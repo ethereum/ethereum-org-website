@@ -30,7 +30,7 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 
 | An NFT internet                                                                                                         | The internet today                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| You own your assets! Only you can sell or swap them.                                                                    | You rent an asset from some organization and it can be taken away from you.                                                                                                              |
+| You own your assets! Only you can sell or swap them.                                                                    | You rent an asset from some organization and it can be taken away from you.                                                                            |
 | NFTs are digitally unique, no two NFTs are the same.                                                                    | A copy of an entity often cannot be distinguished from the original.                                                                                   |
 | Ownership of an NFT is stored on the blockchain for anyone to verify.                                                   | Ownership records of digital items are stored on servers controlled by institutions – you must take their word for it.                                 |
 | NFTs are smart contracts on Ethereum. This means they can easily be used in other smart contracts and apps on Ethereum! | Companies with digital items usually require their own "walled garden" infrastructure.                                                                 |
@@ -65,7 +65,6 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 [More on ENS](https://app.ens.domains)
 
 <Divider />
-
 
 ## How do NFTs work? {#how-nfts-work}
 
