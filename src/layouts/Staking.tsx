@@ -43,8 +43,6 @@ import {
   Page,
   StyledButtonDropdown,
 } from "@/components/MdComponents"
-// TODO: Import once intl implemented
-// import PageMetadata from "@/components/PageMetadata"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
@@ -294,10 +292,6 @@ export const StakingLayout: React.FC<IProps> = ({
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        /> */}
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <Show above={lgBp}>
           <InfoColumn>

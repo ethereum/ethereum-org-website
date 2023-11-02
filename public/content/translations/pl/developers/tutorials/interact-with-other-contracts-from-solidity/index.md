@@ -173,6 +173,6 @@ contract CounterFactory {
 
 Po skompilowaniu wybierz w sekcji wdrażanie Remix fabrykę do wdrożenia:
 
-![Wybór fabryki do wdrożenia w Remix](../../../../../developers/tutorials/interact-with-other-contracts-from-solidity/counterfactory-deploy.png)
+![Wybór fabryki do wdrożenia w Remix](./counterfactory-deploy.png)
 
 Następnie możesz pobawić się swoją fabryką kontraktową i sprawdzić, jak zmienia się wartość. Jeśli chcesz wywołać inteligentny kontrakt z innego adresu, musisz zmienić adres w wyborze konta w Remix.

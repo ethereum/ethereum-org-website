@@ -1,6 +1,7 @@
 // Library imports
 import React, { ReactNode, useState } from "react"
 import { Flex, FlexProps, Heading } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 // Component imports
 import { Button } from "./Buttons"
 // TODO: add Translation when i18n is set up
@@ -26,9 +27,9 @@ const FeedbackCard: React.FC<IProps> = ({
 }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   // const surveyUrl = useSurvey(feedbackSubmitted)
+  const { asPath } = useRouter()
 
-  const location = typeof window !== "undefined" ? window.location.href : ""
-  const isTutorial = location.includes("tutorials")
+  const isTutorial = asPath?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
