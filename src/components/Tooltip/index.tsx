@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import {
-  Center,
+  Box,
   Popover,
   PopoverArrow,
   PopoverBody,
@@ -24,11 +24,11 @@ const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
       {...rest}
     >
       <PopoverTrigger>
-        <Center as="span" tabIndex={0}>
+        <Box as="span" tabIndex={0}>
           {children}
-        </Center>
+        </Box>
       </PopoverTrigger>
-      <PopoverContent minW={192}>
+      <PopoverContent>
         <PopoverArrow />
         <PopoverBody>{content}</PopoverBody>
       </PopoverContent>
