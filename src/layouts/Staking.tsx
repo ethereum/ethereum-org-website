@@ -15,7 +15,6 @@ import {
 import { Image } from "@/components/Image"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Callout from "@/components/Callout"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import OldHeading from "@/components/OldHeading"
@@ -169,7 +168,6 @@ export const stakingComponents = {
   h4: Heading4,
   p: Paragraph,
   pre: Pre,
-  Callout,
   CardGrid,
   DocLink,
   InfoGrid,

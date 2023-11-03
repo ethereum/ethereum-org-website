@@ -15,7 +15,7 @@ Aby lepiej zrozumieć tę stronę, zalecamy najpierw przeczytanie rozdziału <a 
 
 Transakcja Ethereum odnosi się do działania zainicjowanego przez konto będące własnością zewnętrzną, innymi słowy konto zarządzane przez człowieka, a nie przez kontrakt. Na przykład, jeśli Bob wysyła Alice 1 ETH, na koncie Boba musi się pojawić obciążenie, a na koncie Alice uznanie. Ta zmiana stanu ma miejsce w ramach transakcji.
 
-![Schemat pokazujący transakcję powodującą zmianę stanu](../../../../../developers/docs/transactions/tx.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat pokazujący transakcję powodującą zmianę stanu](./tx.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Transakcje, które zmieniają stan EVM, muszą być transmitowane na całą sieć. Każdy węzeł może rozesłać prośbę o wykonanie transakcji na EVM; po tym wydarzeniu górnik wykona transakcję i roześle powstałą zmianę stanu do reszty sieci.
 
@@ -119,7 +119,7 @@ Górnik przetwarzający transakcję otrzyma **+0,0042 ETH**
 
 Gaz jest również potrzebny do każdej interakcji kontraktów inteligentnych.
 
-![Schemat przedstawiający sposób zwrotu kosztów niewykorzystanego gazu](../../../../../developers/docs/transactions/gas-tx.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat przedstawiający sposób zwrotu kosztów niewykorzystanego gazu](./gas-tx.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Gaz niewykorzystany w transakcji jest zwracany na konto użytkownika.
 
