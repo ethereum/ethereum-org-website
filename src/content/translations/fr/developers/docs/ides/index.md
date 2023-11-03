@@ -66,4 +66,6 @@ La plupart des IDE ont permis de construire des plugins pour améliorer l'expér
 
 ## Complément d'information {#further-reading}
 
+- [ IDEs pour Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Liste d'IDEs pour Ethereum par Alchemy_
+
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

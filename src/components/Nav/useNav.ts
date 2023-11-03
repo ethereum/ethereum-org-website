@@ -109,6 +109,10 @@ export const useNav = ({ path }: { path: string }) => {
               to: "/wallets/",
             },
             {
+              text: "Gas fees",
+              to: "/gas/",
+            },
+            {
               text: t("ethereum-security"),
               to: "/security/",
             },
@@ -120,6 +124,7 @@ export const useNav = ({ path }: { path: string }) => {
               text: t("smart-contracts"),
               to: "/smart-contracts/",
             },
+
             {
               text: t("quizzes-title"),
               to: "/quizzes/",

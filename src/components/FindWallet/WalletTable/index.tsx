@@ -1,6 +1,5 @@
 // Libraries
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
@@ -21,7 +20,6 @@ import {
   ListItem,
   SimpleGrid,
   SkipNavContent,
-  Text,
   useToken,
   VisuallyHidden,
   StackItem,
@@ -30,6 +28,8 @@ import {
 // Components
 import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import GatsbyImage from "../../GatsbyImage"
+import Text from "../../OldText"
 
 // Icons
 import {
@@ -47,6 +47,7 @@ import {
   FILTERED_RESULTS_SKIP_LINK,
 } from "../../../pages/wallets/find-wallet"
 import { ChildOnlyProp } from "../../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../../constants"
 
 const ChakraSelect = chakra((props: { className?: string }) => (
   <Select {...props} />

@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
+import { Button } from "../Buttons"
 import Translation from "../Translation"
 import Tag from "../Tag"
 import { GreenTickIcon } from "../icons/quiz"
@@ -56,8 +56,6 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
           <Flex gap={2} alignItems="center">
             <Text
               color={isCompleted ? "body.medium" : "text"}
-              fontWeight="bold"
-              mb={0}
               _before={{
                 content: 'counter(list-counter) ". "',
               }}
@@ -66,9 +64,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
             </Text>
 
             {/* Show green tick if quizz was completed only */}
-            <Box display={isCompleted ? "flex" : "none"}>
-              <GreenTickIcon />
-            </Box>
+            {isCompleted && <GreenTickIcon />}
           </Flex>
 
           {/* Labels */}
@@ -87,7 +83,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
         {/* Start Button */}
         <Box w={{ base: "full", lg: "auto" }}>
           <Button
-            variant="outline-color"
+            variant="outline"
             w={{ base: "full", lg: "auto" }}
             onClick={handleStart}
           >

@@ -64,7 +64,7 @@ Aqui estão alguns exemplos populares:
 
 Se você estiver executando um nó ou validador, aqui estão algumas comunidades que se dedicam a ajudá-lo a começar.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 A maioria das equipes que estão construindo clientes Ethereum também tem espaços dedicados ao público, onde você pode obter suporte e fazer perguntas.

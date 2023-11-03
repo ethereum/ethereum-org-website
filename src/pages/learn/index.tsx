@@ -5,30 +5,30 @@ import {
   Center,
   Flex,
   Grid,
-  Heading,
   HeadingProps,
   ListItem,
   Show,
-  Text,
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
 // Components
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import DocLink from "../../components/DocLink"
 import FeedbackCard from "../../components/FeedbackCard"
 import InlineLink from "../../components/Link"
 import OriginalCard, {
   IProps as IOriginalCardProps,
 } from "../../components/Card"
-import PageHero from "../../components/PageHero"
+import { HubHero, type HubHeroProps } from "../../components/Hero"
 import PageMetadata from "../../components/PageMetadata"
 import Translation from "../../components/Translation"
 import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
+import GatsbyImage from "../../components/GatsbyImage"
 import {
   ContentContainer,
   InfoColumn,
@@ -77,9 +77,15 @@ const DocsContainer = ({ children }: ChildOnlyProp) => {
 
 const AdditionalReadingHeader = ({ children }: ChildOnlyProp) => {
   return (
-    <Heading as="h3" mt={16} fontSize="xl" fontWeight="bold" textAlign="center">
+    <OldHeading
+      as="h3"
+      mt={16}
+      fontSize="xl"
+      fontWeight="bold"
+      textAlign="center"
+    >
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
@@ -105,17 +111,21 @@ const CardGrid = ({ children }: ChildOnlyProp) => {
 
 const H2 = ({ children, ...props }: HeadingProps) => {
   return (
-    <Heading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4} {...props}>
+    <OldHeading
+      fontSize={{ base: "2xl", md: "2rem" }}
+      lineHeight={1.4}
+      {...props}
+    >
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
 const H3 = ({ children, ...props }: HeadingProps) => {
   return (
-    <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
+    <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }} {...props}>
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
@@ -156,12 +166,11 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     },
   ]
 
-  const heroContent = {
+  const heroContent: HubHeroProps = {
     title: t("learn-hub"),
     header: t("hero-header"),
-    subtitle: t("hero-subtitle"),
-    image: getImage(data.heroImage)!,
-    alt: "",
+    description: t("hero-subtitle"),
+    heroImgSrc: getImage(data.heroImage)!,
     buttons: [
       {
         content: t("hero-button-lets-get-started"),
@@ -179,11 +188,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
     <Box position="relative" w="full">
       <PageMetadata title={t("learn-hub")} description={t("hero-subtitle")} />
 
-      <Box bg="layer2Gradient">
-        <Box>
-          <Box as={PageHero} pb={8} content={heroContent} isReverse />
-        </Box>
-      </Box>
+      <HubHero {...heroContent} />
 
       <Flex
         direction={{ base: "column", lg: "row" }}
@@ -191,7 +196,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
         w="full"
         mb={16}
         mx="auto"
-        pt={{ lg: 16 }}
+        pt={{ base: "10", lg: "16" }}
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Show above={lgBp}>
@@ -801,10 +806,10 @@ export const query = graphql`
         }
       }
     }
-    heroImage: file(relativePath: { eq: "eth.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/learn-hub-hero.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 500
+          width: 1504
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

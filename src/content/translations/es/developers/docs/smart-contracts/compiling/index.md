@@ -1,15 +1,15 @@
 ---
 title: Compilación de contratos inteligentes
-description: Una explicación de por qué necesitas compilar contratos inteligentes y qué es lo que realmente hace la compilación.
+description: Explicación de por qué necesita compilar contratos inteligentes y qué es lo que realmente hace la compilación.
 lang: es
 incomplete: true
 ---
 
-Necesitas compilar tu contrato para que tu aplicación web y la máquina virtual de Ethereum (EVM) puedan entenderlo.
+Necesita compilar su contrato para que su aplicación web y la máquina virtual de Ethereum (EVM) puedan entenderlo.
 
 ## Requisitos previos {#prerequisites}
 
-Resultará útil haber leído nuestra introducción a los [contratos inteligentes](/developers/docs/smart-contracts/) y la máquina virtual de [Ethereum](/developers/docs/evm/) antes de leer acerca de la compilación.
+Resultará útil leer nuestra introducción a los [contratos inteligentes](/developers/docs/smart-contracts/) y la [Máquina virtual de Ethereum](/developers/docs/evm/) antes de leer acerca de la compilación.
 
 ## La EVM {#the-evm}
 
@@ -21,7 +21,7 @@ pragma solidity 0.4.24;
 contract Greeter {
 
     function greet() public constant returns (string) {
-        return "Hola";
+        return "Hello";
     }
 
 }
@@ -39,7 +39,7 @@ El compilador también producirá la **interfaz binaria de aplicación (ABI)** q
 
 La ABI es un archivo JSON que describe el contrato implementado y sus funciones de contrato inteligente. Esto ayuda a cerrar la brecha entre web2 y web3
 
-Una [biblioteca de cliente JavaScript](/developers/docs/apis/javascript/) leerá la **ABI** para que solicite tu contrato inteligente en la interfaz de tu aplicación web.
+Una [biblioteca de cliente de JavaScript](/developers/docs/apis/javascript/) leerá la **ABI** para que usted invoque su contrato inteligente en la interfaz de su aplicación web.
 
 A continuación se muestra la ABI para el contrato de token ERC-20. Un ERC-20 es un token que puedes operar en Ethereum.
 

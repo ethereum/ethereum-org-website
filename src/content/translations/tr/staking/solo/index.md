@@ -17,6 +17,8 @@ summaryPoints:
 
 Solo stake etme, internete bağlı [bir Ethereum düğümü çalıştırma](/run-a-node/) ve bir [doğrulayıcıyı](#faq) etkinleştirmek için 32 ETH yatırma işlemidir, size doğrudan ağ konsensüsüne katılma yeteneği verir.
 
+** Bireysel hisseleme Ethereum ağının merkeziyetsizliğini arttırır ** ve Ethereum'un sansüre ve saldırılara karşı dayanıklılığını arttırır. Diğer hisseleme yöntemleri ağa aynı şekillerde yardım etmeyebilir. Solo hisseleme, Ethereum'un güvenliğini sağlamak için en iyi seçenektir.
+
 Bir Ethereum düğümü, hem bir yürütüm katmanı (YK) istemcisinden hem de bir konsensus katmanı (MK) istemcisinden oluşur. Bu istemciler, işlemleri ve blokları doğrulamak, zincirin doğru başını doğrulamak, tasdikleri toplamak ve blok önermek için geçerli bir imza anahtarı seti ile birlikte çalışan yazılımlardır.
 
 Bu istemcileri çalıştırmak için gereken donanımı çalıştırmaktan tek başına pay sahipleri sorumludur. Evden çalıştırdığınız bunun için özel bir makine kullanmanız şiddetle tavsiye edilir – bu, ağın sağlığı için son derece faydalıdır.
@@ -25,18 +27,12 @@ Solo staker, doğrulayıcısının düzgün şekilde çalışmasını ve çevrim
 
 ## Neden solo stake? {#why-stake-solo}
 
-Solo stake etme daha fazla sorumluluk getirir, ancak fonlarınız ve stake kurulumunuz üzerinde size maksimum kontrol sağlar.
+Solo hisseleme daha fazla sorumluluk gerektirmesine rağmen fonlarınız ve hisseleme kurulumunuz üzerinde maksimum kontrol sağlar.
 
 <CardGrid>
-  <Card title="Taze ETH kazan" emoji="💸">
-    Doğrulayıcınız çevrimiçi olduğunda, herhangi bir aracı kesintiye uğramadan doğrudan protokolden, ETH cinsinden ödüller kazanın.
-  </Card>
-  <Card title="Tam kontrol" emoji="🎛️">
-    Kendi anahtarlarınızı saklayın. Riskinizi en aza indirmenize ve ağın sağlığına ve güvenliğine en iyi şekilde katkıda bulunmanıza olanak tanıyan istemci ve donanım kombinasyonunu seçin. Üçüncü taraf staking hizmetleri, bu kararları sizin yerinize verir ve her zaman en güvenli seçimleri yapmazlar.
-  </Card>
-  <Card title="Ağ güvenliği" emoji="🔐">
-    Solo stake etmek, en etkili yoldur. Evinizde kendi donanımınızda bir doğrulayıcı çalıştırarak, Ethereum protokolünün sağlamlığını, merkeziyetsizliğini ve güvenliğini güçlendirirsiniz.
-  </Card>
+  <Card title="Taze ETH kazan" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Tam kontrol" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Ağ güvenliği" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Solo staking yapmadan önce dikkate alınması gerekenler {#considerations-before-staking-solo}
@@ -44,32 +40,35 @@ Solo stake etme daha fazla sorumluluk getirir, ancak fonlarınız ve stake kurul
 Solo staking'in herkes için erişilebilir ve risksiz olmasını dilesek de, bu gerçek değil. ETH'nizi solo stake etmeyi seçmeden önce akılda tutulması gereken bazı pratik ve ciddi hususlar vardır.
 
 <InfoGrid>
-  <ExpandableCard title="Gerekli okuma" eventCategory="SoloStaking" eventName="clicked required reading">
-    Kendi düğümünüzü çalıştırırken, seçtiğiniz yazılımı nasıl kullanacağınızı öğrenmek için biraz zaman harcamalısınız. Bu, ilgili belgeleri okumayı ve bu geliştirme ekiplerinin iletişim kanallarına uyum sağlamayı içerir.
-    Çalıştırdığınız yazılım ve hisse kanıtının nasıl çalıştığı hakkında ne kadar çok şey anlarsanız, bir staker olarak daha az risk almış olacaksınız ve bir düğüm operatörü olarak yol boyunca ortaya çıkabilecek sorunları çözmek de o kadar kolay olacaktır. 
-  </ExpandableCard>
-  <ExpandableCard title="Bilgisayar konusunda bilgili" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
-    Düğüm kurulumu, bilgisayarlarla çalışırken makul bir rahatlık düzeyi gerektirir, ancak yeni araçlar bunu zamanla daha da kolay hale getirir. Komut satırı arabiriminin anlaşılması yararlıdır, ancak artık kesinlikle gerekli değildir.
-    Ayrıca, çok temel donanım kurulumu ve önerilen minimum özelliklerin biraz anlaşılmasını gerektirir.
-  </ExpandableCard>
-  <ExpandableCard title="Güvenli anahtar yönetimi" eventCategory="SoloStaking" eventName="clicked secure key management">
-    Tıpkı özel anahtarların Ethereum adresinizi koruduğu gibi, doğrulayıcınız için özel olarak anahtarlar oluşturmanız gerekecektir. Herhangi bir tohum cümlesini veya özel anahtarı nasıl güvenli ve emniyetli tutacağınızı anlamalısınız.
-    <p style={{marginTop: "1rem"}}><a href="/security">Ethereum güvenliği ve dolandırıcılık önleme</a></p>
-  </ExpandableCard>
-  <ExpandableCard title="Çekimler kapalı (şimdilik)" eventCategory="SoloStaking" eventName="clicked no withdrawing">
-    Bir doğrulayıcı bakiyesinden stake edilen ETH veya ödüllerin çekilmesi henüz desteklenmemektedir. Yaklaşan Şanghay yükseltmesi için para çekme desteği planlanıyor. ETH'nizin en az bir ila iki yıl kilitli kalacağını tahmin etmelisiniz. Şanghay yükseltmesinden sonra, isterseniz payınızın bir kısmını veya tamamını serbestçe çekebileceksiniz.
-  </ExpandableCard>
-  <ExpandableCard title="Bakım" eventCategory="SoloStaking" eventName="clicked maintenance">
-    Donanım bazen başarısız oluyor, ağ bağlantıları hata veriyor ve istemci yazılımının zaman zaman yükseltilmesi gerekiyor. Düğüm bakımı kaçınılmazdır ve zaman zaman ilgilenmenizi gerektirir. Beklenen ağ yükseltmelerinden veya diğer kritik müşteri yükseltmelerinden haberdar olduğunuzdan emin olmak isteyeceksiniz.
-  </ExpandableCard>
-  <ExpandableCard title="Güvenilir çalışma süresi" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-    Ödülleriniz, doğrulayıcınızın çevrimiçi olduğu ve doğru şekilde tasdik ettiği süre ile orantılıdır. Kapalı kalma süresi, aynı anda kaç doğrulayıcının çevrimdışı olduğuyla orantılı olarak cezalara neden olur, ancak <a href="#faq">slashing ile sonuçlanmaz</a>. Bant genişliği de önemlidir, çünkü zamanında alınmayan onaylar için ödüller azalır. Gereksinimler değişiklik gösterecektir, ancak minimum 10 Mb/sn yukarı ve aşağı önerilir.
-  </ExpandableCard>
-  <ExpandableCard title="Cezalandırılma riski" eventCategory="SoloStaking" eventName="clicked slashing risk">
-    Çevrimdışı olmanın verdiği hareketsizlik cezalarından farklı olarak, <em>kesme</em>, kötü niyetli suçlar için ayrılmış çok daha ciddi bir cezadır. Anahtarlarınız aynı anda yalnızca bir makineye yüklenmiş bir azınlık istemcisi çalıştırarak cezalandırılma riskiniz en aza indirilir. Özetle, bütün stakerlar kesilme risklerini göze almak zorundadır.
-    
-    <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Cezalandırılma ve doğrulayıcı yaşam döngüsü konusunda daha fazla bilgi</a></p>
-  </ExpandableCard>
+<ExpandableCard title="Gerekli okuma" eventCategory="SoloStaking" eventName="clicked required reading">
+Kendi düğümünüzü çalıştırırken, seçtiğiniz yazılımı nasıl kullanacağınızı öğrenmek için biraz zaman harcamalısınız. Bu, ilgili belgeleri okumayı ve bu geliştirme ekiplerinin iletişim kanallarına uyum sağlamayı içerir.
+
+Çalıştırdığınız yazılım ve hisse kanıtının nasıl çalıştığı hakkında ne kadar çok şey anlarsanız, bir staker olarak daha az risk almış olacaksınız ve bir düğüm operatörü olarak yol boyunca ortaya çıkabilecek sorunları çözmek de o kadar kolay olacaktır.
+</ExpandableCard>
+
+<ExpandableCard title="Bilgisayar konusunda bilgili" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
+Düğüm kurulumu, bilgisayarlarla çalışırken makul bir rahatlık düzeyi gerektirir, ancak yeni araçlar bunu zamanla daha da kolay hale getirir. Komut satırı arabiriminin anlaşılması yararlıdır, ancak artık kesinlikle gerekli değildir.
+
+Ayrıca, çok temel donanım kurulumu ve önerilen minimum özelliklerin biraz anlaşılmasını gerektirir.
+</ExpandableCard>
+
+<ExpandableCard title="Güvenli anahtar yönetimi" eventCategory="SoloStaking" eventName="clicked secure key management">
+Tıpkı özel anahtarların Ethereum adresinizi koruduğu gibi, doğrulayıcınız için özel olarak anahtarlar oluşturmanız gerekecektir. Güvenlik kelimelerinizi ve özel anahtarınızı nasıl güvenli tutacağınızı anlamalısınız
+</ExpandableCard>
+
+<ExpandableCard title="Bakım" eventCategory="SoloStaking" eventName="clicked maintenance">
+Donanım bazen başarısız oluyor, ağ bağlantıları hata veriyor ve istemci yazılımının zaman zaman yükseltilmesi gerekiyor. Düğüm bakımı kaçınılmazdır ve zaman zaman ilgilenmenizi gerektirir. Beklenen ağ yükseltmelerinden veya diğer kritik müşteri yükseltmelerinden haberdar olduğunuzdan emin olmak isteyeceksiniz.
+</ExpandableCard>
+
+<ExpandableCard title="Güvenilir çalışma süresi" eventCategory="SoloStaking" eventName="clicked reliable uptime">
+Ödülleriniz, doğrulayıcınızın çevrimiçi olduğu ve doğru şekilde tasdik ettiği süre ile orantılıdır. Kapalı kalma süresi, aynı anda kaç doğrulayıcının çevrimdışı olduğuyla orantılı olarak cezalara neden olur, ancak <a href="#faq">slashing ile sonuçlanmaz</a>. Bant genişliği de önemlidir, çünkü zamanında alınmayan onaylar için ödüller azalır. Gereksinimler değişiklik gösterecektir, ancak minimum 10 Mb/sn yukarı ve aşağı önerilir.
+</ExpandableCard>
+
+<ExpandableCard title="Cezalandırılma riski" eventCategory="SoloStaking" eventName="clicked slashing risk">
+Çevrimdışı olmanın verdiği hareketsizlik cezalarından farklı olarak, <em>kesme</em>, kötü niyetli suçlar için ayrılmış çok daha ciddi bir cezadır. Anahtarlarınız aynı anda yalnızca bir makineye yüklenmiş bir azınlık istemcisi çalıştırarak cezalandırılma riskiniz en aza indirilir. Özetle, bütün stakerlar kesilme risklerini göze almak zorundadır.
+
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Kesme ve doğrulayıcı döngüsü hakkında daha fazlası </a>
+</ExpandableCard>
 </InfoGrid>
 
 <StakingComparison page="solo" />
@@ -78,9 +77,11 @@ Solo staking'in herkes için erişilebilir ve risksiz olmasını dilesek de, bu 
 
 <StakingHowSoloWorks />
 
-İstenirse, çevrimiçi olma gereksinimini ortadan kaldıran ve diğer ödülleri durduran bir doğrulayıcı olarak çıkabilirsiniz. Planlanan Şanghay yükseltmesine kadar bu fonların _çekilmesinin_ mümkün olmayacağını unutmayın.
+Aktif olduğu durumda ETH ödülleri kazanırsınız. Bu ödüller periyodik olarak para çekme adresinize yatırılır.
 
-Şanghay'dan sonra, kullanıcılar isterlerse ödüllerini ve paylarını geri çekebilecekler.
+İstenirse, çevrimiçi olma gereksinimini ortadan kaldıran ve diğer ödülleri durduran bir doğrulayıcı olarak çıkabilirsiniz. Sonrasında kalan bakiyeniz kurulum esnasında belirlediğiniz çekim adresine aktarılacaktır.
+
+[Hisseleme para çekmeleri hakkında daha fazlası](/staking/withdrawals/)
 
 ## Hisseleme Başlama Noktası başlangıç rehberi {#get-started-on-the-staking-launchpad}
 
@@ -100,40 +101,40 @@ Nitelik göstergeleri, listelenen bir stake etme aracının sahip olabileceği d
 
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 
-<InfoBanner emoji="⚠️" isWarning>
-Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir <a href="/developers/docs/nodes-and-clients/client-diversity/">azınlık istemcisi</a> seçmenin önemini lütfen unutmayın. Azınlık müşterisini kurmanıza izin veren araçlar, <em style="text-transform: büyük harf;">"çoklu istemci"</em> olarak anılır.
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Düğüm araçları
 
 <StakingProductsCardGrid category="nodeTools" />
 
+Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [azınlık istemcisi](/developers/docs/nodes-and-clients/client-diversity/) seçmenin önemini lütfen unutmayın. Azınlık istemcisini kurmanıza izin veren araçlar, <em style={{ textTransform: "uppercase" }}>"çoklu istemci"</em> olarak anılır.
+
 #### Anahtar Üreticileri
 
-Bu araçlar, anahtar oluşturmaya yardımcı olmak için [Stake Mevduat CLI'sine](https://github.com/ethereum/staking-deposit-cli/) alternatif olarak kullanılabilir.
+Bu araçlar, anahtar oluşturmaya yardımcı olmak için [hisseleme Mevduat CLI'sına](https://github.com/ethereum/staking-deposit-cli/) alternatif olarak kullanılabilir.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Kaçırdığımız bir stake etme aracı için öneriniz mi var mı? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
+Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
 
 ## Solo staking kılavuzlarını keşfet {#staking-guides}
 
 <StakingGuides />
 
-## SSS {#faq}
+## Sıkça sorulan sorular {#faq}
 
-Bunlar, staking hakkında bilmeye değer en yaygın sorulardan birkaçıdır.
+Bunlar, hisseleme hakkında bilmeye değer en yaygın sorulardan birkaçıdır.
 
 <ExpandableCard title="Doğrulayıcı nedir?">
 
-Doğrulayıcı, Ethereum üzerinde yaşayan ve Ethereum protokolünün mutabakatına katılan sanal bir varlıktır. Doğrulayıcılar bir denge, ortak anahtar ve diğer özelliklerle temsil edilir. Doğrulayıcı istemcisi, özel anahtarını tutup kullanarak doğrulayıcı adına hareket eden yazılımdır. Tek bir doğrulayıcı istemcisi, birçok doğrulayıcıyı kontrol ederek birçok anahtar çiftini tutabilir.
+<em>Doğrulayıcı, </em> Ethereum üzerinde yaşayan sanal bir varlıktır ve Ethereum protokolünün mutabakatına katılır. Doğrulayıcılar bir denge, ortak anahtar ve diğer özelliklerle temsil edilir. Bir <em>doğrulayıcı istemcisi</em>, özel anahtarını tutup kullanarak doğrulayıcı adına hareket eden yazılımdır. Tek bir doğrulayıcı istemcisi, birçok doğrulayıcıyı kontrol ederek birçok anahtar çiftini tutabilir.
 
 </ExpandableCard>
 
 <ExpandableCard title="32 ETH'den fazla yatırabilir miyim?">
 Doğrulayıcı ile ilişkili her bir anahtar çiftinin etkinleştirilmesi için tam olarak 32 ETH gerekir. Tek bir anahtar setine daha fazla ETH yatırılması ödül potansiyelini artırmaz çünkü her doğrulayıcı 32 ETH'lik <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">etkili bakiye</a> ile sınırlandırılmıştır. Bu, stake işleminin her biri kendi anahtar ve dengesine sahip 32 ETH artışıyla yapıldığı anlamına gelir.
 
-Tek bir doğrulayıcı için 32 ETH'den fazla para yatırmayın. Ödüllerinizi artırmayacak ve planlanan Şanghay güncellemesine kadar kilitlenecektir.
+Tek bir doğrulayıcı için 32 ETH'den fazla para yatırmayın. Ödüllerinizi artırmayacaktır. Eğer doğrulayıcı için bir para çekme adresi ayarlanmışsa, bir sonraki doğrulayıcı taraması sırasında 32 ETH'in üzerindeki fonlar otomatik olarak bu adrese yatırılacaktır.
 
 Solo staking sizin için çok zorlu görünüyorsa, bir <a href="/staking/saas/">servis sağlayıcı</a> kullanmayı düşünün veya 32 ETH'den daha azıyla çalışıyorsanız, <a href="/staking/pools/">stake havuzları</a>na göz atın.
 </ExpandableCard>
@@ -155,8 +156,10 @@ Süper çoğunluklu bir istemciyi çalıştırmak (ağın 2/3'ünden fazlası ta
 
 Bir <em>azınlık istemcisindeki eşdeğer hatalar hiçbir zaman kesinleşmeyecek</em> ve dolayısıyla hiçbir zaman bir çevre oylamasıyla sonuçlanmayacak ve yalnızca <em>kesik yeme değil</em> hareketsizlik cezalarıyla sonuçlanacaktır.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Azınlık istemcisi çalıştırmanın önemi hakkında daha fazla bilgi edinin.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Kesilmekten korunma konusunda daha fazla bilgi al</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Azınlık istemcisi çalıştırmanın önemi hakkında daha fazla bilgi edinin.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Kesilmekten korunma konusunda daha fazla bilgi alın</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="Hangi istemci en iyisi?">
@@ -173,6 +176,19 @@ Sanal özel sunucu (VPS) ev donanımının yerine kullanılabilse de, doğrulay�
 Tek bir merkezi bulut depolama çözümü üzerinde çalışan doğrulayıcı istemci sayısı arttıkça, bu kullanıcılar için daha tehlikeli hale gelir. Bu sağlayıcıları bir saldırı, düzenleyici talepler veya yalnızca güç/internet kesintileri nedeniyle çevrimdışına alan herhangi bir olay, bu sunucuya güvenen her doğrulayıcı istemcinin aynı anda çevrimdışı olmasına neden olur.
 
 Çevrimdışı cezalar, aynı anda kaç kişinin çevrimdışı olduğuyla orantılıdır. Bir VPS kullanmak, çevrimdışı cezaların daha şiddetli olması riskini büyük ölçüde artırır ve kesintinin yeterince büyük olması durumunda ikinci dereceden sızıntı veya kesinti riskinizi artırır. Kendi riskinizi ve ağ riskini en aza indirmek için, kullanıcıların kendi donanımlarını edinmeleri ve çalıştırmaları şiddetle tavsiye edilir.
+</ExpandableCard>
+
+<ExpandableCard title="Ödüllerimin kilidini nasıl kaldırırım veya ETH'mi nasıl geri alırım?">
+
+İşaret Zincirinden tüm para çekme işlemleri, para çekme bilgilerinin belirlenmiş olmasını gerektirir.
+
+Yeni paydaşlar bunu anahtar üretim ve yatırma zamanında belirler. Henüz bu bilgileri belirlememiş mevcut paydaşlar kendi anahtarlarını güncelleyerek bu işlevi destekleyebilir.
+
+Çekim bilgileri ayarlandığında, ödül ödemeleri (başlangıçtaki 32 adedin üstünde toplananlar) periyodik olarak çekim adresine otomatik dağıtılacaktır.
+
+Tüm bakiyenizin kilidini kaldırmak ve tamamını almak için aynı zamanda doğrulayıcınızın çıkış sürecini tamamlamanız da gerekir.
+
+<ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
 ## Daha fazla bilgi {#further-reading}

@@ -70,7 +70,7 @@ The Ethereum Kurtosis package locally instantiates a containerized and parameter
 
 - [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
 - [Website](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentation](https://docs.kurtosis.com/)
 
 ## Further reading {#further-reading}

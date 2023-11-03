@@ -3,9 +3,7 @@ import {
   Badge,
   Box,
   Flex,
-  Text,
   Divider as ChakraDivider,
-  Heading,
   Icon,
   chakra,
 } from "@chakra-ui/react"
@@ -14,7 +12,7 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -43,8 +41,13 @@ import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import Text from "../components/OldText"
+import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
@@ -80,7 +83,7 @@ const HR = () => (
 const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
 const Header1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", md: "5xl" }}
     lineHeight={1.4}
@@ -103,7 +106,7 @@ const Header1 = (props: ChildOnlyProp) => (
 )
 
 const Header2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
     lineHeight={1.4}
     fontWeight="bold"
@@ -120,7 +123,7 @@ const Header2 = (props: ChildOnlyProp) => (
 )
 
 const Header3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -137,7 +140,7 @@ const Header3 = (props: ChildOnlyProp) => (
 )
 
 const Header4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}
@@ -169,7 +172,7 @@ const CardContainer = (props: ChildOnlyProp) => (
 // Note: you must pass components to MDXProvider in order to render them in markdown files
 // https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx/#mdxprovider
 const components = {
-  a: InlineLink,
+  a: MdLink,
   h1: Header1,
   h2: Header2,
   h3: Header3,
@@ -205,8 +208,10 @@ const components = {
   NetworkUpgradeSummary,
   TranslationChartImage,
   EnergyConsumptionChart,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   UpgradeStatus,
+  GlossaryDefinition,
+  GlossaryTooltip,
 }
 
 const StaticPage = ({
@@ -248,6 +253,7 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+
       <Flex
         justifyContent="space-between"
         w="full"
@@ -280,7 +286,7 @@ const StaticPage = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} />
+          <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
             dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
@@ -327,6 +333,7 @@ export const staticPageQuery = graphql`
             "learn-quizzes"
             "page-history"
             "common"
+            "glossary"
           ]
         }
       }

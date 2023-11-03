@@ -4,10 +4,9 @@ import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import ButtonLink from "../ButtonLink"
+import { ButtonLink, IconButton } from "../Buttons"
 import Link, { BaseLink } from "../Link"
 import Search from "../Search"
-import IconButton from "../IconButton"
 import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
@@ -83,6 +82,7 @@ const Nav: FC<IProps> = ({ path }) => {
               />
               <HStack spacing={2} hideBelow="lg">
                 <IconButton
+                  transition="transform 0.5s, color 0.2s"
                   icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
                   aria-label={
                     isDarkTheme
@@ -92,14 +92,26 @@ const Nav: FC<IProps> = ({ path }) => {
                   variant="ghost"
                   isSecondary
                   px={1.5}
+                  _hover={{
+                    transform: "rotate(10deg)",
+                    color: "primary.hover",
+                  }}
                   onClick={toggleColorMode}
                 ></IconButton>
                 <ButtonLink
                   to={`/languages/${fromPageParameter}`}
+                  transition="color 0.2s"
                   leftIcon={<Icon as={MdLanguage} />}
                   variant="ghost"
                   isSecondary
                   px={1.5}
+                  _hover={{
+                    color: "primary.hover",
+                    "& svg": {
+                      transform: "rotate(10deg)",
+                      transition: "transform 0.5s",
+                    },
+                  }}
                 >
                   {t("languages")} {i18n.language.toUpperCase()}
                 </ButtonLink>

@@ -10,7 +10,6 @@ import {
   HeadingProps,
   List,
   ListItem,
-  Text,
   useToken,
 } from "@chakra-ui/react"
 
@@ -22,10 +21,12 @@ import PageHero, {
   IContent as IPageHeroContent,
 } from "../../components/PageHero"
 import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import PageMetadata from "../../components/PageMetadata"
 import InfoBanner from "../../components/InfoBanner"
 import FeedbackCard from "../../components/FeedbackCard"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
 
 import { getImage } from "../../utils/image"
 
@@ -46,13 +47,12 @@ const PageDivider = () => (
 )
 
 const PageContent = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Flex flexDirection="column" gap="8" py={4} px={8} w="full" {...props} />
 )
 
 const H2 = (props: HeadingProps) => (
   <Heading
     as="h2"
-    mt={0}
     mb={8}
     fontSize={{ base: "2xl", md: "2rem" }}
     fontWeight="semibold"
@@ -64,7 +64,7 @@ const H2 = (props: HeadingProps) => (
 const CenterH2 = (props: HeadingProps) => <H2 textAlign="center" {...props} />
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     fontWeight="semibold"
@@ -74,7 +74,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H6 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h6"
     fontSize="0.9rem"
     fontWeight="normal"

@@ -23,7 +23,7 @@ lang: zh
 - 您的合约字节码 – 这是通过[编译](/developers/docs/smart-contracts/compiling/)获得的。
 - 用作燃料的以太币 – 像其他交易一样，您需要设定燃料限制，这样就知道部署合约比简单的以太币交易需要更多的燃料。
 - 一个部署脚本或插件。
-- 访问[以太坊节点](/developers/docs/nodes-and-clients/)，通过运行自己的节点，连接到公共节点或者通过应用程序接口秘钥使用诸如 [Infura](https://www.infura.io/) 和 [Alchemy](https://docs.alchemy.com/) 等[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)来访问。
+- 通过以下方式之一可以访问[以太坊节点](/developers/docs/nodes-and-clients/)：运行自己的节点、连接到公共节点或使用[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)的应用程序接口应用程序接口密钥。
 
 ### 部署智能合约的步骤 {#steps-to-deploy}
 
@@ -57,11 +57,15 @@ lang: zh
 - [关于网络和应用部署的文档](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _使用单一命令轻松地将任何合约部署到任何与 EVM 兼容的区块链_。**
+
+- [相关文档](https://portal.thirdweb.com/deploy/)
+
 ## 相关教程 {#related-tutorials}
 
-- [部署您的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/) _ - 介绍如何在以太坊测试网络上部署您的第一个智能合约。_
-- [Hello World |智能合约教程](/developers/tutorials/hello-world-smart-contract/) _ – 一门便于学习的教程，介绍如何在以太坊上创建和部署基本智能合约。_
-- [在 Solidity 中与其他合约交互](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– 如何从现有合约中部署智能合约并与之交互。_
+- [部署你的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/) _ – 介绍如何在以太坊测试网络上部署你的第一个智能合约。_
+- [Hello World | 智能合约教程](/developers/tutorials/hello-world-smart-contract/) _ – 一门便于学习的教程，介绍如何在以太坊上创建和部署基本智能合约。_
+- [在 Solidity 中与其它合约交互](/developers/tutorials/interact-with-other-contracts-from-solidity/) _——如何从现有合约中部署智能合约并与之交互。_
 - [如何减少合约的大小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- 如何减少合约的大小使其保持在限制之下并节省燃料_
 
 ## 延伸阅读 {#further-reading}
@@ -69,9 +73,10 @@ lang: zh
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [使用安全帽部署合约](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
 ## 相关主题 {#related-topics}
 
 - [开发框架](/developers/docs/frameworks/)
 - [运行以太坊节点](/developers/docs/nodes-and-clients/run-a-node/)
+- [节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service)

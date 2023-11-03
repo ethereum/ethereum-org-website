@@ -53,5 +53,5 @@ Existen múltiples implementaciones de rollups optimistas que puede integrar en 
 
 - [Todo lo que debes saber sobre Optimistic rollup](https://research.paradigm.xyz/rollups)
 - [Guía esencial sobre Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [¿Cómo funciona realmente el rollup de Optimism?](https://research.paradigm.xyz/optimism)
+- [¿Cómo funciona realmente el rollup de Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [Análisis detallado de OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

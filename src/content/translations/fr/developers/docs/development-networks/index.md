@@ -62,11 +62,22 @@ Il y a aussi deux implémentations de test publiques maintenues d'Ethereum : Goe
 - [Plateforme de lancement de la mise en jeu de Goerli](https://goerli.launchpad.ethereum.org/)
 - [Ropsten, Rinkeby & Annonce de dépréciation Kiln](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
+### Pack Ethereum de Kurtosis {#kurtosis}
+
+Kurtosis est un système de construction d'environnements de test multi-conteneurs qui permet aux développeurs de créer localement des instances reproductibles de réseaux de blockchain.
+
+Le pack Ethereum Kurtosis permet de mettre localement en place un réseau de test Ethereum paramétrable, prenant en charge plusieurs clients différents de la couche d'exécution et de la couche de consensus, ainsi qu'un nombre "n" de nœuds. Kurtosis gère harmonieusement toutes les cartographies de ports locaux et les connexions de services pour faciliter le prototypage et le test des dApp et des contrats intelligents.
+
+- [Pack réseau Ethereum](https://github.com/kurtosis-tech/eth-network-package)
+- [Site Web](https://www.kurtosis.com/)
+- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [Documentation](https://docs.kurtosis.com/)
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Infrastructures de développement](/developers/docs/frameworks/)
+- [Frameworks de développement](/developers/docs/frameworks/)
 - [Configurer un environnement de développement local](/developers/local-environment/)

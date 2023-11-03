@@ -18,7 +18,7 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 
 import { BaseLink } from "../Link"
-import Button from "../Button"
+import { Button } from "../Buttons"
 import Translation from "../Translation"
 
 import { ISections } from "./types"

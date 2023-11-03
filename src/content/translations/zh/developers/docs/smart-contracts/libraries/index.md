@@ -102,11 +102,16 @@ contract MyNFT is ERC721 {
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK -** **_提供了构建自定义智能合约所需的工具，能够高效地完成_**
+
+- [相关文档](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## 相关教程 {#related-tutorials}
 
-- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用_。
-- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-关于 ERC20 标准的教程，由多个库提供。_
+- [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用。_
+- [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 关于 ERC20 标准的教程，由多个库提供。_
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
