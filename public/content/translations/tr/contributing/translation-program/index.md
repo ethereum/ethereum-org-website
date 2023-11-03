@@ -64,7 +64,7 @@ Görsel olarak daha iyi öğrenenler için, Luka'nın Crowdin'i kurmayı anlatı
 
    Dilinizi listede göremiyor musunuz? [Bir sorun açın](https://github.com/ethereum/ethereum-org-website/issues/new/choose) veya [Discord'da](https://discord.gg/6WX7E97) sorun
 
-   ![Crowdin'deki çevrilmiş ve çevrilmemiş dosyalar](./crowdin-files.png)
+   ![Crowdin'deki çevrilmiş ve çevrilmemiş dosyalar](./how-to-translate/crowdin-files.png)
 
    İçerik grupları hakkında bir not: İlk yayınlanan en yüksek öncelikli içeriği elde etmek için Crowdin içinde "içerik grupları" kullanıyoruz. Bir dili kontrol ettiğinizde, örneğin [Filipince](https://crowdin.com/project/ethereum-org/fil#), içerik grubu klasörlerini görürsünüz ("1. Anasayfa", "2. Ethereum Sayfalarını Kullan" vb.).
 
@@ -75,7 +75,7 @@ Görsel olarak daha iyi öğrenenler için, Luka'nın Crowdin'i kurmayı anlatı
 3. **Çevir**  
    Çevirmek istediğiniz dosyayı seçtikten sonra dosya çevrimiçi düzenleyicide açılacaktır. Crowdin'i daha önce hiç kullanmadıysanız, temel bilgileri gözden geçirmek için bu hızlı rehberi kullanabilirsiniz.
 
-   ![Crowdin çevrimiçi düzenleyici](./online-editor.png)
+   ![Crowdin çevrimiçi düzenleyici](./how-to-translate/online-editor.png)
 
    **_1 – Sol panel_**
 

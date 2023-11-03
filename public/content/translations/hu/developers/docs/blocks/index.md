@@ -14,7 +14,7 @@ A blokkok könnyen feldolgozhatók még a legkezdőbb felhasználóknak is. De e
 
 Hogy biztosítsuk azt, hogy az Ethereum hálózat minden résztvevője egy szinkronizált állapotot tart fenn és megegyezik a pontos tranzakciós történetben, a tranzakciókat blokkokba rendezzük. Ez azt jelenti, hogy tucatnyi (vagy több száz) tranzakció felett van elköteleződés, egyetértés és szinkronizáció egyszerre.
 
-![Egy diagram, mely egy tranzakciót mutat egy blokkban ahogy az állapotot változatja](../../../../../developers/docs/blocks/tx-block.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram, mely egy tranzakciót mutat egy blokkban ahogy az állapotot változatja](./tx-block.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 Az elkötelezettségek elosztásával elegendő időt adunk az összes hálózati résztvevőnek konszenzusra jutni: annak ellenére, hogy a tranzakciós kérelmek másodpercenként több tucatszor fordulnak elő, az Ethereum blokkjai körülbelül tizenöt másodpercenként köteleződnek el.
 
