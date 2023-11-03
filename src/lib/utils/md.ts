@@ -92,7 +92,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers",
     "/developers/tutorials/waffle-test-simple-smart-contract",
     "/developers/tutorials/yellow-paper-evm",
-    // Static (68/68) ✅
+    // Static (66/68)
     "/about",
     "/bridges",
     "/community/code-of-conduct",
@@ -121,8 +121,8 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/style-guide/content-standardization",
     "/contributing/translation-program",
     "/contributing/translation-program/content-buckets",
-    "/contributing/translation-program/faq",
-    "/contributing/translation-program/how-to-translate",
+    // "/contributing/translation-program/faq",
+    // "/contributing/translation-program/how-to-translate",
     "/contributing/translation-program/mission-and-vision",
     "/contributing/translation-program/playbook",
     "/contributing/translation-program/resources",
