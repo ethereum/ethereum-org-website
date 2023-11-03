@@ -1,0 +1,223 @@
+{
+  "users" : [ {
+    "created_at" : "2023-01-25T09:27:32.128Z",
+    "user_aliases" : [ ],
+    "first_name" : "Sandra",
+    "random_bucket" : 5553,
+    "email" : "kubulee.kl@gmail.com",
+    "custom_attributes" : {
+      "gpc_token" : "2gIAAAAbAQAEAAAADgUACEE4U1kvVGorBgAGcJiF-EKL10qmzaOs-CNJobSqAS3ThkUHX__HjuMoJSGVknKocrXISFWFA8dZHkKqZQt4zvTVEe-42c-R7-F3KpktebYQYm-bfKjnBJfHMjZ5_Gl1WFeeCPLjcqCa0_GIVJsB-WBWAUVMyG7K9U63nBQnwOPaz7l-cMe_rHLFS7nQMqt66aNc8QGQBzFjMerwzWshrVWsfHctZl1odTXK1441cqT",
+      "gpc_token2" : "xq_KwuwzLFy3lrByMvN4",
+      "isCkMember" : false,
+      "tax_import_consent_ty20" : false,
+      "tax_import_consent_ty20_mint" : false,
+      "holdout_ixp_uber_fy22" : false,
+      "last_auth_date" : "2023-02-09T15:32:30.574Z",
+      "first_auth_date" : "2023-02-09T15:32:26.385Z",
+      "login_name" : "kubulee",
+      "subscription_credit_score" : "subscribed",
+      "tax_import_consent_ty19" : false,
+      "tax_import_consent_ty18" : false,
+      "home_country" : "US",
+      "subscription_advice_and_offer" : "subscribed",
+      "subscription_feedback_and_surveys" : "subscribed",
+      "subscription_new_feature_and_updates" : "subscribed",
+      "subscription_summary_emails" : "subscribed",
+      "mintProfile_country" : "USA",
+      "fiAccountCounts" : 0,
+      "nonFiAccountCounts" : 0
+    },
+    "custom_events" : [ {
+      "name" : "screen:viewed",
+      "first" : "2023-02-09T15:32:33.620Z",
+      "last" : "2023-02-09T15:32:33.620Z",
+      "count" : 1
+    }, {
+      "name" : "pfm_weekly_summary_event",
+      "first" : "2023-02-13T18:37:11.744Z",
+      "last" : "2023-02-13T18:37:11.744Z",
+      "count" : 1
+    } ],
+    "total_revenue" : 0.0,
+    "push_subscribe" : "subscribed",
+    "email_subscribe" : "subscribed",
+    "apps" : [ {
+      "name" : "Mint Web",
+      "platform" : "Web",
+      "version" : null,
+      "sessions" : 0,
+      "first_used" : null,
+      "last_used" : null
+    } ],
+    "campaigns_received" : [ {
+      "name" : "05669_mint-turbotax-February2023_ad-hoc_product_em_05669_001_002",
+      "api_campaign_id" : "9136d589-31b3-40af-8f35-2988901f16f8",
+      "last_received" : "2023-02-13T20:21:04.487Z",
+      "engaged" : {
+        "opened_email" : true
+      },
+      "in_control" : false,
+      "variation_name" : "Variant 1",
+      "variation_api_id" : "acb29299-09b1-474b-b2d1-9349332a6b48"
+    } ],
+    "canvases_received" : [ {
+      "name" : "49350_ftu-welcome-series-day01_triggered_ftu_em_49350_002",
+      "api_canvas_id" : "08540cb7-7e81-4af8-965c-a5eaa052f5b8",
+      "last_received_message" : "2023-02-11T00:10:20.234Z",
+      "last_entered" : "2023-02-09T15:32:29.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-11T00:10:20.234Z",
+      "steps_received" : [ {
+        "name" : "Timer - Next Day 4pm",
+        "api_canvas_step_id" : "cf916e44-95b3-423f-9ccf-4093b052c01d",
+        "last_received" : "2023-02-11T00:03:24.910Z"
+      }, {
+        "name" : "Post-Timer Filters",
+        "api_canvas_step_id" : "fb38b63b-bd29-4e41-aa17-1a8d08525c6b",
+        "last_received" : "2023-02-11T00:10:12.966Z"
+      }, {
+        "name" : "day01-fi-no-app-no-control_em_49350_002_007",
+        "api_canvas_step_id" : "fe68c5d3-9b45-4c47-a555-814e0a18102c",
+        "last_received" : "2023-02-11T00:10:20.234Z"
+      } ]
+    }, {
+      "name" : "49350_ftu-welcome-series-day08_triggered_ftu_em_49350_005",
+      "api_canvas_id" : "de978b0e-cce2-47a0-97b0-e74b5fb128df",
+      "last_received_message" : null,
+      "last_entered" : "2023-02-09T15:32:29.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "steps_received" : [ ]
+    }, {
+      "name" : "49350_ftu-welcome-series-day03_triggered_ftu_em_49350_003",
+      "api_canvas_id" : "d4559022-9d22-411b-8c89-f76bf6ab6e6e",
+      "last_received_message" : "2023-02-12T15:32:50.585Z",
+      "last_entered" : "2023-02-09T15:32:29.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-12T15:32:50.585Z",
+      "steps_received" : [ {
+        "name" : "Timer - 3 Days",
+        "api_canvas_step_id" : "d62a42b0-394e-4f1c-a1b1-2afe2dd11b8b",
+        "last_received" : "2023-02-12T15:32:32.606Z"
+      }, {
+        "name" : "Post-Timer Filters",
+        "api_canvas_step_id" : "49cce66f-b189-4c97-bec3-9bba7dee408d",
+        "last_received" : "2023-02-12T15:32:41.929Z"
+      }, {
+        "name" : "day03-cs-no-app-no-control_em_49350_003_007",
+        "api_canvas_step_id" : "b588afed-0d4a-4034-8936-18deffd0596b",
+        "last_received" : "2023-02-12T15:32:50.585Z"
+      } ]
+    }, {
+      "name" : "49350_ftu-welcome-series-day14_triggered_ftu_em_49350_006",
+      "api_canvas_id" : "204d1947-6082-4b55-9500-50aa47a5fa3c",
+      "last_received_message" : null,
+      "last_entered" : "2023-02-09T15:32:30.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "steps_received" : [ ]
+    }, {
+      "name" : "49350_ftu-welcome-series-day05_triggered_ftu_em_49350_004",
+      "api_canvas_id" : "578eb704-fca5-4c88-bfdb-1838b7685c10",
+      "last_received_message" : "2023-02-14T15:32:51.936Z",
+      "last_entered" : "2023-02-09T15:32:30.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-14T15:32:51.936Z",
+      "steps_received" : [ {
+        "name" : "Timer - 5 Days",
+        "api_canvas_step_id" : "570b7187-19bd-4137-91da-f1248770ff15",
+        "last_received" : "2023-02-14T15:32:33.581Z"
+      }, {
+        "name" : "Post-Timer Filters",
+        "api_canvas_step_id" : "bb093e7f-be25-4f56-9ac2-c251371cd99d",
+        "last_received" : "2023-02-14T15:32:41.833Z"
+      }, {
+        "name" : "day05-fi-no-app-no-control_em_49350_004_007",
+        "api_canvas_step_id" : "b5916237-e721-4f18-afe4-16b498979b58",
+        "last_received" : "2023-02-14T15:32:51.936Z"
+      } ]
+    }, {
+      "name" : "49350_ftu-welcome-series-day00_triggered_ftu_em_49350_001",
+      "api_canvas_id" : "f2744bcd-d695-4e94-a516-717c56290064",
+      "last_received_message" : "2023-02-09T15:42:53.284Z",
+      "last_entered" : "2023-02-09T15:32:30.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-09T15:42:53.284Z",
+      "steps_received" : [ {
+        "name" : "Timer - 10 minutes",
+        "api_canvas_step_id" : "26297420-8ae4-49ad-b0e2-7cca02baf8c4",
+        "last_received" : "2023-02-09T15:42:32.983Z"
+      }, {
+        "name" : "Post-Timer Filters",
+        "api_canvas_step_id" : "eb92c83a-52f5-416b-91ab-5a7a7afc7f31",
+        "last_received" : "2023-02-09T15:42:44.090Z"
+      }, {
+        "name" : "day00-app-no-control_em_49350_001_003",
+        "api_canvas_step_id" : "e6a49c5a-fe4d-4055-98c9-24594729d6e0",
+        "last_received" : "2023-02-09T15:42:53.284Z"
+      } ]
+    }, {
+      "name" : "03926_alert-weekly-summary-full-state_triggered_alert_em_03926_003",
+      "api_canvas_id" : "fe2c6cd0-00eb-408a-bc52-632be66e0c66",
+      "last_received_message" : null,
+      "last_entered" : "2023-02-13T18:37:15.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-13T20:46:25.051Z",
+      "steps_received" : [ {
+        "name" : "full-state_em_03926_003_001",
+        "api_canvas_step_id" : "2fccdab5-8875-47aa-8250-8ad18af03679",
+        "last_received" : "2023-02-13T20:46:25.051Z"
+      } ]
+    }, {
+      "name" : "03926_alert-weekly-summary-zero-state_triggered_alert_em_03926_001",
+      "api_canvas_id" : "9d4d4a99-3966-49cf-b806-4200458b5dd9",
+      "last_received_message" : "2023-02-13T20:33:46.871Z",
+      "last_entered" : "2023-02-13T18:50:04.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-13T20:33:46.871Z",
+      "steps_received" : [ {
+        "name" : "zero-state_em_03926_001_001",
+        "api_canvas_step_id" : "2998eb98-33f6-4137-b257-641744d017fc",
+        "last_received" : "2023-02-13T20:33:46.871Z"
+      } ]
+    }, {
+      "name" : "03926_alert-weekly-summary-null-state_triggered_alert_em_03926_002",
+      "api_canvas_id" : "931fa21c-4069-4df8-ae50-c454de05afdc",
+      "last_received_message" : null,
+      "last_entered" : "2023-02-13T18:50:06.000+00:00",
+      "variation_name" : "Variant 1",
+      "in_control" : false,
+      "is_in_control" : false,
+      "last_entered_control_at" : null,
+      "last_exited" : "2023-02-13T20:01:17.519Z",
+      "steps_received" : [ {
+        "name" : "null-state_em_03926_002_001",
+        "api_canvas_step_id" : "0dda2b64-107d-492f-8538-e9d16afb78a5",
+        "last_received" : "2023-02-13T20:01:17.519Z"
+      } ]
+    } ]
+  } ],
+  "message" : "success"
+}
