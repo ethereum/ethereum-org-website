@@ -24,8 +24,7 @@ import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-// TODO: Implement FileContribtorsGitHub
-// import GitHubContributors from "@/components/FileContributorsGitHub"
+import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import {
@@ -182,6 +181,7 @@ export const TutorialLayout = ({
   frontmatter,
   tocItems,
   timeToRead,
+  lastUpdatedDate,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
@@ -223,21 +223,25 @@ export const TutorialLayout = ({
           />
           {children}
           {frontmatter.lang !== "en" ? (
-            <Text>Crowdin contributor</Text>
+            // TODO: Implement CrowdinContributors
+            <>
+              <Text>Crowdin contributor</Text>
+              {/* <CrowdinContributors
+                relativePath={relativePath}
+                editPath={absoluteEditPath}
+                //@ts-ignore
+                langContributors={allCombinedTranslatorsJson.nodes}
+              /> */}
+            </>
           ) : (
-            // TODO: Implement CrowdinContributors after intl is implemented
-            // <CrowdinContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            //   //@ts-ignore
-            //   langContributors={allCombinedTranslatorsJson.nodes}
-            // />
-            <Text>Github contributor</Text>
-            // TODO: Implement GitHubContributors
-            // <GitHubContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            // />
+            <>
+              <Text>Github contributor</Text>
+              <GitHubContributors
+                relativePath={relativePath}
+                editPath={absoluteEditPath}
+                lastUpdatedDate={lastUpdatedDate!}
+              />
+            </>
           )}
           <FeedbackCard />
         </ContentContainer>
