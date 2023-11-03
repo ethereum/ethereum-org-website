@@ -81,7 +81,6 @@ export interface IProps extends FlexProps {
 }
 
 const FileContributors: React.FC<IProps> = ({
-  editPath,
   contributors,
   loading,
   error,
@@ -181,26 +180,6 @@ const FileContributors: React.FC<IProps> = ({
               See contributors
             </Button>
           </Skeleton>
-          {editPath && (
-            <ButtonLink
-              to={editPath}
-              hideArrow
-              variant="outline"
-              hideBelow="lg"
-            >
-              <Flex
-                h="100%"
-                alignItems="center"
-                justifyContent="center"
-                gap={2}
-              >
-                <Icon as={FaGithub} fontSize="2xl" />
-                <span>
-                  <Translation id="edit-page" />
-                </span>
-              </Flex>
-            </ButtonLink>
-          )}
         </VStack>
       </Flex>
     </>

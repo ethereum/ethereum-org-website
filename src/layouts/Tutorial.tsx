@@ -238,7 +238,6 @@ export const TutorialLayout = ({
               <Text>Github contributor</Text>
               <GitHubContributors
                 relativePath={relativePath}
-                editPath={absoluteEditPath}
                 lastUpdatedDate={lastUpdatedDate!}
               />
             </>
