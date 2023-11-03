@@ -6,7 +6,7 @@ const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
 const unicodeEmojiRegEx = /\\u{[0-9A-F]+}/gi
 const unicodeIntlRegEx = /\\u[0-9A-F]+/gi
 const compiledSourceHeadingRegEx =
-  /mdx\("h([2-4])",e\(.+?id:"([^"]+)"}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
+  /mdx\("h([2-4])".+?\(.+?id:"([^"]+)"\}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
 const mdxFncRegEx = /mdx\(.+?\)/g
 const stringRegEx = /"([^"]+)"/g
 
