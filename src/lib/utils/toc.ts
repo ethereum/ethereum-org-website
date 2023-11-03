@@ -6,9 +6,11 @@ const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
 const unicodeEmojiRegEx = /\\u{[0-9A-F]+}/gi
 const unicodeIntlRegEx = /\\u[0-9A-F]+/gi
 const compiledSourceHeadingRegEx =
-  /mdx\("h([2-4])".+?\(.+?id:"([^"]+)"\}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
-const mdxFncRegEx = /mdx\(.+?\)/g
+  /mdx\("h([2-4])",\w+?\(.+?\{id:"([^"]+)"\}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
+const mdxShallowFncRegEx = /mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)/g
 const stringRegEx = /"([^"]+)"/g
+const csvCommaRegEx =
+  /(?<=mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)|"([^"]+)"),(?=mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)|"([^"]+)")/g
 
 /**
  * Creates a slug from a string (Hello world => hello-world)
@@ -115,6 +117,26 @@ const addHeadingsAsItems = (
 }
 
 /**
+ * Takes in a match result for a single heading, and parses out the depth, id, and label
+ * The label is sanitized to simplify any components (ie, `strong`, `code`, `Emoji`, etc)
+ * to their string argument. For example, `strong` tags will reduce to child text, and Emoji's
+ * have no string argument and are skipped. Parts are joined to form the heading label.
+ * @param headingMatch RegExpMatchArray for a single heading match
+ * @returns `SourceHeadingItem` object: { depth: number, id: string, label: string }
+ */
+const processHeadingMatch = (
+  headingMatch: RegExpMatchArray
+): SourceHeadingItem => {
+  const [_, depth, id, rest] = headingMatch
+  const label = rest
+    .slice(1) // Remove leading comma from match
+    .replaceAll(csvCommaRegEx, "") // Remove top-level commas (skip those between quotes)
+    .replaceAll(mdxShallowFncRegEx, (...match) => match[3] ?? "") // Reduce mdx() functions to its string argument if available
+    .replaceAll(stringRegEx, (...match) => match[1] ?? "") // Remove quotes from string arguments
+  return { depth: +depth, id, label }
+}
+
+/**
  * Generates a Table of Contents from a compiled page source string, after markdown has been parsed into DOM elements
  * Parses all h2/3/4 elements into an array of `SourceHeadingItem` objects using regex matching
  * Note: each file should only have one h1, and it is not included in the ToC
@@ -129,14 +151,6 @@ export const generateTableOfContents = (
 ): Array<ToCItem> => {
   const matchAll = compiledSource.matchAll(compiledSourceHeadingRegEx)
   const matches = Array.from(matchAll).slice(0)
-  const headings: Array<SourceHeadingItem> = matches.map((headingMatch) => {
-    const [_, depth, id, fullLabel] = headingMatch
-    const fullLabelNoFunctions = fullLabel.replaceAll(mdxFncRegEx, "")
-    const matchAllStrings = fullLabelNoFunctions.matchAll(stringRegEx)
-    const label = Array.from(matchAllStrings)
-      .map(([_, frag]) => frag)
-      .join("")
-    return { depth: +depth, id, label }
-  })
+  const headings: Array<SourceHeadingItem> = matches.map(processHeadingMatch)
   return addHeadingsAsItems(headings)
 }
