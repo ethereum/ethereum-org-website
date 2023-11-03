@@ -8,6 +8,9 @@ const { definePartsStyle, defineMultiStyleConfig } =
 const $arrowBg = cssVar("popper-arrow-bg")
 
 const baseStyle = definePartsStyle({
+  popper: {
+    zIndex: "popover",
+  },
   content: {
     maxW: 48,
     p: 2,
@@ -18,13 +21,11 @@ const baseStyle = definePartsStyle({
     cursor: "default",
     textAlign: "center",
     userSelect: "none",
-    zIndex: "popover",
     outline: 0,
     boxShadow: `0px 0px 16px 0px #00000040`,
   },
   arrow: {
     [$arrowBg.variable]: "colors.background.highlight",
-    zIndex: "popover",
   },
 })
 
