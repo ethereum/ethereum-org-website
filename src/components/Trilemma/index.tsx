@@ -62,11 +62,11 @@ const Trilemma: React.FC<IProps> = () => {
           <Text>
             <Translation id="page-roadmap-vision-trilemma-p-2" />
           </Text>
-          <Text fontWeight={600} hideFrom="lg">
+          <Text fontWeight={600} hideFrom={lgBp}>
             <Translation id="page-roadmap-vision-trilemma-modal-tip" />:
           </Text>
         </Box>
-        <Card {...cardDetail} minH="300px" hideBelow="lg" />
+        <Card {...cardDetail} mt={8} minH="300px" hideBelow={lgBp} />
       </Stack>
       <Hide above="lg">
         <Drawer
