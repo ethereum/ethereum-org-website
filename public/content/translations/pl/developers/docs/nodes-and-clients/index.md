@@ -20,7 +20,7 @@ Możesz zobaczyć widok sieci Ethereum w czasie rzeczywistym, patrząc na [mapę
 
 Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#execution-clients) istnieje w wielu językach. Cechą wspólną tych implementacji klienckich jest to, że wszystkie są zgodne z formalną specyfikacją. Ta specyfikacja określa, jak działa sieć Ethereum i blockchain.
 
-![Klient Eth1x](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
+![Klient Eth1x](./client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
 
 ## Typy węzłów {#node-types}
 
@@ -58,7 +58,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 - Nie będziesz musiał ujawniać swoich adresów i sald do przypadkowych węzłów. Wszystko można sprawdzić z własnym klientem.
 - Twoja zdecentralizowana aplikacja może być bezpieczniejsza i bardziej prywatna, jeśli używasz własnego węzła. [MetaMask](https://metamask.io), [MyEtherWallet](https://myetherwallet.com) i kilka innych portfeli można łatwo skierować na swój własny lokalny węzeł.
 
-![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](../../../../../developers/docs/nodes-and-clients/nodes.png)
+![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](./nodes.png)
 
 ### Korzyści dla sieci {#network-benefits}
 
@@ -197,9 +197,9 @@ W zależności od tego, które oprogramowanie i tryb synchronizacji mają być u
 | Nethermind      | 200 GB+                               | 3 TB+                          |
 | Besu            | 750 GB+                               | 4 TB+                          |
 
-![Wykres pokazujący, że ilość GB potrzebna do pełnej synchronizacji ma tendencję wzrostową](../../../../../developers/docs/nodes-and-clients/full-sync.png)
+![Wykres pokazujący, że ilość GB potrzebna do pełnej synchronizacji ma tendencję wzrostową](./full-sync.png)
 
-![Wykres pokazujący, że ilość GB potrzebna do synchronizacji archiwum ma tendencję wzrostową](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
+![Wykres pokazujący, że ilość GB potrzebna do synchronizacji archiwum ma tendencję wzrostową](./archive-sync.png)
 
 Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowywania. Aby uzyskać najbardziej aktualne dane dla Geth i Parity, zobacz [pełną synchronizację danych](https://etherscan.io/chartsync/chaindefault) i [archiwum danych synchronizacji](https://etherscan.io/chartsync/chainarchive).
 
