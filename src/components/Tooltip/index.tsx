@@ -57,7 +57,7 @@ const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
             {children}
           </Center>
         </PopoverTrigger>
-        <PopoverContent>
+        <PopoverContent minW={192}>
           <PopoverArrow />
           <PopoverBody>{content}</PopoverBody>
         </PopoverContent>
