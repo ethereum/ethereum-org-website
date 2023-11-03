@@ -192,7 +192,7 @@ An example workflow in this case would be:
 
 Read more about translation workflows:
 
-[Content rules on the five phrases of the translation workflow](https://contentrules.com/creating-translation-workflow/)
+[Content rules on the five phases of the translation workflow](https://contentrules.com/creating-translation-workflow/)
 
 [Smartling on what is translation workflow management](https://www.smartling.com/resources/101/what-is-translation-workflow-management/)
 

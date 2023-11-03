@@ -8379,7 +8379,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/45835846?v=4",
       "profile": "https://pandapip1.com/",
       "contributions": [
-        "doc"
+        "doc",
+        "ideas"
       ]
     },
     {
@@ -10648,6 +10649,69 @@
       "profile": "http://www.scienft.com",
       "contributions": [
         "ideas"
+      ]
+    },
+    {
+      "login": "Wilson-Wu1",
+      "name": "Wilson Wu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41039035?v=4",
+      "profile": "https://www.linkedin.com/in/wilson-wu-2021/",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "fvaysh",
+      "name": "VAS",
+      "avatar_url": "https://avatars.githubusercontent.com/u/126754021?v=4",
+      "profile": "https://github.com/fvaysh",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "costgallo",
+      "name": "Costanza",
+      "avatar_url": "https://avatars.githubusercontent.com/u/49433698?v=4",
+      "profile": "https://github.com/costgallo",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "joaolago1113",
+      "name": "joao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/22820692?v=4",
+      "profile": "https://github.com/joaolago1113",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "rgb2hsl",
+      "name": "Eugene",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3310192?v=4",
+      "profile": "http://p2p.org",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "g0rbe",
+      "name": "Dániel Görbe",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36860942?v=4",
+      "profile": "http://www.danielgorbe.com",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "s-crypt",
+      "name": "s-crypt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41712656?v=4",
+      "profile": "https://blog.insubli.me",
+      "contributions": [
+        "content"
       ]
     }
   ],

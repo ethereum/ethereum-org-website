@@ -56,7 +56,6 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
           <Flex gap={2} alignItems="center">
             <Text
               color={isCompleted ? "body.medium" : "text"}
-              fontWeight="bold"
               _before={{
                 content: 'counter(list-counter) ". "',
               }}
@@ -65,9 +64,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
             </Text>
 
             {/* Show green tick if quizz was completed only */}
-            <Box display={isCompleted ? "flex" : "none"}>
-              <GreenTickIcon />
-            </Box>
+            {isCompleted && <GreenTickIcon />}
           </Flex>
 
           {/* Labels */}
@@ -86,7 +83,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
         {/* Start Button */}
         <Box w={{ base: "full", lg: "auto" }}>
           <Button
-            variant="outline-color"
+            variant="outline"
             w={{ base: "full", lg: "auto" }}
             onClick={handleStart}
           >

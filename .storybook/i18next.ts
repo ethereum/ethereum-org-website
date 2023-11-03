@@ -15,6 +15,7 @@ const ns = [
   "glossary",
   "page-about",
   "page-index",
+  "page-learn",
   "page-upgrades",
   "page-developers-index",
 ]
