@@ -1,9 +1,8 @@
-import React, { ComponentProps, ComponentPropsWithRef } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -24,7 +23,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
@@ -48,10 +47,11 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 import {
   MobileButton,
   MobileButtonDropdown,
@@ -235,7 +235,7 @@ const components = {
   YouTube,
   ExpandableCard,
   MergeInfographic,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   GlossaryTooltip,
 }
 
@@ -271,21 +271,22 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const Image = chakra(GatsbyImage, {
-  baseStyle: {
-    flex: "1 1 100%",
-    maxW: "816px",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    alignSelf: "flex-end",
-    ml: 8,
-    right: 0,
-    bottom: 0,
-    w: "full",
-    h: "full",
-    overflow: "initial",
-  },
-})
+const Image: GatsbyImageType = (props) => (
+  <GatsbyImage
+    flex="1 1 100%"
+    maxW="816px"
+    backgroundSize="cover"
+    backgroundRepeat="no-repeat"
+    alignSelf="flex-end"
+    ml="8"
+    right={0}
+    bottom={0}
+    w="full"
+    h="full"
+    overflow="initial"
+    {...props}
+  />
+)
 
 const MoreContent = (props: ChildOnlyProp & { to: string }) => (
   <Flex
@@ -381,7 +382,7 @@ const UpgradePage = ({
     <Container>
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <Box>
             <List listStyleType="disc">

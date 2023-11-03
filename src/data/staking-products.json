@@ -249,11 +249,11 @@
       "url": "https://launchnodes.com/",
       "audits": [],
       "minEth": 32,
-      "isFoss": false,
+      "isFoss": true,
       "hasBugBounty": false,
       "isTrustless": true,
       "isPermissionless": false,
-      "multiClient": false,
+      "multiClient": true,
       "easyClientSwitching": false,
       "platforms": ["Linux", "macOS", "Windows"],
       "ui": ["CLI", "AWS", "Azure"],
@@ -357,6 +357,39 @@
   ],
   "saas": [
     {
+      "name": "ChainLabo",
+      "imageName": "ChainLabo",
+      "hue": 248,
+      "launchDate": "2023-04-01",
+      "url": "https://www.chainlabo.com/",
+      "audits": [],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 200,
+      "monthlyFeeUnit": "CHF",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 100,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/3xmHwXxk",
+        "twitter": "https://twitter.com/ChainLabo",
+        "github": "https://github.com/ChainLabo",
+        "telegram": "https://web.telegram.org/a/#-1919442359"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ChainLabo go to link"
+      }
+    },
+    {
       "name": "stakefish",
       "imageName": "Stakefish",
       "hue": 73,
@@ -401,6 +434,49 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked stakefish go to link"
+      }
+    },
+    {
+      "name": "P2P.org",
+      "imageName": "P2P",
+      "hue": 227,
+      "launchDate": "2023-01-10",
+      "url": "https://p2p.org/networks/ethereum/",
+      "audits": [
+        {
+          "name": "Mixbytes (v1)",
+          "url": "https://github.com/mixbytes/audits_public/blob/79cd8153bfb6098227b43dfba8d061881a94a248/P2P.org/ETH2%20Depositor%20%26%20ETH%20Staking%20Fee%20Distributor%20(v.1)/P2P.org_ETH2%20Depositor%20%26%20ETH%20Staking%20Fee%20Distributor%20Smart%20Contracts%20Audit%20Report.pdf"
+        },
+        {
+          "name": "Mixbytes (v2)",
+          "url": "https://github.com/mixbytes/audits_public/blob/79cd8153bfb6098227b43dfba8d061881a94a248/P2P.org/ETH2%20Depositor%20%26%20ETH%20Staking%20Fee%20Distributor%20(v.2)/ETH2%20Depositor%20%26%20ETH%20Staking%20Fee%20Distributor%20Security%20Audit%20Report%20(v.2).pdf"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 5,
+      "monthlyFeeUnit": "%",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 50,
+      "pctMajorityConsensusClient": 30,
+      "isSelfCustody": false,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/company/p2p-org/",
+        "twitter": "https://twitter.com/P2Pvalidator",
+        "telegram": "https://t.me/P2Pstaking",
+        "github": "https://github.com/p2p-org",
+        "youtube": "https://www.youtube.com/channel/UC9pRzyJx5YrUNfmg1vLZ-bQ/"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked P2P (saas) go to link"
       }
     },
     {
@@ -635,6 +711,42 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Sensei Node go to link"
+      }
+    },
+    {
+      "name": "RockX Staking",
+      "imageName": "RockX",
+      "hue": 224,
+      "launchDate": "2023-05-23",
+      "url": "https://www.rockx.com/staking/ethereum",
+      "audits": [
+        {
+          "name": "PeckShield",
+          "url": "https://github.com/RockX-SG/direct_staking_contracts/blob/main/PeckShield-Audit-Report-RockX-DirectStaking-v1.0.pdf"
+        }
+      ],
+      "minEth": 32,
+      "monthlyFee": "20",
+      "monthlyFeeUnit": "% execution rewards",
+      "isFoss": true,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 100,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": false,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/YJzs4UwsTp",
+        "twitter": "https://twitter.com/rockx_official",
+        "linkedin": "https://www.linkedin.com/company/rockx-official",
+        "youtube": "https://www.youtube.com/channel/UCur9s16EemOPuY_YAXhtG9A"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked RockX go to link"
       }
     }
   ],

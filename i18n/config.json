@@ -248,6 +248,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "kn",
+    "crowdinCode": "kn",
+    "name": "Kannada",
+    "localName": "ಕನ್ನಡ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ko",
     "crowdinCode": "ko",
     "name": "Korean",
@@ -404,6 +412,14 @@
     "crowdinCode": "ta",
     "name": "Tamil",
     "localName": "தமிழ்",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "tk",
+    "crowdinCode": "tk",
+    "name": "Turkmen",
+    "localName": "türkmen",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

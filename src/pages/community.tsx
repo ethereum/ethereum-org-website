@@ -8,7 +8,6 @@ import {
   Text,
   useTheme,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
@@ -17,11 +16,13 @@ import Callout from "../components/Callout"
 import Card from "../components/Card"
 import ButtonLink, {
   IProps as IButtonLinkProps,
-} from "../components/ButtonLink"
+} from "../components/Buttons/ButtonLink"
+import { HubHero, type HubHeroProps } from "../components/Hero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
-import PageHero from "../components/PageHero"
 import FeedbackCard from "../components/FeedbackCard"
+
+import GatsbyImage from "../components/GatsbyImage"
 import OldHeading from "../components/OldHeading"
 
 import { getImage } from "../utils/image"
@@ -142,17 +143,9 @@ interface IGetInvolvedCard {
 
 const CommunityPage = ({
   data,
-  location,
 }: PageProps<Queries.CommunityPageQuery, Context>) => {
   const { t } = useTranslation()
   const theme = useTheme()
-  const heroContent = {
-    title: t("page-community-hero-title"),
-    header: t("page-community-hero-header"),
-    subtitle: t("page-community-hero-subtitle"),
-    image: getImage(data.enterprise)!,
-    alt: t("page-community-hero-alt"),
-  }
 
   const cards: Array<ICard> = [
     {
@@ -203,13 +196,20 @@ const CommunityPage = ({
     },
   ]
 
+  const heroContent: HubHeroProps = {
+    title: t("page-community-hero-title"),
+    header: t("page-community-hero-header"),
+    description: t("page-community-hero-subtitle"),
+    heroImgSrc: getImage(data.heroImage)!,
+  }
+
   return (
     <Page>
       <PageMetadata
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
-      <PageHero isReverse content={heroContent} />
+      <HubHero {...heroContent} />
       <Divider />
       <Flex
         bg="homeBoxTurquoise"
@@ -268,8 +268,7 @@ const CommunityPage = ({
               </Subtitle>
             </Box>
             <ImageContainer>
-              <Image
-                as={GatsbyImage}
+              <GatsbyImage
                 w="full"
                 bgSize="cover"
                 bg="no-repeat 50px"
@@ -331,8 +330,7 @@ const CommunityPage = ({
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.ethereum)!}
               alt={t("page-community-open-source-image-alt")}
@@ -379,8 +377,7 @@ const CommunityPage = ({
             </Flex>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.finance)!}
               alt={t("page-index-internet-image-alt")}
@@ -414,8 +411,7 @@ const CommunityPage = ({
             </Box>
           </FeatureContent>
           <ImageContainer>
-            <Image
-              as={GatsbyImage}
+            <GatsbyImage
               w="full"
               image={getImage(data.hackathon)!}
               alt={t("page-community-support-alt")}
@@ -494,10 +490,10 @@ export const query = graphql`
         }
       }
     }
-    enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/community-hero.png" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 624
+          width: 1504
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

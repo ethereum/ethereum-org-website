@@ -46,7 +46,7 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 如果你想成为以太坊改进提案编辑人员，请查看 [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069)。
 
-以太坊改进提案编辑人员决定一个提议何时可以成为以太坊改进提案，并帮助以太坊改进提案创作者们推进他们的提议。 以太坊改进提案编辑人员和社区之间的会议由[以太坊牧猫人组织](https://ethereumcatherders.com/)协助组织（请参阅 [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)）。
+以太坊改进提案编辑人员决定一个提议何时可以成为以太坊改进提案，并帮助以太坊改进提案创作者们推进他们的提议。 以太坊改进提案编辑人员和社区之间的会议由[以太坊牧猫人组织](https://www.ethereumcatherders.com/)协助组织（请参阅 [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)）。
 
 完整的标准化流程和图表在 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) 中描述
 

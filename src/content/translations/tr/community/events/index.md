@@ -2,6 +2,7 @@
 title: Ethereum etkinlikleri
 description: Ethereum topluluğuna nasıl dahil olunur?
 lang: tr
+hideEditButton: true
 ---
 
 ## Gelecek etkinlikler {#events}

@@ -30,15 +30,9 @@ El participante individual recibe las recompensas directamente desde el protocol
 La participación en solitario conlleva más responsabilidad, pero proporciona el máximo control posible sobre los fondos y la configuración para realizarla.
 
 <CardGrid>
-  <Card title="Gane ETH recién salidos" emoji="💸">
-    Gane recompensas expresadas en ETH directamente desde el protocolo cuando su validador esté en línea, sin que ningún intermediario cobre comisiones.
-  </Card>
-  <Card title="Control completo" emoji="🎛️">
-    Conserve sus propias claves. Elija la combinación de clientes y hardware que le permita minimizar su riesgo y contribuir mejor a la salud y seguridad de la red. Los servicios de participación mediante terceros toman implícitamente estas decisiones por usted, y no siempre deciden las opciones más seguras.
-  </Card>
-  <Card title="Seguridad de la red" emoji="🔐">
-    La participación individual es el modo de apuesta con mayor impacto. Al ejecutar un validador en su propio hardware en casa, refuerza la solidez, la descentralización y la seguridad del protocolo Ethereum.
-  </Card>
+  <Card title="Gane ETH recién salidos" emoji="💸" description="Earn ETH-denominated rewards directly from the protocol when your validator is online, without any middlemen taking a cut." />
+  <Card title="Control completo" emoji="🎛️" description="Keep your own keys. Choose the combination of clients and hardware that allows you to minimize your risk and best contribute to the health and security of the network. Third-party staking services make these decisions for you, and they don't always make the safest choices." />
+  <Card title="Seguridad de la red" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
 ## Consideraciones antes de hacer una participación individual {#considerations-before-staking-solo}
@@ -46,31 +40,36 @@ La participación en solitario conlleva más responsabilidad, pero proporciona e
 Por mucho que deseemos que la participación individual fuera accesible y libre de riesgos para todos, esta no es la realidad. Hay algunas consideraciones prácticas y serias que debemos tener en cuenta antes de elegir la participación individual de su ETH.
 
 <InfoGrid>
-  <ExpandableCard title="Lectura obligatoria" eventCategory="SoloStaking" eventName="clicked required reading">
-  Al operar su propio nodo debería invertir tiempo en aprender cómo utilizar el software que ha elegido. Esto implica leer la documentación pertinente y estar en sintonía con los canales de comunicación de los equipos de desarrollo relacionados.
+<ExpandableCard title="Lectura obligatoria" eventCategory="SoloStaking" eventName="clicked required reading">
+Al operar su propio nodo debería invertir tiempo en aprender cómo utilizar el software que ha elegido. Esto implica leer la documentación pertinente y estar en sintonía con los canales de comunicación de los equipos de desarrollo relacionados.
 
 Cuanto más entienda sobre el software que está ejecutando y cómo funciona la prueba de participación, menos riesgo tendrá como participante, y le será más fácil solucionar cualquier incidente que pueda surgir en su función como operador de nodos.
 </ExpandableCard>
+
 <ExpandableCard title="Dominio informático" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 La configuración del nodo requiere un nivel de comodidad razonable al trabajar con ordenadores, aunque las nuevas herramientas lo facilitan con el tiempo. Entender la interfaz de la línea de comandos es útil, pero no estrictamente necesario.
 
 También requiere una configuración de hardware muy básica, y cierta comprensión de las especificaciones mínimas recomendadas.
 </ExpandableCard>
-<ExpandableCard title="Gestión segura de claves" eventCategory="SoloStaking" eventName="clicked secure key management">
-De la misma manera que las claves privadas protegen su dirección de Ethereum, necesitará generar claves específicamente para su validador. Debe entender cómo mantener seguras y protegidas todas las frases de recuperación y las claves privadas.
 
-[Seguridad y prevención de estafas en Ethereum](/security/)
+<ExpandableCard title="Gestión segura de claves" eventCategory="SoloStaking" eventName="clicked secure key management">
+De la misma manera que las claves privadas protegen su dirección de Ethereum, necesitará generar claves específicamente para su validador. Debe entender cómo proteger cualquier frase semilla o clave secreta de forma efectiva.{' '}
+
+<a href="/security/">Seguridad y prevención de estafa Ethereum</a>
 </ExpandableCard>
+
 <ExpandableCard title="Mantenimiento" eventCategory="SoloStaking" eventName="clicked maintenance">
 El hardware ocasionalmente falla, en las conexiones de red suceden desconexiones, y el software cliente ocasionalmente necesita actualizarse. El mantenimiento de nodos es inevitable y de vez en cuando requerirá tu atención. Conviene que esté al tanto de cualquier actualización de red prevista, o de otras actualizaciones críticas del software cliente.
 </ExpandableCard>
+
 <ExpandableCard title="Tiempo de funcionamiento fiable" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 Sus recompensas son proporcionales al tiempo que su validador esté en línea y certifique correctamente. El tiempo de inactividad incurre en penalizaciones proporcionales a los validadores que estén desconectados al mismo tiempo, pero <a href="#faq"> no ocasiona recortes</a>. El ancho de banda también importa, ya que las recompensas disminuyen por las certificaciones que no se reciben a tiempo. Los requisitos variarán, pero se recomienda un mínimo de 10 Mb/s de descarga y carga.
 </ExpandableCard>
+
 <ExpandableCard title="Riesgo de «recorte»" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Distinta a las penalizaciones por inactividad por estar fuera de línea, <em>el recorte</em> es una penalización mucho más grave reservada para infracciones maliciosas. Al ejecutar un cliente minoritario con sus claves cargadas en una sola máquina cada vez, se reduce el riesgo de ser penalizado por recortes. Dicho esto, todos los participantes deben ser conscientes de los riesgos de los recortes.
 
-[Más información sobre el ciclo de vida del validador](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/)
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Más sobre recortes y el ciclo de vida del validador</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -104,21 +103,21 @@ Los indicadores de atributos a continuación indican las fortalezas o debilidade
 
 Hay una variedad de opciones disponibles para ayudarle con su configuración. Utilice los indicadores de arriba para guiarle a través de las herramientas que se muestran a continuación.
 
-<InfoBanner emoji="⚠️" isWarning>
-Por favor, tenga en cuenta la importancia de elegir un <a href="/developers/docs/nodes-and-clients/client-diversity/">cliente minoritario</a> ya que mejora la seguridad de la red y limita su riesgo. Las herramientas que le permiten configurar un cliente minoritario se expresan como <em style="text-transform: uppercase;">"multi-cliente."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Herramientas de nodo
 
 <StakingProductsCardGrid category="nodeTools" />
 
+Por favor, tenga en cuenta la importancia de elegir un [cliente minoritario](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Las herramientas que le permiten configurar un cliente minoritario se expresan como <em style={{ textTransform: "uppercase" }}>«multi-cliente».</em>
+
 #### Generadores de claves
 
-Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de participación](https://github.com/ethereum/staking-deposit-cli/) para ayudar con la generación de llaves.
+Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de participación](https://github.com/ethereum/staking-deposit-cli/) para ayudar con la generación de claves.
 
 <StakingProductsCardGrid category="keyGen" />
 
-¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de lista de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
+¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
 ## Explorar guías de participación individual {#staking-guides}
 
@@ -130,7 +129,7 @@ Estas son algunas de las preguntas más comunes sobre la participación que vale
 
 <ExpandableCard title="¿Qué es un validador?">
 
-Un _validador_ es una entidad virtual que vive en Ethereum y participa en el consenso del protocolo Ethereum. Los validadores están representados por un saldo, una clave pública y otras propiedades. Un _cliente validador_ es un programa que actúa en nombre del validador al mantener y utilizar su clave privada. Un solo cliente validador puede mantener muchos pares de claves y controlar muchos validadores.
+Un <em>validador</em> es una entidad virtual que vive en Ethereum y participa en el consenso del protocolo Ethereum. Los validadores están representados por un saldo, una clave pública y otras propiedades. Un <em>cliente validador</em> es el software que actúa en nombre del validador al mantener y utilizar su clave privada. Un solo cliente validador puede mantener muchos pares de claves y controlar muchos validadores.
 
 </ExpandableCard>
 
@@ -159,8 +158,10 @@ Ejecutar un cliente de supermayoría (cualquier cliente utilizado por más de 2/
 
 Errores equivalentes en un cliente minoritario <em>nunca finalizarán (bloques) </em> y, por lo tanto, nunca resultarían en un voto surround («envolvente»), y simplemente resultaría en penalizaciones por inactividad, <em>no de «recorte»</em>.
 
-<p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Más información sobre la importancia de ejecutar un cliente minoritario.</a></p>
-<p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Más información sobre la prevención de «recortes»</a></p>
+<ul>
+  <li><a href="https://hackernoon.com/ethereums-client-diversity-problem">Más información sobre la importancia de ejecutar un cliente minoritario.</a></li>
+  <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Más información sobre la prevención de «recortes»</a></li>
+</ul>
 </ExpandableCard>
 
 <ExpandableCard title="¿Qué cliente es el mejor?">
@@ -180,6 +181,7 @@ Las penalizaciones por estar fuera de línea son proporcionales a cuántos está
 </ExpandableCard>
 
 <ExpandableCard title="¿Cómo desbloqueo mis recompensas o recupero mis ETH?">
+
 Las retiradas de cualquier tipo de la cadena de baliza requieren que se establezcan credenciales de retirada.
 
 Los nuevos participantes las establecen en el momento de la generación y el depósito de la clave. Los particpipantes existentes que no hayan configurado esta funcionalidad pueden actualizar sus claves para poder utilizarla.
@@ -193,7 +195,7 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 
 ## Para profundizar sobre el tema {#further-reading}
 
-- [El problema de la diversidad de clientes de Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
+- [ El problema de la diversidad de clientes de Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Controbuir a la diversidad de clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [Guía: Cómo comprar hardware para un validador de Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_

@@ -22,23 +22,16 @@ La participación como servicio (SaaS), representa una categoría de servicios d
 El protocolo de Ethereum no respalda originariamente la delegación de participaciones y, por tanto, estos servicios se han creado con el fin de cubrir esta demanda. Si tiene 32 ETH para participar, pero no domina con confianza el hardware, los servicios de participación (SaaS) le permiten delegar la parte técnica mientras gana recompensas de bloques nativos.
 
 <CardGrid>
- <Card title="Su propio validador" emoji=":desktop_computer:">
-    Deposite sus 32 ETH para activar su propio conjunto de claves de firma que participarán en el consenso de Ethereum. Controle su progreso con los paneles de control para ver las recompensas ETH acumuladas.
-  </Card>
-  <Card title="Es fácil comenzar" emoji="🏁">
-    Olvídese de las especificaciones de hardware, la configuración, el mantenimiento del nodo y las actualizaciones.
-    Los proveedores de SaaS le permiten subcontratar la parte difícil subiendo sus propias credenciales de firma, permitiéndoles ejecutar un validador en su nombre, por un pequeño coste.
-  </Card>
-  <Card title="Limite su riesgo" emoji=":shield:">
-    En muchos casos, los usuarios no tienen que ceder el acceso a las claves que permiten retirar o transferir los fondos de participaciones. Estas son diferentes a las claves de firma y se pueden almacenar por separado para limitar (pero no eliminar) su riesgo como participante.
-  </Card>
+  <Card title="Su propio validador" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Es fácil comenzar" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="Limite su riesgo" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## Qué hay que tener en cuenta {#what-to-consider}
 
-Hay un creciente numero de proveedores de SaaS para ayudarle a acumular sus ETH, pero cada uno conlleva diferentes beneficios y riesgos. Debería tener en cuenta que todas las opciones SaaS requieren una suposición de confianza adicional en comparación con las participaciones más seguras. Las opciones SaaS pueden suponer el uso de un codigo adicional para los clientes de Ethereum que no es abierto ni auditable. SaaS tambien causa un efecto perjudicial en la descentralizacion de la red. Dependiendo de la configuracion, se puede controlar o no la validacion: el operador puede actuar deshonestamente usando sus ETH.
+Hay un número creciente de proveedores de SAAS para ayudarle a apostar sus ETH, pero todos tienen sus propias ventajas y riesgos. Todas las opciones SaaS requieren suposiciones adicionales de confianza en comparación con la participación desde casa. Las opciones SaaS pueden suponer el uso de un codigo adicional para los clientes de Ethereum que no es abierto ni auditable. SaaS tambien causa un efecto perjudicial en la descentralizacion de la red. Dependiendo de la configuracion, se puede controlar o no la validacion: el operador puede actuar deshonestamente usando sus ETH.
 
 Los indicadores de atributos se utilizan para señalar las fortalezas o debilidades notables que puede tener un proveedor aprobado de SaaS. Utilice esta sección como referencia sobre cómo definimos estos atributos, mientras está eligiendo el servicio que le ayudará con su experiencia de participación.
 
@@ -48,19 +41,19 @@ Los indicadores de atributos se utilizan para señalar las fortalezas o debilida
 
 A continuación encontrará algunos proveedores SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
 
-<InfoBanner emoji="⚠️" isWarning>
-Por favor, tenga en cuenta la importancia de elegir <a href="/developers/docs/nodes-and-clients/client-diversity/">clientes diversos</a> ya que mejora la seguridad de la red y limita su riesgo. Los servicios que tienen evidencia de limitar el uso a los clientes mayoritarios se marcan como <em style="text-transform: uppercase;">"clientes diversos".</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Proveedores SaaS
 
 <StakingProductsCardGrid category="saas" />
 
+Por favor, tenga en cuenta la importancia de elegir [clientes diversos](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados con <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
+
 #### Generadores de claves
 
 <StakingProductsCardGrid category="keyGen" />
 
-¿Tiene alguna sugerencia de un proveedor de participación como servicio que no hayamos mencionado? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable, y enviarla para su revisión.
+¿Tiene alguna sugerencia para un proveedor de participación como servicio que no hayamos mencionado? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
 ## Preguntas más frecuentes {#faq}
 

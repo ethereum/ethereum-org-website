@@ -42,7 +42,7 @@ Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwä
 Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
 
 <InfoBanner emoji="⚠️" isWarning>
-Hinweis: Es ist wichtig, dass sie die <a href="/developers/docs/nodes-and-clients/client-diversity/">Client-Diversität</a> unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienstleister, die nachweislich die Mehrzahl der Kunden begrenzen, sind wie folgt markiert <em style="text-transform: uppercase;">„Diverse Clients."</em>
+Hinweis: Es ist wichtig, dass sie die <a href="/developers/docs/nodes-and-clients/client-diversity/">Client-Diversität</a> unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienstleister, die nachweislich die Mehrzahl der Kunden begrenzen, sind wie folgt markiert <em style={{ textTransform: "uppercase" }}>„Diverse Clients."</em>
 </InfoBanner>
 
 #### SaaS-Anbieter

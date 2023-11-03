@@ -1,7 +1,6 @@
 import React, { ComponentProps } from "react"
 import {
   Box,
-  Center,
   Flex,
   FlexProps,
   Heading,
@@ -9,13 +8,12 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import Translation from "../components/Translation"
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
 import CardList from "../components/CardList"
 import EthPriceCard from "../components/EthPriceCard"
@@ -25,13 +23,14 @@ import InlineLink from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import Card from "../components/Card"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -555,7 +554,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           </Text>
         </LeftColumn>
         <RightColumn>
-          <CardList content={cardListContent} />
+          <CardList items={cardListContent} />
         </RightColumn>
       </TwoColumnContent>
       <TwoColumnContent id="tokens" align="flex-start">
@@ -572,7 +571,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
           <H4 fontWeight="normal">
             <Translation id="page-eth-more-on-tokens" />
           </H4>
-          <CardList content={tokenLinks} />
+          <CardList items={tokenLinks} />
         </LeftColumn>
         <RightColumn>
           <H3>
@@ -590,9 +589,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
         </RightColumn>
       </TwoColumnContent>
       <Content>
-        <Center w="100%">
-          <QuizWidget quizKey="what-is-ether" />
-        </Center>
+        <StandaloneQuizWidget quizKey="what-is-ether" />
       </Content>
       <Content>
         <FeedbackCard />

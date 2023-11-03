@@ -2,7 +2,6 @@ import React, { ComponentProps } from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -22,7 +21,7 @@ import {
 import { MdExpandMore } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import ButtonDropdown, {
   IProps as ButtonDropdownProps,
   List as ButtonDropdownList,
@@ -49,10 +48,11 @@ import SectionNav from "../components/SectionNav"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -134,7 +134,7 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   GlossaryTooltip,
 }
 
@@ -176,24 +176,25 @@ const TitleCard = (props: ChildOnlyProp) => {
 
 export const Title = (props: ChildOnlyProp) => <H1 mt={4} {...props} />
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    backgroundSize: "cover",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    overflow: "initial",
-    maxH: {
+    }}
+    backgroundSize="cover"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    overflow="initial"
+    maxH={{
       base: "340px",
       lg: "full",
-    },
-  },
-})
+    }}
+    {...props}
+  />
+)
 
 export const Page = (props: FlexProps) => (
   <Flex

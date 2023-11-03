@@ -16,7 +16,7 @@ import { FaGithub } from "react-icons/fa"
 
 // Components
 import Translation from "../../components/Translation"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import InlineLink, { BaseLink } from "../../components/Link"
 import Modal from "../../components/Modal"
 import PageMetadata from "../../components/PageMetadata"

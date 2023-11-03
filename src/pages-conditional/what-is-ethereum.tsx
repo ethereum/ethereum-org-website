@@ -1,5 +1,4 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -18,8 +17,8 @@ import {
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
-import ButtonLink from "../components/ButtonLink"
-import Button from "../components/Button"
+import ButtonLink from "../components/Buttons/ButtonLink"
+import Button from "../components/Buttons/Button"
 import PageMetadata from "../components/PageMetadata"
 import Tooltip from "../components/Tooltip"
 import Tabs from "../components/Tabs"
@@ -35,11 +34,12 @@ import AdoptionChart from "../components/AdoptionChart"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
 import Slider, { EmblaSlide } from "../components/Slider"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import StatErrorMessage from "../components/StatErrorMessage"
 import StatLoadingMessage from "../components/StatLoadingMessage"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getLocaleForNumberFormat } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -842,9 +842,7 @@ const WhatIsEthereumPage = ({
       </Content>
 
       <Content>
-        <Center w="100%">
-          <QuizWidget quizKey="what-is-ethereum" />
-        </Center>
+        <StandaloneQuizWidget quizKey="what-is-ethereum" />
       </Content>
 
       <Content>

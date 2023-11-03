@@ -1,32 +1,30 @@
 import React from "react"
 import {
-  Center,
   Box,
   Flex,
   BoxProps,
-  Img,
   Text as ChakraText,
   Heading,
 } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { graphql, PageProps } from "gatsby"
 
 import PageHero from "../components/PageHero"
 import Translation from "../components/Translation"
 import Callout from "../components/Callout"
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import PageMetadata from "../components/PageMetadata"
 import HorizontalCard, {
   IProps as HorizontalCardProps,
 } from "../components/HorizontalCard"
 import CardList from "../components/CardList"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import { Simulator } from "../components/Simulator"
 import { StyledCard } from "../pages/get-eth"
+import GatsbyImage from "../components/GatsbyImage"
 
 import { getImage, getSrc } from "../utils/image"
 import type { ChildOnlyProp, Context } from "../types"
@@ -260,7 +258,7 @@ const WalletsPage = ({
             <Text>
               <Translation id="page-wallets-desc-2" />{" "}
             </Text>
-            <CardList content={guides} mb={{ base: 6, lg: 0 }} />
+            <CardList items={guides} mb={{ base: 6, lg: 0 }} />
           </Box>
           <RightColumn>
             <Text>
@@ -383,8 +381,7 @@ const WalletsPage = ({
               <ButtonLink to="/wallets/find-wallet/">
                 <Translation id="page-wallets-find-wallet-btn" />
               </ButtonLink>
-              <Img
-                as={GatsbyImage}
+              <GatsbyImage
                 image={getImage(data.findWallet)!}
                 alt=""
                 mt={8}
@@ -402,7 +399,7 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-stay-safe" />
           </H2>
-          <Box fontSize="xl" lineHeight={1.4} mb={6} color="text300">
+          <Box lineHeight={1.4} mb={6} color="text300">
             <Translation id="page-wallets-stay-safe-desc" />
           </Box>
           <Box>
@@ -448,10 +445,10 @@ const WalletsPage = ({
           <H2>
             <Translation id="page-wallets-tips" />
           </H2>
-          <Box fontSize="xl" lineHeight={1.4} color="text300" mb={6}>
+          <Box lineHeight={1.4} color="text300" mb={6}>
             <Translation id="page-wallets-tips-community" />
           </Box>
-          <CardList content={articles} />
+          <CardList items={articles} />
         </RightColumn>
       </TwoColumnContent>
       <Content>
@@ -491,9 +488,7 @@ const WalletsPage = ({
         </CalloutCardContainer>
       </Content>
       <Content>
-        <Center w="100%">
-          <QuizWidget quizKey="wallets" />
-        </Center>
+        <StandaloneQuizWidget quizKey="wallets" />
       </Content>
       <Content>
         <FeedbackCard />

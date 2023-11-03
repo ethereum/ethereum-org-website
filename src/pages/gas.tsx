@@ -1,7 +1,6 @@
 // Third-party libraries
 import React, { ComponentPropsWithRef } from "react"
 import { graphql, PageProps } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
@@ -25,7 +24,7 @@ import {
 import { getImage } from "../utils/image"
 
 // Components
-import ButtonLink from "../components/ButtonLink"
+import { ButtonLink } from "../components/Buttons"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import Emoji from "../components/Emoji"
@@ -41,6 +40,7 @@ import Pill from "../components/Pill"
 import Translation from "../components/Translation"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 const Content = (props: BoxProps) => <Box px={8} w="full" {...props} />
 
@@ -444,7 +444,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             descriptionKey="Layer 2 extends Ethereum, reducing costs and increasing accessibility for decentralized applications."
           >
             <Box>
-              <ButtonLink to="/get-eth/">Use layer 2</ButtonLink>
+              <ButtonLink to="/layer-2/">Use layer 2</ButtonLink>
             </Box>
           </Box>
           <Box
