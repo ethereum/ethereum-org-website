@@ -6,13 +6,16 @@ const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(parts.keys)
 
 const $arrowBg = cssVar("popper-arrow-bg")
+const $arrowSize = cssVar("popper-arrow-size")
 
 const baseStyle = definePartsStyle({
   popper: {
     zIndex: "popover",
+    boxShadow: `0px 0px 16px 0px #00000040`,
   },
   content: {
-    maxW: 48,
+    [$arrowSize.variable]: "12px",
+    minW: 12,
     p: 2,
     bg: "background.highlight",
     fontSize: "sm",
@@ -22,7 +25,6 @@ const baseStyle = definePartsStyle({
     textAlign: "center",
     userSelect: "none",
     outline: 0,
-    boxShadow: `0px 0px 16px 0px #00000040`,
   },
   arrow: {
     [$arrowBg.variable]: "colors.background.highlight",
