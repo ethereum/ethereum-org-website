@@ -14,7 +14,7 @@ const baseStyle = definePartsStyle({
     boxShadow: `0px 0px 16px 0px #00000040`,
   },
   content: {
-    [$arrowSize.variable]: "12px",
+    [$arrowSize.variable]: "8px",
     minW: 12,
     p: 2,
     bg: "background.highlight",

@@ -4,6 +4,7 @@ import makeBlockie from "ethereum-blockies-base64"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
+  BoxProps,
   Button,
   ButtonProps,
   Checkbox,
@@ -12,6 +13,7 @@ import {
   Img,
   Text,
   useToken,
+  forwardRef,
 } from "@chakra-ui/react"
 
 import Breadcrumbs from "../../components/Breadcrumbs"
@@ -120,8 +122,9 @@ const AddressCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Address = (props: ChildOnlyProp) => (
+const Address = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   <Box
+    ref={ref}
     fontFamily="monospace"
     borderRadius="sm"
     fontSize="2rem"
@@ -131,7 +134,7 @@ const Address = (props: ChildOnlyProp) => (
     mb={4}
     {...props}
   />
-)
+))
 
 const CopyButton = (props: ButtonProps) => (
   <Button

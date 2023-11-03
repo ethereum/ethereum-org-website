@@ -1,5 +1,5 @@
 import React from "react"
-import { VStack, Icon, Box, Flex, Text } from "@chakra-ui/react"
+import { Icon, Box, Flex, Text, HStack } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 import { kebabCase } from "lodash"
 import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
@@ -32,22 +32,27 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   ) : isLoading ? (
     <StatLoadingMessage />
   ) : (
-    <VStack>
+    <HStack lineHeight={1} alignItems="baseline" spacing={4}>
+      <Box
+        fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
+        fontWeight={600}
+      >
+        {state.value}
+      </Box>
       <Box>
-        {state.value}{" "}
         <Tooltip content={tooltipContent(metric)}>
-          <Icon
-            as={MdInfoOutline}
-            boxSize={6}
-            fill="text"
-            mr={2}
-            _hover={{ fill: "primary.base" }}
-            _active={{ fill: "primary.base" }}
-            _focus={{ fill: "primary.base" }}
-          ></Icon>
+          <Box as="span" display="inline-block">
+            <Icon
+              as={MdInfoOutline}
+              boxSize="6"
+              _hover={{ fill: "primary.base" }}
+              _active={{ fill: "primary.base" }}
+              _focus={{ fill: "primary.base" }}
+            />
+          </Box>
         </Tooltip>
       </Box>
-    </VStack>
+    </HStack>
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
@@ -179,14 +184,10 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       <Box
         position="absolute"
         bottom="8%"
-        fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
-        fontWeight={600}
         marginTop={0}
-        marginBottom={4}
         color="text"
         flexWrap="wrap"
         textOverflow="ellipsis"
-        lineHeight="1.6rem"
       >
         {value}
       </Box>

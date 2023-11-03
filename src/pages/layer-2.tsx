@@ -89,8 +89,6 @@ const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
 const StyledInfoIcon = () => (
   <Icon
     as={MdInfoOutline}
-    color="text"
-    mr={2}
     opacity={0.8}
     boxSize="full"
     _hover={{ color: "primary.base" }}
@@ -455,7 +453,9 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                       <Translation id={box.descriptionId} />
                     </StatDescription>
                     <Tooltip content={tooltipContent(box.tooltipContent)}>
-                      <StyledInfoIcon />
+                      <Box as="span">
+                        <StyledInfoIcon />
+                      </Box>
                     </Tooltip>
                   </StatSpan>
                 </StatBox>

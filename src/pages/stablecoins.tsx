@@ -4,7 +4,6 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Box,
   Flex,
-  Img,
   Icon,
   Grid,
   BoxProps,
@@ -579,7 +578,7 @@ const StablecoinsPage = ({ data }: PageProps<Queries.StablecoinsPageQuery>) => {
           <H3>
             <Translation id="page-stablecoins-top-coins" />
             <Tooltip content={tooltipContent}>
-              <Icon ml={2} fill="'text" name="info" boxSize={4} />
+              <Icon ml={2} name="info" boxSize={4} />
             </Tooltip>
           </H3>
           <Text>
