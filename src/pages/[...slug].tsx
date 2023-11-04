@@ -144,7 +144,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   return {
     props: {
-      ...(await serverSideTranslations(locale!, "common")), // load i18n required namespace for all pages
+      ...(await serverSideTranslations(locale!, ["common"])), // load i18n required namespace for all pages
       mdxSource,
       originalSlug,
       frontmatter,
