@@ -19,7 +19,7 @@ import { useActiveHash } from "@/hooks/useActiveHash"
 
 import { outerListProps } from "@/lib/utils/toc"
 
-import type { ToCItem } from "@/lib/interfaces"
+import type { ToCItem } from "@/lib/types"
 
 export interface IProps extends BoxProps {
   items: Array<ToCItem>
@@ -60,15 +60,9 @@ const TableOfContents: React.FC<IProps> = ({
 
   const activeHash = useActiveHash(titleIds)
 
-  // Exclude <h1> from TOC
-  if (items?.length === 1) {
-    items = items[0].items!
-  }
-
   if (!items) {
     return null
   }
-
   if (isMobile) {
     return <Mobile items={items} maxDepth={maxDepth} />
   }

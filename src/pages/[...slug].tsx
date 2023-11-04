@@ -5,12 +5,13 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { serialize } from "next-mdx-remote/serialize"
 import remarkGfm from "remark-gfm"
 import { join } from "path"
+import readingTime from "reading-time"
 
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastModifiedDate, getLastDeployDate } from "@/lib/utils/gh"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
-import mdComponents from "@/components/MdComponents"
 
 // Layouts and components
 import {
@@ -27,11 +28,18 @@ import {
   UpgradeLayout,
   // docsComponents,
   // DocsLayout,
+  tutorialsComponents,
+  TutorialLayout,
 } from "@/layouts"
+
+import mdComponents from "@/components/MdComponents"
+import PageMetadata from "@/components/PageMetadata"
 
 // Types
 import type { GetStaticPaths, GetStaticProps } from "next/types"
 import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import { dateToString } from "@/lib/utils/date"
+import { generateTableOfContents } from "@/lib/utils/toc"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -39,6 +47,8 @@ const layoutMapping = {
   staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
+  tutorial: TutorialLayout,
+  // event: EventLayout,
   // docs: DocsLayout,
 } as const
 
@@ -49,6 +59,7 @@ const componentsMapping = {
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
   // docs: docsComponents,
+  tutorial: tutorialsComponents,
 } as const
 
 interface Params extends ParsedUrlQuery {
@@ -60,11 +71,7 @@ interface Props {
 }
 
 export const getStaticPaths: GetStaticPaths = ({ locales }) => {
-  const contentFiles = getContent("/").filter(
-    // Filter `/developers/tutorials` slugs since they are processed by
-    // `/developers/tutorials/[...tutorial].tsx`
-    (file) => !file.slug.includes("/developers/tutorials")
-  )
+  const contentFiles = getContent("/")
 
   let paths: StaticPaths = []
 
@@ -95,7 +102,6 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const markdown = getContentBySlug(`${locale}/${params.slug.join("/")}`)
   const frontmatter = markdown.frontmatter
-  const tocItems = markdown.tocItems
   const contentNotTranslated = markdown.contentNotTranslated
 
   const mdPath = join("/content", ...params.slug)
@@ -112,15 +118,28 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     },
   })
 
+  const timeToRead = readingTime(markdown.content)
+  const tocItems = generateTableOfContents(mdxSource.compiledSource)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
-  const lastDeployDate = await getLastDeployDate()
+  const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
   let layout = frontmatter.template
 
   if (!frontmatter.template) {
-    layout = params.slug.includes("developers/docs") ? "docs" : "static"
+    layout = "static"
+
+    if (params.slug.includes("docs")) {
+      layout = "docs"
+    }
+
+    if (params.slug.includes("tutorials")) {
+      layout = "tutorial"
+      if ("published" in frontmatter) {
+        frontmatter.published = dateToString(frontmatter.published)
+      }
+    }
   }
 
   return {
@@ -133,6 +152,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       lastDeployDate,
       contentNotTranslated,
       layout,
+      timeToRead: Math.round(timeToRead.minutes),
       tocItems,
     },
   }
@@ -166,6 +186,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     lastDeployDate,
     contentNotTranslated,
     layout,
+    timeToRead,
     tocItems,
   } = page.props
 
@@ -174,12 +195,27 @@ ContentPage.getLayout = (page: ReactElement) => {
     contentNotTranslated,
     lastDeployDate,
   }
-  const layoutProps = { slug, frontmatter, lastUpdatedDate, tocItems }
+  const layoutProps = {
+    slug,
+    frontmatter,
+    lastUpdatedDate,
+    timeToRead,
+    tocItems,
+  }
   const Layout = layoutMapping[layout]
 
   return (
     <RootLayout {...rootLayoutProps}>
-      <Layout {...layoutProps}>{page}</Layout>
+      <Layout {...layoutProps}>
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+          image={frontmatter.image}
+          author={frontmatter.author}
+          canonicalUrl={frontmatter.sourceUrl}
+        />
+        {page}
+      </Layout>
     </RootLayout>
   )
 }

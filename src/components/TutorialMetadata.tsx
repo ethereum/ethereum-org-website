@@ -1,20 +1,21 @@
-import { Badge, Box, Flex, HStack } from "@chakra-ui/react"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import Emoji from "./Emoji"
-import CopyToClipboard from "./CopyToClipboard"
-import InlineLink from "./Link"
-import TutorialTags from "./TutorialTags"
-// import Translation from "./Translation"
-import Text from "./OldText"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
+import TutorialTags from "@/components/TutorialTags"
 
-import { Lang } from "../utils/languages"
-import { getLocaleTimestamp } from "../utils/time"
-import { TranslationKey } from "../utils/translations"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
-export interface IProps {
-  tutorial: any
+import type { Lang, TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
+
+export type TutorialMetadataProps = {
+  frontmatter: TutorialFrontmatter
+  timeToRead: number
 }
 
 export enum Skill {
@@ -26,11 +27,13 @@ export enum Skill {
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
-const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
+const TutorialMetadata = ({
+  frontmatter,
+  timeToRead,
+}: TutorialMetadataProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-developers-tutorials")
 
-  const frontmatter = tutorial.frontmatter
   const hasSource = frontmatter.source && frontmatter.sourceUrl
   const published = frontmatter.published
   const author = frontmatter.author
@@ -54,7 +57,7 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
           mb={2}
           whiteSpace="nowrap"
         >
-          {t(getSkillTranslationId(frontmatter.skill))}
+          {t(getSkillTranslationId(frontmatter.skill as Skill))}
         </Flex>
       </Flex>
       <HStack
@@ -83,14 +86,13 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
         )}
         {published && (
           <Box>
-            <Emoji fontSize="sm" mr={2} text=":calendar:" />
+            <Emoji fontSize="sm" mr={2} text=":calendar:" />{" "}
             {getLocaleTimestamp(locale! as Lang, published)}
           </Box>
         )}
         <Box>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
-          {Math.round(tutorial.fields.readingTime.minutes)}{" "}
-          {t("comp-tutorial-metadata-minute-read")}
+          {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
         </Box>
       </HStack>
       <HStack
@@ -103,55 +105,36 @@ const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
       >
         {address && (
           <Flex flexWrap="wrap" w="full" mr={4}>
-            <CopyToClipboard text={frontmatter.address}>
+            <CopyToClipboard text={address}>
               {(isCopied) => (
-                <Text color="primary.base" cursor="pointer">
-                  {!isCopied ? (
-                    <Box
-                      overflow="hidden"
-                      textOverflow="ellipsis"
-                      fontFamily="monospace"
-                      bg="ednBackground"
-                      px={1}
+                <Box
+                  color="primary.base"
+                  cursor="pointer"
+                  overflow="hidden"
+                  textOverflow="ellipsis"
+                  fontFamily="monospace"
+                  bg="ednBackground"
+                  px={1}
+                  fontSize="sm"
+                  _hover={{
+                    bg: "primary100",
+                  }}
+                >
+                  <Text
+                    as={Translation}
+                    textTransform="uppercase"
+                    id="comp-tutorial-metadata-tip-author"
+                  />{" "}
+                  {address} {isCopied && <Translation id="copied" />}
+                  {isCopied && (
+                    <Emoji
                       fontSize="sm"
-                      _hover={{
-                        bg: "primary100",
-                      }}
-                    >
-                      <Text
-                        as={Translation}
-                        textTransform="uppercase"
-                        id="comp-tutorial-metadata-tip-author"
-                      />{" "}
-                      {frontmatter.address}
-                    </Box>
-                  ) : (
-                    <Box
-                      overflow="hidden"
-                      textOverflow="ellipsis"
-                      fontFamily="monospace"
-                      bg="ednBackground"
-                      px={1}
-                      fontSize="sm"
-                      _hover={{
-                        bg: "primary100",
-                      }}
-                    >
-                      <Text
-                        as={Translation}
-                        textTransform="uppercase"
-                        id="comp-tutorial-metadata-tip-author"
-                      />{" "}
-                      {frontmatter.address} {t("common:copied")}
-                      <Emoji
-                        fontSize="sm"
-                        ml={2}
-                        mr={2}
-                        text=":white_check_mark:"
-                      />
-                    </Box>
+                      ml={2}
+                      mr={2}
+                      text=":white_check_mark:"
+                    />
                   )}
-                </Text>
+                </Box>
               )}
             </CopyToClipboard>
           </Flex>

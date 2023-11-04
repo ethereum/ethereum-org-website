@@ -2,14 +2,20 @@ import { Box, Flex, type HeadingProps, Icon, chakra } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
+import Callout from "@/components/Callout"
+import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Link from "@/components/Link"
+import Logo from "@/components/Logo"
+import MatomoOptOut from "@/components/MatomoOptOut"
 import MeetupList from "@/components/MeetupList"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
+import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Text from "@/components/OldText"
+import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 import Translation from "@/components/Translation"
 import GitHubContributors from "@/components/GitHubContributors"
@@ -52,12 +58,18 @@ export const staticComponents = {
   h3: Heading3,
   h4: Heading4,
   li: ListItem,
+  Callout,
+  Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
   Icon,
   Link,
+  Logo,
+  MatomoOptOut,
   MeetupList,
   NetworkUpgradeSummary,
+  SocialListItem,
+  TranslationChartImage,
   UpcomingEventsList,
 }
 

@@ -101,7 +101,7 @@ function safeAdd(uint a, uint b) pure internal returns(uint){
 
 Odpowiedni AST jest pokazany w:
 
-![AST](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/ast.png)
+![AST](./ast.png)
 
 Slither używa AST eksportowanego przez solc.
 
@@ -130,7 +130,7 @@ print(f'The expression {expression} has a addition: {visitor.result()}')
 
 Drugą najbardziej powszechną reprezentacją kodu jest graf przepływu sterowania. Jak sugeruje jego nazwa, jest to przedstawienie oparte na wykresie, które ujawnia wszystkie ścieżki wykonania. Każdy węzeł zawiera jedną lub wiele instrukcji. Krawędzie na wykresie reprezentują operacje przepływu sterowania (if/then/else, loop itp.). CFG naszego poprzedniego przykładu to:
 
-![CFG](../../../../../developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/cfg.png)
+![CFG](./cfg.png)
 
 CFG jest reprezentacją, na której opiera się większość analiz.
 

@@ -23,7 +23,7 @@ Sebagai prasyarat, Anda seharusnya telah menginstal MetaMask di ponsel, dan prog
 
 Pada bagian atas aplikasi, tekan tombol "Dompet", yang setelahnya Anda akan diminta untuk memilih jaringan. Karena NFT kita dicetak di jaringan Ropsten, Anda akan ingin memilih Ropsten sebagai jaringan Anda.
 
-![Cara menetapkan Ropsten sebagai jaringan Anda di MetaMask Seluler](./ropstenMetamask.gif)
+![Cara menetapkan Ropsten sebagai jaringan Anda di MetaMask Seluler](./goerliMetamask.gif)
 
 ## Langkah 2: Tambahkan koleksi Anda ke MetaMask {#add-nft-to-metamask}
 

@@ -22,6 +22,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
+import ShardChainsList from "@/components/ShardChainsList"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
@@ -33,12 +34,10 @@ import {
   InfoColumn,
   ContentContainer,
 } from "@/components/MdComponents"
-import Translation from "@/components/Translation"
-// import PageMetadata from "@/components/PageMetadata"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
@@ -137,6 +136,7 @@ const LastUpdated = (props: ChildOnlyProp) => (
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
+  ShardChainsList,
   UpgradeStatus,
   BeaconChainActions,
 }
@@ -151,10 +151,11 @@ export const UpgradeLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  const { t } = useTranslation("page-upgrades")
+  const { t } = useTranslation("page-upgrades-index")
   const { locale } = useRouter()
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
+
   const summaryPoints = getSummaryPoints(frontmatter)
 
   const dropdownLinks: ButtonDropdownList = {
@@ -198,7 +199,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             </List>
           </Box>
           <LastUpdated>
-            <Translation id="page-last-updated" />:{" "}
+            {t("common:page-last-updated")}:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </LastUpdated>
         </TitleCard>
@@ -224,10 +225,6 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </MoreContent>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        /> */}
         <Show above={lgBreakpoint}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />

@@ -46,7 +46,7 @@ Konta Ethereum mają cztery pola:
 - `codeHash` &ndash; wszystkie tego rodzaju fragmenty kodu zawarte są w bazie danych stanu do późniejszego pobrania. Dla kont kontraktów pole to jest kodem, który jest haszowany i przechowywany jako codeHash. Dla kont posiadanych zewnętrznie pole codeHash jest haszem pustego ciągu znaków (ang. string).
 - `storageRoot` &ndash; jest znany także jako hasz pamięci. 256-bitowy skrót węzła głównego drzewa Merkle Patricia, który koduje zawartość pamięci konta (mapowanie między 256-bitowymi wartościami całkowitymi), zakodowany w trie jako mapowanie z 256-bitowego skrótu Keccak 256 -bitowe klucze liczb całkowitych do 256-bitowych wartości liczb całkowitych zakodowanych w RLP. To drzewo koduje hasz zawartości pamięci masowej tego konta i jest domyślnie puste.
 
-![Schemat przedstawiający skład konta](../../../../../developers/docs/accounts/accounts.png) _Schemat zaadaptowany z [Ilustracja Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat przedstawiający skład konta](./accounts.png) _Schemat zaadaptowany z [Ilustracja Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Konta zewnętrzne i kluczowe pary {#externally-owned-accounts-and-key-pairs}
 

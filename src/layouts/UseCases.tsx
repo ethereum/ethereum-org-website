@@ -30,8 +30,6 @@ import {
   StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
-// TODO: Import once intl implemented?
-// import PageMetadata from "@/components/PageMetadata"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -247,10 +245,6 @@ export const UseCasesLayout: React.FC<IProps> = ({
         </Flex>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        /> */}
         <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />

@@ -1,4 +1,4 @@
-import type { Frontmatter, Lang, TranslationKey } from "./types"
+import type { Frontmatter, Lang, ToCItem, TranslationKey } from "./types"
 
 /**
  * Quiz data interfaces
@@ -42,15 +42,6 @@ export interface Quiz {
 
 export interface RawQuizzes {
   [key: string]: RawQuiz
-}
-
-/**
- * Table of Contents
- */
-export interface ToCItem {
-  title: string
-  url: string
-  items?: Array<ToCItem>
 }
 
 /**
@@ -134,6 +125,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   address?: string
   postMergeBannerTranslation?: string
   hideEditButton?: boolean
+  showPostMergeBanner?: boolean
 }
 
 export interface Root {
