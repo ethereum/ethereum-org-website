@@ -22,7 +22,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
+// import ShardChainsList from "@/components/ShardChainsList"  // TODO: this component doesnt exist?
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
@@ -136,7 +136,7 @@ const LastUpdated = (props: ChildOnlyProp) => (
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
-  ShardChainsList,
+  // ShardChainsList, // TODO: this component doesnt exist?
   UpgradeStatus,
   BeaconChainActions,
 }
