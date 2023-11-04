@@ -22,8 +22,7 @@ import {
   Title,
 } from "@/components/MdComponents"
 
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 const CardGrid = (props: ChildOnlyProp) => (
@@ -64,8 +63,6 @@ export const RoadmapLayout: React.FC<IProps> = ({
   slug,
   tocItems,
 }) => {
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
     ariaLabel: "Roadmap options dropdown menu",
@@ -179,7 +176,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
           />
         </Flex>
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         <Show above="lg">
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />

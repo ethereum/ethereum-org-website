@@ -47,7 +47,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
       position="fixed"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      right={{ base: 0, md: 8 }}
+      insetInlineEnd={{ base: 0, md: 8 }}
       zIndex="99"
     >
       <Flex

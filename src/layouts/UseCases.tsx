@@ -31,8 +31,7 @@ import {
 } from "@/components/MdComponents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -91,7 +90,6 @@ export const UseCasesLayout: React.FC<IProps> = ({
   // const { t } = useTranslation()
   const lgBp = useToken("breakpoints", "lg")
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const summaryPoints = getSummaryPoints(frontmatter)
 
   // TODO: Re-implement GitHub edit path
@@ -247,7 +245,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </Flex>
       </Show>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         <Show above={lgBp}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />

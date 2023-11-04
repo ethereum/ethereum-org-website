@@ -43,8 +43,7 @@ import {
   StyledButtonDropdown,
 } from "@/components/MdComponents"
 
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 const Heading1 = (props: HeadingProps) => (
@@ -196,7 +195,6 @@ export const StakingLayout: React.FC<IProps> = ({
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const { summaryPoints } = frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
@@ -289,7 +287,7 @@ export const StakingLayout: React.FC<IProps> = ({
           }}
         />
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <Show above={lgBp}>
           <InfoColumn>

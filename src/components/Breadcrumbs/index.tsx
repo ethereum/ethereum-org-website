@@ -73,7 +73,7 @@ const Breadcrumbs: React.FC<IProps> = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb dir="auto" {...restProps}>
+    <Breadcrumb {...restProps}>
       {crumbs.map((crumb, idx) => {
         const isCurrentPage = slug === crumb.fullPath
         return (

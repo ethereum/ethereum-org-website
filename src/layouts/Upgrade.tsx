@@ -36,7 +36,6 @@ import {
 // import Translation from "@/components/Translation"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -155,8 +154,6 @@ export const UpgradeLayout: React.FC<IProps> = ({
   // const { t } = useTranslation()
   const { locale } = useRouter()
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
-
   const summaryPoints = getSummaryPoints(frontmatter)
 
   const dropdownLinks: ButtonDropdownList = {
@@ -227,7 +224,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </MoreContent>
       </Show>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         <Show above={lgBreakpoint}>
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />

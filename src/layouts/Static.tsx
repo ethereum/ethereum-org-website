@@ -83,11 +83,9 @@ export const StaticLayout: React.FC<IProps> = ({
   lastUpdatedDate,
 }) => {
   const { locale } = useRouter()
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const repo =
-    process.env.NEXT_PUBLIC_GITHUB_REPO ||
-    "ethereum/ethereum-org-website"
+    process.env.NEXT_PUBLIC_GITHUB_REPO || "ethereum/ethereum-org-website"
   const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
   const absoluteEditPath = baseEditPath + slug + "index.md"
 
@@ -100,7 +98,6 @@ export const StaticLayout: React.FC<IProps> = ({
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
-        dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Box
           as="article"
@@ -122,16 +119,16 @@ export const StaticLayout: React.FC<IProps> = ({
           }}
         >
           <Breadcrumbs slug={slug} mb="8" />
-          <Text
-            color="text200"
-            dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-          >
+          <Text color="text200">
             {/* TODO: add Translation when i18n is set up  */}
             {/* <Translation id="page-last-updated" />:{" "} */}
             Page last updated:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>
-          <GitHubContributors relativePath={slug} lastUpdatedDate={lastUpdatedDate!} />
+          <GitHubContributors
+            relativePath={slug}
+            lastUpdatedDate={lastUpdatedDate!}
+          />
           <TableOfContents
             position="relative"
             zIndex={2}

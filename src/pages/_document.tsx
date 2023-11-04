@@ -1,13 +1,32 @@
-import { Html, Head, Main, NextScript } from "next/document"
+import { Lang } from "@/lib/types"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+import NextDocument, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document"
 
-export default function Document() {
-  return (
-    <Html>
-      <Head />
-      <body>
-        <Main />
-        <NextScript />
-      </body>
-    </Html>
-  )
+class Document extends NextDocument {
+  static async getInitialProps(ctx: DocumentContext) {
+    return await NextDocument.getInitialProps(ctx)
+  }
+
+  render() {
+    const { locale } = this.props.__NEXT_DATA__
+    const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
+
+    return (
+      <Html dir={dir} lang={locale}>
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
 }
+
+export default Document
