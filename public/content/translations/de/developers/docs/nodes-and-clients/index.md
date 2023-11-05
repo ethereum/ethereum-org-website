@@ -288,10 +288,6 @@ Der Sync-Modus, den du auswählst, wird einen Einfluss auf den benötigten Speic
 
 - Hinweis: Erigon kann keinen Fast-Sync durchführen, aber Full-Pruning ist möglich (~500 GB)
 
-![Ein Diagramm, das aufzeigt, dass die Gigabytes für eine Full-Synchronisation ansteigen](./full-sync.png)
-
-![Ein Diagramm, das aufzeigt, dass die Gigabytes für eine Archive-Synchronisation ansteigen](./archive-sync.png)
-
 Diese Diagramme zeigen, wie sich die Speicheranforderungen fortwährend ändern. Die aktuellsten Daten für Geth und OpenEthereum findest du auf [Full-Sync-Daten](https://etherscan.io/chartsync/chaindefault) und [Archive-Sync-Daten](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum auf einem Einzelplatinen-Computer {#ethereum-on-a-single-board-computer}

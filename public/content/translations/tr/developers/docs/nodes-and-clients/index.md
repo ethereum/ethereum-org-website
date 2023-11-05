@@ -288,10 +288,6 @@ Seçtiğiniz senkronizasyon modu, alan gereksinimlerini etkileyecektir ancak aş
 
 - Not: Erigon Fast Senkronizasyon yapmaz, ancak Full Pruning mümkündür (yaklaşık 500 GB)
 
-![Full senkronizasyon için gereken GB miktarının artışta olduğunu gösteren bir grafik](./full-sync.png)
-
-![Archive senkronizasyonu için gereken GB miktarının artışta olduğunu gösteren bir grafik](./archive-sync.png)
-
 Bu grafikler, depolama gereksinimlerinin sürekli değişimlerini gösterir. Geth ve OpenEthereum hakkında en güncel veriler için [full senkronizasyon verilerine](https://etherscan.io/chartsync/chaindefault) ve [archive senkronizasyon verilerine](https://etherscan.io/chartsync/chainarchive) göz atın.
 
 ### Tek kartlı bir bilgisayarda Ethereum {#ethereum-on-a-single-board-computer}
