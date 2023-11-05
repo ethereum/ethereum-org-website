@@ -10,7 +10,7 @@ import Text from "./OldText"
 // Data
 import _rollups from "../data/layer-2/layer-2.json"
 
-import { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
 type RollupType = "optimistic" | "zk"
 
