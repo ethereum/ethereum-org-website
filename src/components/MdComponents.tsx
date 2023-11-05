@@ -24,22 +24,21 @@ import ButtonDropdown, {
   type IProps as ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
+import Contributors from "@/components/Contributors"
+import Link from "@/components/Link"
+import MarkdownImage from "@/components/MarkdownImage"
+import MdLink from "@/components/MdLink"
+import OldHeading from "@/components/OldHeading"
+import { mdxTableComponents } from "@/components/Table"
+import YouTube from "@/components/YouTube"
 
+import GlossaryTooltip from "./Glossary/GlossaryTooltip"
+import QuizWidget from "./Quiz/QuizWidget"
 import Card from "./Card"
 import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
-import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import InfoBanner from "./InfoBanner"
-import MarkdownImage from "@/components/MarkdownImage"
-import MdLink from "@/components/MdLink"
-import { mdxTableComponents } from "@/components/Table"
-import OldHeading from "@/components/OldHeading"
-import QuizWidget from "./Quiz/QuizWidget"
-
-import Link from "@/components/Link"
-import YouTube from "@/components/YouTube"
-import Contributors from "@/components/Contributors"
 
 /**
  * Base HTML elements
