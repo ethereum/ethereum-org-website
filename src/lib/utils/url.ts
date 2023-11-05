@@ -9,7 +9,7 @@ export const isExternal = (href: string): boolean =>
 export const isGlossary = (href: string): boolean =>
   href.includes("glossary") && href.includes("#")
 
-export const isPdf = (href: string): boolean => href.includes(".pdf")
+export const isPdf = (href: string): boolean => href.endsWith(".pdf")
 
 export const sanitizeHitUrl = (url: string): string =>
   url

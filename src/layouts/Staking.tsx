@@ -15,7 +15,6 @@ import {
 import { Image } from "@/components/Image"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import Callout from "@/components/Callout"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import OldHeading from "@/components/OldHeading"
@@ -43,8 +42,6 @@ import {
   Page,
   StyledButtonDropdown,
 } from "@/components/MdComponents"
-// TODO: Import once intl implemented
-// import PageMetadata from "@/components/PageMetadata"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
@@ -171,7 +168,6 @@ export const stakingComponents = {
   h4: Heading4,
   p: Paragraph,
   pre: Pre,
-  Callout,
   CardGrid,
   DocLink,
   InfoGrid,
@@ -294,10 +290,6 @@ export const StakingLayout: React.FC<IProps> = ({
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        /> */}
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <Show above={lgBp}>
           <InfoColumn>

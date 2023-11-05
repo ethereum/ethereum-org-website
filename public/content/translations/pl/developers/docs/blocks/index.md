@@ -14,7 +14,7 @@ Bloki to temat przyjazny dla nowicjuszy. Jednak, aby pomóc ci w lepszym zrozumi
 
 Aby zagwarantować, że wszyscy uczestnicy sieci Ethereum pozostają w zsynchronizowanym stanie i zgadzają się odnośnie do dokładnej historii transakcji, grupujemy transakcje w blokach. Oznacza to, że dziesiątki (lub setki) transakcji są zatwierdzane, uzgadniane i synchronizowane jednocześnie.
 
-![Diagram przedstawiający transakcję w bloku, która powoduje zmiany stanu](../../../../../developers/docs/blocks/tx-block.png) _Diagram zaadaptowany z [Ilustrowanego Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagram przedstawiający transakcję w bloku, która powoduje zmiany stanu](./tx-block.png) _Diagram zaadaptowany z [Ilustrowanego Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Dzięki rozgraniczaniu zatwierdzeń (transakcji zatwierdzeniowych) dajemy wszystkim uczestnikom sieci wystarczający zapas czasu, aby osiągnęli konsensus: nawet jeżeli żądania transakcyjne nadchodzą z częstotliwością kilku na sekundę, każdy jeden blok Ethereum jest zatwierdzany co około piętnaście sekund.
 

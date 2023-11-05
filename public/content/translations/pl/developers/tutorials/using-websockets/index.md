@@ -43,7 +43,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 Aby rozpocząć, otwórz WebSocket za pomocą adresu URL WebSocket dla swojej aplikacji. Możesz znaleźć adres URL swojej aplikacji WebSocket, otwierając stronę aplikacji w [pulpicie nawigacyjnym](https://dashboard.alchemyapi.io/) i klikając przycisk „Wyświetl klucz”. Pamiętaj, że adres URL Twojej aplikacji dla WebSocketów różni się od adresu URL dla żądań HTTP, ale oba można znaleźć klikając „Wyświetl klucz”.
 
-![Gdzie znaleźć twój adres URL WebSocket w panelu Alchemy](../../../../../developers/tutorials/using-websockets/use-websockets.gif)
+![Gdzie znaleźć twój adres URL WebSocket w panelu Alchemy](./use-websockets.gif)
 
 Każdy z API wymienionych w [alchemy API](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) może być używany przez WebSocket. Aby to zrobić, użyj tego samego ładunku, który zostałby wysłany jako treść żądania HTTP POST, ale zamiast tego wyślij ten ładunek za pośrednictwem protokołu WebSocket.
 

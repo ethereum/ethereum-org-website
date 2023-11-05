@@ -142,6 +142,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   address?: string
   postMergeBannerTranslation?: string
   hideEditButton?: boolean
+  showPostMergeBanner?: boolean
 }
 
 export interface Root {
@@ -158,4 +159,15 @@ export interface MdPageContent {
   tocItems: Array<ToCItem>
   lastUpdatedDate?: string
   contentNotTranslated: boolean
+}
+
+// GitHub contributors
+export interface Author {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
+  }
 }

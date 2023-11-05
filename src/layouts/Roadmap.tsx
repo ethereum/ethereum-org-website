@@ -1,10 +1,4 @@
-import {
-  Box,
-  Flex,
-  Show,
-  SimpleGrid, Wrap,
-  WrapItem
-} from "@chakra-ui/react"
+import { Box, Flex, Show, SimpleGrid, Wrap, WrapItem } from "@chakra-ui/react"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
@@ -186,10 +180,6 @@ export const RoadmapLayout: React.FC<IProps> = ({
         </Flex>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        /> */}
         <Show above="lg">
           <InfoColumn>
             <StyledButtonDropdown list={dropdownLinks} />

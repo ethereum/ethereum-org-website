@@ -2,21 +2,19 @@ import { useState } from "react"
 import { Box, chakra, Flex } from "@chakra-ui/react"
 import { FaTools } from "react-icons/fa"
 
-// TODO: Figure out "react-select" usage
-// import { StyledSelect as Select } from "@/components/SharedStyledComponents"
-
 import { ButtonLink } from "@/components/Buttons"
 import Text from "@/components/OldText"
+import { StyledSelect as Select } from "@/components/SharedStyledComponents"
 // TODO: Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// const StyledSelect = chakra(Select, {
-//   baseStyle: {
-//     maxW: { base: "full", md: "50%" },
-//   },
-// })
+const StyledSelect = chakra(Select, {
+  baseStyle: {
+    maxW: { base: "full", md: "50%" },
+  },
+})
 
 export interface IProps {}
 
@@ -64,14 +62,13 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         Choose network
       </Text>
       <Box my={4}>
-        {/* TODO: Figured out "react-select" usage */}
-        {/* <StyledSelect
+        <StyledSelect
           className="react-select-container"
           classNamePrefix="react-select"
           options={selectOptions}
           onChange={handleChange}
           defaultValue={selectOptions[0]}
-        /> */}
+        />
       </Box>
       <Text>
         {/* <Translation id="page-staking-launchpad-widget-p1" /> */}
