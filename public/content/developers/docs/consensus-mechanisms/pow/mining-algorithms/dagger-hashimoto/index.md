@@ -266,7 +266,12 @@ As noted above, the RNG used for DAG generation relies on some results from numb
 
 While the `produce_dag` function does not need to produce unbiased random numbers, a potential threat is that `seed**i % P` only takes on a handful of values. This could provide an advantage to miners recognizing the pattern over those that do not.
 
-To avoid this, a result from number theory is appealed to. A [_Safe Prime_](https://en.wikipedia.org/wiki/Safe_prime) is defined to be a prime `P` such that `(P-1)/2` is also prime. The _order_ of a member `x` of the [multiplicative group](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` is defined to be the minimal `m` such that <pre>xᵐ mod P ≡ 1</pre>
+To avoid this, a result from number theory is appealed to. A [_Safe Prime_](https://en.wikipedia.org/wiki/Safe_prime) is defined to be a prime `P` such that `(P-1)/2` is also prime. The _order_ of a member `x` of the [multiplicative group](https://en.wikipedia.org/wiki/Multiplicative_group_of_integers_modulo_n) `ℤ/nℤ` is defined to be the minimal `m` such that
+
+```
+xᵐ mod P ≡ 1
+```
+
 Given these definitions, we have:
 
 > Observation 1. Let `x` be a member of the multiplicative group `ℤ/Pℤ` for a safe prime `P`. If `x mod P ≠ 1 mod P` and `x mod P ≠ P-1 mod P`, then the order of `x` is either `P-1` or `(P-1)/2`.
@@ -275,7 +280,9 @@ _Proof_. Since `P` is a safe prime, then by [Lagrange's Theorem][lagrange] we ha
 
 The order of `x` cannot be `1`, since by Fermat's Little Theorem we have:
 
-<pre>x<sup>P-1</sup> mod P ≡ 1</pre>
+```
+x<sup>P-1</sup> mod P ≡ 1
+```
 
 Hence `x` must be a multiplicative identity of `ℤ/nℤ`, which is unique. Since we assumed that `x ≠ 1` by assumption, this is not possible.
 

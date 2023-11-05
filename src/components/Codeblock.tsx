@@ -327,13 +327,9 @@ const Codeblock: React.FC<IProps> = ({
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                       <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                         {isCollapsed ? (
-                          // TODO: Implement after intl
-                          // <Translation id="show-all" />
-                          <>Show all</>
+                          <Translation id="show-all" />
                         ) : (
-                          // TODO: Implement after intl
-                          // <Translation id="show-less" />
-                          <>Show less</>
+                          <Translation id="show-less" />
                         )}
                       </TopBarItem>
                     )}
@@ -344,16 +340,12 @@ const Codeblock: React.FC<IProps> = ({
                           {!isCopied ? (
                             <>
                               <Emoji text=":clipboard:" fontSize="md" />{" "}
-                              {/* TODO: Implement after intl */}
-                              {/* <Translation id="copy" /> */}
-                              Copy
+                              <Translation id="copy" />
                             </>
                           ) : (
                             <>
                               <Emoji text=":white_check_mark:" fontSize="md" />{" "}
-                              {/* TODO: Implement after intl */}
-                              {/* <Translation id="copied" /> */}
-                              Copied
+                              <Translation id="copied" />
                             </>
                           )}
                         </TopBarItem>
