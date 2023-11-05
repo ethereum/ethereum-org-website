@@ -7,9 +7,9 @@ sidebarDepth: 3
 
 ## Scaling overview {#scaling-overview}
 
-As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
+As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested, and implemented that take different approaches to achieve similar goals.
 
-The main goal of scalability is to increase transaction speed (faster finality), and transaction throughput (high transactions per second), without sacrificing decentralization or security (more on the [Ethereum vision](/roadmap/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
+The main goal of scalability is to increase transaction speed (faster finality) and transaction throughput (higher number of transactions per second) without sacrificing decentralization or security (more on the [Ethereum vision](/roadmap/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
 
 While speed and throughput are important, it is essential that scaling solutions enabling these goals remain decentralized and secure. Keeping the barrier to entry low for node operators is critical in preventing a progression towards centralized and insecure computing power.
 
@@ -29,7 +29,7 @@ Sharding is the process of splitting a database. Subsets of validators would be 
 
 ## Off-chain scaling {#off-chain-scaling}
 
-Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains), [validiums](#validium), or [plasma chains](#plasma). These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
+Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains), [validiums](#validium), or [plasma chains](#plasma). These solutions communicate with Mainnet but derive their security differently to obtain a variety of goals.
 
 ### Layer 2 scaling {#layer-2-scaling}
 
@@ -43,10 +43,10 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 
 #### Why is layer 2 needed? {#why-is-layer-2-needed}
 
-- Increased transactions per second greatly improves user experience, and reduces network congestion on Mainnet Ethereum.
-- Transactions are rolled up into a single transaction to Mainnet Ethereum, reducing gas fees for users making Ethereum more inclusive and accessible for people everywhere.
+- Increased transactions per second greatly improve user experience and reduce network congestion on Mainnet Ethereum.
+- Transactions are rolled up into a single transaction to Mainnet Ethereum, reducing gas fees for users and making Ethereum more inclusive and accessible for people everywhere.
 - Any updates to scalability should not be at the expense of decentralization or security – layer 2 builds on top of Ethereum.
-- There are application specific layer 2 networks that bring their own set of efficiencies when working with assets at scale.
+- There are application-specific layer 2 networks that bring their own set of efficiencies when working with assets at scale.
 
 [More on layer 2](/layer-2/).
 
@@ -56,7 +56,7 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 
 There are two types of rollups with different security models:
 
-- **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
+- **Optimistic rollups**: assume transactions are valid by default and only run the computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
 - **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 
 #### State channels {#channels}
@@ -67,13 +67,13 @@ Learn more about [state channels](/developers/docs/scaling/state-channels/).
 
 ### Sidechains {#sidechains}
 
-A sidechain is an independent EVM-compatible blockchain which runs in parallel to Mainnet. These are compatible with Ethereum via two-way bridges, and run under their own chosen rules of consensus, and block parameters.
+A sidechain is an independent EVM-compatible blockchain that runs in parallel to Mainnet. These are compatible with Ethereum via two-way bridges and run under their own chosen rules of consensus and block parameters.
 
 Learn more about [Sidechains](/developers/docs/scaling/sidechains/).
 
 ### Plasma {#plasma}
 
-A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
+A plasma chain is a separate blockchain that is anchored to the main Ethereum chain and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Learn more about [Plasma](/developers/docs/scaling/plasma/).
 
@@ -85,7 +85,7 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 
 ## Why are so many scaling solutions needed? {#why-do-we-need-these}
 
-- Multiple solutions can help reduce the overall congestion on any one part of the network, and also prevents single points of failure.
+- Multiple solutions can help reduce the overall congestion on any one part of the network and also prevent single points of failure.
 - The whole is greater than the sum of its parts. Different solutions can exist and work in harmony, allowing for an exponential effect on future transaction speed and throughput.
 - Not all solutions require utilizing the Ethereum consensus algorithm directly, and alternatives can offer benefits that would otherwise be difficult to obtain.
 - No one scaling solution is enough to fulfill the [Ethereum vision](/roadmap/vision/).
