@@ -67,7 +67,7 @@
     "react-emoji-render": "^2.0.1",
     "react-helmet": "^6.1.0",
     "react-i18next": "^12.1.4",
-    "react-icons": "^4.3.1",
+    "react-icons": "^4.11.0",
     "react-instantsearch-dom": "^6.32.0",
     "react-select": "^4.3.0",
     "recharts": "^2.1.9",
