@@ -18,7 +18,7 @@ Analogia „księgi głównej” jest często używana w celu opisania blockchai
 
 Choć Ethereum ma swoją własną kryptowalutę (Ether), która działa niemal dokładnie według tych samych intuicyjnych zasad, pozwala również stosować znacznie bardziej rozbudowaną funkcję: [inteligentne kontrakty](/developers/docs/smart-contracts/). Dla tej skomplikowanej funkcji wymagana jest bardziej wyszukana analogia. W odróżnieniu od rozproszonej księgi główne, Ethereum jest rozproszoną [maszyną stanową](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony). Stany Ethereum są wielkimi strukturami danych, które przechowują nie tylko wszystkie konta i ich salda, ale też _stan maszyny_, który może zmieniać się od bloku do bloku zgodnie z predefiniowanymi zasadami, i który może wykonywać dowolny kod maszynowy. Konkretne zasady zmiany stanu od bloku do bloku są zdefiniowane przez EVM.
 
-![Schemat przedstawiający strukturę EVM](../../../../../developers/docs/evm/evm.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat przedstawiający strukturę EVM](./evm.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Funkcja przejścia stanów Ethereum {#the-ethereum-state-transition-function}
 
@@ -44,7 +44,7 @@ Rezultatem stworzenia nowego kontraktu jest stworzenie nowego konta kontaktu zaw
 
 EVM działa jako [maszyna stosu](https://pl.wikipedia.org/wiki/Automat_sko%C5%84czony), która posiada 1024 elementy. Każdy element jest 256-bitowym słowem, które zostało wybrane dla zmaksymalizowania kompatybilności z algorytmem SHA-3-256.
 
-![A diagram showing the make up of the stack](../../../../../developers/docs/evm/evm-stack.png)
+![A diagram showing the make up of the stack](./evm-stack.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Removed as we should probably show memory and account storage too if showing stack-->
@@ -55,7 +55,7 @@ Kontrakty jednak zawierają drzewo _pamięciowe_ Merkle Patricia (jako adresowal
 
 Skompilowany kod bitowy inteligentnego kontraktu wykonywany jest jako szereg [kodów operacyjnych](https://www.ethervm.io/) EVM, które przeprowadzają standardowe operacje na stosie, takie jak `XOR`, `AND`, `ADD`, `SUB` itp. EVM implementuje również szereg operacji stosu specyficznych dla blockchaina, takich jak `ADDRESS`, `BALANDCE`, `SHA3`, `BLOCKHASH` itp.
 
-![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../../../../../developers/docs/gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat pokazujący, gdzie potrzebny jest gaz dla operacji EVM](../gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Implementacja EVM {#evm-implementations}
 

@@ -66,11 +66,12 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
 
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
-  const isExternal = url.isExternal(href) || isPdf
+  const isExternal = url.isExternal(href)
+  const isInternalPdf = isPdf && !isExternal
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if (isPdf) {
+  if (isInternalPdf) {
     href = getRelativePath(asPath, href)
   }
 
@@ -85,7 +86,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
     ...(isActive && activeStyle),
   }
 
-  if (isExternal) {
+  if (isInternalPdf || isExternal) {
     return (
       <ChakraLink {...commonProps} isExternal>
         {children}

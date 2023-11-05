@@ -1,13 +1,12 @@
-import React, { useEffect, useState } from "react"
-import { shuffle } from "lodash"
 import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { shuffle } from "lodash"
 
-import data from "../data/contributors.json"
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
 
-import InlineLink from "./Link"
-import Text from "./OldText"
-
-export interface IProps {}
+// TODO: Re-import once Crowdin scripts are functional and data available
+// import data from "../data/contributors.json"
 
 export interface Contributor {
   login: string
@@ -17,15 +16,16 @@ export interface Contributor {
   contributions: Array<string>
 }
 
-const Contributors: React.FC<IProps> = () => {
+const Contributors = () => {
   const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
     []
   )
 
-  useEffect(() => {
-    const list = shuffle(data.contributors)
-    setContributorsList(list)
-  }, [])
+  // TODO: Re-enable once Crowdin scripts are functional and data available
+  // useEffect(() => {
+  //   const list = shuffle(data.contributors)
+  //   setContributorsList(list)
+  // }, [])
 
   return (
     <>
@@ -35,8 +35,9 @@ const Contributors: React.FC<IProps> = () => {
       </p>
 
       <Flex flexWrap="wrap">
-        {contributorsList.map((contributor, idx) => (
+        {contributorsList.map((contributor) => (
           <LinkBox
+            key={contributor.login}
             as="div"
             maxWidth="132px"
             margin="2"

@@ -17,7 +17,6 @@ import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import Callout from "@/components/Callout"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
@@ -170,7 +169,6 @@ export const stakingComponents = {
   h4: Heading4,
   p: Paragraph,
   pre: Pre,
-  Callout,
   CardGrid,
   DocLink,
   InfoGrid,
