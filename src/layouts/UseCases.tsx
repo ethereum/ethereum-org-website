@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
@@ -13,7 +14,6 @@ import {
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
-import { useTranslation } from "next-i18next"
 
 import BannerNotification from "@/components/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"

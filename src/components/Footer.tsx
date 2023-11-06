@@ -2,6 +2,7 @@
 // import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
@@ -13,23 +14,14 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import React from "react"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
-import { useRouter } from "next/router"
+
+import { Lang, TranslationKey } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-
-import { Lang, TranslationKey } from "@/lib/types"
-
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-
-import { BaseLink } from "./Link"
 
 const socialLinks = [
   {

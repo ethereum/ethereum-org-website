@@ -1,17 +1,18 @@
 import { ReactNode, useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { useRouter } from "next/router"
-// Import components
-import Tooltip from "../Tooltip"
-import InlineLink from "../Link"
-import Text from "../OldText"
+
 // Import utilities
 import { Lang } from "../../utils/languages"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import InlineLink from "../Link"
+import InlineLink from "../Link"
 import Text from "../OldText"
+import Text from "../OldText"
+// Import components
+import Tooltip from "../Tooltip"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
 

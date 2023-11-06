@@ -1,4 +1,6 @@
 import React, { FC, useRef } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
 import { Box, Flex, HStack, Icon, useDisclosure } from "@chakra-ui/react"
 
@@ -6,15 +8,9 @@ import { ButtonLink, IconButton } from "../Buttons"
 import { EthHomeIcon } from "../icons"
 import { BaseLink } from "../Link"
 import Search from "../Search"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import { ButtonLink, IconButton } from "../Buttons"
-import { BaseLink } from "../Link"
-import Search from "../Search"
-import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
 export interface IProps {

@@ -1,6 +1,6 @@
-import { useTranslation } from "next-i18next"
-
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
+import { BsArrowCounterclockwise } from "react-icons/bs"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 import {
   Box,
@@ -14,7 +14,6 @@ import {
   type TabsProps,
   useTheme,
 } from "@chakra-ui/react"
-import { BsArrowCounterclockwise } from "react-icons/bs"
 
 import { FiltersType } from "../../../pages/wallets/find-wallet"
 import { trackCustomEvent } from "../../../utils/matomo"

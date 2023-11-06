@@ -1,17 +1,13 @@
-import { useState, useEffect, ReactNode } from "react"
-import { Box, HStack, Icon } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-
+import { ReactNode, useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
-
-import { BaseLink, IProps as ILinkProps } from "./Link"
+import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
 
 import { BaseLink, IProps as ILinkProps } from "./Link"
-import Translation from "./Translation"
 
 export const dropdownIconContainerVariant = {
   open: {

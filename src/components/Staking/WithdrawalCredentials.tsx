@@ -1,11 +1,11 @@
 import { ChangeEvent, FC, useMemo, useState } from "react"
-import { Button, Flex, Text } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Button, Flex, Text } from "@chakra-ui/react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-import Translation from "@/components/Translation"
 import Input from "@/components/Input"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

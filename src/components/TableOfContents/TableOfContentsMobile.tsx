@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
@@ -15,8 +16,6 @@ import {
 import type { ToCItem } from "@/lib/types"
 
 import { outerListProps } from "@/lib/utils/toc"
-
-import { useTranslation } from "next-i18next"
 
 import ItemsList from "./ItemsList"
 

@@ -9,8 +9,8 @@ import {
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
 import OldHeading from "@/components/OldHeading"
-import Translation from "@/components/Translation"
 import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

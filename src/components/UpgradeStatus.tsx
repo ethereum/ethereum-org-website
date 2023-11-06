@@ -1,6 +1,6 @@
 import React from "react"
-import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 

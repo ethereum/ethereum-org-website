@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
-import { FlexProps } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { FlexProps } from "@chakra-ui/react"
 
 import FileContributors, { Author } from "./FileContributors"
 

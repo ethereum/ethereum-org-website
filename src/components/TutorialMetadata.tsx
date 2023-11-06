@@ -1,10 +1,8 @@
-import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
-// import { Lang } from "../utils/languages"
-// import { getLocaleTimestamp } from "../utils/time"
-import type { TranslationKey } from "@/lib/types"
+import type { Lang, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
@@ -14,9 +12,6 @@ import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
-
-import type { Lang, TranslationKey } from "@/lib/types"
-import { TutorialFrontmatter } from "@/lib/interfaces"
 
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter

@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react"
 import { useTranslation } from "next-i18next"
+import { Meta, StoryObj } from "@storybook/react"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 

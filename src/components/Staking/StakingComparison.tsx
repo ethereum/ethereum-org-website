@@ -1,12 +1,6 @@
-import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 
-import InlineLink from "@/components/Link"
-// import Translation from "@/components/Translation"
-import Text from "@/components/OldText"
-import OldHeading from "@/components/OldHeading"
-
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import type { StakingPage, TranslationKey } from "@/lib/types"
 
 import {
@@ -16,8 +10,6 @@ import {
 } from "@/components/icons/staking"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
-// TODO: Re-enable when translations are ready
-// import Translation from "@/components/Translation"
 import Text from "@/components/OldText"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"

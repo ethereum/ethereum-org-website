@@ -1,5 +1,6 @@
 import { ComponentType, SVGProps, useEffect, useState } from "react"
 import { shuffle } from "lodash"
+import { useTranslation } from "next-i18next"
 import {
   Badge,
   Box,
@@ -15,7 +16,6 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
 // SVG imports

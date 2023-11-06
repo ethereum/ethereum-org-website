@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react"
 import { Box } from "@chakra-ui/react"
 
+import Translation from "@/components/Translation"
+
 import events from "../data/community-events.json"
 
 import { Button } from "./Buttons"
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
-import { Button } from "./Buttons"
-import Translation from "@/components/Translation"
-
-// Data
-import events from "../data/community-events.json"
 
 // TODO: add trackCustomEvent when util is migrated
 // import { trackCustomEvent } from "../utils/matomo"

@@ -1,5 +1,5 @@
-import { Flex, type FlexProps } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 

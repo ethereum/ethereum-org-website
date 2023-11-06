@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import allQuizzesData from "../../data/quizzes"
 import { QuizzesListItem } from "../../types"

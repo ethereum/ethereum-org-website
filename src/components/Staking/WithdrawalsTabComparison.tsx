@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import {
   ListItem,
   Tab,
@@ -7,13 +8,11 @@ import {
   Tabs,
   UnorderedList,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
-
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"

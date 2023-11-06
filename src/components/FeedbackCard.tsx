@@ -1,7 +1,7 @@
 import React, { ReactNode, useState } from "react"
 import { useRouter } from "next/router"
-import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 
 import { Button } from "./Buttons"
 import { FeedbackThumbsUpIcon } from "./icons"

@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
@@ -13,9 +14,8 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
-import { useTranslation } from "next-i18next"
 
 import BeaconChainActions from "@/components/BeaconChainActions"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -34,16 +34,12 @@ import {
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-// import ShardChainsList from "@/components/ShardChainsList"  // TODO: this component doesnt exist?
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang } from "@/lib/types"
-import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 

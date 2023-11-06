@@ -1,7 +1,7 @@
+import { useTranslation } from "next-i18next"
 import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
-import { useTranslation } from "next-i18next"
 
 import Emoji from "@/components/Emoji"
 import { Image, type ImageProps } from "@/components/Image"

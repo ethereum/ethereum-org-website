@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react"
 import FocusTrap from "focus-trap-react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 import {
   Box,
@@ -10,25 +11,18 @@ import {
   Icon,
   ScaleFade,
 } from "@chakra-ui/react"
-import { MdClose } from "react-icons/md"
-import FocusTrap from "focus-trap-react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-// Component imports
-import Translation from "./Translation"
-import Text from "./OldText"
-// SVG imports
-import { FeedbackGlyphIcon } from "./icons"
-// Utility imports
-import { trackCustomEvent } from "../utils/matomo"
+
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useSurvey } from "../hooks/useSurvey"
 import { DEFAULT_LOCALE } from "../lib/constants"
+// Utility imports
 import { trackCustomEvent } from "../utils/matomo"
 
+// SVG imports
 import { FeedbackGlyphIcon } from "./icons"
 import Text from "./OldText"
+// Component imports
 import Translation from "./Translation"
 
 interface FixedDotProps extends ButtonProps {

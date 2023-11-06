@@ -1,4 +1,7 @@
-import { useEffect, useState, useMemo, useCallback, useContext } from "react"
+import { useCallback, useContext, useEffect, useMemo, useState } from "react"
+import { shuffle } from "lodash"
+import { useTranslation } from "next-i18next"
+import { FaTwitter } from "react-icons/fa"
 import {
   Box,
   Center,
@@ -20,6 +23,8 @@ import type {
   RawQuiz,
 } from "@/lib/interfaces"
 
+import Translation from "@/components/Translation"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import allQuizzesData from "@/data/quizzes"
@@ -30,14 +35,8 @@ import {
   PROGRESS_BAR_GAP,
   USER_STATS_KEY,
 } from "@/lib/constants"
-import { useTranslation } from "next-i18next"
 
 import Button from "../Buttons/Button"
-import QuizRadioGroup from "./QuizRadioGroup"
-import QuizSummary from "./QuizSummary"
-import Text from "../OldText"
-import Translation from "@/components/Translation"
-
 import {
   CorrectIcon,
   IncorrectIcon,

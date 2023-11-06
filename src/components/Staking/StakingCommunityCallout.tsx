@@ -1,5 +1,5 @@
-import { Flex, type FlexProps } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import CalloutBanner from "@/components/CalloutBanner"

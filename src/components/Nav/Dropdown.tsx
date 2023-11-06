@@ -1,6 +1,6 @@
 import React, { createRef, useContext, useState } from "react"
-import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
+import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 
 import { BaseLink, type LinkProps } from "../Link"
 

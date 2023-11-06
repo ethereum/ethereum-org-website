@@ -1,12 +1,12 @@
 import { useState } from "react"
-import { FaTools } from "react-icons/fa"
-import { chakra, Box, Flex } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { FaTools } from "react-icons/fa"
+import { Box, chakra, Flex } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import Text from "@/components/OldText"
-import Translation from "@/components/Translation"
 import { StyledSelect as Select } from "@/components/SharedStyledComponents"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

@@ -1,5 +1,5 @@
-import { useColorModeValue } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { useColorModeValue } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 

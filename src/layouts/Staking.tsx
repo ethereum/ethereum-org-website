@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import {
   Box,
   type BoxProps,
@@ -11,7 +12,6 @@ import {
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"

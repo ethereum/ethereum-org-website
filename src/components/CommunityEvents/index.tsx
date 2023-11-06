@@ -1,4 +1,6 @@
 import { DateTime, DateTimeFormatOptions } from "luxon"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { FaDiscord } from "react-icons/fa"
 import {
   Box,
@@ -9,8 +11,6 @@ import {
   GridItem,
   Icon,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 
 import { trackCustomEvent } from "../../utils/matomo"
 import { ButtonLink } from "../Buttons"

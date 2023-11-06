@@ -1,4 +1,5 @@
 import React, { MouseEvent } from "react"
+import { useTranslation } from "next-i18next"
 import { MdMenu } from "react-icons/md"
 import {
   Button,
@@ -8,15 +9,11 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-
-// Components
-import { BaseLink } from "./Link"
 
 // Utils
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// import Translation from "./Translation"
+// Components
 import { BaseLink } from "./Link"
 
 export interface ListItem {

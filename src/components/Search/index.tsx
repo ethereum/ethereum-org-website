@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
 // TODO
 // import { useDocSearchKeyboardEvents } from "@docsearch/react"
@@ -11,7 +12,6 @@ import {
   useMergeRefs,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import { Button } from "../Buttons"
 

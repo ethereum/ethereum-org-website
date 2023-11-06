@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
@@ -8,15 +9,6 @@ import {
   Stack,
   UnorderedList,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-
-// Components
-import { ButtonLink } from "../Buttons"
-import InlineLink from "../Link"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
-import GatsbyImage from "../GatsbyImage"
 
 // Data
 import {
@@ -26,11 +18,18 @@ import {
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
 import { ChildOnlyProp } from "../../types"
 import { trackCustomEvent } from "../../utils/matomo"
+// Components
+import { ButtonLink } from "../Buttons"
 import { ButtonLink } from "../Buttons"
 import GatsbyImage from "../GatsbyImage"
+import GatsbyImage from "../GatsbyImage"
+import InlineLink from "../Link"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
+import OldHeading from "../OldHeading"
 import Text from "../OldText"
+import Text from "../OldText"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 import Translation from "../Translation"
 

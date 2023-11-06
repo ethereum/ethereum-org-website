@@ -1,4 +1,4 @@
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import {
   Avatar,
   Box,
@@ -10,7 +10,6 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"

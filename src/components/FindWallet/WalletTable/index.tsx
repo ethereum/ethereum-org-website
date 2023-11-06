@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import Select from "react-select"
@@ -19,7 +20,7 @@ import {
   Th,
   Tr,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
+
 import { NAV_BAR_PX_HEIGHT } from "../../../constants"
 import { WalletData } from "../../../data/wallets/wallet-data"
 import { ChildOnlyProp } from "../../../types"

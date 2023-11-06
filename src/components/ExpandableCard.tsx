@@ -1,5 +1,6 @@
 // Libraries
 import { ReactNode, useState } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Accordion,
   AccordionButton,
@@ -9,7 +10,6 @@ import {
   Heading,
   Icon,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 // Components
 import Text from "./OldText"

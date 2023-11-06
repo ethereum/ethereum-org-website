@@ -1,5 +1,5 @@
-import { MdInfoOutline } from "react-icons/md"
 import { useTranslation } from "next-i18next"
+import { MdInfoOutline } from "react-icons/md"
 import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
 
 import walletFilterData from "../../../data/wallets/wallet-filters"

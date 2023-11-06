@@ -1,9 +1,9 @@
+import { useTranslation } from "next-i18next"
 import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
 
-import { useTranslation } from "next-i18next"
+import Translation from "@/components/Translation"
 
 import { Background } from "./Background"
-import Translation from "@/components/Translation"
 
 const Text = chakra("text", {
   baseStyle: {

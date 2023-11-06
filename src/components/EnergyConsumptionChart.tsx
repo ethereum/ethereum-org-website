@@ -1,4 +1,5 @@
 import React from "react"
+import { useTranslation } from "next-i18next"
 import {
   Bar,
   BarChart,
@@ -16,7 +17,6 @@ import {
   useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import Translation from "@/components/Translation"
 

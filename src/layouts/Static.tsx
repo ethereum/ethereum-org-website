@@ -15,22 +15,6 @@ import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
 import Logo from "@/components/Logo"
 import MatomoOptOut from "@/components/MatomoOptOut"
-import MeetupList from "@/components/MeetupList"
-import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
-import SocialListItem from "@/components/SocialListItem"
-import TableOfContents from "@/components/TableOfContents"
-import Text from "@/components/OldText"
-import TranslationChartImage from "@/components/TranslationChartImage"
-import UpcomingEventsList from "@/components/UpcomingEventsList"
-import Translation from "@/components/Translation"
-import GitHubContributors from "@/components/GitHubContributors"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { CONTENT_DIR } from "@/lib/constants"
-
-import type { ChildOnlyProp, Lang } from "@/lib/types"
-import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -41,6 +25,7 @@ import MeetupList from "@/components/MeetupList"
 import Text from "@/components/OldText"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
+import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 

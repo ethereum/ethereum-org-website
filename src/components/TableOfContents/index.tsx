@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import { FaGithub } from "react-icons/fa"
 import {
   Box,
@@ -12,8 +13,6 @@ import {
 
 import type { ToCItem } from "@/lib/types"
 
-import { useTranslation } from "next-i18next"
-
 import { ButtonLink } from "@/components/Buttons"
 import ItemsList from "@/components/TableOfContents/ItemsList"
 import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
@@ -21,10 +20,6 @@ import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 import { outerListProps } from "@/lib/utils/toc"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
-
-import { outerListProps } from "@/lib/utils/toc"
-
-import type { ToCItem } from "@/lib/types"
 
 export interface IProps extends BoxProps {
   items: Array<ToCItem>

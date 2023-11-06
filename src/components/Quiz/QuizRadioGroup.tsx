@@ -1,4 +1,5 @@
 import React, { useMemo } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
@@ -10,7 +11,8 @@ import {
   useRadioGroup,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
+
+import type { Question } from "@/lib/interfaces"
 
 import type { TranslationKey } from "../../lib/types"
 

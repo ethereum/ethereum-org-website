@@ -1,9 +1,8 @@
+import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
 
 import { Button } from "@/components/Buttons"
-
-import { useTranslation } from "next-i18next"
 
 import Card, { IProps } from "."
 

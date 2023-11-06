@@ -1,5 +1,5 @@
-import { Stack } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Stack } from "@chakra-ui/react"
 
 import CardList, { CardListItem } from "@/components/CardList"
 

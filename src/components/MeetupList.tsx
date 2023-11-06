@@ -17,10 +17,10 @@ import InfoBanner from "@/components/InfoBanner"
 import Input from "@/components/Input"
 import InlineLink, { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import Translation from "@/components/Translation"
 import meetups from "@/data/community-meetups.json"
 
 export interface Meetup {
