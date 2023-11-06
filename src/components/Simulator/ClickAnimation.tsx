@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { createIcon, Flex, Text, TextProps } from "@chakra-ui/react"
 import { motion, type Transition } from "framer-motion"
+import { createIcon, Flex, Text, TextProps } from "@chakra-ui/react"
 
 const MotionFlex = motion(Flex)
 

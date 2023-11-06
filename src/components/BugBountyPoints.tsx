@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from "react"
-import { useTheme } from "@emotion/react"
-import { useStaticQuery, graphql } from "gatsby"
-import { Box, Flex, Icon } from "@chakra-ui/react"
+import React, { useEffect,useState } from "react"
 import axios from "axios"
-
-import Emoji from "./Emoji"
-import Translation from "./Translation"
-import InlineLink from "./Link"
-import Tooltip from "./Tooltip"
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
-import GatsbyImage from "./GatsbyImage"
+import { graphql,useStaticQuery } from "gatsby"
+import { MdInfoOutline } from "react-icons/md"
+import { Box, Flex, Icon } from "@chakra-ui/react"
+import { useTheme } from "@emotion/react"
 
 import { getImage } from "../utils/image"
-import { MdInfoOutline } from "react-icons/md"
+
+import Emoji from "./Emoji"
+import GatsbyImage from "./GatsbyImage"
+import InlineLink from "./Link"
+import OldHeading from "./OldHeading"
+import Text from "./OldText"
+import Tooltip from "./Tooltip"
+import Translation from "./Translation"
 
 export const TokenLogo = graphql`
   fragment TokenLogo on File {

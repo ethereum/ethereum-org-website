@@ -1,11 +1,11 @@
 import React from "react"
 import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 
+import type { TranslationKey } from "@/lib/types"
+
 // TODO: Re-enable after i18n implemented
 // import Translation from "./Translation"
 import Text from "./OldText"
-
-import type { TranslationKey } from "@/lib/types"
 
 export interface IStyledContainer {
   isShipped: boolean

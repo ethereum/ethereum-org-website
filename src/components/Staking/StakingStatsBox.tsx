@@ -1,19 +1,16 @@
-// Import libraries
-import React, { useState, useEffect, ReactNode } from "react"
-import { MdInfoOutline } from "react-icons/md"
+import React, { ReactNode, useEffect, useState } from "react"
 import { useI18next } from "gatsby-plugin-react-i18next"
+import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
-// Import components
-import Translation from "../Translation"
-import Tooltip from "../Tooltip"
+
+import { getData } from "../../utils/cache"
+import { Lang } from "../../utils/languages"
+import { getLocaleForNumberFormat } from "../../utils/translations"
 import InlineLink from "../Link"
 import Text from "../OldText"
-// Import utilities
-import { Lang } from "../../utils/languages"
-import { getData } from "../../utils/cache"
-import { getLocaleForNumberFormat } from "../../utils/translations"
+import Tooltip from "../Tooltip"
+import Translation from "../Translation"
 
-// Constants
 const NA_ERROR = "n/a"
 const ZERO = "0"
 

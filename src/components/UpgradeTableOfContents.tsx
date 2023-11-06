@@ -1,13 +1,18 @@
 import { Box, List, ListItem } from "@chakra-ui/react"
+
+import type { ToCItem } from "@/lib/types"
+
 import { BaseLink } from "@/components/Link"
 import { IPropsItemsList } from "@/components/TableOfContents/ItemsList"
+
 import { parseToCTitle } from "@/lib/utils/toc"
-import type { ToCItem } from "@/lib/types"
 
 export interface IPropsTableOfContentsLink {
   item: ToCItem
 }
-const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({ item: { title, url } }) => {
+const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
+  item: { title, url },
+}) => {
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
@@ -50,7 +55,10 @@ interface IPropsToC {
   items: Array<ToCItem>
   maxDepth?: number
 }
-const UpgradeTableOfContents: React.FC<IPropsToC> = ({ items, maxDepth = 1}) => (
+const UpgradeTableOfContents: React.FC<IPropsToC> = ({
+  items,
+  maxDepth = 1,
+}) => (
   <Box
     as="nav"
     p={0}

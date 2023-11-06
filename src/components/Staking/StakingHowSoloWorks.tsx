@@ -4,9 +4,9 @@ import { Link } from "@chakra-ui/next-js"
 
 import { Image } from "@/components/Image"
 import OrderedList from "@/components/OrderedList"
+
 // Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
-
 import image from "@/public/hackathon_transparent.png"
 
 export interface IProps {}

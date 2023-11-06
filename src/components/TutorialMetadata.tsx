@@ -1,16 +1,16 @@
 import React from "react"
 import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
+// import { Lang } from "../utils/languages"
+// import { getLocaleTimestamp } from "../utils/time"
+import type { TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
+
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
-
-// import { Lang } from "../utils/languages"
-// import { getLocaleTimestamp } from "../utils/time"
-import type { TranslationKey } from "@/lib/types"
-import { TutorialFrontmatter } from "@/lib/interfaces"
 
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
@@ -26,8 +26,10 @@ export enum Skill {
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
   `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
-
-const TutorialMetadata = ({ frontmatter, timeToRead }: TutorialMetadataProps) => {
+const TutorialMetadata = ({
+  frontmatter,
+  timeToRead,
+}: TutorialMetadataProps) => {
   // TODO: Implement after intl
   // const { language } = useI18next()
 
@@ -92,8 +94,7 @@ const TutorialMetadata = ({ frontmatter, timeToRead }: TutorialMetadataProps) =>
         )}
         <Box>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
-          {timeToRead}{" "}
-          {/* TODO: Implement after intl */}
+          {timeToRead} {/* TODO: Implement after intl */}
           {/* <Translation id="comp-tutorial-metadata-minute-read" /> */}
           minute read
         </Box>
@@ -129,12 +130,14 @@ const TutorialMetadata = ({ frontmatter, timeToRead }: TutorialMetadataProps) =>
                     id="comp-tutorial-metadata-tip-author"
                   />{" "}
                   {address} {isCopied && <Translation id="copied" />}
-                  {isCopied && <Emoji
+                  {isCopied && (
+                    <Emoji
                       fontSize="sm"
                       ml={2}
                       mr={2}
                       text=":white_check_mark:"
-                    />}
+                    />
+                  )}
                 </Box>
               )}
             </CopyToClipboard>

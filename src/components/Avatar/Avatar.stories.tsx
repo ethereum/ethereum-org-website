@@ -1,6 +1,7 @@
 import * as React from "react"
+import { AvatarGroup, HStack,VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
-import { VStack, AvatarGroup, HStack } from "@chakra-ui/react"
+
 import Avatar from "."
 
 type AvatarType = typeof Avatar

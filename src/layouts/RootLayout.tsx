@@ -1,16 +1,17 @@
-import { Container } from "@chakra-ui/react"
-import { useRouter } from "next/router"
 import { join } from "path"
 
-import Nav from "@/components/Nav"
+import { useRouter } from "next/router"
+import { Container } from "@chakra-ui/react"
+
+import { Lang } from "@/lib/types"
+import { Root } from "@/lib/interfaces"
+
 import Footer from "@/components/Footer"
+import Nav from "@/components/Nav"
 import TranslationBanner from "@/components/TranslationBanner"
 import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
-
-import { Lang } from "@/lib/types"
-import { Root } from "@/lib/interfaces"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 

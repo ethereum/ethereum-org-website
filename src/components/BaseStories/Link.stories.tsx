@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Center, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import Link from "../Link"
 
 type LinkType = typeof Link

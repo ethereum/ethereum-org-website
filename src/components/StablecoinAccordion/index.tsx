@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { MdArrowForward } from "react-icons/md"
 import {
   Accordion,
   Box,
@@ -8,21 +9,22 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/react"
-import { MdArrowForward } from "react-icons/md"
+
+import { TranslationKey } from "../../utils/translations"
 import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
 import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
-import Translation from "../Translation"
-import Text from "../OldText"
 import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import Translation from "../Translation"
+
 import {
   AccordionCustomItem,
   LeftColumnPanel,
   RightColumnPanel,
 } from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./useStablecoinAccordion"
-import { TranslationKey } from "../../utils/translations"
 
 export type ChildOnlyType = {
   children: ReactNode

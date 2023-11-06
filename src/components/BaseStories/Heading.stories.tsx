@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import Translation from "../Translation"
 
 type HeadingType = typeof HeadingComponent

@@ -1,11 +1,14 @@
 import React, { useEffect } from "react"
-import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
+
+import { UserStats } from "@/lib/types"
+
+import { numberToPercent } from "@/lib/utils/numberToPercent"
 
 import Text from "../OldText"
-import { numberToPercent } from "@/lib/utils/numberToPercent"
+
 import { updateUserStats } from "./utils"
-import { UserStats } from "@/lib/types"
 
 // TODO: Re-enable when i18n is implemented and remove placeholders throughout
 // import { useI18next } from "gatsby-plugin-react-i18next"

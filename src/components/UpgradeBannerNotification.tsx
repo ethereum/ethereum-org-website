@@ -1,5 +1,6 @@
 import React from "react"
 import { Box } from "@chakra-ui/react"
+
 import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
 import InlineLink from "./Link"

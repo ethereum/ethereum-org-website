@@ -1,5 +1,9 @@
 import { useState } from "react"
-// SVG imports
+import { chakra } from "@chakra-ui/react"
+
+import type { StakingPage } from "@/lib/types"
+
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import {
   AuditedIcon,
   BattleTestedIcon,
@@ -12,13 +16,9 @@ import {
   SelfCustodyIcon,
   TrustlessIcon,
 } from "@/components/icons/staking"
-// Component imports
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { MatomoEventOptions } from "@/lib/utils/matomo"
 import { IProps as StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
-import { chakra } from "@chakra-ui/react"
 
-import type { StakingPage } from "@/lib/types"
+import { MatomoEventOptions } from "@/lib/utils/matomo"
 
 type DataType = {
   title: string

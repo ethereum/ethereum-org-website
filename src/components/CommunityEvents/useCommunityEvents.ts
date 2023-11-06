@@ -1,13 +1,8 @@
-// Libraries
 import { useEffect, useState } from "react"
 
-// Constants
 import { GATSBY_FUNCTIONS_PATH } from "../../constants"
-
-// Utils
 import { getData } from "../../utils/cache"
 
-// Interface
 export interface Event {
   date: string
   title: string

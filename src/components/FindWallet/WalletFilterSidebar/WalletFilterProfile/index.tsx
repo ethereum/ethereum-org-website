@@ -1,23 +1,18 @@
-// Libraries
 import React from "react"
+import { MdCircle } from "react-icons/md"
 import {
   Box,
   Flex,
   Heading,
+  Icon,
   ListItem,
   UnorderedList,
-  Icon,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-// Components
+import { trackCustomEvent } from "../../../../utils/matomo"
 import Translation from "../../../Translation"
 
-// Icons
-import { MdCircle } from "react-icons/md"
-
-// Utils
-import { trackCustomEvent } from "../../../../utils/matomo"
 import { useWalletFilterProfile } from "./useWalletFilterProfile"
 
 const WalletFilterProfile = ({

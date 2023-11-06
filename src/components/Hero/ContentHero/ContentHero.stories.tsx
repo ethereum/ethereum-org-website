@@ -1,8 +1,9 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import ContentHeroComponent, { ContentHeroProps } from "."
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { Meta, StoryObj } from "@storybook/react"
+
+import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
 

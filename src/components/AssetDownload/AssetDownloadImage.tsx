@@ -1,8 +1,8 @@
 import React from "react"
 import { Center } from "@chakra-ui/react"
-import GatsbyImage from "../GatsbyImage"
 
 import { getImage, ImageDataLike } from "../../utils/image"
+import GatsbyImage from "../GatsbyImage"
 
 interface Props {
   image?: ImageDataLike | null

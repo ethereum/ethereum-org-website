@@ -8,11 +8,13 @@ import {
   Hide,
   useToken,
 } from "@chakra-ui/react"
+
 import Card from "../Card"
-import Translation from "../Translation"
-import Text from "../OldText"
 import OldHeading from "../OldHeading"
-import { TriangleSVG, IProps as TriangleSVGProps } from "./Triangle"
+import Text from "../OldText"
+import Translation from "../Translation"
+
+import { IProps as TriangleSVGProps,TriangleSVG } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
 
 export interface IProps {}

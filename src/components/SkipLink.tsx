@@ -1,8 +1,9 @@
 import React from "react"
 import { Box } from "@chakra-ui/react"
 
-import Translation from "./Translation"
 import { BaseLink } from "../components/Link"
+
+import Translation from "./Translation"
 
 export interface IProps {
   hrefId: string

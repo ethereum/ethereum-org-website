@@ -15,7 +15,7 @@ Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olva
 
 Az Ethereum tranzakció egy külső tulajdonú számla által kezdeményezett tevékenységre utal, más szóval egy számla, melyet egy ember kezel, nem pedig egy szerződés. Például ha Bob elküld Alice-nek 1 ETH-et, akkor Bob számláját terhelni kell, Alice számlájára pedig jóvá kell írni az összeget. Ez az állapotot megváltoztató művelet egy tranzakción belül történik.
 
-![Egy diagram, mely egy tranzakciót ábrázol, ahogy az megváltoztatja az állapotot](../../../../../developers/docs/transactions/tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram, mely egy tranzakciót ábrázol, ahogy az megváltoztatja az állapotot](./tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 A tranzakciókat, melyek megváltoztatják az EVM állapotát, a teljes hálózat számára közvetíteni kell. Bármely csomópont kérvényezheti egy tranzakció végrehajtását az EVM-en; miután ez megtörténik, egy bányász végrehajtja a tranzakciót és továbbterjeszti az eredményül kapott állapotot a hálózat többi része számára.
 
@@ -119,7 +119,7 @@ A bányász, aki feldolgozta a tranzakciót **+0.0042 ETH**-et fog kapni
 
 Az okosszerződés interakciók is gázt igényelnek.
 
-![Egy diagram, mely a fel nem használt gáz visszatérítését ábrázolja](../../../../../developers/docs/transactions/gas-tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
+![Egy diagram, mely a fel nem használt gáz visszatérítését ábrázolja](./gas-tx.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
 Minden fel nem használt gáz visszakerül a felhasználó számlájára.
 

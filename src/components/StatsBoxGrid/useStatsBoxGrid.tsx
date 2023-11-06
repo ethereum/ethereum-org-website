@@ -1,16 +1,16 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import React, { useEffect, useState } from "react"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 
-import { RangeSelector } from "./RangeSelector"
-import { Direction } from "../../types"
 import { GATSBY_FUNCTIONS_PATH } from "../../constants"
+import { Direction } from "../../types"
 import { getData } from "../../utils/cache"
+import { Lang } from "../../utils/languages"
 import {
   getLocaleForNumberFormat,
   isLangRightToLeft,
 } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+
+import { RangeSelector } from "./RangeSelector"
 
 export const ranges = ["30d", "90d"] as const
 

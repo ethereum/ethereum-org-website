@@ -9,11 +9,13 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react"
+
 import Emoji from "../Emoji"
 import Pill from "../Pill"
 import Translation from "../Translation"
-import { ChildOnlyType } from "."
+
 import { accordionButtonContent, CategoryNameType } from "./utils"
+import { ChildOnlyType } from "."
 
 export const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
   <Box flex="0 0 50%" maxW={{ lg: "75%" }} mr={{ lg: 16 }} {...props} />

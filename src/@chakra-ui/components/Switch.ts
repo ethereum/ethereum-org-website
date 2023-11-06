@@ -1,10 +1,11 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
 import { switchAnatomy } from "@chakra-ui/anatomy"
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
+
 import {
+  _notDisabledReadOnly,
   commonInputTriggerStyles,
   defineMergeStyles,
   switchDefaultTheme,
-  _notDisabledReadOnly,
 } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =

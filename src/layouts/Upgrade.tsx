@@ -1,45 +1,46 @@
+import { useRouter } from "next/router"
+import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
+  type FlexProps,
+  type HeadingProps,
   Icon,
   List,
   ListItem,
   Show,
   Text,
-  type FlexProps,
-  type HeadingProps,
   useToken,
 } from "@chakra-ui/react"
-import { MdExpandMore } from "react-icons/md"
-import { useRouter } from "next/router"
 
-import { BaseLink } from "@/components/Link"
+import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
+import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
+
 import BeaconChainActions from "@/components/BeaconChainActions"
-import { Image } from "@/components/Image"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import FeedbackCard from "@/components/FeedbackCard"
-import MergeArticleList from "@/components/MergeArticleList"
-import MergeInfographic from "@/components/MergeInfographic"
-import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import FeedbackCard from "@/components/FeedbackCard"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
 import {
+  ContentContainer,
+  InfoColumn,
   MobileButton,
   MobileButtonDropdown,
   Page as MdPage,
   StyledButtonDropdown,
-  InfoColumn,
-  ContentContainer,
 } from "@/components/MdComponents"
-// import Translation from "@/components/Translation"
+import MergeArticleList from "@/components/MergeArticleList"
+import MergeInfographic from "@/components/MergeInfographic"
+import OldHeading from "@/components/OldHeading"
+import ShardChainsList from "@/components/ShardChainsList"
+import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
+// import Translation from "@/components/Translation"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
-import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 

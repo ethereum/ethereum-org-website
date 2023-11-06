@@ -1,7 +1,9 @@
 import * as React from "react"
 import { Flex } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import TableComponent from ".."
+
 import {
   MdxDemoData,
   MdxEnergyConsumpData,

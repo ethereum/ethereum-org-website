@@ -1,5 +1,6 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
 import { tabsAnatomy } from "@chakra-ui/anatomy"
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
+
 import { tabsDefaultTheme } from "./components.utils"
 
 const { baseStyle, sizes, defaultProps } = tabsDefaultTheme

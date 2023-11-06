@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { createIcon } from "@chakra-ui/react"
+
 import { commonIconDefaultProps } from "@/components/icons/utils"
 
 export const StakefishGlyphIcon = createIcon({

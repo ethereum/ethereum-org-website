@@ -14,15 +14,15 @@ import {
 
 import Emoji from "@/components/Emoji"
 import InfoBanner from "@/components/InfoBanner"
-import InlineLink, { BaseLink } from "@/components/Link"
 import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
-
-import meetups from "@/data/community-meetups.json"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+// TODO: add Translation when i18n is set up
+// import Translation from "./Translation"
+import meetups from "@/data/community-meetups.json"
 
 export interface Meetup {
   title: string
