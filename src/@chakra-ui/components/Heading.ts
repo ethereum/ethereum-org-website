@@ -1,4 +1,5 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
+
 import { headingDefaultTheme } from "./components.utils"
 
 const { sizes: defaultSizes } = headingDefaultTheme

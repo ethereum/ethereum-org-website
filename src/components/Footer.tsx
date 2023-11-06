@@ -1,3 +1,8 @@
+// TODO
+// import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import React from "react"
+import { useRouter } from "next/router"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
   Flex,
@@ -20,6 +25,11 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Lang, TranslationKey } from "@/lib/types"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { BaseLink } from "./Link"
 
 const socialLinks = [
   {

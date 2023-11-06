@@ -1,11 +1,11 @@
 import { Flex, type FlexProps } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
-import { Image, type ImageProps } from "@/components/Image"
-import Text from "@/components/OldText"
-import OldHeading from "@/components/OldHeading"
-
 import type { TranslationKey } from "@/lib/types"
+
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
 
 export interface IProps extends FlexProps {
   children?: React.ReactNode

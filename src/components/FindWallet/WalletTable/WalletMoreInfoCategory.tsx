@@ -1,12 +1,12 @@
-import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
 import { MdInfoOutline } from "react-icons/md"
 import { useTranslation } from "next-i18next"
-
-import Text from "../../OldText"
-import Tooltip from "../../Tooltip"
-import { DropdownOption } from "./useWalletTable"
+import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
 
 import walletFilterData from "../../../data/wallets/wallet-filters"
+import Text from "../../OldText"
+import Tooltip from "../../Tooltip"
+
+import { DropdownOption } from "./useWalletTable"
 
 interface WalletMoreInfoCategoryProps {
   wallet: any

@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Box,
   Flex,
@@ -5,8 +6,9 @@ import {
   Text,
   useBreakpointValue,
 } from "@chakra-ui/react"
-import React from "react"
+
 import GatsbyImage from "../../GatsbyImage"
+
 import type { NFT } from "./interfaces"
 
 interface IProps extends FlexProps {

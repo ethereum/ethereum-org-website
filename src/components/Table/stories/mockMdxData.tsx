@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Td, Th, Tr, Tbody, Thead } from "@chakra-ui/react"
+import { Tbody, Td, Th, Thead,Tr } from "@chakra-ui/react"
 
 /*
  * Note on the Chakra Table components:

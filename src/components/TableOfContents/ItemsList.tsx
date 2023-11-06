@@ -1,6 +1,8 @@
 import { ChakraProps, List, ListItem } from "@chakra-ui/react"
-import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
+
 import type { ToCItem } from "@/lib/types"
+
+import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
 
 export interface IPropsItemsList extends ChakraProps {
   items: Array<ToCItem>
@@ -39,7 +41,8 @@ const ItemsList: React.FC<IPropsItemsList> = ({
                   items={items}
                   depth={depth + 1}
                   maxDepth={maxDepth}
-                  activeHash={activeHash} />
+                  activeHash={activeHash}
+                />
               </List>
             )}
           </ListItem>

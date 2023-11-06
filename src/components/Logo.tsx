@@ -2,6 +2,7 @@ import { useColorModeValue } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
 import { Image } from "@/components/Image"
+
 import darkImage from "@/public/ef-logo.png"
 import lightImage from "@/public/ef-logo-white.png"
 

@@ -1,4 +1,5 @@
 import React from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Breadcrumb,
@@ -6,7 +7,6 @@ import {
   BreadcrumbLink,
   BreadcrumbProps,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
 
 import { BaseLink } from "../Link"
 

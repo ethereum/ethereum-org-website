@@ -1,4 +1,5 @@
 import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
+
 import { useTranslation } from "next-i18next"
 
 import { Background } from "./Background"

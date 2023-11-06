@@ -1,3 +1,4 @@
+import { FaGithub } from "react-icons/fa"
 import {
   Box,
   BoxProps,
@@ -8,12 +9,16 @@ import {
   Show,
   useToken,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
+
+import type { ToCItem } from "@/lib/types"
+
 import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
-import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 import ItemsList from "@/components/TableOfContents/ItemsList"
+import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
+
+import { outerListProps } from "@/lib/utils/toc"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 

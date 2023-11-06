@@ -1,9 +1,10 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import HubHeroComponent, { HubHeroProps } from "./"
-import { Box } from "@chakra-ui/react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
+import { Box } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
+import HubHeroComponent, { HubHeroProps } from "./"
 
 type HubHeroType = typeof HubHeroComponent
 

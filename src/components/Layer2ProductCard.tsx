@@ -2,11 +2,10 @@
 import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
-// Components
 import { ButtonLink } from "./Buttons"
+import GatsbyImage from "./GatsbyImage"
 import InlineLink from "./Link"
 import Text from "./OldText"
-import GatsbyImage from "./GatsbyImage"
 
 export interface IProps {
   children?: React.ReactNode

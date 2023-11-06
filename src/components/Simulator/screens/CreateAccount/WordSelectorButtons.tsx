@@ -1,8 +1,9 @@
-import { Box, Button, Grid, Icon } from "@chakra-ui/react"
 import React, { useEffect } from "react"
 import { useMemo } from "react"
-import { DELAY_MULTIPLIER_MS, WORDS_REQUIRED } from "./constants"
 import { LiaHandPointerSolid } from "react-icons/lia"
+import { Box, Button, Grid, Icon } from "@chakra-ui/react"
+
+import { DELAY_MULTIPLIER_MS, WORDS_REQUIRED } from "./constants"
 
 interface WordIndex {
   word: string

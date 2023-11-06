@@ -1,31 +1,28 @@
-// Import libraries
 import React from "react"
 import { MdSearch } from "react-icons/md"
-import {
-  forwardRef,
-  Portal,
-  IconButtonProps,
-  useToken,
-  useMediaQuery,
-  useMergeRefs,
-} from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-
 // TODO
 // import { useDocSearchKeyboardEvents } from "@docsearch/react"
 // import { DocSearchHit } from "@docsearch/react/dist/esm/types"
+import {
+  forwardRef,
+  IconButtonProps,
+  Portal,
+  useMediaQuery,
+  useMergeRefs,
+  useToken,
+} from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+
 import { Button } from "../Buttons"
+
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
+
 // TODO
 // import { sanitizeHitUrl } from "../../utils/url"
 // import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
-
-// Styles
-import "@docsearch/css"
-
-// Utils
 // import { trackCustomEvent } from "../../utils/matomo"
+import "@docsearch/css"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (

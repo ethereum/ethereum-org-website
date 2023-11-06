@@ -9,10 +9,11 @@ import {
 } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
-import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import { ButtonLink } from "@/components/Buttons"
-import Text from "@/components/OldText"
 import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
+
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"

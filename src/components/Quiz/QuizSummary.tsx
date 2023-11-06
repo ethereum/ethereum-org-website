@@ -1,14 +1,15 @@
 import React, { useEffect } from "react"
-import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
+
+import { UserStats } from "@/lib/types"
+
+import { numberToPercent } from "@/lib/utils/numberToPercent"
 import { useTranslation } from "next-i18next"
 
 import Text from "../OldText"
-import { numberToPercent } from "@/lib/utils/numberToPercent"
 
 import { updateUserStats } from "./utils"
-
-import { UserStats } from "@/lib/types"
 
 interface IProps {
   quizKey: string

@@ -1,13 +1,15 @@
 import { join } from "path"
+
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import ogImageDefault from "@/public/home/hero.png"
-import ogImageDevelopers from "@/public/enterprise-eth.png"
-import ogImageDapps from "@/public/doge-computer.png"
-import ogImageUpgrades from "@/public/upgrades/upgrade_doge.png"
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
+
+import ogImageDapps from "@/public/doge-computer.png"
+import ogImageDevelopers from "@/public/enterprise-eth.png"
+import ogImageDefault from "@/public/home/hero.png"
+import ogImageUpgrades from "@/public/upgrades/upgrade_doge.png"
 
 type NameMeta = {
   name: string

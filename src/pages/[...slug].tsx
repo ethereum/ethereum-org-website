@@ -1,45 +1,44 @@
-import { ReactElement } from "react"
+import { join } from "path"
 import { ParsedUrlQuery } from "querystring"
+
+import { ReactElement } from "react"
+import type { GetStaticPaths, GetStaticProps } from "next/types"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { serialize } from "next-mdx-remote/serialize"
-import remarkGfm from "remark-gfm"
-import { join } from "path"
 import readingTime from "reading-time"
+import remarkGfm from "remark-gfm"
 
-import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getLastModifiedDate } from "@/lib/utils/gh"
-import rehypeImg from "@/lib/rehype/rehypeImg"
-import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
-
-// Layouts and components
-import {
-  RootLayout,
-  staticComponents,
-  StaticLayout,
-  useCasesComponents,
-  UseCasesLayout,
-  stakingComponents,
-  StakingLayout,
-  roadmapComponents,
-  RoadmapLayout,
-  upgradeComponents,
-  UpgradeLayout,
-  // docsComponents,
-  // DocsLayout,
-  tutorialsComponents,
-  TutorialLayout,
-} from "@/layouts"
+import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
-// Types
-import type { GetStaticPaths, GetStaticProps } from "next/types"
-import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
 import { dateToString } from "@/lib/utils/date"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDate } from "@/lib/utils/gh"
+import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { generateTableOfContents } from "@/lib/utils/toc"
+
+import {
+  roadmapComponents,
+  RoadmapLayout,
+  RootLayout,
+  stakingComponents,
+  StakingLayout,
+  staticComponents,
+  StaticLayout,
+  TutorialLayout,
+  // docsComponents,
+  // DocsLayout,
+  tutorialsComponents,
+  upgradeComponents,
+  UpgradeLayout,
+  useCasesComponents,
+  UseCasesLayout,
+} from "@/layouts"
+import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
+import rehypeImg from "@/lib/rehype/rehypeImg"
 
 const layoutMapping = {
   static: StaticLayout,

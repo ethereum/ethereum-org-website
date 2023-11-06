@@ -1,11 +1,10 @@
 // Libraries
 import { useEffect, useState } from "react"
-import { Icon } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Icon } from "@chakra-ui/react"
 
 // Data
 import walletFilterData from "../../../../data/wallets/wallet-filters"
-
 import {
   BrowserIcon,
   BuyCryptoIcon,

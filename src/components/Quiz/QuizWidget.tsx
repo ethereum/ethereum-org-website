@@ -3,15 +3,33 @@ import {
   Box,
   Center,
   Circle,
+  Container,
   Flex,
   Heading,
   Icon,
   Spinner,
   Stack,
-  Container,
 } from "@chakra-ui/react"
-import { shuffle } from "lodash"
-import { FaTwitter } from "react-icons/fa"
+
+import type { QuizStatus } from "@/lib/types"
+import type {
+  AnswerChoice,
+  Question,
+  Quiz,
+  RawQuestion,
+  RawQuiz,
+} from "@/lib/interfaces"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import allQuizzesData from "@/data/quizzes"
+import questionBank from "@/data/quizzes/questionBank"
+
+import {
+  PASSING_QUIZ_SCORE,
+  PROGRESS_BAR_GAP,
+  USER_STATS_KEY,
+} from "@/lib/constants"
 import { useTranslation } from "next-i18next"
 
 import Button from "../Buttons/Button"
@@ -26,30 +44,12 @@ import {
   StarConfettiIcon,
   TrophyIcon,
 } from "../icons/quiz"
+import Text from "../OldText"
 
 import { QuizzesHubContext } from "./context"
-
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
-import {
-  PASSING_QUIZ_SCORE,
-  PROGRESS_BAR_GAP,
-  USER_STATS_KEY,
-} from "@/lib/constants"
-
+import QuizRadioGroup from "./QuizRadioGroup"
+import QuizSummary from "./QuizSummary"
 import { getNextQuiz } from "./utils"
-
-import type {
-  AnswerChoice,
-  RawQuiz,
-  Quiz,
-  RawQuestion,
-  Question,
-} from "@/lib/interfaces"
-import type { QuizStatus } from "@/lib/types"
-
-import allQuizzesData from "@/data/quizzes"
-import questionBank from "@/data/quizzes/questionBank"
 
 // TODO: This is fetched from the quiz PAGE... we should relocate the logic
 // import { INITIAL_USER_STATS } from "../../pages/quizzes"

@@ -1,5 +1,6 @@
-import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react"
 import { checkboxAnatomy } from "@chakra-ui/anatomy"
+import { createMultiStyleConfigHelpers, defineStyle } from "@chakra-ui/react"
+
 import {
   checkboxDefaultTheme,
   commonInputTriggerStyles,

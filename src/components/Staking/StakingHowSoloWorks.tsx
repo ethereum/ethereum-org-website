@@ -2,8 +2,8 @@ import { Center } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 import OrderedList from "@/components/OrderedList"
-import Translation from "@/components/Translation"
 
+import Translation from "@/components/Translation"
 import image from "@/public/hackathon_transparent.png"
 
 const StakingHowSoloWorks: React.FC = () => {

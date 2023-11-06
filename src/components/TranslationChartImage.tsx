@@ -1,7 +1,9 @@
 import { useColorModeValue } from "@chakra-ui/react"
+
 import { Image } from "@/components/Image"
-import pageviewsLight from "@/public/translation-program/pageviews-light.png"
+
 import pageviewsDark from "@/public/translation-program/pageviews-dark.png"
+import pageviewsLight from "@/public/translation-program/pageviews-light.png"
 
 const TranslationChartImage = () => {
   const ethImage = useColorModeValue(pageviewsLight, pageviewsDark)

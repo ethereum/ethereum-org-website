@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { chakra, Box, Flex } from "@chakra-ui/react"
 import { FaTools } from "react-icons/fa"
+import { chakra, Box, Flex } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"

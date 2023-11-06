@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 
+import type { TranslationKey } from "@/lib/types"
+
 import InlineLink from "./Link"
 import Translation from "./Translation"
-import type { TranslationKey } from "@/lib/types"
 
 interface App {
   name: string

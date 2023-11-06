@@ -10,6 +10,9 @@ import { BaseLink, IProps as ILinkProps } from "./Link"
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "../types"
 
+import { BaseLink, IProps as ILinkProps } from "./Link"
+import Translation from "./Translation"
+
 export const dropdownIconContainerVariant = {
   open: {
     rotate: 0,

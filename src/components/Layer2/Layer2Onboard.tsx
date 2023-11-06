@@ -1,4 +1,3 @@
-// Libraries
 import { useState } from "react"
 import {
   Box,
@@ -21,16 +20,20 @@ import GatsbyImage from "../GatsbyImage"
 
 // Data
 import {
-  cexOnboardData,
   CexOnboard,
+  cexOnboardData,
 } from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
-
-//Utils
-import { trackCustomEvent } from "../../utils/matomo"
 import { ChildOnlyProp } from "../../types"
+import { trackCustomEvent } from "../../utils/matomo"
+import { ButtonLink } from "../Buttons"
+import GatsbyImage from "../GatsbyImage"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import { StyledSelect as Select } from "../SharedStyledComponents"
+import Translation from "../Translation"
 
-// Styles
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
 )

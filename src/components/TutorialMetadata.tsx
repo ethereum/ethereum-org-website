@@ -2,6 +2,11 @@ import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
+// import { Lang } from "../utils/languages"
+// import { getLocaleTimestamp } from "../utils/time"
+import type { TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
+
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"

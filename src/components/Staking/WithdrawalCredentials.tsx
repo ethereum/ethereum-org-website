@@ -1,4 +1,4 @@
-import { FC, useState, useMemo, ChangeEvent } from "react"
+import { ChangeEvent, FC, useMemo, useState } from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 

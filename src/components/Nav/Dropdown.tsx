@@ -3,11 +3,11 @@ import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
 import { BaseLink, type LinkProps } from "../Link"
+
 // TODO
 // import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 // import { getDirection } from "../../utils/translations"
 // import { Lang } from "../../utils/languages"
-
 import { ISection } from "./types"
 
 const NavLink = (props: LinkProps) => (

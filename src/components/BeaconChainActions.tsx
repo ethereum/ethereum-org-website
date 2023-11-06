@@ -1,14 +1,16 @@
 import { Box, Flex } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
+import { ButtonLink } from "@/components/Buttons"
+import Card from "@/components/Card"
 import CardList, { type CardListItem } from "@/components/CardList"
 import Card from "@/components/Card"
 import { ButtonLink } from "@/components/Buttons"
 import Translation from "@/components/Translation"
 import OldHeading from "@/components/OldHeading"
 
-import beaconscan from "@/public/upgrades/etherscan.png"
 import beaconchain from "@/public/upgrades/beaconchainemoji.png"
+import beaconscan from "@/public/upgrades/etherscan.png"
 
 const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <OldHeading

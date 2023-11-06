@@ -1,5 +1,7 @@
-// Library imports
-import { useState, useEffect, useRef, useMemo } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
+import FocusTrap from "focus-trap-react"
+import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { MdClose } from "react-icons/md"
 import {
   Box,
   Button,
@@ -21,10 +23,13 @@ import { FeedbackGlyphIcon } from "./icons"
 import { trackCustomEvent } from "../utils/matomo"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { useKeyPress } from "../hooks/useKeyPress"
 import { useSurvey } from "../hooks/useSurvey"
-
 import { DEFAULT_LOCALE } from "../lib/constants"
+import { trackCustomEvent } from "../utils/matomo"
+
+import { FeedbackGlyphIcon } from "./icons"
+import Text from "./OldText"
+import Translation from "./Translation"
 
 interface FixedDotProps extends ButtonProps {
   bottomOffset: number

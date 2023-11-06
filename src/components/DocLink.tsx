@@ -1,12 +1,13 @@
+import { AiOutlineArrowRight } from "react-icons/ai"
 import {
-  Icon,
   Box,
   Flex,
+  Icon,
   LinkBox,
   LinkOverlay,
   useToken,
 } from "@chakra-ui/react"
-import { AiOutlineArrowRight } from "react-icons/ai"
+
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
 import Text from "./OldText"

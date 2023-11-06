@@ -1,4 +1,5 @@
-//Libraries
+import { DateTime, DateTimeFormatOptions } from "luxon"
+import { FaDiscord } from "react-icons/fa"
 import {
   Box,
   Center,
@@ -8,22 +9,16 @@ import {
   GridItem,
   Icon,
 } from "@chakra-ui/react"
-import { FaDiscord } from "react-icons/fa"
-import { DateTime, DateTimeFormatOptions } from "luxon"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-// Components
+import { trackCustomEvent } from "../../utils/matomo"
 import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
-import Translation from "../Translation"
-import Text from "../OldText"
 import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import Translation from "../Translation"
 
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
-
-// Hooks
 import {
   type Event as EventType,
   useCommunityEvents,

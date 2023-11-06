@@ -3,10 +3,10 @@ import { shuffle } from "lodash"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { getLocaleTimestamp } from "../../utils/time"
-import { trackCustomEvent } from "../../utils/matomo"
 import { getImage, ImageDataLike } from "../../utils/image"
 import { Lang } from "../../utils/languages"
+import { trackCustomEvent } from "../../utils/matomo"
+import { getLocaleTimestamp } from "../../utils/time"
 
 export const cardListImage = graphql`
   fragment cardListImage on File {

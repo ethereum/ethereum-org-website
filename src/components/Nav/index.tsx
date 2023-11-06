@@ -1,6 +1,11 @@
 import React, { FC, useRef } from "react"
-import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
-import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
+import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
+import { Box, Flex, HStack, Icon, useDisclosure } from "@chakra-ui/react"
+
+import { ButtonLink, IconButton } from "../Buttons"
+import { EthHomeIcon } from "../icons"
+import { BaseLink } from "../Link"
+import Search from "../Search"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 

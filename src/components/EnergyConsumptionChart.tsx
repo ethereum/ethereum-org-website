@@ -1,3 +1,14 @@
+import React from "react"
+import {
+  Bar,
+  BarChart,
+  Cell,
+  LabelList,
+  Legend,
+  ResponsiveContainer,
+  Text,
+  XAxis,
+} from "recharts"
 import {
   Box,
   Center,
@@ -5,17 +16,6 @@ import {
   useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
-import React from "react"
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  Text,
-  LabelList,
-  ResponsiveContainer,
-  Legend,
-} from "recharts"
 import { useTranslation } from "next-i18next"
 
 import Translation from "@/components/Translation"

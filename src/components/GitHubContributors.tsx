@@ -1,5 +1,7 @@
 import type { FlexProps } from "@chakra-ui/react"
+
 import FileContributors from "@/components/FileContributors"
+
 import { useClientSideGitHubContributors } from "@/hooks/useClientSideGitHubContributors"
 
 export interface IProps extends FlexProps {

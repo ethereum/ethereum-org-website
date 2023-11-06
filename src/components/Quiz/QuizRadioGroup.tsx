@@ -13,7 +13,6 @@ import {
 import { useTranslation } from "next-i18next"
 
 import type { TranslationKey } from "../../lib/types"
-import type { Question } from "../../lib/interfaces"
 
 interface CustomRadioProps extends RadioProps {
   index: number

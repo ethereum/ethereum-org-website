@@ -1,5 +1,4 @@
-// Import libraries
-import { useState, useEffect, ReactNode } from "react"
+import { ReactNode, useEffect, useState } from "react"
 import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
@@ -10,10 +9,12 @@ import InlineLink from "../Link"
 import Text from "../OldText"
 // Import utilities
 import { Lang } from "../../utils/languages"
-import { getData } from "../../utils/cache"
 import { getLocaleForNumberFormat } from "../../utils/translations"
+import InlineLink from "../Link"
+import Text from "../OldText"
+import Tooltip from "../Tooltip"
+import Translation from "../Translation"
 
-// Constants
 const NA_ERROR = "n/a"
 const ZERO = "0"
 

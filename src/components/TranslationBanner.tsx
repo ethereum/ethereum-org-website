@@ -2,10 +2,10 @@ import { useEffect, useState } from "react"
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
+import { DEFAULT_LOCALE } from "../lib/constants"
+
 import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
-
-import { DEFAULT_LOCALE } from "../lib/constants"
 
 export interface IProps {
   shouldShow: boolean

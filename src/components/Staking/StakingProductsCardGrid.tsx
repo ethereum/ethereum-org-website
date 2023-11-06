@@ -17,9 +17,6 @@ import {
 } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
-// Data imports
-import stakingProducts from "@/data/staking-products.json"
-// Component imports
 import { ButtonLink } from "@/components/Buttons"
 // SVG imports
 import {
@@ -28,9 +25,11 @@ import {
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import Translation from "@/components/Translation"
 
 import { MatomoEventOptions } from "@/lib/utils/matomo"
-// When adding a product svg, be sure to add to mapping below as well.
+
+import stakingProducts from "@/data/staking-products.json"
 
 const PADDED_DIV_STYLE: BoxProps = {
   px: 8,

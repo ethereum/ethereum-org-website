@@ -1,9 +1,10 @@
-import { Box, SimpleGrid, VStack, Text } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Box, SimpleGrid, Text, VStack } from "@chakra-ui/react"
 
 import { ButtonLink } from "../../Buttons"
-import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
+
 import { DropdownOption } from "./useWalletTable"
+import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 
 interface WalletMoreInfoProps {
   wallet: Record<string, any>

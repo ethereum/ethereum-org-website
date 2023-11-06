@@ -2,15 +2,16 @@ import { useState, useEffect } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { RangeSelector } from "./RangeSelector"
-import { Direction } from "../../types"
 import { GATSBY_FUNCTIONS_PATH } from "../../constants"
+import { Direction } from "../../types"
 import { getData } from "../../utils/cache"
+import { Lang } from "../../utils/languages"
 import {
   getLocaleForNumberFormat,
   isLangRightToLeft,
 } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+
+import { RangeSelector } from "./RangeSelector"
 
 export const ranges = ["30d", "90d"] as const
 

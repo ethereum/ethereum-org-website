@@ -1,6 +1,7 @@
-import { visit } from "unist-util-visit"
-import type { Plugin } from "unified"
 import type { ElementContent, Root } from "hast"
+import type { Plugin } from "unified"
+import { visit } from "unist-util-visit"
+
 import { parseHeadingId, parseToCTitle } from "@/lib/utils/toc"
 
 /**

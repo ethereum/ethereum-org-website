@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "lint:fix": "next lint --fix",
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts"
   },
@@ -49,6 +50,7 @@
     "@types/react-dom": "^18.2.7",
     "eslint": "^8.45.0",
     "eslint-config-next": "^14.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
     "image-size": "^1.0.2",
     "minimist": "^1.2.8",
     "polished": "^4.2.2",

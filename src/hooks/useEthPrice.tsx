@@ -1,5 +1,5 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
+
 import { getData } from "../utils/cache"
 
 export const useEthPrice = (): number => {

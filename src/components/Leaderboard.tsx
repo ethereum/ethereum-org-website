@@ -1,13 +1,14 @@
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
-  Box,
   Avatar,
+  Box,
   Flex,
-  LinkOverlay,
   LinkBox,
-  useColorModeValue,
-  VisuallyHidden,
+  LinkOverlay,
   List,
   ListItem,
+  useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 
