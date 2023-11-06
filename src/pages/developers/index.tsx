@@ -20,6 +20,7 @@ import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
+import { HubHero } from "../../components/Hero"
 
 import { getImage } from "../../utils/image"
 
@@ -233,38 +234,21 @@ const DevelopersPage = ({
   data,
 }: PageProps<Queries.DevelopersIndexPageQuery, Context>) => {
   const { t } = useTranslation()
-
   return (
     <Page>
       <PageMetadata
         title={t("page-developer-meta-title")}
         description={t("page-developers-meta-desc")}
       />
+      <HubHero
+        heroImgSrc={getImage(data.heroImage)!}
+        header={`${t("page-developers-title-1")} ${t(
+          "page-developers-title-2"
+        )} ${t("page-developers-title-3")}`}
+        title={t("developers")} // TODO: Update to use "Developers Home"?
+        description={t("page-developers-subtitle")}
+      />
       <Content>
-        <HeroContainer>
-          <HeroCopyContainer>
-            <HeroCopy>
-              <H1>
-                <b>
-                  <Translation id="page-developers-title-1" />
-                </b>
-                <br />
-                <Translation id="page-developers-title-2" />
-                <br /> <Translation id="page-developers-title-3" />
-              </H1>
-              <Subtitle>
-                <Translation id="page-developers-subtitle" />
-              </Subtitle>
-            </HeroCopy>
-          </HeroCopyContainer>
-          <Hero>
-            <GatsbyImage
-              image={getImage(data.ednHero)!}
-              alt={t("alt-eth-blocks")}
-              loading="eager"
-            ></GatsbyImage>
-          </Hero>
-        </HeroContainer>
         <MonoSubtitle>
           <Translation id="page-developers-get-started" />
         </MonoSubtitle>
@@ -591,6 +575,16 @@ export const query = graphql`
         gatsbyImageData(
           width: 1200
           layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    heroImage: file(relativePath: { eq: "heroes/developers-hub-hero.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )
