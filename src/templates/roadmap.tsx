@@ -212,7 +212,7 @@ const RoadmapPage = ({
   }
 
   return (
-    <Box position="relative" overflowX="hidden">
+    <Box position="relative">
       <HeroContainer>
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
