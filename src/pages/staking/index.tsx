@@ -15,9 +15,9 @@ import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
-import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
+import LeftNavBar from "../../components/LeftNavBar"
 
 import { getImage } from "../../utils/image"
 import type { TranslationKey } from "../../utils/translations"
@@ -26,12 +26,9 @@ import type { ChildOnlyProp, Context } from "../../types"
 // TODO: move these components to a new folder under /components
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
 } from "../../templates/use-cases"
 
 const PageContainer = (props: ChildOnlyProp) => (
@@ -304,13 +301,7 @@ const StakingPage = ({
       <Page>
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>
-              <Translation id="page-staking-dom-info-title" />
-            </InfoTitle>
-            <UpgradeTableOfContents items={tocArray} />
-          </InfoColumn>
+          <LeftNavBar dropdownLinks={dropdownLinks} tocItems={tocArray} />
         </Show>
         <ContentContainer id="content">
           <Flex direction="column" gap={16} mt={{ base: 16, lg: 0 }}>
