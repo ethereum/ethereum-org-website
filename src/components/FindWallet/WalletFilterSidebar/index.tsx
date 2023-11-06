@@ -1,5 +1,4 @@
-import React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 import {
   Box,
@@ -16,7 +15,6 @@ import {
 
 import { FiltersType } from "../../../pages/wallets/find-wallet"
 import { trackCustomEvent } from "../../../utils/matomo"
-import Translation from "../../Translation"
 
 import WalletFilterProfile from "./WalletFilterFeature"
 import WalletFilterPersonas from "./WalletFilterProfile"
@@ -74,7 +72,8 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
   ...tabsProps
 }) => {
   const theme = useTheme()
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
+
   return (
     <Tabs
       bg="background.base"
@@ -119,7 +118,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
           }}
         >
           <FilterTab eventName="show user personas">
-            <Translation id="page-find-wallet-profile-filters" />
+            {t("page-find-wallet-profile-filters")}
           </FilterTab>
           <FilterTab eventName="show feature filters">
             {t("page-find-wallet-feature-filters")} (

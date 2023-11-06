@@ -1,15 +1,17 @@
-import React, { ReactNode, useEffect, useState } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { ReactNode, useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 
+// Import utilities
 import { getData } from "../../utils/cache"
 import { Lang } from "../../utils/languages"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import InlineLink from "../Link"
 import Text from "../OldText"
+// Import components
 import Tooltip from "../Tooltip"
-import Translation from "../Translation"
 
 const NA_ERROR = "n/a"
 const ZERO = "0"
@@ -98,7 +100,8 @@ export interface IProps {}
 
 // StatsBox component
 const StakingStatsBox: React.FC<IProps> = () => {
-  const { language } = useI18next()
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-staking")
   /**
    * State variables:
    * - ZERO is default string, "0", representing loading state
@@ -109,7 +112,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
   const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
 
     // Helper functions
     const formatInteger = (amount: number): string =>
@@ -156,7 +159,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         setTotalValidators(null)
       }
     })()
-  }, [language])
+  }, [locale!])
 
   return (
     <Flex direction={{ base: "column", md: "row" }}>
@@ -167,12 +170,10 @@ const StakingStatsBox: React.FC<IProps> = () => {
           <Value title={totalEth ? "" : NA_ERROR}>{totalEth || NA_ERROR}</Value>
         )}
         <Label>
-          <Translation id="page-staking-stats-box-metric-1" />
+          {t("page-staking-stats-box-metric-1")}
           <BeaconchainTooltip>
-            <Text>
-              <Translation id="page-staking-stats-box-metric-1-tooltip" />
-            </Text>
-            <Translation id="data-provided-by" />{" "}
+            <Text>{t("page-staking-stats-box-metric-1-tooltip")}</Text>
+            {t("common:data-provided-by")}{" "}
             <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
           </BeaconchainTooltip>
         </Label>
@@ -186,12 +187,10 @@ const StakingStatsBox: React.FC<IProps> = () => {
           </Value>
         )}
         <Label>
-          <Translation id="page-staking-stats-box-metric-2" />
+          {t("page-staking-stats-box-metric-2")}
           <BeaconchainTooltip>
-            <Text>
-              <Translation id="page-staking-stats-box-metric-2-tooltip" />
-            </Text>
-            <Translation id="data-provided-by" />{" "}
+            <Text>{t("page-staking-stats-box-metric-2-tooltip")}</Text>
+            {t("common:data-provided-by")}{" "}
             <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
           </BeaconchainTooltip>
         </Label>
@@ -205,12 +204,10 @@ const StakingStatsBox: React.FC<IProps> = () => {
           </Value>
         )}
         <Label>
-          <Translation id="page-staking-stats-box-metric-3" />
+          {t("page-staking-stats-box-metric-3")}
           <BeaconchainTooltip>
-            <Text>
-              <Translation id="page-staking-stats-box-metric-3-tooltip" />
-            </Text>
-            <Translation id="data-provided-by" />{" "}
+            <Text>{t("page-staking-stats-box-metric-3-tooltip")}</Text>
+            {t("common:data-provided-by")}{" "}
             <InlineLink to="https://beaconcha.in/ethstore">
               Beaconcha.in
             </InlineLink>

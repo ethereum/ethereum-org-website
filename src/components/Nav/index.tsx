@@ -1,4 +1,6 @@
 import React, { FC, useRef } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
 import { Box, Flex, HStack, Icon, useDisclosure } from "@chakra-ui/react"
 
@@ -20,18 +22,15 @@ const Nav: FC<IProps> = ({ path }) => {
   const {
     ednLinks,
     fromPageParameter,
-    // TODO
-    // i18n,
     isDarkTheme,
     shouldShowSubNav,
-    // TODO
-    // t,
     toggleColorMode,
     linkSections,
     mobileNavProps,
   } = useNav({ path })
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
-
   const navWrapperRef = useRef(null)
 
   return (
@@ -118,9 +117,7 @@ const Nav: FC<IProps> = ({ path }) => {
                     },
                   }}
                 >
-                  {/* TODO */}
-                  {/* {t("languages")} {i18n.language.toUpperCase()} */}
-                  Languages EN
+                  {t("languages")} {locale!.toUpperCase()}
                 </ButtonLink>
               </HStack>
             </Flex>

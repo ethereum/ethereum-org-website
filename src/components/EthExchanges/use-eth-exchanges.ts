@@ -1,8 +1,7 @@
 import { useState } from "react"
-import { graphql,useStaticQuery } from "gatsby"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
 import { getImage, ImageDataLike } from "../../utils/image"
 import { Lang } from "../../utils/languages"
@@ -82,8 +81,8 @@ interface State {
 }
 
 export const useEthExchanges = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-get-eth")
   const [state, setState] = useState<State>()
 
   const placeholderString = t("page-get-eth-exchanges-search")
@@ -412,7 +411,7 @@ export const useEthExchanges = () => {
   }
 
   const lastUpdated = getLocaleTimestamp(
-    language as Lang,
+    locale! as Lang,
     data.timestamp.parent.fields.gitLogLatestDate
   )
 

@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, chakra,Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -25,6 +25,7 @@ import MeetupList from "@/components/MeetupList"
 import Text from "@/components/OldText"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
+import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
@@ -87,8 +88,7 @@ export const StaticLayout: React.FC<IProps> = ({
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const repo =
-    process.env.NEXT_PUBLIC_GITHUB_REPO ||
-    "ethereum/ethereum-org-website"
+    process.env.NEXT_PUBLIC_GITHUB_REPO || "ethereum/ethereum-org-website"
   const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
   const absoluteEditPath = baseEditPath + slug + "index.md"
 
@@ -127,12 +127,13 @@ export const StaticLayout: React.FC<IProps> = ({
             color="text200"
             dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
           >
-            {/* TODO: add Translation when i18n is set up  */}
-            {/* <Translation id="page-last-updated" />:{" "} */}
-            Page last updated:{" "}
+            <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>
-          <GitHubContributors relativePath={slug} lastUpdatedDate={lastUpdatedDate!} />
+          <GitHubContributors
+            relativePath={slug}
+            lastUpdatedDate={lastUpdatedDate!}
+          />
           <TableOfContents
             position="relative"
             zIndex={2}

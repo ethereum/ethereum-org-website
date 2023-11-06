@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
 
 import { UserStats } from "@/lib/types"
@@ -9,10 +10,6 @@ import { numberToPercent } from "@/lib/utils/numberToPercent"
 import Text from "../OldText"
 
 import { updateUserStats } from "./utils"
-
-// TODO: Re-enable when i18n is implemented and remove placeholders throughout
-// import { useI18next } from "gatsby-plugin-react-i18next"
-// import Translation from "../Translation"
 
 interface IProps {
   quizKey: string
@@ -34,6 +31,7 @@ const QuizSummary: React.FC<IProps> = ({
   setUserStats,
 }) => {
   const { locale } = useRouter()
+  const { t } = useTranslation("learn-quizzes")
 
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
@@ -58,12 +56,7 @@ const QuizSummary: React.FC<IProps> = ({
         color={isPassingScore ? "success.base" : "body.base"}
         fontSize="3xl"
       >
-        {/* {isPassingScore ? (
-          <Translation id="passed" />
-        ) : (
-          <Translation id="your-results" />
-        )} */}
-        {isPassingScore ? "Passed" : "Your results"}
+        {isPassingScore ? t("passed") : t("your-results")}
       </Text>
 
       <Flex
@@ -87,30 +80,19 @@ const QuizSummary: React.FC<IProps> = ({
         overflowX="hidden"
       >
         <Flex>
-          <Text {...valueStyles}>
-            {numberToPercent(ratioCorrect, locale)}
-          </Text>
-          <Text {...labelStyles}>
-            {/* <Translation id="score" /> */}
-            Score
-          </Text>
+          <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
+          <Text {...labelStyles}>{t("score")}</Text>
         </Flex>
 
         <Flex>
           <Text {...valueStyles}>+{numberOfCorrectAnswers}</Text>
-          <Text {...labelStyles}>
-            {/* <Translation id="correct" /> */}
-            Correct
-          </Text>
+          <Text {...labelStyles}>{t("correct")}</Text>
         </Flex>
 
         {largerThanMobile && (
           <Flex>
             <Text {...valueStyles}>{questionCount}</Text>
-            <Text {...labelStyles}>
-              {/* <Translation id="questions" /> */}
-              Questions
-            </Text>
+            <Text {...labelStyles}>{t("questions")}</Text>
           </Flex>
         )}
       </Flex>

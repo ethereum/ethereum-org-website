@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import FocusTrap from "focus-trap-react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdClose } from "react-icons/md"
 import {
   Box,
@@ -12,13 +13,17 @@ import {
 } from "@chakra-ui/react"
 
 import { useKeyPress } from "../hooks/useKeyPress"
+// Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useSurvey } from "../hooks/useSurvey"
 import { DEFAULT_LOCALE } from "../lib/constants"
+// Utility imports
 import { trackCustomEvent } from "../utils/matomo"
 
+// SVG imports
 import { FeedbackGlyphIcon } from "./icons"
 import Text from "./OldText"
+// Component imports
 import Translation from "./Translation"
 
 interface FixedDotProps extends ButtonProps {
@@ -67,8 +72,8 @@ interface FeedbackWidgetProps {
   location: string
 }
 const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const { t } = useTranslation("common")
+  const { locale } = useRouter()
 
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
@@ -139,7 +144,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   useKeyPress(`Escape`, handleClose)
 
-  if (language !== DEFAULT_LOCALE) return null
+  if (locale! !== DEFAULT_LOCALE) return null
   const closeButtonSize = "24px"
   return (
     <>

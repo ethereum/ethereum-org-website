@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import { FaGithub } from "react-icons/fa"
 import {
   Box,
@@ -18,8 +19,6 @@ import Mobile from "@/components/TableOfContents/TableOfContentsMobile"
 
 import { outerListProps } from "@/lib/utils/toc"
 
-// TODO: Re-enable after i18n implemented
-// import Translation from "@/components/Translation"
 import { useActiveHash } from "@/hooks/useActiveHash"
 
 export interface IProps extends BoxProps {
@@ -40,6 +39,7 @@ const TableOfContents: React.FC<IProps> = ({
   isMobile = false,
   ...rest
 }) => {
+  const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
@@ -89,15 +89,13 @@ const TableOfContents: React.FC<IProps> = ({
                 href={editPath}
                 variant="outline"
               >
-                {/* <Translation id="edit-page" /> */}
-                Edit page
+                {t("edit-page")}
               </ButtonLink>
             </ListItem>
           )}
           <ListItem>
             <Box mb={2} textTransform="uppercase">
-              {/* <Translation id="on-this-page" /> */}
-              On this page
+              {t("on-this-page")}
             </Box>
             <List m={0}>
               <ItemsList

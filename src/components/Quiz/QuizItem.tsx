@@ -1,5 +1,5 @@
-import React, { useContext } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useContext } from "react"
+import { useTranslation } from "next-i18next"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import allQuizzesData from "../../data/quizzes"
@@ -20,7 +20,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const numberOfQuestions = allQuizzesData[id].questions.length
   const isCompleted = JSON.parse(completed)[id][0]
 
-  const { t } = useTranslation()
+  const { t } = useTranslation("learn-quizzes")
 
   const handleStart = () => {
     quizHandler(id)
