@@ -7,7 +7,7 @@ import styles from "./styles"
 
 const config: ThemeConfig = {
   cssVarPrefix: "eth",
-  initialColorMode: "light",
+  initialColorMode: "system",
   useSystemColorMode: true,
 }
 
