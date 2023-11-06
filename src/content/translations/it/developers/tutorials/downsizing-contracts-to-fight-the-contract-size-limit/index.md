@@ -5,7 +5,7 @@ author: Markus Waas
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
+  - "contratto intelligente"
   - "archiviazione"
   - "truffle"
 skill: intermediate
@@ -95,9 +95,21 @@ require(msg.sender == owner, "Only the owner of this contract can call this func
 require(msg.sender == owner, "OW1");
 ```
 
+### Utilizza gli errori personalizzati invece dei messaggi d'errore
+
+Gli errori personalizzati sono stati introdotti in [Solidity 0.8.4](https://blog.soliditylang.org/2021/04/21/custom-errors/). Sono ottimi modi per ridurre le dimensioni dei tuoi contratti, poiché sono codificati in ABI come selettori (proprio come le funzioni).
+
+```solidity
+error Unauthorized();
+
+if (msg.sender != owner) {
+    revert Unauthorized();
+}
+```
+
 ### Considera un valore d'esecuzione basso nell'ottimizzatore {#consider-a-low-run-value-in-the-optimizer}
 
-Puoi anche cambiare le impostazioni dell'ottimizzatore. Il valore predefinito di 200 significa che sta provando a ottimizzare il bytecode come se una funzione fosse chiamata 200 volte. Se lo modifichi a 1, fondamentalmente dici all'ottimizzatore di ottimizzare nel caso dell'esecuzione di ogni funzione una sola volta. Una funzione ottimizzata per essere eseguita solo una volta è ottimizzata per la distribuzione stessa. Sappi che **ciò aumenta i [costi del gas](/developers/docs/gas/) per l'esecuzione delle funzioni**, quindi potresti non volerlo fare.
+Puoi anche cambiare le impostazioni dell'ottimizzatore. Il valore predefinito di 200 significa che sta provando a ottimizzare il bytecode come se una funzione fosse chiamata 200 volte. Se lo modifichi a 1, fondamentalmente dici all'ottimizzatore di ottimizzare nel caso dell'esecuzione di ogni funzione una sola volta. Una funzione ottimizzata per essere eseguita solo una volta è ottimizzata per la distribuzione stessa. Sappi che **ciò aumenta i [costi del gas](/developers/docs/gas/) per l'esecuzione delle funzioni**, quindi meglio non farlo.
 
 ## Piccolo impatto {#small-impact}
 

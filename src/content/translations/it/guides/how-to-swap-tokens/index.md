@@ -12,7 +12,7 @@ Uno scambio di token comporta lo scambio di due risorse differenti esistenti sul
 
 **Prerequisiti:**
 
-- avere un portafoglio di criptovalute, puoi seguire questo tutorial: [Come "registrare" un conto di Ethereum](/guides/how-to-create-an-ethereum-account/)
+- avere un portafoglio di criptovalute, puoi seguire questo tutorial: [Come "registrare" un conto di Ethereum](/guides/how-to-register-an-ethereum-account/)
 - aggiungere fondi al tuo portafoglio
 
 ## 1. Connetti il tuo portafoglio alla borsa decentralizzata (DEX) di tua scelta
