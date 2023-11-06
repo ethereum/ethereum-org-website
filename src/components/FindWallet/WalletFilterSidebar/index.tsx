@@ -1,6 +1,4 @@
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { useTranslation } from "next-i18next"
-import { BsArrowCounterclockwise } from "react-icons/bs"
 import { BsArrowCounterclockwise } from "react-icons/bs"
 import {
   Box,

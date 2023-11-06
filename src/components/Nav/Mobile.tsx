@@ -1,5 +1,4 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
-// import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"

@@ -1,5 +1,4 @@
 import { useContext } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 

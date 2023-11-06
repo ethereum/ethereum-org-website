@@ -5,6 +5,7 @@ import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 
 // Import utilities
+import { getData } from "../../utils/cache"
 import { Lang } from "../../utils/languages"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import InlineLink from "../Link"

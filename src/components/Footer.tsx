@@ -1,5 +1,4 @@
 // TODO
-// import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
