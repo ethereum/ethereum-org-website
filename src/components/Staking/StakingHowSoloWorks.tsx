@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
-import { Center } from "@chakra-ui/react"
 import { Link } from "@chakra-ui/next-js"
+import { Center } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 import OrderedList from "@/components/OrderedList"

@@ -39,7 +39,6 @@ const Contributors = () => {
           <LinkBox
             key={contributor.login}
             as="div"
-            key={idx}
             maxWidth="132px"
             margin="2"
             boxShadow="0px 14px 66px rgba(0, 0, 0, 0.07), 0px 10px 17px rgba(0, 0, 0, 0.03), 0px 4px 7px rgba(0, 0, 0, 0.05)"
