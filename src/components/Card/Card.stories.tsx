@@ -1,10 +1,12 @@
 import React from "react"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
+
+import { Button } from "@/components/Buttons"
+
 // TODO: Re-enable after i18n implemented
 // import { useTranslation } from "react-i18next"
 import Card, { IProps } from "."
-import { Button } from "@/components/Buttons"
 
 const Component = Card
 

@@ -1,22 +1,22 @@
 import { FC, RefAttributes } from "react"
-import {
-  Icon,
-  VisuallyHidden,
-  forwardRef,
-  StyleProps,
-  Link as ChakraLink,
-} from "@chakra-ui/react"
-import { RxExternalLink } from "react-icons/rx"
 import { useRouter } from "next/router"
+import { RxExternalLink } from "react-icons/rx"
 import {
   Link as NextLink,
   type LinkProps as NextLinkProps,
 } from "@chakra-ui/next-js"
+import {
+  forwardRef,
+  Icon,
+  Link as ChakraLink,
+  StyleProps,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 
+import { getRelativePath } from "@/lib/utils/relativePath"
 // import type { Lang } from "@/lib/types"
 // import { trackCustomEvent, MatomoEventOptions } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
-import { getRelativePath } from "@/lib/utils/relativePath"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 // import { Direction } from "../types"
@@ -66,11 +66,12 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
 
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
-  const isExternal = url.isExternal(href) || isPdf
+  const isExternal = url.isExternal(href)
+  const isInternalPdf = isPdf && !isExternal
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
-  if (isPdf) {
+  if (isInternalPdf) {
     href = getRelativePath(asPath, href)
   }
 
@@ -85,7 +86,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
     ...(isActive && activeStyle),
   }
 
-  if (isExternal) {
+  if (isInternalPdf || isExternal) {
     return (
       <ChakraLink {...commonProps} isExternal>
         {children}

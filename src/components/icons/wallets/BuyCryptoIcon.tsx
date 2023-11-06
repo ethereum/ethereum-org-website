@@ -1,5 +1,6 @@
 import * as React from "react"
 import { createIcon } from "@chakra-ui/react"
+
 import { commonIconDefaultProps } from "../utils"
 
 export const BuyCryptoIcon = createIcon({

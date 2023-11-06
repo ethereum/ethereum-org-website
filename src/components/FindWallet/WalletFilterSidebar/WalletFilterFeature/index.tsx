@@ -1,4 +1,5 @@
 import React, { MutableRefObject } from "react"
+import { uniqueId } from "lodash"
 import { BsToggleOff, BsToggleOn } from "react-icons/bs"
 import {
   Accordion,
@@ -18,9 +19,10 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react"
-import { uniqueId } from "lodash"
-import { useWalletFilterFeature } from "./useWalletFilterFeature"
+
 import { trackCustomEvent } from "../../../../utils/matomo"
+
+import { useWalletFilterFeature } from "./useWalletFilterFeature"
 
 const FilterToggle = ({
   ariaLabel,

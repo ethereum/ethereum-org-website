@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
 import {
   Modal as ChakraModal,
-  ModalOverlay,
-  ModalContent,
   ModalCloseButton,
+  ModalContent,
+  ModalOverlay,
   ModalProps,
 } from "@chakra-ui/react"
 

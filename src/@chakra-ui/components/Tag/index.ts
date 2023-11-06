@@ -1,11 +1,13 @@
+import { tagAnatomy } from "@chakra-ui/anatomy"
 import {
   createMultiStyleConfigHelpers,
-  theme,
   defineStyle,
+  theme,
 } from "@chakra-ui/react"
-import { tagAnatomy } from "@chakra-ui/anatomy"
-import { $badgeColor, STATUS_COLORS } from "./utils"
+
 import { defineMergeStyles } from "../components.utils"
+
+import { $badgeColor, STATUS_COLORS } from "./utils"
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(tagAnatomy.keys)

@@ -1,11 +1,12 @@
 import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import CalloutBanner from "@/components/CalloutBanner"
 // TODO: Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
+import CalloutBanner from "@/components/CalloutBanner"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import image from "@/public/enterprise-eth.png"
 
 export interface IProps extends FlexProps {

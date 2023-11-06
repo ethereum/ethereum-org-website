@@ -1,28 +1,28 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
-import {
-  Box,
-  Icon,
-  Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerBody,
-  List,
-  ListItem,
-  forwardRef,
-  DrawerFooter,
-  Flex,
-  ButtonProps,
-} from "@chakra-ui/react"
-import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 // import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
+import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
+import {
+  Box,
+  ButtonProps,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerFooter,
+  DrawerOverlay,
+  Flex,
+  forwardRef,
+  Icon,
+  List,
+  ListItem,
+} from "@chakra-ui/react"
 
-import { BaseLink } from "../Link"
+import type { ChildOnlyProp } from "../../lib/types"
 // import Translation from "../Translation"
 import { Button } from "../Buttons"
+import { BaseLink } from "../Link"
 
 import { ISections } from "./types"
-import type { ChildOnlyProp } from "../../lib/types"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
   (props, ref) => <ListItem ref={ref} mb={12} {...props} />

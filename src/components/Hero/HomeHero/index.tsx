@@ -1,10 +1,11 @@
 import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
+
 import { ButtonLink } from "../../Buttons"
+import GatsbyImage from "../../GatsbyImage"
 import Morpher from "../../Morpher"
 import Translation from "../../Translation"
-import GatsbyImage from "../../GatsbyImage"
 import { CommonHeroProps } from "../utils"
 
 export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}

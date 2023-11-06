@@ -1,16 +1,18 @@
 import React from "react"
-import { VStack, Icon, Box, Flex, Text } from "@chakra-ui/react"
-import { MdInfoOutline } from "react-icons/md"
 import { kebabCase } from "lodash"
-import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
-import Tooltip from "../Tooltip"
-import Translation from "../Translation"
+import { MdInfoOutline } from "react-icons/md"
+import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { Box, Flex, Icon, Text,VStack } from "@chakra-ui/react"
+
+import { Direction } from "../../types"
 import InlineLink from "../Link"
+import OldText from "../OldText"
 import StatErrorMessage from "../StatErrorMessage"
 import StatLoadingMessage from "../StatLoadingMessage"
+import Tooltip from "../Tooltip"
+import Translation from "../Translation"
+
 import { Metric, ranges } from "./useStatsBoxGrid"
-import { Direction } from "../../types"
-import OldText from "../OldText"
 
 const tooltipContent = (metric: Metric) => (
   <div>

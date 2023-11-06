@@ -1,9 +1,9 @@
 import React from "react"
+
 // TODO: enable these deps after i18n is set up
 // import { useTranslation } from "gatsby-plugin-react-i18next"
 // import { TOptions } from "i18next"
 // import htmr from "htmr"
-
 import InlineLink from "./Link"
 
 interface Props {

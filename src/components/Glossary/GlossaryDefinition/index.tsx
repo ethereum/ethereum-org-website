@@ -1,5 +1,6 @@
 import React from "react"
-import { Box, Heading, Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
+
 import OldHeading from "@/components/OldHeading"
 
 // TODO: Re-enable with translations once intl implemented

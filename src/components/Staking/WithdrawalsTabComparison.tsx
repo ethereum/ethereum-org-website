@@ -7,12 +7,14 @@ import {
   Tabs,
   UnorderedList,
 } from "@chakra-ui/react"
-import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
+
 import { ButtonLink } from "@/components/Buttons"
+import OldHeading from "@/components/OldHeading"
 // TODO: Re-enable after i18n implemented
 // import Translation from "@/components/Translation"
 import Text from "@/components/OldText"
-import OldHeading from "@/components/OldHeading"
+import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface IProps {}

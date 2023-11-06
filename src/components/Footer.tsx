@@ -1,3 +1,8 @@
+// TODO
+// import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import React from "react"
+import { useRouter } from "next/router"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
   Flex,
@@ -8,18 +13,13 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-// TODO
-// import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import React from "react"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
-import { useRouter } from "next/router"
-
-import { BaseLink } from "./Link"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Lang, TranslationKey } from "@/lib/types"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { BaseLink } from "./Link"
 
 // TODO
 // import Translation from "./Translation"

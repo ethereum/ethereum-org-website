@@ -1,6 +1,7 @@
-import { Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { MdContentCopy } from "react-icons/md"
+import { Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
+
 import { FAKE_DEMO_ADDRESS } from "../constants"
 import { NotificationPopover } from "../NotificationPopover"
 

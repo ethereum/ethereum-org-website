@@ -1,4 +1,5 @@
 import { AspectRatio, Box, chakra, Icon } from "@chakra-ui/react"
+
 // TODO: Re-enable after i18n implemented
 // import Translation from "./Translation"
 import { Background } from "./Background" 

@@ -1,7 +1,8 @@
-import { useColorMode } from "@chakra-ui/react"
+import { useState } from "react"
 // import { useTranslation } from "gatsby-plugin-react-i18next"
 import { cloneDeep } from "lodash"
-import { useRef, useState } from "react"
+import { useColorMode } from "@chakra-ui/react"
+
 import { IItem, ISections } from "./types"
 
 // TODO: add trackCustomEvent when util is migrated

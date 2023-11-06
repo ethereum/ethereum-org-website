@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react"
-
+import { graphql,useStaticQuery } from "gatsby"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { useStaticQuery, graphql } from "gatsby"
+import { gql,useQuery } from "@apollo/client"
 import { FlexProps } from "@chakra-ui/react"
+
 import FileContributors, { Author } from "./FileContributors"
-import { useQuery, gql } from "@apollo/client"
 
 interface Commit {
   author: Author
