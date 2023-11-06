@@ -2,11 +2,6 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const { i18n } = require("./next-i18next.config")
 
-const BUILD_LOCALES = process.env.BUILD_LOCALES
-// Supported locales defined in `i18n.config.json`
-const locales = BUILD_LOCALES
-  ? BUILD_LOCALES.split(",")
-  : i18nConfig.map(({ code }) => code)
 const experimental =
   (process.env.LIMIT_CPU || "").toLowerCase() === "true"
     ? {
