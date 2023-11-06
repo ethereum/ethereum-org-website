@@ -1,7 +1,8 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
 import { BiCircle } from "react-icons/bi"
 import { Stack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
 import ButtonTwoLinesComponent from "."
 
 type ComponentType = typeof ButtonTwoLinesComponent

@@ -1,5 +1,7 @@
-import { Center, Heading, Flex, Stack } from "@chakra-ui/react"
+import { Center, Flex, Heading, Stack } from "@chakra-ui/react"
+
 import { Image } from "@/components/Image"
+
 import wallet from "@/public/wallet.png"
 
 export interface IProps {

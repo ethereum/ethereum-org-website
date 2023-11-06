@@ -1,9 +1,10 @@
 import React from "react"
-import { Grid, Icon, GridProps, Box, useColorModeValue } from "@chakra-ui/react"
-import { MdArrowDownward } from "react-icons/md"
-import type { SimulatorNavProps } from "../../interfaces"
-import { EthGlyphIcon } from "../../icons"
 import { AnimatePresence, motion } from "framer-motion"
+import { MdArrowDownward } from "react-icons/md"
+import { Box, Grid, GridProps, Icon, useColorModeValue } from "@chakra-ui/react"
+
+import { EthGlyphIcon } from "../../icons"
+import type { SimulatorNavProps } from "../../interfaces"
 
 interface IProps extends GridProps, SimulatorNavProps {}
 export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {

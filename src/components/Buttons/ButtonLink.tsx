@@ -1,7 +1,8 @@
 import React from "react"
 
-import type { IProps as IButtonProps } from "./Button"
 import { BaseLink, LinkProps } from "../Link"
+
+import type { IProps as IButtonProps } from "./Button"
 import Button from "./Button"
 
 export type ButtonLinkProps = LinkProps & Omit<IButtonProps, "toId">

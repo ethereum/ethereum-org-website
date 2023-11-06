@@ -1,4 +1,3 @@
-// Libraries
 import React, { useState } from "react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -6,34 +5,27 @@ import {
   Box,
   chakra,
   Flex,
-  Img,
   ListItem,
   SimpleGrid,
   Stack,
   UnorderedList,
 } from "@chakra-ui/react"
 
-// Components
-import { ButtonLink } from "../Buttons"
-import InlineLink from "../Link"
-import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
-import GatsbyImage from "../GatsbyImage"
-
-// Data
 import {
-  cexOnboardData,
   CexOnboard,
+  cexOnboardData,
 } from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
-
-//Utils
-import { trackCustomEvent } from "../../utils/matomo"
 import { ChildOnlyProp } from "../../types"
+import { trackCustomEvent } from "../../utils/matomo"
+import { ButtonLink } from "../Buttons"
+import GatsbyImage from "../GatsbyImage"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import { StyledSelect as Select } from "../SharedStyledComponents"
+import Translation from "../Translation"
 
-// Styles
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
 )

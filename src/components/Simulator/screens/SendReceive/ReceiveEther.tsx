@@ -1,22 +1,13 @@
-import {
-  Popover,
-  PopoverTrigger,
-  Button,
-  PopoverContent,
-  PopoverArrow,
-  PopoverBody,
-  useBreakpointValue,
-  Image,
-  useColorModeValue,
-} from "@chakra-ui/react"
 import React from "react"
-import { Box, Flex, Text } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
+import { Button, Image, useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
+
+import GatsbyImage from "../../../GatsbyImage"
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
-import GatsbyImage from "../../../GatsbyImage"
 
 const MotionBox = motion(Box)
 

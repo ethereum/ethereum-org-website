@@ -10,13 +10,12 @@ import {
   useRadioGroup,
   useToken,
 } from "@chakra-ui/react"
+
+import type { Question } from "../../lib/interfaces"
 // TODO: Re-enable after intl implemented
 // import { useTranslation } from "gatsby-plugin-react-i18next"
-
 // import Translation from "../Translation"
-
 import type { TranslationKey } from "../../lib/types"
-import type { Question } from "../../lib/interfaces"
 
 interface CustomRadioProps extends RadioProps {
   index: number

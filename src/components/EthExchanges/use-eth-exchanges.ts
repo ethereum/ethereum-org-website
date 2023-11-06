@@ -1,13 +1,13 @@
 import { useState } from "react"
-import { shuffle } from "lodash"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql,useStaticQuery } from "gatsby"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { shuffle } from "lodash"
 
-import { getLocaleTimestamp } from "../../utils/time"
-import { trackCustomEvent } from "../../utils/matomo"
 import { getImage, ImageDataLike } from "../../utils/image"
 import { Lang } from "../../utils/languages"
+import { trackCustomEvent } from "../../utils/matomo"
+import { getLocaleTimestamp } from "../../utils/time"
 
 export const cardListImage = graphql`
   fragment cardListImage on File {

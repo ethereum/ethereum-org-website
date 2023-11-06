@@ -15,21 +15,20 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react"
-// Data imports
-import stakingProducts from "@/data/staking-products.json"
-// Component imports
+
 import { ButtonLink } from "@/components/Buttons"
-import Translation from "@/components/Translation"
-// SVG imports
+// When adding a product svg, be sure to add to mapping below as well.
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import Translation from "@/components/Translation"
 
 import { MatomoEventOptions } from "@/lib/utils/matomo"
-// When adding a product svg, be sure to add to mapping below as well.
+
+import stakingProducts from "@/data/staking-products.json"
 
 const PADDED_DIV_STYLE: BoxProps = {
   px: 8,
@@ -48,7 +47,9 @@ enum FlagType {
 const getIconFromName = (
   imageName: string
 ): ComponentType<SVGProps<SVGElement>> => {
-  const { [imageName + "GlyphIcon"]: Icon } = require("@/components/icons/staking")
+  const {
+    [imageName + "GlyphIcon"]: Icon,
+  } = require("@/components/icons/staking")
   return Icon
 }
 

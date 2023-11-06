@@ -1,27 +1,29 @@
-import { Icon } from "@chakra-ui/react"
 import { useState } from "react"
-import { WalletTableProps } from "."
+import { Icon } from "@chakra-ui/react"
+
 import { trackCustomEvent } from "../../../utils/matomo"
 import {
-  OpenSourceWalletIcon,
-  NonCustodialIcon,
-  HardwareSupportIcon,
-  WalletConnectIcon,
-  RPCImportingIcon,
-  NFTSupportIcon,
+  BuyCryptoIcon,
   ConnectDappsIcon,
-  StakingIcon,
-  SwapIcon,
-  Layer2Icon,
-  GasFeeCustomizationIcon,
+  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
-  EIP1559Icon,
-  BuyCryptoIcon,
-  WithdrawCryptoIcon,
+  GasFeeCustomizationIcon,
+  HardwareSupportIcon,
+  Layer2Icon,
   MultisigIcon,
+  NFTSupportIcon,
+  NonCustodialIcon,
+  OpenSourceWalletIcon,
+  RPCImportingIcon,
   SocialRecoverIcon,
+  StakingIcon,
+  SwapIcon,
+  WalletConnectIcon,
+  WithdrawCryptoIcon,
 } from "../../icons/wallets"
+
+import { WalletTableProps } from "."
 
 export interface DropdownOption {
   label: string

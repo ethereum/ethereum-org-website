@@ -1,5 +1,5 @@
-import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
 import { merge } from "lodash"
+import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
 
 const {
   Accordion: accordionDefaultTheme,

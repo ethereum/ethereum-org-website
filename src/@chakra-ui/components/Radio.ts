@@ -1,9 +1,10 @@
+import { radioAnatomy } from "@chakra-ui/anatomy"
 import {
   createMultiStyleConfigHelpers,
   cssVar,
   defineStyle,
 } from "@chakra-ui/react"
-import { radioAnatomy } from "@chakra-ui/anatomy"
+
 import {
   commonInputTriggerStyles,
   defineMergeStyles,

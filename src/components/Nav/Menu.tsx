@@ -4,7 +4,6 @@ import { Flex, FlexProps, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
 // import { getDirection } from "../../utils/translations"
-
 // import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 

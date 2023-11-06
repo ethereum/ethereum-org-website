@@ -1,4 +1,5 @@
 import { navigate } from "gatsby"
+
 import { PATH_IDS } from "./constants"
 import type { PathId } from "./types"
 

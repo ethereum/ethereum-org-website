@@ -1,20 +1,20 @@
 import React, { ReactNode } from "react"
+import { IGatsbyImageData } from "gatsby-plugin-image"
 import {
   Box,
+  BoxProps,
   Flex,
   Heading,
-  BoxProps,
-  LinkBox,
-  LinkOverlay,
   Image,
-  useColorModeValue,
+  LinkBox,
   LinkBoxProps,
+  LinkOverlay,
+  useColorModeValue,
 } from "@chakra-ui/react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
 
-import Text from "./OldText"
-import { BaseLink } from "./Link"
 import GatsbyImage from "./GatsbyImage"
+import { BaseLink } from "./Link"
+import Text from "./OldText"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",

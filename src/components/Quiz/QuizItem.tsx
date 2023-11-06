@@ -1,19 +1,16 @@
 import React, { useContext } from "react"
-import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-
-import { Button } from "../Buttons"
-import Translation from "../Translation"
-import Tag from "../Tag"
-import { GreenTickIcon } from "../icons/quiz"
-
-import { QuizzesHubContext } from "./context"
-
-import { trackCustomEvent } from "../../utils/matomo"
-
-import { QuizzesListItem } from "../../types"
+import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import allQuizzesData from "../../data/quizzes"
+import { QuizzesListItem } from "../../types"
+import { trackCustomEvent } from "../../utils/matomo"
+import { Button } from "../Buttons"
+import { GreenTickIcon } from "../icons/quiz"
+import Tag from "../Tag"
+import Translation from "../Translation"
+
+import { QuizzesHubContext } from "./context"
 
 const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const { id, level, quizHandler, modalHandler } = props

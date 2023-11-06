@@ -1,4 +1,6 @@
 import React, { useContext } from "react"
+import { useI18next } from "gatsby-plugin-react-i18next"
+import { FaTwitter } from "react-icons/fa"
 import {
   Box,
   Circle,
@@ -9,27 +11,21 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react"
-import { FaTwitter } from "react-icons/fa"
-import { useI18next } from "gatsby-plugin-react-i18next"
 
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
+import { QuizShareStats } from "../../types"
+import { trackCustomEvent } from "../../utils/matomo"
 import { Button } from "../Buttons"
-import Translation from "../Translation"
 import { TrophyIcon } from "../icons/quiz"
+import Translation from "../Translation"
 
 import { QuizzesHubContext } from "./context"
-
-// Utils
 import {
   getFormattedStats,
   getNumberOfCompletedQuizzes,
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
-import { trackCustomEvent } from "../../utils/matomo"
-
-import { QuizShareStats } from "../../types"
-
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({

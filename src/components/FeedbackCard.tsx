@@ -1,17 +1,15 @@
-// Library imports
 import React, { ReactNode, useState } from "react"
-import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 import { useRouter } from "next/router"
-// Component imports
+import { Flex, FlexProps, Heading } from "@chakra-ui/react"
+
 import { Button } from "./Buttons"
 // TODO: add Translation when i18n is set up
 // import Translation from "./Translation"
-// SVG imports
 import { FeedbackThumbsUpIcon } from "./icons"
-// Utility imports
+
 // TODO: add trackCustomEvent when util is migrated
 // import { trackCustomEvent } from "../utils/matomo"
-// Hook imports
+
 // TODO: add useSurvey after hook is migrated
 // import { useSurvey } from "../hooks/useSurvey"
 

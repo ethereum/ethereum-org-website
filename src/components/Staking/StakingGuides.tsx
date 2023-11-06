@@ -1,4 +1,5 @@
 import { Stack } from "@chakra-ui/react"
+
 import CardList, { CardListItem } from "@/components/CardList"
 
 const StakingGuides: React.FC = () => {

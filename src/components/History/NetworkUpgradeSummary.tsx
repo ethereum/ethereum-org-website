@@ -1,22 +1,16 @@
-// Libraries
 import { useEffect, useState } from "react"
-import { Flex, Stack, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { Flex, Stack, Text } from "@chakra-ui/react"
 
-// Components
-import Emoji from "../Emoji"
-import InlineLink from "../Link"
-// TODO add Translation
-// import Translation from "../Translation"
-
-// Utils
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
-
-// Types
 import { Lang } from "@/lib/types"
 
-// Data
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
+// TODO add Translation
+// import Translation from "../Translation"
+import Emoji from "../Emoji"
+import InlineLink from "../Link"
 
 interface IProps {
   name: string
