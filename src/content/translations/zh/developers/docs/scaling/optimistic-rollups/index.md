@@ -260,6 +260,6 @@ ii. 使用乐观卷叠的开发者和项目团队可以利用以太坊的基础�
 - [乐观卷叠如何工作（完整指南）](https://www.alchemy.com/overviews/optimistic-rollups)
 - [乐观卷叠知识大全](https://research.paradigm.xyz/rollups)
 - [Arbitrum 基本指南](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [乐观卷叠究竟如何工作？](https://research.paradigm.xyz/optimism)
+- [乐观卷叠究竟如何工作？](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [深入研究乐观虚拟机](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [什么是乐观虚拟机？](https://www.alchemy.com/overviews/optimistic-virtual-machine)
