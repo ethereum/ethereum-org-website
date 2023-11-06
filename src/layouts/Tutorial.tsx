@@ -225,7 +225,6 @@ export const TutorialLayout = ({
           {frontmatter.lang !== "en" ? (
             // TODO: Implement CrowdinContributors
             <>
-              <Text>Crowdin contributor</Text>
               {/* <CrowdinContributors
                 relativePath={relativePath}
                 editPath={absoluteEditPath}
@@ -234,13 +233,10 @@ export const TutorialLayout = ({
               /> */}
             </>
           ) : (
-            <>
-              <Text>Github contributor</Text>
-              <GitHubContributors
-                relativePath={relativePath}
-                lastUpdatedDate={lastUpdatedDate!}
-              />
-            </>
+            <GitHubContributors
+              relativePath={relativePath}
+              lastUpdatedDate={lastUpdatedDate!}
+            />
           )}
           <FeedbackCard />
         </ContentContainer>
