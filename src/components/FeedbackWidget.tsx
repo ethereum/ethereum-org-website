@@ -12,6 +12,7 @@ import {
   ScaleFade,
 } from "@chakra-ui/react"
 
+import { useKeyPress } from "../hooks/useKeyPress"
 // Hook imports
 import { useOnClickOutside } from "../hooks/useOnClickOutside"
 import { useSurvey } from "../hooks/useSurvey"

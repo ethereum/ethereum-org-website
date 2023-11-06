@@ -1,8 +1,6 @@
 import { useContext } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaTwitter } from "react-icons/fa"
 import { FaTwitter } from "react-icons/fa"
 import {
   Box,
@@ -20,7 +18,6 @@ import { QuizShareStats } from "../../types"
 import { trackCustomEvent } from "../../utils/matomo"
 import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
-import Translation from "../Translation"
 
 import { QuizzesHubContext } from "./context"
 import {

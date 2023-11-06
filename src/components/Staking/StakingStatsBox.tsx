@@ -8,13 +8,9 @@ import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 import { Lang } from "../../utils/languages"
 import { getLocaleForNumberFormat } from "../../utils/translations"
 import InlineLink from "../Link"
-import InlineLink from "../Link"
-import Text from "../OldText"
 import Text from "../OldText"
 // Import components
 import Tooltip from "../Tooltip"
-import Tooltip from "../Tooltip"
-import Translation from "../Translation"
 
 const NA_ERROR = "n/a"
 const ZERO = "0"

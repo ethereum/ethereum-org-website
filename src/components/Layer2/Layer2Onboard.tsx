@@ -20,18 +20,11 @@ import { ChildOnlyProp } from "../../types"
 import { trackCustomEvent } from "../../utils/matomo"
 // Components
 import { ButtonLink } from "../Buttons"
-import { ButtonLink } from "../Buttons"
-import GatsbyImage from "../GatsbyImage"
 import GatsbyImage from "../GatsbyImage"
 import InlineLink from "../Link"
-import InlineLink from "../Link"
-import OldHeading from "../OldHeading"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
-import Text from "../OldText"
 import { StyledSelect as Select } from "../SharedStyledComponents"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Translation from "../Translation"
 
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
