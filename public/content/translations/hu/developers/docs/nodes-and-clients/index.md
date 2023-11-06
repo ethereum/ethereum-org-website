@@ -20,7 +20,7 @@ Valós idejű látványt kaphatsz az Ethereum hálózatról, ha megnézed a [cso
 
 Valamennyi [Ethereum kliens implementáció](/developers/docs/nodes-and-clients/#execution-clients) létezik különböző nyelveken. Ami közös van ezekben az implementációkban, hogy mindegyikük egy formális specifikációt követ. Ez a specifikáció mondja ki, hogyan működik az Ethereum hálózat és a blokklánc.
 
-![Eth1x kliens](../../../../../developers/docs/nodes-and-clients/client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
+![Eth1x kliens](./client-diagram.png) Az Ethereum kliens funkciók egyszerűsített diagramja.
 
 ## Csomópont típusok {#node-types}
 
@@ -58,7 +58,7 @@ A saját csomópont futtatása lehetővé teszi az Ethereum valóban privát, ö
 - Nem kell a címeidet és az egyenlegeidet véletlenszerű csomópontokra szivárogtatnod. Minden ellenőrizhető a saját klienseddel.
 - A dappod biztonságosabb és privátabb lehet, ha saját csomópontot használsz. A [MetaMask](https://metamask.io), a [MyEtherWallet](https://myetherwallet.com) és néhány másik tárcát egyszerűen átirányíthatsz a helyi csomópontodra.
 
-![Hogyan férhetsz hozzá az Ethereumhoz az alkalmazásoddal és a csomópontoddal](../../../../../developers/docs/nodes-and-clients/nodes.png)
+![Hogyan férhetsz hozzá az Ethereumhoz az alkalmazásoddal és a csomópontoddal](./nodes.png)
 
 ### Hálózati előnyök {#network-benefits}
 
@@ -197,9 +197,9 @@ Attól függően hogy melyik szoftvert és szinkronizációs módot használjuk,
 | Nethermind   | 200GB+                   | 3TB+                      |
 | Besu         | 750GB+                   | 4TB+                      |
 
-![Egy diagram, mely megmutatja, hogy a teljes szinkronizációhoz szükséges adat idővel nő](../../../../../developers/docs/nodes-and-clients/full-sync.png)
+![Egy diagram, mely megmutatja, hogy a teljes szinkronizációhoz szükséges adat idővel nő](./full-sync.png)
 
-![Egy diagram, mely megmutatja, hogy az archív szinkronizációhoz szükséges adat idővel nő](../../../../../developers/docs/nodes-and-clients/archive-sync.png)
+![Egy diagram, mely megmutatja, hogy az archív szinkronizációhoz szükséges adat idővel nő](./archive-sync.png)
 
 A fenti értékek mutatják hogy mindig változik a tárhelykövetelmény. A lehető legfrissebb adatokat a Geth-ről és a Parityről lásd itt: [Teljes szinkronizációs adat](https://etherscan.io/chartsync/chaindefault) és [Archívált szinkronizációs adat](https://etherscan.io/chartsync/chainarchive).
 
