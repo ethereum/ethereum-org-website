@@ -45,8 +45,8 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Decentralized finance (DeFi)](/defi/)
 - [Introduction to smart contracts](/smart-contracts/)
-- [Decentralized identity)](/decentralized-identity/)
-- [Decentralized social networks)](/social-networks/)
+- [Decentralized identity](/decentralized-identity/)
+- [Decentralized social networks](/social-networks/)
 - [Decentralized science (DeSci))](/desci/)
 
 ## 6) Staking pages {#staking-pages}
@@ -91,7 +91,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Improving user experience](/roadmap/user-experience/)
 - [Future-proofing Ethereum](/roadmap/future-proofing/)
 - [Danksharding](/roadmap/danksharding/)
-- [Single slot finality](roadmap/single-slot-finality/)
+- [Single slot finality](/roadmap/single-slot-finality/)
 - [Proposer-builder separation](/roadmap/pbs/)
 - [Secret leader election](/roadmap/secret-leader-election/)
 - [Account abstraction](/roadmap/account-abstraction/)

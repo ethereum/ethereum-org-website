@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Фильтры функций",
   "page-find-wallet-footnote-1": "Кошельки, перечисленные на этой странице, не являются официально подтвержденными и представлены исключительно в информационных целях.",
   "page-find-wallet-footnote-2": "Их описания были предоставлены самими проектами кошельков.",
-  "page-find-wallet-footnote-3": "Мы добавляем продукты на эту страницу на основе критериев <a href=\"/contributing/adding-products/\">политики листинга</a>. Если вы хотите, чтобы мы добавили кошелек, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">сообщите о проблеме в GitHub</a>.",
+  "page-find-wallet-footnote-3": "Мы добавляем продукты на эту страницу на основе критериев <a href=\"/contributing/adding-wallets/\">политики листинга</a>. Если вы хотите, чтобы мы добавили кошелек, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">сообщите о проблеме в GitHub</a>.",
   "page-find-wallet-mobile": "На мобильном",
   "page-find-wallet-mobile-desc": "Кошельки с мобильными приложениями",
   "page-find-wallet-desktop": "На настольном ПК",

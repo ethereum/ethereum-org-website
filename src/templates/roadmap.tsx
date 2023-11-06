@@ -216,7 +216,7 @@ const RoadmapPage = ({
       <HeroContainer>
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
-            <Breadcrumbs slug={location.pathname} />
+            <Breadcrumbs slug={location.pathname} mb="8" />
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (

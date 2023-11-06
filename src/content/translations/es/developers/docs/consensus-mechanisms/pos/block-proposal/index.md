@@ -64,6 +64,6 @@ El proponente de bloques recibe el pago por su trabajo. Hay una `base_reward` ca
 
 - [Introducción a los bloques](/developers/docs/blocks/)
 - [Introducción a la prueba de participación](/developers/docs/consensus-mechanisms/pos/)
-- [Especificaciones de consenso de Ethereum](www.github.com/ethereum/consensus-specs)
+- [Especificaciones de consenso de Ethereum](https://github.com/ethereum/consensus-specs)
 - [Introducción a Gasper](/developers/docs/consensus-mechanisms/pos/)
 - [Actualización de Ethereum](https://eth2book.info/)

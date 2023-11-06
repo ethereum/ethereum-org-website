@@ -1,4 +1,4 @@
-import React, { ComponentProps, ComponentPropsWithRef } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
@@ -46,7 +46,7 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
@@ -206,7 +206,7 @@ const components = {
   YouTube,
   ExpandableCard,
   MergeInfographic,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   GlossaryTooltip,
 }
 
@@ -353,7 +353,7 @@ const UpgradePage = ({
     <Container>
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <Box>
             <List listStyleType="disc">

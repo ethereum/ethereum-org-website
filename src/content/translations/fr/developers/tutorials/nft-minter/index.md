@@ -195,7 +195,7 @@ Si vous ouvrez le fichier `App.js`, qui est le composant principal en React agis
 
 Maintenant que nous comprenons ce avec quoi nous travaillons, mettons en place notre portefeuille Ethereum !
 
-## : Configurez votre portefeuille Ethereum {#set-up-your-ethereum-wallet}
+## Configurez votre portefeuille Ethereum {#set-up-your-ethereum-wallet}
 
 Pour que les utilisateurs puissent interagir avec votre contrat intelligent, ils devront connecter leur portefeuille Ethereum à votre dApp.
 

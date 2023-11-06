@@ -51,6 +51,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Foundry](https://github.com/gakonst/foundry)- _Boîte à outils pour le développement d'applications Ethereum_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs) - _Bibliothèque Ethereum et implémentation de portefeuille_
 - [SewUp](https://github.com/second-state/SewUp) - _Bibliothèque pour vous aider aussi bien à créer votre contrat Webassembly Ethereum avec Rust que développer un backend commun._
+- [Substreams](https://github.com/streamingfast/substreams) - _Il s'agit de protocoles d'indexation décentralisés des données qui sont soumises à une période d'immobilisation _
 - [Reth](https://github.com/paradigmxyz/reth) Reth (sous le nom de Rust Ethereum, en abrégé Reth, prononciation) : il s'agit d'une nouvelle implémentation de nœud complet sur Ethereum
 
 Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/)

@@ -152,7 +152,7 @@ Here are the release pages of clients where you can find their pre-built binarie
 ##### Execution clients
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (Doesn't provide a pre-built binary, has to be compiled)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 

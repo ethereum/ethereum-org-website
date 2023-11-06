@@ -109,7 +109,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <StakingProductsCardGrid category="nodeTools" />
 
-请注意选择[非主流客户端](/developers/docs/nodes-and-clients/client-diversity/)的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style="text-transform: uppercase;">“多客户端”。</em>
+请注意选择[非主流客户端](/developers/docs/nodes-and-clients/client-diversity/)的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style={{ textTransform: "uppercase" }}>“多客户端”。</em>
 
 #### 密钥生成器
 

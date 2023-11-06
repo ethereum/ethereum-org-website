@@ -398,7 +398,7 @@ const StakingPage = ({
     <Box position="relative" width="full">
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
-          <Breadcrumbs slug={location.pathname} />
+          <Breadcrumbs slug={location.pathname} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <UnorderedList>
             {(summaryPoints || []).map((point, idx) => (
