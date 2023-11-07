@@ -34,7 +34,7 @@ lang: fa
 
 زنجیره‌ی بیکن در کنار اعتمادسازی برای مکانیزم اثبات مالکیت سهام، تخمینی از میزان مصرف انرژی اتریوم پس از ادغام نیز در اختیار ما قرار می‌دهد. [تخمینی جدید](https://blog.ethereum.org/2021/05/18/country-power-no-more/) پیشنهاد می‌دهد که ادغام به اثبات مالکیت سهام می‌تواند 99.95% میزان مصرف انرژی را کاهش دهد و اثبات مالکیت سهام از نظر مصرف انرژی بیش از 2000 برابر نسبت به اثبات کار به‌صرفه‌تر است. مصرف انرژی اتریوم برای هر گره روی شبکه تقریباً برابر با مصرف انرژی یک کامپیوتر خانگی خواهد بود.
 
-![تصویر](energy_use_per_transaction.png)
+![تصویر](energy_consumption_pre_post_merge.png)
 
 <p style={{ textAlign: "center" }}><small><i>تخمین مصرف انرژی اثبات کار برای هر تراکنش در زمان نوشتن این متن بر مبنای <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">داده‌های مه 2021</a> برابر با <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175.54 کیلووات در ساعت</a> است</i></small></p>
 

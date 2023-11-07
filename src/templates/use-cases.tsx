@@ -39,7 +39,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -48,11 +47,12 @@ import SectionNav from "../components/SectionNav"
 import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
 import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
+import LeftNavBar from "../components/LeftNavBar"
 
 import { isLangRightToLeft } from "../utils/translations"
 import { getSummaryPoints } from "../utils/getSummaryPoints"
@@ -134,7 +134,7 @@ const components = {
   DocLink,
   ExpandableCard,
   YouTube,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   GlossaryTooltip,
 }
 
@@ -209,35 +209,12 @@ export const Page = (props: FlexProps) => (
   />
 )
 
-export const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    as="aside"
-    flexDirection="column"
-    flex="0 1 400px"
-    ml={8}
-    mr={16}
-    position="sticky"
-    top="6.25rem"
-    height={calc("100vh").subtract("80px").toString()}
-    {...props}
-  />
-)
-
-export const InfoTitle = (props: ChildOnlyProp) => (
-  <H2
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
-    mt={0}
-    {...props}
-  />
-)
-
 export const StyledButtonDropdown = ({
   list,
   ...rest
 }: FlexProps & Pick<ButtonDropdownProps, "list">) => (
   <Flex align="flex-end" justify="flex-end" mb={8} {...rest}>
-    <ButtonDropdown list={list} w={{ base: "full", lg: "auto" }} minW="240px" />
+    <ButtonDropdown list={list} w="full" minW="240px" />
   </Flex>
 )
 
@@ -461,17 +438,11 @@ const UseCasePage = ({
           description={mdx.frontmatter.description}
         />
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            tocItems={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           <MDXProvider components={components}>

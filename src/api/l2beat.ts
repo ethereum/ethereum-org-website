@@ -1,15 +1,22 @@
+import axios from "axios"
 import { GatsbyFunctionRequest, GatsbyFunctionResponse } from "gatsby"
-
-import { lambda } from "../lambda/l2beat"
 
 async function handler(
   __req: GatsbyFunctionRequest,
   res: GatsbyFunctionResponse
 ) {
-  // passing env vars as arguments due to a bug on GC functions where env vars
-  // can not be accessed by imported functions
-  const { statusCode, body } = await lambda()
-  res.status(statusCode).send(body)
+  try {
+    const response = await axios.get(`https://api.l2beat.com/api/tvl`)
+    if (response.status < 200 || response.status >= 300) {
+      return res.status(response.status).send(response.statusText)
+    }
+
+    const { data } = response
+    res.status(200).send(JSON.stringify(data))
+  } catch (error) {
+    console.error(error)
+    res.status(500).send(JSON.stringify({ msg: (error as Error).message }))
+  }
 }
 
 export default handler

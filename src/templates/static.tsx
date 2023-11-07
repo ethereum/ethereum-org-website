@@ -41,12 +41,11 @@ import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
 import Text from "../components/OldText"
 import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
-import WritersCohortBanner from "../components/Banners/Implementations/WritersCohortBanner"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
 
@@ -209,7 +208,7 @@ const components = {
   NetworkUpgradeSummary,
   TranslationChartImage,
   EnergyConsumptionChart,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   UpgradeStatus,
   GlossaryDefinition,
   GlossaryTooltip,
@@ -255,7 +254,6 @@ const StaticPage = ({
         />
       )}
 
-      <WritersCohortBanner pathname={location.pathname} />
       <Flex
         justifyContent="space-between"
         w="full"

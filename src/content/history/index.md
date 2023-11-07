@@ -310,6 +310,7 @@ The Istanbul fork:
 
 The Constantinople fork:
 
+- Reduced block [mining](/developers/docs/consensus-mechanisms/pow/mining/) rewards from 3 to 2 ETH.
 - Ensured the blockchain didn't freeze before [proof-of-stake was implemented](#beacon-chain-genesis).
 - Optimised the [gas](/glossary/#gas) cost of certain actions in the [EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Added the ability to interact with addresses that haven't been created yet.
@@ -322,7 +323,7 @@ The Constantinople fork:
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>optimises cost of certain on-chain actions.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>allows you to interact with addresses that have yet to be created.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>optimises cost of certain on-chain actions.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>makes sure the blockchain doesn&#39;t freeze before proof-of-stake and reduces block reward from 3 to 2 ETH.</em></li>
 </ul>
 
 </ExpandableCard>

@@ -1,7 +1,6 @@
 import React, { ComponentProps } from "react"
 import {
   Box,
-  Center,
   Flex,
   FlexProps,
   Heading,
@@ -24,7 +23,7 @@ import InlineLink from "../components/Link"
 import HorizontalCard from "../components/HorizontalCard"
 import PageMetadata from "../components/PageMetadata"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import Card from "../components/Card"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
@@ -590,9 +589,7 @@ const EthPage = (props: PageProps<Queries.EthPageQuery, Context>) => {
         </RightColumn>
       </TwoColumnContent>
       <Content>
-        <Center w="100%">
-          <QuizWidget quizKey="what-is-ether" />
-        </Center>
+        <StandaloneQuizWidget quizKey="what-is-ether" />
       </Content>
       <Content>
         <FeedbackCard />

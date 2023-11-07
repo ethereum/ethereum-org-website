@@ -38,7 +38,8 @@ const commonRedirectProps = {
  * @returns boolean for if file is outdated or not
  */
 const checkIsMdxOutdated = (filePath: string): boolean => {
-  const dirname = path.resolve("./")
+  // .replace(/\\/g, "/") to replace \ in windows paths ex: C:\\folder\\myfile.txt becomes C:/folder/myfile.txt
+  const dirname = path.resolve("./").replace(/\\/g, "/")
   const splitPath = filePath.split(dirname)
   const tempSplitPath = splitPath[1]
   const tempSplit = tempSplitPath.split("/")
@@ -494,19 +495,4 @@ export const onPreBootstrap: GatsbyNode["onPreBootstrap"] = async ({
   reporter.info(`Created locales`)
   copyContributors()
   reporter.info(`Contributors copied`)
-}
-
-// Build lambda functions when the build is complete and the `/public` folder exists
-export const onPostBuild: GatsbyNode["onPostBuild"] = async (
-  gatsbyNodeHelpers
-) => {
-  const { reporter } = gatsbyNodeHelpers
-
-  const reportOut = (report: { stderr: string; stdout: string }) => {
-    const { stderr, stdout } = report
-    if (stderr) reporter.error(stderr)
-    if (stdout) reporter.info(stdout)
-  }
-
-  reportOut(await exec("npm run build:lambda && cp netlify.toml public"))
 }
