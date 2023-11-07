@@ -32,3 +32,8 @@
 
 "event :date:":
   - src/data/community-events.json
+
+  "location :Car_brands:":
+  - src/roads/*
+  - src/roads-drivers/"
+  - src/driving/**/*
