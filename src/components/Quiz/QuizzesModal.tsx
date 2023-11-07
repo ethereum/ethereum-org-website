@@ -5,6 +5,8 @@ import {
   ModalContent,
   ModalOverlay,
   ModalProps,
+  ModalContentProps,
+  Center,
 } from "@chakra-ui/react"
 
 import { QuizzesHubContext } from "./context"
@@ -16,12 +18,15 @@ interface IProps extends ModalProps {
 const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
   const { status: quizStatus } = useContext(QuizzesHubContext)
 
-  const statusColor =
-    quizStatus === "neutral"
-      ? "neutral"
-      : quizStatus === "success"
-      ? "success.light"
-      : "error.light"
+  const getStatusColor = (): ModalContentProps["bg"] => {
+    if (quizStatus === "neutral") {
+      return "neutral"
+    }
+    if (quizStatus === "success") {
+      return "success.neutral"
+    }
+    return "error.neutral"
+  }
 
   return (
     <ChakraModal
@@ -30,12 +35,12 @@ const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
       scrollBehavior="inside"
       {...rest}
     >
-      <ModalOverlay bg="blackAlpha.700" hideBelow="md" />
+      <ModalOverlay bg="blackAlpha.700" />
 
-      <ModalContent justifyContent="center" bg={statusColor}>
-        <ModalCloseButton size="lg" p={6} zIndex={1} />
+      <Center as={ModalContent} m={0} bg={getStatusColor()} py="16">
+        <ModalCloseButton size="lg" p="6" />
         {children}
-      </ModalContent>
+      </Center>
     </ChakraModal>
   )
 }

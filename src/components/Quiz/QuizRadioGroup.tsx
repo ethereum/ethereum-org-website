@@ -5,8 +5,12 @@ import {
   chakra,
   Circle,
   Flex,
+  FlexProps,
   RadioProps,
+  SquareProps,
+  Stack,
   Text,
+  TextProps,
   useRadio,
   useRadioGroup,
   useToken,
@@ -19,6 +23,90 @@ import type { TranslationKey } from "../../lib/types"
 interface CustomRadioProps extends RadioProps {
   index: number
   label: string
+  showAnswer: boolean
+  isSelectedCorrect: boolean
+}
+
+const CustomRadio: React.FC<CustomRadioProps> = ({
+  index,
+  label,
+  showAnswer,
+  isSelectedCorrect,
+  ...radioProps
+}) => {
+  const { state, getInputProps, getRadioProps, htmlProps } =
+    useRadio(radioProps)
+
+  // Memoized values
+  const buttonBg = useMemo<string>(() => {
+    if (!state.isChecked) return "body.inverted"
+    if (!showAnswer) return "primary.base"
+    if (!isSelectedCorrect) return "error.base"
+    return "success.base"
+  }, [state.isChecked, showAnswer, isSelectedCorrect])
+
+  const primaryBaseColor = useToken("colors", "primary.base")
+
+  const focusProps: FlexProps = {
+    outline: showAnswer ? "none" : `1px solid ${primaryBaseColor}`,
+  }
+
+  const controlFocusProps: SquareProps = {
+    bg: showAnswer ? "white" : "primary.pressed",
+  }
+
+  const getRadioControlBg = (): SquareProps["bg"] => {
+    if (showAnswer) return "white"
+
+    if (state.isChecked) return "primary.pressed"
+
+    return "disabled"
+  }
+
+  const getControlLabelColor = (): TextProps["color"] => {
+    if (!showAnswer) return "white"
+
+    if (isSelectedCorrect) return "success.base"
+
+    return "error.base"
+  }
+
+  // Render CustomRadio component
+  return (
+    <chakra.label {...htmlProps} cursor="pointer" w="100%">
+      <input {...getInputProps()} />
+      <Flex
+        {...getRadioProps()}
+        w="100%"
+        p={2}
+        alignItems="center"
+        bg={buttonBg}
+        color={state.isChecked ? "white" : "text"}
+        borderRadius="base"
+        _hover={{ ...focusProps, cursor: showAnswer ? "default" : "pointer" }}
+        _focus={focusProps}
+        data-group
+      >
+        <Circle
+          size="25px"
+          bg={getRadioControlBg()}
+          _groupHover={controlFocusProps}
+          _groupFocus={controlFocusProps}
+          me={2}
+        >
+          <Text
+            m="0"
+            fontWeight="700"
+            fontSize="lg"
+            color={getControlLabelColor()}
+          >
+            {String.fromCharCode(97 + index).toUpperCase()}
+          </Text>
+        </Circle>
+        {label}
+      </Flex>
+    </chakra.label>
+  )
 }
 
 interface IProps {
@@ -50,91 +138,18 @@ const QuizRadioGroup: React.FC<IProps> = ({
     [selectedAnswer]
   )
 
-  // Custom radio button component
-  const CustomRadio: React.FC<CustomRadioProps> = ({
-    index,
-    label,
-    ...radioProps
-  }) => {
-    const { state, getInputProps, getCheckboxProps, htmlProps } =
-      useRadio(radioProps)
-
-    // Memoized values
-    const buttonBg = useMemo<string>(() => {
-      if (!state.isChecked) return "body.inverted"
-      if (!showAnswer) return "primary.base"
-      if (!isSelectedCorrect) return "error.base"
-      return "success.base"
-    }, [state.isChecked, showAnswer, isSelectedCorrect])
-
-    const primaryBaseColor = useToken("colors", "primary.base")
-
-    // Render CustomRadio component
-    return (
-      <chakra.label {...htmlProps} cursor="pointer" data-group w="100%">
-        <input {...getInputProps({})} hidden />
-        <Flex
-          {...getCheckboxProps()}
-          w="100%"
-          p={2}
-          alignItems="center"
-          bg={buttonBg}
-          color={state.isChecked ? "white" : "text"}
-          borderRadius="base"
-          _hover={{
-            boxShadow: showAnswer ? "none" : "primary.base",
-            outline: showAnswer ? "none" : `1px solid ${primaryBaseColor}`,
-            cursor: showAnswer ? "default" : "pointer",
-          }}
-        >
-          <Circle
-            size="25px"
-            bg={
-              showAnswer
-                ? "white"
-                : state.isChecked
-                ? "primary.pressed"
-                : "disabled"
-            }
-            _groupHover={{
-              bg: showAnswer ? "white" : "primary.pressed",
-            }}
-            me={2}
-          >
-            <Text
-              m="0"
-              fontWeight="700"
-              fontSize="lg"
-              color={
-                !showAnswer
-                  ? "white"
-                  : isSelectedCorrect
-                  ? "success.base"
-                  : "error.base"
-              }
-            >
-              {String.fromCharCode(97 + index).toUpperCase()}
-            </Text>
-          </Circle>
-          {label}
-        </Flex>
-      </chakra.label>
-    )
-  }
-
   // Render QuizRadioGroup
   return (
-    <Flex {...getRootProps()} direction="column" w="100%">
+    <Stack spacing="6" {...getRootProps()} w="100%">
       <Text
         textAlign={{ base: "center", md: "left" }}
         fontWeight="700"
-        fontSize="2xl"
-        mb={6}
+        size="2xl"
       >
         {t(prompt)}
       </Text>
 
-      <Flex direction="column" gap={4}>
+      <Stack gap="4">
         {answers.map(({ id, label }, index) => {
           const display =
             !showAnswer || id === selectedAnswer ? "inline-flex" : "none"
@@ -144,14 +159,16 @@ const QuizRadioGroup: React.FC<IProps> = ({
               display={display}
               index={index}
               label={t(label)}
+              showAnswer={showAnswer}
+              isSelectedCorrect={isSelectedCorrect}
               {...getRadioProps({ value: id })}
             />
           )
         })}
-      </Flex>
+      </Stack>
 
       {showAnswer && (
-        <Box mt={5}>
+        <Box>
           <Text fontWeight="bold" mt={0} mb={2}>
             {t("explanation")}
           </Text>
@@ -159,7 +176,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
           <Text m={0}>{t(explanation)}</Text>
         </Box>
       )}
-    </Flex>
+    </Stack>
   )
 }
 
