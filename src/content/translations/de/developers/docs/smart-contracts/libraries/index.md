@@ -16,7 +16,7 @@ Normalerweise finden Sie zwei Arten von Erstellungsblöcken in einer Smart Contr
 
 ### Verhaltensweisen {#behaviors}
 
-Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin-\_Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-\_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
+Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin_-Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
 
 Smart-Contract-Bibliotheken bieten in der Regel wiederverwendbare Implementierungen dieser Vorgehensweisen als [Bibliotheken](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) oder über eine [Vererbung](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) an.
 
