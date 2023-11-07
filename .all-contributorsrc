@@ -10704,6 +10704,33 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "s-crypt",
+      "name": "s-crypt",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41712656?v=4",
+      "profile": "https://blog.insubli.me",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "tudorpintea999",
+      "name": "iwantanode",
+      "avatar_url": "https://avatars.githubusercontent.com/u/87604944?v=4",
+      "profile": "https://github.com/tudorpintea999",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "shak58",
+      "name": "shak58",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150069539?v=4",
+      "profile": "https://github.com/shak58",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
