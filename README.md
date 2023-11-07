@@ -1676,6 +1676,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://www.danielgorbe.com"><img src="https://avatars.githubusercontent.com/u/36860942?v=4?s=100" width="100px;" alt="Dániel Görbe"/><br /><sub><b>Dániel Görbe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=g0rbe" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.insubli.me"><img src="https://avatars.githubusercontent.com/u/41712656?v=4?s=100" width="100px;" alt="s-crypt"/><br /><sub><b>s-crypt</b></sub></a><br /><a href="#content-s-crypt" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tudorpintea999"><img src="https://avatars.githubusercontent.com/u/87604944?v=4?s=100" width="100px;" alt="iwantanode"/><br /><sub><b>iwantanode</b></sub></a><br /><a href="#content-tudorpintea999" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/shak58"><img src="https://avatars.githubusercontent.com/u/150069539?v=4?s=100" width="100px;" alt="shak58"/><br /><sub><b>shak58</b></sub></a><br /><a href="#content-shak58" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
