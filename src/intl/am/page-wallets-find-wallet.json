@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "የባህርያት ማጣሪያዎች",
   "page-find-wallet-footnote-1": "በዚህ ገጽ ላይ የተዘረዘሩ ቦርሳዎች ይፋዊ ማረጋገጫዎች አይደሉም፣ እና እዚህ የቀረቡት ለመረጃ አገልግሎት ብቻ ነው።",
   "page-find-wallet-footnote-2": "የእነሱ መግለጫዎች በራሳቸው የቦርሳ ፕሮጀክቶች ቀርበዋል፡፡",
-  "page-find-wallet-footnote-3": "በእኛ <a href=\"/contributing/adding-products/\">ዝርዝር ፖሊሲ</a> ውስጥ ባሉ መስፈርቶች መሰረት ምርቶችን ወደዚህ ገጽ እንጨምራለን። ቦርሳ እንድንጨምር ከፈለጉ <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">በGitHub ላይ ችግሮን ያንሱ</a>።",
+  "page-find-wallet-footnote-3": "በእኛ <a href=\"/contributing/adding-wallets/\">ዝርዝር ፖሊሲ</a> ውስጥ ባሉ መስፈርቶች መሰረት ምርቶችን ወደዚህ ገጽ እንጨምራለን። ቦርሳ እንድንጨምር ከፈለጉ <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">በGitHub ላይ ችግሮን ያንሱ</a>።",
   "page-find-wallet-mobile": "ሞባይል",
   "page-find-wallet-mobile-desc": "የሞባይል መተግበሪያ ያላቸው ቦርሳዎች",
   "page-find-wallet-desktop": "ዴስክቶፕ",

@@ -4,7 +4,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Box,
-  chakra,
   Flex,
   ListItem,
   Show,
@@ -44,17 +43,15 @@ import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
 import Text from "../components/OldText"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import LeftNavBar from "../components/LeftNavBar"
 import {
   Page,
-  InfoColumn,
   ContentContainer,
-  InfoTitle,
   MobileButton,
   H1,
   H2,
   H3,
   Pre,
-  StyledButtonDropdown,
   MobileButtonDropdown,
   Title,
   Divider,
@@ -215,11 +212,11 @@ const RoadmapPage = ({
   }
 
   return (
-    <Box position="relative" overflowX="hidden">
+    <Box position="relative">
       <HeroContainer>
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
-            <Breadcrumbs slug={location.pathname} />
+            <Breadcrumbs slug={location.pathname} mb="8" />
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (
@@ -274,17 +271,11 @@ const RoadmapPage = ({
           description={mdx.frontmatter.description}
         />
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+            tocItems={tocItems}
+          />
         </Show>
         <ContentContainer id="content">
           <MDXProvider components={components}>

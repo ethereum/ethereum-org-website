@@ -4,6 +4,8 @@
   "template-usecase-dropdown-dao": "Decentralizált autonóm szervezetek (DAO-k)",
   "template-usecase-dropdown-social-networks": "Nem központosított közösségi hálózatok",
   "template-usecase-dropdown-identity": "Nem központilag kibocsájtott identitás",
+  "template-usecase-dropdown-desci": "Nem központosított kutatás (DeSci)",
+  "template-usecase-dropdown-refi": "Regeneratív pénzügyek (ReFi)",
   "template-usecase-dropdown": "Ethereum-esettanulmányok",
   "template-usecase-banner": "Az Ethereum felhasználása folyamatosan bővül és fejlődik. Egészítse ki bármilyen információval, ha úgy gondolja, hogy azzal érthetőbbé vagy aktuálisabbá válhat az oldal.",
   "template-usecase-edit-link": "Oldal szerkesztése",

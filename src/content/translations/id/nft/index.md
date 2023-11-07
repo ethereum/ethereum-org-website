@@ -62,7 +62,7 @@ Mungkin Anda adalah seorang seniman yang ingin berbagi karya mereka menggunakan 
 
 Atau pertimbangkan tiket untuk sebuah acara olahraga. Sama seperti penyelenggara sebuah acara dapat memilih berapa banyak tiket yang dapat dijual, pembuat NFT dapat memutuskan berapa banyak tiruan yang ada. Terkadang ini adalah tiruan yang sama persis, seperti 5000 tiket Masuk Umum. Terkadang ada beberapa dicetak sangat serupa, tetapi masing-masing sedikit berbeda, seperti tiket dengan kursi yang ditentukan. Tiket-tiket ini dapat dibeli dan dijual secara peer-to-peer tanpa membayar petugas tiket, dan pembeli selalu memiliki jaminan keaslian tiket dengan memeriksa alamat kontrak.
 
-Di ethereum.org, NFT digunakan untuk menunjukkan bahwa orang-orang telah berkontribusi pada repositori Github kami atau menghadiri panggilan, dan kami bahkan memiliki nama domain NFT kami sendiri. Jika Anda berkontribusi pada ethereum.org, Anda dapat memperoleh NFT POAP. Beberapa pertemuan kripto telah menggunakan POAP sebagai tiket. [Selengkapnya tentang berkontribusi](/contributing/#poap).
+Di ethereum.org, NFT digunakan untuk menunjukkan bahwa orang-orang telah berkontribusi pada repositori GitHub kami atau menghadiri panggilan, dan kami bahkan memiliki nama domain NFT kami sendiri. Jika Anda berkontribusi pada ethereum.org, Anda dapat memperoleh NFT POAP. Beberapa pertemuan kripto telah menggunakan POAP sebagai tiket. [Selengkapnya tentang berkontribusi](/contributing/#poap).
 
 ![POAP ethereum.org](./poap.png)
 

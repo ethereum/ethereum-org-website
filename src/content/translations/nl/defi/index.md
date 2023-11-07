@@ -40,7 +40,7 @@ Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen
 | DeFi                                                                                                                                | Traditionele financiën                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | U heeft uw geld in bezit.                                                                                                           | Uw geld wordt beheerd door bedrijven.                                                                                                                          |
-| U controleert waar uw geld naartoe gaat en hoe het wordt uitgegeven.                                                                | U moet bedrijven vertrouwen om uw geld niet verkeerd te beheren, zoals lenen aan riskante leners.                                                              |
+| U controleert waar uw geld naartoe gaat en hoe het wordt uitgegeven.                                                                | Je moet erop vertrouwen dat bedrijven je geld niet verkeerd beheren, zoals het uitlenen aan risicovolle leners.                                                |
 | Geldoverboekingen vinden in enkele minuten plaats.                                                                                  | Betalingen kunnen dagen duren vanwege handmatige processen.                                                                                                    |
 | Transactieactiviteit is pseudoniem.                                                                                                 | Financiële activiteit is nauw verbonden met uw identiteit.                                                                                                     |
 | Defi staat voor iedereen open.                                                                                                      | U moet een aanvraag indienen om gebruik te maken van financiële diensten.                                                                                      |
@@ -53,7 +53,7 @@ Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen
 
 ## Het begon allemaal met Bitcoin... {#bitcoin}
 
-Bitcoin was in vele opzichten de eerste DeFi-applicatie. Bitcoin laat u echt waarde bezitten en beheren en u kunt het overal ter wereld heen sturen. Het doet dit door een manier te bieden voor een groot aantal mensen die elkaar niet vertrouwen, om akkoord te gaan met een grootboekrekening zonder dat een vertrouwde tussenpersoon nodig is. Bitcoin is toegankelijk voor iedereen en niemand heeft de bevoegdheid om de regels te wijzigen. De regels van Bitcoin, zoals de schaarste en de openheid ervan, zijn in de technologie verwerkt. Het is niet zoals traditionele financiën waar regeringen geld kunnen bijprinten zodat uw spaargeld devalueert, en waar bedrijven de markten zomaar kunnen sluiten.
+Bitcoin was in vele opzichten de eerste DeFi-applicatie. Bitcoin laat u echt waarde bezitten en beheren en u kunt het overal ter wereld heen sturen. Het doet dit door een manier te bieden voor een groot aantal mensen die elkaar niet vertrouwen, om akkoord te gaan met een grootboekrekening zonder dat een vertrouwde tussenpersoon nodig is. Bitcoin is toegankelijk voor iedereen en niemand heeft de bevoegdheid om de regels te wijzigen. De regels van Bitcoin, zoals de schaarste en de openheid ervan, zijn in de technologie verwerkt. Het is niet zoals traditionele financiën waar regeringen geld kunnen bijprinten zodat jouw spaargeld devalueert, en waar bedrijven de markten zomaar kunnen sluiten.
 
 Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen en heeft iedereen toegang. Maar het maakt dit digitale geld ook programmeerbaar met behulp van [slimme contracten](/glossary#smart-contract), zodat u veel meer kunt doen dan enkel het opslaan en verzenden van waarde.
 
@@ -133,7 +133,7 @@ Er zijn vele voordelen voor het gebruik van een gedecentraliseerd grootboek...
 
 Vandaag gaat het bij het lenen en krediet verstrekken van geld allemaal om de personen die betrokken zijn. Banken moeten weten of u een lening kunt terugbetalen voordat u de lening krijgt.
 
-Gedecentraliseerde leningen werken zonder dat een van beide partijen zich hoeft te identificeren. In plaats daarvan moet de lener een onderpand stellen dat de kredietverstrekker automatisch krijgt als de lening niet wordt terugbetaald. Sommige kredietverstrekkers accepteren zelfs NFT's als onderpand. NFT's zijn een akte voor een uniek goed, zoals een schilderij. [Meer over NFT's](/nft/)
+Gedecentraliseerde leningen werken zonder dat een van beide partijen zich hoeft te identificeren. In plaats daarvan moet de lener een onderpand stellen die de kredietverstrekker automatisch krijgt als de lening niet wordt terugbetaald. Sommige kredietverstrekkers accepteren zelfs NFT's als onderpand. NFT's zijn een akte voor een uniek goed, zoals een schilderij. [Meer over NFT's](/nft/)
 
 Dit stelt u in staat om geld te lenen zonder kredietcontroles of het geven van privé-gegevens.
 
@@ -143,7 +143,7 @@ Wanneer u een gedecentraliseerde kredietgever gebruikt, heeft u toegang tot fond
 
 #### Belastingefficiëntie {#tax-efficiencies}
 
-Lenen kan u toegang geven tot de fondsen die u nodig heeft zonder dat u ETH hoeft te verkopen (een belastbare gebeurtenis). In plaats daarvan kunt u ETH gebruiken als onderpand voor een lening in stabelcoins. Dit geeft u de cash-flow die u nodig heeft en laat u uw ETH behouden. Stablecoins zijn tokens die veel beter zijn voor wanneer u geld nodig heeft omdat ze niet fluctueren in waarde zoals ETH. [Meer over stablecoins](#stablecoins)
+Lenen kan u toegang geven tot de fondsen die u nodig heeft zonder dat u ETH hoeft te verkopen (een belastbare gebeurtenis). In plaats daarvan kun je ETH gebruiken als onderpand voor een lening in stablecoins. Dit geeft u de cash-flow die u nodig heeft en laat u uw ETH behouden. Stablecoins zijn tokens die veel beter zijn voor wanneer u geld nodig heeft omdat ze niet fluctueren in waarde zoals ETH. [Meer over stablecoins](#stablecoins)
 
 #### Flash-leningen {#flash-loans}
 
@@ -157,7 +157,7 @@ De fondsen die vaak worden gebruikt, worden gehouden in liquiditeitspools (grote
 
 Dit betekent dat er veel logica in een op maat gemaakt transactie moet worden opgenomen. Een eenvoudig voorbeeld is iemand die een flash-lening gebruikt om veel van een activum te lenen tegen één prijs, zodat hij/zij dit kan verkopen op een andere exchange waar de prijs hoger is.
 
-Dus in een enkele transactie gebeurt het volgende:
+Dus in één enkele transactie gebeurt het volgende:
 
 - U leent een X bedrag van $activum tegen $ 1,00 van exchange A
 - U verkoopt X $activum op exchange B voor $ 1,10
@@ -233,7 +233,7 @@ Wanneer u een gecentraliseerde exchange gebruikt, moet u uw geld storten vóór 
 
 Er zijn producten voor fondsbeheer op Ethereum die zullen proberen uw portefeuille te laten groeien op basis van een strategie naar eigen keuze. Dit is automatisch, open voor iedereen, en heeft geen menselijke manager nodig die een deel van uw winst afneemt.
 
-Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/blog/defi-pulse-index/). Dit is een fonds dat automatisch in evenwicht blijft om ervoor te zorgen dat uw portfolio altijd [de beste DeFi-tokens bevat door marktkapitalisatie](https://www.coingecko.com/en/defi). U hoeft nooit enige gegevens te beheren en u kunt zich uit het fonds terugtrekken wanneer u dat maar wilt.
+Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/blog/defi-pulse-index/). Dit is een fonds dat automatisch in evenwicht blijft om ervoor te zorgen dat je portfolio altijd [de beste DeFi-tokens volgens marktkapitalisatie bevat](https://www.coingecko.com/en/defi). U hoeft nooit enige gegevens te beheren en u kunt zich uit het fonds terugtrekken wanneer u dat maar wilt.
 
 <ButtonLink to="/dapps/?category=finance">
   Bekijk investering-dapps
@@ -338,7 +338,7 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
 
 ### DeFi-artikelen {#defi-articles}
 
-- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 januari 2020_
+- [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
 
 ### Video's {#videos}
 
