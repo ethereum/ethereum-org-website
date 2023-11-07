@@ -39,7 +39,7 @@ Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wal
 Building can be hard. Here are some development focused spaces with experienced Ethereum developers that are happy to help.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
