@@ -5,10 +5,10 @@ import { useTranslation } from "gatsby-plugin-react-i18next"
 import { FaGithub } from "react-icons/fa"
 
 import ButtonLink from "../components/Buttons/ButtonLink"
-import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
+import HubHero from "../components/Hero/HubHero"
 import QuizWidget from "../components/Quiz/QuizWidget"
 import QuizzesList from "../components/Quiz/QuizzesList"
 import QuizzesModal from "../components/Quiz/QuizzesModal"
@@ -65,14 +65,6 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
 
   const { t } = useTranslation()
 
-  const heroContent = {
-    title: <Translation id="quizzes-title" />,
-    header: <Translation id="test-your-knowledge" />,
-    subtitle: <Translation id="quizzes-subtitle" />,
-    image: getImage(data.doge)!,
-    alt: t("quizzes-title"),
-  }
-
   const contextState = {
     status: quizStatus,
     quizKey: currentQuiz,
@@ -90,9 +82,13 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
         title={t("quizzes-title")}
         description={t("quizzes-subtitle")}
       />
-      <Box w="100%" bg="layer2Gradient" pb={8}>
-        <PageHero content={heroContent} isReverse />
-      </Box>
+
+      <HubHero
+        heroImgSrc={getImage(data.heroImage)!}
+        header={t("test-your-knowledge")}
+        title={t("quizzes-title")}
+        description={t("quizzes-subtitle")}
+      />
 
       <QuizzesHubContext.Provider value={contextState}>
         <QuizzesModal isOpen={isOpen} onClose={onClose}>
@@ -223,7 +219,7 @@ export const query = graphql`
         }
       }
     }
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/quizzes-hub-hero.png" }) {
       childImageSharp {
         gatsbyImageData(
           width: 624
