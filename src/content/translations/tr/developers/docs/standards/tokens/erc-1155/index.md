@@ -10,7 +10,7 @@ Birden çok token türünü yöneten sözleşmeler için standart bir arayüz. D
 
 **Çoklu-Token Standardı ne anlama geliyor?**
 
-Basit bir fikirdir: Herhangi bir sayıda değiştirilebilir ve değiştirilemez token türünü temsil edebilen ve kontrol edebilen bir akıllı sözleşme arayüzü oluşturmayı amaçlar. Böylece ERC-1155 token'ı, [ERC-20](/developers/docs/standards/tokens/erc-20/) ve [ERC-721](/developers/docs/standards/tokens/erc-721/) token'ı ile aynı işlevleri gerçekleştirebilir. Hatta ikisini aynı anda bile yapabilir. Ve hepsinden iyisi, her iki standardın işlevselliğini geliştirerek daha verimli hâle getirmek ve ERC-20 ve ERC-721 standartlarındaki bariz uygulama hatalarını düzeltmek.
+Basit bir fikirdir: Herhangi bir sayıda değiştirilebilir ve değiştirilemez token türünü temsil edebilen ve kontrol edebilen bir akıllı sözleşme arayüzü oluşturmayı amaçlar. Böylece ERC-1155 token'ı, [ERC-20](/developers/docs/standards/tokens/erc-20/) ve [ERC-721](/developers/docs/standards/tokens/erc-721/) token'ı ile aynı işlevleri gerçekleştirebilir. Hatta ikisini aynı anda bile yapabilir. Bu, hem ERC-20 hem de ERC-721 standartlarının işlevselliğini iyileştirerek daha verimli kılar ve bariz uygulama hatalarını düzeltir.
 
 ERC-1155 token'ı, [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155)'te tam olarak açıklanmıştır.
 
@@ -29,7 +29,7 @@ Bu sayfayı daha iyi anlamak için öncelikle [token standartları](/developers/
 
 ### Toplu Aktarımlar {#batch-transfers}
 
-Toplu aktarım, normal ERC-20 aktarımlarına çok benzer şekilde çalışır. Normal ERC-20 transferFrom fonksiyonuna bakalım:
+Toplu aktarım, normal ERC-20 aktarımlarına çok benzer şekilde çalışır. Normal ERC-20 `transferFrom` fonksiyonuna bakalım:
 
 ```solidity
 // ERC-20
@@ -97,7 +97,7 @@ function isApprovedForAll(
 
 Onaylar, ERC-20'den biraz farklıdır. Belirli miktarları onaylamak yerine, `setApprovalForAll` aracılığıyla bir operatörü onaylandı veya onaylanmadı olarak ayarlarsınız.
 
-Mevcut durumun okunması `isApprovedForAll` üzerinden yapılabilir. Gördüğünüz gibi, bir ya hep ya hiç durumu mevcut. Kaç token onaylanacağını ve hatta hangi token sınıflarının onaylanacağını tanımlayamazsınız.
+Mevcut durumun okunması `isApprovedForAll` üzerinden yapılabilir. Gördüğünüz gibi, bir "ya hep ya hiç" işlemidir. Kaç token onaylanacağını ve hatta hangi token sınıflarının onaylanacağını tanımlayamazsınız.
 
 Bu kasıtlı olarak basitlik göz önünde bulundurularak tasarlanmıştır. Her şeyi yalnızca bir adres için onaylayabilirsiniz.
 
