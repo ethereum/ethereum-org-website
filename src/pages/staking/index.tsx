@@ -1,18 +1,10 @@
 import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Flex,
-  Grid,
-  Heading,
-  Show,
-  Text,
-  useToken,
-} from "@chakra-ui/react"
+import { Box, Flex, Grid, Show, useToken } from "@chakra-ui/react"
 
 import { List as ButtonDropdownList } from "../../components/ButtonDropdown"
-import ButtonLink from "../../components/ButtonLink"
+import ButtonLink from "../../components/Buttons/ButtonLink"
 import Card from "../../components/Card"
 import InlineLink from "../../components/Link"
 import PageHero from "../../components/PageHero"
@@ -23,7 +15,9 @@ import ExpandableCard from "../../components/ExpandableCard"
 import StakingStatsBox from "../../components/Staking/StakingStatsBox"
 import StakingHierarchy from "../../components/Staking/StakingHierarchy"
 import StakingCommunityCallout from "../../components/Staking/StakingCommunityCallout"
-import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
+import Text from "../../components/OldText"
+import OldHeading from "../../components/OldHeading"
+import LeftNavBar from "../../components/LeftNavBar"
 
 import { getImage } from "../../utils/image"
 import type { TranslationKey } from "../../utils/translations"
@@ -32,12 +26,9 @@ import type { ChildOnlyProp, Context } from "../../types"
 // TODO: move these components to a new folder under /components
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
 } from "../../templates/use-cases"
 
 const PageContainer = (props: ChildOnlyProp) => (
@@ -105,7 +96,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
 }
 
 const H2 = (props) => (
-  <Heading
+  <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
     lineHeight={1.4}
     mt={0}
@@ -114,9 +105,9 @@ const H2 = (props) => (
 )
 
 const ColorH3 = (props: { color: string; id: TranslationKey }) => (
-  <Heading as="h3" fontSize="2xl" color={props.color}>
+  <OldHeading as="h3" fontSize="2xl" color={props.color}>
     <Translation id={props.id} />
-  </Heading>
+  </OldHeading>
 )
 
 const StyledButtonLink = (props: { to: string; id: TranslationKey }) => {
@@ -310,13 +301,7 @@ const StakingPage = ({
       <Page>
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>
-              <Translation id="page-staking-dom-info-title" />
-            </InfoTitle>
-            <UpgradeTableOfContents items={tocArray} />
-          </InfoColumn>
+          <LeftNavBar dropdownLinks={dropdownLinks} tocItems={tocArray} />
         </Show>
         <ContentContainer id="content">
           <Flex direction="column" gap={16} mt={{ base: 16, lg: 0 }}>
@@ -387,9 +372,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-rewards-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-solo-rewards-li1" />
@@ -408,9 +393,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-risks-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-solo-risks-li1" />
@@ -424,9 +409,9 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-requirements-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-solo-requirements-li1" />
@@ -452,9 +437,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-rewards-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-saas-rewards-li1" />
@@ -470,9 +455,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-risks-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-saas-risks-li1" />
@@ -483,9 +468,9 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-requirements-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-saas-requirements-li1" />
@@ -512,9 +497,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-rewards-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-pools-rewards-li1" />
@@ -533,9 +518,9 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-risks-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-pools-risks-li1" />
@@ -546,9 +531,9 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
-                  <h4>
+                  <OldHeading as="h4">
                     <Translation id="page-staking-section-comparison-requirements-title" />
-                  </h4>
+                  </OldHeading>
                   <ul>
                     <li>
                       <Translation id="page-staking-section-comparison-pools-requirements-li1" />

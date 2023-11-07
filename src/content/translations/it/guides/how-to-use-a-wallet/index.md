@@ -6,7 +6,7 @@ lang: it
 
 # Come utilizzare un portafoglio
 
-Impara come gestire tutte le funzioni di base di un portafoglio. Se non ne hai ancora uno, consulta il nostro [Come "registrare" un conto di Ethereum](/guides/how-to-register-an-ethereum-account/).
+Impara come gestire tutte le funzioni di base di un portafoglio. Se non ne hai ancora uno, dai un'occhiata alla nostra guida [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Apri il tuo portafoglio
 
@@ -18,7 +18,7 @@ Desideri ricevere criptovalute nel tuo portafoglio?
 
 Ogni conto di Ethereum ha il proprio indirizzo di destinazione, una sequenza univoca di numeri e lettere. L'indirizzo funziona come un numero di conto bancario. Gli indirizzi di Ethereum inizieranno sempre con "0x". Puoi condividere questo indirizzo con chiunque: farlo è sicuro.
 
-Il tuo indirizzo (talvolta detto "chiave pubblica") è come l'indirizzo di casa tua: devi comunicarlo alle persone affinché ti possano trovare. Farlo è sicuro, poiché puoi sempre chiudere la porta con un'altra chiave che controlli soltanto tu così che nessuno possa entrare anche se sa dove vivi.
+Il tuo indirizzo è come l'indirizzo di casa: devi dire alle persone qual è, in modo che possano trovarti. Farlo è sicuro, poiché puoi sempre chiudere la porta con un'altra chiave che controlli soltanto tu così che nessuno possa entrare anche se sa dove vivi.
 
 Devi fornire il tuo indirizzo pubblico a chiunque voglia inviarti denaro. Molte app del portafoglio ti consentono di copiare il tuo indirizzo o di mostrare un codice QR da scansionare per facilitare l'utilizzo. Evita di digitare manualmente qualsiasi indirizzo di Ethereum. Ciò può facilmente comportare errori di trascrizione o perdita di fondi.
 
@@ -77,7 +77,7 @@ Puoi utilizzare lo stesso indirizzo su tutte le blokchain compatibili con l'EVM 
 
 ### Posso utilizzare lo stesso indirizzo su diversi dispositivi?
 
-Sì, puoi utilizzare lo stesso indirizzo su più dispositivi. Tecnicamente i portafogli sono soltanto un'interfaccia per mostrarti il tuo saldo ed effettuare transazioni, il tuo conto non è memorizzato nel portafoglio ma sulla blockchain.
+Sì, è possibile utilizzare lo stesso indirizzo su più dispositivi. Tecnicamente i portafogli sono soltanto un'interfaccia per mostrarti il tuo saldo ed effettuare transazioni, il tuo conto non è memorizzato nel portafoglio ma sulla blockchain.
 
 ### Non ho ricevuto le criptovalute, dove posso controllare lo stato di una transazione?
 

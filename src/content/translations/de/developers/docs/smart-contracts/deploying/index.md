@@ -1,5 +1,5 @@
 ---
-title: Einsetzen von Smart Contracts
+title: Smart Contracts bereitstellen
 description:
 lang: de
 ---
@@ -12,18 +12,18 @@ Die Bereitstellung des Smart Contracts auf der Blockchain ist eigentlich nur das
 
 Sie sollten mit [Ethereum-Netzwerken](/developers/docs/networks/), [Transaktionen](/developers/docs/transactions/) und der [Anatomie von Smart Contracts](/developers/docs/smart-contracts/anatomy/) vor der Umsetzung von Smart Contracts vertraut sein.
 
-Der Einsatz eines Vertrags kostet auch ETH, daher sollten Sie sich mit [Ressourcen und Gebühren](/developers/docs/gas/) auf Ethereum auskennen.
+Die Veröffentlichung eines Contracts kostet auch Ether (ETH), da sie auf der Blockchain gespeichert werden. Daher sollten Sie mit [Gas und Gebühren](/developers/docs/gas/) auf Ethereum vertraut sein.
 
 Zu guter letzt muss ein Vertrag vor der Bereitstellung kompiliert werden. Lesen Sie also vorher den Beitrag [Smart Contracts kompilieren](/developers/docs/smart-contracts/compiling/).
 
 ## So laden Sie einen Smart Contract hoch {#how-to-deploy-a-smart-contract}
 
-### Was Sie brauchen {#what-youll-need}
+### Folgendes ist erforderlich {#what-youll-need}
 
 - Der Vertragsbytecode – dieser wird durch [Kompilierung](/developers/docs/smart-contracts/compiling/) generiert
 - Ether for gas – Sie setzen Ihre Ressourcengrenze wie bei anderen Transaktionen fest. Beachten Sie dabei jedoch, dass das Integrieren von Smart Contracts viel mehr Ressourcen erfordert als eine einfache ETH-Transaktion.
 - Ein Bereitstellungsskript oder Plug-in
-- Zugang zu einem [Ethereum-Node](/developers/docs/nodes-and-clients/), entweder durch den Betrieb eines eigenen Node, die Verbindung zu einem öffentlichen Node oder über einen API-Schlüssel mit Hilfe eines [Node-Dienstes](/developers/docs/nodes-and-clients/nodes-as-a-service/) wie Infura oder Alchemy
+- Zugriff auf einen [Ethereum-Knoten](/developers/docs/nodes-and-clients/), entweder durch Betreiben Ihres eigenen Knotens, durch Verbindung zu einem öffentlichen Knoten oder über einen API-Schlüssel mit einem [Node-Service](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### Schritte zur Bereitstellung eines Smart Contracts {#steps-to-deploy}
 
@@ -37,7 +37,7 @@ Sobald Ihr Smart Contract integriert ist, hat er eine Ethereum-Adresse, wie ande
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly – _Simulieren, debuggen und überwachen Sie alles auf EVM-kompatiblen Ketten, mit Echtzeitdaten_**
+**Tenderly - _Web3-Entwicklungsplattform, die Debugging, Beobachtbarkeit und Infrastrukturbausteine für die Entwicklung, das Testen, die Überwachung und den Betrieb von Smart Contracts bietet_**
 
 - [tenderly.co](https://tenderly.co/)
 - [Dokumentation](https://docs.tenderly.co/)
@@ -57,20 +57,26 @@ Sobald Ihr Smart Contract integriert ist, hat er eine Ethereum-Adresse, wie ande
 - [Dokumente über Netzwerke und Anwendungsbereitstellung](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _Einfache Bereitstellung eines beliebigen Vertrags für eine EVM-kompatible Blockchain mit einem einzigen Befehl_**
+
+- [Dokumentation](https://portal.thirdweb.com/deploy/)
+
 ## Verwandte Tutorials {#related-tutorials}
 
-- [Bereitstellung Ihres ersten Smart Contracts](/developers/tutorials/deploying-your-first-smart-contract/) _– Eine Einführung in die Bereitstellung Ihres ersten Smart Contracts in einem Ethereum-Testnetzwerk_
-- [Mit anderen Contracts aus Solidity interagieren](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– So bauen Sie einen Smart Contract aus einem bestehenden Vertrag auf und interagieren damit_
-- [So können Sie die Größe Ihres Vertrags verkleinern](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– So verkleinern Sie die Größe Ihres Vertrags, um sie unter dem Limit zu halten und Ressourcen zu sparen_
+- [Bereitstellung Ihres ersten Smart Contracts](/developers/tutorials/deploying-your-first-smart-contract/) _– Eine Einführung in die Bereitstellung Ihres ersten Smart Contracts in einem Ethereum-Testnetzwerk._
+- [Hallo Welt | Smart Contract-Tutorial](/developers/tutorials/hello-world-smart-contract/) _– Ein leicht verständliches Tutorial zur Erstellung & Veröffentlichung eines einfachen Smart Contracts auf Ethereum._
+- [Mit anderen Verträgen aus Solidity interagieren](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– So können Sie einen Smart Contract aus einem bestehenden Vertrag aufbauen und mit ihm interagieren_
+- [So können Sie die Größe Ihres Vertrags reduzieren](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– So reduzieren Sie die Größe Ihres Vertrags, um sie unter dem Limit zu halten und Gas zu sparen_
 
 ## Weiterführende Informationen {#further-reading}
 
-- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) – _OpenZeppelin_
+- [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Ihre Verträge mit Hardhat bereitstellen](https://hardhat.org/guides/deploying.html) – _Nomic Labs_
 
-_Kennen Sie eine Community-Ressource die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Verwandte Themen {#related-topics}
 
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)
-- [Einen Ethereum-Node starten](/developers/docs/nodes-and-clients/run-a-node/)
+- [Einen Ethereum-Knoten betreiben](/developers/docs/nodes-and-clients/run-a-node/)
+- [Nodes als Dienstleistung](/developers/docs/nodes-and-clients/nodes-as-a-service)

@@ -110,7 +110,7 @@ Les preuves à divulgation nulle de connaissance sont également utilisées pour
 
 Les systèmes actuels de gestion de l'identité mettent en péril les renseignements personnels. Les preuves à divulgation nulle peuvent aider les individus à valider leur identité tout en protégeant leurs données personnelles.
 
-Les preuves à divulgation nulle sont particulièrement utiles dans un contexte de [décentralisation de l'identité](/decentralized-identity/). La décentralisation de l'identité (également appelée "'identité auto-souveraine") donne à l'individu la possibilité de contrôler l'accès à ses données personnelles. Prouver votre citoyenneté sans révéler les détails de vos documents d'identité est un bon exemple de la manière dont la technologie de la preuve à divulgation nulle de connaissance permet une décentralisation de l'identité.
+Les preuves à divulgation nulle sont particulièrement utiles dans un contexte de [décentralisation de l'identité](/decentralized-identity). La décentralisation de l'identité (également appelée "'identité auto-souveraine") donne à l'individu la possibilité de contrôler l'accès à ses données personnelles. Prouver votre citoyenneté sans révéler les détails de vos documents d'identité est un bon exemple de la manière dont la technologie de la preuve à divulgation nulle de connaissance permet une décentralisation de l'identité.
 
 ### Authentification {#authentication}
 
@@ -146,7 +146,7 @@ C'est ici que le calcul vérifiable entre en jeu. En effet, lorsqu'un nœud exé
 
 Les systèmes de vote de la blockchain ont de nombreuses caractéristiques favorables : ils sont entièrement auditables, blindés contre les attaques, résistants à la censure et exempts de contraintes géographiques. Mais même les systèmes de vote en chaîne ne sont pas immunisés contre le problème de la **collusion**.
 
-Défini comme "entente visant à limiter la libre concurrence par le trucage, la fraude, et en trompant les autres", la collusion peut prendre la forme d'un individu malveillant influant sur le vote d'autrui en lui offrant des pots-de-vin. Par exemple Alice pourrait recevoir un pot-de-vin de Bob pour voter pour `l'option B` sur un bulletin même si elle préfère `l'option A`.
+Défini comme "entente visant à limiter la libre concurrence par le trucage, la fraude, et en trompant les autres", la collusion peut prendre la forme d'un individu malveillant influant sur le vote d'autrui en lui offrant des pots-de-vin. Par exemple Alice pourrait recevoir un pot-de-vin de Bob pour voter pour l'`option B` sur un bulletin même si elle préfère l'`option A`.
 
 La corruption et la collusion limitent l'efficacité de tout processus utilisant le système de vote comme mécanisme de positionnement (en particulier lorsque les usagers peuvent révéler comment ils ont voté). Cela peut avoir des conséquences significatives, en particulier lorsque les votes déterminent l'affectation de ressources limitées.
 
@@ -165,12 +165,12 @@ Dans MACI, des preuves à divulgation nulle sont utilisées pour assurer l'exact
 Ainsi, même sans partager une répartition des votes par utilisateur (comme c'est généralement le cas), MACI garantit l'intégrité des résultats calculés au cours du processus de décompte. Cette caractéristique permet de réduire l'efficacité des programmes de collusion de base. Nous pouvons étudier cette possibilité en utilisant l'exemple précédent de Bob soudoyant Alice pour voter pour une option:
 
 - Alice enregistre son vote en envoyant sa clé publique à un contrat intelligent.
-- Alice accepte de voter pour l'option `B` en échange d'un pot-de-vin de Bob.
-- Alice vote pour l'option `B`.
+- Alice accepte de voter pour l'`option B` en échange d'un pot-de-vin de Bob.
+- Alice vote pour l'`option B`.
 - Alice envoie secrètement une transaction chiffrée pour changer la clé publique associée à son identité.
-- Alice envoie un autre message (chiffré) au contrat intelligent afin de voter pour l'option `A` en utilisant la nouvelle clé publique.
-- Alice montre à Bob une transaction indiquant qu'elle a voté pour l'option `B` (qui est invalide car la clé publique n'est plus associée à l'identité d'Alice dans le système)
-- Lors du traitement des messages, le coordinateur ignore le vote d'Alice pour l'option `B` et ne compte que le vote pour l'option `A`. Ainsi, la tentative de Bob de se joindre à Alice et de manipuler le vote sur la chaîne échoue.
+- Alice envoie un autre message (chiffré) au contrat intelligent afin de voter pour l'`option A` en utilisant la nouvelle clé publique.
+- Alice montre à Bob une transaction indiquant qu'elle a voté pour l'`option B` (qui est invalide car la clé publique n'est plus associée à l'identité d'Alice dans le système)
+- Lors du traitement des messages, le coordinateur ignore le vote d'Alice pour l'`option B` et ne compte que le vote pour l'`option A`. Ainsi, la tentative de Bob de se joindre à Alice et de manipuler le vote sur la chaîne échoue.
 
 L'utilisation de MACI _nécessite_ de faire confiance au coordinateur pour ne pas collaborer avec des corrupteurs ou tenter de soudoyer les électeurs eux-mêmes. Le coordinateur peut déchiffrer les messages des utilisateurs (nécessaires à la création de la preuve), afin qu'ils puissent vérifier avec précision comment chaque personne a voté.
 

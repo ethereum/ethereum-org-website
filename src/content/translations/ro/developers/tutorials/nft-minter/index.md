@@ -198,7 +198,7 @@ If you go to the `App.js` file, which is the main component in React that acts a
 
 Now that we understand what we're working with, let's set up our Ethereum wallet!
 
-## : Set up your Ethereum wallet {#set-up-your-ethereum-wallet}
+## Set up your Ethereum wallet {#set-up-your-ethereum-wallet}
 
 For users to be able to interact with your smart contract they will need to connect their Ethereum wallet to your dApp.
 

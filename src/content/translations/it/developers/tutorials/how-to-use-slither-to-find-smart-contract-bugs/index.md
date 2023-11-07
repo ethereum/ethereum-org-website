@@ -5,7 +5,7 @@ author: Trailofbits
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
+  - "Smart Contract"
   - "sicurezza"
   - "test"
   - "analisi statica"

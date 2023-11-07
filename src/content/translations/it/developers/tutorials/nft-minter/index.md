@@ -5,12 +5,9 @@ author: "smudgil"
 tags:
   - "solidity"
   - "NFT"
-  - "coniatore"
   - "alchemy"
-  - "smart contract"
+  - "contratti intelligenti"
   - "frontend"
-  - "UI"
-  - "portafoglio"
   - "Pinata"
 skill: intermediate
 lang: it
@@ -480,7 +477,7 @@ Il testo nei campi "Link to Asset", "Name", "Description" comprenderà le divers
 
 Per memorizzare i nostri metadati su IPFS, useremo [Pinata](https://pinata.cloud/), una comoda API e un toolkit per IPFS. Al prossimo passaggio, spiegheremo esattamente come farlo!
 
-## Usare Pinata per fissare i metadati a IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Utilizza Pinata per fissare i tuoi metadati su IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 Se non hai un conto di [Pinata](https://pinata.cloud/), registrane gratuitamente uno [qui](https://pinata.cloud/signup) e completa i passaggi per verificare la tua email e il tuo conto.
 
@@ -632,7 +629,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(alchemyKey)
 ```
 
-[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) è un wrapper intorno a [Web3.js](https://docs.web3js.org/), che fornisce metodi API migliorati e altri benefici cruciali per semplificare la tua vita a uno sviluppatore web3. È progettato per richiedere una configurazione minima, così da poter iniziare a usarlo immediatamente nella tua app!
+[Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) è un wrapper intorno a[Web3.js](https://docs.web3js.org/) che fornisce metodi API migliorati e altri benefici fondamentale per semplificare la tua vita a uno sviluppatore web3. È progettato per richiedere una configurazione minima, così da poter iniziare a usarlo immediatamente nella tua app!
 
 In seguito, aggiungiamo l'ABI del nostro contratto e l'indirizzo del contratto al nostro file.
 

@@ -1,9 +1,8 @@
-import React, { ComponentProps, ComponentPropsWithRef } from "react"
+import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Badge,
   Box,
@@ -13,7 +12,6 @@ import {
   Divider as ChakraDivider,
   Flex,
   FlexProps,
-  Heading,
   HeadingProps,
   List,
   ListItem,
@@ -25,7 +23,7 @@ import {
 } from "@chakra-ui/react"
 import { MdExpandMore } from "react-icons/md"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Contributors from "../components/Contributors"
@@ -40,7 +38,6 @@ import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
 import Translation from "../components/Translation"
 import SectionNav from "../components/SectionNav"
@@ -49,14 +46,13 @@ import Emoji from "../components/Emoji"
 import YouTube from "../components/YouTube"
 import MergeInfographic from "../components/MergeInfographic"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
-import {
-  MobileButton,
-  MobileButtonDropdown,
-  StyledButtonDropdown,
-} from "./use-cases"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
+import LeftNavBar from "../components/LeftNavBar"
+import { MobileButton, MobileButtonDropdown } from "./use-cases"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft } from "../utils/translations"
@@ -85,19 +81,6 @@ const Divider = () => (
     w="10%"
     borderBottomWidth="0.25rem"
     borderColor="homeDivider"
-  />
-)
-
-const InfoColumn = (props: ChildOnlyProp) => (
-  <Flex
-    direction="column"
-    flex="0 1 400px"
-    ml={8}
-    mr={16}
-    position="sticky"
-    top="6.25rem"
-    h={calc("100vh").subtract("80px").toString()}
-    {...props}
   />
 )
 
@@ -149,20 +132,8 @@ const Pre = chakra("pre", {
   },
 })
 
-const H1 = (props: ChildOnlyProp) => (
-  <Heading
-    as="h1"
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    fontWeight="bold"
-    lineHeight={1.4}
-    textAlign={{ base: "left", lg: "right" }}
-    mt={0}
-    {...props}
-  />
-)
-
 const MDXH1 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontWeight="bold"
     lineHeight={1.4}
@@ -172,7 +143,7 @@ const MDXH1 = (props: HeadingProps) => (
 )
 
 const H2 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     fontSize="2rem"
     fontWeight="bold"
     lineHeight={1.4}
@@ -182,7 +153,7 @@ const H2 = (props: HeadingProps) => (
 )
 
 const H3 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontWeight="bold"
     lineHeight={1.4}
@@ -192,7 +163,7 @@ const H3 = (props: HeadingProps) => (
 )
 
 const H4 = (props: HeadingProps) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize="xl"
     lineHeight={1.4}
@@ -235,12 +206,12 @@ const components = {
   YouTube,
   ExpandableCard,
   MergeInfographic,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   GlossaryTooltip,
 }
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2.5rem"
     fontWeight="bold"
@@ -271,21 +242,22 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const Image = chakra(GatsbyImage, {
-  baseStyle: {
-    flex: "1 1 100%",
-    maxW: "816px",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    alignSelf: "flex-end",
-    ml: 8,
-    right: 0,
-    bottom: 0,
-    w: "full",
-    h: "full",
-    overflow: "initial",
-  },
-})
+const Image: GatsbyImageType = (props) => (
+  <GatsbyImage
+    flex="1 1 100%"
+    maxW="816px"
+    backgroundSize="cover"
+    backgroundRepeat="no-repeat"
+    alignSelf="flex-end"
+    ml="8"
+    right={0}
+    bottom={0}
+    w="full"
+    h="full"
+    overflow="initial"
+    {...props}
+  />
+)
 
 const MoreContent = (props: ChildOnlyProp & { to: string }) => (
   <Flex
@@ -381,7 +353,7 @@ const UpgradePage = ({
     <Container>
       <HeroContainer>
         <TitleCard>
-          <Breadcrumbs slug={slug} startDepth={1} mt={2} />
+          <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <Box>
             <List listStyleType="disc">
@@ -408,19 +380,11 @@ const UpgradePage = ({
           description={mdx.frontmatter.description}
         />
         <Show above={lgBreakpoint}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <Show above={lgBreakpoint}>
-              <H1>{mdx.frontmatter.title}</H1>
-            </Show>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            tocItems={tocItems}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}

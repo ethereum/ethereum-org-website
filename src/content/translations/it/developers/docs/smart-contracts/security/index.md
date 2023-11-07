@@ -96,7 +96,7 @@ Detto ciò, dovresti evitare di trattare i controlli come una bacchetta magica. 
 
 Impostare un programma di caccia ai bug è un altro approccio per implementare le revisioni esterne del codice. Una bug bounty è una ricompensa finanziaria data a persone (solitamente hacker whitehat) che scoprono vulnerabilità in un'applicazione.
 
-Quando usate propriamente, queste ricompense per la caccia ai bug incentivano i membri della community di hacker a ispezionare il tuo codice in cerca di difetti critici. Un esempio reale è il "bug del denaro infinito", che avrebbe consentito a un utente malevolo di creare un importo illimitato di Ether su [Optimism](https://www.optimism.io/), un protocollo del [Livello 2](/layer-2/) eseguito su Ethereum. Fortunatamente, un hacker whitehat [ha scoperto il difetto](https://www.saurik.com/optimism.html) e informato il team, [guadagnandosi una ricca ricompensa](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
+Quando usate propriamente, queste ricompense per la caccia ai bug incentivano i membri della community di hacker a ispezionare il tuo codice in cerca di difetti critici. Un esempio reale è il "bug del denaro infinito", che avrebbe consentito a un utente malevolo di creare un importo illimitato di Ether su [Optimism](https://www.optimism.io/), un protocollo del [livello 2](/layer-2/) eseguito su Ethereum. Fortunatamente, un hacker whitehat [ha scoperto il difetto](https://www.saurik.com/optimism.html) e informato il team, [guadagnandosi una ricca ricompensa](https://cryptoslate.com/critical-bug-in-ethereum-l2-optimism-2m-bounty-paid/).
 
 Una strategia utile è impostare la ricompensa di un programma di caccia ai bug proporzionale all'importo di fondi in staking. Descritto come "[caccia ai bug scalare](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)", questo approccio fornisce incentivi finanziari alle persone perché divulghino responsabilmente le vulnerabilità invece di sfruttarle.
 
@@ -462,7 +462,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[Servizi di controllo dei contratti intelligenti](/developers/docs/smart-contracts/testing/#smart-contract-auditing-services)**: _elenco di organizzazioni che forniscono servizi di controllo dei contratti intelligenti per progetti di sviluppo per Ethereum._
 
-- **[Piattaforme di bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)**: _piattaforme per coordinare le ricompense per la caccia ai bug e ricompensare la divulgazione responsabile delle vulnerabilità critiche nei contratti intelligenti._
+- **[Piattaforme di bug bounty](/developers/docs/smart-contracts/testing/#bug-bounty-platforms)**: _piattaforme per coordinare le ricompense per la segnalazione di bug e ricompensare la divulgazione responsabile delle vulnerabilità critiche nei contratti intelligenti._
 
 - **[Fork Checker](https://forkchecker.hashex.org/)**: _uno strumento online gratuito per verificare tutte le informazioni disponibili riguardanti un contratto diramato._
 
@@ -504,7 +504,7 @@ Se prevedi di interrogare un oracolo sulla catena per conoscere i prezzi dei ben
 
 - **[HashEx](https://hashex.org/)**: _HashEx è incentrata sul controllo della blockchain e dei controlli intelligenti allo scopo di garantire la sicurezza delle criptovalute, fornendo servizi come lo sviluppo di contratti intelligenti, test di penetrazione o consulenza sulla blockchain._
 
-- **[Code4rena](https://code4rena.com/)**: _Piattaforma di controllo competitiva che incentiva gli esperti di sicurezza dei contratti intelligenti a trovare le vulnerabilità e ad aiutare a rendere il Web3 più sicuro._
+- **[Code4rena](https://code4rena.com/)**: _piattaforma di controllo competitiva che incentiva gli esperti di sicurezza dei contratti intelligenti a trovare le vulnerabilità e ad aiutare a rendere il Web3 più sicuro._
 
 ### Piattaforme di bug bounty {#bug-bounty-platforms}
 

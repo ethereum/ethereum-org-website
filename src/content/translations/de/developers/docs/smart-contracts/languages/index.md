@@ -88,6 +88,7 @@ Dieses Beispiel soll ein Gefühl vermitteln, wie die Smart-Contract-Syntax in So
 - Pythonische Programmiersprache
 - Stark typisiert
 - Kompilierter Code ist kurz und nachvollziehbar
+- Effiziente Bytecode-Generierung
 - Hat beabsichtigterweise weniger Funktionen als Solidity – mit dem Ziel, die Smart Contracts sicherer und einfacherer auditierbar zu machen. Vyper bietet keine Untersützung für:
   - Modifikationen
   - Vererbung
@@ -104,10 +105,16 @@ Weitere Informationen finden Sie im [Vyper-Grundprinzip](https://vyper.readthedo
 
 - [Dokumentation](https://vyper.readthedocs.io)
 - [Vyper am Beispiel](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
+- [Mehr Vyper am Beispiel](https://vyper-by-example.org/)
 - [GitHub](https://github.com/vyperlang/vyper)
-- [Vyper Gitter-Chatraum](https://gitter.im/vyperlang/community)
+- [Vyper-Community Discord-Chat](https://discord.gg/SdvKC79cJk)
 - [Spickzettel](https://reference.auditless.com/cheatsheet)
-- [Aktualisiert 8. Januar 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
+- [Entwicklungsframeworks für Smart Contracts und Tools für Vyper](/developers/docs/programming-languages/python/)
+- [VyperPunk - Lernen Sie, Vyper Smart Contracts zu sichern und zu hacken](https://github.com/SupremacyTeam/VyperPunk)
+- [VyperExamples - Beispiele zu Schwachstellen von Vyper](https://www.vyperexamples.com/reentrancy)
+- [Vyper Hub für Entwicklung](https://github.com/zcor/vyper-dev)
+- [Vyper Greatest Hits Smart Contract – Beispiele](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
+- [Großartige, sorgfältig ausgewählte Vyper-Ressourcen](https://github.com/spadebuilders/awesome-vyper)
 
 ### Beispiel {#example}
 

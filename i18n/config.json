@@ -8,6 +8,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "am",
+    "crowdinCode": "am",
+    "name": "Amharic",
+    "localName": "አማርኛ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ar",
     "crowdinCode": "ar",
     "name": "Arabic",
@@ -24,6 +32,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "be",
+    "crowdinCode": "be",
+    "name": "Belarusian",
+    "localName": "беларускі",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "bg",
     "crowdinCode": "bg",
     "name": "Bulgarian",
@@ -36,6 +52,14 @@
     "crowdinCode": "bn",
     "name": "Bengali",
     "localName": "বাংলা",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "bs",
+    "crowdinCode": "bs",
+    "name": "Bosnian",
+    "localName": "босански",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -160,6 +184,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "hy-am",
+    "crowdinCode": "hy-AM",
+    "name": "Armenian",
+    "localName": "հայերեն",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "id",
     "crowdinCode": "id",
     "name": "Indonesian",
@@ -216,6 +248,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "kn",
+    "crowdinCode": "kn",
+    "name": "Kannada",
+    "localName": "ಕನ್ನಡ",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "ko",
     "crowdinCode": "ko",
     "name": "Korean",
@@ -252,6 +292,14 @@
     "crowdinCode": "ms",
     "name": "Malay",
     "localName": "Melayu",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "ne-np",
+    "crowdinCode": "ne-np",
+    "name": "Nepali",
+    "localName": "नेपाली",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -372,6 +420,14 @@
     "crowdinCode": "ta",
     "name": "Tamil",
     "localName": "தமிழ்",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
+    "code": "tk",
+    "crowdinCode": "tk",
+    "name": "Turkmen",
+    "localName": "türkmen",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },

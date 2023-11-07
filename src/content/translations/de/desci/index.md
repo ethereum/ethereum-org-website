@@ -110,6 +110,7 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [Aktives Inferenz-Labor](https://www.activeinference.org/)
 - [CureDAO: Community-eigene Gesundheitsplattform](https://docs.curedao.org/)
 - [IdeaMarkets: Ermöglicht dezentralisierte wissenschaftliche Glaubwürdigkeit](https://ideamarket.io/)
+- [DeSci Labs](https://www.desci.com/)
 
 Wir freuen uns über Vorschläge für neue Projekte, die in die Liste aufgenommen werden sollen – bitte lesen Sie dazu unsere [Listing Policy](/contributing/adding-desci-projects/)!
 

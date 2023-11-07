@@ -6,7 +6,7 @@ lang: it
 
 # Guide su Ethereum
 
-Vuoi iniziare il tuo viaggio in Ethereum? Ethereum non è una società con un'assistenza vincolata dagli script, ma queste guide pratiche ti aiuteranno a capire come iniziare.
+Vuoi iniziare il tuo viaggio in Ethereum? Le nostre guide pratiche ti guidano passo dopo passo per iniziare, e facilitano la navigazione in questa nuova tecnologia.
 
 ## Primi passi
 
@@ -16,14 +16,12 @@ Vuoi iniziare il tuo viaggio in Ethereum? Ethereum non è una società con un'as
 
 ## Fondamenti di sicurezza
 
-1. [Come revocare l'accesso del contratto intelligente ai tuoi fondi di criptovalute](/guides/how-to-revoke-token-access/) - Se improvvisamente vedi una transazione nel tuo portafoglio che non hai avviato, questa guida ti insegnerà come impedire che si verifichi nuovamente.
+1. [Come revocare l'accesso del contratto intelligente ai tuoi fondi di criptovalute](/guides/how-to-revoke-token-access/): se improvvisamente vedi una transazione nel tuo portafoglio, che non hai avviato, questa guida ti insegnerà come impedire che si verifichi nuovamente.
+
+2. [Come identificare i token fraudolenti](/guides/how-to-id-scam-tokens/): cosa sono i token fraudolenti, come fanno a sembrare legittimi e come individuarli per proteggersi ed evitare di essere truffati.
 
 ## Uso di Ethereum
 
 1. [Come collegare i token al livello 2](/guides/how-to-use-a-bridge/) - Le transazioni di Ethereum sono troppo costose? Considera di spostare le soluzioni di ridimensionamento di Ethereum, dette Livelli 2.
 
 2. [Come scambiare i token](/guides/how-to-swap-tokens/) - Desideri scambiare i tuoi token per uno differente? Questa semplice guida ti mostrerà come farlo.
-
-## Abilità di pensiero decentralizzato
-
-Una volta ottenuto un portafoglio e utilizzate alcune delle sue funzionalità, puoi comprendere di più su Ethereum chiedendo, "_perché_ è importante?" Cosa rende prezioso il denaro se nessuno lo controlla? Cos'è la fiducia? Contribuisce alla libertà? Quali tipi di nuove strutture organizzative e di governance sono consentiti da Ethereum? Queste domande, e altre, sono approfondite liberamente in community come [Kernel](https://www.kernel.community/).

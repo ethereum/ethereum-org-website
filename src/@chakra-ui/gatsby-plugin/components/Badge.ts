@@ -10,6 +10,7 @@ const baseStyle = defineMergeStyles(defaultBaseStyle, {
   fontWeight: "initial",
   py: 1,
   px: 2,
+  lineHeight: "1.6rem",
   textTransform: "uppercase",
 })
 

@@ -1,24 +1,21 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Box,
-  chakra,
   Flex,
   ListItem,
   Show,
   SimpleGrid,
-  Text,
   UnorderedList,
   useToken,
   Wrap,
   WrapItem,
 } from "@chakra-ui/react"
 
-import Button from "../components/Button"
-import ButtonLink from "../components/ButtonLink"
+import Button from "../components/Buttons/Button"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Card from "../components/Card"
 import ImageCard from "../components/ImageCard"
 import ExpandableCard from "../components/ExpandableCard"
@@ -43,19 +40,18 @@ import YouTube from "../components/YouTube"
 import Breadcrumbs from "../components/Breadcrumbs"
 import RoadmapActionCard from "../components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "../components/Roadmap/RoadmapImageContent"
+import Text from "../components/OldText"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import LeftNavBar from "../components/LeftNavBar"
 import {
   Page,
-  InfoColumn,
   ContentContainer,
-  InfoTitle,
   MobileButton,
   H1,
   H2,
   H3,
   Pre,
-  StyledButtonDropdown,
   MobileButtonDropdown,
   Title,
   Divider,
@@ -68,14 +64,10 @@ import { getImage } from "../utils/image"
 
 import type { ChildOnlyProp, Context } from "../types"
 import type { List as ButtonDropdownList } from "../components/ButtonDropdown"
+import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
 
 const CardGrid = (props: ChildOnlyProp) => (
-  <SimpleGrid
-    columns={{ base: 1, md: 2 }}
-    spacing={8}
-    sx={{ h3: { mt: 0 } }}
-    {...props}
-  />
+  <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
 const HeroContainer = (props: ChildOnlyProp) => (
@@ -91,25 +83,26 @@ const HeroContainer = (props: ChildOnlyProp) => (
   />
 )
 
-const HeroImage = chakra(GatsbyImage, {
-  baseStyle: {
-    alignSelf: {
+const HeroImage: GatsbyImageType = (props) => (
+  <GatsbyImage
+    alignSelf={{
       base: "center",
       lg: "normal",
-    },
-    bgRepeat: "no-repeat",
-    flex: "1 1 100%",
-    right: 0,
-    bottom: 0,
-    width: "full",
-    height: "full",
-    overflow: "initial",
-    maxW: {
+    }}
+    bgRepeat="no-repeat"
+    flex="1 1 100%"
+    right={0}
+    bottom={0}
+    width="full"
+    height="full"
+    overflow="initial"
+    maxW={{
       base: "538px",
       lg: "full",
-    },
-  },
-})
+    }}
+    {...props}
+  />
+)
 
 const TitleCard = (props: ChildOnlyProp) => (
   <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
@@ -219,11 +212,11 @@ const RoadmapPage = ({
   }
 
   return (
-    <Box position="relative" overflowX="hidden">
+    <Box position="relative">
       <HeroContainer>
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
-            <Breadcrumbs slug={location.pathname} />
+            <Breadcrumbs slug={location.pathname} mb="8" />
             <Title>{mdx.frontmatter.title}</Title>
             <Text>{mdx.frontmatter.description}</Text>
             {mdx?.frontmatter?.buttons && (
@@ -278,17 +271,11 @@ const RoadmapPage = ({
           description={mdx.frontmatter.description}
         />
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            maxDepth={mdx.frontmatter.sidebarDepth!}
+            tocItems={tocItems}
+          />
         </Show>
         <ContentContainer id="content">
           <MDXProvider components={components}>

@@ -20,10 +20,11 @@ Sie können diese Bibliotheken verwenden, um mit Smart Contracts auf Ethereum zu
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) _– Beinhaltet die Anwendung von Ethereum Wallets und Nutzungsmöglichkeiten in JavaScript und TypeScript._
+- [Viem](https://viem.sh) – Eine TypeScript-Schnittstelle für Ethereum, die zustandslose Primitive auf unterer Ebene für die Interaktion mit Ethereum bereitstellt.
 
 ### Smart Contracts {#smart-contracts}
 
-Wenn Sie JavaScript-Entwickler sind und Ihren eigenen Smart Contract schreiben möchten, sollten Sie sich mit [Solidity](https://solidity.readthedocs.io) vertraut machen. Das ist die am weitesten verbreitete Smart-Contract-Sprache. Sie ist syntaktisch ähnlich wie JavaScript und erleichtert damit das Lernen.
+Wenn Sie ein JavaScript-Entwickler sind und Ihren eigenen Smart Contract schreiben möchten, sollten Sie sich mit [Solidity](https://solidity.readthedocs.io) vertraut machen. Das ist die am weitesten verbreitete Smart-Contract-Sprache. Sie ist syntaktisch ähnlich wie JavaScript und erleichtert damit das Lernen.
 
 Mehr erfahren über [Smart Contracts](/developers/docs/smart-contracts/).
 
@@ -50,10 +51,12 @@ Wenn Sie sich lieber den geschriebenen Code durchlesen, ist dieses JavaScript ei
 
 ### Knotenpunkte (Nodes) und Anwendungen (Clients) {#nodes-and-clients}
 
-Derzeit befindet sich ein Ethereumjs-Client in der Entwicklung. Damit können Sie in Erfahrung bringen, wie Ethereum-Clients in einer Sprache arbeiten, die Sie verstehen.
+Einer der Clients von Ethereum befindet sich derzeit in der aktiven Entwicklungsphase, sodass Sie einen Einblick in die Funktionsweise der Ethereum-Clients erhalten können, in einer Programmiersprache, die Sie verstehen: JavaScript!
+
+Früher wurde es auf unabhängigen [`Repositories`](https://github.com/ethereumjs/ethereumjs-client) aufgebaut, später wurde es jedoch als Paket in die Monorepo der virtuellen Maschine von Ethereum implementiert.
 
 **Sehen Sie sich den Client**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client) an
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client) an
 
 ## Andere Projekte {#other-projects}
 
@@ -63,8 +66,8 @@ Im Bereich Ethereum-JavaScript gibt es noch weitere Neuerungen, darunter:
 - Tools zum Erstellen, Importieren und Exportieren von Ethereum-Schlüsseln
 - Eine Implementierung des `merkle-patricia-Baumes` – Eine Datenstruktur, die im Yellow-Paper von Ethereum skizziert wird.
 
-In [EthereumJS Repo](https://github.com/ethereumjs) finden Sie Informationen zu allen Themen, an denen Sie Interessiert sind.
+Forschen Sie in dem Bereich, der Sie am meisten interessiert, im [EthereumJS-Repository](https://github.com/ethereumjs)
 
 ## Weiterführende Informationen {#further-reading}
 
-_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

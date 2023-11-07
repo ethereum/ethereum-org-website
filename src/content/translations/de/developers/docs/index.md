@@ -1,16 +1,16 @@
 ---
-title: Ethereum-Entwicklungs-Dokumentation
-description: Einführung in die ethereum.org-Entwicklerdokumentation.
+title: Dokumentation zur Ethereum-Entwicklung
+description: Einführung in die Entwicklerdokumentation zu ethereum.org.
 lang: de
 ---
 
-Diese Dokumentation soll dir helfen, mit Ethereum zu entwickeln. Es umfasst Ethereum als Konzept, erklärt den Ethereum-Technologie-Stack, dokumentiert fortgeschrittene Themen für komplexere Anwendungen und Anwendungsfälle.
+Diese Dokumentation soll Ihnen dabei helfen, mit Ethereum zu entwickeln. Darin wird das Konzept von Ethereum erläutert sowie der Technologie-Stack von Ethereum. Außerdem sind fortgeschrittene Themen für komplexere Anwendungen und Anwendungsfälle dokumentiert.
 
-Dies ist eine Open-Source-Community-Anstrengung, also zögere nicht, neue Themen vorzuschlagen oder neue Inhalte hinzuzufügen, und gib Beispiele an, wo immer du denkst, dass dies hilfreich sein könnte. Alle Entwicklerdokumentationen können auf GitHub editiert werden. Falls du dir nicht sicher bist wie, [folge einfach dieser Anleitung](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
+Diese Dokumentation wird von der Open-Source-Community gepflegt, also zögern Sie nicht, neue Themen vorzuschlagen oder neue Inhalte hinzuzufügen. Geben Sie dabei Beispiele an, wenn das Ihrer Meinung nach hilfreich ist. Die gesamte Entwicklungsdokumentation kann auf GitHub bearbeitet werden. Falls Sie sich nicht sicher sind wie, [befolgen Sie einfach diese Anleitung](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
 ## Entwicklungsmodule {#development-modules}
 
-Wenn dies dein erster Versuch bei der Entwicklung mit Ethereum ist, empfehlen wir dir, ganz vorne zu beginnen und dich wie bei einem Buch durchzuarbeiten.
+Wenn das Ihr erster Versuch bei der Entwicklung mit Ethereum ist, empfehlen wir Ihnen, ganz vorne zu beginnen und sich wie bei einem Buch durchzuarbeiten.
 
 ### Grundsätzliche Themen {#foundational-topics}
 
