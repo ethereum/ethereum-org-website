@@ -56,7 +56,7 @@ Antes de iniciar su propio nodo de archivo, conozca bien las diferencias entre l
 
 ## Prácticas recomendadas
 
-Aparte de las [recomendaciones generales para ejecutar un nodo](developers/docs/nodes-and-clients/run-a-node/), el hardware y el mantenimiento de un nodo de archivo pueden ser más exigentes. Teniendo en cuenta las características clave [de Erigons](https://github.com/ledgerwatch/erigon#key-features), el enfoque más práctico es utilizar la implementación del cliente [Erigon](/developers/docs/nodes-and-clients/#erigon).
+Aparte de las [recomendaciones generales para ejecutar un nodo](/developers/docs/nodes-and-clients/run-a-node/), el hardware y el mantenimiento de un nodo de archivo pueden ser más exigentes. Teniendo en cuenta las características clave [de Erigons](https://github.com/ledgerwatch/erigon#key-features), el enfoque más práctico es utilizar la implementación del cliente [Erigon](/developers/docs/nodes-and-clients/#erigon).
 
 ### Hardware
 

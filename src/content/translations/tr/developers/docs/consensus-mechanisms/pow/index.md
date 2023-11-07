@@ -68,7 +68,7 @@ Madenciler merkeziyetsiz bir şekilde çalıştıkları için, aynı anda iki ge
 
 ## İş ispatı enerji kullanımı {#energy}
 
-İş ispatıyla ilgili büyük bir eleştiri, iş ispatının ağı güvende tutması için gereken enerji miktarı hakkındadır. Güvenlik ve merkeziyetsizliği sürdürmek için is ispatındaki Ethereum, büyük miktarda eneji tüketti. Hisse ispatına geçmeden kısa süre önce Ethereum madencileri toplu olarak yaklaşık 70 TWh/yıl kadar enerji (18 Temmuz 2022'de [digiconomist](digiconomist.net)'e göre Çek Cumhuriyeti ile neredeyse aynı) harcardı.
+İş ispatıyla ilgili büyük bir eleştiri, iş ispatının ağı güvende tutması için gereken enerji miktarı hakkındadır. Güvenlik ve merkeziyetsizliği sürdürmek için is ispatındaki Ethereum, büyük miktarda eneji tüketti. Hisse ispatına geçmeden kısa süre önce Ethereum madencileri toplu olarak yaklaşık 70 TWh/yıl kadar enerji (18 Temmuz 2022'de [digiconomist](https://digiconomist.net/)'e göre Çek Cumhuriyeti ile neredeyse aynı) harcardı.
 
 ## Artıları ve eksileri {#pros-and-cons}
 

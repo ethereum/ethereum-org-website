@@ -22,7 +22,7 @@ Fiecare actualizare de rețea constă dintr-un set de EIP-uri care trebuie imple
 
 ## Istoricul EIP-urilor {#history-of-eips}
 
-[Depozitarul Github pentru Propunerile de îmbunătățire pentru Ethereum (EIPuri)](https://github.com/ethereum/EIPs) a fost creat în octombrie 2015. Procesul EIP-urilor se bazează pe procesul de [Propuneri de îmbunătățire Bitcoin (BIP-uri)](https://github.com/bitcoin/bips), care în sine se bazează pe procesul de [Propuneri de ămbunătățire Python (PEP-uri)](https://www.python.org/dev/peps/).
+[Depozitarul GitHub pentru Propunerile de îmbunătățire pentru Ethereum (EIPuri)](https://github.com/ethereum/EIPs) a fost creat în octombrie 2015. Procesul EIP-urilor se bazează pe procesul de [Propuneri de îmbunătățire Bitcoin (BIP-uri)](https://github.com/bitcoin/bips), care în sine se bazează pe procesul de [Propuneri de ămbunătățire Python (PEP-uri)](https://www.python.org/dev/peps/).
 
 Editorii EIP-urilor sunt însărcinați cu revizuirea EIP-urilor pentru a le stabili temeinicia din puncte de vedere tehnic, al aspectelor de formatare și al corectării ortografiei, gramaticii și stilului de cod. Martin Becze, Vitalik Buterin, Gavin Wood și alţi câțiva au fost editorii iniţiali de EIP-uri din 2015 până la sfârșitul anului 2016.
 

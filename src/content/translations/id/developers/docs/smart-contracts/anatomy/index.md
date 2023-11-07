@@ -96,7 +96,7 @@ function update_name(string value) public {
 }
 ```
 
-- `value` parameter dari `string` jenis diteruskan ke dalam fungsi: `update_name`
+- `Nilai` parameter dari `string` jenis diteruskan ke dalam fungsi: `update_name`
 - Fungsi dideklarasikan sebagai `public`, berarti siapa pun bisa mengaksesnya
 - Fungsi tidak dideklarasikan sebagai `view`, sehingga bisa memodifikasi state kontrak
 
@@ -137,7 +137,7 @@ Fungsi `constructor` hanya dijalankan sekali saat kontrak digunakan untuk pertam
 
 ```solidity
 // Contoh Solidity
-// Jalankan data kontrak, siapkan `owner`
+// Jalankan data kontrak, siapkan `pemilik`
 // sesuai dengan alamat dari pembuat kontrak.
 constructor() public {
     // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
@@ -179,7 +179,7 @@ Fungsi Anda memerlukan:
 ```solidity
 pragma solidity >=0.4.0 <=0.6.0;
 
-kontrak ExampleDapp {
+contract ExampleDapp {
     string dapp_name; // state variable
 
     // Dipanggil saat kontrak disebarkan dan jalankan nilai
@@ -224,7 +224,7 @@ contract HelloWorld {
 
     // Deklarasikan `message` variabel state dari `string` tipe.
     // Variabel state adalah variabel yang nilainya secara permanen disimpan dalam penyimpanan kontrak.
-    // Kata kunci `public` membuat variabel dapat diakses dari luar kontrak
+    // Kata kunci `publik` membuat variabel dapat diakses dari luar kontrak
     //dan menciptakan fungsi yang dengannya kontrak atau klien lain bisa memanggil untuk mengakses nilai.
     string public message;
 
@@ -239,7 +239,7 @@ contract HelloWorld {
     }
 
     // Sebuah fungsi publik yang menerima argumen string
-    // dan memperbarui variabel penyimpanan `message`.
+    // dan memperbarui variabel penyimpanan`message`.
     function update(string memory newMessage) public {
         message = newMessage;
     }
@@ -252,7 +252,7 @@ contract HelloWorld {
 pragma solidity ^0.5.10;
 
 contract Token {
-    //Sebuah `address` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
+    //Sebuah `alamat` dapat disamakan dengan sebuah alamat email - ia digunakan untuk mengidentifikasi sebuah akun di Ethereum.
     // Alamat bisa mewakilkan sebuah kontrak pintar atau satu akun (pengguna) eksternal.
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/types.html#address
     address public owner;
@@ -267,7 +267,7 @@ contract Token {
     // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#events
     event Transfer(address from, address to, uint amount);
 
-    // Jalankan data kontrak, siapkan `owner`
+    // Jalankan data kontrak, siapkan `pemilik`
     // di alamat dari pembuat kontrak.
     constructor() public {
         // Semua kontrak pintar bergantung pada transaksi eksternal untuk memicu fungsinya.
@@ -280,7 +280,7 @@ contract Token {
     // Membuat sejumlah token baru dan mengirimkan mereka ke satu alamat.
     function mint(address receiver, uint amount) public {
         // `require` is struktur kontrol yang digunakan untuk melaksanakan kondisi tertentu.
-        // Jika sebuah pernyataan `require` mengevaluasi ke `false`, satu pengecualian terpicu,
+        // Jika sebuah pernyataan `require` mengevaluasi ke `palsu`, satu pengecualian terpicu,
         // yang membalikkan semua perubahan yang dibuat pada state selama pemanggilan saat ini.
         //Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
 
@@ -333,51 +333,55 @@ contract CryptoPizza is IERC721, ERC165 {
 
     // Variabel state konstan di Solidity sama dengan bahasa lainnya
     // tapi Anda harus menetapkan satu ekpresi yang konstan pada waktu pengompilasian.
-    // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constant-state-variables
     uint256 constant dnaDigits = 10;
     uint256 constant dnaModulus = 10 ** dnaDigits;
     bytes4 private constant _ERC721_RECEIVED = 0x150b7a02;
 
-    // Tipe Struct memungkinkan Anda menentukan tipe Anda
-    //Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
+    // Struct types let you define your own type
+    // Learn more: https://solidity.readthedocs.io/en/v0.5.10/types.html#structs
     struct Pizza {
         string name;
         uint256 dna;
     }
 
-    // Buat satu array kosong dari struct Pizza
+    // Creates an empty array of Pizza structs
     Pizza[] public pizzas;
 
-    // Mapping dari ID pizza ke alamat pemiliknya
+    // Mapping from pizza ID to its owner's address
     mapping(uint256 => address) public pizzaToOwner;
 
-    // Mapping dari alamat pemilik ke nomor dari token yang dimiliki
+    // Mapping from owner's address to number of owned token
     mapping(address => uint256) public ownerPizzaCount;
 
-    // Mapping dari ID token ke alamat yang disetujui
+    // Mapping from token ID to approved address
     mapping(uint256 => address) pizzaApprovals;
 
-    // Anda bisa melakukan nest pada mapping, contoh ini melakukan map ke persetujuan operator
+    // You can nest mappings, this example maps owner to operator approvals
     mapping(address => mapping(address => bool)) private operatorApprovals;
 
-    // Fungsi internal untuk membentuk satu Pizza acak dari (nama) string dan DNA
+    // Internal function to create a random Pizza from string (name) and DNA
     function _createPizza(string memory _name, uint256 _dna)
-        // Kata kunci `internal` berarti fungsi ini hanya terlihat
-        // dalam kontrak ini dan kontrak yang diturunkan dari kontrak ini
-        // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
+        // The `internal` keyword means this function is only visible
+        // within this contract and contracts that derive this contract
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#visibility-and-getters
         internal
-        // `isUnique` adalah satu fungsi modifier yang memeriksa apakah pizza sudah ada
-        // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
+        // `isUnique` is a function modifier that checks if the pizza already exists
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html#function-modifiers
         isUnique(_name, _dna)
     {
-        // Menambahkan Pizza ke array dari Pizza dan mendapatkan id
+        // Adds Pizza to array of Pizzas and get id
         uint256 id = SafeMath.sub(pizzas.push(Pizza(_name, _dna)), 1);
 
-        // Periksa pemilik Pizza sama dengan pengguna saat ini
+        // Checks that Pizza owner is the same as current user
         // Learn more: https://solidity.readthedocs.io/en/v0.5.10/control-structures.html#error-handling-assert-require-revert-and-exceptions
+
+        // note that address(0) is the zero address,
+        // indicating that pizza[id] is not yet allocated to a particular user.
+
         assert(pizzaToOwner[id] == address(0));
 
-        // Lakukan map pada Pizza ke pemiliknya
+        // Maps the Pizza to the owner
         pizzaToOwner[id] = msg.sender;
         ownerPizzaCount[msg.sender] = SafeMath.add(
             ownerPizzaCount[msg.sender],
@@ -385,37 +389,37 @@ contract CryptoPizza is IERC721, ERC165 {
         );
     }
 
-    // Buat satu Pizza acak dari (nama) string
+    // Creates a random Pizza from string (name)
     function createRandomPizza(string memory _name) public {
         uint256 randDna = generateRandomDna(_name, msg.sender);
         _createPizza(_name, randDna);
     }
 
-    // Hasilkan DNA acak dari (nama) string dan alamat dari pemilik (pembuat)
+    // Generates random DNA from string (name) and address of the owner (creator)
     function generateRandomDna(string memory _str, address _owner)
         public
-        // Fungsi yang ditandai `pure` berjanji tidak membaca dari atau memodifikasi state
-        // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
+        // Functions marked as `pure` promise not to read from or modify the state
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#pure-functions
         pure
         returns (uint256)
     {
-        // Buat uint acak dari (nama) string + (pemilik) alamat
+        // Generates random uint from string (name) + address (owner)
         uint256 rand = uint256(keccak256(abi.encodePacked(_str))) +
             uint256(_owner);
         rand = rand % dnaModulus;
         return rand;
     }
 
-    // Kembalikan array Pizza yang ditemukan pemilik
+    // Returns array of Pizzas found by owner
     function getPizzasByOwner(address _owner)
         public
-        // Fungsi yang ditandai `view` berjanji tidak memodifikasi state
-        // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
+        // Functions marked as `view` promise not to modify state
+        // Learn more: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#view-functions
         view
         returns (uint256[] memory)
     {
-        // Gunakan lokasi penyimpanan `memory` untuk menyimpan nilai hanya untuk
-        // siklus hidup dari pemanggilan fungsi ini.
+        // Uses the `memory` storage location to store values only for the
+        // lifecycle of this function call.
         // Pelajari lebih banyak: https://solidity.readthedocs.io/en/v0.5.10/introduction-to-smart-contracts.html#storage-memory-and-the-stack
         uint256[] memory result = new uint256[](ownerPizzaCount[_owner]);
         uint256 counter = 0;
