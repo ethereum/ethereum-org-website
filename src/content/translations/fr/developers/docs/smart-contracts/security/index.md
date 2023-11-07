@@ -504,6 +504,8 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 - **[HashEx](https://hashex.org/)** - _Les rapports d'audit présentés par HashEx relatifs à la blockchain et aux contrats intelligents, visent à garantir la sécurité des cryptomonnaies, fournissant des services tels que le développement des contrats intelligents, le test de pénétration, ou le conseil blockchain._
 
+- **[Code4rena](https://code4rena.com/)** - _Une plateforme concurrentielle, réputée pour ses audits de sécurité, qui prête main forte aux experts garantissant la sécurité des smart-contracts, dans l'objectif commun d'œuvrer à la sécurisation du Web3. _
+
 ### Plateformes de récompense de bug {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Plateforme de récompense de bug pour les contrats intelligents et les projets DeFi, où les chercheurs en sécurité examinent le code, révèlent les vulnérabilités, sont payés et rendent les crypto-monnaies plus sûres._

@@ -276,7 +276,7 @@ ethers.utils.formatEther(balance)
 **viem -** **_Interface TypeScript para Ethereum._**
 
 - [Documentação](https://viem.sh)
-- [Github](https://github.com/wagmi-dev/viem)
+- [GitHub](https://github.com/wagmi-dev/viem)
 
 ## Leitura adicional {#further-reading}
 

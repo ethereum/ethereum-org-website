@@ -66,7 +66,7 @@ Zayıf durumsuzluk Ethereum düğümlerinin durum değişikliklerini onaylaması
 
 **Zayıf durumsuzlukta blok önerileri tüm durum verisine erişim gerektirir fakat blokları onaylamak hiç durum verisi gerektirmez**
 
-Bunun olabilmesi için [Verkle ağaçları](../verkle-trees) Ethereum istemcilerinde çoktan uygulanmış olmalıdır. Verkle ağaçları, veri yapıları yerine kullanılan, Ethereum depolamada veriye eşler arasında küçük, ayarlanmış tanıklar gönderilmesini sağlayan ve yerel veritabanlarına karşı blok onaylamak yerine direkt olarak blok onaylamak için kullanılan bir yedektir. [Önerici-inşa edici ayrımı](/roadmap/pbs/) ayrıca gereklidir çünkü bu blok oluşturucularının daha güçlü donanımlarla uzmanlaşmış düğümler olmasının önünü açar ve bu uzmanlaşmış düğümler tüm durum verilerine ihtiyaç duyarlar.
+Bunun olabilmesi için [Verkle ağaçları](/roadmap/verkle-trees/) Ethereum istemcilerinde çoktan uygulanmış olmalıdır. Verkle ağaçları, veri yapıları yerine kullanılan, Ethereum depolamada veriye eşler arasında küçük, ayarlanmış tanıklar gönderilmesini sağlayan ve yerel veritabanlarına karşı blok onaylamak yerine direkt olarak blok onaylamak için kullanılan bir yedektir. [Önerici-inşa edici ayrımı](/roadmap/pbs/) ayrıca gereklidir çünkü bu blok oluşturucularının daha güçlü donanımlarla uzmanlaşmış düğümler olmasının önünü açar ve bu uzmanlaşmış düğümler tüm durum verilerine ihtiyaç duyarlar.
 
 <ExpandableCard title="Daha az blok önericisine güvenmek neden sorun değil?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
