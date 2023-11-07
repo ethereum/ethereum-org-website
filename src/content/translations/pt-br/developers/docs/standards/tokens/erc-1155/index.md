@@ -142,5 +142,5 @@ _Nota_: Todas as funções por lotes, incluindo o hook, também existem como ver
 
 - [EIP-1155: Padrão Multi-Token](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Documentos da Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)
-- [ERC-1155: Repositório no Github](https://github.com/enjin/erc-1155)
+- [ERC-1155: Repositório no GitHub](https://github.com/enjin/erc-1155)
 - [NFT API do Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)

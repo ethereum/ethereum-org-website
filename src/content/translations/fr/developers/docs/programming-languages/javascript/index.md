@@ -20,6 +20,7 @@ Exploitez ces bibliothèques pour interagir avec des contrats intelligents sur E
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) _- Comprend l'implémentation d'un portefeuille Ethereum et des utilitaires en JavaScript et TypeScript._
+- [viem](https://viem.sh) –est une proposition d'interface TypeScript pour Ethereum, fournissant des primitives permettant de programmer des opérations spécifiques, qui sont nécessaires pour interagir avec Ethereum.
 
 ### Contrats intelligents {#smart-contracts}
 
@@ -50,10 +51,12 @@ Si vous préférez lire du code, ce extrait JavaScript peut être une excellente
 
 ### Nœuds et clients {#nodes-and-clients}
 
-Il existe un client Ethereumjs en cours de développement. Cela vous permettra de découvrir comment les clients Ethereum fonctionnent dans un langage que vous comprenez.
+L'un des clients logiciels d'Ethereum se trouve actuellement en phase de test, vous permettant ainsi de découvrir le fonctionnement des clients de test d'Ethereum, dans un langage de programmation qui vous est propre : JavaScript !
+
+Il était jadis bâti sur des systèmes indépendants sur lesquels pouvaient être installés les systèmes d'exploitation hôte[`repository`](https://github.com/ethereumjs/ethereumjs-client), par contre, il a ensuite été implémenté en tant que paquet dans la monorepo de la machine virtuelle d'Ethereum.
 
 **Jetez un œil au client**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Autres projets {#other-projects}
 
