@@ -4,11 +4,14 @@ import type { SourceHeadingItem, ToCItem } from "@/lib/types"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
-const emojiRegEx = /<Emoji [^/]+\/>/g
-const emojiUnicodeRegEx = /\\u{[0-9A-F]+?}/gi
-const escapeSlashRegEx = /\\(?=[+*?^$\\.[\]{}()|/#])/g
+const unicodeEmojiRegEx = /\\u{[0-9A-F]+}/gi
+const unicodeIntlRegEx = /\\u[0-9A-F]+/gi
 const compiledSourceHeadingRegEx =
-  /(?<=mdx\()"h([2-4])",e\(.+?id:"([^"]+)".+?"([^"]+)"/g
+  /mdx\("h([2-4])",\w+?\(.+?\{id:"([^"]+)"\}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
+const mdxShallowFncRegEx = /mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)/g
+const stringRegEx = /"([^"]+)"/g
+const csvCommaRegEx =
+  /(?<=mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)|"([^"]+)"),(?=mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)|"([^"]+)")/g
 
 /**
  * Creates a slug from a string (Hello world => hello-world)
@@ -30,8 +33,7 @@ export const parseHeadingId = (heading: string): string => {
 }
 
 /**
- * Parse out the title to be displayed in the Table of Contents by removing any custom
- * ID and Twemoji components, as well as any backslashes used to escape Markdown characters
+ * Parse out the title to be displayed in the Table of Contents
  * @param title Heading string without leading #s that may contain Emoji's or a {#custom-id}
  * @returns Title string with custom ID and Emoji's removed
  */
@@ -39,9 +41,12 @@ export const parseToCTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
   const trimmedTitle = match ? title.replace(match[1], "").trim() : title
   const sanitizedTitle = trimmedTitle
-    .replaceAll(emojiRegEx, "")
-    .replaceAll(emojiUnicodeRegEx, "")
-    .replaceAll(escapeSlashRegEx, "")
+    .replaceAll(unicodeEmojiRegEx, (match) =>
+      String.fromCodePoint(parseInt(match.slice(3, -1), 16))
+    )
+    .replaceAll(unicodeIntlRegEx, (match) =>
+      String.fromCharCode(parseInt(match.slice(2), 16))
+    )
   return sanitizedTitle
 }
 
@@ -113,9 +118,30 @@ const addHeadingsAsItems = (
 }
 
 /**
+ * Takes in a match result for a single heading, and parses out the depth, id, and label
+ * The label is sanitized to simplify any components (ie, `strong`, `code`, `Emoji`, etc)
+ * to their string argument. For example, `strong` tags will reduce to child text, and Emoji's
+ * have no string argument and are skipped. Parts are joined to form the heading label.
+ * @param headingMatch RegExpMatchArray for a single heading match
+ * @returns `SourceHeadingItem` object: { depth: number, id: string, label: string }
+ */
+const processHeadingMatch = (
+  headingMatch: RegExpMatchArray
+): SourceHeadingItem => {
+  const [_, depth, id, rest] = headingMatch
+  const label = rest
+    .slice(1) // Remove leading comma from match
+    .replaceAll(csvCommaRegEx, "") // Remove top-level commas (skip those between quotes)
+    .replaceAll(mdxShallowFncRegEx, (...match) => match[3] ?? "") // Reduce mdx() functions to its string argument if available
+    .replaceAll(stringRegEx, (...match) => match[1] ?? "") // Remove quotes from string arguments
+  return { depth: +depth, id, label }
+}
+
+/**
  * Generates a Table of Contents from a compiled page source string, after markdown has been parsed into DOM elements
  * Parses all h2/3/4 elements into an array of `SourceHeadingItem` objects using regex matching
  * Note: each file should only have one h1, and it is not included in the ToC
+ * Removes component functions such as Emoji components) and joins rest to form heading label
  * Calls `addHeadingAsItem` with array of `SourceHeadingItem` objects to generate list of `Item` objects
  * @param content Compiled page source from mdx compiler (string)
  * @returns List of `Item` objects parsed from the compiled source, nested according to heading depth
@@ -125,13 +151,7 @@ export const generateTableOfContents = (
   compiledSource: string
 ): Array<ToCItem> => {
   const matchAll = compiledSource.matchAll(compiledSourceHeadingRegEx)
-  const matches = Array.from(matchAll)
-  const headings: Array<SourceHeadingItem> = matches.map(
-    ([_, depth, id, label]) => ({
-      depth: +depth,
-      id,
-      label,
-    })
-  )
+  const matches = Array.from(matchAll).slice(0)
+  const headings: Array<SourceHeadingItem> = matches.map(processHeadingMatch)
   return addHeadingsAsItems(headings)
 }
