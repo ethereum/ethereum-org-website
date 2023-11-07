@@ -1,9 +1,10 @@
 import * as React from "react"
-import { Center, Icon } from "@chakra-ui/react"
 import { FaTwitter } from "react-icons/fa"
+import { Center, Icon } from "@chakra-ui/react"
+
+import { AnswerChoice, Question } from "../../../types"
 import { Button } from "../../Buttons"
 import Translation from "../../Translation"
-import { AnswerChoice, Question } from "../../../types"
 
 export type QuizButtonGroupProps = {
   showAnswer: boolean

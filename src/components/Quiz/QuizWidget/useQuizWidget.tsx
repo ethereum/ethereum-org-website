@@ -1,8 +1,11 @@
 import { useCallback, useContext, useEffect, useMemo, useState } from "react"
-import { shuffle } from "lodash"
 import { useTranslation } from "gatsby-plugin-react-i18next"
+import { shuffle } from "lodash"
 
+import { PASSING_QUIZ_SCORE, USER_STATS_KEY } from "../../../constants"
 import allQuizzesData from "../../../data/quizzes"
+import questionBank from "../../../data/quizzes/questionBank"
+import { INITIAL_USER_STATS } from "../../../pages/quizzes"
 import {
   AnswerChoice,
   Question,
@@ -10,13 +13,10 @@ import {
   RawQuestion,
   RawQuiz,
 } from "../../../types"
-import questionBank from "../../../data/quizzes/questionBank"
-import { PASSING_QUIZ_SCORE, USER_STATS_KEY } from "../../../constants"
 import { trackCustomEvent } from "../../../utils/matomo"
-import { INITIAL_USER_STATS } from "../../../pages/quizzes"
-
 import { QuizzesHubContext } from "../context"
 import { getNextQuiz } from "../utils"
+
 import type { IProps } from "./index"
 
 export const useQuizWidget = ({

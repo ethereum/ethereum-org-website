@@ -1,5 +1,6 @@
-import { Circle, SquareProps } from "@chakra-ui/react"
 import * as React from "react"
+import { Circle, SquareProps } from "@chakra-ui/react"
+
 import { ChildOnlyProp } from "../../../types"
 import { CorrectIcon, IncorrectIcon, TrophyIcon } from "../../icons/quiz"
 

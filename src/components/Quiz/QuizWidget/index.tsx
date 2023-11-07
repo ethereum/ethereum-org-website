@@ -1,14 +1,14 @@
 import * as React from "react"
 import { Center, Spinner, Stack, StackProps, VStack } from "@chakra-ui/react"
 
-import { StandaloneQuizHeading } from "./StandaloneQuizHeading"
+import { QuizStatus } from "../../../types"
+
 import { AnswerIcon } from "./AnswerIcon"
+import { QuizButtonGroup } from "./QuizButtonGroup"
 import { QuizConfetti } from "./QuizConfetti"
 import { QuizContent } from "./QuizContent"
-import { QuizButtonGroup } from "./QuizButtonGroup"
+import { StandaloneQuizHeading } from "./StandaloneQuizHeading"
 import { useQuizWidget } from "./useQuizWidget"
-
-import { QuizStatus } from "../../../types"
 
 export interface IProps {
   quizKey?: string

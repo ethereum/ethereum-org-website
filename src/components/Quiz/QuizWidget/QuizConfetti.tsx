@@ -1,5 +1,6 @@
 import * as React from "react"
 import { IconProps } from "@chakra-ui/react"
+
 import { StarConfettiIcon } from "../../icons/quiz"
 
 export const QuizConfetti = () => {

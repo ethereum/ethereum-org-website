@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Heading } from "@chakra-ui/react"
+
 import Translation from "../../Translation"
 
 export const StandaloneQuizHeading = () => (

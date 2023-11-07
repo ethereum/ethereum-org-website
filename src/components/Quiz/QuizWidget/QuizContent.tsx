@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Center, Container, Text, TextProps, VStack } from "@chakra-ui/react"
-import QuizSummary from "../QuizSummary"
-import QuizRadioGroup from "../QuizRadioGroup"
+
 import { PROGRESS_BAR_GAP } from "../../../constants"
 import { Question } from "../../../types"
+import QuizRadioGroup from "../QuizRadioGroup"
+import QuizSummary from "../QuizSummary"
 
 export type QuizContentProps = {
   showAnswer: boolean

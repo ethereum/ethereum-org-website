@@ -1,12 +1,12 @@
 import React, { useContext } from "react"
 import {
+  Center,
   Modal as ChakraModal,
   ModalCloseButton,
   ModalContent,
+  ModalContentProps,
   ModalOverlay,
   ModalProps,
-  ModalContentProps,
-  Center,
 } from "@chakra-ui/react"
 
 import { QuizzesHubContext } from "./context"
