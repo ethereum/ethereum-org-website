@@ -4,14 +4,12 @@ description: Guida all'uso di WebSocket e Alchemy per creare richieste JSON-RPC 
 author: "Elan Halpern"
 lang: it
 tags:
-  - "alchemy"
+  - "fornisce servizi e strumenti Api per la creazione e il monitoraggio di applicazioni su Ethereum. \nFile: glossario"
   - "websocket"
   - "query"
-  - "primi passi"
-  - "iscrizione"
   - "javascript"
 skill: beginner
-source: documentazione Alchemy
+source: Documentazione di Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01
 ---
@@ -65,7 +63,7 @@ Se ti connetti tramite WebSocket, puoi usare altri due metodi: `eth_subscribe` e
 
 ### `eth_subscribe` {#eth-subscribe}
 
-Crea una nuova iscrizione agli eventi specificati. [Scopri di più su `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
+Crea una nuova iscrizione agli eventi specificati. [Scopri di più su`eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
 #### Parametri {#parameters}
 

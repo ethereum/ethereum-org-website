@@ -111,9 +111,9 @@ Una volta finito di modificare il file JSON, salvalo e caricalo su Pinata, segue
 
 ## Fase 5: crea un'istanza del tuo contratto {#instance-contract}
 
-Ora, per interagire con il nostro contratto, dobbiamo crearne un'istanza nel nostro codice. Per farlo, avremo bisogno dell'indirizzo del nostro contratto, che possiamo ottenere dalla distribuzione o da [Etherscan](https://goerli.etherscan.io/), cercando l'indirizzo usato per distribuire il contratto.
+Ora, per interagire con il nostro contratto, dobbiamo crearne un'istanza nel nostro codice. Per farlo, avremo bisogno dell'indirizzo del nostro contratto, che possiamo ottenere dalla distribuzione o da [Etherscan](https://sepolia.etherscan.io/), cercando l'indirizzo usato per distribuire il contratto.
 
-![Visualizza l'indirizzo del tuo contratto su Etherscan](./viewContractEtherscan.png)
+![Visualizza l'indirizzo del tuo contratto su Etherscan](./view-contract-etherscan.png)
 
 Nell'esempio precedente, l'indirizzo del nostro contratto è 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
@@ -132,7 +132,7 @@ Ora, per poter creare e inviare le transazioni alla catena di Ethereum, useremo 
 Aggiungi la tua chiave pubblica al tuo file `.env`; se hai completato la parte 1 del tutorial, il nostro file `.env` dovrebbe somigliare a questo:
 
 ```js
-API_URL = "https://eth-goerli.g.alchemy.com/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -319,9 +319,9 @@ Ora, esegui `scripts/mint-nft.js` per distribuire il tuo NFT. Dopo qualche secon
 
     Consulta il Mempool di Alchemy per visualizzare lo stato della tua transazione!
 
-Vai quindi alla tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool) per vedere lo stato della transazione (se è sospesa, minata o eliminata dalla rete). Se la tua transazione è stata eliminata, è utile dare un'occhiata anche a [Goerli Etherscan](https://goerli.etherscan.io/) e cercare l'hash della tua transazione.
+Vai quindi alla tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool) per vedere lo stato della transazione (se è sospesa, minata o eliminata dalla rete). Se la tua transazione è stata eliminata, è utile dare un'occhiata anche su [Sepolia Etherscan](https://sepolia.etherscan.io/) e cercare l'hash della tua transazione.
 
-![Visualizza l'hash della tua transazione NFT su Etherscan](./viewNFTEtherscan.png)_Visualizza l'hash della tua transazione NFT su Etherscan_
+![Visualizza l'hash della tua transazione NFT su Etherscan](./view-nft-etherscan.png)_Visualizza l'hash della tua transazione NFT su Etherscan_
 
 Ecco fatto! Hai ora distribuito E coniato con un NFT sulla Blockchain di Ethereum <Emoji text=":money_mouth_face:" size={1} />
 

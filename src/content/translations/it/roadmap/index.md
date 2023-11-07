@@ -11,7 +11,7 @@ buttons:
     toId: what-changes-are-coming
   - label: Aggiornamenti precedenti
     to: /history/
-    variant: outline
+    variant: delineazione
 ---
 
 Ethereum è già una potente piattaforma per il coordinamento globale, ma è ancora in fase di miglioramento. Una serie ambiziosa di miglioramenti trasformerà Ethereum dalla sua forma attuale in una piattaforma completamente scalata e al massimo resiliente. Questi aggiornamenti sono previsti nella tabella di marcia di Ethereum.
@@ -66,7 +66,7 @@ La tabella di marcia è principalmente il risultato di anni di lavoro da parte d
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style={{ marginTop: 0 }}>Cos'è stato l'ETH?</h4>
+  <h4 style="margin-top: 0">Cos'è stato l'ETH?</h4>
 
   <p>Il termine 'Eth2' è stato comunemente usato per descrivere il futuro di Ethereum prima del passaggio alla proof-of-stake ma è stato <strong>gradualmente eliminato a favore di una terminologia più precisa.</strong> Originariamente è stato utilizzato per differenziare la rete Ethereum prima del passaggio alla proof-of-stake e la rete successiva, o a volte per fare riferimento ai diversi clienti di Ethereum (i clienti di esecuzione sono stati talvolta denominati clienti ETH1 e i clienti di consenso sono stati talvolta denominati clienti ETH2).</p>
 
