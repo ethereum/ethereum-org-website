@@ -14,52 +14,59 @@ const baseStyle = defineMergeStyles(defaultBaseStyle, {
   textTransform: "uppercase",
 })
 
-const variantSecondary = defineStyle({
-  borderColor: "orange.100",
-  color: "text",
-})
+const COLOR_SCHEME_MAP = {
+  purple: {
+    color: "black300",
+    background: "primary100",
+    borderColor: "primary100",
+  },
+  orange: {
+    color: "text",
+    background: "orange.100",
+    borderColor: "orange.100",
+  },
+  green: {
+    color: "white",
+    background: "green.500",
+    borderColor: "green.500",
+  },
+  blue: {
+    color: "black",
+    background: "blue.300",
+    borderColor: "blue.300",
+  },
+  red: {
+    color: "white",
+    background: "red.500",
+    borderColor: "red.500",
+  },
+  pink: {
+    color: "black",
+    background: "red.100",
+    borderColor: "red.100",
+  },
+  gray: {
+    color: "black",
+    background: "gray.300",
+    borderColor: "gray.300",
+  },
+}
 
-const variantSolid = defineStyle({
-  color: "black300",
-  background: "primary100",
-})
+const variantSecondary = defineStyle(({ colorScheme: c = "orange" }) => ({
+  ...COLOR_SCHEME_MAP[c],
+  background: "transparent",
+}))
 
-const variantGreen = defineStyle({
-  color: "white",
-  background: "green.500",
-})
-
-const variantBlue = defineStyle({
-  color: "black",
-  background: "blue.300",
-})
-
-const variantRed = defineStyle({
-  color: "white",
-  background: "red.500",
-})
-
-const variantPink = defineStyle({
-  color: "black",
-  background: "red.100",
-})
-
-const variantGray = defineStyle({
-  color: "black",
-  background: "gray.300",
-})
+const variantSolid = defineStyle(({ colorScheme: c = "purple" }) => ({
+  ...COLOR_SCHEME_MAP[c],
+  borderColor: "transparent",
+}))
 
 export const Badge = defineStyleConfig({
   baseStyle,
   variants: {
     solid: variantSolid,
     secondary: variantSecondary,
-    green: variantGreen,
-    purple: variantSolid,
-    red: variantRed,
-    pink: variantPink,
-    gray: variantGray,
-    blue: variantBlue,
   },
   sizes: {
     sm: {
