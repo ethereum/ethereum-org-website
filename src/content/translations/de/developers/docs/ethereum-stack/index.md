@@ -1,5 +1,5 @@
 ---
-title: Eine Anleitung zum Ethereum-Stack
+title: Einführung in den Ethereum-Stack
 description: Eine Vorstellung der verschiedenen Ebenen des Ethereum-Stacks und wie sie zusammen passen
 lang: de
 ---
@@ -10,11 +10,11 @@ Es gibt jedoch zentrale Komponenten von Ethereum, die dabei helfen, ein gedankli
 
 ## Ebene 1: Ethereum-Virtual Machine {#ethereum-virtual-machine}
 
-Die [Ethereum-Virtual Machine (EVM)](/developers/docs/evm/) ist die Laufzeitumgebung für Smart Contracts in Ethereum. Alle Smart Contracts und Statusänderungen auf der Ethereum-Blockchain erfolgen über [Transaktionen](/developers/docs/transactions/). Die EVM übernimmt die gesamte Transaktionsabwicklung im Ethereum-Netzwerk.
+Die [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) ist die Laufzeitumgebung für Smart Contracts in Ethereum. Alle Smart Contracts und Statusänderungen auf der Ethereum-Blockchain erfolgen über [Transaktionen](/developers/docs/transactions/). Die EVM übernimmt die gesamte Transaktionsabwicklung im Ethereum-Netzwerk.
 
 Wie bei jeder virtuellen Maschine erzeugt die EVM einen Abstraktionsgrad zwischen dem ausführenden Code und der ausführenden Maschine (einem Ethereum-Node). Derzeit läuft die EVM auf Tausenden von Knoten auf der ganzen Welt.
 
-Unter der Haube verwendet die EVM eine Reihe von Opcode-Anweisungen, um bestimmte Aufgaben auszuführen. Diese (140 einmaligen) Opcodes erlauben es der EVM Turing-Vollständig zu sein. Das bedeutet, dass die EVM in der Lage ist, nahezu alles zu berechnen, sofern ausreichend Ressourcen verfügbar sind.
+Unter der Haube verwendet die EVM eine Reihe von Opcode-Anweisungen, um bestimmte Aufgaben auszuführen. Diese (140 einmaligen) Opcodes erlauben es der EVM [Turing-komplett](https://en.wikipedia.org/wiki/Turing_completeness) zu sein, was bedeutet, dass die EVM in der Lage ist, fast alles zu berechnen, wenn man genügend Ressourcen hat.
 
 Als dApp-Entwickler müssen Sie über die EVM nicht mehr wissen, als dass sie existiert und sie alle Anwendungen auf Ethereum zuverlässig ohne Ausfallzeiten betreibt.
 
@@ -46,7 +46,7 @@ Obwohl diese APIs kein notwendiger Bestandteil des Stacks sind, gestalten sie di
 
 ## Ebene 5: Endbenutzeranwendungen {#end-user-applications}
 
-Auf der obersten Ebene des Stacks befinden sich benutzerorientierte Anwendungen. Das sind die Standardanwendungen, die Sie heute regelmäßig nutzen und erstellen: in erster Linie Web- und Mobilanwendungen.
+Auf der obersten Ebene des Stacks befinden sich benutzerorientierte Anwendungen. Das sind die Standardanwendungen, die Sie heute regelmäßig nutzen aund aufhauen: in erster Linie Web- und Mobilanwendungen.
 
 Die Art und Weise, wie Sie diese Benutzeroberflächen entwickeln, bleibt im Wesentlichen unverändert. Meist müssen Benutzer nicht wissen, dass die von ihnen verwendete Anwendung auf einer Blockchain erstellt wurde.
 

@@ -8,7 +8,7 @@ lang: de
 
 Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten und gleichzeitig die Sicherheit und das Vertrauen der Nutzer gewährleisten.
 
-Jeder kann ein Staking-Produkt oder einen Service zur Hinzufügung auf ethereum.org vorschlagen. Wenn wir ein Produkt übersehen haben, **[dann schlagen Sie es bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md).**
+Jeder kann ein Staking-Produkt oder einen Service zur Hinzufügung auf ethereum.org vorschlagen. Wenn wir ein Produkt übersehen haben, **[dann schlagen Sie es bitte vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml).**
 
 Auf den folgenden Seiten finden Sie eine Liste der Staking-Produkte und Services, die wir derzeit anbieten:
 
@@ -20,7 +20,7 @@ Der Proof-of-Stake wurde am 1. Dezember 2020 auf der Beacon Chain eingeführt. D
 
 ## Der Entscheidungsrahmen {#the-decision-framework}
 
-Die Entscheidung, ein Produkt auf ethereum.org zu listen, ist von mehrern Faktoren abhängig. Mehrer Kriterien werden bei der Entscheidung über die Aufnahme eines Produkts oder einer Dienstleistung gemeinsam berücksichtigt. Je mehr dieser Kriterien erfüllt sind, desto wahrscheinlicher ist eine Aufnahme in die Liste.
+Die Entscheidung, ein Produkt auf ethereum.org zu listen, ist von mehrern Faktoren abhängig. Mehrer Kriterien werden bei der Entscheidung über die Aufnahme eines Produkts oder einer Dienstleistung gemeinsam berücksichtigt. Je mehr dieser Kriterien erfüllt sind, umso wahrscheinlicher ist eine Aufnahme in die Liste.
 
 **Erstens: Um welche Art von Produkt oder Dienstleistung handelt es sich?**
 
@@ -49,6 +49,11 @@ Die eingereichten Staking-Produkte oder Services werden anhand von folgenden Kri
 
 - Für welche Schritte der Benutzererfahrung ist es erforderlich, dass Vertrauen in die Menschen gesetzt wird, die entweder die Schlüssel zu ihren Geldern halten oder die Belohnungen richtig verteilen?
 - Damit wird die "Vertrauenswürdigkeit" des Produkts oder Services ermittelt.
+
+**Liefert das Projekt genaue und zuverlässige Informationen?**
+
+- Es ist von entscheidender Bedeutung, dass die Website des Produkts aktuelle, genaue und nicht irreführende Informationen enthält, insbesondere wenn sie sich auf das Ethereum-Protokoll oder andere verwandte Technologien beziehen.
+- Beiträge, die Fehlinformationen, veraltete Details oder potenziell irreführende Aussagen über Ethereum oder andere relevante Themen enthalten, werden nicht aufgelistet oder werden entfernt, wenn sie bereits aufgelistet sind.
 
 **Welche Plattformen werden unterstützt?**
 
@@ -82,35 +87,35 @@ Für jegliche benutzerdefinierte Software oder Smart Contracts:
 
 Für Softwareprodukte im Zusammenhang mit der Einrichtung, Verwaltung oder Migration von Nodes oder Clients:
 
-**Welche Konsensebenen-Clients (z. B. Lighthouse, Teku, Nimbus, Prysm) werden unterstützt?**
+**Welche Clients auf Konsensebene (d. h. Lighthouse, Teku, Nimbus, Prysm) werden unterstützt?**
 
 - Welche Clients werden unterstützt? Kann der Nutzer wählen?
 - Das wird zur Ermittlung der "Multi-Client"-Bewertung des Produkts verwendet.
 
 #### Staking als Service {#staking-as-a-service}
 
-Für [Staking-as-a-Service-Angebote](/staking/saas/) (d. h. delegierter Node-Betrieb):
+Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Betrieb):
 
 **Wie hoch sind die Gebühren für die Nutzung des Services?**
 
 - Wie ist die Gebührenstruktur, gibt es z. B. eine monatliche Gebühr für den Service?
-- Gibt es zusätzliche Anforderungen für das Staking?
+- Gibt es zusätzliche Staking-Anforderungen?
 
 **Müssen sich die Nutzer für ein Konto registrieren?**
 
 - Kann jemand den Service ohne Genehmigung oder KYC nutzen?
 - Auf diese Weise wird der Aspekt der "Berechtigungsfreiheit" für das Produkt bewertet.
 
-**Wer hat die Unterschrifts- und Abhebungsschlüssel?**
+**Wer hat die Singatur- und Abhebungsschlüssel?**
 
 - Auf welche Schlüssel hat der Benutzer Zugriff? Auf welche Schlüssel hat der Service Zugriff?
 - Das wird zur Ermittlung der "Vertrauenswürdigkeit" des Produkts herangezogen.
 
-**Wie groß ist die Kundenvielfalt der betriebenen Nodes?**
+**Wie groß ist die Kundenvielfalt der betriebenen Knoten?**
 
-- Wie viel Prozent der Validierungsschlüssel werden vorwiegend von einem Client der Konsensebene (CL) ausgeführt?
-- Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Node-Betreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
-- Auf dieser Grundlage wird die Bewertung für "Diverse Clients" ermittelt.
+- Wie viel Prozent der Validierungsschlüssel werden von einem Client der Konsensebene (CL) ausgeführt?
+- Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Knotenbetreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
+- Auf dieser Grundlage wird für das Produkt der Aspekt "Diverse Clients" bewertet.
 
 #### Staking-Pool {#staking-pool}
 
@@ -130,16 +135,16 @@ Für [Staking-Services im Pool](/Staking/pools/):
 - Um welche Token handelt es sich? Wie funktionieren sie? Wie lauten die Vertragsadressen?
 - Das wird zur Ermittlung der "Liquiditäts-Token"-Bewertung des Produkts verwendet.
 
-**Können Nutzer als Node-Betreiber teilnehmen?**
+**Können Nutzer als Knotenbetreiber teilnehmen?**
 
 - Was ist erforderlich, um Validator-Clients mit den gepoolten Mitteln zu betreiben?
 - Ist hierfür die Genehmigung einer Einzelperson, eines Unternehmens oder einer DAO erforderlich?
-- Auf diese Weise wird der Aspekt "berechtigungsfreie Nodes" für das Produkts bewertet.
+- Auf diese Weise wird der Aspekt "berechtigungsfreie Knoten" für das Produkt bewertet.
 
-**Wie groß ist die Kundenvielfalt bei den Betreibern der Pool-Nodes?**
+**Wie groß ist die Kundenvielfalt bei den Betreibern der Poolknoten?**
 
-- Wie viel Prozent der Node-Betreiber verwenden einen Mehrheits-Client der Konsensebene (CL)?
-- Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Node-Betreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
+- Wie viel Prozent der Knotenbetreiber verwenden einen Mehrheits-Client der Konsensebene (CL)?
+- Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Knotenbetreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
 - Auf dieser Grundlage wird für das Produkt der Aspekt "Diverse Clients" bewertet.
 
 ### Weitere Kriterien: optionale Aspekte {#other-criteria}
@@ -148,7 +153,7 @@ Für [Staking-Services im Pool](/Staking/pools/):
 
 - z. B. Browser-Anwendung, Desktop-Anwendung, mobile Anwendung, CLI
 
-**Bietet die Software für das Node-Tooling eine einfache Möglichkeit, zwischen den Clients zu wechseln?**
+**Bietet die Software für das Knoten-Tooling eine einfache Möglichkeit, zwischen den Clients zu wechseln?**
 
 - Kann der Benutzer mit dem Tool einfach und sicher zwischen Clients wechseln?
 
@@ -166,6 +171,6 @@ Die Codelogik und die Gewichtungen für diese Kriterien sind derzeit in [dieser 
 
 Wenn Sie ein Staking-Produkt oder einen Staking-Service zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Eintrag erstellen
 </ButtonLink>
