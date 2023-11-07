@@ -1,23 +1,29 @@
 import { useCallback, useContext, useEffect, useMemo, useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 import { shuffle } from "lodash"
+import { useTranslation } from "next-i18next"
 
-import { PASSING_QUIZ_SCORE, USER_STATS_KEY } from "../../../constants"
-import allQuizzesData from "../../../data/quizzes"
-import questionBank from "../../../data/quizzes/questionBank"
-import { INITIAL_USER_STATS } from "../../../pages/quizzes"
 import {
   AnswerChoice,
   Question,
   Quiz,
   RawQuestion,
   RawQuiz,
-} from "../../../types"
-import { trackCustomEvent } from "../../../utils/matomo"
+} from "@/lib/interfaces"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { PASSING_QUIZ_SCORE, USER_STATS_KEY } from "@/lib/constants"
+
+import allQuizzesData from "../../../data/quizzes"
+import questionBank from "../../../data/quizzes/questionBank"
 import { QuizzesHubContext } from "../context"
 import { getNextQuiz } from "../utils"
 
 import type { IProps } from "./index"
+
+// TODO: This is fetched from the quiz PAGE... we should relocate the logic
+// import { INITIAL_USER_STATS } from "../../pages/quizzes"
+const INITIAL_USER_STATS = { score: 0, average: [], completed: "" }
 
 export const useQuizWidget = ({
   currentHandler,

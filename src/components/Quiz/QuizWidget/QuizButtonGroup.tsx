@@ -2,7 +2,8 @@ import * as React from "react"
 import { FaTwitter } from "react-icons/fa"
 import { Center, Icon } from "@chakra-ui/react"
 
-import { AnswerChoice, Question } from "../../../types"
+import { AnswerChoice, Question } from "@/lib/interfaces"
+
 import { Button } from "../../Buttons"
 import Translation from "../../Translation"
 

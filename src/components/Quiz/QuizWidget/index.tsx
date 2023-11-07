@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Center, Spinner, Stack, StackProps, VStack } from "@chakra-ui/react"
 
-import { QuizStatus } from "../../../types"
+import { QuizStatus } from "@/lib/types"
 
 import { AnswerIcon } from "./AnswerIcon"
 import { QuizButtonGroup } from "./QuizButtonGroup"

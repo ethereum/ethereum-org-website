@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Circle, SquareProps } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "../../../types"
+import { ChildOnlyProp } from "@/lib/types"
+
 import { CorrectIcon, IncorrectIcon, TrophyIcon } from "../../icons/quiz"
 
 interface AnswerIconProps {

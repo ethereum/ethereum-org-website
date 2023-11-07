@@ -1,8 +1,10 @@
 import * as React from "react"
 import { Center, Container, Text, TextProps, VStack } from "@chakra-ui/react"
 
-import { PROGRESS_BAR_GAP } from "../../../constants"
-import { Question } from "../../../types"
+import { Question } from "@/lib/interfaces"
+
+import { PROGRESS_BAR_GAP } from "@/lib/constants"
+
 import QuizRadioGroup from "../QuizRadioGroup"
 import QuizSummary from "../QuizSummary"
 
