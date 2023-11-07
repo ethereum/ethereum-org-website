@@ -1,5 +1,6 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
 import { modalAnatomy } from "@chakra-ui/anatomy"
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
+
 import { defineMergeStyles, modalDefaultTheme } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =

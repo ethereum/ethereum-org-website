@@ -1,36 +1,26 @@
+import { useTranslation } from "next-i18next"
 import {
   Box,
+  type BoxProps,
   chakra,
   Flex,
+  Grid,
+  type HeadingProps,
   Show,
+  SimpleGrid,
   Text,
-  type BoxProps,
   UnorderedList,
   useToken,
-  Grid,
-  SimpleGrid,
-  type HeadingProps,
 } from "@chakra-ui/react"
 
-import { Image } from "@/components/Image"
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
+
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
-import OldHeading from "@/components/OldHeading"
-import ProductDisclaimer from "@/components/ProductDisclaimer"
-import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
-import StakingComparison from "@/components/Staking/StakingComparison"
-import StakingConsiderations from "@/components/Staking/StakingConsiderations"
-import StakingGuides from "@/components/Staking/StakingGuides"
-import StakingHowSoloWorks from "@/components/Staking/StakingHowSoloWorks"
-import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
-import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
-import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
+import { Image } from "@/components/Image"
 import {
   ContentContainer,
   Heading1 as MdHeading1,
@@ -42,10 +32,22 @@ import {
   Page,
   StyledButtonDropdown,
 } from "@/components/MdComponents"
+import OldHeading from "@/components/OldHeading"
+import ProductDisclaimer from "@/components/ProductDisclaimer"
+import StakingCommunityCallout from "@/components/Staking/StakingCommunityCallout"
+import StakingComparison from "@/components/Staking/StakingComparison"
+import StakingConsiderations from "@/components/Staking/StakingConsiderations"
+import StakingGuides from "@/components/Staking/StakingGuides"
+import StakingHowSoloWorks from "@/components/Staking/StakingHowSoloWorks"
+import StakingLaunchpadWidget from "@/components/Staking/StakingLaunchpadWidget"
+import StakingProductsCardGrid from "@/components/Staking/StakingProductsCardGrid"
+import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
+import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
-import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -187,12 +189,14 @@ export const stakingComponents = {
 interface IProps extends MdPageContent, ChildOnlyProp {
   frontmatter: StakingFrontmatter
 }
+
 export const StakingLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
   tocItems,
 }) => {
+  const { t } = useTranslation("page-staking")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
@@ -200,11 +204,11 @@ export const StakingLayout: React.FC<IProps> = ({
   const { summaryPoints } = frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options",
-    ariaLabel: "Staking options dropdown menu",
+    text: t("page-staking-dropdown-staking-options"),
+    ariaLabel: t("page-staking-dropdown-staking-options-alt"),
     items: [
       {
-        text: "Staking home" as TranslationKey,
+        text: t("page-staking-dropdown-home"),
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -213,7 +217,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Solo staking" as TranslationKey,
+        text: t("page-staking-dropdown-solo"),
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -222,7 +226,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Staking as a service" as TranslationKey,
+        text: t("page-staking-dropdown-saas"),
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -231,7 +235,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Pooled staking" as TranslationKey,
+        text: t("page-staking-dropdown-pools"),
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -240,7 +244,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "About withdrawals" as TranslationKey,
+        text: t("page-staking-dropdown-withdrawals"),
         to: "/staking/withdrawals/",
         matomo: {
           eventCategory: `Staking dropdown`,

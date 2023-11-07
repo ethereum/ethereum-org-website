@@ -1,5 +1,6 @@
 import { useState } from "react"
-
+import { useRouter } from "next/router"
+import { FaGithub } from "react-icons/fa"
 import {
   Avatar,
   Flex,
@@ -14,19 +15,18 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
+
+import type { Lang } from "@/lib/types"
+import type { Author } from "@/lib/interfaces"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
-import Translation from "@/components/Translation"
 import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-import { getLocaleTimestamp } from "@/lib/utils/time"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import type { Lang } from "@/lib/types"
-import type { Author } from "@/lib/interfaces"
-import { useRouter } from "next/router"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in
@@ -91,15 +91,17 @@ const FileContributors: React.FC<IProps> = ({
   const { locale } = useRouter()
 
   if (error) return null
-  const lastContributor: Author = contributors.length ? contributors[0] : {
-    name: "",
-    email: "",
-    avatarUrl: "",
-    user: {
-      login: "",
-      url: "",
-    },
-  }
+  const lastContributor: Author = contributors.length
+    ? contributors[0]
+    : {
+        name: "",
+        email: "",
+        avatarUrl: "",
+        user: {
+          login: "",
+          url: "",
+        },
+      }
 
   return (
     <>
@@ -146,9 +148,7 @@ const FileContributors: React.FC<IProps> = ({
 
           <Skeleton isLoaded={!loading}>
             <Text m={0} color="text200">
-              {/* TODO: Revert with intl */}
-              {/* <Translation id="last-edit" />:{" "} */}
-              Last edit:{" "}
+              <Translation id="last-edit" />:{" "}
               {lastContributor.user && (
                 <InlineLink to={lastContributor.user.url}>
                   @{lastContributor.user.login}
@@ -176,8 +176,7 @@ const FileContributors: React.FC<IProps> = ({
               }}
               w={{ base: "full", md: "inherit" }}
             >
-              {/* <Translation id="see-contributors" /> */}
-              See contributors
+              <Translation id="see-contributors" />
             </Button>
           </Skeleton>
         </VStack>

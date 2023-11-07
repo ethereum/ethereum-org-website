@@ -1,18 +1,18 @@
+import { useTranslation } from "next-i18next"
 import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 
-import InlineLink from "@/components/Link"
-// TODO: Re-enable when translations are ready
-// import Translation from "@/components/Translation"
-import Text from "@/components/OldText"
-import OldHeading from "@/components/OldHeading"
-
-import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import type { StakingPage, TranslationKey } from "@/lib/types"
+
 import {
   StakingGlyphCloudIcon,
   StakingGlyphCPUIcon,
   StakingGlyphTokenWalletIcon,
 } from "@/components/icons/staking"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 interface DataType {
   title: TranslationKey
@@ -31,6 +31,7 @@ export interface IProps {
 const StakingComparison: React.FC<IProps> = ({ page, className }) => {
   const theme = useTheme()
   const { stakingGold, stakingGreen, stakingBlue } = theme.colors
+  const { t } = useTranslation("page-staking")
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
@@ -141,22 +142,16 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
             )}
             <Box>
               <Heading as="h3" fontSize="2xl" color={color} mb={2}>
-                {/* TODO: Re-enable after i18n implemented */}
-                {/* <Translation id={title} /> */}
-                {title}
+                {t(title)}
               </Heading>
-              <Text>
-                {/* <Translation id={content} /> */}
-                {content}
-              </Text>
+              <Text>{t(content)}</Text>
               <InlineLink
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
                 to={to}
               >
-                {/* <Translation id={linkText} /> */}
-                {linkText}
+                {t(linkText)}
               </InlineLink>
             </Box>
           </Flex>

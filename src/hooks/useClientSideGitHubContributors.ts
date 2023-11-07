@@ -1,8 +1,11 @@
 import { join } from "path"
-import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"
-import type { Author } from "@/lib/interfaces"
-import type { FileContributorsState } from "@/lib/types"
+
 import { useEffect, useState } from "react"
+
+import type { FileContributorsState } from "@/lib/types"
+import type { Author } from "@/lib/interfaces"
+
+import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"
 
 const gitHubAuthHeaders = {
   headers: new Headers({

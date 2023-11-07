@@ -7,6 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
+
 import GatsbyImage from "../../GatsbyImage"
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"

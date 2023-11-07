@@ -1,15 +1,15 @@
 import React from "react"
 import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
-import CardList from "../CardList"
-import InlineLink from "../Link"
-import Emoji from "../Emoji"
-import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
-
 import { ChildOnlyProp } from "../../types"
+import CardList from "../CardList"
+import Emoji from "../Emoji"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import { StyledSelect as Select } from "../SharedStyledComponents"
+import Translation from "../Translation"
+
 import { useEthExchanges } from "./use-eth-exchanges"
 
 const ListContainer = (props: ChildOnlyProp) => (

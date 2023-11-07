@@ -1,43 +1,34 @@
-import React, {
-  useEffect,
-  useState,
-  useMemo,
-  useCallback,
-  useContext,
-} from "react"
+import { useCallback, useContext, useEffect, useMemo, useState } from "react"
+import { shuffle } from "lodash"
+import { useTranslation } from "next-i18next"
+import { FaTwitter } from "react-icons/fa"
 import {
   Box,
   Center,
   Circle,
+  Container,
   Flex,
   Heading,
   Icon,
   Spinner,
   Stack,
-  Container,
 } from "@chakra-ui/react"
-import { shuffle } from "lodash"
-import { FaTwitter } from "react-icons/fa"
 
-import Button from "../Buttons/Button"
-import QuizRadioGroup from "./QuizRadioGroup"
-import QuizSummary from "./QuizSummary"
-import Text from "../OldText"
+import type { QuizStatus } from "@/lib/types"
+import type {
+  AnswerChoice,
+  Question,
+  Quiz,
+  RawQuestion,
+  RawQuiz,
+} from "@/lib/interfaces"
 
-// TODO: Re-enable after intl implemented
-// import { useTranslation } from "gatsby-plugin-react-i18next"
-// import Translation from "../Translation"
-
-import {
-  CorrectIcon,
-  IncorrectIcon,
-  StarConfettiIcon,
-  TrophyIcon,
-} from "../icons/quiz"
-
-import { QuizzesHubContext } from "./context"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import allQuizzesData from "@/data/quizzes"
+import questionBank from "@/data/quizzes/questionBank"
 
 import {
   PASSING_QUIZ_SCORE,
@@ -45,19 +36,19 @@ import {
   USER_STATS_KEY,
 } from "@/lib/constants"
 
+import Button from "../Buttons/Button"
+import {
+  CorrectIcon,
+  IncorrectIcon,
+  StarConfettiIcon,
+  TrophyIcon,
+} from "../icons/quiz"
+import Text from "../OldText"
+
+import { QuizzesHubContext } from "./context"
+import QuizRadioGroup from "./QuizRadioGroup"
+import QuizSummary from "./QuizSummary"
 import { getNextQuiz } from "./utils"
-
-import type {
-  AnswerChoice,
-  RawQuiz,
-  Quiz,
-  RawQuestion,
-  Question,
-} from "@/lib/interfaces"
-import type { QuizStatus } from "@/lib/types"
-
-import allQuizzesData from "@/data/quizzes"
-import questionBank from "@/data/quizzes/questionBank"
 
 // TODO: This is fetched from the quiz PAGE... we should relocate the logic
 // import { INITIAL_USER_STATS } from "../../pages/quizzes"
@@ -79,8 +70,8 @@ const QuizWidget: React.FC<IProps> = ({
   maxQuestions,
   isStandaloneQuiz = true,
 }) => {
-  // TODO
-  // const { t } = useTranslation()
+  const { t } = useTranslation(["common", "learn-quizzes"])
+
   const [quizData, setQuizData] = useState<Quiz | null>(null)
   const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
@@ -141,7 +132,7 @@ const QuizWidget: React.FC<IProps> = ({
       ? shuffledQuestions.slice(0, maxQuestions)
       : shuffledQuestions
     const quiz: Quiz = {
-      title: rawQuiz.title, // t(rawQuiz.title),
+      title: t(rawQuiz.title),
       questions: trimmedQuestions,
     }
 
@@ -326,9 +317,7 @@ const QuizWidget: React.FC<IProps> = ({
           scrollMarginTop={24}
           id="quiz"
         >
-          {/* TODO: Re-enable after intl implemented; remove placeholder */}
-          {/* <Translation id="test-your-knowledge" /> */}
-          Test your knowledge
+          <Translation id="test-your-knowledge" />
         </Heading>
       )}
 
@@ -485,9 +474,7 @@ const QuizWidget: React.FC<IProps> = ({
                 currentQuestionAnswerChoice &&
                 !currentQuestionAnswerChoice.isCorrect && (
                   <Button onClick={handleRetryQuestion} variant="outline-color">
-                    {/* TODO: Re-enable after intl implemented; remove placeholder */}
-                    {/* <Translation id="try-again" /> */}
-                    Try again
+                    <Translation id="try-again" />
                   </Button>
                 )}
 
@@ -508,17 +495,13 @@ const QuizWidget: React.FC<IProps> = ({
                       leftIcon={<Icon as={FaTwitter} />}
                       onClick={handleShare}
                     >
-                      {/* TODO: Re-enable after intl implemented; remove placeholder */}
-                      {/* <Translation id="share-results" /> */}
-                      Share results
+                      <Translation id="share-results" />
                     </Button>
 
                     {/* Show `Next Quiz` button if quiz is opened from hub page */}
                     {hasNextQuiz && (
                       <Button onClick={handleNextQuiz}>
-                        {/* TODO: Re-enable after intl implemented; remove placeholder */}
-                        {/* <Translation id="next-quiz" /> */}
-                        Next quiz
+                        <Translation id="next-quiz" />
                       </Button>
                     )}
                   </Flex>
@@ -531,18 +514,14 @@ const QuizWidget: React.FC<IProps> = ({
                       _hover={{ boxShadow: "none" }}
                     >
                       <Text textDecoration="underline" fontWeight="bold" m={0}>
-                        {/* TODO: Re-enable after intl implemented; remove placeholder */}
-                        {/* <Translation id="try-again" /> */}
-                        Try again
+                        <Translation id="try-again" />
                       </Text>
                     </Button>
                   )}
                 </Flex>
               ) : showAnswer ? (
                 <Button onClick={handleContinue}>
-                  {/* TODO: Re-enable after intl implemented; remove placeholder */}
-                  {/* {finishedQuiz ? t("see-results") : t("next-question")} */}
-                  {finishedQuiz ? "See results" : "Next question"}
+                  {finishedQuiz ? t("see-results") : t("next-question")}
                 </Button>
               ) : (
                 <Button
@@ -554,9 +533,7 @@ const QuizWidget: React.FC<IProps> = ({
                   }
                   isDisabled={!currentQuestionAnswerChoice}
                 >
-                  {/* TODO: Re-enable after intl implemented; remove placeholder */}
-                  {/* <Translation id="submit-answer" /> */}
-                  Submit answer
+                  <Translation id="submit-answer" />
                 </Button>
               )}
             </Flex>

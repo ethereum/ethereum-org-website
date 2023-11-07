@@ -1,5 +1,5 @@
-import type { IconProps } from "@chakra-ui/react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
+import type { IconProps } from "@chakra-ui/react"
 
 export interface TokenBalance {
   name: string

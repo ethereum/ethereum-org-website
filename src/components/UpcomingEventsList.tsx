@@ -1,18 +1,15 @@
-// Libraries
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { Box } from "@chakra-ui/react"
 
-// Components
+import Translation from "@/components/Translation"
+
+import events from "../data/community-events.json"
+
+import { Button } from "./Buttons"
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
-import Translation from "./Translation"
-import { Button } from "./Buttons"
 
-// Data
-import events from "../data/community-events.json"
-
-// Utils
 // TODO: add trackCustomEvent when util is migrated
 // import { trackCustomEvent } from "../utils/matomo"
 
@@ -31,9 +28,7 @@ interface IOrderedUpcomingEventType extends ICommunityEventData {
   formattedDetails: string
 }
 
-export interface IProps {}
-
-const UpcomingEventsList: React.FC<IProps> = () => {
+const UpcomingEventsList: React.FC = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
     Array<IOrderedUpcomingEventType>

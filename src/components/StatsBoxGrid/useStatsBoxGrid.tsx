@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { useEffect,useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
-import { RangeSelector } from "./RangeSelector"
-import { Direction } from "../../types"
 import { GATSBY_FUNCTIONS_PATH } from "../../constants"
+import { Direction } from "../../types"
 import { getData } from "../../utils/cache"
+import { Lang } from "../../utils/languages"
 import {
   getLocaleForNumberFormat,
   isLangRightToLeft,
 } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+
+import { RangeSelector } from "./RangeSelector"
 
 export const ranges = ["30d", "90d"] as const
 
@@ -52,8 +53,8 @@ interface IFetchTxResponse {
 }
 
 export const useStatsBoxGrid = () => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  const { t } = useTranslation("page-index")
+  const { locale } = useRouter()
 
   const [totalEthStaked, setTotalEthStaked] = useState<State>({
     data: [],
@@ -84,7 +85,7 @@ export const useStatsBoxGrid = () => {
   const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(ranges[0])
 
   useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+    const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
 
     const formatTotalStaked = (amount: number): string => {
       return new Intl.NumberFormat(localeForStatsBoxNumbers, {
@@ -250,7 +251,7 @@ export const useStatsBoxGrid = () => {
       }
     }
     fetchTxCount()
-  }, [language])
+  }, [locale!])
 
   const metrics: Array<Metric> = [
     {
@@ -330,7 +331,7 @@ export const useStatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir: Direction = isLangRightToLeft(language as Lang) ? "rtl" : "ltr"
+  const dir: Direction = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   return {
     metrics,
