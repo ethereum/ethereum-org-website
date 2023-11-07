@@ -9,7 +9,6 @@ import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
-import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -130,10 +129,6 @@ export const StaticLayout: React.FC<IProps> = ({
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>
-          <GitHubContributors
-            relativePath={slug}
-            lastUpdatedDate={lastUpdatedDate!}
-          />
           <TableOfContents
             position="relative"
             zIndex={2}
