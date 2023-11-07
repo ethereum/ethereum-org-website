@@ -22,7 +22,7 @@ En espaçant les engagements, nous donnons à tous les participants du serveur a
 
 Pour préserver l'historique des transactions, les blocs sont strictement ordonnés (chaque nouveau bloc créé contient une référence à son bloc parent), et les transactions au sein des blocs sont également strictement ordonnées. Sauf dans de rares cas, à tout moment, tous les participants au réseau sont d'accord sur le nombre exact et l'historique des blocs, et s'efforcent de regrouper les demandes de transactions en cours dans le bloc suivant.
 
-Une fois qu'un bloc est assemblé par un validateur sur le réseau, il est propagé auprès du reste du réseau ; tous les nœuds ajoutent ce bloc à la fin de leur blockchain, et un nouveau validateur est sélectionné pour créer le bloc suivant. Le processus exact d'assemblage de blocs et le processus d'engagement/consensus sont actuellement spécifiés par le protocole de la « preuve d'enjeu » d'Ethereum.
+Une fois qu'un bloc a été lié aux autres blocs par un validateur sélectionné aléatoirement sur le réseau, il est scellé au reste du réseau ; ce bloc ajouté à la chaîne de bloc (blockchain) est lié au précédent, et une copie est transmise à tous les noeuds du réseau, ensuite un autre validateur est sélectionné pour créer le nouveau bloc. Le processus exact d'assemblage de blocs et le processus d'engagement/consensus sont actuellement spécifiés par le protocole de la « preuve d'enjeu » d'Ethereum.
 
 ## Protocole de la preuve d'enjeu {#proof-of-work-protocol}
 
@@ -100,8 +100,9 @@ Exécuter les transactions dans `execution_payload` met à jour l'état global. 
 | `base_fee_per_gas`  | la valeur des frais de base                                                         |
 | `block_hash`        | hachage du bloc d'exécution                                                         |
 | `transactions_root` | hachage racine des transactions dans le bloc                                        |
+| `withdrawal_root`   | hachage racine des retraits dans le bloc                                            |
 
-`execution_payload` contient lui-même ce qui suit (notez que cela est identique à l'en-tête sauf qu'au lieu du hachage racine des transactions, il inclut la liste réelle des opérations) :
+`execution_payload` contient lui-même ce qui suit (notez que cela est identique à l'en-tête sauf qu'au lieu du hachage racine des transactions, il inclut la liste réelle des transactions et des informations de retrait) :
 
 | Champ              | Description                                                                       |
 | :----------------- | :-------------------------------------------------------------------------------- |
@@ -119,10 +120,22 @@ Exécuter les transactions dans `execution_payload` met à jour l'état global. 
 | `base_fee_per_gas` | la valeur des frais de base                                                       |
 | `block_hash`       | hachage du bloc d'exécution                                                       |
 | `des transactions` | liste des transactions à exécuter                                                 |
+| `retraits`         | liste des objets de retrait                                                       |
+
+La liste `withdrawals` contient les objets `withdrawal` structurée de la façon suivante :
+
+| Champ            | Description                        |
+| :--------------- | :--------------------------------- |
+| `address`        | adresse du compte qui s'est retiré |
+| `amount`         | montant du retrait                 |
+| `Index`          | valeur d'index du retrait          |
+| `validatorIndex` | valeur d'index du validateur       |
 
 ## Durée de blocage {#block-time}
 
-Le temps de bloc fait référence au temps qui sépare les blocs. Dans Ethereum, le temps est divisé en unités de douze secondes appelées « créneau ». Pour chaque créneau, un validateur est choisi pour proposer un bloc. Si tous les validateurs sont en ligne et complétement opérationnels, il y aura un bloc dans chaque créneau, ce qui signifie que le temps de bloc est de 12 s. Occasionnellement, des validateurs peuvent être hors-ligne lorsqu'ils sont appelés pour valider un bloc, de sorte que les créneaux peuvent parfois être vide. Cela est différent des systèmes basés sur la preuve de travail où les temps de bloc sont probabilistes et ajustés selon la difficulté du minage.
+Le temps de bloc fait référence au temps qui sépare les blocs. Dans Ethereum, le temps est divisé en unités de douze secondes appelées « créneau ». Pour chaque créneau, un validateur est choisi pour proposer un bloc. Si tous les validateurs sont en ligne et complétement opérationnels, il y aura un bloc dans chaque créneau, ce qui signifie que le temps de bloc est de 12 s. Occasionnellement, des validateurs peuvent être hors-ligne lorsqu'ils sont appelés pour valider un bloc, de sorte que les créneaux peuvent parfois être vide.
+
+Cette implémentation diffère des systèmes fondés sur la preuve de travail (PoW), dans lesquels la génération d'un bloc est une occurrence naturelle, compensée par la difficulté de mining du protocole. Le temps moyen de propagation des blocs d'Ethereum [average block time](https://etherscan.io/chart/blocktime) est l'exemple parfait de l'implementation de la preuve d'enjeu, et donc du passage de la preuve de travail (PoW) à la preuve d'enjeu (PoS), rendu possible grâce à un nouvel ajustement du temps de propagation des blocs, qui est passé à 12 secondes.
 
 ## Taille des blocs {#block-size}
 

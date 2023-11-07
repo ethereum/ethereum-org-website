@@ -444,7 +444,7 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             descriptionKey="Layer 2 extends Ethereum, reducing costs and increasing accessibility for decentralized applications."
           >
             <Box>
-              <ButtonLink to="/get-eth/">Use layer 2</ButtonLink>
+              <ButtonLink to="/layer-2/">Use layer 2</ButtonLink>
             </Box>
           </Box>
           <Box
