@@ -1678,6 +1678,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tudorpintea999"><img src="https://avatars.githubusercontent.com/u/87604944?v=4?s=100" width="100px;" alt="iwantanode"/><br /><sub><b>iwantanode</b></sub></a><br /><a href="#content-tudorpintea999" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shak58"><img src="https://avatars.githubusercontent.com/u/150069539?v=4?s=100" width="100px;" alt="shak58"/><br /><sub><b>shak58</b></sub></a><br /><a href="#content-shak58" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://linkedin.com/in/muhammadaltabba"><img src="https://avatars.githubusercontent.com/u/24407834?v=4?s=100" width="100px;" alt="Muhammad Altabba"/><br /><sub><b>Muhammad Altabba</b></sub></a><br /><a href="#content-Muhammad-Altabba" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
