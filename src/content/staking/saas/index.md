@@ -47,7 +47,7 @@ Below are some available SaaS provider. Use the above indicators to help guide y
 
 <StakingProductsCardGrid category="saas" />
 
-Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style="text-transform: uppercase;">"execution client diversity"</em> and <em style="text-transform: uppercase;">"consensus client diversity."</em>
+Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
 #### Key Generators
 
@@ -91,4 +91,5 @@ Contact individual SaaS provider for more details on any guarantees or insurance
 
 ## Further reading {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

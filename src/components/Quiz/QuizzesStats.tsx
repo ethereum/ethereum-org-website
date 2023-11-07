@@ -3,9 +3,9 @@ import {
   Box,
   Circle,
   Flex,
-  Grid,
   GridItem,
   Progress,
+  SimpleGrid,
   Stack,
   Text,
 } from "@chakra-ui/react"
@@ -66,18 +66,19 @@ const QuizzesStats: React.FC = () => {
   } = getFormattedStats(language, average)
 
   return (
-    <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
-      <Stack mt={{ base: 0, lg: 12 }} gap={{ base: 8, lg: 4 }}>
+    <Box flex={1} order={{ base: "1", lg: "2" }} w="full">
+      <Stack mt={{ base: 0, lg: "12" }} spacing={{ base: "8", lg: "4" }}>
         {/* user stats */}
-        <Grid
-          gap={4}
+        <SimpleGrid
+          columns={{ base: 1, lg: 2 }}
+          gap="4"
           bg="background.highlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={8}
-          mb={-2}
+          p="8"
+          mb="-2"
         >
-          <GridItem colSpan={{ base: 2, lg: 1 }} alignSelf="center" order={1}>
+          <GridItem alignSelf="center" order={1}>
             <Text
               color="body.base"
               fontWeight="bold"
@@ -90,7 +91,6 @@ const QuizzesStats: React.FC = () => {
           </GridItem>
 
           <GridItem
-            colSpan={{ base: 2, lg: 1 }}
             justifySelf={{ base: "auto", lg: "end" }}
             alignSelf="center"
             order={{ base: 3, lg: 2 }}
@@ -102,14 +102,14 @@ const QuizzesStats: React.FC = () => {
                 handleShare({ score: userScore, total: totalQuizzesPoints })
               }
               w={{ base: "full", lg: "auto" }}
-              mt={{ base: 2, lg: 0 }}
+              mt={{ base: "2", lg: 0 }}
             >
               <Translation id="share-results" />
             </Button>
           </GridItem>
 
           <GridItem colSpan={2} order={{ base: 2, lg: 3 }}>
-            <Stack gap={2}>
+            <Stack spacing="2">
               <Flex
                 justifyContent={{ base: "center", lg: "flex-start" }}
                 alignItems="center"
@@ -118,7 +118,7 @@ const QuizzesStats: React.FC = () => {
                   <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
                 </Circle>
 
-                <Text fontWeight="bold" fontSize="5xl" mb={0} color="body.base">
+                <Text fontWeight="bold" fontSize="5xl" color="body.base">
                   {userScore}
                   <Text as="span" color="body.medium">
                     /{totalQuizzesPoints}
@@ -128,20 +128,15 @@ const QuizzesStats: React.FC = () => {
 
               <Progress value={(userScore / totalQuizzesPoints) * 100} />
 
-              <Flex direction={{ base: "column", lg: "row" }}>
-                <Text
-                  mr={10}
-                  mb={0}
-                  mt={{ base: 2, lg: 0 }}
-                  color="body.medium"
-                >
+              <Flex columnGap="10" direction={{ base: "column", lg: "row" }}>
+                <Text mt={{ base: "2", lg: 0 }} color="body.medium">
                   <Translation id="average-score" />{" "}
                   <Text as="span" color="body.base">
                     {formattedUserAverageScore}
                   </Text>
                 </Text>
 
-                <Text mb={0} color="body.medium">
+                <Text color="body.medium">
                   <Translation id="completed" />{" "}
                   <Text as="span" color="body.base">
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
@@ -150,56 +145,52 @@ const QuizzesStats: React.FC = () => {
               </Flex>
             </Stack>
           </GridItem>
-        </Grid>
+        </SimpleGrid>
 
         {/* community stats */}
-        <Flex
-          direction="column"
-          gap={6}
+        <Stack
+          gap="6"
           justifyContent="space-between"
           bg="background.highlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={8}
+          p="8"
         >
-          <Text color="body.base" fontWeight="bold" fontSize="xl" mb={0}>
+          <Text color="body.base" fontWeight="bold" fontSize="xl">
             <Translation id="community-stats" />
           </Text>
 
           <Flex
             direction={{ base: "column", md: "row" }}
-            gap={{ base: 6, md: 10 }}
+            columnGap="20"
+            rowGap="6"
           >
-            <Stack>
-              <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="average-score" />
-              </Text>
-              {/* Data from Matomo, manually updated */}
-              <Text color="body.base">{formattedCollectiveAverageScore}</Text>
-            </Stack>
-
-            <Stack>
-              <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="questions-answered" />
-              </Text>
-
-              {/* Data from Matomo, manually updated */}
-              <Text color="body.base">
-                {formattedCollectiveQuestionsAnswered}
-                <Text as="span">+</Text>
-              </Text>
-            </Stack>
-
-            <Stack>
-              <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="retry" />
-              </Text>
-
-              {/* Data from Matomo, manually updated */}
-              <Text color="body.base">{formattedCollectiveRetryRate}</Text>
-            </Stack>
+            {(
+              [
+                {
+                  labelId: "average-score",
+                  value: formattedCollectiveAverageScore,
+                },
+                {
+                  labelId: "questions-answered",
+                  value: formattedCollectiveQuestionsAnswered + "+",
+                },
+                {
+                  labelId: "retry",
+                  value: formattedCollectiveRetryRate,
+                },
+              ] satisfies Array<{ labelId: string; value: string }>
+            ).map(({ labelId, value }) => (
+              <Stack key={labelId}>
+                <Text mb="-2" color="body.medium">
+                  <Translation id={labelId} />
+                </Text>
+                {/* Data from Matomo, manually updated */}
+                <Text color="body.base">{value}</Text>
+              </Stack>
+            ))}
           </Flex>
-        </Flex>
+        </Stack>
       </Stack>
     </Box>
   )
