@@ -250,7 +250,7 @@ Per connetterli realmente al nostro codice, faremo riferimento a queste variabil
 
 ### Fase 12: installa Ethers.js {#step-12-install-ethersjs}
 
-Ethers.js è una libreria che rende più facile interagire ed effettuare richieste a Ethereum tramite wrapping dei <a href="https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc"">metodi JSON-RPC standard</a> con altri metodi più facili da usare.
+Ethers.js è una libreria che rende più facile interagire ed effettuare richieste a Ethereum tramite wrapping dei <a href="https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc">metodi JSON-RPC standard</a> con altri metodi più facili da usare.
 
 Hardhat ci permette di integrare i [plugin](https://hardhat.org/plugins/) per avere strumenti aggiuntivi e funzionalità estese. Sfrutteremo il [plugin di Ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) per la distribuzione del contratto.
 
