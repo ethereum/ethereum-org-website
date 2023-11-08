@@ -15,3 +15,33 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
+
+export const getRequiredNamespacesForPath = (path: string) => {
+  let requiredNamespaces: string[] = ["common"]
+
+  if (path.startsWith("/community")) {
+    requiredNamespaces = [...requiredNamespaces, "page-community"]
+  }
+
+  if (path.startsWith("/energy-consumption")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-about",
+      "page-what-is-ethereum",
+    ]
+  }
+
+  if (path.startsWith("/history")) {
+    requiredNamespaces = [...requiredNamespaces, "page-history"]
+  }
+
+  if (path.startsWith("/nft")) {
+    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
+  }
+
+  if (path.startsWith("/staking")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking"]
+  }
+
+  return requiredNamespaces
+}

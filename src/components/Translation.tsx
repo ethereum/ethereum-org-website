@@ -4,6 +4,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import InlineLink from "./Link"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 interface Props {
   id: string
@@ -19,34 +20,8 @@ const transform = {
 // Renders the translation string for the given translation key `id`. It
 // fallback to English if it doesn't find the given key in the current language
 const Translation = ({ id, options }: Props) => {
-  const [requiredNamespaces, setRequiredNamespaces] = useState<string[]>([])
   const { asPath } = useRouter()
-
-  useEffect(() => {
-    if (asPath.startsWith("/community")) {
-      setRequiredNamespaces([...requiredNamespaces, "page-community"])
-    }
-
-    if (asPath.startsWith("/energy-consumption")) {
-      setRequiredNamespaces([
-        ...requiredNamespaces,
-        "page-about",
-        "page-what-is-ethereum",
-      ])
-    }
-
-    if (asPath.startsWith("/history")) {
-      setRequiredNamespaces([...requiredNamespaces, "page-history"])
-    }
-
-    if (asPath.startsWith("/nft")) {
-      setRequiredNamespaces([...requiredNamespaces, "learn-quizzes"])
-    }
-
-    if (asPath.startsWith("/staking")) {
-      setRequiredNamespaces([...requiredNamespaces, "page-staking"])
-    }
-  }, [requiredNamespaces])
+  const requiredNamespaces = getRequiredNamespacesForPath(asPath)
 
   const { t } = useTranslation(requiredNamespaces)
   const translatedText = t(id, options)
