@@ -22,7 +22,7 @@ const MarkdownImage = ({
   let imageHeight = parseFloat(height)
 
   // Replace slashes from windows paths with forward slashes
-  const transformedSrc = src.toString().replace(/\\/g, "/")
+  const srcToString = src.toString()
 
   // keep the size of the images proportional to the max width constraint
   if (imageWidth > CONTENT_IMAGES_MAX_WIDTH) {
@@ -34,12 +34,12 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
-      <Link href={transformedSrc} target="_blank" rel="noopener">
+      <Link href={srcToString} target="_blank" rel="noopener">
         <Image
           width={imageWidth}
           height={imageHeight}
           loading="lazy"
-          src={transformedSrc}
+          src={srcToString}
           {...rest}
         />
       </Link>
