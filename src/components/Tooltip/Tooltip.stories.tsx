@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
-import { HStack } from "@chakra-ui/react"
+import { Box, HStack } from "@chakra-ui/react"
 import { RiInformationLine } from "react-icons/ri"
 
 // TODO: remove `index` when we delete the old tooltip
@@ -22,7 +22,11 @@ const meta = {
   component: TooltipComponent,
   args: {
     content: <TooltipContent />,
-    children: <RiInformationLine />,
+    children: (
+      <Box as="span">
+        <RiInformationLine />
+      </Box>
+    ),
   },
 } satisfies Meta<TooltipType>
 
