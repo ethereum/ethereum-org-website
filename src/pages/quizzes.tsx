@@ -219,7 +219,7 @@ export const query = graphql`
         }
       }
     }
-    heroImage: file(relativePath: { eq: "heroes/quizzes-hub-hero.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/quizzes-hub-hero.jpeg" }) {
       childImageSharp {
         gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
       }
