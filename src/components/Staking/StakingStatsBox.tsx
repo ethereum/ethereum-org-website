@@ -2,7 +2,7 @@
 import React, { useState, useEffect, ReactNode } from "react"
 import { MdInfoOutline } from "react-icons/md"
 import { useI18next } from "gatsby-plugin-react-i18next"
-import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
+import { Box, Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 // Import components
 import Translation from "../Translation"
 import Tooltip from "../Tooltip"
@@ -71,15 +71,17 @@ const BeaconchainTooltip: React.FC<BeaconchainTooltipProps> = ({
   children,
 }) => (
   <Tooltip content={children}>
-    <Icon
-      as={MdInfoOutline}
-      color="text"
-      marginInlineStart={2}
-      _hover={{ color: "primary.base" }}
-      _active={{ color: "primary.base" }}
-      _focus={{ color: "primary.base" }}
-      boxSize={4}
-    />
+    <Box as="span" marginInlineStart={2}>
+      <Icon
+        as={MdInfoOutline}
+        color="text"
+        _hover={{ color: "primary.base" }}
+        _active={{ color: "primary.base" }}
+        _focus={{ color: "primary.base" }}
+        boxSize={4}
+        verticalAlign="middle"
+      />
+    </Box>
   </Tooltip>
 )
 
@@ -172,11 +174,13 @@ const StakingStatsBox: React.FC<IProps> = () => {
         <Label>
           <Translation id="page-staking-stats-box-metric-1" />
           <BeaconchainTooltip>
-            <Text>
-              <Translation id="page-staking-stats-box-metric-1-tooltip" />
-            </Text>
-            <Translation id="data-provided-by" />{" "}
-            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            <Box textTransform="none">
+              <Text>
+                <Translation id="page-staking-stats-box-metric-1-tooltip" />
+              </Text>
+              <Translation id="data-provided-by" />{" "}
+              <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            </Box>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -191,11 +195,13 @@ const StakingStatsBox: React.FC<IProps> = () => {
         <Label>
           <Translation id="page-staking-stats-box-metric-2" />
           <BeaconchainTooltip>
-            <Text>
-              <Translation id="page-staking-stats-box-metric-2-tooltip" />
-            </Text>
-            <Translation id="data-provided-by" />{" "}
-            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            <Box textTransform="none">
+              <Text>
+                <Translation id="page-staking-stats-box-metric-2-tooltip" />
+              </Text>
+              <Translation id="data-provided-by" />{" "}
+              <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            </Box>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -210,13 +216,15 @@ const StakingStatsBox: React.FC<IProps> = () => {
         <Label>
           <Translation id="page-staking-stats-box-metric-3" />
           <BeaconchainTooltip>
-            <Text>
-              <Translation id="page-staking-stats-box-metric-3-tooltip" />
-            </Text>
-            <Translation id="data-provided-by" />{" "}
-            <InlineLink to="https://beaconcha.in/ethstore">
-              Beaconcha.in
-            </InlineLink>
+            <Box textTransform="none">
+              <Text>
+                <Translation id="page-staking-stats-box-metric-3-tooltip" />
+              </Text>
+              <Translation id="data-provided-by" />{" "}
+              <InlineLink to="https://beaconcha.in/ethstore">
+                Beaconcha.in
+              </InlineLink>
+            </Box>
           </BeaconchainTooltip>
         </Label>
       </Cell>

@@ -66,7 +66,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
     : ``
 
   const tooltipContent = (
-    <Box>
+    <Box textTransform="none">
       <Translation id="data-provided-by" />{" "}
       <InlineLink to="https://www.coingecko.com/en/api">
         coingecko.com
@@ -107,7 +107,9 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
       >
         <Translation id="eth-current-price" />
         <Tooltip content={tooltipContent}>
-          <Icon as={MdInfoOutline} boxSize="14px" ml={2} />
+          <Box as="span">
+            <Icon as={MdInfoOutline} boxSize="14px" ml={2} />
+          </Box>
         </Tooltip>
       </Heading>
 

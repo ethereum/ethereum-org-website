@@ -124,7 +124,9 @@ const BugBountyPoints: React.FC<IProps> = () => {
       <Box mb={4} fontSize="sm">
         <Translation id="page-upgrades-bug-bounty-points-exchange" />{" "}
         <Tooltip content={tooltipContent}>
-          <Icon as={MdInfoOutline} fill="text200" boxSize="4" />
+          <Box as="span">
+            <Icon as={MdInfoOutline} fill="text200" boxSize="4" />
+          </Box>
         </Tooltip>
       </Box>
       <OldHeading

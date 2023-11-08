@@ -12,19 +12,16 @@ const baseStyle = definePartsStyle({
   popper: {
     zIndex: "popover",
     boxShadow: `0px 0px 16px 0px #00000040`,
+    borderRadius: "base",
   },
   content: {
     [$arrowSize.variable]: "8px",
     minW: 12,
+    maxW: 80,
     p: 2,
     bg: "background.highlight",
     fontSize: "sm",
-    fontWeight: "normal",
     borderRadius: "base",
-    cursor: "default",
-    textAlign: "center",
-    userSelect: "none",
-    outline: 0,
   },
   arrow: {
     [$arrowBg.variable]: "colors.background.highlight",

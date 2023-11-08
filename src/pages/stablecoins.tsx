@@ -37,10 +37,10 @@ import { getData } from "../utils/cache"
 import { getImage } from "../utils/image"
 
 const tooltipContent = (
-  <div>
+  <Box fontWeight="normal">
     <Translation id="data-provided-by" />{" "}
     <InlineLink to="https://www.coingecko.com/en/api">coingecko.com</InlineLink>
-  </div>
+  </Box>
 )
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />

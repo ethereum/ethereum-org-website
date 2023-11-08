@@ -492,7 +492,9 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about Ethereum projects stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -511,7 +513,9 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about wallets stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -530,7 +534,9 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about smart contracts stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -548,7 +554,9 @@ const WhatIsEthereumPage = ({
                           ariaLabel: "Read more about about Ethereum as money",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -568,7 +576,9 @@ const WhatIsEthereumPage = ({
                             "Read more about 2021 Ethereum earnings stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
@@ -589,7 +599,9 @@ const WhatIsEthereumPage = ({
                             "Read more about number of transactions stats",
                         })}
                       >
-                        <Icon as={MdInfoOutline} fontSize="md" />
+                        <Box as="span">
+                          <Icon as={MdInfoOutline} verticalAlign="middle" />
+                        </Box>
                       </Tooltip>
                     </NoWrapText>
                   </StatDescription>
