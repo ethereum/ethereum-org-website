@@ -57,22 +57,26 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 - [Documentazione sulle reti e la distribuzione delle app](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _Distribuisci con facilità qualsiasi contratto a qualsiasi catena che sia compatibile con EVM, utilizzando un singolo comando_**
+
+- [Documentazione](https://portal.thirdweb.com/deploy/)
+
 ## Tutorial correlati {#related-tutorials}
 
-- [Distribuire il tuo primo contratto intelligente](/developers/tutorials/deploying-your-first-smart-contract/): _Un'introduzione alla distribuzione del tuo primo contratto su una rete di prova di Ethereum._
-- [Hello World | tutorial di un contratto intelligente](/developers/tutorials/hello-world-smart-contract/): _Un tutorial facile da seguire per creare e distribuire un contratto intelligente di base su Ethereum._
+- [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/): _Un'introduzione alla distribuzione del primo contratto su una rete di prova di Ethereum._
+- [Hello World | smart contract tutorial](/developers/tutorials/hello-world-smart-contract/): _Un tutorial facile da seguire per creare e distribuire un contratto intelligente di base su Ethereum._
 - [Interagire con gli altri contratti da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/): _Come distribuire un contratto intelligente da un contratto esistente e interagirvi._
-- [Come ridimensionare il tuo contratto](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/): _Come ridurre le dimensioni del tuo contratto per mantenerlo sotto il limite e risparmiare sul gas_
+- [How to downsize your contract size](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/): _Come ridurre le dimensioni del tuo contratto per mantenerlo sotto il limite e risparmiare carburante_
 
 ## Letture consigliate {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Distribuire i tuoi contratti Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Framework di sviluppo](/developers/docs/frameworks/)
+- [Quadri di sviluppo](/developers/docs/frameworks/)
 - [Eseguire un nodo di Ethereum](/developers/docs/nodes-and-clients/run-a-node/)
 - [Nodes-as-a-service](/developers/docs/nodes-and-clients/nodes-as-a-service)

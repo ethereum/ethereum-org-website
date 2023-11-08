@@ -113,7 +113,7 @@ def rlp_decode(input):
         output = instantiate_str(substr(input, offset, dataLen))
     elif type is list:
         output = instantiate_list(substr(input, offset, dataLen))
-    output + rlp_decode(substr(input, offset + dataLen))
+    output += rlp_decode(substr(input, offset + dataLen))
     return output
 
 def decode_length(input):

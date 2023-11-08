@@ -1,5 +1,5 @@
 ---
-title: Kompilieren von Smart Contracts
+title: Smart Contracts erstellen
 description: Eine Erklärung, warum Sie Smart Contracts kompilieren müssen und was bei der Kompilierung tatsächlich passiert
 lang: de
 incomplete: true
@@ -275,4 +275,4 @@ Unten ist die ABI für den ERC-20-Token-Contract. Ein ERC-20 ist ein Tokenstanda
 ## Verwandte Themen {#related-topics}
 
 - [JavaScript-Client-Bibliotheken](/developers/docs/apis/javascript/)
-- [Ethereum-Virtual Machine (EVM)](/developers/docs/ethereum-virtual-machine/)
+- [Ethereum-Virtual Machine (EVM)](/developers/docs/evm/)
