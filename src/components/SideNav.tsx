@@ -4,7 +4,7 @@ import { Box, HStack, Icon } from "@chakra-ui/react"
 import { motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 
-import { BaseLink } from "./Link"
+import { BaseLink, LinkProps } from "./Link"
 import Translation from "./Translation"
 
 import docLinks from "../data/developer-docs-links.yaml"
@@ -47,7 +47,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
       w="full"

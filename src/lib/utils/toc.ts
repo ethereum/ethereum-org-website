@@ -91,7 +91,7 @@ const parseSourceToToCItem = ({ label, id }: SourceHeadingItem): ToCItem => ({
  */
 const addHeadingsAsItems = (
   headings: Array<SourceHeadingItem>,
-  h = 3
+  h = 2
 ): Array<ToCItem> => {
   const items: Array<ToCItem> = []
   const depths: number[] = headings.map(({ depth }) => depth)

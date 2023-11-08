@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { ChildOnlyProp, Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import {
@@ -47,10 +48,10 @@ import {
   Heading4 as MdHeading4,
   Paragraph,
 } from "@/components/MdComponents"
-import { useRouter } from "next/router"
 
 // Utils
 import { EDIT_CONTENT_URL } from "@/lib/constants"
+import { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -214,7 +215,11 @@ export const docsComponents = {
   YouTube,
 }
 
-export const DocsLayout = ({ children, frontmatter, slug, tocItems }) => {
+interface DocsLayoutProps extends MdPageContent, ChildOnlyProp {
+  frontmatter: DocsFrontmatter
+}
+
+export const DocsLayout = ({ children, frontmatter, slug, tocItems }: DocsLayoutProps) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath} = useRouter()

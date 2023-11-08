@@ -1,14 +1,13 @@
-import React from "react"
 import { Flex } from "@chakra-ui/react"
 import Emoji from "@/components/Emoji"
 import Translation from "@/components/Translation"
 import OldHeading from "@/components/OldHeading"
 
-export interface IProps {
+export type SectionNavProps = {
   children?: React.ReactNode
 }
 
-const SectionNav: React.FC<IProps> = ({ children }) => (
+const SectionNav = ({ children }: SectionNavProps) => (
   <Flex
     direction="column"
     color="textTableOfContents"

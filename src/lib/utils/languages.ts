@@ -1,25 +1,10 @@
 import i18nConfig from '../../../i18n.config.json'
-import type { Direction, Lang } from "@/lib/types"
+import type { I18nLocale, Lang } from "@/lib/types"
 
-export interface Language {
-    code: Lang
-    crowdinCode: string
-    name: string
-    localName: string
-    langDir: Direction
-    dateFormat: string
-  }
 
 export type Languages = {
-    [lang in Lang]: Language
+    [lang in Lang]: I18nLocale
   }
-  
-export const defaultLanguage: Lang = "en"
-
-// same data as in the `config.json` but indexed by language code
-const languages: Languages = i18nConfig.reduce((result, config) => {
-return { ...result, [config.code]: config }
-}, {} as Languages)
 
 const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
 .split(",")
