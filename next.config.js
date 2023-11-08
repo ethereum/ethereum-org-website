@@ -12,7 +12,7 @@ module.exports = (phase, { defaultConfig }) => {
       // supported locales defined in `i18n.config.json`
       locales: i18nConfig.map((lang) => lang.code).sort(),
     },
-    webpack: (config, { isServer }) => {
+    webpack: (config) => {
       // For all file types, you should have existing rules here
       config.module.rules.push({
         test: /\.ya?ml$/,
