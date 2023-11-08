@@ -33,7 +33,7 @@ import { mdxTableComponents } from "@/components/Table"
 import YouTube from "@/components/YouTube"
 
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
-import QuizWidget from "./Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
 import DocLink from "./DocLink"
 import Emoji from "./Emoji"
@@ -61,7 +61,8 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
 
 const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
   id ? (
-    <Link href={`#${id}`}
+    <Link
+      href={`#${id}`}
       position="absolute"
       insetInlineEnd="100%"
       aria-label={id.replaceAll("-", " ") + " permalink"}
@@ -84,7 +85,13 @@ export const Heading1 = ({ children, ...rest }: HeadingProps) => (
 )
 
 export const Heading2 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h2" {...commonHeadingProps(id)} fontSize="2rem" mt={16} {...rest}>
+  <OldHeading
+    as="h2"
+    {...commonHeadingProps(id)}
+    fontSize="2rem"
+    mt={16}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </OldHeading>
@@ -98,7 +105,13 @@ export const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
 )
 
 export const Heading4 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h4" {...commonHeadingProps(id)} fontSize="xl" fontWeight={600} {...rest}>
+  <OldHeading
+    as="h4"
+    {...commonHeadingProps(id)}
+    fontSize="xl"
+    fontWeight={600}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </OldHeading>
@@ -266,7 +279,7 @@ export const reactComponents = {
   MobileButton,
   MobileButtonDropdown,
   Page,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
   Title,
   YouTube,
