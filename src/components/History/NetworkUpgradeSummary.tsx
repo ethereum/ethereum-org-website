@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { Flex, Stack, Text } from "@chakra-ui/react"
 
-import { Lang } from "@/lib/types"
+import type { Lang } from "@/lib/types"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
-// TODO add Translation
-// import Translation from "../Translation"
 import Emoji from "../Emoji"
 import InlineLink from "../Link"
 
@@ -20,6 +19,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const { locale } = useRouter()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
+  const { t } = useTranslation("page-history")
 
   const {
     dateTimeAsString,
@@ -47,18 +47,10 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
   }, [dateTimeAsString, locale])
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
-    // TODO: remove temporalGetValue after i18n is set up
-    const temporalGetValue = {
-      "page-history-block-number": "Block number",
-      "page-history-epoch-number": "Epoch number",
-      "page-history-slot-number": "Slot number",
-    }
-
     return (
       <Flex>
         <Emoji fontSize="sm" mr={2} text=":bricks:" />
-        {/* <Translation id={translationKey} /> */}
-        {temporalGetValue[translationKey]}:&nbsp;
+        {t(translationKey)}:{" "}
         <InlineLink to={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
@@ -95,9 +87,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {ethPriceInUSD && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":money_bag:" />
-          {/* TODO: remove hardcoded text when Translation & i18n are set up */}
-          {/* <Translation id="page-history-eth-price" /> */}
-          ETH price: &nbsp;
+          {t("page-history-eth-price")}:{" "}
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
             currency: "USD",
@@ -108,9 +98,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
           <InlineLink to={waybackLink}>
-            {/* TODO: remove hardcoded text when Translation & i18n are set up */}
-            {/* <Translation id="page-history-ethereum-org-wayback" /> */}
-            ethereum.org on waybackmachine
+            {t("page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>
       )}

@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import {
   Box,
   type BoxProps,
@@ -188,12 +189,14 @@ export const stakingComponents = {
 interface IProps extends MdPageContent, ChildOnlyProp {
   frontmatter: StakingFrontmatter
 }
+
 export const StakingLayout: React.FC<IProps> = ({
   children,
   frontmatter,
   slug,
   tocItems,
 }) => {
+  const { t } = useTranslation("page-staking")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
@@ -201,11 +204,11 @@ export const StakingLayout: React.FC<IProps> = ({
   const { summaryPoints } = frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options",
-    ariaLabel: "Staking options dropdown menu",
+    text: t("page-staking-dropdown-staking-options"),
+    ariaLabel: t("page-staking-dropdown-staking-options-alt"),
     items: [
       {
-        text: "Staking home" as TranslationKey,
+        text: t("page-staking-dropdown-home"),
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -214,7 +217,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Solo staking" as TranslationKey,
+        text: t("page-staking-dropdown-solo"),
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -223,7 +226,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Staking as a service" as TranslationKey,
+        text: t("page-staking-dropdown-saas"),
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -232,7 +235,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Pooled staking" as TranslationKey,
+        text: t("page-staking-dropdown-pools"),
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -241,7 +244,7 @@ export const StakingLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "About withdrawals" as TranslationKey,
+        text: t("page-staking-dropdown-withdrawals"),
         to: "/staking/withdrawals/",
         matomo: {
           eventCategory: `Staking dropdown`,

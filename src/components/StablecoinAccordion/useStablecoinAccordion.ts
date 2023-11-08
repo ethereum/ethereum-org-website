@@ -1,11 +1,9 @@
-import { graphql,useStaticQuery } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 
 import { CardListItem } from "../CardList"
 
 export const useStablecoinAccordion = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-stablecoins")
   const data = useStaticQuery(graphql`
     {
       uniswap: file(relativePath: { eq: "dapps/uni.png" }) {

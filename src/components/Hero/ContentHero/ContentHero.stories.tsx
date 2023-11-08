@@ -1,6 +1,4 @@
-import * as React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
@@ -47,7 +45,7 @@ const mockGatsbyImgData: IGatsbyImageData = {
 export const ContentHero: StoryObj = {
   render: () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { t } = useTranslation()
+    const { t } = useTranslation("page-learn")
 
     const buttons: ContentHeroProps["buttons"] = [
       {

@@ -1,6 +1,6 @@
-import React from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import { DateTime, DateTimeFormatOptions } from "luxon"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { FaDiscord } from "react-icons/fa"
 import {
   Box,
@@ -78,8 +78,8 @@ const Event = ({ event, language, type }: EventProps) => {
 }
 
 const CommunityEvents = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-index")
   const { pastEventData, upcomingEventData, loading, hasError } =
     useCommunityEvents()
 
@@ -134,7 +134,7 @@ const CommunityEvents = () => {
                     {upcomingEventData[0].title}
                   </Text>
                   <Text m={0} fontSize="xl">
-                    {renderEventDateTime(upcomingEventData[0].date, language)}
+                    {renderEventDateTime(upcomingEventData[0].date, locale!)}
                   </Text>
                   <Text color="body.medium" fontSize="md">
                     ({Intl.DateTimeFormat().resolvedOptions().timeZone})

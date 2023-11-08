@@ -1,6 +1,6 @@
 import React from "react"
 import { useRouter } from "next/router"
-// import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -38,8 +38,7 @@ const Breadcrumbs: React.FC<IProps> = ({
   startDepth = 0,
   ...restProps
 }) => {
-  // TODO: update when i18n is set up
-  // const { t } = useTranslation()
+  const { t } = useTranslation()
   const { locale, asPath } = useRouter()
 
   const hasHome = asPath !== "/"
@@ -53,9 +52,7 @@ const Breadcrumbs: React.FC<IProps> = ({
       ? [
           {
             fullPath: "/",
-            // TODO: update when i18n is set up
-            // text: t("page-index-meta-title"),
-            text: "Home",
+            text: t("page-index-meta-title"),
           },
         ]
       : []),
@@ -63,9 +60,7 @@ const Breadcrumbs: React.FC<IProps> = ({
     ...sliced.map((path, idx) => {
       return {
         fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
-        // TODO: update when i18n is set up
-        // text: t(path),
-        text: path,
+        text: t(path),
       }
     }),
   ]

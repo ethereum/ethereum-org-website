@@ -9,9 +9,8 @@ import {
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
 import OldHeading from "@/components/OldHeading"
-// TODO: Re-enable after i18n implemented
-// import Translation from "@/components/Translation"
 import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -49,9 +48,7 @@ const IndicatorGroup = ({
         textAlign="center"
         width={{ base: "fit-content", sm: "max-content" }}
       >
-        {/* TODO: Re-enable after i18n implemented */}
-        {/* <Translation id={label} /> */}
-        {label}
+        <Translation id={label} />
       </Text>
     </VStack>
   )

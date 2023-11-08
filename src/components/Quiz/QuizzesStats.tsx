@@ -1,5 +1,6 @@
-import React, { useContext } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
+import { useContext } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { FaTwitter } from "react-icons/fa"
 import {
   Box,
@@ -17,7 +18,6 @@ import { QuizShareStats } from "../../types"
 import { trackCustomEvent } from "../../utils/matomo"
 import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
-import Translation from "../Translation"
 
 import { QuizzesHubContext } from "./context"
 import {
@@ -41,7 +41,8 @@ const handleShare = ({ score, total }: QuizShareStats) => {
 }
 
 const QuizzesStats: React.FC = () => {
-  const { language } = useI18next()
+  const { locale } = useRouter()
+  const { t } = useTranslation("learn-quizzes")
   const {
     userStats: { score: userScore, completed, average },
   } = useContext(QuizzesHubContext)
@@ -59,7 +60,7 @@ const QuizzesStats: React.FC = () => {
     formattedCollectiveQuestionsAnswered,
     formattedCollectiveAverageScore,
     formattedCollectiveRetryRate,
-  } = getFormattedStats(language, average)
+  } = getFormattedStats(locale!, average)
 
   return (
     <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
@@ -81,7 +82,7 @@ const QuizzesStats: React.FC = () => {
               margin={0}
               textAlign={{ base: "center", lg: "left" }}
             >
-              <Translation id="your-total" />
+              {t("your-total")}
             </Text>
           </GridItem>
 
@@ -100,7 +101,7 @@ const QuizzesStats: React.FC = () => {
               w={{ base: "full", lg: "auto" }}
               mt={{ base: 2, lg: 0 }}
             >
-              <Translation id="share-results" />
+              {t("share-results")}
             </Button>
           </GridItem>
 
@@ -131,14 +132,14 @@ const QuizzesStats: React.FC = () => {
                   mt={{ base: 2, lg: 0 }}
                   color="body.medium"
                 >
-                  <Translation id="average-score" />{" "}
+                  {t("average-score")}{" "}
                   <Text as="span" color="body.base">
                     {formattedUserAverageScore}
                   </Text>
                 </Text>
 
                 <Text mb={0} color="body.medium">
-                  <Translation id="completed" />{" "}
+                  {t("completed")}{" "}
                   <Text as="span" color="body.base">
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
                   </Text>
@@ -159,7 +160,7 @@ const QuizzesStats: React.FC = () => {
           p={8}
         >
           <Text color="body.base" fontWeight="bold" fontSize="xl" mb={0}>
-            <Translation id="community-stats" />
+            {t("community-stats")}
           </Text>
 
           <Flex
@@ -168,7 +169,7 @@ const QuizzesStats: React.FC = () => {
           >
             <Stack>
               <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="average-score" />
+                {t("average-score")}
               </Text>
               {/* Data from Matomo, manually updated */}
               <Text color="body.base">{formattedCollectiveAverageScore}</Text>
@@ -176,7 +177,7 @@ const QuizzesStats: React.FC = () => {
 
             <Stack>
               <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="questions-answered" />
+                {t("questions-answered")}
               </Text>
 
               {/* Data from Matomo, manually updated */}
@@ -188,7 +189,7 @@ const QuizzesStats: React.FC = () => {
 
             <Stack>
               <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="retry" />
+                {t("retry")}
               </Text>
 
               {/* Data from Matomo, manually updated */}

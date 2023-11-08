@@ -1,9 +1,8 @@
-import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
-// import { Lang } from "../utils/languages"
-// import { getLocaleTimestamp } from "../utils/time"
-import type { TranslationKey } from "@/lib/types"
+import type { Lang, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
@@ -11,6 +10,8 @@ import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter
@@ -30,8 +31,8 @@ const TutorialMetadata = ({
   frontmatter,
   timeToRead,
 }: TutorialMetadataProps) => {
-  // TODO: Implement after intl
-  // const { language } = useI18next()
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-developers-tutorials")
 
   const hasSource = frontmatter.source && frontmatter.sourceUrl
   const published = frontmatter.published
@@ -56,9 +57,7 @@ const TutorialMetadata = ({
           mb={2}
           whiteSpace="nowrap"
         >
-          {/* TODO: Implement after intl */}
-          {/* <Translation id={getSkillTranslationId(frontmatter.skill)} /> */}
-          {frontmatter.skill}
+          {t(getSkillTranslationId(frontmatter.skill as Skill))}
         </Flex>
       </Flex>
       <HStack
@@ -87,16 +86,13 @@ const TutorialMetadata = ({
         )}
         {published && (
           <Box>
-            <Emoji fontSize="sm" mr={2} text=":calendar:" />
-            {/* TODO: Implement after intl */}
-            {/* {getLocaleTimestamp(language as Lang, published)} */}
+            <Emoji fontSize="sm" mr={2} text=":calendar:" />{" "}
+            {getLocaleTimestamp(locale! as Lang, published)}
           </Box>
         )}
         <Box>
           <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
-          {timeToRead} {/* TODO: Implement after intl */}
-          {/* <Translation id="comp-tutorial-metadata-minute-read" /> */}
-          minute read
+          {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
         </Box>
       </HStack>
       <HStack

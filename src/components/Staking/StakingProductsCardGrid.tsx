@@ -1,5 +1,6 @@
 import { ComponentType, SVGProps, useEffect, useState } from "react"
 import { shuffle } from "lodash"
+import { useTranslation } from "next-i18next"
 import {
   Badge,
   Box,
@@ -17,7 +18,7 @@ import {
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-// When adding a product svg, be sure to add to mapping below as well.
+// SVG imports
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
@@ -140,71 +141,59 @@ const StakingProductCard: React.FC<ICardProps> = ({
     matomo,
   },
 }) => {
+  const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
   const data = [
     {
-      // label: <Translation id="page-staking-considerations-solo-1-title" />,
-      label: "page-staking-considerations-solo-1-title",
+      label: t("page-staking-considerations-solo-1-title"),
       status: openSource,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-2-title" />,
-      label: "page-staking-considerations-solo-2-title",
+      label: t("page-staking-considerations-solo-2-title"),
       status: audited,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-3-title" />,
-      label: "page-staking-considerations-solo-3-title",
+      label: t("page-staking-considerations-solo-3-title"),
       status: bugBounty,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-4-title" />,
-      label: "page-staking-considerations-solo-4-title",
+      label: t("page-staking-considerations-solo-4-title"),
       status: battleTested,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-5-title" />,
-      label: "page-staking-considerations-solo-5-title",
+      label: t("page-staking-considerations-solo-5-title"),
       status: trustless,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-6-title" />,
-      label: "page-staking-considerations-solo-6-title",
+      label: t("page-staking-considerations-solo-6-title"),
       status: permissionless,
     },
     {
-      // label: <Translation id="page-staking-considerations-pools-6-title" />,
-      label: "page-staking-considerations-pools-6-title",
+      label: t("page-staking-considerations-pools-6-title"),
       status: permissionlessNodes,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-7-title" />,
-      label: "page-staking-considerations-solo-7-title",
+      label: t("page-staking-considerations-solo-7-title"),
       status: multiClient,
     },
     {
-      // label: <Translation id="page-staking-considerations-saas-7-title" />,
-      label: "page-staking-considerations-saas-7-title",
+      label: t("page-staking-considerations-saas-7-title"),
       status: executionDiversity,
     },
     {
-      // label: <Translation id="page-staking-considerations-saas-8-title" />,
-      label: "page-staking-considerations-saas-8-title",
+      label: t("page-staking-considerations-saas-8-title"),
       status: consensusDiversity,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-8-title" />,
-      label: "page-staking-considerations-solo-8-title",
+      label: t("page-staking-considerations-solo-8-title"),
       status: selfCustody,
     },
     {
-      // label: <Translation id="page-staking-considerations-pools-8-title" />,
-      label: "page-staking-considerations-pools-8-title",
+      label: t("page-staking-considerations-pools-8-title"),
       status: liquidityToken,
     },
     {
-      // label: <Translation id="page-staking-considerations-solo-9-title" />,
-      label: "page-staking-considerations-solo-9-title",
+      label: t("page-staking-considerations-solo-9-title"),
       status: economical,
     },
   ].filter(({ status }) => !!status)
@@ -289,7 +278,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
       <Box {...PADDED_DIV_STYLE}>
         {/* TODO: Matomo - re-enable */}
         <ButtonLink to={url} /* customEventOptions={matomo} */ width="100%">
-          <Translation id="page-staking-products-get-started" />
+          {t("page-staking-products-get-started")}
         </ButtonLink>
       </Box>
     </Flex>

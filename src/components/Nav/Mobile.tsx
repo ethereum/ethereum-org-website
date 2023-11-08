@@ -1,6 +1,6 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
-// import { useTranslation } from "gatsby-plugin-react-i18next"
 import { motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import {
   Box,
@@ -18,7 +18,6 @@ import {
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "../../lib/types"
-// import Translation from "../Translation"
 import { Button } from "../Buttons"
 import { BaseLink } from "../Link"
 
@@ -126,7 +125,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   drawerContainerRef,
   ...props
 }) => {
-  // const { t } = useTranslation()
+  const { t } = useTranslation("common")
 
   const handleClick = (): void => {
     toggleMenu()
@@ -136,8 +135,7 @@ const MobileNavMenu: React.FC<IProps> = ({
     <>
       <Button
         onClick={toggleMenu}
-        // aria-label={t("aria-toggle-search-button")}
-        aria-label=""
+        aria-label={t("aria-toggle-search-button")}
         variant="ghost"
         isSecondary
         px={0}
@@ -260,18 +258,12 @@ const MobileNavMenu: React.FC<IProps> = ({
               }}
             >
               <Icon as={MdSearch} />
-              <FooterItemText>
-                {/* TODO */}
-                {/* <Translation id="search" /> */}
-                Search
-              </FooterItemText>
+              <FooterItemText>{t("search")}</FooterItemText>
             </FooterItem>
             <FooterItem onClick={toggleTheme}>
               <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
               <FooterItemText>
-                {/* TODO */}
-                {/* <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} /> */}
-                {isDarkTheme ? "light-mode" : "dark-mode"}
+                {t(isDarkTheme ? "light-mode" : "dark-mode")}
               </FooterItemText>
             </FooterItem>
             <FooterItem onClick={handleClick}>
@@ -288,11 +280,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 }}
               >
                 <Icon as={MdLanguage} />
-                <FooterItemText>
-                  {/* TODO */}
-                  {/* <Translation id="languages" /> */}
-                  Languages
-                </FooterItemText>
+                <FooterItemText>{t("languages")}</FooterItemText>
               </Flex>
             </FooterItem>
           </DrawerFooter>

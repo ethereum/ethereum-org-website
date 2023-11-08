@@ -3,6 +3,7 @@ import { ParsedUrlQuery } from "querystring"
 
 import { ReactElement } from "react"
 import type { GetStaticPaths, GetStaticProps } from "next/types"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
@@ -142,6 +143,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   return {
     props: {
+      ...(await serverSideTranslations(locale!, ["common"])), // load i18n required namespace for all pages
       mdxSource,
       originalSlug,
       frontmatter,

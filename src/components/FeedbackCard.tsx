@@ -1,10 +1,9 @@
 import React, { ReactNode, useState } from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { Flex, FlexProps, Heading } from "@chakra-ui/react"
 
 import { Button } from "./Buttons"
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
 import { FeedbackThumbsUpIcon } from "./icons"
 
 // TODO: add trackCustomEvent when util is migrated
@@ -23,6 +22,7 @@ const FeedbackCard: React.FC<IProps> = ({
   isArticle = false,
   ...props
 }) => {
+  const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   // const surveyUrl = useSurvey(feedbackSubmitted)
   const { asPath } = useRouter()
@@ -32,19 +32,14 @@ const FeedbackCard: React.FC<IProps> = ({
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
       if (prompt) return prompt
-      // TODO: add Translation when i18n is set up
-      // if (isTutorial) return <Translation id="feedback-card-prompt-tutorial" />
-      // if (isArticle) return <Translation id="feedback-card-prompt-article" />
-      // return <Translation id="feedback-card-prompt-page" />
 
-      if (isTutorial) return "Was this tutorial helpful?"
-      if (isArticle) return "Was this article helpful?"
-      return "Was this page helpful?"
+      if (isTutorial) return t("feedback-card-prompt-tutorial")
+      if (isArticle) return t("feedback-card-prompt-article")
+
+      return t("feedback-card-prompt-page")
     }
 
-    // TODO: add Translation when i18n is set up
-    // return <Translation id="feedback-widget-thank-you-title" />
-    return "Thank you for your feedback!"
+    return t("feedback-widget-thank-you-title")
   }
 
   const handleSubmit = (choice: boolean): void => {
@@ -56,6 +51,7 @@ const FeedbackCard: React.FC<IProps> = ({
     // })
     setFeedbackSubmitted(true)
   }
+
   const handleSurveyOpen = (): void => {
     // TODO: add trackCustomEvent when util is migrated
     // trackCustomEvent({
@@ -65,6 +61,7 @@ const FeedbackCard: React.FC<IProps> = ({
     // })
     // window && surveyUrl && window.open(surveyUrl, "_blank")
   }
+
   return (
     <Flex
       border="1px"
@@ -84,11 +81,8 @@ const FeedbackCard: React.FC<IProps> = ({
         </Heading>
         {feedbackSubmitted && (
           <p>
-            {/* TODO: add Translation when i18n is set up */}
-            Make this page even better by answering a few questions.
-            {/* <Translation id="feedback-widget-thank-you-subtitle" />{" "} */}
-            {/* <Translation id="feedback-widget-thank-you-subtitle-ext" /> */}
-            If you need help, you can reach out to the community on our{" "}
+            {t("feedback-widget-thank-you-subtitle")}{" "}
+            {t("feedback-widget-thank-you-subtitle-ext")}{" "}
             <a href="https://discord.gg/rZz26QWfCg\" target="_blank\">
               Discord
             </a>
@@ -103,25 +97,19 @@ const FeedbackCard: React.FC<IProps> = ({
                 leftIcon={<FeedbackThumbsUpIcon />}
                 onClick={() => handleSubmit(true)}
               >
-                {/* TODO: add Translation when i18n is set up */}
-                {/* <Translation id="yes" /> */}
-                Yes
+                {t("yes")}
               </Button>
               <Button
                 variant="outline-color"
                 leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
                 onClick={() => handleSubmit(false)}
               >
-                {/* TODO: add Translation when i18n is set up */}
-                {/* <Translation id="no" /> */}
-                No
+                {t("no")}
               </Button>
             </>
           ) : (
             <Button variant="outline-color" onClick={handleSurveyOpen}>
-              {/* TODO: add Translation when i18n is set up */}
-              {/* <Translation id="feedback-widget-thank-you-cta" /> */}
-              Open short survey
+              {t("feedback-widget-thank-you-cta")}
             </Button>
           )}
         </Flex>

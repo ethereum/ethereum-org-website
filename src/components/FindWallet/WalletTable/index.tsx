@@ -1,5 +1,5 @@
-import React, { ReactNode } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import Select from "react-select"
@@ -314,7 +314,7 @@ export interface WalletTableProps {
 }
 
 const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
     filteredFeatureDropdownItems,
