@@ -164,7 +164,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 **Tokenview -** **_The General Multi-Crypto Blockchain APIs Platform._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
-- [Documentation](https://services.tokeniew/docs?type=api)
+- [Documentation](https://services.tokenview/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
 ## Further reading {#further-reading}
