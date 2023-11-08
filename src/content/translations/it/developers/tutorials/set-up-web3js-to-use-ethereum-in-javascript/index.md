@@ -39,7 +39,7 @@ Ora che hai incluso la libreria nel progetto, dobbiamo inizializzarla. Il proget
 const web3 = new Web3("http://localhost:8545")
 ```
 
-Se desideri accedere direttamente a un nodo ospitato, puoi usare Infura o quelli gratuiti forniti da [Cloudflare](https://cloudflare-eth.com/):
+Se vorresti avere accesso diretto a un nodo ospitato, puoi trovare le opzioni su [nodi come servizi](/developers/docs/nodes-and-clients/nodes-as-a-service).
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
@@ -84,11 +84,11 @@ if (window.ethereum != null) {
   try {
     // Request account access if needed
     await window.ethereum.enable()
-    // Acccounts now exposed
+    // Accounts now exposed
   } catch (error) {
     // User denied account access...
   }
 }
 ```
 
-Esistono alternative a web3.js, come [Ethers.js](https://docs.ethers.io/), ma concentreremo tutti i tutorial di JavaScript su web3.js, essendo la libreria ufficiale per interagire con Ethereum nel browser. Nel prossimo tutorial vedremo [come ascoltare facilmente i nuovi blocchi in arrivo sulla blockchain e esaminarne il contenuto](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Alternative a web3.js come [Ethers.js](https://docs.ethers.io/) esistono e sono anche utilizzate comunemente. Nel prossimo tutorial vedremo [come ascoltare facilmente i nuovi blocchi in arrivo sulla blockchain e esaminarne il contenuto](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).

@@ -29,11 +29,8 @@ import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
 import GatsbyImage from "../../components/GatsbyImage"
-import {
-  ContentContainer,
-  InfoColumn,
-  InfoTitle,
-} from "../../templates/use-cases"
+import LeftNavBar from "../../components/LeftNavBar"
+import { ContentContainer } from "../../templates/use-cases"
 
 // Utils
 import { Lang } from "../../utils/languages"
@@ -200,12 +197,7 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Show above={lgBp}>
-          <InfoColumn>
-            <InfoTitle>
-              <Translation id="toc-learn-hub" />
-            </InfoTitle>
-            <UpgradeTableOfContents items={tocItems} />
-          </InfoColumn>
+          <LeftNavBar tocItems={tocItems} />
         </Show>
 
         <ContentContainer id="content">

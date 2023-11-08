@@ -207,7 +207,7 @@ const WalletsPage = ({
             },
             {
               to: `#${SIMULATOR_ID}`,
-              content: "Interactive tutorial",
+              content: "How to use a wallet",
               matomo: {
                 eventCategory: "wallet hero buttons",
                 eventAction: "click",

@@ -50,7 +50,7 @@ A pesar de intercambiar la prueba de trabajo y transicionar a la prueba de parti
 
 [Más información sobre la seguridad de Ethereum](/security/#eth2-token-scam)
 
-### Operadores de nodos y desarrolladores de dApps {#node-operators-dapp-developers}
+### Operadores de nodos y desarrolladores de DApps {#node-operators-dapp-developers}
 
 <ExpandableCard
 title="Operadores de nodos de participación y proveedores"
@@ -87,19 +87,22 @@ Si no se completan los pasos anteriores, su nodo aparecerá como «desconectado�
 </ExpandableCard>
 
 <ExpandableCard
-title="Desarrolladores de dApps y contratos inteligentes"
+title="Desarrolladores de DApps y contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusión trajo consigo cambios relacionados con el consenso, que también incluyen modificaciones en aspectos como:
+La Fusión vino con cambios en el consenso, que también incluye cambios relacionados con:<
 
-- Estructura de bloques.
-- Programación de ranuras y bloques.
-- Cambios en el código de operaciones.
-- Fuentes de aleatoriedad en cadena.
-- Conceptos de _safe head_ y _finalized blocks_ para iniciar y cerrar los bloques.
+<ul>
+  <li>estructura de bloque</li>
+  <li>secuenciación de bloques/ranuras</li>
+  <li>cambios en el código operativo</li>
+  <li>fuentes de aleatoriedad en cadena</li>
+  <li>concepto de <em>cabeza segura</em> y <em>bloques finalizados</em></li>
+</ul>
 
-Para más información, consulte la publicación de Tim Beiko sobre [Cómo La Fusión influirá en la capa de aplicación de Ethereum](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
+Para obtener más información, eche un vistazo a esta publicación en el blog de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Cómo afecta La Fusión a la capa de aplicación de Ethereum</a>.
+
 </ExpandableCard>
 
 ## La Fusión y el consumo de energía {#merge-and-energy}
@@ -115,26 +118,29 @@ La Fusión coloca a Ethereum en una nueva fase de actualizaciones escalables que
 <ExpandableCard
 title="Concepto erróneo: &quot;Ejecutar un nodo requiere depositar 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+
 Hay dos tipos de nodos en Ethereum: los que pueden proponer bloques y los que no.
 
 Los nodos que proponen bloques son solo un pequeño número total de todos los nodos de Ethereum. Esta categoría incluye los nodos mineros bajo prueba de trabajo (PoW) y los nodos validadores bajo prueba de participación (PoS). Esta categoría requiere comprometer recursos económicos (como el poder de hash de la GPU en una prueba de trabajo o ETH depositado en prueba de participación) a cambio de poder proponer ocasionalmente el siguiente bloque y ganar recompensas del protocolo.
 
 Los demás nodos de la red (es decir, la mayoría) no necesitan comprometer ningún recurso económico más allá de un ordenador de consumo con 1-2 TB de almacenamiento disponible y una conexión a Internet. Estos nodos no proponen bloques, pero siguen desempeñando un papel fundamental en la seguridad de la red, al tener un registro de todos los nodos que sí proponen bloques analizando la inclusión de nuevos y verificando su validez a su llegada, de acuerdo con las reglas de consenso de la red. Si el bloque es válido, el nodo continúa propagándolo por la red. Si el bloque no es válido por cualquier motivo, el software del nodo lo ignorará como no válido y detendrá su propagación.
 
-Cualquier persona puede ejecutar un nodo que no produzca bloques con cualquiera de los dos mecanismos de consenso (prueba de trabajo o prueba de participación); se recomienda encarecidamente a todos los usuarios que dispongan de los medios necesarios. Ejecutar un nodo es inmensamente valioso para Ethereum y aporta beneficios adicionales a cualquier persona que ejecute uno, como la mejora de la seguridad, la privacidad y la resistencia a la censura.
+Cualquier persona bajo cualquier mecanismo de consenso (prueba de trabajo o prueba de participación) puede ejecutar un nodo que no produzca bloques; se <em>recomienda encarecidamente</em> para todos los usuarios si tienen los medios. Ejecutar un nodo es inmensamente valioso para Ethereum y aporta beneficios adicionales a cualquier persona que ejecute uno, como la mejora de la seguridad, la privacidad y la resistencia a la censura.
 
-La posibilidad de que cualquiera pueda dirigir su propio nodo es absolutamente esencial para mantener la descentralización de la red Ethereum.
+La capacidad de cualquier persona tiene de ejecutar su propio nodo es <em>absolutamente esencial</em> para mantener la descentralización de la red Ethereum.
 
-[Más sobre la ejecución de su propio nodo](/run-a-node/)
+<a href="/run-a-node/">Más información sobre cómo ejecutar su propio nodo.</a>
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Concepto erróneo: &quot;La Fusión falló en la reducción de la tarifa de gas.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+
 Las tarifas de gas son producto de la demanda de la red en relación con la capacidad de la misma. La Fusión dejó obsoleto el uso del mecanismo de prueba de trabajo, permitiendo la transición a la prueba de participación para el consenso, pero no cambió de manera significativa ninguno de los parámetros que influyen de manera directa la capacidad o rendimiento de la red.
 
-Con una [hoja de ruta centrada en las acumulaciones](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), los esfuerzos se centran en escalar la actividad de los usuarios en la [capa 2](/layer-2/), al tiempo que se habilita la red principal de la capa 1 como una capa de liquidación descentralizada y segura, optimizada para el almacenamiento de datos de las acumulaciones, para ayudar a abaratar exponencialmente sus transacciones. La transición a la prueba de participación es un precursor fundamental para conseguirlo. [Más sobre el gas y las tasas.](/developers/docs/gas/)
+Con una <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">hoja de ruta centrada en las acumulaciones</a>, los esfuerzos se están centrando en escalar la actividad del usuario en la <a href="/layer-2/">capa 2</a>, al tiempo que se le permite la red principal de la capa 1 ser una capa de liquidación descentralizada segura optimizada para el almacenamiento de datos de la acumulación y así ayudar a hacer que las transacciones sean exponencialmente más baratas. La transición a la prueba de participación es un precursor fundamental para conseguirlo. <a href="/developers/docs/gas/">Más información sobre el gas y las tarifas. </a>
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -150,28 +156,26 @@ La prueba de participación introduce el concepto de finalidad de la transacció
 
 <ExpandableCard
 title="Concepto erróneo: &quot;La Fusión habilitará los retiros de la participación.&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
-El ETH apostado y sus recompensas continúan retenidos sin posibilidad de ser retirados. La actualización de Shanghai contempla las retiradas.
+contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+
+Inicialmente, después de La Fusión, los participantes solo podían acceder a las propinas de tarifas y MEV que se ganaban como resultado de las propuestas de bloques. Estas recompensas se acreditan a una cuenta sin participación controlada por el validador (conocida como el <em>destinatario de la tarifa</em>), y están disponibles de inmediato. Estas recompensas están separadas de las recompensas del protocolo para realizar las tareas de validación.
+
+Desde la mejora de la red Shanghai/Capella, los participantes pueden designar una <em>dirección de retirada</em> para comenzar a recibir pagos automáticos de cualquier saldo en exceso (más de 32 ETH por recompensas del protocolo). Esta actualización también permitió a los validadores desbloquear y reclamar el total de su saldo al salir de la red.
+
+<a href="/staking/withdrawals/">Más información sobre la retirada de participaciones.</a>
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Concepto erróneo: &quot;Los validadores no recibirán ninguna recompensa de ETH líquida hasta la actualización de Shanghai cuando se habiliten las retiradas.&quot;"
-contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
-Podrá resultar contradictorio para lo antes señalado en la nota que las retiradas no estén habilitadas hasta la actualización de Shanghai, no obstante los validadores tendrán acceso inmediato a las recompensas derivadas de las tarifas y MEV de las propuestas de bloques.
-
-El protocolo emite ETH como recompensa a los validadores por contribuir al consenso. La capa de consenso influye en la emisión de nuevo ETH, donde el validador tiene una dirección unica que contendrá el ETH apostado y las recompensas del protocolo. Este ETH está bloqueado hasta Shanghai.
-
-El ETH de la capa de ejecución se cuenta por separado desde la capa de consenso. Cuando los usuarios ejecutan transacciones en la red principal de Ethereum, hay que pagar ETH para cubrir el gas, incluyendo una propina al validador. Este ETH ya se encuentra en la capa de ejecución, el protocolo NO lo emite de nuevo, y está disponible para el validador de forma inmediata (siempre que se proporcione al software cliente una dirección de «recepción de la comisión» adecuada).
-</ExpandableCard>
-
-<ExpandableCard
-title="Concepto erróneo: &quot;Cuando se habiliten las retiradas, todos los participantes se saldrán a la vez.&quot;"
+title="Ideas erróneas: &quot;ahora que se ha completado La Fusión y las retiradas se han activado, los participantes pueden salir todos a la vez.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-Después de que la actualización de Shanghai habilitara las retiradas, se incentivará a todos los validadores a retirar el balance apostado que esté por encima de los 32 ETH, ya que estos fondos no proporcionan mayor rendimiento y que de por sí se encuentran bloqueados. Dependiendo de la TAE (determinada por el total de ETH depositado), pueden ser incentivados a salir de su(s) validadores para reclamar todo su saldo o potencialmente apostar aún más usando sus recompensas para ganar más rendimiento.
+Desde que la actualización Shanghai/Capella activó las retiradas, los validadores tienen el incentivo de retirar su saldo excedente de participación por encima de los 32 ETH, pues estos fondos no suman al rendimiento y sólo están bloqueados. Dependiendo de la tasa efectiva anual (o APR, según sus siglas en inglés), que viene determinada por el total de ETH depositado, se puede animar a su(s) validadores a reclamar todo su saldo o potencialmente apostar aún más usando sus recompensas para ganar más rendimiento.
 
-Una advertencia importante es que las salidas completas de los validadores están limitadas por el protocolo, por lo que solo pueden salir seis validadores por época (cada 6,4 minutos, es decir, 1.350 al día, o solo ~43.200 ETH al día de más de 10 millones de ETH apostados). Este límite se ajusta en función del total de ETH depositado y evita un éxodo masivo de fondos. Además, evita que un atacante potencial utilice su depósito para cometer una acción penalizada con un recorte y que saque todo su saldo en el misma época antes de que el protocolo pueda aplicar la penalización.
+Un detalle importante que cabe recalcar es que el ritmo de las salidas de un validador total las limita el protocolo, y sólo puede salir cierto número de validadores por época (cada 6,4 minutos). Este límite fluctúa dependiendo del número de validadores activos, pero llega a aproximadamente el 0,33 % del total de ETH en participación que puede salir de la red en un solo día.
 
-La TAE es intencionadamente dinámica, lo que permite a un mercado de participantes equilibrar cuánto están dispuestos a recibir para ayudar a asegurar la red. Cuando se habiliten las retiradas, si la tasa es demasiado baja, los validadores saldrán a una tasa limitada por el protocolo. Poco a poco, esto aumentará la TAE para todos los que se queden, atrayendo a nuevos participantes o a los que regresen.
+Esto evita un éxodo masivo de fondos en participación. Además, evita que un potencial atacante con acceso a una gran parte del total de ETH en participación actúe de mala fe y que se pueda recortar/retirar todo el saldo del validador causante en la misma época, antes de que el protocolo pueda hacer cumplir la penalización mediante recorte.
+
+La APR también es intencionalmente dinámica, lo que permite a un mercado de participantes equilibrar cuánto están dispuestos a que se les pague para ayudar a proteger la red. Si la tasa es muy baja, los validadores se retirarán a un ritmo limitado por el protocolo. Poco a poco, esto aumentará la APR para todos los que se queden, atrayendo a nuevos participantes o a los que regresen.
 </ExpandableCard>
 
 ## ¿Qué pasó con «Eth2»? {#eth2}
@@ -203,9 +207,9 @@ En su lugar, los bloques serán propuestos desde un nodo validado que tenga ETH 
 
 ### La Fusión y actualización Shanghai {#merge-and-shanghai}
 
-Con la intención de simplificar y maximizar los esfuerzos centrados en una transición fructífera a la prueba de participación, la actualización de La Fusión no incluirá algunas características previamente anticipadas, como la posibilidad de retirar ETH apostados. Está previsto que la actualización de Shanghái se produzca después de La Fusión, lo que permitirá a los participantes retirarse.
+Con la intención de simplificar y maximizar los esfuerzos centrados en una transición fructífera a la prueba de participación, la actualización de La Fusión no incluirá algunas características previamente anticipadas, como la posibilidad de retirar ETH apostados. Esta funcionalidad se habilitó de forma separada con la actualización Shanghai/Capella.
 
-Manténgase al día sobre la [Planificación de la actualización de Shanghai en GitHub](https://github.com/ethereum/pm/issues/450), o el [Blog de investigación y desarrollo de EF](https://blog.ethereum.org/category/research-and-development/). Aquellos que quieran saber más, pueden ver la charla [Lo que ocurrirá después de La Fusión](https://youtu.be/7ggwLccuN5s?t=101), que dio Vitalik, en el evento ETHGlobal en abril de 2021.
+Aquellos que quieran saber más, pueden ver la charla [Lo que ocurrirá después de La Fusión](https://youtu.be/7ggwLccuN5s?t=101), que dio Vitalik, en el evento ETHGlobal en abril de 2021.
 
 ### La fusión y la fragmentación {#merge-and-data-sharding}
 
