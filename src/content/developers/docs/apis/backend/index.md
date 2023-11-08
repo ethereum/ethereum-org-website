@@ -149,7 +149,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**GetBlock-** **_Blockchain-as-a-service for Web3 developement_**
+**GetBlock-** **_Blockchain-as-a-service for Web3 development_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://getblock.io/docs/)
