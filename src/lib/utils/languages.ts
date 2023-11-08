@@ -1,5 +1,6 @@
 import i18nConfig from '../../../i18n.config.json'
 import type { I18nLocale, Lang } from "@/lib/types"
+import {LOCALES_CODES} from "@/lib/constants"
 
 
 export type Languages = {
@@ -15,7 +16,7 @@ const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
 export const languageMetadata: {
 [lang: string]: Language
 } = Object.fromEntries(
-  Object.entries(languages).filter(([lang]) => {
+  Object.entries(LOCALES_CODES).filter(([lang]) => {
     // BUILD_LANGS === empty means to build all the langs
     if (!buildLangs.length) {
     return true
@@ -27,7 +28,7 @@ export const languageMetadata: {
 
 export const supportedLanguages = Object.keys(languageMetadata) as Array<Lang>
 
-export const ignoreLanguages = (Object.keys(languages) as Array<Lang>).filter(
+export const ignoreLanguages = (Object.keys(LOCALES_CODES) as Array<Lang>).filter(
 (lang) => !supportedLanguages.includes(lang)
 )
 
