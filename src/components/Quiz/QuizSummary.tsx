@@ -1,13 +1,17 @@
 import React, { useEffect } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
+import {
+  HStack,
+  StackDivider,
+  Text,
+  useMediaQuery,
+  VStack,
+} from "@chakra-ui/react"
 
 import { UserStats } from "@/lib/types"
 
 import { numberToPercent } from "@/lib/utils/numberToPercent"
-
-import Text from "../OldText"
 
 import { updateUserStats } from "./utils"
 
@@ -35,7 +39,7 @@ const QuizSummary: React.FC<IProps> = ({
 
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
-  const valueStyles = { fontWeight: "700", mb: 2 }
+  const valueStyles = { fontWeight: "700", lineHeight: 1 }
   const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
 
   // QuizSummary is rendered when user has finished the quiz, proper time to update the stats
@@ -49,7 +53,7 @@ const QuizSummary: React.FC<IProps> = ({
   }, [numberOfCorrectAnswers, quizKey, quizScore, setUserStats])
 
   return (
-    <Box w="full" fontSize={["xl", "2xl"]}>
+    <VStack spacing="3" w="full" fontSize={["xl", "2xl"]}>
       <Text
         fontWeight="700"
         textAlign="center"
@@ -59,44 +63,40 @@ const QuizSummary: React.FC<IProps> = ({
         {isPassingScore ? t("passed") : t("your-results")}
       </Text>
 
-      <Flex
-        p={4}
+      <HStack
+        py="4"
+        px="8"
         justify="center"
         boxShadow="drop"
         bg="background.base"
         mx="auto"
-        w="fit-content"
+        spacing="4"
         sx={{
-          "div:not(:last-of-type)": {
-            borderEnd: "1px",
-            borderColor: "disabled",
-          },
-          div: {
-            p: 4,
-            flexDirection: "column",
-            alignItems: "center",
+          "& > div": {
+            py: "4",
           },
         }}
         overflowX="hidden"
+        divider={<StackDivider borderColor="disabled" />}
       >
-        <Flex>
+        <VStack>
           <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
           <Text {...labelStyles}>{t("score")}</Text>
-        </Flex>
+        </VStack>
 
-        <Flex>
+        <VStack>
           <Text {...valueStyles}>+{numberOfCorrectAnswers}</Text>
           <Text {...labelStyles}>{t("correct")}</Text>
-        </Flex>
+        </VStack>
 
         {largerThanMobile && (
-          <Flex>
+          <VStack>
             <Text {...valueStyles}>{questionCount}</Text>
             <Text {...labelStyles}>{t("questions")}</Text>
-          </Flex>
+          </VStack>
         )}
-      </Flex>
-    </Box>
+      </HStack>
+    </VStack>
   )
 }
 

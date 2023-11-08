@@ -33,7 +33,7 @@ import { mdxTableComponents } from "@/components/Table"
 import YouTube from "@/components/YouTube"
 
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
-import QuizWidget from "./Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
 import DocLink from "./DocLink"
 import Emoji from "./Emoji"
@@ -279,7 +279,7 @@ export const reactComponents = {
   MobileButton,
   MobileButtonDropdown,
   Page,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
   Title,
   YouTube,

@@ -260,6 +260,6 @@ Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare n
 - [Come funzionano gli Optimistic Rollup (La guida completa)](https://www.alchemy.com/overviews/optimistic-rollups)
 - [Everything you need to know about Optimistic Rollup](https://research.paradigm.xyz/rollups)
 - [Guida essenziale ad Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
-- [Come funziona davvero il rollup di Optimism?](https://research.paradigm.xyz/optimism)
+- [Come funziona davvero il rollup di Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [Approfondimento su OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [What is the Optimistic Virtual Machine?](https://www.alchemy.com/overviews/optimistic-virtual-machine)
