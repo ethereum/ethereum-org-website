@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import htmr from "htmr"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
