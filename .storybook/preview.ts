@@ -25,8 +25,18 @@ const preview: Preview = {
       viewports: chakraBreakpointArray.reduce((prevVal, currVal) => {
         const [token, key] = currVal
 
-        // Unnecessary breakpoint
-        if (token === "base") return { ...prevVal }
+        // Replace base value
+        if (token === "base")
+          return {
+            ...prevVal,
+            base: {
+              name: "base",
+              styles: {
+                width: "375px", // A popular minimum mobile width
+                height: "600px",
+              },
+            },
+          }
 
         return {
           ...prevVal,
