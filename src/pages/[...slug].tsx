@@ -39,6 +39,7 @@ import {
 } from "@/layouts"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
+import remarkInferToc, { type TocNodeType } from "@/lib/rehype/remarkInferToc"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -106,10 +107,21 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
 
+  let tocItems: TocNodeType[] = []
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
-      // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
-      remarkPlugins: [remarkGfm],
+      remarkPlugins: [
+        // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
+        remarkGfm,
+        [
+          remarkInferToc,
+          {
+            callback: (toc: TocNodeType) => {
+              tocItems = "items" in toc ? toc.items : []
+            },
+          },
+        ],
+      ],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
         [rehypeHeadingIds],
@@ -118,7 +130,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const timeToRead = readingTime(markdown.content)
-  const tocItems = generateTableOfContents(mdxSource.compiledSource)
+  // const tocItems = generateTableOfContents(mdxSource.compiledSource)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = getLastDeployDate()
