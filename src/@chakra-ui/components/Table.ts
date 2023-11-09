@@ -4,6 +4,7 @@ import {
   cssVar,
   defineStyle,
 } from "@chakra-ui/react"
+
 import { defineMergeStyles, tableDefaultTheme } from "./components.utils"
 
 const { defineMultiStyleConfig, definePartsStyle } =

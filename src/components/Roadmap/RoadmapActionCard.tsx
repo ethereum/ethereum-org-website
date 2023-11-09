@@ -1,17 +1,18 @@
 import {
-  Text,
   Center,
   Flex,
   Heading,
   LinkBox,
   LinkOverlay,
+  Text,
 } from "@chakra-ui/react"
+
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 
 import futureProofing from "@/public/roadmap/roadmap-future.png"
-import scaling from "@/public/roadmap/roadmap-transactions.png"
 import security from "@/public/roadmap/roadmap-security.png"
+import scaling from "@/public/roadmap/roadmap-transactions.png"
 import userExperience from "@/public/roadmap/roadmap-ux.png"
 
 interface IProps {

@@ -1,6 +1,6 @@
 import React from "react"
-import { Icon, Center, Flex } from "@chakra-ui/react"
 import { FaGithub } from "react-icons/fa"
+import { Center, Flex,Icon } from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"

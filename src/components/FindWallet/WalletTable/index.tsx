@@ -1,9 +1,8 @@
-// Libraries
-import React, { ReactNode } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import Select from "react-select"
-import { MdExpandLess, MdExpandMore } from "react-icons/md"
+import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
+import { MdExpandLess, MdExpandMore } from "react-icons/md"
+import Select from "react-select"
 import {
   Box,
   calc,
@@ -12,7 +11,6 @@ import {
   FlexProps,
   forwardRef,
   Icon,
-  Img,
   keyframes,
   SimpleGrid,
   SimpleGridProps,
@@ -23,25 +21,21 @@ import {
   Tr,
 } from "@chakra-ui/react"
 
-// Components
-import InlineLink, { IProps as LinkProps } from "../../Link"
-import { WalletMoreInfo } from "./WalletMoreInfo"
+import { NAV_BAR_PX_HEIGHT } from "../../../constants"
+import { WalletData } from "../../../data/wallets/wallet-data"
+import { ChildOnlyProp } from "../../../types"
+import { getImage } from "../../../utils/image"
+import { trackCustomEvent } from "../../../utils/matomo"
 import GatsbyImage from "../../GatsbyImage"
-import Text from "../../OldText"
-
-// Icons
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "../../icons/staking"
+import InlineLink, { IProps as LinkProps } from "../../Link"
+import Text from "../../OldText"
 
-// Utils
 import { useWalletTable } from "./useWalletTable"
-import { trackCustomEvent } from "../../../utils/matomo"
-import { getImage } from "../../../utils/image"
-import { WalletData } from "../../../data/wallets/wallet-data"
-import { ChildOnlyProp } from "../../../types"
-import { NAV_BAR_PX_HEIGHT } from "../../../constants"
+import { WalletMoreInfo } from "./WalletMoreInfo"
 
 const Container = (props: TableProps) => (
   <Table
@@ -320,7 +314,7 @@ export interface WalletTableProps {
 }
 
 const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
     filteredFeatureDropdownItems,

@@ -1,9 +1,9 @@
 import React from "react"
 import { OrderedList } from "@chakra-ui/react"
 
-import QuizItem from "./QuizItem"
-
 import { QuizzesSection } from "../../types"
+
+import QuizItem from "./QuizItem"
 
 interface IProps {
   content: Array<QuizzesSection>

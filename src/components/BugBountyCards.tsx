@@ -1,22 +1,22 @@
 import React from "react"
 import {
+  Box,
+  BoxProps,
   Center,
   CenterProps,
+  Divider,
   Flex,
   FlexProps,
   Heading,
   HeadingProps,
   TextProps,
-  Divider,
-  Box,
-  BoxProps,
   useToken,
 } from "@chakra-ui/react"
 
 import { TranslationKey } from "../utils/translations"
+
 import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
-
 import Translation from "./Translation"
 
 const CardRow = ({ children }) => (

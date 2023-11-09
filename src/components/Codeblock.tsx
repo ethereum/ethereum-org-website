@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react"
-import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 import Highlight, {
   defaultProps,
   Language,
   PrismTheme,
 } from "prism-react-renderer"
 import Prism from "prism-react-renderer/prism"
+import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
-import Translation from "./Translation"
 import CopyToClipboard from "./CopyToClipboard"
 import Emoji from "./Emoji"
+import Translation from "./Translation"
 
 const LINES_BEFORE_COLLAPSABLE = 8
 
@@ -215,7 +215,6 @@ const Codeblock: React.FC<IProps> = ({
   fromHomepage = false,
 }) => {
   useEffect(() => {
-    
     ;(typeof global !== "undefined" ? global : window).Prism = Prism
 
     // Default languages included:

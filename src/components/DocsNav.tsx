@@ -19,7 +19,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 import type { DeveloperDocsLink } from "@/lib/interfaces"
 import { TranslationKey } from "@/lib/types"
 
-
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex
     direction="column"

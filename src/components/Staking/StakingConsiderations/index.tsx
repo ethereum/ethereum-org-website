@@ -1,19 +1,20 @@
 import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
 
+import type { StakingPage } from "@/lib/types"
+
+import ButtonDropdown from "@/components/ButtonDropdown"
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
-import ButtonDropdown from "@/components/ButtonDropdown"
-import Text from "@/components/OldText"
 import OldHeading from "@/components/OldHeading"
-// TODO: Re-enable after i18n implemented
-// import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
-import type { StakingPage } from "@/lib/types"
 
 const IndicatorGroup = ({
   label,
@@ -47,9 +48,7 @@ const IndicatorGroup = ({
         textAlign="center"
         width={{ base: "fit-content", sm: "max-content" }}
       >
-        {/* TODO: Re-enable after i18n implemented */}
-        {/* <Translation id={label} /> */}
-        {label}
+        <Translation id={label} />
       </Text>
     </VStack>
   )

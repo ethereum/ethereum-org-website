@@ -1,6 +1,6 @@
 import {
-  lightTheme as oldLightTheme,
   darkTheme as oldDarkTheme,
+  lightTheme as oldLightTheme,
 } from "../theme"
 
 /** @deprecated */

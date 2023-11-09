@@ -1,12 +1,15 @@
 import { join } from "path"
+
 import Head from "next/head"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 
-import ogImageDefault from "@/public/home/hero.png"
-import ogImageDevelopers from "@/public/enterprise-eth.png"
-import ogImageDapps from "@/public/doge-computer.png"
-import ogImageUpgrades from "@/public/upgrades/upgrade_doge.png"
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
+
+import ogImageDapps from "@/public/doge-computer.png"
+import ogImageDevelopers from "@/public/enterprise-eth.png"
+import ogImageDefault from "@/public/home/hero.png"
+import ogImageUpgrades from "@/public/upgrades/upgrade_doge.png"
 
 type NameMeta = {
   name: string
@@ -36,17 +39,10 @@ const PageMetadata: React.FC<IProps> = ({
   author,
 }) => {
   const { locale, asPath } = useRouter()
+  const { t } = useTranslation()
 
-  // TODO: Re-implement intl
-  // const { t } = useTranslation()
-
-  // const desc = description || t("site-description")
-  const desc =
-    description ||
-    "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world."
-
-  // const siteTitle = t("site-title")
-  const siteTitle = "ethereum.org"
+  const desc = description || t("site-description")
+  const siteTitle = t("site-title")
   const fullTitle = `${title} | ${siteTitle}`
 
   /* Set canonical URL w/ language path to avoid duplicate content */
@@ -56,20 +52,24 @@ const PageMetadata: React.FC<IProps> = ({
 
   /* Set fallback ogImage based on path */
   let ogImage = ogImageDefault.src
+
   if (asPath.includes("/developers/")) {
     ogImage = ogImageDevelopers.src
   }
+
   if (asPath.includes("/dapps/")) {
     ogImage = ogImageDapps.src
   }
+
   if (asPath.includes("/roadmap/")) {
     ogImage = ogImageUpgrades.src
   }
+
   if (image) {
     ogImage = image
   }
-  const ogImageUrl = join(SITE_URL, ogImage)
 
+  const ogImageUrl = join(SITE_URL, ogImage)
   const metadata: Array<Meta> = [
     { name: `description`, content: desc },
     { name: `image`, content: ogImageUrl },
@@ -92,7 +92,10 @@ const PageMetadata: React.FC<IProps> = ({
     <Head>
       <title>{fullTitle}</title>
       {metadata.map((data) => (
-        <meta key={(data as NameMeta).name || (data as PropMeta).property} {...data} />
+        <meta
+          key={(data as NameMeta).name || (data as PropMeta).property}
+          {...data}
+        />
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
       {/* favicon */}

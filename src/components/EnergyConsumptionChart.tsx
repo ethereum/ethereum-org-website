@@ -1,3 +1,15 @@
+import React from "react"
+import { useTranslation } from "next-i18next"
+import {
+  Bar,
+  BarChart,
+  Cell,
+  LabelList,
+  Legend,
+  ResponsiveContainer,
+  Text,
+  XAxis,
+} from "recharts"
 import {
   Box,
   Center,
@@ -5,21 +17,8 @@ import {
   useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
-import React from "react"
-import {
-  BarChart,
-  Bar,
-  Cell,
-  XAxis,
-  Text,
-  LabelList,
-  ResponsiveContainer,
-  Legend,
-} from "recharts"
-// import { useTranslation } from "gatsby-plugin-react-i18next"
 
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
+import Translation from "@/components/Translation"
 
 interface ITickProps {
   x: number
@@ -49,9 +48,7 @@ const RechartText = chakra(Text, {
       "maxLines",
     ].includes(prop)
 
-    if (isValidRechartProp) return true
-
-    return false
+    return isValidRechartProp
   },
 })
 
@@ -75,93 +72,92 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 const EnergyConsumptionChart: React.FC = () => {
-  // const { t } = useTranslation()
-
+  const { t } = useTranslation(["page-about", "page-what-is-ethereum"])
   const textColor = useToken("colors", "text")
 
   const data = useBreakpointValue<Data>({
     base: [
       {
-        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
+        name: t("energy-consumption-chart-global-data-centers-label"),
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
+        name: t("energy-consumption-chart-btc-pow-label"),
         amount: 149,
         color: "#F2A900",
       },
       {
-        name: "Gaming in the US", // t("energy-consumption-chart-gaming-us-label"),
+        name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
+        name: t("energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
       {
-        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label"),
+        name: t("energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     sm: [
       {
-        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
+        name: t("energy-consumption-chart-global-data-centers-label"),
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
+        name: t("energy-consumption-chart-btc-pow-label"),
         amount: 149,
         color: "#D7B14A",
       },
       {
-        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
+        name: t("energy-consumption-gold-mining-cbeci-label"),
         amount: 131,
         color: "#F2A900",
       },
       {
-        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
+        name: t("energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
       {
-        name: "Netflix", // t("energy-consumption-chart-netflix-label")
+        name: t("energy-consumption-chart-netflix-label"),
         amount: 0.457,
         color: "#E50914",
       },
       {
-        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label"),
+        name: t("energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     md: [
       {
-        name: "Global data centers", // t("energy-consumption-chart-global-data-centers-label")
+        name: t("energy-consumption-chart-global-data-centers-label"),
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: "BTC PoW", // t("energy-consumption-chart-btc-pow-label")
+        name: t("energy-consumption-chart-btc-pow-label"),
         amount: 149,
         color: "#D7B14A",
       },
       {
-        name: "Gold mining", // t("energy-consumption-gold-mining-cbeci-label")
+        name: t("energy-consumption-gold-mining-cbeci-label"),
         amount: 131,
         color: "#D7B14A",
       },
       {
-        name: "Gaming in the US", // t("energy-consumption-chart-gaming-us-label"),
+        name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: "ETH PoW", //t("energy-consumption-chart-eth-pow-label"),
+        name: t("energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
@@ -171,22 +167,22 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#E50914",
       },
       {
-        name: "Netflix", // t("energy-consumption-chart-netflix-label")
+        name: t("energy-consumption-chart-netflix-label"),
         amount: 0.457,
         color: "#E50914",
       },
       {
-        name: "PayPal", // t("energy-consumption-chart-paypal-label")
+        name: t("energy-consumption-chart-paypal-label"),
         amount: 0.26,
         color: "#C1B6F5",
       },
       {
-        name: "AirBnB", // t("energy-consumption-chart-airbnb-label")
+        name: t("energy-consumption-chart-airbnb-label"),
         amount: 0.02,
         color: "#E50914",
       },
       {
-        name: "ETH PoS", // t("energy-consumption-chart-eth-pos-label"),
+        name: t("energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
@@ -213,9 +209,7 @@ const EnergyConsumptionChart: React.FC = () => {
             <Legend
               content={
                 <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  {/* TODO: add `Translation` after setting up i18n */}
-                  {/* <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" /> */}
-                  Annual Energy Consumption in TWh/yr
+                  <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
                 </Box>
               }
             />

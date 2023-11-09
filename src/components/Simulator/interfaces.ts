@@ -1,5 +1,6 @@
-import { IconProps } from "@chakra-ui/react"
 import type { ReactElement } from "react"
+import { IconProps } from "@chakra-ui/react"
+
 import type { PathId } from "./types"
 
 export interface SimulatorPathSummary {

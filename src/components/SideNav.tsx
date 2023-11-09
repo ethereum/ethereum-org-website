@@ -1,11 +1,11 @@
-import React, { useState, useEffect, ReactNode } from "react"
-import { Box, HStack, Icon } from "@chakra-ui/react"
-
+import { ReactNode, useEffect, useState } from "react"
 import { motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 
-import { BaseLink, LinkProps } from "./Link"
-import Translation from "./Translation"
+
+import { BaseLink, LinkProps } from "@/components/Link"
+import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "@/lib/interfaces"
@@ -69,6 +69,7 @@ export interface IPropsNavLink {
 }
 
 const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
+  const { t } = useTranslation("page-developers-docs")
   const isLinkInPath = path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
@@ -87,12 +88,12 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </SideNavLink>
           )}
           {!item.to && (
             <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </Box>
           )}
           <Box
@@ -127,7 +128,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
     <Box>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
-          <Translation id={item.id} />
+          {t(item.id)}
         </SideNavLink>
       </LinkContainer>
     </Box>
@@ -143,8 +144,7 @@ export interface SideNavProps {
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav: React.FC<SideNavProps> = ({ path }) => {
-  // TODO: Implement intl
-  // const { t } = useTranslation()
+  const { t } = useTranslation("page-developers-docs")
 
   return (
     <Box
@@ -163,8 +163,7 @@ const SideNav: React.FC<SideNavProps> = ({ path }) => {
       borderRight="1px solid"
       borderRightColor="border"
       display={{ base: "none", lg: "block" }}
-      // TODO: Implement intl
-      // aria-label={t("nav-developers-docs")}
+      aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
         <NavLink item={item} path={path} key={idx} />

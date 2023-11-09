@@ -1,6 +1,6 @@
-import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import { useEffect, useState } from "react"
 import { shuffle } from "lodash"
+import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"

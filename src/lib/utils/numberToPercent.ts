@@ -1,5 +1,6 @@
-import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 import type { Lang } from "@/lib/types"
+
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE } from "../constants"
 

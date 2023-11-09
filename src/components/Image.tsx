@@ -1,5 +1,5 @@
-import { chakra, ChakraComponent, HTMLChakraProps } from "@chakra-ui/react"
 import NextImage, { ImageProps as NextImageProps } from "next/image"
+import { chakra, ChakraComponent, HTMLChakraProps } from "@chakra-ui/react"
 
 export type ImageProps = NextImageProps &
   Omit<HTMLChakraProps<"img">, keyof NextImageProps>
