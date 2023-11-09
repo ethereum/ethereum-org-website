@@ -14,7 +14,7 @@ const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
 // will take the same shape as `languages`. Only thing we are doing
 // here is filtering the desired langs to be built
 export const languageMetadata: {
-[lang: string]: Language
+[lang: string]: any
 } = Object.fromEntries(
   Object.entries(LOCALES_CODES).filter(([lang]) => {
     // BUILD_LANGS === empty means to build all the langs

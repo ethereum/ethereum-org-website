@@ -1,4 +1,4 @@
-import type { Frontmatter, Lang, TranslationKey } from "./types"
+import type { Frontmatter, Lang, TranslationKey, ToCItem } from "@/lib/types"
 
 /**
  * Quiz data interfaces
