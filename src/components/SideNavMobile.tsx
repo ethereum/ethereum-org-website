@@ -5,7 +5,7 @@ import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
-import { isLang } from "@/lib/utils/languages"
+import { isLang } from "@/lib/utils/translations"
 import {
   dropdownIconContainerVariant,
   IPropsNavLink as INavLinkProps,

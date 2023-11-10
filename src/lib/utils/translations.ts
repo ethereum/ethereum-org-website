@@ -15,3 +15,7 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
+
+export const isLang = (lang: string) => {
+  return i18nConfigs.map((language) => language.code).includes(lang)
+} 
