@@ -18,7 +18,7 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { generateTableOfContents } from "@/lib/utils/toc"
+import { remapTableOfContents } from "@/lib/utils/toc"
 
 import {
   roadmapComponents,
@@ -107,7 +107,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
 
-  let tocItems: TocNodeType[] = []
+  let tocNodeItems: TocNodeType[] = []
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       remarkPlugins: [
@@ -117,7 +117,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
           remarkInferToc,
           {
             callback: (toc: TocNodeType) => {
-              tocItems = "items" in toc ? toc.items : []
+              tocNodeItems = "items" in toc ? toc.items : []
             },
           },
         ],
@@ -130,7 +130,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const timeToRead = readingTime(markdown.content)
-  // const tocItems = generateTableOfContents(mdxSource.compiledSource)
+  const tocItems = remapTableOfContents(tocNodeItems)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = getLastDeployDate()
