@@ -34,7 +34,7 @@ Trustlessness is arguably the biggest premise for smart contracts and [decentral
 
 For a smart contract to be trustless, the contract code should be available for independent verification. While the compiled bytecode for every smart contract is publicly available on the blockchain, low-level language is difficult to understand—for both developers and users.
 
-Projects reduce trust assumptions by publishing the source code of their contracts. But this leads to another problem: it is difficult to verify that the published source code match the contract bytecode. In this scenario, the value of trustlessness is lost because users have to trust developers not to change a contract's business logic (i.e., by changing the bytecode) before deploying it on the blockchain.
+Projects reduce trust assumptions by publishing the source code of their contracts. But this leads to another problem: it is difficult to verify that the published source code matches the contract bytecode. In this scenario, the value of trustlessness is lost because users have to trust developers not to change a contract's business logic (i.e., by changing the bytecode) before deploying it on the blockchain.
 
 Source code verification tools provide guarantees that a smart contract’s source code files matches the assembly code. The result is a trustless ecosystem, where users don’t blindly trust third parties and instead verify code before depositing funds into a contract.
 
