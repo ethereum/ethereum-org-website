@@ -26,7 +26,7 @@ While it is possible to upgrade a contract if a bug is discovered, upgrades are 
 
 ## Methods for testing smart contracts {#methods-for-testing-smart-contracts}
 
-Methods for testing Ethereum smart contracts exist fall under two broad categories: **automated testing** and **manual testing**. Automated testing and manual testing offer unique benefits and tradeoffs, but you can combine both to create a robust plan for analyzing your contracts.
+Methods for testing Ethereum smart contracts fall under two broad categories: **automated testing** and **manual testing**. Automated testing and manual testing offer unique benefits and tradeoffs, but you can combine both to create a robust plan for analyzing your contracts.
 
 ### Automated testing {#automated-testing}
 
