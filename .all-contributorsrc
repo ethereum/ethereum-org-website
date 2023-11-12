@@ -10767,6 +10767,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "pseudomata",
+      "name": "Pseudomata",
+      "avatar_url": "https://avatars.githubusercontent.com/u/132238190?v=4",
+      "profile": "https://pseudomata.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
