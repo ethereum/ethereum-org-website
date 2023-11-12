@@ -32,7 +32,6 @@ import UpgradeStatus from "../components/UpgradeStatus"
 import { BaseLink } from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
-import ShardChainsList from "../components/ShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
@@ -201,7 +200,6 @@ const components = {
   Emoji,
   UpgradeStatus,
   BeaconChainActions,
-  ShardChainsList,
   MergeArticleList,
   YouTube,
   ExpandableCard,
