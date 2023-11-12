@@ -157,10 +157,15 @@ const parseItem = (item: ToCItem): ToCItem => {
  */
 
 export const remapTableOfContents = (
-  tocNodeItems: TocNodeType[]
+  tocNodeItems: TocNodeType[],
+  compiledSource: string
 ): ToCItem[] => {
+  const h1Count = Array.from(compiledSource.matchAll(/mdx\("h1"/g)).length
+  if ("url" in tocNodeItems[0] && h1Count > 1) {
+    console.warn("More than one h1 found in file at id:", tocNodeItems[0].url)
+  }
   const items = (
-    tocNodeItems.length === 1 && "items" in tocNodeItems[0]
+    h1Count > 0 && "items" in tocNodeItems[0]
       ? tocNodeItems[0].items
       : tocNodeItems
   ) as ToCItem[]

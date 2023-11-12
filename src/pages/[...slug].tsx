@@ -130,7 +130,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const timeToRead = readingTime(markdown.content)
-  const tocItems = remapTableOfContents(tocNodeItems)
+  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = getLastDeployDate()
