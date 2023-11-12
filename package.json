@@ -37,7 +37,7 @@
     "remark-gfm": "^3.0.1"
   },
   "devDependencies": {
-    "@chakra-ui/storybook-addon": "0.0.0-dev-20231109125555",
+    "@chakra-ui/storybook-addon": "5.1.0",
     "@netlify/plugin-nextjs": "^4.40.2",
     "@storybook/addon-essentials": "7.5.3",
     "@storybook/addon-interactions": "7.5.3",
