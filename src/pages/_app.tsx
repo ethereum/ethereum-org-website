@@ -1,15 +1,15 @@
-import { extendBaseTheme } from "@chakra-ui/react"
+import { appWithTranslation } from "next-i18next"
 // ChakraProvider import updated as recommended on https://github.com/chakra-ui/chakra-ui/issues/4975#issuecomment-1174234230
 // to reduce bundle size. Should be reverted to "@chakra-ui/react" in case on theme issues
 import { ChakraProvider } from "@chakra-ui/provider"
-// Chakra custom theme
-import _theme from "@/@chakra-ui/theme"
-// Fonts
-import { inter, mono } from "@/lib/fonts"
-// Types
-import { AppPropsWithLayout, Lang } from "@/lib/types"
+import { extendBaseTheme } from "@chakra-ui/react"
+
+import customTheme from "@/@chakra-ui/theme"
+
+import { AppPropsWithLayout } from "@/lib/types"
 import { useRouter } from "next/router"
-import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { inter, mono } from "@/lib/fonts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   const { locale } = useRouter()
 
   const theme = extendBaseTheme({
-    ..._theme,
+    ...customTheme,
     direction: isLangRightToLeft(locale as Lang) ? "rtl" : "ltr",
   })
 
@@ -40,4 +40,4 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   )
 }
 
-export default App
+export default appWithTranslation(App)

@@ -1,16 +1,10 @@
 import { Box, Flex, Show, SimpleGrid, Wrap, WrapItem } from "@chakra-ui/react"
 
-import { Button, ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
-import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { Button, ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
-import OldText from "@/components/OldText"
-import Pill from "@/components/Pill"
-import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
-import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import { Image } from "@/components/Image"
 import {
   ContentContainer,
   InfoColumn,
@@ -21,6 +15,12 @@ import {
   StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
+import OldText from "@/components/OldText"
+import Pill from "@/components/Pill"
+import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
+import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"

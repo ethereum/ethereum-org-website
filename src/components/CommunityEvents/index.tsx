@@ -1,6 +1,7 @@
-//Libraries
-import React from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { DateTime, DateTimeFormatOptions } from "luxon"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { FaDiscord } from "react-icons/fa"
 import {
   Box,
   Center,
@@ -10,20 +11,14 @@ import {
   GridItem,
   Icon,
 } from "@chakra-ui/react"
-import { FaDiscord } from "react-icons/fa"
-import { DateTime, DateTimeFormatOptions } from "luxon"
 
-// Components
+import { trackCustomEvent } from "../../utils/matomo"
 import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
-import Translation from "../Translation"
-import Text from "../OldText"
 import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import Translation from "../Translation"
 
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
-
-// Hooks
 import {
   type Event as EventType,
   useCommunityEvents,
@@ -83,8 +78,8 @@ const Event = ({ event, language, type }: EventProps) => {
 }
 
 const CommunityEvents = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-index")
   const { pastEventData, upcomingEventData, loading, hasError } =
     useCommunityEvents()
 
@@ -139,7 +134,7 @@ const CommunityEvents = () => {
                     {upcomingEventData[0].title}
                   </Text>
                   <Text m={0} fontSize="xl">
-                    {renderEventDateTime(upcomingEventData[0].date, language)}
+                    {renderEventDateTime(upcomingEventData[0].date, locale!)}
                   </Text>
                   <Text color="body.medium" fontSize="md">
                     ({Intl.DateTimeFormat().resolvedOptions().timeZone})
@@ -192,7 +187,7 @@ const CommunityEvents = () => {
             </Text>
           ) : upcomingEventData.slice(1).length ? (
             upcomingEventData.slice(1).map((item) => {
-              return <Event event={item} language={language} type="upcoming" />
+              return <Event event={item} language={locale!} type="upcoming" />
             })
           ) : (
             <Text mx="auto">
@@ -213,7 +208,7 @@ const CommunityEvents = () => {
             </Text>
           ) : pastEventData.length ? (
             pastEventData.map((item) => {
-              return <Event event={item} language={language} type="past" />
+              return <Event event={item} language={locale!} type="past" />
             })
           ) : (
             <Text mx="auto">

@@ -6,26 +6,27 @@ import {
   TextProps,
   UnorderedList,
 } from "@chakra-ui/react"
+
 import Emoji from "../components/Emoji"
-import type { SimulatorData } from "../components/Simulator/types"
-import {
-  ConnectWeb3,
-  CreateAccount,
-  SendReceive,
-} from "../components/Simulator/screens"
-import {
-  CreateAccountIcon,
-  ConnectWeb3Icon,
-  SendReceiveIcon,
-} from "../components/Simulator/icons"
+import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import Link from "../components/Link"
 import {
   CONNECT_WEB3,
   CREATE_ACCOUNT,
   SEND_RECEIVE,
 } from "../components/Simulator/constants"
-import Link from "../components/Link"
-import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
+import {
+  ConnectWeb3Icon,
+  CreateAccountIcon,
+  SendReceiveIcon,
+} from "../components/Simulator/icons"
+import {
+  ConnectWeb3,
+  CreateAccount,
+  SendReceive,
+} from "../components/Simulator/screens"
 import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
+import type { SimulatorData } from "../components/Simulator/types"
 
 const Text: React.FC<TextProps> = (props) => <ChakraText mb={4} {...props} />
 

@@ -1,20 +1,19 @@
 import React, { ReactNode, useState } from "react"
+import { AnimatePresence,motion } from "framer-motion"
+import { MdExpandMore } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import { motion, AnimatePresence } from "framer-motion"
-import { MdExpandMore } from "react-icons/md"
+import docLinks from "../data/developer-docs-links.yaml"
+import { DeveloperDocsLink } from "../types"
+import { isLang } from "../utils/languages"
+import { TranslationKey } from "../utils/translations"
 
 import { BaseLink, IProps as ILinkProps } from "./Link"
-import Translation from "./Translation"
-import { isLang } from "../utils/languages"
 import {
   dropdownIconContainerVariant,
   IPropsNavLink as INavLinkProps,
 } from "./SideNav"
-
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { TranslationKey } from "../utils/translations"
+import Translation from "./Translation"
 
 // Traverse all links to find page id
 const getPageTitleId = (

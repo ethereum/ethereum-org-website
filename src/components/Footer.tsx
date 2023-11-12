@@ -1,3 +1,8 @@
+// TODO
+import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
   Flex,
@@ -8,21 +13,14 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-// TODO
-// import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import React from "react"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
-import { useRouter } from "next/router"
-
-import { BaseLink } from "./Link"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { Lang, TranslationKey } from "@/lib/types"
 
-// TODO
-// import Translation from "./Translation"
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const socialLinks = [
   {
@@ -59,64 +57,63 @@ export interface IProps {
 
 const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
   const { locale } = useRouter()
-  // TODO: enable after setting i18n UI strings
-  // const { t } = useTranslation()
+  const { t } = useTranslation("common")
 
   const isPageRightToLeft = isLangRightToLeft(locale as Lang)
   // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
   const linkSections: Array<LinkSection> = [
     {
-      title: "Use Ethereum", // t("use-ethereum"),
+      title: t("use-ethereum"),
       links: [
         {
           to: "/wallets/find-wallet/",
-          text: "Find wallet", // t("find-wallet"),
+          text: t("find-wallet"),
         },
         {
           to: `/get-eth/`,
-          text: "Get ETH", // t("get-eth"),
+          text: t("get-eth"),
         },
         {
           to: `/dapps/`,
-          text: "Decentralized applications (dapps)", // t("decentralized-applications-dapps"),
+          text: t("decentralized-applications-dapps"),
         },
         {
           to: "/layer-2/",
-          text: "Layer 2", // t("layer-2"),
+          text: t("layer-2"),
         },
         {
           to: "/run-a-node/",
-          text: "Run a node", // t("run-a-node"),
+          text: t("run-a-node"),
         },
         {
           to: `/stablecoins/`,
-          text: "Stablecoins", // t("stablecoins"),
+          text: t("stablecoins"),
         },
         {
           to: `/staking/`,
-          text: "Stake ETH", // t("stake-eth"),
+          text: t("stake-eth"),
         },
       ],
     },
     {
-      title: "Learn", // t("learn"),
+      title: t("learn"),
       links: [
         {
           to: `/learn/`,
-          text: "Learn Hub", // t("learn-hub"),
+          text: t("learn-hub"),
         },
         {
           to: `/what-is-ethereum/`,
-          text: "What is Ethereum?", // t("what-is-ethereum"),
+          text: t("what-is-ethereum"),
         },
         {
           to: `/eth/`,
-          text: "What is ether (ETH)?", // t("what-is-ether"),
+          text: t("what-is-ether"),
         },
         {
           to: `/wallets/`,
-          text: "Ethereum wallets", // t("ethereum-wallets"),
+          text: t("ethereum-wallets"),
         },
         {
           to: "/gas/",
@@ -124,172 +121,172 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
         },
         {
           to: "/security/",
-          text: "Ethereum security and scam prevention", // t("ethereum-security"),
+          text: t("ethereum-security"),
         },
         {
           to: "/web3/",
-          text: "What is Web3?", // t("web3"),
+          text: t("web3"),
         },
         {
           to: "/smart-contracts/",
-          text: "Smart contracts", // t("smart-contracts"),
+          text: t("smart-contracts"),
         },
         {
           to: "/energy-consumption/",
-          text: "Ethereum energy consumption", // t("energy-consumption"),
+          text: t("energy-consumption"),
         },
         {
           to: "/roadmap/",
-          text: "Ethereum roadmap", // t("ethereum-roadmap"),
+          text: t("ethereum-roadmap"),
         },
         {
           to: "/eips/",
-          text: "Ethereum Improvement Proposals", // t("eips"),
+          text: t("eips"),
         },
         {
           to: "/history/",
-          text: "History of Ethereum", // t("history-of-ethereum"),
+          text: t("history-of-ethereum"),
         },
         {
           to: "/whitepaper/",
-          text: "Ethereum Whitepaper", // t("ethereum-whitepaper"),
+          text: t("ethereum-whitepaper"),
         },
         {
           to: `/glossary/`,
-          text: "Ethereum glossary", // t("ethereum-glossary"),
+          text: t("ethereum-glossary"),
         },
         {
           to: "/governance/",
-          text: "Ethereum governance", // t("ethereum-governance"),
+          text: t("ethereum-governance"),
         },
         {
           to: "/bridges/",
-          text: "Blockchain bridges", // t("bridges"),
+          text: t("bridges"),
         },
         {
           to: "/zero-knowledge-proofs/",
-          text: "Zero-knowledge proofs", // t("zero-knowledge-proofs"),
+          text: t("zero-knowledge-proofs"),
         },
         {
           to: "/quizzes/",
-          text: "Quiz Hub", // t("quizzes-title"),
+          text: t("quizzes-title"),
         },
       ],
     },
     {
-      title: "Developers", // t("developers"),
+      title: t("developers"),
       links: [
         {
           to: `/developers/`,
-          text: "Get started", // t("get-started"),
+          text: t("get-started"),
           isPartiallyActive: false,
         },
         {
           to: `/developers/docs/`,
-          text: "Documentation", // t("documentation"),
+          text: t("documentation"),
         },
         {
           to: `/developers/tutorials/`,
-          text: "Tutorials", // t("tutorials"),
+          text: t("tutorials"),
         },
         {
           to: `/developers/learning-tools/`,
-          text: "Learn by coding", // t("learn-by-coding"),
+          text: t("learn-by-coding"),
         },
         {
           to: `/developers/local-environment/`,
-          text: "Set up local environment", // t("set-up-local-env"),
+          text: t("set-up-local-env"),
         },
       ],
     },
     {
-      title: "Ecosystem", // t("ecosystem"),
+      title: t("ecosystem"),
       links: [
         {
           to: `/community/`,
-          text: "Community hub", // t("community-hub"),
+          text: t("community-hub"),
         },
         {
           to: "/foundation/",
-          text: "Ethereum Foundation", // t("ethereum-foundation"),
+          text: t("ethereum-foundation"),
         },
         {
           to: "https://blog.ethereum.org/",
-          text: "Ethereum Foundation Blog", // t("ef-blog"),
+          text: t("ef-blog"),
         },
         {
           to: "https://esp.ethereum.foundation",
-          text: "Ecosystem Support Program", // t("esp"),
+          text: t("esp"),
         },
         {
           to: "/bug-bounty/",
-          text: "Ethereum bug bounty program", // t("ethereum-bug-bounty"),
+          text: t("ethereum-bug-bounty"),
         },
         {
           to: "/community/grants",
-          text: "Ecosystem Grant Programs", // t("grant-programs"),
+          text: t("grant-programs"),
         },
         {
           to: "/assets/",
-          text: "Ethereum brand assets", // t("ethereum-brand-assets"),
+          text: t("ethereum-brand-assets"),
         },
         {
           to: "https://devcon.org/",
-          text: "Devcon", // t("devcon"),
+          text: t("devcon"),
         },
       ],
     },
     {
-      title: "Enterprise", // t("enterprise"),
+      title: t("enterprise"),
       links: [
         {
           to: "/enterprise/",
-          text: "Mainnet Ethereum", // t("mainnet-ethereum"),
+          text: t("mainnet-ethereum"),
         },
         {
           to: "/enterprise/private-ethereum/",
-          text: "Private Ethereum", // t("private-ethereum"),
+          text: t("private-ethereum"),
         },
         {
           to: "/enterprise/",
-          text: "Enterprise", // t("enterprise"),
+          text: t("enterprise"),
         },
       ],
     },
     {
-      title: "About ethereum.org", // t("about-ethereum-org"),
+      title: t("about-ethereum-org"),
       links: [
         {
           to: "/about/",
-          text: "About us", // t("about-us"),
+          text: t("about-us"),
         },
         {
           to: "/about/#open-jobs",
-          text: "Jobs", // t("jobs"),
+          text: t("jobs"),
         },
         {
           to: "/contributing/",
-          text: "Contributing", // t("contributing"),
+          text: t("contributing"),
         },
         {
           to: "/languages/",
-          text: "Language support", // t("language-support"),
+          text: t("language-support"),
         },
         {
           to: "/privacy-policy/",
-          text: "Privacy policy", // t("privacy-policy"),
+          text: t("privacy-policy"),
         },
         {
           to: "/terms-of-use/",
-          text: "Terms of use", // t("terms-of-use"),
+          text: t("terms-of-use"),
         },
         {
           to: "/cookie-policy/",
-          text: "Cookie policy", // t("cookie-policy"),
+          text: t("cookie-policy"),
         },
         {
           to: "mailto:press@ethereum.org",
-          text: "Contact", // t("contact"),
+          text: t("contact"),
         },
       ],
     },
@@ -304,9 +301,7 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
         flexWrap="wrap"
       >
         <Box color="text200">
-          {/* TODO */}
-          {/* <Translation id="website-last-updated" />:{" "} */}
-          Website last updated:{" "}
+          <Translation id="website-last-updated" />:{" "}
           {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
         </Box>
         <Box my={4}>
@@ -347,9 +342,7 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
         {linkSections.map((section: LinkSection, idx) => (
           <Box key={idx}>
             <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
-              {/* TODO */}
-              {/* <Translation id={section.title} /> */}
-              {section.title}
+              <Translation id={section.title} />
             </Heading>
             <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
               {section.links.map((link, linkIdx) => (

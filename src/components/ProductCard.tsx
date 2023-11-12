@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useQuery, gql } from "@apollo/client"
+import { gql,useQuery } from "@apollo/client"
 import {
   Badge,
   Box,
@@ -12,10 +12,10 @@ import {
   TextProps,
 } from "@chakra-ui/react"
 
-import GitStars from "./GitStars"
 import { ButtonLink } from "./Buttons"
-import Text from "./OldText"
 import GatsbyImage from "./GatsbyImage"
+import GitStars from "./GitStars"
+import Text from "./OldText"
 
 const REPO_DATA = gql`
   query RepoData(

@@ -1,15 +1,19 @@
 import React, { useEffect } from "react"
-import { Box, Flex, useMediaQuery } from "@chakra-ui/react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import {
+  HStack,
+  StackDivider,
+  Text,
+  useMediaQuery,
+  VStack,
+} from "@chakra-ui/react"
 
-import Text from "../OldText"
-import { numberToPercent } from "@/lib/utils/numberToPercent"
-import { updateUserStats } from "./utils"
 import { UserStats } from "@/lib/types"
 
-// TODO: Re-enable when i18n is implemented and remove placeholders throughout
-// import { useI18next } from "gatsby-plugin-react-i18next"
-// import Translation from "../Translation"
+import { numberToPercent } from "@/lib/utils/numberToPercent"
+
+import { updateUserStats } from "./utils"
 
 interface IProps {
   quizKey: string
@@ -31,10 +35,11 @@ const QuizSummary: React.FC<IProps> = ({
   setUserStats,
 }) => {
   const { locale } = useRouter()
+  const { t } = useTranslation("learn-quizzes")
 
   const [largerThanMobile] = useMediaQuery("(min-width: 30em)")
 
-  const valueStyles = { fontWeight: "700", mb: 2 }
+  const valueStyles = { fontWeight: "700", lineHeight: 1 }
   const labelStyles = { fontSize: "sm", m: 0, color: "disabled" }
 
   // QuizSummary is rendered when user has finished the quiz, proper time to update the stats
@@ -48,70 +53,50 @@ const QuizSummary: React.FC<IProps> = ({
   }, [])
 
   return (
-    <Box w="full" fontSize={["xl", "2xl"]}>
+    <VStack spacing="3" w="full" fontSize={["xl", "2xl"]}>
       <Text
         fontWeight="700"
         textAlign="center"
         color={isPassingScore ? "success.base" : "body.base"}
         fontSize="3xl"
       >
-        {/* {isPassingScore ? (
-          <Translation id="passed" />
-        ) : (
-          <Translation id="your-results" />
-        )} */}
-        {isPassingScore ? "Passed" : "Your results"}
+        {isPassingScore ? t("passed") : t("your-results")}
       </Text>
 
-      <Flex
-        p={4}
+      <HStack
+        py="4"
+        px="8"
         justify="center"
         boxShadow="drop"
         bg="background.base"
         mx="auto"
-        w="fit-content"
+        spacing="4"
         sx={{
-          "div:not(:last-of-type)": {
-            borderEnd: "1px",
-            borderColor: "disabled",
-          },
-          div: {
-            p: 4,
-            flexDirection: "column",
-            alignItems: "center",
+          "& > div": {
+            py: "4",
           },
         }}
         overflowX="hidden"
+        divider={<StackDivider borderColor="disabled" />}
       >
-        <Flex>
-          <Text {...valueStyles}>
-            {numberToPercent(ratioCorrect, locale)}
-          </Text>
-          <Text {...labelStyles}>
-            {/* <Translation id="score" /> */}
-            Score
-          </Text>
-        </Flex>
+        <VStack>
+          <Text {...valueStyles}>{numberToPercent(ratioCorrect, locale)}</Text>
+          <Text {...labelStyles}>{t("score")}</Text>
+        </VStack>
 
-        <Flex>
+        <VStack>
           <Text {...valueStyles}>+{numberOfCorrectAnswers}</Text>
-          <Text {...labelStyles}>
-            {/* <Translation id="correct" /> */}
-            Correct
-          </Text>
-        </Flex>
+          <Text {...labelStyles}>{t("correct")}</Text>
+        </VStack>
 
         {largerThanMobile && (
-          <Flex>
+          <VStack>
             <Text {...valueStyles}>{questionCount}</Text>
-            <Text {...labelStyles}>
-              {/* <Translation id="questions" /> */}
-              Questions
-            </Text>
-          </Flex>
+            <Text {...labelStyles}>{t("questions")}</Text>
+          </VStack>
         )}
-      </Flex>
-    </Box>
+      </HStack>
+    </VStack>
   )
 }
 

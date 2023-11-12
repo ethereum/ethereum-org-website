@@ -45,8 +45,8 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Decentralized finance (DeFi)](/defi/)
 - [Introduction to smart contracts](/smart-contracts/)
-- [Decentralized identity)](/decentralized-identity/)
-- [Decentralized social networks)](/social-networks/)
+- [Decentralized identity](/decentralized-identity/)
+- [Decentralized social networks](/social-networks/)
 - [Decentralized science (DeSci))](/desci/)
 
 ## 6) Staking pages {#staking-pages}

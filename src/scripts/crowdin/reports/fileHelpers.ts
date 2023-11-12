@@ -1,7 +1,9 @@
 import fs from "fs"
 import path from "path"
-import { filterAndFormatData } from "./dataHelpers"
+
 import { getLangCodeFromCrowdinCode } from "../utils"
+
+import { filterAndFormatData } from "./dataHelpers"
 
 export type CombinedData = {
   lang: string

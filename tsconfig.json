@@ -136,7 +136,6 @@
     "./src/components/Tag/Tag.stories.tsx",
     "./src/components/Tag/index.tsx",
     "./src/components/TitleCardList.tsx",
-    "./src/components/Translation.tsx",
     "./src/components/TranslationLeaderboard.tsx",
     "./src/components/Trilemma/Triangle.tsx",
     "./src/components/Trilemma/index.tsx",

@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react"
-
+import { useEffect, useState } from "react"
+import { useTranslation } from "next-i18next"
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
-import { ButtonLink } from "./Buttons"
-// import Translation from "./Translation"
-import Emoji from "./Emoji"
 
 import { DEFAULT_LOCALE } from "../lib/constants"
+
+import { ButtonLink } from "./Buttons"
+import Emoji from "./Emoji"
 
 export interface IProps {
   shouldShow: boolean
@@ -22,6 +22,7 @@ const TranslationBanner: React.FC<IProps> = ({
 }) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
   const [textColor] = useToken("colors", ["text"])
+  const { t } = useTranslation("common")
 
   useEffect(() => {
     setIsOpen(shouldShow)
@@ -75,9 +76,7 @@ const TranslationBanner: React.FC<IProps> = ({
               lineHeight="100%"
               my="0"
             >
-              {/* TODO: enable after setting i18n UI strings */}
-              {/* <Translation id={headerTextId} /> */}
-              {headerTextId}
+              {t(headerTextId)}
             </Heading>
             <Emoji
               text=":globe_showing_asia_australia:"
@@ -86,20 +85,14 @@ const TranslationBanner: React.FC<IProps> = ({
               mb={{ base: 4, sm: "auto" }}
             />
           </Flex>
-          <p>
-            {/* TODO: enable after setting i18n UI strings */}
-            {/* <Translation id={bodyTextId} /> */}
-            {bodyTextId}
-          </p>
+          <p>{t(bodyTextId)}</p>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
             flexDirection={{ base: "column", sm: "row" }}
           >
             <Box>
               <ButtonLink to="/contributing/translation-program/">
-                {/* TODO: enable after setting i18n UI strings */}
-                {/* <Translation id="translation-banner-button-translate-page" /> */}
-                translation-banner-button-translate-page
+                {t("translation-banner-button-translate-page")}
               </ButtonLink>
             </Box>
             {!isPageContentEnglish && (
@@ -113,9 +106,7 @@ const TranslationBanner: React.FC<IProps> = ({
                   color="#333333"
                   lang={DEFAULT_LOCALE}
                 >
-                  {/* TODO: enable after setting i18n UI strings */}
-                  {/* <Translation id="translation-banner-button-see-english" /> */}
-                  translation-banner-button-see-english
+                  {t("translation-banner-button-see-english")}
                 </ButtonLink>
               </Box>
             )}

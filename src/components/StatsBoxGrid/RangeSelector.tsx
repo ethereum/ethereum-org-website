@@ -1,8 +1,9 @@
 import React from "react"
 import { Button } from "@chakra-ui/react"
-import { ranges } from "./useStatsBoxGrid"
 
 import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
+
+import { ranges } from "./useStatsBoxGrid"
 
 interface IRangeSelectorProps {
   state: string

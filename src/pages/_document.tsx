@@ -7,6 +7,9 @@ import NextDocument, {
   NextScript,
   DocumentContext,
 } from "next/document"
+import { ColorModeScript } from "@chakra-ui/react"
+
+import theme from "@/@chakra-ui/theme"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {
@@ -21,6 +24,7 @@ class Document extends NextDocument {
       <Html dir={dir} lang={locale}>
         <Head />
         <body>
+          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>

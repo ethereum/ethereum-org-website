@@ -1,6 +1,7 @@
 import React, { useState } from "react"
-import Translation from "../Translation"
+
 import { IProps as CardProps } from "../Card"
+import Translation from "../Translation"
 
 /**
  * The `selection` param accepted values for the click handler

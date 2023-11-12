@@ -1,6 +1,6 @@
+import { execSync } from "child_process"
 import fs from "fs"
 import { join } from "path"
-import { execSync } from "child_process"
 
 import { CONTENT_DIR, DEFAULT_LOCALE, TRANSLATIONS_DIR } from "@/lib/constants"
 

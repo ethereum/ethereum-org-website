@@ -2,7 +2,6 @@ import React from "react"
 import {
   Box,
   Flex,
-  Image,
   List,
   ListItem,
   useColorModeValue,
@@ -10,9 +9,9 @@ import {
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "./Buttons"
-import Translation from "./Translation"
-import OldHeading from "./OldHeading"
 import GatsbyImage from "./GatsbyImage"
+import OldHeading from "./OldHeading"
+import Translation from "./Translation"
 
 export interface Content {
   title: string

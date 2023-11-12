@@ -1,12 +1,11 @@
-import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 import React, { ReactNode } from "react"
+import { FaGithub } from "react-icons/fa"
+import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
 
-import InlineLink from "./Link"
 import { ButtonLink } from "./Buttons"
-import Text from "./OldText"
+import InlineLink from "./Link"
 import OldHeading from "./OldHeading"
-
+import Text from "./OldText"
 import Translation from "./Translation"
 
 export interface IProps {

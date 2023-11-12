@@ -1,23 +1,13 @@
-import React, { useState, createRef, useContext } from "react"
-// TODO
-// import { useI18next } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Fade,
-  Flex,
-  Heading,
-  Icon,
-  List,
-  ListItem,
-} from "@chakra-ui/react"
+import React, { createRef, useContext, useState } from "react"
 import { MdExpandMore } from "react-icons/md"
+import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 
 import { BaseLink, type LinkProps } from "../Link"
+
 // TODO
 // import { useOnClickOutside } from "../../hooks/useOnClickOutside"
 // import { getDirection } from "../../utils/translations"
 // import { Lang } from "../../utils/languages"
-
 import { ISection } from "./types"
 
 const NavLink = (props: LinkProps) => (
@@ -63,8 +53,8 @@ const NavDropdown: React.FC<IProps> & {
   Title: typeof Title
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
-  // TODO
-  // const { language } = useI18next()
+
+  // const { locale } = useRouter()
   const ref = createRef<HTMLLIElement>()
 
   // TODO

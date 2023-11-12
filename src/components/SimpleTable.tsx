@@ -1,6 +1,4 @@
 import React from "react"
-
-import Translation from "./Translation"
 import {
   Flex,
   Image,
@@ -12,7 +10,9 @@ import {
   Tr,
   useToken,
 } from "@chakra-ui/react"
+
 import { ButtonLink } from "./Buttons"
+import Translation from "./Translation"
 
 export interface TableRow {
   name: string

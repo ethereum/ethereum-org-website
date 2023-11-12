@@ -1,4 +1,4 @@
-// Libraries
+import { useRouter } from "next/router"
 import {
   Badge,
   Box,
@@ -12,8 +12,13 @@ import {
   TextProps,
   useToken,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
 
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
+
+// TODO: Import once intl implements?
+// import PageMetadata from "@/components/PageMetadata"
+import PostMergeBanner from "@/components/Banners/PostMergeBanner"
 // Components
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
@@ -24,8 +29,7 @@ import Codeblock from "@/components/Codeblock"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
-// TODO: Implement FileContribtorsGitHub
-// import GitHubContributors from "@/components/FileContributorsGitHub"
+import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import {
@@ -35,19 +39,15 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
-// TODO: Import once intl implements?
-// import PageMetadata from "@/components/PageMetadata"
-import PostMergeBanner from "@/components/Banners/PostMergeBanner"
+import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
-import { mdxTableComponents } from "@/components/Table"
 import YouTube from "@/components/YouTube"
 
-// Utils
 import { EDIT_CONTENT_URL } from "@/lib/constants"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import { EDIT_CONTENT_URL } from "@/lib/constants"
 
 const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
@@ -181,6 +181,7 @@ export const TutorialLayout = ({
   frontmatter,
   tocItems,
   timeToRead,
+  lastUpdatedDate,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
@@ -220,21 +221,20 @@ export const TutorialLayout = ({
           />
           {children}
           {frontmatter.lang !== "en" ? (
-            <Text>Crowdin contributor</Text>
+            // TODO: Implement CrowdinContributors
+            <>
+              {/* <CrowdinContributors
+                relativePath={relativePath}
+                editPath={absoluteEditPath}
+                //@ts-ignore
+                langContributors={allCombinedTranslatorsJson.nodes}
+              /> */}
+            </>
           ) : (
-            // TODO: Implement CrowdinContributors after intl is implemented
-            // <CrowdinContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            //   //@ts-ignore
-            //   langContributors={allCombinedTranslatorsJson.nodes}
-            // />
-            <Text>Github contributor</Text>
-            // TODO: Implement GitHubContributors
-            // <GitHubContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            // />
+            <GitHubContributors
+              relativePath={relativePath}
+              lastUpdatedDate={lastUpdatedDate!}
+            />
           )}
           <FeedbackCard />
         </ContentContainer>

@@ -1,10 +1,7 @@
-import React from "react"
-// import { useI18next } from "gatsby-plugin-react-i18next"
 import { Flex, FlexProps, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
 // import { getDirection } from "../../utils/translations"
-
 // import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
@@ -14,7 +11,7 @@ export interface IProps extends FlexProps {
 }
 
 const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
-  // const { language } = useI18next()
+  // const { locale } = useRouter()
   const direction = "ltr"
   // const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
