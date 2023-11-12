@@ -1,14 +1,16 @@
+import React, { type Dispatch, type SetStateAction } from "react"
 import { Flex } from "@chakra-ui/react"
-import React, { type Dispatch, type SetStateAction, useState } from "react"
-import { SendReceiveButtons } from "./SendReceiveButtons"
-import { TokenBalanceList } from "./TokenBalanceList"
-import { CategoryTabs } from "./CategoryTabs"
-import { WalletBalance } from "./WalletBalance"
-import { NFT, TokenBalance } from "./interfaces"
+
 import { defaultTokenBalances } from "../constants"
 import type { SimulatorNav } from "../interfaces"
-import type { SendReceiveEnabled } from "./types"
+
+import { CategoryTabs } from "./CategoryTabs"
+import { NFT, TokenBalance } from "./interfaces"
 import { NFTList } from "./NFTList"
+import { SendReceiveButtons } from "./SendReceiveButtons"
+import { TokenBalanceList } from "./TokenBalanceList"
+import type { SendReceiveEnabled } from "./types"
+import { WalletBalance } from "./WalletBalance"
 
 interface IProps {
   nav?: SimulatorNav

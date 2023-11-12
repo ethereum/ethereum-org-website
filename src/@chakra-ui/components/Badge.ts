@@ -1,4 +1,5 @@
 import { defineStyle, defineStyleConfig } from "@chakra-ui/react"
+
 import { badgeDefaultTheme, defineMergeStyles } from "./components.utils"
 
 const { baseStyle: defaultBaseStyle } = badgeDefaultTheme

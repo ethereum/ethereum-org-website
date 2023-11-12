@@ -1,5 +1,6 @@
 // Libraries
 import { ReactNode, useState } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Accordion,
   AccordionButton,
@@ -11,8 +12,6 @@ import {
 } from "@chakra-ui/react"
 
 // Components
-// TODO: add Translation when i18n is set up
-// import Translation from "./Translation"
 import Text from "./OldText"
 
 // Utils
@@ -39,6 +38,7 @@ const ExpandableCard: React.FC<IProps> = ({
   eventName = "",
 }) => {
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useTranslation("common")
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
@@ -124,9 +124,7 @@ const ExpandableCard: React.FC<IProps> = ({
                 mt="auto"
                 mb="auto"
               >
-                {/* TODO: add Translation component when i18n is set up */}
-                {/* <Translation id={isVisible ? "less" : "more"} /> */}
-                More
+                {t(isVisible ? "less" : "more")}
               </Text>
             </Box>
           </AccordionButton>

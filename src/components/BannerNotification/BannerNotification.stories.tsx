@@ -1,7 +1,8 @@
 import React from "react"
+import { useTranslation } from "react-i18next"
 import { Text } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
-import { useTranslation } from "react-i18next"
+
 import BannerNotification from "."
 
 export default {

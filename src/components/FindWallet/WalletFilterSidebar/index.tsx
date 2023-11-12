@@ -1,29 +1,23 @@
-// Libraries
-import React from "react"
-import {
-  Icon,
-  Center,
-  useTheme,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
-  Box,
-  type TabsProps,
-} from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
-
-// Components
-import Translation from "../../Translation"
-import WalletFilterProfile from "./WalletFilterFeature"
-import WalletFilterPersonas from "./WalletFilterProfile"
-
-// Utils
-import { trackCustomEvent } from "../../../utils/matomo"
+import {
+  Box,
+  Center,
+  Icon,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  type TabsProps,
+  useTheme,
+} from "@chakra-ui/react"
 
 import { FiltersType } from "../../../pages/wallets/find-wallet"
+import { trackCustomEvent } from "../../../utils/matomo"
+
+import WalletFilterProfile from "./WalletFilterFeature"
+import WalletFilterPersonas from "./WalletFilterProfile"
 
 const FilterTab = ({
   eventName,
@@ -78,7 +72,8 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
   ...tabsProps
 }) => {
   const theme = useTheme()
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
+
   return (
     <Tabs
       bg="background.base"
@@ -123,7 +118,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
           }}
         >
           <FilterTab eventName="show user personas">
-            <Translation id="page-find-wallet-profile-filters" />
+            {t("page-find-wallet-profile-filters")}
           </FilterTab>
           <FilterTab eventName="show feature filters">
             {t("page-find-wallet-feature-filters")} (

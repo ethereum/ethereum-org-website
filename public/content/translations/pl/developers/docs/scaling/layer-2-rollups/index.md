@@ -82,7 +82,7 @@ Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymist
 
 Optymistyczne pakiety zbiorcze nie obliczają transakcji, więc potrzebny jest mechanizm zapewniający, że transakcje są legalne, a nie oszukańcze. W tym miejscu pojawiają się dowody oszustwa. Jeśli ktoś powiadomi o oszukańczej transakcji, pakiet zbiorczy wykryje oszustwo i uruchomi obliczenie transakcji przy użyciu dostępnych danych o stanie. Oznacza to, że możesz mieć dłuższy czas oczekiwania na potwierdzenie transakcji niż w przypadku pakietu zbiorczego ZK, ponieważ może być zakwestionowana.
 
-![Schemat pokazujący, co się dzieje, gdy dochodzi do oszukańczej transakcji w optymistycznym pakiecie zbiorczym w Ethereum](../../../../../../developers/docs/scaling/optimistic-rollups/optimistic-rollups.png)
+![Schemat pokazujący, co się dzieje, gdy dochodzi do oszukańczej transakcji w optymistycznym pakiecie zbiorczym w Ethereum](../optimistic-rollups/optimistic-rollups.png)
 
 Gaz potrzebny do obliczenia dowodu oszustwa jest nawet refundowany. Ben Jones z Optimism opisuje istniejący system zabezpieczeń:
 
@@ -126,7 +126,7 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 - [Wszystko, co musisz wiedzieć o optymistycznym pakiecie zbiorczym](https://research.paradigm.xyz/rollups)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
-- [Jak faktycznie działa pakiet zbiorczy Optimism?](https://research.paradigm.xyz/optimism)
+- [Jak faktycznie działa pakiet zbiorczy Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 
 **Rozwiązania hybrydowe**
 

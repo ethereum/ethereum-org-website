@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react"
-
-import { useI18next } from "gatsby-plugin-react-i18next"
-import { useStaticQuery, graphql } from "gatsby"
+import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import { FlexProps } from "@chakra-ui/react"
+
 import FileContributors, { Author } from "./FileContributors"
-import { useQuery, gql } from "@apollo/client"
 
 interface Commit {
   author: Author
@@ -90,7 +88,7 @@ const CrowdinContributors: React.FC<IProps> = ({
 }) => {
   const [mappedContributors, setMappedContributors] = useState<Author[]>([])
   const [error, setError] = useState(false)
-  const { language } = useI18next()
+  const { locale } = useRouter()
   const { allFileIdsJson } = useStaticQuery(FILE_IDS_QUERY)
 
   const { data, loading } = useQuery(COMMIT_HISTORY, {
@@ -106,7 +104,7 @@ const CrowdinContributors: React.FC<IProps> = ({
 
   useEffect(() => {
     const fetchContributors = async () => {
-      const id = await getFileIdByPath(fileIdsData, relativePath, language)
+      const id = await getFileIdByPath(fileIdsData, relativePath, locale!)
       const crowdinContributorsForLang = langContributors[0].data
       const crowdinContributorsForFile = crowdinContributorsForLang.find(
         (file) => file.fileId === id.toString()
@@ -138,7 +136,7 @@ const CrowdinContributors: React.FC<IProps> = ({
     }
 
     fetchContributors()
-  }, [fileIdsData, relativePath, language, langContributors])
+  }, [fileIdsData, relativePath, locale!, langContributors])
 
   const lastContributor = mappedContributors.length ? mappedContributors[0] : {}
 

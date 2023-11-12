@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Box, Heading, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
+
 import Breadcrumbs, { IProps as BreadcrumbsProps } from "../../Breadcrumbs"
 import GatsbyImage from "../../GatsbyImage"
 import { CallToAction } from "../CallToAction"

@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
+
 import type { NFT } from "../interfaces"
 
 export const useNFT = (): Array<NFT> => {

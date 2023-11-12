@@ -1,8 +1,8 @@
-import { chakra, type ChakraComponent } from "@chakra-ui/react"
 import {
   GatsbyImage as Image,
   type GatsbyImageProps,
 } from "gatsby-plugin-image"
+import { chakra, type ChakraComponent } from "@chakra-ui/react"
 
 export type GatsbyImageType = ChakraComponent<"img", GatsbyImageProps>
 

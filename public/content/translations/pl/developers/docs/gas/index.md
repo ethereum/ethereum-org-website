@@ -18,7 +18,7 @@ Gaz odnosi się do jednostki, która mierzy ilość wysiłku obliczeniowego wyma
 
 Ponieważ każda transakcja Ethereum wymaga zasobów obliczeniowych do wykonania, każda transakcja wymaga opłaty. Gaz odnosi się do opłaty wymaganej do pomyślnego przeprowadzenia transakcji na Ethereum.
 
-![Schemat pokazujący, gdzie potrzebny jest nam gaz dla operacji EVM](../../../../../developers/docs/gas/gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat pokazujący, gdzie potrzebny jest nam gaz dla operacji EVM](./gas.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Zasadniczo opłaty za gaz są uiszczane w walucie ojczystej Ethereum, eterze (ETH). Ceny gazu są oznaczane w Gwei, który sam jest nominałem ETH — każdy Gwei jest równy 0,00000001 ETH (10<sup>-9</sup> ETH). Na przykład, zamiast mówić, że Twój gaz kosztuje 0,000000001 Ethera, możesz powiedzieć, że gaz kosztuje 1 Gwei.
 
@@ -32,7 +32,7 @@ Krótko mówiąc, opłaty za gaz pomagają utrzymać bezpieczeństwo sieci Ether
 
 Chociaż transakcja zawiera limit, każdy gaz niewykorzystany w transakcji jest zwracany użytkownikowi.
 
-![Schemat pokazujący, w jaki sposób niewykorzystany gaz jest zwracany](../../../../../developers/docs/transactions/gas-tx.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Schemat pokazujący, w jaki sposób niewykorzystany gaz jest zwracany](../transactions/gas-tx.png) _Schemat zaadaptowany z [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Dalsza lektura {#further-reading}
 

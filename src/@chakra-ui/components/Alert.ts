@@ -1,10 +1,12 @@
+import { alertAnatomy } from "@chakra-ui/anatomy"
 import {
   createMultiStyleConfigHelpers,
   SystemStyleObject,
 } from "@chakra-ui/react"
-import { alertAnatomy } from "@chakra-ui/anatomy"
-import { alertDefaultTheme, defineMergeStyles } from "./components.utils"
+
 import { AlertStatusType } from "@/components/Alert"
+
+import { alertDefaultTheme, defineMergeStyles } from "./components.utils"
 
 const STATUS_COLORS: Record<
   "solid" | "subtle",

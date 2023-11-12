@@ -1,5 +1,6 @@
-import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
 import { breadcrumbAnatomy } from "@chakra-ui/anatomy"
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
+
 import { breadcrumbDefaultTheme, defineMergeStyles } from "./components.utils"
 
 const { defineMultiStyleConfig } = createMultiStyleConfigHelpers(

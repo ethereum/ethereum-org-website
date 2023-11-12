@@ -1,17 +1,18 @@
 import { ReactNode } from "react"
 import {
   Box,
+  BoxProps,
   Flex,
   HStack,
   LinkBox,
   LinkOverlay,
-BoxProps,
-StackProps,
+  StackProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "@/components/Link"
 import { Image, type ImageProps } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+
 import * as url from "@/lib/utils/url"
 
 export type CardListItem = {

@@ -1,43 +1,44 @@
 import { ComponentProps } from "react"
+import { CiLink } from "react-icons/ci"
 import {
   Badge,
   Box,
+  type BoxProps,
   calc,
   chakra,
   Divider as ChakraDivider,
   Flex,
-  Text,
-  type BoxProps,
   type FlexProps,
   type HeadingProps,
-  useToken,
-  ListItem,
-  UnorderedList,
-  OrderedList,
   Icon,
+  ListItem,
+  OrderedList,
+  Text,
+  UnorderedList,
+  useToken,
 } from "@chakra-ui/react"
-import { CiLink } from "react-icons/ci"
+
+import type { ChildOnlyProp } from "@/lib/types"
+
 import ButtonDropdown, {
   type IProps as ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
-import { mdxTableComponents } from "@/components/Table"
+import Contributors from "@/components/Contributors"
+import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import MdLink from "@/components/MdLink"
 import OldHeading from "@/components/OldHeading"
+import { mdxTableComponents } from "@/components/Table"
 import YouTube from "@/components/YouTube"
-import type { ChildOnlyProp } from "@/lib/types"
+
+import GlossaryTooltip from "./Glossary/GlossaryTooltip"
+import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
+import Card from "./Card"
+import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
-import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import InfoBanner from "./InfoBanner"
-import Card from "./Card"
-import QuizWidget from "./Quiz/QuizWidget"
-import DocLink from "./DocLink"
-import Link from "@/components/Link"
-// import Contributors from "@/components/Contributors"
-// import Logo from "@/components/Logo"
-// import MeetupList from "@/components/MeetupList"
 
 /**
  * Base HTML elements
@@ -60,7 +61,8 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
 
 const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
   id ? (
-    <Link href={`#${id}`}
+    <Link
+      href={`#${id}`}
       position="absolute"
       insetInlineEnd="100%"
       aria-label={id.replaceAll("-", " ") + " permalink"}
@@ -83,7 +85,13 @@ export const Heading1 = ({ children, ...rest }: HeadingProps) => (
 )
 
 export const Heading2 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h2" {...commonHeadingProps(id)} fontSize="2rem" mt={16} {...rest}>
+  <OldHeading
+    as="h2"
+    {...commonHeadingProps(id)}
+    fontSize="2rem"
+    mt={16}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </OldHeading>
@@ -97,7 +105,13 @@ export const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
 )
 
 export const Heading4 = ({ id, children, ...rest }: HeadingProps) => (
-  <OldHeading as="h4" {...commonHeadingProps(id)} fontSize="xl" fontWeight={600} {...rest}>
+  <OldHeading
+    as="h4"
+    {...commonHeadingProps(id)}
+    fontSize="xl"
+    fontWeight={600}
+    {...rest}
+  >
     <IdAnchor id={id} />
     {children}
   </OldHeading>
@@ -141,11 +155,11 @@ export const htmlElements = {
   h4: Heading4,
   hr: HR,
   img: MarkdownImage,
-  ol: OrderedList,
-  ul: UnorderedList,
   li: ListItem,
+  ol: OrderedList,
   p: Paragraph,
   pre: Pre,
+  ul: UnorderedList,
   ...mdxTableComponents,
 }
 
@@ -253,8 +267,9 @@ export const reactComponents = {
   ButtonLink,
   Card,
   ContentContainer,
-  DocLink,
+  Contributors,
   Divider,
+  DocLink,
   Emoji,
   ExpandableCard,
   GlossaryTooltip,
@@ -262,15 +277,12 @@ export const reactComponents = {
   InfoColumn,
   InfoTitle,
   MobileButton,
-  QuizWidget,
   MobileButtonDropdown,
   Page,
+  QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
   Title,
   YouTube,
-  // Contributors,
-  // Logo,
-  // MeetupList,
 }
 
 /**

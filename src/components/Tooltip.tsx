@@ -1,6 +1,7 @@
 import React, { ReactNode, useState } from "react"
+import { AnimatePresence,motion } from "framer-motion"
 import { Box, useColorModeValue, useToken } from "@chakra-ui/react"
-import { motion, AnimatePresence } from "framer-motion"
+
 import { isMobile as isMobileCheck } from "../lib/utils/isMobile"
 
 export interface IProps {

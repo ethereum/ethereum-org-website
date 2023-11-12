@@ -1,17 +1,16 @@
 import * as React from "react"
+import { RxExternalLink } from "react-icons/rx"
 import {
   Avatar as ChakraAvatar,
   AvatarProps,
   Center,
-  CenterProps,
-  FlexProps,
   forwardRef,
   LinkBox,
   LinkOverlay,
   LinkProps,
   ThemingProps,
 } from "@chakra-ui/react"
-import { RxExternalLink } from "react-icons/rx"
+
 import { BaseLink } from "../Link"
 
 type AssignAvatarProps = Required<Pick<AvatarProps, "name" | "src">> &

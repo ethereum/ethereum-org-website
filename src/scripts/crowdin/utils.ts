@@ -1,5 +1,6 @@
 import fs from "fs"
 import path from "path"
+
 import { languagePathRootRegExp } from "../../lib/constants"
 import type { I18nLocale } from "../../lib/types"
 

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 
 /**
  * A hook to determine which section of the page is currently in the viewport.

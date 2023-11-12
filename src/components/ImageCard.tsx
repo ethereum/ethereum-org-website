@@ -2,9 +2,9 @@ import React from "react"
 import { IGatsbyImageData } from "gatsby-plugin-image"
 import { Box } from "@chakra-ui/react"
 
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
 import GatsbyImage from "./GatsbyImage"
+import OldHeading from "./OldHeading"
+import Text from "./OldText"
 
 export interface IProps {
   children?: React.ReactNode
