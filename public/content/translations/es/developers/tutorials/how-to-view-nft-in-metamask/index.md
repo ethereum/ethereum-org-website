@@ -23,7 +23,7 @@ Como requisito previo, ya debería tener MetaMask en su móvil instalado e inclu
 
 En la parte superior de la aplicación, pulse el botón «Wallet» (Cartera) después de lo cual se le pedirá que seleccione una red. Como nuestro NFT se acuñó en la red Ropsten, lo más lógico es que seleccione Ropsten como su red.
 
-![Cómo configurar Ropsten como su red móvil MetaMask](./ropstenMetamask.gif)
+![Cómo configurar Ropsten como su red móvil MetaMask](./goerliMetamask.gif)
 
 ## Paso 2: Añadir su coleccionable a MetaMask {#add-nft-to-metamask}
 

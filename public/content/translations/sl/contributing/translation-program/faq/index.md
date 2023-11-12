@@ -15,7 +15,7 @@ Ni vsak niz napisan v čisti besedni obliki. Obstajajo nekateri nizi, ki so sest
 - Prevedite besedilo znotraj tagov, ampak ne samih tagov. Karkoli v `<` in `>` ne sme biti prevedeno ali odstranjeno.
 - Da ohranite niz varen, priporočamo, da kliknete "Copy Source" gumb spodaj levo. To bo kopiralo izvorni niz in ga prilepilo v besedilno polje. To vam omogoči razjasniti, kje so tagi in vam pomaga pri izogibanju napakam.
 
-![Crowdin vmesnik z izpostavljenim gumbom kopiraj vir](../../../../../contributing/translation-program/faq/html-tag-strings.png)
+![Crowdin vmesnik z izpostavljenim gumbom kopiraj vir](./html-tag-strings.png)
 
 Lahko premaknete položaj tagov znotraj niza, da bo bolje zvenel v vašem jeziku – le prepričajte se, da ste premaknili celoten tag.
 
@@ -26,9 +26,9 @@ Pogosto le izvorni niz morda ne bo dovolj, da bi lahko zagotovili natančen prev
 - Oglejte si posnetke zaslona in kontekst za več informacij. V sekciji izvornega niza boste našli pripet posnetek zaslona, ki vam bo pokazal kako niz uporabljamo v kontekstu.
 - Če še vedno niste prepričani postavite vprašanje v sekciji za komentarje. [Niste prepričani kako podati komentar?](#comment)
 
-![Prikaz načina zagotovitve konteksta za niz s posnetkom zaslona](../../../../../contributing/translation-program/faq/source-string.png)
+![Prikaz načina zagotovitve konteksta za niz s posnetkom zaslona](./source-string.png)
 
-![Primer posnetka zaslona za kontekst](../../../../../contributing/translation-program/faq/source-string-2.png)
+![Primer posnetka zaslona za kontekst](./source-string-2.png)
 
 ## Kako lahko podam komentar ali postavim vprašanje? Rad bi označil težavo ali napako... {#comment}
 
@@ -37,7 +37,7 @@ Pogosto le izvorni niz morda ne bo dovolj, da bi lahko zagotovili natančen prev
 - Kliknite drugi gumb v vrstici desno zgoraj. Skrit zavihek se bo pojavil na vaši desni. Podajte nov komentar in kliknite okence "težava" na dnu. Vrsto težave lahko opredelite z izbiro ene od možnosti iz spustnega menija.
 - Ko je komentar podan, bo sporočen naši ekipi. Odpravili bomo težavo in vas obvestili z odgovorom na vaš komentar in zaprtjem težave.
 
-![Prikaz, kako ustvariti komentarje in označiti težave](../../../../../contributing/translation-program/faq/comment-issue.png)
+![Prikaz, kako ustvariti komentarje in označiti težave](./comment-issue.png)
 
 ## Kaj je pomnilnik prevodov (TM)? {#translation-memory}
 
@@ -46,7 +46,7 @@ Pomnilnik prevodov (TM) je funkcija orodja Crowdin, ki shrani vse predhodne prev
 - Oglejte si sekcijo "TM in MT predlogi" in lahko boste videli, kako so drugi prevajalci prevedli enak ali podoben niz. Če najdete predlog z visokim razmerjem ujemanja, ga s klikom brez težav uporabite za prevod.
 - Če na seznamu ni ničesar, lahko iščete po TM za predhodne prevode in jih ponovno uporabite za ohranjanje konsistentnosti.
 
-![Posnetek zaslona pomnilnika prevodov](../../../../../contributing/translation-program/faq/translation-memory.png)
+![Posnetek zaslona pomnilnika prevodov](./translation-memory.png)
 
 ## Kako uporabljam Crowdin slovar? {#glossary}
 
@@ -56,15 +56,15 @@ Crowdin slovar je najboljše mesto za razjasnitev izrazov in definicij. Obstajat
 
 - Prvič, ko najdete podčrtan izraz v izvornem nizu, se lahko z miško postavite nanj in tako razkrijete njegovo definicijo.
 
-![Primer definicije iz slovarja](../../../../../contributing/translation-program/faq/glossary-definition.png)
+![Primer definicije iz slovarja](./glossary-definition.png)
 
 - Drugič, če najdete pojem, ki ga ne poznate, vendar ni podčrtan, lahko iščete po zavihku slovarja (tretji gumb desnega stolpca). Našli boste razlage specifičnih izrazov in tistih pogosto uporabljenih v projektu.
 
-![Posnetek zaslona, ki prikazuje, kje najti zavihek slovarja v Crowdinu](../../../../../contributing/translation-program/faq/glossary-tab.png)
+![Posnetek zaslona, ki prikazuje, kje najti zavihek slovarja v Crowdinu](./glossary-tab.png)
 
 - Če ga še vedno ne najdete, je to vaša priložnost, da dodate nov izraz! Spodbujamo vas, da ga poiščete v iskalniku in v slovar dodate opis. Bilo bo v veliko pomoč drugim prevajalcem, da bodo izraz lažje razumeli.
 
-![Posnetek zaslona, ki prikazuje kako dodati izraz v slovar v Crowdinu](../../../../../contributing/translation-program/faq/add-glossary-term.png)
+![Posnetek zaslona, ki prikazuje kako dodati izraz v slovar v Crowdinu](./add-glossary-term.png)
 
 ### Politika prevajanja terminologije {#terminology}
 

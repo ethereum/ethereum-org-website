@@ -1,20 +1,15 @@
-// Libraries
 import React, { useEffect, useState } from "react"
 import Countdown, { zeroPad } from "react-countdown"
 import { Box, Center, CloseButton } from "@chakra-ui/react"
 
-// Components
+import { GATSBY_FUNCTIONS_PATH } from "../constants"
+import { getFreshData } from "../utils/cache"
+import { TranslationKey } from "../utils/translations"
+
 import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
 import InlineLink from "./Link"
 import Translation from "./Translation"
-
-// Utils
-import { getFreshData } from "../utils/cache"
-import { TranslationKey } from "../utils/translations"
-
-// Constants
-import { GATSBY_FUNCTIONS_PATH } from "../constants"
 
 interface CountdownRendererProps {
   days: number

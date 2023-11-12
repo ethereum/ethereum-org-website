@@ -1,4 +1,5 @@
 import { Box } from "@chakra-ui/react"
+
 import CardList, { CardListItem } from "@/components/CardList"
 
 export interface IProps {}

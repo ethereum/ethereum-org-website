@@ -1,7 +1,8 @@
 import { Flex } from "@chakra-ui/react"
 
-import Link from "@/components/Link"
 import { Image, type ImageProps } from "@/components/Image"
+import Link from "@/components/Link"
+
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {

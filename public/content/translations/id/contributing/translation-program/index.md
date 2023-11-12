@@ -57,7 +57,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 
    Tidak melihat bahasa Anda dicantumkan? [Buat masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](https://discord.gg/6WX7E97) kami
 
-   ![File yang diterjemahkan dan tidak diterjemahkan di Crowdin](./crowdin-files.png)
+   ![File yang diterjemahkan dan tidak diterjemahkan di Crowdin](./how-to-translate/crowdin-files.png)
 
    Catatan tentang versi konten: kami menggunakan 'ember konten' di dalam Crowdin untuk membuat konten berprioritas tertinggi dirilis terlebih dahulu. Ketika Anda memeriksa sebuah bahasa, misalkan, [Filipina](https://crowdin.com/project/ethereum-org/fil#) Anda akan melihat folder untuk ember konten ("1. Halaman beranda", "2. Gunakan Halaman Ethereum", dll.).
 
@@ -68,7 +68,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 3. **Terjemahkan**  
    Setelah memilih file yang ingin diterjemahkan, file itu akan terbuka di editor online. Jika belum pernah menggunakan Crowdin sebelumnya, Anda dapat menggunakan panduan cepat ini untuk melihat dasar-dasarnya.
 
-   ![Editor online Crowdin](./online-editor.png)
+   ![Editor online Crowdin](./how-to-translate/online-editor.png)
 
    **_1 – Sidebar kiri_**
 

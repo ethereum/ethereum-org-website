@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react"
 import {
-  Tabs as ChakraTabs,
-  TabList,
   Tab,
-  TabPanels,
+  TabList,
   TabPanel,
+  TabPanels,
+  Tabs as ChakraTabs,
 } from "@chakra-ui/react"
 
 interface Tab {

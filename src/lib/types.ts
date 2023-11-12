@@ -1,6 +1,7 @@
 import { ReactElement, ReactNode } from "react"
 import { NextPage } from "next"
 import { AppProps } from "next/app"
+
 import type {
   Author,
   DocsFrontmatter,
@@ -143,4 +144,14 @@ export type FileContributorsState = {
   loading: boolean
   authors?: Array<Author>
   error?: unknown
+}
+
+/**
+ * Table of contents
+ */
+export type SourceHeadingItem = { depth: number; id: string; label: string }
+export type ToCItem = {
+  title: string
+  url: string
+  items?: Array<ToCItem>
 }

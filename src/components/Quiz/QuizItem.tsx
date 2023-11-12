@@ -1,19 +1,16 @@
-import React, { useContext } from "react"
+import { useContext } from "react"
+import { useTranslation } from "next-i18next"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-
-import { Button } from "../Buttons"
-import Translation from "../Translation"
-import Tag from "../Tag"
-import { GreenTickIcon } from "../icons/quiz"
-
-import { QuizzesHubContext } from "./context"
-
-import { trackCustomEvent } from "../../utils/matomo"
-
-import { QuizzesListItem } from "../../types"
 
 import allQuizzesData from "../../data/quizzes"
+import { QuizzesListItem } from "../../types"
+import { trackCustomEvent } from "../../utils/matomo"
+import { Button } from "../Buttons"
+import { GreenTickIcon } from "../icons/quiz"
+import Tag from "../Tag"
+import Translation from "../Translation"
+
+import { QuizzesHubContext } from "./context"
 
 const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const { id, level, quizHandler, modalHandler } = props
@@ -23,7 +20,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
   const numberOfQuestions = allQuizzesData[id].questions.length
   const isCompleted = JSON.parse(completed)[id][0]
 
-  const { t } = useTranslation()
+  const { t } = useTranslation("learn-quizzes")
 
   const handleStart = () => {
     quizHandler(id)
@@ -56,7 +53,6 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
           <Flex gap={2} alignItems="center">
             <Text
               color={isCompleted ? "body.medium" : "text"}
-              fontWeight="bold"
               _before={{
                 content: 'counter(list-counter) ". "',
               }}
@@ -65,9 +61,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
             </Text>
 
             {/* Show green tick if quizz was completed only */}
-            <Box display={isCompleted ? "flex" : "none"}>
-              <GreenTickIcon />
-            </Box>
+            {isCompleted && <GreenTickIcon />}
           </Flex>
 
           {/* Labels */}
@@ -86,7 +80,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
         {/* Start Button */}
         <Box w={{ base: "full", lg: "auto" }}>
           <Button
-            variant="outline-color"
+            variant="outline"
             w={{ base: "full", lg: "auto" }}
             onClick={handleStart}
           >

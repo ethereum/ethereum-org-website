@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { Box, Flex, FlexProps, Heading, Icon } from "@chakra-ui/react"
-import { MdInfoOutline } from "react-icons/md"
+import React, { useEffect,useState } from "react"
 import axios from "axios"
+import { MdInfoOutline } from "react-icons/md"
+import { Box, Flex, FlexProps, Heading, Icon } from "@chakra-ui/react"
 
-import Translation from "./Translation"
 import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
+import Translation from "./Translation"
 
 export interface IProps extends FlexProps {
   isLeftAlign?: boolean

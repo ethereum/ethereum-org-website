@@ -1,4 +1,5 @@
 import { ReportsModel } from "@crowdin/crowdin-api-client"
+
 import i18nConfig from "../../i18n.config.json"
 
 export const OLD_CONTENT_DIR = "src/content"
@@ -9,11 +10,15 @@ export const TRANSLATED_IMAGES_DIR = "/content/translations"
 // i18n
 export const DEFAULT_LOCALE = "en"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
-export const LOCALES_CODES = i18nConfig.map((lang) => lang.code).sort()
+const BUILD_LOCALES = process.env.BUILD_LOCALES
+export const LOCALES_CODES = BUILD_LOCALES
+  ? BUILD_LOCALES.split(",")
+  : i18nConfig.map(({ code }) => code)
 
 // Site urls
 export const SITE_URL = "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
+export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800

@@ -1,17 +1,18 @@
+import React from "react"
+import { motion } from "framer-motion"
 import {
   Grid,
   type GridProps,
   type ListProps,
   OrderedList,
 } from "@chakra-ui/react"
-import React from "react"
-import { WordDisplay, type WordStyleVariant } from "./WordDisplay"
+
 import {
   DELAY_MULTIPLIER_MS,
   EXTRA_DELAY_MS,
   WORDS_REQUIRED,
 } from "./constants"
-import { motion } from "framer-motion"
+import { WordDisplay, type WordStyleVariant } from "./WordDisplay"
 
 interface WordListProps {
   words: Array<string>

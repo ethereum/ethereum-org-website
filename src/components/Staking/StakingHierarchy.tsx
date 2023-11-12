@@ -1,4 +1,3 @@
-// Libraries
 import React, { ReactNode } from "react"
 import {
   Box,
@@ -13,11 +12,8 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-// Components
+import { trackCustomEvent } from "../../utils/matomo"
 import { ButtonLink } from "../Buttons"
-import Translation from "../Translation"
-
-// SVG icons
 import {
   StakingGlyphCentralizedIcon,
   StakingGlyphCloudIcon,
@@ -25,9 +21,7 @@ import {
   StakingGlyphEtherCircleIcon,
   StakingGlyphTokenWalletIcon,
 } from "../icons/staking"
-
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
+import Translation from "../Translation"
 
 type ChildOnlyType = {
   children: ReactNode

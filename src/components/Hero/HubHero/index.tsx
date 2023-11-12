@@ -7,6 +7,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
+
 import GatsbyImage from "../../GatsbyImage"
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
@@ -55,6 +56,7 @@ const HubHero = (props: HubHeroProps) => {
         transform={{ xl: "translateY(-50%)" }}
         backdropFilter={{ xl: "auto" }}
         backdropBlur={{ xl: "base" }}
+        wordBreak="break-word"
       >
         <Heading
           as="h1"

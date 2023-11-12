@@ -1,5 +1,5 @@
 import { defineStyleConfig } from "@chakra-ui/react"
-import components from "."
+
 import { defineMergeStyles, linkDefaultTheme } from "./components.utils"
 import { Text } from "./Text"
 

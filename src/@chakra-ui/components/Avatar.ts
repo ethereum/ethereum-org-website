@@ -1,12 +1,13 @@
+import { pick } from "lodash"
+import { avatarAnatomy } from "@chakra-ui/anatomy"
 import {
   createMultiStyleConfigHelpers,
   cssVar,
   defineStyle,
   getToken,
 } from "@chakra-ui/react"
-import { avatarAnatomy } from "@chakra-ui/anatomy"
+
 import { avatarDefaultTheme, defineMergeStyles } from "./components.utils"
-import { pick } from "lodash"
 
 const { defineMultiStyleConfig, definePartsStyle } =
   createMultiStyleConfigHelpers(avatarAnatomy.keys)

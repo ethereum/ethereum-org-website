@@ -1,8 +1,9 @@
 import path from "path"
-import { visit } from "unist-util-visit"
+
+import type { Root } from "hast"
 import sizeOf from "image-size"
 import type { Plugin } from "unified"
-import type { Root } from "hast"
+import { visit } from "unist-util-visit"
 
 import {
   checkIfImageIsTranslated,

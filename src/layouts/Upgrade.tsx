@@ -1,45 +1,46 @@
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
+  type FlexProps,
+  type HeadingProps,
   Icon,
   List,
   ListItem,
   Show,
   Text,
-  type FlexProps,
-  type HeadingProps,
   useToken,
 } from "@chakra-ui/react"
-import { MdExpandMore } from "react-icons/md"
-import { useRouter } from "next/router"
 
-import { BaseLink } from "@/components/Link"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
+
 import BeaconChainActions from "@/components/BeaconChainActions"
-import { Image } from "@/components/Image"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import FeedbackCard from "@/components/FeedbackCard"
-import MergeArticleList from "@/components/MergeArticleList"
-import MergeInfographic from "@/components/MergeInfographic"
-import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import FeedbackCard from "@/components/FeedbackCard"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
 import {
+  ContentContainer,
+  InfoColumn,
   MobileButton,
   MobileButtonDropdown,
   Page as MdPage,
   StyledButtonDropdown,
-  InfoColumn,
-  ContentContainer,
 } from "@/components/MdComponents"
-// import Translation from "@/components/Translation"
+import MergeArticleList from "@/components/MergeArticleList"
+import MergeInfographic from "@/components/MergeInfographic"
+import OldHeading from "@/components/OldHeading"
+import ShardChainsList from "@/components/ShardChainsList"
+import UpgradeStatus from "@/components/UpgradeStatus"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
-import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
@@ -151,8 +152,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  // TODO: Re-enabled after i18n is implemented
-  // const { t } = useTranslation()
+  const { t } = useTranslation("page-upgrades-index")
   const { locale } = useRouter()
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
@@ -160,11 +160,11 @@ export const UpgradeLayout: React.FC<IProps> = ({
   const summaryPoints = getSummaryPoints(frontmatter)
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Guide to Ethereum upgrades", // t("page-upgrades-upgrades-guide"),
-    ariaLabel: "Ethereum upgrades menu", // t("page-upgrades-upgrades-aria-label"),
+    text: t("page-upgrades-upgrades-guide"),
+    ariaLabel: t("page-upgrades-upgrades-aria-label"),
     items: [
       {
-        text: "The Beacon Chain", // t("page-upgrades-upgrades-beacon-chain"),
+        text: t("page-upgrades-upgrades-beacon-chain"),
         to: "/roadmap/beacon-chain/",
         matomo: {
           eventCategory: "upgrade menu",
@@ -173,7 +173,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "The Merge", // t("page-upgrades-upgrades-docking"),
+        text: t("page-upgrades-upgrades-docking"),
         to: "/roadmap/merge/",
         matomo: {
           eventCategory: "upgrade menu",
@@ -200,9 +200,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             </List>
           </Box>
           <LastUpdated>
-            {/* TODO: Re-enable after i18n implemented */}
-            {/* <Translation id="page-last-updated" />:{" "} */}
-            Page last updated:{" "}
+            {t("common:page-last-updated")}:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </LastUpdated>
         </TitleCard>

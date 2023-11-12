@@ -223,7 +223,7 @@ Să descompunem acest test în mai multe părți:
 
 Suntem gata să dăm drumul fiarei:
 
-![A trecut un test](test-one.png)
+![A trecut un test](./test-one.png)
 
 Deci a trecut cu bine testul, dar... mai sunt necesare ameliorări. Funcția `balanceOf()` va răspunde întotdeauna prin 99999. Se poate evita acest lucru dacă indicăm un portofel pentru care funcția trebuie să dea un răspuns - la fel ca un contract real:
 

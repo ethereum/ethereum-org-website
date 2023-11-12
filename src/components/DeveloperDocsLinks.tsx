@@ -1,8 +1,10 @@
 import React from "react"
 import { ListItem, UnorderedList } from "@chakra-ui/react"
-import Translation from "./Translation"
-import InlineLink from "./Link"
+
 import docLinks from "../data/developer-docs-links.yaml"
+
+import InlineLink from "./Link"
+import Translation from "./Translation"
 
 export interface IProps {
   headerId: string

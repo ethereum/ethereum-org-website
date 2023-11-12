@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next"
+import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
@@ -9,16 +11,16 @@ import {
   UnorderedList,
   useToken,
 } from "@chakra-ui/react"
-import { MdExpandMore } from "react-icons/md"
+
+import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import { BaseLink } from "@/components/Link"
-import { Image } from "@/components/Image"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
-import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
   InfoColumn,
@@ -29,11 +31,11 @@ import {
   StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
+import TableOfContents from "@/components/TableOfContents"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-import type { ChildOnlyProp, Lang } from "@/lib/types"
-import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -87,8 +89,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
   slug,
   tocItems,
 }) => {
-  // TODO: Re-enable after i18n implemented
-  // const { t } = useTranslation()
+  const { t } = useTranslation("template-usecase")
   const lgBp = useToken("breakpoints", "lg")
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
@@ -109,11 +110,11 @@ export const UseCasesLayout: React.FC<IProps> = ({
   }
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Ethereum use cases", // t("template-usecase-dropdown"),
-    ariaLabel: "Use case dropdown menu", // t("template-usecase-dropdown-aria"),
+    text: t("template-usecase-dropdown"),
+    ariaLabel: t("template-usecase-dropdown-aria"),
     items: [
       {
-        text: "Decentralized finance (DeFi)", // t("template-usecase-dropdown-defi"),
+        text: t("template-usecase-dropdown-defi"),
         to: "/defi/",
         matomo: {
           eventCategory: "use cases menu",
@@ -122,7 +123,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Non-fungible tokens (NFTs)", // t("template-usecase-dropdown-nft"),
+        text: t("template-usecase-dropdown-nft"),
         to: "/nft/",
         matomo: {
           eventCategory: "use cases menu",
@@ -131,7 +132,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Decentralized autonomous organisations (DAOs)", // t("template-usecase-dropdown-dao"),
+        text: t("template-usecase-dropdown-dao"),
         to: "/dao/",
         matomo: {
           eventCategory: "use cases menu",
@@ -140,7 +141,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Decentralized social networks", // t("template-usecase-dropdown-social-networks"),
+        text: t("template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
         matomo: {
           eventCategory: "use cases menu",
@@ -149,7 +150,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Decentralized identity", // t("template-usecase-dropdown-identity"),
+        text: t("template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
         matomo: {
           eventCategory: "use cases menu",
@@ -158,7 +159,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Decentralized science (DeSci)", // t("template-usecase-dropdown-desci"),
+        text: t("template-usecase-dropdown-desci"),
         to: "/desci/",
         matomo: {
           eventCategory: "use cases menu",
@@ -167,7 +168,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: "Regenerative finance (ReFi)", // t("template-usecase-dropdown-refi"),
+        text: t("template-usecase-dropdown-refi"),
         to: "/refi/",
         matomo: {
           eventCategory: "use cases menu",
@@ -184,11 +185,8 @@ export const UseCasesLayout: React.FC<IProps> = ({
         <BannerNotification shouldShow zIndex="sticky">
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <Text m={0}>
-            Uses of Ethereum are always developing and evolving. Add any info
-            you think will make things clearer or more up to date. Edit page
-            {/* TODO: Re-enable after intl implemented */}
-            {/* <Translation id="template-usecase-banner" />{" "}
-            <InlineLink to={absoluteEditPath}>
+            {t("template-usecase-banner")}{" "}
+            {/* <InlineLink to={absoluteEditPath}>
               <Translation id="template-usecase-edit-link" />
             </InlineLink> */}
           </Text>

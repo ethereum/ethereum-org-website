@@ -1,5 +1,5 @@
-import { Badge } from "@chakra-ui/react"
 import React from "react"
+import { Badge } from "@chakra-ui/react"
 
 // Represent string as 32-bit integer
 const hashCode = (string) => {

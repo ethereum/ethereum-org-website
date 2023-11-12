@@ -1,17 +1,14 @@
-import { GetStaticProps } from "next"
-import { Html, Head, Main, NextScript } from "next/document"
-import { useRouter } from "next/router"
+import { Head, Html, Main, NextScript } from "next/document"
+import { ColorModeScript } from "@chakra-ui/react"
 
-export const getStaticProps: GetStaticProps = async () => {
-  const { locale } = useRouter()
-  return { props: { locale } }
-}
+import theme from "@/@chakra-ui/theme"
 
-export default function Document({ locale }) {
+export default function Document() {
   return (
-    <Html lang={locale}>
+    <Html>
       <Head />
       <body>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Main />
         <NextScript />
       </body>
