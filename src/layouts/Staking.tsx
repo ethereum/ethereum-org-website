@@ -13,6 +13,9 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
+import type { ChildOnlyProp } from "@/lib/types"
+import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
+
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
@@ -43,9 +46,6 @@ import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabCompari
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
-
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
-import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />

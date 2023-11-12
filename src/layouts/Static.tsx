@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"

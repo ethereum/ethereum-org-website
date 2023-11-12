@@ -45,9 +45,6 @@ import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
 import { EDIT_CONTENT_URL } from "@/lib/constants"
-import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
-
-import { EDIT_CONTENT_URL } from "@/lib/constants"
 
 const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const boxShadow = useToken("colors", "tableBoxShadow")

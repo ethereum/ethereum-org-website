@@ -1,15 +1,17 @@
-import { Lang } from "@/lib/types"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 import NextDocument, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document"
 import { ColorModeScript } from "@chakra-ui/react"
 
 import theme from "@/@chakra-ui/theme"
+
+import { Lang } from "@/lib/types"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 class Document extends NextDocument {
   static async getInitialProps(ctx: DocumentContext) {

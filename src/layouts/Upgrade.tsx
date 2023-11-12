@@ -14,6 +14,9 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
+import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
+import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
+
 import BeaconChainActions from "@/components/BeaconChainActions"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
@@ -36,10 +39,6 @@ import UpgradeStatus from "@/components/UpgradeStatus"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-
-import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
-import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
-
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />

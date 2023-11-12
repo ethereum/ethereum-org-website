@@ -12,6 +12,9 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
+import type { ChildOnlyProp } from "@/lib/types"
+import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
+
 import BannerNotification from "@/components/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
@@ -32,9 +35,6 @@ import TableOfContents from "@/components/TableOfContents"
 import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-
-import type { ChildOnlyProp } from "@/lib/types"
-import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
