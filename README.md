@@ -1684,6 +1684,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shubhusion"><img src="https://avatars.githubusercontent.com/u/96301987?v=4?s=100" width="100px;" alt="SHUBHAM SHARMA "/><br /><sub><b>SHUBHAM SHARMA </b></sub></a><br /><a href="#ideas-shubhusion" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/paulallensuxs"><img src="https://avatars.githubusercontent.com/u/114240091?v=4?s=100" width="100px;" alt="paulallensuxs"/><br /><sub><b>paulallensuxs</b></sub></a><br /><a href="#content-paulallensuxs" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://pseudomata.com"><img src="https://avatars.githubusercontent.com/u/132238190?v=4?s=100" width="100px;" alt="Pseudomata"/><br /><sub><b>Pseudomata</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=pseudomata" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/CodeDragonVN"><img src="https://avatars.githubusercontent.com/u/150457827?v=4?s=100" width="100px;" alt="CodeDragonVN"/><br /><sub><b>CodeDragonVN</b></sub></a><br /><a href="#content-CodeDragonVN" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
