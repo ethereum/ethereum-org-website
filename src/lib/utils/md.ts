@@ -9,6 +9,7 @@ import type { MdPageContent } from "@/lib/interfaces"
 import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
 
 import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
+import { toPosixPath } from "./relativePath"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -189,11 +190,11 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
 
           if (name.includes(fullPagePath)) {
             files.push(
-              fullPagePath
-                .replace(CURRENT_CONTENT_DIR, "")
-                .replace("/index.md", "")
-                // For replacing forward slashes generated in windows file paths
-                .replace(/\\/g, "/")
+              toPosixPath(
+                fullPagePath
+                  .replace(CURRENT_CONTENT_DIR, "")
+                  .replace("/index.md", "")
+              )
             )
           }
         }
@@ -215,7 +216,7 @@ export const getContentBySlug = (slug: string) => {
     }
   }
 
-  let fullPath = join(CURRENT_CONTENT_DIR, realSlug)
+  let fullPath = toPosixPath(join(CURRENT_CONTENT_DIR, realSlug))
   let contentNotTranslated = false
 
   // If content is not translated, use english content fallback
