@@ -45,11 +45,11 @@ Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obige
 Hinweis: Es ist wichtig, dass sie die <a href="/developers/docs/nodes-and-clients/client-diversity/">Client-Diversität</a> unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienstleister, die nachweislich die Mehrzahl der Kunden begrenzen, sind wie folgt markiert <em style={{ textTransform: "uppercase" }}>„Diverse Clients."</em>
 </InfoBanner>
 
-#### SaaS-Anbieter
+### SaaS-Anbieter
 
 <StakingProductsCardGrid category="saas" />
 
-#### Schlüssel-Generatoren
+### Schlüssel-Generatoren
 
 <StakingProductsCardGrid category="keyGen" />
 

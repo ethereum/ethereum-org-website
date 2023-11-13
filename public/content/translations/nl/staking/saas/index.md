@@ -52,11 +52,11 @@ Hieronder staat een aantal beschikbare SaaS-providers. Gebruik bovenstaande indi
 Houd rekening met het belang van het ondersteunen van <a href="/developers/docs/nodes-and-clients/client-diversity/">diversiteit van clients</a>, omdat dit de veiligheid van het netwerk verbetert en uw risico's beperkt. Services die bewijs hebben van het beperken van het gebruik van meerderheid-clients zijn gemarkeerd als <em style={{ textTransform: "uppercase" }}>"diverse clients."</em>
 </InfoBanner>
 
-#### SaaS-providers
+### SaaS-providers
 
 <StakingProductsCardGrid category="saas" />
 
-#### Sleutelgenerators
+### Sleutelgenerators
 
 <StakingProductsCardGrid category="keyGen" />
 

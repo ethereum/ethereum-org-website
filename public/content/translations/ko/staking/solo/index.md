@@ -103,11 +103,11 @@ ETH 솔로 스테이킹을 지원하는 도구와 서비스는 점점 많아지�
 참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">소수 클라이언트</a>는 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 소수 클라이언트를 설정하기 위한 도구를 <em style={{ textTransform: "uppercase" }}>"멀티 클라이언트"</em>라고 부릅니다.
 </InfoBanner>
 
-#### 노드 도구
+### 노드 도구
 
 <StakingProductsCardGrid category="nodeTools" />
 
-#### 키 생성기
+### 키 생성기
 
 이러한 도구는 키를 생성하는 데 있어 [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/)의 대안으로 사용될 수 있습니다.
 
