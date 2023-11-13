@@ -76,7 +76,7 @@ Microsoft のテクノロジースタックのツールと言語を使用して�
 
 ## .NET コミュニティコントリビューター {#dot-net-community-contributors}
 
-Nethereum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)を活用しています。ここでは誰でも、質問、質問への回答、支援要請などを行えます。単なる雑談も歓迎です。 [Nethereum の GitHub リポジトリ](https://github.com/Nethereum)では、リクエストのプルや問題のオープンが可能です。参加者のサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。 また、その他に[Discord](https://discord.gg/jQPrR58FxX)もご利用いただけます。
+Nethereum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)を活用しています。ここでは誰でも、質問、質問への回答、支援要請などを行えます。単なる雑談も歓迎です。 [Nethereum の Github リポジトリ](https://github.com/Nethereum)では、リクエストのプルや問題のオープンが可能です。参加者のサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。 また、その他に[Discord](https://discord.gg/jQPrR58FxX)もご利用いただけます。
 
 Nethermind を初めて利用する際に支援が必要な場合は、[Discord](http://discord.gg/PaCMRFdvWT)にご参加ください。 デベロッパーが常駐しており、ご質問に回答します。 また、[Nethermind GitHub リポジトリ](https://github.com/NethermindEth/nethermind)でのリクエストのプルや問題のオープンも、いつでも行えます。
 

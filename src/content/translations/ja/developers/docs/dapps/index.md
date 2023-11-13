@@ -68,15 +68,23 @@ lang: ja
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
+**thirdweb _- Web3 開発用の各言語の SDK、スマートコントラクト、ツール、インフラストラクチャ。_**
+
+- [ホームページ](https://thirdweb.com/)
+- [ドキュメント](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 ## 参考文献 {#further-reading}
 
+- [dapps を探す](/dapps)
 - [Web 3.0 アプリケーションのアーキテクチャ](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 - [分散型アプリケーションに関するガイド(2021 年)](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) - _LimeChain_
 - [分散型アプリとは](https://www.gemini.com/cryptopedia/decentralized-applications-defi-Dapps) - _Gemini_
+- [人気のある dApp](https://www.alchemy.com/dapps) - _Alchemy_
 
-_役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
 ## 関連トピック {#related-topics}
 
-- [イーサリアムスタック入門](/developers/docs/ethereum-stack/)
+- [イーサリアムスタック](/developers/docs/ethereum-stack/)
 - [開発フレームワーク](/developers/docs/frameworks/)
