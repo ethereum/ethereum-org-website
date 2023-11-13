@@ -66,7 +66,8 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
           return
         }
 
-        const originalPath = path.join(srcPath, src)
+        // Replace slashes from windows paths with forward slashes
+        const originalPath = path.join(srcPath, src).replace(/\\/g, "/")
         const translatedImgPath = getTranslatedImgPath(originalPath, locale)
         const imageIsTranslated = checkIfImageIsTranslated(translatedImgPath)
 
