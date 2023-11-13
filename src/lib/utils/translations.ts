@@ -16,7 +16,7 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
 
-export const getRequiredNamespacesForPath = (path: string, layout: string | undefined) => {
+export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
   let requiredNamespaces: string[] = ["common"]
 
   if (layout === 'use-cases') {
