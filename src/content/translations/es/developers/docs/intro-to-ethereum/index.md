@@ -107,7 +107,7 @@ Un fragmento de código reutilizable (un programa) que publica un desarrollador 
 ## Leer más {#further-reading}
 
 - [Informe oficial de Ethereum](/whitepaper/)
-- [¿Cómo funciona Ethereum de todos modos?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** este recurso todavía es valioso, pero tenga en cuenta que es anterior a [La Fusión](/roadmap/merge) y por lo tanto se refiere al mecanismo de prueba de trabajo de Ethereum - Ethereum es ahora seguro mediante la [prueba de participación](/developers/docs/consensus-mechanisms/pos))
+- [¿Cómo funciona Ethereum de todos modos?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway), _Preethi Kasireddy_ (**NB** este recurso todavía es valioso, pero tenga en cuenta que es anterior a [La Fusión](/roadmap/merge) y por lo tanto se refiere al mecanismo de prueba de trabajo de Ethereum - Ethereum es ahora seguro mediante la [prueba de participación](/developers/docs/consensus-mechanisms/pos))
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
