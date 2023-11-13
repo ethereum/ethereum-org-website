@@ -81,7 +81,7 @@ contract BtcPriceContract is UsingTellor {
 
 Mainnet: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
-#### Ingin melakukan beberapa pengujian terlebih dahulu? Lihat daftar di bawah untuk alamat testnet aktif kami: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
+### Ingin melakukan beberapa pengujian terlebih dahulu? Lihat daftar di bawah untuk alamat testnet aktif kami: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
 
 Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
 
@@ -97,4 +97,4 @@ Polygon Mumbai Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://m
 
 Arbitrum Testnet: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://rinkeby-explorer.arbitrum.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7)
 
-#### Untuk implementasi yang lebih kuat pada oracle Tellor, lihat daftar lengkap fungsi yang tersedia [di sini.](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
+### Untuk implementasi yang lebih kuat pada oracle Tellor, lihat daftar lengkap fungsi yang tersedia [di sini.](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
