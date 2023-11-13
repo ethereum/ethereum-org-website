@@ -17,18 +17,21 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 
 - [Lavora su un ticket aperto](https://github.com/ethereum/ethereum-org-website/issues) _– Attività che abbiamo identificato come necessarie_
 - [Unisciti al programma di traduzione](/contributing/translation-program/) _– Aiutaci a offrire ethereum.org in nuove lingue_
-- [Aggiungi risorse della community](/contributing/content-resources/) _– Aggiungi un articolo o risorsa utili a una pagina rilevante_
+- [Aiuta a progettare il sito web](/contributing/design/): _i progettisti di tutti i livelli possono contribuire a migliorare il sito web_
+- [Aggiungi risorse della comunità](/contributing/content-resources/) _– Aggiungi un articolo o risorsa utile a una pagina rilevante_
 - [Aggiungi un prodotto](/contributing/adding-products/) _– Aggiungi una dapp o un portafoglio a una pagina rilevante_
 - [Aggiungi strumenti per sviluppatori](/contributing/adding-developer-tools/) _– Aggiungi uno strumento per sviluppatori a una pagina rilevante_
 - [Aggiungi una piattaforma di scambio](/contributing/adding-exchanges/) _– Aggiungi una piattaforma di scambio al nostro [strumento di ricerca dedicato](/get-eth/#country-picker)_
 - [Migliora la nostra ricerca](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _– Comunicaci il tuo feedback sulla nostra ricerca o contribuisci direttamente_
-- [Richiedi una funzionalità](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) _– Condividi con noi le tue idee per nuove funzionalità o design_
-- [Aggiungi un termine del glossario](/contributing/adding-glossary-terms) _– Aiutaci a continuare a espandere il [glossario](/glossary/) di Ethereum_
-- [Crea/modifica contenuti](/contributing/#how-to-update-content) _– Suggerisci nuove pagine o apporta modifiche a quelle già esistenti_
-- [Aggiungi un livello 2](/contributing/adding-layer-2s/) _- Aggiungi un livello 2 a una pagina pertinente_
-- [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/) - _Aggiungi un progetto che aiuti a facilitare lo staking in solo, in pool o lo staking come servizio_
+- [Richiedi una funzionalità](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=): _comunicaci qualsiasi idea che hai per una nuova funzionalità o design_
+- [Aggiungi un termine al glossario](/contributing/adding-glossary-terms) _– Aiutaci a continuare a espandere il [glossario](/glossary/) di Ethereum_
+- [Crea/modifica i contenuti](/contributing/#how-to-update-content): _suggerisci nuove pagine o apporta modifiche a ciò che c'è già_
+- [Aggiungi un livello 2](/contributing/adding-layer-2s/): _Aggiungi un livello 2 a una pagina pertinente_
+- [Aggiungi un prodotto o servizio di staking](/contributing/adding-staking-products/): _aggiungi un progetto che aiuti a facilitare lo staking in solo, in gruppo o lo staking come servizio_
 - [Aggiungi un portafoglio](/contributing/adding-wallets/) _– Aggiungi un portafoglio per la [pagina trova portafogli](/wallets/find-wallet/)_
 - [Suggerisci un progetto per la nostra pagina DeSci](/contributing/adding-desci-projects/) _- Aggiungi un progetto basato su Ethereum che contribuisca alla scienza decentralizzata_
+- [Quiz](/contributing/quizzes/)_: aggiungi, aggiorna ed elimina le banche di domande dei quiz per una pagina rilevante_
+- [Suggerisci una risorsa di progettazione](/contributing/design/adding-design-resources/)_: aggiungi, aggiorna ed elimina le risorse di progettazione utili_
 
 _Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
 
@@ -48,6 +51,7 @@ Prima di contribuire, assicurati di avere familiarità con:
 - la [visione in evoluzione di ethereum.org](/about/)
 - i nostri [principi di progettazione](/contributing/design-principles/)
 - la nostra [guida di stile](/contributing/style-guide/)
+- il nostro [codice di condotta](/community/code-of-conduct)
 
 ## Come vengono prese le decisioni sul sito {#how-decisions-about-the-site-are-made}
 

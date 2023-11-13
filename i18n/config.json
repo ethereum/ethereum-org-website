@@ -296,6 +296,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "ne-np",
+    "crowdinCode": "ne-np",
+    "name": "Nepali",
+    "localName": "नेपाली",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "nl",
     "crowdinCode": "nl",
     "name": "Dutch",

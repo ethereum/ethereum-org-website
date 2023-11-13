@@ -1,19 +1,19 @@
 ---
 title: Ethereum für Java-Entwickler
-description: Erfahre, wie du mit Java-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Lernen, wie Sie mit Java-basierten Projekten und Werkzeugen für Ethereum entwickeln können
 lang: de
 incomplete: true
 ---
 
 <div class="featured">Erfahren Sie, wie Sie mit Java-basierten Projekten und Werkzeugen für Ethereum entwickeln können</div>
 
-Verwende Ethereum, um dezentrale Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
+Sie können mit Ethereum dezentrale Anwendungen (oder „dApps“) erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
 ## Erste Schritte mit Smart Contracts und der Solidity-Sprache {#getting-started-with-smart-contracts-and-solidity}
 
 **Erste Schritte bei der Integration von Java mit Ethereum**
 
-Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sich auf [ethereum.org/learn](/learn/) oder [ethereum.org/developers](/developers/) um
+Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sich auf [ethereum.org/learn](/learn/) oder [ethereum.org/developers](/developers/) um.
 
 - [Blockchain erklärt](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [Smart Contracts verstehen](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)

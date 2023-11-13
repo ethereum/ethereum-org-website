@@ -207,8 +207,19 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Supporto per orchestrazioni multi-cloud, multiregionali e con distribuzione ibrida
     - Tariffe orarie semplici basate su Saas
     - Supporto SLA e 24x7
+- [**Lava Network**](https://www.lavanet.xyz/)
+  - [Documenti](https://docs.lavanet.xyz/)
+  - Caratteristiche
+    - Utilizzo gratuito di Testnet
+    - Ridondanza decentralizzata per un elevato tempo di attività.
+    - Open-source
+    - SDK completamente decentralizzato
+    - Integrazione di Ethers.js
+    - Interfaccia di gestione del progetto intuitiva
+    - Integrità dei dati basata sul consenso
+    - Supporto multi-catena
 - [**Moralis**](https://moralis.io/)
-  - [Documenti](https://docs.moralis.io/)
+  - [Documentazione](https://docs.moralis.io/)
   - Caratteristiche
     - Nodi condivisi gratuiti
     - Nodi archivio condivisi gratuiti
@@ -231,47 +242,46 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
   - Caratteristiche
     - Accesso a oltre 50 nodi della blockchain
     - Chiave API gratuita
-    - Block Explorer
+    - Esploratori di blocchi
     - Tempo di risposta dell'API ⩽ 1 sec
-    - Team di assistenza 24/7
-    - Referente commerciale personale
-    - Nodi condivisi, archivio, backup e dedicati
+    - Team di assistenza 24 ore su 24/7 giorni su 7
+    - Gestore personale dell'account
+    - Nodi condivisi, di archivio, di backup e dedicati
 - [**Pocket Network**](https://www.pokt.network/)
   - [Documentazione](https://docs.pokt.network/home/)
   - Caratteristiche
-    - Protocollo RPC e Marketplace decentralizzati
+    - Protocollo RPC e mercato decentralizzati
     - Livello con 1 milione di richieste giornaliere gratuite (per endpoint, max. 2)
     - [Endpoint pubblici](https://docs.pokt.network/home/resources/public-rpc-endpoints)
     - Programma Pre-Stake+ (se servono più di 1 milione di richieste al giorno)
     - Più di 15 blockchain supportate
     - Più di 6.400 nodi che guadagnano POKT a servizio delle applicazioni
-    - Nodo d'archiviazione, nodo d'archiviazione con tracciamento e supporto ai nodi di reti di prova
-    - Diversità dei client dei nodi della Rete Principale di Ethereum
+    - Nodo d'archiviazione, nodo d'archiviazione con tracciamento e supporto ai nodi di Testnet
+    - Diversità dei client dei nodi della rete principale di Ethereum
     - Nessun punto di errore unico
-    - Nessun tempo di inattività
+    - Nessun tempo d'inattività
     - Tokenomic a bassissimo costo (esegui lo staking di POKT una volta per la larghezza di banda di rete)
     - Nessun costo mensile irrecuperabile, trasforma la tua infrastruttura in una risorsa
     - Bilanciamento di carico integrato nel protocollo
     - Ridimensiona illimitatamente il numero di richieste giornaliere e nodi orari in base alle esigenze
     - L'opzione più privata e resistente alla censura
     - Supporto pratico per sviluppatori
-    - Pannello di controllo e analisi di [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
+    - Dashboard e analisi di [Pocket Portal](https://bit.ly/ETHorg_POKTportal)
 - [**QuickNode**](https://www.quicknode.com)
-  - [Documentazione](https://www.quicknode.com/docs/)
+  - [Documenti](https://www.quicknode.com/docs/)
   - Caratteristiche
-    - Riferimento nel settore per prestazioni e affidabilità
     - Supporto tecnico 24/7 e community Discord di sviluppatori
     - Bilanciamento geografico, multi-cloud/metal, rete a bassa latenza
     - Supporto multi-catena (Optimism, Arbitrum, Polygon e altri 11)
     - Livelli intermedi per velocità e stabilità (indirizzamento di chiamata, cache, indicizzazione)
     - Monitoraggio del contratto intelligente tramite Webhook
-    - Pannello di controllo intuitivo, suite di analisi, compositore RPC
+    - Pannello di controllo intuitivo, suite di analisi, RPC composer
     - Funzionalità di sicurezza avanzate (JWT, mascheratura, whitelist)
     - API di dati e analisi NFT
     - [Certificazione SOC2](https://www.quicknode.com/security)
-    - Adatto agli sviluppatori per grandi imprese
+    - Adatto agli sviluppatori per imprese
 - [**Rivet**](https://rivet.cloud/)
-  - [Documenti](https://rivet.readthedocs.io/en/latest/)
+  - [Docs](https://rivet.readthedocs.io/en/latest/)
   - Caratteristiche
     - Opzione livello gratuito
     - Ridimensionamento secondo le esigenze
@@ -280,7 +290,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
   - Caratteristiche
     - Nodi dedicati e condivisi
     - Pannello di controllo
-    - Hosting di AWS su diversi fornitori di hosting in diversi luoghi in America Latina
+    - Hosting di AWS su più fornitori di hosting in diversi luoghi in America Latina
     - Client di Prysm e Lighthouse
 - [**SettleMint**](https://console.settlemint.com/)
   - [Docs](https://docs.settlemint.com/)
@@ -298,19 +308,19 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
 - [**Tenderly**](https://tenderly.co/web3-gateway)
   - [Docs](https://docs.tenderly.co/web3-gateway/web3-gateway)
   - Caratteristiche
-    - Livello gratuito con 25 milioni di Unità di Tenderly al mese
+    - Livello gratuito con 25 milioni di unità di Tenderly al mese
     - Accesso gratuito ai dati storici
     - Carichi di lavoro gravosi in lettura fino a 8 volte più veloci
     - Accesso di lettura coerente al 100%
     - Endpoint RPC JSON
-    - Costruttore di richieste RPC basato sull'UI e anteprima della richiesta
+    - Generatore di richieste RPC e anteprima delle richieste basati sull'interfaccia utente
     - Completamente integrato con gli strumenti di sviluppo, debug e test di Tenderly
     - Simulazioni delle transazioni
     - Analisi di utilizzo e filtraggio
     - Facile gestione delle chiavi d'accesso
-    - Supporto ingegneristico dedicato tramite chat, email e Discord
+    - Supporto ingegneristico dedicato tramite chat, e-mail e Discord
 - [**Watchdata**](https://watchdata.io/)
-  - [Docs](https://docs.watchdata.io/)
+  - [Documenti](https://docs.watchdata.io/)
   - Caratteristiche
     - Attendibilità dei dati
     - Connessione ininterrotta senza tempi di inattività
@@ -328,6 +338,14 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
     - Commissione TX illimitata e carburante infinito per inviare le transazioni
     - Ottenimento più veloce del nuovo blocco e lettura della blockchain
     - Il miglior prezzo per garanzia di chiamata dell'API
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Documenti](https://docs.chainbase.com)
+  - Caratteristiche
+    - Servizi RPC altamente disponibili, veloci e scalabili
+    - Supporto multi-catena
+    - Tariffe gratuite
+    - Pannelli di controllo facili da usare
+    - Fornisce servizi di dati blockchain oltre a RPC
 
 [**Zeeve**](https://www.zeeve.io/)
 
@@ -340,6 +358,19 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
   - Gli endpoint RPC offrono un accesso autenticato alle API, una gestione dei servizi senza sforzo con un pannello di controllo intuitivo e analisi dei dati.
   - Offre opzioni di cloud gestito e di bring your own cloud tra cui scegliere e supporta tutti i principali fornitori di cloud come AWS, Azure, Google Cloud, Digital Ocean e on-premise.
   - Utilizziamo l'instradamento intelligente per colpire sempre il nodo più vicino al tuo utente
+
+[**Tokenview**](https://services.tokenview.io/)
+
+- [Documenti](https://services.tokeniew/docs?type=nodeService)
+- Caratteristiche
+  - Supporto tecnico 24/7 & comunità di sviluppatori su Telegram
+  - Supporto di più blockchain (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+  - Entrambi gli endpoint di rpc e wss possono essere utilizzati
+  - Accesso illimitato ad API di dati d'archivio
+  - Pannello di controllo con Request Explorer e Mempool Watcher
+  - API per dati NFT e notifiche per Webhook
+  - Paga in criptovalute
+  - Supporto esterno per ulteriori requisiti di funzionalità
 
 ## Letture consigliate {#further-reading}
 

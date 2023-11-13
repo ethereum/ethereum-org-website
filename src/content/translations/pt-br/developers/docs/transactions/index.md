@@ -27,7 +27,7 @@ Uma transação enviada inclui as seguintes informações:
 - `signature`: o identificador do remetente. Ele é gerado quando a chave privada do remetente assina a transação e confirma que o remetente autorizou essa transação.
 - `nonce`: um contador de incremento sequencial que indica o número da transação a partir da conta.
 - `value`: a quantidade de ETH a transferir do remetente para o destinatário (denominado em WEI, onde 1ETH equivale a 1e+18wei).
-- `data`: o campo opcional para incluir dados arbitrários.
+- `input data` – campo opcional para incluir um dado arbitrário
 - `gasLimit`: a quantidade máxima de gás que pode ser consumida pela transação. A [EVM](/developers/docs/evm/opcodes) especifica as unidades de gás necessárias para cada etapa computacional
 - `maxPriorityFeePerGas`: o preço máximo do gás consumido a ser incluído como gorjeta para o validador.
 - `maxFeePerGas`: a taxa máxima por unidade de gás disposta a ser paga pela transação (inclusive de `baseFeePerGas` e `maxPriorityFeePerGas`)

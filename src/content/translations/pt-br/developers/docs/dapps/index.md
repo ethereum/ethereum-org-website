@@ -68,6 +68,12 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
+**thirdweb _- SDKs em todos os idiomas, contratos inteligentes, ferramentas e infraestrutura para o desenvolvimento da web3._**
+
+- [Página inicial](https://thirdweb.com/)
+- [Documentação](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 ## Leitura adicional {#further-reading}
 
 - [Ver dapps](/dapps)
@@ -76,9 +82,9 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 - [Dapps populares](https://www.alchemy.com/dapps) - _Alchemy_
 
-_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 
-- [Introdução à pilha Ethereum](/developers/docs/ethereum-stack/)
+- [Introdução à pilha de Ethereum](/developers/docs/ethereum-stack/)
 - [Estruturas de desenvolvimento](/developers/docs/frameworks/)

@@ -1,12 +1,11 @@
 ---
 title: ERC-20 token akıllı sözleşmesini anlamak
-description: Ethereum test ağında ilk akıllı sözleşmenizi dağıtmaya giriş
+description: Ethereum test ağında ilk akıllı sözleşmenizi nasıl dağıtacağınızı öğrenin
 author: "jdourlens"
 tags:
-  - "akıllı sözleşmeler"
-  - "token'lar"
-  - "solidity"
-  - "başlarken"
+  - "akıllı kontratlar"
+  - "jetonlar"
+  - "katılık"
   - "erc-20"
 skill: beginner
 lang: tr
@@ -63,7 +62,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 ERC-20 standartı, bir adresin başka bir adresten token alabilmesi için ödenek vermesine izin verir. Bu alıcı, `spender` adresinin `owner` adresinin adına harcayabileceği kalan token'ların sayısını döndürür. Bu fonksiyon bir alıcıdır, sözleşmenin durumunu değiştirmez ve varsayılan olarak 0 döndürür.
 
-## Fonksiyonlar {#functions}
+## İşlevler {#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
