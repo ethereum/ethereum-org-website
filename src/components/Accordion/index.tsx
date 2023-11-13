@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useColorMode, useColorModeValue } from "@chakra-ui/react"
 import {
   Accordion as ChakraAccordion,
   AccordionItem,
@@ -7,14 +6,17 @@ import {
   AccordionPanel,
   AccordionIcon,
   Box,
+  useToken
 } from "@chakra-ui/react"
 
 const Accordion = () => {
-  const { toggleColorMode } = useColorMode()
-  const primary = useColorModeValue("#8282FF", "#FFE3D3")
+  const primary = useToken(
+    "primary",
+    "lowContrast"
+  )
   return (
     <>
-      <ChakraAccordion allowToggle width="296px" height="300px">
+      <ChakraAccordion allowToggle>
         <AccordionItem border="none">
           {({ isExpanded }) => (
             <>
