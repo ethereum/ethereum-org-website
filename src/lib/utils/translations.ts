@@ -16,8 +16,20 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
 
-export const getRequiredNamespacesForPath = (path: string) => {
+export const getRequiredNamespacesForPath = (path: string, layout: string | undefined) => {
   let requiredNamespaces: string[] = ["common"]
+
+  if (layout === 'use-cases') {
+    requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
+  }
+
+  if (layout === "upgrade") {
+    requiredNamespaces = [...requiredNamespaces, "page-upgrades", "page-upgrades-index"]
+  }
+
+  if (layout === "tutorial") {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
 
   if (path.startsWith("/community")) {
     requiredNamespaces = [...requiredNamespaces, "page-community"]
@@ -31,6 +43,10 @@ export const getRequiredNamespacesForPath = (path: string) => {
     ]
   }
 
+  if (path.startsWith("/glossary")) {
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
+
   if (path.startsWith("/history")) {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
@@ -41,6 +57,16 @@ export const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
+  }
+
+  // Quizzes
+  // Note: Add any URL paths that have quizzes here
+  if (
+    path.startsWith("/nft") ||
+    path.startsWith("/roadmap/merge") ||
+    path.startsWith("/security")
+  ) {
+    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
 
   return requiredNamespaces

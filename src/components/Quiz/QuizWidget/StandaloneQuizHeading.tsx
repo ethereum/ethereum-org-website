@@ -11,6 +11,6 @@ export const StandaloneQuizHeading = () => (
     scrollMarginTop={24}
     id="quiz"
   >
-    <Translation id="test-your-knowledge" />
+    <Translation id="learn-quizzes:test-your-knowledge" />
   </Heading>
 )
