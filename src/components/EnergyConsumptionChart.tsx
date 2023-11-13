@@ -209,7 +209,7 @@ const EnergyConsumptionChart: React.FC = () => {
             <Legend
               content={
                 <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
+                  {t("page-what-is-ethereum:page-what-is-ethereum-energy-consumption-chart-legend")}
                 </Box>
               }
             />
