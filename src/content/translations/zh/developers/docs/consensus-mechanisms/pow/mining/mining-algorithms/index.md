@@ -12,7 +12,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-为了更好地理解本页内容，推荐您先阅读[工作量证明共识](/developers/docs/consensus-mechanisms/pow)和[挖矿](/developers/docs/consensus-mechanisms/pow/mining)。
+为了更好地理解本页内容，推荐你先阅读[工作量证明共识](/developers/docs/consensus-mechanisms/pow)和[挖矿](/developers/docs/consensus-mechanisms/pow/mining)。
 
 ## Dagger Hashimoto {#dagger-hashimoto}
 
@@ -34,4 +34,4 @@ Ethash 是在现已弃用的工作量证明架构下，实际用于真正的以�
 
 ## 延伸阅读 {#further-reading}
 
-_还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
+_还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
