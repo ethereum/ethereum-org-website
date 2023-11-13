@@ -15,11 +15,14 @@ const MarkdownImage = ({
   width,
   height,
   aspectRatio,
+  src,
   ...rest
 }: MarkdownImageProps) => {
   const imageAspectRatio = parseFloat(aspectRatio)
   let imageWidth = parseFloat(width)
   let imageHeight = parseFloat(height)
+
+  const srcToString = src.toString()
 
   // keep the size of the images proportional to the max width constraint
   if (imageWidth > CONTENT_IMAGES_MAX_WIDTH) {
@@ -31,11 +34,12 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
-      <Link href={rest.src.toString()} target="_blank" rel="noopener">
+      <Link href={srcToString} target="_blank" rel="noopener">
         <Image
           width={imageWidth}
           height={imageHeight}
           loading="lazy"
+          src={srcToString}
           {...rest}
         />
       </Link>
