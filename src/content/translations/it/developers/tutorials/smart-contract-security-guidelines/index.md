@@ -9,7 +9,7 @@ tags:
 skill: intermediate
 lang: it
 published: 2020-09-06
-source: Costruire contratti sicuri
+source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/guidelines.md
 ---
 
@@ -50,7 +50,7 @@ Abbiamo discusso le diverse soluzioni di aggiornabilità nel [nostro post di blo
 
 L'architettura della base di codice deve rendere il codice semplice da controllare. Evita le scelte architettoniche che riducono la capacità di ragionare sulla sua correttezza.
 
-- **Dividi la logica del sistema**, su più contratti o raggruppando funzioni simili (ad esempio, autenticazione, aritmetica, ...).
+- **Dividi la logica del tuo sistema**, tramite più contratti o raggruppando le funzioni simili (ad esempio, autenticazione, aritmetica, ...).
 - **Scrivi funzioni piccole, con uno scopo chiaro.** Questo faciliterà il controllo e consentirà di testare singoli componenti.
 
 ### Ereditarietà {#inheritance}

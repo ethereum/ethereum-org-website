@@ -23,4 +23,4 @@ Yeni sözlük terimleri aşağıdaki kriterlere göre değerlendirilecektir:
 
 ## Teriminizi ekleyin {#how-decisions-about-the-site-are-made}
 
-Ethereum.org'a bir sözlük terimi eklemek istiyorsanız ve kriterleri karşılıyorsa, [GitHub'da bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_glossary_term.md).
+Ethereum.org'a bir sözlük terimi eklemek istiyorsanız ve kriterleri karşılıyorsa, [GitHub'da bir konu oluşturun](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

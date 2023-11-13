@@ -1,6 +1,5 @@
 import React from "react"
 import {
-  Center,
   Box,
   Flex,
   BoxProps,
@@ -20,7 +19,7 @@ import HorizontalCard, {
 } from "../components/HorizontalCard"
 import CardList from "../components/CardList"
 import FeedbackCard from "../components/FeedbackCard"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import { Simulator } from "../components/Simulator"
@@ -208,7 +207,7 @@ const WalletsPage = ({
             },
             {
               to: `#${SIMULATOR_ID}`,
-              content: "Interactive tutorial",
+              content: "How to use a wallet",
               matomo: {
                 eventCategory: "wallet hero buttons",
                 eventAction: "click",
@@ -489,9 +488,7 @@ const WalletsPage = ({
         </CalloutCardContainer>
       </Content>
       <Content>
-        <Center w="100%">
-          <QuizWidget quizKey="wallets" />
-        </Center>
+        <StandaloneQuizWidget quizKey="wallets" />
       </Content>
       <Content>
         <FeedbackCard />

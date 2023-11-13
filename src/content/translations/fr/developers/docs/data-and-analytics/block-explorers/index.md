@@ -21,8 +21,10 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 - [Ethplorer](https://ethplorer.io/) - _Aussi disponible en chinois, espagnol, français, turc, russe, coréen et vietnamien_
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
+- [Rantom](https://rantom.app/)
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
+- [Explorateurs de bloc DexGuru](https://ethereum.dex.guru/)
 
 ## Données {#data}
 
@@ -234,6 +236,7 @@ Les données de couches de consensus de haut niveau comprennent les éléments s
 - [Blockchair](https://blockchair.com/ethereum) - L'explorateur Ethereum le plus privé. Egalement pour trier et filtrer des données (mempool).
 - [Etherchain](https://www.etherchain.org/) - un explorateur de blocs pour le réseau principal Ethereum
 - [Ethplorer](https://ethplorer.io/) - un explorateur de blocs avec une focalisation sur les jetons pour le réseau principal Ethereum et le réseau de test Kovan
+- [Rantom](https://rantom.app/) - Un service crypto-friendly open-source, intégré à sa plateforme de finance décentralisée (DeFi) & Visualisation du volume de transactions des NFT pour une vision détaillée
 
 ## En savoir plus {#further-reading}
 

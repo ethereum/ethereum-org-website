@@ -18,7 +18,7 @@ Die erste Kryptowährung war Bitcoin, die vom Pseudonym Satoshi Nakamoto erschaf
 
 ## Was ist Ether? {#what-is-ether}
 
-**Ether (ETH)** ist die Kryptowährung, die für viele Dinge im Ethereum-Netzwerk verwendet wird. Grundsätzlich ist es die einzig akzeptable Form der Bezahlung von Transaktionsgebühren, und nach [The Merge](/roadmap/merge) wird Ether erforderlich sein, um Blöcke im Mainnet zu validieren und vorzuschlagen. Ether werden u. a. auch als primäre Form von Sicherheiten auf den [DeFi](/defi)-Kreditmärkten, als Rechnungseinheit auf NFT-Marktplätzen, als Bezahlung für die Erbringung von Dienstleistungen oder für den Verkauf von Gütern in der realen Welt und mehr verwendet.
+**Ether (ETH)** ist die Kryptowährung, die für viele Dinge im Ethereum-Netzwerk verwendet wird. Grundsätzlich ist es die einzig akzeptable Form der Bezahlung von Transaktionsgebühren, und nach [der Zusammenführung](/roadmap/merge) wird Ether benötigt, um Blöcke auf dem Mainnet zu validieren und vorzuschlagen. Ether werden u. a. auch als primäre Form von Sicherheiten auf den [DeFi](/defi)-Kreditmärkten, als Rechnungseinheit auf NFT-Marktplätzen, als Bezahlung für die Erbringung von Dienstleistungen oder für den Verkauf von Gütern in der realen Welt und mehr verwendet.
 
 Ethereum ermöglicht es Entwicklern, [**dezentrale Anwendungen (dapps)**](/developers/docs/dapps) zu erstellen, die sich alle einen Pool von Rechenleistung teilen. Da dieser gemeinsame Pool endlich ist, braucht Ethereum einen Mechanismus, um zu bestimmen, wer ihn nutzen darf. Andernfalls könnte eine App versehentlich oder böswillig alle Netzwerkressourcen verbrauchen, was anderen den Zugriff auf die App verwehren würde.
 
@@ -32,19 +32,19 @@ Es ist [üblich](https://www.reuters.com/article/us-crypto-currencies-lending-in
 
 Minting ist der Prozess, bei dem neuer Ether im Ethereum-Ledger erstellt wird. Das zugrundeliegende Ethereum-Protokoll erstellt den neuen Ether, und es ist nicht möglich, dass ein Nutzer Ether erstellt.
 
-Ether wird gemintet, wenn ein Miner einen Block auf der Ethereum-Blockchain erstellt. Als Anreiz für Miner gewährt das Protokoll in jedem Block eine Belohnung, die das Guthaben einer Adresse erhöht, die vom Miner des Blocks festgelegt wurde. Die Blockbelohnung hat sich im Laufe der Zeit geändert und beträgt heute 2 ETH pro Block.
+Ether wird als Belohnung für jeden vorgeschlagenen Block und an jedem Epochen-Checkpoint für andere Validierungsaktivitäten geprägt, die mit dem Erreichen des Konsenses in Zusammenhang stehen. Der Gesamtbetrag, der ausgegeben wird, hängt von der Anzahl der Validatoren und der Höhe ihrer Einsätze ab. Diese Gesamtausgabe wird im Idealfall, wenn alle Validierer ehrlich und online sind, gleichmäßig unter den Validierern aufgeteilt, doch in der Realität variiert sie je nach Leistung der Validierer. Etwa 1/8 der Gesamtausgabe geht an den Block-Vorschlagenden, der Rest wird auf die weiteren Validierer verteilt. Block-Vorschlagende erhalten auch Trinkgelder aus Transaktionsgebühren und MEV-bezogenen Einnahmen, aber diese stammen aus recyceltem Ether, nicht aus der Neuausstellung.
 
 ## Ether verbrennen {#burning-ether}
 
-Neben der Erzeugung von Ether durch Blockprämien kann Ether auch durch einen Prozess namens "Verbrennen" zerstört werden. Wenn Ether verbrannt wird, wird er dauerhaft aus dem Verkehr gezogen.
+Neben der Erzeugung von Ether durch Blockbelohnungen kann Ether auch durch einen Prozess namens "Burning" zerstört werden. Wenn Ether verbrannt wird, wird er dauerhaft aus dem Verkehr gezogen.
 
 Bei jeder Transaktion auf Ethereum wird Ether verbrannt. Wenn Nutzer für ihre Transaktionen bezahlen, wird eine grundlegende Gasgebühr vernichtet, die vom Netzwerk entsprechend der Transaktion festgelegt wird. Dies, zusammen mit variablen Blockgrößen und einer maximalen Gasgebühr, vereinfacht die Abschätzung der Transaktionsgebühren auf Ethereum. Wenn die Nachfrage im Netzwerk hoch ist, können [Blöcke](https://etherscan.io/block/12965263) mehr Ether verbrauchen, als sie minten, wodurch die Ausgabe von Ether effektiv ausgeglichen wird.
 
-Die Verbrennung der Grundgebühr verhindert diverse Möglichkeiten der Miner zur Manipulation. Wenn beispielsweise die Miner ihre Grundgebühr erhalten, können sie ihre eigenen Transaktionen kostenlos einbeziehen und die Grundgebühr für alle anderen erhöhen. Alternativ könnten sie die Grundgebühr an einige Nutzer außerhalb der Kette zurückerstatten, was zu einem undurchsichtigen und komplexen Markt für Transaktionsgebühren führen würde.
+Das Verbrennen der Grundgebühr verhindert, dass ein Block-Produzent Transaktionen manipulieren kann. Wenn beispielsweise Block-Ersteller die Grundgebühr erhalten, könnten sie ihre eigenen Transaktionen kostenlos einbeziehen und die Grundgebühr für alle anderen erhöhen. Alternativ könnten sie die Grundgebühr an einige Nutzer außerhalb der Kette zurückerstatten, was zu einem undurchsichtigen und komplexen Markt für Transaktionsgebühren führen würde.
 
 ## Stückelung von Ether {#denominations}
 
-Da viele Transaktionen auf Ethereum klein sind, hat Ether mehrere Stückelungen, die für kleinere Beträge referenziert werden können. Von diesen Stückelungen sind Wei und gwei besonders wichtig.
+Da der Wert vieler Transaktionen auf Ethereum gering ist, hat Ether mehrere Stückelungen, die als kleinere Rechnungseinheiten bezeichnet werden können. Von diesen Stückelungen sind Wei und gwei besonders wichtig.
 
 Wei ist die kleinstmögliche Menge an Ether. Daher basieren viele technische Implementierungen, wie das [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf), auf Berechnungen in Wei.
 
@@ -67,11 +67,12 @@ Wenn es sich bei der Empfängeradresse um einen [Smart Contract](/developers/doc
 
 Nutzer können den Ether-Saldo jedes [Kontos](/developers/docs/accounts/) abfragen, indem sie das `balance`-Feld des Kontos einsehen, das den Ether-Bestand in Wei anzeigt.
 
-[Etherscan](https://etherscan.io) ist ein beliebtes Tool zur Überprüfung von Adresssalden über eine webbasierte Anwendung. Zum Beispiel zeigt [diese Etherscan-Seite](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) den Kontostand der Ethereum Foundation.
+[Etherscan](https://etherscan.io) ist ein beliebtes Tool zur Überprüfung von Adresssalden über eine webbasierte Anwendung. Zum Beispiel zeigt [diese Etherscan-Seite](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) den Kontostand der Ethereum Foundation. Kontostände können auch über Wallets oder direkt durch Anfragen an die Knoten abgefragt werden.
 
 ## Weiterführende Informationen {#further-reading}
 
 - [Definition von Ether und Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) - _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): Der ursprüngliche Vorschlag für Ethereum. Dieses Dokument enthält eine Beschreibung von Ether und der Beweggründe für seine Entstehung.
+- [Gwei-Rechner](https://www.alchemy.com/gwei-calculator): Dieser Gwei-Rechner konvertiert Wei, Gwei und Ether. Geben Sie einfach einen Betrag an Wei, Gwei oder ETH ein, die Umrechnung erhalten Sie automatisch.
 
 _Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_

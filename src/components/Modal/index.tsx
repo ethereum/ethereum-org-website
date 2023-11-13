@@ -7,14 +7,15 @@ import {
   ModalCloseButton,
   ModalHeader,
   ModalBody,
-  ModalFooter,
+  type ModalProps,
+  type ModalContentProps,
 } from "@chakra-ui/react"
 
 export interface IPropsOverlay {
   isActive: boolean
 }
 
-export interface IProps {
+export interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
   children?: React.ReactNode
   title?: string
   description?: string
@@ -30,20 +31,29 @@ const Modal: React.FC<IProps> = ({
   description,
   actionButtonLabel,
   ButtonLabel,
+  /* size, */
   isOpen,
   setIsOpen,
-  ...props
+  ...restProps
 }) => {
   return (
     <ChakraModal
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
+      isCentered
+      /* size={size ?? "xl"} */
       scrollBehavior="inside"
-      {...props}
     >
       <ModalOverlay bgColor="blackAlpha.700" />
 
-      <ModalContent>
+      <ModalContent
+        p={8}
+        shadow="md"
+        border="1px"
+        borderColor="border"
+        borderRadius="md"
+        {...restProps}
+      >
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{children}</ModalBody>

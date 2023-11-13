@@ -358,7 +358,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-## eth_chainId {#eth_chainId}
+### eth_chainId {#eth_chainId}
 
 Retourne la chaîne ID utilisée pour la signature d'opérations protégées par la rediffusion.
 
@@ -1239,7 +1239,10 @@ params: ["0x85d995eba9763907fdf35cd2034144dd9d53ce32cbec21349d4b12823c6860c5"]
 - `contractAddress`: `DATA`, 20 octets - L'adresse du contrat a été créée, si la transaction était une création de contrat, sinon `null`.
 - `logs`: `Tableau` - Tableau d'objets de log, que cette transaction a générés.
 - `logsBloom`: `DATA`, 256 octets - Filtre Bloom pour les clients légers pour récupérer rapidement les logs associés.
-- `type`: `QUANTITY` - nombre entier du type de transaction, `0x00` pour les transactions héritées, `0x01` pour les types de listes d'accès, `0x02` pour les frais dynamiques. Il renvoie aussi _soit_ :
+- `type`: `QUANTITY` - nombre entier du type de transaction, `0x00` pour les transactions héritées, `0x01` pour les types de listes d'accès, `0x02` pour les frais dynamiques.
+
+Il renvoie aussi _soit_ :
+
 - `root` : `DATA` 32 octets de stateroot post-transaction (avant Byzantium)
 - `status`: `QUANTITY` soit `1` (succès) ou `0` (échec)
 
@@ -1484,10 +1487,10 @@ Crée un objet filtre, basé sur les options de filtre, pour avertir lorsque l'�
 
 1. `Object` - Les options de filtre :
 
-- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre de blocs entiers, ou `« latest »` pour le dernier bloc miné ou `« pendant »`, `« earliest »` pour les transactions non encore minées.
-- `toBlock`: `QUANTITY|TAG` - (facultatif, par défaut : `« latest »`) Numéro de bloc d'entier ou `« latest »` pour le dernier bloc miné ou `« pending »`, `« earliest »` pour les transactions non encore minées.
+- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `"latest"`) nombre de blocs entiers, ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
+- `toBlock`: `QUANTITY|TAG` - (facultatif, par défaut : `"latest"`) Numéro de bloc d'entier ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
 - `address`: `DATA|Array`, 20 octets - (facultatif) adresse contractuelle ou une liste d'adresses d'où les logs doivent provenir.
-- `topics` : `Array of DATA`, - (facultatif) tableau de sujets `DATA` de 32 bytes. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options « ou ».
+- `topics`: `Array of DATA`, - (facultatif) tableau de 32 bytes `DATA` topics. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options "ou".
 
 ```js
 params: [
@@ -1678,10 +1681,10 @@ Retourne un tableau de tous les logs correspondant à un objet filtre donné.
 
 1. `Object` - Les options de filtre :
 
-- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `« latest »`) nombre de blocs entiers, ou `« latest »` pour le dernier bloc miné ou `« pendant »`, `« earliest »` pour les transactions non encore minées.
-- `toBlock`: `QUANTITY|TAG` - (facultatif, par défaut : `« latest »`) Numéro de bloc d'entier ou `« latest »` pour le dernier bloc miné ou `« pending »`, `« earliest »` pour les transactions non encore minées.
+- `fromBlock`: `QUANTITY|TAG` - (optionnel, par défaut : `"latest"`) nombre de blocs entiers, ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
+- `toBlock`: `QUANTITY|TAG` - (facultatif, par défaut : `"latest"`) Numéro de bloc d'entier ou `"latest"` pour le dernier bloc miné ou `"pending"`, `"earliest"` pour les transactions non encore minées.
 - `address`: `DATA|Array`, 20 octets - (facultatif) adresse contractuelle ou une liste d'adresses d'où les logs doivent provenir.
-- `topics` : `Array of DATA`, - (facultatif) tableau de sujets `DATA` de 32 bytes. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options « ou ».
+- `topics`: `Array of DATA`, - (facultatif) tableau de 32 bytes `DATA` topics. Les sujets dépendent de l'ordre. Chaque sujet peut également être un tableau de DATA avec des options "ou".
 - `blockhash`: `DATA`, 32 octets - (facultatif, **futur**) À l'ajout de EIP-234, `blockHash` sera une nouvelle option de filtre qui restreint les logs retournés au bloc unique avec le hachage de 32 octets `blockHash`. Utiliser `blockHash` est équivalent à `fromBlock` = `toBlock` = le numéro de bloc avec le hachage `blockHash`. Si `blockHash` est présent dans les critères de filtre, alors ni `fromBlock` ni `toBlock` ne sont autorisés.
 
 ```js
@@ -1798,7 +1801,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":[
 }
 ```
 
-### db_putString (deprecated) {#db_putstring}
+### db_putString (obsolète) {#db_putstring}
 
 Stocke une chaîne dans la base de données locale.
 
@@ -1829,7 +1832,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_putString","params":["testDB"
 }
 ```
 
-### db_getString (deprecated) {#db_getstring}
+### db_getString (obsolète) {#db_getstring}
 
 Retourne une chaîne depuis la base de données locale. **Remarque :** cette fonction est obsolète.
 
@@ -1857,7 +1860,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_getString","params":["testDB"
 }
 ```
 
-### db_putHex (deprecated) {#db_puthex}
+### db_putHex (obsolète) {#db_puthex}
 
 Stocke les données binaires dans la base de données locale. **Remarque :** cette fonction est obsolète.
 
@@ -1886,7 +1889,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_putHex","params":["testDB","m
 }
 ```
 
-### db_getHex (deprecated) {#db_gethex}
+### db_getHex (obsolète) {#db_gethex}
 
 Retourne des données binaires depuis la base de données locale. **Remarque :** cette fonction est obsolète.
 
@@ -1914,7 +1917,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_getHex","params":["testDB","m
 }
 ```
 
-### shh_version (deprecated) {#shh_post}
+### shh_version (obsolète) {#shh_post}
 
 Retourne la version actuelle du protocole de chuchotement.
 
@@ -1937,7 +1940,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_version","params":[],"id":67
 }
 ```
 
-### shh_post (deprecated) {#shh_version}
+### shh_post (obsolète) {#shh_version}
 
 Envoie un message chuchoté.
 
@@ -2008,7 +2011,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newIdentity","params":[],"id
 }
 ```
 
-### shh_hasIdentity (deprecated){#shh_hasidentity}
+### shh_hasIdentity (obsolète){#shh_hasidentity}
 
 Vérifie si le client détient les clés privées pour une identité donnée.
 
@@ -2039,7 +2042,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_hasIdentity","params":["0x04
 }
 ```
 
-### shh_newGroup (deprecated){#shh_newgroup}
+### shh_newGroup (obsolète){#shh_newgroup}
 
 **Remarque :** cette fonction est obsolète.
 
@@ -2060,7 +2063,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newGroup","params":[],"id":7
 }
 ```
 
-### shh_addToGroup (deprecated){#shh_addtogroup}
+### shh_addToGroup (obsolète){#shh_addtogroup}
 
 **Remarque :** cette fonction est obsolète.
 
@@ -2089,7 +2092,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_addToGroup","params":["0x04f
 }
 ```
 
-### shh_newFilter (deprecated){#shh_newfilter}
+### shh_newFilter (obsolète){#shh_newfilter}
 
 Crée un filtre à notifier, lorsque le client reçoit un message chuchotant correspondant aux options de filtre. **Remarque :** cette fonction est obsolète.
 
@@ -2128,7 +2131,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_newFilter","params":[{"topic
 }
 ```
 
-### shh_uninstallFilter (deprecated){#shh_uninstallfilter}
+### shh_uninstallFilter (obsolète){#shh_uninstallfilter}
 
 Désinstalle un filtre avec un identifiant donné. Doit toujours être appelé lorsque la montre n'est plus nécessaire. De plus, filtre le délai d'attente quand ils ne sont pas demandés avec [shh_getFilterChanges](#shh_getfilterchanges) pour une certaine période. **Remarque :** cette fonction est obsolète.
 
@@ -2157,7 +2160,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_uninstallFilter","params":["
 }
 ```
 
-### shh_getFilterChanges (deprecated){#shh_getfilterchanges}
+### shh_getFilterChanges (obsolète){#shh_getfilterchanges}
 
 Méthode de vote pour les filtres chuchotants. Retourne les nouveaux messages depuis le dernier appel de cette méthode. **Note** appelant la méthode [shh_getMessages](#shh_getmessages) va réinitialiser le tampon pour cette méthode afin que vous ne receviez pas de messages dupliqués. **Remarque :** cette fonction est obsolète.
 
@@ -2206,7 +2209,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getFilterChanges","params":[
 }
 ```
 
-### shh_getMessages (deprecated) {#shh_getmessages}
+### shh_getMessages (obsolète) {#shh_getmessages}
 
 Récupère tous les messages correspondant à un filtre. Contrairement à `shh_getFilterChanges` cela retourne tous les messages.
 

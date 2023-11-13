@@ -5,11 +5,7 @@ author: "Paul Apivat"
 tags:
   - "SQL"
   - "Interrogazioni"
-  - "Analisi"
-  - "Primi passi"
-  - "Blocchi"
   - "Transazioni"
-  - "Gas"
 skill: beginner
 lang: it
 published: 2021-05-11

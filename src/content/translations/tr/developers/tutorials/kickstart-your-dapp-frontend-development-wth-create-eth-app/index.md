@@ -9,7 +9,7 @@ tags:
   - "ethers.js"
   - "the graph"
   - "defi"
-skill: beginner
+skill: advanced
 lang: tr
 published: 2020-04-27
 source: soliditydeveloper.com
@@ -28,7 +28,7 @@ cd my-eth-app
 yarn react-app:start
 ```
 
-Perde arkasında [create-react-app](https://github.com/facebook/create-react-app) kullanır. Uygulamanızı görmek için, `http://localhost:3000/` bağlantısını açın. Üretime dağıtmaya hazır olduğunuzda, yarn build ile küçültülmüş bir paket oluşturun. Bunu sunmanın kolay yollarından biri [Netlify](https://www.netlify.com/)'dır. Bir GitHub deposu oluşturmanız, Netlify'a eklemeniz ve build komutunu kurmanız yeterli olur! Uygulamanız barındırılacak ve herkes tarafından kullanılabilir olacak. Ve hepsi ücretsiz.
+Perde arkasında [create-react-app](https://github.com/facebook/create-react-app) kullanır. Uygulamanızı görmek için, `http://localhost:3000/` bağlantısını açın. Üretime dağıtmaya hazır olduğunuzda, yarn build ile küçültülmüş bir paket oluşturun. Bunu sunmanın kolay yollarından biri [Netlify](https://www.netlify.com/)'dır. Bir Github deposu oluşturmanız, Netlify'a eklemeniz ve build komutunu kurmanız yeterli olur! Uygulamanız barındırılacak ve herkes tarafından kullanılabilir olacak. Ve hepsi ücretsiz.
 
 ## Özellikler {#features}
 
@@ -51,21 +51,21 @@ Perde arkasında [create-react-app](https://github.com/facebook/create-react-app
 
 ### ethers.js {#ethersjs}
 
-[Web3](https://docs.web3js.org/) hâlâ çoğunlukla kullanılıyor olsa da, [ethers.js](https://docs.ethers.io/) son yıl içinde bir alternatif olarak büyük bir ivme kazanmıştır ve _create-eth-app_ içine entegre edilmiştir. Bununla çalışabilir, onu Web3 olarak değiştirebilir veya neredeyse beta sürümünden çıkmış olan [ethers.js v5](https://docs-beta.ethers.io/)'e yükseltmeyi düşünebilirsiniz.
+Hâlâ çoğunlukla [Web3](https://docs.web3js.org/) kullanılıyor olsa da, [ethers.js](https://docs.ethers.io/) son bir yıl içinde bir alternatif olarak büyük ivme kazanmış ve _create-eth-app_ içine entegre edilmiştir. Bununla çalışabilir, onu Web3 olarak değiştirebilir veya neredeyse beta sürümünden çıkmış olan [ethers.js v5](https://docs-beta.ethers.io/)'e yükseltmeyi düşünebilirsiniz.
 
 ### The Graph {#the-graph}
 
 [GraphQL](https://graphql.org/), [Restful API](https://restfulapi.net/)'ye kıyasla verileri işlemenin alternatif bir yoludur. Özellikle merkeziyetsiz blok zinciri verileri için Restful Api'lere göre çeşitli avantajları vardır. Eğer bunun ardındaki sebepler konusunda meraklıysanız, [GraphQL Merkeziyetsiz Ağı Güçlendirecek](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a)'e bir göz atın.
 
-Genellikle akıllı sözleşmenizden doğrudan veri alırsınız. En son işlemin gerçekleştiği zamanı okumak mı istiyorsunuz? Verileri Infura gibi bir Ethereum düğümünden Dapp'inize getiren `MyContract.methods.latestTradeTime().call()`'u çağırmanız yeterlidir. Peki ya yüzlerce farklı veri noktasına ihtiyacınız varsa? Bu, düğüme yüzlerce veri alınmasına yol açar ve bu alımların her biri bir [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) gerektirerek Dapp'inizi yavaş ve verimsiz hâle getirir. Bir geçici çözüm, sözleşmenizin içinde aynı anda birden çok veri döndüren bir alıcı çağrı işlevi olabilir. Ancak bu her zaman ideal değildir.
+Genellikle akıllı sözleşmenizden doğrudan veri alırsınız. En son işlemin gerçekleştiği zamanı okumak mı istiyorsunuz? Sadece Ethereum düğümünden merkeziyetsiz uygulamanıza veriyi getiren `MyContract.methods.latestTradeTime().call()`'u çağırın. Peki ya yüzlerce farklı veri noktasına ihtiyacınız varsa? Bu, düğüme yüzlerce veri alınmasına yol açar ve bu alımların her biri bir [RTT](https://wikipedia.org/wiki/Round-trip_delay_time) gerektirerek merkeziyetsiz uygulamanızı yavaş ve verimsiz hâle getirir. Bir geçici çözüm, sözleşmenizin içinde aynı anda birden çok veri döndüren bir alıcı çağrı işlevi olabilir. Ancak bu her zaman ideal değildir.
 
 Tarihsel verilerle de ilgileniyor olabilirsiniz. Yalnızca son işlem zamanını değil, kendi yaptığınız tüm işlemlerin zamanlarını da bilmek istiyorsunuz. _create-eth-app_ alt grafik paketini kullanın, [belgeleri](https://thegraph.com/docs/define-a-subgraph) okuyun ve kendi sözleşmelerinize uyarlayın. Popüler akıllı sözleşmeler arıyorsanız, zaten bir alt grafik bile olabilir. [Alt grafik gezgini](https://thegraph.com/explorer/)'ne bir göz atın.
 
-Bir alt grafiğiniz olduğunda, ihtiyacınız olan geçmiş veriler de dahil olmak üzere tüm önemli blok zinciri verilerini alan Dapp'inize basit bir sorgu yazmanıza olanak tanır, yalnızca tek bir getirme gerekir.
+Bir alt grafiğiniz olduğunda, ihtiyacınız olan geçmiş veriler de dahil olmak üzere tüm önemli blok zinciri verilerini alan merkeziyetsiz uygulamanıza basit bir sorgu yazmanıza olanak tanır, yalnızca tek bir getirme gerekir.
 
 ### Apollo {#apollo}
 
-[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) entegrasyonu sayesinde grafiği React Dapp'inizde kolayca entegre edebilirsiniz. Özellikle [React hooks ve Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) kullanılırken, verileri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir:
+[Apollo Boost](https://www.apollographql.com/docs/react/get-started/) entegrasyonu sayesinde grafiği React merkeziyetsiz uygulamanıza kolayca entegre edebilirsiniz. Özellikle [React hooks ve Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2) kullanılırken, verileri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -97,13 +97,13 @@ Aave'yi _create-eth-app_ ile entegre etmek istediğinizde, bir [alt grafik enteg
 
 ### Uniswap {#uniswap}
 
-[Uniswap](https://uniswap.exchange/), merkeziyetsiz bir borsadır (DEX). Likidite sağlayıcıları, bir ticaretin her iki tarafı için gerekli token'ları veya ether'ı sağlayarak ücret kazanabilir. Yaygın olarak kullanılır ve bu nedenle çok çeşitli token'lar için en yüksek likiditelerden birine sahiptir. Örneğin, kullanıcıların ETH'lerini DAI ile değiştirmelerine izin vermek için Dapp'inize kolayca entegre edebilirsiniz.
+[Uniswap](https://uniswap.exchange/), merkeziyetsiz bir borsadır (DEX). Likidite sağlayıcıları, bir ticaretin her iki tarafı için gerekli token'ları veya ether'ı sağlayarak ücret kazanabilir. Yaygın olarak kullanılır ve bu nedenle çok çeşitli token'lar için en yüksek likiditelerden birine sahiptir. Örneğin, kullanıcıların ETH'lerini DAI ile takas etmelerine olanak tanımak için merkeziyetsiz uygulamanıza kolayca entegre edebilirsiniz.
 
 Ne yazık ki, bu yazının yazıldığı sırada entegrasyon yalnızca Uniswap v1 içindir ve [yeni yayınlanan v2](https://uniswap.org/blog/uniswap-v2/) için değildir.
 
 ### Sablier {#sablier}
 
-[Sablier](https://sablier.com/), kullanıcıların para ödemeleri akışına izin verir. Tek bir ödeme günü yerine, ilk kurulumdan sonra başka bir yönetim olmaksızın paranızı sürekli olarak alırsınız. Bu entegrasyon [kendi alt grafiğini](https://thegraph.com/explorer/subgraph/sablierhq/sablier) içerir.
+[Sablier](https://sablier.com/), kullanıcıların para ödemesi akışlarını yürütmesine olanak tanır. Tek bir ödeme günü yerine, ilk kurulumdan sonra başka bir yönetim olmaksızın paranızı sürekli olarak alırsınız. Bu entegrasyon [kendi alt grafiğini](https://thegraph.com/explorer/subgraph/sablierhq/sablier) içerir.
 
 ## Sırada ne var? {#whats-next}
 

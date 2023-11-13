@@ -36,7 +36,7 @@ Així com a mecanisme de construcció de confiança en la prova de participació
 
 ![imatge](energy_use_per_transaction.png)
 
-<p style={{ textTransform: "uppercase" }}><small><i>Estimació del consum energètic de la prova de treball per tx utilitzada en una figura en base a les <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">dades de maig de 2021</a>, al moment d'escriure la mateixa font suggeria un consum de fins a <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
+<p style={{ textAlign: "center" }}><small><i>Estimació del consum energètic de la prova de treball per tx utilitzada en una figura en base a les <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">dades de maig de 2021</a>, al moment d'escriure la mateixa font suggeria un consum de fins a <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 kWh</a></i></small></p>
 
 Comparem aquests nombres amb un servei com ara Visa. 100.000 transaccions de Visa utilitzen 149 kWh d'energia<sup>[^2]</sup>. Assumint que la fragmentació o «sharding» s'ha implementat, la tasa actual de transaccions d'Ethereum (15 transaccions per segon) s'incrementaria al menys en 64 vegades (el nombre de «shards»), sense comptabilitzar les optimitzacions adicionals dels «rollups». Una estimació realista per a un Ethereum posfusió i fragmentat amb «rollups» és de [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transaccions per segon. Podem utilitzar aquesta informació per a estimar una quantitat màxima i mínima de consum energètic per cada 100.000 transaccions.
 
@@ -62,7 +62,7 @@ _També hem de tenir en compte que Ethereum no està limitat a simples transacci
 Mentre que el consum energètic d'Ethereum històricament ha estat substancial, hi ha hagut una gran inversió en temps de desenvolupament i intel·lecte en la transició des d'una validació de bloc més àvida d'energia a una més energèticament eficient. Citant [Bankless](http://podcast.banklesshq.com/), la millor forma de reduir l'energia consumida mitjançant la prova de treball és simplement «desconectant-la», que és l'aproximació que Ethereum s'ha proposat fer.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Si creieu que aquestes afirmacions són incorrectes o poden ser més exactes, plantegeu un problema o una PR. Són estimacions fetes per l'equip d'ethereum.org utilitzant informació accessible públicament i l'actual mapa d'Ethereum. Aquestes afirmacions no representen una promesa oficial des de la Fundació Ethereum. 
+  Si creieu que aquestes afirmacions són incorrectes o poden ser més exactes, plantegeu un problema o una PR. Són estimacions fetes per l'equip d'ethereum.org utilitzant informació accessible públicament i l'actual mapa d'Ethereum. Aquestes afirmacions no representen una promesa oficial des de la Fundació Ethereum.
 </InfoBanner>
 
 ## Llegir-ne més {#further-reading}

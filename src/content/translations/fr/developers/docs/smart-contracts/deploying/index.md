@@ -57,6 +57,10 @@ Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [co
 - [Documentation sur les réseaux et le déploiement d'applications](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
 - [GitHub](https://github.com/trufflesuite/truffle)
 
+**thirdweb - _Déployez facilement n'importe quel contrat sur n'importe quelle chaîne compatible EVM en une seule commande_**
+
+- [Documentation](https://portal.thirdweb.com/deploy/)
+
 ## Tutoriels connexes {#related-tutorials}
 
 - [Déployer votre premier contrat intelligent](/developers/tutorials/deploying-your-first-smart-contract/) _– Introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum_
@@ -73,6 +77,6 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Thèmes connexes {#related-topics}
 
-- [Infrastructures de développement](/developers/docs/frameworks/)
+- [Frameworks de développement](/developers/docs/frameworks/)
 - [Exécuter un nœud Ethereum](/developers/docs/nodes-and-clients/run-a-node/)
 - [Nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service)
