@@ -36,8 +36,8 @@ En savoir plus sur [la mission et la vision](/contributing/translation-program/m
 
 ### Les progrès réalisés jusqu'à présent {#our-progress}
 
-- [Plus de **4 700** traducteurs](/contributing/translation-program/contributors/)
-- [**52** langues présentes sur le site](/languages/)
+- [**5,100 +** traducteurs](/contributing/translation-program/contributors/)
+- [**54** langues présentes sur le site](/languages/)
 - [**3 millions** de mots traduits en 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -77,7 +77,7 @@ Pour obtenir d'autres outils de traduction utiles, connaître les communautés d
 
 ## Nous contacter {#get-in-touch}
 
-Avez-vous d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](https://discord.gg/6WX7E97)
+Vous avez d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](https://discord.gg/6WX7E97)
 
 Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 
@@ -85,6 +85,6 @@ Vous pouvez également nous contacter à l'adresse translations@ethereum.org
 
 Nous tenons à traduire le contenu Ethereum en autant de langues que possible et à mettre le contenu éducatif à la disposition de tous. En vertu de l'importance que nous accordons aux traductions, nous souhaitons apporter notre aide à d'autres projets Ethereum dans l'organisation, la gestion et l'amélioration de leurs propres efforts de traduction.
 
-C'est pourquoi nous avons créé un [manuel pour le Programme de traduction](/contributing/translation-program/playbook/) qui contient quelques conseils et bonnes pratiques que nous avons identifiés et regroupés au cours du processus de traduction du site ethereum.org.
+C'est pourquoi nous avons créé un [manuel pour le Programme de traduction](/contributing/translation-program/playbook/) qui contient quelques conseils et bonnes pratiques que nous avons identifiées et regroupés au cours du processus de traduction du site ethereum.org.
 
 Vous souhaitez collaborer davantage ou utiliser certaines de nos ressources de traduction ? Vous avez des commentaires sur le manuel ? N'hésitez pas à nous contacter à l'adresse translations@ethereum.org.
