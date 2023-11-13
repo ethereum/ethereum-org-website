@@ -108,19 +108,15 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const mdDir = join("public", mdPath)
 
   let tocNodeItems: TocNodeType[] = []
+  const tocCallback = (toc: TocNodeType): void => {
+    tocNodeItems = "items" in toc ? toc.items : []
+  }
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       remarkPlugins: [
         // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
         remarkGfm,
-        [
-          remarkInferToc,
-          {
-            callback: (toc: TocNodeType) => {
-              tocNodeItems = "items" in toc ? toc.items : []
-            },
-          },
-        ],
+        [remarkInferToc, { callback: tocCallback }],
       ],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],

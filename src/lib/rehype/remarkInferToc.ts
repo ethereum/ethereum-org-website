@@ -1,6 +1,7 @@
 import type { Plugin } from "unified"
 import type { BlockContent, DefinitionContent, ListItem } from "mdast"
 import { toc, type Options } from "mdast-util-toc"
+import type { Nodes } from "mdast-util-toc/lib"
 import { visit } from "unist-util-visit"
 
 interface ITocNodeEntry {
@@ -78,8 +79,7 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
   }
 
   return (tree) => {
-    // @ts-ignore
-    const generatedToC = toc(tree, { maxDepth })
+    const generatedToC = toc(tree as Nodes, { maxDepth })
 
     if (generatedToC.map) {
       const processedToC = processToC(generatedToC.map, {})
