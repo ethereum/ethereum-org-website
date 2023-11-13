@@ -163,7 +163,6 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/web3",
     "/whitepaper",
     "/zero-knowledge-proofs",
-    // TODO: CHECK QUIZZES
   ]
 
   // Get an array of all files and directories in the passed directory using `fs.readdirSync`
