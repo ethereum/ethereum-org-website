@@ -1,7 +1,7 @@
 import { ListProps } from "@chakra-ui/react"
 
-import type { SourceHeadingItem, ToCItem } from "@/lib/types"
-import type { TocNodeType } from "../rehype/remarkInferToc"
+import type { ToCItem } from "@/lib/types"
+import type { TocNodeType } from "@/lib/rehype/remarkInferToc"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
@@ -17,8 +17,8 @@ const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
 /**
- * Parse a heading ID from a Markdown heading string. If the heading contains a custom ID,
- * it will be used as the ID, otherwise the heading will be slugified
+ * Parse a heading ID from a heading string. If the heading contains a custom ID,
+ * it will be used as the ID, otherwise the heading will be slugified and used.
  * @param heading Heading string without leading #s that may contain a {#custom-id}
  * @returns Heading ID string
  */
@@ -56,9 +56,9 @@ export const outerListProps: ListProps = {
 }
 
 /**
- * TODO: Update documentation comments
- * @param title
- * @returns
+ * Removes any custom ID and Emoji components from a heading string
+ * @param title Heading string, not yet trimmed
+ * @returns Trimmed heading string
  */
 export const trimmedTitle = (title: string): string => {
   const match = customIdRegEx.exec(title)
@@ -73,7 +73,6 @@ export const trimmedTitle = (title: string): string => {
  * Recursive function to sanitize original `title` property, and extract appropriate heading id
  * title comes in form 'A note on names {#a-note-on-names}'
  * url is in form '#a-note-on-names'... if no {#name} exists, call slugify(title) for url
- *
  * @param item: Of ToCItem type, { title: string, url: string, items?: ToCItem[] }
  * @returns Updated ToCItem with cleaned up title, url, and any subitems
  */
