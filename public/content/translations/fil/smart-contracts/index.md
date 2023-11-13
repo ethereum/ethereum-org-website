@@ -12,7 +12,7 @@ Si Nick Szabo ang gumawa ng terminong "smart contract". Noong 1994, sumulat siya
 
 Gusto ni Szabo ng digital marketplace kung saan binibigyang-daan ng mga awtomatiko at cryptographically-secure na proseso na maisagawa ang mga transaksyon at business fuction nang walang pinagkakatiwalaang intermediary. Isinasagawa ng mga smart contract sa Ethereum ang mithiing ito.
 
-### Tiwala sa mga conventional na kontrata {#trust-and-contracts}
+## Tiwala sa mga conventional na kontrata {#trust-and-contracts}
 
 Ang isa sa pinakamalalaking problema sa tradisyonal na kontrata ang pangangailangan ng mga mapagkakatiwalaang indibidwal na tuparin ang mga resulta ng kontrata.
 
@@ -22,7 +22,7 @@ Sina Alice at Bob ay nagkakarera sakay ng bisikleta. Sabihin nating pumusta ng $
 
 Ipinapakita ng nakakatawang halimbawang ang problema sa anumang non-smart agreement. Kahit na matugunan ang mga kundisyon ng kasunduan (halimbawa, ikaw ang nanalo sa karera), kailangan mo pa rin magtiwala sa ibang tao na tuparin ang kasunduan (ibig sabihin, ibigay ang ipinusta).
 
-### A digital vending machine {#vending-machine}
+## A digital vending machine {#vending-machine}
 
 Maihahambing ang smart contract sa isang vending machine, na gumagana na halos katulad ng smart contract - kapag naglagay ng mga partikular na input, siguradong makukuha ang mga paunang natukoy na output.
 
@@ -34,25 +34,25 @@ Maihahambing ang smart contract sa isang vending machine, na gumagana na halos k
 
 Ilalabas lang ng vending machine ang gusto mong produkto kapag natugunan ang lahat ng kahingian. Kung hindi ka pipili ng produkto o kulang ang ilalagay mong pera, hindi ilalabas ng vending machine ang iyong produkto.
 
-### Awtomatikong pag-execute {#automation}
+## Awtomatikong pag-execute {#automation}
 
 Ang pangunahing benepisyo ng smart contract ay tiyak nitong ine-execute ang malinaw na code kapag natugunan ang ilang partikular na kundisyon. Hindi mo kailangang maghintayng tao para i-interpret ang o makipag-usap tungkol sa resulta. Inaalis nito ang pangangailangan ng mga pinagkakatiwalaang intermediary.
 
 Halimbawa, maaari kang mag-write ng smart contract na nag-iingat ng pondo sa escrow para sa isang bata, na magbibigay-daan sa kanyang kunin ang pondo pagkatapos ng isang partikular na petsa. Kung susubukan niyang kunin ang pondo bago ang petsang iyon, hindi mae-execute ang smart contract. O maari kang mag-write ng kontrata na awtomatiko kang binibigyan ng digital na bersyon ng titulo ng kotse kapag binayaran mo ang dealer.
 
-### Mga predictable outcome {#predictability}
+## Mga predictable outcome {#predictability}
 
 Malabo ang mga tradisyonal na kontrata dahil umaasa ang mga ito sa mga tao upang unawain at ipatupad ang mga ito. Halimbawa, maaaring magkaiba ang interpretasyon ng dalawang hukom sa isang kontrata, na maaaring magresulta sa hindi magkakaayon na desisyon at hindi patas na resulta. Inaalis ng mga smart contract ang posibilidad na ito. Sa halip, ine-execute ang mga smart contract nang tumpak batay sa mga kundisyong nakasulat sa code ng kontrata. Dahil sa katumpakang ito, kapag pareho ang mga sitwasyon, iisang resulta ang ibibigay ng smart contract.
 
-### Pampublikong record {#public-record}
+## Pampublikong record {#public-record}
 
 Ang mga smart contract ay kapaki-pakinabang para sa mga audit at pagsubaybay. Dahil nasa pampublikong blockchain ang mga smart contract ng Ethereum, agad na masusubaybayan ng kahit sino ang mga pag-transfer ng asset at iba pang nauugnay na impormasyon. Halimbawa, puwede mong alamin kung may nagpadala ng pera sa iyong address.
 
-### Pagprotekta sa privacy {#privacy-protection}
+## Pagprotekta sa privacy {#privacy-protection}
 
 Pinoprotektahan din ng mga smart contract ang iyong privacy. Dahil isang pseudonymous network ang Ethereum (pampublikong nakaugnay ang iyong mga transaksyon sa isang natatanging cryptographic address, at hindi sa iyong identity), kaya mapoprotektahan mo ang iyong privacy mula sa mga observer.
 
-### Mga nakikitang tuntunin {#visible-terms}
+## Mga nakikitang tuntunin {#visible-terms}
 
 Sa wakas, tulad ng mga tradisyonal na kontrata, matitingnan mo ang laman ng smart contract bago mo ito lagdaan (o kaya ay mag-interact dito). Sinisigurado ng transparency ng smart contract na masusuri ito ng kahit sino.
 

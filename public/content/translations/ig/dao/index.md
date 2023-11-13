@@ -90,7 +90,7 @@ Mgbe DAO nwere ike ịnwe ọtụtụ puku ndị otu na-eme ntuli aka, ego nwere
 
 Na 1977, Wyoming chepụtara LLC, nke na-echebe ndị ọchụnta ego ma kpachie ụgwọ ha ji. N'oge na-adịbeghị anya, ha sụrụ ụzọ iwu DAO nke na-eguzobe ọnọdụ iwu maka DAO. Ugbu a Wyoming, Vermont, na Virgin Islands nwere iwu DAO na udị ụfọdụ.
 
-#### Ihe atụ ama ama {#law-example}
+### Ihe atụ ama ama {#law-example}
 
 [CityDAO](https://citydao.io) - CityDAO jiri iwu Wyoming DAO iji zụta ala 40 dị nso na Ogige Mba Yellowstone.
 

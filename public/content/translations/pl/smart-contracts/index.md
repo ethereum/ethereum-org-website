@@ -18,7 +18,7 @@ Prawdopodobnie myślisz: _„Nie jestem prawnikiem! Dlaczego mam się zajmować 
 
 Kontrakty to tylko umowy. Oznacza to, że każda forma umowy może być objęta warunkami kontraktu. Umowy ustne lub umowy na papierze są dopuszczalne w wielu sprawach, ale nie są pozbawione wad.
 
-### Zaufanie a kontrakty {#trust-and-contracts}
+## Zaufanie a kontrakty {#trust-and-contracts}
 
 Jednym z największych problemów związanych z tradycyjnym kontraktem jest konieczność przestrzegania jego postanowień przez zaufane osoby.
 
@@ -32,7 +32,7 @@ Ten jaskrawy przykład ilustruje problem z dowolną umową nieinteligentną. Naw
 
 Inteligentne kontrakty digitalizują umowy, przekształcając warunki umowy w kod komputerowy, który automatycznie wykonuje się, gdy warunki kontraktu są spełnione.
 
-### Cyfrowy automat do sprzedaży {#vending-machine}
+## Cyfrowy automat do sprzedaży {#vending-machine}
 
 Prostą metaforą inteligentnego kontraktu jest automat sprzedający, który działa nieco podobnie do inteligentnego kontraktu — określone wejścia gwarantują z góry określone wyjścia.
 
@@ -44,25 +44,25 @@ Prostą metaforą inteligentnego kontraktu jest automat sprzedający, który dzi
 
 Automat wyda żądany produkt dopiero po spełnieniu wszystkich wymagań. Jeśli nie wybierzesz produktu lub nie umieścisz wystarczającej ilości pieniędzy, automat sprzedający nie poda produktu.
 
-### Automatyczne wykonanie {#automation}
+## Automatyczne wykonanie {#automation}
 
 Jedną z najbardziej znaczących korzyści, jakie mają inteligentne kontrakty w stosunku do zwykłych umów, jest to, że wynik jest automatycznie wykonywany po zrealizowaniu warunków umowy. Nie trzeba czekać na człowieka, aby zrealizować wynik. Innymi słowy, inteligentne kontrakty eliminują potrzebę zaufania.
 
 Na przykład można napisać inteligentny kontrakt, który przechowuje środki finansowe na rzecz dziecka, umożliwiając mu wypłatę środków po określonej dacie. Gdyby ktoś próbował wycofać środki przed określoną datą, inteligentny kontrakt nie zostanie wykonany. Możesz też napisać kontrakt, który automatycznie udostępni Ci cyfrową wersję tytułu własności samochodu, gdy zapłacisz sprzedawcy.
 
-### Przewidywalne wyniki {#predictability}
+## Przewidywalne wyniki {#predictability}
 
 Czynnik ludzki jest jedną z najczęstszych przyczyn niepowodzeń w przypadku tradycyjnych umów. Na przykład dwóch różnych sędziów może w różny sposób interpretować tradycyjny kontrakt. Ich interpretacja może prowadzić do podejmowania różnych decyzji i rozbieżnych wyników. Inteligentne kontrakty eliminują możliwość różnych interpretacji. Zamiast tego, inteligentne kontrakty wykonują dokładnie to, co zostało zapisane w kodzie kontraktu. Dokładność ta oznacza, że w tych samych okolicznościach inteligentny kontrakt wygeneruje taki sam wynik.
 
-### Rekord publiczny {#public-record}
+## Rekord publiczny {#public-record}
 
 Inteligentne kontrakty są również przydatne do celów kontroli i śledzenia. Ponieważ inteligentne kontrakty Ethereum znajdują się w publicznym łańcuchu bloków, każdy może natychmiast śledzić transfery aktywów i inne powiązane informacje. Na przykład możesz sprawdzić, czy ktoś wysłał pieniądze na Twój adres.
 
-### Ochrona prywatności {#privacy-protection}
+## Ochrona prywatności {#privacy-protection}
 
 Inteligentne kontrakty mogą również chronić Twoją prywatność. Ponieważ Ethereum jest siecią pseudonimową (Twoje transakcje są związane publicznie z unikalnym adresem kryptograficznym, a nie z Twoją tożsamością), możesz chronić swoją prywatność przed obserwatorami.
 
-### Widoczne terminy {#visible-terms}
+## Widoczne terminy {#visible-terms}
 
 Wreszcie, podobnie jak w przypadku umów, możesz sprawdzić, co jest w inteligentnym kontrakcie, zanim go podpiszesz (lub w inny sposób wejdziesz z nim w interakcję). Jeszcze lepsza przejrzystość warunków umowy oznacza, że każdy może ją obejrzeć.
 

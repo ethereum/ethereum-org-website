@@ -91,7 +91,7 @@ DAO-ların minlərlə səsvermə üzvü ola bilsə də, fondlar etibar edilən v
 
 1977-ci ildə Vayominq LLC-ni icad etdi ki, sahibkarları qoruyur və onların məsuliyyətini məhdudlaşdırır. Bu yaxınlarda onlar DAO-lar üçün hüquqi statusu müəyyən edən DAO qanununa öncülük etdilər. Hal-hazırda Vayominq, Vermont və Virgin Adalarında müəyyən formada DAO qanunları var.
 
-#### Tanınmış bir nümunə {#law-example}
+### Tanınmış bir nümunə {#law-example}
 
 [CityDAO](https://citydao.io)- CityDAO, Yellowstone Milli Parkının yaxınlığında 40 hektar torpaq almaq üçün Vyoming'in DAO qanunundan istifadə etdi.
 
