@@ -40,6 +40,7 @@ import {
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc, { type TocNodeType } from "@/lib/rehype/remarkInferToc"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -149,9 +150,12 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     }
   }
 
+  // load i18n required namespaces for the given page
+  const requiredNamespaces = getRequiredNamespacesForPath(originalSlug)
+
   return {
     props: {
-      ...(await serverSideTranslations(locale!, ["common"])), // load i18n required namespace for all pages
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
       mdxSource,
       originalSlug,
       frontmatter,
