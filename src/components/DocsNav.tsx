@@ -86,7 +86,7 @@ const CardLink = (props: {
             })
           }}
         >
-          <Translation id={docData.id} />
+          <Translation id={`page-developers-docs:${docData.id}`} />
         </LinkOverlay>
       </TextDiv>
     </LinkBox>

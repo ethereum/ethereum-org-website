@@ -23,6 +23,10 @@ export const isLang = (lang: string) => {
 export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
   let requiredNamespaces: string[] = ["common"]
 
+  if (layout === "docs") {
+    requiredNamespaces = [...requiredNamespaces, 'page-developers-docs']
+  }
+
   if (layout === 'use-cases') {
     requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
   }
@@ -61,6 +65,10 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
 
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
+  }
+
+  if (path.startsWith("/developers/docs/scaling")) {
+    requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
 
   // Quizzes

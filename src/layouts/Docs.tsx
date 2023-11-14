@@ -235,7 +235,7 @@ export const DocsLayout = ({ children, frontmatter, slug, tocItems }: DocsLayout
       <SideNavMobile path={relativePath} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
-          <Translation id="banner-page-incomplete" />
+          <Translation id="page-developers-docs:banner-page-incomplete" />
         </BannerNotification>
       )}
       <ContentContainer>

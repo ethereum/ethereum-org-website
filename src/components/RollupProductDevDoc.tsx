@@ -55,7 +55,7 @@ const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
                   </Heading>
                   {noteKey.length > 0 && (
                     <Text>
-                      * <Translation id={noteKey} />
+                      * <Translation id={`page-layer-2:${noteKey}`} />
                     </Text>
                   )}
                   <UnorderedList>
