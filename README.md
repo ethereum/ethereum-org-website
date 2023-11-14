@@ -1691,6 +1691,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/NaijaCoderGirl"><img src="https://avatars.githubusercontent.com/u/150683513?v=4?s=100" width="100px;" alt="NaijaCoderGirl"/><br /><sub><b>NaijaCoderGirl</b></sub></a><br /><a href="#content-NaijaCoderGirl" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/konstantinzolotarev"><img src="https://avatars.githubusercontent.com/u/286431?v=4?s=100" width="100px;" alt="Konstantin Zolotarev"/><br /><sub><b>Konstantin Zolotarev</b></sub></a><br /><a href="#content-konstantinzolotarev" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vuittont60"><img src="https://avatars.githubusercontent.com/u/81072379?v=4?s=100" width="100px;" alt="vuittont60"/><br /><sub><b>vuittont60</b></sub></a><br /><a href="#content-vuittont60" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://goldnite.github.io"><img src="https://avatars.githubusercontent.com/u/114434414?v=4?s=100" width="100px;" alt="Golden Ite"/><br /><sub><b>Golden Ite</b></sub></a><br /><a href="#content-goldnite" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
