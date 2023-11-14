@@ -580,10 +580,10 @@ export const query = graphql`
         )
       }
     }
-    heroImage: file(relativePath: { eq: "heroes/developers-hub-hero.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/developers-hub-hero.jpg" }) {
       childImageSharp {
         gatsbyImageData(
-          width: 1504
+          width: 2303
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
