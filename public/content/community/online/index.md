@@ -41,7 +41,7 @@ Hundreds of thousands of Ethereum enthusiasts gather in these online forums to s
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Learn more about DAOs

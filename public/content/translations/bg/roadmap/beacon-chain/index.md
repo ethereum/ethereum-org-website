@@ -10,7 +10,7 @@ summaryPoint2: През септември 2022 г. беше извършено 
 summaryPoint3: Бийкън чейн въведе логиката на консенсуса и блок протокола тип „разпространение на клюки“, който осигурява Eтереум в момента.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Бийкън чейн беше пуснат на 1 декември 2020 г. и превърна доказателство-за-залог в официалния механизъм за консенсус на Eтереум със Сливането на 15 септември 2022 г.
 </UpgradeStatus>
 

@@ -68,26 +68,26 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       )}
       {blockNumber &&
         blockTypeTranslation(
-          "page-history-block-number",
+          "page-history:page-history-block-number",
           "https://etherscan.io/block/",
           blockNumber
         )}
       {epochNumber &&
         blockTypeTranslation(
-          "page-history-epoch-number",
+          "page-history:page-history-epoch-number",
           "https://beaconscan.com/epoch/",
           epochNumber
         )}
       {slotNumber &&
         blockTypeTranslation(
-          "page-history-slot-number",
+          "page-history:page-history-slot-number",
           "https://beaconscan.com/slot/",
           slotNumber
         )}
       {ethPriceInUSD && (
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":money_bag:" />
-          {t("page-history-eth-price")}:{" "}
+          {t("page-history:page-history-eth-price")}:{" "}
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
             currency: "USD",
@@ -98,7 +98,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         <Flex>
           <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
           <InlineLink to={waybackLink}>
-            {t("page-history-ethereum-org-wayback")}
+            {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>
       )}
