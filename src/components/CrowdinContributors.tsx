@@ -1,0 +1,35 @@
+import FileContributors from "@/components/FileContributors"
+import type { Author, CrowdinContributor } from "@/lib/types"
+
+type CrowdinContributorsProps = {
+  relativePath: string
+  lastUpdatedDate: string
+  contributorsByLocale: CrowdinContributor[]
+}
+const CrowdinContributors = ({
+  lastUpdatedDate,
+  contributorsByLocale,
+}: CrowdinContributorsProps) => {
+  const mappedContributors: Author[] = contributorsByLocale.map(
+    ({ id, username, avatarUrl }) => ({
+      name: username,
+      email: id.toString(),
+      avatarUrl: avatarUrl,
+      user: {
+        login: username,
+        url: `https://crowdin.com/profile/${username}`,
+      },
+    })
+  )
+
+  return (
+    <FileContributors
+      error={mappedContributors.length === 0} // TODO: Confirm GH error handling
+      loading={!mappedContributors.length}
+      contributors={mappedContributors}
+      lastEdit={lastUpdatedDate}
+    />
+  )
+}
+
+export default CrowdinContributors

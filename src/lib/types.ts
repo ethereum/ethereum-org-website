@@ -3,7 +3,6 @@ import { NextPage } from "next"
 import { AppProps } from "next/app"
 
 import type {
-  Author,
   DocsFrontmatter,
   RoadmapFrontmatter,
   StakingFrontmatter,
@@ -140,10 +139,66 @@ export type StakingPage = "solo" | "saas" | "pools"
 /**
  * File contributors
  */
-export type FileContributorsState = {
-  loading: boolean
-  authors?: Array<Author>
-  error?: unknown
+export type FileContributorsState =
+  | {
+      loading: true
+      authors?: Author[]
+    }
+  | {
+      loading: false
+      authors: Author[]
+    }
+  | {
+      loading: false
+      error: unknown
+    }
+
+export type LastUpdatedState =
+  | {
+      loading: true
+      lastEdit?: string
+    }
+  | {
+      loading: false
+      lastEdit: string
+    }
+  | {
+      loading: false
+      error: unknown
+    }
+
+// Crowdin contributors
+export type CrowdinFileId = {
+  id: number
+  path: string
+}
+
+export type CrowdinContributor = {
+  id: number
+  username: string
+  avatarUrl: string
+  totalCosts: number
+}
+
+type FileContributorData = {
+  fileId: string
+  contributors: CrowdinContributor[]
+}
+
+export type LocaleContributions = {
+  lang: string
+  data: FileContributorData[]
+}
+
+// GitHub contributors
+export type Author = {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
+  }
 }
 
 /**

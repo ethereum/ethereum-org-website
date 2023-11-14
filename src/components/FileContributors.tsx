@@ -16,8 +16,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import type { Lang } from "@/lib/types"
-import type { Author } from "@/lib/interfaces"
+import type { Author, Lang } from "@/lib/types"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import InlineLink from "@/components/Link"

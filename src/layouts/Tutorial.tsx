@@ -25,8 +25,7 @@ import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-// TODO: Implement CrowdinContributors after intl is implemented
-// import CrowdinConbtirbutors from "@/components/FileContributorsCrowdin"
+import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -47,7 +46,9 @@ import YouTube from "@/components/YouTube"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { EDIT_CONTENT_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+
+import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
@@ -182,6 +183,7 @@ export const TutorialLayout = ({
   tocItems,
   timeToRead,
   lastUpdatedDate,
+  crowdinContributors,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
@@ -189,6 +191,9 @@ export const TutorialLayout = ({
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null
+  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
+  const intlLastEdit =
+    "lastEdit" in gitHubLastEdit ? gitHubLastEdit.lastEdit! : ""
 
   return (
     <>
@@ -222,16 +227,12 @@ export const TutorialLayout = ({
             pt={8}
           />
           {children}
-          {frontmatter.lang !== "en" ? (
-            // TODO: Implement CrowdinContributors
-            <>
-              {/* <CrowdinContributors
-                relativePath={relativePath}
-                editPath={absoluteEditPath}
-                //@ts-ignore
-                langContributors={allCombinedTranslatorsJson.nodes}
-              /> */}
-            </>
+          {frontmatter.lang !== DEFAULT_LOCALE ? (
+            <CrowdinContributors
+              relativePath={relativePath}
+              lastUpdatedDate={intlLastEdit}
+              contributorsByLocale={crowdinContributors}
+            />
           ) : (
             <GitHubContributors
               relativePath={relativePath}

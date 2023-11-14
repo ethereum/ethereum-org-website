@@ -1,4 +1,10 @@
-import type { Frontmatter, Lang, ToCItem, TranslationKey } from "./types"
+import type {
+  CrowdinContributor,
+  Frontmatter,
+  Lang,
+  ToCItem,
+  TranslationKey,
+} from "./types"
 
 /**
  * Quiz data interfaces
@@ -142,15 +148,5 @@ export interface MdPageContent {
   tocItems: Array<ToCItem>
   lastUpdatedDate?: string
   contentNotTranslated: boolean
-}
-
-// GitHub contributors
-export interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
+  crowdinContributors: CrowdinContributor[]
 }

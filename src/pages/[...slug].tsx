@@ -9,11 +9,16 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import type {
+  Lang,
+  NextPageWithLayout,
+  StaticPaths,
+} from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
+import { getCrowdinContributors } from "@/lib/utils/crowdin"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
@@ -141,6 +146,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     }
   }
 
+  const crowdinContributors = getCrowdinContributors(mdPath, locale as Lang)
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, ["common"])), // load i18n required namespace for all pages
@@ -153,6 +160,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
+      crowdinContributors,
     },
   }
 }
@@ -187,6 +195,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     layout,
     timeToRead,
     tocItems,
+    crowdinContributors,
   } = page.props
 
   const rootLayoutProps = {
@@ -200,6 +209,7 @@ ContentPage.getLayout = (page: ReactElement) => {
     lastUpdatedDate,
     timeToRead,
     tocItems,
+    crowdinContributors,
   }
   const Layout = layoutMapping[layout]
 

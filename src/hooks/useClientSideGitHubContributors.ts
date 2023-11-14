@@ -1,23 +1,33 @@
 import { join } from "path"
 
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import type { Author, FileContributorsState, Lang } from "@/lib/types"
 
-import type { FileContributorsState } from "@/lib/types"
-import type { Author } from "@/lib/interfaces"
+import {
+  DEFAULT_LOCALE,
+  GITHUB_COMMITS_URL,
+  OLD_CONTENT_DIR,
+} from "@/lib/constants"
 
-import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"
-
-const gitHubAuthHeaders = {
+export const gitHubAuthHeaders = {
   headers: new Headers({
     // About personal access tokens https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#about-personal-access-tokens
     Authorization: "Token " + process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY,
   }),
 }
 
-const fetchGitHubContributors = async (relativePath: string) => {
+const fetchGitHubContributors = async (
+  relativePath: string,
+  locale?: Lang
+): Promise<FileContributorsState> => {
   const url = new URL(GITHUB_COMMITS_URL)
   // TODO: OLD_CONTENT_DIR -> CONTENT_DIR for production
-  const filePath = join(OLD_CONTENT_DIR, relativePath, "index.md")
+  const localePath =
+    locale && locale !== DEFAULT_LOCALE
+      ? join("translations", locale, relativePath)
+      : relativePath
+  const filePath = join(OLD_CONTENT_DIR, localePath, "index.md")
   url.searchParams.set("path", filePath)
 
   try {
@@ -54,16 +64,16 @@ const fetchGitHubContributors = async (relativePath: string) => {
 /**
  * Client-side hook to fetch GitHub contributors for a given file
  * @param relativePath Relative path of the file being queried
- * @returns `state` comprise of { loading, authors, error } where
- * authors is an array of Author objects if successful
+ * @returns `state` comprise of { loading, authors?, error? }
  */
 export const useClientSideGitHubContributors = (
   relativePath: string
 ): FileContributorsState => {
   const [state, setState] = useState<FileContributorsState>({ loading: true })
+  const { locale } = useRouter()
   useEffect(() => {
     ;(async () => {
-      setState(await fetchGitHubContributors(relativePath))
+      setState(await fetchGitHubContributors(relativePath, locale as Lang))
     })()
   }, [relativePath])
   return state
