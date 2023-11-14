@@ -23,7 +23,7 @@ const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         {t(`${term}-term`)}
       </OldHeading>
-      <Text {...textStyles}>{t(`${term}-definition`)}</Text>
+      <Text {...textStyles}>{t(`glossary:${term}-definition`)}</Text>
     </Box>
   )
 }

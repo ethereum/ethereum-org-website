@@ -10,7 +10,7 @@ summaryPoint2: Acesta a fost fuzionat cu lanțul dovadă a muncii Ethereum origi
 summaryPoint3: Lanțul Beacon a introdus logica consensului și protocolul de bârfă al blocului care protejează Ethereum în acest moment.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Lanțul Beacon a fost lansat pe 1 decembrie 2020 și a formalizat dovada mizei ca mecanism de consens al Ethereum prin modernizarea Fuziunii în 15 septembrie 2022.
 </UpgradeStatus>
 

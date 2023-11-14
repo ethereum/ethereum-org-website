@@ -59,13 +59,13 @@ export const QuizButtonGroup = ({
               leftIcon={<Icon as={FaTwitter} />}
               onClick={handleShare}
             >
-              <Translation id="share-results" />
+              <Translation id="learn-quizzes:share-results" />
             </Button>
 
             {/* Show `Next Quiz` button if quiz is opened from hub page */}
             {hasNextQuiz && (
               <Button onClick={handleNextQuiz}>
-                <Translation id="next-quiz" />
+                <Translation id="learn-quizzes:next-quiz" />
               </Button>
             )}
           </Center>
@@ -77,7 +77,7 @@ export const QuizButtonGroup = ({
               fontWeight="bold"
               textDecoration="underline"
             >
-              <Translation id="try-again" />
+              <Translation id="learn-quizzes:try-again" />
             </Button>
           ) : null}
         </>
@@ -89,11 +89,11 @@ export const QuizButtonGroup = ({
         <>
           {hasFailedAnswer ? (
             <Button onClick={handleRetryQuestion} variant="outline">
-              <Translation id="try-again" />
+              <Translation id="learn-quizzes:try-again" />
             </Button>
           ) : null}
           <Button onClick={handleContinue}>
-            <Translation id={finishedQuiz ? "see-results" : "next-question"} />
+            <Translation id={finishedQuiz ? "learn-quizzes:see-results" : "learn-quizzes:next-question"} />
           </Button>
         </>
       )
@@ -109,7 +109,7 @@ export const QuizButtonGroup = ({
         }
         isDisabled={!currentQuestionAnswerChoice}
       >
-        <Translation id="submit-answer" />
+        <Translation id="learn-quizzes:submit-answer" />
       </Button>
     )
   }

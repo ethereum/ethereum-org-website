@@ -46,14 +46,14 @@ const WithdrawalsTabComparison: React.FC<IProps> = () => {
           </OldHeading>
           <UnorderedList>
             <ListItem>
-              <Translation id="comp-withdrawal-comparison-current-li-1" />{" "}
+              <Translation id="page-staking:comp-withdrawal-comparison-current-li-1" />{" "}
             </ListItem>
             <ListItem>
-              <Translation id="comp-withdrawal-comparison-current-li-2" />
+              <Translation id="page-staking:comp-withdrawal-comparison-current-li-2" />
             </ListItem>
           </UnorderedList>
           <Text fontWeight="bold">
-            <Translation id="comp-withdrawal-comparison-current-p" />
+            <Translation id="page-staking:comp-withdrawal-comparison-current-p" />
           </Text>
 
           <WithdrawalCredentials />
