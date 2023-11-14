@@ -1687,6 +1687,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/CodeDragonVN"><img src="https://avatars.githubusercontent.com/u/150457827?v=4?s=100" width="100px;" alt="CodeDragonVN"/><br /><sub><b>CodeDragonVN</b></sub></a><br /><a href="#content-CodeDragonVN" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SamiAlHassan"><img src="https://avatars.githubusercontent.com/u/150172180?v=4?s=100" width="100px;" alt="SamiAlHassan"/><br /><sub><b>SamiAlHassan</b></sub></a><br /><a href="#content-SamiAlHassan" title="Content">🖋</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/NaijaCoderGirl"><img src="https://avatars.githubusercontent.com/u/150683513?v=4?s=100" width="100px;" alt="NaijaCoderGirl"/><br /><sub><b>NaijaCoderGirl</b></sub></a><br /><a href="#content-NaijaCoderGirl" title="Content">🖋</a></td>
+    </tr>
   </tbody>
 </table>
 
