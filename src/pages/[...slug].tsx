@@ -143,7 +143,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(originalSlug)
+  const requiredNamespaces = getRequiredNamespacesForPath(originalSlug, layout)
 
   return {
     props: {

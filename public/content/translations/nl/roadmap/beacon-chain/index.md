@@ -11,7 +11,7 @@ summaryPoint3: Het introduceerde Proof-of-Stake in het Ethereum-ecosysteem.
 summaryPoint4: U kent dit wellicht als "Fase 0" op technische routekaarten.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
     De Beacon Chain werd op 1 december 2020 om 12:00 uur UTC verzonden. <a href="https://beaconscan.com/">Bekijk de gegevens</a> voor meer informatie. Als u wilt helpen met het valideren van de keten, kunt u <a href="/staking/">uw ETH staken</a>.
 </UpgradeStatus>
 

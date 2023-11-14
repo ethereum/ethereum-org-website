@@ -10,7 +10,7 @@ summaryPoint2: Se fusionó con la cadena de prueba de trabajo original de Ethere
 summaryPoint3: La cadena de baliza introdujo la lógica de consenso y bloqueó el protocolo de cotilleo que ahora asegura Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La cadena de baliza enviada el 1 de diciembre de 2020 formalizó la prueba de participación como mecanismo de consenso de Ethereum con la actualización a La Fusión el 15 de septiembre de 2022.
 </UpgradeStatus>
 

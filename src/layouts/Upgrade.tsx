@@ -152,7 +152,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  const { t } = useTranslation("page-upgrades-index")
+  const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)

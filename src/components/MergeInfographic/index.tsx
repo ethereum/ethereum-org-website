@@ -15,7 +15,7 @@ const Text = chakra("text", {
 export interface SvgProps {}
 
 const SvgText: React.FC<SvgProps> = () => {
-  const { t } = useTranslation(["page-upgrades-index", "page-upgrades"])
+  const { t } = useTranslation(["page-upgrades-index"])
   const [sm, lg] = ["7px", "8px"]
 
   return (
@@ -31,19 +31,19 @@ const SvgText: React.FC<SvgProps> = () => {
       aria-hidden="true"
     >
       <Text x="2%" y="35%" fontSize={lg}>
-        ⛏ {t("docs-nav-proof-of-work")}
+        ⛏ {t("page-upgrades-index:docs-nav-proof-of-work")}
       </Text>
       <Text x="47%" y="35%" fontSize={lg}>
-        🌱 {t("docs-nav-proof-of-stake")}
+        🌱 {t("page-upgrades-index:docs-nav-proof-of-stake")}
       </Text>
       <Text x="11%" y="70%" fontSize={sm}>
-        🚀 {t("beacon-chain")}
+        🚀 {t("common:beacon-chain")}
       </Text>
       <Text x="43%" y="12.5%" fontSize={sm}>
-        🐼 {t("page-upgrades-get-involved-ethresearch-2")}
+        🐼 {t("page-upgrades-index:page-upgrades-get-involved-ethresearch-2")}
       </Text>
       <Text x="63%" y="95%" fontSize={sm}>
-        🌳 {t("page-upgrades-get-involved-ethresearch-1")}
+        🌳 {t("page-upgrades-index:page-upgrades-get-involved-ethresearch-1")}
       </Text>
     </Icon>
   )
@@ -60,7 +60,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
     <AspectRatio
       className={className}
       role="img"
-      aria-label={t("page-upgrades-merge-infographic-alt-text")}
+      aria-label={t("page-upgrades-index:page-upgrades-merge-infographic-alt-text")}
       position="relative"
       width="100%"
       ratio={25 / 11}
@@ -93,7 +93,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
           }}
           aria-hidden="true"
         >
-          <Translation id="page-upgrades-merge-infographic-el" />
+          <Translation id="page-upgrades:page-upgrades-merge-infographic-el" />
         </Box>
         <SvgText />
         <Background
