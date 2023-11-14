@@ -1,5 +1,5 @@
 import type { CrowdinContributor, Lang } from "@/lib/types"
-import combinedTranslators from "@/data/crowdin/combined-translators.json"
+import translators from "@/data/crowdin/combined-translators.json"
 import fileIds from "@/data/crowdin/file-ids.json"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -17,6 +17,6 @@ export const getCrowdinContributors = (
     }
   }
 
-  const { data } = combinedTranslators.filter(({ lang }) => lang === locale)[0]
+  const data = translators.filter(({ lang }) => lang === locale)[0]?.data
   return data.filter(({ fileId }) => +fileId === _fileId)[0]?.contributors ?? []
 }
