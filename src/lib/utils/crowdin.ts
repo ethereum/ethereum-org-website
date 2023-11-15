@@ -17,6 +17,6 @@ export const getCrowdinContributors = (
     }
   }
 
-  const data = translators.filter(({ lang }) => lang === locale)[0]?.data
+  const data = translators.filter(({ lang }) => lang === locale)[0]?.data ?? []
   return data.filter(({ fileId }) => +fileId === _fileId)[0]?.contributors ?? []
 }
