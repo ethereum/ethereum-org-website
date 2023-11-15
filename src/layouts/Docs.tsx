@@ -3,7 +3,6 @@ import { ChildOnlyProp, Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import {
   Box,
-  Divider as ChakraDivider,
   Flex,
   FlexProps,
   HeadingProps,
@@ -11,35 +10,30 @@ import {
   ListItemProps,
   ListProps,
   OrderedList as ChakraOrderedList,
-  Text, UnorderedList as ChakraUnorderedList, useToken, Badge } from "@chakra-ui/react"
+  Text,
+  UnorderedList as ChakraUnorderedList,
+  useToken,
+} from "@chakra-ui/react"
 
 import BannerNotification from "@/components/BannerNotification"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import CallToContribute from "@/components/CallToContribute"
-import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
 // TODO: Implement file contributors
 // import CrowdinContributors from "@/components/FileContributorsCrowdin"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
-import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 // TODO: Implement file contributors
 // import GitHubContributors from "@/components/FileContributorsGitHub"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
-import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
-import MdLink from "@/components/MdLink"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
-import { mdxTableComponents } from "@/components/Table"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SectionNav from "@/components/SectionNav"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
-import YouTube from "@/components/YouTube"
 
 import {
   Heading1 as MdHeading1,
@@ -109,18 +103,11 @@ const baseSubHeadingStyles: HeadingProps = {
 }
 
 const H3 = (props: HeadingProps) => (
-  <MdHeading3
-    {...baseSubHeadingStyles}
-    mt={12}
-    {...props}
-  />
+  <MdHeading3 {...baseSubHeadingStyles} mt={12} {...props} />
 )
 
 const H4 = (props: HeadingProps) => (
-  <MdHeading4
-    {...baseSubHeadingStyles}
-    {...props}
-  />
+  <MdHeading4 {...baseSubHeadingStyles} {...props} />
 )
 
 const UnorderedList = (props: ListProps) => (
@@ -132,15 +119,6 @@ const OrderedList = (props: ListProps) => (
 
 const ListItem = (props: ListItemProps) => (
   <ChakraListItem color="text300" {...props} />
-)
-
-const Divider = () => (
-  <ChakraDivider
-    my={16}
-    w="10%"
-    borderBottomWidth={1}
-    borderColor="homeDivider"
-  />
 )
 
 // Apply styles for classes within markdown here
@@ -190,7 +168,6 @@ const BackToTop = (props: ChildOnlyProp) => (
 )
 
 export const docsComponents = {
-  a: MdLink,
   h1: H1,
   h2: H2,
   h3: H3,
@@ -200,29 +177,25 @@ export const docsComponents = {
   ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
-  ...mdxTableComponents,
-  Badge,
-  ButtonLink,
   CallToContribute,
-  Card,
   DeveloperDocsLinks,
-  Divider,
-  Emoji,
-  GlossaryTooltip,
-  InfoBanner,
   RollupProductDevDoc,
   SectionNav,
-  YouTube,
 }
 
 interface DocsLayoutProps extends MdPageContent, ChildOnlyProp {
   frontmatter: DocsFrontmatter
 }
 
-export const DocsLayout = ({ children, frontmatter, slug, tocItems }: DocsLayoutProps) => {
+export const DocsLayout = ({
+  children,
+  frontmatter,
+  slug,
+  tocItems,
+}: DocsLayoutProps) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
-  const { asPath: relativePath} = useRouter()
+  const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
 
   return (
@@ -245,12 +218,12 @@ export const DocsLayout = ({ children, frontmatter, slug, tocItems }: DocsLayout
           {frontmatter.lang !== "en" ? (
             // TODO: Implement file contributors
             <Text>CrowdinContributors</Text>
+          ) : (
             // <CrowdinContributors
             //   relativePath={relativePath}
             //   editPath={absoluteEditPath}
             //   langContributors={allCombinedTranslatorsJson.nodes}
             // />
-          ) : (
             // TODO: Implement file contributors
             // <GitHubContributors
             //   relativePath={relativePath}
