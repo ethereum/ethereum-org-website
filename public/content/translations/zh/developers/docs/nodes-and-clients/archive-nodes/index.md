@@ -56,7 +56,7 @@ sidebarDepth: 2
 
 ## 推荐的做法
 
-除了[运行节点的一般建议](developers/docs/nodes-and-clients/run-a-node/)以外，归档节点可能对硬件和维护的要求更高。 考虑到 Erigon 的[关键特性](https://github.com/ledgerwatch/erigon#key-features)，最实用的方法是使用 [Erigon](/developers/docs/nodes-and-clients/#erigon) 客户端实现。
+除了[运行节点的一般建议](/developers/docs/nodes-and-clients/run-a-node/)以外，归档节点可能对硬件和维护的要求更高。 考虑到 Erigon 的[关键特性](https://github.com/ledgerwatch/erigon#key-features)，最实用的方法是使用 [Erigon](/developers/docs/nodes-and-clients/#erigon) 客户端实现。
 
 ### 硬件
 

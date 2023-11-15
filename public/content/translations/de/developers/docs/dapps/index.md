@@ -4,7 +4,7 @@ description:
 lang: de
 ---
 
-Eine dezentralisierte Anwendung ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufgebaut ist. Dies kombiniert einen [Smart Contract](/developers/docs/smart-contracts/) und eine Frontend-Benutzeroberfläche. Beachte, dass Smart Contracts in Ethereum zugänglich und transparent sind – wie offene APIs –, also kann deine Dapp sogar einen Smart Contract enthalten, den eine andere Person geschrieben hat.
+Eine dezentralisierte Anwendung (dapp) ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufgebaut ist. Dies kombiniert einen [Smart Contract](/developers/docs/smart-contracts/) und eine Frontend-Benutzeroberfläche. Beachte, dass Smart Contracts in Ethereum zugänglich und transparent sind – wie offene APIs –, also kann deine Dapp sogar einen Smart Contract enthalten, den eine andere Person geschrieben hat.
 
 ## Voraussetzungen {#prerequisites}
 
@@ -33,12 +33,12 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 - **Privatsphäre** – Du musst keine echte Identität zur Verfügung stellen, um eine Dapp bereitzustellen oder mit einer zu interagieren.
 - **Resistenz gegen Zensur** - keine einzige Entität im Netzwerk kann Benutzer daran hindern, Transaktionen zu übertragen, Dapps bereitzustellen oder Daten der Blockchain auszulesen.
 - **Komplette Datenintegrität** – Daten, die auf der Blockchain gespeichert sind, sind unveränderbar und unbestreitbar, dank kryptographischer Primitivität. Böswillige Akteure können keine Transaktionen oder andere Daten, die bereits öffentlich gemacht wurden, fälschen.
-- **Vertrauenslose Berechnung/überprüfbares Verhalten** – Smart Contracts können analysiert werden und garantieren, dass sie auf vorhersehbare Weise ausgeführt werden, ohne dass man einer zentralen Autorität vertrauen muss. Das ist bei traditionellen Modellen nicht der Fall. Wenn wir zum Beispiel Online-Banking-Systeme nutzen, müssen wir darauf vertrauen, dass die Finanzinstitute unsere Finanzdaten nicht missbrauchen, keine Aufzeichnungen manipulieren und uns nicht hacken.
+- **Vertrauenslose Berechnung/überprüfbares Verhalten** – Smart Contracts können analysiert werden und garantieren, dass sie auf vorhersehbare Weise ausgeführt werden, ohne dass dafür das Vertrauen in eine zentrale Autorität vorausgesetzt wird. Das ist bei traditionellen Modellen nicht der Fall. Wenn wir zum Beispiel Online-Banking-Systeme nutzen, müssen wir darauf vertrauen, dass die Finanzinstitute unsere Finanzdaten nicht missbrauchen, keine Aufzeichnungen manipulieren und uns nicht hacken.
 
 ## Nachteile der Dapp-Entwicklung {#drawbacks-of-dapp-development}
 
-- **Wartung** – Dapps können schwieriger zu warten sein, weil der Code und die Daten, die auf der Blockchain veröffentlicht werden, schwerer zu ändern sind. Für Entwickler ist es schwierig ihre Dapps (oder die zugrunde liegenden Daten, die von einer Dapp gespeichert werden) zu aktualisieren, sobald sie bereitgestellt wurden, selbst wenn in einer alten Version Fehler oder Sicherheitsrisiken festgestellt werden.
-- **Performance-Overhead** – Es gibt einen enormen Performance-Overhead und die Skalierung ist sehr schwierig. Um den Grad an Sicherheit, Integrität, Transparenz und Zuverlässigkeit zu erreichen, den Ethereum anstrebt, führt jeder Node jede Transaktion aus und speichert sie. Darüber hinaus benötigt Proof-of-Work auch Zeit. Eine "Back-of-the-Envelope"-Rechnung setzt den Leistungsaufwand auf etwa das 1.000.000-Fache der Standardrechnung.
+- **Wartung** – Dapps können schwieriger zu warten sein, weil der Code und die Daten, die auf der Blockchain veröffentlicht werden, schwerer zu ändern sind. Für Entwickler ist es schwierig ihre dApps (oder die zugrunde liegenden Daten, die von einer dApp gespeichert werden) zu aktualisieren, sobald sie bereitgestellt wurden, selbst wenn in einer alten Version Fehler oder Sicherheitsrisiken festgestellt werden.
+- **Performance-Overhead** – Es gibt einen enormen Performance-Overhead und die Skalierung ist sehr schwierig. Um den Grad an Sicherheit, Integrität, Transparenz und Zuverlässigkeit zu erreichen, den Ethereum anstrebt, führt jeder Node jede Transaktion aus und speichert sie. Hinzu kommt, dass der Proof-of-Stake-Konsens ebenfalls Zeit benötigt.
 - **Netzüberlastung** – Wenn eine Dapp zu viele Rechenressourcen verbraucht, gerät das gesamte Netzwerk ins Stocken. Derzeit kann das Netzwerk nur etwa 10 bis 15 Transaktionen pro Sekunde verarbeiten; wenn Transaktionen schneller eingehen, kann der Pool an unbestätigten Transaktionen schnell anschwellen.
 - **Benutzererfahrung** – Es könnte schwieriger sein, eine benutzerfreundliche Erfahrung zu entwickeln, weil es für den durchschnittlichen Endbenutzer zu schwer sein könnte, die notwendigen Tools für eine wirklich sichere Interaktion mit der Blockchain einzurichten.
 - **Zentralisierung** – Benutzer- und entwicklerfreundliche Lösungen, die auf der Basisschicht von Ethereum aufgebaut sind, könnten am Ende ohnehin wie zentralisierte Dienste aussehen. Solche Dienste können zum Beispiel Schlüssel oder andere sensible Informationen serverseitig speichern, ein Frontend über einen zentralen Server bedienen oder wichtige Geschäftslogik auf einem zentralen Server ausführen, bevor sie in die Blockchain geschrieben werden. Durch die Zentralisierung werden viele (wenn nicht alle) Vorteile der Blockchain gegenüber dem traditionellen Modell aufgehoben.
@@ -47,7 +47,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Werkzeuge für das Erstellen von Dapps {#dapp-tools}
+## Tools zum Erstellen von dApps {#dapp-tools}
 
 **Scaffold-ETH _- Experimentiere schnell mit Solidity, indem du ein Frontend verwendest, das sich an deinen Smart Contract anpasst._**
 
@@ -68,15 +68,23 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
+**thirdweb _- SDKs in jeder Sprache, Smart Contracts, Tools und Infrastruktur für die Web3-Entwicklung._**
+
+- [Website](https://thirdweb.com/)
+- [Dokumentation](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 ## Weiterführende Informationen {#further-reading}
 
-- [Die Architektur einer Web 3.0 Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
+- [Entdecken Sie dApps](/dapps)
+- [Die Architektur einer Web 3.0-Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
 - [Ein Leitfaden für dezentrale Anwendungen aus dem Jahr 2021](https://limechain.tech/blog/what-are-dapps-the-2021-guide/) – _LimeChain_
 - [Was sind dezentrale Apps?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) – _Gemini_
+- [Beliebte Dapps](https://www.alchemy.com/dapps) – _Alchemy_
 
-_Kennst du eine Community-Ressource, die dir geholfen hat? Bearbeite diese Seite und füge sie hinzu!_
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
 ## Verwandte Themen {#related-topics}
 
-- [Eine Anleitung zum Ethereum-Stack](/developers/docs/ethereum-stack/)
+- [Einführung in den Ethereum-Stack](/developers/docs/ethereum-stack/)
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)

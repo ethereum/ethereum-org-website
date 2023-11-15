@@ -27,7 +27,7 @@ Das wird als **Blockchain-basierte** Persistenz bezeichnet.
 
 Das Problem bei der Blockchain-basierten Persistenz ist, dass die Kette viel zu groß werden könnte, um alle Daten aufrechtzuerhalten und zu speichern (z. B. schätzen [viele Quellen](https://healthit.com.au/how-big-is-the-internet-and-how-do-we-measure-it/), dass das Internet über 40 Zetabyte Speicherkapazität benötigt).
 
-Die Blockchain benötigt außerdem auch eine Art Anreizstruktur. Bei der Blockchain-basierten Persistenz gibt es das, und zwar in Form einer Zahlung an die Miner. Wenn Daten an die Chain angehängt werden, müssen die Nodes dafür bezahlt werden.
+Die Blockchain benötigt außerdem auch eine Art Anreizstruktur. Bei der Blockchain-basierten Persistenz wird eine Zahlung an den Validator durchgeführt. Wenn Daten zur Blockchain hinzugefügt werden, werden die Validatoren für das Hinzufügen der Daten bezahlt.
 
 Plattformen mit Blockchain-basierter Persistenz:
 
@@ -46,6 +46,9 @@ Plattformen mit vertragsbsierter Persistenz:
 - [Skynet](https://siasky.net/)
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
+- [Crust-Netzwerk](https://crust.network)
+- [Swarm](https://www.ethswarm.org/)
+- [4EVERLAND](https://www.4everland.org/)
 
 ### Weitere Überlegungen {#additional-consideration}
 
@@ -55,14 +58,19 @@ IPFS ist ein verteiltes System für die Speicherung und den Zugriff auf Dateien,
 - [Pinata](https://www.pinata.cloud/) _(IPFS Pinning Service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin Pinning Service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS Pinning Service)_
+- [IPFS Scan](https://ipfs-scan.io) _(IPFS Pinning Explorer)_
+- [4EVERLAND](https://www.4everland.org/)_（IPFS Pinning Service）_
+- [Filebase](https://filebase.com) _(IPFS Pinning Service)_
+
+SWARM ist eine dezentrale Datenspeicherungs- und Datenverteilungstechnologie mit einem Speicher-Incentive-System und einem Speicher-Mietpreis-Orakel.
 
 ## Datenaufbewahrung/Verfügbarkeit {#data-retention}
 
-Systeme müssen für die Datenverfügbarkeit über einen Mechanismus verfügen, der genau das sicherstellt.
+Systeme müssen für die Datenverfügbarkeit über einen Mechanismus verfügen, der genau dies sicherstellt.
 
 ### Herausforderungsmechanismus {#challenge-mechanism}
 
-Einer der beliebtesten Wege zur Gewährleistung der Datenverfügbarkeit ist es, irgendeine Art von kryptographischer Herausforderung an die Nodes zu senden, die sie nur lösen können, wenn die Daten noch vorhanden sind. Ein einfaches Beispiel ist der Proof-of-Access von Arweave. Sie senden eine Herausforderung an Nodes, um zu sehen, ob sie über diese die Daten im aktuellsten Block sowie einem zufälligen Block in der Vergangenheit verfügen. Hat ein Node nicht die richtige Antwort, wird er bestraft.
+Einer der beliebtesten Wege zur Gewährleistung der Datenverfügbarkeit ist es, irgendeine Art von kryptographischer Herausforderung an die Knoten zu senden, die sie nur lösen können, wenn die Daten noch vorhanden sind. Ein einfaches Beispiel ist der Proof-of-Access von Arweave. Sie senden eine Herausforderung an Knoten, um zu sehen, ob sie über diese die Daten im aktuellsten Block sowie einem zufälligen Block in der Vergangenheit verfügen. Hat ein Knoten nicht die richtige Antwort, wird er bestraft.
 
 Anbieter von dStorage mit einem Herausforderungsmechanismus:
 
@@ -70,12 +78,14 @@ Anbieter von dStorage mit einem Herausforderungsmechanismus:
 - Skynet
 - Arweave
 - Filecoin
+- Crust Netzwerk
+- 4EVERLAND
 
 ### Dezentralität {#decentrality}
 
-Es gibt keine tollen Tools, um den Grad der Dezentralität von Plattformen festzustellen. Doch im Allgemeinen sollte man die Tools verwenden, die keine Form von KYC für die Benutzung benötigen.
+Es gibt keine hervorragenden Tools, um den Grad der Dezentralität von Plattformen festzustellen. Doch im Allgemeinen sollte man die Tools verwenden, die keine Form von KYC für die Benutzung benötigen.
 
-Dezentrale Speichersysteme ohne KYC:
+Dezentrale Tools ohne KYC:
 
 - 0Chain (gerade erfolgt die Implementierung einer Version ohne KYC)
 - Skynet
@@ -83,22 +93,24 @@ Dezentrale Speichersysteme ohne KYC:
 - Filecoin
 - IPFS
 - Ethereum
+- Crust Netzwerk
+- 4EVERLAND
 
 ### Konsens {#consensus}
 
-Die meisten der gelisteten Tools haben ihre eigene Version eines [Konsensmechanismus](/developers/docs/consensus-mechanisms/), basieren aber typischerweise auf [**Proof-of-Work (PoW)**](/developers/docs/consensus-mechanisms/pow/) oder [**Proof-of-Stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
+Die meisten diesere Tools haben ihre eigene Version eines [Konsensmechanismus](/developers/docs/consensus-mechanisms/), basieren aber typischerweise auf [**Proof-of-Work (PoW)**](/developers/docs/consensus-mechanisms/pow/) oder [**Proof-of-Stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
-PoW-basiert:
+Basierend auf Proof-of-Work:
 
 - Skynet
 - Arweave
+
+Basierend auf Proof-of-Stake:
+
 - Ethereum
-
-PoS-basiert:
-
-- [Die Beacon Chain](/roadmap/beacon-chain/)
 - Filecoin
 - 0Chain
+- Crust Netzwerk
 
 ## Verwandte Werkzeuge {#related-tools}
 
@@ -112,6 +124,7 @@ PoS-basiert:
 
 - [Storj.io](https://storj.io/)
 - [Dokumentation](https://docs.storj.io/)
+- [GitHub](https://github.com/storj/storj)
 
 **Skynet – _Skynet ist eine dezentrale PoW-Chain speziell für ein dezentrales Web_**
 
@@ -131,46 +144,64 @@ PoS-basiert:
 - [Dokumentation](https://docs.arweave.org/info/)
 - [Arweave](https://github.com/ArweaveTeam/arweave/)
 
-**0chain – _0Chain ist eine Proof-of-Stake-dStorage-Plattform mit Sharding und Blobbers_**
+**0chain – _0Chain ist eine Proof-of-Stake-dStorage-Plattform mit Sharding und Blobbers._**
 
 - [0Chain.net](https://0chain.net/)
 - [Dokumentation](https://docs.0chain.net/0chain/)
 - [GitHub](https://github.com/0chain/)
 
-**Swarm – _Ein verteiltes Speichersystem und Content-Verteilungs-Service für den Ethereum-Web3-Stack_**
+**Crust Netzwerk – _Crust ist eine dStorage Plattform auf dem IPFS._**
+
+- [Crust.network](https://crust.network)
+- [Dokumentation](https://wiki.crust.network)
+- [Github](https://github.com/crustio)
+
+**Swarm – _Ein verteiltes Speichersystem und Content-Verteilungs-Service für den Ethereum-Web3-Stack._**
 
 - [EthSwarm.org](https://www.ethswarm.org/)
 - [Dokumentation](https://docs.ethswarm.org/docs/)
 - [GitHub](https://github.com/ethersphere/)
 
-**OrbitDB – _Eine dezentrale Peer-to-Peer-Datenbank die auf IPFS aufsetzt_**
+**OrbitDB – _Eine dezentrale Peer-to-Peer-Datenbank, die auf IPFS basiert._**
 
 - [OrbitDB.org](https://orbitdb.org/)
 - [Dokumentation](https://github.com/orbitdb/field-manual/)
 - [GitHub](https://github.com/orbitdb/orbit-db/)
 
-**Aleph.im – _Dezentrales Cloudprojekt (Datenbanken, Dateispeicherung, Computing und DID). Eine einzigartige Mischung aus Peer-to-Peer-Technologie – off-chain und on-chain. IPFS und Multi-Chain-Kompatibilität._**
+**Aleph.im – _Dezentrales Cloudprojekt (Datenbanken, Dateispeicherung, Computing und DID). Eine einzigartige Mischung aus Peer-to-Peer-Technologie – Off-Chain und On-Chain. IPFS und Multi-Chain-Kompatibilität._**
 
 - [Aleph.im](https://aleph.im/)
 - [Dokumentation](https://aleph.im/#/developers/)
 - [GitHub](https://github.com/aleph-im/)
 
-**Ceramic – _Nutzergesteuerte IPFS-Datenbankspeicher für datenintensive und anspruchsvolle Anwendungen_**
+**Ceramic – _Nutzergesteuerte IPFS-Datenbankspeicher für datenintensive und anspruchsvolle Anwendungen._**
 
 - [Ceramic.network](https://ceramic.network/)
 - [Dokumentation](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-**Filebase - _Die erste S3-kompatible Objektspeicherplattform, mit der Daten in mehreren dezentralen Speichernetzwerken wie IPFS, Sia, Skynet und Storj gespeichert werden können._**
+**Filebase – _Ein S3-kompatibler dezentraler Speicher und geo-redundanter IPFS-Pinning-Service. Alle über Filebase auf IPFS hochgeladenen Dateien werden automatisch an die Filebase-Infrastruktur mit dreifacher Replikation auf der ganzen Welt gepinnt._**
 
 - [Filebase.com](https://filebase.com/)
 - [Dokumentation](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
+**4EVERLAND - _Eine Web 3.0-Cloud-Computing-Plattform, die Speicher-, Rechen- und Netzwerk-Kernfunktionen integriert, S3-kompatibel ist und synchrone Datenspeicherung auf dezentralen Speichernetzwerken wie IPFS und Arweave bietet._**
+
+- [4everland.org](https://www.4everland.org/)
+- [Dokumentation](https://docs.4everland.org/)
+- [GitHub](https://github.com/4everland)
+
+**Kaleido – _Eine Blockchain-as-a-Service-Plattform mit IPFS-Knoten auf einen Klick_**
+
+- [Kaleido](https://kaleido.io/)
+- [Dokumentation](https://docs.kaleido.io/kaleido-services/ipfs/)
+- [GitHub](https://github.com/kaleido-io)
+
 ## Weiterführende Informationen {#further-reading}
 
-- [Was sind dezentrale Speichersysteme?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
-- [Fünf gängige Mythen über dezentrale Speichersysteme](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
+- [Was sind dezentrale Speichersysteme?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
+- [Fünf gängige Mythen über dezentrale Speichersysteme entlarvt](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
 

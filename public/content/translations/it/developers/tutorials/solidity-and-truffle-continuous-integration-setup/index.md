@@ -5,10 +5,9 @@ author: Markus Waas
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
+  - "contratto intelligente"
   - "test"
   - "truffle"
-  - "integrazione continua"
   - "ganache"
 skill: intermediate
 published: 2020-06-05
@@ -157,9 +156,7 @@ Con il plugin di solidity-coverage puoi controllare in quale misura i percorsi d
 ### Fase 1: Crea un progetto di metacoin e installa gli strumenti di coverage {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
-npm install --save-dev truffle
-npm install --save-dev coveralls
-npm install --save-dev solidity-coverage
+npm install --save-dev truffle coveralls solidity-coverage
 ```
 
 ### Fase 2: Aggiungi solidity-coverage all'insieme di plugin in truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}

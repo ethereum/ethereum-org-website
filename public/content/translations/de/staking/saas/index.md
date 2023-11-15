@@ -22,16 +22,16 @@ Staking-as-a-Service („SaaS“) stellt eine Kategorie von Staking-Diensten dar
 Das Ethereum-Protokoll unterstützt keine Delegation von Staking, daher wurden diese Serviceleistungen aufgebaut, um die entsprechende Nachfrage zu befriedigen. Wenn Sie über 32 ETH zum Staking verfügen, sich aber davor scheuen, mit Hardware umzugehen, bieten SaaS-Dienste Ihnen die Möglichkeit, den schwierigen Teil zu delegieren, während Sie native Blockbelohnungen erhalten.
 
 <CardGrid>
-  <Card title="Ihr eigener Validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
-  <Card title="Einfach starten" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Schränken Sie Ihr Risiko ein" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Ihr eigener Validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Einfach starten" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="Schränken Sie Ihr Risiko ein" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## Bitte beachten {#what-to-consider}
 
-Es gibt eine wachsende Anzahl von SaaS-Anbietern, die Ihnen beim Staken Ihres ETH helfen, doch jeder hat eigene Vorteile und Risiken. Sie sollten bedenken, dass alle SaaS-Optionen im Vergleich zum Home-Staking zusätzliches Vertrauen erfordern. SaaS-Optionen können zusätzlichen Code haben, der die Ethereum-Clients umgibt, der nicht offen oder überprüfbar ist. SaaS beeinträchtigt zudem die Dezentralisierung des Netzwerks. Je nach Einstellung haben Sie möglicherweise keine Kontrolle über Ihren Validator – der Betreiber könnte mit Ihrem ETH unehrlich handeln.
+Es kommen immer mehr SaaS-Anbieter auf den Markt, die Ihnen beim Staking Ihrer ETH helfen. Doch alle haben ihre eigenen Vorteile und Risiken. Bei allen SaaS-Optionen müssen Sie im Vergleich zum Home-Staking mehr Vertrauen aufbringen. SaaS-Optionen können zusätzlichen Code haben, der die Ethereum-Clients umgibt, der nicht offen oder überprüfbar ist. SaaS beeinträchtigt zudem die Dezentralisierung des Netzwerks. Je nach Einstellung haben Sie möglicherweise keine Kontrolle über Ihren Validator – der Betreiber könnte mit Ihrem ETH unehrlich handeln.
 
 Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwächen eines gelisteten SaaS-Anbieters zu signalisieren. Nutzen Sie bei Ihrer Auswahl eines Diensts, dem Sie Ihr Staking anvertrauen möchten, diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren.
 
@@ -41,19 +41,19 @@ Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwä
 
 Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
 
-<InfoBanner emoji="⚠️" isWarning>
-Hinweis: Es ist wichtig, dass sie die <a href="/developers/docs/nodes-and-clients/client-diversity/">Client-Diversität</a> unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienstleister, die nachweislich die Mehrzahl der Kunden begrenzen, sind wie folgt markiert <em style={{ textTransform: "uppercase" }}>„Diverse Clients."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### SaaS-Anbieter
 
 <StakingProductsCardGrid category="saas" />
 
+Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style="text-transform: uppercase;">"Vielfalt der Ausführungskunden"</em> and <em style="text-transform: uppercase;">"Vielfalt der Konsenskunden"</em>.
+
 #### Schlüssel-Generatoren
 
 <StakingProductsCardGrid category="keyGen" />
 
-Sie haben einen Vorschlag zu einem SaaS-Anbieter, den wir noch nicht haben? Prüfen Sie unsere [Produktlistenrichtlinie](/contributing/adding-staking-products/), um festzustellen, ob dies passt, und senden Sie ihn uns zur Prüfung zu.
+Sie haben einen Vorschlag zu einem SaaS-Anbieter, den wir noch nicht haben? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.
 
 ## Häufig gestellte Fragen {#faq}
 
