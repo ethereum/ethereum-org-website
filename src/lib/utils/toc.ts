@@ -1,7 +1,5 @@
 import { ListProps } from "@chakra-ui/react"
-
-import type { ToCItem } from "@/lib/types"
-import type { TocNodeType } from "@/lib/rehype/remarkInferToc"
+import type { TocNodeType, ToCItem } from "@/lib/types"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/

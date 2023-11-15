@@ -1,24 +1,9 @@
+import { toc } from "mdast-util-toc"
+import { visit } from "unist-util-visit"
 import type { Plugin } from "unified"
 import type { BlockContent, DefinitionContent, ListItem } from "mdast"
-import { toc, type Options } from "mdast-util-toc"
 import type { Nodes } from "mdast-util-toc/lib"
-import { visit } from "unist-util-visit"
-
-interface ITocNodeEntry {
-  url?: string
-  title?: string
-}
-
-export type TocNodeType =
-  | ITocNodeEntry
-  | {
-      items: Array<TocNodeType>
-    }
-
-interface IRemarkTocOptions {
-  maxDepth?: Options["maxDepth"]
-  callback: (toc: TocNodeType) => void
-}
+import type { IRemarkTocOptions, ToCNodeEntry, TocNodeType } from "@/lib/types"
 
 const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
   const { callback, maxDepth }: IRemarkTocOptions = {
@@ -36,7 +21,7 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
 
     switch (node.type) {
       case `paragraph`: {
-        const typedCurrent = current as ITocNodeEntry
+        const typedCurrent = current as ToCNodeEntry
 
         visit(node, (item) => {
           if (item.type === `link`) {
@@ -73,9 +58,10 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
           return heading
         }
       }
-    }
 
-    return {}
+      default:
+        return {}
+    }
   }
 
   return (tree) => {

@@ -9,7 +9,7 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import type { NextPageWithLayout, StaticPaths, TocNodeType } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -39,7 +39,7 @@ import {
 } from "@/layouts"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import remarkInferToc, { type TocNodeType } from "@/lib/rehype/remarkInferToc"
+import remarkInferToc from "@/lib/rehype/remarkInferToc"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const layoutMapping = {
