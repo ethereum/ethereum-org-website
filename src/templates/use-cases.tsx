@@ -437,13 +437,13 @@ const UseCasePage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBp}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>

@@ -8,7 +8,7 @@ Uma conta Ethereum é uma entidade com um saldo de ether (ETH) que pode enviar t
 
 ## Pré-requisitos {#prerequisites}
 
-As contas são um tema muito amigável para iniciantes. Mas para ajudá-lo a entender melhor esta página, recomendamos que você primeiro leia a nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
+Para ajudá-lo a entender melhor esta página, recomendamos que você primeiro leia nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipos de conta {#types-of-account}
 
@@ -120,9 +120,11 @@ Assista a Austin mostrando passo a passo as funções de hash e os pares de chav
 
 ## Leitura adicional {#further-reading}
 
+- [Entendendo Contas Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
+
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione-a!_
 
 ## Tópicos relacionados {#related-topics}
 
-- [Smart Contracts](/developers/docs/smart-contracts/)
+- [Contratos inteligentes](/developers/docs/smart-contracts/)
 - [Transações](/developers/docs/transactions/)

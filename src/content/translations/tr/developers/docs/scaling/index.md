@@ -21,38 +21,38 @@ Tüm temel konuları kapsamlı olarak anlamanız gerekmektedir. Bu teknoloji hen
 
 ## Zincir üstünde ölçeklendirme {#on-chain-scaling}
 
-Bu ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını gerektirir (katman 1 [Mainnet](/glossary/#mainnet)). Parçalama, şu anda bu ölçeklendirme yönteminin ana odak noktasıdır.
+Zincir üstünde ölçeklendirme yöntemi, Ethereum protokolünde değişiklik yapılmasını gerektirir (katman 1 [Ana Ağ](/glossary/#mainnet)). Uzun bir süredir blokzinciri parçalamanın Ethereum'u ölçeklendirmesi bekleniyordu. Süreç, blokzincirin çeşitli ayrık parçalara (shard adı verilen) ayrılmasını ve bu parçaların doğrulayıcı alt kümeleri tarafından onaylanmasını içerecekti. Ancak katman-2 toplamalarıyla ölçeklendirmenin birincil ölçeklendirme tekniği olmasıyla beraber bu durum değişti. Bu, toplama kullanımlarının kullanıcılar için ucuz hale getirilmesi amaçlanarak daha ucuz bir veri biçiminin Ethereum bloklarına eklenmesiyle destekleniyor.
 
 ### Parçalama {#sharding}
 
-Parçalama, yükü yaymak için bir veri tabanını yatay olarak bölme işlemidir. Ethereum bağlamında parçalama, "parça" olarak bilinen yeni zincirler oluşturarak ağ tıkanıklığını azaltır ve saniye başına işlem kapasitesini artırır. Bu, aynı zamanda doğrulayıcıların ağdaki işlemlerin tamamını işleme zorunluluğunu ortadan kaldırarak tüm doğrulayıcıların yükünü azaltır.
-
-[Parçalama](/roadmap/danksharding/) hakkında daha fazla bilgi.
+Parçalama, veritabanını bölmek için kullanılan işlemdir. Böylelikle doğrulayıcı alt kümeleri, tüm Ethereum ağını takip etmektense belirli bazı parçaları takip etmekten sorumlu olurlar. Parçalama aslında uzun süredir Ethereum [yol haritasında](/roadmap/) yer alıyordu ve Birleşim'den önce hisse ispatına gönderilmesi amaçlanmıştı. Bununla birlikte, [katman 2 toplamalarının](#layer-2-scaling) hızlı gelişimi ve [Danksharding'in](/roadmap/danksharding)(doğrulayıcılar tarafından çok verimli bir şekilde doğrulanabilen Ethereum bloklarına toplama verisi damlacıkları ekleme) icat edilmesi, Ethereum topluluğunun parçalama yoluyla ölçeklendirme yerine toplama merkezli ölçeklendirmeyi tercih etmesine yol açtı. Bu aynı zamanda da Ethereum'un mutabakat mantığının sade kalmasına da yardımcı olacaktır.
 
 ## Zincir dışında ölçeklendirme {#off-chain-scaling}
 
-Zincir dışı çözümler, katman 1 Mainnet'ten ayrı olarak uygulanır: Mevcut Ethereum protokolünde herhangi bir değişiklik gerektirmezler. "Katman 2" çözümleri olarak bilinen bazı çözümler, güvenliklerini doğrudan [iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/), [sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups/) veya [durum kanalları](/developers/docs/scaling/state-channels/) gibi katman 1 Ethereum mutabakatından alır. Diğer çözümler, [yan zincirler](#sidechains) veya [plazma zincirleri](#plasma) gibi, güvenliklerini Mainnet'ten ayrı olarak türeten çeşitli biçimlerde yeni zincirlerin oluşturulmasını içerir. Bu çözümler Mainnet ile iletişim kurar, ancak çeşitli hedeflere ulaşmak için güvenliklerini farklı şekilde elde eder.
+Zincir dışı çözümler, katman 1 Ana Ağ'dan ayrı olarak uygulanır; mevcut Ethereum protokolünde herhangi bir değişiklik gerektirmezler. "Katman 2" çözümleri olarak bilinen bazı çözümler, güvenliklerini doğrudan [iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/), [sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups/) veya [özel kanallar](/developers/docs/scaling/state-channels/) gibi katman 1 Ethereum mutabakatından alır. Diğer çözümler, [yan zincirler](#sidechains) [validium'lar](#validium) veya [plazma zincirleri](#plasma) gibi güvenliklerini Ana Ağ'dan ayrı olarak türeten çeşitli biçimlerde yeni zincirlerin oluşturulmasını içerir. Bu çözümler Ana Ağ ile iletişim kurar, ancak çeşitli hedeflere ulaşmak için güvenliklerini farklı şekilde elde eder.
 
 ### Katman 2 ölçeklendirme {#layer-2-scaling}
 
-Bu zincir dışı çözümler kategorisi, güvenliğini Mainnet Ethereum'dan alır.
+Bu zincir dışı çözümler kategorisi, güvenliğini Ana Ağ Ethereum'dan alır.
 
-Katman 2, Mainnet'in sağlam merkeziyetsiz güvenlik modelinden yararlanırken, Ethereum Mainnet'ten (katman 1) işlemleri yöneterek uygulamanızı ölçeklendirmeye yardımcı olmak için tasarlanmış çözümler için kullanılan toplu bir terimdir. Ağ meşgulken işlem hızı düşer ve belirli türdeki dapp'ler için kullanıcı deneyimi olumsuz etkilenir. Ve ağ yoğunluğu arttıkça işlem yapmak isteyenler birbirlerinden daha fazla işlem ücreti sunarak işlem ücretlerinin artmasına neden olurlar. Bu, Ethereum'u kullanmayı çok pahalı hâle getirebilir.
+Katman 2, Ana Ağ'ın sağlam merkeziyetsiz güvenlik modelinden yararlanırken, işlemleri Ethereum Ana Ağı'ndan (katman 1) yöneterek uygulamanızı ölçeklendirmeye yardımcı olmak üzere tasarlanmış çözümler için kullanılan toplu bir terimdir. Ağ meşgulken işlem hızı düşer ve belirli türdeki merkeziyetsiz uygulamalar için kullanıcı deneyimi olumsuz etkilenir. Ağ yoğunluğu arttıkça işlem göndericiler birbirleriyle rekabete girerek gaz ücretlerinin artmasına neden olurlar. Bu, Ethereum'u kullanmayı çok pahalı hâle getirebilir.
 
-Katman 2 çözümlerinin çoğu düğüm, doğrulayıcı, operatör, sıralayıcı veya blok üreticileri gibi sunucu veya sunucu kümeleri etrafında toplanır. Uygulamaya bağlı olarak, bu katman 2 düğümleri, onları kullanan kişiler, işletmeler veya kuruluşlar veya bir 3. taraf operatör veya büyük bir grup kişi tarafından (Mainnet'e benzer şekilde) çalıştırılabilir. Genel olarak konuşursak, işlemler doğrudan katman 1'e (Mainnet) gönderilmek yerine bu katman 2 düğümlerine gönderilir. Bazı çözümlerde, katman 2 örneği daha sonra bu işlemleri katman 1'e bağlamadan önce gruplara ayırır, ardından bu işlemler katman 1 tarafından sabitlenir ve değiştirilemez. Bu sürece ilişkin ayrıntılar, farklı katman 2 teknolojileri ve uygulamaları arasında önemli ölçüde farklılık gösterir.
+Katman 2 çözümlerinin çoğu düğüm, doğrulayıcı, operatör, sıralayıcı veya blok üreticileri gibi bir sunucu veya sunucu kümesi etrafında toplanır. Uygulamaya bağlı olarak bu katman 2 düğümleri, onları kullanan kişiler, işletmeler veya kuruluşlar veya bir 3. taraf operatör veya büyük bir grup kişi tarafından (Ana Ağ'a benzer şekilde) çalıştırılabilir. Genel olarak konuşursak, işlemler doğrudan katman 1'e (Ana ağ) gönderilmek yerine bu katman 2 düğümlerine gönderilir. Bazı çözümlerde katman 2 örneği daha sonra bunları katman 1'e bağlamadan önce gruplara ayırır, ardından bunlar katman 1 tarafından sabitlenir ve değiştirilemez. Bunun nasıl yapıldığına ilişkin ayrıntılar, farklı katman 2 teknolojileri ve uygulamaları arasında önemli ölçüde farklılık gösterir.
 
-Belirli bir katman 2 örneği açık olabilir ve birçok uygulama tarafından paylaşılabilir veya bir proje tarafından kullanılarak yalnızca uygulamalarını desteklemeye adanmış olabilir.
+Belirli bir katman 2 örneği açık olabilir ve birçok uygulama tarafından paylaşılabilir veya bir proje tarafından dağıtılabilir ve yalnızca uygulamalarını desteklemeye adanmış olabilir.
 
-#### Katman 2 çözümleri neden gerekli? {#why-is-layer-2-needed}
+#### Katman 2 neden gerekli? {#why-is-layer-2-needed}
 
 - Saniye başına artan işlem, kullanıcı deneyimini büyük ölçüde iyileştirir ve Mainnet Ethereum'daki ağ tıkanıklığını azaltır.
 - İşlemler, Mainnet Ethereum'da tek bir işlemde toplanır ve Ethereum'u tüm dünyadaki insanlar için daha kapsayıcı ve erişilebilir hâle getiren kullanıcılar için gaz ücretlerini azaltır.
 - Ölçeklendirme ile ilgili hiçbir gelişme güvenlik veya merkeziyetsizlikten taviz vermemelidir: Katman 2 çözümleri Ethereum'u olduğu hâliyle geliştirir.
 - Ölçekli varlıklarla çalışırken kendi verimlilik setlerini kullanan uygulamaya özel katman 2 ağları bulunuyor.
 
+[Katman 2 hakkında daha fazla bilgi](/layer-2/).
+
 #### Toplamalar {#rollups}
 
-Toplamalar, işlem yürütmesini katman 1 dışında gerçekleştirir ve ardından veriler, mutabakata varılan katman 1'e gönderilir. İşlem verileri katman 1 bloklarına dahil edildiğinden bu, toplamaların yerel Ethereum güvenliği ile güvence altına alınmasına izin verir.
+Toplamalar, işlem yürütmesini katman 1 dışında gerçekleştirir ve ardından veriler, mutabakata varılan katman 1'e gönderilir. Bu, işlem verileri katman 1 bloklarına dahil edildiğinden toplamaların yerel Ethereum güvenliği ile güvence altına alınmasına olanak tanır.
 
 Farklı güvenlik modellerine sahip iki tür toplama vardır:
 
@@ -61,25 +61,25 @@ Farklı güvenlik modellerine sahip iki tür toplama vardır:
 
 #### Durum kanalları {#channels}
 
-Durum kanalları, katılımcıların zincir dışında hızlı ve özgürce işlem yapmalarını sağlamak için çoklu imza sözleşmelerini kullanır ve ardından Mainnet ile kesinliği kararlaştırır. Bu, ağ tıkanıklığını, ücretleri ve gecikmeleri en aza indirger. Şu andaki durum kanalları ve ödeme kanalları olarak iki tür kanal bulunur.
+Özel kanallar, katılımcıların zincir dışında hızlı ve özgürce işlem yapmalarını sağlamak için çoklu imza sözleşmelerini kullanır ve ardından Ana ağ ile kesinliği belirler. Bu, ağ tıkanıklığını, ücretleri ve gecikmeleri en aza indirger. Mevcut kanal türleri, özel kanallar ve ödeme kanalları olarak iki türdedir.
 
-[Durum kanalları](/developers/docs/scaling/state-channels/) hakkında daha fazla bilgi.
+[Özel kanallar](/developers/docs/scaling/state-channels/) hakkında daha fazla bilgi.
 
 ### Yan zincirler {#sidechains}
 
-Bir yan zincir, Mainnet'e paralel olarak çalışan bağımsız bir Ethereum Sanal Makinesi uyumlu blok zinciridir. Bunlar, iki yönlü köprüler aracılığıyla Ethereum ile uyumludur ve kendi seçtikleri mutabakat kuralları ve blok parametreleri altında çalışırlar.
+Bir yan zincir, Ana Ağ'a paralel olarak çalışan bağımsız bir Ethereum Sanal Makinesi uyumlu blokzinciridir. Bunlar, iki yönlü köprüler aracılığıyla Ethereum ile uyumludur ve kendi seçtikleri mutabakat kuralları ve blok parametreleri altında çalışırlar.
 
 [Yan zincirler](/developers/docs/scaling/sidechains/) hakkında daha fazla bilgi.
 
 ### Plazma {#plasma}
 
-Plazma zinciri, ana Ethereum zincirine bağlı olan ve anlaşmazlıkları tahkim etmek için dolandırıcılık kanıtlarını ([iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/) gibi) kullanan ayrı bir blok zinciridir.
+Plazma zinciri, ana Ethereum zincirine bağlı olan ve uyuşmazlıkları çözüme kavuşturmak için sahtecilik kanıtlarını ([iyimser toplamalar](/developers/docs/scaling/optimistic-rollups/) gibi) kullanan ayrı bir blokzincirdir.
 
 [Plazma](/developers/docs/scaling/plasma/) hakkında daha fazla bilgi.
 
 ### Validium {#validium}
 
-Bir Validium zinciri, sıfır bilgi toplamaları gibi doğruluk ispatlarını kullanır, ancak veriler ana katman 1 Ethereum zincirinde depolanmaz. Bu, her bir Validium zinciri başına saniyede 10 bin işlem yapılabilmesini ve birden çok zincirle birlikte paralel olarak çalışabilmesine olanak sağlar.
+Bir Validium zinciri, sıfır bilgi toplamaları gibi doğruluk ispatlarını kullanır, ancak veriler ana katman 1 Ethereum zincirinde depolanmaz. Bu, her bir Validium zinciri başına saniyede 10 bin işlem yapılabilmesine ve birden çok zincirin paralel olarak çalışabilmesine olanak sağlar.
 
 [Validium](/developers/docs/scaling/validium/) hakkında daha fazla bilgi.
 
@@ -94,13 +94,13 @@ Bir Validium zinciri, sıfır bilgi toplamaları gibi doğruluk ispatlarını ku
 
 <YouTube id="BgCgauWVTs0" />
 
-_Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirme çözümlerini ifade etmek için kullandığına dikkat edin: Biz "Katman 2"yi, güvenliğini katman 1 Mainnet mutabakatından alan zincir dışı bir çözüm olarak ayırıyoruz._
+_Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirme çözümlerini ifade etmek için kullandığına dikkat edin: Biz "Katman 2"yi, güvenliğini katman 1 Ana ağ mutabakatından alan zincir dışı bir çözüm olarak ayırıyoruz._
 
 <YouTube id="7pWxCklcNsU" />
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla bilgi {#further-reading}
 
-- [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
+- [Toplama merkezli bir Ethereum yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Ethereum için Katman 2 ölçeklendirme çözümlerinde güncel analitikler](https://www.l2beat.com/)
 - [Ethereum katman 2 Ölçeklendirme Çözümlerini Değerlendirme: Bir Karşılaştırma Çerçevesi](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
 - [Toplamalar için Tamamlanmamış Bir Kılavuz](https://vitalik.ca/general/2021/01/05/rollup.html)
@@ -108,5 +108,6 @@ _Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirm
 - [İyimser Toplamalar ile ZK Toplamalarının Karşılaştırması](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Sıfır Bilgi Blok Zinciri Ölçeklendirilebilirliği](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Toplamalar + veri parçalarının, yüksek ölçeklenebilirlik için tek sürdürülebilir çözüm olma nedeni](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
+- [Hangi tür Katman 3'ler kulağa mantıklı geliyor?](https://vitalik.ca/general/2022/09/17/layer_3.html)
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

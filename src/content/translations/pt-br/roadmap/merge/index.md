@@ -91,15 +91,18 @@ title="Dapp e desenvolvedores de contratos inteligentes"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-A Fusão veio com mudanças no consenso, que também inclui mudanças relacionadas a:
+A Fusão veio com alterações no consenso, que também inclui alterações relacionadas a:<
 
-- estrutura de blocos
-- temporização de espaço/bloco
-- alterações de opcode
-- fontes de aleatoriedade na cadeia
-- conceito de _cabeça segura_ e _blocos finalizados_
+<ul>
+  <li>estrutura de bloco</li>
+  <li>timing de espaço/bloco</li>
+  <li>alterações de opcode</li>
+  <li>fontes de aleatoriedade em cadeia</li>
+  <li>conceito de <em>cabeçalho seguro</em> e <em>blocos finalizados</em></li>
+</ul>
 
-Para obter mais informações, confira esta postagem no blog de Tim Beiko sobre [Como A Fusão impacta a camada de aplicativo do Ethereum] (https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer /).
+Para obter mais informações, leia esta publicação de Tim Beiko sobre <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a> (Como a Fusão afeta a camada de aplicação do Ethereum).
+
 </ExpandableCard>
 
 ## A Fusão e o consumo de energia {#merge-and-energy}
@@ -115,26 +118,29 @@ The Merge também preparou o terreno para futuras atualizações de escalabilida
 <ExpandableCard
 title="Equívoco: &quot;executar um nó requer a participação de 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+
 Existem dois tipos de nós no Ethereum: nós que podem propor blocos e nós que não podem.
 
 Os nós que propõem blocos são apenas um pequeno número dos nós totais no Ethereum. Esta categoria inclui nós de mineração sob a prova de trabalho (PoW) e nós validadores sobre a prova de participação (PoS). Esta categoria requer comprometer recursos econômicos (como o poder de hash da GPU em prova de trabalho ou ETH em prova de participação) em troca da capacidade de propor, ocasionalmente, o próximo bloco e ganhar recompensas de protocolo.
 
 Os outros nós na rede (por exemplo, a maioria) não é obrigada a comprometer quaisquer recursos econômicos para além de um computador com 1 a 2 TB de armazenamento disponível e uma conexão com a internet. Esses nós não propõem blocos, mas eles ainda desempenham um papel crítico na segurança da rede, mantendo todos os proponentes de bloco responsáveis, ouvindo novos blocos e verificando sua validade na chegada de acordo com as regras de consenso da rede. Se o bloco for válido, o nó continua a propagá-lo pela rede. Se o bloco é inválido por qualquer motivo, o software do nó irá ignorá-lo como inválido e irá parar sua propagação.
 
-Executar um nó não produtor de blocos é possível para qualquer um sob qualquer mecanismo de consenso (prova de trabalho ou prova de participação); isso é _fortemente recomendado_ a todos os usuários se eles tiverem os meios. A execução de um nó é imensamente valiosa para o Ethereum e oferece benefícios adicionais a qualquer indivíduo executando um, como maior segurança, privacidade e resistência à censura.
+Qualquer pessoa pode executar um nó que não produz blocos, em qualquer mecanismo de consenso (prova de trabalho ou prova de participação); isso é <em>amplamente incentivado</em> para todos os usuários, se tiverem os meios. A execução de um nó é imensamente valiosa para o Ethereum e oferece benefícios adicionais a qualquer indivíduo executando um, como maior segurança, privacidade e resistência à censura.
 
-A capacidade de qualquer um de executar seu próprio nó é _essencial_ para manter a descentralização da rede Ethereum.
+A capacidade de qualquer pessoa de executar seu próprio nó é <em>absolutamente essencial</em> para manter a descentralização da rede Ethereum.
 
-[Mais sobre como executar seu próprio nó](/run-a-node/)
+<a href="/run-a-node/">Mais detalhes sobre como executar seu próprio nó</a>
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Equívoco: &quot;A Fusão falhou em reduzir as taxas de gás.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+
 Taxas de gás são um produto da demanda de rede relativa à capacidade da rede. A Fusão depreciou o uso da prova de trabalho, passando para a prova de participação por consenso, mas não alterou significativamente nenhum parâmetro que influencie diretamente a capacidade da rede ou a taxa de transferência.
 
-Com um [planejamento centrado por rollup](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), os esforços se concentram em escalar a atividade do usuário na [camada 2](/layer-2/), enquanto habilita a Rede principal da camada 1 como uma camada de liquidação descentralizada otimizada para o armazenamento de dados rollup para ajudar a tornar as transações rollup exponencialmente mais baratas. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. [Mais sobre gas e tarifas.](/developers/docs/gas/)
+Com um <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">planejamento centrado em rollup</a>, os esforços se concentram em dimensionar a atividade do usuário na <a href="/layer-2/">camada 2</a> ao habilitar a rede principal da camada 1 como uma camada de estabelecimento descentralizada e segura, otimizada para o armazenamento de dados de rollup para ajudar a fazer com que as transações de rollup sejam exponencialmente mais acessíveis. A transição para a prova de participação é um precursor crítico para a realização desse objetivo. <a href="/developers/docs/gas/">Mais informações sobre gás e taxas.</a>
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -150,28 +156,26 @@ A prova de participação introduziu o conceito de finalidade da transação que
 
 <ExpandableCard
 title="Equívoco: &quot;A Fusão permitiu saques de participação.&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
-O ETH colocado em e as recompensas de participação continuam bloqueadas sem a capacidade de saque. Os saques são planejados para a próxima atualização do Shanghai.
+contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+
+Inicialmente, após a Fusão, os participantes podiam acessar apenas as comissões de taxas e o MEV obtidos como resultado de propostas de bloco. Essas recompensas são creditadas em uma conta de não participação controlada pelo validador (conhecido como <em>destinatário da taxa</em>), e ficam disponíveis imediatamente. Essas recompensas são separadas das recompensas do protocolo pela execução das obrigações do validador.
+
+Desde a melhoria da rede Shanghai/Capella, os participantes agora podem designar um <em>endereço de saque</em> para começar a receber pagamentos automáticos de qualquer saldo de participação excedente (ETH superior a 32 de recompensas do protocolo). Essa melhoria também permitiu que um validador desbloqueasse e recuperasse todo o saldo ao sair da rede.
+
+<a href="/staking/withdrawals/">Mais sobre saques de participação</a>
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Equívoco: &quot;os validadores não receberão nenhuma recompensa líquida de ETH até a atualização do Shanghai quando os saques estiverem ativados.&quot;"
-contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
-Isso pode parecer contra-intuitivo em relação à nota acima, uma vez que os saques não são permitidos até a atualização do Shanghai, mas os validadores têm acesso imediato às recompensas de taxa/MEV ganhos durante as propostas em bloco.
-
-O protocolo emite ETH como recompensa aos validadores por contribuir para o consenso. A camada de consenso é responsável pelo ETH recém-emitido, no qual um validador tem um endereço único que detém seu ETH envolvido e recompensas de protocolo. Este ETH está bloqueado até o Shanghai.
-
-O ETH na camada de execução é contabilizado separadamente da camada de consenso. Quando os usuários executam transações na Rede principal do Ethereum, o ETH deve ser pago para cobrir o gás, incluindo uma gorjeta ao validador. Esse ETH já está na camada de execução, NÃO está sendo emitido recentemente pelo protocolo e está disponível para o validador imediatamente (dado um endereço do "destinatário de taxa" apropriado é fornecido ao software cliente).
-</ExpandableCard>
-
-<ExpandableCard
-title="Equívoco: &quot;quando os saques são ativados, os participantes sairão todos de uma vez.&quot;"
+title="Conceito errôneo: &quot;agora que a Fusão está concluída e os saques estão habilitados, os participantes podem sair todos de uma só vez.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-Após a atualização do Shanghai permitir saques, todos os validadores serão incentivados a retirar seu saldo de participação acima de 32 ETH, uma vez que estes fundos não contribuem para o rendimento e, de outro modo, ficam bloqueados. Dependendo da APR (determinado pelo ETH total colocado), eles podem ser incentivados a sair de seus validadores para recuperar todo o saldo ou potencialmente colocar ainda mais usando suas recompensas para obter mais rendimento.
+Como a melhoria do Shanghai/Capella permitiu saques, os validadores são incentivados a sacar o saldo de participação superior a 32 ETH, já que esses fundos não aumentam o rendimento e são bloqueados. Dependendo da APR (determinada pelo total de ETH participado), eles podem ser incentivados a sair de seus validadores para recuperar todo o saldo ou potencialmente participar ainda mais utilizando as recompensas, de forma a obter mais rendimento.
 
-Uma ressalva importante aqui: as saídas completas do validador são limitadas pelo protocolo, portanto, apenas seis validadores podem sair por época (a cada 6,4 minutos, por isso, 1.350 por dia ou apenas ~43.200 ETH por dia de mais de 10 milhões de ETH colocados). Esse limite de taxa se ajusta dependendo do total de ETH colocado e evita um êxodo em massa de fundos. Além disso, ele impede que um atacante em potencial use a sua aposta para cometer um delito severo e saia com todo o saldo colocado na mesma época antes que o protocolo possa aplicar a penalidade de remoção.
+Uma advertência importante aqui é que as saídas completas do validador são limitadas pelo protocolo, e apenas um número específico de validadores pode sair por época (a cada 6,4 minutos). Esse limite varia de acordo com o número de validadores ativos, mas chega a aproximadamente 0,33% do total de ETH participado que pode ser sacado da rede em um único dia.
 
-A APR é intencionalmente dinâmica, permitindo que um mercado de participantes equilibre o quanto eles estão dispostos a serem pagos para ajudar a proteger a rede. Quando as retiradas são habilitadas, se a taxa for muito baixa, os validadores sairão com uma taxa limitada pelo protocolo. Gradualmente, isto criará a APR para todos os que permanecem, atraindo novos ou antigos participantes novamente.
+Isso evita um êxodo em massa dos fundos participados. Além disso, impede que um possível invasor com acesso a uma grande parte do total de ETH participado cometa uma ofensa passível de corte e saia/saque todos os saldos do validador infrator na mesma época, antes que o protocolo possa aplicar a penalidade de corte.
+
+A APR também é intencionalmente dinâmica, o que permite que um mercado de participantes equilibre o quanto estão dispostos a receber para ajudar a proteger a rede. Se a taxa for muito baixa, os validadores sairão a uma taxa limitada pelo protocolo. Gradualmente, isso aumentará a APR para todos os que permanecerem, atraindo participantes novos ou antigos novamente.
 </ExpandableCard>
 
 ## O que aconteceu com o "Eth2"? {#eth2}
@@ -203,9 +207,9 @@ Em vez disso, os blocos são propostos validando nós que colocaram o ETH em tro
 
 ### A Fusão e a atualização do Shanghai {#merge-and-shanghai}
 
-Para simplificar e maximizar o foco em uma transição bem-sucedida para a prova de participação, a atualização da Fusão não incluiu certos recursos previstos, como a possibilidade de retirar o ETH colocado. A atualização do Shanghai está planejada para acompanhar A Fusão, o que permitirá aos participantes fazer um saque.
+Para simplificar e maximizar o foco em uma transição bem-sucedida para a prova de participação, a atualização da Fusão não incluiu certos recursos previstos, como a possibilidade de retirar o ETH colocado. Essa funcionalidade foi habilitada separadamente com a melhoria Shanghai/Capella.
 
-Mantenha-se atualizado com o [Problema do planejamento de melhoria do Shangai no GitHub](https://github.com/ethereum/pm/issues/450), ou o [Blog de Pesquisa e Desenvolvimento EF](https://blog.ethereum.org/category/research-and-development/). Se tiver curiosidade, assista ao vídeo [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), apresentado por Vitalik no evento ETHGlobal de abril de 2021.
+Se tiver curiosidade, assista ao vídeo [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101) (O que ocorre após a Fusão), apresentado por Vitalik no evento ETHGlobal de abril de 2021.
 
 ### A Fusão e a fragmentação {#merge-and-data-sharding}
 

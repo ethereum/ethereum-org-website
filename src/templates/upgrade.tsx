@@ -32,7 +32,6 @@ import UpgradeStatus from "../components/UpgradeStatus"
 import { BaseLink } from "../components/Link"
 import { mdxTableComponents } from "../components/Table"
 import BeaconChainActions from "../components/BeaconChainActions"
-import ShardChainsList from "../components/ShardChainsList"
 import MergeArticleList from "../components/MergeArticleList"
 import Logo from "../components/Logo"
 import MeetupList from "../components/MeetupList"
@@ -201,7 +200,6 @@ const components = {
   Emoji,
   UpgradeStatus,
   BeaconChainActions,
-  ShardChainsList,
   MergeArticleList,
   YouTube,
   ExpandableCard,
@@ -379,13 +377,13 @@ const UpgradePage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBreakpoint}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBreakpoint}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>

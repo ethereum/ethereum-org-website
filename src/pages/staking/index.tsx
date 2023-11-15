@@ -299,10 +299,12 @@ const StakingPage = ({
         <StakingStatsBox />
       </HeroStatsWrapper>
       <Page>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <LeftNavBar dropdownLinks={dropdownLinks} tocItems={tocArray} />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          dropdownLinks={dropdownLinks}
+          tocItems={tocArray}
+          hideBelow={lgBp}
+        />
         <ContentContainer id="content">
           <Flex direction="column" gap={16} mt={{ base: 16, lg: 0 }}>
             <Box>

@@ -8,12 +8,12 @@ lang: tr
 
 Kullanıcıları güvende ve kendinden emin tutarken mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
-Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özgürdür. Kaçırdığımız bir şey varsa, **[lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md)!**
+Herkes ethereum.org'da bir stake ürünü veya hizmeti eklemeyi önermekte özgürdür. Gözden kaçırdığımız bir şey varsa **[lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)!**
 
 Şu anda stake ürün ve hizmetlerini aşağıdaki sayfalarda listeliyoruz:
 
 - [Tekli staking](/staking/solo/)
-- [Bir hizmet olarak stake etme](/staking/saas/)
+- [Hizmet olarak stake etme](/staking/saas/)
 - [Stake havuzları](/staking/pools/)
 
 İşaret Zincirindeki hisse ispatı, 1 Aralık 2020'den beri yayında. Stake etme hâlâ nispeten yeni olsa da, ethereum.org'da değerlendirilmek üzere adil ve şeffaf bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişip gelişecek ve bu kriterler nihayetinde ethereum.org web sitesi ekibinin takdirindedir.
@@ -29,7 +29,7 @@ Bir ürünün ethereum.org'da listeleme kararı herhangi bir tek faktöre bağl�
 - Bir hizmet olarak stake etme (SaaS)
 - Stake havuzu
 
-Şu anda yalnızca bu kategorilerdeki ürün veya hizmetleri listeliyoruz.
+Şu anda, yalnızca bu kategorilerdeki ürün veya hizmetleri listeliyoruz.
 
 ### Dahil edilme kriterleri {#criteria-for-inclusion}
 
@@ -42,7 +42,7 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 
 **Proje aktif olarak sürdürülüyor mu?**
 
-- Projeyi geliştiren aktif bir ekip var mı? Kimler dahil olur?
+- Projeyi geliştiren aktif bir ekip var mı? Projeye kimler dahil?
 - Yalnızca aktif olarak bakımı yapılan ürünler dikkate alınacaktır.
 
 **Ürün veya hizmet güvenilen/insan aracılardan arındırılmış mı?**
@@ -50,7 +50,12 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 - Kullanıcıların yolculuğundaki hangi adımlar, fonlarının anahtarlarını elinde tutmak veya ödülleri uygun şekilde dağıtmak için insanlara güvenmeyi gerektiriyor?
 - Bu, ürün veya hizmetlerin "güvensizlik" puanını belirlemek için kullanılır.
 
-**Hangi platformları destekliyor?**
+**Proje, doğru ve güvenilir bilgi sağlıyor mu?**
+
+- Ürünün web sitesinin, özellikle Ethereum protokolü ya da bağlantılı diğer teknolojiler ile ilgili güncel, doğru ve yanlış yönlendirici olmayan bilgiler içermesi çok önemlidir.
+- Yanlış bilgi, tarihi geçmiş detaylar, Ethereum ya da alakalı diğer konular ile ilgili yanlış yönlendirme potansiyeli olan ifadeler içeren başvurular listelenmeyecek ya da listelendiyse kaldırılacaktır.
+
+**Hangi platformlar destekleniyor?**
 
 - örn. Linux, macOS, Windows, iOS, Android
 
@@ -58,89 +63,89 @@ Stake etme ürünleri veya hizmet sunumları aşağıdaki kriterlere göre değe
 
 İlgili herhangi bir özel yazılım veya akıllı sözleşme için:
 
-**Her şey açık kaynak mı?**
+**Her şey açık kaynaklı mı?**
 
-- Açık kaynak projeler, herkese açık bir kaynak kod deposuna sahip olmalıdır
+- Açık kaynaklı projeler, herkese açık bir kaynak kodu deposuna sahip olmalıdır
 - Bu, ürünlerin "açık kaynak" puanını belirlemek için kullanılır.
 
-**Ürün, _beta_ geliştirme aşamasından çıktı mı?**
+**Ürün, _beta_ geliştirme aşamasından çıkmış mı?**
 
 - Ürün, geliştirme döngüsünün hangi aşamasında?
-- Beta aşamasındaki ürünler ethereum.org'a dahil edilmek için değerlendirilmez
+- Beta aşamasındaki ürünler, ethereum.org'a dahil edilmek üzere değerlendirmeye alınmaz
 
-**Yazılım harici bir güvenlik denetiminden geçti mi?**
+**Yazılım, harici bir güvenlik denetiminden geçti mi?**
 
-- Geçmediyse, bir dış denetim gerçekleştirme planları var mı?
-- Bu, ürünlerin "denetlenmişlik" puanını belirlemek için kullanılır.
+- Geçmediyse, harici denetim gerçekleştirme planı var mı?
+- Bu, ürünlerin "denetim" puanını belirlemek için kullanılır.
 
-**Projenin bir hata ödül programı var mı?**
+**Projenin bir hata ödülü programı var mı?**
 
-- Yoksa, bir güvenlik hatası ödülü oluşturma planları var mı?
+- Yoksa, bir güvenlik hatası ödülü oluşturma planı var mı?
 - Bu, ürünlerin "hata ödülü" puanını belirlemek için kullanılır.
 
 #### Düğüm veya istemci araçları {#node-or-client-tooling}
 
 Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ürünleri için:
 
-**Hangi mutabakat katmanı istemcileri (örn. Lighthouse, Teku, Nimbus, Prysm) destekleniyor?**
+**Hangi fikir birliği katmanı istemcileri (yani Lighthouse, Teku, Nimbus, Prysm) destekleniyor?**
 
 - Hangi istemciler destekleniyor? Kullanıcı seçebilir mi?
 - Bu, ürünlerin "çoklu istemci" puanını belirlemek için kullanılır.
 
 #### Bir hizmet olarak stake etme {#staking-as-a-service}
 
-[Bir hizmet olarak stake etme listeleri](/staking/saas/) için (yani, delege edilmiş düğüm işlemi):
+[Bir hizmet olarak hisseleme listeleri](/staking/saas/) için (yani, yetkilendirilmiş düğüm işlemi):
 
 **Hizmeti kullanmakla ilişkili ücretler nelerdir?**
 
-- Ücret yapısı nedir, ör. hizmet için aylık bir ücret var mı?
-- Herhangi bir ek stake gereksinimi var mı?
+- Ücret yapısı nedir, örn. hizmet için aylık bir ücret var mı?
+- Herhangi bir ek hisseleme gereksinimi var mı?
 
-**Kullanıcıların bir hesap almak için kaydolması gerekiyor mu?**
+**Kullanıcıların hesap açmak için kaydolması gerekiyor mu?**
 
 - Birisi hizmeti izinsiz veya KYC olmadan kullanabilir mi?
 - Bu, ürünlerin "izinsizlik" puanını belirlemek için kullanılır.
 
-**İmza anahtarları ve para çekme anahtarları kimde?**
+**İmza anahtarları ve çekme anahtarları kimin elinde?**
 
-- Kullanıcı hangi anahtarlara erişimi kendinde tutar? Hizmet hangi anahtarlara erişim sağlar?
+- Kullanıcı, hangi anahtarlara erişimi elinde tutuyor? Hizmet, hangi anahtarlara erişim sağlıyor?
 - Bu, ürünlerin "güvensizlik" puanını belirlemek için kullanılır.
 
 **Çalıştırılan düğümlerin istemci çeşitliliği nedir?**
 
-- Doğrulayıcı anahtarların yüzde kaçı bir çoğunluk mutabakat katmanı (CL) istemcisi çalıştırılıyor?
-- Son düzenleme itibariyle Prysm düğüm operatörlerinin çoğunluğu tarafından çalıştırılan mutabakat katmanı istemcisi hâline gelmiştir ve bu durum, ağ için bir tehlike oluşturmaktadır. Herhangi bir mutabakat katmanı istemcisi şu anda ağın %33'ünden fazlası tarafından kullanılıyorsa, kullanımıyla ilgili verileri talep ederiz.
-- Bu, ürünlerin "çeşitli istemciler" puanını belirlemek için kullanılır.
+- Doğrulayıcı anahtarların yüzde kaçı bir çoğunluk fikir birliği katmanı (CL) istemcisi tarafından çalıştırılıyor?
+- Son düzenleme itibariyle Prysm, düğüm operatörlerinin çoğunluğu tarafından çalıştırılan fikir birliği katmanı istemcisi hâline gelmiştir ve bu durum, ağ için bir tehlike oluşturmaktadır. Herhangi bir CL istemcisi şu anda ağın %33'ünden fazlası tarafından kullanılıyorsa, kullanımıyla ilgili verileri talep ederiz.
+- Bu, ürünlerin "istemci çeşitliliği" puanını belirlemek için kullanılır.
 
 #### Stake havuzu {#staking-pool}
 
-[Havuzlu stake etme hizmetleri](/staking/pools/) için:
+[Havuzlu hisseleme hizmetleri](/staking/pools/) için:
 
-**Stake için gereken minimum ETH nedir?**
+**Hisseleme için gereken minimum ETH nedir?**
 
 - örn. 0,01 ETH
 
-**İlgili ücretler veya stake gereksinimleri nelerdir?**
+**İlgili ücretler veya hisseleme gereksinimleri nelerdir?**
 
 - Ödüllerin yüzde kaçı ücret olarak kaldırılıyor?
-- Herhangi bir ek stake gereksinimi var mı?
+- Herhangi bir ek hisseleme gereksinimi var mı?
 
 **Bir likidite token'ı var mı?**
 
-- İlgili token'lar nelerdir? Nasıl çalışırlar? Sözleşme adresleri nelerdir?
+- İlgili jetonlar nelerdir? Nasıl çalışırlar? Sözleşme adresleri nelerdir?
 - Bu, ürünlerin "likidite token'ı" puanını belirlemek için kullanılır.
 
 **Kullanıcılar düğüm operatörü olarak katılabilir mi?**
 
-- Havuzlanmış fonları kullanarak doğrulayıcı istemcileri çalıştırmak için ne gereklidir?
+- Havuzlanmış fonları kullanarak doğrulayıcı istemcilerini çalıştırmak için ne gereklidir?
 - Bunun için bir kişiden, şirketten veya DAO'dan izin alınması gerekiyor mu?
-- Bu, ürünlerin "izinsiz düğümler" puanını belirlemek için kullanılır.
+- Bu, ürünlerin "izin gerektirmeyen düğümler" puanını belirlemek için kullanılır.
 
 **Havuz düğüm operatörlerinin istemci çeşitliliği nedir?**
 
-- Düğüm operatörlerinin yüzde kaçı bir çoğunluk mutabakat katmanı (CL) istemcisi çalıştırıyor?
-- Son düzenleme itibariyle Prysm düğüm operatörlerinin çoğunluğu tarafından çalıştırılan mutabakat katmanı istemcisi hâline gelmiştir ve bu durum, ağ için bir tehlike oluşturmaktadır. Herhangi bir mutabakat katmanı istemcisi şu anda ağın %33'ünden fazlası tarafından kullanılıyorsa, kullanımıyla ilgili verileri talep ederiz.
-- Bu, ürünlerin "çeşitli istemciler" puanını belirlemek için kullanılır.
+- Düğüm operatörlerinin yüzde kaçı bir çoğunluk fikir birliği katmanı (CL) istemcisi çalıştırıyor?
+- Son düzenleme itibariyle Prysm, düğüm operatörlerinin çoğunluğu tarafından çalıştırılan fikir birliği katmanı istemcisi hâline gelmiştir ve bu durum, ağ için bir tehlike oluşturmaktadır. Herhangi bir CL istemcisi şu anda ağın %33'ünden fazlası tarafından kullanılıyorsa, kullanımıyla ilgili verileri talep ederiz.
+- Bu, ürünlerin "istemci çeşitliliği" puanını belirlemek için kullanılır.
 
 ### Diğer kriterler: olursa iyi olan şeyler {#other-criteria}
 
@@ -148,24 +153,24 @@ Düğüm veya istemci kurulumu, yönetimi veya geçişi ile ilgili yazılım ür
 
 - örn. Tarayıcı uygulaması, masaüstü uygulaması, mobil uygulama, CLI
 
-**Düğüm araçları konusunda, yazılım istemciler arasında geçiş yapmanın kolay bir yolunu sağlıyor mu?**
+**Düğüm araçları konusunda yazılım, istemciler arasında geçiş yapmanın kolay bir yolunu sağlıyor mu?**
 
-- Kullanıcı, aracı kullanarak istemcileri kolayca ve güvenli bir şekilde değiştirebilir mi?
+- Kullanıcı, aracı kullanarak istemcileri kolayca ve güvenli bir şekilde değiştirebiliyor mu?
 
-**Bir hizmet olarak stake etme için, hizmet tarafından şu anda kaç doğrulayıcı çalıştırılıyor?**
+**SaaS için hizmet tarafından şu anda kaç doğrulayıcı çalıştırılıyor?**
 
 - Bu, bize hizmetinizin şu ana kadarki erişimi hakkında bir fikir verir.
 
 ## Sonuçları nasıl görüntülüyoruz {#product-ordering}
 
-Yukarıdaki [dahil edilme kriterleri](#criteria-for-inclusion), her ürün veya hizmet için kümülatif puan hesaplamak için kullanılır. Bu, belirli objektif kriterleri karşılayan ürünleri sıralamak ve sergilemek için bir araç olarak kullanılır. Kanıt için ne kadar çok kriter sağlanırsa, bir ürün o kadar yüksek sıralanır ve beraberlikler gerektiğinde rastgele hâle getirilir.
+Yukarıdaki [dahil edilme kriterleri](#criteria-for-inclusion), her ürün veya hizmet için kümülatif puan hesaplamak için kullanılır. Bu, belirli objektif kriterleri karşılayan ürünleri sıralamak ve sergilemek için bir araç olarak kullanılır. Kanıt için ne kadar çok kriter sağlanırsa, bir ürün o kadar yüksek sıralanır ve beraberlikler yükte rastgele hâle getirilir.
 
 Bu kriterlerin kod mantığı ve ağırlıkları şu anda depomuzdaki [bu JavaScript bileşeninde](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) bulunmaktadır.
 
 ## Ürününüzü veya hizmetinizi ekleyin {#add-product}
 
-Ethereum.org'a stake etme ürünü veya hizmeti eklemek istiyorsanız GitHub'da bir konu oluşturun.
+Ethereum.org'a hisseleme ürünü veya hizmeti eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_staking_product.md">
-  Bir konu oluşturun
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
+  Bir konu oluştur
 </ButtonLink>

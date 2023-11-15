@@ -1,12 +1,11 @@
 ---
 title: ERC-20 token'larının bir solidity akıllı sözleşmesinden transferleri ve doğrulanması
-description: Solidity dilini kullanarak bir token'la etkileşmek için bir akıllı sözleşme nasıl kullanılır
+description: Solidity dilini kullanarak bir token'la etkileşim kurmak için akıllı bir sözleşme nasıl kullanılır
 author: "jdourlens"
 tags:
   - "akıllı sözleşmeler"
   - "token'lar"
-  - "solidity"
-  - "başlarken"
+  - "katılık"
   - "erc-20"
 skill: intermediate
 lang: tr
@@ -18,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Önceki öğreticide Ethereum blok zincirindeki [bir ERC-20 token'ının Solidity içindeki anatomisi](/developers/tutorials/understand-the-erc-20-token-smart-contract/) üzerine çalıştık. Bu makalede, bir akıllı sözleşmeyi bir token'la etkileşime geçmek için Solidity diliyle nasıl kullanabileceğimizi göreceğiz.
 
-Bu akıllı sözleşme için, bir kullanıcının yeni dağıtılmış [ERC-20 token](/developers/docs/standards/tokens/erc-20/)'ınımızın, Ethereum ile takas edebileceği sahte bir merkeziyetsiz borsa oluşturacağız.
+Bu akıllı sözleşme için bir kullanıcının yeni dağıtılmış [ERC-20 jetonumuz](/developers/docs/standards/tokens/erc-20/) karşılığında ether takas edebileceği sahte bir merkeziyetsiz borsa oluşturacağız.
 
 Bu öğreticide, önceki öğreticide yazdığımız kodu temel olarak kullanacağız. DEX'imiz, kendi inşasında sözleşmenin bir örneğini oluşturacak ve bu işlemleri gerçekleştirecektir:
 
@@ -197,7 +196,7 @@ function sell(uint256 amount) public {
 }
 ```
 
-Her şey çalışıyorsa işlemde 2 olay görmelisiniz (`Transfer` ve `Sold`) ve token bakiyeniz ile Ethereum bakiyeniz güncellenmiş olmalı.
+Her şey çalışıyorsa işlemde 2 olay görmelisiniz (`Transfer` ve `Sold`) ve jeton bakiyeniz ile ether bakiyeniz güncellenmiş olmalıdır.
 
 ![İşlemdeki iki olay: Transfer ve Sold](./transfer-and-sold-events.png)
 
