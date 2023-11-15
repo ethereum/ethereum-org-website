@@ -4,7 +4,7 @@ description: Przegląd tego, jak rozpocząć korzystanie ze stakowania ETH w pul
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: Nosorożec Leslie pływający w basenie.
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyżs
 
 <StakingProductsCardGrid category="pools" />
 
-Należy pamiętać, że ważne jest, aby wybrać usługę, która poważnie traktuje [różnorodność klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ zwiększa to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style="text-transform: uppercase;">„różnorodność klientów wykonawczych”</em> i <em style="text-transform: uppercase;">„różnorodność klientów konsensusu.”</em>
+Należy pamiętać, że ważne jest, aby wybrać usługę, która poważnie traktuje [różnorodność klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ zwiększa to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
 
 Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy są one odpowiednie i przesłać je do recenzji.
 

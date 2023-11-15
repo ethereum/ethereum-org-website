@@ -109,7 +109,7 @@ Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwen
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Bitte beachten Sie, wie wichtig es ist, einen [Minderheits-Client](/developers/docs/nodes-and-clients/client-diversity/) zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheit-Client einrichten können, werden als <em style="text-transform: uppercase;">„Multi-Client"</em> bezeichnet.
+Bitte beachten Sie, wie wichtig es ist, einen [Minderheits-Client](/developers/docs/nodes-and-clients/client-diversity/) zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheit-Client einrichten können, werden als <em style={{ textTransform: "uppercase" }}>„Multi-Client"</em> bezeichnet.
 
 #### Schlüssel-Generatoren
 

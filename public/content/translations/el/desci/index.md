@@ -5,7 +5,7 @@ lang: el
 template: use-cases
 emoji: ":microscope:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Μια παγκόσμια, ανοικτή εναλλακτική λύση στο τρέχον επιστημονικό σύστημα.
 summaryPoint2: Τεχνολογία που επιτρέπει στους επιστήμονες να αντλήσουν χρηματοδοτήσεις, να εκτελέσουν πειράματα, να μοιραστούν δεδομένα, ιδέες και πολλά άλλα.

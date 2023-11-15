@@ -4,7 +4,7 @@ description: Przegląd tego, jak rozpocząć korzystanie ze stakowania ETH w pul
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Nosorożec Leslie unoszący się w chmurach.
 sidebarDepth: 2
 summaryPoints:
@@ -47,7 +47,7 @@ Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższyc
 
 <StakingProductsCardGrid category="saas" />
 
-Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style="text-transform: uppercase;">„różnorodność klientów wykonawczych”</em> i <em style="text-transform: uppercase;">„różnorodność klientów konsensusu.”</em>
+Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
 
 #### Generatory kluczy
 

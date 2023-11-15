@@ -4,7 +4,7 @@ description: نظرة عامة على كيفية بدء مع تجميع ETH
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: يطوف ليزلي فرس النهر في السحاب.
 sidebarDepth: 2
 summaryPoints:
@@ -47,7 +47,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="saas" />
 
-يُرجى مراعاة أهمية اختيار الخدمة التي تدعم [تنوع العملاء](/developers/docs/nodes-and-clients/client-diversity/)، لأنها تعمل على تحسين أمان الشبكة، وتحدّ من المخاطر التي تتعرض لها. تتم الإشارة إلى الخدمات التي تمتلك دليلًا على وضع حدود على أغلبية استخدامات العملاء بـ <em style="text-transform: uppercase;">"تنويع عملاء التنفيذ"</em> و<em style="text-transform: uppercase;">"تنويع عملاء الإجماع".</em>
+يُرجى مراعاة أهمية اختيار الخدمة التي تدعم [تنوع العملاء](/developers/docs/nodes-and-clients/client-diversity/)، لأنها تعمل على تحسين أمان الشبكة، وتحدّ من المخاطر التي تتعرض لها. تتم الإشارة إلى الخدمات التي تمتلك دليلًا على وضع حدود على أغلبية استخدامات العملاء بـ <em style={{ textTransform: "uppercase" }}>"تنويع عملاء التنفيذ"</em> و<em style={{ textTransform: "uppercase" }}>"تنويع عملاء الإجماع".</em>
 
 #### مكونات المفاتيح
 

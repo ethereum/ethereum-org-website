@@ -5,7 +5,7 @@ lang: ar
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: اقتصاد بديل قائم على أُسُس متجددة
 summaryPoint2: محاولة لتسخير الإيثريوم في سبيل حل الأزمات التي تتطلب تنسيق عالمي مثل التغيرات المناخية
@@ -20,7 +20,7 @@ summaryPoint3: أداة تسهم في توسع الأصول الإيكولوجي
 
 يعتبر مفهوم الاقتصادات المتجددة، المبتكر من قِبل جون فولرتون من [Capital Institute](https://capitalinstitute.org)، أحد أُسُس التمويل المتجدد (ري فاي). اقترح فولرتون ثمانية مبادئ مترابطة تكمن وراء الصحة البنيوية:
 
-![ثمانية مبادئ مترابطة](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![ثمانية مبادئ مترابطة](refi-regenerative-economy-diagram.png)
 
 تدرك مشاريع التمويل المتجدد (ري فاي) هذه المبادئ بواسطة [العقود الذكية](/developers/docs/smart-contracts/) و [تطبيقات التمويل اللامركزي](/defi/) (دي فاي)، لتحفيز السلوكيات المتجددة، كاستعادة النظم البيئية المتدهورة، وتسير التعاون واسع النطاق لمجابهة مشاكل عالمية، مثل التغير المناخي وفقدان التنوع الحيوي.
 

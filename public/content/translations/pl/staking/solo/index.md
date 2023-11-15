@@ -4,7 +4,7 @@ description: Przegląd tego, jak rozpocząć samodzielne stakowanie ETH
 lang: pl
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Nosorożec Leslie na własnym chipie komputerowym.
 sidebarDepth: 2
 summaryPoints:
@@ -109,7 +109,7 @@ Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyżs
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego są oznaczone jako <em style="text-transform: uppercase;">„multi-klient”.</em>
+Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
 
 #### Generatory kluczy
 

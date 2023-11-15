@@ -21,12 +21,6 @@ Questa sezione è dedicata ai software per desktop, per riga di comando o per se
 
 ### OpenEthereum {#open-ethereum}
 
-<p align="center">
-  <img width="300" height="180" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://miro.medium.com/max/1400/1*npKIT4jX5WwlRZmcBPusig.png" />
-</p>
-
 Obsoleto dal luglio 2021
 
 **Riepilogo**
@@ -46,12 +40,6 @@ OpenEthereum è stata costruita da miner, fornitori di servizi e borse che neces
 [Confronta tutte le opzioni del client di esecuzione di Ethereum](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Grid {#grid}
-
-<p align="center">
-  <img width="300" height="150" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://user-images.githubusercontent.com/47108/53807420-80433380-3f1d-11e9-80cd-967aabb26506.png" />
-</p>
 
 Obsoldeto dal 10 dicembre 2020
 
@@ -73,12 +61,6 @@ Grid potrebbe essere visto come il successore di Mist, anche essa un'applicazion
 
 ### Ethereum Studio {#ethereum-studio}
 
-<p align="center">
-  <img width="500" height="350" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://user-images.githubusercontent.com/7814134/78335917-d0f8e600-758e-11ea-91e1-2433eaaef6f4.png" />
-</p>
-
 Obsoleto dal 7 dicembre 2020
 
 **Riepilogo**
@@ -98,12 +80,6 @@ Ethereum Studio è stato sviluppato per fornire agli utenti un IDE con una block
 [Remix](https://remix.ethereum.org/) è un IDE web alternativo per lo sviluppo in Solidity. Inoltre il [Portale per sviluppatori](/developers/) ha strumenti per lo sviluppo su web e in locale, documentazione e molto altro.
 
 ### Portafoglio Meteor Dapp {#meteor-dapp-wallet}
-
-<p align="center">
-  <img width="600" height="450" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://miro.medium.com/max/700/0*L222OAjPhe_KL1Iy." />
-</p>
 
 Obsoleto dal 27 marzo 2019
 
@@ -130,12 +106,6 @@ Vedi Mist qui sotto.
 Visita la pagina dei [Portafogli di Ethereum](/wallets/) su ethereum.org.
 
 ### Mist {#mist}
-
-<p align="center">
-  <img width="120" height="200" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://mist.ethereum.org/images/logo@2x.png" />
-</p>
 
 Obsoleto dal 27 marzo 2019
 
@@ -267,12 +237,6 @@ ruby-ethereum era un client Ethereum scritto in Ruby. È stato abbandonato intor
 
 ### Parity {#parity}
 
-<p align="center">
-  <img width="240" height="180" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://davidgerard.co.uk/blockchain/wp-content/uploads/2017/11/parity-logo.png" />
-</p>
-
 Obsoleto dal 2 giugno 2020
 
 **Riepilogo**
@@ -296,12 +260,6 @@ Essendo uno dei due principali client validi nei primi anni di Ethereum (l'altro
 La risorsa ["Avvia il tuo nodo di Ethereum"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) su ethereum.org include una sezione per scaricare, installare ed eseguire un client Ethereum.
 
 ### Trinity {#trinity}
-
-<p align="center">
-  <img width="230" height="150" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://trinity.ethereum.org/images/trinity-logo-icon.svg" />
-</p>
 
 Obsoleto dal 1° luglio 2021
 
@@ -328,12 +286,6 @@ Il progetto [EthereumJS](https://github.com/ethereumjs) ha uno scopo di ricerca 
 Questa sezione riguarda i servizi distribuiti sulla Rete Principale di Ethereum e su altre reti baste sull'EVM. Si tenga presente che le dapp e i servizi qui elencati potrebbero includere applicazioni DeFi che sono state hackerate o che potrebbero soffrire di vulnerabilità di sicurezza dovute alla mancanza di manutenzione, di cambiamenti nel protocollo, ecc.
 
 ### Protocollo Cover {#cover-protocol}
-
-<p align="center">
-  <img width="400" height="267" 
-    style="background-color:#fff; padding:0px 0px 0px 0px;"
-    src="https://miro.medium.com/max/1838/0*kA6PGbaYHLJOI66O" />
-</p>
 
 Chiuso nell'autunno del 2021
 
@@ -380,12 +332,6 @@ Sebbene The DAO sia fallito, il concetto è sopravvissuto. L'innovativo modello 
 [Gitcoin Grants](https://gitcoin.co/grants/)
 
 ### SparkPool {#sparkpool}
-
-<p align="center">
-  <img width="562" height="124" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://cryptodiffer.com/src/images/person/SparkPool-cryptodiffer.png" />
-</p>
 
 Chiuso nell'autunno del 2021
 

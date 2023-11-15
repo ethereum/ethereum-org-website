@@ -3,7 +3,7 @@ title: Hoja de ruta de Ethereum
 description: El camino hacia una mayor escalabilidad, seguridad y sostenibilidad para Ethereum.
 lang: es
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "Hoja de ruta de Ethereum"
 summaryPoints:
 buttons:
@@ -66,7 +66,7 @@ La hoja de ruta es principalmente el resultado de años de trabajo de investigad
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">¿Qué era ETH2?</h4>
+  <h4 style={{ marginTop: 0 }}>¿Qué era ETH2?</h4>
 
   <p>El término Eth2 se usaba comúnmente para describir el futuro de Ethereum antes del cambio a la prueba de participación, pero se <strong>eliminó gradualmente a favor de una terminología más precisa.</strong>Originalmente se usó para diferenciar la red Ethereum antes del cambio a la prueba de participación y la red después, o a veces para referirse a los diferentes clientes de Ethereum (los clientes de ejecución a veces se denominaban clientes ETH1 y los clientes de consenso a veces se denominaban clientes ETH2).</p>
 

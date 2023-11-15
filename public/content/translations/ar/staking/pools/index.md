@@ -4,7 +4,7 @@ description: نظرة عامة على كيفية بدء مراهنة عملة ET
 lang: ar
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: /staking/leslie-pool.png
 alt: يسبح ليزلي فرس النهر في حمام السباحة.
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="pools" />
 
-يُرجى مراعاة أهمية اختيار الخدمة التي تأخذ [تنوع العملاء](/developers/docs/nodes-and-clients/client-diversity/) على محمل الجد، لأنها تعمل على تحسين أمان الشبكة، وتحدّ من المخاطر التي تتعرض لها. تتم الإشارة إلى الخدمات التي تمتلك دليلًا على وضع حدود على أغلبية استخدامات العملاء بـ <em style="text-transform: uppercase;">"تنويع عملاء التنفيذ"</em> و<em style="text-transform: uppercase;">"تنويع عملاء الإجماع".</em>
+يُرجى مراعاة أهمية اختيار الخدمة التي تأخذ [تنوع العملاء](/developers/docs/nodes-and-clients/client-diversity/) على محمل الجد، لأنها تعمل على تحسين أمان الشبكة، وتحدّ من المخاطر التي تتعرض لها. تتم الإشارة إلى الخدمات التي تمتلك دليلًا على وضع حدود على أغلبية استخدامات العملاء بـ <em style={{ textTransform: "uppercase" }}>"تنويع عملاء التنفيذ"</em> و<em style={{ textTransform: "uppercase" }}>"تنويع عملاء الإجماع".</em>
 
 هل لديك اقتراح غاب عنا لأداة مراهنة؟ راجع [سياسة قائمة المنتجات](/contributing/adding-staking-products/) الخاصة بنا لمعرفة ما إذا كانت مناسبة، ثم أرسلها للمراجعة.
 

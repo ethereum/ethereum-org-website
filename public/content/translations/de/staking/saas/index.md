@@ -47,7 +47,7 @@ Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obige
 
 <StakingProductsCardGrid category="saas" />
 
-Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style="text-transform: uppercase;">"Vielfalt der Ausführungskunden"</em> and <em style="text-transform: uppercase;">"Vielfalt der Konsenskunden"</em>.
+Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungskunden"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsenskunden"</em>.
 
 #### Schlüssel-Generatoren
 

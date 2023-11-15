@@ -2,7 +2,7 @@
 title: Escalar en Ethereum
 description: Las acumulaciones agrupan transacciones en lotes y lo hacen fuera de la cadena, reduciendo costes para el usuario. Sin embargo, la forma en que las acumulaciones gestionan los datos es muy cara en estos momentos, limitando con ello la posibilidad de tener transacciones baratas. Proto-anksharing se encarga de solucionarlo.
 lang: es
-image: ../../../../../assets/roadmap/roadmap-transactions.png
+image: /roadmap/roadmap-transactions.png
 alt: "Hoja de ruta de Ethereum"
 template: roadmap
 ---
@@ -10,11 +10,11 @@ template: roadmap
 Ethereum escala utilizando las [capas 2](/layer-2/#rollups)(también conocidas como acumulaciones o «rollups»), que agrupan transacciones y envían el resultado a Ethereum. Aunque las acumulaciones son hasta ocho veces más baratas que la red principal de Ethereum, es posible optimizarlas aún más para reducir costes para los usuarios finales. Las acumulaciones dependen de algunos componentes centralizados que los desarrolladores podrán eliminar en la medida en que dichas acumulaciones maduren.
 
 <InfoBanner mb={8} title="Costos de transacción">
-  <ul style="margin-bottom: 0">
+  <ul style={{ marginBottom: 0 }}>
     <li>Actualmente las acumulaciones son <strong>~3-8x</strong> más baratas que la capa 1 de Ethereum</li>
     <li>Las acumulaciones ZK pronto reducirán un <strong>~40-100</strong> las tarifas.</li>
     <li>Los próximos cambios en Ethereum traerán un incremento de <strong>~100-1.000</strong> en escalabilidad.</li>
-    <li style="margin-bottom: 0">Los usuarios deberían beneficiarse con transacciones <strong>que cuesten menos de 0,001 USD</strong>.</li>
+    <li style={{ marginBottom: 0 }}>Los usuarios deberían beneficiarse con transacciones <strong>que cuesten menos de 0,001 USD</strong>.</li>
   </ul>
 </InfoBanner>
 
