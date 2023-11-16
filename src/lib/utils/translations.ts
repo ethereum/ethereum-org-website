@@ -63,6 +63,10 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
     requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
   }
 
+  if (path.startsWith("/developers/learning-tools")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-index", "page-developers-learning-tools"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (

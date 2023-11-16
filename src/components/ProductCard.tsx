@@ -1,6 +1,4 @@
 import React, { ReactNode } from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { gql,useQuery } from "@apollo/client"
 import {
   Badge,
   Box,
@@ -8,35 +6,13 @@ import {
   Flex,
   Heading,
   HStack,
-  Img,
   TextProps,
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "./Buttons"
-import GatsbyImage from "./GatsbyImage"
-import GitStars from "./GitStars"
+import { Image } from "@/components/Image"
 import Text from "./OldText"
-
-const REPO_DATA = gql`
-  query RepoData(
-    $repoOwner: String!
-    $repoName: String!
-    $repoLangCount: Int!
-  ) {
-    repository(owner: $repoOwner, name: $repoName) {
-      stargazerCount
-      languages(
-        orderBy: { field: SIZE, direction: DESC }
-        first: $repoLangCount
-      ) {
-        nodes {
-          name
-        }
-      }
-      url
-    }
-  }
-`
+import { StaticImageData } from "next/image"
 
 const SubjectBadge: React.FC<{
   subject: string
@@ -79,15 +55,12 @@ export interface IProps {
   children?: React.ReactNode
   url: string
   background: string
-  image: IGatsbyImageData | string
+  image: StaticImageData
   name: string
   description?: ReactNode
   note?: string
   alt?: string
-  githubUrl?: string
-  repoLangCount?: number
   subjects?: Array<string>
-  hideStars?: boolean
 }
 
 const ProductCard: React.FC<IProps> = ({
@@ -99,28 +72,8 @@ const ProductCard: React.FC<IProps> = ({
   note = "",
   alt = "",
   children,
-  githubUrl = "",
-  repoLangCount = 1,
   subjects,
-  hideStars = false,
 }) => {
-  const split = githubUrl.split("/")
-  const repoOwner = split[split.length - 2]
-  const repoName = split[split.length - 1]
-
-  // TODO add loading state
-  const { error, data } = useQuery(REPO_DATA, {
-    variables: {
-      repoOwner,
-      repoName,
-      repoLangCount,
-    },
-    skip: !githubUrl,
-  })
-
-  const hasRepoData = data && data.repository && !error
-
-  const isImgSrc = typeof image === "string"
 
   const DESCRIPTION_STYLES: TextProps = {
     opacity: 0.8,
@@ -150,29 +103,21 @@ const ProductCard: React.FC<IProps> = ({
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
         minH="200px"
       >
-        {isImgSrc ? (
-          <Img src={image} alt={alt} />
-        ) : (
-          <GatsbyImage
-            image={image}
-            alt={alt}
-            objectFit="contain"
-            width="100%"
-            alignSelf="center"
-            maxW={{ base: "311px", sm: "372px" }}
-            maxH="257px"
-          />
-        )}
+        <Image
+          src={image}
+          alt={alt}
+          height="100"
+          alignSelf="center"
+          maxW={{ base: "311px", sm: "372px" }}
+          maxH="257px"
+        />
       </Center>
       <Flex flexDirection="column" p={6} textAlign="left" height="100%">
-        {hasRepoData && (
-          <GitStars gitHubRepo={data.repository} hideStars={hideStars} />
-        )}
         <Heading
           as="h3"
           fontSize="2xl"
           fontWeight={600}
-          mt={!hasRepoData ? 8 : 12}
+          mt={8}
           mb={3}
         >
           {name}
@@ -188,14 +133,6 @@ const ProductCard: React.FC<IProps> = ({
               {subject}
             </SubjectBadge>
           ))}
-        {hasRepoData &&
-          data.repository.languages.nodes.map(
-            ({ name }: { name: string }, idx: number) => (
-              <SubjectBadge key={idx} subject={name}>
-                {name.toUpperCase()}
-              </SubjectBadge>
-            )
-          )}
       </HStack>
       <ButtonLink to={url} m={4} height={20}>
         Open {name}

@@ -12,6 +12,7 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
+import { StaticImageData } from "next/image"
 
 export type ChildOnlyProp = { children?: ReactNode }
 
@@ -154,4 +155,21 @@ export type ToCItem = {
   title: string
   url: string
   items?: Array<ToCItem>
+}
+
+// Learning Tools
+
+export interface LearningTool {
+  name: string
+  description: string
+  url: string
+  image: StaticImageData
+  alt: string
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
 }
