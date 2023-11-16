@@ -4,8 +4,8 @@ description: Perché è importante prendersi gioco dei propri contratti in fase 
 author: Markus Waas
 lang: it
 tags:
-  - "solidity"
-  - "contratti intelligenti"
+  - "Solidity"
+  - "contratto intelligente"
   - "test"
   - "simulazione"
 skill: intermediate
@@ -14,7 +14,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
 
-[Gli oggetti Mock](https://en.wikipedia.org/wiki/Mock_object) sono un modello di progettazione comune nella programmazione orientata agli oggetti. Il termine inglese per "simulare" è "to mock", dal francese antico "mocquer" col significato di "prendersi gioco di". Questo significato si è poi evoluto in "imitare qualcosa di reale", che è ciò che in effetti facciamo nella programmazione. Prenditi gioco dei tuoi contratti intelligenti quanto vuoi, ma simulali ogni volta che puoi. Ti semplificherà la vita.
+[Gli oggetti Mock](https://wikipedia.org/wiki/Mock_object) sono un modello di progettazione comune nella programmazione orientata agli oggetti. Il termine inglese per "simulare" è "to mock", dal francese antico "mocquer" col significato di "prendersi gioco di". Questo significato si è poi evoluto in "imitare qualcosa di reale", che è ciò che in effetti facciamo nella programmazione. Prenditi gioco dei tuoi contratti intelligenti quanto vuoi, ma simulali ogni volta che puoi. Ti semplificherà la vita.
 
 ## Condurre unit test dei contratti con le simulazioni {#unit-testing-contracts-with-mocks}
 
@@ -103,4 +103,4 @@ Può diventare caotico creare un altro contratto per ogni singola simulazione. S
 I poteri della simulazione non finiscono qui.
 
 - Aggiungere funzioni: è utile non solo sovrascrivere una funzione specifica, ma anche aggiungere funzioni aggiuntive. Un buon esempio per i token è proprio avere una funzione `mint` aggiuntiva per consentire a qualsiasi utente di ottenere nuovi token gratuitamente.
-- Uso nelle reti di prova: quando distribuisci e testi i tuoi contratti sulle reti di prova insieme alla tua dApp, prendi in considerazione l'uso di una versione simulata. Evita di sovrascrivere le funzioni, a meno che non sia davvero necessario. Dopotutto, vuoi testare la logica reale. Ma può essere utile aggiungere una funzione di ripristino che ripristini semplicemente lo stato del contratto all'inizio, senza necessità di alcuna nuova distribuzione. Ovviamente, non vorresti farlo in un contratto sulla Rete Principale.
+- Uso nelle testnet: quando distribuisci e testi i tuoi contratti sulle reti di prova insieme alla tua dApp, prendi in considerazione l'uso di una versione simulata. Evita di sovrascrivere le funzioni, a meno che non sia davvero necessario. Dopotutto, vuoi testare la logica reale. Ma può essere utile aggiungere una funzione di ripristino che ripristini semplicemente lo stato del contratto all'inizio, senza necessità di alcuna nuova distribuzione. Ovviamente, non vorresti farlo in un contratto sulla Rete mainnet.

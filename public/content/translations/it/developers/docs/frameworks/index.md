@@ -91,10 +91,21 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
+**SDK di thirdweb -** **_Sviluppa applicazioni web3 che possono interagire con i tuoi contratti intelligenti usando i nostri potenti SDK e CLI._**
+
+- [Documentazione](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Piattaforma di sviluppo Web3 (Ethereum e altri)._**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
+
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Imposta un ambiente di sviluppo locale](/developers/local-environment/)
+- [Configura un ambiente di sviluppo locale](/developers/local-environment/)

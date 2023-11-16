@@ -100,8 +100,9 @@ L'`execution_payload_header` contiene i seguenti campi:
 | `fee_base_per_gas`  | il valore base della commissione                                                      |
 | `hash_del_blocco`   | Hash del blocco di esecuzione                                                         |
 | `transactions_root` | hash radice delle transazioni nel payload                                             |
+| `withdrawal_root`   | hash radice del prelievo nel payload                                                  |
 
-Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all'intestazione, tranne per il fatto che, invece dell'hash radice delle transazioni, include l'elenco effettivo delle transazioni):
+Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all'intestazione, tranne per il fatto che, invece dell'hash radice delle transazioni, include l'elenco effettivo delle transazioni e informazioni sui prelievi):
 
 | Campo              | Descrizione                                                                         |
 | :----------------- | :---------------------------------------------------------------------------------- |
@@ -119,20 +120,30 @@ Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all
 | `fee_base_per_gas` | il valore base della commissione                                                    |
 | `hash_del_blocco`  | Hash dell'esecuzione del blocco                                                     |
 | `transazioni`      | elenco delle transazioni da eseguire                                                |
+| `prelievi`         | elenco degli oggetti prelievo                                                       |
+
+L'elenco dei `withdrawals` contiene oggetti `withdrawal` strutturati nel modo seguente:
+
+| Campo            | Descrizione                          |
+| :--------------- | :----------------------------------- |
+| `address`        | indirizzo del conto che ha prelevato |
+| `amount`         | importo del prelievo                 |
+| `indice`         | valore dell'indice di prelievo       |
+| `validatorIndex` | valore dell'indice del validatore    |
 
 ## Tempo di blocco {#block-time}
 
 Il tempo di blocco si riferisce al tempo che separa i blocchi. In Ethereum, il tempo è diviso in unità da dodici secondi, dette 'slot'. In ogni slot viene selezionato un singolo validatore per proporre un blocco. Supponendo che tutti i validatori siano online e totalmente operativi, ci sarà un blocco in ogni slot, a significare che il tempo del blocco è 12 secondi. Tuttavia, occasionalmente, i validatori potrebbero essere offline quando chiamati a proporre un blocco, a significare che talvolta gli slot possono rimanere vuoti.
 
-Questa implementazione differisce dai sistemi basati sul proof-of-work, in cui i tempi di blocco sono probabilistici e regolati dalla difficoltà di estrazione del target del protocollo. Ne è un esempio perfetto il [tempo medio di blocco](https://etherscan.io/chart/blocktime) di Ethereum, in cui la transazione da proof-of-work a a proof-of-stake è facilmente deducibile in base alla consistenza del nuovo tempo di blocco da 12 secondi.
+Questa implementazione differisce dai sistemi basati sul proof-of-work, in cui i tempi di blocco sono probabilistici e regolati dalla difficoltà di mining target del protocollo. Il [tempo medio di blocco](https://etherscan.io/chart/blocktime) di Ethereum è un esempio perfetto da cui è possibile desumere il passaggio da proof-of-work a proof-of-stake in base alla coerenza del nuovo tempo di blocco da 12 secondi.
 
 ## Dimensioni del blocco {#block-size}
 
-Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di carburante, ma la dimensione dei blocchi aumenta o diminuisce in base alla domanda della rete, fino al limite massimo di 30 milioni di carburante del blocco (2 volte la dimensione previste del blocco). La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Questo è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per lo slot successivo. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
+Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenterà o diminuirà in base alle esigenze della rete, fino al limite di 30 milioni di gas (2x dimensioni del blocco previste). La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 

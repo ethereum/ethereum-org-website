@@ -13,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -25,12 +25,9 @@ import {
   ContentContainer,
   Heading1 as MdHeading1,
   Heading4 as MdHeading4,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
 } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import ProductDisclaimer from "@/components/ProductDisclaimer"
@@ -45,7 +42,7 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
@@ -296,17 +293,11 @@ export const StakingLayout: React.FC<IProps> = ({
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            tocItems={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           {children}

@@ -5,8 +5,8 @@ author: Markus Waas
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
-  - "interrogando"
+  - "contratto intelligente"
+  - "query"
   - "the graph"
   - "create-eth-app"
   - "react"
@@ -52,7 +52,7 @@ Ora, diciamo che nella nostra dapp, vogliamo mostrare le scommesse totali, le pa
 2. Recuperare `totalGamesPlayerLost`.
 3. Iscriversi agli eventi `BetPlaced`.
 
-Possiamo attendere l'[evento in Web3](https://docs.web3js.org/api/web3/class/Contract#events) come mostrato sulla destra, ma richiederebbe la gestione di alcuni casi.
+Possiamo ascoltare l'[evento in Web3](https://docs.web3js.org/api/web3/class/Contract#events) come mostrato sulla destra, ma richiederebbe la gestione di alcuni casi.
 
 ```solidity
 GameContract.events.BetPlaced({
@@ -124,7 +124,7 @@ Qui puoi definire più contratti e gestori. Una configurazione tipica avrebbe un
 
 Per motivi di comodità potresti anche usare uno strumento di modelli come mustache. Poi crei un ` subgraph.template.yaml` e inserisci gli indirizzi in base alle distribuzioni più recenti. Per una configurazione più avanzata, vedi ad esempio il [repo del subgraph Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-Al seguente link puoi trovare la documentazione completa: https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+E la documentazione completa può essere consultata [qui](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```yaml
 specVersion: 0.0.1
@@ -167,7 +167,7 @@ Lo schema è la definizione dei dati di GraphQL. Ti consentirà di definire qual
 - BigInt
 - BigDecimal
 
-Puoi anche usare le entità come tipo per definire le relazioni. Nel nostro esempio definiamo una relazione 1 a tanti dal giocatore alle scommesse. Il punto esclamativo ! significa che il valore non può essere vuoto. La documentazione completa è consultabile qui: https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+Puoi anche usare le entità come tipo per definire le relazioni. Nel nostro esempio definiamo una relazione 1 a tanti dal giocatore alle scommesse. Il punto esclamativo ! significa che il valore non può essere vuoto. La documentazione completa può essere consultata [qui](https://thegraph.com/docs/define-a-subgraph#the-graphql-schema).
 
 ```graphql
 type Bet @entity {
@@ -293,13 +293,13 @@ Ma ci manca l'ultimo pezzo del puzzle: il server. Puoi eseguirlo personalmente o
 
 ### Graph Explorer: il servizio ospitato {#graph-explorer-the-hosted-service}
 
-Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/deploy-a-subgraph) per distribuire un subgraph. Per molti progetti, puoi trovare i subgraph esistenti nell'esploratore all'indirizzo https://thegraph.com/explorer/.
+Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/deploy-a-subgraph) per distribuire un subgraph. Per molti progetti è possibile trovare i sottografi esistenti nell'esploratore [](https://thegraph.com/explorer/).
 
 ![Explorer di The Graph](./thegraph-explorer.png)
 
 ### Esecuzione di un nodo personalizzato {#running-your-own-node}
 
-In alternativa puoi eseguire un nodo personalizzato: https://github.com/graphprotocol/graph-node#quick-start. Un motivo per farlo potrebbe essere l'uso di una rete non supportata dal servizio di hosting. Sono correntemente supportate Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI e Sokol.
+In alternativa, può eseguire il suo nodo personale. Documenti [qui](https://github.com/graphprotocol/graph-node#quick-start). Un motivo per farlo potrebbe essere l'uso di una rete non supportata dal servizio di hosting. Sono correntemente supportate Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI e Sokol.
 
 ## Il futuro decentralizzato {#the-decentralized-future}
 

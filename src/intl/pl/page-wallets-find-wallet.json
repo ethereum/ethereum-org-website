@@ -33,7 +33,7 @@
   "page-find-wallet-gas-fee-customization": "Dostosowanie opłat za gaz",
   "page-find-wallet-gas-fee-customization-desc": "Personalizacja swoich ilości gazu (opłaty bazowej, priorytetowej i maksymalnej)",
   "page-find-wallet-ens-support": "Obsługa ENS",
-  "page-find-wallet-ens-support-desc": "Portfele obsługujące usługę nazw Ethereum (ENS)",
+  "page-find-wallet-ens-support-desc": "Portfele obsługujące Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Importowanie tokenów",
   "page-find-wallet-token-importing-desc": "Import dowolnego tokena ERC-20 do użycia w portfelu",
   "page-find-wallet-fee-optimization": "Optymalizacja opłat",
@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Przeglądarkowe",
   "page-find-wallet-browser-desc": "Portfele z rozszerzeniami przeglądarki",
   "page-find-wallet-device": "Urządzenie",
-  "page-find-choose-to-compare": "Wybierz, aby porównać"
+  "page-find-choose-to-compare": "Wybierz, aby porównać",
+  "page-find-wallet-choose-features": "Wybierz funkcje"
 }

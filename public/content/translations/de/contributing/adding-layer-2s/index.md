@@ -8,7 +8,7 @@ lang: de
 
 Wir möchten sicherstellen, dass die bestmöglichen Ressourcen vorhanden sind, damit Benutzer sich sicher und informiert in der Ebene 2 bewegen können.
 
-Jeder kann vorschlagen, eine Ebene 2 auf ethereum.org hinzuzufügen. Wenn es eine Ebene 2 gibt, die wir vergessen haben, **[schlagen Sie sie gerne vor](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md).**
+Jeder kann vorschlagen, eine Ebene 2 auf ethereum.org hinzuzufügen. Wenn es eine Layer 2 gibt, die wir vergessen haben, **[schlagen Sie sie gerne vor](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml).**
 
 Wir listen derzeit L2s auf den folgenden Seiten auf:
 
@@ -50,6 +50,8 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 **Datum der Inbetriebnahme des Projekts**
 
+- Eine Layer 2, die seit über 6 Monaten auf dem Mainnet "live" ist
+
 - Neuere Projekte, die noch nicht von Nutzern getestet wurden, werden seltener aufgeführt.
 
 **Externes Sicherheitsaudit**
@@ -90,6 +92,6 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 Wenn Sie eine Ebene 2 zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Eintrag erstellen
 </ButtonLink>

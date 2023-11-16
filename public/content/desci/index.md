@@ -18,7 +18,7 @@ Decentralized science (DeSci) is a movement that aims to build public infrastruc
 
 DeSci aims to create an ecosystem where scientists are incentivized to openly share their research and receive credit for their work while allowing anyone to access and contribute to the research easily. DeSci works off the idea that scientific knowledge should be accessible to everyone and that the process of scientific research should be transparent. DeSci is creating a more decentralized and distributed scientific research model, making it more resistant to censorship and control by central authorities. DeSci hopes to create an environment where new and unconventional ideas can flourish by decentralizing access to funding, scientific tools, and communication channels.
 
-Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible access data and methods, and by providing incentives for reproducibility.
+Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible data and methods, and by providing incentives for reproducibility.
 
 ### Juan Benet - The DeSci Movement
 
@@ -104,7 +104,7 @@ Explore projects and join the DeSci community.
 - [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.molecule.to/)
+- [Bio.xyz: get funded for your biotech DAO or desci project](https://www.bio.xyz/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
