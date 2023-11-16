@@ -1,10 +1,126 @@
 import Translation from "@/components/Translation"
-import { RootLayout } from "../../layouts/RootLayout"
+import { RootLayout } from "@/layouts/RootLayout"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { GetStaticProps } from "next"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { Box, Flex, SimpleGrid, TextProps, chakra, useColorModeValue } from "@chakra-ui/react"
+import { ChildOnlyProp } from "@/lib/types"
+import PageMetadata from "@/components/PageMetadata"
+import { useTranslation } from "react-i18next"
+import Text from "@/components/OldText"
+import OldHeading from "@/components/OldHeading"
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import { ReactNode } from "react"
+import Card, { IProps as ICardProps } from "@/components/Card"
+import Callout from "@/components/Callout"
+import DevelopersImage from "@/public/developers-eth-blocks.png"
+import InlineLink from "@/components/Link"
+import { Image, type ImageProps } from "@/components/Image"
+import DogeImage from '@/public/doge-computer.png'
+import FeedbackCard from "@/components/FeedbackCard"
 
+const Page = (props: ChildOnlyProp) => (
+  <Flex
+    flexDirection="column"
+    alignItems="center"
+    w="full"
+    my={0}
+    mx="auto"
+    {...props}
+  />
+)
+
+const GrayContainer = (props: ChildOnlyProp) => (
+  <Box
+    w="full"
+    py={16}
+    px={0}
+    mt={8}
+    bg="grayBackground"
+    boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
+    {...props}
+  />
+)
+
+const Content = (props: ChildOnlyProp) => (
+  <Box py={4} px={8} w="full" {...props} />
+)
+
+const Subtitle = (props: TextProps) => (
+  <Text fontSize="xl" lineHeight="140%" color="text200" {...props} />
+)
+
+const MonoSubtitle = (props: ChildOnlyProp) => <OldHeading mb={0} {...props} />
+
+const StyledCardContainer = (props: ChildOnlyProp) => (
+  <SimpleGrid columns={[1, 1, 2, 4]} mx={-4} mt={8} mb={12} {...props} />
+)
+
+const TwoColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", lg: "center" }}
+    flexDirection={{ base: "column", lg: "row" }}
+    w="100%"
+    {...props}
+  />
+)
+
+const ThreeColumnContent = (props: ChildOnlyProp) => (
+  <Flex
+    py={0}
+    px={8}
+    w="full"
+    justifyContent="space-between"
+    alignItems={{ base: "flex-start", lg: "flex-start" }}
+    flexDirection={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
+
+const Column = (props: ChildOnlyProp) => (
+  <Box flex="1 1 33%" mb={6} mr={8} w="full" {...props} />
+)
+const RightColumn = (props: ChildOnlyProp) => (
+  <Box flex="1 1 33%" mb={6} mr={0} w="full" {...props} />
+)
+const IntroColumn = (props: ChildOnlyProp) => (
+  <Box
+    flex="1 1 33%"
+    mb={6}
+    mt={{ base: 0, lg: 32 }}
+    mr={{ base: 0, sm: 8 }}
+    w="full"
+    {...props}
+  />
+)
+
+const StyledCard = (props: ICardProps) => {
+  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+
+  return (
+    <Card
+      boxShadow={tableBoxShadow}
+      m={4}
+      p={6}
+      {...props}
+      _hover={{
+        borderRadius: "4px",
+        boxShadow: "0px 8px 17px rgba(0, 0, 0, 0.15)",
+        background: "tableBackgroundHover",
+        transition: "transform 0.1s",
+        transform: "scale(1.02)",
+      }}
+    />
+  )
+}
+
+const StyledCallout = chakra(Callout, {
+  baseStyle: {
+    flex: { base: "auto", md: "1 1 416px" },
+  },
+})
 export const getStaticProps: GetStaticProps = async (
   context
 ) => {
@@ -21,17 +137,332 @@ export const getStaticProps: GetStaticProps = async (
   }
 }
 
+interface IDevelopersPath {
+  emoji: string
+  title: ReactNode
+  description: ReactNode
+  url: string
+  button: ReactNode
+}
+
+const paths: Array<IDevelopersPath> = [
+  {
+    emoji: ":woman_student:",
+    title: <Translation id="page-developers-index:page-developers-learn" />,
+    description: <Translation id="page-developers-index:page-developers-learn-desc" />,
+    url: "/developers/docs/",
+    button: <Translation id="page-developers-index:page-developers-read-docs" />,
+  },
+  {
+    emoji: ":woman_teacher:",
+    title: <Translation id="page-developers-index:page-developers-learn-tutorials" />,
+    description: <Translation id="page-developers-index:page-developers-learn-tutorials-desc" />,
+    url: "/developers/tutorials/",
+    button: <Translation id="page-developers-index:page-developers-learn-tutorials-cta" />,
+  },
+  {
+    emoji: ":woman_scientist:",
+    title: <Translation id="page-developers-index:page-developers-start" />,
+    description: <Translation id="page-developers-index:page-developers-start-desc" />,
+    url: "/developers/learning-tools/",
+    button: <Translation id="page-developers-index:page-developers-play-code" />,
+  },
+  {
+    emoji: ":construction_worker:",
+    title: <Translation id="page-developers-index:page-developers-set-up" />,
+    description: <Translation id="page-developers-index:page-developers-setup-desc" />,
+    url: "/developers/local-environment/",
+    button: <Translation id="page-developers-index:page-developers-choose-stack" />,
+  },
+]
+
 const DevelopersPage = ({ lastDeployDate }) => {
+  const { t } = useTranslation("page-developers-index")
+
   return (
     <RootLayout
       contentIsOutdated={false}
       contentNotTranslated={false}
       lastDeployDate={lastDeployDate}
     >
-      <>
+      <Page>
+        <PageMetadata
+          title={t("page-developers-index:page-developer-meta-title")}
+          description={t("page-developers-index:page-developers-meta-desc")}
+        />
         {/* TODO: IMPLEMENT HUBHERO WHEN THIS IS BROUGHT INTO THIS REPO */}
-        <h1>Developers home</h1>
-      </>
+        <Content>
+          <MonoSubtitle>
+            <Translation id="page-developers-index:page-developers-get-started" />
+          </MonoSubtitle>
+          <StyledCardContainer>
+            {paths.map((path, idx) => (
+              <StyledCard
+                key={idx}
+                emoji={path.emoji}
+                title={path.title}
+                description={path.description}
+              >
+                <ButtonLink to={path.url}>{path.button}</ButtonLink>
+              </StyledCard>
+            ))}
+          </StyledCardContainer>
+          <TwoColumnContent>
+          <IntroColumn>
+            <OldHeading>
+              <Translation id="page-developers-index:page-developers-about" />
+            </OldHeading>
+            <Subtitle mb={6}>
+              <Translation id="page-developers-index:page-developers-about-desc" />
+            </Subtitle>
+            <Text>
+              <Translation id="page-developers-index:page-developers-about-desc-2" />
+            </Text>
+            <Text>
+              <Translation id="page-developers-index:page-developers-feedback" />{" "}
+              <InlineLink to="https://discord.gg/CetY6Y4">
+                <Translation id="page-developers-index:page-developers-discord" />
+              </InlineLink>
+            </Text>
+          </IntroColumn>
+          <StyledCallout
+            image={DevelopersImage}
+            titleKey="page-developers-index:page-developers-improve-ethereum"
+            descriptionKey="page-developers-index:page-developers-improve-ethereum-desc"
+            alt={t("page-developers-index:alt-eth-blocks")}
+          >
+            <div>
+              <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
+                <Translation id="page-developers-index:page-developers-contribute" />
+              </ButtonLink>
+            </div>
+          </StyledCallout>
+        </TwoColumnContent>
+        </Content>
+        <GrayContainer>
+        <Content>
+          <OldHeading>
+            <Translation id="page-developers-index:page-developers-explore-documentation" />
+          </OldHeading>
+        </Content>
+
+        <ThreeColumnContent>
+          <Column>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+              <Translation id="page-developers-index:page-developers-docs-introductions" />
+            </OldHeading>
+            <InlineLink to="/developers/docs/intro-to-ethereum/">
+              <Translation id="page-developers-index:page-developers-intro-eth-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-into-eth-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/intro-to-ether/">
+              <Translation id="page-developers-index:page-developers-intro-ether-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-intro-ether-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/dapps/">
+              <Translation id="page-developers-index:page-developers-intro-dapps-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-intro-dapps-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/ethereum-stack/">
+              <Translation id="page-developers-index:page-developers-intro-stack" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-intro-stack-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/web2-vs-web3/">
+              <Translation id="page-developers-index:page-developers-web3-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-web3-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/programming-languages/">
+              <Translation id="page-developers-index:page-developers-languages" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-language-desc" />
+            </Text>
+            <Image
+              hideBelow="lg"
+              src={DogeImage}
+              alt={t("page-assets-doge")}
+              maxW="400px"
+              mt={16}
+            />
+          </Column>
+          <Column>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+              <Translation id="page-developers-index:page-developers-fundamentals" />
+            </OldHeading>
+            <InlineLink to="/developers/docs/accounts/">
+              <Translation id="page-developers-index:page-developers-accounts-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-account-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/transactions/">
+              <Translation id="page-developers-index:page-developers-transactions-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-transactions-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/blocks/">
+              <Translation id="page-developers-index:page-developers-blocks-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-block-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/evm/">
+              <Translation id="page-developers-index:page-developers-evm-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-evm-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/gas/">
+              <Translation id="page-developers-index:page-developers-gas-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-gas-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/nodes-and-clients/">
+              <Translation id="page-developers-index:page-developers-node-clients-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-node-clients-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/networks/">
+              <Translation id="page-developers-index:page-developers-networks-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-networks-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining/">
+              <Translation id="page-developers-index:page-developers-mining-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-mining-desc" />
+            </Text>
+
+            <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
+              <Translation id="page-developers-index:page-developers-mining-algorithms-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-mining-algorithms-desc" />
+            </Text>
+          </Column>
+          <RightColumn>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+              <Translation id="page-developers-index:page-developers-stack" />
+            </OldHeading>
+            <InlineLink to="/developers/docs/smart-contracts/">
+              <Translation id="page-developers-index:page-developers-smart-contracts-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-smart-contracts-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/frameworks/">
+              <Translation id="page-developers-index:page-developers-frameworks-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-frameworks-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/apis/javascript/">
+              <Translation id="page-developers-index:page-developers-js-libraries-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-js-libraries-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/apis/backend/">
+              <Translation id="page-developers-index:page-developers-api-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-api-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/data-and-analytics/block-explorers/">
+              <Translation id="page-developers-index:page-developers-block-explorers-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-block-explorers-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/smart-contracts/security/">
+              <Translation id="page-developers-index:page-developers-smart-contract-security-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-smart-contract-security-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/storage/">
+              <Translation id="page-developers-index:page-developers-storage-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-storage-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/ides/">
+              <Translation id="page-developers-index:page-developers-dev-env-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-dev-env-desc" />
+            </Text>
+            <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
+              <Translation id="page-developers-index:page-developers-advanced" />
+            </OldHeading>
+            <InlineLink to="/developers/docs/standards/tokens/">
+              <Translation id="page-developers-index:page-developers-token-standards-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-token-standards-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/mev/">
+              <Translation id="page-developers-index:page-developers-mev-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-mev-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/oracles/">
+              <Translation id="page-developers-index:page-developers-oracles-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-oracle-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/scaling/">
+              <Translation id="page-developers-index:page-developers-scaling-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-scaling-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/networking-layer/">
+              <Translation id="page-developers-index:page-developers-networking-layer-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-networking-layer-desc" />
+            </Text>
+            <InlineLink to="/developers/docs/data-structures-and-encoding/">
+              <Translation id="page-developers-index:page-developers-data-structures-and-encoding-link" />
+            </InlineLink>
+            <Text>
+              <Translation id="page-developers-index:page-developers-data-structures-and-encoding-desc" />
+            </Text>
+          </RightColumn>
+        </ThreeColumnContent>
+      </GrayContainer>
+      <FeedbackCard />
+      </Page>
     </RootLayout>
   )
 }
