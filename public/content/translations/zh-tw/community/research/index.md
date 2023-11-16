@@ -346,7 +346,6 @@ lang: zh-tw
 - [開發者框架](/developers/docs/frameworks/)
 - [共識開發者工具列表](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [權杖標準](/developers/docs/standards/tokens/)
-- [Biastek：以太坊工具](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub：以太坊虛擬機工具](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### 近期研究 {#recent-research-17}

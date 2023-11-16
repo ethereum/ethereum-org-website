@@ -1,13 +1,13 @@
 ---
 title: Ethereum für .NET-Entwickler
-description: Erfahre, wie du mit .NET-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Lernen, wie Sie .NET-basierte Projekte und Tools für die Ethereum-Entwicklung nutzen können
 lang: de
 incomplete: true
 ---
 
 <div class="featured">Erfahren Sie, wie Sie .NET-basierte Projekte und Tools für die Ethereum-Entwicklung nutzen können</div>
 
-Verwende Ethereum, um dezentrale Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
+Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. dApps sind vertrauenswürdig. Das bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
 Erstellen Sie dezentrale Anwendungen auf Ethereum und interagieren Sie mit Smart Contracts unter Verwendung von Tools und Sprachen aus dem Microsoft-Technologie-Stack – unterstützt C#, Visual Basic .NET, F#, über Tools wie VSCode und Visual Studio, mit dem .NET Framework/.NET Core/.NET Standard. Stellen Sie eine Ethereum-Blockchain mit Microsoft Azure Blockchain in wenigen Minuten bereit. Ethereum lässt sich eben so gut einsetzen wie .NET.
 
@@ -68,7 +68,7 @@ Benötigen Sie für den Einstieg erst einmal allgemeinere Informationen? Dann em
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) – _Nethereum-Codegenerator mit UI in Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) – _Ein .NET Wasm SPA Light-Blockchain-Explorer und einfache Wallet_
 - [Wonka Business Rules Engine](https://docs.nethereum.com/en/latest/wonka/) – _Eine Business Rules-Engine (für die .NET-Plattform und die Ethereum-Plattform), die von Natur aus Metadaten-basiert ist_
-- [Nethermind](https://github.com/NethermindEth/nethermind) – _Ein .NET Core Ethereum-Client für Linux, Windows, MacOs_
+- [Nethermind](https://github.com/NethermindEth/nethermind) - _Ein .NET Core Ethereum-Client für Linux, Windows, MacOs_
 - [eth-utils](https://github.com/ethereum/eth-utils/) – _Dienstprogrammfunktionen für das Arbeiten mit Codebasen, die mit Ethereum verwandt sind_
 - [TestChains](https://github.com/Nethereum/TestChains) – _vorkonfigurierte .NET-Devchains für schnelles Feedback (PoA)_
 
@@ -76,9 +76,9 @@ Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/de
 
 ## .NET-Community-Mitwirkende {#dot-net-community-contributors}
 
-Bei Nethereum halten wir uns meistens bei [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder gerne Fragen stellen oder beantworten, Hilfe bekommen oder einfach nur beobachten kann. Fühlen Sie sich frei, eine PR zu erstellen oder ein neues Issue im [Nethereum GitHub Repository](https://github.com/Nethereum) zu eröffnen oder einfach nur die vielen Seiten/Beispielprojekte zu durchstöbern, die wir haben. Sie können uns auch auf [Discord](https://discord.gg/jQPrR58FxX) finden.
+Bei Nethereum halten wir uns meistens bei [Gitter](https://gitter.im/Nethereum/Nethereum) auf, wo jeder gerne Fragen stellen oder beantworten, Hilfe bekommen oder einfach nur beobachten kann. Erstellen Sie gerne einen PR oder öffnen ein Problem im [Nethereum Github Repository](https://github.com/Nethereum) oder durchstöbern Sie einfach nur unsere vielen Seiten/Beispielprojekte. Sie können uns auch auf [Discord](https://discord.gg/jQPrR58FxX) finden.
 
-Bei Nethermind nutzen wir [Gitter](https://gitter.im/nethermindeth/nethermind) um in Kontakt zu treten. Für PRs oder Probleme können Sie im [Nethermind Repository](https://github.com/NethermindEth/nethermind) fündig werden.
+Wenn Sie neu bei Nethermind sind und Hilfe beim Einstieg benötigen, treten Sie unserem [Discord](http://discord.gg/PaCMRFdvWT) bei. Unsere Entwickler stehen Ihnen gerne bei Fragen zur Verfügung. Zögern Sie nicht, einen PR zu eröffnen oder Probleme im [Nethermind GitHub-Repository](https://github.com/NethermindEth/nethermind) aufzuzeigen.
 
 ## Andere zusammengefasste Listen {#other-aggregated-lists}
 

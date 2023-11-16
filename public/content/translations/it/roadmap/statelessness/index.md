@@ -83,11 +83,11 @@ L'assenza di stato debole è in uno stato avanzato di ricerca, ma si affida all'
 
 L'assenza di stato forte rimuove il bisogno di qualsiasi blocco, di memorizzare i dati di stato. Invece, le transazioni sono inviate con i testimoni, aggregabili dai produttori di blocchi. I produttori di blocchi sono quindi responsabili della memorizzazione di soltanto quello stato, necessario per generare testimoni per i conti rilevanti. La responsabilità per lo stato è quasi interamente trasferita agli utenti, poiché inviano i testimoni e 'accedono agli elenchi' per dichiarare con quali conti e quali chiavi d'archiviazione stanno interagendo.
 
-L'assenza di stato forte è la soluzione più elegante per ridurre i requisiti del disco per i nodi, ma richiede aggiornamenti sostanziali al protocollo di Ethereum. È ancora nella fase di ricerca e non sarà probabilmente distribuita per svariati anni.
+L'assenza di stato forte è stata investigata dai ricercatori, ma non è correntemente previsto che diventi parte della tabella di marcia di Ethereum: è più probabile che l'assenza di stato debole sia sufficiente per le esigenze di ridimensionamento di Ethereum.
 
 ## Stato attuale {#current-progress}
 
-L'assenza di stato completa è ancora in fase di ricerca ed è probabilmente distante di diversi anni dall'implementazione. L'assenza di stato debole, la scadenza dello storico e la scadenza dello stato sono tutte pietre miliari vero la completa assenza di stato. Anch'esse sono ancora in fase di sviluppo. Non esiste alcuna garanzia che tutte queste proposte saranno implementate, ad esempio, se la scadenza di stato è implementate per prima, non sarebbe necessario implementare anche la scadenza dello storico. Esistono anche altri punti della tabella di marcia, come gli [Alberi di Verkle](/roadmap/verkle-trees) e la [Separazione tra propositori e costruttori](/roadmap/pbs), che necessitano di essere completati per primi.
+L'assenza di stato debole, la scadenza dello storico e la scadenza dello stato sono tutte in fase di ricerca ed è previsto siano distribuite tra svariati anni. Non esiste alcuna garanzia che tutte queste proposte saranno implementate, ad esempio, se la scadenza di stato è implementate per prima, non sarebbe necessario implementare anche la scadenza dello storico. Esistono anche altri punti della tabella di marcia, come gli [Alberi di Verkle](/roadmap/verkle-trees) e la [Separazione tra propositori e costruttori](/roadmap/pbs), che necessitano di essere completati per primi.
 
 ## Letture consigliate {#further-reading}
 

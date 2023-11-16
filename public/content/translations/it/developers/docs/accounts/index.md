@@ -8,7 +8,7 @@ Un conto di Ethereum è un'entità con un saldo in ether (ETH) che può inviare 
 
 ## Prerequisiti {#prerequisites}
 
-I conti sono un argomento piuttosto basilare. Ma per meglio comprendere questa pagina, ti consigliamo innanzi tutto di leggere la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
+Per aiutarti a comprendere meglio questa pagina ti consigliamo prima di leggere l'[introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
 ## Tipi di conto {#types-of-account}
 
@@ -119,6 +119,8 @@ Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiav
 <YouTube id="9LtBDy67Tho" />
 
 ## Ulteriori letture {#further-reading}
+
+- [Capire i conti di Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 

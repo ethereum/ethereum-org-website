@@ -10,7 +10,7 @@ summaryPoint2: Nadogradnja je objedinjena s izvornim lancem dokaza rada Ethereum
 summaryPoint3: Nadogradnja Beacon Chain uvela je logiku koncenzusa i protokol blokiranja nagađanja koji sada pruža Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Nadogradnja Beacon Chain krenula je u implementaciju 1. prosinca 2020., dok je formalizacija dokaza uloga kao Ethereumovog mehanizma konsenzusa izvršena nadogradnjom The Merge 15. rujna 2022.
 </UpgradeStatus>
 

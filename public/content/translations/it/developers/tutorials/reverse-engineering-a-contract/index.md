@@ -6,8 +6,6 @@ lang: it
 tags:
   - "evm"
   - "opcode"
-  - "decompilazione"
-  - "decompilatore"
 skill: advanced
 published: 2021-12-30
 ---
@@ -18,7 +16,7 @@ _Non ci sono segreti sulla blockchain_: tutto ciò che si verifica è coerente, 
 
 Esistono dei decompilatori, ma non producono sempre [risultati utilizzabili](https://etherscan.io/bytecode-decompiler?a=0x2510c039cc3b061d79e564b38836da87e31b342f). In questo articolo imparerai come decompilare manualmente e comprendere un contratto dagli [opcode](https://github.com/wolflo/evm-opcodes), nonché come interpretare i risultati di un decompilatore.
 
-Per poter comprendere questo articolo dovresti già conoscere le basi dell'EVM ed avere una certa familiarità con l'assembler dell'EVM. [Puoi leggere informazioni su questi argomenti qui](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
+Per poter comprendere questo articolo dovresti già conoscere le basi dell'EVM ed avere una certa familiarità con l'assembler dell'EVM. [Puoi leggere articoli su questi argomenti qui](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
 ## Preparare il codice eseguibile {#prepare-the-executable-code}
 
@@ -36,7 +34,7 @@ Il prossimo passaggio è ottenere le posizioni corrette del codice, così da pot
 
 Questa funzione aggiunge prima un byte per l'opcode stesso e poi cerca `PUSH`. Gli opcode push sono speciali perché hanno bisogno di byte aggiuntivi affinché venga eseguito il push del valore. Se l'opcode è un `PUSH`, estraiamo il numero di byte e lo aggiungiamo.
 
-In `A1` inserisci il primo offset, zero. Poi, in `A2`, inserisci questa funzione e di nuovo copiala e incollala per il resto della colonna A:
+In `A1` inserisci il primo scostamento: zero. Poi, in `A2`, inserisci questa funzione e di nuovo copiala e incollala per il resto della colonna A:
 
 ```
 =dec2hex(hex2dec(A1)+B1)
@@ -316,7 +314,7 @@ Se non è trovata alcuna corrispondenza, il codice salta al [gestore del proxy a
 |    10D | DUP1         | 0x00 0x00 CALLVALUE           |
 |    10E | REVERT       |                               |
 
-La prima cosa che fa questa funzione è controllare che la chiamata non abbia inviato alcun ETH. Questa funzione non è [`pagabile`](https://solidity-by-example.org/payable/). Se qualcuno ci ha inviato degli ETH, si tratterebbe di un errore e vogliamo `REVERT` per evitare di avere quegli ETH dove non possiamo restituirli.
+La prima cosa che fa questa funzione è controllare che la chiamata non abbia inviato alcun ETH. Questa funzione non è [`pagabile`](https://solidity-by-example.org/payable/). Se qualcuno ci ha invitato degli ETH, deve trattarsi di un errore e vogliamo `REVERT` (RIPRISTINARE) per evitare che tali ETH finiscano per essere irrecuperabili.
 
 | Offset | Opcode                                            | Stack                                                                      |
 | -----: | ------------------------------------------------- | -------------------------------------------------------------------------- |

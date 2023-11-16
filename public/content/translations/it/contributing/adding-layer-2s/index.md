@@ -8,7 +8,7 @@ lang: it
 
 Vogliamo assicurarci di elencare le migliori risorse possibili, così che gli utenti possano navigare nello spazio del livello 2 con la massima tranquillità e sicurezza.
 
-Chiunque è libero di suggerire nuove piattaforme di scambio su ethereum.org. Se ci siamo dimenticati di un livello 2, **[ti invitiamo a suggerirlo](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)!**
+Chiunque è libero di suggerire nuove piattaforme di scambio su ethereum.org. Se ci siamo dimenticati di un livello 2, **[ti invitiamo a suggerirlo](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 Attualmente elenchiamo i L2 nelle pagine seguenti:
 
@@ -50,7 +50,9 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 **Data di rilascio del progetto**
 
-- I progetti più nuovi e non ancora ben testati dagli utenti hanno meno probabilità di esser elencati.
+- Un livello due che è stato "attivo" sulla rete principale per 6 mesi
+
+- I progetti più recenti e non ancora ben testati dagli utenti hanno meno probabilità di essere elencati.
 
 **Controllo di sicurezza esterno**
 
@@ -90,6 +92,6 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 Se desideri aggiungere un livello 2 su ethereum.org, crea un ticket su GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crea un ticket
 </ButtonLink>
