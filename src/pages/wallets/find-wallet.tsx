@@ -402,9 +402,6 @@ export const query = graphql`
     zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
       ...walletImage
     }
-    linen: file(relativePath: { eq: "wallets/linen.png" }) {
-      ...walletImage
-    }
     imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
       ...walletImage
     }

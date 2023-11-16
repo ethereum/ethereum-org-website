@@ -3,7 +3,7 @@ title: "Uniswap-v2 Sözleşmesine Genel Bakış"
 description: Uniswap-v2 sözleşmesi nasıl çalışır? Neden bu şekilde yazılmıştır?
 author: Ori Pomerantz
 tags:
-  - "katılık"
+  - "solidity"
 skill: intermediate
 published: 2021-05-01
 lang: tr
@@ -11,23 +11,23 @@ lang: tr
 
 ## Giriş {#introduction}
 
-[Uniswap v2](https://uniswap.org/whitepaper.pdf) herhangi iki ERC-20 token'ı arasında bir takas piyasası oluşturabilir. Bu yazıda bu protokolü uygulayan sözleşmelerin kaynak kodunu inceleyeceğiz ve neden bu şekilde yazıldığını göreceğiz.
+[Uniswap v2](https://uniswap.org/whitepaper.pdf) herhangi iki ERC-20 token'ı arasında bir takas piyasası oluşturabilir. Bu yazıda bu protokolü uygulayan sözleşmelerin kaynak kodunu inceleyecek ve neden bu şekilde yazıldığını göreceğiz.
 
 ### Uniswap ne yapar? {#what-does-uniswap-do}
 
 Temel olarak iki tür kullanıcı vardır: likidite sağlayıcıları ve ticaret yapanlar.
 
-_Likidite sağlayıcıları_, havuza takas edilebilecek iki token sağlar (bunlara **Token0** ve **Token1** diyeceğiz). Karşılığında, havuzun kısmi sahipliğini temsil eden bir _likidite token_'ı adı verilen üçüncü bir token alırlar.
+_Likidite sağlayıcıları_, havuza takas edilebilecek iki jeton sağlar (bunlara **Jeton0** ve **Jeton1** diyeceğiz). Karşılığında, havuzun kısmi sahipliğini temsil eden ve _likidite jetonu_ adı verilen üçüncü bir jeton alırlar.
 
-_Ticaret yapanlar_, havuza bir tür token gönderir ve (örneğin, **Token0** gönderir ve **Token1** alır) likidite sağlayıcıları tarafından sağlanan havuzdan diğer token'ı alırlar. Takas oranı, havuzun sahip olduğu **Token0**'lar ve **Token1**'lerin göreceli sayısına göre belirlenir. Ayrıca havuz, likidite havuzu için ödül olarak küçük bir yüzde alır.
+_Ticaret yapanlar_, havuza bir tür jeton gönderir ve likidite sağlayıcıları tarafından sağlanan havuzdan diğer jetonu alır (örneğin, **Jeton0** gönderir ve **Jeton1** alır). Takas oranı, havuzun sahip olduğu **Jeton0**'lar ve **Jeton1**'lerin göreceli sayısına göre belirlenir. Ayrıca havuz, likidite havuzu için ödül olarak küçük bir yüzde alır.
 
-Likidite sağlayıcıları varlıklarını geri istediklerinde havuz token'larını yakabilir ve ödül payları da dahil olmak üzere token'larını geri alabilirler.
+Likidite sağlayıcıları varlıklarını geri istediklerinde havuz jetonlarını yakabilir ve ödül payları da dahil olmak üzere jetonlarını geri alabilir.
 
 [Daha geniş çaplı bir açıklama için buraya tıklayın](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
 ### Neden v2? Neden v3 değil? {#why-v2}
 
-Bunu yazdığım esnada, [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) neredeyse hazır durumda. Ancak bu, orijinalinden çok daha karmaşık bir yükseltmedir. Önce v2'yi öğrenmek ve ardından v3'e geçmek daha kolaydır.
+[Uniswap v3](https://uniswap.org/whitepaper-v3.pdf), v2'den çok daha karmaşık bir yükseltmedir. Önce v2'yi öğrenip ardından v3'e geçmek daha kolaydır.
 
 ### Çekirdek Sözleşmeler ve Çevre Sözleşmeler {#contract-types}
 
@@ -71,13 +71,13 @@ Bu, ticaret yapanlar tarafından kullanılan en yaygın akıştır:
 #### Çağıran {#caller-2}
 
 1. Likidite havuzuna eklenecek tutarlarda çevre hesabına bir ödenek sağlayın.
-2. Çevre sözleşmesinin addLiquidity fonksiyonlarından birini çağırın.
+2. Çevre sözleşmesinin `addLiquidity` fonksiyonlarından birini çağırın.
 
 #### Çevre sözleşmesinde (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Gerekirse yeni bir eş takası oluşturun
-4. Mevcut bir eş takası varsa, eklenecek token miktarını hesaplayın. Bunun her iki token için aynı değer olması gerekiyordu, bu nedenle yeni token'ların mevcut token'lara oranı aynı.
-5. Tutarların kabul edilebilir olup olmadığını kontrol edin (çağıranlar, likidite eklemek istemeyecekleri bir minimum tutar altında belirtebilirler)
+4. Mevcut bir eş takası varsa, eklenecek jeton miktarını hesaplayın. Yeni jetonların mevcut jetonlara oranının aynı olması için bunun her iki jeton için aynı değer olması gerekir.
+5. Tutarların kabul edilebilir olup olmadığını kontrol edin (çağıranlar, altında likidite eklemek istemeyecekleri bir minimum tutar belirtebilir)
 6. Çekirdek sözleşmeyi çağırın.
 
 #### Çekirdek sözleşmede (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
@@ -90,7 +90,7 @@ Bu, ticaret yapanlar tarafından kullanılan en yaygın akıştır:
 #### Çağıran {#caller-3}
 
 1. Çevre hesabına, temeldeki token'lar karşılığında yakılacak likidite token'ı ödeneği sağlayın.
-2. Çevre sözleşmesinin removeLiquidity fonksiyonlarından birini çağırın.
+2. Çevre sözleşmesinin `removeLiquidity` fonksiyonlarından birini çağırın.
 
 #### Çevre sözleşmesinde (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
@@ -98,8 +98,8 @@ Bu, ticaret yapanlar tarafından kullanılan en yaygın akıştır:
 
 #### Çekirdek sözleşmede (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
 
-4. Temeldeki token'ları hedef adrese yakılmış token'larla orantılı olarak gönderin. Örneğin, havuzda 1000 A token'ı, 500 B token'ı ve 90 likidite token'ı varsa ve yakmak için 9 token alırsak, likidite token'ının %10'unu yakıyoruz, böylece kullanıcıya 100 A token'ı ve 50 B token'ı geri gönderiyoruz.
-5. Likidite token'larını yakın
+4. Temeldeki jetonları hedef adrese yakılmış jetonlarla orantılı olarak gönderin. Örneğin, havuzda 1000 A token'ı, 500 B token'ı ve 90 likidite token'ı varsa ve yakmak için 9 token alırsak, likidite token'ının %10'unu yakıyoruz, böylece kullanıcıya 100 A token'ı ve 50 B token'ı geri gönderiyoruz.
+5. Likidite jetonlarını yakın
 6. Rezerv tutarlarını güncellemek için `_update`'i çağırın
 
 ## Çekirdek Sözleşmeler {#core-contracts}
@@ -108,7 +108,7 @@ Bunlar likiditeyi tutan güvenli sözleşmelerdir.
 
 ### UniswapV2Pair.sol {#UniswapV2Pair}
 
-[Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) token'ları takas eden asıl havuzu uygular. Temel Uniswap fonksiyonudur.
+[Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol), jetonları takas eden asıl havuzu uygular. Temel Uniswap fonksiyonudur.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -128,13 +128,13 @@ Bunlar, sözleşme bunları uyguladığı (`IUniswapV2Pair` ve `UniswapV2ERC20`)
 contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 ```
 
-Bu sözleşme, likidite token'ları için ERC-20 fonksiyonlarını sağlayan `UniswapV2ERC20`'den kalıtıma uğrar.
+Bu sözleşme, likidite jetonları için ERC-20 fonksiyonlarını sağlayan `UniswapV2ERC20`'den devralır.
 
 ```solidity
     using SafeMath  for uint;
 ```
 
-[SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/2.x/api/math), taşmaları ve yetersizlikleri önlemek için kullanılır. Bu, aksi takdirde bir değerin `-1` olması gerektiği, ancak bunun yerine `2^256-1` olduğu bir durumla karşılaşabileceğimiz için önemlidir.
+[SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/2.x/api/math), taşmaları ve yetersizlikleri önlemek için kullanılır. Bu, bir değerin `-1` olması gerektiği, ancak bunun yerine `2^256-1` olduğu bir durumla karşılaşabileceğimiz için önemlidir.
 
 ```solidity
     using UQ112x112 for uint224;
@@ -150,33 +150,33 @@ Bu kütüphane hakkında daha fazla ayrıntı [belgenin ilerleyen bölümlerinde
     uint public constant MINIMUM_LIQUIDITY = 10**3;
 ```
 
-Sıfıra bölme durumlarından kaçınmak için, her zaman var olan (ancak hesap sıfırına ait olan) minimum sayıda likidite token'ı vardır. O sayı **MINIMUM_LIQUIDITY**, yani bindir.
+Sıfıra bölme durumlarından kaçınmak için her zaman var olan (ancak hesap sıfırına ait olan) minimum sayıda likidite jetonu mevcuttur. O sayı **MINIMUM_LIQUIDITY**, yani bindir.
 
 ```solidity
     bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)')));
 ```
 
-Bu, ERC-20 transfer fonksiyonu için ABI seçicisidir. İki token hesabında ERC-20 token'larını aktarmak için kullanılır.
+Bu, ERC-20 transfer fonksiyonu için ABI seçicisidir. Bu, ERC-20 jetonlarını iki jeton hesabına aktarmak için kullanılır.
 
 ```solidity
     address public factory;
 ```
 
-Bu havuzu oluşturan fabrika sözleşmesi budur. Her havuz, iki ERC-20 token'ı arasında bir takas, fabrika ise tüm bu havuzları birbirine bağlayan merkezi bir noktadır.
+Bu havuzu oluşturan fabrika sözleşmesi budur. Her havuz, iki ERC-20 jetonu arasında bir borsa, fabrika ise tüm bu havuzları birbirine bağlayan merkezi bir noktadır.
 
 ```solidity
     address public token0;
     address public token1;
 ```
 
-Bu havuz tarafından takas edilebilecek iki tür ERC-20 token'ı için sözleşmelerin adresleri vardır.
+Bu havuz tarafından takas edilebilecek iki tür ERC-20 jetonu için sözleşme adresleri mevcuttur.
 
 ```solidity
     uint112 private reserve0;           // uses single storage slot, accessible via getReserves
     uint112 private reserve1;           // uses single storage slot, accessible via getReserves
 ```
 
-Havuzun her token türü için sahip olduğu rezervler. İkisinin aynı miktarda değeri temsil ettiğini varsayıyoruz, ve bu nedenle her token0, reserve1/reserve0 token1'i değerindedir.
+Havuzun her token türü için sahip olduğu rezervler. İkisinin aynı miktarda değeri temsil ettiğini varsayıyoruz; bu nedenle her token0; reserve1/reserve0 token1 değerindedir.
 
 ```solidity
     uint32  private blockTimestampLast; // uses single storage slot, accessible via getReserves
@@ -184,20 +184,20 @@ Havuzun her token türü için sahip olduğu rezervler. İkisinin aynı miktarda
 
 Bir takasın gerçekleştiği son bloğun zaman damgası, zaman içindeki takas oranını izlemek için kullanılır.
 
-Ethereum sözleşmelerinin en büyük gaz giderlerinden biri, sözleşmenin bir çağrısından diğerine devam eden depolamadır. Her depolama hücresi 256 bit uzunluğundadır. Bu yüzden üç değişken olan reserve0, reserve1 ve blokTimestampLast, tek bir depolama değerinin üçünü de içerebileceği bir şekilde tahsis edilir (112+112+32=256).
+Ethereum sözleşmelerinin en büyük gaz giderlerinden biri, sözleşmenin bir çağrısından diğerine devam eden depolamadır. Her depolama hücresi 256 bit uzunluğundadır. Bu yüzden üç değişken olan `reserve0`, `reserve1` ve `blokTimestampLast`, tek bir depolama değerinin üçünü de içerebileceği bir şekilde tahsis edilir (112+112+32=256).
 
 ```solidity
     uint public price0CumulativeLast;
     uint public price1CumulativeLast;
 ```
 
-Bu değişkenler, her bir token için kümülatif maliyetleri tutar (her biri diğerinin cinsinden). Bir zaman aralığı boyunca ortalama takas oranını hesaplamak için kullanılabilirler.
+Bu değişkenler, her bir token için kümülatif maliyetleri tutar (her biri diğerinin cinsinden). Bunlar, bir zaman aralığındaki ortalama takas oranını hesaplamak için kullanılabilir.
 
 ```solidity
     uint public kLast; // reserve0 * reserve1, as of immediately after the most recent liquidity event
 ```
 
-Eş takasının token0 ve token1 arasındaki takas oranına karar verme yöntemi, işlemler sırasında iki rezervin katını sabit tutmaktır. Bu değer `kLast`'dir. Bu, bir likidite sağlayıcısı token yatırdığında veya çektiğinde değişir ve %0,3 piyasa ücreti nedeniyle biraz artar.
+Eş takasının jeton0 ile jeton1 arasındaki takas oranına karar verme yöntemi, işlemler sırasında iki rezervin katını sabit tutmaktır. Bu değer `kLast`'dir. Bu, bir likidite sağlayıcısı jeton yatırdığında veya çektiğinde değişir ve %0,3 piyasa ücreti nedeniyle biraz artar.
 
 İşte basit bir örnek. Basitlik adına, tablonun ondalık kısmından sonra yalnızca üç haneye sahip olduğunu ve sayıların doğru olmaması için %0,3 işlem ücretini göz ardı ettiğimizi unutmayın.
 
@@ -218,7 +218,7 @@ Ticaret yapanlar daha fazla token0 sağladıkça, arz ve talebe bağlı olarak t
     uint private unlocked = 1;
 ```
 
-[Yeniden giriş istismarı](https://medium.com/coinmonks/ethernaut-lvl-10-re-entrancy-walkthrough-how-to-abuse-execution-ordering-and-reproduce-the-dao-7ec88b912c14) üzerine kurulu bir güvenlik açığı sınıfı bulunmaktadır. Uniswap'ın isteğe bağlı ERC-20 token'larını aktarması gerekir; bu, onları çağıran Uniswap borsasını kötüye kullanmaya çalışabilecek ERC-20 sözleşmelerini çağırmak anlamına gelir. Sözleşmenin bir parçası olarak bir `unlocked` değişkenine sahip olarak, fonksiyonların çalışırken (aynı işlem içinde) çağrılmasını önleyebiliriz.
+[Yeniden giriş istismarı](https://medium.com/coinmonks/ethernaut-lvl-10-re-entrancy-walkthrough-how-to-abuse-execution-ordering-and-reproduce-the-dao-7ec88b912c14) üzerine kurulu bir güvenlik açığı sınıfı bulunmaktadır. Uniswap'ın isteğe bağlı ERC-20 token'larını aktarması gerekir; bu, onları çağıran Uniswap borsasını kötüye kullanmaya çalışabilecek ERC-20 sözleşmelerini çağırmak anlamına gelir. Sözleşmenin bir parçası olarak bir `unlocked` değişkenine sahip olduğumuzda fonksiyonların çalışırken (aynı işlem içinde) çağrılmasını önleyebiliriz.
 
 ```solidity
     modifier lock() {
@@ -237,7 +237,7 @@ Eğer `unlocked` bire eşit ise, onu sıfır olarak ayarlayın. Zaten sıfırsa 
         _;
 ```
 
-Bir niteleyicide `_;` orijinal fonksiyon çağrısıdır (tüm parametrelerle birlikte). Burada, fonksiyonun çağrısının yalnızca, çağrıldığında `unlocked` bir olduğunda ve çalışırken `unlocked` değerinin sıfır olması durumunda gerçekleşeceği anlamına gelir.
+Bir niteleyicide `_;` orijinal fonksiyon çağrısıdır (tüm parametrelerle birlikte). Burada, fonksiyon çağrısının yalnızca çağrıldığında `unlocked` bir olduğunda ve çalışırken `unlocked` değerinin sıfır olması durumunda gerçekleşeceği anlamına gelir.
 
 ```solidity
         unlocked = 1;
@@ -265,7 +265,7 @@ Bu fonksiyon, çağıranlara takasın mevcut durumunu sağlar. Solidity fonksiyo
 
 Bu dahili fonksiyon, takastaki bir miktar ERC20 token'ını bir başkasına aktarır. `SELECTOR`, çağırdığımız fonksiyonun `transfer(address,uint)` olduğunu belirtir (yukarıdaki tanıma bakın).
 
-Token fonksiyonu için bir arayüzü içe aktarmak zorunda kalmamak için, çağrıyı [ABI fonksiyonlarından](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions) birini kullanarak "manuel olarak" oluştururuz.
+Jeton fonksiyonu için bir arayüzü içe aktarmak zorunda kalmak istemiyorsak çağrıyı [ABI fonksiyonlarından](https://docs.soliditylang.org/en/v0.8.3/units-and-global-variables.html#abi-encoding-and-decoding-functions) birini kullanarak "manuel olarak" oluştururuz.
 
 ```solidity
         require(success && (data.length == 0 || abi.decode(data, (bool))), 'UniswapV2: TRANSFER_FAILED');
@@ -286,7 +286,7 @@ Bu koşullardan herhangi biri gerçekleşirse, geri döndürün.
     event Burn(address indexed sender, uint amount0, uint amount1, address indexed to);
 ```
 
-Bu iki olay, bir likidite sağlayıcısı likidite yatırdığında (`Mint`) veya onu çektiğinde (`Burn`) ortaya çıkar. Her iki durumda da, yatırılan veya çekilen token0 ve token1 miktarları ve ayrıca bizi çağıran hesabın (`sender`) kimliği olayın bir parçasıdır. Çekme durumunda olay, gönderen ile aynı olmayabilecek token'ları alan (`to`) hedefi de içerir.
+Bu iki olay, bir likidite sağlayıcısı likidite yatırdığında (`Mint`) veya onu çektiğinde (`Burn`) ortaya çıkar. Her iki durumda da, yatırılan veya çekilen token0 ve token1 miktarları ve ayrıca bizi çağıran hesabın (`sender`) kimliği olayın bir parçasıdır. Çekme durumunda olay, gönderici ile aynı olmayabilecek jetonları alan (`to`) hedefi de içerir.
 
 ```solidity
     event Swap(
@@ -305,7 +305,7 @@ Bu olay, ticaret yapan kişi bir token'ı diğeriyle takas ettiğinde ortaya ç�
     event Sync(uint112 reserve0, uint112 reserve1);
 ```
 
-Son olarak, nedenden bağımsız olarak, en son rezerv bilgilerini (ve dolayısıyla takas oranını) sağlamak için token'lar her eklendiğinde veya çekildiğinde `Sync` gönderilir.
+Son olarak, nedenden bağımsız olarak en son rezerv bilgilerini (ve dolayısıyla takas oranını) sağlamak için jetonlar her eklendiğinde veya çekildiğinde `Sync` gönderilir.
 
 #### Kurulum Fonksiyonları {#pair-setup}
 
@@ -345,7 +345,7 @@ Bu fonksiyon, token'lar her yatırıldığında veya çekildiğinde çağrılır
         require(balance0 <= uint112(-1) && balance1 <= uint112(-1), 'UniswapV2: OVERFLOW');
 ```
 
-balance0 veya balance1 (uint256), uint112(-1) (=2^112-1) değerinden yüksekse (böylece uint122'ye dönüştürüldüğünde taşarak 0'a dönüyorsa) taşmaları önlemek için \_update'i sürdürmeyi reddedin. 10^18 birime bölünebilen normal bir token ele alındığında bu, her takastaki tüm token'ların ortalama 5.1\*10^15 ile kısıtlı olduğu anlamına gelir. Şimdiye kadar bu bir sorun olmadı.
+Balance0 veya balance1 (uint256), uint112(-1) (=2^112-1) değerinden yüksekse (böylece uint112'ye dönüştürüldüğünde taşar ve 0'a geri döner) taşmaları önlemek için \_update'i sürdürmeyi reddedin. 10^18 birime bölünebilen normal bir token ele alındığında bu, her takastaki tüm jetonların ortalama 5,1\*10^15 ile kısıtlı olduğu anlamına gelir. Şimdiye kadar bu bir sorun olmadı.
 
 ```solidity
         uint32 blockTimestamp = uint32(block.timestamp % 2**32);
@@ -353,7 +353,7 @@ balance0 veya balance1 (uint256), uint112(-1) (=2^112-1) değerinden yüksekse (
         if (timeElapsed > 0 && _reserve0 != 0 && _reserve1 != 0) {
 ```
 
-Geçen süre sıfır değilse, bu bloktaki ilk takas işlemi biziz demektir. Bu durumda maliyet biriktiricilerini güncellememiz gerekiyor.
+Geçen süre sıfır değilse, bu bloktaki ilk takas işlemi biziz demektir. Bu durumda maliyet biriktiricilerini güncellememiz gerekir.
 
 ```solidity
             // * never overflows, and + overflow is desired
@@ -362,7 +362,7 @@ Geçen süre sıfır değilse, bu bloktaki ilk takas işlemi biziz demektir. Bu 
         }
 ```
 
-Her maliyet biriktirici, son ücret ve (diğer token'ın rezervi/bu token'ın rezervi) saniye cinsinden geçen sürenin çarpımı ile güncellenir. Ortalama bir fiyat elde etmek için kümülatif fiyatın zaman içinde iki nokta olduğunu okursunuz ve aralarındaki zaman farkına bölersiniz. Örneğin, bu olay dizisini varsayalım:
+Her maliyet biriktirici, son ücret ve (diğer jetonun rezervi/bu jetonun rezervi) saniye cinsinden geçen sürenin çarpımı ile güncellenir. Ortalama bir fiyat elde etmek için kümülatif fiyatı zaman içinde iki noktada okursunuz ve aralarındaki zaman farkına bölersiniz. Örneğin, bu olay dizisini varsayalım:
 
 | Olay                                                           |  reserve0 |  reserve1 | zaman damgası | Marjinal takas oranı (reserve1 / reserve0) |       price0CumulativeLast |
 | -------------------------------------------------------------- | --------: | --------: | ------------- | -----------------------------------------: | -------------------------: |
@@ -396,7 +396,7 @@ Son olarak, global değişkenleri güncelleyin ve bir `Sync` olayı yayınlayın
 
 Uniswap 2.0'da ticaret yapanlar, piyasayı kullanmak için %0,30'luk bir ücret öderler. Bu ücretin çoğu (ticaretin %0,25'i) her zaman likidite sağlayıcılarına gider. Kalan %0,05, likidite sağlayıcılarına veya fabrika tarafından protokol ücreti olarak belirtilen ve Uniswap'a geliştirme çabaları için ödeme yapan bir adrese gidebilir.
 
-Hesaplamaları (ve dolayısıyla gaz maliyetlerini) azaltmak için bu ücret, her işlemde değil, yalnızca havuza likidite eklendiğinde veya havuzdan çıkarıldığında hesaplanır.
+Hesaplamaları (ve dolayısıyla gaz maliyetlerini) azaltmak için bu ücret, her işlemde değil, yalnızca likidite havuza eklendiğinde veya havuzdan çıkarıldığında hesaplanır.
 
 ```solidity
         address feeTo = IUniswapV2Factory(factory).feeTo();
@@ -416,7 +416,7 @@ Fabrikanın ücret hedefini okuyun. Sıfır ise protokol ücreti yoktur ve bu ü
             if (_kLast != 0) {
 ```
 
-Likidite sağlayıcıları, likidite token'larının değer kazanmasıyla paylarını alırlar. Ancak protokol ücreti, yeni likidite token'larının basılmasını ve `feeTo` adresine sağlanmasını gerektirir.
+Likidite sağlayıcıları, likidite token'larının değer kazanmasıyla paylarını alırlar. Ancak protokol ücreti, yeni likidite jetonlarının basılmasını ve `feeTo` adresine sağlanmasını gerektirir.
 
 ```solidity
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
@@ -432,7 +432,7 @@ Protokol ücreti tahsil edilecek yeni likidite varsa. Karekök fonksiyonunu [bu 
                     uint liquidity = numerator / denominator;
 ```
 
-Bu karmaşık ücret hesaplaması, 5. sayfadaki [teknik raporda](https://uniswap.org/whitepaper.pdf) açıklanmaktadır. `kLast`'ın hesaplandığı zaman ile şimdiki zaman arasında likidite eklenmediğini veya kaldırılmadığını biliyoruz (çünkü bu hesaplamayı her likidite eklendiğinde veya kaldırıldığında, aslında değişmeden önce yapıyoruz), dolayısıyla `reserve0 * reserve1` üzerindeki tüm değişiklikler işlem ücretlerinden gelmelidir (onlar olmadan `reserve0 * reserve1` değerlerini sabit tutardık).
+Bu karmaşık ücret hesaplaması, 5. sayfadaki [teknik raporda](https://uniswap.org/whitepaper.pdf) açıklanmaktadır. `kLast`'ın hesaplandığı zaman ile şimdiki zaman arasında hiçbir likidite eklenmediğini veya kaldırılmadığını biliyoruz (çünkü bu hesaplamayı her likidite eklendiğinde veya kaldırıldığında, fiilen değişmeden önce yapıyoruz), dolayısıyla `reserve0 *reserve1` işlem ücretlerinden gelmelidir (onlar olmadan `reserve0 *reserve1` sabit tutardık).
 
 ```solidity
                     if (liquidity > 0) _mint(feeTo, liquidity);
@@ -449,7 +449,7 @@ Ek likidite token'larını gerçekten oluşturmak ve bunları `feeTo` öğesine 
     }
 ```
 
-Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, ihtiyaç duymadıkları depolama alanını sıfırlayarak sözleşmeleri Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://eips.ethereum.org/EIPS/eip-3298) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
+Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, sözleşmeleri ihtiyaç duymadıkları depolama alanını sıfırlayarak Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://eips.ethereum.org/EIPS/eip-3298) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
 
 #### Harici Erişilebilir Fonksiyonlar {#pair-external}
 
@@ -462,7 +462,7 @@ Herhangi bir işlem veya sözleşme bu fonksiyonları _çağırabilir_, ancak bu
     function mint(address to) external lock returns (uint liquidity) {
 ```
 
-Bu fonksiyon, bir likidite sağlayıcısı havuza likidite eklediğinde çağrılır. Ödül olarak ek likidite token'ları basar. Aynı işlemde likiditeyi ekledikten sonra onu çağıran [çevre sözleşmesinden](#UniswapV2Router02) (böylece başka hiç kimse meşru sahibinden önce yeni likidite talep eden bir işlem sunamaz).
+Bu fonksiyon, bir likidite sağlayıcısı havuza likidite eklediğinde çağrılır. Ödül olarak ek likidite jetonları basar. Aynı işlemde likiditeyi ekledikten sonra onu çağıran [çevre sözleşmesinden](#UniswapV2Router02) (böylece başka hiç kimse meşru sahibinden önce yeni likidite talep eden bir işlem gönderemez) çağrılmalıdır.
 
 ```solidity
         (uint112 _reserve0, uint112 _reserve1,) = getReserves(); // gas savings
@@ -492,11 +492,11 @@ Varsa toplanacak protokol ücretlerini hesaplayın ve likidite token'larını bu
            _mint(address(0), MINIMUM_LIQUIDITY); // permanently lock the first MINIMUM_LIQUIDITY tokens
 ```
 
-Eğer bu ilk yatırma ise, `MINIMUM_LIQUIDITY` tane token yaratın ve onları kilitlemek için sıfır adresine gönderin. Asla alınamayacakları için havuz asla tamamen boşaltılamaz (bu bizi bazı yerlerde sıfıra bölmekten kurtarır). `MINIMUM_LIQUIDITY` değeri bindir ve çoğu ERC-20'nin bir token'ın 10^-18'lik birimlerine tekrar bölündüğünü göz önünde bulundurursak ETH wei'ye bölündüğünden bu bin, tek bir token'ın değerinin 10^-15 kadarıdır. Yüksek bir ücret değil.
+Eğer bu ilk yatırma ise, `MINIMUM_LIQUIDITY` tane token yaratın ve onları kilitlemek için sıfır adresine gönderin. Asla geri alınamayacakları için havuz asla tamamen boşaltılamaz (bu, bizi bazı yerlerde sıfıra bölmekten kurtarır). `MINIMUM_LIQUIDITY` değeri bindir ve çoğu ERC-20'nin bir jetonun 10^-18'lik birimlerine tekrar bölündüğünü göz önünde bulundurursak ETH wei'ye bölündüğünden bu bin, tek bir jetonun değerinin 10^-15 kadarıdır. Yüksek bir ücret değil.
 
 İlk yatırma sırasında iki token'ın göreceli değerini bilmiyoruz, bu yüzden sadece miktarları çarpıyoruz ve yatırma işleminin bize her iki token'da da eşit değer sağladığını varsayarak bir karekök alıyoruz.
 
-Arbitrajda değer kaybetmemek için eşit değer sağlamak para yatıran kişinin çıkarına olduğu için buna güvenebiliriz. Diyelim ki iki token'ın değeri aynı, ancak yatıran kişimiz **Token0**'a göre dört kat daha fazla **Token1** yatırdı. Ticaret yapan bir kişi, eş takasının **Token0**'ın daha değerli olduğunu düşündüğü gerçeğini ondan değer yaratmak için kullanabilir.
+Arbitrajda değer kaybetmemek için eşit değer sağlamak para yatıran kişinin çıkarına olduğu için buna güvenebiliriz. Diyelim ki iki jetonun değeri aynı, ancak yatıran kişimiz **Jeton0**'a göre dört kat daha fazla **Jeton1** yatırdı. Bir tacir, eş takasının **Jeton0**'ın daha değerli olduğunu düşünmesi gerçeğini ondan değer yaratmak için kullanabilir.
 
 | Olay                                                               | reserve0 | reserve1 | reserve0 \* reserve1 | Havuzun değeri (reserve0 + reserve1) |
 | ------------------------------------------------------------------ | -------: | -------: | -------------------: | -----------------------------------: |
@@ -512,7 +512,7 @@ Gördüğünüz gibi, ticaret yapan kişi havuzun değerindeki bir düşüşten 
 
 Sonraki her yatırmada, iki varlık arasındaki takas oranını zaten biliyoruz ve likidite sağlayıcılarının her ikisinde de eşit değer sağlamasını bekliyoruz. Vermezlerse, ceza olarak sağladıkları daha düşük değere dayalı olarak onlara likidite token'ları veririz.
 
-İster ilk yatırma ister sonraki bir yatırma olsun, sağladığımız likidite token'larının sayısı `reserve0*reserve1`'deki değişikliğin kareköküne eşittir ve likidite token'ının değeri değişmez (her iki tür için de eşit değerlere sahip olmayan bir yatırım almadığı sürece böyledir, aksi hâlde "para cezası" dağıtılır). İşte aynı değere sahip iki token'lı, üç iyi yatırma ve bir kötü yatırma bulunan başka bir örnek (yalnızca bir token türünden para yatırma, bu nedenle herhangi bir likidite token'ı üretmez).
+İster ilk yatırma ister sonraki bir yatırma olsun, sağladığımız likidite token'larının sayısı `reserve0*reserve1`'deki değişikliğin kareköküne eşittir ve likidite token'ının değeri değişmez (her iki tür için de eşit değerlere sahip olmayan bir yatırım almadığı sürece böyledir, aksi hâlde "para cezası" dağıtılır). İşte aynı değere sahip iki jetonlu, üç iyi yatırma ve bir kötü yatırma bulunan başka bir örnek (yalnızca bir jeton türünün yatırılması, bu nedenle herhangi bir likidite jetonu üretmez).
 
 | Olay                       | reserve0 | reserve1 | reserve0 \* reserve1 | Havuz değeri (reserve0 + reserve1) | Bu yatırma için basılmış likidite token'ları | Toplam likidite token'ları | her bir likidite token'ının değeri |
 | -------------------------- | -------: | -------: | -------------------: | ---------------------------------: | -------------------------------------------: | -------------------------: | ---------------------------------: |
@@ -605,7 +605,7 @@ Bu fonksiyonun [bir çevre sözleşmesinden](#UniswapV2Router02) çağrılması 
         { // scope for _token{0,1}, avoids stack too deep errors
 ```
 
-Yerel değişkenler ya bellekte ya da çok fazla değilse doğrudan yığında saklanabilir. Yığını kullanmak için sayıyı sınırlayabilirsek daha az gaz kullanırız. Daha detaylı incelemek için [sarı kağıt, resmi Ethereum şartnamesinin](https://ethereum.github.io/yellowpaper/paper.pdf) 26. sayfasındaki 298. denkleme bakınız.
+Yerel değişkenler ya bellekte ya da çok fazla değilse doğrudan yığında saklanabilir. Yığını kullanmak için sayıyı sınırlayabilirsek daha az gaz kullanırız. Daha detaylı incelemek için [sarı kağıt, resmi Ethereum şartnamesinin](https://ethereum.github.io/yellowpaper/paper.pdf) 26. sayfasındaki 298. denkleme bakın.
 
 ```solidity
             address _token0 = token0;
@@ -655,12 +655,12 @@ Bu, takastan zarara uğramayacağımızdan emin olmak için yapılan bir doğrul
 
 ##### Senkronize Etme veya Fazlasını Alma
 
-Reel bakiyelerin, eş takasının sahip olduğunu düşündüğü rezervlerle uyumsuz olması mümkündür. Sözleşmenin izni olmadan token'ları çekmenin bir yolu yoktur, ancak yatırımlar farklı bir konudur. Bir hesap borsaya `mint` veya `swap` çağırmadan token aktarabilir.
+Reel bakiyelerin, eş takasının sahip olduğunu düşündüğü rezervlerle uyumsuz olması mümkündür. Sözleşmenin izni olmadan token'ları çekmenin bir yolu yoktur, ancak yatırımlar farklı bir konudur. Bir hesap borsaya `mint` veya `swap` çağırmadan jeton aktarabilir.
 
 Bu durumda iki çözüm var:
 
 - `sync`, rezervleri mevcut bakiyelere güncelleyin
-- `skim`, fazladan miktarı çekin. Token'ları kimin yatırdığını bilmediğimiz için herhangi bir hesabın `skim` komutunu çağırmasına izin verildiğini unutmayın. Bu bilgi bir olayda yayınlanır, ancak olaylara blok zincirinden erişilemez.
+- `skim`, fazladan miktarı çekin. Jetonları kimin yatırdığını bilmediğimiz için herhangi bir hesabın `skim` komutunu çağırmasına izin verildiğini unutmayın. Bu bilgi bir olayda yayınlanır, ancak olaylara blok zincirinden erişilemez.
 
 ```solidity
     // force balances to match reserves
@@ -695,7 +695,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
     address public feeToSetter;
 ```
 
-Bu durum değişkenleri protokol ücretini uygulamak için gereklidir (bkz. [teknik rapor](https://uniswap.org/whitepaper.pdf), 5. sayfa). `feeTo` adresi, protokol ücreti için likidite token'larını biriktirir ve `feeToSetter`, `feeTo`'u farklı bir adresle değiştirmesine izin verilen adrestir.
+Bu durum değişkenleri protokol ücretini uygulamak için gereklidir (bkz. [teknik rapor](https://uniswap.org/whitepaper.pdf), 5. sayfa). `feeTo` adresi, protokol ücreti için likidite jetonlarını biriktirir ve `feeToSetter`, `feeTo`'un farklı bir adresle değiştirilmesine olanak tanıyan adrestir.
 
 ```solidity
     mapping(address => mapping(address => address)) public getPair;
@@ -704,17 +704,17 @@ Bu durum değişkenleri protokol ücretini uygulamak için gereklidir (bkz. [tek
 
 Bu değişkenler; eşleri, iki token türü arasındaki değişimleri takip eder.
 
-İlki olan `getPair`, takas ettiği iki ERC-20 token'ını temel alan bir eş takası sözleşmesini tanımlayan bir eşleştirmedir. ERC-20 token'ları, onları uygulayan sözleşmelerin adresleri ile tanımlanır, bu nedenle anahtarlar ve değerin tümü adreslerdir. `tokenA`'dan `tokenB`'ye dönüştürmenize izin veren eş takasının adresini almak için şunu kullanırsınız: `getPair[<tokenA address>][<tokenB address>]` (veya tam tersi).
+İlki olan `getPair`, takas ettiği iki ERC-20 jetonunu temel alan eş takası sözleşmesini tanımlayan bir eşleştirmedir. ERC-20 jetonları, onları uygulayan sözleşmelerin adresleri ile tanımlanır, bu nedenle anahtarlar ve değerin tümü adreslerdir. `tokenA`'dan `tokenB`'ye dönüştürmenize izin veren eş takasının adresini almak için şunu kullanırsınız: `getPair[<tokenA address>][<tokenB address>]` (veya tam tersi).
 
 İkinci değişken olan `allPairs`, bu fabrika tarafından oluşturulan eş takaslarının tüm adreslerini içeren bir dizidir. Ethereum'da bir eşlemenin içeriğini yineleyemezsiniz veya tüm anahtarların bir listesini alamazsınız, bu nedenle bu fabrikanın hangi takasları yönettiğini bilmenin tek yolu bu değişkendir.
 
-Not: Bir eşlemenin tüm anahtarlarını yineleyememenizin nedeni, sözleşme verilerinin depolanmasının _pahalı_ olmasıdır, bu nedenle ne kadar azını kullanırsak ve onu ne kedar az değiştirirsek o kadar iyi olur. [Tekrarlamayı destekleyen eşleştirmeler](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol) oluşturabilirsiniz, ancak bunlar anahtar listesi için ekstra depolama gerektirirler. Çoğu uygulamada buna ihtiyacınız yoktur.
+Not: Bir eşlemenin tüm anahtarlarını yineleyememenizin nedeni, sözleşme verilerinin depolanmasının _pahalı_ olmasıdır, bu nedenle ne kadar azını kullanırsak ve onu ne kadar az değiştirirsek o kadar iyidir. [Yinelemeyi destekleyen eşleştirmeler](https://github.com/ethereum/dapp-bin/blob/master/library/iterable_mapping.sol) oluşturabilirsiniz, ancak bunlar anahtar listesi için ekstra depolama gerektirir. Çoğu uygulamada buna ihtiyacınız yoktur.
 
 ```solidity
     event PairCreated(address indexed token0, address indexed token1, address pair, uint);
 ```
 
-Bu olay, yeni bir eş takası oluşturulduğunda yayınlanır. Token'ların adreslerini, eş takasının adresini ve fabrika tarafından yönetilen toplam takas sayısını içerir.
+Bu olay, yeni bir eş takası oluşturulduğunda yayınlanır. Jetonların adreslerini, eş takasının adresini ve fabrika tarafından yönetilen toplam takas sayısını içerir.
 
 ```solidity
     constructor(address _feeToSetter) public {
@@ -736,27 +736,27 @@ Bu fonksiyon, eş takaslarının sayısını döndürür.
     function createPair(address tokenA, address tokenB) external returns (address pair) {
 ```
 
-Bu, fabrikanın ana işlevidir, yani iki ERC-20 token'ı arasında bir eş takası yaratmak. Bu fonksiyonu herhangi birinin çağırabileceğini unutmayın. Yeni bir eş takası oluşturmak için Uniswap'ten izin almanız gerekmez.
+Bu, fabrikanın ana işlevidir, yani iki ERC-20 token'ı arasında bir eş takası yaratmak. Bu fonksiyonu herhangi birinin çağırabileceğini unutmayın. Yeni bir takas çifti oluşturmak için Uniswap'ten izin almanız gerekmez.
 
 ```solidity
         require(tokenA != tokenB, 'UniswapV2: IDENTICAL_ADDRESSES');
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Zincir dışında önceden hesaplanabilmesi için yeni takasın adresinin deterministik olmasını istiyoruz (bu, [katman 2 işlemleri](/developers/docs/layer-2-scaling/) için yararlı olabilir). Bunu yapmak için, onları aldığımız sıraya bakılmaksızın, token adreslerinin tutarlı bir sırasına sahip olmamız gerekir, bu yüzden onları burada sıralarız.
+Zincir dışında önceden hesaplanabilmesi için yeni takasın adresinin deterministik olmasını istiyoruz (bu, [katman 2 işlemleri](/developers/docs/layer-2-scaling/) için yararlı olabilir). Bunu yapabilmek için onları aldığımız sıraya bakmaksızın jeton adreslerinin tutarlı bir sırasına sahip olmamız gerekir, bu yüzden de onları burada sıralarız.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
         require(getPair[token0][token1] == address(0), 'UniswapV2: PAIR_EXISTS'); // single check is sufficient
 ```
 
-Büyük likidite havuzları, daha istikrarlı fiyatlara sahip oldukları için küçük olanlardan daha iyidir. Token çifti başına birden fazla likidite havuzuna sahip olmak istemiyoruz. Hâlihazırda bir değişim takas, aynı çift için başka bir takas oluşturmaya gerek yoktur.
+Büyük likidite havuzları, daha istikrarlı fiyatlara sahip oldukları için küçük olanlardan daha iyidir. Jeton çifti başına birden fazla likidite havuzuna sahip olmak istemiyoruz. Hâlihazırda bir takas yeri varsa, aynı çift için başka bir takas yeri oluşturmaya gerek yoktur.
 
 ```solidity
         bytes memory bytecode = type(UniswapV2Pair).creationCode;
 ```
 
-Yeni bir sözleşme oluşturmak için onu oluşturan koda ihtiyacımız var (hem yapıcı fonksiyon hem de gerçek sözleşmenin EVM bayt kodunu belleğe yazan kod). Normalde Solidity'de sadece `addr = new <name of contract>(<constructor parameters>)` kullanırız ve derleyici bizim için her şeyi halleder, ancak deterministik bir sözleşme adresine sahip olmak için [CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014)'u kullanmamız gerekir. Bu kod yazıldığında opcode henüz Solidity tarafından desteklenmiyordu, bu yüzden kodu manuel olarak almak gerekiyordu. Bu artık bir sorun değil, çünkü [Solidity artık CREATE2'yi destekliyor](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
+Yeni bir sözleşme oluşturmak için onu oluşturan koda ihtiyacımız vardır (hem oluşturucu fonksiyon hem de gerçek sözleşmenin EVM bit kodunu belleğe yazan kod). Normalde Solidity'de sadece `addr = new <name of contract>(<constructor parameters>)` kullanırız ve derleyici bizim için her şeyi halleder, ancak deterministik bir sözleşme adresine sahip olmak için [CREATE2 işlem kodunu](https://eips.ethereum.org/EIPS/eip-1014) kullanmamız gerekir. Bu kod yazıldığında işlem kodu henüz Solidity tarafından desteklenmediği için kodu manuel olarak almak gerekiyordu. Bu artık bir sorun değil, çünkü [Solidity artık CREATE2'yi destekliyor](https://docs.soliditylang.org/en/v0.8.3/control-structures.html#salted-contract-creations-create2).
 
 ```solidity
         bytes32 salt = keccak256(abi.encodePacked(token0, token1));
@@ -796,13 +796,13 @@ Yeni çift bilgisini durum değişkenlerine kaydedin ve yeni eş takasını dün
 }
 ```
 
-Bu iki fonksiyon, `feeSetter` öğesinin ücret alıcısını (varsa) kontrol etmesine ve `feeSetter` öğesini yeni bir adresle değiştirmesine olanak tanır.
+Bu iki fonksiyon `feeSetter` öğesinin ücret alıcısını (varsa) kontrol etmesine ve `feeSetter` öğesini yeni bir adresle değiştirmesine olanak tanır.
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol), ERC-20 likidite token'ını uygular. [OpenWhisk ERC-20 sözleşmesine](/developers/tutorials/erc20-annotated-code) benzer, bu yüzden sadece `permit` işlevselliği olan farklı kısmı açıklayacağım.
+[Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol), ERC-20 likidite jetonunu uygular. Bu sözleşme [OpenZeppelin ERC-20 sözleşmesine](/developers/tutorials/erc20-annotated-code) benzer, bu yüzden sadece `permit` işlevselliği olan farklı kısmı açıklayacağım.
 
-Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. ERC-20 token'larınız varsa ancak ETH'niz yoksa işlem gönderemezsiniz, bu nedenle onlarla hiçbir şey yapamazsınız. Bu sorundan kaçınmanın bir yolu [meta-işlemlerdir](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Token'ların sahibi, bir başkasının jetonları zincirden çekmesine ve interneti kullanarak alıcıya göndermesine izin veren bir işlem imzalar. Daha sonra ETH'ye sahip olan alıcı, token sahibi adına izni gönderir.
+Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. ERC-20 jetonlarınız varsa ancak ETH'niz yoksa işlem gönderemez, yani onlarla hiçbir şey yapamazsınız. Bu sorundan kaçınmanın bir yolu [meta-işlemlerdir](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Jetonların sahibi, bir başkasının jetonları zincirden çekmesine ve de interneti kullanarak alıcıya göndermesine izin veren bir işlemi imzalar. Daha sonra ETH'ye sahip olan alıcı, token sahibi adına izni gönderir.
 
 ```solidity
     bytes32 public DOMAIN_SEPARATOR;
@@ -810,13 +810,13 @@ Ethereum'daki işlemler, gerçek paraya eş değer olan ether'a (ETH) mal olur. 
     bytes32 public constant PERMIT_TYPEHASH = 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
 ```
 
-Bu hash değeri, [işlem türü için tanımlayıcıdır](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). Burada desteklediğimiz tek şey, bu parametrelerle `Permit`'dir.
+Bu hash değeri, [işlem türü için tanımlayıcıdır](https://eips.ethereum.org/EIPS/eip-712#rationale-for-typehash). Bu parametrelerle burada desteklediğimiz tek şey `Permit`'tir.
 
 ```solidity
     mapping(address => uint) public nonces;
 ```
 
-Bir alıcının dijital imzayı taklit etmesi mümkün değildir. Ancak, aynı işlemi iki kez göndermek önemsizdir. (bu, bir [tekrar saldırısı](https://wikipedia.org/wiki/Replay_attack) biçimidir). Bunu önlemek için, bir [nonce](https://wikipedia.org/wiki/Cryptographic_nonce) kullanırız. Yeni bir `Permit`'in nonce değeri son kullanılandan bir fazla değilse, geçersiz olduğunu varsayıyoruz.
+Bir alıcının dijital imzayı taklit etmesi mümkün değildir. Ancak, aynı işlemi iki kez göndermek önemsizdir (bu, bir [tekrar saldırısı](https://wikipedia.org/wiki/Replay_attack) biçimidir). Bunu önlemek için, bir [nonce](https://wikipedia.org/wiki/Cryptographic_nonce) kullanırız. Yeni bir `Permit`'in nonce değeri son kullanılandan bir fazla değilse, geçersiz olduğunu varsayarız.
 
 ```solidity
     constructor() public {
@@ -826,7 +826,7 @@ Bir alıcının dijital imzayı taklit etmesi mümkün değildir. Ancak, aynı i
         }
 ```
 
-Bu, [zincir tanımlayıcısını](https://chainid.network/) almaya yarayan koddur. [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html) denilen bir EVM derleme diyalekti kullanır. Yul'un mevcut versiyonunda `chainid` değil `chainid()` kullanmanız gerektiğini unutmayın.
+Bu, [zincir tanımlayıcısını](https://chainid.network/) almaya yarayan koddur. [Yul](https://docs.soliditylang.org/en/v0.8.4/yul.html) denilen bir EVM derleme biçemi kullanır. Yul'un mevcut versiyonunda `chainid` değil, `chainid()` kullanmanız gerektiğini unutmayın.
 
 ```solidity
         DOMAIN_SEPARATOR = keccak256(
@@ -865,7 +865,7 @@ Son teslim tarihinden sonra işlemleri kabul etmeyin.
         );
 ```
 
-`abi.encodePacked(...)` almayı beklediğimiz mesajdır. Nonce değerinin ne olması gerektiğini biliyoruz, bu yüzden onu parametre olarak almamıza gerek yok
+`abi.encodePacked(...)` almayı beklediğimiz mesajdır. Nonce değerinin ne olması gerektiğini biliyoruz, bu yüzden onu parametre olarak almamıza gerek yoktur.
 
 Ethereum imza algoritması, imzalamak için 256 bit almayı bekler, bu nedenle `keccak256` hash fonksiyonunu kullanırız.
 
@@ -873,7 +873,7 @@ Ethereum imza algoritması, imzalamak için 256 bit almayı bekler, bu nedenle `
         address recoveredAddress = ecrecover(digest, v, r, s);
 ```
 
-Özetten ve imzadan, [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/) kullanarak imzalayan adresi alabiliriz.
+Özetten ve imzadan, [ecrecover](https://coders-errand.com/ecrecover-signature-verification-ethereum/) kullanarak onu imzalayan adresi alabiliriz.
 
 ```solidity
         require(recoveredAddress != address(0) && recoveredAddress == owner, 'UniswapV2: INVALID_SIGNATURE');
@@ -886,11 +886,11 @@ Her şey tamamsa bunu bir [ERC-20 onayı](https://eips.ethereum.org/EIPS/eip-20#
 
 ## Çevre Sözleşmeleri {#periphery-contracts}
 
-Çevre sözleşmeler, Uniswap için API'dir (uygulama programı arayüzü). Diğer sözleşmelerden veya merkeziyetsiz uygulamalardan harici çağrılar için kullanılabilirler. Çekirdek sözleşmeleri doğrudan arayabilirsiniz, ancak bu daha karmaşıktır ve bir hata yaparsanız değer kaybedebilirsiniz. Çekirdek sözleşmeler, yalnızca aldatılmadıklarından emin olmak için testler içerir, başkaları için doğruluk testi yapmak için değil. Bunlar, gerektiğinde güncellenebilmeleri için çevrededir.
+Çevre sözleşmeler, Uniswap için API'dir (uygulama programı arayüzü). Diğer sözleşmelerden veya merkeziyetsiz uygulamalardan harici çağrılar için kullanılabilirler. Çekirdek sözleşmeleri doğrudan çağırabilirsiniz ancak bu daha karmaşıktır ve bir hata yaparsanız değer kaybedebilirsiniz. Çekirdek sözleşmeler, başkaları için doğruluk testi yapmaya değil yalnızca bu kişilerin aldatılmadıklarından emin olmaya yönelik testler içerir. Bunlar, gerektiğinde güncellenebilmeleri için çevrededir.
 
 ### UniswapV2Router01.sol {#UniswapV2Router01}
 
-[Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Neyse ki çevre sözleşmeler durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
+[Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Neyse ki çevre sözleşmeleri durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
 
 ### UniswapV2Router02.sol {#UniswapV2Router02}
 
@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Bunların çoğuyla ya daha önce karşılaştık ya da çoğu oldukça açık. `IWETH.sol` tek istisnadır. Uniswap v2, herhangi bir çift ERC-20 token'ı için takasa izin verir ancak ether'ın (ETH) kendisi bir ERC-20 token'ı değildir. Standarttan önce gelir ve benzersiz mekanizmalar ile aktarılır. ERC-20 token'ları için geçerli olan sözleşmelerde ETH kullanımını etkinleştirmek için insanlar [paketlenmiş ether (WETH)](https://weth.io/) sözleşmesini buldu. Bu sözleşmeye ETH gönderirsiniz ve size eş değer miktarda WETH basar. Veya WETH'yi yakabilir ve ETH'yi geri alabilirsiniz.
+Bunların çoğuyla ya daha önce karşılaştık ya da çoğu oldukça açık. `IWETH.sol` tek istisnadır. Uniswap v2, herhangi bir çift ERC-20 jetonu için takasa izin verir ancak ether'in (ETH) kendisi bir ERC-20 jetonu değildir. Standarttan öncesine tarihlidir ve benzersiz mekanizmalar ile aktarılır. ERC-20 jetonları için geçerli olan sözleşmelerde ETH kullanımını etkinleştirmek için insanlar [paketlenmiş ether (WETH)](https://weth.io/) sözleşmesini bulmuştur. Bu sözleşmeye ETH gönderirsiniz ve size eş değer miktarda WETH basar. Veya WETH'yi yakabilir ve ETH'yi geri alabilirsiniz.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
@@ -919,7 +919,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
     address public immutable override WETH;
 ```
 
-Yönlendiricinin hangi fabrikayı kullanacağını ve WETH gerektiren işlemler için hangi WETH sözleşmesinin kullanılacağını bilmesi gerekir. Bu değerler [değiştirilemez](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), yani bu sadece yapıcıda ayarlanabilirler. Bu durum kullanıcılara, kimsenin bu değerleri güvenilmez sözleşmelere yönlendirecek şekilde değiştiremeyeceğine dair güven verir.
+Yönlendiricinin hangi fabrikayı kullanacağını ve WETH gerektiren işlemler için hangi WETH sözleşmesinin kullanılacağını bilmesi gerekir. Bu değerler [değiştirilemez](https://docs.soliditylang.org/en/v0.8.3/contracts.html#constant-and-immutable-state-variables), yani sadece oluşturucuda ayarlanabilir. Bu durum kullanıcılara, kimsenin bu değerleri güvenilmez sözleşmelere yönlendirecek şekilde değiştiremeyeceğine dair güven verir.
 
 ```solidity
     modifier ensure(uint deadline) {
@@ -945,7 +945,7 @@ Yapıcı sadece değişmez durum değişkenlerini ayarlar.
     }
 ```
 
-Bu fonksiyon, WETH sözleşmesinden token'ları tekrar ETH'ye döndürdüğümüzde çağrılır. Sadece kullandığımız WETH sözleşmesi bunu yapmaya yetkilidir.
+Bu fonksiyon, WETH sözleşmesinden token'ları tekrar ETH'ye döndürdüğümüzde çağrılır. Sadece kullandığımız WETH sözleşmesi bunu yapmak için yetkilidir.
 
 #### Likidite Ekleyin {#add-liquidity}
 
@@ -957,7 +957,7 @@ Bu fonksiyonlar, likidite havuzunu artıran eş takasına token'lar ekler.
     function _addLiquidity(
 ```
 
-Bu fonksiyon, eş takasına yatırılması gereken A ve B token'larının miktarını hesaplamak için kullanılır.
+Bu fonksiyon, eş takasına yatırılması gereken A ve B jetonlarının miktarını hesaplamak için kullanılır.
 
 ```solidity
         address tokenA,
@@ -971,14 +971,14 @@ Bunlar, ERC-20 token sözleşmelerinin adresleridir.
         uint amountBDesired,
 ```
 
-Bunlar, likidite sağlayıcısının yatırmak istediği miktarlardır. Ayrıca yatırılacak maksimum A ve B miktarlarıdır.
+Bunlar, likidite sağlayıcısının yatırmak istediği miktarlardır. Ayrıca yatırılacak maksimum A ve B miktarlarını belirtir.
 
 ```solidity
         uint amountAMin,
         uint amountBMin
 ```
 
-Bunlar, yatırmak için kabul edilebilir minimum tutarlardır. Bu tutarlar veya daha fazlası ile işlem gerçekleşemezse, geri dönün. Bu özelliği istemiyorsanız, sıfırı belirtmeniz yeterlidir.
+Bunlar, yatırmak için kabul edilebilir minimum tutarlardır. Bu tutarlar veya daha fazlası ile gerçekleşemezse, işlemi geri alın. Bu özelliği istemiyorsanız, sıfırı belirtmeniz yeterlidir.
 
 Likidite sağlayıcıları, işlemi mevcut takas oranına yakın bir takas oranıyla sınırlamak istedikleri için genelde bir minimum tutar belirtir. Takas oranının çok fazla dalgalanması, temeldeki değerleri değiştiren haberler olduğu anlamına gelebilir ve ne yapacaklarına manuel olarak karar vermek isteyebilirler.
 
@@ -993,7 +993,7 @@ Likidite sağlayıcıları, işlemi mevcut takas oranına yakın bir takas oran�
 
 Takas oranı 0,9 ila 1,25 arasında kaldığı sürece işlem gerçekleşir. Takas oranı bu aralığın dışına çıkarsa işlem iptal edilir.
 
-Bu önlemin nedeni; işlemlerin hemen gerçekleşmemesidir. Siz işlemleri gönderirsiniz ve sonunda bir madenci bunları bir bloğa dahil eder (gaz fiyatınız çok düşük değilse böyledir, aksi takdirde aynı nonce değeri üzerine işlem yazmak için daha yüksek bir gaz fiyatı olan başka bir işlem göndermeniz gerekir). Gönderme ve dahil etme arasındaki aralıkta ne olacağını kontrol edemezsiniz.
+Bu önlemin nedeni işlemlerin hemen olmaması, onları göndermeniz ve sonunda bir madencinin bunları bir bloğa dahil etmesidir (gaz fiyatınız çok düşükse bu durumda, aynı nonce'un üzerine yazmak için daha yüksek bir gaz fiyatı ile başka bir işlem göndermeniz gerekir). Gönderme ile dahil etme arasındaki aralıkta ne olacağını kontrol edemezsiniz.
 
 ```solidity
     ) internal virtual returns (uint amountA, uint amountB) {
@@ -1028,7 +1028,7 @@ Mevcut rezervler boşsa, bu yeni bir eş takasıdır. Yatırılacak tutarlar, li
             uint amountBOptimal = UniswapV2Library.quote(amountADesired, reserveA, reserveB);
 ```
 
-Eğer miktarların ne olduğunu görmemiz gerekiyorsa, [bu fonksiyonu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35) kullanarak en uygun miktarı alırız. Mevcut rezervlerle aynı oranı istiyoruz.
+Eğer miktarların ne olduğunu görmemiz gerekiyorsa, [bu fonksiyonu](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/libraries/UniswapV2Library.sol#L35) kullanarak en uygun miktarı buluruz. Mevcut rezervlerle aynı oranı istiyoruz.
 
 ```solidity
             if (amountBOptimal <= amountBDesired) {
@@ -1036,7 +1036,7 @@ Eğer miktarların ne olduğunu görmemiz gerekiyorsa, [bu fonksiyonu](https://g
                 (amountA, amountB) = (amountADesired, amountBOptimal);
 ```
 
-`amountBOptimal`, likidite sağlayıcısının yatırmak istediği miktardan daha küçükse bu, B token'ının şu anda likidite yatırıcısının düşündüğünden daha değerli olduğu anlamına gelir, bu nedenle daha küçük bir miktar gereklidir.
+Eğer `amountBOptimal`, likidite sağlayıcısının yatırmak istediği miktardan daha küçükse, bu, B jetonunun şu anda likidite yatırıcısının düşündüğünden daha değerli olduğu anlamına gelir, bu nedenle daha küçük bir miktar gereklidir.
 
 ```solidity
             } else {
@@ -1046,19 +1046,13 @@ Eğer miktarların ne olduğunu görmemiz gerekiyorsa, [bu fonksiyonu](https://g
                 (amountA, amountB) = (amountAOptimal, amountBDesired);
 ```
 
-Optimal B miktarı, istenen B miktarından daha fazlaysa bu, B token'larının şu anda likidite yatıran kişinin düşündüğünden daha az değerli olduğu anlamına gelir, bu nedenle daha yüksek bir miktar gereklidir. Ancak istenilen miktar bir maksimum olduğu için bunu yapamıyoruz. Bunun yerine, istenen miktarda B token'ı için en uygun A token'ı sayısını hesaplıyoruz.
+Optimal B miktarı, istenen B miktarından daha fazlaysa bu durum, B jetonlarının şu anda likidite yatıran kişinin düşündüğünden daha az değerli olduğu anlamına gelir; bu nedenle de daha yüksek bir miktar gereklidir. Ancak istenilen miktar bir maksimum olduğu için bunu yapamıyoruz. Bunun yerine, istenen miktarda B token'ı için en uygun A token'ı sayısını hesaplıyoruz.
 
-Hepsini bir araya getirdiğimizde bu grafiği elde ederiz. Bin A token'ı (mavi çizgi) ve bin B token'ı (kırmızı çizgi) yatırmaya çalıştığınızı varsayalım. X ekseni takas oranıdır, A/B. X=1 ise, değer olarak eşittirler ve her birinden bin tane yatırırsınız. X=2 ise A, B değerinin iki katıdır (her A token'ı için iki B token'ı alırsınız), bu nedenle bin B token'ı, ancak yalnızca 500 A token'ı yatırırsınız. X=0,5 ise, durum tersine çevrilir, bin A token'ı ve beş yüz B token'ı olur.
+Hepsini bir araya getirdiğimizde bu grafiği elde ederiz. Bin A jetonu (mavi çizgi) ve bin B jetonu (kırmızı çizgi) yatırmaya çalıştığınızı varsayalım. X ekseni takas oranıdır, A/B. X=1 ise, değer olarak eşittirler ve her birinden bin tane yatırırsınız. A x=2 ise B değerinin iki katıdır (her A jetonu için iki B jetonu alırsınız), bu nedenle bin B jetonu ile ancak 500 A jetonu yatırırsınız. X=0,5 ise, durum tersine çevrilir, bin A token'ı ve beş yüz B token'ı olur.
 
 ![Çizelge](liquidityProviderDeposit.png)
 
-```solidity
-            }
-        }
-    }
-```
-
-Likiditeyi doğrudan ana sözleşmeye yatırabilirsiniz ([UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110) kullanarak), ancak ana sözleşme yalnızca kendisinin aldatılmadığını kontrol eder, bu nedenle, işleminizi gönderdiğiniz zaman ile gerçekleştirildiği zaman arasında takas oranı değişirse değer kaybetme riskiyle karşı karşıya kalırsınız. Çevre sözleşmesini kullanırsanız, yatırmanız gereken tutarı hesaplar ve hemen yatırır, böylece takas oranı değişmez ve hiçbir şey kaybetmezsiniz.
+Likiditeyi doğrudan ana sözleşmeye yatırabilirsiniz ([UniswapV2Pair::mint](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol#L110) kullanarak), ancak ana sözleşme yalnızca kendisinin aldatılmadığını kontrol eder, bu nedenle, işleminizi gönderdiğiniz zaman ile gerçekleştirildiği zaman arasında takas oranı değişirse değer kaybetme riskiyle karşı karşıya kalırsınız. Çevre sözleşmesini kullanırsanız, bu sözleşme yatırmanız gereken tutarı hesaplar ve hemen yatırır; takas oranı değişmez ve hiçbir şey kaybetmezsiniz.
 
 ```solidity
     function addLiquidity(
@@ -1082,7 +1076,7 @@ Bu fonksiyon, likidite yatırma işlemiyle çağrılabilir. Çoğu parametre, yu
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
 ```
 
-Fiili olarak yatırılacak tutarları hesaplıyoruz ve ardından likidite havuzunun adresini buluyoruz. Gazdan tasarruf etmek için bunu fabrikaya sorarak değil, `pairFor` kütüphane işlevini kullanarak yapıyoruz (aşağıdaki kütüphanelere bakın)
+Fiili olarak yatırılacak tutarları hesaplıyoruz ve ardından likidite havuzunun adresini buluyoruz. Gazdan tasarruf etmek için bunu fabrikaya sorarak değil, `pairFor` kütüphane işlevini kullanarak yaparız (aşağıdaki kütüphanelere bakın)
 
 ```solidity
         TransferHelper.safeTransferFrom(tokenA, msg.sender, pair, amountA);
@@ -1096,7 +1090,7 @@ Kullanıcıdan doğru miktarda token'ı eş takasına aktarın.
     }
 ```
 
-Karşılığında, havuzun kısmi sahipliği için `to` adresine likidite token'ları verin. Çekirdek sözleşmenin `mint` fonksiyonu, sahip olduğu ekstra token sayısını (son likiditenin değiştiği zamana kıyasla) görür ve buna göre likiditeyi basar.
+Karşılığında, havuzun kısmi sahipliği için `to` adresine likidite token'ları verin. Çekirdek sözleşmenin `mint` fonksiyonu, sahip olduğu ekstra jeton sayısını (son likiditenin değiştiği zamana kıyasla) görür ve buna göre likiditeyi basar.
 
 ```solidity
     function addLiquidityETH(
@@ -1104,7 +1098,7 @@ Karşılığında, havuzun kısmi sahipliği için `to` adresine likidite token'
         uint amountTokenDesired,
 ```
 
-Bir likidite sağlayıcısı bir Token/ETH eş takasına likidite sağlamak istediğinde, birkaç farklılık vardır. Sözleşme, likidite sağlayıcısı için ETH'yi paketler. Kullanıcının ne kadar ETH yatırmak istediğini belirtmeye gerek yoktur, çünkü kullanıcı bunları işlemle birlikte gönderir (tutar `msg.value` içinde mevcuttur).
+Bir likidite sağlayıcısı bir Token/ETH eş takasına likidite sağlamak istediğinde, birkaç farklılık vardır. Sözleşme, likidite sağlayıcısı için ETH'yi paketler. Kullanıcının ne kadar ETH yatırmak istediğini belirtmeye gerek yoktur. Çünkü kullanıcı bunları işlemle birlikte gönderir (miktar`msg.value` içinde mevcuttur).
 
 ```solidity
         uint amountTokenMin,
@@ -1126,7 +1120,7 @@ Bir likidite sağlayıcısı bir Token/ETH eş takasına likidite sağlamak iste
         assert(IWETH(WETH).transfer(pair, amountETH));
 ```
 
-ETH'yi yatırmak için sözleşme önce onu WETH olarak paketler ve ardından WETH'yi eşe aktarır. Aktarımın bir `assert` içinde paketlendiğini dikkate alın. Bu, aktarım başarısız olursa bu sözleşme çağrısının da başarısız olduğu ve bu nedenle paketleme işleminin gerçekten gerçekleşmediği anlamına gelir.
+ETH'yi yatırmak için sözleşme önce onu WETH olarak paketler ve ardından WETH'yi eşe aktarır. Transferin bir `assert` içinde paketlendiğini dikkate alın. Bu, transfer başarısız olursa bu sözleşme çağrısının da başarısız olduğu ve bu nedenle paketleme işleminin gerçekten gerçekleşmediği anlamına gelir.
 
 ```solidity
         liquidity = IUniswapV2Pair(pair).mint(to);
@@ -1135,7 +1129,7 @@ ETH'yi yatırmak için sözleşme önce onu WETH olarak paketler ve ardından WE
     }
 ```
 
-Kullanıcı bize ETH'yi zaten gönderdi, bu nedenle fazladan kalan varsa (çünkü diğer token kullanıcının düşündüğünden daha az değerlidir), bir geri ödeme yapmamız gerekir.
+Kullanıcı bize ETH'yi zaten gönderdi, bu nedenle fazladan kalan varsa (çünkü diğer jeton kullanıcının düşündüğünden daha az değerlidir), bir geri ödeme yapmamız gerekir.
 
 #### Likiditeyi Kaldırın {#remove-liquidity}
 
@@ -1154,7 +1148,7 @@ Bu işlevler likiditeyi ortadan kaldıracak ve likidite sağlayıcısına geri �
     ) public virtual override ensure(deadline) returns (uint amountA, uint amountB) {
 ```
 
-Likidite kaldırmanın en basit hâli. Likidite sağlayıcısının almayı kabul ettiği her bir token'ın minimum miktarı vardır ve bu, son tarihten önce gerçekleşmelidir.
+Likidite kaldırmanın en basit hâli. Likidite sağlayıcısının almayı kabul ettiği her bir jeton için bir minimum miktar vardır ve bu, son tarihten önce gerçekleşmelidir.
 
 ```solidity
         address pair = UniswapV2Library.pairFor(factory, tokenA, tokenB);
@@ -1174,7 +1168,7 @@ Bir fonksiyon, sadece birkaç tanesiyle ilgilendiğimiz birçok değer döndürd
         (amountA, amountB) = tokenA == token0 ? (amount0, amount1) : (amount1, amount0);
 ```
 
-Tutarları, çekirdek sözleşmenin onları döndürdüğü biçimden (önce alt adres token'ı), kullanıcının beklediği biçime (`tokenA` ve `tokenB`'ye karşılık) çevirin.
+Tutarları, çekirdek sözleşmenin onları döndürdüğü biçimden (önce alt adres jetonu), kullanıcının beklediği biçime (`tokenA` ve `tokenB`'ye karşılık) çevirin.
 
 ```solidity
         require(amountA >= amountAMin, 'UniswapV2Router: INSUFFICIENT_A_AMOUNT');
@@ -1182,7 +1176,7 @@ Tutarları, çekirdek sözleşmenin onları döndürdüğü biçimden (önce alt
     }
 ```
 
-Önce aktarımı yapmak ve ardından meşru olduğunu doğrulamak sorun değil, çünkü değilse tüm durum değişikliklerinden geri döneceğiz.
+Önce aktarımı yapmak ve ardından yasal olduğunu doğrulamak sorun değildir, çünkü yasal değilse tüm durum değişikliklerini geri alacağız.
 
 ```solidity
     function removeLiquidityETH(
@@ -1244,7 +1238,7 @@ ETH için likiditeyi kaldırma, WETH token'larını almamız ve ardından bunlar
     }
 ```
 
-Bu fonksiyonlar, [izin mekanizmasını](#UniswapV2ERC20) kullanarak, ether'ı olmayan kullanıcıların havuzdan çekilmesine izin vermek için meta-işlemleri iletir.
+Bu fonksiyonlar, [izin mekanizmasını](#UniswapV2ERC20) kullanarak, ether'i olmayan kullanıcıların havuzdan çekilmesine izin vermek için meta işlemleri iletir.
 
 ```solidity
 
@@ -1312,14 +1306,14 @@ Bu fonksiyon, ticaret yapanların maruz kaldığı fonksiyonlar için gerekli ol
         for (uint i; i < path.length - 1; i++) {
 ```
 
-Bunu yazdığım esnada [388.160 ERC-20 token'ı](https://etherscan.io/tokens) bulunmakta. Her bir token çifti için bir eş takası olsaydı, 150 milyardan fazla eş takası olurdu. Tüm zincir şu anda [o sayının sadece %0,1'i kadar hesaba sahip](https://etherscan.io/chart/address). Bunun yerine, takas fonksiyonları bir yol kavramını destekler. Bir ticaret yapan kişi A'yı B'ye, B'yi C'ye ve C'yi D'ye çevirebilir, dolayısıyla doğrudan bir A-D çifti takasına gerek yoktur.
+Bunu yazdığım esnada [388.160 ERC-20 token'ı](https://etherscan.io/tokens) bulunmakta. Her bir jeton çifti için bir eş takası olsaydı, 150 milyardan fazla eş takası olurdu. Tüm zincir, şu anda [o sayının sadece %0,1'i kadar hesaba sahiptir](https://etherscan.io/chart/address). Bunun yerine, bir yol kavramını takas fonksiyonları destekler. Bir tacir A'yı B'ye, B'yi C'ye ve C'yi D'ye çevirebilir, dolayısıyla doğrudan bir A-D çifti takasına gerek yoktur.
 
-Bu piyasalardaki fiyatlar senkronize olma eğilimindedir, çünkü senkronize olmadıklarında arbitraj için bir fırsat yaratır. Örneğin A, B ve C olmak üzere üç token düşünün. Her çift için bir tane olmak üzere üç eş takası bulunuyor.
+Bu piyasalardaki fiyatlar senkronize olma eğilimindedir, çünkü senkronize olmadıklarında arbitraj için bir fırsat oluşur. Örneğin A, B ve C olmak üzere üç jeton düşünün. Her çift için bir tane olmak üzere üç eş takası bulunuyor.
 
 1. Başlangıç durumu
 2. Ticaret yapan bir kişi 24,695 A token'ı satar ve 25,305 B token'ı alır.
-3. Ticaret yapan kişi 25,305 C token'ı karşılığında 24,695 B token'ı satar ve yaklaşık 0,61 B token'ını kâr olarak tutar.
-4. Daha sonra ticaret yapan kişi 25,305 A token'ı için 24,695 C token'ı satar ve yaklaşık 0,61 C token'ını kâr olarak tutar. Ticaret yapan kişi ayrıca 0,61 fazladan A token'ına sahiptir (ticaret yapan kişinin sonunda elde ettiği 25,305 eksi 24,695 orijinal yatırım).
+3. Tacir, 25,305 C jetonu karşılığında 24,695 B jetonu satar ve yaklaşık 0,61 B jetonunu kâr olarak tutar.
+4. Tacir daha sonra 25,305 A jetonu için 24,695 C jetonu satar ve yaklaşık 0,61 C jetonunu kâr olarak tutar. Tacir ayrıca fazladan 0,61 A jetonuna sahiptir (tacirin sonunda elde ettiği 25,305 eksi 24,695 orijinal yatırımdır).
 
 | Adım | A-B Takası                  | B-C Takası                  | A-C Takası                  |
 | ---- | --------------------------- | --------------------------- | --------------------------- |
@@ -1357,7 +1351,7 @@ Bu son takas mı? Eğer öyleyse ticaretten alınan token'ları hedefe gönderin
     }
 ```
 
-Token'ları takas etmek için eş takasını gerçekten çağırın. Değişim hakkında bilgi almak için bir geri çağrıya ihtiyacımız yok, bu yüzden o alana herhangi bir bayt göndermiyoruz.
+Token'ları takas etmek için eş takasını gerçekten çağırın. Takas hakkında bilgi almak için bir geri çağrıya ihtiyacımız yoktur, bu yüzden o alana herhangi bir bayt göndermeyiz.
 
 ```solidity
     function swapExactTokensForTokens(
@@ -1373,9 +1367,9 @@ Bu fonksiyon, doğrudan ticaret yapanlar tarafından bir token'ı başka bir tok
 
 Bu parametre ERC-20 sözleşmelerinin adreslerini içerir. Yukarıda açıklandığı gibi, sahip olduğunuz varlıktan istediğiniz varlığa ulaşmak için birkaç eş takasından geçmeniz gerekebileceği için bu bir dizidir.
 
-Solidity'de bir fonksiyon parametresi ya `memory` ya da `calldata` olarak depolanabilir. Fonksiyon, doğrudan bir kullanıcıdan (bir işlem kullanılarak) veya farklı bir sözleşmeden çağrılan sözleşmeye bir giriş noktasıysa, parametrenin değeri doğrudan çağrı verilerinden alınabilir. Yukarıdaki `_swap` gibi fonksiyon dahili olarak çağrılırsa, parametrelerin `memory` içinde saklanması gerekir. Çağrılan sözleşmenin bakış açısından `calldata` salt okunurdur.
+Solidity'de bir fonksiyon parametresi ya `memory` ya da `calldata` olarak depolanabilir. Fonksiyon, çağrılan sözleşmeye doğrudan bir kullanıcıdan (bir işlem kullanılarak) veya farklı bir sözleşmeden giriş noktasıysa, parametrenin değeri doğrudan çağrı verilerinden alınabilir. Yukarıdaki `_swap` gibi bir fonksiyon dahili olarak çağrılırsa, parametrelerin `memory` içinde saklanması gerekir. Çağrılan sözleşmenin bakış açısından `calldata` salt okunurdur.
 
-`uint` veya `address` gibi skaler türlerde depolama seçimini bizim için derleyici halleder, ancak daha uzun ve daha pahalı olan dizilerde kullanılacak depolama türünü belirtiriz.
+`uint` veya `address` gibi skaler türlerde depolama seçimini bizim için derleyici halletse de, daha uzun ve daha pahalı olan dizilerde kullanılacak depolama türünü belirtiriz.
 
 ```solidity
         address to,
@@ -1390,7 +1384,7 @@ Dönen değerler her zaman bellekte döndürülür.
         require(amounts[amounts.length - 1] >= amountOutMin, 'UniswapV2Router: INSUFFICIENT_OUTPUT_AMOUNT');
 ```
 
-Her takasta satın alınacak tutarı hesaplayın. Sonuç, ticaret yapanın kabul etmeye istekli olduğu minimum değerden düşükse, işlemden geri dönün.
+Her takasta satın alınacak tutarı hesaplayın. Sonuç, tacirin kabul etmeye istekli olduğu minimum değerden düşükse, işlemi geri alın.
 
 ```solidity
         TransferHelper.safeTransferFrom(
@@ -1400,7 +1394,7 @@ Her takasta satın alınacak tutarı hesaplayın. Sonuç, ticaret yapanın kabul
     }
 ```
 
-Son olarak, ilk ERC-20 token'ını ilk eş takası için hesaba aktarın ve `_swap`'i çağırın. Bunların hepsi aynı işlemde olduğu için eş takası, beklenmeyen token'ların bu transferin bir parçası olduğunu biliyor.
+Son olarak, ilk ERC-20 token'ını ilk eş takası için hesaba aktarın ve `_swap`'i çağırın. Bunların hepsi aynı aktarımda olduğu için eş takası, beklenmeyen jetonların bu transferin bir parçası olduğunu bilir.
 
 ```solidity
     function swapTokensForExactTokens(
@@ -1419,7 +1413,7 @@ Son olarak, ilk ERC-20 token'ını ilk eş takası için hesaba aktarın ve `_sw
     }
 ```
 
-Önceki fonksiyon olan `swapTokensForTokens`, bir ticaret yapanın vermek istediği girdi token'larının tam sayısını ve karşılığında almak istediği minimum çıktı token'ları sayısını belirlemesine olanak tanır. Bu fonksiyon ters takası yapar, ticaret yapan bir kişinin istediği çıktı token'larının sayısını ve onlar için ödemek istediği maksimum girdi token'larının sayısını belirlemesine izin verir.
+Önceki fonksiyon olan `swapTokensForTokens`, bir ticaret yapanın vermek istediği girdi token'larının tam sayısını ve karşılığında almak istediği minimum çıktı token'ları sayısını belirlemesine olanak tanır. Bu fonksiyon ters takas gerçekleştirir, tacirin istediği çıktı jetonlarının ve onlar için ödemek istediği maksimum girdi jetonlarının sayısını belirlemesine olanak tanır.
 
 Her iki durumda da, ticaret yapan kişinin önce bu çevre sözleşmesine, onları transfer etmesine izin vermek için bir ödenek vermesi gerekir.
 
@@ -1507,7 +1501,7 @@ Bu dört varyantın tümü, ETH ve token'lar arasındaki ticareti içerir. Tek f
     function _swapSupportingFeeOnTransferTokens(address[] memory path, address _to) internal virtual {
 ```
 
-Bu, ([bu sorunu](https://github.com/Uniswap/uniswap-interface/issues/835)) çözmek için aktarım veya depolama ücretleri olan token'ları takas eden dahili fonksiyondur.
+Bu, ([bu sorunu](https://github.com/Uniswap/uniswap-interface/issues/835)) çözmek için aktarım veya depolama ücretleri olan jetonları takas eden dahili fonksiyondur.
 
 ```solidity
         for (uint i; i < path.length - 1; i++) {
@@ -1523,9 +1517,9 @@ Bu, ([bu sorunu](https://github.com/Uniswap/uniswap-interface/issues/835)) çöz
             amountOutput = UniswapV2Library.getAmountOut(amountInput, reserveInput, reserveOutput);
 ```
 
-Transfer ücretleri nedeniyle, her transferden ne kadar kazandığımızı bize söylemesi için `getAmountsOut` fonksiyonuna güvenemeyiz (orijinal `_swap`'u çağırmadan önce yaptığımız gibi). Bunun yerine önce transfer etmemiz ve sonra kaç token aldığımızı görmemiz gerekiyor.
+Transfer ücretleri nedeniyle, her transferden ne kadar kazandığımızı bize söylemesi için `getAmountsOut` fonksiyonuna güvenemeyiz (orijinal `_swap`'ı çağırmadan önce yaptığımız gibi). Bunun yerine önce transfer yapmamız ve sonra kaç jeton aldığımızı görmemiz gerekir.
 
-Not: Teoride, tek başına bu işlevi `_swap` yerine kullanabilirdik ancak bazı durumlarda (örneğin, gerekli minimum değeri karşılamak için sonunda yeterli olmadığı için aktarım geri alınırsa) bu daha fazla gaza mal olur. Transfer ücreti token'ları oldukça nadirdir, bu nedenle onları barındırmamız gerekse de, en az birinden geçtiklerini varsaymak için tüm takaslara gerek yoktur.
+Not: Teoride, tek başına bu işlevi `_swap` yerine kullanabilirdik ancak bazı durumlarda (örneğin, sonunda gerekli minimum değeri karşılamak için yeterli olmadığından transfer geri alınırsa) bu daha fazla gaza mal olur. Transfer ücreti jetonları oldukça nadirdir, bu nedenle onları barındırmamız gerekse de, en az bir takastan geçtiklerini varsaymak için tüm takaslara gerek yoktur.
 
 ```solidity
             }
@@ -1693,7 +1687,7 @@ Karekökten daha yüksek bir tahmin olarak x ile başlayın (1-3'ü özel duruml
                 x = (y / x + x) / 2;
 ```
 
-Önceki tahminin ortalamasını ve karekökünü bulmaya çalıştığımız sayının önceki tahmine bölümü ile daha yakın bir tahmin alın. Yeni tahmin, mevcut tahminden daha düşük olmayana kadar tekrarlayın. Daha fazla detay için, [buraya bakın](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
+Daha yakın bir tahmin elde etmek için önceki tahmin ile karekökünü bulmaya çalıştığımız sayının önceki tahmine bölünmüş halinin ortalaması alınır. Yeni tahmin, mevcut tahminden daha düşük olmayana kadar tekrarlayın. Daha fazla detay için [buraya bakın](https://wikipedia.org/wiki/Methods_of_computing_square_roots#Babylonian_method).
 
 ```solidity
             }
@@ -1701,7 +1695,7 @@ Karekökten daha yüksek bir tahmin olarak x ile başlayın (1-3'ü özel duruml
             z = 1;
 ```
 
-Sıfırın kareköküne asla ihtiyacımız olmamalı. Bir, iki ve üçün karekökleri kabaca birdir (tamsayıları kullanır, bu yüzden kesri yok sayarız).
+Sıfırın kareköküne asla ihtiyacımız olmamalı. Bir, iki ve üçün karekökleri kabaca birdir (tam sayıları kullandığımız için kesirleri yok sayarız).
 
 ```solidity
         }
@@ -1711,7 +1705,7 @@ Sıfırın kareköküne asla ihtiyacımız olmamalı. Bir, iki ve üçün karek�
 
 ### Sabit Nokta Kesirleri (UQ112x112) {#FixedPoint}
 
-Bu kütüphane normalde Ethereum aritmetiğinin parçası olmayan kesirleri işler. Bunu _x_ sayısını _x\*2^112_ olarak şifreleyerek yapar. Bu, orijinal toplama ve çıkarma işlem kodlarını değişiklik yapmadan kullanmamızı sağlar.
+Bu kütüphane normalde Ethereum aritmetiğinin parçası olmayan kesirleri işler. Bunu, _x_ sayısını _x\*2^112_ olarak kodlayarak yapar. Bu, orijinal toplama ve çıkarma işlem kodlarını değişiklik yapmadan kullanmamızı sağlar.
 
 ```solidity
 pragma solidity =0.5.16;
@@ -1744,7 +1738,7 @@ Y `uint112` olduğundan, en fazla 2^112-1 olabilir. Bu sayı hâlâ `UQ112x112` 
 }
 ```
 
-Eğer iki `UQ112x112` değerini bölersek, sonuç artık 2^112 tarafından çarpılmaz. Bunun yerine payda için bir tamsayı alıyoruz. Çarpma yapmak için benzer bir numara kullanmamız gerekirdi, ancak `UQ112x112` değerlerinin çarpımını yapmamıza gerek yok.
+Eğer iki `UQ112x112` değerini bölersek, sonuç artık 2^112 tarafından çarpılmaz. Bunun yerine payda için bir tam sayı alıyoruz. Çarpma yapmak için benzer bir hile kullanmamız gerekirdi, ancak `UQ112x112` değerlerinin çarpımını yapmamıza gerek yoktur.
 
 ### UniswapV2Library {#uniswapV2library}
 
@@ -1768,7 +1762,7 @@ library UniswapV2Library {
     }
 ```
 
-İki token'ı adrese göre sıralayın, böylece onlar için eş takasının adresini alabiliriz. Bu, bir yerine iki takasa yol açacak şekilde biri A,B parametreleri için diğeri B,A parametreleri için olmak üzere iki olasılık ortaya çıkaracağı için zorunludur.
+İki token'ı adrese göre sıralayın, böylece onlar için eş takasının adresini alabiliriz. Bu, aksi durumda biri A,B parametreleri, diğeri B,A parametreleri olmak üzere iki olasılığımız olacağı ve dolayısıyla bir yerine iki takas gerekeceği için zorunludur.
 
 ```solidity
     // calculates the CREATE2 address for a pair without making any external calls
@@ -1783,7 +1777,7 @@ library UniswapV2Library {
     }
 ```
 
-Bu fonksiyon, iki token için eş takasının adresini hesaplar. Bu sözleşme [CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014) kullanılarak oluşturulur, bu yüzden kullandığı parametreleri biliyorsak adresi aynı algoritmayı kullanarak hesaplayabiliriz. Bu, fabrikaya sormaktan çok daha ucuzdur.
+Bu fonksiyon, iki token için eş takasının adresini hesaplar. Bu sözleşme, [CREATE2 opcode](https://eips.ethereum.org/EIPS/eip-1014) kullanılarak oluşturulur, bu yüzden kullandığı parametreleri biliyorsak aynı algoritmayı kullanarak adresi hesaplayabiliriz. Bu, fabrikaya sormaktan çok daha ucuzdur.
 
 ```solidity
     // fetches and sorts the reserves for a pair
@@ -1794,7 +1788,7 @@ Bu fonksiyon, iki token için eş takasının adresini hesaplar. Bu sözleşme [
     }
 ```
 
-Bu fonksiyon, eş takasının sahip olduğu iki token'ın rezervlerini döndürür. Token'ları her iki sırayla alabileceğini ve bunları dahili kullanım için sıralayabileceğini unutmayın.
+Bu fonksiyon, eş takasının sahip olduğu iki token'ın rezervlerini döndürür. Jetonları her iki sıradan biriyle alabileceğini ve bunları dahili kullanım için sıralayabileceğini unutmayın.
 
 ```solidity
     // given some amount of an asset and pair reserves, returns an equivalent amount of the other asset
@@ -1805,14 +1799,14 @@ Bu fonksiyon, eş takasının sahip olduğu iki token'ın rezervlerini döndür�
     }
 ```
 
-Bu fonksiyon, herhangi bir ücret yoksa A token'ı karşılığında alacağınız B token'ı miktarını verir. Bu hesaplama, transferin takas oranını değiştirdiğini dikkate alır.
+Bu fonksiyon, herhangi bir ücret yoksa A token'ı karşılığında alacağınız B token'ı miktarını verir. Bu hesaplama, transferin takas oranını değiştirmesini dikkate alır.
 
 ```solidity
     // given an input amount of an asset and pair reserves, returns the maximum output amount of the other asset
     function getAmountOut(uint amountIn, uint reserveIn, uint reserveOut) internal pure returns (uint amountOut) {
 ```
 
-Yukarıdaki `quote` işlevi, eş takasını kullanmak için herhangi bir ücret yoksa harika çalışır. Ancak, %0,3'lük bir takas ücreti varsa, gerçekte aldığınız miktar daha düşüktür. Bu fonksiyon, takas ücretinden sonraki tutarı hesaplar.
+Yukarıdaki `quote` işlevi, eş takasını kullanmak için herhangi bir ücret yoksa harika çalışır. Ancak, %0,3'lük bir takas ücreti varsa gerçekte aldığınız miktar daha düşüktür. Bu fonksiyon, takas ücretinden sonraki tutarı hesaplar.
 
 ```solidity
 
@@ -1825,7 +1819,7 @@ Yukarıdaki `quote` işlevi, eş takasını kullanmak için herhangi bir ücret 
     }
 ```
 
-Solidity kesirleri yerel olarak işlemediği için miktarı doğrudan 0,997 ile çarpamayız. Bunun yerine, aynı etkiyi elde etmek için payı 997 ve paydayı 1000 ile çarparız.
+Solidity kesirleri yerel olarak işlemediği için miktarı doğrudan 0,997 ile çarpamayız. Bunun yerine, aynı etkiyi elde etmek için payı 997, paydayı 1000 ile çarparız.
 
 ```solidity
     // given an output amount of an asset and pair reserves, returns a required input amount of the other asset
@@ -1870,7 +1864,7 @@ Bu iki fonksiyon, birkaç eş takasından geçmek gerektiğinde değerleri tanı
 
 ### Transfer Yardımcısı {#transfer-helper}
 
-[Bu kütüphane](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol), bir geri döndürmeyi ve bir `false` değeri döndürmeyi aynı şekilde işlemek için ERC-20 ve Ethereum transferleri kapsamında başarı kontrolleri ekler.
+[Bu kütüphane](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol), ERC-20 ve Ethereum transfer işlemleri ile ilgili başarı kontrolleri ekleyerek bir geri alım ile `yanlış` değer dönüşünün aynı şekilde işlenmesini sağlar.
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0-or-later
@@ -1902,7 +1896,7 @@ library TransferHelper {
     }
 ```
 
-ERC-20 standardından önce oluşturulmuş token'la geriye dönük uyumluluk sağlaması adına, bir ERC-20 çağrısı geri döndürülerek (bu durumda `success`, `false` olur) veya başarılı olup bir `false` değeri döndürerek (bu durumda çıktı verileri vardır ve verinin kodunu bir boole olarak çözerseniz `false` alırsınız) başarısız olabilir.
+Bir ERC-20 çağrısı, ERC-20 standardından önce oluşturulmuş jetonla geriye dönük uyumluluk sağlamak adına ya geri döndürülerek (bu durumda `success`, `false` olur) veya başarılı olup bir `false` değeri döndürerek (bu durumda çıktı verileri vardır ve verinin kodunu mantıksal olarak çözerseniz `false` alırsınız) başarısız olabilir.
 
 ```solidity
 
@@ -1951,10 +1945,10 @@ Bu fonksiyon, [ERC-20'nin transferFrom işlevselliğini](https://eips.ethereum.o
 }
 ```
 
-Bu fonksiyon, ether'ı bir hesaba aktarır. Farklı bir sözleşmeye yapılan herhangi bir çağrı, ether göndermeyi deneyebilir. Aslında herhangi bir fonksiyonu çağırmamız gerekmediğinden, çağrıyla birlikte herhangi bir veri göndermiyoruz.
+Bu fonksiyon, ether'ı bir hesaba aktarır. Farklı bir sözleşmeye yapılan herhangi bir çağrı, ether göndermeyi deneyebilir. Aslında herhangi bir fonksiyonu çağırmamız gerekmediğinden, çağrıyla birlikte herhangi bir veri göndermeyiz.
 
 ## Sonuç {#conclusion}
 
-Bu yaklaşık 50 sayfalık uzun bir makaledir. Buraya kadar varabildiyseniz tebrikler! Umarım şimdiye kadar gerçek hayatta bir uygulama yazarken (kısa örnek programların aksine) dikkate alınması gereken hususları anlamışsınızdır ve kendi kullanım alanlarınız için sözleşmeler yazabilme konusunda daha iyisinizdir.
+Bu yaklaşık 50 sayfalık uzun bir makaledir. Buraya kadar varabildiyseniz tebrikler! Umuyoruz ki şimdiye kadar gerçek hayatta bir uygulama yazarken (kısa örnek programların aksine) dikkate alınması gereken hususları kavramış ve kendi kullanım alanlarınız için sözleşmeler yazabilme konusunda daha iyi durumdasınızdır.
 
 Şimdi faydalı bir şeyler yazarak bizi büyüleyin.

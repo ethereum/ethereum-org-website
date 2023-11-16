@@ -9,7 +9,7 @@ incomplete: true
 
 Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Son descentralizadas, lo que significa que funcionan en una red de punto a punto, y no hay un único punto de fracaso. Ninguna entidad o persona las controla y es casi imposible censurarlas. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones.
 
-## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Empezando con contratos inteligentes y el lenguaje Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Go con Ethereum**
 
@@ -33,28 +33,28 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 ## Artículos y documentos de nivel intermedio {#intermediate-articles-and-docs}
 
 - [Documentación Ethereum de Go](https://geth.ethereum.org/docs/): _La documentación oficial para Ethereum Golang_
-- [Guía del Programador Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md): _Guía ilustrada que incluye el árbol de estado, multi-pruebas y procesamiento de transacciones_
-- [Erigon and Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394): _Conferencia de la Comunidad Ethereum (EthCC 3)_
-- [Erigon: Optimizando clientes de Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _Devcon 2018 4_
+- [Guía del programador de Erigon:](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) _Guía ilustrada que incluye el árbol de estado, multipruebas y procesamiento de transacciones_
+- [Erigon y Ethereum sin estado:](https://youtu.be/3-Mn7OckSus?t=394) _Conferencia de la Comunidad de Ethereum 2020 (EthCC 3)_
+- [Erigon: optimizar clientes Ethereum](https://www.youtube.com/watch?v=CSpc1vZQW2Q) _Devcon 2018 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Crear una dapp en Go con Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
+- [Crear un dapp en ir con Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Trabajar con la red privada Ethereum con Golang y Geth](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Unidad de prueba de contratos de Solidity en Ethereum con Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Referencia rápida para usar Geth como biblioteca](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## Patrones de uso avanzado {#advanced-use-patterns}
+## Patrones de uso avanzados {#advanced-use-patterns}
 
 - [El fondo simulado de GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplicaciones de Blockchain-as-a-Service que utilizan Ethereum y Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Almacenamiento distribuido IPFS y Swarm en aplicaciones Ethereum Blockchain](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Clientes móviles: Bibliotecas y nodos Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
-- [Dapps nativas: Enlaces de Go a contratos Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+- [Aplicaciones nativas: Bindings de Go para contratos de Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Proyectos y Herramientas de Go {#go-projects-and-tools}
+## Proyectos y herramientas de Go {#go-projects-and-tools}
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum): _Implementación oficial en Go del protocolo Ethereum_
 - [Análisis de código Go de Ethereum](https://github.com/ZtesoftCS/go-ethereum-code-analysis): _Revisión y análisis del código fuente de Go para Ethereum_
-- [Erigon](https://github.com/ledgerwatch/erigon)_: Derivada más rápida de Go Ethereum_
+- [Erigon:](https://github.com/ledgerwatch/erigon) _Derivado más rápido de Go Ethereum, con un enfoque en nodos de archivo_
 - [Golem](https://github.com/golemfactory/golem): _Golem está creando un mercado global orientado al poder de la informática_
 - [Quorum](https://github.com/jpmorganchase/quorum): _Una implementación autorizada de Ethereum compatible con la privacidad de datos_
 - [Prysm](https://github.com/prysmaticlabs/prysm): _Implementación de Go de Ethereum 'Serenity' 2.0_
@@ -64,8 +64,9 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Cartera Ethereum HD](https://github.com/miguelmota/go-ethereum-hdwallet): _Derivaciones en Go de la cartera Ethereum HD _
 - [Multi Geth](https://github.com/multi-geth/multi-geth): _Soporte para muchos tipos de redes Ethereum_
 - [Cliente Geth Light](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client): _Implementación Geth del subprotocolo Light Ethereum_
+- [Ethereum Golang SDK:](https://github.com/everFinance/goether) _Implementación simple de billetera Ethereum y utilidades en Golang_
 
-¿Buscas más recursos? Echa un vistazo a [ethereum.org/developers.](/developers/)
+¿Buscas más recursos? Visite [ethereum.org/developers](/developers/).
 
 ## Colaboradores de la comunidad de Go {#go-community-contributors}
 

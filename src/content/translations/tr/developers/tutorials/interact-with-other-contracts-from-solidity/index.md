@@ -3,10 +3,9 @@ title: Solidity'nin diğer sözleşmeleriyle etkileşime geçin
 description: Mevcut bir sözleşmeden akıllı bir sözleşme nasıl kurulur ve onunla nasıl etkileşim kurulur
 author: "jdourlens"
 tags:
-  - "akıllı kontratlar"
+  - "akıllı sözleşmeler"
   - "solidity"
   - "remix"
-  - "fabrikalar"
   - "dağıtma"
   - "birleştirilebilirlik"
 skill: advanced
