@@ -117,7 +117,7 @@ Before accepting transactions, the operator will perform the usual checks. This 
 
 Once the ZK-rollup node has enough transactions, it aggregates them into a batch and compiles inputs for the proving circuit to compile into a succinct ZK-proof. This includes:
 
-- A Merkle tree comprising all the transactions in the batch.
+- A Merkle tree root comprising all the transactions in the batch.
 - Merkle proofs for transactions to prove inclusion in the batch.
 - Merkle proofs for each sender-receiver pair in transactions to prove those accounts are part of the rollup's state tree.
 - A set of intermediate state roots, derived from updating the state root after applying state updates for each transaction (i.e., decreasing sender accounts and increasing receiver accounts).
