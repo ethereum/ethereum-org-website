@@ -915,7 +915,7 @@ Creates new message call transaction or a contract creation, if the data field c
 - `gas`: `QUANTITY` - (optional, default: 90000) Integer of the gas provided for the transaction execution. It will return unused gas.
 - `gasPrice`: `QUANTITY` - (optional, default: To-Be-Determined) Integer of the gasPrice used for each paid gas.
 - `value`: `QUANTITY` - (optional) Integer of the value sent with this transaction.
-- `input`: `DATA` - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters.
+- `data`: `DATA` - The compiled code of a contract OR the hash of the invoked method signature and encoded parameters.
 - `nonce`: `QUANTITY` - (optional) Integer of a nonce. This allows to overwrite your own pending transactions that use the same nonce.
 
 ```js
@@ -926,7 +926,7 @@ params: [
     gas: "0x76c0", // 30400
     gasPrice: "0x9184e72a000", // 10000000000000
     value: "0x9184e72a", // 2441406250
-    input: "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
+    data: "0xd46e8dd67c5d32be8d46e8dd67c5d32be8058bb8eb970870f072445675058bb8eb970870f072445675",
   },
 ]
 ```
