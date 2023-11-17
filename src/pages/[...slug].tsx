@@ -70,7 +70,7 @@ interface Props {
   mdxSource: MDXRemoteSerializeResult
 }
 
-export const getStaticPaths: GetStaticPaths = ({ locales }) => {
+export const getStaticPaths = (({ locales }) => {
   const contentFiles = getContent("/")
 
   let paths: StaticPaths = []
@@ -92,7 +92,7 @@ export const getStaticPaths: GetStaticPaths = ({ locales }) => {
     paths,
     fallback: false,
   }
-}
+}) satisfies GetStaticPaths
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
