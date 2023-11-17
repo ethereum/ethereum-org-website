@@ -192,8 +192,7 @@ export const TutorialLayout = ({
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit =
-    "lastEdit" in gitHubLastEdit ? gitHubLastEdit.lastEdit! : ""
+  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
 
   return (
     <>
@@ -231,7 +230,7 @@ export const TutorialLayout = ({
             <CrowdinContributors
               relativePath={relativePath}
               lastUpdatedDate={intlLastEdit}
-              contributorsByLocale={crowdinContributors}
+              contributors={crowdinContributors}
             />
           ) : (
             <GitHubContributors

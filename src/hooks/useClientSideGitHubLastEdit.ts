@@ -28,7 +28,7 @@ const fetchGitHubLastEdit = async (
     if (!response.ok) throw new Error(response.statusText)
     const lastCommit = (await response.json())[0]
     const lastEdit = lastCommit.commit.author.date
-    return { loading: false, lastEdit }
+    return { loading: false, data: lastEdit }
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error(filePath, error.message)
@@ -38,9 +38,8 @@ const fetchGitHubLastEdit = async (
 }
 /**
  * Client-side hook to fetch date of last commit through GitHub
- * Use example:
  * @param relativePath Relative path of the file being queried
- * @returns `state` comprise of { loading, lastEdit?, error? }
+ * @returns `state` comprise of data with loading state, where data is last edit string
  */
 export const useClientSideGitHubLastEdit = (
   relativePath: string
@@ -48,7 +47,7 @@ export const useClientSideGitHubLastEdit = (
   const [state, setState] = useState<LastUpdatedState>({ loading: true })
   const { locale } = useRouter()
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       setState(await fetchGitHubLastEdit(relativePath, locale as Lang))
     })()
   }, [relativePath])

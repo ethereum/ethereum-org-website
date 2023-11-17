@@ -4,13 +4,13 @@ import type { Author, CrowdinContributor } from "@/lib/types"
 type CrowdinContributorsProps = {
   relativePath: string
   lastUpdatedDate: string
-  contributorsByLocale: CrowdinContributor[]
+  contributors: CrowdinContributor[]
 }
 const CrowdinContributors = ({
   lastUpdatedDate,
-  contributorsByLocale,
+  contributors,
 }: CrowdinContributorsProps) => {
-  const mappedContributors: Author[] = contributorsByLocale.map(
+  const mappedContributors: Author[] = contributors.map(
     ({ id, username, avatarUrl }) => ({
       name: username,
       email: id.toString(),

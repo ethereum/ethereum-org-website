@@ -1,12 +1,10 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
-import { FaGithub } from "react-icons/fa"
 import {
   Avatar,
   Flex,
   FlexProps,
   Heading,
-  Icon,
   ListItem,
   ModalBody,
   ModalHeader,
@@ -18,7 +16,7 @@ import {
 
 import type { Author, Lang } from "@/lib/types"
 
-import { Button, ButtonLink } from "@/components/Buttons"
+import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
 import Text from "@/components/OldText"
@@ -71,15 +69,15 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
   )
 }
 
-export interface IProps extends FlexProps {
+export interface FileContributorsProps extends FlexProps {
   editPath?: string
-  contributors: Array<Author>
-  loading: Boolean
+  contributors: Author[]
+  loading: boolean
   error?: boolean
   lastEdit: string
 }
 
-const FileContributors: React.FC<IProps> = ({
+const FileContributors: React.FC<FileContributorsProps> = ({
   contributors,
   loading,
   error,

@@ -53,7 +53,7 @@ const fetchGitHubContributors = async (
     const authors = Array.from(authorSet).map(
       JSON.parse as (entry: string) => Author
     )
-    return { loading: false, authors }
+    return { loading: false, data: authors }
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error(filePath, error.message)
@@ -64,7 +64,8 @@ const fetchGitHubContributors = async (
 /**
  * Client-side hook to fetch GitHub contributors for a given file
  * @param relativePath Relative path of the file being queried
- * @returns `state` comprise of { loading, authors?, error? }
+ * @returns `state` comprise of { loading, data, error } where
+ * data is an array of Author objects if successful
  */
 export const useClientSideGitHubContributors = (
   relativePath: string
@@ -72,7 +73,7 @@ export const useClientSideGitHubContributors = (
   const [state, setState] = useState<FileContributorsState>({ loading: true })
   const { locale } = useRouter()
   useEffect(() => {
-    ;(async () => {
+    ; (async () => {
       setState(await fetchGitHubContributors(relativePath, locale as Lang))
     })()
   }, [relativePath])

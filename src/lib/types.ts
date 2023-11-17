@@ -103,6 +103,11 @@ export type StaticPaths = { params: { slug: string[] }; locale: string }[]
 
 export type TranslationKey = string
 
+export type LoadingState<T> =
+  | { loading: true }
+  | { loading: false; data: T }
+  | { loading: false; error: unknown }
+
 /**
  * Quiz data types
  */
@@ -139,33 +144,9 @@ export type StakingPage = "solo" | "saas" | "pools"
 /**
  * File contributors
  */
-export type FileContributorsState =
-  | {
-      loading: true
-      authors?: Author[]
-    }
-  | {
-      loading: false
-      authors: Author[]
-    }
-  | {
-      loading: false
-      error: unknown
-    }
+export type FileContributorsState = LoadingState<Author[]>
 
-export type LastUpdatedState =
-  | {
-      loading: true
-      lastEdit?: string
-    }
-  | {
-      loading: false
-      lastEdit: string
-    }
-  | {
-      loading: false
-      error: unknown
-    }
+export type LastUpdatedState = LoadingState<string>
 
 // Crowdin contributors
 export type CrowdinFileId = {
@@ -205,8 +186,9 @@ export type Author = {
  * Table of contents
  */
 export type SourceHeadingItem = { depth: number; id: string; label: string }
+
 export type ToCItem = {
   title: string
   url: string
-  items?: Array<ToCItem>
+  items?: ToCItem[]
 }
