@@ -461,12 +461,19 @@ The `Greeter` component is the one we need to export for the application.
 
 ### `src/wagmi.ts` {#wagmi-ts}
 
-Finally, various definitions related to WAGMI are in `src/wagmi.ts`.
+Finally, various definitions related to WAGMI are in `src/wagmi.ts`. I am not going to explain everything here, because most of it is boilerplate you are unlikely to need to change.
+
+The code here isn't exactly the same as [on github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) because later in the article we add another chain ([Redstone Holesky](https://redstone.xyz/docs/network-info)). 
 
 ```ts
 import { getDefaultWallets } from '@rainbow-me/rainbowkit'
 import { configureChains, createConfig } from 'wagmi'
 import { holesky, sepolia } from 'wagmi/chains'
+```
+
+Import the blockchains the application supports. You can see the list of supported chains [in the viem github](https://github.com/wagmi-dev/viem/tree/main/src/chains/definitions).
+
+```ts
 import { publicProvider } from 'wagmi/providers/public'
 
 const walletConnectProjectId = 'c96e690bb92b6311e8e9b2a6a22df575'
@@ -475,10 +482,6 @@ const walletConnectProjectId = 'c96e690bb92b6311e8e9b2a6a22df575'
 To be able to use [WalletConnect](https://walletconnect.com/) you need a project ID for your application. You can get it [on cloud.walletconnect.com](https://cloud.walletconnect.com/sign-in).
 
 ```ts
-holesky.rpcUrls.public.http = holesky.rpcUrls.default.http
-  
-console.log(holesky)
-
 const { chains, publicClient, webSocketPublicClient } = configureChains(
   [ holesky, sepolia ],
   [
@@ -502,8 +505,64 @@ export const config = createConfig({
 export { chains }
 ```
 
+## Adding another blockchain
 
-## Scaffolding {#scaffolding}
+These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`:
+
+1. Import the `Chain` type from WAGMI.
+
+   ```ts
+   import { Chain } from 'wagmi'
+   ```
+
+1. Add the network definition.
+
+   ```ts
+    const redstoneHolesky = {
+      id: 17_001,
+      name: 'Redstone Holesky',
+      network: 'redstone-holesky',
+      nativeCurrency: {
+        name: 'Holesky Ether',
+        symbol: 'ETH',
+        decimals: 18,
+      },
+      rpcUrls: {
+        default: { http: ['https://rpc.holesky.redstone.xyz'], },
+        public: { http: ['https://rpc.holesky.redstone.xyz'], },
+      },
+      blockExplorers: {
+        default: { name: 'Redstone Holesky',
+                  url: 'https://explorer.holesky.redstone.xyz' },
+      },
+    }  as const satisfies Chain
+   ```
+
+1. Add the new chain to the `configureChains` call.
+
+   ```ts
+    const { chains, publicClient, webSocketPublicClient } = configureChains(
+      [ holesky, sepolia, redstoneHolesky ],
+      [ publicProvider(), ],
+    ) 
+   ```
+
+1. Ensure that the application knows the address for your contracts on the new network. In this case, we modify `src/components/Greeter.tsx`:
+
+    ```ts
+    const contractAddrs : AddressPerBlockchainType = {
+      // Holesky
+      17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
+        
+      // Redstone Holesky
+      17001: '0x4919517f82a1B89a32392E1BF72ec827ba9986D3',
+        
+      // Sepolia
+      11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
+    }    
+    ```
+
+# Scaffolding {#scaffolding}
 
 ```sh
 npm create wagmi
