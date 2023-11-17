@@ -1,12 +1,5 @@
 import * as React from "react"
-import {
-  Box,
-  Heading,
-  HStack,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 import GatsbyImage from "../../GatsbyImage"
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
@@ -21,11 +14,6 @@ const HubHero = (props: HubHeroProps) => {
       "Can not have more than two call-to-action buttons in this hero component."
     )
   }
-
-  const largeContentBg = useColorModeValue(
-    "rgba(255, 255, 255, 0.80)",
-    "rgba(34, 34, 34, 0.80)"
-  )
 
   return (
     <Box position="relative">
@@ -47,7 +35,7 @@ const HubHero = (props: HubHeroProps) => {
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
-        bg={{ xl: largeContentBg }}
+        bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
         insetStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
@@ -55,6 +43,7 @@ const HubHero = (props: HubHeroProps) => {
         transform={{ xl: "translateY(-50%)" }}
         backdropFilter={{ xl: "auto" }}
         backdropBlur={{ xl: "base" }}
+        wordBreak="break-word"
       >
         <Heading
           as="h1"

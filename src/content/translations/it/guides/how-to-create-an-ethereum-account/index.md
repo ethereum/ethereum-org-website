@@ -4,37 +4,39 @@ description: Una guida passo-passo sulla creazione di un conto di Ethereum utili
 lang: it
 ---
 
-# Come "registrare" un conto di Ethereum
+# Come creare un conto di Ethereum
 
-Chiunque può creare gratuitamente un conto di Ethereum grazie a una specifica tipologia di app comunemente nota come portafoglio. I portafogli creano e proteggono le chiavi che ti consentono di detenere, inviare e ricevere criptovalute. Inoltre, puoi connetterti ai progetti su Ethereum che ti consentiranno di commerciare NFT, scambiare token, accedere a giochi e molto altro.
+Chiunque può creare un conto di Ethereum in qualsiasi momento, gratuitamente. Esistono diversi modi per farlo, ma il più semplice e comune è quello di utilizzare un'applicazione nota come portafoglio. I portafogli creano e proteggono le chiavi che ti consentono di utilizzare Ethereum. È possibile utilizzare il proprio portafoglio per inviare transazioni, controllare il saldo dei token e connettersi ad applicazioni basate su Ethereum, come borse scambio di token, videogiochi, marketplace NFT e altro ancora. Alcune applicazioni "web2" ora ti consentono di accedere anche con Ethereum.
 
-A differenza dell'apertura di un nuovo conto presso un'azienda, la creazione di un conto di Ethereum avviene gratuitamente, privatamente e senza chiedere un'autorizzazione. I conti sono controllati da chiavi che il software del tuo portafoglio ti aiuta a generare, che non sono rilasciate da terzi né sono conservate in un registro centrale.
+A differenza dell'apertura di un nuovo conto presso un'azienda, la creazione di un conto di Ethereum avviene liberamente, privatamente e senza bisogno di autorizzazione. I conti sono controllati da chiavi che il software del tuo portafoglio ti aiuta a generare, che non sono rilasciate da terzi né sono conservate in un registro centrale.
 
-## Fase 1: sfoglia il nostro elenco di portafogli
+## Fase 1: Scegliere un portafoglio
 
-Un portafoglio è come un conto bancario online per Ethereum. Esistono decine di portafogli diversi tra cui scegliere: per mobile, desktop o persino estensioni per browser. Il nostro elenco curato di portafogli sicuri è un buon punto di partenza.
+Un portafoglio è un'applicazione che ti aiuta a gestire il tuo conto di Ethereum. Utilizza le chiavi per inviare e ricevere transazioni e accedere alle applicazioni. Esistono decine di portafogli diversi tra cui scegliere: per mobile, desktop o persino estensioni per browser.
 
 <ButtonLink to="/wallets/find-wallet/">
   Trova un portafoglio
 </ButtonLink>
 
-## Fase 2: scegli un portafoglio adatto alle tue esigenze
+Se si è nuovi, è possibile selezionare il filtro "Senza conoscenza di criptovalute" nella pagina "Trova un portafoglio" per identificare i portafogli che dovrebbero includere tutte le caratteristiche necessarie adatte ai principianti.
 
-Se non hai esperienza, puoi attivare il filtro "Senza conoscenza di criptovalute" per visualizzare soltanto quei portafogli che includono tutte le funzionalità necessarie che pensiamo sarebbero particolarmente adatte per i principianti. Esistono poi altri filtri del profilo per provvedere alle tue esigenze.
+![filtra la selezione nella pagina "trova un portafoglio"](./wallet-box.png)
 
-## Fase 3: scarica e installa l'app del tuo portafoglio
+Esistono poi altri filtri del profilo per provvedere alle tue esigenze. Questi sono esempi di portafogli comunemente utilizzati - prima di fidarsi di qualsiasi software, è bene fare le proprie ricerche.
+
+## Fase 2: Scaricare e installare l'app del proprio portafoglio
 
 Una volta scelto un portafoglio specifico, visitane il sito web ufficiale o l'app store, scaricalo e installalo. Dovrebbero essere tutti gratuiti.
 
-## Fase 4: apri l'app e genera o importa il tuo conto di Ethereum
+## Fase 3: Aprire l'app e generare o importare il proprio conto di Ethereum
 
 La prima volta che apri il tuo nuovo portafoglio, ti potrebbe esser chiesto di scegliere tra creare un nuovo conto o importarne uno esistente. Clicca sulla creazione di un nuovo conto.
 
-## Fase 5: memorizza la tua frase di recupero
+## Fase 4: Memorizzare la frase di recupero
 
-Alcune app ti chiederanno di salvare una frase di recupero segreta. Mantenere questa frase di recupero segreta al sicuro è estremamente importante! Chiunque conosca questa frase di recupero segreta può prendere il controllo di tutti i tuoi conti generati da tali parole. Non condividerla mai con nessuno. Questa frase dovrebbe contenere da 12 a 24 parole generate casualmente (l'ordine delle parole è importante).
+Alcune applicazioni richiedono di salvare una "frase di seed" segreta (che può essere chiamata anche "frase di recupero" o "mnemonica"). Tenere questa frase di seed al sicuro è estremamente importante! La frase di seed viene utilizzata per generare una chiave segreta per il conto che può essere utilizzata per firmare e inviare transazioni. Chiunque conosca la frase di seed può prendere il controllo di tutti i conti da essa generati. Non condividere mai la frase di seed con nessuno. La frase di seed deve contenere da 12 a 24 parole generate in modo casuale (l'ordine delle parole è importante).
 
-Una volta salvata la tua frase di recupero, dovresti vedere il pannello di controllo del tuo portafoglio con il tuo saldo. Consulta la nostra guida: [come utilizzare un portafoglio.](/guides/how-to-use-a-wallet)
+Una volta salvata la frase di seed, si dovrebbe vedere il pannello di controllo del portafoglio con il saldo. Consulta la nostra guida: [come utilizzare un portafoglio.](/guides/how-to-use-a-wallet)
 
  <br />
 
@@ -49,7 +51,9 @@ Una volta salvata la tua frase di recupero, dovresti vedere il pannello di contr
 
 ### Il mio portafoglio e il mio conto di Ethereum sono la stessa cosa?
 
-No, proprio come l'online banking, puoi avere molti conti differenti, tutti memorizzati nell'applicazione di un portafoglio. La tua frase di 12 o 24 parole li protegge tutti: è come il seme di un grande albero (per cui, devi tenerla al sicuro). Ogni ramo dell'albero regge una chiave e ogni chiave è uno dei tuoi conti. Se perdi l'accesso al portafoglio (cioè, se il tuo albero viene abbattuto), puoi sempre ripristinare tutti i tuoi diversi conti utilizzando un altro software e lo stesso seme (che farà crescere sempre lo stesso albero).
+No. Il portafoglio è uno strumento di gestione che ti aiuta a gestire i conti. Un singolo portafoglio può darti accesso a diversi conti e un singolo conto può essere accessibile da più portafogli. La frase di seed viene utilizzata per creare conti che vengono poi controllati dal portafoglio.
+
+Si può pensare ai conti come alle foglie di un albero che "crescono" da un'unica frase di seed. Ogni seed univoco farà crescere un albero di conti completamente diverso.
 
 ### Posso inviare bitcoin a un indirizzo di Ethereum, o ether a un indirizzo di Bitcoin?
 
@@ -57,12 +61,12 @@ No, non puoi. Bitcoin ed ether esistono su due reti separate (cioè, blockchain 
 
 ### Se possiedo un indirizzo ETH, possiedo lo stesso indirizzo su altre blockchain?
 
-Puoi utilizzare lo stesso indirizzo su tutte le blokchain compatibili con l'EVM (se hai il tipo di portafoglio con una frase di recupero). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti, dovresti consultare il sito web del prodotto per ulteriori informazioni su quali blockchain sono supportate.
+È possibile utilizzare lo stesso indirizzo su tutte le blockchain che utilizzano un software sottostante simile a Ethereum (noto come "compatibile con l'EVM"). Questo [elenco](https://chainlist.org/) ti mostrerà quali blockchain puoi utilizzare con lo stesso indirizzo. Alcune blockchain, come Bitcoin, implementano una serie di regole di rete completamente separata, e ti servirà un indirizzo diverso con un formato differente. Se hai un portafoglio di contratti intelligenti, dovresti consultare il sito web del prodotto per ulteriori informazioni su quali blockchain sono supportate.
 
 ### Avere il proprio portafoglio è più sicuro di mantenere i miei fondi su una borsa?
 
-Sì, è un'opzione molto più sicura perché nessun altro avrà accesso ai tuoi fondi. Sfortunatamente, esistono molti esempi di borse fallite che hanno presentato istanza di fallimento, causando la perdita da parte degli utenti dei propri risparmi tenuti in custodia. Hack, conti congelati o prelievi bloccati sono alcuni altri rischi comuni. Possedere un portafoglio (con una frase di recupero) è il metodo migliore per salvaguardare le tue risorse. Ciononostante, una frase di recupero mal protetta ti espone potenzialmente a più rischi rispetto a far gestire le tue chiavi da una borsa. Assicurati di proteggere bene la tua frase di recupero.
+Avere un portafoglio personale significa assumersi la responsabilità della sicurezza delle proprie risorse. Purtroppo ci sono molti esempi di borse fallite che hanno fatto perdere denaro ai loro clienti. Possedere un portafoglio (con una frase di seed) elimina il rischio associato al fidarsi di un'entità che detiene le tue risorse. Tuttavia, è necessario proteggere le proprie chiavi ed evitare truffe di phishing, l'approvazione accidentale di transazioni o l'esposizione delle chiavi, l'interazione con siti web fraudolenti e altri rischi legati all'autocustodia. I rischi e i benefici sono diversi.
 
 ### Se perdo il mio portafoglio su telefono/hardware, devo riutilizzare la stessa app del portafoglio per recuperare i fondi perduti?
 
-No, puoi usare quasi qualsiasi portafoglio poiché il procedimento di recupero è ampiamente standardizzato. Ciò significa che puoi inserire la stessa frase di 12 o 24 parole in gran parte dei portafogli e il tuo conto sarà ripristinato. Se mai dovessi farlo, sii cauto: è meglio assicurarsi di non essere connessi a Internet quando si recupera il proprio portafoglio, così che la tua frase di recupero non trapeli accidentalmente. Spesso è impossibile recuperare i fondi perduti senza la frase di recupero.
+No, puoi utilizzare un altro portafoglio. Finché disponi della frase di seed, puoi inserirla nella maggior parte dei portafogli e questi ripristineranno il conto. Fai attenzione se mai dovessi fare questa operazione: è meglio assicurarsi di non essere connessi a Internet quando si recupera il portafoglio, in modo da non far trapelare accidentalmente la frase di seed. Spesso è impossibile recuperare i fondi persi senza la frase di seed.

@@ -1,13 +1,13 @@
 ---
 title: Ethereum für Python-Entwickler
-description: Erfahre, wie du mit Python-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Lernen, wie Sie mit Python-basierten Projekten und Tools für Ethereum entwickeln können
 lang: de
 incomplete: true
 ---
 
 <div class="featured">Erfahren Sie, wie Sie mit Python-basierten Projekten und Tools für Ethereum entwickeln können</div>
 
-Verwende Ethereum, um dezentrale Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
+Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
 ## Erste Schritte mit Smart Contracts und der Solidity-Sprache {#getting-started-with-smart-contracts-and-solidity}
 
@@ -23,13 +23,14 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 ## Informationen für Einsteiger {#beginner-articles}
 
 - [Ein (Python)-Entwicklerhandbuch für Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
+- [Bericht über den Zustand von Python im Jahr 2023](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [Eine Einführung in Smart Contracts mit Vyper](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
 - [Einen eigenen ERC20-Token mit Python und Brownie bereitstellen](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
-- [Wie wird ein Ethereum-Vertrag mit Python Flask entwickelt?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
+- [Wie entwickelt man einen Ethereum-Vertrag mit Python Flask?](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Einführung in Web3.py · Ethereum für Python-Entwickler](https://www.dappuniversity.com/articles/web3-py-intro)
-- [So rufen Sie eine Smart-Contract-Funktion mit Python und web3.py auf](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
+- [Wie man eine Smart Contract-Funktion mit Python und web3.py aufruft](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## Artikel für Fortgeschrittene {#intermediate-articles}
+## Vertiefende Artikel {#intermediate-articles}
 
 - [dApp-Entwicklung für Python-Programmierer](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Eine Python-Ethereum-Schnittstelle erstellen: Teil 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
@@ -48,9 +49,9 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 ### Aktiv: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) – _Python-Bibliothek für die Interaktion mit Ethereum_
-- [Ape](https://github.com/ApeWorX/ape) – _Das Smart-Contract-Entwicklungstool für Python-Experten, Data Scientists und Sicherheitsexperten_
-- [Brownie](https://github.com/eth-brownie/brownie) – _Python-Framework zum Bereitstellen, Testen und Interagieren mit Ethereum-Smart Contracts_
-- [Vyper](https://github.com/ethereum/vyper/) – _Pythonic-Smart-Contract-Sprache für EVM_
+- [Vyper](https://github.com/ethereum/vyper/) – _Pythonic Smart Contract-Sprache für EVM_
+- [Ape](https://github.com/ApeWorX/ape) – _Das Smart Contract-Entwicklungstool für Python-Experten, Datenwissenschaftler und Sicherheitsexperten_
+- [Brownie](https://github.com/eth-brownie/brownie) – _Python-Framework zum Bereitstellen, Testen und Interagieren mit Ethereum Smart Contracts_
 - [py-evm](https://github.com/ethereum/py-evm) – _Implementierung der Ethereum -Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) – _Tools zum Testen von Ethereum-basierten Anwendungen_
 - [eth-utils](https://github.com/ethereum/eth-utils/) – _Dienstprogrammfunktionen für das Arbeiten mit Codebasen, die mit Ethereum verwandt sind_
@@ -59,7 +60,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [pydevp2p](https://github.com/ethereum/pydevp2p) – _Implementierung des Ethereum-P2P-Stacks_
 - [pymaker](https://github.com/makerdao/pymaker) – _Python-API für Maker-Verträge_
 - [siwe](https://github.com/spruceid/siwe-py) – _Mit Ethereum (siwe) für Python anmelden_
-- [Smart Contracts zum Testen](https://github.com/tradingstrategy-ai/smart-contracts-for-testing) – _Ein Python-Paket, das ERC-20, Uniswap und andere gängige Verträge zum Schreiben von Tests mit Web3.py bietet_
+- [Web3 DeFi für Ethereum-Integrationen](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _Ein Python-Paket mit fertigen Integrationen für ERC-20, Uniswap und andere populäre Projekte_
 
 ### Archiviert/Nicht mehr verwaltet: {#archived--no-longer-maintained}
 
@@ -78,10 +79,11 @@ Die folgenden Ethereum-basierten Projekte verwenden die auf dieser Seite erwähn
 - [Sushi](https://sushi.com/) verwendet [Python zum Verwalten und Bereitstellen ihrer Übertragungsverträge](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/) von Alpha Homora verwendet [ Brownie zum Testen und Bereitstellen von Smart Contracts](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Mitwirkende der Python-Community {#python-community-contributors}
+## Python Community-Diskussionen {#python-community-contributors}
 
-Der [Ethereum-Python-Community-Discord](https://discord.gg/9zk7snTfWe) beherbergt eine schnell wachsende Community mit umfangreichen Ressourcen für Diskussionen zu einem der oben genannten Projekte und verwandten Themen.
+- [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) für Web3.py und andere Python Framework-Diskussionen
+- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) für Diskussionen zu Vyper Smart Contract-Programmierung
 
 ## Andere aggregierte Listen {#other-aggregated-lists}
 
-Das Vyper-Wiki hat eine [umfassende Liste mit Ressourcen für Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+Das Vyper-Wiki verfügt über eine [umfassende Liste mit Ressourcen für Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

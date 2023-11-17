@@ -10,7 +10,7 @@ source: paulapivat.com
 sourceUrl: https://paulapivat.com/post/query_ethereum/
 ---
 
-Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analyst or for people who wish to see on-chain data without running a client or node.
+Many Ethereum tutorials target developers, but there’s a lack of educational resources for data analysts or for people who wish to see on-chain data without running a client or node.
 
 This tutorial helps readers understand fundamental Ethereum concepts including transactions, blocks and gas by querying on-chain data with structured query language (SQL) through an interface provided by [Dune Analytics](https://dune.xyz/home).
 
@@ -26,7 +26,7 @@ However, a user may wish to query the data directly to reconcile the information
 
 For reference, the smart contract account for the Ethereum Foundation (EF) can be viewed on [Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae).
 
-One thing to note is that all accounts, including the EF’s, has a public address that can be used to send and receive transactions.
+One thing to note is that all accounts, including the EF’s, have a public address that can be used to send and receive transactions.
 
 The account balance on Etherscan comprises regular transactions and internal transactions. Internal transactions, despite the name, are not _actual_ transactions that change the state of the chain. They are value transfers initiated by executing a contract ([source](https://ethereum.stackexchange.com/questions/3417/how-to-get-contract-internal-transactions)). Since internal transactions have no signature, they are **not** included on the blockchain and cannot be queried with Dune Analytics.
 

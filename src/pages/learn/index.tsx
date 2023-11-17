@@ -29,11 +29,8 @@ import UpgradeTableOfContents from "../../components/UpgradeTableOfContents"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
 import GatsbyImage from "../../components/GatsbyImage"
-import {
-  ContentContainer,
-  InfoColumn,
-  InfoTitle,
-} from "../../templates/use-cases"
+import LeftNavBar from "../../components/LeftNavBar"
+import { ContentContainer } from "../../templates/use-cases"
 
 // Utils
 import { Lang } from "../../utils/languages"
@@ -199,14 +196,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
         pt={{ base: "10", lg: "16" }}
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
-        <Show above={lgBp}>
-          <InfoColumn>
-            <InfoTitle>
-              <Translation id="toc-learn-hub" />
-            </InfoTitle>
-            <UpgradeTableOfContents items={tocItems} />
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar tocItems={tocItems} hideBelow={lgBp} />
 
         <ContentContainer id="content">
           <Section>

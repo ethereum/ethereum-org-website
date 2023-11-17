@@ -5,9 +5,9 @@ author: "Trailofbits"
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
+  - "Smart Contract"
   - "sicurezza"
-  - "token"
+  - "tokens"
 skill: intermediate
 published: 2020-08-13
 source: Creare contratti sicuri
