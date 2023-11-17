@@ -23,14 +23,13 @@ export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export type Frontmatter =
-  | RoadmapFrontmatter
-  | UpgradeFrontmatter
-  | StaticFrontmatter
-  | UseCasesFrontmatter
-  | StakingFrontmatter
-  | DocsFrontmatter
-  | TutorialFrontmatter
+export type Frontmatter = RoadmapFrontmatter &
+  UpgradeFrontmatter &
+  StaticFrontmatter &
+  UseCasesFrontmatter &
+  StakingFrontmatter &
+  DocsFrontmatter &
+  TutorialFrontmatter
 
 export type Lang =
   | "en"
