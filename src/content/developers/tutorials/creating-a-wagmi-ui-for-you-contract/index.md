@@ -48,9 +48,7 @@ There is a lot of theory behind for a modern UI works, and [a lot of good sites]
 
 1. You can see the contract source code, a slightly modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract).
 
-
-
-## The files  {#the-files}
+## File walk through {#file-walk-through}
 
 ### `index.html` {#index-html}
 
@@ -98,7 +96,7 @@ The application is going inside [a `React.StrictMode` component](https://react.d
     <WagmiConfig config={config}>
 ```
 
-The application is also inside [a `WagmiConfig` component](https://wagmi.sh/react/WagmiConfig). [The `wagmi` (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the `viem` library](https://viem.sh/) for writing an Ethereum decentralized application.
+The application is also inside [a `WagmiConfig` component](https://wagmi.sh/react/WagmiConfig). [The wagmi (we are going to make it) library](https://wagmi.sh/) connects the React UI definitions with [the viem library](https://viem.sh/) for writing an Ethereum decentralized application.
 
 ```tsx
       <RainbowKitProvider chains={chains}>
@@ -121,7 +119,7 @@ Now we can have the component for the application, which actually implements the
 
 Of course, we have to close off the other components.
 
-### `src/App.tsx`  {#app-tsx}
+### `src/App.tsx` {#app-tsx}
 
 
 ```tsx
@@ -162,7 +160,7 @@ We get [the `ConnectButton` component](https://www.rainbowkit.com/docs/connect-b
 
 When we need to insert actual JavaScript (or TypeScript that will be compiled to JavaScript) into a JSX, we use brackets (`{}`).
 
-The syntax `a && b` is short for [`a ? b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). That is, if `a` is true it evaluates to `b` and otherwise it evaluates to a (which can be `false`, `0`, etc). This is an easy way to tell React that a component should only be displayed if a certain condition is fulfilled.
+The syntax `a && b` is short for [`a ? b : a`](https://www.w3schools.com/react/react_es6_ternary.asp). That is, if `a` is true it evaluates to `b` and otherwise it evaluates to `a` (which can be `false`, `0`, etc). This is an easy way to tell React that a component should only be displayed if a certain condition is fulfilled.
 
 In this case, we only want to show the user `Greeter` if the user is connected to a blockchain.
 
@@ -228,6 +226,8 @@ const contractAddrs : AddressPerBlockchainType = {
 ```
 
 The address of the contract on the two supported networks: [Holesky](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contact_code) and [Sepolia](https://eth-sepolia.blockscout.com/address/0x7143d5c190F048C8d19fe325b748b081903E3BF0?tab=contact_code).
+
+Note: There is actually a third definition, for Redstone Holesky, it will be explained below.
 
 ```tsx
 type ShowObjectAttrsType = {
@@ -505,37 +505,42 @@ export const config = createConfig({
 export { chains }
 ```
 
-## Adding another blockchain
+## Adding another blockchain {#add-blockchain}
 
-These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`:
+These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
-1. Import the `Chain` type from WAGMI.
+1. Import the `defineChain` type from viem.
 
    ```ts
-   import { Chain } from 'wagmi'
+   import { defineChain } from 'viem'
    ```
 
 1. Add the network definition.
 
    ```ts
-    const redstoneHolesky = {
+   const redstoneHolesky = defineChain({
       id: 17_001,
       name: 'Redstone Holesky',
       network: 'redstone-holesky',
       nativeCurrency: {
-        name: 'Holesky Ether',
-        symbol: 'ETH',
         decimals: 18,
+        name: 'Ether',
+        symbol: 'ETH',
       },
       rpcUrls: {
-        default: { http: ['https://rpc.holesky.redstone.xyz'], },
-        public: { http: ['https://rpc.holesky.redstone.xyz'], },
+        default: {
+          http: ['https://rpc.holesky.redstone.xyz'],
+          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
+      },
+      public: {  
+          http: ['https://rpc.holesky.redstone.xyz'],
+          webSocket: ['wss://rpc.holesky.redstone.xyz/ws'],
+        },
       },
       blockExplorers: {
-        default: { name: 'Redstone Holesky',
-                  url: 'https://explorer.holesky.redstone.xyz' },
+        default: { name: 'Explorer', url: 'https://explorer.holesky.redstone.xyz' },
       },
-    }  as const satisfies Chain
+   })
    ```
 
 1. Add the new chain to the `configureChains` call.
@@ -562,11 +567,24 @@ These days there are a lot of [L2 scaling solution](https://ethereum.org/en/laye
     }    
     ```
 
-# Scaffolding {#scaffolding}
+# Conclusion {#conclusion}
 
-```sh
-npm create wagmi
-simple-app
-Vite (React)
-RainbowKit
-```
+Of course, you don't really care about providing a user interface for `Greeter`. You want to create a user interface for your own contracts. To create your own application, run these steps:
+
+1. Specify to create a wagmi application.
+
+   ```sh copy
+   npm create wagmi
+   ```
+
+1. Name the application.
+
+1. Select the **Vite (React)** framework.
+
+1. Select **Rainbow Kit**.
+
+1. Press Enter.
+
+1. Enter your own WalletConnect Project Id.
+
+Now go and make your contracts usable for the wide world.
