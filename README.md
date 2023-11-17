@@ -1693,6 +1693,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vuittont60"><img src="https://avatars.githubusercontent.com/u/81072379?v=4?s=100" width="100px;" alt="vuittont60"/><br /><sub><b>vuittont60</b></sub></a><br /><a href="#content-vuittont60" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://goldnite.github.io"><img src="https://avatars.githubusercontent.com/u/114434414?v=4?s=100" width="100px;" alt="Golden Ite"/><br /><sub><b>Golden Ite</b></sub></a><br /><a href="#content-goldnite" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Erlangshen219"><img src="https://avatars.githubusercontent.com/u/104747507?v=4?s=100" width="100px;" alt="Erlangshen219"/><br /><sub><b>Erlangshen219</b></sub></a><br /><a href="#content-Erlangshen219" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://oxpampam.netlify.app/"><img src="https://avatars.githubusercontent.com/u/72970379?v=4?s=100" width="100px;" alt="AyDeveloper"/><br /><sub><b>AyDeveloper</b></sub></a><br /><a href="#content-AyDeveloper" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
