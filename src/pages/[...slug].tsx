@@ -94,9 +94,7 @@ export const getStaticPaths: GetStaticPaths = ({ locales }) => {
   }
 }
 
-export const getStaticProps: GetStaticProps<Props, Params> = async (
-  context
-) => {
+export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
 
@@ -159,7 +157,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       tocItems,
     },
   }
-}
+}) satisfies GetStaticProps<Props, Params>
 
 interface ContentPageProps extends Props {
   layout: keyof typeof layoutMapping
