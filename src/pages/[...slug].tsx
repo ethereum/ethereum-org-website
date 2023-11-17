@@ -5,6 +5,7 @@ import type {
   GetStaticProps,
   InferGetStaticPropsType,
 } from "next/types"
+import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
@@ -12,6 +13,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type { NextPageWithLayout } from "@/lib/types"
+import { Root } from "@/lib/interfaces"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -21,8 +23,11 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { generateTableOfContents } from "@/lib/utils/toc"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 import {
+  // docsComponents,
+  DocsLayout,
   roadmapComponents,
   RoadmapLayout,
   RootLayout,
@@ -31,8 +36,6 @@ import {
   staticComponents,
   StaticLayout,
   TutorialLayout,
-  // docsComponents,
-  DocsLayout,
   tutorialsComponents,
   upgradeComponents,
   UpgradeLayout,
@@ -41,9 +44,6 @@ import {
 } from "@/layouts"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { Root } from "@/lib/interfaces"
-import { SSRConfig } from "next-i18next"
 
 const layoutMapping = {
   static: StaticLayout,
