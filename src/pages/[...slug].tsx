@@ -173,8 +173,6 @@ const ContentPage: NextPageWithLayout<
   const components = { ...mdComponents, ...componentsMapping[layout!] }
   return (
     <>
-      {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
-      {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
     </>
   )
