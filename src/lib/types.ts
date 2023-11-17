@@ -99,8 +99,6 @@ export type I18nLocale = {
   dateFormat: string
 }
 
-export type StaticPaths = { params: { slug: string[] }; locale: string }[]
-
 export type TranslationKey = string
 
 /**

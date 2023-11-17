@@ -1,5 +1,4 @@
 import { join } from "path"
-import { ParsedUrlQuery } from "querystring"
 
 import type {
   GetStaticPaths,
@@ -12,7 +11,7 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import type { NextPageWithLayout } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -69,26 +68,22 @@ const componentsMapping = {
 export const getStaticPaths = (({ locales }) => {
   const contentFiles = getContent("/")
 
-  let paths: StaticPaths = []
-
   // Generate page paths for each supported locale
-  for (const locale of locales!) {
-    contentFiles.map((file) => {
-      paths.push({
-        params: {
-          // Splitting nested paths to generate proper slug
-          slug: file.slug.split("/").slice(1),
-        },
-        locale,
-      })
-    })
-  }
+  const paths = locales!.flatMap((locale) =>
+    contentFiles.map((file) => ({
+      params: {
+        // Splitting nested paths to generate proper slug
+        slug: file.slug.split("/").slice(1),
+      },
+      locale,
+    }))
+  )
 
   return {
     paths,
     fallback: false,
   }
-}) satisfies GetStaticPaths
+}) satisfies GetStaticPaths<{ slug: string[] }>
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
