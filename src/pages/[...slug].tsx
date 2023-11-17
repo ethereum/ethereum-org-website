@@ -1,7 +1,6 @@
 import { join } from "path"
 import { ParsedUrlQuery } from "querystring"
 
-import { ReactElement } from "react"
 import type {
   GetStaticPaths,
   GetStaticProps,
@@ -34,7 +33,7 @@ import {
   StaticLayout,
   TutorialLayout,
   // docsComponents,
-  // DocsLayout,
+  DocsLayout,
   tutorialsComponents,
   upgradeComponents,
   UpgradeLayout,
@@ -44,6 +43,7 @@ import {
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { Root } from "@/lib/interfaces"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -53,7 +53,7 @@ const layoutMapping = {
   upgrade: UpgradeLayout,
   tutorial: TutorialLayout,
   // event: EventLayout,
-  // docs: DocsLayout,
+  docs: DocsLayout,
 } as const
 
 const componentsMapping = {
@@ -65,14 +65,6 @@ const componentsMapping = {
   // docs: docsComponents,
   tutorial: tutorialsComponents,
 } as const
-
-interface Params extends ParsedUrlQuery {
-  slug: string[]
-}
-
-interface Props {
-  mdxSource: MDXRemoteSerializeResult
-}
 
 export const getStaticPaths = (({ locales }) => {
   const contentFiles = getContent("/")
@@ -127,7 +119,7 @@ export const getStaticProps = (async (context) => {
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = frontmatter.template
+  let layout = frontmatter.template as keyof typeof layoutMapping
 
   if (!frontmatter.template) {
     layout = "static"
@@ -161,16 +153,17 @@ export const getStaticProps = (async (context) => {
       tocItems,
     },
   }
-}) satisfies GetStaticProps<Props, Params>
-
-interface ContentPageProps extends Props {
-  layout: keyof typeof layoutMapping
-}
+}) satisfies GetStaticProps<
+  { mdxSource: MDXRemoteSerializeResult },
+  {
+    slug: string[]
+  }
+>
 
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ mdxSource, layout }) => {
-  const components = { ...mdComponents, ...componentsMapping[layout!] }
+  const components = { ...mdComponents, ...componentsMapping[layout] }
   return (
     <>
       <MDXRemote {...mdxSource} components={components} />
@@ -179,7 +172,7 @@ const ContentPage: NextPageWithLayout<
 }
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
-ContentPage.getLayout = (page: ReactElement) => {
+ContentPage.getLayout = (page) => {
   // values returned by `getStaticProps` method and passed to the page component
   const {
     originalSlug: slug,
@@ -192,8 +185,8 @@ ContentPage.getLayout = (page: ReactElement) => {
     tocItems,
   } = page.props
 
-  const rootLayoutProps = {
-    contentIsOutdated: frontmatter.isOutdated,
+  const rootLayoutProps: Omit<Root, "children"> = {
+    contentIsOutdated: frontmatter.isOutdated ?? false,
     contentNotTranslated,
     lastDeployDate,
   }
