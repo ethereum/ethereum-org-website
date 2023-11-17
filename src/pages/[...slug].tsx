@@ -43,6 +43,7 @@ import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { Root } from "@/lib/interfaces"
+import { SSRConfig } from "next-i18next"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -53,7 +54,9 @@ const layoutMapping = {
   tutorial: TutorialLayout,
   // event: EventLayout,
   docs: DocsLayout,
-} as const
+}
+
+type LayoutMappingType = typeof layoutMapping
 
 const componentsMapping = {
   static: staticComponents,
@@ -85,6 +88,14 @@ export const getStaticPaths = (({ locales }) => {
   }
 }) satisfies GetStaticPaths<{ slug: string[] }>
 
+type Props = Omit<
+  Parameters<LayoutMappingType[keyof LayoutMappingType]>[0],
+  "children"
+> &
+  SSRConfig & {
+    mdxSource: MDXRemoteSerializeResult
+  }
+
 export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
@@ -109,12 +120,12 @@ export const getStaticProps = (async (context) => {
 
   const timeToRead = readingTime(markdown.content)
   const tocItems = generateTableOfContents(mdxSource.compiledSource)
-  const originalSlug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
+  const slug = `/${params.slug.join("/")}/`
+  const lastUpdatedDate = getLastModifiedDate(slug, locale!)
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = frontmatter.template as keyof typeof layoutMapping
+  let layout = frontmatter.template as keyof LayoutMappingType
 
   if (!frontmatter.template) {
     layout = "static"
@@ -132,13 +143,13 @@ export const getStaticProps = (async (context) => {
   }
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(originalSlug, layout)
+  const requiredNamespaces = getRequiredNamespacesForPath(slug, layout)
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       mdxSource,
-      originalSlug,
+      slug,
       frontmatter,
       lastUpdatedDate,
       lastDeployDate,
@@ -148,12 +159,7 @@ export const getStaticProps = (async (context) => {
       tocItems,
     },
   }
-}) satisfies GetStaticProps<
-  { mdxSource: MDXRemoteSerializeResult },
-  {
-    slug: string[]
-  }
->
+}) satisfies GetStaticProps<Props, { slug: string[] }>
 
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -170,7 +176,7 @@ const ContentPage: NextPageWithLayout<
 ContentPage.getLayout = (page) => {
   // values returned by `getStaticProps` method and passed to the page component
   const {
-    originalSlug: slug,
+    slug,
     frontmatter,
     lastUpdatedDate,
     lastDeployDate,
