@@ -2,7 +2,11 @@ import { join } from "path"
 import { ParsedUrlQuery } from "querystring"
 
 import { ReactElement } from "react"
-import type { GetStaticPaths, GetStaticProps } from "next/types"
+import type {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+} from "next/types"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
@@ -163,11 +167,10 @@ interface ContentPageProps extends Props {
   layout: keyof typeof layoutMapping
 }
 
-const ContentPage: NextPageWithLayout<ContentPageProps> = ({
-  mdxSource,
-  layout,
-}) => {
-  const components = { ...mdComponents, ...componentsMapping[layout] }
+const ContentPage: NextPageWithLayout<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = ({ mdxSource, layout }) => {
+  const components = { ...mdComponents, ...componentsMapping[layout!] }
   return (
     <>
       {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
