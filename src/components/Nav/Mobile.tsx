@@ -12,6 +12,8 @@ import {
   DrawerFooter,
   Flex,
   ButtonProps,
+  Accordion,
+  AccordionItem,
 } from "@chakra-ui/react"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import { useTranslation } from "gatsby-plugin-react-i18next"
@@ -188,45 +190,47 @@ const MobileNavMenu: React.FC<IProps> = ({
 
                 return section.items ? (
                   <NavListItem key={idx} aria-label={`Select ${section.text}`}>
-                    <Box color="text" my={4} fontSize="1.3rem">
-                      {section.text}
-                    </Box>
-                    <List m={0}>
-                      {section.items.map((item, idx) =>
-                        item.items ? (
-                          <Fragment key={idx}>
-                            <Box
-                              mt={8}
-                              mb={4}
-                              fontSize="0.9rem"
-                              lineHeight={1}
-                              color="currentColor"
-                            >
-                              {item.text}
-                            </Box>
-                            {item.items.map((item, idx) => (
-                              <SectionItem key={idx} onClick={handleClick}>
-                                <StyledNavLink
-                                  to={item.to}
-                                  isPartiallyActive={item.isPartiallyActive}
-                                >
-                                  {item.text}
-                                </StyledNavLink>
-                              </SectionItem>
-                            ))}
-                          </Fragment>
-                        ) : (
-                          <SectionItem key={idx} onClick={handleClick}>
-                            <StyledNavLink
-                              to={item.to}
-                              isPartiallyActive={item.isPartiallyActive}
-                            >
-                              {item.text}
-                            </StyledNavLink>
-                          </SectionItem>
-                        )
-                      )}
-                    </List>
+                    <Accordion>
+                      <Box color="text" my={4} fontSize="1.3rem">
+                        {section.text}
+                      </Box>
+                      <AccordionItem m={0} border={"none"}>
+                        {section.items.map((item, idx) =>
+                          item.items ? (
+                            <Fragment key={idx}>
+                              <Box
+                                mt={8}
+                                mb={4}
+                                fontSize="0.9rem"
+                                lineHeight={1}
+                                color="currentColor"
+                              >
+                                {item.text}
+                              </Box>
+                              {item.items.map((item, idx) => (
+                                <SectionItem key={idx} onClick={handleClick}>
+                                  <StyledNavLink
+                                    to={item.to}
+                                    isPartiallyActive={item.isPartiallyActive}
+                                  >
+                                    {item.text}
+                                  </StyledNavLink>
+                                </SectionItem>
+                              ))}
+                            </Fragment>
+                          ) : (
+                            <SectionItem key={idx} onClick={handleClick}>
+                              <StyledNavLink
+                                to={item.to}
+                                isPartiallyActive={item.isPartiallyActive}
+                              >
+                                {item.text}
+                              </StyledNavLink>
+                            </SectionItem>
+                          )
+                        )}
+                      </AccordionItem>
+                    </Accordion>
                   </NavListItem>
                 ) : (
                   <NavListItem key={idx} onClick={handleClick}>
