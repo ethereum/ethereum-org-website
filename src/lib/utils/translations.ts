@@ -16,15 +16,26 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
 
-export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
+export const getRequiredNamespacesForPath = (
+  path: string,
+  layout?: string | undefined
+) => {
   let requiredNamespaces: string[] = ["common"]
 
-  if (layout === 'use-cases') {
-    requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
+  if (layout === "use-cases") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "template-usecase",
+      "learn-quizzes",
+    ]
   }
 
   if (layout === "upgrade") {
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades", "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades",
+      "page-upgrades-index",
+    ]
   }
 
   if (layout === "tutorial") {
@@ -64,7 +75,8 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
   if (
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
-    path.startsWith("/security")
+    path.startsWith("/security") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

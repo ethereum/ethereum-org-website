@@ -16,7 +16,7 @@ import type {
 export type ChildOnlyProp = { children?: ReactNode }
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
+  getLayout?: (page: ReactElement<P>) => ReactNode
 }
 
 export type AppPropsWithLayout = AppProps & {
