@@ -53,6 +53,12 @@ The specific steps involved will depend on the development framework in question
 
 - [Documentation](https://portal.thirdweb.com/deploy/)
 
+**Crossmint - _Enterprise-grade web3 development platform to deploy smart contracts, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs._**
+
+- [crossmint.com](https://www.crossmint.com/?utm_source=backlinks)
+- [Documentation](https://docs.crossmint.com/?utm_source=backlinks)
+- [Discord](https://discord.com/invite/crossmint/?utm_source=backlinks)
+
 ## Related tutorials {#related-tutorials}
 
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._
