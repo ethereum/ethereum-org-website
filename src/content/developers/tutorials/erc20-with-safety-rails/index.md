@@ -125,7 +125,7 @@ Sometimes it is useful to have an administrator that can undo mistakes. To reduc
 1. Freezing and unfreezing accounts. This can be useful, for example, when an account might be compromised.
 2. Asset cleanup.
 
-   Sometimes frauds send fraudulant tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). The legitimate ERC-20 contract is [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
+   Sometimes frauds send fraudulent tokens to the real token's contract to gain legitimacy. For example, [see here](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). The legitimate ERC-20 contract is [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). The scam that pretends to be it is [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
 
    It is also possible that people send legitimate ERC-20 tokens to our contract by mistake, which is another reason to want to have a way to get them out.
 

@@ -199,9 +199,8 @@ const EventPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBp}>
-          <LeftNavBar tocItems={tocItems} />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar tocItems={tocItems} hideBelow={lgBp} />
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>

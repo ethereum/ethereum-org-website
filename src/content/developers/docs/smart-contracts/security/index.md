@@ -470,13 +470,13 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 ### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
 
 ### Tools for secure administration of smart contracts {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
+- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
 
 - **[Safe](https://safe.global/)** - _Smart contract wallet running on Ethereum that requires a minimum number of people to approve a transaction before it can occur (M-of-N)._
 
