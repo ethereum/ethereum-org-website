@@ -363,7 +363,7 @@ const WhatIsEthereumPage = ({
           <br />
           <br />
 
-          <Section>
+          <Box>
             <H2>
               <Translation id="page-what-is-ethereum-what-can-eth-do-title" />
             </H2>
@@ -381,7 +381,7 @@ const WhatIsEthereumPage = ({
                 />
               ))}
             </CardContainer>
-          </Section>
+          </Box>
 
           <TwoColumnContent>
             <Width60>
