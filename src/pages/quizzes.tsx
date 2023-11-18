@@ -1,19 +1,34 @@
+import { useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import { Box, Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  Stack,
+  Text,
+  useDisclosure,
+} from "@chakra-ui/react"
 
 import { NextPageWithLayout } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import PageMetadata from "@/components/PageMetadata"
+import QuizzesList, { QuizzesListProps } from "@/components/Quiz/QuizzesList"
+import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
+
+import { INITIAL_QUIZ } from "@/lib/constants"
 
 import { RootLayout } from "@/layouts"
 
@@ -27,6 +42,7 @@ const handleGHAdd = () =>
 const QuizListWrapper = (props: {
   headingId: string
   descriptionId: string
+  quizzesListProps: QuizzesListProps
 }) => (
   <Stack spacing="8" px={{ base: "8", lg: 0 }} pt="12">
     <Stack spacing="8">
@@ -37,7 +53,7 @@ const QuizListWrapper = (props: {
         <Translation id={props.descriptionId} />
       </Text>
     </Stack>
-    <div>Quiz List</div>
+    <QuizzesList {...props.quizzesListProps} />
   </Stack>
 )
 
@@ -45,6 +61,16 @@ const QuizzesHubPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
   const { t } = useTranslation()
+
+  const [userStats] = useLocalQuizData()
+  const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
+  const { onOpen, isOpen } = useDisclosure()
+
+  const commonQuizListProps = {
+    userStats,
+    quizHandler: setCurrentQuiz,
+    modalHandler: onOpen,
+  }
 
   return (
     <Box>
@@ -60,10 +86,18 @@ const QuizzesHubPage: NextPageWithLayout<
               <QuizListWrapper
                 headingId="learn-quizzes:basics"
                 descriptionId="learn-quizzes:basics-description"
+                quizzesListProps={{
+                  ...commonQuizListProps,
+                  content: ethereumBasicsQuizzes,
+                }}
               />
               <QuizListWrapper
                 headingId="learn-quizzes:using-ethereum"
                 descriptionId="learn-quizzes:using-ethereum-description"
+                quizzesListProps={{
+                  ...commonQuizListProps,
+                  content: usingEthereumQuizzes,
+                }}
               />
             </Box>
             <Flex

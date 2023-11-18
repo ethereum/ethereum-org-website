@@ -115,11 +115,6 @@ export type QuizzesSection = {
   next?: string
 }
 
-export type QuizzesListItem = QuizzesSection & {
-  quizHandler: (id: string) => void
-  modalHandler: (isModalOpen: boolean) => void
-}
-
 export type QuizStatus = "neutral" | "success" | "error"
 
 export type CompletedQuizzes = { [key: string]: [boolean, number] }
@@ -127,7 +122,7 @@ export type CompletedQuizzes = { [key: string]: [boolean, number] }
 export type UserStats = {
   score: number
   average: number[]
-  completed: string
+  completed: CompletedQuizzes
 }
 
 export type QuizShareStats = { score: number; total: number }
