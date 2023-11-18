@@ -270,13 +270,13 @@ const RoadmapPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBp}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-            tocItems={tocItems}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
+          tocItems={tocItems}
+        />
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
