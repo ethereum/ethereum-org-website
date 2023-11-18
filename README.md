@@ -122,7 +122,7 @@ To use an existing function locally you don't need to do anything. Just check th
 To create a new function, you will need to create two files:
 
 - One in `src/lambda` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
-- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
+- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatsby docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
 Typically, you will develop and test functions in the Gatsby context, by running `yarn start`.
 
@@ -1692,6 +1692,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/konstantinzolotarev"><img src="https://avatars.githubusercontent.com/u/286431?v=4?s=100" width="100px;" alt="Konstantin Zolotarev"/><br /><sub><b>Konstantin Zolotarev</b></sub></a><br /><a href="#content-konstantinzolotarev" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vuittont60"><img src="https://avatars.githubusercontent.com/u/81072379?v=4?s=100" width="100px;" alt="vuittont60"/><br /><sub><b>vuittont60</b></sub></a><br /><a href="#content-vuittont60" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://goldnite.github.io"><img src="https://avatars.githubusercontent.com/u/114434414?v=4?s=100" width="100px;" alt="Golden Ite"/><br /><sub><b>Golden Ite</b></sub></a><br /><a href="#content-goldnite" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Erlangshen219"><img src="https://avatars.githubusercontent.com/u/104747507?v=4?s=100" width="100px;" alt="Erlangshen219"/><br /><sub><b>Erlangshen219</b></sub></a><br /><a href="#content-Erlangshen219" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://oxpampam.netlify.app/"><img src="https://avatars.githubusercontent.com/u/72970379?v=4?s=100" width="100px;" alt="AyDeveloper"/><br /><sub><b>AyDeveloper</b></sub></a><br /><a href="#content-AyDeveloper" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jeremyfritzen"><img src="https://avatars.githubusercontent.com/u/26802442?v=4?s=100" width="100px;" alt="jeremyfritzen"/><br /><sub><b>jeremyfritzen</b></sub></a><br /><a href="#content-jeremyfritzen" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fuzheng1998"><img src="https://avatars.githubusercontent.com/u/24203166?v=4?s=100" width="100px;" alt="Zheng Fu"/><br /><sub><b>Zheng Fu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fuzheng1998" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>

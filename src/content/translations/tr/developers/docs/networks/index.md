@@ -56,8 +56,6 @@ Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sep
 - [QuickNode Sepolia Musluğu](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [İş İspatı Musluğu](https://sepolia-faucet.pk910.de/)
-- [Sepolia Musluğu](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Coinbase Cüzdanı Musluğu | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia musluğu](https://sepoliafaucet.com/)
 - [Infura Sepolia Musluğu](https://www.infura.io/faucet)
