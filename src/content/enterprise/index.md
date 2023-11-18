@@ -56,6 +56,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [Chainstack](https://chainstack.com/) _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.net/) _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
+- [Crossmint](http://crossmint.com/?utm_source=backlinks) _Enterprise-grade web3 development platform to deploy smart contracts, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs._
 - [Envision Blockchain](https://envisionblockchain.com/) _provides enterprise focused consulting and development services specializing in Ethereum Mainnet_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_
@@ -72,6 +73,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 ### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
+- [Crossmint](http://crossmint.com/?utm_source=backlinks) _Enterprise-grade APIs to create, distribute, sell, store, and edit NFTs_
 - [Sirato](https://www.web3labs.com/sirato) _a data and analytics platform for public and private Ethereum compatible networks by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_
@@ -91,6 +93,7 @@ Here are some of the enterprise applications that have been built on top of the 
 ### Payments {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
+- [Crossmint](http://crossmint.com/?utm_source=backlinks) _Enable credit card and cross-chain payments for your NFT Collections._
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_
 
