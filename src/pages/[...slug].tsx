@@ -9,11 +9,7 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type {
-  Lang,
-  NextPageWithLayout,
-  StaticPaths,
-} from "@/lib/types"
+import type { Lang, NextPageWithLayout, StaticPaths } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"

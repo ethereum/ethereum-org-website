@@ -193,6 +193,8 @@ export const TutorialLayout = ({
     frontmatter.postMergeBannerTranslation as TranslationKey | null
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
   const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const useGitHubContributors =
+    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <>
@@ -226,16 +228,16 @@ export const TutorialLayout = ({
             pt={8}
           />
           {children}
-          {frontmatter.lang !== DEFAULT_LOCALE ? (
+          {useGitHubContributors ? (
+            <GitHubContributors
+              relativePath={relativePath}
+              lastUpdatedDate={lastUpdatedDate!}
+            />
+          ) : (
             <CrowdinContributors
               relativePath={relativePath}
               lastUpdatedDate={intlLastEdit}
               contributors={crowdinContributors}
-            />
-          ) : (
-            <GitHubContributors
-              relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
             />
           )}
           <FeedbackCard />
