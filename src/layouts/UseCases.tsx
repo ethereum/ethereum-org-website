@@ -23,16 +23,13 @@ import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -247,14 +244,11 @@ export const UseCasesLayout: React.FC<IProps> = ({
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents items={tocItems} maxDepth={2} />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            tocItems={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           {children}

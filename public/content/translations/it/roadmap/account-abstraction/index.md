@@ -1,6 +1,6 @@
 ---
 title: Astrazione account
-description: Un panoramica dei piani di Ethereum per rendere i conti degli utenti più semplici e sicuri
+description: Una panoramica dei piani di Ethereum per rendere i conti degli utenti più semplici e sicuri
 lang: it
 summaryPoints:
   - L'astrazione del conto semplifica molto la creazione di portafogli di contratti intelligenti
@@ -23,7 +23,7 @@ I portafogli di contratti intelligenti sbloccano molti benefici per l'utente, tr
 - raggruppare le transazioni (es. approvare ed eseguire uno scambio in una sola volta)
 - incrementare le opportunità per gli svilupptori di dapp e portafogli, per innovare l'esperienza degli utenti
 
-Tali benefici non sono ad oggi supportati nativamente, poiché soltanto i conti posseduti esternamente ([EOA](/glossary/#eoa)) possono avviare le transazioni. Gli EOA sono semplicemente coppie di chiavi pubblica-privata. Funzionano come segue:
+Tali benefici non sono oggi supportati nativamente, poiché soltanto gli account posseduti esternamente ([EOA](/glossary/#eoa)) possono avviare le transazioni. Gli EOA sono semplicemente coppie di chiavi pubblica-privata. Funzionano come segue:
 
 - se hai la chiave privata puoi fare _qualsiasi cosa_ entro le regole della Macchina Virtuale di Ethereum (EVM)
 - se non hai la chiave privata non puoi fare _nulla_.

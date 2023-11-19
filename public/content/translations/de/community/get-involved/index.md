@@ -8,6 +8,8 @@ lang: de
 
 Die Ethereum-Community besteht aus vielen unterschiedlichen Menschen mit verschiedensten Hintergründen und Fähigkeiten. Egal, ob Programmierer, Künstler oder Buchhalter, es gibt immer Wege, sich zu beteiligen. Im Folgenden finden Sie eine Liste mit Vorschlägen, die Sie vielleicht dabei unterstützt, durchzustarten.
 
+Machen Sie sich zunächst mit der Mission und den Grundsätze von ethereum.org in unserem [Verhaltenskodex](/community/code-of-conduct) vertraut.
+
 ## Entwickler <Emoji text=":computer." size={1} /> {#developers}
 
 - Erfahren Sie mehr über Ethereum auf [ethereum.org/developers/](/developers/)
@@ -21,14 +23,24 @@ Die Ethereum-Community besteht aus vielen unterschiedlichen Menschen mit verschi
 
 ## Wissenschaftler und Akademiker <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
-Haben Sie einen Hintergrund in Mathematik, kryptographie oder Wirtschaft? Vielleicht interessieren Sie sich für einige der bahnbrechenden Arbeiten, die im Ethereum-Ökosystem durchgeführt werden.
+Haben Sie einen Hintergrund in Mathematik, Kryptographie oder Wirtschaftswissenschaften? Vielleicht interessieren Sie sich für einige der innovativen Arbeiten, die im Ethereum-Ökosystem durchgeführt werden:
 
+- Ethereum-Verbesserungsvorschläge formulieren oder prüfen
+  - Ein EIP schreiben
+    1. Reichen Sie Ihre Idee auf [Ethereum Magicians](https://ethereum-magicians.org) ein.
+    2. Lesen Sie [EIP-1](https://eip.ethereum.org/EIPS/eip-1) – **Ja, das ist das _ganze_ Dokument**.
+    3. Folgen Sie den Anweisungen in EIP-1. Beziehen Sie sich auf die darin enthaltenen Informationen, während Sie Ihren Entwurf schreiben.
+  - Erfahren Sie, wie Sie ein [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069) werden.
+    - Sie können direkt in das Peer-Review von EIPs einsteigen. Sehen Sie [Öffnen von PRs mit dem `e-review`-Tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Geben Sie technisches Feedback über den `discussion-to`-Link.
+  - Beteiligen Sie sich an der [EIP-Verwaltung](https://github.com/ethereum-cat-herders/EIPIP).
+    - Trete dem [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) bei
+  - [Mehr zu EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) – eine Reihe hochwertiger Forschungsprämien, bei denen Sie >100.000 USD verdienen können
 - [Ethresear.ch](https://ethresear.ch) – Ethereums primäres Forum für Forschung und das weltweit einflussreichste Forum für Kryptoökonomie
-- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – Eine fortlaufende Q&A-Reihe mit Forschern. Während sich die weiteren Teile öffnen, können alle Fragen stellen.
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) – Eine fortlaufende Q&A-Reihe mit Wissenschaftlern. Während sich die weiteren Teile öffnen, können alle Fragen stellen.
 - [Wunschliste des Ethereum Ecosystem-Supportprogrramms](https://esp.ethereum.foundation/wishlist/) – Forschungsbereiche, für die das Ethereum Ecosystem-Supportprogramm aktiv Förderer sucht
 
-[Erkunden Sie mehr aktive Forschungsbereiche](/community/research/).
+[Erkunden Sie weitere aktive Forschungsbereiche](/community/research/).
 
 ## Nicht-technische Kompetenzen <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
@@ -122,3 +134,5 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) – _Von Frauen geführte Projekte_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) – _Gemeinschaft zur Finanzierung der Entwicklung von Ethereum_
 - [Raid-Gilde](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) – _Kollektiv von Web3-Erstellern_
+
+Denken Sie daran, sich an den [Verhaltenskodex](/community/code-of-conduct) von ethereum.org zu halten, wann und wie auch immer Sie zu ethereum.org beitragen.

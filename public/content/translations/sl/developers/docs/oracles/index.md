@@ -347,8 +347,8 @@ contract Oracle {
   )
   public
   {
-    uint lenght = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
-    Request storage r = requests[lenght-1];
+    uint length = requests.push(Request(currentId, _urlToQuery, _attributeToFetch, ""));
+    Request storage r = requests[length-1];
 
     // Hardcoded oracles address
     r.quorum[address(0x6c2339b46F41a06f09CA0051ddAD54D1e582bA77)] = 1;

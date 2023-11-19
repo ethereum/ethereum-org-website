@@ -5,7 +5,6 @@ author: Ori Pomerantz
 lang: it
 tags:
   - "livello 2"
-  - "gas"
 skill: intermediate
 published: 2022-04-01
 ---
@@ -33,7 +32,7 @@ Il costo delle transazioni su L2 ha due componenti:
 1. Elaborazione su L2, solitamente estremamente economica
 2. Archiviazione sul L1, legata ai costi del gas della Rete Principale
 
-Al momento della scrittura, su Optimism il costo del gas del L2 è 0,001 [Gwei](/developers/docs/gas/#pre-london). Il costo del gas del L1, d'altra parte, è approssimativamente di 40 gwei. [Puoi visualizzare i prezzi correnti qui](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
+Al momento della redazione, su Optimism il costo del gas del L2 è 0,001 [Gwei](/developers/docs/gas/#pre-london). Il costo del gas del L1, d'altra parte, è approssimativamente di 40 gwei. [Puoi visualizzare i prezzi correnti qui](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m).
 
 Un byte di dati di chiamata costa 4 gas (se è zero) o 16 gas (se ha qualsiasi altro valore). Una delle operazioni più costose sull'EVM è scrivere in memoria. Il costo massimo della scrittura di una parola di 32 byte all'archiviazione sul L2, è di 22.100 gas. Attualmente, ciò equivale a 22,1 gwei. Quindi, se possiamo risparmiare un singolo byte zero di calldata, potremo scrivere circa 200 byte in memoria e ne usciremo comunque bene.
 
@@ -63,7 +62,7 @@ Uno spreco di 160 gas sul L1 è di norma trascurabile. Una transazione costa alm
 
 Supponendo di non avere il controllo sul contratto di destinazione, puoi comunque usare una soluzione simile a [questa](https://github.com/qbzzt/ethereum.org-20220330-shortABI). Vediamo i file pertinenti.
 
-### Token.sol {#token.sol}
+### Token.sol {#token-sol}
 
 [Questo è il contratto di destinazione](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol). È un contratto ERC-20 standard, con una funzionalità aggiuntiva. Questa funzione `faucet` consente a qualsiasi utente di ottenere dei token da usare. Renderebbe inutile una produzione del contratto ERC-20, ma semplifica la vita quando l'ERC-20 esiste solo per facilitare i test.
 
@@ -78,7 +77,7 @@ Supponendo di non avere il controllo sul contratto di destinazione, puoi comunqu
 
 [Puoi vedere un esempio di questo contratto distribuito qui](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol}
+### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
 [Questo è il contratto che le transazioni dovrebbero chiamare con calldata più brevi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol). Analizziamolo riga per riga.
 
@@ -173,7 +172,7 @@ Leggi il primo byte dei calldata, che ci dice la funzione. Ci sono due motivi pe
 1. Le funzioni che sono `pure` o `view` non cambiano lo stato e non costano gas (quando chiamate al di fuori della catena). Non ha senso provare a ridurne il loro costo del gas.
 2. Le funzioni che si affidano a [`msg.sender`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#block-and-transaction-properties). Il valore del `msg.sender` sarà l'indirizzo `CalldataInterpreter`, non il chiamante.
 
-Sfortunatamente, [guardando alle specifiche dell'ERC-20](https://eips.ethereum.org/EIPS/eip-20), questo lascia solo una funzione: `transfer`. Questo ci lascia con solo due funzioni: `transfer` (perché possiamo chiamare `transferFrom`) e `faucet` (perché possiamo ritrasferire i token a chiunque ci abbia chiamati).
+Sfortunatamente, [guardando alle specifiche dell'ERC-20](https://eips.ethereum.org/EIPS/eip-20), questo lascia solo una funzione: `transfer`. Questo ci lascia con soltanto due funzioni: `transfer` (poiché possiamo chiamare `transferFrom`) e `faucet` (poiché possiamo ritrasferire i token a chiunque ci abbia chiamati).
 
 ```solidity
 
@@ -240,7 +239,7 @@ In generale, un trasferimento richiede 35 byte di calldata:
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test.js}
+### test.js {#test-js}
 
 [Questo test unitario di JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) ci mostra come usare questo meccanismo (e come verificare che funzioni correttamente). Partirò dal presupposto che tu comprenda [chai](https://www.chaijs.com/) ed [ether](https://docs.ethers.io/v5/) e spiegherò solo le parti che si applicano nello specifico al contratto.
 
@@ -344,7 +343,7 @@ Se hai il controllo sul contratto di destinazione, puoi creare funzioni che bypa
 
 Se il contratto rispondesse solo alle transazioni esterne, potremmo riuscirsi con un solo contratto. Tuttavia, questo spezzerebbe la [componibilità](/developers/docs/smart-contracts/composability/). È molto meglio avere un contratto che risponda alle normali chiamate ERC-20 e un altro che risponda alle transazioni con dati della chiamata brevi.
 
-### Token.sol {#token.sol-2}
+### Token.sol {#token-sol-2}
 
 In questo esempio, possiamo modificare `Token.sol`. Questo ci permette di avere un numero di funzioni che solo il proxy può chiamare. Ecco le nuove parti:
 
@@ -442,7 +441,7 @@ Queste sono tre operazioni che normalmente richiedono che il messaggio provenga 
 1. È modificata da `onlyProxy()`, così che nessun altro possa controllarla.
 2. Ottiene l'indirizzo che sarebbe normalmente `msg.sender` come un parametro aggiuntivo.
 
-### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
 L'interprete dei dati della chiamata è praticamente identico a quello precedente, tranne che le funzioni in proxy ricevono un parametro `msg.sender` e non è necessaria un'indennità per `transfer`.
 
@@ -476,7 +475,7 @@ L'interprete dei dati della chiamata è praticamente identico a quello precedent
         }
 ```
 
-### Test.js {#test.js-2}
+### Test.js {#test-js-2}
 
 Ci sono alcune modifiche tra il codice di test precedente e questo.
 
@@ -513,7 +512,7 @@ await (await signer.sendTransaction(transferTx)).wait()
 Poiché il contratto ERC-20 si fida del proxy (`cdi`), non ci serve un'indennità per inoltrare i trasferimenti.
 
 ```js
-// approval e transferFrom
+// approvazione e transferFrom
 const approveTx = {
   to: cdi.address,
   data: "0x03" + poorSigner.address.slice(2, 42) + "00FF",
@@ -528,11 +527,11 @@ const transferFromTx = {
 }
 await (await poorSigner.sendTransaction(transferFromTx)).wait()
 
-// Verifica che la combo approve / transeferFrom sia stata eseguita correttamente
+// Controlla che la combo approva / transferFrom sia stata eseguita correttamente
 expect(await token.balanceOf(destAddr2)).to.equal(255)
 ```
 
-Testa le due nuove funzioni. Nota che `transeferFromTx` richiede due parametri dell'indirizzo: l'autore dell'indennità e il destinatario.
+Testa le due nuove funzioni. Nota che `transferFromTx` richiede due parametri dell'indirizzo: l'autore dell'indennità e il destinatario.
 
 ### Esempio {#example-2}
 

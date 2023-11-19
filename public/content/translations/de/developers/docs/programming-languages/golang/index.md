@@ -1,13 +1,13 @@
 ---
 title: Ethereum für Go-Entwickler
-description: Erfahre, wie du mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln kannst
+description: Lernen, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können
 lang: de
 incomplete: true
 ---
 
 <div class="featured">Erfahren Sie, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können</div>
 
-Verwenden Sie Ethereum, um dezentrale Anwendungen (oder "dApps") zu erstellen. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie sind dezentralisiert. Das bedeutet, dass sie auf einem Peer-to-Peer-Netzwerk laufen und es keine einzelne Fehlerquelle gibt. Keine einzelne Eintität oder Person kontrolliert sie und es ist fast unmöglich, sie zu zensieren. Sie können digitale Vermögenswerte kontrollieren, um neue Arten von Anwendungen zu erstellen.
+Verwenden Sie Ethereum, um dezentrale Anwendungen (oder "dApps") zu erstellen. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Sie sind dezentralisiert. Das bedeutet, dass sie auf einem Peer-to-Peer-Netzwerk laufen und es keine einzelne Fehlerquelle gibt. Keine einzelne Eintität oder Person kontrolliert sie und es ist fast unmöglich, sie zu zensieren. Sie können digitale Vermögenswerte kontrollieren, um neue Arten von Anwendungen zu erstellen.
 
 ## Erste Schritte mit Smart Contracts und der Solidity-Sprache {#getting-started-with-smart-contracts-and-solidity}
 
@@ -33,11 +33,11 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 ## Artikel und Dokumente für Fortgeschrittene {#intermediate-articles-and-docs}
 
 - [Go-Ethereum-Dokumentation](https://geth.ethereum.org/docs/) – _Die Dokumentation für die offizielle Ethereum-Golang_
-- [Turbo-Geth-Programmierhandbuch](https://github.com/ledgerwatch/turbo-geth/blob/master/docs/programmers_guide/guide.md) – _Illustrierte Anleitung, inklusive State Tree, Multiproofs und Transaktionsverarbeitung_
-- [Turbo-Geth und Stateless Ethereum](https://youtu.be/3-Mn7OckSus?t=394) – _2020 Ethereum Community Conference (EthCC 3)_
-- [Turbo-Geth: Optimierung der Ethereum-Clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) – _2018 Devcon 4_
+- [Leitfaden für Erigon-Programmierer](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Illustrierter Leitfaden, einschließlich Zustandsbaum, Multi-Beweise und die Transaktionsverarbeitung_
+- [Erigon und zustandsloses Ethereum](https://youtu.be/3-Mn7OckSus?t=394) - _2020 Ethereum Community-Konferenz (EthCC 3)_
+- [Erigon: Optimierung von Ethereum-Clients](https://www.youtube.com/watch?v=CSpc1vZQW2Q) - _2018 Devcon 4_
 - [Go Ethereum GoDoc](https://godoc.org/github.com/ethereum/go-ethereum)
-- [Eine dApp mit Geth in Go erstellen](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
+- [Erstellen einer dApp in Go mit Geth](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/creating-a-dapp-in-go-with-geth/)
 - [Mit einem privaten Ethereum-Netzwerk in Golang und Geth arbeiten](https://myhsts.org/tutorial-learn-how-to-work-with-ethereum-private-network-with-golang-with-geth.php)
 - [Einheitentests für Solidity-Verträge auf Ethereum mit Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Schnellreferenz für die Verwendung von Geth als Bibliothek](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
@@ -48,13 +48,13 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Blockchain-as-a-Service-Apps mit Ethereum und Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
 - [Verteilte Speicher-IPFS und Swarm in Ethereum-Blockchain-Anwendungen](https://blockchain.dcwebmakers.com/work-with-distributed-storage-ipfs-and-swarm-in-ethereum.html)
 - [Mobile Clients: Bibliotheken und Inproc-Ethereum-Nodes](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
-- [Native DApps: Go-Bindungen an Ethereum-Verträge](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
+- [Native dAapps: Go-Bindings für Ethereum-Verträge](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
 ## Go-Projekte und Tools {#go-projects-and-tools}
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum) - _Offizielle Go-Implementierung des Ethereum-Protokolls_
 - [Go Ethereum-Codeanalyse](https://github.com/ZtesoftCS/go-ethereum-code-analysis) – _Überprüfung und Analyse des Go Ethereum-Quellcodes_
-- [Turbo-Geth](https://github.com/ledgerwatch/turbo-geth) – _Schnellere Ableitung von Go Ethereum_
+- [Erigon](https://github.com/ledgerwatch/erigon) - _Eine schnellere Variante von Go Ethereum mit Schwerpunkt auf Archivierungsknoten_
 - [Golem](https://github.com/golemfactory/golem) – _Golem schafft einen globalen Markt für Rechenleistung_
 - [Quorum](https://github.com/jpmorganchase/quorum) – _Eine private Implementierung von Ethereum, die Datenprivatsphäre unterstützt_
 - [Prysm](https://github.com/prysmaticlabs/prysm) – _Ethereum 'Serenity' 2.0 Go-Implementation_
@@ -64,6 +64,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Ethereum-HD Wallet](https://github.com/miguelmota/go-ethereum-hdwallet) – _Ethereum-HD Wallet Derivate im Go_
 - [Multi Geth](https://github.com/multi-geth/multi-geth) – _Unterstützung für viele Arten von Ethereum-Netzwerken_
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) – _Light Ethereum-Subprotokoll-Geth-Implementierung_
+- [Ethereum Golang SDK](https://github.com/everFinance/goether) - _Eine einfache Ethereum-Wallet-Implementierung und Hilfsprogramme in Golang_
 
 Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/developers](/developers/) an.
 
