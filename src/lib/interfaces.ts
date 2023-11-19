@@ -1,4 +1,4 @@
-import type { Frontmatter, Lang, ToCItem, TranslationKey } from "./types"
+import type { Frontmatter, Lang, TranslationKey, ToCItem } from "@/lib/types"
 
 /**
  * Quiz data interfaces
@@ -42,6 +42,14 @@ export interface Quiz {
 
 export interface RawQuizzes {
   [key: string]: RawQuiz
+}
+
+export interface DeveloperDocsLink {
+  id: TranslationKey
+  to: string
+  path: string
+  description: TranslationKey
+  items: Array<DeveloperDocsLink>
 }
 
 /**

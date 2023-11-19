@@ -39,7 +39,6 @@
     "./src/components/Avatar/index.tsx",
     "./src/components/BannerGrid/index.tsx",
     "./src/components/BannerNotification/BannerNotification.stories.tsx",
-    "./src/components/BannerNotification/index.tsx",
     "./src/components/Banners/DismissableBanner.tsx",
     "./src/components/Banners/Implementations/WritersCohortBanner.tsx",
     "./src/components/Banners/PostMergeBanner.tsx",

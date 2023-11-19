@@ -21,6 +21,8 @@ import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { generateTableOfContents } from "@/lib/utils/toc"
 
 import {
+  docsComponents,
+  DocsLayout,
   roadmapComponents,
   RoadmapLayout,
   RootLayout,
@@ -29,8 +31,6 @@ import {
   staticComponents,
   StaticLayout,
   TutorialLayout,
-  // docsComponents,
-  // DocsLayout,
   tutorialsComponents,
   upgradeComponents,
   UpgradeLayout,
@@ -47,9 +47,9 @@ const layoutMapping = {
   staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
+  docs: DocsLayout,
   tutorial: TutorialLayout,
   // event: EventLayout,
-  // docs: DocsLayout,
 } as const
 
 const componentsMapping = {
@@ -58,7 +58,7 @@ const componentsMapping = {
   staking: stakingComponents,
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
-  // docs: docsComponents,
+  docs: docsComponents,
   tutorial: tutorialsComponents,
 } as const
 

@@ -16,8 +16,16 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
 
+export const isLang = (lang: string) => {
+  return i18nConfigs.map((language) => language.code).includes(lang)
+} 
+
 export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
   let requiredNamespaces: string[] = ["common"]
+
+  if (layout === "docs") {
+    requiredNamespaces = [...requiredNamespaces, 'page-developers-docs']
+  }
 
   if (layout === 'use-cases') {
     requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
@@ -59,6 +67,10 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/developers/docs/scaling")) {
+    requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
@@ -71,3 +83,4 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
 
   return requiredNamespaces
 }
+
