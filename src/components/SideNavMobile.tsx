@@ -3,17 +3,17 @@ import { AnimatePresence,motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { isLang } from "../utils/languages"
-import { TranslationKey } from "../utils/translations"
-
-import { BaseLink, IProps as ILinkProps } from "./Link"
+import { BaseLink, LinkProps } from "@/components/Link"
+import Translation from "@/components/Translation"
+import { isLang } from "@/lib/utils/translations"
 import {
   dropdownIconContainerVariant,
   IPropsNavLink as INavLinkProps,
 } from "./SideNav"
-import Translation from "./Translation"
+
+import docLinks from "@/data/developer-docs-links.yaml"
+import { DeveloperDocsLink } from "@/lib/interfaces"
+import type { TranslationKey } from "@/lib/types"
 
 // Traverse all links to find page id
 const getPageTitleId = (
@@ -62,7 +62,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
       w="full"
