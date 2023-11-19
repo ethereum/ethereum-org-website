@@ -23,7 +23,7 @@ const MarkdownImage = ({
   let imageWidth = parseFloat(width)
   let imageHeight = parseFloat(height)
 
-  // Ensure that src path has forward slashes only
+  // Ensure that src path has forward slashes only, to avoid issues with Windows filepaths
   const transformedSrc = toPosixPath(src.toString())
 
   // keep the size of the images proportional to the max width constraint
