@@ -62,7 +62,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }: ILinkProps) => {
   return (
     <BaseLink
       w="full"

@@ -11,7 +11,7 @@ Lernen, mit der Programmiersprache Delphi für Ethereum zu entwickeln
 
 </div>
 
-Verwende Ethereum, um dezentrale Anwendungen (oder „dApps“) zu erschaffen, die von den kryptografischen Begebenheiten von Kryptowährungen und der Blockchain-Technologie profitieren. Sie sind vertrauenswürdig, was bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Sie können digitale Vermögenswerte verwalten und dadurch neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein, was bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann und sie so fast unmöglich zu zensieren ist.
+Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. dApps sind vertrauenswürdig. Das bedeutet, dass dApps nach dem Hochladen auf Ethereum immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
 Erstellen Sie dezentrale Anwendungen auf Ethereum und interagieren Sie mit Smart Contracts in der Programmiersprache Delphi.
 
@@ -51,5 +51,6 @@ Benötigen Sie für den Einstieg erst einmal allgemeinere Informationen? Dann em
 - [Delphi und Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum und Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
 - [Delphi und der Ethereum Dark Forest](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
+- [Einen Token gegen einen anderen in Delphi austauschen](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
 Sind Sie an weiteren Informationen interessiert? Sehen Sie sich [ethereum.org/developers](/developers/) an.
