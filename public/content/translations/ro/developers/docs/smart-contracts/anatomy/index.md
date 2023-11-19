@@ -6,7 +6,7 @@ lang: ro
 
 Un contract inteligent este un program care rulează la o adresă pe Ethereum. Este alcătuit din date și funcții care pot fi executate la primirea unei tranzacții. Iată o imagine de ansamblu a ceea ce constituie un contract inteligent.
 
-### Condiții prealabile {#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 Aveţi grijă să citiţi mai întâi despre [contractele inteligente](/developers/docs/smart-contracts/). Acest document presupune că sunteţi deja familiarizat cu limbaje de programarea precum JavaScript sau Python.
 
