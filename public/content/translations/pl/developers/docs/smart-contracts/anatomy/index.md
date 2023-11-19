@@ -6,7 +6,7 @@ lang: pl
 
 Inteligentny kontrakt to program, który działa pod adresem Ethereum. Składają się z danych i funkcji, które można wykonać po otrzymaniu transakcji. Oto przegląd tego, co stanowi inteligentny kontrakt.
 
-### Warunki wstępne {#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Upewnij się, że najpierw przeczytałeś o [inteligentnych kontraktach](/developers/docs/smart-contracts/). Ten dokument zakłada, że znasz już języki programowania, takie jak JavaScript lub Python.
 

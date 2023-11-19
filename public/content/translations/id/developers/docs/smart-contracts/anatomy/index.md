@@ -6,7 +6,7 @@ lang: id
 
 Kontrak pintar adalah program yang dijalankan pada sebuah alamat di Ethereum. Kontrak pintar terbuat dari data dan fungsi yang bisa dieksekusi saat menerima sebuah transaksi. Berikut adalah gambaran umum dari komponen yang menyusun sebuah kontrak pintar.
 
-### Prasyarat {#prerequisites}
+## Prasyarat {#prerequisites}
 
 Pastikan Anda telah membaca tentang [kontrak pintar](/developers/docs/smart-contracts/) terlebih dahulu. Dokumen ini menganggap Anda telah terbiasa dengan bahasa pemrograman seperti JavaScript atau Python.
 
