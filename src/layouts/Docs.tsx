@@ -35,7 +35,6 @@ import Link from "@/components/Link"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
-import SectionNav from "@/components/SectionNav"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
 import { mdxTableComponents } from "@/components/Table"
@@ -206,7 +205,6 @@ export const docsComponents = {
   GlossaryTooltip,
   InfoBanner,
   RollupProductDevDoc,
-  SectionNav,
   YouTube,
 }
 
@@ -246,12 +244,12 @@ export const DocsLayout = ({
           {frontmatter.lang !== "en" ? (
             // TODO: Implement file contributors
             <Text>CrowdinContributors</Text>
+          ) : (
             // <CrowdinContributors
             //   relativePath={relativePath}
             //   editPath={absoluteEditPath}
             //   langContributors={allCombinedTranslatorsJson.nodes}
             // />
-          ) : (
             <GitHubContributors
               relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate!}
