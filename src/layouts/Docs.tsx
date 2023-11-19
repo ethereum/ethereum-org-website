@@ -2,7 +2,9 @@ import { useRouter } from "next/router"
 import { ChildOnlyProp, Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 import {
+  Badge,
   Box,
+  Divider as ChakraDivider,
   Flex,
   FlexProps,
   HeadingProps,
@@ -16,14 +18,19 @@ import {
 } from "@chakra-ui/react"
 
 import BannerNotification from "@/components/BannerNotification"
+import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
+import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
 // TODO: Implement file contributors
 // import CrowdinContributors from "@/components/FileContributorsCrowdin"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
+import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GitHubContributors from "@/components/GitHubContributors"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
+import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
@@ -31,8 +38,10 @@ import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SectionNav from "@/components/SectionNav"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
+import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
+import YouTube from "@/components/YouTube"
 
 import {
   Heading1 as MdHeading1,
@@ -53,6 +62,15 @@ const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
     borderBottom="1px"
     borderColor="border"
     {...props}
+  />
+)
+
+const Divider = () => (
+  <ChakraDivider
+    my={16}
+    w="10%"
+    borderBottomWidth={1}
+    borderColor="homeDivider"
   />
 )
 
@@ -176,10 +194,19 @@ export const docsComponents = {
   ol: OrderedList,
   li: ListItem,
   pre: Codeblock,
+  ...mdxTableComponents,
+  Badge,
+  ButtonLink,
+  Card,
   CallToContribute,
   DeveloperDocsLinks,
+  Divider,
+  Emoji,
+  GlossaryTooltip,
+  InfoBanner,
   RollupProductDevDoc,
   SectionNav,
+  YouTube,
 }
 
 interface DocsLayoutProps extends MdPageContent, ChildOnlyProp {
