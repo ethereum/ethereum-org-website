@@ -105,13 +105,13 @@ Staking Launchpad یک برنامه منبع‌باز است که به شما ک
 
 <ProductDisclaimer />
 
-#### ابزارهای گره
+### ابزارهای گره
 
 <StakingProductsCardGrid category="nodeTools" />
 
 لطفاً از اهمیت انتخاب [کلاینت اقلیت](/developers/docs/nodes-and-clients/client-diversity/) غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. ابزارهایی که به شما امکان می‌دهند کاربر اقلیت را راه‌اندازی کنید با عنوان <em style={{ textTransform: "uppercase" }}>«چندکاربری»</em> نشان داده می‌شوند.
 
-#### تولید‌کنندگان کلید
+### تولید‌کنندگان کلید
 
 این ابزارها می‌توانند به‌عنوان جایگزینی برای [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) برای کمک به تولید کلید استفاده شوند.
 

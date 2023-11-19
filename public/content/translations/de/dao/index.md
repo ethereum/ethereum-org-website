@@ -91,7 +91,7 @@ Zwar können DAOs Tausende Mitglieder haben, doch die Gelder befinden sich meist
 
 Wyoming hat 1977 die LCC eingeführt, die Unternehmer schützt und ihre Haftung beschränkt. Kürzlich hat der Bundesstaat außerdem ein DAO-Gesetz verabschiedet, das den Rechtsstatus von DAOs festlegt. Aktuell verfügen (in den USA) Wyoming, Vermont und die Jungferninseln über eine Form von DAO-Gesetzen.
 
-#### Bekanntes Beispiel {#law-example}
+### Bekanntes Beispiel {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO hat durch Wyomings DAO-Gesetz 40 Hektar Land in der Nähe des Yellowstone Nationalparks gekauft.
 

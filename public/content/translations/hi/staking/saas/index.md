@@ -43,13 +43,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### SaaS प्रदाता
+### SaaS प्रदाता
 
 <StakingProductsCardGrid category="saas" />
 
 कृपया ध्यान दें कि [क्लाइंट विविधता](/developers/docs/nodes-and-clients/client-diversity/) का समर्थन महत्वपूर्ण है, क्योंकि यह नेटवर्क की सुरक्षा में सुधार और आपके जोखिम को सीमित करता है। जिन सेवाओं में बहुमत क्लाइंट उपयोग को सीमित करने के सबूत हैं, उन्हें <em style={{ textTransform: "uppercase" }}>"निष्पादन ग्राहक विविधता"</em> और <em style={{ textTransform: "uppercase" }}>"सहमति ग्राहक विविधता"</em> के साथ इंगित किया जाता है।
 
-#### कुंजी जनरेटर
+### कुंजी जनरेटर
 
 <StakingProductsCardGrid category="keyGen" />
 

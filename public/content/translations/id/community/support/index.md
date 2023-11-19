@@ -86,17 +86,17 @@ Anda juga dapat [mempelajari cara menjalankan node di sini](/developers/docs/nod
 
 ## Pertanyaan yang sering diajukan {#faq}
 
-#### Saya telah mengirim ETH ke dompet yang salah {#wrong-wallet}
+### Saya telah mengirim ETH ke dompet yang salah {#wrong-wallet}
 
 Transaksi yang dikirimkan di Ethereum tidak dapat dibalikkan. Sayangnya, jika Anda telah mengirim ETH ke dompet yang salah, tidak ada cara untuk mendapatkan kembali dana ini. Tidak ada satu organisasi, entitas, atau orang sentral yang memiliki Ethereum, yang berarti tidak ada satu pun yang dapat membalikkan transaksi. Oleh karena itu, sangat penting untuk selalu memeriksa ulang transaksi Anda sebelum mengirimkannya.
 
-#### Bagaimana saya dapat mengklaim hadiah Ethereum? {#giveaway-scam}
+### Bagaimana saya dapat mengklaim hadiah Ethereum? {#giveaway-scam}
 
 Hadiah Ethereum adalah penipuan yang dirancang untuk mencuri ETH Anda. Jangan tergoda dengan penawaran yang tampak terlalu menggiurkan — jika Anda mengirim ETH ke suatu alamat hadiah, Anda tidak akan menerima hadiah, dan Anda tidak akan dapat mendapatkan dana Anda kembali.
 
 [Lebih lanjut tentang pencegahan penipuan](/security/#common-scams)
 
-#### Transaksi saya macet {#stuck-transaction}
+### Transaksi saya macet {#stuck-transaction}
 
 Transaksi di Ethereum dapat terkadang mengalami kemacetan jika Anda telah mengirimkan biaya transaksi yang lebih rendah dari yang diharuskan karena permintaan jaringan. Banyak dompet menyediakan opsi untuk mengirimkan kembali transaksi yang sama dengan biaya transaksi yang lebih tinggi untuk memungkinkan transaksi diproses. Sebagai alternatif, Anda dapat membatalkan transaksi berstatus tunggu dengan mengirimkan transaksi ke alamat Anda sendiri dan menggunakan nonce yang sama sebagai transaksi berstatus tunggu.
 
@@ -104,6 +104,6 @@ Transaksi di Ethereum dapat terkadang mengalami kemacetan jika Anda telah mengir
 
 [Cara membatalkan transaksi Ethereum berstatus tunggu](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Bagaimana cara menambang Ethereum? {#mining-ethereum}
+### Bagaimana cara menambang Ethereum? {#mining-ethereum}
 
 Kami tidak menyarankan membeli peralatan menambang jika Anda belum menambang Ethereum. Di ~Q3/Q4 2022, [penggabungan](/roadmap/merge/) akan terjadi, yang mengalihkan Ethereum dari bukti kerja ke bukti taruhan. Perubahan ini berarti menambang Ethereum tidak akan mungkin lagi.

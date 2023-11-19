@@ -12,13 +12,13 @@ Bu belge, genel bir rehber görevi görür ve herhangi bir dile özgü değildir
 
 Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen bize translations@ethereum.org adresinden bize ulaşın, Crowdin'de @ethdotorg'a bir mesaj gönderin veya #translations kanalından bize mesaj gönderebileceğiniz veya ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord](https://discord.gg/XVepFu7sqR)'umuza katılın.
 
-### Crowdin kullanma {#using-crowdin}
+## Crowdin kullanma {#using-crowdin}
 
 [Çeviri Programı sayfasında](/contributing/translation-program/#how-to-translate) Crowdin'de projeye nasıl katılacağınıza ve Crowdin çevrimiçi düzenleyicisinin nasıl kullanılacağına ilişkin temel talimatları bulabilirsiniz.
 
 Crowdin hakkında daha fazla bilgi edinmek ve gelişmiş özelliklerinden bazılarını kullanmak istiyorsanız, [Crowdin bilgi bankası](https://support.crowdin.com/online-editor/) birçok kapsamlı kılavuz ve tüm Crowdin işlevlerine genel bakış içerir.
 
-### Mesajın özünü yakalamak {#capturing-the-essence}
+## Mesajın özünü yakalamak {#capturing-the-essence}
 
 Ethereum.org içeriğini çevirirken, kelimenin tam anlamıyla çeviri yapmaktan kaçının.
 
@@ -28,7 +28,7 @@ Farklı dillerin farklı gramer kuralları, kuralları ve kelime sırası vardı
 
 Kaynak metni kelimesi kelimesine tercüme etmek yerine, tüm cümleyi okumanız ve onu hedef dilin kurallarına uyacak şekilde uyarlamanız tavsiye edilir.
 
-### Resmi ve günlük dil {#formal-vs-informal}
+## Resmi ve günlük dil {#formal-vs-informal}
 
 Her zaman, kibar ve tüm ziyaretçiler için uygun olan resmi hitap biçimini kullanırız.
 
@@ -36,13 +36,13 @@ Resmi hitap biçimini kullanmak, günlük veya saldırgan görünmekten kaçınm
 
 Hint-Avrupa ve Afro-Asya dillerinin çoğu, eril ve dişil kelimeler arasında ayrım yapan cinsiyete özgü ikinci şahıs zamirlerini kullanır. Kullanıcıya hitap ederken veya iyelik zamirlerini kullanırken, resmi hitap şekli genellikle nasıl tanımlandıklarına bakılmaksızın uygulanabilir ve tutarlı olduğundan, ziyaretçinin cinsiyetini varsaymaktan kaçınabiliriz.
 
-### Basit ve net olan kelime hazinesi ve anlam {#simple-vocabulary}
+## Basit ve net olan kelime hazinesi ve anlam {#simple-vocabulary}
 
 Amacımız, web sitesindeki içeriği mümkün olduğunca çok kişi için anlaşılır kılmaktır.
 
 Çoğu durumda bu, kolayca anlaşılabilir kısa ve basit kelimeler kullanılarak kolayca başarılabilir. Kendi dilinizde aynı anlama sahip belirli bir kelimenin birden fazla olası çevirisi varsa, en iyi seçenek çoğu zaman anlamı açıkça yansıtan en kısa kelimedir.
 
-### Yazım sistemi {#writing-system}
+## Yazım sistemi {#writing-system}
 
 Ethereum.org, Latince'ye alternatif yazma sistemleri (veya komut dosyaları yazma) kullanarak birçok dilde kullanılabilir.
 
@@ -54,7 +54,7 @@ Yaygın bir yanılgı, Ethereum'un her zaman Latince yazılması gerektiğidir. 
 
 **Yukarıdakiler, özel isimlerin kural olarak tercüme edilmemesi gereken diller için geçerli değildir.**
 
-### Sayfa meta verilerini çevirme {#translating-metadata}
+## Sayfa meta verilerini çevirme {#translating-metadata}
 
 Bazı sayfalar sayfada "başlık", "dil", "açıklama", "kenar çubuğu" vb. gibi meta veriler içerir.
 
@@ -72,7 +72,7 @@ En çok konuşulan diller için bazı dil kodları örnekleri:
 - Hintçe - hi
 - İspanyolca - es
 
-### Harici makalelerin başlıkları {#external-articles}
+## Harici makalelerin başlıkları {#external-articles}
 
 Bazı dizgiler, harici makalelerin başlıklarını içerir. Geliştirici belgesi sayfalarımızın çoğu, daha fazla okuma için harici makalelere yönlendiren bağlantılar içerir. Sayfayı kendi dillerinde görüntüleyen ziyaretçiler için daha tutarlı bir kullanıcı deneyimi sağlamak için makalenin dilinden bağımsız olarak makale başlıklarını içeren dizgilerin çevrilmesi gerekir.
 
@@ -80,7 +80,7 @@ Bu dizgilerin çevirmenler için nasıl göründüğüne ve bunların nasıl tan
 
 ![Sidebar.png'deki makale başlıkları](./article-titles-in-sidebar.png) ![editor.png'deki makale başlıkları](./article-titles-in-editor.png)
 
-### Crowdin uyarıları {#crowdin-warnings}
+## Crowdin uyarıları {#crowdin-warnings}
 
 Crowdin, çevirmenleri hata yapmak üzereyken uyaran yerleşik bir özelliğe sahiptir. Bir çeviri önerirseniz ve kaynaktan bir etiket eklemeyi, çevrilmemesi gereken öğeleri çevirmeyi, birkaç ardışık boşluk eklemeyi, son noktalama işaretlerini unutmayı vb. unutursanız, Crowdin çevirinizi kaydetmeden önce sizi bu konuda otomatik olarak uyaracaktır. Bunun gibi bir uyarı görürseniz lütfen geri dönün ve önerilen çeviriyi tekrar kontrol edin.
 
@@ -88,7 +88,7 @@ Crowdin, çevirmenleri hata yapmak üzereyken uyaran yerleşik bir özelliğe sa
 
 Çevirinize bir etiket eklemeyi unuttuğunuzda verilen bir Crowdin uyarısı örneği: ![Bir Crowdin uyarısı örneği.png](./crowdin-warning-example.png)
 
-### Etiketler ve kod parçacıkları hakkında yapılacaklar {#dealing-with-tags}
+## Etiketler ve kod parçacıkları hakkında yapılacaklar {#dealing-with-tags}
 
 Kaynak içeriğin çoğu, Crowdin düzenleyicisinde sarı renkle vurgulanan etiketler ve değişkenler içerir. Bunlar, farklı fonksiyonlar gerçekleştirir ve bunlara doğru bir şekilde yaklaşılmalıdır.
 
@@ -144,7 +144,7 @@ Aşağıdaki örnekte, imleç üzerine götürüldüğünde <0> etiketin `<code>
 
 ![Belirsiz etiketlerin örneği.png](./example-of-ambiguous-tags.png)
 
-### Kısa vs. eksiksiz hâller/kısatmalar {#short-vs-full-forms}
+## Kısa vs. eksiksiz hâller/kısatmalar {#short-vs-full-forms}
 
 Web sitesinde kullanılan birçok kısaltma vardır, ör. dApp'ler, NFT, DAO, DeFi vb. Bu kısaltmalar genellikle İngilizce olarak kullanılır ve web sitesini ziyaret edenlerin çoğu bunlara aşinadır.
 
@@ -156,7 +156,7 @@ dApp'lerin nasıl çevrileceğine dair bir örnek:
 
 - Decentralized applications (dApps) → _Çevrilmiş tam hâli (parantez içinde İngilizce kısaltma)_
 
-### Yerleşmiş çevirileri olmayan terimler {#terms-without-established-translations}
+## Yerleşmiş çevirileri olmayan terimler {#terms-without-established-translations}
 
 Bazı terimlerin diğer dillerde çevirileri bulunmayabilir ve orijinal İngilizce terim hâliyle yaygın olarak biliniyor olabilir. Proof-of-work, proof-of-stake, Beacon Chain, staking vb. nispeten yeni olan terimler buna örnek gösterilebilir.
 
@@ -166,7 +166,7 @@ Bunları çevirirken yaratıcılığınızı kullanmaktan, açıklayıcı çevir
 
 **Bazı terimleri İngilizce bırakmak yerine çoğu terimin çevrilmesinin nedeni, daha fazla insan Ethereum ve ilgili teknolojileri kullanmaya başladıkça, bu yeni terminolojinin gelecekte daha yaygın hâle geleceği gerçeğidir. Dünyanın her yerinden daha fazla insanı bu alana dahil etmek istiyorsak, kendimiz oluşturmamız gerekse bile mümkün olduğunca çok dilde anlaşılır terminoloji sağlamamız gerekir.**
 
-### Düğmeler ve CTA'lar {#buttons-and-ctas}
+## Düğmeler ve CTA'lar {#buttons-and-ctas}
 
 Web sitesi, diğer içeriklerden farklı şekilde çevrilmesi gereken çok sayıda düğme içerir.
 
@@ -176,7 +176,7 @@ Biçimlendirme uyumsuzluklarını önlemek için düğmelerin çevirileri mümk�
 
 ![Bir buton nasıl bulunur.png](./how-to-find-a-button.png)
 
-### Kapsayıcılık için çevirme {#translating-for-inclusivity}
+## Kapsayıcılık için çevirme {#translating-for-inclusivity}
 
 Ethereum.org'un, dünyanın dört bir yanında olan ve farklı geçmişlere sahip ziyaretçileri bulunuyor. Bu nedenle web sitesindeki dil; tarafsız, herkese açık ve kapsayıcı olmalıdır.
 
@@ -270,7 +270,7 @@ Dilinizin kurallarını bilmeli ve buna göre çeviri yapmalısınız. Yardıma 
 - Genel bir kural olarak, lütfen ölçü birimlerini kaynağa göre saklayın. Ülkeniz farklı bir sistem kullanıyorsa, dönüştürmeyi parantez içinde ekleyebilirsiniz.
 - Ölçü birimlerinin yerelleştirilmesinin yanı sıra, dillerin bu birimlere yaklaşımlarındaki farklılıkları da not etmek önemlidir. Temel fark, dile bağlı olarak farklı olabilen sayı ve birim arasındaki boşluktur. Bunun örnekleri arasında 100 kB'ye karşı 100 kB veya 50ºF'ye karşı 50 ºF yer alır.
 
-### Sonuç {#conclusion}
+## Sonuç {#conclusion}
 
 Ethereum.org'u çevirmek, Ethereum'un farklı yönlerini öğrenmek için harika bir fırsattır.
 

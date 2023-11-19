@@ -45,11 +45,11 @@ Abaixo estão alguns provedores SaaS disponíveis. Use os indicadores acima para
 Observe a importância de escolher um serviço que leve a <a href="/developers/docs/nodes-and-clients/client-diversity/">diversidade de cliente</a> a sério, à medida que melhora a segurança da rede e limita o seu risco. Serviços que possuem evidências de limitar o uso do cliente majoritário são marcados como <em style={{ textTransform: "uppercase" }}>"clientes diversos".</em>
 </InfoBanner>
 
-#### Provedores SaaS
+### Provedores SaaS
 
 <StakingProductsCardGrid category="saas" />
 
-#### Geradores de chaves
+### Geradores de chaves
 
 <StakingProductsCardGrid category="keyGen" />
 

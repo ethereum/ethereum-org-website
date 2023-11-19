@@ -12,13 +12,13 @@ Este documento serve como um guia geral e não é específico para nenhum idioma
 
 Se você tiver alguma dúvida, sugestão ou feedback, entre em contato conosco em translations@ethereum.org, envie uma mensagem para @ethdotorg no Crowdin, ou [inscreva-se no nosso Discord](https://discord.gg/XVepFu7sqR), onde você poderá nos enviar mensagens no canal #translations ou entrar em contato com qualquer um dos membros da equipe.
 
-### Como usar o Crowdin {#using-crowdin}
+## Como usar o Crowdin {#using-crowdin}
 
 Você pode encontrar instruções básicas sobre como participar do projeto no Crowdin e como usar o editor online do Crowdin na [página do Programa de Tradução](/contributing/translation-program/#how-to-translate).
 
 Se você quiser saber mais sobre o Crowdin e usar alguns dos seus recursos avançados, a [Base de conhecimento do Crowdin](https://support.crowdin.com/online-editor/) contém vários de guias detalhados e resumos de todas as funcionalidades do Crowdin.
 
-### Captando a essência da mensagem {#capturing-the-essence}
+## Captando a essência da mensagem {#capturing-the-essence}
 
 Ao traduzir o conteúdo do ethereum.org, evite traduções literais.
 
@@ -28,7 +28,7 @@ Idiomas diferentes têm diferentes regras gramaticais, convenções e ordem de p
 
 Em vez de traduzir o texto de origem palavra por palavra, é recomendado ler toda a frase e adaptá-la para que ela se adapte às convenções do idioma de destino.
 
-### Formal ou informal {#formal-vs-informal}
+## Formal ou informal {#formal-vs-informal}
 
 Utilizamos linguagem formal, que é sempre mais educada e apropriada a todos os visitantes.
 
@@ -36,13 +36,13 @@ O uso do estilo formal nos permite evitar soarmos ofensivos ou inapropriados, e 
 
 A maioria dos idiomas indo-europeus e afro-asiáticos utiliza pronomes pessoais em segunda pessoa específicos de gênero, que fazem a distinção entre masculino e feminino. Quando nos dirigimos ao usuário ou usamos pronomes possessivos, podemos evitar supor o sexo do visitante, uma vez que a maneira formal de tratamento é geralmente aplicável e consistente, independentemente da forma como se identificam.
 
-### Vocabulário simples e claro {#simple-vocabulary}
+## Vocabulário simples e claro {#simple-vocabulary}
 
 Nosso objetivo é tornar o conteúdo do site compreensível para o maior número de pessoas possível.
 
 Na maioria dos casos, isso pode ser facilmente alcançado através da utilização de palavras curtas e simples, que sejam facilmente compreensíveis. Se existirem várias traduções possíveis para uma determinada palavra no seu idioma com o mesmo significado, a melhor opção é, na maioria das vezes, a palavra mais curta que reflita claramente o significado.
 
-### Sistema de escrita {#writing-system}
+## Sistema de escrita {#writing-system}
 
 O ethereum.org está disponível em vários idiomas, utilizando sistemas de escrita (ou scripts de escrita) diferentes do sistema latino.
 
@@ -54,7 +54,7 @@ Um engano comum é o de que Ethereum deve ser escrito sempre em caracteres latin
 
 **O mencionado acima não se aplica a idiomas em que nomes próprios não devem ser traduzidos como regra geral.**
 
-### Traduzindo metadados da página {#translating-metadata}
+## Traduzindo metadados da página {#translating-metadata}
 
 Algumas páginas contêm metadados, como "title", "lang", "description", "sidebar", etc.
 
@@ -72,7 +72,7 @@ Alguns exemplos de códigos para os idiomas mais falados:
 - Híndi - hi
 - Espanhol - es
 
-### Títulos de artigos externos {#external-articles}
+## Títulos de artigos externos {#external-articles}
 
 Algumas frases contêm títulos de artigos externos. A maioria das nossas páginas de desenvolvedor contém links para artigos externos para uma leitura mais aprofundada. As frases que contêm títulos de artigos precisam ser traduzidas, independentemente do idioma do artigo, para garantir uma experiência de usuário mais eficiente para quem quiser acessar a página em seu idioma.
 
@@ -80,7 +80,7 @@ Você pode encontrar alguns exemplos de como essas frases aparecem para os tradu
 
 ![Títulos de artigos no sidebar.png](./article-titles-in-sidebar.png) ![Títulos de artigos no editor.png](./article-titles-in-editor.png)
 
-### Alertas do Crowdin {#crowdin-warnings}
+## Alertas do Crowdin {#crowdin-warnings}
 
 O Crowdin tem um recurso integrado que alerta os tradutores quando eles estão prestes a cometer um erro. O Crowdin avisará automaticamente antes de salvar sua tradução, caso você se esqueça de incluir uma tag da fonte, traduzir elementos que não devem ser traduzidos, adicionar espaços adicionais ou se esqueça da pontuação final, etc. Se você vir um aviso como este, verifique novamente a tradução sugerida.
 
@@ -88,7 +88,7 @@ O Crowdin tem um recurso integrado que alerta os tradutores quando eles estão p
 
 Um exemplo de alerta do Crowdin quando você se esquece de adicionar uma tag à sua tradução: ![Exemplo de um aviso do Crowdin](./crowdin-warning-example.png)
 
-### Lidando com tags e trechos de código {#dealing-with-tags}
+## Lidando com tags e trechos de código {#dealing-with-tags}
 
 Grande parte do conteúdo fonte contém tags e variáveis, que são destacadas em amarelo no editor do Crowdin. Elas desempenham funções diferentes e devem ser abordadas corretamente.
 
@@ -158,7 +158,7 @@ No exemplo abaixo, ao passar o mouse sobre a <0> tag mostra que ela representa `
 
 ![Exemplo de tags.png ambíguas](./example-of-ambiguous-tags.png)
 
-### Formas/abreviaturas curtas vs. completas {#short-vs-full-forms}
+## Formas/abreviaturas curtas vs. completas {#short-vs-full-forms}
 
 Existem muitas abreviações usadas no site, por exemplo, dapps, NFT, DAO, DeFi, etc. Essas abreviações são comumente usadas em inglês e a maioria dos visitantes do site estão familiarizados com elas.
 
@@ -170,7 +170,7 @@ Exemplo de como traduzir dapps:
 
 - Aplicativos descentralizados (dapps) → _Formulário completo traduzido (abreviação em inglês entre parênteses)_
 
-### Termos sem traduções estabelecidas {#terms-without-established-translations}
+## Termos sem traduções estabelecidas {#terms-without-established-translations}
 
 Alguns termos podem não ter traduções estabelecidas em outros idiomas e são mais conhecidos pelo termo original em inglês. Esses termos incluem principalmente conceitos novos, como proof-of-work, proof-of-stake, Beacon Chain, staking, etc.
 
@@ -180,7 +180,7 @@ Ao traduzi-los, sinta-se livre para ser criativo, use traduções descritivas ou
 
 **A razão pela qual a maioria dos termos deveria ser traduzida, em vez ser deixada em inglês, é que essa nova terminologia se tornará mais difundida no futuro, à medida que mais pessoas começarem a usar o Ethereum e tecnologias relacionadas. Se queremos envolver mais pessoas de todo o mundo nesse espaço, precisamos fornecer uma terminologia compreensível no maior número possível de idiomas, mesmo que precisemos criá-la nós mesmos.**
 
-### Botões e chamadas para a ação (CTAs) {#buttons-and-ctas}
+## Botões e chamadas para a ação (CTAs) {#buttons-and-ctas}
 
 O site contém vários botões, que devem ser traduzidos de forma diferente dos outros tipos de conteúdo.
 
@@ -190,7 +190,7 @@ As traduções dos botões devem ser o mais curtas possível, para evitar incomp
 
 ![Como encontrar um botão.png](./how-to-find-a-button.png)
 
-### Traduzindo de forma inclusiva {#translating-for-inclusivity}
+## Traduzindo de forma inclusiva {#translating-for-inclusivity}
 
 Os visitantes do ethereum.org vêm de todo o mundo e de diferentes origens. Por conseguinte, a linguagem utilizada no site deve ser neutra, acolhedora para todos e inclusiva.
 
@@ -284,7 +284,7 @@ Aqui estão alguns exemplos a que você deve ter atenção:
 - Como regra geral, mantenha as unidades de medida iguais ao texto original. Se o seu país usa um sistema diferente, você pode incluir a conversão entre parênteses.
 - Além da localização das unidades de medida, também é importante observar as diferenças na forma como as línguas abordam essas unidades. A principal diferença é o espaçamento entre o número e a unidade, que pode diferir dependendo da língua. Por exemplo: 100kB versus 100 kB ou 50ºF versus 50 ºF.
 
-### Conclusão {#conclusion}
+## Conclusão {#conclusion}
 
 A tradução do ethereum.org é uma ótima oportunidade para aprender sobre os diferentes aspectos do Ethereum.
 

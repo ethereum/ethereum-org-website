@@ -43,13 +43,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### موفرو خدمات المراهنة
+### موفرو خدمات المراهنة
 
 <StakingProductsCardGrid category="saas" />
 
 يُرجى مراعاة أهمية اختيار الخدمة التي تدعم [تنوع العملاء](/developers/docs/nodes-and-clients/client-diversity/)، لأنها تعمل على تحسين أمان الشبكة، وتحدّ من المخاطر التي تتعرض لها. تتم الإشارة إلى الخدمات التي تمتلك دليلًا على وضع حدود على أغلبية استخدامات العملاء بـ <em style={{ textTransform: "uppercase" }}>"تنويع عملاء التنفيذ"</em> و<em style={{ textTransform: "uppercase" }}>"تنويع عملاء الإجماع".</em>
 
-#### مكونات المفاتيح
+### مكونات المفاتيح
 
 <StakingProductsCardGrid category="keyGen" />
 
