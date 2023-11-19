@@ -32,7 +32,7 @@ Jika Kontrak Pintar menerapkan metode dan aksi berikut, kontrak itu dapat disebu
 
 Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Metode {#methods}
+### Metode {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Aksi {#events}
+### Aksi {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

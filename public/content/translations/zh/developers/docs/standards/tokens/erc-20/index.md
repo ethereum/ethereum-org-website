@@ -45,7 +45,7 @@ ERC-20 的功能示例包括：
 
 来自 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)：
 
-#### 方法 {#methods}
+### 方法 {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,7 +59,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-#### 事件 {#events}
+### 事件 {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
