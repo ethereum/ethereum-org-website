@@ -155,12 +155,12 @@ Ataki typu Sybil polegają na tym, że pojedynczy człowiek oszukuje system, aby
 
 Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zdecentralizowanych rozwiązań w zakresie tożsamości:
 
-- **[Ethereum Name Service (ENS)](https://ens.domains/)** — _Zdecentralizowany system nazewnictwa w łańcuchu, odczytywalnych maszynowo, takich jak adresy portfeli Ethereum, skróty treści i metadane._
-- **[SpruceID](https://www.spruceid.com/)** — _Zdecentralizowany projekt tożsamości, który pozwala użytkownikom kontrolować tożsamość cyfrową za pomocą kont Ethereum i profili ENS, zamiast polegać na usługach stron trzecich._
-- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _Zdecentralizowany ledger/protokół umożliwiający tworzenie poświadczeń o dowolnym elemencie w łańcuchu (on-chain) lub poza nim (off-chain)._
-- **[Proof of Humanity (lub PoH)](https://www.proofofhumanity.id)** — _System weryfikacji tożsamości społecznościowej oparty na Ethereum._
-- **[BrightID](https://www.brightid.org/)** — _Sieć zdecentralizowanych tożsamości społecznościowych typu open source. Jej celem jest zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę wykresu społecznego._
-- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** — _Zdecentralizowany agregator tożsamości cyfrowych._
+- **[Ethereum Name Service (ENS)](https://ens.domains/)** — _zdecentralizowany system nazewnictwa w łańcuchu, odczytywalnych maszynowo, takich jak adresy portfeli Ethereum, skróty treści i metadane._
+- **[SpruceID](https://www.spruceid.com/)** — _zdecentralizowany projekt tożsamości, który pozwala użytkownikom kontrolować tożsamość cyfrową za pomocą kont Ethereum i profili ENS, zamiast polegać na usługach stron trzecich._
+- **[Ethereum Attestation Service (EAS)](https://attest.sh/)** — _ Zdecentralizowany ledger/protokół umożliwiający tworzenie poświadczeń o dowolnym elemencie w łańcuchu lub poza nim._
+- **[Proof of Humanity (lub PoH)](https://www.proofofhumanity.id)** — _ system weryfikacji tożsamości społecznościowej oparty na Ethereum._
+- **[BrightID](https://www.brightid.org/)** — _sieć zdecentralizowanych tożsamości społecznościowych typu open source. Jej celem jest zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę wykresu społecznego._
+- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** — _zdecentralizowany agregator tożsamości cyfrowych._
 
 ## Dalsza lektura {#further-reading}
 
@@ -176,7 +176,7 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - [Zdecentralizowana tożsamość (oraz dodatkowa sesja transmisji na żywo)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _świetny film szkoleniowy na temat zdecentralizowanej tożsamości autorstwa Andreasa Antonopoulosa._
 - [Logowanie za pomocą Ethereum i zdecentralizowanej tożsamości za pomocą Ceramic, IDX, React i 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _samouczek YouTube pokazujący, jak zbudować system zarządzania tożsamością do tworzenia, odczytywania i aktualizowania profilu użytkownika przy użyciu portfela Ethereum autorstwa Nadera Dabita._
 - [BrightID — zdecentralizowana tożsamość w Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _odcinek podcastu Bankless omawiający BrightID, zdecentralizowane rozwiązanie tożsamości dla Ethereum._
-- [Internet poza łańcuchem: zdecentralizowana tożsamość i weryfikowalne dane uwierzytelniające](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _prezentacja EthDenver 2022 autorstwa Evina McMullena._
+- [Internet poza łańcuchem: zdecentralizowana tożsamość i weryfikowalne dane uwierzytelniające](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — prezentacja EthDenver 2022 autorstwa Evina McMullena.
 
 ### Społeczności {#communities}
 

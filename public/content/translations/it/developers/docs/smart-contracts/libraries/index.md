@@ -102,11 +102,16 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK -** **_Fornisce gli strumenti necessari per costruire contratti intelligenti personalizzati in modo efficiente_**
+
+- [Documentazione](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Tutorial correlati {#related-tutorials}
 
-- [Considerazioni sulla sicurezza per gli sviluppatori di Ethereum](/developers/docs/smart-contracts/security/): _Un tutorial sulle considerazioni sulla sicurezza durante lo sviluppo dei contratti intelligenti, incluso l'uso della libreria._
-- [Comprendere il contratto intelligente del token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/): _Tutorial sullo standard ERC20, fornito da diverse librerie._
+- [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/): _Un tutorial sulle considerazioni sulla sicurezza durante lo sviluppo dei contratti intelligenti, incluso l'uso della libreria._
+- [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/): _Tutorial sullo standard ERC20, fornito da diverse librerie._
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

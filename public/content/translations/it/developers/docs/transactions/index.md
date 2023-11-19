@@ -27,8 +27,8 @@ Una transazione inviata contiene le seguenti informazioni:
 - `signature` – l'identificativo del mittente. Viene generata quando la chiave privata del mittente firma la transazione e conferma che il mittente ha autorizzato la transazione
 - `nonce` – un contatore con incremento sequenziale, che indica il numero della transazione dal conto
 - `value` – quantità di ETH da trasferire dal mittente al destinatario (denominata in WEI, dove 1 ETH corrisponde a 1e+18wei)
-- `data` – campo facoltativo per includere dati arbitrari
-- `gasLimit` – importo massimo di unità di carburante che possono essere consumate dalla transazione. La [EVM](/developers/docs/evm/opcodes) specifica le unità di carburante richiesti da ogni passaggio di calcolo
+- `input data` - campo facoltativo per includere dati arbitrari
+- `gasLimit` – importo massimo di unità di carburante che possono essere consumate dalla transazione. L'[EVM](/developers/docs/evm/opcodes) specifica le unità di gas necessarie per ogni passaggio di calcolo
 - `maxPriorityFeePerGas` – il prezzo massimo del carburante consumato da includere come mancia al validatore
 - `maxFeePerGas` – la commissione massima per unità di carburante che si desidera pagare per la transazione (che include `baseFeePerGas` e `maxPriorityFeePerGas`)
 
@@ -99,7 +99,7 @@ Esempio di risposta:
 }
 ```
 
-- `raw` è la transazione firmata in formato codificato [Recursive Length Prefix (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- `raw` è la transazione firmata nella forma codificata [prefisso di lunghezza ricorsiva (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` è la transazione firmata in formato JSON
 
 Con l'hash di firma, la transazione può provare crittograficamente che proviene dal mittente ed è stata inviata alla rete.

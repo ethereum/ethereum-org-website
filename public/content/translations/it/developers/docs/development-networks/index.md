@@ -62,11 +62,22 @@ Esistono anche due implementazioni di prova pubbliche e mantenute di Ethereum: G
 - [Launchpad di staking di Goerli](https://goerli.launchpad.ethereum.org/)
 - [Annuncio di Deprecazione di Ropsten, Rinkeby e Kiln](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
+### Pacchetto Ethereum di Kurtosis {#kurtosis}
+
+Kurtosis è un sistema di produzione per ambienti di prova multi-contenitore che consente agli sviluppatori di avviare localmente istanze riproducibili di reti blockchain.
+
+Il pacchetto Ethereum di Kurtosis istanzia localmente una rete di prova di Ethereum containerizzata e parametrizzabile, con il supporto di diversi client del Livello di esecuzione (EL) e del Livello di consenso (CL) e un numero n di nodi. Kurtosis gestisce elegantemente tutte le mappature delle porte locali e le connessioni ai servizi per facilitare la prototipazione e il testing di dApp e contratti intelligenti.
+
+- [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/eth-network-package)
+- [Sito Web](https://www.kurtosis.com/)
+- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [Documentazione](https://docs.kurtosis.com/)
+
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Framework di sviluppo](/developers/docs/frameworks/)
-- [Imposta un ambiente di sviluppo locale](/developers/local-environment/)
+- [Quadri di sviluppo](/developers/docs/frameworks/)
+- [Configura un ambiente di sviluppo locale](/developers/local-environment/)
