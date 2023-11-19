@@ -6,7 +6,6 @@ tags:
   - "smart contract"
   - "remix"
   - "Solidity"
-  - "per cominciare"
   - "distribuzione"
 skill: beginner
 lang: it
@@ -50,14 +49,14 @@ contract Counter {
 }
 ```
 
-Se hai famigliarità con la programmazione, puoi facilmente intuire cosa faccia questo programma. Ecco una spiegazione riga per riga:
+Se sei familiare con la programmazione, puoi facilmente intuire cosa faccia questo programma. Ecco una spiegazione riga per riga:
 
-- Riga 3: definiamo un contratto con il nome `Counter`.
-- Riga 6: il nostro contratto memorizza un numero intero senza firma `count` a partire da 0.
-- Riga 9: la prima funzione modificherà lo stato del contratto e incrementerà (`increment()`) la nostra variabile `count`.
-- Riga 14: la seconda funzione è solo un getter per leggere il valore della variabile `count` al di fuori dello Smart Contract. Nota che, dato che abbiamo definito la variabile `count` come pubblica, questo non è necessario. Lo indichiamo come esempio.
+- Riga 4: definiamo un contratto con il nome `Counter`.
+- Riga 7: il nostro contratto memorizza un numero intero senza firma `count` a partire da 0.
+- Riga 10: la prima funzione modificherà lo stato del contratto e incrementerà (`increment()`) la nostra variabile `count`.
+- Riga 15: la seconda funzione è solo un getter per leggere il valore della variabile `count` al di fuori dello Smart Contract. Nota che, dato che abbiamo definito la variabile `count` come pubblica, questo non è necessario. Lo indichiamo come esempio.
 
-Questo è tutto per il nostro primo semplice Smart Contract. Come forse saprai, assomiglia un po' sembra ai linguaggi orientati agli oggetti come Java o C++. Ora è il momento di sperimentare con il contratto.
+Questo è tutto per il nostro primo semplice Smart Contract. Come forse saprai, somiglia un po' un linguaggio di OOP (Programmazione Orientata agli Oggetti), come Java o C++. Ora è il momento di sperimentare con il contratto.
 
 ## Distribuzione del contratto {#deploying-our-contract}
 

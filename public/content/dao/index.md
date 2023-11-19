@@ -81,7 +81,7 @@ In many DAOs, transactions will be automatically executed if a quorum of members
 
 #### A famous example {#governance-example}
 
-[Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affimrative, as long as it is not vetoed by the founders.
+[Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
 ### Multisig governance {#governance-example}
 

@@ -55,7 +55,7 @@ const StakingLaunchpadWidget: React.FC = () => {
       p={{ base: 6, md: 8 }}
     >
       <Text as="span" color="text200">
-        <Translation id="page-staking-launchpad-widget-span" />
+        <Translation id="page-staking:page-staking-launchpad-widget-span" />
       </Text>
       <Box my={4}>
         <StyledSelect
@@ -67,10 +67,10 @@ const StakingLaunchpadWidget: React.FC = () => {
         />
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p1" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p1" />
       </Text>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p2" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p2" />
       </Text>
       <Box mb={4}>
         <ButtonLink
@@ -78,12 +78,12 @@ const StakingLaunchpadWidget: React.FC = () => {
           width={{ base: "full", md: "auto" }}
         >
           {selection === "mainnet"
-            ? t("page-staking-launchpad-widget-mainnet-start")
-            : t("page-staking-launchpad-widget-testnet-start")}
+            ? t("page-staking:page-staking-launchpad-widget-mainnet-start")
+            : t("page-staking:page-staking-launchpad-widget-testnet-start")}
         </ButtonLink>
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p3" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p3" />
       </Text>
       <Box>
         <ButtonLink
@@ -92,7 +92,7 @@ const StakingLaunchpadWidget: React.FC = () => {
           width={{ base: "full", md: "auto" }}
           leftIcon={<FaTools />}
         >
-          <Translation id="page-staking-launchpad-widget-link" />
+          <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
       </Box>
     </Flex>

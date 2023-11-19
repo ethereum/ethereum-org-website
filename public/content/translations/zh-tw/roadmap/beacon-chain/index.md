@@ -10,7 +10,7 @@ summaryPoint2: 信標鏈已於 2022 年 9 月與原先的以太坊工作量證�
 summaryPoint3: 信標鏈引入共識邏輯和區塊流言協定，現在可保護以太坊安全。
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   信標鏈於 2020 年 12 月 1 日發佈，並於 2022 年 9 月 15 日透過合併正式將權益證明確定為以太坊的共識機制。
 </UpgradeStatus>
 

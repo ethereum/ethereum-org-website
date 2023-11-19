@@ -91,7 +91,7 @@ const WithdrawalCredentials: FC = () => {
           <Text m={0} color="success.base">
             <Text as="span" fontWeight="bold">
               <Translation
-                id="comp-withdrawal-credentials-upgraded-1"
+                id="page-staking:comp-withdrawal-credentials-upgraded-1"
                 options={{ validatorIndex: validator.validatorIndex }}
               />{" "}
             </Text>
@@ -126,7 +126,7 @@ const WithdrawalCredentials: FC = () => {
               ? t("comp-withdrawal-credentials-not-upgraded-1-testnet")
               : t("comp-withdrawal-credentials-not-upgraded-1")}
           </Text>{" "}
-          <Translation id="comp-withdrawal-credentials-not-upgraded-2" />
+          <Translation id="page-staking:comp-withdrawal-credentials-not-upgraded-2" />
         </Text>
       </Flex>
     )

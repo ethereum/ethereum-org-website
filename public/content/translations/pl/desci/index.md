@@ -110,6 +110,7 @@ Przeglądaj projekty i dołącz do społeczności DeSci.
 - [Laboratorium aktywnego wnioskowania](https://www.activeinference.org/)
 - [CureDAO: wspólnotowa platforma ds. zdrowia precyzyjnego](https://docs.curedao.org/)
 - [IdeaMarkets: umożliwia zapewnienie zdecentralizowanej wiarygodności naukowej](https://ideamarket.io/)
+- [Laboratoria DeSci](https://www.desci.com/)
 
 Mile widziane są propozycje nowych projektów do umieszczenia na liście — zapoznaj się z naszymi [zasadami umieszczania na liście](/contributing/adding-desci-projects/) i zaczynaj!
 

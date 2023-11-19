@@ -10,7 +10,7 @@ summaryPoint2: Rantai ini digabungkan dengan rantai bukti kerja Ethereum yang as
 summaryPoint3: Rantai Suar memperkenalkan logika konsensus dan protokol gosip blok yang sekarang mengamankan Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Rantai Suar dikirimkan pada tanggal 1 Desember 2020, dan meresmikan bukti taruhan sebagai mekanisme konsensus Ethereum dengan peningkatan Penggabungan pada tanggal 15 September 2022.
 </UpgradeStatus>
 

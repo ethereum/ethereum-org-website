@@ -11,19 +11,19 @@ import image from "@/public/hackathon_transparent.png"
 const StakingHowSoloWorks: React.FC = () => {
   const items = [
     <p>
-      <Translation id="page-staking-how-solo-works-item-1" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-1" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-2" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-2" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-3" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-3" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-4" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-4" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-5" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-5" />
     </p>,
   ]
 
