@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react"
-import { AnimatePresence,motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
@@ -157,7 +157,6 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
   }
   let pageTitleId = getPageTitleId(pagePath, docLinks)
   if (!pageTitleId) {
-    console.warn(`No id found for "pagePath": `, pagePath)
     pageTitleId = `Change page` as TranslationKey
   }
   return (
