@@ -27,7 +27,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       </style>
       <ChakraProvider theme={theme}>
         <RootLayout
-          contentIsOutdated={pageProps.contentIsOutdated}
+          contentIsOutdated={pageProps.frontmatter.contentIsOutdated}
           contentNotTranslated={pageProps.contentNotTranslated}
           lastDeployDate={pageProps.lastDeployDate}
         >
