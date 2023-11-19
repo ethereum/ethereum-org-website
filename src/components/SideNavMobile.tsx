@@ -3,7 +3,7 @@ import { AnimatePresence,motion } from "framer-motion"
 import { MdExpandMore } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import { BaseLink } from "@/components/Link"
+import { BaseLink, LinkProps } from "@/components/Link"
 import Translation from "@/components/Translation"
 import { isLang } from "@/lib/utils/translations"
 import {
@@ -62,7 +62,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink = ({ children, ...props }: ILinkProps) => {
+const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
       w="full"
