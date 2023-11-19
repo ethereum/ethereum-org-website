@@ -23,8 +23,7 @@ import Codeblock from "@/components/Codeblock"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import FeedbackCard from "@/components/FeedbackCard"
-// TODO: Implement file contributors
-// import GitHubContributors from "@/components/FileContributorsGitHub"
+import GitHubContributors from "@/components/GitHubContributors"
 import Link from "@/components/Link"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
@@ -192,6 +191,7 @@ export const DocsLayout = ({
   frontmatter,
   slug,
   tocItems,
+  lastUpdatedDate,
 }: DocsLayoutProps) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
@@ -218,18 +218,16 @@ export const DocsLayout = ({
           {frontmatter.lang !== "en" ? (
             // TODO: Implement file contributors
             <Text>CrowdinContributors</Text>
-          ) : (
             // <CrowdinContributors
             //   relativePath={relativePath}
             //   editPath={absoluteEditPath}
             //   langContributors={allCombinedTranslatorsJson.nodes}
             // />
-            // TODO: Implement file contributors
-            // <GitHubContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            // />
-            <Text>GitHubContributors</Text>
+          ) : (
+            <GitHubContributors
+              relativePath={relativePath}
+              lastUpdatedDate={lastUpdatedDate!}
+            />
           )}
           <TableOfContents
             slug={slug}
