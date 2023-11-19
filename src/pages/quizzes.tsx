@@ -13,12 +13,13 @@ import {
   useDisclosure,
 } from "@chakra-ui/react"
 
-import { NextPageWithLayout } from "@/lib/types"
+import { NextPageWithLayout, QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import PageMetadata from "@/components/PageMetadata"
 import QuizzesList, { QuizzesListProps } from "@/components/Quiz/QuizzesList"
+import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import Translation from "@/components/Translation"
@@ -63,9 +64,10 @@ const QuizzesHubPage: NextPageWithLayout<
 > = () => {
   const { t } = useTranslation()
 
-  const [userStats] = useLocalQuizData()
+  const [userStats, updateUserStats] = useLocalQuizData()
+  const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
   const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
-  const { onOpen, isOpen } = useDisclosure()
+  const { onOpen, isOpen, onClose } = useDisclosure()
 
   const commonQuizListProps = {
     userStats,
@@ -80,6 +82,9 @@ const QuizzesHubPage: NextPageWithLayout<
         description={t("quizzes-subtitle")}
       />
       {/* TODO: Add HubHero */}
+      <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
+        QuizWidget
+      </QuizzesModal>
       <Box px={{ base: 0, lg: "8" }} py={{ base: 0, lg: "4" }} mb="12">
         <Flex direction={{ base: "column-reverse", lg: "row" }} columnGap="20">
           <Stack spacing="10" flex="1">
@@ -140,6 +145,7 @@ const QuizzesHubPage: NextPageWithLayout<
             />
           </Box>
         </Flex>
+        Q
       </Box>
       <Box w="full" py="4" px="8">
         <FeedbackCard />

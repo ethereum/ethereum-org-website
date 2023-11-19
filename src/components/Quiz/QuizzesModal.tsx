@@ -1,4 +1,3 @@
-import React, { useContext } from "react"
 import {
   Center,
   Modal as ChakraModal,
@@ -9,15 +8,14 @@ import {
   ModalProps,
 } from "@chakra-ui/react"
 
-import { QuizzesHubContext } from "./context"
+import { QuizStatus } from "@/lib/types"
 
-interface IProps extends ModalProps {
+interface IProps extends Omit<ModalProps, "isCentered" | "scrollBehavior"> {
   children: React.ReactNode
+  quizStatus: QuizStatus
 }
 
-const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
-  const { status: quizStatus } = useContext(QuizzesHubContext)
-
+const QuizzesModal: React.FC<IProps> = ({ children, quizStatus, ...rest }) => {
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
       return "neutral"
