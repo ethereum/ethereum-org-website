@@ -25,7 +25,6 @@ import {
   DocsLayout,
   roadmapComponents,
   RoadmapLayout,
-  RootLayout,
   stakingComponents,
   StakingLayout,
   staticComponents,
@@ -208,18 +207,16 @@ ContentPage.getLayout = (page: ReactElement) => {
   const Layout = layoutMapping[layout]
 
   return (
-    <RootLayout {...rootLayoutProps}>
-      <Layout {...layoutProps}>
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          image={frontmatter.image}
-          author={frontmatter.author}
-          canonicalUrl={frontmatter.sourceUrl}
-        />
-        {page}
-      </Layout>
-    </RootLayout>
+    <Layout {...layoutProps}>
+      <PageMetadata
+        title={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.image}
+        author={frontmatter.author}
+        canonicalUrl={frontmatter.sourceUrl}
+      />
+      {page}
+    </Layout>
   )
 }
 
