@@ -8,15 +8,16 @@ import {
   Spacer,
 } from "@chakra-ui/react"
 
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { trackCustomEvent } from "../utils/matomo"
-import { TranslationKey } from "../utils/translations"
+import { BaseLink } from "@/components/Link"
+import Emoji from "@/components/Emoji"
+import Translation from "@/components/Translation"
+import Text from "@/components/OldText"
 
-import Emoji from "./Emoji"
-import { BaseLink } from "./Link"
-import Text from "./OldText"
-import Translation from "./Translation"
+import docLinks from "@/data/developer-docs-links.yaml"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import type { DeveloperDocsLink } from "@/lib/interfaces"
+import { TranslationKey } from "@/lib/types"
 
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex
@@ -24,7 +25,7 @@ const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
     justify="space-between"
     maxW="166px"
     h="100%"
-    wordWrap="break-word"
+    wordwrap="break-word"
     p={4}
     lineHeight={4}
     {...props}
@@ -85,7 +86,7 @@ const CardLink = (props: {
             })
           }}
         >
-          <Translation id={docData.id} />
+          <Translation id={`page-developers-docs:${docData.id}`} />
         </LinkOverlay>
       </TextDiv>
     </LinkBox>

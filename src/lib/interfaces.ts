@@ -2,9 +2,9 @@ import type {
   CrowdinContributor,
   Frontmatter,
   Lang,
-  ToCItem,
   TranslationKey,
-} from "./types"
+  ToCItem,
+} from "@/lib/types"
 
 /**
  * Quiz data interfaces
@@ -48,6 +48,14 @@ export interface Quiz {
 
 export interface RawQuizzes {
   [key: string]: RawQuiz
+}
+
+export interface DeveloperDocsLink {
+  id: TranslationKey
+  to: string
+  path: string
+  description: TranslationKey
+  items: Array<DeveloperDocsLink>
 }
 
 /**

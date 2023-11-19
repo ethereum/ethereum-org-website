@@ -2,12 +2,13 @@ import { ReactNode, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
+
+
+import { BaseLink, LinkProps } from "@/components/Link"
 import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-
-import { BaseLink, IProps as ILinkProps } from "./Link"
+import { DeveloperDocsLink } from "@/lib/interfaces"
 
 export const dropdownIconContainerVariant = {
   open: {
@@ -46,7 +47,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
       w="full"
@@ -68,6 +69,7 @@ export interface IPropsNavLink {
 }
 
 const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
+  const { t } = useTranslation("page-developers-docs")
   const isLinkInPath = path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
@@ -133,7 +135,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
   )
 }
 
-export interface IProps {
+export interface SideNavProps {
   path: string
 }
 
@@ -141,7 +143,7 @@ export interface IProps {
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
 // e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
-const SideNav: React.FC<IProps> = ({ path }) => {
+const SideNav = ({ path }: SideNavProps) => {
   const { t } = useTranslation("page-developers-docs")
 
   return (
