@@ -19,6 +19,7 @@ import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import PageMetadata from "@/components/PageMetadata"
 import QuizzesList, { QuizzesListProps } from "@/components/Quiz/QuizzesList"
+import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import Translation from "@/components/Translation"
 
@@ -131,7 +132,13 @@ const QuizzesHubPage: NextPageWithLayout<
               </ButtonLink>
             </Flex>
           </Stack>
-          <Box flex="1">QuizzesStats</Box>
+          <Box flex="1">
+            <QuizzesStats
+              averageScoresArray={userStats.average}
+              completedQuizzes={userStats.completed}
+              totalCorrectAnswers={userStats.score}
+            />
+          </Box>
         </Flex>
       </Box>
       <Box w="full" py="4" px="8">
