@@ -192,11 +192,6 @@ ContentPage.getLayout = (page: ReactElement) => {
     tocItems,
   } = page.props
 
-  const rootLayoutProps = {
-    contentIsOutdated: frontmatter.isOutdated,
-    contentNotTranslated,
-    lastDeployDate,
-  }
   const layoutProps = {
     slug,
     frontmatter,
