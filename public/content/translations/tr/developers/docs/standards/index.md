@@ -11,8 +11,8 @@ Ethereum topluluğu, projelerin ([Ethereum istemcileri](/developers/docs/nodes-a
 
 Genellikle standartlar, bir [standart süreci](https://eips.ethereum.org/EIPS/eip-1) aracılığıyla topluluk üyeleri tarafından tartışılan [Ethereum İyileştirme Önerileri](/eips/) (EIP'ler) olarak sunulur.
 
-- [EIPs'e giriş](/eips/)
-- [EIP'lerin listesi](https://eips.ethereum.org/)
+- [EIP'lere giriş](/eips/)
+- [EIP listesi](https://eips.ethereum.org/)
 - [EIP GitHub deposu](https://github.com/ethereum/EIPs)
 - [EIP tartışma panosu](https://ethereum-magicians.org/c/eips)
 - [Ethereum Yönetişimine Giriş](/governance/)
@@ -22,19 +22,37 @@ Genellikle standartlar, bir [standart süreci](https://eips.ethereum.org/EIPS/ei
 
 ## Standart türleri {#types-of-standards}
 
-Bazı EIP'ler uygulama seviyesinde standartlar (ör. standart akıllı sözleşme formatı) ile ilgilidir, bunlar [Ethereum Yorum Talebi (ERC)](https://eips.ethereum.org/erc) olarak sunulmuştur. Pek çok ERC, Ethereum ekosisteminde geniş çaplı kullanılan kritik standartlardır.
+3 tür EIP vardır:
 
-- [ERC'lerin listesi](https://eips.ethereum.org/erc)
+- Standart İzleme: Ethereum uygulamalarının çoğunu ya da tamamını etkileyen herhangi bir değişikliği açıklar
+- [Meta İzleme](https://eips.ethereum.org/meta): Ethereum'u çevreleyen bir süreci açıklar ya da bir süreçte değişiklik önerir
+- [Bilgi İzleme](https://eips.ethereum.org/informational): bir Ethereum tasarım sorununu açıklar ya da Ethereum topluluğuna genel yönergeler ya da bilgiler sağlar
+
+Ayrıca, Standart İzleme 4 kategoriye ayrılmıştır:
+
+- [Çekirdek](https://eips.ethereum.org/core): mutabakat çatalı gerektiren iyileştirmeler
+- [Ağ Oluşturma](https://eips.ethereum.org/networking): devp2p ve Hafif Ethereum Alt Protokolü ile ilgili iyileştirmelerin yanı sıra whisper ve swarm ağ protokolü spesifikasyonlarına önerilen iyileştirmeler.
+- [Arayüz](https://eips.ethereum.org/interface): istemci API/RPC spesifikasyonları ve standartları ile ilgili iyileştirmeler ve yöntem adları ile sözleşme ABI'leri gibi dil düzeyindeki belirli standartlar.
+- [ERC](https://eips.ethereum.org/erc): uygulama seviyesindeki standartlar ve teamüller
+
+Bu farklı türler ve kategoriler daha fazla bilgi [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types) içinde bulunabilir
 
 ### Token standartları {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Oylama token'ları, stake etme token'ları veya sanal para birimleri gibi değiştirilebilir (birbirinin yerine geçebilir) token'lar için standart bir arayüz.
+  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - ERC-20 jetonları için transfer veya transferFrom sonrası alıcı kodunun veya onaylandıktan sonra harcama kodunun yürütülmesini destekleyen bir jeton arayüzünü tanımlar.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Bir şarkı veya sanat eserinin telif hakkı gibi değiştirilemez token'lar için standart bir arayüz.
-- [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-20'yi geliştiren bir token standardı.
-- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Hem değiştirilebilir hem de değiştirilemez varlıkları içerebilen bir token standardı.
+  - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Ardışık jeton tanımlayıcıları kullanarak bir veya çok sayıda değiştirilemez jeton oluştururken/transfer ederken yayımlanan standartlaştırılmış bir olay.
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721 tüketici rolü için arayüz uzantısı.
+  - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - ERC-721 jetonlarına sınırlı izinlere sahip zaman sınırlı bir rol ekler.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - **(TAVSİYE EDİLMEZ)** ERC-20'yi geliştiren bir jeton standardı.
+- [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Hem değiştirilebilir hem de değiştirilemez varlıkları içerebilen bir jeton standardı.
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Verim taşıyan kasaların teknik parametrelerini optimize etmek ve birleştirmek için tasarlanmış, tokenize edilmiş bir kasa standardı.
 
-[Token standartları](/developers/docs/standards/tokens/) hakkında daha fazla bilgi edinin.
+[Jeton standartları](/developers/docs/standards/tokens/) hakkında daha fazla bilgi edinin.
 
 ## Daha fazla bilgi {#further-reading}
+
+- [Ethereum İyileştirme Önerileri (EIP'ler)](/eips/)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_

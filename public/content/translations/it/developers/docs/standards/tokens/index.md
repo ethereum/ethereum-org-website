@@ -24,9 +24,11 @@ Ecco alcuni degli standard token più popolari su Ethereum:
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 consente scambi e aggregazioni di transazioni più efficienti, risparmiando sui costi. Questo standard del token consente di creare token d'utilità (come $BNB o $BAT) e token non fungibili come CryptoPunks.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Uno standard di cassaforte tokenizzata progettato per ottimizzare e unificare i parametri tecnici delle cassaforti di resa.
 
+L'elenco completo delle proposte [ERC](https://eips.ethereum.org/erc).
+
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Tutorial correlati {#related-tutorials}
 

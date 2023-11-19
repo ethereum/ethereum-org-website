@@ -10,7 +10,7 @@ summaryPoint2: Ela foi integrada à cadeia de prova de trabalho da Ethereum orig
 summaryPoint3: A Beacon Chain introduziu a lógica de consenso e o protocolo de propagação de boatos de bloco que agora protege a Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   A Beacon Chain foi lançada em 1º de Dezembro de 2020 e formalizou a prova de participação como mecanismo de consenso da Ethereum, com a atualização da Fusão em 15 de setembro de 2022.
 </UpgradeStatus>
 
