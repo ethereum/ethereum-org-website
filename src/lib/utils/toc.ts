@@ -1,17 +1,10 @@
 import { ListProps } from "@chakra-ui/react"
-
-import type { SourceHeadingItem, ToCItem } from "@/lib/types"
+import type { TocNodeType, ToCItem } from "@/lib/types"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
-const unicodeEmojiRegEx = /\\u{[0-9A-F]+}/gi
-const unicodeIntlRegEx = /\\u[0-9A-F]+/gi
-const compiledSourceHeadingRegEx =
-  /mdx\("h([2-4])",\w+?\(.+?\{id:"([^"]+)"\}\)((,("([^"]+)"|mdx\([^\)]+\)))+)\)/g
-const mdxShallowFncRegEx = /mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)/g
-const stringRegEx = /"([^"]+)"/g
-const csvCommaRegEx =
-  /(?<=mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)|"([^"]+)"),(?=mdx\("?(\w+)"?,\{[^\}]+\}(,\"([^\"]+)\")?\)|"([^"]+)")/g
+const emojiRegEx = /<Emoji [^/]+\/>/g
+const h1RegEx = /mdx\("h1"/g
 
 /**
  * Creates a slug from a string (Hello world => hello-world)
@@ -22,32 +15,14 @@ const slugify = (s: string): string =>
   encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
 
 /**
- * Parse a heading ID from a Markdown heading string. If the heading contains a custom ID,
- * it will be used as the ID, otherwise the heading will be slugified
+ * Parse a heading ID from a heading string. If the heading contains a custom ID,
+ * it will be used as the ID, otherwise the heading will be slugified and used.
  * @param heading Heading string without leading #s that may contain a {#custom-id}
  * @returns Heading ID string
  */
 export const parseHeadingId = (heading: string): string => {
   const match = customIdRegEx.exec(heading)
   return match ? match[2].toLowerCase() : slugify(heading)
-}
-
-/**
- * Parse out the title to be displayed in the Table of Contents
- * @param title Heading string without leading #s that may contain Emoji's or a {#custom-id}
- * @returns Title string with custom ID and Emoji's removed
- */
-export const parseToCTitle = (title: string): string => {
-  const match = customIdRegEx.exec(title)
-  const trimmedTitle = match ? title.replace(match[1], "").trim() : title
-  const sanitizedTitle = trimmedTitle
-    .replaceAll(unicodeEmojiRegEx, (match) =>
-      String.fromCodePoint(parseInt(match.slice(3, -1), 16))
-    )
-    .replaceAll(unicodeIntlRegEx, (match) =>
-      String.fromCharCode(parseInt(match.slice(2), 16))
-    )
-  return sanitizedTitle
 }
 
 /**
@@ -79,79 +54,58 @@ export const outerListProps: ListProps = {
 }
 
 /**
- * Refactor title and URL from `SourceHeadingItem` object. The contained `id`'s are obtained
- * from the compiled DOM source and do not need further alteration.
- * @param heading SourceHeadingItem object with label and id strings
- * @returns Object of type `Item` containing `title` and `url` properties parsed from heading
+ * Removes any custom ID and Emoji components from a heading string
+ * @param title Heading string, not yet trimmed
+ * @returns Trimmed heading string
  */
-const parseSourceToToCItem = ({ label, id }: SourceHeadingItem): ToCItem => ({
-  title: parseToCTitle(label),
-  url: "#" + id,
-})
+export const trimmedTitle = (title: string): string => {
+  const match = customIdRegEx.exec(title)
+  const trimmedTitle = match ? title.replace(match[1], "").trim() : title
 
-/**
- * Recursive function used to generate nested array of `Items`, nesting according to heading depth
- * @param headings Array of `SourceHeadingItem` objects: { depth: number, id: string, label: string }
- * @param h Heading level being parsed (2 for h2, 3 for h3, 4 for h4), starting with 2
- * @returns Array of `Item` objects parsed from the headings
- */
-const addHeadingsAsItems = (
-  headings: Array<SourceHeadingItem>,
-  h = 2
-): Array<ToCItem> => {
-  const items: Array<ToCItem> = []
-  const depths: number[] = headings.map(({ depth }) => depth)
-  depths.forEach((depth, i): void => {
-    if (depth !== h) return
-    const headingItem = parseSourceToToCItem(headings[i])
-    if (depths[i + 1] > h) {
-      const start = i + 1
-      const rest = depths.slice(start)
-      const stepOutIndex = rest.indexOf(h)
-      const end = stepOutIndex < 0 ? headings.length : start + stepOutIndex
-      const subHeadings = headings.slice(start, end)
-      headingItem.items = addHeadingsAsItems(subHeadings, h + 1)
-    }
-    items.push(headingItem)
-  })
-  return items
+  // Removes Twemoji components from title
+  const emojiMatch = emojiRegEx.exec(trimmedTitle)
+  return emojiMatch ? trimmedTitle.replaceAll(emojiRegEx, "") : trimmedTitle
 }
 
 /**
- * Takes in a match result for a single heading, and parses out the depth, id, and label
- * The label is sanitized to simplify any components (ie, `strong`, `code`, `Emoji`, etc)
- * to their string argument. For example, `strong` tags will reduce to child text, and Emoji's
- * have no string argument and are skipped. Parts are joined to form the heading label.
- * @param headingMatch RegExpMatchArray for a single heading match
- * @returns `SourceHeadingItem` object: { depth: number, id: string, label: string }
+ * Recursive function to sanitize original `title` property, and extract appropriate heading id
+ * title comes in form 'A note on names {#a-note-on-names}'
+ * url is in form '#a-note-on-names'... if no {#name} exists, call slugify(title) for url
+ * @param item: Of ToCItem type, { title: string, url: string, items?: ToCItem[] }
+ * @returns Updated ToCItem with cleaned up title, url, and any subitems
  */
-const processHeadingMatch = (
-  headingMatch: RegExpMatchArray
-): SourceHeadingItem => {
-  const [_, depth, id, rest] = headingMatch
-  const label = rest
-    .slice(1) // Remove leading comma from match
-    .replaceAll(csvCommaRegEx, "") // Remove top-level commas (skip those between quotes)
-    .replaceAll(mdxShallowFncRegEx, (...match) => match[3] ?? "") // Reduce mdx() functions to its string argument if available
-    .replaceAll(stringRegEx, (...match) => match[1] ?? "") // Remove quotes from string arguments
-  return { depth: +depth, id, label }
+const parseItem = (item: ToCItem): ToCItem => {
+  const { title, items: subItems } = item
+  const parsedItem = {
+    title: trimmedTitle(title),
+    url: `#${parseHeadingId(title)}`,
+  }
+  if (!subItems) return parsedItem
+  return {
+    ...parsedItem,
+    items: subItems.map(parseItem),
+  }
 }
 
 /**
- * Generates a Table of Contents from a compiled page source string, after markdown has been parsed into DOM elements
- * Parses all h2/3/4 elements into an array of `SourceHeadingItem` objects using regex matching
+ * Remaps the ToC generated by remarkInferToc plugin (@/lib/rehype/remarkInferToc.ts)
  * Note: each file should only have one h1, and it is not included in the ToC
- * Removes component functions such as Emoji components) and joins rest to form heading label
- * Calls `addHeadingAsItem` with array of `SourceHeadingItem` objects to generate list of `Item` objects
- * @param content Compiled page source from mdx compiler (string)
- * @returns List of `Item` objects parsed from the compiled source, nested according to heading depth
+ * @param tocNodeItems Array of TocNodeType objects generated by remarkInferToc
+ * @returns Modified array of ToCItem objects
  */
 
-export const generateTableOfContents = (
+export const remapTableOfContents = (
+  tocNodeItems: TocNodeType[],
   compiledSource: string
-): Array<ToCItem> => {
-  const matchAll = compiledSource.matchAll(compiledSourceHeadingRegEx)
-  const matches = Array.from(matchAll).slice(0)
-  const headings: Array<SourceHeadingItem> = matches.map(processHeadingMatch)
-  return addHeadingsAsItems(headings)
+): ToCItem[] => {
+  const h1Count = Array.from(compiledSource.matchAll(h1RegEx)).length
+  if (h1Count > 1 && "url" in tocNodeItems[0]) {
+    console.warn("More than one h1 found in file at id:", tocNodeItems[0].url)
+  }
+  const items = (
+    h1Count > 0 && "items" in tocNodeItems[0]
+      ? tocNodeItems[0].items
+      : tocNodeItems
+  ) as ToCItem[]
+  return items.map(parseItem)
 }

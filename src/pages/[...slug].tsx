@@ -9,7 +9,7 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, StaticPaths } from "@/lib/types"
+import type { NextPageWithLayout, StaticPaths, TocNodeType } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -18,7 +18,7 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { generateTableOfContents } from "@/lib/utils/toc"
+import { remapTableOfContents } from "@/lib/utils/toc"
 
 import {
   docsComponents,
@@ -38,6 +38,7 @@ import {
 } from "@/layouts"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
+import remarkInferToc from "@/lib/rehype/remarkInferToc"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const layoutMapping = {
@@ -106,10 +107,17 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
 
+  let tocNodeItems: TocNodeType[] = []
+  const tocCallback = (toc: TocNodeType): void => {
+    tocNodeItems = "items" in toc ? toc.items : []
+  }
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
-      // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
-      remarkPlugins: [remarkGfm],
+      remarkPlugins: [
+        // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
+        remarkGfm,
+        [remarkInferToc, { callback: tocCallback }],
+      ],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
         [rehypeHeadingIds],
@@ -118,7 +126,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const timeToRead = readingTime(markdown.content)
-  const tocItems = generateTableOfContents(mdxSource.compiledSource)
+  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = getLastDeployDate()

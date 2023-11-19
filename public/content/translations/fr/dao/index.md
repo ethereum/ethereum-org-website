@@ -91,7 +91,7 @@ Tandis que les DAO peuvent avoir des milliers de membres votants, les fonds peuv
 
 En 1977, le Wyoming a créé la LLC, qui protège les entrepreneurs et limite leur responsabilité. Plus récemment, ils ont été les pionniers de la loi pour les DAO qui établit un statut juridique pour les DAO. Actuellement, le Wyoming, le Vermont et les Iles Vierges ont des lois portant sur les DAO sous une forme ou une autre.
 
-#### Un exemple célèbre {#law-example}
+### Un exemple célèbre {#law-example}
 
 [CityDAO](https://citydao.io) - CityDAO s'est servi de la loi DAO du Wyoming pour acheter 40 acres de terrain près du parc national de Yellowstone.
 

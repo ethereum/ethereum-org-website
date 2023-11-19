@@ -87,17 +87,17 @@ U kunt hier ook [leren hoe u een node uitvoert](/developers/docs/nodes-and-clien
 
 ## Veelgestelde vragen {#faq}
 
-#### Ik heb ETH naar de verkeerde portemonnee gestuurd {#wrong-wallet}
+### Ik heb ETH naar de verkeerde portemonnee gestuurd {#wrong-wallet}
 
 Een transactie verzonden op Ethereum is onomkeerbaar. Helaas, als u ETH naar de verkeerde portemonnee heeft gestuurd, is er geen manier om deze fondsen terug te krijgen. Geen enkele centrale organisatie, entiteit of persoon bezit Ethereum, wat betekent dat niemand transacties kan omkeren. Daarom is het essentieel om uw transacties altijd opnieuw te controleren alvorens ze te verzenden.
 
-#### Hoe kan ik mijn Ethereum-giveaway claimen? {#giveaway-scam}
+### Hoe kan ik mijn Ethereum-giveaway claimen? {#giveaway-scam}
 
 Ethereum-giveaways zijn scams ontworpen om uw ETH te stelen. Word niet in de verleiding gebracht door aanbiedingen die te goed lijken om waar te zijn - als u ETH naar een giveaway-adres stuurt, ontvangt u geen giveaway en kunt u uw fondsen niet terugkrijgen.
 
 [Meer over scampreventie](/security/#common-scams)
 
-#### Mijn transactie is vastgelopen {#stuck-transaction}
+### Mijn transactie is vastgelopen {#stuck-transaction}
 
 Transacties op Ethereum kunnen soms vast komen te zitten als u een lagere transactietarief heeft ingediend dan vereist is vanwege de netwerkvraag. Veel portemonnees bieden een optie om dezelfde transactie opnieuw in te dienen met een hoger transactietarief om de transactie te kunnen verwerken. Of u kunt een lopende transactie annuleren door een transactie naar uw eigen adres te sturen en dezelfde nonce te gebruiken als de lopende transactie.
 
@@ -105,10 +105,10 @@ Transacties op Ethereum kunnen soms vast komen te zitten als u een lagere transa
 
 [Hoe lopende Ethereum transacties annuleren](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Hoe kan ik Ethereum minen? {#mining-ethereum}
+### Hoe kan ik Ethereum minen? {#mining-ethereum}
 
 Ethereum-mining is niet langer mogelijk. Mining werd uitgeschakeld toen Ethereum overschakelde van proof-of-work naar proof-of-stake. Nu heeft Ethereum validators in plaats van miners. Validators staken ETH en ontvangen staking-beloningen voor het beveiligen van het netwerk.
 
-#### Hoe word ik een staker/validator? {#become-validator}
+### Hoe word ik een staker/validator? {#become-validator}
 
 Om een validator te worden moet u 32 ETH staken in het Ethereum-stortingscontract en een validator-node instellen. Er is meer informatie beschikbaar op onze [staking-pagina's](/staking) en op [het staking launchpad](https://launchpad.ethereum.org/).
