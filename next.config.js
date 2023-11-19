@@ -21,7 +21,6 @@ module.exports = (phase, { defaultConfig }) => {
     ...defaultConfig,
     reactStrictMode: true,
     webpack: (config) => {
-      // For all file types, you should have existing rules here
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: 'yaml-loader',
