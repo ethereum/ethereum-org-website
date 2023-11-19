@@ -1,4 +1,5 @@
 import type { Frontmatter, Lang, TranslationKey, ToCItem } from "@/lib/types"
+import { ReactNode } from "react"
 
 /**
  * Quiz data interfaces
@@ -137,7 +138,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
 }
 
 export interface Root {
-  children: JSX.Element
+  children: ReactNode
   contentIsOutdated: boolean
   contentNotTranslated: boolean
   lastDeployDate: string
