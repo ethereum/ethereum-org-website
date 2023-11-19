@@ -105,13 +105,13 @@ Il existe une variété d'options disponibles pour vous aider dans votre configu
 
 <ProductDisclaimer />
 
-#### Outils de nœud
+### Outils de nœud
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/nodes-and-clients/client-diversity/) , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
-#### Générateurs de clés
+### Générateurs de clés
 
 Ces outils peuvent être utilisés en alternative à [l'interface de dépôt de mise en jeu](https://github.com/ethereum/staking-deposit-cli/) pour vous aider à générer vos clés.
 

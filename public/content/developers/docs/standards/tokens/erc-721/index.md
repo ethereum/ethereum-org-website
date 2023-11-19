@@ -44,7 +44,7 @@ and, once deployed, it will be responsible to keep track of the created tokens o
 
 From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Methods {#methods}
+### Methods {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -58,7 +58,7 @@ From [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Events {#events}
+### Events {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

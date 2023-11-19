@@ -6,7 +6,7 @@ lang: pt-br
 
 Um contrato inteligente (smart contract) é um programa executado em um endereço na Ethereum. Eles são compostos por dados e funções que podem ser executadas ao receber uma transação. Veja aqui uma visão geral do que compõe um contrato inteligente.
 
-### Pré-requisitos {#prerequisites}
+## Pré-requisitos {#prerequisites}
 
 Não deixe de ler sobre [contratos inteligentes](/developers/docs/smart-contracts/). Este documento presume que você já está familiarizado com linguagens de programação como JavaScript ou Python.
 

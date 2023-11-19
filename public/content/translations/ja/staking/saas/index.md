@@ -52,11 +52,11 @@ ETH のステーキングを支援するステーキング・アズ・ア・サ�
 <a href="/developers/docs/nodes-and-clients/client-diversity/">クライアントの多様性</a>をサポートすることが、ネットワークのセキュリティを向上させ、ご自身のリスクを制限する上で、重要であることにご留意ください。 マジョリティを占めるクライアントを制限している証拠があるサービスは、<em style={{ textTransform: "uppercase" }}>「クライアントの多様性」</em>として表示されます。
 </InfoBanner>
 
-#### ステーキングサービスプロバイダー
+### ステーキングサービスプロバイダー
 
 <StakingProductsCardGrid category="saas" />
 
-#### キージェネレーター
+### キージェネレーター
 
 <StakingProductsCardGrid category="keyGen" />
 

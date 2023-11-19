@@ -32,7 +32,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 来自[ EIP-721 ](https://eips.ethereum.org/EIPS/eip-721)：
 
-#### 方法 {#methods}
+### 方法 {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### 事件 {#events}
+### 事件 {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

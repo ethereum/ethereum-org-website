@@ -6,7 +6,7 @@ lang: ro
 
 Maximal extractable value (MEV) refers to the maximum value that can be extracted from block production in excess of the standard block reward and gas fees by including, excluding, and changing the order of transactions in a block.
 
-### Miner extractable value
+## Miner extractable value
 
 This concept was first applied under the context of [proof-of-work](/developers/docs/consensus-mechanisms/pow/), and was initially referred to as "miner extractable value." Aceasta deoarece în dovada-muncii (PoW), miner-ii controlează includerea, excluderea și ordonarea tranzacțiilor. However, after the transition to proof-of-stake via [The Merge](/updates/merge) validators will be responsible for these roles, and mining will no longer be applicable. The value extraction methods here will still persist after this transition, and thus a name change was needed. To keep the same acronym for continuity while maintaining the same fundamental meaning, "maximal extractable value" is now used as a more inclusive replacement.
 

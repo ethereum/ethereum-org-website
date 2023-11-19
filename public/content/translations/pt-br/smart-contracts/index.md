@@ -18,7 +18,7 @@ Você provavelmente está pensando: _"Não sou advogado! Por que eu deveria me i
 
 Contratos são meros acordos. Ou seja, qualquer forma de acordo pode ser encapsulada nas condições de um contrato. Acordos verbais ou contratos de papel e caneta são aceitáveis para muitas coisas, mas eles não são isentos de falhas.
 
-### Confiança e contratos {#trust-and-contracts}
+## Confiança e contratos {#trust-and-contracts}
 
 Um dos maiores problemas com um contrato tradicional é a necessidade de indivíduos confiáveis seguirem com os resultados do contrato.
 
@@ -32,7 +32,7 @@ Este exemplo bobo ilustra o problema com qualquer acordo não inteligente. Mesmo
 
 Os contratos inteligentes digitalizam acordos transformando os termos de um acordo em código de computador executado automaticamente quando os termos do contrato são cumpridos.
 
-### Uma máquina de vendas digitais {#vending-machine}
+## Uma máquina de vendas digitais {#vending-machine}
 
 Uma metáfora simples para um contrato inteligente é uma máquina de venda, que funciona de maneira como um contrato inteligente – entradas específicas garantem saídas predeterminadas.
 
@@ -44,25 +44,25 @@ Uma metáfora simples para um contrato inteligente é uma máquina de venda, que
 
 A máquina de venda só dispensará o seu produto desejado depois que todos os requisitos forem atendidos. Se você não selecionar um produto ou inserir dinheiro suficiente, a máquina de venda não vai entregar o seu produto.
 
-### Execução automática {#automation}
+## Execução automática {#automation}
 
 Um dos benefícios mais significativos que os contratos inteligentes têm sobre contratos comuns é o resultado ser executado automaticamente quando a condição do contrato é cumprida. Não há necessidade de esperar que um humano execute o resultado. Em outras palavras: contratos inteligentes eliminam a necessidade de confiança.
 
 Por exemplo, você poderia escrever um contrato inteligente que retenha fundos em caução para uma criança, permitindo que ela retire fundos após uma data específica. Se eles tentarem retirar os fundos antes da data especificada, o contrato inteligente não será executado. Ou, você poderia escrever um contrato que dá automaticamente a você uma versão digital do documento de propriedade de um carro quando você paga o vendedor.
 
-### Resultados previsíveis {#predictability}
+## Resultados previsíveis {#predictability}
 
 O fator humano é um dos maiores pontos de falha com contratos tradicionais. Por exemplo, dois juízes individuais podem interpretar um contrato tradicional de maneiras diferentes. Suas interpretações poderiam levar a diferentes decisões sendo tomadas e a resultados diferentes. Contratos inteligentes eliminam a possibilidade de diferentes interpretações. Ao invés disso, contratos inteligentes executam precisamente com base nas condições escritas no código do contrato. Esta precisão significa que, dada as mesmas circunstâncias, o contrato inteligente produzirá o mesmo resultado.
 
-### Registro público {#public-record}
+## Registro público {#public-record}
 
 Contratos inteligentes são úteis também para auditoria e rastreamento. Como os contratos inteligentes do Ethereum estão em um blockchain público, qualquer um pode rastrear instantaneamente as transferências de ativos e outras informações relacionadas. Você pode verificar se alguém enviou dinheiro para seu endereço, por exemplo.
 
-### Proteção de privacidade {#privacy-protection}
+## Proteção de privacidade {#privacy-protection}
 
 Contratos inteligentes também podem proteger sua privacidade. Uma vez que o Ethereum é uma rede pseudônima (suas transações são ligadas publicamente a um único endereço criptográfico, não sua identidade), você pode proteger sua privacidade de observadores.
 
-### Termos visíveis {#visible-terms}
+## Termos visíveis {#visible-terms}
 
 Por fim, tal como os contratos, você pode verificar o que está em um contrato inteligente antes de assiná-lo (ou de outra forma, interagir com ele). Melhor ainda, a transparência pública dos termos do contrato significa que qualquer pessoa pode examiná-lo.
 
