@@ -10,7 +10,7 @@ summaryPoint2: इसे सितंबर 2022 में ओरिजिनल
 summaryPoint3: बीकन चेन ने सहमति तर्क और गॉसिप प्रोटोकॉल को पेश किया जो अब एथेरियम को सुरक्षित करता है।
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   बीकन चेन 1 दिसंबर, 2020 को शिप कर दिया गया, और 15 सितंबर, 2022 को मर्ज अपग्रेड के साथ एथेरियम की सहमति तंत्र के रूप में औपचारिक रूप से हिस्सेदारी का सबूत दिया गया।
 </UpgradeStatus>
 

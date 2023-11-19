@@ -39,7 +39,7 @@ This Code of Conduct applies to all ethereum.org spaces (such as GitHub, Discord
 
 ### Our standards {#our-standards}
 
-Examples of behaviour that contributes to creating a positive environment include:
+Examples of behavior that contributes to creating a positive environment include:
 
 - Using welcoming and inclusive language
 - Being respectful of differing viewpoints and experiences

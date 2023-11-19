@@ -10,7 +10,7 @@ summaryPoint2: It was merged with the original Ethereum proof-of-work chain in S
 summaryPoint3: The Beacon Chain introduced the consensus logic and block gossip protocol which now secures Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   The Beacon Chain shipped on December 1, 2020, and formalized proof-of-stake as Ethereum's consensus mechanism with The Merge upgrade on September 15, 2022.
 </UpgradeStatus>
 

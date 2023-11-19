@@ -25,7 +25,7 @@ export enum Skill {
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
+  `page-developers-tutorials:page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
 
 const TutorialMetadata = ({
   frontmatter,

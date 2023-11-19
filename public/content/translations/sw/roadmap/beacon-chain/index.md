@@ -11,7 +11,7 @@ summaryPoint3: Inatoa muhtasari wa uthibitisho-wa-hisa kwenyeikolojia ya Ethereu
 summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaalamu.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
     Mnyororo wa Kioleza ulisafirishwa Disemba 1 saa sita mchana wakati wa ulimwengu ulioratibiwa. Kujifunza zaidi, <a href="https://beaconscan.com/">chunguza taarifa</a>. Kama unataka kuhalalisha mnyororo, unaweza <a href="/staking/">kuweka ETH yako kama hisa</a>.
 </UpgradeStatus>
 

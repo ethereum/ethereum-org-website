@@ -43,6 +43,7 @@ La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo svilup
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 Puoi anche trovare la documentazione e le guide di sviluppo nella nostra sezione [risorse per sviluppatore Ethereum](/developers/).
 
@@ -64,7 +65,7 @@ Ecco alcuni esempi più diffusi:
 
 Se stai eseguendo un nodo o un validatore, ecco alcune community che sono dedicate ad aiutarti ad iniziare.
 
-- [EthStaker discord](https://discord.gg/ethstaker)
+- [EthStaker discord](https://discord.io/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi dedicati, rivolti al pubblico, dove è possibile ottenere supporto e fare domande.

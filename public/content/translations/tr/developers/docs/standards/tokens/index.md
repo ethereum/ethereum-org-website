@@ -7,7 +7,7 @@ incomplete: true
 
 ## Giriş {#introduction}
 
-Birçok Ethereum geliştirme standartlarından biri token arayüzlerine odaklanır. Bu standartlar akıllı sözleşmelerin birleştirilebilir kalmasını sağlamaya yardımcı olur: Örneğin yeni bir proje bir token çıkardığı zaman token'ın mevcut merkeziyetsiz borsalarla uyumlu kalması gibi.
+Birçok Ethereum geliştirme standardı, jeton arayüzlerine odaklanır. Bu standartlar akıllı sözleşmelerin birleştirilebilir kalmasını sağlamaya yardımcı olur: Örneğin yeni bir proje bir token çıkardığı zaman token'ın mevcut merkeziyetsiz borsalarla uyumlu kalması gibi.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -22,10 +22,13 @@ Bunlar Ethereum'daki en popüler token standartlarından bazılarıdır:
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Bir şarkı veya sanat eserinin telif hakkı gibi değiştirilemez token'lar için standart bir arayüz.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777, gelişmiş işlem gizliliği için bir mikser sözleşmesi veya özel anahtarlarınızı kaybederseniz sizi kurtarmak için bir acil durum kurtarma işlevi gibi token'ların üzerine ek işlevler oluşturmasına olanak tanır.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155, daha verimli alım satımlara ve işlemlerin gruplandırılmasına olanak tanır: Böylece maliyetlerden tasarruf sağlar. Bu token standardı, hem yardımcı token'ların ($BNB veya $BAT gibi) hem de CryptoPunks gibi Değiştirilemez Token'ların oluşturulmasına izin verir.
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Verim taşıyan kasaların teknik parametrelerini optimize etmek ve birleştirmek için tasarlanmış, tokenize edilmiş bir kasa standardı.
 
-## Daha fazla bilgi {#further-reading}
+[ERC](https://eips.ethereum.org/erc) önerilerinin tam listesi.
 
-_Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
+## daha fazla okuma {#further-reading}
+
+_Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
 ## İlgili öğreticiler {#related-tutorials}
 

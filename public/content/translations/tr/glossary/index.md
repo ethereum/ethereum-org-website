@@ -1,6 +1,6 @@
 ---
-title: Ethereum Sözlüğü
-description: Ethereum ile ilgili teknik ve teknik olmayan, tamamlanmamış bir sözlük
+title: Ethereum Terimler Sözlüğü
+description: Ethereum ile ilgili teknik ve teknik olmayan terimlere ilişkin tamamlanmamış bir sözlük
 lang: tr
 sidebarDepth: 2
 ---
@@ -27,7 +27,7 @@ Merkeziyetsiz bir [ağa](#network) yapılan, bir grubun [düğümlerin](#node) �
 
 ### adres {#address}
 
-En genel olarak bu, blok zincirinde [işlemleri](#transaction) alabilen (varış adresi) veya gönderebilen (kaynak adresi) bir [EOA](#eoa)'yı veya [sözleşmeyi](#contract-account) temsil eder. Daha spesifik olarak, bir [ECDSA](#ecdsa) [açık anahtarının](#public-key) [Keccak hash değerinin](#keccak-256) en sağdaki 160 bitidir.
+En genel olarak bu, blok zincirde [işlemleri](#transaction) alabilen (varış adresi) veya gönderebilen (kaynak adresi) bir [EOA](#eoa)'yı veya [sözleşmeyi](#contract-account) temsil eder. Daha spesifik olarak, bir [ECDSA](#ecdsa) [açık anahtarının](#public-key) [Keccak hash değerinin](#keccak-256) en sağdaki 160 bitidir.
 
 ### uygulama ikili arayüzü (ABI) {#abi}
 
@@ -55,15 +55,19 @@ Uygulamaya Özel Entegre Devre. Bu genellikle kripto para madenciliği için öz
 
 ### tasdikleme {#attestation}
 
-Bir [İşaret Zinciri](#beacon-chain) veya [parça](#shard) [blok](#block) için doğrulayıcı oy. Doğrulayıcılar, blok tarafından önerilen durumla aynı fikirde olduklarını belirterek blokları onaylamalıdır.
+Bir varlık tarafından bir şeyin doğru olduğuna dair yapılan iddiadır. Ethereum açısından bakıldığında mutabakat doğrulayıcıları, zincirin inandıkları durumunun ne olduğuna dair iddia ortaya atmak zorundadır. Her doğrulayıcı belirli zamanlarda doğrulayıcının, kesinleşmiş son kontrol noktası ve zincirin o andaki başını içeren zincir hakkındaki görüşünü resmi olarak açıklayan farklı tasdikler yayımlamak ile yükümlüdür.
+
+<DocLink to="/developers/docs/consensus-mechanisms/pos/attestations/">
+  Tasdikler
+</DocLink>
 
 <Divider />
 
 ## B {#section-b}
 
-### Taban Ücret {#base-fee}
+### Ana Ücret {#base-fee}
 
-Her [blok](#block), "taban ücret" olarak bilinen bir rezerv fiyatına sahiptir. Bir kullanıcının sonraki bloğa bir işlemi dahil etmesi için ödemesi gereken minimum [gaz](#gas) ücretidir.
+Her [blok](#block), "ana ücret" olarak bilinen bir rezerv fiyatına sahiptir. Bir kullanıcının sonraki bloka bir işlemi dahil etmesi için ödemesi gereken minimum [gaz](#gas) ücretidir.
 
 <DocLink to="/developers/docs/gas/">
   Gaz ve ücretler
@@ -71,7 +75,7 @@ Her [blok](#block), "taban ücret" olarak bilinen bir rezerv fiyatına sahiptir.
 
 ### İşaret Zinciri {#beacon-chain}
 
-Tüm Ethereum ağının koordinatörü olacak yeni bir konsensus katmanı sunan bir ağ yükseltmesi. Ethereum'a [hisse kanıtı](#pos) ve [doğrulayıcılar](#validator) sunar. Sonunda [Ana Ağ](#mainnet) ile birleştirilecektir.
+İşaret Zinciri, Ethereum'a [hisse ispatı](#pos) ve [doğrulayıcıları](#validator) getiren blokzincirdir. Aralık 2020'den iki zincirin birleştirildiği Eylül 2022'ye dek iş ispatı Ethereum ana ağını oluşturmak için birlikte çalışarak günümüxün Ethereum'nu kurmuştur.
 
 <DocLink to="/roadmap/beacon-chain/">
   İşaret Zinciri
@@ -83,7 +87,7 @@ En önemli basamağın, bellekte ilk olduğu konumsal sayı gösterimi. En az an
 
 ### blok {#block}
 
-Oluşturulan [işlemler](#transaction) hakkında gerekli bilgiler (bir blok başlığı) ve [ommerler](#ommer) olarak bilinen bir dizi başka blok başlığı. Bloklar, Ethereum ağına [madenciler](#miner) tarafından eklenir.
+Bir blok, sıralı bir işlem listesi ve mutabakatla ilgili bilgileri içeren birleştirilmiş bir bilgi birimidir. Bloklar, hisse ispatı doğrulayıcıları tarafından önerilir ve bu noktada bloklar tüm eşler arası ağ boyunca paylaşılır; bu ağda tüm diğer düğümler tarafından bağımsız olarak doğrulanabilir. Mutabakat kuralları, bir bloğun hangi içeriklerinin geçerli kabul edileceğini belirler ve geçersiz bloklar ağ tarafından göz ardı edilir. Bu blokların sıralanması ve içerdikleri işlemler, belirleyici bir olay zinciri oluşturur ve sonu, ağın güncel durumunu temsil eder.
 
 <DocLink to="/developers/docs/blocks/">
   Bloklar
@@ -95,43 +99,56 @@ Kullanıcının bir blok zincirinden ve blok zinciri hakkında bilgi aramasına 
 
 ### blok başlığı {#block-header}
 
-Bir bloktaki içeriğine ve oluşturulduğu koşullara özgü veriler. Önceki bloğun başlığının karmasını, bloğun çıkarıldığı yazılımın sürümünü, zaman damgasını ve bloğun içeriğinin merkle kök karmasını içerir.
+Blok başlığı, bir blok hakkındaki meta veriler ile yürütme yükündeki işlemlerin özetinin toplamıdır.
 
 ### blok yayılımı {#block-propagation}
 
 Onaylanmış bir bloğu ağdaki tüm diğer düğümlere iletme süreci.
 
+### blok önerici {#block-proposer}
+
+Belirli bir [yuvada](#slot) bir blok oluşturmak için seçilen spesifik doğrulayıcı.
+
 ### blok ödülü {#block-reward}
 
-Yeni bir geçerli bloğun üreticisine verilen ether miktarı.
+Yeni bir geçerli bloğu önerene ödül olarak verilen ether miktarı.
+
+### blok durumu {#block-status}
+
+Bir bloğun var olabileceği durumlar. Olası durumlar şunlardır:
+
+- önerilen: blok, bir doğrulayıcı tarafından önerilmiştir
+- zamanlanmış: doğrulayıcılar şu anda veri göndermektedir
+- kaçırılmış/atlanmış: öneren, uygun zaman aralığında bir blok önermemiştir.
+- bırakılmış: blok, [çatallanma seçim algoritması](#fork-choice-algorithm) tarafından yeniden organize edilmiştir
 
 ### blok süresi {#block-time}
 
-Blok zincirine eklenen bloklar arasındaki ortalama zaman aralığı.
+Blokzincire eklenen bloklar arasındaki ortalama zaman aralığı.
 
-### blok doğrulama {#block-validation}
+### blok doğrulaması {#block-validation}
 
-Tüm blok zincirinde saklanan geçmiş ile bloğun kriptografik imzasının tutarlılığının kontrol edilmesi.
+Yeni bir bloğun geçerli işlemler ve imzalar içerdiğini, en ağır tarihsel zinciri temel aldığını ve diğer tüm mutabakat kurallarına uyduğunu teyit etme sürecidir. Geçerli bloklar zincirin sonuna eklenir ve ağdaki diğerlerine yayılır. Geçersiz bloklar göz ardı edilir.
 
 ### blokzincir {#blockchain}
 
-Ethereum'da, [iş kanıtı](#pow) sistemi tarafından doğrulanan bir dizi [blok](#block), her biri bir önceki [genesis blok](#genesis-block) una giden yol. Blok boyutu sınırı yoktur; bunun yerine değişen [gaz sınırı](#gas-limit) nı kullanır.
+Her biri önceki bloğun karmasına başvuruda bulunarak [başlangıç bloğuna](#genesis-block) dek kendinden öncekine bağlantı veren bir [bloklar](#block) dizisidir. Blok zincirinin bütünlüğü, hisse ispatı tabanlı bir mutabakat mekanizması kullanılarak kripto-ekonomik açıdan güvence altına alınır.
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
-  Blok zinciri nedir?
+  Blok zincir nedir?
 </DocLink>
 
-### bootnode {#bootnode}
+### başlangıç düğümü {#bootnode}
 
 Bir düğüm çalıştırılırken keşif sürecini başlatmak için kullanılabilecek düğümler. Bu düğümlerin uç noktaları, Ethereum kaynak koduna kaydedilir.
 
-### bitkod {#bytecode}
+### bit kodu {#bytecode}
 
-Bir yazılım yorumlayıcısı veya bir sanal makine tarafından verimli bir şekilde yürütülmesi için tasarlanmış soyut bir talimat seti. İnsan tarafından okunabilen kaynak kodun aksine, bayt kodu sayısal biçimde ifade edilir.
+Bir yazılım yorumlayıcısı veya bir sanal makine tarafından verimli bir şekilde yürütülmesi için tasarlanmış soyut bir talimat seti. İnsan tarafından okunabilen kaynak kodunun aksine, bit kodu sayısal biçimde ifade edilir.
 
 ### Bizans çatalı {#byzantium-fork}
 
-[Metropolis](#metropolis) geliştirme aşaması için iki [sert çatalın](#hard-fork) ilki. EIP-649 Metropolis [Zorluk Bombası](#difficulty-bomb) Gecikmesi ve Blok Ödül Azaltma içeriyordu, burada [Buz Devri](#ice-age) 1 yıl ertelendi ve blok ödülü 5'ten 3 ethere düşürüldü.
+[Metropolis](#metropolis) geliştirme aşamasının iki [sert çatalanmasının](#hard-fork) ilki. [Buz Devri](#ice-age)'nin 1 yıl ertelendiği ve blok ödülünün 5'ten 3 ether'e düşürüldüğü EIP-649 Metropolis [Bomba Değeri](#difficulty-bomb) Gecikmesi ve Blok Ödülü Azaltmasını içermiştir.
 
 <Divider />
 
@@ -139,99 +156,93 @@ Bir yazılım yorumlayıcısı veya bir sanal makine tarafından verimli bir şe
 
 ### Casper-FFG {#casper-ffg}
 
-Casper-FFG, [LMD-GHOST](#lmd-ghost) çatal seçim algoritması ile birlikte kullanılan, [konsensüs istemcileri](#consensus-client) Beacon Chain'in başında anlaşmaya varmaları için için bir hisse kanıtı protokolüdür.
+Casper-FFG, [fikir birliği istemcilerinin](#consensus-client) İşaret Zinciri'nin başı konusunda anlaşmaya varmaları için [LMD-GHOST](#lmd-ghost) çatallanma seçim algoritması ile birlikte kullanılan bir hisse ispatı mutabakat protokolüdür.
 
 ### kontrol noktası {#checkpoint}
 
-[İşaret Zinciri](#beacon-chain), yuva (12 saniye) ve dönem (32 yuva) olarak ayrılmış bir tempoya sahiptir. Her dönemdeki ilk yuva bir kontrol noktasıdır. Doğrulayıcıların [süper çoğunluğu](#supermajority), iki kontrol noktası arasındaki bağlantıyı tasdik ettiğinde, bu kontrol noktaları [doğrulanabilir](#justification) ve ardından başka bir kontrol noktası da bunlardan sonra doğrulanırsa [kesinleştirilebilirler](#finality).
+[İşaret Zinciri](#beacon-chain), yuva (12 saniye) ve dönem (32 yuva) olarak ayrılmış bir tempoya sahiptir. Her dönemdeki ilk yuva bir kontrol noktasıdır. Doğrulayıcıların [nitelikli çoğunluğu](#supermajority) iki kontrol noktası arasındaki bağlantıyı tasdik ettiğinde, bu kontrol noktaları [doğrulanabilir](#justification) ve ardından başka bir kontrol noktası da bunlardan sonra doğrulanırsa bağlantı [kesinleştirilebilir](#finality).
 
 ### derleme {#compiling}
 
-Yüksek seviyeli bir programlama dilinde yazılmış kodu (ör., [Solidity](#solidity)) daha düşük seviyeli bir dile dönüştürme (ör., EVM [bayt kodu](#bytecode)).
+Yüksek seviyeli bir programlama dilinde yazılmış kodu (örn. [Solidity](#solidity)) daha düşük seviyeli bir dile dönüştürme (örn. Ethereum Sanal Makinesi [bit kodu](#bytecode)).
 
 <DocLink to="/developers/docs/smart-contracts/compiling/">
   Akıllı Sözleşmeleri Derleme
 </DocLink>
 
-### komite {#committee}
+### kurul {#committee}
 
-[İşaret Zinciri](#beacon-chain) tarafından rastgele işaret ve parça bloklarına atanan en az 128 [doğrulayıcı](#validator) grubu.
+Her bir yuvada blok doğrulamak üzere atanmış en az 128 [doğrulayıcıdan](#validator) oluşan grup. Kuruldaki doğrulayıcılardan biri, kurulun tasdikte fikir birliğine varan diğer tüm doğrulayıcılarının imzalarını toplamakla yükümlü olan toplayıcıdır. [Senkronizasyon kurulu](#sync-committee) ile karıştırılmamalıdır.
 
-### hesaplamalı fizibilite {#computational-infeasibility}
+### hesaplamaya uygun olmama {#computational-infeasibility}
 
-Bir süreç, onu gerçekleştirmeye ilgi duyabilecek herhangi biri için uygulanamayacak kadar uzun bir zaman (örneğin milyarlarca yıl) alacaksa, hesaplama açısından olanaksızdır.
+Bir süreç, onu gerçekleştirmeye ilgi duyabilecek herhangi biri için uygulanamayacak kadar uzun bir zaman (örneğin milyarlarca yıl) alacaksa hesaplama açısından uygunsuzdur.
 
-### konsensus {#consensus}
+### mutabakat {#consensus}
 
-Çok sayıda düğüm (genellikle ağdaki çoğu düğüm) yerel olarak doğrulanmış en iyi blok zincirlerinde aynı bloklara sahip olduğunda. [Konsensus kuralları](#consensus-rules) ile karıştırılmamalıdır.
+Ağdaki düğümlerin nitelikli çoğunluğunun tümü kendi yerel doğrulanmış en iyi blokzincirlerinde aynı bloklara sahip oldukları durumdur. [Mutabakat kuralları](#consensus-rules) ile karıştırılmamalıdır.
 
-### konsensus istemcisi {#consensus-client}
+### fikir birliği istemcisi {#consensus-client}
 
-Konsensus istemcileri (Prysm, Teku, Nimbus, Lighthouse, Lodestar gibi) Ethereum'un [hisse ispatı](#pos) konsensus algoritmasını çalıştırarak ağın İşaret Zincirinin başı hakkında anlaşmaya varmasını sağlar. Konsensus istemcileri, işlemlerin doğrulanmasına/yayınlanmasına veya durum geçişlerinin yürütülmesine katılmazlar. Bu, [yürütüm istemcileri](#execution-client) tarafından yapılır.
+Fikir birliği istemcileri (Prysm, Teku, Nimbus, Lighthouse, Lodestar gibi) Ethereum'un [hisse ispatı](#pos) mutabakat algoritmasını çalıştırarak ağın İşaret Zincirinin başı hakkında anlaşmaya varmasını sağlar. Fikir birliği istemcileri, işlemlerin doğrulanmasına/yayımlanmasına veya durum geçişlerinin yürütülmesine katılmazlar. Bu, [yürütüm istemcileri](#execution-client) tarafından yapılır.
 
 ### konsensus katmanı {#consensus-layer}
 
-Ethereum'un konsensus katmanı, [konsensus istemcileri ağıdır](#consensus-client).
+Ethereum'un fikir birliği katmanı, bir [fikir birliği istemcileri](#consensus-client) ağıdır.
 
-### konsensus kuralları {#consensus-rules}
+### mutabakat kuralları {#consensus-rules}
 
-Diğer düğümlerle konsensus sağlamak için tam düğümlerin izlediği blok doğrulama kuralları. [konsensus](#consensus) ile karıştırılmamalıdır.
+Tam düğümlerin diğer düğümlerle mutabakat sağlamak için izlediği blok doğrulama kurallarıdır. [Mutabakat](#consensus) ile karıştırılmamalıdır.
+
+### Dahil Edilmek Üzere Değerlendirilmiş (CFI) {#cfi}
+
+Henüz Ana Ağ üzerinde aktif olmayan bir Temel [EIP](#eip)'dir ve istemci geliştiricileri genellikle fikre olumlu bakar. Ana ağın dahil edilmesi adına tüm gereksinimleri karşıladığını varsayarsak potansiyel olarak bir ağ yükseltmesinde (mutlaka bir sonrakinde olmak zorunda değil) yer alabilir.
 
 ### Konstantinopolis çatalı {#constantinople-fork}
 
-[Metropolis](#metropolis) etabının ikinci kısmı, başlangıçta 2018 ortası için planlanmıştı. Diğer değişikliklerin yanı sıra hibrid bir [iş kanıtı](#pow)/[hisse kanıtı](#pos) konsensus algoritmasına geçişi içermesi bekleniyor.
+[Metropolis](#metropolis) aşamasının ikinci kısmıdır, başlangıçta 2018 ortası için planlanmıştır. Diğer değişikliklerin yanı sıra hibrit bir [iş ispatı](#pow)/[hisse kanıtı](#pos) mutabakat algoritmasına geçişi içermesi bekleniyor.
 
-### kontrat hesabı {#contract-account}
+### sözleşme hesabı {#contract-account}
 
-Başka bir [hesaptan](#account) ([EOA](#eoa) veya [sözleşme](#contract-account)) bir [işlem](#transaction) aldığında yürütülen kodu içeren bir hesap.
+Başka bir [hesap](#account)tan ([EOA](#eoa) veya [sözleşme](#contract-account)) bir [işlem](#transaction) aldığında yürütülen kodu içeren bir hesaptır.
 
-### kontrat oluşturma işlemi {#contract-creation-transaction}
+### sözleşme oluşturma işlemi {#contract-creation-transaction}
 
-Alıcı olarak [sıfır adres](#zero-address) olan ve bir [sözleşme](#contract-account) kaydetmek ve bunu Ethereum blok zincirine kaydetmek için kullanılan özel bir [işlem](#transaction).
-
-### çapraz bağlantı {#crosslink}
-
-Bir çapraz bağlantı, parçanın durumunun bir özetini sağlar. [Parçacık](#shard) zincirleri, parçalı [pay kanıtlama sisteminde](#proof-of-stake) [İşaret Zinciri](#beacon-chain) aracılığıyla birbirleriyle bu şekilde iletişim kurar.
-
-<DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
-  Hisse ispatı
-</DocLink>
-
-<Divider />
+Bir sözleşmenin başlatma kodunu içeren özel bir [işlem](#transaction)dir. Alıcı `null` olarak ayarlanmıştır ve sözleşme, kullanıcı adresi ile `nonce`'tan oluşturulan bir adrese dağıtılır. Bir [sözleşmeyi](#contract-account) kaydetmek ve Ethereum blokzinciri üzerinde belgelemek için kullanılır.
 
 ### kriptoekonomi {#cryptoeconomics}
 
-Kripto para birimlerinin ekonomisi.
+Kripto paraların ekonomisidir.
 
 ## D {#section-d}
 
-### Đ {#D-with-stroke}
+### Đ {#d-with-stroke}
 
-Đ (d darbeli), Eski İngilizce, Orta İngilizce, İzlandaca ve Faroece'de büyük harf “Eth” için kullanılır. Đ'nin İskandinav harfi "eth" olduğu ĐEV veya Đapp (merkeziyetsiz uygulama) gibi kelimelerde kullanılır. Büyük harf eth (Ð) ayrıca kripto para birimi Dogecoin'i sembolize etmek için kullanılır. Bu genellikle eski Ethereum literatüründe görülür ancak günümüzde daha az kullanılmaktadır.
+Đ (d darbeli), Eski İngilizce, Orta İngilizce, İzlandaca ve Faroece'de büyük harf "Eth" için kullanılır. Đ'nin İskandinav harfi "eth" olduğu ĐEV veya Đapp (merkeziyetsiz uygulama) gibi kelimelerde kullanılır. Büyük harf eth (Ð) ayrıca kripto para birimi Dogecoin'i sembolize etmek için kullanılır. Bu, genellikle eski Ethereum literatüründe görülür ve günümüzde daha az kullanılmaktadır.
 
-### DAG {#DAG}
+### DAG {#dag}
 
-DAG, Yönlendirilmiş Döngüsel Grafik anlamına gelir. Düğümler ve aralarındaki bağlantılardan oluşan bir veri yapısıdır. Ethereum, [iş kanıtı](#proof-of-work) algoritmasında [Ethash](#ethash) bir DAG kullanır.
+DAG, Yönlendirilmiş Döngüsüz Grafik anlamına gelir. Düğümler ve aralarındaki bağlantılardan oluşan bir veri yapısıdır. Birleşim'den önce Ethereum, kendi [iş ispatı](#pow) algoritması olan [Ethash](#ethash)'te bir DAG kullanırdı ancak artık [hisse ispatı](#pos)nda kullanılmamaktadır.
 
-### Mapp {#dapp}
+### Dapp {#dapp}
 
-Merkeziyetsiz aplikasyon. En azından bir [akıllı sözleşme](#smart-contract) ve bir web kullanıcı arayüzüdür. Daha geniş anlamda dapp açık, merkeziyetsiz, eşler arası altyapı hizmetleri üzerine inşa edilmiş bir web uygulamasıdır. Ek olarak birçok dapp merkeziyetsiz depolama ve/veya bir mesaj protokolü ve platformu içerir.
+Merkeziyetsiz uygulamadır. En düşük seviyede, bir [akıllı sözleşme](#smart-contract) ile bir web kullanıcı arayüzüdür. Daha geniş seviyede ise dapp; açık, merkeziyetsiz, eşler arası altyapı hizmetleri üzerine inşa edilmiş bir web uygulamasıdır. Ek olarak birçok dapp, merkeziyetsiz depolama ve/veya bir mesaj protokolü ve platformu içerir.
 
 <DocLink to="/developers/docs/dapps/">
   Dapp'lere giriş
 </DocLink>
 
-### veri mevcudiyeti {#data-availability}
+### veri kullanılabilirliği {#data-availability}
 
-Bir durumun özelliği, ağa bağlı herhangi bir düğümün, durumun herhangi bir belirli bölümünü dilediği şekilde indirebilmesidir.
+Bir durumun, ağa bağlı herhangi bir düğümün, durumun dilediği herhangi bir bölümünü indirebilmesine yönelik özelliğidir.
 
 ### merkeziyetsizlik {#decentralization}
 
-Süreçlerin kontrolünü ve yürütülmesini merkezi bir varlıktan uzaklaştırma kavramı.
+Süreçlerin kontrolünü ve yürütülmesini merkezi bir varlıktan uzaklaştırma kavramıdır.
 
-### merkeziyetsiz otonom organizasyonlar (DAO'lar) {#dao}
+### merkeziyetsiz otonom organizasyon (DAO) {#dao}
 
-Hiyerarşik yönetim olmaksızın çalışan bir şirket veya başka bir organizasyon. DAO, 30 Nisan 2016'da başlatılan ve daha sonra Haziran 2016'da saldırıya uğrayan "DAO" adlı bir sözleşmeye de atıfta bulunabilir; bu sonuçta 1,192.000 blokta bir [hard fork](#hard-fork) (kod adı DAO)'yu motive etti ve bu, saldırıya uğramış DAO sözleşmesini tersine çevirdi, nihayetinde Ethereum ile Ethereum Classic'in iki rakip sisteme bölünmesine neden oldu.
+Hiyerarşik yönetim olmaksızın çalışan bir şirket veya başka bir organizasyondur. DAO, 30 Nisan 2016'da başlatılan ve daha sonra Haziran 2016'da saldırıya uğrayan "DAO" adlı bir sözleşmeye de atıfta bulunabilir; nihayetinde 1.192.000 numaralı blokta bir [sert çatallanma](#hard-fork) (kod adı DAO) gerçekleştirilmesini sağlamış ve bu işlem, saldırıya uğrayan DAO sözleşmesini tersine çevirerek Ethereum ile Ethereum Classic'in birbirine rakip iki sisteme bölünmesine neden olmuştur.
 
 <DocLink to="/dao/">
   Merkeziyetsiz otonom organizasyonlar (DAO'lar)
@@ -239,19 +250,23 @@ Hiyerarşik yönetim olmaksızın çalışan bir şirket veya başka bir organiz
 
 ### merkeziyetsiz borsa (DEX) {#dex}
 
-Ağdaki eşler ile belirteçleri değiştirmenize olanak tanıyan bir tür [dapp](#dapp). ([işlem ücretlerini](#transaction-fee) ödemek için) [ether](#ether)'e ihtiyacınız vardır, ancak bunlar merkezileştirilmiş borsalar gibi coğrafi kısıtlamalara tabi değildir – herkes katılabilir.
+Ağdaki eşler ile jeton takas etmenize olanak tanıyan bir tür [dapp](#dapp). Bunlardan birini kullanmak için [ether](#ether) gerekir ([işlem ücretlerini](#transaction-fee) ödemek için) ancak bunlar merkezi borsalar gibi coğrafi kısıtlamalara tabi değildir; yani herkes katılabilir.
 
 <DocLink to="/get-eth/#dex">
   Merkeziyetsiz borsalar
 </DocLink>
 
-### deed {#deed}
+### tapu {#deed}
 
-Değiştirilemez tokenı görün (NFT)
+[Değiştirilemez token (NFT)](#nft) kısmına bakın.
 
-### DeFi {#defi}
+### mevduat sözleşmesi {#deposit-contract}
 
-"Merkeziyetsiz finans"ın kısaltması, herhangi bir aracı olmadan blok zinciri tarafından desteklenen finansal hizmetler sunmayı amaçlayan geniş bir [dapps](#dapp) kategorisidir, internet bağlantısı olan herkes katılabilir.
+Ethereum üzerinde hisseleme için geçit yoludur. Mevduat sözleşmesi, Ethereum üzerinde, ETH yatırımlarını kabul eden ve doğrulayıcı bakiyelerini yöneten bir akıllı sözleşmedir. Bu sözleşmeye ETH yatırmayan bir doğrulayıcı etkinleştirilemez. Sözleşme, ETH ve girdi verilerine ihtiyaç duyar. Bu girdi verileri, doğrulayıcı açık anahtarını ve doğrulayıcı özel anahtarı ile imzalanmış çekim açık anahtarını içerir. Bu veriler, [hisse ispatı](#pos) ağı tarafından doğrulayıcının kimliğinin belirlenmesi ve onaylanması için gereklidir.
+
+### MeFi {#defi}
+
+"Merkeziyetsiz finans"ın kısaltması, herhangi bir aracı olmadan blok zinciri tarafından desteklenen finansal hizmetler sunmayı amaçlayan geniş bir [merkeziyetsiz uygulama](#dapp) kategorisidir, internet bağlantısı olan herkes katılabilir.
 
 <DocLink to="/defi/">
   Merkeziyetsiz Finans (DeFi)
@@ -259,35 +274,35 @@ Değiştirilemez tokenı görün (NFT)
 
 ### zorluk {#difficulty}
 
-Bir [iş kanıtı](#pow) üretmek için ne kadar hesaplama gerektiğini kontrol eden ağ çapında bir ayar.
+Geçerli bir nonce değeri bulmak için gereken ortalama hesaplama miktarını kontrol eden, [iş ispatı](#pow) ağlarındaki bir ağ çapında ayar. Zorluk, süreç sonunda ortaya çıkan blok karmasında geçerli kabul edilmesi için bulunması gereken öndeki sıfırların sayısı ile belirtilir. Bu konsept, hisse ispatına geçiş sonrası Ethereum'da kullanım dışı bırakılmıştır.
 
-### zorluk bombası {#difficulty-bomb}
+### bomba değeri {#difficulty-bomb}
 
-[İş kanıtı](#pow) [zorluk](#difficulty) ayarında planlı üstel artış, [hisse kanıtı](#pos)'na geçişi motive etmek için tasarlanmıştır, bu da [çatal](#hard-fork) olma olasılığını azaltır
+[İş ispatı](#pow) [zorluk](#difficulty) ayarında, [hisse ispatına](#pos) geçişi desteklemek üzere tasarlanmış ve [çatallanma](#hard-fork) olasılığını azaltan planlı üstel artıştır. Bomba değeri, [hisse ispatına geçiş](/roadmap/merge) ile kullanımdan kaldırılmıştır.
 
 ### dijital imza {#digital-signatures}
 
-Bir kullanıcının [özel anahtar](#private-key) kullanarak bir belge için ürettiği kısa bir veri dizisi, öyle ki karşılık gelen [ortak anahtar](#public-key), imza ve belgeye sahip olan herkes şunu doğrulayabilir: (1) söz konusu özel anahtarın sahibi tarafından "imzalanmıştır" ve (2) imzalandıktan sonra değiştirilmemiştir belgesi.
+Bir kullanıcının [özel anahtar](#private-key) kullanarak bir belge için ürettiği kısa bir veri dizisidir. Karşılık gelen [açık anahtar](#public-key), imza ve belgeye sahip olan herkes şunları doğrulayabilir: (1) söz konusu özel anahtarın sahibi tarafından "imzalandığını" ve (2) imzalandıktan sonra belgenin değiştirilmediğini.
 
 <Divider />
 
 ### keşif {#discovery}
 
-Bir Ethereum düğümünün bağlanacak diğer düğümleri bulma süreci.
+Bir Ethereum düğümünün bağlanacağı diğer düğümleri bulma sürecidir.
 
-### dağıtılmış hash tablosu (DHT) {#distributed-hash-table}
+### dağıtılmış karma tablosu (DHT) {#distributed-hash-table}
 
-Bağlanılacak eşleri tanımlamak ve iletişim kurmak için hangi protokollerin kullanılacağını belirlemek için Ethereum düğümleri tarafından kullanılan `(anahtar, değer)` çiftlerini içeren bir veri yapısı.
+Bağlanılacak eşleri tanımlamak ve iletişim kurarken hangi protokollerin kullanılacağını belirlemek için Ethereum düğümleri tarafından kullanılan `(key, value)` çiftlerini içeren bir veri yapısıdır.
 
 ### çifte harcama {#double-spend}
 
-Yeterince büyük miktarda madencilik gücüne/payına sahip bir kullanıcının, bir miktar para birimini zincir dışı hareket ettiren bir işlem gönderdiği (örneğin fiat paraya çıkmak veya zincir dışı bir satın alma yapmak) ve ardından bu işlemi kaldırmak için blok zincirini yeniden düzenlediği kasıtlı bir blok zinciri çatalı. Başarılı bir çifte harcama, saldırganı hem zincir içi hem de zincir dışı varlıklarıyla baş başa bırakır.
+Yeterli miktarda madencilik gücüne/paya sahip bir kullanıcının, bir miktar kripto para birimini zincir dışına taşıyan bir işlem (örn. itibari paraya dönüştürmek veya zincir dışında satın alım yapmak) gönderdiği ve ardından bu işlemi kaldırmak için blokzinciri yeniden düzenlediği kasıtlı bir blokzincir çatallanmasıdır. Başarılı bir çifte harcama, saldırganı hem zincir içindeki hem de zincir dışındaki varlıklarıyla baş başa bırakır.
 
 ## E {#section-e}
 
 ### eliptik eğri dijital imza algoritması (ECDSA) {#ecdsa}
 
-Ethereum tarafından fonların yalnızca sahipleri tarafından harcanabilmesini sağlamak için kullanılan bir kriptografik algoritma. Genel ve özel anahtarlar oluşturmak için tercih edilen yöntemdir. Hesap [adresi](#address) oluşturma ve [işlem](#transaction) doğrulaması için önemlidir.
+Ethereum tarafından fonların yalnızca sahipleri tarafından harcanabilmesini sağlamak için kullanılan bir kriptografik algoritmadır. Açık ve özel anahtarlar oluşturmak için tercih edilen yöntemdir. Hesap [adresi](#address) oluşturma ve [işlem](#transaction) doğrulaması için kullanılır.
 
 ### şifreleme {#encryption}
 
@@ -295,11 +310,11 @@ Ethereum tarafından fonların yalnızca sahipleri tarafından harcanabilmesini 
 
 ### entropi {#entropy}
 
-Kriptografi bağlamında, öngörülebilirlik eksikliği veya rastgelelik düzeyi. [Özel anahtar](#private-key)lar gibi gizli bilgiler üretirken, algoritmalar çıktının tahmin edilemez olmasını sağlamak için genellikle yüksek entropi kaynağına güvenir.
+Kriptografi bağlamında, öngörülebilirlik eksikliği veya rastgelelik düzeyidir. Algoritmalar, [özel anahtarlar](#private-key) gibi gizli bilgiler üretirken çıktının tahmin edilemez olmasını sağlamak için genellikle yüksek entropi kaynağını temel alır.
 
 ### dönem {#epoch}
 
-[İşaret Zinciri](#beacon-chain)-koordineli sistemde 32 [yuvalık](#slot) (6,4 dakika) bir periyot. [Doğrulayıcı](#validator) [komiteler](#committee), her dönem, güvenlik nedenleriyle karıştırılır. Zincirin [sonlandırılması](#finality) için her çağda bir fırsat vardır. Terim ayrıca [yürütme katmanında](#execution-layer) kullanılır ve <a href= iş kanıtı algoritması [Ethash](#Ethash) tarafından tohum olarak kullanılan veritabanının her yenilenmesi arasındaki aralık anlamına gelir. Dönem, 30000 blok olarak belirtilmiştir.
+Her yuvanın 12 saniye olduğu toplamda 6,4 dakikaya karşılık gelen 32 [yuvalık](#slot) bir periyottur. Güvenlik nedenleriyle her dönemde doğrulayıcı [kurulları](#committee) karıştırılır. Her dönem, zincirin [sonlandırılması](#finality) için bir fırsata sahiptir. Her bir dönemin başlangıcında her bir doğrulayıcıya yeni sorumluluklar atanır.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Hisse ispatı
@@ -307,11 +322,11 @@ Kriptografi bağlamında, öngörülebilirlik eksikliği veya rastgelelik düzey
 
 ### belirsizlik {#equivocation}
 
-Birbiriyle çelişen iki mesaj gönderen bir doğrulayıcı. NonceBasit bir örnek, aynı nonce ile iki işlem gönderen bir işlem göndericisidir. Bir diğeri, aynı blok yüksekliğinde (veya aynı yuva için) iki blok öneren bir blok teklifçisidir.
+Birbiriyle çelişen iki mesaj gönderen bir doğrulayıcıdır. Basit bir örneği, aynı nonce ile iki işlem gönderen bir işlem göndericisidir. Bir diğeri, aynı blok yüksekliğinde (veya aynı yuva için) iki blok öneren bir blok önericidir.
 
 ### Eth1 {#eth1}
 
-"Eth1", mevcut iş kanıtı blok zinciri olan Ethereum Anaağı'na atıfta bulunan bir terimdir. Artık bu terim, yerine "yürütüm katmanı" kullanıldığı için kullanımdan kaldırılmıştır. [Bu ad değişikliği hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+"Eth1", mevcut iş ispatı blokzinciri olan Ethereum Ana Ağı'nı ifade eden bir terimdir. Artık bu terim, yerine "yürütüm katmanı" kullanıldığı için kullanımdan kaldırılmıştır. [Bu ad değişikliği hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
 <DocLink to="/roadmap/">
   Ethereum yükseltmeleri hakkında daha fazla bilgi
@@ -319,19 +334,15 @@ Birbiriyle çelişen iki mesaj gönderen bir doğrulayıcı. NonceBasit bir örn
 
 ### Eth2 {#eth2}
 
-"Eth2", Ethereum'un hisse ispatına geçişi de dahil olmak üzere bir dizi Ethereum protokolü yükseltmesine atıfta bulunan bir terimdir. Artık bu terim, yerine "konsensus katmanı" kullanıldığı için kullanımdan kaldırılmıştır. [Bu ad değişikliği hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
+"Eth2", Ethereum'un hisse ispatına geçişi de dahil olmak üzere bir dizi Ethereum protokolü yükseltmesini ifade eden bir terimdir. Artık bu terim, yerine "fikir birliği katmanı" kullanıldığı için kullanımdan kaldırılmıştır. [Bu ad değişikliği hakkında daha fazla bilgi edinin](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/).
 
 <DocLink to="/roadmap/">
   Ethereum yükseltmeleri hakkında daha fazla bilgi
 </DocLink>
 
-### etherbase {#etherbase}
+### Ethereum Geliştirme Önerisi (EIP) {#eip}
 
-Bir Ethereum istemcisindeki birincil hesabın varsayılan adı. Madencilik ödülleri bu hesaba yatırılır. Bu, diğer kripto para birimleri için geçerli olan "coinbase"in, Ethereum'a özgü bir sürümüdür.
-
-### Ethereum İyileştirme Önerisi (EIP) {#eip}
-
-Önerilen yeni bir özelliği veya süreçlerini veya ortamını açıklayan, Ethereum topluluğuna bilgi sağlayan bir tasarım belgesi (bkz. [ERC](#erc)).
+Önerilen yeni bir özelliği veya süreçlerini veya ortamını açıklayan, Ethereum topluluğuna bilgi sağlayan bir tasarım belgesidir (bkz. [ERC](#erc)).
 
 <DocLink to="/eips/">
   EIP'lere giriş
@@ -341,23 +352,23 @@ Bir Ethereum istemcisindeki birincil hesabın varsayılan adı. Madencilik ödü
 
 ENS kaydı, [EIP](#eip) 137'de açıklandığı gibi, alan adlarından sahiplere ve çözümleyicilere eşleştirme sağlayan tek bir merkezi [sözleşmedir](#smart-contract).
 
-[Bkz. ens.domains](https://ens.domains)
+[ens.domains adresinden daha fazla bilgi edinin](https://ens.domains)
 
 ### yürütüm istemcisi {#execution-client}
 
-Yürütüm istemcileri (f.k.a. "Eth1 istemcileri"), işlemleri işlemek ve yayınlamakla ve ayrıca Ethereum'un durumunu yönetmekle görevlidir. Protokol kurallarına uyulmasını sağlamak için [Ethereum Sanal Makinesi](#evm)'ndeki her işlem için hesaplamaları çalıştırırlar. Bugün aynı zamanda [iş kanıtı](#pow) konsensusunu da ele alıyorlar. [Hisse kanıtına](#pos) geçişten sonra, bunu konsensus istemcilerine devredecekler.
+Besu, Erigon, Go-Ethereum (Geth), Nethermind gibi yürütüm istemcilerinin (daha önce ''Eth1 istemcileri'' olarak bilinen) görevi, işlemleri işlemek, yayımlamak ve Ethereum'un durumunu yönetmektir. Protokol kurallarının takip edildiğinden emin olmak amacıyla [Ethereum Sanal Makinası](#evm)'nı kullanarak her bir işlem için hesaplamaları yürütürler.
 
 ### yürütüm katmanı {#execution-layer}
 
-Ethereum'un yürütüm katmanı, [yürütüm istemcilerinin](#execution-client) ağıdır.
+Ethereum'un yürütüm katmanı, [yürütüm istemcileri](#execution-client) ağıdır.
 
 ### dışarıdan sahip olunan hesap (EOA) {#eoa}
 
-Harici olarak sahiplenilmiş hesaplar (EOA'lar), bir hesaptaki tipik olarak bir [güvenlik kelimesi](#hd-wallet-seed) kullanılarak oluşturulan [özel anahtarları](#private-key) kontrol eden kullanıcılar tarafından kullanılan [hesaplardır](#account). Harici olarak sahiplenilmiş hesaplar, herhangi bir kodla bağlantılı değildir. Bu hesaplar tipik olarak bir [cüzdan](#wallet) ile kullanılır.
+Dışarıdan sahip olunan hesaplar (EOA'lar), genelde [güvenlik kelimeleri](#hd-wallet-seed) kullanılarak oluşturulmuş, [özel anahtarlar](#private-key) tarafından kontrol edilen [hesaplar](#account)dır. Dışarıdan sahip olunan hesaplar, akıllı sözleşmelerin aksine kendileriyle ilişkili herhangi bir kodun olmadığı hesaplardır. Genelde bu hesaplar, bir [cüzdan](#wallet) ile yönetilir.
 
 ### Ethereum Yorum Talebi (ERC) {#erc}
 
-Belirli bir Ethereum kullanım standardını tanımlamaya çalışan bazı [EIP'lere](#eip) verilen bir etiket.
+Belirli bir Ethereum kullanım standardını tanımlamaya çalışan bazı [EIP'lere](#eip) verilen bir etikettir.
 
 <DocLink to="/eips/">
   EIP'lere giriş
@@ -365,88 +376,85 @@ Belirli bir Ethereum kullanım standardını tanımlamaya çalışan bazı [EIP'
 
 ### Ethash {#ethash}
 
-Ethereum 1.0 için [iş kanıtı](#pow) algoritması.
+[Hisse ispatına](#pos) dönüşmeden önce Ethereum'da kullanılmış bir [iş ispatı](#pow) algoritmasıdır.
 
-[Bkz. eth.wiki](https://eth.wiki/en/concepts/ethash/ethash)
+[Daha fazla bilgi edinin](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
 
 ### ether {#ether}
 
-İşlemler yürütülürken, [gaz](#gas) maliyetlerini kapsayan, Ethereum ekosistemi tarafından kullanılan yerel kripto para birimi. ETH veya sembolü Ξ, Yunanca büyük Xi karakteri olarak da yazılır.
+Ethereum ekosisteminin, işlemler yürütülürken ortaya çıkan [gaz](#gas) maliyetlerini karşılayan yerel kripto para birimidir. ETH veya Yunanca büyük harfle Xi karakteri olan Ξ sembolü şeklinde de yazılır.
 
 <DocLink to="/eth/">
   Dijital geleceğimiz için para birimi
 </DocLink>
 
-### etkinlikler {#events}
+### olaylar {#events}
 
-[EVM](#evm) günlük kaydı olanaklarının kullanımına izin verir. [Dapps](#dapp), olayları dinleyebilir ve bunları kullanıcı arayüzünde JavaScript geri aramalarını tetiklemek için kullanabilir.
+[EVM](#evm) günlük kaydı olanaklarının kullanılmasını mümkün kılar. [Merkeziyetsiz uygulamalar](#dapp), olayları dinleyip kullanıcı arayüzünde JavaScript geri aramalarını tetiklemek için kullanabilir.
 
 <DocLink to="/developers/docs/smart-contracts/anatomy/#events-and-logs">
   Olaylar ve Kayıtlar
 </DocLink>
 
-### Ethereum Sanal Makinası (EVM) {#evm}
+### Ethereum Sanal Makinesi (EVM) {#evm}
 
-[Bytecode](#bytecode) yürüten yığın tabanlı bir sanal makine. Ethereum'da yürütme modeli, bir dizi bayt kodu talimatı ve küçük bir çevresel veri demeti verildiğinde, sistem durumunun nasıl değiştirildiğini belirtir. Bu, bir sanal durum makinesinin resmi modeli aracılığıyla belirtilir.
+[Bit kodu](#bytecode) yürüten yığın tabanlı bir sanal makinedir. Ethereum'da yürütme modeli, bir dizi bit kodu talimatı ve küçük bir çevresel veri demeti verildiğinde, sistem durumunun nasıl değiştirildiğini belirtir. Bu, bir sanal durum makinesinin resmi modeli aracılığıyla belirtilir.
 
 <DocLink to="/developers/docs/evm/">
   Ethereum Sanal Makinesı
 </DocLink>
 
-### ESM derleyici dili {#evm-assembly-language}
+### EVM derleyici dili {#evm-assembly-language}
 
-İnsan tarafından okunabilir bir EVM [bytecode](#bytecode) biçimi.
+İnsan tarafından okunabilir bir EVM [bit kodu](#bytecode) biçimidir.
 
 <Divider />
 
 ## F {#section-f}
 
-### geri çekilim fonksiyonu {#fallback-function}
+### fallback fonksiyonu {#fallback-function}
 
-Veri ve beyan edilen işlev adının yokluğu durumunda çağrılan temel fonksiyon.
+Veri veya beyan edilen bir fonksiyon adının olmadığı durumlarda çağrılan varsayılan fonksiyondur.
 
-### sebil {#faucet}
+### musluk {#faucet}
 
-[Akıllı sözleşme](#smart-contract) aracılığıyla gerçekleştirilen ve bir test ağında kullanılabilen ücretsiz test etheri biçiminde fon dağıtan bir hizmet.
+[Akıllı sözleşme](#smart-contract) aracılığıyla gerçekleştirilen ve bir test ağında kullanılabilen ücretsiz test etheri biçiminde fon dağıtan bir hizmettir.
 
 <DocLink to="/developers/docs/networks/#testnet-faucets">
-  Test Ağı Muslukları
+  Test ağı muslukları
 </DocLink>
 
-### nihayet {#finality}
+### kesinlik {#finality}
 
 Kesinlik, belirli bir zamandan önce yapılan bir dizi işlemin değişmeyeceğinin ve geri alınamayacağının garantisidir.
 
-<DocLink to="/developers/docs/consensus-mechanisms/pow/#finality">
-  İş kanıtı nihayeti
-</DocLink>
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#finality">
-  Hisse kanıtı nihayeti
+  Hisse ispatı kesinliği
 </DocLink>
 
 ### finney {#finney}
 
-[ether](#ether)'in bir değeri. 1 finney = 10<sup>15</sup> [wei](#wei). 10<sup>3</sup> finney = 1 ether.
+[ether](#ether)'in bir değeridir. 1 finney = 10<sup>15</sup> [wei](#wei). 10<sup>3</sup> finney = 1 ether.
 
-### çatal {#fork}
+### çatallanma {#fork}
 
-Madencilik sırasında alternatif bir zincir oluşturulmasına veya iki potansiyel blok yolunda zamansal bir farklılığa neden olan protokol değişikliği.
+Protokolde, alternatif bir zincirin yaratılmasına ya da geçici olarak iki potansiyel blok yoluna ayrılmaya neden olan değişimdir.
 
-### çatal-seçim algoritması {#fork-choice-algorithm}
+### çatallanma-seçim algoritması {#fork-choice-algorithm}
 
-Blok zincirinin başını tanımlamak için kullanılan algoritma. Yürütüm katmanında zincirin başı, arkasında en büyük toplam zorluğa sahip olan parça ile belirlenir. Bu, zincirin gerçek başının, madencilik için en çok çalışmayı gerektiren blok başı olduğu anlamına gelir. Konsensus katmanında algoritma, doğrulayıcılardan toplanan tasdikleri gözlemler ([LMD_GHOST](#lmd-ghost)).
+Blokzincirin başını tanımlamak için kullanılan algoritmadır. Yürütüm katmanında zincirin başı, arkasında en büyük toplam zorluk bulunan parça olarak belirlenir. Bu, zincirin gerçek başının, madencilik için en çok çalışmayı gerektiren blok başı olduğu anlamına gelir. Fikir birliği katmanında algoritma, doğrulayıcılardan toplanan tasdikleri takip eder ([LMD_GHOST](#lmd-ghost)).
 
-### dolandırıcılık kanıtı {#fraud-proof}
+### sahtecilik kanıtı {#fraud-proof}
 
-Belirli [katman 2](#layer-2) çözümleri için, hızı artırmak amacıyla işlemlerin gruplar halinde [toplandığı](#rollups) ve tek bir işlemde Ethereum'a gönderildiği bir güvenlik modeli. Geçerli oldukları varsayılır, ancak dolandırıcılıktan şüpheleniliyorsa itiraz edilebilir. Bir dolandırıcılık kanıtı, dolandırıcılığın gerçekleşip gerçekleşmediğini görmek için işlemi çalıştırır. Bu yöntem, güvenliği korurken mümkün olan işlem miktarını artırır. Bazı [toplamalar](#rollups), [geçerlilik kanıtlarını](#validity-proof) kullanır.
+Belirli [katman 2](#layer-2) çözümlerine yönelik, hızı artırmak amacıyla işlemlerin gruplar halinde [toplandığı](#rollups) ve tek bir işlemde Ethereum'a gönderildiği bir güvenlik modelidir. Geçerli oldukları varsayılır ancak sahtecilikten şüpheleniliyorsa itiraz edilebilir. Bunun ardından sahtecilik kanıtı, bir sahtecilik gerçekleşip gerçekleşmediğini görmek için işlemi çalıştırır. Bu yöntem, bir yandan güvenliği sürdürürken diğer yandan olası işlem miktarını artırır. Bazı [toplamalar](#rollups)da [doğruluk kanıtları](#validity-proof) kullanılır.
 
 <DocLink to="/developers/docs/scaling/optimistic-rollups/">
-  İyimser toplamalar
+  Optimistic rollups
 </DocLink>
 
 ### sınır {#frontier}
 
-Temmuz 2015'ten Mart 2016'ya kadar süren Ethereum'un ilk test geliştirme aşaması.
+Ethereum'un Temmuz 2015'ten Mart 2016'ya kadar süren ilk test geliştirme aşamasıdır.
 
 <Divider />
 
@@ -454,7 +462,7 @@ Temmuz 2015'ten Mart 2016'ya kadar süren Ethereum'un ilk test geliştirme aşam
 
 ### gaz {#gas}
 
-Akıllı sözleşmeleri yürütmek için Ethereum'da kullanılan sanal bir yakıt. [ESM](#evm), gaz tüketimini ölçmek ve bilgi işlem kaynaklarının tüketimini sınırlamak için bir muhasebe mekanizması kullanır (bkz. [Turing complete](#turing-complete)).
+Ethereum'da akıllı sözleşmeleri yürütmek için kullanılan bir sanal yakıttır. [Ethereum Sanal Makinesi](#evm), gaz tüketimini ölçmek ve bilgi işlem kaynaklarının tüketimini sınırlamak (bkz. [Turing tamamlığı](#turing-complete)) için bir muhasebe mekanizması kullanır.
 
 <DocLink to="/developers/docs/gas/">
   Gaz ve Ücretler
@@ -462,83 +470,83 @@ Akıllı sözleşmeleri yürütmek için Ethereum'da kullanılan sanal bir yakı
 
 ### gaz limiti {#gas-limit}
 
-Bir [blok](#block) veya [işlem](#transaction)'in tüketebileceği maksimum [gaz](#gas) miktarı.
+Bir [işlem](#transaction) veya [blok](#block) tarafından tüketilebilecek maksimum [gaz](#gas) miktarıdır.
 
 ### gaz fiyatı {#gas-price}
 
-Bir işlemde belirtilen bir gaz biriminin ether cinsinden fiyatı.
+Bir işlemde belirtilen bir gaz biriminin ether cinsinden fiyatıdır.
 
 ### başlangıç bloğu {#genesis-block}
 
-Belirli bir ağı ve onun kripto para birimini başlatmak için kullanılan bir [blockchain](#blockchain) içindeki ilk blok.
+Belirli bir ağı ve onun kripto para birimini başlatmak için kullanılan bir [blokzincir](#blockchain) içindeki ilk bloktur.
 
 ### geth {#geth}
 
-Go Ethereum. Go ile yazılmış, Ethereum protokolünün en belirgin uygulamalarından biri.
+Go Ethereum. Ethereum protokolünün Go ile yazılmış en öne çıkan uygulamalarından biridir.
 
 [Bkz. geth.ethereum.org](https://geth.ethereum.org/)
 
 ### gwei {#gwei}
 
-Gigawei'nin kısaltması, genellikle [gaz](#gas)'ı fiyatlandırmak için kullanılan [ether](#ether) birimi. 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
+Genellikle [gaz](#gas)ı fiyatlandırmak için kullanılan ve [ether](#ether) birimi olan gigawei'nin kısaltmasıdır. 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 <Divider />
 
 ## H {#section-h}
 
-### sert çatal {#hard-fork}
+### sert çatallanma {#hard-fork}
 
-[Blockchain](#blockchain)'de kalıcı bir farklılık; sert çatallı değişiklik olarak da bilinir. Güncellenmemiş düğümler, daha yeni [konsensus kurallarına](#consensus-rules) uyan yükseltilmiş düğümler tarafından oluşturulan blokları doğrulayamadığında yaygın olarak ortaya çıkar. Çatal, yumuşak çatal, yazılım çatalı veya Git çatalı ile karıştırılmamalıdır.
+[Blokzincirde](#blockchain) kalıcı bir ayrılmadır; sert çatallı değişim olarak da bilinir. Yükseltilmemiş düğümlerin daha yeni [mutabakat kurallarına](#consensus-rules) uyan yükseltilmiş düğümler tarafından oluşturulmuş blokları doğrulayamadığı zamanlarda yaygın olarak görülür. Çatallanma, yumuşak çatallanma, yazılım çatallanması veya Git çatallanması ile karıştırılmamalıdır.
 
-### hash {#hash}
+### karma {#hash}
 
-Bir karma işlevi tarafından üretilen, değişken boyutlu girdinin sabit uzunluktaki parmak izi. (Bkz. [keccak-256](#keccak-256)).
+Bir karma işlevi tarafından üretilen, değişken boyutlu girdinin sabit uzunluktaki parmak izidir. (Bkz. [keccak-256](#keccak-256)).
 
-### karmahızı {#hash-rate}
+### karma hızı {#hash-rate}
 
-Madencilik yazılımı çalıştıran bilgisayarlar tarafından saniyede yapılan karma hesaplama sayısı.
+Madencilik yazılımı çalıştıran bilgisayarlar tarafından saniye başına yapılan karma hesaplamalarının sayısıdır.
 
 ### HD cüzdanı {#hd-wallet}
 
-Hiyerarşik deterministik (HD) anahtar oluşturma ve aktarma protokolünü kullanan bir [cüzdan](#wallet).
+Hiyerarşik belirleyici (HD) anahtar oluşturma ve transfer protokolünü kullanan bir [cüzdan](#wallet)dır.
 
 [Github.com'da daha fazlasını okuyun](https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki)
 
-### HD cüzdan tohumu {#hd-wallet-seed}
+### HD cüzdanı tohumu {#hd-wallet-seed}
 
-Bir HD [cüzdan](#wallet) için ana [özel anahtarı](#private-key) ve ana zincir kodunu oluşturmak için kullanılan bir değer. Cüzdan tohumu, insanların özel anahtarları kopyalamasını, yedeklemesini ve geri yüklemesini kolaylaştıran anımsatıcı kelimelerle temsil edilebilir.
+Bir HD [cüzdanı](#wallet) için ana [özel anahtarı](#private-key) ve ana zincir kodunu oluşturmak için kullanılan değerdir. Cüzdan tohumu, insanların özel anahtarları kopyalamasını, yedeklemesini ve geri yüklemesini kolaylaştıran anımsatıcı kelimelerle temsil edilebilir.
 
 ### homestead {#homestead}
 
-Ethereum'un ikinci geliştirme aşaması, Mart 2016'da 1.150.000 blokta başlatıldı.
+Ethereum'un Mart 2016'da 1.150.000 numaralı blokta başlatılan ikinci geliştirme aşamasıdır.
 
 <Divider />
 
 ## I {#section-i}
 
-### dizin {#index}
+### indeks {#index}
 
-Depolama kaynağına verimli bir yol sağlayarak [blokzincir](#blockchain) genelinde bilgi sorgulamasını optimize etmeyi amaçlayan bir ağ yapısı.
+Depolama kaynağına giden verimli bir yol sağlayarak [blokzincir](#blockchain) genelinde bilgi sorgulamasını optimize etmeyi amaçlayan bir ağ yapısıdır.
 
 ### Değişimler Arası İstemci Adresi Protokolü (ICAP) {#icap}
 
-Uluslararası Banka Hesap Numarası (IBAN) kodlamasıyla kısmen uyumlu olan ve Ethereum adresleri için çok yönlü, sağlama toplamı ve birlikte çalışabilir bir kodlama sunan bir Ethereum adres kodlamasıdır. ICAP adresleri, yargı yetkisi olmayan para birimlerinde (örneğin, XBT, XRP, XCP) kullanıldığı gibi, "genişletilmiş Ethereum" anlamına gelen yeni IBAN sözde ülke kodu-XE kullanır.
+Uluslararası Banka Hesap Numarası (IBAN) kodlamasıyla kısmen uyumlu olan ve Ethereum adresleri için çok yönlü, sağlama toplamlı ve birlikte çalışabilir bir kodlama sunan bir Ethereum adres kodlamasıdır. ICAP adresleri, yargı yetkisi altında olmayan para birimlerinde (örneğin, XBT, XRP, XCP) kullanıldığı gibi, "genişletilmiş Ethereum" anlamına gelen yeni bir IBAN sözde ülke kodu (XE) kullanır.
 
 ### Buz Devri {#ice-age}
 
-Üstel bir [zorluk](#difficulty) artışı (diğer adıyla [zorluk bombası](#difficulty-bomb)) getirmek için 200.000 blokta Ethereum'un [hard fork'u](#hard-fork), [hisse kanıta geçişi](#pos) motive ediyor.
+Üstel bir [zorluk](#difficulty) artışı (diğer adıyla [bomba değeri](#difficulty-bomb)) getirme amaçlı Ethereum'un 200.000 numaralı bloktaki [sert çatallanması](#hard-fork) olup [hisse ispatına](#pos) geçişi desteklemiştir.
 
 ### tümleşik geliştirme ortamı (IDE) {#ide}
 
-Genellikle bir kod düzenleyici, derleyici, çalışma zamanı ve hata ayıklayıcıyı birleştiren bir kullanıcı arabirimi.
+Genellikle bir kod düzenleyici, derleyici, çalışma zamanı ve hata ayıklayıcıyı bir araya getiren bir kullanıcı arayüzüdür.
 
 <DocLink to="/developers/docs/ides/">
   Tümleşik Geliştirme Ortamları
 </DocLink>
 
-### değiştirilemez olarak konuşlandırılmış kod problemi {#immutable-deployed-code-problem}
+### değiştirilemez konuşlandırılmış kod problemi {#immutable-deployed-code-problem}
 
-Bir [sözleşmenin](#smart-contract) (veya [kütüphanenin](#library)) kodu dağıtıldığında, değişmez hale gelir. Standart yazılım geliştirme uygulamaları, olası hataları düzeltmeye ve yeni özellikler eklemeye dayanır, bu nedenle bu, akıllı sözleşme geliştirme için bir zorluk teşkil eder.
+Bir [sözleşmenin](#smart-contract) (veya [kütüphanenin](#library)) kodu dağıtıldığında değiştirilemez hale gelir. Standart yazılım geliştirme uygulamaları, olası hataları düzeltmeye ve yeni özellikler eklemeye dayandığı için bu, akıllı sözleşme geliştirme için bir zorluk teşkil eder.
 
 <DocLink to="/developers/docs/smart-contracts/deploying/">
   Akıllı Sözleşmeleri Dağıtma
@@ -546,19 +554,19 @@ Bir [sözleşmenin](#smart-contract) (veya [kütüphanenin](#library)) kodu dağ
 
 ### iç işlem {#internal-transaction}
 
-Bir [sözleşme hesabından](#contract-account) başka bir sözleşme hesabına veya [EOA](#eoa)'ya gönderilen [işlem](#transaction) (bkz. [mesaj](#message)).
+Bir [sözleşme hesabından](#contract-account) başka bir sözleşme hesabına veya [EOA](#eoa)'ya gönderilen [işlem](#transaction)dir (bkz. [mesaj](#message)).
 
 <Divider />
 
 ### ihraç
 
-Blok teklifini, tasdik ve ihbarı ödüllendirmek için yeni etherin basımı.
+Blok teklifini, tasdik ve ihbarı ödüllendirmek amacıyla yeni ether basımıdır.
 
 ## K {#section-k}
 
 ### anahtar türetme fonksiyonu (KDF) {#kdf}
 
-"Parola genişletme algoritması" olarak da bilinir, [anahtar deposu](#keystore-file) biçimleri tarafından, parola şifrelemesine yönelik kaba kuvvet, sözlük ve gökkuşağı tablosu saldırılarına karşı, sürekli olarak parolayı karma yaparak koruma sağlamak için kullanılır.
+"Parola genişletme algoritması" olarak da bilinir ve [anahtar deposu](#keystore-file) biçimleri tarafından parola şifrelemesine yönelik kaba kuvvet, sözlük ve gökkuşağı tablosu saldırılarına karşı, sürekli olarak parolayı karma yaparak koruma sağlamak için kullanılır.
 
 <DocLink to="/developers/docs/smart-contracts/security/">
   Akıllı sözleşme güvenliği
@@ -570,7 +578,7 @@ Her hesabın özel anahtar/adres çifti, bir Ethereum istemcisinde tek bir anaht
 
 ### keccak-256 {#keccak-256}
 
-Ethereum'da kullanılan kriptografik [karma](#hash) işlevi. Keccak-256, [SHA](#sha)-3 olarak standardize edildi.
+Ethereum'da kullanılan kriptografik [karma](#hash) fonksiyonudur. Keccak-256, [SHA](#sha)-3 olarak standardize edilmiştir.
 
 <Divider />
 
@@ -578,39 +586,39 @@ Ethereum'da kullanılan kriptografik [karma](#hash) işlevi. Keccak-256, [SHA](#
 
 ### katman 2 {#layer-2}
 
-Ethereum protokolünün üstündeki katman iyileştirmelerine odaklanan bir geliştirme alanı. Bu iyileştirmeler, [işlem](#transaction) hızları, daha ucuz [işlem ücretleri](#transaction-fee) ve işlem gizliliği ile ilgilidir.
+Ethereum protokolünün üstündeki katman iyileştirmelerine odaklanan bir geliştirme alanıdır. Bu iyileştirmeler, [işlem](#transaction) hızları, daha ucuz [işlem ücretleri](#transaction-fee) ve işlem gizliliği ile ilgilidir.
 
 <DocLink to="/layer-2/">
   Katman 2
 </DocLink>
 
-### SeviyeDB {#level-db}
+### LevelDB {#level-db}
 
-Hafif, tek amaçlı bir [kütüphane](#library) olarak uygulanan ve birçok platforma bağlanan açık kaynaklı bir disk üzerinde anahtar/değer deposu.
+Hafif, tek amaçlı bir [kütüphane](#library) olarak uygulanan ve birçok platforma bağlanan açık kaynaklı bir disk üzerindeki anahtar değer deposudur.
 
 ### kütüphane {#library}
 
-Ödenecek işlevleri, geri dönüş işlevi ve veri depolaması olmayan özel bir [sözleşme](#smart-contract) türü. Bu nedenle, ether alamaz, tutamaz veya veri depolayamaz. Bir kitaplık, diğer sözleşmelerin salt okunur hesaplama için çağırabileceği, önceden konuşlandırılmış kod olarak hizmet eder.
+Ödenecek fonksiyonları, geri dönüş fonksiyonu ve veri depolaması olmayan özel bir [sözleşme](#smart-contract) türüdür. Bu nedenle, ether alamaz, tutamaz veya veri depolayamaz. Bir kitaplık, diğer sözleşmelerin salt okunur hesaplama için çağrabileceği, önceden dağıtılmış kod görevi görür.
 
 <DocLink to="/developers/docs/smart-contracts/libraries/">
   Akıllı Sözleşme Kütüphaneleri
 </DocLink>
 
-### hafif istemci {#lightweight-client}
+### hafif istemci {#light-client}
 
-[Blokzincir](#blockchain)'in yerel bir kopyasını saklamayan veya blokları ve [işlemleri](#transaction) doğrulamayan bir Ethereum istemcisi. Bir [cüzdan](#wallet) fonksiyonu gösterir ve işlemler oluşturup yayınlayabilir.
+[Blokzincir](#blockchain)in yerel bir kopyasını saklamayan veya blokları ve [işlemleri](#transaction) doğrulamayan bir Ethereum istemcisidir. Bir [cüzdanın](#wallet) fonksiyonlarını sunar ve işlemler oluşturup yayımlayabilir.
 
 <Divider />
 
 ### LMD_GHOST {#lmd-ghost}
 
-Ethereum'un konsensus istemcileri tarafından zincirin başını belirlemek için kullanılan [çatal-seçim algoritması](#fork-choice-algorithm). LMD-GHOST, "Latest Message Driven Greediest Heaviest Observed SubTree" ifadesinin kısaltmasıdır; bu, zincirin başının, tarihindeki en büyük [tasdik](#attestation) birikimine sahip blok olduğu anlamına gelir.
+Ethereum'un fikir birliği istemcileri tarafından zincirin başını belirlemek için kullanılan [çatallanma seçim algoritması](#fork-choice-algorithm)dır. LMD-GHOST, "Mesaja Dayalı En Son En Açgözlü En Ağır Gözlemlenen Alt Ağaç" ifadesinin kısaltmasıdır. Bu, zincirin başının, geçmişindeki en büyük [tasdik](#attestation) birikimine sahip olan blok olduğu anlamına gelir.
 
 ## M {#section-m}
 
-### Anaağ {#mainnet}
+### Ana Ağ {#mainnet}
 
-"Ana ağ"ın kısaltması olan, genel Ethereum [blockchain](#blockchain)'dir. Gerçek ETH, gerçek değer ve gerçek sonuçlar. [Katman 2](#layer-2) ölçekleme çözümlerini tartışırken katman 1 olarak da bilinir. (Ayrıca, [testnet](#testnet)'e bakın)
+"Ana ağ"ın kısaltmasıdır ve herkese açık ana Ethereum [blokzinciri](#blockchain)dir. Gerçek ETH, gerçek değer ve gerçek sonuçlar. [Katman 2](#layer-2) ölçeklendirme çözümlerini tartışırken katman 1 olarak da bilinir. (Ayrıca bkz. [test ağı](#testnet)).
 
 <DocLink to="/developers/docs/networks/">
   Ethereum ağları
@@ -618,43 +626,39 @@ Ethereum'un konsensus istemcileri tarafından zincirin başını belirlemek içi
 
 ### hafıza-zorlar {#memory-hard}
 
-Sabit bellek işlevleri, kullanılabilir bellek miktarı biraz bile azaldığında, hızda veya fizibilitede ciddi bir düşüş yaşayan işlemlerdir. Örnek bir kimlik, Ethereum madencilik algoritması [Ethash](#ethash).
+Sabit bellek işlevleri, kullanılabilir bellek miktarı biraz bile azaldığında, hızda veya fizibilitede ciddi bir düşüş yaşayan işlemlerdir. Bunun bir örneği, Ethereum madencilik algoritması olan [Ethash](#ethash)'tir.
 
 ### Merkle Patricia ağacı {#merkle-patricia-tree}
 
-Anahtar/değer çiftlerini verimli bir şekilde depolamak için Ethereum'da kullanılan bir veri yapısı.
+Ethereum'da anahtar değer çiftlerini verimli bir şekilde depolamak için kullanılan bir veri yapısıdır.
 
 ### mesaj {#message}
 
-Hiçbir zaman serileştirilmeyen ve yalnızca [Ethereum Sanal Makinesi](#evm) içinde gönderilen [dahili işlem](#internal-transaction).
+Hiçbir zaman serileştirilmeyen ve yalnızca [Ethereum Sanal Makinesi](#evm) içinde gönderilen [dahili işlem](#internal-transaction)dir.
 
 ### mesaj çağrısı {#message-call}
 
-Bir hesaptan diğerine [mesaj](#message) geçirme eylemi. Hedef hesap [Ethereum Sanal Makinesi](#evm) koduyla ilişkilendirilmişse, Sanal Makine o nesnenin durumuyla ve iletiye göre hareket edilerek başlatılır.
+Bir [mesajı](#message) bir hesaptan diğerine geçirme eylemidir. Hedef hesap [Ethereum Sanal Makinesi](#evm) koduyla ilişkilendirilmişse, Sanal Makine o nesnenin durumuyla ve iletiye göre hareket edilerek başlatılır.
 
 ### Metropolis {#metropolis}
 
-Ekim 2017'de başlatılan Ethereum'un üçüncü geliştirme aşaması.
+Ethereum'un Ekim 2017'de başlatılan üçüncü geliştirme aşamasıdır.
 
 ### madencilik {#mining}
 
-Her bloğun madenciliği ile etherde bir ödül karşılığında Ethereum blok zincirinde işlemlerin ve sözleşmenin yürütülmesinin doğrulanması süreci.
-
-### madencilik havuzu {#mining-pool}
-
-İşlem güçlerini paylaşan ve [blok ödüllerini](#block-reward) bölen madenciler tarafından kaynakların bir havuzda toplanması.
+Sonuç, öndeki ikili tabanda sıfırlardan isteğe bağlı sayıda içerene kadar [nonce](#nonce) artırımı yapılırken bir blok başlığını defalarca karma sürecidir. Bu, yeni [blokların](#block) iş ispatı [blokzincirine](#blockchain) eklendiği süreçtir. Ethereum, [hisse ispatına](#pos) geçirilmeden önce işte bu şekilde güvence altına alınmıştır.
 
 ### madenci {#miner}
 
-Tekrarlanan geçiş karma işlemiyle yeni bloklar için geçerli [iş kanıtı](#pow) bulan bir ağ [düğümü](#node) (bkz. [Ethash](#ethash)).
+Tekrarlanan geçiş karma işlemiyle yeni bloklar için geçerli [iş ispatı](#pow) bulan bir ağ [düğümü](#node)dür (bkz. [Ethash](#ethash)). Madenciler artık Ethereum'un bir parçası değildir; Ethereum [hisse ispatına](#pos) geçtikten sonra onların yerini doğrulayıcılar almıştır.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/mining/">
   Madencilik
 </DocLink>
 
-### basım {#mint}
+### mint {#mint}
 
-Token basmak, yeni token'lar yaratma ve bunları kullanılabilecekleri şekilde dolaşıma sokma sürecidir. Merkezi otoritenin katılımı olmadan yeni bir token oluşturmak için kullanılan merkeziyetsiz bir mekanizmadır.
+Jeton basmak, yeni jetonlar yaratma ve bu jetonları kullanılabilmeleri için dolaşıma sokma sürecidir. Merkezi otoritenin katılımı olmadan yeni bir jeton oluşturmak için kullanılan merkeziyetsiz bir mekanizmadır.
 
 <Divider />
 
@@ -662,7 +666,7 @@ Token basmak, yeni token'lar yaratma ve bunları kullanılabilecekleri şekilde 
 
 ### ağ {#network}
 
-İşlemleri ve blokları her Ethereum düğümüne (ağ katılımcısı) yayan eşler arası bir ağ olan Ethereum ağına atıfta bulunur.
+Ethereum ağına atıfla, işlemleri ve blokları her Ethereum düğümüne (ağ katılımcısı) yayan eşler arası bir ağdır.
 
 <DocLink to="/developers/docs/networks/">
   Ağlar
@@ -670,22 +674,22 @@ Token basmak, yeni token'lar yaratma ve bunları kullanılabilecekleri şekilde 
 
 ### ağ karma hızı {#network-hashrate}
 
-Tüm Ethereum madencilik ağı tarafından üretilen toplu [hash oranı](#hashrate).
+Tüm madencilik ağı tarafından üretilen toplam [karma hızı](#hashrate)dır. Ethereum [hisse ispatına](#pos) geçirildikten sonra Ethereum üzerinde madencilik sonlandırılmıştır.
 
 ### değiştirilemez token (NFT) {#nft}
 
-"Tapu" olarak da bilinen LMD-GHOST, ERC-721 teklifi tarafından tanıtılan bir belirteç standardıdır. NFT'ler izlenebilir ve takas edilebilir, ancak her bir token benzersiz ve farklıdır; ETH ve [ERC-20 jetonları](#token-standard) gibi değiştirilemezler. NFT'ler, dijital veya fiziksel varlıkların sahipliğini temsil edebilir.
+"Tapu" olarak da bilinen ve ERC-721 teklifi tarafından getirilmiş bir jeton standardıdır. NFT'ler izlenebilir ve takas edilebilir, ancak her bir jeton benzersiz ve farklıdır; ETH ve [ERC-20 jetonları](#token-standard) gibi birbiri ile değiştirilebilir değildir. NFT'ler, dijital veya fiziksel varlıklara sahip olmayı temsil edebilir.
 
 <DocLink to="/nft/">
-  Değiştirilemeyen tokenler (NFT'ler)
+  Değiştirilemez Token'lar (NFT'ler)
 </DocLink>
 <DocLink to="/developers/docs/standards/tokens/erc-721/">
-  ERC-721 Değiştirilemeyen Token Standardı
+  ERC-721 Değiştirilemez Token Standardı
 </DocLink>
 
-### boğum {#node}
+### düğüm {#node}
 
-Ağa katılan bir yazılım istemcisi.
+Ağa katılan bir yazılım istemcisidir.
 
 <DocLink to="/developers/docs/nodes-and-clients/">
   Düğümler ve İstemciler
@@ -693,27 +697,27 @@ Ağa katılan bir yazılım istemcisi.
 
 ### nonce {#nonce}
 
-Kriptografide, bir değer, yalnızca bir kez kullanılabilinir. Ethereum'da kullanılan iki tür nonce vardır- hesap nonce, her hesapta tekrar saldırılarını önlemek için kullanılan bir işlem sayacıdır; [iş kanıtı](#pow) nonce ise [iş kanıtı](#pow)'nı karşılamak için kullanılan bir bloktaki rastgele değerdir.
+Kriptografide sadece bir kez kullanılabilen bir değerdir. Bir hesap nonce'u, tekrar saldırılarından korunmak için kullanılan ve her hesapta bulunan işlem sayacıdır.
 
 <Divider />
 
 ## O {#section-o}
 
-### ommer (amca) blok {#ommer}
+### ommer (amca) bloğu {#ommer}
 
-Bir [madenci](#miner) geçerli bir [blok](#block) bulduğunda, başka bir madenci önce blok zincirinin ucuna eklenen rakip bir blok yayınlamış olabilir. Bu geçerli, ancak eski blok, daha yeni bloklar tarafından _ommers_ olarak dahil edilebilir ve kısmi blok ödülü alabilir. "Ommer" terimi, bir ebeveyn bloğunun kardeşi için tercih edilen cinsiyetten bağımsız terimdir, ancak buna bazen "amca" da denir.
+Bir iş ispatı [madencisi](#miner) geçerli bir [blok](#block) bulduğu zaman başka bir madenci, blokzincirin ucuna ilk olarak eklenmiş rakip bir blok yayımlamış olabilir. Bu geçerli ancak eski blok, daha yeni bloklar tarafından _ommer'ler_ olarak dahil edilebilir ve kısmi blok ödülü alabilir. "Ommer" terimi, bir ebeveyn bloğunun kardeşi için tercih edilen cinsiyetsiz bir terimdir ancak buna bazen "amca" da denir. Bu, bir [iş ispatı](pow) ağıyken Ethereum ile ilgiliydi ancak ommer'ler, her bir yuvada tam olarak bir adet blok önerici seçildiğinden [hisse ispatı](#pos) Ethereum'un bir özelliği değildir.
 
 ### i̇yimser toplama {#optimistic-rollup}
 
-[Anaağ](#mainnet) tarafından sağlanan güvenliği kullanırken, artan [katman 2](#layer-2) işlem verimi sunmak için [dolandırıcılık kanıtlarını](#fraud-proof) kullanan işlemlerin [toplaması](#rollups) (katman 1). Benzer bir katman 2 çözümü olan [Plazma](#plasma)'dan farklı olarak, İyimser özetler daha karmaşık işlem türlerini işleyebilir - [Ethereum Sanal Makinesi](#evm)'nde mümkün olan her şey. [Sıfır bilgi toplamaları](#zk-rollups)na kıyasla gecikme sorunları vardır, çünkü bir işleme dolandırıcılık kanıtı yoluyla itiraz edilebilir.
+[Ana ağ](#mainnet) (katman 1) tarafından sağlanan güvenliği kullanırken daha yüksek [katman 2](#layer-2) işlem verimi sunmak için [sahtecilik kanıtlarını](#fraud-proof) kullanan bir işlemler [toplaması](#rollups)dır. Benzer bir katman 2 çözümü olan [Plazma](#plasma)'dan farklı olarak, İyimser toplamalar daha karmaşık işlem türlerini, yani [Ethereum Sanal Makinesi](#evm)'nde mümkün olan her şeyi işleyebilir. Bir işleme sahtecilik kanıtı yoluyla itiraz edilebileceği için [Sıfır-bilgi toplamalarına](#zk-rollups) kıyasla gecikme sorunları olması muhtemeldir.
 
 <DocLink to="/developers/docs/scaling/optimistic-rollups/">
   İyimser Toplamalar
 </DocLink>
 
-### Kahin {#oracle}
+### Kâhin {#oracle}
 
-Oracle, [blockchain](#blockchain) ile gerçek dünya arasında bir köprüdür. Bilgi için sorgulanabilen ve [akıllı sözleşmelerde](#smart-contract) kullanılabilen zincir üstündeki [API'ler](#api) gibi davranırlar.
+Kâhin, [blokzincir](#blockchain) ile gerçek dünya arasında bir köprüdür. Bilgi sorgusu yapılabilen ve [akıllı sözleşmelerde](#smart-contract) kullanılabilen zincir üstündeki [API'ler](#api) gibi davranırlar.
 
 <DocLink to="/developers/docs/oracles/">
   Kâhinler
@@ -723,21 +727,21 @@ Oracle, [blockchain](#blockchain) ile gerçek dünya arasında bir köprüdür. 
 
 ## P {#section-p}
 
-### eşlik {#parity}
+### parity {#parity}
 
-Ethereum istemci yazılımının en belirgin birlikte çalışabilir uygulamalarından biri.
+Ethereum istemci yazılımının en öne çıkan birlikte çalışabilir uygulamalarından biridir.
 
 ### eş {#peer}
 
-[Blockchain](#blockchain)'in aynı kopyalarına sahip, Ethereum istemci yazılımı çalıştıran bağlı bilgisayarlar.
+[Blokzincir](#blockchain)in aynı kopyalarına sahip, Ethereum istemci yazılımı çalıştıran bağlı bilgisayarlardır.
 
 ### eşler arası ağ {#peer-to-peer-network}
 
-Merkezi, sunucu tabanlı hizmetlere ihtiyaç duymadan işlevleri toplu olarak gerçekleştirebilen bir bilgisayar ağı ([eşler](#peer)).
+Merkezi, sunucu tabanlı hizmetlere ihtiyaç duymadan işlevleri toplu olarak gerçekleştirebilen bir bilgisayar ağıdır ([eşler](#peer)).
 
 ### Plazma {#plasma}
 
-[İyimser toplamalar](#optimistic-rollups) gibi [dolandırıcılık kanıtlarını](#fraud-proof) kullanan zincir dışı bir ölçeklendirme çözümü. Plazma, temel token transferleri ve takasları gibi basit işlemlerle sınırlıdır.
+[İyimser toplamalar](#optimistic-rollups) gibi [sahtecilik kanıtlarını](#fraud-proof) kullanan zincir dışında bir ölçeklendirme çözümüdür. Plazma, temel jeton transferleri ve takasları gibi basit işlemlerle sınırlıdır.
 
 <DocLink to="/developers/docs/scaling/plasma">
   Plazma
@@ -745,31 +749,31 @@ Merkezi, sunucu tabanlı hizmetlere ihtiyaç duymadan işlevleri toplu olarak ge
 
 ### özel anahtar (gizli anahtar) {#private-key}
 
-Ethereum kullanıcılarının dijital bir imza üreterek bir hesabın veya sözleşmenin sahipliğini kanıtlamasına olanak tanıyan gizli bir numara (bkz. [genel anahtar](#public-key), [adres](#address), [ECDSA](#ecdsa)).
+Ethereum kullanıcılarının dijital bir imza üreterek bir hesabın veya sözleşmelerin sahibi olduklarını kanıtlamasına olanak tanıyan gizli bir numaradır (bkz. [açık anahtar](#public-key), [adres](#address), [ECDSA](#ecdsa)).
 
 ### özel zincir {#private-chain}
 
-Tamamen özel bir blok zinciri, izinli erişime sahip olan ve herkesin kullanımına açık olmayan bir blok zinciridir.
+Tamamen özel bir blokzincir, herkesin kullanımına açık olan değil, izinli erişime sahip olandır.
 
-### hisse kanıtı (PoS) {#pos}
+### hisse ispatı (PoS) {#pos}
 
-Bir kripto para birimi blok zinciri protokolünün dağıtılmış [konsensusa](#consensus) ulaşmayı amaçladığı bir yöntem. Hisse kanıtı, işlemlerin onaylanmasına katılabilmek için kullanıcılardan belirli bir miktarda kripto para biriminin (ağdaki "payları") sahipliğini kanıtlamalarını ister.
+Bir kripto para blokzinciri protokolünün dağıtılmış [mutabakata](#consensus) ulaşmayı amaçladığı bir yöntemdir. PoS, işlemlerin doğrulanmasına katılabilmek için kullanıcılardan belirli bir miktarda kripto paraya (ağdaki "hisseleri") sahip olduklarını kanıtlamalarını ister.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/">
   Hisse ispatı
 </DocLink>
 
-### i̇ş kanıtı (PoW) {#pow}
+### iş ispatı (PoW) {#pow}
 
-Bulmak için önemli hesaplama gerektiren bir veri parçası (kanıt). Ethereum'da, [madenciler](#miner), ağ çapında bir [zorluk](#difficulty) hedefini karşılayan [Ethash](#ethash) algoritmasına sayısal bir çözüm bulmalıdır.
+Bulmak için büyük miktarda hesaplama gereken bir veridir (ispat).
 
 <DocLink to="/developers/docs/consensus-mechanisms/pow/">
-  İş ispatı
+  İş İspatı
 </DocLink>
 
-### genel anahtar {#public-key}
+### açık anahtar {#public-key}
 
-[özel anahtardan](#private-key) tek yönlü bir işlev aracılığıyla türetilen, herkese açık olarak paylaşılabilen ve ilgili özel anahtarla yapılan dijital imzayı doğrulamak için herkes tarafından kullanılabilen bir sayı.
+[Özel anahtardan](#private-key) tek yönlü bir işlev aracılığıyla türetilen, herkese açık olarak paylaşılabilen ve ilgili özel anahtarla yapılan dijital imzayı doğrulamak için herkes tarafından kullanılabilen bir sayıdır.
 
 <Divider />
 
@@ -777,11 +781,11 @@ Bulmak için önemli hesaplama gerektiren bir veri parçası (kanıt). Ethereum'
 
 ### makbuz {#receipt}
 
-Belirli bir [işlemin](#transaction) sonucunu temsil etmek için bir Ethereum istemcisi tarafından döndürülen veriler, işlemin [karma](#hash)kayıtlarını, [blok](#block) numarasını, kullanılan [gaz](#gas) miktarını ve bir [akıllı sözleşmenin](#smart-contract) uygulanması durumunda, sözleşmenin [adres](#address)ini tutar.
+Belirli bir [işlemin](#transaction) sonucunu temsil etmek için bir Ethereum istemcisi tarafından döndürülen, işlemin bir [karmasını](#hash), [blok](#block) numarasını, kullanılan [gaz](#gas) miktarını ve bir [akıllı sözleşmenin](#smart-contract) dağıtılması durumunda da sözleşmenin [adres](#address)ini içeren verilerdir.
 
 ### yeniden giriş saldırısı {#re-entrancy-attack}
 
-Bir saldırgan sözleşmenin, yürütme sırasında kurbanın sözleşmesini yinelemeli olarak yeniden çağırmasını sağlayacak şekilde bir kurban sözleşmesi işlevi içeren bir saldırıdır. Örneğin bu, mağdur sözleşmesinin bakiyeleri güncelleyen veya para çekme miktarlarını sayan kısımlarını atlayarak fonların çalınmasıyla sonuçlanabilir.
+Bir saldırgan sözleşmenin, yürütüm sırasında kurbanın sözleşmesini yinelemeli olarak yeniden çağırmasını sağlayacak şekilde bir kurban sözleşmesi fonksiyonu içeren bir saldırıdır. Örneğin bu, mağdur sözleşmenin bakiyeleri güncelleyen veya para çekme miktarlarını sayan kısımlarını atlayarak fonların çalınmasıyla sonuçlanabilir.
 
 <DocLink to="/developers/docs/smart-contracts/security/#re-entrancy">
   Yeniden giriş
@@ -789,15 +793,15 @@ Bir saldırgan sözleşmenin, yürütme sırasında kurbanın sözleşmesini yin
 
 ### ödül {#reward}
 
-Ağ tarafından [iş kanıtı](#pow) çözümünü bulan [madenciye](#miner) ödül olarak verilen, her yeni bloğa eklenen bir miktar ether.
+Ağ tarafından [iş ispatı](#pow) çözümünü bulan [madenciye](#miner) ödül olarak verilen, her yeni bloğa eklenen bir miktar ether'i ifade eder.
 
 ### Tekrarlamalı Uzunluk Öneki (RLP) {#rlp}
 
-Ethereum geliştiricileri tarafından rastgele karmaşıklık ve uzunluktaki nesneleri (veri yapılarını) kodlamak ve seri hale getirmek için tasarlanmış bir kodlama standardı.
+Ethereum geliştiricileri tarafından rastgele karmaşıklık ve uzunluktaki nesneleri (veri yapılarını) kodlamak ve seri hâle getirmek için tasarlanmış bir kodlama standardıdır.
 
-### toplama {#rollups}
+### toplamalar {#rollups}
 
-Birden çok işlemi gruplandıran ve bunları tek bir işlemde [Ethereum ana zincirine](#mainnet) gönderen bir tür [katman 2](#layer-2) ölçeklendirme çözümü. Bu, [gaz](#gas) maliyetlerinde azalmaya ve [işlem](#transaction) çıktısında artışa olanak tanır. Bu ölçeklenebilirlik kazanımlarını sunmak için farklı güvenlik yöntemleri kullanan İyimser ve Sıfır bilgi toplamaları vardır.
+Birden çok işlemi gruplandıran ve bunları tek bir işlemde [Ethereum ana zincirine](#mainnet) gönderen bir tür [katman 2](#layer-2) ölçeklendirme çözümüdür. Bu, [gaz](#gas) maliyetlerinde azalmaya ve [işlem](#transaction) çıktısında artışa olanak tanır. Bu ölçeklenebilirlik kazanımlarını sunmak için farklı güvenlik yöntemleri kullanan İyimser toplamalar ve Sıfır-bilgi toplamaları mevcuttur.
 
 <DocLink to="/developers/docs/scaling/#rollups">
   Toplamalar
@@ -807,17 +811,17 @@ Birden çok işlemi gruplandıran ve bunları tek bir işlemde [Ethereum ana zin
 
 ### RPC {#rpc}
 
-**Uzaktan prosedür çağrısı (RPC)**, bir programın ağdaki başka bir bilgisayarda bulunan bir programdan ağ ayrıntılarını anlamak zorunda kalmadan hizmet istemek için kullandığı bir protokoldür.
+**Uzak prosedür çağrısı (RPC)**, bir programın ağdaki başka bir bilgisayarda bulunan bir programdan ağ ayrıntılarını anlamak zorunda kalmadan hizmet istemek için kullandığı bir protokoldür.
 
 ## S {#section-s}
 
-### Güvenli Karma Algoritması (SHA) {#sha}
+### Güvenli Hash Algoritması (SHA) {#sha}
 
-Ulusal Standartlar ve Teknoloji Enstitüsü (NIST) tarafından yayınlanan bir şifreleme karma işlevleri ailesi.
+Ulusal Standartlar ve Teknoloji Enstitüsü (NIST) tarafından yayınlanan bir kriptografik karma fonksiyonları ailesidir.
 
-### Sükunet {#serenity}
+### Serenity {#serenity}
 
-Daha önce 'Ethereum 2.0' veya 'Eth2' olarak bilinen bir dizi ölçeklendirme ve sürdürülebilirlik yükseltmesini başlatan Ethereum geliştirme aşaması.
+Daha önce "Ethereum 2.0" veya "Eth2" olarak bilinen bir dizi ölçeklendirme ve sürdürülebilirlik yükseltmesini başlatan Ethereum geliştirme aşamasıdır.
 
 <DocLink to="/roadmap/">
   Ethereum yükseltmeleri
@@ -825,19 +829,19 @@ Daha önce 'Ethereum 2.0' veya 'Eth2' olarak bilinen bir dizi ölçeklendirme ve
 
 ### serileştirme {#serialization}
 
-Veri yapısını bir bayt dizisine dönüştürme işlemi.
+Bir veri yapısını baytlar dizisine dönüştürme işlemidir.
 
 ### parça / parça zinciri {#shard}
 
-[İşaret Zinciri](#beacon-chain), bir [hisse kanıtı](#pos) zinciri tarafından koordine edilir ve [doğrulayıcılar](#validator) tarafından güvence altına alınır. Parça zinciri yükseltmesinin bir parçası olarak, ağa 64 tanesi eklenecektir. Parça zincirleri, [katman 2](#layer-2) çözümlerine [iyimser toplamalar](#optimistic-rollups) ve [ZK-rollups](#zk-rollups) gibi ek veriler sağlayarak Ethereum için artan işlem hacmi sunacak.
+Parça zincirleri, toplam blok zincirin doğrulayıcıların alt kümelerinin sorumlu tutulabilecekleri ayrık bölümleridir. Ethereum için daha yüksek işlem verimi sunar ve [iyimser toplamalar](#optimistic-rollups) ile [ZK-toplamaları](#zk-rollups) gibi [katman 2](#layer-2) çözümleri için veri kullanılabilirliğini iyileştirir.
 
 <DocLink to="/roadmap/danksharding">
-  Parça Zincirleri
+  Danksharding
 </DocLink>
 
-### yanzincir {#sidechain}
+### yan zincir {#sidechain}
 
-Farklı, genellikle daha hızlı [konsensus kurallarına](#consensus-rules) sahip, ayrı bir zincir kullanan, bir ölçeklendirme çözümü. Bu yan zincirleri [Anaağ](#mainnet)'a bağlamak için bir köprü gereklidir. [Toplamalar](#rollups) da yan zincirler kullanır ancak bunun yerine [Ana Ağ](#mainnet) ile işbirliği içinde çalışırlar.
+Farklı, genellikle daha hızlı [mutabakat kurallarına](#consensus-rules) sahip ayrı bir zincir kullanan bir ölçeklendirme çözümüdür. Bu yan zincirleri [Ana Ağ](#mainnet)'a bağlamak için bir köprü gereklidir. [Toplamalar](#rollups) da yan zincirleri kullanır ancak bunun yerine [Ana Ağ](#mainnet) ile işbirliği içinde çalışırlar.
 
 <DocLink to="/developers/docs/scaling/sidechains/">
   Yan zincirler
@@ -845,15 +849,19 @@ Farklı, genellikle daha hızlı [konsensus kurallarına](#consensus-rules) sahi
 
 ### imzalama {#signing}
 
-Bir işlemin belirli bir özel anahtarın sahibi tarafından onaylandığını kriptografik olarak gösterme.
+Bir işlemin belirli bir özel anahtarın sahibi tarafından onaylandığını kriptografik olarak göstermeyi ifade eder.
 
 ### tekil {#singleton}
 
-Yalnızca tek bir örneğinin bulunabileceği bir nesneyi tanımlayan bir bilgisayar programlama terimi.
+Yalnızca tek bir örneğinin mevcut olabileceği bir nesneyi tanımlayan bir bilgisayar programlama terimidir.
+
+### kesici {#slasher}
+
+Kesici, iptal edilebilir saldırıları arayan tasdikleri tarayan bir varlıktır. Kesikler ağa yayımlanır ve sonraki blok önereni kanıtı bloğa ekler. Sonrasında blok öneren, kötü niyetli doğrulayıcıyı kestiği için ödül alır.
 
 ### yuva {#slot}
 
-Yeni bir [İşaret Zinciri](#beacon-chain) ve [parça](#shard) zincir bloğunun [doğrulayıcı](#validator) tarafından [ içinde önerilebileceği bir süre (12 saniye) Proof-of-stake](#pos) sistemi. Bir yuva boş olabilir. 32 yuva bir [dönem](#epoch) oluşturur.
+[Hisse ispatı](#pos) sisteminde bir [doğrulayıcı](#validator) tarafından yeni blokların önerilebileceği zaman periyodudur (12 saniye). Bir yuva boş olabilir. 32 yuva bir [dönem](#epoch) oluşturur.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos/#how-does-validation-work">
   Hisse ispatı
@@ -861,7 +869,7 @@ Yeni bir [İşaret Zinciri](#beacon-chain) ve [parça](#shard) zincir bloğunun 
 
 ### akıllı sözleşme {#smart-contract}
 
-Ethereum bilgi işlem altyapısında çalışan bir program.
+Ethereum bilgi işlem altyapısında çalışan bir programdır.
 
 <DocLink to="/developers/docs/smart-contracts/">
   Akıllı Sözleşmelere Giriş
@@ -869,19 +877,19 @@ Ethereum bilgi işlem altyapısında çalışan bir program.
 
 ### SNARK {#snark}
 
-"Öz ve etkileşimli olmayan bilgi argümanı"nın kısaltması olan SNARK, bir tür [sıfır bilgi kanıtıdır](#zk-proof).
+"Öz ve etkileşimli olmayan bilgi argümanı"nın kısaltması olan SNARK, bir tür [sıfır bilgili ispat](#zk-proof)tır.
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Sıfır-bilgi toplamaları
+  Sıfır-bilgi toplamalar
 </DocLink>
 
 ### yumuşak çatallanma {#soft-fork}
 
-[Mutabakat kuralları](#consensus-rules) değiştiğinde bir [blokzincirde](#blockchain) meydana gelen bir farklılıktır. [Sert çatallanmanın](#hard-fork) aksine yumuşak çatallanma geriye dönük olarak uyumludur; yükseltilmiş düğümler yeni mutabakat kurallarına uyduğu sürece yükseltilmemiş düğümler tarafından oluşturulan blokları doğrulayabilir.
+[Blokzincirde](#blockchain) [mutabakat kuralları](#consensus-rules) değiştiğinde gerçekleşen bir ayrışmadır. [Sert çatallanmanın](#hard-fork) aksine yumuşak çatallanma geriye dönük olarak uyumludur; yükseltilmiş düğümler yeni mutabakat kurallarına uyduğu sürece yükseltilmemiş düğümler tarafından oluşturulan blokları doğrulayabilir.
 
 ### Solidity {#solidity}
 
-JavaScript, C++ veya Java'ya benzer söz dizimine sahip prosedürel (zorunlu) bir programlama dili. Ethereum [akıllı sözleşmeleri](#smart-contract) için en popüler ve en sık kullanılan dil. Dr. Gavin Wood tarafından yaratıldı.
+JavaScript, C++ veya Java'ya benzer söz dizimine sahip prosedürel (zorunlu) bir programlama dilidir. Ethereum [akıllı sözleşmeleri](#smart-contract) için en popüler ve en sık kullanılan dildir. Dr. Gavin Wood tarafından yaratılmıştır.
 
 <DocLink to="/developers/docs/smart-contracts/languages/#solidity">
   Solidity
@@ -889,59 +897,67 @@ JavaScript, C++ veya Java'ya benzer söz dizimine sahip prosedürel (zorunlu) bi
 
 ### Solidity sıralı derleyicisi {#solidity-inline-assembly}
 
-Bir [Solidity](#solidity) programında [EVM](#evm) derleme dili. Solidity'nin satır içi derleme desteği, belirli işlemleri yazmayı kolaylaştırır.
+Bir [Solidity](#solidity) programındaki [Ethereum Sanal Makinesi](#evm) derleme dilidir. Solidity'nin sıralı derleyici desteği, belirli işlemleri yazmayı kolaylaştırır.
 
 ### Sahte Ejderha {#spurious-dragon}
 
-Daha fazla hizmet reddi saldırı vektörü ve net durumu ele almak için 2.675.000 blokta meydana gelen Ethereum blok zincirinin bir [sert çatallanma](#hard-fork) (bkz. [Mandalina Düdüğü](#tangerine-whistle)). Ayrıca, bir tekrar saldırı koruma mekanizması (bkz. [nonce](#nonce)).
+Daha fazla hizmet reddi saldırı vektörünü ve net durumu ele almak için 2.675.000 numaralı blokta meydana gelen bir Ethereum blok zinciri [sert çatallanma](#hard-fork)sıdır (bkz. [Mandalina Düdüğü](#tangerine-whistle)). Ayrıca, bir tekrar saldırı koruma mekanizmasıdır (bkz. [nonce](#nonce)).
 
 ### sabit para {#stablecoin}
 
-Değeri başka bir varlığın değerine sabitlenmiş bir [ERC-20 tokenı](#token-standard). Dolar gibi bir resmi para birimi, altın gibi değerli metaller ve Bitcoin gibi diğer kripto paralar tarafından desteklenen sabit paralar vardır.
+Değeri, başka bir varlığın değerine sabitlenmiş bir [ERC-20 jetonu](#token-standard)dur. Dolar gibi bir resmi para birimi, altın gibi değerli metaller ve Bitcoin gibi diğer kripto paralar tarafından desteklenen sabit paralar mevcuttur.
 
 <DocLink to="/eth/#tokens">
   ETH, Ethereum'daki tek kripto değildir
 </DocLink>
 
-### hisseleme {#staking}
+### staking {#staking}
 
-Doğrulayıcı olmak ve [ağı](#network) güvence altına almak için bir miktar [ether](#ether) (payınız) yatırmak. Doğrulayıcı, [işlemleri](#transaction) kontrol eder ve bir [pay kanıtı](#pos) mutabakat modeli altında [bloklar](#block) önerir. Hisseleme, ağın çıkarları doğrultusunda hareket etmeniz için size ekonomik bir teşvik sağlar. [Doğrulayıcı](#validator) görevlerinizi yerine getirdiğiniz için ödüller alacaksınız, ancak yapmazsanız değişen miktarlarda ETH kaybedeceksiniz.
+Doğrulayıcı olmak ve [ağı](#network) güvence altına almak için bir miktar [ether](#ether) (payınız) yatırmayı ifade eder. Doğrulayıcı, [işlemleri](#transaction) kontrol eder ve bir [hisse ispatı](#pos) mutabakat modeli altında [bloklar](#block) önerir. Hisseleme, ağın çıkarları doğrultusunda hareket etmeniz için size ekonomik bir teşvik sağlar. [Doğrulayıcı](#validator) görevlerinizi yerine getirdiğiniz için ödüller alır, yerine getirmezseniz değişen miktarlarda ETH kaybedersiniz.
 
 <DocLink to="/staking/">
-  Ethereum doğrulayıcısı olmak için ETH'nizi hisseleyin
+  ETH'nizi hisseleyin ve Ethereum doğrulayıcısı olun
+</DocLink>
+
+### paydaşlık havuzu {#staking-pool}
+
+Bir doğrulayıcı anahtar setini etkinleştirmek için gereken 32 ETH'ye ulaşmak amacıyla kullanılan tek bir Ethereum paydaşından daha fazlasına ait birleşik ETH'dir. Bir düğüm operatörü mutabakatta yer almak için bu anahtarları kullanır ve [blok ödülleri](#block-reward) katkı veren paydaşlar arasında bölüştürülür. Havuzları hisseleme veya hisseleme dağıtma, Ethereum protokolüne özgü olmasa da çözümlerin çoğu topluluk tarafından geliştirilmiştir.
+
+<DocLink to="/staking/pools/">
+  Havuzlanmış hisseleme
 </DocLink>
 
 ### STARK {#stark}
 
-"Scalable transparent argument of knowledge"ın (Ölçeklenebilir şeffaf bilgi argümanı) kısaltması olan STARK, bir tür [sıfır bilgili ispattır](#zk-proof).
+"Scalable transparent argument of knowledge" (Ölçeklenebilir şeffaf bilgi argümanı) ifadesinin kısaltması olan STARK, bir tür [sıfır bilgili ispattır](#zk-proof).
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Sıfır-bilgi toplamaları
+  Sıfır-bilgi toplamalar
 </DocLink>
 
 ### durum {#state}
 
-Normalde belirli bir bloktaki duruma atıfta bulunarak blok zincirde belirli bir zaman noktasındaki tüm bakiyelerin ve verilerin anlık görüntüsü.
+Normalde belirli bir bloktaki duruma atıfta bulunan, blok zincirde belirli bir zaman noktasındaki tüm bakiyelerin ve verilerin anlık görüntüsüdür.
 
 ### özel kanallar {#state-channels}
 
-Katılımcılar arasında özgürce ve ucuza işlem yapabilecekleri bir kanalın kurulduğu bir [katman 2](#layer-2) çözümü. [Ana ağ](#mainnet)'a yalnızca kanalı kurmak ve kanalı kapatmak için bir [işlem](#transaction) gönderilir. Bu, çok yüksek işlem hacmine izin verir, ancak katılımcı sayısının önceden bilinmesine ve fonların kilitlenmesine dayanır.
+Katılımcılar arasında özgürce ve ucuza işlem yapabilecekleri bir kanal kurulan bir [katman 2](#layer-2) çözümüdür. [Ana ağ](#mainnet)'a yalnızca kanalı kurmak ve kanalı kapatmak için bir [işlem](#transaction) gönderilir. Bu, işlem veriminin çok yüksek olmasına olanak tanısa da, katılımcı sayısının önceden bilinmesine ve fonların kilitlenmesine dayalıdır.
 
 <DocLink to="/developers/docs/scaling/state-channels/#state-channels">
   Özel kanallar
 </DocLink>
 
-### süper çoğunluk {#supermajority}
+### nitelikli çoğunluk {#supermajority}
 
-Süper çoğunluk, [İşaret Zincirindeki toplam hisselenen etherin 2/3'ünü (%66) aşan bir miktar için verilen terimdir](#beacon-chain). İşaret Zincirinde blokların [sonlandırılması](#finality) için bir süper çoğunluk oyu gereklidir.
+Nitelikli çoğunluk, Ethereum'u güvence altına alan hisselenmiş toplam ether'in 2/3'ünü (66%) aşan miktarları ifade eden terimdir. İşaret Zincirinde blokların [sonlandırılması](#finality) için nitelikli çoğunluk oyu gereklidir.
 
 ### senkronize etme {#syncing}
 
-Bir blok zincirin en son sürümünün tamamını bir düğüme indirme işlemi.
+Bir blokzincirin en son sürümünün tamamını bir düğüme indirme işlemidir.
 
 ### senkronizasyon kurulu {#sync-committee}
 
-Senkronizasyon kurulu, [İşaret Zinciri](#beacon-chain) üzerinde ortalama her 27 saatte bir yenilenen rastgele seçilmiş [doğrulayıcılar](#validator) grubudur. Amaçları, imzalarını geçerli blok başlıklarına eklemektir. Senkronizasyon kurulları, [hafif istemcilerin](#lightweight-client) tüm doğrulayıcı setine erişmek zorunda kalmadan blok zincirin başını takip etmesine olanak tanır.
+Senkronizasyon kurulu, yaklaşık olarak ortalama her 27 saatte bir yenilenen rastgele seçilmiş bir [doğrulayıcılar](#validator) grubudur. Amaçları, imzalarını geçerli blok başlıklarına eklemektir. Senkronizasyon kurulları, [hafif istemcilerin](#light-client) tüm doğrulayıcı setine erişmek zorunda kalmadan blokzincirin başını takip etmesine olanak tanır.
 
 ### szabo {#szabo}
 
@@ -953,27 +969,27 @@ Senkronizasyon kurulu, [İşaret Zinciri](#beacon-chain) üzerinde ortalama her 
 
 ### Mandalina Düdüğü {#tangerine-whistle}
 
-Belirli G/Ç yoğun işlemler için [gaz](#gas) hesaplamasını değiştirmek ve düşük gaz maliyetinden yararlanan hizmet dışı bir saldırı olan birikmiş durumu bir reddetme durumundan temizlemek için 2,463.000 blokta meydana gelen Ethereum blok zincirinin bir [sert çatallanması](#hard-fork).
+Belirli G/Ç yoğun işlemler için [gaz](#gas) hesaplamasını değiştirmek ve düşük gaz maliyetinden yararlanan hizmet dışı bir saldırı olan birikmiş durumu bir reddetme durumundan temizlemek için 2.463.000 numaralı blokta meydana gelen bir Ethereum blok zinciri [sert çatallanması](#hard-fork)dır.
 
 ### terminal toplam zorluk (TTD) {#terminal-total-difficulty}
 
-Toplam zorluk, blok zincirde belirli bir noktaya kadar olan tüm bloklar için Ethash madencilik zorluğunun toplamıdır. Terminal toplam zorluğu, yürütüm istemcilerinin madenciliklerini kapatmaları ve dedikodu işlevlerini bloke etmeleri için tetikleyici olarak kullanılacak toplam zorluk için belirli bir değerdir, böylece ağın hisse ispatına geçiş yapabilmesi sağlanır.
+Toplam zorluk, blok zincirde belirli bir noktaya kadar olan tüm bloklar için Ethash madencilik zorluğunun toplamıdır. Terminal toplam zorluk, yürütüm istemcilerinin madenciliklerini kapatmaları ve dedikodu işlevlerini bloke etmeleri için tetikleyici olarak kullanılan toplam zorluk için belirli bir değerdir, böylece ağın hisse ispatına geçiş yapabilmesi sağlanmıştır.
 
 ### test ağı {#testnet}
 
-"Test ağı"nın kısaltması, ana Ethereum ağının davranışını simüle etmek için kullanılan bir ağ (bkz. [Ana ağ](#mainnet)).
+Ana Ethereum ağının davranışını simüle etmek için kullanılan bir ağdır (bkz. [Ana ağ](#mainnet)).
 
 <DocLink to="/developers/docs/networks/#ethereum-testnets">
   Test ağları
 </DocLink>
 
-### token {#token}
+### jeton {#token}
 
-Ethereum blok zincirindeki akıllı sözleşmelerde tanımlanan ticarete açık bir sanal mal.
+Ethereum blokzincirindeki akıllı sözleşmelerde tanımlanan, alım satıma açık bir sanal maldır.
 
-### token standardı {#token-standard}
+### jeton standardı {#token-standard}
 
-ERC-20 teklifiyle sunulan bu standart, değiştirilebilir tokenlar için standartlaştırılmış bir [akıllı sözleşme](#smart-contract) yapısı sağlar. [NFT'lerin](#nft) aksine, aynı sözleşmeye ait tokenlar izlenebilir, takas edilebilir ve değiştirilebilir.
+ERC-20 teklifiyle birlikte kullanıma sunulan bu standart, değiştirilebilir jetonlar için standartlaştırılmış bir [akıllı sözleşme](#smart-contract) yapısı sağlar. [NFT'lerin](#nft) aksine, aynı sözleşmeye ait jetonlar izlenebilir, alınıp satılabilir ve değiştirilebilir.
 
 <DocLink to="/developers/docs/standards/tokens/erc-20/">
   ERC-20 Token Standardı
@@ -981,7 +997,7 @@ ERC-20 teklifiyle sunulan bu standart, değiştirilebilir tokenlar için standar
 
 ### işlem {#transaction}
 
-Belirli bir [adresi](#address) hedefleyen, bir başlangıç [hesabı](#account) tarafından imzalanan Ethereum Blok Zincirine taahhüt edilen veriler. İşlem, söz konusu işlem için [gaz limiti](#gas-limit) gibi meta verileri içerir.
+Belirli bir [adresi](#address) hedefleyen, bir başlangıç [hesabı](#account) tarafından imzalanan Ethereum Blokzincirine girilmiş verilerdir. İşlem, söz konusu işlemin [gaz limiti](#gas-limit) gibi meta verileri içerir.
 
 <DocLink to="/developers/docs/transactions/">
   İşlemler
@@ -989,19 +1005,19 @@ Belirli bir [adresi](#address) hedefleyen, bir başlangıç [hesabı](#account) 
 
 ### işlem ücreti {#transaction-fee}
 
-Ethereum ağını her kullandığınızda ödemeniz gereken bir ücret. Örnekler arasında, [cüzdanınızdan](#wallet) para gönderme veya token takası ya da koleksiyon satın alma gibi bir [dapp](#dapp) etkileşimi sayılabilir. Bunu bir hizmet bedeli gibi düşünebilirsiniz. Bu ücret, ağın ne kadar meşgul olduğuna bağlı olarak değişecektir. Bunun nedeni, işleminizi gerçekleştirmekten sorumlu kişiler olan [madencilerin](#miner) daha yüksek ücretli işlemlere öncelik vermesidir: Bu nedenle tıkanıklık, fiyatı yukarı çeker.
+Ethereum ağını her kullandığınızda ödemeniz gereken bir ücrettir. Örneklerinin arasında [cüzdanınızdan](#wallet) fon gönderimi ya da jeton takası veya koleksiyon parçası satın alımı gibi [merkeziyetsiz uygulama](#dapp) etkileşimleri yer alır. Bunu bir hizmet bedeli gibi düşünebilirsiniz. Bu ücret, ağın ne kadar meşgul olduğuna bağlı olarak değişir. Bunun nedeni, işleminizi gerçekleştirmekten sorumlu kişiler olan [doğrulayıcıların](#validator) muhtemelen daha yüksek ücretli işlemlere öncelik vermesidir: Bu nedenle tıkanıklık, fiyatı yukarı çeker.
 
 Teknik düzeyde işlem ücretiniz, işleminizin ne kadar [gaz](#gas) gerektirdiğiyle ilgilidir.
 
-İşlem ücretlerinin düşürülmesi şu sıralar yoğun ilgi gören bir konudur. Bkz. [Katman 2](#layer-2)
+İşlem ücretlerinin düşürülmesi şu sıralar yoğun ilgi gören bir konudur. Bkz. [Katman 2](#layer-2).
 
-### güvensizlik {#trustlessness}
+### güven gerektirmezlik {#trustlessness}
 
-Bir ağın, ilgili tarafların herhangi birinin üçüncü bir tarafa güvenmesine gerek kalmadan işlemlere aracılık etme yeteneği
+Bir ağın, ilgili tarafların herhangi birinin üçüncü bir tarafa güvenmesine gerek kalmadan işlemlere aracılık etme yeteneğidir.
 
 ### Turing tamamlığı {#turing-complete}
 
-İsmini İngiliz matematikçi ve bilgisayar bilimcisi Alan Turing'den alan bir veri işleme kuralları sistemi olan (bir bilgisayarın komut seti, programlama dili veya hücresel otomasyon gibi) bu kavram, eğer herhangi bir Turing makinesini simüle etmek için kullanılabilirse bunun "Turing tamamlığı" veya "hesaplama açısından evrensel" olduğu söylenir.
+İsmini İngiliz matematikçi ve bilgisayar bilimcisi Alan Turing'den alan ve bir veri işleme kuralları sisteminin (bir bilgisayarın komut seti, programlama dili veya hücresel otomasyon gibi), herhangi bir Turing makinesini simüle etmek için kullanılabilmesi durumunda "Turing tamamlığı" veya "hesaplama açısından evrensel" olduğunu ifade eden bir kavramdır.
 
 <Divider />
 
@@ -1009,7 +1025,7 @@ Bir ağın, ilgili tarafların herhangi birinin üçüncü bir tarafa güvenmesi
 
 ### doğrulayıcı {#validator}
 
-Verileri depolamaktan, işlemleri işlemekten ve blok zincire yeni bloklar eklemekten sorumlu [hisse ispatı](#pos) sistemindeki bir [düğüm](#node). Doğrulayıcı yazılımını etkinleştirmek için, 32 ETH'yi [paylaşabilmeniz](#staking) gerekir.
+Verileri depolamaktan, işlemleri işlemekten ve blokzincire yeni bloklar eklemekten sorumlu [hisse ispatı](#pos) sisteminde bulunan bir [düğüm](#node)dür. Doğrulayıcı yazılımı etkinleştirmek için 32 ETH'yi [hisseleyebilmeniz](#staking) gerekir.
 
 <DocLink to="/developers/docs/consensus-mechanisms/pos">
   Hisse ispatı
@@ -1018,17 +1034,27 @@ Verileri depolamaktan, işlemleri işlemekten ve blok zincire yeni bloklar eklem
   Ethereum'da hisseleme
 </DocLink>
 
+### doğrulayıcı yaşam döngüsü {#validator-lifecycle}
+
+Bir doğrulayıcının var olabileceği durumlar sekansıdır. Şunları içerir:
+
+- yatırılmış: Doğrulayıcı tarafından [mevduat sözleşmesine](#deposit-contract) en az 32 ETH yatırılmıştır
+- beklemede: Doğrulayıcı, halihazırda var olan doğrulayıcılar tarafından ağa oylanması için aktivasyon kuyruğunda beklemektedir
+- aktif: Bloklar tasdik ve önerilme aşamasındadır
+- kesiliyor: Doğrulayıcı kötü niyetle davranmıştır ve kesilmektedir
+- ayrılıyor: Doğrulayıcı ya kendi isteğiyle ya da çıkarıldığı için ağdan ayrılıyor olarak işaretlenmiştir.
+
 ### doğruluk kanıtı {#validity-proof}
 
-Belirli [katman 2](#layer-2) çözümleri için, hızı artırmak üzere işlemlerin gruplar halinde [toplandığı](/#rollups) ve tek bir işlemde Ethereum'a gönderildiği bir güvenlik modeli. İşlem hesaplaması zincir dışında yapılır ve daha sonra doğruluklarının bir ispatı ile ana zincire sağlanır. Bu yöntem, güvenliği korurken mümkün olan işlem miktarını artırır. Bazı [toplamalar](#rollups), [sahtecilik kanıtlarını](#fraud-proof) kullanır.
+Belirli [katman 2](#layer-2) çözümleri için hızı artırmak üzere işlemlerin gruplar halinde [toplandığı](/#rollups) ve tek bir işlemde Ethereum'a gönderildiği bir güvenlik modelidir. İşlem hesaplaması, zincir dışında yapılır ve daha sonra doğruluk kanıtı ile ana zincire sağlanır. Bu yöntem, güvenliği korurken mümkün olan işlem miktarını artırır. Bazı [toplamalar](#rollups), [sahtecilik kanıtlarını](#fraud-proof) kullanır.
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Sıfır-bilgi toplamaları
+  Sıfır-bilgi toplamalar
 </DocLink>
 
 ### validium {#validium}
 
-İşlem hacmini iyileştirmek için [doğruluk kanıtlarını](#validity-proof) kullanan zincir dışında bir çözüm. [Sıfır-bilgi toplamalarının](#zk-rollup) aksine, Validium verileri katman 1 [Ana Ağda](#mainnet) depolanmaz.
+İşlem hacmini iyileştirmek için [doğruluk kanıtlarını](#validity-proof) kullanan zincir dışında bir çözümdür. [Sıfır-bilgi toplamalarının](#zk-rollup) aksine, validium verileri katman 1 [Ana Ağı](#mainnet)'nda depolanmaz.
 
 <DocLink to="/developers/docs/scaling/validium/">
   Validium
@@ -1036,7 +1062,7 @@ Belirli [katman 2](#layer-2) çözümleri için, hızı artırmak üzere işleml
 
 ### Vyper {#vyper}
 
-Python benzeri söz dizimine sahip üst düzey bir programlama dili. Saf işlevsel bir dile yaklaşmak amaçlanmıştır. Vitalik Buterin tarafından yaratıldı.
+Python benzeri söz dizimine sahip üst düzey bir programlama dilidir. Saf işlevsel dile yakın bir dil oluşturma amacı taşır. Vitalik Buterin tarafından yaratılmıştır.
 
 <DocLink to="/developers/docs/smart-contracts/languages/#vyper">
   Vyper
@@ -1048,7 +1074,7 @@ Python benzeri söz dizimine sahip üst düzey bir programlama dili. Saf işlevs
 
 ### cüzdan {#wallet}
 
-[Özel anahtarları](#private-key) tutan yazılım. Ethereum [hesaplarına](#account) erişmek, kontrol etmek ve [akıllı sözleşmelerle](#smart-contract) etkileşim kurmak için kullanılır. Anahtarların bir cüzdanda saklanması gerekmez ve geliştirilmiş güvenlik için çevrimdışı depolamadan (yani bir hafıza kartı veya kağıttan) alınabilir. İsmine rağmen, cüzdanlar asla gerçek paraları veya tokenları saklamaz.
+[Özel anahtarları](#private-key) tutan yazılımdır. Ethereum [hesaplarına](#account) erişmek, kontrol etmek ve [akıllı sözleşmelerle](#smart-contract) etkileşim kurmak için kullanılır. Anahtarların bir cüzdanda saklanması gerekmez ve geliştirilmiş güvenlik için çevrimdışı depolamadan (yani bir hafıza kartı veya kağıttan) alınabilir. İsmine rağmen, cüzdanlar asla gerçek para veya jeton depolamaz.
 
 <DocLink to="/wallets/">
   Ethereum Cüzdanları
@@ -1056,7 +1082,7 @@ Python benzeri söz dizimine sahip üst düzey bir programlama dili. Saf işlevs
 
 ### Web3 {#web3}
 
-Web'in üçüncü versiyonu. İlk olarak Dr. Gavin Wood tarafından önerilen Web3, merkezi olarak sahip olunan ve yönetilen uygulamalardan merkeziyetsiz protokoller üzerine kurulu uygulamalara kadar web uygulamaları için yeni bir vizyonu ve odağı temsil eder (bkz. [dapp](#dapp)).
+Web'in üçüncü versiyonudur. İlk olarak Dr. Gavin Wood tarafından önerilen Web3, merkezi olarak sahip olunan ve yönetilen uygulamalardan merkeziyetsiz protokoller (bkz. [dapp](#dapp)) üzerine inşa edilmiş uygulamalara kadar çeşitli web uygulamaları için yeni bir odak ve vizyonu temsil eder.
 
 <DocLink to="/developers/docs/web2-vs-web3/">
   Web2 ve Web3
@@ -1064,7 +1090,7 @@ Web'in üçüncü versiyonu. İlk olarak Dr. Gavin Wood tarafından önerilen We
 
 ### wei {#wei}
 
-[Ether](#ether)'in en küçük değeri. 10<sup>18</sup> wei = 1 ether.
+[Ether](#ether)'in en küçük değeridir. 10<sup>18</sup> wei = 1 ether.
 
 <Divider />
 
@@ -1072,19 +1098,19 @@ Web'in üçüncü versiyonu. İlk olarak Dr. Gavin Wood tarafından önerilen We
 
 ### sıfır adres {#zero-address}
 
-Bir [sözleşme oluşturma işleminin](#contract-creation-transaction) hedef adresi olarak belirtilen, tamamen sıfırlardan oluşan özel bir Ethereum adresi.
+Tamamen sıfırlardan oluşan, sahipli dolaşımdan jeton çıkarmak amacıyla sıklıkla kullanılan bir Ethereum adresidir. Ayrım, bir akıllı sözleşmenin endeksinden yakım() yöntemiyle resmi olarak çıkarılan jetonlar ile bu adrese gönderilen jetonlar arasında çizilir.
 
 ### sıfır bilgili ispat {#zk-proof}
 
 Sıfır bilgili ispat, bir kişinin herhangi bir ek bilgi aktarmadan bir ifadenin doğru olduğunu kanıtlamasına izin veren kriptografik bir yöntemdir.
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
-  Sıfır-bilgi toplamaları
+  Sıfır-bilgi toplamalar
 </DocLink>
 
-### sıfır-bilgi toplaması {#zk-rollup}
+### sıfır bilgili toplama {#zk-rollup}
 
-[Ana ağ](#mainnet) tarafından sağlanan güvenliği kullanırken artan [katman 2](#layer-2) işlem verimi sunmak için [doğruluk kanıtlarını](#validity-proof) kullanan işlemlerin [toplanması](#rollups) (katman 1). [İyimser toplamalar](#optimistic-rollups) gibi karmaşık işlem türlerini işleyemeseler de, işlemler gönderildiklerinde kanıtlanabilir şekilde geçerli olduklarından gecikme sorunları yaşamazlar.
+[Ana ağ](#mainnet) tarafından sağlanan güvenliği kullanırken artan [katman 2](#layer-2) işlem verimi sunmak için [doğruluk kanıtlarını](#validity-proof) kullanan işlemlerin [toplanması](#rollups)dır (katman 1). [İyimser toplamalar](#optimistic-rollups) gibi karmaşık işlem türlerini işleyemeseler de, işlemler gönderildiklerinde kanıtlanabilir şekilde geçerli olduklarından gecikme sorunları yaşamazlar.
 
 <DocLink to="/developers/docs/scaling/zk-rollups/">
   Sıfır-Bilgi Toplamaları
@@ -1094,12 +1120,12 @@ Sıfır bilgili ispat, bir kişinin herhangi bir ek bilgi aktarmadan bir ifadeni
 
 ## Kaynaklar {#sources}
 
-_CC-BY-SA kapsamında bir kısmı [Andreas M. Antonopoulos ve Gavin Wood](https://ethereumbook.info)'un [Ethereum'da Uzmanlaşma](https://github.com/ethereumbook/ethereumbook) eserinden sağlanmıştır_
+_CC-BY-SA kapsamında kısmen [Andreas M. Antonopoulos ve Gavin Wood](https://ethereumbook.info)'un [Ethereum'da Uzmanlaşma](https://github.com/ethereumbook/ethereumbook) eserinden alınmıştır_
 
 <Divider />
 
 ## Bu sayfaya katkıda bulunun {#contribute-to-this-page}
 
-Gözden kaçırdığımız bir şey mi var? Yanlış bir şey mi var? GitHub'daki bu sözlüğe katkıda bulunarak gelişmemize yardımcı olun!
+Gözden kaçırdığımız bir şey mi oldu? Yanlış bir şey mi var? GitHub'daki bu sözlüğe katkıda bulunarak gelişmemize yardımcı olun!
 
 [Nasıl katkıda bulunacağınız hakkında daha fazla bilgi edinin](/contributing/adding-glossary-terms)

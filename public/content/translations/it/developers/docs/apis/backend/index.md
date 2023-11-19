@@ -143,14 +143,33 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [Forum](https://forum.moralis.io/)
 
-\*_GetBlock- Blockchain-as-a-service per lo sviluppo in Web3_
+**Chainbase -** **_Infrastruttura dati web3 tutto in uno per Ethereum._**
+
+- [chainbase.com](https://chainbase.com/)
+- [Documentazione](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**GetBlock-** **_Blockchain-as-a-service per lo sviluppo Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentazione](https://getblock.io/docs/)
 
+**BlockPi -** **_Fornire servizi RPC più efficienti e veloci_**
+
+- [blockpi.io](https://blockpi.io/)
+- [Documentazione](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
+**Tokenview -** **_La piattaforma generale per API blockchain multi-criptovaluta._**
+
+- [services.tokenview.io](https://services.tokenview.io/)
+- [Documentazione](https://services.tokeniew/docs?type=api)
+- [Github](https://github.com/Tokenview)
+
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
@@ -160,4 +179,4 @@ _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e ag
 ## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
-- [Chiamare un contratto intelligente da JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/): _Usando il token DAI, impara come chiamare la funzione dei contratti usando JavaScript._
+- [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token DAI, impara come funzionano i contratti di chiamata con JavaScript_

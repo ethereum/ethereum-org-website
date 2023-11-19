@@ -4,21 +4,25 @@ description:
 lang: tr
 ---
 
+## Uyarı {#warning}
+
+**ERC777'nin, [farklı saldırı türlerine karşı duyarlı olduğu için](https://github.com/OpenZeppelin/openzeppelin-contracts/issues/2620) doğru şekilde uygulanması zordur. Onun yerine [ERC-20](/developers/docs/standards/tokens/erc-20/) kullanılması tavsiye edilir.** Bu sayfa tarihi arşiv olarak kalır.
+
 ## Giriş {#introduction}
 
-ERC-777, mevcut [ERC-20](/developers/docs/standards/tokens/erc-20/) standardını geliştiren bir değiştirilebilir token standardıdır.
+ERC-777, mevcut [ERC-20](/developers/docs/standards/tokens/erc-20/) standardını geliştiren bir değiştirilebilir jeton standardıdır.
 
-## Ön Koşullar {#prerequisites}
+## Ön koşullar {#prerequisites}
 
-Bu sayfayı daha iyi anlamanız için, ilk olarak [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında okuma yapmanızı öneririz.
+Bu sayfayı daha iyi anlamanız için ilk olarak [ERC-20](/developers/docs/standards/tokens/erc-20/) hakkında okuma yapmanızı öneririz.
 
-## ERC-777, ERC-20 üzerine ne tür gelişmeler önerir? {#-erc-777-vs-erc-20}
+## ERC-777, ERC-20'nin üzerine ne tür iyileştirmeler önerir? {#-erc-777-vs-erc-20}
 
-ERC-777, ERC-20 üzerine aşağıdaki gelişmeleri sağlar.
+ERC-777, ERC-20'nin üzerine aşağıdaki iyileştirmeleri sağlar.
 
 ### Kancalar {#hooks}
 
-Kancalar, bir akıllı sözleşmenin kodunda açıklanan bir fonksiyondur. Kancalar, token'lar sözleşme aracılığıyla gönderildiğinde veya alındığında çağrılır. Bu, bir akıllı sözleşmenin gelen veya giden token'lara tepki vermesini sağlar.
+Kancalar, bir akıllı sözleşmenin kodunda açıklanan bir fonksiyondur. Kancalar, jetonlar sözleşme aracılığıyla gönderildiğinde veya alındığında çağrılır. Bu, bir akıllı sözleşmenin gelen veya giden jetonlara tepki vermesini sağlar.
 
 Kancalar, [ERC-1820](https://eips.ethereum.org/EIPS/eip-1820) standardı kullanılarak kaydedilir ve keşfedilir.
 
@@ -36,6 +40,6 @@ Standart ayrıca ERC-20'de oluşan `decimals` hakkındaki kafa karışıklığı
 
 ERC-777 sözleşmeleri ile sanki ERC-20 sözleşmeleriymiş gibi etkileşime geçilebilir.
 
-## Daha fazla bilgi {#further-reading}
+## Daha Fazla Okuma {#further-reading}
 
-[EIP-777: Token Standardı](https://eips.ethereum.org/EIPS/eip-777)
+[EIP-777: Jeton Standardı](https://eips.ethereum.org/EIPS/eip-777)

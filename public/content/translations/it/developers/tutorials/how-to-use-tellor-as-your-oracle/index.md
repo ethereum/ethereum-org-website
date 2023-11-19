@@ -5,8 +5,7 @@ author: "Tellor"
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
-  - "feed di prezzo"
+  - "Smart Contract"
   - "oracoli"
 skill: beginner
 published: 2021-06-29
@@ -26,11 +25,11 @@ Premesse:
 - hai installato npm
 - sai come usare npm per gestire le dipendenze
 
-Tellor è un oracolo in diretta e open source pronto all'implementazione. Questa guida per principianti vuole mostrare la facilità con cui puoi metterti al lavoro con Tellor, mettendo nel tuo progetto un oracolo totalmente decentralizzato e resistente alla censura.
+Tellor è un oracolo in diretta e open source pronto all'implementazione. Questa guida per principianti serve a mostrare la facilità con cui puoi metterti al lavoro con Tellor, fornendo il tuo progetto con un oracolo completamente decentralizzato e resistente alla censura.
 
 ## Panoramica {#overview}
 
-Tellor è un sistema di oracolo in cui le parti possono richiedere il valore di un punto di dati esterno alla catena (es. BTC/USD) e i reporter competono per aggiungere questo valore a una banca dati esterna alla catena, accessibile da tutti gli smart contract di Ethereum. Gli input a questa banca dati sono protetti da una rete di reporter di staking. Tellor usa meccanismi d'incentivazione di criptoeconomia, premiando gli invii di dati onesti dai reporter e punendo gli attori malevoli tramite l'emissione di token di Tellor, Tributes (TRB) e un meccanismo per le dispute.
+Tellor è un sistema di oracolo in cui le parti possono richiedere il valore di un punto di dati esterno alla catena (es. BTC/USD) e i segnalatori competono ad aggiungere tale valore a una banca dati sulla catena, accessibile da tutti i contratti intelligenti di Ethereum. Gli input a questa banca dati sono protetti da una rete di reporter di staking. Tellor utilizza dei meccanismi d'incentivazione cripto-economica, ricompensando gli invii di dati onesti dai segnalatori e punendo gli utenti malevoli tramite l'emissione del token di Tellor, Tributes (TRB) e un meccanismo di disputa.
 
 In questo tutorial, esamineremo:
 
@@ -57,44 +56,29 @@ Ecco un esempio:
 ```solidity
 import "usingtellor/contracts/UsingTellor.sol";
 
-contract BtcPriceContract is UsingTellor {
+contract PriceContract is UsingTellor {
+  uint256 public btcPrice;
 
-  //This Contract now has access to all functions in UsingTellor
+ //This Contract now has access to all functions in UsingTellor
 
-  bytes btcPrice;
-  bytes32 btcQueryId = 0x0000000000000000000000000000000000000000000000000000000000000002;
+constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
-  constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
+function setBtcPrice() public {
+    bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
+    bytes32 _queryId = keccak256(_b);
 
-  function setBtcPrice() public {
-    bool _didGet;
     uint256 _timestamp;
+    bytes _value;
 
-    (_didGet, btcPrice, _timestamp) = getCurrentValue(btcQueryId);
+    (_value, _timestamp) = getDataBefore(_queryId, block.timestamp - 15 minutes);
+
+    btcPrice = abi.decode(_value,(uint256));
   }
 }
 ```
 
-**Vuoi provare un diverso feed di dati? Dai un'occhiata all'elenco di feed di dati supportati qui: [Feed di dati correnti](https://docs.tellor.io/tellor/integration/data-feed-ids)**
+Per un elenco completo degli indirizzi dei contratti, fai riferimento a [questa guida](https://docs.tellor.io/tellor/the-basics/contracts-reference).
 
-## Indirizzi: {#addresses}
+Per semplicità d'uso, la repository UsingTellort è dotata di una versione del contratto [Tellor Playground](https://github.com/tellor-io/TellorPlayground), per una più facile integrazione. Visualizza [questa pagina](https://github.com/tellor-io/sampleUsingTellor#tellor-playground) per un elenco delle funzioni utili.
 
-Rete principale: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
-
-### Vuoi fare qualche test prima? Vedi nell'elenco seguente i nostri indirizzi di rete di prova attivi: {#looking-to-do-some-testing-first-see-the-list-below-for-our-active-testnet-addresses}
-
-Rinkeby: [`0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0`](https://rinkeby.etherscan.io/address/0x88df592f8eb5d7bd38bfef7deb0fbc02cf3778a0#code)
-
-Kovan: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://kovan.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Ropsten: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://ropsten.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Goerli: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://goerli.etherscan.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Rete di prova di BSC: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://testnet.bscscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7#code)
-
-Rete di prova di Polygon Mumbai: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://mumbai.polygonscan.com/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7/contracts#code)
-
-Rete di prova Arbitrum: [`0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7`](https://rinkeby-explorer.arbitrum.io/address/0x3477EB82263dabb59AC0CAcE47a61292f28A2eA7)
-
-### Per un'implementazione più robusta dell'oracolo di Tellor, dai un'occhiata all'elenco completo di funzioni disponibili [qui](https://github.com/tellor-io/usingtellor/blob/master/README.md) {#for-a-more-robust-implementation-of-the-tellor-oracle-check-out-the-full-list-of-available-functions-here}
+Per un'implementazione più robusta dell'oracolo di Tellor, consulta [qui](https://github.com/tellor-io/usingtellor/blob/master/README.md) l'elenco completo delle funzioni disponibili.

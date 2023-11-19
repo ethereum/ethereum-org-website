@@ -43,6 +43,7 @@ Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpu
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 In unserem Bereich mit [Ethereum-Entwicklerressourcen](/developers/) finden Sie auch Dokumentationen und Entwicklungsleitfäden.
 
@@ -64,7 +65,7 @@ Hier sind einige beliebte Beispiele:
 
 Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
 
-- [EthStaker-Discord](https://discord.gg/ethstaker)
+- [EthStaker-Discord](https://discord.io/ethstaker)
 - [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
 
 Die meisten Teams, die Ethereum-Clients entwickeln, haben auch eigene, öffentlich zugängliche Bereiche, in denen Sie Unterstützung erhalten und Fragen stellen können.

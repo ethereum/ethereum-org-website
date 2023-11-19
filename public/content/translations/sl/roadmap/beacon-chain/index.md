@@ -10,7 +10,7 @@ summaryPoint2: Z izvirno Ethereumovo verigo, ki je uporabljala dokaz o delu, je 
 summaryPoint3: Oddajniška veriga je vpeljala protokol z logiko za doseganje soglasja in blokiranja lažnih govoric, ki zdaj ščiti Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Oddajniška veriga je začela delovati 1. decembra 2020 in je formalizirala dokaz o deležu kot Ethereumov mehanizem za doseganje soglasja ob spojitvi 15. septembra 2022.
 </UpgradeStatus>
 

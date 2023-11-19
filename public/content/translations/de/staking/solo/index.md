@@ -15,7 +15,7 @@ summaryPoints:
 
 ## Was ist Solo-Staking? {#what-is-solo-staking}
 
-Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen Validator zu aktivieren, wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
+Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen [Validator zu aktivieren](#faq), wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
 
 **Das Solo-Staking erhöht die Dezentralisierung des Ethereum-Netzwerks **, damit Ethereum gegen Zensur resistenter und gegen Angriffe robuster wird. Andere Staking-Methoden können das Netzwerk nicht auf die gleiche Weise unterstützen. Das Solo-Staking ist die beste Staking-Option zur Absicherung von Ethereum.
 
@@ -53,9 +53,9 @@ Es erfordert auch eine sehr einfache Hardware-Konfiguration und ein gewisses Ver
 </ExpandableCard>
 
 <ExpandableCard title="Sichere Schlüsselverwaltung" eventCategory="SoloStaking" eventName="clicked secure key management">
-Genauso wie private Schlüssel Ihre Ethereum-Adresse sichern, müssen Sie Schlüssel speziell für Ihren Validator generieren. Sie müssen verstehen, wie Sie Seed-Phrasen oder private Schlüssel sicher und geschützt aufbewahren.
+Genauso wie private Schlüssel Ihre Ethereum-Adresse sichern, müssen Sie Schlüssel speziell für Ihren Validator generieren. Sie müssen sich informieren, wie Sie Seed-Phrasen oder private Schlüssel sicher aufbewahren.{' '}
 
-<a href="/security/">Ethereum Sicherheit und Betrugsprävention</a>
+<a href="/security/">Ethereum-Sicherheit und Betrugsprävention</a>
 </ExpandableCard>
 
 <ExpandableCard title="Wartung" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -69,7 +69,7 @@ Ihre Belohnungen sind proportional zu der Zeit, in der Ihr Validator online ist 
 <ExpandableCard title="Slashing-Risiko" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Im Gegensatz zu Strafen für Inaktivität in Offline-Zeiten ist <em>Slashing</em> eine viel schwerwiegendere Strafe, die auf böswillige Vergehen beschränkt ist. Wenn Sie einen Minderheiten-Client mit Ihren Schlüsseln jeweils auf nur einer Maschine laden, wird das Risiko des Schrumpfens minimiert. Davon abgesehen müssen sich alle Staker der Risiken von Slashing bewusst sein.
 
-Für mehr Informationen zu Slashing und dem Lebenszyklus von Validatoren, nutzen Sie <a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">diesen Link</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mehr über Slashing und den Lebenszyklus von Validatoren</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -103,21 +103,21 @@ Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Sc
 
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwenden Sie die obigen Indikatoren, um Sie durch die folgenden Tools zu führen.
 
-<InfoBanner emoji="⚠️" isWarning>
-Bitte beachten Sie, wie wichtig es ist, einen <a href="/developers/docs/nodes-and-clients/client-diversity/">Minderheits-Client</a> zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheit-Client einrichten können, werden als <em style={{ textTransform: "uppercase" }}>„Multi-Client."</em> bezeichnet
-</InfoBanner>
+<ProductDisclaimer />
 
 ### Node-Tools
 
 <StakingProductsCardGrid category="nodeTools" />
 
+Bitte beachten Sie, wie wichtig es ist, einen [Minderheits-Client](/developers/docs/nodes-and-clients/client-diversity/) zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheit-Client einrichten können, werden als <em style={{ textTransform: "uppercase" }}>„Multi-Client"</em> bezeichnet.
+
 ### Schlüssel-Generatoren
 
-Diese Tools können als Alternative zur [Staking-Einlage CLI](https://github.com/ethereum/staking-deposit-cli/) verwendet werden, um bei der Schlüsselgenerierung zu helfen.
+Diese Tools können als Alternative zur [Staking-Einlage-CLI](https://github.com/ethereum/staking-deposit-cli/) genutzt werden, um bei der Schlüsselgenerierung zu helfen.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Haben Sie einen Vorschlag für ein Staking-Tool, das wir noch nicht haben? Sehen Sie sich unsere [Produktlistenrichtlinie](/contributing/adding-staking-products/) an, um zu sehen, ob sie gut passt, und um sie zur Überprüfung einzureichen.
+Haben Sie einen Vorschlag für einen Staking-Tool, der noch fehlt? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.
 
 ## Erkunden Sie Solo-Staking-Anleitungen {#staking-guides}
 
@@ -125,7 +125,7 @@ Haben Sie einen Vorschlag für ein Staking-Tool, das wir noch nicht haben? Sehen
 
 ## Häufig gestellte Fragen {#faq}
 
-Dies sind einige der häufigsten Fragen zum Thema Staking, über die es sich zu informieren lohnt.
+Das sind einige der häufigsten Fragen zum Thema Staking. Es ist lohnenswert sich damit auseinanderzusetzen.
 
 <ExpandableCard title="Was ist ein Validator?">
 
@@ -181,6 +181,7 @@ Offline-Strafen sind proportional dazu, wie viele andere gleichzeitig offline si
 </ExpandableCard>
 
 <ExpandableCard title="Wie schalte ich meine Belohnungen frei oder bekomme mein ETH zurück?">
+
 Abhebungen jeglicher Art aus der Beaconchain erfordern die Angabe von Rücktrittsberechtigungen.
 
 Neue Staker setzen dies bei der Schlüsselgenerierung und Einzahlung. Bestehende Staker, die dies noch nicht eingestellt haben, können ihre Schlüssel aktualisieren, um diese Funktion zu unterstützen.
@@ -198,5 +199,5 @@ Um Ihr gesamtes Guthaben zu entsperren und zu erhalten, müssen Sie auch den Pro
 - [Client-Diversität fördern](https://www.attestant.io/Posts/Client-Diversität-fördern/) – _Jim McDonald 2022_
 - [Client-Diversität auf der Konsensebene von Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022_
 - [Anleitung: Ethereum-Validator-Hardware kaufen](https://www.youtube.com/watch?v=C2wwu1IlhDc) – _EthStaker 2022_
-- [Schritt für Schritt: Wie man dem Ethereum 2.0 Testnetz beitritt](https://kb.beaconcha.in/Guides/Tutorium-eth2-Multi-Client) - _Butta_
-- [Eth2-Slashing-Präventionstipps](https://medium.com/prysmatic-labs/eth2-Slashing-Präventionstipps-f6faa5025f50) – _Raul Jordan 2020_
+- [Schritt für Schritt: Wie man dem Ethereum 2.0 Testnetz beitritt](https://kb.beaconcha.in/Guides/Tutorium-eth2-Multi-Client) - _ Butta_
+- [Eth2-Slashing-Präventionstipps](https://medium.com/prysmatic-labs/eth2-Slashing-Präventionstipps-f6faa5025f50) – _Raul Jordan 2020 _
