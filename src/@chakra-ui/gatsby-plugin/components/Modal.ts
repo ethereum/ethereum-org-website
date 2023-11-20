@@ -46,13 +46,10 @@ export const Modal = defineMultiStyleConfig({
         fontFamily: "Inter",
       },
       closeButton: {
-        padding: 0,
-        width: "24px",
-        height: "24px",
-        borderRadius: 0,
-        color: "rgb(178, 178, 178)",
-        fontSize: "sm",
-        marginTop: 5,
+        boxSize: "8",
+        color: "body.base",
+        top: "8",
+        insetInlineEnd: "8",
       },
       body: {
         padding: 0,
