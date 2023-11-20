@@ -91,7 +91,6 @@
     "./src/components/Layer2/Layer2Onboard.tsx",
     "./src/components/Layer2ProductCard.tsx",
     "./src/components/Layout.tsx",
-    "./src/components/Leaderboard.tsx",
     "./src/components/LearningToolsCardGrid.tsx",
     "./src/components/Modal.tsx",
     "./src/components/Morpher.tsx",
