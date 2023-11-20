@@ -91,7 +91,7 @@ Podczas gdy DAO mogą mieć tysiące członków posiadających prawo głosu, fun
 
 W 1977 r. w Wyoming powstały pierwsze spółki z ograniczoną odpowiedzialnością (LLC), które chronią przedsiębiorców i ograniczają ich odpowiedzialność. Ostatnio wprowadziły one ustawę DAO, która ustanawia status prawny DAO. Obecnie w Wyoming, Vermont i na Wyspach Dziewiczych obowiązuje w pewnej formie prawo DAO.
 
-#### Znany przykład {#law-example}
+### Znany przykład {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO użył prawa DAO Wyoming, aby kupić 40 hektarów ziemi w pobliżu Parku Narodowego Yellowstone.
 

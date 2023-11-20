@@ -86,17 +86,17 @@ També podeu [aprendre com executar un node aquí](/developers/docs/nodes-and-cl
 
 ## Preguntes freqüents {#faq}
 
-#### He enviat ETH a la cartera equivocada {#wrong-wallet}
+### He enviat ETH a la cartera equivocada {#wrong-wallet}
 
 En Ethereum les transaccions ja enviades són irreversibles. Malauradament, si heu enviat ETH a la cartera equivocada, no hi ha forma de recuperar aquests fons. Ethereum no pertany a cap persona, entitat o organització central, cosa que significa que ningú pot retornar transaccions. Per tant, és vital que comproveu dues vegades les vostres transaccions abans d'enviar-les.
 
-#### Com puc reclamar el meu regal d'Ethereum? {#giveaway-scam}
+### Com puc reclamar el meu regal d'Ethereum? {#giveaway-scam}
 
 Els regals d'Ethereum són estafes dissenyades per robar els vostres ETH. No caigueu en la temptació d'ofertes que semblen massa bones per ser veritat; si envieu ETH a aquestes adreces de regals, no rebreu cap regal i no podreu recuperar els vostres fons.
 
 [Més informació sobre la prevenció d'estafes](/security/#common-scams)
 
-#### La meva transacció està bloquejada {#stuck-transaction}
+### La meva transacció està bloquejada {#stuck-transaction}
 
 Les transaccions en Ethereum, de vegades, poden restar bloquejades si heu enviat una tarifa de transacció més baixa de la requerida a causa de la demanda de la xarxa. Moltes carteres donen l'opció de reenviar la mateixa transacció amb una tarifa de transacció més alta per a permetre que la transacció sigui processada. D'altra banda, podeu cancel·lar una transacció pendent enviant una transacció a la vostra adreça i utilitzant el mateix codi d'un sòl ús que la transacció pendent.
 
@@ -104,6 +104,6 @@ Les transaccions en Ethereum, de vegades, poden restar bloquejades si heu enviat
 
 [Com cancel·lar transaccions pendents en Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Com puc minar Ethereum? {#mining-ethereum}
+### Com puc minar Ethereum? {#mining-ethereum}
 
 No recomanem comprar equipament per a la mineria si no esteu minant Ethereum actualment. Durant el segon trimestre de 2022 tindrà lloc [la fusió](/roadmap/merge/): canviarem Ethereum de la prova de treball a la prova de participació. Aquest canvi significa que minar Ethereum ja no serà possible.

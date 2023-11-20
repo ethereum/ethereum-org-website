@@ -197,10 +197,6 @@ W zależności od tego, które oprogramowanie i tryb synchronizacji mają być u
 | Nethermind      | 200 GB+                               | 3 TB+                          |
 | Besu            | 750 GB+                               | 4 TB+                          |
 
-![Wykres pokazujący, że ilość GB potrzebna do pełnej synchronizacji ma tendencję wzrostową](./full-sync.png)
-
-![Wykres pokazujący, że ilość GB potrzebna do synchronizacji archiwum ma tendencję wzrostową](./archive-sync.png)
-
 Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowywania. Aby uzyskać najbardziej aktualne dane dla Geth i Parity, zobacz [pełną synchronizację danych](https://etherscan.io/chartsync/chaindefault) i [archiwum danych synchronizacji](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}

@@ -45,7 +45,7 @@ ERC-20 は、以下のような機能を提供します:
 
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)から引用：
 
-#### メソッド {#methods}
+### メソッド {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,7 +59,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-#### イベント {#events}
+### イベント {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)

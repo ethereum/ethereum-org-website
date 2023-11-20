@@ -91,7 +91,7 @@ Walaupun DAO mungkin mempunyai beribu-ribu ahli mengundi, dana boleh hidup dalam
 
 Pada tahun 1977, Wyoming mencipta LLC, yang melindungi usahawan dan mengehadkan liabiliti mereka. Baru-baru ini, mereka merintis undang-undang DAO yang menubuhkan status undang-undang untuk DAO. Pada masa ini Wyoming, Vermont, dan Kepulauan Virgin mempunyai undang-undang DAO dalam beberapa bentuk.
 
-#### Contoh yang terkenal {#law-example}
+### Contoh yang terkenal {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO menggunakan undang-undang DAO Wyoming untuk membeli 40 ekar tanah berhampiran Taman Negara Yellowstone.
 

@@ -105,13 +105,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### नोड उपकरण
+### नोड उपकरण
 
 <StakingProductsCardGrid category="nodeTools" />
 
 कृपया [अल्पसंख्यक क्लाइंट](/developers/docs/nodes-and-clients/client-diversity/) चुनने के महत्व पर ध्यान दें क्योंकि यह नेटवर्क की सुरक्षा में सुधार करता है, और आपके जोखिम को सीमित करता है। उपकरण जो आपको अल्पसंख्यक क्लाइंट सेटअप करने की अनुमति देते हैं, उन्हें <em style={{ textTransform: "uppercase" }}>"बहु-क्लाइंट"</em> के रूप में निरूपित किया जाता है।
 
-#### कुंजी जनरेटर
+### कुंजी जनरेटर
 
 कुंजी उत्पन्न करने में मदद करने के लिए इन उपकरणों का उपयोग [स्टेकिंग डिपॉजिट CLI](https://github.com/ethereum/staking-deposit-cli/) के विकल्प के रूप में किया जा सकता है।
 

@@ -91,7 +91,7 @@ While DAOs may have thousands of voting members, funds can live in a wallet shar
 
 In 1977, Wyoming invented the LLC, which protects entrepreneurs and limits their liability. More recently, they pioneered the DAO law that establishes legal status for DAOs. Currently Wyoming, Vermont, and the Virgin Islands have DAO laws in some form.
 
-#### A famous example {#law-example}
+### A famous example {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
 

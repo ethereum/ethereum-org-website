@@ -105,13 +105,13 @@ There are a variety of options available to help you with your setup. Use the ab
 
 <ProductDisclaimer />
 
-#### Node tools
+### Node tools
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
-#### Key Generators
+### Key Generators
 
 These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) to help with key generation.
 

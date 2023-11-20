@@ -17,7 +17,7 @@ If you're new to the topic of running a node, or looking for a less technical pa
 
 Langkah pertama dalam menjalankan node Anda adalah memilih pendekatan Anda. Anda harus memilih klien (perangkat lunaknya), lingkungan, dan parameter yang Anda inginkan untuk memulai. Lihat semua [klien Jaringan Utama](/developers/docs/nodes-and-clients/#advantages-of-different-implementations) yang tersedia.
 
-#### Pengaturan klien {#client-settings}
+### Pengaturan klien {#client-settings}
 
 Implementasi klien memungkinkan mode sinkronisasi yang berbeda dan beragam opsi lainnya. [Mode sinkronisasi](/developers/docs/nodes-and-clients/#sync-modes) mewakili metode pengunduhan dan pengesahan data rantai blok yang berbeda. Sebelum memulai node, Anda harus memutuskan jaringan dan mode sinkronisasi apa yang akan digunakan. Yang paling penting untuk dipertimbangkan adalah ruang disk dan waktu sinkronisasi yang dibutuhkan klien.
 

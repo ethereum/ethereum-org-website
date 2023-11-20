@@ -6,7 +6,7 @@ lang: es
 
 Un contrato inteligente es un programa que se ejecuta en una dirección en Ethereum. Están formados por datos y funciones, que se pueden ejecutar al recibir una transacción. A continuación encontrarás una visión general de lo que compone un contrato inteligente.
 
-### Requisitos previos {#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Asegúrate de haber leído primero la documentación sobre los [contratos inteligentes](/developers/docs/smart-contracts/). Este documento asume que ya estás familiarizado con lenguajes de programación como JavaScript o Python.
 
