@@ -1,38 +1,43 @@
-import React from "react"
 import { Box, Flex, FlexProps } from "@chakra-ui/react"
+import type { StaticImageData } from "next/image"
 
-import { getSrc, ImageDataLike } from "../../utils/image"
-import { trackCustomEvent } from "../../utils/matomo"
-import { ButtonLink } from "../Buttons"
-import OldHeading from "../OldHeading"
-import Translation from "../Translation"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { ButtonLink } from "@/components/Buttons"
+import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
 
-import AssetDownloadArtist from "./AssetDownloadArtist"
-import AssetDownloadImage from "./AssetDownloadImage"
+import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
+import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
+import { SITE_URL } from "@/lib/constants"
+import { extname } from "path"
 
-export interface IProps extends FlexProps {
+type AssetDownloadProps = {
+  title: string
   alt: string
   artistName?: string
   artistUrl?: string
-  src?: string
-  title: string
+  image: StaticImageData
   svgUrl?: string
-  image?: ImageDataLike | null
-}
+} & FlexProps
 
-const AssetDownload: React.FC<IProps> = ({
+const AssetDownload = ({
   alt,
   artistName,
   artistUrl,
   image,
-  src,
   title,
   svgUrl,
-  ...rest
-}) => {
-  const baseUrl = `https://ethereum.org`
-  const downloadUri = src ? src : image ? getSrc(image) : ""
-  const downloadUrl = `${baseUrl}${downloadUri}`
+  ...props
+}: AssetDownloadProps) => {
+  const { href: downloadUrl } = new URL(image.src, SITE_URL)
+
+  const matomoHandler = () => {
+    trackCustomEvent({
+      eventCategory: "asset download button",
+      eventAction: "click",
+      eventName: title,
+    })
+  }
 
   return (
     <Flex
@@ -40,7 +45,7 @@ const AssetDownload: React.FC<IProps> = ({
       justifyContent="space-between"
       m={4}
       p={0}
-      {...rest}
+      {...props}
     >
       <OldHeading as="h4" fontSize={{ base: "md", md: "xl" }} fontWeight="500">
         {title}
@@ -52,34 +57,13 @@ const AssetDownload: React.FC<IProps> = ({
         )}
       </Box>
       <Flex gap={5} mt={4}>
-        {downloadUrl && (
-          <ButtonLink
-            to={downloadUrl}
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: "asset download button",
-                eventAction: "click",
-                eventName: title,
-              })
-            }}
-          >
-            <Translation id="page-assets-download-download" />
-            <>&nbsp;(PNG)</>
-          </ButtonLink>
-        )}
+        <ButtonLink href={downloadUrl} onClick={matomoHandler}>
+          <Translation id="page-assets-download-download" />{" "}
+          {extname(image.src).slice(1).toUpperCase()}
+        </ButtonLink>
         {svgUrl && (
-          <ButtonLink
-            to={svgUrl}
-            onClick={() => {
-              trackCustomEvent({
-                eventCategory: "asset download button",
-                eventAction: "click",
-                eventName: title,
-              })
-            }}
-          >
-            <Translation id="page-assets-download-download" />
-            <>&nbsp;(SVG)</>
+          <ButtonLink href={svgUrl} onClick={matomoHandler}>
+            <Translation id="page-assets-download-download" /> (SVG)
           </ButtonLink>
         )}
       </Flex>
