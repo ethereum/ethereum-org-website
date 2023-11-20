@@ -21,7 +21,7 @@ export const Modal = defineMultiStyleConfig({
   baseStyle: definePartsStyle((props) =>
     defineMergeStyles(defaultBaseStyle?.(props), {
       overlay: {
-        bg: "rgba(0, 0, 0, 0.7)",
+        bg: "gray.500",
       },
       dialog: {
         size: "2xl",
