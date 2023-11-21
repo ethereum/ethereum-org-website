@@ -143,7 +143,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     }
   }
 
-  const crowdinContributors = getCrowdinContributors(mdPath, locale as Lang)
+  const crowdinContributors = ["docs", "tutorials"].includes(layout ?? "") // TODO: Remove fallback after Layout type implemented (PR #137)
+    ? getCrowdinContributors(mdPath, locale as Lang)
+    : []
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath(originalSlug, layout)
