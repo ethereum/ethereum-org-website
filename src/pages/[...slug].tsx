@@ -9,7 +9,12 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, StaticPaths, TocNodeType } from "@/lib/types"
+import type {
+  Layout,
+  NextPageWithLayout,
+  StaticPaths,
+  TocNodeType,
+} from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -41,7 +46,7 @@ import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
-const layoutMapping = {
+export const layoutMapping = {
   static: StaticLayout,
   "use-cases": UseCasesLayout,
   staking: StakingLayout,
@@ -62,11 +67,11 @@ const componentsMapping = {
   tutorial: tutorialsComponents,
 } as const
 
-interface Params extends ParsedUrlQuery {
+type Params = ParsedUrlQuery & {
   slug: string[]
 }
 
-interface Props {
+type StaticProps = {
   mdxSource: MDXRemoteSerializeResult
 }
 
@@ -94,7 +99,7 @@ export const getStaticPaths: GetStaticPaths = ({ locales }) => {
   }
 }
 
-export const getStaticProps: GetStaticProps<Props, Params> = async (
+export const getStaticProps: GetStaticProps<StaticProps, Params> = async (
   context
 ) => {
   const params = context.params!
@@ -132,11 +137,9 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = frontmatter.template
+  let layout: Layout = frontmatter.template ?? "static"
 
   if (!frontmatter.template) {
-    layout = "static"
-
     if (params.slug.includes("docs")) {
       layout = "docs"
     }
@@ -168,8 +171,8 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 }
 
-interface ContentPageProps extends Props {
-  layout: keyof typeof layoutMapping
+type ContentPageProps = StaticProps & {
+  layout: Layout
 }
 
 const ContentPage: NextPageWithLayout<ContentPageProps> = ({
