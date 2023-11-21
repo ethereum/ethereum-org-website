@@ -14,5 +14,6 @@ export const Modal: Story = {
     title: "Modal Title",
     children:
       "This is the base component to be used in the modal window.Please change the text to preview final content for ethereum.org",
+    actionButtonLabel: "Save",
   },
 }

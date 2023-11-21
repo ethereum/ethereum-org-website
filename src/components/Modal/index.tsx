@@ -9,6 +9,8 @@ import {
   ModalBody,
   type ModalProps,
   type ModalContentProps,
+  Button,
+  ModalFooter,
 } from "@chakra-ui/react"
 
 export interface IPropsOverlay {
@@ -19,7 +21,6 @@ export interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
   children?: React.ReactNode
   title?: string
   description?: string
-  ButtonLabel?: string
   actionButtonLabel?: string
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
@@ -30,8 +31,6 @@ const Modal: React.FC<IProps> = ({
   title,
   description,
   actionButtonLabel,
-  ButtonLabel,
-  /* size, */
   isOpen,
   setIsOpen,
   ...restProps
@@ -57,6 +56,12 @@ const Modal: React.FC<IProps> = ({
         <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
         <ModalBody>{children}</ModalBody>
+        {actionButtonLabel && (
+          <ModalFooter>
+            <Button variant="outline">Cancel</Button>
+            <Button>{actionButtonLabel}</Button>
+          </ModalFooter>
+        )}
       </ModalContent>
     </ChakraModal>
   )
