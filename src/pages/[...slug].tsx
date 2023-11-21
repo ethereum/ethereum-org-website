@@ -9,7 +9,12 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { Lang, NextPageWithLayout, StaticPaths } from "@/lib/types"
+import type {
+  Lang,
+  NextPageWithLayout,
+  StaticPaths,
+  TocNodeType,
+} from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -19,14 +24,13 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { generateTableOfContents } from "@/lib/utils/toc"
+import { remapTableOfContents } from "@/lib/utils/toc"
 
 import {
   docsComponents,
   DocsLayout,
   roadmapComponents,
   RoadmapLayout,
-  RootLayout,
   stakingComponents,
   StakingLayout,
   staticComponents,
@@ -40,6 +44,7 @@ import {
 } from "@/layouts"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
+import remarkInferToc from "@/lib/rehype/remarkInferToc"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const layoutMapping = {
@@ -50,7 +55,6 @@ const layoutMapping = {
   upgrade: UpgradeLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
-  // event: EventLayout,
 } as const
 
 const componentsMapping = {
@@ -108,10 +112,17 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
 
+  let tocNodeItems: TocNodeType[] = []
+  const tocCallback = (toc: TocNodeType): void => {
+    tocNodeItems = "items" in toc ? toc.items : []
+  }
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
-      // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
-      remarkPlugins: [remarkGfm],
+      remarkPlugins: [
+        // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
+        remarkGfm,
+        [remarkInferToc, { callback: tocCallback }],
+      ],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
         [rehypeHeadingIds],
@@ -120,7 +131,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   })
 
   const timeToRead = readingTime(markdown.content)
-  const tocItems = generateTableOfContents(mdxSource.compiledSource)
+  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const originalSlug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
   const lastDeployDate = getLastDeployDate()
@@ -200,11 +211,6 @@ ContentPage.getLayout = (page: ReactElement) => {
     crowdinContributors,
   } = page.props
 
-  const rootLayoutProps = {
-    contentIsOutdated: frontmatter.isOutdated,
-    contentNotTranslated,
-    lastDeployDate,
-  }
   const layoutProps = {
     slug,
     frontmatter,
@@ -216,18 +222,16 @@ ContentPage.getLayout = (page: ReactElement) => {
   const Layout = layoutMapping[layout]
 
   return (
-    <RootLayout {...rootLayoutProps}>
-      <Layout {...layoutProps}>
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          image={frontmatter.image}
-          author={frontmatter.author}
-          canonicalUrl={frontmatter.sourceUrl}
-        />
-        {page}
-      </Layout>
-    </RootLayout>
+    <Layout {...layoutProps}>
+      <PageMetadata
+        title={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.image}
+        author={frontmatter.author}
+        canonicalUrl={frontmatter.sourceUrl}
+      />
+      {page}
+    </Layout>
   )
 }
 

@@ -32,7 +32,7 @@ Se un Contratto Intelligente implementa i seguenti metodi ed eventi, può esser 
 
 Da [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Metodi {#methods}
+### Metodi {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Da [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Eventi {#events}
+### Eventi {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

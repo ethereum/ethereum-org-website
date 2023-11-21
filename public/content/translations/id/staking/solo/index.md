@@ -106,13 +106,13 @@ Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan An
 
 <ProductDisclaimer />
 
-#### Perangkat simpul
+### Perangkat simpul
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Perangkat yang memungkinkan Anda mengatur klien minoritas ditandai sebagai <em style={{ textTransform: "uppercase" }}>"multi-klien."</em>
 
-#### Pembangkit Kunci
+### Pembangkit Kunci
 
 Perangkat ini dapat digunakan sebagai alternatif untuk [CLI Deposit Penaruhan](https://github.com/ethereum/staking-deposit-cli/) untuk membantu dalam pembuatan kunci.
 

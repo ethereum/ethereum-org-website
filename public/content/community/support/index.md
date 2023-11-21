@@ -89,17 +89,17 @@ You can also [learn how to run a node here](/developers/docs/nodes-and-clients/r
 
 ## Frequently asked questions {#faq}
 
-#### I've sent ETH to the wrong wallet {#wrong-wallet}
+### I've sent ETH to the wrong wallet {#wrong-wallet}
 
 A transaction sent on Ethereum is irreversible. Unfortunately, if you've sent ETH to the wrong wallet, there is no way to recover these funds. No one central organization, entity, or person owns Ethereum, which means no one can reverse transactions. Therefore, it is vital always to double-check your transactions before sending them.
 
-#### How can I claim my Ethereum giveaway? {#giveaway-scam}
+### How can I claim my Ethereum giveaway? {#giveaway-scam}
 
 Ethereum giveaways are scams designed to steal your ETH. Do not be tempted by offers that seem too good to be true — if you send ETH to a giveaway address, you will not receive a giveaway, and you will not be able to recover your funds.
 
 [More on scam prevention](/security/#common-scams)
 
-#### My transaction is stuck {#stuck-transaction}
+### My transaction is stuck {#stuck-transaction}
 
 Transactions on Ethereum can sometimes get stuck if you have submitted a lower transaction fee than is required due to network demand. Many wallets provide an option to resubmit the same transaction with a higher transaction fee to allow the transaction to be processed. Alternatively, you can cancel a pending transaction by sending a transaction to your own address and using the same nonce as the pending transaction.
 
@@ -107,10 +107,10 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 [How to cancel pending Ethereum transactions](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### How do I mine Ethereum? {#mining-ethereum}
+### How do I mine Ethereum? {#mining-ethereum}
 
 Ethereum mining is no longer possible. Mining was switched off when Ethereum moved from proof-of-work to proof-of-stake. Now, instead of miners, Ethereum has validators. Validators stake ETH and receive staking rewards for securing the network.
 
-#### How do I become a staker/validator? {#become-validator}
+### How do I become a staker/validator? {#become-validator}
 
 To become a validator, you must stake 32 ETH in the Ethereum deposit contract and set up a validator node. More information is available on our [staking pages](/staking) and at [the staking launchpad](https://launchpad.ethereum.org/).

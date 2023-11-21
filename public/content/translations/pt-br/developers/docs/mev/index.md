@@ -6,7 +6,7 @@ lang: pt-br
 
 Valor Máximo Extraível (MEV, na sigla em inglês) expressa o valor máximo que pode ser extraído da produção de blocos que excede a recompensa padrão do bloco e sua taxa de gás através da inclusão, exclusão e alteração da ordem de transações em um determinado bloco.
 
-### Valor máximo extraível {#miner-extractable-value}
+## Valor máximo extraível {#miner-extractable-value}
 
 O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) e inicialmente referido como "valor extraível do minerador". Isto porque na prova de trabalho, os mineradores controlam a inclusão, exclusão e ordenação das transações. No entanto, desde a transição para a prova de participação por meio do [The Merge (A Fusão)](/roadmap/merge), os validadores têm sido responsáveis por essas funções, e a mineração não faz mais parte do protocolo Ethereum. Como os métodos de extração de valor ainda existem, o termo "valor máximo extraível" agora é usado.
 

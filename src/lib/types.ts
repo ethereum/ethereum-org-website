@@ -1,6 +1,7 @@
-import { ReactElement, ReactNode } from "react"
-import { NextPage } from "next"
-import { AppProps } from "next/app"
+import type { ReactElement, ReactNode } from "react"
+import type { NextPage } from "next"
+import type { AppProps } from "next/app"
+import type { Options } from "mdast-util-toc"
 
 import type {
   DocsFrontmatter,
@@ -187,8 +188,24 @@ export type Author = {
  */
 export type SourceHeadingItem = { depth: number; id: string; label: string }
 
+export type ToCNodeEntry = {
+  url?: string
+  title?: string
+}
+
+export type TocNodeType =
+  | ToCNodeEntry
+  | {
+    items: TocNodeType[]
+  }
+
 export type ToCItem = {
   title: string
   url: string
   items?: ToCItem[]
+}
+
+export type IRemarkTocOptions = {
+  maxDepth?: Options["maxDepth"]
+  callback: (toc: TocNodeType) => void
 }

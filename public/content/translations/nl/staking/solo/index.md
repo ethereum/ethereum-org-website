@@ -104,11 +104,11 @@ Er zijn verschillende opties beschikbaar om u te helpen met uw installatie. Gebr
 Houd rekening met het belang van het kiezen van een <a href="/developers/docs/nodes-and-clients/client-diversity/">minoriteit-client</a>, aangezien dit de veiligheid van het netwerk verbetert en uw risico beperkt. Tools die u in staat stellen om een minoriteit-client in te stellen worden aangeduid als <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 </InfoBanner>
 
-#### Node tools
+### Node tools
 
 <StakingProductsCardGrid category="nodeTools" />
 
-#### Sleutelgenerators
+### Sleutelgenerators
 
 Deze tools worden gebruikt als een alternatief voor de [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), om u te helpen met het genereren van sleutels.
 
