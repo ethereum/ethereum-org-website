@@ -1,5 +1,5 @@
+import type { ReactNode } from "react"
 
-import { ReactNode } from "react"
 import type {
   Frontmatter,
   Lang,
@@ -26,7 +26,7 @@ export interface Answer {
 
 export interface RawQuestion {
   prompt: TranslationKey
-  answers: Array<Answer>
+  answers: Answer[]
   correctAnswerId: string
 }
 
@@ -40,12 +40,12 @@ export interface QuestionBank {
 
 export interface RawQuiz {
   title: TranslationKey
-  questions: Array<string> // TODO: Force to be an array of questionID's
+  questions: string[] // TODO: Force to be an array of questionID's
 }
 
 export interface Quiz {
   title: string
-  questions: Array<Question>
+  questions: Question[]
 }
 
 export interface RawQuizzes {
@@ -57,7 +57,7 @@ export interface DeveloperDocsLink {
   to: string
   path: string
   description: TranslationKey
-  items: Array<DeveloperDocsLink>
+  items: DeveloperDocsLink[]
 }
 
 /**
@@ -79,7 +79,7 @@ export interface StaticFrontmatter extends SharedFrontmatter {
 
 /**
  * TODO: Refactor markdown content that currently uses SummaryPointsNumbered
- * to use SummaryPoints (`summaryPoints: Array<string>`) instead. Then
+ * to use SummaryPoints (`summaryPoints: string[]`) instead. Then
  * deprecate @/lib/util/getSummaryPoints.ts
  */
 export interface SummaryPointsNumbered {
@@ -90,7 +90,7 @@ export interface SummaryPointsNumbered {
 }
 
 interface SummaryPoints {
-  summaryPoints: Array<string>
+  summaryPoints: string[]
 }
 
 interface ImageInfo {
@@ -104,12 +104,12 @@ export interface UpgradeFrontmatter
   ImageInfo { }
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
-  buttons: Array<{
+  buttons: {
     label: string
     toId?: string
     to?: string
     variant?: string
-  }>
+  }[]
 }
 
 export interface UseCasesFrontmatter
@@ -132,7 +132,7 @@ export interface DocsFrontmatter extends SharedFrontmatter {
 }
 
 export interface TutorialFrontmatter extends SharedFrontmatter {
-  tags: Array<string>
+  tags: string[]
   author: string
   source?: string
   sourceUrl?: string
@@ -155,7 +155,7 @@ export interface MdPageContent {
   slug: string
   content: string
   frontmatter: Frontmatter
-  tocItems: Array<ToCItem>
+  tocItems: ToCItem[]
   lastUpdatedDate?: string
   contentNotTranslated: boolean
 }
