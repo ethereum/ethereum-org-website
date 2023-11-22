@@ -32,7 +32,7 @@ Wenn ein Smart Contract folgende Methoden und Ereignisse implementiert, kann er 
 
 Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Methoden {#methods}
+### Methoden {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Events {#events}
+### Events {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

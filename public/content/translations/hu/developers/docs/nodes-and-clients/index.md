@@ -197,10 +197,6 @@ Attól függően hogy melyik szoftvert és szinkronizációs módot használjuk,
 | Nethermind   | 200GB+                   | 3TB+                      |
 | Besu         | 750GB+                   | 4TB+                      |
 
-![Egy diagram, mely megmutatja, hogy a teljes szinkronizációhoz szükséges adat idővel nő](./full-sync.png)
-
-![Egy diagram, mely megmutatja, hogy az archív szinkronizációhoz szükséges adat idővel nő](./archive-sync.png)
-
 A fenti értékek mutatják hogy mindig változik a tárhelykövetelmény. A lehető legfrissebb adatokat a Geth-ről és a Parityről lásd itt: [Teljes szinkronizációs adat](https://etherscan.io/chartsync/chaindefault) és [Archívált szinkronizációs adat](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum egy egykártyás számítógépen {#ethereum-on-a-single-board-computer}

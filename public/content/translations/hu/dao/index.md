@@ -91,7 +91,7 @@ Miközben a DAO-knak ezernyi szavazattal rendelkező tagja lehet, az alapítván
 
 1977-ben Wyoming megalkotta a korlátolt felelősségű társasági formát, mely megvédi a vállalkozót és behatárolja a felelősségi körüket. Nemrég elsőként hozták létre a DAO-kra vonatkozó törvényt, mely jogi státuszt ad a DAO-knak. Jelenleg Wyoming, Vermont és a Virgin-szigetek rendelkeznek DAO-törvénnyel valamilyen formában.
 
-#### Egy híres példa {#law-example}
+### Egy híres példa {#law-example}
 
 [CityDAO](https://citydao.io) – A CityDAO 40 hektár földet vett a Yellowstone Nemzeti Park közelében Wyoming DAO-törvényével élve.
 

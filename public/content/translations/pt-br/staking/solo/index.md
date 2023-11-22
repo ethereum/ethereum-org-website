@@ -107,11 +107,11 @@ Há uma variedade de opções disponíveis para ajudá-lo na sua configuração.
 Observe a importância de escolher um <a href="/developers/docs/nodes-and-clients/client-diversity/">cliente minoritário</a>, pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar o cliente minoritário são indicadas como <em style={{ textTransform: "uppercase" }}>"multicliente."</em>
 </InfoBanner>
 
-#### Ferramentas do nó
+### Ferramentas do nó
 
 <StakingProductsCardGrid category="nodeTools" />
 
-#### Geradores de chaves
+### Geradores de chaves
 
 Essas ferramentas podem ser usadas como uma alternativa ao [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) para ajudar na geração de chaves.
 

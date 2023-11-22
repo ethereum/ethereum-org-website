@@ -91,7 +91,7 @@ Mientras que las DAO pueden tener miles de miembros votantes, los fondos pueden 
 
 En 1977, Wyoming inventó la LLC (sociedad de responsabilidad limitada), que protege a los emprendedores y limita su responsabilidad. Más recientemente, promovieron la ley de las DAO que establece su estatus legal. Actualmente Wyoming, Vermont y las islas Vírgenes tienen alguna legislación que regula las DAO.
 
-#### Un conocido ejemplo {#law-example}
+### Un conocido ejemplo {#law-example}
 
 La CityDAO utilizó la ley de las DAO de Wyoming para comprar 40 hectáreas de tierra cerca del Parque Nacional de Yellowstone.
 
