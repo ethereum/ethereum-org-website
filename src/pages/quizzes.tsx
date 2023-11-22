@@ -92,14 +92,14 @@ const QuizzesHubPage = ({ data }: PageProps<Queries.QuizzesHubPageQuery>) => {
       />
 
       <QuizzesHubContext.Provider value={contextState}>
-        <Modal isOpen={isOpen} setIsOpen={onClose}>
+        <QuizzesModal isQuizModalOpen={isOpen} onQuizModalClose={onClose}>
           <QuizWidget
             quizKey={currentQuiz}
             currentHandler={setCurrentQuiz}
             statusHandler={setQuizStatus}
             isStandaloneQuiz={false}
           />
-        </Modal>
+        </QuizzesModal>
 
         <Box px={{ base: 0, lg: 8 }} py={{ base: 0, lg: 4 }} mb={12}>
           <Flex
