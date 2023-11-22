@@ -12,7 +12,6 @@ import {
   ListItemProps,
   ListProps,
   OrderedList as ChakraOrderedList,
-  Text,
   UnorderedList as ChakraUnorderedList,
   useToken,
 } from "@chakra-ui/react"
@@ -22,8 +21,7 @@ import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-// TODO: Implement file contributors
-// import CrowdinContributors from "@/components/FileContributorsCrowdin"
+import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
@@ -51,8 +49,9 @@ import {
 } from "@/components/MdComponents"
 
 // Utils
-import { EDIT_CONTENT_URL } from "@/lib/constants"
-import { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
+import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
+import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -218,11 +217,17 @@ export const DocsLayout = ({
   slug,
   tocItems,
   lastUpdatedDate,
+  crowdinContributors,
 }: DocsLayoutProps) => {
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+
+  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
+  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const useGitHubContributors =
+    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <Page dir={isRightToLeft ? "rtl" : "ltr"}>
@@ -241,18 +246,16 @@ export const DocsLayout = ({
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
-          {frontmatter.lang !== "en" ? (
-            // TODO: Implement file contributors
-            <Text>CrowdinContributors</Text>
-          ) : (
-            // <CrowdinContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            //   langContributors={allCombinedTranslatorsJson.nodes}
-            // />
+          {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate!}
+            />
+          ) : (
+            <CrowdinContributors
+              relativePath={relativePath}
+              lastUpdatedDate={intlLastEdit}
+              contributors={crowdinContributors}
             />
           )}
           <TableOfContents
