@@ -5,8 +5,8 @@ import { Question } from "@/lib/interfaces"
 
 import { PROGRESS_BAR_GAP } from "@/lib/constants"
 
-import QuizRadioGroup from "../QuizRadioGroup"
-import QuizSummary from "../QuizSummary"
+import QuizRadioGroup from "./QuizRadioGroup"
+import QuizSummary from "./QuizSummary"
 
 export type QuizContentProps = {
   showAnswer: boolean

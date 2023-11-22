@@ -33,7 +33,7 @@ import { mdxTableComponents } from "@/components/Table"
 import YouTube from "@/components/YouTube"
 
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
-import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "./Quiz/OldQuizWidget"
 import Card from "./Card"
 import DocLink from "./DocLink"
 import Emoji from "./Emoji"

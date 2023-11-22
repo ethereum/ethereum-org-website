@@ -13,7 +13,7 @@ import { UserStats } from "@/lib/types"
 
 import { numberToPercent } from "@/lib/utils/numberToPercent"
 
-import { updateUserStats } from "./utils"
+import { updateUserStats } from "../utils"
 
 interface IProps {
   quizKey: string

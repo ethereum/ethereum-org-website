@@ -16,9 +16,8 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
+import type { TranslationKey } from "@/lib/types"
 import type { Question } from "@/lib/interfaces"
-
-import type { TranslationKey } from "../../lib/types"
 
 interface CustomRadioProps extends RadioProps {
   index: number
