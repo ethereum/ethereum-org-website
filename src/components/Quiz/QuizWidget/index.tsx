@@ -1,6 +1,8 @@
-import { Center, Spinner, Stack, VStack } from "@chakra-ui/react"
+import { Center, Heading, Spinner, Stack, VStack } from "@chakra-ui/react"
 
 import { QuizStatus } from "@/lib/types"
+
+import Translation from "@/components/Translation"
 
 import { AnswerIcon } from "./AnswerIcon"
 import { useQuizWidget } from "./useQuizWidget"
@@ -60,3 +62,23 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
 }
 
 export default QuizWidget
+
+/**
+ * For use of the widget on single pages (not the quizzes page)
+ */
+export const StandaloneQuizWidget = (
+  props: Omit<QuizWidgetProps, "isStandaloneQuiz">
+) => (
+  <VStack spacing="12" my="16">
+    <Heading
+      as="h2"
+      textAlign="center"
+      scrollBehavior="smooth"
+      scrollMarginTop={24}
+      id="quiz"
+    >
+      <Translation id="learn-quizzes:test-your-knowledge" />
+    </Heading>
+    <QuizWidget {...props} isStandaloneQuiz />
+  </VStack>
+)
