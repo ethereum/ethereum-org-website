@@ -24,7 +24,6 @@
   "exclude": [
     "node_modules",
     "./public/content",
-    "./public/assets",
     "./src/intl",
     "./src/data", // TODO: move to /public?
     // TODO: Remove these exclusions as we migrate the pages & templates that use these components

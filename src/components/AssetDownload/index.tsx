@@ -1,15 +1,14 @@
+import { extname } from "path"
 import { Box, Flex, FlexProps } from "@chakra-ui/react"
 import type { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
 import { ButtonLink } from "@/components/Buttons"
 import OldHeading from "@/components/OldHeading"
-import Translation from "@/components/Translation"
-
 import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
-import { SITE_URL } from "@/lib/constants"
-import { extname } from "path"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 type AssetDownloadProps = {
   title: string
@@ -29,8 +28,7 @@ const AssetDownload = ({
   svgUrl,
   ...props
 }: AssetDownloadProps) => {
-  const { href: downloadUrl } = new URL(image.src, SITE_URL)
-
+  const { t } = useTranslation(["page-assets"])
   const matomoHandler = () => {
     trackCustomEvent({
       eventCategory: "asset download button",
@@ -57,13 +55,13 @@ const AssetDownload = ({
         )}
       </Box>
       <Flex gap={5} mt={4}>
-        <ButtonLink href={downloadUrl} onClick={matomoHandler}>
-          <Translation id="page-assets-download-download" />{" "}
-          {extname(image.src).slice(1).toUpperCase()}
+        <ButtonLink href={image.src} onClick={matomoHandler} target="_blank">
+          {t("page-assets-download-download")}{" "}
+          ({extname(image.src).slice(1).toUpperCase()})
         </ButtonLink>
         {svgUrl && (
-          <ButtonLink href={svgUrl} onClick={matomoHandler}>
-            <Translation id="page-assets-download-download" /> (SVG)
+          <ButtonLink href={svgUrl} onClick={matomoHandler} target="_blank">
+            {t("page-assets-download-download")} (SVG)
           </ButtonLink>
         )}
       </Flex>
