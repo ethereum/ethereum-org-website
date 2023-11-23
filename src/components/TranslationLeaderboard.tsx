@@ -203,7 +203,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
           </Flex>
         </Flex>
         {leaderboardData[dateRangeType]
-          .slice(0, filterAmount) // This replaces the second filter that limits the amount
+          .slice(0, filterAmount)
           .map((item, idx) => {
             const { user, languages } = item
             const sortedLanguages = reverse(
@@ -218,7 +218,6 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             } else if (idx === 2) {
               emoji = ":3rd_place_medal:"
             }
-            // ... Rest of your map function that generates JSX for each item
             return (
               <Flex
                 textDecoration="none"
