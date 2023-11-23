@@ -31,7 +31,6 @@ import {
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import LeftNavBar from "@/components/LeftNavBar"
 
@@ -126,7 +125,6 @@ const LastUpdated = (props: ChildOnlyProp) => (
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
-  ShardChainsList,
   UpgradeStatus,
   BeaconChainActions,
 }
@@ -215,13 +213,13 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </MoreContent>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <Show above={lgBreakpoint}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBreakpoint}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />

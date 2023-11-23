@@ -291,14 +291,13 @@ export const StakingLayout: React.FC<IProps> = ({
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <StakingCommunityCallout my={16} />
