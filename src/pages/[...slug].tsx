@@ -1,4 +1,5 @@
 import { join } from "path"
+import { ParsedUrlQuery } from "querystring"
 
 import type {
   GetStaticPaths,
@@ -22,6 +23,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -42,7 +44,10 @@ import {
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+
+interface Params extends ParsedUrlQuery {
+  slug: string[]
+}
 
 const layoutMapping = {
   static: StaticLayout,
@@ -85,7 +90,7 @@ export const getStaticPaths = (({ locales }) => {
     paths,
     fallback: false,
   }
-}) satisfies GetStaticPaths<{ slug: string[] }>
+}) satisfies GetStaticPaths<Params>
 
 type Props = Omit<
   Parameters<LayoutMappingType[keyof LayoutMappingType]>[0],
@@ -165,7 +170,7 @@ export const getStaticProps = (async (context) => {
       tocItems,
     },
   }
-}) satisfies GetStaticProps<Props, { slug: string[] }>
+}) satisfies GetStaticProps<Props, Params>
 
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
