@@ -9,6 +9,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import type { GetStaticProps } from "next/types"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import AssetDownload from "@/components/AssetDownload"
 import InlineLink from "@/components/Link"
@@ -72,6 +74,7 @@ import whatIsEthereum from "@/public/what-is-ethereum.png"
 // import leslieTheRhino from "@/public/upgrades/upgrade_rhino.png"
 
 import type { ChildOnlyProp } from "@/lib/types"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const Row = (props: SimpleGridProps) => (
   <SimpleGrid
@@ -101,6 +104,15 @@ const H3 = (props: ChildOnlyProp) => (
     {...props}
   />
 )
+
+export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
+  const { locale } = context
+  // load i18n required namespaces for the given page
+  const requiredNamespaces = getRequiredNamespacesForPath("/assets")
+  return {
+    props: await serverSideTranslations(locale!, requiredNamespaces),
+  }
+}
 
 const AssetsPage = () => {
   const { t } = useTranslation("page-assets")

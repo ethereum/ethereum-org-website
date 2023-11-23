@@ -18,7 +18,7 @@ export const getLocaleForNumberFormat = (locale: Lang): Lang =>
 
 export const isLang = (lang: string) => {
   return i18nConfigs.map((language) => language.code).includes(lang)
-} 
+}
 
 export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
   let requiredNamespaces: string[] = ["common"]
@@ -37,6 +37,10 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
 
   if (layout === "tutorial") {
     requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
+
+  if (path.startsWith("/assets")) {
+    requiredNamespaces = [...requiredNamespaces, "page-assets"]
   }
 
   if (path.startsWith("/community")) {
