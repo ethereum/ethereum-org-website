@@ -8,13 +8,13 @@ import { useQuizWidgetContext } from "./context"
 type QuizContentProps = ChildOnlyProp
 
 export const QuizContent = ({ children }: QuizContentProps) => {
-  const { answerStatus, quizData } = useQuizWidgetContext()
+  const { answerStatus, title } = useQuizWidgetContext()
 
   const getTitleContent = useCallback((): string => {
-    if (!answerStatus) return quizData.title
+    if (!answerStatus) return title
     
     return answerStatus === 'correct' ? "Correct!" : "Incorrect"
-  }, [answerStatus, quizData.title])
+  }, [answerStatus, title])
   
   return (
     <VStack spacing="4">

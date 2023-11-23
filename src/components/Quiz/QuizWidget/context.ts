@@ -4,8 +4,7 @@ import { AnswerChoice, Quiz } from "@/lib/interfaces";
 
 import { AnswerStatus } from "./useQuizWidget";
 
-type QuizWidgetContextType = {
-  quizData: Quiz
+type QuizWidgetContextType = Quiz & {
   answerStatus: AnswerStatus
   currentQuestionIndex: number
   userQuizProgress: AnswerChoice[]

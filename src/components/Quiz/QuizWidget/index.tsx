@@ -59,7 +59,7 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
           {!!quizData ? (
             <QuizWidgetProvider
               value={{
-                quizData,
+                ...quizData,
                 answerStatus,
                 currentQuestionIndex,
                 userQuizProgress,

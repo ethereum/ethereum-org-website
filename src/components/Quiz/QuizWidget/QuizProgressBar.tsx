@@ -6,10 +6,8 @@ import { PROGRESS_BAR_GAP } from "@/lib/constants"
 import { useQuizWidgetContext } from "./context"
 
 export const QuizProgressBar = () => {
-  const { quizData, answerStatus, currentQuestionIndex, userQuizProgress } =
+  const { questions, answerStatus, currentQuestionIndex, userQuizProgress } =
     useQuizWidgetContext()
-
-  const questions = quizData.questions
 
   const progressBarBackground = useCallback(
     (index: number): ChakraProps["bg"] => {

@@ -21,7 +21,7 @@ import { useQuizWidgetContext } from "./context"
 
 export const QuizRadioGroup = () => {
   const {
-    quizData: { questions },
+    questions,
     currentQuestionIndex,
     answerStatus,
     selectedAnswer,
