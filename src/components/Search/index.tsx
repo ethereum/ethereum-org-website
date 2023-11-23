@@ -8,7 +8,6 @@ import {
   forwardRef,
   IconButtonProps,
   Portal,
-  useMediaQuery,
   useMergeRefs,
   Box,
   ThemeTypings,
@@ -18,8 +17,6 @@ import { Button } from "../Buttons"
 
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
-import { sanitizeHitUrl } from "../../utils/url"
-import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
 
 // TODO
 // import { sanitizeHitUrl } from "../../utils/url"
