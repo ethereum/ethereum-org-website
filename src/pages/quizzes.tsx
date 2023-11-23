@@ -18,6 +18,7 @@ import { QuizStatus } from "@/lib/types"
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import PageMetadata from "@/components/PageMetadata"
+import QuizWidget from "@/components/Quiz/QuizWidget"
 import QuizzesList, { QuizzesListProps } from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
@@ -79,8 +80,8 @@ const QuizzesHubPage: NextPage<
         description={t("quizzes-subtitle")}
       />
       {/* TODO: Add HubHero */}
-      <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
-        QuizWidget
+      <QuizzesModal isOpen={true} onClose={onClose} quizStatus={quizStatus}>
+        <QuizWidget quizKey={currentQuiz} />
       </QuizzesModal>
       <Box px={{ base: 0, lg: "8" }} py={{ base: 0, lg: "4" }} mb="12">
         <Flex direction={{ base: "column-reverse", lg: "row" }} columnGap="20">
