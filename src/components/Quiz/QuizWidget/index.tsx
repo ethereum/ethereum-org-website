@@ -1,10 +1,4 @@
-import {
-  Center,
-  Heading,
-  Spinner,
-  Stack,
-  VStack,
-} from "@chakra-ui/react"
+import { Center, Heading, Spinner, Stack, VStack } from "@chakra-ui/react"
 
 import { QuizStatus } from "@/lib/types"
 
@@ -14,6 +8,7 @@ import { AnswerIcon } from "./AnswerIcon"
 import { QuizWidgetProvider } from "./context"
 import { QuizContent } from "./QuizContent"
 import { QuizProgressBar } from "./QuizProgressBar"
+import { QuizRadioGroup } from "./QuizRadioGroup"
 import { useQuizWidget } from "./useQuizWidget"
 
 export type QuizWidgetProps = {
@@ -30,6 +25,9 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
     showResults,
     currentQuestionIndex,
     userQuizProgress,
+    selectedAnswer,
+    setSelectedAnswer,
+    setCurrentQuestionAnswerChoice
   } = useQuizWidget({ quizKey })
 
   return (
@@ -65,12 +63,17 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
                 answerStatus,
                 currentQuestionIndex,
                 userQuizProgress,
+                selectedAnswer,
+                setSelectedAnswer,
+                setCurrentQuestionAnswerChoice
               }}
             >
               <QuizContent>
                 {!showResults && (
-                  <QuizProgressBar
-                  />
+                  <>
+                    <QuizProgressBar />
+                    <QuizRadioGroup />
+                  </>
                 )}
               </QuizContent>
             </QuizWidgetProvider>

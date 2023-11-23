@@ -29,9 +29,11 @@ export const useQuizWidget = ({
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
+    const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(undefined)
 
   const initialize = () => {
     setQuizData(null)
+    setSelectedAnswer(undefined)
 
     const currentQuizKey =
       quizKey ||
@@ -81,5 +83,8 @@ export const useQuizWidget = ({
     showResults,
     currentQuestionIndex,
     userQuizProgress,
+    selectedAnswer,
+    setSelectedAnswer,
+    setCurrentQuestionAnswerChoice
   }
 }

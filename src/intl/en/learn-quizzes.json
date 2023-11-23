@@ -10,6 +10,7 @@
   "explanation": "Explanation",
   "next-question": "Next question",
   "next-quiz": "Next quiz",
+  "question-number": "Question number {{number}}:",
   "page-assets-merge": "The Merge",
   "passed": "You passed the quiz!",
   "questions": "Questions",

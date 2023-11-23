@@ -9,6 +9,9 @@ type QuizWidgetContextType = {
   answerStatus: AnswerStatus
   currentQuestionIndex: number
   userQuizProgress: AnswerChoice[]
+  selectedAnswer: string | undefined
+  setSelectedAnswer: (answer: string) => void
+  setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
 }
 
 const QuizWidgetContext = createContext<QuizWidgetContextType | null>(null)
