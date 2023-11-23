@@ -12,8 +12,7 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout } from "@/lib/types"
-import { Root } from "@/lib/interfaces"
+import type { NextPageWithLayout, TocNodeType } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -22,15 +21,13 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { generateTableOfContents } from "@/lib/utils/toc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { remapTableOfContents } from "@/lib/utils/toc"
 
 import {
-  // docsComponents,
+  docsComponents,
   DocsLayout,
   roadmapComponents,
   RoadmapLayout,
-  RootLayout,
   stakingComponents,
   StakingLayout,
   staticComponents,
@@ -44,6 +41,8 @@ import {
 } from "@/layouts"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
+import remarkInferToc from "@/lib/rehype/remarkInferToc"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -51,9 +50,9 @@ const layoutMapping = {
   staking: StakingLayout,
   roadmap: RoadmapLayout,
   upgrade: UpgradeLayout,
+  docs: DocsLayout,
   tutorial: TutorialLayout,
   // event: EventLayout,
-  docs: DocsLayout,
 }
 
 type LayoutMappingType = typeof layoutMapping
@@ -64,7 +63,7 @@ const componentsMapping = {
   staking: stakingComponents,
   roadmap: roadmapComponents,
   upgrade: upgradeComponents,
-  // docs: docsComponents,
+  docs: docsComponents,
   tutorial: tutorialsComponents,
 } as const
 
@@ -107,10 +106,17 @@ export const getStaticProps = (async (context) => {
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
 
+  let tocNodeItems: TocNodeType[] = []
+  const tocCallback = (toc: TocNodeType): void => {
+    tocNodeItems = "items" in toc ? toc.items : []
+  }
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
-      // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
-      remarkPlugins: [remarkGfm],
+      remarkPlugins: [
+        // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
+        remarkGfm,
+        [remarkInferToc, { callback: tocCallback }],
+      ],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
         [rehypeHeadingIds],
@@ -119,7 +125,7 @@ export const getStaticProps = (async (context) => {
   })
 
   const timeToRead = readingTime(markdown.content)
-  const tocItems = generateTableOfContents(mdxSource.compiledSource)
+  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(slug, locale!)
   const lastDeployDate = getLastDeployDate()
@@ -164,7 +170,8 @@ export const getStaticProps = (async (context) => {
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ mdxSource, layout }) => {
-  const components = { ...mdComponents, ...componentsMapping[layout] }
+  // @ts-expect-error
+  const components: Record<string, React.ReactNode> = { ...mdComponents, ...componentsMapping[layout] }
   return (
     <>
       <MDXRemote {...mdxSource} components={components} />
@@ -179,18 +186,12 @@ ContentPage.getLayout = (page) => {
     slug,
     frontmatter,
     lastUpdatedDate,
-    lastDeployDate,
-    contentNotTranslated,
     layout,
     timeToRead,
     tocItems,
   } = page.props
 
-  const rootLayoutProps: Omit<Root, "children"> = {
-    contentIsOutdated: frontmatter.isOutdated ?? false,
-    contentNotTranslated,
-    lastDeployDate,
-  }
+
   const layoutProps = {
     slug,
     frontmatter,
@@ -201,18 +202,16 @@ ContentPage.getLayout = (page) => {
   const Layout = layoutMapping[layout]
 
   return (
-    <RootLayout {...rootLayoutProps}>
-      <Layout {...layoutProps}>
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          image={frontmatter.image}
-          author={frontmatter.author}
-          canonicalUrl={frontmatter.sourceUrl}
-        />
-        {page}
-      </Layout>
-    </RootLayout>
+    <Layout {...layoutProps}>
+      <PageMetadata
+        title={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.image}
+        author={frontmatter.author}
+        canonicalUrl={frontmatter.sourceUrl}
+      />
+      {page}
+    </Layout>
   )
 }
 

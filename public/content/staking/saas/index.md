@@ -43,13 +43,13 @@ Below are some available SaaS provider. Use the above indicators to help guide y
 
 <ProductDisclaimer />
 
-#### SaaS providers
+### SaaS providers
 
 <StakingProductsCardGrid category="saas" />
 
 Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
-#### Key Generators
+### Key Generators
 
 <StakingProductsCardGrid category="keyGen" />
 

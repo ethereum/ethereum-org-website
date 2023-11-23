@@ -12,6 +12,7 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
+import { Options } from "mdast-util-toc"
 
 export type ChildOnlyProp = { children?: ReactNode }
 
@@ -146,9 +147,24 @@ export type FileContributorsState = {
 /**
  * Table of contents
  */
-export type SourceHeadingItem = { depth: number; id: string; label: string }
+export type ToCNodeEntry = {
+  url?: string
+  title?: string
+}
+
+export type TocNodeType =
+  | ToCNodeEntry
+  | {
+      items: TocNodeType[]
+    }
+
 export type ToCItem = {
   title: string
   url: string
-  items?: Array<ToCItem>
+  items?: ToCItem[]
+}
+
+export type IRemarkTocOptions = {
+  maxDepth?: Options["maxDepth"]
+  callback: (toc: TocNodeType) => void
 }

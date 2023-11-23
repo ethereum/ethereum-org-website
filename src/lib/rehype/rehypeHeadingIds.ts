@@ -2,7 +2,7 @@ import type { ElementContent, Root } from "hast"
 import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
-import { parseHeadingId, parseToCTitle } from "@/lib/utils/toc"
+import { parseHeadingId, trimmedTitle } from "@/lib/utils/toc"
 
 /**
  * Parses DOM elements to find all headings, setting an `id` attribute on each one.
@@ -28,7 +28,7 @@ const setMarkdownHeadingIds: Plugin<[{}], Root> = () => (tree, _file) => {
       const lastChildValue: string = lastChild.value as string
       node.children[lastIndex] = {
         type: "text",
-        value: parseToCTitle(lastChildValue),
+        value: trimmedTitle(lastChildValue),
       }
     }
   })

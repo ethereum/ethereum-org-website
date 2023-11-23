@@ -288,10 +288,6 @@ Modul de sincronizare pe care îl alegeți va afecta spațiul necesar, dar am es
 
 - Observaţie: Erigon nu oferă sincronizarea rapidă, însă permite curățarea completă (~500 GB)
 
-![O diagramă care arată că numărul de GB necesari pentru o sincronizare completă are o tendință de creștere](./full-sync.png)
-
-![O diagramă care arată că numărul de GB necesari pentru o sincronizare arhivă are o tendință de creștere](./archive-sync.png)
-
 Aceste diagrame arată cum cerințele de stocare sunt mereu în schimbare. Pentru cele mai recente date referitoare la Geth și OpenEthereum, consultați [date complete de sincronizare](https://etherscan.io/chartsync/chaindefault) și [date arhivate de sincronizare](https://etherscan.io/chartsync/chainarchive).
 
 ### Ethereum pe un computer cu o singură placă (SBC) {#ethereum-on-a-single-board-computer}

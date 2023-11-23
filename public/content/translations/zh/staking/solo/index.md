@@ -105,13 +105,13 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <ProductDisclaimer />
 
-#### 节点工具
+### 节点工具
 
 <StakingProductsCardGrid category="nodeTools" />
 
 请注意选择[非主流客户端](/developers/docs/nodes-and-clients/client-diversity/)的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style={{ textTransform: "uppercase" }}>“多客户端”。</em>
 
-#### 密钥生成器
+### 密钥生成器
 
 这些工具可用来替代[质押存款命令行接口](https://github.com/ethereum/staking-deposit-cli/)，帮助生成密钥。
 

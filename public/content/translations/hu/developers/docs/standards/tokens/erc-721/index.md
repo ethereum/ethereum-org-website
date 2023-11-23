@@ -32,7 +32,7 @@ Ha egy okosszerződés implementálja a következő metódusokat és eseményeke
 
 Az [EIP-721-ből](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Metódusok {#methods}
+### Metódusok {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Az [EIP-721-ből](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Események {#events}
+### Események {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
