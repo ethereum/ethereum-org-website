@@ -43,10 +43,7 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
           translateY={{ md: "-50%" }}
         >
           <AnswerIcon
-            // showAnswer={showAnswer}
-            // isCurrentQuestionCorrect={currentQuestionAnswerChoice?.isCorrect}
-            showAnswer={false}
-            isCurrentQuestionCorrect={false}
+            answerStatus={answerStatus}
           />
         </Center>
         <Stack spacing="8" justifyContent="space-between">
