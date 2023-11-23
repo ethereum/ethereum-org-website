@@ -7,16 +7,23 @@ tags:
   - "hardhat"
   - "alchemy"
   - "akıllı sözleşmeler"
-  - "başlarken"
   - "dağıtma"
 skill: beginner
 lang: tr
 published: 2021-03-31
 ---
 
-Blok zinciri geliştirme konusunda yeniyseniz ve nereden başlayacağınızı bilmiyorsanız veya akıllı sözleşmelerin nasıl dağıtıldığını ve bunlarla nasıl etkileşime geçileceğini anlamak istiyorsanız bu rehber tam size göre. Bir sanal cüzdan ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) ve [Alchemy](https://alchemyapi.io/eth) kullanarak Ropsten test ağında basit bir akıllı sözleşme oluşturma ve dağıtma adımlarını inceleyeceğiz (bunların ne demek olduğunu anlamıyorsanız üzülmeyin, açıklayacağız).
+Blok zinciri geliştirme konusunda yeniyseniz ve nereden başlayacağınızı bilmiyorsanız veya akıllı sözleşmelerin nasıl dağıtıldığını ve bunlarla nasıl etkileşime geçileceğini anlamak istiyorsanız bu rehber tam size göre. Size Goerli test ağında [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) ve [Alchemy](https://alchemyapi.io/eth)'yi kullanarak basit bir akıllı sözleşme oluşturmayı ve dağıtmayı göstereceğiz (bunların ne anlama geldiğini henüz bilmiyorsanız endişelenmeyin, anlatacağız).
 
-Bu öğreticinin 2. bölümünde, dağıtıldıktan sonra akıllı sözleşmemizle nasıl etkileşime geçebileceğimizi inceleyeceğiz ve 3. bölümde, bunu Etherscan'de nasıl yayınlayacağımızı ele alacağız.
+> **Uyarı**
+>
+> 🚧 Kullanımdan Kaldırma Bildirimi
+>
+> Bu rehberin tamamında, sözleşme oluşturmak ve dağıtmak için Goerli test ağı kullanılacaktır. Yine de, Ethereum Foundation'ın [Goerli'nin yakında kullanımdan kaldırılacağını duyurduğunu](https://www.alchemy.com/blog/goerli-faucet-deprecation) lütfen unutmayın.
+>
+> Bu öğretici için [Sepolia'yı](https://www.alchemy.com/overviews/sepolia-testnet) ve [Sepolia musluğunu](https://sepoliafaucet.com/) kullanmanızı öneriyoruz.
+
+Bu öğreticinin [2. bölümünde](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) sözleşmemiz burada dağıtıldığında akıllı sözleşmemizle nasıl etkileşim kurabileceğimizi ele alacak ve [3. bölümde](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) sözleşmenizi Etherscan'de nasıl yayımlayacağınızı anlatacağız.
 
 Herhangi bir noktada sorularınız varsa, [Alchemy Discord](https://discord.gg/gWuC7zB)'da bize ulaşmaktan çekinmeyin!
 
@@ -26,13 +33,13 @@ Ethereum zincirine istek göndermenin birçok yolu vardır. Basit olması için,
 
 ## Adım 2: Uygulamanızı (ve API anahtarınızı) oluşturun {#step-2}
 
-Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtarı oluşturabilirsiniz. Bu, Ropsten test ağına istekte bulunmamıza izin verecektir. Eğer test ağlarına aşina değilseniz, [bu sayfaya](/developers/docs/networks/) bakınız.
+Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtarı oluşturabilirsiniz. Bu, Goerli test ağına taleplerde bulunmamızı sağlayacaktır. Eğer test ağlarına aşina değilseniz, [bu sayfaya](/developers/docs/networks/) bakınız.
 
 1.  İmlecinizi gezinme çubuğundaki "Apps"in (Uygulamalar) üzerine gelip "Create App"e (Uygulama Oluştur) tıklayarak Alchemy Gösterge Panelinizdeki "Create App" sayfasına gidin
 
 ![Merhaba dünya uygulama oluşturma](./hello-world-create-app.png)
 
-2. Uygulamanıza "Hello World" adını verin, kısa bir açıklama yazın, Environment (Ortam) için "Staging"i (Hazırlama) seçin (uygulamanızın muhasebesi için kullanılır) ve network (ağ) için "Ropsten"i seçin.
+2. Uygulamanıza "Merhaba Dünya" adını verin, kısa bir açıklama yazın, Ortam için "Hazırlama"yı (uygulama muhasebeniz için kullanılır) seçin ve ağınız olarak da "Goerli"yi seçin.
 
 ![merhaba dünya görüntüleme uygulamasını oluşturma](./create-app-view-hello-world.png)
 
@@ -42,13 +49,13 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtar
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. [İşlemler](/developers/docs/transactions/) üzerine dahası.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak indirebilir ve bir MetaMask hesabı oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun (böylece gerçek parayla uğraşmayız).
+[Buradan](https://metamask.io/download.html) ücretsiz olarak indirebilir ve bir Metamask hesabı oluşturabilirsiniz. Bir hesap oluştururken ya da zaten bir hesabınız varsa, sağ üstten "Goerli Test Ağına" geçin (bu sayede gerçek parayla denemeler yapmayız).
 
 ![metamask ropsten örneği](./metamask-ropsten-example.png)
 
 ## Adım 4: Bir Musluktan ether ekleyin {#step-4}
 
-Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [Ropsten musluğuna](https://faucet.dimensions.network/) gidebilir ve Ropsten hesap adresinizi girip "Send Ropsten ETH"e (Ropsten ETH Gönder) tıklayabilirsiniz. Ağ trafiği nedeniyle sahte ETH'nizi almanız biraz zaman alabilir. Kısa bir süre sonra MetaMask hesabınızda ETH'yi görmelisiniz!
+Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte Eth'ye ihtiyacımız olacak. Eth alabilmek için [Goerli musluğuna](https://goerlifaucet.com/) gidip Alchemy hesabınıza giriş yapın ve cüzdan adresinizi girin, sonra da "Bana Eth gönder"e tıklayın. Ağ trafiği nedeniyle sahte Eth'nizi almanız biraz zaman alabilir. (Bunu yazarken denediğimizde, 30 dakika civarı sürdü) Eth'yi kısa süre içinde MetaMask hesabınızda görmelisiniz!
 
 ## Adım 5: Bakiyenizi kontrol edin {#step-5}
 
@@ -58,9 +65,9 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcı
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> **NOT:** Bu sonuç ETH değil, wei biçimindedir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm: 1 eth = 10<sup>18</sup> wei'dir. Yani 0x2B5E3AF16B1880000'ı ondalık sayıya dönüştürürsek 5\*10¹⁸ elde ederiz ki bu da 5 ETH'ye eşittir.
+> **NOT:** Bu sonuç ETH değil, wei cinsindendir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüştürme: 1 eth = 10<sup>18</sup> wei şeklindedir. Yani 0x2B5E3AF16B1880000'ı ondalık sayıya dönüştürürsek 5\*10¹⁸ elde ederiz ve bu da 5 ETH'ye eşittir.
 >
-> Vay be! Tüm sahte paramız yerinde <Emoji text=":money_mouth_face:" size={1} />.
+> Vay be! Tüm sahte paramız yerli yerinde <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Adım 6: Projemizi başlatın {#step-6}
 
@@ -106,9 +113,9 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 package.json'ı onayladıktan sonra hazırız!
 
-## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}'i indirin
+## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i indirin {#step-7}
 
-Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve dApp'ler oluştururken geliştiricilere yardımcı olur.
+Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Bu geliştiricilere canlı zincirde dağıtmadan önce akıllı sözleşmelerini ve merkeziyetsiz uygulamalarını geliştirirken yardımcı olur.
 
 `hello-world` projemizin içinde şunu yürütün:
 
@@ -213,7 +220,7 @@ Sanal cüzdanınızdan gönderilen her işlem, benzersiz özel anahtarınızı k
 npm install dotenv --save
 ```
 
-Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna MetaMask özel anahtarınızı ve HTTP Alchemy API URL'nizi ekleyin.
+Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna Metamask özel anahtarınızı ve HTTP Alchemy API URL'nizi ekleyin.
 
 - Özel anahtarınızı almak için [şu talimatları](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) takip edin
 - HTTP Alchemy API URL'sini almak için aşağıya göz atın
@@ -225,14 +232,14 @@ Alchemy API URL'sini kopyalayın
 `.env` dosyanız şu şekilde görünmelidir:
 
 ```
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
 PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 Bunları kodumuza gerçekten bağlamak için, adım 13'te `hardhat.config.js` dosyamızda bu değişkenlere başvuracağız.
 
 <InfoBanner isWarning>
-<code>.env</code> taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
+<code>.env</code> doyasını taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
 </InfoBanner>
 
 ## Adım 12: Ethers.js'yi kurun {#step-12-install-ethersjs}
@@ -266,10 +273,10 @@ const { API_URL, PRIVATE_KEY } = process.env;
 */
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "ropsten",
+   defaultNetwork: "goerli",
    networks: {
       hardhat: {},
-      ropsten: {
+      goerli: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`]
       }
@@ -330,7 +337,7 @@ Bir `ContractFactory` üzerinde `deploy()` öğesinin çağrılması, dağıtım
 Sonunda akıllı sözleşmemizi uygulamaya hazırız! Komut satırına gidin ve şunu yürütün:
 
 ```
-npx hardhat run scripts/deploy.js --network ropsten
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Daha sonra şöyle bir şey görmelisiniz:
@@ -339,7 +346,7 @@ Daha sonra şöyle bir şey görmelisiniz:
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-[Ropsten etherscan](https://ropsten.etherscan.io/)'e gidersek ve sözleşme adresimizi ararsak, bunun başarıyla dağıtıldığını görebiliriz. İşlem şunun gibi gözükecektir:
+[Goerli etherscan](https://goerli.etherscan.io/)'e gider ve sözleşme adresimizi aratırsak başarıyla dağıtılmış olduğunu görürüz. İşlem şunun gibi gözükecektir:
 
 ![etherscan sözleşmesi](./etherscan-contract.png)
 
@@ -351,7 +358,7 @@ Tebrikler! Ethereum zincirine bir akıllı sözleşme dağıttınız 🎉
 
 Perde arkasında neler olduğunu anlamak için [Alchemy gösterge panelimizde](https://dashboard.alchemyapi.io/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtreleme yaptığınızdan ve "Hello World"ü seçtiğinizden emin olun. ![merhaba dünya gezgini](./hello-world-explorer.png)
 
-Burada, `.deploy()` fonksiyonunu çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC çağrısı göreceksiniz. Burada belirtilmesi gereken iki önemli şey, akıllı sözleşmemizi Ropsten zincirine yazma isteği olan [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) ve hash değerine göre işlemimiz hakkındaki bilgileri okuma isteği olan (işlem gönderirken sık kullanılan bir şablon) [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) öğeleridir. İşlem gönderme hakkında daha fazlasını öğrenmek için, [Web3 kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) üzerine olan şu öğreticiye göz atın
+Burada, `.deploy()` fonksiyonunu çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC çağrısı göreceksiniz. Burada belirtilmesi gereken iki önemli şey, akıllı sözleşmemizi Goerli zincirine yazma isteği olan [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction) ve karma değerine göre işlemimiz hakkındaki bilgileri okuma isteği olan (işlem gönderirken sık kullanılan bir şablon) [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) öğeleridir. İşlem gönderme hakkında daha fazlasını öğrenmek için, [Web3 kullanarak işlem gönderme](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) üzerine olan şu öğreticiye göz atın
 
 Öğreticinin 1. bölümü bu kadar, 2. bölümde ilk mesajımızı güncelleyerek [akıllı sözleşmemizle gerçekten etkileşime geçeceğiz](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract) ve 3. bölümde herkesin akıllı sözleşmemizle nasıl [etkileşimde bulunacağını bilmesi için akıllı sözleşmemizi Etherscan'da](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan) yayınlayacağız.
 

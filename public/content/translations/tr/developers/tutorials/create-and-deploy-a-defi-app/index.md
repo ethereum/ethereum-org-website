@@ -151,7 +151,7 @@ Sözleşmelerimizi dağıtmak için kullanılan adres, Ganache'nin bize gösterd
 
 Dağıtıcı adresine 1 milyon MyToken token'ının gönderildiğini doğrulamak amacıyla, dağıtılan akıllı sözleşmemizle etkileşim kurmak için Truffle Konsolunu kullanabiliriz.
 
-> [Truffle Konsolu, herhangi bir Ethereum istemcisine bağlanan temel bir etkileşimli konsoldur.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
+> [Truffle Konsolu, tüm Ethereum istemcilerine bağlanan temel bir etkileşimli konsoldur.](https://www.trufflesuite.com/docs/truffle/getting-started/using-truffle-develop-and-the-console)
 
 Akıllı sözleşmemizle etkileşim kurmak için aşağıdaki komutu çalıştırın:
 

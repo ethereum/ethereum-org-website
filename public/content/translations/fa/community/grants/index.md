@@ -20,7 +20,8 @@ lang: fa
 - [Moloch DAO](https://www.molochdao.com/) - _حریم خصوصی، مقیاس‌پذیری لایه‌ی 2، امنیت کلاینت و غیره_
 - [Open Grants](https://opengrants.com/explore)
 - [ کمک‌های مالی DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _صفحه‌گسترده Google از سازمان‌های ارائه‌دهنده‌ی کمک‌هزینه_
-- [کمک‌های مالی لایه 2](https://esp.ethereum.foundation/layer-2-grants) - _بنیاد اتریوم برای پشتیبانی از برنامه‌های لایه 2 حمایت مالی ، تجزیه و تحلیل و آموزش ارائه می‌کند_
+- [Crunchbase برای حمایت های مالی Web3](https://www.cryptoneur.xyz/web3-grants)-_فیلتر و جست و جوی کمک های مالی بر اساس دسته،کاربرد، مقدار، و غیره. مشارکت کنید تا دیگران کمک مالی مورد نیاز خود را بهتر بیابند._
+- [کمک های مالی تحصیلی](https://esp.ethereum.foundation/academic-grants)-_کمک های مالی برای تحقیقات آکادمیک مربوط به اتریوم_
 
 ## خاص هر پروژه {#project-specific}
 
@@ -29,13 +30,15 @@ lang: fa
 - [برنامه‌ی کمک‌های مالی Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) DAO_ را اعطا می‌کند
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _صندوق اکوسیستم [Balancer](https://balancer.fi/)_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _ کمک‌های مالی اجتماعی [Chainlink](https://chain.link/)_
-- [برنامه‌ی کمک‌های مالی Compound](https://compoundgrants.org/) - اکوسیستم مالی _[Compound](https://compound.finance/)_
-- [سازمان کمک‌های مالی اکوسیستم Lido‏ (LEGO)](https://lego.lido.fi/) – _[اکوسیستم تأمین مالی Lido](https://lido.fi/)_
-- [برنامه‌ی MetaMask‏](https://metamaskgrants.org/) - _سازمان مستقل غیرمتمرکز کمک‌های مالی کارمندمحور_
-- [برنامه‌ی کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - _انجمن [mStable](https://mstable.org/)_
+- [برنامه‌ی کمک‌های مالی Compound](https://compoundgrants.org/) - اکوسیستم مالی \_[Compound](https://compound.finance/)
+- [برنامه کمک‌های مالی Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
+- [سازمان کمک‌های مالی اکوسیستم لیدو (LEGO)](https://lego.lido.fi/) - اکوسیستم مالی[Lido](https://lido.fi/)
+- [برنامه MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) سازمان مستقل غیرمتمرکز کمک‌های مالی کارمندمحور_
+- [برنامه‌ کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - انجمن _[mStable](https://mstable.org/)_
+- [برنامه حمایت مالی شبکه (SKALE)](https://skale.space/developers#grants)-_اکوسیستم[شبکه SKALE](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [The Graph](https://thegraph.com/)_
-- [برنامه‌ی کمک‌های مالی UMA](https://grants.umaproject.org/) - _[حمایت مالی از برنامه‌نویسان UMA](https://umaproject.org/)_
-- [برنامه‌ی کمک مالی Uniswap](https://www.unigrants.org/) - _جامعه‌ی [Uniswap](https://uniswap.org/)_
+- [برنامه‌ کمک‌های مالی UMA](https://grants.umaproject.org/) - _[ حمایت مالی از برنامه‌نویسان UMA](https://umaproject.org/)_
+- [برنامه‌ کمک مالی Uniswap](https://www.unigrants.org/) - _جامعه‌ [Uniswap](https://uniswap.org/)_
 - [کمک‌های مالی Web3](https://web3grants.net) - _یک فهرست گسترده از برنامه‌های کمک‌های مالی مرتبط با web3/رمزارز_
 
 ## کمک مالی درجه‌ی دوم {#quadratic-funding}
