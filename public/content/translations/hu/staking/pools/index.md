@@ -4,7 +4,7 @@ description: Áttekintés a letéti alapok használatáról
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-pool.png
+image: ..//staking/leslie-pool.png
 alt: Leslie, a rinocérosz a medencében fürdik.
 sidebarDepth: 2
 summaryPoints:
@@ -53,7 +53,7 @@ Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A
 
 <StakingProductsCardGrid category="pools" />
 
-Olyan szolgáltatást válasszon, amely komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style="text-transform: uppercase;">sokrétű végrehajtás</em> és <em style="text-transform: uppercase;">sokrétű konszenzus</em>
+Olyan szolgáltatást válasszon, amely komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>sokrétű végrehajtás</em> és <em style={{ textTransform: "uppercase" }}>sokrétű konszenzus</em>
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 

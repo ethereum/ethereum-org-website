@@ -5,7 +5,7 @@ lang: pt-br
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Um sistema econômico alternativo desenvolvido com base em princípios regenerativos
 summaryPoint2: Uma tentativa de aproveitar o Ethereum para resolver crises de coordenação em nível global, como, por exemplo, a mudança climática
@@ -20,7 +20,7 @@ Em vez disso, o ReFi tem como objetivo solucionar problemas ambientais, comunit�
 
 Um dos fundamentos do sistema ReFi é o conceito de economia regenerativa, criado por John Fullerton do [Capital Institute](https://capitalinstitute.org). Ele propôs oito princípios interconectados que fundamentam a integridade sistêmica:
 
-![Oito princípios interconectados](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Oito princípios interconectados](refi-regenerative-economy-diagram.png)
 
 Os projetos ReFi cumprem esses princípios por meio de [contratos inteligentes](/developers/docs/smart-contracts/) e aplicativos de [finanças descentralizadas (DeFi)](/defi/) para incentivar comportamentos regenerativos, como, por exemplo, a recuperação de ecossistemas degradados, e facilitar a colaboração em larga escala em relação a problemas globais, como a mudança climática e a perda de biodiversidade.
 

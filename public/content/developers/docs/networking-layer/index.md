@@ -134,7 +134,7 @@ A summary of the control flow is shown below, with the relevant networking stack
 - Execution layer passes validation data back to consensus layer, block now considered to be validated (local RPC connection)
 - Consensus layer adds block to head of its own blockchain and attests to it, broadcasting the attestation over the network (consensus p2p)
 
-### When consensus client is block producer: #{when-consensus-client-is-block-producer}
+### When consensus client is block producer: {#when-consensus-client-is-block-producer}
 
 - Consensus client receives notice that it is the next block producer (consensus p2p)
 - Consensus layer calls `create block` method in execution client (local RPC)

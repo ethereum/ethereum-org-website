@@ -2,7 +2,7 @@
 title: Escalar o Ethereum
 description: Rollups agrupam transações fora da cadeia, o que reduz os custos para o usuário. Entretanto, a maneira como rollups usam os dados atualmente é muito cara, o que limita a acessibilidade das transações. Proto-Danksharding corrige isso.
 lang: pt-br
-image: ../../../../../assets/roadmap/roadmap-transactions.png
+image: /roadmap/roadmap-transactions.png
 alt: "Planejamento Ethereum"
 template: roadmap
 ---
@@ -10,11 +10,11 @@ template: roadmap
 A escalabilidade do Ethereum é feita por meio de [camadas 2s](/layer-2/#rollups) (também conhecidas como rollups), que agrupam transações em lote e enviam o resultado para o Ethereum. Embora os rollups sejam até oito vezes mais baratos do que a rede principal do Ethereum, é possível otimizar ainda mais os rollups de forma a reduzir os custos para os usuários finais. Os rollups também dependem de alguns componentes centralizados que os desenvolvedores podem remover à medida que os rollups se desenvolvem.
 
 <InfoBanner mb={8} title="Custos de transação">
-  <ul style="margin-bottom: 0">
+  <ul style={{ marginBottom: 0 }}>
     <li>Os rollups atuais são <strong>~3-8x</strong> mais baratos do que a camada 1 da Ethereum</li>
     <li>ZK-rollups em breve reduzirão as taxas em <strong>~40-100x</strong></li>
     <li>As próximas alterações no Ethereum oferecerão <strong>~100-1000x</strong> a mais de escalabilidade</li>
-    <li style="margin-bottom: 0">Os usuários devem se beneficiar com transações <strong>que custam menos do que $0,001</strong></li>
+    <li style={{ marginBottom: 0 }}>Os usuários devem se beneficiar com transações <strong>que custam menos do que $0,001</strong></li>
   </ul>
 </InfoBanner>
 

@@ -3,7 +3,7 @@ title: イーサリアムロードマップ
 description: イーサリアムのスケーラビリティ、セキュリティ、サステナビリティを改善する工程
 lang: ja
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "イーサリアムロードマップ"
 summaryPoints:
 buttons:
@@ -66,7 +66,7 @@ buttons:
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">ETH2とは何ですか？</h4>
+  <h4 style={{ marginTop: 0 }}>ETH2とは何ですか？</h4>
 
   <p>「Eth2」という用語は、プルーフ・オブ・ステークへ移行する前、イーサリアムの今後を説明するために広く使用されていましたが、<strong>より正確な用語の方が好ましいということで段階的に廃止されました</strong>。元々は、プルーフ・オブ・ステークへの移行前のネットワークと移行後のネットワークを区別するために使われていました。また、異なるイーサリアムクライアントを指す場合もありました。具体的には、実行クライアントをETH1クライアント、コンセンサスクライアントをETH2クライアントと呼んでいました。</p>
 

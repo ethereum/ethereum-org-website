@@ -3,7 +3,7 @@ title: Planejamento Ethereum
 description: O caminho para mais escalabilidade, segurança e sustentabilidade no Ethereum.
 lang: pt-br
 template: roadmap
-image: ../../../../assets/roadmap/roadmap-main.png
+image: /roadmap/roadmap-main.png
 alt: "Planejamento Ethereum"
 summaryPoints:
 buttons:
@@ -66,7 +66,7 @@ O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisad
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">O que era ETH2?</h4>
+  <h4 style={{ marginTop: 0 }}>O que era ETH2?</h4>
 
   <p>O termo "Eth2" era normalmente usado para descrever o futuro do Ethereum antes da mudança para a prova de participação, mas foi <strong>eliminado em favor de uma terminologia mais exata.</strong> Originalmente, era utilizado para diferenciar a rede Ethereum antes da mudança para a prova de participação e a rede depois, ou às vezes para se referir aos diferentes clientes Ethereum (os clientes de execução eram às vezes chamados de clientes ETH1 e os clientes de consenso eram às vezes chamados de clientes ETH2).</p>
 

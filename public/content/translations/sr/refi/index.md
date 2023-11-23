@@ -5,7 +5,7 @@ lang: sr
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Alternativa ekonomskom sistemu izgrađena na regenerativnim principima
 summaryPoint2: Pokušaj upotrebe Ethereuma za rešavanje globalnih koordinacionih kriza kao što su klimatske promene
@@ -20,7 +20,7 @@ Umesto toga, ReFi želi da reši probleme životne sredine, zajednice i društve
 
 Jedna od osnova ReFi-ja je koncept regenerativne ekonomije koji je razvio Džon Fulerton iz [Capital Instituta](https://capitalinstitute.org). On je predložio osam međusobno povezanih principa koji su deo sistemskog zdravlja:
 
-![Osam međusobno povezanih principa](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![Osam međusobno povezanih principa](refi-regenerative-economy-diagram.png)
 
 ReFi projekti ostvaruju ove principe korišćenjem [pametnih ugovora](/developers/docs/smart-contracts/) i aplikacija za [decentralizovane finansije](/defi/) (DeFi) kako bi podstakli regenerativna ponašanja, na primer obnavljanje degradiranih ekosistema, i kako bi olakšali masovnu saradnju na globalnim pitanjima kao što su klimatske promene i gubitak biodiverziteta.
 

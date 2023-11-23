@@ -21,12 +21,6 @@ Bu bölüm, kullanımdan kaldırılmış masaüstü, komut satırı veya sunucu 
 
 ### OpenEthereum {#open-ethereum}
 
-<p align="center">
-  <img width="300" height="180" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://miro.medium.com/max/1400/1*npKIT4jX5WwlRZmcBPusig.png" />
-</p>
-
 Temmuz 2021'de kullanımdan kaldırılmıştır
 
 **Özet**
@@ -46,12 +40,6 @@ OpenEthereum, madenciler, hizmet sağlayıcılar ve hızlı senkronizasyon ile m
 [Tüm Ethereum yürütüm istemcisi seçeneklerini karşılaştırın](/developers/docs/nodes-and-clients/#execution-clients).
 
 ### Grid {#grid}
-
-<p align="center">
-  <img width="300" height="150" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://user-images.githubusercontent.com/47108/53807420-80433380-3f1d-11e9-80cd-967aabb26506.png" />
-</p>
 
 10 Ocak 2020'de kullanımdan kaldırılmıştır
 
@@ -73,12 +61,6 @@ Grid, aynı zamanda Mist'in varisi olarak görülebilir. Mist de bağımsız bir
 
 ### Ethereum Studio {#ethereum-studio}
 
-<p align="center">
-  <img width="500" height="350" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://user-images.githubusercontent.com/7814134/78335917-d0f8e600-758e-11ea-91e1-2433eaaef6f4.png" />
-</p>
-
 7 Aralık 2020'de kullanımdan kaldırılmıştır
 
 **Özet**
@@ -98,12 +80,6 @@ Ethereum Studio, kullanıcılara tümleşik bir Ethereum blokzinciri ve Solidity
 [Remix](https://remix.ethereum.org/), Solidity geliştirmeleri için alternatif bir web IDE'sidir. Ayrıca [Geliştirici Portalı](/developers/), web ve yerel geliştirme, belgeleme ve daha fazlası için araçlar sunmaktadır.
 
 ### Meteor Dapp Wallet {#meteor-dapp-wallet}
-
-<p align="center">
-  <img width="600" height="450" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://miro.medium.com/max/700/0*L222OAjPhe_KL1Iy." />
-</p>
 
 27 Mart 2019'da kullanımdan kaldırılmıştır
 
@@ -130,12 +106,6 @@ Aşağıda Mist'e göz atın.
 Ethereum.org'da [Ethereum Cüzdanları](/wallets/) sayfasına göz atın.
 
 ### Mist {#mist}
-
-<p align="center">
-  <img width="120" height="200" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://mist.ethereum.org/images/logo@2x.png" />
-</p>
 
 27 Mart 2019'da kullanımdan kaldırılmıştır
 
@@ -267,12 +237,6 @@ ruby-ethereum, Ruby'de yazılmış bir Ethereum istemcisiydi. 2018 civarında ku
 
 ### Parity {#parity}
 
-<p align="center">
-  <img width="240" height="180" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://davidgerard.co.uk/blockchain/wp-content/uploads/2017/11/parity-logo.png" />
-</p>
-
 2 Haziran 2020'de kullanımdan kaldırılmıştır
 
 **Özet**
@@ -296,12 +260,6 @@ Ethereum'un ilk yıllarındaki iki önde gelen uygulanabilir istemciden biri ola
 Ethereum.org'daki ["Kendi Ethereum düğümünüzü programlayın"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) kaynağı, bir Ethereum istemcisini indirme, kurma ve çalıştırma bölümlerini kapsar.
 
 ### Trinity {#trinity}
-
-<p align="center">
-  <img width="230" height="150" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://trinity.ethereum.org/images/trinity-logo-icon.svg" />
-</p>
 
 1 Temmuz 2021'de kullanımdan kaldırılmıştır
 
@@ -328,12 +286,6 @@ Ethereum.org'daki ["Kendi Ethereum düğümünüzü programlayın"](/developers/
 Bu bölüm, Ethereum Ana Ağı'na ve EVM tabanlı diğer ağlara dağıtılmış olan hizmetlere yöneliktir. Buradaki merkeziyetsiz uygulama ve hizmetlerin bakımsızlık, protokol değişiklikleri, vs. gibi sebeplerden hack'lenmiş ya da güvenlik açıklarına sahip olan DeFi uygulamalarını kapsayabileceğini göz önünde bulundurun.
 
 ### Cover Protokolü {#cover-protocol}
-
-<p align="center">
-  <img width="400" height="267" 
-    style="background-color:#fff; padding:0px 0px 0px 0px;"
-    src="https://miro.medium.com/max/1838/0*kA6PGbaYHLJOI66O" />
-</p>
 
 2021 sonbaharında kapatılmıştır
 
@@ -380,12 +332,6 @@ DAO başarısız olmasına rağmen, konsept devam ettirildi. DAO için geliştir
 [Gitcoin Hibeleri](https://gitcoin.co/grants/)
 
 ### SparkPool {#sparkpool}
-
-<p align="center">
-  <img width="562" height="124" 
-    style="background-color:#fff; padding:0px 10px 0px 10px;"
-    src="https://cryptodiffer.com/src/images/person/SparkPool-cryptodiffer.png" />
-</p>
 
 2021 sonbaharında kapatılmıştır
 

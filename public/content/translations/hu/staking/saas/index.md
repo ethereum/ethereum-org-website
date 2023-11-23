@@ -4,7 +4,7 @@ description: Egy áttekintő a pooled ETH staking elkezdéséről
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-saas.png
+image: ..//staking/leslie-saas.png
 alt: Leslie, a rinocérosz a felhőkön lebeg.
 sidebarDepth: 2
 summaryPoints:
@@ -43,13 +43,13 @@ Néhány elérhető SaaS-szolgáltatót soroltunk fel alább. A fenti jellemzők
 
 <ProductDisclaimer />
 
-#### SaaS-szolgáltatók
+### SaaS-szolgáltatók
 
 <StakingProductsCardGrid category="saas" />
 
-Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style="text-transform: uppercase;">sokrétű végrehajtás</em> és <em style="text-transform: uppercase;">sokrétű konszenzus</em>
+Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>sokrétű végrehajtás</em> és <em style={{ textTransform: "uppercase" }}>sokrétű konszenzus</em>
 
-#### Kulcsgenerátorok
+### Kulcsgenerátorok
 
 <StakingProductsCardGrid category="keyGen" />
 

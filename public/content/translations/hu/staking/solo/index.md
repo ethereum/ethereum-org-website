@@ -4,7 +4,7 @@ description: Az önálló letétbe helyezés áttekintése
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: ../../../../../assets/staking/leslie-solo.png
+image: ..//staking/leslie-solo.png
 alt: Leslie, a rinocérosz a saját számítógépes chipjén.
 sidebarDepth: 2
 summaryPoints:
@@ -105,13 +105,13 @@ Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A
 
 <ProductDisclaimer />
 
-#### Csomóponteszközök
+### Csomóponteszközök
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok az eszközök, melyek a kisebbségi kliens beállítást támogatják, a <em style="text-transform: uppercase;">többklienses</em> jellemzővel vannak jelölve
+Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok az eszközök, melyek a kisebbségi kliens beállítást támogatják, a <em style={{ textTransform: "uppercase" }}>többklienses</em> jellemzővel vannak jelölve
 
-#### Kulcsgenerátorok
+### Kulcsgenerátorok
 
 Ezek alternatív eszközök a [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) mellett, hogy a kulcsok le legyenek generálva.
 

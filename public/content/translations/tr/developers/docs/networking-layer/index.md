@@ -125,7 +125,7 @@ Fikir birliği ve yürütüm istemcileri paralel şekilde çalışır. Fikir bir
 
 İlgili ağ yığını parantez içinde olacak şekilde, kontrol akışının bir özeti aşağıda gösterilmiştir.
 
-##### Fikir birliği istemcisi blok üreticisi olmadığında:
+### Fikir birliği istemcisi blok üreticisi olmadığında:
 
 - Konsensus istemcisi, blok dedikodu protokolü aracılığıyla bir blok alır (konsensus p2p)
 - Konsensus istemcisi bloğu önceden doğrular, yani doğru meta verilerle geçerli bir göndericiden gelmesini sağlar
@@ -134,7 +134,7 @@ Fikir birliği ve yürütüm istemcileri paralel şekilde çalışır. Fikir bir
 - Yürütüm katmanı, doğrulama verilerini konsensus katmanına geri iletir, blok artık doğrulanmış olarak kabul edilir (yerel RPC bağlantısı)
 - Konsensus katmanı, kendi blok zincirinin başına blok ekler ve bunu onaylar, onaylamayı ağ üzerinden yayınlar (konsensus p2p)
 
-##### Fikir birliği istemcisi blok üreticisi olduğunda:
+### Fikir birliği istemcisi blok üreticisi olduğunda:
 
 - Konsensus istemcisi, bir sonraki blok üreticisi olduğuna dair bildirim alır (konsensus p2p)
 - Konsensus katmanı, yürütüm istemcisinde (yerel RPC) `create block` yöntemini çağırır

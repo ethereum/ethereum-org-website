@@ -2,7 +2,7 @@
 title: Scaling Ethereum
 description: ロールアップでは、トランザクションをオフチェーンでまとめて処理することで、ユーザーのコスト削減を実現しています。 しかし、現在のロールアップでは、データを使用するコストが高く、トランザクションを安価にすることが難しいという課題があります。 これについては、プロトダンクシャーディングによって解決できます。
 lang: ja
-image: ../../../../../assets/roadmap/roadmap-transactions.png
+image: /roadmap/roadmap-transactions.png
 alt: "イーサリアムロードマップ"
 template: roadmap
 ---
@@ -10,11 +10,11 @@ template: roadmap
 イーサリアムは、[レイヤー 2](/layer-2/#rollups)(ロールアップとも呼ばれます)と呼ばれるスケーリング技術で、トランザクションをまとめて処理し、出力をイーサリアムに送信します。 ロールアップでは、イーサリアムメインネットよりも最大 8 倍安価に取引を行うことができますが、ロールアップのさらなる最適化によって、さらにコストを削減できる可能性があります。 ただし、ロールアップには一部の集中化されたコンポーネントも含まれており、これはロールアップが成熟するにつれてデベロッパーによって取り除かれる予定です。
 
 <InfoBanner mb={8} title="トランザクションコスト">
-  <ul style="margin-bottom: 0">
+  <ul style={{ marginBottom: 0 }}>
     <li>現在のロールアップはイーサリアムのレイヤー1よりも<strong>約3～8倍</strong>安い</li>
     <li>ゼロ知識ロールアップはまもなく、<strong>約40～100倍</strong>安くなる予定</li>
     <li>イーサリアムの今後の仕様変更により、さらに<strong>約100～1000倍</strong>のスケーリングが実現</li>
-    <li style="margin-bottom: 0">ユーザーは、トランザクションのコストが<strong>0.001ドル未満</strong>というメリットを享受</li>
+    <li style={{ marginBottom: 0 }}>ユーザーは、トランザクションのコストが<strong>0.001ドル未満</strong>というメリットを享受</li>
   </ul>
 </InfoBanner>
 

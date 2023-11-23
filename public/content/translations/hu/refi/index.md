@@ -5,7 +5,7 @@ lang: hu
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: Egy alternatív gazdasági rendszer, mely regeneratív elvekre épül
 summaryPoint2: Az Ethereum kiaknázása a globális koordinációs krízisek megoldására, mint amilyen a klímaváltozás is
@@ -20,7 +20,7 @@ Ehelyett a ReFi arra törekszik, hogy regeneratív ciklusok létrehozásával k�
 
 A ReFi egyik alapköve a regeneratív gazdaság koncepciója, melyet John Fullerton fogalmazott meg a [Capital Institute intézettől](https://capitalinstitute.org). Nyolc összefüggő elvet javasolt, melyek megalapozzák a rendszer egészségét:
 
-![A nyolc összefüggő elv](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![A nyolc összefüggő elv](refi-regenerative-economy-diagram.png)
 
 A ReFi projektek ezeket az elveket valósítják meg az [okosszerződések](/developers/docs/smart-contracts/) és [a decentralizált pénzügyek (DeFi)](/defi/) alkalmazásainak segítségével, hogy ösztönözzék a regeneratív viselkedéseket, mint amilyen a lepusztult ökoszisztémák visszaállítása, illetve a nagy léptékű együttműködés elősegítése olyan globális problémák esetén, mint a klímaváltozás és a biodiverzitás-csökkenés.
 
