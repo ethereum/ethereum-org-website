@@ -1,12 +1,12 @@
 ---
-title: Como o The Merge afetou o fornecimento de ETH
-description: Detalhamento de como o The Merge afetou o fornecimento de ETH
+title: Como a Fusão afetou o fornecimento de ETH
+description: Detalhamento de como a Fusão afetou o fornecimento de ETH
 lang: pt-br
 ---
 
 # Como A Fusão afetou o fornecimento de ETH {#how-the-merge-impacts-ETH-supply}
 
-O The Merge representou a transição das redes Ethereum da prova de trabalho para a prova de participação, que ocorreu em setembro de 2022. A forma como o ETH foi emitido passou por mudanças no momento dessa transição. Anteriormente, novas moedas de ETH eram emitidas por duas fontes: a camada de execução (ou seja, Mainnet) e a camada de consenso (ou seja, Beacon Chain). Desde o The Merge, a emissão na camada de execução não acontece mais. Vamos explicar isso melhor.
+A Fusão representou a transição das redes Ethereum da prova de trabalho para a prova de participação, que ocorreu em setembro de 2022. A forma como o ETH foi emitido passou por mudanças no momento dessa transição. Anteriormente, novas moedas de ETH eram emitidas por duas fontes: a camada de execução (ou seja, Mainnet) e a camada de consenso (ou seja, Beacon Chain). Desde o The Merge, a emissão na camada de execução não acontece mais. Vamos explicar isso melhor.
 
 ## Componentes da emissão de ETH {#components-of-eth-issuance}
 
@@ -68,11 +68,15 @@ A emissão da camada de execução desde o The Merge é zero. A prova de trabalh
 
 ### Emissão da camada de consenso {#cl-issuance-post-merge}
 
-A emissão da camada de consenso continua hoje, como antes do The Merge, com pequenas recompensas para os validadores que atestam e propõem blocos. As recompensas do validador continuam a acumular para _saldos do validador_ que são gerenciados na camada de consenso. Ao contrário das contas atuais, que podem realizar transações na rede principal, essas são contas Ethereum separadas, nas quais os fundos do validador não serão sacáveis/transferíveis até a próxima atualização Shanghai. Isso significa que, embora o novo ETH ainda esteja sendo emitido, 100% dos fundos da camada de consenso permanecem bloqueados e indisponíveis para o mercado até que essa atualização ocorra.
+A emissão da camada de consenso continua hoje, como antes do The Merge, com pequenas recompensas para os validadores que atestam e propõem blocos. As recompensas do validador continuam a acumular para _saldos do validador_ que são gerenciados na camada de consenso. Diferentemente das contas atuais (contas de "execução"), que podem fazer transações na rede principal, essas são contas Ethereum separadas que não podem realizar transações livremente com outras contas Ethereum. Os fundos nessas contas podem ser retirados apenas para um único endereço de execução especificado.
 
-Quando as retiradas do validador são habilitadas, os stakers (participantes) serão incentivados a retirar suas _receitas/remunerações (saldo acima de 32 ETH)_, pois, de outra forma, esses fundos não estão contribuindo ao seu stake para participar (que no máximo é de 32).
+Desde a melhoria Shanghai/Capella que ocorreu em abril de 2023, esses saques foram habilitados para os participantes (stakers). Os participantes são incentivados a remover seus _ganhos/recompensas (saldo superior a 32 ETH)_, pois esses fundos não contribuem para o peso da participação (que é de no máximo 32).
 
-Depois que a funcionalidade de saaue é habilitada, os participantes também podem optar por sair e sacar todo o saldo do validador. Para garantir que o Ethereum esteja estável, o número de validadores saindo simultaneamente é limitado. Apenas seis validadores podem sair em uma dada época (período de 6,4 minutos), dependendo do total de ETH em stake no momento. À medida que mais validadores sacam, o número máximo de validadores existentes será gradualmente reduzido para quatro, para evitar intencionalmente que grandes quantidades desestabilizadoras de ETH em stake sejam sacadas simultaneamente.
+Os participantes também podem optar por sair e sacar todo o saldo do validador. Para garantir que o Ethereum esteja estável, o número de validadores saindo simultaneamente é limitado.
+
+Aproximadamente 0,33% da contagem total de validadores pode sair em um dia específico. Por padrão, quatro (4) validadores podem sair por época (a cada 6,4 minutos ou 900 por dia). Um (1) validador adicional tem permissão para sair a cada 65.536 (2<sup>16</sup>) validadores adicionais acima de 262.144 (2<sup>18</sup>). Por exemplo, com mais de 327.680 validadores, cinco (5) podem sair por época (1.125 por dia). Com uma contagem total de validadores ativos acima de 393.216, sies (6) poderão sair, e assim por diante.
+
+À medida que mais validadores sacam, o número máximo de validadores que saem reduz gradualmente para um mínimo de quatro, para evitar intencionalmente que grandes quantidades desestabilizadoras de ETH participado sejam sacadas simultaneamente.
 
 ### Detalhamento da inflação pós-fusão {#post-merge-inflation-breakdown}
 

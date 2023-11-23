@@ -10,13 +10,16 @@ import {
   Portal,
   useMediaQuery,
   useMergeRefs,
-  useToken,
+  Box,
+  ThemeTypings,
 } from "@chakra-ui/react"
 
 import { Button } from "../Buttons"
 
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
+import { sanitizeHitUrl } from "../../utils/url"
+import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
 
 // TODO
 // import { sanitizeHitUrl } from "../../utils/url"
@@ -57,13 +60,11 @@ const Search = forwardRef<IProps, "button">(
     const indexName =
       process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
-    // Check for the breakpoint with theme token
-    const xlBp = useToken("breakpoints", "xl")
-    const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBp})`)
+    const breakpointToken: ThemeTypings["breakpoints"] = "xl"
 
     return (
       <>
-        {isLargerThanXl ? (
+        <Box hideBelow={breakpointToken}>
           <SearchButton
             ref={mergedButtonRefs}
             onClick={() => {
@@ -80,7 +81,8 @@ const Search = forwardRef<IProps, "button">(
               buttonAriaLabel: t("search"),
             }}
           />
-        ) : (
+        </Box>
+        <Box hideFrom={breakpointToken}>
           <SearchIconButton
             onClick={() => {
               onOpen()
@@ -94,7 +96,7 @@ const Search = forwardRef<IProps, "button">(
             ref={mergedButtonRefs}
             aria-label={t("aria-toggle-search-button")}
           />
-        )}
+        </Box>
         <Portal>
           {isOpen && (
             <SearchModal
