@@ -23,6 +23,9 @@ export const useQuizWidget = ({
   const { t } = useTranslation()
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
+  const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
+    []
+  )
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
@@ -56,6 +59,9 @@ export const useQuizWidget = ({
 
   useEffect(initialize, [quizKey, t])
 
+  const currentQuestionIndex = userQuizProgress.length
+  const showResults = currentQuestionIndex === quizData?.questions.length
+
   /**
    * Determines the status of a submitted answer choice.
    *
@@ -69,5 +75,11 @@ export const useQuizWidget = ({
     return "incorrect"
   }, [currentQuestionAnswerChoice?.isCorrect, showAnswer])
 
-  return { quizData, answerStatus }
+  return {
+    quizData,
+    answerStatus,
+    showResults,
+    currentQuestionIndex,
+    userQuizProgress,
+  }
 }

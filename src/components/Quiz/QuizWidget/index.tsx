@@ -1,4 +1,10 @@
-import { Center, Heading, Spinner, Stack, VStack } from "@chakra-ui/react"
+import {
+  Center,
+  Heading,
+  Spinner,
+  Stack,
+  VStack,
+} from "@chakra-ui/react"
 
 import { QuizStatus } from "@/lib/types"
 
@@ -7,6 +13,7 @@ import Translation from "@/components/Translation"
 import { AnswerIcon } from "./AnswerIcon"
 import { QuizWidgetProvider } from "./context"
 import { QuizContent } from "./QuizContent"
+import { QuizProgressBar } from "./QuizProgressBar"
 import { useQuizWidget } from "./useQuizWidget"
 
 export type QuizWidgetProps = {
@@ -17,7 +24,13 @@ export type QuizWidgetProps = {
 }
 
 const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
-  const { quizData, answerStatus } = useQuizWidget({ quizKey })
+  const {
+    quizData,
+    answerStatus,
+    showResults,
+    currentQuestionIndex,
+    userQuizProgress,
+  } = useQuizWidget({ quizKey })
 
   return (
     <VStack spacing="12" width="full" maxW="600px">
@@ -42,15 +55,24 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
           translateX={{ md: "-50%" }}
           translateY={{ md: "-50%" }}
         >
-          <AnswerIcon
-            answerStatus={answerStatus}
-          />
+          <AnswerIcon answerStatus={answerStatus} />
         </Center>
         <Stack spacing="8" justifyContent="space-between">
           {!!quizData ? (
-            <QuizWidgetProvider value={{quizData, answerStatus}}>
-
-            <QuizContent>QuizContent</QuizContent>
+            <QuizWidgetProvider
+              value={{
+                quizData,
+                answerStatus,
+                currentQuestionIndex,
+                userQuizProgress,
+              }}
+            >
+              <QuizContent>
+                {!showResults && (
+                  <QuizProgressBar
+                  />
+                )}
+              </QuizContent>
             </QuizWidgetProvider>
           ) : (
             <Center>

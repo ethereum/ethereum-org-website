@@ -1,12 +1,14 @@
 import { createContext, useContext } from "react";
 
-import { Quiz } from "@/lib/interfaces";
+import { AnswerChoice, Quiz } from "@/lib/interfaces";
 
 import { AnswerStatus } from "./useQuizWidget";
 
 type QuizWidgetContextType = {
   quizData: Quiz
   answerStatus: AnswerStatus
+  currentQuestionIndex: number
+  userQuizProgress: AnswerChoice[]
 }
 
 const QuizWidgetContext = createContext<QuizWidgetContextType | null>(null)
