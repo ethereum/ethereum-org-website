@@ -31,7 +31,6 @@ import {
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import LeftNavBar from "@/components/LeftNavBar"
 
@@ -126,7 +125,6 @@ const LastUpdated = (props: ChildOnlyProp) => (
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
-  ShardChainsList,
   UpgradeStatus,
   BeaconChainActions,
 }
