@@ -21,8 +21,10 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visua
 - [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
+- [Rantom](https://rantom.app/)
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
 ## Dati {#data}
 
@@ -234,6 +236,7 @@ I dati di livello superiore del livello di consenso includono quanto segue:
 - [Blockchair](https://blockchair.com/ethereum): l'esploratore di Ethereum più privato. Anche per ordinare e filtrare i dati (mempool)
 - [Etherchain](https://www.etherchain.org/) - un esploratore di blocchi per la rete principale di Ethereum
 - [Ethplorer](https://ethplorer.io/) - un esploratore di blocchi incentrato sui token per la Rete Principale di Ethereum e la rete di prova di Kovan
+- [Rantom](https://rantom.app/): Un visualizzatore di transazioni NFT e DeFi open source e intuitivo per gli utenti, per una visione dettagliata
 
 ## Approfondimenti {#further-reading}
 

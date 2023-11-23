@@ -12,6 +12,7 @@ import { AppPropsWithLayout, Lang } from "@/lib/types"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { inter, mono } from "@/lib/fonts"
+import { RootLayout } from "@/layouts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
@@ -36,7 +37,13 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
         `}
       </style>
       <ChakraProvider theme={theme}>
-        {getLayout(<Component {...pageProps} />)}
+        <RootLayout
+          contentIsOutdated={!!pageProps.frontmatter?.isOutdated}
+          contentNotTranslated={pageProps.contentNotTranslated}
+          lastDeployDate={pageProps.lastDeployDate}
+        >
+          {getLayout(<Component {...pageProps} />)}
+        </RootLayout>
       </ChakraProvider>
     </>
   )

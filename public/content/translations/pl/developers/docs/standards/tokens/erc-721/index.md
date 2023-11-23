@@ -32,7 +32,7 @@ Jeśli inteligentny kontrakt implementuje następujące metody i zdarzenia, moż
 
 Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Metody {#methods}
+### Metody {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Wydarzenia {#events}
+### Wydarzenia {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

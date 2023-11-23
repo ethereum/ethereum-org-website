@@ -91,7 +91,7 @@ Bagama't may libo-libong miyembrong bumoboto sa mga DAO, puwedeng itabi ang pond
 
 Noong 1977, nilikha sa Wyoming ang LLC, na nagpoprotekta sa mga negosyante at nagbibigay limitasyon sa kanilang pananagutan. Kamakailan lang, ipinanukala rito ang batas sa DAO na nagtatakda ng legal na status para sa mga DAO. Sa kasalukuyan, may mga batas sa DAO ang Wyoming, Vermont, at Virgin Islands.
 
-#### Isang kilalang halimbawa {#law-example}
+### Isang kilalang halimbawa {#law-example}
 
 [CityDAO](https://citydao.io) – Ginamit ng CityDAO ang batas sa DAO ng Wyoming para bumili ng 40 acres ng lupa malapit sa Yellowstone National Park.
 

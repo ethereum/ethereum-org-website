@@ -22,7 +22,7 @@ Quando avvii un nodo, dovrebbe registrare il tuo [enode](/developers/docs/networ
 
 L'enode è solitamente rigenerato a ogni riavvio, quindi assicurati di consultare la documentazione del tuo client su come generare un enode persistente per il tuo nodo d'avvio.
 
-Per poter essere un buon nodo d'avvio è una buona idea incrementare il numero massimo di pari che possono connettersi a esso. Eseguire un nodo d'avvio con molti pari aumenterà significativamente i requisiti della larghezza di banda.
+Per poter essere un buon nodo d'avvio è una buona idea incrementare il numero massimo di pari che possono connettersi a esso. L'esecuzione di un nodo d'avvio con molti peer aumenterà in modo significativo i requisiti di larghezza di banda.
 
 ## Nodi d'avvio disponibili {#available-bootnodes}
 

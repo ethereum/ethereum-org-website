@@ -11,7 +11,7 @@ summaryPoint3: Va introduir la prova de participació a l'ecosistema Ethereum.
 summaryPoint4: Potser, això, ho coneixeu com la "Fase 0" dels mapes tècnics.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
     La cadena de balisa es va posar en marxa l'1 de desembre del 2020 al migdia (UTC). Per saber-ne més <a href="https://beaconscan.com/">exploreu les dades</a>. Si voleu ajudar a validar la cadena, podeu <a href="/staking/">"apostar" els vostres ETH</a>.
 </UpgradeStatus>
 

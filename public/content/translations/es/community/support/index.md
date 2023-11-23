@@ -89,17 +89,17 @@ También puede [aprender aquí a ejecutar su propio nodo](/developers/docs/nodes
 
 ## Preguntas más frecuentes {#faq}
 
-#### He enviado ETH a una cartera equivocada {#wrong-wallet}
+### He enviado ETH a una cartera equivocada {#wrong-wallet}
 
 Una transacción enviada en Ethereum es irreversible. Desafortunadamente, si ha enviado ETH a la cartera equivocada, no hay forma de recuperar esos fondos. Debido a que no existe organización central, ni ninguna entidad ni persona al frente de Ethereum, nadie puede revertir las transacciones. Por lo tanto, es vital comprobar siempre sus transacciones antes de enviarlas.
 
-#### ¿Cómo puedo reclamar mi regalo en Ethereum? {#giveaway-scam}
+### ¿Cómo puedo reclamar mi regalo en Ethereum? {#giveaway-scam}
 
 Los regalos de Ethereum son estafas diseñadas para robarle ETH. No se deje tentar por ofertas que parezcan demasiado buenas para ser verdad, si envía ETH a una dirección de regalo, no recibirá ningún ningún regalo, ni tampoco podrá recuperar sus fondos.
 
 [Más información acerca de la prevención de fraudes.](/security/#common-scams)
 
-#### Mi transacción está estancada {#stuck-transaction}
+### Mi transacción está estancada {#stuck-transaction}
 
 Debido a la demanda de la red, las transacciones en Ethereum pueden a veces estancarse si ha pagado una comisión de la transacción inferior a la requerida. Muchas carteras proporcionan una opción para volver a enviar la misma transacción con una comisión de transacción más elevada y así poder procesar la transacción. Otra alternativa es cancelar una transacción pendiente enviando una transacción a su propia dirección y utilizando el mismo nonce que la transacción pendiente.
 
@@ -107,10 +107,10 @@ Debido a la demanda de la red, las transacciones en Ethereum pueden a veces esta
 
 [Cómo cancelar las transacciones pendientes de Ethereum.](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
+### ¿Cómo puedo minar Ethereum? {#mining-ethereum}
 
 Ya no se puede minar en Ethereum. La minería se desactivó cuando Ethereum pasó de la prueba de trabajo a la prueba de participación. Ahora, en lugar de mineros, Ethereum tiene validadores. Los validadores apuestan ETH y reciben recompensas por asegurar la red.
 
-#### ¿Cómo puedo convertirme en participante/validador? {#become-validator}
+### ¿Cómo puedo convertirme en participante/validador? {#become-validator}
 
 Para convertirse en validador, debe apostar 32 ETH en el contrato de depósito de Ethereum y configurar un nodo de validación. Hay más información disponible en nuestras [páginas de participación](/staking) y en [la plataforma de lanzamiento de participación](https://launchpad.ethereum.org/).

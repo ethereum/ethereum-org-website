@@ -35,10 +35,11 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-Finanzökosystem_
 - [MetaMask-Programm](https://metamaskgrants.org/) – _Von Mitarbeitern geleitete DAO für[MetaMask](https://metamask.io/)-Stipendien_
 - [mStable-Zuschussprogram](https://docs.mstable.org/advanced/grants-program) – _[mStable](https://mstable.org/)-Gemeinschaft_
+- [SKALE Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE Network](https://skale.space/)-Ökosystem_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-Ökosystem_
 - [UMA Grants Program](https://grants.umaproject.org/) – _[UMA](https://umaproject.org/)-Entwicklerunterstützung_
-- [Uniswap-Zuschussprogramm](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)-Gemeinschaft_
-- [Web3 Zuschüsse](https://web3grants.net) – _Eine umfangreiche Liste von Web3/Krypto verwandten Förderungsprogrammen_
+- [Uniswap-Zuschussprogramm](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)-Community_
+- [Web3-Förderung](https://web3grants.net) – _Eine umfangreiche Liste von Web3-/Krypto-verwandten Förderprogrammen_
 
 ## Quadratische Finanzierung {#quadratic-funding}
 

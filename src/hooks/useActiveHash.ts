@@ -25,7 +25,8 @@ export const useActiveHash = (
     )
 
     itemIds?.forEach((id) => {
-      const element = document.getElementById(id)
+      // Remove # from id. EX: #element-id -> element-id
+      const element = document.getElementById(id.replace("#", ""))
       if (element !== null) {
         observer.observe(element)
       }

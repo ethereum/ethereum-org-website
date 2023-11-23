@@ -4,6 +4,7 @@ import { Image, type ImageProps } from "@/components/Image"
 import Link from "@/components/Link"
 
 import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
+import { toPosixPath } from "@/lib/utils/relativePath"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
@@ -15,11 +16,15 @@ const MarkdownImage = ({
   width,
   height,
   aspectRatio,
+  src,
   ...rest
 }: MarkdownImageProps) => {
   const imageAspectRatio = parseFloat(aspectRatio)
   let imageWidth = parseFloat(width)
   let imageHeight = parseFloat(height)
+
+  // Ensure that src path has forward slashes only, to avoid issues with Windows filepaths
+  const transformedSrc = toPosixPath(src.toString())
 
   // keep the size of the images proportional to the max width constraint
   if (imageWidth > CONTENT_IMAGES_MAX_WIDTH) {
@@ -31,11 +36,12 @@ const MarkdownImage = ({
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
     <Flex as="span" justify="center">
-      <Link href={rest.src.toString()} target="_blank" rel="noopener">
+      <Link href={transformedSrc} target="_blank" rel="noopener">
         <Image
           width={imageWidth}
           height={imageHeight}
           loading="lazy"
+          src={transformedSrc}
           {...rest}
         />
       </Link>

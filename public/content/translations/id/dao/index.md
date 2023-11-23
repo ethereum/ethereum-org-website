@@ -91,7 +91,7 @@ DAO bisa memiliki anggota hingga ribuan suara, dananya bisa disimpan dalam dompe
 
 Pada tahun 1977, negara bagian Wyoming menemukan LLC, bentuk usaha yang melindungi pengusaha dan membatasi tanggung jawab mereka. Belum lama ini, mereka mempelopori hukum DAO yang mengakui legalitas hukum bagi DAO. Kini, Wyoming, Vermont dan Virgin Islands punya hukum DAO dalam beberapa bentuk.
 
-#### Contoh yang terkenal {#law-example}
+### Contoh yang terkenal {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO menggunakan hukum DAO Wyoming untuk membeli tanah seluas 40 acre di dekat Taman Nasional Yellowstone.
 

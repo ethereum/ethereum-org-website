@@ -5,7 +5,6 @@ import {
   Box,
   Flex,
   type FlexProps,
-  type HeadingProps,
   Icon,
   List,
   ListItem,
@@ -25,18 +24,16 @@ import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
-  InfoColumn,
   MobileButton,
   MobileButtonDropdown,
   Page as MdPage,
-  StyledButtonDropdown,
 } from "@/components/MdComponents"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
 import ShardChainsList from "@/components/ShardChainsList"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -50,14 +47,6 @@ const Title = (props: ChildOnlyProp) => (
     fontWeight="bold"
     lineHeight={1.4}
     mt={0}
-    {...props}
-  />
-)
-
-const InfoTitle = (props: HeadingProps) => (
-  <Title
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
     {...props}
   />
 )
@@ -151,7 +140,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   tocItems,
   lastUpdatedDate,
 }) => {
-  const { t } = useTranslation("page-upgrades-index")
+  const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 
   const summaryPoints = getSummaryPoints(frontmatter)
@@ -224,19 +213,11 @@ export const UpgradeLayout: React.FC<IProps> = ({
       </Show>
       <Page>
         <Show above={lgBreakpoint}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <Show above={lgBreakpoint}>
-              <InfoTitle>{frontmatter.title}</InfoTitle>
-            </Show>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={frontmatter.sidebarDepth || 2}
-              />
-            )}
-          </InfoColumn>
+          <LeftNavBar
+            dropdownLinks={dropdownLinks}
+            tocItems={tocItems}
+            maxDepth={frontmatter.sidebarDepth!}
+          />
         </Show>
         <ContentContainer id="content">
           {children}

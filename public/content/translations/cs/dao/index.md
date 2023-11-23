@@ -91,7 +91,7 @@ Přestože DAO mají tísíce hlasujících členů, finanční prostředky moho
 
 V roce 1977 představil stát Wyoming LLC, typ společnosti ekvivalentní k české společnosti s ručením omezením, který chrání podnikatele a omezuje jejich odpovědnost. V nedávné době se stal průkopníkem zákona DAO, který pro organizaci zavádí právní status. V současné době mají Wyoming, Vermont a Panenské ostrovy v nějaké formě zákony DAO.
 
-#### Příklad z praxe {#law-example}
+### Příklad z praxe {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO používal zákon DAO státu Wyoming ke koupi 40 akrů půdy poblíž Yellowstonského národního parku.
 

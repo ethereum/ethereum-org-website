@@ -67,7 +67,7 @@ Proprio come un distributore automatico rimuove la necessità di un addetto alla
 
 ## Senza autorizzazioni {#permissionless}
 
-Chiunque può scrivere un contratto intelligente e distribuirlo sulla rete. Devi solo imparare come programmare nel [linguaggio di un contratto intelligente](/developers/docs/smart-contracts/languages/) e avere ETH sufficienti per distribuire il tuo contratto. Distribuire un contratto intelligente è tecnicamente una transazione, quindi dovrai pagare del [Gas](/developers/docs/gas/) allo stesso modo in cui devi pagarlo per un semplice trasferimento di ETH. Tuttavia, i costi del gas per la distribuzione del contratto sono molto più elevati.
+Chiunque può scrivere un contratto intelligente e distribuirlo sulla rete. Devi solo imparare come programmare nel [linguaggio di un contratto intelligente](/developers/docs/smart-contracts/languages/) e avere ETH sufficienti per distribuire il tuo contratto. Implementare un contratto intelligente è tecnicamente una transazione, per cui è necessario pagare del [gas](/developers/docs/gas/) allo stesso modo con cui è pagato per una semplice transazione di ETH. Tuttavia, i costi del gas per la distribuzione del contratto sono molto più elevati.
 
 Ethereum prevede dei linguaggi pratici per gli sviluppatori per scrivere i contratti intelligenti:
 
@@ -86,9 +86,9 @@ Scopri di più sulla [componibilità dei contratti intelligenti](/developers/doc
 
 ## Limitazioni {#limitations}
 
-I soli contratti intelligenti non possono ottenere informazioni sugli eventi del "mondo reale", poiché non possono inviare richieste HTTP. È così per progettazione. Basarsi su informazioni esterne potrebbe pregiudicare il consenso, importante per la sicurezza e la decentralizzazione.
+I contratti intelligenti da soli non possono ottenere informazioni riguardo agli eventi nel "mondo reale" perché non possono recuperare dati da risorse esterne alla catena. Questo significa che non possono rispondere a eventi nel mondo reale. Sono stati progettati così. Basarsi su informazioni esterne potrebbe pregiudicare il consenso, importante per la sicurezza e la decentralizzazione.
 
-Esistono modi per aggirare questa condizione, grazie agli [oracoli](/developers/docs/oracles/).
+A ogni modo, è importante per le applicazioni blockchain essere in grado di usare dati off-chain. La soluzione sono gli [oracoli](/developers/docs/oracles/) che sono strumenti che ingeriscono dati off-chain e li rendono disponibili per i contratti intelligenti.
 
 Un'altra limitazione dei contratti intelligenti è la dimensione massima del contratto. Un contratto intelligente può avere una dimensione massima di 24 Kb; altrimenti, esaurirà il gas. Questo problema può essere aggirato usando [il Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535) (schema a diamante).
 
@@ -104,13 +104,8 @@ I contratti multifirma (a firma multipla), sono conti del contratto intelligente
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Forum della community](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Blocchi di programmazione sicuri, semplici e flessibili per contratti intelligenti._**
-
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## Letture consigliate {#further-reading}
 
-- [Contratti Intelligenti: La Tecnologia della Blockchain Che Sostituirà gli Avvocati](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
-- [Migliori Pratiche per lo Sviluppo dei Contratti Intelligenti](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 novembre 2019 - Yos Riady_
-- [Contratti puliti - Una guida a modelli e pratiche per i contratti intelligenti](https://www.wslyvh.com/clean-contracts/) _– 30 luglio 2020 - wslyvh_
+- [Coinbase: Cos'è un contratto intelligente?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink: Cos'è un contratto intelligente?](https://chain.link/education/smart-contracts)
+- [Video: Spiegato in modo semplice - Contratti intelligenti](https://youtu.be/ZE2HxTmxfrI)

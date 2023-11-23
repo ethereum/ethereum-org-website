@@ -15,3 +15,72 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
+
+export const isLang = (lang: string) => {
+  return i18nConfigs.map((language) => language.code).includes(lang)
+} 
+
+export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
+  let requiredNamespaces: string[] = ["common"]
+
+  if (layout === "docs") {
+    requiredNamespaces = [...requiredNamespaces, 'page-developers-docs']
+  }
+
+  if (layout === 'use-cases') {
+    requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
+  }
+
+  if (layout === "upgrade") {
+    requiredNamespaces = [...requiredNamespaces, "page-upgrades", "page-upgrades-index"]
+  }
+
+  if (layout === "tutorial") {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
+
+  if (path.startsWith("/community")) {
+    requiredNamespaces = [...requiredNamespaces, "page-community"]
+  }
+
+  if (path.startsWith("/energy-consumption")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-about",
+      "page-what-is-ethereum",
+    ]
+  }
+
+  if (path.startsWith("/glossary")) {
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
+
+  if (path.startsWith("/history")) {
+    requiredNamespaces = [...requiredNamespaces, "page-history"]
+  }
+
+  if (path.startsWith("/nft")) {
+    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
+  }
+
+  if (path.startsWith("/staking")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking"]
+  }
+
+  if (path.startsWith("/developers/docs/scaling")) {
+    requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
+  }
+
+  // Quizzes
+  // Note: Add any URL paths that have quizzes here
+  if (
+    path.startsWith("/nft") ||
+    path.startsWith("/roadmap/merge") ||
+    path.startsWith("/security")
+  ) {
+    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
+  }
+
+  return requiredNamespaces
+}
+
