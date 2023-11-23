@@ -5,6 +5,8 @@ import { QuizStatus } from "@/lib/types"
 import Translation from "@/components/Translation"
 
 import { AnswerIcon } from "./AnswerIcon"
+import { QuizWidgetProvider } from "./context"
+import { QuizContent } from "./QuizContent"
 import { useQuizWidget } from "./useQuizWidget"
 
 export type QuizWidgetProps = {
@@ -15,7 +17,7 @@ export type QuizWidgetProps = {
 }
 
 const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
-  const { quizData } = useQuizWidget({ quizKey })
+  const { quizData, answerStatus } = useQuizWidget({ quizKey })
 
   return (
     <VStack spacing="12" width="full" maxW="600px">
@@ -49,7 +51,10 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
         </Center>
         <Stack spacing="8" justifyContent="space-between">
           {!!quizData ? (
-            <div>QuizContent</div>
+            <QuizWidgetProvider value={{quizData, answerStatus}}>
+
+            <QuizContent>QuizContent</QuizContent>
+            </QuizWidgetProvider>
           ) : (
             <Center>
               <Spinner />

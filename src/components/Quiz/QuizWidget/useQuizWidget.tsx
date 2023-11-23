@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import { shuffle } from "lodash"
 import { useTranslation } from "next-i18next"
 
-import { Question, Quiz, RawQuestion, RawQuiz } from "@/lib/interfaces"
+import { AnswerChoice, Question, Quiz, RawQuestion, RawQuiz } from "@/lib/interfaces"
 
 import allQuizzesData from "@/data/quizzes"
 import questionBank from "@/data/quizzes/questionBank"
 
 import { QuizWidgetProps } from "."
+
+export type AnswerStatus = "correct" | "incorrect" | null
 
 export const useQuizWidget = ({
   quizKey,
@@ -15,6 +17,9 @@ export const useQuizWidget = ({
   const { t } = useTranslation()
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
+  const [showAnswer, setShowAnswer] = useState<boolean>(false)
+  const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
+    useState<AnswerChoice | null>(null)
 
   const initialize = () => {
     setQuizData(null)
@@ -45,5 +50,13 @@ export const useQuizWidget = ({
 
   useEffect(initialize, [quizKey, t])
 
-  return { quizData }
+  const answerStatus = useMemo<AnswerStatus>(() => {
+    if (!showAnswer) return null
+  
+      if (currentQuestionAnswerChoice?.isCorrect) return 'correct'
+  
+      return  'incorrect'
+  }, [currentQuestionAnswerChoice?.isCorrect, showAnswer])
+
+  return { quizData, answerStatus }
 }
