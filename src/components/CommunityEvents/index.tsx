@@ -12,7 +12,8 @@ import {
   Icon,
 } from "@chakra-ui/react"
 
-import { trackCustomEvent } from "../../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
@@ -96,13 +97,13 @@ const CommunityEvents = () => {
       <Center w={{ base: "100%", lg: "40%" }}>
         <Box pr={8} pl={{ base: 8, lg: 0 }}>
           <OldHeading>
-            <Translation id="community-events-content-heading" />
+            <Translation id="page-index:community-events-content-heading" />
           </OldHeading>
           <Text>
-            <Translation id="community-events-content-1" />
+            <Translation id="page-index:community-events-content-1" />
           </Text>
           <Text>
-            <Translation id="community-events-content-2" />
+            <Translation id="page-index:community-events-content-2" />
           </Text>
         </Box>
       </Center>
@@ -142,7 +143,7 @@ const CommunityEvents = () => {
                 </Box>
               ) : (
                 <Text fontSize="3xl" fontWeight="bold" mb={8}>
-                  <Translation id="community-events-no-events-planned" />
+                  <Translation id="page-index:community-events-no-events-planned" />
                 </Text>
               )}
               <Flex flexDirection="column" gap={2}>
@@ -174,7 +175,7 @@ const CommunityEvents = () => {
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
-            <Translation id="community-events-upcoming-calls" />
+            <Translation id="page-index:community-events-upcoming-calls" />
           </Text>
           <Divider mb={4} />
           {loading ? (
@@ -187,15 +188,22 @@ const CommunityEvents = () => {
             </Text>
           ) : upcomingEventData.slice(1).length ? (
             upcomingEventData.slice(1).map((item) => {
-              return <Event event={item} language={locale!} type="upcoming" />
+              return (
+                <Event
+                  key={item.date}
+                  event={item}
+                  language={locale!}
+                  type="upcoming"
+                />
+              )
             })
           ) : (
             <Text mx="auto">
-              <Translation id="community-events-no-upcoming-calls" />
+              <Translation id="page-index:community-events-no-upcoming-calls" />
             </Text>
           )}
           <Text fontSize="lg" fontWeight="bold" mb={2} mt={4}>
-            <Translation id="community-events-previous-calls" />
+            <Translation id="page-index:community-events-previous-calls" />
           </Text>
           <Divider mb={4} />
           {loading ? (
@@ -208,11 +216,18 @@ const CommunityEvents = () => {
             </Text>
           ) : pastEventData.length ? (
             pastEventData.map((item) => {
-              return <Event event={item} language={locale!} type="past" />
+              return (
+                <Event
+                  key={item.date}
+                  event={item}
+                  language={locale!}
+                  type="past"
+                />
+              )
             })
           ) : (
             <Text mx="auto">
-              <Translation id="community-events-there-are-no-past-calls" />
+              <Translation id="page-index:community-events-there-are-no-past-calls" />
             </Text>
           )}
         </Flex>

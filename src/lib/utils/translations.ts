@@ -18,25 +18,40 @@ export const getLocaleForNumberFormat = (locale: Lang): Lang =>
 
 export const isLang = (lang: string) => {
   return i18nConfigs.map((language) => language.code).includes(lang)
-} 
+}
 
-export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
+export const getRequiredNamespacesForPath = (
+  path: string,
+  layout?: string | undefined
+) => {
   let requiredNamespaces: string[] = ["common"]
 
   if (layout === "docs") {
-    requiredNamespaces = [...requiredNamespaces, 'page-developers-docs']
+    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
   }
 
-  if (layout === 'use-cases') {
-    requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
+  if (layout === "use-cases") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "template-usecase",
+      "learn-quizzes",
+    ]
   }
 
   if (layout === "upgrade") {
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades", "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades",
+      "page-upgrades-index",
+    ]
   }
 
   if (layout === "tutorial") {
     requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
+
+  if (path === "/") {
+    requiredNamespaces = [...requiredNamespaces, "page-index"]
   }
 
   if (path.startsWith("/community")) {
@@ -83,4 +98,3 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
 
   return requiredNamespaces
 }
-

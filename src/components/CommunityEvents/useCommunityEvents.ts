@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react"
 
-import { GATSBY_FUNCTIONS_PATH } from "../../constants"
-import { getData } from "../../utils/cache"
+function getData() {
+  return {
+    pastEvents: [],
+    futureEvents: [],
+  }
+}
 
 export interface Event {
   date: string
@@ -42,9 +46,7 @@ export const useCommunityEvents = () => {
       let events: ReqEvents
 
       try {
-        events = await getData<ReqEvents>(
-          `${GATSBY_FUNCTIONS_PATH}/calendarEvents`
-        )
+        events = await getData<ReqEvents>(`/api/calendarEvents`)
       } catch {
         setState({ ...state, loading: false, hasError: true })
         return
