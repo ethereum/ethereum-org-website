@@ -272,22 +272,12 @@ export const StakingLayout: React.FC<IProps> = ({
           />
         </Flex>
         <Image
-          flex="1 1 100%"
-          bgRepeat="no-repeat"
-          right={0}
-          bottom={0}
-          maxW={{ base: "min(400px, 98%)", lg: "400px" }}
-          width={400}
-          height={340}
-          maxH={{ base: "340px", lg: "none" }}
-          boxSize={{ base: "full", lg: "auto" }}
-          overflow={{ base: "initial", lg: "visible" }}
-          alignSelf={{ base: "center", lg: "auto" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
-          style={{
-            objectFit: "contain",
-          }}
+          style={{ objectFit: "contain" }}
+          width={400}
+          height={340}
+          quality="100"
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>

@@ -38,12 +38,11 @@ const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     bg="cardGradient"
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-    direction={{ base: "column-reverse", lg: "row" }}
-    justify="end"
-    minHeight={{ base: "800px", lg: "608px" }}
+    flexDirection={{ base: "column-reverse", lg: "row" }}
+    justifyContent="flex-end"
+    minHeight="608px"
     maxHeight={{ base: "full", lg: "608px" }}
     width="full"
-    position="relative"
     {...props}
   />
 )
@@ -60,9 +59,10 @@ const TitleCard = (props: ChildOnlyProp) => {
       boxShadow={{ lg: boxShadow }}
       flexDirection="column"
       maxWidth={{ base: "full", lg: "container.sm" }}
+      mt={{ base: 0, lg: 12 }}
       zIndex="docked"
       p={8}
-      position="absolute"
+      position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
       left={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
@@ -209,15 +209,20 @@ export const UseCasesLayout: React.FC<IProps> = ({
           </Box>
         </TitleCard>
         <Image
-          position="absolute"
-          alignSelf={{ base: "center", lg: "normal" }}
-          top={0}
-          bottom={0}
-          style={{ objectFit: "cover" }}
-          width={1000}
-          height={610}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
+          width={1200}
+          height={610}
+          style={{ objectFit: "cover" }}
+          quality="100"
+          alignSelf={{
+            base: "center",
+            lg: "normal",
+          }}
+          maxH={{
+            base: "340px",
+            lg: "full",
+          }}
           maxW={{
             base: useCase === "defi" ? "full" : "min(405px, 98%)",
             lg:

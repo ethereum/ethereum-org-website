@@ -11,6 +11,7 @@ import {
   Show,
   Text,
   useToken,
+  Center,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
@@ -193,17 +194,14 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </TitleCard>
         {frontmatter.image && (
           <Image
-            flex="1 1 100%"
-            maxW="min(100%, 816px)"
-            style={{ objectFit: "cover" }}
-            alignSelf="center"
-            right={0}
-            bottom={0}
-            width={600}
-            height={600}
-            overflow="initial"
             src={frontmatter.image}
             alt={frontmatter.alt}
+            width={816}
+            height={525}
+            style={{ objectFit: "cover" }}
+            quality="100"
+            flex={{ base: "1 1 100%", md: "none" }}
+            alignSelf={{ base: "center", md: "flex-end" }}
           />
         )}
       </HeroContainer>
