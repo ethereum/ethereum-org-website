@@ -19,6 +19,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -39,7 +40,6 @@ import {
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 const layoutMapping = {
   static: StaticLayout,
@@ -150,7 +150,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
   }
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(originalSlug, layout)
+  const requiredNamespaces = getRequiredNamespacesForPage(originalSlug, layout)
 
   return {
     props: {
