@@ -17,7 +17,7 @@ import { GITHUB_ROOT } from "@/lib/constants"
 
 type Person = {
   name: string
-  username?: string
+  username: string
   score: number
 }
 
