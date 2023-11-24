@@ -1,9 +1,8 @@
-import type { StaticImageData } from "next/image"
 import { Center } from "@chakra-ui/react"
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 
 interface AssetDownloadImageProps {
-  image: StaticImageData
+  image: ImageProps["src"]
   alt: string
 }
 

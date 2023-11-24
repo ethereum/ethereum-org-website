@@ -1,6 +1,5 @@
 import { extname } from "path"
 import { Box, Flex, FlexProps } from "@chakra-ui/react"
-import type { StaticImageData } from "next/image"
 import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
@@ -8,6 +7,7 @@ import OldHeading from "@/components/OldHeading"
 import AssetDownloadArtist from "@/components/AssetDownload/AssetDownloadArtist"
 import AssetDownloadImage from "@/components/AssetDownload/AssetDownloadImage"
 
+import type { ImageProps } from "@/components/Image"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 type AssetDownloadProps = {
@@ -15,7 +15,7 @@ type AssetDownloadProps = {
   alt: string
   artistName?: string
   artistUrl?: string
-  image: StaticImageData
+  image: ImageProps["src"]
   svgUrl?: string
 } & FlexProps
 
