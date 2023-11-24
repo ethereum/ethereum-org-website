@@ -1,8 +1,9 @@
 import React from "react"
 import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
-import _rollups from "../data/layer-2/layer-2.json"
 import type { TranslationKey } from "@/lib/types"
+
+import _rollups from "../data/layer-2/layer-2.json"
 
 import InlineLink from "./Link"
 import Text from "./OldText"

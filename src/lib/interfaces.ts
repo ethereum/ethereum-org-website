@@ -1,5 +1,6 @@
-import type { Frontmatter, Lang, TranslationKey, ToCItem } from "@/lib/types"
 import { ReactNode } from "react"
+
+import type { Frontmatter, Lang, ToCItem,TranslationKey } from "@/lib/types"
 
 /**
  * Quiz data interfaces

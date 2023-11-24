@@ -3,9 +3,9 @@ import {
   Flex,
   Show,
   SimpleGrid,
+  useToken,
   Wrap,
   WrapItem,
-  useToken,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
@@ -16,6 +16,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Button, ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import {
   ContentContainer,
   MobileButton,
@@ -28,7 +29,6 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
-import LeftNavBar from "@/components/LeftNavBar"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 

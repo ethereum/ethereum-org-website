@@ -2,13 +2,13 @@ import { ReactNode, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
-
-
-import { BaseLink, LinkProps } from "@/components/Link"
 import { Box, HStack, Icon } from "@chakra-ui/react"
 
-import docLinks from "../data/developer-docs-links.yaml"
 import { DeveloperDocsLink } from "@/lib/interfaces"
+
+import { BaseLink, LinkProps } from "@/components/Link"
+
+import docLinks from "../data/developer-docs-links.yaml"
 
 export const dropdownIconContainerVariant = {
   open: {
