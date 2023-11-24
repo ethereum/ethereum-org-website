@@ -52,7 +52,7 @@ const Breadcrumbs = ({
       ? [
           {
             fullPath: "/",
-            text: <Translation id="page-index-meta-title" />, // t("page-index-meta-title"),
+            text: <Translation id="page-index-meta-title" />,
           },
         ]
       : []),
@@ -60,8 +60,7 @@ const Breadcrumbs = ({
     ...sliced.map((path, idx) => {
       return {
         fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
-        // text: t(path),
-        text: <Translation id={path} />,
+        text: t(path), // TODO: fix i18n strings for path breadcrumbs
       }
     }),
   ]
