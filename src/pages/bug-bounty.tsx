@@ -1,5 +1,3 @@
-import type { ReactNode } from "react"
-import { useTranslation } from "next-i18next"
 import {
   Box,
   Center,
@@ -7,40 +5,45 @@ import {
   UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import type { GetStaticProps } from "next/types"
+import type { ReactNode } from "react"
 
-import Card from "@/components/Card"
-import Leaderboard from "@/components/Leaderboard"
-import BugBountyCards from "@/components/BugBountyCards"
-import InlineLink from "@/components/Link"
-import Emoji from "@/components/Emoji"
-import CardList from "@/components/CardList"
+import { Image, type ImageProps } from "@/components/Image"
 import Breadcrumbs from "@/components/Breadcrumbs"
+import BugBountyCards from "@/components/BugBountyCards"
 import ButtonLink from "@/components/Buttons/ButtonLink"
-import PageMetadata from "@/components/PageMetadata"
+import Card from "@/components/Card"
+import CardList from "@/components/CardList"
+import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import Text from "@/components/OldText"
+import InlineLink from "@/components/Link"
+import Leaderboard from "@/components/Leaderboard"
 import OldHeading from "@/components/OldHeading"
-import { Image } from "@/components/Image"
+import PageMetadata from "@/components/PageMetadata"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-import prysm from "@/public/upgrades/prysm.png"
-import lodestar from "@/public/upgrades/lodestar.png"
 import besu from "@/public/upgrades/besu.png"
 import erigon from "@/public/upgrades/erigon.png"
 import geth from "@/public/upgrades/geth.png"
+import lighthouseDark from "@/public/upgrades/lighthouse-dark.png"
+import lighthouseLight from "@/public/upgrades/lighthouse-light.png"
+import lodestar from "@/public/upgrades/lodestar.png"
 import nethermind from "@/public/upgrades/nethermind.png"
+import nimbus from "@/public/upgrades/nimbus-cloud.png"
+import prysm from "@/public/upgrades/prysm.png"
 import tekuDark from "@/public/upgrades/teku-dark.png"
 import tekuLight from "@/public/upgrades/teku-light.png"
-import lighthouseLight from "@/public/upgrades/lighthouse-light.png"
-import lighthouseDark from "@/public/upgrades/lighthouse-dark.png"
-import nimbus from "@/public/upgrades/nimbus-cloud.png"
 
-import type { ChildOnlyProp /* , Context  */ } from "@/lib/types"
-import { StaticImageData } from "next/image"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import type { ChildOnlyProp } from "@/lib/types"
 
-// TODO: Fix csv imports
-// import consensusBountyHunters from "@/data/consensus-bounty-hunters.csv"
-// import executionBountyHunters from "@/data/execution-bounty-hunters.csv"
+import consensusData from "@/data/consensus-bounty-hunters.json"
+import executionData from "@/data/execution-bounty-hunters.json"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -48,14 +51,14 @@ const Page = (props: ChildOnlyProp) => (
     flexDirection="column"
     alignItems="center"
     w="full"
-    my={0}
+    my="0"
     mx="auto"
     {...props}
   />
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Box py="4" px="8" w="full" {...props} />
 )
 
 const Title = (props: ChildOnlyProp) => (
@@ -63,8 +66,8 @@ const Title = (props: ChildOnlyProp) => (
     textTransform="uppercase"
     fontSize="0.875rem"
     color="text"
-    mb={0}
-    ml={2}
+    mb="0"
+    ms="2"
     {...props}
   />
 )
@@ -88,7 +91,7 @@ const Subtitle = (props: ChildOnlyProp) => (
     lineHeight="140%"
     color="text200"
     maxW="480px"
-    mt={4}
+    mt="4"
     {...props}
   />
 )
@@ -99,8 +102,8 @@ const SloganGradient = (props: ChildOnlyProp) => (
     fontSize={{ base: "2.5rem", lg: "3rem" }}
     lineHeight="140%"
     maxW="720px"
-    mt={4}
-    mb={0}
+    mt="4"
+    mb="0"
     bgClip="text"
     sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
     bg="upgradesGradient"
@@ -111,7 +114,7 @@ const SloganGradient = (props: ChildOnlyProp) => (
 
 const Rules = (props: ChildOnlyProp) => (
   <Box
-    my={0}
+    my="0"
     mx="auto"
     maxW="3xl"
     display="flex"
@@ -122,15 +125,15 @@ const Rules = (props: ChildOnlyProp) => (
 )
 
 const SubmitInstructions = (props: ChildOnlyProp) => (
-  <Box flex="1 1 600px" mr={8} maxW="100ch" {...props} />
+  <Box flex="1 1 600px" me="8" maxW="100ch" {...props} />
 )
 
 const GradientContainer = (props: ChildOnlyProp) => (
   <Box
     w="full"
-    py={16}
-    px={0}
-    mt={8}
+    py="16"
+    px="0"
+    mt="8"
     bg="cardGradient"
     boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
     {...props}
@@ -150,10 +153,10 @@ const LeaderboardContainer = (props: ChildOnlyProp) => (
 
 const FullLeaderboardContainer = (props: ChildOnlyProp) => (
   <Box
-    my={8}
+    my="8"
     mx="auto"
-    py={0}
-    px={8}
+    py="0"
+    px="8"
     maxW="3xl"
     display="flex"
     flexDirection="column"
@@ -165,7 +168,7 @@ const FullLeaderboardContainer = (props: ChildOnlyProp) => (
 const On = () => <Box w="8px" h="8px" bg="success400" borderRadius="64px" />
 
 const Divider = () => (
-  <Box my={16} mx={0} w="10%" h={1} backgroundColor="homeDivider" />
+  <Box my="16" mx="0" w="10%" h="1" backgroundColor="homeDivider" />
 )
 
 const Contact = (props: ChildOnlyProp) => (
@@ -177,25 +180,23 @@ const Contact = (props: ChildOnlyProp) => (
     display="flex"
     justifyContent="space-between"
     alignItems="center"
-    p={6}
-    my={12}
-    mx={32}
+    p="6"
+    my="12"
+    mx="32"
     w="80%"
     {...props}
   />
 )
 
 const ButtonRow = (props: ChildOnlyProp) => (
-  <Box display="flex" alignItems="center" mt={4} flexWrap="wrap" {...props} />
+  <Box display="flex" alignItems="center" mt="4" flexWrap="wrap" {...props} />
 )
 
-const StyledButton = ({ children, ...props }) => {
-  return (
-    <ButtonLink mr={4} mb={0} {...props}>
-      {children}
-    </ButtonLink>
-  )
-}
+const StyledButton = ({ children, ...props }) => (
+  <ButtonLink me="4" mb="0" {...props}>
+    {children}
+  </ButtonLink>
+)
 
 const ClientIntro = (props: ChildOnlyProp) => (
   <Text
@@ -218,7 +219,7 @@ const ClientRow = (props: ChildOnlyProp) => (
 )
 
 const Client = (props: ChildOnlyProp) => (
-  <Box m={16} mt={4} mb={12} {...props} />
+  <Box m="16" mt="4" mb="12" {...props} />
 )
 
 const HeroCard = (props: ChildOnlyProp) => (
@@ -226,7 +227,7 @@ const HeroCard = (props: ChildOnlyProp) => (
     display="flex"
     justifyContent="space-between"
     flexDirection={{ base: "column", lg: "row" }}
-    pl={{ lg: "0" }}
+    ps={{ lg: "0" }}
     mt={{ base: "-2rem", lg: "0" }}
     {...props}
   />
@@ -253,21 +254,19 @@ const StyledCardContainer = (props: ChildOnlyProp) => (
   <Box display="flex" flexWrap="wrap" m="2rem -1rem 3rem -1rem" {...props} />
 )
 
-const StyledCard = ({ children, ...props }) => {
-  return (
-    <Card flex="1 1 464px" m={4} p={6} justifyContent="flex-start" {...props}>
-      {children}
-    </Card>
-  )
-}
+const StyledCard = ({ children, ...props }) => (
+  <Card flex="1 1 464px" m="4" p="6" justifyContent="flex-start" {...props}>
+    {children}
+  </Card>
+)
 
 const StyledGrayContainer = ({ children, ...props }) => (
   <Box
     w="full"
-    py={16}
-    px={0}
-    mt={8}
-    mb={12}
+    py="16"
+    px="0"
+    mt="8"
+    mb="12"
     bg="grayBackground"
     boxShadow="inset 0px 1px 0px var(--eth-colors-tableItemBoxShadow)"
     {...props}
@@ -279,40 +278,34 @@ const StyledGrayContainer = ({ children, ...props }) => (
 const Faq = (props: ChildOnlyProp) => (
   <Box
     display="flex"
-    mt={16}
+    mt="16"
     flexDirection={{ base: "column", lg: "row" }}
     {...props}
   />
 )
 const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
+
 const RightColumn = (props: ChildOnlyProp) => (
   <Box
     w="full"
-    ml={{ base: "0rem", lg: "2rem" }}
+    ms={{ base: "0rem", lg: "2rem" }}
     flexDirection={{ base: "column", lg: "column" }}
     {...props}
   />
 )
 
-type BountyHuntersArg = {
-  score?: number | null
-}
-
-const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
-  if (!a.score || !b.score) return 0
-  return b.score - a.score
-}
+type BountyHuntersArg = { score?: number }
 
 type Node = {
-  readonly username: string
   readonly name: string
+  readonly username: string
   readonly score: number
 }
 
 type Client = {
   title: string
   link: string
-  image: StaticImageData
+  image: ImageProps["src"]
 }
 
 type Spec = {
@@ -320,59 +313,56 @@ type Spec = {
   link: string
 }
 
-const BugBountiesPage = ({
-  location,
-}) => {
+const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
+  if (!a.score || !b.score) return 0
+  return b.score - a.score
+}
+
+export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
+  const { locale } = context
+
+  // load i18n required namespaces for the given page
+  const requiredNamespaces = getRequiredNamespacesForPath("bug-bounty")
+
+  return {
+    props: await serverSideTranslations(locale!, requiredNamespaces),
+  }
+}
+
+const BugBountiesPage = () => {
+  const { pathname } = useRouter()
   const { t } = useTranslation("page-bug-bounty")
 
-  /**
-   * TODO!: Upgrade for Next.js
-   * TODO sort query isn't working :(
-   */
-  // const consensusBountyHuntersNodes = data.consensusBountyHunters
-  //   .nodes as Array<Node>
-  // const consensusBountyHunters = [...consensusBountyHuntersNodes].sort(
-  //   sortBountyHuntersFn
-  // )
+  const consensusBountyHunters: Node[] = consensusData.sort(sortBountyHuntersFn)
+  const executionBountyHunters: Node[] = executionData.sort(sortBountyHuntersFn)
 
-  // const executionBountyHuntersNodes = data.executionBountyHunters
-  //   .nodes as Array<Node>
-  // const executionBountyHunters = [...executionBountyHuntersNodes].sort(
-  //   sortBountyHuntersFn
-  // )
+  const bountyHuntersArrayToObject: Record<string, Node> = [
+    ...consensusData,
+    ...executionData,
+  ].reduce((acc, next) => {
+    const name = next.name
+    if (!name) return acc
 
-  // const bountyHuntersArrayToObject: Record<string, Node> = [
-  //   ...consensusBountyHunters,
-  //   ...executionBountyHunters,
-  // ].reduce((acc, next) => {
-  //   const name = next.name
-  //   if (!name) {
-  //     return acc
-  //   }
+    if (acc[name]) {
+      return {
+        ...acc,
+        [name]: {
+          ...next,
+          score: acc[name].score + next.score,
+        },
+      }
+    }
 
-  //   if (acc[name]) {
-  //     return {
-  //       ...acc,
-  //       [name]: {
-  //         ...next,
-  //         score: acc[name].score + next.score,
-  //       },
-  //     }
-  //   }
+    return {
+      ...acc,
+      [name]: next,
+    }
+  }, {})
 
-  //   return {
-  //     ...acc,
-  //     [name]: next,
-  //   }
-  // }, {})
-
-  // // total all counts using name as identifier, then sort
-  // const allBounterHunters = Object.values(bountyHuntersArrayToObject).sort(
-  //   (a, b) => b.score - a.score
-  // )
-  /**
-   * END TODO!
-   */
+  // total all counts using name as identifier, then sort
+  const allBounterHunters = Object.values(bountyHuntersArrayToObject).sort(
+    (a, b) => b.score - a.score
+  )
 
   const clients: Client[] = [
     {
@@ -422,7 +412,7 @@ const BugBountiesPage = ({
     },
   ].map((client) => ({
     ...client,
-    image: { ...client.image, width: 24 },
+    image: { ...client.image, width: 24 }, // TODO: Fix image width—should be 24px wide
   }))
 
   const specs: Array<Spec> = [
@@ -452,7 +442,7 @@ const BugBountiesPage = ({
       <Content>
         <HeroCard>
           <HeroContainer>
-            <Breadcrumbs slug={location.pathname} mb="8" />
+            <Breadcrumbs slug={pathname} mb="8" />
             <Row>
               <On />
               <Title>{t("page-upgrades-bug-bounty-title")}</Title>
@@ -471,8 +461,7 @@ const BugBountiesPage = ({
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
-            {/* TODO: Fix csv imports */}
-            {/* <Leaderboard content={allBounterHunters} /> */}
+            <Leaderboard content={allBounterHunters.slice(0,5)} />
             <ButtonLink variant="outline" href="#leaderboard">
               {t("page-upgrades-bug-bounty-leaderboard")}
             </ButtonLink>
@@ -552,7 +541,7 @@ const BugBountiesPage = ({
               <Box>
                 <OldHeading
                   as="h4"
-                  fontWeight={500}
+                  fontWeight="medium"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -568,7 +557,7 @@ const BugBountiesPage = ({
               <Box>
                 <OldHeading
                   as="h4"
-                  fontWeight={500}
+                  fontWeight="medium"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -583,10 +572,12 @@ const BugBountiesPage = ({
               description={t("page-upgrades-bug-bounty-client-bugs-desc")}
             >
               <Box>
-                <Text>{t("page-upgrades-bug-bounty-client-bugs-desc-2")}</Text>
+                <Text>
+                  <Translation id="page-bug-bounty:page-upgrades-bug-bounty-client-bugs-desc-2" />
+                </Text>
                 <OldHeading
                   as="h4"
-                  fontWeight={500}
+                  fontWeight="medium"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -608,7 +599,7 @@ const BugBountiesPage = ({
               <Box>
                 <OldHeading
                   as="h4"
-                  fontWeight={500}
+                  fontWeight="medium"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -628,7 +619,7 @@ const BugBountiesPage = ({
               <Box>
                 <OldHeading
                   as="h4"
-                  fontWeight={500}
+                  fontWeight="medium"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -647,7 +638,7 @@ const BugBountiesPage = ({
               <Box>
                 <OldHeading
                   as="h4"
-                  fontWeight={500}
+                  fontWeight="medium"
                   lineHeight={1.4}
                   fontSize={{ base: "md", md: "xl" }}
                 >
@@ -716,16 +707,14 @@ const BugBountiesPage = ({
               "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle"
             )}
           </Text>
-          {/* TODO: Fix csv imports */}
-          {/* <Leaderboard content={executionBountyHunters} /> */}
+          <Leaderboard content={executionBountyHunters} />
         </FullLeaderboardContainer>
         <FullLeaderboardContainer>
           <H2>{t("page-upgrades-bug-bounty-hunting-leaderboard")}</H2>
           <Text>
             {t("page-upgrades-bug-bounty-hunting-leaderboard-subtitle")}
           </Text>
-          {/* TODO: Fix csv imports */}
-          {/* <Leaderboard content={consensusBountyHunters} /> */}
+          <Leaderboard content={consensusBountyHunters} />
         </FullLeaderboardContainer>
       </GradientContainer>
       <Divider />
@@ -736,63 +725,142 @@ const BugBountiesPage = ({
         <Faq>
           <LeftColumn>
             <ExpandableCard
-              title={t("bug-bounty-faq-q1-title")}
-              contentPreview={t("bug-bounty-faq-q1-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q1-content-1")}</Text>
-              <Text>{t("bug-bounty-faq-q1-content-2")}</Text>
-              <Text>{t("bug-bounty-faq-q1-content-3")}</Text>
-              <Text>{t("bug-bounty-faq-q1-content-4")}</Text>
-              <Text>{t("bug-bounty-faq-q1-content-5")}</Text>
-              <Text>{t("bug-bounty-faq-q1-content-6")}</Text>
-              <Text>{t("bug-bounty-faq-q1-content-7")}</Text>
+              {/* TODO: Check <code> styling compared to Gatsby repo */}
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-1" />
+              </Text>
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-2" />
+              </Text>
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-3" />
+              </Text>
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-4" />
+              </Text>
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-5" />
+              </Text>
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-6" />
+              </Text>
+              <Text>
+                <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-7" />
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={t("bug-bounty-faq-q2-title")}
-              contentPreview={t("bug-bounty-faq-q2-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q2-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q2-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q2-content-1")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q2-content-1" />
+                }
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={t("bug-bounty-faq-q3-title")}
-              contentPreview={t("bug-bounty-faq-q3-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q3-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q3-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q3-content-1")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q3-content-1" />
+                }
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={t("bug-bounty-faq-q4-title")}
-              contentPreview={t("bug-bounty-faq-q4-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q4-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q4-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q4-content-1")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q4-content-1" />
+                }
+              </Text>
             </ExpandableCard>
           </LeftColumn>
           <RightColumn>
             <ExpandableCard
-              title={t("bug-bounty-faq-q5-title")}
-              contentPreview={t("bug-bounty-faq-q5-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q5-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q5-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q5-content-1")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q5-content-1" />
+                }
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={t("bug-bounty-faq-q6-title")}
-              contentPreview={t("bug-bounty-faq-q6-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q6-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q6-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q6-content-1")}</Text>
-              <Text>{t("bug-bounty-faq-q6-content-2")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q6-content-1" />
+                }
+              </Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q6-content-2" />
+                }
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={t("bug-bounty-faq-q7-title")}
-              contentPreview={t("bug-bounty-faq-q7-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q7-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q7-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q7-content-1")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q7-content-1" />
+                }
+              </Text>
             </ExpandableCard>
             <ExpandableCard
-              title={t("bug-bounty-faq-q8-title")}
-              contentPreview={t("bug-bounty-faq-q8-contentPreview")}
+              title={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q8-title" />
+              }
+              contentPreview={
+                <Translation id="page-bug-bounty:bug-bounty-faq-q8-contentPreview" />
+              }
             >
-              <Text>{t("bug-bounty-faq-q8-content-1")}</Text>
+              <Text>
+                {
+                  <Translation id="page-bug-bounty:bug-bounty-faq-q8-content-1" />
+                }
+              </Text>
               <InlineLink href="https://ethereum.org/security_at_ethereum.org.asc">
-                {t("bug-bounty-faq-q8-PGP-key")}
+                {<Translation id="page-bug-bounty:bug-bounty-faq-q8-PGP-key" />}
               </InlineLink>
             </ExpandableCard>
           </RightColumn>
