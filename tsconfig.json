@@ -49,7 +49,6 @@
     "./src/components/BaseStories/Switch.stories.tsx",
     "./src/components/BaseStories/Text.stories.tsx",
     "./src/components/BoxGrid.tsx",
-    "./src/components/BugBountyCards.tsx",
     "./src/components/BugBountyPoints.tsx",
     "./src/components/Buttons/Button.stories.tsx",
     "./src/components/CallToContribute.tsx",
