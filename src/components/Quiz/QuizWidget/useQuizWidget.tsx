@@ -13,6 +13,8 @@ import {
 import allQuizzesData from "@/data/quizzes"
 import questionBank from "@/data/quizzes/questionBank"
 
+import { getNextQuiz } from "../utils"
+
 import { QuizWidgetProps } from "."
 
 export type AnswerStatus = "correct" | "incorrect" | null
@@ -23,6 +25,7 @@ export const useQuizWidget = ({
   const { t } = useTranslation()
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
+  const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
   const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
     []
   )
@@ -30,6 +33,10 @@ export const useQuizWidget = ({
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
     const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(undefined)
+
+    useEffect(() => {
+      setNextQuiz(getNextQuiz(quizKey))
+    }, [quizKey])
 
   const initialize = () => {
     setQuizData(null)
@@ -77,6 +84,16 @@ export const useQuizWidget = ({
     return "incorrect"
   }, [currentQuestionAnswerChoice?.isCorrect, showAnswer])
 
+  const numberOfCorrectAnswers = userQuizProgress.filter(
+    ({ isCorrect }) => isCorrect
+  ).length
+
+  const ratioCorrect = !quizData
+    ? 0
+    : numberOfCorrectAnswers / quizData.questions.length
+
+  const quizScore = Math.floor(ratioCorrect * 100)
+
   return {
     quizData,
     answerStatus,
@@ -84,7 +101,14 @@ export const useQuizWidget = ({
     currentQuestionIndex,
     userQuizProgress,
     selectedAnswer,
+    currentQuestionAnswerChoice,
+    numberOfCorrectAnswers,
+    nextQuiz,
+    quizScore,
+    initialize,
+    setUserQuizProgress,
     setSelectedAnswer,
+    setShowAnswer,
     setCurrentQuestionAnswerChoice
   }
 }

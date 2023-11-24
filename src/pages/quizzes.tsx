@@ -81,7 +81,12 @@ const QuizzesHubPage: NextPage<
       />
       {/* TODO: Add HubHero */}
       <QuizzesModal isOpen={true} onClose={onClose} quizStatus={quizStatus}>
-        <QuizWidget quizKey={currentQuiz} />
+        <QuizWidget
+          quizKey={currentQuiz}
+          currentHandler={setCurrentQuiz}
+          statusHandler={setQuizStatus}
+          updateStatsHandler={updateUserStats}
+        />
       </QuizzesModal>
       <Box px={{ base: 0, lg: "8" }} py={{ base: 0, lg: "4" }} mb="12">
         <Flex direction={{ base: "column-reverse", lg: "row" }} columnGap="20">

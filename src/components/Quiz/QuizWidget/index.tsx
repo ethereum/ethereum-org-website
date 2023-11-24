@@ -1,24 +1,46 @@
+import { useEffect, useRef } from "react"
 import { Center, Heading, Spinner, Stack, VStack } from "@chakra-ui/react"
 
-import { QuizStatus } from "@/lib/types"
+import { QuizStatus, UserStats } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 
+import { useLocalQuizData } from "../useLocalQuizData"
+
 import { AnswerIcon } from "./AnswerIcon"
 import { QuizWidgetProvider } from "./context"
+import { QuizButtonGroup } from "./QuizButtonGroup"
 import { QuizContent } from "./QuizContent"
 import { QuizProgressBar } from "./QuizProgressBar"
 import { QuizRadioGroup } from "./QuizRadioGroup"
 import { useQuizWidget } from "./useQuizWidget"
 
-export type QuizWidgetProps = {
-  isStandaloneQuiz?: boolean
+type CommonProps = {
   quizKey: string
-  currentHandler?: (nextKey: string) => void
-  statusHandler?: (status: QuizStatus) => void
+  updateStatsHandler: (prevStats: UserStats) => void
 }
 
-const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
+type StandaloneQuizProps = CommonProps & {
+  isStandaloneQuiz: true
+  currentHandler?: never
+  statusHandler?: never
+}
+
+type QuizPageProps = CommonProps & {
+  currentHandler: (nextKey: string) => void
+  statusHandler: (status: QuizStatus) => void
+  isStandaloneQuiz?: false
+}
+
+export type QuizWidgetProps = StandaloneQuizProps | QuizPageProps
+
+const QuizWidget = ({
+  isStandaloneQuiz = false,
+  quizKey,
+  updateStatsHandler,
+  currentHandler,
+  statusHandler,
+}: QuizWidgetProps) => {
   const {
     quizData,
     answerStatus,
@@ -26,9 +48,34 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
     currentQuestionIndex,
     userQuizProgress,
     selectedAnswer,
+    currentQuestionAnswerChoice,
+    numberOfCorrectAnswers,
+    nextQuiz,
+    quizScore,
+    initialize,
     setSelectedAnswer,
-    setCurrentQuestionAnswerChoice
+    setShowAnswer,
+    setUserQuizProgress,
+    setCurrentQuestionAnswerChoice,
   } = useQuizWidget({ quizKey })
+
+  const quizPageProps = useRef<
+    | (Required<Pick<QuizWidgetProps, "currentHandler" | "statusHandler">> & {
+        nextQuiz: string | undefined
+      })
+    | false
+  >(false)
+
+  useEffect(() => {
+    if (isStandaloneQuiz) return
+
+    quizPageProps.current = {
+      currentHandler: currentHandler!,
+      statusHandler: statusHandler!,
+      nextQuiz,
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <VStack spacing="12" width="full" maxW="600px">
@@ -64,8 +111,16 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
                 currentQuestionIndex,
                 userQuizProgress,
                 selectedAnswer,
+                showResults,
+                currentQuestionAnswerChoice,
+                quizPageProps: quizPageProps.current,
+                numberOfCorrectAnswers,
+                quizScore,
+                initialize,
+                setUserQuizProgress,
                 setSelectedAnswer,
-                setCurrentQuestionAnswerChoice
+                setShowAnswer,
+                setCurrentQuestionAnswerChoice,
               }}
             >
               <QuizContent>
@@ -76,6 +131,7 @@ const QuizWidget = ({ isStandaloneQuiz = false, quizKey }: QuizWidgetProps) => {
                   </>
                 )}
               </QuizContent>
+              <QuizButtonGroup />
             </QuizWidgetProvider>
           ) : (
             <Center>
@@ -94,18 +150,25 @@ export default QuizWidget
  * For use of the widget on single pages (not the quizzes page)
  */
 export const StandaloneQuizWidget = (
-  props: Omit<QuizWidgetProps, "isStandaloneQuiz">
-) => (
-  <VStack spacing="12" my="16">
-    <Heading
-      as="h2"
-      textAlign="center"
-      scrollBehavior="smooth"
-      scrollMarginTop={24}
-      id="quiz"
-    >
-      <Translation id="learn-quizzes:test-your-knowledge" />
-    </Heading>
-    <QuizWidget {...props} isStandaloneQuiz />
-  </VStack>
-)
+  props: Pick<QuizWidgetProps, "quizKey">
+) => {
+  const [_, updateUserStats] = useLocalQuizData()
+  return (
+    <VStack spacing="12" my="16">
+      <Heading
+        as="h2"
+        textAlign="center"
+        scrollBehavior="smooth"
+        scrollMarginTop="24"
+        id="quiz"
+      >
+        <Translation id="learn-quizzes:test-your-knowledge" />
+      </Heading>
+      <QuizWidget
+        {...props}
+        updateStatsHandler={updateUserStats}
+        isStandaloneQuiz
+      />
+    </VStack>
+  )
+}

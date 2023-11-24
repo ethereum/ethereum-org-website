@@ -49,7 +49,8 @@ export const QuizRadioGroup = () => {
   const explanation = useMemo<TranslationKey>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
-  }, [answers, selectedAnswer])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedAnswer])
 
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
