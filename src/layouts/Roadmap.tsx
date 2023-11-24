@@ -180,6 +180,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
               width={700}
               height={345}
               quality="100"
+              priority
             />
           </Center>
         </Flex>

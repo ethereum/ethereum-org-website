@@ -278,6 +278,7 @@ export const StakingLayout: React.FC<IProps> = ({
           width={400}
           height={340}
           quality="100"
+          priority
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
