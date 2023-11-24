@@ -28,12 +28,10 @@ import enterprise from "@/public/enterprise-eth.png"
 import eth from "@/public/eth.png"
 import ethDiamondBlack from "@/public/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/assets/eth-diamond-black-gray.png"
-// import ethDiamondBlackHero from "@/public/assets/eth-diamond-black.png"
 import ethDiamondBlackWhite from "@/public/assets/eth-diamond-black-white.jpg"
 import ethDiamondColor from "@/public/assets/eth-diamond-rainbow.png"
 import ethDiamondGlyph from "@/public/assets/eth-diamond-glyph.png"
 import ethDiamondPurple from "@/public/assets/eth-diamond-purple.png"
-// import ethDiamondPurpleHero from "@/public/assets/eth-diamond-purple.png"
 import ethDiamondPurplePurple from "@/public/assets/eth-diamond-purple-purple.png"
 import ethDiamondPurpleWhite from "@/public/assets/eth-diamond-purple-white.jpg"
 import ethGlyphColored from "@/public/assets/eth-glyph-colored.png"
@@ -66,6 +64,8 @@ import wallet from "@/public/wallet.png"
 import whatIsEthereum from "@/public/what-is-ethereum.png"
 // import efLogo from "@/public/ef-logo.png"
 // import efLogoWhite from "@/public/ef-logo-white.png"
+// import ethDiamondBlackHero from "@/public/assets/eth-diamond-black.png"
+// import ethDiamondPurpleHero from "@/public/assets/eth-diamond-purple.png"
 // import ethGifCat from "@/public/eth-gif-cat.png"
 // import ethGifChalk from "@/public/eth-gif-chalk.png"
 // import ethGifSun from "@/public/eth-gif-sun.png"
@@ -80,7 +80,7 @@ const Row = (props: SimpleGridProps) => (
   <SimpleGrid
     templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
     mx={-4}
-    mb={8}
+    mb="8"
     {...props}
   />
 )
@@ -90,7 +90,7 @@ const H2 = (props: ChildOnlyProp & HeadingProps) => (
     fontSize={{ base: "2xl", md: "3xl" }}
     lineHeight={1.4}
     mt={16}
-    mb={6}
+    mb="6"
     {...props}
   />
 )
@@ -100,7 +100,7 @@ const H3 = (props: ChildOnlyProp) => (
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
-    mb={0}
+    mb="0"
     {...props}
   />
 )
@@ -126,8 +126,8 @@ const AssetsPage = () => {
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box py={4} px={8}>
-        <Flex direction="column" px={8} py={4}>
+      <Box py="4" px="8">
+        <Flex direction="column" px="8" py="4">
           <Center>
             <Image
               src={assetPageHeroImage}
@@ -136,7 +136,7 @@ const AssetsPage = () => {
             />
           </Center>
           <Center>
-            <Heading as="h1" size="2xl" my={8}>
+            <Heading as="h1" size="2xl" my="8">
               {t("page-assets-h1")}
             </Heading>
           </Center>
@@ -309,19 +309,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-glyph")}
             alt={t("page-assets-eth-diamond-glyph")}
             image={ethDiamondGlyph}
-            svgUrl="/static/eth-diamond-glyph.svg"
+            svgUrl="/assets/svgs/eth-diamond-glyph.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={ethDiamondBlack}
-            svgUrl="/static/eth-diamond-black.svg"
+            svgUrl="/assets/svgs/eth-diamond-black.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-color")}
             alt={t("page-assets-eth-diamond-color")}
             image={ethDiamondColor}
-            svgUrl="/static/eth-diamond-rainbow.svg"
+            svgUrl="/assets/svgs/eth-diamond-rainbow.svg"
           />
         </Row>
         <Row>
@@ -329,13 +329,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={ethDiamondPurple}
-            svgUrl="/static/eth-diamond-purple.svg"
+            svgUrl="/assets/svgs/eth-diamond-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-colored")}
             alt={t("page-assets-eth-diamond-colored")}
             image={ethGlyphColored}
-            svgUrl="/static/eth-glyph-colored.svg"
+            svgUrl="/assets/svgs/eth-glyph-colored.svg"
           />
         </Row>
         <Row>
@@ -343,19 +343,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={ethPortraitBlack}
-            svgUrl="/static/ethereum-logo-portrait-black.svg  "
+            svgUrl="/assets/svgs/ethereum-logo-portrait-black.svg  "
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={ethLandscapeBlack}
-            svgUrl="/static/ethereum-logo-landscape-black.svg"
+            svgUrl="/assets/svgs/ethereum-logo-landscape-black.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={ethWordmarkBlack}
-            svgUrl="/static/ethereum-wordmark-black.svg"
+            svgUrl="/assets/svgs/ethereum-wordmark-black.svg"
           />
         </Row>
         <Row>
@@ -363,19 +363,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={ethPortraitPurple}
-            svgUrl="/static/ethereum-logo-portrait-purple.svg"
+            svgUrl="/assets/svgs/ethereum-logo-portrait-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={ethLandscapePurple}
-            svgUrl="/static/ethereum-logo-landscape-purple.svg"
+            svgUrl="/assets/svgs/ethereum-logo-landscape-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={ethWordmarkPurple}
-            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
+            svgUrl="/assets/svgs/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
         <H3>{t("page-assets-page-assets-solid-background")}</H3>
@@ -384,19 +384,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondBlackWhite}
-            svgUrl="/static/eth-diamond-black-white.svg"
+            svgUrl="/assets/svgs/eth-diamond-black-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
             image={ethDiamondBlackGray}
-            svgUrl="/static/eth-diamond-black-gray.svg"
+            svgUrl="/assets/svgs/eth-diamond-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
             image={ethDiamondPurplePurple}
-            svgUrl="/static/eth-diamond-purple-purple.svg"
+            svgUrl="/assets/svgs/eth-diamond-purple-purple.svg"
           />
         </Row>
 
@@ -405,13 +405,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondPurpleWhite}
-            svgUrl="/static/eth-diamond-purple-white.svg"
+            svgUrl="/assets/svgs/eth-diamond-purple-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
             image={ethDiamondPurpleWhite}
-            svgUrl="/static/eth-diamond-purple-white.svg"
+            svgUrl="/assets/svgs/eth-diamond-purple-white.svg"
           />
         </Row>
         <Row>
@@ -419,19 +419,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
             image={ethPortraitBlackGray}
-            svgUrl="/static/ethereum-logo-portrait-black-gray.svg"
+            svgUrl="/assets/svgs/ethereum-logo-portrait-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
             image={ethLandscapeBlackGray}
-            svgUrl="/static/ethereum-logo-landscape-black-gray.svg"
+            svgUrl="/assets/svgs/ethereum-logo-landscape-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
             image={ethWordmarkBlackGray}
-            svgUrl="/static/ethereum-wordmark-black-gray.svg"
+            svgUrl="/assets/svgs/ethereum-wordmark-black-gray.svg"
           />
         </Row>
         <Row>
@@ -439,19 +439,19 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
             image={ethPortraitPurplePurple}
-            svgUrl="/static/ethereum-logo-portrait-purple-purple.svg"
+            svgUrl="/assets/svgs/ethereum-logo-portrait-purple-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
             image={ethLandscapePurplePurple}
-            svgUrl="/static/ethereum-logo-landscape-purple-purple.svg"
+            svgUrl="/assets/svgs/ethereum-logo-landscape-purple-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
             image={ethWordmarkPurplePurple}
-            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
+            svgUrl="/assets/svgs/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
         <Row>
@@ -459,13 +459,13 @@ const AssetsPage = () => {
             title={t("page-assets-eth-logo-landscape-white")}
             alt={t("page-assets-eth-logo-landscape-white")}
             image={ethLandscapePurpleWhite}
-            svgUrl="/static/ethereum-logo-landscape-purple-white.svg"
+            svgUrl="/assets/svgs/ethereum-logo-landscape-purple-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-white")}
             alt={t("page-assets-eth-wordmark-white")}
             image={ethWordmarkPurpleWhite}
-            svgUrl="/static/ethereum-wordmark-purple-white.svg"
+            svgUrl="/assets/svgs/ethereum-wordmark-purple-white.svg"
           />
         </Row>
         <H2 id="historical-illustrations">{t("page-assets-illustrations")}</H2>
@@ -479,7 +479,7 @@ const AssetsPage = () => {
             title={t("page-assets-merge-panda")}
             alt={t("page-assets-merge-panda")}
             image={mergePanda}
-            svgUrl="/static/merge-panda.svg"
+            svgUrl="/assets/svgs/merge-panda.svg"
           />
         </Row>
       </Box>
