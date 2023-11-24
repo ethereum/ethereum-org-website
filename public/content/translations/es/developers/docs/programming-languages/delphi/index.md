@@ -15,7 +15,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ¡Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contratos inteligentes usando el lenguaje de programación Delphi!
 
-## Comenzar con los contratos inteligentes y el lenguaje de Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Empezando con contratos inteligentes y el lenguaje Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **De los primeros pasos para integrar Delphi con Ethereum**
 
@@ -32,7 +32,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 - [¿Qué es Delphereum?](https://github.com/svanas/delphereum/blob/master/README.md)
 - [Conectando a Delphi a un blockchain local (en memoria)](https://medium.com/@svanas/connecting-delphi-to-a-local-in-memory-blockchain-9a1512d6c5b0)
-- [Conectando Delphi a la red principal de Ethereum](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
+- [Conectar Delphi a la red principal de Ethereum](https://medium.com/@svanas/connecting-delphi-to-the-ethereum-main-net-5faf1feffd83)
 - [Conectando Delphi a los contratos Inteligentes](https://medium.com/@svanas/connecting-delphi-to-smart-contracts-3146b12803a1)
 
 **¿Deseas omitir la configuración por ahora y pasar directamente a los ejemplos?**
@@ -40,7 +40,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Un contrato inteligente de 3 minutos y Delphi: Parte 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [Un contrato inteligente de 3 minutos y Delphi: Parte 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Artículos de nivel intermedio {#intermediate-articles}
+## Artículos intermedios {#intermediate-articles}
 
 - [Generando una firma de mensaje firmado por Ethereum en Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Transferir ether con Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
@@ -50,5 +50,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 - [Delphi y Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum y Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)
+- [Delphi y el Ethereum Dark Forest](https://svanas.medium.com/delphi-and-the-ethereum-dark-forest-5b430da3ad93)
+- [Intercambie un token por otro en Delphi](https://svanas.medium.com/swap-one-token-for-another-in-delphi-bcb999c47f7)
 
-¿Buscas más recursos? Revisa [ethereum.org/developers](/developers/).
+¿Buscas más recursos? Visita [ethereum.org/developers.](/developers/).

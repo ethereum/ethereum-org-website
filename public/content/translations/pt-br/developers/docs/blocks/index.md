@@ -100,8 +100,9 @@ O `execution_payload_header` contém os seguintes campos:
 | `base_fee_per_gas`  | o valor da taxa base                                               |
 | `block_hash`        | hash do bloco de execução                                          |
 | `transactions_root` | hash raiz das transações na carga                                  |
+| `withdrawal_root`   | hash raiz das retiradas no payload                                 |
 
-O próprio `execution_payload` contém o seguinte (observe que isso é idêntico ao cabeçalho, exceto que, em vez do hash raiz das transações, ele inclui a lista real de transações):
+O próprio `execution_payload` contém o seguinte (note que é idêntico ao cabeçalho, exceto que, em vez do hash raiz das transações, ele inclui a lista real de transações e informações de retirada):
 
 | Campo              | Descrição                                                          |
 | :----------------- | :----------------------------------------------------------------- |
@@ -119,6 +120,16 @@ O próprio `execution_payload` contém o seguinte (observe que isso é idêntico
 | `base_fee_per_gas` | o valor da taxa base                                               |
 | `block_hash`       | hash do bloco de execução                                          |
 | `transações`       | lista de transações a serem executadas                             |
+| `saques`           | lista de objetos de retirada                                       |
+
+A lista `withdrawals` contém objetos `withdrawal` estruturados da seguinte forma:
+
+| Campo            | Descrição                     |
+| :--------------- | :---------------------------- |
+| `endereço`       | endereço da conta que retirou |
+| `amount`         | quantidade retirada           |
+| `index`          | valor do índice da retirada   |
+| `validatorIndex` | valor do índice do validador  |
 
 ## Tempo de bloco {#block-time}
 
@@ -132,7 +143,7 @@ Uma observação final importante é que os blocos em si são delimitados por ta
 
 ## Leitura adicional {#further-reading}
 
-_Conhece um recurso da comunidade que ajudou você? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 

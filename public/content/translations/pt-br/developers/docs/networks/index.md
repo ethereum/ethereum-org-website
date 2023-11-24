@@ -4,7 +4,7 @@ description: Uma visão geral das redes Ethereum e onde obter ether (ETH) da red
 lang: pt-br
 ---
 
-Redes são ambientes diferentes do Ethereum que você pode acessar para desenvolvimento, teste ou produção. Como o Ethereum é um protocolo, podem existir várias "redes" independentes em conformidade com o protocolo sem interagir umas com as outras.
+Redes Ethereum são grupos de computadores conectados que se comunicam usando o protocolo Ethereum. Só há uma Ethereum Mainnet, mas redes independentes seguindo as mesmas regras de protocolo podem ser criadas para finalidade de testes e desenvolvimento. Há várias "redes" independentes que seguem o protocolo sem interagir uma com a outra. Você pode até iniciar uma localmente no seu próprio computador para testar seus contratos inteligentes e apps web3.
 
 Sua conta Ethereum funcionará nas diferentes redes, mas o saldo da sua conta e o histórico de transações não serão transferidos da rede Ethereum principal. Para fins de teste, é útil saber quais redes estão disponíveis e como obter a rede de testes ETH para brincar. Em geral, por razões de segurança, não é recomendado reutilizar contas da rede principal em redes de testes ou vice-versa.
 
@@ -30,7 +30,7 @@ Você deve testar qualquer código de contrato que você escrever em uma rede de
 
 A maioria das redes de teste começou usando um mecanismo de consenso de prova de autoridade permitido. Isso significa que um pequeno número de nós é escolhido para validar as transações e criar novos blocos, incluindo sua identidade no processo. Como alternativa, algumas redes de testes apresentam um mecanismo de consenso de prova de participação aberto, no qual todos podem testar a execução de um validador, assim como a Rede principal do Ethereum.
 
-O ETH em redes de teste não tem valor real; portanto, não há mercados para ETH de redes de teste. Como você precisa do ETH para interagir de fato com o Ethereum, a maioria das pessoas obtém o ETH via "torneiras". A maioria das torneiras são aplicativos Web em que você pode inserir um endereço para o qual deseja que o ETH seja enviado.
+ETH em redes de teste (testnets) supostamente não tem valor real; entretanto, tem sido criados mercados para certos tipos de ETH de testnet que têm se tornado escassos ou difíceis de se obter. Como você precisa do ETH para realmente interagir com o Ethereum (mesmo em redes de teste), a maioria das pessoas obtém ETH em redes de teste gratuitamente em torneiras (faucets). A maioria das torneiras são aplicativos Web em que você pode inserir um endereço para o qual deseja que o ETH seja enviado.
 
 #### Qual rede de testes devo usar?
 
@@ -61,12 +61,13 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet da Carteira da Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
+- [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 
 #### Goerli _(suporte a longo prazo)_ {#goerli}
 
 _Nota: [a rede de testes Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e será substituída por [Holesovice](https://github.com/eth-clients/holesovice) em 2023. Considere migrar seus aplicativos para a Sepolia._
 
-Goerli é a rede de testes usada para testar a validação e a participação. A rede Goerli está aberta para usuários que queiram executar um validador na rede de testes. Os participantes que desejam testar atualizações de protocolo antes de serem implantados na rede principal devem, portanto, usar a Goerli.
+Goerli é a rede de testes usada para testar a validação e staking. A rede Goerli está aberta para usuários que queiram executar um validador na rede de testes. Os participantes que desejam testar atualizações de protocolo antes de serem implantados na rede principal devem, portanto, usar a Goerli.
 
 - Conjunto de validadores abertos, com o qual os participantes podem testar atualizações de rede
 - Estado grande, útil para testar interações complexas de contratos inteligentes
@@ -83,26 +84,13 @@ Goerli é a rede de testes usada para testar a validação e a participação. A
 - [Faucet Goerli do QuickNode](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet de PoW](https://goerli-faucet.pk910.de/)
-- [Faucet Goerli](https://faucet.goerli.mudit.blog/)
-- [Faucet do Paradigm](https://faucet.paradigm.xyz/)
-- [Faucet Goreli do Alchemy](https://goerlifaucet.com/)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
+- [Faucet Alchemy Goerli](https://goerlifaucet.com/)
 - [Todas as faucets do nó Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
-- [Faucet da Carteira Coinbase | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Faucet Chainstack Goerli](https://faucet.chainstack.com/goerli-faucet)
 
 Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://goerli.launchpad.ethstaker.cc/en/) do ethstaker.
-
-#### Rinkeby _(descontinuada)_ {#rinkeby}
-
-_Observação: [a rede de testes Rinkeby foi descontinuada](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) e não receberá mais atualizações de protocolo. Considere migrar seus aplicativos para a Sepolia._
-
-Uma rede de testes de prova de autoridade para aqueles que executam versões antigas do cliente Geth.
-
-##### Faucets
-
-- [FaucETH](https://fauceth.komputing.org) (torneira multi-cadeia sem a necessidade de conta social)
-- [Faucet Chainlink](https://faucets.chain.link/)
-- [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Faucet Rinkeby](https://faucet.rinkeby.io/)
 
 ### Redes de testes de camada 2 {#layer-2-testnets}
 
@@ -114,7 +102,7 @@ Uma rede de testes para [Arbitrum](https://arbitrum.io/).
 
 ##### Faucets
 
-- [Faucet Chainlink](https://faucets.chain.link/)
+- [Faucet do Chainlink](https://faucets.chain.link/)
 
 #### Goerli otimista {#optimistic-goerli}
 
@@ -122,7 +110,7 @@ Uma rede de testes para [Optimism](https://www.optimism.io/).
 
 ##### Faucets
 
-- [Faucet do Paradigm](https://faucet.paradigm.xyz/)
+- [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## Redes privadas {#private-networks}
