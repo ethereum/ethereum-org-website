@@ -80,12 +80,12 @@ const QuizzesHubPage: NextPage<
         description={t("quizzes-subtitle")}
       />
       {/* TODO: Add HubHero */}
-      <QuizzesModal isOpen={true} onClose={onClose} quizStatus={quizStatus}>
+      <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
         <QuizWidget
           quizKey={currentQuiz}
           currentHandler={setCurrentQuiz}
           statusHandler={setQuizStatus}
-          updateStatsHandler={updateUserStats}
+          updateUserStats={updateUserStats}
         />
       </QuizzesModal>
       <Box px={{ base: 0, lg: "8" }} py={{ base: 0, lg: "4" }} mb="12">
@@ -148,7 +148,6 @@ const QuizzesHubPage: NextPage<
             />
           </Box>
         </Flex>
-        Q
       </Box>
       <Box w="full" py="4" px="8">
         <FeedbackCard />

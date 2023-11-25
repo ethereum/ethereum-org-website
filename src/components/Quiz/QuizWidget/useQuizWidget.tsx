@@ -21,7 +21,8 @@ export type AnswerStatus = "correct" | "incorrect" | null
 
 export const useQuizWidget = ({
   quizKey,
-}: Pick<QuizWidgetProps, "quizKey">) => {
+  updateUserStats,
+}: Pick<QuizWidgetProps, "quizKey" | "updateUserStats">) => {
   const { t } = useTranslation()
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
@@ -32,11 +33,13 @@ export const useQuizWidget = ({
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
-    const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(undefined)
+  const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(
+    undefined
+  )
 
-    useEffect(() => {
-      setNextQuiz(getNextQuiz(quizKey))
-    }, [quizKey])
+  useEffect(() => {
+    setNextQuiz(getNextQuiz(quizKey))
+  }, [quizKey])
 
   const initialize = () => {
     setQuizData(null)
@@ -70,6 +73,26 @@ export const useQuizWidget = ({
 
   const currentQuestionIndex = userQuizProgress.length
   const showResults = currentQuestionIndex === quizData?.questions.length
+
+  useEffect(() => {
+    if (!showResults) return
+
+    updateUserStats((prevStats) => {
+      const lastScore = prevStats.completed[quizKey][1]
+      return {
+        score: prevStats.score + quizScore - lastScore,
+        average: [...prevStats.average, quizScore],
+        completed: {
+          ...prevStats.completed,
+          [quizKey]: [
+            quizScore === 100,
+            quizScore > lastScore ? numberOfCorrectAnswers : lastScore,
+          ],
+        },
+      }
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showResults])
 
   /**
    * Determines the status of a submitted answer choice.
@@ -105,10 +128,11 @@ export const useQuizWidget = ({
     numberOfCorrectAnswers,
     nextQuiz,
     quizScore,
+    ratioCorrect,
     initialize,
     setUserQuizProgress,
     setSelectedAnswer,
     setShowAnswer,
-    setCurrentQuestionAnswerChoice
+    setCurrentQuestionAnswerChoice,
   }
 }

@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from "react"
 
-import { QuizStatus } from "@/lib/types"
+import { QuizStatus, UserStats } from "@/lib/types"
 import { AnswerChoice, Quiz } from "@/lib/interfaces"
 
 import { AnswerStatus } from "./useQuizWidget"
@@ -21,6 +21,7 @@ type QuizWidgetContextType = Quiz & {
     | false
     numberOfCorrectAnswers: number
     quizScore: number
+    ratioCorrect: number
   initialize: () => void
   setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
   setSelectedAnswer: (answer?: string) => void

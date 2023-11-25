@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 import { Center, Heading, Spinner, Stack, VStack } from "@chakra-ui/react"
 
 import { QuizStatus, UserStats } from "@/lib/types"
@@ -13,11 +13,12 @@ import { QuizButtonGroup } from "./QuizButtonGroup"
 import { QuizContent } from "./QuizContent"
 import { QuizProgressBar } from "./QuizProgressBar"
 import { QuizRadioGroup } from "./QuizRadioGroup"
+import { QuizSummary } from "./QuizSummary"
 import { useQuizWidget } from "./useQuizWidget"
 
 type CommonProps = {
   quizKey: string
-  updateStatsHandler: (prevStats: UserStats) => void
+  updateUserStats: Dispatch<SetStateAction<UserStats>>
 }
 
 type StandaloneQuizProps = CommonProps & {
@@ -37,7 +38,7 @@ export type QuizWidgetProps = StandaloneQuizProps | QuizPageProps
 const QuizWidget = ({
   isStandaloneQuiz = false,
   quizKey,
-  updateStatsHandler,
+  updateUserStats,
   currentHandler,
   statusHandler,
 }: QuizWidgetProps) => {
@@ -52,12 +53,13 @@ const QuizWidget = ({
     numberOfCorrectAnswers,
     nextQuiz,
     quizScore,
+    ratioCorrect,
     initialize,
     setSelectedAnswer,
     setShowAnswer,
     setUserQuizProgress,
     setCurrentQuestionAnswerChoice,
-  } = useQuizWidget({ quizKey })
+  } = useQuizWidget({ quizKey, updateUserStats })
 
   const quizPageProps = useRef<
     | (Required<Pick<QuizWidgetProps, "currentHandler" | "statusHandler">> & {
@@ -116,6 +118,7 @@ const QuizWidget = ({
                 quizPageProps: quizPageProps.current,
                 numberOfCorrectAnswers,
                 quizScore,
+                ratioCorrect,
                 initialize,
                 setUserQuizProgress,
                 setSelectedAnswer,
@@ -124,11 +127,13 @@ const QuizWidget = ({
               }}
             >
               <QuizContent>
-                {!showResults && (
+                {!showResults ? (
                   <>
                     <QuizProgressBar />
                     <QuizRadioGroup />
                   </>
+                ) : (
+                  <QuizSummary />
                 )}
               </QuizContent>
               <QuizButtonGroup />
@@ -166,7 +171,7 @@ export const StandaloneQuizWidget = (
       </Heading>
       <QuizWidget
         {...props}
-        updateStatsHandler={updateUserStats}
+        updateUserStats={updateUserStats}
         isStandaloneQuiz
       />
     </VStack>
