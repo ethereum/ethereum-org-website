@@ -1,25 +1,24 @@
-import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 
-import { ButtonLink } from "../../Buttons"
-import GatsbyImage from "../../GatsbyImage"
-import Morpher from "../../Morpher"
-import Translation from "../../Translation"
-import { CommonHeroProps } from "../utils"
+import { ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
+import Morpher from "@/components/Morpher"
 
-export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
+import type { CommonHeroProps } from "@/lib/types"
+
+export type HomeHeroProps = Pick<CommonHeroProps, "heroImgSrc">
 
 const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-index")
   return (
     <Box>
-      <GatsbyImage
-        image={heroImgSrc}
+      <Image
+        src={heroImgSrc}
         alt={t("page-index-hero-image-alt")}
         loading="eager"
         w="full"
-        height={{ base: "300px", sm: "350px", md: "380px", lg: "440px" }}
+        h={{ base: "300px", sm: "350px", md: "380px", lg: "440px" }}
       />
       <VStack>
         <Stack
@@ -32,13 +31,13 @@ const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
           <Morpher />
           <VStack spacing="6">
             <Heading as="h1" size="2xl">
-              <Translation id="page-index-title" />
+              {t("page-index-title")}
             </Heading>
             <Text size="xl">
-              <Translation id="page-index-description" />
+              {t("page-index-description")}
             </Text>
-            <ButtonLink to="/learn/">
-              <Translation id="page-index-title-button" />
+            <ButtonLink href="/learn/">
+              {t("page-index-title-button")}
             </ButtonLink>
           </VStack>
         </Stack>

@@ -1,7 +1,8 @@
-import { ReactElement, ReactNode } from "react"
-import { NextPage } from "next"
-import { AppProps } from "next/app"
+import type { ReactElement, ReactNode } from "react"
+import type { NextPage } from "next"
+import type { AppProps } from "next/app"
 
+import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type {
   Author,
   DocsFrontmatter,
@@ -12,7 +13,7 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
-import { Options } from "mdast-util-toc"
+import type { Options } from "mdast-util-toc"
 
 export type ChildOnlyProp = { children?: ReactNode }
 
@@ -158,8 +159,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -170,4 +171,12 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
+}
+
+export type CommonHeroProps = {
+  heroImgSrc: string
+  header: string
+  title: string
+  description: string
+  buttons?: [CallToActionProps, CallToActionProps?]
 }
