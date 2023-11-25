@@ -1,10 +1,10 @@
-import * as React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import HubHeroComponent, { HubHeroProps } from "./"
+import HubHeroComponent from "./"
+
+import type { CommonHeroProps as HubHeroProps } from "@/lib/types"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -25,35 +25,18 @@ const meta = {
 
 export default meta
 
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "fullWidth",
-  images: {
-    fallback: {
-      src: "/heroes/learn-hub-hero.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/heroes/learn-hub-hero.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
+// TODO: Double-check correct way to mock Next.js image data
+const mockImgData = "/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {
     title: "learn-hub",
     header: "hero-header",
     description: "hero-subtitle",
-    heroImgSrc: mockGatsbyImgData,
+    heroImgSrc: mockImgData,
   },
-  render: (args) => {
+  render: ({ title, header, description, ...props }) => {
     const { t } = useTranslation()
-    const { title, header, description, ...rest } = args
 
     const buttons: HubHeroProps["buttons"] = [
       {
@@ -81,7 +64,7 @@ export const HubHero: StoryObj<typeof meta> = {
         header={t(header)}
         description={t(description)}
         buttons={buttons}
-        {...rest}
+        {...props}
       />
     )
   },
