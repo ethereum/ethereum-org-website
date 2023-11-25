@@ -1,4 +1,3 @@
-import * as React from "react"
 import {
   Box,
   Heading,
@@ -8,21 +7,18 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import GatsbyImage from "../../GatsbyImage"
-import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
+import { Image } from "@/components/Image"
+import { CallToAction } from "@/components/Hero/CallToAction"
 
-export interface HubHeroProps extends CommonHeroProps {}
+import type { CommonHeroProps } from "@/lib/types"
 
-const HubHero = (props: HubHeroProps) => {
-  const { heroImgSrc, title, header, description, buttons } = props
-
-  if (buttons && buttons.length > 2) {
-    throw Error(
-      "Can not have more than two call-to-action buttons in this hero component."
-    )
-  }
-
+const HubHero = ({
+  heroImgSrc,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
   const largeContentBg = useColorModeValue(
     "rgba(255, 255, 255, 0.80)",
     "rgba(34, 34, 34, 0.80)"
@@ -30,11 +26,11 @@ const HubHero = (props: HubHeroProps) => {
 
   return (
     <Box position="relative">
-      <GatsbyImage
-        image={heroImgSrc}
+      <Image
+        src={heroImgSrc}
         alt=""
         w="full"
-        height={{
+        h={{
           base: "192px",
           md: "256px",
           lg: "320px",
@@ -75,14 +71,14 @@ const HubHero = (props: HubHeroProps) => {
           <Heading size="2xl">{header}</Heading>
           <Text size="lg">{description}</Text>
         </Stack>
-        <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-          {buttons
-            ? buttons.map((button, idx) => {
-                if (!button) return
-                return <CallToAction key={idx} {...button} index={idx} />
-              })
-            : null}
-        </HStack>
+        {buttons && (
+          <HStack justify={{ md: "center", xl: "start" }} spacing="4">
+            {buttons.map((button, idx) => {
+              if (!button) return
+              return <CallToAction key={idx} {...button} />
+            })}
+          </HStack>
+        )}
       </Stack>
     </Box>
   )
