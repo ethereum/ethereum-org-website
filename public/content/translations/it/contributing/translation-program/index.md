@@ -36,8 +36,8 @@ Leggi di più sulla [missione e visione](/contributing/translation-program/missi
 
 ### I nostri progressi finora {#our-progress}
 
-- [**Oltre 4.700** traduttori](/contributing/translation-program/contributors/)
-- [**52** lingue presenti sul sito](/languages/)
+- [**Oltre 5.100** traduttori](/contributing/translation-program/contributors/)
+- [**54** lingue presenti sul sito](/languages/)
 - [**3 milioni** di parole tradotte nel 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -66,14 +66,14 @@ Pensiamo costantemente a modi nuovi e innovativi per premiare i nostri collabora
 
 ### Guide e risorse {#guides-and-resources}
 
-Se stai contribuendo al Programma di Traduzione o stai pensando di partecipare, dovresti dare un'occhiata alle seguenti guide alla traduzione:
+Se stai contribuendo al programma di traduzione o stai pensando di partecipare, dovresti dare un'occhiata alle seguenti guide alla traduzione:
 
-- [Guida di Stile di Traduzione](/contributing/translation-program/translators-guide/) _– istruzioni e suggerimenti per i traduttori di ethereum.org_
-- [FAQ di Traduzione](/contributing/translation-program/faq/) _– domande e risposte frequenti sul Programma di Traduzione di ethereum.org_
+- [Guida allo stile di traduzione](/contributing/translation-program/translators-guide/) _– istruzioni e suggerimenti per i traduttori di ethereum.org_
+- [FAQ sulle traduzioni](/contributing/translation-program/faq/) _– domande e risposte frequenti sul programma di traduzione di ethereum.org_
 - [Guida all'editor online di Crowdin](https://support.crowdin.com/online-editor/) _– una guida approfondita all'uso dell'editor online di Crowdin e di alcune funzionalità avanzate di Crowdin_
-- [Categorie di contenuti](/contributing/translation-program/content-buckets/) _– quali pagine sono incluse in ogni categoria di contenuto di ethereum.org_
+- [Categorie di contenuti](/contributing/translation-program/content-buckets/) _– quali pagine sono incluse in ogni categoria di contenuti di ethereum.org_
 
-Per altri utili strumenti di traduzione, le community di traduttori e i post del blog del Programma di Traduzione, visita la [pagina delle risorse](/contributing/translation-program/resources/).
+Per altri utili strumenti di traduzione, le comunità di traduttori e i post del blog del programma di traduzione, visita la [pagina delle risorse](/contributing/translation-program/resources/).
 
 ## Contattaci {#get-in-touch}
 
@@ -83,8 +83,8 @@ Puoi anche contattarci all'indirizzo translations@ethereum.org
 
 ## Avviare il proprio programma di traduzione {#starting-a-translation-program}
 
-Ci impegniamo nella traduzione dei contenuti di Ethereum in quante più lingue possibile e nel rendere i contenuti educativi disponibili per tutti. In linea con la nostra attenzione alle traduzioni, vogliamo aiutare gli altri progetti di Ethereum a organizzare, gestire e migliorare i propri sforzi traduttivi.
+Ci impegniamo nella traduzione dei contenuti di Ethereum in quante più lingue possibile e nel rendere i contenuti istruttivi disponibili per tutti. In linea con la nostra attenzione alle traduzioni, vogliamo aiutare gli altri progetti di Ethereum a organizzare, gestire e migliorare i propri sforzi relativi alle traduzioni.
 
-Per questo motivo, abbiamo creato un [manuale del Programma di Traduzione](/contributing/translation-program/playbook/) contenente alcuni consigli e buone pratiche scelte nel processo di traduzione di ethereum.org.
+Per questo motivo abbiamo creato un [manuale del programma di traduzione](/contributing/translation-program/playbook/) contenente alcuni consigli e buone pratiche scelte nel processo di traduzione di ethereum.org.
 
 Desideri collaborare ulteriormente o usare alcune delle nostre risorse di traduzione? Hai qualche commento sul manuale? Vorremmo sentire il tuo parere su translations@ethereum.org.

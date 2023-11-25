@@ -6,71 +6,61 @@ lang: pt-br
 
 # Introdução aos contratos inteligentes {#introduction-to-smart-contracts}
 
-Os contratos inteligentes são os blocos fundamentais de construção de [aplicativos Ethereum](/dapps/). Eles são programas de computador armazenados na cadeia de blocos que nos permite converter contratos tradicionais em contratos paralelos digitais. Os contratos inteligentes são muitos lógicos — seguindo a estrutura condicional "If This Hena That" (se isso acontecer, então faça aquilo). Isso significa que eles se comportam exatamente como programado e que não podem ser alterados.
+Os contratos inteligentes são os elementos fundamentais da camada de aplicativos Ethereum. Eles são programas informáticos armazenados no blockchain que seguem a lógica "se isso, então aquilo" e têm a garantia de serem executados de acordo com as regras definidas pelo respectivo código, que não pode ser alterado depois de criado.
 
-Nick Szabo cunhou o termo "contrato inteligente". Em 1994, ele escreveu [uma introdução ao conceito](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) e, em 1996, [uma exploração do que os contratos inteligentes poderiam fazer](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
+Nick Szabo cunhou o termo "contrato inteligente". Em 1994, ele escreveu [uma introdução ao conceito](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html) e, em 1996, [uma análise sobre o que os contratos inteligentes poderiam fazer](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Nick Szabo previu um mercado digital construído sobre estes processos automáticos, criptograficamente seguros. Um lugar onde transações e funções de negócio podem acontecer com necessidade mínima de confiança — sem intermediários. Contratos inteligentes no Ethereum colocam esta visão em prática.
+Szabo imaginou um mercado digital em que processos automáticos e criptograficamente seguros permitiriam a ocorrência de funções de negócio e transações sem intermediários confiáveis. Os contratos inteligentes no Ethereum colocam em prática essa visão.
 
-## O que são contratos? {#what-are-contracts}
+## Confiança em contratos convencionais {#trust-and-contracts}
 
-Você provavelmente está pensando: _"Não sou advogado! Por que eu deveria me importar com contratos?"_. Para a maioria das pessoas, os contratos trazem consigo acordo de termos ou condições desnecessariamente longas ou documentos legalmente monótonos.
+Um dos maiores problemas de um contrato tradicional é a necessidade de se ter indivíduos confiáveis para acompanhar os resultados do contrato.
 
-Contratos são meros acordos. Ou seja, qualquer forma de acordo pode ser encapsulada nas condições de um contrato. Acordos verbais ou contratos de papel e caneta são aceitáveis para muitas coisas, mas eles não são isentos de falhas.
+Exemplo:
 
-### Confiança e contratos {#trust-and-contracts}
+Alice e Bob estão fazendo uma corrida de bicicleta. Digamos que Alice aposte R$ 10 com Bob que ela vencerá corrida. Bob está confiante que será o vencedor e aceita a aposta. No final, Alice termina a corrida bem à frente de Bob e vence. Mas Bob se recusa a pagar a aposta, alegando que Alice deve ter trapaceado.
 
-Um dos maiores problemas com um contrato tradicional é a necessidade de indivíduos confiáveis seguirem com os resultados do contrato.
+Esse exemplo ilustra o problema com qualquer contrato não inteligente. Mesmo que as condições do contrato sejam cumpridas (ou seja, você é o vencedor da corrida), você ainda precisa confiar que a outra pessoa cumprirá o contrato (ou seja, pagar a aposta).
 
-Veja um exemplo:
+## Uma máquina de vendas digitais {#vending-machine}
 
-Alice e Bob estão em uma corrida de bicicleta. Digamos que Alice aposte R$ 10 com Bob que ela vai ganhar a corrida. Bob está confiante que ele será o vencedor e aceita a aposta. No final, Alice termina a corrida bem à frente de Bob e é a vencedora. Mas Bob recusa-se a pagar a aposta, alegando que Alice deve ter trapaceado.
-
-Este exemplo bobo ilustra o problema com qualquer acordo não inteligente. Mesmo que as condições do acordo sejam cumpridas (ou seja, você é o vencedor da corrida), você ainda deve confiar na outra pessoa para cumprir o acordo (ou seja, o pagamento da aposta).
-
-## Contratos inteligentes {#smart-contracts}
-
-Os contratos inteligentes digitalizam acordos transformando os termos de um acordo em código de computador executado automaticamente quando os termos do contrato são cumpridos.
-
-### Uma máquina de vendas digitais {#vending-machine}
-
-Uma metáfora simples para um contrato inteligente é uma máquina de venda, que funciona de maneira como um contrato inteligente – entradas específicas garantem saídas predeterminadas.
+Uma metáfora simples de um contrato inteligente é como se fosse uma máquina de venda automática, que funciona de forma semelhante a um contrato inteligente – você insere algo específico e isso garante um produto predeterminado.
 
 - Você seleciona um produto
-- A máquina de venda retorna a quantidade necessária para comprar o produto
-- Você insere o valor correto
-- A máquina de venda verifica se você inseriu o valor correto
-- A máquina de venda dispensa o produto escolhido
+- A máquina de venda automática mostra o preço
+- Você paga o preço
+- A máquina de venda automática confirma que você pagou o valor correto
+- A máquina de venda automática entrega o item comprado
 
-A máquina de venda só dispensará o seu produto desejado depois que todos os requisitos forem atendidos. Se você não selecionar um produto ou inserir dinheiro suficiente, a máquina de venda não vai entregar o seu produto.
+A máquina de venda automática só entregará o produto após o cumprimento de todas as exigências. Se você não selecionar um produto ou não inserir dinheiro suficiente, a máquina de venda automática não entrega o produto.
 
-### Execução automática {#automation}
+## Execução automática {#automation}
 
-Um dos benefícios mais significativos que os contratos inteligentes têm sobre contratos comuns é o resultado ser executado automaticamente quando a condição do contrato é cumprida. Não há necessidade de esperar que um humano execute o resultado. Em outras palavras: contratos inteligentes eliminam a necessidade de confiança.
+O principal benefício de um contrato inteligente é que ele executa, de maneira determinística, um código inequívoco quando determinadas condições são atendidas. Não há necessidade de esperar que um ser humano interprete ou negocie o resultado. Isso elimina a necessidade de intermediários confiáveis.
 
-Por exemplo, você poderia escrever um contrato inteligente que retenha fundos em caução para uma criança, permitindo que ela retire fundos após uma data específica. Se eles tentarem retirar os fundos antes da data especificada, o contrato inteligente não será executado. Ou, você poderia escrever um contrato que dá automaticamente a você uma versão digital do documento de propriedade de um carro quando você paga o vendedor.
+Por exemplo, você pode redigir um contrato inteligente que mantenha fundos em depósito para uma criança e que permitirá que ela retire os fundos após uma data específica. Se a criança tentar retirar os fundos antes dessa data, o contrato inteligente não permitirá. Ou você pode redigir um contrato que entrega automaticamente uma versão digital do documento de propriedade de um carro assim que você pagar o valor à concessionária.
 
-### Resultados previsíveis {#predictability}
+## Resultados previsíveis {#predictability}
 
-O fator humano é um dos maiores pontos de falha com contratos tradicionais. Por exemplo, dois juízes individuais podem interpretar um contrato tradicional de maneiras diferentes. Suas interpretações poderiam levar a diferentes decisões sendo tomadas e a resultados diferentes. Contratos inteligentes eliminam a possibilidade de diferentes interpretações. Ao invés disso, contratos inteligentes executam precisamente com base nas condições escritas no código do contrato. Esta precisão significa que, dada as mesmas circunstâncias, o contrato inteligente produzirá o mesmo resultado.
+Os contratos tradicionais são ambíguos porque dependem de seres humanos para interpretá-los e implementá-los. Por exemplo, dois juízes podem interpretar um contrato de forma diferente, o que pode resultar na tomada de decisões incoerentes e resultados desproporcionais. Os contratos inteligentes eliminar essa possibilidade. Em vez disso, os contratos inteligentes são executados precisamente com base nas condições escritas no código do contrato. Essa exatidão significa que, se as circunstâncias forem idênticas, o contrato inteligente produzirá o mesmo resultado.
 
-### Registro público {#public-record}
+## Registro público {#public-record}
 
-Contratos inteligentes são úteis também para auditoria e rastreamento. Como os contratos inteligentes do Ethereum estão em um blockchain público, qualquer um pode rastrear instantaneamente as transferências de ativos e outras informações relacionadas. Você pode verificar se alguém enviou dinheiro para seu endereço, por exemplo.
+Os contratos inteligentes são úteis para auditorias e rastreamento. Como os contratos inteligentes do Ethereum estão em um blockchain público, qualquer pessoa pode rastrear instantaneamente as transferências de ativos e outras informações relacionadas. Por exemplo, você pode verificar se alguém enviou fundos para o seu endereço.
 
-### Proteção de privacidade {#privacy-protection}
+## Proteção de privacidade {#privacy-protection}
 
-Contratos inteligentes também podem proteger sua privacidade. Uma vez que o Ethereum é uma rede pseudônima (suas transações são ligadas publicamente a um único endereço criptográfico, não sua identidade), você pode proteger sua privacidade de observadores.
+Os contratos inteligentes também protegem a sua privacidade. Como o Ethereum é uma rede pseudônima (as suas transações são vinculadas publicamente a um único endereço criptográfico, não à sua identidade), você pode proteger a sua privacidade de observadores.
 
-### Termos visíveis {#visible-terms}
+## Termos visíveis {#visible-terms}
 
-Por fim, tal como os contratos, você pode verificar o que está em um contrato inteligente antes de assiná-lo (ou de outra forma, interagir com ele). Melhor ainda, a transparência pública dos termos do contrato significa que qualquer pessoa pode examiná-lo.
+Por último, como os contratos tradicionais, você pode verificar o conteúdo de um contrato inteligente antes de assiná-lo (ou interagir com ele de outra forma). A transparência de um contrato inteligente garante que qualquer pessoa pode analisar o conteúdo.
 
 ## Casos de uso de contrato inteligente {#use-cases}
 
-Assim sendo, contratos inteligentes são programas de computador que vivem no blockchain. Eles podem executar automaticamente. Você pode rastrear suas transações, prever como elas agem e até mesmo usá-las sob pseudônimo. Isso é legal. Mas para que eles servem? Bem, os contratos ininteligentes podem fazer essencialmente qualquer coisa que outros programas de computador fazem.
+Os contratos inteligentes podem fazer essencialmente qualquer coisa que os programas informáticos podem fazer.
 
-Eles podem realizar computações, criar moedas, armazenar dados, criar NFTs, enviar comunicados e até mesmo gerar gráficos. Aqui estão alguns exemplos populares, do mundo real:
+Eles podem realizar cálculos, criar moeda, armazenar dados, mintar NFTs, enviar comunicações e inclusive gerar gráficos. Apresentamos alguns exemplos reais e populares:
 
 - [Stablecoins](/stablecoins/)
 - [Criação e distribuição de ativos digitais únicos](/nft/)
@@ -81,11 +71,11 @@ Eles podem realizar computações, criar moedas, armazenar dados, criar NFTs, en
 
 ## Você é o tipo de pessoa que aprende mais com recursos visuais? {#visual-learner}
 
-Assista ao Finematics explicando contratos inteligentes:
+Assista à explicação de contratos inteligentes disponibilizada pelo canal Finematics:
 
 <YouTube id="pWGLtjG-F5c" />
 
-## Leia mais {#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Como os Contratos Inteligentes irão mudar o mundo](https://www.youtube.com/watch?v=pA6CGuXEKtQ)
 - [Contratos Inteligentes: A Tecnologia Blockchain que substituirá os Advogados](https://blockgeeks.com/guides/smart-contracts/)

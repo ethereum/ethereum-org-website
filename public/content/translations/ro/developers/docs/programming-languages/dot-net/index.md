@@ -78,7 +78,7 @@ Căutaţi şi alte resurse? Accesează [ethereum.org/developers](/developers/).
 
 Pe noi, cei de la Nethereum, ne puteţi găsi pe [Gitter](https://gitter.im/Nethereum/Nethereum), unde toată lumea poate să pună întrebări și să dea răspunsuri, să primească ajutor sau pur și simplu să se relaxeze. Puteţi crea un PR sau ridica o problemă în [Repo-ul GitHub Nethereum](https://github.com/Nethereum) sau puteţi descoperi numeroasele noastre proiecte secundare/de exemplificare. Ne puteţi găsi și pe [Discord](https://discord.gg/jQPrR58FxX)!
 
-La Nethermind, vă invităm să ne contactaţi prin [Gitter](//gitter.im/nethermindeth/nethermind). Pentru PR sau probleme, accesaţi [Repo-ul GitHub Nethermind](https://github.com/NethermindEth/nethermind).
+La Nethermind, vă invităm să ne contactaţi prin [Gitter](https://gitter.im/nethermindeth/nethermind). Pentru PR sau probleme, accesaţi [Repo-ul GitHub Nethermind](https://github.com/NethermindEth/nethermind).
 
 ## Alte liste agregate {#other-aggregated-lists}
 

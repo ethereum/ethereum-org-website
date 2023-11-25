@@ -44,7 +44,7 @@ Antes da atualização Shanghai/Capella, não era possível usar ou acessar seu 
 Fornecer um endereço de saque é uma etapa necessária para qualquer conta de validador, antes que ele seja elegível para sacar ETH de seu saldo.
 
 <InfoBanner emoji="⚠️" isWarning>
-  <strong>Cada conta de validador só pode ser atribuído a um único endereço de saque, uma vez.</strong> Visto que um endereço é escolhido e enviado para o Beacon Chain, isso não pode ser desfeito ou alterado novamente. Verifique a propriedade e a precisão do endereço fornecido antes de enviar.
+  <strong>Cada conta de validador pode ser atribuída a um único endereço de saque, uma única vez.</strong> Após a seleção e envio do endereço à camada de consenso, isso não pode ser desfeito ou alterado novamente. Verifique a propriedade e a precisão do endereço fornecido antes de enviar.
 </InfoBanner>
 
 Não há <strong>nenhuma ameaça aos seus fundos</strong> enquanto não fornecer essa conta, contanto que sua frase mnemônica/de recuperação tenha permanecido segura offline e não tenha sido comprometida de nenhuma forma. A falha em adicionar credenciais de saque simplesmente deixará o ETH bloqueado na conta do validador como tem estado até que um endereço de saque seja fornecido.
@@ -53,7 +53,7 @@ Não há <strong>nenhuma ameaça aos seus fundos</strong> enquanto não fornecer
 
 Fornecer um endereço de saque é necessário antes que _quaisquer_ fundos possam ser transferidos de um saldo de uma conta do validador.
 
-Os usuários que procuram sair totalmente do staking e sacar seu saldo total de volta, também devem assinar e transmitir uma mensagem de "saída voluntária", com as chaves do validador que iniciarão o processo de saída do staking. Isso é feito com seu cliente validador e enviado ao seu nó beacon, e não requer gás.
+Os usuários que procuram sair totalmente do staking e sacar seu saldo total de volta, também devem assinar e transmitir uma mensagem de "saída voluntária", com as chaves do validador que iniciarão o processo de saída do staking. Isso é feito com o seu cliente validador e enviado ao seu nó de consenso, e não exige gás.
 
 O processo de saída de um validador do staking leva uma quantidade variável de tempo, dependendo de quantos outros estão saindo ao mesmo tempo. Uma vez concluída, esta conta não será mais responsável por executar as obrigações de rede do validador, não será mais elegível para recompensas e não terá mais seu ETH "em stake". Nesse momento, a conta será marcada como totalmente “sacável”.
 
@@ -83,8 +83,9 @@ Confira esta explicação sobre saques de staking do Ethereum pela Finematics:
 Quando um validador está agendado para propor o próximo bloco, ele é necessário para construir uma fila de saque de até 16 saques elegíveis. Isso é feito originalmente começando com o validador de índice 0, determinando se há um saque elegível para essa conta, conforme as regras do protocolo, e adicionando-o à fila, se houver. O validador definido para propor o bloco seguinte continuará de onde o último parou, progredindo em ordem indefinidamente.
 
 <InfoBanner emoji="🕛">
-Pense em um relógio analógico. O ponteiro do relógio aponta para a hora, avança em uma direção, não pula nenhuma hora e, por fim, volta ao início novamente após o último número ser alcançado.<br/><br/>
-Agora, em vez de 1 a 12, imagine que o relógio tenha 0 a N <em>(o número total de contas do validador que já foram registradas na Beacon Chain, mais de 500.000 em janeiro de 2023).</em><br/> <br/>. O ponteiro do relógio aponta para o próximo validador, que precisa ser verificado para saques elegíveis. Começa em 0 e avança ao longo de todo o caminho sem pular nenhuma conta. Quando o último validador é alcançado, o ciclo continua de volta ao início.
+Pense em um relógio analógico. O ponteiro no relógio aponta para a hora, avança em uma direção, não pula nenhuma hora e, por fim, volta ao início após alcançar o último número.<br/><br/>
+Agora, em vez de 1 a 12, imagine que o relógio é de 0 a N <em>(o total de números de contas de validador que foram registradas na camada de consenso, mais de 500 mil em janeiro de 2023).</em><br/><br/>
+O ponteiro do relógio aponta para o próximo validador que precisa ser verificado quanto a saques elegíveis. Começa em 0 e avança ao longo de todo o caminho sem pular nenhuma conta. Quando o último validador é alcançado, o ciclo continua de volta ao início.
 </InfoBanner>
 
 #### Verificando os saques de uma conta {#checking-an-account-for-withdrawals}
@@ -147,12 +148,12 @@ Uma alternativa para mudar o endereço de saque de um validador específico impl
 </ExpandableCard>
 
 <ExpandableCard
-title="E se eu participar de derivativos líquidos de staking ou staking combinado?"
+title="E se eu me envolver em tokens participados ou participação combinada?"
 eventCategory="FAQ"
-eventAction="What if I participate in liquid staking derivatives or pooled staking"
+eventAction="What if I participate in staking tokens or pooled staking"
 eventName="read more">
 
-Se você faz parte de um <a href="/staking/pools/">pool de stake</a> ou possui derivados de stake líquidos, você deve solicitar ao seu provedor mais detalhes sobre como os saques de stake são tratados, pois cada serviço opera de maneira diferente.
+Se você faz parte de uma <a href="/staking/pools/">participação combinada</a> (participação em pool) ou mantém tokens participados, deve solicitar ao seu provedor mais detalhes sobre o processamento de saques de participação, pois cada serviço funciona de maneira diferente.
 
 Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer <a href="/staking/solo/">stake em casa</a>.
 

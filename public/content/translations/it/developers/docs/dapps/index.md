@@ -68,6 +68,12 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
+**thirdweb _- SDK in ogni linguaggio, contratti intelligenti, strumenti e infrastruttura per lo sviluppo web3._**
+
+- [Home page](https://thirdweb.com/)
+- [Documentazione](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 ## Letture consigliate {#further-reading}
 
 - [Esplora le dapp](/dapps)
@@ -76,9 +82,9 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 - [Cosa sono le App Decentralizzate?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 - [Dapp popolari](https://www.alchemy.com/dapps) - _Alchemy_
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
 - [Introduzione allo stack di Ethereum](/developers/docs/ethereum-stack/)
-- [Framework di sviluppo](/developers/docs/frameworks/)
+- [Quadri di sviluppo](/developers/docs/frameworks/)

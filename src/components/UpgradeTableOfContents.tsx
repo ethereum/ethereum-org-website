@@ -5,7 +5,7 @@ import type { ToCItem } from "@/lib/types"
 import { BaseLink } from "@/components/Link"
 import { IPropsItemsList } from "@/components/TableOfContents/ItemsList"
 
-import { parseToCTitle } from "@/lib/utils/toc"
+import { trimmedTitle } from "@/lib/utils/toc"
 
 export interface IPropsTableOfContentsLink {
   item: ToCItem
@@ -27,12 +27,18 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
       position="relative"
       display="inline-block"
       // `li :last-child` global selector wants to override this without `!important`
-      mb="0.5rem !important"
-      color="text300"
+      mb="1rem !important"
+      textDecoration="none"
+      color="body.medium"
       fontWeight="normal"
+      fontSize="xl"
+      _hover={{
+        color: "primary.hover",
+        textDecoration: "none",
+      }}
       _visited={{}}
     >
-      {parseToCTitle(title)}
+      {trimmedTitle(title)}
     </BaseLink>
   )
 }
@@ -63,19 +69,10 @@ const UpgradeTableOfContents: React.FC<IPropsToC> = ({
     as="nav"
     p={0}
     mb={8}
-    textAlign="end"
     overflowY="auto"
     display={{ base: "none", l: "block" }}
   >
-    <List
-      m={0}
-      py={0}
-      ps={4}
-      pe={1}
-      fontSize="xl"
-      lineHeight="1.6"
-      styleType="none"
-    >
+    <List m={0} py={0} lineHeight="1.4">
       <ItemsList items={items} depth={0} maxDepth={maxDepth} />
     </List>
   </Box>

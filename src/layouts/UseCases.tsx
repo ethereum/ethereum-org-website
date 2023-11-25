@@ -23,16 +23,13 @@ import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -110,11 +107,11 @@ export const UseCasesLayout: React.FC<IProps> = ({
   }
 
   const dropdownLinks: ButtonDropdownList = {
-    text: t("template-usecase-dropdown"),
-    ariaLabel: t("template-usecase-dropdown-aria"),
+    text: t("template-usecase:template-usecase-dropdown"),
+    ariaLabel: t("template-usecase:template-usecase-dropdown-aria"),
     items: [
       {
-        text: t("template-usecase-dropdown-defi"),
+        text: t("template-usecase:template-usecase-dropdown-defi"),
         to: "/defi/",
         matomo: {
           eventCategory: "use cases menu",
@@ -123,7 +120,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: t("template-usecase-dropdown-nft"),
+        text: t("template-usecase:template-usecase-dropdown-nft"),
         to: "/nft/",
         matomo: {
           eventCategory: "use cases menu",
@@ -132,7 +129,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: t("template-usecase-dropdown-dao"),
+        text: t("template-usecase:template-usecase-dropdown-dao"),
         to: "/dao/",
         matomo: {
           eventCategory: "use cases menu",
@@ -141,7 +138,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: t("template-usecase-dropdown-social-networks"),
+        text: t("template-usecase:template-usecase-dropdown-social-networks"),
         to: "/social-networks/",
         matomo: {
           eventCategory: "use cases menu",
@@ -150,7 +147,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: t("template-usecase-dropdown-identity"),
+        text: t("template-usecase:template-usecase-dropdown-identity"),
         to: "/decentralized-identity/",
         matomo: {
           eventCategory: "use cases menu",
@@ -159,7 +156,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: t("template-usecase-dropdown-desci"),
+        text: t("template-usecase:template-usecase-dropdown-desci"),
         to: "/desci/",
         matomo: {
           eventCategory: "use cases menu",
@@ -168,7 +165,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         },
       },
       {
-        text: t("template-usecase-dropdown-refi"),
+        text: t("template-usecase:template-usecase-dropdown-refi"),
         to: "/refi/",
         matomo: {
           eventCategory: "use cases menu",
@@ -185,7 +182,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         <BannerNotification shouldShow zIndex="sticky">
           <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
           <Text m={0}>
-            {t("template-usecase-banner")}{" "}
+            {t("template-usecase:template-usecase-banner")}{" "}
             {/* <InlineLink to={absoluteEditPath}>
               <Translation id="template-usecase-edit-link" />
             </InlineLink> */}
@@ -246,16 +243,13 @@ export const UseCasesLayout: React.FC<IProps> = ({
         </Flex>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents items={tocItems} maxDepth={2} />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />

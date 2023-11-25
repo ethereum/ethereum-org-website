@@ -12,13 +12,13 @@ This document serves as a general guide and is not specific to any one language.
 
 If you have any questions, suggestions or feedback, feel free to reach out to us at translations@ethereum.org, send a message to @ethdotorg on Crowdin, or [join our Discord](https://discord.gg/XVepFu7sqR), where you can message us in the #translations channel or reach out to any of the team members.
 
-### Using Crowdin {#using-crowdin}
+## Using Crowdin {#using-crowdin}
 
 You can find basic instructions on how to join the project in Crowdin and how to use the Crowdin online editor on the [Translation Program page](/contributing/translation-program/#how-to-translate).
 
 If you would like to learn more about Crowdin and using some of its advanced feature, the [Crowdin knowledge base](https://support.crowdin.com/online-editor/) contains a lot of in-depth guides and overviews of all Crowdin functionality.
 
-### Capturing the essence of the message {#capturing-the-essence}
+## Capturing the essence of the message {#capturing-the-essence}
 
 When translating ethereum.org content, avoid literal translations.
 
@@ -28,7 +28,7 @@ Different languages have different grammar rules, conventions and word order. Wh
 
 Instead of translating the source text word for word, it is recommended you read the entire sentence and adapt it to fit the conventions of the target language.
 
-### Formal vs. informal {#formal-vs-informal}
+## Formal vs. informal {#formal-vs-informal}
 
 We use the formal form of address, which is always polite and appropriate for all visitors.
 
@@ -36,13 +36,13 @@ Using the formal address allows us to avoid sounding unofficial or offensive, an
 
 Most Indo-European and Afro-Asiatic languages use gender-specific second-person personal pronouns, which distinguish between male and female. When addressing the user or using possessive pronouns, we can avoid assuming the visitor’s gender, as the formal form of address is generally applicable and consistent, regardless of how they identify.
 
-### Simple and clear vocabulary and meaning {#simple-vocabulary}
+## Simple and clear vocabulary and meaning {#simple-vocabulary}
 
 Our goal is to make content on the website understandable to as many people as possible.
 
 In most cases, this can be easily achieved by using short and simple words that are easily understandable. If there are multiple possible translations for a certain word in your language with the same meaning, the best option is most often the shortest word that clearly reflects the meaning.
 
-### Writing system {#writing-system}
+## Writing system {#writing-system}
 
 Ethereum.org is available in a number of languages, using alternative writing systems (or writing scripts) to Latin.
 
@@ -54,7 +54,7 @@ A common misconception is that Ethereum should always be written in Latin. This 
 
 **The above doesn’t apply to languages, where proper names shouldn’t be translated as a rule.**
 
-### Translating page metadata {#translating-metadata}
+## Translating page metadata {#translating-metadata}
 
 Some pages contain metadata on the page, like 'title', 'lang', 'description', 'sidebar', etc.
 
@@ -72,7 +72,7 @@ Some examples of language codes for the most widely spoken languages:
 - Hindi - hi
 - Spanish - es
 
-### Titles of external articles {#external-articles}
+## Titles of external articles {#external-articles}
 
 Some strings contain titles of external articles. Most of our developer documentation pages contain links to external articles for further reading. The strings containing titles of articles need to be translated, regardless of the article's language, to ensure a more consistent user experience for the visitors viewing the page in their language.
 
@@ -81,7 +81,7 @@ You can find some examples of what these strings look like for translators and h
 ![Article titles in sidebar.png](./article-titles-in-sidebar.png)
 ![Article titles in editor.png](./article-titles-in-editor.png)
 
-### Crowdin warnings {#crowdin-warnings}
+## Crowdin warnings {#crowdin-warnings}
 
 Crowdin has a built-in feature that warns translators when they are about to make a mistake. Crowdin will automatically warn you of this before saving your translation if you forget to include a tag from the source, translate elements that should not be translated, add several consecutive spaces, forget end punctuation, etc.
 If you see a warning like this, please go back and double-check the suggested translation.
@@ -91,7 +91,7 @@ If you see a warning like this, please go back and double-check the suggested tr
 An example of a Crowdin warning when you forget to add a tag to your translation:
 ![Example of a Crowdin warning](./crowdin-warning-example.png)
 
-### Dealing with tags and code snippets {#dealing-with-tags}
+## Dealing with tags and code snippets {#dealing-with-tags}
 
 A lot of the source content contains tags and variables, which are highlighted in yellow in the Crowdin editor. These serve different functions and should be approached correctly.
 
@@ -164,7 +164,7 @@ In the example below, you can see that hovering over the <0> tag shows that it r
 
 ![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 
-### Short vs. full forms/abbreviations {#short-vs-full-forms}
+## Short vs. full forms/abbreviations {#short-vs-full-forms}
 
 There are a lot of abbreviations used on the website, e.g. dapps, NFT, DAO, DeFi, etc. These abbreviations are commonly used in English and most visitors to the website are familiar with them.
 
@@ -176,7 +176,7 @@ Example of how to translate dapps:
 
 - Decentralized applications (dapps) → _Translated full form (English abbreviation in brackets)_
 
-### Terms without established translations {#terms-without-established-translations}
+## Terms without established translations {#terms-without-established-translations}
 
 Some terms might not have established translations in other languages, and are widely known by the original English term. Such terms mostly include newer concepts, like proof-of-work, proof-of-stake, Beacon Chain, staking, etc.
 
@@ -186,7 +186,7 @@ When translating them, feel free to get creative, use descriptive translations, 
 
 **The reason why most terms should be translated, instead of leaving some in English, is the fact that this new terminology will become more widespread in the future, as more people start using Ethereum and related technologies. If we want to onboard more people from all over the world to this space, we need to provide understandable terminology in as many languages as possible, even if we need to create it ourselves.**
 
-### Buttons & CTAs {#buttons-and-ctas}
+## Buttons & CTAs {#buttons-and-ctas}
 
 The website contains numerous buttons, which should be translated differently than other content.
 
@@ -196,7 +196,7 @@ The translations for buttons should be as short as possible, to prevent formatti
 
 ![How to find a button.png](./how-to-find-a-button.png)
 
-### Translating for inclusivity {#translating-for-inclusivity}
+## Translating for inclusivity {#translating-for-inclusivity}
 
 Ethereum.org visitors come from all over the world and from different backgrounds. The language on the website should therefore be neutral, welcoming to everyone and not exclusive.
 
@@ -290,7 +290,7 @@ Some examples of what to be particularly mindful of:
 - As a general rule, please keep the units of measure as per the source. If your country uses a different system, you can include the conversion in brackets.
 - Aside from the localization of units of measure, it is also important to note the differences in how languages approach these units. The main difference is the spacing between the number and unit, which can be different, based on the language. Examples of this include 100kB vs. 100 kB or 50ºF vs. 50 ºF.
 
-### Conclusion {#conclusion}
+## Conclusion {#conclusion}
 
 Translating ethereum.org is a great opportunity to learn about the different aspects of Ethereum.
 

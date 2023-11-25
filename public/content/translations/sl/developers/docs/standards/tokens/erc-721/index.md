@@ -32,7 +32,7 @@ Zagotavlja funkcionalnosti, kot so prenos žetonov z enega računa na drugega, p
 
 Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-#### Metode {#methods}
+### Metode {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Dogodki {#events}
+### Dogodki {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);

@@ -1,4 +1,12 @@
-import { Box, Flex, Show, SimpleGrid, Wrap, WrapItem } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Show,
+  SimpleGrid,
+  Wrap,
+  WrapItem,
+  useToken,
+} from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
@@ -10,12 +18,9 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
   Title,
 } from "@/components/MdComponents"
 import OldText from "@/components/OldText"
@@ -23,7 +28,7 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
@@ -65,6 +70,9 @@ export const RoadmapLayout: React.FC<IProps> = ({
   slug,
   tocItems,
 }) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {
@@ -120,7 +128,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative" overflowX="hidden">
+    <Box position="relative">
       <HeroContainer>
         <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
           <TitleCard>
@@ -181,19 +189,13 @@ export const RoadmapLayout: React.FC<IProps> = ({
         </Flex>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <Show above="lg">
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          maxDepth={frontmatter.sidebarDepth!}
+          tocItems={tocItems}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />

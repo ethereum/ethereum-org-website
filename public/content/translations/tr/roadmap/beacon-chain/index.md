@@ -10,7 +10,7 @@ summaryPoint2: Original Ethereum Hisse İspatı zinciri ile eylül 2022de birle�
 summaryPoint3: İşaret Zinciri ve mutabakat mantığını ve şimdilerde Ethereumu güvende tutan blok dedikodusu protokolünü tanıttı.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   İşaret Zinciri 1 Aralık 2020'de geldi ve hisse ispatını Ethereumun mutabakat mekanizması olarak 15 Eylül 2022'de Birleşim yükseltmesiyle resmileştirdi.
 </UpgradeStatus>
 

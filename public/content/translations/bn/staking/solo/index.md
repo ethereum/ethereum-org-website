@@ -105,13 +105,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### নোড টুলস
+### নোড টুলস
 
 <StakingProductsCardGrid category="nodeTools" />
 
 একটি [মাইনরিটি ক্লায়েন্ট](/developers/docs/nodes-and-clients/client-diversity/) বেছে নেওয়া অত্যান্ত গুরুত্বপূর্ণ কারণ এটি নেটওয়ার্কের নিরাপত্তা উন্নত করে এবং আপনার ঝুঁকি সীমিত করে। যে টুলস আপনাকে মাইনরিটি ক্লায়েন্ট সেটআপ করতে দেয় সেগুলি <em style={{ textTransform: "uppercase" }}>"মাল্টি-ক্লায়েন্ট"</em> হিসাবে চিহ্নিত করা হয়।
 
-#### কী জেনারেটর সমূহ
+### কী জেনারেটর সমূহ
 
 কী জেনারেশনে সহায়তা করার জন্য এই টুলস [স্টেকিং ডিপোজিট CLI](https://github.com/ethereum/staking-deposit-cli/) এর বিকল্প হিসাবে ব্যবহার করা যেতে পারে।
 

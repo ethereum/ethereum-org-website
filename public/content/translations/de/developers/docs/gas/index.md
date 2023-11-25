@@ -14,51 +14,43 @@ Um diese Seite besser zu verstehen, empfehlen wir dir, zuerst [Transaktionen](/d
 
 Gas bezieht sich auf die Einheit, die den Umfang des Rechenaufwands misst, der für die Durchführung spezifischer Operationen im Ethereum-Netzwerk erforderlich ist.
 
-Da jede Ethereum-Transaktion Rechenressourcen benötigt, um ausgeführt zu werden, wird für jede Transaktion eine Gebühr fällig. Gas bezieht sich auf die Gebühr, die erforderlich ist, um eine Transaktion auf Ethereum erfolgreich durchzuführen.
+Da jede Transaktion im Ethereum-Netzwerk den Einsatz von Rechenressourcen erfordert, um zur Ausführung zu gelangen, ist für diese Ressourcen eine Vergütung erforderlich. Das dient der Sicherstellung, dass das Ethereum-Netzwerk weder für Spam-Attacken anfällig ist, noch in Zustände unendlicher Rechenzyklen verfallen kann. Die Bezahlung für Berechnungen erfolgt in Form einer Gasgebühr.
+
+Die Gasgebühr entspricht **dem Volumen des verbrauchten Gases für eine spezifische Transaktion multipliziert mit dem Preis je Gaseinheit**. Die Gebühr wird unabhängig davon gezahlt, ob eine Transaktion erfolgreich ist oder nicht.
 
 ![Ein Diagramm, das zeigt, wo Gas im EVM-Betrieb benötigt wird](./gas.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-Im Wesentlichen werden Gasgebühren in Ethereums Eigenwährung, Ether (ETH) gezahlt. Die Gaspreise sind in Gwei angegeben, was selbst eine Bezeichnung für ETH ist. Jeder Gwei ist gleich 0,000000001 ETH (10<sup>-9</sup> ETH). Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet. Das Wort "gwei" selbst bedeutet "giga-wei" und entspricht 1.000.000.000 wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
+Gasgebühren sind in der originären Währung von Ethereum, Ether (ETH), zu entrichten. Die Gaspreise werden in der Regel in Gwei angegeben, einer Untereinheit von ETH. Jede Gwei entspricht einem Milliardstel einer ETH (0,000000001 ETH oder 10<sup>-9</sup> ETH).
 
-## Vor dem London-Upgrade {#pre-london}
+Anstatt z. B. zu sagen, dass dein Gas 0,000000001 Ether kostet, kannst du sagen, dass dein Gas 1 Gwei kostet.
 
-Die Art und Weise, wie die Transaktionsgebühren im Ethereum-Netzwerk berechnet wurden, änderte sich mit dem [London-Upgrade](/history/#london) vom August 2021. Hier ist eine Zusammenfassung, wie die Dinge früher funktionierten:
+Das Wort "gwei" ist eine Kurzform von "giga-wei", was "Milliarde wei" bedeutet. Ein gwei entspricht einer Milliarde wei. Wei selbst (benannt nach [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), dem Erfinder von [B-Geld](https://www.investopedia.com/terms/b/bmoney.asp)) ist die kleinste Einheit von ETH.
 
-Nehmen wir an, Alice müsste Bob 1 ETH zahlen. Bei der Transaktion liegt das Gaslimit bei 21.000 Einheiten und der Gaspreis bei 200 gwei.
+## Wie werden die Gasgebühren berechnet? {#how-are-gas-fees-calculated}
 
-Die Gesamtgebühr wäre gewesen: `Gaseinheiten (Limit) * Gaspreis pro Einheit`, d. h. `21.000 * 200 = 4.200.000 gwei` oder 0,0042 ETH.
+Sie können die Menge an Gas, die Sie zu zahlen bereit sind, festlegen, wenn Sie eine Transaktion einreichen. Durch das Angebot einer festgelegten Gasmenge beteiligen Sie sich an einer Auktion zur Einbeziehung Ihrer Transaktion in den nächsten Block. Bei einem zu niedrigen Gasangebot verringert sich die Wahrscheinlichkeit, dass Validierer Ihre Transaktion für die Einbindung in den nächsten Block auswählen, was zu einer verzögerten oder sogar nicht erfolgenden Ausführung Ihrer Transaktion führen kann. Wenn Sie zu viel bieten, könnten Sie ETH verschwenden. Wie können Sie also feststellen, wie viel Sie zahlen müssen?
 
-Wenn Alice das Geld schickt, werden 1,0042 ETH von ihrem Konto abgezogen. Bob würden 1,0000 ETH gutgeschrieben werden. Der Miner würde 0,0042 ETH erhalten.
+Der Gesamtbetrag, den Sie zahlen, wird in zwei Komponenten aufgeteilt: die `Grundgebühr `und die `Prioritätsgebühr` (Trinkgeld).
 
-Dieses Video bietet einen kurzen Überblick über Gas und warum es existiert:
+Die `Grundgebühr` wird durch das Protokoll festgelegt - Sie müssen mindestens diesen Betrag zahlen, damit Ihre Transaktion als gültig betrachtet wird. Die `Prioritätsgebühr` ist ein Trinkgeld, das Sie auf die Grundgebühr aufschlagen, um Ihre Transaktion für die Validierer attraktiv zu machen, so dass diese sie für die Aufnahme in den nächsten Block auswählen.
 
-<YouTube id="AJvzNICwcwc" />
+Eine Transaktion, für die nur die `Grundgebühr` gezahlt wird, ist zwar technisch gesehen gültig, wird aber wahrscheinlich nicht berücksichtigt, da sie den Validierern keinen Anreiz bietet, sie einer anderen Transaktion vorzuziehen. Die "richtige" `Prioritätsgebühr` wird durch die Netzwerkauslastung zu dem Zeitpunkt bestimmt, an dem Sie Ihre Transaktion senden. Wenn es viel Nachfrage gibt, müssen Sie Ihre `Prioritätsgebühr` möglicherweise höher ansetzen, aber wenn es weniger Nachfrage gibt, können Sie weniger bezahlen.
 
-## Nach dem London-Upgrade {#post-london}
+Nehmen wir zum Beispiel an, Jordan muss Taylor 1 ETH bezahlen. Ein ETH-Transfer erfordert 21.000 Gaseinheiten, und die Grundgebühr beträgt 10 gwei. Jordan enthält ein Trinkgeld von 2 gwei.
 
-[Das London-Upgrade](/history/#london) wurde am 5. August 2021 eingeführt, um Transaktionen auf Ethereum für die Nutzer berechenbarer zu machen, indem der Transaktionsgebühren-Mechanismus von Ethereum überarbeitet wurde. Zu den wichtigsten Vorteilen dieser Änderung gehören eine bessere Schätzung der Transaktionsgebühren, eine allgemein schnellere Aufnahme von Transaktionen und die Kompensation der ETH-Ausgabe durch das Verbrennen eines Prozentsatzes der Transaktionsgebühren.
+Die Gesamtgebühr würde sich nun wie folgt zusammensetzen:
 
-Seit dem Upgrade des Londoner Netzes gibt es für jeden Block eine Grundgebühr, den Mindestpreis pro Gaseinheit für die Aufnahme in diesen Block, der vom Netz auf der Grundlage der Nachfrage nach Blockraum berechnet wird. Da die Grundgebühr der Transaktionsgebühr verbrannt wird, wird von den Nutzern erwartet, dass sie bei ihren Transaktionen auch ein Trinkgeld (Prioritätsgebühr) festlegen. Das Trinkgeld entschädigt die Miner für die Ausführung und Weitergabe von Nutzertransaktionen in Blöcken und wird voraussichtlich von den meisten Wallets automatisch festgelegt.
+`Verbrauchte Gaseinheiten * (Grundgebühr + Prioritätsgebühr)`
 
-Die Berechnung der gesamten Transaktionsgebühr funktioniert wie folgt: `Gaseinheiten (Limit) * (Grundgebühr + Trinkgeld)`
+wobei die `Grundgebühr` ein durch das Protokoll bestimmter Wert und die `Prioritätsgebühr` ein vom Benutzer gesetzter Wert als Anreiz für den Validierer ist.
 
-Sagen wir, Jordan muss Taylor 1 ETH zahlen. Bei der Transaktion liegt das Gaslimit bei 21.000 Einheiten und die Grundgebühr bei 100 gwei. Jordan enthält ein Trinkgeld von 10 gwei.
+z.B. `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
-Mit der obigen Formel können wir dies als `21.000 * (100 + 10) = 2.310.000 gwei` oder 0,00231 ETH berechnen.
-
-Wenn Jordan das Geld schickt, werden 1,00231 ETH von seinem Konto abgezogen. Taylor werden 1,0000 ETH gutgeschrieben. Der Miner erhält das Trinkgeld von 0,00021 ETH. Die Grundgebühr von 0,0021 ETH wird verbrannt.
-
-Zusätzlich kann Jordan auch eine maximale Gebühr (`maxFeePerGas`) für die Transaktion festlegen. Die Differenz zwischen der Höchstgebühr und der tatsächlichen Gebühr wird Jordan zurückerstattet, d. h. `Erstattung = Höchstgebühr - (Grundgebühr + Prioritätsgebühr)`. Jordan kann einen Höchstbetrag für die Ausführung der Transaktion festlegen und muss sich keine Sorgen machen, dass er "über" die Grundgebühr hinaus zahlt, wenn die Transaktion ausgeführt wird.
-
-### Blockgröße {#block-size}
-
-Vor dem London-Upgrade hatte Ethereum Blöcke mit fester Größe. In Zeiten hoher Netznachfrage waren diese voll ausgelastet. Infolgedessen mussten die Nutzer/Nutzerinnen oft warten, bis die hohe Nachfrage nachließ, um in einen Block aufgenommen zu werden, was zu einem schlechten Nutzererlebnis führte.
-
-Mit dem London-Upgrade wurden in Ethereum Blöcke mit variabler Größe eingeführt. Jeder Block hat eine Zielgröße von 15 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 30 Millionen Gas (2x die Zielblockgröße). Das Protokoll erreicht durch den Prozess des _Tâtonnement_ eine gleichgewichtige Blockgröße von durchschnittlich 15 Millionen. Das heißt, wenn die Blockgröße die Zielblockgröße übersteigt, erhöht das Protokoll die Grundgebühr für den folgenden Block. Ebenso senkt das Protokoll die Grundgebühr, wenn die Blockgröße kleiner als die Zielblockgröße ist. Der Betrag, um den die Grundgebühr angepasst wird, ist proportional dazu, wie weit die aktuelle Blockgröße vom Zielwert entfernt ist. [Mehr über Blöcke](/developers/docs/blocks/).
+Wenn Jordan das Geld versendet, werden 1,000252 ETH von Jordans Konto abgezogen. Taylor werden 1,0000 ETH gutgeschrieben. Der Validator erhält das Trinkgeld von 0,000042 ETH. Die `Grundgebühr` von 0,00021 ETH wird verbrannt.
 
 ### Grundgebühr {#base-fee}
 
-Jeder Block hat eine Grundgebühr, die als Reservepreis dient. Um in einen Block aufgenommen zu werden, muss der angebotene Preis pro Gas mindestens der Grundgebühr entsprechen. Die Grundgebühr wird unabhängig vom aktuellen Block berechnet und richtet sich stattdessen nach den vorherigen Blöcken. Das macht die Transaktionsgebühren für die Nutzer/Nutzerinnen berechenbarer. Wenn der Block abgebaut wird, wird diese Grundgebühr "verbrannt" und aus dem Verkehr gezogen.
+Jeder Block hat seine eigene Basisgebühr, welche als reservierter Preis erscheint. Um in einen Block aufgenommen zu werden, muss der angebotene Preis pro Gas mindestens der Grundgebühr entsprechen. Die Grundgebühr wird unabhängig vom aktuellen Block berechnet und richtet sich stattdessen nach den vorherigen Blöcken. Das macht die Transaktionsgebühren für die Nutzer/Nutzerinnen berechenbarer. Bei der Erstellung des Blocks wird diese **Grundgebühr "verbrannt"** und damit aus dem Verkehr gezogen.
 
 Die Grundgebühr wird anhand einer Formel berechnet, die die Größe des vorherigen Blocks (die für alle Transaktionen verwendete Gasmenge) mit der Zielgröße vergleicht. Die Grundgebühr erhöht sich um maximal 12,5 % pro Block, wenn die Zielblockgröße überschritten wird. Dieses exponentielle Wachstum macht es wirtschaftlich unrentabel, die Blockgröße unbegrenzt hoch zu halten.
 
@@ -73,9 +65,9 @@ Die Grundgebühr wird anhand einer Formel berechnet, die die Größe des vorheri
 | 7           |            30 m |           12,5 % |           180,2 gwei |
 | 8           |            30 m |           12,5 % |           202,7 gwei |
 
-Im Vergleich zum Markt vor der Londoner Gasauktion führt diese Änderung des Transaktionsgebühren-Mechanismus dazu, dass die Gebührenvorhersage zuverlässiger ist. Der obigen Tabelle folgend, um eine Transaktion auf Block Nummer 9 zu erstellen, wird eine Wallet den Nutzer mit Sicherheit wissen lassen, dass die **maximale Grundgebühr**, die zum nächsten Block hinzugefügt werden soll, `aktuelle Grundgebühr * 112,5%` oder `202,8 gwei * 112,5% = 228,1 gwei` ist.
+Der obigen Tabelle folgend: Um eine Transaktion auf Block Nummer 9 zu erstellen, wird eine Wallet den Nutzer mit Sicherheit wissen lassen, dass die **maximale Grundgebühr**, die dem nächsten Block hinzugefügt wird, `aktuelle Grundgebühr * 112,5%` oder `202,7 gwei * 112,5% = 228,1 gwei` ist.
 
-Außerdem ist es unwahrscheinlich, dass wir längere Spitzen von vollen Blöcken sehen werden, weil die Grundgebühr bei einem vollen Block so schnell steigt.
+Außerdem ist es unwahrscheinlich, dass es zu längeren Zeiträumen mit vollen Blöcken kommt, da die Grundgebühr vor einem vollen Block schnell ansteigt.
 
 | Blocknummer | Enthaltenes Gas | Gebührenerhöhung | Aktuelle Grundgebühr |
 | ----------- | --------------: | ---------------: | -------------------: |
@@ -87,83 +79,77 @@ Außerdem ist es unwahrscheinlich, dass wir längere Spitzen von vollen Blöcken
 
 ### Prioritätsgebühr (Trinkgeld) {#priority-fee}
 
-Vor dem London-Upgrade erhielten die Miner die gesamte Gasgebühr für jede in einem Block enthaltene Transaktion.
-
-Da die neue Grundgebühr verbrannt wurde, führte das London-Upgrade eine Prioritätsgebühr (Trinkgeld) ein, um Minern einen Anreiz zu geben, eine Transaktion in den Block aufzunehmen. Ohne Trinkgelder würde es sich für Miner lohnen, leere Blöcke abzubauen, da sie die gleiche Blockbelohnung erhalten würden. Unter normalen Bedingungen bietet ein kleines Trinkgeld den Minern einen minimalen Anreiz, eine Transaktion durchzuführen. Für Transaktionen, die vor anderen Transaktionen im selben Block bevorzugt ausgeführt werden müssen, ist ein höheres Trinkgeld notwendig, um konkurrierende Transaktionen zu überbieten.
+Die Prioritätsgebühr (Trinkgeld) bietet den Validierern einen Anreiz, eine Transaktion in den Block aufzunehmen. Ohne Trinkgeld wäre es für Validierer wirtschaftlich rentabel, leere Blöcke zu schürfen, da sie die gleiche Blockbelohnung erhalten würden. Kleine Trinkgelder geben den Validierern einen minimalen Anreiz, eine Transaktion aufzunehmen. Damit Transaktionen vor anderen Transaktionen im selben Block bevorzugt ausgeführt werden, kann ein höheres Trinkgeld hinzugefügt werden, um zu versuchen, konkurrierende Transaktionen zu überbieten.
 
 ### Maximale Gebühr {#maxfee}
 
-Um eine Transaktion im Netzwerk auszuführen, können Nutzer/Nutzerinnen ein maximales Limit angeben, das sie bereit sind, für die Ausführung ihrer Transaktion zu zahlen. Dieser optionale Parameter ist als `maxFeePerGas` bekannt. Damit eine Transaktion ausgeführt werden kann, muss die maximale Gebühr die Summe aus der Grundgebühr und dem Trinkgeld übersteigen. Der Absender der Transaktion erhält die Differenz zwischen der maximalen Gebühr und der Summe aus Grundgebühr und Trinkgeld zurück.
+Um eine Transaktion im Netzwerk auszuführen, können Nutzer/Nutzerinnen ein maximales Limit angeben, das sie bereit sind, für die Ausführung ihrer Transaktion zu bezahlen. Dieser optionale Parameter ist als `maxFeePerGas` bekannt. Damit eine Transaktion ausgeführt werden kann, muss die maximale Gebühr die Summe aus der Grundgebühr und dem Trinkgeld übersteigen. Der Absender der Transaktion erhält die Differenz zwischen der maximalen Gebühr und der Summe aus Grundgebühr und Trinkgeld zurück.
 
-### Berechnung der Gebühren {#calculating-fees}
+### Blockgröße {#block-size}
 
-Einer der Hauptvorteile des London-Upgrades ist die Verbesserung der Benutzererfahrung bei der Festlegung der Transaktionsgebühren. Bei Wallets, die das Upgrade unterstützen, geben die Wallet-Anbieter nicht mehr explizit an, wie viel du bereit bist, für deine Transaktion zu zahlen, sondern legen automatisch eine empfohlene Transaktionsgebühr fest (Grundgebühr + empfohlene Prioritätsgebühr), um die Komplexität für ihre Nutzer zu reduzieren.
+Jeder Block hat eine Zielgröße von 15 Millionen Gas, aber die Größe der Blöcke wird entsprechend der Netznachfrage erhöht oder verringert, bis zur Blockgrenze von 30 Millionen Gas (die zweifache Zielblockgröße). Das Protokoll erreicht durch den Prozess des _Tâtonnement_ eine gleichgewichtige Blockgröße von durchschnittlich 15 Millionen. Das heißt, wenn die Blockgröße die Zielblockgröße übersteigt, erhöht das Protokoll die Grundgebühr für den folgenden Block. Ebenso senkt das Protokoll die Grundgebühr, wenn die Blockgröße kleiner als die Zielblockgröße ist. Der Betrag, um den die Grundgebühr angepasst wird, ist proportional dazu, wie weit die aktuelle Blockgröße vom Zielwert entfernt ist. [Mehr über Blöcke](/developers/docs/blocks/).
 
-## EIP-1559 {#eip-1559}
+### Berechnung der Gasgebühren in der Praxis {#calculating-fees-in-practice}
 
-Die Implementierung der [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) im London-Upgrade hat den Mechanismus der Transaktionsgebühren komplexer gemacht als die vorherige Gaspreisauktion. Dies hat aber den Vorteil, dass die Gasgebühren berechenbarer sind, was zu einem effizienteren Markt für Transaktionsgebühren führt. Nutzer können Transaktionen mit einem `maxFeePerGas` einreichen, der angibt, wie viel sie bereit sind, für die Ausführung der Transaktion zu zahlen. Dabei können sie sicher sein, dass sie nicht mehr als den Marktpreis für Gas (`baseFeePerGas`) zahlen und alles, was darüber hinausgeht, abzüglich ihres Trinkgelds zurückerstattet bekommen.
-
-Dieses Video erklärt EIP-1559 und die Vorteile, die es bringt:
-
-<YouTube id="MGemhK9t44Q" />
-
-Wenn du interessiert bist, kannst du hier die genauen [EIP-1559 Spezifikationen](https://eips.ethereum.org/EIPS/eip-1559) nachlesen.
-
-Gehe mit diesem Link weiter in den Kaninchenbau hinein: [EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
+Sie können ausdrücklich angeben, wie viel Sie bereit sind zu zahlen, damit Ihre Transaktion ausgeführt wird. Die meisten Anbieter von Wallets legen jedoch automatisch eine empfohlene Transaktionsgebühr fest (Grundgebühr + empfohlene Prioritätsgebühr), um die Komplexität für die Nutzer zu verringern.
 
 ## Warum gibt es Gasgebühren? {#why-do-gas-fees-exist}
 
-Kurzum: Gasgebühren helfen dabei, das Ethereum-Netz sicher zu halten. Indem wir für jede Berechnung, die im Netzwerk ausgeführt wird, eine Gebühr verlangen, verhindern wir, dass schlechte Akteure das Netzwerk spammen. Um versehentliche oder feindliche Endlosschleifen oder andere Rechenverschwendung in Code zu vermeiden, muss jede Transaktion eine Grenze für die Anzahl der Rechenschritte festlegen, die sie zur Codeausführung verwenden kann. Die Grundeinheit der Berechnung ist "Gas".
+Kurzum, Gasgebühren helfen dabei, das Ethereum-Netz sicher zu halten. Indem wir für jede Berechnung, die im Netzwerk ausgeführt wird, eine Gebühr verlangen, verhindern wir, dass Akteure mit böswilligen Absichten das Netzwerk spammen. Um versehentliche oder feindliche Endlosschleifen oder andere Verschwendung von Rechenlast in Code zu vermeiden, muss jede Transaktion eine Grenze für die Anzahl der Rechenschritte festlegen, die sie zur Codeausführung verwenden kann. Die Grundeinheit der Berechnung ist "Gas".
 
 Auch wenn eine Transaktion ein Limit beinhaltet, wird jedes nicht verbrauchte Gas an den Nutzer zurückgegeben (d. h. `max fee - (base fee + tip)` wird zurückgegeben).
 
-![Ein Diagramm, das zeigt, wie ungenutztes Gas zurückerstattet wird](../transactions/gas-tx.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagramm zeigt, wie ungenutztes Gas zurückerstattet wird](../transactions/gas-tx.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Was ist das Gaslimit? {#what-is-gas-limit}
 
-Das Gaslimit bezieht sich auf die maximale Menge an Gas, die du bei einer Transaktion verbrauchen möchtest. Kompliziertere Transaktionen mit [smarten Verträgen](/developers/docs/smart-contracts/) erfordern mehr Rechenarbeit und damit ein höheres Gaslimit als eine einfache Zahlung. Ein Standard-ETH-Transfer erfordert ein Gaslimit von 21.000 Gaseinheiten.
+Das Gaslimit bezieht sich auf die maximale Menge an Gas, die Sie bereit sind, bei einer Transaktion zu verbrauchen. Kompliziertere Transaktionen mit [Smart Contracts](/developers/docs/smart-contracts/) erfordern mehr Rechenarbeit und damit ein höheres Gaslimit als eine einfache Zahlung. Ein Standard-ETH-Transfer erfordert ein Gaslimit von 21.000 Gaseinheiten.
 
-Wenn du zum Beispiel ein Gaslimit von 50.000 für einen einfachen ETH-Transfer festlegen würdest, würde die EVM 21.000 verbrauchen und du würdest die restlichen 29.000 zurückbekommen. Wenn du jedoch zu wenig Gas angibst, z. B. ein Gaslimit von 20.000 für einen einfachen ETH-Transfer, wird die EVM deine 20.000 Gaseinheiten verbrauchen und versuchen, die Transaktion durchzuführen, aber sie wird nicht abgeschlossen. Die EVM macht dann alle Änderungen rückgängig, aber da der Miner bereits Arbeit im Wert von 20.000 Gaseinheiten geleistet hat, ist dieses Gas verbraucht.
+Wenn Sie zum Beispiel ein Gaslimit von 50.000 für einen einfachen ETH-Transfer festlegen würden, würde die EVM 21.000 verbrauchen und Sie würden die restlichen 29.000 zurückbekommen. Wenn Sie jedoch zu wenig Gas angeben, z. B. ein Gaslimit von 20.000 für einen einfachen ETH-Transfer, wird die EVM Ihre 20.000 Gaseinheiten verbrauchen und versuchen, die Transaktion durchzuführen, aber sie wird nicht abgeschlossen. Die EVM macht dann alle Änderungen rückgängig, da der Validierer jedoch bereits Arbeit im Wert von 20.000 Gaseinheiten geleistet hat, ist dieses Gas verbraucht.
 
 ## Warum können die Gasgebühren so hoch sein? {#why-can-gas-fees-get-so-high}
 
-Die hohen Gasgebühren sind auf die Beliebtheit von Ethereum zurückzuführen. Für jede Operation auf Ethereum muss Gas verbraucht werden, und der Gasplatz ist pro Block begrenzt. Zu den Gebühren gehören Berechnungen, das Speichern oder Verarbeiten von Daten oder die Übertragung von Token, die unterschiedliche Mengen von "Gas"-Einheiten verbrauchen. Je komplexer die Funktionalität einer App wird, desto mehr Operationen führt ein Smart Contract aus, was bedeutet, dass jede Transaktion mehr Platz in einem Block begrenzter Größe einnimmt. Wenn die Nachfrage zu groß ist, müssen die Nutzer/Nutzerinnen einen höheren Trinkgeldbetrag anbieten, um zu versuchen, die Transaktionen anderer Nutzer/Nutzerinnen zu überbieten. Ein höheres Trinkgeld kann die Wahrscheinlichkeit erhöhen, dass deine Transaktion in den nächsten Block gelangt.
-
-Wie viel wir für eine bestimmte Transaktion bezahlen müssen, wird nicht allein durch den Gaspreis bestimmt. Um die Transaktionsgebühr zu berechnen, müssen wir das verbrauchte Gas mit der Transaktionsgebühr multiplizieren, die in gwei gemessen wird.
+Die hohen Gasgebühren sind auf die Beliebtheit von Ethereum zurückzuführen. Wenn die Nachfrage zu groß ist, müssen die Nutzer höhere Trinkgeldbeträge anbieten, um darüber zu versuchen, die Transaktionen anderer Nutzer zu überbieten. Ein höheres Trinkgeld kann die Wahrscheinlichkeit erhöhen, dass Ihre Transaktion in den nächsten Block gelangt. Außerdem führen komplexere Smart-Contract-Anwendungen möglicherweise eine hohle Anzahl an Operationen durch, um ihre Funktionen zu unterstützen, so dass sie viel Gas verbrauchen.
 
 ## Initiativen zur Senkung der Gaskosten {#initiatives-to-reduce-gas-costs}
 
-Die Ethereum-[Skalierbarkeits-Upgrades](/roadmap/) sollten letztendlich einige der Probleme mit den Gasgebühren lösen, was wiederum die Plattform in die Lage versetzen wird, Tausende von Transaktionen pro Sekunde zu verarbeiten und global zu skalieren.
+Die [Skalierbarkeits-Upgrades](/roadmap/) für Ethereum waren letztendlich dazu gedacht, einige der Probleme mit den Gasgebühren lösen. Das wiederum soll die Plattform in die Lage versetzen, Tausende von Transaktionen pro Sekunde zu verarbeiten und global zu skalieren.
 
 Die Skalierung auf Layer 2 ist eine der wichtigsten Initiativen, um die Gaskosten, das Nutzererlebnis und die Skalierbarkeit deutlich zu verbessern. [Mehr zur Skalierung mit Layer 2](/developers/docs/scaling/#layer-2-scaling)
 
-Das neue Proof-of-Stake-Modell, das auf der Beacon Chain eingeführt wurde, soll den hohen Stromverbrauch und die Abhängigkeit von spezieller Hardware reduzieren. Diese Kette wird es dem dezentralen Ethereum-Netzwerk ermöglichen, sich zu verständigen und das Netzwerk sicher zu halten, während der Energieverbrauch begrenzt wird, indem stattdessen ein finanzielles Commitment verlangt wird.
+## Was war das London-Upgrade/EIP-1559? {#what-was-the-london-upgrade-eip-1559}
 
-Jeder, der mindestens 32 ETH besitzt, kann diese einsetzen, um ein Validator zu werden, welcher für die Verarbeitung von Transaktionen, die Validierung von Blöcken und das Vorschlagen neuer Blöcke für die Kette verantwortlich ist. Nutzer mit weniger als 32 ETH können an Staking-Pools teilnehmen.
+Vor dem London-Upgrade hatte Ethereum Blöcke mit fester Größe. In Zeiten hoher Netzwerknachfrage arbeiteten diese Blöcke mit voller Kapazität. Infolgedessen mussten die Nutzer oft warten, bis die Nachfrage zurückging, um in einen Block aufgenommen zu werden. Das führte zu einer schlechten Nutzererfahrung. Mit dem London-Upgrade wurden Blöcke variabler Größe in Ethereum eingeführt.
 
-## Strategien zur Senkung der Gaskosten {#strategies-for-you-to-reduce-gas-costs}
+Die Berechnungsart für Transaktionsgebühren im Ethereum-Netzwerk änderte sich mit dem [London-Upgrade](/history/#london) vom August 2021. Vor dem London-Upgrade wurden die Gebühren ohne Trennung von `Basis-` und `Prioritätsgebühren` wie folgt berechnet:
 
-Wenn du die Gaskosten für deine ETH senken willst, kannst du ein Trinkgeld setzen, um die Prioritätsstufe deiner Transaktion anzugeben. Die Miner werden Transaktionen mit einem höheren Trinkgeld pro Gas "bearbeiten" und ausführen, da sie die von dir gezahlten Trinkgelder behalten können und weniger geneigt sind, Transaktionen mit niedrigeren Trinkgeldern auszuführen.
+Angenommen, Alice müsste Bob 1 ETH zahlen. Bei der Transaktion liegt das Gaslimit bei 21.000 Einheiten und der Gaspreis bei 200 gwei.
 
-Wenn du die Gaspreise überwachen willst, damit du deine ETH günstiger verschicken kannst, kannst du viele verschiedene Tools nutzen, wie z. B.:
+Die Gesamtgebühr würde sich wie folgt berechnen: `Gas units (limit) * Gas price per unit` d. h. `21,000 * 200 = 4,200,000 gwei` oder 0,0042 ETH
+
+Durch die Implementierung von [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) im Rahmen des London-Upgrades wurde der Mechanismus der Transaktionsgebühren komplexer, aber die Gasgebühren wurden einfacher vorauszusagen und das führte zu einem effizienteren Markt für Transaktionsgebühren. Die Nutzer können Transaktionen mit einer `maxFeePerGas` einreichen, die dem Betrag entspricht, den sie bereit sind, für die Ausführung der Transaktion zu zahlen. Dabei wissen sie, dass sie nicht mehr als den Marktpreis für Gas (`baseFeePerGas`) zahlen werden und alles, was darüber hinausgeht, abzüglich ihres Trinkgelds, zurückerstattet bekommen.
+
+In diesem Video werden EIP-1559 und die Vorteile, die es bringt, erläutert:
+
+<YouTube id="MGemhK9t44Q" />
+
+## Gasgebühren überwachen {#moitoring-gas-fees}
+
+Wenn Sie die Gaspreise überwachen möchten, damit Sie Ihre ETH günstiger verschicken können, stehen Ihnen unterschiedliche Tools zur Verfügung, wie zum Beispiel:
 
 - [Etherscan](https://etherscan.io/gastracker) _Transaktionsgaspreis-Schätzer_
-- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gasschätzungs-Chrome-Erweiterung, die sowohl Typ 0 Legacy-Transaktionen als auch Typ 2 EIP-1559-Transaktionen unterstützt_
+- [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Chrome-Erweiterung zur Gasschätzung, die sowohl Typ 0 Legacy-Transaktionen als auch Typ 2 EIP-1559-Transaktionen unterstützt_
+- [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Berechnen Sie Gasgebühren in Ihrer lokalen Währung für verschiedene Transaktionsarten im Mainnet, Arbitrum und Polygon._
 
-- [ETH-Tankstelle](https://ethgasstation.info/) _Verbraucherorientierte Metriken für den Ethereum-Gasmarkt _
-- [Cryptoneur-Gasgebührenrechner](https://www.cryptoneur.xyz/gas-fees-calculator) _Berechnen Sie Gasgebühren in Ihrer lokalen Währung für verschiedene Transaktionsarten im Mainnet, Arbitrum und Polygon._
+## Verwandte Werkzeuge {#related-tools}
 
-## Verwandte Tools {#related-tools}
-
-- [Bloxy Gas Analytics](https://stat.bloxy.info/superset/dashboard/gas/?standalone=true) _Netzwerk-Gas-Statistik_
-- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas Schätzung API powered by Blocknative's global mempool data platform_
+- [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API zur Gasschätzung von Blocknative's Global Mempool Data Platform_
 
 ## Weiterführende Informationen {#further-reading}
 
 - [Ethereum Gas erklärt](https://defiprime.com/gas)
-- [Reduziere den Gasverbrauch deiner Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
-- [Proof-of-Stake vs. Proof-of-Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
-
-## Verwandte Themen {#related-topics}
-
-- [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Den Gasverbrauch von Smart Contracts reduzieren](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
+- [Proof-of-Stake und Proof-of-Work im Vergleich](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
+- [Strategien für Programmierer zur Optimierung des Gasverbrauchs](https://www.alchemy.com/overviews/solidity-gas-optimization)
+- [Spezifikationen zu EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
+- [Ressourcen von Time Beiko zu EIP-1559](https://hackmd.io/@timbeiko/1559-resources).

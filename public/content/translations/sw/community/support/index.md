@@ -86,17 +86,17 @@ Unaweza [kujifunza jinsi ya kuendesha nodi hapa](/developers/docs/nodes-and-clie
 
 ## Maswali yanayoulizwa mara kwa mara {#faq}
 
-#### Nimetuma ETH kwenye pochi isiyo sahihi {#wrong-wallet}
+### Nimetuma ETH kwenye pochi isiyo sahihi {#wrong-wallet}
 
 Muamala unaofanyika kwenye Ethereum hauwezi kurudishwa ulikotoka. Kwa bahati mbaya, kama umetuma ETH kwenye pochi isiyo sahihi, hamna njia ya kupata fedha hizo. Hakuna shirika la kati, chombo ama mtu mmoja anaemiliki Ethereum, kwa maana kwamba hamna anaeweza kurudisha muamala ulikwishafanyika. Kwahiyo, ni muhimu kukagua mara kadhaa kama anauani ya pochi unayoingiza iko sahihi kabala ya kufanya muamala.
 
-#### Nawezaje kudai zawadi yangu ya Ethereum? {#giveaway-scam}
+### Nawezaje kudai zawadi yangu ya Ethereum? {#giveaway-scam}
 
 Zawadi za Ethereum ni mitego/ulaghai unaobuniwa ili kuiba ETH zako. Usishawishike na huduma inayotanganzwa inayoonekana kua ya uwongo - ukiotuma ETH kwenye anwani ya zawadi, hautapokea zawadi, na hautaweza kupata fedha ulizotuma mwanzo.
 
 [Zaidi juu ya kuzuia ulaghai](/security/#common-scams)
 
-#### Muamala wangu umegota {#stuck-transaction}
+### Muamala wangu umegota {#stuck-transaction}
 
 Wakati mwingine miamala hugita kwenye Ethereum kama umetoa kiwango kidogo cha malipo ya muamala kuliko kile kinachohitajika kwenye mtandao. Pochi nyingi hutoa chaguo la kutuma tena muamala huo huo kwa bei ya juu zaidi ili muamala ufanyiwe mchakato. Kwa njia mbadala unaweza kughairi muamala usio kamili kwa kutuma fedha hizo kwenye anwani yako mwenyewe, na kutumia nonce sawa na ya muamala ambao haujakamlika.
 
@@ -104,6 +104,6 @@ Wakati mwingine miamala hugita kwenye Ethereum kama umetoa kiwango kidogo cha ma
 
 [Jinsi ya kuzuia/ghairi miamala kwenye Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Nawezaje kuchimba Ethereum? {#mining-ethereum}
+### Nawezaje kuchimba Ethereum? {#mining-ethereum}
 
 Hatushauri kununua maunzi ya kuchimba Ethereum kama bado haujaanza kuchimba. Kwenye ~Q3. Q4 2022, [Muungano](/roadmap/merge/) utatokea, utabadilisha Ethereum kutoka kwenye uthibitisho-wa-kazi kwenda kwenye usthibitisho-wa-hisa. Haya mabadiliko yatafanya uchimbaji wa Ethereum kutowezekana tena.
