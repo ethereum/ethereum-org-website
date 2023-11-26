@@ -74,26 +74,6 @@ export const useQuizWidget = ({
   const currentQuestionIndex = userQuizProgress.length
   const showResults = currentQuestionIndex === quizData?.questions.length
 
-  useEffect(() => {
-    if (!showResults) return
-
-    updateUserStats((prevStats) => {
-      const lastScore = prevStats.completed[quizKey][1]
-      return {
-        score: prevStats.score + quizScore - lastScore,
-        average: [...prevStats.average, quizScore],
-        completed: {
-          ...prevStats.completed,
-          [quizKey]: [
-            quizScore === 100,
-            quizScore > lastScore ? numberOfCorrectAnswers : lastScore,
-          ],
-        },
-      }
-    })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [showResults])
-
   /**
    * Determines the status of a submitted answer choice.
    *
@@ -116,6 +96,27 @@ export const useQuizWidget = ({
     : numberOfCorrectAnswers / quizData.questions.length
 
   const quizScore = Math.floor(ratioCorrect * 100)
+
+  useEffect(() => {
+    if (!showResults) return
+
+    updateUserStats((prevStats) => {
+      const lastScore = prevStats.completed[quizKey][1]
+
+      return {
+        score: prevStats.score + numberOfCorrectAnswers - lastScore,
+        average: [...prevStats.average, quizScore],
+        completed: {
+          ...prevStats.completed,
+          [quizKey]: [
+            quizScore === 100,
+            quizScore > lastScore ? numberOfCorrectAnswers : lastScore,
+          ],
+        },
+      }
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showResults])
 
   return {
     quizData,
