@@ -7,7 +7,6 @@ import {
   type FlexProps,
   type HeadingProps,
   type Icon as ChakraIcon,
-  chakra,
 } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -39,6 +38,10 @@ import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 import { InfoGrid } from "@/layouts/Staking"
 
+import Dappnode from "@/public/run-a-node/dappnode.svg"
+import Dapptap from "@/public/run-a-node/dapptap.svg"
+import Terminal from "@/public/run-a-node/terminal.svg"
+
 import community from "@/public/enterprise-eth.png"
 import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
 import hackathon from "@/public/hackathon_transparent.png"
@@ -48,13 +51,6 @@ import leslie from "@/public/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import type { ChildOnlyProp } from "@/lib/types"
 
-// TODO: Fix svg imports
-// import dappnode from "@/public/run-a-node/dappnode.svg"
-// import dapptap from "@/public/run-a-node/dapptap.svg"
-// import terminal from "@/public/run-a-node/terminal.svg"
-// const Dappnode = chakra(dappnode)
-// const Dapptap = chakra(dapptap)
-// const Terminal = chakra(terminal)
 
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
@@ -395,7 +391,9 @@ const RunANodePage = () => {
     {
       image: EarthGlyphIcon,
       title: t("page-run-a-node-participate-title"),
-      preview: <Translation id="page-run-a-node:page-run-a-node-participate-preview" />,
+      preview: (
+        <Translation id="page-run-a-node:page-run-a-node-participate-preview" />
+      ),
       body: [
         t("page-run-a-node-participate-1"),
         t("page-run-a-node-participate-2"),
@@ -536,25 +534,25 @@ const RunANodePage = () => {
               </InlineLink>
             </ColumnFill>
             <ColumnNarrow>
-              {/* <Terminal
+              <Terminal
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
                 alt={t("page-run-a-node-glyph-alt-terminal")}
-              /> */}
+              />
             </ColumnNarrow>
           </SoftwareHighlight>
 
           <SoftwareHighlight bg="homeBoxOrange">
             <ColumnNarrow>
-              {/* <Dappnode
+              <Dappnode
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
                 alt={t("page-run-a-node-glyph-alt-dappnode")}
-              /> */}
+              />
             </ColumnNarrow>
             <ColumnFill>
               <Text>
-                <Translation id="page-run-a-node-getting-started-software-section-2" />
+                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-2" />
               </Text>
             </ColumnFill>
           </SoftwareHighlight>
@@ -572,11 +570,11 @@ const RunANodePage = () => {
               </Text>
             </ColumnFill>
             <ColumnNarrow>
-              {/* <Dapptap
+              <Dapptap
                 // TODO: make a11y svgs (using <title>)
                 // @ts-ignore
                 alt={t("page-run-a-node-glyph-alt-phone")}
-              /> */}
+              />
             </ColumnNarrow>
           </SoftwareHighlight>
         </GappedContent>
@@ -854,7 +852,9 @@ const RunANodePage = () => {
           <Emoji text=":cut_of_meat:" fontSize="2em" me="4" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
-        <Text>{t("page-run-a-node-staking-plans-description")}</Text>
+        <Text>
+          <Translation id="page-run-a-node:page-run-a-node-staking-plans-description" />
+        </Text>
         <Text>
           {t("page-run-a-node-staking-plans-ethstaker-link-description")} -{" "}
           <InlineLink to="https://youtu.be/C2wwu1IlhDc">
