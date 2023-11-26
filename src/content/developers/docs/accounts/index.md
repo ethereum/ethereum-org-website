@@ -8,14 +8,14 @@ An Ethereum account is an entity with an ether (ETH) balance that can send trans
 
 ## Prerequisites {#prerequisites}
 
-To help you better understand this page, we recommend you first read through our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
+To help you better understand this page, we recommend you first read through our [introduction to Ethereum](../../docs/intro-to-ethereum/).
 
 ## Account types {#types-of-account}
 
 Ethereum has two account types:
 
 - Externally-owned account (EOA) – controlled by anyone with the private keys
-- Contract account – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](/developers/docs/smart-contracts/)
+- Contract account – a smart contract deployed to the network, controlled by code. Learn about [smart contracts](../..//docs/smart-contracts/)
 
 Both account types have the ability to:
 
@@ -105,7 +105,7 @@ The contract address is usually given when a contract is deployed to the Ethereu
 
 There is also another type of key in Ethereum, introduced when Ethereum switched from proof-of-work to proof-of-stake based consensus. These are 'BLS' keys and they are used to identify validators. These keys can be efficiently aggregated to reduce the bandwidth required for the network to come to consensus. Without this key aggregation the minimum stake for a validator would be much higher.
 
-[More on validator keys](/developers/docs/consensus-mechanisms/pos/keys/).
+[More on validator keys](../../docs/consensus-mechanisms/pos/keys/).
 
 ## A note on wallets {#a-note-on-wallets}
 
@@ -127,5 +127,5 @@ _Know of a community resource that helped you? Edit this page and add it!_
 
 ## Related topics {#related-topics}
 
-- [Smart contracts](/developers/docs/smart-contracts/)
-- [Transactions](/developers/docs/transactions/)
+- [Smart contracts](../../docs/smart-contracts/)
+- [Transactions](../../docs/transactions/)
