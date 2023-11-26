@@ -44,6 +44,7 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.40.2",
+    "@svgr/webpack": "^8.1.0",
     "@types/hast": "^3.0.0",
     "@types/luxon": "^3.3.2",
     "@types/node": "^20.4.2",
