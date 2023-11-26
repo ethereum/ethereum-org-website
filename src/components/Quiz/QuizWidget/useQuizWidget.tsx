@@ -13,6 +13,8 @@ import {
 import allQuizzesData from "@/data/quizzes"
 import questionBank from "@/data/quizzes/questionBank"
 
+import { PASSING_QUIZ_SCORE } from "@/lib/constants"
+
 import { getNextQuiz } from "../utils"
 
 import { QuizWidgetProps } from "."
@@ -96,6 +98,12 @@ export const useQuizWidget = ({
     : numberOfCorrectAnswers / quizData.questions.length
 
   const quizScore = Math.floor(ratioCorrect * 100)
+  const isPassingScore = quizScore > PASSING_QUIZ_SCORE
+
+  const showConfetti = useMemo<boolean>(
+    () => !!quizData && showResults && isPassingScore,
+    [quizData, showResults, isPassingScore]
+  )
 
   useEffect(() => {
     if (!showResults) return
@@ -130,6 +138,7 @@ export const useQuizWidget = ({
     nextQuiz,
     quizScore,
     ratioCorrect,
+    showConfetti,
     initialize,
     setUserQuizProgress,
     setSelectedAnswer,

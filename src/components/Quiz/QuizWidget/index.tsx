@@ -17,6 +17,7 @@ import { useLocalQuizData } from "../useLocalQuizData"
 import { AnswerIcon } from "./AnswerIcon"
 import { QuizWidgetProvider } from "./context"
 import { QuizButtonGroup } from "./QuizButtonGroup"
+import { QuizConfetti } from "./QuizConfetti"
 import { QuizContent } from "./QuizContent"
 import { QuizProgressBar } from "./QuizProgressBar"
 import { QuizRadioGroup } from "./QuizRadioGroup"
@@ -61,6 +62,7 @@ const QuizWidget = ({
     nextQuiz,
     quizScore,
     ratioCorrect,
+    showConfetti,
     initialize,
     setSelectedAnswer,
     setShowAnswer,
@@ -112,7 +114,8 @@ const QuizWidget = ({
         boxShadow={isStandaloneQuiz ? "drop" : "none"}
         position="relative"
       >
-        {/* TODO: Add QuizConfetti render (src/components/Quiz/OldQuizWidget/index.tsx line 78) */}
+        {showConfetti && <QuizConfetti />}
+
         <Center
           position={{ base: "relative", md: "absolute" }}
           top={{ base: 2, md: 0 }}
