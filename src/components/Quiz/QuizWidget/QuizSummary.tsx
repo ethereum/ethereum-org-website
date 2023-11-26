@@ -19,7 +19,7 @@ import { numberToPercent } from "@/lib/utils/numberToPercent"
 import { useQuizWidgetContext } from "./context"
 
 export const QuizSummary = () => {
-  const { numberOfCorrectAnswers, questions, ratioCorrect } =
+  const { numberOfCorrectAnswers, questions, ratioCorrect, isPassingScore } =
     useQuizWidgetContext()
 
   const { locale } = useRouter()
@@ -39,13 +39,9 @@ export const QuizSummary = () => {
         as="h3"
         textAlign="center"
         size="lg"
-        // color={isPassingScore ? "success.base" : "body.base"}
-        color={true ? "success.base" : "body.base"}
+        color={isPassingScore ? "success.base" : "body.base"}
       >
-        {
-          // isPassingScore
-          true ? t("passed") : t("your-results")
-        }
+        {isPassingScore ? t("passed") : t("your-results")}
       </Heading>
       <HStack
         py="4"

@@ -139,6 +139,7 @@ export const useQuizWidget = ({
     quizScore,
     ratioCorrect,
     showConfetti,
+    isPassingScore,
     initialize,
     setUserQuizProgress,
     setSelectedAnswer,

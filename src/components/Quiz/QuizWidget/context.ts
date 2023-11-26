@@ -22,6 +22,7 @@ type QuizWidgetContextType = Quiz & {
     numberOfCorrectAnswers: number
     quizScore: number
     ratioCorrect: number
+    isPassingScore: boolean
   initialize: () => void
   setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
   setSelectedAnswer: (answer?: string) => void
