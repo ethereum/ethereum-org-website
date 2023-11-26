@@ -45,6 +45,9 @@ export const useQuizWidget = ({
 
   const initialize = () => {
     setQuizData(null)
+    setCurrentQuestionAnswerChoice(null)
+    setUserQuizProgress([])
+    setShowAnswer(false)
     setSelectedAnswer(undefined)
 
     const currentQuizKey =
