@@ -1,5 +1,12 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react"
-import { Center, Heading, Spinner, Stack, VStack } from "@chakra-ui/react"
+import {
+  Center,
+  Heading,
+  Spinner,
+  Stack,
+  StackProps,
+  VStack,
+} from "@chakra-ui/react"
 
 import { QuizStatus, UserStats } from "@/lib/types"
 
@@ -79,6 +86,18 @@ const QuizWidget = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const getMainContainerBg = (): StackProps["bg"] => {
+    if (!answerStatus) {
+      return "neutral"
+    }
+
+    if (answerStatus === "correct") {
+      return "success.neutral"
+    }
+
+    return "error.neutral"
+  }
+
   return (
     <VStack spacing="12" width="full" maxW="600px">
       <Stack
@@ -88,7 +107,7 @@ const QuizWidget = ({
         // Reduce padding when showing Spinner
         pt={!!!quizData ? "10" : { base: "5", md: "12" }}
         pb={!!!quizData ? "5" : { base: "4", md: "8" }}
-        // bg={getMainContainerBg()}
+        bg={getMainContainerBg()}
         borderRadius="base"
         boxShadow={isStandaloneQuiz ? "drop" : "none"}
         position="relative"
