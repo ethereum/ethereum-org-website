@@ -49,7 +49,7 @@ export const QuizRadioGroup = () => {
   const explanation = useMemo<TranslationKey>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAnswer])
 
   const isSelectedCorrect = useMemo<boolean>(
@@ -93,10 +93,8 @@ export const QuizRadioGroup = () => {
       </Stack>
 
       {!!answerStatus && (
-        <Stack spacing='2'>
-          <Text fontWeight="bold">
-            {t("explanation")}
-          </Text>
+        <Stack spacing="2" mt="6">
+          <Text fontWeight="bold">{t("explanation")}</Text>
 
           <Text m={0}>{t(explanation)}</Text>
         </Stack>
