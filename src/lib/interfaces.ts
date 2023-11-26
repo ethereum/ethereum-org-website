@@ -1,5 +1,5 @@
+import type { ReactNode } from "react"
 import type { Frontmatter, Lang, TranslationKey, ToCItem } from "@/lib/types"
-import { ReactNode } from "react"
 
 /**
  * Quiz data interfaces
@@ -93,8 +93,8 @@ interface ImageInfo {
 
 export interface UpgradeFrontmatter
   extends SharedFrontmatter,
-    SummaryPointsNumbered,
-    ImageInfo {}
+  SummaryPointsNumbered,
+  ImageInfo { }
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
   buttons: Array<{
@@ -107,15 +107,15 @@ export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
 
 export interface UseCasesFrontmatter
   extends SharedFrontmatter,
-    SummaryPointsNumbered,
-    ImageInfo {
+  SummaryPointsNumbered,
+  ImageInfo {
   emoji: string
 }
 
 export interface StakingFrontmatter
   extends SharedFrontmatter,
-    SummaryPoints,
-    ImageInfo {
+  SummaryPoints,
+  ImageInfo {
   emoji: string
 }
 

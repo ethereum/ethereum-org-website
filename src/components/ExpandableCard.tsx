@@ -1,5 +1,4 @@
-// Libraries
-import { ReactNode, useState } from "react"
+import { type ReactNode, useState } from "react"
 import { useTranslation } from "next-i18next"
 import {
   Accordion,
@@ -8,27 +7,24 @@ import {
   AccordionPanel,
   Box,
   Heading,
-  Icon,
+  type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
-// Components
 import Text from "./OldText"
 
-// Utils
-// TODO: add trackCustomEvent when util is migrated
-// import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-export interface IProps {
-  children?: React.ReactNode
+export type ExpandableCardProps = {
+  children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: typeof Icon
+  svg?: typeof ChakraIcon
   eventAction?: string
   eventCategory?: string
   eventName?: string
 }
 
-const ExpandableCard: React.FC<IProps> = ({
+const ExpandableCard = ({
   children,
   contentPreview,
   title,
@@ -36,9 +32,9 @@ const ExpandableCard: React.FC<IProps> = ({
   eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
-}) => {
+}: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(false)
-  const { t } = useTranslation("common")
+  const { t } = useTranslation("common") // TODO: Double-check namespace
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
@@ -52,15 +48,14 @@ const ExpandableCard: React.FC<IProps> = ({
         "ExternalLink"
       )
     ) {
-      // TODO: add trackCustomEvent
-      // !isVisible && trackCustomEvent(matomo)
+      !isVisible && trackCustomEvent(matomo)
       setIsVisible(!isVisible)
     }
   }
 
   return (
     <Accordion
-      border="1px solid"
+      border="1px"
       borderColor="border"
       borderRadius="sm"
       display="flex"

@@ -1,55 +1,61 @@
-import React, { ReactNode } from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import type { ReactNode } from "react"
 import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
 
-import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
+import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
-import { Button, ButtonLink, IButtonLinkProps,IButtonProps } from "./Buttons"
-import GatsbyImage from "./GatsbyImage"
+import {
+  Button,
+  ButtonLink,
+  type ButtonLinkProps,
+  type IButtonProps as ButtonProps,
+} from "@/components/Buttons"
+import { Image, type ImageProps } from "@/components/Image"
 import Text from "./OldText"
 
-export interface IButtonLink extends Omit<IButtonLinkProps, "content"> {
+export type ButtonLinkType = Omit<ButtonLinkProps, "content"> & {
   content: ReactNode
   matomo: MatomoEventOptions
 }
 
-export interface IButton extends Omit<IButtonProps, "content"> {
+export type ButtonType = Omit<ButtonProps, "content"> & {
   content: ReactNode
   matomo: MatomoEventOptions
 }
 
-export interface IContent {
-  buttons?: Array<IButtonLink | IButton>
+export type Content = {
+  buttons?: ButtonLinkType[] | ButtonType[]
   title: ReactNode
   header: ReactNode
   subtitle: ReactNode
-  image: IGatsbyImageData
+  image: ImageProps["src"]
   alt: string
 }
 
-export interface IProps {
-  content: IContent
+export type PageHeroProps = {
+  content: Content
   isReverse?: boolean
   children?: ReactNode
   className?: string
 }
 
-function isButtonLink(button: IButton | IButtonLink): button is IButtonLink {
-  return (button as IButtonLink).to !== undefined
+function isButtonLink(
+  button: ButtonType | ButtonLinkType
+): button is ButtonLinkType {
+  return (button as ButtonLinkType).to !== undefined
 }
 
-const PageHero: React.FC<IProps> = ({
+const PageHero = ({
   content,
   isReverse = false,
   children,
   className,
-}) => {
+}: PageHeroProps) => {
   const { buttons, title, header, subtitle, image, alt } = content
   return (
-    <Box py={4} px={8} width="full">
+    <Box py="4" px="8" width="full">
       <Flex
         justifyContent="space-between"
-        mt={8}
+        mt="8"
         px={{ base: 0, lg: 16 }}
         direction={{ base: isReverse ? "column" : "column-reverse", lg: "row" }}
         className={className}
@@ -67,7 +73,7 @@ const PageHero: React.FC<IProps> = ({
             fontSize="md"
             fontWeight="normal"
             mt={{ base: 0, lg: 8 }}
-            mb={4}
+            mb="4"
             color="text300"
             lineHeight={1.4}
           >
@@ -78,7 +84,7 @@ const PageHero: React.FC<IProps> = ({
             fontWeight="bold"
             fontSize={{ base: "2.5rem", lg: "5xl" }}
             maxW="full"
-            mb={0}
+            mb="0"
             mt={{ base: 8, lg: 12 }}
             color="text00"
             lineHeight={1.4}
@@ -89,15 +95,15 @@ const PageHero: React.FC<IProps> = ({
             fontSize={{ base: "xl", lg: "2xl" }}
             lineHeight={1.4}
             color="text200"
-            mt={4}
-            mb={8}
+            mt="4"
+            mb="8"
           >
             {subtitle}
           </Text>
           {buttons && (
             // FIXME: remove the `ul` override once removed the corresponding
             // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
-            <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
+            <Wrap spacing="2" overflow="visible" sx={{ ul: { m: 0 } }}>
               {buttons.map((button, idx) => {
                 if (isButtonLink(button)) {
                   return (
@@ -143,15 +149,15 @@ const PageHero: React.FC<IProps> = ({
           )}
           {children}
         </Box>
-        <GatsbyImage
+        <Image
           flex="1 1 50%"
           alignSelf="center"
           mt={{ base: 0, lg: 12 }}
           ml={{ base: 0, lg: 12 }}
           w="full"
           maxWidth={{ base: "560px", lg: "624px" }}
-          image={image}
-          objectFit="contain"
+          src={image}
+          style={{ objectFit: "contain" }}
           alt={alt}
           loading="eager"
         />
