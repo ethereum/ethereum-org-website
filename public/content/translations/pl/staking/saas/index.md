@@ -43,13 +43,13 @@ Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższyc
 
 <ProductDisclaimer />
 
-#### Dostawcy SaaS
+### Dostawcy SaaS
 
 <StakingProductsCardGrid category="saas" />
 
 Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
 
-#### Generatory kluczy
+### Generatory kluczy
 
 <StakingProductsCardGrid category="keyGen" />
 

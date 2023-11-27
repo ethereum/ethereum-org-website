@@ -43,13 +43,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### Поставщики SaaS
+### Поставщики SaaS
 
 <StakingProductsCardGrid category="saas" />
 
 Обратите внимание на важность поддержки [разнообразия клиентов](/developers/docs/nodes-and-clients/client-diversity/), так как это повышет безопасность сети и ограничивает ваши риски. Службы, у которых есть доказательства ограничения для мажоритарных клиентов, имеют отметки <em style={{ textTransform: "uppercase" }}>разнообразие клиентов-исполнителей</em> и <em style={{ textTransform: "uppercase" }}>разнообразие консенсус-клиентов</em>.
 
-#### Генераторы ключей
+### Генераторы ключей
 
 <StakingProductsCardGrid category="keyGen" />
 

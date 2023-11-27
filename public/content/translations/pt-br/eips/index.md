@@ -22,7 +22,7 @@ Além de fornecer uma especificação técnica para mudanças, as EIPs são a un
 
 ## Histórico de EIPs {#history-of-eips}
 
-O repositório GitHub [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
+O repositório Github [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
 
 Os editores de EIP têm a tarefa de revisar os processos das EIPs quanto a coerência técnica, problemas de formatação e correção de ortografia, gramática e estilo de código. Martin Becze, Vitalik Buterin, Gavin Wood e alguns outros foram os editores originais de EIP de 2015 até o final de 2016.
 
@@ -46,7 +46,7 @@ Os editores eméritos da EIP são
 
 Se você deseja se tornar um editor de EIP, confira [EIP-5069](https://eips.ethereum.org/EIPS/eip-5069).
 
-Os editores de EIP decidem quando uma proposta está pronta para se tornar uma EIP e ajudam os autores da EIP a avançar com suas propostas. [Ethereum Cat Herders](https://ethereumcatherders.com/) ajuda a organizar reuniões entre os editores de EIP e a comunidade (confira [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
+Os editores de EIP decidem quando uma proposta está pronta para se tornar uma EIP e ajudam os autores da EIP a avançar com suas propostas. O grupo [Ethereum Cat Herders](https://www.ethereumcatherders.com/) ajuda a organizar reuniões entre os editores de EIP e a comunidade (consulte [EIPIP](https://github.com/ethereum-cat-herders/EIPIP)).
 
 O processo completo de padronização, juntamente com o gráfico, é descrito em [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 

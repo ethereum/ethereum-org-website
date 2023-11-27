@@ -6,7 +6,7 @@ lang: tr
 
 Maksimal çıkarılabilir değer (MEV), bir bloktaki işlemlerin sırasını dahil ederek, hariç tutarak ve değiştirerek standart blok ödülü ve gaz ücretlerini aşan blok üretiminden elde edilebilecek maksimum değeri ifade eder.
 
-### Madenci çıkarılabilir değeri {#miner-extractable-value}
+## Madenci çıkarılabilir değeri {#miner-extractable-value}
 
 Maksimum çıkarılabilir değer, ilk olarak [iş ispatı](/developers/docs/consensus-mechanisms/pow/) bağlamında uygulandı ve başlangıçta "madenci çıkarılabilir değeri" olarak adlandırıldı. Bunun sebebi, iş ispatında katılım, çıkarım ve sıralamayı madencilerin kontrol etmesidir. Ancak, [Birleşim](/roadmap/merge) aracılığıyla hisse ispatına geçişten sonra bu rollerden doğrulayıcılar sorumlu olacak ve madencilik artık Ethereum protokolünün bir parçası olmayacaktır. Ancak değer çıkarım yöntemleri hala mevcuttur, yani artık bunun yerine "Maksimum çıkarılabilir değer" kullanılacaktır.
 

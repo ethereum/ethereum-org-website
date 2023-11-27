@@ -86,17 +86,17 @@ De asemenea, puteți [învăța cum să executați un nod aici](/developers/docs
 
 ## Întrebări frecvente {#faq}
 
-#### Am trimis ETH către un portofel greșit {#wrong-wallet}
+### Am trimis ETH către un portofel greșit {#wrong-wallet}
 
 O tranzacție trimisă pe Ethereum este ireversibilă. Din nefericire, dacă ați trimis ETH către un portofel greșit, nu există nicio posibilitate de a recupera aceste fonduri. Nicio organizație centrală, entitate sau persoană nu deține Ethereum, ceea ce înseamnă că nimeni nu poate anula tranzacțiile. De aceea, este vital să vă verificați întotdeauna de două ori tranzacțiile înainte de a le trimite.
 
-#### Cum pot să îmi revendic giveaway-ul (cadoul) Ethereum? {#giveaway-scam}
+### Cum pot să îmi revendic giveaway-ul (cadoul) Ethereum? {#giveaway-scam}
 
 Cadourile Ethereum sunt escrocherii concepute pentru a vă fura ETH-ul. Nu vă lăsați tentat de oferte care par prea bune pentru a fi adevărate — dacă trimiteți ETH la o adresă de giveaway, nu veți primi un cadou și nu veți putea să vă recuperați fondurile.
 
 [Mai multe despre prevenirea fraudelor](/security/#common-scams)
 
-#### Tranzacția mea este blocată {#stuck-transaction}
+### Tranzacția mea este blocată {#stuck-transaction}
 
 Tranzacțiile pe Ethereum pot rămâne uneori blocate dacă ați trimis un comision de tranzacție mai mic decât cel cerut din cauza cererii din rețea. Multe portofele oferă opțiunea de a retrimite aceeași tranzacție cu un comision de tranzacție mai mare, pentru a permite ca tranzacția să fie procesată. În mod alternativ, puteți anula o tranzacție în așteptare, trimițând o tranzacție la propria dvs. adresă și utilizând același nonce ca și tranzacția în așteptare.
 
@@ -104,6 +104,6 @@ Tranzacțiile pe Ethereum pot rămâne uneori blocate dacă ați trimis un comis
 
 [Cum să anulați tranzacțiile în așteptare pe Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Cum pot să minez pe Ethereum? {#mining-ethereum}
+### Cum pot să minez pe Ethereum? {#mining-ethereum}
 
 Nu vă recomandăm să cumpărați echipament de minare dacă nu ați minat deja pe Ethereum. În -T2 2022 va avea loc [fuziunea](/roadmap/merge/), prin care Ethereum va trece de la dovada-muncii la dovada-mizei. Această schimbare înseamnă că minarea pe Ethereum nu va mai fi posibilă.

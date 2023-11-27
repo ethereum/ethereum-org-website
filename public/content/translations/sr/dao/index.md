@@ -91,7 +91,7 @@ Iako DAO-i mogu imati hiljade članova sa pravom glasa, sredstva mogu biti smeš
 
 Godine 1977. američka savezna država Vajoming stvorila je LLC (limited liability company/društvo sa ograničenom odgovornošću), kojim štiti preduzetnike i ograničava njihovu odgovornost. Nedavno, ta država bila je pionir i u usvajanju zakona o DAO kojim se uspostavlja pravni status DAO-a. Trenutno, Vajoming, Vermont i Devičanska Ostrva imaju zakone o DAO u nekom obliku.
 
-#### Poznat primer {#law-example}
+### Poznat primer {#law-example}
 
 [DAOGrad](https://citydao.io)Kompanija CityDAO je iskoristila zakon o DAO savezne države Vajoming da kupi 40 ari zemljišta u blizini Nacionalnog parka Jeloustoun.
 

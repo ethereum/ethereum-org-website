@@ -6,7 +6,7 @@ lang: tr
 
 Bir akıllı sözleşme Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen fonksiyonlar ve verilerden oluşurlar. Burada bir akıllı sözleşmenin nelerden oluştuğu hakkında genel bir bakış bulunmaktadır.
 
-### Ön Koşullar {#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 İlk olarak [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında okuduğunuzdan emin olun. Bu belge, hâlihazırda JavaScript veya Python gibi programlama dillerine aşina olduğunuzu varsayar.
 

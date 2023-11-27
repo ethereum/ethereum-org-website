@@ -43,13 +43,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### ارائه‌دهندگان SaaS
+### ارائه‌دهندگان SaaS
 
 <StakingProductsCardGrid category="saas" />
 
 لطفاً از اهمیت انتخاب سرویسی که [تنوع کلاینت](/developers/docs/nodes-and-clients/client-diversity/) را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که مدارکی از محدود کردن استفاده اکثریت کاربران را دارند با عنوان <em style={{ textTransform: "uppercase" }}>"تنوع کاربر اجرایی"</em> و <em style={{ textTransform: "uppercase" }}>"تنوع کاربر اجماعی"</em> نشان داده می‌شوند.
 
-#### تولید‌کنندگان کلید
+### تولید‌کنندگان کلید
 
 <StakingProductsCardGrid category="keyGen" />
 

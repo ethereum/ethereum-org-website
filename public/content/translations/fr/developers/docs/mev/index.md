@@ -6,7 +6,7 @@ lang: fr
 
 La Valeur Extractible Maximale (MEV) représente la valeur maximale qui peut être extraite de la production d'un bloc au-delà de la récompense standard du bloc et des frais de gaz, en incluant, en excluant ou en modifiant l'ordre des transactions au sein d'un bloc.
 
-### Valeur extractible par minage {#miner-extractable-value}
+## Valeur extractible par minage {#miner-extractable-value}
 
 La valeur extractible maximale a été appliquée pour la première fois dans le contexte de [preuve de travail](/developers/docs/consensus-mechanisms/pow/), et initialement appelée « valeur extractible par les mineurs ». Ceci est dû au fait que dans la preuve de travail, les mineurs contrôlent les inclusions, exclusions et l'ordre des transactions. Cependant, depuis le passage à la preuve d'enjeu via [La Fusion](/roadmap/merge), les validateurs sont responsables de ces rôles, et le minage ne fait plus partie du protocole Ethereum. Les méthodes d'extraction de valeurs existent toujours, donc le terme « valeur extractible maximale » est maintenant utilisé à la place.
 

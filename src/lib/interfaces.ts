@@ -1,10 +1,11 @@
 import type {
+  Direction,
   Frontmatter,
   Lang,
   TranslationKey,
   ToCItem,
-  Direction,
 } from "@/lib/types"
+import { ReactNode } from "react"
 
 /**
  * Quiz data interfaces
@@ -143,7 +144,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
 }
 
 export interface Root {
-  children: JSX.Element
+  children: ReactNode
   contentIsOutdated: boolean
   contentNotTranslated: boolean
   lastDeployDate: string
