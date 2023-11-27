@@ -87,7 +87,9 @@ const QuizWidget = ({
       nextQuiz,
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [nextQuiz])
+
+  console.count("QuizWidget rendered")
 
   const getMainContainerBg = (): StackProps["bg"] => {
     if (!answerStatus) {
