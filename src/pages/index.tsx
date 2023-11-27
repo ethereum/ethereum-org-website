@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react"
-import { GetStaticProps, NextPage } from "next"
+import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaGithub } from "react-icons/fa"
@@ -41,6 +41,7 @@ import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
 import Translation from "../components/Translation"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
+import { cacheAsyncFn } from "@/lib/utils/cache"
 
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
@@ -176,10 +177,12 @@ type Props = SSRConfig & {
   communityEvents: CommunityEventsReturnType
 }
 
+const cachedFetchCommunityEvents = cacheAsyncFn(fetchCommunityEvents)
+
 export const getStaticProps = (async (context) => {
   const { locale } = context
 
-  const communityEvents = await fetchCommunityEvents()
+  const communityEvents = await cachedFetchCommunityEvents()
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("/")
@@ -192,7 +195,9 @@ export const getStaticProps = (async (context) => {
   }
 }) satisfies GetStaticProps<Props>
 
-const HomePage: NextPage<Props> = ({ communityEvents }) => {
+const HomePage = ({
+  communityEvents,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
