@@ -1,6 +1,6 @@
-import { ReactElement, ReactNode } from "react"
-import { NextPage } from "next"
-import { AppProps } from "next/app"
+import type { ReactElement, ReactNode } from "react"
+import type { NextPage } from "next"
+import type { AppProps } from "next/app"
 
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
 import type {
@@ -168,25 +168,6 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
-}
-
-type CrowdinUser = {
-  totalCosts: number
-  username: string
-  fullName: string
-  avatarUrl: string
-}
-
-type LanguageCostSummary = {
-  language: {
-    totalCosts: number
-    name: string
-  }
-}
-
-export type CrowdinData = {
-  user: CrowdinUser
-  languages: LanguageCostSummary[]
 }
 
 export type CommonHeroProps = {

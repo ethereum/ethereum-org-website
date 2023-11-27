@@ -1,21 +1,21 @@
-import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbProps,
+  type BreadcrumbProps as ChakraBreadcrumbProps,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "../Link"
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
 
-export interface IProps extends BreadcrumbProps {
+export type BreadcrumbsProps = ChakraBreadcrumbProps & {
   slug: string
   startDepth?: number
 }
 
-interface Crumb {
+type Crumb = {
   fullPath: string
   text: string
 }
@@ -33,12 +33,12 @@ interface Crumb {
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs: React.FC<IProps> = ({
+const Breadcrumbs = ({
   slug: originalSlug,
   startDepth = 0,
-  ...restProps
-}) => {
-  const { t } = useTranslation()
+  ...props
+}: BreadcrumbsProps) => {
+  const { t } = useTranslation("page-index")
   const { locale, asPath } = useRouter()
 
   const hasHome = asPath !== "/"
@@ -52,7 +52,7 @@ const Breadcrumbs: React.FC<IProps> = ({
       ? [
           {
             fullPath: "/",
-            text: t("page-index-meta-title"),
+            text: <Translation id="page-index-meta-title" />,
           },
         ]
       : []),
@@ -60,7 +60,7 @@ const Breadcrumbs: React.FC<IProps> = ({
     ...sliced.map((path, idx) => {
       return {
         fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
-        text: t(path),
+        text: t(path), // TODO: fix i18n strings for path breadcrumbs
       }
     }),
   ]
@@ -68,17 +68,18 @@ const Breadcrumbs: React.FC<IProps> = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb dir="auto" {...restProps}>
-      {crumbs.map((crumb, idx) => {
-        const isCurrentPage = slug === crumb.fullPath
+    <Breadcrumb dir="auto" {...props}>
+      {crumbs.map(({ fullPath, text }) => {
+        const isCurrentPage = slug === fullPath
         return (
-          <BreadcrumbItem key={idx} isCurrentPage={isCurrentPage}>
+          <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
             <BreadcrumbLink
               as={BaseLink}
-              to={crumb.fullPath}
+              to={fullPath}
               isPartiallyActive={isCurrentPage}
+              textTransform="uppercase"
             >
-              {crumb.text.toUpperCase()}
+              {text}
             </BreadcrumbLink>
           </BreadcrumbItem>
         )
