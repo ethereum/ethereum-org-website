@@ -214,7 +214,6 @@ export const UseCasesLayout: React.FC<IProps> = ({
           width={1200}
           height={610}
           style={{ objectFit: "cover" }}
-          quality="100"
           priority
           alignSelf={{
             base: "center",

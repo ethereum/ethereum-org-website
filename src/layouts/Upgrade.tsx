@@ -199,7 +199,6 @@ export const UpgradeLayout: React.FC<IProps> = ({
             width={816}
             height={525}
             style={{ objectFit: "cover" }}
-            quality="100"
             priority
             flex={{ base: "1 1 100%", md: "none" }}
             alignSelf={{ base: "center", md: "flex-end" }}

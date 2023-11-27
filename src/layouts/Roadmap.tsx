@@ -179,7 +179,6 @@ export const RoadmapLayout: React.FC<IProps> = ({
               style={{ objectFit: "contain" }}
               width={700}
               height={345}
-              quality="100"
               priority
             />
           </Center>
