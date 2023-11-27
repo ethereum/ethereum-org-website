@@ -18,21 +18,20 @@ import type { Options } from "mdast-util-toc"
 export type ChildOnlyProp = { children?: ReactNode }
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
+  getLayout?: (page: ReactElement<P>) => ReactNode
 }
 
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export type Frontmatter =
-  | RoadmapFrontmatter
-  | UpgradeFrontmatter
-  | StaticFrontmatter
-  | UseCasesFrontmatter
-  | StakingFrontmatter
-  | DocsFrontmatter
-  | TutorialFrontmatter
+export type Frontmatter = RoadmapFrontmatter &
+  UpgradeFrontmatter &
+  StaticFrontmatter &
+  UseCasesFrontmatter &
+  StakingFrontmatter &
+  DocsFrontmatter &
+  TutorialFrontmatter
 
 export type Lang =
   | "en"
@@ -101,8 +100,6 @@ export type I18nLocale = {
   langDir: Direction
   dateFormat: string
 }
-
-export type StaticPaths = { params: { slug: string[] }; locale: string }[]
 
 export type TranslationKey = string
 
