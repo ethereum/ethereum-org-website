@@ -9,6 +9,7 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { GetStaticProps } from "next/types"
+import type { StaticImageData } from "next/image"
 import type { ReactNode } from "react"
 
 import { Image, type ImageProps } from "@/components/Image"
@@ -410,10 +411,16 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
-  ].map((client) => ({
-    ...client,
-    image: { ...client.image, width: 24 }, // TODO: Fix image width—should be 24px wide
-  }))
+  ].map((client) => {
+    client.image.width = 60
+    return client
+  })
+
+  const clientsSmall = clients.map((client) => {
+    const thumbnail = client.image as StaticImageData
+    thumbnail.width = 24
+    return { ...client, image: thumbnail }
+  })
 
   const specs: Array<Spec> = [
     {
@@ -605,7 +612,7 @@ const BugBountiesPage = () => {
                 >
                   {t("page-upgrades-bug-bounty-help-links")}
                 </OldHeading>
-                <CardList items={clients} />
+                <CardList items={clientsSmall} />
               </Box>
             </StyledCard>
             <StyledCard
