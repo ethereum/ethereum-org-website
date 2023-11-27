@@ -1,4 +1,10 @@
-import type { Frontmatter, Lang, TranslationKey, ToCItem } from "@/lib/types"
+import type {
+  Frontmatter,
+  Lang,
+  TranslationKey,
+  ToCItem,
+  Direction,
+} from "@/lib/types"
 
 /**
  * Quiz data interfaces
@@ -161,4 +167,14 @@ export interface Author {
     login: string
     url: string
   }
+}
+
+// Locales
+export interface Language {
+  code: Lang
+  crowdinCode: string
+  name: string
+  localName: string
+  langDir: Direction
+  dateFormat: string
 }
