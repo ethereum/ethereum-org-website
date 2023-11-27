@@ -3,15 +3,7 @@ import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
-import {
-  Box,
-  Flex,
-  Heading,
-  Icon,
-  Stack,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
 
 import { QuizStatus } from "@/lib/types"
 
@@ -19,7 +11,7 @@ import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import PageMetadata from "@/components/PageMetadata"
 import QuizWidget from "@/components/Quiz/QuizWidget"
-import QuizzesList, { QuizzesListProps } from "@/components/Quiz/QuizzesList"
+import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
@@ -38,24 +30,6 @@ const handleGHAdd = () =>
     eventAction: "Secondary button clicks",
     eventName: "GH_add",
   })
-
-const QuizListWrapper = (props: {
-  headingId: string
-  descriptionId: string
-  quizzesListProps: QuizzesListProps
-}) => (
-  <Stack spacing="8" px={{ base: "8", lg: 0 }} pt="12">
-    <Stack spacing="8">
-      <Heading size="xl">
-        <Translation id={props.headingId} />
-      </Heading>
-      <Text>
-        <Translation id={props.descriptionId} />
-      </Text>
-    </Stack>
-    <QuizzesList {...props.quizzesListProps} />
-  </Stack>
-)
 
 const QuizzesHubPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -95,21 +69,17 @@ const QuizzesHubPage: NextPage<
         <Flex direction={{ base: "column-reverse", lg: "row" }} columnGap="20">
           <Stack spacing="10" flex="1">
             <Box>
-              <QuizListWrapper
+              <QuizzesList
+                content={ethereumBasicsQuizzes}
                 headingId="learn-quizzes:basics"
                 descriptionId="learn-quizzes:basics-description"
-                quizzesListProps={{
-                  ...commonQuizListProps,
-                  content: ethereumBasicsQuizzes,
-                }}
+                {...commonQuizListProps}
               />
-              <QuizListWrapper
+              <QuizzesList
+                content={usingEthereumQuizzes}
                 headingId="learn-quizzes:using-ethereum"
                 descriptionId="learn-quizzes:using-ethereum-description"
-                quizzesListProps={{
-                  ...commonQuizListProps,
-                  content: usingEthereumQuizzes,
-                }}
+                {...commonQuizListProps}
               />
             </Box>
             <Flex
