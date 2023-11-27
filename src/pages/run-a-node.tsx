@@ -51,7 +51,6 @@ import leslie from "@/public/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import type { ChildOnlyProp } from "@/lib/types"
 
-
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
 const GappedPage = (props: ChildOnlyProp) => (
@@ -432,6 +431,12 @@ const RunANodePage = () => {
     },
   ]
 
+  community.width = 624
+  ethereumInside.width = 624
+  hackathon.width = 624
+  impact.width = 300
+  leslie.width = 624
+
   return (
     <GappedPage>
       <PageMetadata
@@ -490,7 +495,7 @@ const RunANodePage = () => {
           <Translation id="page-run-a-node:page-run-a-node-why-title" />
         </H2>
         <InfoGrid>
-          {whyRunANodeCards.map(({ image, title, preview, body, alt }, idx) => (
+          {whyRunANodeCards.map(({ image, title, preview, body, alt }) => (
             <ExpandableCard
               contentPreview={preview}
               title={title}
@@ -498,10 +503,10 @@ const RunANodePage = () => {
               // @ts-ignore
               alt={alt}
               svg={image}
-              key={idx}
+              key={title}
             >
-              {body.map((item, idx) => (
-                <p key={idx}>{item}</p>
+              {body.map((item) => (
+                <p key={item}>{item}</p>
               ))}
             </ExpandableCard>
           ))}
