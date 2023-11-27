@@ -337,7 +337,6 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
                 src={hackathon}
                 alt={t("page-index:page-index-get-started-image-alt")}
                 width={720}
-                height={400}
                 backgroundSize="cover"
                 background="no-repeat 50px"
               />
@@ -383,7 +382,6 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
               src={ethereum}
               alt={t("page-index:page-index-what-is-ethereum-image-alt")}
               width={700}
-              height={400}
             />
           </ImageContainer>
         </Row>
@@ -409,7 +407,6 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
               src={impact}
               alt={t("page-index:page-index-defi-image-alt")}
               width={700}
-              height={400}
             />
           </ImageContainer>
         </Row>
@@ -435,7 +432,6 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
               src={infrastructure}
               alt={t("page-index:page-index-nft-alt")}
               width={700}
-              height={400}
             />
           </ImageContainer>
         </Row>
@@ -465,7 +461,6 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
                 src={future}
                 alt={t("page-index:page-index-internet-image-alt")}
                 width={700}
-                height={400}
               />
             </ImageContainer>
           </Row>
@@ -565,7 +560,7 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
                 description={tout.description}
                 alt={tout.alt}
                 to={tout.to}
-                image={tout.image!}
+                image={tout.image}
                 boxShadow={cardBoxShadow}
               />
             )
@@ -576,8 +571,8 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
           descriptionKey={
             "page-index:page-index-contribution-banner-description"
           }
-          image={finance!}
-          maxImageWidth={600}
+          image={finance}
+          imageWidth={600}
           alt={t("page-index:page-index-contribution-banner-image-alt")}
           mt={32}
           mb={16}

@@ -67,7 +67,7 @@ const ActionCard: React.FC<IProps> = ({
       {...rest}
     >
       <Flex
-        minH="260px"
+        h="260px"
         bg="cardGradient"
         direction="row"
         justify={isRight ? "flex-end" : "center"}
@@ -78,10 +78,8 @@ const ActionCard: React.FC<IProps> = ({
         <Image
           src={image}
           alt={alt || ""}
-          maxH="257px"
-          maxW={{ base: "311px", sm: "372px" }}
-          minW="100px"
-          minH="100px"
+          h="full"
+          style={{ objectFit: "contain" }}
         />
       </Flex>
       <Box p={6} className="action-card-content">
