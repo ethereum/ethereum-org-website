@@ -77,7 +77,9 @@ export const useCasesComponents = {
   // Export empty object if none needed
 }
 
-interface IProps extends ChildOnlyProp, MdPageContent {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: UseCasesFrontmatter
 }
 export const UseCasesLayout: React.FC<IProps> = ({
