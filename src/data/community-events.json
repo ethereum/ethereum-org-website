@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHDam",
+    "to": "https://www.ethdam.com/",
+    "sponsor": null,
+    "location": "Amsterdam, Netherlands",
+    "description": "Conference and hackathon gathering the best Privacy and Security builders",
+    "startDate": "2024-04-12",
+    "endDate": "2024-04-14"
+  },
+  {
     "title": "ETH Abu Dhabi",
     "to": "https://www.ethabudhabi.org/",
     "sponsor": null,
