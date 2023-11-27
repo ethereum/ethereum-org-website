@@ -18,21 +18,35 @@ export const getLocaleForNumberFormat = (locale: Lang): Lang =>
 
 export const isLang = (lang: string) => {
   return i18nConfigs.map((language) => language.code).includes(lang)
-} 
+}
 
-export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
+export const getRequiredNamespacesForPath = (
+  path: string,
+  layout?: string | undefined
+) => {
+  // For pages that don't need extra namespaces or don't use the Translation component
+  // if (!path) return "common"
+
   let requiredNamespaces: string[] = ["common"]
 
   if (layout === "docs") {
-    requiredNamespaces = [...requiredNamespaces, 'page-developers-docs']
+    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
   }
 
-  if (layout === 'use-cases') {
-    requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
+  if (layout === "use-cases") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "template-usecase",
+      "learn-quizzes",
+    ]
   }
 
   if (layout === "upgrade") {
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades", "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades",
+      "page-upgrades-index",
+    ]
   }
 
   if (layout === "tutorial") {
@@ -71,6 +85,10 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
 
+  if (path.startsWith("/languages")) {
+    requiredNamespaces = [...requiredNamespaces, "page-languages"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
@@ -83,4 +101,3 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
 
   return requiredNamespaces
 }
-
