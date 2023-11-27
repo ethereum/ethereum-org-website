@@ -36,9 +36,11 @@ import CodeModal from "../components/CodeModal"
 import CommunityEvents from "../components/CommunityEvents"
 import { HomeHero } from "../components/Hero"
 import PageMetadata from "../components/PageMetadata"
-import StatsBoxGrid from "../components/StatsBoxGrid"
+// import StatsBoxGrid from "../components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
 import Translation from "../components/Translation"
+import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
@@ -170,10 +172,14 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
-type Props = SSRConfig
+type Props = SSRConfig & {
+  communityEvents: CommunityEventsReturnType
+}
 
 export const getStaticProps = (async (context) => {
   const { locale } = context
+
+  const communityEvents = await fetchCommunityEvents()
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("/")
@@ -181,11 +187,12 @@ export const getStaticProps = (async (context) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      communityEvents,
     },
   }
 }) satisfies GetStaticProps<Props>
 
-const HomePage: NextPage<Props> = () => {
+const HomePage: NextPage<Props> = ({ communityEvents }) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
@@ -537,10 +544,11 @@ const HomePage: NextPage<Props> = () => {
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        <StatsBoxGrid />
+        {/* // TODO: migrate stats fetching the necessary data on build time */}
+        {/* <StatsBoxGrid /> */}
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
-      <CommunityEvents />
+      <CommunityEvents events={communityEvents} />
       {/* Explore Section */}
       <ContentBox>
         <Box pb={4}>

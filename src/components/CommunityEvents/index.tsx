@@ -20,10 +20,7 @@ import OldHeading from "../OldHeading"
 import Text from "../OldText"
 import Translation from "../Translation"
 
-import {
-  type Event as EventType,
-  useCommunityEvents,
-} from "./useCommunityEvents"
+import type { CommunityEvent } from "@/lib/interfaces"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
@@ -49,7 +46,7 @@ const renderEventDateTime = (
 }
 
 interface EventProps {
-  event: EventType
+  event: CommunityEvent
   language: string
   type: "upcoming" | "past"
 }
@@ -78,11 +75,17 @@ const Event = ({ event, language, type }: EventProps) => {
   )
 }
 
-const CommunityEvents = () => {
+type CommunityEventsProps = {
+  events: {
+    pastEventData: CommunityEvent[]
+    upcomingEventData: CommunityEvent[]
+  }
+}
+
+const CommunityEvents = ({ events }: CommunityEventsProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-index")
-  const { pastEventData, upcomingEventData, loading, hasError } =
-    useCommunityEvents()
+  const { pastEventData, upcomingEventData } = events
 
   return (
     <Flex
@@ -119,54 +122,44 @@ const CommunityEvents = () => {
           textAlign="center"
           flexDir="column"
         >
-          {loading ? (
-            <Text>
-              <Translation id="loading" />
-            </Text>
-          ) : (
-            <Flex direction="column" h="full" gap={8}>
-              {hasError ? (
-                <Text color="error.base">
-                  <Translation id="loading-error-try-again-later" />
+          <Flex direction="column" h="full" gap={8}>
+            {upcomingEventData.length ? (
+              <Box flex={1}>
+                <Text fontSize="3xl" fontWeight="bold" lineHeight={1.4}>
+                  {upcomingEventData[0].title}
                 </Text>
-              ) : upcomingEventData.length ? (
-                <Box flex={1}>
-                  <Text fontSize="3xl" fontWeight="bold" lineHeight={1.4}>
-                    {upcomingEventData[0].title}
-                  </Text>
-                  <Text m={0} fontSize="xl">
-                    {renderEventDateTime(upcomingEventData[0].date, locale!)}
-                  </Text>
-                  <Text color="body.medium" fontSize="md">
-                    ({Intl.DateTimeFormat().resolvedOptions().timeZone})
-                  </Text>
-                </Box>
-              ) : (
-                <Text fontSize="3xl" fontWeight="bold" mb={8}>
-                  <Translation id="page-index:community-events-no-events-planned" />
+                <Text m={0} fontSize="xl">
+                  {renderEventDateTime(upcomingEventData[0].date, locale!)}
                 </Text>
-              )}
-              <Flex flexDirection="column" gap={2}>
-                <ButtonLink
-                  to="/discord/"
-                  gap={2}
-                  onClick={() => matomoEvent("discord")}
+                <Text color="body.medium" fontSize="md">
+                  ({Intl.DateTimeFormat().resolvedOptions().timeZone})
+                </Text>
+              </Box>
+            ) : (
+              <Text fontSize="3xl" fontWeight="bold" mb={8}>
+                <Translation id="page-index:community-events-no-events-planned" />
+              </Text>
+            )}
+            <Flex flexDirection="column" gap={2}>
+              <ButtonLink
+                to="/discord/"
+                gap={2}
+                onClick={() => matomoEvent("discord")}
+              >
+                <Icon as={FaDiscord} fontSize={25} />
+                Join Discord
+              </ButtonLink>
+              {upcomingEventData[0] && (
+                <InlineLink
+                  to={upcomingEventData[0].calendarLink}
+                  onClick={() => matomoEvent("Add to calendar")}
+                  fontWeight={700}
                 >
-                  <Icon as={FaDiscord} fontSize={25} />
-                  Join Discord
-                </ButtonLink>
-                {upcomingEventData[0] && (
-                  <InlineLink
-                    to={upcomingEventData[0].calendarLink}
-                    onClick={() => matomoEvent("Add to calendar")}
-                    fontWeight={700}
-                  >
-                    {t("community-events-add-to-calendar")}
-                  </InlineLink>
-                )}
-              </Flex>
+                  {t("community-events-add-to-calendar")}
+                </InlineLink>
+              )}
             </Flex>
-          )}
+          </Flex>
         </Flex>
         <Flex
           w={{ base: "100%", lg: "50%" }}
@@ -178,15 +171,7 @@ const CommunityEvents = () => {
             <Translation id="page-index:community-events-upcoming-calls" />
           </Text>
           <Divider mb={4} />
-          {loading ? (
-            <Text>
-              <Translation id="loading" />
-            </Text>
-          ) : hasError ? (
-            <Text color="error.base">
-              <Translation id="loading-error-try-again-later" />
-            </Text>
-          ) : upcomingEventData.slice(1).length ? (
+          {upcomingEventData.slice(1).length ? (
             upcomingEventData.slice(1).map((item) => {
               return (
                 <Event
@@ -206,15 +191,7 @@ const CommunityEvents = () => {
             <Translation id="page-index:community-events-previous-calls" />
           </Text>
           <Divider mb={4} />
-          {loading ? (
-            <Text>
-              <Translation id="loading" />
-            </Text>
-          ) : hasError ? (
-            <Text color="error.base">
-              <Translation id="loading-error-try-again-later" />
-            </Text>
-          ) : pastEventData.length ? (
+          {pastEventData.length ? (
             pastEventData.map((item) => {
               return (
                 <Event

@@ -163,3 +163,26 @@ export interface Author {
     url: string
   }
 }
+
+/**
+ * Community events
+ */
+
+export interface CommunityEventsReturnType {
+  pastEventData: CommunityEvent[]
+  upcomingEventData: CommunityEvent[]
+}
+
+export interface CommunityEvent {
+  date: string
+  title: string
+  calendarLink: string
+  pastEventLink: string | undefined
+}
+
+export interface ReqCommunityEvent {
+  start: { dateTime: string }
+  summary: string
+  htmlLink: string
+  location: string
+}
