@@ -461,7 +461,7 @@ const BugBountiesPage = () => {
             </ButtonRow>
           </HeroContainer>
           <LeaderboardContainer>
-            <Leaderboard content={allBounterHunters.slice(0,5)} />
+            <Leaderboard content={allBounterHunters.slice(0, 5)} />
             <ButtonLink variant="outline" href="#leaderboard">
               {t("page-upgrades-bug-bounty-leaderboard")}
             </ButtonLink>
@@ -677,7 +677,9 @@ const BugBountiesPage = () => {
               <Text as="b">{t("page-upgrades-bug-bounty-quality-repro")}</Text>
               {t("page-upgrades-bug-bounty-quality-repro-desc")}
             </Text>
-            <Text>{t("page-upgrades-bug-bounty-quality-fix")}</Text>
+            <Text>
+              <Translation id="page-bug-bounty:page-upgrades-bug-bounty-quality-fix" />
+            </Text>
           </SubmitInstructions>
           {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
