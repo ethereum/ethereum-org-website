@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useMemo, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -67,11 +67,14 @@ const QuizzesHubPage: NextPage<
   const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
   const { onOpen, isOpen, onClose } = useDisclosure()
 
-  const commonQuizListProps = {
-    userStats,
-    quizHandler: setCurrentQuiz,
-    modalHandler: onOpen,
-  }
+  const commonQuizListProps = useMemo(
+    () => ({
+      userStats,
+      quizHandler: setCurrentQuiz,
+      modalHandler: onOpen,
+    }),
+    [onOpen, userStats]
+  )
 
   return (
     <Box>
