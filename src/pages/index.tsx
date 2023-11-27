@@ -308,7 +308,7 @@ const HomePage: NextPage<Props> = ({ communityEvents }) => {
         description={t("page-index:page-index-meta-description")}
       />
       <Box w="full">
-        <HomeHero heroImgSrc={hero!} />
+        <HomeHero heroImgSrc={hero} />
       </Box>
       {/* Getting Started Section */}
       <GrayContainer>
