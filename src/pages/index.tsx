@@ -61,6 +61,7 @@ import infrastructurefixed from "@/public/infrastructure_transparent.png"
 import merge from "@/public/upgrades/merge.png"
 import robotfixed from "@/public/wallet-cropped.png"
 import ethereum from "@/public/what-is-ethereum.png"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -186,11 +187,13 @@ export const getStaticProps = (async (context) => {
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("/")
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
+      lastDeployDate,
     },
   }
 }) satisfies GetStaticProps<Props>
