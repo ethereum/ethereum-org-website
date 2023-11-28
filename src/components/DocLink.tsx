@@ -44,6 +44,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         flexDirection="row"
         flex={1}
         justifyContent="space-between"
+        data-group
       >
         <Flex align="center">
           <Emoji fontSize="md" me={4} text=":page_with_curl:" />
