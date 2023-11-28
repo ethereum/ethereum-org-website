@@ -171,7 +171,9 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
-interface TutorialLayoutProps extends MdPageContent, ChildOnlyProp {
+interface TutorialLayoutProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "tocItems" | "lastUpdatedDate"> {
   frontmatter: TutorialFrontmatter
   timeToRead: number
 }

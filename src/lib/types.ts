@@ -1,6 +1,8 @@
 import { ReactElement, ReactNode } from "react"
 import { NextPage } from "next"
 import { AppProps } from "next/app"
+import { StaticImageData } from "next/image"
+import { Options } from "mdast-util-toc"
 
 import type {
   Author,
@@ -12,26 +14,29 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
-import { StaticImageData } from "next/image"
+
+import { layoutMapping } from "@/pages/[...slug]"
 
 export type ChildOnlyProp = { children?: ReactNode }
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
+  getLayout?: (page: ReactElement<P>) => ReactNode
 }
 
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export type Frontmatter =
-  | RoadmapFrontmatter
-  | UpgradeFrontmatter
-  | StaticFrontmatter
-  | UseCasesFrontmatter
-  | StakingFrontmatter
-  | DocsFrontmatter
-  | TutorialFrontmatter
+export type Frontmatter = RoadmapFrontmatter &
+  UpgradeFrontmatter &
+  StaticFrontmatter &
+  UseCasesFrontmatter &
+  StakingFrontmatter &
+  DocsFrontmatter &
+  TutorialFrontmatter
+
+export type LayoutMappingType = typeof layoutMapping
+export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
@@ -101,8 +106,6 @@ export type I18nLocale = {
   dateFormat: string
 }
 
-export type StaticPaths = { params: { slug: string[] }; locale: string }[]
-
 export type TranslationKey = string
 
 /**
@@ -150,11 +153,26 @@ export type FileContributorsState = {
 /**
  * Table of contents
  */
-export type SourceHeadingItem = { depth: number; id: string; label: string }
+export type ToCNodeEntry = {
+  url?: string
+  title?: string
+}
+
+export type TocNodeType =
+  | ToCNodeEntry
+  | {
+      items: TocNodeType[]
+    }
+
 export type ToCItem = {
   title: string
   url: string
-  items?: Array<ToCItem>
+  items?: ToCItem[]
+}
+
+export type IRemarkTocOptions = {
+  maxDepth?: Options["maxDepth"]
+  callback: (toc: TocNodeType) => void
 }
 
 // Learning Tools

@@ -43,6 +43,7 @@ La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo svilup
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 Puoi anche trovare la documentazione e le guide di sviluppo nella nostra sezione [risorse per sviluppatore Ethereum](/developers/).
 
@@ -64,7 +65,7 @@ Ecco alcuni esempi più diffusi:
 
 Se stai eseguendo un nodo o un validatore, ecco alcune community che sono dedicate ad aiutarti ad iniziare.
 
-- [EthStaker discord](https://discord.gg/ethstaker)
+- [EthStaker discord](https://discord.io/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi dedicati, rivolti al pubblico, dove è possibile ottenere supporto e fare domande.
@@ -88,17 +89,17 @@ Puoi anche [imparare ad eseguire un nodo qui](/developers/docs/nodes-and-clients
 
 ## Domande frequenti {#faq}
 
-#### Ho inviato ETH al portafoglio sbagliato {#wrong-wallet}
+### Ho inviato ETH al portafoglio sbagliato {#wrong-wallet}
 
 Una transazione inviata in Ethereum è irreversibile. Sfortunatamente, se hai inviato ETH al portafoglio sbagliato, non c'è modo di recuperare questi fondi. Nessuna organizzazione centrale, entità o persona possiede Ethereum, il che significa che nessuno può annullare le transazioni. Pertanto, è fondamentale ricontrollare sempre le tue transazioni prima di inviarle.
 
-#### Come posso reclamare il mio giveaway Ethereum? {#giveaway-scam}
+### Come posso reclamare il mio giveaway Ethereum? {#giveaway-scam}
 
 I giveaway Ethereum sono truffe progettate per rubare il vostro ETH. Non farti tentare da offerte che sembrano troppo belle per essere vere - se invii ETH a un indirizzo giveaway, non riceverai un giveaway e non potrai recuperare i tuoi fondi.
 
 [Maggiori informazioni sulla prevenzione delle truffe](/security/#common-scams)
 
-#### La mia transazione è bloccata {#stuck-transaction}
+### La mia transazione è bloccata {#stuck-transaction}
 
 Le transazioni su Ethereum a volte possono bloccarsi se hai inviato una commissione sulle transazioni inferiore a quella richiesta per la domanda di rete. Molti portafogli prevedono un'opzione per reinviare la stessa transazione con una commissione sulle transazioni più elevata per consentire l'elaborazione. In alternativa, è possibile annullare una transazione in sospeso inviando una transazione al proprio indirizzo e utilizzando lo stesso nonce della transazione in sospeso.
 
@@ -106,10 +107,10 @@ Le transazioni su Ethereum a volte possono bloccarsi se hai inviato una commissi
 
 [Come annullare le transazioni Ethereum in sospeso](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Come posso fare mining in Ethereum? {#mining-ethereum}
+### Come posso fare mining in Ethereum? {#mining-ethereum}
 
 Il mining su Ethereum non è più possibile. Il mining è stato disattivato quando Ethereum è passato dal proof-of-work al proof-of-stake. Ora, invece dei miner, Ethereum ha i validatori. I validatori mettono ETH in staking e ricevono ricompense per proteggere la rete.
 
-#### Come divento uno staker/validatore? {#become-validator}
+### Come divento uno staker/validatore? {#become-validator}
 
 Per diventare un validatore, devi mettere in staking 32 ETH nel contratto di deposito di Ethereum e configurare un nodo del validatore. Ulteriori informazioni sono disponibili sulle nostre [pagine di staking](/staking) e al [launchpad di staking](https://launchpad.ethereum.org/).

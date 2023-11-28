@@ -14,27 +14,25 @@ summaryPoint3: La cadena de baliza introdujo la lógica de consenso y bloqueó e
   La cadena de baliza enviada el 1 de diciembre de 2020 formalizó la prueba de participación como mecanismo de consenso de Ethereum con la actualización a La Fusión el 15 de septiembre de 2022.
 </UpgradeStatus>
 
-## ¿Qué era la cadena de baliza? {#what-is-the-beacon-chain}
+## ¿Qué es la cadena de baliza? {#what-is-the-beacon-chain}
 
-La cadena de bloques fue el nombre de la cadena de bloques de prueba de participación original lanzada en 2020. Fue creada para mostrar que la lógica de consenso de la prueba de participación era segura y sostenible, antes de habilitarla en la red principal de Ethereum. Por esta razón, estuvo funcionando paralelamente con la prueba de trabajo de Ethereum. Al desconectar la prueba de trabajo y habilitar la prueba de participación en Ethereum, fue necesario instruir a la cadena de baliza a que aceptara las transacciones alojadas en la agrupación de cadena original de Ethereum. Luego, estas se agruparon en bloques y posteriormente se organizaron en la cadena de bloques usando un mecanismo de consenso basado en la prueba de participación. Al mismo tiempo, los clientes originales de Ethereum apagaron su minería, propagación de bloques y lógica de consenso, confiándolo todo a la cadena de baliza. A este evento se le denominó [La Fusión](/roadmap/merge/). Una vez completada La Fusión, dejó de haber dos cadenas de bloques, convirtiéndose en una única cadena de Ethereum con prueba de participación.
+La cadena de baliza es el nombre original de la cadena de bloques de la prueba de participación que fue lanzada en 2020. Fue creada para mostrar que la lógica de consenso de la prueba de participación era segura y sostenible, antes de habilitarla en la red principal de Ethereum. Por esta razón, estuvo funcionando paralelamente con la prueba de trabajo de Ethereum. La Cadena de Baliza fue una cadena de bloques 'vacios', pero al cambiar a prueba de trabajo y al cambiar a prueba de participación en Ethereum requiere instrucciones a la Cadena de Baliza para aceptar data de transacciones de clientes de ejecución, juntarlos en bloques y después organizarlos en la cadena de bloques usando un mecanismo de consenso usando una base prueba de participación. Al mismo tiempo, los clientes originales de Ethereum apagaron su minería, propagación de bloques y lógica de consenso, confiándolo todo a la cadena de baliza. A este evento se le denominó [La Fusión](/roadmap/merge/). Una vez producida La Fusión, ya no había dos cadenas de bloques. En lugar de ello, solo había una prueba de participación en Ethereum, que ahora requiere dos clientes diferentes por nodo. La cadena de baliza es ahora la capa de consenso, una red entre pares de clientes de consenso que maneja el bloque de intercambio de información y la lógica de consenso, mientras que los clientes originales forman la capa de ejecución, que es la responsable del intercambio de información y de la ejecución de transacciones, y de la gestión del estado de Ethereum. Las dos capas pueden comunicarse entre sí usando Engine API.
 
 ## ¿Qué hace la cadena de baliza? {#what-does-the-beacon-chain-do}
 
-El nombre de la cadena de baliza era el nombre utilizado para referirse al libro mayor de cuentas encargado de orquestar y coordinar a los [participantes](/staking/) de la red de Ethereum mucho antes de que estos comenzaran a validar transacciones reales de Ethereum. No se encargaba de procesar transacciones ni de las interaccones con contratos inteligentes.
-
-Dio paso al mecanismo de consenso (o «capa de consenso») que reemplazó el minado de la prueba de trabajo de Ethereum y trajo consigo mejoras significativas a la red.
-
-La cadena de baliza es un elemento fundacional para el [Ethereum seguro, escalable y amigable al medioambiente que tenemos en la actualidad](/roadmap/vision/).
+Cadena de baliza es el nombre que se le ha dado a un libro mayor de cuentas que dirigía y coordinaba la red de [participantes](/staking/) de Ethereum antes de que esos participantes comenzaran a validar bloques reales de Ethereum. No procesa transacciones ni maneja interacciones de contratos inteligentes, porque eso se esta haciendo a través de la capa de ejecución. La cadena de baliza es responsable de cosas como la gestión de bloques y certificaciones, de la ejecución del algoritmo de bifurcación y de la gestión de recompensas y penalizaciones. Lea más en nuestra [página de arquitectura de nodos](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
 ## El impacto de la cadena de baliza {#beacon-chain-features}
 
 ### Introducción a la participación {#introducing-staking}
 
-La cadena de baliza introdujo la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) en Ethereum. Esta mantiene la seguridad de Ethereum y permite a los validadores obtener más ETH en el proceso. En la práctica, la participación supone comprometer ETH para poder activar el software de validación. Como participador, será el encargado de ejecutar el software que crea y valida los nuevos bloques de la cadena.
+La cadena de baliza introdujo la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) en Ethereum. Esta mantiene la seguridad de Ethereum y permite a los validadores obtener más ETH en el proceso. En la práctica, la participación supone comprometer ETH para poder activar el software de validación. Como participante, se encargará de ejecutar el software que crea y valida los nuevos bloques de la cadena.
 
-La participación cumple un rol similar al que solía realizar el [minado](/developers/docs/mining/), pero con muchas diferencias entre ambos. El minado requería de una inversión inicial significativa destinada a la adquisición de un productivo hardware y a cubrir los gastos de consumo energético, lo que derivó en economías de escala y en la promoción de la centralización. El minado tampoco requería de la retención de activos colaterales, lo que limitaba los alcances del protocolo a castigar las acciones incorrectas solo tras un ataque.
+La participación cumple un propósito similar al que solía realizar la [minería](/developers/docs/mining/), pero con muchas diferencias entre ambos. La minería requería de una inversión inicial significativa destinada a la adquisición de un productivo hardware y a cubrir los gastos de consumo energético, lo que derivó en economías de escala y en la promoción de la centralización. La minería tampoco requería la retención de activos colaterales, lo que limitaba los alcances del protocolo a castigar las acciones incorrectas solo tras un ataque.
 
-La transición de Ethereum a la prueba de participación le hace significativamente más segura y descentralizada en comparación con la prueba de trabajo. La red se vuelve más descentralizada y menos propensa a ataques con el aumento de personas participando en ella.
+La transición de Ethereum a la prueba de participación hace que la red sea significativamente más segura y descentralizada en comparación con la prueba de trabajo. Cuantas más personas participan en la red, más descentralizada y menos segura frente a ataques se vuelve.
+
+Y usando la prueba de participación como un mecanismo de consenso es un componente fundamental para [la seguridad, respecto al medio ambiente y la escalabilidad de Ethereum que tenemos ahora](/roadmap/vision/).
 
 <InfoBanner emoji=":money_bag:">
   Si le interesa convertirse en validador y contribuir con la seguridad de Ethereum, <a href="/staking/"> obtenga más información sobre la participación</a>.
@@ -44,9 +42,9 @@ La transición de Ethereum a la prueba de participación le hace significativame
 
 Al producirse la fusión entre la cadena de baliza y la red principal de Ethereum, la comunidad de Ethereum comenzó a interesarse por la escalabilidad de la red.
 
-La prueba de participación ofrece las ventajas de contar con un registro de todos los productores de bloques aprobados de cualquier período de tiempo, todos ellos con ETH en participación. Este registro establece el escenario para la posibilidad de «dividir y vencer», pero establece de manera precisa la derivación de responsabilidades de la red.
+La prueba de participación ofrece las ventajas de contar con un registro de todos los productores de bloques aprobados en cualquier período de tiempo, todos ellos con ETH en participación. Este registro establece el escenario para la posibilidad de «dividir y vencer», pero determina de manera precisa la derivación de responsabilidades de la red.
 
-Esta responsabilidad se diferencia de la responsabilidad de la prueba de trabajo, en donde los mineros no tenían obligaciones con la red, quienes podían detener el minado y desactivar el software del nodo permanentemente sin que esto tuviera repercusiones. Tampoco había un registro de quién proponía los bloques, por lo que no había forma de dividir apropiadamente las responsabilidades de la red.
+Esta responsabilidad se diferencia de la responsabilidad de la prueba de trabajo, en donde los mineros no tenían obligaciones con la red, quienes podían detener la minería y desactivar el software del nodo permanentemente sin que esto tuviera repercusiones. Tampoco existía un registro de quién proponía los bloques, por lo que no había forma de dividir apropiadamente las responsabilidades de la red.
 
 [Más sobre la fragmentación](/roadmap/danksharding/)
 
@@ -64,7 +62,7 @@ En sus comienzos, la cadena de baliza existía de manera independiente a la red 
 
 ### Los fragmentos y la cadena de baliza {#shards-and-beacon-chain}
 
-La fragmentación solo podría ser implementada en el ecosistema de Ethereum de manera segura a través del mecanismo de consenso de la prueba de participación. La cadena de baliza introdujo apuestas, que se «fusionaron» con la red principal, allanando el camino para la fragmentación y así ayudar a una mayor escalabilidad de Ethereum.
+La fragmentación solo podría implementarse en el ecosistema de Ethereum de manera segura a través del mecanismo de consenso de la prueba de participación. La cadena de baliza introdujo apuestas, que se «fusionaron» con la red principal, allanando el camino para la fragmentación y así contribuir a una mayor escalabilidad de Ethereum.
 
 <ButtonLink to="/roadmap/danksharding/">
   Cadenas de fragmentos
@@ -73,4 +71,5 @@ La fragmentación solo podría ser implementada en el ecosistema de Ethereum de 
 ## Más información
 
 - [Más sobre las futuras actualizaciones de Ethereum](/roadmap/vision)
+- [Más sobre arquitectura de nodos](/developers/docs/nodes-and-clients/node-architecture)
 - [Más sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)

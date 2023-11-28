@@ -35,10 +35,11 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _Ecosistema finanziario di [Lido](https://lido.fi/)_
 - [MetaMask Program](https://metamaskgrants.org/): _DAO di sovvenzioni operata dai dipendenti di [MetaMask](https://metamask.io/)_
 - [mStable Grants Program](https://docs.mstable.org/advanced/grants-program) - _Community [mStable](https://mstable.org/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema [The Graph](https://thegraph.com/)_
-- [UMA Grants Program](https://grants.umaproject.org/): _Supporto per sviluppatori [UMA](https://umaproject.org/)_
-- [Uniswap Grants Program](https://www.unigrants.org/) – _Community [Uniswap](https://uniswap.org/)_
-- [Sovvenzioni Web3](https://web3grants.net): _Un elenco completo di programmi di sovvenzione relativi a web3/cripto_
+- [Programma di sovvenzioni della rete di SKALE](https://skale.space/developers#grants): _ecosistema della [rete di SKALE](https://skale.space/)_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _ecosistema di [The Graph](https://thegraph.com/)_
+- [Programma di sovvenzioni UMA](https://grants.umaproject.org/): _supporto per sviluppatori di [UMA](https://umaproject.org/)_
+- [Programma di sovvenzioni di Uniswap](https://www.unigrants.org/) – _Comunità di [Uniswap](https://uniswap.org/)_
+- [Sovvenzioni Web3](https://web3grants.net): _un elenco completo di programmi di sovvenzione relativi a web3/cripto_
 
 ## Finanziamento quadratico {#quadratic-funding}
 

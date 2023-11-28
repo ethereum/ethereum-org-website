@@ -11,7 +11,7 @@ buttons:
     toId: what-changes-are-coming
   - label: Aggiornamenti precedenti
     to: /history/
-    variant: outline
+    variant: delineazione
 ---
 
 Ethereum è già una potente piattaforma per il coordinamento globale, ma è ancora in fase di miglioramento. Una serie ambiziosa di miglioramenti trasformerà Ethereum dalla sua forma attuale in una piattaforma completamente scalata e al massimo resiliente. Questi aggiornamenti sono previsti nella tabella di marcia di Ethereum.

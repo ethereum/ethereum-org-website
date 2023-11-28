@@ -17,7 +17,7 @@ If you're new to the topic of running a node, or looking for a less technical pa
 
 Primul pas în crearea nodului dvs. este să vă alegeţi un mod de abordare. You have to choose the client (the software), the environment, and the parameters you want to start with. Vizualizați toți [clienţii din Mainnet](/developers/docs/nodes-and-clients/#advantages-of-different-implementations) disponibili.
 
-#### Setările pentru client {#client-settings}
+### Setările pentru client {#client-settings}
 
 Implementările clienţilor activează diferite moduri de sincronizare și diverse alte opțiuni. [Modurile de sincronizare](/developers/docs/nodes-and-clients/#sync-modes) reprezintă diferite metode de descărcare și validare a datelor din blockchain. Before starting the node, you should decide what network and sync mode to use. Cele mai importante lucruril de luat în considerare sunt spațiul pe disc și timpul de sincronizare de care va avea nevoie clientul.
 

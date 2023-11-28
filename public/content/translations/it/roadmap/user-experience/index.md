@@ -19,7 +19,7 @@ La soluzione è utilizzare portafogli di contratti intelligenti per interagire c
 
 ## Nodi per tutti
 
-Gli utenti che operano nodi non devono fidarsi di terze parti per fornire loro i dati e possono interagire rapidamente, privatamente e senza permessi con la blockchain di Ethereum. Tuttavia, al momento, operare un nodo richiede una conoscenza tecnica e sostanziale spazio su disco, a significare che molte persone devono invece fidarsi di degli intermediari.
+Gli utenti che operano nodi non devono fidarsi di terze parti per fornire loro i dati e possono interagire rapidamente, privatamente e senza permessi con la blockchain di Ethereum. Tuttavia, al momento, operare un nodo richiede una conoscenza tecnica e sostanziale spazio su disco, a significare che molte persone devono invece fidarsi degli intermediari.
 
 Esistono diversi aggiornamenti che semplificheranno l'esecuzione dei nodi, riducendo di molto il consumo di risorse. Il metodo di archiviazione dei dati sarà modificato per utilizzare una struttura molto più efficiente a livello di spazio, nota come **Albero di Verkle**. Inoltre, con l'[assenza di stato](/roadmap/statelessness) o la [scadenza dei dati](/roadmap/statelessness/#data-expiry), i nodi di Ethereum non dovranno memorizzare una copia degli interi dati di stato di Ethereum, riducendo drasticamente i requisiti di spazio su disco. I [nodi leggeri](/developers/docs/nodes-and-clients/light-clients/) offriranno molti benefici dell'operare un nodo completo, ma potranno facilmente operare su smartphone o in semplici app per browser.
 
@@ -29,7 +29,7 @@ Con questi aggiornamenti, le barriere all'esecuzione di un nodo sono ridotte eff
 
 ## Stato attuale {#current-progress}
 
-I portafogli di contratti intelligenti sono già disponibili, ma sono necessari maggiori aggiornamenti per renderli il più decentralizzati e privi di permessi possibile. L'EIP-4337 è un proposta matura che non richiede alcuna modifica al protocollo di Ethereum. Il contratto intelligente principale necessario per l'EIP-4337 è stato distribuito a marzo 2023.
+I portafogli di contratti intelligenti sono già disponibili, ma sono necessari maggiori aggiornamenti per renderli il più decentralizzati e privi di permessi possibile. L'EIP-4337 è una proposta matura che non richiede alcuna modifica al protocollo di Ethereum. Il contratto intelligente principale necessario per l'EIP-4337 è stato distribuito a marzo 2023.
 
 L'assenza di stato completa è ancora in fase di ricerca ed è probabilmente distante di diversi anni dall'implementazione. Esistono diverse pietre miliari sul percorso alla completa assenza di stato, inclusa la scadenza dei dati, che potrebbe essere implementata prima. Devono prima essere completati altri punti della tabella di marcia, come gli [Alberi di Verkle](/roadmap/verkle-trees/) e la [Separazione tra propositori e costruttori](/roadmap/pbs/).
 
