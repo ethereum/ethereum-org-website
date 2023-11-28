@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 import InlineLink from "../components/Link"
 import Translation from "../components/Translation"
@@ -16,13 +17,17 @@ export const getStaticProps = (async (context) => {
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("/")
+  const lastDeployDate = getLastDeployDate()
 
   return {
-    props: await serverSideTranslations(locale!, requiredNamespaces),
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
+    },
   }
 }) satisfies GetStaticProps<Props>
 
-const NotFoundPage: NextPage<Props> = () => (
+const NotFoundPage = () => (
   <Flex flexDir="column" align="center" w="full" mt={16} mb={0} mx="auto">
     <Box py={4} px={8} w="full">
       <Heading as="h1" size="2xl" my={8}>
