@@ -72,8 +72,8 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
       direction="column"
       borderTop="1px solid"
       borderTopColor="searchBackground"
-      borderLeft={{ base: 0, md: "1px solid" }}
-      borderLeftColor={{ md: "searchBackground" }}
+      borderInlineStart={{ base: 0, md: "1px solid" }}
+      borderInlineStartColor={{ md: "searchBackground" }}
       sx={{
         "&:first-child": {
           borderTop: 0,
@@ -83,21 +83,21 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
             borderTop: 0,
           },
           "&:nth-child(2n + 1)": {
-            borderLeft: 0,
+            borderInlineStart: 0,
           },
         },
         [`@media (min-width: ${lgBp})`]: {
           "&:first-child": {
             ps: 0,
-            borderLeft: 0,
+            borderInlineStart: 0,
           },
           "&:nth-child(-n + 2)": {
             borderTop: "1px solid",
             borderTopColor: "searchBackground",
           },
           "&:nth-child(2n + 1)": {
-            borderLeft: "1px solid",
-            borderLeftColor: "searchBackground",
+            borderInlineStart: "1px solid",
+            borderInlineStartColor: "searchBackground",
           },
           "&:nth-child(-n + 3)": {
             borderTop: 0,
@@ -106,7 +106,7 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
           },
           "&:nth-child(3n + 1)": {
             ps: 0,
-            borderLeft: 0,
+            borderInlineStart: 0,
           },
           "&:nth-child(n + 4)": {
             justifyContent: "start",

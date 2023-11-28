@@ -69,13 +69,13 @@ const EventCard: React.FC<IProps> = ({
           ? {
               insetInlineStart: "inherit",
               insetInlineEnd: "45%",
-              borderLeft: 0,
-              borderRight: "25px solid",
+              borderInlineStart: 0,
+              borderInlineEnd: "25px solid",
             }
           : {
               insetInlineStart: "45%",
-              borderLeft: "25px solid",
-              borderRight: 0,
+              borderInlineStart: "25px solid",
+              borderInlineEnd: 0,
             }),
         borderColor: "primary.base",
       }}

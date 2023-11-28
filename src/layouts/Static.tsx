@@ -107,8 +107,8 @@ export const StaticLayout: React.FC<IProps> = ({
             ".featured": {
               ps: 4,
               ms: -4,
-              borderLeft: "1px dotted",
-              borderLeftColor: "primary.base",
+              borderInlineStart: "1px dotted",
+              borderInlineStartColor: "primary.base",
             },
 
             ".citation": {

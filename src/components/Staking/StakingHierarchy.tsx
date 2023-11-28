@@ -144,7 +144,7 @@ const Line = () => {
         content: `""`,
         height: calc.subtract("100%", "50px"),
         borderImage: `linear-gradient(to bottom, ${$colorVar.reference}, ${$nextColorVar.reference}) 1 100%`,
-        borderLeft: "4px",
+        borderInlineStart: "4px",
         borderColor: "orange",
         position: "absolute",
         insetInlineStart: calc.subtract("50%", "2px"),
@@ -253,8 +253,8 @@ const StakingHierarchy: React.FC<IProps> = () => {
       borderRadius={{ base: 0, md: "lg" }}
       spacing={{ base: 16, md: 0 }}
       p={8}
-      borderLeft={{ base: "4px", md: "none" }}
-      borderRight={0}
+      borderInlineStart={{ base: "4px", md: "none" }}
+      borderInlineEnd={0}
       sx={{
         borderImage: `linear-gradient(to bottom, ${stakingGold} 5%, ${stakingGreen} 30%, ${stakingBlue} 55%, ${stakingRed} 80%) 1 100%`,
       }}

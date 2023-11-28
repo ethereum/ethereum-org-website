@@ -160,8 +160,8 @@ const SideNav = ({ path }: SideNavProps) => {
       transition="transform 0.2s ease"
       bgColor="background.base"
       boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
-      borderRight="1px solid"
-      borderRightColor="border"
+      borderInlineEnd="1px solid"
+      borderInlineEndColor="border"
       display={{ base: "none", lg: "block" }}
       aria-label={t("common:nav-developers-docs")}
     >

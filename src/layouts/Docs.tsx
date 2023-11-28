@@ -155,7 +155,7 @@ const Content = (props: ChildOnlyProp) => {
         ".featured": {
           ps: 4,
           ms: -4,
-          borderLeft: "1px dotted",
+          borderInlineStart: "1px dotted",
           borderColor: "primary",
         },
         ".citation": {

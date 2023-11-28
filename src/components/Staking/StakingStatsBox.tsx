@@ -22,12 +22,12 @@ const Cell: React.FC<{ children: ReactNode }> = ({ children }) => {
       spacing={2}
       py={4}
       px={8}
-      borderLeft={{ md: "1px" }}
+      borderInlineStart={{ md: "1px" }}
       borderTop={{ base: "1px", md: "none" }}
       // `!important` needed to force an override of the user-agent
       borderColor="preBorder !important"
       _first={{
-        borderLeft: "none",
+        borderInlineStart: "none",
         borderTop: "none",
       }}
     >

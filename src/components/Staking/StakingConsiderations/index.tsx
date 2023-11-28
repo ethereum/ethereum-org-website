@@ -108,7 +108,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
                         top: 0,
                         insetInlineStart: "100%",
                         border: "1rem solid transparent",
-                        borderLeftColor: "primary.base",
+                        borderInlineStartColor: "primary.base",
                       },
                     }
                   : { color: "primary.base" })}

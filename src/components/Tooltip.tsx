@@ -99,15 +99,15 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
                 position="absolute"
                 bottom={-2}
                 insetInlineStart="calc(50% - 6px)"
-                borderRightWidth={10}
-                borderRightStyle="solid"
-                borderRightColor="transparent"
+                borderInlineEndWidth={10}
+                borderInlineEndStyle="solid"
+                borderInlineEndColor="transparent"
                 borderTopWidth={10}
                 borderTopStyle="solid"
                 borderTopColor="background.highlight"
-                borderLeftWidth={10}
-                borderLeftStyle="solid"
-                borderLeftColor="transparent"
+                borderInlineStartWidth={10}
+                borderInlineStartStyle="solid"
+                borderInlineStartColor="transparent"
               />
               {content}
             </Box>

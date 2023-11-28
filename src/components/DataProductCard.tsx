@@ -116,8 +116,8 @@ const DataProductCard: React.FC<IProps> = ({
                 textTransform="uppercase"
                 border="1px solid"
                 borderColor="lightBorder"
-                borderLeft="0"
-                borderRight="0"
+                borderInlineStart="0"
+                borderInlineEnd="0"
               >
                 <Flex alignItems="center">
                   {logo && (

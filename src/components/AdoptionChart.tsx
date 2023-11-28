@@ -30,13 +30,13 @@ const Cell: React.FC<BoxProps> = ({ children, color, ...props }) => {
       lineHeight="none"
       textAlign="center"
       _last={{
-        borderTopLeftRadius: "2xl",
-        borderTopRightRadius: "2xl",
+        borderTopStartRadius: "2xl",
+        borderTopEndRadius: "2xl",
       }}
       sx={{
         "&:nth-child(-n + 2)": {
-          borderBottomLeftRadius: "2xl",
-          borderBottomRightRadius: "2xl",
+          borderBottomStartRadius: "2xl",
+          borderBottomEndRadius: "2xl",
         },
       }}
       {...props}
