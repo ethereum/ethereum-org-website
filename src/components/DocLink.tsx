@@ -12,6 +12,8 @@ import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
 import Text from "./OldText"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 export interface IProps {
   children?: React.ReactNode
   to: string
@@ -20,6 +22,7 @@ export interface IProps {
 
 const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
   const linkBoxShadowColor = useToken("colors", "primary.base")
+  const { flipForRtl } = useRtlFlip()
 
   return (
     <LinkBox
@@ -68,9 +71,10 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           _groupHover={{
             fill: "primary.base",
             transition: "transform 0.1s",
-            transform: "scale(1.2)",
+            transform: `${flipForRtl} scale(1.2)`,
             rotate: isExternal ? "-45deg" : "0",
           }}
+          transform={flipForRtl}
         />
       </Flex>
     </LinkBox>
