@@ -1,9 +1,7 @@
 import Translation from "@/components/Translation"
-import { RootLayout } from "../../layouts/RootLayout"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { GetStaticProps } from "next"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { ChildOnlyProp } from "@/lib/types"
 import { Box, Flex, ListItem, SimpleGrid, UnorderedList } from "@chakra-ui/react"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -63,17 +61,15 @@ export const getStaticProps: GetStaticProps = async (
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath('/developers/local-environment')
-  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      lastDeployDate,
     },
   }
 }
 
-const DevelopersPage = ({ lastDeployDate }) => {
+const DevelopersPage = () => {
   const { t } = useTranslation("page-developers-local-environment")
 
   const frameworksList: Array<IFramework> = [
@@ -170,12 +166,7 @@ const DevelopersPage = ({ lastDeployDate }) => {
   ]
 
   return (
-    <RootLayout
-      contentIsOutdated={false}
-      contentNotTranslated={false}
-      lastDeployDate={lastDeployDate}
-    >
-      <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
+    <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
       <PageMetadata
         title={t("page-developers-local-environment:page-local-environment-setup-meta-title")}
         description={t("page-developers-local-environment:page-local-environment-setup-meta-desc")}
@@ -284,8 +275,7 @@ const DevelopersPage = ({ lastDeployDate }) => {
       <Content>
         <FeedbackCard />
       </Content>
-      </Flex>
-    </RootLayout>
+    </Flex>
   )
 }
 
