@@ -18,7 +18,7 @@ export const getLocaleForNumberFormat = (locale: Lang): Lang =>
 
 export const isLang = (lang: string) => {
   return i18nConfigs.map((language) => language.code).includes(lang)
-} 
+}
 
 export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
   let requiredNamespaces: string[] = ["common"]
@@ -69,6 +69,10 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
 
   if (path.startsWith("/developers/docs/scaling")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
+  }
+
+  if (path === "get-eth") {
+    requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
   }
 
   // Quizzes
