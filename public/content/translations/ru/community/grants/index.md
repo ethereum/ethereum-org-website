@@ -35,10 +35,11 @@ lang: ru
 - [Организация грантов экосистемы Lido (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
 - [ Программа MetaMask](https://metamaskgrants.org/) — _децентрализованная автономная организация (DAO) по выдаче грантов, возглавляемая сотрудниками [MetaMask](https://metamask.io/)_
 - [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
+- [Программа грантов SKALE Network](https://skale.space/developers#grants) — _экосистема [SKALE Network](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
 - [Программа грантов UMA](https://grants.umaproject.org/) — _поддержка разработчиков [UMA](https://umaproject.org/)_
 - [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
-- [Гранты по Web3](https://web3grants.net) — _исчерпывающий список программ грантов, связанных с Web3/криптовалютами_
+- [Гранты по Web3](https://web3grants.net) — _большой список грантовых программ по Web3/криптовалютам_
 
 ## Квадратичное финансирование {#quadratic-funding}
 

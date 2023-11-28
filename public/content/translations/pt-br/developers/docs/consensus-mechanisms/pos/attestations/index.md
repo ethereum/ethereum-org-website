@@ -62,7 +62,7 @@ A recompensa base é calculada de acordo com o número de validadores atestadore
 
 #### Atraso de inclusão {#inclusion-delay}
 
-No momento em que os validadores votaram no topo da cadeia (`bloco n`), `bloco n+1` ainda não foi proposto. Portanto, as atestações naturalmente são incluídas **um bloco mais tarde** de modo que todas as atestações que votaram no `block n` sendo a cabeça da cadeia foram incluídos no `block n+1` e o **atraso de inclusão** é 1. Se o atraso da inclusão duplicar para dois slots, a atestação recompensa pela metade, porque para calcular a recompensa de atestação a recompensa base é multiplicada pela reciprocidade do atraso de inclusão.
+No momento em que os validadores votaram no topo da cadeia (`bloco n`), `bloco n+1` ainda não foi proposto. Portanto, as atestações naturalmente são incluídas **um bloco mais tarde** de modo que todas as atestações que votaram no `block n` sendo a cabeça da cadeia foram incluídos no `block n+1` e o **atraso de inclusão** é 1. Se o atraso de inclusão dobrar para dois slots, a recompensa da atestação cai pela metade, porque para calcular a recompensa da atestação, a recompensa base é multiplicada pelo recíproco do atraso de inclusão.
 
 ### Cenários de atestação {#attestation-scenarios}
 

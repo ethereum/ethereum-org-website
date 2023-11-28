@@ -37,12 +37,11 @@ const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     bg="cardGradient"
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-    direction={{ base: "column-reverse", lg: "row" }}
-    justify="end"
-    minHeight={{ base: "800px", lg: "608px" }}
+    flexDirection={{ base: "column-reverse", lg: "row" }}
+    justifyContent="flex-end"
+    minHeight="608px"
     maxHeight={{ base: "full", lg: "608px" }}
     width="full"
-    position="relative"
     {...props}
   />
 )
@@ -59,9 +58,10 @@ const TitleCard = (props: ChildOnlyProp) => {
       boxShadow={{ lg: boxShadow }}
       flexDirection="column"
       maxWidth={{ base: "full", lg: "container.sm" }}
+      mt={{ base: 0, lg: 12 }}
       zIndex="docked"
       p={8}
-      position="absolute"
+      position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
       insetInlineStart={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
@@ -76,7 +76,9 @@ export const useCasesComponents = {
   // Export empty object if none needed
 }
 
-interface IProps extends ChildOnlyProp, MdPageContent {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: UseCasesFrontmatter
 }
 export const UseCasesLayout: React.FC<IProps> = ({
@@ -207,15 +209,20 @@ export const UseCasesLayout: React.FC<IProps> = ({
           </Box>
         </TitleCard>
         <Image
-          position="absolute"
-          alignSelf={{ base: "center", lg: "normal" }}
-          top={0}
-          bottom={0}
-          style={{ objectFit: "cover" }}
-          width={1000}
-          height={610}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
+          width={1200}
+          height={610}
+          style={{ objectFit: "cover" }}
+          priority
+          alignSelf={{
+            base: "center",
+            lg: "normal",
+          }}
+          maxH={{
+            base: "340px",
+            lg: "full",
+          }}
           maxW={{
             base: useCase === "defi" ? "full" : "min(405px, 98%)",
             lg:
@@ -241,13 +248,13 @@ export const UseCasesLayout: React.FC<IProps> = ({
         </Flex>
       </Show>
       <Page>
-        <Show above={lgBp}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />

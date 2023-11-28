@@ -72,7 +72,9 @@ export const staticComponents = {
   UpcomingEventsList,
 }
 
-interface IProps extends ChildOnlyProp, MdPageContent {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
   frontmatter: StaticFrontmatter
 }
 export const StaticLayout: React.FC<IProps> = ({
