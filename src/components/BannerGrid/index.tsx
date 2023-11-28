@@ -88,7 +88,7 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
         },
         [`@media (min-width: ${lgBp})`]: {
           "&:first-child": {
-            paddingLeft: 0,
+            ps: 0,
             borderLeft: 0,
           },
           "&:nth-child(-n + 2)": {
@@ -105,7 +105,7 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
             paddingTop: 0,
           },
           "&:nth-child(3n + 1)": {
-            paddingLeft: 0,
+            ps: 0,
             borderLeft: 0,
           },
           "&:nth-child(n + 4)": {

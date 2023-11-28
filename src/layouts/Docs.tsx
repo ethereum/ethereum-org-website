@@ -153,8 +153,8 @@ const Content = (props: ChildOnlyProp) => {
       m="0 auto"
       sx={{
         ".featured": {
-          paddingLeft: 4,
-          marginLeft: -4,
+          ps: 4,
+          ms: -4,
           borderLeft: "1px dotted",
           borderColor: "primary",
         },

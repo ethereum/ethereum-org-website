@@ -110,9 +110,9 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
             cursor="pointer"
             onClick={() => scrollTo(index)}
             sx={{
-              marginRight: "1rem",
+              me: "1rem",
               "&:last-child": {
-                marginRight: 0,
+                me: 0,
               },
             }}
           />

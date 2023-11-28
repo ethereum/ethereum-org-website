@@ -126,7 +126,7 @@ const DataProductCard: React.FC<IProps> = ({
                       objectFit="cover"
                       alt=""
                       minWidth="24px"
-                      marginRight="0.5rem"
+                      me="0.5rem"
                     />
                   )}
                   {coin}

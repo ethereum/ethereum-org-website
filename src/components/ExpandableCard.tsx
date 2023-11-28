@@ -93,13 +93,13 @@ const ExpandableCard: React.FC<IProps> = ({
             >
               <Box
                 marginBottom={{ base: 2, sm: 0 }}
-                marginRight={{ base: 0, sm: 4 }}
+                me={{ base: 0, sm: 4 }}
               >
                 <Box
                   display="flex"
                   alignItems="center"
                   sx={{
-                    svg: { marginRight: "1.5rem" },
+                    svg: { me: "1.5rem" },
                   }}
                   my="4"
                 >
