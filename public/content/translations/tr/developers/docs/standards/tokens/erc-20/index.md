@@ -16,13 +16,13 @@ Token'lar Ethereum'daki hemen hemen her şeyi temsil edebilir:
 - şirket hissesi gibi finansal varlıklar
 - ABD Doları gibi itibari para birimi
 - ons altın
-- ve dahası...
+- ve daha fazlası...
 
 Ethereum'un bu kadar güçlü bir özelliği güçlü bir standart tarafından idare edilmeli, değil mi? ERC-20 tam da bu noktada devreye giriyor! Bu standart, geliştiricilerin diğer ürün ve servislerle uyumlu token uygulamaları inşa etmesini sağlar.
 
 **ERC-20 nedir?**
 
-ERC-20, Değiştirilebilir Tokenler için bir standart ortaya çıkarır: Başka bir deyişle her bir Token'ın başka bir Token ile tamamen aynı (tür ve değer olarak) olmasını sağlayan bir özelliğe sahiptir. Örnek olarak, bir ERC-20 Token'ı tıpkı ETH gibi davranır, yani 1 Token her zaman tüm diğer Token'lara eşit olur.
+ERC-20, Değiştirilebilir Jetonlar için bir standart getirmiştir: Başka bir deyişle bunlar, her bir Jetonun (tür ve değer olarak) başka bir Jeton ile tamamen aynı olmasını sağlayan bir özelliğe sahiptir. Örnek olarak, bir ERC-20 Token'ı tıpkı ETH gibi davranır, yani 1 Token her zaman tüm diğer Token'lara eşit olur.
 
 ## Ön Koşullar {#prerequisites}
 
@@ -45,7 +45,7 @@ Eğer bir Akıllı Sözleşme aşağıdaki metodları ve olayları uygularsa bir
 
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)'den:
 
-#### Yöntemler {#methods}
+### Yöntemler {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,7 +59,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-#### Olaylar {#events}
+### Olaylar {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -70,7 +70,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 Ethereum'daki herhangi bir ERC-20 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-20 token'a arayüz oluşturmak için sadece Sözleşme Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
-#### Web3.py örneği {#web3py-example}
+#### Web3.py Örneği {#web3py-example}
 
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 
@@ -118,7 +118,7 @@ simplified_abi = [
     }
 ]
 
-dai_contract = w3.eth.contract(address=w3.toChecksumAddress(dai_token_addr), abi=simplified_abi)
+dai_contract = w3.eth.contract(address=w3.to_checksum_address(dai_token_addr), abi=simplified_abi)
 symbol = dai_contract.functions.symbol().call()
 decimals = dai_contract.functions.decimals().call()
 totalSupply = dai_contract.functions.totalSupply().call() / 10**decimals
@@ -129,7 +129,7 @@ print("===== %s =====" % symbol)
 print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 
-weth_contract = w3.eth.contract(address=w3.toChecksumAddress(weth_token_addr), abi=simplified_abi)
+weth_contract = w3.eth.contract(address=w3.to_checksum_address(weth_token_addr), abi=simplified_abi)
 symbol = weth_contract.functions.symbol().call()
 decimals = weth_contract.functions.decimals().call()
 totalSupply = weth_contract.functions.totalSupply().call() / 10**decimals
@@ -141,8 +141,9 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Daha fazla bilgi {#further-reading}
+## daha fazla okuma {#further-reading}
 
-- [EIP-20: ERC-20 Token Standartı](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20: ERC-20 Token Standardı](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token'lar](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Uygulaması](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Solidity ERC20 Jetonları için bir Rehber](https://www.alchemy.com/overviews/erc20-solidity)

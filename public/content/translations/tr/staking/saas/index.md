@@ -43,13 +43,13 @@ Aşağıda bazı mevcut SaaS sağlayıcıları bulunmaktadır. Bu hizmetlerde si
 
 <ProductDisclaimer />
 
-#### SaaS sağlayıcıları
+### SaaS sağlayıcıları
 
 <StakingProductsCardGrid category="saas" />
 
 Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
 
-#### Anahtar Üreticileri
+### Anahtar Üreticileri
 
 <StakingProductsCardGrid category="keyGen" />
 

@@ -26,8 +26,8 @@
     "i18next": "^23.6.0",
     "lodash.merge": "^4.6.2",
     "luxon": "^3.4.3",
-    "next-i18next": "^14.0.3",
     "next": "^14.0.0",
+    "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
     "prism-react-renderer": "1.1.0",
     "prismjs": "^1.27.0",
@@ -39,7 +39,8 @@
     "react-select": "^5.7.7",
     "reading-time": "^1.5.0",
     "recharts": "^2.7.3",
-    "remark-gfm": "^3.0.1"
+    "remark-gfm": "^3.0.1",
+    "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.40.2",
@@ -52,6 +53,7 @@
     "eslint-config-next": "^14.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "image-size": "^1.0.2",
+    "mdast-util-toc": "^7.0.0",
     "minimist": "^1.2.8",
     "polished": "^4.2.2",
     "ts-node": "^10.9.1",

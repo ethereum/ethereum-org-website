@@ -3,12 +3,10 @@ title: NFT'nizi Cüzdanınızda Nasıl Görüntüleyebilirsiniz (NFT Öğretici 
 description: Bu öğretici, MetaMask'ta mevcut bir NFT'nin nasıl görüntüleneceğini açıklar!
 author: "Sumi Mudgil"
 tags:
-  - "NFT'ler"
   - "ERC-721"
   - "Alchemy"
-  - "değiştirilemez token'lar"
   - "Solidity"
-skill: beginner
+skill: advanced
 lang: tr
 published: 2021-04-22
 ---
@@ -19,15 +17,15 @@ Tebrikler! NFT öğretici serimizin en kısa ve en basit kısmına geldiniz: Yen
 
 Bir ön koşul olarak, MetaMask'in mobil cihazınızda zaten kurulu olması ve NFT'nizi bastığınız hesabı içermesi gerekir: Uygulamayı [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) veya [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) üzerinden ücretsiz edinebilirsiniz.
 
-## Adım 1: Ağınızı Ropsten olarak ayarlayın {#set-network-to-ropsten}
+## Adım 1: Ağınızı Sepolia'ya ayarlayın {#set-network-to-sepolia}
 
-Uygulamanın üst kısmındaki "Wallet" (Cüzdan) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Ropsten ağında basıldığından, ağ olarak Ropsten'i seçmelisiniz.
+Uygulamanın üst kısmındaki "Wallet" (Cüzdan) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Sepolia ağında basıldığından, ağınız olarak Sepolia'yı seçmeniz makuldür.
 
-![MetaMask Mobile üzerinde ağınız nasıl Ropsten olarak ayarlanır](./goerliMetamask.gif)
+![MetaMask Mobile üzerinde ağınızı Sepolia olarak ayarlama](./goerliMetamask.gif)
 
 ## Adım 2: Koleksiyon öğenizi MetaMask'e ekleyin {#add-nft-to-metamask}
 
-Ropsten ağına girdikten sonra, sağdaki "Collectibles" (Koleksiyon Öğeleri) sekmesini seçin ve NFT akıllı sözleşme adresini ve NFT'nizin ERC-721 token kimliğini ekleyin: Bunu, öğreticimizin 2. Bölümünde dağıtılan NFT'nizin işlem hash değerine göre Etherscan'de bulabilirsiniz.
+Sepolia ağına girdikten sonra, sağdaki "Collectibles" (Koleksiyon Öğeleri) sekmesini seçip NFT akıllı sözleşme adresini ve NFT'nizin ERC-721 jeton kimliğini ekleyin: Bunu, öğreticimizin 2. Bölümünde dağıtılan NFT'nizin işlem karması temelinde Etherscan'de bulabilirsiniz.
 
 ![İşlem hash değerinizi ve ERC-721 token kimliğinizi nasıl bulabilirsiniz](./findNFTEtherscan.png)
 

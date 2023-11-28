@@ -56,7 +56,7 @@ var net = require("net")
 var web3 = new Web3("/Users/myuser/Library/Ethereum/geth. pc", net) // mac os path
 // o
 var web3 = new Web3(
-  new Web3.providers.pcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
+  new Web3.providers.IpcProvider("/Users/myuser/Library/Ethereum/geth.ipc", net)
 ) // percorso MacOS
 // in Windows il percorso è: "\\\\.\\pipe\\geth.ipc"
 // in Linux il percorso è: "/users/myuser/.ethereum/geth.ipc"Web3
@@ -282,11 +282,11 @@ ethers.utils.formatEther(balance)
 
 ## Letture consigliate {#further-reading}
 
-_Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
+_Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
 ## Argomenti correlati {#related-topics}
 
-- [Nodi e client](/developers/docs/nodes-and-clients/)
+- [ Nodi e client](/developers/docs/nodes-and-clients/)
 - [Quadri di sviluppo](/developers/docs/frameworks/)
 
 ## Tutorial correlati {#related-tutorials}

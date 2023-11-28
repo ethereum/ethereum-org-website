@@ -23,4 +23,4 @@ Die Bewertungen euer Glossarbegriffe erfolgt anhand der folgenden Kriterien:
 
 ## Ihren Begriff hinzufügen {#how-decisions-about-the-site-are-made}
 
-Wenn Sie einen Glossarbegriff zu ethereum.org hinzufügen möchten und er die Kriterien erfüllt, [erstellen Sie einen Eintrag auf GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_glossary_term.md).
+Wenn Sie einen Glossarbegriff zu ethereum.org hinzufügen möchten und er die Kriterien erfüllt, [erstellen Sie einen Eintrag auf GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

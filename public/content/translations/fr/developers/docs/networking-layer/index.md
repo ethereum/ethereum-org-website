@@ -125,7 +125,7 @@ Les clients de consensus et d'exécution fonctionnent en parallèle. Ils doivent
 
 Un résumé du flux de contrôle est affiché ci-dessous (la pile réseau pertinente apparaît entre parenthèses).
 
-##### Lorsque le client de consensus n'est pas le producteur de bloc :
+### Lorsque le client de consensus n'est pas le producteur de bloc :
 
 - Le client de consensus reçoit un bloc via le protocole de commutation (consensus p2p)
 - Le client de consensus prévalide le bloc, c'est-à-dire qu'il s'assure qu'il est arrivé d'un expéditeur valide avec des métadonnées correctes
@@ -134,7 +134,7 @@ Un résumé du flux de contrôle est affiché ci-dessous (la pile réseau pertin
 - La couche d'exécution transmet les données de validation à la couche de consensus, le bloc est maintenant considéré comme validé (connexion RPC locale)
 - La couche de consensus ajoute un bloc à la tête de sa propre blockchain et l'atteste, diffusant l'attestation sur le réseau (consensus p2p)
 
-##### Lorsque le client de consensus est le producteur de bloc :
+### Lorsque le client de consensus est le producteur de bloc :
 
 - Le client de consensus reçoit une note l'informant qu'il est le prochain producteur de blocs (consensus p2p)
 - Les appels de couche de consensus `créent la méthode du bloc` dans le client d'exécution (RPC en local)

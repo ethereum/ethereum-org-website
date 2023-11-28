@@ -20,6 +20,8 @@ Das ethereum.org Übersetzungsprogramm ist offen und jeder kann dazu beitragen!
 4. Maschinelle Übersetzungen werden nicht genehmigt.
 5. Alle Übersetzungen werden überprüft, bevor sie zur Seite hinzugefügt werden. Daher gibt es eine kurze Verzögerung, bevor Ihre Übersetzungen veröffentlicht werden.
 
+_Treten Sie dem [ethereum.org-Discord](/discord/) bei, um an Übersetzungen mitzuarbeiten, Fragen zu stellen, Feedback und Ideen zu teilen oder einer Übersetzungsgruppe beizutreten._
+
 <ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Mit dem Übersetzen beginnen
 </ButtonLink>
@@ -30,37 +32,52 @@ Die Ethereum-Community hat das Ziel, global und inklusiv zu sein. Doch ein Groß
 
 Das Übersetzungsprogramm von ethereum.org zielt darauf ab, Ethereum jedermann zugänglich zu machen, indem ethereum.org und andere Ethereum-Inhalte in so viele Sprachen wie möglich übersetzt werden.
 
-Lesen Sie mehr über das ethereum.org Übersetzungsprogramm [Mission und Vision](/contributing/translation-program/mission-and-vision).
+Lesen Sie mehr über <a href="/contributing/translation-program/mission-and-vision">Mission und Vision</a> des Übersetzungsprogramms auf ethereum.org.
 
 ### Unsere bisherigen Fortschritte {#our-progress}
 
-- [**3,800 +** Übersetzer](/contributing/translation-program/contributors/)
-- [Die Seite ist in **48** Sprachen verfügbar](/languages/)
-- [**2,9 Millionen** Wörter übersetzt im Jahr 2021](/contributing/translation-program/acknowledgements/)
-- [**1,9 Millionen** Worte wurden 2022 bisher übersetzt](/contributing/translation-program/acknowledgements/)
+- [**5.100 +** Übersetzer](/contributing/translation-program/contributors/)
+- [Die Seite ist in **54** Sprachen verfügbar](/languages/)
+- [**3 Millionen** Wörter übersetzt im Jahr 2022](/contributing/translation-program/acknowledgements/)
 
-Wenn Sie sich engagieren und uns helfen möchten, die globale Ethereum-Community zu vergrößern, indem Sie die Website in Ihre Sprache übersetzen, sollten Sie Folgendes beachten!
+<TranslationChartImage />
 
-<InfoBanner emoji=":tada:">
-  Sehen Sie sich unsere Seite für die <Link to="/contributing/translation-program/acknowledgements/">Übersetzeranerkennungen</Link> an und{" "}
-  fordern Sie Ihren POAP-Token an. Wenn Sie 2022 ethereum.org übersetzt haben, wartet ein einzigartiger POAP auf Sie.{" "}
-  <Link to="/contributing/translation-program/acknowledgements/#poap">Mehr zu POAPs</Link>
-</InfoBanner>
+### Danksagungen {#acknowledgements}
 
-### Anleitungen & Ressourcen {#guides-and-resources}
+Ethereum.org wird von Tausenden von Community-Mitgliedern übersetzt und sie bilden den wichtigsten Teil des Übersetzungsprogramms. Wir wollen unseren Übersetzern Anerkennung entgegenbringen und sie auf ihrem Karriereweg unterstützen. Hier sind einige der Auszeichnungen für unsere Übersetzer:
+
+#### Zertifikat {#certificate}
+
+Wenn Sie zum Übersetzungsprogramm beigetragen haben und mindestens 5.000 Ihrer übersetzten Wörter genehmigt wurden, haben Sie Anspruch auf ein ethereum.org-Übersetzerzertifikat. [Mehr über Zertifikate](/contributing/translation-program/acknowledgements/#certificate)
+
+#### POAPs {#poaps}
+
+Alle unsere Übersetzer haben Anspruch auf ein POAP (Proof of Attendance Protocol) – ein NFT, das ihren Beitrag zum Übersetzungsprogramm von ethereum.org belegt. [Mehr über POAPs](/contributing/translation-program/acknowledgements/#poap)
+
+#### Danksagungen an die Übersetzer {#translator-acknowledgements}
+
+Öffentliche Anerkennungen unserer besten Übersetzer durch [Leaderboards](/contributing/translation-program/acknowledgements/) und eine [Liste aller Übersetzer, die zum Übersetzungsprogramm beitragen](/contributing/translation-program/contributors/).
+
+#### Belohnungen {#rewards}
+
+In der Vergangenheit haben wir unsere aktivsten Beitragenden rückwirkend mit Tickets für Ethereum-Konferenzen wie [Devcon](https://devcon.org/en/) und [Devconnect](https://devconnect.org/) sowie mit exklusiven ethereum.org-Artikeln belohnt.
+
+Wir denken ständig über neue und innovative Möglichkeiten nach, unsere Mitwirkenden zu belohnen, also bleiben Sie dran!
+
+### Anleitungen und Ressourcen {#guides-and-resources}
 
 Wenn Sie zum Übersetzungsprogramm beitragen oder daran denken, sich zu beteiligen, sollten Sie sich die folgenden Übersetzungsanleitungen ansehen:
 
 - [Übersetzungsleitfaden](/contributing/translation-program/translators-guide/)_ – Anleitungen und Tipps für ethereum.org-Übersetzer_
 - [Übersetzungs-FAQs](/contributing/translation-program/faq/)_ – häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
 - [Editorleitfaden für Crowdin-Online](https://support.crowdin.com/online-editor/)_ – ein ausführlicher Ratgeber für die Nutzung des Online-Crowdin-Editors und seiner umfangreichen Funktionen_
-- [Inhaltsbereiche](/contributing/translation-program/content-buckets/)_ – welche Seiten zu welchem Inhaltsbereich von ethereum.org gehören_
+- [Inhaltsbereich](/contributing/translation-program/content-buckets/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
 
 Für andere nützliche Übersetzungstools, Übersetzergemeinschaften und Blog-Einträge des Übersetzungsprogramms besuchen Sie bitte die [Ressourcenseite](/contributing/translation-program/resources/).
 
 ## Kontaktieren Sie uns {#get-in-touch}
 
-Haben Sie noch Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Verfassen Sie Ihre Beiträge im #translations Kanal unseres[Discord-Servers von ethereum.org](https://discord.gg/6WX7E97)
+Haben Sie noch Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Verfassen Sie Ihre Beiträge im Kanal #translations unseres[Discord-Servers von ethereum.org](https://discord.gg/6WX7E97)
 
 Sie können uns auch unter translations@ethereum.org kontaktieren.
 

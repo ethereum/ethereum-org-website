@@ -270,7 +270,6 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
 - [**QuickNode**](https://www.quicknode.com)
   - [Documentos](https://www.quicknode.com/docs/)
   - Recursos
-    - Desempenho e confiabilidade líderes do setor
     - Suporte técnico 24/7 e comunidade de desenvolvedores do Discord
     - Rede de baixa latência, geograficamente equilibrada e multinuvem/metal
     - Suporte multicadeia (Optimism, Arbitrum, Polygon + 11 outros)
@@ -339,6 +338,14 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
     - Taxa TX ilimitada e Gás infinito para envio de transações
     - O máximo de velocidade na obtenção do novo bloco e leitura da blockchain
     - O melhor preço garantido por chamada de API
+- [**Chainbase**](https://www.chainbase.com/)
+  - [Documentos](https://docs.chainbase.com)
+  - Recursos
+    - Serviço RPC altamente disponível, rápido e escalável
+    - Suporte multicadeia
+    - Tarifas gratuitas
+    - Painel amigável
+    - Fornece serviços de dados blockchain além do RPC
 
 [**Zeeve**](https://www.zeeve.io/)
 
@@ -351,6 +358,19 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
   - Os pontos de conclusão RPC oferecem acesso autenticado às APIs, facilitam o gerenciamento livre com painel intuitivo e análises.
   - Fornece nuvem gerenciada e traz suas próprias opções de nuvem para escolher, além de oferecer suporte a todos os maiores provedores de nuvem como AWS, Azure, Google Cloud, Digital Ocean e local.
   - Usamos roteamento inteligente para sempre atingir o nó mais próximo de seu usuário
+
+[**Tokenview**](https://services.tokenview.io/)
+
+- [Documentos](https://services.tokeniew/docs?type=nodeService)
+- Recursos
+  - Suporte técnico 24/7 & comunidade Telegram de desenvolvedores
+  - Suporte multichain (Bitcoin, Ethereum, Tron, BNB Smart Chain, Ethereum Classic)
+  - Ambos endpoints rpc e wss são abertos para uso
+  - Acesso ilimitado para a API de dados de arquivo
+  - Painel com Request Explorer e Mempool Watcher
+  - API de dados NFT e notificador Webhook
+  - Pagamento em Cripto
+  - Suporte externo para requisitos extras de comportamento
 
 ## Leitura adicional {#further-reading}
 

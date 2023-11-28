@@ -57,11 +57,12 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _client Ethereum open source aziendale sviluppato con licenza Apache 2.0 e scritto in Java_
 - [Infura](https://infura.io/) _accesso scalabile all'API alle reti di Ethereum e IPFS_
 - [Kaleido](https://kaleido.io/) _una piattaforma di sviluppo incentrata sulle imprese che offre applicazioni semplificate per blockchain e asset digitali_
-- [Fornire](https://provide.services/) _infrastruttura e API per applicazioni aziendali Web3_
-- [QuickNode](https://www.quicknode.com/) _fornisce nodi affidabili e veloci con API di alto livello come l'API NFT, l'API Token, etc., consegnando una suite di prodotti unificata e soluzioni aziendali_
-- [Tenderly](https://tenderly.co) _una piattaforma di sviluppo Web3 che fornisce elementi di debug, osservabilità e infrastruttura per lo sviluppo, il test, il monitoraggio e il funzionamento dei contratti intelligenti._
-- [Unibright](https://unibright.io/) _team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza in processi di business e integrazione_
-- [Zero Services GmbH](https://www.zeroservices.eu/) _provider di servizi gestiti si diffonde in co-sedi in Europa e Asia. Fa funzionare e monitora i tuoi nodi in modo sicuro e affidabile_
+- [NodeReal](https://nodereal.io/) _fornisce l'infrastruttura scalabile della blockchain e il fornitore di servizi dell'API per l'ecosistema del Web3_
+- [Fornisce](https://provide.services/) _l'infrastruttura e l'API per applicazioni aziendali Web3_
+- [QuickNode](https://www.quicknode.com/) _fornisce nodi affidabili e veloci con API di alto livello come l'API NFT, l'API Token, ecc., e una suite di prodotti unificata e soluzioni aziendali_
+- [Tenderly](https://tenderly.co) _una piattaforma di sviluppo Web3 che fornisce elementi di debug, osservabilità e blocchi per la creazione di infrastrutture per lo sviluppo, il test, il monitoraggio e il funzionamento dei contratti intelligenti._
+- [Unibright](https://unibright.io/), _ un team di specialisti della blockchain, architetti, sviluppatori e consulenti con più di 20 anni di esperienza nei processi aziendali e di integrazione_
+- [Zero Services GmbH](https://www.zeroservices.eu/), _un fornitore di servizi gestiti con diverse sedi in Europa e Asia. Fa funzionare e monitora i tuoi nodi in modo sicuro e affidabile_
 - [Zeeve](https://www.zeeve.io/) _fornisce una gamma di prodotti e strumenti per creare su Ethereum, nonché infrastruttura e API per le applicazioni Enterprise Web3._
 
 ### Strumenti e librerie {#tooling-and-libraries}

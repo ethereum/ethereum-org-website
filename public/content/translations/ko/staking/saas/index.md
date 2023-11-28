@@ -51,11 +51,11 @@ ETH를 스테이킹할 수 있도록 도와주는 서비스형 스테이킹 제�
 참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">클라이언트 다양성</a>에 대한 지원은 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 대부분 클라이언트의 사용을 제한하는 것으로 밝혀진 서비스는 <em style={{ textTransform: "uppercase" }}>"다양한 클라이언트"</em>로 표시됩니다.
 </InfoBanner>
 
-#### SaaS 제공업체
+### SaaS 제공업체
 
 <StakingProductsCardGrid category="saas" />
 
-#### 키 생성기
+### 키 생성기
 
 <StakingProductsCardGrid category="keyGen" />
 

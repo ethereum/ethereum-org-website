@@ -81,7 +81,7 @@ In many DAOs, transactions will be automatically executed if a quorum of members
 
 #### A famous example {#governance-example}
 
-[Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affimrative, as long as it is not vetoed by the founders.
+[Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
 ### Multisig governance {#governance-example}
 
@@ -91,7 +91,7 @@ While DAOs may have thousands of voting members, funds can live in a wallet shar
 
 In 1977, Wyoming invented the LLC, which protects entrepreneurs and limits their liability. More recently, they pioneered the DAO law that establishes legal status for DAOs. Currently Wyoming, Vermont, and the Virgin Islands have DAO laws in some form.
 
-#### A famous example {#law-example}
+### A famous example {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO used Wyoming's DAO law to buy 40 acres of land near Yellowstone National Park.
 

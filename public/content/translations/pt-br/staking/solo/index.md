@@ -53,9 +53,9 @@ Também requer uma configuração de hardware muito básica e alguma compreensã
 </ExpandableCard>
 
 <ExpandableCard title="Gerenciamento seguro de chaves" eventCategory="SoloStaking" eventName="clicked secure key management">
-Assim como as chaves privadas protegem seu endereço Ethereum, você precisará gerar chaves especificamente para seu validador. Você deve saber como manter todas as frases de recuperação ou chaves privadas seguras e protegidas.
+Assim como as chaves privadas protegem seu endereço Ethereum, você precisará gerar chaves especificamente para seu validador. Você precisa compreender como manter qualquer frase semente ou chave privada protegida e segura.{' '}
 
-<a href="/security/">Segurança e prevenção contra fraudes do Ethereum</a>
+<a href="/security/">Segurança Ethereum e prevenção à fraude</a>
 </ExpandableCard>
 
 <ExpandableCard title="Manutenção" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -69,7 +69,7 @@ Suas recompensas são proporcionais ao tempo que seu validador está on-line e a
 <ExpandableCard title="Risco de corte" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é uma penalidade muito mais séria reservada para infrações maliciosas. Ao executar um cliente minoritário com suas chaves carregadas em apenas uma máquina por vez, o risco de ser cortado é minimizado. Dito isto, todos os stakers devem estar cientes dos riscos de serem cortados.
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Mais sobre remoção e o ciclo de vida do validador</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/"> Mais informações sobre o ciclo de vida do validador e remoção</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -103,21 +103,21 @@ Os indicadores de atributo são usados abaixo para sinalizar pontos fortes ou fr
 
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
-<InfoBanner emoji="⚠️" isWarning>
-Observe a importância de escolher um <a href="/developers/docs/nodes-and-clients/client-diversity/">cliente minoritário</a>, pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar o cliente minoritário são indicadas como <em style={{ textTransform: "uppercase" }}>"multicliente."</em>
-</InfoBanner>
+<ProductDisclaimer />
 
-#### Ferramentas do nó
+### Ferramentas do nó
 
 <StakingProductsCardGrid category="nodeTools" />
 
-#### Geradores de chaves
+Observe a importância de escolher um [cliente minoritário](/developers/docs/nodes-and-clients/client-diversity/), pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar um cliente minoritário são indicadas como <em style={{ textTransform: "uppercase" }}>"multicliente."</em>
 
-Essas ferramentas podem ser usadas como uma alternativa ao [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) para ajudar na geração de chaves.
+### Geradores de chaves
+
+Essas ferramentas podem ser utilizadas como uma alternativa à [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) para ajudar na geração de chaves.
 
 <StakingProductsCardGrid category="keyGen" />
 
-Alguma sugestão de ferramenta de staking que não mencionamos? Confira nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente, e envie-a para análise.
+Alguma sugestão de ferramenta de participação que não mencionamos? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
 ## Explore os guias de staking individual {#staking-guides}
 
@@ -125,7 +125,7 @@ Alguma sugestão de ferramenta de staking que não mencionamos? Confira nossa [p
 
 ## Perguntas frequentes {#faq}
 
-Estas são algumas das perguntas mais comuns sobre staking que vale a pena conhecer.
+Apresentamos algumas das perguntas mais comuns sobre staking (participação) que vale a pena saber.
 
 <ExpandableCard title="O que é um validador?">
 
@@ -181,6 +181,7 @@ As penalidades por ficar off-line são proporcionais a quantos outros estão off
 </ExpandableCard>
 
 <ExpandableCard title="Como posso desbloquear minhas recompensas ou obter meu ETH de volta?">
+
 Saques de qualquer tipo da Beacon Chain exigem que sejam definidas credenciais de retirada.
 
 Os novos participantes estabeleceram isso no momento da geração da chave e do depósito. Os stakers existentes que ainda não definiram isso podem atualizar suas chaves para dar suporte a essa funcionalidade.

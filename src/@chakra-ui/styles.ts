@@ -1,5 +1,5 @@
 const styles = {
-  global: (props) => ({
+  global: {
     /**
      * THESE ARE OLD GLOBAL STYLES - carried over from old css files
      *
@@ -79,7 +79,7 @@ const styles = {
       lineHeight: "base",
       fontFamily: "monospace",
     },
-  }),
+  },
 }
 
 export default styles

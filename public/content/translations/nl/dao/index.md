@@ -91,7 +91,7 @@ Hoewel DAO's mogelijk duizenden stemmende leden hebben, worden fondsen vaak bewa
 
 In 1977 heeft Wyoming het LLC uitgevonden, dat ondernemers beschermt en hun aansprakelijkheid beperkt. Meer recentelijk hebben ze het voortouw genomen in de DAO-wetgeving die de juridische status van DAO's vaststelt. Op dit moment hebben Wyoming, Vermont en de Maagdeneilanden een of andere vorm van DAO-wetgeving.
 
-#### Een goed voorbeeld {#law-example}
+### Een goed voorbeeld {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO gebruikte de DAO-wetgeving van Wyoming om 40 hectare land in de buurt van het Yellowstone nationaal park te kopen.
 

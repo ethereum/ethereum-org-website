@@ -291,7 +291,7 @@ Shut down in Fall 2021
 
 **Summary**
 
-Cover was an DeFi insurance protocol running on Ethereum and other EVM-based networks.
+Cover was a DeFi insurance protocol running on Ethereum and other EVM-based networks.
 
 **Archives**
 

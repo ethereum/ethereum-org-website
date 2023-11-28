@@ -91,7 +91,7 @@ Vaikka DAOlla voi olla tuhansia äänioikeutettuja jäseniä sen varat säilytet
 
 Vuonna 1977 Wyoming keksi LLC:n, joka suojelee yrittäjiä ja rajoittaa heidän vastuutaan. Äskettäin samainen taho toimi pioneerina DAO-lain asettamisen, jolla määritellään DAOn laillinen status. Tällä hetkellä Wyomingilla, Vermontilla ja Neitsytsaarilla on DAO-lakeja jossain muodossa.
 
-#### Tunnettu esimerkki {#law-example}
+### Tunnettu esimerkki {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO hyödynsi Wyomingin DAO-lakia 40 hehtaarin maa-alueen ostossa lähellä Yellowstonen kansallispuistoa.
 

@@ -3,16 +3,15 @@ title: Primi passi con lo sviluppo di Ethereum
 description: "Questa è una guida per principianti per iniziare con lo sviluppo di Ethereum. Ti guideremo dal lancio di un endpoint API alla formulazione di una richiesta da riga di comando, fino alla scrittura del tuo primo script web3! Non è necessaria alcuna esperienza di sviluppo con le blockchain!"
 author: "Elan Halpern"
 tags:
-  - "primi passi"
   - "javascript"
   - "ethers.js"
   - "nodi"
-  - "interrogazione"
-  - "alchemy"
+  - "query"
+  - "fornisce servizi e strumenti Api per la creazione e il monitoraggio di applicazioni su Ethereum. \nFile: glossario"
 skill: beginner
 lang: it
 published: 2020-10-30
-source: Medium
+source: Medio
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
 

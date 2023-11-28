@@ -45,7 +45,7 @@ Si un contrat intelligent implémente les méthodes et les événements suivants
 
 De [EIP-20](https://eips.ethereum.org/EIPS/eip-20) :
 
-#### Méthodes {#methods}
+### Méthodes {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,7 +59,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-#### Événements {#events}
+### Événements {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)

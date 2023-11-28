@@ -91,7 +91,7 @@ DAO'ların binlerce oylama üyesi olabilirken, fonlar güvenilir ve genellikle "
 
 1977'de Wyoming, girişimcileri koruyan ve sorumluluklarını sınırlayan LLC'yi (Sınırlı Sorumlu Şirket) icat etti. Daha yakın zamanlarda, DAO'lar için yasal statü oluşturan DAO yasasına öncülük ettiler. Şu anda Wyoming, Vermont ve Virgin Adaları bir şekilde DAO yasalarına sahiptir.
 
-#### Meşhur bir örnek {#law-example}
+### Meşhur bir örnek {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO, Wyoming'in DAO yasasını kullanarak Yellowstone Milli Parkı yakınında 40 dönümlük arazi satın aldı.
 
