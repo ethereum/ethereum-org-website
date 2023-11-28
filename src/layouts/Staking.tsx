@@ -13,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -25,12 +25,9 @@ import {
   ContentContainer,
   Heading1 as MdHeading1,
   Heading4 as MdHeading4,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
 } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import ProductDisclaimer from "@/components/ProductDisclaimer"
@@ -45,7 +42,7 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
@@ -186,7 +183,9 @@ export const stakingComponents = {
   WithdrawalsTabComparison,
 }
 
-interface IProps extends MdPageContent, ChildOnlyProp {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: StakingFrontmatter
 }
 
@@ -275,39 +274,22 @@ export const StakingLayout: React.FC<IProps> = ({
           />
         </Flex>
         <Image
-          flex="1 1 100%"
-          bgRepeat="no-repeat"
-          right={0}
-          bottom={0}
-          maxW={{ base: "min(400px, 98%)", lg: "400px" }}
-          width={400}
-          height={340}
-          maxH={{ base: "340px", lg: "none" }}
-          boxSize={{ base: "full", lg: "auto" }}
-          overflow={{ base: "initial", lg: "visible" }}
-          alignSelf={{ base: "center", lg: "auto" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
-          style={{
-            objectFit: "contain",
-          }}
+          style={{ objectFit: "contain" }}
+          width={400}
+          height={340}
+          priority
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <StakingCommunityCallout my={16} />

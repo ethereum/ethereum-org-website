@@ -5,7 +5,7 @@ author: "Trailofbits"
 lang: it
 tags:
   - "Solidity"
-  - "smart contract"
+  - "contratto intelligente"
   - "sicurezza"
   - "test"
   - "fuzzing"
@@ -138,13 +138,13 @@ Non necessitiamo di alcuna inizializzazione particolare nel nostro esempio corre
 Echidna è avviato con:
 
 ```bash
-$ echidna-test contract.sol
+echidna-test contract.sol
 ```
 
 Se contract.sol contiene più contratti, puoi specificare l'obiettivo:
 
 ```bash
-$ echidna-test contract.sol --contract MyContract
+echidna-test contract.sol --contract MyContract
 ```
 
 ### Riepilogo: Testare una proprietà {#summary-testing-a-property}
@@ -161,7 +161,7 @@ contract TestToken is Token{
 ```
 
 ```bash
-$ echidna-test testtoken.sol --contract TestToken
+echidna-test testtoken.sol --contract TestToken
 ...
 
 echidna_balance_under_1000: failed!💥
@@ -230,7 +230,7 @@ contract C {
 Questo piccolo esempio forza Echidna a trovare una certa sequenza di transazioni per modificare una variabile di stato. Ciò è difficile per un fuzzer (si consiglia di usare uno strumento di esecuzione simbolica come [Manticore](https://github.com/trailofbits/manticore)). Possiamo eseguire Echidna per verificarlo:
 
 ```bash
-$ echidna-test multi.sol
+echidna-test multi.sol
 ...
 echidna_state4: passed! 🎉
 Seed: -3684648582249875403
@@ -262,7 +262,7 @@ filterFunctions: ["f", "g", "h", "i"]
 Per eseguire Echidna con un file di configurazione `blacklist.yaml`:
 
 ```bash
-$ echidna-test multi.sol --config blacklist.yaml
+echidna-test multi.sol --config blacklist.yaml
 ...
 echidna_state4: failed!
   Call sequence:
@@ -284,7 +284,7 @@ filterFunctions: ["f1", "f2", "f3"]
 ```
 
 ```bash
-$ echidna-test contract.sol --config config.yaml
+echidna-test contract.sol --config config.yaml
 ...
 ```
 
@@ -335,9 +335,9 @@ checkAsserts: true
 Quando eseguiamo questo contratto in Echidna, otteniamo i risultati previsti:
 
 ```bash
-$ echidna-test assert.sol --config config.yaml
+echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
-assertion in inc: failed!
+assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
     inc(21711016731996786641919559689128982722488122124807605757398297001483711807488)
     inc(7237005577332262213973186563042994240829374041602535252466099000494570602496)
@@ -402,7 +402,7 @@ contract Incrementor {
 ```
 
 ```bash
-$ echidna-test assert.sol --config config.yaml
+echidna-test assert.sol --config config.yaml
 Analyzing contract: assert.sol:Incrementor
 assertion in inc: failed!💥
   Call sequence, shrinking (2596/5000):
@@ -440,7 +440,7 @@ contract C {
 Questo piccolo esempio forza Echidna a trovare una certi valori per modificare una variabile di stato, il che è difficile per un fuzzer (si consiglia di usare uno strumento d'esecuzione simbolica come [Manticore](https://github.com/trailofbits/manticore)). Possiamo eseguire Echidna per verificarlo:
 
 ```bash
-$ echidna-test magic.sol
+echidna-test magic.sol
 ...
 
 echidna_magic_values: passed! 🎉
@@ -455,7 +455,7 @@ Tuttavia, possiamo comunque usare Echidna per raccogliere il corpus mentre si es
 Per abilitare la raccolta, crea la cartella di un corpus:
 
 ```bash
-$ mkdir corpus-magic
+mkdir corpus-magic
 ```
 
 E un [file di configurazione di Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
@@ -468,7 +468,7 @@ corpusDir: "corpus-magic"
 Ora possiamo eseguire il nostro strumento e controllare il corpus raccolto:
 
 ```bash
-$ echidna-test magic.sol --config config.yaml
+echidna-test magic.sol --config config.yaml
 ```
 
 Echidna non è ancora in grado di trovare i valori magici corretti, ma possiamo dare un'occhiata al corpus raccolto. Ad esempio, uno di questi file era:
@@ -523,13 +523,13 @@ Chiaramente, questo input non innescherà il fallimento nella nostra proprietà.
 Echidna necessita di un po' di aiuto per poter affrontare la funzione `magic`. Copieremo e modificheremo l'input per usare parametri idonei a tale scopo:
 
 ```bash
-$ cp corpus/2712688662897926208.txt corpus/new.txt
+cp corpus/2712688662897926208.txt corpus/new.txt
 ```
 
 Modificheremo `new.txt` per chiamare `magic(42,129,333,0)`. Ora possiamo ri-eseguire Echidna:
 
 ```bash
-$ echidna-test magic.sol --config config.yaml
+echidna-test magic.sol --config config.yaml
 ...
 echidna_magic_values: failed!💥
   Call sequence:
@@ -576,7 +576,7 @@ Qui `expensive` può avere un gran consumo di gas.
 Attualmente, Echidna necessità sempre di una proprietà da testare: qui `echidna_test` restituisce sempre `true`. Possiamo eseguire Echidna per verificarlo:
 
 ```
-$ echidna-test gas.sol
+echidna-test gas.sol
 ...
 echidna_test: passed! 🎉
 
@@ -598,12 +598,12 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Run Echidna {#run-echidna-3}
+### Esegui Echidna {#run-echidna-3}
 
 Una volta creato il file di configurazione, possiamo eseguire Echidna come segue:
 
 ```bash
-$ echidna-test gas.sol --config config.yaml
+echidna-test gas.sol --config config.yaml
 ...
 echidna_test: passed! 🎉
 
@@ -651,7 +651,7 @@ contract C {
 Se Echidna può chiamare tutte le funzioni, non troverà facilmente le transazioni a costo elevato di gas:
 
 ```
-$ echidna-test pushpop.sol --config config.yaml
+echidna-test pushpop.sol --config config.yaml
 ...
 pop used a maximum of 10746 gas
 ...
@@ -670,7 +670,7 @@ filterFunctions: ["pop", "clear"]
 ```
 
 ```
-$ echidna-test pushpop.sol --config config.yaml
+echidna-test pushpop.sol --config config.yaml
 ...
 push used a maximum of 40839 gas
 ...
@@ -686,7 +686,7 @@ estimateGas: true
 ```
 
 ```bash
-$ echidna-test contract.sol --config config.yaml
+echidna-test contract.sol --config config.yaml
 ...
 ```
 

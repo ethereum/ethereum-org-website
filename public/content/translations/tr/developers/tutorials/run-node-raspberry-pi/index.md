@@ -1,6 +1,6 @@
 ---
 title: Raspberry Pi 4'ünüzü sadece MicroSD kartı flaşlayarak bir düğüme nasıl dönüştürebilirsiniz
-description: Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü yürütüm katmanını veya mutabakat katmanını (İşaret Zinciri/doğrulayıcı) çalıştıran tam bir Ethereum düğümüne dönüştürmek için cihazı çalıştırın
+description: Raspberry Pi 4'ünüzü flaşlama, ethernet kablosu takma, SSD diskini bağlama ve Raspberry Pi 4'ünüzü çalıştırarak tam bir Ethereum düğümüne ve doğrulayıcısına dönüştürme
 author: "EthereumOnArm"
 tags:
   - "istemciler"
@@ -9,259 +9,177 @@ tags:
   - "düğümler"
 lang: tr
 skill: intermediate
-published: 2020-05-07
-source: r/ethereum
-sourceUrl: https://www.reddit.com/r/ethereum/comments/gf3nhg/ethereum_on_arm_raspberry_pi_4_images_release/
+published: 2022-06-10
+source: Ethereum on ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 
-**Kısacası**: Raspberry Pi 4'ünüzü flaşlayın, bir ethernet kablosu takın, SSD diskini bağlayın ve Raspberry Pi 4'ü yürütüm katmanını veya mutabakat katmanını (İşaret Zinciri/doğrulayıcı) çalıştıran tam bir Ethereum düğümüne dönüştürmek için cihazı çalıştırın
+**Ethereum on Arm, Raspberry Pi'ı bir Ethereum düğümüne çevirebilecek olan kişiselleştirilmiş bir Linux görüntüsüdür.**
 
-[Ethereum yükseltmeleri hakkında bilgi edinin](/roadmap/)
+Ethereum on Arm'ı kullanarak Raspberry Pi'ı Ethereum düğümüne çevirmek için aşağıdaki donanım önerilir:
 
-Önce biraz arka plan bilgisi verelim. Bildiğiniz gibi, Raspbian işletim sistemi hâlâ 32 bit [[2]](/developers/tutorials/run-node-raspberry-pi/#references) (en azından kullanıcı alanı) üzerinde olduğundan, [[1]](/developers/tutorials/run-node-raspberry-pi/#references)Raspberry Pi 4 görüntüsüyle ilgili bazı bellek sorunlarıyla karşılaşıyoruz. Resmi işletim sistemine bağlı kalmayı tercih ederken, bu sorunları çözmek için yerel 64 bit işletim sistemine geçmemiz gerektiği sonucuna vardık
-
-Ayrıca, mutabakat istemcileri 32 bit ikili dosyaları desteklemez, bu nedenle Raspbian kullanmak, Raspberry Pi 4'ün bir mutabakat katmanı düğümü çalıştırmasını (ve stake etme olasılığını) hariç tutar.
-
-Bu nedenle, birkaç testten sonra şimdi Ubuntu 20.04 64bit [[3]](/developers/tutorials/run-node-raspberry-pi/#references) tabanlı 2 farklı sürücü yayınlıyoruz: yürütüm katmanı ve mutabakat katmanı sürümleri.
-
-Temel olarak, her ikisi de aynı sürücüdür ve Raspbian tabanlı sürücülerin aynı özelliklerini içerir. Ancak varsayılan olarak yürütüm katmanı veya mutabakat katmanı yazılımlarını çalıştırmak için ayarlanmıştır.
-
-**Sürücüler**, ortamın kurulmasından ve SSD diskinin biçimlendirilmesinden Ethereum yazılımını kurup çalıştırmaya ve ayrıca blok zinciri senkronizasyonunu başlatmaya kadar gerekli tüm adımların üstesinden gelir.
-
-## Ana özellikler {#main-features}
-
-- Ubuntu 20.04 64bit temelli
-- Otomatik USB disk bölümleme ve formatlama
-- Armbian çalışmasına dayalı takas belleği (ZRAM çekirdek modülü + bir takas dosyası) ekler[[7]](/developers/tutorials/run-node-raspberry-pi/#references)
-- MAC hash değerine dayalı olarak ana bilgisayar adını "ethnode-e2a3e6fe" gibi bir şeyle değiştirir
-- Yazılımı bir systemd hizmeti olarak çalıştırır ve Blok Zincirini senkronize etmeye başlar
-- Ethereum yazılımını kurmak ve yükseltmek için bir APT deposu içerir
-- Grafana/Prometheus'a dayalı bir izleme gösterge paneli içerir
-
-## Mevcut yazılım {#software-included}
-
-Her iki sürücü de aynı paketleri içerir: Aralarındaki tek fark, yürütüm sürümünün varsayılan olarak Geth'i çalıştırması ve mutabakat sürümünün varsayılan olarak Prysm işaret zincirini çalıştırmasıdır.
-
-### Yürütüm istemcileri {#execution-clients}
-
-- Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (resmi ikili)
-- Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (çapraz derlenmiş)
-- Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (çapraz derlenmiş)
-- Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (derlenmiş)
-
-### Mutabakat istemcileri {#consensus-clients}
-
-- Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (resmi ikili)
-- Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (derlenmiş)
-
-### Ethereum çerçevesi {#ethereum-framework}
-
-- Swarm [[14]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (resmi ikili)
-- Raiden Network [[15]](/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (resmi ikili)
-- IPFS [[16]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.0 (resmi ikili)
-- Statusd [[17]](/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (derlenmiş)
-- Vipnode [[18]](/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (resmi ikili)
-
-## Kurulum rehberi ve kullanım {#installation-guide-and-usage}
-
-### Önerilen donanım ve kurulum {#recommended-hardware-and-setup}
-
-- Raspberry 4 (model B) - 4GB
-- MicroSD Kartı (minimum 16 GB Class 10)
-- SSD USB 3.0 diski (depolama bölümüne bakın)
+- Raspberry 4 (model B 8GB), Odroid M1 ya da Rock 5B (8GB/16GB RAM) kart
+- MicroSD Kartı (minimum 16 GB Sınıf 10)
+- Minimum 2 TB SSD'li bir USB 3.0 disk veya USB - SATA kasalı bir SSD.
 - Güç kaynağı
 - Ethernet kablosu
-- 30303 Port yönlendirme (yürütüm katmanı) ve 13000 port yönlendirme (mutabakat katmanı)[[4]](/developers/tutorials/run-node-raspberry-pi/#references)
-- Soğutucu ve fanlı bir kasa (isteğe bağlıdır ancak şiddetle tavsiye edilir)
-- USB klavye, Monitör ve HDMI kablosu (mikro HDMI) (isteğe bağlı)
+- Bağlantı noktası yönlendirme (daha fazla bilgi için istemcilere bakın)
+- Soğutucusu ve fanı olan bir kasa
+- USB klavye, Monitör ve HDMI kablosu (mikro-HDMI) (İsteğe bağlı)
 
-## Depolama {#storage}
+## Neden Ethereum on ARM'ı çalıştıralım? {#why-run-ethereum-on-arm}
 
-Ethereum istemcilerini çalıştırmak için bir SSD'ye ihtiyacınız olacak (SSD sürücüsü olmadan Ethereum blok zincirini senkronize etme şansınız kesinlikle yoktur). İki seçenek bulunmaktadır:
+ARM kartları çok uygun fiyatlı, esnek ve küçük bilgisayarlardır. Ethereum düğümlerini çalıştırmak için iyi seçimlerdir çünkü ucuza satın alınabilirler, tüm kaynakları yalnızca düğüme odaklanacak şekilde yapılandırılabilirler, bu onları verimli kılar, düşük miktarda güç tüketir ve fiziksel olarak küçüktür, böylece herhangi bir eve dikkat çekmeden sığabilirler. Ayrıca, Raspberry Pi'ın MicroSD'si bir yüklemeye ya da yazılım oluşturmaya gerek olmadan basitçe önceden yüklenmiş bir görüntüyle doldurabildiği için düğümlerin kodlarını yazmak aşırı kolaydır.
 
-- Samsung T5 Portable SSD gibi bir taşınabilir USB SSD diski kullanın.
-- SSD Diskli bir USB 3.0 External Hard Drive Case kullanın. Biz, bir Inateck 2.5 Hard Drive Enclosure FE2011 kullandık. Özellikle JMicron (JMS567 veya JMS578) veya ASMedia (ASM1153E) olmak üzere UAS uyumlu çipli bir kasa satın aldığınızdan emin olun.
+## Nasıl çalışır? {#how-does-it-work}
 
-Her iki durumda da, düşük kaliteli SSD diskleri almaktan kaçının çünkü bu, düğümünüzün önemli bir bileşenidir ve performansı (ve senkronizasyon sürelerini) büyük ölçüde etkileyebilir.
+Raspberry Pi'ın bellek kartı önceden oluşturulmuş bir görüntüyle depolanmıştır. Bu görüntü, bir Ethereum düğümünü çalıştırabilmek için gereken her şeyi içerir. Yüklenmiş bir kartla, kullanıcının yapması gereken tek şey Raspberry Pi'ı açmaktır. Düğümü çalıştırmak için gereken her işlem otomatik olarak başlatılır. Bu, bellek kartı Linux tabanlı bir işletim sistemi (OS) içerdiğinden ve bu sistemde birimi bir Ethereum düğümüne dönüştüren sistem seviyesindeki işlemler otomatik olarak çalıştığından işe yarar.
 
-Diski bir USB 3.0 portuna (mavi) takmanız gerektiğini unutmayın
+Ethereum, popüler Raspberry Pi Linux OS "Raspbian" kullanılarak çalıştırılamaz, çünkü Raspbian hala 32-bit bir mimari kullanır, bu da Ethereum kullanıcılarının bellek sorunları yaşamasına neden olur ve konsensus istemcileri 32-bit ikili dosyaları desteklemez. Ethereum on Arm ekibi, bunun üstesinden gelmek için yerel bir 64-bit OS olan "Armbian"a geçiş yaptı.
 
-## Sürücü indirme ve kurulumu {#image-download-and-installation}
+**Sürücüler**, ortamın kurulmasından ve SSD diskinin biçimlendirilmesinden, Ethereum yazılımını kurup çalıştırmaya ve ayrıca blokzincir senkronizasyonunu başlatmaya kadar gerekli tüm adımların üstesinden gelir.
 
-### 1. Yürütüm ve mutabakat katmanı sürücülerini indirin {#1-download-execution-or-consensus-images}
+## Yürütüm ve fikir birliği istemcileriyle ilgili not {#note-on-execution-and-consensus-clients}
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
-  Yürütüm katmanı sürücüsünü indir
-</ButtonLink>
+Ethereum on Arm görüntüsü, hizmet olarak önceden oluşturulmuş yürütüm ve fikir birliği istemcileri içerir. Bir ethereum düğümü senkronize olmak ve çalışmak için iki istemciye de ihtiyaç duyar. Görüntüyü yükleyip depolamanız ve ardından hizmetleri başlatmanız yeterlidir. Bu görüntüye, aşağıdaki yürütüm istemcileri:
 
-sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c
+- Geth
+- Nethermind
+- Besu
 
-<ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth2.img.zip">
-  Mutabakat katmanı sürücüsünü indir
-</ButtonLink>
+ve aşağıdaki fikir birliği istemcileri önceden yüklenmiştir:
 
-sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
+- Lighthouse
+- Nimbus
+- Prysm
+- Teku
 
-### 2. Sürücüyü flaşlayın {#2-flash-the-image}
+Çalıştırmak için her birinden bir tanesini seçmelisiniz; tüm yürütüm istemcileri tüm fikir birliği istemcileriyle uyumludur. Açık bir şekilde bir istemci seçmezseniz düğüm, varsayılanlarına geri dönecek (Geth ve Lighthouse) ve bunları kart açıldığında otomatik olarak çalıştıracaktır. Geth'in eşleri bulup bağlanabilmesi için yönlendiricinizin 30303 bağlantı noktasını açmalısınız.
 
-MicroSD'yi Masaüstünüze/Dizüstü bilgisayarınıza takın ve dosyayı indirin (örneğin yürütüm katmanı):
+## Görüntüyü İndirme {#downloading-the-image}
 
-```bash
-wget https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
+Raspberry Pi Ethereum görüntüsü, yürütüm ve fikir birliği istemcilerini otomatik olarak yükleyip ayarlayan ve onları birbiriyle konuşmaları ve Ethereum ağına bağlanmaları için yapılandıran "tak ve çalıştır" tipi bir görüntüdür. Kullanıcının tek yapması gereken basit bir komut kullanarak işlemlerini başlatmaktır.
+
+[Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/Ec_VmUvr80VFjf3RYSU-NzkBmj2JOteDECj8Bibde929Gw?download=1)'dan Raspberry Pi görüntüsünü indirin ve SHA256 karmasını doğrulayın:
+
+```sh
+# From directory containing the downloaded image
+shasum -a 256 ethonarm_22.04.00.img.zip
+# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Not: Eğer komut satırı ile rahat değilseniz veya Windows çalıştırıyorsanız, [Etcher](https://etcher.io) kullanabilirsiniz
+Rock 5B ve Odroid M1 kartlarının görüntülerinin Ethereum-on-Arm'ın [indirmeler sayfasında](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) mevcut olduğunu unutmayın.
 
-Bir terminal açın ve çalışan MicroSD cihaz adınızı kontrol edin:
+## MicroSD'yi yükleme {#flashing-the-microsd}
 
-```bash
+Raspberry Pi için kullanılacak MicroSD kartın yüklenebilmesi için öncelikle bir masaüstü veya dizüstü bilgisayara takılması gerekir. Ardından aşağıdaki terminal komutları, indirilen görüntüyü SD karta aktaracaktır:
+
+```shell
+# check the MicroSD card name
 sudo fdisk -l
+
+>> sdxxx
 ```
 
-mmcblk0 veya sdd adında bir cihaz görmelisiniz. Sürücüyü unzip'leyin ve flaşlayın:
+İsmin doğru olması gerçekten önemlidir, çünkü bir sonraki komut, resmi üzerine göndermeden önce kartın mevcut içeriğini tamamen silen `dd`'yi içerir. Devam etmek için sıkıştırılmış resmi içeren dizine gidin:
 
-```bash
-unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
-sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
+```shell
+# unzip and flash image
+unzip ethonarm_22.04.00.img.zip
+sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
-### 3. MicroSD'yi Raspberry Pi 4'e takın. Bir Ethernet kablosu bağlayın ve USB SSD diskini takın (mavi bir port kullandığınızdan emin olun). {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
+Kart şimdi yanıp sönüyor, böylece Raspberry Pi'a takılabilir.
 
-### 4. Cihazı çalıştırın {#4-power-on-the-device}
+## Düğümü başlatma {#start-the-node}
 
-Ubuntu İşletim Sistemi bir dakikadan daha kısa sürede açılacaktır ancak ** komut dosyasının cihazı bir Ethereum düğümüne dönüştürmek ve Raspberry'yi yeniden başlatmak için gerekli görevleri gerçekleştirmesine izin vermek için yaklaşık 10 dakika beklemeniz gerekecek**.
+Raspberry Pi'a takılı SD kart ile ethernet kablosunu ve SSD'yi bağlayın ve ardından gücü açın. İşletim sistemi açılır ve Raspberry Pi'ı bir Ethereum düğümüne dönüştüren, istemci yazılımının yüklenmesi ve oluşturulması da dahil olmak üzere önceden yapılandırılmış görevler otomatik olarak gerçekleştirilir. Bu, muhtemelen 10-15 dakika sürecektir.
 
-Sürücüye bağlı olarak şunları çalıştıracaksınız:
+Her şey kurulduktan ve yapılandırıldıktan sonra, bir ssh bağlantısı aracılığıyla veya panoya bir monitör ve klavye takılıysa doğrudan terminali kullanarak cihazda oturum açın. Düğümü başlatmak için gerekli izinlere sahip olduğundan, oturum açmak için `ethereum` hesabını kullanın.
 
-- Yürütüm istemcisi: Blok zincirini senkronize eden varsayılan istemci olarak Geth
-- Mutabakat istemcisi: İşaret zincirini senkronize eden varsayılan istemci olarak Prysm (Goerli testnet)
-
-### 5. Giriş yapın {#5-log-in}
-
-SSH üzerinden veya konsolu kullanarak oturum açabilirsiniz (bağlı bir monitörünüz ve klavyeniz varsa)
-
-```bash
+```shell
 User: ethereum
 Password: ethereum
 ```
 
-İlk girişte şifreyi değiştirmeniz istenecek, bu yüzden iki kez giriş yapmanız gerekecek.
+Varsayılan yürütüm istemcisi Geth, otomatik olarak başlayacaktır. Bunu, aşağıdaki terminal komutları ile günlükleri kontrol ederek onaylayabilirsiniz:
 
-### 6. Prysm işaret zinciri çalıştırıyorsanız 13000 ve Geth için 30303 portunu açın. Bunu nasıl yapacağınızı bilmiyorsanız, yönlendirici modeliniz ile birlikte “port yönlendirme” kelimelerini google'layın. {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
-
-### 7. Konsol çıktısı alın {#7-get-console-output}
-
-Yazarak arka planda neler olduğunu görebilirsiniz:
-
-```bash
-sudo tail -f /var/log/syslog
+```sh
+sudo journalctl -u geth -f
 ```
 
-**Tebrikler. Artık Raspberry Pi 4'ünüzde tam bir Ethereum düğümü çalıştırıyorsunuz.**
+Fikir birliği istemcisi ayrı olarak başlatılmalıdır. Bunu yapmak için yönlendiricinizin 9000 bağlantı noktasını açın ve Ligthouse'un bulup eşlere bağlayabilmesini sağlayın. Sonra da lighthouse hizmetini etkinleştirip başlatın:
 
-## İşaret zincirini senkronize etmek {#syncing-the-blockchain}
-
-Şimdi blok zincirinin senkronize edilmesini beklemeniz gerekiyor. Yürütüm katmanı söz konusu olduğunda, bu birkaç faktöre bağlı olarak birkaç gün sürebilir, ancak yaklaşık 5-7 güne kadar bekleyebilirsiniz.
-
-Mutabakat katmanı Goerli test ağını çalıştırıyorsanız, 1-2 günlük İşaret zinciri senkronizasyon süresi bekleyebilirsiniz. Stake sürecini başlatmak için doğrulayıcıyı daha sonra kurmanız gerekeceğini unutmayın. [Mutabakat katmanı doğrulayıcı nasıl çalıştırılır](/developers/tutorials/run-node-raspberry-pi/#validator)
-
-## İzleme gösterge panoları {#monitoring-dashboards}
-
-Bu ilk sürüm için, düğümü ve istemci verilerini (Geth ve Besu) izlemek için Prometheus[[5]](/developers/tutorials/run-node-raspberry-pi/#references)/Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) temelli 3 izleme gösterge panosu ekledik. Web tarayıcınız üzerinden erişebilirsiniz:
-
-```bash
-URL: http://your_raspberrypi_IP:3000
-User: admin
-Password: ethereum
+```sh
+sudo systemctl enable lighthouse-beacon
+sudo systemctl start lighthouse-beacon
 ```
 
-## İstemcileri değiştirme {#switching-clients}
+Günlükleri kullanarak istemciyi kontrol edin:
 
-Tüm istemciler bir systemd hizmeti olarak çalışır. Sistem, bir sorun ortaya çıkarsa süreci otomatik olarak yeniden başlatacağı için bu önemlidir.
-
-Geth ve Prysm işaret zinciri varsayılan olarak çalışır (ne senkronize ettiğinize, yürütüm katmanına veya mutabakat katmanına bağlı olarak), bu nedenle, diğer istemcilere geçmek istiyorsanız (örneğin Geth'ten Nethermind'e), önce Geth'i durdurup devre dışı bırakmanız ve ardından diğer istemciyi etkinleştirip başlatmanız gerekir:
-
-```bash
-sudo systemctl stop geth && sudo systemctl disable geth
+```sh
+sudo journalctl -u lighthouse-beacon
 ```
 
-Her yürütüm istemcisini etkinleştirme ve başlatma komutları:
+Kontrol noktası senkronizasyonunu kullandığı için fikir birliği istemcisinin de birkaç dakika içinde senkronize olacağını unutmayın. Yürütüm istemcisi biraz daha fazla, muhtemelen birkaç saat zaman alacak ve fikir birliği istemcisi senkronizasyonunu bitirmediği sürece başlamayacaktır (bunun nedeni, yürütüm istemcisinin senkronize olacağı bir hedefe ihtiyaç duyması ve bunu da fikir birliği istemcisinin sağlıyor olmasıdır).
 
-```bash
-sudo systemctl enable besu && sudo systemctl start besu
-sudo systemctl enable nethermind && sudo systemctl start nethermind
-sudo systemctl enable parity && sudo systemctl start parity
+Geth ve Lighthouse hizmetleri senkronize ve çalışır durumdaysa, Raspberry Pi'ınız artık bir Ethereum düğümüdür! En yaygın yöntem, 8545 bağlantı noktasında Geth istemcisine iliştirilebilen Geth Javascript konsolunu kullanarak Ethereum ile etkileşime girmektir. JSON nesneleri şeklinde biçimlendirilmiş komutları Curl gibi bir istek aracı kullanarak göndermek de mümkündür. [Geth dokümanlarında](https://geth.ethereum.org) daha fazla bilgiye ulaşın.
+
+Geth, metrikleri tarayıcıda görüntülenebilen Grafana paneline rapor etmek üzere önceden yapılandırılmıştır. Daha ileri seviye kullanıcılar bu özelliği, `ipaddress:3000` adresine gidip `user: admin` ve `passwd: ethereum` öğelerini geçirmek yoluyla düğümlerinin sağlığını izlemek için kullanmak isteyebilirler.
+
+## Doğrulayıcılar {#validators}
+
+Fikir birliği istemcisine isteğe bağlı olarak bir doğrulayıcı da eklenebilir. Doğrulayıcı yazılımı, düğümünüzün mutabakata aktif olarak katılmasına olanak tanır ve ağa kriptoekonomik güvenlik sağlar. Bu iş için ETH bazında ödüllendirilirsiniz. Bir doğrulayıcıyı çalıştırmak için öncelikle yatırma sözleşmesine yatırmak üzere 32 ETH'ye sahip olmanız gerekir. **Bu, uzun süreli bir bağlılık gerektirir; bu ETH'yi çekmek henüz mümkün değildir!**. Yatırma işlemi, [Başlama noktası](https://launchpad.ethereum.org/)'ndaki adım-adım rehberi takip edilerek yapılabilir. Bunu bir masaüstü/dizüstü bilgisayarda yapın ancak anahtar oluşturmayın; bu, doğrudan Raspberry Pi üzerinde yapılabilir.
+
+Raspberry Pi'da bir terminal açın ve para yatırma anahtarlarını oluşturmak için aşağıdaki komutu çalıştırın:
+
+```
+sudo apt-get update
+sudo apt-get install staking-deposit-cli
+cd && deposit new-mnemonic --num_validators 1
 ```
 
-Mutabakat istemcileri:
+Anımsatıcı ifadeyi güvende tutun! Yukarıdaki komut, düğümün anahtar deposunda iki dosya oluşturmuştur: doğrulayıcı anahtarlar ve bir yatırma veri dosyası. Yatırma verilerinin başlatma paneline yüklenmesi gerekir, bu nedenle Raspberry Pi'dan masaüstü/dizüstü bilgisayara kopyalanmalıdır. Bu, bir ssh bağlantısı veya başka bir kopyala/yapıştır yöntemi kullanılarak yapılabilir.
 
-```bash
-sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
-sudo systemctl start lighthouse && sudo systemctl enable lighthouse
+Yatırılan veri dosyası, başlatma panelini çalıştıran bilgisayarda mevcut olduğunda, başlatma paneli ekranındaki `+` üzerine sürüklenip bırakılabilir. Yatırma sözleşmesine işlem göndermek için ekrandaki talimatları izleyin.
+
+Raspberry Pi'a geri dönecek olursak, bir doğrulayıcı başlatılabilir. Bu, doğrulayıcı anahtarlarının içe aktarılmasını, ödülleri toplamak için adresin ayarlanmasını ve ardından önceden yapılandırılmış doğrulama sürecinin başlatılmasını gerektirir. Aşağıdaki örnek Lighthouse içindir; diğer fikir birliği istemcileri için talimatlar [Ethereum on Arm dokümanları](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)'nda bulunabilir:
+
+```shell
+# import the validator keys
+lighthouse account validator import --directory=/home/ethereum/validator_keys
+
+# set the reward address
+sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
+
+# start the validator
+sudo systemctl start lighthouse-validator
 ```
 
-## Parametreleri değiştirme {#changing-parameters}
+Tebrikler, artık Raspberry Pi üzerinde çalışan tam bir Ethereum düğümünüz ve doğrulayıcınız var!
 
-İstemcilerin yapılandırma dosyaları /etc/ethereum/ dizininde bulunur. Değişikliklerin etkili olması için bu dosyaları düzenleyebilir ve systemd hizmetini yeniden başlatabilirsiniz. Tek istisna, ayrıca burada bulunan bir Mainnet yapılandırma dosyasına sahip olan Nethermind'dır:
+## Daha fazla ayrıntı {#more-details}
 
-```bash
-/etc/nethermind/configs/mainnet.cfg
-```
+Bu sayfa, Raspberry Pi kullanarak Geth-Lighthouse düğümünü ve doğrulayıcısını nasıl kuracağınız hakkında genel bir görünüm sunmuştur. Daha detaylı açıklama [Ethereum-on-Arm web sitesinde](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) mevcuttur.
 
-Blok zinciri istemcilerinin verileri, Ethereum ana hesabında aşağıdaki şekilde saklanır (dizin adından önceki noktaya dikkat edin):
+## Geribildirimleriniz bizi memnun eder {#feedback-appreciated}
 
-### Yürütüm katmanı {#execution-layer}
-
-```bash
-/home/ethereum/.geth
-/home/ethereum/.parity
-/home/ethereum/.besu
-/home/ethereum/.nethermind
-```
-
-### Mutabakat katmanı {#consensus-layer}
-
-```bash
-/home/ethereum/.eth2
-/home/ethereum/.eth2validators
-/home/ethereum/.lighthouse
-```
-
-## Nethermind ve Hyperledger Besu {#nethermind-and-hyperledger-besu}
-
-Bu 2 harika yürütüm istemcisi, Geth ve Parity'ye harika bir alternatif hâline geldi. Ağdaki çeşitlilik ne kadar fazlaysa o kadar iyidir, bu yüzden onları deneyebilir ve ağ sağlığına katkıda bulunabilirsiniz.
-
-Her ikisinin de daha fazla teste ihtiyacı var, bu yüzden onlarla deney yapmaktan çekinmeyin ve geri bildiriminizi gönderin.
-
-## Mutabakat doğrulayıcı nasıl çalıştırılır (stake etmek) {#validator}
-
-Goerli test ağı işaret zinciri senkronize edildikten sonra aynı cihazda bir doğrulayıcı çalıştırabilirsiniz. [Bu katılım adımlarını](https://prylabs.net/participate) takip etmeniz gerekecek.
-
-İlk sefer için, “doğrulayıcı” ikili dosyasını çalıştırarak manuel olarak bir hesap oluşturmanız ve bir şifre belirlemeniz gerekir. Bu adımı tamamladıktan sonra parolayı `/etc/ethereum/prysm-validator.conf` dizinine ekleyebilir ve doğrulayıcıyı bir systemd hizmeti olarak başlatabilirsiniz.
-
-## Geri bildirim faydalı olur {#feedback-appreciated}
-
-Bu cihazın devasa kullanıcı tabanının ağ üzerinde çok olumlu bir etkisi olabileceğini bildiğimizden dolayı Raspberry Pi 4'ü tam bir Ethereum düğümü olarak kurmak için çok uğraştık.
-
-Lütfen bunun Ubuntu 20.04 temelli ilk sürücü olduğunu dikkate alın, bu nedenle bazı hatalar olabilir. Eğer varsa, [GitHub](https://github.com/diglos/ethereumonarm) üzerinde bir konu açın veya bize [Twitter](https://twitter.com/EthereumOnARM) üzerinden ulaşın.
+Raspberry Pi'ın, Ethereum ağının sağlığı üzerinde çok olumlu bir etkisi olabilecek büyük bir kullanıcı tabanına sahip olduğunu biliyoruz. Lütfen bu öğreticideki ayrıntıları inceleyin, test ağlarında çalıştırmayı deneyin, Github'da Ethereum on Arm'a göz atın, geribildirimde bulunun, sorunları ve çekme isteklerini dile getirin, teknolojiyi ve dokümanları geliştirmeye yardımcı olun!
 
 ## Referanslar {#references}
 
-1. [geth, SIGSEGV ile sürekli çöküyor](https://github.com/ethereum/go-ethereum/issues/20190)
-2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)
-3. https://ubuntu.com/download/raspberry-pi
-4. https://wikipedia.org/wiki/Port_forwarding
-5. https://prometheus.io
-6. https://grafana.com
-7. https://forum.armbian.com/topic/5565-zram-vs-swap/
-8. https://geth.ethereum.org
-9. https://github.com/openethereum/openethereum \* **OpenEthereum'un [kullanımdan kaldırıldığını](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) ve artık sürdürülmediğini unutmayın**. Dikkatli kullanın ve tercihen başka bir istemci uygulamasına geçin.
-10. https://nethermind.io
-11. https://www.hyperledger.org/projects/besu
-12. https://github.com/prysmaticlabs/prysm
-13. https://lighthouse.sigmaprime.io
-14. https://ethersphere.github.io/swarm-home
-15. https://raiden.network
-16. https://ipfs.io
-17. https://status.im
-18. https://vipnode.org
+1. https://ubuntu.com/download/raspberry-pi
+2. https://wikipedia.org/wiki/Port_forwarding
+3. https://prometheus.io
+4. https://grafana.com
+5. https://forum.armbian.com/topic/5565-zram-vs-swap/
+6. https://geth.ethereum.org
+7. https://nethermind.io
+8. https://www.hyperledger.org/projects/besu
+9. https://github.com/prysmaticlabs/prysm
+10. https://lighthouse.sigmaprime.io
+11. https://ethersphere.github.io/swarm-home
+12. https://raiden.network
+13. https://ipfs.io
+14. https://status.im
+15. https://vipnode.org

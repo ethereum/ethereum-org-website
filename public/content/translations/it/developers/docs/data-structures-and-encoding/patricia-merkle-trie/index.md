@@ -25,7 +25,7 @@ Dove `i_0 ... i_n` rappresenta i simboli dell'alfabeto (spesso binari o esadecim
 
 Ipotizziamo che si voglia utilizzare una struttura dei dati ad albero radicato per perdurare un ordine su una serie di coppie chiave-valore. Per trovare il valore attualmente mappato alla chiave `dog` nell'albero, occorre convertire prima `dog` in lettere dell'alfabeto (restituendo `64 6f 67`) e poi discendere l'albero seguendo tale percorso, fino a trovare il valore. Quindi, iniziare guardando l'hash radice in un database chiave/valore piatto per trovare il nodo radice dell'albero. È rappresentato come un insieme di chiavi che puntano ad altri nodi. Occorre utilizzare il valore all'indice `6` come una chiave e cercarlo nel database chiave/valore piatto per ottenere il nodo al livello inferiore. Poi si deve scegliere l'indice `4` per cercare il valore successivo, quindi, l'indice `6` e così via, finché, una volta seguito il percorso: `root -> 6 -> 4 -> 6 -> 15 -> 6 -> 7` si cerca il valore del nodo e si trova il risultato.
 
-Esiste una differenza tra cercare qualcosa nel 'trie' e nel 'DB' flat chiave/valore sottostante. Entrambi definiscono degli schemi chiave/valori, ma il DB sottostante può effettuare una tradizionale ricerca di una chiave in 1 passaggio. Cercare una chiave nel trie richiede diverse ricerche DB sottostanti, per ottenere il valore finale descritto sopra. Facciamo riferimento a quest'ultimo come `path`, per eliminare ogni ambiguità.
+Esiste una differenza tra cercare qualcosa nel 'trie' e nel 'DB' flat chiave/valore sottostante. Entrambi definiscono degli schemi chiave/valore, ma il DB sottostante può effettuare una tradizionale ricerca di una chiave in 1 passaggio. Cercare una chiave nel trie richiede diverse ricerche DB sottostanti, per ottenere il valore finale descritto sopra. Facciamo riferimento a quest'ultimo come `path`, per eliminare ogni ambiguità.
 
 Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono definibili come segue:
 
@@ -62,9 +62,9 @@ Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono defi
                 return hash(newnode)
 ```
 
-Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento dei contenuti (nel database chiave/valore `key == keccak256(rlp(value))`) fornisce l'autenticazione crittografica dei dati archiviati. Se l'hash radice di un dato albero è noto pubblicamente, allora chiunque può fornire una prova che l'albero includa un dato valore in un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
+Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente, allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
 
-È impossibile, per un utente malevolo, fornire una prova di una coppia `(percorso, valore)` che non esiste, poiché l'hash radice in definitiva si basa su tutti gli hash inferiori. Qualsiasi modifica sottostante modificherebbe l'hash radice.
+È impossibile, per un utente malevolo, fornire una prova di una coppia `(percorso, valore)` che non esiste, poiché l'hash radice in definitiva si basa su tutti gli hash inferiori. Qualsiasi modifica sottostante modificherebbe l'hash radice. Si può pensare all'hash come una rappresentazione compressa delle informazioni strutturali sui dati, assicurata da una protezione pre-immagine della funzione di hashing.
 
 Chiameremo "nibble" l'unità atomica di un albero radicato (es., un singolo carattere esadecimale o un numero binario a 4 bit). Attraversando un percorso un "nibble" per volta, come descritto sopra, i nodi possono fare riferimento massimale a 16 figli, ma includono un elemento `value`. Dunque, li rappresentiamo come un insieme di lunghezza 17. Chiamiamo questi insiemi da 17 elementi "nodi ramo".
 
@@ -232,6 +232,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
+
+Nota: la `storageRoot` per un account di Ethereum è vuota per impostazione predefinita se non è l'account di un contratto.
 
 ### Trie delle transazioni {#transaction-trie}
 

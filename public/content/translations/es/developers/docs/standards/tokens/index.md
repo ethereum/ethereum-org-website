@@ -7,9 +7,9 @@ incomplete: true
 
 ## Introducción {#introduction}
 
-Uno de los muchos estándares de desarrollo de Ethereum se centra en las interfaces de token. Estas normas garantizan que los contratos inteligentes sigan siendo composibles, por ejemplo, cuando un nuevo proyecto emite un token, ayudan a que estos sigan siendo compatible con los intercambios descentralizados existentes.
+Muchos estándares de desarrollo de Ethereum se centran en las interfaces de token. Estas normas garantizan que los contratos inteligentes sigan siendo composibles, por ejemplo, cuando un nuevo proyecto emite un token, ayudan a que estos sigan siendo compatible con los intercambios descentralizados existentes.
 
-## Prerrequisitos {#prerequisites}
+## Requisitos previos {#prerequisites}
 
 - [Estándares de desarrollo de Ethereum](/developers/docs/standards/)
 - [Contratos inteligentes](/developers/docs/smart-contracts/)
@@ -22,10 +22,13 @@ Aquí están algunos de los estándares de token más populares de Ethereum:
 - [ERC-721](/developers/docs/standards/tokens/erc-721/): Una interfaz para tokens no fungibles (NFT), como un deed de una obra de arte o una canción.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/): ERC-777 permite a los usuarios crear funciones adicionales, como un contrato mixto para lograr mejoras en la privacidad de las transacciones o una función de recuperación de emergencia para rescatarlo si pierde sus claves privadas.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/): ERC-1155 permite operaciones y empaquetado de transacciones más eficientes, lo que permite ahorrar costos. Este estándar de token permite crear tanto utility tokens (como $BNB o $BAT) como tokens no fungibles como CryptoPunks.
+- [ERC-4626](/developers/docs/standards/tokens/erc-4626/): Estándar de bóveda tokenizada diseñado para optimizar y unificar los parámetros técnicos de las bóvedas que otorgan rendimiento.
 
-## Más información {#further-reading}
+La lista completa de propuestas [ERC](https://eips.ethereum.org/erc).
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+## Leer más {#further-reading}
+
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Tutoriales relacionados {#related-tutorials}
 

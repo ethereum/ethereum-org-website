@@ -5,13 +5,13 @@ import {
   Box,
   Flex,
   type FlexProps,
-  type HeadingProps,
   Icon,
   List,
   ListItem,
   Show,
   Text,
   useToken,
+  Center,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
@@ -25,18 +25,15 @@ import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
-  InfoColumn,
   MobileButton,
   MobileButtonDropdown,
   Page as MdPage,
-  StyledButtonDropdown,
 } from "@/components/MdComponents"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
+import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
@@ -51,14 +48,6 @@ const Title = (props: ChildOnlyProp) => (
     fontWeight="bold"
     lineHeight={1.4}
     mt={0}
-    {...props}
-  />
-)
-
-const InfoTitle = (props: HeadingProps) => (
-  <Title
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
     {...props}
   />
 )
@@ -137,12 +126,13 @@ const LastUpdated = (props: ChildOnlyProp) => (
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
-  ShardChainsList,
   UpgradeStatus,
   BeaconChainActions,
 }
 
-interface IProps extends ChildOnlyProp, MdPageContent {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
   frontmatter: UpgradeFrontmatter
 }
 export const UpgradeLayout: React.FC<IProps> = ({
@@ -206,17 +196,14 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </TitleCard>
         {frontmatter.image && (
           <Image
-            flex="1 1 100%"
-            maxW="min(100%, 816px)"
-            style={{ objectFit: "cover" }}
-            alignSelf="center"
-            right={0}
-            bottom={0}
-            width={600}
-            height={600}
-            overflow="initial"
             src={frontmatter.image}
             alt={frontmatter.alt}
+            width={816}
+            height={525}
+            style={{ objectFit: "cover" }}
+            priority
+            flex={{ base: "1 1 100%", md: "none" }}
+            alignSelf={{ base: "center", md: "flex-end" }}
           />
         )}
       </HeroContainer>
@@ -226,21 +213,13 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </MoreContent>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <Show above={lgBreakpoint}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <Show above={lgBreakpoint}>
-              <InfoTitle>{frontmatter.title}</InfoTitle>
-            </Show>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={frontmatter.sidebarDepth || 2}
-              />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBreakpoint}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />

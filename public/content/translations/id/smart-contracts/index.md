@@ -12,7 +12,7 @@ Nick Szabo menciptakan istilah "kontrak pintar". Pada tahun 1994, ia menulis [pe
 
 Szabo membayangkan pasar digital di mana proses otomatis yang aman secara kriptografis memungkinkan transaksi dan fungsi bisnis terjadi tanpa perantara yang dapat dipercaya. Kontrak pintar Ethereum membuat mimpi ini menjadi nyata.
 
-### Kepercayaan dalam kontrak konvensional {#trust-and-contracts}
+## Kepercayaan dalam kontrak konvensional {#trust-and-contracts}
 
 Salah satu masalah terbesar dengan kontrak tradisional adalah kebutuhan terhadap individu yang bertanggung jawab untuk melaksanakan hasil kontrak.
 
@@ -22,7 +22,7 @@ Alice dan Bob sedang ikut lomba sepeda. Anggaplah Alice bertaruh $10 dengan Bob 
 
 Contoh konyol ini menunjukkan masalah pada kesepakatan non-pintar mana pun. Bahkan jika persyaratan dari perjanjian tersebut terpenuhi (misalnya, Anda menjadi pemenang lombanya), Anda masih harus mempercayai pihak lain untuk memenuhi perjanjian tersebut (misalnya, membayar taruhan tersebut).
 
-### Mesin penjual otomatis digital {#vending-machine}
+## Mesin penjual otomatis digital {#vending-machine}
 
 Metafora sederhana untuk kontrak pintar adalah mesin penjual, yang bekerja entah bagaimana sama dengan kontrak pintar - input yang spesifik memastikan hasil yang telah ditentukan sebelumnya.
 
@@ -34,25 +34,25 @@ Metafora sederhana untuk kontrak pintar adalah mesin penjual, yang bekerja entah
 
 Mesin penjual hanya akan mengeluarkan produk yang Anda inginkan setelah semua persyaratan dipenuhi. Jika Anda tidak memilih produk atau memasukkan uang yang cukup, mesin penjual tidak akan memberikan produk yang Anda inginkan.
 
-### Eksekusi otomatis {#automation}
+## Eksekusi otomatis {#automation}
 
 Manfaat utama dari kontrak pintar adalah bahwa ia menjalankan kode yang tegas dan jelas ketika kondisi tertentu terpenuhi. Tidak perlu menunggu manusia untuk menginterpretasi atau merundingkan hasilnya. Ini menghilangkan keharusan terhadap perantara yang dipercaya.
 
 Contohnya, Anda dapat menulis kontrak pintar yang menyimpan dana di escrow untuk seorang anak, yang memungkinkan mereka untuk menarik dana tersebut setelah tanggal tertentu. Jika mereka mencoba menarik dana sebelum tanggal tersebut, kontrak pintar tidak akan dieksekusi. Atau Anda bisa menulis kontrak yang secara otomatis memberikan Anda versi digital dari surat kepemilikan mobil ketika Anda membayar kepada dealer.
 
-### Hasil yang dapat diprediksi {#predictability}
+## Hasil yang dapat diprediksi {#predictability}
 
 Kontrak konvensional bersifat ambigu karena mengandalkan manusia untuk mengartikan dan melaksanakannya. Sebagai contoh, dua hakim bisa saja mengartikan kontrak dengan cara yang berbeda, yang dapat menghasilkan keputusan yang inkonsisten dan hasil yang tidak adil. Kontrak pintar menghilangkan kemungkinan ini. Sebagai gantinya, kontrak pintar membuat persis dengan ketentuan yang tertulis dalam kode kontrak. Ketepatan ini berarti bahwa dengan situasi yang sama, kontrak pintar akan membuat hasil yang sama.
 
-### Catatan umum {#public-record}
+## Catatan umum {#public-record}
 
 Kontrak pintar berguna untuk audit dan pelacakan. Karena kontrak pintar Ethereum ada di rantai blok publik, siapa pun dapat dengan cepat melacak pemindahan aset dan informasi terkait lainnya. Sebagai contoh, Anda dapat memeriksa apakah seseorang telah mengirim uang ke alamat Anda.
 
-### Perlindungan privasi {#privacy-protection}
+## Perlindungan privasi {#privacy-protection}
 
 Kontrak pintar juga melindungi privasi Anda. Karena Ethereum adalah jaringan dengan nama samaran (transaksi Anda terikat secara publik ke alamat kriptografik unik, bukan identitas Anda), Anda dapat melindungi privasi Anda dari pengintai.
 
-### Ketentuan yang terlihat {#visible-terms}
+## Ketentuan yang terlihat {#visible-terms}
 
 Akhirnya, seperti kontrak tradisional, Anda dapat memeriksa isi kontrak pintar sebelum Anda menandatanganinya (atau berinteraksi dengannya). Transparansi kontrak pintar menjamin bahwa siapa pun dapat memeriksanya secara teliti.
 

@@ -10,7 +10,7 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
 ---
 
-We are going use three distinctive testing and program analysis techniques:
+We are going to use three distinctive testing and program analysis techniques:
 
 - **Static analysis with [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** All the paths of the program are approximated and analyzed at the same time, through different program presentations (e.g. control-flow-graph)
 - **Fuzzing with [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** The code is executed with a pseudo-random generation of transactions. The fuzzer will try to find a sequence of transactions to violate a given property.

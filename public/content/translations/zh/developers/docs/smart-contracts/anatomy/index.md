@@ -6,7 +6,7 @@ lang: zh
 
 智能合约是一种在以太坊某个地址上运行的程序。 它们是由数据和函数组成的，可以在收到交易时执行。 以下概述一个智能合约的组成。
 
-### 前置要求 {#prerequisites}
+## 前置要求 {#prerequisites}
 
 确保您已经先阅读了[智能合约](/developers/docs/smart-contracts/)。 本文档假设您已经熟悉某种编程语言，例如 JavaScript 或 Python。
 

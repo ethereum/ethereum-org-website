@@ -91,7 +91,7 @@ Trong khi DAO có thể có hàng ngàn thành viên bỏ phiếu, tài khoản 
 
 Vào năm 1977, Wyoming đã phát minh ra LLC để bảo vệ các doanh nhân và giới hạn quyền của họ. Gần đây nhất, họ đã đi tiên phong trong luật DAO thiết lập tư cách pháp lý cho DAO. Hiện tại Wyoming, Vermont và quần đảo Virgin đã có đạo luật DAO dưới một số hình thức.
 
-#### Một ví dụ nổi tiếng {#law-example}
+### Một ví dụ nổi tiếng {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO đã sử dụng luật DAO của Wyoming để mua 40 mẫu đất gần Công viên Quốc gia Yellowstone.
 

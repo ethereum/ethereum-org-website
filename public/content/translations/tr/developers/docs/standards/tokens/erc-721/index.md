@@ -1,5 +1,5 @@
 ---
-title: ERC-721 Değiştirilemeyen Token Standardı
+title: ERC-721 Değiştirilemez Token Standardı
 description:
 lang: tr
 ---
@@ -14,7 +14,7 @@ Bir Değiştirilemez Token (NFT), bir şeyi veya bir kimseyi eşsiz bir yolla ta
 
 ERC-721, NFT için bir standart getirir, başka bir deyişle, bu Token türü benzersizdir ve örneğin yaşı, nadirliği ve hatta görseli gibi başka bir şey nedeniyle aynı Akıllı Sözleşmedeki başka bir Token'dan farklı değere sahip olabilir. Görsel mi?
 
-Evet! Tüm NFT'ler `tokenId` denilen bir `uint256` değişkenine sahiptir, yani herhangi bir ERC-721 sözleşmesi için, `sözleşme adresi, uint256 tokenId` çifti küresel olarak eşsiz olmalıdır. Bununla birlikte bir dApp, girdi olarak `tokenId` kullanan ve zombiler, silahlar, yetenekler veya müthiş kedicikler gibi havalı bir şeyin resmini veren bir "dönüştürücüye" sahip olabilir!
+Evet! Tüm NFT'ler `tokenId` denilen bir `uint256` değişkenine sahiptir, yani herhangi bir ERC-721 sözleşmesi için, `sözleşme adresi, uint256 tokenId` çifti küresel olarak eşsiz olmalıdır. Bununla birlikte, bir dapp girdi olarak `tokenId` kullanan ve çıktı olarak da zombiler, silahlar, yetenekler ya da muhteşem kedicikler gibi havalı bir şeyin görüntüsünü veren bir "dönüştürücüye" sahip olabilir!
 
 ## Ön Koşullar {#prerequisites}
 
@@ -32,7 +32,7 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
 
 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)'den:
 
-#### Yöntemler {#methods}
+### Yöntemler {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-#### Olaylar {#events}
+### Olaylar {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -58,7 +58,7 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
 
 Ethereum'daki herhangi bir ERC-721 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-721 token'a arayüz oluşturmak için sadece sözleşmenin Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
-#### Web3.py örneği {#web3py-example}
+#### Web3.py Örneği {#web3py-example}
 
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 
@@ -127,7 +127,7 @@ ck_extra_abi = [
     }
 ]
 
-ck_contract = w3.eth.contract(address=w3.toChecksumAddress(ck_token_addr), abi=simplified_abi+ck_extra_abi)
+ck_contract = w3.eth.contract(address=w3.to_checksum_address(ck_token_addr), abi=simplified_abi+ck_extra_abi)
 name = ck_contract.functions.name().call()
 symbol = ck_contract.functions.symbol().call()
 kitties_auctions = ck_contract.functions.balanceOf(acc_address).call()
@@ -148,25 +148,25 @@ tx_event_abi = {
 }
 
 # We need the event's signature to filter the logs
-event_signature = w3.sha3(text="Transfer(address,address,uint256)").hex()
+event_signature = w3.keccak(text="Transfer(address,address,uint256)").hex()
 
-logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [event_signature]
 })
 
 # Notes:
-#   - 120 blocks is the max range for CloudFlare Provider
+#   - Increase the number of blocks up from 120 if no Transfer event is returned.
 #   - If you didn't find any Transfer event you can also try to get a tokenId at:
 #       https://etherscan.io/address/0x06012c8cf97BEaD5deAe237070F9587f8E7A266d#events
 #       Click to expand the event's logs and copy its "tokenId" argument
-
 recent_tx = [get_event_data(w3.codec, tx_event_abi, log)["args"] for log in logs]
 
-kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
-is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
-print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
+if recent_tx:
+    kitty_id = recent_tx[0]['tokenId'] # Paste the "tokenId" here from the link above
+    is_pregnant = ck_contract.functions.isPregnant(kitty_id).call()
+    print(f"{name} [{symbol}] NFTs {kitty_id} is pregnant: {is_pregnant}")
 ```
 
 CryptoKitties Sözleşmesi, Standart olanlar dışında bazı ilginç Olaylara sahiptir.
@@ -200,15 +200,15 @@ ck_extra_events_abi = [
 
 # We need the event's signature to filter the logs
 ck_event_signatures = [
-    w3.sha3(text="Pregnant(address,uint256,uint256,uint256)").hex(),
-    w3.sha3(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Pregnant(address,uint256,uint256,uint256)").hex(),
+    w3.keccak(text="Birth(address,uint256,uint256,uint256,uint256)").hex(),
 ]
 
 # Here is a Pregnant Event:
 # - https://etherscan.io/tx/0xc97eb514a41004acc447ac9d0d6a27ea6da305ac8b877dff37e49db42e1f8cef#eventlog
-pregnant_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+pregnant_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[0]]
 })
 
@@ -216,9 +216,9 @@ recent_pregnants = [get_event_data(w3.codec, ck_extra_events_abi[0], log)["args"
 
 # Here is a Birth Event:
 # - https://etherscan.io/tx/0x3978028e08a25bb4c44f7877eb3573b9644309c044bf087e335397f16356340a
-birth_logs = w3.eth.getLogs({
-    "fromBlock": w3.eth.blockNumber - 120,
-    "address": w3.toChecksumAddress(ck_token_addr),
+birth_logs = w3.eth.get_logs({
+    "fromBlock": w3.eth.block_number - 120,
+    "address": w3.to_checksum_address(ck_token_addr),
     "topics": [ck_event_signatures[1]]
 })
 
@@ -231,6 +231,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [CryptoKitties](https://www.cryptokitties.co/) yetiştirilebilen, toplanabilen ve aşırı şirin olan CryptoKitties dediğimiz yaratıklar çevresinde gelişen bir oyundur.
 - [Sorare](https://sorare.com/), sınırlı sayılı koleksiyon parçaları toplayabileceğiniz, takımlarınızı yönetebileceğiniz ve ödüller kazanmak için rekabet edebileceğiniz küresel bir fantezi futbol oyunudur.
 - [Ethereum İsim Hizmeti (ENS)](https://ens.domains/); basit, insanlar tarafından okunabilir isimler kullanarak hem blok zinciri üstünde hem de dışında kaynakları yönetmenin güvenli ve merkeziyetsiz bir yolunu sunar.
+- [POAP](https://poap.xyz), etkinliklere katılan veya belirli eylemleri tamamlayan kişilere ücretsiz NFT'ler sunar. POAP'ler oluşturmak ve dağıtmak ücretsizdir.
 - [Unstoppable Domains](https://unstoppabledomains.com/), blok zincirleri üzerinde alan adları inşa eden San-Francisco merkezli bir şirkettir. Blok zinciri alan adları, kripto para adreslerini insanlar tarafından okunabilir adlarla değiştirir ve sansüre dayanıklı web sitelerini etkinleştirmek için kullanılabilir.
 - [Gods Unchained Cards](https://godsunchained.com/), oyun içi varlıklara gerçek sahiplik getirmek için NFT'leri kullanan Ethereum blok zinciri üzerindeki bir Kart Ticareti Oyunudur.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com), kanıtlanabilir derecede ender bir sanat eseri olmasının yanı sıra, kulübe üyelik simgesi olarak hareket eden ve topluluk çabalarının sonucu olarak zamanla artan üye avantajları ve faydaları sağlayan 10.000 benzersiz NFT'den oluşan bir koleksiyondur.

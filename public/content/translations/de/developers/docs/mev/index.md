@@ -6,7 +6,7 @@ lang: de
 
 Der Maximal extrahierbare Wert (MEV) bezieht sich auf den maximalen Wert, der aus der Blockproduktion extrahiert werden kann und der über die Standard-Blockprämie und die Gasgebühren hinausgeht, indem Transaktionen in einem Block einbezogen, ausgeschlossen oder in der Reihenfolge geändert werden.
 
-### Durch Miner extrahierbarer Wert
+## Durch Miner extrahierbarer Wert
 
 Dieses Konzept wurde erstmals im Rahmen des [Arbeitsnachweis](/developers/docs/consensus-mechanisms/pow/) angewandt und anfangs als „miner extractable value" bezeichnet. Das liegt daran, dass beim Arbeitsnachweis die Miner den Einschluss, den Ausschluss und die Reihenfolge von Transaktionen kontrollieren. Nach der Umstellung auf Proof-of-Stake über [Die Zusammenführung](/roadmap/merge) werden jedoch die Validierer für diese Rollen verantwortlich sein, und Mining wird nicht mehr möglich sein. Die Methoden der Wertextraktion werden auch nach dieser Umstellung fortbestehen, so dass eine Namensänderung erforderlich war. Um das gleiche Akronym der Kontinuität willen und gleichzeitig die gleiche grundlegende Bedeutung beizubehalten, wird jetzt der „maximal extrahierbare Wert" als umfassenderer Ersatz verwendet.
 

@@ -6,7 +6,7 @@ lang: sl
 
 Maksimalna pridobljiva vrednost (MEV) se nanaša na maksimalno vrednost, ki se lahko pridobi pri izdelavi bloka poleg standardne blokovne nagrade in provizij goriva z vključevanjem, izključevanjem in spreminjanjem vrstnega reda transakcij v bloku.
 
-### Pridobljiva vrednost rudarjev
+## Pridobljiva vrednost rudarjev
 
 Ta koncept se je prvič pojavil v kontekstu [dokaza o delu](/developers/docs/consensus-mechanisms/pow/) in se je na začetku imenoval "pridobljiva vrednost rudarjev". To je zato, ker pri dokazu o delu rudarji nadzirajo vključevanje, izključevanje in razvrščanje transakcij. Vendar pa bodo validatorji po prehodu na dokaz o deležu prek [Spojitve](/roadmap/merge) odgovorni za te vloge in rudarjenje ne bo več uporabno. Metode za pridobivanje vrednosti bodo ostale tudi po prehodu in zato je bila potrebna zamenjava imena. Zaradi ohranjanja kontinuitete bomo ohranili enako kratico in obenem ohranili osnovni pomen, "maksimalna pridobljiva vrednost" se zdaj uporablja kot bolj vključujoča zamenjava.
 
