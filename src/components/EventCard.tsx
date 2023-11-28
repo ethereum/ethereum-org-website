@@ -43,7 +43,7 @@ const EventCard: React.FC<IProps> = ({
       h="24px"
       position="absolute"
       top="0"
-      left="50%"
+      insetInlineStart="50%"
       overflow="hidden"
       ms="-12px"
       backgroundColor="primary.base"
@@ -67,13 +67,13 @@ const EventCard: React.FC<IProps> = ({
         display: { base: "none", md: "inline" },
         ...(isEven
           ? {
-              left: "inherit",
-              right: "45%",
+              insetInlineStart: "inherit",
+              insetInlineEnd: "45%",
               borderLeft: 0,
               borderRight: "25px solid",
             }
           : {
-              left: "45%",
+              insetInlineStart: "45%",
               borderLeft: "25px solid",
               borderRight: 0,
             }),

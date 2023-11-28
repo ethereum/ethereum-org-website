@@ -94,7 +94,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       <Center
         position={{ sm: "absolute" }}
         bottom={{ sm: "2.9rem" }}
-        left={{ sm: "calc((100% - 68px)/2)" }}
+        insetInlineStart={{ sm: "calc((100% - 68px)/2)" }}
       >
         {scrollSnaps.map((_, index) => (
           <Box

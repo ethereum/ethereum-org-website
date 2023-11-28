@@ -271,7 +271,7 @@ export const StakingLayout: React.FC<IProps> = ({
         <Image
           flex="1 1 100%"
           bgRepeat="no-repeat"
-          right={0}
+          insetInlineEnd={0}
           bottom={0}
           maxW={{ base: "min(400px, 98%)", lg: "400px" }}
           width={400}

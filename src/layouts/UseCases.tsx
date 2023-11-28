@@ -63,9 +63,9 @@ const TitleCard = (props: ChildOnlyProp) => {
       p={8}
       position="absolute"
       top={{ base: "unset", lg: 24 }}
-      left={{ base: 0, lg: 24 }}
+      insetInlineStart={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
-      right={{ base: 0, lg: "unset" }}
+      insetInlineEnd={{ base: 0, lg: "unset" }}
       {...props}
     />
   )

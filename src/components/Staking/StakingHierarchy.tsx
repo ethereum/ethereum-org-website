@@ -147,7 +147,7 @@ const Line = () => {
         borderLeft: "4px",
         borderColor: "orange",
         position: "absolute",
-        left: calc.subtract("50%", "2px"),
+        insetInlineStart: calc.subtract("50%", "2px"),
         top: "50px",
         zIndex: 1,
       }}
@@ -196,7 +196,7 @@ const Pills = ({ children }: ChildOnlyType) => (
           content: `""`,
           position: "absolute",
           top: 0,
-          left: 0,
+          insetInlineStart: 0,
           boxSize: "100%",
           background: $colorVar.reference,
           opacity: 0.125,

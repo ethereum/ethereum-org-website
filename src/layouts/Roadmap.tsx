@@ -161,7 +161,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
             }}
             bgRepeat="no-repeat"
             flex="1 1 100%"
-            right={0}
+            insetInlineEnd={0}
             bottom={0}
             width={600}
             height={336}

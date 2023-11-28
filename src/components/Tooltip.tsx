@@ -24,7 +24,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
         <Box
           position="fixed"
           top={0}
-          left={0}
+          insetInlineStart={0}
           w="full"
           h="full"
           zIndex={1}
@@ -60,7 +60,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
               borderRadius="base"
               border={`1px solid ${borderColor}`}
               bottom="125%"
-              left={{ base: "-70px", md: "-150px" }}
+              insetInlineStart={{ base: "-70px", md: "-150px" }}
               ms="50%"
               initial="exit"
               animate="enter"
@@ -90,7 +90,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
                 position="absolute"
                 bg="transparent"
                 bottom={-2}
-                left={0}
+                insetInlineStart={0}
                 width="100%"
                 height={5}
               />
@@ -98,7 +98,7 @@ const Tooltip: React.FC<IProps> = ({ content, children }) => {
                 as="span"
                 position="absolute"
                 bottom={-2}
-                left="calc(50% - 6px)"
+                insetInlineStart="calc(50% - 6px)"
                 borderRightWidth={10}
                 borderRightStyle="solid"
                 borderRightColor="transparent"

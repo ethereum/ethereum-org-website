@@ -194,7 +194,7 @@ const EnergyConsumptionChart: React.FC = () => {
       <Box maxW="500px" w="full">
         <ResponsiveContainer height={500}>
           <BarChart
-            margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
+            margin={{ top: 30, insetInlineEnd: 30, bottom: 30, insetInlineStart: 30 }}
             barGap={15}
             barSize={38}
             data={data}

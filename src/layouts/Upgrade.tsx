@@ -102,7 +102,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       maxW={{ base: "full", lg: "640px" }}
       p={8}
       top={{ lg: 24 }}
-      left={{ lg: 24 }}
+      insetInlineStart={{ lg: 24 }}
       zIndex={10}
       {...props}
     />
@@ -196,7 +196,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
             maxW="min(100%, 816px)"
             style={{ objectFit: "cover" }}
             alignSelf="center"
-            right={0}
+            insetInlineEnd={0}
             bottom={0}
             width={600}
             height={600}

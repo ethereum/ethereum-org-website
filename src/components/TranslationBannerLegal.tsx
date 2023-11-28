@@ -111,7 +111,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top={0}
-          right={isPageRightToLeft ? "auto" : 0}
+          insetInlineEnd={isPageRightToLeft ? "auto" : 0}
           margin={4}
           color="secondary"
           _hover={{

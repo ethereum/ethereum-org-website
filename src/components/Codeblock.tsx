@@ -320,7 +320,7 @@ const Codeblock: React.FC<IProps> = ({
                   justify="flex-end"
                   position="absolute"
                   top={3}
-                  right={4}
+                  insetInlineEnd={4}
                 >
                   {allowCollapse &&
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
