@@ -1,4 +1,5 @@
 import React from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Bar,
@@ -19,6 +20,8 @@ import {
 } from "@chakra-ui/react"
 
 import Translation from "@/components/Translation"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+import type { Lang } from "@/lib/types"
 
 interface ITickProps {
   x: number
@@ -74,6 +77,8 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 const EnergyConsumptionChart: React.FC = () => {
   const { t } = useTranslation(["page-about", "page-what-is-ethereum"])
   const textColor = useToken("colors", "text")
+  const { locale } = useRouter()
+  const isRtl = isLangRightToLeft(locale as Lang)
 
   const data = useBreakpointValue<Data>({
     base: [
@@ -194,10 +199,10 @@ const EnergyConsumptionChart: React.FC = () => {
       <Box maxW="500px" w="full">
         <ResponsiveContainer height={500}>
           <BarChart
-            margin={{ top: 30, insetInlineEnd: 30, bottom: 30, insetInlineStart: 30 }}
+            margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
             barGap={15}
             barSize={38}
-            data={data}
+            data={isRtl ? data?.reverse() : data}
           >
             <XAxis
               dataKey="name"
