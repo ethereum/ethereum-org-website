@@ -19,6 +19,7 @@ import InlineLink, { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
@@ -52,6 +53,7 @@ export interface IProps {}
 // TODO prop if ordered list or unordered
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
+  const { flipForRtl } = useRtlFlip()
   const filteredMeetups = filterMeetups(searchField)
   const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const listItemBoxShadow = useColorModeValue(
@@ -135,6 +137,7 @@ const MeetupList: React.FC<IProps> = () => {
                 content: '"↗"',
                 ms: 0.5,
                 me: 1.5,
+                transform: flipForRtl,
               }}
             ></Box>
           </LinkBox>

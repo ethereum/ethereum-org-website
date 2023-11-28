@@ -14,6 +14,8 @@ import {
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 const githubUrl = `https://github.com/`
 
 export interface Person {
@@ -28,6 +30,7 @@ export interface IProps {
 }
 
 const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
+  const { flipForRtl } = useRtlFlip()
   const colorModeStyles = useColorModeValue(
     {
       listBoxShadow: "tableBox.light",
@@ -135,6 +138,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                     content: '"↗"',
                     ms: 0.5,
                     me: 1.5,
+                    transform: flipForRtl,
                   }}
                 ></Box>
               </LinkBox>

@@ -13,6 +13,7 @@ import {
 import { Image, type ImageProps } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 import * as url from "@/lib/utils/url"
 
 export type CardListItem = {
@@ -43,6 +44,7 @@ const CardContainer = (props: StackProps) => (
 
 const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   const { title, description, caption, link, image, alt, ...rest } = props
+  const { flipForRtl } = useRtlFlip()
 
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
@@ -79,7 +81,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
           </Box>
         </Flex>
       )}
-      {isExternal && <Box>↗</Box>}
+      {isExternal && <Box transform={flipForRtl}>↗</Box>}
     </CardContainer>
   )
 }
