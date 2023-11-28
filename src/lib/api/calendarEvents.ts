@@ -1,5 +1,6 @@
 import axios from "axios"
 
+import { IS_DEV } from "../utils/env"
 import type {
   CommunityEventsReturnType,
   ReqCommunityEvent,
@@ -58,6 +59,19 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
       upcomingEventData,
     }
   } catch (error) {
+    // To improve DX, return empty arrays if we are in dev mode
+    if (IS_DEV) {
+      console.warn(
+        "The community events fetch failed most probably because you are missing some env vars"
+      )
+
+      return {
+        pastEventData: [],
+        upcomingEventData: [],
+      }
+    }
+
+    // In production mode, throw an error to stop the build in case this fetch fails
     console.error(error)
     throw new Error(
       "Something went wrong with requesting the calendar events data."
