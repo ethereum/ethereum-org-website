@@ -54,7 +54,7 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ### Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
-To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Goerli network, go to a Goerli faucet and enter your Goerli account address. Nopte that Goerli faucets can be a bit unreliable recently - see the [test networks page](/developers/docs/networks/#goerli) for a list of options to try:
+To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Goerli network, go to a Goerli faucet and enter your Goerli account address. Note that Goerli faucets can be a bit unreliable recently - see the [test networks page](/developers/docs/networks/#goerli) for a list of options to try:
 
 _Note: due to network congestion, this might take a while._
 ``

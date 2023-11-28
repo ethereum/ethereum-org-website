@@ -23,15 +23,15 @@ O protocolo Ethereum não suporta nativamente a delegação de stake, portanto e
 
 <CardGrid>
   <Card title="Seu próprio validador" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
-  <Card title="Fácil de iniciar" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="Limite seu risco" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="Fácil de iniciar" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="Limite seu risco" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## O que considerar {#what-to-consider}
 
-Há um número crescente de provedores SaaS para ajudar você a colocar seu ETH em participação, mas cada um vem com diferentes riscos e benefícios. Você deve considerar que todas as opções de SaaS exigem suposições de confiança adicionais em comparação com a participação local. As opções SaaS podem ter código adicional envolvendo os clientes Ethereum que não são abertos ou auditáveis. O SaaS também tem um efeito prejudicial na descentralização da rede. Dependendo da configuração, você pode não controlar seu validador — o operador pode agir de forma desonesta usando seu ETH.
+Há um número cada vez maior de provedores de SaaS para ajudar você a fazer participação com os seus ETH, mas todos têm benefícios e riscos. Todas as opções de SaaS exigem uma confiança adicional em comparação a fazer staking internamente. As opções SaaS podem ter código adicional envolvendo os clientes Ethereum que não são abertos ou auditáveis. O SaaS também tem um efeito prejudicial na descentralização da rede. Dependendo da configuração, você pode não controlar seu validador — o operador pode agir de forma desonesta usando seu ETH.
 
 Os indicadores de atributo são usados abaixo para sinalizar os pontos fortes ou fracos notáveis que um pool de staking pode ter. Utilize esta seção como referência de como definimos estes atributos enquanto você está escolhendo um serviço para auxiliar em sua jornada de staking.
 
@@ -41,19 +41,19 @@ Os indicadores de atributo são usados abaixo para sinalizar os pontos fortes ou
 
 Abaixo estão alguns provedores SaaS disponíveis. Use os indicadores acima para guiá-lo pelos serviços abaixo
 
-<InfoBanner emoji="⚠️" isWarning>
-Observe a importância de escolher um serviço que leve a <a href="/developers/docs/nodes-and-clients/client-diversity/">diversidade de cliente</a> a sério, à medida que melhora a segurança da rede e limita o seu risco. Serviços que possuem evidências de limitar o uso do cliente majoritário são marcados como <em style="text-transform: uppercase;">"clientes diversos".</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### Provedores SaaS
 
 <StakingProductsCardGrid category="saas" />
 
+Observe a importância de escolher um serviço que leve a [diversidade de cliente](/developers/docs/nodes-and-clients/client-diversity/) a sério, à medida que melhora a segurança da rede e limita o seu risco. Os serviços que têm evidências de limitação do uso do cliente majoritário são indicados com <em style="text-transform: uppercase;">"diversidade do cliente de execução"</em> e <em style="text-transform: uppercase;">"diversidade do cliente de consenso".</em>
+
 #### Geradores de chaves
 
 <StakingProductsCardGrid category="keyGen" />
 
-Alguma sugestão de um provedor de SaaS que deixamos de mencionar? Confira nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente, e envie-a para análise.
+Alguma sugestão de um provedor de SaaS que não foi mencionado? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
 ## Perguntas frequentes {#faq}
 

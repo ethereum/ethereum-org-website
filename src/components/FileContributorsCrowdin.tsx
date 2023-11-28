@@ -18,7 +18,7 @@ interface Data {
   contributors: Contributor[]
 }
 
-interface LangContributor {
+export interface LangContributor {
   lang: string
   data: Data[]
 }

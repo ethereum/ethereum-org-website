@@ -342,7 +342,7 @@ const DepositContractPage = ({
           <Text>
             <Translation id="page-staking-deposit-contract-staking-check-desc" />
           </Text>
-          <CardList content={addressSources} />
+          <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
           <AddressCard>

@@ -8,7 +8,7 @@ I blocchi costituiscono le unità fondamentali della blockchain. I blocchi sono 
 
 ## Prerequisiti {#prerequisites}
 
-L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a capire questa pagina, ti consigliamo di informarti sul [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e sull'[architettura del blocco](/developers/docs/blocks/).
+L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a comprendere questa pagina, ti consigliamo di leggere a riguardo del [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e dell'[architettura dei blocchi](/developers/docs/blocks/).
 
 ## Chi produce i blocchi? {#who-produces-blocks}
 
@@ -42,7 +42,7 @@ class BeaconBlockBody(Container):
     execution_payload: ExecutionPayload
 ```
 
-Il campo `randao_reveal` prende un valore casuale verificabile che il propositore di blocchi crea aggiungendo un po' della propria entropia al valore accumulato del RANDAO dai blocchi precedenti. `eth1_data` è un voto per la vista del contratto di deposito da parte del propositore di blocchi, che include la radice dell'albero di Merkle di deposito e il numero totale di depositi che consentono la verifica dei nuovi depositi. `graffiti` è un campo facoltativo utilizzabile per aggiungere un messaggio al blocco. `proposer_slashings` e `attester_slashings` sono campi contenenti la prova che certi validatori hanno commesso infrazioni tagliabili secondo la vista della catena del propositore. `deposits` è un elenco di nuovi depositi del validatore di cui il propositore di blocchi è consapevole, e `voluntary_exits` è un elenco di validatori che desiderano uscire di cui il propositore di blocchi è venuto a conoscenza sulla rete di gossip del livello di consenso. `sync_aggregate` è un vettore che mostra quali validatori erano precedentemente assegnati a una commissione di sincronizzazione (un sottoinsieme di validatori che servono i dati dei client leggeri) e hanno partecipato alla firma dei dati.
+Il campo `randao_reveal` prende un valore casuale verificabile che il propositore di blocchi crea firmando il numero dell'epoca corrente. `eth1_data` è un voto per la vista del contratto di deposito da parte del propositore di blocchi, che include la radice dell'albero di Merkle di deposito e il numero totale di depositi che consentono la verifica dei nuovi depositi. `graffiti` è un campo facoltativo utilizzabile per aggiungere un messaggio al blocco. `proposer_slashings` e `attester_slashings` sono campi contenenti la prova che certi validatori hanno commesso infrazioni tagliabili secondo la vista della catena del propositore. `deposits` è un elenco di nuovi depositi del validatore di cui il propositore di blocchi è consapevole, e `voluntary_exits` è un elenco di validatori che desiderano uscire di cui il propositore di blocchi è venuto a conoscenza sulla rete di gossip del livello di consenso. `sync_aggregate` è un vettore che mostra quali validatori erano precedentemente assegnati a una commissione di sincronizzazione (un sottoinsieme di validatori che servono i dati dei client leggeri) e hanno partecipato alla firma dei dati.
 
 `execution_payload` consente il passaggio delle informazioni sulle transazioni tra i client di esecuzione e di consenso. `execution_payload` è un blocco di dati di esecuzione che viene nidificato in un blocco beacon. I campi in `execution_payload` riflettono la struttura dei blocchi delineata nello Yellow Paper di Ethereum, tranne che non esistono ommer e che `prev_randao` esiste al posto della `difficulty`. Il client di esecuzione ha accesso a un pool locale di transazioni di cui è venuto a conoscenza sulla propria rete di gossip. Queste transazioni sono eseguite localmente per generare un albero di stato aggiornato, noto come post-stato. Le transazioni sono incluse nell'`execution_payload` come un elenco detto `transactions` e il post-stato è fornito nel campo `state-root`.
 
@@ -64,6 +64,6 @@ Il propositore del blocco riceve il pagamento per il proprio lavoro. Esiste una 
 
 - [Introduzione ai blocchi](/developers/docs/blocks/)
 - [Introduzione al proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Specifiche del consenso di Ethereum](www.github.com/ethereum/consensus-specs)
+- [Specifiche del consenso di Ethereum](https://www.github.com/ethereum/consensus-specs)
 - [Introduzione a Gasper](/developers/docs/consensus-mechanisms/pos/)
 - [Aggiornare Ethereum](https://eth2book.info/)

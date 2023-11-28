@@ -1,12 +1,12 @@
 ---
 title: Reti
-description: Panoramica delle reti Ethereum e indicazioni su dove ottenere ether (ETH) per le reti di test per testare le applicazioni.
+description: Panoramica delle reti Ethereum e indicazioni su dove ottenere ether (ETH) per le reti di prova per testare le applicazioni.
 lang: it
 ---
 
-Le reti sono ambienti Ethereum diversi ai quali si può accedere per sviluppare, testare o produrre. Poiché Ethereum è un protocollo, possono esistere diverse "reti" indipendenti conformi al protocollo senza che interagiscano tra loro.
+Le reti di Ethereum sono gruppi di computer interconnessi che comunicano usando il protocollo di Ethereum. Esiste solo una Rete Principale di Ethereum, ma possono essere create delle reti indipendenti conformi alle stesse regole di protocollo per scopi di test e sviluppo. Esistono molte "reti" indipendenti conformi al protocollo che non interagiscono tra loro. Puoi perfino avviare una rete localmente sul tuo computer per testare i tuoi contratti intelligenti e le tue applicazioni web3.
 
-Il tuo conto di Ethereum opererà su reti diverse, ma il saldo del tuo conto e lo storico delle transazioni non saranno riportati dalla Rete Principale di Ethereum. Per utilizzi di test è utile sapere quali reti sono disponibili e come ottenere ETH per le reti di prova per poter sperimentare. In generale, per considerazioni di sicurezza, è sconsigliato riutilizzare i conti della rete principale sulle reti di prova e viceversa.
+Il tuo conto di Ethereum opererà su reti diverse, ma il saldo del tuo conto e lo storico delle transazioni non saranno riportati dalla Rete Principale di Ethereum. Per utilizzi di prova è utile sapere quali reti sono disponibili e come ottenere ETH per le reti di prova per poter sperimentare. In generale, per considerazioni di sicurezza, è sconsigliato riutilizzare i conti della rete principale sulle reti di prova e viceversa.
 
 ## Prerequisiti {#prerequisites}
 
@@ -24,13 +24,13 @@ Quando per persone e scambi si parla di prezzi in ETH, si parla di ETH della ret
 
 ### Rete di prova di Ethereum {#ethereum-testnets}
 
-Oltre alla rete principale, sono disponibili reti di test pubbliche. Queste, sono reti usate dagli sviluppatori di protocolli o contratti intelligenti per testare sia gli aggiornamenti del protocollo che i potenziali contratti intelligenti, in un ambiente simile a quello di produzione prima della distribuzione alla Rete Principale. In pratica, è analogo ad ambiente di produzione rispetto a server di staging.
+Oltre alla rete principale, sono disponibili reti di prova pubbliche. Queste, sono reti usate dagli sviluppatori di protocolli o contratti intelligenti per testare sia gli aggiornamenti del protocollo che i potenziali contratti intelligenti, in un ambiente simile a quello di produzione prima della distribuzione alla Rete Principale. In pratica, è analogo ad ambiente di produzione rispetto a server di staging.
 
 Dovresti testare il codice di ogni contratto che scrivi su una rete di prova prima di distribuirlo alla rete principale. Tra le dApp che si integrano con contratti intelligenti esistenti, gran parte dei progetti hanno copie distribuite alle reti di prova.
 
 La maggior parte delle reti di prova è partita utilizzando un meccanismo di consenso proof-of-authority autorizzato. Significa che viene scelto un ristretto numero di nodi per convalidare le transazioni e creare nuovi blocchi, e questi fanno staking con la propria identità in questo processo. In alternativa, alcune reti di prova presentano un meccanismo di consenso proof-of-stake aperto, in cui tutti possono fare prove di esecuzione di un validatore, proprio come sulla Rete Principale di Ethereum.
 
-Gli ETH sulle reti di prova non hanno valore reale, quindi non c'è un mercato per gli ETH delle reti di prova. Siccome serviranno ETH per interagire con Ethereum, molti ottengono ETH delle reti di prova da faucet. La maggior parte dei faucet sono webapp dove è possibile inserire un indirizzo al quale verranno inviati gli ETH.
+Si presuppone che gli ETH sulla rete di prova non abbiano valore; tuttavia sono stati creati dei mercati per alcuni tipi di ETH su rete di prova che sono divenuti scarsi o difficili da ottenere. Poiché per interagire su Ethereum (anche sulle reti di prova) hai bisogno di ETH, la maggior parte delle persone prende gli ETH gratuitamente dai faucet. La maggior parte dei faucet sono webapp dove è possibile inserire un indirizzo al quale verranno inviati gli ETH.
 
 #### Quale rete di prova dovrei usare?
 
@@ -56,17 +56,16 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [Faucet Sepolia QuickNode](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet PoW](https://sepolia-faucet.pk910.de/)
-- [Faucet Sepolia](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Faucet Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
+- [Faucet Sepolia di Chainstack](https://faucet.chainstack.com/sepolia-faucet)
 
 #### Goerli _(supporto a lungo termine)_ {#goerli}
 
 _Nota: [la rete di prova Goerli è obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e sarà sostituita da [Holesovice](https://github.com/eth-clients/holesovice) nel 2023. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
 
-Goerli è la rete di prova per testare la convalida e lo staking. La rete Goerli è aperta per gli utenti che vogliono eseguire un validatore della rete di prova. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che siano distribuiti sulla rete principale dovrebbero quindi utilizzare Goerli.
+Goerli è una rete di prova per testare la convalida e lo staking. La rete Goerli è aperta per gli utenti che vogliono eseguire un validatore della rete di prova. Gli staker che desiderano testare gli aggiornamenti del protocollo prima che siano distribuiti sulla rete principale dovrebbero quindi utilizzare Goerli.
 
 - Insieme di validatori aperto, gli staker possono testare gli aggiornamenti di rete
 - Grandi dimensioni di stato, utile per testare complesse interazioni tra contratti intelligenti
@@ -83,30 +82,17 @@ Goerli è la rete di prova per testare la convalida e lo staking. La rete Goerli
 - [Faucet Goerli QuickNode](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet PoW](https://goerli-faucet.pk910.de/)
-- [Faucet Goerli](https://faucet.goerli.mudit.blog/)
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Alchemy Goerli](https://goerlifaucet.com/)
-- [Faucet All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Tutti i Faucet del Nodo Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Faucet Coinbase Wallet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Faucet Gorli di Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
 Per lanciare un Validatore sulla rete di prova Goerli, usa il ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/) di ethstaker.
 
-#### Rinkeby _(deprecata)_ {#rinkeby}
-
-_Nota: [la rete di prova Rinkeby è obsoleta](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) e non riceverà più aggiornamenti del protocollo. Sei pregato di considerare la migrazione delle tue applicazioni a Sepolia._
-
-Una rete di prova proof-of-authority per coloro che eseguono versioni meno recenti del client di Geth.
-
-##### Faucet
-
-- [FaucETH](https://fauceth.komputing.org) (Faucet multi-catena che non necessita di un profilo social)
-- [Faucet Chainlink](https://faucets.chain.link/)
-- [Faucet Paradigm](https://faucet.paradigm.xyz/)
-- [Faucet Rinkeby](https://faucet.rinkeby.io/)
-
 ### Rete di prova del livello 2 {#layer-2-testnets}
 
-[Livello 2 (Layer 2 – L2)](/layer-2/) è un termine collettivo per descrivere un insieme specifico di soluzioni di ridimensionamento di Ethereum. Un livello 2 è una blockchain separata che estende Ethereum ed eredita le garanzie di sicurezza di Ethereum. Solitamente le reti di prova di Livello 2 sono strettamente accoppiate alle reti di prova pubbliche di Ethereum.
+[Livello 2 (L2)](/layer-2/) è un termine collettivo per descrivere un insieme specifico di soluzioni di ridimensionamento di Ethereum. Un livello 2 è una blockchain separata che estende Ethereum ed eredita le garanzie di sicurezza di Ethereum. Solitamente le reti di prova di Livello 2 sono strettamente accoppiate alle reti di prova pubbliche di Ethereum.
 
 #### Arbitrum Goerli {#arbitrum-goerli}
 
@@ -143,7 +129,7 @@ Se una rete Ethereum pubblica è come la rete Internet pubblica, una rete di con
 
 ## Strumenti correlati {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _Elenco di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
+- Elenco di [Chainlist](https://chainlist.org/) _ di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
 - [Catene basate su EVM](https://github.com/ethereum-lists/chains) _Repository di GitHub di metadati della catena che alimentano Chainlist._
 
 ## Letture consigliate {#further-reading}

@@ -6,15 +6,15 @@ lang: de
 
 Die physische Überschreibung der EVM kann nicht auf dieselbe Weise beschrieben werden, wie eine Wolke oder Ozeanwelle. Sie _existiert_ vielmehr als eine zusammenhängende Einheit, die von tausenden verbundenen Computern, die einen Ethereum-Client laufen lassen, aufrechterhalten wird.
 
-Das Ethereum-Protokoll selbst besteht ausschließlich zu dem Zweck, den kontinuierlichen, ununterbrochenen und unveränderlichen Betrieb dieser speziellen Zustandsmaschine aufrechtzuerhalten. Es ist das Umfeld, in dem alle Ethereum-Konten und Smart Contracts existieren. Bei jedem Block in der Kette hat Ethereum genau einen "kanonischen" Zustand und die EVM definiert die Regeln für die Berechnung eines neuen gültigen Zustands von Block zu Block.
+Das Ethereum-Protokoll selbst dient ausschließlich dem Zweck, den kontinuierlichen, ununterbrochenen und unveränderlichen Betrieb dieser speziellen Zustandsmaschine aufrechtzuerhalten. Es ist die Umgebung, in der alle Ethereum-Konten und Smart Contracts leben. Bei jedem Block in der Kette hat Ethereum genau einen "kanonischen" Zustand und die EVM definiert die Regeln für die Berechnung eines neuen gültigen Zustands von Block zu Block.
 
 ## Voraussetzungen {#prerequisites}
 
-Um den EVM zu verstehen, sind ein paar grundlegende Kenntnisse der gängigen Informatikterminologie wie [Bytes](https://wikipedia.org/wiki/Byte), [Speicher](https://wikipedia.org/wiki/Computer_memory) und [Stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) notwendig. Es wäre auch hilfreich, wenn du dich mit Kryptografie-/Blockchain-Konzepten wie [Hash-Funktionen](https://wikipedia.org/wiki/Cryptographic_hash_function), [Proof-of-Work](https://wikipedia.org/wiki/Proof_of_work) und dem [Merkle-Baum](https://wikipedia.org/wiki/Merkle_tree) auskennst.
+Um den EVM zu verstehen, sind ein paar grundlegende Kenntnisse der gängigen Informatikterminologie wie [Bytes](https://wikipedia.org/wiki/Byte), [Speicher](https://wikipedia.org/wiki/Computer_memory) und [Stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) notwendig. Es wäre auch hilfreich, wenn Sie sich mit Kryptografie-/Blockchain-Konzepten wie [Hash-Funktionen](https://wikipedia.org/wiki/Cryptographic_hash_function) und dem [Merkle-Baum](https://wikipedia.org/wiki/Merkle_tree) auskennen.
 
 ## Vom Ledger zur Zustandsmaschine {#from-ledger-to-state-machine}
 
-Die Analogie eines 'verteilten Schalters' wird oft verwendet, um Blockchains wie Bitcoin zu beschreiben, die eine dezentrale Währung mit grundlegenden Tools der Kryptographie ermöglichen. Eine Kryptowährung verhält sich wie eine "normale" Währung, da es Regeln gibt, die bestimmen, was man tun kann und was nicht, um den Ledger zu verändern. Zum Beispiel kann eine Bitcoin-Adresse nicht mehr Bitcoin ausgeben, als sie zuvor erhalten hat. Diese Regeln untermauern alle Transaktionen auf Bitcoin und vielen anderen Blockchains.
+Die Analogie eines 'verteilten Schalters' wird oft verwendet, um Blockchains wie Bitcoin zu beschreiben, die eine dezentrale Währung mit grundlegenden Tools der Kryptographie ermöglichen. Der Ledger führt eine Aufzeichnung von Aktivitäten, die sich an eine Reihe von Regeln halten müssen, die wiederum bestimmen, welche Aktionen erfolgen bzw. nicht erfolgen können, um den Ledger zu verändern. Zum Beispiel kann eine Bitcoin-Adresse nicht mehr Bitcoin ausgeben, als sie zuvor erhalten hat. Diese Regeln untermauern alle Transaktionen auf Bitcoin und vielen anderen Blockchains.
 
 Während Ethereum seine eigene native Kryptowährung (Ether) hat, die fast genau den gleichen intuitiven Regeln folgt, ermöglicht es auch eine wesentlich leistungsfähigere Funktion: [Smart Contracts](/developers/docs/smart-contracts/). Für diese komplexere Funktion ist eine ausgeklügeltere Analogie erforderlich. Anstelle eines verteilten Ledgers ist Ethereum eine verteilte [Zustandsmaschine](https://wikipedia.org/wiki/Finite-state_machine). Ethereums Zustand ist eine große Datenstruktur, die nicht nur alle Konten und Kontostände enthält, sondern einen _Maschinenzustand_, der nach einer vordefinierten Reihe von Regeln von Block zu Block wechselt und beliebigen Maschinencode ausführen kann. Die spezifischen Regeln für das Ändern des Zustands von Block zu Block werden vom EVM definiert.
 
@@ -32,7 +32,7 @@ Bei einem alten gültigen Zustand `(S)` und einem neuen Satz gültiger Transakti
 
 ### Zustand {#state}
 
-Im Rahmen von Ethereum ist der Zustand eine enorme Datenstruktur, die eine [ modifizierte Merkle-Patricia-Trie](https://eth.wiki/en/fundamentals/patricia-tree) genannt wird, die alle [Konten](/developers/docs/accounts/) durch Hashes verbunden hält und mit einem einzigen Root-Hash in der Blockchain abrufbar ist.
+Im Rahmen von Ethereum ist der Zustand eine enorme Datenstruktur, die [ modifizierte Merkle-Patricia-Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) genannt wird, die alle [Konten](/developers/docs/accounts/) durch Hashes verbunden hält und mit einem einzigen Stamm-Hash in der Blockchain abrufbar ist.
 
 ### Transaktionen {#transactions}
 
@@ -56,9 +56,9 @@ Kompilierter Smart-Contract-Bytecode wird als eine Anzahl von EVM-[Opcodes ausge
 
 Alle Implementierungen der EVM müssen sich nach der im Yellowpaper von Ethereum beschriebenen Spezifikation richten.
 
-Während der fünfjährigen Geschichte von Ethereum hat die EVM mehrere Revisionen durchlaufen und es gibt mehrere Implementierungen der EVM in verschiedenen Programmiersprachen.
+Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisionen durchlaufen. Zudem gibt es mehrere Implementierungen der EVM in verschiedenen Programmiersprachen.
 
-Alle [Ethereum-Clients](/developers/docs/nodes-and-clients/#execution-clients) enthalten eine EVM-Implementierung. Zusätzlich gibt es mehrere Standalone-Implementierungen, einschließlich:
+[Ethereum-Ausführungs-Clients](/developers/docs/nodes-and-clients/#execution-clients) enthalten eine EVM-Implementierung. Zusätzlich gibt es mehrere eigenständige Implementierungen, einschließlich:
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -71,6 +71,7 @@ Alle [Ethereum-Clients](/developers/docs/nodes-and-clients/#execution-clients) e
 - [Jellopaper aka KEVM: Semantics of EVM in K](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Opcodes der virtuellen Maschine von Ethereum](https://www.ethervm.io/)
+- [Betriebscodes für die Referenzdokumente für die virtuelle Ethereum-Maschine](https://www.evm.codes/)
 - [Eine kurze Einführung in die Dokumentation von Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## Verwandte Themen {#related-topics}

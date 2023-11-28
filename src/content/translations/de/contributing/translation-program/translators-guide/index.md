@@ -116,7 +116,7 @@ Am besten ist es, Links direkt aus der Quelle zu kopieren, entweder durch Anklic
 
 ![Beispiel für einen Link.png](./example-of-link.png)
 
-Links erscheinen im Quelltext auch in Form von Tags (z. B. <0> </0>). Wenn Sie mit dem Mauszeiger über den Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
+Links erscheinen im Quelltext auch in Form von Tags (z. B. <0> </0>). Wenn Sie mit dem Mauszeiger über das Tag fahren, zeigt der Editor den vollständigen Inhalt an. Manchmal stellen diese Tags auch Links dar.
 
 Es ist sehr wichtig, die Links aus der Quelle zu kopieren und die Reihenfolge nicht zu verändern.
 

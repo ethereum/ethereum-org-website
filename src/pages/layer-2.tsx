@@ -1,5 +1,5 @@
 // Libraries
-import React, { HTMLAttributes, ReactNode, useEffect, useState } from "react"
+import React, { ReactNode, useEffect, useState } from "react"
 import { graphql, PageProps } from "gatsby"
 import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
 import {
@@ -35,7 +35,7 @@ import OrderedList from "../components/OrderedList"
 import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import Text from "../components/OldText"
@@ -914,9 +914,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         </UnorderedList>
       </ContentBox>
       {/* Layer 2 Quiz Section */}
-      <ContentBox>
-        <QuizWidget quizKey="layer-2" />
-      </ContentBox>
+      <StandaloneQuizWidget quizKey="layer-2" />
       {/* Layer 2 Feedback Section */}
       <ContentBox>
         <FeedbackCard />
@@ -1059,6 +1057,16 @@ export const query = graphql`
       childImageSharp {
         gatsbyImageData(
           width: 200
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    starknet: file(relativePath: { eq: "layer-2/starknet.png" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 100
           layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100

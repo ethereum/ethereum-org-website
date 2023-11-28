@@ -10,16 +10,15 @@ tags:
 lang: it
 skill: intermediate
 published: 2022-06-10
-source: Ethereum on ARM
-sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html
-postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
+source: Ethereum su ARM
+sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/
 ---
 
 **Ethereum on Arm è un'immagine Linux personalizzata che può trasformare un Raspberry Pi in un nodo di Ethereum.**
 
 Per usare Ethereum on Arm per trasformare un Raspberry Pi in un nodo di Ethereum, si consiglia il seguente hardware:
 
-- Raspberry 4 (modello B 8GB)
+- Raspberry 4 (modello B 8 GB), scheda Odroid M1 o Rock 5B (8 GB/16 GB RAM)
 - Scheda MicroSD (almeno 16 GB Classe 10)
 - SSD da minimo 2 TB, disco USB 3.0 o una SSD con un case USB a SATA.
 - Alimentatore
@@ -42,31 +41,38 @@ Ethereum non è eseguibile usando il popolare OS Linux per Raspberry Pi "Raspbia
 
 ## Nota sui client di esecuzione e di consenso {#note-on-execution-and-consensus-clients}
 
-La documentazione di Ethereum on Arm spiega come configurare un client di esecuzione _O_ un client di consenso, ad eccezione di due reti di prova di Ethereum (Kiln e Ropsten). Questa scelta è possibile solo prima dell'imminente transizione di Ethereum dal Proof of Work (PoW) al Proof of Stake (PoS), nota come [La Fusione](/roadmap/merge).
+L'immagine Ethereum su Arm include l'esecuzione precostruita e client di consenso come servizi. Un nodo Ethereum richiede che entrambi i client siano sincronizzati ed in esecuzione. È necessario solo scaricare e copiare l'immagine e quindi avviare i servizi. L'immagine è precaricata con i seguenti client di esecuzione:
 
-<InfoBanner>
-Dopo La Fusione non sarà possibile eseguire separatamente i client di esecuzione e di consenso, che dovranno essere eseguiti in coppia. Pertanto, in questo tutorial eseguiremo insieme una coppia client di esecuzione- client di consenso su una rete di prova di Ethereum (Kiln).
-</InfoBanner>
+- Geth
+- Nethermind
+- Besu
 
-## L'Immagine di Raspberry Pi 4 di Kiln {#the-kiln-raspberry-pi-4-image}
+e i seguenti clienti di consenso:
 
-Kiln è una rete di prova pubblica progettata specificamente per testare La Fusione. Ethereum on Arm ha sviluppato un'immagine che consente agli utenti di avviare rapidamente una coppia di client di Ethereum su questa rete di prova della fusione. La fusione di Kiln si è già verificata, ma la rete è ancora attiva, quindi è utilizzabile per questo tutorial. Ether on Kiln non ha alcun valore nel mondo reale.
+- Lighthouse
+- Nimbus
+- Prysm
+- Teku
 
-L'immagine di Raspberry Pi 4 di Kiln è un'immagine "plug and play" che installa e configura automaticamente sia il client di esecuzione che quello di consenso, configurandoli per comunicare tra loro e connettersi alla rete Kiln. Tutto ciò che l'utente deve fare è avviarne i processi usando un semplice comando. L'immagine contiene quattro client di esecuzione (Geth, Nethermind, Besu ed Erigon) e quattro client di consenso (Lighthouse, Prysm, Nimbus, Teku) tra cui l'utente può scegliere.
+È necessario scegliere uno di ciascun gruppo da eseguire - tutti i client di esecuzione sono compatibili con tutti i client di consenso. Se non si seleziona esplicitamente un client, il nodo tornerà ai suoi valori predefiniti - Geth e Lighthouse - e li eseguirà automaticamente quando la scheda è accesa. È necessario aprire la porta 30303 sul router in modo che Geth possa trovare e connettersi ai pari.
+
+## Download immagine {#downloading-the-image}
+
+L'immagine Raspberry Pi 4 Ethereum è un'immagine "plug and play" che installa e imposta automaticamente sia i client di esecuzione che di consenso, configurarli per farli comunicare tra loro e connettersi alla rete Ethereum. Tutto ciò che l'utente deve fare è avviarne i processi usando un semplice comando.
 
 Scarica l'immagine di Raspberry Pi da [Ethereum on Arm](https://ethereumonarm-my.sharepoint.com/:u:/p/dlosada/ES56R_SuvaVFkiMO1Tgnf6kB7lEbBfla5c2c18E3WQRJzA?download=1) e verifica l'hash SHA256:
 
 ```sh
-# Dalla cartella contenente l'immagine scaricata
-shasum -a 256 ethonarm_kiln_22.03.01.img.zip
-# L'hash dovrebbe produrre: 485cf36128ca60a41b5de82b5fee3ee46b7c479d0fc5dfa5b9341764414c4c57
+# From directory containing the downloaded image
+shasum -a 256 ethonarm_22.04.00.img.zip
+# Hash should output: fb497e8f8a7388b62d6e1efbc406b9558bee7ef46ec7e53083630029c117444f
 ```
 
-Nota che per gli utenti che non possiedono un Raspberry Pi ma hanno un conto AWS, esistono istanze di ARM disponibili che possono eseguire la stessa immagine. Le istruzioni e l'immagine AWS possono essere scaricate da Ethereum on Arm (https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html).
+Nota che le immagini per le schede Rock 5B e Odroid M1 sono disponibili alla [pagina di download](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) di Ethereum-su-Arm.
 
 ## Flashing della MicroSD {#flashing-the-microsd}
 
-La scheda MicroSD che sarà usata per il Raspberry Pi dovrebbe innanzitutto essere inserita in un computer desktop o portatile, così da eseguirne il flashing. Poi, i seguenti comandi del terminale eseguiranno il flashing dell'immagine scaricata sulla scheda SD:
+La scheda MicroSD che sarà usata per il Raspberry Pi dovrebbe innanzitutto essere inserita in un computer desktop o portatile, così da eseguirne la copia. Poi, i seguenti comandi del terminale eseguiranno la copia dell'immagine scaricata sulla scheda SD:
 
 ```shell
 # verifica il nome della scheda MicroSD
@@ -78,74 +84,87 @@ sudo fdisk -I
 È davvero importante inserire il nome corretto, perché il prossimo comando include `dd`, che cancella completamente i contenuti esistenti della scheda prima di caricarvi l'immagine. Per continuare, naviga fino alla cartella contenente l'immagine compressa:
 
 ```shell
-# decompressione e flash dell'immagine
-unzip ethonarm_kiln_22.03.01.img.zip
-sudo dd bs=1M if=ethonarm_kiln_22.03.01.img of=/dev/mmcblk0 conv=fdatasync status=progress
+# unzip and flash image
+unzip ethonarm_22.04.00.img.zip
+sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=progress
 ```
 
-Dopo aver eseguito il flashing, la scheda può essere inserita nel Raspberry Pi.
+Dopo aver eseguito la copia, la scheda può essere inserita nel Raspberry Pi.
 
 ## Avviare il nodo {#start-the-node}
 
-Con la scheda SD inserita nel Raspberry Pi, connetti il cavo Ethernet e la SSD, poi accendilo. L'OS si avvierà e inizierà automaticamente a eseguire le attività pre-configurate che trasformano il Raspberry Pi in un nodo di Ethereum, anche installando e creando il software del client. Ciò richiederà probabilmente da 10 a 15 minuti.
+Con la scheda SD inserita nel Raspberry Pi, connetti il cavo Ethernet e la SSD, poi accendilo. Il sistema operativo si avvierà e avvierà automaticamente l'esecuzione delle attività preconfigurate che trasformeranno il Raspberry Pi in un nodo Ethereum, compresa l'installazione e la creazione del software client. Ciò richiederà probabilmente da 10 a 15 minuti.
 
-Una volta che tutto è installato e configurato, accedi al dispositivo tramite una connessione ssh o usando il terminale direttamente se alla scheda sono collegati uno schermo e una tastiera. Usa il conto di `ethereum` per accedere, poiché ha le autorizzazioni necessarie per avviare il nodo.
+Una volta che tutto è installato e configurato, accedi al dispositivo tramite una connessione ssh o usando il terminale direttamente se alla scheda sono collegati uno schermo e una tastiera. Usa l'account `ethereum` per accedere, in quanto ha i permessi necessari per avviare il nodo.
 
 ```shell
 User: ethereum
 Password: ethereum
 ```
 
-L'utente può poi scegliere la combinazione di client di esecuzione e di consenso che desidera eseguire e avviarne i processi systemctl come segue (l'esempio esegue Geth e Lighthouse):
+Il client di esecuzione predefinito, Geth, verrà avviato automaticamente. È possibile confermarlo controllando i registri utilizzando il seguente comando terminale:
 
-```shell
-sudo systemctl start geth-lh
-sudo systemctl start lh-geth-beacon
+```sh
+sudo journalctl -u geth -f
 ```
 
-I registri possono essere controllati usando
+Il client di consenso deve essere avviato esplicitamente. Per fare questo, prima aprire la porta 9000 sul router in modo che Lighthouse possa trovare e connettersi ai pari. Quindi abilitare e avviare il servizio lighthouse:
 
-```shell
-# log per Geth
-sudo journalctl -u geth-lh -f
-# log per Lighthouse
-sudo journalctl -u lh-geth-beacon -f
+```sh
+sudo systemctl enable lighthouse-beacon
+sudo systemctl start lighthouse-beacon
 ```
 
-I nomi specifici del servizio per ogni combinazione di client sono disponibili nella [documentazione di Ethereum on Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#id2). Possono essere usati per aggiornare i comandi forniti qui per qualsiasi combinazione.
+Controllare il client utilizzando i registri:
+
+```sh
+sudo journalctl -u lighthouse-beacon
+```
+
+Si noti che il client di consenso si sincronizzerà in pochi minuti perché utilizza la sincronizzazione dei checkpoint. Il client di esecuzione richiederà più tempo, potenzialmente diverse ore, e si avvierà quando il client di consenso avrà già terminato la sincronizzazione (questo perché il client di esecuzione ha bisogno di un obiettivo per la sincronizzazione fornito dal client di consenso).
+
+Con i servizi Geth e Lighthouse in esecuzione e sincronizzati, il tuo Raspberry Pi è ora un nodo Ethereum! È più comune interagire con la rete Ethereum utilizzando la console Javascript di Geth, che può essere collegata al client Geth sulla porta 8545. È anche possibile inviare comandi formattati come oggetti JSON utilizzando uno strumento di richiesta come Curl. Maggiori informazioni nella [documentazione di Geth](https://geth.ethereum.org).
+
+Geth è preconfigurato per segnalare le metriche a un pannello Grafana che può essere visualizzato nel browser. Gli utenti più avanzati potrebbero voler utilizzare questa funzione per monitorare lo stato di salute del loro nodo accedendo a `ipaddress:3000` con nome `utente: admin` e `passwd: ethereum`.
 
 ## Validatori {#validators}
 
-Per poter eseguire un validatore, devi prima avere accesso a 32 ETH della rete di prova, che devono essere depositati nel contratto di deposito di Kiln. Questo può esser fatto seguendo la guida passo-passo sul [Launchpad di Kiln](https://kiln.launchpad.ethereum.org/en/). Fallo su un computer desktop/portatile, ma non generare chiavi: puoi farlo direttamente sul Raspberry Pi.
+Un validatore può anche essere aggiunto facoltativamente al client di consenso. Il software validatore consente al nodo di partecipare attivamente al consenso e fornisce alla rete sicurezza criptoeconomica. Per questo lavoro in ETH si viene ricompensati. Per poter eseguire un validatore, devi prima avere accesso a 32 ETH, che devono essere depositati nel contratto di deposito. **Questo è un impegno a lungo termine - non è ancora possibile ritirare questi ETH!**. Questo deposito può essere eseguito seguendo la guida passo-passo sul [Launchpad](https://launchpad.ethereum.org/). Fallo su un computer desktop/portatile, ma non generare chiavi - questo puoi farlo direttamente sul Raspberry Pi.
 
 Apri un terminale sul Raspberry Pi ed esegui il seguente comando per generare le chiavi di deposito:
 
 ```
-cd && deposit new-mnemonic --num_validators 1 --chain kiln
+sudo apt-get update
+sudo apt-get install staking-deposit-cli
+cd && deposit new-mnemonic --num_validators 1
 ```
 
 Mantieni al sicuro la frase mnemonica! Il suddetto comando ha generato due file nel keystore del nodo: le chiavi del validatore e un file dei dati di deposito. I dati di deposito devono essere caricati nel launchpad, quindi devono esser copiati dal Raspberry Pi nel PC/portatile. Questo si può fare usando una connessione ssh o qualsiasi altro metodo copia/incolla.
 
-Una volta che il file dei dati di deposito è disponibile sul computer che esegue il launchpad, può essere selezionato e trascinato sul `+` sulla schermata del launchpad. Segui le istruzioni sullo schermo per inviare una transazione al contratto di deposito.
+Una volta che il file dei dati di deposito è disponibile sul computer che esegue il launchpad, può essere selezionato e trascinato sul `+` nella schermata del launchpad. Segui le istruzioni sullo schermo per inviare una transazione al contratto di deposito.
 
-Tornando al Raspberry Pi, può essere avviato un validatore. Ciò richiede l'importazione delle chiavi del validatore, l'impostazione dell'indirizzo per incassare le ricompense e successivamente l'avvio del processo pre-configurato del validatore. Gli esempi seguenti sono per Lighthouse, le istruzioni per gli altri client di consenso sono disponibili nella [documentazione di Ethereum on Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#lighthouse):
+Tornando al Raspberry Pi, può essere avviato un validatore. Ciò richiede l'importazione delle chiavi del validatore, l'impostazione dell'indirizzo per incassare le ricompense e successivamente l'avvio del processo pre-configurato del validatore. Gli esempi seguenti sono per Lighthouse, le istruzioni per gli altri client di consenso sono disponibili nella [documentazione di Ethereum su Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/):
 
 ```shell
 # importa le chiavi del validatore
-lighthouse-kl account validator import --directory=/home/ethereum/validator_keys --datadir=/home/ethereum/.lh-geth/kiln/testnet-lh
+lighthouse-kl account validator import --lighthouse account validator import --directory=/home/ethereum/validator_keys
 
 # imposta l'indirizzo di ricompensa
-sudo sed -i '<ETH_ADDRESS>' /etc/ethereum/kiln/lh-geth-validator.conf
+sudo sed -i 's/<ETH_ADDRESS>' /etc/ethereum/lighthouse-validator.conf
 
 # avvia il validatore
-sudo systemctl start lh-geth-validator
+sudo systemctl start lighthouse-validator
 ```
 
 Congratulazioni, hai ora un nodo di Ethereum completo e un validatore in esecuzione su un Raspberry Pi!
 
+## Maggiori dettagli {#more-details}
+
+Questa pagina ha fornito una panoramica di come configurare un nodo Geth-Lighthouse e validatore utilizzando Raspberry Pi. Istruzioni più dettagliate sono disponibili sul sito web [Ethereum-su-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
+
 ## Ogni feedback è benvenuto {#feedback-appreciated}
 
-Sappiamo che Raspberry Pi ha un'enorme base di utenti che potrebbe avere un impatto molto positivo sulla salute della rete di Ethereum. Sei pregato di approfondire i dettagli in questo tutorial, provare a eseguirlo su altre reti di prova o persino sulla Rete principale di Ethereum, dare un'occhiata al GitHub di Ethereum on Arm, dare feedback, creare ticket e richieste di pull e aiutare a far progredire la tecnologia e la documentazione!
+Sappiamo che Raspberry Pi ha un'enorme base di utenti che potrebbe avere un impatto molto positivo sulla salute della rete di Ethereum. Sei pregato di approfondire i dettagli in questo tutorial, provare a eseguirlo su altre reti di prova, dare un'occhiata al GitHub di Ethereum su Arm, fornire feedback, creare ticket e richieste di pull e aiutare a far progredire la tecnologia e la documentazione!
 
 ## Riferimenti {#references}
 

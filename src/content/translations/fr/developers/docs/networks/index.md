@@ -4,7 +4,7 @@ description: Une vue d'ensemble des réseaux Ethereum et où obtenir de l'ether 
 lang: fr
 ---
 
-Les réseaux constituent différents environnements Ethereum auxquels vous pouvez accéder à des fins de développement, de test ou de production. Comme Ethereum est un protocole, plusieurs « réseaux » indépendants peuvent se conformer au protocole sans interagir les uns avec les autres.
+Les réseaux Ethereum sont des groupes d'ordinateurs connectés qui communiquent à l'aide du protocole Ethereum. Il n'existe qu'un seul réseau principal Ethereum, mais des réseaux indépendants conformes aux mêmes règles de protocole peuvent être créés à des fins de test et de développement. Il existe de nombreux "réseaux" indépendants qui se conforment au protocole sans interagir les uns avec les autres. Vous pouvez même en lancer un localement sur votre propre ordinateur pour tester vos contrats intelligents et vos applications web3.
 
 Votre compte Ethereum fonctionnera sur les différents réseaux, mais le solde de votre compte et votre historique de transactions ne seront pas transférés du réseau Ethereum principal. Pour les tests, il est utile de connaître les réseaux disponibles et la façon d'obtenir de l'ETH de test pour pouvoir vous amuser avec. En général, pour des raisons de sécurité, il n'est pas recommandé de réutiliser les comptes principaux sur les réseaux de test ou vice versa.
 
@@ -30,7 +30,7 @@ Vous devriez tester tout code de contrat que vous écrivez sur un réseau de tes
 
 La plupart des réseaux de test ont commencé par utiliser le mécanisme de consensus de preuve d'autorité. Cela signifie qu'un petit nombre de nœuds sont choisis pour valider les transactions et créer des blocs, en mettant en jeu leur identité dans le processus. Alternativement, certains réseaux de test proposent un mécanisme de consensus ouvert, qui permet à tout le monde de tester un validateur, comme avec le réseau principal Ethereum.
 
-L'ETH des réseaux de test n'a pas de valeur réelle, il n'existe donc pas de marché pour celui-ci. Puisque vous avez besoin d'ETH pour interagir avec Ethereum, la plupart des utilisateurs obtiennent de l'ETH de réseau de test via des robinets. La plupart des robinets sont des applications Web dans lesquelles vous saisissez l'adresse à laquelle vous demandez l'envoi d'ETH.
+L'ETH sur les réseaux de test est censé n'avoir aucune valeur réelle ; cependant, des marchés ont été créés pour certains types d'ETH testnet qui sont devenus rares ou difficiles à obtenir. Étant donné que vous avez besoin d'ETH pour interagir avec Ethereum (même sur les testnets), la plupart des gens obtiennent l'ETH des testnets gratuitement via des robinets. La plupart des robinets sont des applications Web dans lesquelles vous saisissez l'adresse à laquelle vous demandez l'envoi d'ETH.
 
 #### Quel réseau de test dois-je utiliser ?
 
@@ -53,16 +53,19 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 
 ##### Robinets
 
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Sepolia faucet](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
+- [Robinet PoW](https://sepolia-faucet.pk910.de/)
+- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
+- [Infura Sepolia faucet](https://www.infura.io/faucet)
+- [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
 
 #### Goerli _(support à long terme)_ {#goerli}
 
 _Remarque : [le réseau de test Goerli est obsolète](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) et sera remplacé par [Holesovice](https://github.com/eth-clients/holesovice) en 2023. Veuillez envisager de migrer vos applications vers Sepolia._
 
-Goerli ess un réseau de test pour les tests de validation et de mise en jeu. Le réseau Goerli est ouvert aux utilisateurs souhaitant exécuter un validateur de réseau de test. Les utilisateurs désireux de tester les mises à jour de protocoles avant de les déployer sur le réseau principal sont donc invités à utiliser Goerli.
+Goerli est un réseau de test qui permet de tester, de valider et de mettre en jeu. Le réseau Goerli est ouvert aux utilisateurs souhaitant exécuter un validateur de réseau de test. Les utilisateurs désireux de tester les mises à jour de protocoles avant de les déployer sur le réseau principal sont donc invités à utiliser Goerli.
 
 - Ensemble de validateurs ouvert, les validateurs peuvent tester les mises à jour du réseau
 - État diversifié, utile pour tester les interactions des contrats intelligents complexes
@@ -76,27 +79,16 @@ Goerli ess un réseau de test pour les tests de validation et de mise en jeu. Le
 
 ##### Robinets
 
+- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Robinet PoW](https://goerli-faucet.pk910.de/)
-- [Robinet Goerli](https://faucet.goerli.mudit.blog/)
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
 - [Robinet Alchemy Goerli](https://goerlifaucet.com/)
 - [Robinet All That Node Goerli](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Robinet Goerli Chainstack](https://faucet.chainstack.com/goerli-faucet)
 
 Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli.launchpad.ethstaker.cc/en/) d'ethstaker.
-
-#### Rinkeby _(soutien à long terme)_ {#rinkeby}
-
-_Veuillez noter que [le réseau de test Rinkeby est obsolète](https://blog.ethereum.org/2022/11/30/ropsten-shutdown-announcement) et ne bénéficiera plus de mises à jour de son protocole. Veuillez envisager de migrer vos applications vers Sepolia._
-
-Un réseau de test pour preuve d'autorité pour ceux qui utilisent les anciennes versions du client Geth.
-
-##### Robinets
-
-- [FaucETH](https://fauceth.komputing.org) (Robinet multichaînes fonctionnant sans avoir besoin d'un compte sur un réseau social)
-- [Robinet Chainlink](https://faucets.chain.link/)
-- [Robinet Paradigm](https://faucet.paradigm.xyz/)
-- [Robinet Rinkeby](https://faucet.rinkeby.io/)
 
 ### Réseaux de test de Couche 2 {#layer-2-testnets}
 
@@ -108,18 +100,16 @@ Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
 ##### Robinets
 
-- [FaucETH](https://fauceth.komputing.org) (Robinet multichaînes fonctionnant sans avoir besoin d'un compte sur un réseau social)
 - [Robinet Chainlink](https://faucets.chain.link/)
-- [Robinet Paradigm](https://faucet.paradigm.xyz/)
 
-#### Goerli Optimiste {#optimistic-goerli}
+#### Optimistic Goerli {#optimistic-goerli}
 
 Réseau de test pour [Optimism](https://www.optimism.io/).
 
 ##### Robinets
 
-- [FaucETH](https://fauceth.komputing.org) (Robinet multichaînes fonctionnant sans avoir besoin d'un compte sur réseau social)
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
 ## Réseaux privés {#private-networks}
 

@@ -35,7 +35,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - **Completar a integridade dos dados**: os dados armazenados na blockchain são imutáveis e indiscutíveis, graças aos primitivos criptográficos. Atores mal-intencionados não podem forjar transações ou outros dados que já foram tornados públicos.
 - **Computação sem confiança/comportamento verificável** – Contratos inteligentes podem ser analisados e têm garantia de execução de maneiras previsíveis, sem a necessidade de confiar em uma autoridade central. Isso não é verdade nos modelos tradicionais; por exemplo, quando usamos sistemas bancários on-line, temos que confiar que as instituições financeiras não usarão indevidamente nossos dados financeiros, adulterarão registros ou serão hackeadas.
 
-## Benefícios do desenvolvimento de dapps {#drawbacks-of-dapp-development}
+## Desvantagens do desenvolvimento de dapps {#drawbacks-of-dapp-development}
 
 - **Manutenção**: os dapps podem ser mais difíceis de manter, porque o código e os dados publicados na blockchain são mais difíceis de modificar. É difícil para os desenvolvedores fazerem atualizações em seus dapps (ou nos dados armazenados sob um dapp) uma vez que eles foram implantados, mesmo se bugs ou riscos de segurança forem identificados em uma versão antiga.
 - **Impactos no desempenho**: há um grande impacto no desempenho, e o dimensionamento é realmente difícil. Para alcançar o nível de segurança, integridade, transparência e confiabilidade que o Ethereum aspira, cada nó executa e armazena cada transação. Além disso, o consenso de prova de participação também leva tempo.
@@ -68,6 +68,12 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
 
+**thirdweb _- SDKs em todos os idiomas, contratos inteligentes, ferramentas e infraestrutura para o desenvolvimento da web3._**
+
+- [Página inicial](https://thirdweb.com/)
+- [Documentação](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
 ## Leitura adicional {#further-reading}
 
 - [Ver dapps](/dapps)
@@ -76,9 +82,9 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 - [O que são aplicativos descentralizados?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps) - _Gemini_
 - [Dapps populares](https://www.alchemy.com/dapps) - _Alchemy_
 
-_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 
-- [Introdução à pilha Ethereum](/developers/docs/ethereum-stack/)
+- [Introdução à pilha de Ethereum](/developers/docs/ethereum-stack/)
 - [Estruturas de desenvolvimento](/developers/docs/frameworks/)

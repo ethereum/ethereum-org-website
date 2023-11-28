@@ -165,7 +165,7 @@ lang: zh
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [相关文档](https://services.tokeniew/docs?type=api)
-- [Github](https://github.com/Tokenview)
+- [GitHub](https://github.com/Tokenview)
 
 ## 延伸阅读 {#further-reading}
 

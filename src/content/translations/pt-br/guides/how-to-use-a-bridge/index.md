@@ -10,7 +10,7 @@ Se houver muito tráfego no Ethereum, isso pode ficar caro. Uma solução para i
 
 **Pré-Requisitos:**
 
-- ter uma carteira de criptomoedas, você pode seguir este tutorial: [Como fazer: "Registrar" uma conta Ethereum](/guides/how-to-create-an-ethereum-account/)
+- ter uma carteira de criptomoedas, você pode seguir este tutorial: [Como fazer: "Registrar" uma conta Ethereum](/guides/how-to-register-an-ethereum-account/)
 - adicione fundos à sua carteira
 
 ## 1. Determinar qual rede de camada 2 você deseja usar

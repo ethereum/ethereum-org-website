@@ -119,7 +119,7 @@ Here's an example to show how on-chain attestations might work in practice:
 
 3. Decentralized identity harnesses blockchain technology, which creates trust between different parties and provides cryptographic guarantees to prove the validity of attestations.
 
-4. Decentralized identity makes identity data portable. Users store attestations and identifiers in mobile wallet and can share with any party of their choice. Decentralized identifiers and attestations are not locked into the database of the issuing organization.
+4. Decentralized identity makes identity data portable. Users store attestations and identifiers in a mobile wallet and can share with any party of their choice. Decentralized identifiers and attestations are not locked into the database of the issuing organization.
 
 5. Decentralized identity should work well with emerging zero-knowledge technologies that will enable individuals to prove they own or have done something without revealing what that thing is. This could become a powerful way to combine trust and privacy for applications such as voting.
 
@@ -171,7 +171,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
-- [Introduction to Decentralized Identity](https://walt.id/white-paper/digital-identity)  — _Dominik Beron_
+- [Introduction to Decentralized Identity](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Videos {#videos}
 

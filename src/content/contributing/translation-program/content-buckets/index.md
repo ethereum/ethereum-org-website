@@ -45,8 +45,8 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Decentralized finance (DeFi)](/defi/)
 - [Introduction to smart contracts](/smart-contracts/)
-- [Decentralized identity)](/decentralized-identity/)
-- [Decentralized social networks)](/social-networks/)
+- [Decentralized identity](/decentralized-identity/)
+- [Decentralized social networks](/social-networks/)
 - [Decentralized science (DeSci))](/desci/)
 
 ## 6) Staking pages {#staking-pages}
@@ -91,7 +91,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Improving user experience](/roadmap/user-experience/)
 - [Future-proofing Ethereum](/roadmap/future-proofing/)
 - [Danksharding](/roadmap/danksharding/)
-- [Single slot finality](roadmap/single-slot-finality/)
+- [Single slot finality](/roadmap/single-slot-finality/)
 - [Proposer-builder separation](/roadmap/pbs/)
 - [Secret leader election](/roadmap/secret-leader-election/)
 - [Account abstraction](/roadmap/account-abstraction/)
@@ -296,7 +296,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Interact with other contracts from Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/)
 - [NFT Minter tutorial](/developers/tutorials/nft-minter/)
 - [Reverse engineering a contract](/developers/tutorials/reverse-engineering-a-contract/)
-- [Sending tokens using ethers.js](/developers/tutorials/send-token-etherjs/)
+- [Sending tokens using ethers.js](/developers/tutorials/send-token-ethersjs/)
 - [The Graph: Fixing Web3 data querying](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 - [Transfers and approval of ERC-20 tokens from a Solidity smart contract](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/)
 
@@ -308,7 +308,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [ERC-20 with safety rails](/developers/tutorials/erc20-with-safety-rails/)
 - [Getting Started with Ethereum Development](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [How to mock Solidity smart contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/)
+- [Kickstart your dapp frontend development with create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)
 - [Logging data from smart contracts with events](/developers/tutorials/logging-events-smart-contracts/)
 - [Merkle proofs for offline data integrity](/developers/tutorials/merkle-proofs-for-offline-data-integrity/)
 - [Sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
