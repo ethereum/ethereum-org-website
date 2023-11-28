@@ -140,7 +140,7 @@ const SubHeader = ({ children, ...props }: TextProps) => {
       as="p"
       textTransform="uppercase"
       fontSize="sm"
-      ml={4}
+      ms={4}
       mt={4}
       mb={2}
       opacity="0.6"

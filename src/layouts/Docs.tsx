@@ -78,8 +78,8 @@ const ContentContainer = (props: ChildOnlyProp) => (
     justify={"space-between"}
     w="full"
     py={0}
-    pl={0}
-    pr={{ base: 0, lg: 8 }}
+    ps={0}
+    pe={{ base: 0, lg: 8 }}
     backgroundColor="ednBackground"
     {...props}
   />

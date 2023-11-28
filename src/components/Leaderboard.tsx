@@ -49,7 +49,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
-      ml={0}
+      ms={0}
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
@@ -96,18 +96,18 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                   background: "tableBackgroundHover",
                 }}
               >
-                <Box mr={4} opacity="0.4">
+                <Box me={4} opacity="0.4">
                   {idx + 1}
                 </Box>
                 <Avatar
                   src={avatarImg}
                   name={avatarAlt}
-                  mr={4}
+                  me={4}
                   h={10}
                   w={10}
                   display={{ base: "none", xs: "block" }}
                 />
-                <Flex flex="1 1 75%" direction="column" mr={8}>
+                <Flex flex="1 1 75%" direction="column" me={8}>
                   <LinkOverlay
                     as={BaseLink}
                     href={hasGitHub ? `${githubUrl}${username}` : "#"}
@@ -128,13 +128,13 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                     {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
                   </Box>
                 </Flex>
-                {emoji && <Emoji mr={8} fontSize="2xl" text={emoji} />}
+                {emoji && <Emoji me={8} fontSize="2xl" text={emoji} />}
                 <Box
                   as="span"
                   _after={{
                     content: '"↗"',
-                    ml: 0.5,
-                    mr: 1.5,
+                    ms: 0.5,
+                    me: 1.5,
                   }}
                 ></Box>
               </LinkBox>

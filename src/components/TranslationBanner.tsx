@@ -81,7 +81,7 @@ const TranslationBanner: React.FC<IProps> = ({
             <Emoji
               text=":globe_showing_asia_australia:"
               fontSize="2xl"
-              ml={2}
+              ms={2}
               mb={{ base: 4, sm: "auto" }}
             />
           </Flex>
@@ -100,7 +100,7 @@ const TranslationBanner: React.FC<IProps> = ({
                 <ButtonLink
                   to={originalPagePath}
                   variant="outline"
-                  ml={{ base: 0, sm: 2 }}
+                  ms={{ base: 0, sm: 2 }}
                   mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"

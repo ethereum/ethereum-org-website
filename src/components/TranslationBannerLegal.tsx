@@ -83,7 +83,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
                 text=":bug:"
                 fontSize="3xl"
                 pt={2}
-                ml={2}
+                ms={2}
                 mb={{ base: 4, sm: "auto" }}
               />
             </Heading>

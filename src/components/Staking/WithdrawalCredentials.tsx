@@ -104,13 +104,13 @@ const WithdrawalCredentials: FC = () => {
                   </Text>
                   {isCopied ? (
                     <>
-                      <Emoji text="✅" fontSize="lg" mr={2} ml={2} />
+                      <Emoji text="✅" fontSize="lg" mx={2} />
                       <Text as="span" title={longAddress}>
                         {t("copied")}
                       </Text>
                     </>
                   ) : (
-                    <Emoji text="📋" fontSize="lg" mr={2} ml={2} />
+                    <Emoji text="📋" fontSize="lg" mx={2} />
                   )}
                 </>
               )}

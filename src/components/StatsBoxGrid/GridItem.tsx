@@ -42,7 +42,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             as={MdInfoOutline}
             boxSize={6}
             fill="text"
-            mr={2}
+            me={2}
             _hover={{ fill: "primary.base" }}
             _active={{ fill: "primary.base" }}
             _focus={{ fill: "primary.base" }}

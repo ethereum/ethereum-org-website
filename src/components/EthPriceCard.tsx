@@ -107,7 +107,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
       >
         <Translation id="eth-current-price" />
         <Tooltip content={tooltipContent}>
-          <Icon as={MdInfoOutline} boxSize="14px" ml={2} />
+          <Icon as={MdInfoOutline} boxSize="14px" ms={2} />
         </Tooltip>
       </Heading>
 
@@ -128,7 +128,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
         <Box
           fontSize="2xl"
           lineHeight="140%"
-          mr={4}
+          me={4}
           color={isNegativeChange ? "fail300" : "success.base"}
         >
           {change}

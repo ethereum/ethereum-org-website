@@ -42,7 +42,7 @@ Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty
 
 </ExpandableCard>
 
-#### <Emoji text=":police_car_light:" size={1} mr="0.5rem" />Operator node {#arrow-glacier-node-operators}
+#### <Emoji text=":police_car_light:" size={1} me="0.5rem" />Operator node {#arrow-glacier-node-operators}
 
 Pastikan untuk meningkatkan perangkat lunak klien Anda ke versi terbarunya sebelum 5 Desember 2021 guna mengetahui frekuensi blok variabel. Sehingga klien Anda tidak perlu menyinkronkan ke suatu rantai sebelum fork, yang menyebabkan kegagalan untuk mengirim dana atau dengan benar memverifikasi transaksi.
 
@@ -58,7 +58,7 @@ Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar]
 
 - [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} mr="0.5rem" />Fakta menyenangkan! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} me="0.5rem" />Fakta menyenangkan! {#altair-fun-fact}
 
 Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu rollout yang pasti. Setiap peningkatan sebelumnya telah berdasarkan pada suatu nomor blok yang dideklarasikan pada rantai bukti kerja, dengan waktu blok yang bervariasi. Rantai Suar tidak mengharuskan penyelesaian bukti kerja, dan sebagai gantinya berfungsi pada sistem epoch berbasis waktu yang terdiri dari 32 "slot" waktu dua belas detik di mana para validator dapat mengusulkan blok. Inilah alasan kami mengetahui secara pasti kapan kami akan mencapai epoch 74.240 dan Altair mulai beroperasi!
 

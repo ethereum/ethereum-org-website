@@ -38,8 +38,7 @@ const Button = (props) => {
       bg="transparent"
       w={{ base: "full", lg: "initial" }}
       justifyContent="center"
-      ml={{ base: "0", lg: "2" }}
-      mr={{ base: "0", lg: "2" }}
+      mx={{ base: "0", lg: "2" }}
       _hover={{
         color: "primary.base",
         borderColor: "primary.base",
@@ -162,7 +161,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             <Flex
               flexDirection="row"
               alignItems="center"
-              mr={8}
+              me={8}
               overflowWrap="anywhere"
             >
               <Translation id="page-contributing-translation-program-acknowledgements-translator" />
@@ -223,7 +222,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                 <Flex>
                   {emoji ? (
                     <Box w={10}>
-                      <Emoji mr={4} fontSize="2rem" text={emoji} />
+                      <Emoji me={4} fontSize="2rem" text={emoji} />
                     </Box>
                   ) : (
                     <Box w={10} opacity="0.4">
@@ -233,11 +232,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   <Flex
                     flexDirection="row"
                     alignItems="center"
-                    mr={8}
+                    me={8}
                     overflowWrap="anywhere"
                   >
                     <Img
-                      mr={4}
+                      me={4}
                       h={{ base: "30px", sm: 10 }}
                       w={{ base: "30px", sm: 10 }}
                       borderRadius="50%"
@@ -255,7 +254,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                 <Flex minW="20%" flexDirection="row" alignItems="left">
                   <Emoji
                     display={{ base: "none", sm: "block" }}
-                    mr={2}
+                    me={2}
                     fontSize="2xl"
                     text={":writing:"}
                   />

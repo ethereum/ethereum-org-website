@@ -178,7 +178,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
     <Box position="relative" width="full">
       <Show above={lgBp}>
         <BannerNotification shouldShow zIndex="sticky">
-          <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
+          <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
           <Text m={0}>
             {t("template-usecase:template-usecase-banner")}{" "}
             {/* <InlineLink to={absoluteEditPath}>

@@ -63,8 +63,8 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
       {...props}
       sx={{
         ".featured": {
-          pl: "1rem",
-          ml: "-1rem",
+          ps: "1rem",
+          ms: "-1rem",
           borderLeft: `1px dotted ${borderColor}`,
         },
         ".citation": {

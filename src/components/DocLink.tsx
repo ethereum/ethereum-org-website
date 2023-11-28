@@ -43,7 +43,7 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         justifyContent="space-between"
       >
         <Flex align="center">
-          <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
+          <Emoji fontSize="md" me={4} text=":page_with_curl:" />
         </Flex>
         <Box flex={1} flexDirection="column">
           <LinkOverlay

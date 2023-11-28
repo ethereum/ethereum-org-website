@@ -98,7 +98,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
           >
             <Td>
               <Flex align="center">
-                {image && <Image src={image} alt="" mr={4} boxSize={6} />}
+                {image && <Image src={image} alt="" me={4} boxSize={6} />}
                 <>{name}</>
               </Flex>
             </Td>

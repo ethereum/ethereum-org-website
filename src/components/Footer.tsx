@@ -322,7 +322,7 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
                       "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                   }}
                   fontSize="4xl"
-                  ml={4}
+                  ms={4}
                 />
               </BaseLink>
             )

@@ -194,8 +194,8 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
       {...props}
       sx={{
         ".featured": {
-          pl: 4,
-          ml: -4,
+          ps: 4,
+          ms: -4,
           borderLeft: "1px dotted",
           borderColor: "primary.base",
         },
@@ -212,8 +212,8 @@ export const InfoColumn = (props: ChildOnlyProp) => (
     as="aside"
     flexDirection="column"
     flex="0 1 400px"
-    ml={8}
-    mr={16}
+    ms={8}
+    me={16}
     position="sticky"
     top="6.25rem"
     height={calc("100vh").subtract("80px").toString()}

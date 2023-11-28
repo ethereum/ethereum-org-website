@@ -120,7 +120,7 @@ const ExpandableCard: React.FC<IProps> = ({
               <Text
                 fontSize="md"
                 color="primary.base"
-                ml={{ base: undefined, sm: "auto" }}
+                ms={{ base: undefined, sm: "auto" }}
                 mt="auto"
                 mb="auto"
               >

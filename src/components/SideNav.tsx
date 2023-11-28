@@ -38,8 +38,8 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
       w="full"
       justify="space-between"
       py={2}
-      pr={4}
-      pl={8}
+      pe={4}
+      ps={8}
       _hover={{ bgColor: "ednBackground" }}
     >
       {children}
@@ -111,7 +111,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
           fontSize="sm"
           lineHeight="tall"
           fontWeight="normal"
-          ml={4}
+          ms={4}
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}

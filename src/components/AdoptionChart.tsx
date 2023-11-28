@@ -9,8 +9,8 @@ const Column: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Flex
       flexDirection="column-reverse"
-      ml={{ base: 2, md: 4 }}
-      _first={{ ml: 0 }}
+      ms={{ base: 2, md: 4 }}
+      _first={{ ms: 0 }}
     >
       {children}
     </Flex>

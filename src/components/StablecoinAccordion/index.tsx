@@ -88,7 +88,7 @@ const StepBox = (
           <Translation id={props.descId} />
         </Text>
       </Box>
-      <Icon as={MdArrowForward} ml={4} minW={6} />
+      <Icon as={MdArrowForward} ms={4} minW={6} />
     </Flex>
   </Flex>
 )

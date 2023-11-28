@@ -72,7 +72,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           onClick={scrollPrev}
           icon={<MdChevronLeft fontSize={24} focusable />}
           isRound
-          mr="0.8rem"
+          me="0.8rem"
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
           bg={prevBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
