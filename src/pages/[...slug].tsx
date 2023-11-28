@@ -14,6 +14,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
+  Layout,
   LayoutMappingType,
   NextPageWithLayout,
   TocNodeType,
@@ -94,10 +95,7 @@ export const getStaticPaths = (({ locales }) => {
   }
 }) satisfies GetStaticPaths<Params>
 
-type Props = Omit<
-  Parameters<LayoutMappingType[keyof LayoutMappingType]>[0],
-  "children"
-> &
+type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
   SSRConfig & {
     mdxSource: MDXRemoteSerializeResult
   }
@@ -138,7 +136,7 @@ export const getStaticProps = (async (context) => {
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = (frontmatter.template as keyof LayoutMappingType) ?? "static"
+  let layout = (frontmatter.template as Layout) ?? "static"
 
   if (!frontmatter.template) {
     if (params.slug.includes("docs")) {

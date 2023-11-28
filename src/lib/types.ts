@@ -35,6 +35,7 @@ export type Frontmatter = RoadmapFrontmatter &
   TutorialFrontmatter
 
 export type LayoutMappingType = typeof layoutMapping
+export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
