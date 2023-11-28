@@ -183,7 +183,9 @@ export const stakingComponents = {
   WithdrawalsTabComparison,
 }
 
-interface IProps extends MdPageContent, ChildOnlyProp {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: StakingFrontmatter
 }
 
