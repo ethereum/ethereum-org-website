@@ -19,23 +19,22 @@ import { layoutMapping } from "@/pages/[...slug]"
 export type ChildOnlyProp = { children?: ReactNode }
 
 export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
-  getLayout?: (page: ReactElement) => ReactNode
+  getLayout?: (page: ReactElement<P>) => ReactNode
 }
 
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export type Frontmatter =
-  | RoadmapFrontmatter
-  | UpgradeFrontmatter
-  | StaticFrontmatter
-  | UseCasesFrontmatter
-  | StakingFrontmatter
-  | DocsFrontmatter
-  | TutorialFrontmatter
+export type Frontmatter = RoadmapFrontmatter &
+  UpgradeFrontmatter &
+  StaticFrontmatter &
+  UseCasesFrontmatter &
+  StakingFrontmatter &
+  DocsFrontmatter &
+  TutorialFrontmatter
 
-export type Layout = keyof typeof layoutMapping
+export type LayoutMappingType = typeof layoutMapping
 
 export type Lang =
   | "en"
@@ -104,8 +103,6 @@ export type I18nLocale = {
   langDir: Direction
   dateFormat: string
 }
-
-export type StaticPaths = { params: { slug: string[] }; locale: string }[]
 
 export type TranslationKey = string
 

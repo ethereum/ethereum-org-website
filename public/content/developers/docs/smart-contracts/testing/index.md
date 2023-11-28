@@ -20,13 +20,13 @@ Although approaches vary, most testing methods require executing a smart contrac
 
 ### Why is it important to test smart contracts? {#importance-of-testing-smart-contracts}
 
-As smart contracts often manage high-value financial assets, minor programming errors can and often lead to [massive losses for users](https://rekt.news/leaderboard/). Rigorous testing can, however, help you discover defects issues in a smart contracts code early and fix them before launching on Mainnet.
+As smart contracts often manage high-value financial assets, minor programming errors can and often lead to [massive losses for users](https://rekt.news/leaderboard/). Rigorous testing can, however, help you discover defects and issues in a smart contract's code early and fix them before launching on Mainnet.
 
 While it is possible to upgrade a contract if a bug is discovered, upgrades are complex and can [result in errors](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) if handled improperly. Upgrading a contract further negates the principle of immutability and burdens users with additional trust assumptions. Conversely, a comprehensive plan for testing your contract mitigates smart contract security risks and reduces the need to perform complex logic upgrades after deploying.
 
 ## Methods for testing smart contracts {#methods-for-testing-smart-contracts}
 
-Methods for testing Ethereum smart contracts exist fall under two broad categories: **automated testing** and **manual testing**. Automated testing and manual testing offer unique benefits and tradeoffs, but you can combine both to create a robust plan for analyzing your contracts.
+Methods for testing Ethereum smart contracts fall under two broad categories: **automated testing** and **manual testing**. Automated testing and manual testing offer unique benefits and tradeoffs, but you can combine both to create a robust plan for analyzing your contracts.
 
 ### Automated testing {#automated-testing}
 

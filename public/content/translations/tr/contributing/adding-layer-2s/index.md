@@ -8,14 +8,13 @@ lang: tr
 
 Kullanıcıların katman 2 alanında güvenli ve kendinden emin bir şekilde gezinebilmeleri için mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
-Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Kaçırdığımız bir katman 2 varsa, **[lütfen önerin](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)!**
+Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Gözden kaçırdığımız bir katman 2 varsa, **[lütfen belirtin](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)!**
 
 Şu anda aşağıdaki sayfalarda Katman 2'leri listeliyoruz:
 
-- [Optimistic rollups](/developers/docs/scaling/optimistic-rollups/)
-- [Sifir-Bilgi Toplamalari](/developers/docs/scaling/zk-rollups/)
-- [Durum kanalları](/developers/docs/scaling/state-channels/)
-<!-- TODO: Add layer-2 page -->
+- [İyimser toplamalar](/developers/docs/scaling/optimistic-rollups/)
+- [Sıfır-bilgi toplamalar](/developers/docs/scaling/zk-rollups/)
+- [Katman 2](/layer-2/)
 
 Katman 2, Ethereum için nispeten yeni ve heyecan verici bir paradigmadır. Ethereum.org'da değerlendirilmek üzere adil bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişecek ve gelişecektir.
 
@@ -38,9 +37,12 @@ Katman 2, Ethereum için nispeten yeni ve heyecan verici bir paradigmadır. Ethe
 
 - İyimser toplama
 - Sıfır-bilgi toplamaları
-- Durum kanalı
 
-_Diğer ölçeklendirme çözümlerini katman 2 olarak görmüyoruz._
+_Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer ölçeklendirme çözümlerini katman 2 olarak görmüyoruz._
+
+**Veri kullanılabilirliği için Ethereum**
+
+- Veri kullanılabilirliği, diğer ölçeklendirme çözümleri ile katman 2 arasında önemli bir ayırt edici faktördür. Bir proje, listeleme için dikkate alınması gereken veri kullanılabilirliği için Ethereum Mainnet'i **kullanmalıdır**.
 
 **Köprüler**
 
@@ -48,11 +50,13 @@ _Diğer ölçeklendirme çözümlerini katman 2 olarak görmüyoruz._
 
 **Projenin yayınlandığı tarih**
 
+- Ana Ağ'da 6 aydan fazla bir süredir "canlı" olan bir katman 2
+
 - Kullanıcılar tarafından aktif olarak kullanılmamış yeni projelerin listelenme olasılığı daha düşüktür.
 
 **Harici güvenlik denetimi**
 
-- İster denetim yoluyla, ister dahili güvenlik ekibiyle veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
+- İster denetim yoluyla, ister dahili güvenlik ekibiyle veya başka bir yöntemle olsun, ürününüzün güvenliği doğru bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
 
 **Sürekli kullanıcı tabanı**
 
@@ -74,7 +78,7 @@ _Diğer ölçeklendirme çözümlerini katman 2 olarak görmüyoruz._
 
 **Katman 2 ekosistemindeki dapp'lere bağlantılar**
 
-- Kullanıcıların bu katman 2'de neler yapmayı bekleyebilecekleri hakkında bilgi sağlayabilmek istiyoruz. (bkz. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Kullanıcıların bu katman 2'de neler yapabilecekleri hakkında bilgi sağlayabilmek istiyoruz. (bkz. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
 
 **Token sözleşme listeleri**
 
@@ -88,6 +92,6 @@ _Diğer ölçeklendirme çözümlerini katman 2 olarak görmüyoruz._
 
 Ethereum.org'a bir katman 2 eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
-  Bir konu oluşturun
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
+  Bir konu oluştur
 </ButtonLink>

@@ -12,7 +12,7 @@ Um swap de token envolve a corretora de dois ativos diferentes que existem na re
 
 **Pré-requisitos:**
 
-- ter uma carteira de criptomoedas. Você pode seguir este tutorial: [Como “registrar” uma conta Ethereum](/guides/how-to-create-an-ethereum-account/)
+- ter uma carteira de criptomoedas. Você pode seguir este tutorial: [Como “registrar” uma conta Ethereum](/guides/how-to-register-an-ethereum-account/)
 - adicionar fundos à sua carteira
 
 ## 1. Conecte sua carteira à corretora descentralizada (DEX) de sua escolha
