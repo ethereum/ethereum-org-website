@@ -167,7 +167,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               <Translation id="page-contributing-translation-program-acknowledgements-translator" />
             </Flex>
           </Flex>
-          <Flex minW="20%" flexDirection="row" alignItems="left">
+          <Flex minW="20%" flexDirection="row" alignItems="start">
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </Flex>
         </Flex>
@@ -251,7 +251,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                     </Box>
                   </Flex>
                 </Flex>
-                <Flex minW="20%" flexDirection="row" alignItems="left">
+                <Flex minW="20%" flexDirection="row" alignItems="start">
                   <Emoji
                     display={{ base: "none", sm: "block" }}
                     me={2}

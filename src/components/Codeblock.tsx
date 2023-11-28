@@ -298,7 +298,7 @@ const Codeblock: React.FC<IProps> = ({
                       <Box
                         as="span"
                         display="table-cell"
-                        textAlign="right"
+                        textAlign="end"
                         pe={8}
                         userSelect="none"
                         opacity={0.4}

@@ -118,7 +118,7 @@ const MeetupList: React.FC<IProps> = () => {
               </Box>
             </Flex>
             <Flex
-              textAlign="right"
+              textAlign="end"
               alignContent="flex-start"
               flex="1 1 25%"
               me={4}

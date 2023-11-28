@@ -81,7 +81,7 @@ const QuizzesStats: React.FC = () => {
               fontWeight="bold"
               fontSize="xl"
               margin={0}
-              textAlign={{ base: "center", lg: "left" }}
+              textAlign={{ base: "center", lg: "start" }}
             >
               {t("your-total")}
             </Text>

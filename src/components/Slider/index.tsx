@@ -64,7 +64,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <Flex>{children}</Flex>
       </Box>
       <Flex
-        justifyContent={{ sm: "left", base: "center" }}
+        justifyContent={{ sm: "start", base: "center" }}
         mb={{ sm: 0, base: 4 }}
       >
         <IconButton

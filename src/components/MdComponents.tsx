@@ -224,7 +224,7 @@ export const InfoColumn = (props: ChildOnlyProp) => (
 export const InfoTitle = (props: ChildOnlyProp) => (
   <Heading2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
+    textAlign={{ base: "start", lg: "end" }}
     mt={0}
     {...props}
   />

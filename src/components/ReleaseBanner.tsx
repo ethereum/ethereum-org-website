@@ -40,7 +40,11 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
         <Emoji me={4} flexShrink={0} text=":tada:" w={4} h={4} />
         {children}
       </Center>
-      <CloseButton onClick={onClose} aria-label="Close Banner" float="right" />
+      <CloseButton
+        onClick={onClose}
+        aria-label="Close Banner"
+        float="inline-end"
+      />
     </BannerNotification>
   )
 }

@@ -36,7 +36,7 @@ const SectionTitle = (props: ChildOnlyType) => (
     fontSize="1.25rem"
     fontWeight={700}
     lineHeight="22px"
-    textAlign="left"
+    textAlign="start"
     mt={0}
     {...props}
   />
@@ -77,7 +77,7 @@ const StepBox = (
           textDecoration="inherit"
           to={props.to}
           fontWeight={700}
-          textAlign="left"
+          textAlign="start"
           _hover={{
             textDecoration: "inherit",
           }}

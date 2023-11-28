@@ -117,7 +117,7 @@ const H2 = ({ children, ...props }: HeadingProps) => {
       lineHeight="22px"
       letterSpacing={0}
       p={4}
-      textAlign="left"
+      textAlign="start"
       mb={-2}
       mt={2}
       {...props}

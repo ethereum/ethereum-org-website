@@ -75,7 +75,7 @@ const DataProductCard: React.FC<IProps> = ({
         />
       </Flex>
       <Flex
-        textAlign="left"
+        textAlign="start"
         flexDirection="column"
         justifyContent="space-between"
       >

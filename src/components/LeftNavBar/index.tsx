@@ -14,7 +14,7 @@ export const H2 = (props: HeadingProps) => (
     fontWeight={700}
     lineHeight={1.4}
     size="lg"
-    textAlign="left"
+    textAlign="start"
     mt={0}
     {...props}
   />

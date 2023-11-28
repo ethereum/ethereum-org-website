@@ -29,7 +29,7 @@ const GhostCard: React.FC<IProps> = ({ children, className, ...rest }) => (
       background="ghostCardBackground"
       border="1px solid"
       borderColor="border"
-      textAlign="left"
+      textAlign="start"
     >
       {children}
     </Box>
