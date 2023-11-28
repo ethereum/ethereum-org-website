@@ -13,6 +13,7 @@ import {
 import { ButtonLink } from "@/components/Buttons"
 import Text from "@/components/OldText"
 import { Image } from "@/components/Image"
+import GitStars from "./GitStars"
 import { StaticImageData } from "next/image"
 
 const SubjectBadge: React.FC<{
@@ -61,7 +62,10 @@ export interface IProps {
   description?: ReactNode
   note?: string
   alt?: string
+  githubUrl?: string
+  repoLangCount?: number
   subjects?: Array<string>
+  hideStars?: boolean
 }
 
 const ProductCard: React.FC<IProps> = ({
@@ -73,8 +77,16 @@ const ProductCard: React.FC<IProps> = ({
   note = "",
   alt = "",
   children,
+  githubUrl = "",
+  repoLangCount = 1,
   subjects,
+  hideStars = false,
 }) => {
+  // TODO: fetch github repo data
+
+  // TODO get proper github repo data
+  const hasRepoData = true 
+  
   const DESCRIPTION_STYLES: TextProps = {
     opacity: 0.8,
     fontSize: "sm",
@@ -113,11 +125,15 @@ const ProductCard: React.FC<IProps> = ({
         />
       </Center>
       <Flex flexDirection="column" p={6} textAlign="left" height="100%">
+        {hasRepoData && (
+          // TODO: get proper github repo data
+          <GitStars gitHubRepo={{url: githubUrl, stargazerCount: 20}} hideStars={hideStars} />
+        )}
         <Heading
           as="h3"
           fontSize="2xl"
           fontWeight={600}
-          mt={8}
+          mt={!hasRepoData ? 8 : 12}
           mb={3}
         >
           {name}
@@ -133,6 +149,15 @@ const ProductCard: React.FC<IProps> = ({
               {subject}
             </SubjectBadge>
           ))}
+        {hasRepoData &&
+          // TODO: get proper github repo data
+          [{name: 'JavaScript'}].map(
+            ({ name }: { name: string }, idx: number) => (
+              <SubjectBadge key={idx} subject={name}>
+                {name.toUpperCase()}
+              </SubjectBadge>
+            )
+          )}
       </HStack>
       <ButtonLink to={url} m={4} height={20}>
         Open {name}

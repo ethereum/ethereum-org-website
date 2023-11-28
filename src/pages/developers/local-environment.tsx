@@ -48,6 +48,7 @@ const Column = ({ children }: ChildOnlyProp) => {
 interface IFramework {
   id: string
   url: string
+  githubUrl: string
   background: string
   name: string
   description: string
@@ -69,13 +70,14 @@ export const getStaticProps: GetStaticProps = async (
   }
 }
 
-const DevelopersPage = () => {
+const LocalEnvironmentPage = () => {
   const { t } = useTranslation("page-developers-local-environment")
 
   const frameworksList: Array<IFramework> = [
     {
       id: "waffle",
       url: "https://getwaffle.io/",
+      githubUrl: "https://github.com/EthWorks/waffle",
       background: "#ffffff",
       name: "Waffle",
       description: t("page-developers-local-environment:page-local-environment-waffle-desc"),
@@ -85,6 +87,7 @@ const DevelopersPage = () => {
     {
       id: "kurtosis",
       url: "https://www.kurtosis.com/",
+      githubUrl: "https://github.com/kurtosis-tech/kurtosis",
       background: "#000000",
       name: "Kurtosis",
       description: t("page-developers-local-environment:page-local-environment-kurtosis-desc"),
@@ -94,6 +97,7 @@ const DevelopersPage = () => {
     {
       id: "hardhat",
       url: "https://hardhat.org/",
+      githubUrl: "https://github.com/nomiclabs/hardhat",
       background: "#faf8fb",
       name: "Hardhat",
       description: t("page-developers-local-environment:page-local-environment-hardhat-desc"),
@@ -103,6 +107,7 @@ const DevelopersPage = () => {
     {
       id: "truffle",
       url: "https://www.trufflesuite.com/",
+      githubUrl: "https://github.com/trufflesuite/truffle",
       background: "#31272a",
       name: "Truffle",
       description: t("page-developers-local-environment:page-local-environment-truffle-desc"),
@@ -112,6 +117,7 @@ const DevelopersPage = () => {
     {
       id: "brownie",
       url: "https://github.com/eth-brownie/brownie",
+      githubUrl: "https://github.com/eth-brownie/brownie",
       background: "#ffffff",
       name: "Brownie",
       description: t("page-developers-local-environment:page-local-environment-brownie-desc"),
@@ -121,6 +127,7 @@ const DevelopersPage = () => {
     {
       id: "epirus",
       url: "https://www.web3labs.com/epirus",
+      githubUrl: "https://github.com/web3labs/epirus-free",
       background: "#ffffff",
       name: "Epirus",
       description: t("page-developers-local-environment:page-local-environment-epirus-desc"),
@@ -130,6 +137,7 @@ const DevelopersPage = () => {
     {
       id: "createethapp",
       url: "https://github.com/PaulRBerg/create-eth-app",
+      githubUrl: "https://github.com/PaulRBerg/create-eth-app",
       background: "#ffffff",
       name: "Create Eth App",
       description: t("page-developers-local-environment:page-local-environment-eth-app-desc"),
@@ -139,6 +147,7 @@ const DevelopersPage = () => {
     {
       id: "scaffoldeth",
       url: "https://github.com/austintgriffith/scaffold-eth",
+      githubUrl: "https://github.com/austintgriffith/scaffold-eth",
       background: "#ffffff",
       name: "scaffold-eth",
       description: t("page-developers-local-environment:page-local-environment-scaffold-eth-desc"),
@@ -148,6 +157,7 @@ const DevelopersPage = () => {
     {
       id: "soliditytemplate",
       url: "https://github.com/paulrberg/solidity-template",
+      githubUrl: "https://github.com/paulrberg/solidity-template",
       background: "#ffffff",
       name: "Solidity template",
       description: t("page-developers-local-environment:page-local-environment-solidity-template-desc"),
@@ -157,6 +167,7 @@ const DevelopersPage = () => {
     {
       id: "foundry",
       url: "https://getfoundry.sh/",
+      githubUrl: "https://github.com/foundry-rs/foundry",
       background: "#ffffff",
       name: "Foundry",
       description: t("page-developers-local-environment:page-local-environment-foundry-desc"),
@@ -279,4 +290,4 @@ const DevelopersPage = () => {
   )
 }
 
-export default DevelopersPage
+export default LocalEnvironmentPage
