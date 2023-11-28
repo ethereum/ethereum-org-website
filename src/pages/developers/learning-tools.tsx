@@ -1,9 +1,7 @@
 import Translation from "@/components/Translation"
-import { RootLayout } from "../../layouts/RootLayout"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { GetStaticProps } from "next"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { ChildOnlyProp, LearningTool } from "@/lib/types"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 import Heading from "@/components/OldHeading"
@@ -117,17 +115,15 @@ export const getStaticProps: GetStaticProps = async (
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath('/developers/learning-tools')
-  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      lastDeployDate,
     },
   }
 }
 
-const DevelopersPage = ({ lastDeployDate }) => {
+const DevelopersPage = () => {
   const { t } = useTranslation(["page-developers-learning-tools"])
 
 
@@ -313,12 +309,7 @@ const DevelopersPage = ({ lastDeployDate }) => {
   ]
 
   return (
-    <RootLayout
-      contentIsOutdated={false}
-      contentNotTranslated={false}
-      lastDeployDate={lastDeployDate}
-    >
-      <Page>
+    <Page>
       <PageMetadata
         title={t("page-developers-learning-tools:page-learning-tools-meta-title")}
         description={t("page-developers-learning-tools:page-learning-tools-meta-desc")}
@@ -382,7 +373,6 @@ const DevelopersPage = ({ lastDeployDate }) => {
         <FeedbackCard />
       </ContentBox>
     </Page>
-    </RootLayout>
   )
 }
 
