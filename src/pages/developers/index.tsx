@@ -1,9 +1,7 @@
 import Translation from "@/components/Translation"
-import { RootLayout } from "@/layouts/RootLayout"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { GetStaticProps } from "next"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { Box, Flex, SimpleGrid, TextProps, chakra, useColorModeValue } from "@chakra-ui/react"
 import { ChildOnlyProp } from "@/lib/types"
 import PageMetadata from "@/components/PageMetadata"
@@ -16,9 +14,11 @@ import Card, { IProps as ICardProps } from "@/components/Card"
 import Callout from "@/components/Callout"
 import DevelopersImage from "@/public/developers-eth-blocks.png"
 import InlineLink from "@/components/Link"
-import { Image, type ImageProps } from "@/components/Image"
+import { Image } from "@/components/Image"
 import DogeImage from '@/public/doge-computer.png'
+import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
 import FeedbackCard from "@/components/FeedbackCard"
+import HubHero from "@/components/Hero/HubHero"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -121,18 +121,17 @@ const StyledCallout = chakra(Callout, {
     flex: { base: "auto", md: "1 1 416px" },
   },
 })
+
 export const getStaticProps: GetStaticProps = async (
   context
 ) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath('/developers')
-  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      lastDeployDate,
     },
   }
 }
@@ -176,21 +175,23 @@ const paths: Array<IDevelopersPath> = [
   },
 ]
 
-const DevelopersPage = ({ lastDeployDate }) => {
+const DevelopersPage = () => {
   const { t } = useTranslation("page-developers-index")
 
   return (
-    <RootLayout
-      contentIsOutdated={false}
-      contentNotTranslated={false}
-      lastDeployDate={lastDeployDate}
-    >
       <Page>
         <PageMetadata
           title={t("page-developers-index:page-developer-meta-title")}
           description={t("page-developers-index:page-developers-meta-desc")}
         />
-        {/* TODO: IMPLEMENT HUBHERO WHEN THIS IS BROUGHT INTO THIS REPO */}
+        <HubHero
+          heroImgSrc={HeroImage}
+          header={`${t("page-developers-index:page-developers-title-1")} ${t(
+            "page-developers-index:page-developers-title-2"
+          )} ${t("page-developers-index:page-developers-title-3")}`}
+          title={t("developers")}
+          description={t("page-developers-index:page-developers-subtitle")}
+        />
         <Content>
           <MonoSubtitle>
             <Translation id="page-developers-index:page-developers-get-started" />
@@ -462,8 +463,7 @@ const DevelopersPage = ({ lastDeployDate }) => {
         </ThreeColumnContent>
       </GrayContainer>
       <FeedbackCard />
-      </Page>
-    </RootLayout>
+    </Page>
   )
 }
 
