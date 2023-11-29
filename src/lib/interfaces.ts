@@ -169,13 +169,3 @@ export interface Author {
     url: string
   }
 }
-
-// Locales
-export interface Language {
-  code: Lang
-  crowdinCode: string
-  name: string
-  localName: string
-  langDir: Direction
-  dateFormat: string
-}

@@ -16,8 +16,7 @@ import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { languageMetadata } from "@/lib/utils/languages"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
-import { TranslationKey } from "@/lib/types"
-import { Language } from "@/lib/interfaces"
+import { I18nLocale, TranslationKey } from "@/lib/types"
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { locale } = context
@@ -43,7 +42,7 @@ const LanguagesPage = () => {
     setKeyword("")
   }
   const searchString = t("page-languages-filter-placeholder")
-  let translationsCompleted: Array<Language> = []
+  let translationsCompleted: Array<I18nLocale> = []
 
   for (const lang in languageMetadata) {
     const langMetadata = {
