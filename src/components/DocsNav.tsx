@@ -1,3 +1,4 @@
+// TODO: Implement with RTL locale responsiveness
 import React from "react"
 import {
   Box,
