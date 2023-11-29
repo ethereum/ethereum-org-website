@@ -1,27 +1,31 @@
-import Translation from "@/components/Translation"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { GetStaticProps } from "next"
-import { ChildOnlyProp } from "@/lib/types"
+import { StaticImageData } from "next/image"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "react-i18next"
 import { Box, Flex, ListItem, SimpleGrid, UnorderedList } from "@chakra-ui/react"
+
+import { ChildOnlyProp } from "@/lib/types"
+
 import FeedbackCard from "@/components/FeedbackCard"
-import ProductCard from "@/components/ProductCard"
-import PageMetadata from "@/components/PageMetadata"
+import { Image } from "@/components/Image"
 import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
-import { useTranslation } from "react-i18next"
-import { Image } from "@/components/Image"
-import EthBlocksImage from '@/public/developers-eth-blocks.png'
-import { StaticImageData } from "next/image"
-import WaffleImage from '@/public/dev-tools/waffle.png'
-import KurtosisImage from '@/public/dev-tools/kurtosis.png'
-import HardhatImage from '@/public/dev-tools/hardhat.png'
-import TruffleImage from '@/public/dev-tools/truffle.png'
+import PageMetadata from "@/components/PageMetadata"
+import ProductCard from "@/components/ProductCard"
+import Translation from "@/components/Translation"
+
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { ghRepoData } from "@/lib/api/ghRepoData"
 import EthDiamondBlackImage from '@/public/assets/eth-diamond-black.png'
 import EpirusImage from '@/public/dev-tools/epirus.png'
-import ScaffoldEthImage from '@/public/dev-tools/scaffoldeth.png'
 import FoundryImage from '@/public/dev-tools/foundry.png'
-import { ghRepoData } from "@/lib/api/ghRepoData"
+import HardhatImage from '@/public/dev-tools/hardhat.png'
+import KurtosisImage from '@/public/dev-tools/kurtosis.png'
+import ScaffoldEthImage from '@/public/dev-tools/scaffoldeth.png'
+import TruffleImage from '@/public/dev-tools/truffle.png'
+import WaffleImage from '@/public/dev-tools/waffle.png'
+import EthBlocksImage from '@/public/developers-eth-blocks.png'
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
@@ -64,7 +68,7 @@ export const getStaticProps: GetStaticProps = async (
 ) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath('/developers/local-environment')
+  const requiredNamespaces = getRequiredNamespacesForPage('/developers/local-environment')
 
   // TODO: fetch github repo data
   let frameworksList: Array<IFramework> = [

@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { StaticImageData } from "next/image"
 import {
   Badge,
   Box,
@@ -11,10 +12,10 @@ import {
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import Text from "@/components/OldText"
 import { Image } from "@/components/Image"
+import Text from "@/components/OldText"
+
 import GitStars from "./GitStars"
-import { StaticImageData } from "next/image"
 
 const SubjectBadge: React.FC<{
   subject: string
@@ -123,7 +124,6 @@ const ProductCard: React.FC<IProps> = ({
       </Center>
       <Flex flexDirection="column" p={6} textAlign="start" height="100%">
         {githubRepoStars > 0 && (
-          // TODO: get proper github repo data
           <GitStars gitHubRepo={{url: githubUrl, stargazerCount: githubRepoStars}} hideStars={hideStars} />
         )}
         <Heading
