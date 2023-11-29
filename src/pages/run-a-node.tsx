@@ -49,6 +49,7 @@ import impact from "@/public/impact_transparent.png"
 import leslie from "@/public/upgrades/upgrade_rhino.png"
 
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import type { ChildOnlyProp } from "@/lib/types"
 
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
@@ -325,12 +326,16 @@ type RunANodeCard = {
 
 export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
   const { locale } = context
+  const lastDeployDate = getLastDeployDate()
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("run-a-node")
 
   return {
-    props: await serverSideTranslations(locale!, requiredNamespaces),
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
+    },
   }
 }
 
