@@ -1,24 +1,24 @@
-import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import React, { useState } from "react"
-import { MdClose } from "react-icons/md"
-import { SSRConfig, useTranslation } from "next-i18next"
-import { useRouter } from "next/router"
 import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { MdClose } from "react-icons/md"
+import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
-import InlineLink, { BaseLink } from "../components/Link"
-import Input from "../components/Input"
-import PageMetadata from "../components/PageMetadata"
-import Text from "../components/OldText"
-import OldHeading from "../components/OldHeading"
+import { I18nLocale, TranslationKey } from "@/lib/types"
 
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
   languageMetadata,
 } from "@/lib/utils/translations"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
-import { I18nLocale, TranslationKey } from "@/lib/types"
+import Input from "../components/Input"
+import InlineLink, { BaseLink } from "../components/Link"
+import OldHeading from "../components/OldHeading"
+import Text from "../components/OldText"
+import PageMetadata from "../components/PageMetadata"
 
 type Props = SSRConfig & {
   lastDeployDate: string

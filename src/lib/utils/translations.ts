@@ -1,8 +1,6 @@
 import i18nConfig from "../../../i18n.config.json"
-
-import { I18nLocale, Lang } from "../types"
-
 import { DEFAULT_LOCALE } from "../constants"
+import { I18nLocale, Lang } from "../types"
 
 export type Languages = {
   [lang in Lang]: I18nLocale
