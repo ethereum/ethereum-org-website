@@ -1,3 +1,7 @@
+import { useRouter } from "next/router"
+import type { GetStaticProps } from "next/types"
+import { SSRConfig, useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
@@ -5,14 +9,9 @@ import {
   UnorderedList,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { GetStaticProps } from "next/types"
-import type { StaticImageData } from "next/image"
-import type { ReactNode } from "react"
 
-import { Image, type ImageProps } from "@/components/Image"
+import type { ChildOnlyProp } from "@/lib/types"
+
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -21,12 +20,20 @@ import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
-import InlineLink from "@/components/Link"
+import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
+import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
-import PageMetadata from "@/components/PageMetadata"
 import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
+
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { resizeImage } from "@/lib/utils/resizeImage"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import consensusData from "@/data/consensus-bounty-hunters.json"
+import executionData from "@/data/execution-bounty-hunters.json"
 
 import besu from "@/public/upgrades/besu.png"
 import erigon from "@/public/upgrades/erigon.png"
@@ -39,13 +46,6 @@ import nimbus from "@/public/upgrades/nimbus-cloud.png"
 import prysm from "@/public/upgrades/prysm.png"
 import tekuDark from "@/public/upgrades/teku-dark.png"
 import tekuLight from "@/public/upgrades/teku-light.png"
-
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import type { ChildOnlyProp } from "@/lib/types"
-
-import consensusData from "@/data/consensus-bounty-hunters.json"
-import executionData from "@/data/execution-bounty-hunters.json"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -285,6 +285,7 @@ const Faq = (props: ChildOnlyProp) => (
     {...props}
   />
 )
+
 const LeftColumn = (props: ChildOnlyProp) => <Box w="full" {...props} />
 
 const RightColumn = (props: ChildOnlyProp) => (
@@ -311,7 +312,7 @@ type Client = {
 }
 
 type Spec = {
-  title: ReactNode
+  title: string
   link: string
 }
 
@@ -320,11 +321,11 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   return b.score - a.score
 }
 
-export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
+export const getStaticProps = (async (context) => {
   const { locale } = context
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("bug-bounty")
+  const requiredNamespaces = getRequiredNamespacesForPage("bug-bounty")
   const lastDeployDate = getLastDeployDate()
 
   return {
@@ -333,7 +334,7 @@ export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
       lastDeployDate,
     },
   }
-}
+}) satisfies GetStaticProps<SSRConfig>
 
 const BugBountiesPage = () => {
   const { pathname } = useRouter()
@@ -416,18 +417,9 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
-  ].map((client) => {
-    client.image.width = 60
-    return client
-  })
+  ].map((client) => ({ ...client, image: resizeImage(client.image, 24) }))
 
-  const clientsSmall = clients.map((client) => {
-    const thumbnail = client.image as StaticImageData
-    thumbnail.width = 24
-    return { ...client, image: thumbnail }
-  })
-
-  const specs: Array<Spec> = [
+  const specs: Spec[] = [
     {
       title: t("page-upgrades-bug-bounty-title-1"),
       link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/beacon-chain.md",
@@ -483,16 +475,16 @@ const BugBountiesPage = () => {
       <ClientIntro>{t("page-upgrades-bug-bounty-clients")}</ClientIntro>
       <ClientRow>
         <Client>
-          <Image src={besu} alt="" />
+          <Image src={resizeImage(besu, 60)} alt="" />
         </Client>
         <Client>
-          <Image src={erigon} alt="" />
+          <Image src={resizeImage(erigon, 60)} alt="" />
         </Client>
         <Client>
-          <Image src={geth} alt="" />
+          <Image src={resizeImage(geth, 60)} alt="" />
         </Client>
         <Client>
-          <Image src={nethermind} alt="" />
+          <Image src={resizeImage(nethermind, 60)} alt="" />
         </Client>
       </ClientRow>
       <ClientRow>
@@ -503,16 +495,19 @@ const BugBountiesPage = () => {
           />
         </Client>
         <Client>
-          <Image src={lodestar} alt="" />
+          <Image src={resizeImage(lodestar, 60)} alt="" />
         </Client>
         <Client>
-          <Image src={nimbus} alt="" />
+          <Image src={resizeImage(nimbus, 60)} alt="" />
         </Client>
         <Client>
-          <Image src={prysm} alt="" />
+          <Image src={resizeImage(prysm, 60)} alt="" />
         </Client>
         <Client>
-          <Image src={useColorModeValue(tekuDark, tekuLight)} alt="" />
+          <Image
+            src={resizeImage(useColorModeValue(tekuDark, tekuLight), 60)}
+            alt=""
+          />
         </Client>
       </ClientRow>
       <StyledGrayContainer id="rules">
@@ -617,7 +612,7 @@ const BugBountiesPage = () => {
                 >
                   {t("page-upgrades-bug-bounty-help-links")}
                 </OldHeading>
-                <CardList items={clientsSmall} />
+                <CardList items={clients} />
               </Box>
             </StyledCard>
             <StyledCard
