@@ -101,7 +101,11 @@ export const useQuizWidget = ({
     setQuizData(quiz)
   }
 
-  useEffect(initialize, [quizKey])
+  useEffect(
+    initialize,
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [quizKey]
+  )
 
   const currentQuestionIndex = userQuizProgress.length
   const showResults = currentQuestionIndex === quizData?.questions.length

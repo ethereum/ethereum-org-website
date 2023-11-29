@@ -121,7 +121,7 @@ const ProductCard: React.FC<IProps> = ({
           maxH="257px"
         />
       </Center>
-      <Flex flexDirection="column" p={6} textAlign="left" height="100%">
+      <Flex flexDirection="column" p={6} textAlign="start" height="100%">
         {githubRepoStars > 0 && (
           // TODO: get proper github repo data
           <GitStars gitHubRepo={{url: githubUrl, stargazerCount: githubRepoStars}} hideStars={hideStars} />

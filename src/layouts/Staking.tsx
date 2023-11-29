@@ -13,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -21,6 +21,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import {
   ContentContainer,
   Heading1 as MdHeading1,
@@ -42,9 +43,6 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import LeftNavBar from "@/components/LeftNavBar"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -199,7 +197,6 @@ export const StakingLayout: React.FC<IProps> = ({
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const { summaryPoints } = frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
@@ -282,7 +279,7 @@ export const StakingLayout: React.FC<IProps> = ({
           priority
         />
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBp}
