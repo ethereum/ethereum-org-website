@@ -1,4 +1,4 @@
-import { FC, RefAttributes } from "react"
+import type { FC, RefAttributes } from "react"
 import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
 import {
@@ -9,7 +9,7 @@ import {
   forwardRef,
   Icon,
   Link as ChakraLink,
-  StyleProps,
+  type StyleProps,
   VisuallyHidden,
 } from "@chakra-ui/react"
 

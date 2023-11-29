@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
-import CardList, { type CardListItem } from "@/components/CardList"
+import CardList, { type CardProps } from "@/components/CardList"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
@@ -25,7 +25,7 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 const BeaconChainActions: React.FC = () => {
   const { t } = useTranslation(["page-upgrades-index", "page-upgrades"])
 
-  const datapoints: Array<CardListItem> = [
+  const datapoints: Array<CardProps> = [
     {
       title: t("consensus-beaconscan-title"),
       image: beaconscan,
@@ -43,7 +43,7 @@ const BeaconChainActions: React.FC = () => {
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
-  const reads: Array<CardListItem> = [
+  const reads: Array<CardProps> = [
     {
       title: t("page-upgrade-article-title-two-point-oh"),
       description: t("page-upgrade-article-author-status"),

@@ -1,14 +1,14 @@
 import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 
-import CardList, { CardListItem } from "./CardList"
+import CardList, { type CardProps as CardListItem } from "@/components/CardList"
 
 export interface IProps {}
 
 const MergeArticleList: React.FC<IProps> = () => {
   const { t } = useTranslation(["page-upgrades", "page-upgrades-index"])
 
-  const reads: Array<CardListItem> = [
+  const reads: CardListItem[] = [
     {
       title: t("page-upgrades-index:page-upgrade-article-title-ethmerge"),
       description: t("page-upgrades-index:page-upgrade-article-author-ethmerge"),

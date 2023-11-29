@@ -1,12 +1,12 @@
-import { ReactNode } from "react"
+import type { ReactNode } from "react"
 import {
   Box,
-  BoxProps,
   Flex,
   HStack,
   LinkBox,
   LinkOverlay,
-  StackProps,
+  type BoxProps,
+  type StackProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 
@@ -15,7 +15,7 @@ import { BaseLink } from "@/components/Link"
 
 import * as url from "@/lib/utils/url"
 
-export type CardListItem = {
+export type CardProps = {
   title?: ReactNode
   description?: ReactNode
   caption?: ReactNode
@@ -41,16 +41,22 @@ const CardContainer = (props: StackProps) => (
   />
 )
 
-const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
-  const { title, description, caption, link, image, alt, ...rest } = props
-
+const Card = ({
+  title,
+  description,
+  caption,
+  link,
+  image,
+  alt,
+  ...props
+}: CardProps & Omit<StackProps, "title" | "id">) => {
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
   const descriptionColor = useColorModeValue("gray.500", "gray.400")
 
   return (
-    <CardContainer {...rest}>
+    <CardContainer {...props}>
       {image && <Image src={image} alt={alt ?? ""} minW="20px" />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
@@ -73,7 +79,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
         </Box>
       </Flex>
       {caption && (
-        <Flex flex="1 0 25%" align="center" wrap="wrap" mr={4}>
+        <Flex flex="1 0 25%" align="center" wrap="wrap" me={4}>
           <Box fontSize="sm" mb={0} opacity={0.6}>
             {caption}
           </Box>
@@ -84,17 +90,17 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   )
 }
 
-export interface IProps extends BoxProps {
-  items: Array<CardListItem>
+export type CardListProps = BoxProps & {
+  items: CardProps[]
   clickHandler?: (idx: string | number) => void
 }
 
-const CardList: React.FC<IProps> = ({
+const CardList = ({
   items,
   clickHandler = () => null,
-  ...rest
-}) => (
-  <Box bg="background.base" w="full" {...rest}>
+  ...props
+}: CardListProps) => (
+  <Box bg="background.base" w="full" {...props}>
     {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link
