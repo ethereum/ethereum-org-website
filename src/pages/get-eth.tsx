@@ -34,6 +34,7 @@ import wallet from "@/public/wallet.png"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { resizeImage } from "@/lib/utils/resizeImage"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -98,9 +99,13 @@ export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("get-eth")
+  const lastDeployDate = getLastDeployDate()
 
   return {
-    props: await serverSideTranslations(locale!, requiredNamespaces),
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
+    },
   }
 }) satisfies GetStaticProps<{}, {}>
 

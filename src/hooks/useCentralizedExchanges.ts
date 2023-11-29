@@ -43,8 +43,8 @@ import type { ImageProps } from "@/components/Image"
 import type { Lang } from "@/lib/types"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import exchangeData from "@/data/exchangesByCountry"
 import { resizeImage } from "@/lib/utils/resizeImage"
+import exchangeData from "@/data/exchangesByCountry"
 
 type ExchangeKey =
   | "binance"
