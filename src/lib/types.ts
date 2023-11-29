@@ -102,6 +102,11 @@ export type I18nLocale = {
 
 export type TranslationKey = string
 
+export type LoadingState<T> =
+  | { loading: true }
+  | { loading: false; data: T }
+  | { loading: false; error: unknown }
+
 /**
  * Quiz data types
  */
