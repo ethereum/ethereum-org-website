@@ -28,7 +28,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -152,7 +152,7 @@ export const getStaticProps = (async (context) => {
   }
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(slug, layout)
+  const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
 
   return {
     props: {

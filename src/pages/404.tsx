@@ -4,8 +4,8 @@ import type { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import InlineLink from "../components/Link"
 import Translation from "../components/Translation"
@@ -16,7 +16,7 @@ export const getStaticProps = (async (context) => {
   const { locale } = context
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("/")
+  const requiredNamespaces = getRequiredNamespacesForPage("/")
   const lastDeployDate = getLastDeployDate()
 
   return {
