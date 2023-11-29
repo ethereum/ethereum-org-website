@@ -40,6 +40,7 @@ import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { resizeImage } from "@/lib/utils/resizeImage"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { InfoGrid } from "@/layouts/Staking"
@@ -345,7 +346,7 @@ const RunANodePage = () => {
     title: t("page-run-a-node-title"),
     header: <Translation id="page-run-a-node:page-run-a-node-hero-header" />,
     subtitle: t("page-run-a-node-hero-subtitle"),
-    image: ethereumInside,
+    image: resizeImage(ethereumInside, 624),
     alt: t("page-run-a-node-hero-alt"),
     buttons: [
       {
@@ -436,12 +437,6 @@ const RunANodePage = () => {
     },
   ]
 
-  community.width = 624
-  ethereumInside.width = 624
-  hackathon.width = 624
-  impact.width = 300
-  leslie.width = 624
-
   return (
     <GappedPage>
       <PageMetadata
@@ -468,7 +463,7 @@ const RunANodePage = () => {
             <Text>{t("page-run-a-node-what-3-text")}</Text>
           </Width60>
           <Width40>
-            <Image src={hackathon} alt="" />
+            <Image src={resizeImage(hackathon, 624)} alt="" />
           </Width40>
         </TwoColumnContent>
       </Content>
@@ -478,7 +473,7 @@ const RunANodePage = () => {
           alignSelf="center"
           width={{ base: "full", md: "90%" }}
           mb={{ base: 0, md: 4 }}
-          image={impact}
+          image={resizeImage(impact, 300)}
           title={<Translation id="page-run-a-node:page-run-a-node-who-title" />}
           contentPreview={
             <Translation id="page-run-a-node:page-run-a-node-who-preview" />
@@ -804,7 +799,7 @@ const RunANodePage = () => {
             </ButtonContainer>
           </Column>
           <Column>
-            <Image src={community} alt="" />
+            <Image src={resizeImage(community, 624)} alt="" />
           </Column>
         </SplitContent>
       </Content>
@@ -839,7 +834,7 @@ const RunANodePage = () => {
       <StakingCalloutContainer>
         <Column>
           <Image
-            src={leslie}
+            src={resizeImage(leslie, 624)}
             alt=""
             transform={{
               base: "scaleX(-1) translateY(-3rem)",
