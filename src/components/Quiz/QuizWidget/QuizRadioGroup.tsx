@@ -24,21 +24,21 @@ export const QuizRadioGroup = () => {
     questions,
     currentQuestionIndex,
     answerStatus,
-    selectedAnswer,
-    setSelectedAnswer,
     setCurrentQuestionAnswerChoice,
   } = useQuizWidgetContext()
   const { t } = useTranslation("learn-quizzes")
 
   const handleSelection = (answerId: string) => {
-    setSelectedAnswer(answerId)
     const isCorrect =
       answerId === questions[currentQuestionIndex].correctAnswerId
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })
   }
 
-  const { getRadioProps, getRootProps } = useRadioGroup({
+  const {
+    getRadioProps,
+    getRootProps,
     value: selectedAnswer,
+  } = useRadioGroup({
     name: `quiz-question-${currentQuestionIndex}`,
     onChange: handleSelection,
   })
@@ -47,7 +47,7 @@ export const QuizRadioGroup = () => {
 
   // Memoized values
   const explanation = useMemo<TranslationKey>(() => {
-    if (!selectedAnswer) return ""
+    if (selectedAnswer === "") return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAnswer])

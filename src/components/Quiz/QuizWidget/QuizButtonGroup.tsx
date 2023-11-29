@@ -25,7 +25,6 @@ export const QuizButtonGroup = () => {
     quizScore,
     setCurrentQuestionAnswerChoice,
     setUserQuizProgress,
-    setSelectedAnswer,
     setShowAnswer,
   } = useQuizWidgetContext()
 
@@ -83,7 +82,6 @@ export const QuizButtonGroup = () => {
     })
 
     setCurrentQuestionAnswerChoice(null)
-    setSelectedAnswer(undefined)
     setShowAnswer(false)
 
     if (quizPageProps) {

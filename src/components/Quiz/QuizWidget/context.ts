@@ -9,7 +9,6 @@ type QuizWidgetContextType = Quiz & {
   answerStatus: AnswerStatus
   currentQuestionIndex: number
   userQuizProgress: AnswerChoice[]
-  selectedAnswer: string | undefined
   showResults: boolean
   currentQuestionAnswerChoice: AnswerChoice | null
   quizPageProps:
@@ -25,7 +24,6 @@ type QuizWidgetContextType = Quiz & {
     isPassingScore: boolean
   initialize: () => void
   setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
-  setSelectedAnswer: (answer?: string) => void
   setShowAnswer: (prev: boolean) => void
   setCurrentQuestionAnswerChoice: (answer: AnswerChoice | null) => void
 }

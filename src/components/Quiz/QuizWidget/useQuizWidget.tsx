@@ -35,9 +35,6 @@ export const useQuizWidget = ({
   const [showAnswer, setShowAnswer] = useState<boolean>(false)
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
-  const [selectedAnswer, setSelectedAnswer] = useState<string | undefined>(
-    undefined
-  )
 
   useEffect(() => {
     setNextQuiz(getNextQuiz(quizKey))
@@ -48,7 +45,6 @@ export const useQuizWidget = ({
     setCurrentQuestionAnswerChoice(null)
     setUserQuizProgress([])
     setShowAnswer(false)
-    setSelectedAnswer(undefined)
 
     const currentQuizKey =
       quizKey ||
@@ -135,7 +131,6 @@ export const useQuizWidget = ({
     showResults,
     currentQuestionIndex,
     userQuizProgress,
-    selectedAnswer,
     currentQuestionAnswerChoice,
     numberOfCorrectAnswers,
     nextQuiz,
@@ -145,7 +140,6 @@ export const useQuizWidget = ({
     isPassingScore,
     initialize,
     setUserQuizProgress,
-    setSelectedAnswer,
     setShowAnswer,
     setCurrentQuestionAnswerChoice,
   }
