@@ -1,6 +1,7 @@
 import { Box, type BoxProps, Flex, type FlexProps } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
 import type { GetStaticProps } from "next/types"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
 
 import { Divider } from "@/components/MdComponents"
@@ -31,19 +32,10 @@ import wallet from "@/public/wallet.png"
 // import matcha from "@/public/exchanges/matcha.png" // width=20px
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { resizeImage } from "@/lib/utils/resizeImage"
 
 import type { ChildOnlyProp } from "@/lib/types"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-
-bancor.width = 20
-dapps.width = 600
-kyber.width = 20
-loopring.width = 20
-oneinch.width = 20
-uniswap.width = 20
-wallet.width = 600
-// matcha.width = 20
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -119,31 +111,31 @@ const GetEthPage = () => {
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
-      image: oneinch,
+      image: resizeImage(oneinch, 20),
       alt: "",
     },
     {
       title: "Bancor",
       link: "https://www.bancor.network/",
-      image: bancor,
+      image: resizeImage(bancor, 20),
       alt: "",
     },
     {
       title: "Kyber",
       link: "https://kyberswap.com/#/swap/",
-      image: kyber,
+      image: resizeImage(kyber, 20),
       alt: "",
     },
     {
       title: "Loopring",
       link: "https://loopring.io/",
-      image: loopring,
+      image: resizeImage(loopring, 20),
       alt: "",
     },
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
-      image: uniswap,
+      image: resizeImage(uniswap, 20),
       alt: "",
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
@@ -375,7 +367,7 @@ const GetEthPage = () => {
       <TwoColumnContent>
         <Flex as={LeftColumn} flexDir="column">
           <Image
-            src={wallet}
+            src={resizeImage(wallet, 600)}
             alignSelf="center"
             w={{ base: "full", sm: "60%", md: "50%" }}
             maxW="600px"
@@ -453,7 +445,7 @@ const GetEthPage = () => {
         mb={40}
         titleKey="page-get-eth:page-get-eth-use-your-eth"
         descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
-        image={dapps}
+        image={resizeImage(dapps, 600)}
         alt={t("page-index:page-index-sections-individuals-image-alt")}
         maxImageWidth={600}
       >
