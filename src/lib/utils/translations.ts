@@ -24,9 +24,6 @@ export const getRequiredNamespacesForPath = (
   path: string,
   layout?: string | undefined
 ) => {
-  // For pages that don't need extra namespaces or don't use the Translation component
-  // if (!path) return "common"
-
   let requiredNamespaces: string[] = ["common"]
 
   if (layout === "docs") {
