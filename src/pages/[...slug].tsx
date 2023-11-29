@@ -196,11 +196,9 @@ const ContentPage: NextPageWithLayout<
 ContentPage.getLayout = (page) => {
   // values returned by `getStaticProps` method and passed to the page component
   const {
-    originalSlug: slug,
+    slug,
     frontmatter,
     lastUpdatedDate,
-    lastDeployDate,
-    contentNotTranslated,
     layout,
     timeToRead,
     tocItems,

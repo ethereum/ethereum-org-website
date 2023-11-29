@@ -206,7 +206,12 @@ export const docsComponents = {
   YouTube,
 }
 
-interface DocsLayoutProps extends Pick<MdPageContent, 'slug' | 'tocItems' | 'lastUpdatedDate'>, ChildOnlyProp {
+interface DocsLayoutProps
+  extends Pick<
+      MdPageContent,
+      "slug" | "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+    >,
+    ChildOnlyProp {
   frontmatter: DocsFrontmatter
 }
 

@@ -171,7 +171,10 @@ export const tutorialsComponents = {
 }
 interface TutorialLayoutProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "tocItems" | "lastUpdatedDate"> {
+    Pick<
+      MdPageContent,
+      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+    > {
   frontmatter: TutorialFrontmatter
   timeToRead: number
 }
