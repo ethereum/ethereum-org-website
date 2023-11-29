@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
+  Center,
   Flex,
   type FlexProps,
   Icon,
@@ -11,7 +12,6 @@ import {
   Show,
   Text,
   useToken,
-  Center,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
