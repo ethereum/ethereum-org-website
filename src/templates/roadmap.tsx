@@ -144,7 +144,7 @@ const components = {
 }
 
 const RoadmapPage = ({
-  data: { pageData: mdx },
+  data: { pageData: mdx, heroImage },
   location,
 }: PageProps<Queries.RoadmapPageQuery, Context>) => {
   // TODO: Replace with direct token implementation after UI migration is completed
@@ -221,7 +221,7 @@ const RoadmapPage = ({
     <Box position="relative">
       {parsedPathname === "roadmap" ? (
         <HubHero
-          heroImgSrc={getImage(mdx.frontmatter.image)!}
+          heroImgSrc={getImage(heroImage)!}
           header={mdx.frontmatter.title}
           title={""}
           description={mdx.frontmatter.description}
@@ -322,6 +322,16 @@ export const roadmapPageQuery = graphql`
           data
           language
         }
+      }
+    }
+    heroImage: file(relativePath: { eq: "heroes/roadmap-hub-hero.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
