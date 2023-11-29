@@ -1,12 +1,15 @@
 import { join } from "path"
+
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
+
+import type { Lang, LastUpdatedState } from "@/lib/types"
+
 import {
   DEFAULT_LOCALE,
   GITHUB_COMMITS_URL,
   OLD_CONTENT_DIR,
 } from "@/lib/constants"
-import type { Lang, LastUpdatedState } from "@/lib/types"
 
 import { gitHubAuthHeaders } from "@/hooks/useClientSideGitHubContributors"
 

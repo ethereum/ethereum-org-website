@@ -1,6 +1,8 @@
 import type { CrowdinContributor, Lang } from "@/lib/types"
+
 import translators from "@/data/crowdin/combined-translators.json"
 import fileIds from "@/data/crowdin/file-ids.json"
+
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 export const getCrowdinContributors = (

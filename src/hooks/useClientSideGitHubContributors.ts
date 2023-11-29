@@ -1,6 +1,7 @@
 import { join } from "path"
 
 import { useEffect, useState } from "react"
+
 import type { Author, FileContributorsState } from "@/lib/types"
 
 import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"

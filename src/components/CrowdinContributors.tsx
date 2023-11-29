@@ -1,5 +1,6 @@
-import FileContributors from "@/components/FileContributors"
 import type { Author, CrowdinContributor } from "@/lib/types"
+
+import FileContributors from "@/components/FileContributors"
 
 type CrowdinContributorsProps = {
   relativePath: string

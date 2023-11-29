@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
+import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
@@ -49,7 +50,7 @@ import YouTube from "@/components/YouTube"
 
 // Utils
 import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
-import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
+
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
