@@ -8,7 +8,7 @@ In the ever-evolving landscape, Liquid Staking Derivatives (LSDs) have emerged a
 
 However, as with any burgeoning market, some challenges and opportunities need careful consideration. This post delves into the hurdles newer staking pools face, users' behavior in this space, and the critical role of user experience.
 
-The Staking Pool Challenge
+**The Staking Pool Challenge**
 Newer staking pools often find themselves in a tight spot when competing against established players in the market. 
 
 These larger players command substantial liquidity, making it challenging for new entrants to attract users and offer competitive yields.
@@ -17,37 +17,31 @@ A few major players have established a stronghold in the LST (Liquid Staking Tok
 
 So, why do new pools obsess over liquidity when it's a fight they cannot win?
 
-Complexity vs. Clarity
+**Complexity vs. Clarity**
 In an attempt to differentiate themselves, many new pools are turning to intricate staking setups. 
 This often results in complex systems that can need to be clarified for users, creating potential barriers to adoption. 
 
 Examples of strategies designed to enhance yield:
 
-
+![Example of strategies](./l.png)
 
 The need for simplicity and clarity must be balanced in attracting and retaining users.
 
-Understanding User Behavior
+**Understanding User Behavior**
 
 Specifically, 224,000 users staked $1024 or less, and 125,000 users staked between $1024 to $32,000, demonstrating the varied investment strategies in play (October 2023)
-
 
 In most cases, staking pools try to talk to each user the same way.
 
 A user with 1 ETH and 100 ETH probably has a different risk profile/strategy they are thinking about, creating an opportunity to offer a targeted product.
 
+![Example of strategies](./2.png)
 
 Surprisingly, 65% of users need to actively manage their stETH to increase yield. (October 2023)
 
 This finding highlights a potential gap in user engagement and addresses the issue that everyone is leaning into more complex Liquid Staking Strategies when even the most simple ones are not attractive to users.
 
-
-
-
-
-
-
-The Importance of UX
+**The Importance of UX**
 The disparity in how investors understand and use Liquid staking points to a need for better UX design. 
 
 The concept of rebasing (1 LSD = 1 ETH) versus reward-bearing LSDs (1 LSD = ? ETH) can be confusing.
@@ -63,7 +57,7 @@ Coinbase is a great example as they originally started with no liquid staking to
 
 The market, while promising, is fraught with challenges that require strategic thinking and user-centric solutions. 
 
-
+![Example of strategies](./3.png)
 
 As the market evolves, it will be crucial for new entrants to focus on clear, simple, and user-friendly platforms.
 
