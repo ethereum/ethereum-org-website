@@ -56,7 +56,7 @@ const CalloutBanner = ({
         flexBasis="50%"
         direction="column"
         justifyContent="center"
-        pl={{ base: 0, sm: 4, lg: 8 }}
+        ps={{ base: 0, sm: 4, lg: 8 }}
         w={{ base: "full", lg: "inherit" }}
       >
         <OldHeading

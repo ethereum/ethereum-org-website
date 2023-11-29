@@ -24,11 +24,13 @@ const WalletFilterProfile = ({
   const { personas } = useWalletFilterProfile()
 
   const getContainerBg = (idx: number) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useColorModeValue(
       selectedPersona === idx ? "primary100" : "chakra-subtle-bg",
       selectedPersona === idx ? "primary900" : "black400"
     )
   const getContainerHoverBg = (idx: number) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useColorModeValue(
       "primary100",
       selectedPersona === idx ? "primary900" : "black500"
@@ -113,11 +115,11 @@ const WalletFilterProfile = ({
               </Box>
               <Heading
                 as="h3"
-                ml={0}
+                ms={0}
                 fontSize="1.2rem"
                 py={0}
-                pr={1}
-                pl={0}
+                pe={1}
+                ps={0}
                 lineHeight="1.7rem"
                 color="primary.base"
               >
@@ -146,8 +148,9 @@ const WalletFilterProfile = ({
               rowGap="0.4rem"
               aria-label={`${persona.title} filters`}
             >
-              {persona.featureHighlight.map((feature) => (
+              {persona.featureHighlight.map((feature, idx) => (
                 <ListItem
+                  key={idx}
                   display="flex"
                   gap="0.2rem"
                   fontSize="0.85rem"

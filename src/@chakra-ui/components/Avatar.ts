@@ -44,7 +44,7 @@ const baseStyleContainer = defineStyle((props) => {
     "[role='group'] &": {
       [$border.variable]: "colors.background.base",
       _notLast: {
-        marginLeft: $mlBySize.reference,
+        ms: $mlBySize.reference,
       },
     },
   })

@@ -66,8 +66,8 @@ const BeaconChainActions: React.FC = () => {
       <Flex flexDir={{ base: "column", md: "row" }} pt={4}>
         <Card
           w="full"
-          ml={0}
-          mr={{ base: 0, md: 4 }}
+          ms={0}
+          me={{ base: 0, md: 4 }}
           mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
           title={t("consensus-become-staker")}

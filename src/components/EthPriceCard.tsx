@@ -1,13 +1,15 @@
-import { Box, Flex, type FlexProps, Heading, Icon } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
+import { Box, Flex, type FlexProps, Heading, Icon, Text } from "@chakra-ui/react"
+
+import type { LoadingState } from "@/lib/types"
 
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 
-import type { LoadingState } from "@/lib/types"
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type EthPriceResponse = {
   ethereum: {
@@ -31,6 +33,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
   const [state, setState] = useState<LoadingState<EthPriceState>>({
     loading: true,
   })
+  const { flipForRtl } = useRtlFlip()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -83,12 +86,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
 
   const isNegativeChange = hasData && state.data.percentChangeUSD < 0
 
-  // TODO: Update with RTL logic when PR #112 merged:
-  const change = hasData
-    ? isNegativeChange
-      ? `${formatPercentage(state.data.percentChangeUSD)} ↘`
-      : `${formatPercentage(state.data.percentChangeUSD)} ↗`
-    : ``
+  const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ''
 
   const tooltipContent = (
     <Box>
@@ -132,7 +130,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
       >
         {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
-          <Icon as={MdInfoOutline} boxSize="14px" ml={2} />
+          <Icon as={MdInfoOutline} boxSize="14px" ms={2} />
         </Tooltip>
       </Heading>
 
@@ -153,10 +151,18 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
         <Box
           fontSize="2xl"
           lineHeight="140%"
-          mr={4}
+          me={4}
           color={isNegativeChange ? "fail300" : "success.base"}
         >
-          {change}
+          <Text
+            as="span"
+            _after={{
+              content: isNegativeChange ? '"↘"' : '"↗"',
+              transform: flipForRtl,
+            }}
+          >
+            {change}
+          </Text>
         </Box>
         <Box
           fontSize="sm"

@@ -1,11 +1,11 @@
-import type { ReactNode } from "react"
+import { type ReactNode } from "react"
 import {
   Box,
+  type BoxProps,
   Flex,
   HStack,
   LinkBox,
   LinkOverlay,
-  type BoxProps,
   type StackProps,
   useColorModeValue,
 } from "@chakra-ui/react"
@@ -15,7 +15,9 @@ import { BaseLink } from "@/components/Link"
 
 import * as url from "@/lib/utils/url"
 
-export type CardProps = {
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+export type CardListItem = {
   title?: ReactNode
   description?: ReactNode
   caption?: ReactNode
@@ -41,6 +43,8 @@ const CardContainer = (props: StackProps) => (
   />
 )
 
+type CardProps = CardListItem & Omit<StackProps, "title" | "id">
+
 const Card = ({
   title,
   description,
@@ -49,7 +53,8 @@ const Card = ({
   image,
   alt,
   ...props
-}: CardProps & Omit<StackProps, "title" | "id">) => {
+}: CardProps) => {
+  const { flipForRtl } = useRtlFlip()
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
@@ -85,7 +90,7 @@ const Card = ({
           </Box>
         </Flex>
       )}
-      {isExternal && <Box>↗</Box>}
+      {isExternal && <Box transform={flipForRtl}>↗</Box>}
     </CardContainer>
   )
 }
