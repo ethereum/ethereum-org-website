@@ -18,6 +18,7 @@ import { QuizShareStats } from "../../types"
 import { trackCustomEvent } from "../../utils/matomo"
 import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
+import Translation from "../Translation"
 
 import { QuizzesHubContext } from "./context"
 import {

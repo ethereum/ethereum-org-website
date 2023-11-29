@@ -9,16 +9,17 @@ import {
   Spacer,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "@/components/Link"
-import Emoji from "@/components/Emoji"
-import Translation from "@/components/Translation"
-import Text from "@/components/OldText"
+import { TranslationKey } from "@/lib/types"
+import type { DeveloperDocsLink } from "@/lib/interfaces"
 
-import docLinks from "@/data/developer-docs-links.yaml"
+import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import type { DeveloperDocsLink } from "@/lib/interfaces"
-import { TranslationKey } from "@/lib/types"
+import docLinks from "@/data/developer-docs-links.yaml"
 
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex

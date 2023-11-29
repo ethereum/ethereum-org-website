@@ -32,7 +32,8 @@ export const MdxDemoData = () => (
           work
         </Td>
         <Td>
-          Web3 payment apps require no personal data and can't prevent payments
+          Web3 payment apps require no personal data and can&apos;t prevent
+          payments
         </Td>
       </Tr>
       <Tr>
@@ -40,8 +41,8 @@ export const MdxDemoData = () => (
           Servers for gig-economy apps could go down and affect worker income
         </Td>
         <Td>
-          Web3 servers can't go down – they use Ethereum, a decentralized
-          network of 1000s of computers as their backend
+          Web3 servers can&apos;t go down &ndash; they use Ethereum, a
+          decentralized network of 1000s of computers as their backend
         </Td>
       </Tr>
     </Tbody>
@@ -242,8 +243,8 @@ export const MdxTypesOfBridgesData = () => (
       <Tr>
         <Td>
           They have trust assumptions with respect to the custody of funds and
-          the security of the bridge. Users mostly rely on the bridge operator's
-          reputation.
+          the security of the bridge. Users mostly rely on the bridge
+          operator&apos;s reputation.
         </Td>
         <Td>
           They are trustless, i.e., the security of the bridge is the same as

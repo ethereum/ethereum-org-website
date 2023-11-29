@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import { ChildOnlyProp } from "@/lib/types"
 import {
   Badge,
   Box,
@@ -15,6 +14,8 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
@@ -29,6 +30,13 @@ import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
+import {
+  Heading1 as MdHeading1,
+  Heading2 as MdHeading2,
+  Heading3 as MdHeading3,
+  Heading4 as MdHeading4,
+  Paragraph,
+} from "@/components/MdComponents"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
@@ -38,14 +46,6 @@ import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
-
-import {
-  Heading1 as MdHeading1,
-  Heading2 as MdHeading2,
-  Heading3 as MdHeading3,
-  Heading4 as MdHeading4,
-  Paragraph,
-} from "@/components/MdComponents"
 
 // Utils
 import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"

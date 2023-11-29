@@ -251,7 +251,7 @@ export const useStatsBoxGrid = () => {
       }
     }
     fetchTxCount()
-  }, [locale!])
+  }, [locale])
 
   const metrics: Array<Metric> = [
     {

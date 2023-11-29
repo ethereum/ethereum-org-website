@@ -198,8 +198,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string

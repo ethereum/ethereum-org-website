@@ -186,8 +186,15 @@ const CommunityEvents = () => {
               <Translation id="loading-error-try-again-later" />
             </Text>
           ) : upcomingEventData.slice(1).length ? (
-            upcomingEventData.slice(1).map((item) => {
-              return <Event event={item} language={locale!} type="upcoming" />
+            upcomingEventData.slice(1).map((item, idx) => {
+              return (
+                <Event
+                  key={idx}
+                  event={item}
+                  language={language}
+                  type="upcoming"
+                />
+              )
             })
           ) : (
             <Text mx="auto">
@@ -207,8 +214,10 @@ const CommunityEvents = () => {
               <Translation id="loading-error-try-again-later" />
             </Text>
           ) : pastEventData.length ? (
-            pastEventData.map((item) => {
-              return <Event event={item} language={locale!} type="past" />
+            pastEventData.map((item, idx) => {
+              return (
+                <Event key={idx} event={item} language={language} type="past" />
+              )
             })
           ) : (
             <Text mx="auto">

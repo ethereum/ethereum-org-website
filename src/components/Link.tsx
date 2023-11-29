@@ -13,12 +13,13 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { getRelativePath } from "@/lib/utils/relativePath"
 // import { trackCustomEvent, MatomoEventOptions } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type BaseProps = {
   /** @deprecated Use `href` prop instead */

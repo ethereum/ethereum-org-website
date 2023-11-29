@@ -1,10 +1,10 @@
 import { cssVar,SystemStyleObject } from "@chakra-ui/react"
 
+import type { ToCItem } from "@/lib/types"
+
 import { BaseLink } from "@/components/Link"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
-
-import type { ToCItem } from "@/lib/types"
 
 export interface IPropsTableOfContentsLink {
   depth: number

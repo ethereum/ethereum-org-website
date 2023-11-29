@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 import axios from "axios"
+import { useRouter } from "next/router"
 import { MdInfoOutline } from "react-icons/md"
 import { Box, Flex, FlexProps, Heading, Icon, Text } from "@chakra-ui/react"
 
@@ -43,10 +43,10 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
       })
       .catch((error) => {
         console.error(error)
-        setState({
-          ...state,
+        setState((prevState) => ({
+          ...prevState,
           hasError: true,
-        })
+        }))
       })
   }, [])
 

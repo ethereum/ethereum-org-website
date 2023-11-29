@@ -159,7 +159,7 @@ const StakingStatsBox: React.FC<IProps> = () => {
         setTotalValidators(null)
       }
     })()
-  }, [locale!])
+  }, [locale])
 
   return (
     <Flex direction={{ base: "column", md: "row" }}>

@@ -27,7 +27,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         onSlideChange(index)
       }
     },
-    [embla]
+    [embla, onSlideChange]
   )
 
   const onSelect = useCallback(() => {
@@ -48,7 +48,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       }
       onSelect()
     })
-  }, [embla, setScrollSnaps, onSelect])
+  }, [embla, setScrollSnaps, onSelect, onSlideChange])
 
   return (
     <Box
