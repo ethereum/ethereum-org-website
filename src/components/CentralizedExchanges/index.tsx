@@ -1,16 +1,17 @@
-import React from "react"
 import { Box, Center, chakra, Flex } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
-import { ChildOnlyProp } from "../../types"
-import CardList from "../CardList"
-import Emoji from "../Emoji"
-import InlineLink from "../Link"
-import OldHeading from "../OldHeading"
-import Text from "../OldText"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Translation from "../Translation"
+import { StyledSelect } from "@/components/SharedStyledComponents"
+import CardList from "@/components/CardList"
+import Emoji from "@/components/Emoji"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
 
-import { useEthExchanges } from "./use-eth-exchanges"
+import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
+import { WEBSITE_EMAIL } from "@/lib/constants"
+import type { ChildOnlyProp } from "@/lib/types"
+
 
 const ListContainer = (props: ChildOnlyProp) => (
   <Box mt={16} flex={{ base: "1 1 100%", md: "1 1 50%" }} {...props} />
@@ -25,7 +26,7 @@ const ResultsContainer = (props: ChildOnlyProp) => (
     sx={{
       "& > *": {
         _first: {
-          mr: { base: 0, md: 6 },
+          me: { base: 0, md: 6 },
         },
       },
     }}
@@ -45,21 +46,17 @@ const EmptyStateText = (props: ChildOnlyProp) => (
   <Text m={8} fontSize="xl" maxW="450px" textAlign="center" {...props} />
 )
 
-const StyledSelect = chakra(Select, {
-  baseStyle: {
-    maxW: "container.sm",
-  },
+const Select = chakra(StyledSelect, {
+  baseStyle: { maxW: "container.sm" },
 })
 
 const NoResults = ({ children }) => (
   <EmptyStateContainer>
     <Emoji text=":crying_face:" fontSize="80px" />
     <EmptyStateText>
+      {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
-      <InlineLink to="mailto:website@ethereum.org">
-        website@ethereum.org
-      </InlineLink>
-      .
+      <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</InlineLink>.
     </EmptyStateText>
   </EmptyStateContainer>
 )
@@ -67,28 +64,25 @@ const NoResults = ({ children }) => (
 const NoResultsSingle = ({ children }) => (
   <Center flexDir="column" mt={6}>
     <Text maxW="450px" mb={16}>
+      {/* TODO: Fix `children` structure to include email link within i18n string */}
       {children}{" "}
-      <InlineLink to="mailto:website@ethereum.org">
-        website@ethereum.org
-      </InlineLink>
-      .
+      <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>{WEBSITE_EMAIL}</InlineLink>.
     </Text>
     <Emoji text=":crying_face:" fontSize="80px" />
   </Center>
 )
 
-// TODO move component into get-eth.js page?
-const EthExchanges = () => {
+const CentralizedExchanges = () => {
+  const { t } = useTranslation("page-get-eth")
   const {
-    exchangesByCountry,
+    selectOptions,
     handleSelectChange,
     hasSelectedCountry,
     placeholderString,
-    t,
     hasExchangeResults,
     filteredExchanges,
     lastUpdated,
-  } = useEthExchanges()
+  } = useCentralizedExchanges()
 
   return (
     <Flex flexDir="column" align="center" w="full">
@@ -97,24 +91,24 @@ const EthExchanges = () => {
         fontWeight={600}
         lineHeight={1.4}
       >
-        <Translation id="page-get-eth-exchanges-header" />
+        {t("page-get-eth-exchanges-header")}
       </OldHeading>
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
-        <Translation id="page-get-eth-exchanges-intro" />
+        {t("page-get-eth-exchanges-intro")}
       </Text>
-      <StyledSelect
+      <Select
         aria-label={t("page-get-eth-exchanges-header")}
         className="react-select-container"
         classNamePrefix="react-select"
-        options={exchangesByCountry}
-        onChange={handleSelectChange}
+        options={selectOptions}
+        onChange={handleSelectChange as any} // TODO: Fix typing
         placeholder={placeholderString}
       />
       {!hasSelectedCountry && (
         <EmptyStateContainer>
           <Emoji text=":world_map:" fontSize="80px" />
           <EmptyStateText>
-            <Translation id="page-get-eth-exchanges-empty-state-text" />
+            {t("page-get-eth-exchanges-empty-state-text")}
           </EmptyStateText>
         </EmptyStateContainer>
       )}
@@ -122,7 +116,7 @@ const EthExchanges = () => {
       {hasSelectedCountry && !hasExchangeResults && (
         <ResultsContainer>
           <NoResults>
-            <Translation id="page-get-eth-exchanges-no-exchanges-or-wallets" />
+            {t("page-get-eth-exchanges-no-exchanges-or-wallets")}
           </NoResults>
         </ResultsContainer>
       )}
@@ -137,29 +131,27 @@ const EthExchanges = () => {
                 fontWeight={600}
                 lineHeight={1.4}
               >
-                <Translation id="page-get-eth-exchanges-header-exchanges" />
+                {t("page-get-eth-exchanges-header-exchanges")}
               </OldHeading>
               {hasExchangeResults && (
                 <SuccessContainer>
-                  <Text>
-                    <Translation id="page-get-eth-exchanges-success-exchange" />
-                  </Text>
+                  <Text>{t("page-get-eth-exchanges-success-exchange")}</Text>
                   <CardList items={filteredExchanges} />
                 </SuccessContainer>
               )}
               {!hasExchangeResults && (
                 <NoResultsSingle>
-                  <Translation id="page-get-eth-exchanges-no-exchanges" />
+                  {t("page-get-eth-exchanges-no-exchanges")}
                 </NoResultsSingle>
               )}
             </ListContainer>
           </ResultsContainer>
           <Text w="full" maxW="876px" mt={16} mb={0}>
-            <Translation id="page-get-eth-exchanges-disclaimer" />{" "}
-            <InlineLink to="mailto:website@ethereum.org">
-              website@ethereum.org
+            {t("page-get-eth-exchanges-disclaimer")}{" "}
+            <InlineLink href={`mailto:${WEBSITE_EMAIL}`}>
+              {WEBSITE_EMAIL}
             </InlineLink>
-            . <Translation id="page-find-wallet-last-updated" />{" "}
+            . {t("page-find-wallet-last-updated")}{" "}
             <strong>{lastUpdated}</strong>
           </Text>
         </>
@@ -168,4 +160,4 @@ const EthExchanges = () => {
   )
 }
 
-export default EthExchanges
+export default CentralizedExchanges

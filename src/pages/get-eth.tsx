@@ -324,8 +324,7 @@ const GetEthPage = () => {
         px={{ base: 8, sm: 16 }}
         py={{ base: 16, sm: 16 }}
       >
-        {/* TODO: Re-enable once component migrated */}
-        {/* <CentralizedExchanges /> */}
+        <CentralizedExchanges />
       </Flex>
       <Content id="dex">
         <OldHeading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
