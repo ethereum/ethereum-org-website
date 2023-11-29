@@ -23,7 +23,7 @@ This often results in complex systems that can need to be clarified for users, c
 
 Examples of strategies designed to enhance yield:
 
-![Example of strategies](./l.png)
+![Example of strategies](./1.png)
 
 The need for simplicity and clarity must be balanced in attracting and retaining users.
 
