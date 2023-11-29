@@ -25,7 +25,7 @@ export const GeneratingKeys: React.FC<IProps> = ({
   const [loading, setLoading] = useState(true)
   const [complete, setComplete] = useState(false)
 
-  useEffect(generateNewWords, [])
+  useEffect(() => generateNewWords(), [generateNewWords])
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
   useEffect(() => {

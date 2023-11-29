@@ -19,10 +19,11 @@ import InlineLink, { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
-import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface Meetup {
   title: string

@@ -11,12 +11,12 @@ import Nav from "@/components/Nav"
 import TranslationBanner from "@/components/TranslationBanner"
 import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 
+import { toPosixPath } from "@/lib/utils/relativePath"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { lightTheme as oldTheme } from "../theme"
-import { toPosixPath } from "@/lib/utils/relativePath"
 
 export const RootLayout = ({
   children,

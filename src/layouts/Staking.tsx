@@ -21,6 +21,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import {
   ContentContainer,
   Heading1 as MdHeading1,
@@ -42,7 +43,6 @@ import WithdrawalCredentials from "@/components/Staking/WithdrawalCredentials"
 import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabComparison"
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import LeftNavBar from "@/components/LeftNavBar"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />

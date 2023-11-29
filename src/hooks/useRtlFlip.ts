@@ -1,6 +1,8 @@
 import { useRouter } from "next/router"
-import { isLangRightToLeft } from "@/lib/utils/translations"
+
 import type { Lang } from "@/lib/types"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 /**
  * Checks locale text direction and conditionally applies a scaleX(-1) for RTL locales

@@ -20,6 +20,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
@@ -29,7 +30,6 @@ import {
   Title,
 } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
-import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 

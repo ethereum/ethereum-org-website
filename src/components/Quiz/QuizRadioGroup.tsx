@@ -132,10 +132,12 @@ const QuizRadioGroup: React.FC<IProps> = ({
   const explanation = useMemo<TranslationKey>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAnswer])
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
-    [selectedAnswer]
+    [correctAnswerId, selectedAnswer]
   )
 
   // Render QuizRadioGroup

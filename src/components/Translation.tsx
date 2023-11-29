@@ -2,8 +2,9 @@ import htmr from "htmr"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import InlineLink from "./Link"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+
+import InlineLink from "./Link"
 
 interface Props {
   id: string

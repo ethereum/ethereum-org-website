@@ -313,21 +313,20 @@ export const useWalletFilterFeature = ({
     updateFilterOptions(keys, value)
   }
 
-  const resetFilters = () => {
-    for (let filterItem of filterOptions) {
-      for (let item of filterItem.items) {
-        if (item.options.length > 0) {
-          item.showOptions = false
-        } else {
-          item.showOptions = undefined
+  useEffect(() => {
+    const resetFilters = () => {
+      for (let filterItem of filterOptions) {
+        for (let item of filterItem.items) {
+          if (item.options.length > 0) {
+            item.showOptions = false
+          } else {
+            item.showOptions = undefined
+          }
         }
       }
     }
-  }
-
-  useEffect(() => {
     resetWalletFilter.current = resetFilters
-  }, [])
+  }, [filterOptions, resetWalletFilter])
 
   return {
     setShowOptions,
