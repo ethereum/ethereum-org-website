@@ -86,10 +86,17 @@ const QuizWidget = ({
       statusHandler: statusHandler!,
       nextQuiz,
     }
+    return () => {
+      if (quizPageProps.current) {
+        /**
+         * If modal for widget unmounts when viewing a question's answer, ensure
+         * the status is back to neutral when the modal is opened again.
+         */
+        quizPageProps.current.statusHandler("neutral")
+      }
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nextQuiz])
-
-  console.count("QuizWidget rendered")
 
   const getMainContainerBg = (): StackProps["bg"] => {
     if (!answerStatus) {
