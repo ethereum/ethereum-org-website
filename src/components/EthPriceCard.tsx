@@ -2,7 +2,14 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Flex, type FlexProps, Heading, Icon, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  type FlexProps,
+  Heading,
+  Icon,
+  Text,
+} from "@chakra-ui/react"
 
 import type { LoadingState } from "@/lib/types"
 
@@ -45,7 +52,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
         const data: EthPriceResponse = await response.json()
         if (data && data.ethereum) {
           const currentPriceUSD = data.ethereum.usd
-          const percentChangeUSD = +data.ethereum.usd_24h_change.toFixed(2)
+          const percentChangeUSD = +data.ethereum.usd_24h_change / 100
           setState({
             loading: false,
             data: { currentPriceUSD, percentChangeUSD },
@@ -74,7 +81,11 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
     }).format(+price)
 
   const formatPercentage = (amount: number): string =>
-    new Intl.NumberFormat(locale, { style: "percent" }).format(amount)
+    new Intl.NumberFormat(locale, {
+      style: "percent",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(amount)
 
   const getPriceString = (): string => {
     if (state.loading) return t("loading")
@@ -86,7 +97,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
 
   const isNegativeChange = hasData && state.data.percentChangeUSD < 0
 
-  const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ''
+  const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ""
 
   const tooltipContent = (
     <Box>
