@@ -175,7 +175,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
         onClose={handleClick}
-        placement="left"
+        placement="start"
         size="sm"
       >
         <DrawerOverlay bg="modalBackground" />

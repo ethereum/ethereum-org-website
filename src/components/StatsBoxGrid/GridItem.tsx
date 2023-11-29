@@ -42,7 +42,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             as={MdInfoOutline}
             boxSize={6}
             fill="text"
-            mr={2}
+            me={2}
             _hover={{ fill: "primary.base" }}
             _active={{ fill: "primary.base" }}
             _focus={{ fill: "primary.base" }}
@@ -77,7 +77,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
         data={filteredData(state.data)}
-        margin={{ left: -5, right: -5 }}
+        margin={{ insetInlineStart: -5, insetInlineEnd: -5 }}
       >
         <defs>
           <linearGradient
@@ -150,7 +150,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         <>
           <Box
             position="absolute"
-            left={0}
+            insetInlineStart={0}
             bottom={0}
             width="100%"
             height="65%"
@@ -162,7 +162,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
               position="absolute"
               bottom="20px"
               fontFamily="monospace"
-              left="20px"
+              insetInlineStart="20px"
             >
               {buttonContainer}
             </Box>
@@ -171,7 +171,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
               position="absolute"
               bottom="20px"
               fontFamily="monospace"
-              right="20px"
+              insetInlineEnd="20px"
             >
               {buttonContainer}
             </Box>

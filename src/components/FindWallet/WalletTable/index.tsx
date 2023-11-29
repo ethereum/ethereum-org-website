@@ -227,7 +227,7 @@ const FlexInfo = (props: FlexProps) => (
   <Flex
     alignItems="center"
     gap={4}
-    pl="0.3rem"
+    ps="0.3rem"
     sx={{
       p: {
         p: 0,

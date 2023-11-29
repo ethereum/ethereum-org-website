@@ -41,7 +41,7 @@ const TranslationBanner: React.FC<IProps> = ({
       as="aside"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      right={{ base: 0, md: 8 }}
+      insetInlineEnd={{ base: 0, md: 8 }}
       position="fixed"
       zIndex="99"
     >
@@ -81,7 +81,7 @@ const TranslationBanner: React.FC<IProps> = ({
             <Emoji
               text=":globe_showing_asia_australia:"
               fontSize="2xl"
-              ml={2}
+              ms={2}
               mb={{ base: 4, sm: "auto" }}
             />
           </Flex>
@@ -100,7 +100,7 @@ const TranslationBanner: React.FC<IProps> = ({
                 <ButtonLink
                   to={originalPagePath}
                   variant="outline"
-                  ml={{ base: 0, sm: 2 }}
+                  ms={{ base: 0, sm: 2 }}
                   mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"
@@ -115,7 +115,7 @@ const TranslationBanner: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top="0"
-          right={isPageRightToLeft ? "auto" : 0}
+          insetInlineEnd={isPageRightToLeft ? "auto" : 0}
           margin={2}
           color="secondary"
           _hover={{

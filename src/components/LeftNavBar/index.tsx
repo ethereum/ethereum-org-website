@@ -14,7 +14,7 @@ export const H2 = (props: HeadingProps) => (
     fontWeight={700}
     lineHeight={1.4}
     size="lg"
-    textAlign="left"
+    textAlign="start"
     mt={0}
     {...props}
   />
@@ -46,8 +46,8 @@ const LeftNavBar: React.FC<IProps> = ({
       as="aside"
       flexDirection="column"
       flex="0 1 400px"
-      ml={8}
-      mr={16}
+      ms={8}
+      me={16}
       position="sticky"
       top="6.25rem"
       height={calc("100vh").subtract("80px").toString()}

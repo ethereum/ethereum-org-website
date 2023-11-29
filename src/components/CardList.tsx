@@ -15,6 +15,8 @@ import { BaseLink } from "@/components/Link"
 
 import * as url from "@/lib/utils/url"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 export type CardListItem = {
   title?: ReactNode
   description?: ReactNode
@@ -43,6 +45,7 @@ const CardContainer = (props: StackProps) => (
 
 const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   const { title, description, caption, link, image, alt, ...rest } = props
+  const { flipForRtl } = useRtlFlip()
 
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
@@ -73,13 +76,13 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
         </Box>
       </Flex>
       {caption && (
-        <Flex flex="1 0 25%" align="center" wrap="wrap" mr={4}>
+        <Flex flex="1 0 25%" align="center" wrap="wrap" me={4}>
           <Box fontSize="sm" mb={0} opacity={0.6}>
             {caption}
           </Box>
         </Flex>
       )}
-      {isExternal && <Box>↗</Box>}
+      {isExternal && <Box transform={flipForRtl}>↗</Box>}
     </CardContainer>
   )
 }

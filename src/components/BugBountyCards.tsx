@@ -1,23 +1,22 @@
+import { useTranslation } from "next-i18next"
 import {
   Box,
+  type BoxProps,
   Center,
+  type CenterProps,
   Divider,
   Flex,
-  Heading,
-  type BoxProps,
-  type CenterProps,
   type FlexProps,
+  Heading,
   type HeadingProps,
   type TextProps,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
+
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import { ButtonLink, type ButtonLinkProps } from "@/components/Buttons"
 import Text from "@/components/OldText"
-import Translation from "@/components/Translation"
-
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 const CardRow = ({ children }: ChildOnlyProp) => (
   <Flex justifyContent="space-between" my="16" mx="4" flexWrap="wrap">
@@ -41,6 +40,7 @@ const Card = ({ children, ...props }: FlexProps) => {
       justifyContent="space-between"
       bg="background.base"
       borderRadius="2px"
+      borderRad
       boxShadow={tableBoxShadow}
       border="1px solid"
       borderColor="border"
@@ -89,10 +89,10 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
 
   return (
     <Center
-      borderTopRightRadius="1px"
-      borderTopLeftRadius="1px"
-      borderBottomRightRadius="0"
-      borderBottomLeftRadius="0"
+      borderTopEndRadius="1px"
+      borderTopStartRadius="1px"
+      borderBottomEndRadius={0}
+      borderBottomStartRadius={0}
       borderBottom="1px solid"
       borderColor="border"
       fontSize="sm"
@@ -115,7 +115,7 @@ const H2 = ({ children, ...props }: HeadingProps) => (
     lineHeight="22px"
     letterSpacing="normal"
     p="4"
-    textAlign="left"
+    textAlign="start"
     mb="-2"
     mt="2"
     {...props}
@@ -230,38 +230,24 @@ const BugBountyCards = () => {
       {bugBountyCardsInfo.map((card, idx) => (
         <Card key={`bug-bounty-card-${idx}`}>
           {card.lowLabelTranslationId && (
-            <Label variant="low">
-              {t(card.lowLabelTranslationId)}
-            </Label>
+            <Label variant="low">{t(card.lowLabelTranslationId)}</Label>
           )}
           {card.mediumLabelTranslationId && (
-            <Label variant="medium">
-              {t(card.mediumLabelTranslationId)}
-            </Label>
+            <Label variant="medium">{t(card.mediumLabelTranslationId)}</Label>
           )}
           {card.highLabelTranslationId && (
-            <Label variant="high">
-              {t(card.highLabelTranslationId)}
-            </Label>
+            <Label variant="high">{t(card.highLabelTranslationId)}</Label>
           )}
           {card.criticalLabelTranslationId && (
             <Label variant="critical">
               {t(card.criticalLabelTranslationId)}
             </Label>
           )}
-          <H2>
-            {t(card.h2TranslationId)}
-          </H2>
-          <Description>
-            {t(card.descriptionTranslationId)}
-          </Description>
-          <SubHeader>
-            {t(card.subDescriptionTranslationId)}
-          </SubHeader>
+          <H2>{t(card.h2TranslationId)}</H2>
+          <Description>{t(card.descriptionTranslationId)}</Description>
+          <SubHeader>{t(card.subDescriptionTranslationId)}</SubHeader>
           <Divider opacity="1" />
-          <SubHeader>
-            {t(card.subHeader1TranslationId)}
-          </SubHeader>
+          <SubHeader>{t(card.subHeader1TranslationId)}</SubHeader>
           <TextBox>
             <ul>
               {card.severityList.map((listItemId) => (
@@ -273,12 +259,8 @@ const BugBountyCards = () => {
             </ul>
           </TextBox>
           <Divider opacity="1" />
-          <SubHeader>
-            {t(card.subHeader2TranslationId)}
-          </SubHeader>
-          <TextBox>
-            {t(card.textTranslationId)}
-          </TextBox>
+          <SubHeader>{t(card.subHeader2TranslationId)}</SubHeader>
+          <TextBox>{t(card.textTranslationId)}</TextBox>
           <SubmitBugBountyButton>
             {t(card.styledButtonTranslationId)}
           </SubmitBugBountyButton>

@@ -12,7 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
@@ -20,6 +20,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
@@ -29,21 +30,18 @@ import {
   Title,
 } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
-import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     bg="cardGradient"
     boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-    direction={{ base: "column-reverse", lg: "row" }}
-    justify="end"
-    minHeight={{ base: "800px", lg: "608px" }}
+    flexDirection={{ base: "column-reverse", lg: "row" }}
+    justifyContent="flex-end"
+    minHeight="608px"
     maxHeight={{ base: "full", lg: "608px" }}
     width="full"
-    position="relative"
     {...props}
   />
 )
@@ -60,13 +58,14 @@ const TitleCard = (props: ChildOnlyProp) => {
       boxShadow={{ lg: boxShadow }}
       flexDirection="column"
       maxWidth={{ base: "full", lg: "container.sm" }}
+      mt={{ base: 0, lg: 12 }}
       zIndex="docked"
       p={8}
-      position="absolute"
+      position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
-      left={{ base: 0, lg: 24 }}
+      insetInlineStart={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
-      right={{ base: 0, lg: "unset" }}
+      insetInlineEnd={{ base: 0, lg: "unset" }}
       {...props}
     />
   )
@@ -77,7 +76,9 @@ export const useCasesComponents = {
   // Export empty object if none needed
 }
 
-interface IProps extends ChildOnlyProp, MdPageContent {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: UseCasesFrontmatter
 }
 export const UseCasesLayout: React.FC<IProps> = ({
@@ -89,7 +90,6 @@ export const UseCasesLayout: React.FC<IProps> = ({
   const { t } = useTranslation("template-usecase")
   const lgBp = useToken("breakpoints", "lg")
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const summaryPoints = getSummaryPoints(frontmatter)
 
   // TODO: Re-implement GitHub edit path
@@ -180,7 +180,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
     <Box position="relative" width="full">
       <Show above={lgBp}>
         <BannerNotification shouldShow zIndex="sticky">
-          <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
+          <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
           <Text m={0}>
             {t("template-usecase:template-usecase-banner")}{" "}
             {/* <InlineLink to={absoluteEditPath}>
@@ -209,15 +209,20 @@ export const UseCasesLayout: React.FC<IProps> = ({
           </Box>
         </TitleCard>
         <Image
-          position="absolute"
-          alignSelf={{ base: "center", lg: "normal" }}
-          top={0}
-          bottom={0}
-          style={{ objectFit: "cover" }}
-          width={1000}
-          height={610}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
+          width={1200}
+          height={610}
+          style={{ objectFit: "cover" }}
+          priority
+          alignSelf={{
+            base: "center",
+            lg: "normal",
+          }}
+          maxH={{
+            base: "340px",
+            lg: "full",
+          }}
           maxW={{
             base: useCase === "defi" ? "full" : "min(405px, 98%)",
             lg:
@@ -242,7 +247,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </Flex>
       </Show>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBp}

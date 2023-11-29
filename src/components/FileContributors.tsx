@@ -1,12 +1,10 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
-import { FaGithub } from "react-icons/fa"
 import {
   Avatar,
   Flex,
   FlexProps,
   Heading,
-  Icon,
   ListItem,
   ModalBody,
   ModalHeader,
@@ -16,10 +14,9 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import type { Lang } from "@/lib/types"
-import type { Author } from "@/lib/interfaces"
+import type { Author, Lang } from "@/lib/types"
 
-import { Button, ButtonLink } from "@/components/Buttons"
+import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
 import Modal from "@/components/Modal"
 import Text from "@/components/OldText"
@@ -60,7 +57,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         width="40px"
         src={contributor.avatarUrl}
         name={contributor.name}
-        mr={2}
+        me={2}
       />
       {contributor.user && (
         <InlineLink to={contributor.user.url}>
@@ -72,15 +69,15 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
   )
 }
 
-export interface IProps extends FlexProps {
+export interface FileContributorsProps extends FlexProps {
   editPath?: string
-  contributors: Array<Author>
-  loading: Boolean
+  contributors: Author[]
+  loading: boolean
   error?: boolean
   lastEdit: string
 }
 
-const FileContributors: React.FC<IProps> = ({
+const FileContributors: React.FC<FileContributorsProps> = ({
   contributors,
   loading,
   error,
@@ -135,14 +132,14 @@ const FileContributors: React.FC<IProps> = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex mr={4} alignItems="center" flex="1">
-          <SkeletonCircle size="10" mr={2} isLoaded={!loading}>
+        <Flex me={4} alignItems="center" flex="1">
+          <SkeletonCircle size="10" me={4} isLoaded={!loading}>
             <Avatar
               height="40px"
               width="40px"
               src={lastContributor.avatarUrl}
               name={lastContributor.name}
-              mr={2}
+              me={2}
             />
           </SkeletonCircle>
 

@@ -1,6 +1,4 @@
 import { useRouter } from "next/router"
-import { ChildOnlyProp, Lang } from "@/lib/types"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 import {
   Badge,
   Box,
@@ -12,18 +10,19 @@ import {
   ListItemProps,
   ListProps,
   OrderedList as ChakraOrderedList,
-  Text,
   UnorderedList as ChakraUnorderedList,
   useToken,
 } from "@chakra-ui/react"
+
+import { ChildOnlyProp } from "@/lib/types"
+import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-// TODO: Implement file contributors
-// import CrowdinContributors from "@/components/FileContributorsCrowdin"
+import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
@@ -32,6 +31,13 @@ import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
+import {
+  Heading1 as MdHeading1,
+  Heading2 as MdHeading2,
+  Heading3 as MdHeading3,
+  Heading4 as MdHeading4,
+  Paragraph,
+} from "@/components/MdComponents"
 // TODO: IMPLEMENT PAGEMETADATA
 // import PageMetadata from "@/components/PageMetadata"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
@@ -42,17 +48,10 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
-import {
-  Heading1 as MdHeading1,
-  Heading2 as MdHeading2,
-  Heading3 as MdHeading3,
-  Heading4 as MdHeading4,
-  Paragraph,
-} from "@/components/MdComponents"
-
 // Utils
-import { EDIT_CONTENT_URL } from "@/lib/constants"
-import { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
+import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+
+import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -78,8 +77,8 @@ const ContentContainer = (props: ChildOnlyProp) => (
     justify={"space-between"}
     w="full"
     py={0}
-    pl={0}
-    pr={{ base: 0, lg: 8 }}
+    ps={0}
+    pe={{ base: 0, lg: 8 }}
     backgroundColor="ednBackground"
     {...props}
   />
@@ -153,9 +152,9 @@ const Content = (props: ChildOnlyProp) => {
       m="0 auto"
       sx={{
         ".featured": {
-          paddingLeft: 4,
-          marginLeft: -4,
-          borderLeft: "1px dotted",
+          ps: 4,
+          ms: -4,
+          borderInlineStart: "1px dotted",
           borderColor: "primary",
         },
         ".citation": {
@@ -208,7 +207,12 @@ export const docsComponents = {
   YouTube,
 }
 
-interface DocsLayoutProps extends MdPageContent, ChildOnlyProp {
+interface DocsLayoutProps
+  extends Pick<
+      MdPageContent,
+      "slug" | "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+    >,
+    ChildOnlyProp {
   frontmatter: DocsFrontmatter
 }
 
@@ -218,14 +222,19 @@ export const DocsLayout = ({
   slug,
   tocItems,
   lastUpdatedDate,
+  crowdinContributors,
 }: DocsLayoutProps) => {
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
 
+  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
+  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const useGitHubContributors =
+    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
+
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page>
       {/* // TODO: IMPLEMENT PAGEMETADATA */}
       {/* <PageMetadata
         title={frontmatter.title}
@@ -241,18 +250,16 @@ export const DocsLayout = ({
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
-          {frontmatter.lang !== "en" ? (
-            // TODO: Implement file contributors
-            <Text>CrowdinContributors</Text>
-          ) : (
-            // <CrowdinContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            //   langContributors={allCombinedTranslatorsJson.nodes}
-            // />
+          {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate!}
+            />
+          ) : (
+            <CrowdinContributors
+              relativePath={relativePath}
+              lastUpdatedDate={intlLastEdit}
+              contributors={crowdinContributors}
             />
           )}
           <TableOfContents

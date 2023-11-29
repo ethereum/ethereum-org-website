@@ -251,7 +251,7 @@ export const useStatsBoxGrid = () => {
       }
     }
     fetchTxCount()
-  }, [locale!])
+  }, [locale])
 
   const metrics: Array<Metric> = [
     {
@@ -331,10 +331,6 @@ export const useStatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir: Direction = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  return {
-    metrics,
-    dir,
-  }
+  return { metrics }
 }
