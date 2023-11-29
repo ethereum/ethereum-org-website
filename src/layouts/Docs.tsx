@@ -10,21 +10,19 @@ import {
   ListItemProps,
   ListProps,
   OrderedList as ChakraOrderedList,
-  Text,
   UnorderedList as ChakraUnorderedList,
   useToken,
 } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
-import { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
+import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-// TODO: Implement file contributors
-// import CrowdinContributors from "@/components/FileContributorsCrowdin"
+import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
@@ -51,7 +49,9 @@ import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
 // Utils
-import { EDIT_CONTENT_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+
+import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const Page = (props: ChildOnlyProp & Pick<FlexProps, "dir">) => (
   <Flex
@@ -208,7 +208,10 @@ export const docsComponents = {
 }
 
 interface DocsLayoutProps
-  extends Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate">,
+  extends Pick<
+      MdPageContent,
+      "slug" | "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+    >,
     ChildOnlyProp {
   frontmatter: DocsFrontmatter
 }
@@ -219,10 +222,16 @@ export const DocsLayout = ({
   slug,
   tocItems,
   lastUpdatedDate,
+  crowdinContributors,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+
+  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
+  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const useGitHubContributors =
+    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <Page>
@@ -241,18 +250,16 @@ export const DocsLayout = ({
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
-          {frontmatter.lang !== "en" ? (
-            // TODO: Implement file contributors
-            <Text>CrowdinContributors</Text>
-          ) : (
-            // <CrowdinContributors
-            //   relativePath={relativePath}
-            //   editPath={absoluteEditPath}
-            //   langContributors={allCombinedTranslatorsJson.nodes}
-            // />
+          {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate!}
+            />
+          ) : (
+            <CrowdinContributors
+              relativePath={relativePath}
+              lastUpdatedDate={intlLastEdit}
+              contributors={crowdinContributors}
             />
           )}
           <TableOfContents
