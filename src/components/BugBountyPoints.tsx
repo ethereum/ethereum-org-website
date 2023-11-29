@@ -70,12 +70,12 @@ const BugBountyPoints: React.FC<IProps> = () => {
       })
       .catch((error) => {
         console.error(error)
-        setState({
-          ...state,
+        setState((prevState) => ({
+          ...prevState,
           hasError: true,
-        })
+        }))
       })
-  }, [state])
+  }, [])
 
   const isLoading = !state.currentETHPriceUSD
 
