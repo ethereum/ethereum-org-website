@@ -124,7 +124,7 @@ const ProductCard: React.FC<IProps> = ({
       <Flex flexDirection="column" p={6} textAlign="left" height="100%">
         {githubRepoStars > 0 && (
           // TODO: get proper github repo data
-          <GitStars gitHubRepo={{url: githubUrl, stargazerCount: 20}} hideStars={hideStars} />
+          <GitStars gitHubRepo={{url: githubUrl, stargazerCount: githubRepoStars}} hideStars={hideStars} />
         )}
         <Heading
           as="h3"
