@@ -20,7 +20,6 @@ import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const socialLinks = [
   {
@@ -59,7 +58,6 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
 
-  const isPageRightToLeft = isLangRightToLeft(locale as Lang)
   // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
   const linkSections: Array<LinkSection> = [
@@ -350,7 +348,6 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
                   <BaseLink
                     to={link.to}
                     isPartiallyActive={false}
-                    dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
                     fontWeight="normal"

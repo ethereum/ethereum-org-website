@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
-import { ChildOnlyProp, Lang } from "@/lib/types"
-import { isLangRightToLeft } from "@/lib/utils/translations"
+import { ChildOnlyProp } from "@/lib/types"
 import {
   Badge,
   Box,
@@ -219,13 +218,12 @@ export const DocsLayout = ({
   tocItems,
   lastUpdatedDate,
 }: DocsLayoutProps) => {
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page>
       {/* // TODO: IMPLEMENT PAGEMETADATA */}
       {/* <PageMetadata
         title={frontmatter.title}

@@ -331,10 +331,6 @@ export const useStatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir: Direction = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  return {
-    metrics,
-    dir,
-  }
+  return { metrics }
 }
