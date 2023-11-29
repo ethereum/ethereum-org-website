@@ -1,17 +1,18 @@
-import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 import { useTranslation } from "next-i18next"
+import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
-import { StyledSelect } from "@/components/SharedStyledComponents"
+import type { ChildOnlyProp } from "@/lib/types"
+
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
+import { StyledSelect } from "@/components/SharedStyledComponents"
+
+import { WEBSITE_EMAIL } from "@/lib/constants"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
-import { WEBSITE_EMAIL } from "@/lib/constants"
-import type { ChildOnlyProp } from "@/lib/types"
-
 
 const ListContainer = (props: ChildOnlyProp) => (
   <Box mt={16} flex={{ base: "1 1 100%", md: "1 1 50%" }} {...props} />

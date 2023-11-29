@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 
-import CardList, { type CardProps as CardListItem } from "@/components/CardList"
+import CardList, { type CardListItem } from "@/components/CardList"
 
 export interface IProps {}
 

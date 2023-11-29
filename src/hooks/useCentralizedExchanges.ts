@@ -3,6 +3,24 @@ import { shuffle } from "lodash"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
+import type { Lang } from "@/lib/types"
+
+// TODO: Remove unused?
+// import argent from "@/public/wallets/argent.png"
+// import binanceus from "@/public/exchanges/binance.png"
+// import imtoken from "@/public/wallets/imtoken.png"
+// import mycrypto from "@/public/wallets/mycrypto.png"
+// import myetherwallet from "@/public/wallets/myetherwallet.png"
+// import squarelink from "@/public/wallets/squarelink.png"
+// import trust from "@/public/wallets/trust.png"
+import type { ImageProps } from "@/components/Image"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { resizeImage } from "@/lib/utils/resizeImage"
+import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import exchangeData from "@/data/exchangesByCountry"
+
 import binance from "@/public/exchanges/binance.png"
 import bitbuy from "@/public/exchanges/bitbuy.png"
 import bitfinex from "@/public/exchanges/bitfinex.png"
@@ -30,21 +48,6 @@ import okx from "@/public/exchanges/okx.png"
 import rain from "@/public/exchanges/rain.png"
 import shakepay from "@/public/exchanges/shakepay.png"
 import wazirx from "@/public/exchanges/wazirx.png"
-// TODO: Remove unused?
-// import argent from "@/public/wallets/argent.png"
-// import binanceus from "@/public/exchanges/binance.png"
-// import imtoken from "@/public/wallets/imtoken.png"
-// import mycrypto from "@/public/wallets/mycrypto.png"
-// import myetherwallet from "@/public/wallets/myetherwallet.png"
-// import squarelink from "@/public/wallets/squarelink.png"
-// import trust from "@/public/wallets/trust.png"
-
-import type { ImageProps } from "@/components/Image"
-import type { Lang } from "@/lib/types"
-import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLocaleTimestamp } from "@/lib/utils/time"
-import { resizeImage } from "@/lib/utils/resizeImage"
-import exchangeData from "@/data/exchangesByCountry"
 
 type ExchangeKey =
   | "binance"

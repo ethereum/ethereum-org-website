@@ -1,42 +1,42 @@
-import { Box, type BoxProps, Flex, type FlexProps } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 import type { GetStaticProps } from "next/types"
+import { type SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
+import { Box, type BoxProps, Flex, type FlexProps } from "@chakra-ui/react"
 
-import { Divider } from "@/components/MdComponents"
-import { Image } from "@/components/Image"
+import type { ChildOnlyProp } from "@/lib/types"
+
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
+import type { CardListItem } from "@/components/CardList"
 import CardList from "@/components/CardList"
 import CentralizedExchanges from "@/components/CentralizedExchanges"
 import EthPriceCard from "@/components/EthPriceCard"
 import FeedbackCard from "@/components/FeedbackCard"
+import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import { Divider } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
-import PageMetadata from "@/components/PageMetadata"
 import Text from "@/components/OldText"
-import type { CardProps } from "@/components/CardList"
+import PageMetadata from "@/components/PageMetadata"
 
-import bancor from "@/public/exchanges/bancor.png"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+// TODO: Remove or add Matcha as listed product:
+// import matcha from "@/public/exchanges/matcha.png" // width=20px
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { resizeImage } from "@/lib/utils/resizeImage"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import uniswap from "@/public/dapps/uni.png"
 import dapps from "@/public/doge-computer.png"
-import hero from "@/public/get-eth.png"
+import oneinch from "@/public/exchanges/1inch.png"
+import bancor from "@/public/exchanges/bancor.png"
 import kyber from "@/public/exchanges/kyber.png"
 import loopring from "@/public/exchanges/loopring.png"
-import oneinch from "@/public/exchanges/1inch.png"
-import uniswap from "@/public/dapps/uni.png"
+import hero from "@/public/get-eth.png"
 import wallet from "@/public/wallet.png"
-// TODO: Remove unused?
-// import matcha from "@/public/exchanges/matcha.png" // width=20px
-
-import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { resizeImage } from "@/lib/utils/resizeImage"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-
-import type { ChildOnlyProp } from "@/lib/types"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -98,7 +98,7 @@ const RightColumn = (props: ChildOnlyProp) => (
 export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("get-eth")
+  const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
   const lastDeployDate = getLastDeployDate()
 
   return {
@@ -107,12 +107,12 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<{}, {}>
+}) satisfies GetStaticProps<SSRConfig>
 
 const GetEthPage = () => {
   const { t } = useTranslation("page-get-eth")
 
-  const tokenSwaps: CardProps[] = [
+  const tokenSwaps: CardListItem[] = [
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
@@ -145,7 +145,7 @@ const GetEthPage = () => {
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
 
-  const safetyArticles: CardProps[] = [
+  const safetyArticles: CardListItem[] = [
     {
       title: t("page-get-eth-article-protecting-yourself"),
       link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",

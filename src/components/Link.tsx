@@ -1,5 +1,5 @@
-import type { FC, RefAttributes } from "react"
 import { useRouter } from "next/router"
+import type { FC, RefAttributes } from "react"
 import { RxExternalLink } from "react-icons/rx"
 import {
   Link as NextLink,

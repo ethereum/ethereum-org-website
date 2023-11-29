@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { Stack } from "@chakra-ui/react"
 
-import CardList, { type CardProps as CardListItem } from "@/components/CardList"
+import CardList, { type CardListItem } from "@/components/CardList"
 
 const StakingGuides = () => {
   const { t } = useTranslation("page-staking")
