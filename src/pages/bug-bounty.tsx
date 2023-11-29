@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { type SSRConfig, useTranslation } from "next-i18next"
