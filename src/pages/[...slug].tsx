@@ -13,7 +13,12 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, TocNodeType } from "@/lib/types"
+import type {
+  Layout,
+  LayoutMappingType,
+  NextPageWithLayout,
+  TocNodeType,
+} from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
@@ -49,7 +54,7 @@ interface Params extends ParsedUrlQuery {
   slug: string[]
 }
 
-const layoutMapping = {
+export const layoutMapping = {
   static: StaticLayout,
   "use-cases": UseCasesLayout,
   staking: StakingLayout,
@@ -59,8 +64,6 @@ const layoutMapping = {
   tutorial: TutorialLayout,
   // event: EventLayout,
 }
-
-type LayoutMappingType = typeof layoutMapping
 
 const componentsMapping = {
   static: staticComponents,
@@ -92,10 +95,7 @@ export const getStaticPaths = (({ locales }) => {
   }
 }) satisfies GetStaticPaths<Params>
 
-type Props = Omit<
-  Parameters<LayoutMappingType[keyof LayoutMappingType]>[0],
-  "children"
-> &
+type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
   SSRConfig & {
     mdxSource: MDXRemoteSerializeResult
   }
@@ -136,11 +136,9 @@ export const getStaticProps = (async (context) => {
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = frontmatter.template as keyof LayoutMappingType
+  let layout = (frontmatter.template as Layout) ?? "static"
 
   if (!frontmatter.template) {
-    layout = "static"
-
     if (params.slug.includes("docs")) {
       layout = "docs"
     }
@@ -177,7 +175,10 @@ const ContentPage: NextPageWithLayout<
 > = ({ mdxSource, layout }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
   // @ts-expect-error
-  const components: Record<string, React.ReactNode> = { ...mdComponents, ...componentsMapping[layout] }
+  const components: Record<string, React.ReactNode> = {
+    ...mdComponents,
+    ...componentsMapping[layout],
+  }
   return (
     <>
       <MDXRemote {...mdxSource} components={components} />
@@ -188,15 +189,8 @@ const ContentPage: NextPageWithLayout<
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page) => {
   // values returned by `getStaticProps` method and passed to the page component
-  const {
-    slug,
-    frontmatter,
-    lastUpdatedDate,
-    layout,
-    timeToRead,
-    tocItems,
-  } = page.props
-
+  const { slug, frontmatter, lastUpdatedDate, layout, timeToRead, tocItems } =
+    page.props
 
   const layoutProps = {
     slug,

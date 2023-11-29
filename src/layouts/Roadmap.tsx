@@ -1,5 +1,6 @@
 import {
   Box,
+  Center,
   Flex,
   Show,
   SimpleGrid,
@@ -50,7 +51,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
 )
 
 const TitleCard = (props: ChildOnlyProp) => (
-  <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
+  <Flex p={8} direction="column" justify="flex-start" {...props} />
 )
 
 // Roadmap layout components
@@ -132,10 +133,15 @@ export const RoadmapLayout: React.FC<IProps> = ({
   return (
     <Box position="relative">
       <HeroContainer>
-        <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
+        <Flex
+          w="full"
+          flexDirection={{ base: "column", lg: "row" }}
+          justify="space-between"
+        >
           <TitleCard>
             {/* TODO: Double check this slug works */}
-            <Breadcrumbs slug={slug} /> <Title>{frontmatter.title}</Title>
+            <Breadcrumbs slug={slug} mb="8" />
+            <Title>{frontmatter.title}</Title>
             <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (
               // FIXME: remove the `ul` override once removed the corresponding
@@ -168,26 +174,16 @@ export const RoadmapLayout: React.FC<IProps> = ({
               isMobile
             />
           </TitleCard>
-          <Image
-            src={frontmatter.image}
-            alt={frontmatter.alt ?? ""}
-            style={{ objectFit: "contain" }}
-            alignSelf={{
-              base: "center",
-              lg: "normal",
-            }}
-            bgRepeat="no-repeat"
-            flex="1 1 100%"
-            right={0}
-            bottom={0}
-            width={600}
-            height={336}
-            overflow="initial"
-            maxW={{
-              base: "538px",
-              lg: "full",
-            }}
-          />
+          <Center>
+            <Image
+              src={frontmatter.image}
+              alt={frontmatter.alt ?? ""}
+              style={{ objectFit: "contain" }}
+              width={700}
+              height={345}
+              priority
+            />
+          </Center>
         </Flex>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
