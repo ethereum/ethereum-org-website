@@ -110,6 +110,8 @@ export const useQuizWidget = ({
     updateUserStats((prevStats) => {
       const lastScore = prevStats.completed[quizKey][1]
 
+      if (numberOfCorrectAnswers < lastScore) return prevStats
+
       return {
         score: prevStats.score + numberOfCorrectAnswers - lastScore,
         average: [...prevStats.average, quizScore],
