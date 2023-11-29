@@ -50,9 +50,9 @@ export const useClientSideGitHubLastEdit = (
   const [state, setState] = useState<LastUpdatedState>({ loading: true })
   const { locale } = useRouter()
   useEffect(() => {
-    ; (async () => {
+    ;(async () => {
       setState(await fetchGitHubLastEdit(relativePath, locale as Lang))
     })()
-  }, [relativePath])
+  }, [relativePath, locale])
   return state
 }
