@@ -45,6 +45,7 @@ import type { ChildOnlyProp } from "@/lib/types"
 
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
@@ -324,9 +325,13 @@ export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("bug-bounty")
+  const lastDeployDate = getLastDeployDate()
 
   return {
-    props: await serverSideTranslations(locale!, requiredNamespaces),
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
+    },
   }
 }
 
