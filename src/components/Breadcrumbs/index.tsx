@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react"
 
 import { BaseLink } from "@/components/Link"
-import Translation from "@/components/Translation"
 
 export type BreadcrumbsProps = ChakraBreadcrumbProps & {
   slug: string
@@ -52,7 +51,7 @@ const Breadcrumbs = ({
       ? [
           {
             fullPath: "/",
-            text: <Translation id="page-index-meta-title" />,
+            text: t("page-index-meta-title"),
           },
         ]
       : []),
