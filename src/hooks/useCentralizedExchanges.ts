@@ -3,8 +3,6 @@ import { shuffle } from "lodash"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import type { Lang } from "@/lib/types"
-
 // TODO: Remove unused?
 // import argent from "@/public/wallets/argent.png"
 // import binanceus from "@/public/exchanges/binance.png"
@@ -17,7 +15,6 @@ import type { ImageProps } from "@/components/Image"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { resizeImage } from "@/lib/utils/resizeImage"
-import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import exchangeData from "@/data/exchangesByCountry"
 
@@ -288,13 +285,6 @@ export const useCentralizedExchanges = () => {
 
   const placeholderString = t("page-get-eth-exchanges-search")
 
-  const lastUpdated = getLocaleTimestamp(
-    locale as Lang,
-    // TODO: Set up git log fetch; confirm no SSR issues
-    // data.timestamp.parent.fields.gitLogLatestDate
-    new Date().toISOString()
-  )
-
   // Add `value` & `label` for Select component, sort alphabetically
   const selectOptions: ExchangeByCountryOption[] = Object.entries(exchangeData as ExchangeData)
     .map(([country, exchanges]) => ({ value: country, label: country, exchanges }))
@@ -358,6 +348,5 @@ export const useCentralizedExchanges = () => {
     hasSelectedCountry,
     hasExchangeResults,
     filteredExchanges,
-    lastUpdated,
   }
 }

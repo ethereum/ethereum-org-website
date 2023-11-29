@@ -1,7 +1,8 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
@@ -9,6 +10,8 @@ import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import { StyledSelect } from "@/components/SharedStyledComponents"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { WEBSITE_EMAIL } from "@/lib/constants"
 
@@ -73,8 +76,13 @@ const NoResultsSingle = ({ children }) => (
   </Center>
 )
 
-const CentralizedExchanges = () => {
+type CentralizedExchangesProps = { lastDataUpdateDate: string }
+
+const CentralizedExchanges = ({
+  lastDataUpdateDate,
+}: CentralizedExchangesProps) => {
   const { t } = useTranslation("page-get-eth")
+  const { locale } = useRouter()
   const {
     selectOptions,
     handleSelectChange,
@@ -82,8 +90,9 @@ const CentralizedExchanges = () => {
     placeholderString,
     hasExchangeResults,
     filteredExchanges,
-    lastUpdated,
   } = useCentralizedExchanges()
+
+  const lastUpdated = getLocaleTimestamp(locale as Lang, lastDataUpdateDate)
 
   return (
     <Flex flexDir="column" align="center" w="full">

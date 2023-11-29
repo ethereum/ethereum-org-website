@@ -23,6 +23,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 // TODO: Remove or add Matcha as listed product:
 // import matcha from "@/public/exchanges/matcha.png" // width=20px
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -99,17 +100,21 @@ export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
+  const lastDataUpdateDate = getLastModifiedDateByPath(
+    "src/data/exchangesByCountry.ts"
+  )
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       lastDeployDate,
+      lastDataUpdateDate,
     },
   }
 }) satisfies GetStaticProps<SSRConfig>
 
-const GetEthPage = () => {
+const GetEthPage = ({ lastDataUpdateDate }) => {
   const { t } = useTranslation("page-get-eth")
 
   const tokenSwaps: CardListItem[] = [
@@ -321,7 +326,7 @@ const GetEthPage = () => {
         px={{ base: 8, sm: 16 }}
         py={{ base: 16, sm: 16 }}
       >
-        <CentralizedExchanges />
+        <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
       </Flex>
       <Content id="dex">
         <OldHeading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
