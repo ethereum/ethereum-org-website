@@ -152,7 +152,7 @@ export const getStaticProps = (async (context) => {
     }
   }
 
-  const crowdinContributors = ["docs", "tutorials"].includes(layout ?? "") // TODO: Remove fallback after Layout type implemented (PR #137)
+  const crowdinContributors = ["docs", "tutorial"].includes(layout)
     ? getCrowdinContributors(mdPath, locale as Lang)
     : []
 
