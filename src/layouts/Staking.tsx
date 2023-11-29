@@ -13,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -43,8 +43,6 @@ import WithdrawalsTabComparison from "@/components/Staking/WithdrawalsTabCompari
 import TableOfContents from "@/components/TableOfContents"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import LeftNavBar from "@/components/LeftNavBar"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -183,7 +181,9 @@ export const stakingComponents = {
   WithdrawalsTabComparison,
 }
 
-interface IProps extends MdPageContent, ChildOnlyProp {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: StakingFrontmatter
 }
 
@@ -197,7 +197,6 @@ export const StakingLayout: React.FC<IProps> = ({
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const { summaryPoints } = frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
@@ -272,33 +271,22 @@ export const StakingLayout: React.FC<IProps> = ({
           />
         </Flex>
         <Image
-          flex="1 1 100%"
-          bgRepeat="no-repeat"
-          right={0}
-          bottom={0}
-          maxW={{ base: "min(400px, 98%)", lg: "400px" }}
-          width={400}
-          height={340}
-          maxH={{ base: "340px", lg: "none" }}
-          boxSize={{ base: "full", lg: "auto" }}
-          overflow={{ base: "initial", lg: "visible" }}
-          alignSelf={{ base: "center", lg: "auto" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
-          style={{
-            objectFit: "contain",
-          }}
+          style={{ objectFit: "contain" }}
+          width={400}
+          height={340}
+          priority
         />
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-          />
-        </Show>
+      <Page>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <StakingCommunityCallout my={16} />

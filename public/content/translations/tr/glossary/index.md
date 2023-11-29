@@ -705,7 +705,7 @@ Kriptografide sadece bir kez kullanılabilen bir değerdir. Bir hesap nonce'u, t
 
 ### ommer (amca) bloğu {#ommer}
 
-Bir iş ispatı [madencisi](#miner) geçerli bir [blok](#block) bulduğu zaman başka bir madenci, blokzincirin ucuna ilk olarak eklenmiş rakip bir blok yayımlamış olabilir. Bu geçerli ancak eski blok, daha yeni bloklar tarafından _ommer'ler_ olarak dahil edilebilir ve kısmi blok ödülü alabilir. "Ommer" terimi, bir ebeveyn bloğunun kardeşi için tercih edilen cinsiyetsiz bir terimdir ancak buna bazen "amca" da denir. Bu, bir [iş ispatı](pow) ağıyken Ethereum ile ilgiliydi ancak ommer'ler, her bir yuvada tam olarak bir adet blok önerici seçildiğinden [hisse ispatı](#pos) Ethereum'un bir özelliği değildir.
+Bir iş ispatı [madencisi](#miner) geçerli bir [blok](#block) bulduğu zaman başka bir madenci, blokzincirin ucuna ilk olarak eklenmiş rakip bir blok yayımlamış olabilir. Bu geçerli ancak eski blok, daha yeni bloklar tarafından _ommer'ler_ olarak dahil edilebilir ve kısmi blok ödülü alabilir. "Ommer" terimi, bir ebeveyn bloğunun kardeşi için tercih edilen cinsiyetsiz bir terimdir ancak buna bazen "amca" da denir. Bu, bir [iş ispatı](#pow) ağıyken Ethereum ile ilgiliydi ancak ommer'ler, her bir yuvada tam olarak bir adet blok önerici seçildiğinden [hisse ispatı](#pos) Ethereum'un bir özelliği değildir.
 
 ### i̇yimser toplama {#optimistic-rollup}
 

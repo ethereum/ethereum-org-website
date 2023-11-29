@@ -27,7 +27,7 @@ const ContentColumn = (props: {
     flexBasis="50%"
     p={4}
     color="text"
-    textAlign={{ base: "center", lg: "left" }}
+    textAlign={{ base: "center", lg: "start" }}
     {...props}
   />
 )

@@ -28,7 +28,7 @@ export const ButtonTwoLines: Story = {
       <ButtonTwoLinesComponent {...args} />
       <ButtonTwoLinesComponent
         {...args}
-        iconAlignment="right"
+        iconAlignment="end"
         size="sm"
         reverseTextOrder
       />

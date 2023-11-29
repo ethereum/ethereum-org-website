@@ -1,11 +1,14 @@
-import React, { useEffect,useState } from "react"
+import React, { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import axios from "axios"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Flex, FlexProps, Heading, Icon } from "@chakra-ui/react"
+import { Box, Flex, FlexProps, Heading, Icon, Text } from "@chakra-ui/react"
 
 import InlineLink from "./Link"
 import Tooltip from "./Tooltip"
 import Translation from "./Translation"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface IProps extends FlexProps {
   isLeftAlign?: boolean
@@ -18,6 +21,8 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
     percentChangeUSD: 0,
     hasError: false,
   })
+  const { locale } = useRouter()
+  const { flipForRtl } = useRtlFlip()
 
   useEffect(() => {
     axios
@@ -59,10 +64,11 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
 
   const isNegativeChange = state?.percentChangeUSD < 0
 
+  const formatPercentage = (amount: number): string =>
+    new Intl.NumberFormat(locale, { style: "percent" }).format(amount)
+
   const change = state.percentChangeUSD
-    ? isNegativeChange
-      ? `${state.percentChangeUSD}% ↘`
-      : `${state.percentChangeUSD}% ↗`
+    ? formatPercentage(state.percentChangeUSD)
     : ``
 
   const tooltipContent = (
@@ -107,7 +113,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
       >
         <Translation id="eth-current-price" />
         <Tooltip content={tooltipContent}>
-          <Icon as={MdInfoOutline} boxSize="14px" ml={2} />
+          <Icon as={MdInfoOutline} boxSize="14px" ms={2} />
         </Tooltip>
       </Heading>
 
@@ -128,10 +134,18 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
         <Box
           fontSize="2xl"
           lineHeight="140%"
-          mr={4}
+          me={4}
           color={isNegativeChange ? "fail300" : "success.base"}
         >
-          {change}
+          <Text
+            as="span"
+            _after={{
+              content: isNegativeChange ? '"↘"' : '"↗"',
+              transform: flipForRtl,
+            }}
+          >
+            {change}
+          </Text>
         </Box>
         <Box
           fontSize="sm"

@@ -1,8 +1,12 @@
 import { join } from "path"
 import { ParsedUrlQuery } from "querystring"
 
-import { ReactElement } from "react"
-import type { GetStaticPaths, GetStaticProps } from "next/types"
+import type {
+  GetStaticPaths,
+  GetStaticProps,
+  InferGetStaticPropsType,
+} from "next/types"
+import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
@@ -11,8 +15,9 @@ import remarkGfm from "remark-gfm"
 
 import type {
   Lang,
+  Layout,
+  LayoutMappingType,
   NextPageWithLayout,
-  StaticPaths,
   TocNodeType,
 } from "@/lib/types"
 
@@ -25,6 +30,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
+import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -45,9 +51,12 @@ import {
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
-const layoutMapping = {
+interface Params extends ParsedUrlQuery {
+  slug: string[]
+}
+
+export const layoutMapping = {
   static: StaticLayout,
   "use-cases": UseCasesLayout,
   staking: StakingLayout,
@@ -55,7 +64,7 @@ const layoutMapping = {
   upgrade: UpgradeLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
-} as const
+}
 
 const componentsMapping = {
   static: staticComponents,
@@ -67,41 +76,32 @@ const componentsMapping = {
   tutorial: tutorialsComponents,
 } as const
 
-interface Params extends ParsedUrlQuery {
-  slug: string[]
-}
-
-interface Props {
-  mdxSource: MDXRemoteSerializeResult
-}
-
-export const getStaticPaths: GetStaticPaths = ({ locales }) => {
+export const getStaticPaths = (({ locales }) => {
   const contentFiles = getContent("/")
 
-  let paths: StaticPaths = []
-
   // Generate page paths for each supported locale
-  for (const locale of locales!) {
-    contentFiles.map((file) => {
-      paths.push({
-        params: {
-          // Splitting nested paths to generate proper slug
-          slug: file.slug.split("/").slice(1),
-        },
-        locale,
-      })
-    })
-  }
+  const paths = locales!.flatMap((locale) =>
+    contentFiles.map((file) => ({
+      params: {
+        // Splitting nested paths to generate proper slug
+        slug: file.slug.split("/").slice(1),
+      },
+      locale,
+    }))
+  )
 
   return {
     paths,
     fallback: false,
   }
-}
+}) satisfies GetStaticPaths<Params>
 
-export const getStaticProps: GetStaticProps<Props, Params> = async (
-  context
-) => {
+type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
+  SSRConfig & {
+    mdxSource: MDXRemoteSerializeResult
+  }
+
+export const getStaticProps = (async (context) => {
   const params = context.params!
   const { locale } = context
 
@@ -132,16 +132,14 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
-  const originalSlug = `/${params.slug.join("/")}/`
-  const lastUpdatedDate = getLastModifiedDate(originalSlug, locale!)
+  const slug = `/${params.slug.join("/")}/`
+  const lastUpdatedDate = getLastModifiedDate(slug, locale!)
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = frontmatter.template
+  let layout = (frontmatter.template as Layout) ?? "static"
 
   if (!frontmatter.template) {
-    layout = "static"
-
     if (params.slug.includes("docs")) {
       layout = "docs"
     }
@@ -159,13 +157,13 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
     : []
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(originalSlug, layout)
+  const requiredNamespaces = getRequiredNamespacesForPath(slug, layout)
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       mdxSource,
-      originalSlug,
+      slug,
       frontmatter,
       lastUpdatedDate,
       lastDeployDate,
@@ -176,28 +174,26 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
       crowdinContributors,
     },
   }
-}
+}) satisfies GetStaticProps<Props, Params>
 
-interface ContentPageProps extends Props {
-  layout: keyof typeof layoutMapping
-}
-
-const ContentPage: NextPageWithLayout<ContentPageProps> = ({
-  mdxSource,
-  layout,
-}) => {
-  const components = { ...mdComponents, ...componentsMapping[layout] }
+const ContentPage: NextPageWithLayout<
+  InferGetStaticPropsType<typeof getStaticProps>
+> = ({ mdxSource, layout }) => {
+  // TODO: Address component typing error here (flip `FC` types to prop object types)
+  // @ts-expect-error
+  const components: Record<string, React.ReactNode> = {
+    ...mdComponents,
+    ...componentsMapping[layout],
+  }
   return (
     <>
-      {/* // TODO: fix components types, for some reason MDXRemote doesn't like some of them */}
-      {/* @ts-ignore */}
       <MDXRemote {...mdxSource} components={components} />
     </>
   )
 }
 
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
-ContentPage.getLayout = (page: ReactElement) => {
+ContentPage.getLayout = (page) => {
   // values returned by `getStaticProps` method and passed to the page component
   const {
     originalSlug: slug,
