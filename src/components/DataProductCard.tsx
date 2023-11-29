@@ -75,7 +75,7 @@ const DataProductCard: React.FC<IProps> = ({
         />
       </Flex>
       <Flex
-        textAlign="left"
+        textAlign="start"
         flexDirection="column"
         justifyContent="space-between"
       >
@@ -116,8 +116,8 @@ const DataProductCard: React.FC<IProps> = ({
                 textTransform="uppercase"
                 border="1px solid"
                 borderColor="lightBorder"
-                borderLeft="0"
-                borderRight="0"
+                borderInlineStart="0"
+                borderInlineEnd="0"
               >
                 <Flex alignItems="center">
                   {logo && (
@@ -126,7 +126,7 @@ const DataProductCard: React.FC<IProps> = ({
                       objectFit="cover"
                       alt=""
                       minWidth="24px"
-                      marginRight="0.5rem"
+                      me="0.5rem"
                     />
                   )}
                   {coin}

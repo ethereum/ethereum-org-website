@@ -36,7 +36,7 @@ const SectionTitle = (props: ChildOnlyType) => (
     fontSize="1.25rem"
     fontWeight={700}
     lineHeight="22px"
-    textAlign="left"
+    textAlign="start"
     mt={0}
     {...props}
   />
@@ -77,7 +77,7 @@ const StepBox = (
           textDecoration="inherit"
           to={props.to}
           fontWeight={700}
-          textAlign="left"
+          textAlign="start"
           _hover={{
             textDecoration: "inherit",
           }}
@@ -88,7 +88,7 @@ const StepBox = (
           <Translation id={props.descId} />
         </Text>
       </Box>
-      <Icon as={MdArrowForward} ml={4} minW={6} />
+      <Icon as={MdArrowForward} ms={4} minW={6} />
     </Flex>
   </Flex>
 )

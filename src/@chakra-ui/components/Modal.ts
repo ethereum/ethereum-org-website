@@ -43,7 +43,7 @@ const variantCode = definePartsStyle((props) => ({
     fontSize: "sm",
     margin: 0,
     top: 4,
-    right: 4,
+    insetInlineEnd: 4,
     bottom: 4,
   },
   body: {

@@ -68,7 +68,7 @@ const Nav: FC<IProps> = ({ path }) => {
           <Flex
             w="full"
             justifyContent={{ base: "flex-end", lg: "space-between" }}
-            ml={{ base: 3, xl: 8 }}
+            ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="lg" path={path} sections={linkSections} />
             <Flex
@@ -145,7 +145,7 @@ const Nav: FC<IProps> = ({ path }) => {
               color="text"
               fontWeight="normal"
               textDecor="none"
-              mr={8}
+              me={8}
               _hover={{
                 color: "primary.base",
                 svg: {

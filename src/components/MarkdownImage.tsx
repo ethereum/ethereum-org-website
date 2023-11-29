@@ -3,8 +3,9 @@ import { Flex } from "@chakra-ui/react"
 import { Image, type ImageProps } from "@/components/Image"
 import Link from "@/components/Link"
 
-import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 import { toPosixPath } from "@/lib/utils/relativePath"
+
+import { CONTENT_IMAGES_MAX_WIDTH } from "@/lib/constants"
 
 interface MarkdownImageProps extends Omit<ImageProps, "width" | "height"> {
   width: string
@@ -16,6 +17,7 @@ const MarkdownImage = ({
   width,
   height,
   aspectRatio,
+  alt,
   src,
   ...rest
 }: MarkdownImageProps) => {
@@ -38,6 +40,7 @@ const MarkdownImage = ({
     <Flex as="span" justify="center">
       <Link href={transformedSrc} target="_blank" rel="noopener">
         <Image
+          alt={alt}
           width={imageWidth}
           height={imageHeight}
           loading="lazy"

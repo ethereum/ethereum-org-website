@@ -5,12 +5,12 @@ import { MdSearch } from "react-icons/md"
 // import { useDocSearchKeyboardEvents } from "@docsearch/react"
 // import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import {
+  Box,
   forwardRef,
   IconButtonProps,
   Portal,
-  useMergeRefs,
-  Box,
   ThemeTypings,
+  useMergeRefs,
 } from "@chakra-ui/react"
 
 import { Button } from "../Buttons"

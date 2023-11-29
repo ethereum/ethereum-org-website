@@ -22,8 +22,8 @@ const AssetDownloadArtist = ({ artistName, artistUrl }: Props) => {
       px={4}
       borderRadius="0 0 4px 4px"
     >
-      <Flex mr={2} fontSize="md" textColor="text300">
-        <Emoji text=":artist_palette:" mr={2} fontSize="2xl" />
+      <Flex me={2} fontSize="md" textColor="text300">
+        <Emoji text=":artist_palette:" me={2} fontSize="2xl" />
         <Translation id="page-assets-download-artist" />
       </Flex>
       {artistUrl && <Link to={artistUrl}>{artistName}</Link>}

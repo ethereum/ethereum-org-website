@@ -8,7 +8,6 @@ import {
 } from "@chakra-ui/react"
 
 import { BaseLink } from "@/components/Link"
-import Translation from "@/components/Translation"
 
 export type BreadcrumbsProps = ChakraBreadcrumbProps & {
   slug: string
@@ -38,7 +37,7 @@ const Breadcrumbs = ({
   startDepth = 0,
   ...props
 }: BreadcrumbsProps) => {
-  const { t } = useTranslation("page-index")
+  const { t } = useTranslation(["common", "page-index"])
   const { locale, asPath } = useRouter()
 
   const hasHome = asPath !== "/"
@@ -52,17 +51,15 @@ const Breadcrumbs = ({
       ? [
           {
             fullPath: "/",
-            text: <Translation id="page-index-meta-title" />,
+            text: t("page-index-meta-title"),
           },
         ]
       : []),
     ,
-    ...sliced.map((path, idx) => {
-      return {
-        fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
-        text: t(path), // TODO: fix i18n strings for path breadcrumbs
-      }
-    }),
+    ...sliced.map((path, idx) => ({
+      fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
+      text: t(path),
+    })),
   ]
     .filter((item): item is Crumb => !!item)
     .slice(startDepth)

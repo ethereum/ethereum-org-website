@@ -2,9 +2,9 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import HubHeroComponent from "./"
-
 import type { CommonHeroProps as HubHeroProps } from "@/lib/types"
+
+import HubHeroComponent from "./"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -35,7 +35,9 @@ export const HubHero: StoryObj<typeof meta> = {
     description: "hero-subtitle",
     heroImgSrc: mockImgData,
   },
+
   render: ({ title, header, description, ...props }) => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
 
     const buttons: HubHeroProps["buttons"] = [

@@ -22,7 +22,7 @@ const TopBarItem = (props: BoxProps) => {
       borderRadius="base"
       borderColor="searchBorder"
       bg={bgColor}
-      ml={2}
+      ms={2}
       py={1}
       px={2}
       _hover={{
@@ -280,7 +280,7 @@ const Codeblock: React.FC<IProps> = ({
               style={style}
               className={className}
               pt={hasTopBar ? "2.75rem" : 6}
-              pl={4}
+              ps={4}
               m={0}
               overflow="visible"
               minW="full"
@@ -298,8 +298,8 @@ const Codeblock: React.FC<IProps> = ({
                       <Box
                         as="span"
                         display="table-cell"
-                        textAlign="right"
-                        pr={8}
+                        textAlign="end"
+                        pe={8}
                         userSelect="none"
                         opacity={0.4}
                       >
@@ -320,7 +320,7 @@ const Codeblock: React.FC<IProps> = ({
                   justify="flex-end"
                   position="absolute"
                   top={3}
-                  right={4}
+                  insetInlineEnd={4}
                 >
                   {allowCollapse &&
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (

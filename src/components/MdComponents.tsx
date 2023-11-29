@@ -194,9 +194,9 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
       {...props}
       sx={{
         ".featured": {
-          pl: 4,
-          ml: -4,
-          borderLeft: "1px dotted",
+          ps: 4,
+          ms: -4,
+          borderInlineStart: "1px dotted",
           borderColor: "primary.base",
         },
         ".citation p": {
@@ -212,8 +212,8 @@ export const InfoColumn = (props: ChildOnlyProp) => (
     as="aside"
     flexDirection="column"
     flex="0 1 400px"
-    ml={8}
-    mr={16}
+    ms={8}
+    me={16}
     position="sticky"
     top="6.25rem"
     height={calc("100vh").subtract("80px").toString()}
@@ -224,7 +224,7 @@ export const InfoColumn = (props: ChildOnlyProp) => (
 export const InfoTitle = (props: ChildOnlyProp) => (
   <Heading2
     fontSize={{ base: "2.5rem", lg: "5xl" }}
-    textAlign={{ base: "left", lg: "right" }}
+    textAlign={{ base: "start", lg: "end" }}
     mt={0}
     {...props}
   />
@@ -288,7 +288,9 @@ export const reactComponents = {
 /**
  * All base markdown components as default export
  */
-export default {
+const MdComponents = {
   ...htmlElements,
   ...reactComponents,
 }
+
+export default MdComponents

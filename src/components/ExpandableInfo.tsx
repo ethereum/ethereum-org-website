@@ -1,16 +1,16 @@
-import type { ReactNode } from "react"
 import { motion } from "framer-motion"
+import type { ReactNode } from "react"
 import { MdExpandMore } from "react-icons/md"
 import {
+  type BackgroundProps,
   Box,
   Center,
+  type ChakraProps,
   Collapse,
   Heading,
   HStack,
   Icon,
   Stack,
-  type BackgroundProps,
-  type ChakraProps,
   useDisclosure,
   VStack,
 } from "@chakra-ui/react"

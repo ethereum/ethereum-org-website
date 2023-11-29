@@ -17,7 +17,7 @@ const DismissableBanner: React.FC<IProps> = ({ children, storageKey }) => {
   useEffect(() => {
     const isDismissed = localStorage.getItem(storageKey) === "true"
     setShow(!isDismissed)
-  }, [])
+  }, [storageKey])
 
   const onClose = () => {
     localStorage.setItem(storageKey, "true")

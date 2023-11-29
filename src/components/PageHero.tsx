@@ -1,8 +1,6 @@
 import type { ReactNode } from "react"
 import { Box, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
 
-import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
-
 import {
   Button,
   ButtonLink,
@@ -11,6 +9,8 @@ import {
 } from "@/components/Buttons"
 import { Image, type ImageProps } from "@/components/Image"
 import Text from "@/components/OldText"
+
+import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 export type ButtonLinkType = Omit<ButtonLinkProps, "content"> & {
   content: ReactNode
@@ -109,11 +109,13 @@ const PageHero = ({
                     <ButtonLink
                       variant={button.variant}
                       to={button.to}
-                      onClick={() => trackCustomEvent({
-                        eventCategory: button.matomo.eventCategory,
-                        eventAction: button.matomo.eventAction,
-                        eventName: button.matomo.eventName,
-                      })}
+                      onClick={() =>
+                        trackCustomEvent({
+                          eventCategory: button.matomo.eventCategory,
+                          eventAction: button.matomo.eventAction,
+                          eventName: button.matomo.eventName,
+                        })
+                      }
                     >
                       {button.content}
                     </ButtonLink>
@@ -127,11 +129,13 @@ const PageHero = ({
                     <Button
                       variant={button.variant}
                       toId={button.toId}
-                      onClick={() => trackCustomEvent({
-                        eventCategory: button.matomo.eventCategory,
-                        eventAction: button.matomo.eventAction,
-                        eventName: button.matomo.eventName,
-                      })}
+                      onClick={() =>
+                        trackCustomEvent({
+                          eventCategory: button.matomo.eventCategory,
+                          eventAction: button.matomo.eventAction,
+                          eventName: button.matomo.eventName,
+                        })
+                      }
                     >
                       {button.content}
                     </Button>
@@ -153,7 +157,8 @@ const PageHero = ({
         src={image}
         style={{ objectFit: "contain" }}
         alt={alt}
-        loading="eager" />
+        loading="eager"
+      />
     </Flex>
   </Box>
 )
