@@ -1,19 +1,26 @@
+import type { GetStaticProps } from "next/types"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import type { ComponentProps, ReactNode } from "react"
+import { FaDiscord } from "react-icons/fa"
 import {
   Box,
-  Center,
-  Flex,
   type BoxProps,
+  Center,
   type CenterProps,
+  Flex,
   type FlexProps,
   type HeadingProps,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { GetStaticProps } from "next/types"
-import type { ComponentProps, ReactNode } from "react"
-import { FaDiscord } from "react-icons/fa"
 
+import type { ChildOnlyProp } from "@/lib/types"
+
+import { Button, ButtonLink } from "@/components/Buttons"
+import Emoji from "@/components/Emoji"
+import ExpandableCard from "@/components/ExpandableCard"
+import ExpandableInfo from "@/components/ExpandableInfo"
+import FeedbackCard from "@/components/FeedbackCard"
 import {
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -24,33 +31,26 @@ import {
   SovereigntyGlyphIcon,
   VoteGlyphIcon,
 } from "@/components/icons/run-a-node"
-import { Button, ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
-import Emoji from "@/components/Emoji"
-import ExpandableCard from "@/components/ExpandableCard"
-import ExpandableInfo from "@/components/ExpandableInfo"
-import FeedbackCard from "@/components/FeedbackCard"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
-import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
+
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
 import { InfoGrid } from "@/layouts/Staking"
-
-import Dappnode from "@/public/run-a-node/dappnode.svg"
-import Dapptap from "@/public/run-a-node/dapptap.svg"
-import Terminal from "@/public/run-a-node/terminal.svg"
-
 import community from "@/public/enterprise-eth.png"
-import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
 import hackathon from "@/public/hackathon_transparent.png"
 import impact from "@/public/impact_transparent.png"
+import Dappnode from "@/public/run-a-node/dappnode.svg"
+import Dapptap from "@/public/run-a-node/dapptap.svg"
+import ethereumInside from "@/public/run-a-node/ethereum-inside.png"
+import Terminal from "@/public/run-a-node/terminal.svg"
 import leslie from "@/public/upgrades/upgrade_rhino.png"
-
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import type { ChildOnlyProp } from "@/lib/types"
 
 const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
@@ -329,7 +329,7 @@ export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
   const lastDeployDate = getLastDeployDate()
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("run-a-node")
+  const requiredNamespaces = getRequiredNamespacesForPage("run-a-node")
 
   return {
     props: {

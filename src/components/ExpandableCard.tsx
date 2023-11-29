@@ -10,7 +10,7 @@ import {
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
-import Text from "./OldText"
+import Text from "@/components/OldText"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -86,10 +86,7 @@ const ExpandableCard = ({
               flexDir={{ base: "column", sm: "row" }}
               textAlign="start"
             >
-              <Box
-                marginBottom={{ base: 2, sm: 0 }}
-                me={{ base: 0, sm: 4 }}
-              >
+              <Box marginBottom={{ base: 2, sm: 0 }} me={{ base: 0, sm: 4 }}>
                 <Box
                   display="flex"
                   alignItems="center"

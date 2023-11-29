@@ -1,11 +1,11 @@
 import { useTranslation } from "next-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 
+import type { CommonHeroProps } from "@/lib/types"
+
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 import Morpher from "@/components/Morpher"
-
-import type { CommonHeroProps } from "@/lib/types"
 
 export type HomeHeroProps = Pick<CommonHeroProps, "heroImgSrc">
 
@@ -33,9 +33,7 @@ const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
             <Heading as="h1" size="2xl">
               {t("page-index-title")}
             </Heading>
-            <Text size="xl">
-              {t("page-index-description")}
-            </Text>
+            <Text size="xl">{t("page-index-description")}</Text>
             <ButtonLink href="/learn/">
               {t("page-index-title-button")}
             </ButtonLink>

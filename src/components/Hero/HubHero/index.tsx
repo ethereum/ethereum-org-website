@@ -7,10 +7,10 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { Image } from "@/components/Image"
-import { CallToAction } from "@/components/Hero/CallToAction"
-
 import type { CommonHeroProps } from "@/lib/types"
+
+import { CallToAction } from "@/components/Hero/CallToAction"
+import { Image } from "@/components/Image"
 
 const HubHero = ({
   heroImgSrc,
