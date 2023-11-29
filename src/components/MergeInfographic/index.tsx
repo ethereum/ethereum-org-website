@@ -72,7 +72,7 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
         <Box
           position="absolute"
           top="40%"
-          left="2%"
+          insetInlineStart="2%"
           width="81%"
           height="18%"
           margin={0}

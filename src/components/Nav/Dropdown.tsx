@@ -57,9 +57,6 @@ const NavDropdown: React.FC<IProps> & {
   // const { locale } = useRouter()
   const ref = createRef<HTMLLIElement>()
 
-  // TODO
-  // const direction = getDirection(language as Lang)
-
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
 
@@ -100,8 +97,6 @@ const NavDropdown: React.FC<IProps> & {
       >
         <Flex
           as="span"
-          // TODO
-          // dir={direction}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}

@@ -28,6 +28,7 @@ import { Tabs } from "./Tabs"
 import { Tag } from "./Tag"
 import { Text } from "./Text"
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   Accordion: accordionDefaultTheme,
   Alert,

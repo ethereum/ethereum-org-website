@@ -1,14 +1,15 @@
 import {
   Box,
+  Center,
   Flex,
   Show,
   SimpleGrid,
+  useToken,
   Wrap,
   WrapItem,
-  useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -16,6 +17,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Button, ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import {
   ContentContainer,
   MobileButton,
@@ -28,9 +30,6 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
-import LeftNavBar from "@/components/LeftNavBar"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -50,7 +49,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
 )
 
 const TitleCard = (props: ChildOnlyProp) => (
-  <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
+  <Flex p={8} direction="column" justify="flex-start" {...props} />
 )
 
 // Roadmap layout components
@@ -74,8 +73,6 @@ export const RoadmapLayout: React.FC<IProps> = ({
 }) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
-
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
@@ -132,10 +129,15 @@ export const RoadmapLayout: React.FC<IProps> = ({
   return (
     <Box position="relative">
       <HeroContainer>
-        <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
+        <Flex
+          w="full"
+          flexDirection={{ base: "column", lg: "row" }}
+          justify="space-between"
+        >
           <TitleCard>
             {/* TODO: Double check this slug works */}
-            <Breadcrumbs slug={slug} /> <Title>{frontmatter.title}</Title>
+            <Breadcrumbs slug={slug} mb="8" />
+            <Title>{frontmatter.title}</Title>
             <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (
               // FIXME: remove the `ul` override once removed the corresponding
@@ -168,29 +170,19 @@ export const RoadmapLayout: React.FC<IProps> = ({
               isMobile
             />
           </TitleCard>
-          <Image
-            src={frontmatter.image}
-            alt={frontmatter.alt ?? ""}
-            style={{ objectFit: "contain" }}
-            alignSelf={{
-              base: "center",
-              lg: "normal",
-            }}
-            bgRepeat="no-repeat"
-            flex="1 1 100%"
-            right={0}
-            bottom={0}
-            width={600}
-            height={336}
-            overflow="initial"
-            maxW={{
-              base: "538px",
-              lg: "full",
-            }}
-          />
+          <Center>
+            <Image
+              src={frontmatter.image}
+              alt={frontmatter.alt ?? ""}
+              style={{ objectFit: "contain" }}
+              width={700}
+              height={345}
+              priority
+            />
+          </Center>
         </Flex>
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBp}

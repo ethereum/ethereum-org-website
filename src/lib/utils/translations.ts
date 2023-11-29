@@ -20,24 +20,24 @@ export const isLang = (lang: string) => {
   return i18nConfigs.map((language) => language.code).includes(lang)
 }
 
-export const getRequiredNamespacesForPath = (path: string, layout?: string | undefined) => {
-  let requiredNamespaces: string[] = ["common"]
+export const getRequiredNamespacesForPage = (
+  path: string,
+  layout?: string | undefined
+) => {
+  const baseNamespaces = ["common"]
 
-  if (layout === "docs") {
-    requiredNamespaces = [...requiredNamespaces, 'page-developers-docs']
-  }
+  const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
+  const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
 
-  if (layout === 'use-cases') {
-    requiredNamespaces = [...requiredNamespaces, "template-usecase", "learn-quizzes"]
-  }
+  return [
+    ...baseNamespaces,
+    ...requiredNamespacesForPath,
+    ...requiredNamespacesForLayout,
+  ]
+}
 
-  if (layout === "upgrade") {
-    requiredNamespaces = [...requiredNamespaces, "page-upgrades", "page-upgrades-index"]
-  }
-
-  if (layout === "tutorial") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
-  }
+const getRequiredNamespacesForPath = (path: string) => {
+  let requiredNamespaces: string[] = []
 
   if (path.startsWith("/assets")) {
     requiredNamespaces = [...requiredNamespaces, "page-assets"]
@@ -88,3 +88,32 @@ export const getRequiredNamespacesForPath = (path: string, layout?: string | und
   return requiredNamespaces
 }
 
+const getRequiredNamespacesForLayout = (layout?: string) => {
+  let requiredNamespaces: string[] = []
+
+  if (layout === "docs") {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
+  }
+
+  if (layout === "use-cases") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "template-usecase",
+      "learn-quizzes",
+    ]
+  }
+
+  if (layout === "upgrade") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades",
+      "page-upgrades-index",
+    ]
+  }
+
+  if (layout === "tutorial") {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
+
+  return requiredNamespaces
+}

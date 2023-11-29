@@ -57,7 +57,7 @@ const MatomoOptOut = () => {
           id="matomo"
           isChecked={!isOptedOut}
           onChange={handleCheckbox}
-          mr={2}
+          me={2}
         >
           {isOptedOut
             ? "You are opted out. Check this box to opt-in."

@@ -26,6 +26,7 @@ const imageProps: (keyof NextImageProps)[] = [
   "referrerPolicy",
   "sizes",
   "src",
+  "style",
   "useMap",
 ]
 

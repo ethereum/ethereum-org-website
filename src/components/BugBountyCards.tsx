@@ -41,6 +41,7 @@ const Card = ({ children, ...props }: FlexProps) => {
       justifyContent="space-between"
       bg="background.base"
       borderRadius="2px"
+      borderRad
       boxShadow={tableBoxShadow}
       border="1px solid"
       borderColor="border"
@@ -89,10 +90,10 @@ const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
 
   return (
     <Center
-      borderTopRightRadius="1px"
-      borderTopLeftRadius="1px"
-      borderBottomRightRadius={0}
-      borderBottomLeftRadius={0}
+      borderTopEndRadius="1px"
+      borderTopStartRadius="1px"
+      borderBottomEndRadius={0}
+      borderBottomStartRadius={0}
       borderBottom="1px solid"
       borderColor="border"
       fontSize="sm"
@@ -116,7 +117,7 @@ const H2 = ({ children, ...props }: HeadingProps) => {
       lineHeight="22px"
       letterSpacing={0}
       p={4}
-      textAlign="left"
+      textAlign="start"
       mb={-2}
       mt={2}
       {...props}
@@ -140,7 +141,7 @@ const SubHeader = ({ children, ...props }: TextProps) => {
       as="p"
       textTransform="uppercase"
       fontSize="sm"
-      ml={4}
+      ms={4}
       mt={4}
       mb={2}
       opacity="0.6"

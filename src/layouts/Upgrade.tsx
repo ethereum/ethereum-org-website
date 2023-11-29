@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
+  Center,
   Flex,
   type FlexProps,
   Icon,
@@ -13,7 +14,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
 import BeaconChainActions from "@/components/BeaconChainActions"
@@ -21,6 +22,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
@@ -32,11 +34,9 @@ import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
 import UpgradeStatus from "@/components/UpgradeStatus"
-import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
@@ -102,7 +102,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       maxW={{ base: "full", lg: "640px" }}
       p={8}
       top={{ lg: 24 }}
-      left={{ lg: 24 }}
+      insetInlineStart={{ lg: 24 }}
       zIndex={10}
       {...props}
     />
@@ -143,8 +143,6 @@ export const UpgradeLayout: React.FC<IProps> = ({
 }) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
-
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
@@ -195,17 +193,14 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </TitleCard>
         {frontmatter.image && (
           <Image
-            flex="1 1 100%"
-            maxW="min(100%, 816px)"
-            style={{ objectFit: "cover" }}
-            alignSelf="center"
-            right={0}
-            bottom={0}
-            width={600}
-            height={600}
-            overflow="initial"
             src={frontmatter.image}
             alt={frontmatter.alt}
+            width={816}
+            height={525}
+            style={{ objectFit: "cover" }}
+            priority
+            flex={{ base: "1 1 100%", md: "none" }}
+            alignSelf={{ base: "center", md: "flex-end" }}
           />
         )}
       </HeroContainer>
@@ -214,7 +209,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </MoreContent>
       </Show>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBreakpoint}

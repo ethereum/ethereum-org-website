@@ -73,8 +73,8 @@ export const Heading: Story = {
   render: (args) => (
     <VStack w="full">
       <Box>
-        Adjust the viewport to below "md" to see the font size and line height
-        change
+        Adjust the viewport to below &quot;md&quot; to see the font size and
+        line height change
       </Box>
       <Stack>
         {headingScale.map((obj, idx) => (
@@ -82,7 +82,7 @@ export const Heading: Story = {
             <HeadingComponent
               as="span"
               flex="1"
-              textAlign="right"
+              textAlign="end"
               size={obj.size}
             >
               {obj.size || "xl"}
