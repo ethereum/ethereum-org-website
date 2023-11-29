@@ -1,7 +1,7 @@
 import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
-import { useTranslation } from "next-i18next"
+import { SSRConfig, useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
 import { GetStaticProps } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -12,13 +12,19 @@ import PageMetadata from "../components/PageMetadata"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { languageMetadata } from "@/lib/utils/languages"
+import {
+  getRequiredNamespacesForPath,
+  languageMetadata,
+} from "@/lib/utils/translations"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 import { I18nLocale, TranslationKey } from "@/lib/types"
 
-export const getStaticProps: GetStaticProps = async (context) => {
+type Props = SSRConfig & {
+  lastDeployDate: string
+}
+
+export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("/languages")
@@ -30,7 +36,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       lastDeployDate,
     },
   }
-}
+}) satisfies GetStaticProps<Props>
 
 const LanguagesPage = () => {
   const { t } = useTranslation("page-languages")
