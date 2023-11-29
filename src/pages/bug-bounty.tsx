@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { type SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -100,13 +100,14 @@ const Subtitle = (props: ChildOnlyProp) => (
 
 const SloganGradient = (props: ChildOnlyProp) => (
   <Box
-    fontWeight="800"
-    fontSize={{ base: "2.5rem", lg: "3rem" }}
-    lineHeight="140%"
+    fontWeight="extrabold"
+    fontSize={{ base: "2.5rem", lg: "5xl" }}
+    lineHeight="xs"
     maxW="720px"
     mt="4"
     mb="0"
     bgClip="text"
+    overflow="auto"
     sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
     bg="upgradesGradient"
   >
@@ -205,8 +206,8 @@ const ClientIntro = (props: ChildOnlyProp) => (
     textTransform="uppercase"
     fontSize="0.875rem"
     color="text300"
-    fontWeight="600"
-    mt={{ base: "3rem", lg: "0" }}
+    fontWeight="semibold"
+    mt={{ base: "5xl", lg: "0" }}
     {...props}
   />
 )
