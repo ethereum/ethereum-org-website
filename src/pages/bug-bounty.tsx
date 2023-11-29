@@ -534,13 +534,13 @@ const BugBountiesPage = () => {
                 <UnorderedList>
                   <ListItem>
                     <InlineLink href="https://benjaminion.xyz/eth2-annotated-spec/">
-                      Ben Edgington's{" "}
+                      Ben Edgington&apos;s{" "}
                       {t("page-upgrades-bug-bounty-annotated-specs")}
                     </InlineLink>
                   </ListItem>
                   <ListItem>
                     <InlineLink href="https://github.com/ethereum/annotated-spec">
-                      Vitalik Buterin's{" "}
+                      Vitalik Buterin&apos;s{" "}
                       {t("page-upgrades-bug-bounty-annotated-specs")}
                     </InlineLink>
                   </ListItem>
