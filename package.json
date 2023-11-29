@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -29,6 +30,7 @@
     "next": "^14.0.0",
     "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
+    "next-sitemap": "^4.2.3",
     "prism-react-renderer": "1.1.0",
     "prismjs": "^1.27.0",
     "react": "^18.2.0",
