@@ -183,7 +183,9 @@ export const stakingComponents = {
   WithdrawalsTabComparison,
 }
 
-interface IProps extends MdPageContent, ChildOnlyProp {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: StakingFrontmatter
 }
 
@@ -272,33 +274,22 @@ export const StakingLayout: React.FC<IProps> = ({
           />
         </Flex>
         <Image
-          flex="1 1 100%"
-          bgRepeat="no-repeat"
-          right={0}
-          bottom={0}
-          maxW={{ base: "min(400px, 98%)", lg: "400px" }}
-          width={400}
-          height={340}
-          maxH={{ base: "340px", lg: "none" }}
-          boxSize={{ base: "full", lg: "auto" }}
-          overflow={{ base: "initial", lg: "visible" }}
-          alignSelf={{ base: "center", lg: "auto" }}
           src={frontmatter.image}
           alt={frontmatter.alt || ""}
-          style={{
-            objectFit: "contain",
-          }}
+          style={{ objectFit: "contain" }}
+          width={400}
+          height={340}
+          priority
         />
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <StakingCommunityCallout my={16} />

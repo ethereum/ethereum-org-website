@@ -1,4 +1,13 @@
-import { Box, Flex, Show, SimpleGrid, Wrap, WrapItem } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Flex,
+  Show,
+  SimpleGrid,
+  Wrap,
+  WrapItem,
+  useToken,
+} from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
@@ -42,7 +51,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
 )
 
 const TitleCard = (props: ChildOnlyProp) => (
-  <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
+  <Flex p={8} direction="column" justify="flex-start" {...props} />
 )
 
 // Roadmap layout components
@@ -53,7 +62,9 @@ export const roadmapComponents = {
   RoadmapImageContent,
 }
 
-interface IProps extends MdPageContent, ChildOnlyProp {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems"> {
   frontmatter: RoadmapFrontmatter
 }
 export const RoadmapLayout: React.FC<IProps> = ({
@@ -62,6 +73,9 @@ export const RoadmapLayout: React.FC<IProps> = ({
   slug,
   tocItems,
 }) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const lgBp = useToken("breakpoints", "lg")
+
   const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {
@@ -119,10 +133,15 @@ export const RoadmapLayout: React.FC<IProps> = ({
   return (
     <Box position="relative">
       <HeroContainer>
-        <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
+        <Flex
+          w="full"
+          flexDirection={{ base: "column", lg: "row" }}
+          justify="space-between"
+        >
           <TitleCard>
             {/* TODO: Double check this slug works */}
-            <Breadcrumbs slug={slug} /> <Title>{frontmatter.title}</Title>
+            <Breadcrumbs slug={slug} mb="8" />
+            <Title>{frontmatter.title}</Title>
             <OldText>{frontmatter.description}</OldText>
             {frontmatter?.buttons && (
               // FIXME: remove the `ul` override once removed the corresponding
@@ -155,36 +174,26 @@ export const RoadmapLayout: React.FC<IProps> = ({
               isMobile
             />
           </TitleCard>
-          <Image
-            src={frontmatter.image}
-            alt={frontmatter.alt ?? ""}
-            style={{ objectFit: "contain" }}
-            alignSelf={{
-              base: "center",
-              lg: "normal",
-            }}
-            bgRepeat="no-repeat"
-            flex="1 1 100%"
-            right={0}
-            bottom={0}
-            width={600}
-            height={336}
-            overflow="initial"
-            maxW={{
-              base: "538px",
-              lg: "full",
-            }}
-          />
+          <Center>
+            <Image
+              src={frontmatter.image}
+              alt={frontmatter.alt ?? ""}
+              style={{ objectFit: "contain" }}
+              width={700}
+              height={345}
+              priority
+            />
+          </Center>
         </Flex>
       </HeroContainer>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <Show above="lg">
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            maxDepth={frontmatter.sidebarDepth!}
-            tocItems={tocItems}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          maxDepth={frontmatter.sidebarDepth!}
+          tocItems={tocItems}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />

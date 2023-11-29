@@ -11,7 +11,7 @@ lang: tr
 
 [Ethereum Vakfı](http://ethereum.foundation/) (EF) kendisini [Ethereum](/what-is-ethereum/) ve ilgili teknolojileri desteklemeye adanmış, kâr amacı gütmeyen bir organizasyondur.
 
-Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş değildir. Rolü, Ethereum'u kontrol etmek veya Ethereum'a liderlik etmek değildir ve ayrıca Ethereum ile ilgili teknolojilerin kritik gelişimini finanse eden tek organizasyon değildir. Ethereum Vakfı, çok daha büyük bir [ekosistemin](/community/) parçasıdır.
+Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş değildir. Rolü, Ethereum'u kontrol etmek veya Ethereum'a liderlik etmek olmadığı gibi, Ethereum ile ilgili teknolojilerin kritik gelişimini finanse eden tek organizasyon da değildir. Ethereum Vakfı, çok daha büyük bir [ekosistemin](/community/) parçasıdır.
 
 ## Ethereum Vakfı Girişimleri {#ethereum-foundation-initiatives}
 

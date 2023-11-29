@@ -38,10 +38,12 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 
 ساختن می‌تواند سخت باشد. در اینجا برخی از فضاهای متمرکز توسعه با توسعه‌دهندگان باتجربه‌ای وجود دارند که خوشحال می‌شوند به شما کمکی کنند.
 
+- [دانشگاه شیمی](https://university.alchemy.com/#starter_code)
 - [دیسکورد CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange اتریوم](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [دانشگاه Web3](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 همچنین می‌توانید مستندات و راهنمای توسعه را در بخش [منابع توسعه‌دهندگان اتریوم](/developers/) ما بیابید.
 
@@ -57,12 +59,13 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## راه‌اندازی یک گره {#node-support}
 
 اگر از یک گره یا یک اعتبارسنج استفاده می‌کنید، در اینجا چند انجمن وجود دارد که به شما در شروع کار کمک می‌کنند.
 
-- [دیسکورد EthStaker](https://discord.gg/ethstaker)
+- [دیسکورد EthStaker](https://discord.io/ethstaker)
 - [ردیت EthStaker](https://www.reddit.com/r/ethstaker)
 
 اکثر تیم‌هایی که کلاینت های اتریومی را می‌سازند، فضاهای اختصاصی و عمومی دارند که می‌توانید از آنها پشتیبانی دریافت کنید و سؤال بپرسید.

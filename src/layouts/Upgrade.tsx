@@ -11,6 +11,7 @@ import {
   Show,
   Text,
   useToken,
+  Center,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
@@ -31,7 +32,6 @@ import {
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
 import OldHeading from "@/components/OldHeading"
-import ShardChainsList from "@/components/ShardChainsList"
 import UpgradeStatus from "@/components/UpgradeStatus"
 import LeftNavBar from "@/components/LeftNavBar"
 
@@ -126,12 +126,13 @@ const LastUpdated = (props: ChildOnlyProp) => (
 export const upgradeComponents = {
   MergeArticleList,
   MergeInfographic,
-  ShardChainsList,
   UpgradeStatus,
   BeaconChainActions,
 }
 
-interface IProps extends ChildOnlyProp, MdPageContent {
+interface IProps
+  extends ChildOnlyProp,
+    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
   frontmatter: UpgradeFrontmatter
 }
 export const UpgradeLayout: React.FC<IProps> = ({
@@ -195,17 +196,14 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </TitleCard>
         {frontmatter.image && (
           <Image
-            flex="1 1 100%"
-            maxW="min(100%, 816px)"
-            style={{ objectFit: "cover" }}
-            alignSelf="center"
-            right={0}
-            bottom={0}
-            width={600}
-            height={600}
-            overflow="initial"
             src={frontmatter.image}
             alt={frontmatter.alt}
+            width={816}
+            height={525}
+            style={{ objectFit: "cover" }}
+            priority
+            flex={{ base: "1 1 100%", md: "none" }}
+            alignSelf={{ base: "center", md: "flex-end" }}
           />
         )}
       </HeroContainer>
@@ -215,13 +213,13 @@ export const UpgradeLayout: React.FC<IProps> = ({
         </MoreContent>
       </Show>
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
-        <Show above={lgBreakpoint}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBreakpoint}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {children}
           <FeedbackCard />
