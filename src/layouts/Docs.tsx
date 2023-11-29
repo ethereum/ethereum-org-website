@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import { ChildOnlyProp } from "@/lib/types"
 import {
   Badge,
   Box,
@@ -16,7 +15,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, Lang } from "@/lib/types"
+import { ChildOnlyProp } from "@/lib/types"
 import { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
@@ -50,8 +49,6 @@ import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 // Utils
 import { EDIT_CONTENT_URL } from "@/lib/constants"

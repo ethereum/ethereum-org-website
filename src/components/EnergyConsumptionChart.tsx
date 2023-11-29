@@ -19,9 +19,11 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import Translation from "@/components/Translation"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 import type { Lang } from "@/lib/types"
+
+import Translation from "@/components/Translation"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 interface ITickProps {
   x: number
