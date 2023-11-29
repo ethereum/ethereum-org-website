@@ -1,4 +1,5 @@
 import { ReactElement, ReactNode } from "react"
+import { Options } from "mdast-util-toc"
 import { NextPage } from "next"
 import { AppProps } from "next/app"
 
@@ -12,7 +13,6 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
-import { Options } from "mdast-util-toc"
 
 import { layoutMapping } from "@/pages/[...slug]"
 

@@ -1,8 +1,9 @@
 import React from "react"
 import { ListItem, UnorderedList } from "@chakra-ui/react"
 
-import Translation from "@/components/Translation"
 import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
+
 import docLinks from "@/data/developer-docs-links.yaml"
 
 export interface IProps {
@@ -14,7 +15,7 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <UnorderedList ml={6} spacing={3} key={id}>
+        <UnorderedList ms={6} spacing={3} key={id}>
           {items &&
             items.map(({ id, to, path, description, items }) => (
               <ListItem key={id}>
@@ -30,7 +31,7 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
                   <Translation id={`page-developers-docs:${description}`} />
                 </i>
                 <UnorderedList
-                  ml={6}
+                  ms={6}
                   mt={3}
                   spacing={3}
                   style={{ listStyleType: "circle" }}

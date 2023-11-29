@@ -5,6 +5,7 @@ import {
   Table,
   Tbody,
   Td,
+  Text,
   Th,
   Thead,
   Tr,
@@ -13,6 +14,8 @@ import {
 
 import { ButtonLink } from "./Buttons"
 import Translation from "./Translation"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface TableRow {
   name: string
@@ -31,6 +34,7 @@ export interface IProps {
 // TODO generalize this component - currently tailored for stablecoin market caps
 const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
   const [textColor] = useToken("colors", ["text"])
+  const { flipForRtl } = useRtlFlip()
 
   return (
     <Table
@@ -58,7 +62,9 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
 
           {content && content[0]?.url && (
             <Th p={5} fontSize="md" fontWeight="normal" textAlign="end">
-              ↗
+              <Text as="span" transform={flipForRtl}>
+                ↗
+              </Text>
             </Th>
           )}
         </Tr>
@@ -98,7 +104,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
           >
             <Td>
               <Flex align="center">
-                {image && <Image src={image} alt="" mr={4} boxSize={6} />}
+                {image && <Image src={image} alt="" me={4} boxSize={6} />}
                 <>{name}</>
               </Flex>
             </Td>

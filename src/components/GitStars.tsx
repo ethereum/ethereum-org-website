@@ -1,6 +1,6 @@
 import React from "react"
 import { FaGithub } from "react-icons/fa"
-import { Center, Flex,Icon } from "@chakra-ui/react"
+import { Center, Flex, Icon } from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
@@ -33,7 +33,7 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
         border="1px solid"
         borderColor="lightBorder"
         borderRadius="base"
-        float="right"
+        float="inline-end"
         color="text"
         _hover={{
           boxShadow: "0 0 1px var(--eth-colors-primary-base)",
