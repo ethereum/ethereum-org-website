@@ -63,8 +63,9 @@ export interface IProps {
   note?: string
   alt?: string
   githubUrl?: string
-  repoLangCount?: number
   subjects?: Array<string>
+  githubRepoStars?: number
+  githubRepoLanguages?: Array<string>
   hideStars?: boolean
 }
 
@@ -78,15 +79,11 @@ const ProductCard: React.FC<IProps> = ({
   alt = "",
   children,
   githubUrl = "",
-  repoLangCount = 1,
   subjects,
+  githubRepoStars = 0,
+  githubRepoLanguages = [],
   hideStars = false,
 }) => {
-  // TODO: fetch github repo data
-
-  // TODO get proper github repo data
-  const hasRepoData = true 
-  
   const DESCRIPTION_STYLES: TextProps = {
     opacity: 0.8,
     fontSize: "sm",
@@ -125,7 +122,7 @@ const ProductCard: React.FC<IProps> = ({
         />
       </Center>
       <Flex flexDirection="column" p={6} textAlign="left" height="100%">
-        {hasRepoData && (
+        {githubRepoStars > 0 && (
           // TODO: get proper github repo data
           <GitStars gitHubRepo={{url: githubUrl, stargazerCount: 20}} hideStars={hideStars} />
         )}
@@ -133,7 +130,7 @@ const ProductCard: React.FC<IProps> = ({
           as="h3"
           fontSize="2xl"
           fontWeight={600}
-          mt={!hasRepoData ? 8 : 12}
+          mt={githubRepoStars > 0 ? 8 : 12}
           mb={3}
         >
           {name}
@@ -149,10 +146,9 @@ const ProductCard: React.FC<IProps> = ({
               {subject}
             </SubjectBadge>
           ))}
-        {hasRepoData &&
-          // TODO: get proper github repo data
-          [{name: 'JavaScript'}].map(
-            ({ name }: { name: string }, idx: number) => (
+        {githubRepoLanguages.length &&
+          githubRepoLanguages.map(
+            (name, idx: number) => (
               <SubjectBadge key={idx} subject={name}>
                 {name.toUpperCase()}
               </SubjectBadge>

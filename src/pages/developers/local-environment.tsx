@@ -21,6 +21,7 @@ import EthDiamondBlackImage from '@/public/assets/eth-diamond-black.png'
 import EpirusImage from '@/public/dev-tools/epirus.png'
 import ScaffoldEthImage from '@/public/dev-tools/scaffoldeth.png'
 import FoundryImage from '@/public/dev-tools/foundry.png'
+import { ghRepoData } from "@/lib/api/ghRepoData"
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
@@ -54,6 +55,8 @@ interface IFramework {
   description: string
   alt: string
   image: StaticImageData
+  starCount?: number
+  languages?: string[]
 }
 
 export const getStaticProps: GetStaticProps = async (
@@ -63,25 +66,16 @@ export const getStaticProps: GetStaticProps = async (
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath('/developers/local-environment')
 
-  return {
-    props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
-    },
-  }
-}
-
-const LocalEnvironmentPage = () => {
-  const { t } = useTranslation("page-developers-local-environment")
-
-  const frameworksList: Array<IFramework> = [
+  // TODO: fetch github repo data
+  let frameworksList: Array<IFramework> = [
     {
       id: "waffle",
       url: "https://getwaffle.io/",
       githubUrl: "https://github.com/EthWorks/waffle",
       background: "#ffffff",
       name: "Waffle",
-      description: t("page-developers-local-environment:page-local-environment-waffle-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-waffle-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-waffle-desc",
+      alt: "page-developers-local-environment:page-local-environment-waffle-logo-alt",
       image: WaffleImage,
     },
     {
@@ -90,8 +84,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/kurtosis-tech/kurtosis",
       background: "#000000",
       name: "Kurtosis",
-      description: t("page-developers-local-environment:page-local-environment-kurtosis-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-kurtosis-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-kurtosis-desc",
+      alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",
       image: KurtosisImage,
     },
     {
@@ -100,8 +94,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/nomiclabs/hardhat",
       background: "#faf8fb",
       name: "Hardhat",
-      description: t("page-developers-local-environment:page-local-environment-hardhat-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-hardhat-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-hardhat-desc",
+      alt: "page-developers-local-environment:page-local-environment-hardhat-logo-alt",
       image: HardhatImage,
     },
     {
@@ -110,8 +104,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/trufflesuite/truffle",
       background: "#31272a",
       name: "Truffle",
-      description: t("page-developers-local-environment:page-local-environment-truffle-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-truffle-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-truffle-desc",
+      alt: "page-developers-local-environment:page-local-environment-truffle-logo-alt",
       image: TruffleImage,
     },
     {
@@ -120,8 +114,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/eth-brownie/brownie",
       background: "#ffffff",
       name: "Brownie",
-      description: t("page-developers-local-environment:page-local-environment-brownie-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-brownie-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-brownie-desc",
+      alt: "page-developers-local-environment:page-local-environment-brownie-logo-alt",
       image: EthDiamondBlackImage,
     },
     {
@@ -130,8 +124,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/web3labs/epirus-free",
       background: "#ffffff",
       name: "Epirus",
-      description: t("page-developers-local-environment:page-local-environment-epirus-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-epirus-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-epirus-desc",
+      alt: "page-developers-local-environment:page-local-environment-epirus-logo-alt",
       image: EpirusImage,
     },
     {
@@ -140,8 +134,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/PaulRBerg/create-eth-app",
       background: "#ffffff",
       name: "Create Eth App",
-      description: t("page-developers-local-environment:page-local-environment-eth-app-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-eth-app-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-eth-app-desc",
+      alt: "page-developers-local-environment:page-local-environment-eth-app-logo-alt",
       image: EthDiamondBlackImage,
     },
     {
@@ -150,8 +144,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/austintgriffith/scaffold-eth",
       background: "#ffffff",
       name: "scaffold-eth",
-      description: t("page-developers-local-environment:page-local-environment-scaffold-eth-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-scaffold-eth-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
+      alt: "page-developers-local-environment:page-local-environment-scaffold-eth-logo-alt",
       image: ScaffoldEthImage,
     },
     {
@@ -160,8 +154,8 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/paulrberg/solidity-template",
       background: "#ffffff",
       name: "Solidity template",
-      description: t("page-developers-local-environment:page-local-environment-solidity-template-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-solidity-template-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-solidity-template-desc",
+      alt: "page-developers-local-environment:page-local-environment-solidity-template-logo-alt",
       image: EthDiamondBlackImage,
     },
     {
@@ -170,11 +164,31 @@ const LocalEnvironmentPage = () => {
       githubUrl: "https://github.com/foundry-rs/foundry",
       background: "#ffffff",
       name: "Foundry",
-      description: t("page-developers-local-environment:page-local-environment-foundry-desc"),
-      alt: t("page-developers-local-environment:page-local-environment-foundry-logo-alt"),
+      description: "page-developers-local-environment:page-local-environment-foundry-desc",
+      alt: "page-developers-local-environment:page-local-environment-foundry-logo-alt",
       image: FoundryImage,
     },
   ]
+  
+  frameworksList = await Promise.all(frameworksList.map(async (framework) => {
+    const repoData = await ghRepoData(framework.githubUrl)
+    return {
+      ...framework,
+      starCount: repoData.starCount,
+      languages: repoData.languages.slice(0,2),
+    }
+  }))
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      frameworksList,
+    },
+  }
+}
+
+const LocalEnvironmentPage = ({ frameworksList }) => {
+  const { t } = useTranslation("page-developers-local-environment")
 
   return (
     <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
@@ -276,9 +290,12 @@ const LocalEnvironmentPage = () => {
               background={framework.background}
               image={framework.image!}
               name={framework.name}
-              alt={framework.alt}
+              alt={t(framework.alt)}
+              githubUrl={framework.githubUrl}
+              githubRepoStars={framework.starCount}
+              githubRepoLanguages={framework.languages}
             >
-              {framework.description}
+              {t(framework.description)}
             </ProductCard>
           ))}
         </SimpleGrid>
