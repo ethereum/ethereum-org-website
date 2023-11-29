@@ -82,7 +82,7 @@ export const Heading: Story = {
             <HeadingComponent
               as="span"
               flex="1"
-              textAlign="right"
+              textAlign="end"
               size={obj.size}
             >
               {obj.size || "xl"}

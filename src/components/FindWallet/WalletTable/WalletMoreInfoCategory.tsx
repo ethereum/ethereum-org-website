@@ -65,7 +65,7 @@ export const WalletMoreInfoCategory = ({
                     svg: {
                       width: 6,
                       fill: "secondary",
-                      pr: 2,
+                      pe: 2,
                     },
                   },
                 }}

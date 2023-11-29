@@ -54,16 +54,16 @@ export const MdxEnergyConsumpData = () => (
     <Thead>
       <Tr>
         <Th></Th>
-        <Th textAlign="right">Annualized energy consumption (TWh)</Th>
-        <Th textAlign="right">Comparison to PoS Ethereum</Th>
+        <Th textAlign="end">Annualized energy consumption (TWh)</Th>
+        <Th textAlign="end">Comparison to PoS Ethereum</Th>
         <Th>Source</Th>
       </Tr>
     </Thead>
     <Tbody>
       <Tr>
         <Td>Global data centers</Td>
-        <Td textAlign="right">200</Td>
-        <Td textAlign="right">77,000x</Td>
+        <Td textAlign="end">200</Td>
+        <Td textAlign="end">77,000x</Td>
         <Td>
           <a
             target="_blank"
@@ -78,8 +78,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>Gold mining</Td>
-        <Td textAlign="right">131</Td>
-        <Td textAlign="right">50,000x</Td>
+        <Td textAlign="end">131</Td>
+        <Td textAlign="end">50,000x</Td>
         <Td>
           <a
             target="_blank"
@@ -94,8 +94,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>Bitcoin</Td>
-        <Td textAlign="right">131</Td>
-        <Td textAlign="right">50,000x</Td>
+        <Td textAlign="end">131</Td>
+        <Td textAlign="end">50,000x</Td>
         <Td>
           <a
             target="_blank"
@@ -110,8 +110,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>PoW Ethereum</Td>
-        <Td textAlign="right">78</Td>
-        <Td textAlign="right">30,000x</Td>
+        <Td textAlign="end">78</Td>
+        <Td textAlign="end">30,000x</Td>
         <Td>
           <a
             target="_blank"
@@ -126,8 +126,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>Youtube (direct only)</Td>
-        <Td textAlign="right">12</Td>
-        <Td textAlign="right">4600x</Td>
+        <Td textAlign="end">12</Td>
+        <Td textAlign="end">4600x</Td>
         <Td>
           <a
             target="_blank"
@@ -142,8 +142,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>Gaming in USA</Td>
-        <Td textAlign="right">34</Td>
-        <Td textAlign="right">13,000x</Td>
+        <Td textAlign="end">34</Td>
+        <Td textAlign="end">13,000x</Td>
         <Td>
           <a
             target="_blank"
@@ -158,8 +158,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>Netflix</Td>
-        <Td textAlign="right">0.451</Td>
-        <Td textAlign="right">173x</Td>
+        <Td textAlign="end">0.451</Td>
+        <Td textAlign="end">173x</Td>
         <Td>
           <a
             target="_blank"
@@ -174,8 +174,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>PayPal</Td>
-        <Td textAlign="right">0.26</Td>
-        <Td textAlign="right">100x</Td>
+        <Td textAlign="end">0.26</Td>
+        <Td textAlign="end">100x</Td>
         <Td>
           <a
             target="_blank"
@@ -190,8 +190,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>AirBnB</Td>
-        <Td textAlign="right">0.02</Td>
-        <Td textAlign="right">8x</Td>
+        <Td textAlign="end">0.02</Td>
+        <Td textAlign="end">8x</Td>
         <Td>
           <a
             target="_blank"
@@ -206,8 +206,8 @@ export const MdxEnergyConsumpData = () => (
       </Tr>
       <Tr>
         <Td>PoS Ethereum</Td>
-        <Td textAlign="right">0.0026</Td>
-        <Td textAlign="right">1x</Td>
+        <Td textAlign="end">0.0026</Td>
+        <Td textAlign="end">1x</Td>
         <Td>
           <a
             target="_blank"

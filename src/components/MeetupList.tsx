@@ -19,6 +19,7 @@ import InlineLink, { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import meetups from "@/data/community-meetups.json"
@@ -52,6 +53,7 @@ export interface IProps {}
 // TODO prop if ordered list or unordered
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
+  const { flipForRtl } = useRtlFlip()
   const filteredMeetups = filterMeetups(searchField)
   const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const listItemBoxShadow = useColorModeValue(
@@ -101,8 +103,8 @@ const MeetupList: React.FC<IProps> = () => {
               bg: "tableBackgroundHover",
             }}
           >
-            <Flex flex="1 1 75%" mr={4}>
-              <Box mr={4} opacity="0.4">
+            <Flex flex="1 1 75%" me={4}>
+              <Box me={4} opacity="0.4">
                 {idx + 1}
               </Box>
               <Box>
@@ -118,13 +120,13 @@ const MeetupList: React.FC<IProps> = () => {
               </Box>
             </Flex>
             <Flex
-              textAlign="right"
+              textAlign="end"
               alignContent="flex-start"
               flex="1 1 25%"
-              mr={4}
+              me={4}
               flexWrap="wrap"
             >
-              <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+              <Emoji text={meetup.emoji} boxSize={4} me={2} />
               <Text mb={0} opacity={"0.6"}>
                 {meetup.location}
               </Text>
@@ -133,8 +135,9 @@ const MeetupList: React.FC<IProps> = () => {
               as="span"
               _after={{
                 content: '"↗"',
-                ml: 0.5,
-                mr: 1.5,
+                ms: 0.5,
+                me: 1.5,
+                transform: flipForRtl,
               }}
             ></Box>
           </LinkBox>

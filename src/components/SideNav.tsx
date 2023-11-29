@@ -38,8 +38,8 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
       w="full"
       justify="space-between"
       py={2}
-      pr={4}
-      pl={8}
+      pe={4}
+      ps={8}
       _hover={{ bgColor: "ednBackground" }}
     >
       {children}
@@ -111,7 +111,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
           fontSize="sm"
           lineHeight="tall"
           fontWeight="normal"
-          ml={4}
+          ms={4}
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -160,8 +160,8 @@ const SideNav = ({ path }: SideNavProps) => {
       transition="transform 0.2s ease"
       bgColor="background.base"
       boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
-      borderRight="1px solid"
-      borderRightColor="border"
+      borderInlineEnd="1px solid"
+      borderInlineEndColor="border"
       display={{ base: "none", lg: "block" }}
       aria-label={t("common:nav-developers-docs")}
     >

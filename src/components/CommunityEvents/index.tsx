@@ -94,7 +94,7 @@ const CommunityEvents = () => {
       }}
     >
       <Center w={{ base: "100%", lg: "40%" }}>
-        <Box pr={8} pl={{ base: 8, lg: 0 }}>
+        <Box pe={8} ps={{ base: 8, lg: 0 }}>
           <OldHeading>
             <Translation id="community-events-content-heading" />
           </OldHeading>

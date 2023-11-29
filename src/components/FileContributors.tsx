@@ -60,7 +60,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         width="40px"
         src={contributor.avatarUrl}
         name={contributor.name}
-        mr={2}
+        me={2}
       />
       {contributor.user && (
         <InlineLink to={contributor.user.url}>
@@ -135,14 +135,14 @@ const FileContributors: React.FC<IProps> = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex mr={4} alignItems="center" flex="1">
-          <SkeletonCircle size="10" mr={2} isLoaded={!loading}>
+        <Flex me={4} alignItems="center" flex="1">
+          <SkeletonCircle size="10" me={4} isLoaded={!loading}>
             <Avatar
               height="40px"
               width="40px"
               src={lastContributor.avatarUrl}
               name={lastContributor.name}
-              mr={2}
+              me={2}
             />
           </SkeletonCircle>
 

@@ -12,7 +12,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
@@ -32,7 +32,6 @@ import {
 import TableOfContents from "@/components/TableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -64,9 +63,9 @@ const TitleCard = (props: ChildOnlyProp) => {
       p={8}
       position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
-      left={{ base: 0, lg: 24 }}
+      insetInlineStart={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
-      right={{ base: 0, lg: "unset" }}
+      insetInlineEnd={{ base: 0, lg: "unset" }}
       {...props}
     />
   )
@@ -91,7 +90,6 @@ export const UseCasesLayout: React.FC<IProps> = ({
   const { t } = useTranslation("template-usecase")
   const lgBp = useToken("breakpoints", "lg")
 
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const summaryPoints = getSummaryPoints(frontmatter)
 
   // TODO: Re-implement GitHub edit path
@@ -182,7 +180,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
     <Box position="relative" width="full">
       <Show above={lgBp}>
         <BannerNotification shouldShow zIndex="sticky">
-          <Emoji text=":pencil:" fontSize="2xl" mr={4} flexShrink={0} />
+          <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
           <Text m={0}>
             {t("template-usecase:template-usecase-banner")}{" "}
             {/* <InlineLink to={absoluteEditPath}>
@@ -249,7 +247,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </Flex>
       </Show>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBp}

@@ -54,8 +54,8 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
       w="full"
       justify="space-between"
       py={2}
-      pr={8}
-      pl={2}
+      pe={8}
+      ps={2}
       _hover={{
         bgColor: "ednBackground",
       }}
@@ -121,7 +121,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
           fontSize="sm"
           lineHeight="tall"
           fontWeight="normal"
-          pl={4}
+          ps={4}
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -185,7 +185,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
         borderBottomColor="border"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Box mr={2}>
+        <Box me={2}>
           <Translation id={pageTitleId} />
         </Box>
         <Box

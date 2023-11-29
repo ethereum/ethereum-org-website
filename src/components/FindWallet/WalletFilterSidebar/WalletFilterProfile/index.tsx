@@ -115,11 +115,11 @@ const WalletFilterProfile = ({
               </Box>
               <Heading
                 as="h3"
-                ml={0}
+                ms={0}
                 fontSize="1.2rem"
                 py={0}
-                pr={1}
-                pl={0}
+                pe={1}
+                ps={0}
                 lineHeight="1.7rem"
                 color="primary.base"
               >

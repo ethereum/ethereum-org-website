@@ -82,7 +82,7 @@ const QuizzesStats: React.FC = () => {
               fontWeight="bold"
               fontSize="xl"
               margin={0}
-              textAlign={{ base: "center", lg: "left" }}
+              textAlign={{ base: "center", lg: "start" }}
             >
               {t("your-total")}
             </Text>
@@ -112,7 +112,7 @@ const QuizzesStats: React.FC = () => {
                 justifyContent={{ base: "center", lg: "flex-start" }}
                 alignItems="center"
               >
-                <Circle size="64px" bg="primary.base" mr={4}>
+                <Circle size="64px" bg="primary.base" me={4}>
                   <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
                 </Circle>
 

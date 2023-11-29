@@ -1,3 +1,4 @@
+// TODO: Implement with RTL locale responsiveness
 import React from "react"
 import {
   Box,
@@ -70,7 +71,7 @@ const CardLink = (props: {
           fontSize="5xl"
         />
       </Box>
-      <TextDiv {...xPadding} {...(isNext && { textAlign: "right" })}>
+      <TextDiv {...xPadding} {...(isNext && { textAlign: "end" })}>
         <Text textTransform="uppercase" m="0">
           <Translation id={isPrev ? "previous" : "next"} />
         </Text>

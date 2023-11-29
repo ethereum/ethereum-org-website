@@ -18,16 +18,16 @@ import { accordionButtonContent, CategoryNameType } from "./utils"
 import { ChildOnlyType } from "."
 
 export const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
-  <Box flex="0 0 50%" maxW={{ lg: "75%" }} mr={{ lg: 16 }} {...props} />
+  <Box flex="0 0 50%" maxW={{ lg: "75%" }} me={{ lg: 16 }} {...props} />
 )
 
 export const RightColumnPanel = (props: ChildOnlyType) => (
-  <LeftColumnPanel mr={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
+  <LeftColumnPanel me={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
 )
 
 const MoreOrLessLink = ({ isOpen }: { isOpen: boolean }) => {
   return (
-    <Box mr={6} color="primary.base">
+    <Box me={6} color="primary.base">
       {isOpen ? (
         <Translation id="page-stablecoins-accordion-less" />
       ) : (
@@ -83,7 +83,7 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                     <Translation id={contentObj.title} />
                   </Heading>
                   {!!contentObj.pill && (
-                    <Pill ml={4} background={contentObj.pill.color}>
+                    <Pill ms={4} background={contentObj.pill.color}>
                       <Translation id={contentObj.pill.name} />
                     </Pill>
                   )}

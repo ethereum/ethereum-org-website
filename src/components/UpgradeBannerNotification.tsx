@@ -7,7 +7,7 @@ import InlineLink from "./Link"
 
 const UpgradeBannerNotification: React.FC = () => (
   <BannerNotification shouldShow>
-    <Emoji text=":megaphone:" mr={4} fontSize="2xl" flexShrink="0" />
+    <Emoji text=":megaphone:" me={4} fontSize="2xl" flexShrink="0" />
     <Box>
       <b>
         We&apos;ve deprecated our use of &apos;Eth1&apos; and &apos;Eth2&apos;

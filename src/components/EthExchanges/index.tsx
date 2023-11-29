@@ -25,7 +25,7 @@ const ResultsContainer = (props: ChildOnlyProp) => (
     sx={{
       "& > *": {
         _first: {
-          mr: { base: 0, md: 6 },
+          me: { base: 0, md: 6 },
         },
       },
     }}
