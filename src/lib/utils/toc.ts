@@ -1,5 +1,6 @@
 import { ListProps } from "@chakra-ui/react"
-import type { TocNodeType, ToCItem } from "@/lib/types"
+
+import type { ToCItem,TocNodeType } from "@/lib/types"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/

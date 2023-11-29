@@ -43,7 +43,7 @@ const InfoBanner: React.FC<IProps> = ({
           <Emoji
             flexGrow="0"
             flexShrink="0"
-            mr={{ base: 0, sm: 6 }}
+            me={{ base: 0, sm: 6 }}
             mb={{ base: 2, sm: 0 }}
             alignSelf={{ base: "flex-start", sm: "auto" }}
             text={emoji}

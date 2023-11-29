@@ -122,7 +122,7 @@ const UpcomingEventsList: React.FC = () => {
           height: "full",
           background: "primary.base",
           top: 0,
-          left: "50%",
+          insetInlineStart: "50%",
         }}
         _after={{
           content: '""',

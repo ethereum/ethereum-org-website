@@ -14,12 +14,13 @@ const GitHubContributors: React.FC<IProps> = ({
   relativePath,
   lastUpdatedDate,
 }) => {
-  const { loading, authors, error } = useClientSideGitHubContributors(relativePath)
+  const state = useClientSideGitHubContributors(relativePath)
+
   return (
     <FileContributors
-      error={!!error}
-      loading={loading}
-      contributors={authors || []}
+      error={"error" in state}
+      loading={state.loading as boolean}
+      contributors={"data" in state ? state.data : []}
       lastEdit={lastUpdatedDate}
     />
   )

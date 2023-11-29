@@ -13,7 +13,7 @@ import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 
 import {
-  getRequiredNamespacesForPath,
+  getRequiredNamespacesForPage,
   languageMetadata,
 } from "@/lib/utils/translations"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -27,7 +27,7 @@ type Props = SSRConfig & {
 export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("/languages")
+  const requiredNamespaces = getRequiredNamespacesForPage("/languages")
   const lastDeployDate = getLastDeployDate()
 
   return {

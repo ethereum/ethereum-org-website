@@ -36,11 +36,15 @@ const BannerWrapper: React.FC<BannerWrapperProps> = ({
       position="relative"
       justifyContent="space-between"
     >
-      <Center paddingRight={8} flexWrap="wrap">
-        <Emoji marginRight={4} flexShrink={0} text=":tada:" w={4} h={4} />
+      <Center pe={8} flexWrap="wrap">
+        <Emoji me={4} flexShrink={0} text=":tada:" w={4} h={4} />
         {children}
       </Center>
-      <CloseButton onClick={onClose} aria-label="Close Banner" float="right" />
+      <CloseButton
+        onClick={onClose}
+        aria-label="Close Banner"
+        float="inline-end"
+      />
     </BannerNotification>
   )
 }
@@ -99,7 +103,7 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
             <Translation
               id={"london-upgrade-banner-released" as TranslationKey}
             />
-            <Box paddingLeft="5px">
+            <Box ps="5px">
               <InlineLink to="/history/#london">
                 <Translation id="learn-more" />
               </InlineLink>
@@ -112,11 +116,11 @@ const ReleaseBanner: React.FC<IProps> = ({ storageKey }) => {
         <BannerWrapper onClose={handleClose} isBannerVisible={show}>
           <>
             <Translation id={"london-upgrade-banner" as TranslationKey} />
-            <Box paddingLeft="5px">
+            <Box ps="5px">
               {zeroPad(days, 2)}:{zeroPad(hours, 2)}:{zeroPad(minutes, 2)}:
               {zeroPad(seconds, 2)}!
             </Box>
-            <Box paddingLeft="5px">
+            <Box ps="5px">
               <InlineLink to="/history/#london">
                 <Translation id="learn-more" />
               </InlineLink>

@@ -33,8 +33,8 @@ const baseStyle = defineMergeStyles(
     tr: {
       "th, td": {
         _notLast: {
-          borderRight: "2px",
-          borderRightColor: "background.base",
+          borderInlineEnd: "2px",
+          borderInlineEndColor: "background.base",
         },
       },
     },

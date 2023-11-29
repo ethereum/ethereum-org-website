@@ -13,17 +13,24 @@ import { serialize } from "next-mdx-remote/serialize"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
-import type { NextPageWithLayout, TocNodeType } from "@/lib/types"
+import type {
+  Lang,
+  Layout,
+  LayoutMappingType,
+  NextPageWithLayout,
+  TocNodeType,
+} from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
+import { getCrowdinContributors } from "@/lib/utils/crowdin"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -49,7 +56,7 @@ interface Params extends ParsedUrlQuery {
   slug: string[]
 }
 
-const layoutMapping = {
+export const layoutMapping = {
   static: StaticLayout,
   "use-cases": UseCasesLayout,
   staking: StakingLayout,
@@ -57,10 +64,7 @@ const layoutMapping = {
   upgrade: UpgradeLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
-  // event: EventLayout,
 }
-
-type LayoutMappingType = typeof layoutMapping
 
 const componentsMapping = {
   static: staticComponents,
@@ -92,10 +96,7 @@ export const getStaticPaths = (({ locales }) => {
   }
 }) satisfies GetStaticPaths<Params>
 
-type Props = Omit<
-  Parameters<LayoutMappingType[keyof LayoutMappingType]>[0],
-  "children"
-> &
+type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
   SSRConfig & {
     mdxSource: MDXRemoteSerializeResult
   }
@@ -136,11 +137,9 @@ export const getStaticProps = (async (context) => {
   const lastDeployDate = getLastDeployDate()
 
   // Get corresponding layout
-  let layout = frontmatter.template as keyof LayoutMappingType
+  let layout = (frontmatter.template as Layout) ?? "static"
 
   if (!frontmatter.template) {
-    layout = "static"
-
     if (params.slug.includes("docs")) {
       layout = "docs"
     }
@@ -153,8 +152,12 @@ export const getStaticProps = (async (context) => {
     }
   }
 
+  const crowdinContributors = ["docs", "tutorial"].includes(layout)
+    ? getCrowdinContributors(mdPath, locale as Lang)
+    : []
+
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(slug, layout)
+  const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
 
   return {
     props: {
@@ -168,6 +171,7 @@ export const getStaticProps = (async (context) => {
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
+      crowdinContributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
@@ -177,7 +181,10 @@ const ContentPage: NextPageWithLayout<
 > = ({ mdxSource, layout }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
   // @ts-expect-error
-  const components: Record<string, React.ReactNode> = { ...mdComponents, ...componentsMapping[layout] }
+  const components: Record<string, React.ReactNode> = {
+    ...mdComponents,
+    ...componentsMapping[layout],
+  }
   return (
     <>
       <MDXRemote {...mdxSource} components={components} />
@@ -195,8 +202,8 @@ ContentPage.getLayout = (page) => {
     layout,
     timeToRead,
     tocItems,
+    crowdinContributors,
   } = page.props
-
 
   const layoutProps = {
     slug,
@@ -204,6 +211,7 @@ ContentPage.getLayout = (page) => {
     lastUpdatedDate,
     timeToRead,
     tocItems,
+    crowdinContributors,
   }
   const Layout = layoutMapping[layout]
 

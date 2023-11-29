@@ -7,7 +7,7 @@ import ButtonLink, { type ButtonLinkProps } from "../ButtonLink"
 
 type CommonProps = {
   icon: IconType | typeof Icon
-  iconAlignment?: "left" | "right"
+  iconAlignment?: "left" | "right" | "start" | "end"
   /**
    * Reduced choices of the button variant.
    *
@@ -49,7 +49,7 @@ const hasHref = (props: ButtonTwoLinesProps): props is ButtonLinkTypeProps => {
 const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
   const {
     icon: Icon,
-    iconAlignment = "left",
+    iconAlignment = "start",
     mainText,
     helperText,
     reverseTextOrder = false,
@@ -57,7 +57,7 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
     ...rest
   } = props
 
-  const isIconLeft = iconAlignment === "left"
+  const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const vertPadding: ButtonTwoLinesProps["py"] = size === "md" ? "4" : "2"
 

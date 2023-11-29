@@ -29,7 +29,6 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { CONTENT_DIR } from "@/lib/constants"
 
@@ -86,7 +85,6 @@ export const StaticLayout: React.FC<IProps> = ({
   lastUpdatedDate,
 }) => {
   const { locale } = useRouter()
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const repo =
     process.env.NEXT_PUBLIC_GITHUB_REPO || "ethereum/ethereum-org-website"
@@ -94,7 +92,7 @@ export const StaticLayout: React.FC<IProps> = ({
   const absoluteEditPath = baseEditPath + slug + "index.md"
 
   return (
-    <Box w="full" ml={2}>
+    <Box w="full" ms={2}>
       <Flex
         justifyContent="space-between"
         w="full"
@@ -102,7 +100,6 @@ export const StaticLayout: React.FC<IProps> = ({
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
-        dir={isRightToLeft ? "rtl" : "ltr"}
       >
         <Box
           as="article"
@@ -110,10 +107,10 @@ export const StaticLayout: React.FC<IProps> = ({
           w="full"
           sx={{
             ".featured": {
-              pl: 4,
-              ml: -4,
-              borderLeft: "1px dotted",
-              borderLeftColor: "primary.base",
+              ps: 4,
+              ms: -4,
+              borderInlineStart: "1px dotted",
+              borderInlineStartColor: "primary.base",
             },
 
             ".citation": {
@@ -126,7 +123,6 @@ export const StaticLayout: React.FC<IProps> = ({
           <Breadcrumbs slug={slug} mb="8" />
           <Text
             color="text200"
-            dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
           >
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
