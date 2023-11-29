@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useCallback, useEffect } from "react"
 import { useMemo } from "react"
 import { LiaHandPointerSolid } from "react-icons/lia"
 import { Box, Button, Grid, Icon } from "@chakra-ui/react"
@@ -36,26 +36,27 @@ export const WordSelectorButtons: React.FC<IProps> = ({
       return [...acc.slice(0, randIndex), item, ...acc.slice(randIndex)]
     }, restRandom)
     return pseudoRandom
-  }, [words])
+  }, [wordIndices])
 
-  const autocomplete = () => {
+  const incrementWordsSelected = useCallback(() => {
+    setWordsSelected((prev) => prev + 1)
+  }, [setWordsSelected])
+
+  const autocomplete = useCallback(() => {
     const interval = setInterval(() => {
       incrementWordsSelected()
       if (wordsSelected >= words.length) {
         clearInterval(interval)
       }
     }, DELAY_MULTIPLIER_MS)
-  }
+  }, [incrementWordsSelected, words.length, wordsSelected])
 
   useEffect(() => {
     if (wordsSelected === WORDS_REQUIRED) {
       autocomplete()
     }
-  }, [wordsSelected])
+  }, [autocomplete, wordsSelected])
 
-  const incrementWordsSelected = () => {
-    setWordsSelected((prev) => prev + 1)
-  }
   return (
     <Box
       p={4}
@@ -97,7 +98,7 @@ export const WordSelectorButtons: React.FC<IProps> = ({
                   as={LiaHandPointerSolid}
                   position="absolute"
                   top="65%"
-                  left="65%"
+                  insetInlineStart="65%"
                   fill="body.base"
                   zIndex="popover"
                   transition="opacity 0.2s"

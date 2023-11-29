@@ -136,7 +136,7 @@ const CrowdinContributors: React.FC<IProps> = ({
     }
 
     fetchContributors()
-  }, [fileIdsData, relativePath, locale!, langContributors])
+  }, [fileIdsData, relativePath, locale, langContributors])
 
   const lastContributor = mappedContributors.length ? mappedContributors[0] : {}
 

@@ -119,7 +119,7 @@ export const TriangleSVG: React.FC<IProps> = ({
       width={{ base: "full", lg: "auto" }}
       my={{ base: -28, sm: -16, lg: 0 }}
       mt={{ lg: 32 }}
-      mr={{ lg: 32 }}
+      me={{ lg: 32 }}
     >
       <Path />
       <Path />

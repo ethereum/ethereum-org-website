@@ -3,9 +3,9 @@ import type { ReactNode } from "react"
 import type {
   Frontmatter,
   Lang,
-  TranslationKey,
-  ToCItem,
   Layout,
+  ToCItem,
+  TranslationKey,
 } from "@/lib/types"
 
 /**

@@ -132,17 +132,19 @@ const QuizRadioGroup: React.FC<IProps> = ({
   const explanation = useMemo<TranslationKey>(() => {
     if (!selectedAnswer) return ""
     return answers.filter(({ id }) => id === selectedAnswer)[0].explanation
+    
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedAnswer])
   const isSelectedCorrect = useMemo<boolean>(
     () => correctAnswerId === selectedAnswer,
-    [selectedAnswer]
+    [correctAnswerId, selectedAnswer]
   )
 
   // Render QuizRadioGroup
   return (
     <Stack spacing="6" {...getRootProps()} w="100%">
       <Text
-        textAlign={{ base: "center", md: "left" }}
+        textAlign={{ base: "center", md: "start" }}
         fontWeight="700"
         size="2xl"
       >
