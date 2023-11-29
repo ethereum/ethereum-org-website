@@ -1,39 +1,47 @@
+import type { GetStaticProps } from "next/types"
+import { type SSRConfig, useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
   Flex,
   Heading,
-  SimpleGrid,
   type HeadingProps,
+  SimpleGrid,
   type SimpleGridProps,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { type SSRConfig, useTranslation } from "next-i18next"
-import type { GetStaticProps } from "next/types"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+import type { ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
-import InlineLink from "@/components/Link"
-import PageMetadata from "@/components/PageMetadata"
 import FeedbackCard from "@/components/FeedbackCard"
-import OldHeading from "@/components/OldHeading"
 import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
 
-import beaconChain from "@/public/upgrades/core.png"
-import dao from "@/public/use-cases/dao-2.png"
-import defi from "@/public/use-cases/defi.png"
-import developers from "@/public/developers-eth-blocks.png"
-import doge from "@/public/doge-computer.png"
-import enterprise from "@/public/enterprise-eth.png"
-import eth from "@/public/eth.png"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+// import efLogo from "@/public/ef-logo.png"
+// import efLogoWhite from "@/public/ef-logo-white.png"
+// import ethDiamondBlackHero from "@/public/assets/eth-diamond-black.png"
+// import ethDiamondPurpleHero from "@/public/assets/eth-diamond-purple.png"
+// import ethGifCat from "@/public/eth-gif-cat.png"
+// import ethGifChalk from "@/public/eth-gif-chalk.png"
+// import ethGifSun from "@/public/eth-gif-sun.png"
+// import ethGifWaves from "@/public/eth-gif-waves.png"
+// import ethPortraitPurpleWhite from "@/public/assets/ethereum-logo-portrait-purple-white.png"
+// import leslieTheRhino from "@/public/upgrades/upgrade_rhino.png"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
 import ethDiamondBlack from "@/public/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/assets/eth-diamond-black-white.jpg"
-import ethDiamondColor from "@/public/assets/eth-diamond-rainbow.png"
 import ethDiamondGlyph from "@/public/assets/eth-diamond-glyph.png"
 import ethDiamondPurple from "@/public/assets/eth-diamond-purple.png"
 import ethDiamondPurplePurple from "@/public/assets/eth-diamond-purple-purple.png"
 import ethDiamondPurpleWhite from "@/public/assets/eth-diamond-purple-white.jpg"
+import ethDiamondColor from "@/public/assets/eth-diamond-rainbow.png"
 import ethGlyphColored from "@/public/assets/eth-glyph-colored.png"
 import ethLandscapeBlack from "@/public/assets/ethereum-logo-landscape-black.png"
 import ethLandscapeBlackGray from "@/public/assets/ethereum-logo-landscape-black-gray.png"
@@ -49,33 +57,26 @@ import ethWordmarkBlackGray from "@/public/assets/ethereum-wordmark-black-gray.p
 import ethWordmarkPurple from "@/public/assets/ethereum-wordmark-purple.png"
 import ethWordmarkPurplePurple from "@/public/assets/ethereum-wordmark-purple-purple.png"
 import ethWordmarkPurpleWhite from "@/public/assets/ethereum-wordmark-purple-white.png"
+import developers from "@/public/developers-eth-blocks.png"
+import doge from "@/public/doge-computer.png"
+import enterprise from "@/public/enterprise-eth.png"
+import eth from "@/public/eth.png"
 import finance from "@/public/finance_transparent.png"
 import future from "@/public/future_transparent.png"
 import hackathon from "@/public/hackathon_transparent.png"
 import hero from "@/public/home/hero.png"
 import heroPanda from "@/public/home/hero-panda.png"
+import mergePanda from "@/public/home/merge-panda.png"
 import impact from "@/public/impact_transparent.png"
 import infrastructure from "@/public/infrastructure_transparent.png"
+import beaconChain from "@/public/upgrades/core.png"
 import merge from "@/public/upgrades/merge.png"
-import mergePanda from "@/public/home/merge-panda.png"
 import newRings from "@/public/upgrades/newrings.png"
 import oldShip from "@/public/upgrades/oldship.png"
+import dao from "@/public/use-cases/dao-2.png"
+import defi from "@/public/use-cases/defi.png"
 import wallet from "@/public/wallet.png"
 import whatIsEthereum from "@/public/what-is-ethereum.png"
-// import efLogo from "@/public/ef-logo.png"
-// import efLogoWhite from "@/public/ef-logo-white.png"
-// import ethDiamondBlackHero from "@/public/assets/eth-diamond-black.png"
-// import ethDiamondPurpleHero from "@/public/assets/eth-diamond-purple.png"
-// import ethGifCat from "@/public/eth-gif-cat.png"
-// import ethGifChalk from "@/public/eth-gif-chalk.png"
-// import ethGifSun from "@/public/eth-gif-sun.png"
-// import ethGifWaves from "@/public/eth-gif-waves.png"
-// import ethPortraitPurpleWhite from "@/public/assets/ethereum-logo-portrait-purple-white.png"
-// import leslieTheRhino from "@/public/upgrades/upgrade_rhino.png"
-
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import type { ChildOnlyProp } from "@/lib/types"
 
 const Row = (props: SimpleGridProps) => (
   <SimpleGrid
@@ -109,7 +110,7 @@ const H3 = (props: ChildOnlyProp) => (
 export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("/assets")
+  const requiredNamespaces = getRequiredNamespacesForPage("assets")
   const lastDeployDate = getLastDeployDate()
 
   return {

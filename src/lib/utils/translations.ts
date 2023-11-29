@@ -39,7 +39,7 @@ export const getRequiredNamespacesForPage = (
 const getRequiredNamespacesForPath = (path: string) => {
   let requiredNamespaces: string[] = []
 
-  if (path.startsWith("/assets")) {
+  if (path === "assets") {
     requiredNamespaces = [...requiredNamespaces, "page-assets"]
   }
 

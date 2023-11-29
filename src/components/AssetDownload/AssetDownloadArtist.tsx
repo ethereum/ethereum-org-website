@@ -1,9 +1,9 @@
+import { useTranslation } from "next-i18next"
 import { Flex } from "@chakra-ui/react"
 
 import Emoji from "@/components/Emoji"
 import Link from "@/components/Link"
 import Text from "@/components/OldText"
-import { useTranslation } from "next-i18next"
 
 type AssetDownloadArtistProps = {
   artistName: string
