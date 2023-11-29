@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
-import { ChildOnlyProp, Lang } from "@/lib/types"
-import { isLangRightToLeft } from "@/lib/utils/translations"
+import { ChildOnlyProp } from "@/lib/types"
 import {
   Badge,
   Box,
@@ -78,8 +77,8 @@ const ContentContainer = (props: ChildOnlyProp) => (
     justify={"space-between"}
     w="full"
     py={0}
-    pl={0}
-    pr={{ base: 0, lg: 8 }}
+    ps={0}
+    pe={{ base: 0, lg: 8 }}
     backgroundColor="ednBackground"
     {...props}
   />
@@ -153,9 +152,9 @@ const Content = (props: ChildOnlyProp) => {
       m="0 auto"
       sx={{
         ".featured": {
-          paddingLeft: 4,
-          marginLeft: -4,
-          borderLeft: "1px dotted",
+          ps: 4,
+          ms: -4,
+          borderInlineStart: "1px dotted",
           borderColor: "primary",
         },
         ".citation": {
@@ -219,13 +218,12 @@ export const DocsLayout = ({
   tocItems,
   lastUpdatedDate,
 }: DocsLayoutProps) => {
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
 
   return (
-    <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+    <Page>
       {/* // TODO: IMPLEMENT PAGEMETADATA */}
       {/* <PageMetadata
         title={frontmatter.title}

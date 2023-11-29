@@ -14,7 +14,7 @@ import {
   Center,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
 import BeaconChainActions from "@/components/BeaconChainActions"
@@ -37,7 +37,6 @@ import LeftNavBar from "@/components/LeftNavBar"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
@@ -103,7 +102,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       maxW={{ base: "full", lg: "640px" }}
       p={8}
       top={{ lg: 24 }}
-      left={{ lg: 24 }}
+      insetInlineStart={{ lg: 24 }}
       zIndex={10}
       {...props}
     />
@@ -144,8 +143,6 @@ export const UpgradeLayout: React.FC<IProps> = ({
 }) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
-
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
@@ -212,7 +209,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </MoreContent>
       </Show>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBreakpoint}

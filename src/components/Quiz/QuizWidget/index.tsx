@@ -80,7 +80,7 @@ const QuizWidget: React.FC<IProps> = (props) => {
         <Center
           position={{ base: "relative", md: "absolute" }}
           top={{ base: 2, md: 0 }}
-          left={{ md: "50%" }}
+          insetInlineStart={{ md: "50%" }}
           transform="auto"
           translateX={{ md: "-50%" }}
           translateY={{ md: "-50%" }}

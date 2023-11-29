@@ -13,13 +13,12 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 import { getRelativePath } from "@/lib/utils/relativePath"
-// import type { Lang } from "@/lib/types"
 // import { trackCustomEvent, MatomoEventOptions } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
-// import { Direction } from "../types"
 
 type BaseProps = {
   /** @deprecated Use `href` prop instead */
@@ -29,7 +28,6 @@ type BaseProps = {
   isPartiallyActive?: boolean
   activeStyle?: StyleProps
   // customEventOptions?: MatomoEventOptions
-  // dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
 }
 
 export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
@@ -62,6 +60,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   let href = (to ?? hrefProp)!
 
   const { asPath, locale } = useRouter()
+  const { flipForRtl } = useRtlFlip()
   const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
 
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -98,6 +97,7 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
             p="1"
             verticalAlign="middle"
             me="-1"
+            transform={flipForRtl}
           />
         )}
       </ChakraLink>

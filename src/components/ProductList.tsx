@@ -76,7 +76,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
               flexDir={{ base: "column", sm: "row" }}
               paddingBottom={4}
               width="full"
-              marginLeft={{ base: 4, sm: 6 }}
+              ms={{ base: 4, sm: 6 }}
               borderBottom="1px solid"
               borderColor="border"
             >
@@ -91,7 +91,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
                   variant="outline"
                   to={link}
                   alignSelf="center"
-                  marginLeft={{ base: 0, sm: 8 }}
+                  ms={{ base: 0, sm: 8 }}
                   paddingY={1}
                   paddingX={6}
                   borderRadius="sm"

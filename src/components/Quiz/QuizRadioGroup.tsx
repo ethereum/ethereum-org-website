@@ -142,7 +142,7 @@ const QuizRadioGroup: React.FC<IProps> = ({
   return (
     <Stack spacing="6" {...getRootProps()} w="100%">
       <Text
-        textAlign={{ base: "center", md: "left" }}
+        textAlign={{ base: "center", md: "start" }}
         fontWeight="700"
         size="2xl"
       >

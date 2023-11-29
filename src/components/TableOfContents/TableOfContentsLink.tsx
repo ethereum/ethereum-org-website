@@ -1,8 +1,10 @@
 import { cssVar,SystemStyleObject } from "@chakra-ui/react"
 
-import type { ToCItem } from "@/lib/types"
-
 import { BaseLink } from "@/components/Link"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+import type { ToCItem } from "@/lib/types"
 
 export interface IPropsTableOfContentsLink {
   depth: number
@@ -15,6 +17,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
   item: { title, url },
   activeHash,
 }) => {
+  const { flipForRtl } = useRtlFlip()
   const isActive = activeHash === url
   const isNested = depth === 2
 
@@ -35,7 +38,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",
-      left: "-1.29rem",
+      insetInlineStart: "-1.29rem",
       top: "50%",
       mt: -1,
     },
@@ -67,12 +70,13 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
             opacity: 0.5,
             display: "inline-flex",
             position: "absolute",
-            left: -3.5,
+            insetInlineStart: -3.5,
             top: -1,
+            transform: flipForRtl,
           },
           "&.active, &:hover": {
             _after: {
-              left: "-2.29rem",
+              insetInlineStart: "-2.29rem",
             },
           },
         },

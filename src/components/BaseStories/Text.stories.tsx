@@ -50,7 +50,7 @@ export const Normal: Story = {
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
             <Flex key={idx} gap="6">
-              <Text size={key} flex="1" textAlign="right">
+              <Text size={key} flex="1" textAlign="end">
                 {key}
               </Text>
               <Text size={key} flex="9" {...args} />
@@ -77,7 +77,7 @@ export const Bold: Story = {
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
             <Flex key={idx} gap="6">
-              <Text size={key} flex="1" textAlign="right">
+              <Text size={key} flex="1" textAlign="end">
                 {key}
               </Text>
               <Text size={key} flex="9" {...args} />
@@ -103,7 +103,7 @@ export const Italic: Story = {
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
             <Flex key={idx} gap="6">
-              <Text size={key} flex="1" textAlign="right">
+              <Text size={key} flex="1" textAlign="end">
                 {key}
               </Text>
               <Text size={key} flex="9" {...args} />
@@ -129,7 +129,7 @@ export const Link: StoryObj<typeof ChakraLink> = {
         <Stack>
           {Object.keys(textSizes || {}).map((key, idx) => (
             <Flex key={idx} gap="6">
-              <Text size={key} flex="1" textAlign="right">
+              <Text size={key} flex="1" textAlign="end">
                 {key}
               </Text>
               <ChakraLink size={key} href="#" flex="9" {...args} />
