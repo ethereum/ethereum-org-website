@@ -14,7 +14,7 @@ import {
 import Emoji from "@/components/Emoji"
 import { BaseLink } from "@/components/Link"
 
-import { GITHUB_ROOT } from "@/lib/constants"
+import { GITHUB_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -60,7 +60,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
         .map(({ name, username, score }, idx) => {
           const hasGitHub = !!username
           const avatarImg =
-            GITHUB_ROOT + (username || "random") + ".png?size=40"
+            GITHUB_URL + (username || "random") + ".png?size=40"
           const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
 
           let emoji: string | null = null
@@ -104,7 +104,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                 <Flex flex="1 1 75%" direction="column" me={8}>
                   <LinkOverlay
                     as={BaseLink}
-                    href={hasGitHub ? `${GITHUB_ROOT}${username}` : "#"}
+                    href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
                     textDecor="none"
                     color="text"
                     hideArrow
