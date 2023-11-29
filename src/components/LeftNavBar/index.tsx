@@ -51,6 +51,7 @@ const LeftNavBar: React.FC<IProps> = ({
       position="sticky"
       top="6.25rem"
       height={calc("100vh").subtract("80px").toString()}
+      zIndex="dropdown"
       {...props}
     >
       {dropdownLinks && <StyledButtonDropdown list={dropdownLinks} />}
