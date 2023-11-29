@@ -8,7 +8,7 @@ import {
   type SimpleGridProps,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
+import { type SSRConfig, useTranslation } from "next-i18next"
 import type { GetStaticProps } from "next/types"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
@@ -73,8 +73,9 @@ import whatIsEthereum from "@/public/what-is-ethereum.png"
 // import ethPortraitPurpleWhite from "@/public/assets/ethereum-logo-portrait-purple-white.png"
 // import leslieTheRhino from "@/public/upgrades/upgrade_rhino.png"
 
-import type { ChildOnlyProp } from "@/lib/types"
 import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import type { ChildOnlyProp } from "@/lib/types"
 
 const Row = (props: SimpleGridProps) => (
   <SimpleGrid
@@ -105,14 +106,19 @@ const H3 = (props: ChildOnlyProp) => (
   />
 )
 
-export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
+export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath("/assets")
+  const lastDeployDate = getLastDeployDate()
+
   return {
-    props: await serverSideTranslations(locale!, requiredNamespaces),
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
+    },
   }
-}
+}) satisfies GetStaticProps<SSRConfig>
 
 const AssetsPage = () => {
   const { t } = useTranslation("page-assets")
