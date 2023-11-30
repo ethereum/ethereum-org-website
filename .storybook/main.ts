@@ -50,8 +50,6 @@ const config: StorybookConfig = {
     return config
   },
   typescript: {
-    check: true,
-    checkOptions: {},
     reactDocgenTypescriptOptions: {
       shouldExtractLiteralValuesFromEnum: true,
       /**
