@@ -1,4 +1,3 @@
-import { FC, RefAttributes } from "react"
 import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
 import {
@@ -13,8 +12,8 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
+import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { getRelativePath } from "@/lib/utils/relativePath"
-// import { trackCustomEvent, MatomoEventOptions } from "@/lib/utils/matomo"
 import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
@@ -22,18 +21,19 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type BaseProps = {
-  /** @deprecated Use `href` prop instead */
-  to?: string
-  href?: string
   hideArrow?: boolean
   isPartiallyActive?: boolean
   activeStyle?: StyleProps
-  // customEventOptions?: MatomoEventOptions
-}
+  customEventOptions?: MatomoEventOptions
+} & (
+  | {
+      /** @deprecated Use `href` prop instead */
+      to: string
+    }
+  | { href: string }
+)
 
 export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
-
-type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
 
 /**
  * Link wrapper which handles:
@@ -47,23 +47,23 @@ type LinkComponent = FC<RefAttributes<HTMLAnchorElement> & LinkProps>
  * - PDFs & static files (which open in a new tab)
  * e.g. <Link href="/eth-whitepaper.pdf">
  */
-export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
-  const {
-    href: hrefProp,
-    to,
+export const BaseLink = forwardRef(function Link(
+  {
     children,
     hideArrow,
     isPartiallyActive = true,
     activeStyle = { color: "primary.base" },
-    ...rest
-  } = props
-
-  let href = (to ?? hrefProp)!
+    customEventOptions,
+    ...props
+  }: LinkProps,
+  ref
+) {
+  let href = "to" in props ? props.to : props.href
 
   const { asPath, locale } = useRouter()
   const { flipForRtl } = useRtlFlip()
-  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
 
+  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
   const isPdf = url.isPdf(href)
   const isExternal = url.isExternal(href)
@@ -81,14 +81,29 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
 
   const commonProps = {
     ref,
-    href,
-    ...rest,
+    ...props,
     ...(isActive && activeStyle),
+    href,
   }
 
   if (isInternalPdf || isExternal) {
     return (
-      <ChakraLink {...commonProps} isExternal>
+      <ChakraLink
+        {...commonProps}
+        isExternal
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ?? {
+              eventCategory: `Link`,
+              eventAction: `Clicked`,
+              eventName: `Clicked on ${
+                isInternalPdf ? "internal PDF" : "external link"
+              }`,
+              eventValue: href,
+            }
+          )
+        }
+      >
         {children}
         <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
         {!hideArrow && (
@@ -106,13 +121,26 @@ export const BaseLink: LinkComponent = forwardRef(function Link(props, ref) {
   }
 
   return (
-    <NextLink locale={locale} {...commonProps}>
+    <NextLink
+      locale={locale}
+      {...commonProps}
+      onClick={() =>
+        trackCustomEvent(
+          customEventOptions ?? {
+            eventCategory: `Link`,
+            eventAction: `Clicked`,
+            eventName: `Clicked on internal link`,
+            eventValue: href,
+          }
+        )
+      }
+    >
       {children}
     </NextLink>
   )
 })
 
-const InlineLink: FC<LinkProps> = forwardRef((props, ref) => {
+const InlineLink = forwardRef((props: LinkProps, ref) => {
   const { locale } = useRouter()
 
   return <BaseLink data-inline-link ref={ref} locale={locale} {...props} />
