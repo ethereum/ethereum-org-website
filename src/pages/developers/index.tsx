@@ -19,6 +19,8 @@ import DogeImage from '@/public/doge-computer.png'
 import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { SSRConfig } from "next-i18next"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -122,7 +124,7 @@ const StyledCallout = chakra(Callout, {
   },
 })
 
-export const getStaticProps: GetStaticProps = async (
+export const getStaticProps = (async (
   context
 ) => {
   const { locale } = context
@@ -136,7 +138,7 @@ export const getStaticProps: GetStaticProps = async (
       lastDeployDate,
     },
   }
-}
+}) satisfies GetStaticProps<SSRConfig>
 
 interface IDevelopersPath {
   emoji: string
