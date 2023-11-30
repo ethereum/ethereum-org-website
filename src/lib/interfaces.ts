@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 import type { ReactNode } from "react"
 
 import type {
@@ -160,4 +161,18 @@ export interface MdPageContent {
   lastUpdatedDate?: string
   contentNotTranslated: boolean
   crowdinContributors: CrowdinContributor[]
+}
+
+// Local environment framework
+export interface Framework {
+  id: string
+  url: string
+  githubUrl: string
+  background: string
+  name: string
+  description: string
+  alt: string
+  image: StaticImageData
+  starCount?: number
+  languages?: string[]
 }

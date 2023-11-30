@@ -1,10 +1,12 @@
 import { GetStaticProps } from "next"
 import { StaticImageData } from "next/image"
+import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "react-i18next"
 import { Box, Flex, ListItem, SimpleGrid, UnorderedList } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
+import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
@@ -14,6 +16,7 @@ import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import Translation from "@/components/Translation"
 
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ghRepoData } from "@/lib/api/ghRepoData"
@@ -50,131 +53,121 @@ const Column = ({ children }: ChildOnlyProp) => {
   )
 }
 
-interface IFramework {
-  id: string
-  url: string
-  githubUrl: string
-  background: string
-  name: string
-  description: string
-  alt: string
-  image: StaticImageData
-  starCount?: number
-  languages?: string[]
+const frameworksList: Array<Framework> = [
+  {
+    id: "waffle",
+    url: "https://getwaffle.io/",
+    githubUrl: "https://github.com/EthWorks/waffle",
+    background: "#ffffff",
+    name: "Waffle",
+    description: "page-developers-local-environment:page-local-environment-waffle-desc",
+    alt: "page-developers-local-environment:page-local-environment-waffle-logo-alt",
+    image: WaffleImage,
+  },
+  {
+    id: "kurtosis",
+    url: "https://www.kurtosis.com/",
+    githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+    background: "#000000",
+    name: "Kurtosis",
+    description: "page-developers-local-environment:page-local-environment-kurtosis-desc",
+    alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",
+    image: KurtosisImage,
+  },
+  {
+    id: "hardhat",
+    url: "https://hardhat.org/",
+    githubUrl: "https://github.com/nomiclabs/hardhat",
+    background: "#faf8fb",
+    name: "Hardhat",
+    description: "page-developers-local-environment:page-local-environment-hardhat-desc",
+    alt: "page-developers-local-environment:page-local-environment-hardhat-logo-alt",
+    image: HardhatImage,
+  },
+  {
+    id: "truffle",
+    url: "https://www.trufflesuite.com/",
+    githubUrl: "https://github.com/trufflesuite/truffle",
+    background: "#31272a",
+    name: "Truffle",
+    description: "page-developers-local-environment:page-local-environment-truffle-desc",
+    alt: "page-developers-local-environment:page-local-environment-truffle-logo-alt",
+    image: TruffleImage,
+  },
+  {
+    id: "brownie",
+    url: "https://github.com/eth-brownie/brownie",
+    githubUrl: "https://github.com/eth-brownie/brownie",
+    background: "#ffffff",
+    name: "Brownie",
+    description: "page-developers-local-environment:page-local-environment-brownie-desc",
+    alt: "page-developers-local-environment:page-local-environment-brownie-logo-alt",
+    image: EthDiamondBlackImage,
+  },
+  {
+    id: "epirus",
+    url: "https://www.web3labs.com/epirus",
+    githubUrl: "https://github.com/web3labs/epirus-free",
+    background: "#ffffff",
+    name: "Epirus",
+    description: "page-developers-local-environment:page-local-environment-epirus-desc",
+    alt: "page-developers-local-environment:page-local-environment-epirus-logo-alt",
+    image: EpirusImage,
+  },
+  {
+    id: "createethapp",
+    url: "https://github.com/PaulRBerg/create-eth-app",
+    githubUrl: "https://github.com/PaulRBerg/create-eth-app",
+    background: "#ffffff",
+    name: "Create Eth App",
+    description: "page-developers-local-environment:page-local-environment-eth-app-desc",
+    alt: "page-developers-local-environment:page-local-environment-eth-app-logo-alt",
+    image: EthDiamondBlackImage,
+  },
+  {
+    id: "scaffoldeth",
+    url: "https://github.com/austintgriffith/scaffold-eth",
+    githubUrl: "https://github.com/austintgriffith/scaffold-eth",
+    background: "#ffffff",
+    name: "scaffold-eth",
+    description: "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
+    alt: "page-developers-local-environment:page-local-environment-scaffold-eth-logo-alt",
+    image: ScaffoldEthImage,
+  },
+  {
+    id: "soliditytemplate",
+    url: "https://github.com/paulrberg/solidity-template",
+    githubUrl: "https://github.com/paulrberg/solidity-template",
+    background: "#ffffff",
+    name: "Solidity template",
+    description: "page-developers-local-environment:page-local-environment-solidity-template-desc",
+    alt: "page-developers-local-environment:page-local-environment-solidity-template-logo-alt",
+    image: EthDiamondBlackImage,
+  },
+  {
+    id: "foundry",
+    url: "https://getfoundry.sh/",
+    githubUrl: "https://github.com/foundry-rs/foundry",
+    background: "#ffffff",
+    name: "Foundry",
+    description: "page-developers-local-environment:page-local-environment-foundry-desc",
+    alt: "page-developers-local-environment:page-local-environment-foundry-logo-alt",
+    image: FoundryImage,
+  },
+]
+
+interface Props extends SSRConfig {
+  frameworksList: Array<Framework>
 }
 
-export const getStaticProps: GetStaticProps = async (
+export const getStaticProps = (async (
   context
 ) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage('/developers/local-environment')
-
-  // TODO: fetch github repo data
-  let frameworksList: Array<IFramework> = [
-    {
-      id: "waffle",
-      url: "https://getwaffle.io/",
-      githubUrl: "https://github.com/EthWorks/waffle",
-      background: "#ffffff",
-      name: "Waffle",
-      description: "page-developers-local-environment:page-local-environment-waffle-desc",
-      alt: "page-developers-local-environment:page-local-environment-waffle-logo-alt",
-      image: WaffleImage,
-    },
-    {
-      id: "kurtosis",
-      url: "https://www.kurtosis.com/",
-      githubUrl: "https://github.com/kurtosis-tech/kurtosis",
-      background: "#000000",
-      name: "Kurtosis",
-      description: "page-developers-local-environment:page-local-environment-kurtosis-desc",
-      alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",
-      image: KurtosisImage,
-    },
-    {
-      id: "hardhat",
-      url: "https://hardhat.org/",
-      githubUrl: "https://github.com/nomiclabs/hardhat",
-      background: "#faf8fb",
-      name: "Hardhat",
-      description: "page-developers-local-environment:page-local-environment-hardhat-desc",
-      alt: "page-developers-local-environment:page-local-environment-hardhat-logo-alt",
-      image: HardhatImage,
-    },
-    {
-      id: "truffle",
-      url: "https://www.trufflesuite.com/",
-      githubUrl: "https://github.com/trufflesuite/truffle",
-      background: "#31272a",
-      name: "Truffle",
-      description: "page-developers-local-environment:page-local-environment-truffle-desc",
-      alt: "page-developers-local-environment:page-local-environment-truffle-logo-alt",
-      image: TruffleImage,
-    },
-    {
-      id: "brownie",
-      url: "https://github.com/eth-brownie/brownie",
-      githubUrl: "https://github.com/eth-brownie/brownie",
-      background: "#ffffff",
-      name: "Brownie",
-      description: "page-developers-local-environment:page-local-environment-brownie-desc",
-      alt: "page-developers-local-environment:page-local-environment-brownie-logo-alt",
-      image: EthDiamondBlackImage,
-    },
-    {
-      id: "epirus",
-      url: "https://www.web3labs.com/epirus",
-      githubUrl: "https://github.com/web3labs/epirus-free",
-      background: "#ffffff",
-      name: "Epirus",
-      description: "page-developers-local-environment:page-local-environment-epirus-desc",
-      alt: "page-developers-local-environment:page-local-environment-epirus-logo-alt",
-      image: EpirusImage,
-    },
-    {
-      id: "createethapp",
-      url: "https://github.com/PaulRBerg/create-eth-app",
-      githubUrl: "https://github.com/PaulRBerg/create-eth-app",
-      background: "#ffffff",
-      name: "Create Eth App",
-      description: "page-developers-local-environment:page-local-environment-eth-app-desc",
-      alt: "page-developers-local-environment:page-local-environment-eth-app-logo-alt",
-      image: EthDiamondBlackImage,
-    },
-    {
-      id: "scaffoldeth",
-      url: "https://github.com/austintgriffith/scaffold-eth",
-      githubUrl: "https://github.com/austintgriffith/scaffold-eth",
-      background: "#ffffff",
-      name: "scaffold-eth",
-      description: "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
-      alt: "page-developers-local-environment:page-local-environment-scaffold-eth-logo-alt",
-      image: ScaffoldEthImage,
-    },
-    {
-      id: "soliditytemplate",
-      url: "https://github.com/paulrberg/solidity-template",
-      githubUrl: "https://github.com/paulrberg/solidity-template",
-      background: "#ffffff",
-      name: "Solidity template",
-      description: "page-developers-local-environment:page-local-environment-solidity-template-desc",
-      alt: "page-developers-local-environment:page-local-environment-solidity-template-logo-alt",
-      image: EthDiamondBlackImage,
-    },
-    {
-      id: "foundry",
-      url: "https://getfoundry.sh/",
-      githubUrl: "https://github.com/foundry-rs/foundry",
-      background: "#ffffff",
-      name: "Foundry",
-      description: "page-developers-local-environment:page-local-environment-foundry-desc",
-      alt: "page-developers-local-environment:page-local-environment-foundry-logo-alt",
-      image: FoundryImage,
-    },
-  ]
   
-  frameworksList = await Promise.all(frameworksList.map(async (framework) => {
+  const frameworksListData = await Promise.all(frameworksList.map(async (framework) => {
     const repoData = await ghRepoData(framework.githubUrl)
     return {
       ...framework,
@@ -183,13 +176,16 @@ export const getStaticProps: GetStaticProps = async (
     }
   }))
 
+  const lastDeployDate = getLastDeployDate()
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      frameworksList,
+      frameworksList: frameworksListData,
+      lastDeployDate,
     },
   }
-}
+}) satisfies GetStaticProps<Props>
 
 const LocalEnvironmentPage = ({ frameworksList }) => {
   const { t } = useTranslation("page-developers-local-environment")

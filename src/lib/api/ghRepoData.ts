@@ -1,7 +1,5 @@
 import axios from 'axios'
 
-import "dotenv/config"
-
 export const ghRepoData = async (githubUrl: string) => {
   const split = githubUrl.split("/")
   const repoOwner = split[split.length - 2]
