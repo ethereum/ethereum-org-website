@@ -1,8 +1,11 @@
 import type { Preview } from "@storybook/react"
 
 import theme from "../src/@chakra-ui/theme"
+import { extendBaseTheme } from "@chakra-ui/react"
 
-const chakraBreakpointArray = Object.entries(theme.breakpoints)
+const extendedTheme = extendBaseTheme(theme)
+
+const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
 
 const preview: Preview = {
   parameters: {
@@ -17,7 +20,7 @@ const preview: Preview = {
       disable: true,
     },
     chakra: {
-      theme,
+      theme: extendedTheme,
     },
     layout: "centered",
     // Modify viewport selection to match Chakra breakpoints (or custom breakpoints)
