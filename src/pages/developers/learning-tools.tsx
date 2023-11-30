@@ -1,5 +1,6 @@
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
+import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "react-i18next"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
@@ -16,6 +17,7 @@ import Text from '@/components/OldText'
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
@@ -113,19 +115,21 @@ const StackContainer = (props: ChildOnlyProp) => (
   />
 )
 
-export const getStaticProps: GetStaticProps = async (
+export const getStaticProps = (async (
   context
 ) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage('/developers/learning-tools')
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
     },
   }
-}
+}) satisfies GetStaticProps<SSRConfig>
 
 const DevelopersPage = () => {
   const { t } = useTranslation(["page-developers-learning-tools"])
