@@ -348,29 +348,32 @@ export const getContent = (dir: string) => {
 }
 
 export const getTutorialsData = (locale: string): ITutorial[] => {
-  const languageTutorialFiles = fs.readdirSync(
-    join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials')
-  )
+  const fullPath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials')
+  let tutorialData: ITutorial[] = []
 
-  const tutorialData = languageTutorialFiles.map((dir) => {
-    const filePath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials', dir, 'index.md')
-    const fileContents = fs.readFileSync(filePath, "utf8")
-    const { data, content } = matter(fileContents)
-    const frontmatter = data as Frontmatter
-    
-    return {
-      to: join(`/${locale}/developers/tutorials`, dir),
-      title: frontmatter.title,
-      description: frontmatter.description,
-      author: frontmatter.author,
-      tags: frontmatter.tags,
-      skill: frontmatter.skill as Skill,
-      timeToRead: Math.round(readingTime(content).minutes),
-      published: dateToString(frontmatter.published),
-      lang: frontmatter.lang, 
-      isExternal: false,
-    }
-  })
+  if (fs.existsSync(fullPath)) {
+    const languageTutorialFiles = fs.readdirSync(fullPath)
+
+    tutorialData = languageTutorialFiles.map((dir) => {
+      const filePath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials', dir, 'index.md')
+      const fileContents = fs.readFileSync(filePath, "utf8")
+      const { data, content } = matter(fileContents)
+      const frontmatter = data as Frontmatter
+      
+      return {
+        to: join(`/${locale}/developers/tutorials`, dir),
+        title: frontmatter.title,
+        description: frontmatter.description,
+        author: frontmatter.author || '',
+        tags: frontmatter.tags,
+        skill: frontmatter.skill as Skill,
+        timeToRead: Math.round(readingTime(content).minutes),
+        published: dateToString(frontmatter.published),
+        lang: frontmatter.lang, 
+        isExternal: false,
+      }
+    })
+  }
 
   return tutorialData
 }
