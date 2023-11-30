@@ -128,10 +128,12 @@ export const getStaticProps: GetStaticProps = async (
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPath('/developers')
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
     },
   }
 }
