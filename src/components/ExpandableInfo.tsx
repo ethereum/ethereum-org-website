@@ -87,13 +87,13 @@ const ExpandableInfo: React.FC<IProps> = ({
       >
         {image && <GatsbyImage image={image} alt="" />}
         <HStack gap={12} width="full">
-          <Box mr={4}>
+          <Box me={4}>
             <HStack
               width="full"
               my={4}
               sx={{
                 img: {
-                  mr: 6,
+                  me: 6,
                 },
               }}
             >

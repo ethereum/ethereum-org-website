@@ -7,7 +7,7 @@ import { useStatsBoxGrid } from "./useStatsBoxGrid"
 export interface IProps {}
 
 const StatsBoxGrid: React.FC<IProps> = () => {
-  const { metrics, dir } = useStatsBoxGrid()
+  const { metrics } = useStatsBoxGrid()
 
   return (
     <SimpleGrid
@@ -20,7 +20,7 @@ const StatsBoxGrid: React.FC<IProps> = () => {
       borderRadius="sm"
     >
       {metrics.map((metric, idx) => (
-        <GridItem key={idx} metric={metric} dir={dir} />
+        <GridItem key={idx} metric={metric} />
       ))}
     </SimpleGrid>
   )

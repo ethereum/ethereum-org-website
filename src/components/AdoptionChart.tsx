@@ -9,8 +9,8 @@ const Column: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <Flex
       flexDirection="column-reverse"
-      ml={{ base: 2, md: 4 }}
-      _first={{ ml: 0 }}
+      ms={{ base: 2, md: 4 }}
+      _first={{ ms: 0 }}
     >
       {children}
     </Flex>
@@ -30,13 +30,13 @@ const Cell: React.FC<BoxProps> = ({ children, color, ...props }) => {
       lineHeight="none"
       textAlign="center"
       _last={{
-        borderTopLeftRadius: "2xl",
-        borderTopRightRadius: "2xl",
+        borderTopStartRadius: "2xl",
+        borderTopEndRadius: "2xl",
       }}
       sx={{
         "&:nth-child(-n + 2)": {
-          borderBottomLeftRadius: "2xl",
-          borderBottomRightRadius: "2xl",
+          borderBottomStartRadius: "2xl",
+          borderBottomEndRadius: "2xl",
         },
       }}
       {...props}

@@ -112,7 +112,7 @@ const ProductCard: React.FC<IProps> = ({
           maxH="257px"
         />
       </Center>
-      <Flex flexDirection="column" p={6} textAlign="left" height="100%">
+      <Flex flexDirection="column" p={6} textAlign="start" height="100%">
         <Heading
           as="h3"
           fontSize="2xl"
