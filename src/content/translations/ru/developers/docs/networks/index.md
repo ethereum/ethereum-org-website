@@ -56,8 +56,6 @@ lang: ru
 - [Кран QuickNode Sepolia](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Кран PoW](https://sepolia-faucet.pk910.de/)
-- [Кран Sepolia](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Кран кошелька Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Кран Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Кран Infura Sepolia](https://www.infura.io/faucet)

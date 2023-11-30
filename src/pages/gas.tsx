@@ -92,29 +92,26 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
   const benefits = [
     {
       emoji: "🪪",
-      description:
-        "Gas keeps Ethereum sybil-resistant by preventing malicious actors from overwhelming the network with fraudulent activities.",
+      description: t("page-gas-benefits-1-description"),
     },
     {
       emoji: ":money_with_wings:",
-      description:
-        "Because computation costs gas, spamming Ethereum with expensive transactions, either accidentally and maliciously, is financially disencentivised.",
+      description: t("page-gas-benefits-2-description"),
     },
     {
       emoji: ":hourglass_flowing_sand:",
-      description:
-        "A hard-limit on the amount of computation that can be done at any one time prevents Ethereum from being overwhelmed, helping to ensure the network is always accessible.",
+      description: t("page-gas-benefits-3-description"),
     },
   ]
 
   const heroContent = {
-    title: "Gas fees",
-    header: "Network fees",
+    title: t("page-gas-hero-title"),
+    header: t("page-gas-hero-header"),
     image: getImage(data.infrastructure)!,
     alt: "",
     buttons: [
       {
-        content: "What is gas?",
+        content: t("page-gas-hero-button-1-content"),
         toId: "what-is-gas",
         matomo: {
           eventCategory: "gas hero buttons",
@@ -128,8 +125,8 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
   return (
     <Page>
       <PageMetadata
-        title="Gas fees on Ethereum: how do they work?"
-        description="Learn about gas on Ethereum: how they work and how to pay less in gas fees"
+        title={t("page-gas-meta-title")}
+        description={t("page-gas-meta-description")}
       />
       <Box background="layer2Gradient" width="full">
         <Box pb={8}>
@@ -137,9 +134,9 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             content={{
               subtitle: (
                 <>
-                  Network fees on Ethereum are called gas.
+                  {t("page-gas-hero-subtitle-1")}
                   <br />
-                  Gas is the fuel that powers Ethereum.
+                  {t("page-gas-hero-subtitle-2")}
                 </>
               ),
               ...heroContent,
@@ -154,29 +151,27 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           w="full"
         >
           <Box flex="60%" w="full" mr={{ base: "auto", lg: 2 }}>
-            <InfoBanner mb={8} title="Summary">
+            <InfoBanner mb={8} title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>
-                  Every transaction on Ethereum requires a small form of payment
-                  to process
+                  <Translation id="page-gas-summary-item-1" />
                 </ListItem>
-                <ListItem>These fees are known as ‘gas’ fee.</ListItem>
-                <ListItem>Gas fees change based on network congestion</ListItem>
+                <ListItem>
+                  <Translation id="page-gas-summary-item-2" />
+                </ListItem>
+                <ListItem>
+                  <Translation id="page-gas-summary-item-3" />
+                </ListItem>
               </UnorderedList>
             </InfoBanner>
             <H2 id="what-is-gas" mt={0}>
-              What are gas fees?
+              <Translation id="page-gas-what-are-gas-fees-header" />
             </H2>
             <Text>
-              Think of Ethereum as a large computer network where people can do
-              tasks like sending messages or running programs. Just like in the
-              real world, these tasks require energy to get done.
+              <Translation id="page-gas-what-are-gas-fees-text-1" />
             </Text>
             <Text>
-              In Ethereum, each computational action has a set "gas" price. Your
-              gas fees are the total cost of the actions in your transaction.
-              When you send a transaction or run a smart contract, you pay in
-              gas fees to process it.
+              <Translation id="page-gas-what-are-gas-fees-text-2" />
             </Text>
           </Box>
 
@@ -202,29 +197,36 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
           width="full"
         >
           <Box w="full">
-            <H2 mt={0}>How do I pay less gas?</H2>
+            <H2 mt={0}>
+              <Translation id="page-gas-how-do-i-pay-less-gas-header" />
+            </H2>
             <Text>
-              While higher fees on Ethereum are sometimes inevitable, there are
-              strategies you can use to reduce the cost:
+              <Translation id="page-gas-how-do-i-pay-less-gas-text" />
             </Text>
             <Flex flexWrap="wrap" my={{ base: 4, lg: 0 }} gap={8}>
               <StyledCard
                 emoji=":alarm_clock:"
-                title="Time your transactions"
-                description="Just like travelling off-peak is less crowded and more affordable, Ethereum is generally cheaper to use when North America is asleep."
+                title={t("page-gas-how-do-i-pay-less-gas-card-1-title")}
+                description={t(
+                  "page-gas-how-do-i-pay-less-gas-card-1-description"
+                )}
               ></StyledCard>
               <StyledCard
                 emoji=":robot:"
-                title="Wait for gas to go down"
-                description="Gas prices go up and down every twelve seconds based on how congested Ethereum is. When gas prices are high, waiting just a few minutes before making a transaction could see a significant drop in what you pay."
+                title={t("page-gas-how-do-i-pay-less-gas-card-2-title")}
+                description={t(
+                  "page-gas-how-do-i-pay-less-gas-card-2-description"
+                )}
               ></StyledCard>
               <StyledCard
                 emoji=":rocket:"
-                title="Use layer 2"
-                description="Layer-2 chains are built atop Ethereum, offering lower fees and handling more transactions. They're a good choice to save on fees for transactions that don't need to happen on the main Ethereum network."
+                title={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
+                description={t(
+                  "page-gas-how-do-i-pay-less-gas-card-3-description"
+                )}
               >
                 <ButtonLink w="fit-content" to="/layer-2/">
-                  Try layer 2
+                  <Translation id="page-gas-try-layer-2" />
                 </ButtonLink>
               </StyledCard>
             </Flex>
@@ -243,27 +245,22 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             mr={{ base: "auto", lg: 16 }}
             flex="60%"
           >
-            <H3 mt={0}>What causes high gas fees?</H3>
+            <H3 mt={0}>
+              <Translation id="page-gas-what-causes-high-gas-fees-header" />
+            </H3>
             <Text>
-              Whenever the amount of computation (gas) on Ethereum exceeds a
-              certain threshold, gas fees begin to rise. The more the gas
-              exceeds this threshold, the quicker gas fees increase.
+              <Translation id="page-gas-what-causes-high-gas-fees-text-1" />
             </Text>
             <Text>
-              Higher fees could be caused by things like popular dapps or NFTs,
-              periodically increased trading on DEXs, or an overwhelming number
-              of user activity at peak times.
+              <Translation id="page-gas-what-causes-high-gas-fees-text-2" />
             </Text>
             <Text>
-              Developers on Ethereum should take care to optimise their smart
-              contracts usage before deploying. If lots of people are using a
-              poorly written smart contract, it will consume more gas and could
-              inadvertently cause network congestion.
+              <Translation id="page-gas-what-causes-high-gas-fees-text-3" />
             </Text>
             <Text>
-              Want to dive deeper?{" "}
+              <Translation id="page-gas-want-to-dive-deeper" />{" "}
               <InlineLink to="/developers/docs/gas/">
-                Check out the developer docs.
+                <Translation id="page-gas-check-out-the-developer-docs" />
               </InlineLink>
             </Text>
           </Box>
@@ -274,13 +271,11 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             mt={{ base: 16, lg: 2 }}
           >
             <Emoji text=":cat:" fontSize="5xl" />
-            <H3>Attack of the Cryptokitties</H3>
+            <H3>
+              <Translation id="page-gas-attack-of-the-cryptokitties-header" />
+            </H3>
             <Text>
-              In November 2017, the popular CryptoKitties project was launched.
-              Its rapid spike in popularity caused significant network
-              congestion and extremely high gas fees. The challenges posed by
-              CryptoKitties accelerated the urgency of finding solutions for
-              scaling Ethereum.
+              <Translation id="page-gas-attack-of-the-cryptokitties-text" />
             </Text>
           </GhostCard>
         </Flex>
@@ -294,10 +289,11 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         >
           <Box w="full" mr={{ base: "auto", lg: "8" }}>
             <Box>
-              <H2 mt={0}>Why do we need gas?</H2>
+              <H2 mt={0}>
+                <Translation id="page-gas-why-do-we-need-gas-header" />
+              </H2>
               <Text>
-                Gas is a critical element in keeping Ethereum secure and
-                processing transactions. Gas helps in many ways:
+                <Translation id="page-gas-why-do-we-need-gas-text" />
               </Text>
             </Box>
             {benefits.map((benefit) => (
@@ -326,70 +322,74 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         <Flex direction={{ base: "column", lg: "row" }} align="flex-start">
           <Box w="full" mr={{ base: "auto", lg: 8 }}>
             <Flex alignItems="flex-start">
-              <H2 mt={0}>How is gas calculated?</H2>
+              <H2 mt={0}>
+                <Translation id="page-gas-how-is-gas-calculated-header" />
+              </H2>
 
               <Pill mt={1.5} ml={4} background="warning">
-                Advanced
+                <Translation id="page-gas-advanced" />
               </Pill>
             </Flex>
-            <Text>The total gas fee you pay is made up of a few parts:</Text>
+            <Text>
+              <Translation id="page-gas-how-is-gas-calculated-text-1" />
+            </Text>
             <UnorderedList ml={6} spacing={3}>
               <ListItem>
-                <b>Base fee:</b> a fee set by the network that has to be paid
-                for a transaction
+                <Translation id="page-gas-how-is-gas-calculated-item-1" />
               </ListItem>
               <ListItem>
-                <b>Priority fee:</b> an optional tip to incentivise node
-                operators to include your transaction
+                <Translation id="page-gas-how-is-gas-calculated-item-2" />
               </ListItem>
               <ListItem>
-                <b>
-                  Units of gas used<i>*</i>:
-                </b>{" "}
-                remember we said gas represented computation? More complex
-                actions, like interacting with a smart contract, use more gas
-                than simple ones, such as sending a transaction.
+                <Translation id="page-gas-how-is-gas-calculated-item-3" />
                 <UnorderedList ml={6} spacing={3} styleType="none">
                   <ListItem color="body.medium" fontSize="sm">
-                    <i>
-                      <span>*</span> See Figure 1 to see how much gas different
-                      types of transactions use
-                    </i>
+                    <Translation id="page-gas-how-is-gas-calculated-list-item-1" />
                   </ListItem>
                 </UnorderedList>
               </ListItem>
             </UnorderedList>
             <Text>
-              The formula for calculating a gas fee is units of gas used * (base
-              fee + priority fee). Most wallets will calculate gas usage and
-              display it in a more straight-forward way.
+              <Translation id="page-gas-how-is-gas-calculated-text-2" />
             </Text>
           </Box>
           <Table maxW={"100%"} minW={"auto"}>
             <TableCaption fontSize="sm">
-              <i>Figure 1: Gas used by transaction type</i>
+              <Translation id="page-gas-table-figure" />
             </TableCaption>
             <Thead>
               <Tr>
-                <Th>Transaction type</Th>
-                <Th>Units of gas used</Th>
+                <Th>
+                  <Translation id="page-gas-table-header-1" />
+                </Th>
+                <Th>
+                  <Translation id="page-gas-table-header-2" />
+                </Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td>Sending ETH</Td>
+                <Td>
+                  <Translation id="page-gas-table-item-1-transaction-type" />
+                </Td>
                 <Td>21,000</Td>
               </Tr>
               <Tr>
-                <Td>Sending an ERC-20 token</Td>
+                <Td>
+                  <Translation id="page-gas-table-item-2-transaction-type" />
+                </Td>
                 <Td>65,000</Td>
               </Tr>
               <Tr>
-                <Td>Transferring an NFT</Td>
+                <Td>
+                  <Translation id="page-gas-table-item-3-transaction-type" />
+                </Td>
                 <Td>84,904</Td>
               </Tr>
               <Tr>
-                <Td>Swapping on Uniswap</Td>
+                <Td>
+                  <Translation id="page-gas-table-item-4-transaction-type" />
+                </Td>
                 <Td>184,523</Td>
               </Tr>
             </Tbody>
@@ -397,36 +397,33 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
         </Flex>
       </Content>
       <Content>
-        <H2 mt="0">Frequently asked questions</H2>
+        <H2 mt="0">
+          <Translation id="page-gas-faq-header" />
+        </H2>
         {/* MaxWidth will be enforced by FAQ component once implemented */}
         <Box maxWidth="832px">
-          <ExpandableCard title="Who gets paid the gas fee in my transaction?">
+          <ExpandableCard title={t("page-gas-faq-question-1-q")}>
             <Text>
-              The majority is gas fee—the base fee— is destroyed by the protocol
-              (burned). The priority fee, if included in your transaction, will
-              be given to the validator who proposed your transaction.
+              <Translation id="page-gas-faq-question-1-a-1" />
             </Text>
             <Text>
-              You can read a detailed description of the process in{" "}
-              <Link href="/developers/docs/gas/">the gas developer docs.</Link>
+              <Translation id="page-gas-faq-question-1-a-2" />
             </Text>
           </ExpandableCard>
-          <ExpandableCard title="Do I need to pay gas in ETH?">
+          <ExpandableCard title={t("page-gas-faq-question-2-q")}>
             <Text>
-              Yes. All gas fees on Ethereum must be paid in the native ETH
-              currency.
+              <Translation id="page-gas-faq-question-2-a-1" />
             </Text>
-            <Link href="/eth/">More on ETH</Link>
+            <Link href="/eth/">
+              <Translation id="page-gas-faq-question-2-a-2" />
+            </Link>
           </ExpandableCard>
-          <ExpandableCard title="What is gwei?">
+          <ExpandableCard title={t("page-gas-faq-question-3-q")}>
             <Text>
-              In most wallets or gas trackers, you will see gas prices
-              denominated as ‘gwei’.
+              <Translation id="page-gas-faq-question-3-a-1" />
             </Text>
             <Text>
-              Gwei is just a smaller unit of ETH, just as pennies are to
-              dollars, with the difference being that 1 ETH equals 1 billion
-              gwei. Gwei is useful when talking about very small amounts of ETH.
+              <Translation id="page-gas-faq-question-3-a-2" />
             </Text>
           </ExpandableCard>
         </Box>
@@ -444,7 +441,9 @@ const GasPage = ({ data }: PageProps<Queries.GasPageQuery>) => {
             descriptionKey="Layer 2 extends Ethereum, reducing costs and increasing accessibility for decentralized applications."
           >
             <Box>
-              <ButtonLink to="/get-eth/">Use layer 2</ButtonLink>
+              <ButtonLink to="/layer-2/">
+                <Translation id="page-gas-use-layer-2" />
+              </ButtonLink>
             </Box>
           </Box>
           <Box
@@ -478,7 +477,7 @@ export const query = graphql`
     locales: allLocale(
       filter: {
         language: { in: $languagesToFetch }
-        ns: { in: ["page-community", "common"] }
+        ns: { in: ["page-community", "common", "page-gas"] }
       }
     ) {
       edges {

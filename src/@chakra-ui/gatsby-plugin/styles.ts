@@ -1,7 +1,5 @@
-import { mode } from "@chakra-ui/theme-tools"
-
 const styles = {
-  global: (props) => ({
+  global: {
     /**
      * THESE ARE OLD GLOBAL STYLES - carried over from old css files
      *
@@ -12,11 +10,9 @@ const styles = {
      * don't need the global styles anymore
      */
     body: {
-      // TODO: when we have Chakra v2, this should be done by overriding the
-      // native Chakra semantic tokens
-      bg: mode("white", "gray.700")(props),
+      bg: "background.base",
       lineHeight: "base",
-      fontSize: ["sm", null, "md"],
+      fontSize: "md",
     },
     a: {
       color: "primary.base",
@@ -79,11 +75,11 @@ const styles = {
       visibility: "visible",
     },
     "pre, code, kbd, samp": {
-      fontSize: "0.8em",
-      lineHeight: "1.1rem",
-      fontFamily: "SFMono-Regular,Menlo,Monaco,Consolas,monospace",
+      fontSize: "md",
+      lineHeight: "base",
+      fontFamily: "monospace",
     },
-  }),
+  },
 }
 
 export default styles

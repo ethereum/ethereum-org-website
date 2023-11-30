@@ -3,21 +3,20 @@ title: Bir NFT Nasıl Yazılır ve Dağıtılır (NFT Öğretici Serisi Bölüm 
 description: Bu öğretici, Ethereum ve Gezegenler Arası Dosya Sistemi (IPFS) kullanarak bir Değiştirilemez Token (ERC-721 token'ı) akıllı sözleşmesinin nasıl yazılacağı ve dağıtılacağı konusunda adım adım yol gösterecek olan NFT'lerle ilgili bir dizinin 1. Bölümüdür.
 author: "Sumi Mudgil"
 tags:
-  - "NFT'ler"
   - "ERC-721"
   - "Alchemy"
   - "Solidity"
   - "akıllı sözleşmeler"
-skill: beginner
+skill: advanced
 lang: tr
 published: 2021-04-22
 ---
 
-Şu anda NFT'lerin blok zincirini insanlara sunması, Ethereum blok zincirinde kendi NFT'nizi (ERC-721 Token'ı) yayınlarak bu heyecanı bizzat deneyimlemeniz için mükemmel bir fırsattır!
+NFT'lerin blokzinciri geniş kitlelere tanıtmasıyla, Ethereum blokzinciri üzerinde kendi NFT sözleşmenizi (ERC-721 Jetonu) yayımlayarak bu konudaki heyecanı kendiniz anlamanız için harika bir fırsat doğdu!
 
 Alchemy; Makersplace (son zamanlarda Christie's'de 69 Milyon ABD Doları değerinde rekor bir dijital sanat eseri satışı gerçekleştirdi), Dapper Labs (NBA Top Shot ve Crypto Kitties'in yaratıcıları), OpenSea (dünyanın en büyük NFT pazarı), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable ve daha fazlası gibi NFT alanındaki büyük isimleri desteklemekten büyük bir gurur duyuyor.
 
-Bu öğreticide; [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) ve [Alchemy](https://alchemy.com/signup/eth) kullanarak Ropsten test ağında bir ERC-721 akıllı sözleşmesi oluşturma ve dağıtma adımlarını inceleyeceğiz (ne olduğunu anlamıyorsanız üzülmeyin, açıklayacağız!).
+Bu öğreticide; [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) ve [Alchemy](https://alchemy.com/signup/eth) kullanarak Sepolia test ağında ERC-721 akıllı sözleşmesi oluşturma ve dağıtma adımlarını inceleyeceğiz (ne olduğunu anlamıyorsanız üzülmeyin, açıklayacağız!).
 
 Bu öğreticinin 2. Bölümünde, bir NFT'yi basmak için akıllı sözleşmemizi nasıl kullanabileceğimizi inceleyeceğiz ve 3. Bölümde NFT'nizi MetaMask üzerinde nasıl görüntüleyeceğinizi açıklayacağız.
 
@@ -31,29 +30,29 @@ Bu eğitimde, akıllı sözleşme dağıtımımızda perde arkasında neler olup
 
 ## Adım 2: Uygulamanızı (ve API anahtarınızı) oluşturun {#make-api-key}
 
-Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı oluşturabilirsiniz. Bu, Ropsten test ağına istekte bulunmamıza izin verecektir. Eğer test ağları hakkında daha fazlasını öğrenmeye meraklıysanız [bu rehbere](https://docs.alchemyapi.io/guides/choosing-a-network) göz atın.
+Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı oluşturabilirsiniz. Bu, Sepolia test ağına istekte bulunmamıza izin verecektir. Eğer test ağları hakkında daha fazlasını öğrenmeye meraklıysanız [bu rehbere](https://docs.alchemyapi.io/guides/choosing-a-network) göz atın.
 
-1. İmlecinizi gezinme çubuğundaki "Apps"in (Uygulamalar) üzerine gelip "Create App"e (Uygulama Oluştur) tıklayarak Alchemy Gösterge Panelinizdeki "Create App" sayfasına gidin
+1. Gezinme çubuğundaki "Uygulamalar"ın üzerine gelip "Uygulama Oluştur"a tıklayarak Simya Panonuzdaki "Uygulama Oluştur" sayfasına gidin
 
 ![Uygulamanızı oluşturun](./create-your-app.png)
 
-2. Uygulamanıza bir ad verin (biz, "İlk NFT'm!"i seçtik), kısa bir açıklama yazın, Environment (Ortam) için "Staging"i (Hazırlama) seçin (uygulamanızın muhasebesi için kullanılır) ve network (ağ) için "Ropsten"i seçin.
+2. Uygulamanıza bir ad verin (biz, "İlk NFT'm!"i seçtik), kısa bir açıklama yazın, Zincir için "Ethereum"', ağınız için "Sepolia" seçimi yapın. Birleşim sonrasında diğer test ağları kullanımdan kaldırılmıştır.
 
-![Uygulamanızı yapılandırın ve yayınlayın](./configure-and-publish-your-app.png)
+![Uygulamanızı yapılandırın ve yayınlayın](./alchemy-explorer-sepolia.png)
 
-3. "Create app"e (Uygulama oluştur) tıklamanız yeterlidir! Uygulamanız aşağıdaki tabloda görünmelidir.
+3. "Uygulama oluştur"u tıklayın, işte bu kadar! Uygulamanız aşağıdaki tabloda görünmelidir.
 
 ## Adım 3: Bir Ethereum hesabı oluşturun (adres) {#create-eth-address}
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, Ethereum Vakfı'nın [bu sayfasına](/developers/docs/transactions/) göz atın.
 
-[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun (böylece gerçek parayla uğraşmayız).
+[Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluştururken, ya da bir hesabınız çoktan varsa, sağ üstten Sepolia Test Ağına geçtiğinizden emin olun (bu sayede gerçek parayla denemeler yapmayız).
 
-![Ropsten'i ağınız olarak ayarlayın](./metamask-ropsten.png)
+![Sepolia'yı ağınız olarak ayarlayın](./metamask-goerli.png)
 
 ## Adım 4: Bir Musluktan ether ekleyin {#step-4-add-ether-from-a-faucet}
 
-Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH almak için [FaucETH](https://fauceth.komputing.org)'e gidip Ropsten hesap adresinizi girebilir, "Request funds"a (Para talep et) tıklayabilir, ardından açılır menüden "Ethereum Testnet Ropsten"i seçebilir ve son olarak tekrar "Request funds" düğmesine tıklayabilirsiniz. Kısa bir süre sonra MetaMask hesabınızda ETH'yi görmelisiniz!
+Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH alabilmek için Alchemy tarafından barındırılan [Sepolia Musluğuna](https://sepoliafaucet.com/) gidin, hesabınızın adresini girin, sonra da "Bana ETH gönder"e tıklayın. Kısa bir süre sonra MetaMask hesabınızda ETH'yi görmelisiniz!
 
 ## Adım 5: Bakiyenizi kontrol edin {#check-balance}
 
@@ -61,7 +60,7 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcı
 
     `{"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}`
 
-**NOT: **Bu sonuç ETH değil, wei biçimindedir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüşüm 1 eth = 10<sup>18</sup> wei'dir. Yani 0xde0b6b3a7640000'i ondalık sayıya dönüştürürsek 1\*10<sup>18</sup> wei elde ederiz, bu da 1 ETH'ye eşittir.
+> **NOT:** Bu sonuç ETH değil, wei biçimindedir. Wei, ether'ın en küçük birimi olarak kullanılır. Wei'den ETH'ye dönüştürme 1 eth = 10<sup>18</sup> wei şeklindedir. Yani 0xde0b6b3a7640000'ı ondalık sayıya dönüştürürsek 1\*10<sup>18</sup> wei elde ederiz, bu da 1 ETH'ye eşittir.
 
 Vay be! Tüm sahte paramız yerli yerinde.
 
@@ -76,7 +75,7 @@ Artık proje klasörümüzün içinde olduğumuza göre, projeyi başlatmak içi
 
     npm init
 
-Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olması için nasıl yaptığımız aşağıda açıklanmıştır:
+Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olması için nasıl yaptığımızı aşağıda açıkladık:
 
     package name: (my-nft)
     version: (1.0.0)
@@ -101,11 +100,11 @@ Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olmas
       "license": "ISC"
     }
 
-package.json'ı onayladıktan sonra hazırız!
+package.json'ı onaylayın ve artık hazırız!
 
 ## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i kurun {#install-hardhat}
 
-Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Canlı zincire dağıtmadan önce yerel olarak akıllı sözleşmeler ve dApp'ler oluştururken geliştiricilere yardımcı olur.
+Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Bu geliştiricilere canlı zincirde dağıtmadan önce akıllı sözleşmelerini ve merkeziyetsiz uygulamalarını geliştirirken yardımcı olur.
 
 my-nft projemizin içinde şunu yürütün:
 
@@ -130,8 +129,7 @@ Daha sonra bir karşılama mesajı ve ne yapmak istediğinizi seçme seçeneği 
     888    888 888  888 888    Y88b 888 888  888 888  888 Y88b.
     888    888 "Y888888 888     "Y88888 888  888 "Y888888  "Y888
     👷 Hardhat v2.0.11 Hoşgeldin 👷‍
-    ?
-     Ne yapmak istersin? …
+    ? Ne yapmak istersin? …
     Create a sample project
     ❯ Create an empty hardhat.config.js
     Quit
@@ -202,9 +200,9 @@ Akıllı sözleşmemizin en üstüne, üç tane [OpenZeppelin](https://openzeppe
 
 - @openzeppelin/contracts/access/Ownable.sol, akıllı sözleşmemizde sadece akıllı sözleşmenin sahibinin (sizin) NFT basabilmesi için [erişim kontrolü](https://docs.openzeppelin.com/contracts/3.x/access-control) kurulumu yapar. (Erişim kontrolünün dahil edilmesinin tamamen bir tercih olduğunu unutmayın. Herhangi birinin akıllı sözleşmenizi kullanarak bir NFT basabilmesini istiyorsanız, 10. satırdaki Ownable ve 17. satırdaki onlyOwner kelimelerini kaldırın.)
 
-İçe aktarma ifadelerimizden sonra, şaşırtıcı derecede kısa olan özel NFT akıllı sözleşmemiz var: Yalnızca bir sayaç, bir yapıcı (constructor) ve tek bir fonksiyon içeriyor! Bu, NFT'nin sahibini döndüren `ownerOf` ve `transferFrom` gibi bir NFT oluşturmak için ihtiyaç duyduğumuz yöntemlerin çoğunu uygulayan devralınan, NFT'nin sahipliğini bir hesaptan diğerine aktaran OpenZeppelin sözleşmelerimiz sayesindedir.
+İçe aktarma ifadelerimizden sonra, şaşırtıcı derecede kısa olan özel NFT akıllı sözleşmemiz var: Yalnızca bir sayaç, bir oluşturucu ve tek bir fonksiyon içeriyor! Bu, NFT'nin sahibini döndüren `ownerOf` ve `transferFrom` gibi bir NFT oluşturmak için ihtiyaç duyduğumuz yöntemlerin çoğunu uygulayan devralınan, NFT'nin sahipliğini bir hesaptan diğerine aktaran OpenZeppelin sözleşmelerimiz sayesindedir.
 
-ERC-721 yapıcımızda, "MyNFT" ve "NFT" olmak üzere 2 dize geçirdiğimizi göreceksiniz İlk değişken akıllı sözleşmenin adı, ikincisi ise sembolüdür. Bu değişkenlerin her birine dilediğiniz gibi isim verebilirsiniz!
+ERC-721 oluşturucumuzda, "MyNFT" ve "NFT" olmak üzere 2 dize geçirdiğimizi göreceksiniz. İlk değişken akıllı sözleşmenin adı, ikincisi ise sembolüdür. Bu değişkenlerin her birine dilediğiniz gibi isim verebilirsiniz!
 
 Son olarak, bir NFT basmamızı sağlayan `mintNFT(address recipient, string memory tokenURI)` fonksiyonumuz var! Bu fonksiyonun iki değişken aldığını fark edeceksiniz:
 
@@ -220,13 +218,13 @@ Artık bir MetaMask cüzdanı ile Alchemy hesabı oluşturduğumuza ve akıllı 
 
 Sanal cüzdanınızdan gönderilen her işlem, benzersiz özel anahtarınızı kullanan bir imza gerektirir. Programımıza bu izni sağlamak için özel anahtarımızı (ve Alchemy API anahtarımızı) bir ortam dosyasında güvenle saklayabiliriz.
 
-İşlem gönderme hakkında daha fazla bilgi edinmek için web3 kullanarak işlem göndermeyle ilgili [bu öğreticiye](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
+İşlem gönderme hakkında daha fazla bilgi edinmek için web3 kullanarak işlem göndermeyle ilgili [bu öğreticiye](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) bakın.
 
 İlk önce dotenv paketini proje dizininize kurun:
 
     npm install dotenv --save
 
-Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna MetaMask özel anahtarınızı ve HTTP Alchemy API URL'nizi ekleyin.
+Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna Metamask özel anahtarınızı ve HTTP Alchemy API URL'nizi ekleyin.
 
 - Özel anahtarınızı MetaMask'ten almak için [şu talimatları](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) takip edin
 
@@ -234,16 +232,14 @@ Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna MetaM
 
 ![Alchemy API URL'nizi kopyalayın](./copy-alchemy-api-url.gif)
 
-`.env`, şimdi şöyle görünmelidir:
+`.env` artık şöyle görünmelidir:
 
-    API_URL="https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+    API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
-Bunları kodumuza gerçekten bağlamak için, adım 13'te hardhat.config.js dosyamızda bu değişkenlere başvuracağız.
+Bunları kodumuza gerçekten bağlamak için adım 13'te hardhat.config.js dosyamızda bu değişkenlere başvuracağız.
 
-<InfoBanner isWarning>
-<code>.env</code> taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
-</InfoBanner>
+<EnvWarningBanner />
 
 ## Adım 12: Ethers.js'yi kurun {#install-ethers}
 
@@ -255,7 +251,7 @@ Proje klasörünüzde şunu yazın:
 
     npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
 
-Bir sonraki adımda hardhat.config.js'mizde de ether'lara ihtiyacımız olacak.
+Bir sonraki adımda hardhat.config.js'mizde de ether'lere ihtiyacımız olacak.
 
 ## Adım 13: hardhat.config.js'yi güncelleyin {#update-hardhat-config}
 
@@ -271,10 +267,10 @@ Hardhat.config.js dosyanızı şöyle görünecek şekilde güncelleyin:
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
        solidity: "0.8.1",
-       defaultNetwork: "ropsten",
+       defaultNetwork: "sepolia",
        networks: {
           hardhat: {},
-          ropsten: {
+          sepolia: {
              url: API_URL,
              accounts: [`0x${PRIVATE_KEY}`]
           }
@@ -319,36 +315,36 @@ Hardhat, bu kod satırlarının her birinin ne işe yaradığını [Sözleşme �
 
     const MyNFT = await ethers.getContractFactory("MyNFT");
 
-Ethers.js'deki bir ContractFactory, yeni akıllı sözleşmeleri dağıtmak için kullanılan bir soyutlamadır, bu nedenle MyNFT burada, NFT sözleşmemizin örnekleri için bir fabrikadır. Hardhat-ethers eklentisini kullanırken ContractFactory ve Sözleşme örnekleri varsayılan olarak ilk imzalayana bağlanır.
+Ethers.js'deki ContractFactory, yeni akıllı sözleşmeleri dağıtmak için kullanılan bir soyutlamadır, bu nedenle MyNFT burada, NFT sözleşmemizin örnekleri için bir fabrikadır. Hardhat-ethers eklentisini kullanırken ContractFactory ve Sözleşme örnekleri, varsayılan olarak ilk imzalayana bağlanır.
 
     const myNFT = await MyNFT.deploy();
 
-Bir Sözleşme Fabrikasında deploy() öğesinin çağrılması, dağıtımı başlatır ve bir Sözleşmeye çözümlenen bir Söz verir. Bu, akıllı sözleşme fonksiyonlarımızın her biri için bir yöntemi olan nesnedir.
+Bir ContractFactory üzerinde deploy() öğesinin çağrılması, dağıtımı başlatır ve bir çözümlendiğinde Sözleşme oluşturacak bir Söz döndürür. Bu, akıllı sözleşme fonksiyonlarımızın her biri için bir yöntemi olan nesnedir.
 
 ## Adım 16: Sözleşmemizi dağıtın {#deploy-contract}
 
 Sonunda akıllı sözleşmemizi uygulamaya hazırız! Proje dizininizin kök dizinine geri dönün ve komut satırında şunu çalıştırın:
 
-    npx hardhat --network ropsten run scripts/deploy.js
+    npx hardhat --network sepolia run scripts/deploy.js
 
 Daha sonra şöyle bir şey görmelisiniz:
 
-    Contract deployed to address: 0x81c587EB0fE773404c42c1d2666b5f557C470eED
+    Contract deployed to address: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
 
-[Ropsten etherscan](https://ropsten.etherscan.io/)'e gidersek ve sözleşme adresimizi ararsak, bunun başarıyla dağıtıldığını görebiliriz. Bu işlem biraz zaman alabileceğinden dolayı hemen göremezseniz lütfen biraz bekleyin. İşlem şunun gibi gözükecektir:
+[Sepolia etherscan](https://sepolia.etherscan.io/)'e gidip sözleşme adresimizi aratığımızda, başarıyla dağıtıldığını görebiliriz. Bu işlem biraz zaman alabileceğinden dolayı hemen göremezseniz lütfen biraz bekleyin. İşlem şunun gibi gözükecektir:
 
-![İşlem adresinizi Etherscan'de görüntüleyin](./etherscan-transaction.png)
+![İşlem adresinizi Etherscan'de görüntüleyin](./etherscan-sepoila-contract-creation.png)
 
-From (gönderen) adresi, MetaMask hesap adresinizle eşleşmelidir ve To (alıcı) adresinde "Contract Creation" (Sözleşme Oluşturma) yazacaktır. İşleme tıklarsak, To alanında sözleşme adresimizi görürüz:
+Gönderici adresi, MetaMask hesap adresinizle eşleşmelidir ve Alıcı adresinde "Sözleşme Oluşturma" yazacaktır. İşleme tıklarsak, Alıcı alanında sözleşme adresimizi görürüz:
 
-![Etherscan'da sözleşme adresinizi görüntüleyin](./etherscan-contract.png)
+![Etherscan'da sözleşme adresinizi görüntüleyin](./etherscan-sepolia-tx-details.png)
 
-Eveeet! NFT akıllı sözleşmenizi Ethereum zincirine dağıttınız!
+Evet! NFT akıllı sözleşmenizi Ethereum (test ağı) zincirinde dağıttınız!
 
 Perde arkasında neler olduğunu anlamak için [Alchemy gösterge panelimizde](https://dashboard.alchemyapi.io/explorer) Explorer (Gezgin) sekmesine gidelim. Birden fazla Alchemy uygulamanız varsa, uygulamaya göre filtreleme yaptığınızdan ve "MyNFT"yi seçtiğinizden emin olun.
 
-![Alchemy'nin Gezgin Gösterge Panosu ile "perde arkasında" yapılan aramaları görüntüleyin](./alchemy-explorer.png)
+![Alchemy'nin Gezgin Gösterge Paneli ile "perde arkasında" yapılan çağrıları görüntüleyin](./alchemy-explorer-goerli.png)
 
-Burada, .deploy() fonksiyonunu çağırdığımızda Hardhat/Ethers'ın bizim için arka planda yaptığı bir avuç JSON-RPC çağrısı göreceksiniz. Burada belirtilmesi gereken iki önemli şey, akıllı sözleşmemizi Ropsten zincirine yazma isteği olan [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction) ve hash değerine göre işlemimiz hakkındaki bilgileri okuma isteği olan (işlem gönderirken sık kullanılan bir şablon) [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) öğeleridir. İşlem gönderme hakkında daha fazla bilgi edinmek için web3 kullanarak işlem göndermeyle ilgili [bu öğreticiye](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
+Burada, .deploy() fonksiyonunu çağırdığımızda Hardhat/Ethers'in bizim için arka planda yaptığı birkaç JSON-RPC çağrısı göreceksiniz. Burada belirtilmesi gereken iki önemli şey, akıllı sözleşmemizi Ropsten zincirine yazma isteği olan [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction) ve hash değerine göre işlemimiz hakkındaki bilgileri okuma isteği olan (işlem gönderirken sık kullanılan bir şablon) [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) öğeleridir. İşlem gönderme hakkında daha fazla bilgi edinmek için web3 kullanarak işlem göndermeyle ilgili [bu öğreticiye](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) göz atın.
 
 Bu öğreticinin 1. Bölümü bu kadardı. [2. Bölümde, bir NFT'yi basarak](/developers/tutorials/how-to-mint-an-nft/) akıllı sözleşmemizle gerçekten etkileşime geçeceğiz ve [3. Bölümde, Ethereum cüzdanınızda NFT'nizi nasıl görüntüleyeceğinizi göstereceğiz](/developers/tutorials/how-to-view-nft-in-metamask/)!

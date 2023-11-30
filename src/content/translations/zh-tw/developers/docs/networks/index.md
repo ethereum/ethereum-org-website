@@ -56,8 +56,6 @@ lang: zh-tw
 - [QuickNode 的 Sepolia 水龍頭](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [工作量證明水龍頭](https://sepolia-faucet.pk910.de/)
-- [Sepolia 水龍頭](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Coinbase 錢包水龍頭 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia 水龍頭](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龍頭](https://www.infura.io/faucet)
@@ -132,7 +130,7 @@ Goerli 是測試驗證和質押的測試網。 Goerli 測試網對想要運行�
 ## 相關工具 {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _將錢包與提供商連結到適當鏈識別碼與網路識別碼的以太坊虛擬機網路清單_
-- [以以太坊虛擬機為基礎的鏈](https://github.com/ethereum-lists/chains) _Github 的鏈中繼資料存放庫，可運行鏈清單_
+- [以以太坊虛擬機為基礎的鏈](https://github.com/ethereum-lists/chains) _GitHub 的鏈中繼資料存放庫，可運行鏈清單_
 
 ## 衍生閱讀 {#further-reading}
 

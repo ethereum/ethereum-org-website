@@ -41,7 +41,7 @@ import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
 import Text from "../components/OldText"
 import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
@@ -208,7 +208,7 @@ const components = {
   NetworkUpgradeSummary,
   TranslationChartImage,
   EnergyConsumptionChart,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   UpgradeStatus,
   GlossaryDefinition,
   GlossaryTooltip,
@@ -253,6 +253,7 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+
       <Flex
         justifyContent="space-between"
         w="full"

@@ -705,7 +705,7 @@ In termini crittografici è un valore che può essere usato una volta sola. Il n
 
 ### blocco ommer (zio) {#ommer}
 
-Nel momento in cui un [miner](#miner) di Proof-of-Work trova un [blocco](#block) valido, un altro miner potrebbe aver pubblicato un blocco concorrente e averlo aggiunto alla fine della blockchain. Questo blocco valido, ma non aggiornato, può essere incluso dai nuovi blocchi come _ommer_ e ricevere una ricompensa parziale per i blocchi. Il termine "ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". Ciò era rilevante per Ethereum quando era una rete di [Proof-of-Work](pow), ma gli ommer non sono una caratteristica dell'Ethereum [Proof-of-Stake](#pos), perché in ogni slot è selezionato precisamente un propositore del blocco.
+Nel momento in cui un [miner](#miner) di Proof-of-Work trova un [blocco](#block) valido, un altro miner potrebbe aver pubblicato un blocco concorrente e averlo aggiunto alla fine della blockchain. Questo blocco valido, ma non aggiornato, può essere incluso dai nuovi blocchi come _ommer_ e ricevere una ricompensa parziale per i blocchi. Il termine "ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". Ciò era rilevante per Ethereum quando era una rete di [Proof-of-Work](#pow), ma gli ommer non sono una caratteristica dell'Ethereum [Proof-of-Stake](#pos), perché in ogni slot è selezionato precisamente un propositore del blocco.
 
 ### rollup ottimistico {#optimistic-rollup}
 

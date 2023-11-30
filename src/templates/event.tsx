@@ -20,10 +20,10 @@ import InlineLink from "../components/Link"
 import ExpandableCard from "../components/ExpandableCard"
 import PageMetadata from "../components/PageMetadata"
 import { type Item as ItemTableOfContents } from "../components/TableOfContents"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import GatsbyImage, { type GatsbyImageType } from "../components/GatsbyImage"
+import LeftNavBar from "../components/LeftNavBar"
 
 import { ChildOnlyProp, Context } from "../types"
 
@@ -199,16 +199,8 @@ const EventPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBp}>
-          <InfoColumn>
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar tocItems={tocItems} hideBelow={lgBp} />
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>

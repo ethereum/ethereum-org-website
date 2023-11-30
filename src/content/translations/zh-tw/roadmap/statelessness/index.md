@@ -66,7 +66,7 @@ EIP-4444 尚未準備好發佈，但正在積極討論當中。 有趣的是，E
 
 **在弱無狀態中，提交區塊需要存取完整的狀態資料，但驗證區塊不需要狀態資料。**
 
-為此，必須先在以太坊用戶端中實作 [Verkle 樹](../verkle-trees)。 Verkle 樹是儲存以太坊狀態資料的替代資料結構，允許小型、固定大小的「證據」在節點間傳遞，並用於驗證區塊，而不是根據本地資料庫驗證區塊。 [提交者-建置者分離](/roadmap/pbs/)也是必要的，因為這讓區塊建置者成為有更強大硬體的特化節點，這些節點需要存取完整的狀態資料。
+為此，必須先在以太坊用戶端中實作 [Verkle 樹](/roadmap/verkle-trees)。 Verkle 樹是儲存以太坊狀態資料的替代資料結構，允許小型、固定大小的「證據」在節點間傳遞，並用於驗證區塊，而不是根據本地資料庫驗證區塊。 [提交者-建置者分離](/roadmap/pbs/)也是必要的，因為這讓區塊建置者成為有更強大硬體的特化節點，這些節點需要存取完整的狀態資料。
 
 <ExpandableCard title="為什麼依賴少數區塊提交者是沒問題的？" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 

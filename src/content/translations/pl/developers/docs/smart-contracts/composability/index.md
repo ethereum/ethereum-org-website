@@ -12,7 +12,7 @@ Inteligentne kontrakty są publiczne w Ethereum i można je uznać za otwarte AP
 ## Powiązane samouczki {#related-tutorials}
 
 - [Kompozycyjność kontraktu: elementy konstrukcyjne inteligentnych kontraktów Ethereum](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
-- [Szybkie rozpoczęcie tworzenia frontendu aplikacji dapp za pomocą create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _— omówienie korzystania z create-eth-app do tworzenia aplikacji z zastosowaniem popularnych inteligentnych kontraktów._
+- [Szybkie rozpoczęcie tworzenia frontendu aplikacji dapp za pomocą create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _— omówienie korzystania z create-eth-app do tworzenia aplikacji z zastosowaniem popularnych inteligentnych kontraktów._
 
 ## Dalsza lektura {#further-reading}
 

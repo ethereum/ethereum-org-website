@@ -31,7 +31,6 @@ import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -53,6 +52,7 @@ import Callout from "../components/Callout"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import OldHeading from "../components/OldHeading"
+import LeftNavBar from "../components/LeftNavBar"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -63,12 +63,9 @@ import { ChildOnlyProp, Context } from "../types"
 // TODO: move these components to a new folder under /components
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
 } from "./use-cases"
 import GatsbyImage from "../components/GatsbyImage"
 
@@ -436,20 +433,13 @@ const StakingPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>

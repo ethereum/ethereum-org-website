@@ -1,5 +1,5 @@
 ---
-title: イーサリアム改善提案 (EIP)
+title: イーサリアム改善提案(EIP)
 description: EIPを理解するために必要な基本情報
 lang: ja
 ---
@@ -14,7 +14,7 @@ lang: ja
 
 ## EIP の重要性 {#why-do-eips-matter}
 
-EIP は、イーサリアムで変更がどのように行われ、文書化されるかにおいて、中心的な役割を果たします。 EIP は変更を提案・議論し、採用する方法です。 [EIP には異なるタイプ](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-1.md#eip-types)があります。[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)のようなコンセンサスやネットワークアップグレードに影響する下位レベルのプロトコルを変更するコア EIP を含め、 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)や[EIP-721](https://eips.ethereum.org/EIPS/eip-721)などのアプリケーション標準の ERC などがあります。
+EIP は、イーサリアムで変更がどのように行われ、文書化されるかにおいて、中心的な役割を果たします。 EIP は変更を提案・議論し、採用する方法です。 [EIP には複数の種類](https://eips.ethereum.org/EIPS/eip-1#eip-types)があります。[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)のようにコンセンサスに影響を与えてネットワークのアップグレードを要求する下位レベルのプロトコル変更を目的としたコア EIP、 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)や[EIP-721](https://eips.ethereum.org/EIPS/eip-721)などのアプリケーション標準を目的とした ERC などがあります。
 
 すべてのネットワークアップグレードは、複数の EIP で構成され、これらはネットワーク上の各[イーサリアムクライアント](/learn/#clients-and-nodes)に実装される必要があります。 これは、イーサリアムメインネット上の他のクライアントとコンセンサス状態を維持するには、クライアントデベロッパーは必ず必要な EIP をすべて実装しなければならないということを意味します。
 
@@ -46,7 +46,7 @@ EIP 名誉編集者は次のとおりです
 
 EIP 編集者になりたい方は、[EIP-5069](https://eips.ethereum.org/EIPS/eip-5069)をご確認ください。
 
-EIP 編集者は、提案が EIP になる準備ができているかを決定し、EIP 作成者が提案を進めるのを支援します。 [Ethereum Cat Herders](https://ethereumcatherders.com/)は、EIP 編集者とコミュニティ間のミーティングの開催を支援します([EIPIP](https://github.com/ethereum-cat-herders/EIPIP)を参照)。
+EIP 編集者は、提案が EIP になる準備ができているかを決定し、EIP 作成者が提案を進めるのを支援します。 [イーサリアムキャットハーダーズ(Ethereum Cat Herders)](https://www.ethereumcatherders.com/)は、EIP 編集者とコミュニティ間のミーティング開催をサポートします([EIPIP](https://github.com/ethereum-cat-herders/EIPIP)を参照)。
 
 図表を含む完全な標準化プロセスは、[EIP-1](https://eips.ethereum.org/EIPS/eip-1)に記載されています。
 

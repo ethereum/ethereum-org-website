@@ -3,8 +3,8 @@ title: JavaScript'ten bir akıllı sözleşme çağırmak
 description: Dai token'ı örneğini kullanarak JavaScript'ten bir akıllı sözleşme fonksiyonu nasıl çağrılır
 author: jdourlens
 tags:
-  - "işlemler"
-  - "ön uç"
+  - "İşlemler"
+  - "ön yüz"
   - "JavaScript"
   - "web3.js"
 skill: beginner
@@ -105,7 +105,7 @@ ABI'yi sağladığınız somutlaştırılmış akıllı sözleşme yöntemlerine
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
   if (err) {
-    console.log("An error occured", err)
+    console.log("An error occurred", err)
     return
   }
   console.log("The balance is: ", res)
@@ -123,7 +123,7 @@ daiToken.methods
   .transfer(receiverAddress, "100000000000000000000")
   .send({ from: senderAddress }, function (err, res) {
     if (err) {
-      console.log("An error occured", err)
+      console.log("An error occurred", err)
       return
     }
     console.log("Hash of the transaction: " + res)

@@ -1,5 +1,5 @@
 ---
-title: Smart-Contract-Bibliotheken
+title: Smart Contract-Bibliotheken
 description:
 lang: de
 ---
@@ -16,7 +16,7 @@ Normalerweise finden Sie zwei Arten von Erstellungsblöcken in einer Smart Contr
 
 ### Verhaltensweisen {#behaviors}
 
-Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin-\_Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-\_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
+Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin_-Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
 
 Smart-Contract-Bibliotheken bieten in der Regel wiederverwendbare Implementierungen dieser Vorgehensweisen als [Bibliotheken](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) oder über eine [Vererbung](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) an.
 
@@ -102,6 +102,11 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK -** **_Bietet die Tools, die zum effizienten Erstellen von benutzerdefinierten Smart Contracts erforderlich sind_**
+
+- [Dokumentation](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Ähnliche Tutorials {#related-tutorials}
 
 - [Sicherheitsüberlegungen für Ethereum-Entwickler](/developers/docs/smart-contracts/security/) _– Ein Tutorial zu Sicherheitsüberlegungen beim Erstellen von Smart Contracts, einschließlich der Bibliotheksnutzung_
@@ -109,4 +114,4 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 
 ## Weiterführende Informationen {#further-reading}
 
-_Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
+_Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

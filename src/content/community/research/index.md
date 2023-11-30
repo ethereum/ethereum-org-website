@@ -156,7 +156,7 @@ Sharding Ethereum's blockchain has long been part of the development roadmap. Ho
 
 #### Recent research {#recent-research-5}
 
-- [ecdsa on FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa on FPGAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Security {#security}
 
@@ -346,7 +346,6 @@ Tools for Ethereum developers are rapidly improving. There is lots of active res
 - [Developer Frameworks](/developers/docs/frameworks/)
 - [Consensus developer tools list](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Token standards](/developers/docs/standards/tokens/)
-- [Biastek: Ethereum tools](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: EVM Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Recent research {#recent-research-17}
