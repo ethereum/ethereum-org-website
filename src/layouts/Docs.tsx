@@ -38,8 +38,7 @@ import {
   Heading4 as MdHeading4,
   Paragraph,
 } from "@/components/MdComponents"
-// TODO: IMPLEMENT PAGEMETADATA
-// import PageMetadata from "@/components/PageMetadata"
+import PageMetadata from "@/components/PageMetadata"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
@@ -49,7 +48,11 @@ import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
 // Utils
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import {
+  DEFAULT_LOCALE,
+  EDIT_CONTENT_URL,
+  MAIN_CONTENT_ID,
+} from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
@@ -138,7 +141,7 @@ const ListItem = (props: ListItemProps) => (
 )
 
 // Apply styles for classes within markdown here
-const Content = (props: ChildOnlyProp) => {
+const Content = (props: Pick<FlexProps, "children" | "id">) => {
   const mdBreakpoint = useToken("breakpoints", "md")
 
   return (
@@ -235,11 +238,10 @@ export const DocsLayout = ({
 
   return (
     <Page>
-      {/* // TODO: IMPLEMENT PAGEMETADATA */}
-      {/* <PageMetadata
+      <PageMetadata
         title={frontmatter.title}
         description={frontmatter.description}
-      /> */}
+      />
       <SideNavMobile path={relativePath} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>
@@ -248,7 +250,7 @@ export const DocsLayout = ({
       )}
       <ContentContainer>
         <SideNav path={relativePath} />
-        <Content>
+        <Content id={MAIN_CONTENT_ID}>
           <H1 id="top">{frontmatter.title}</H1>
           {useGitHubContributors ? (
             <GitHubContributors

@@ -287,7 +287,7 @@ export const StakingLayout: React.FC<IProps> = ({
           tocItems={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           {children}
           <StakingCommunityCallout my={16} />
           <FeedbackCard />

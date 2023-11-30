@@ -16,10 +16,7 @@ import {
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-// TODO: Import once intl implements?
-// import PageMetadata from "@/components/PageMetadata"
 import PostMergeBanner from "@/components/Banners/PostMergeBanner"
-// Components
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
@@ -38,12 +35,17 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
+import PageMetadata from "@/components/PageMetadata"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import {
+  DEFAULT_LOCALE,
+  EDIT_CONTENT_URL,
+  MAIN_CONTENT_ID,
+} from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
@@ -211,13 +213,12 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        {/* TODO: Implement PageMetaData after intl */}
-        {/* <PageMetadata
+        <PageMetadata
           title={frontmatter.title}
           description={frontmatter.description}
           canonicalUrl={frontmatter.sourceUrl}
-        /> */}
-        <ContentContainer>
+        />
+        <ContentContainer id={MAIN_CONTENT_ID}>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents

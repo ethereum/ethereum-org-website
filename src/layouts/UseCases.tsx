@@ -33,6 +33,8 @@ import TableOfContents from "@/components/TableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
+import { MAIN_CONTENT_ID } from "@/lib/constants"
+
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
     bg="cardGradient"
@@ -235,7 +237,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
       <Show above={lgBp}>
         <Flex
           as={BaseLink}
-          to="#content"
+          to={"#" + MAIN_CONTENT_ID}
           bg="ednBackground"
           justifyContent="center"
           p={4}
@@ -255,7 +257,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
           tocItems={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           {children}
           <FeedbackCard />
         </ContentContainer>

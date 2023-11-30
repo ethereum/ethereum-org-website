@@ -30,7 +30,7 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-import { CONTENT_DIR } from "@/lib/constants"
+import { CONTENT_DIR, MAIN_CONTENT_ID } from "@/lib/constants"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -103,6 +103,7 @@ export const StaticLayout: React.FC<IProps> = ({
       >
         <Box
           as="article"
+          id={MAIN_CONTENT_ID}
           maxW="container.md"
           w="full"
           sx={{
@@ -121,9 +122,7 @@ export const StaticLayout: React.FC<IProps> = ({
           }}
         >
           <Breadcrumbs slug={slug} mb="8" />
-          <Text
-            color="text200"
-          >
+          <Text color="text200">
             <Translation id="page-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
           </Text>

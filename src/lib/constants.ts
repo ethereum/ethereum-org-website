@@ -19,6 +19,7 @@ export const LOCALES_CODES = BUILD_LOCALES
 export const SITE_URL = "https://ethereum.org"
 export const DISCORD_PATH = "/discord/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
+export const MAIN_CONTENT_ID = "main-content"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
