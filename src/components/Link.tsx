@@ -21,17 +21,14 @@ import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type BaseProps = {
+  /** @deprecated Use `href` prop instead */
+  to?: string
+  href?: string
   hideArrow?: boolean
   isPartiallyActive?: boolean
   activeStyle?: StyleProps
   customEventOptions?: MatomoEventOptions
-} & (
-  | {
-      /** @deprecated Use `href` prop instead */
-      to: string
-    }
-  | { href: string }
-)
+}
 
 export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
 
@@ -49,6 +46,8 @@ export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
  */
 export const BaseLink = forwardRef(function Link(
   {
+    to,
+    href: hrefProp,
     children,
     hideArrow,
     isPartiallyActive = true,
@@ -58,7 +57,7 @@ export const BaseLink = forwardRef(function Link(
   }: LinkProps,
   ref
 ) {
-  let href = "to" in props ? props.to : props.href
+  let href = (to ?? hrefProp) as string
 
   const { asPath, locale } = useRouter()
   const { flipForRtl } = useRtlFlip()
