@@ -69,7 +69,7 @@ Proposer-builder separation is required to prevent individual validators from ha
 
 </ExpandableCard>
 
-<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="Why does Danksharding require data availability sampling?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Data availability sampling is required for validators to quickly and efficiently verify blob data. Using data availability sampling, the validators can be very certain that the blob data was available and correctly committed. Every validator can randomly sample just a few data points and create a proof, meaning no validator has to check the entire blob. If any data is missing, it will be identified quickly and the blob rejected.
 
