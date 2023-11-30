@@ -277,7 +277,6 @@ const LocalEnvironmentPage = ({ frameworksList }) => {
           <Column>
             <Image
               flex="1 1 100%"
-              maxW="50rem"
               backgroundSize="cover"
               backgroundRepeat="no-repeat"
               src={EthBlocksImage}
