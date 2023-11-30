@@ -1,8 +1,9 @@
-import { toc } from "mdast-util-toc"
-import { visit } from "unist-util-visit"
-import type { Plugin } from "unified"
 import type { BlockContent, DefinitionContent, ListItem } from "mdast"
+import { toc } from "mdast-util-toc"
 import type { Nodes } from "mdast-util-toc/lib"
+import type { Plugin } from "unified"
+import { visit } from "unist-util-visit"
+
 import type { IRemarkTocOptions, ToCNodeEntry, TocNodeType } from "@/lib/types"
 
 const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {

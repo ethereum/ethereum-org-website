@@ -45,8 +45,12 @@ export const Tables: Story = {
 export const MockDocContent: Story = {
   render: () => (
     <>
-      <TableComponent children={<MdxEnergyConsumpData />} variant="simple" />
-      <TableComponent children={<MdxTypesOfBridgesData />} />
+      <TableComponent variant="simple">
+        <MdxEnergyConsumpData />
+      </TableComponent>
+      <TableComponent>
+        <MdxTypesOfBridgesData />
+      </TableComponent>
     </>
   ),
 }

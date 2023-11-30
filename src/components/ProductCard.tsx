@@ -164,7 +164,7 @@ const ProductCard: React.FC<IProps> = ({
           />
         )}
       </Center>
-      <Flex flexDirection="column" p={6} textAlign="left" height="100%">
+      <Flex flexDirection="column" p={6} textAlign="start" height="100%">
         {hasRepoData && (
           <GitStars gitHubRepo={data.repository} hideStars={hideStars} />
         )}

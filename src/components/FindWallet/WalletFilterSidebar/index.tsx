@@ -109,10 +109,10 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
               letterSpacing: "0.02rem",
               py: "0.9rem",
               _first: {
-                borderTopLeftRadius: "lg",
+                borderTopStartRadius: "lg",
               },
               _last: {
-                borderTopRightRadius: "lg",
+                borderTopEndRadius: "lg",
               },
             },
           }}

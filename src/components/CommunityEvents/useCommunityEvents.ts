@@ -46,7 +46,7 @@ export const useCommunityEvents = () => {
           `${GATSBY_FUNCTIONS_PATH}/calendarEvents`
         )
       } catch {
-        setState({ ...state, loading: false, hasError: true })
+        setState((prevState) => ({ ...prevState, loading: false, hasError: true }))
         return
       }
 
@@ -67,13 +67,13 @@ export const useCommunityEvents = () => {
         }
       })
 
-      setState({
-        ...state,
+      setState((prevState) => ({
+        ...prevState,
         pastEventData,
         upcomingEventData,
         loading: false,
         hasError: false,
-      })
+      }))
     }
     fetchCalendarData()
   }, [])
