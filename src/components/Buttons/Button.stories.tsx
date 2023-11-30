@@ -43,7 +43,6 @@ const variants: ThemingProps<"Button">["variant"][] = [
 export const StyleVariants: Story = {
   argTypes: {
     size: {
-      //@ts-expect-error
       ...getThemingArgTypes(theme, "Button")?.size,
       defaultValue: "md",
     },
