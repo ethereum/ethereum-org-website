@@ -1,39 +1,43 @@
-import Translation from "@/components/Translation"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { GetStaticProps } from "next"
-import { ChildOnlyProp, LearningTool } from "@/lib/types"
-import { Box, Flex, HeadingProps } from "@chakra-ui/react"
-import Heading from "@/components/OldHeading"
-import { useTranslation } from "react-i18next"
-import FeedbackCard from "@/components/FeedbackCard"
-import CalloutBanner from "@/components/CalloutBanner"
-import ButtonLink from "@/components/Buttons/ButtonLink"
-import PageMetadata from "@/components/PageMetadata"
-import Text from '@/components/OldText'
-import InfoBanner from "@/components/InfoBanner"
-import EnterpriseEth from '@/public/enterprise-eth.png'
-import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import { shuffle } from "lodash"
-import RemixImage from '@/public/dev-tools/remix.png'
-import EthDotBuildImage from '@/public/dev-tools/eth-dot-build.png'
-import ReplitImage from '@/public/dev-tools/replit.png'
-import ChainIDEImage from '@/public/dev-tools/chainIDE.png'
-import TenderlyImage from '@/public/dev-tools/tenderly.png'
-import CryptoZombieImage from "@/public/dev-tools/crypto-zombie.png"
-import EthernautImage from "@/public/dev-tools/oz.png"
-import CaptureTheEtherImage from "@/public/dev-tools/capturetheether.png"
-import ChainShotImage from "@/public/dev-tools/chainshot.png"
-import ConsensysImage from '@/public/dev-tools/consensys.png'
+import { GetStaticProps } from "next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "react-i18next"
+import { Box, Flex, HeadingProps } from "@chakra-ui/react"
+
+import { ChildOnlyProp, LearningTool } from "@/lib/types"
+
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import CalloutBanner from "@/components/CalloutBanner"
+import FeedbackCard from "@/components/FeedbackCard"
+import InfoBanner from "@/components/InfoBanner"
+import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
+import Heading from "@/components/OldHeading"
+import Text from '@/components/OldText'
+import PageMetadata from "@/components/PageMetadata"
+import Translation from "@/components/Translation"
+
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
 import BloomTechImage from '@/public/dev-tools/bloomtech.png'
 import BuildSpaceImage from '@/public/dev-tools/buildspace.png'
-import QuestbookImage from '@/public/dev-tools/questbook.png'
+import CaptureTheEtherImage from "@/public/dev-tools/capturetheether.png"
+import ChainIDEImage from '@/public/dev-tools/chainIDE.png'
+import ChainShotImage from "@/public/dev-tools/chainshot.png"
+import ConsensysImage from '@/public/dev-tools/consensys.png'
+import CryptoZombieImage from "@/public/dev-tools/crypto-zombie.png"
+import EthDotBuildImage from '@/public/dev-tools/eth-dot-build.png'
 import MetaschoolImage from '@/public/dev-tools/metaschool.png'
 import NFTSchoolImage from '@/public/dev-tools/nftschool.png'
-import PointerImage from '@/public/dev-tools/pointer.png'
+import EthernautImage from "@/public/dev-tools/oz.png"
 import PlatziImage from '@/public/dev-tools/platzi.png'
+import PointerImage from '@/public/dev-tools/pointer.png'
+import QuestbookImage from '@/public/dev-tools/questbook.png'
+import RemixImage from '@/public/dev-tools/remix.png'
+import ReplitImage from '@/public/dev-tools/replit.png'
 import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum.png"
-import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
+import TenderlyImage from '@/public/dev-tools/tenderly.png'
+import EnterpriseEth from '@/public/enterprise-eth.png'
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -114,7 +118,7 @@ export const getStaticProps: GetStaticProps = async (
 ) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath('/developers/learning-tools')
+  const requiredNamespaces = getRequiredNamespacesForPage('/developers/learning-tools')
 
   return {
     props: {

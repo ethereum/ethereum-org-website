@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { StaticImageData } from "next/image"
 import {
   Badge,
   Box,
@@ -9,10 +10,10 @@ import {
   TextProps,
 } from "@chakra-ui/react"
 
-import { ButtonLink } from "./Buttons"
 import { Image } from "@/components/Image"
+
+import { ButtonLink } from "./Buttons"
 import Text from "./OldText"
-import { StaticImageData } from "next/image"
 
 const SubjectBadge: React.FC<{
   subject: string
