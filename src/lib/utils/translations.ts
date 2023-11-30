@@ -39,6 +39,10 @@ export const getRequiredNamespacesForPage = (
 const getRequiredNamespacesForPath = (path: string) => {
   let requiredNamespaces: string[] = []
 
+  if (path === "assets") {
+    requiredNamespaces = [...requiredNamespaces, "page-assets"]
+  }
+
   if (path.startsWith("/community")) {
     requiredNamespaces = [...requiredNamespaces, "page-community"]
   }
