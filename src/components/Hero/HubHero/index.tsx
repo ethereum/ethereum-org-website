@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
+
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 

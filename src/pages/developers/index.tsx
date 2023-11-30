@@ -1,26 +1,30 @@
-import Translation from "@/components/Translation"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { GetStaticProps } from "next"
-import { Box, Flex, SimpleGrid, TextProps, chakra, useColorModeValue } from "@chakra-ui/react"
-import { ChildOnlyProp } from "@/lib/types"
-import PageMetadata from "@/components/PageMetadata"
-import { useTranslation } from "react-i18next"
-import Text from "@/components/OldText"
-import OldHeading from "@/components/OldHeading"
-import ButtonLink from "@/components/Buttons/ButtonLink"
 import { ReactNode } from "react"
-import Card, { IProps as ICardProps } from "@/components/Card"
+import { GetStaticProps } from "next"
+import { SSRConfig } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useTranslation } from "react-i18next"
+import { Box, chakra, Flex, SimpleGrid, TextProps, useColorModeValue } from "@chakra-ui/react"
+
+import { ChildOnlyProp } from "@/lib/types"
+
+import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
-import DevelopersImage from "@/public/developers-eth-blocks.png"
-import InlineLink from "@/components/Link"
-import { Image } from "@/components/Image"
-import DogeImage from '@/public/doge-computer.png'
-import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
+import Card, { IProps as ICardProps } from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
+import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
+import Translation from "@/components/Translation"
+
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { SSRConfig } from "next-i18next"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import DevelopersImage from "@/public/developers-eth-blocks.png"
+import DogeImage from '@/public/doge-computer.png'
+import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -129,7 +133,7 @@ export const getStaticProps = (async (
 ) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath('/developers')
+  const requiredNamespaces = getRequiredNamespacesForPage('/developers')
   const lastDeployDate = getLastDeployDate()
 
   return {
