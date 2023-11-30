@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -187,14 +187,14 @@ export const getStaticProps = (async (
   }
 }) satisfies GetStaticProps<Props>
 
-const LocalEnvironmentPage = ({ frameworksList }) => {
+const LocalEnvironmentPage = ({ frameworksList }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-developers-local-environment")
 
   return (
     <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
       <PageMetadata
-        title={t("page-developers-local-environment:page-local-environment-setup-meta-title")}
-        description={t("page-developers-local-environment:page-local-environment-setup-meta-desc")}
+        title={t("page-local-environment-setup-meta-title")}
+        description={t("page-local-environment-setup-meta-desc")}
       />
       <Box
         pt={{ base: 0, xl: 4 }}
