@@ -5,7 +5,6 @@ import {
   Box,
   chakra,
   Flex,
-  Image,
   SimpleGrid,
   TextProps,
   useColorModeValue,
@@ -38,55 +37,6 @@ const Page = (props: ChildOnlyProp) => (
   />
 )
 
-const HeroContainer = (props: ChildOnlyProp) => (
-  <Flex
-    justifyContent="space-between"
-    flexDirection={{ base: "column-reverse", md: "row" }}
-    mt={8}
-    mb={16}
-    bg="cardGradient"
-    {...props}
-  />
-)
-
-const HeroCopyContainer = (props: ChildOnlyProp) => (
-  <Box
-    flex={{ base: "0 1 400px", md: "0 1 500px" }}
-    w={{ base: "100%", md: "auto" }}
-    maxWidth={{ base: "100%", md: "500px" }}
-    maxHeight={{ base: "280px", md: "340px" }}
-    {...props}
-  />
-)
-
-const HeroCopy = (props: ChildOnlyProp) => (
-  <Box
-    p={8}
-    m={{ base: 0, sm: 8 }}
-    mt={{ base: -2, md: 8 }}
-    bg="background.base"
-    borderRadius="4px"
-    border="1px solid border"
-    {...props}
-  />
-)
-
-const H1 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h1"
-    fontSize="2rem"
-    fontWeight="medium"
-    fontFamily="monospace"
-    fontStyle="normal"
-    textTransform="uppercase"
-    lineHeight="110%"
-    bg="ednBackground"
-    p={2}
-    mt={0}
-    {...props}
-  />
-)
-
 const GrayContainer = (props: ChildOnlyProp) => (
   <Box
     w="full"
@@ -108,19 +58,6 @@ const Subtitle = (props: TextProps) => (
 )
 
 const MonoSubtitle = (props: ChildOnlyProp) => <OldHeading mb={0} {...props} />
-
-const Hero = (props: ChildOnlyProp) => (
-  <Box
-    flex="1 1 50%"
-    maxW="800px"
-    bgSize="cover"
-    bgRepeat="no-repeat"
-    mt={{ base: 0, md: 12 }}
-    ml={{ base: 0, md: 8 }}
-    alignSelf={{ base: "center", md: "" }}
-    {...props}
-  />
-)
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
   <SimpleGrid columns={[1, 1, 2, 4]} mx={-4} mt={8} mb={12} {...props} />

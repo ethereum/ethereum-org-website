@@ -44,6 +44,7 @@ import Text from "../components/OldText"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
 import LeftNavBar from "../components/LeftNavBar"
+import { HubHero } from "../components/Hero"
 import {
   Page,
   ContentContainer,
@@ -143,11 +144,16 @@ const components = {
 }
 
 const RoadmapPage = ({
-  data: { pageData: mdx },
+  data: { pageData: mdx, heroImage },
   location,
 }: PageProps<Queries.RoadmapPageQuery, Context>) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
+  const parsedPathname = location.pathname
+    .split("/")
+    .filter((item) => item !== "")
+    .slice(1)
+    .join("/")
 
   if (!mdx?.frontmatter)
     throw new Error(
@@ -213,58 +219,67 @@ const RoadmapPage = ({
 
   return (
     <Box position="relative">
-      <HeroContainer>
-        <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
-          <TitleCard>
-            <Breadcrumbs slug={location.pathname} mb="8" />
-            <Title>{mdx.frontmatter.title}</Title>
-            <Text>{mdx.frontmatter.description}</Text>
-            {mdx?.frontmatter?.buttons && (
-              // FIXME: remove the `ul` override once removed the corresponding
-              // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
-              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
-                {mdx.frontmatter.buttons.map((button, idx) => {
-                  if (button?.to) {
+      {parsedPathname === "roadmap" ? (
+        <HubHero
+          heroImgSrc={getImage(heroImage)!}
+          header={mdx.frontmatter.title}
+          title={""}
+          description={mdx.frontmatter.description}
+        />
+      ) : (
+        <HeroContainer>
+          <Flex w="100%" flexDirection={{ base: "column", md: "row" }}>
+            <TitleCard>
+              <Breadcrumbs slug={location.pathname} mb="8" />
+              <Title>{mdx.frontmatter.title}</Title>
+              <Text>{mdx.frontmatter.description}</Text>
+              {mdx?.frontmatter?.buttons && (
+                // FIXME: remove the `ul` override once removed the corresponding
+                // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+                <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
+                  {mdx.frontmatter.buttons.map((button, idx) => {
+                    if (button?.to) {
+                      return (
+                        <WrapItem>
+                          <ButtonLink
+                            key={idx}
+                            variant={button?.variant}
+                            to={button?.to}
+                          >
+                            {button.label}
+                          </ButtonLink>
+                        </WrapItem>
+                      )
+                    }
                     return (
                       <WrapItem>
-                        <ButtonLink
+                        <Button
                           key={idx}
                           variant={button?.variant}
-                          to={button?.to}
+                          toId={button?.toId}
                         >
-                          {button.label}
-                        </ButtonLink>
+                          {button?.label}
+                        </Button>
                       </WrapItem>
                     )
-                  }
-                  return (
-                    <WrapItem>
-                      <Button
-                        key={idx}
-                        variant={button?.variant}
-                        toId={button?.toId}
-                      >
-                        {button?.label}
-                      </Button>
-                    </WrapItem>
-                  )
-                })}
-              </Wrap>
-            )}
-            <TableOfContents
-              position="relative"
-              zIndex="2"
-              items={tocItems}
-              isMobile
+                  })}
+                </Wrap>
+              )}
+              <TableOfContents
+                position="relative"
+                zIndex="2"
+                items={tocItems}
+                isMobile
+              />
+            </TitleCard>
+            <HeroImage
+              image={getImage(mdx.frontmatter.image)!}
+              alt={mdx.frontmatter.alt || ""}
+              objectFit="contain"
             />
-          </TitleCard>
-          <HeroImage
-            image={getImage(mdx.frontmatter.image)!}
-            alt={mdx.frontmatter.alt || ""}
-            objectFit="contain"
-          />
-        </Flex>
-      </HeroContainer>
+          </Flex>
+        </HeroContainer>
+      )}
       <Page dir={isRightToLeft ? "rtl" : "ltr"}>
         <PageMetadata
           title={mdx.frontmatter.title}
@@ -307,6 +322,16 @@ export const roadmapPageQuery = graphql`
           data
           language
         }
+      }
+    }
+    heroImage: file(relativePath: { eq: "heroes/roadmap-hub-hero.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     pageData: mdx(fields: { relativePath: { eq: $relativePath } }) {
