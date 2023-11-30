@@ -1,23 +1,19 @@
-import * as React from "react"
 import {
   IconButton as ChakraIconButton,
   IconButtonProps as ChakraIconButtonProps,
 } from "@chakra-ui/react"
 
-import { checkIsSecondary, IProps as IButtonProps } from "./Button"
+import { type ButtonProps } from "@/components/Buttons"
+import { checkIsSecondary } from "@/components/Buttons/Button"
 
-interface IconButtonProps
-  extends Omit<IButtonProps, keyof ChakraIconButtonProps>,
-    ChakraIconButtonProps {}
+type IconButtonProps = Omit<ButtonProps, keyof ChakraIconButtonProps> &
+  ChakraIconButtonProps
 
-const IconButton = (props: IconButtonProps) => {
-  const { isSecondary, ...rest } = props
-  return (
-    <ChakraIconButton
-      {...checkIsSecondary({ variant: rest.variant?.toString(), isSecondary })}
-      {...rest}
-    />
-  )
-}
+const IconButton = ({ isSecondary, ...props }: IconButtonProps) => (
+  <ChakraIconButton
+    {...checkIsSecondary({ variant: props.variant?.toString(), isSecondary })}
+    {...props}
+  />
+)
 
 export default IconButton

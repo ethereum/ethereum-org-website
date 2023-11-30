@@ -1,17 +1,18 @@
-import React from "react"
 import {
   Button as ChakraButton,
-  ButtonProps,
+  ButtonProps as ChakraButtonProps,
   forwardRef,
 } from "@chakra-ui/react"
 
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
 
-export const checkIsSecondary = (props: {
+export const checkIsSecondary = ({
+  variant,
+  isSecondary,
+}: {
   variant?: string
   isSecondary?: boolean
 }) => {
-  const { variant, isSecondary } = props
   // These two variants do not have secondary styling, so prevent overrides
   return {
     "data-secondary":
@@ -19,7 +20,7 @@ export const checkIsSecondary = (props: {
   }
 }
 
-export interface IProps extends ButtonProps {
+export type ButtonProps = ChakraButtonProps & {
   /**
    * Set string value that matches the `id` attribute value used
    * on another element in a given page. Selecting the button will then
@@ -35,25 +36,28 @@ export interface IProps extends ButtonProps {
   isSecondary?: boolean
 }
 
-const Button = forwardRef<IProps, "button">((props, ref) => {
-  const { toId, onClick, isSecondary, ...rest } = props
+const Button = forwardRef<ButtonProps, "button">(
+  ({ toId, onClick, isSecondary, ...props }, ref) => {
+    const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+      if (toId) {
+        scrollIntoView(toId)
+      }
 
-  const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (toId) {
-      scrollIntoView(toId)
+      onClick?.(e)
     }
 
-    onClick?.(e)
+    return (
+      <ChakraButton
+        ref={ref}
+        onClick={handleOnClick}
+        {...checkIsSecondary({
+          variant: props.variant?.toString(),
+          isSecondary,
+        })}
+        {...props}
+      />
+    )
   }
-
-  return (
-    <ChakraButton
-      ref={ref}
-      onClick={handleOnClick}
-      {...checkIsSecondary({ variant: rest.variant?.toString(), isSecondary })}
-      {...rest}
-    />
-  )
-})
+)
 
 export default Button
