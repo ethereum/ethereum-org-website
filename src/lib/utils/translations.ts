@@ -93,6 +93,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
 
+  if (path === "bug-bounty") {
+    requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
+  }
+
   return requiredNamespaces
 }
 
