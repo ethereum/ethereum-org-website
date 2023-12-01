@@ -121,7 +121,7 @@
   "bug-bounty-faq-q4-content-1": "We can donate your reward to an established charitable organization of your choice.",
   "bug-bounty-faq-q5-title": "I reported an issue / vulnerability but have not received a response!",
   "bug-bounty-faq-q5-contentPreview": "Please allow a few days for someone to respond to your submission.",
-  "bug-bounty-faq-q5-content-1": "We aim to respond to submissions as fast as possible. Feel free to email us at <a href=\"mailto:bounty@ethereum.org\" target=\"_blank\" rel=\"noreferrer\">bounty@ethereum.org</a>if you have not received a response within a day or two.",
+  "bug-bounty-faq-q5-content-1": "We aim to respond to submissions as fast as possible. Feel free to email us at <a href=\"mailto:bounty@ethereum.org\" target=\"_blank\" rel=\"noreferrer\">bounty@ethereum.org</a> if you have not received a response within a day or two.",
   "bug-bounty-faq-q6-title": "I want to be anonymous / I do not want my name on the leader board.",
   "bug-bounty-faq-q6-contentPreview": "You can do this, but it might make you ineligble for rewards.",
   "bug-bounty-faq-q6-content-1": "Submitting anonymously or with a pseudonym is OK, but will make you ineligible for ETH/DAI rewards. To be eligible for ETH/DAI rewards, we require your real name and a proof of your identity. Donating your bounty to a charity doesn’t require your identity.",
