@@ -62,8 +62,8 @@ const PageHero = ({
         maxW={{ base: "full", lg: "container.sm" }}
         pt={{ base: isReverse ? 0 : 8, lg: 32 }}
         pb={{ base: isReverse ? 8 : 0, lg: 32 }}
-        pl={{ base: 0, lg: 8 }}
-        mr={{ base: 0, lg: 4 }}
+        ps={{ base: 0, lg: 8 }}
+        me={{ base: 0, lg: 4 }}
       >
         <Heading
           as="h1"
@@ -151,7 +151,7 @@ const PageHero = ({
         flex="1 1 50%"
         alignSelf="center"
         mt={{ base: 0, lg: 12 }}
-        ml={{ base: 0, lg: 12 }}
+        ms={{ base: 0, lg: 12 }}
         w="full"
         maxWidth={{ base: "560px", lg: "624px" }}
         src={image}

@@ -65,7 +65,7 @@ const Breadcrumbs = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb dir="auto" {...props}>
+    <Breadcrumb {...props}>
       {crumbs.map(({ fullPath, text }) => {
         const isCurrentPage = slug === fullPath
         return (

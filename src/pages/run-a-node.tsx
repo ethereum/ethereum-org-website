@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
+import { type SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps, ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
@@ -325,7 +325,7 @@ type RunANodeCard = {
   alt: string
 }
 
-export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
+export const getStaticProps = (async (context) => {
   const { locale } = context
   const lastDeployDate = getLastDeployDate()
 
@@ -338,7 +338,7 @@ export const getStaticProps: GetStaticProps<{}, {}> = async (context) => {
       lastDeployDate,
     },
   }
-}
+}) satisfies GetStaticProps<SSRConfig>
 
 const RunANodePage = () => {
   const { t } = useTranslation("page-run-a-node")
