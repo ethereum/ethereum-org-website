@@ -30,7 +30,7 @@ lang: ja
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_このリストはすべてを網羅するものではありません。 特定のウォレットのサポートを探すのにお困りの場合は、 [ethereum.org Discord](https://discord.gg/rZz26QWfCg)に参加すると、サポートできることがあると思います。_
+_このリストはすべてを網羅するものではありません。 特定のウォレットのサポートを探すのにお困りの場合は、 [ethereum.org Discord](https://discord.gg/ethereum-org)に参加すると、サポートできることがあると思います。_
 
 イーサリアムウォレットをお探しの場合は、 [イーサリアムウォレットの全リスト](/wallets/find-wallet/)をご確認ください。
 

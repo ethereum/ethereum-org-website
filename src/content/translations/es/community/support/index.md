@@ -30,7 +30,7 @@ A pesar de la falta de apoyo oficial, muchos grupos, comunidades y proyectos en 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Esta lista no es exhaustiva. ¿Necesita ayuda para encontrar soporte sobre una cartera específica? Únase al Discord de [ethereum.org](https://discord.gg/rZz26QWfCg) e intentaremos ayudarle._
+_Esta lista no es exhaustiva. ¿Necesita ayuda para encontrar soporte sobre una cartera específica? Únase al Discord de [ethereum.org](https://discord.gg/ethereum-org) e intentaremos ayudarle._
 
 ¿Busca una cartera de Ethereum? [Explore nuestra lista completa de carteras Ethereum](/wallets/find-wallet/).
 
