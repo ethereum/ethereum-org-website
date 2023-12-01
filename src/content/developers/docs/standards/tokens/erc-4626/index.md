@@ -102,7 +102,7 @@ This function allows users to simulate the effects of their mint at the current 
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
 ```
 
-This function mints exactly `shares` vault shares to `receiver` by depositing `assets` of underlying tokens.
+This function mints vault shares to `receiver` by depositing `assets` of underlying tokens.
 
 #### maxWithdraw {#maxwithdraw}
 
