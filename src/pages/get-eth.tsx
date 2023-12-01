@@ -212,7 +212,7 @@ const GetETHPage = ({ data }: PageProps<Queries.GetEthPageQuery>) => {
           description={t("page-get-eth-peers-desc")}
         >
           <InlineLink to="/wallets/">
-            <Translation id="page-get-eth-wallets-link-desc" />
+            <Translation id="page-get-eth-wallets-link" />
           </InlineLink>
         </StyledCard>
         <StyledCard
