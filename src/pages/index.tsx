@@ -24,7 +24,7 @@ import { ChildOnlyProp, Lang } from "@/lib/types"
 import { Image } from "@/components/Image"
 
 import {
-  getRequiredNamespacesForPath,
+  getRequiredNamespacesForPage,
   isLangRightToLeft,
 } from "@/lib/utils/translations"
 
@@ -186,7 +186,7 @@ export const getStaticProps = (async (context) => {
   const communityEvents = await cachedFetchCommunityEvents()
 
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath("/")
+  const requiredNamespaces = getRequiredNamespacesForPage("/")
   const lastDeployDate = getLastDeployDate()
 
   return {
