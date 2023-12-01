@@ -1,14 +1,21 @@
+import { extendBaseTheme } from "@chakra-ui/react"
 import type { Preview } from "@storybook/react"
 
 import theme from "../src/@chakra-ui/theme"
-import { extendBaseTheme } from "@chakra-ui/react"
+
+import i18n, { baseLocales } from "./i18next"
 
 const extendedTheme = extendBaseTheme(theme)
 
 const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
 
 const preview: Preview = {
+  globals: {
+    locale: 'en',
+    locales: baseLocales,
+  },
   parameters: {
+    i18n,
     actions: { argTypesRegex: "^on[A-Z].*" },
     controls: {
       matchers: {

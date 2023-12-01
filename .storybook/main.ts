@@ -28,6 +28,7 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
     "@chakra-ui/storybook-addon",
+    "storybook-react-i18next"
   ],
   staticDirs: ["../public"],
   framework: {

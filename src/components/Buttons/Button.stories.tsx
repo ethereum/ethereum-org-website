@@ -129,7 +129,7 @@ export const OverrideStyles: Story = {
       </Text>
       <VStack>
         <IconButton aria-label="toggle" icon={<MdNightlight />} px="1.5" />
-        <ButtonLink to="#" borderRadius="full" px="0" py="0">
+        <ButtonLink href="#" borderRadius="full" px="0" py="0">
           <Translation id="get-involved" />
         </ButtonLink>
       </VStack>
