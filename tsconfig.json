@@ -24,7 +24,6 @@
   "exclude": [
     "node_modules",
     "./public/content",
-    "./public/assets",
     "./src/intl",
     "./src/data", // TODO: move to /public?
     // TODO: Remove these exclusions as we migrate the pages & templates that use these components
@@ -32,9 +31,6 @@
     "./src/components/AdoptionChart.tsx",
     "./src/components/Alert/Alert.stories.tsx",
     "./src/components/Alert/index.tsx",
-    "./src/components/AssetDownload/AssetDownloadArtist.tsx",
-    "./src/components/AssetDownload/AssetDownloadImage.tsx",
-    "./src/components/AssetDownload/index.tsx",
     "./src/components/Avatar/Avatar.stories.tsx",
     "./src/components/Avatar/index.tsx",
     "./src/components/BannerGrid/index.tsx",
@@ -49,9 +45,6 @@
     "./src/components/BaseStories/Switch.stories.tsx",
     "./src/components/BaseStories/Text.stories.tsx",
     "./src/components/BoxGrid.tsx",
-    "./src/components/Breadcrumbs/index.tsx",
-    "./src/components/Breadcrumbs/Breadcrumbs.stories.tsx",
-    "./src/components/BugBountyCards.tsx",
     "./src/components/BugBountyPoints.tsx",
     "./src/components/Buttons/Button.stories.tsx",
     "./src/components/CallToContribute.tsx",
@@ -91,7 +84,6 @@
     "./src/components/Layer2/Layer2Onboard.tsx",
     "./src/components/Layer2ProductCard.tsx",
     "./src/components/Layout.tsx",
-    "./src/components/Leaderboard.tsx",
     "./src/components/LearningToolsCardGrid.tsx",
     "./src/components/Modal.tsx",
     "./src/components/Morpher.tsx",

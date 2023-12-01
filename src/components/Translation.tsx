@@ -2,7 +2,7 @@ import htmr from "htmr"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import InlineLink from "./Link"
 
@@ -21,7 +21,7 @@ const transform = {
 // fallback to English if it doesn't find the given key in the current language
 const Translation = ({ id, options }: Props) => {
   const { asPath } = useRouter()
-  const requiredNamespaces = getRequiredNamespacesForPath(asPath)
+  const requiredNamespaces = getRequiredNamespacesForPage(asPath)
 
   const { t } = useTranslation(requiredNamespaces)
   const translatedText = t(id, options)

@@ -11,25 +11,25 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import Emoji from "./Emoji"
-import { BaseLink } from "./Link"
+import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
+
+import { GITHUB_URL } from "@/lib/constants"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const githubUrl = `https://github.com/`
-
-export interface Person {
+type Person = {
   name: string
-  username?: string | null
+  username: string
   score: number
 }
 
-export interface IProps {
-  content: Array<Person>
+type LeaderboardProps = {
+  content: Person[]
   limit?: number
 }
 
-const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
+const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
   const { flipForRtl } = useRtlFlip()
   const colorModeStyles = useColorModeValue(
     {
@@ -57,14 +57,12 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
     >
       {content
         .filter((_, idx) => idx < limit)
-        .map((item, idx) => {
-          const { name, username, score } = item
-
-          const hasGitHub = username !== ""
-          const avatarImg = hasGitHub
-            ? `${githubUrl}${username}.png?size=40`
-            : "https://github.com/random.png?size=40"
+        .map(({ name, username, score }, idx) => {
+          const hasGitHub = !!username
+          const avatarImg =
+            GITHUB_URL + (username || "random") + ".png?size=40"
           const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
+
           let emoji: string | null = null
           if (idx === 0) {
             emoji = ":trophy:"
@@ -74,15 +72,8 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
             emoji = ":3rd_place_medal:"
           }
 
-          const PLACE_WORDS = [
-            "first",
-            "second",
-            "third",
-            "fourth",
-            "fifth",
-          ] as const
           return (
-            <ListItem key={item.username} mb={0}>
+            <ListItem key={username} mb={0}>
               <LinkBox
                 key={idx}
                 display="flex"
@@ -113,7 +104,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                 <Flex flex="1 1 75%" direction="column" me={8}>
                   <LinkOverlay
                     as={BaseLink}
-                    href={hasGitHub ? `${githubUrl}${username}` : "#"}
+                    href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
                     textDecor="none"
                     color="text"
                     hideArrow
