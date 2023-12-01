@@ -77,9 +77,13 @@ const ActionCard: React.FC<IProps> = ({
       >
         <Image
           src={image}
+          width={320}
           alt={alt || ""}
-          h="full"
-          style={{ objectFit: "contain" }}
+          maxH="257px"
+          maxW={{ base: "311px", sm: "372px" }}
+          minW="100px"
+          minH="100px"
+          style={{ objectFit: "cover" }}
         />
       </Flex>
       <Box p={6} className="action-card-content">
