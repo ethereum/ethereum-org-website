@@ -20,34 +20,27 @@ export const isLang = (lang: string) => {
   return i18nConfigs.map((language) => language.code).includes(lang)
 }
 
-export const getRequiredNamespacesForPath = (
+export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
 ) => {
-  let requiredNamespaces: string[] = ["common"]
+  const baseNamespaces = ["common"]
 
-  if (layout === "docs") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
-  }
+  const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
+  const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
 
-  if (layout === "use-cases") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "template-usecase",
-      "learn-quizzes",
-    ]
-  }
+  return [
+    ...baseNamespaces,
+    ...requiredNamespacesForPath,
+    ...requiredNamespacesForLayout,
+  ]
+}
 
-  if (layout === "upgrade") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-upgrades",
-      "page-upgrades-index",
-    ]
-  }
+const getRequiredNamespacesForPath = (path: string) => {
+  let requiredNamespaces: string[] = []
 
-  if (layout === "tutorial") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  if (path === "assets") {
+    requiredNamespaces = [...requiredNamespaces, "page-assets"]
   }
 
   if (path === "/") {
@@ -94,6 +87,40 @@ export const getRequiredNamespacesForPath = (
     path.startsWith("/security")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
+  }
+
+  if (path === "bug-bounty") {
+    requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
+  }
+
+  return requiredNamespaces
+}
+
+const getRequiredNamespacesForLayout = (layout?: string) => {
+  let requiredNamespaces: string[] = []
+
+  if (layout === "docs") {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
+  }
+
+  if (layout === "use-cases") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "template-usecase",
+      "learn-quizzes",
+    ]
+  }
+
+  if (layout === "upgrade") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-upgrades",
+      "page-upgrades-index",
+    ]
+  }
+
+  if (layout === "tutorial") {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
   }
 
   return requiredNamespaces

@@ -60,13 +60,13 @@ export const WithUsername: Story = {
   render: (args) => (
     <HStack spacing={16}>
       <VStack>
-        {["md", "sm"].map((size) => (
-          <Avatar size={size} {...args} />
+        {["md", "sm"].map((size, idx) => (
+          <Avatar key={idx} size={size} {...args} />
         ))}
       </VStack>
       <VStack>
-        {["md", "sm"].map((size) => (
-          <Avatar size={size} direction="column" {...args} />
+        {["md", "sm"].map((size, idx) => (
+          <Avatar key={idx} size={size} direction="column" {...args} />
         ))}
       </VStack>
     </HStack>

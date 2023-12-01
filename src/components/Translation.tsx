@@ -3,8 +3,9 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import type { TOptions } from "i18next"
 
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
 import InlineLink from "./Link"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
 
 interface Props {
   id: string
@@ -21,7 +22,7 @@ const transform = {
 // fallback to English if it doesn't find the given key in the current language
 const Translation = ({ id, options }: Props) => {
   const { asPath } = useRouter()
-  const requiredNamespaces = getRequiredNamespacesForPath(asPath)
+  const requiredNamespaces = getRequiredNamespacesForPage(asPath)
 
   const { t } = useTranslation(requiredNamespaces)
   const translatedText = t(id, options)

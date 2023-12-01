@@ -98,7 +98,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
       }}
     >
       <Center w={{ base: "100%", lg: "40%" }}>
-        <Box pr={8} pl={{ base: 8, lg: 0 }}>
+        <Box pe={8} ps={{ base: 8, lg: 0 }}>
           <OldHeading>
             <Translation id="page-index:community-events-content-heading" />
           </OldHeading>
@@ -172,10 +172,10 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           </Text>
           <Divider mb={4} />
           {upcomingEventData.slice(1).length ? (
-            upcomingEventData.slice(1).map((item) => {
+            upcomingEventData.slice(1).map((item, idx) => {
               return (
                 <Event
-                  key={item.date}
+                  key={idx}
                   event={item}
                   language={locale!}
                   type="upcoming"
@@ -192,14 +192,9 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           </Text>
           <Divider mb={4} />
           {pastEventData.length ? (
-            pastEventData.map((item) => {
+            pastEventData.map((item, idx) => {
               return (
-                <Event
-                  key={item.date}
-                  event={item}
-                  language={locale!}
-                  type="past"
-                />
+                <Event key={idx} event={item} language={locale!} type="past" />
               )
             })
           ) : (

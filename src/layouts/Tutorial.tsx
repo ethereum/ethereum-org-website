@@ -1,4 +1,3 @@
-// Libraries
 import { useRouter } from "next/router"
 import {
   Badge,
@@ -14,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 // TODO: Import once intl implements?
@@ -25,8 +24,7 @@ import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
 import Codeblock from "@/components/Codeblock"
-// TODO: Implement CrowdinContributors after intl is implemented
-// import CrowdinConbtirbutors from "@/components/FileContributorsCrowdin"
+import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -45,9 +43,9 @@ import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
-import { isLangRightToLeft } from "@/lib/utils/translations"
+import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
 
-import { EDIT_CONTENT_URL } from "@/lib/constants"
+import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
@@ -66,9 +64,9 @@ const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
       {...props}
       sx={{
         ".featured": {
-          pl: "1rem",
-          ml: "-1rem",
-          borderLeft: `1px dotted ${borderColor}`,
+          ps: "1rem",
+          ms: "-1rem",
+          borderInlineStart: `1px dotted ${borderColor}`,
         },
         ".citation": {
           p: { color: "text200" },
@@ -171,7 +169,12 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
-interface TutorialLayoutProps extends MdPageContent, ChildOnlyProp {
+interface TutorialLayoutProps
+  extends ChildOnlyProp,
+    Pick<
+      MdPageContent,
+      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+    > {
   frontmatter: TutorialFrontmatter
   timeToRead: number
 }
@@ -182,13 +185,17 @@ export const TutorialLayout = ({
   tocItems,
   timeToRead,
   lastUpdatedDate,
+  crowdinContributors,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
   const borderColor = useToken("colors", "border")
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null
+  const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
+  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const useGitHubContributors =
+    frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <>
@@ -200,7 +207,6 @@ export const TutorialLayout = ({
       <Flex
         w="100%"
         borderBottom={`1px solid ${borderColor}`}
-        dir={isRightToLeft ? "rtl" : "ltr"}
         m={{ base: "2rem 0rem", lg: "0 auto" }}
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
@@ -222,20 +228,16 @@ export const TutorialLayout = ({
             pt={8}
           />
           {children}
-          {frontmatter.lang !== "en" ? (
-            // TODO: Implement CrowdinContributors
-            <>
-              {/* <CrowdinContributors
-                relativePath={relativePath}
-                editPath={absoluteEditPath}
-                //@ts-ignore
-                langContributors={allCombinedTranslatorsJson.nodes}
-              /> */}
-            </>
-          ) : (
+          {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate!}
+            />
+          ) : (
+            <CrowdinContributors
+              relativePath={relativePath}
+              lastUpdatedDate={intlLastEdit}
+              contributors={crowdinContributors}
             />
           )}
           <FeedbackCard />

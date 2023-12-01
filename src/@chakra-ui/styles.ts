@@ -55,8 +55,8 @@ const styles = {
     ".header-anchor": {
       position: "relative !important",
       display: "initial",
-      marginLeft: "-1.5em",
-      paddingRight: "0.5rem !important",
+      marginStart: "-1.5em",
+      paddingEnd: "0.5rem !important",
       fontSize: "1rem",
       verticalAlign: "middle",
 
