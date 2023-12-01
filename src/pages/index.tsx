@@ -2,6 +2,8 @@ import React, { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { SSRConfig } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
   Box,
@@ -16,13 +18,14 @@ import {
   Stack,
   useToken,
 } from "@chakra-ui/react"
-import { SSRConfig } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 import { ChildOnlyProp, Lang } from "@/lib/types"
+import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import { Image } from "@/components/Image"
 
+import { cacheAsyncFn } from "@/lib/utils/cache"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
@@ -34,19 +37,18 @@ import CalloutBanner from "../components/CalloutBanner"
 import Codeblock from "../components/Codeblock"
 import CodeModal from "../components/CodeModal"
 import CommunityEvents from "../components/CommunityEvents"
-import { HomeHero } from "../components/Hero"
+import HomeHero from "../components/Hero/HomeHero"
 import PageMetadata from "../components/PageMetadata"
+// TODO: migrate stats fetching on build time
 // import StatsBoxGrid from "../components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
 import Translation from "../components/Translation"
-import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
-import type { CommunityEventsReturnType } from "@/lib/interfaces"
-import { cacheAsyncFn } from "@/lib/utils/cache"
 
 import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
 import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
+import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import devfixed from "@/public/developers-eth-blocks.png"
 import dogefixed from "@/public/doge-computer.png"
 import enterprise from "@/public/enterprise-eth.png"
@@ -61,7 +63,6 @@ import infrastructurefixed from "@/public/infrastructure_transparent.png"
 import merge from "@/public/upgrades/merge.png"
 import robotfixed from "@/public/wallet-cropped.png"
 import ethereum from "@/public/what-is-ethereum.png"
-import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading

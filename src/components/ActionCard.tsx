@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { StaticImageData } from "next/image"
 import {
   Box,
   BoxProps,
@@ -13,7 +14,6 @@ import {
 import { Image } from "./Image"
 import { BaseLink } from "./Link"
 import Text from "./OldText"
-import { StaticImageData } from "next/image"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",

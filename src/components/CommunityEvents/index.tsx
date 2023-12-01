@@ -12,6 +12,8 @@ import {
   Icon,
 } from "@chakra-ui/react"
 
+import type { CommunityEvent } from "@/lib/interfaces"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ButtonLink } from "../Buttons"
@@ -19,8 +21,6 @@ import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
 import Translation from "../Translation"
-
-import type { CommunityEvent } from "@/lib/interfaces"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
