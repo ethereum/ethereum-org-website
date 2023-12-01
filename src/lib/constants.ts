@@ -26,6 +26,7 @@ export const CONTENT_IMAGES_MAX_WIDTH = 800
 export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
+export const GITHUB_URL = `https://github.com/`
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"
