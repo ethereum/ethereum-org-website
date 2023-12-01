@@ -20,6 +20,7 @@
     "@emotion/styled": "^11.11.0",
     "@storybook/react": "^7.3.2",
     "clipboard": "^2.0.11",
+    "focus-trap-react": "^10.2.3",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
     "htmr": "^1.0.2",
