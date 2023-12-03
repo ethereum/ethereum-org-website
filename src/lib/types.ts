@@ -1,6 +1,7 @@
 import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
+import { StaticImageData } from "next/image"
 import type { ReactElement, ReactNode } from "react"
 
 import type {
@@ -210,4 +211,21 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
+}
+
+// Learning Tools
+
+export interface LearningTool {
+  name: string
+  description: string
+  url: string
+  image: StaticImageData
+  alt: string
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
 }
