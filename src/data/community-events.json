@@ -178,5 +178,14 @@
     "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
     "startDate": "2023-12-8",
     "endDate": "2023-12-10"
+  },
+  {
+    "title": "ETH Canal",
+    "to": "https://www.ethcanal.xyz/",
+    "sponsor": null,
+    "location": "Panama City, Panamá",
+    "description": "ETH Canal is an Ethereum conference in Panama City,  a hub for decentralized technology in the largest country without a central banking system. The conference and a hackathon is a dynamic platform for connecting EVM-compatible business opportunities with technology experts. It's an ideal meeting point for Ethereum enthusiasts and professionals, fostering innovation, collaboration, and knowledge exchange in the heart of financial innovation. ",
+    "startDate": "2024-03-19",
+    "endDate": "2024-03-21"
   }
 ]
