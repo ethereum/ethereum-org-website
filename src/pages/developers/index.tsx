@@ -1,9 +1,15 @@
 import { ReactNode } from "react"
 import { GetStaticProps } from "next"
-import { SSRConfig } from "next-i18next"
+import { type SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useTranslation } from "react-i18next"
-import { Box, chakra, Flex, SimpleGrid, TextProps, useColorModeValue } from "@chakra-ui/react"
+import {
+  Box,
+  chakra,
+  Flex,
+  SimpleGrid,
+  TextProps,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -23,7 +29,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import DevelopersImage from "@/public/developers-eth-blocks.png"
-import DogeImage from '@/public/doge-computer.png'
+import DogeImage from "@/public/doge-computer.png"
 import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
 
 const Page = (props: ChildOnlyProp) => (
@@ -128,12 +134,10 @@ const StyledCallout = chakra(Callout, {
   },
 })
 
-export const getStaticProps = (async (
-  context
-) => {
+export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage('/developers')
+  const requiredNamespaces = getRequiredNamespacesForPage("/developers")
   const lastDeployDate = getLastDeployDate()
 
   return {
@@ -156,30 +160,48 @@ const paths: Array<IDevelopersPath> = [
   {
     emoji: ":woman_student:",
     title: <Translation id="page-developers-index:page-developers-learn" />,
-    description: <Translation id="page-developers-index:page-developers-learn-desc" />,
+    description: (
+      <Translation id="page-developers-index:page-developers-learn-desc" />
+    ),
     url: "/developers/docs/",
-    button: <Translation id="page-developers-index:page-developers-read-docs" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-read-docs" />
+    ),
   },
   {
     emoji: ":woman_teacher:",
-    title: <Translation id="page-developers-index:page-developers-learn-tutorials" />,
-    description: <Translation id="page-developers-index:page-developers-learn-tutorials-desc" />,
+    title: (
+      <Translation id="page-developers-index:page-developers-learn-tutorials" />
+    ),
+    description: (
+      <Translation id="page-developers-index:page-developers-learn-tutorials-desc" />
+    ),
     url: "/developers/tutorials/",
-    button: <Translation id="page-developers-index:page-developers-learn-tutorials-cta" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-learn-tutorials-cta" />
+    ),
   },
   {
     emoji: ":woman_scientist:",
     title: <Translation id="page-developers-index:page-developers-start" />,
-    description: <Translation id="page-developers-index:page-developers-start-desc" />,
+    description: (
+      <Translation id="page-developers-index:page-developers-start-desc" />
+    ),
     url: "/developers/learning-tools/",
-    button: <Translation id="page-developers-index:page-developers-play-code" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-play-code" />
+    ),
   },
   {
     emoji: ":construction_worker:",
     title: <Translation id="page-developers-index:page-developers-set-up" />,
-    description: <Translation id="page-developers-index:page-developers-setup-desc" />,
+    description: (
+      <Translation id="page-developers-index:page-developers-setup-desc" />
+    ),
     url: "/developers/local-environment/",
-    button: <Translation id="page-developers-index:page-developers-choose-stack" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-choose-stack" />
+    ),
   },
 ]
 
@@ -187,36 +209,36 @@ const DevelopersPage = () => {
   const { t } = useTranslation("page-developers-index")
 
   return (
-      <Page>
-        <PageMetadata
-          title={t("page-developers-index:page-developer-meta-title")}
-          description={t("page-developers-index:page-developers-meta-desc")}
-        />
-        <HubHero
-          heroImgSrc={HeroImage}
-          header={`${t("page-developers-index:page-developers-title-1")} ${t(
-            "page-developers-index:page-developers-title-2"
-          )} ${t("page-developers-index:page-developers-title-3")}`}
-          title={t("developers")}
-          description={t("page-developers-index:page-developers-subtitle")}
-        />
-        <Content>
-          <MonoSubtitle>
-            <Translation id="page-developers-index:page-developers-get-started" />
-          </MonoSubtitle>
-          <StyledCardContainer>
-            {paths.map((path, idx) => (
-              <StyledCard
-                key={idx}
-                emoji={path.emoji}
-                title={path.title}
-                description={path.description}
-              >
-                <ButtonLink to={path.url}>{path.button}</ButtonLink>
-              </StyledCard>
-            ))}
-          </StyledCardContainer>
-          <TwoColumnContent>
+    <Page>
+      <PageMetadata
+        title={t("page-developers-index:page-developer-meta-title")}
+        description={t("page-developers-index:page-developers-meta-desc")}
+      />
+      <HubHero
+        heroImgSrc={HeroImage}
+        header={`${t("page-developers-index:page-developers-title-1")} ${t(
+          "page-developers-index:page-developers-title-2"
+        )} ${t("page-developers-index:page-developers-title-3")}`}
+        title={t("developers")}
+        description={t("page-developers-index:page-developers-subtitle")}
+      />
+      <Content>
+        <MonoSubtitle>
+          <Translation id="page-developers-index:page-developers-get-started" />
+        </MonoSubtitle>
+        <StyledCardContainer>
+          {paths.map((path, idx) => (
+            <StyledCard
+              key={idx}
+              emoji={path.emoji}
+              title={path.title}
+              description={path.description}
+            >
+              <ButtonLink to={path.url}>{path.button}</ButtonLink>
+            </StyledCard>
+          ))}
+        </StyledCardContainer>
+        <TwoColumnContent>
           <IntroColumn>
             <OldHeading>
               <Translation id="page-developers-index:page-developers-about" />
@@ -247,8 +269,8 @@ const DevelopersPage = () => {
             </div>
           </StyledCallout>
         </TwoColumnContent>
-        </Content>
-        <GrayContainer>
+      </Content>
+      <GrayContainer>
         <Content>
           <OldHeading>
             <Translation id="page-developers-index:page-developers-explore-documentation" />
