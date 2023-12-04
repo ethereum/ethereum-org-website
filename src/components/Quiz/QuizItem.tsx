@@ -60,7 +60,7 @@ const QuizItem = ({
             {/* number of questions - label */}
             <Tag
               label={t(`${numberOfQuestions} ${t("questions")}`)}
-              ml={{ lg: -2 }}
+              ms={{ lg: -2 }}
             />
 
             {/* difficulty - label */}

@@ -1,9 +1,10 @@
-import { ReactElement, ReactNode } from "react"
-import { NextPage } from "next"
-import { AppProps } from "next/app"
+import type { Options } from "mdast-util-toc"
+import type { NextPage } from "next"
+import type { AppProps } from "next/app"
+import { StaticImageData } from "next/image"
+import type { ReactElement, ReactNode } from "react"
 
 import type {
-  Author,
   DocsFrontmatter,
   RoadmapFrontmatter,
   StakingFrontmatter,
@@ -12,7 +13,6 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
-import { Options } from "mdast-util-toc"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -107,6 +107,11 @@ export type I18nLocale = {
 
 export type TranslationKey = string
 
+export type LoadingState<T> =
+  | { loading: true }
+  | { loading: false; data: T }
+  | { loading: false; error: unknown }
+
 /**
  * Quiz data types
  */
@@ -138,15 +143,49 @@ export type StakingPage = "solo" | "saas" | "pools"
 /**
  * File contributors
  */
-export type FileContributorsState = {
-  loading: boolean
-  authors?: Array<Author>
-  error?: unknown
+export type FileContributorsState = LoadingState<Author[]>
+
+export type LastUpdatedState = LoadingState<string>
+
+// Crowdin contributors
+export type CrowdinFileId = {
+  id: number
+  path: string
+}
+
+export type CrowdinContributor = {
+  id: number
+  username: string
+  avatarUrl: string
+  totalCosts: number
+}
+
+type FileContributorData = {
+  fileId: string
+  contributors: CrowdinContributor[]
+}
+
+export type LocaleContributions = {
+  lang: string
+  data: FileContributorData[]
+}
+
+// GitHub contributors
+export type Author = {
+  name: string
+  email: string
+  avatarUrl: string
+  user: {
+    login: string
+    url: string
+  }
 }
 
 /**
  * Table of contents
  */
+export type SourceHeadingItem = { depth: number; id: string; label: string }
+
 export type ToCNodeEntry = {
   url?: string
   title?: string
@@ -167,4 +206,21 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
+}
+
+// Learning Tools
+
+export interface LearningTool {
+  name: string
+  description: string
+  url: string
+  image: StaticImageData
+  alt: string
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
 }

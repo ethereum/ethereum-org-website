@@ -44,12 +44,12 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       second: "numeric",
     })
     setFormattedUTC(`${formattedDate} +UTC`)
-  })
+  }, [dateTimeAsString, locale])
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
       <Flex>
-        <Emoji fontSize="sm" mr={2} text=":bricks:" />
+        <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink to={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
@@ -62,7 +62,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
     <Stack>
       {formattedUTC && (
         <Flex>
-          <Emoji fontSize="sm" mr={2} text=":calendar:" />
+          <Emoji fontSize="sm" me={2} text=":calendar:" />
           <Text fontFamily="monospace">{formattedUTC}</Text>
         </Flex>
       )}
@@ -86,7 +86,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
         )}
       {ethPriceInUSD && (
         <Flex>
-          <Emoji fontSize="sm" mr={2} text=":money_bag:" />
+          <Emoji fontSize="sm" me={2} text=":money_bag:" />
           {t("page-history:page-history-eth-price")}:{" "}
           {new Intl.NumberFormat(localeForStatsBoxNumbers, {
             style: "currency",
@@ -96,7 +96,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       )}
       {waybackLink && (
         <Flex>
-          <Emoji fontSize="sm" mr={2} text=":desktop_computer:" />
+          <Emoji fontSize="sm" me={2} text=":desktop_computer:" />
           <InlineLink to={waybackLink}>
             {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>

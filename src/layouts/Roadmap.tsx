@@ -4,12 +4,12 @@ import {
   Flex,
   Show,
   SimpleGrid,
+  useToken,
   Wrap,
   WrapItem,
-  useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -17,6 +17,7 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Button, ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import LeftNavBar from "@/components/LeftNavBar"
 import {
   ContentContainer,
   MobileButton,
@@ -29,9 +30,6 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
-import LeftNavBar from "@/components/LeftNavBar"
-
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -75,8 +73,6 @@ export const RoadmapLayout: React.FC<IProps> = ({
 }) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
-
-  const isRightToLeft = isLangRightToLeft(frontmatter.lang as Lang)
 
   const dropdownLinks: ButtonDropdownList = {
     text: "Roadmap Options" as TranslationKey,
@@ -186,7 +182,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
           </Center>
         </Flex>
       </HeroContainer>
-      <Page dir={isRightToLeft ? "rtl" : "ltr"}>
+      <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
           hideBelow={lgBp}

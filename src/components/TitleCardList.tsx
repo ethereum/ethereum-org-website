@@ -80,21 +80,21 @@ const TitleCardList: React.FC<IProps> = ({
                 width="12px"
                 height="12px"
                 bg="fail300"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
               <Box
                 width="12px"
                 height="12px"
                 bg="gridYellow"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
               <Box
                 width="12px"
                 height="12px"
                 bg="success300"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
             </Flex>
@@ -126,13 +126,13 @@ const TitleCardList: React.FC<IProps> = ({
             {image && (
               <GatsbyImage
                 marginTop={1}
-                marginRight={4}
+                me={4}
                 minWidth={5}
                 image={image}
                 alt={alt || ""}
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
+            <Flex flex="1 1 75%" flexDirection="column" me={8}>
               <LinkOverlay
                 as={BaseLink}
                 href={link}
@@ -159,7 +159,7 @@ const TitleCardList: React.FC<IProps> = ({
                 flex="1 0 25%"
                 alignItems="center"
                 flexWrap="wrap"
-                marginRight={4}
+                me={4}
               >
                 <Box
                   fontSize="sm"
@@ -192,13 +192,13 @@ const TitleCardList: React.FC<IProps> = ({
             {image && (
               <GatsbyImage
                 marginTop={1}
-                marginRight={4}
+                me={4}
                 minWidth={5}
                 image={image}
                 alt={alt || ""}
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
+            <Flex flex="1 1 75%" flexDirection="column" me={8}>
               <Box>{title}</Box>
 
               <Box
@@ -214,7 +214,7 @@ const TitleCardList: React.FC<IProps> = ({
                 flex="1 0 25%"
                 alignItems="center"
                 flexWrap="wrap"
-                marginRight={4}
+                me={4}
               >
                 <Box
                   fontSize="sm"

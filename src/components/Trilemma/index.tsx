@@ -88,7 +88,7 @@ const Trilemma: React.FC<IProps> = () => {
               justifyContent="flex-start"
               my={8}
             />
-            <DrawerCloseButton top={6} right={6} />
+            <DrawerCloseButton top={6} insetInlineEnd={6} />
           </DrawerContent>
         </Drawer>
       </Hide>

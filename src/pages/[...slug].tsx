@@ -14,6 +14,7 @@ import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
 import type {
+  Lang,
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
@@ -23,12 +24,13 @@ import type {
 import mdComponents from "@/components/MdComponents"
 import PageMetadata from "@/components/PageMetadata"
 
+import { getCrowdinContributors } from "@/lib/utils/crowdin"
 import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -62,7 +64,6 @@ export const layoutMapping = {
   upgrade: UpgradeLayout,
   docs: DocsLayout,
   tutorial: TutorialLayout,
-  // event: EventLayout,
 }
 
 const componentsMapping = {
@@ -151,8 +152,12 @@ export const getStaticProps = (async (context) => {
     }
   }
 
+  const crowdinContributors = ["docs", "tutorial"].includes(layout)
+    ? getCrowdinContributors(mdPath, locale as Lang)
+    : []
+
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPath(slug, layout)
+  const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
 
   return {
     props: {
@@ -166,6 +171,7 @@ export const getStaticProps = (async (context) => {
       layout,
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
+      crowdinContributors,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
@@ -189,8 +195,15 @@ const ContentPage: NextPageWithLayout<
 // Per-Page Layouts: https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript
 ContentPage.getLayout = (page) => {
   // values returned by `getStaticProps` method and passed to the page component
-  const { slug, frontmatter, lastUpdatedDate, layout, timeToRead, tocItems } =
-    page.props
+  const {
+    slug,
+    frontmatter,
+    lastUpdatedDate,
+    layout,
+    timeToRead,
+    tocItems,
+    crowdinContributors,
+  } = page.props
 
   const layoutProps = {
     slug,
@@ -198,6 +211,7 @@ ContentPage.getLayout = (page) => {
     lastUpdatedDate,
     timeToRead,
     tocItems,
+    crowdinContributors,
   }
   const Layout = layoutMapping[layout]
 

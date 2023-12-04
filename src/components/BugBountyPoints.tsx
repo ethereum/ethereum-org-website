@@ -70,10 +70,10 @@ const BugBountyPoints: React.FC<IProps> = () => {
       })
       .catch((error) => {
         console.error(error)
-        setState({
-          ...state,
+        setState((prevState) => ({
+          ...prevState,
           hasError: true,
-        })
+        }))
       })
   }, [])
 
@@ -143,7 +143,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
           wrap="wrap"
           mb={8}
         >
-          <Text fontSize="xl" m={0} mr={4}>
+          <Text fontSize="xl" m={0} me={4}>
             <Translation id="page-upgrades-bug-bounty-points-error" />
           </Text>
         </Flex>
@@ -155,7 +155,7 @@ const BugBountyPoints: React.FC<IProps> = () => {
           wrap="wrap"
           mb={8}
         >
-          <Text fontSize="xl" m={0} mr={4}>
+          <Text fontSize="xl" m={0} me={4}>
             <Translation id="page-upgrades-bug-bounty-points-loading" />
           </Text>
         </Flex>
@@ -169,20 +169,20 @@ const BugBountyPoints: React.FC<IProps> = () => {
           gap={2}
         >
           <Flex align="center" wrap="wrap">
-            <Emoji fontSize="xl" mr={2} text=":dollar:" />
-            <Text fontSize="xl" m={0} mr={4}>
+            <Emoji fontSize="xl" me={2} text=":dollar:" />
+            <Text fontSize="xl" m={0} me={2}>
               <Translation id="page-upgrades-bug-bounty-points-usd" />
             </Text>
           </Flex>
           <Flex align="center" wrap="wrap">
             <GatsbyImage image={getImage(data.dai)!} alt="" me="2" />
-            <Text fontSize="xl" m={0} mr={4}>
+            <Text fontSize="xl" m={0} me={4}>
               {pointsInDAI} DAI
             </Text>
           </Flex>
           <Flex align="center" wrap="wrap">
             <GatsbyImage image={getImage(ethImage)!} alt="" me="2" />
-            <Text fontSize="xl" m={0} mr={4}>
+            <Text fontSize="xl" m={0} me={4}>
               {pointsInETH} ETH
             </Text>
           </Flex>

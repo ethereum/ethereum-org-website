@@ -25,7 +25,9 @@ export enum Skill {
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-developers-tutorials:page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
+  `page-developers-tutorials:page-tutorial-${
+    Skill[skill.toUpperCase() as keyof typeof Skill]
+  }`
 
 const TutorialMetadata = ({
   frontmatter,
@@ -72,13 +74,13 @@ const TutorialMetadata = ({
       >
         {author && (
           <Box>
-            <Emoji fontSize="sm" mr={2} text=":writing_hand:" />
+            <Emoji fontSize="sm" me={2} text=":writing_hand:" />
             {author}
           </Box>
         )}
         {hasSource && (
           <Box>
-            <Emoji fontSize="sm" mr={2} text=":books:" />
+            <Emoji fontSize="sm" me={2} text=":books:" />
             <InlineLink to={frontmatter.sourceUrl}>
               {frontmatter.source}
             </InlineLink>
@@ -86,12 +88,12 @@ const TutorialMetadata = ({
         )}
         {published && (
           <Box>
-            <Emoji fontSize="sm" mr={2} text=":calendar:" />{" "}
+            <Emoji fontSize="sm" me={2} text=":calendar:" />{" "}
             {getLocaleTimestamp(locale! as Lang, published)}
           </Box>
         )}
         <Box>
-          <Emoji fontSize="sm" mr={2} text=":stopwatch:" />
+          <Emoji fontSize="sm" me={2} text=":stopwatch:" />
           {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
         </Box>
       </HStack>
@@ -104,7 +106,7 @@ const TutorialMetadata = ({
         justifyContent="flex-start"
       >
         {address && (
-          <Flex flexWrap="wrap" w="full" mr={4}>
+          <Flex flexWrap="wrap" w="full" me={4}>
             <CopyToClipboard text={address}>
               {(isCopied) => (
                 <Box
@@ -127,12 +129,7 @@ const TutorialMetadata = ({
                   />{" "}
                   {address} {isCopied && <Translation id="copied" />}
                   {isCopied && (
-                    <Emoji
-                      fontSize="sm"
-                      ml={2}
-                      mr={2}
-                      text=":white_check_mark:"
-                    />
+                    <Emoji fontSize="sm" mx={2} text=":white_check_mark:" />
                   )}
                 </Box>
               )}

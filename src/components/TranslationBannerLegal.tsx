@@ -45,7 +45,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
       position="fixed"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      right={{ base: 0, md: 8 }}
+      insetInlineEnd={{ base: 0, md: 8 }}
       zIndex="99"
     >
       <Flex
@@ -83,7 +83,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
                 text=":bug:"
                 fontSize="3xl"
                 pt={2}
-                ml={2}
+                ms={2}
                 mb={{ base: 4, sm: "auto" }}
               />
             </Heading>
@@ -111,7 +111,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top={0}
-          right={isPageRightToLeft ? "auto" : 0}
+          insetInlineEnd={isPageRightToLeft ? "auto" : 0}
           margin={4}
           color="secondary"
           _hover={{

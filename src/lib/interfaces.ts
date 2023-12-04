@@ -1,11 +1,12 @@
 import type { ReactNode } from "react"
 
 import type {
+  CrowdinContributor,
   Frontmatter,
   Lang,
-  TranslationKey,
-  ToCItem,
   Layout,
+  ToCItem,
+  TranslationKey,
 } from "@/lib/types"
 
 /**
@@ -100,8 +101,8 @@ interface ImageInfo {
 
 export interface UpgradeFrontmatter
   extends SharedFrontmatter,
-  SummaryPointsNumbered,
-  ImageInfo { }
+    SummaryPointsNumbered,
+    ImageInfo {}
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
   buttons: {
@@ -114,15 +115,15 @@ export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
 
 export interface UseCasesFrontmatter
   extends SharedFrontmatter,
-  SummaryPointsNumbered,
-  ImageInfo {
+    SummaryPointsNumbered,
+    ImageInfo {
   emoji: string
 }
 
 export interface StakingFrontmatter
   extends SharedFrontmatter,
-  SummaryPoints,
-  ImageInfo {
+    SummaryPoints,
+    ImageInfo {
   emoji: string
 }
 
@@ -158,15 +159,5 @@ export interface MdPageContent {
   tocItems: ToCItem[]
   lastUpdatedDate?: string
   contentNotTranslated: boolean
-}
-
-// GitHub contributors
-export interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
+  crowdinContributors: CrowdinContributor[]
 }

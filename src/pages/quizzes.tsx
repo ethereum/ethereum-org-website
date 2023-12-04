@@ -18,7 +18,7 @@ import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getRequiredNamespacesForPath } from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
@@ -132,7 +132,7 @@ const QuizzesHubPage: NextPage<
 export default QuizzesHubPage
 
 export const getStaticProps = (async ({ locale }) => {
-  const requiredNamespaces = getRequiredNamespacesForPath("/quizzes")
+  const requiredNamespaces = getRequiredNamespacesForPage("quizzes")
 
   return {
     props: {

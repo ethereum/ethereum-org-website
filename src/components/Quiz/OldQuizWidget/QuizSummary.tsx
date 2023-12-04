@@ -50,7 +50,7 @@ const QuizSummary: React.FC<IProps> = ({
       numberOfCorrectAnswers,
       setUserStats,
     })
-  }, [])
+  }, [numberOfCorrectAnswers, quizKey, quizScore, setUserStats])
 
   return (
     <VStack spacing="3" w="full" fontSize={["xl", "2xl"]}>
