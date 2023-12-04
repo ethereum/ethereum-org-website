@@ -8,7 +8,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import GatsbyImage from "../../GatsbyImage"
+import { Image } from "@/components/Image"
+
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 
@@ -30,18 +31,17 @@ const HubHero = (props: HubHeroProps) => {
 
   return (
     <Box position="relative">
-      <GatsbyImage
-        image={heroImgSrc}
+      <Image
+        src={heroImgSrc}
         alt=""
-        w="full"
-        height={{
+        objectFit="cover"
+        h={{
           base: "192px",
           md: "256px",
           lg: "320px",
           xl: "576px",
           "2xl": "672px",
         }}
-        loading="eager"
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
