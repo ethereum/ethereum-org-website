@@ -5,8 +5,8 @@ import {
   forwardRef,
 } from "@chakra-ui/react"
 
+import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
-import { type MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 
 export const checkIsSecondary = (props: {
   variant?: string
