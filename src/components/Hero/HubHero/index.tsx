@@ -10,8 +10,6 @@ import {
 
 import { Image } from "@/components/Image"
 
-import { Image } from "@/components/Image"
-
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 

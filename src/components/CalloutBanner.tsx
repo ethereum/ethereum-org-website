@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { Box, Center, Flex, type FlexProps } from "@chakra-ui/react"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 
@@ -11,6 +11,7 @@ export interface IProps extends FlexProps {
   children?: React.ReactNode
   image: ImageProps["src"]
   imageWidth?: ImageProps["width"]
+  maxImageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
   alt: string
@@ -19,6 +20,7 @@ export interface IProps extends FlexProps {
 const CalloutBanner: React.FC<IProps> = ({
   image,
   imageWidth,
+  maxImageWidth,
   titleKey,
   descriptionKey,
   alt,
