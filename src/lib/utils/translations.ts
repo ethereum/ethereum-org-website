@@ -44,6 +44,10 @@ export const getRequiredNamespacesForPage = (
 const getRequiredNamespacesForPath = (path: string) => {
   let requiredNamespaces: string[] = []
 
+  if (path === "assets") {
+    requiredNamespaces = [...requiredNamespaces, "page-assets"]
+  }
+
   if (path.startsWith("/community")) {
     requiredNamespaces = [...requiredNamespaces, "page-community"]
   }
@@ -72,6 +76,14 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/developers")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
+  }
+
+  if (path.startsWith("/developers/learning-tools")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-index", "page-developers-learning-tools"]
+  }
+
   if (path.startsWith("/developers/docs/scaling")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
@@ -88,6 +100,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     path.startsWith("/security")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
+  }
+
+  if (path === "bug-bounty") {
+    requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
   }
 
   return requiredNamespaces

@@ -1,6 +1,7 @@
 import * as React from "react"
 
-import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+
 import { Button, type IButtonProps } from "../Buttons"
 
 export type CallToActionProps = Omit<IButtonProps, "children" | "content"> & {
