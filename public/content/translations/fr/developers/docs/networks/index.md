@@ -56,8 +56,6 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Robinet PoW](https://sepolia-faucet.pk910.de/)
-- [Sepolia faucet](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)

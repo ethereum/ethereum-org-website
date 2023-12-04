@@ -6,6 +6,7 @@ import {
 } from "@chakra-ui/react"
 
 import { scrollIntoView } from "@/lib/utils/scrollIntoView"
+import { type MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
 
 export const checkIsSecondary = (props: {
   variant?: string
@@ -33,15 +34,15 @@ export interface IProps extends ButtonProps {
    * `NOTE`: Does not apply to the `Solid` or `Link` variants
    */
   isSecondary?: boolean
+  customEventOptions?: MatomoEventOptions
 }
 
 const Button = forwardRef<IProps, "button">((props, ref) => {
-  const { toId, onClick, isSecondary, ...rest } = props
+  const { toId, onClick, isSecondary, customEventOptions, ...rest } = props
 
   const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (toId) {
-      scrollIntoView(toId)
-    }
+    toId && scrollIntoView(toId)
+    customEventOptions && trackCustomEvent(customEventOptions)
 
     onClick?.(e)
   }
