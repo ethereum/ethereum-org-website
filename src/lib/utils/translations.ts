@@ -1,42 +1,11 @@
 import i18nConfig from "../../../i18n.config.json"
 import { DEFAULT_LOCALE } from "../constants"
-import { I18nLocale, Lang } from "../types"
-
-export type Languages = {
-  [lang in Lang]: I18nLocale
-}
-
-export const defaultLanguage: Lang = "en"
+import { Lang, Languages } from "../types"
 
 // same data as in the `config.json` but indexed by language code
-const languages: Languages = i18nConfig.reduce((result, config) => {
+export const languages: Languages = i18nConfig.reduce((result, config) => {
   return { ...result, [config.code]: config }
 }, {} as Languages)
-
-const buildLangs = (process.env.GATSBY_BUILD_LANGS || "")
-  .split(",")
-  .filter(Boolean)
-
-// will take the same shape as `languages`. Only thing we are doing
-// here is filtering the desired langs to be built
-export const languageMetadata: {
-  [lang: string]: I18nLocale
-} = Object.fromEntries(
-  Object.entries(languages).filter(([lang]) => {
-    // BUILD_LANGS === empty means to build all the langs
-    if (!buildLangs.length) {
-      return true
-    }
-
-    return buildLangs.includes(lang)
-  })
-)
-
-export const supportedLanguages = Object.keys(languageMetadata) as Array<Lang>
-
-export const ignoreLanguages = (Object.keys(languages) as Array<Lang>).filter(
-  (lang) => !supportedLanguages.includes(lang)
-)
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfig.filter((language) => language.code === lang)

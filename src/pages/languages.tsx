@@ -11,7 +11,7 @@ import { I18nLocale, TranslationKey } from "@/lib/types"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
-  languageMetadata,
+  languages,
 } from "@/lib/utils/translations"
 
 import Input from "../components/Input"
@@ -50,9 +50,9 @@ const LanguagesPage = () => {
   const searchString = t("page-languages-filter-placeholder")
   let translationsCompleted: Array<I18nLocale> = []
 
-  for (const lang in languageMetadata) {
+  for (const lang in languages) {
     const langMetadata = {
-      ...languageMetadata[lang],
+      ...languages[lang],
       name: t(`language-${lang}` as TranslationKey),
     }
 

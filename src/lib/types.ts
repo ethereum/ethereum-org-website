@@ -104,6 +104,10 @@ export type I18nLocale = {
   dateFormat: string
 }
 
+export type Languages = {
+  [lang in Lang]: I18nLocale
+}
+
 export type TranslationKey = string
 
 export type LoadingState<T> =
