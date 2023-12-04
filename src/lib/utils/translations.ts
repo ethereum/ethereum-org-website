@@ -1,9 +1,14 @@
-import i18nConfigs from "../../../i18n.config.json"
+import i18nConfig from "../../../i18n.config.json"
 import { DEFAULT_LOCALE } from "../constants"
-import { Lang } from "../types"
+import { Lang, Languages } from "../types"
+
+// same data as in the `config.json` but indexed by language code
+export const languages: Languages = i18nConfig.reduce((result, config) => {
+  return { ...result, [config.code]: config }
+}, {} as Languages)
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
-  const langConfig = i18nConfigs.filter((language) => language.code === lang)
+  const langConfig = i18nConfig.filter((language) => language.code === lang)
 
   if (!langConfig.length)
     throw new Error("Language code not found in isLangRightToLeft")
@@ -17,7 +22,7 @@ export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
 
 export const isLang = (lang: string) => {
-  return i18nConfigs.map((language) => language.code).includes(lang)
+  return i18nConfig.map((language) => language.code).includes(lang)
 }
 
 export const getRequiredNamespacesForPage = (
@@ -81,6 +86,10 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/developers/docs/scaling")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
+  }
+
+  if (path.startsWith("/languages")) {
+    requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
 
   // Quizzes
