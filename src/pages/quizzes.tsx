@@ -34,7 +34,7 @@ const handleGHAdd = () =>
 const QuizzesHubPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
-  const { t } = useTranslation("learn-quizzes")
+  const { t } = useTranslation()
 
   const [userStats, updateUserStats] = useLocalQuizData()
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
@@ -71,14 +71,14 @@ const QuizzesHubPage: NextPage<
             <Box>
               <QuizzesList
                 content={ethereumBasicsQuizzes}
-                headingId={t("basics")}
-                descriptionId={t("basics-description")}
+                headingId={t("learn-quizzes:basics")}
+                descriptionId={t("learn-quizzes:basics-description")}
                 {...commonQuizListProps}
               />
               <QuizzesList
                 content={usingEthereumQuizzes}
-                headingId={t("using-ethereum")}
-                descriptionId={t("using-ethereum-description")}
+                headingId={t("learn-quizzes:using-ethereum")}
+                descriptionId={t("learn-quizzes:using-ethereum-description")}
                 {...commonQuizListProps}
               />
             </Box>
@@ -93,11 +93,11 @@ const QuizzesHubPage: NextPage<
             >
               <Box>
                 <Text align={{ base: "center", xl: "left" }} fontWeight="bold">
-                  <Translation id="want-more-quizzes" />
+                  <Translation id="learn-quizzes:want-more-quizzes" />
                 </Text>
 
                 <Text align={{ base: "center", xl: "left" }}>
-                  <Translation id="contribute" />
+                  <Translation id="learn-quizzes:contribute" />
                 </Text>
               </Box>
               <ButtonLink
@@ -108,7 +108,7 @@ const QuizzesHubPage: NextPage<
               >
                 <Flex alignItems="center">
                   <Icon as={FaGithub} color="text" boxSize={6} me={2} />
-                  <Translation id="add-quiz" />
+                  <Translation id="learn-quizzes:add-quiz" />
                 </Flex>
               </ButtonLink>
             </Flex>
