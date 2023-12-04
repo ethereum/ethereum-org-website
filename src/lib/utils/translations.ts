@@ -75,6 +75,14 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/developers")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
+  }
+
+  if (path.startsWith("/developers/learning-tools")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-index", "page-developers-learning-tools"]
+  }
+
   if (path.startsWith("/developers/docs/scaling")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }

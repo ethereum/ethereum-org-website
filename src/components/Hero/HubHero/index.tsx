@@ -10,6 +10,8 @@ import {
 
 import { Image } from "@/components/Image"
 
+import { Image } from "@/components/Image"
+
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 
@@ -31,7 +33,18 @@ const HubHero = (props: HubHeroProps) => {
 
   return (
     <Box position="relative">
-      <Image src={heroImgSrc} alt="" w="full" height={672} loading="eager" />
+      <Image
+        src={heroImgSrc}
+        alt=""
+        objectFit="cover"
+        h={{
+          base: "192px",
+          md: "256px",
+          lg: "320px",
+          xl: "576px",
+          "2xl": "672px",
+        }}
+      />
       <Stack
         spacing={{ base: "3", md: "4" }}
         p={{ base: "4", lg: "8" }}

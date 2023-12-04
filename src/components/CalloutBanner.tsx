@@ -37,11 +37,12 @@ const CalloutBanner: React.FC<IProps> = ({
       {...restProps}
     >
       {image && (
-        <Center>
+        <Flex>
           <Image
             src={image}
             alt={alt}
             w={imageWidth}
+            maxW={`${maxImageWidth}px`}
             style={{
               objectFit: "contain",
             }}
@@ -49,7 +50,7 @@ const CalloutBanner: React.FC<IProps> = ({
             mt={-24}
             mb={{ base: 0, lg: -24 }}
           />
-        </Center>
+        </Flex>
       )}
       <Flex
         flexGrow={1}
