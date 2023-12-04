@@ -30,12 +30,8 @@ const QuizzesList = ({
 }: QuizzesListProps) => (
   <Stack spacing="8" px={{ base: "8", lg: 0 }} pt="12">
     <Stack spacing="8">
-      <Heading size="xl">
-        <Translation id={headingId} />
-      </Heading>
-      <Text>
-        <Translation id={descriptionId} />
-      </Text>
+      <Heading size="xl">{headingId}</Heading>
+      <Text>{descriptionId}</Text>
     </Stack>
 
     <OrderedList

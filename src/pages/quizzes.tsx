@@ -71,14 +71,14 @@ const QuizzesHubPage: NextPage<
             <Box>
               <QuizzesList
                 content={ethereumBasicsQuizzes}
-                headingId="learn-quizzes:basics"
-                descriptionId="learn-quizzes:basics-description"
+                headingId={t("learn-quizzes:basics")}
+                descriptionId={t("learn-quizzes:basics-description")}
                 {...commonQuizListProps}
               />
               <QuizzesList
                 content={usingEthereumQuizzes}
-                headingId="learn-quizzes:using-ethereum"
-                descriptionId="learn-quizzes:using-ethereum-description"
+                headingId={t("learn-quizzes:using-ethereum")}
+                descriptionId={t("learn-quizzes:using-ethereum-description")}
                 {...commonQuizListProps}
               />
             </Box>
