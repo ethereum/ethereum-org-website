@@ -7,7 +7,7 @@ module.exports = {
   generateRobotsTxt: true,
   transform: async (_, path) => {
     const rootPath = path.split("/")[1]
-    if (path.endsWith("404")) return null
+    if (path.endsWith("/404")) return null
     const isDefaultLocale = !locales.includes(rootPath) || rootPath === "en"
     return {
       loc: path,
