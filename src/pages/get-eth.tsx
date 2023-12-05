@@ -205,11 +205,10 @@ const GetEthPage = ({ lastDataUpdateDate }) => {
           position="absolute"
           zIndex={-1}
           sizes="100%"
-          style={{ width: "100%", height: "auto" }}
-          maxW={{ base: "100vh", xl: "8xl" }}
+          style={{ width: "100%", height: "auto", objectFit: "cover" }}
+          overflowX="auto"
           minH="300px"
           maxH="400px"
-          backgroundSize="cover"
           alt={t("page-get-eth-hero-image-alt")}
           priority
         />
