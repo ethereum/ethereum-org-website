@@ -59,7 +59,6 @@
     "./src/components/EthVideo.tsx",
     "./src/components/EventCard.tsx",
     "./src/components/ExpandableInfo.tsx",
-    "./src/components/FeedbackWidget.tsx",
     "./src/components/FileContributorsCrowdin.tsx",
     "./src/components/FindWallet/WalletFilterSidebar/WalletFilterFeature/index.tsx",
     "./src/components/FindWallet/WalletFilterSidebar/WalletFilterFeature/useWalletFilterFeature.tsx",
