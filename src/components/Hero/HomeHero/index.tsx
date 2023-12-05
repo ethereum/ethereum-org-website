@@ -2,12 +2,11 @@ import * as React from "react"
 import { useTranslation } from "react-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 
+import { ButtonLink } from "@/components/Buttons"
+import { CommonHeroProps } from "@/components/Hero/utils"
 import { Image } from "@/components/Image"
-
-import { ButtonLink } from "../../Buttons"
-import Morpher from "../../Morpher"
-import Translation from "../../Translation"
-import { CommonHeroProps } from "../utils"
+import Morpher from "@/components/Morpher"
+import Translation from "@/components/Translation"
 
 export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
 

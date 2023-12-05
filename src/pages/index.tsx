@@ -22,7 +22,19 @@ import {
 import { ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
+import ActionCard from "@/components/ActionCard"
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import CalloutBanner from "@/components/CalloutBanner"
+import Codeblock from "@/components/Codeblock"
+import CodeModal from "@/components/CodeModal"
+import CommunityEvents from "@/components/CommunityEvents"
+import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
+import PageMetadata from "@/components/PageMetadata"
+// TODO: migrate stats fetching on build time
+// import StatsBoxGrid from "../components/StatsBoxGrid"
+import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
+import Translation from "@/components/Translation"
 
 import { runOnlyOnce } from "@/lib/utils/cache"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -33,23 +45,10 @@ import {
 
 import { BASE_TIME_UNIT } from "@/lib/constants"
 
-import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/Buttons/ButtonLink"
-import CalloutBanner from "../components/CalloutBanner"
-import Codeblock from "../components/Codeblock"
-import CodeModal from "../components/CodeModal"
-import CommunityEvents from "../components/CommunityEvents"
-import HomeHero from "../components/Hero/HomeHero"
-import PageMetadata from "../components/PageMetadata"
-// TODO: migrate stats fetching on build time
-// import StatsBoxGrid from "../components/StatsBoxGrid"
-import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
-import Translation from "../components/Translation"
-
-import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
-import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
-import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
-import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
+import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
+import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
+import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
+import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
 import devfixed from "@/public/developers-eth-blocks.png"
 import dogefixed from "@/public/doge-computer.png"

@@ -7,8 +7,8 @@ import Highlight, {
 import Prism from "prism-react-renderer/prism"
 import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
-import CopyToClipboard from "./CopyToClipboard"
-import Emoji from "./Emoji"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
 
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 ;(typeof global !== "undefined" ? global : window).Prism = Prism

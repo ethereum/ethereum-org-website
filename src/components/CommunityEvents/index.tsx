@@ -14,13 +14,13 @@ import {
 
 import type { CommunityEvent } from "@/lib/interfaces"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
+import { ButtonLink } from "@/components/Buttons"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-import { ButtonLink } from "../Buttons"
-import InlineLink from "../Link"
-import OldHeading from "../OldHeading"
-import Text from "../OldText"
-import Translation from "../Translation"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({

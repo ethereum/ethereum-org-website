@@ -3,8 +3,9 @@ import axios from "axios"
 import type {
   CommunityEventsReturnType,
   ReqCommunityEvent,
-} from "../interfaces"
-import { IS_DEV } from "../utils/env"
+} from "@/lib/interfaces"
+
+import { IS_DEV } from "@/lib/utils/env"
 
 export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType> {
   const apiKey = process.env.GOOGLE_API_KEY

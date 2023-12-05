@@ -12,9 +12,9 @@ import {
 
 import { TranslationKey } from "@/lib/types"
 
-import { Image } from "./Image"
-import { BaseLink } from "./Link"
-import Translation from "./Translation"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
 
 export interface ITitleCardItem {
   title: string

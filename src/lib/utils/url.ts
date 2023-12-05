@@ -1,4 +1,4 @@
-import { DISCORD_PATH } from "../constants"
+import { DISCORD_PATH } from "@/lib/constants"
 
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")

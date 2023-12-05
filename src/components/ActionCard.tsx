@@ -11,9 +11,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { Image } from "./Image"
-import { BaseLink } from "./Link"
-import Text from "./OldText"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
