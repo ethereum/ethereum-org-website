@@ -1,5 +1,5 @@
 /**
- * Run an async function only once and cache the result
+ * Run an async function only once and cache the result during build time to avoid multiple calls. The purpose is to avoid hitting external APIs rate limits.
  *
  * @param fn async function to run only once
  * @returns a new function that will run the async function only once

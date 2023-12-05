@@ -1,5 +1,3 @@
-import axios from "axios"
-
 import type {
   CommunityEventsReturnType,
   ReqCommunityEvent,
@@ -12,33 +10,17 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
   const calendarId = process.env.GOOGLE_CALENDAR_ID
 
   try {
-    const futureEventsReq = await axios.get<{ items: ReqCommunityEvent[] }>(
-      `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events`,
-      {
-        params: {
-          key: apiKey,
-          timeMin: new Date().toISOString(),
-          maxResults: 3,
-          singleEvents: true,
-          orderBy: "startTime",
-        },
-      }
-    )
+    const futureEventsReq: ReqCommunityEvent[] = await fetch(
+      `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${new Date().toISOString()}&maxResults=3`
+    ).then(response => response.json())
+    .then(data => data.items)
 
-    const pastEventsReq = await axios.get<{ items: ReqCommunityEvent[] }>(
-      `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events`,
-      {
-        params: {
-          key: apiKey,
-          timeMax: new Date().toISOString(),
-          maxResults: 4,
-          singleEvents: true,
-          orderBy: "startTime",
-        },
-      }
-    )
+    const pastEventsReq: ReqCommunityEvent[] = await fetch(
+      `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMax=${new Date().toISOString()}&maxResults=4`
+    ).then(response => response.json())
+    .then(data => data.items)
 
-    const pastEventData = pastEventsReq.data.items.map((event) => {
+    const pastEventData = pastEventsReq.map((event) => {
       return {
         date: event.start.dateTime,
         title: event.summary,
@@ -46,7 +28,7 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
         pastEventLink: event.location,
       }
     })
-    const upcomingEventData = futureEventsReq.data.items.map((event) => {
+    const upcomingEventData = futureEventsReq.map((event) => {
       return {
         date: event.start.dateTime,
         title: event.summary,

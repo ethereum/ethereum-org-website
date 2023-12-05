@@ -1,5 +1,5 @@
 import * as React from "react"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
@@ -11,7 +11,7 @@ import Translation from "@/components/Translation"
 export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
 
 const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
-  const { t } = useTranslation("common")
+  const { t } = useTranslation("page-index")
   return (
     <Box>
       <Box h={440}>
@@ -35,13 +35,13 @@ const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
           <Morpher />
           <VStack spacing="6">
             <Heading as="h1" size="2xl">
-              <Translation id="page-index:page-index-title" />
+{t("page-index:page-index-title")}
             </Heading>
             <Text size="xl">
-              <Translation id="page-index:page-index-description" />
+{t("page-index:page-index-description")}
             </Text>
             <ButtonLink to="/learn/">
-              <Translation id="page-index:page-index-title-button" />
+{t("page-index:page-index-title-button")}
             </ButtonLink>
           </VStack>
         </Stack>

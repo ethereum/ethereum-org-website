@@ -100,13 +100,13 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
       <Center w={{ base: "100%", lg: "40%" }}>
         <Box pe={8} ps={{ base: 8, lg: 0 }}>
           <OldHeading>
-            <Translation id="page-index:community-events-content-heading" />
+{t("page-index:community-events-content-heading")}
           </OldHeading>
           <Text>
             <Translation id="page-index:community-events-content-1" />
           </Text>
           <Text>
-            <Translation id="page-index:community-events-content-2" />
+{t("page-index:community-events-content-2")}
           </Text>
         </Box>
       </Center>
@@ -137,7 +137,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
               </Box>
             ) : (
               <Text fontSize="3xl" fontWeight="bold" mb={8}>
-                <Translation id="page-index:community-events-no-events-planned" />
+{t("page-index:community-events-no-events-planned")}
               </Text>
             )}
             <Flex flexDirection="column" gap={2}>
@@ -168,7 +168,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
-            <Translation id="page-index:community-events-upcoming-calls" />
+{t("page-index:community-events-upcoming-calls")}
           </Text>
           <Divider mb={4} />
           {upcomingEventData.slice(1).length ? (
@@ -184,11 +184,11 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
             })
           ) : (
             <Text mx="auto">
-              <Translation id="page-index:community-events-no-upcoming-calls" />
+{t("page-index:community-events-no-upcoming-calls")}
             </Text>
           )}
           <Text fontSize="lg" fontWeight="bold" mb={2} mt={4}>
-            <Translation id="page-index:community-events-previous-calls" />
+{t("page-index:community-events-previous-calls")}
           </Text>
           <Divider mb={4} />
           {pastEventData.length ? (
@@ -199,7 +199,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
             })
           ) : (
             <Text mx="auto">
-              <Translation id="page-index:community-events-there-are-no-past-calls" />
+{t("page-index:community-events-there-are-no-past-calls")}
             </Text>
           )}
         </Flex>

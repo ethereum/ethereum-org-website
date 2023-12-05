@@ -36,7 +36,7 @@ import PageMetadata from "@/components/PageMetadata"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
-import { runOnlyOnce } from "@/lib/utils/cache"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
@@ -197,7 +197,7 @@ export const getStaticProps = (async (context) => {
       communityEvents,
       lastDeployDate,
     },
-    revalidate: BASE_TIME_UNIT * 24,
+    revalidate: BASE_TIME_UNIT * 24, // Rebuilds page daily
   }
 }) satisfies GetStaticProps<Props>
 
