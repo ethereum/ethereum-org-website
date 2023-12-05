@@ -1,30 +1,26 @@
-import React, { ReactNode, useState } from "react"
+import { type ReactNode, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Flex, FlexProps, Heading } from "@chakra-ui/react"
+import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
 
-import { Button } from "./Buttons"
-import { FeedbackThumbsUpIcon } from "./icons"
+import { Button } from "@/components/Buttons"
+import { FeedbackThumbsUpIcon } from "@/components/icons"
 
-// TODO: add trackCustomEvent when util is migrated
-// import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// TODO: add useSurvey after hook is migrated
-// import { useSurvey } from "../hooks/useSurvey"
+import Translation from "./Translation"
 
-export interface IProps extends FlexProps {
+import { useSurvey } from "@/hooks/useSurvey"
+
+type FeedbackCardProps = FlexProps & {
   prompt?: string
   isArticle?: boolean
 }
 
-const FeedbackCard: React.FC<IProps> = ({
-  prompt,
-  isArticle = false,
-  ...props
-}) => {
+const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  // const surveyUrl = useSurvey(feedbackSubmitted)
+  const surveyUrl = useSurvey(feedbackSubmitted)
   const { asPath } = useRouter()
 
   const isTutorial = asPath?.includes("tutorials")
@@ -32,7 +28,6 @@ const FeedbackCard: React.FC<IProps> = ({
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
       if (prompt) return prompt
-
       if (isTutorial) return t("feedback-card-prompt-tutorial")
       if (isArticle) return t("feedback-card-prompt-article")
 
@@ -43,23 +38,21 @@ const FeedbackCard: React.FC<IProps> = ({
   }
 
   const handleSubmit = (choice: boolean): void => {
-    // TODO: add trackCustomEvent when util is migrated
-    // trackCustomEvent({
-    //   eventCategory: `Page is helpful feedback`,
-    //   eventAction: `Clicked`,
-    //   eventName: String(choice),
-    // })
+    trackCustomEvent({
+      eventCategory: `Page is helpful feedback`,
+      eventAction: `Clicked`,
+      eventName: String(choice),
+    })
     setFeedbackSubmitted(true)
   }
 
   const handleSurveyOpen = (): void => {
-    // TODO: add trackCustomEvent when util is migrated
-    // trackCustomEvent({
-    //   eventCategory: `Feedback survey opened`,
-    //   eventAction: `Clicked`,
-    //   eventName: "Feedback survey opened",
-    // })
-    // window && surveyUrl && window.open(surveyUrl, "_blank")
+    trackCustomEvent({
+      eventCategory: `Feedback survey opened`,
+      eventAction: `Clicked`,
+      eventName: "Feedback survey opened",
+    })
+    window && surveyUrl && window.open(surveyUrl, "_blank")
   }
 
   return (
@@ -68,28 +61,24 @@ const FeedbackCard: React.FC<IProps> = ({
       borderColor="border"
       bg="feedbackGradient"
       borderRadius="base"
-      p={6}
+      p="6"
       direction="column"
-      mb={4}
-      mt={8}
+      mb="4"
+      mt="8"
       w="full"
       {...props}
     >
-      <Flex direction="column" gap={4}>
-        <Heading as="h3" m={0} mb={2} fontSize="1.375rem" fontWeight="bold">
+      <Flex direction="column" gap="4">
+        <Heading as="h3" m="0" mb="2" fontSize="1.375rem" fontWeight="bold">
           {getTitle(feedbackSubmitted)}
         </Heading>
         {feedbackSubmitted && (
           <p>
-            {t("feedback-widget-thank-you-subtitle")}{" "}
-            {t("feedback-widget-thank-you-subtitle-ext")}{" "}
-            <a href="https://discord.gg/rZz26QWfCg\" target="_blank\">
-              Discord
-            </a>
-            .
+            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
+            <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}
-        <Flex gap={4}>
+        <Flex gap="4">
           {!feedbackSubmitted ? (
             <>
               <Button
