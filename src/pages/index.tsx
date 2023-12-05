@@ -31,6 +31,8 @@ import {
   isLangRightToLeft,
 } from "@/lib/utils/translations"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import ActionCard from "../components/ActionCard"
 import ButtonLink from "../components/Buttons/ButtonLink"
 import CalloutBanner from "../components/CalloutBanner"
@@ -196,6 +198,7 @@ export const getStaticProps = (async (context) => {
       communityEvents,
       lastDeployDate,
     },
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
