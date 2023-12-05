@@ -24,7 +24,7 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import { Image } from "@/components/Image"
 
-import { cacheAsyncFn } from "@/lib/utils/cache"
+import { runOnlyOnce } from "@/lib/utils/cache"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
@@ -179,7 +179,7 @@ type Props = SSRConfig & {
   communityEvents: CommunityEventsReturnType
 }
 
-const cachedFetchCommunityEvents = cacheAsyncFn(fetchCommunityEvents)
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 
 export const getStaticProps = (async (context) => {
   const { locale } = context
