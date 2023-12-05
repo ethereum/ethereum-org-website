@@ -71,6 +71,7 @@
     "mdast-util-toc": "^7.0.0",
     "minimist": "^1.2.8",
     "polished": "^4.2.2",
+    "raw-loader": "^4.0.2",
     "storybook": "7.5.3",
     "storybook-react-i18next": "^2.0.9",
     "ts-node": "^10.9.1",
