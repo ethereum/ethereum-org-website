@@ -27,6 +27,7 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
+export const BASE_TIME_UNIT = 3600 // 1 hour
 
 // Quiz Hub
 export const PROGRESS_BAR_GAP = "4px"

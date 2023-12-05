@@ -5,9 +5,10 @@ import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
 
 import { Button } from "@/components/Buttons"
 import { FeedbackThumbsUpIcon } from "@/components/icons"
-import Link from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import Translation from "./Translation"
 
 import { useSurvey } from "@/hooks/useSurvey"
 
@@ -73,9 +74,8 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
         </Heading>
         {feedbackSubmitted && (
           <p>
-            {t("feedback-widget-thank-you-subtitle")}{" "}
-            {t("feedback-widget-thank-you-subtitle-ext")}{" "}
-            <Link href="/discord/">Discord</Link>.
+            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
+            <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}
         <Flex gap="4">

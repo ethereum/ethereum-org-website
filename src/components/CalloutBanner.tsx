@@ -38,18 +38,22 @@ const CalloutBanner = ({
       borderRadius="base"
       {...props}
     >
-      <Image
-        src={image}
-        alt={alt}
-        w={imageWidth}
-        maxW={`${maxImageWidth}px`}
-        style={{
-          objectFit: "contain",
-        }}
-        alignSelf="center"
-        mt={-24}
-        mb={{ base: 0, lg: -24 }}
-      />
+      {image && (
+        <Flex>
+          <Image
+            src={image}
+            alt={alt}
+            w={imageWidth}
+            maxW={`${maxImageWidth}px`}
+            style={{
+              objectFit: "contain",
+            }}
+            alignSelf="center"
+            mt={-24}
+            mb={{ base: 0, lg: -24 }}
+          />
+        </Flex>
+      )}
       <Flex
         flexGrow={1}
         flexShrink={0}
