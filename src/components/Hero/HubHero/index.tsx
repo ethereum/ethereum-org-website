@@ -4,7 +4,7 @@ import {
   HStack,
   Stack,
   Text,
-  useColorModeValue,
+  useBreakpointValue,
 } from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
@@ -19,32 +19,27 @@ const HubHero = ({
   description,
   buttons,
 }: CommonHeroProps) => {
-  const largeContentBg = useColorModeValue(
-    "rgba(255, 255, 255, 0.80)",
-    "rgba(34, 34, 34, 0.80)"
-  )
-
+  const height = useBreakpointValue({
+    base: "192px",
+    md: "256px",
+    lg: "320px",
+    xl: "576px",
+    "2xl": "672px",
+  })
   return (
     <Box position="relative">
       <Image
         src={heroImgSrc}
         alt=""
-        w="full"
-        h={{
-          base: "192px",
-          md: "256px",
-          lg: "320px",
-          xl: "576px",
-          "2xl": "672px",
-        }}
-        loading="eager"
+        sizes="100vw"
+        style={{ width: "100vw", objectFit: "cover", height }}
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
-        bg={{ xl: largeContentBg }}
+        bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
         insetStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
