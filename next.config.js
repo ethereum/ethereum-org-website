@@ -1,6 +1,7 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const { i18n } = require("./next-i18next.config")
+const redirects = require("./redirects")
 
 const experimental =
   (process.env.LIMIT_CPU || "").toLowerCase() === "true"
@@ -23,12 +24,13 @@ module.exports = (phase, { defaultConfig }) => {
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
-        use: 'yaml-loader',
-      });
-  
-      return config;
+        use: "yaml-loader",
+      })
+
+      return config
     },
     i18n,
+    redirects,
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
