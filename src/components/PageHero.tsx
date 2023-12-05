@@ -148,16 +148,20 @@ const PageHero = ({
         {children}
       </Box>
       <Image
+        src={image}
         flex="1 1 50%"
         alignSelf="center"
         mt={{ base: 0, lg: 12 }}
         ms={{ base: 0, lg: 12 }}
-        w="full"
         maxWidth={{ base: "560px", lg: "624px" }}
-        src={image}
-        style={{ objectFit: "contain" }}
+        sizes="100%"
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+        }}
         alt={alt}
-        loading="eager"
+        priority
       />
     </Flex>
   </Box>

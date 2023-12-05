@@ -346,7 +346,7 @@ const RunANodePage = () => {
     title: t("page-run-a-node-title"),
     header: <Translation id="page-run-a-node:page-run-a-node-hero-header" />,
     subtitle: t("page-run-a-node-hero-subtitle"),
-    image: resizeImage(ethereumInside, 624),
+    image: ethereumInside,
     alt: t("page-run-a-node-hero-alt"),
     buttons: [
       {
