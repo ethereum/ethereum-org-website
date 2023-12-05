@@ -40,7 +40,6 @@ import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { resizeImage } from "@/lib/utils/resizeImage"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { InfoGrid } from "@/layouts/Staking"
@@ -463,7 +462,12 @@ const RunANodePage = () => {
             <Text>{t("page-run-a-node-what-3-text")}</Text>
           </Width60>
           <Width40>
-            <Image src={resizeImage(hackathon, 624)} alt="" />
+            <Image
+              src={hackathon}
+              alt=""
+              sizes="624px"
+              style={{ width: "624px", height: "auto" }}
+            />
           </Width40>
         </TwoColumnContent>
       </Content>
@@ -473,7 +477,7 @@ const RunANodePage = () => {
           alignSelf="center"
           width={{ base: "full", md: "90%" }}
           mb={{ base: 0, md: 4 }}
-          image={resizeImage(impact, 300)}
+          image={impact}
           title={<Translation id="page-run-a-node:page-run-a-node-who-title" />}
           contentPreview={
             <Translation id="page-run-a-node:page-run-a-node-who-preview" />
@@ -799,7 +803,12 @@ const RunANodePage = () => {
             </ButtonContainer>
           </Column>
           <Column>
-            <Image src={resizeImage(community, 624)} alt="" />
+            <Image
+              src={community}
+              alt=""
+              sizes="624px"
+              style={{ width: "624px", height: "auto" }}
+            />
           </Column>
         </SplitContent>
       </Content>
@@ -834,8 +843,10 @@ const RunANodePage = () => {
       <StakingCalloutContainer>
         <Column>
           <Image
-            src={resizeImage(leslie, 624)}
+            src={leslie}
             alt=""
+            sizes="624px"
+            style={{ width: "624px", height: "auto" }}
             transform={{
               base: "scaleX(-1) translateY(-3rem)",
               lg: "scaleX(-1) scale(1.15) translateX(2rem)",

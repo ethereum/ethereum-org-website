@@ -84,7 +84,14 @@ const ExpandableInfo = ({
         flexDirection={{ base: "column", md: "row" }}
         width="full"
       >
-        {image && <Image src={image} alt="" />}
+        {image && (
+          <Image
+            src={image}
+            alt=""
+            sizes="300px"
+            style={{ width: "300px", height: "auto" }}
+          />
+        )}
         <HStack gap="12" width="full">
           <Box me="4">
             <HStack width="full" my="4" sx={{ img: { me: 6 } }}>
