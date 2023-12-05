@@ -36,8 +36,8 @@ import PageMetadata from "@/components/PageMetadata"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
-import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
