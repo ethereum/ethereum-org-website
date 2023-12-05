@@ -16,7 +16,7 @@ const whitelist = [
 ]
 
 /**
- * Look for unsed translations keys in the provided `paths`.
+ * Look for unused translations keys in the provided `paths`.
  *
  * - For each file found in `src/intl/{defaultLang}/`
  * - Reads all the translation keys
