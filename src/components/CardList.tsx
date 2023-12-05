@@ -62,7 +62,14 @@ const Card = ({
 
   return (
     <CardContainer {...props}>
-      {image && <Image src={image} alt={alt ?? ""} minW="20px" />}
+      {image && (
+        <Image
+          src={image}
+          alt={alt ?? ""}
+          sizes="20px"
+          style={{ width: "20px", height: "auto" }}
+        />
+      )}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay

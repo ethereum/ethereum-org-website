@@ -2,7 +2,13 @@ import type { GetStaticProps } from "next/types"
 import { type SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
-import { Box, type BoxProps, Flex, type FlexProps } from "@chakra-ui/react"
+import {
+  Box,
+  type BoxProps,
+  Flex,
+  type FlexProps,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -121,31 +127,31 @@ const GetEthPage = ({ lastDataUpdateDate }) => {
     {
       title: "1inch",
       link: "https://1inch.exchange/#/",
-      image: resizeImage(oneinch, 20),
+      image: oneinch,
       alt: "",
     },
     {
       title: "Bancor",
       link: "https://www.bancor.network/",
-      image: resizeImage(bancor, 20),
+      image: bancor,
       alt: "",
     },
     {
       title: "Kyber",
       link: "https://kyberswap.com/#/swap/",
-      image: resizeImage(kyber, 20),
+      image: kyber,
       alt: "",
     },
     {
       title: "Loopring",
       link: "https://loopring.io/",
-      image: resizeImage(loopring, 20),
+      image: loopring,
       alt: "",
     },
     {
       title: "Uniswap",
       link: "https://app.uniswap.org/#/swap",
-      image: resizeImage(uniswap, 20),
+      image: uniswap,
       alt: "",
     },
   ].sort((a, b) => a.title.localeCompare(b.title))
@@ -167,6 +173,12 @@ const GetEthPage = ({ lastDataUpdateDate }) => {
       description: t("page-get-eth-article-store-digital-assets-desc"),
     },
   ]
+
+  const walletImageWidth = useBreakpointValue({
+    base: "full",
+    sm: "60%",
+    md: "50%",
+  })
 
   return (
     <Page>
@@ -192,7 +204,8 @@ const GetEthPage = ({ lastDataUpdateDate }) => {
           src={hero}
           position="absolute"
           zIndex={-1}
-          w="full"
+          sizes="100%"
+          style={{ width: "100%", height: "auto" }}
           maxW={{ base: "100vh", xl: "8xl" }}
           minH="300px"
           maxH="400px"
@@ -377,10 +390,10 @@ const GetEthPage = ({ lastDataUpdateDate }) => {
       <TwoColumnContent>
         <Flex as={LeftColumn} flexDir="column">
           <Image
-            src={resizeImage(wallet, 600)}
+            src={wallet}
+            sizes={walletImageWidth}
+            style={{ width: walletImageWidth, height: "auto" }}
             alignSelf="center"
-            w={{ base: "full", sm: "60%", md: "50%" }}
-            maxW="600px"
             mb={8}
             alt=""
           />
