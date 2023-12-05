@@ -14,7 +14,6 @@ import { useTranslation } from "next-i18next"
 import type { ImageProps } from "@/components/Image"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { resizeImage } from "@/lib/utils/resizeImage"
 
 import exchangeData from "@/data/exchangesByCountry"
 
@@ -105,175 +104,173 @@ type FilteredData = {
 
 const UNITED_STATES = "United States of America (USA)"
 
-const resize = (image: ImageProps["src"]): ImageProps["src"] => resizeImage(image, 20)
-
 const exchanges: ExchangeDetails = {
   binance: {
     name: "Binance",
     url: "https://www.binance.com/",
-    image: resize(binance),
+    image: binance,
     usaExceptions: [],
   },
   binanceus: {
     name: "Binance US",
     url: "https://www.binance.us/",
-    image: resize(binance),
+    image: binance,
     usaExceptions: ["HI", "ID", "NY", "TX", "VT"],
   },
   bitbuy: {
     name: "Bitbuy",
     url: "https://bitbuy.ca/",
-    image: resize(bitbuy),
+    image: bitbuy,
     usaExceptions: [],
   },
   bitfinex: {
     name: "Bitfinex",
     url: "https://www.bitfinex.com/",
-    image: resize(bitfinex),
+    image: bitfinex,
     usaExceptions: [],
   },
   bitflyer: {
     name: "bitFlyer",
     url: "https://bitflyer.com/",
-    image: resize(bitflyer),
+    image: bitflyer,
     usaExceptions: ["NV", "WV"],
   },
   bitkub: {
     name: "Bitkub",
     url: "https://www.bitkub.com/",
-    image: resize(bitkub),
+    image: bitkub,
     usaExceptions: [],
   },
   bitso: {
     name: "Bitso",
     url: "https://bitso.com/",
-    image: resize(bitso),
+    image: bitso,
     usaExceptions: [],
   },
   bittrex: {
     name: "Bittrex",
     url: "https://global.bittrex.com/",
-    image: resize(bittrex),
+    image: bittrex,
     usaExceptions: ["CT", "HI", "NY", "NH", "TX", "VT", "VA"],
   },
   bitvavo: {
     name: "Bitvavo",
     url: "https://bitvavo.com/en/ethereum",
-    image: resize(bitvavo),
+    image: bitvavo,
     usaExceptions: [],
   },
   bybit: {
     name: "Bybit",
     url: "https://www.bybit.com/",
-    image: resize(bybit),
+    image: bybit,
     usaExceptions: [],
   },
   coinbase: {
     name: "Coinbase",
     url: "https://www.coinbase.com/",
-    image: resize(coinbase),
+    image: coinbase,
     usaExceptions: ["HI"],
   },
   coinmama: {
     name: "Coinmama",
     url: "https://www.coinmama.com/",
-    image: resize(coinmama),
+    image: coinmama,
     usaExceptions: ["CT", "FL", "IA", "NY"],
   },
   coinspot: {
     name: "CoinSpot",
     url: "https://www.coinspot.com.au/",
-    image: resize(coinspot),
+    image: coinspot,
     usaExceptions: [],
   },
   cryptocom: {
     name: "Crypto.com",
     url: "https://crypto.com/exchange/",
-    image: resize(cryptocom),
+    image: cryptocom,
     usaExceptions: ["NY"],
   },
   easycrypto: {
     name: "Easy Crypto",
     url: "https://easycrypto.com/",
-    image: resize(easycrypto),
+    image: easycrypto,
     usaExceptions: [],
   },
   gateio: {
     name: "Gate.io",
     url: "https://www.gate.io/",
-    image: resize(gateio),
+    image: gateio,
     usaExceptions: [],
   },
   huobiglobal: {
     name: "Huobi Global",
     url: "https://huobi.com/",
-    image: resize(huobiglobal),
+    image: huobiglobal,
     usaExceptions: [],
   },
   itezcom: {
     name: "Itez",
     url: "https://itez.com/",
-    image: resize(itezcom),
+    image: itezcom,
     usaExceptions: [],
   },
   kraken: {
     name: "Kraken",
     url: "https://www.kraken.com/",
-    image: resize(kraken),
+    image: kraken,
     usaExceptions: ["NY, WA"],
   },
   kucoin: {
     name: "KuCoin",
     url: "https://www.kucoin.com/",
-    image: resize(kucoin),
+    image: kucoin,
     usaExceptions: [],
   },
   moonpay: {
     name: "MoonPay",
     url: "https://www.moonpay.com/",
-    image: resize(moonpay),
+    image: moonpay,
     usaExceptions: ["VI"],
   },
   mtpelerin: {
     name: "Mt Pelerin",
     url: "https://www.mtpelerin.com/",
-    image: resize(mtpelerin),
+    image: mtpelerin,
     usaExceptions: [],
   },
   okx: {
     name: "OKX",
     url: "https://www.okx.com/",
-    image: resize(okx),
+    image: okx,
     usaExceptions: [],
   },
   gemini: {
     name: "Gemini",
     url: "https://gemini.com/",
-    image: resize(gemini),
+    image: gemini,
     usaExceptions: ["HI"],
   },
   rain: {
     name: "Rain",
     url: "https://rain.bh",
-    image: resize(rain),
+    image: rain,
     usaExceptions: [],
   },
   shakepay: {
     name: "Shakepay",
     url: "https://shakepay.com",
-    image: resize(shakepay),
+    image: shakepay,
     usaExceptions: [],
   },
   wazirx: {
     name: "WazirX",
     url: "https://wazirx.com/",
-    image: resize(wazirx),
+    image: wazirx,
     usaExceptions: [],
   },
   korbit: {
     name: "Korbit",
     url: "https://korbit.co.kr",
-    image: resize(korbit),
+    image: korbit,
     usaExceptions: [],
   },
 }
