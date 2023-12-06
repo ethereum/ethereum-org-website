@@ -1,22 +1,18 @@
 // Libraries
-import React, { ReactNode, useEffect, useState } from "react"
+import React, { ReactNode } from "react"
 import { graphql, PageProps } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "gatsby-plugin-react-i18next"
 import {
   Badge,
   Box,
   BoxProps,
   Center,
-  Divider,
-  DividerProps,
   Flex,
   GridItem,
   HeadingProps,
-  Icon,
   ListItem,
   SimpleGrid,
   UnorderedList,
-  useBreakpointValue,
 } from "@chakra-ui/react"
 
 // Data
@@ -32,25 +28,26 @@ import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import Layer2ProductCard from "../components/Layer2ProductCard"
 import InlineLink from "../components/Link"
 import OrderedList from "../components/OrderedList"
-import PageHero from "../components/PageHero"
 import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
 import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
-import Tooltip from "../components/Tooltip"
 import Translation from "../components/Translation"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
 import GatsbyImage from "../components/GatsbyImage"
+import { HubHero, type HubHeroProps } from "../components/Hero"
 
 // Utils
-import { getData } from "../utils/cache"
-import { getLocaleForNumberFormat, TranslationKey } from "../utils/translations"
-import { Lang } from "../utils/languages"
+// Todo: Reimplement Big Numbers
+// import { getData } from "../utils/cache"
+// import { Lang } from "../utils/languages"
+import { TranslationKey } from "../utils/translations"
 import { getImage } from "../utils/image"
 
 // Constants
-import { GATSBY_FUNCTIONS_PATH } from "../constants"
-import { MdInfoOutline } from "react-icons/md"
+// Todo: Reimplement Big Numbers
+// import { GATSBY_FUNCTIONS_PATH } from "../constants"
+// import { MdInfoOutline } from "react-icons/md"
 import { merge } from "lodash"
 
 type ChildOnlyType = {
@@ -86,19 +83,6 @@ const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
   />
 )
 
-const StyledInfoIcon = () => (
-  <Icon
-    as={MdInfoOutline}
-    color="text"
-    mr={2}
-    opacity={0.8}
-    boxSize="full"
-    _hover={{ color: "primary.base" }}
-    _active={{ color: "primary.base" }}
-    _focus={{ color: "primary.base" }}
-  />
-)
-
 const TwoColumnContent = (props: ChildOnlyType) => (
   <Flex
     justifyContent="space-between"
@@ -109,47 +93,61 @@ const TwoColumnContent = (props: ChildOnlyType) => (
   />
 )
 
-const StatDivider = () => {
-  const responsiveOrientation = useBreakpointValue<DividerProps["orientation"]>(
-    { base: "horizontal", md: "vertical" }
-  )
-  return (
-    <Divider
-      orientation={responsiveOrientation}
-      borderColor="homeDivider"
-      my={{ base: 8, md: 0 }}
-    />
-  )
-}
+// Todo: Reimplement Big Numbers
+// const StyledInfoIcon = () => (
+//   <Icon
+//     as={MdInfoOutline}
+//     color="text"
+//     mr={2}
+//     opacity={0.8}
+//     boxSize="full"
+//     _hover={{ color: "primary.base" }}
+//     _active={{ color: "primary.base" }}
+//     _focus={{ color: "primary.base" }}
+//   />
+// )
 
-const StatBox = (props: ChildOnlyType) => (
-  <Center
-    flexDirection="column"
-    flex={{ base: "100%", md: "33%" }}
-    textAlign="center"
-    px={5}
-    {...props}
-  />
-)
+// const StatDivider = () => {
+//   const responsiveOrientation = useBreakpointValue<DividerProps["orientation"]>(
+//     { base: "horizontal", md: "vertical" }
+//   )
+//   return (
+//     <Divider
+//       orientation={responsiveOrientation}
+//       borderColor="homeDivider"
+//       my={{ base: 8, md: 0 }}
+//     />
+//   )
+// }
 
-const StatPrimary = (props: { content: string }) => (
-  <Text
-    color="primary.base"
-    fontFamily="monospace"
-    fontWeight="bold"
-    fontSize="2rem"
-  >
-    {props.content}
-  </Text>
-)
+// const StatBox = (props: ChildOnlyType) => (
+//   <Center
+//     flexDirection="column"
+//     flex={{ base: "100%", md: "33%" }}
+//     textAlign="center"
+//     px={5}
+//     {...props}
+//   />
+// )
 
-const StatSpan = (props: ChildOnlyType) => (
-  <Flex justifyContent="center" gap={2} {...props} />
-)
+// const StatPrimary = (props: { content: string }) => (
+//   <Text
+//     color="primary.base"
+//     fontFamily="monospace"
+//     fontWeight="bold"
+//     fontSize="2rem"
+//   >
+//     {props.content}
+//   </Text>
+// )
 
-const StatDescription = (props: ChildOnlyType) => (
-  <Text opacity={0.8} m={0} {...props} />
-)
+// const StatSpan = (props: ChildOnlyType) => (
+//   <Flex justifyContent="center" gap={2} {...props} />
+// )
+
+// const StatDescription = (props: ChildOnlyType) => (
+//   <Text opacity={0.8} m={0} {...props} />
+// )
 
 const Layer2CardGrid = (props: ChildOnlyType) => (
   <SimpleGrid
@@ -159,112 +157,115 @@ const Layer2CardGrid = (props: ChildOnlyType) => (
   />
 )
 
-interface L2DataResponseItem {
-  daily: {
-    data: Array<[string, number, number]>
-  }
-}
-interface L2DataResponse {
-  layers2s: L2DataResponseItem
-  combined: L2DataResponseItem
-  bridges: L2DataResponseItem
-}
+// Todo: Reimplement Big Numbers
+// interface L2DataResponseItem {
+//   daily: {
+//     data: Array<[string, number, number]>
+//   }
+// }
+// interface L2DataResponse {
+//   layers2s: L2DataResponseItem
+//   combined: L2DataResponseItem
+//   bridges: L2DataResponseItem
+// }
 
-interface FeeDataResponse {
-  data: Array<{
-    id: string
-    results: { feeTransferEth: number }
-    errors?: { [key: string]: string }
-  }>
-}
+// interface FeeDataResponse {
+//   data: Array<{
+//     id: string
+//     results: { feeTransferEth: number }
+//     errors?: { [key: string]: string }
+//   }>
+// }
 
 const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
   const { t } = useTranslation()
-  const { language } = useI18next()
-  const [tvl, setTVL] = useState("loading...")
-  const [percentChangeL2, setL2PercentChange] = useState("loading...")
-  const [averageFee, setAverageFee] = useState("loading...")
+  // Todo: Reimplement Big Numbers
+  // const { language } = useI18next()
+  // const [tvl, setTVL] = useState("loading...")
+  // const [percentChangeL2, setL2PercentChange] = useState("loading...")
+  // const [averageFee, setAverageFee] = useState("loading...")
 
-  useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  // Todo: Reimplement Big Numbers
+  // useEffect(() => {
+  //   const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
 
-    const fetchL2Beat = async (): Promise<void> => {
-      try {
-        const l2BeatData = await getData<L2DataResponse>(
-          `${GATSBY_FUNCTIONS_PATH}/l2beat`
-        )
+  //   const fetchL2Beat = async (): Promise<void> => {
+  //     try {
+  //       const l2BeatData = await getData<L2DataResponse>(
+  //         `${GATSBY_FUNCTIONS_PATH}/l2beat`
+  //       )
 
-        const dailyData = l2BeatData.layers2s.daily.data
+  //       const dailyData = l2BeatData.layers2s.daily.data
 
-        // formatted TVL from L2beat API formatted
-        const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
-          style: "currency",
-          currency: "USD",
-          notation: "compact",
-          minimumSignificantDigits: 2,
-          maximumSignificantDigits: 3,
-        }).format(dailyData[dailyData.length - 1][1])
+  //       // formatted TVL from L2beat API formatted
+  //       const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
+  //         style: "currency",
+  //         currency: "USD",
+  //         notation: "compact",
+  //         minimumSignificantDigits: 2,
+  //         maximumSignificantDigits: 3,
+  //       }).format(dailyData[dailyData.length - 1][1])
 
-        setTVL(`${TVL}`)
-        // Calculate percent change ((new value - old value) / old value) *100)
-        const percentage =
-          ((dailyData[dailyData.length - 1][1] -
-            dailyData[dailyData.length - 31][1]) /
-            dailyData[dailyData.length - 31][1]) *
-          100
-        setL2PercentChange(
-          percentage > 0
-            ? `+${percentage.toFixed(2)}%`
-            : `${percentage.toFixed(2)}%`
-        )
-      } catch (error) {
-        console.error(error)
-        setTVL("Error, please refresh.")
-        setL2PercentChange("Error, please refresh.")
-      }
-    }
-    fetchL2Beat()
+  //       setTVL(`${TVL}`)
+  //       // Calculate percent change ((new value - old value) / old value) *100)
+  //       const percentage =
+  //         ((dailyData[dailyData.length - 1][1] -
+  //           dailyData[dailyData.length - 31][1]) /
+  //           dailyData[dailyData.length - 31][1]) *
+  //         100
+  //       setL2PercentChange(
+  //         percentage > 0
+  //           ? `+${percentage.toFixed(2)}%`
+  //           : `${percentage.toFixed(2)}%`
+  //       )
+  //     } catch (error) {
+  //       console.error(error)
+  //       setTVL("Error, please refresh.")
+  //       setL2PercentChange("Error, please refresh.")
+  //     }
+  //   }
+  //   fetchL2Beat()
+  //
+  //
+  //   const fetchCryptoStats = async (): Promise<void> => {
+  //     try {
+  //       // Average eth transfer fee from L2's supported by cryptostats API
+  //       const feeDataResponse = await getData<FeeDataResponse>(
+  //         "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
+  //       )
 
-    const fetchCryptoStats = async (): Promise<void> => {
-      try {
-        // Average eth transfer fee from L2's supported by cryptostats API
-        const feeDataResponse = await getData<FeeDataResponse>(
-          "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
-        )
+  //       // filtering out L2's we arent listing
+  //       const feeData = feeDataResponse.data.filter(
+  //         (l2) => l2.id !== "hermez" && !l2.errors
+  //       )
 
-        // filtering out L2's we arent listing
-        const feeData = feeDataResponse.data.filter(
-          (l2) => l2.id !== "hermez" && !l2.errors
-        )
+  //       const feeAverage =
+  //         feeData.reduce(
+  //           (acc, curr) => (acc += curr.results.feeTransferEth),
+  //           0
+  //         ) / feeData.length
 
-        const feeAverage =
-          feeData.reduce(
-            (acc, curr) => (acc += curr.results.feeTransferEth),
-            0
-          ) / feeData.length
+  //       const intlFeeAverage = new Intl.NumberFormat(localeForStatsBoxNumbers, {
+  //         style: "currency",
+  //         currency: "USD",
+  //         notation: "compact",
+  //         minimumSignificantDigits: 2,
+  //         maximumSignificantDigits: 3,
+  //       }).format(feeAverage)
+  //       setAverageFee(`${intlFeeAverage}`)
+  //     } catch (error) {
+  //       setAverageFee("Error, please refresh.")
+  //       console.error(error)
+  //     }
+  //   }
+  //   fetchCryptoStats()
+  // }, [language])
 
-        const intlFeeAverage = new Intl.NumberFormat(localeForStatsBoxNumbers, {
-          style: "currency",
-          currency: "USD",
-          notation: "compact",
-          minimumSignificantDigits: 2,
-          maximumSignificantDigits: 3,
-        }).format(feeAverage)
-        setAverageFee(`${intlFeeAverage}`)
-      } catch (error) {
-        setAverageFee("Error, please refresh.")
-        console.error(error)
-      }
-    }
-    fetchCryptoStats()
-  }, [language])
-
-  const heroContent = {
+  const heroContent: HubHeroProps = {
     title: t("layer-2-hero-title"),
     header: t("layer-2-hero-header"),
-    subtitle: t("layer-2-hero-subtitle"),
-    image: getImage(data.heroImage)!,
-    alt: t("layer-2-hero-alt-text"),
+    description: t("layer-2-hero-subtitle"),
+    heroImgSrc: getImage(data.heroImage)!,
     buttons: [
       {
         content: t("layer-2-hero-button-1"),
@@ -283,16 +284,6 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
           eventCategory: "layer 2 hero buttons",
           eventAction: "click",
           eventName: "use layer 2",
-        },
-      },
-      {
-        content: t("layer-2-hero-button-3"),
-        toId: "how-to-get-onto-layer-2",
-        variant: "outline",
-        matomo: {
-          eventCategory: "layer 2 hero buttons",
-          eventAction: "click",
-          eventName: "move to layer 2",
         },
       },
     ],
@@ -384,47 +375,48 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 
   const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  type ToolTipContentMetric = {
-    apiUrl: string
-    apiProvider: string
-  }
-  const tooltipContent = (metric: ToolTipContentMetric): JSX.Element => (
-    <div>
-      <Translation id="data-provided-by" />{" "}
-      <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
-    </div>
-  )
+  // Todo: Reimplement Big Numbers
+  // type ToolTipContentMetric = {
+  //   apiUrl: string
+  //   apiProvider: string
+  // }
+  // const tooltipContent = (metric: ToolTipContentMetric): JSX.Element => (
+  //   <div>
+  //     <Translation id="data-provided-by" />{" "}
+  //     <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
+  //   </div>
+  // )
 
-  const statBoxGroupData: Array<{
-    content: string
-    descriptionId: TranslationKey
-    tooltipContent: ToolTipContentMetric
-  }> = [
-    {
-      content: tvl,
-      descriptionId: "layer-2-statsbox-1",
-      tooltipContent: {
-        apiUrl: "https://l2beat.com/",
-        apiProvider: "L2BEAT",
-      },
-    },
-    {
-      content: averageFee,
-      descriptionId: "layer-2-statsbox-2",
-      tooltipContent: {
-        apiUrl: "https://cryptostats.community/",
-        apiProvider: "CryptoStats",
-      },
-    },
-    {
-      content: percentChangeL2,
-      descriptionId: "layer-2-statsbox-3",
-      tooltipContent: {
-        apiUrl: "https://l2beat.com/",
-        apiProvider: "L2BEAT",
-      },
-    },
-  ]
+  // const statBoxGroupData: Array<{
+  //   content: string
+  //   descriptionId: TranslationKey
+  //   tooltipContent: ToolTipContentMetric
+  // }> = [
+  //   {
+  //     content: tvl,
+  //     descriptionId: "layer-2-statsbox-1",
+  //     tooltipContent: {
+  //       apiUrl: "https://l2beat.com/",
+  //       apiProvider: "L2BEAT",
+  //     },
+  //   },
+  //   {
+  //     content: averageFee,
+  //     descriptionId: "layer-2-statsbox-2",
+  //     tooltipContent: {
+  //       apiUrl: "https://cryptostats.community/",
+  //       apiProvider: "CryptoStats",
+  //     },
+  //   },
+  //   {
+  //     content: percentChangeL2,
+  //     descriptionId: "layer-2-statsbox-3",
+  //     tooltipContent: {
+  //       apiUrl: "https://l2beat.com/",
+  //       apiProvider: "L2BEAT",
+  //     },
+  //   },
+  // ]
 
   return (
     <Flex flexDirection="column" alignItems="center">
@@ -434,37 +426,7 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       />
 
       {/* Hero Section */}
-      <Box background="layer2Gradient" width="full">
-        <Box pb={8}>
-          <PageHero content={heroContent} isReverse />
-        </Box>
-
-        <ContentBox>
-          <Center
-            flexDirection={{ base: "column", md: "row" }}
-            mb={16}
-            // To allow the content divider to expand vertically above the breakpoint
-            height={{ md: "100px" }}
-          >
-            {statBoxGroupData.map((box, idx) => (
-              <>
-                <StatBox>
-                  <StatPrimary content={box.content} />
-                  <StatSpan>
-                    <StatDescription>
-                      <Translation id={box.descriptionId} />
-                    </StatDescription>
-                    <Tooltip content={tooltipContent(box.tooltipContent)}>
-                      <StyledInfoIcon />
-                    </Tooltip>
-                  </StatSpan>
-                </StatBox>
-                {idx < statBoxGroupData.length - 1 ? <StatDivider /> : null}
-              </>
-            ))}
-          </Center>
-        </ContentBox>
-      </Box>
+      <HubHero {...heroContent} />
       {/* What is Layer 2 Section */}
       <ContentBox id="what-is-layer-2">
         <TwoColumnContent>
@@ -991,9 +953,14 @@ export const query = graphql`
         )
       }
     }
-    heroImage: file(relativePath: { eq: "layer-2/hero.png" }) {
+    heroImage: file(relativePath: { eq: "heroes/layer-2-hub-hero.jpg" }) {
       childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     impact: file(relativePath: { eq: "impact_transparent.png" }) {
