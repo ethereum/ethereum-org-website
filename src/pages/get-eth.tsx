@@ -30,8 +30,6 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
-// TODO: Remove or add Matcha as listed product:
-// import matcha from "@/public/exchanges/matcha.png" // width=20px
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { resizeImage } from "@/lib/utils/resizeImage"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"

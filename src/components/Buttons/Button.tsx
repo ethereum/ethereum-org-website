@@ -39,11 +39,10 @@ export type ButtonProps = ChakraButtonProps & {
 }
 
 const Button = forwardRef<ButtonProps, "button">(
-  ({ toId, onClick, isSecondary, ...props }, ref) => {
+  ({ toId, onClick, isSecondary, customEventOptions, ...props }, ref) => {
     const handleOnClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (toId) {
-        scrollIntoView(toId)
-      }
+      toId && scrollIntoView(toId)
+      customEventOptions && trackCustomEvent(customEventOptions)
 
       onClick?.(e)
     }
