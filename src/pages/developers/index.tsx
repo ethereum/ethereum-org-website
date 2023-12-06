@@ -5,7 +5,6 @@ import {
   Box,
   chakra,
   Flex,
-  Image,
   SimpleGrid,
   TextProps,
   useColorModeValue,
@@ -20,6 +19,7 @@ import PageMetadata from "../../components/PageMetadata"
 import FeedbackCard from "../../components/FeedbackCard"
 import Text from "../../components/OldText"
 import OldHeading from "../../components/OldHeading"
+import { HubHero } from "../../components/Hero"
 
 import { getImage } from "../../utils/image"
 
@@ -33,55 +33,6 @@ const Page = (props: ChildOnlyProp) => (
     w="full"
     my={0}
     mx="auto"
-    {...props}
-  />
-)
-
-const HeroContainer = (props: ChildOnlyProp) => (
-  <Flex
-    justifyContent="space-between"
-    flexDirection={{ base: "column-reverse", md: "row" }}
-    mt={8}
-    mb={16}
-    bg="cardGradient"
-    {...props}
-  />
-)
-
-const HeroCopyContainer = (props: ChildOnlyProp) => (
-  <Box
-    flex={{ base: "0 1 400px", md: "0 1 500px" }}
-    w={{ base: "100%", md: "auto" }}
-    maxWidth={{ base: "100%", md: "500px" }}
-    maxHeight={{ base: "280px", md: "340px" }}
-    {...props}
-  />
-)
-
-const HeroCopy = (props: ChildOnlyProp) => (
-  <Box
-    p={8}
-    m={{ base: 0, sm: 8 }}
-    mt={{ base: -2, md: 8 }}
-    bg="background.base"
-    borderRadius="4px"
-    border="1px solid border"
-    {...props}
-  />
-)
-
-const H1 = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h1"
-    fontSize="2rem"
-    fontWeight="medium"
-    fontFamily="monospace"
-    fontStyle="normal"
-    textTransform="uppercase"
-    lineHeight="110%"
-    bg="ednBackground"
-    p={2}
-    mt={0}
     {...props}
   />
 )
@@ -107,19 +58,6 @@ const Subtitle = (props: TextProps) => (
 )
 
 const MonoSubtitle = (props: ChildOnlyProp) => <OldHeading mb={0} {...props} />
-
-const Hero = (props: ChildOnlyProp) => (
-  <Box
-    flex="1 1 50%"
-    maxW="800px"
-    bgSize="cover"
-    bgRepeat="no-repeat"
-    mt={{ base: 0, md: 12 }}
-    ml={{ base: 0, md: 8 }}
-    alignSelf={{ base: "center", md: "" }}
-    {...props}
-  />
-)
 
 const StyledCardContainer = (props: ChildOnlyProp) => (
   <SimpleGrid columns={[1, 1, 2, 4]} mx={-4} mt={8} mb={12} {...props} />
@@ -233,38 +171,21 @@ const DevelopersPage = ({
   data,
 }: PageProps<Queries.DevelopersIndexPageQuery, Context>) => {
   const { t } = useTranslation()
-
   return (
     <Page>
       <PageMetadata
         title={t("page-developer-meta-title")}
         description={t("page-developers-meta-desc")}
       />
+      <HubHero
+        heroImgSrc={getImage(data.heroImage)!}
+        header={`${t("page-developers-title-1")} ${t(
+          "page-developers-title-2"
+        )} ${t("page-developers-title-3")}`}
+        title={t("developers")} // TODO: Update to use "Developers Home"?
+        description={t("page-developers-subtitle")}
+      />
       <Content>
-        <HeroContainer>
-          <HeroCopyContainer>
-            <HeroCopy>
-              <H1>
-                <b>
-                  <Translation id="page-developers-title-1" />
-                </b>
-                <br />
-                <Translation id="page-developers-title-2" />
-                <br /> <Translation id="page-developers-title-3" />
-              </H1>
-              <Subtitle>
-                <Translation id="page-developers-subtitle" />
-              </Subtitle>
-            </HeroCopy>
-          </HeroCopyContainer>
-          <Hero>
-            <GatsbyImage
-              image={getImage(data.ednHero)!}
-              alt={t("alt-eth-blocks")}
-              loading="eager"
-            ></GatsbyImage>
-          </Hero>
-        </HeroContainer>
         <MonoSubtitle>
           <Translation id="page-developers-get-started" />
         </MonoSubtitle>
@@ -591,6 +512,16 @@ export const query = graphql`
         gatsbyImageData(
           width: 1200
           layout: FIXED
+          placeholder: BLURRED
+          quality: 100
+        )
+      }
+    }
+    heroImage: file(relativePath: { eq: "heroes/developers-hub-hero.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
           placeholder: BLURRED
           quality: 100
         )

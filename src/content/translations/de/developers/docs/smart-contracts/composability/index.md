@@ -12,7 +12,7 @@ Smart Contracts sind auf Ethereum öffentlich und können als offene APIs betrac
 ## Verwandte Tutorials {#related-tutorials}
 
 - [Vertragskombinierbarkeit: die Bausteine der Smart-Contract-Entwicklung von Ethereum](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
-- [Starten Sie Ihre dApp-Frontend-Entwicklung mit Create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– Eine Übersicht darüber, wie Create-eth-app verwendet wird, um Apps mit beliebten Smart Contracts zu erstellen_
+- [Starten Sie Ihre dApp-Frontend-Entwicklung mit Create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Eine Übersicht darüber, wie Create-eth-app verwendet wird, um Apps mit beliebten Smart Contracts zu erstellen_
 
 ## Weiterführende Informationen {#further-reading}
 

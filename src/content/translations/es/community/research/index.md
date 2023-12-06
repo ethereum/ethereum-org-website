@@ -346,7 +346,6 @@ Las herramientas para desarrolladores de Ethereum están evolucionando rápidame
 - [Entornos de desarrollo](/developers/docs/frameworks/)
 - [Lista de herramientas de desarrollo de consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Estándares de tókenes](/developers/docs/standards/tokens/)
-- [Biastek: Herramientas de Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: Herramientas EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Investigaciones recientes {#recent-research-17}

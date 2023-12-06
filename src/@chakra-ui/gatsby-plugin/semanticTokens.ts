@@ -92,6 +92,10 @@ const semanticTokens = {
       _dark: "whiteAlpha.400",
     },
     switchBackground: { _light: "gray.300", _dark: "whiteAlpha.400" },
+    hubHeroContentBg: {
+      _light: "rgba(255, 255, 255, 0.80)",
+      _dark: "rgba(34, 34, 34, 0.80)",
+    },
   },
   gradients: {
     bgMainGradient: {
