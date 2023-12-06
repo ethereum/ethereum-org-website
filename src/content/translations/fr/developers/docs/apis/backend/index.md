@@ -163,7 +163,7 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 
 - [services.tokenview.io](https://services.tokenview.io/)
 - [Documentation](https://services.tokeniew/docs?type=api)
-- [Github](https://github.com/Tokenview)
+- [GitHub](https://github.com/Tokenview)
 
 ## Complément d'information {#further-reading}
 

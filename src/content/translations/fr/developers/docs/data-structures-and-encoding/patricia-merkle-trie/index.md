@@ -5,7 +5,7 @@ lang: fr
 sidebarDepth: 2
 ---
 
-Un arbre de Merkle Patricia produit une structure des données cryptographiquement authentifiée pouvant être utilisée pour sauvegarder toutes les paires `(clé, valeur)`.
+Un arbre de Merkle Patricia produit une structure des données cryptographiquement authentifiée pouvant être utilisée pour sauvegarder toutes les paires `(key, value)`.
 
 Les arbres de Merkle Patricia sont entièrement déterministes, ce qui signifie que deux arbres possédant la même paire `(clé, valeur)` sont garantis identiques -- jusqu'au dernier octet. Cela signifie également qu'ils ont le même hachage racine, ce qui permet d'atteindre le "Graal" de l'efficacité `O(log(n))` pour les insertions, les consultations et les suppressions. Enfin, ils sont plus simples à appréhender ainsi qu'à coder que les alternatives basées sur les comparaisons, comme les arbres rouge-noir.
 
@@ -21,11 +21,11 @@ Dans un arbre radix de base, chaque nœud se présente comme suit :
     [i_0, i_1 ... i_n, value]
 ```
 
-Là où `i0 ... in` représentent les symboles de l'alphabet (souvent binaires ou hexagonaux), `value` est la valeur terminale du nœud, et les valeurs dans les créneaux `i0 ... in` sont soit `NULL` soit des pointeurs vers (dans notre cas, des hashs) d'autres nœuds. Cela forme un registre de base `(clé, valeur)`.
+Là où `i0 ... in` représentent les symboles de l'alphabet (souvent binaires ou hexagonaux), `value` est la valeur terminale du nœud, et les valeurs dans les créneaux `i0 ... in` sont soit `NULL` soit des pointeurs vers (dans notre cas, des hashs) d'autres nœuds. Cela forme un registre de base `(key, value)`.
 
 Supposons que vous souhaitiez utiliser une structure de données d'arborescence radix pour maintenir une commande sur un ensemble de paires de valeurs clés. Pour connaître la valeur actuellement associée à `dog` dans le tableau, vous devriez d'abord convertir `dog` en lettres de l'alphabet (ce qui donne `64 6f 67`), puis descendre dans l'arbre en suivant ce chemin jusqu'à ce que vous trouviez la valeur. C'est-à-dire que vous commencez par chercher le hachage racine dans une base de données/valeur plate pour trouver le nœud racine de l'arbre. Il se présente sous la forme d'un tableau de clés pointant vers d'autres nœuds. Vous utilisez ensuite la valeur à l'index `6` comme clé et la recherchez dans la base de données clé/valeur pour obtenir le nœud un niveau plus bas. Ensuite, choisissez l'index `4` pour rechercher la valeur suivante, puis choisissez l'index `6`, et ainsi de suite, jusqu'à ce que, une fois suivi le chemin : `racine -> -> -> 6 - > 6 -> 15 -> 6 -> 7`, vous cherchiez la valeur du nœud et retourniez le résultat.
 
-Il y a une différence entre rechercher quelque chose dans l'"arbre" et la "base de données" plate sous-jacente (clé/valeur). Ils définissent tous deux des arrangements clé/valeur, mais la base de données sous-jacente peut effectuer une recherche traditionnelle en une étape d'une clé. La recherche d'une clé dans le tableau nécessite plusieurs consultations de la base de données sous-jacente pour obtenir la valeur finale décrite ci-dessus. Faisons référence à ce dernier comme à un `chemin` pour éliminer toute ambiguïté.
+Il y a une différence entre rechercher quelque chose dans l'"arbre" et la "base de données" plate sous-jacente (clé/valeur). Ils définissent tous deux des combinaisons clé/valeur, mais la base de données sous-jacente peut rechercher une clé en une seule étape basique. La recherche d'une clé dans le tableau nécessite plusieurs consultations de la base de données sous-jacente pour obtenir la valeur finale décrite ci-dessus. Faisons référence à ce dernier comme à un `path` (chemin) pour éliminer toute ambiguïté.
 
 Les opérations de mise à jour et de suppression pour les arbres radix peuvent être définies comme suit :
 
@@ -62,15 +62,15 @@ Les opérations de mise à jour et de suppression pour les arbres radix peuvent 
                 return hash(newnode)
 ```
 
-Un arbre Radix « Merkle» est construit en reliant les nœuds à l'aide des diagrammes de hachage cryptographiques générés de manière déterministe. Cette adresse de contenu (dans la DB clé/valeur `clé == keccak256(rlp(valeur))`) fournit une authentification cryptographique des données stockées. Si le hash racine d'un arbre donné est connu publiquement, alors tout le monde peut fournir une preuve que l'arbre inclut une valeur donnée à un endroit spécifique, en fournissant les hachages de chaque nœud reliant une valeur spécifique à la racine de l'arborescence.
+Un arbre Radix « Merkle» est construit en reliant les nœuds à l'aide des diagrammes de hachage cryptographiques générés de manière déterministe. Cette adresse de contenu (dans la base de données clé/valeur `key == keccak256(rlp(value))`) fournit une garantie d'intégrité cryptographique des données stockées. Si le hash racine d'un arbre donné est connu publiquement, alors tout le monde ayant accès à cette feuille peut fournir une preuve que l'arbre inclut une valeur donnée à un endroit spécifique, en fournissant les hachages de chaque nœud reliant une valeur spécifique à la racine de l'arborescence.
 
-Il est impossible pour un attaquant de fournir une preuve d'une paire de `(chemin, valeur)` qui n'existe pas car le hachage racine est basé en fin de compte sur tous les hachages situés au-dessous. Toute modification sous-jacente modifierait le hash racine.
+Il est impossible pour un attaquant de fournir une preuve d'une paire de `(path, value)` qui n'existe pas car le hachage racine est basé en fin de compte sur tous les hachages situés au-dessous. Toute modification sous-jacente modifierait le hash racine. Vous pouvez considérer le hash comme une représentation compressée des informations structurelles sur les données, sécurisée par la protection de pré-image de la fonction de hachage.
 
 Nous allons faire référence à une unité atomique d'un arbre radix (par exemple un seul caractère hexadécimal, ou un nombre binaire de 4 bits) en tant que "nibble". Lorsque l'on parcourt un chemin un nibble à la fois, comme décrit ci-dessus, les nœuds peuvent faire référence à 16 enfants au maximum, mais peuvent également inclure un élément `value`. Nous les représentons donc comme un tableau de longueur 17. Nous appelons ces tableaux à 17 éléments des "nœuds de branches".
 
 ## Arbre de Merkle de Patricia {#merkle-patricia-trees}
 
-Cependant, les arbres radix ont une limitation majeure : ils sont inefficaces. Si vous voulez stocker une seule liaison `(chemin, valeur)` où le chemin est, comme dans Ethereum, long de 64 caractères (nombre de nibbles dans `bytes32`), vous aurez besoin de plus d'un kilooctet d'espace supplémentaire pour stocker un niveau par caractère, et chaque consultation ou suppression prendra les 64 étapes complètes. L'arbre de Patricia présenté dans ce qui suit résout ce problème.
+Cependant, les arbres radix ont une limitation majeure : ils sont inefficaces. Si vous voulez stocker une seule liaison `(path, value)` où le chemin est, comme dans Ethereum, long de 64 caractères (nombre de nibbles dans `bytes32`), vous aurez besoin de plus d'un kilooctet d'espace supplémentaire pour stocker un niveau par caractère, et chaque consultation ou suppression prendra les 64 étapes complètes. L'arbre de Patricia présenté dans ce qui suit résout ce problème.
 
 ### Optimisation {#optimization}
 
@@ -81,7 +81,7 @@ Un nœud dans un arbre de Merkle Patricia correspond à l'un des éléments suiv
 3.  `leaf` Un nœud de 2 éléments `[ encodedPath, value ]`
 4.  `extension` Un nœud de 2 éléments `[ encodedPath, key ]`
 
-Avec 64 chemins de caractères, il est inévitable qu'après avoir traversé les premières couches de l'arbre, vous atteigniez un nœud où aucun chemin divergent n'existe sur au moins une partie de la descente. Pour éviter de devoir créer jusqu'à 15 nœuds `NULL` épars le long du chemin, nous raccourcissons la descente en créant un nœud `extension` de la forme `[ encodedPath, key ]`, où `encodedPath` contient le "chemin partiel" à sauter (à l'aide d'un codage compact décrit ci-dessous), et où la `clé` est destinée à la consultation suivante de la base de données.
+Avec 64 chemins de caractères, il est inévitable qu'après avoir traversé les premières couches de l'arbre, vous atteigniez un nœud où aucun chemin divergent n'existe sur au moins une partie de la descente. Pour éviter de devoir créer jusqu'à 15 nœuds `NULL` épars le long du chemin, nous raccourcissons la descente en créant un nœud `extension` de la forme `[ encodedPath, key ]`, où `encodedPath` contient le "chemin partiel" à sauter (à l'aide d'un codage compact décrit ci-dessous), et où la `key` est destinée à la consultation suivante de la base de données.
 
 Pour un nœud `feuille`, qui peut être marqué par un drapeau dans la première pièce du `encodedPath`, le chemin encode tous les fragments de chemin du nœud précédent et nous pouvons consulter la `valeur` directement.
 
@@ -162,7 +162,7 @@ Voici le code étendu pour obtenir un nœud dans l'arbre de Merkle Patricia :
 
 Supposons que nous voulions un tableau contenant quatre couples chemin/valeur `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
-Tout d'abord, nous convertissons les chemins et les valeurs en `octets`. Ci-dessous, les représentations réelles d'octets pour les _chemins_ sont désignées par `<>`, bien que les _valeurs_ soient toujours représentées sous forme de chaînes, désignées par `''`, pour une compréhension plus facile (elles aussi seraient en fait des `octets`) :
+Tout d'abord, nous convertissons les chemins et les valeurs en `bytes` (octets). Ci-dessous, les représentations réelles d'octets pour les _chemins_ sont désignées par `<>`, bien que les _valeurs_ soient toujours représentées sous forme de chaînes, désignées par `''`, pour une compréhension plus facile (elles aussi seraient en fait des `octets`) :
 
 ```
     <64 6f> : 'verb'
@@ -197,7 +197,7 @@ L'en-tête d'un bloc comporte trois racines issues de trois de ces arbres.
 
 ### Arbre d'état {#state-trie}
 
-Il n'existe qu'un seul arbre d'état global, qui est mis à jour à chaque fois qu'un client traite un bloc. Dans celui-ci, un `chemin` est toujours : `keccak256(ethereumAddress)` et une `valeur` est toujours : `rlp(ethereumAccount)`. Plus précisément, un `compte` ethereum est un tableau de 4 éléments de `[nonce,balance,storageRoot,codeHash]`. À ce stade, il convient de noter que ce `storageRoot` est la racine d'un autre arbre Patricia :
+Il n'existe qu'un seul arbre d'état global, qui est mis à jour à chaque fois qu'un client traite un bloc. Dans celui-ci, un `path` est toujours : `keccak256(ethereumAddress)` et une `value` est toujours : `rlp(ethereumAccount)`. Plus précisément, un `account` ethereum est un tableau de 4 éléments de `[nonce,balance,storageRoot,codeHash]`. À ce stade, il convient de noter que ce `storageRoot` est la racine d'un autre arbre Patricia :
 
 ### Arbre de stockage {#storage-trie}
 
@@ -225,7 +225,7 @@ undefined
 "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9"
 ```
 
-Le `chemin` est donc `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. On peut maintenant l'utiliser pour récupérer les données de l'arbre de stockage comme précédemment :
+Le `path` est donc `keccak256(<6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9>)`. On peut maintenant l'utiliser pour récupérer les données de l'arbre de stockage comme précédemment :
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x6661e9d6d8b923d5bbaab1b96e1dd51ff6ea2a93520fdc9eb75d059238b8c5e9", "latest"], "id": 1}' localhost:8545
@@ -233,9 +233,11 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
+Note : le `storageRoot` pour un compte Ethereum est vide par défaut s'il ne s'agit pas d'un compte de contrat.
+
 ### Arbre de transactions {#transaction-trie}
 
-Il existe un arbre de transactions distinct pour chaque bloc, qui stocke à nouveau les paires `(clé, valeur)` . Un chemin ici est : `rlp(transactionIndex)` qui représente la clé qui correspond à une valeur déterminée par :
+Il existe un arbre de transactions distinct pour chaque bloc, qui stocke à nouveau les paires `(key, value)` . Un chemin ici est : `rlp(transactionIndex)` qui représente la clé qui correspond à une valeur déterminée par :
 
 ```
 if legacyTx:
@@ -248,7 +250,7 @@ Plus d'informations à ce sujet peuvent être trouvées dans la documentation [E
 
 ### Arbre de reçus {#receipts-trie}
 
-Chaque bloc a son propre arbre de reçus. Un `chemin` ici est : `rlp(transactionIndex)`. `transactionIndex` est son indice dans le bloc qu'il a miné. Les arbres de reçus ne sont jamais mis à jour. De la même manière que pour les arbres de transactions, il existe des reçus actuels et des reçus hérités. Pour interroger un reçu spécifique dans la liste des reçus, l'indice de la transaction dans son bloc, les charges du reçu et le type de transaction sont nécessaires. Le reçu retourné peut être de type `Reçu` qui est défini comme la concaténation de `TransactionType` et `ReceiptPayload` ou il peut être de type `LegacyReceipt` qui est défini comme `rlp([statut, cumulativeGasUsed, logsBloom, logs])`.
+Chaque bloc a son propre arbre de reçus. Un `path` ici est : `rlp(transactionIndex)`. `transactionIndex` est son indice dans le bloc qu'il a miné. Les arbres de reçus ne sont jamais mis à jour. De la même manière que pour les arbres de transactions, il existe des reçus actuels et des reçus hérités. Pour interroger un reçu spécifique dans la liste des reçus, l'indice de la transaction dans son bloc, les charges du reçu et le type de transaction sont nécessaires. Le reçu retourné peut être de type `Reçu` qui est défini comme la concaténation de `TransactionType` et `ReceiptPayload` ou il peut être de type `LegacyReceipt` qui est défini comme `rlp([statut, cumulativeGasUsed, logsBloom, logs])`.
 
 Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 

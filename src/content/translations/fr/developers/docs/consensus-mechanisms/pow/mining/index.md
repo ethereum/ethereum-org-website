@@ -60,7 +60,7 @@ Chaque transaction est minée (incluse dans un nouveau bloc et propagée pour la
 
 Le minage du bloc reposant sur la preuve de travail (PoW) n'était alors que probabiliste, ce qui signifie que, parfois, il arrivait que deux blocs, ayant déjà été validés, soient en même temps exposés au public, notamment en raison de la latence du réseau. Dans ce cas, le protocole devait déterminer la chaîne la plus longue (et donc la plus « valide ») tout en assurant l'équité envers les mineurs en récompensant partiellement le bloc valide non inclus proposé. Cela a encouragé une plus grande décentralisation du réseau pour les mineurs plus petits, qui pourraient être confrontés à une plus grande latence, leur permettant de générer des rendements par le biais d'un bloc de récompenses [ommer](/glossary/#ommer) .
 
-On utilise de préférence le terme « ommer », plus neutre, pour désigner le frère ou la sœur d'un bloc parent, mais on parle aussi parfois d'« oncle ». **Depuis le passage d'Ethereum à la preuve d'enjeu, les blocs Ommer ne sont plus minés** puisque seulement un acteur de l'écosystème peut être élu dans chaque slot. Vous pouvez voir ce changement en visualisant le [graphique historique](https://ycharts.com/indicators/ethereum_uncle_rate) des blocs Ommer minés.
+On utilise de préférence le terme « ommer », plus neutre, pour désigner le frère ou la sœur d'un bloc parent, mais on parle aussi parfois d'« oncle ». **Depuis le passage d'Ethereum à la preuve d'enjeu, les blocs Ommer ne sont plus minés** puisque seulement un acteur de l'écosystème peut être élu dans chaque slot. Vous pouvez voir ce changement en visualisant le [graphique historique](https://ycharts.com/indicators/ethereum_uncle_rate) des blocs Ommer minés.
 
 ## Démonstration visuelle {#a-visual-demo}
 

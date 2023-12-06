@@ -56,7 +56,6 @@ lang: zh
 - [QuickNode Sepolia 水龙头](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW 水龙头](https://sepolia-faucet.pk910.de/)
-- [FaucETH](https://fauceth.komputing.org)
 - [Coinbase Wallet 水龙头 | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)

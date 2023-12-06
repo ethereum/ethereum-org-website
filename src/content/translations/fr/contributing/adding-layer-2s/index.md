@@ -8,7 +8,7 @@ lang: fr
 
 Nous voulons nous assurer que nous listons les meilleures ressources possibles afin que les utilisateurs puissent naviguer en toute confiance et sécurité dans l'espace des Couches de niveau 2.
 
-Toute personne est libre de suggérer l'ajout d'une Couche de niveau 2 sur ethereum.org. S'il existe une Couche de niveau 2 que nous avons manqué, **[merci de bien vouloir la suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md) !**
+Toute personne est libre de suggérer l'ajout d'une Couche de niveau 2 sur ethereum.org. S'il existe une couche de niveau 2 que nous avons manquée, **[merci de bien vouloir la suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml) !**
 
 Nous listons actuellement les L2s sur les pages suivantes :
 
@@ -50,6 +50,8 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 **Date de mise en ligne du projet**
 
+- Une couche 2 qui est « en direct » sur le réseau principal depuis plus de 6 mois
+
 - Les nouveaux projets qui n'ont pas encore été testés par les utilisateurs sont moins susceptibles d'être listés.
 
 **Audit de sécurité externe**
@@ -90,6 +92,6 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 Si vous souhaitez ajouter une Couche 2 sur ethereum.org, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Créez un ticket
 </ButtonLink>

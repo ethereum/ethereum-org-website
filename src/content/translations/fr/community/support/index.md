@@ -43,6 +43,7 @@ Le développement d'une application décentralisée peut être difficile. Voici 
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 Vous pouvez aussi consulter notre documentation ainsi que des guides de développement dans notre section [Ressources pour les développeurs Ethereum](/developers/).
 

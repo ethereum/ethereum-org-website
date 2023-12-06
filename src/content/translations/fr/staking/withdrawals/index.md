@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Il est recommandé aux opérateurs de validateurs de consulter la page <a href="https://launchpad.ethereum.org/withdrawals/">Retraits de la mise en jeu</a> où vous trouverez plus de détails sur la façon de préparer votre validateur aux retraits. préparés, le déroulé des événements, et plus de détails sur comment les retraits fonctionnent.
+Il est recommandé aux opérateurs de validateurs de consulter la page <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> où vous trouverez plus de détails sur la façon de préparer votre validateur aux retraits, le calendrier des événements, et davantage d'informations sur le fonctionnement des retraits.
 
 Pour commencer en testant votre configuration sur un réseau de test, visitez la <a href="https://goerli.launchpad.ethereum.org">Platforme de lancement pour la mise en jeu sur le réseau de test Goerli</a>.
 
@@ -214,5 +214,5 @@ Non. Une fois qu'un validateur est sorti et que son solde total a été retiré,
 - [EIP-4895 : la chaîne phare signale les retraits comme des opérations](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94 : Retrait de l'ETH misé (Testing) avec Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68 : EIP-4895 : Retraits de la chaîne de balises en tant qu'opérations avec des prises Alex](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68 : EIP-4895 : Retraits de la chaîne de balises en tant qu'opérations avec Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Comprendre le Solde Effectif du Validateur](https://www.attestant.io/posts/understanding-validator-effective-balance/)

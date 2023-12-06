@@ -346,7 +346,6 @@ Ethereum geliştiricileri için araçlar hızlıca gelişiyor. Bu genel alanda y
 - [Geliştirici Çerçeveleri](/developers/docs/frameworks/)
 - [Mutabakat geliştirici araçları listesi](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Token standartları](/developers/docs/standards/tokens/)
-- [Biastek: Ethereum araçları](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: EVM Araçları](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Güncel araştırma {#recent-research-17}
