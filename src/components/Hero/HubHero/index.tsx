@@ -7,7 +7,7 @@ import { Image } from "@/components/Image"
 import { CallToAction, CallToActionProps } from "../CallToAction"
 
 export type CommonHeroProps = {
-  heroImgSrc: StaticImageData
+  heroImg: StaticImageData
   header: string
   title: string
   description: string
@@ -15,7 +15,7 @@ export type CommonHeroProps = {
 }
 
 const HubHero = (props: CommonHeroProps) => {
-  const { heroImgSrc, title, header, description, buttons } = props
+  const { heroImg, title, header, description, buttons } = props
 
   if (buttons && buttons.length > 2) {
     throw Error(
@@ -26,7 +26,7 @@ const HubHero = (props: CommonHeroProps) => {
   return (
     <Box position="relative">
       <Image
-        src={heroImgSrc}
+        src={heroImg}
         alt=""
         objectFit="cover"
         h={{

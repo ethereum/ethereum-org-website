@@ -7,15 +7,15 @@ import Morpher from "@/components/Morpher"
 
 import { CommonHeroProps } from "../HubHero"
 
-export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImgSrc"> {}
+export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImg"> {}
 
-const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
+const HomeHero = ({ heroImg }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
   return (
     <Box>
       <Box h={440}>
         <Image
-          src={heroImgSrc}
+          src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
           w="full"
           h="full"

@@ -1,8 +1,9 @@
-import { useTranslation } from "react-i18next"
+import * as React from "react"
+import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import HubHeroComponent, { HubHeroProps } from "./"
+import HubHeroComponent, { CommonHeroProps } from "./"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -23,38 +24,21 @@ const meta = {
 
 export default meta
 
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "fullWidth",
-  images: {
-    fallback: {
-      src: "/heroes/learn-hub-hero.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/heroes/learn-hub-hero.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
+import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {
     title: "learn-hub",
     header: "hero-header",
     description: "hero-subtitle",
-    heroImgSrc: mockGatsbyImgData,
+    heroImg: learnHubHeroImg,
   },
   render: (args) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
     const { title, header, description, ...rest } = args
 
-    const buttons: HubHeroProps["buttons"] = [
+    const buttons: CommonHeroProps["buttons"] = [
       {
         content: t("hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",

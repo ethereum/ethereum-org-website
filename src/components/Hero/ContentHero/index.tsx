@@ -12,7 +12,7 @@ export interface ContentHeroProps extends Omit<CommonHeroProps, "header"> {
 }
 
 const ContentHero = (props: ContentHeroProps) => {
-  const { breadcrumbs, heroImgSrc, buttons, title, description } = props
+  const { breadcrumbs, heroImg, buttons, title, description } = props
   return (
     <Box bgImg="bgMainGradient">
       <SimpleGrid columns={{ base: 1, lg: 2 }} maxW="1536px" mx="auto" gap="4">
@@ -21,7 +21,7 @@ const ContentHero = (props: ContentHeroProps) => {
           order={{ lg: 1 }}
         >
           <Image
-            src={heroImgSrc}
+            src={heroImg}
             alt=""
             loading="eager"
             objectFit="contain"
