@@ -48,13 +48,13 @@ Optimism（またはその他の L2）上で L1 のアセットを使用する�
 
 ### 出金フロー {#withdrawal-flow}
 
-#### L2 {#withdrawl-flow-layer-2}
+#### L2 {#withdrawal-flow-layer-2}
 
 1. 出金者は、L2 のブリッジ（`withdraw`または`withdrawTo`）を呼び出します 。
 2. L2 のブリッジは、`msg.sender`が所有する適切な数のトークンをバーンします。
 3. L2 のブリッジは、クロスドメインのメッセージ・メカニズムを利用して、L1 のブリッジ上で、 `finalizeETHWithdrawal`または`finalizeERC20Withdrawal`を呼び出します。
 
-#### L1 {#withdrawl-flow-layer-1}
+#### L1 {#withdrawal-flow-layer-1}
 
 4. L1 のブリッジは、`finalizeETHWithdraw`または`finalizeERC20Withdral`の呼び出しにつき、以下が適切であるかを確認します：
    - クロスドメインのメッセージ・メカニズムを経由していること。

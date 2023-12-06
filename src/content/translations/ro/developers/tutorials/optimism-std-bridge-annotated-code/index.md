@@ -47,13 +47,13 @@ The bridge has two main flows:
 
 ### Withdrawal flow {#withdrawal-flow}
 
-#### Nivel 2 {#withdrawl-flow-layer-2}
+#### Nivel 2 {#withdrawal-flow-layer-2}
 
 1. The withdrawer calls the L2 bridge (`withdraw` or `withdrawTo`)
 2. The L2 bridge burns the appropriate number of tokens belonging to `msg.sender`
 3. The L2 bridge uses the cross-domain message mechanism to call `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` on the L1 bridge
 
-#### Nivel 1 {#withdrawl-flow-layer-1}
+#### Nivel 1 {#withdrawal-flow-layer-1}
 
 4. The L1 bridge verifies the call to `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` is legitimate:
    - Came from the cross domain message mechanism
