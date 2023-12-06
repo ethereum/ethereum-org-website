@@ -75,7 +75,7 @@ const Pre = (props: ChildOnlyProp) => (
   />
 )
 
-const InfoGrid = (props: ChildOnlyProp) => (
+export const InfoGrid = (props: ChildOnlyProp) => (
   <Grid
     templateColumns="repeat(auto-fill, minmax(min(100%, 340px), 1fr))"
     gap={8}

@@ -57,6 +57,7 @@
     "@storybook/nextjs": "7.5.3",
     "@storybook/react": "7.5.3",
     "@storybook/testing-library": "0.2.2",
+    "@svgr/webpack": "^8.1.0",
     "@types/hast": "^3.0.0",
     "@types/luxon": "^3.3.2",
     "@types/node": "^20.4.2",

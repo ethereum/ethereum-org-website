@@ -1,35 +1,39 @@
-import * as React from "react"
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
+import type { CommonHeroProps } from "@/lib/types"
+
+import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
-import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
-
-export interface HubHeroProps extends CommonHeroProps {}
-
-const HubHero = (props: HubHeroProps) => {
-  const { heroImgSrc, title, header, description, buttons } = props
-
-  if (buttons && buttons.length > 2) {
-    throw Error(
-      "Can not have more than two call-to-action buttons in this hero component."
-    )
-  }
-
+const HubHero = ({
+  heroImgSrc,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
+  const height = useBreakpointValue({
+    base: "192px",
+    md: "256px",
+    lg: "320px",
+    xl: "576px",
+    "2xl": "672px",
+  })
   return (
     <Box position="relative">
       <Image
         src={heroImgSrc}
         alt=""
-        objectFit="cover"
-        h={{
-          base: "192px",
-          md: "256px",
-          lg: "320px",
-          xl: "576px",
-          "2xl": "672px",
-        }}
+        priority
+        sizes="100vw"
+        style={{ width: "100vw", objectFit: "cover", height }}
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
@@ -63,14 +67,14 @@ const HubHero = (props: HubHeroProps) => {
           <Heading size="2xl">{header}</Heading>
           <Text size="lg">{description}</Text>
         </Stack>
-        <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-          {buttons
-            ? buttons.map((button, idx) => {
-                if (!button) return
-                return <CallToAction key={idx} {...button} index={idx} />
-              })
-            : null}
-        </HStack>
+        {buttons && (
+          <HStack justify={{ md: "center", xl: "start" }} spacing="4">
+            {buttons.map((button, idx) => {
+              if (!button) return
+              return <CallToAction key={idx} {...button} />
+            })}
+          </HStack>
+        )}
       </Stack>
     </Box>
   )
