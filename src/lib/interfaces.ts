@@ -1,3 +1,5 @@
+import { pages } from "next/dist/build/templates/app-page"
+import { StaticImageData } from "next/image"
 import type { ReactNode } from "react"
 
 import type {
@@ -183,4 +185,22 @@ export interface ReqCommunityEvent {
   summary: string
   htmlLink: string
   location: string
+}
+
+/**
+ * Community page
+ */
+
+export interface ICard {
+  image: StaticImageData
+  title: string
+  description: string
+  alt: string
+  to: string
+}
+
+export interface IGetInvolvedCard {
+  emoji: string
+  title: string
+  description: string
 }
