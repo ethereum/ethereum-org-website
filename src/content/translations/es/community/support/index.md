@@ -65,7 +65,7 @@ He aquí algunos ejemplos:
 
 Si está ejecutando un nodo o validador, estas son algunas comunidades dedicadas a ayudar a los usuarios en sus comienzos.
 
-- [Discord de EthStaker](https://discord.io/ethstaker)
+- [Discord de EthStaker](https://discord.gg/ethstaker)
 - [Reddit de EthStaker](https://www.reddit.com/r/ethstaker)
 
 La mayoría de los equipos que se encargan de la creación de clientes de Ethereum también cuentan con espacios especializados, orientados al público, en los que se puede obtener ayuda y hacer preguntas.
