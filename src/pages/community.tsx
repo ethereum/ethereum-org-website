@@ -13,6 +13,8 @@ import {
 import { ChildOnlyProp } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
+import { CommonHeroProps } from "@/components/Hero/HubHero"
+
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -21,7 +23,7 @@ import ButtonLink from "../components/Buttons/ButtonLink"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import FeedbackCard from "../components/FeedbackCard"
-import { HubHero, type HubHeroProps } from "../components/Hero"
+import { HubHero } from "../components/Hero"
 import { Image } from "../components/Image"
 import OldHeading from "../components/OldHeading"
 import PageMetadata from "../components/PageMetadata"
@@ -208,11 +210,11 @@ const CommunityPage = () => {
     },
   ]
 
-  const heroContent: HubHeroProps = {
+  const heroContent: CommonHeroProps = {
     title: t("page-community-hero-title"),
     header: t("page-community-hero-header"),
     description: t("page-community-hero-subtitle"),
-    heroImgSrc: communityHeroImg,
+    heroImg: communityHeroImg,
   }
 
   return (

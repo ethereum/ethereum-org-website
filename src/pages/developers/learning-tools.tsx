@@ -1,8 +1,8 @@
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
 import { SSRConfig } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useTranslation } from "react-i18next"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 
 import { ChildOnlyProp, LearningTool } from "@/lib/types"
@@ -13,7 +13,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import Heading from "@/components/OldHeading"
-import Text from '@/components/OldText'
+import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
@@ -21,25 +21,25 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import AlchemyUniversityImage from "@/public/dev-tools/alchemyuniversity.png"
-import BloomTechImage from '@/public/dev-tools/bloomtech.png'
-import BuildSpaceImage from '@/public/dev-tools/buildspace.png'
+import BloomTechImage from "@/public/dev-tools/bloomtech.png"
+import BuildSpaceImage from "@/public/dev-tools/buildspace.png"
 import CaptureTheEtherImage from "@/public/dev-tools/capturetheether.png"
-import ChainIDEImage from '@/public/dev-tools/chainIDE.png'
+import ChainIDEImage from "@/public/dev-tools/chainIDE.png"
 import ChainShotImage from "@/public/dev-tools/chainshot.png"
-import ConsensysImage from '@/public/dev-tools/consensys.png'
+import ConsensysImage from "@/public/dev-tools/consensys.png"
 import CryptoZombieImage from "@/public/dev-tools/crypto-zombie.png"
-import EthDotBuildImage from '@/public/dev-tools/eth-dot-build.png'
-import MetaschoolImage from '@/public/dev-tools/metaschool.png'
-import NFTSchoolImage from '@/public/dev-tools/nftschool.png'
+import EthDotBuildImage from "@/public/dev-tools/eth-dot-build.png"
+import MetaschoolImage from "@/public/dev-tools/metaschool.png"
+import NFTSchoolImage from "@/public/dev-tools/nftschool.png"
 import EthernautImage from "@/public/dev-tools/oz.png"
-import PlatziImage from '@/public/dev-tools/platzi.png'
-import PointerImage from '@/public/dev-tools/pointer.png'
-import QuestbookImage from '@/public/dev-tools/questbook.png'
-import RemixImage from '@/public/dev-tools/remix.png'
-import ReplitImage from '@/public/dev-tools/replit.png'
+import PlatziImage from "@/public/dev-tools/platzi.png"
+import PointerImage from "@/public/dev-tools/pointer.png"
+import QuestbookImage from "@/public/dev-tools/questbook.png"
+import RemixImage from "@/public/dev-tools/remix.png"
+import ReplitImage from "@/public/dev-tools/replit.png"
 import SpeedRunEthereumImage from "@/public/dev-tools/speed-run-ethereum.png"
-import TenderlyImage from '@/public/dev-tools/tenderly.png'
-import EnterpriseEth from '@/public/enterprise-eth.png'
+import TenderlyImage from "@/public/dev-tools/tenderly.png"
+import EnterpriseEth from "@/public/enterprise-eth.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -115,12 +115,12 @@ const StackContainer = (props: ChildOnlyProp) => (
   />
 )
 
-export const getStaticProps = (async (
-  context
-) => {
+export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage('/developers/learning-tools')
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/developers/learning-tools"
+  )
   const lastDeployDate = getLastDeployDate()
 
   return {
@@ -134,50 +134,69 @@ export const getStaticProps = (async (
 const DevelopersPage = () => {
   const { t } = useTranslation(["page-developers-learning-tools"])
 
-
   const randomizedSandboxes: Array<LearningTool> = shuffle([
     {
       name: "Remix",
-      description: t("page-developers-learning-tools:page-learning-tools-remix-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-remix-description"
+      ),
       url: "https://remix.ethereum.org",
       image: RemixImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-remix-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-remix-logo-alt"
+      ),
       background: "#5098d6",
       subjects: ["Solidity", "Vyper"],
     },
     {
       name: "Eth.build",
-      description: t("page-developers-learning-tools:page-learning-tools-eth-dot-build-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-eth-dot-build-description"
+      ),
       url: "https://eth.build/",
       image: EthDotBuildImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-eth-dot-build-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-eth-dot-build-logo-alt"
+      ),
       background: "#000000",
       subjects: ["web3"],
     },
     {
       name: "Replit",
-      description: t("page-developers-learning-tools:page-learning-tools-replit-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-replit-description"
+      ),
       url: "https://replit.com/@replit/Solidity-starter-beta",
       image: ReplitImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-replit-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-replit-logo-alt"
+      ),
       background: "#0f1524",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "ChainIDE",
-      description: t("page-developers-learning-tools:page-learning-tools-chainIDE-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-chainIDE-description"
+      ),
       url: "https://chainide.com/",
       image: ChainIDEImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-chainIDE-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-chainIDE-logo-alt"
+      ),
       background: "#2C60A3",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Tenderly",
-      description: t("page-developers-learning-tools:page-learning-tools-tenderly-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-tenderly-description"
+      ),
       url: "https://sandbox.tenderly.co",
       image: TenderlyImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-tenderly-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-tenderly-logo-alt"
+      ),
       background: "#0f1524",
       subjects: ["Solidity", "Vyper", "web3"],
     },
@@ -186,28 +205,40 @@ const DevelopersPage = () => {
   const games: Array<LearningTool> = [
     {
       name: "CryptoZombies",
-      description: t("page-developers-learning-tools:page-learning-tools-cryptozombies-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-cryptozombies-description"
+      ),
       url: "https://cryptozombies.io/",
       image: CryptoZombieImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-cryptozombies-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-cryptozombies-logo-alt"
+      ),
       background: "#2b2f48",
       subjects: ["Solidity"],
     },
     {
       name: "Ethernauts",
-      description: t("page-developers-learning-tools:page-learning-tools-ethernauts-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-ethernauts-description"
+      ),
       url: "https://ethernaut.openzeppelin.com/",
       image: EthernautImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-ethernauts-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-ethernauts-logo-alt"
+      ),
       background: "#4f62dc",
       subjects: ["Solidity"],
     },
     {
       name: "Capture The Ether",
-      description: t("page-developers-learning-tools:page-learning-tools-capture-the-ether-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-capture-the-ether-description"
+      ),
       url: "https://capturetheether.com/",
       image: CaptureTheEtherImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-capture-the-ether-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-capture-the-ether-logo-alt"
+      ),
       background: "#1b9aaa",
       subjects: ["Solidity"],
     },
@@ -216,101 +247,145 @@ const DevelopersPage = () => {
   const bootcamps: Array<LearningTool> = [
     {
       name: "ChainShot",
-      description: t("page-developers-learning-tools:page-learning-tools-chainshot-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-chainshot-description"
+      ),
       url: "https://www.chainshot.com",
       image: ChainShotImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-chainshot-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-chainshot-logo-alt"
+      ),
       background: "#111f29",
       subjects: ["Solidity", "Vyper", "web3"],
     },
     {
       name: "ConsenSys Academy",
-      description: t("page-developers-learning-tools:page-learning-tools-consensys-academy-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-consensys-academy-description"
+      ),
       url: "https://consensys.net/academy/bootcamp/",
       image: ConsensysImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-consensys-academy-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-consensys-academy-logo-alt"
+      ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "BloomTech",
-      description: t("page-developers-learning-tools:page-learning-tools-bloomtech-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-bloomtech-description"
+      ),
       url: "https://www.bloomtech.com/courses/web3",
       image: BloomTechImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-bloomtech-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-bloomtech-logo-alt"
+      ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "_buildspace",
-      description: t("page-developers-learning-tools:page-learning-tools-buildspace-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-buildspace-description"
+      ),
       url: "https://buildspace.so",
       image: BuildSpaceImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-buildspace-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-buildspace-logo-alt"
+      ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Questbook",
-      description: t("page-developers-learning-tools:page-learning-tools-questbook-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-questbook-description"
+      ),
       url: "https://learn.questbook.xyz/",
       image: QuestbookImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-questbook-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-questbook-logo-alt"
+      ),
       background: "#141236",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Metaschool",
-      description: t("page-developers-learning-tools:page-learning-tools-metaschool-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-metaschool-description"
+      ),
       url: "https://metaschool.so",
       image: MetaschoolImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-metaschool-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-metaschool-logo-alt"
+      ),
       background: "#f6f7f9",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "NFT School",
-      description: t("page-developers-learning-tools:page-learning-tools-nftschool-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-nftschool-description"
+      ),
       url: "https://nftschool.dev/",
       image: NFTSchoolImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-nftschool-logo-alt"
+      ),
       background: "#111f29",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Pointer",
-      description: t("page-developers-learning-tools:page-learning-tools-pointer-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-pointer-description"
+      ),
       url: "https://pointer.gg/",
       image: PointerImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-pointer-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-pointer-logo-alt"
+      ),
       background: "#171717",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Platzi",
-      description: t("page-developers-learning-tools:page-learning-tools-platzi-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-platzi-description"
+      ),
       url: "https://platzi.com/escuela/escuela-blockchain/",
       image: PlatziImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-platzi-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-platzi-logo-alt"
+      ),
       background: "#121f3d",
       subjects: ["Solidity", "web3"],
       locales: ["es"],
     },
     {
       name: "Speed Run Ethereum",
-      description: t("page-developers-learning-tools:page-learning-tools-speed-run-ethereum-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-speed-run-ethereum-description"
+      ),
       url: "https://speedrunethereum.com/",
       image: SpeedRunEthereumImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-speed-run-ethereum-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-speed-run-ethereum-logo-alt"
+      ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
     {
       name: "Alchemy University",
-      description: t("page-developers-learning-tools:page-learning-tools-alchemy-university-description"),
+      description: t(
+        "page-developers-learning-tools:page-learning-tools-alchemy-university-description"
+      ),
       url: "https://university.alchemy.com/",
       image: AlchemyUniversityImage,
-      alt: t("page-developers-learning-tools:page-learning-tools-alchemy-university-logo-alt"),
+      alt: t(
+        "page-developers-learning-tools:page-learning-tools-alchemy-university-logo-alt"
+      ),
       background: "#ffffff",
       subjects: ["Solidity", "web3"],
     },
@@ -319,8 +394,12 @@ const DevelopersPage = () => {
   return (
     <Page>
       <PageMetadata
-        title={t("page-developers-learning-tools:page-learning-tools-meta-title")}
-        description={t("page-developers-learning-tools:page-learning-tools-meta-desc")}
+        title={t(
+          "page-developers-learning-tools:page-learning-tools-meta-title"
+        )}
+        description={t(
+          "page-developers-learning-tools:page-learning-tools-meta-desc"
+        )}
       />
       <Header>
         <H1>
@@ -366,9 +445,15 @@ const DevelopersPage = () => {
           mt={24}
           mb={40}
           image={EnterpriseEth}
-          alt={t("page-developers-learning-tools:page-index-tout-enterprise-image-alt")}
-          titleKey={"page-developers-learning-tools:page-learning-tools-documentation"}
-          descriptionKey={"page-developers-learning-tools:page-learning-tools-documentation-desc"}
+          alt={t(
+            "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
+          )}
+          titleKey={
+            "page-developers-learning-tools:page-learning-tools-documentation"
+          }
+          descriptionKey={
+            "page-developers-learning-tools:page-learning-tools-documentation-desc"
+          }
         >
           <Box>
             <ButtonLink to="/developers/docs/">
