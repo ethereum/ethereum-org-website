@@ -137,7 +137,7 @@ Un résumé du flux de contrôle est affiché ci-dessous (la pile réseau pertin
 ##### Lorsque le client de consensus est le producteur de bloc :
 
 - Le client de consensus reçoit une note l'informant qu'il est le prochain producteur de blocs (consensus p2p)
-- Les appels de couche de consensus `créent la méthode du bloc` dans le client d'exécution (RPC en local)
+- La couche de consensus appelle la méthode `create block` dans le client d'exécution (RPC en local)
 - La couche d'exécution accède au mempool de transaction qui a été alimenté par le protocole de commutation de transaction (exécution p2p)
 - Le client d'exécution empaquette les transactions dans un bloc, exécute les transactions et génère un hachage du bloc
 - Le client de consensus récupère les transactions et bloque le hachage du client d'exécution et les ajoute au bloc phare (RPC)

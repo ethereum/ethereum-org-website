@@ -8,7 +8,7 @@ lang: fr
 
 Nous souhaitons nous assurer de lister les meilleures ressources possibles tout en préservant la sécurité et la confiance des utilisateurs.
 
-Toute personne est libre de suggérer l'ajout de produits ou de services mis en jeu sur ethereum.org. S'il en existe un que nous avons manqué, **[merci de bien vouloir le suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service) !**
+Toute personne est libre de suggérer l'ajout de produits ou de services mis en jeu sur ethereum.org. S'il en existe que nous avons manqué, **[merci de bien vouloir les suggérer](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml) !**
 
 Nous listons actuellement les produits et services de mise en jeu sur les pages suivantes :
 
@@ -50,6 +50,11 @@ Les soumissions de produits ou de services de mise en jeu seront évaluées selo
 - Quelles étapes dans le parcours des utilisateurs exigent que les humains de confiance détiennent les clés de leurs fonds, ou bien pour distribuer correctement les récompenses ?
 - Ceci est utilisé pour déterminer le score de « confiance » du produit ou des services.
 
+**Le projet fournit-il des informations précises et fiables ?**
+
+- Il est essentiel que le site web du produit présente des informations à jour, précises et non trompeuses, en particulier s'il concerne le protocole Ethereum ou d'autres technologies associées.
+- Les soumissions contenant des informations erronées, des détails obsolètes ou des déclarations potentiellement trompeuses sur Ethereum ou d'autres sujets pertinents ne seront pas répertoriées ou seront supprimées si elles sont déjà répertoriées.
+
 **Quelles plateformes sont prises en charge ?**
 
 - Par ex. Linux, macOS, Windows, iOS, Android
@@ -82,14 +87,14 @@ Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 
 Pour les produits logiciels liés à la configuration de nœuds ou de clients, la gestion ou la migration :
 
-**Quels clients de la couche de consensus (par ex. : Lighthouse, Teku, Nimbus, Prysm) sont pris en charge ?**
+**Quels clients de la couche de consensus (c'est-à-dire Lighthouse, Teku, Nimbus, Prysm) sont pris en charge ?**
 
 - Quels sont les clients pris en charge ? L'utilisateur peut-il choisir ?
 - Ceci est utilisé pour déterminer le score « multi-client » des produits.
 
 #### Mise en jeu en tant que service {#staking-as-a-service}
 
-Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c.-à-d. les opérations de nœuds délégués) :
+Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c'est-à-dire les opérations de nœuds délégués) :
 
 **Quels sont les frais associés à l'utilisation du service ?**
 
@@ -108,7 +113,7 @@ Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c.-à-d. l
 
 **Quelle est la diversité des clients des nœuds opérés ?**
 
-- Quel pourcentage des clés de validateur est utilisé par un client pour constituer la majorité de la couche de consensus ?
+- Quel pourcentage de clés de validateur exécute un client majoritaire de la couche de consensus (CL) ?
 - Depuis la dernière modification, Prysm est le client de couche de consensus exécutée par une majorité d'opérateurs de nœuds, ce qui est dangereux pour le réseau. Si une couche de consensus client est actuellement utilisée par plus de 33 % du réseau, nous demandons des données relatives à son utilisation.
 - Ceci est utilisé pour déterminer le score « diversité de clients » des produits.
 
@@ -133,7 +138,7 @@ Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 **Les utilisateurs peuvent-ils participer en tant qu'opérateur de nœud ?**
 
 - Quels sont les prérequis pour pouvoir exécuter des clients validateurs en utilisant les groupements de fonds ?
-- Cela exige-t-il une autorisation de la part d'une personne, d'une entreprise ou d'un DAO ?
+- Cela exige-t-il une autorisation de la part d'une personne, d'une entreprise ou d'une DAO ?
 - Ceci est utilisé pour déterminer le score « nœuds sans autorisation » des produits.
 
 **Quelle est la diversité des clients des opérateurs de nœuds groupés ?**
@@ -160,12 +165,12 @@ Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 
 Les [critères d'inclusion](#criteria-for-inclusion) ci-dessus sont utilisés pour calculer un score cumulé pour chaque produit ou service. Ceci est utilisé comme un moyen de trier et de présenter des produits qui répondent à certains critères objectifs. Plus il y a de critères pour lesquels des preuves sont fournies, plus un produit sera listé haut, les ex æquo étant affichés aléatoirement au chargement.
 
-La logique de code et les valeurs de ces critères sont actuellement contenus dans [ce composant JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) sur notre dépôt.
+La logique de code et les pondérations de ces critères sont actuellement contenus dans [ce composant JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) sur notre dépôt.
 
 ## Ajoutez votre produit ou service {#add-product}
 
 Si vous souhaitez ajouter un produit ou un service de mise en jeu sur ethereum.org, il vous suffit de créer un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Créez un ticket
 </ButtonLink>
