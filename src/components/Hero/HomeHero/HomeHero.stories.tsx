@@ -1,5 +1,3 @@
-import * as React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
 import { Meta, StoryObj } from "@storybook/react"
 
 import HomeHeroComponent from "."
@@ -23,29 +21,10 @@ const meta = {
 
 export default meta
 
-// Comes from the original compiled querying
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "fullWidth",
-  images: {
-    fallback: {
-      src: "/home/hero.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/home/hero.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
+// TODO: Double-check correct way to mock Next.js image data
+const mockImgData = "/home/hero.png"
 
 export const HomeHero: StoryObj<typeof meta> = {
-  args: {
-    heroImgSrc: mockGatsbyImgData,
-  },
+  args: { heroImgSrc: mockImgData },
   render: (args) => <HomeHeroComponent {...args} />,
 }

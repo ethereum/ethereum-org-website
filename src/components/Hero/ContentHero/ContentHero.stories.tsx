@@ -22,25 +22,8 @@ const meta = {
 
 export default meta
 
-// Comes from the original compiled querying
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "constrained",
-  images: {
-    fallback: {
-      src: "/mainnet.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/mainnet.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
+// TODO: Double-check correct way to mock Next.js image data
+const mockImgData = "/mainnet.png"
 
 export const ContentHero: StoryObj = {
   render: () => {
@@ -69,7 +52,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImgSrc={mockGatsbyImgData}
+        heroImgSrc={mockImgData}
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}
