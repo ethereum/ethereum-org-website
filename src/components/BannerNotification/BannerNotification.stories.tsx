@@ -1,5 +1,5 @@
 import React from "react"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { Text } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
 
