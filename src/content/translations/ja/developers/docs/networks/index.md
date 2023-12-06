@@ -53,15 +53,11 @@ lang: ja
 
 ##### フォーセット
 
-- [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
+- [QuickNode Sepolia フォーセット](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
-- [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [FaucETH](https://fauceth.komputing.org)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
-- [Infura Sepolia faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [テストネットフォーセット | Sepolia](https://testnet-faucet.com/sepolia/)
+- [PoW フォーセット](https://sepolia-faucet.pk910.de/)
+- [Coinbase Wallet フォーセット | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Alchemy Sepolia フォーセット](https://sepoliafaucet.com/)
 
 #### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
 

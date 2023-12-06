@@ -377,13 +377,13 @@ const UpgradePage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Show above={lgBreakpoint}>
-          <LeftNavBar
-            dropdownLinks={dropdownLinks}
-            tocItems={tocItems}
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-          />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBreakpoint}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           {/* <DesktopBreadcrumbs slug={mdx.fields.slug} startDepth={1} /> */}
           <MDXProvider components={components}>

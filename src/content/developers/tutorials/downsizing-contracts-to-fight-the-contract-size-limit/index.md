@@ -48,7 +48,7 @@ One simple way to move functionality code away from the storage is using a [libr
 
 ### Proxies {#proxies}
 
-A more advanced strategy would be proxy system. Libraries use `DELEGATECALL` in the back which simply executes another contract's function with the state of the calling contract. Check out [this blog post](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) to learn more about proxy systems. They give you more functionality, e.g., they enable upgradability, but they also add a lot of complexity. I wouldn't add those only to reduce contract sizes unless it's your only option for whatever reason.
+A more advanced strategy would be a proxy system. Libraries use `DELEGATECALL` in the back which simply executes another contract's function with the state of the calling contract. Check out [this blog post](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) to learn more about proxy systems. They give you more functionality, e.g., they enable upgradability, but they also add a lot of complexity. I wouldn't add those only to reduce contract sizes unless it's your only option for whatever reason.
 
 ## Medium impact {#medium-impact}
 
