@@ -274,7 +274,7 @@ If the call data size is four bytes or more this might be a valid ABI call.
 |     10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data))) |
 |     12 | SHR          | (((first 32 bits (4 bytes) of the call data)))    |
 
-Etherscan tells us that `1C` is an unknown opcode, because [it was added after Etherscan wrote this feature](https://eips.ethereum.org/EIPS/eip-145) and they haven't updated it. An [up to data opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
+Etherscan tells us that `1C` is an unknown opcode, because [it was added after Etherscan wrote this feature](https://eips.ethereum.org/EIPS/eip-145) and they haven't updated it. An [up to date opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
 
 | Offset | Opcode           | Stack                                                                                                    |
 | -----: | ---------------- | -------------------------------------------------------------------------------------------------------- |

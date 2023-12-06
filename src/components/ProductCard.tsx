@@ -7,7 +7,6 @@ import {
   Flex,
   Heading,
   HStack,
-  Img,
   TextProps,
 } from "@chakra-ui/react"
 
@@ -124,7 +123,10 @@ const ProductCard: React.FC<IProps> = ({
       </Center>
       <Flex flexDirection="column" p={6} textAlign="start" height="100%">
         {githubRepoStars > 0 && (
-          <GitStars gitHubRepo={{url: githubUrl, stargazerCount: githubRepoStars}} hideStars={hideStars} />
+          <GitStars
+            gitHubRepo={{ url: githubUrl, stargazerCount: githubRepoStars }}
+            hideStars={hideStars}
+          />
         )}
         <Heading
           as="h3"
@@ -147,13 +149,11 @@ const ProductCard: React.FC<IProps> = ({
             </SubjectBadge>
           ))}
         {githubRepoLanguages.length &&
-          githubRepoLanguages.map(
-            (name, idx: number) => (
-              <SubjectBadge key={idx} subject={name}>
-                {name.toUpperCase()}
-              </SubjectBadge>
-            )
-          )}
+          githubRepoLanguages.map((name, idx: number) => (
+            <SubjectBadge key={idx} subject={name}>
+              {name.toUpperCase()}
+            </SubjectBadge>
+          ))}
       </HStack>
       <ButtonLink to={url} m={4} height={20}>
         Open {name}

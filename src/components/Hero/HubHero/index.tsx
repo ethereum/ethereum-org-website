@@ -1,14 +1,8 @@
 import * as React from "react"
-import {
-  Box,
-  Heading,
-  HStack,
-  Stack,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 
-import GatsbyImage from "../../GatsbyImage"
+import { Image } from "@/components/Image"
+
 import { CallToAction } from "../CallToAction"
 import { CommonHeroProps } from "../utils"
 
@@ -23,32 +17,26 @@ const HubHero = (props: HubHeroProps) => {
     )
   }
 
-  const largeContentBg = useColorModeValue(
-    "rgba(255, 255, 255, 0.80)",
-    "rgba(34, 34, 34, 0.80)"
-  )
-
   return (
     <Box position="relative">
-      <GatsbyImage
-        image={heroImgSrc}
+      <Image
+        src={heroImgSrc}
         alt=""
-        w="full"
-        height={{
+        objectFit="cover"
+        h={{
           base: "192px",
           md: "256px",
           lg: "320px",
           xl: "576px",
           "2xl": "672px",
         }}
-        loading="eager"
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
-        bg={{ xl: largeContentBg }}
+        bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
         insetStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
