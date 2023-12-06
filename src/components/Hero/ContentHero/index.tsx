@@ -1,11 +1,11 @@
 import * as React from "react"
 import { Box, Heading, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 
-import Breadcrumbs, { IProps as BreadcrumbsProps } from "@/components/Breadcrumbs"
+import Breadcrumbs, { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import { Image } from "@/components/Image"
 
 import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
+import { CommonHeroProps } from "../HubHero"
 
 export interface ContentHeroProps extends Omit<CommonHeroProps, "header"> {
   breadcrumbs: BreadcrumbsProps

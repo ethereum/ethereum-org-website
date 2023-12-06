@@ -1,14 +1,20 @@
 import * as React from "react"
+import { StaticImageData } from "next/image"
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
 
-import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
+import { CallToAction, CallToActionProps } from "../CallToAction"
 
-export interface HubHeroProps extends CommonHeroProps {}
+export type CommonHeroProps = {
+  heroImgSrc: StaticImageData
+  header: string
+  title: string
+  description: string
+  buttons?: [CallToActionProps, CallToActionProps?]
+}
 
-const HubHero = (props: HubHeroProps) => {
+const HubHero = (props: CommonHeroProps) => {
   const { heroImgSrc, title, header, description, buttons } = props
 
   if (buttons && buttons.length > 2) {

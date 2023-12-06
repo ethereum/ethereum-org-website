@@ -1,5 +1,3 @@
-import * as React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
 import { useTranslation } from "react-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
