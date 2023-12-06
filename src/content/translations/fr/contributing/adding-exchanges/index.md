@@ -20,7 +20,7 @@ Dans cette optique, nous avons besoin d'informations spécifiques lorsque vous p
 
 ## Ce dont nous avons besoin {#what-we-need}
 
-- Les restrictions géographiques qui s'appliquent à l'échange
+- Les restrictions géographiques qui s'appliquent à l'échange. Les restrictions géographiques associées à l'échange doivent être détaillées sur une page ou une section spécifique du site web de l'échange.
 - Les devises que les utilisateurs peuvent choisir pour acheter des ETH
 - Des preuves que l'échange est une société commerciale légitime
 - Toute information supplémentaire que vous pourriez avoir ; il peut s'agir d'informations sur l'entreprise comme son ancienneté, son financement, etc.
@@ -35,6 +35,6 @@ Cela permet également à ethereum.org d'avoir confiance en la légitimité et l
 
 Si vous souhaitez ajouter un échange sur ethereum.org, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Créez un ticket
 </ButtonLink>

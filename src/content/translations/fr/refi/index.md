@@ -18,7 +18,7 @@ summaryPoint3: Un outil permettant une augmentation drastique des bénéfices é
 
 Le ReFi vise plutôt à résoudre des problèmes environnementaux, communautaires ou sociaux en créant des cycles de régénération. Ces systèmes créent de la valeur pour les participants tout en bénéficiant aux écosystèmes et aux communautés.
 
-L'un des fondements de la ReFi est le concept d'économie régénératrice dont John Fullerton, du [Capital Institute](https://capitalinstitute.org), a été le pionnier. Il a proposé huit principes interconnectés qui constituent la base de la santé systémique :
+L'un des fondements de la ReFi est le concept d'économie régénératrice dont John Œilleton, du Capital Institute, a été le pionnier. Il a proposé [huit principes interconnectés](https://capitalinstitute.org/8-principles-regenerative-economy/) qui sous-tendent la santé systémique :
 
 ![Huit principes interconnectés](../../assets/use-cases/refi-regenerative-economy-diagram.png)
 

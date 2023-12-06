@@ -26,7 +26,7 @@ En plus des avantages que nous avons décrits dans notre [introduction à la mis
 <CardGrid>
   <Card title="Barrière faible à l’entrée" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="La mise en jeu aujourd'hui" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="jetons de staking" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Jetons de staking" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -53,14 +53,14 @@ De nombreuses options sont disponible pour vous aider dans votre configuration. 
 
 <StakingProductsCardGrid category="pools" />
 
-Veuillez noter l'importance de choisir un service qui prend au sérieux [la diversité des clients](/developers/docs/nodes-and-clients/client-diversity/) , car elle améliore la sécurité du réseau et limite vos risques. Les services limitent l'émergence d'un client majoritaire sont indiqués avec <em style="text-transform: uppercase;">"diversité des clients d'exécution"</em> et <em style="text-transform: uppercase;">"diversité des clients de consensus"</em>.
+Veuillez noter l'importance de choisir un service qui prend au sérieux [la diversité des clients](/developers/docs/nodes-and-clients/client-diversity/) , car elle améliore la sécurité du réseau et limite vos risques. Les services prouvant que l'utilisation d'un client majoritaire est limitée sont indiqués avec <em style={{ textTransform: "uppercase" }}>"diversité des clients d'exécution"</em> et <em style={{ textTransform: "uppercase" }}>"diversité des clients de consensus."</em>
 
 Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.
 
 ## Questions fréquemment posées {#faq}
 
 <ExpandableCard title="Comment puis-je gagner des récompenses ?">
-Habituellement, les jetons ERC-20 de staking sont émis envers les validateurs et représentent la valeur de leur ETH misé auquel s'ajoutent des récompenses. Gardez en mémoire que les différents pools distribueront des récompenses de mise en jeu à leurs utilisateurs selon des règles différentes, mais c'est un sujet général.
+Généralement, des jetons de mise en jeu RC-20 sont émis à destination des participants et représentent la valeur de leur ETH mis en jeu et, en sus, les récompenses. Gardez en mémoire que les différents pools distribueront des récompenses de mise en jeu à leurs utilisateurs selon des règles différentes, mais c'est un sujet général.
 </ExpandableCard>
 
 <ExpandableCard title="Quand puis-je retirer ma mise?">
@@ -81,5 +81,6 @@ Certaines options de mise en commun sont plus décentralisées que d'autres conc
 
 ## Lectures complémentaires {#further-reading}
 
+- [L'Annuaire de la mise en jeu sur Ethereum.](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Staking with Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_
 - [Staking Ethereum With Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Aide Lido docs_

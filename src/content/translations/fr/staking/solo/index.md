@@ -109,7 +109,7 @@ Il existe une variété d'options disponibles pour vous aider dans votre configu
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/nodes-and-clients/client-diversity/) , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style="text-transform: uppercase;">"multi-client."</em>
+Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/nodes-and-clients/client-diversity/) , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
 #### Générateurs de clés
 
@@ -195,6 +195,7 @@ Pour déverrouiller et recevoir la totalité de votre solde, vous devez égaleme
 
 ## Complément d'information {#further-reading}
 
+- [L'Annuaire de la mise en jeu sur Ethereum.](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_

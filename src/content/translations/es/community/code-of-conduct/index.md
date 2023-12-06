@@ -52,7 +52,7 @@ Algunos ejemplos de comportamiento inaceptable por parte de los participantes so
 
 - Violencia física, amenazas con violencia física o alentar a cualquier tipo de violencia física.
 - El uso de un lenguaje o de imágenes sexualizadas o la imposición de una atención sexual no deseada.
-- Hacerse pasar por otro individuo, o reclamar fraudulentamente afiliación a alguna organización o con algún individuo.
+- Hacerse pasar por otro individuo, o reclamar fraudulentamente afiliación a alguna organización o con algún individuo
 - Trolear, insultar/hacer comentarios despectivos y ataques personales o políticos.
 - Hostigar a otros miembros de la comunidad en canales públicos o privados.
 - Publicar información privada de otros, como una dirección física o electrónica, sin permiso explícito.
