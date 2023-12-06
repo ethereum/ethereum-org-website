@@ -206,7 +206,7 @@
   "e003-c-explanation": "Prominent community members do not do ETH giveaways. Scammers pretend well-know individuals, such as Elon Musk, are doing giveaways to give them the scam a sense of legitimacy.",
   "e003-d-label": "Are very likely to be a scam",
   "e003-d-explanation": "ETH giveaways are always scams. Reporting and ignoring scammers is best.",
-  "e004-prompt": "Ethereum transaction are reversible.",
+  "e004-prompt": "Ethereum transactions are reversible.",
   "e004-a-label": "True",
   "e004-a-explanation": "Ethereum transactions cannot be reversed. Anyone who tells you otherwise might be trying to scam you.",
   "e004-b-label": "False",

@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Carteras con extension para navegadores",
   "page-find-wallet-device": "Dispositivo",
   "page-find-choose-to-compare": "Elija para comparar",
-  "page-find-wallet-choose-features": "Seleccionar características"
+  "page-find-wallet-choose-features": "Seleccionar características",
+  "page-find-wallet-reset-filters": "Restablecer filtros"
 }
