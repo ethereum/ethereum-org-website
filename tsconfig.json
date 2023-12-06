@@ -86,7 +86,6 @@
     "./src/components/Morpher.tsx",
     "./src/components/OrderedList.tsx",
     "./src/components/PageHero.tsx",
-    "./src/components/ProductCard.tsx",
     "./src/components/ProductList.tsx",
     "./src/components/Quiz/QuizItem.tsx",
     "./src/components/Quiz/QuizzesList.tsx",
