@@ -30,7 +30,7 @@ Cüzdanınızla ilgili sorun mu yaşıyorsunuz? Çoğu cüzdan, aşağıdakilere
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Bu kapsamlı bir liste değildir. Belirli bir cüzdan için destek bulma konusunda yardıma mı ihtiyacınız var? [ethereum.org Discord](https://discord.gg/rZz26QWfCg)'una katılın, yardım etmeye çalışacağız._
+_Bu kapsamlı bir liste değildir. Belirli bir cüzdan için destek bulma konusunda yardıma mı ihtiyacınız var? [ethereum.org Discord](https://discord.gg/ethereum-org)'una katılın, yardım etmeye çalışacağız._
 
 Ethereum cüzdanı mı arıyorsunuz? [Ethereum cüzdanlarının tam listesini keşfedin](/wallets/find-wallet/).
 
