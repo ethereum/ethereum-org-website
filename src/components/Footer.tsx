@@ -34,7 +34,7 @@ const socialLinks = [
   },
   {
     icon: FaDiscord,
-    to: "/discord",
+    to: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
     color: "#7289da",
   },
