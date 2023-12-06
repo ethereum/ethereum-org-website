@@ -319,7 +319,7 @@ const HomePage = ({
         description={t("page-index:page-index-meta-description")}
       />
       <Box w="full">
-        <HomeHero heroImgSrc={hero} />
+        <HomeHero heroImg={hero} />
       </Box>
       {/* Getting Started Section */}
       <GrayContainer>
