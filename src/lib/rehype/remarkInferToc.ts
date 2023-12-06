@@ -4,7 +4,7 @@ import type { Nodes } from "mdast-util-toc/lib"
 import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
-import type { IRemarkTocOptions, ToCNodeEntry, TocNodeType } from "@/lib/types"
+import type { IRemarkTocOptions, ToCMapItem, ToCNodeEntry, TocNodeType } from "@/lib/types"
 
 const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
   const { callback, maxDepth }: IRemarkTocOptions = {
@@ -13,7 +13,7 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
   }
 
   const processToC = (
-    node: BlockContent | DefinitionContent | ListItem | null,
+    node: BlockContent | DefinitionContent | ListItem | ToCMapItem | null,
     current: TocNodeType
   ): TocNodeType => {
     if (!node) {

@@ -1,4 +1,4 @@
-import type { Options } from "mdast-util-toc"
+import { type Options, toc } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import type { ReactElement, ReactNode } from "react"
@@ -198,8 +198,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -211,3 +211,5 @@ export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
 }
+
+export type ToCMapItem = ReturnType<typeof toc>["map"]
