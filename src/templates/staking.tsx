@@ -343,7 +343,7 @@ const StakingPage = ({
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "page-staking-dropdown-home",
+    text: "page-staking-dropdown-staking-options",
     ariaLabel: "page-staking-dropdown-staking-options-alt",
     items: [
       {
