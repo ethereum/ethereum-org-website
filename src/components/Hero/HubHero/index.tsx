@@ -1,18 +1,10 @@
 import * as React from "react"
-import { StaticImageData } from "next/image"
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 
+import type { CommonHeroProps } from "@/lib/types"
+
+import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
-
-import { CallToAction, CallToActionProps } from "../CallToAction"
-
-export type CommonHeroProps = {
-  heroImg: StaticImageData
-  header: string
-  title: string
-  description: string
-  buttons?: [CallToActionProps, CallToActionProps?]
-}
 
 const HubHero = (props: CommonHeroProps) => {
   const { heroImg, title, header, description, buttons } = props
@@ -28,14 +20,9 @@ const HubHero = (props: CommonHeroProps) => {
       <Image
         src={heroImg}
         alt=""
-        objectFit="cover"
-        h={{
-          base: "192px",
-          md: "256px",
-          lg: "320px",
-          xl: "576px",
-          "2xl": "672px",
-        }}
+        priority
+        sizes="100vw"
+        style={{ width: "100vw", objectFit: "cover", height: "auto" }}
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
@@ -69,14 +56,14 @@ const HubHero = (props: CommonHeroProps) => {
           <Heading size="2xl">{header}</Heading>
           <Text size="lg">{description}</Text>
         </Stack>
-        <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-          {buttons
-            ? buttons.map((button, idx) => {
-                if (!button) return
-                return <CallToAction key={idx} {...button} index={idx} />
-              })
-            : null}
-        </HStack>
+        {buttons && (
+          <HStack justify={{ md: "center", xl: "start" }} spacing="4">
+            {buttons.map((button, idx) => {
+              if (!button) return
+              return <CallToAction key={idx} {...button} />
+            })}
+          </HStack>
+        )}
       </Stack>
     </Box>
   )

@@ -1,11 +1,11 @@
 import { useTranslation } from "next-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 
+import type { CommonHeroProps } from "@/lib/types"
+
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 import Morpher from "@/components/Morpher"
-
-import { CommonHeroProps } from "../HubHero"
 
 export interface HomeHeroProps extends Pick<CommonHeroProps, "heroImg"> {}
 

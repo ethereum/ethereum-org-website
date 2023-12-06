@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import HubHeroComponent, { CommonHeroProps } from "./"
+import HubHeroComponent from "./"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -24,6 +24,8 @@ const meta = {
 
 export default meta
 
+import { CommonHeroProps } from "@/lib/types"
+
 import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
@@ -33,10 +35,10 @@ export const HubHero: StoryObj<typeof meta> = {
     description: "hero-subtitle",
     heroImg: learnHubHeroImg,
   },
-  render: (args) => {
+
+  render: ({ title, header, description, ...props }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
-    const { title, header, description, ...rest } = args
 
     const buttons: CommonHeroProps["buttons"] = [
       {
@@ -64,7 +66,7 @@ export const HubHero: StoryObj<typeof meta> = {
         header={t(header)}
         description={t(description)}
         buttons={buttons}
-        {...rest}
+        {...props}
       />
     )
   },

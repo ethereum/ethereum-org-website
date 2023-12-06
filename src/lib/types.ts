@@ -14,6 +14,9 @@ import type {
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
 
+import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import { ImageProps } from "@/components/Image"
+
 import { layoutMapping } from "@/pages/[...slug]"
 
 export type ChildOnlyProp = { children?: ReactNode }
@@ -215,6 +218,14 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
+}
+
+export type CommonHeroProps = {
+  heroImg: StaticImageData
+  header: string
+  title: string
+  description: string
+  buttons?: [CallToActionProps, CallToActionProps?]
 }
 
 // Learning Tools

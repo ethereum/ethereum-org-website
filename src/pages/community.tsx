@@ -10,10 +10,8 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { ChildOnlyProp, CommonHeroProps } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
-
-import { CommonHeroProps } from "@/components/Hero/HubHero"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"

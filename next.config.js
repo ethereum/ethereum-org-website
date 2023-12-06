@@ -2,18 +2,17 @@ const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const { i18n } = require("./next-i18next.config")
 
-const experimental =
-  (process.env.LIMIT_CPU || "").toLowerCase() === "true"
-    ? {
-        // This option could be enabled in the future when flagged as stable, to speed up builds
-        // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
-        // mdxRs: true,
+const experimental = (process.env.LIMIT_CPU || "").toLowerCase() === "true"
+  ? {
+    // This option could be enabled in the future when flagged as stable, to speed up builds
+    // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
+    // mdxRs: true,
 
-        // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
-        workerThreads: false,
-        cpus: 2,
-      }
-    : {}
+    // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
+    workerThreads: false,
+    cpus: 2,
+  }
+  : {}
 
 /** @type {import('next').NextConfig} */
 module.exports = (phase, { defaultConfig }) => {
@@ -25,7 +24,11 @@ module.exports = (phase, { defaultConfig }) => {
         test: /\.ya?ml$/,
         use: 'yaml-loader',
       });
-  
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: '@svgr/webpack',
+      })
+
       return config;
     },
     i18n,

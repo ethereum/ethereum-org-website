@@ -1,11 +1,11 @@
-import * as React from "react"
 import { Box, Heading, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
+
+import { CommonHeroProps } from "@/lib/types"
 
 import Breadcrumbs, { BreadcrumbsProps } from "@/components/Breadcrumbs"
 import { Image } from "@/components/Image"
 
 import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../HubHero"
 
 export interface ContentHeroProps extends Omit<CommonHeroProps, "header"> {
   breadcrumbs: BreadcrumbsProps
@@ -36,13 +36,10 @@ const ContentHero = (props: ContentHeroProps) => {
             </Heading>
             <Text fontSize="lg">{description}</Text>
             <HStack spacing="4">
-              {buttons
-                ? buttons.map((button, idx) => {
-                    if (!button) return
-
-                    return <CallToAction key={idx} index={idx} {...button} />
-                  })
-                : null}
+              {buttons!.map((button, idx) => {
+                if (!button) return
+                return <CallToAction key={idx} {...button} />
+              })}
             </HStack>
           </Stack>
           {/* TODO:
