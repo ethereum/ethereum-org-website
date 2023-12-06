@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
+import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -24,7 +25,19 @@ import { HubHero, type HubHeroProps } from "../components/Hero"
 import { Image } from "../components/Image"
 import OldHeading from "../components/OldHeading"
 import PageMetadata from "../components/PageMetadata"
-import Translation from "../components/Translation"
+
+// Static assets
+import developersEthBlockImg from "@/public/developers-eth-blocks.png"
+import dogeComputerImg from "@/public/doge-computer.png"
+import ethImg from "@/public/eth.png"
+import financeTransparentImg from "@/public/finance_transparent.png"
+import futureTransparentImg from "@/public/future_transparent.png"
+import hackathonTransparentImg from "@/public/hackathon_transparent.png"
+// -- Hero
+import communityHeroImg from "@/public/heroes/community-hero.png"
+// -- Cards
+import upgradesCoreImg from "@/public/upgrades/core.png"
+import whatIsEthereumImg from "@/public/what-is-ethereum.png"
 
 type Props = SSRConfig & {
   lastDeployDate: string
@@ -142,48 +155,34 @@ const H2 = ({ children, ...props }: HeadingProps) => {
   )
 }
 
-interface ICard {
-  image: any
-  title: string
-  description: string
-  alt: string
-  to: string
-}
-
-interface IGetInvolvedCard {
-  emoji: string
-  title: string
-  description: string
-}
-
 const CommunityPage = () => {
   const { t } = useTranslation("page-community")
   const theme = useTheme()
 
   const cards: Array<ICard> = [
     {
-      image: "/upgrades/core.png",
+      image: upgradesCoreImg,
       title: t("page-community-card-1-title"),
       description: t("page-community-card-1-description"),
       alt: t("page-index-get-started-wallet-image-alt"),
       to: "/community/online/",
     },
     {
-      image: "/eth.png",
+      image: ethImg,
       title: t("page-community-card-2-title"),
       description: t("page-community-card-2-description"),
       alt: t("page-index-get-started-eth-image-alt"),
       to: "/community/events/",
     },
     {
-      image: "/doge-computer.png",
+      image: dogeComputerImg,
       title: t("page-community-card-3-title"),
       description: t("page-community-card-3-description"),
       alt: t("page-index-get-started-dapps-image-alt"),
       to: "/community/get-involved/",
     },
     {
-      image: "/future_transparent.png",
+      image: futureTransparentImg,
       title: t("page-community-card-4-title"),
       description: t("page-community-card-4-description"),
       alt: t("page-index-get-started-dapps-image-alt"),
@@ -213,7 +212,7 @@ const CommunityPage = () => {
     title: t("page-community-hero-title"),
     header: t("page-community-hero-header"),
     description: t("page-community-hero-subtitle"),
-    heroImgSrc: "/heroes/community-hero.png",
+    heroImgSrc: communityHeroImg,
   }
 
   return (
@@ -222,7 +221,7 @@ const CommunityPage = () => {
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
       />
-      {/* <HubHero {...heroContent} /> */}
+      <HubHero {...heroContent} />
       <Divider />
       <Flex
         bg="homeBoxTurquoise"
@@ -279,13 +278,13 @@ const CommunityPage = () => {
               </Subtitle>
             </Box>
             <ImageContainer>
-              {/* <Image
-                w="624px"
-                bgSize="cover"
-                bg="no-repeat 50px"
-                src="/developers-eth-blocks.png"
+              <Image
+                src={developersEthBlockImg}
                 alt={t("page-community-get-involved-image-alt")}
-              /> */}
+                style={{
+                  objectFit: "cover",
+                }}
+              />
             </ImageContainer>
           </Flex>
           <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={{ base: 8, lg: 0 }}>
@@ -303,7 +302,7 @@ const CommunityPage = () => {
                 title={card.title}
                 description={card.description}
                 to={card.to}
-                // imageSrc={card.image}
+                image={card.image}
                 alt={card.alt}
               />
             ))}
@@ -337,11 +336,13 @@ const CommunityPage = () => {
             </ButtonRow>
           </FeatureContent>
           <ImageContainer>
-            {/* <Image
-              w="full"
-              src="/what-is-ethereum.png"
+            <Image
+              src={whatIsEthereumImg}
               alt={t("page-community-open-source-image-alt")}
-            /> */}
+              style={{
+                objectFit: "cover",
+              }}
+            />
           </ImageContainer>
         </RowReverse>
       </Flex>
@@ -380,11 +381,13 @@ const CommunityPage = () => {
             </Flex>
           </FeatureContent>
           <ImageContainer>
-            {/* <Image
-              w="full"
-              src="/finance_transparent.png"
+            <Image
+              src={financeTransparentImg}
               alt={t("page-index-internet-image-alt")}
-            /> */}
+              style={{
+                objectFit: "cover",
+              }}
+            />
           </ImageContainer>
         </Flex>
       </Flex>
@@ -410,11 +413,13 @@ const CommunityPage = () => {
             </Box>
           </FeatureContent>
           <ImageContainer>
-            {/* <Image
-              w="full"
-              src="/hackathon_transparent.png"
+            <Image
+              src={hackathonTransparentImg}
               alt={t("page-community-support-alt")}
-            /> */}
+              style={{
+                objectFit: "cover",
+              }}
+            />
           </ImageContainer>
         </RowReverse>
       </Flex>
@@ -434,36 +439,36 @@ const CommunityPage = () => {
       </Flex>
       <Content>
         <CardContainer>
-          {/* <Box
+          <Box
             as={Callout}
             flex="1 1 416px"
             minH="full"
-            image="/eth.png"
-            titleKey="page-community-get-eth-title"
+            image={ethImg}
+            titleKey="page-community:page-community-get-eth-title"
             alt={t("page-community-get-eth-alt")}
-            descriptionKey="page-community-get-eth-description"
+            descriptionKey="page-community:page-community-get-eth-description"
           >
             <Box>
               <ButtonLink to="/get-eth/">
                 {t("page-community-get-eth")}
               </ButtonLink>
             </Box>
-          </Box> */}
-          {/* <Box
+          </Box>
+          <Box
             as={Callout}
             flex="1 1 416px"
             minH="full"
-            image="/doge-computer.png"
-            titleKey="page-community-explore-dapps-title"
+            image={dogeComputerImg}
+            titleKey="page-community:page-community-explore-dapps-title"
             alt={t("page-community-explore-dapps-alt")}
-            descriptionKey="page-community-explore-dapps-description"
+            descriptionKey="page-community:page-community-explore-dapps-description"
           >
             <Box>
               <ButtonLink to="/dapps/">
                 {t("page-community-explore-dapps")}
               </ButtonLink>
             </Box>
-          </Box> */}
+          </Box>
         </CardContainer>
       </Content>
       <FeedbackCard />
