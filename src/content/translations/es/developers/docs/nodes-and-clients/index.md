@@ -136,6 +136,7 @@ En esta tabla se resumen los diferentes clientes. Todos ellos pasan [pruebas de 
 | [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Red principal, Sepolia, Goerli y más | Instantánea (sin servir), rápida, completa | Archivo, podado |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli             | Instantánea, rápida, completa              | Archivo, podado |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli             | Completa                                   | Archivo, podado |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust     | Linux, Windows, macOS | Red principal, Sepolia, Goerli y más | Completa                                   | Archivo, podado |
 
 Si desea obtener más información sobre redes compatibles, puede leer el apartado de [Redes de Ethereum](/developers/docs/networks/).
 
@@ -250,7 +251,7 @@ El modo de cliente ligero descarga todos los encabezados de los bloques, los dat
 
 #### Sincronización optimista {#optimistic-sync}
 
-La sincronización óptima es una estrategia de sincronización post-fusión diseñada para ser compatible opt-in y backwards permitiendo que los nodos de ejecución se sincronicen a través de métodos establecidos. El motor de ejecución puede importar _bloques de baliza optimistamente_ sin verificarlos completamente, encontrar el último encabezado y luego comenzar a sincronizar la cadena con los métodos anteriores. Seguidamente, una vez que el cliente de ejecución se haya actualizado, informará al cliente de consenso de la validez de las transacciones en la cadena de baliza.
+La sincronización óptima es una estrategia de sincronización después de La Fusión diseñada para ser compatible opt-in y backwards permitiendo que los nodos de ejecución se sincronicen a través de métodos establecidos. El motor de ejecución puede importar _bloques de baliza optimistamente_ sin verificarlos completamente, encontrar el último encabezado y luego comenzar a sincronizar la cadena con los métodos anteriores. Seguidamente, una vez que el cliente de ejecución se haya actualizado, informará al cliente de consenso de la validez de las transacciones en la cadena de baliza.
 
 [Más sobre la sincronización optimista](https://github.com/ethereum/consensus-specs/blob/dev/sync/optimistic.md)
 

@@ -47,13 +47,13 @@ La passerelle dispose de deux flux principaux :
 
 ### Flux de retrait {#withdrawal-flow}
 
-#### Couche 2 {#withdrawl-flow-layer-2}
+#### Couche 2 {#withdrawal-flow-layer-2}
 
 1. Le retirant appelle la passerelle de connexion L2 (`withdraw` ou `withdrawTo`)
 2. La passerelle de connexion L2 brûle le nombre approprié de jetons appartenant à `msg.sender`
 3. La passerelle de connexion L2 utilise le mécanisme de message inter-domaine pour appeler `finalizeETHWithdrawal` ou `finalizeERC20Withdrawal` de la passerelle L1
 
-#### Couche 1 {#withdrawl-flow-layer-1}
+#### Couche 1 {#withdrawal-flow-layer-1}
 
 4. La passerelle de connexion L1 vérifie que l'appel à `finalizeETHWithal` ou à `finalizeERC20Withal` est légitime :
    - Provient du mécanisme de message inter-domaine

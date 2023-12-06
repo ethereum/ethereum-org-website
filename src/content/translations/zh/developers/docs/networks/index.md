@@ -49,7 +49,7 @@ lang: zh
 - [网站](https://sepolia.dev/)
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
-- [Etherscan](https://sepolia.etherscan.io)
+- [Etherscan 区块浏览器](https://sepolia.etherscan.io)
 
 ##### 水龙头
 
@@ -60,6 +60,7 @@ lang: zh
 - [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-faucet)
+- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _（长期支持）_ {#goerli}
 
@@ -71,11 +72,11 @@ Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运�
 - 状态比较大，用于测试复杂的智能合约交互
 - 同步时间更长，运行节点需要更多存储空间
 
-##### 更多资源
+##### 资源
 
 - [网站](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
-- [Etherscan](https://goerli.etherscan.io)
+- [Etherscan 区块浏览器](https://goerli.etherscan.io)
 
 ##### 水龙头
 
@@ -111,13 +112,21 @@ Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运�
 - [Paradigm 水龙头](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet 水龙头 | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+[Starknet](https://www.starknet.io) 的测试网。
+
+##### 水龙头
+
+- [Starknet 水龙头](https://faucet.goerli.starknet.io)
+
 ## 私有网络 {#private-networks}
 
-如果以太坊网络的节点未连接到公共网络（即， 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
+如果以太坊网络的节点未连接到公共网络（ 主网或测试网），则以太坊网络就是私有网络。 在这种情况下，私有仅指保留或隔离，而不是保护或安全。
 
 ### 开发网络 {#development-networks}
 
-要开发以太坊应用程序，你需要在私有网络上运行以了解它的运行情况，然后再进行部署。 如同在自己的计算机上创建用于 Web 开发的本地服务器，你可以创建本地区块链实例来测试你的去中心化应用程序。 这样，迭代将比公共测试网快很多。
+要开发以太坊应用程序，你需要在私有网络上运行该应用程序以了解它的运行情况，然后再进行部署。 如同在自己的计算机上创建用于 Web 开发的本地服务器，你可以创建本地区块链实例来测试你的去中心化应用程序。 这样，迭代将比公共测试网快很多。
 
 有一些项目和工具专门协助这方面的工作。 进一步了解[开发网络](/developers/docs/development-networks/)。
 
@@ -129,10 +138,10 @@ Goerli 是用于测试验证和质押的测试网。 Goerli 网络对想要运�
 
 ## 相关工具 {#related-tools}
 
-- [Chainlist](https://chainlist.org/) _ 以太坊虚拟机网络的列表，可将钱包和提供商连接到相应的链 ID 和网络 ID_
-- [基于以太坊虚拟机的链](https://github.com/ethereum-lists/chains) _向 Chainlist 提供支持的 GitHub 链元数据存储库_
+- [Chainlist](https://chainlist.org/) _ 以太坊虚拟机网络的列表，可将钱包和提供者连接到相应的链 ID 和网络 ID_
+- [基于以太坊虚拟机的链](https://github.com/ethereum-lists/chains) _给 Chainlist 提供支持的 GitHub 链元数据存储库_
 
 ## 延伸阅读 {#further-reading}
 
-- [提议：可预测的以太坊测试网生命周期](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
+- [提案：可预测的以太坊测试网生命周期](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [以太坊测试网的演变](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

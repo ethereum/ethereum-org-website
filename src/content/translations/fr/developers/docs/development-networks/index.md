@@ -70,7 +70,7 @@ Le pack Ethereum Kurtosis permet de mettre localement en place un réseau de tes
 
 - [Pack réseau Ethereum](https://github.com/kurtosis-tech/eth-network-package)
 - [Site Web](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentation](https://docs.kurtosis.com/)
 
 ## Complément d'information {#further-reading}

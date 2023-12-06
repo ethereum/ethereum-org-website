@@ -12,7 +12,7 @@ Un échange de jetons implique l'échange de deux actifs distincts et présents 
 
 **Prérequis :**
 
-- détenir un portefeuille de cryptomonnaies, vous pouvez suivre ce tutoriel : [Comment : "Enregistrer" un compte Ethereum](/guides/how-to-register-an-ethereum-account/)
+- détenir un portefeuille de cryptomonnaies, vous pouvez suivre ce tutoriel : [Comment : « Enregistrer » un compte Ethereum](/guides/how-to-create-an-ethereum-account/)
 - ajouter des fonds à votre portefeuille
 
 ## 1. Connectez votre portefeuille à l'échange décentralisé (DEX) de votre choix

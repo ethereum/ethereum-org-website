@@ -24,6 +24,8 @@ Voici quelques-unes des normes de jetons les plus populaires sur Ethereum :
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Permet des transactions et des regroupements de transactions plus efficaces – réduisant ainsi les coûts. Ce type de jeton permet de créer à la fois des jetons utilitaires (comme $BNB ou $BAT) et des jetons non fongibles comme des CryptoPunks.
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - Un standard de coffre tokenisé conçu pour optimiser et unifier les paramètres techniques des coffres à rendement.
 
+La liste complète des propositions [ERC](https://eips.ethereum.org/erc).
+
 ## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
