@@ -31,6 +31,7 @@ const HubHero = ({
       <Image
         src={heroImgSrc}
         alt=""
+        priority
         sizes="100vw"
         style={{ width: "100vw", objectFit: "cover", height }}
       />
