@@ -28,6 +28,7 @@ This is a curated list of user research done in web3 that may help with design a
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [CRADL: Onboarding to Cryptocurrency](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                        |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [Bitcoin UX report](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                          |
 | <Badge colorScheme="green">Crypto onboarding</Badge>    | [ConSensys: The State of Web3 perception around the world 2023](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                            |
+| <Badge colorScheme="green">Crypto onboarding</Badge>    | [NEAR: Accelerating the journey towards adoption](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                          |
 | <Badge colorScheme="purple">Staking</Badge>             | [Staking: Key trends, takeaways, and predictions - Eth Staker](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo) |
 | <Badge colorScheme="purple">Staking</Badge>             | [Multi App Staking](<https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf>)         |
 | <Badge colorScheme="red">DAO</Badge>                    | [2022 DAO Research Update: What do DAO Builders Need?](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
@@ -46,6 +47,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Web3 Design Patterns](https://www.web3designpatterns.io/)- A curated library of design patterns from real Web3 products
 - [W3design.io](https://w3design.io/) - A curated library of UI flows of different projects in the ecosystem
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
+- [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
 
 ## Web3 Design Case Studies {#design-case-studies}
 
@@ -79,7 +81,8 @@ Get involved in professional community-driven organizations or join design group
 
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
-- [Finity, a design system for Web3 by Polygon](https://finity.polygon.technology/) (Figma)
+- [Finity, a design system by Polygon](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
+- [Kleros Design System](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
 - [ENS Design system](https://thorin.ens.domains/)
 - [Mirror Design System](https://degen-xyz.vercel.app/)
 
