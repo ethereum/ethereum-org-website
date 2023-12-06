@@ -88,7 +88,6 @@ export const BaseLink = forwardRef(function Link(
   if (isInternalPdf || isExternal) {
     return (
       <ChakraLink
-        {...commonProps}
         isExternal
         onClick={() =>
           trackCustomEvent(
@@ -102,6 +101,7 @@ export const BaseLink = forwardRef(function Link(
             }
           )
         }
+        {...commonProps}
       >
         {children}
         <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
@@ -122,7 +122,6 @@ export const BaseLink = forwardRef(function Link(
   return (
     <NextLink
       locale={locale}
-      {...commonProps}
       onClick={() =>
         trackCustomEvent(
           customEventOptions ?? {
@@ -133,6 +132,7 @@ export const BaseLink = forwardRef(function Link(
           }
         )
       }
+      {...commonProps}
     >
       {children}
     </NextLink>
