@@ -10,7 +10,7 @@ The ethereum.org translation style guide contains some of the most important gui
 
 This document serves as a general guide and is not specific to any one language.
 
-If you have any questions, suggestions or feedback, feel free to reach out to us at translations@ethereum.org, send a message to @ethdotorg on Crowdin, or [join our Discord](https://discord.gg/XVepFu7sqR), where you can message us in the #translations channel or reach out to any of the team members.
+If you have any questions, suggestions or feedback, feel free to reach out to us at translations@ethereum.org, send a message to @ethdotorg on Crowdin, or [join our Discord](https://discord.gg/ethereum-org), where you can message us in the #translations channel or reach out to any of the team members.
 
 ### Using Crowdin {#using-crowdin}
 

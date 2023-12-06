@@ -10,7 +10,7 @@ ethereum.org 翻訳スタイルガイドには、翻訳者向けの最も重要�
 
 本ドキュメントは一般的なガイドであり、特定の言語に固有のものではありません。
 
-ご質問やご意見などございましたら、translations@ethereum までお気軽にお問い合わせください。または Crowdin で@ethdotorg にメッセージを送るか、 [Discord](https://discord.gg/XVepFu7sqR)に参加して、#translation チャンネルでメッセージ、またはチームメンバーに直接連絡を取ることも可能です。
+ご質問やご意見などございましたら、translations@ethereum までお気軽にお問い合わせください。または Crowdin で@ethdotorg にメッセージを送るか、 [Discord](https://discord.gg/ethereum-org)に参加して、#translation チャンネルでメッセージ、またはチームメンバーに直接連絡を取ることも可能です。
 
 ### Crowdin の使用 {#using-crowdin}
 
