@@ -161,3 +161,26 @@ export interface MdPageContent {
   contentNotTranslated: boolean
   crowdinContributors: CrowdinContributor[]
 }
+
+/**
+ * Community events
+ */
+
+export interface CommunityEventsReturnType {
+  pastEventData: CommunityEvent[]
+  upcomingEventData: CommunityEvent[]
+}
+
+export interface CommunityEvent {
+  date: string
+  title: string
+  calendarLink: string
+  pastEventLink?: string
+}
+
+export interface ReqCommunityEvent {
+  start: { dateTime: string }
+  summary: string
+  htmlLink: string
+  location: string
+}

@@ -13,13 +13,16 @@ const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
   return (
     <Box>
-      <Image
-        src={heroImgSrc}
-        alt={t("page-index-hero-image-alt")}
-        loading="eager"
-        w="full"
-        h={{ base: "300px", sm: "350px", md: "380px", lg: "440px" }}
-      />
+      <Box h={440}>
+        <Image
+          src={heroImgSrc}
+          alt={t("page-index:page-index-hero-image-alt")}
+          w="full"
+          h="full"
+          priority
+          style={{ objectFit: "cover" }}
+        />
+      </Box>
       <VStack>
         <Stack
           spacing={{ base: "4", lg: "7" }}

@@ -51,7 +51,7 @@ const Breadcrumbs = ({
       ? [
           {
             fullPath: "/",
-            text: t("page-index-meta-title"),
+            text: t("page-index:page-index-meta-title"),
           },
         ]
       : []),
