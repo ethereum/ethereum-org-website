@@ -116,6 +116,9 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
   }
 
+  if (path === "run-a-node") {
+    requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
+  }
   return requiredNamespaces
 }
 

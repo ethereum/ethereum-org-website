@@ -157,11 +157,15 @@ const PageHero = ({
         alignSelf="center"
         mt={{ base: 0, lg: 12 }}
         ms={{ base: 0, lg: 12 }}
-        w="full"
         maxWidth={{ base: "560px", lg: "624px" }}
-        objectFit="contain"
+        sizes="100%"
+        style={{
+          width: "100%",
+          height: "auto",
+          objectFit: "contain",
+        }}
         alt={alt}
-        loading="eager"
+        priority
       />
     </Flex>
   </Box>

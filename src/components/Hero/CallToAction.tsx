@@ -1,4 +1,4 @@
-import type { Key, ReactNode } from "react"
+import type { ReactNode } from "react"
 
 import { Button, type ButtonProps } from "@/components/Buttons"
 
@@ -12,9 +12,9 @@ export type CallToActionProps = Omit<ButtonProps, "children" | "content"> & {
 export function CallToAction({
   content,
   matomo,
-  index,
+  key: index,
   ...props
-}: CallToActionProps & { index: Key }) {
+}: CallToActionProps) {
   const handleClick = () => trackCustomEvent(matomo)
 
   const buttonProps: ButtonProps = {
