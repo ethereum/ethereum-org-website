@@ -87,7 +87,11 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/developers/learning-tools")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-index", "page-developers-learning-tools"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-index",
+      "page-developers-learning-tools",
+    ]
   }
 
   if (path.startsWith("/developers/docs/scaling")) {
@@ -96,6 +100,10 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/languages")) {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
+  }
+
+  if (path.startsWith("/gas")) {
+    requiredNamespaces = [...requiredNamespaces, "page-gas"]
   }
 
   // Quizzes
