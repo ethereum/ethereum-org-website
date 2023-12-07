@@ -1,6 +1,8 @@
+import { Lang, Languages } from "@/lib/types"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import i18nConfig from "../../../i18n.config.json"
-import { DEFAULT_LOCALE } from "../constants"
-import { Lang, Languages } from "../types"
 
 // same data as in the `config.json` but indexed by language code
 export const languages: Languages = i18nConfig.reduce((result, config) => {
@@ -46,6 +48,10 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path === "assets") {
     requiredNamespaces = [...requiredNamespaces, "page-assets"]
+  }
+
+  if (path === "/") {
+    requiredNamespaces = [...requiredNamespaces, "page-index"]
   }
 
   if (path.startsWith("/community")) {
@@ -106,6 +112,9 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
   }
 
+  if (path === "run-a-node") {
+    requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
+  }
   return requiredNamespaces
 }
 
