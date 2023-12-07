@@ -10,10 +10,11 @@ import {
   TextProps,
 } from "@chakra-ui/react"
 
+import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
+import Text from "@/components/OldText"
 
-import { ButtonLink } from "./Buttons"
-import Text from "./OldText"
+import GitStars from "./GitStars"
 
 const SubjectBadge: React.FC<{
   subject: string
@@ -61,7 +62,11 @@ export interface IProps {
   description?: ReactNode
   note?: string
   alt?: string
+  githubUrl?: string
   subjects?: Array<string>
+  githubRepoStars?: number
+  githubRepoLanguages?: Array<string>
+  hideStars?: boolean
 }
 
 const ProductCard: React.FC<IProps> = ({
@@ -73,9 +78,12 @@ const ProductCard: React.FC<IProps> = ({
   note = "",
   alt = "",
   children,
+  githubUrl = "",
   subjects,
+  githubRepoStars = 0,
+  githubRepoLanguages = [],
+  hideStars = false,
 }) => {
-
   const DESCRIPTION_STYLES: TextProps = {
     opacity: 0.8,
     fontSize: "sm",
@@ -114,11 +122,17 @@ const ProductCard: React.FC<IProps> = ({
         />
       </Center>
       <Flex flexDirection="column" p={6} textAlign="start" height="100%">
+        {githubRepoStars > 0 && (
+          <GitStars
+            gitHubRepo={{ url: githubUrl, stargazerCount: githubRepoStars }}
+            hideStars={hideStars}
+          />
+        )}
         <Heading
           as="h3"
           fontSize="2xl"
           fontWeight={600}
-          mt={8}
+          mt={githubRepoStars > 0 ? 8 : 12}
           mb={3}
         >
           {name}
@@ -132,6 +146,12 @@ const ProductCard: React.FC<IProps> = ({
           subjects.map((subject, idx) => (
             <SubjectBadge key={idx} subject={subject}>
               {subject}
+            </SubjectBadge>
+          ))}
+        {githubRepoLanguages.length &&
+          githubRepoLanguages.map((name, idx: number) => (
+            <SubjectBadge key={idx} subject={name}>
+              {name.toUpperCase()}
             </SubjectBadge>
           ))}
       </HStack>
