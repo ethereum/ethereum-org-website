@@ -437,6 +437,14 @@ const BugBountiesPage = () => {
       link: "https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md",
     },
   ]
+
+  const iconImageProps = {
+    sizes: "60px",
+    style: {
+      width: "60px",
+      height: "auto",
+    },
+  }
   return (
     <Page>
       <PageMetadata
@@ -475,16 +483,16 @@ const BugBountiesPage = () => {
       <ClientIntro>{t("page-upgrades-bug-bounty-clients")}</ClientIntro>
       <ClientRow>
         <Client>
-          <Image src={besu} w="60px" alt="" />
+          <Image src={besu} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={erigon} w="60px" alt="" />
+          <Image src={erigon} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={geth} w="60px"alt="" />
+          <Image src={geth} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={nethermind} w="60px" alt="" />
+          <Image src={nethermind} alt="" {...iconImageProps} />
         </Client>
       </ClientRow>
       <ClientRow>
@@ -492,22 +500,23 @@ const BugBountiesPage = () => {
           <Image
             src={useColorModeValue(lighthouseLight, lighthouseDark)}
             alt=""
+            {...iconImageProps}
           />
         </Client>
         <Client>
-          <Image src={lodestar} w="60px" alt="" />
+          <Image src={lodestar} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={nimbus} w="60px" alt="" />
+          <Image src={nimbus} alt="" {...iconImageProps} />
         </Client>
         <Client>
-          <Image src={prysm} w="60px" alt="" />
+          <Image src={prysm} alt="" {...iconImageProps} />
         </Client>
         <Client>
           <Image
             src={useColorModeValue(tekuDark, tekuLight)}
-            w="60px"
             alt=""
+            {...iconImageProps}
           />
         </Client>
       </ClientRow>
@@ -599,7 +608,6 @@ const BugBountiesPage = () => {
                     {t("page-upgrades-bug-bounty-clients-type-2")}
                   </ListItem>
                   <ListItem>
-                    {" "}
                     {t("page-upgrades-bug-bounty-clients-type-3")}
                   </ListItem>
                 </UnorderedList>
