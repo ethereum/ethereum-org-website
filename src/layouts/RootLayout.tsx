@@ -6,6 +6,7 @@ import { Container } from "@chakra-ui/react"
 import { Lang } from "@/lib/types"
 import { Root } from "@/lib/interfaces"
 
+import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
 import Nav from "@/components/Nav"
 import TranslationBanner from "@/components/TranslationBanner"
@@ -62,6 +63,7 @@ export const RootLayout = ({
       {children}
 
       <Footer lastDeployDate={lastDeployDate} />
+      <FeedbackWidget />
     </Container>
   )
 }

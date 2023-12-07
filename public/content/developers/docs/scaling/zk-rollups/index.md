@@ -117,7 +117,7 @@ Before accepting transactions, the operator will perform the usual checks. This 
 
 Once the ZK-rollup node has enough transactions, it aggregates them into a batch and compiles inputs for the proving circuit to compile into a succinct ZK-proof. This includes:
 
-- A Merkle tree comprising all the transactions in the batch.
+- A Merkle tree root comprising all the transactions in the batch.
 - Merkle proofs for transactions to prove inclusion in the batch.
 - Merkle proofs for each sender-receiver pair in transactions to prove those accounts are part of the rollup's state tree.
 - A set of intermediate state roots, derived from updating the state root after applying state updates for each transaction (i.e., decreasing sender accounts and increasing receiver accounts).
@@ -240,7 +240,9 @@ Projects working on zkEVMs include:
 
 - **[Taiko](https://taiko.xyz)** - _Taiko is a decentralized, Ethereum-equivalent ZK-rollup (a [Type 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 

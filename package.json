@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
-    "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts"
+    "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
@@ -18,17 +21,19 @@
     "@docsearch/react": "^3.5.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@storybook/react": "^7.3.2",
     "clipboard": "^2.0.11",
+    "focus-trap-react": "^10.2.3",
     "framer-motion": "^10.13.0",
     "gray-matter": "^4.0.3",
     "htmr": "^1.0.2",
     "i18next": "^23.6.0",
     "lodash.merge": "^4.6.2",
+    "lodash.shuffle": "^4.2.0",
     "luxon": "^3.4.3",
     "next": "^14.0.0",
     "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
+    "next-sitemap": "^4.2.3",
     "prism-react-renderer": "1.1.0",
     "prismjs": "^1.27.0",
     "react": "^18.2.0",
@@ -43,7 +48,16 @@
     "yaml-loader": "^0.8.0"
   },
   "devDependencies": {
+    "@chakra-ui/storybook-addon": "5.1.0",
     "@netlify/plugin-nextjs": "^4.40.2",
+    "@storybook/addon-essentials": "7.5.3",
+    "@storybook/addon-interactions": "7.5.3",
+    "@storybook/addon-links": "7.5.3",
+    "@storybook/addon-onboarding": "1.0.8",
+    "@storybook/nextjs": "7.5.3",
+    "@storybook/react": "7.5.3",
+    "@storybook/testing-library": "0.2.2",
+    "@svgr/webpack": "^8.1.0",
     "@types/hast": "^3.0.0",
     "@types/luxon": "^3.3.2",
     "@types/node": "^20.4.2",
@@ -53,13 +67,20 @@
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-storybook": "^0.6.15",
     "image-size": "^1.0.2",
     "mdast-util-toc": "^7.0.0",
     "minimist": "^1.2.8",
     "polished": "^4.2.2",
+    "raw-loader": "^4.0.2",
+    "storybook": "7.5.3",
+    "storybook-react-i18next": "^2.0.9",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"
+  },
+  "resolutions": {
+    "jackspeak": "2.1.1"
   }
 }
