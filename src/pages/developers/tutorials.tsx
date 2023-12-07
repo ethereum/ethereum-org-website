@@ -109,7 +109,7 @@ const published = (locale: string, published: string) => {
   ) : null
 }
 
-const TutorialPage = ({ internalTutorials, locale }) => {
+const TutorialPage = ({ internalTutorials, locale }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
