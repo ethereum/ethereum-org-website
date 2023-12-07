@@ -284,6 +284,7 @@ const CommunityPage = () => {
                 style={{
                   objectFit: "cover",
                 }}
+                my={-4}
               />
             </ImageContainer>
           </Flex>
