@@ -115,8 +115,8 @@ const QuizWidget = ({
         gap="8"
         px={{ base: "8", md: "12", lg: "16" }}
         // Reduce padding when showing Spinner
-        pt={!!!quizData ? "10" : { base: "5", md: "12" }}
-        pb={!!!quizData ? "5" : { base: "4", md: "8" }}
+        pt={!quizData ? "10" : { base: "5", md: "12" }}
+        pb={!quizData ? "5" : { base: "4", md: "8" }}
         bg={getMainContainerBg()}
         borderRadius="base"
         boxShadow={isStandaloneQuiz ? "drop" : "none"}
