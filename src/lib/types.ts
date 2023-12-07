@@ -1,4 +1,4 @@
-import { type Options, toc } from "mdast-util-toc"
+import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
