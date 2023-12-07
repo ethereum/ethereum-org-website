@@ -78,7 +78,7 @@ The NFT smart contract can do a few key things:
 
 When someone "creates" or "mints" an NFT, they're basically telling the smart contract to give them ownership of a particular NFT. This information is securely and publicly stored in the blockchain.
 
-Furthermore, the creator of the contract can add extra rules. They might limit how many of a certain NFT can be made or decide that they should get a small royality fee whenever the NFT changes hands.
+Furthermore, the creator of the contract can add extra rules. They might limit how many of a certain NFT can be made or decide that they should get a small royalty fee whenever the NFT changes hands.
 
 ### NFT security {#nft-security}
 

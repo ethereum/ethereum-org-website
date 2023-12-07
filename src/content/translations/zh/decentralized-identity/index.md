@@ -6,7 +6,7 @@ template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: ../../../../assets/eth-gif-cat.png
-summaryPoint1: 传统身份系统有权对您的身份标识进行发布、维护和控制。
+summaryPoint1: 传统身份系统有权对你的身份标识进行发布、维护和控制。
 summaryPoint2: 去中心化身份消除了对中心化第三方的依赖。
 summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持有和控制其自身身份标识和身份证明的工具。
 ---
@@ -43,7 +43,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 诸如你的法定姓名或电子邮件地址等传统身份标识依赖于第三方——政府和电子邮件提供商。 去中心化身份标识 (DID) 则不同——它们不由任何中心实体发布、管理或控制。
 
-去中心化身份标识由个人发行、持有和控制。 [以太坊账户](/developers/docs/accounts/)就是去中心化身份标识的一个示例。 你可以根据需要创建任意数量的账户，无需任何人的许可，也无需将它们存储在一个中心注册系统中。
+去中心化身份标识由个人发行、持有和控制。 [以太坊帐户](/developers/docs/accounts/)就是去中心化身份标识的一个示例。 你可以根据需要创建任意数量的帐户，无需任何人的许可，也无需将它们存储在一个中心注册系统中。
 
 去中心化身份标识存储在分布式账本（区块链）或对等网络上。 这使得去中心化身份标识 (DID) 具有[全局唯一性、可解析性、高可用性，并可加密验证](https://w3c-ccg.github.io/did-primer/)。 去中心化身份标识可与不同的实体相关联，包括个人、组织或政府机构。
 
@@ -53,11 +53,11 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 公钥基础设施 (PKI) 是一种信息安全措施，可为实体生成[公钥](/glossary/#public-key)和[私钥](/glossary/#private-key)。 公钥加密技术在区块链网络中用于认证用户身份和证明数字资产的所有权。
 
-一些去中心化身份标识，如以太坊账户，都有公钥和私钥。 公钥用于识别账户的操控者，而私钥可以签名和解密此账户的消息。 公钥基础设施使用[加密签名](https://andersbrownworth.com/blockchain/public-private-keys/)来验证所有声明，从而提供验证实体身份、防止冒充身份和使用假身份所需的证明。
+一些去中心化身份标识，如以太坊帐户，都有公钥和私钥。 公钥用于识别帐户的操控者，而私钥可以签名和解密此帐户的消息。 公钥基础设施使用[加密签名](https://andersbrownworth.com/blockchain/public-private-keys/)来验证所有声明，从而提供验证实体身份、防止冒充身份和使用假身份所需的证明。
 
 ### 2. 去中心化数据存储 {#decentralized-datastores}
 
-区块链是一个可验证数据注册系统：一个开放的免信任去中心化信息库。 公链的存在使得不再需要将身份标识存储在中心化注册系统。
+区块链是一个可验证数据注册系统：一个开放的去信任去中心化信息库。 公链的存在使得不再需要将身份标识存储在中心化注册系统。
 
 如有任何人需要确认去中心化身份标识的有效性，他们可以在区块链上查找相关公钥。 这与需要第三方进行身份认证的传统身份标识不同。
 
@@ -115,7 +115,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 1. 去中心化身份增加了个人对识别信息的控制度。 可以在不依赖中心化机构和第三方服务的情况下验证去中心化身份标识和身份证明。
 
-2. 去中心化身份解决方案为验证和管理用户身份提供一种可保护隐私的免信任无缝方法。
+2. 去中心化身份解决方案为验证和管理用户身份提供一种可保护隐私的去信任无缝方法。
 
 3. 去中心化身份利用区块链技术，在不同方之间建立信任，并提供加密保证来证实身份证明的有效性。
 
@@ -133,7 +133,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 去中心化身份有助于使用[去中心化身份验证](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)替代密码登录。 服务提供商可以向用户发布认证，这些认证可以存储在以太坊钱包中。 一个身份证明的示例是[非同质化代币](/nft/)，可授予持有者访问在线社区的权限。
 
-然后，[使用以太坊登录](https://login.xyz/)功能将使服务器能够确认用户的以太坊账户，并从他们的账户地址获取所需的身份证明。 这意味着用户无需记住冗长的密码即可访问平台和网站，从而改善用户的线上体验。
+然后，[使用以太坊登录](https://login.xyz/)功能将使服务器能够确认用户的以太坊帐户，并从他们的帐户地址获取所需的身份证明。 这意味着用户无需记住冗长的密码即可访问平台和网站，从而改善用户的线上体验。
 
 ### 2. “了解你的客户”身份验证 {#kyc-authentication}
 
@@ -145,7 +145,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 
 在线投票和社交媒体是去中心化身份的两个新应用。 在线投票方案容易受到操控，尤其当恶意行为者创建虚假身份进行投票时。 要求个人提供链上身份证明可以提高在线投票流程的公平性。
 
-去中心化身份可以帮助创建没有虚假账户的在线社区。 例如，每位用户可能必须使用链上身份系统（如以太坊域名服务）来验证他们的身份，从而减少是机器人的可能性。
+去中心化身份可以帮助创建没有虚假帐户的在线社区。 例如，每位用户可能必须使用链上身份系统（如以太坊域名服务）来验证他们的身份，从而减少是机器人的可能性。
 
 ### 4. 防女巫保护 {#sybil-protection}
 
@@ -156,11 +156,12 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 有许多雄心勃勃的项目使用以太坊作为去中心化身份解决方案的基础：
 
 - **[以太坊域名服务 (ENS)](https://ens.domains/)** - _用于链上机器可读标识（例如以太坊钱包地址、内容哈希和元数据）的去中心化命名系统。_
-- **[SpruceID](https://www.spruceid.com/)** - _去中心化身份项目允许用户使用以太坊账户和以太坊域名服务配置文件来控制数字身份，而不是依赖第三方服务。_
+- **[SpruceID](https://www.spruceid.com/)** - _去中心化身份项目允许用户使用以太坊帐户和以太坊域名服务配置文件来控制数字身份，而不是依赖第三方服务。_
 - **[以太坊认证服务 (EAS)](https://attest.sh/)** - _一个去中心化的账本/协议，用于进行各类链上或链下认证。_
 - **[非机器人证明](https://www.proofofhumanity.id)** - _非机器人证明 (PoH) 是在以太坊上建立的社会身份验证系统。_
 - **[BrightID](https://www.brightid.org/)** - _一个去中心化的开源社交身份网络，旨在通过创建和分析社交图谱来改进身份验证。_
 - **[人格证明护照](https://proofofpersonhood.com/)** - _一个去中心化数字身份聚合模块。_
+- **[walt.id](https://walt.id)** — _开源去中心化身份和钱包基础架构，使开发人员和组织能够利用自主主权身份和非同质化代币/灵魂绑定代币。_
 
 ## 延伸阅读 {#further-reading}
 
@@ -170,6 +171,7 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 - [什么是以太坊 ERC725？ 区块链上的自主身份管理](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [区块链如何解决数字身份问题](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [什么是去中心化身份以及你为什么要关心？](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [去中心化身份简介](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### 视频 {#videos}
 
@@ -177,9 +179,11 @@ summaryPoint3: 多亏了加密技术，用户现在拥有了再次发布、持�
 - [使用以太坊和 Ceramic、IDX、React 以及 3ID Connect 的去中心化身份登录](https://www.youtube.com/watch?v=t9gWZYJxk7c) - _来自 Nader Dabit 的一个 YouTube 教程，介绍如何使用用户的以太坊钱包构建身份管理系统以创建、读取和更新他们的个人资料_
 - [BrightID - 以太坊上的去中心化身份](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless 播客节目讨论 BrightID（以太坊的去中心化身份解决方案）_
 - [链下互联网：去中心化身份和可验证凭证](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen 的 EthDenver 2022 演讲
+- [可验证凭据释义](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Tamino Baumann 的 YouTube 讲解视频和演示
 
 ### 社区 {#communities}
 
 - [GitHub 上的 ERC-725 联盟](https://github.com/erc725alliance) — _支持 ERC725 标准管理以太坊区块链上的身份_
 - [SpruceID Discord 服务器](https://discord.com/invite/Sf9tSFzrnt) — _使用以太坊登录的爱好者和开发者社区_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) - _开发者社区，帮助为应用程序构建可验证数据框架_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _一个由开发者和构建者组成的社区，致力于研究跨各种行业的去中心化身份用例_

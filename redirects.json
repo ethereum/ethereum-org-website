@@ -1,11 +1,11 @@
 [
   {
     "fromPath": "/discord",
-    "toPath": "https://discord.gg/rZz26QWfCg"
+    "toPath": "https://discord.gg/ethereum-org"
   },
   {
     "fromPath": "/*/discord",
-    "toPath": "https://discord.gg/rZz26QWfCg"
+    "toPath": "https://discord.gg/ethereum-org"
   },
   {
     "fromPath": "/pdfs/*",

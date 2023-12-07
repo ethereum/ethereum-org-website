@@ -193,7 +193,7 @@ describe("Am I Rich Already", () => {
 })
 ```
 
-Let's write the first test to the the `AmIRichAlready` contract. What do you think our test should be about? Yeah, you're right! We should check if we are already rich :)
+Let's write the first test for the `AmIRichAlready` contract. What do you think our test should be about? Yeah, you're right! We should check if we are already rich :)
 
 But wait a second. How will our mocked contract know what values to return? We haven't implemented any logic for the `balanceOf()` function. Again, Waffle can help here. Our mocked contract has some new fancy stuff to it now:
 
@@ -211,7 +211,7 @@ it("returns false if the wallet has less than 1000000 tokens", async () => {
 })
 ```
 
-Let's brake down this test into parts:
+Let's break down this test into parts:
 
 1. We set our mock ERC20 contract to always return balance of 999999 tokens.
 2. Check if the `contract.check()` method returns `false`.

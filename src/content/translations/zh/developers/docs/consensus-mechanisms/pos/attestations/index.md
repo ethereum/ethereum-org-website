@@ -83,4 +83,4 @@ lang: zh
 - [Vitalik 的注释共识规范中的认证](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [eth2book.info 中的认证](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
 
-_还有哪些社区资源对您有所帮助？ 编辑并添加本页面！_
+_还有哪些社区资源对你有所帮助？ 编辑并添加本页面！_

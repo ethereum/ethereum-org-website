@@ -4,7 +4,7 @@ description: イーサリアム仮想マシンと状態、トランザクショ�
 lang: ja
 ---
 
-イーサリアム仮想マシン(EVM)の物理的なインスタンス化は、雲や海の波を指し示すようには説明できませんが、イーサリアムクライアントを実行する数千の接続されたコンピュータによって維持される 1 つのエンティティとして*存在*します。
+イーサリアム仮想マシン(EVM)の物理的に例示することは、雲や海の波を指し示すようにはできませんが、イーサリアムクライアントを実行する数千の接続されたコンピュータによって維持される 1 つのエンティティとして*存在*します。
 
 イーサリアムのプロトコル自体、この特別な状態マシンの継続的、無中断かつ変更不可能である動作を維持することが唯一の目的です。 すべてのイーサリアムアカウントとスマートコントラクトが存続する環境です。 チェーン内のすべてブロックにおいて、イーサリアムは単一の「正規」の状態のみを持ち、EVM はブロックごとに新たな有効状態を計算するためのルールを定義します。
 
@@ -56,9 +56,9 @@ EVM は 1024 項目を含む[スタックマシン](https://wikipedia.org/wiki/S
 
 EVM のすべての実装は、イーサリアムイエローペーパーに記載されている仕様を遵守する必要があります。
 
-イーサリアムの 7 年間の歴史の中で、EVM は何度も改訂されており、また、様々なプログラミング言語により EVM の実装がされてきました。
+イーサリアムが誕生してから 9 年間にわたって、EVM は数多くの改訂を受け、様々なプログラミング言語で実装されてきました。
 
-すべての[イーサリアムクライアント](/developers/docs/nodes-and-clients/#execution-clients)は EVM 実装を含みます。 さらに、次のような複数のスタンドアローンの実装があります。
+[イーサリアム実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)には EVM の実装が含まれています。 また、次のようなスタンドアローンの実装も複数あります。
 
 - [Py-EVM](https://github.com/ethereum/py-evm) - _Python_
 - [evmone](https://github.com/ethereum/evmone) - _C++_
@@ -71,6 +71,7 @@ EVM のすべての実装は、イーサリアムイエローペーパーに記�
 - [Jellopaper(別名: KEVM): K における EVM のセマンティクス](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
 - [イーサリアム仮想マシンのオペコード](https://www.ethervm.io/)
+- [イーサリアム仮想マシンオペコードのインタラクティブリファレンス](https://www.evm.codes/)
 - [Solidity ドキュメントの簡単な紹介](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
 ## 関連トピック {#related-topics}

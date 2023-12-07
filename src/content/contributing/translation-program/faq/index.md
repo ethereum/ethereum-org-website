@@ -116,4 +116,4 @@ We plan to add support for non-English content additions in the near future.
 
 ## Get in touch {#contact}
 
-Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/XVepFu7sqR) to ask questions and collaborate with other translators, or reach out to us at translations@ethereum.org!
+Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/ethereum-org) to ask questions and collaborate with other translators, or reach out to us at translations@ethereum.org!

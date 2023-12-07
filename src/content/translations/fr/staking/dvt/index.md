@@ -46,14 +46,10 @@ Sans la Technologie DVT, il est plus facile pour les fournisseurs d'actifs de ne
 
 Une solution DVT contient les éléments suivants :
 
-- Le partage secret de Shamir (SSS - algorithme cryptographique portant le nom de son créateur : Adi Shamir) Validateurs utilisant [des clés BLS](https://en.wikipedia.org/wiki/BLS_digital_signature) Les partages individuels de clés BLS (key shares) peuvent être combinés en une seule clé agrégée (signature). Dans la Technologie de validation distribuée (DVT), la clé privée d'un validateur est la combinaison de signatures BLS de chaque opérateur à l'intérieur du cluster.
-
-  - Seuil du schéma de signature - Détermine le nombre de partages de clés individuelles requis au sujet des droits de signature. Exemple : 3 sur 4.
-
-  - Génération de clés distribuées (DKG) - Processus cryptographique qui génère les partages de clé, puis utilisé à distribuer les partages d'une clé de validateur nouvelle ou déjà existante à l'endroit des nœuds d'un cluster.
-
-  - **[Calcul multipartite (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - L'intégralité de la clé du validateur est générée de manière confidentielle via l'apport d'un calcul multipartite sécurisé. L'intégralité de la clé n'est jamais connue par aucun opérateur individuel : chaque opérateur n'a connaissance que de son propre fragment de clé (leur "part").
-
+- **Le partage secret de Shamir (SSS - algorithme cryptographique portant le nom de son créateur : Adi Shamir)** Validateurs utilisant [des clés BLS](https://en.wikipedia.org/wiki/BLS_digital_signature) Les partages individuels de clés BLS (key shares) peuvent être combinés en une seule clé agrégée (signature). Dans la Technologie de validation distribuée (DVT), la clé privée d'un validateur est la combinaison de signatures BLS de chaque opérateur à l'intérieur du cluster.
+- **Seuil du schéma de signature** - Détermine le nombre de partages de clés individuelles requis au sujet des droits de signature. Exemple : 3 sur 4.
+- **Génération de clés distribuées (DKG)** - Processus cryptographique qui génère les partages de clé, puis utilisé à distribuer les partages d'une clé de validateur nouvelle ou déjà existante à l'endroit des nœuds d'un cluster.
+- **[Calcul multipartite (MPC)](https://messari.io/report/applying-multiparty-computation-to-the-world-of-blockchains)** - L'intégralité de la clé du validateur est générée de manière confidentielle via l'apport d'un calcul multipartite sécurisé. L'intégralité de la clé n'est jamais connue par aucun opérateur individuel : chaque opérateur n'a connaissance que de son propre fragment de clé (leur "part").
 - **Protocole de consensus** - Le protocole de consensus sélectionne un nœud qui deviendra le proposant de bloc. Ils partagent ledit bloc avec les autres nœuds du cluster, qui ajoutent leurs fragments de clé à la signature agrégée. Lorsque suffisamment de fragments de clé ont été agrégés, le bloc est proposé sur Ethereum.
 
 Les validateurs distribués bénéficient d'une tolérance aux défaillances intégrées et peuvent continuer à fonctionner, et ce même, si certains des nœuds individuels demeurent hors-ligne. Il faut interpréter que le cluster est résistant, même si certains de ses nœuds s'avèrent être malveillants ou très peu actifs.
