@@ -5,8 +5,6 @@ import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
 
-import React from "react"
-
 import contentHeroImg from "../../../../public/mainnet.png"
 
 const meta = {
