@@ -17,7 +17,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/Buttons/ButtonLink"
+import ButtonLink, { ButtonLinkProps } from "../components/Buttons/ButtonLink"
 import Callout from "../components/Callout"
 import Card from "../components/Card"
 import FeedbackCard from "../components/FeedbackCard"
@@ -93,7 +93,7 @@ const ButtonRow = ({ children }: ChildOnlyProp) => {
   )
 }
 
-const StyledButtonLink = ({ children, ...props }: any) => {
+const StyledButtonLink = ({ children, ...props }: ButtonLinkProps) => {
   return (
     <ButtonLink
       mt={{ base: 4, md: 0 }}
