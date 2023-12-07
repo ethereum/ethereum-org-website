@@ -29,7 +29,6 @@ import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { resizeImage } from "@/lib/utils/resizeImage"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import consensusData from "@/data/consensus-bounty-hunters.json"
@@ -418,7 +417,7 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
-  ].map((client) => ({ ...client, image: resizeImage(client.image, 24) }))
+  ].map((client) => ({ ...client, image: client.image }))
 
   const specs: Spec[] = [
     {
@@ -476,16 +475,16 @@ const BugBountiesPage = () => {
       <ClientIntro>{t("page-upgrades-bug-bounty-clients")}</ClientIntro>
       <ClientRow>
         <Client>
-          <Image src={resizeImage(besu, 60)} alt="" />
+          <Image src={besu} w="60px" alt="" />
         </Client>
         <Client>
-          <Image src={resizeImage(erigon, 60)} alt="" />
+          <Image src={erigon} w="60px" alt="" />
         </Client>
         <Client>
-          <Image src={resizeImage(geth, 60)} alt="" />
+          <Image src={geth} w="60px"alt="" />
         </Client>
         <Client>
-          <Image src={resizeImage(nethermind, 60)} alt="" />
+          <Image src={nethermind} w="60px" alt="" />
         </Client>
       </ClientRow>
       <ClientRow>
@@ -496,17 +495,18 @@ const BugBountiesPage = () => {
           />
         </Client>
         <Client>
-          <Image src={resizeImage(lodestar, 60)} alt="" />
+          <Image src={lodestar} w="60px" alt="" />
         </Client>
         <Client>
-          <Image src={resizeImage(nimbus, 60)} alt="" />
+          <Image src={nimbus} w="60px" alt="" />
         </Client>
         <Client>
-          <Image src={resizeImage(prysm, 60)} alt="" />
+          <Image src={prysm} w="60px" alt="" />
         </Client>
         <Client>
           <Image
-            src={resizeImage(useColorModeValue(tekuDark, tekuLight), 60)}
+            src={useColorModeValue(tekuDark, tekuLight)}
+            w="60px"
             alt=""
           />
         </Client>

@@ -31,7 +31,6 @@ import PageMetadata from "@/components/PageMetadata"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDateByPath } from "@/lib/utils/gh"
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { resizeImage } from "@/lib/utils/resizeImage"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import uniswap from "@/public/dapps/uni.png"
@@ -465,7 +464,7 @@ const GetEthPage = ({ lastDataUpdateDate }) => {
         mb={40}
         titleKey="page-get-eth:page-get-eth-use-your-eth"
         descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
-        image={resizeImage(dapps, 600)}
+        image={dapps}
         alt={t("page-index:page-index-sections-individuals-image-alt")}
         maxImageWidth={600}
       >
