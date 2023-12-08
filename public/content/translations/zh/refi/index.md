@@ -5,7 +5,7 @@ lang: zh
 template: use-cases
 emoji: ":recycle:"
 sidebarDepth: 2
-image: ../../../../assets/future_transparent.png
+image: /future_transparent.png
 alt: ""
 summaryPoint1: 一种构建于再生原则之上的替代经济体系
 summaryPoint2: 一次利用以太坊解决全球协作危机（如气候变化）的尝试
@@ -20,7 +20,7 @@ summaryPoint3: 一种可以大幅扩展生态效益资产的工具，例如经�
 
 再生金融的基础之一是由 Capital Institute（资本研究院）的 John Fullerton 开创的再生经济学概念。 他提出了[ 8 项相互关联的原则，](https://capitalinstitute.org/8-principles-regenerative-economy/)作为保持体系健康的基础：
 
-![8 项相互关联的原则](../../assets/use-cases/refi-regenerative-economy-diagram.png)
+![8 项相互关联的原则](refi-regenerative-economy-diagram.png)
 
 再生金融项目借助[智能合约](/developers/docs/smart-contracts/)和[去中心化金融 (DeFi)](/defi/) 应用程序来实现这些原则，以激励再生行为，例如恢复退化的生态系统，推动气候变化和生物多样性丧失等全球问题上的大规模合作。
 
