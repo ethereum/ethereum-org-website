@@ -1,3 +1,4 @@
+import Image, { type ImageProps } from "next/image"
 import type { ReactNode } from "react"
 import {
   Box,
@@ -10,7 +11,6 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { Image, type ImageProps } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 
 import * as url from "@/lib/utils/url"
@@ -62,14 +62,7 @@ const Card = ({
 
   return (
     <CardContainer {...props}>
-      {image && (
-        <Image
-          src={image}
-          alt={alt ?? ""}
-          sizes="20px"
-          style={{ width: "20px", height: "auto" }}
-        />
-      )}
+      {image && <Image src={image} alt={alt ?? ""} width={20} />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
