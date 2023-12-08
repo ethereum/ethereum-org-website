@@ -30,7 +30,7 @@ Está tendo problemas com sua carteira? A maioria das carteiras tem equipes de s
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Esta não é uma lista exaustiva. Precisa de ajuda para encontrar suporte para uma carteira específica? Una-se ao [Discord da ethereum.org](https://discord.gg/rZz26QWfCg) e tentaremos ajudar._
+_Esta não é uma lista exaustiva. Precisa de ajuda para encontrar suporte para uma carteira específica? Una-se ao [Discord da ethereum.org](https://discord.gg/ethereum-org) e tentaremos ajudar._
 
 Procurando uma carteira Ethereum? [Veja a nossa lista completa de carteiras Ethereum](/wallets/find-wallet/).
 

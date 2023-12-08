@@ -8,6 +8,8 @@ lang: fr
 
 La communauté Ethereum comprend des personnes d'horizons et de compétences très différents. Que vous soyez développeur, artiste ou comptable, il existe des moyens de vous impliquer. Voici une liste de suggestions qui pourraient vous aider à démarrer.
 
+Commencez à lire la mission et les valeurs d'ethereum.org dans notre [code de conduite](/community/code-of-conduct).
+
 ## Développeurs <Emoji text=":computer:" size={1} /> {#developers}
 
 - Découvrez et essayez Ethereum sur [ethereum.org/developers/](/developers/)
@@ -21,8 +23,18 @@ La communauté Ethereum comprend des personnes d'horizons et de compétences tr�
 
 ## Chercheurs et universitaires <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
-Avez-vous une formation en mathématiques, en cryptographie ou en économie ? Vous pourriez être intéressé par certains des travaux de pointe réalisés au sein de l'écosystème Ethereum
+Avez-vous une formation en mathématiques, en cryptographie ou en économie ? Vous pourriez être intéressé par certains des travaux de pointe réalisés au sein de l'écosystème Ethereum :
 
+- Écrivez ou relisez une proposition d'amélioration d'Ethereum (EIP)
+  - Écrivez une EIP
+    1. Soumettez votre idée aux [Ethereum Magicians](https://ethereum-magicians.org)
+    2. Lisez l'[EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Oui, lisez bien _tout_ le document.**
+    3. Suivez les consignes de l'EIP-1. Référencez-le lorsque vous rédigez votre brouillon.
+  - Apprenez comment devenir un [Rédacteur d'EIP](https://eips.ethereum.org/EIPS/eip-5069)
+    - Vous pouvez participer à une revue des EIP par les pairs dès maintenant ! Trouvez [des PR ouvertes comportant le libellé `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fournissez un retour technique sur le lien `discussion-to`.
+  - Participez à la [Gouvernance des EIP](https://github.com/ethereum-cat-herders/EIPIP)
+    - Rejoignez le [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+  - [Plus d'infos les EIP](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - une série de primes de recherche de grande valeur, où vous pouvez gagner >100 000 USD
 - [Ethresear.ch](https://ethresear.ch) - le principal forum de recherche d'Ethereum et le forum le plus influent au monde pour la cryptoéconomie
 - [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - Une série de questions-réponses avec des chercheurs. Dès l'ouverture de chaque partie suivante, tout le monde peut poster des questions.
@@ -122,3 +134,5 @@ Les « DAO » sont des organisations autonomes décentralisées. Ces groupes t
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Projets dirigés par des femmes_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
 - [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectif de constructeurs Web3_
+
+À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct) !

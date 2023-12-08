@@ -56,7 +56,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 Cette valeur doit être comparée au contenu de la clé `mac` ; si elles sont différentes, un mot de passe alternatif doit être demandé (ou l'opération annulée).
 
-Une fois la clé du fichier vérifiée, le texte de chiffrement (le `cryptage` clé dans le fichier) peut être déchiffré à l'aide de l'algorithme de chiffrement symétrique spécifié par la clé `de chiffrement` et paramétré à travers la clé `de chiffrement`. Si la taille de la clé dérivée et la taille de la clé de l'algorithme ne correspondent pas, les octets zéro les plus à droite de la clé dérivée doivent être utilisés comme clé de l'algorithme.
+Une fois la clé du fichier vérifiée, le texte de chiffrement (le `ciphertext` clé dans le fichier) peut être déchiffré à l'aide de l'algorithme de chiffrement symétrique spécifié par la clé `cipher` et paramétré à travers la clé `cipherparams`. Si la taille de la clé dérivée et la taille de la clé de l'algorithme ne correspondent pas, les octets zéro les plus à droite de la clé dérivée doivent être utilisés comme clé de l'algorithme.
 
 Toutes les implémentations minimalement conformes doivent supporter l'algorithme AES-128-CTR, désigné par :
 
@@ -68,7 +68,7 @@ Ce procédé de chiffrement prend les paramètres suivants, donnés comme clés 
 
 La clé de chiffrement est constituée des 16 octets les plus à gauche de la clé dérivée, c'est-à-dire `DK[0..15]`
 
-La création/Le cryptage d'une clé secrète doit être essentiellement l'inverse de ces instructions. Assurez-vous que les `uuuid`, `sel` et `iv` sont réellement aléatoires.
+La création/Le cryptage d'une clé secrète doit être essentiellement l'inverse de ces instructions. Assurez-vous que les `uuuid`, `salt` et `iv` sont réellement aléatoires.
 
 En plus du champ `version` , qui devrait agir comme un identifiant "en dur" de la version, les implémentations peuvent également utiliser `minorversion` pour suivre les changements plus petits et sans rupture du format.
 
@@ -123,18 +123,18 @@ Test de vecteur en utilisant AES-128-CTR et Scrypt :
   "crypto": {
     "cipher": "aes-128-ctr",
     "cipherparams": {
-      "iv": "83dbcc02d8ccb40e466191a123791e0e"
+      "iv": "740770fce12ce862af21264dab25f1da"
     },
-    "ciphertext": "d172bf743a674da9cdad04534d56926ef8358534d458fffccd4e6ad2fbde479c",
+    "ciphertext": "dd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2",
     "kdf": "scrypt",
     "kdfparams": {
       "dklen": 32,
       "n": 262144,
-      "p": 8,
-      "r": 1,
-      "salt": "ab0c7876052600dd703518d6fc3fe8984592145b591fc8fb5c6d43190334ba19"
+      "p": 1,
+      "r": 8,
+      "salt": "25710c2ccd7c610b24d068af83b959b7a0e5f40641f0c82daeb1345766191034"
     },
-    "mac": "2103ac29920d71da29f15d75b4a16dbe95cfd7ff8faea1056c33131d846e3097"
+    "mac": "337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c"
   },
   "id": "3198bc9c-6672-5ab3-d995-4942343ae5b6",
   "version": 3
@@ -143,7 +143,7 @@ Test de vecteur en utilisant AES-128-CTR et Scrypt :
 
 **Intermédiaire** :
 
-`Derived key`: `fac192ceb5fd772906bea3e118a69e8bbb5cc24229e20d8766fd298291bba6bd` `MAC Body`: `bb5cc24229e20d8766fd298291bba6bdd172bf743a674da9cdad04534d56926ef8358534d458fffccd4e6ad2fbde479c` `MAC`: `2103ac29920d71da29f15d75b4a16dbe95cfd7ff8faea1056c33131d846e3097` `Cipher key`: `fac192ceb5fd772906bea3e118a69e8b`
+`Derived key`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d` `MAC Body`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2` `MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c` `Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
 ## Modifications de la Version 1 {#alterations-from-v2}
 
@@ -151,11 +151,11 @@ Cette version corrige plusieurs incohérences vis-à-vis de la version 1 publié
 
 - La capitalisation est injustifiée et incohérente (Scrypt minuscule, Kdf mixte, Mac majuscule).
 - Adresse inutile et compromettant la vie privée.
-- `Le sel` est intrinsèquement un paramètre de la fonction de dérivation clé et mérite d'y être associé, et non à la crypto en général.
+- `Salt` est intrinsèquement un paramètre de la fonction de dérivation clé et mérite d'y être associé, et non à la crypto en général.
 - _SaltLen_ inutile (il suffit de le déduire du sel).
 - La fonction de dérivation de clé est donnée, mais l'algorithme de crypto n'est pas spécifié.
-- `La version` est intrinsèquement numérique, mais il s'agit encore d'une chaîne de caractères (le contrôle structuré des versions serait possible avec une chaîne, mais peut être considéré hors de portée pour un format de fichier de configuration rarement changeant).
-- `KDF` et `chiffrement` sont en théorie des concepts frères mais sont organisés différemment.
+- `Version` est intrinsèquement numérique, mais il s'agit encore d'une chaîne de caractères (le contrôle structuré des versions serait possible avec une chaîne, mais peut être considéré hors de portée pour un format de fichier de configuration rarement changeant).
+- `KDF` et `cipher` sont en théorie des concepts frères mais sont organisés différemment.
 - `MAC` est calculé à travers un espace de données agnostique (!)
 
 Des modifications ont été apportées au format pour donner le fichier suivant, équivalent sur le plan fonctionnel à l'exemple donné sur la page précédemment citée :

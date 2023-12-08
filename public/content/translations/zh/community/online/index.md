@@ -25,7 +25,7 @@ lang: zh
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - 由 ETHGlobal 管理的 Discord 聊天室：全世界以太坊黑客的线上社区。</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 关注以太坊发展的 Discord 社区</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - 社区为现有和潜在的质押人提供的指导、教育、支持和资源。</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org 网站团队</Link> - 拜访社区中的团队和成员并与他们讨论 ethereum.org 的网络开发和设计</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org 网站团队</Link> - 拜访社区中的团队和成员并与他们讨论 ethereum.org 的网络开发和设计</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - Web3 创作者社区，构建者、业界人士和以太坊爱好者在这里聚会。 我们热衷于 Web3 的开发、设计和文化。 来吧，我们一起来构建。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - 有关 Solidity 开发的聊天 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 有关 Solidity 开发的聊天 (Matrix)</SocialListItem>

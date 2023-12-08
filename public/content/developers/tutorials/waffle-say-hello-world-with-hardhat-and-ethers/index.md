@@ -11,7 +11,7 @@ published: 2020-10-16
 
 In this [Waffle](https://ethereum-waffle.readthedocs.io) tutorial, we will learn how to set up a simple "Hello world" smart contract project, using [hardhat](https://hardhat.org/) and [ethers.js](https://docs.ethers.io/v5/). Then we will learn how to add a new functionality to our smart contract and how to test it with Waffle.
 
-Let's start with creating new project:
+Let's start by creating a new project:
 
 ```bash
 yarn init
@@ -68,7 +68,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json

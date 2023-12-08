@@ -30,7 +30,7 @@ Een probleem met uw portemonnee? De meeste portemonnees hebben speciale onderste
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Dit is geen uitputtende lijst. Hulp nodig bij het vinden van ondersteuning voor een specifieke portemonnee? Doe mee met de [ethereum.org discord](https://discord.gg/rZz26QWfCg) en we zullen proberen te helpen._
+_Dit is geen uitputtende lijst. Hulp nodig bij het vinden van ondersteuning voor een specifieke portemonnee? Doe mee met de [ethereum.org discord](https://discord.gg/ethereum-org) en we zullen proberen te helpen._
 
 Op zoek naar een Ethereum-portemonnee? [Ontdek onze volledige lijst van Ethereum-portemonnees](/wallets/find-wallet/).
 

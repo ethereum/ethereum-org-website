@@ -30,11 +30,12 @@ lang: ja
 
 ## クライアントの多様性
 
-[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、[clientdiversity.org](https://clientdiversity.org/)、[rated.network](https://rated.network/)、[slashed.info](https://www.slashed.info/)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードがあります。
+[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は、バグや脆弱性に対する回復力を提供します。そのため、イーサリアムネットワーク全体の健全性にとって重要です。 現在、
+clientdiversity.org[rated.network](https://www.rated.network)、[execution-diversity.info](https://execution-diversity.info/)、[Ethernodes](https://ethernodes.org/)など、いくつかのクライアント多様性ダッシュボードが存在します。
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/)は、リレーショナルデータベース (PostgreSQL および DatabricksSQL) テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーは SQL を使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4 つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
+[Dune Analytics](https://dune.com/)は、リレーショナルデータベース(PostgreSQL および DatabricksSQL)テーブルのために、ブロックチェーンデータの前処理を行います。 これにより、ユーザーは SQL を使用してブロックチェーンデータのクエリを実行し、クエリ結果に基づいてダッシュボードを構築できるようになります。 オンチェーンデータは、`blocks`、`transactions`、(event) `logs`、(call) `traces`という、4 つの未加工テーブルに編成されます。 一般的なコントラクトやプロトコルはデコードされており、それぞれにイベントと呼び出しのテーブルのセットがあります。 これらのイベントと呼び出しのテーブルはさらに処理され、DEX、レンディング、ステーブルコインなどのプロトコルの種類によって抽象テーブルに編成されます。
 
 ## 参考文献 {#further-reading}
 

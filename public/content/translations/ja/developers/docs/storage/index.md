@@ -1,5 +1,5 @@
 ---
-title: 分散ストレージ
+title: 分散型ストレージ
 description: 分散型ストレージとは何であるか、さらに、分散型ストレージをDappに統合するために利用できるツールの概要
 lang: ja
 ---
@@ -87,7 +87,7 @@ SWARM は、ストレージインセンティブシステムとストレージ�
 
 KYC なしの分散型ツール
 
-- 0Chain (KYC なし版を実装)
+- 0Chain(KYC なし版を実装)
 - Skynet
 - Arweave
 - Filecoin

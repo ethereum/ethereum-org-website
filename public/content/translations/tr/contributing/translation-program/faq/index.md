@@ -116,4 +116,4 @@ Yakın gelecekte İngilizce olmayan içerik eklenmesi için destek eklemeyi plan
 
 ## İletişime geçin {#contact}
 
-Bunların hepsini okuduğunuz için teşekkürler. Umarız bu, programımıza katılmamıza yardımcı olmuştur. Soru sormak ve diğer çevirmenlerle işbirliği yapmak için [Discord translation channel](https://discord.gg/XVepFu7sqR)'a katılmaktan çekinmeyin veya translations@ethereum.org adresinden bize ulaşın!
+Bunların hepsini okuduğunuz için teşekkürler. Umarız bu, programımıza katılmamıza yardımcı olmuştur. Soru sormak ve diğer çevirmenlerle işbirliği yapmak için [Discord translation channel](https://discord.gg/ethereum-org)'a katılmaktan çekinmeyin veya translations@ethereum.org adresinden bize ulaşın!
