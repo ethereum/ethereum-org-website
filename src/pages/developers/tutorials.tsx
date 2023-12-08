@@ -4,7 +4,15 @@ import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { useTranslation } from "react-i18next"
 import { FaGithub } from "react-icons/fa"
-import { Badge, Box, chakra, Flex, forwardRef, Heading, useToken } from "@chakra-ui/react"
+import {
+  Badge,
+  Box,
+  chakra,
+  Flex,
+  forwardRef,
+  Heading,
+  useToken,
+} from "@chakra-ui/react"
 
 import { Lang } from "@/lib/types"
 
@@ -17,15 +25,18 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
-import { getSkillTranslationId,Skill } from "@/components/TutorialMetadata"
+import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTutorialsData } from "@/lib/utils/md"
-import { getLocaleTimestamp,INVALID_DATETIME } from "@/lib/utils/time"
+import { getLocaleTimestamp, INVALID_DATETIME } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { filterTutorialsByLang, getSortedTutorialTagsForLang } from "@/lib/utils/tutorial"
+import {
+  filterTutorialsByLang,
+  getSortedTutorialTagsForLang,
+} from "@/lib/utils/tutorial"
 
 import externalTutorials from "@/data/externalTutorials.json"
 
@@ -60,12 +71,18 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   }
 )
 
-export const getStaticProps = (async (
-  context
-) => {
+type Props = SSRConfig & {
+  internalTutorials: ITutorial[]
+  locale: string | undefined
+  lastDeployDate: string
+}
+
+export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage('/developers/tutorials')
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/developers/tutorials"
+  )
   const lastDeployDate = getLastDeployDate()
 
   return {
@@ -73,10 +90,10 @@ export const getStaticProps = (async (
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       internalTutorials: getTutorialsData(locale!),
       locale,
-      lastDeployDate
+      lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
 export interface IExternalTutorial {
   url: string
@@ -113,7 +130,10 @@ const published = (locale: string, published: string) => {
   ) : null
 }
 
-const TutorialPage = ({ internalTutorials, locale }: InferGetServerSidePropsType<typeof getStaticProps>) => {
+const TutorialPage = ({
+  internalTutorials,
+  locale,
+}: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
@@ -184,7 +204,9 @@ const TutorialPage = ({ internalTutorials, locale }: InferGetServerSidePropsType
     >
       <PageMetadata
         title={t("page-developers-tutorials:page-tutorials-meta-title")}
-        description={t("page-developers-tutorials:page-tutorials-meta-description")}
+        description={t(
+          "page-developers-tutorials:page-tutorials-meta-description"
+        )}
       />
       <Heading
         fontStyle="normal"
