@@ -9,19 +9,11 @@ export type ButtonLinkProps = LinkProps &
   }
 
 const ButtonLink = ({ customEventOptions, ...props }: ButtonLinkProps) => {
-  const matomoEvent = customEventOptions ?? {
-    eventCategory: "Link",
-    eventAction: "clicked",
-    eventName: "ButtonLink clicked",
-    eventValue: (props.to ?? props.href) as string,
+  const handleClick = () => {
+    customEventOptions && trackCustomEvent(customEventOptions)
   }
   return (
-    <Button
-      as={BaseLink}
-      activeStyle={{}}
-      {...props}
-      onClick={() => trackCustomEvent(matomoEvent)}
-    />
+    <Button as={BaseLink} activeStyle={{}} {...props} onClick={handleClick} />
   )
 }
 
