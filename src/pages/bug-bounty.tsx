@@ -221,7 +221,7 @@ const ClientRow = (props: ChildOnlyProp) => (
 )
 
 const Client = (props: ChildOnlyProp) => (
-  <Box m="16" mt="4" mb="12" {...props} />
+  <Box m="16" mt="4" mb="12" w="60px" {...props} />
 )
 
 const HeroCard = (props: ChildOnlyProp) => (
@@ -417,7 +417,7 @@ const BugBountiesPage = () => {
       link: "https://pegasys.tech/teku",
       image: useColorModeValue(tekuDark, tekuLight),
     },
-  ].map((client) => ({ ...client, image: client.image }))
+  ]
 
   const specs: Spec[] = [
     {
@@ -439,11 +439,7 @@ const BugBountiesPage = () => {
   ]
 
   const iconImageProps = {
-    sizes: "60px",
-    style: {
-      width: "60px",
-      height: "auto",
-    },
+    width: 60,
   }
   return (
     <Page>
