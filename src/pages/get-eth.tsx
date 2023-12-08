@@ -1,4 +1,4 @@
-import type { GetStaticProps } from "next/types"
+import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import { type SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
@@ -99,6 +99,11 @@ const RightColumn = (props: ChildOnlyProp) => (
   />
 )
 
+type Props = SSRConfig & {
+  lastDeployDate: string
+  lastDataUpdateDate: string
+}
+
 export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
@@ -115,9 +120,11 @@ export const getStaticProps = (async (context) => {
       lastDataUpdateDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
-const GetEthPage = ({ lastDataUpdateDate }) => {
+const GetEthPage = ({
+  lastDataUpdateDate,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-get-eth")
 
   const tokenSwaps: CardListItem[] = [
