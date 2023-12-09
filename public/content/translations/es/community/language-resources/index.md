@@ -72,7 +72,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [Gwei.cz](https://gwei.cz): comunidad local con enfoque en Web3 que crea contenido educativo y organiza eventos tanto en línea como presenciales.
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/): guía de Ethereum para principiantes.
 - [DAO Příručka](https://dao.gwei.cz/): guía sobre las DAO para principiantes.
-- [Dominar Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m): dominar Ethereum en checo.
+- [Dominar Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m): dominar Ethereum en checo.
 
 ### Francés {#fr}
 

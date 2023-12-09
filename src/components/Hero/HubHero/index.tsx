@@ -1,54 +1,46 @@
-import * as React from "react"
 import {
   Box,
   Heading,
   HStack,
   Stack,
   Text,
-  useColorModeValue,
+  useBreakpointValue,
 } from "@chakra-ui/react"
 
-import GatsbyImage from "../../GatsbyImage"
-import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
+import type { CommonHeroProps } from "@/lib/types"
 
-export interface HubHeroProps extends CommonHeroProps {}
+import { CallToAction } from "@/components/Hero/CallToAction"
+import { Image } from "@/components/Image"
 
-const HubHero = (props: HubHeroProps) => {
-  const { heroImgSrc, title, header, description, buttons } = props
-
-  if (buttons && buttons.length > 2) {
-    throw Error(
-      "Can not have more than two call-to-action buttons in this hero component."
-    )
-  }
-
-  const largeContentBg = useColorModeValue(
-    "rgba(255, 255, 255, 0.80)",
-    "rgba(34, 34, 34, 0.80)"
-  )
-
+const HubHero = ({
+  heroImgSrc,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
+  const height = useBreakpointValue({
+    base: "192px",
+    md: "256px",
+    lg: "320px",
+    xl: "576px",
+    "2xl": "672px",
+  })
   return (
     <Box position="relative">
-      <GatsbyImage
-        image={heroImgSrc}
+      <Image
+        src={heroImgSrc}
         alt=""
-        w="full"
-        height={{
-          base: "192px",
-          md: "256px",
-          lg: "320px",
-          xl: "576px",
-          "2xl": "672px",
-        }}
-        loading="eager"
+        priority
+        sizes="100vw"
+        style={{ width: "100vw", objectFit: "cover", height }}
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
-        bg={{ xl: largeContentBg }}
+        bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
         insetStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
@@ -76,12 +68,10 @@ const HubHero = (props: HubHeroProps) => {
           <Text size="lg">{description}</Text>
         </Stack>
         <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-          {buttons
-            ? buttons.map((button, idx) => {
-                if (!button) return
-                return <CallToAction key={idx} {...button} index={idx} />
-              })
-            : null}
+          {(buttons || []).map((button, idx) => {
+            if (!button) return
+            return <CallToAction key={idx} {...button} />
+          })}
         </HStack>
       </Stack>
     </Box>

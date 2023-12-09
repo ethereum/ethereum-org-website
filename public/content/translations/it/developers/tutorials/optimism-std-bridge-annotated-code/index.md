@@ -47,13 +47,13 @@ Il ponte ha due flussi principali:
 
 ### Flusso di prelievo {#withdrawal-flow}
 
-#### Livello 2 {#withdrawl-flow-layer-2}
+#### Livello 2 {#withdrawal-flow-layer-2}
 
 1. Il prelevante chiama il ponte L2 (`withdraw` o `withdrawTo`)
 2. Il ponte L2 brucia il giusto numero di token appartenente a `msg.sender`
 3. Il ponte L2 usa il meccanismo di messaggio interdominio per chiamare `finalizeETHWithdrawal` o `finalizeERC20Withdrawal` sul ponte L1
 
-#### Livello 1 {#withdrawl-flow-layer-1}
+#### Livello 1 {#withdrawal-flow-layer-1}
 
 4. Il ponte L1 verifica che la chiamata a `finalizeETHWithdrawal` o `finalizeERC20Withdrawal` sia legittima:
    - Proviene dal meccanismo di messaggistica interdominio

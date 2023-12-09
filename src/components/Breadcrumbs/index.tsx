@@ -51,7 +51,7 @@ const Breadcrumbs = ({
       ? [
           {
             fullPath: "/",
-            text: t("page-index-meta-title"),
+            text: t("page-index:page-index-meta-title"),
           },
         ]
       : []),
@@ -65,7 +65,7 @@ const Breadcrumbs = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb dir="auto" {...props}>
+    <Breadcrumb {...props}>
       {crumbs.map(({ fullPath, text }) => {
         const isCurrentPage = slug === fullPath
         return (

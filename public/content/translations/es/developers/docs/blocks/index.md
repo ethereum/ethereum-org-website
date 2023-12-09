@@ -143,7 +143,7 @@ Un importante apunte final es que los bloques tienen limitaciones de tamaño. Ca
 
 ## Más información {#further-reading}
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

@@ -1,10 +1,13 @@
-import { DISCORD_PATH } from "../constants"
+import { DISCORD_PATH } from "@/lib/constants"
 
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
 
 export const isExternal = (href: string): boolean =>
-  href.includes("http") || href.includes("mailto:") || href.includes("ipfs")
+  href.includes("http") ||
+  href.includes("mailto:") ||
+  href.includes("ipfs") ||
+  isDiscordInvite(href)
 
 export const isGlossary = (href: string): boolean =>
   href.includes("glossary") && href.includes("#")

@@ -30,7 +30,7 @@ Teniu problemes amb la vostra cartera? La majoria de les carteres tenen equips d
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_No és una llista exhaustiva. Necessiteu ajuda per trobar suport amb alguna cartera en especial? Uniu-vos al [discord ethereum.org](https://discord.gg/rZz26QWfCg) i us intentarem ajudar._
+_No és una llista exhaustiva. Necessiteu ajuda per trobar suport amb alguna cartera en especial? Uniu-vos al [discord ethereum.org](https://discord.gg/ethereum-org) i us intentarem ajudar._
 
 Esteu buscant una cartera d'Ethereum? [Exploreu el nostre llistat de carteres d'Ethereum](/wallets/find-wallet/).
 

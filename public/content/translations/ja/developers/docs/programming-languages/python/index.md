@@ -82,7 +82,7 @@ incomplete: true
 ## Python コミュニティディスカッション {#python-community-contributors}
 
 - [イーサリアム Python コミュニティの Discord](https://discord.gg/9zk7snTfWe) Web3.py やその他の Python フレームワークについてのディスカッションを行う場所
-- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) Vyper スマートコントラクトのプログラミングについてのディスカッションを行う場所
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) Vyper スマートコントラクトのプログラミングについてのディスカッションを行う場所
 
 ## その他のリスト {#other-aggregated-lists}
 

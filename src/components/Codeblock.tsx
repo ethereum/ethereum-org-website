@@ -7,9 +7,12 @@ import Highlight, {
 import Prism from "prism-react-renderer/prism"
 import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
-import CopyToClipboard from "./CopyToClipboard"
-import Emoji from "./Emoji"
-import Translation from "./Translation"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+
+// https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
+;(typeof global !== "undefined" ? global : window).Prism = Prism
+require("prismjs/components/prism-solidity")
 
 const LINES_BEFORE_COLLAPSABLE = 8
 
@@ -214,14 +217,6 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
-  useEffect(() => {
-    ;(typeof global !== "undefined" ? global : window).Prism = Prism
-
-    // Default languages included:
-    // https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
-    require("prismjs/components/prism-solidity")
-  })
-
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 
   const codeText = React.Children.toArray(children)

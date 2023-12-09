@@ -96,4 +96,4 @@ Kami berencana menambahkan dukungan untuk konten selain bahasa Inggris dalam wak
 
 ## Hubungi kami {#contact}
 
-Terima kasih telah membaca semua ini. Semoga ini membantu Anda untuk mengikuti program kami. Silakan bergabung dengan [kanal terjemahan Discord](https://discord.gg/XVepFu7sqR) kami untuk mengajukan pertanyaan dan berkolaborasi dengan penerjemah lain, atau untuk menghubungi kami di translations@ethereum.org!
+Terima kasih telah membaca semua ini. Semoga ini membantu Anda untuk mengikuti program kami. Silakan bergabung dengan [kanal terjemahan Discord](https://discord.gg/ethereum-org) kami untuk mengajukan pertanyaan dan berkolaborasi dengan penerjemah lain, atau untuk menghubungi kami di translations@ethereum.org!

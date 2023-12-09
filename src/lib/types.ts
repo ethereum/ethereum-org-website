@@ -14,6 +14,9 @@ import type {
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
 
+import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import { ImageProps } from "@/components/Image"
+
 import { layoutMapping } from "@/pages/[...slug]"
 
 export type ChildOnlyProp = { children?: ReactNode }
@@ -105,6 +108,10 @@ export type I18nLocale = {
   dateFormat: string
 }
 
+export type Languages = {
+  [lang in Lang]: I18nLocale
+}
+
 export type TranslationKey = string
 
 export type LoadingState<T> =
@@ -194,8 +201,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -206,6 +213,14 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
+}
+
+export type CommonHeroProps = {
+  heroImgSrc: ImageProps["src"]
+  header: string
+  title: string
+  description: string
+  buttons?: [CallToActionProps, CallToActionProps?]
 }
 
 // Learning Tools

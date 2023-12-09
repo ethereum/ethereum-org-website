@@ -8,7 +8,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-区块是一个对初学者非常友好的主题。 为了帮助您更好地理解这个页面，我们建议你先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
+区块是一个对初学者非常友好的主题。 为了帮助你更好地理解这个页面，我们建议你先阅读[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
 ## 为什么要有区块？ {#why-blocks}
 

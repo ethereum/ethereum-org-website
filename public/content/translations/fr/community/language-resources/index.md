@@ -72,7 +72,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Gwei.cz](https://gwei.cz) - communauté locale autour du Web3, création du contenu éducatif, organisation des événements en ligne et en présentiel
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - guide Ethereum pour débutants
 - [DAO Příručka](https://dao.gwei.cz/) - guide pour débutants en DAO
-- [Maîtriser Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Maîtriser Ethereum en tchèque
+- [Maîtriser Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Maîtriser Ethereum en tchèque
 
 ### Français {#fr}
 

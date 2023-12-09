@@ -27,7 +27,7 @@ Sejak 2014, Yayasan Ethereum telah mengadakan Devcon, konferensi tahunan untuk s
 
 Anda bisa mengakses konten video presentasi konferensi untuk tiap tahunnya bahkan sejak konferensi pertama di [archive.devcon.org](https://archive.devcon.org/).
 
-Pelajari lebih lanjut di [devcon.org](https://devcon.org/), lihat [Blog Devcon](https://blog.ethereum.org/category/devcon/), atau ikuti [@efdevcon](https://twitter.com/EFDevcon) untuk pengumuman terbaru mereka.
+Pelajari lebih lanjut di [devcon.org](https://devcon.org/), lihat [Blog Devcon](https://devcon.org/en/blogs/), atau ikuti [@efdevcon](https://twitter.com/EFDevcon) untuk pengumuman terbaru mereka.
 
 ### Program Beasiswa {#fellowship-program}
 
