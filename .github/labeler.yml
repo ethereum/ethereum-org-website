@@ -1,5 +1,6 @@
 "review needed :eyes:":
   - src/**/*
+  - public/*
 
 "documentation :book:":
   - README.md
@@ -7,6 +8,8 @@
 "tooling :wrench:":
   - .github/**/*
   - src/scripts/*
+  - src/lib/*
+  - src/hooks/*
   - netlify.toml
 
 "dependencies :package:":
@@ -14,21 +17,26 @@
   - yarn.lock
 
 "internal :house:":
-  - gatsby-browser.js
-  - gatsby-config.js
-  - gatsby-node.js
-  - gatsby-ssr.js
   - .all-contributorsrc
+  - i18n.config.json
+  - next.config.js
+  - next-i18next.config,js
+  - next-sitemap.config.js
+  - tsconfig.json
+  - .nvmrc
+  - .eslintignore
+  - .eslintrc.json
+  - .prettierignore
+  - .prettierrc
 
 "translation :earth_africa:":
-  - /content/translations/**/*
-  - src/intl/*
-  - src/utils/translations.js
+  - src/content/translations/**/*
+  - src/intl/**/*
+  - src/lib/utils/translations.ts
 
 "content :fountain_pen:":
   - src/pages/*
-  - src/pages-conditional/*
-  - /content/**/*
+  - public/content/**/*
 
 "event :date:":
   - src/data/community-events.json
