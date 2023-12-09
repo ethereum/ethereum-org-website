@@ -19,7 +19,7 @@ lang: zh
 title="什么是 ARB？"
 contentPreview=''>
 
-Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollup /">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
+Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollup/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
 
 </ExpandableCard>
 
@@ -65,7 +65,7 @@ contentPreview=''>
 
 骗子也可以制作非常逼真的网站，有时甚至会精确克隆真实网站，用户界面完全相同，但暗藏陷阱。 例如，看似合法的外部链接实际上会将用户发送到外部诈骗网站，或者错误的说明会引导用户暴露密钥或将资金发送到攻击者的地址。
 
-避免这种情况的最佳做法是仔细检查所访问网站的 URL，并将已知真实网站的地址保存在书签中。 这样，你就可以通过书签访问真实网站，不会发生意外拼写错误或依赖外部链接。
+避免这种情况的最佳做法是仔细检查所访问网站的网址，并将已知真实网站的地址保存在书签中。 这样，你就可以通过书签访问真实网站，不会发生意外拼写错误或依赖外部链接。
 
 ## 如何保护自己？ {#protect-yourself}
 
@@ -83,7 +83,7 @@ contentPreview=''>
 
 这是表明 `wARB` 不太可能是一种合法代币的另一个证据。
 
-3. **通过 Etherscan 检查**。 许多骗局代币已经被社区识别并报告。 Etherscan [标记了这些代币](https://info.etherscan.com/etherscan-token-reputation/)。 尽管 Etherscan 不是权威信息来源（去中心化网络的性质决定了不可能存在关于合法性的权威信息来源)，但被 Etherscan 标记为骗局代币的代币很可能就是骗局代币。
+3. **通过 Etherscan 检查**。 许多骗局代币已经被社区识别并报告。 Etherscan [标记了这些代币](https://info.etherscan.com/etherscan-token-reputation/)。 尽管 Etherscan 不是权威信息来源（去中心化网络的性质决定了不可能存在关于合法性的权威信息来源），但被 Etherscan 标记为骗局代币的代币很可能就是骗局代币。
 
    ![Etherscan 中的骗局代币](./etherscan-scam.png)
 

@@ -30,7 +30,7 @@ lang: ru
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Это не полный список. Нужна помощь в поиске поддержки для определенного кошелька? Присоединяйтесь к [ethereum.org на платформе Discord](https://discord.gg/rZz26QWfCg), и мы постараемся помочь._
+_Это не полный список. Нужна помощь в поиске поддержки для определенного кошелька? Присоединяйтесь к [ethereum.org на платформе Discord](https://discord.gg/ethereum-org), и мы постараемся помочь._
 
 Ищете кошелек Ethereum? [Ознакомьтесь с полным списком кошельков Ethereum](/wallets/find-wallet/).
 

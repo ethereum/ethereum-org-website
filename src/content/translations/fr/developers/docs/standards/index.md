@@ -40,10 +40,10 @@ Des informations plus détaillées sur ces différents types et catégories peuv
 ### Normes de jetons {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Une interface type pour les jetons fongibles (interchangeables) comme les jetons de vote, les jetons d'enjeu ou les monnaies virtuelles.
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Définit une interface de jeton pour les jetons ERC-20 qui prend en charge l'exécution du code du destinataire après transfert ou transferFrom, ou du code de l'expéditeur après approbation
+  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Définit une interface de jeton pour les jetons ERC-20 qui prend en charge l'exécution du code du destinataire après transfert ou transferFrom, ou du code de l'expéditeur après approbation.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Une interface type pour les jetons non fongibles, comme ceux requis pour les œuvres d'art ou une chanson.
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - Événement normalisé émis lors de la création/du transfert d'un, ou de plusieurs jetons non fongibles à l'aide d'identifiants de jetons consécutifs.
-  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Extension de l'interface pour le rôle de consommateur EIP-721
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - Extension de l'interface pour le rôle de consommateur EIP-721.
   - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - Ajouter un rôle limité dans le temps avec des autorisations restreintes aux jetons ERC-721.
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - **(NON RECOMMANDÉ)** Une norme de jeton améliorant ERC-20.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - Un type de jeton qui peut contenir des actifs fongibles et non fongibles.

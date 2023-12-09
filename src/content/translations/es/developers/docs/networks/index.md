@@ -58,8 +58,9 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
 - [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
-- [Infura Sepolia faucet](https://www.infura.io/faucet)
+- [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet de red de prueba | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(soporte a largo plazo)_ {#goerli}
 
@@ -111,13 +112,21 @@ Una red de pruebas para [Optimism](https://www.optimism.io/).
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Goerli Starknet {#starknet-goerli}
+
+Una red de prueba para [Starknet](https://www.starknet.io).
+
+##### Faucets
+
+- [Faucet Starknet](https://faucet.goerli.starknet.io)
+
 ## Redes privadas {#private-networks}
 
 Una red de Ethereum es una red privada si sus nodos no están conectados a una red pública (es decir, a una red principal o una red de pruebas). En este contexto, el término privado solo significa reservado o aislado, en lugar de protegido o seguro.
 
 ### Redes de desarrollo {#development-networks}
 
-Para desarrollar una aplicación Ethereum, se recomienda ejecutarla en una red privada para ver cómo funciona antes de implementarla. De igual modo que crea un servidor local en su ordenador para el desarrollo web, puede crear una instancia de cadena de bloques local para probar su DApp. Esto permite realizar una iteración mucho más rápida que en una red de prueba pública.
+Para desarrollar una aplicación Ethereum, se recomienda ejecutarla en una red privada para ver cómo funciona antes de implementarla. De igual modo que crea un servidor local en su ordenador para el desarrollo web, puede crear una instancia de cadena de bloques local para probar su DApp. Esto permite realizar una repetición mucho más rápida que en una red de prueba pública.
 
 Existen proyectos y herramientas exclusivos para ayudarle con esto. Más información sobre [redes de desarrollo](/developers/docs/development-networks/).
 
@@ -125,12 +134,12 @@ Existen proyectos y herramientas exclusivos para ayudarle con esto. Más informa
 
 El proceso de consenso se controla mediante un conjunto predefinido de nodos de confianza. Por ejemplo, una red privada de instituciones académicas conocidas en las que cada una gestiona un único nodo y los bloques se validan mediante un umbral de signatarios en la red.
 
-Si una red pública de Ethereum es como la red pública de Internet, puede entender una red de consorcio como una intranet privada.
+Si una red pública de Ethereum es como la red pública de internet, puede entender una red de consorcio como una intranet privada.
 
 ## Herramientas relacionadas {#related-tools}
 
-- [Lista de cadena](https://chainlist.org/) _lista de redes EVM para conectar carteras y proveedores a las ID de cadena y red apropiados_
-- [Cadenas basadas en EVM](https://github.com/ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimenta la lista de cadena_
+- [Chainlist](https://chainlist.org/) _lista de redes EVM para conectar carteras y proveedores a las ID de cadena y red apropiadas_
+- [Cadenas basadas en EVM](https://github.com/ethereum-lists/chains) _Repositorio de GitHub con metadatos de cadena que alimentan la Chainlist_
 
 ## Más información {#further-reading}
 

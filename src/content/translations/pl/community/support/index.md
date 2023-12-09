@@ -30,7 +30,7 @@ Masz problemy z portfelem? Większość portfeli ma dedykowane zespoły wsparcia
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Nie jest to pełna lista. Potrzebujesz pomocy w znalezieniu wsparcia konkretnego portfela? Dołącz do [Discorda ethereum.org](https://discord.gg/rZz26QWfCg), a my postaramy się pomóc._
+_Nie jest to pełna lista. Potrzebujesz pomocy w znalezieniu wsparcia konkretnego portfela? Dołącz do [Discorda ethereum.org](https://discord.gg/ethereum-org), a my postaramy się pomóc._
 
 Szukasz portfela Ethereum? [ Zapoznaj się z naszą pełną listą portfeli Ethereum](/wallets/find-wallet/).
 

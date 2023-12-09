@@ -30,7 +30,7 @@ Pour les développeurs, les ponts activent les éléments suivants :
 
 ## Comment fonctionnent les ponts ? {#how-do-bridges-work}
 
-Bien qu'il existe différents [types de modèles de ponts](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), trois façons de faciliter le transfert inter-chaîne d'actifs se distinguent :
+Bien qu'il existe différents [types de modèles de ponts](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/), trois façons de faciliter le transfert inter-chaîne d'actifs se distinguent :
 
 - **Verrouiller et frapper -** Verrouiller les actifs sur la chaîne source et frapper les actifs sur la chaîne de destination.
 - **Brûler et frapper -** Brûler les actifs sur la chaîne source et frapper les actifs sur la chaîne de destination.

@@ -1698,6 +1698,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/fuzheng1998"><img src="https://avatars.githubusercontent.com/u/24203166?v=4?s=100" width="100px;" alt="Zheng Fu"/><br /><sub><b>Zheng Fu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fuzheng1998" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/xiaolou86"><img src="https://avatars.githubusercontent.com/u/20718693?v=4?s=100" width="100px;" alt="xiaolou86"/><br /><sub><b>xiaolou86</b></sub></a><br /><a href="#content-xiaolou86" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/aztecEagle22"><img src="https://avatars.githubusercontent.com/u/152518936?v=4?s=100" width="100px;" alt="aztecEagle22"/><br /><sub><b>aztecEagle22</b></sub></a><br /><a href="#content-aztecEagle22" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Messi-Q"><img src="https://avatars.githubusercontent.com/u/21357985?v=4?s=100" width="100px;" alt="QIAN"/><br /><sub><b>QIAN</b></sub></a><br /><a href="#content-Messi-Q" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

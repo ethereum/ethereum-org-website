@@ -3,6 +3,7 @@ title: Livre blanc Ethereum
 description: Document d'introduction à Ethereum, publié en 2013 avant son lancement.
 lang: fr
 sidebarDepth: 2
+hideEditButton: true
 ---
 
 # Livre blanc Ethereum {#ethereum-whitepaper}
@@ -11,7 +12,7 @@ _Ce document d'introduction a été publié pour la première fois en 2014 par V
 
 _Même s'il date déjà de plusieurs années, nous conservons ce document car il constitue une référence utile et une représentation précise d'Ethereum et de la vision du projet. Pour plus d'infos sur les derniers développements d'Ethereum et la façon dont les modifications du protocole sont mises en œuvre, nous vous recommandons de lire [ce guide](/learn/)._
 
-[Ouvrir le livre blanc d'Ethereum au format PDF](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
+[Les chercheurs et universitaires à la recherche d'une version historique ou canonique du livre blanc [à partir de décembre 2014] peuvent utiliser ce PDF.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
 ## Une plateforme d'applications décentralisées et de contrats intelligents de nouvelle génération {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
@@ -134,7 +135,7 @@ Même sans extension, le protocole Bitcoin permet d'obtenir une version "faible"
 Le langage de script, tel qu'il est implémenté dans Bitcoin, a toutefois d'importantes limitations :
 
 - **Défaut de langage Turing-complet** : bien que le langage de script de Bitcoin prenne en charge un large sous-ensemble de calculs, il est loin de tout prendre en charge. La principale catégorie manquante est celle des boucles. Cela évite les boucles infinies lors de la vérification d'une transaction. Théoriquement, c'est un obstacle surmontable pour les programmeurs de scripts, car toute boucle peut être simulée en répétant simplement plusieurs fois le code sous-jacent avec une instruction « if » (si), mais cela conduit à des scripts qui sont très volumineux. Par exemple, l'implémentation d'un algorithme de signature à courbe elliptique alternatif pourrait nécessiter 256 itérations de multiplications, chacune incluse individuellement dans le code.
-- **Défaut de valeur** : un script UTXO n'a aucun moyen de contrôler précisemment le montant pouvant être retiré. Un cas d'utilisation très intéressant d'un contrat d'oracle serait un contrat de couverture dans lequel A et B investiraient 1000 $ de BTC. Au bout de 30 jours, le script enverrait 1000 $ de BTC à A et le reste à B. Un oracle serait nécessaire pour déterminer la valeur du BTC en USD, mais il s'agirait néanmoins d'une énorme amélioration en termes de confiance et d'infrastructure requise par rapport aux solutions totalement centralisées actuellement disponibles. Les UTXO étant toutefois en tout-ou-rien, la seule façon d'arriver à cela serait un bricolage peu efficace où l'on disposerait de nombreux UTXO de diverses dénominations (c'est-à-dire un UTXO de 2<sup>k</sup> pour chaque k jusqu'à 30) et où O choisirait quel UTXO envoyer à A et lequel envoyer à B.
+- **Défaut de valeur** : un script UTXO n'a aucun moyen de contrôler précisemment le montant pouvant être retiré. Un cas d'utilisation très intéressant d'un contrat d'oracle serait un contrat de couverture dans lequel A et B investiraient 1000 $ de BTC. Au bout de 30 jours, le script enverrait 1000 $ de BTC à A et le reste à B. Un oracle serait nécessaire pour déterminer la valeur du BTC en USD, mais il s'agirait néanmoins d'une énorme amélioration en termes de confiance et d'infrastructure requise par rapport aux solutions totalement centralisées actuellement disponibles. Les UTXO étant toutefois en tout-ou-rien, la seule façon d'arriver à cela serait un bricolage très peu efficace où l'on disposerait de nombreux UTXO de diverses dénominations (c'est-à-dire un UTXO de 2<sup>k</sup> pour chaque k jusqu'à 30) et où l'oracle choisirait quel UTXO envoyer à A et lequel envoyer à B.
 - **Manque d'état** : un UTXO peut être dépensé ou non. Il n'est pas possible d'avoir de scripts ni de contrats multi-étapes qui conserveraient un autre état interne au-delà de cela. Il est donc difficile de réaliser des contrats d'options multi-étapes, des offres d'échange décentralisées ou des protocoles d'engagement cryptographiques à deux étapes (nécessaires pour les primes de calcul sécurisées). Cela signifie que les UTXO ne peuvent être utilisés que pour construire des contrats simples à usage unique, et non des contrats dynamiques plus complexes comme les organisations décentralisées, ce qui rend aussi l'implémentation des méta-protocoles plus compliquée. L'état binaire combiné au défaut de valeur rend impossible une autre application importante : les limites de retrait.
 - **Inaccessibilité de la blockchain** : les UTXO n'ont pas accès à certaines données de la blockchain, comme le nonce et le hachage du bloc précédent. Cela limite considérablement les applications de jeux d'argent, et plusieurs autres catégories, en privant le langage de script d'une source d'aléatoire potentiellement précieuse.
 
@@ -314,7 +315,7 @@ Une description générale de la façon de coder une DAO est fournie ci-après. 
 - `[1,i]` pour enregistrer un vote en faveur de la proposition `i`
 - `[2,i]` pour finaliser la proposition `i` si suffisamment de votes ont été enregistrés
 
-Le contrat aurait alors des clauses pour chacun de ces types. Il conserverait un enregistrement de toutes les modifications de stockage ouvertes, ainsi qu'une liste de ceux qui ont voté pour. Il inclurait également une liste de tous les membres. Quand une modification de stockage atteint deux tiers de votes « pour » de la part des membres, une transaction de finalisation peut exécuter la modification. Un modèle plus sophistiqué aurait également une fonctionnalité de vote intégrée pour envoyer une transaction, ajouter ou retirer des membres, et peut-être même pour permettre une sorte de [démocratie délégative](https://wikipedia.org/wiki/Delegative_democracy)de vote (c.-à-d. que n'importe qui pourrait déléguer à quelqu'un son droit de vote, et l'affectation étant transitoire, si A assigne B et B assigne C, alors C détermine le vote de A). Cette conception permettrait à la DAO de se développer organiquement en tant que communauté décentralisée, permettant éventuellement aux membres de déléguer la tâche de filtrage des membres à des spécialistes, bien que, contrairement au « système actuel », les spécialistes puissent facilement apparaître et disparaître au fil du temps, à mesure que les membres individuels de la communauté changent d'orientation.
+Le contrat aurait alors des clauses pour chacun de ces types. Il conserverait un enregistrement de toutes les modifications de stockage ouvertes, ainsi qu'une liste de ceux qui ont voté pour. Il inclurait également une liste de tous les membres. Quand une modification de stockage atteint deux tiers de votes « pour » de la part des membres, une transaction de finalisation peut exécuter la modification. Un modèle plus sophistiqué aurait également une fonctionnalité de vote intégrée pour envoyer une transaction, ajouter ou retirer des membres, voire pour permettre une sorte de [démocratie délégative](https://wikipedia.org/wiki/Liquid_democracy)de vote (c.-à-d. que n'importe qui pourrait déléguer à quelqu'un son droit de vote, et l'affectation étant transitoire, si A assigne B et B assigne C, alors C détermine le vote de A). Cette conception permettrait à la DAO de se développer organiquement en tant que communauté décentralisée, permettant éventuellement aux membres de déléguer la tâche de filtrage des membres à des spécialistes, bien que, contrairement au « système actuel », les spécialistes puissent facilement apparaître et disparaître au fil du temps, à mesure que les membres individuels de la communauté changent d'orientation.
 
 L'entreprise décentralisée constitue un autre modèle, où n'importe quel compte peut avoir zéro ou plus d'actions, et où deux tiers des actions sont requises pour prendre une décision. Un modèle complet impliquerait une fonctionnalité de gestion d'actifs, la possibilité de faire une offre pour acheter ou vendre des actions, et la possibilité d'accepter les offres (de préférence avec un mécanisme de correspondance d'ordres à l'intérieur du contrat). Une délégation existerait également, à la manière d'une démocratie délégative, généralisant le concept de « conseil d'administration ».
 
@@ -501,15 +502,15 @@ Le concept d'une fonction de transition d'état arbitraire telle qu'implémenté
 10. [Livre blanc sur les pièces de couleur](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)
 11. [Livre blanc Mastercoin](https://github.com/mastercoin-MSC/spec)
 12. [Organisations autonomes décentralisées, Bitcoin Magazine](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)
-13. [Vérification de paiement simplifiée](https://en.bitcoin.it/wiki/Scalability#Simplifiedpaymentverification)
+13. [Vérification de paiement simplifiée](https://en.bitcoin.it/wiki/Scalability#Simplified_payment_verification)
 14. [Arbres de Merkle](https://wikipedia.org/wiki/Merkle_tree)
 15. [Arbres Patricia](https://wikipedia.org/wiki/Patricia_tree)
 16. [GHOST](https://eprint.iacr.org/2013/881.pdf)
 17. [StorJ et agents autonomes, Jeff Garzik](http://garzikrants.blogspot.ca/2013/01/storj-and-bitcoin-autonomous-agents.html)
-18. [Mike Hearn, Smart Property, Turing Festival](http://www.youtube.com/watch?v=Pu4PAMFPo5Y)
+18. [Mike Hearn, Smart Property, Turing Festival](https://www.youtube.com/watch?v=MVyv4t0OKe4)
 19. [RLP Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP)
 20. [Arbres de Merkle dans Ethereum](https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-Patricia-Tree)
-21. [Peter Todd à propos des arbres de Merkle additifs](http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
+21. [Peter Todd à propos des arbres de Merkle additifs](https://web.archive.org/web/20140623061815/http://sourceforge.net/p/bitcoin/mailman/message/31709140/)
 
 _Pour en savoir plus sur l'historique du livre blanc, consultez [ce wiki](https://github.com/ethereum/wiki/blob/old-before-deleting-all-files-go-to-wiki-wiki-instead/old-whitepaper-for-historical-reference.md)._
 
