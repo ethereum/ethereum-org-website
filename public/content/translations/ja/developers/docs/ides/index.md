@@ -4,7 +4,7 @@ description:
 lang: ja
 ---
 
-[統合開発環境 (IDE) ](https://wikipedia.org/wiki/Integrated_development_environment)のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと類似しています。 多くの選択肢があるので、最終的には自分の好みに合った IDE やコードエディタを選んでください。 イーサリアムの開発に最適な IDE は、ほとんどの場合、従来のソフトウェア開発ですでに使用している IDE です。
+[統合開発環境(IDE)](https://wikipedia.org/wiki/Integrated_development_environment)のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと類似しています。 多くの選択肢があるので、最終的には自分の好みに合った IDE やコードエディタを選んでください。 イーサリアムの開発に最適な IDE は、ほとんどの場合、従来のソフトウェア開発ですでに使用している IDE です。
 
 ## Web ベースの IDE {#web-based-ides}
 
@@ -65,5 +65,7 @@ lang: ja
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettier を使用するコードフォーマッター
 
 ## 参考文献 {#further-reading}
+
+- [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy のイーサリアム統合開発環境のリスト_
 
 _役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_

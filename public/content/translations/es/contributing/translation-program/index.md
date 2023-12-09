@@ -77,7 +77,7 @@ Si desea informarse sobre herramientas de traducción útiles, comunidades de tr
 
 ## Contáctenos {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de [servidor de Discord de ethereum.org](https://discord.gg/6WX7E97)
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de [servidor de Discord de ethereum.org](https://discord.gg/ethereum-org)
 
 También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org
 

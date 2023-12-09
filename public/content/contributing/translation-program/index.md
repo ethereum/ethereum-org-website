@@ -36,8 +36,8 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 
 ### Our progress so far {#our-progress}
 
-- [**5,100 +** translators](/contributing/translation-program/contributors/)
-- [**54** languages live on site](/languages/)
+- [**5,600 +** translators](/contributing/translation-program/contributors/)
+- [**62** languages live on site](/languages/)
 - [**3 million** words translated in 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -78,7 +78,7 @@ For other useful translation tools, translator communities and Translation Progr
 
 ## Get in touch {#get-in-touch}
 
-Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
+Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/ethereum-org)
 
 You can also reach out to us at translations@ethereum.org
 

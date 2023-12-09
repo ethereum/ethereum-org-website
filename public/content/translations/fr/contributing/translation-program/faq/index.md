@@ -116,4 +116,4 @@ Nous prévoyons de prendre en charge l'ajout de contenu dans d'autres langues qu
 
 ## Nous contacter {#contact}
 
-Je vous remercie d'avoir lu toutes ces informations. Nous espérons que cela vous aidera à participer à notre programme. N'hésitez pas à rejoindre notre [canal de traduction sur Discord](https://discord.gg/XVepFu7sqR) afin de poser des questions et de travailler avec les autres traducteurs, ou à nous contacter à l'adresse translations@ethereum.org !
+Je vous remercie d'avoir lu toutes ces informations. Nous espérons que cela vous aidera à participer à notre programme. N'hésitez pas à rejoindre notre [canal de traduction sur Discord](https://discord.gg/ethereum-org) afin de poser des questions et de travailler avec les autres traducteurs, ou à nous contacter à l'adresse translations@ethereum.org !

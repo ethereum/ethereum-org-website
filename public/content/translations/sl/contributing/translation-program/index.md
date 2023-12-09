@@ -88,7 +88,7 @@ Ethereum.org prevajalski program želi narediti Ethereum dostopen za vse, s prev
 4. **Preces pregleda**  
    Ko ste zaključili prevod (torej vse datoteke vsebinskih verzij prikazujejo 100%), bo naša strokovna prevajalska pomoč pregledala (in po potrebi uredila) vsebino. Ko je pregled zaključen (torej proces pregleda je 100%), bomo vsebino dodali na spletno stran.
 
-Imate kakšno vprašanje? Ali želite sodelovati z našo ekipo in ostalimi prevajalci? Objavite v kanal #translations našega [ethereum.org Discord strežnika](https://discord.gg/6WX7E97)
+Imate kakšno vprašanje? Ali želite sodelovati z našo ekipo in ostalimi prevajalci? Objavite v kanal #translations našega [ethereum.org Discord strežnika](https://discord.gg/ethereum-org)
 
 Prav tako nas lahko kontaktirate prek translations@ethereum.org
 
@@ -110,7 +110,7 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
 
 **Skupnosti**
 
-- [Prevajalske skupine za posamezne jezike](https://discord.gg/6WX7E97) _– iniciativa za povezovanje ethereum.org prevajalcev v prevajalske skupine_
+- [Prevajalske skupine za posamezne jezike](https://discord.gg/ethereum-org) _– iniciativa za povezovanje ethereum.org prevajalcev v prevajalske skupine_
 - [Kitajska prevajalska skupina](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)_ – Stran s pojmi za lažjo koordinacijo med kitajskimi prevajalci_
 
 **Pregled verzij**

@@ -79,7 +79,7 @@ While the subscription is active, you will receive events which are objects with
 - `jsonrpc`: Always "2.0"
 - `method`: Always "eth_subscription"
 - `params`: An object with the following fields:
-  - `subscription`: The subscription ID returned by the `eth_subscription` call which created this subscription.
+  - `subscription`: The subscription ID returned by the `eth_subscribe` call which created this subscription.
   - `result`: An object whose contents vary depending on the type of subscription.
 
 #### Subscription types {#subscription-types}

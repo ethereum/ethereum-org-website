@@ -30,7 +30,7 @@ Aveți probleme cu portofelul dvs.? Majoritatea portofelelor au echipe de asiste
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Aceasta nu este o listă exhaustivă. Aveți nevoie de ajutor ca să găsiți asistență pentru un anumit portofel? Alăturați-vă la [ethereum.org discord](https://discord.gg/rZz26QWfCg) și vom încerca să vă ajutăm._
+_Aceasta nu este o listă exhaustivă. Aveți nevoie de ajutor ca să găsiți asistență pentru un anumit portofel? Alăturați-vă la [ethereum.org discord](https://discord.gg/ethereum-org) și vom încerca să vă ajutăm._
 
 Căutați un portofel Ethereum? [Explorați lista noastră completă de portofele Ethereum](/wallets/find-wallet/).
 

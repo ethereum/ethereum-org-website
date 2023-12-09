@@ -67,7 +67,7 @@ La capa de ejecución se ocupa de la ejecución de transacciones, de la ejecuci�
 #### Investigaciones recientes {#recent-research-1}
 
 - [Optimizaciones de la base de datos](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [Expiración de estado](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [Vencimiento del estado](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [Modelos de vencimiento del estado](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkel y la propuesta de vencimiento del estado](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Gestión del historial](https://eips.ethereum.org/EIPS/eip-4444)
@@ -156,7 +156,7 @@ La fragmentación de la cadena de bloques de Ethereum ha sido durante mucho tiem
 
 #### Investigaciones recientes {#recent-research-5}
 
-- [ecds sobre FGPA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa sobre FGPA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Seguridad {#security}
 
@@ -392,4 +392,4 @@ La descentralización de todo el stack de tecnologías de Ethereum es un área d
 
 #### Investigaciones recientes {#recent-research-20}
 
-- [Capacidad de composición de los contratos inteligentes](/developers/docs/smart-contracts/composability/)
+- [Componibilidad de los contratos inteligentes](/developers/docs/smart-contracts/composability/)
