@@ -10,7 +10,7 @@ Web2 se refiere a la versión de Internet que la mayoría de nosotros conocemos 
 
 ## Ventajas de Web3 {#web3-benefits}
 
-Muchos desarrolladores de Web3 han elegido construir dapps debido a la descentralización inherente a Ethereum:
+Muchos desarrolladores de Web3 han elegido construir DApps debido a la descentralización inherente a Ethereum:
 
 - Cualquiera que esté en la red tiene permiso para usar el servicio o, en otras palabras, no se requiere permiso.
 - Nadie puede bloquearte o denegarte el acceso al servicio.

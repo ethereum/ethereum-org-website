@@ -26,7 +26,7 @@ Az Ethereum Alapítvány 2014 óta szervezi a Devcont, az Ethereum összes fejle
 
 Hozzáférhetsz az összes konferencia prezentáció videó tartalmához a kezdetektől az [archive.devcon.org](https://archive.devcon.org/) oldalon.
 
-Tudj meg többet a [devcon.org](https://devcon.org/) oldalon, nézd meg a [Devcon Blogot](https://blog.ethereum.org/category/devcon/), vagy kövesd be az [@efdevcon](https://twitter.com/EFDevcon) oldalt a legfrissebb bejelentésekért.
+Tudj meg többet a [devcon.org](https://devcon.org/) oldalon, nézd meg a [Devcon Blogot](https://devcon.org/en/blogs/), vagy kövesd be az [@efdevcon](https://twitter.com/EFDevcon) oldalt a legfrissebb bejelentésekért.
 
 <br/>
 

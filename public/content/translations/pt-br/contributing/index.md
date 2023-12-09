@@ -31,7 +31,7 @@ O site ethereum.org, como o Ethereum de forma mais ampla, é um projeto de códi
 - [Adicionar uma carteira](/contributing/adding-wallets/) _ — Adicione uma carteira à [página de pesquisa de carteiras](/wallets/find-wallet/)_
 - [Sugerir um projeto para nossa página DeSci](/contributing/adding-desci-projects/) _ — Adicione um projeto construído no Ethereum que contribua para a ciência descentralizada_
 
-_Alguma dúvida?_ 🤔 Entre em contato no nosso [servidor do Discord](https://discord.gg/CetY6Y4)
+_Alguma dúvida?_ 🤔 Entre em contato no nosso [servidor do Discord](https://discord.gg/ethereum-org)
 
 ## Como trabalhar no ethereum.org {#how-to-update-content}
 
@@ -42,7 +42,7 @@ Todas as atualizações são efetuadas por meio do processo de PR (solicitação
 Você não precisa de permissão para trabalhar em nada, mas é sempre melhor nos informar sobre o que está planejando fazer. Você pode fazer isso:
 
 - Comentando sobre um problema ou uma solicitação de pull (PR) no [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Enviando uma mensagem em nosso [servidor Discord](https://discord.gg/CetY6Y4)
+- Enviando uma mensagem em nosso [servidor Discord](https://discord.gg/ethereum-org)
 
 Antes de contribuir, certifique-se de está familiarizado com:
 
@@ -56,7 +56,7 @@ As decisões sobre PRs individuais, desenvolvimento do design e grandes atualiza
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Servidor do Discord](https://discord.gg/CetY6Y4)
+- [Servidor do Discord](https://discord.gg/ethereum-org)
 
 ### Observação sobre plágio {#plagiarism}
 
@@ -74,7 +74,7 @@ Se a sua contribuição for incluída no ethereum.org, cunharemos um POAP único
 
 ### Como solicitar seu POAP {#how-to-claim}
 
-1. Entre em nosso [servidor do Discord](https://discord.gg/E8dET2ux8y).
+1. Entre em nosso [servidor do Discord](https://discord.gg/ethereum-org).
 2. Cole o link com sua contribuição no `#🥇| ` [canal poaps](https://discord.com/channels/714888181740339261/804005643211898911).
 3. Espere que um membro de nossa equipe envie um link para o seu POAP.
 4. Solicite seu POAP!

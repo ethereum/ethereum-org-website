@@ -86,7 +86,7 @@ sidebarDepth: 2
 
 ### 对你的好处 {#benefits-to-you}
 
-运行你自己的节点使你能够以私密、自给自足的去信任方式使用以太坊。 你无需信任网络，因为你可以使用自己的客户端验证数据。 “不要信任，直接验证”是一句在区块链领域非常流行的口头禅。
+运行你自己的节点使你能够以私密、自给自足的去信任方式使用以太坊。 你去信任网络，因为你可以使用自己的客户端验证数据。 “不要信任，直接验证”是一句在区块链领域非常流行的口头禅。
 
 - 你的节点根据共识规则独自验证所有交易和区块。 这意味着你不必依赖网络中的任何其他节点或完全信任它们。
 - 你可以将以太坊钱包与你自己的节点一起使用。 你可以更安全、更私密地使用去中心化应用程序，因为你不必将地址和余额泄露给中间商。 你可以用自己的客户端检查所有内容。 [MetaMask](https://metamask.io)、[Frame](https://frame.sh/) 和[许多其他钱包](/wallets/find-wallet/)提供远程过程调用导入，这让它们可以使用你的节点。
@@ -130,12 +130,13 @@ sidebarDepth: 2
 
 下表汇总了不同的客户端。 这些客户端均通过[客户端测试](https://github.com/ethereum/tests)并得到积极维护，以保持与网络升级同步。
 
-| 客户端                                          | 语言     | 操作系统：            | 网络                               | 同步策略                       | 状态缓冲        |
-| ----------------------------------------------- | -------- | --------------------- | ---------------------------------- | ------------------------------ | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux、Windows、macOS | 主网、Sepolia、Goerli              | 快照、完全                     | Archive、Pruned |
-| [Nethermind](http://nethermind.io/)             | C#、.NET | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他       | 快照（不提供服务）、快速、完全 | Archive、Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 快照、快速、完全               | Archive、Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 完全                           | Archive、Pruned |
+| 客户端                                          | 语言      | 操作系统：            | 网络                               | 同步策略                       | 状态缓冲        |
+| ----------------------------------------------- | --------- | --------------------- | ---------------------------------- | ------------------------------ | --------------- |
+| [Geth](https://geth.ethereum.org/)              | Go        | Linux、Windows、macOS | 主网、Sepolia、Goerli              | 快照、完全                     | Archive、Pruned |
+| [Nethermind](http://nethermind.io/)             | C#、.NET  | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他       | 快照（不提供服务）、快速、完全 | Archive、Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java      | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 快照、快速、完全               | Archive、Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go        | Linux、Windows、macOS | Mainnet, Sepolia, Goerli, 以及更多 | 完全                           | Archive、Pruned |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust 语言 | Linux、Windows、macOS | 主网、Sepolia、Goerli 及其他       | 完全                           | Archive、Pruned |
 
 有关受支持网络的更多信息，请仔细阅读[以太坊网络](/developers/docs/networks/)。
 

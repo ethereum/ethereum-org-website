@@ -17,15 +17,15 @@ Félicitations ! Vous avez réussi la partie la plus courte et la plus simple d
 
 En prérequis, vous devriez déjà avoir MetaMask installé sur votre mobile, et ce dernier devrait inclure le compte sur lequel vous avez miné votre NFT — vous pouvez télécharger l'application gratuitement sur [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) ou [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Étape 1 : Configurez votre réseau sur Goerli {#set-network-to-goerli}
+## Étape 1 : Configurez votre réseau sur Sepolia {#set-network-to-sepolia}
 
-En haut de l'application, appuyez sur le bouton « Portefeuille », après quoi vous serez invité à sélectionner un réseau. Comme notre NFT a été miné sur le réseau Goerli, vous devez sélectionner ce réseau.
+En haut de l'application, appuyez sur le bouton « Portefeuille », après quoi vous serez invité à sélectionner un réseau. Comme notre NFT a été miné sur le réseau Sepolia, vous devez sélectionner Sepolia comme votre réseau.
 
-![Comment définir Goerli comme votre réseau sur MetaMask Mobile](./goerliMetamask.gif)
+![Comment définir Sepolia comme votre réseau sur MetaMask Mobile](./goerliMetamask.gif)
 
 ## Étape 2 : Ajoutez votre article de collection à MetaMask {#add-nft-to-metamask}
 
-Une fois que vous êtes sur le réseau Goerli, sélectionner l'onglet « Articles de collection » sur la droite et ajoutez l'adresse du contrat intelligent NFT et l'identifiant du jeton ERC-721 de votre NFT — que vous devriez pouvoir trouver sur Etherscan en fonction du hachage de la transaction de votre NFT déployé dans la Partie II de notre tutoriel.
+Une fois que vous êtes sur le réseau Sepolia, sélectionner l'onglet « Articles de collection » sur la droite et ajoutez l'adresse du contrat intelligent NFT et l'identifiant du jeton ERC-721 de votre NFT — que vous devriez pouvoir trouver sur Etherscan en fonction du hachage de la transaction de votre NFT déployé dans la Partie II de notre tutoriel.
 
 ![Comment trouver votre hachage de transaction et votre identifiant de jeton ERC-721](./findNFTEtherscan.png)
 
