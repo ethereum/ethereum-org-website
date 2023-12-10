@@ -21,6 +21,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Filter and search for grants by category, use case, amount, and more. Contribute to help others find the right grant._
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
+- [MOROS NET DAO](https://morosnet.com/grants/) - _Small grants and sponsorship for open source projects in secure network, cybersecurity, DeFi, privacy & ZK, machine learning, free tech/web3 education_
 
 ## Project specific {#project-specific}
 
