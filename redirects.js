@@ -3,7 +3,7 @@ module.exports = async function redirects() {
   return [
     {
       source: "/discord",
-      destination: "https://discord.gg/rZz26QWfCg",
+      destination: "https://discord.gg/ethereum-org",
       permanent: true,
     },
     {
