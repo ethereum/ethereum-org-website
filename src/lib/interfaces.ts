@@ -163,6 +163,20 @@ export interface MdPageContent {
   crowdinContributors: CrowdinContributor[]
 }
 
+// Local environment framework
+export interface Framework {
+  id: string
+  url: string
+  githubUrl: string
+  background: string
+  name: string
+  description: string
+  alt: string
+  image: StaticImageData
+  starCount?: number
+  languages?: string[]
+}
+
 /**
  * Community events
  */

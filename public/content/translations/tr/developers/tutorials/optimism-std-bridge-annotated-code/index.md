@@ -47,13 +47,13 @@ Köprünün iki ana akışı vardır:
 
 ### Çekme akışı {#withdrawal-flow}
 
-#### Katman 2 {#withdrawl-flow-layer-2}
+#### Katman 2 {#withdrawal-flow-layer-2}
 
 1. Çeken kişi K2 köprüsünü çağırır (`draw` veya `withdrawTo`)
 2. K2 köprüsü, `msg.sender`'a ait uygun sayıda token'ı yakar
 3. K2 köprüsü, K1 köprüsünde `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal`'ı çağırmak için etki alanları arası mesaj mekanizmasını kullanır
 
-#### Katman 1 {#withdrawl-flow-layer-1}
+#### Katman 1 {#withdrawal-flow-layer-1}
 
 4. K1 köprüsü, `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal` çağrısının meşru olduğunu doğrular:
    - Etki alanları arası mesaj mekanizmasından geldi

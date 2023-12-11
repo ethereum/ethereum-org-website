@@ -61,6 +61,6 @@ Aveţi grijă să citiţi [principiile noastre](/contributing/design-principles/
 
 În ciuda faptului că acest site este open-source și poate lucra oricine la el, avem o echipă dedicată site-ului ethereum.org și altor proiecte web ale Fundației Ethereum.
 
-Vom publica aici orice posturi vacante. Dacă nu găsiţi în această listă niciun rol care să vi se potrivească, accesaţi [Discord](https://discord.gg/CetY6Y4) și spuneți-ne în ce fel ați dori să colaboraţi cu noi!
+Vom publica aici orice posturi vacante. Dacă nu găsiţi în această listă niciun rol care să vi se potrivească, accesaţi [Discord](https://discord.gg/ethereum-org) și spuneți-ne în ce fel ați dori să colaboraţi cu noi!
 
 Căutaţi şi posturi în afara echipei ethereum.org? [Vedeţi şi alte posturi din Ethereum](/community/get-involved/#ethereum-jobs/).

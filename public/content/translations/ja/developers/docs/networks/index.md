@@ -4,9 +4,9 @@ description: イーサリアムネットワーク概要、およびアプリケ�
 lang: ja
 ---
 
-開発、テスト、本番の用途に応じて、異なるイーサリアム環境にアクセスすることができます。 イーサリアムはプロトコルであるため、プロトコルに準拠した、複数の互いに干渉しない「ネットワーク」が存在します。
+イーサリアムネットワークは、接続されたコンピューターのグループで、イーサリアムプロトコルを使って通信します。 イーサリアムメインネットは、1 つしかありませんが、同じプロトコルのルールに準拠した独立したネットワークをテストや開発のために作成することができます。 プロトコルに準拠した、互いに干渉しない多くの「ネットワーク」が存在します。 自分のコンピュータ上でローカルに起動して、スマートコントラクトや web3 アプリのテストに利用できます。
 
-イーサリアムアカウントは異なるネットワークすべてで使用できますが、アカウント残高とトランザクション履歴はメインネットから継承されません。 テスト目的に利用可能なネットワークと、テストネットの ETH を取得する方法を知っておくと有用です。
+イーサリアムアカウントは異なるネットワークすべてで使用できますが、アカウント残高とトランザクション履歴はメインネットから継承されません。 テスト目的に利用可能なネットワークと、テストネットの ETH を取得する方法を知っておくと有用です。 セキュリティの観点から、一般にはメインネットのアカウントをテストネットで再利用すること(またはその逆)は推奨されません。
 
 ## 前提知識 {#prerequisites}
 
@@ -28,34 +28,30 @@ lang: ja
 
 メインネットにデプロイする前に、テストネットで作成したコントラクトコードをテストする必要があります。 既存のスマートコントラクトと統合する分散型アプリ(Dapp)では、ほとんどのプロジェクトはコピーがテストネットにデプロイされています。
 
-ほとんどのテストネットは、プルーフ・オブ・オーソリティ(PoA)合意メカニズムを使って開始されました。 これは、選ばれた少数のノードがトランザクションを検証し、新しいブロックを作成することで、その過程でアイデンティティをステーキングします。 あるいは、許可された少数のマイナーのプルーフ・オブ・ワークの合意メカニズムを使用して開始されたいくつかのテストネットもあります。 しかし、[マージ](/roadmap/merge)の準備として、これらのテストネットはプルーフ・オブ・ステークへ移行し、イーサリアムメインネットのマージが行われる前に、テストの機会が複数回提供されました。 現在、イーサリアムテストネットは、イーサリアムメインネットと同様にプルーフ・オブ・ステークです。
+ほとんどのテストネットは、プルーフ・オブ・オーソリティ(PoA)の合意メカニズムで立ち上げられました。 このメカニズムでは、選ばれた少数のノードがトランザクションを検証し、新しいブロックを作成することで、その過程でアイデンティティをステーキングします。 また、テストネットの中にはイーサリアムのメインネットのように、誰もがバリデータの実行をテストできるオープンなプルーフ・オブ・ステークの合意メカニズムを備えているものもあります。
 
-テストネットの ETH は実価値がないため、テストネットの ETH には市場価値はありません。 実際にイーサリアムを利用するには ETH が必要なので、ほとんどの人はフォーセットからテストネット ETH を取得します。 ほとんどのフォーセットは Web アプリで、ETH を送信するアドレスを入力します。
+テストネット上の ETH は、本来は価値がないとされています。しかし、特定のタイプのテストネットでは、希少性や入手が困難なことから、価値を持つようになった ETH のマーケットが形成されています。 実際にイーサリアムを利用するには(テストネットであれ)ETH が必要なので、ほとんどの人はフォーセットからテストネット ETH を取得します。 ほとんどのフォーセットは Web アプリで、ETH を送信するアドレスを入力します。
 
-#### Goerli (ゴエリ) {#goerli}
+#### 推奨テストネット
 
-Goerli (ゴエリ)はプルーフ・オブ・ステークのテストネットです。 アプリケーションデベロッパー向けの安定したテストネットとして、長期的にわたって維持されると見込まれています。 テストネットがマージされる前は、 Goerli はプルーフ・オブ・オーソリティのテストネットでした。
+現在クライアントデベロッパーによってメンテナンスされているパブリックのテストネットは、Sepolia と Goerli の 2 つです。 Sepolia は、コントラクトやアプリケーションのデベロッパーのためのネットワークで、アプリケーションのテストに使用されます。 Goerli は、プロトコルのデベロッパーがネットワークのアップグレードをテストしたり、ステーカーがバリデータの実行をテストしたりするために使用されるネットワークです。
 
-- [ウェブサイト](https://goerli.net/)
-- [GitHub](https://github.com/goerli/testnet)
-- [Etherscan](https://goerli.etherscan.io)
+#### Sepolia(セポリア) {#sepolia}
 
-##### Goerli フォーセット
+**Sepolia はアプリケーション開発に推奨されるデフォルトのテストネットです。** Sepolia ネットワークは、許可型のバリデータセットを使用しています。 また、まだ新しいものであるため、ステートや履歴などデータ量が少ないことも特徴です。 そのため、ネットワークを素早く同期でき、ノードを実行するのに必要なストレージ容量が少なくて済みます。 これは、ノードを素早く起動してネットワークと直接やり取りしたい場合に便利です。
 
-- [Goerli faucet](https://faucet.goerli.mudit.blog/)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- クライアントとテストチームが管理する非公開のバリデータセット
+- 他のテストネットに比べてアプリケーションのデプロイが少ない、新しいテストネット
+- 同期が速く、ノードを実行するには最小限のディスク容量が必要
 
-#### Sepolia (セポリア) {#sepolia}
-
-Sepolia (セポリア)は、プルーフ・オブ・ステークのテストネットです。 Sepolia はまだ稼働していますが、長期的には維持されない予定です。 2022 年 6 月にマージされる前は、Sepolia はプルーフ・オブ・ワークのテストネットでした。
+##### リソース
 
 - [ウェブサイト](https://sepolia.dev/)
-- [GitHub](https://github.com/goerli/sepolia)
+- [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
 
-##### Sepolia フォーセット
+##### フォーセット
 
 - [QuickNode Sepolia フォーセット](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
@@ -63,73 +59,71 @@ Sepolia (セポリア)は、プルーフ・オブ・ステークのテストネ�
 - [Coinbase Wallet フォーセット | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia フォーセット](https://sepoliafaucet.com/)
 
-#### Ropsten (ロプステン) _(非推奨)_ {#ropsten}
+#### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
 
-_注意: [Ropsten (ロプステン)テストネットは非推奨](https://github.com/ethereum/pm/issues/460)であり、プロトコルのアップグレードは行われません。 Sepolia または Goerli にアプリケーションを移行することを検討してください。_
+_注: [Goerli テストネットは廃止予定となっており](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)、2023 年に[Holesovice](https://github.com/eth-clients/holesovice)に置き換わります。 アプリケーションの Sepolia への移行をご検討ください。_
 
-Ropsten は、プルーフ・オブ・ステークのテストネットです。 2022 年後半に廃止される予定です。 2022 年 6 月にマージされる前は、ロプステンはプルーフ・オブ・ワークのテストネットでした。
+Goerli は、バリデーションやステーキングのテストを行うためのテストネットです。 Goerli ネットワークは、テストネットバリデータを実行したいユーザーのために公開されています。 メインネットにデプロイする前にプロトコルのアップグレードをテストしたいステーカーは、Goerli を使用する必要があります。
 
-##### Ropsten フォーセット
+- オープンなバリデータセット。ステーカーはネットワークのアップグレードをテスト可能。
+- 大きなステート。複雑なスマートコントラクトのインタラクションのテストに有効。
+- 同期に時間がかかり、ノードを実行するために多くのストレージが必要。
 
-- [FaucETH](https://fauceth.komputing.org) (ソーシャルアカウントを必要としない複数チェーンのフォーセット)
+##### リソース
+
+- [ウェブサイト](https://goerli.net/)
+- [GitHub](https://github.com/eth-clients/goerli)
+- [Etherscan](https://goerli.etherscan.io)
+
+##### フォーセット
+
+- [QuickNode Goerli Faucet](https://faucet.quicknode.com/drip)
+- [Grabteeth](https://grabteeth.xyz/)
+- [PoW faucet](https://goerli-faucet.pk910.de/)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Alchemy Goerli Faucet](https://goerlifaucet.com/)
+- [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
+- [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
+- [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
 
-#### Rinkeby (リンケビュー) _(非推奨)_ {#rinkeby}
-
-_注意: [Rinkeby (リンケビュー)テストネットは非推奨](https://github.com/ethereum/pm/issues/460)であり、プロトコルのアップグレードは行われません。 Sepolia または Goerli にアプリケーションを移行することを検討してください。_
-
-古いバージョンの Geth クライアントに対応している、プルーフ・オブ・オーソリティのテストネット。
-
-##### Rinkeby フォーセット
-
-- [FaucETH](https://fauceth.komputing.org) (ソーシャルアカウントを必要としない複数チェーンのフォーセット)
-- [Alchemy faucet](https://RinkebyFaucet.com)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
-- [Rinkeby Faucet](https://faucet.rinkeby.io/)
-
-#### Kovan (コバン) _(非推奨)_ {#kovan}
-
-_注意: [Kovan (コバン)テストネットは非推奨](https://github.com/ethereum/pm/issues/460)であり、プロトコルのアップグレードは行われません。 Sepolia または Goerli にアプリケーションを移行することを検討してください。_
-
-OpenEthereum クライアントに対応している、非常に古いプルーフ・オブ・オーソリティのテストネット。
-
-##### Kovan フォーセット
-
-- [FaucETH](https://fauceth.komputing.org) (ソーシャルアカウントを必要としない複数チェーンのフォーセット)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+Goerli テストネットでバリデータを起動するには、ethstaker の["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/)を使用してください。
 
 ### レイヤー 2 テストネット {#layer-2-testnets}
 
-[レイヤー 2 (L2)](/layer-2/)は、イーサリアムのスケーリングソリューションの総称です。 レイヤー 2 はイーサリアムを拡張し、またイーサリアムのセキュリティ保証を継承する独立したブロックチェーンです。 レイヤー 2 テストネットは、通常、パブリックイーサリアムテストネットと対になっています。
+[レイヤー 2(L2)](/layer-2/)は、イーサリアムのスケーリングソリューションの総称であり、 レイヤー 2 はイーサリアムを拡張し、またイーサリアムのセキュリティ保証を継承する独立したブロックチェーンです。 レイヤー 2 のテストネットは、通常、パブリックイーサリアムのテストネットと対になっています。
 
-#### Arbitrum Rinkeby (アービトラム・リンケビー) {#arbitrum-rinkeby}
+#### Arbitrum Goerli {#arbitrum-goerli}
 
 [Arbitrum](https://arbitrum.io/)のテストネット。
 
-Arbitrum Rinkeby フォーセット:
+##### フォーセット
 
-- [FaucETH](https://fauceth.komputing.org) (ソーシャルアカウントを必要としない複数チェーンのフォーセット)
-- [Chainlink faucet](https://faucets.chain.link/)
-- [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Chainlink フォーセット](https://faucets.chain.link/)
 
-#### Optimistic Kovan (オプティミスティック・コバン) {#optimistic-kovan}
+#### Optimistic Goerli {#optimistic-goerli}
 
 [Optimism](https://www.optimism.io/)のテストネット。
 
-Optimistic Kovan フォーセット:
+##### フォーセット
 
-- [FaucETH](https://fauceth.komputing.org) (ソーシャルアカウントを必要としない複数チェーンのフォーセット)
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
+- [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
+
+#### Starknet Goerli {#starknet-goerli}
+
+[Starknet](https://www.starknet.io)のテストネット
+
+##### フォーセット
+
+- [Starknet フォーセット](https://faucet.goerli.starknet.io)
 
 ## プライベートネットワーク {#private-networks}
 
-イーサリアムネットワークは、ノードがパブリックネットワーク(メインネットやテストネット)に接続しなければ、プライベートネットワーク です。 ここでのプライベートとは、保護されており安全という意味ではなく、別のまたは分離されていることを意味します。
+イーサリアムネットワークは、ノードがパブリックネットワーク(メインネットやテストネット) に接続されていない場合は、プライベートネットワークとなります。 ここでのプライベートとは、保護されており安全という意味ではなく、他のネットワークから分離されているという意味です。
 
 ### 開発フレームワーク {#development-networks}
 
-イーサリアムアプリケーションを構築する場合は、プライベートネットワークで実行して、デプロイする前に動作確認をすることをお勧めします。 自身のコンピュータ上でローカルサーバを作成し、Web 開発するのと同様に、ローカルのブロックチェーンインスタンスを作成し、開発中の分散型アプリ(Dapp)をテストできます。 プライベートネットワークでのテストは、パブリックテストネットよりもはるかに高速な反復処理が可能です。
+イーサリアムアプリケーションを構築する場合は、プライベートネットワークで実行して、デプロイする前に動作確認をすることをお勧めします。 自身のコンピュータ上でローカルサーバを作成し、Web 開発するのと同様に、ローカルのブロックチェーンインスタンスを作成し、開発中の分散型アプリ(Dapp)をテストできます。 プライベートネットワークでのテストは、パブリックテストネットよりもはるかに高速に反復処理を行うことができます。
 
 これをサポートするためのプロジェクトやツールがあります。 [開発ネットワーク](/developers/docs/development-networks/)の詳細をご覧ください。
 
@@ -146,4 +140,5 @@ Optimistic Kovan フォーセット:
 
 ## 参考文献 {#further-reading}
 
+- [提案: 予測可能なイーサリアムテストネットのライフサイクル](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [イーサリアムテストネットの進化](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

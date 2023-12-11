@@ -20,8 +20,7 @@ Un portefeuille est une application qui vous aide à gérer votre compte Ethereu
 
 Si vous êtes novice, vous pouvez sélectionner le filtre "Débutant dans les cryptos" sur la page "Trouver un portefeuille" pour identifier les portefeuilles qui devraient inclure toutes les fonctionnalités nécessaires pour les débutants.
 
-![
-Sélection de filtre sur la page "Trouver un portefeuille".](./wallet-box.png)
+![Sélection de filtre sur la page « Trouver un portefeuille »](./wallet-box.png)
 
 Il y a aussi d'autres filtres de profil pour répondre à vos besoins. Il s'agit d'exemples de portefeuilles couramment utilisés - vous devez faire vos propres recherches avant de faire confiance à tout logiciel.
 

@@ -16,6 +16,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Button, ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
+import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import {
@@ -30,6 +31,8 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
+
+import RoadmapHubHeroImage from "@/public/heroes/roadmap-hub-hero.jpg"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -128,7 +131,15 @@ export const RoadmapLayout: React.FC<IProps> = ({
 
   return (
     <Box position="relative">
-      <HeroContainer>
+      {slug === "/roadmap/" ? (
+        <HubHero
+          heroImgSrc={RoadmapHubHeroImage}
+          header={frontmatter.title}
+          title={""}
+          description={frontmatter.description}
+        />
+      ) : (
+        <HeroContainer>
         <Flex
           w="full"
           flexDirection={{ base: "column", lg: "row" }}
@@ -182,6 +193,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
           </Center>
         </Flex>
       </HeroContainer>
+      )}
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
