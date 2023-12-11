@@ -1,12 +1,12 @@
 import { ReactNode } from "react"
-import { GetStaticProps, InferGetStaticPropsType } from "next"
+import { GetStaticProps } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, Show, useToken } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
-import { ButtonDropdownList as ButtonDropdownList } from "@/components/ButtonDropdown"
+import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
@@ -160,9 +160,6 @@ type BenefitsType = {
   to?: string
 }
 
-type Props = SSRConfig & {
-  // lastDeployDate: string
-}
 export const getStaticProps = (async (context) => {
   const { locale } = context
   const lastDeployDate = getLastDeployDate()
@@ -176,9 +173,9 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<SSRConfig>
 
-const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
+const StakingPage = () => {
   const { t } = useTranslation("page-staking")
 
   // TODO: Replace with direct token implementation after UI migration is completed
