@@ -406,9 +406,11 @@ const GasPage = () => {
             flex="1 1 416px"
             minH="full"
             image={whatIsEthereumImg}
-            titleKey="Use Layer 2"
+            titleKey={t("page-gas-how-do-i-pay-less-gas-card-3-title")}
             alt=""
-            descriptionKey="Layer 2 extends Ethereum, reducing costs and increasing accessibility for decentralized applications."
+            descriptionKey={t(
+              "page-gas-how-do-i-pay-less-gas-card-3-description"
+            )}
           >
             <Box>
               <ButtonLink to="/layer-2/">
