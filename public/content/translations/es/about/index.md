@@ -61,6 +61,6 @@ Asegúrese de leer [nuestros principios](/contributing/design-principles/) y [nu
 
 Aunque este sitio web es de código abierto, y cualquiera puede trabajar en él, tenemos un equipo dedicado a ethereum.org y a otros proyectos web de Ethereum Foundation.
 
-Publicaremos aquí las ofertas de empleo. Si no ve aquí una función que se adecúe a su perfil, vaya a [Discord](https://discord.gg/CetY6Y4) y cuéntenos cómo te gustaría trabajar con nosotros.
+Publicaremos aquí las ofertas de empleo. Si no ve aquí una función que se adecúe a su perfil, vaya a [Discord](https://discord.gg/ethereum-org) y cuéntenos cómo te gustaría trabajar con nosotros.
 
 ¿Busca algo distinto del equipo de ethereum.org? [Consulte otras vacantes relacionadas con Ethereum](/community/get-involved/#ethereum-jobs/).

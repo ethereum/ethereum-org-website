@@ -67,14 +67,12 @@ const HubHero = ({
           <Heading size="2xl">{header}</Heading>
           <Text size="lg">{description}</Text>
         </Stack>
-        {buttons && (
-          <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-            {buttons.map((button, idx) => {
-              if (!button) return
-              return <CallToAction key={idx} {...button} />
-            })}
-          </HStack>
-        )}
+        <HStack justify={{ md: "center", xl: "start" }} spacing="4">
+          {(buttons || []).map((button, idx) => {
+            if (!button) return
+            return <CallToAction key={idx} {...button} />
+          })}
+        </HStack>
       </Stack>
     </Box>
   )

@@ -24,7 +24,7 @@ Solo se selecciona un proponente de bloque en cada ranura. En condiciones normal
 
 ## ¿Cómo se crea el bloque? {#how-is-a-block-created}
 
-Se espera que el proponente de bloques transmita un bloque de baliza firmado que se construye sobre la cabeza más reciente de la cadena, de acuerdo con la vista de su propio algoritmo de elección de bifurcación de ejecución local. El algoritmo de elección de bifurcación aplica cualquier certificación en cola que quede de la ranura anterior, luego encuentra el bloque con el mayor peso acumulado de certificaciones en su historia. Ese bloque es la matriz del nuevo bloque creado por el proponente.
+Se espera que el proponente de bloques transmita un bloque de baliza firmado que se construye sobre la cabeza más reciente de la cadena, de acuerdo con la vista de su propio algoritmo de elección de bifurcación de ejecución local. El algoritmo de elección de bifurcación aplica cualquier certificación en cola que quede de la ranura anterior, luego encuentra el bloque con el mayor peso acumulado de certificaciones en su historia. Ese bloque es el padre del nuevo bloque creado por el proponente.
 
 El proponente de bloques crea un bloque recopilando datos de su propia base de datos local y vista de la cadena. El contenido del bloque se muestra en el siguiente fragmento:
 
@@ -52,7 +52,7 @@ Más información sobre la [anatomía de los bloques](/developers/docs/blocks).
 
 ## ¿Qué pasa con el bloque? {#what-happens-to-blocks}
 
-El bloque se añade a la base de datos local del proponente del bloque y se transmite a los pares a través de la red de intercambio de información de la capa de consenso. Cuando un validador recibe el bloque, verifica los datos dentro de él, incluida la verificación de que el bloque tiene la matriz correcta, corresponde a la ranura indicada, el índice del proponente es el esperado, la revelación de RANDAO es válida y que el proponente no está recortado. El `execution_payload` se desagrupa, y el cliente de ejecución del validador vuelve a ejecutar las transacciones de la lista para comprobar el cambio de estado propuesto. Suponiendo que el bloque pase todas estas comprobaciones, cada validador añade el bloque a su propia cadena predilecta. El proceso comienza de nuevo en la siguiente ranura.
+El bloque se añade a la base de datos local del proponente del bloque y se transmite a los pares a través de la red de intercambio de información de la capa de consenso. Cuando un validador recibe el bloque, verifica los datos dentro de él, incluida la verificación de que el bloque tiene el padre correcto, corresponde a la ranura indicada, el índice del proponente es el esperado, la revelación de RANDAO es válida y que el proponente no está recortado. El `execution_payload` se desagrupa, y el cliente de ejecución del validador vuelve a ejecutar las transacciones de la lista para comprobar el cambio de estado propuesto. Suponiendo que el bloque pase todas estas comprobaciones, cada validador añade el bloque a su propia cadena predilecta. El proceso comienza de nuevo en la siguiente ranura.
 
 ## Recompensas de bloque {#block-rewards}
 

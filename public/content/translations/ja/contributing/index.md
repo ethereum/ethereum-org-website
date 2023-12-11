@@ -29,7 +29,7 @@ ethereum.org のウェブサイトは、より広範なイーサリアムと同�
 - [ウォレットの追加](/contributing/adding-wallets/) _- [ウォレットを探すページ](/wallets/find-wallet/)にウォレットを追加する_
 - [分散型サイエンス(DeSci)ページのプロジェクトの提案](/contributing/adding-desci-projects/)_- 分散型サイエンスに貢献するイーサリアム上のプロジェクトを追加する_
 
-*ご質問がある場合は*🤔、[Discord サーバー](https://discord.gg/CetY6Y4)でご連絡ください
+*ご質問がある場合は*🤔、[Discord サーバー](https://discord.gg/ethereum-org)でご連絡ください
 
 ## ethereum.org での活動方法 {#how-to-update-content}
 
@@ -40,7 +40,7 @@ ethereum.org のウェブサイトは、より広範なイーサリアムと同�
 作業するのに許可は必要ありませんが、何をするつもりなのかお知らせください。 これは次の方法で行うことができます。
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website)の問題や PR にコメントする
-- [Discord サーバー](https://discord.gg/CetY6Y4)でメッセージする
+- [Discord サーバー](https://discord.gg/ethereum-org)でメッセージする
 
 貢献するにあたって、以下のことを確認してください。
 
@@ -54,7 +54,7 @@ ethereum.org のウェブサイトは、より広範なイーサリアムと同�
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord サーバー](https://discord.gg/CetY6Y4)
+- [Discord サーバー](https://discord.gg/ethereum-org)
 
 ### 盗用に関する注意点 {#plagiarism}
 
@@ -72,7 +72,7 @@ GitHub リポジトリには、オープンソースに初めて触れるデベ�
 
 ### 申請方法 {#how-to-claim}
 
-1. [Discord サーバー](https://discord.gg/E8dET2ux8y)に参加します。
+1. [Discord サーバー](https://discord.gg/ethereum-org)に参加します。
 2. `#🥇 | poaps`[チャンネル](https://discord.com/channels/714888181740339261/804005643211898911)にあなたの投稿へのリンクを貼り付けます。
 3. 出席証明プロトコル(POAP)へのリンクが送られるまでお待ちください。
 4. 出席証明プロトコル(POAP)を受け取ります。

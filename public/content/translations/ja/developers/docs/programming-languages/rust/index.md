@@ -25,43 +25,39 @@ incomplete: true
 - [イーサリアムクライアントの選択](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust イーサリアムクライアント](https://openethereum.github.io/) \* **OpenEthereum は[すでに廃止されており](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)、現在は維持されていません。** ご利用には注意が必要です。できれば、他のクライアント実装に切り替えてください。
 - [Rust を使用してイーサリアムにトランザクションを送信する](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Parity イーサリアムクライアントを使用するスマートコントラクトの入門](https://wiki.parity.io/Smart-Contracts)
 - [Kovan 向け Rust Wasm でのコントラクトの記述方法についての段階的なチュートリアル](https://github.com/paritytech/pwasm-tutorial)
 
 ## 中級者向けの記事 {#intermediate-articles}
 
-- [Rust-Web3 ドキュメント](https://tomusdrw.github.io/rust-web3/web3/index.html)
-- [Rust-Web3 の実例](https://github.com/tomusdrw/rust-web3/blob/master/examples)
-
 ## 発展的なユースケース {#advanced-use-patterns}
 
-- [pwasm_ethereum: イーサリアムライクなネットワークとやり取りするための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
-- [JavaScript と Rust を使用して分散型チャットの構築](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
-- [Vue.js と Rust を使用して分散化 Todo アプリケーションの構築](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
+- [pwasm_ethereum イーサリアムライクなネットワークと対話するための extern ライブラリ](https://github.com/openethereum/pwasm-ethereum)
+- [JavaScript と Rust を使用して分散型チャットを構築する](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
+- [Vue.js と Rust を使用して分散化 Todo アプリを構築する](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [シークレットコントラクト入門](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
-- [Rust でのブロックチェーンの構築](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
+- [Secret Contract の概要](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
+- [Rust でブロックチェーンを構築する](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust のプロジェクトとツール {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _イーサリアムライクのネットワークとやり取りするための extern のコレクション_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _高速イーサリアムコンセンサスレイヤークライアント_
-- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly の決定論的サブセットを使用したイーサリアムスマートコントラクト実行レイヤーの再設計の提案_
+- [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly の決定論的サブセットを使用して、イーサリアムスマートコントラクト実行レイヤーを再設計する提案_
 - [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API リファレンス_
-- [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブ Parity クライアント EVM を使用した Solidity スマートコントラクトの単位テストハーネス_
+- [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブ Parity クライアント EVM を使用した Solidity スマートコントラクトのユニットテストハーネス_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust のイーサリアム仮想マシンの実装_
-- [rust-web3](https://github.com/tomusdrw/rust-web3) - _Web3.js ライブラリの Rust 実装_
-- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust での Wavelet スマートコントラクト_
+- [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust で書かれた Wavelet スマートコントラクト_
 - [Foundry](https://github.com/gakonst/foundry)- _イーサリアムアプリケーション開発のためのツールキット_
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _イーサリアムライブラリとウォレットの実装_
 - [SewUp](https://github.com/second-state/SewUp) - _Rust を使用したイーサリアム WebAssembly コントラクトの構築と、一般的なバックエンドと同様の開発をサポートするライブラリ_
-- [Reth](https://github.com/paradigmxyz/reth) レス(Rust Ethereum の略称)は、新しいイーサリアムのフルノード実装
+- [Substreams](https://github.com/streamingfast/substreams) - _並列化ブロックチェーンデータインデックス技術_
+- [Reth](https://github.com/paradigmxyz/reth)Reth(Rust Ethereum の略称)は、新しいイーサリアムのフルノード実装
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 
 ## Rust コミュニティコントリビューター {#rust-community-contributors}
 
-- [イーサリアム WebAssembly](https://gitter.im/ewasm/Lobby)
+- [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)
 - [Parity Gitter](https://gitter.im/paritytech/parity)
 - [Enigma](https://discord.gg/SJK32GY)

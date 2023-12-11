@@ -32,7 +32,7 @@ Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir 
 - [Kısa Sınavlar](/contributing/quizzes/)_- İlgili bir sayfa için kısa sınav soru havuzları ekleyin, güncelleyin ve silin_
 - [Bir tasarım kaynağı önerin](/contributing/design/adding-design-resources/)_- Yararlı tasarım kaynaklarını ekleyin, güncelleyin ve silin_
 
-_Herhangi bir sorunuz mu var?_ 🤔 [Discord sunucumuzdan](https://discord.gg/CetY6Y4) bize ulaşın
+_Herhangi bir sorunuz mu var?_ 🤔 [Discord sunucumuzdan](https://discord.gg/ethereum-org) bize ulaşın
 
 ## Nasıl ethereum.org üzerinde çalışılır {#how-to-update-content}
 
@@ -43,7 +43,7 @@ Tüm güncellemeler GitHub PR süreci aracılığıyla yapılır. Bu, web sitesi
 Herhangi bir şey üzerinde çalışmak için izne ihtiyacınız yok, ancak ne yapmayı planladığınızı bize bildirmeniz her zaman en iyisidir. Bunu şu şekillerde yapabilirsiniz:
 
 - [GitHub](https://github.com/ethereum/ethereum-org-website) üzerinde bir konuya veya PR'ye yorum yapmak
-- [Discord sunucumuzda](https://discord.gg/CetY6Y4) mesajlaşmak
+- [Discord sunucumuzda](https://discord.gg/ethereum-org) mesajlaşmak
 
 Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 
@@ -58,7 +58,7 @@ Bireysel PR'ler, tasarım evrimi ve büyük yükseltmeler hakkındaki kararlar, 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord sunucusu](https://discord.gg/CetY6Y4)
+- [Discord sunucusu](https://discord.gg/ethereum-org)
 
 ### İntihal üzerine bir not {#plagiarism}
 
@@ -76,7 +76,7 @@ Katkınız ethereum.org ile birleştirilirse, sizin için benzersiz bir katkıda
 
 ### Nasıl talep edilir? {#how-to-claim}
 
-1. [Discord sunucumuza](https://discord.gg/E8dET2ux8y) katılın.
+1. [Discord sunucumuza](https://discord.gg/ethereum-org) katılın.
 2. Katkınızın bağlantısını `#🥇 | poaps` [kanalına](https://discord.com/channels/714888181740339261/804005643211898911) yapıştırın.
 3. Ekibimizin bir üyesinin size POAP'nize bir bağlantı göndermesini bekleyin.
 4. POAP'nizi talep edin!

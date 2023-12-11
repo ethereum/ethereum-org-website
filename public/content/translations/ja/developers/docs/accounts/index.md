@@ -1,14 +1,14 @@
 ---
-title: イーサリアムアカウント
-description: イーサリアムアカウントの説明 - データ構造と鍵ペア暗号との関係
+title: Ethereumアカウント
+description: イーサリアムアカウントの説明 - データ構造、鍵ペア暗号技術との関係
 lang: ja
 ---
 
-イーサリアムアカウントとは、イーサリアム上でトランザクションを送信できる Ether (ETH) 残高を持つエンティティです。 アカウントはユーザーが管理し、スマートコントラクトとしてデプロイすることができます。
+イーサリアムアカウントとは、イーサリアム上でトランザクションを送信できる Ether(ETH)残高を持つエンティティです。 アカウントはユーザーが管理し、スマートコントラクトとしてデプロイすることができます。
 
 ## 前提知識 {#prerequisites}
 
-この記事は初心者向けに記載していますが、 このページの理解を深めるために、まずは [イーサリアム入門](/developers/docs/intro-to-ethereum/)を読むことをお勧めします。
+このページをよりよく理解するためには、[イーサリアム入門](/developers/docs/intro-to-ethereum/)を読むことをお勧めします。
 
 ## アカウントの種類 {#types-of-account}
 
@@ -42,7 +42,7 @@ lang: ja
 
 イーサリアムアカウントには 4 つのフィールドがあります。
 
-- `nonce` – アカウントから送信されたトランザクションの総数を示すカウンター。 これにより、トランザクションは一度だけ実行される。 コントラクトアカウントでは、この数字はアカウントで作成されたコントラクト数を表す。
+- `nonce` – カウンターで、外部所有アカウントから送信されたトランザクションの数、あるいはコントラクトアカウントによって作成されたコントラクトの数を表します。 各アカウントは、既定の nonce を持つトランザクションを 1 回だけ実行するように設計されています。これにより、署名済みのトランザクションが繰り返しブロードキャスト、再実行されるリプレイ攻撃を防いでいます。
 - `balance` - アドレスが所有する wei 額。 wei は ETH の最小単位で、1ETH は 1e+18wei。
 - `codeHash` - このハッシュは、イーサリアム仮想マシン(EVM)のアカウントの*コード*を指す。 コントラクトアカウントには、さまざまな操作を行えるコードの断片がプログラムされており、 この EVM コードはアカウントにメッセージ呼び出しがあった場合に実行される。 他のアカウントのフィールドとは異なり、変更することはできない。 このようなコードの断片はすべて、対応するハッシュの状態データベースに含まれ、後で取得可能。 このハッシュ値が codeHash として知られている。 外部所有アカウントの場合、codeHash フィールドは空の文字列のハッシュとなる。
 - `storageRoot` – ストレージハッシュとも呼ばれる。 アカウントのストレージ内容をコード化する Merkle Patricia ツリーのルートノードの 256 ビットハッシュ(256 ビット整数値間のマッピング)で、256 ビット整数キーの Keccak 256 ビットハッシュから RLP エンコードされた 256 ビット整数値へのマッピングとしてデジタルツリーの中へコード化される。 このツリーは、このアカウントのストレージコンテンツのハッシュであり、デフォルトは空です。
@@ -69,16 +69,19 @@ lang: ja
 
 公開鍵は、秘密鍵から[楕円曲線 DSA](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)を用いて生成されます。 公開鍵の keccak-256 ハッシュの末尾 20 バイトに`0x` を先頭に追加することで、アカウントの公開アドレスを取得できます。
 
-次に GETH の`personal_newAccount`を使用してコンソールにアカウントを作成する例を示します。
+次の例は、[Clef](https://geth.ethereum.org/docs/tools/clef/introduction) というサインツールで、新しいアカウントを生成する方法です。 Clef は、イーサリアムクライアントの[Geth](https://geth.ethereum.org)に含まれる、アカウント管理および署名ツールです。 `clef newaccount`コマンドは、新しい鍵ペアを作成して、暗号化された鍵ストアに保存します。
 
-```go
-> personal.newAccount()
-Passphrase:
-Repeat passphrase:
-"0x5e97870f263700f46aa00d967821199b9bc5a120"
+```
+> clef newaccount --keystore <path>
 
-> personal.newAccount("h4ck3r")
-"0x3d80b31a78c30fc628f20b2c89d7ddbf6e53cedc"
+Please enter a password for the new account to be created:
+> <password>
+
+------------
+INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
+WARN [10-28|16:19:09.306] Please remember your password!
+Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [GETH のドキュメント](https://geth.ethereum.org/docs)
@@ -116,6 +119,8 @@ Repeat passphrase:
 <YouTube id="9LtBDy67Tho" />
 
 ## 参考文献 {#further-reading}
+
+- [イーサリアムアカウントについて理解する](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
 
