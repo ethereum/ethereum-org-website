@@ -82,6 +82,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/staking/deposit-contract")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+  }
+
   if (path.startsWith("/developers")) {
     requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
   }
