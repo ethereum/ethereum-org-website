@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import { GetStaticProps } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex, Grid, Show, useToken } from "@chakra-ui/react"
+import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -106,18 +106,20 @@ const H2 = (props) => (
   />
 )
 
-const ColorH3 = (props: { color: string; id: TranslationKey }) => (
-  <OldHeading as="h3" fontSize="2xl" color={props.color}>
-    <Translation id={props.id} />
+const ColorH3 = ({
+  color,
+  children,
+}: Pick<HeadingProps, "color" | "children">) => (
+  <OldHeading as="h3" fontSize="2xl" color={color}>
+    {children}
   </OldHeading>
 )
 
-const StyledButtonLink = (
-  props: Pick<ButtonLinkProps, "href"> & { id: TranslationKey }
-) => (
-  <ButtonLink href={props.href}>
-    <Translation id={props.id} />
-  </ButtonLink>
+const StyledButtonLink = ({
+  href,
+  children,
+}: Pick<ButtonLinkProps, "href" | "children">) => (
+  <ButtonLink href={href}>{children}</ButtonLink>
 )
 
 const CardGrid = (props: ChildOnlyProp) => (
@@ -378,7 +380,9 @@ const StakingPage = () => {
               </H2>
               <Text>{t("page-staking-section-comparison-subtitle")}</Text>
               <ComparisonGrid>
-                <ColorH3 color="stakingGold" id="page-staking-dropdown-solo" />
+                <ColorH3 color="stakingGold">
+                  {t("page-staking-dropdown-solo")}
+                </ColorH3>
                 <div
                   style={{
                     gridArea: "solo-rewards",
@@ -442,12 +446,13 @@ const StakingPage = () => {
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-cta" }}>
-                  <StyledButtonLink
-                    href="/staking/solo/"
-                    id="page-staking-more-on-solo"
-                  />
+                  <StyledButtonLink href="/staking/solo/">
+                    {t("page-staking-more-on-solo")}
+                  </StyledButtonLink>
                 </div>
-                <ColorH3 color="stakingGreen" id="page-staking-dropdown-saas" />
+                <ColorH3 color="stakingGreen">
+                  {t("page-staking-dropdown-saas")}
+                </ColorH3>
                 <div
                   style={{
                     gridArea: "saas-rewards",
@@ -507,13 +512,14 @@ const StakingPage = () => {
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-cta" }}>
-                  <StyledButtonLink
-                    href="/staking/saas"
-                    id="page-staking-more-on-saas"
-                  />
+                  <StyledButtonLink href="/staking/saas">
+                    {t("page-staking-more-on-saas")}
+                  </StyledButtonLink>
                 </div>
 
-                <ColorH3 color="stakingBlue" id="page-staking-dropdown-pools" />
+                <ColorH3 color="stakingBlue">
+                  {t("page-staking-dropdown-pools")}
+                </ColorH3>
                 <div
                   style={{
                     gridArea: "pool-rewards",
@@ -571,10 +577,9 @@ const StakingPage = () => {
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-cta" }}>
-                  <StyledButtonLink
-                    href="/staking/pools/"
-                    id="page-staking-more-on-pools"
-                  />
+                  <StyledButtonLink href="/staking/pools/">
+                    {t("page-staking-more-on-pools")}
+                  </StyledButtonLink>
                 </div>
               </ComparisonGrid>
             </Box>
