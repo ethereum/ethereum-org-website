@@ -98,10 +98,6 @@ const PageMetadata: React.FC<IProps> = ({
         />
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
-      {/* favicon */}
-      <link rel="icon" type="image/x-icon" href="favicon.ico" />
-      {/* TODO: Add manifest */}
-      {/* <link rel="manifest" href="/manifest.json" /> */}
     </Head>
   )
 }

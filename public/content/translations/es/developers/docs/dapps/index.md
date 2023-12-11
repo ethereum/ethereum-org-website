@@ -82,7 +82,7 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 - [¿Qué son las Aplicaciones Descentralizadas?](https://www.gemini.com/cryptopedia/decentralized-applications-defi-dapps): _Gemini_
 - [DApps populares](https://www.alchemy.com/dapps): _Alquimia_
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

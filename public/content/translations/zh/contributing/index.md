@@ -30,7 +30,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 - [添加钱包](/contributing/adding-wallets/) *– 为[发现钱包页面](/wallets/find-wallet/)*添加钱包
 - [为我们的去中心化科学页面提出项目](/contributing/adding-desci-projects/) _- 添加以太坊上构建的项目，为去中心化科学做贡献_
 
-*有任何问题？*🤔 请访问我们的 [Discord 服务器](https://discord.gg/CetY6Y4)
+*有任何问题？*🤔 请访问我们的 [Discord 服务器](https://discord.gg/ethereum-org)
 
 ## 如何在 ethereum.org 上工作 {#how-to-update-content}
 
@@ -41,7 +41,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 您不需要权限来处理任何事情，但是最好让我们知道您打算做什么。 您可以这样做：
 
 - 评论 [GitHub](https://github.com/ethereum/ethereum-org-website) 中的一个问题或拉取请求
-- 在我们的 [Discord 服务器](https://discord.gg/CetY6Y4)上发消息讨论
+- 在我们的 [Discord 服务器](https://discord.gg/ethereum-org)上发消息讨论
 
 在做出贡献之前，请您了解以下内容：
 
@@ -55,7 +55,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord 服务器](https://discord.gg/CetY6Y4)
+- [Discord 服务器](https://discord.gg/ethereum-org)
 
 ### 关于抄袭的说明 {#plagiarism}
 
@@ -73,7 +73,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 
 ### 如何领取 {#how-to-claim}
 
-1. 加入我们的 [Discord 服务器](https://discord.gg/E8dET2ux8y)。
+1. 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)。
 2. 在 `#🥇 | poaps` [频道](https://discord.com/channels/714888181740339261/804005643211898911)中粘贴指向你的贡献的链接。
 3. 等待我们的团队成员向您发送 POAP 徽章领取链接。
 4. 领取您的 POAP 徽章！

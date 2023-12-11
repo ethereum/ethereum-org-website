@@ -110,6 +110,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [活跃的推理实验室](https://www.activeinference.org/)
 - [CureDAO：由社区所有的精准健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：实现去中心化科学的诚信](https://ideamarket.io/)
+- [DeSci Labs](https://www.desci.com/)
 
 我们欢迎提出新项目加入到列表中 - 开始前，请查看我们的[上架政策](/contributing/adding-desci-projects/)！
 

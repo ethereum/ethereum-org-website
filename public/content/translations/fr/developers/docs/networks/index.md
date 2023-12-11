@@ -4,7 +4,7 @@ description: Une vue d'ensemble des réseaux Ethereum et où obtenir de l'ether 
 lang: fr
 ---
 
-Les réseaux Ethereum sont des groupes d'ordinateurs connectés qui communiquent à l'aide du protocole Ethereum. Il n'existe qu'un seul réseau principal Ethereum, mais des réseaux indépendants conformes aux mêmes règles de protocole peuvent être créés à des fins de test et de développement. Il existe de nombreux "réseaux" indépendants qui se conforment au protocole sans interagir les uns avec les autres. Vous pouvez même en lancer un localement sur votre propre ordinateur pour tester vos contrats intelligents et vos applications web3.
+Les réseaux Ethereum sont des groupes d'ordinateurs connectés qui communiquent à l'aide du protocole Ethereum. Il n'existe qu'un seul réseau principal Ethereum, mais des réseaux indépendants conformes aux mêmes règles de protocole peuvent être créés à des fins de test et de développement. Il existe de nombreux « réseaux » indépendants qui se conforment au protocole sans interagir les uns avec les autres. Vous pouvez même en lancer un localement sur votre propre ordinateur pour tester vos contrats intelligents et vos applications web3.
 
 Votre compte Ethereum fonctionnera sur les différents réseaux, mais le solde de votre compte et votre historique de transactions ne seront pas transférés du réseau Ethereum principal. Pour les tests, il est utile de connaître les réseaux disponibles et la façon d'obtenir de l'ETH de test pour pouvoir vous amuser avec. En général, pour des raisons de sécurité, il n'est pas recommandé de réutiliser les comptes principaux sur les réseaux de test ou vice versa.
 
@@ -60,6 +60,7 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
+- [Robinet pour le réseau de test Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(support à long terme)_ {#goerli}
 
@@ -111,13 +112,21 @@ Réseau de test pour [Optimism](https://www.optimism.io/).
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+Un réseau de test pour [Starknet](https://www.starknet.io).
+
+##### Robinets
+
+- [Robinet Starknet](https://faucet.goerli.starknet.io)
+
 ## Réseaux privés {#private-networks}
 
-Un réseau Ethereum est un privé si ses nœuds ne sont pas connectés à un réseau public ( réseau principal ou réseau de test par exemple). Dans ce contexte, « privé » signifie « réservé » ou « isolé », plutôt que « protégé » ou « sécurisé ».
+Un réseau Ethereum est un réseau privé si ses nœuds ne sont pas connectés à un réseau public (à savoir réseau principal ou réseau de test). Dans ce contexte, « privé » signifie « réservé » ou « isolé », plutôt que « protégé » ou « sécurisé ».
 
 ### Réseaux de développement {#development-networks}
 
-Pour développer une application Ethereum, exécutez-la sur un réseau local pour vérifier son bon fonctionnement avant de la déployer. De la même façon que vous exécuteriez un serveur local sur votre ordinateur pour du développement Web, vous pouvez utiliser un réseau de développement pour créer une occurrence de blockchain locale et tester votre application décentralisée (dApp). Cela permet une itération beaucoup plus rapide que sur un réseau de test public.
+Pour développer une application Ethereum, exécutez-la sur un réseau privé pour vérifier son bon fonctionnement avant de la déployer. De la même façon que vous exécuteriez un serveur local sur votre ordinateur pour du développement Web, vous pouvez créer une occurrence de blockchain locale pour tester votre application décentralisée (dApp). Cela permet une itération beaucoup plus rapide que sur un réseau de test public.
 
 Il existe des projets et des outils dédiés pour vous aider dans cette tâche. En savoir plus sur les [réseaux de développement](/developers/docs/development-networks/).
 

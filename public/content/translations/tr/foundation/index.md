@@ -27,7 +27,7 @@ Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş 
 
 Başlangıcından bu yana her yılın konferans sunumlarının video içeriğine [archive.devcon.org](https://archive.devcon.org/)'dan erişebilirsiniz.
 
-[Devcon.org](https://devcon.org/)'dan daha fazla bilgi edinin, [Devcon Blog](https://blog.ethereum.org/category/devcon/)'a göz atın veya en son duyurular için [@efdevcon](https://twitter.com/EFDevcon)'u takip edin.
+[Devcon.org](https://devcon.org/)'dan daha fazla bilgi edinin, [Devcon Blog](https://devcon.org/en/blogs/)'a göz atın veya en son duyurular için [@efdevcon](https://twitter.com/EFDevcon)'u takip edin.
 
 ### Burs Programı {#fellowship-program}
 

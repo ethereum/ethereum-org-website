@@ -77,7 +77,7 @@ Per altri utili strumenti di traduzione, le comunità di traduttori e i post del
 
 ## Contattaci {#get-in-touch}
 
-Hai domande? O desideri collaborare con il nostro team e altri traduttori? Ti invitiamo a pubblicare nel canale #translations del nostro [server Discord ethereum.org](https://discord.gg/6WX7E97)
+Hai domande? O desideri collaborare con il nostro team e altri traduttori? Ti invitiamo a pubblicare nel canale #translations del nostro [server Discord ethereum.org](https://discord.gg/ethereum-org)
 
 Puoi anche contattarci all'indirizzo translations@ethereum.org
 
