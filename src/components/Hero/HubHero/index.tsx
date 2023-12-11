@@ -1,5 +1,11 @@
-import * as React from "react"
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  useBreakpointValue,
+} from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
@@ -15,6 +21,14 @@ const HubHero = (props: CommonHeroProps) => {
     )
   }
 
+  const height = useBreakpointValue({
+    base: "192px",
+    md: "256px",
+    lg: "320px",
+    xl: "576px",
+    "2xl": "672px",
+  })
+
   return (
     <Box position="relative">
       <Image
@@ -22,7 +36,7 @@ const HubHero = (props: CommonHeroProps) => {
         alt=""
         priority
         sizes="100vw"
-        style={{ width: "100vw", objectFit: "cover", height: "auto" }}
+        style={{ width: "100vw", objectFit: "cover", height }}
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
