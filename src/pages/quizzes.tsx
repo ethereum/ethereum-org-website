@@ -132,7 +132,7 @@ const QuizzesHubPage: NextPage<
 export default QuizzesHubPage
 
 export const getStaticProps = (async ({ locale }) => {
-  const requiredNamespaces = getRequiredNamespacesForPage("quizzes")
+  const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
 
   return {
     props: {
