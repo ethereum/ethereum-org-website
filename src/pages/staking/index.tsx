@@ -1,5 +1,7 @@
 import { ReactNode } from "react"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, Show, useToken } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -26,11 +28,10 @@ import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
 
-import rhino from "@/public/upgrades/upgrade_rhino.png"
-import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+
+import rhino from "@/public/upgrades/upgrade_rhino.png"
 
 const PageContainer = (props: ChildOnlyProp) => (
   <Flex flexDir="column" alignItems="center" w="full" m="0 auto" {...props} />
@@ -332,12 +333,10 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
               <H2 id={tocItems.whatIsStaking.id}>
                 {tocItems.whatIsStaking.title}
               </H2>
-              <Text>
-                <Translation id="page-staking-description" />
-              </Text>
+              <Text>{t("page-staking-description")}</Text>
               <Text>
                 <InlineLink href="/get-eth/">
-                  <Translation id="page-staking-section-what-link" />
+                  {t("page-staking-section-what-link")}
                 </InlineLink>
               </Text>
             </Box>
@@ -366,17 +365,13 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
               <H2 id={tocItems.howToStakeYourEth.id}>
                 {tocItems.howToStakeYourEth.title}
               </H2>
-              <Text>
-                <Translation id="page-staking-section-why-p1" />
-              </Text>
-              <Text>
-                <Translation id="page-staking-section-why-p2" />
-              </Text>
+              <Text>{t("page-staking-section-why-p1")}</Text>
+              <Text>{t("page-staking-section-why-p2")}</Text>
             </Box>
             <StakingHierarchy />
             <Box>
               <p style={{ marginTop: "1rem" }}>
-                <Translation id="page-staking-hierarchy-subtext" />
+                <Translation id="page-staking:page-staking-hierarchy-subtext" />
               </p>
             </Box>
             <Divider />
@@ -384,9 +379,7 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
               <H2 id={tocItems.comparisonOfOptions.id}>
                 {tocItems.comparisonOfOptions.title}
               </H2>
-              <Text>
-                <Translation id="page-staking-section-comparison-subtitle" />
-              </Text>
+              <Text>{t("page-staking-section-comparison-subtitle")}</Text>
               <ComparisonGrid>
                 <ColorH3 color="stakingGold" id="page-staking-dropdown-solo" />
                 <div
@@ -396,17 +389,17 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
                   }}
                 >
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-rewards-title" />
+                    {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-rewards-li1" />
+                      {t("page-staking-section-comparison-solo-rewards-li1")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-rewards-li2" />
+                      {t("page-staking-section-comparison-solo-rewards-li2")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-rewards-li3" />
+                      {t("page-staking-section-comparison-solo-rewards-li3")}
                     </li>
                   </ul>
                 </div>
@@ -417,33 +410,37 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
                   }}
                 >
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-risks-title" />
+                    {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-risks-li1" />
+                      {t("page-staking-section-comparison-solo-risks-li1")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-risks-li2" />
+                      {t("page-staking-section-comparison-solo-risks-li2")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-risks-li3" />
+                      {t("page-staking-section-comparison-solo-risks-li3")}
                     </li>
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-requirements-title" />
+                    {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-requirements-li1" />
+                      {t(
+                        "page-staking-section-comparison-solo-requirements-li1"
+                      )}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-requirements-li2" />
+                      {t(
+                        "page-staking-section-comparison-solo-requirements-li2"
+                      )}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-solo-requirements-li3" />
+                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li3" />
                     </li>
                   </ul>
                 </div>
@@ -461,14 +458,14 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
                   }}
                 >
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-rewards-title" />
+                    {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-rewards-li1" />
+                      {t("page-staking-section-comparison-saas-rewards-li1")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-rewards-li2" />
+                      {t("page-staking-section-comparison-saas-rewards-li2")}
                     </li>
                   </ul>
                 </div>
@@ -479,30 +476,36 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
                   }}
                 >
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-risks-title" />
+                    {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-risks-li1" />
+                      {t("page-staking-section-comparison-saas-risks-li1")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-risks-li2" />
+                      {t("page-staking-section-comparison-saas-risks-li2")}
                     </li>
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-requirements-title" />
+                    {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-requirements-li1" />
+                      {t(
+                        "page-staking-section-comparison-saas-requirements-li1"
+                      )}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-requirements-li2" />
+                      {t(
+                        "page-staking-section-comparison-saas-requirements-li2"
+                      )}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-saas-requirements-li3" />
+                      {t(
+                        "page-staking-section-comparison-saas-requirements-li3"
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -521,17 +524,17 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
                   }}
                 >
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-rewards-title" />
+                    {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-rewards-li1" />
+                      {t("page-staking-section-comparison-pools-rewards-li1")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-rewards-li2" />
+                      {t("page-staking-section-comparison-pools-rewards-li2")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-rewards-li3" />
+                      {t("page-staking-section-comparison-pools-rewards-li3")}
                     </li>
                   </ul>
                 </div>
@@ -542,27 +545,31 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
                   }}
                 >
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-risks-title" />
+                    {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-risks-li1" />
+                      {t("page-staking-section-comparison-pools-risks-li1")}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-risks-li2" />
+                      {t("page-staking-section-comparison-pools-risks-li2")}
                     </li>
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
                   <OldHeading as="h4">
-                    <Translation id="page-staking-section-comparison-requirements-title" />
+                    {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-requirements-li1" />
+                      {t(
+                        "page-staking-section-comparison-pools-requirements-li1"
+                      )}
                     </li>
                     <li>
-                      <Translation id="page-staking-section-comparison-pools-requirements-li2" />
+                      {t(
+                        "page-staking-section-comparison-pools-requirements-li2"
+                      )}
                     </li>
                   </ul>
                 </div>
@@ -579,42 +586,30 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
             <Box>
               <H2 id={tocItems.faq.id}>{tocItems.faq.title}</H2>
               <ExpandableCard title={t("page-staking-faq-4-question")}>
-                <Text>
-                  <Translation id="page-staking-faq-4-answer-p1" />
-                </Text>
-                <Text>
-                  <Translation id="page-staking-faq-4-answer-p2" />
-                </Text>
-                <Text>
-                  <Translation id="page-staking-faq-4-answer-p3" />
-                </Text>
+                <Text>{t("page-staking-faq-4-answer-p1")}</Text>
+                <Text>{t("page-staking-faq-4-answer-p2")}</Text>
+                <Text>{t("page-staking-faq-4-answer-p3")}</Text>
                 <ButtonLink href="/roadmap/merge/">
-                  <Translation id="page-upgrades-merge-btn" />
+                  {t("page-upgrades-merge-btn")}
                 </ButtonLink>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-5-question")}>
-                <Text>
-                  <Translation id="page-staking-faq-5-answer-p1" />
-                </Text>
-                <Text>
-                  <Translation id="page-staking-faq-5-answer-p2" />
-                </Text>
+                <Text>{t("page-staking-faq-5-answer-p1")}</Text>
+                <Text>{t("page-staking-faq-5-answer-p2")}</Text>
                 <ButtonLink href="/staking/withdrawals/">
-                  <Translation id="page-staking-faq-5-answer-link" />
+                  {t("page-staking-faq-5-answer-link")}
                 </ButtonLink>
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-1-question")}>
-                <Translation id="page-staking-faq-1-answer" />
+                <Translation id="page-staking:page-staking-faq-1-answer" />
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-2-question")}>
-                <Translation id="page-staking-faq-2-answer" />
+                {t("page-staking-faq-2-answer")}
               </ExpandableCard>
               <ExpandableCard title={t("page-staking-faq-3-question")}>
+                <Text>{t("page-staking-faq-3-answer-p1")}</Text>
                 <Text>
-                  <Translation id="page-staking-faq-3-answer-p1" />
-                </Text>
-                <Text>
-                  <Translation id="page-staking-faq-3-answer-p2" />
+                  <Translation id="page-staking:page-staking-faq-3-answer-p2" />
                 </Text>
               </ExpandableCard>
             </Box>
@@ -623,72 +618,66 @@ const StakingPage = (): InferGetStaticPropsType<typeof getStaticProps> => {
               <ul>
                 <li>
                   <InlineLink href="https://vitalik.ca/general/2020/11/06/pos2020.html">
-                    <Translation id="page-staking-further-reading-1-link" />
+                    {t("page-staking-further-reading-1-link")}
                   </InlineLink>{" "}
                   -{" "}
                   <i>
-                    <Translation id="page-staking-further-reading-author-vitalik-buterin" />
+                    {t("page-staking-further-reading-author-vitalik-buterin")}
                   </i>
                 </li>
                 <li>
                   <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
-                    <Translation id="page-staking-further-reading-2-link" />
+                    {t("page-staking-further-reading-2-link")}
                   </InlineLink>{" "}
                   -{" "}
                   <i>
-                    <Translation id="page-staking-further-reading-author-vitalik-buterin" />
+                    {t("page-staking-further-reading-author-vitalik-buterin")}
                   </i>
                 </li>
                 <li>
                   <InlineLink href="https://vitalik.ca/general/2017/12/31/pos_faq.html">
-                    <Translation id="page-staking-further-reading-3-link" />
+                    {t("page-staking-further-reading-3-link")}
                   </InlineLink>{" "}
                   -{" "}
                   <i>
-                    <Translation id="page-staking-further-reading-author-vitalik-buterin" />
+                    {t("page-staking-further-reading-author-vitalik-buterin")}
                   </i>
                 </li>
                 <li>
                   <InlineLink href="https://hackmd.io/@benjaminion/eth2_news">
-                    <Translation id="page-staking-further-reading-4-link" />
+                    {t("page-staking-further-reading-4-link")}
                   </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    <Translation id="page-staking-further-reading-4-author" />
-                  </i>
+                  - <i>{t("page-staking-further-reading-4-author")}</i>
                 </li>
                 <li>
                   <InlineLink href="https://blog.ethereum.org/2022/01/31/finalized-no-33/">
-                    <Translation id="page-staking-further-reading-5-link" />
+                    {t("page-staking-further-reading-5-link")}
                   </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    <Translation id="page-staking-further-reading-5-author" />
-                  </i>
+                  - <i>{t("page-staking-further-reading-5-author")}</i>
                 </li>
                 <li>
                   <InlineLink href="https://www.attestant.io/posts/">
-                    <Translation id="page-staking-further-reading-6-link" />
+                    {t("page-staking-further-reading-6-link")}
                   </InlineLink>
                 </li>
                 <li>
                   <InlineLink href="https://kb.beaconcha.in/">
-                    <Translation id="page-staking-further-reading-7-link" />
+                    {t("page-staking-further-reading-7-link")}
                   </InlineLink>
                 </li>
                 <li>
                   <InlineLink href="https://beaconcha.in/education">
-                    <Translation id="page-staking-further-reading-8-link" />
+                    {t("page-staking-further-reading-8-link")}
                   </InlineLink>
                 </li>
                 <li>
                   <InlineLink href="https://launchpad.ethereum.org/en/faq">
-                    <Translation id="page-staking-further-reading-9-link" />
+                    {t("page-staking-further-reading-9-link")}
                   </InlineLink>
                 </li>
                 <li>
                   <InlineLink href="https://ethstaker.gitbook.io/ethstaker-knowledge-base/">
-                    <Translation id="page-staking-further-reading-10-link" />
+                    {t("page-staking-further-reading-10-link")}
                   </InlineLink>
                 </li>
               </ul>
