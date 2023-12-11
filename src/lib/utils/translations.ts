@@ -94,6 +94,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     ]
   }
 
+  if (path.startsWith("/developers/tutorials")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
+
   if (path.startsWith("/developers/docs/scaling")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
