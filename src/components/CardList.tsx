@@ -54,7 +54,7 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
 
   return (
     <CardContainer {...rest}>
-      {image && <Image src={image} alt={alt ?? ""} minW="20px" />}
+      {image && <Image src={image} alt={alt ?? ""} w="20px" />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
