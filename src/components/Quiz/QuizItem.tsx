@@ -75,7 +75,7 @@ const QuizItem = ({
             w={{ base: "full", lg: "auto" }}
             onClick={handleStart}
           >
-            <Translation id="start" />
+            <Translation id="learn-quizzes:start" />
           </Button>
         </Box>
       </Flex>
