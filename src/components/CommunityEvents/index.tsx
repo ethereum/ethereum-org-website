@@ -88,6 +88,9 @@ const CommunityEvents = () => {
   const { pastEventData, upcomingEventData, loading, hasError } =
     useCommunityEvents()
 
+  const reversedUpcomingEventData = upcomingEventData.slice().reverse()
+  const reversedPastEventData = pastEventData.slice().reverse()
+
   return (
     <Flex
       w="full"
@@ -133,13 +136,16 @@ const CommunityEvents = () => {
                 <Text color="error.base">
                   <Translation id="loading-error-try-again-later" />
                 </Text>
-              ) : upcomingEventData.length ? (
+              ) : reversedUpcomingEventData.length ? (
                 <Box flex={1}>
                   <Text fontSize="3xl" fontWeight="bold" lineHeight={1.4}>
-                    {upcomingEventData[0].title}
+                    {reversedUpcomingEventData[0].title}
                   </Text>
                   <Text m={0} fontSize="xl">
-                    {renderEventDateTime(upcomingEventData[0].date, language)}
+                    {renderEventDateTime(
+                      reversedUpcomingEventData[0].date,
+                      language
+                    )}
                   </Text>
                   <Text color="body.medium" fontSize="md">
                     ({Intl.DateTimeFormat().resolvedOptions().timeZone})
@@ -159,9 +165,9 @@ const CommunityEvents = () => {
                   <Icon as={FaDiscord} fontSize={25} />
                   Join Discord
                 </ButtonLink>
-                {upcomingEventData[0] && (
+                {reversedUpcomingEventData[0] && (
                   <InlineLink
-                    to={upcomingEventData[0].calendarLink}
+                    to={reversedUpcomingEventData[0].calendarLink}
                     onClick={() => matomoEvent("Add to calendar")}
                     fontWeight={700}
                   >
@@ -190,8 +196,8 @@ const CommunityEvents = () => {
             <Text color="error.base">
               <Translation id="loading-error-try-again-later" />
             </Text>
-          ) : upcomingEventData.slice(1).length ? (
-            upcomingEventData.slice(1).map((item) => {
+          ) : reversedUpcomingEventData.slice(1).length ? (
+            reversedUpcomingEventData.slice(1).map((item) => {
               return <Event event={item} language={language} type="upcoming" />
             })
           ) : (
@@ -211,8 +217,8 @@ const CommunityEvents = () => {
             <Text color="error.base">
               <Translation id="loading-error-try-again-later" />
             </Text>
-          ) : pastEventData.length ? (
-            pastEventData.map((item) => {
+          ) : reversedPastEventData.length ? (
+            reversedPastEventData.map((item) => {
               return <Event event={item} language={language} type="past" />
             })
           ) : (
