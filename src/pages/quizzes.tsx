@@ -9,6 +9,7 @@ import { QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
+import { HubHero } from "@/components/Hero"
 import PageMetadata from "@/components/PageMetadata"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import QuizzesList from "@/components/Quiz/QuizzesList"
@@ -23,6 +24,8 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "@/data/quizzes"
 
 import { INITIAL_QUIZ } from "@/lib/constants"
+
+import HeroImage from "@/public/heroes/quizzes-hub-hero.png"
 
 const handleGHAdd = () =>
   trackCustomEvent({
@@ -56,7 +59,12 @@ const QuizzesHubPage: NextPage<
         title={t("quizzes-title")}
         description={t("quizzes-subtitle")}
       />
-      {/* TODO: Add HubHero */}
+      <HubHero
+        title={t("quizzes-title")}
+        description={t("learn-quizzes:quizzes-subtitle")}
+        header={t("learn-quizzes:test-your-knowledge")}
+        heroImgSrc={HeroImage}
+      />
       <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
         <QuizWidget
           quizKey={currentQuiz}
