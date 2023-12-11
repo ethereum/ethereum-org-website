@@ -27,7 +27,7 @@ EF は企業でも、伝統的な非営利団体でもありません。 彼ら�
 
 [archive.devcon.org](https://archive.devcon.org/)にて、毎年の会議プレゼンテーションのビデオコンテンツにアクセスできます。
 
-詳細は[devcon.org](https://devcon.org/)をご覧ください。 [Devcon ブログ](https://blog.ethereum.org/category/devcon/)、または最新のお知らせは[@efdevcon](https://twitter.com/EFDevcon)をご覧ください。
+詳細は[devcon.org](https://devcon.org/)をご覧ください。 [Devcon ブログ](https://devcon.org/en/blogs/)、または最新のお知らせは[@efdevcon](https://twitter.com/EFDevcon)をご覧ください。
 
 ### フェローシッププログラム {#fellowship-program}
 

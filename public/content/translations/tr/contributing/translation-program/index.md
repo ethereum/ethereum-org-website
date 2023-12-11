@@ -77,7 +77,7 @@ Diğer kullanışlı çeviri araçları, çevirmen toplulukları ve Çeviri Prog
 
 ## İletişime geçin {#get-in-touch}
 
-Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/6WX7E97) #translations kanalına yazın
+Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalına yazın
 
 Ayrıca bize translations@ethereum.org adresinden de ulaşabilirsiniz
 

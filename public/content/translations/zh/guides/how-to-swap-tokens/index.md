@@ -12,7 +12,7 @@ lang: zh
 
 **前期准备：**
 
-- 要有加密钱包，请参照这个教程：[如何“注册”一个以太坊帐户](/guides/how-to-register-an-ethereum-account/)
+- 要有加密钱包，请参照这个教程：[如何“注册”以太坊帐户](/guides/how-to-create-an-ethereum-account/)
 - 把资金添加到你的钱包
 
 ## 1. 把你的钱包连接到你选定的去中心化交易所 (DEX)

@@ -116,4 +116,4 @@ _适用于名称（商标、公司、人员）和新技术术语（信标链、�
 
 ## 联系我们 {#contact}
 
-感谢阅读所有内容。 我们希望这对您加入我们的计划有所帮助。 欢迎加入我们的 [Discord 翻译频道](https://discord.gg/XVepFu7sqR)，提出问题并与其他翻译人员合作，或者通过 translations@ethereum.org 联系我们！
+感谢阅读所有内容。 我们希望这对您加入我们的计划有所帮助。 欢迎加入我们的 [Discord 翻译频道](https://discord.gg/ethereum-org)，提出问题并与其他翻译人员合作，或者通过 translations@ethereum.org 联系我们！

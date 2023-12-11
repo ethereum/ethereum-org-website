@@ -90,4 +90,4 @@ Você pode ver nossos princípios de design em ação [em nosso site](/).
 
 Embora esses princípios estejam focados no site ethereum.org, esperamos que muitos deles representem os valores do ecossistema Ethereum em geral (por exemplo, você pode ver a influência doo [princípios do Whitepape Ethereum](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy)). Talvez você até queira incorporar alguns deles em seu próprio projeto!
 
-Dê sua opinião no [servidor Discord](https://discord.gg/CetY6Y4) ou [criando um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).
+Dê sua opinião no [servidor Discord](https://discord.gg/ethereum-org) ou [criando um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=).

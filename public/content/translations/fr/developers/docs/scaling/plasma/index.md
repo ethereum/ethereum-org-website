@@ -162,10 +162,7 @@ Plasma est différent car le réseau principal ne reçoit qu'un minimum d'inform
 
 Plusieurs projets fournissent des implémentations de Plasma que vous pouvez intégrer dans vos dApps :
 
-- [Réseau OMG](https://omg.network/)
 - [Polygon](https://polygon.technology/) (anciennement Matic Network)
-- [Gluon](https://gluon.network/)
-- [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Complément d'information {#further-reading}
 
