@@ -1,4 +1,4 @@
-import React, { ComponentPropsWithRef } from "react"
+import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next/types"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -177,26 +177,16 @@ const GasPage = () => {
           <Box flex="60%" w="full" mr={{ base: "auto", lg: 2 }}>
             <InfoBanner mb={8} title={t("page-gas-summary-title")}>
               <UnorderedList>
-                <ListItem>
-                  <Translation id="page-gas-summary-item-1" />
-                </ListItem>
-                <ListItem>
-                  <Translation id="page-gas-summary-item-2" />
-                </ListItem>
-                <ListItem>
-                  <Translation id="page-gas-summary-item-3" />
-                </ListItem>
+                <ListItem>{t("page-gas-summary-item-1")}</ListItem>
+                <ListItem>{t("page-gas-summary-item-2")}</ListItem>
+                <ListItem>{t("page-gas-summary-item-3")}</ListItem>
               </UnorderedList>
             </InfoBanner>
             <H2 id="what-is-gas" mt={0}>
-              <Translation id="page-gas-what-are-gas-fees-header" />
+              {t("page-gas-what-are-gas-fees-header")}
             </H2>
-            <Text>
-              <Translation id="page-gas-what-are-gas-fees-text-1" />
-            </Text>
-            <Text>
-              <Translation id="page-gas-what-are-gas-fees-text-2" />
-            </Text>
+            <Text>{t("page-gas-what-are-gas-fees-text-1")}</Text>
+            <Text>{t("page-gas-what-are-gas-fees-text-2")}</Text>
           </Box>
 
           <Box
@@ -217,12 +207,8 @@ const GasPage = () => {
           width="full"
         >
           <Box w="full">
-            <H2 mt={0}>
-              <Translation id="page-gas-how-do-i-pay-less-gas-header" />
-            </H2>
-            <Text>
-              <Translation id="page-gas-how-do-i-pay-less-gas-text" />
-            </Text>
+            <H2 mt={0}>{t("page-gas-how-do-i-pay-less-gas-header")}</H2>
+            <Text>{t("page-gas-how-do-i-pay-less-gas-text")}</Text>
             <Flex flexWrap="wrap" my={{ base: 4, lg: 0 }} gap={8}>
               <StyledCard
                 emoji=":alarm_clock:"
@@ -246,7 +232,7 @@ const GasPage = () => {
                 )}
               >
                 <ButtonLink w="fit-content" to="/layer-2/">
-                  <Translation id="page-gas-try-layer-2" />
+                  {t("page-gas-try-layer-2")}
                 </ButtonLink>
               </StyledCard>
             </Flex>
@@ -265,22 +251,14 @@ const GasPage = () => {
             mr={{ base: "auto", lg: 16 }}
             flex="60%"
           >
-            <H3 mt={0}>
-              <Translation id="page-gas-what-causes-high-gas-fees-header" />
-            </H3>
+            <H3 mt={0}>{t("page-gas-what-causes-high-gas-fees-header")}</H3>
+            <Text>{t("page-gas-what-causes-high-gas-fees-text-1")}</Text>
+            <Text>{t("page-gas-what-causes-high-gas-fees-text-2")}</Text>
+            <Text>{t("page-gas-what-causes-high-gas-fees-text-3")}</Text>
             <Text>
-              <Translation id="page-gas-what-causes-high-gas-fees-text-1" />
-            </Text>
-            <Text>
-              <Translation id="page-gas-what-causes-high-gas-fees-text-2" />
-            </Text>
-            <Text>
-              <Translation id="page-gas-what-causes-high-gas-fees-text-3" />
-            </Text>
-            <Text>
-              <Translation id="page-gas-want-to-dive-deeper" />{" "}
+              {t("page-gas-want-to-dive-deeper")}{" "}
               <InlineLink to="/developers/docs/gas/">
-                <Translation id="page-gas-check-out-the-developer-docs" />
+                {t("page-gas-check-out-the-developer-docs")}
               </InlineLink>
             </Text>
           </Box>
@@ -291,12 +269,8 @@ const GasPage = () => {
             mt={{ base: 16, lg: 2 }}
           >
             <Emoji text=":cat:" fontSize="5xl" />
-            <H3>
-              <Translation id="page-gas-attack-of-the-cryptokitties-header" />
-            </H3>
-            <Text>
-              <Translation id="page-gas-attack-of-the-cryptokitties-text" />
-            </Text>
+            <H3>{t("page-gas-attack-of-the-cryptokitties-header")}</H3>
+            <Text>{t("page-gas-attack-of-the-cryptokitties-text")}</Text>
           </GhostCard>
         </Flex>
       </Content>
@@ -309,12 +283,8 @@ const GasPage = () => {
         >
           <Box w="full" mr={{ base: "auto", lg: "8" }}>
             <Box>
-              <H2 mt={0}>
-                <Translation id="page-gas-why-do-we-need-gas-header" />
-              </H2>
-              <Text>
-                <Translation id="page-gas-why-do-we-need-gas-text" />
-              </Text>
+              <H2 mt={0}>{t("page-gas-why-do-we-need-gas-header")}</H2>
+              <Text>{t("page-gas-why-do-we-need-gas-text")}</Text>
             </Box>
             {benefits.map((benefit) => (
               <Box key={benefit.description} minWidth="full" my={2}>
@@ -342,74 +312,58 @@ const GasPage = () => {
         <Flex direction={{ base: "column", lg: "row" }} align="flex-start">
           <Box w="full" mr={{ base: "auto", lg: 8 }}>
             <Flex alignItems="flex-start">
-              <H2 mt={0}>
-                <Translation id="page-gas-how-is-gas-calculated-header" />
-              </H2>
+              <H2 mt={0}>{t("page-gas-how-is-gas-calculated-header")}</H2>
 
               <Pill mt={1.5} ml={4} background="warning">
-                <Translation id="page-gas-advanced" />
+                {t("page-gas-advanced")}
               </Pill>
             </Flex>
-            <Text>
-              <Translation id="page-gas-how-is-gas-calculated-text-1" />
-            </Text>
+            <Text>{t("page-gas-how-is-gas-calculated-text-1")}</Text>
             <UnorderedList ml={6} spacing={3}>
               <ListItem>
-                <Translation id="page-gas-how-is-gas-calculated-item-1" />
+                <Translation id="page-gas:page-gas-how-is-gas-calculated-item-1" />
               </ListItem>
               <ListItem>
-                <Translation id="page-gas-how-is-gas-calculated-item-2" />
+                <Translation id="page-gas:page-gas-how-is-gas-calculated-item-2" />
               </ListItem>
               <ListItem>
-                <Translation id="page-gas-how-is-gas-calculated-item-3" />
+                <Translation id="page-gas:page-gas-how-is-gas-calculated-item-3" />
                 <UnorderedList ml={6} spacing={3} styleType="none">
                   <ListItem color="body.medium" fontSize="sm">
-                    <Translation id="page-gas-how-is-gas-calculated-list-item-1" />
+                    <Translation id="page-gas:page-gas-how-is-gas-calculated-list-item-1" />
                   </ListItem>
                 </UnorderedList>
               </ListItem>
             </UnorderedList>
             <Text>
-              <Translation id="page-gas-how-is-gas-calculated-text-2" />
+              <Translation id="page-gas:page-gas-how-is-gas-calculated-text-2" />
             </Text>
           </Box>
           <Table maxW={"100%"} minW={"auto"}>
             <TableCaption fontSize="sm">
-              <Translation id="page-gas-table-figure" />
+              <Translation id="page-gas:page-gas-table-figure" />
             </TableCaption>
             <Thead>
               <Tr>
-                <Th>
-                  <Translation id="page-gas-table-header-1" />
-                </Th>
-                <Th>
-                  <Translation id="page-gas-table-header-2" />
-                </Th>
+                <Th>{t("page-gas-table-header-1")}</Th>
+                <Th>{t("page-gas-table-header-2")}</Th>
               </Tr>
             </Thead>
             <Tbody>
               <Tr>
-                <Td>
-                  <Translation id="page-gas-table-item-1-transaction-type" />
-                </Td>
+                <Td>{t("page-gas-table-item-1-transaction-type")}</Td>
                 <Td>21,000</Td>
               </Tr>
               <Tr>
-                <Td>
-                  <Translation id="page-gas-table-item-2-transaction-type" />
-                </Td>
+                <Td>{t("page-gas-table-item-2-transaction-type")}</Td>
                 <Td>65,000</Td>
               </Tr>
               <Tr>
-                <Td>
-                  <Translation id="page-gas-table-item-3-transaction-type" />
-                </Td>
+                <Td>{t("page-gas-table-item-3-transaction-type")}</Td>
                 <Td>84,904</Td>
               </Tr>
               <Tr>
-                <Td>
-                  <Translation id="page-gas-table-item-4-transaction-type" />
-                </Td>
+                <Td>{t("page-gas-table-item-4-transaction-type")}</Td>
                 <Td>184,523</Td>
               </Tr>
             </Tbody>
@@ -417,9 +371,7 @@ const GasPage = () => {
         </Flex>
       </Content>
       <Content>
-        <H2 mt="0">
-          <Translation id="page-gas-faq-header" />
-        </H2>
+        <H2 mt="0">{t("page-gas-faq-header")}</H2>
         {/* MaxWidth will be enforced by FAQ component once implemented */}
         <Box maxWidth="832px">
           <ExpandableCard title={t("page-gas-faq-question-1-q")}>
@@ -442,9 +394,7 @@ const GasPage = () => {
             <Text>
               <Translation id="page-gas-faq-question-3-a-1" />
             </Text>
-            <Text>
-              <Translation id="page-gas-faq-question-3-a-2" />
-            </Text>
+            <Text>{t("page-gas-faq-question-3-a-2")}</Text>
           </ExpandableCard>
         </Box>
       </Content>
@@ -462,7 +412,7 @@ const GasPage = () => {
           >
             <Box>
               <ButtonLink to="/layer-2/">
-                <Translation id="page-gas-use-layer-2" />
+                {t("page-gas-use-layer-2")}
               </ButtonLink>
             </Box>
           </Box>
@@ -471,13 +421,15 @@ const GasPage = () => {
             flex="1 1 416px"
             minH="full"
             image={dogeComputerImg}
-            titleKey="page-community-explore-dapps-title"
-            alt={t("page-community-explore-dapps-alt")}
-            descriptionKey="page-community-explore-dapps-description"
+            titleKey={t("page-community:page-community-explore-dapps-title")}
+            alt={t("page-community:page-community-explore-dapps-alt")}
+            descriptionKey={t(
+              "page-community:page-community-explore-dapps-description"
+            )}
           >
             <Box>
               <ButtonLink to="/dapps/">
-                <Translation id="page-community-explore-dapps" />
+                {t("page-community:page-community-explore-dapps")}
               </ButtonLink>
             </Box>
           </Box>
