@@ -12,7 +12,8 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import { trackCustomEvent } from "../../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { ButtonLink } from "../Buttons"
 import {
   StakingGlyphCentralizedIcon,
@@ -209,18 +210,17 @@ const Pills = ({ children }: ChildOnlyType) => (
   </Flex>
 )
 
-const Glyph = ({ glyphIcon }: { glyphIcon: typeof Icon }) => {
-  const Icon = glyphIcon
-  return (
-    <Center gridArea={{ base: "content", md: "glyph" }}>
-      <Icon
-        boxSize={{ base: "50%", md: "50px" }}
-        color={$colorVar.reference}
-        opacity={{ base: 0.1, md: "initial" }}
-      />
-    </Center>
-  )
-}
+type GlyphProps = { glyphIcon: typeof Icon }
+const Glyph = ({ glyphIcon }: GlyphProps) => (
+  <Center gridArea={{ base: "content", md: "glyph" }}>
+    <Icon
+      as={glyphIcon}
+      boxSize={{ base: "50%", md: "50px" }}
+      color={$colorVar.reference}
+      opacity={{ base: 0.1, md: "initial" }}
+    />
+  </Center>
+)
 
 const Content = ({ children }: ChildOnlyType) => (
   <Box

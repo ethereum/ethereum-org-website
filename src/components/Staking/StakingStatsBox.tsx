@@ -4,14 +4,13 @@ import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, Spinner, VStack } from "@chakra-ui/react"
 
-// Import utilities
-import { getData } from "../../utils/cache"
-import { Lang } from "../../utils/languages"
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import InlineLink from "../Link"
-import Text from "../OldText"
-// Import components
-import Tooltip from "../Tooltip"
+import type { Lang } from "@/lib/types"
+
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
+import Tooltip from "@/components/Tooltip"
+
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
 const NA_ERROR = "n/a"
 const ZERO = "0"
@@ -96,10 +95,8 @@ interface EpochResponse {
   }
 }
 
-export interface IProps {}
-
 // StatsBox component
-const StakingStatsBox: React.FC<IProps> = () => {
+const StakingStatsBox = () => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-staking")
   /**
@@ -111,55 +108,56 @@ const StakingStatsBox: React.FC<IProps> = () => {
   const [totalValidators, setTotalValidators] = useState<string | null>(ZERO)
   const [currentApr, setCurrentApr] = useState<string | null>(ZERO)
 
-  useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
+  // TODO! Fix data fetching
+  // useEffect(() => {
+  //   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
 
-    // Helper functions
-    const formatInteger = (amount: number): string =>
-      new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
+  //   // Helper functions
+  //   const formatInteger = (amount: number): string =>
+  //     new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
-    const formatPercentage = (amount: number): string =>
-      new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        style: "percent",
-        minimumSignificantDigits: 2,
-        maximumSignificantDigits: 2,
-      }).format(amount)
+  //   const formatPercentage = (amount: number): string =>
+  //     new Intl.NumberFormat(localeForStatsBoxNumbers, {
+  //       style: "percent",
+  //       minimumSignificantDigits: 2,
+  //       maximumSignificantDigits: 2,
+  //     }).format(amount)
 
-    // API calls, data formatting, and state setting
-    const base = "https://beaconcha.in"
-    const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
-    const { href: epoch } = new URL("api/v1/epoch/latest", base)
-    // Get total ETH staked and current APR from ethstore endpoint
-    ;(async () => {
-      try {
-        const ethStoreResponse = await getData<EthStoreResponse>(ethstore)
-        const {
-          data: { apr, effective_balances_sum_wei },
-        } = ethStoreResponse
-        const totalEffectiveBalance: number = effective_balances_sum_wei * 1e-18
-        const valueTotalEth = formatInteger(Math.floor(totalEffectiveBalance))
-        const valueCurrentApr = formatPercentage(apr)
-        setTotalEth(valueTotalEth)
-        setCurrentApr(valueCurrentApr)
-      } catch (error) {
-        setTotalEth(null)
-        setCurrentApr(null)
-      }
-    })()
-    // Get total active validators from latest epoch endpoint
-    ;(async () => {
-      try {
-        const epochResponse = await getData<EpochResponse>(epoch)
-        const {
-          data: { validatorscount },
-        } = epochResponse
-        const valueTotalValidators = formatInteger(validatorscount)
-        setTotalValidators(valueTotalValidators)
-      } catch (error) {
-        setTotalValidators(null)
-      }
-    })()
-  }, [locale])
+  //   // API calls, data formatting, and state setting
+  //   const base = "https://beaconcha.in"
+  //   const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
+  //   const { href: epoch } = new URL("api/v1/epoch/latest", base)
+  //   // Get total ETH staked and current APR from ethstore endpoint
+  //   ;(async () => {
+  //     try {
+  //       const ethStoreResponse = await getData<EthStoreResponse>(ethstore)
+  //       const {
+  //         data: { apr, effective_balances_sum_wei },
+  //       } = ethStoreResponse
+  //       const totalEffectiveBalance: number = effective_balances_sum_wei * 1e-18
+  //       const valueTotalEth = formatInteger(Math.floor(totalEffectiveBalance))
+  //       const valueCurrentApr = formatPercentage(apr)
+  //       setTotalEth(valueTotalEth)
+  //       setCurrentApr(valueCurrentApr)
+  //     } catch (error) {
+  //       setTotalEth(null)
+  //       setCurrentApr(null)
+  //     }
+  //   })()
+  //   // Get total active validators from latest epoch endpoint
+  //   ;(async () => {
+  //     try {
+  //       const epochResponse = await getData<EpochResponse>(epoch)
+  //       const {
+  //         data: { validatorscount },
+  //       } = epochResponse
+  //       const valueTotalValidators = formatInteger(validatorscount)
+  //       setTotalValidators(valueTotalValidators)
+  //     } catch (error) {
+  //       setTotalValidators(null)
+  //     }
+  //   })()
+  // }, [locale])
 
   return (
     <Flex direction={{ base: "column", md: "row" }}>
