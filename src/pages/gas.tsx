@@ -302,8 +302,8 @@ const GasPage = () => {
             <Image
               src={ethImg}
               alt=""
-              style={{ maxHeight: "400px" }}
-              objectFit="contain"
+              width={600}
+              style={{ objectFit: "contain" }}
             />
           </Box>
         </Flex>
