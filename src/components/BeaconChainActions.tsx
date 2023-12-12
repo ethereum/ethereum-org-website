@@ -25,7 +25,7 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
 const BeaconChainActions: React.FC = () => {
   const { t } = useTranslation(["page-upgrades-index", "page-upgrades"])
 
-  const datapoints: Array<CardListItem> = [
+  const datapoints: CardListItem[] = [
     {
       title: t("consensus-beaconscan-title"),
       image: beaconscan,
@@ -43,7 +43,7 @@ const BeaconChainActions: React.FC = () => {
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
-  const reads: Array<CardListItem> = [
+  const reads: CardListItem[] = [
     {
       title: t("page-upgrade-article-title-two-point-oh"),
       description: t("page-upgrade-article-author-status"),

@@ -7,7 +7,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import InlineLink from "./Link"
 
-interface Props {
+type TranslationProps = {
   id: string
   options?: TOptions
 }
@@ -20,7 +20,7 @@ const transform = {
 
 // Renders the translation string for the given translation key `id`. It
 // fallback to English if it doesn't find the given key in the current language
-const Translation = ({ id, options }: Props) => {
+const Translation = ({ id, options }: TranslationProps) => {
   const { asPath } = useRouter()
   const requiredNamespaces = getRequiredNamespacesForPage(asPath)
 
@@ -29,7 +29,7 @@ const Translation = ({ id, options }: Props) => {
 
   // Use `htmr` to parse html content in the translation text
   // @ts-ignore
-  return <>{htmr(translatedText, { transform })}</>
+  return htmr(translatedText, { transform })
 }
 
 export default Translation

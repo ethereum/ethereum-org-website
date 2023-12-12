@@ -74,10 +74,6 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
 
-  if (path.startsWith("/nft")) {
-    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
-  }
-
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
@@ -109,6 +105,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
 
+  if (path === "get-eth") {
+    requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
+  }
+
   if (path.startsWith("/languages")) {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
@@ -122,7 +122,8 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
-    path.startsWith("/security")
+    path.startsWith("/security") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
