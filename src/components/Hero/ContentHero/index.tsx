@@ -23,8 +23,8 @@ const ContentHero = (props: ContentHeroProps) => {
           <Image
             src={heroImg}
             alt=""
-            loading="eager"
-            objectFit="contain"
+            priority
+            style={{ objectFit: "contain" }}
             boxSize="full"
           />
         </Box>
