@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Box,
   Flex,
@@ -8,26 +7,26 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import { ButtonLink } from "./Buttons"
-import GatsbyImage from "./GatsbyImage"
-import OldHeading from "./OldHeading"
-import Translation from "./Translation"
+import { ButtonLink } from "@/components/Buttons"
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
 
-export interface Content {
+type Content = {
   title: string
   description: string
   link?: string
-  image?: any
+  image?: ImageProps["src"]
   alt: string
   id?: string
 }
 
-export interface IProps {
-  content: Array<Content>
+type ProductListProps = {
+  content: Content[]
   category: string
 }
 
-const ProductList: React.FC<IProps> = ({ content, category }) => {
+const ProductList = ({ content, category }: ProductListProps) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   const CATEGORY_NAME = "category-name"
@@ -63,9 +62,10 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
           >
             <Box width="5rem">
               {image && (
-                <GatsbyImage
-                  image={image}
+                <Image
+                  src={image}
                   alt={alt}
+                  width={66}
                   boxShadow={shadow}
                   borderRadius="sm"
                 />
@@ -97,7 +97,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  <Translation id="page-dapps-ready-button" />
+                  <Translation id="page-dapps:page-dapps-ready-button" />
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}
