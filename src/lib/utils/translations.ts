@@ -74,10 +74,6 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
 
-  if (path.startsWith("/nft")) {
-    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
-  }
-
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
@@ -87,11 +83,18 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/developers/local-environment")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-local-environment"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-local-environment",
+    ]
   }
 
   if (path.startsWith("/developers/learning-tools")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-index", "page-developers-learning-tools"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-index",
+      "page-developers-learning-tools",
+    ]
   }
 
   if (path.startsWith("/developers/tutorials")) {
@@ -102,8 +105,24 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
 
+  if (path === "get-eth") {
+    requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
+  }
+
   if (path.startsWith("/languages")) {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
+  }
+
+  if (path.startsWith("/roadmap/vision")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-roadmap-vision",
+      "page-upgrades-index",
+    ]
+  }
+
+  if (path.startsWith("/gas")) {
+    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
   // Quizzes
@@ -111,7 +130,8 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
-    path.startsWith("/security")
+    path.startsWith("/security") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }

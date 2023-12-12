@@ -1,52 +1,122 @@
-import * as React from "react"
+import { useMemo } from "react"
+import { useRouter } from "next/navigation"
 import { FaTwitter } from "react-icons/fa"
 import { Center, Icon } from "@chakra-ui/react"
 
-import { AnswerChoice, Question } from "@/lib/interfaces"
+import { Button } from "@/components/Buttons"
+import Translation from "@/components/Translation"
 
-import { Button } from "../../Buttons"
-import Translation from "../../Translation"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-export type QuizButtonGroupProps = {
-  showAnswer: boolean
-  showResults: boolean
-  quizScore: number
-  handleReset: () => void
-  currentQuestionIndex: number
-  currentQuestionAnswerChoice: AnswerChoice | null
-  questions: Question[]
-  finishedQuiz: boolean
-  handleRetryQuestion: () => void
-  handleShare: () => void
-  handleNextQuiz: () => void
-  hasNextQuiz: boolean
-  handleContinue: () => void
-  handleSubmitAnswer: (questionId: string, answerChoice: AnswerChoice) => void
-}
+import { useQuizWidgetContext } from "./context"
 
-export const QuizButtonGroup = ({
-  showAnswer,
-  showResults,
-  quizScore,
-  questions,
-  handleReset,
-  currentQuestionIndex,
-  currentQuestionAnswerChoice,
-  finishedQuiz,
-  handleRetryQuestion,
-  handleShare,
-  handleNextQuiz,
-  hasNextQuiz,
-  handleContinue,
-  handleSubmitAnswer,
-}: QuizButtonGroupProps) => {
-  const hasFailedAnswer =
-    currentQuestionAnswerChoice && !currentQuestionAnswerChoice.isCorrect
+export const QuizButtonGroup = () => {
+  const {
+    showResults,
+    initialize: handleReset,
+    currentQuestionAnswerChoice,
+    title,
+    questions,
+    currentQuestionIndex,
+    quizPageProps,
+    answerStatus,
+    numberOfCorrectAnswers,
+    userQuizProgress,
+    quizScore,
+    setCurrentQuestionAnswerChoice,
+    setUserQuizProgress,
+    setShowAnswer,
+  } = useQuizWidgetContext()
+
+  const finishedQuiz = useMemo(
+    () => userQuizProgress.length === questions.length! - 1,
+    [questions.length, userQuizProgress.length]
+  )
+
+  const handleShare = () => {
+    if (!window) return
+
+    trackCustomEvent({
+      eventCategory: "quiz_hub_events",
+      eventAction: "Secondary button clicks",
+      eventName: "Twitter_share_quiz",
+    })
+
+    const url = `https://ethereum.org${window.location.pathname}%23quiz`
+    const hashtags = ["ethereumquiz", "ethereum", "quiz"]
+    const tweet = `${encodeURI(
+      `I just took the "${title}" quiz on ethereum.org and scored ${numberOfCorrectAnswers} out of ${questions.length}! Try it yourself at ${url}`
+    )}`
+
+    window.open(
+      `https://twitter.com/intent/tweet?text=${tweet}&hashtags=${hashtags}`
+    )
+  }
+
+  const handleSubmitAnswer = () => {
+    if (!currentQuestionAnswerChoice) return
+
+    trackCustomEvent({
+      eventCategory: "Quiz widget",
+      eventAction: "Question answered",
+      eventName: `QID: ${questions[currentQuestionIndex].id}`,
+      eventValue: currentQuestionAnswerChoice.isCorrect ? "1" : "0",
+    })
+
+    setShowAnswer(true)
+
+    if (!!quizPageProps) {
+      if (currentQuestionAnswerChoice.isCorrect) {
+        return quizPageProps.statusHandler?.("success")
+      }
+
+      return quizPageProps.statusHandler?.("error")
+    }
+  }
+
+  const handleRetryQuestion = () => {
+    trackCustomEvent({
+      eventCategory: "Quiz widget",
+      eventAction: "Other",
+      eventName: "Retry question",
+    })
+
+    setCurrentQuestionAnswerChoice(null)
+    setShowAnswer(false)
+
+    if (quizPageProps) {
+      quizPageProps.statusHandler("neutral")
+    }
+  }
+
+  const handleContinue = () => {
+    if (!currentQuestionAnswerChoice) return
+
+    setUserQuizProgress((prev) => [...prev, currentQuestionAnswerChoice])
+    setCurrentQuestionAnswerChoice(null)
+    setShowAnswer(false)
+
+    // Reset quiz status (modifies bg color for mobile)
+    if (quizPageProps) {
+      quizPageProps.statusHandler("neutral")
+    }
+
+    if (finishedQuiz) {
+      trackCustomEvent({
+        eventCategory: "Quiz widget",
+        eventAction: "Other",
+        eventName: "Submit results",
+        eventValue: `${quizScore}%`,
+      })
+    }
+  }
 
   const hasNotPerfectQuizScore = quizScore < 100
 
   const MainButtons = () => {
     if (showResults) {
+      const hasNextQuiz = quizPageProps && !!quizPageProps.nextQuiz
+
       return (
         <>
           <Center
@@ -64,7 +134,11 @@ export const QuizButtonGroup = ({
 
             {/* Show `Next Quiz` button if quiz is opened from hub page */}
             {hasNextQuiz && (
-              <Button onClick={handleNextQuiz}>
+              <Button
+                onClick={() => {
+                  quizPageProps.currentHandler(quizPageProps.nextQuiz!)
+                }}
+              >
                 <Translation id="learn-quizzes:next-quiz" />
               </Button>
             )}
@@ -84,16 +158,22 @@ export const QuizButtonGroup = ({
       )
     }
 
-    if (showAnswer) {
+    if (answerStatus) {
       return (
         <>
-          {hasFailedAnswer ? (
+          {answerStatus === "incorrect" && (
             <Button onClick={handleRetryQuestion} variant="outline">
               <Translation id="learn-quizzes:try-again" />
             </Button>
-          ) : null}
+          )}
           <Button onClick={handleContinue}>
-            <Translation id={finishedQuiz ? "learn-quizzes:see-results" : "learn-quizzes:next-question"} />
+            <Translation
+              id={
+                finishedQuiz
+                  ? "learn-quizzes:see-results"
+                  : "learn-quizzes:next-question"
+              }
+            />
           </Button>
         </>
       )
@@ -101,12 +181,7 @@ export const QuizButtonGroup = ({
 
     return (
       <Button
-        onClick={() =>
-          handleSubmitAnswer(
-            questions[currentQuestionIndex].id,
-            currentQuestionAnswerChoice!
-          )
-        }
+        onClick={handleSubmitAnswer}
         isDisabled={!currentQuestionAnswerChoice}
       >
         <Translation id="learn-quizzes:submit-answer" />
@@ -114,7 +189,6 @@ export const QuizButtonGroup = ({
     )
   }
 
-  // Render QuizButtonGroup component
   return (
     <Center
       gap={{ base: 4, md: 6 }}
