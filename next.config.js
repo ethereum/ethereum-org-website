@@ -28,6 +28,15 @@ module.exports = (phase, { defaultConfig }) => {
         test: /\.svg$/,
         use: '@svgr/webpack',
       })
+      config.module.rules.push({
+        test: /\.mp4$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
+        },
+      });
 
       return config;
     },
