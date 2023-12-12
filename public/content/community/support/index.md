@@ -30,7 +30,7 @@ Having trouble with your wallet? Most wallets have dedicated support teams that 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_This is not an exhaustive list. Need help finding support for a specific wallet? Join the [ethereum.org discord](https://discord.gg/rZz26QWfCg) and we'll try to help._
+_This is not an exhaustive list. Need help finding support for a specific wallet? Join the [ethereum.org discord](https://discord.gg/ethereum-org) and we'll try to help._
 
 Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wallets/find-wallet/).
 

@@ -2,15 +2,21 @@ import fs from "fs"
 import { extname, join } from "path"
 
 import matter from "gray-matter"
+import readingTime from "reading-time"
 
 import type { Frontmatter } from "@/lib/types"
 import type { MdPageContent } from "@/lib/interfaces"
 
+import { Skill } from "@/components/TutorialMetadata"
+
+import { dateToString } from "@/lib/utils/date"
 import { getFallbackEnglishPath, removeEnglishPrefix } from "@/lib/utils/i18n"
 
 import { CONTENT_DIR, DEFAULT_LOCALE, LOCALES_CODES } from "@/lib/constants"
 
 import { toPosixPath } from "./relativePath"
+
+import { ITutorial } from "@/pages/developers/tutorials"
 
 const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
 
@@ -339,4 +345,35 @@ export const getContent = (dir: string) => {
   const content = slugs.map(getContentBySlug)
 
   return content
+}
+
+export const getTutorialsData = (locale: string): ITutorial[] => {
+  const fullPath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials')
+  let tutorialData: ITutorial[] = []
+
+  if (fs.existsSync(fullPath)) {
+    const languageTutorialFiles = fs.readdirSync(fullPath)
+
+    tutorialData = languageTutorialFiles.map((dir) => {
+      const filePath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials', dir, 'index.md')
+      const fileContents = fs.readFileSync(filePath, "utf8")
+      const { data, content } = matter(fileContents)
+      const frontmatter = data as Frontmatter
+      
+      return {
+        to: join(`/${locale}/developers/tutorials`, dir),
+        title: frontmatter.title,
+        description: frontmatter.description,
+        author: frontmatter.author || '',
+        tags: frontmatter.tags,
+        skill: frontmatter.skill as Skill,
+        timeToRead: Math.round(readingTime(content).minutes),
+        published: dateToString(frontmatter.published),
+        lang: frontmatter.lang, 
+        isExternal: false,
+      }
+    })
+  }
+
+  return tutorialData
 }

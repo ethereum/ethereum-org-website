@@ -27,7 +27,7 @@ EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用�
 
 从会议开始以来，您每年都可以在 [archive.devcon.org](https://archive.devcon.org/) 访问会议的视频内容。
 
-在[devcon.org](https://devcon.org/)可以学到更多，查看[Devcon Blog](https://blog.ethereum.org/category/devcon/)，或者关注[@efdevcon](https://twitter.com/EFDevcon) 获得最新通知。
+在[devcon.org](https://devcon.org/)可以学到更多，查看[Devcon Blog](https://devcon.org/en/blogs/)，或者关注[@efdevcon](https://twitter.com/EFDevcon) 获得最新通知。
 
 ### Fellowship 计划 {#fellowship-program}
 

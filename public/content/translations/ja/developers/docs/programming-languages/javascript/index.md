@@ -20,6 +20,7 @@ JavaScript でブロックチェーンへのクエリやトランザクション
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) - _JavaScript と TypeScript での完全なイーサリアムウォレットの実装とユーティリティを含む_
+- [viem](https://viem.sh) – イーサリアム用の TypeScript インターフェイスで、イーサリアムとやり取りする低レベルのステートレスプリミティブを提供します。
 
 ### スマートコントラクト {#smart-contracts}
 
@@ -50,10 +51,12 @@ JavaScript でブロックチェーンへのクエリやトランザクション
 
 ### ノードとクライアント {#nodes-and-clients}
 
-開発中の Ethereumjs クライアントを利用できます。 これにより、理解できる言語でイーサリアムクライアントの動作について詳細に調査できます。
+Ethereumjs クライアントは活発に開発されており、JavaScript で書かれたイーサリアムクライアントの仕組みを詳しく学ぶことができます。
+
+以前は、スタンドアロンの[`repository`](https://github.com/ethereumjs/ethereumjs-client)に格納されていましたが、後にパッケージとして EthereumVM モノレポにマージされました。
 
 **クライアントを調べる**  
-[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-client)
+[`ethereumjs`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## 他のプロジェクト {#other-projects}
 
@@ -67,4 +70,4 @@ JavaScript でブロックチェーンへのクエリやトランザクション
 
 ## 参考文献 {#further-reading}
 
-_役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_

@@ -47,13 +47,13 @@ lang: zh
 
 ### 提款流程 {#withdrawal-flow}
 
-#### 二层网络 {#withdrawl-flow-layer-2}
+#### 二层网络 {#withdrawal-flow-layer-2}
 
 1. 提款人调用第二层链桥（`withdraw` 或 `withdrawTo`）
 2. 第二层链桥销毁属于 `msg.sender` 的适当数量代币
 3. 第二层链桥使用跨域信息机制调用第一层链桥上的 `finalizeETHWithdrawal` 或 `finalizeERC20Withdrawal`
 
-#### 第一层 {#withdrawl-flow-layer-1}
+#### 第一层 {#withdrawal-flow-layer-1}
 
 4. 第一层链桥验证调用 `finalizeETHWithdrawal` 或 `finalizeERC20Withdrawal` 是否合法：
    - 来自交叉域信息机制

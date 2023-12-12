@@ -32,7 +32,7 @@ Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Sourc
 - [Quizfragen](/contributing/quizzes/) _ – Hinzufügen, Aktualisieren und Löschen von Quizfragen für eine bestimmte Seite_
 - [Designressourcen vorschlagen](/contributing/design/adding-design-resources/) _ – Hilfreiche Designressourcen hinzufügen, aktualisieren und löschen_
 
-_Haben Sie Fragen?_ 🤔 Sie erreichen uns auf unserem [Discord-Server](https://discord.gg/CetY6Y4).
+_Haben Sie Fragen?_ 🤔 Sie erreichen uns auf unserem [Discord-Server](https://discord.gg/ethereum-org).
 
 ## So funktioniert die Arbeit an ethereum.org {#how-to-update-content}
 
@@ -43,7 +43,7 @@ Alle Updates erfolgen über den GitHub PR-Prozess. Das bedeutet, Sie erstellen e
 Sie können ohne unsere Erlaubnis an Themen arbeiten. Allerdings ist es immer besser, uns wissen zu lassen, was Sie umsetzen möchten. Dafür haben Sie folgende Möglichkeiten:
 
 - Einen Fehler oder einen PR auf [GitHub](https://github.com/ethereum/ethereum-org-website) kommentieren
-- Uns auf unserem [Discord-Server](https://discord.gg/CetY6Y4) schreiben
+- Uns auf unserem [Discord-Server](https://discord.gg/ethereum-org) schreiben
 
 Bevor Sie einen Beitrag leisten, sollten Sie sich mit folgenden Themen vertraut machen:
 
@@ -58,7 +58,7 @@ Entscheidungen zu individuellen PRs, zur Designentwicklung und zu großen Upgrad
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord-Server](https://discord.gg/CetY6Y4)
+- [Discord-Server](https://discord.gg/ethereum-org)
 
 ### Ein Hinweis zu Plagiaten {#plagiarism}
 
@@ -76,7 +76,7 @@ Wenn Ihr Beitrag in ethereum.org eingebunden wird, prägen wir Ihnen einen einzi
 
 ### So werden sie beansprucht {#how-to-claim}
 
-1. Treten Sie unserem [Discord-Server](https://discord.gg/E8dET2ux8y) bei.
+1. Treten Sie unserem [Discord-Server](https://discord.gg/ethereum-org) bei.
 2. Fügen Sie einen Link zu Ihrem Beitrag in den `#🥇 | poaps` [Kanal](https://discord.com/channels/714888181740339261/804005643211898911) ein.
 3. Warten Sie, bis ein Mitglied unseres Teams Ihnen einen Link zu Ihrem POAP schickt.
 4. Beanspruchen Sie Ihren POAP.

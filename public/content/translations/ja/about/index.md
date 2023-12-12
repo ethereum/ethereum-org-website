@@ -94,7 +94,7 @@ ethereum.org コアチームは、私たちの取り組みへのアクセスを�
 
 **いかがでしょうか?**ロードマップに関するフィードバックをお待ちしております。私たちが取り組むべきことについてご意見があれば、お知らせください。 コミュニティからのアイデアや PR をお待ちしています。
 
-**参加を希望されますか?** [貢献の詳細](/contributing/)をご参照ください。[Twitter](https://twitter.com/ethdotorg)で連絡いただくか、[Discord サーバー](https://discord.gg/CetY6Y4)のコミュニティディスカッションに参加してください。
+**参加を希望されますか?** [貢献の詳細](/contributing/)をご参照ください。[Twitter](https://twitter.com/ethdotorg)で連絡いただくか、[Discord サーバー](https://discord.gg/ethereum-org)のコミュニティディスカッションに参加してください。
 
 ## デザイン原則 {#design-principles}
 
@@ -104,7 +104,7 @@ ethereum.org コアチームは、私たちの取り組みへのアクセスを�
 
 私たちは、機能のリリースを迅速化するために[デザインシステム](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)を構築し、コミュニティメンバーが ethereum.org のオープンデザインに参加できるようにしました。
 
-参加を希望されますか?希望される方は、[Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)と[GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284)のイシューをフォローし、[#design Discord チャネル](https://discord.gg/bKycYhVUwV)の会話に参加してください。
+参加を希望されますか?希望される方は、[Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System)と[GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284)のイシューをフォローし、[#design Discord チャネル](https://discord.gg/ethereum-org)の会話に参加してください。
 
 ## スタイルガイド {#style-guide}
 
@@ -118,6 +118,6 @@ ethereum.org コアチームは、私たちの取り組みへのアクセスを�
 
 このウェブサイトはオープンソースで、誰でも作業できますが、ethereum.org や他のイーサリアム・ファウンデーションの Web プロジェクトに専念するチームがあります。
 
-求人情報はすべてこちらに掲載されます。 ご自身に向いている役割が見つからない場合は、[イーサリアムの Discord サーバー](https://discord.gg/CetY6Y4)にアクセスして、協働したい内容について教えてください。
+求人情報はすべてこちらに掲載されます。 ご自身に向いている役割が見つからない場合は、[イーサリアムの Discord サーバー](https://discord.gg/ethereum-org)にアクセスして、協働したい内容について教えてください。
 
 ethereum.org チーム以外にも目を向けてみませんか？ [他のイーサリアム関連の求人情報もぜひご覧ください。](/community/get-involved/#ethereum-jobs/).

@@ -5,6 +5,6 @@ export const scrollIntoView = (
   const element = document.getElementById(toId)
 
   if (!element) return
-  
+
   element.scrollIntoView(options)
 }

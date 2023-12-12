@@ -25,7 +25,7 @@ lang: zh-tw
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">以太坊駭客</Link> - 由全球以太坊駭客線上社群 ETHGlobal 所管理的 Discord 聊天室</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 專注於以太坊開發的 Discord 社群</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - 給現有及潛在質押者的社群營運指導、教育、支援及資源。</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org 網站團隊</Link> - 訪問並和團隊及社群大眾聊聊 Ethereum.org 網站開發及設計</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org 網站團隊</Link> - 訪問並和團隊及社群大眾聊聊 Ethereum.org 網站開發及設計</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - 建造者、產業領袖，及以太坊愛好者出沒的 web3 創作者社群。 我們熱愛 web3 開發、設計及文化。 與我們一起建立。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - 討論 solidity 的開發 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 討論 solidity 的開發 (Matrix)</SocialListItem>
