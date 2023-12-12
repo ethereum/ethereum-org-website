@@ -1,79 +1,107 @@
-import React, { useEffect, useState } from "react"
-import axios from "axios"
+import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Flex, FlexProps, Heading, Icon, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  type FlexProps,
+  Heading,
+  Icon,
+  Text,
+} from "@chakra-ui/react"
 
-import InlineLink from "./Link"
-import Tooltip from "./Tooltip"
-import Translation from "./Translation"
+import type { LoadingState } from "@/lib/types"
+
+import InlineLink from "@/components/Link"
+import Tooltip from "@/components/Tooltip"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-export interface IProps extends FlexProps {
+type EthPriceResponse = {
+  ethereum: {
+    usd: string
+    usd_24h_change: number
+  }
+}
+
+type EthPriceState = {
+  currentPriceUSD: string
+  percentChangeUSD: number
+}
+
+export type EthPriceCardProps = FlexProps & {
   isLeftAlign?: boolean
 }
 
-// TODO add prop to left vs. center align
-const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
-  const [state, setState] = useState({
-    currentPriceUSD: "",
-    percentChangeUSD: 0,
-    hasError: false,
-  })
+const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
   const { locale } = useRouter()
+  const { t } = useTranslation()
+  const [state, setState] = useState<LoadingState<EthPriceState>>({
+    loading: true,
+  })
   const { flipForRtl } = useRtlFlip()
 
   useEffect(() => {
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
-      )
-      .then((response) => {
-        if (response.data && response.data.ethereum) {
-          const currentPriceUSD = response.data.ethereum.usd
-          const percentChangeUSD =
-            +response.data.ethereum.usd_24h_change.toFixed(2)
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+        )
+        if (!response.ok) throw new Error(response.statusText)
+        const data: EthPriceResponse = await response.json()
+        if (data && data.ethereum) {
+          const currentPriceUSD = data.ethereum.usd
+          const percentChangeUSD = +data.ethereum.usd_24h_change / 100
           setState({
-            currentPriceUSD,
-            percentChangeUSD,
-            hasError: false,
+            loading: false,
+            data: { currentPriceUSD, percentChangeUSD },
           })
         }
-      })
-      .catch((error) => {
-        console.error(error)
-        setState((prevState) => ({
-          ...prevState,
-          hasError: true,
-        }))
-      })
+      } catch (error: unknown) {
+        error instanceof Error && console.error(error.message)
+        setState({
+          loading: false,
+          error,
+        })
+      }
+    }
+    fetchData()
   }, [])
 
-  const isLoading = !state.currentPriceUSD
+  const hasError = "error" in state
+  const hasData = "data" in state
 
-  let price = isLoading ? (
-    <Translation id="loading" />
-  ) : (
-    `$${state.currentPriceUSD}`
-  )
-
-  if (state.hasError) {
-    price = <Translation id="loading-error-refresh" />
-  }
-
-  const isNegativeChange = state?.percentChangeUSD < 0
+  const formatPrice = (price: string) =>
+    new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(+price)
 
   const formatPercentage = (amount: number): string =>
-    new Intl.NumberFormat(locale, { style: "percent" }).format(amount)
+    new Intl.NumberFormat(locale, {
+      style: "percent",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(amount)
 
-  const change = state.percentChangeUSD
-    ? formatPercentage(state.percentChangeUSD)
-    : ``
+  const getPriceString = (): string => {
+    if (state.loading) return t("loading")
+    if (hasError) return t("loading-error-refresh")
+    return formatPrice(state.data.currentPriceUSD)
+  }
+
+  const price = getPriceString()
+
+  const isNegativeChange = hasData && state.data.percentChangeUSD < 0
+
+  const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ""
 
   const tooltipContent = (
     <Box>
-      <Translation id="data-provided-by" />{" "}
+      {t("data-provided-by")}{" "}
       <InlineLink to="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
@@ -99,7 +127,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
       maxW="420px"
       maxH="192px"
       borderRadius="base"
-      {...rest}
+      {...props}
     >
       <Heading
         as="h4"
@@ -111,17 +139,17 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
         letterSpacing="0.04em"
         textTransform="uppercase"
       >
-        <Translation id="eth-current-price" />
+        {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
           <Icon as={MdInfoOutline} boxSize="14px" ms={2} />
         </Tooltip>
       </Heading>
 
       <Box
-        m={state.hasError ? "1rem 0" : 0}
+        m={hasError ? "1rem 0" : 0}
         lineHeight="1.4"
-        fontSize={state.hasError ? "md" : "5xl"}
-        color={state.hasError ? "fail" : "text"}
+        fontSize={hasError ? "md" : "5xl"}
+        color={hasError ? "fail" : "text"}
       >
         {price}
       </Box>
@@ -154,7 +182,7 @@ const EthPriceCard: React.FC<IProps> = ({ isLeftAlign = false, ...rest }) => {
           textTransform="uppercase"
           color="text300"
         >
-          (<Translation id="last-24-hrs" />)
+          ({t("last-24-hrs")})
         </Box>
       </Flex>
     </Flex>

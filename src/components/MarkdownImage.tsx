@@ -1,3 +1,5 @@
+import { extname } from "path"
+
 import { Flex } from "@chakra-ui/react"
 
 import { Image, type ImageProps } from "@/components/Image"
@@ -34,6 +36,9 @@ const MarkdownImage = ({
     imageHeight = CONTENT_IMAGES_MAX_WIDTH / imageAspectRatio
   }
 
+  const fileExt = extname(transformedSrc).toLowerCase()
+  const isAnimated = [".gif", ".apng", ".webp"].includes(fileExt)  
+
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
     // sometimes wraps images in `p` tags
@@ -45,6 +50,7 @@ const MarkdownImage = ({
           height={imageHeight}
           loading="lazy"
           src={transformedSrc}
+          unoptimized={isAnimated}
           {...rest}
         />
       </Link>
