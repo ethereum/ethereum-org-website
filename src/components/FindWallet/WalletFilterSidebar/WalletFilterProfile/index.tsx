@@ -10,8 +10,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { trackCustomEvent } from "../../../../utils/matomo"
-import Translation from "../../../Translation"
+import Translation from "@/components/Translation"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useWalletFilterProfile } from "./useWalletFilterProfile"
 
@@ -48,7 +49,7 @@ const WalletFilterProfile = ({
         textAlign="center"
         color="secondary"
       >
-        <Translation id="page-find-wallet-persona-desc" />
+        <Translation id="page-wallets-find-wallet:page-find-wallet-persona-desc" />
       </Box>
       {personas.map((persona, idx) => {
         return (
