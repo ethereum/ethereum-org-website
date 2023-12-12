@@ -119,6 +119,11 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (path === "run-a-node") {
     requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
   }
+
+  if (path.startsWith("/wallets")) {
+    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+  }
+
   return requiredNamespaces
 }
 

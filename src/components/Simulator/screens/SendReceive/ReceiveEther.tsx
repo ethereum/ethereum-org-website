@@ -1,47 +1,22 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { graphql, useStaticQuery } from "gatsby"
-import { getImage } from "gatsby-plugin-image"
-import { Button, Image, useColorModeValue } from "@chakra-ui/react"
+import { Button, useColorModeValue } from "@chakra-ui/react"
 import { Box, Flex, Text } from "@chakra-ui/react"
 
-import GatsbyImage from "../../../GatsbyImage"
+import { Image } from "@/components/Image"
+
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
+
+import QRDark from "@/public/qr-code-ethereum-org-dark.png"
+import QRLight from "@/public/qr-code-ethereum-org-light.png"
 
 const MotionBox = motion(Box)
 
 export const ReceiveEther = () => {
-  const images = useStaticQuery(graphql`
-    {
-      qrLight: file(relativePath: { eq: "qr-code-ethereum-org-light.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 128
-            height: 128
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-      qrDark: file(relativePath: { eq: "qr-code-ethereum-org-dark.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 128
-            height: 128
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
-
   const qrImage = useColorModeValue(
-    getImage(images.qrLight),
-    getImage(images.qrDark)
+    QRLight,
+    QRDark,
   )
 
   const SPACING = { base: 3, md: 5 }
@@ -76,9 +51,8 @@ export const ReceiveEther = () => {
       >
         <Box w="fit-content" mx="auto" mb={SPACING} p={3} bg="background.base">
           <Image
-            as={GatsbyImage}
             alt=""
-            image={qrImage}
+            src={qrImage}
             maxW={QR_SIZE}
             maxH={QR_SIZE}
             p={3}
