@@ -113,6 +113,14 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
 
+  if (path.startsWith("/roadmap/vision")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-roadmap-vision",
+      "page-upgrades-index",
+    ]
+  }
+
   if (path.startsWith("/gas")) {
     requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }

@@ -22,7 +22,7 @@ type ButtonType = Omit<ButtonProps, "content"> & {
   matomo: MatomoEventOptions
 }
 
-type ContentType = {
+export type ContentType = {
   buttons?: (ButtonLinkType | ButtonType)[]
   title: ReactNode
   header: ReactNode
