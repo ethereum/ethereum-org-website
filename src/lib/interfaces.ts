@@ -102,8 +102,8 @@ interface ImageInfo {
 
 export interface UpgradeFrontmatter
   extends SharedFrontmatter,
-  SummaryPointsNumbered,
-  ImageInfo { }
+    SummaryPointsNumbered,
+    ImageInfo {}
 
 export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
   buttons: {
@@ -116,15 +116,15 @@ export interface RoadmapFrontmatter extends SharedFrontmatter, ImageInfo {
 
 export interface UseCasesFrontmatter
   extends SharedFrontmatter,
-  SummaryPointsNumbered,
-  ImageInfo {
+    SummaryPointsNumbered,
+    ImageInfo {
   emoji: string
 }
 
 export interface StakingFrontmatter
   extends SharedFrontmatter,
-  SummaryPoints,
-  ImageInfo {
+    SummaryPoints,
+    ImageInfo {
   emoji: string
 }
 
@@ -198,4 +198,22 @@ export interface ReqCommunityEvent {
   summary: string
   htmlLink: string
   location: string
+}
+
+/**
+ * Community page
+ */
+
+export interface ICard {
+  image: StaticImageData
+  title: string
+  description: string
+  alt: string
+  to: string
+}
+
+export interface IGetInvolvedCard {
+  emoji: string
+  title: string
+  description: string
 }

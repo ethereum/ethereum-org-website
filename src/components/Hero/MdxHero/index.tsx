@@ -1,6 +1,6 @@
 import { Heading, Stack } from "@chakra-ui/react"
 
-import type { CommonHeroProps } from "@/lib/types"
+import { CommonHeroProps } from "@/lib/types"
 
 import Breadcrumbs, { type BreadcrumbsProps } from "@/components/Breadcrumbs"
 

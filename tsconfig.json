@@ -27,7 +27,6 @@
     "./src/intl",
     "./src/data", // TODO: move to /public?
     // TODO: Remove these exclusions as we migrate the pages & templates that use these components
-    "./src/components/ActionCard.tsx",
     "./src/components/AdoptionChart.tsx",
     "./src/components/Alert/Alert.stories.tsx",
     "./src/components/Alert/index.tsx",
