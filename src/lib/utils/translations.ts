@@ -83,7 +83,10 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/developers/local-environment")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-local-environment"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-local-environment",
+    ]
   }
 
   if (path.startsWith("/developers/learning-tools")) {
@@ -111,7 +114,15 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/roadmap/vision")) {
-    requiredNamespaces = [...requiredNamespaces, "page-roadmap-vision", "page-upgrades-index"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-roadmap-vision",
+      "page-upgrades-index",
+    ]
+  }
+
+  if (path.startsWith("/gas")) {
+    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
   // Quizzes

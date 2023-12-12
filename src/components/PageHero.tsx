@@ -1,11 +1,5 @@
 import type { ReactNode } from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
 
 import {
   Button,
@@ -151,22 +145,24 @@ const PageHero = ({
         )}
         {children}
       </Box>
-      <Image
-        src={image}
+      <Center
         flex="1 1 50%"
-        alignSelf="center"
+        maxWidth={{ base: "560px", lg: "624px" }}
         mt={{ base: 0, lg: 12 }}
         ms={{ base: 0, lg: 12 }}
-        maxWidth={{ base: "560px", lg: "624px" }}
-        sizes="100%"
-        style={{
-          width: "100%",
-          height: "auto",
-          objectFit: "contain",
-        }}
-        alt={alt}
-        priority
-      />
+      >
+        <Image
+          src={image}
+          sizes="100%"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+          }}
+          alt={alt}
+          priority
+        />
+      </Center>
     </Flex>
   </Box>
 )
