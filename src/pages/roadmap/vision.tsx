@@ -108,6 +108,10 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
   <Box w="full" my={8} mx={0} p={8} background="cardGradient" {...props} />
 )
 
+type Props = SSRConfig & {
+  lastDeployDate: string
+}
+
 export const getStaticProps = (async (context) => {
   const { locale } = context
 
@@ -121,7 +125,7 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
 const VisionPage = () => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])
