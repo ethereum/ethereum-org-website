@@ -110,6 +110,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
 
+  if (path.startsWith("/roadmap/vision")) {
+    requiredNamespaces = [...requiredNamespaces, "page-roadmap-vision", "page-upgrades-index"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
