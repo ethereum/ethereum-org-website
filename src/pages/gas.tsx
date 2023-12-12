@@ -376,23 +376,23 @@ const GasPage = () => {
         <Box maxWidth="832px">
           <ExpandableCard title={t("page-gas-faq-question-1-q")}>
             <Text>
-              <Translation id="page-gas-faq-question-1-a-1" />
+              <Translation id="page-gas:page-gas-faq-question-1-a-1" />
             </Text>
             <Text>
-              <Translation id="page-gas-faq-question-1-a-2" />
+              <Translation id="page-gas:page-gas-faq-question-1-a-2" />
             </Text>
           </ExpandableCard>
           <ExpandableCard title={t("page-gas-faq-question-2-q")}>
             <Text>
-              <Translation id="page-gas-faq-question-2-a-1" />
+              <Translation id="page-gas:page-gas-faq-question-2-a-1" />
             </Text>
             <Link href="/eth/">
-              <Translation id="page-gas-faq-question-2-a-2" />
+              <Translation id="page-gas:page-gas-faq-question-2-a-2" />
             </Link>
           </ExpandableCard>
           <ExpandableCard title={t("page-gas-faq-question-3-q")}>
             <Text>
-              <Translation id="page-gas-faq-question-3-a-1" />
+              <Translation id="page-gas:page-gas-faq-question-3-a-1" />
             </Text>
             <Text>{t("page-gas-faq-question-3-a-2")}</Text>
           </ExpandableCard>
