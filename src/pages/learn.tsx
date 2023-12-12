@@ -184,7 +184,7 @@ const LearnPage = () => {
     title: t("learn-hub"),
     header: t("hero-header"),
     description: t("hero-subtitle"),
-    heroImgSrc: heroImage,
+    heroImg: heroImage,
     buttons: [
       {
         content: t("hero-button-lets-get-started"),
