@@ -54,6 +54,7 @@ export const Simulator: React.FC<IProps> = ({ children, data }) => {
   useEffect(() => {
     setStep(0)
     if (!pathId && router.asPath !== "/wallets#sim") clearUrlParams()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId])
 
   // Navigation helpers
