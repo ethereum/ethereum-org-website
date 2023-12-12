@@ -6,7 +6,7 @@ import type {
   GetStaticProps,
   InferGetStaticPropsType,
 } from "next/types"
-import { SSRConfig } from "next-i18next"
+import type { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"

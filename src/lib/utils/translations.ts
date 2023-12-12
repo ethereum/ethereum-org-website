@@ -102,6 +102,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
 
+  if (path === "get-eth") {
+    requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
+  }
+
   if (path.startsWith("/languages")) {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }

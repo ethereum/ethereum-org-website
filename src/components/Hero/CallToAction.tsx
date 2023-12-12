@@ -1,6 +1,6 @@
 import type { ReactNode } from "react"
 
-import { Button, type IButtonProps as ButtonProps } from "@/components/Buttons"
+import { Button, type ButtonProps } from "@/components/Buttons"
 
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 

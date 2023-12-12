@@ -1,9 +1,10 @@
-import * as React from "react"
 import type { IconType } from "react-icons/lib"
 import { Icon, Stack, Text } from "@chakra-ui/react"
 
-import Button, { type IProps as ButtonProps } from "../Button"
-import ButtonLink, { type ButtonLinkProps } from "../ButtonLink"
+import { Button, type ButtonProps } from "@/components/Buttons"
+import ButtonLink, {
+  type ButtonLinkProps,
+} from "@/components/Buttons/ButtonLink"
 
 type CommonProps = {
   icon: IconType | typeof Icon
@@ -85,7 +86,7 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
       }}
     >
       <Stack
-        spacing={0}
+        spacing="0"
         flexDir={reverseTextOrder ? "column-reverse" : "column"}
       >
         <Text
