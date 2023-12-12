@@ -21,7 +21,7 @@ import OriginalCard, {
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import InlineLink from "@/components/Link"
 import { ContentContainer } from "@/components/MdComponents"
@@ -121,6 +121,10 @@ const H3 = ({ children, ...props }: HeadingProps) => (
   </OldHeading>
 )
 
+type Props = SSRConfig & {
+  lastDeployDate: string
+}
+
 export const getStaticProps = (async (context) => {
   const { locale } = context
 
@@ -134,7 +138,7 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
 const LearnPage = () => {
   const { t } = useTranslation("page-learn")
@@ -195,7 +199,10 @@ const LearnPage = () => {
     ],
   }
 
-  const height200 = { h: 200, style: { width: "auto" } }
+  const height200: Partial<ImageProps> = {
+    height: 200,
+    style: { width: "auto", objectFit: "cover" },
+  }
 
   return (
     <Box position="relative" w="full">
