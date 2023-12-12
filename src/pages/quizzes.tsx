@@ -63,7 +63,7 @@ const QuizzesHubPage: NextPage<
         title={t("quizzes-title")}
         description={t("learn-quizzes:quizzes-subtitle")}
         header={t("learn-quizzes:test-your-knowledge")}
-        heroImgSrc={HeroImage}
+        heroImg={HeroImage}
       />
       <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
         <QuizWidget
