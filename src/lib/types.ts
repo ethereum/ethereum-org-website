@@ -239,3 +239,23 @@ export interface LearningTool {
 export interface LearningToolsCardGridProps {
   category: Array<LearningTool>
 }
+
+// Staking stats data fetching
+type Data<T> = {
+  data: T
+}
+
+export type EthStoreResponse = Data<{
+  apr: number
+  effective_balances_sum_wei: number
+}>
+
+export type EpochResponse = Data<{
+  validatorscount: number
+}>
+
+export type BeaconchainData = {
+  totalEthStaked: number
+  validatorscount: number
+  apr: number
+}

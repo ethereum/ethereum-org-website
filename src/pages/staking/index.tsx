@@ -1,10 +1,15 @@
 import { ReactNode } from "react"
-import { GetStaticProps } from "next"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type {
+  BeaconchainData,
+  ChildOnlyProp,
+  EpochResponse,
+  EthStoreResponse,
+} from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
@@ -31,7 +36,21 @@ import Translation from "@/components/Translation"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
 import rhino from "@/public/upgrades/upgrade_rhino.png"
+
+type BenefitsType = {
+  title: string
+  emoji: string
+  description: string
+  linkText?: string
+  to?: string
+}
+
+type Props = SSRConfig & {
+  data: BeaconchainData
+}
 
 const PageContainer = (props: ChildOnlyProp) => (
   <Flex flexDir="column" alignItems="center" w="full" m="0 auto" {...props} />
@@ -97,7 +116,7 @@ const ComparisonGrid = (props: ChildOnlyProp) => {
   )
 }
 
-const H2 = (props) => (
+const H2 = (props: HeadingProps) => (
   <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
     lineHeight={1.4}
@@ -154,12 +173,33 @@ const StyledCard = (props: {
   </Card>
 )
 
-type BenefitsType = {
-  title: string
-  emoji: string
-  description: string
-  linkText?: string
-  to?: string
+const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
+  // Fetch Beaconcha.in data
+  const base = "https://beaconcha.in"
+  const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
+  const { href: epoch } = new URL("api/v1/epoch/latest", base)
+
+  // Get total ETH staked and current APR from ethstore endpoint
+  const ethStoreResponse = await fetch(ethstore)
+  if (!ethStoreResponse.ok)
+    throw new Error("Network response from Beaconcha.in ETHSTORE was not ok")
+  const ethStoreResponseJson: EthStoreResponse = await ethStoreResponse.json()
+  const {
+    data: { apr, effective_balances_sum_wei },
+  } = ethStoreResponseJson
+  const totalEffectiveBalance = effective_balances_sum_wei * 1e-18
+  const totalEthStaked = Math.floor(totalEffectiveBalance)
+
+  // Get total active validators from latest epoch endpoint
+  const epochResponse = await fetch(epoch)
+  if (!epochResponse.ok)
+    throw new Error("Network response from Beaconcha.in EPOCH was not ok")
+  const epochResponseJson: EpochResponse = await epochResponse.json()
+  const {
+    data: { validatorscount },
+  } = epochResponseJson
+
+  return { totalEthStaked, validatorscount, apr }
 }
 
 export const getStaticProps = (async (context) => {
@@ -169,15 +209,21 @@ export const getStaticProps = (async (context) => {
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
+  const data = await fetchBeaconchainData()
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       lastDeployDate,
+      data,
     },
+    revalidate: BASE_TIME_UNIT * 24,
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
-const StakingPage = () => {
+const StakingPage = ({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-staking")
 
   // TODO: Replace with direct token implementation after UI migration is completed
@@ -317,7 +363,7 @@ const StakingPage = () => {
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
-        <StakingStatsBox />
+        <StakingStatsBox data={data} />
       </HeroStatsWrapper>
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
