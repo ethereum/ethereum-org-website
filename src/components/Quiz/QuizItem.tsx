@@ -1,37 +1,28 @@
-import { useContext } from "react"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
-import allQuizzesData from "../../data/quizzes"
-import { QuizzesListItem } from "../../types"
-import { trackCustomEvent } from "../../utils/matomo"
+import type { QuizzesSection } from "@/lib/types"
+
 import { Button } from "../Buttons"
 import { GreenTickIcon } from "../icons/quiz"
 import Tag from "../Tag"
 import Translation from "../Translation"
 
-import { QuizzesHubContext } from "./context"
+export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
+  isCompleted: boolean
+  numberOfQuestions: number
+  titleId: string
+  handleStart: () => void
+}
 
-const QuizItem: React.FC<QuizzesListItem> = (props) => {
-  const { id, level, quizHandler, modalHandler } = props
-  const {
-    userStats: { completed },
-  } = useContext(QuizzesHubContext)
-  const numberOfQuestions = allQuizzesData[id].questions.length
-  const isCompleted = JSON.parse(completed)[id][0]
-
+const QuizItem = ({
+  level,
+  isCompleted = false,
+  titleId,
+  numberOfQuestions,
+  handleStart,
+}: QuizzesListItemProps) => {
   const { t } = useTranslation("learn-quizzes")
-
-  const handleStart = () => {
-    quizHandler(id)
-    modalHandler(true)
-
-    trackCustomEvent({
-      eventCategory: "quiz_hub_events",
-      eventAction: "quizzes click",
-      eventName: `${id}`,
-    })
-  }
 
   return (
     <ListItem
@@ -57,7 +48,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
                 content: 'counter(list-counter) ". "',
               }}
             >
-              <Translation id={allQuizzesData[id].title} />
+              <Translation id={titleId} />
             </Text>
 
             {/* Show green tick if quizz was completed only */}
@@ -84,7 +75,7 @@ const QuizItem: React.FC<QuizzesListItem> = (props) => {
             w={{ base: "full", lg: "auto" }}
             onClick={handleStart}
           >
-            <Translation id="start" />
+            <Translation id="learn-quizzes:start" />
           </Button>
         </Box>
       </Flex>

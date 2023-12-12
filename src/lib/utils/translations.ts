@@ -74,10 +74,6 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
 
-  if (path.startsWith("/nft")) {
-    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
-  }
-
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
@@ -91,7 +87,15 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/developers/learning-tools")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-index", "page-developers-learning-tools"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-index",
+      "page-developers-learning-tools",
+    ]
+  }
+
+  if (path.startsWith("/developers/tutorials")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
   }
 
   if (path.startsWith("/developers/docs/scaling")) {
@@ -111,7 +115,8 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
-    path.startsWith("/security")
+    path.startsWith("/security") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
