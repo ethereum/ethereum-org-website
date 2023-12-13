@@ -5,6 +5,8 @@ import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
 
+import contentHeroImg from "../../../../public/mainnet.png"
+
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: ContentHeroComponent,
@@ -12,7 +14,7 @@ const meta = {
     layout: "none",
   },
   argTypes: {
-    heroImgSrc: {
+    heroImg: {
       table: {
         disable: true,
       },
@@ -21,9 +23,6 @@ const meta = {
 } satisfies Meta<ContentHeroType>
 
 export default meta
-
-// TODO: Double-check correct way to mock Next.js image data
-const mockImgData = "/mainnet.png"
 
 export const ContentHero: StoryObj = {
   render: () => {
@@ -52,7 +51,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImgSrc={mockImgData}
+        heroImg={contentHeroImg}
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}

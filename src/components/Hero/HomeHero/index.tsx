@@ -7,15 +7,15 @@ import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
 import Morpher from "@/components/Morpher"
 
-export type HomeHeroProps = Pick<CommonHeroProps, "heroImgSrc">
+export type HomeHeroProps = Pick<CommonHeroProps, "heroImg">
 
-const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
+const HomeHero = ({ heroImg }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
   return (
     <Box>
       <Box h={440}>
         <Image
-          src={heroImgSrc}
+          src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
           w="full"
           h="full"
@@ -34,11 +34,11 @@ const HomeHero = ({ heroImgSrc }: HomeHeroProps) => {
           <Morpher />
           <VStack spacing="6">
             <Heading as="h1" size="2xl">
-              {t("page-index-title")}
+              {t("page-index:page-index-title")}
             </Heading>
-            <Text size="xl">{t("page-index-description")}</Text>
+            <Text size="xl">{t("page-index:page-index-description")}</Text>
             <ButtonLink href="/learn/">
-              {t("page-index-title-button")}
+              {t("page-index:page-index-title-button")}
             </ButtonLink>
           </VStack>
         </Stack>
