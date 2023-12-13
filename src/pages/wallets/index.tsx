@@ -1,8 +1,15 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box,type BoxProps, Flex, Heading,Text as ChakraText } from "@chakra-ui/react"
+import {
+  Box,
+  type BoxProps,
+  Flex,
+  Heading,
+  Text as ChakraText,
+} from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -124,12 +131,16 @@ const cards = [
   {
     emoji: ":dollar:",
     title: <Translation id="page-wallets:page-wallets-manage-funds" />,
-    description: <Translation id="page-wallets:page-wallets-manage-funds-desc" />,
+    description: (
+      <Translation id="page-wallets:page-wallets-manage-funds-desc" />
+    ),
   },
   {
     emoji: ":frame_with_picture:",
     title: <Translation id="page-wallets:page-wallets-your-ethereum-account" />,
-    description: <Translation id="page-wallets:page-wallets-your-ethereum-account-desc" />,
+    description: (
+      <Translation id="page-wallets:page-wallets-your-ethereum-account-desc" />
+    ),
   },
   {
     emoji: ":bust_in_silhouette:",
@@ -153,7 +164,9 @@ const types = [
   },
   {
     emoji: ":globe_with_meridians:",
-    description: <Translation id="page-wallets:page-wallets-web-browser-extension" />,
+    description: (
+      <Translation id="page-wallets:page-wallets-web-browser-extension" />
+    ),
   },
   {
     emoji: ":desktop_computer:",
@@ -187,7 +200,9 @@ const guides = [
     link: "/guides/how-to-create-an-ethereum-account/",
   },
   {
-    title: <Translation id="page-wallets:additional-reading-how-to-use-a-wallet" />,
+    title: (
+      <Translation id="page-wallets:additional-reading-how-to-use-a-wallet" />
+    ),
     link: "/guides/how-to-use-a-wallet/",
   },
 ]
@@ -203,12 +218,12 @@ export const getStaticProps = (async (context) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       lastDeployDate,
-      locale,
     },
   }
 }) satisfies GetStaticProps<SSRConfig>
 
-const WalletsPage = ({locale}) => {
+const WalletsPage = () => {
+  const { locale } = useRouter()
   const { t } = useTranslation("page-wallets")
 
   const heroContent = {
@@ -263,9 +278,7 @@ const WalletsPage = ({locale}) => {
       <PageHero content={heroContent} isReverse />
       <GrayContainer>
         <Intro>
-          <H2>
-            {t("page-wallets-whats-a-wallet")}
-          </H2>
+          <H2>{t("page-wallets-whats-a-wallet")}</H2>
         </Intro>
         <TwoColumnContent mb={0}>
           <Box
@@ -276,21 +289,13 @@ const WalletsPage = ({locale}) => {
             mt={{ lg: 0 }}
             maxWidth={{ lg: "100%" }}
           >
-            <Text>
-              {t("page-wallets-description")}
-            </Text>
-            <Text>
-              {t("page-wallets-desc-2")}
-            </Text>
+            <Text>{t("page-wallets-description")}</Text>
+            <Text>{t("page-wallets-desc-2")}</Text>
             <CardList items={guides} mb={{ base: 6, lg: 0 }} />
           </Box>
           <RightColumn>
-            <Text>
-              {t("page-wallets-desc-3")}
-            </Text>
-            <Text>
-              {t("page-wallets-desc-4")}
-            </Text>
+            <Text>{t("page-wallets-desc-3")}</Text>
+            <Text>{t("page-wallets-desc-4")}</Text>
           </RightColumn>
         </TwoColumnContent>
         <Content>
@@ -308,40 +313,24 @@ const WalletsPage = ({locale}) => {
       </GrayContainer>
       <TwoColumnContent marginBottom={-8} marginTop={8}>
         <LeftColumn>
-          <H2>
-            {t("page-wallets-accounts-addresses")}
-          </H2>
-          <Text>
-            {t("page-wallets-accounts-addresses-desc")}
-          </Text>
+          <H2>{t("page-wallets-accounts-addresses")}</H2>
+          <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
           <ul>
             <li>
-              <Text>
-                {t("page-wallets-ethereum-account")}
-              </Text>
+              <Text>{t("page-wallets-ethereum-account")}</Text>
             </li>
             <li>
-              <Text>
-                {t("page-wallets-accounts-ethereum-addresses")}
-              </Text>
+              <Text>{t("page-wallets-accounts-ethereum-addresses")}</Text>
             </li>
             <li>
-              <Text>
-                {t("page-wallets-ethereum-wallet")}
-              </Text>
+              <Text>{t("page-wallets-ethereum-wallet")}</Text>
             </li>
           </ul>
-          <Text>
-            {t("page-wallets-most-wallets")}
-          </Text>
+          <Text>{t("page-wallets-most-wallets")}</Text>
         </LeftColumn>
         <RightColumn mt={{ base: 12, lg: 0 }}>
-          <H2>
-            {t("page-wallets-types")}
-          </H2>
-          <Text>
-            {t("page-wallets-types-desc")}
-          </Text>
+          <H2>{t("page-wallets-types")}</H2>
+          <Text>{t("page-wallets-types-desc")}</Text>
           <Box>
             {types.map((type, idx) => (
               <HorizontalCard
@@ -390,9 +379,7 @@ const WalletsPage = ({locale}) => {
         >
           <Content>
             <Flex flexDirection="column" alignItems="center" mb="8">
-              <H2>
-                {t("page-wallets-features-title")}
-              </H2>
+              <H2>{t("page-wallets-features-title")}</H2>
               <Box
                 fontSize="xl"
                 lineHeight={1.4}
@@ -418,11 +405,9 @@ const WalletsPage = ({locale}) => {
           </Content>
         </GrayContainer>
       )}
-       <TwoColumnContent>
+      <TwoColumnContent>
         <LeftColumn>
-          <H2>
-            {t("page-wallets-stay-safe")}
-          </H2>
+          <H2>{t("page-wallets-stay-safe")}</H2>
           <Box lineHeight={1.4} mb={6} color="text300">
             {t("page-wallets-stay-safe-desc")}
           </Box>
@@ -439,17 +424,13 @@ const WalletsPage = ({locale}) => {
               title={t("page-wallets-seed-phrase")}
               description={t("page-wallets-seed-phrase-desc")}
             >
-              <Text>
-                {t("page-wallets-seed-phrase-example")}
-              </Text>
+              <Text>{t("page-wallets-seed-phrase-example")}</Text>
               <Box bg="black" p={2} mb={4} borderRadius="base">
                 <Text fontFamily="monospace" fontSize="sm" color="white" mb={0}>
                   {t("page-wallets-seed-phrase-snippet")}
                 </Text>
               </Box>
-              <Text>
-                {t("page-wallets-seed-phrase-write-down")}
-              </Text>
+              <Text>{t("page-wallets-seed-phrase-write-down")}</Text>
             </ChecklistItem>
             <ChecklistItem
               key="2"
@@ -466,9 +447,7 @@ const WalletsPage = ({locale}) => {
           </Box>
         </LeftColumn>
         <RightColumn mt={{ base: 12, lg: 0 }}>
-          <H2>
-            {t("page-wallets-tips")}
-          </H2>
+          <H2>{t("page-wallets-tips")}</H2>
           <Box lineHeight={1.4} color="text300" mb={6}>
             {t("page-wallets-tips-community")}
           </Box>
@@ -477,9 +456,7 @@ const WalletsPage = ({locale}) => {
       </TwoColumnContent>
       <Content>
         <Divider />
-        <H2>
-          {t("page-wallets-explore")}
-        </H2>
+        <H2>{t("page-wallets-explore")}</H2>
         <CalloutCardContainer>
           <Callout
             flex="1 1 424px"
