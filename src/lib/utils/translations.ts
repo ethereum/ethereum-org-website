@@ -139,6 +139,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
+    path.startsWith("/wallets") ||
     path.startsWith("/web3") ||
     path.startsWith("/quizzes")
   ) {
@@ -152,6 +153,11 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (path === "run-a-node") {
     requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
   }
+
+  if (path.startsWith("/wallets")) {
+    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+  }
+
   return requiredNamespaces
 }
 

@@ -222,7 +222,7 @@ export const walletOnboardingSimData: SimulatorData = {
             </Text>
             <Text>
               Let&apos;s first look at how to receive ether (ETH),
-              Ethereum&amp;apos;s native currency.
+              Ethereum&apos;s native currency.
             </Text>
             <Text>
               Click the &quot;Receive&quot; button to see how to receive funds.
