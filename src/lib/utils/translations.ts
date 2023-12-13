@@ -54,6 +54,13 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-index"]
   }
 
+  if (path === "/contributing/translation-program/acknowledgements") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-contributing-translation-program-acknowledgements",
+    ]
+  }
+
   if (path.startsWith("/community")) {
     requiredNamespaces = [...requiredNamespaces, "page-community"]
   }
@@ -79,7 +86,10 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/staking/deposit-contract")) {
-    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-staking-deposit-contract",
+    ]
   }
 
   if (path.startsWith("/developers")) {
