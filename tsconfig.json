@@ -109,7 +109,6 @@
     "./src/components/Tag/Tag.stories.tsx",
     "./src/components/Tag/index.tsx",
     "./src/components/TitleCardList.tsx",
-    "./src/components/TranslationLeaderboard.tsx",
     "./src/components/UpgradeBannerNotification.tsx",
     "./src/hooks/useEthPrice.tsx"
   ]
