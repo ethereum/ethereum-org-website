@@ -215,7 +215,7 @@ const DevelopersPage = () => {
         description={t("page-developers-index:page-developers-meta-desc")}
       />
       <HubHero
-        heroImgSrc={HeroImage}
+        heroImg={HeroImage}
         header={`${t("page-developers-index:page-developers-title-1")} ${t(
           "page-developers-index:page-developers-title-2"
         )} ${t("page-developers-index:page-developers-title-3")}`}

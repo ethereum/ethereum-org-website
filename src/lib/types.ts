@@ -201,8 +201,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -216,7 +216,7 @@ export type IRemarkTocOptions = {
 }
 
 export type CommonHeroProps = {
-  heroImgSrc: ImageProps["src"]
+  heroImg: StaticImageData
   header: string
   title: string
   description: string
