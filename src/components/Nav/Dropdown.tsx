@@ -4,11 +4,9 @@ import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 
 import { BaseLink, type LinkProps } from "../Link"
 
-// TODO
-// import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-// import { getDirection } from "../../utils/translations"
-// import { Lang } from "../../utils/languages"
 import { ISection } from "./types"
+
+import { useOnClickOutside } from "@/hooks/useOnClickOutside"
 
 const NavLink = (props: LinkProps) => (
   <BaseLink
@@ -54,14 +52,12 @@ const NavDropdown: React.FC<IProps> & {
 } = ({ children, section, hasSubNav }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  // const { locale } = useRouter()
   const ref = createRef<HTMLLIElement>()
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
 
-  // TODO
-  // useOnClickOutside(ref, () => setIsOpen(false))
+  useOnClickOutside(ref, () => setIsOpen(false))
 
   // Toggle on `enter` key
   const onKeyDownHandler = (e: React.KeyboardEvent<HTMLElement>): void => {
