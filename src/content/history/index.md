@@ -384,7 +384,7 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 <ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>prevents transactions from one Ethereum chain from being rebroadcasted on an alternative chain, for example a testnet transaction being replayed on the main Ethereum chain.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-155">EIP-155</a> – <em>prevents transactions from one Ethereum chain from being re-broadcasted on an alternative chain, for example a testnet transaction being replayed on the main Ethereum chain.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-160">EIP-160</a> – <em>adjusts prices of <code>EXP</code> opcode – makes it more difficult to slow down the network via computationally expensive contract operations.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-161">EIP-161</a> – <em>allows for removal of empty accounts added via the DOS attacks.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-170">EIP-170</a> – <em>changes the maximum code size that a contract on the blockchain can have – to 24576 bytes.</em></li>
