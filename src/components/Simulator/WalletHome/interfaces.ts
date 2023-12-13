@@ -1,4 +1,4 @@
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import { StaticImageData } from "next/image"
 import type { IconProps } from "@chakra-ui/react"
 
 export interface TokenBalance {
@@ -16,5 +16,5 @@ export interface Contact {
 
 export interface NFT {
   title: string
-  image: IGatsbyImageData
+  image: StaticImageData
 }

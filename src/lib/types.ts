@@ -201,8 +201,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -216,7 +216,7 @@ export type IRemarkTocOptions = {
 }
 
 export type CommonHeroProps = {
-  heroImgSrc: ImageProps["src"]
+  heroImg: StaticImageData
   header: string
   title: string
   description: string
@@ -238,4 +238,24 @@ export interface LearningTool {
 
 export interface LearningToolsCardGridProps {
   category: Array<LearningTool>
+}
+
+// Staking stats data fetching
+type Data<T> = {
+  data: T
+}
+
+export type EthStoreResponse = Data<{
+  apr: number
+  effective_balances_sum_wei: number
+}>
+
+export type EpochResponse = Data<{
+  validatorscount: number
+}>
+
+export type BeaconchainData = {
+  totalEthStaked: number
+  validatorscount: number
+  apr: number
 }

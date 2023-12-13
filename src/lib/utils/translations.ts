@@ -66,6 +66,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     ]
   }
 
+  if (path.startsWith("/eth")) {
+    requiredNamespaces = [...requiredNamespaces, "page-eth"]
+  }
+
   if (path.startsWith("/glossary")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
@@ -78,12 +82,23 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/staking/deposit-contract")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+  }
+
   if (path.startsWith("/developers")) {
     requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
   }
 
+  if (path.startsWith("/learn")) {
+    requiredNamespaces = [...requiredNamespaces, "page-learn"]
+  }
+
   if (path.startsWith("/developers/local-environment")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-local-environment"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-local-environment",
+    ]
   }
 
   if (path.startsWith("/developers/learning-tools")) {
@@ -110,12 +125,27 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
 
+  if (path.startsWith("/roadmap/vision")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-roadmap-vision",
+      "page-upgrades-index",
+    ]
+  }
+
+  if (path.startsWith("/gas")) {
+    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
+    path.startsWith("/eth") ||
+    path.startsWith("/wallets") ||
+    path.startsWith("/web3") ||
     path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
@@ -129,6 +159,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
   }
 
+  if (path.startsWith("/wallets")) {
+    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+  }
+  
   if (path.startsWith("/wallets/find-wallet")) {
     requiredNamespaces = [...requiredNamespaces, "page-wallets", "page-wallets-find-wallet"]
   }

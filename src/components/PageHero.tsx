@@ -1,11 +1,5 @@
 import type { ReactNode } from "react"
-import {
-  Box,
-  Flex,
-  Heading,
-  Wrap,
-  WrapItem,
-} from "@chakra-ui/react"
+import { Box, Center, Flex, Heading, Wrap, WrapItem } from "@chakra-ui/react"
 
 import {
   Button,
@@ -28,7 +22,7 @@ type ButtonType = Omit<ButtonProps, "content"> & {
   matomo: MatomoEventOptions
 }
 
-type ContentType = {
+export type ContentType = {
   buttons?: (ButtonLinkType | ButtonType)[]
   title: ReactNode
   header: ReactNode
@@ -151,22 +145,26 @@ const PageHero = ({
         )}
         {children}
       </Box>
-      <Image
-        src={image}
+      <Center
         flex="1 1 50%"
-        alignSelf="center"
+        maxWidth={{ base: "560px", lg: "624px" }}
         mt={{ base: 0, lg: 12 }}
         ms={{ base: 0, lg: 12 }}
-        maxWidth={{ base: "560px", lg: "624px" }}
-        sizes="100%"
-        style={{
-          width: "100%",
-          height: "auto",
-          objectFit: "contain",
-        }}
-        alt={alt}
-        priority
-      />
+        w="full"
+        alignSelf="center"
+      >
+        <Image
+          src={image}
+          sizes="100%"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "contain",
+          }}
+          alt={alt}
+          priority
+        />
+      </Center>
     </Flex>
   </Box>
 )

@@ -27,7 +27,6 @@
     "./src/intl",
     "./src/data", // TODO: move to /public?
     // TODO: Remove these exclusions as we migrate the pages & templates that use these components
-    "./src/components/ActionCard.tsx",
     "./src/components/AdoptionChart.tsx",
     "./src/components/Alert/Alert.stories.tsx",
     "./src/components/Alert/index.tsx",
@@ -100,8 +99,6 @@
     "./src/components/StablecoinAccordion/useStablecoinAccordion.ts",
     "./src/components/StablecoinAccordion/utils.ts",
     "./src/components/StablecoinBoxGrid.tsx",
-    "./src/components/Staking/StakingHierarchy.tsx",
-    "./src/components/Staking/StakingStatsBox.tsx",
     "./src/components/StatErrorMessage.tsx",
     "./src/components/StatLoadingMessage.tsx",
     "./src/components/StatsBoxGrid/GridItem.tsx",
@@ -113,9 +110,6 @@
     "./src/components/Tag/index.tsx",
     "./src/components/TitleCardList.tsx",
     "./src/components/TranslationLeaderboard.tsx",
-    "./src/components/Trilemma/Triangle.tsx",
-    "./src/components/Trilemma/index.tsx",
-    "./src/components/Trilemma/useTrilemma.tsx",
     "./src/components/UpgradeBannerNotification.tsx",
     "./src/hooks/useEthPrice.tsx"
   ]

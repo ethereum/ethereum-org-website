@@ -12,13 +12,15 @@ import type { CommonHeroProps } from "@/lib/types"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
-const HubHero = ({
-  heroImgSrc,
-  title,
-  header,
-  description,
-  buttons,
-}: CommonHeroProps) => {
+const HubHero = (props: CommonHeroProps) => {
+  const { heroImg, title, header, description, buttons } = props
+
+  if (buttons && buttons.length > 2) {
+    throw Error(
+      "Can not have more than two call-to-action buttons in this hero component."
+    )
+  }
+
   const height = useBreakpointValue({
     base: "192px",
     md: "256px",
@@ -26,10 +28,11 @@ const HubHero = ({
     xl: "576px",
     "2xl": "672px",
   })
+
   return (
     <Box position="relative">
       <Image
-        src={heroImgSrc}
+        src={heroImg}
         alt=""
         priority
         sizes="100vw"

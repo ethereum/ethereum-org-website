@@ -1,3 +1,4 @@
+import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import HomeHeroComponent from "."
@@ -11,7 +12,7 @@ const meta = {
     layout: "none",
   },
   argTypes: {
-    heroImgSrc: {
+    heroImg: {
       table: {
         disable: true,
       },
@@ -21,10 +22,11 @@ const meta = {
 
 export default meta
 
-// TODO: Double-check correct way to mock Next.js image data
-const mockImgData = "/home/hero.png"
+import homeHeroImg from "../../../../public/home/hero.png"
 
 export const HomeHero: StoryObj<typeof meta> = {
-  args: { heroImgSrc: mockImgData },
+  args: {
+    heroImg: homeHeroImg,
+  },
   render: (args) => <HomeHeroComponent {...args} />,
 }

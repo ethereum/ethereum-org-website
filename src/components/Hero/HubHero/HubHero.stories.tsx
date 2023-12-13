@@ -3,8 +3,6 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import type { CommonHeroProps as HubHeroProps } from "@/lib/types"
-
 import HubHeroComponent from "./"
 
 type HubHeroType = typeof HubHeroComponent
@@ -26,22 +24,23 @@ const meta = {
 
 export default meta
 
-// TODO: Double-check correct way to mock Next.js image data
-const mockImgData = "/heroes/learn-hub-hero.png"
+import { CommonHeroProps } from "@/lib/types"
+
+import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {
     title: "learn-hub",
     header: "hero-header",
     description: "hero-subtitle",
-    heroImgSrc: mockImgData,
+    heroImg: learnHubHeroImg,
   },
 
   render: ({ title, header, description, ...props }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
 
-    const buttons: HubHeroProps["buttons"] = [
+    const buttons: CommonHeroProps["buttons"] = [
       {
         content: t("hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",

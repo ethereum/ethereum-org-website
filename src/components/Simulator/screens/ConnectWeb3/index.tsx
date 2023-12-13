@@ -7,8 +7,9 @@ import {
 } from "react-icons/ri"
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 
+import { Image } from "@/components/Image"
+
 import { useEthPrice } from "../../../../hooks/useEthPrice"
-import GatsbyImage from "../../../GatsbyImage"
 import {
   BASE_ANIMATION_DELAY_SEC,
   defaultTokenBalances,
@@ -19,7 +20,6 @@ import type { PhoneScreenProps } from "../../interfaces"
 import { NotificationPopover } from "../../NotificationPopover"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
-import { useNFT } from "../../WalletHome/hooks/useNFT"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
 import { Browser } from "./Browser"
@@ -27,9 +27,16 @@ import { EXAMPLE_APP_URL } from "./constants"
 import { Slider } from "./Slider"
 import { Web3App } from "./Web3App"
 
+import NFTImage from "@/public/deep-panic.png"
+
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
-  const NFTs = useNFT()
+  const NFTs = [
+    {
+      title: "Cool art",
+      image: NFTImage,
+    },
+  ]
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
@@ -46,7 +53,12 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
     [ethPrice]
   )
   const [activeTabIndex, setActiveTabIndex] = useState(1)
-  const nfts = useNFT()
+  const nfts = [
+    {
+      title: "Cool art",
+      image: NFTImage,
+    },
+  ]
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
@@ -129,7 +141,7 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                 Your collection (1)
               </Text>
               <Flex gap={2} mb={6}>
-                <GatsbyImage image={NFTs[0].image} alt="NFT Image" />
+                <Image src={NFTs[0].image} width={120} height={120} alt="NFT Image" />
                 <NotificationPopover
                   title="Example walkthrough"
                   content="These are some things you could do as the owner of your NFTs"
