@@ -20,7 +20,6 @@ import type { PhoneScreenProps } from "../../interfaces"
 import { NotificationPopover } from "../../NotificationPopover"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
-import { useNFT } from "../../WalletHome/hooks/useNFT"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
 import { Browser } from "./Browser"
@@ -28,9 +27,16 @@ import { EXAMPLE_APP_URL } from "./constants"
 import { Slider } from "./Slider"
 import { Web3App } from "./Web3App"
 
+import NFTImage from "@/public/deep-panic.png"
+
 export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
   const { progressStepper, step } = nav
-  const NFTs = useNFT()
+  const NFTs = [
+    {
+      title: "Cool art",
+      image: NFTImage,
+    },
+  ]
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
@@ -47,7 +53,12 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
     [ethPrice]
   )
   const [activeTabIndex, setActiveTabIndex] = useState(1)
-  const nfts = useNFT()
+  const nfts = [
+    {
+      title: "Cool art",
+      image: NFTImage,
+    },
+  ]
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },

@@ -207,6 +207,9 @@ const guides = [
   },
 ]
 
+type Props = SSRConfig & {
+  lastDeployDate: string
+}
 export const getStaticProps = (async (context) => {
   const { locale } = context
   const lastDeployDate = getLastDeployDate()
@@ -220,7 +223,7 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
 const WalletsPage = () => {
   const { locale } = useRouter()
