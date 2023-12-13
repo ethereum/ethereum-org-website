@@ -155,8 +155,8 @@ const FindWalletPage = () => {
           w={{ base: "full", sm: "50%" }}
           src={FindWalletHeroImage}
           alt=""
-          loading="eager"
-          objectFit="contain"
+          priority
+          style={{ objectFit: "contain" }}
         />
       </Flex>
 
