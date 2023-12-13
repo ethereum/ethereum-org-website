@@ -85,86 +85,86 @@ const EnergyConsumptionChart: React.FC = () => {
   const data = useBreakpointValue<Data>({
     base: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-global-data-centers-label"),
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-btc-pow-label"),
         amount: 149,
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-gaming-us-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-eth-pos-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     sm: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-global-data-centers-label"),
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-btc-pow-label"),
         amount: 149,
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-gold-mining-cbeci-label"),
+        name: t("page-what-is-ethereum:energy-consumption-gold-mining-cbeci-label"),
         amount: 131,
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-netflix-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-netflix-label"),
         amount: 0.457,
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-eth-pos-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },
     ],
     md: [
       {
-        name: t("energy-consumption-chart-global-data-centers-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-global-data-centers-label"),
         amount: 190,
         color: "#FF0000",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-btc-pow-label"),
         amount: 149,
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-gold-mining-cbeci-label"),
+        name: t("page-what-is-ethereum:energy-consumption-gold-mining-cbeci-label"),
         amount: 131,
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-gaming-us-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
-        name: t("energy-consumption-chart-eth-pow-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-eth-pow-label"),
         amount: 21,
         color: "#C1B6F5",
       },
@@ -174,22 +174,22 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-netflix-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-netflix-label"),
         amount: 0.457,
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-paypal-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-paypal-label"),
         amount: 0.26,
         color: "#C1B6F5",
       },
       {
-        name: t("energy-consumption-chart-airbnb-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-airbnb-label"),
         amount: 0.02,
         color: "#E50914",
       },
       {
-        name: t("energy-consumption-chart-eth-pos-label"),
+        name: t("page-what-is-ethereum:energy-consumption-chart-eth-pos-label"),
         amount: 0.0026,
         color: "#C1B6F5",
       },

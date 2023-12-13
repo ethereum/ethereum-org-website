@@ -617,7 +617,9 @@ const WhatIsEthereumPage = () => {
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-smart-contract-title")}</H2>
-              <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-1" />
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-1" />
+              </Text>
               <Text>{t("page-what-is-ethereum-smart-contract-desc-2")}</Text>
               <Text>{t("page-what-is-ethereum-smart-contract-desc-3")}</Text>
               <ButtonRow>
@@ -661,7 +663,7 @@ const WhatIsEthereumPage = () => {
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
               <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
-              <Text>{t("page-what-is-ethereum-energy-desc-2")}</Text>
+              <Text><Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2"/></Text>
               <ButtonRow>
                 <ButtonLink to="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}
@@ -771,9 +773,9 @@ const WhatIsEthereumPage = () => {
             flex="1 1 416px"
             minH="full"
             image={community}
-            titleKey="page-what-is-ethereum-community"
+            titleKey="page-what-is-ethereum:page-what-is-ethereum-community"
             alt={t("page-what-is-ethereum-alt-img-comm")}
-            descriptionKey="page-what-is-ethereum-comm-desc"
+            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-comm-desc"
           >
             <Box>
               <ButtonLink to="/community/">
