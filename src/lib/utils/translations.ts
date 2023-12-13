@@ -66,6 +66,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     ]
   }
 
+  if (path.startsWith("/eth")) {
+    requiredNamespaces = [...requiredNamespaces, "page-eth"]
+  }
+
   if (path.startsWith("/glossary")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
@@ -78,8 +82,16 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/staking/deposit-contract")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+  }
+
   if (path.startsWith("/developers")) {
     requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
+  }
+
+  if (path.startsWith("/learn")) {
+    requiredNamespaces = [...requiredNamespaces, "page-learn"]
   }
 
   if (path.startsWith("/developers/local-environment")) {
@@ -132,11 +144,14 @@ const getRequiredNamespacesForPath = (path: string) => {
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
+    path.startsWith("/eth") ||
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
-    path.startsWith("/quizzes") ||
-    path.startsWith("/what-is-ethereum")
+    path.startsWith("/wallets") ||
+    path.startsWith("/web3") ||
+    path.startsWith("/what-is-ethereum") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
@@ -148,6 +163,11 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (path === "run-a-node") {
     requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
   }
+
+  if (path.startsWith("/wallets")) {
+    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+  }
+
   return requiredNamespaces
 }
 

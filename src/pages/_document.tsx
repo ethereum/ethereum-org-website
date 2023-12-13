@@ -26,9 +26,9 @@ class Document extends NextDocument {
       <Html dir={dir} lang={locale}>
         <Head>
           {/* favicon */}
-          <link rel="icon" type="image/x-icon" href="favicon.png" />
+          <link rel="icon" type="image/x-icon" href="/favicon.png" />
           {/* manifest */}
-          <link rel="manifest" href="manifest.json" />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
