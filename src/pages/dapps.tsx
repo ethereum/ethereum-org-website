@@ -1400,7 +1400,6 @@ const DappsPage = () => {
         <Text>{t("page-dapps-beginner-friendly-description")}</Text>
         <StyledCardGrid>
           {editorChoices.map((choice, idx) => (
-            // TODO: Override with height=80px? Component uses 100px
             <ProductCard
               key={idx}
               background={choice.background}
