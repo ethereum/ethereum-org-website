@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react"
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -28,7 +28,7 @@ export const Simulator: React.FC<IProps> = ({ children, data }) => {
   const [step, setStep] = useState(0) // 0-indexed to use as array index
 
   // Track pathID
-  const pathId = getValidPathId(router.query.sim as PathId)
+  const pathId = getValidPathId(router.query.sim as string)
   const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
   const totalSteps: number = simulator ? simulator.explanations.length : 0
 
@@ -36,7 +36,8 @@ export const Simulator: React.FC<IProps> = ({ children, data }) => {
   const isOpen = !!pathId
 
   const clearUrlParams = () => {
-    router.replace(router.pathname + `#${SIMULATOR_ID}`)
+    const pathWithoutParams = router.asPath.replace(/\?[^\#]*/, "")
+    router.replace(pathWithoutParams)
   }
 
   // When simulator closed: log event, clear URL params and close modal
@@ -53,8 +54,8 @@ export const Simulator: React.FC<IProps> = ({ children, data }) => {
   // Remove URL search param if invalid pathId
   useEffect(() => {
     setStep(0)
-    if (!pathId && router.asPath !== "/wallets#sim") clearUrlParams()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    if (!pathId) clearUrlParams()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId])
 
   // Navigation helpers
