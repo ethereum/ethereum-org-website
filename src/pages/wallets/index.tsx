@@ -127,85 +127,6 @@ const CalloutCardContainer = (props: ChildOnlyProp) => (
   <CardContainer mt={16} {...props} />
 )
 
-const cards = [
-  {
-    emoji: ":dollar:",
-    title: <Translation id="page-wallets:page-wallets-manage-funds" />,
-    description: (
-      <Translation id="page-wallets:page-wallets-manage-funds-desc" />
-    ),
-  },
-  {
-    emoji: ":frame_with_picture:",
-    title: <Translation id="page-wallets:page-wallets-your-ethereum-account" />,
-    description: (
-      <Translation id="page-wallets:page-wallets-your-ethereum-account-desc" />
-    ),
-  },
-  {
-    emoji: ":bust_in_silhouette:",
-    title: <Translation id="page-wallets:page-wallets-your-login" />,
-    description: <Translation id="page-wallets:page-wallets-your-login-desc" />,
-  },
-]
-
-const types = [
-  {
-    emoji: ":cd:",
-    description: <Translation id="page-wallets:page-wallets-cd" />,
-  },
-  {
-    emoji: ":mobile_phone:",
-    description: <Translation id="page-wallets:page-wallets-mobile" />,
-  },
-  {
-    emoji: ":globe_with_meridians:",
-    description: <Translation id="page-wallets:page-wallets-web-browser" />,
-  },
-  {
-    emoji: ":globe_with_meridians:",
-    description: (
-      <Translation id="page-wallets:page-wallets-web-browser-extension" />
-    ),
-  },
-  {
-    emoji: ":desktop_computer:",
-    description: <Translation id="page-wallets:page-wallets-desktop" />,
-  },
-]
-
-const articles = [
-  {
-    title: <Translation id="page-wallets:page-wallets-protecting-yourself" />,
-    description: "MyCrypto",
-    link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
-  },
-  {
-    title: <Translation id="page-wallets:page-wallets-keys-to-safety" />,
-    description: <Translation id="page-wallets:page-wallets-blog" />,
-    link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
-  },
-  {
-    title: <Translation id="page-wallets:page-wallets-how-to-store" />,
-    description: "ConsenSys",
-    link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-  },
-]
-
-const guides = [
-  {
-    title: (
-      <Translation id="page-wallets:additional-reading-how-to-create-an-ethereum-account" />
-    ),
-    link: "/guides/how-to-create-an-ethereum-account/",
-  },
-  {
-    title: (
-      <Translation id="page-wallets:additional-reading-how-to-use-a-wallet" />
-    ),
-    link: "/guides/how-to-use-a-wallet/",
-  },
-]
 
 type Props = SSRConfig & {
   lastDeployDate: string
@@ -271,6 +192,76 @@ const WalletsPage = () => {
             },
           ],
   }
+
+  const cards = [
+    {
+      emoji: ":dollar:",
+      title: t("page-wallets-manage-funds"),
+      description: t("page-wallets-manage-funds-desc"),
+    },
+    {
+      emoji: ":frame_with_picture:",
+      title: t("page-wallets-your-ethereum-account"),
+      description: t("page-wallets-your-ethereum-account-desc"),
+    },
+    {
+      emoji: ":bust_in_silhouette:",
+      title: t("page-wallets-your-login"),
+      description: t("page-wallets-your-login-desc"),
+    },
+  ]
+  
+  const types = [
+    {
+      emoji: ":cd:",
+      description: t("page-wallets-cd"),
+    },
+    {
+      emoji: ":mobile_phone:",
+      description: t("page-wallets-mobile"),
+    },
+    {
+      emoji: ":globe_with_meridians:",
+      description: t("page-wallets-web-browser"),
+    },
+    {
+      emoji: ":globe_with_meridians:",
+      description: t("page-wallets-web-browser-extension"),
+    },
+    {
+      emoji: ":desktop_computer:",
+      description: t("page-wallets-desktop"),
+    },
+  ]
+  
+  const articles = [
+    {
+      title: t("page-wallets-protecting-yourself"),
+      description: "MyCrypto",
+      link: "https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds",
+    },
+    {
+      title: t("page-wallets-keys-to-safety"),
+      description: t("page-wallets-blog"),
+      link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
+    },
+    {
+      title: t("page-wallets-how-to-store"),
+      description: "ConsenSys",
+      link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
+    },
+  ]
+  
+  const guides = [
+    {
+      title: t("additional-reading-how-to-create-an-ethereum-account"),
+      link: "/guides/how-to-create-an-ethereum-account/",
+    },
+    {
+      title: t("additional-reading-how-to-use-a-wallet"),
+      link: "/guides/how-to-use-a-wallet/",
+    },
+  ]
 
   return (
     <Page>
