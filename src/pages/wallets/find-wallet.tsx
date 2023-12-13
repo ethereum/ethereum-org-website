@@ -4,7 +4,22 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay, Flex, Hide, Show, Text, useDisclosure, useTheme } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Hide,
+  Show,
+  Text,
+  useDisclosure,
+  useTheme,
+} from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -74,7 +89,9 @@ export type FiltersType = typeof filterDefault
 export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage("/wallets/find-wallet")
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/wallets/find-wallet"
+  )
   const lastDeployDate = getLastDeployDate()
 
   return {
@@ -115,7 +132,7 @@ const FindWalletPage = () => {
     setSelectedPersona(NaN)
     setFilters(filterDefault)
   }
-  
+
   return (
     <Flex direction="column" position="relative" w="full">
       <PageMetadata
@@ -144,20 +161,20 @@ const FindWalletPage = () => {
           >
             {t("page-find-wallet-title")}
           </OldHeading>
-          <Subtitle>
-            {t("page-find-wallet-description")}
-          </Subtitle>
-          <Subtitle>
-            {t("page-find-wallet-desc-2")}
-          </Subtitle>
+          <Subtitle>{t("page-find-wallet-description")}</Subtitle>
+          <Subtitle>{t("page-find-wallet-desc-2")}</Subtitle>
         </Box>
-        <Image
-          w={{ base: "full", sm: "50%" }}
-          src={FindWalletHeroImage}
-          alt=""
-          priority
-          style={{ objectFit: "contain" }}
-        />
+        <Center w={{ base: "full", sm: "50%" }}>
+          <Image
+            src={FindWalletHeroImage}
+            width={600}
+            alt=""
+            priority
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </Center>
       </Flex>
 
       <Hide above="lg">
@@ -193,9 +210,7 @@ const FindWalletPage = () => {
             }}
           >
             <Box>
-              <Text>
-                {t("page-find-wallet-filters")}
-              </Text>
+              <Text>{t("page-find-wallet-filters")}</Text>
               <Text fontSize="sm" lineHeight="14px" color="body.medium">
                 {Object.values(filters).reduce(
                   (acc, filter) => (filter ? acc + 1 : acc),
@@ -278,10 +293,7 @@ const FindWalletPage = () => {
             },
           }}
         >
-          <WalletTable
-            filters={filters}
-            walletData={randomizedWalletData}
-          />
+          <WalletTable filters={filters} walletData={randomizedWalletData} />
         </Box>
       </Flex>
     </Flex>
