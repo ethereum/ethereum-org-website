@@ -7,12 +7,13 @@ import { IPropsItemsList } from "@/components/TableOfContents/ItemsList"
 
 import { trimmedTitle } from "@/lib/utils/toc"
 
-export interface IPropsTableOfContentsLink {
+export type TableOfContentsLinkProps = {
   item: ToCItem
 }
-const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
+
+const TableOfContentsLink = ({
   item: { title, url },
-}) => {
+}: TableOfContentsLinkProps) => {
   let isActive = false
   if (typeof window !== `undefined`) {
     isActive = window.location.hash === url
@@ -43,7 +44,7 @@ const TableOfContentsLink: React.FC<IPropsTableOfContentsLink> = ({
   )
 }
 
-const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
+const ItemsList = ({ items, depth, maxDepth }: IPropsItemsList) => {
   // Return early if maxDepth hit, or if no items
   if (depth > maxDepth || !items) return null
   return (
@@ -57,14 +58,15 @@ const ItemsList: React.FC<IPropsItemsList> = ({ items, depth, maxDepth }) => {
   )
 }
 
-interface IPropsToC {
-  items: Array<ToCItem>
+type UpgradeTableOfContentsProps = {
+  items: ToCItem[]
   maxDepth?: number
 }
-const UpgradeTableOfContents: React.FC<IPropsToC> = ({
+
+const UpgradeTableOfContents = ({
   items,
   maxDepth = 1,
-}) => (
+}: UpgradeTableOfContentsProps) => (
   <Box
     as="nav"
     p={0}
