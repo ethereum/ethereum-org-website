@@ -130,11 +130,6 @@ export type QuizzesSection = {
   next?: string
 }
 
-export type QuizzesListItem = QuizzesSection & {
-  quizHandler: (id: string) => void
-  modalHandler: (isModalOpen: boolean) => void
-}
-
 export type QuizStatus = "neutral" | "success" | "error"
 
 export type CompletedQuizzes = { [key: string]: [boolean, number] }
@@ -142,7 +137,7 @@ export type CompletedQuizzes = { [key: string]: [boolean, number] }
 export type UserStats = {
   score: number
   average: number[]
-  completed: string
+  completed: CompletedQuizzes
 }
 
 export type QuizShareStats = { score: number; total: number }
@@ -206,8 +201,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -221,7 +216,7 @@ export type IRemarkTocOptions = {
 }
 
 export type CommonHeroProps = {
-  heroImgSrc: ImageProps["src"]
+  heroImg: StaticImageData
   header: string
   title: string
   description: string

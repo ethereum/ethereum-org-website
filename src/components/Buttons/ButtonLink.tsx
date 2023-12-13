@@ -1,14 +1,20 @@
-import React from "react"
+import Button, { type ButtonProps } from "@/components/Buttons/Button"
+import { BaseLink, type LinkProps } from "@/components/Link"
 
-import { BaseLink, LinkProps } from "../Link"
+import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
-import type { IProps as IButtonProps } from "./Button"
-import Button from "./Button"
+export type ButtonLinkProps = LinkProps &
+  Omit<ButtonProps, "toId" | "onClick"> & {
+    customEventOptions?: MatomoEventOptions
+  }
 
-export type ButtonLinkProps = LinkProps & Omit<IButtonProps, "toId">
-
-const ButtonLink: React.FC<ButtonLinkProps> = (props) => {
-  return <Button as={BaseLink} activeStyle={{}} {...props} />
+const ButtonLink = ({ customEventOptions, ...props }: ButtonLinkProps) => {
+  const handleClick = () => {
+    customEventOptions && trackCustomEvent(customEventOptions)
+  }
+  return (
+    <Button as={BaseLink} activeStyle={{}} {...props} onClick={handleClick} />
+  )
 }
 
 export default ButtonLink
