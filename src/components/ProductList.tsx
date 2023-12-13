@@ -8,10 +8,10 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import { ButtonLink } from "./Buttons"
-import GatsbyImage from "./GatsbyImage"
-import OldHeading from "./OldHeading"
-import Translation from "./Translation"
+import { ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
 
 export interface Content {
   title: string
@@ -63,8 +63,8 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
           >
             <Box width="5rem">
               {image && (
-                <GatsbyImage
-                  image={image}
+                <Image
+                  src={image}
                   alt={alt}
                   boxShadow={shadow}
                   borderRadius="sm"
@@ -97,7 +97,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  <Translation id="page-dapps-ready-button" />
+                  <Translation id="page-layer-2:page-dapps-ready-button" />
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}
