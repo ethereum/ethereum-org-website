@@ -78,6 +78,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/staking/deposit-contract")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+  }
+
   if (path.startsWith("/developers")) {
     requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
   }
@@ -136,6 +140,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
     path.startsWith("/wallets") ||
+    path.startsWith("/web3") ||
     path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
