@@ -111,9 +111,9 @@ Une fois que vous avez fini de modifier le fichier JSON, enregistrez les modific
 
 ## Étape 5 : Créer une instance de votre contrat {#instance-contract}
 
-À présent, pour interagir avec notre contrat, nous avons besoin de l'instancier dans notre code. Pour ce faire, nous aurons besoin de l'adresse du contrat que nous pouvons obtenir à partir du déploiement ou d'[Etherscan](https://goerli.etherscan.io/) en recherchant l'adresse que vous avez utilisée pour déployer le contrat.
+À présent, pour interagir avec notre contrat, nous avons besoin de l'instancier dans notre code. Pour ce faire, nous aurons besoin de l'adresse du contrat que nous pouvons obtenir à partir du déploiement ou d'[Etherscan](https://sepolia.etherscan.io/) en recherchant l'adresse que vous avez utilisée pour déployer le contrat.
 
-![Consultez l'adresse de votre contrat sur Etherscan](./viewContractEtherscan.png)
+![Consultez l'adresse de votre contrat sur Etherscan](./view-contract-etherscan.png)
 
 Dans l'exemple ci-dessus, notre adresse de contrat est 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
@@ -132,7 +132,7 @@ Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nou
 Ajoutez votre clé publique à votre fichier `.env` — si vous avez terminé la première partie du tutoriel, notre fichier `.env` devrait maintenant ressembler à ceci :
 
 ```js
-API_URL = "https://eth-goerli.g.alchemy.com/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -318,9 +318,9 @@ Maintenant, exécutez `node scripts/mint-nft.js` pour déployer votre NFT. Aprè
 
     Vérifiez le Mempool d'Alchemy pour voir l'état de votre transaction !
 
-Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) pour voir l'état de votre transaction (en attente, minée ou rejetée par le réseau). Si votre transaction a été rejetée, il est également utile de vérifier [Goerli Etherscan](https://goerli.etherscan.io/) et rechercher votre hachage de transaction.
+Ensuite, consultez votre [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) pour voir l'état de votre transaction (en attente, minée ou rejetée par le réseau). Si votre transaction a été rejetée, il est également utile de vérifier [Sepolia Etherscan](https://sepolia.etherscan.io/) et rechercher votre hachage de transaction.
 
-![Voir le hachage de votre transaction NFT sur Etherscan](./viewNFTEtherscan.png)_Voir le hachage de votre transaction NFT sur Etherscan_
+![Voir le hachage de votre transaction NFT sur Etherscan](./view-nft-etherscan.png)_Voir le hachage de votre transaction NFT sur Etherscan_
 
 Et voilà ! Vous avez maintenant déployé ET frappé un NFT sur la blockchain Ethereum. <Emoji text=":money_mouth_face:" size={1} />
 

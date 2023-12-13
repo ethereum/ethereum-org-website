@@ -1,9 +1,16 @@
-import i18nConfigs from "../../../i18n.config.json"
-import { DEFAULT_LOCALE } from "../constants"
-import { Lang } from "../types"
+import { Lang, Languages } from "@/lib/types"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import i18nConfig from "../../../i18n.config.json"
+
+// same data as in the `config.json` but indexed by language code
+export const languages: Languages = i18nConfig.reduce((result, config) => {
+  return { ...result, [config.code]: config }
+}, {} as Languages)
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
-  const langConfig = i18nConfigs.filter((language) => language.code === lang)
+  const langConfig = i18nConfig.filter((language) => language.code === lang)
 
   if (!langConfig.length)
     throw new Error("Language code not found in isLangRightToLeft")
@@ -17,7 +24,7 @@ export const getLocaleForNumberFormat = (locale: Lang): Lang =>
   locale === "fa" ? DEFAULT_LOCALE : locale
 
 export const isLang = (lang: string) => {
-  return i18nConfigs.map((language) => language.code).includes(lang)
+  return i18nConfig.map((language) => language.code).includes(lang)
 }
 
 export const getRequiredNamespacesForPage = (
@@ -43,6 +50,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-assets"]
   }
 
+  if (path === "/") {
+    requiredNamespaces = [...requiredNamespaces, "page-index"]
+  }
+
   if (path.startsWith("/community")) {
     requiredNamespaces = [...requiredNamespaces, "page-community"]
   }
@@ -55,6 +66,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     ]
   }
 
+  if (path.startsWith("/eth")) {
+    requiredNamespaces = [...requiredNamespaces, "page-eth"]
+  }
+
   if (path.startsWith("/glossary")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
@@ -63,16 +78,63 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
 
-  if (path.startsWith("/nft")) {
-    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
-  }
-
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
+  if (path.startsWith("/staking/deposit-contract")) {
+    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+  }
+
+  if (path.startsWith("/developers")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
+  }
+
+  if (path.startsWith("/learn")) {
+    requiredNamespaces = [...requiredNamespaces, "page-learn"]
+  }
+
+  if (path.startsWith("/developers/local-environment")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-local-environment",
+    ]
+  }
+
+  if (path.startsWith("/developers/learning-tools")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-index",
+      "page-developers-learning-tools",
+    ]
+  }
+
+  if (path.startsWith("/developers/tutorials")) {
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+  }
+
   if (path.startsWith("/developers/docs/scaling")) {
     requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
+  }
+
+  if (path === "get-eth") {
+    requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
+  }
+
+  if (path.startsWith("/languages")) {
+    requiredNamespaces = [...requiredNamespaces, "page-languages"]
+  }
+
+  if (path.startsWith("/roadmap/vision")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-roadmap-vision",
+      "page-upgrades-index",
+    ]
+  }
+
+  if (path.startsWith("/gas")) {
+    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
   // Quizzes
@@ -80,13 +142,25 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
-    path.startsWith("/security")
+    path.startsWith("/security") ||
+    path.startsWith("/eth") ||
+    path.startsWith("/wallets") ||
+    path.startsWith("/web3") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
 
   if (path === "bug-bounty") {
     requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
+  }
+
+  if (path === "run-a-node") {
+    requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
+  }
+
+  if (path.startsWith("/wallets")) {
+    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
   }
 
   return requiredNamespaces

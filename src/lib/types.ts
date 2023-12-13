@@ -1,6 +1,7 @@
 import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
+import { StaticImageData } from "next/image"
 import type { ReactElement, ReactNode } from "react"
 
 import type {
@@ -12,6 +13,9 @@ import type {
   UpgradeFrontmatter,
   UseCasesFrontmatter,
 } from "@/lib/interfaces"
+
+import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import { ImageProps } from "@/components/Image"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -104,6 +108,10 @@ export type I18nLocale = {
   dateFormat: string
 }
 
+export type Languages = {
+  [lang in Lang]: I18nLocale
+}
+
 export type TranslationKey = string
 
 export type LoadingState<T> =
@@ -122,11 +130,6 @@ export type QuizzesSection = {
   next?: string
 }
 
-export type QuizzesListItem = QuizzesSection & {
-  quizHandler: (id: string) => void
-  modalHandler: (isModalOpen: boolean) => void
-}
-
 export type QuizStatus = "neutral" | "success" | "error"
 
 export type CompletedQuizzes = { [key: string]: [boolean, number] }
@@ -134,7 +137,7 @@ export type CompletedQuizzes = { [key: string]: [boolean, number] }
 export type UserStats = {
   score: number
   average: number[]
-  completed: string
+  completed: CompletedQuizzes
 }
 
 export type QuizShareStats = { score: number; total: number }
@@ -210,4 +213,49 @@ export type ToCItem = {
 export type IRemarkTocOptions = {
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
+}
+
+export type CommonHeroProps = {
+  heroImg: StaticImageData
+  header: string
+  title: string
+  description: string
+  buttons?: [CallToActionProps, CallToActionProps?]
+}
+
+// Learning Tools
+
+export interface LearningTool {
+  name: string
+  description: string
+  url: string
+  image: StaticImageData
+  alt: string
+  background: string
+  subjects: Array<string>
+  locales?: Array<Lang>
+}
+
+export interface LearningToolsCardGridProps {
+  category: Array<LearningTool>
+}
+
+// Staking stats data fetching
+type Data<T> = {
+  data: T
+}
+
+export type EthStoreResponse = Data<{
+  apr: number
+  effective_balances_sum_wei: number
+}>
+
+export type EpochResponse = Data<{
+  validatorscount: number
+}>
+
+export type BeaconchainData = {
+  totalEthStaked: number
+  validatorscount: number
+  apr: number
 }

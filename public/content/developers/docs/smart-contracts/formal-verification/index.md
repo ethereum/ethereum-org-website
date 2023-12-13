@@ -227,7 +227,7 @@ Also, it is not always possible for program verifiers to determine if a property
 
 ### Program verifiers for checking correctness {#program-verifiers}
 
-**Certora Prover** - _Certora Prover is an automatic formal verification tool for checking code correctness in smart contracts. Specifications are written in CVL (Certora Verification Language), with property violations detected using a comibination of static analysis and constraint-solving._
+**Certora Prover** - _Certora Prover is an automatic formal verification tool for checking code correctness in smart contracts. Specifications are written in CVL (Certora Verification Language), with property violations detected using a combination of static analysis and constraint-solving._
 
 - [Website](https://www.certora.com/)
 - [Documentation](https://docs.certora.com/en/latest/index.html)

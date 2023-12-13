@@ -61,6 +61,6 @@ Pastikan Anda membaca [prinsip-prinsip kami](/contributing/design-principles/) d
 
 Meskipun situs web ini adalah sumber terbuka dan siapa pun dapat mengerjakannya, kami memiliki sebuah tim yang didedikasikan untuk ethereum.org dan proyek web Yayasan Ethereum lainnya.
 
-Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat posisi pekerjaan yang sesuai untuk Anda, kunjungi [Discord](https://discord.gg/CetY6Y4) dan beri tahu kami bagaimana Anda ingin bekerja dengan kami!
+Kami akan memposting lowongan pekerjaan apa pun di sini. Jika Anda tidak melihat posisi pekerjaan yang sesuai untuk Anda, kunjungi [Discord](https://discord.gg/ethereum-org) dan beri tahu kami bagaimana Anda ingin bekerja dengan kami!
 
 Ingin pekerjaan di luar tim ethereum.org? [Lihat pekerjaan terkait Ethereum lainnya](/community/get-involved/#ethereum-jobs/).

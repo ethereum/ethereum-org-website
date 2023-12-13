@@ -421,11 +421,13 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
             <Wallet
               onClick={() => {
                 updateMoreInfo(wallet.key)
-                trackCustomEvent({
-                  eventCategory: "WalletMoreInfo",
-                  eventAction: `More info wallet`,
-                  eventName: `More info ${wallet.name} ${wallet.moreInfo}`,
-                })
+                // Log "more info" event only on expanding
+                wallet.moreInfo &&
+                  trackCustomEvent({
+                    eventCategory: "WalletMoreInfo",
+                    eventAction: `More info wallet`,
+                    eventName: `More info ${wallet.name}`,
+                  })
               }}
             >
               <Td lineHeight="revert">
@@ -467,7 +469,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                           customEventOptions={{
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
-                            eventName: `${wallet.name} ${idx}`,
+                            eventName: `Website: ${wallet.name} ${idx}`,
                             eventValue: JSON.stringify(filters),
                           }}
                         >
@@ -480,7 +482,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `${wallet.name} ${idx}`,
+                              eventName: `Twitter: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >
@@ -498,7 +500,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `${wallet.name} ${idx}`,
+                              eventName: `Discord: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >

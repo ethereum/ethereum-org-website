@@ -27,7 +27,7 @@ Din 2014, Fundația Ethereum a organizat Devcon, conferința anuală pentru toț
 
 Puteți accesa conținutul video al prezentărilor conferinței pentru fiecare an, de la înființarea sa, la [archive.devcon.org](https://archive.devcon.org/).
 
-Aflaţi mai multe la [devcon.org](https://devcon.org/), consultaţi [Devcon Blog](https://blog.ethereum.org/category/devcon/) sau urmăriţi [@efdevcon](https://twitter.com/EFDevcon) pentru a afla anunţurile de ultimă oră.
+Aflaţi mai multe la [devcon.org](https://devcon.org/), consultaţi [Devcon Blog](https://devcon.org/en/blogs/) sau urmăriţi [@efdevcon](https://twitter.com/EFDevcon) pentru a afla anunţurile de ultimă oră.
 
 ### Programul de burse {#fellowship-program}
 

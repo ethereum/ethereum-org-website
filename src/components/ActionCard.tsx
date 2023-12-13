@@ -1,20 +1,18 @@
-import React, { ReactNode } from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import type { ReactNode } from "react"
 import {
   Box,
-  BoxProps,
+  type BoxProps,
   Flex,
   Heading,
-  Image,
   LinkBox,
-  LinkBoxProps,
+  type LinkBoxProps,
   LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import GatsbyImage from "./GatsbyImage"
-import { BaseLink } from "./Link"
-import Text from "./OldText"
+import { Image, type ImageProps } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
@@ -28,11 +26,11 @@ const linkFocusStyles: BoxProps = {
   textDecoration: "none",
 }
 
-export interface IProps extends Omit<LinkBoxProps, "title"> {
-  children?: React.ReactNode
+export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
+  children?: ReactNode
   to: string
   alt?: string
-  image: IGatsbyImageData | string
+  image: ImageProps["src"]
   title: ReactNode
   description?: ReactNode
   className?: string
@@ -40,7 +38,7 @@ export interface IProps extends Omit<LinkBoxProps, "title"> {
   isBottom?: boolean
 }
 
-const ActionCard: React.FC<IProps> = ({
+const ActionCard = ({
   to,
   alt,
   image,
@@ -50,9 +48,8 @@ const ActionCard: React.FC<IProps> = ({
   className,
   isRight,
   isBottom = true,
-  ...rest
-}) => {
-  const isImageURL = typeof image === "string"
+  ...props
+}: ActionCardProps) => {
   const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
 
   return (
@@ -66,10 +63,10 @@ const ActionCard: React.FC<IProps> = ({
       _focus={linkBoxFocusStyles}
       className={className}
       m={4}
-      {...rest}
+      {...props}
     >
       <Flex
-        minH="260px"
+        h="260px"
         bg="cardGradient"
         direction="row"
         justify={isRight ? "flex-end" : "center"}
@@ -77,29 +74,12 @@ const ActionCard: React.FC<IProps> = ({
         className="action-card-image-wrapper"
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
       >
-        {!isImageURL && (
-          <GatsbyImage
-            alt={alt || ""}
-            maxH="257px"
-            maxW={{ base: "311px", sm: "372px" }}
-            minW="100px"
-            minH="100px"
-            image={image}
-            sizes="full"
-          />
-        )}
-        {isImageURL && (
-          <Image
-            alt={alt || ""}
-            maxH="257px"
-            maxW={{ base: "311px", sm: "372px" }}
-            minW="100px"
-            minH="100px"
-            src={image}
-            sizes="full"
-            className="action-card-image"
-          />
-        )}
+        <Image
+          src={image}
+          width={220}
+          alt={alt || ""}
+          style={{ objectFit: "cover" }}
+        />
       </Flex>
       <Box p={6} className="action-card-content">
         <Heading

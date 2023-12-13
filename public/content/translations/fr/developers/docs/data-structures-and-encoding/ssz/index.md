@@ -109,11 +109,11 @@ Cet objet sérialisé SSZ peut ensuite être merkléisé, c'est-à-dire transfor
 
 Il existe également des cas où les feuilles de l'arbre ne se répartissent pas naturellement de manière égale comme dans l'exemple ci-dessus. Par exemple, la feuille 4 pourrait être un conteneur avec plusieurs éléments qui nécessitent une "profondeur" supplémentaire à ajouter à l'arbre de Merkle, créant ainsi un arbre inégal.
 
-Au lieu de nous référer à ces éléments de l'arbre comme feuille X, nœud X, etc., nous pouvons leur donner des indices généralisés, en commençant par la racine = 1 et en comptant de gauche à droite sur chaque niveau. Il s'agit de l'indice généralisé expliqué ci-dessus. Chaque élément de la liste sérialisée a un index généralisé égal à `2**depth + idx` où idx est sa position indexée zéro dans l'objet sérialisé et la profondeur est le nombre de niveaux dans l'arbre de Merkle, qui peut être déterminé comme la racine carrée du nombre d'éléments (feuilles).
+Au lieu de nous référer à ces éléments de l'arbre comme feuille X, nœud X, etc., nous pouvons leur donner des indices généralisés, en commençant par la racine = 1 et en comptant de gauche à droite sur chaque niveau. Il s'agit de l'indice généralisé expliqué ci-dessus. Chaque élément dans la liste sérialisée a un index généralisé égal à `2**profondeur + idx`, où idx est sa position indexée à partir de zéro dans l'objet sérialisé et la profondeur est le nombre de niveaux dans l'arbre de Merkle, qui peut être déterminé comme le logarithme en base deux du nombre d'éléments (feuilles).
 
 ## Indices généralisés {#generalized-indices}
 
-Un indice généralisé est un nombre entier qui représente un nœud dans un arbre de Merkle binaire où chaque nœud a un index généralisé `2 ** profondeur + index dans la rangée`.
+Un indice généralisé est un nombre entier qui représente un nœud dans un arbre de Merkle binaire où chaque nœud a un index généralisé `2 ** depth + index in row`.
 
 ```
         1           --depth = 0  2**0 + 0 = 1

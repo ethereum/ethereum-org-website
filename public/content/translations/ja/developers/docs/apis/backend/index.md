@@ -143,21 +143,40 @@ lang: ja
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [フォーラム](https://forum.moralis.io/)
 
-\*_GetBlock - Web3 開発のためのブロックチェーン・アズ・ア・サービス_
+**Chainbase -** **_イーサリアム向けのオールインワン Web3 データインフラストラクチャ_**
+
+- [chainbase.com](https://chainbase.com/)
+- [ドキュメンテーション](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**GetBlock-** **_Web3 開発用の Blockchain-as-a-service_**
 
 - [GetBlock.io](https://getblock.io/)
-- [ドキュメンテーション](https://getblock.io/docs/)
+- [ドキュメント](https://getblock.io/docs/)
+
+**BlockPi -** **_より効率的かつ高速な RPC サービスを提供_**
+
+- [blockpi.io](https://blockpi.io/)
+- [ドキュメント](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
+**Tokenview -** **_ジェネラルなマルチクリプトブロックチェーン API プラットフォーム_**
+
+- [services.tokenview.io](https://services.tokenview.io/)
+- [ドキュメント](https://services.tokeniew/docs?type=api)
+- [GitHub](https://github.com/Tokenview)
 
 ## 参考文献 {#further-reading}
 
-_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ このページを編集して追加しましょう！_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
 ## 関連トピック {#related-topics}
 
-- [ノードとクライアント](/developers/docs/nodes-and-clients/)
+- [ ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [Javascript でイーサリアムブロックチェーンを使用するための Web3js のセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトで web3.js をセットアップするための手順_
-- [JavaScript からスマートコントラクトの呼び出し](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Dai トークンを使った、JavaScript でスマートコントラクト機能の呼び出し方法_
+- [Javascript でイーサリアムブロックチェーンを使用するための Web3js のセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトで web3.js をセットアップするための手順。_
+- [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI トークンを使って、JavaScript からスマートコントラクトを呼び出す方法を確認する。_

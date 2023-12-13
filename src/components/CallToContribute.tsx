@@ -95,7 +95,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
         </DescriptionParagraph>
         <DescriptionParagraph>
           <Translation id="page-developers-docs:page-calltocontribute-desc-4" />{" "}
-          <InlineLink to="https://discord.gg/CetY6Y4">
+          <InlineLink to="https://discord.gg/ethereum-org">
             <Translation id="page-developers-docs:page-calltocontribute-link-2" />
           </InlineLink>{" "}
         </DescriptionParagraph>

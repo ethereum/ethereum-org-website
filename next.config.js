@@ -23,10 +23,23 @@ module.exports = (phase, { defaultConfig }) => {
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
-        use: 'yaml-loader',
+        use: "yaml-loader",
+      })
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: "@svgr/webpack",
+      })
+      config.module.rules.push({
+        test: /\.mp4$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+          },
+        },
       });
-  
-      return config;
+
+      return config
     },
     i18n,
   }

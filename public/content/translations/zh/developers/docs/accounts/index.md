@@ -67,9 +67,9 @@ lang: zh
 
 `fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd036415f`
 
-使用[椭圆曲线数字签名算法](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)从私钥生成公钥。 通过获取公钥 Keccak-256 哈希的最后 20 个字节并校验码前面添加 `0x`，可以为帐户获取公共地址。
+使用[椭圆曲线加密法](https://wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm)从私钥生成公钥。 通过获取公钥 Keccak-256 哈希的最后 20 个字节并校验码前面添加 `0x`，可以为帐户获取公共地址。
 
-下面的示例显示如何使用一种名为 [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) 的签名工具生成一个新帐户。 Clef 是一个集成在以太坊客户端 [Geth](https://geth.ethereum.org) 中的账户管理和签名工具。 `clef newaccount` 命令创建一个新的密钥对并保存在加密的密钥库中。
+下面的示例显示如何使用一种名为 [Clef](https://geth.ethereum.org/docs/tools/clef/introduction) 的签名工具生成一个新帐户。 Clef 是一个集成在以太坊客户端 [Geth](https://geth.ethereum.org) 中的帐户管理和签名工具。 `clef newaccount` 命令创建一个新的密钥对并保存在加密的密钥库中。
 
 ```
 > clef newaccount --keystore <path>
@@ -81,7 +81,7 @@ Please enter a password for the new account to be created:
 INFO [10-28|16:19:09.156] Your new key was generated       address=0x5e97870f263700f46aa00d967821199b9bc5a120
 WARN [10-28|16:19:09.306] Please backup your key file      path=/home/user/go-ethereum/data/keystore/UTC--2022-10-28T15-19-08.000825927Z--5e97870f263700f46aa00d967821199b9bc5a120
 WARN [10-28|16:19:09.306] Please remember your password!
-生成账户 0x5e97870f263700f46aa00d967821199b9bc5a120
+生成帐户 0x5e97870f263700f46aa00d967821199b9bc5a120
 ```
 
 [Geth 相关文档](https://geth.ethereum.org/docs)

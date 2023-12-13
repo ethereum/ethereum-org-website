@@ -7,7 +7,7 @@ import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 
-export interface IProps extends FlexProps {
+export type CalloutBannerProps = FlexProps & {
   children?: React.ReactNode
   image: ImageProps["src"]
   imageWidth?: ImageProps["width"]
@@ -17,7 +17,7 @@ export interface IProps extends FlexProps {
   alt: string
 }
 
-const CalloutBanner: React.FC<IProps> = ({
+const CalloutBanner = ({
   image,
   imageWidth,
   maxImageWidth,
@@ -25,8 +25,8 @@ const CalloutBanner: React.FC<IProps> = ({
   descriptionKey,
   alt,
   children,
-  ...restProps
-}) => {
+  ...props
+}: CalloutBannerProps) => {
   const { t } = useTranslation("page-staking")
 
   return (
@@ -36,21 +36,22 @@ const CalloutBanner: React.FC<IProps> = ({
       bg="layer2Gradient"
       p={{ base: 8, sm: 12 }}
       borderRadius="base"
-      {...restProps}
+      {...props}
     >
       {image && (
-        <Image
-          src={image}
-          alt={alt}
-          w={imageWidth}
-          maxW={`${maxImageWidth}px`}
-          style={{
-            objectFit: "contain",
-          }}
-          alignSelf="center"
-          mt={-24}
-          mb={{ base: 0, lg: -24 }}
-        />
+        <Flex>
+          <Image
+            src={image}
+            alt={alt}
+            w={imageWidth}
+            style={{
+              objectFit: "contain",
+            }}
+            alignSelf="center"
+            mt={-24}
+            mb={{ base: 0, lg: -24 }}
+          />
+        </Flex>
       )}
       <Flex
         flexGrow={1}

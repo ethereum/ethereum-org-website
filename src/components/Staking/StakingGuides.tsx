@@ -1,12 +1,12 @@
 import { useTranslation } from "next-i18next"
 import { Stack } from "@chakra-ui/react"
 
-import CardList, { CardListItem } from "@/components/CardList"
+import CardList, { type CardListItem } from "@/components/CardList"
 
-const StakingGuides: React.FC = () => {
+const StakingGuides = () => {
   const { t } = useTranslation("page-staking")
 
-  const guides: Array<CardListItem> = [
+  const guides: CardListItem[] = [
     {
       title: t("page-staking-guide-title-coincashew-ethereum"),
       link: "https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet",

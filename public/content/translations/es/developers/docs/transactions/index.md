@@ -189,7 +189,7 @@ Ethereum ha mejorado y ahora es compatible con múltiples tipos de transacciones
 Donde los campos indican:
 
 - `TransactionType` - un número entre 0 y 0x7f, para un total de 128 posibles tipos de transacción.
-- `TransactionPayload` - una matriz de bytes arbitraria definida según el tipo de transacción.
+- `TransactionPayload`: una matriz de bytes arbitraria definida según el tipo de transacción.
 
 ## Más información {#further-reading}
 

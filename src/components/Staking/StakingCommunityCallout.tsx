@@ -22,7 +22,7 @@ const StakingCommunityCallout: React.FC<IProps> = (props) => {
       alt={t("page-staking-image-alt")}
       titleKey={"page-staking-join-community"}
       descriptionKey={"page-staking-join-community-desc"}
-      maxImageWidth={350}
+      imageWidth={350}
     >
       <Flex gap={4} direction={{ base: "column", md: "row" }}>
         <ButtonLink
