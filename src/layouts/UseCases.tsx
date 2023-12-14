@@ -189,7 +189,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
           </Text>
         </BannerNotification>
       </Show>
-      <HeroContainer>
+      <HeroContainer key={frontmatter.title}>
         <TitleCard>
           <Emoji fontSize="4rem" text={frontmatter.emoji!} />
           <Title>{frontmatter.title}</Title>
