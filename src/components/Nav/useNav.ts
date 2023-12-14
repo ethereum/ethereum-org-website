@@ -5,8 +5,9 @@ import { useColorMode } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { IItem, ISections } from "./types"
 import { FROM_QUERY } from "@/lib/constants"
+
+import { IItem, ISections } from "./types"
 
 export const useNav = ({ path }: { path: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
