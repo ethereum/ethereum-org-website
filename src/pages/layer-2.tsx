@@ -259,7 +259,7 @@ const Layer2Page = () => {
             </Text>
             <Text>{t("layer-2-what-is-layer-2-2")}</Text>
           </Box>
-          <Box flex="50%">
+          <Center flex="50%" w="full">
             <Image
               src={WhatIsEthereumImage}
               alt=""
@@ -267,7 +267,7 @@ const Layer2Page = () => {
               maxH="400px"
               style={{ objectFit: "contain" }}
             />
-          </Box>
+          </Center>
         </TwoColumnContent>
       </ContentBox>
       {/* What is Layer 1 Section */}
@@ -320,7 +320,7 @@ const Layer2Page = () => {
       {/* Why Layer 2 Section */}
       <ContentBox>
         <TwoColumnContent>
-          <Center flex="50%">
+          <Center flex="50%" w="full">
             <Image
               src={DAOImage}
               alt=""
@@ -395,7 +395,7 @@ const Layer2Page = () => {
             <Text>{t("layer-2-rollups-1")}</Text>
             <Text>{t("layer-2-rollups-2")}</Text>
           </Box>
-          <Center flex="50%">
+          <Center flex="50%" w="full">
             <Image
               src={RollupImage}
               alt=""
