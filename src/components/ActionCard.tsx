@@ -31,6 +31,7 @@ export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
   to: string
   alt?: string
   image: ImageProps["src"]
+  imageWidth?: number
   title: ReactNode
   description?: ReactNode
   className?: string
@@ -42,6 +43,7 @@ const ActionCard = ({
   to,
   alt,
   image,
+  imageWidth = 220,
   title,
   description,
   children,
@@ -76,7 +78,7 @@ const ActionCard = ({
       >
         <Image
           src={image}
-          width={220}
+          width={imageWidth}
           alt={alt || ""}
           style={{ objectFit: "cover" }}
         />

@@ -363,6 +363,7 @@ const HomePage = ({
                 alt={card.alt}
                 to={card.to}
                 image={card.image}
+                imageWidth={320}
               />
             ))}
           </CardContainer>
@@ -571,6 +572,7 @@ const HomePage = ({
                 alt={tout.alt}
                 to={tout.to}
                 image={tout.image}
+                imageWidth={320}
                 boxShadow={cardBoxShadow}
               />
             )
