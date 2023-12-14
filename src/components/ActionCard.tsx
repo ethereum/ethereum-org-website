@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 import type { ReactNode } from "react"
 import {
   Box,
@@ -10,7 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { Image, type ImageProps } from "@/components/Image"
+import { Image } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 
@@ -30,7 +31,7 @@ export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
   children?: ReactNode
   to: string
   alt?: string
-  image: ImageProps["src"]
+  image: StaticImageData
   imageWidth?: number
   title: ReactNode
   description?: ReactNode
