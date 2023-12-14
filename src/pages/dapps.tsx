@@ -429,7 +429,7 @@ export const getStaticProps = (async (context) => {
 }) satisfies GetStaticProps<SSRConfig>
 
 const DappsPage = () => {
-  const { t } = useTranslation("page-dapps")
+  const { t } = useTranslation(["page-dapps", "common"])
   const { locale, query } = useRouter()
 
   const [selectedCategory, setCategory] = useState<CategoryType>(
@@ -1292,7 +1292,7 @@ const DappsPage = () => {
   ]
 
   const heroContent = {
-    title: t("decentralized-applications-dapps"),
+    title: t("common:decentralized-applications-dapps"),
     header: t("page-dapps-hero-header"),
     subtitle: t("page-dapps-hero-subtitle"),
     image: doge,
