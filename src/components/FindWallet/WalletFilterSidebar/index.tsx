@@ -13,11 +13,12 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { FiltersType } from "../../../pages/wallets/find-wallet"
-import { trackCustomEvent } from "../../../utils/matomo"
+import WalletFilterProfile from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
+import WalletFilterPersonas from "@/components/FindWallet/WalletFilterSidebar/WalletFilterProfile"
 
-import WalletFilterProfile from "./WalletFilterFeature"
-import WalletFilterPersonas from "./WalletFilterProfile"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { FiltersType } from "@/pages/wallets/find-wallet"
 
 const FilterTab = ({
   eventName,

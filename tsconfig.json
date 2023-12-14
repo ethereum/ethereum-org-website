@@ -99,8 +99,6 @@
     "./src/components/StablecoinAccordion/useStablecoinAccordion.ts",
     "./src/components/StablecoinAccordion/utils.ts",
     "./src/components/StablecoinBoxGrid.tsx",
-    "./src/components/Staking/StakingHierarchy.tsx",
-    "./src/components/Staking/StakingStatsBox.tsx",
     "./src/components/StatErrorMessage.tsx",
     "./src/components/StatLoadingMessage.tsx",
     "./src/components/StatsBoxGrid/GridItem.tsx",

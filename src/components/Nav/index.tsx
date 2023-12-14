@@ -38,8 +38,7 @@ const Nav: FC<IProps> = ({ path }) => {
       <Flex
         ref={navWrapperRef}
         as="nav"
-        // TODO
-        // aria-label={t("nav-primary")}
+        aria-label={t("nav-primary")}
         bg="background.base"
         borderBottom="1px"
         borderColor="rgba(0, 0, 0, 0.1)"
@@ -56,8 +55,7 @@ const Nav: FC<IProps> = ({ path }) => {
         >
           <BaseLink
             to="/"
-            // TODO
-            // aria-label={t("home")}
+            aria-label={t("home")}
             display="inline-flex"
             alignItems="center"
             textDecor="none"
@@ -127,8 +125,7 @@ const Nav: FC<IProps> = ({ path }) => {
       {shouldShowSubNav && (
         <Flex
           as="nav"
-          // TODO
-          // aria-label={t("nav-developers")}
+          aria-label={t("nav-developers")}
           display={{ base: "none", lg: "flex" }}
           bg="ednBackground"
           borderBottom="1px"
