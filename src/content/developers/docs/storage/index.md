@@ -33,6 +33,9 @@ Platforms with blockchain-based persistence:
 
 - Ethereum
 - [Arweave](https://www.arweave.org/)
+- [Bitcoin](https://www.bitcoin.org/en/bitcoin-core/)
+- [Litecoin](https://www.litecoin.org)
+- [Monero](https://www.getmonero.org/)
 
 ### Contract-based {#contract-based}
 
