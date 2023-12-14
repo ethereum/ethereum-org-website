@@ -1,5 +1,25 @@
 [
   {
+    "url": "https://updraft.cyfrin.io/courses/security",
+    "title": "Learn Smart Contract Auditing, Security, and DeFi",
+    "description": "The ultimate web3 security course for all those looking to be top smart contract developer or security researchers. We teach you all the cutting edge skills needed to make web3 safer and start a successful career in web3 security.",
+    "author": "Cyfrin Updraft",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "video",
+      "oracles",
+      "foundry",
+      "defi",
+      "fuzzing"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "1320",
+    "lang": "en",
+    "publishDate": "12/13/2023"
+  },
+  {
     "url": "https://youtu.be/umepbfKp5rI",
     "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
     "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
@@ -34,7 +54,9 @@
     "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "9",
     "lang": "en",
@@ -46,7 +68,9 @@
     "description": "Smart Contract Auditing | What it is, what to expect, and where to look for one. Everything you need to know!",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "5",
     "lang": "en",
@@ -58,7 +82,9 @@
     "description": "We look at formal verification & symbolic execution with two Trail of Bits Web3 security team members. Additionally, we review the value these techniques bring and compare them to other tools.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["security"],
+    "tags": [
+      "security"
+    ],
     "skillLevel": "intermediate",
     "timeToRead": "10",
     "lang": "en",
@@ -156,7 +182,11 @@
     "description": "We build a minimal Foundry project using a staking application to show you how to work with Foundry.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "foundry", "video"],
+    "tags": [
+      "solidity",
+      "foundry",
+      "video"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "19",
     "lang": "en",
@@ -188,7 +218,14 @@
     "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "typescript", "hardhat", "defi", "dao", "video"],
+    "tags": [
+      "solidity",
+      "typescript",
+      "hardhat",
+      "defi",
+      "dao",
+      "video"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "86",
     "lang": "en",
@@ -200,7 +237,13 @@
     "description": "Using Compound and Openzeppelin as a basis, we build a 100% on-chain DAO using an ERC20 governance token for votes.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity", "typescript", "hardhat", "defi", "dao"],
+    "tags": [
+      "solidity",
+      "typescript",
+      "hardhat",
+      "defi",
+      "dao"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "6",
     "lang": "en",
@@ -232,7 +275,9 @@
     "description": "We explore the steps one needs to take to enter the world as a blockchain developer and engineer. We talk about how to get there.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["solidity"],
+    "tags": [
+      "solidity"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "12",
     "lang": "en",
@@ -264,7 +309,12 @@
     "description": "Learn how to make multiple API calls to a blockchain node with a single API call to a multicall contract.",
     "author": "Patrick Collins",
     "authorGithub": "https://github.com/PatrickAlphaC",
-    "tags": ["brownie", "web3.py", "video", "python"],
+    "tags": [
+      "brownie",
+      "web3.py",
+      "video",
+      "python"
+    ],
     "skillLevel": "intermediate",
     "timeToRead": "15",
     "lang": "en",
@@ -398,7 +448,12 @@
     "description": "Hardhat's beginners guide to Ethereum contracts and dapp development",
     "author": "Hardhat",
     "authorGithub": "https://https://hardhat.org/",
-    "tags": ["hardhat", "solidity", "testing", "smart contracts"],
+    "tags": [
+      "hardhat",
+      "solidity",
+      "testing",
+      "smart contracts"
+    ],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "06/22/2021"
@@ -409,7 +464,13 @@
     "description": "Building Full Stack dapps with React, Ethers.js, Solidity, and Hardhat",
     "author": "Nader Dabit",
     "authorGithub": "https://github.com/dabit3",
-    "tags": ["solidity", "hardhat", "ethers.js", "smart contracts", "react"],
+    "tags": [
+      "solidity",
+      "hardhat",
+      "ethers.js",
+      "smart contracts",
+      "react"
+    ],
     "skillLevel": "beginner",
     "timeToRead": "18",
     "lang": "en",
@@ -421,7 +482,11 @@
     "description": "Build, mint, and send around your own ERC721!",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
-    "tags": ["solidity", "smart contracts", "react"],
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react"
+    ],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "08/03/2021"
@@ -432,7 +497,12 @@
     "description": "Build, test and ship your own decentralized staking app!",
     "author": "Austin Griffith",
     "authorGithub": "https://github.com/austintgriffith",
-    "tags": ["solidity", "smart contracts", "react", "testing"],
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "react",
+      "testing"
+    ],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "08/15/2021"
@@ -443,7 +513,10 @@
     "description": "Learn how to fetch the current price of Bitcoin, Ethereum and other cryptocurrencies in your Solidity smart contracts.",
     "author": "Harry Papacharissiou",
     "authorGithub": "https://github.com/kwsantiago",
-    "tags": ["solidity", "oracles"],
+    "tags": [
+      "solidity",
+      "oracles"
+    ],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "01/05/2021"
@@ -454,7 +527,12 @@
     "description": "devpill.me is a public good blockchain development guide aimed at becoming the go-to learning resource aggregator for building on Ethereum and its wider ecosystem of scaling solutions and applications.",
     "author": "dcbuilder",
     "authorGithub": "https://github.com/dcbuild3r",
-    "tags": ["frontend", "backend", "smart contracts", "solidity"],
+    "tags": [
+      "frontend",
+      "backend",
+      "smart contracts",
+      "solidity"
+    ],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "03/22/2023"
