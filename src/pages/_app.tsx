@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useRouter } from "next/router"
 import { appWithTranslation } from "next-i18next"
 // ChakraProvider import updated as recommended on https://github.com/chakra-ui/chakra-ui/issues/4975#issuecomment-1174234230
@@ -21,10 +22,13 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
 
   const { locale } = useRouter()
 
-  const theme = extendBaseTheme({
-    ...customTheme,
-    direction: isLangRightToLeft(locale as Lang) ? "rtl" : "ltr",
-  })
+  useEffect(() => {
+    if (!document) return
+    const dir: "rtl" | "ltr" = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
+    document.getElementsByTagName("html")[0].setAttribute("dir", dir)
+  }, [locale])
+
+  const theme = extendBaseTheme(customTheme)
 
   return (
     <>
