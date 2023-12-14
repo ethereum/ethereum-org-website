@@ -27,7 +27,6 @@ export const NotificationPopover: React.FC<IProps> = ({
   return (
     <Popover placement={placement}>
       <PopoverTrigger>{children}</PopoverTrigger>
-      <Portal>
         <PopoverContent
           bg="background.highlight"
           px={4}
@@ -46,7 +45,6 @@ export const NotificationPopover: React.FC<IProps> = ({
           </Flex>
           <PopoverBody>{content}</PopoverBody>
         </PopoverContent>
-      </Portal>
     </Popover>
   )
 }

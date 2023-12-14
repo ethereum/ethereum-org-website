@@ -150,6 +150,8 @@ const PageHero = ({
         maxWidth={{ base: "560px", lg: "624px" }}
         mt={{ base: 0, lg: 12 }}
         ms={{ base: 0, lg: 12 }}
+        w="full"
+        alignSelf="center"
       >
         <Image
           src={image}

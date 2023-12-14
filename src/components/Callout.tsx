@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { Flex, type FlexProps } from "@chakra-ui/react"
+import { Center, Flex, type FlexProps } from "@chakra-ui/react"
 
 import type { TranslationKey } from "@/lib/types"
 
@@ -49,16 +49,9 @@ const Callout: React.FC<IProps> = ({
       {...rest}
     >
       {image && (
-        <Image
-          src={image}
-          alt={alt || ""}
-          mt={-40}
-          alignSelf="center"
-          w={263}
-          h={200}
-          maxW="263px"
-          minH="200px"
-        />
+        <Center maxW="263px" minH="200px" mt={-40} alignSelf="center">
+          <Image src={image} alt={alt || ""} height={200} />
+        </Center>
       )}
       <Flex direction="column" justify="space-between" mt={10} h="full">
         <div>
