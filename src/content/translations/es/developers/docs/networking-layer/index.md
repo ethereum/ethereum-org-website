@@ -1,5 +1,5 @@
 ---
-title: "Ninguna llave\nBloque el texto del elemento (div)\nXpath: /div[@id=front-matter]/ul/li[1]/div[2]"
+title: Capa de red
 description: Introducción a la capa de red de Ethereum.
 lang: es
 sidebarDepth: 2

@@ -240,7 +240,7 @@ const TranslatorAcknowledgements = ({
         <List as="ol" styleType="decimal">
           <ListItem>
             <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1" />{" "}
-            <InlineLink to="https://discord.gg/CetY6Y4">
+            <InlineLink to="https://discord.gg/ethereum-org">
               <Translation id="page-contributing-translation-program-acknowledgements-how-to-claim-1-discord" />
             </InlineLink>
           </ListItem>
