@@ -22,6 +22,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
+import { useRouter } from "next/router"
 
 type Props = SSRConfig & {
   lastDeployDate: string
@@ -43,7 +44,7 @@ export const getStaticProps = (async (context) => {
   }
 }) satisfies GetStaticProps<Props>
 
-const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
+const Content = (props: BoxProps) => <Box py={4} px={10} w="full" {...props} />
 const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
 )
@@ -53,6 +54,8 @@ const Contributors = () => {
     "page-contributing-translation-program-contributors",
     "page-languages",
   ])
+  const router = useRouter()
+
   // TODO: Remove specific user checks once Acolad has updated their usernames
   const translatorData =
     allTimeData.data.flatMap(
@@ -100,7 +103,7 @@ const Contributors = () => {
       />
 
       <Content>
-        <Breadcrumbs slug={location.pathname} />
+        <Breadcrumbs slug={router.asPath} mt={12} />
         <ContentHeading
           as="h1"
           fontSize={{ base: "2.5rem", md: "5xl" }}
@@ -136,9 +139,9 @@ const Contributors = () => {
           )}
         </Text>
         <Text>
-          {t("page-languages-interested")}{" "}
+          {t("page-languages:page-languages-interested")}{" "}
           <InlineLink to="/contributing/translation-program/">
-            {t("page-languages-learn-more")}
+            {t("page-languages:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>
@@ -164,9 +167,9 @@ const Contributors = () => {
             })}
         </SimpleGrid>
         <Text>
-          {t("page-languages-interested")}{" "}
+          {t("page-languages:page-languages-interested")}{" "}
           <InlineLink to="/contributing/translation-program/">
-            {t("page-languages-learn-more")}
+            {t("page-languages:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>
