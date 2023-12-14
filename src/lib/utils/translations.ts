@@ -167,7 +167,7 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/wallets")) {
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "glossary"]
   }
 
   if (path.startsWith("/wallets/find-wallet")) {
@@ -185,7 +185,11 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
   let requiredNamespaces: string[] = []
 
   if (layout === "docs") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-docs",
+      "glossary",
+    ]
   }
 
   if (layout === "use-cases") {
@@ -193,6 +197,7 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
       ...requiredNamespaces,
       "template-usecase",
       "learn-quizzes",
+      "glossary",
     ]
   }
 
@@ -201,11 +206,16 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
       ...requiredNamespaces,
       "page-upgrades",
       "page-upgrades-index",
+      "glossary",
     ]
   }
 
   if (layout === "tutorial") {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-developers-tutorials",
+      "glossary",
+    ]
   }
 
   return requiredNamespaces
