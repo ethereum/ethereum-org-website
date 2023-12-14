@@ -58,10 +58,9 @@ const Layer2ProductCard: React.FC<IProps> = ({
         <Image
           src={image}
           alt={alt}
-          objectFit="contain"
-          alignSelf="center"
-          w={"100px"}
+          width={100}
           maxH={"257px"}
+          style={{ objectFit: "contain" }}
         />
       </Center>
       <Flex p={6} h="100%" direction="column">

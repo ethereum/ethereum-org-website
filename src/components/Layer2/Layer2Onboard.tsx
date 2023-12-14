@@ -357,9 +357,9 @@ const Layer2Onboard: React.FC<IProps> = ({
         <Box {...gridContentPlacementStyles.logo}>
           <Image
             src={ethIcon}
-            objectFit="contain"
             alt={ethIconAlt}
-            w="50px"
+            width={50}
+            style={{ objectFit: "contain" }}
           />
         </Box>
       </SimpleGrid>

@@ -2,7 +2,18 @@ import { merge } from "lodash"
 import { GetStaticProps } from "next"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Badge, Box, BoxProps, Center, Flex, GridItem, HeadingProps, ListItem, SimpleGrid, UnorderedList } from "@chakra-ui/react"
+import {
+  Badge,
+  Box,
+  BoxProps,
+  Center,
+  Flex,
+  GridItem,
+  HeadingProps,
+  ListItem,
+  SimpleGrid,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import type { CommonHeroProps, TranslationKey } from "@/lib/types"
 
@@ -46,7 +57,10 @@ import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
 interface ContentBoxProps extends BoxProps {
   isLightGrayBg?: boolean
 }
-const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }: ContentBoxProps) => (
+const ContentBox: React.FC<ContentBoxProps> = ({
+  isLightGrayBg,
+  ...rest
+}: ContentBoxProps) => (
   <Box
     px={8}
     py={12}
@@ -224,7 +238,7 @@ const Layer2Page = () => {
       },
     ],
   }
-  
+
   return (
     <Flex flexDirection="column" alignItems="center">
       <PageMetadata
@@ -243,33 +257,28 @@ const Layer2Page = () => {
             <Text>
               <Translation id="page-layer-2:layer-2-what-is-layer-2-1" />
             </Text>
-            <Text>
-              {t("layer-2-what-is-layer-2-2")}
-            </Text>
+            <Text>{t("layer-2-what-is-layer-2-2")}</Text>
           </Box>
           <Box flex="50%">
             <Image
               src={WhatIsEthereumImage}
               alt=""
+              width={624}
               maxH="400px"
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
           </Box>
         </TwoColumnContent>
       </ContentBox>
       {/* What is Layer 1 Section */}
       <ContentBox isLightGrayBg>
-        <SectionHeading>
-          {t("layer-2-what-is-layer-1-title")}
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-what-is-layer-1-title")}</SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <Text>
               <Translation id="page-layer-2:layer-2-what-is-layer-1-1" />
             </Text>
-            <Text>
-              {t("layer-2-what-is-layer-1-2")}
-            </Text>
+            <Text>{t("layer-2-what-is-layer-1-2")}</Text>
           </Box>
           <Box flex="50%">
             <Text>
@@ -315,8 +324,8 @@ const Layer2Page = () => {
             <Image
               src={DAOImage}
               alt=""
-              w="full"
-              objectFit="contain"
+              width={500}
+              style={{ objectFit: "contain" }}
             />
           </Center>
           <Box flex="50%">
@@ -333,9 +342,7 @@ const Layer2Page = () => {
             <SectionHeading as="h3">
               {t("layer-2-why-do-we-need-layer-2-scalability")}
             </SectionHeading>
-            <Text>
-              {t("layer-2-why-do-we-need-layer-2-scalability-1")}
-            </Text>
+            <Text>{t("layer-2-why-do-we-need-layer-2-scalability-1")}</Text>
             <Text>
               <Translation id="page-layer-2:layer-2-why-do-we-need-layer-2-scalability-2" />
             </Text>
@@ -381,25 +388,19 @@ const Layer2Page = () => {
             <Text>
               <Translation id="page-layer-2:layer-2-how-does-layer-2-work-1" />
             </Text>
-            <Text>
-              {t("layer-2-how-does-layer-2-work-2")}
-            </Text>
+            <Text>{t("layer-2-how-does-layer-2-work-2")}</Text>
             <SectionHeading as="h3">
               {t("layer-2-rollups-title")}
             </SectionHeading>
-            <Text>
-              {t("layer-2-rollups-1")}
-            </Text>
-            <Text>
-              {t("layer-2-rollups-2")}
-            </Text>
+            <Text>{t("layer-2-rollups-1")}</Text>
+            <Text>{t("layer-2-rollups-2")}</Text>
           </Box>
           <Center flex="50%">
             <Image
               src={RollupImage}
               alt=""
-              w="full"
-              objectFit="contain"
+              width={800}
+              style={{ objectFit: "contain" }}
             />
           </Center>
         </TwoColumnContent>
@@ -436,15 +437,9 @@ const Layer2Page = () => {
       {/* DYOR Section */}
       <ContentBox>
         <InfoBanner isWarning>
-          <SectionHeading>
-            {t("layer-2-dyor-title")}
-          </SectionHeading>
-          <Text>
-            {t("layer-2-dyor-1")}
-          </Text>
-          <Text>
-            {t("layer-2-dyor-2")}
-          </Text>
+          <SectionHeading>{t("layer-2-dyor-title")}</SectionHeading>
+          <Text>{t("layer-2-dyor-1")}</Text>
+          <Text>{t("layer-2-dyor-2")}</Text>
           <Text>
             <ButtonLink to="https://l2beat.com/scaling/risk">
               {t("layer-2-dyor-3")}
@@ -454,46 +449,54 @@ const Layer2Page = () => {
       </ContentBox>
       {/* Use Layer 2 Section */}
       <ContentBox id="use-layer-2">
-        <SectionHeading>
-          {t("layer-2-use-layer-2-title")}
-        </SectionHeading>
-        <Text>
-          {t("layer-2-use-layer-2-1")}
-        </Text>
-        <Text>
-          {t("layer-2-contract-accounts")}
-        </Text>
+        <SectionHeading>{t("layer-2-use-layer-2-title")}</SectionHeading>
+        <Text>{t("layer-2-use-layer-2-1")}</Text>
+        <Text>{t("layer-2-contract-accounts")}</Text>
         <SectionHeading as="h3">
           {t("layer-2-use-layer-2-generalized-title")}
         </SectionHeading>
-        <Text>
-          {t("layer-2-use-layer-2-generalized-1")}
-        </Text>
+        <Text>{t("layer-2-use-layer-2-generalized-1")}</Text>
         <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
-            .map(({ background, image, descriptionKey, website, noteKey, name, bridge, ecosystemPortal, tokenLists, purpose}, idx) => {
-              return (
-                <Layer2ProductCard
-                  key={idx}
-                  background={background}
-                  image={image}
-                  description={t(descriptionKey as TranslationKey)}
-                  url={website}
-                  note={t(noteKey as TranslationKey)}
-                  name={name}
-                  bridge={bridge}
-                  ecosystemPortal={ecosystemPortal}
-                  tokenLists={tokenLists}
-                >
-                  {purpose.map((purpose, index) => (
-                    <Badge key={index} me={2}>
-                      {purpose}
-                    </Badge>
-                  ))}
-                </Layer2ProductCard>
-              )
-            })}
+            .map(
+              (
+                {
+                  background,
+                  image,
+                  descriptionKey,
+                  website,
+                  noteKey,
+                  name,
+                  bridge,
+                  ecosystemPortal,
+                  tokenLists,
+                  purpose,
+                },
+                idx
+              ) => {
+                return (
+                  <Layer2ProductCard
+                    key={idx}
+                    background={background}
+                    image={image}
+                    description={t(descriptionKey as TranslationKey)}
+                    url={website}
+                    note={t(noteKey as TranslationKey)}
+                    name={name}
+                    bridge={bridge}
+                    ecosystemPortal={ecosystemPortal}
+                    tokenLists={tokenLists}
+                  >
+                    {purpose.map((purpose, index) => (
+                      <Badge key={index} me={2}>
+                        {purpose}
+                      </Badge>
+                    ))}
+                  </Layer2ProductCard>
+                )
+              }
+            )}
         </Layer2CardGrid>
       </ContentBox>
       {/* Layer 2 App Specific Section */}
@@ -501,49 +504,59 @@ const Layer2Page = () => {
         <SectionHeading as="h3">
           {t("layer-2-use-layer-2-application-specific-title")}
         </SectionHeading>
-        <Text>
-          {t("layer-2-use-layer-2-application-specific-1")}
-        </Text>
+        <Text>{t("layer-2-use-layer-2-application-specific-1")}</Text>
         <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
-            .map(({ background, image, descriptionKey, website, noteKey, name, bridge, ecosystemPortal, tokenLists, purpose}, idx) => {
-              return (
-                <Layer2ProductCard
-                  key={idx}
-                  background={background}
-                  image={image}
-                  description={t(descriptionKey as TranslationKey)}
-                  url={website}
-                  note={t(noteKey as TranslationKey)}
-                  name={name}
-                  bridge={bridge}
-                  ecosystemPortal={ecosystemPortal}
-                  tokenLists={tokenLists}
-                >
-                  {purpose.map((purpose, index) => (
-                    <Badge key={index} me={2}>
-                      {purpose}
-                    </Badge>
-                  ))}
-                </Layer2ProductCard>
-              )
-            })}
+            .map(
+              (
+                {
+                  background,
+                  image,
+                  descriptionKey,
+                  website,
+                  noteKey,
+                  name,
+                  bridge,
+                  ecosystemPortal,
+                  tokenLists,
+                  purpose,
+                },
+                idx
+              ) => {
+                return (
+                  <Layer2ProductCard
+                    key={idx}
+                    background={background}
+                    image={image}
+                    description={t(descriptionKey as TranslationKey)}
+                    url={website}
+                    note={t(noteKey as TranslationKey)}
+                    name={name}
+                    bridge={bridge}
+                    ecosystemPortal={ecosystemPortal}
+                    tokenLists={tokenLists}
+                  >
+                    {purpose.map((purpose, index) => (
+                      <Badge key={index} me={2}>
+                        {purpose}
+                      </Badge>
+                    ))}
+                  </Layer2ProductCard>
+                )
+              }
+            )}
         </Layer2CardGrid>
       </ContentBox>
       {/* Layer 2 Sidechain Section */}
       <ContentBox>
-        <SectionHeading>
-          {t("layer-2-sidechains-title")}
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-sidechains-title")}</SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <Text>
               <Translation id="page-layer-2:layer-2-sidechains-1" />
             </Text>
-            <Text>
-              {t("layer-2-sidechains-2")}
-            </Text>
+            <Text>{t("layer-2-sidechains-2")}</Text>
             <UnorderedList>
               <ListItem>
                 <InlineLink to="/developers/docs/scaling/sidechains/">
@@ -558,9 +571,7 @@ const Layer2Page = () => {
             </UnorderedList>
           </Box>
           <Box flex="50%">
-            <Text>
-              {t("layer-2-sidechains-4")}
-            </Text>
+            <Text>{t("layer-2-sidechains-4")}</Text>
           </Box>
         </TwoColumnContent>
       </ContentBox>
@@ -574,9 +585,7 @@ const Layer2Page = () => {
       </ContentBox>
       {/* Layer 2 Tools Section */}
       <ContentBox>
-        <SectionHeading>
-          {t("layer-2-tools-title")}
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-tools-title")}</SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <ProductList
@@ -594,24 +603,14 @@ const Layer2Page = () => {
       </ContentBox>
       {/* Layer 2 FAQ Section */}
       <ContentBox>
-        <SectionHeading>
-          {t("layer-2-faq-title")}
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-faq-title")}</SectionHeading>
         <ExpandableCard title={`${t("layer-2-faq-question-1-title")}`}>
-          <Text>
-            {t("layer-2-faq-question-1-description-1")}
-          </Text>
+          <Text>{t("layer-2-faq-question-1-description-1")}</Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-2-title")}`}>
-          <Text>
-            {t("layer-2-faq-question-2-description-1")}
-          </Text>
-          <Text>
-            {t("layer-2-faq-question-2-description-2")}
-          </Text>
-          <Text>
-            {t("layer-2-faq-question-2-description-3")}
-          </Text>
+          <Text>{t("layer-2-faq-question-2-description-1")}</Text>
+          <Text>{t("layer-2-faq-question-2-description-2")}</Text>
+          <Text>{t("layer-2-faq-question-2-description-3")}</Text>
           <Text>
             <InlineLink to="/developers/docs/scaling/optimistic-rollups/">
               {t("layer-2-more-info-on-optimistic-rollups")}
@@ -624,9 +623,7 @@ const Layer2Page = () => {
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
-          <Text>
-            {t("layer-2-faq-question-4-description-1")}
-          </Text>
+          <Text>{t("layer-2-faq-question-4-description-1")}</Text>
           <Text>
             <Translation id="page-layer-2:layer-2-faq-question-4-description-2" />
           </Text>
@@ -653,9 +650,7 @@ const Layer2Page = () => {
       </ContentBox>
       {/* Layer 2 Further Reading Section */}
       <ContentBox>
-        <SectionHeading>
-          {t("layer-2-further-reading-title")}
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-further-reading-title")}</SectionHeading>
         <UnorderedList ms="1.45rem" mb="1.45rem">
           <ListItem>
             <InlineLink to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
