@@ -1,7 +1,7 @@
-import { useTranslation } from "next-i18next"
 import { Box, Text } from "@chakra-ui/react"
 
 import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
 
 interface IProps {
   term: string
@@ -9,8 +9,6 @@ interface IProps {
 }
 
 const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
-  const { t } = useTranslation("glossary")
-
   const headingStyles =
     size === "sm"
       ? { fontSize: "md", mt: 0, mb: 2 }
@@ -21,9 +19,11 @@ const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
   return (
     <Box>
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
-        {t(`${term}-term`)}
+        <Translation id={"glossary:" + term + "-term"} />
       </OldHeading>
-      <Text {...textStyles}>{t(`glossary:${term}-definition`)}</Text>
+      <Text {...textStyles}>
+        <Translation id={"glossary:" + term + "-definition"} />
+      </Text>
     </Box>
   )
 }

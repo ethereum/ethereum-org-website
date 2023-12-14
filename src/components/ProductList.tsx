@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Box,
   Flex,
@@ -9,25 +8,25 @@ import {
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
-export interface Content {
+type Content = {
   title: string
   description: string
   link?: string
-  image?: any
+  image?: ImageProps["src"]
   alt: string
   id?: string
 }
 
-export interface IProps {
-  content: Array<Content>
+type ProductListProps = {
+  content: Content[]
   category: string
 }
 
-const ProductList: React.FC<IProps> = ({ content, category }) => {
+const ProductList = ({ content, category }: ProductListProps) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   const CATEGORY_NAME = "category-name"
@@ -66,6 +65,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
                 <Image
                   src={image}
                   alt={alt}
+                  width={66}
                   boxShadow={shadow}
                   borderRadius="sm"
                 />
