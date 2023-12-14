@@ -59,7 +59,7 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/dapps")) {
-    requiredNamespaces = [...requiredNamespaces, "page-dapps", "glossary"]
+    requiredNamespaces = [...requiredNamespaces, "page-dapps"]
   }
 
   if (path.startsWith("/energy-consumption")) {
@@ -70,7 +70,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     ]
   }
 
-  if (path.startsWith("/glossary")) {
+  if (path.startsWith("/glossary") || path.startsWith("/dapps")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
