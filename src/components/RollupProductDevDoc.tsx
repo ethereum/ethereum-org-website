@@ -1,36 +1,13 @@
 import React from "react"
 import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
-import type { TranslationKey } from "@/lib/types"
-
-import _rollups from "../data/layer-2/layer-2.json"
+import { layer2Data, Rollups,RollupType } from "@/data/layer-2/layer-2"
 
 import InlineLink from "./Link"
 import Text from "./OldText"
 import Translation from "./Translation"
 
-type RollupType = "optimistic" | "zk"
-
-interface Rollup {
-  name: string
-  website: string
-  developerDocs: string
-  l2beat: string
-  bridge: string
-  bridgeWallets: Array<string>
-  blockExplorer: string
-  ecosystemPortal: string
-  tokenLists: string
-  noteKey: TranslationKey
-  purpose: Array<string>
-  descriptionKey: string
-  imageKey: string
-  background: string
-}
-
-type Rollups = { [type in RollupType]: Array<Rollup> }
-
-const rollups = _rollups as Rollups
+const rollups = layer2Data as Rollups
 
 export interface IProps {
   rollupType: RollupType
