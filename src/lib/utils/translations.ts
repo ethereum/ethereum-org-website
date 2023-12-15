@@ -213,12 +213,18 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
   return requiredNamespaces
 }
 
+/**
+ * Checks if the primary namespace .json file exists for the given locale
+ * @param locale Path locale
+ * @param primaryNs Primary namespace for the page
+ * @param existsSync Passed from fs library
+ * @returns false if the primary namespace .json file exists, true otherwise
+ */
 export const getIsContentNotTranslated = (
   locale: string,
   primaryNs: string,
   existsSync: (arg0: string) => boolean
 ): boolean => {
-  const file = join("../intl", locale, primaryNs + ".json")
-  console.log({ locale, primaryNs, file })
-  return !existsSync(file)
+  const primaryIntlJsonForLocale = join("../intl", locale, primaryNs + ".json")
+  return !existsSync(primaryIntlJsonForLocale)
 }
