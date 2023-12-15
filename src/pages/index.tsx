@@ -1,5 +1,5 @@
-import React, { ReactNode, useState } from "react"
-import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import { ReactNode, useState } from "react"
+import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { SSRConfig } from "next-i18next"
@@ -19,7 +19,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, Lang } from "@/lib/types"
+import { AllMetricData, ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -31,8 +31,7 @@ import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import PageMetadata from "@/components/PageMetadata"
-// TODO: migrate stats fetching on build time
-// import StatsBoxGrid from "../components/StatsBoxGrid"
+import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
@@ -50,6 +49,10 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
+import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import devfixed from "@/public/developers-eth-blocks.png"
 import dogefixed from "@/public/doge-computer.png"
 import enterprise from "@/public/enterprise-eth.png"
@@ -178,12 +181,27 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
 
 type Props = SSRConfig & {
   communityEvents: CommunityEventsReturnType
+  metricResults: AllMetricData
 }
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+export const getServerSideProps = (async ({ locale, res }) => {
+  const maxAge = BASE_TIME_UNIT * 24 // 24 hours
+  const staleWhile = maxAge + BASE_TIME_UNIT // 1 extra hour
+  res.setHeader(
+    "Cache-Control",
+    `public, s-maxage=${maxAge}, stale-while-revalidate=${staleWhile}`
+  )
+
+  const etherscanApiKey = process.env.ETHERSCAN_API_KEY
+
+  const metricResults: AllMetricData = {
+    totalEthStaked: await fetchTotalEthStaked(),
+    nodeCount: await fetchNodes(etherscanApiKey),
+    totalValueLocked: await fetchTotalValueLocked(),
+    txCount: await fetchTxCount(etherscanApiKey),
+  }
 
   const communityEvents = await cachedFetchCommunityEvents()
 
@@ -196,13 +214,15 @@ export const getStaticProps = (async (context) => {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
       lastDeployDate,
+      metricResults,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetServerSideProps<Props>
 
 const HomePage = ({
   communityEvents,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  metricResults,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
@@ -549,8 +569,7 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        {/* // TODO: migrate stats fetching the necessary data on build time */}
-        {/* <StatsBoxGrid /> */}
+        <StatsBoxGrid data={metricResults} />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
       <CommunityEvents events={communityEvents} />

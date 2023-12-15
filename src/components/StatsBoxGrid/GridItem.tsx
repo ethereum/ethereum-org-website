@@ -1,38 +1,36 @@
-import React from "react"
 import { kebabCase } from "lodash"
 import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { Box, Flex, Icon, Text,VStack } from "@chakra-ui/react"
+import { Box, Flex, Icon, Text, VStack } from "@chakra-ui/react"
 
-import { Direction } from "../../types"
+import type { StatsBoxMetric } from "@/lib/types"
+
+import { RANGES } from "@/lib/constants"
+
 import InlineLink from "../Link"
 import OldText from "../OldText"
 import StatErrorMessage from "../StatErrorMessage"
-import StatLoadingMessage from "../StatLoadingMessage"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
 
-import { Metric, ranges } from "./useStatsBoxGrid"
-
-const tooltipContent = (metric: Metric) => (
+const tooltipContent = (metric: StatsBoxMetric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
     <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 
-interface IGridItemProps {
-  metric: Metric
-  dir?: Direction
+type GridItemProps = {
+  metric: StatsBoxMetric
 }
 
-export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
+export const GridItem = ({ metric }: GridItemProps) => {
   const { title, description, state, buttonContainer, range } = metric
-  const isLoading = !state.value
-  const value = state.hasError ? (
+  const hasError = "error" in state
+  const hasData = "data" in state
+
+  const value = hasError ? (
     <StatErrorMessage />
-  ) : isLoading ? (
-    <StatLoadingMessage />
   ) : (
     <VStack>
       <Box>
@@ -46,7 +44,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             _hover={{ fill: "primary.base" }}
             _active={{ fill: "primary.base" }}
             _focus={{ fill: "primary.base" }}
-          ></Icon>
+          />
         </Tooltip>
       </Box>
     </VStack>
@@ -55,7 +53,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   // Returns either 90 or 30-day data range depending on `range` selection
   const filteredData = (data: Array<{ timestamp: number }>) => {
     if (!data) return
-    if (range === ranges[1]) return [...data]
+    if (range === RANGES[1]) return [...data]
     return data.filter(({ timestamp }) => {
       const millisecondRange = 1000 * 60 * 60 * 24 * 30
       const now = new Date().getTime()
@@ -63,21 +61,22 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     })
   }
 
-  const minValue = state.data.reduce(
-    (prev, { value }) => (prev < value ? prev : value),
-    1e42
-  )
+  const minValue = hasData
+    ? state.data.reduce(
+        (prev, { value }) => (prev < value ? prev : value),
+        Infinity
+      )
+    : 0
 
-  const maxValue = state.data.reduce(
-    (prev, { value }) => (prev > value ? prev : value),
-    0
-  )
+  const maxValue = hasData
+    ? state.data.reduce((prev, { value }) => (prev > value ? prev : value), 0)
+    : 0
 
   const chart: React.ReactNode = (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
-        data={filteredData(state.data)}
-        margin={{ insetInlineStart: -5, insetInlineEnd: -5 }}
+        data={hasData ? filteredData(state.data) : []}
+        margin={{ left: -5, right: -5 }}
       >
         <defs>
           <linearGradient
@@ -146,7 +145,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         </Text>
         <OldText>{description}</OldText>
       </Box>
-      {!state.hasError && !isLoading && (
+      {hasData && (
         <>
           <Box
             position="absolute"
@@ -157,25 +156,14 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
           >
             {chart}
           </Box>
-          {dir === "rtl" ? (
-            <Box
-              position="absolute"
-              bottom="20px"
-              fontFamily="monospace"
-              insetInlineStart="20px"
-            >
-              {buttonContainer}
-            </Box>
-          ) : (
-            <Box
-              position="absolute"
-              bottom="20px"
-              fontFamily="monospace"
-              insetInlineEnd="20px"
-            >
-              {buttonContainer}
-            </Box>
-          )}
+          <Box
+            position="absolute"
+            bottom="20px"
+            fontFamily="monospace"
+            insetInlineEnd="20px"
+          >
+            {buttonContainer}
+          </Box>
         </>
       )}
       <Box
