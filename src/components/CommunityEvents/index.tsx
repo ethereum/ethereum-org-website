@@ -87,6 +87,9 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
   const { t } = useTranslation("page-index")
   const { pastEventData, upcomingEventData } = events
 
+  const reversedUpcomingEventData = upcomingEventData.slice().reverse()
+  const reversedPastEventData = pastEventData.slice().reverse()
+
   return (
     <Flex
       w="full"
@@ -100,14 +103,12 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
       <Center w={{ base: "100%", lg: "40%" }}>
         <Box pe={8} ps={{ base: 8, lg: 0 }}>
           <OldHeading>
-{t("page-index:community-events-content-heading")}
+            {t("page-index:community-events-content-heading")}
           </OldHeading>
           <Text>
             <Translation id="page-index:community-events-content-1" />
           </Text>
-          <Text>
-{t("page-index:community-events-content-2")}
-          </Text>
+          <Text>{t("page-index:community-events-content-2")}</Text>
         </Box>
       </Center>
       <Flex
@@ -123,13 +124,16 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           flexDir="column"
         >
           <Flex direction="column" h="full" gap={8}>
-            {upcomingEventData.length ? (
+            {reversedUpcomingEventData.length ? (
               <Box flex={1}>
                 <Text fontSize="3xl" fontWeight="bold" lineHeight={1.4}>
-                  {upcomingEventData[0].title}
+                  {reversedUpcomingEventData[0].title}
                 </Text>
                 <Text m={0} fontSize="xl">
-                  {renderEventDateTime(upcomingEventData[0].date, locale!)}
+                  {renderEventDateTime(
+                    reversedUpcomingEventData[0].date,
+                    locale!
+                  )}
                 </Text>
                 <Text color="body.medium" fontSize="md">
                   ({Intl.DateTimeFormat().resolvedOptions().timeZone})
@@ -137,7 +141,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
               </Box>
             ) : (
               <Text fontSize="3xl" fontWeight="bold" mb={8}>
-{t("page-index:community-events-no-events-planned")}
+                {t("page-index:community-events-no-events-planned")}
               </Text>
             )}
             <Flex flexDirection="column" gap={2}>
@@ -149,9 +153,9 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
                 <Icon as={FaDiscord} fontSize={25} />
                 Join Discord
               </ButtonLink>
-              {upcomingEventData[0] && (
+              {reversedUpcomingEventData[0] && (
                 <InlineLink
-                  to={upcomingEventData[0].calendarLink}
+                  to={reversedUpcomingEventData[0].calendarLink}
                   onClick={() => matomoEvent("Add to calendar")}
                   fontWeight={700}
                 >
@@ -168,11 +172,11 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           flexDir="column"
         >
           <Text fontSize="lg" fontWeight="bold" mb={2}>
-{t("page-index:community-events-upcoming-calls")}
+            {t("page-index:community-events-upcoming-calls")}
           </Text>
           <Divider mb={4} />
-          {upcomingEventData.slice(1).length ? (
-            upcomingEventData.slice(1).map((item, idx) => {
+          {reversedUpcomingEventData.slice(1).length ? (
+            reversedUpcomingEventData.slice(1).map((item, idx) => {
               return (
                 <Event
                   key={idx}
@@ -184,22 +188,22 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
             })
           ) : (
             <Text mx="auto">
-{t("page-index:community-events-no-upcoming-calls")}
+              {t("page-index:community-events-no-upcoming-calls")}
             </Text>
           )}
           <Text fontSize="lg" fontWeight="bold" mb={2} mt={4}>
-{t("page-index:community-events-previous-calls")}
+            {t("page-index:community-events-previous-calls")}
           </Text>
           <Divider mb={4} />
-          {pastEventData.length ? (
-            pastEventData.map((item, idx) => {
+          {reversedPastEventData.length ? (
+            reversedPastEventData.map((item, idx) => {
               return (
                 <Event key={idx} event={item} language={locale!} type="past" />
               )
             })
           ) : (
             <Text mx="auto">
-{t("page-index:community-events-there-are-no-past-calls")}
+              {t("page-index:community-events-there-are-no-past-calls")}
             </Text>
           )}
         </Flex>
