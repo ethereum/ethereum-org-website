@@ -512,5 +512,8 @@ export const query = graphql`
     XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
       ...walletImage
     }
+    particlenetwork: file(relativePath: { eq: "wallets/particlenetwork.png" }) {
+      ...walletImage
+    }
   }
 `
