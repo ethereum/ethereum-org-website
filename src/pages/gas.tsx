@@ -1,3 +1,5 @@
+import { existsSync } from "fs"
+
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next/types"
 import { SSRConfig, useTranslation } from "next-i18next"
@@ -21,7 +23,10 @@ import {
 } from "@chakra-ui/react"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import {
+  getIsContentNotTranslated,
+  getRequiredNamespacesForPage,
+} from "@/lib/utils/translations"
 
 import { ButtonLink } from "../components/Buttons"
 import Callout from "../components/Callout"
@@ -93,18 +98,27 @@ const H3 = (props: HeadingProps) => (
 )
 
 type Props = SSRConfig & {
+  contentNotTranslated: boolean
   lastDeployDate: string
 }
-
 export const getStaticProps = (async (context) => {
   const { locale } = context
+
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/gas")
+
+  const contentNotTranslated = getIsContentNotTranslated(
+    locale!,
+    requiredNamespaces[1],
+    existsSync
+  )
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
