@@ -56,3 +56,4 @@ export const REGULAR_RATES: ReportsModel.RegularRate[] = [
 export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z\-]*\//
 
 export const NAV_BAR_PX_HEIGHT = "75px"
+export const FROM_QUERY = "from"

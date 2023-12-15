@@ -1,3 +1,5 @@
+import { join } from "path"
+
 import React, { useState } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
@@ -13,6 +15,8 @@ import {
   getRequiredNamespacesForPage,
   languages,
 } from "@/lib/utils/translations"
+
+import { FROM_QUERY } from "@/lib/constants"
 
 import Input from "../components/Input"
 import InlineLink, { BaseLink } from "../components/Link"
@@ -40,7 +44,7 @@ export const getStaticProps = (async (context) => {
 
 const LanguagesPage = () => {
   const { t } = useTranslation("page-languages")
-  const { locale } = useRouter()
+  const { locale, query } = useRouter()
 
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -132,7 +136,9 @@ const LanguagesPage = () => {
           <Flex my={8} wrap="wrap" w="full">
             {translationsCompleted.map((lang) => {
               const isActive = locale === lang.code
-              const redirectTo = `/${lang.code}`
+              const fromPath =
+                FROM_QUERY in query ? (query[FROM_QUERY] as string) : ""
+              const redirectTo = `/${lang.code}` + fromPath
 
               return (
                 <LinkBox
@@ -173,7 +179,7 @@ const LanguagesPage = () => {
                     <LinkOverlay
                       as={BaseLink}
                       to={redirectTo}
-                      lang={lang.code}
+                      locale={lang.code}
                       textDecoration="none"
                       fontWeight="medium"
                       color="body.base"
