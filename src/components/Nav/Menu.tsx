@@ -28,7 +28,7 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
       gap={{ base: 3, xl: 6 }}
       {...props}
     >
-      <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
+      <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, index) => (
           <NavDropdown.Item
             key={index}
@@ -41,7 +41,7 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
         ))}
       </NavDropdown>
 
-      <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
+      <NavDropdown section={learn}>
         <Flex flexDir={direction === "ltr" ? "row" : "row-reverse"}>
           <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
@@ -82,7 +82,6 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
           <NavDropdown
             key={sectionKey}
             section={section}
-            hasSubNav={shouldShowSubNav}
           >
             {section.items.map((item, index) => (
               <NavDropdown.Item
