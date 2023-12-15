@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { StaticImageData } from "next/image"
 import { useTranslation } from "next-i18next"
 import {
   Box,
@@ -10,17 +11,20 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
+import type { ChildOnlyProp } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 // Data
 import {
   CexOnboard,
   cexOnboardData,
 } from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
-import { ChildOnlyProp } from "../../types"
-import { trackCustomEvent } from "../../utils/matomo"
 // Components
 import { ButtonLink } from "../Buttons"
-import GatsbyImage from "../GatsbyImage"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
@@ -110,7 +114,7 @@ interface CexOnboardOption extends Option {
 
 export interface IProps {
   layer2DataCombined: Array<Layer2>
-  ethIcon: IGatsbyImageData
+  ethIcon: StaticImageData
   ethIconAlt: string
 }
 
@@ -351,11 +355,11 @@ const Layer2Onboard: React.FC<IProps> = ({
         )}
         {/* EthLogo */}
         <Box {...gridContentPlacementStyles.logo}>
-          <GatsbyImage
-            image={ethIcon}
-            objectFit="contain"
+          <Image
+            src={ethIcon}
             alt={ethIconAlt}
-            w="full"
+            width={50}
+            style={{ objectFit: "contain" }}
           />
         </Box>
       </SimpleGrid>
