@@ -97,7 +97,7 @@ const ProductList = ({ content, category }: ProductListProps) => {
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  <Translation id="page-dapps:page-dapps-ready-button" />
+                  <Translation id="page-layer-2:page-dapps-ready-button" />
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}
