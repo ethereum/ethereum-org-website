@@ -1,17 +1,16 @@
-import React, { ReactNode } from "react"
-import { StaticImageData } from "next/image"
+import type { ReactNode } from "react"
 import {
   Box,
-  BoxProps,
+  type BoxProps,
   Flex,
   Heading,
   LinkBox,
-  LinkBoxProps,
+  type LinkBoxProps,
   LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
 
@@ -27,11 +26,11 @@ const linkFocusStyles: BoxProps = {
   textDecoration: "none",
 }
 
-export interface IProps extends Omit<LinkBoxProps, "title"> {
-  children?: React.ReactNode
+export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
+  children?: ReactNode
   to: string
   alt?: string
-  image: StaticImageData
+  image: ImageProps["src"]
   title: ReactNode
   description?: ReactNode
   className?: string
@@ -39,7 +38,7 @@ export interface IProps extends Omit<LinkBoxProps, "title"> {
   isBottom?: boolean
 }
 
-const ActionCard: React.FC<IProps> = ({
+const ActionCard = ({
   to,
   alt,
   image,
@@ -49,8 +48,8 @@ const ActionCard: React.FC<IProps> = ({
   className,
   isRight,
   isBottom = true,
-  ...rest
-}) => {
+  ...props
+}: ActionCardProps) => {
   const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
 
   return (
@@ -64,7 +63,7 @@ const ActionCard: React.FC<IProps> = ({
       _focus={linkBoxFocusStyles}
       className={className}
       m={4}
-      {...rest}
+      {...props}
     >
       <Flex
         h="260px"
@@ -77,12 +76,8 @@ const ActionCard: React.FC<IProps> = ({
       >
         <Image
           src={image}
-          width={320}
+          width={220}
           alt={alt || ""}
-          maxH="257px"
-          maxW={{ base: "311px", sm: "372px" }}
-          minW="100px"
-          minH="100px"
           style={{ objectFit: "cover" }}
         />
       </Flex>
