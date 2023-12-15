@@ -54,6 +54,13 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-index"]
   }
 
+  if (path === "/contributing/translation-program/acknowledgements") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-contributing-translation-program-acknowledgements",
+    ]
+  }
+
   if (path === "/contributing/translation-program/contributors") {
     requiredNamespaces = [
       ...requiredNamespaces,
