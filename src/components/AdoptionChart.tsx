@@ -48,7 +48,6 @@ const ColumnName = ({ children }: ChildOnlyProp) => (
 
 const AdoptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
-  // TODO: Use useColorModeValue
   const { colorMode } = useColorMode()
   const isDark = colorMode === "dark"
 
