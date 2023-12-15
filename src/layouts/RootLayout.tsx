@@ -41,10 +41,13 @@ export const RootLayout = ({
 
   const isPageTranslationOutdated = contentIsOutdated ?? false
   const isPageLanguageEnglish = locale === DEFAULT_LOCALE
+
   const shouldShowTranslationBanner =
     (isPageTranslationOutdated ||
       (contentNotTranslated && !isPageLanguageEnglish)) &&
     !isLegal
+  const shouldShowLegalTranslationBanner = isLegal && !isPageLanguageEnglish
+
   const isPageRightToLeft = isLangRightToLeft(locale as Lang)
   const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
 
@@ -60,7 +63,7 @@ export const RootLayout = ({
       />
 
       <TranslationBannerLegal
-        shouldShow={isLegal}
+        shouldShow={shouldShowLegalTranslationBanner}
         isPageRightToLeft={isPageRightToLeft}
         originalPagePath={originalPagePath}
       />
