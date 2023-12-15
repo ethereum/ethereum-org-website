@@ -1,5 +1,3 @@
-import { existsSync } from "fs"
-
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next/types"
 import { SSRConfig, useTranslation } from "next-i18next"
@@ -22,11 +20,9 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import {
-  getIsContentNotTranslated,
-  getRequiredNamespacesForPage,
-} from "@/lib/utils/translations"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { ButtonLink } from "../components/Buttons"
 import Callout from "../components/Callout"
@@ -107,11 +103,7 @@ export const getStaticProps = (async (context) => {
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/gas")
 
-  const contentNotTranslated = getIsContentNotTranslated(
-    locale!,
-    requiredNamespaces[1],
-    existsSync
-  )
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   const lastDeployDate = getLastDeployDate()
 
