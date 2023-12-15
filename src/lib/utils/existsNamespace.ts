@@ -12,5 +12,5 @@ export const existsNamespace = (
   namespace: string,
 ): boolean => {
   const nsJsonPathForLocale = join("../intl", locale, namespace + ".json")
-  return !existsSync(nsJsonPathForLocale)
+  return existsSync(nsJsonPathForLocale)
 }
