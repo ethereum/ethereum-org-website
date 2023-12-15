@@ -4,7 +4,7 @@ description: An overview of techniques and considerations for testing Ethereum s
 lang: en
 ---
 
-Public blockchains like Ethereum are immutable, making it difficult to change a smart contracts code after deployment. [Contract upgrade patterns](/developers/docs/smart-contracts/upgrading/) for performing "virtual upgrades" exist, but these are difficult to implement and require social consensus. Moreover, an upgrade can only fix an error _after_ it is discovered—if an attacker discovers the vulnerability first, your smart contract is at risk of an exploit.
+Public blockchains like Ethereum are immutable, making it difficult to change a smart contract's code after deployment. [Contract upgrade patterns](/developers/docs/smart-contracts/upgrading/) for performing "virtual upgrades" exist, but these are difficult to implement and require social consensus. Moreover, an upgrade can only fix an error _after_ it is discovered—if an attacker discovers the vulnerability first, your smart contract is at risk of an exploit.
 
 For these reasons, testing smart contracts before [deploying](/developers/docs/smart-contracts/deploying/) to Mainnet is a minimum requirement for [security](/developers/docs/smart-contracts/security/). There are many techniques for testing contracts and evaluating code correctness; what you choose depends on your needs. Nevertheless, a test suite made up of different tools and approaches is ideal for catching both minor and major security flaws in contract code.
 
