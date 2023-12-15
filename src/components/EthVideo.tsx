@@ -1,10 +1,7 @@
 import { Box, useColorModeValue } from "@chakra-ui/react"
 
-import darkVideo from "@/public/ethereum-hero-dark.mp4"
-import lightVideo from "@/public/ethereum-hero-light.mp4"
-
 const EthVideo = () => {
-  const src = useColorModeValue(lightVideo, darkVideo)
+  const src = useColorModeValue("ethereum-hero-light.mp4", "ethereum-hero-dark.mp4")
 
   return (
     <Box>
