@@ -1,3 +1,5 @@
+import { join } from "path"
+
 import { Lang, Languages } from "@/lib/types"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
@@ -209,4 +211,14 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
   }
 
   return requiredNamespaces
+}
+
+export const getIsContentNotTranslated = (
+  locale: string,
+  primaryNs: string,
+  existsSync: (arg0: string) => boolean
+): boolean => {
+  const file = join("../intl", locale, primaryNs + ".json")
+  console.log({ locale, primaryNs, file })
+  return !existsSync(file)
 }
