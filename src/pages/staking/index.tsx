@@ -1,10 +1,11 @@
 import { ReactNode } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
 
 import type {
+  BasePageProps,
   BeaconchainData,
   ChildOnlyProp,
   EpochResponse,
@@ -33,6 +34,7 @@ import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -44,10 +46,6 @@ type BenefitsType = {
   description: string
   linkText?: string
   to?: string
-}
-
-type Props = SSRConfig & {
-  data: BeaconchainData
 }
 
 const PageContainer = (props: ChildOnlyProp) => (
@@ -200,20 +198,25 @@ const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
   return { totalEthStaked, validatorscount, apr }
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+type Props = BasePageProps & {
+  data: BeaconchainData
+}
+
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
 
-  // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   const data = await fetchBeaconchainData()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      lastDeployDate,
+      contentNotTranslated,
       data,
+      lastDeployDate,
     },
   }
 }) satisfies GetStaticProps<Props>

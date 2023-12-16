@@ -131,11 +131,9 @@ const CalloutCardContainer = (props: ChildOnlyProp) => (
 type Props = SSRConfig & {
   lastDeployDate: string
 }
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
 
-  // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
 
   return {

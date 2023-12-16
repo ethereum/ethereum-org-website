@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -19,6 +19,8 @@ import {
   Tr,
   UnorderedList,
 } from "@chakra-ui/react"
+
+import { BasePageProps } from "@/lib/types"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -93,14 +95,7 @@ const H3 = (props: HeadingProps) => (
   />
 )
 
-type Props = SSRConfig & {
-  contentNotTranslated: boolean
-  lastDeployDate: string
-}
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/gas")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
@@ -114,7 +109,7 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const GasPage = () => {
   const { t } = useTranslation("page-gas")

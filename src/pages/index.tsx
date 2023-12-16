@@ -1,8 +1,7 @@
-import React, { ReactNode, useState } from "react"
+import { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
@@ -19,7 +18,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, Lang } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -36,14 +35,13 @@ import PageMetadata from "@/components/PageMetadata"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import {
   getRequiredNamespacesForPage,
   isLangRightToLeft,
 } from "@/lib/utils/translations"
-
-import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
 import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
@@ -176,25 +174,30 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
-type Props = SSRConfig & {
+type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
 }
 
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
+export const getStaticProps = (async ({ locale }) => {
+  // fetch community events for homepage
   const communityEvents = await cachedFetchCommunityEvents()
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/")
+
+  // check if the translated page content file exists for locale
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
+
+  // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
+      contentNotTranslated,
       lastDeployDate,
     },
   }

@@ -86,9 +86,7 @@ const filterDefault = {
 
 export type FiltersType = typeof filterDefault
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
   )

@@ -1,11 +1,10 @@
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
-import { SSRConfig } from "next-i18next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 
-import { ChildOnlyProp, LearningTool } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, LearningTool } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -17,6 +16,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -115,23 +115,25 @@ const StackContainer = (props: ChildOnlyProp) => (
   />
 )
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/learning-tools"
   )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
-const DevelopersPage = () => {
+const LearningToolsPage = () => {
   const { t } = useTranslation(["page-developers-learning-tools"])
 
   const randomizedSandboxes: Array<LearningTool> = shuffle([
@@ -469,4 +471,4 @@ const DevelopersPage = () => {
   )
 }
 
-export default DevelopersPage
+export default LearningToolsPage

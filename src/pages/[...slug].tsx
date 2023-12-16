@@ -156,7 +156,6 @@ export const getStaticProps = (async (context) => {
     ? getCrowdinContributors(mdPath, locale as Lang)
     : []
 
-  // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
 
   return {
