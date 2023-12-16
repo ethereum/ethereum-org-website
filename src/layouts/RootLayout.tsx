@@ -3,8 +3,7 @@ import { join } from "path"
 import { useRouter } from "next/router"
 import { Container } from "@chakra-ui/react"
 
-import { Lang } from "@/lib/types"
-import { Root } from "@/lib/interfaces"
+import type { Lang, Root } from "@/lib/types"
 
 import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
@@ -34,10 +33,9 @@ export const RootLayout = ({
     asPath.includes(`/contributing/`) ||
     asPath.includes(`/style-guide/`)
 
-  const isPageTranslationOutdated = contentIsOutdated ?? false
   const isPageLanguageEnglish = locale === DEFAULT_LOCALE
   const shouldShowTranslationBanner =
-    (isPageTranslationOutdated ||
+    (contentIsOutdated ||
       (contentNotTranslated && !isPageLanguageEnglish)) &&
     !isLegal
   const isPageRightToLeft = isLangRightToLeft(locale as Lang)
