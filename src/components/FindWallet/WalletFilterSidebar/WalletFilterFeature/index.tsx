@@ -20,7 +20,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import { trackCustomEvent } from "../../../../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useWalletFilterFeature } from "./useWalletFilterFeature"
 

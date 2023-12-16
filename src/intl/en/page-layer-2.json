@@ -2,6 +2,7 @@
   "layer-2-arbitrum-note": "Fraud proofs only for whitelisted users, whitelist not open yet",
   "layer-2-boba-note": "State validation in development",
   "layer-2-optimism-note": "Fault proofs in development",
+  "layer-2-metadata-description": "Introduction page to layer 2",
   "layer-2-hero-title": "Layer 2",
   "layer-2-hero-header": "Ethereum for everyone",
   "layer-2-hero-subtitle": "Scaling Ethereum for mass adoption.",

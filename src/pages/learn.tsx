@@ -181,7 +181,7 @@ const LearnPage = () => {
   }))
 
   const heroContent: CommonHeroProps = {
-    title: t("learn-hub"),
+    title: t("common:learn-hub"),
     header: t("hero-header"),
     description: t("hero-subtitle"),
     heroImg: heroImage,
@@ -206,7 +206,7 @@ const LearnPage = () => {
 
   return (
     <Box position="relative" w="full">
-      <PageMetadata title={t("learn-hub")} description={t("hero-subtitle")} />
+      <PageMetadata title={t("common:learn-hub")} description={t("hero-subtitle")} />
 
       <HubHero {...heroContent} />
 
