@@ -17,6 +17,15 @@
     "startDate": "2023-10-21",
     "endDate": "2023-10-21"
   },
+    {
+    "title": "ETH Belgrade",
+    "to": "https://ethbelgrade.rs/",
+    "sponsor": null,
+    "location": "Belgrade, Serbia",
+    "description": "ETH Belgrade is a playground for exploring Ethereum possibilities. As part of Belgrade Blockchain Week, this three-day conference gathers extraordinary minds and Ethereum enthusiasts to share knowledge and spark ideas that will ignite the whole ecosystem.",
+    "startDate": "2024-06-03",
+    "endDate": "2024-06-05"
+  },
   {
     "title": "ETHDubai",
     "to": "https://www.ethdubaiconf.org/",
