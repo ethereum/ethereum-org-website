@@ -1,27 +1,28 @@
-import React from "react"
+import { useRef } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
-// TODO
-// import { useDocSearchKeyboardEvents } from "@docsearch/react"
-// import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 import {
   Box,
   forwardRef,
   IconButtonProps,
   Portal,
   ThemeTypings,
+  type UseDisclosureReturn,
   useMergeRefs,
 } from "@chakra-ui/react"
+import { useDocSearchKeyboardEvents } from "@docsearch/react"
+import { DocSearchHit } from "@docsearch/react/dist/esm/types"
 
-import { Button } from "../Buttons"
+import { Button } from "@/components/Buttons"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
+import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
 
-// TODO
-// import { sanitizeHitUrl } from "../../utils/url"
-// import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
-// import { trackCustomEvent } from "../../utils/matomo"
 import "@docsearch/css"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
@@ -32,30 +33,26 @@ export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   )
 )
 
-interface IProps {
-  isOpen: boolean
-  onOpen: () => void
-  onClose: () => void
-}
+type Props = Pick<UseDisclosureReturn, "isOpen" | "onOpen" | "onClose">
 
-const Search = forwardRef<IProps, "button">(
+const Search = forwardRef<Props, "button">(
   ({ isOpen, onOpen, onClose }, ref) => {
-    const searchButtonRef = React.useRef<HTMLButtonElement>(null)
+    const { locale } = useRouter()
+    const searchButtonRef = useRef<HTMLButtonElement>(null)
     const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
     const { t } = useTranslation("common")
 
-    // TODO
-    // useDocSearchKeyboardEvents({
-    //   isOpen,
-    //   onOpen,
-    //   onClose,
-    //   searchButtonRef,
-    // })
+    useDocSearchKeyboardEvents({
+      isOpen,
+      onOpen,
+      onClose,
+      searchButtonRef,
+    })
 
-    const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
-    const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
+    const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
+    const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
     const indexName =
-      process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
+      process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
     const breakpointToken: ThemeTypings["breakpoints"] = "xl"
 
@@ -66,12 +63,11 @@ const Search = forwardRef<IProps, "button">(
             ref={mergedButtonRefs}
             onClick={() => {
               onOpen()
-              // TODO
-              // trackCustomEvent({
-              //   eventCategory: "nav bar",
-              //   eventAction: "click",
-              //   eventName: "search open",
-              // })
+              trackCustomEvent({
+                eventCategory: "nav bar",
+                eventAction: "click",
+                eventName: "search open",
+              })
             }}
             translations={{
               buttonText: t("search"),
@@ -83,12 +79,11 @@ const Search = forwardRef<IProps, "button">(
           <SearchIconButton
             onClick={() => {
               onOpen()
-              // TODO
-              // trackCustomEvent({
-              //   eventCategory: "nav bar",
-              //   eventAction: "click",
-              //   eventName: "search open",
-              // })
+              trackCustomEvent({
+                eventCategory: "nav bar",
+                eventAction: "click",
+                eventName: "search open",
+              })
             }}
             ref={mergedButtonRefs}
             aria-label={t("aria-toggle-search-button")}
@@ -101,20 +96,20 @@ const Search = forwardRef<IProps, "button">(
               appId={appId}
               indexName={indexName}
               onClose={onClose}
-              // TODO
-              // searchParameters={{
-              //   facetFilters: [`lang:${language}`],
-              // }}
-              // TODO
-              // transformItems={(items) =>
-              //   items.map((item: DocSearchHit) => {
-              //     const newItem: DocSearchHit = structuredClone(item)
-              //     newItem.url = sanitizeHitUrl(item.url)
-              //     newItem._highlightResult.hierarchy.lvl0.value =
-              //       sanitizeHitTitle(item._highlightResult.hierarchy.lvl0.value)
-              //     return newItem
-              //   })
-              // }
+              searchParameters={{
+                facetFilters: [`lang:${locale}`],
+              }}
+              transformItems={(items) =>
+                items.map((item: DocSearchHit) => {
+                  const newItem: DocSearchHit = structuredClone(item)
+                  newItem.url = sanitizeHitUrl(item.url)
+                  const newTitle = sanitizeHitTitle(
+                    item._highlightResult.hierarchy.lvl0?.value || ""
+                  )
+                  newItem._highlightResult.hierarchy.lvl0.value = newTitle
+                  return newItem
+                })
+              }
               placeholder={t("search-ethereum-org")}
               translations={{
                 searchBox: {
