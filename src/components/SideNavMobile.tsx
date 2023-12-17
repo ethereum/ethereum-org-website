@@ -154,15 +154,10 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  // Strip language path
-  let pagePath = path
-  if (isLang(pagePath.split("/")[1])) {
-    pagePath = pagePath.substring(3)
-  }
-  let pageTitleId = getPageTitleId(pagePath, docLinks)
-  if (!pageTitleId) {
-    pageTitleId = `Change page` as TranslationKey
-  }
+  // Add trailing slash to path for docLinks match
+  const pageTitleId =
+    getPageTitleId(path + "/", docLinks) || ("Change page" as TranslationKey)
+
   return (
     <Box
       position="sticky"
