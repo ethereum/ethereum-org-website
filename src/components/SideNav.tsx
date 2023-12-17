@@ -115,7 +115,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
-          initial="closed"
+          initial={isOpen ? "open" : "closed"}
         >
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} />
