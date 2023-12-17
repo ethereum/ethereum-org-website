@@ -6,11 +6,6 @@ import { useTranslation } from "next-i18next"
 
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
-import ogImageDapps from "@/public/doge-computer.png"
-import ogImageDevelopers from "@/public/enterprise-eth.png"
-import ogImageDefault from "@/public/home/hero.png"
-import ogImageUpgrades from "@/public/upgrades/upgrade_doge.png"
-
 type NameMeta = {
   name: string
   content: string
@@ -44,33 +39,34 @@ const PageMetadata: React.FC<IProps> = ({
   const desc = description || t("site-description")
   const siteTitle = t("site-title")
   const fullTitle = `${title} | ${siteTitle}`
+  const origin = process.env.NEXT_PUBLIC_SITE_URL || SITE_URL // TODO: Remove .env var usage after launch
 
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-  const canonical = canonicalUrl || join(SITE_URL, DEFAULT_LOCALE, asPath)
-  const url = locale ? join(SITE_URL, locale, asPath) : canonical
+  const canonical = canonicalUrl || join(origin, DEFAULT_LOCALE, asPath)
+  const url = locale ? join(origin, locale, asPath) : canonical
 
   /* Set fallback ogImage based on path */
-  let ogImage = ogImageDefault.src
+  let ogImage = "/home/hero.png"
 
   if (asPath.includes("/developers/")) {
-    ogImage = ogImageDevelopers.src
+    ogImage = "/enterprise-eth.png"
   }
 
   if (asPath.includes("/dapps/")) {
-    ogImage = ogImageDapps.src
+    ogImage = "/doge-computer.png"
   }
 
   if (asPath.includes("/roadmap/")) {
-    ogImage = ogImageUpgrades.src
+    ogImage = "/upgrades/upgrade_doge.png"
   }
 
   if (image) {
     ogImage = image
   }
 
-  const ogImageUrl = join(SITE_URL, ogImage)
-  const metadata: Array<Meta> = [
+  const ogImageUrl = join(origin, ogImage)
+  const metadata: Meta[] = [
     { name: `description`, content: desc },
     { name: `image`, content: ogImageUrl },
     { property: `og:title`, content: fullTitle },
