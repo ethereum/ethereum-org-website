@@ -3,10 +3,11 @@ import { cloneDeep } from "lodash"
 import { useTranslation } from "next-i18next"
 import { useColorMode } from "@chakra-ui/react"
 
-import { IItem, ISections } from "./types"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// TODO: add trackCustomEvent when util is migrated
-// import { trackCustomEvent } from "../../utils/matomo"
+import { FROM_QUERY } from "@/lib/constants"
+
+import { IItem, ISections } from "./types"
 
 export const useNav = ({ path }: { path: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -285,21 +286,20 @@ export const useNav = ({ path }: { path: string }) => {
     setIsMenuOpen((prev) => !prev)
   }
 
-  const shouldShowSubNav = path.includes("/developers/")
+  const shouldShowSubNav = path.includes("/developers")
   const splitPath = path.split("/")
   const fromPageParameter =
-    splitPath.length > 3 && splitPath[2] !== "languages"
-      ? `?from=/${splitPath.slice(2).join("/")}`
+    splitPath.length > 1 && splitPath[1] !== "languages"
+      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
       : ""
 
   const changeColorMode = () => {
     toggleColorMode()
-    // TODO: add trackCustomEvent when util is migrated
-    // trackCustomEvent({
-    //   eventCategory: "nav bar",
-    //   eventAction: "click",
-    //   eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
-    // })
+    trackCustomEvent({
+      eventCategory: "nav bar",
+      eventAction: "click",
+      eventName: isDarkTheme ? "light mode" : "dark mode", // This will be inverted as the state is changing
+    })
   }
 
   const mobileNavProps = {

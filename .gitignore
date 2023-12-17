@@ -41,5 +41,8 @@ feed.xml
 # Sitemaps
 sitemap*.xml
 
+# Robots.txt
+robots.txt
+
 # Local Netlify folder
 .netlify

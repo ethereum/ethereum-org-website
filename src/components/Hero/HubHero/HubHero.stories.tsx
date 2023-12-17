@@ -1,10 +1,9 @@
 import * as React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import HubHeroComponent, { HubHeroProps } from "./"
+import HubHeroComponent from "./"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -25,38 +24,23 @@ const meta = {
 
 export default meta
 
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "fullWidth",
-  images: {
-    fallback: {
-      src: "/heroes/learn-hub-hero.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/heroes/learn-hub-hero.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
+import { CommonHeroProps } from "@/lib/types"
+
+import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {
     title: "learn-hub",
     header: "hero-header",
     description: "hero-subtitle",
-    heroImgSrc: mockGatsbyImgData,
+    heroImg: learnHubHeroImg,
   },
-  render: (args) => {
+
+  render: ({ title, header, description, ...props }) => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
-    const { title, header, description, ...rest } = args
 
-    const buttons: HubHeroProps["buttons"] = [
+    const buttons: CommonHeroProps["buttons"] = [
       {
         content: t("hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",
@@ -82,7 +66,7 @@ export const HubHero: StoryObj<typeof meta> = {
         header={t(header)}
         description={t(description)}
         buttons={buttons}
-        {...rest}
+        {...props}
       />
     )
   },

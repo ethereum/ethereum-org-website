@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/e8f2e766-888b-4954-8500-1b647d84db99/deploy-status)](https://app.netlify.com/sites/ethereumorg/deploys)
 [![All Contributors](https://img.shields.io/github/all-contributors/ethereum/ethereum-org-website?color=orange&style=flat-square)](#contributors-)
-[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/CetY6Y4)
+[![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=ethereum.org%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat-square)](https://discord.gg/ethereum-org)
 [![Twitter Follow](https://img.shields.io/twitter/follow/ethdotorg.svg?style=social)](https://twitter.com/ethdotorg)
 [![Crowdin](https://badges.crowdin.net/ethereum-org/localized.svg)](https://crowdin.com/project/ethereum-org)
 [![gitpoap badge](https://public-api.gitpoap.io/v1/repo/ethereum/ethereum-org-website/badge)](https://www.gitpoap.io/gh/ethereum/ethereum-org-website)
@@ -122,7 +122,7 @@ To use an existing function locally you don't need to do anything. Just check th
 To create a new function, you will need to create two files:
 
 - One in `src/lambda` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
-- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
+- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatsby docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
 Typically, you will develop and test functions in the Gatsby context, by running `yarn start`.
 
@@ -136,7 +136,7 @@ In case you want to test them as if you were in a Netlify env, you can install t
 - Gatsby Cloud (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Gatsby Cloud deploy preview](./GC-preview-deploy.png)
 - _Confirm your GC preview deploy looks & functions as expected_
-- Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
+- Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
 ### 7. Wait for review
 
@@ -167,7 +167,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 - If you have committed any changes in 2022 so far that were merged into our repo, you have a POAP waiting!
 - This includes our dedicated translators on Crowdin
 
-  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/CetY6Y4)
+  [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
 
 - 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911)
 
@@ -1692,6 +1692,15 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/konstantinzolotarev"><img src="https://avatars.githubusercontent.com/u/286431?v=4?s=100" width="100px;" alt="Konstantin Zolotarev"/><br /><sub><b>Konstantin Zolotarev</b></sub></a><br /><a href="#content-konstantinzolotarev" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/vuittont60"><img src="https://avatars.githubusercontent.com/u/81072379?v=4?s=100" width="100px;" alt="vuittont60"/><br /><sub><b>vuittont60</b></sub></a><br /><a href="#content-vuittont60" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://goldnite.github.io"><img src="https://avatars.githubusercontent.com/u/114434414?v=4?s=100" width="100px;" alt="Golden Ite"/><br /><sub><b>Golden Ite</b></sub></a><br /><a href="#content-goldnite" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Erlangshen219"><img src="https://avatars.githubusercontent.com/u/104747507?v=4?s=100" width="100px;" alt="Erlangshen219"/><br /><sub><b>Erlangshen219</b></sub></a><br /><a href="#content-Erlangshen219" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://oxpampam.netlify.app/"><img src="https://avatars.githubusercontent.com/u/72970379?v=4?s=100" width="100px;" alt="AyDeveloper"/><br /><sub><b>AyDeveloper</b></sub></a><br /><a href="#content-AyDeveloper" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jeremyfritzen"><img src="https://avatars.githubusercontent.com/u/26802442?v=4?s=100" width="100px;" alt="jeremyfritzen"/><br /><sub><b>jeremyfritzen</b></sub></a><br /><a href="#content-jeremyfritzen" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/fuzheng1998"><img src="https://avatars.githubusercontent.com/u/24203166?v=4?s=100" width="100px;" alt="Zheng Fu"/><br /><sub><b>Zheng Fu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=fuzheng1998" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/xiaolou86"><img src="https://avatars.githubusercontent.com/u/20718693?v=4?s=100" width="100px;" alt="xiaolou86"/><br /><sub><b>xiaolou86</b></sub></a><br /><a href="#content-xiaolou86" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/aztecEagle22"><img src="https://avatars.githubusercontent.com/u/152518936?v=4?s=100" width="100px;" alt="aztecEagle22"/><br /><sub><b>aztecEagle22</b></sub></a><br /><a href="#content-aztecEagle22" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Messi-Q"><img src="https://avatars.githubusercontent.com/u/21357985?v=4?s=100" width="100px;" alt="QIAN"/><br /><sub><b>QIAN</b></sub></a><br /><a href="#content-Messi-Q" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
@@ -1705,4 +1714,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ### Join our Discord server
 
-We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/CetY6Y4).
+We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).

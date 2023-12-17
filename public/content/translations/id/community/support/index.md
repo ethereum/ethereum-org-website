@@ -30,7 +30,7 @@ Mengalami masalah dengan dompet Anda? Kebanyakan dompet telah mendedikasikan tim
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Ini bukanlah daftar yang lengkap. Perlu bantuan menemukan bantuan untuk dompet yang khusus? Bergabunglah dengan [discord ethereum.org](https://discord.gg/rZz26QWfCg) dan kami akan mencoba menolong Anda._
+_Ini bukanlah daftar yang lengkap. Perlu bantuan menemukan bantuan untuk dompet yang khusus? Bergabunglah dengan [discord ethereum.org](https://discord.gg/ethereum-org) dan kami akan mencoba menolong Anda._
 
 Sedang mencari dompet Ethereum? [Jelajahi daftar lengkap dompet Ethereum kami](/wallets/find-wallet/).
 

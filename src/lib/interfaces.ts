@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image"
 import type { ReactNode } from "react"
 
 import type {
@@ -160,4 +161,59 @@ export interface MdPageContent {
   lastUpdatedDate?: string
   contentNotTranslated: boolean
   crowdinContributors: CrowdinContributor[]
+}
+
+// Local environment framework
+export interface Framework {
+  id: string
+  url: string
+  githubUrl: string
+  background: string
+  name: string
+  description: string
+  alt: string
+  image: StaticImageData
+  starCount?: number
+  languages?: string[]
+}
+
+/**
+ * Community events
+ */
+
+export interface CommunityEventsReturnType {
+  pastEventData: CommunityEvent[]
+  upcomingEventData: CommunityEvent[]
+}
+
+export interface CommunityEvent {
+  date: string
+  title: string
+  calendarLink: string
+  pastEventLink?: string
+}
+
+export interface ReqCommunityEvent {
+  start: { dateTime: string }
+  summary: string
+  htmlLink: string
+  location: string
+}
+
+/**
+ * Community page
+ */
+
+export interface ICard {
+  image: StaticImageData
+  title: string
+  description: string
+  alt: string
+  to: string
+}
+
+export interface IGetInvolvedCard {
+  emoji: string
+  title: string
+  description: string
 }

@@ -21,21 +21,23 @@ import {
   Tr,
 } from "@chakra-ui/react"
 
-import { NAV_BAR_PX_HEIGHT } from "../../../constants"
-import { WalletData } from "../../../data/wallets/wallet-data"
-import { ChildOnlyProp } from "../../../types"
-import { getImage } from "../../../utils/image"
-import { trackCustomEvent } from "../../../utils/matomo"
-import GatsbyImage from "../../GatsbyImage"
+import { ChildOnlyProp } from "@/lib/types"
+
+import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
+import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../../icons/staking"
-import InlineLink, { IProps as LinkProps } from "../../Link"
-import Text from "../../OldText"
+} from "@/components/icons/staking"
+import { Image } from "@/components/Image"
+import InlineLink, { LinkProps } from "@/components/Link"
+import Text from "@/components/OldText"
 
-import { useWalletTable } from "./useWalletTable"
-import { WalletMoreInfo } from "./WalletMoreInfo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { WalletData } from "@/data/wallets/wallet-data"
+
+import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
 const Container = (props: TableProps) => (
   <Table
@@ -308,12 +310,11 @@ const secondCol = "secondCol"
 const thirdCol = "thirdCol"
 
 export interface WalletTableProps {
-  data: Record<string, any>
   filters: Record<string, boolean>
   walletData: WalletData[]
 }
 
-const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
+const WalletTable = ({ filters, walletData }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
@@ -421,18 +422,20 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
             <Wallet
               onClick={() => {
                 updateMoreInfo(wallet.key)
-                trackCustomEvent({
-                  eventCategory: "WalletMoreInfo",
-                  eventAction: `More info wallet`,
-                  eventName: `More info ${wallet.name} ${wallet.moreInfo}`,
-                })
+                // Log "more info" event only on expanding
+                wallet.moreInfo &&
+                  trackCustomEvent({
+                    eventCategory: "WalletMoreInfo",
+                    eventAction: `More info wallet`,
+                    eventName: `More info ${wallet.name}`,
+                  })
               }}
             >
               <Td lineHeight="revert">
                 <FlexInfo>
                   <Box>
-                    <GatsbyImage
-                      image={getImage(data[wallet.image_name])!}
+                    <Image
+                      src={wallet.image}
                       alt=""
                       objectFit="contain"
                       boxSize="56px"
@@ -467,7 +470,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                           customEventOptions={{
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
-                            eventName: `${wallet.name} ${idx}`,
+                            eventName: `Website: ${wallet.name} ${idx}`,
                             eventValue: JSON.stringify(filters),
                           }}
                         >
@@ -480,7 +483,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `${wallet.name} ${idx}`,
+                              eventName: `Twitter: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >
@@ -498,7 +501,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `${wallet.name} ${idx}`,
+                              eventName: `Discord: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >

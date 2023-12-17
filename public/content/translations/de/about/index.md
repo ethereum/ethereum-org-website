@@ -61,6 +61,6 @@ Stelle sicher, dass du [unsere Prinzipien](/contributing/design-principles/) und
 
 Auch wenn dies eine Open-Source-Website ist und jeder daran arbeiten kann, haben wir ein Team, das sich speziell mit ethereum.org und anderen Ethereum-Foundation-Webprojekten befasst.
 
-Wir werden alle Stellenangebote hier veröffentlichen. Wenn dir keine dieser Rollen zusagt, gehe zu [Discord](https://discord.gg/CetY6Y4) und lass uns wissen, wie du mit uns arbeiten möchtest!
+Wir werden alle Stellenangebote hier veröffentlichen. Wenn dir keine dieser Rollen zusagt, gehe zu [Discord](https://discord.gg/ethereum-org) und lass uns wissen, wie du mit uns arbeiten möchtest!
 
 Siehst du über das ethereum.org-Team hinaus? [Schau dir andere Jobs im Zusammenhang mit Ethereum an](/community/get-involved/#ethereum-jobs/).

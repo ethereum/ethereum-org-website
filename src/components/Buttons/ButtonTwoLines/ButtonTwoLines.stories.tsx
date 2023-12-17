@@ -1,4 +1,3 @@
-import * as React from "react"
 import { BiCircle } from "react-icons/bi"
 import { Stack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"

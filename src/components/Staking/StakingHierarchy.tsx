@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   calc,
@@ -12,7 +13,8 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import { trackCustomEvent } from "../../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { ButtonLink } from "../Buttons"
 import {
   StakingGlyphCentralizedIcon,
@@ -209,18 +211,17 @@ const Pills = ({ children }: ChildOnlyType) => (
   </Flex>
 )
 
-const Glyph = ({ glyphIcon }: { glyphIcon: typeof Icon }) => {
-  const Icon = glyphIcon
-  return (
-    <Center gridArea={{ base: "content", md: "glyph" }}>
-      <Icon
-        boxSize={{ base: "50%", md: "50px" }}
-        color={$colorVar.reference}
-        opacity={{ base: 0.1, md: "initial" }}
-      />
-    </Center>
-  )
-}
+type GlyphProps = { glyphIcon: typeof Icon }
+const Glyph = ({ glyphIcon }: GlyphProps) => (
+  <Center gridArea={{ base: "content", md: "glyph" }}>
+    <Icon
+      as={glyphIcon}
+      boxSize={{ base: "50%", md: "50px" }}
+      color={$colorVar.reference}
+      opacity={{ base: 0.1, md: "initial" }}
+    />
+  </Center>
+)
 
 const Content = ({ children }: ChildOnlyType) => (
   <Box
@@ -239,9 +240,8 @@ const Content = ({ children }: ChildOnlyType) => (
   </Box>
 )
 
-export interface IProps {}
-
-const StakingHierarchy: React.FC<IProps> = () => {
+const StakingHierarchy = () => {
+  const { t } = useTranslation("page-staking")
   const [stakingGold, stakingGreen, stakingBlue, stakingRed] = useToken(
     "colors",
     ["stakingGold", "stakingGreen", "stakingBlue", "stakingRed"]
@@ -263,34 +263,22 @@ const StakingHierarchy: React.FC<IProps> = () => {
         <StyledEtherSvg size="100%" />
         <Line />
         <Header>
-          <HeadingEl>
-            <Translation id="page-staking-hierarchy-solo-h2" />
-          </HeadingEl>
+          <HeadingEl>{t("page-staking-hierarchy-solo-h2")}</HeadingEl>
           <Pills>
             <p>
-              <em>
-                <Translation id="page-staking-hierarchy-solo-pill-1" />
-              </em>
+              <em>{t("page-staking-hierarchy-solo-pill-1")}</em>
             </p>
-            <p>
-              <Translation id="page-staking-hierarchy-solo-pill-2" />
-            </p>
-            <p>
-              <Translation id="page-staking-hierarchy-solo-pill-3" />
-            </p>
-            <p>
-              <Translation id="page-staking-hierarchy-solo-pill-4" />
-            </p>
+            <p>{t("page-staking-hierarchy-solo-pill-2")}</p>
+            <p>{t("page-staking-hierarchy-solo-pill-3")}</p>
+            <p>{t("page-staking-hierarchy-solo-pill-4")}</p>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCPUIcon} />
         <Content>
           <p>
-            <Translation id="page-staking-hierarchy-solo-p1" />
+            <Translation id="page-staking:page-staking-hierarchy-solo-p1" />
           </p>
-          <p>
-            <Translation id="page-staking-hierarchy-solo-p2" />
-          </p>
+          <p>{t("page-staking-hierarchy-solo-p2")}</p>
           <ButtonLink
             to="/staking/solo/"
             onClick={() => {
@@ -302,7 +290,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             }}
             width={{ base: "100%", md: "auto" }}
           >
-            <Translation id="page-staking-more-on-solo" />
+            {t("page-staking-more-on-solo")}
           </ButtonLink>
         </Content>
       </SectionGrid>
@@ -310,32 +298,18 @@ const StakingHierarchy: React.FC<IProps> = () => {
         <StyledEtherSvg size="90%" />
         <Line />
         <Header>
-          <HeadingEl>
-            <Translation id="page-staking-dropdown-saas" />
-          </HeadingEl>
+          <HeadingEl>{t("page-staking-dropdown-saas")}</HeadingEl>
           <Pills>
-            <p>
-              <Translation id="page-staking-hierarchy-saas-pill-1"></Translation>
-            </p>
-            <p>
-              <Translation id="page-staking-hierarchy-saas-pill-2"></Translation>
-            </p>
-            <p>
-              <Translation id="page-staking-hierarchy-saas-pill-3"></Translation>
-            </p>
+            <p>{t("page-staking-hierarchy-saas-pill-1")}</p>
+            <p>{t("page-staking-hierarchy-saas-pill-2")}</p>
+            <p>{t("page-staking-hierarchy-saas-pill-3")}</p>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCloudIcon} />
         <Content>
-          <p>
-            <Translation id="page-staking-hierarchy-saas-p1" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-saas-p2" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-saas-p3" />
-          </p>
+          <p>{t("page-staking-hierarchy-saas-p1")}</p>
+          <p>{t("page-staking-hierarchy-saas-p2")}</p>
+          <p>{t("page-staking-hierarchy-saas-p3")}</p>
           <ButtonLink
             to="/staking/saas/"
             onClick={() => {
@@ -347,7 +321,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             }}
             width={{ base: "100%", md: "auto" }}
           >
-            <Translation id="page-staking-more-on-saas" />
+            {t("page-staking-more-on-saas")}
           </ButtonLink>
         </Content>
       </SectionGrid>
@@ -355,40 +329,22 @@ const StakingHierarchy: React.FC<IProps> = () => {
         <StyledEtherSvg size="80%" />
         <Line />
         <Header>
-          <HeadingEl>
-            <Translation id="page-staking-dropdown-pools" />
-          </HeadingEl>
+          <HeadingEl>{t("page-staking-dropdown-pools")}</HeadingEl>
           <Pills>
+            <p>{t("page-staking-hierarchy-pools-pill-1")}</p>
+            <p>{t("page-staking-hierarchy-pools-pill-2")}</p>
+            <p>{t("page-staking-hierarchy-pools-pill-3")}</p>
             <p>
-              <Translation id="page-staking-hierarchy-pools-pill-1" />
-            </p>
-            <p>
-              <Translation id="page-staking-hierarchy-pools-pill-2" />
-            </p>
-            <p>
-              <Translation id="page-staking-hierarchy-pools-pill-3" />
-            </p>
-            <p>
-              <em>
-                <Translation id="page-staking-hierarchy-pools-pill-4" />
-              </em>
+              <em>{t("page-staking-hierarchy-pools-pill-4")}</em>
             </p>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphTokenWalletIcon} />
         <Content>
-          <p>
-            <Translation id="page-staking-hierarchy-pools-p1" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-pools-p2" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-pools-p3" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-pools-p4" />
-          </p>
+          <p>{t("page-staking-hierarchy-pools-p1")}</p>
+          <p>{t("page-staking-hierarchy-pools-p2")}</p>
+          <p>{t("page-staking-hierarchy-pools-p3")}</p>
+          <p>{t("page-staking-hierarchy-pools-p4")}</p>
           <ButtonLink
             to="/staking/pools/"
             onClick={() => {
@@ -400,7 +356,7 @@ const StakingHierarchy: React.FC<IProps> = () => {
             }}
             width={{ base: "100%", md: "auto" }}
           >
-            <Translation id="page-staking-more-on-pools" />
+            {t("page-staking-more-on-pools")}
           </ButtonLink>
         </Content>
       </SectionGrid>
@@ -408,30 +364,20 @@ const StakingHierarchy: React.FC<IProps> = () => {
         <StyledEtherSvg size="70%" />
         <Line />
         <Header>
-          <HeadingEl>
-            <Translation id="page-staking-hierarchy-cex-h2" />
-          </HeadingEl>
+          <HeadingEl>{t("page-staking-hierarchy-cex-h2")}</HeadingEl>
           <Pills>
             <p>
-              <em>
-                <Translation id="page-staking-hierarchy-cex-pill-1" />
-              </em>
+              <em>{t("page-staking-hierarchy-cex-pill-1")}</em>
             </p>
-            <p>
-              <Translation id="page-staking-hierarchy-cex-pill-2" />
-            </p>
+            <p>{t("page-staking-hierarchy-cex-pill-2")}</p>
           </Pills>
         </Header>
         <Glyph glyphIcon={StakingGlyphCentralizedIcon} />
         <Content>
+          <p>{t("page-staking-hierarchy-cex-p1")}</p>
+          <p>{t("page-staking-hierarchy-cex-p2")}</p>
           <p>
-            <Translation id="page-staking-hierarchy-cex-p1" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-cex-p2" />
-          </p>
-          <p>
-            <Translation id="page-staking-hierarchy-cex-p3" />
+            <Translation id="page-staking:page-staking-hierarchy-cex-p3" />
           </p>
         </Content>
       </SectionGrid>

@@ -1,16 +1,16 @@
-import { ReactNode } from "react"
+import Image, { type ImageProps } from "next/image"
+import type { ReactNode } from "react"
 import {
   Box,
-  BoxProps,
+  type BoxProps,
   Flex,
   HStack,
   LinkBox,
   LinkOverlay,
-  StackProps,
+  type StackProps,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { Image, type ImageProps } from "@/components/Image"
 import { BaseLink } from "@/components/Link"
 
 import * as url from "@/lib/utils/url"
@@ -43,18 +43,26 @@ const CardContainer = (props: StackProps) => (
   />
 )
 
-const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
-  const { title, description, caption, link, image, alt, ...rest } = props
-  const { flipForRtl } = useRtlFlip()
+type CardProps = CardListItem & Omit<StackProps, "title" | "id">
 
+const Card = ({
+  title,
+  description,
+  caption,
+  link,
+  image,
+  alt,
+  ...props
+}: CardProps) => {
+  const { flipForRtl } = useRtlFlip()
   const isLink = !!link
   const isExternal = url.isExternal(link || "")
 
   const descriptionColor = useColorModeValue("gray.500", "gray.400")
 
   return (
-    <CardContainer {...rest}>
-      {image && <Image src={image} alt={alt ?? ""} minW="20px" />}
+    <CardContainer {...props}>
+      {image && <Image src={image} alt={alt ?? ""} width={20} />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
@@ -87,17 +95,17 @@ const Card = (props: CardListItem & Omit<StackProps, "title" | "id">) => {
   )
 }
 
-export interface IProps extends BoxProps {
-  items: Array<CardListItem>
+export type CardListProps = BoxProps & {
+  items: CardProps[]
   clickHandler?: (idx: string | number) => void
 }
 
-const CardList: React.FC<IProps> = ({
+const CardList = ({
   items,
   clickHandler = () => null,
-  ...rest
-}) => (
-  <Box bg="background.base" w="full" {...rest}>
+  ...props
+}: CardListProps) => (
+  <Box bg="background.base" w="full" {...props}>
     {items.map((listItem, idx) => {
       const { link, id } = listItem
       const isLink = !!link

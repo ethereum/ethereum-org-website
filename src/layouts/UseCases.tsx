@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
@@ -21,7 +22,7 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
-import { BaseLink } from "@/components/Link"
+import InlineLink, { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
   MobileButton,
@@ -33,7 +34,7 @@ import TableOfContents from "@/components/TableOfContents"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
-import { MAIN_CONTENT_ID } from "@/lib/constants"
+import { EDIT_CONTENT_URL, MAIN_CONTENT_ID } from "@/lib/constants"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -89,15 +90,13 @@ export const UseCasesLayout: React.FC<IProps> = ({
   slug,
   tocItems,
 }) => {
+  const { asPath: relativePath } = useRouter()
   const { t } = useTranslation("template-usecase")
   const lgBp = useToken("breakpoints", "lg")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  // TODO: Re-implement GitHub edit path
-  // const { editContentUrl } = siteData.siteMetadata || {}
-  // const { relativePath } = pageContext
-  // const absoluteEditPath = `${editContentUrl}${relativePath}`
+  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
 
   // Assign hero styling, default to "defi"
   let useCase = "defi"
@@ -185,13 +184,13 @@ export const UseCasesLayout: React.FC<IProps> = ({
           <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
           <Text m={0}>
             {t("template-usecase:template-usecase-banner")}{" "}
-            {/* <InlineLink to={absoluteEditPath}>
-              <Translation id="template-usecase-edit-link" />
-            </InlineLink> */}
+            <InlineLink href={absoluteEditPath}>
+              {t("template-usecase-edit-link")}
+            </InlineLink>
           </Text>
         </BannerNotification>
       </Show>
-      <HeroContainer>
+      <HeroContainer key={frontmatter.title}>
         <TitleCard>
           <Emoji fontSize="4rem" text={frontmatter.emoji!} />
           <Title>{frontmatter.title}</Title>

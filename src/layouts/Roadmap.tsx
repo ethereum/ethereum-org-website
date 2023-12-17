@@ -16,6 +16,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Button, ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
+import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import {
@@ -30,6 +31,8 @@ import Pill from "@/components/Pill"
 import RoadmapActionCard from "@/components/Roadmap/RoadmapActionCard"
 import RoadmapImageContent from "@/components/Roadmap/RoadmapImageContent"
 import TableOfContents from "@/components/TableOfContents"
+
+import RoadmapHubHeroImage from "@/public/heroes/roadmap-hub-hero.jpg"
 
 const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
@@ -128,60 +131,69 @@ export const RoadmapLayout: React.FC<IProps> = ({
 
   return (
     <Box position="relative">
-      <HeroContainer>
-        <Flex
-          w="full"
-          flexDirection={{ base: "column", lg: "row" }}
-          justify="space-between"
-        >
-          <TitleCard>
-            {/* TODO: Double check this slug works */}
-            <Breadcrumbs slug={slug} mb="8" />
-            <Title>{frontmatter.title}</Title>
-            <OldText>{frontmatter.description}</OldText>
-            {frontmatter?.buttons && (
-              // FIXME: remove the `ul` override once removed the corresponding
-              // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
-              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
-                {frontmatter.buttons.map((button, idx) => {
-                  if (button?.to) {
+      {slug === "/roadmap/" ? (
+        <HubHero
+          heroImg={RoadmapHubHeroImage}
+          header={frontmatter.title}
+          title={""}
+          description={frontmatter.description}
+        />
+      ) : (
+        <HeroContainer>
+          <Flex
+            w="full"
+            flexDirection={{ base: "column", lg: "row" }}
+            justify="space-between"
+          >
+            <TitleCard>
+              {/* TODO: Double check this slug works */}
+              <Breadcrumbs slug={slug} mb="8" />
+              <Title>{frontmatter.title}</Title>
+              <OldText>{frontmatter.description}</OldText>
+              {frontmatter?.buttons && (
+                // FIXME: remove the `ul` override once removed the corresponding
+                // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
+                <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
+                  {frontmatter.buttons.map((button, idx) => {
+                    if (button?.to) {
+                      return (
+                        <WrapItem key={idx}>
+                          <ButtonLink variant={button?.variant} to={button?.to}>
+                            {button.label}
+                          </ButtonLink>
+                        </WrapItem>
+                      )
+                    }
                     return (
                       <WrapItem key={idx}>
-                        <ButtonLink variant={button?.variant} to={button?.to}>
-                          {button.label}
-                        </ButtonLink>
+                        <Button variant={button?.variant} toId={button?.toId}>
+                          {button?.label}
+                        </Button>
                       </WrapItem>
                     )
-                  }
-                  return (
-                    <WrapItem key={idx}>
-                      <Button variant={button?.variant} toId={button?.toId}>
-                        {button?.label}
-                      </Button>
-                    </WrapItem>
-                  )
-                })}
-              </Wrap>
-            )}
-            <TableOfContents
-              position="relative"
-              zIndex="2"
-              items={tocItems}
-              isMobile
-            />
-          </TitleCard>
-          <Center>
-            <Image
-              src={frontmatter.image}
-              alt={frontmatter.alt ?? ""}
-              style={{ objectFit: "contain" }}
-              width={700}
-              height={345}
-              priority
-            />
-          </Center>
-        </Flex>
-      </HeroContainer>
+                  })}
+                </Wrap>
+              )}
+              <TableOfContents
+                position="relative"
+                zIndex="2"
+                items={tocItems}
+                isMobile
+              />
+            </TitleCard>
+            <Center>
+              <Image
+                src={frontmatter.image}
+                alt={frontmatter.alt ?? ""}
+                style={{ objectFit: "contain" }}
+                width={700}
+                height={345}
+                priority
+              />
+            </Center>
+          </Flex>
+        </HeroContainer>
+      )}
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar

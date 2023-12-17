@@ -5,6 +5,8 @@ import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
 
+import contentHeroImg from "../../../../public/mainnet.png"
+
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: ContentHeroComponent,
@@ -12,7 +14,7 @@ const meta = {
     layout: "none",
   },
   argTypes: {
-    heroImgSrc: {
+    heroImg: {
       table: {
         disable: true,
       },
@@ -21,26 +23,6 @@ const meta = {
 } satisfies Meta<ContentHeroType>
 
 export default meta
-
-// Comes from the original compiled querying
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "constrained",
-  images: {
-    fallback: {
-      src: "/mainnet.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/mainnet.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
 
 export const ContentHero: StoryObj = {
   render: () => {
@@ -69,7 +51,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImgSrc={mockGatsbyImgData}
+        heroImg={contentHeroImg}
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}

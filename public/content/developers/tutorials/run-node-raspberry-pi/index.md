@@ -25,7 +25,7 @@ To use Ethereum on Arm to turn a Raspberry Pi into an Ethereum node, the followi
 
 ## Why run Ethereum on ARM? {#why-run-ethereum-on-arm}
 
-ARM boards are very affordable, flexible, small computers. They are good choices for running Ethereum nodes because they can be bought cheaply, configured so that all their resources focus just on the node, making them efficient, they consume low amounts of power and have are physically small so they can fit unobtrusively in any home. It is also very easy to spin up nodes because the Raspberry Pi's MicroSD can simply be flashed with a prebuilt image, with no downloading or building software required.
+ARM boards are very affordable, flexible, small computers. They are good choices for running Ethereum nodes because they can be bought cheaply, configured so that all their resources focus just on the node, making them efficient, they consume low amounts of power and are physically small so they can fit unobtrusively in any home. It is also very easy to spin up nodes because the Raspberry Pi's MicroSD can simply be flashed with a prebuilt image, with no downloading or building software required.
 
 ## How does it work? {#how-does-it-work}
 
