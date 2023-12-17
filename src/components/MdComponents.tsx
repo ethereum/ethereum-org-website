@@ -32,8 +32,6 @@ import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
 import YouTube from "@/components/YouTube"
 
-import { MAIN_CONTENT_ID } from "@/lib/constants"
-
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
@@ -41,6 +39,7 @@ import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import InfoBanner from "./InfoBanner"
+import MainArticle from "./MainArticle"
 
 /**
  * Base HTML elements
@@ -188,8 +187,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 
   return (
     <Box
-      as="article"
-      id={MAIN_CONTENT_ID}
+      as={MainArticle}
       flex={`1 1 ${lgBp}`}
       position="relative"
       px={8}

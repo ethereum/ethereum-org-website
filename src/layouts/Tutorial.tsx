@@ -2,7 +2,6 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
-  type BoxProps,
   chakra,
   Divider,
   Flex,
@@ -28,6 +27,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
+import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -41,21 +41,17 @@ import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
-import {
-  DEFAULT_LOCALE,
-  EDIT_CONTENT_URL,
-  MAIN_CONTENT_ID,
-} from "@/lib/constants"
+import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
-const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+const ContentContainer = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
   const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
-      as="article"
+      as={MainArticle}
       maxW="1000px"
       minW={0}
       background="background.base"
@@ -218,7 +214,7 @@ export const TutorialLayout = ({
           description={frontmatter.description}
           canonicalUrl={frontmatter.sourceUrl}
         />
-        <ContentContainer id={MAIN_CONTENT_ID}>
+        <ContentContainer>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents

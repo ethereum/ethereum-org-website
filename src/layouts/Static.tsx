@@ -13,6 +13,7 @@ import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
 import Logo from "@/components/Logo"
+import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
 import {
   Heading1 as MdHeading1,
@@ -30,7 +31,7 @@ import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-import { CONTENT_DIR, MAIN_CONTENT_ID } from "@/lib/constants"
+import { CONTENT_DIR } from "@/lib/constants"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -102,8 +103,7 @@ export const StaticLayout: React.FC<IProps> = ({
         pt={{ base: 8, lg: 16 }}
       >
         <Box
-          as="article"
-          id={MAIN_CONTENT_ID}
+          as={MainArticle}
           maxW="container.md"
           w="full"
           sx={{
