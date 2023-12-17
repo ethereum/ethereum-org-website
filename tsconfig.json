@@ -89,7 +89,6 @@
     "./src/components/SideNavMobile.tsx",
     "./src/components/SimpleTable.tsx",
     "./src/components/Simulator",
-    "./src/components/SkipLink.tsx",
     "./src/components/Slider/Slider.stories.tsx",
     "./src/components/Slider/index.tsx",
     "./src/components/StablecoinAccordion/AccordionCustomItem.tsx",
