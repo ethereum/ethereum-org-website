@@ -39,9 +39,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import { layer2Data } from "@/data/layer-2/layer-2"
 
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
-import ProductListComponent, {
-  ProductListProps,
-} from "../components/ProductList"
+import ProductList from "../components/ProductList"
 
 import DogeImage from "@/public/doge-computer.png"
 import EthHomeImage from "@/public/eth-home-icon.png"
@@ -105,16 +103,6 @@ const Layer2CardGrid = (props) => (
     {...props}
   />
 )
-
-const ProductList = (props: Omit<ProductListProps, "actionLabel">) => {
-  const { t } = useTranslation("page-dapps")
-  return (
-    <ProductListComponent
-      actionLabel={t("page-dapps-ready-button")}
-      {...props}
-    />
-  )
-}
 
 type Props = SSRConfig & {
   lastDeployDate: string
@@ -603,12 +591,14 @@ const Layer2Page = () => {
             <ProductList
               category="Information"
               content={toolsData.information}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
         </TwoColumnContent>
