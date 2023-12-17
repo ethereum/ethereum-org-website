@@ -4,7 +4,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
+import { SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
   name: string
@@ -41,23 +41,27 @@ const PageMetadata: React.FC<IProps> = ({
   const fullTitle = `${title} | ${siteTitle}`
   const origin = process.env.NEXT_PUBLIC_SITE_URL || SITE_URL // TODO: Remove .env var usage after launch
 
+  // Remove anything query params (?) or hash links (#)
+  const path = asPath.replace(/[\?\#].*/, "")
+  const slug = path.split("/")
+
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-  const canonical = canonicalUrl || join(origin, DEFAULT_LOCALE, asPath)
-  const url = locale ? join(origin, locale, asPath) : canonical
+  const url = join(origin, locale!, path)
+  const canonical = canonicalUrl || url
 
   /* Set fallback ogImage based on path */
   let ogImage = "/home/hero.png"
 
-  if (asPath.includes("/developers/")) {
+  if (slug.includes("developers")) {
     ogImage = "/enterprise-eth.png"
   }
 
-  if (asPath.includes("/dapps/")) {
+  if (slug.includes("dapps")) {
     ogImage = "/doge-computer.png"
   }
 
-  if (asPath.includes("/roadmap/")) {
+  if (slug.includes("roadmap")) {
     ogImage = "/upgrades/upgrade_doge.png"
   }
 
