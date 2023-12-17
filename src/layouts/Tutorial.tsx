@@ -36,7 +36,6 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
-import PageMetadata from "@/components/PageMetadata"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
@@ -210,11 +209,6 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          canonicalUrl={frontmatter.sourceUrl}
-        />
         <ContentContainer>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
