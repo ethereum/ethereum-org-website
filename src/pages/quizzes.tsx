@@ -18,6 +18,7 @@ import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import Translation from "@/components/Translation"
 
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -141,10 +142,12 @@ export default QuizzesHubPage
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      lastDeployDate,
     },
   }
 }) satisfies GetStaticProps<SSRConfig>
