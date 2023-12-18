@@ -47,7 +47,7 @@ const PageMetadata: React.FC<IProps> = ({
 
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-  const url = join(origin, locale!, path)
+  const url = new URL(join(locale!, path), origin).href
   const canonical = canonicalUrl || url
 
   /* Set fallback ogImage based on path */
@@ -69,7 +69,7 @@ const PageMetadata: React.FC<IProps> = ({
     ogImage = image
   }
 
-  const ogImageUrl = join(origin, ogImage)
+  const ogImageUrl = new URL(ogImage, origin).href
   const metadata: Meta[] = [
     { name: `description`, content: desc },
     { name: `image`, content: ogImageUrl },
