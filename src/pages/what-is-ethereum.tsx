@@ -2,7 +2,6 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
   type BoxProps,
@@ -11,7 +10,6 @@ import {
   type FlexProps,
   Heading,
   type HeadingProps,
-  Icon,
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
@@ -24,13 +22,7 @@ import {
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
-import {
-  Banner,
-  BannerBody,
-  BannerGrid,
-  BannerGridCell,
-  BannerImage,
-} from "@/components/BannerGrid"
+import { Banner, BannerImage } from "@/components/BannerGrid"
 import Button from "@/components/Buttons/Button"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -44,10 +36,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Slider, { EmblaSlide } from "@/components/Slider"
-import StatErrorMessage from "@/components/StatErrorMessage"
-import StatLoadingMessage from "@/components/StatLoadingMessage"
 import Tabs from "@/components/Tabs"
-import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -663,7 +652,9 @@ const WhatIsEthereumPage = () => {
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
               <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
-              <Text><Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2"/></Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2" />
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}
