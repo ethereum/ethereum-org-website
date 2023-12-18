@@ -134,7 +134,7 @@ const ChooseStackPage = ({
       url: "https://scaffoldeth.io/",
       githubUrl: "https://github.com/scaffold-eth/scaffold-eth-2",
       background: "#ffffff",
-      name: "Scaffold-ETH",
+      name: "Scaffold-ETH-2",
       description: t("page-local-environment-scaffold-eth-desc"),
       alt: t("page-local-environment-scaffold-eth-logo-alt"),
     },
