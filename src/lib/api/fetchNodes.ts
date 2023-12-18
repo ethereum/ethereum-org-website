@@ -1,8 +1,6 @@
 import type { EtherscanNodeResponse, MetricReturnData, TimestampedData } from "@/lib/types"
 
-import { ETHERSCAN_API_URL } from "@/lib/constants"
-
-const DAYS_TO_FETCH = 90
+import { DAYS_TO_FETCH, ETHERSCAN_API_URL } from "@/lib/constants"
 
 export const fetchNodes = async (apiKey: string): Promise<MetricReturnData> => {
   const now = new Date()

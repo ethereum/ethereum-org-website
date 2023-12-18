@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react"
-import type { GetServerSideProps, InferGetServerSidePropsType } from "next"
+import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { SSRConfig } from "next-i18next"
@@ -179,28 +179,25 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
+const etherscanApiKey = process.env.ETHERSCAN_API_KEY
+
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
+const cachedFetchNodes = runOnlyOnce(() => fetchNodes(etherscanApiKey))
+const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
+const cachedFetchTxCount = runOnlyOnce(() => fetchTxCount(etherscanApiKey))
+
 type Props = SSRConfig & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
 }
 
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
-
-export const getServerSideProps = (async ({ locale, res }) => {
-  const maxAge = BASE_TIME_UNIT * 24 // 24 hours
-  const staleWhile = maxAge + BASE_TIME_UNIT // 1 extra hour
-  res.setHeader(
-    "Cache-Control",
-    `public, s-maxage=${maxAge}, stale-while-revalidate=${staleWhile}`
-  )
-
-  const etherscanApiKey = process.env.ETHERSCAN_API_KEY
-
+export const getStaticProps = (async ({ locale }) => {
   const metricResults: AllMetricData = {
-    totalEthStaked: await fetchTotalEthStaked(),
-    nodeCount: await fetchNodes(etherscanApiKey),
-    totalValueLocked: await fetchTotalValueLocked(),
-    txCount: await fetchTxCount(etherscanApiKey),
+    totalEthStaked: await cachedFetchTotalEthStaked(),
+    nodeCount: await cachedFetchNodes(),
+    totalValueLocked: await cachedFetchTotalValueLocked(),
+    txCount: await cachedFetchTxCount(),
   }
 
   const communityEvents = await cachedFetchCommunityEvents()
@@ -216,14 +213,14 @@ export const getServerSideProps = (async ({ locale, res }) => {
       lastDeployDate,
       metricResults,
     },
-    revalidate: BASE_TIME_UNIT * 24,
+    revalidate: 15, // BASE_TIME_UNIT * 24,
   }
-}) satisfies GetServerSideProps<Props>
+}) satisfies GetStaticProps<Props>
 
 const HomePage = ({
   communityEvents,
   metricResults,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
