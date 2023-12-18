@@ -41,7 +41,7 @@ const PageMetadata: React.FC<IProps> = ({
   const fullTitle = `${title} | ${siteTitle}`
   const origin = process.env.NEXT_PUBLIC_SITE_URL || SITE_URL // TODO: Remove .env var usage after launch
 
-  // Remove anything query params (?) or hash links (#)
+  // Remove any query params (?) or hash links (#)
   const path = asPath.replace(/[\?\#].*/, "")
   const slug = path.split("/")
 
