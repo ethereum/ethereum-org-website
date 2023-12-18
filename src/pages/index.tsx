@@ -179,13 +179,11 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
-const etherscanApiKey = process.env.ETHERSCAN_API_KEY
-
 const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
 const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
-const cachedFetchNodes = runOnlyOnce(() => fetchNodes(etherscanApiKey))
+const cachedFetchNodes = runOnlyOnce(fetchNodes)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
-const cachedFetchTxCount = runOnlyOnce(() => fetchTxCount(etherscanApiKey))
+const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 
 type Props = SSRConfig & {
   communityEvents: CommunityEventsReturnType
