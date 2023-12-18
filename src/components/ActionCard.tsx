@@ -80,6 +80,7 @@ const ActionCard = ({
         <Image
           src={image}
           width={imageWidth}
+          maxH="full"
           alt={alt || ""}
           style={{ objectFit: "cover" }}
         />
