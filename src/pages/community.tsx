@@ -304,6 +304,7 @@ const CommunityPage = () => {
                 description={card.description}
                 to={card.to}
                 image={card.image}
+                imageWidth={320}
                 alt={card.alt}
               />
             ))}
