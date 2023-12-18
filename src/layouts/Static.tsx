@@ -106,10 +106,6 @@ export const StaticLayout: React.FC<IProps> = ({
         p={8}
         pt={{ base: 8, lg: 16 }}
       >
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-        />
         <Box>
           {slug === "/guides/" ? (
             <HubHero
