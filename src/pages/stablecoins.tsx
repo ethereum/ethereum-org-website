@@ -27,7 +27,7 @@ import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductList from "@/components/ProductList"
-import SimpleTable from "@/components/SimpleTable"
+import StablecoinsTable from "@/components/StablecoinsTable"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import Tooltip from "@/components/Tooltip"
@@ -603,7 +603,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           </Text>
         </Box>
         <Box px={8} py={4} width="full" overflowX="scroll">
-          <SimpleTable
+          <StablecoinsTable
             columns={tableColumns}
             content={markets}
             hasError={marketsHasError}

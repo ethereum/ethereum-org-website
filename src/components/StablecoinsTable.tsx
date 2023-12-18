@@ -30,8 +30,7 @@ export interface IProps {
   hasError: boolean
 }
 
-// TODO generalize this component - currently tailored for stablecoin market caps
-const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
+const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
   const [textColor] = useToken("colors", ["text"])
   const { flipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-stablecoins")
@@ -130,4 +129,4 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
     </Table>
   )
 }
-export default SimpleTable
+export default StablecoinsTable

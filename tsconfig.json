@@ -88,7 +88,7 @@
     "./src/components/Select/index.tsx",
     "./src/components/SideNav.tsx",
     "./src/components/SideNavMobile.tsx",
-    "./src/components/SimpleTable.tsx",
+    "src/components/StablecoinsTable.tsx",
     "./src/components/Simulator",
     "./src/components/SkipLink.tsx",
     "./src/components/Slider/Slider.stories.tsx",
