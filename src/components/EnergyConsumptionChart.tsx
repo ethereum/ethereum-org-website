@@ -21,8 +21,6 @@ import {
 
 import type { Lang } from "@/lib/types"
 
-import Translation from "@/components/Translation"
-
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 interface ITickProps {
@@ -77,7 +75,7 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
 }
 
 const EnergyConsumptionChart: React.FC = () => {
-  const { t } = useTranslation(["page-about", "page-what-is-ethereum"])
+  const { t } = useTranslation("page-what-is-ethereum")
   const textColor = useToken("colors", "text")
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
@@ -216,7 +214,7 @@ const EnergyConsumptionChart: React.FC = () => {
             <Legend
               content={
                 <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  {t("page-what-is-ethereum:page-what-is-ethereum-energy-consumption-chart-legend")}
+                  {t("page-what-is-ethereum-energy-consumption-chart-legend")}
                 </Box>
               }
             />
