@@ -591,12 +591,14 @@ const Layer2Page = () => {
             <ProductList
               category="Information"
               content={toolsData.information}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
         </TwoColumnContent>

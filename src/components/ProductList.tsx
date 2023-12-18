@@ -10,7 +10,6 @@ import {
 import { ButtonLink } from "@/components/Buttons"
 import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
-import Translation from "@/components/Translation"
 
 type Content = {
   title: string
@@ -21,12 +20,13 @@ type Content = {
   id?: string
 }
 
-type ProductListProps = {
+export type ProductListProps = {
   content: Content[]
   category: string
+  actionLabel: string
 }
 
-const ProductList = ({ content, category }: ProductListProps) => {
+const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   const CATEGORY_NAME = "category-name"
@@ -89,7 +89,7 @@ const ProductList = ({ content, category }: ProductListProps) => {
               {link && (
                 <ButtonLink
                   variant="outline"
-                  to={link}
+                  href={link}
                   alignSelf="center"
                   ms={{ base: 0, sm: 8 }}
                   paddingY={1}
@@ -97,7 +97,7 @@ const ProductList = ({ content, category }: ProductListProps) => {
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  <Translation id="page-layer-2:page-dapps-ready-button" />
+                  {actionLabel}
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}

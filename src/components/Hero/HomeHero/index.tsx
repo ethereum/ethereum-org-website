@@ -17,6 +17,7 @@ const HomeHero = ({ heroImg }: HomeHeroProps) => {
         <Image
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
+          sizes="100vw"
           w="full"
           h="full"
           priority

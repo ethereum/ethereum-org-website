@@ -34,7 +34,10 @@ import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import rhino from "@/public/upgrades/upgrade_rhino.png"
 
@@ -200,6 +203,8 @@ const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
   return { totalEthStaked, validatorscount, apr }
 }
 
+const cachedFetchBeaconchainData = runOnlyOnce(fetchBeaconchainData)
+
 export const getStaticProps = (async (context) => {
   const { locale } = context
   const lastDeployDate = getLastDeployDate()
@@ -207,7 +212,7 @@ export const getStaticProps = (async (context) => {
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
-  const data = await fetchBeaconchainData()
+  const data = await cachedFetchBeaconchainData()
 
   return {
     props: {
@@ -215,6 +220,8 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
       data,
     },
+    // Updated once a day
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
