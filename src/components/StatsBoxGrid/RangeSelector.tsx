@@ -1,7 +1,7 @@
 import React from "react"
 import { Button } from "@chakra-ui/react"
 
-import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ranges } from "./useStatsBoxGrid"
 

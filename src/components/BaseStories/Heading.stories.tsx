@@ -85,7 +85,7 @@ export const Heading: Story = {
               textAlign="end"
               size={obj.size}
             >
-              {obj.size || "xl"}
+              {obj.size as string|| "xl"}
             </HeadingComponent>
             <HeadingComponent flex="3" {...obj}>
               {args.children}

@@ -4,7 +4,8 @@ import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { Box, Flex, Icon, Text,VStack } from "@chakra-ui/react"
 
-import { Direction } from "../../types"
+import { Direction } from "@/lib/types"
+
 import InlineLink from "../Link"
 import OldText from "../OldText"
 import StatErrorMessage from "../StatErrorMessage"
@@ -77,7 +78,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
         data={filteredData(state.data)}
-        margin={{ insetInlineStart: -5, insetInlineEnd: -5 }}
+        margin={{ left: -5, right: -5 }}
       >
         <defs>
           <linearGradient
