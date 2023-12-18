@@ -159,17 +159,22 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
+  if (path.startsWith("/what-is-ethereum")) {
+    requiredNamespaces = [...requiredNamespaces, "page-what-is-ethereum"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
+    path.startsWith("/eth") ||
+    path.startsWith("/layer-2") ||
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
-    path.startsWith("/eth") ||
     path.startsWith("/wallets") ||
     path.startsWith("/web3") ||
-    path.startsWith("/quizzes") ||
-    path.startsWith("/layer-2")
+    path.startsWith("/what-is-ethereum") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
