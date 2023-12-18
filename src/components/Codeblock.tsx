@@ -9,6 +9,7 @@ import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
+import Translation from "@/components/Translation"
 
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
 ;(typeof global !== "undefined" ? global : window).Prism = Prism
@@ -321,13 +322,9 @@ const Codeblock: React.FC<IProps> = ({
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                       <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                         {isCollapsed ? (
-                          // TODO: Implement after intl
-                          // <Translation id="show-all" />
-                          <>Show all</>
+                          <Translation id="show-all" />
                         ) : (
-                          // TODO: Implement after intl
-                          // <Translation id="show-less" />
-                          <>Show less</>
+                          <Translation id="show-less" />
                         )}
                       </TopBarItem>
                     )}
@@ -338,16 +335,12 @@ const Codeblock: React.FC<IProps> = ({
                           {!isCopied ? (
                             <>
                               <Emoji text=":clipboard:" fontSize="md" />{" "}
-                              {/* TODO: Implement after intl */}
-                              {/* <Translation id="copy" /> */}
-                              Copy
+                              <Translation id="copy" />
                             </>
                           ) : (
                             <>
                               <Emoji text=":white_check_mark:" fontSize="md" />{" "}
-                              {/* TODO: Implement after intl */}
-                              {/* <Translation id="copied" /> */}
-                              Copied
+                              <Translation id="copied" />
                             </>
                           )}
                         </TopBarItem>
