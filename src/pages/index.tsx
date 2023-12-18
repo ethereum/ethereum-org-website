@@ -197,6 +197,7 @@ export const getStaticProps = (async (context) => {
       communityEvents,
       lastDeployDate,
     },
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
