@@ -1,5 +1,4 @@
 import React, { ReactNode } from "react"
-import { StaticImageData } from "next/image"
 import {
   Badge,
   Box,
@@ -11,7 +10,7 @@ import {
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
-import { Image } from "@/components/Image"
+import { Image, type ImageProps } from "@/components/Image"
 import Text from "@/components/OldText"
 
 import GitStars from "./GitStars"
@@ -57,7 +56,7 @@ export interface IProps {
   children?: React.ReactNode
   url: string
   background: string
-  image: StaticImageData
+  image: ImageProps["src"]
   name: string
   description?: ReactNode
   note?: string

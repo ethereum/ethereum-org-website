@@ -38,8 +38,6 @@ import {
   Heading4 as MdHeading4,
   Paragraph,
 } from "@/components/MdComponents"
-// TODO: IMPLEMENT PAGEMETADATA
-// import PageMetadata from "@/components/PageMetadata"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
@@ -235,11 +233,6 @@ export const DocsLayout = ({
 
   return (
     <Page>
-      {/* // TODO: IMPLEMENT PAGEMETADATA */}
-      {/* <PageMetadata
-        title={frontmatter.title}
-        description={frontmatter.description}
-      /> */}
       <SideNavMobile path={relativePath} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>

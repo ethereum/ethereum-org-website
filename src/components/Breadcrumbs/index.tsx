@@ -37,7 +37,7 @@ const Breadcrumbs = ({
   startDepth = 0,
   ...props
 }: BreadcrumbsProps) => {
-  const { t } = useTranslation(["common", "page-index"])
+  const { t } = useTranslation("common")
   const { locale, asPath } = useRouter()
 
   const hasHome = asPath !== "/"
@@ -51,7 +51,7 @@ const Breadcrumbs = ({
       ? [
           {
             fullPath: "/",
-            text: t("page-index:page-index-meta-title"),
+            text: t("page-index-meta-title"),
           },
         ]
       : []),

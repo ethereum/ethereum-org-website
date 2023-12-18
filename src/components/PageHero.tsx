@@ -155,7 +155,7 @@ const PageHero = ({
       >
         <Image
           src={image}
-          sizes="100%"
+          sizes="(max-width: 992px) 100vw, 50vw"
           style={{
             width: "100%",
             height: "auto",

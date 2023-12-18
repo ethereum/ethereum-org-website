@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { reverse, sortBy } from "lodash"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   Button as ChakraButton,
@@ -12,7 +13,6 @@ import {
 
 import Emoji from "./Emoji"
 import Text from "./OldText"
-import Translation from "./Translation"
 
 export interface IProps {
   monthData: any
@@ -145,6 +145,10 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     onChange: updateDateRangeType,
   })
 
+  const { t } = useTranslation(
+    "page-contributing-translation-program-acknowledgements"
+  )
+
   return (
     <Box>
       <Flex
@@ -156,19 +160,25 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         w="full"
       >
         <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view"
+          )}
         </RadioCard>
         <RadioCard
           key="quarterData"
           {...getRadioProps({ value: "quarterData" })}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view"
+          )}
         </RadioCard>
         <RadioCard
           key="allTimeData"
           {...getRadioProps({ value: "allTimeData" })}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view"
+          )}
         </RadioCard>
       </Flex>
       <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
@@ -192,11 +202,15 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               me={8}
               overflowWrap="anywhere"
             >
-              <Translation id="page-contributing-translation-program-acknowledgements-translator" />
+              {t(
+                "page-contributing-translation-program-acknowledgements-translator"
+              )}
             </Flex>
           </Flex>
           <Flex minW="20%" flexDirection="row" alignItems="start">
-            <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
+            {t(
+              "page-contributing-translation-program-acknowledgements-total-words"
+            )}
           </Flex>
         </Flex>
         {leaderboardData[dateRangeType]
@@ -294,13 +308,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             textAlign="center"
             fontWeight={{ base: "semibold", md: "normal" }}
           >
-            <Translation
-              id={
-                filterAmount === 10
-                  ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
-                  : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
-              }
-            />
+            {t(
+              filterAmount === 10
+                ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
+                : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
+            )}
           </Text>
         </Button>
       </Flex>
