@@ -69,7 +69,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
 
           {content && content[0]?.url && (
             <Th p={5} fontSize="md" fontWeight="normal" textAlign="end">
-              <Text as="span" transform={flipForRtl}>
+              <Text as="span" display="inline-block" transform={flipForRtl}>
                 ↗
               </Text>
             </Th>

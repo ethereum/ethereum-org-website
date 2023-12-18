@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import {
   Box,
   Flex,
@@ -21,14 +20,14 @@ type Content = {
   id?: string
 }
 
-type ProductListProps = {
+export type ProductListProps = {
   content: Content[]
   category: string
+  actionLabel: string
 }
 
-const ProductList = ({ content, category }: ProductListProps) => {
+const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
-  const { t } = useTranslation("page-stablecoins")
 
   const CATEGORY_NAME = "category-name"
 
@@ -90,7 +89,7 @@ const ProductList = ({ content, category }: ProductListProps) => {
               {link && (
                 <ButtonLink
                   variant="outline"
-                  to={link}
+                  href={link}
                   alignSelf="center"
                   ms={{ base: 0, sm: 8 }}
                   paddingY={1}
@@ -98,7 +97,7 @@ const ProductList = ({ content, category }: ProductListProps) => {
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  {t("page-stablecoins:page-dapps-ready-button")}
+                  {actionLabel}
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}

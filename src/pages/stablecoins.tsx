@@ -805,6 +805,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             mr={{ base: "auto", lg: 2 }}
           >
             <ProductList
+              actionLabel={t("page-stablecoins:page-dapps-ready-button")}
               category="Dashboards & Education"
               content={toolsData}
             />

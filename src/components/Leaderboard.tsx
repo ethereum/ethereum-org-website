@@ -130,8 +130,9 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
                     ms: 0.5,
                     me: 1.5,
                     transform: flipForRtl,
+                    display: "inline-block",
                   }}
-                ></Box>
+                />
               </LinkBox>
             </ListItem>
           )

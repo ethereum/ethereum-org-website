@@ -16,8 +16,6 @@ import {
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-// TODO: Import once intl implements?
-// import PageMetadata from "@/components/PageMetadata"
 import PostMergeBanner from "@/components/Banners/PostMergeBanner"
 // Components
 import { ButtonLink } from "@/components/Buttons"
@@ -211,12 +209,6 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        {/* TODO: Implement PageMetaData after intl */}
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          canonicalUrl={frontmatter.sourceUrl}
-        /> */}
         <ContentContainer>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />

@@ -163,17 +163,22 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
+  if (path.startsWith("/what-is-ethereum")) {
+    requiredNamespaces = [...requiredNamespaces, "page-what-is-ethereum"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
+    path.startsWith("/eth") ||
+    path.startsWith("/layer-2") ||
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
-    path.startsWith("/eth") ||
     path.startsWith("/wallets") ||
     path.startsWith("/web3") ||
-    path.startsWith("/quizzes") ||
-    path.startsWith("/layer-2")
+    path.startsWith("/what-is-ethereum") ||
+    path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
@@ -187,7 +192,7 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/wallets")) {
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "glossary"]
   }
 
   if (path.startsWith("/wallets/find-wallet")) {
@@ -207,6 +212,11 @@ const getRequiredNamespacesForPath = (path: string) => {
 
 const getRequiredNamespacesForLayout = (layout?: string) => {
   let requiredNamespaces: string[] = []
+
+  // namespaces required for all layouts
+  if (layout) {
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
 
   if (layout === "docs") {
     requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]

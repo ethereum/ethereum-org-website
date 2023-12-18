@@ -38,7 +38,9 @@ import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
-import ProductList from "@/components/ProductList"
+import ProductListComponent, {
+  type ProductListProps,
+} from "@/components/ProductList"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -387,6 +389,16 @@ const StyledCardGrid = (props: ChildOnlyProp) => (
 const MoreButtonContainer = (props: ChildOnlyProp) => (
   <Flex justify="center" mt={12} mb={4} {...props} />
 )
+
+const ProductList = (props: Omit<ProductListProps, "actionLabel">) => {
+  const { t } = useTranslation("page-dapps")
+  return (
+    <ProductListComponent
+      actionLabel={t("page-dapps-ready-button")}
+      {...props}
+    />
+  )
+}
 
 enum CategoryType {
   FINANCE = "finance",
