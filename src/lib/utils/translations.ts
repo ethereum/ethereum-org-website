@@ -188,7 +188,7 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/wallets")) {
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "glossary"]
   }
 
   if (path.startsWith("/wallets/find-wallet")) {
@@ -208,6 +208,11 @@ const getRequiredNamespacesForPath = (path: string) => {
 
 const getRequiredNamespacesForLayout = (layout?: string) => {
   let requiredNamespaces: string[] = []
+
+  // namespaces required for all layouts
+  if (layout) {
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
 
   if (layout === "docs") {
     requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
