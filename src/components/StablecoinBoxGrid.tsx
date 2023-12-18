@@ -1,13 +1,13 @@
-import React, { useState } from "react"
+import { useState } from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
-import { isMobile } from "../utils/isMobile"
+import { isMobile } from "../lib/utils/isMobile"
 
 import Emoji from "./Emoji"
 import InlineLink from "./Link"
 import OldHeading from "./OldHeading"
-import Translation from "./Translation"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {
@@ -151,6 +151,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
     callback(index)
   }
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { t } = useTranslation("page-stablecoins")
 
   return (
     <Flex
@@ -198,9 +199,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
             <Row>
               {pros && (
                 <Column>
-                  <Subtitle>
-                    <Translation id="pros" />
-                  </Subtitle>
+                  <Subtitle>{t("pros")}</Subtitle>
 
                   <Body>
                     <ul>
@@ -213,9 +212,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
               )}
               {cons && (
                 <Column>
-                  <Subtitle>
-                    <Translation id="cons" />
-                  </Subtitle>
+                  <Subtitle>{t("cons")}</Subtitle>
                   <Body>
                     <ul>
                       {cons.map((con, idx) => (
@@ -227,9 +224,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
               )}
             </Row>
             <div>
-              <Subtitle>
-                <Translation id="example-projects" />
-              </Subtitle>
+              <Subtitle>{t("example-projects")}</Subtitle>
               <Body>
                 <ul>
                   {links.map((link, idx) => (
