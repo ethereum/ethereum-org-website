@@ -220,6 +220,7 @@ export const getStaticProps = (async (context) => {
       lastDeployDate,
       data,
     },
+    // Updated once a day
     revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
