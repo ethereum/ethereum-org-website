@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next/types"
+import { GetStaticProps } from "next/types"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -37,6 +37,7 @@ import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
+  BASE_TIME_UNIT,
   COINGECKO_API_BASE_URL,
   COINGECKO_API_URL_PARAMS,
 } from "@/lib/constants"
@@ -91,7 +92,7 @@ const stablecoinDataFetch = runOnlyOnce(() =>
   )
 )
 
-export const getServerSideProps = (async (context) => {
+export const getStaticProps = (async (context) => {
   const { locale } = context
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
@@ -132,111 +133,39 @@ export const getServerSideProps = (async (context) => {
 
   try {
     // Fetch token data in the Ethereum ecosystem
-    // const ethereumData: EthereumDataResponse = await fetch(
-    //   `${COINGECKO_API_BASE_URL}ethereum-ecosystem${COINGECKO_API_URL_PARAMS}`
-    // ).then((res) => res.json())
-    // const ethereumData = await ethereumDataFetch()
-    // console.log({ ethereumData })
+    const ethereumData: EthereumDataResponse = await ethereumDataFetch()
 
     // Fetch token data for stablecoins
-    // const stablecoinData = await stablecoinDataFetch()
+    const stablecoinData: StablecoinDataResponse = await stablecoinDataFetch()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
-    // const ethereumStablecoinData = stablecoinData.filter(
-    //   (stablecoin) =>
-    //     ethereumData.findIndex(
-    //       // eslint-disable-next-line
-    //       (etherToken) => stablecoin.id == etherToken.id
-    //     ) > -1
-    // )
+    const ethereumStablecoinData = stablecoinData.filter(
+      (stablecoin) =>
+        ethereumData.findIndex(
+          // eslint-disable-next-line
+          (etherToken) => stablecoin.id == etherToken.id
+        ) > -1
+    )
 
     marketsHasError = false
-    // markets = ethereumStablecoinData
-    //   .filter((token) => {
-    //     return stablecoins[token.symbol.toUpperCase()]
-    //   })
-    //   .map((token) => {
-    //     return {
-    //       name: token.name,
-    //       marketCap: new Intl.NumberFormat("en-US", {
-    //         style: "currency",
-    //         currency: "USD",
-    //         minimumFractionDigits: 0,
-    //         maximumFractionDigits: 0,
-    //       }).format(token.market_cap),
-    //       image: token.image,
-    //       type: stablecoins[token.symbol.toUpperCase()].type,
-    //       url: stablecoins[token.symbol.toUpperCase()].url,
-    //     }
-    //   })
-
-    // TODO: remove mocked data
-    markets = [
-      {
-        name: "Tether",
-        marketCap: "$90,772,535,555",
-        image:
-          "https://assets.coingecko.com/coins/images/325/large/Tether.png?1696501661",
-        type: "FIAT",
-        url: "https://tether.to/",
-      },
-      {
-        name: "USDC",
-        marketCap: "$24,544,485,941",
-        image:
-          "https://assets.coingecko.com/coins/images/6319/large/usdc.png?1696506694",
-        type: "FIAT",
-        url: "https://www.coinbase.com/usdc",
-      },
-      {
-        name: "Dai",
-        marketCap: "$5,279,500,183",
-        image:
-          "https://assets.coingecko.com/coins/images/9956/large/Badge_Dai.png?1696509996",
-        type: "CRYPTO",
-        url: "https://kb.oasis.app/help/what-is-dai",
-      },
-      {
-        name: "TrueUSD",
-        marketCap: "$2,431,041,555",
-        image:
-          "https://assets.coingecko.com/coins/images/3449/large/tusd.png?1696504140",
-        type: "FIAT",
-        url: "https://www.trusttoken.com/trueusd",
-      },
-      {
-        name: "BUSD",
-        marketCap: "$1,191,498,133",
-        image:
-          "https://assets.coingecko.com/coins/images/9576/large/BUSDLOGO.jpg?1696509654",
-        type: "FIAT",
-        url: "https://www.binance.com/en/busd",
-      },
-      {
-        name: "Frax",
-        marketCap: "$649,718,063",
-        image:
-          "https://assets.coingecko.com/coins/images/13422/large/FRAX_icon.png?1696513182",
-        type: "ALGORITHMIC",
-        url: "https://frax.finance/",
-      },
-      {
-        name: "PAX Gold",
-        marketCap: "$448,940,869",
-        image:
-          "https://assets.coingecko.com/coins/images/9519/large/paxgold.png?1696509604",
-        type: "ASSET",
-        url: "https://www.paxos.com/paxgold/",
-      },
-      {
-        name: "Pax Dollar",
-        marketCap: "$370,275,387",
-        image:
-          "https://assets.coingecko.com/coins/images/6013/large/Pax_Dollar.png?1696506427",
-        type: "FIAT",
-        url: "https://paxos.com/usdp/",
-      },
-    ]
+    markets = ethereumStablecoinData
+      .filter((token) => {
+        return stablecoins[token.symbol.toUpperCase()]
+      })
+      .map((token) => {
+        return {
+          name: token.name,
+          marketCap: new Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 0,
+          }).format(token.market_cap),
+          image: token.image,
+          type: stablecoins[token.symbol.toUpperCase()].type,
+          url: stablecoins[token.symbol.toUpperCase()].url,
+        }
+      })
   } catch (error) {
     console.error(error)
     markets = []
@@ -250,8 +179,10 @@ export const getServerSideProps = (async (context) => {
       markets,
       marketsHasError,
     },
+    // Updated once a week
+    revalidate: BASE_TIME_UNIT * 24 * 7,
   }
-}) satisfies GetServerSideProps<Props>
+}) satisfies GetStaticProps<Props>
 
 const Content = (props: BoxProps) => <Box py={4} px={8} w="full" {...props} />
 
