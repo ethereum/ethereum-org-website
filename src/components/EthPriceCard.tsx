@@ -170,6 +170,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
             _after={{
               content: isNegativeChange ? '"↘"' : '"↗"',
               transform: flipForRtl,
+              display: "inline-block",
             }}
           >
             {change}
