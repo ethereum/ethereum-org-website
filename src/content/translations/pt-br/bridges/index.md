@@ -45,7 +45,7 @@ Seguem alguns cenários onde você pode usar uma ponte:
 
 ### Diminuir as taxas de transação {#transaction-fees}
 
-Digamos que você tenha ETH na mainet (rede principal) Ethereum, mas queira taxas de transação mais baratas para explorar diferentes dapps. Ao fazer uma ponte do seu ETH da Mainnet para uma rollup Ethereum L2, você poderá usufruir de taxas de transação mais baixas.
+Digamos que você tenha ETH na mainnet (rede principal) Ethereum, mas queira taxas de transação mais baratas para explorar diferentes dapps. Ao fazer uma ponte do seu ETH da Mainnet para uma rollup Ethereum L2, você poderá usufruir de taxas de transação mais baixas.
 
 ### Dapps em outros blockchains {#dapps-other-chains}
 
