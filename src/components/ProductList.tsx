@@ -6,11 +6,11 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
-import Translation from "@/components/Translation"
 
 type Content = {
   title: string
@@ -28,6 +28,7 @@ type ProductListProps = {
 
 const ProductList = ({ content, category }: ProductListProps) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { t } = useTranslation("page-stablecoins")
 
   const CATEGORY_NAME = "category-name"
 
@@ -97,7 +98,7 @@ const ProductList = ({ content, category }: ProductListProps) => {
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  <Translation id="page-layer-2:page-dapps-ready-button" />
+                  {t("page-stablecoins:page-dapps-ready-button")}
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}
