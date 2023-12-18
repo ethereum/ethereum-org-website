@@ -10,6 +10,7 @@ import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
 import Logo from "@/components/Logo"
@@ -22,6 +23,7 @@ import {
 } from "@/components/MdComponents"
 import MeetupList from "@/components/MeetupList"
 import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
@@ -29,8 +31,11 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { CONTENT_DIR } from "@/lib/constants"
+
+import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -101,6 +106,31 @@ export const StaticLayout: React.FC<IProps> = ({
         p={8}
         pt={{ base: 8, lg: 16 }}
       >
+        <PageMetadata
+          title={frontmatter.title}
+          description={frontmatter.description}
+        />
+        <Box>
+          {slug === "/guides/" ? (
+            <HubHero
+              heroImg={GuideHeroImage}
+              header={frontmatter.title}
+              title={""}
+              description={frontmatter.description}
+            />
+          ) : (
+            <>
+              <Breadcrumbs slug={slug} mb="8" />
+              <Text
+                color="text200"
+                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+              >
+                <Translation id="page-last-updated" />:{" "}
+                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
+              </Text>
+            </>
+          )}
+
         <Box
           as="article"
           maxW="container.md"
@@ -120,13 +150,6 @@ export const StaticLayout: React.FC<IProps> = ({
             },
           }}
         >
-          <Breadcrumbs slug={slug} mb="8" />
-          <Text
-            color="text200"
-          >
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-          </Text>
           <TableOfContents
             position="relative"
             zIndex={2}
@@ -138,6 +161,7 @@ export const StaticLayout: React.FC<IProps> = ({
           {children}
 
           <FeedbackCard isArticle />
+        </Box>
         </Box>
         <TableOfContents
           editPath={absoluteEditPath}
