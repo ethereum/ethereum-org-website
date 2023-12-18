@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import {
   Box,
   Flex,
@@ -6,7 +7,6 @@ import {
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image, type ImageProps } from "@/components/Image"

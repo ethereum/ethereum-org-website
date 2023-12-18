@@ -1,4 +1,5 @@
 import React from "react"
+import { StaticImageData } from "next/image"
 import {
   Box,
   Flex,
@@ -8,9 +9,9 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import Text from "./OldText"
 import { Image } from "@/components/Image"
-import { StaticImageData } from "next/image"
+
+import Text from "./OldText"
 
 export interface DataRow {
   logo: StaticImageData

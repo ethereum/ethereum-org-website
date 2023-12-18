@@ -1,3 +1,4 @@
+import { useTranslation } from "next-i18next"
 import {
   Flex,
   Image,
@@ -10,7 +11,6 @@ import {
   Tr,
   useToken,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 
 import { ButtonLink } from "./Buttons"
 
