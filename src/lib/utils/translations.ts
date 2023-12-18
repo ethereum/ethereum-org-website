@@ -184,12 +184,13 @@ const getRequiredNamespacesForPath = (path: string) => {
 const getRequiredNamespacesForLayout = (layout?: string) => {
   let requiredNamespaces: string[] = []
 
+  // namespaces required for all layouts
+  if (layout) {
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
+
   if (layout === "docs") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-developers-docs",
-      "glossary",
-    ]
+    requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]
   }
 
   if (layout === "use-cases") {
@@ -197,7 +198,6 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
       ...requiredNamespaces,
       "template-usecase",
       "learn-quizzes",
-      "glossary",
     ]
   }
 
@@ -206,16 +206,11 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
       ...requiredNamespaces,
       "page-upgrades",
       "page-upgrades-index",
-      "glossary",
     ]
   }
 
   if (layout === "tutorial") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-developers-tutorials",
-      "glossary",
-    ]
+    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
   }
 
   return requiredNamespaces
