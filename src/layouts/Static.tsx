@@ -23,7 +23,6 @@ import {
 } from "@/components/MdComponents"
 import MeetupList from "@/components/MeetupList"
 import Text from "@/components/OldText"
-import PageMetadata from "@/components/PageMetadata"
 import SocialListItem from "@/components/SocialListItem"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
@@ -127,37 +126,37 @@ export const StaticLayout: React.FC<IProps> = ({
             </>
           )}
 
-        <Box
-          as="article"
-          maxW="container.md"
-          w="full"
-          sx={{
-            ".featured": {
-              ps: 4,
-              ms: -4,
-              borderInlineStart: "1px dotted",
-              borderInlineStartColor: "primary.base",
-            },
-
-            ".citation": {
-              p: {
-                color: "text200",
+          <Box
+            as="article"
+            maxW="container.md"
+            w="full"
+            sx={{
+              ".featured": {
+                ps: 4,
+                ms: -4,
+                borderInlineStart: "1px dotted",
+                borderInlineStartColor: "primary.base",
               },
-            },
-          }}
-        >
-          <TableOfContents
-            position="relative"
-            zIndex={2}
-            items={tocItems}
-            isMobile
-            maxDepth={frontmatter.sidebarDepth || 2}
-            hideEditButton={!!frontmatter.hideEditButton}
-          />
-          {children}
 
-          <FeedbackCard isArticle />
-        </Box>
+              ".citation": {
+                p: {
+                  color: "text200",
+                },
+              },
+            }}
+          >
+            <TableOfContents
+              position="relative"
+              zIndex={2}
+              items={tocItems}
+              isMobile
+              maxDepth={frontmatter.sidebarDepth || 2}
+              hideEditButton={!!frontmatter.hideEditButton}
+            />
+            {children}
+
+            <FeedbackCard isArticle />
+          </Box>
         </Box>
         <TableOfContents
           editPath={absoluteEditPath}
