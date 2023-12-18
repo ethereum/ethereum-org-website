@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
 import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import { FaGithub } from "react-icons/fa"
 import {
   Badge,
