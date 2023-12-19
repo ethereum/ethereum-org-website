@@ -473,7 +473,7 @@ const GetEthPage = ({
         descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
         image={dapps}
         alt={t("page-index:page-index-sections-individuals-image-alt")}
-        maxImageWidth={600}
+        maxImageWidth="600px"
       >
         <Box>
           <ButtonLink href="/dapps/">
