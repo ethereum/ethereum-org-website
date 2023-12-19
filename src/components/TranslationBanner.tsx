@@ -9,14 +9,12 @@ import Emoji from "./Emoji"
 
 export interface IProps {
   shouldShow: boolean
-  isPageRightToLeft: boolean
   originalPagePath: string
   isPageContentEnglish: boolean
 }
 
 const TranslationBanner: React.FC<IProps> = ({
   shouldShow,
-  isPageRightToLeft,
   originalPagePath,
   isPageContentEnglish,
 }) => {
@@ -60,7 +58,6 @@ const TranslationBanner: React.FC<IProps> = ({
       >
         <Flex
           flexDirection="column"
-          alignItems={isPageRightToLeft ? "flex-end" : "flex-start"}
           m={4}
           mt={{ base: 10, sm: 4 }}
         >
@@ -115,7 +112,7 @@ const TranslationBanner: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top="0"
-          insetInlineEnd={isPageRightToLeft ? "auto" : 0}
+          insetInlineEnd="0"
           margin={2}
           color="secondary"
           _hover={{
