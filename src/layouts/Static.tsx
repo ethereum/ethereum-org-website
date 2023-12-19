@@ -10,6 +10,7 @@ import Contributors from "@/components/Contributors"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
 import Logo from "@/components/Logo"
@@ -29,8 +30,11 @@ import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { CONTENT_DIR } from "@/lib/constants"
+
+import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -101,43 +105,58 @@ export const StaticLayout: React.FC<IProps> = ({
         p={8}
         pt={{ base: 8, lg: 16 }}
       >
-        <Box
-          as="article"
-          maxW="container.md"
-          w="full"
-          sx={{
-            ".featured": {
-              ps: 4,
-              ms: -4,
-              borderInlineStart: "1px dotted",
-              borderInlineStartColor: "primary.base",
-            },
+        <Box>
+          {slug === "/guides/" ? (
+            <HubHero
+              heroImg={GuideHeroImage}
+              header={frontmatter.title}
+              title={""}
+              description={frontmatter.description}
+            />
+          ) : (
+            <>
+              <Breadcrumbs slug={slug} mb="8" />
+              <Text
+                color="text200"
+                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+              >
+                <Translation id="page-last-updated" />:{" "}
+                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
+              </Text>
+            </>
+          )}
 
-            ".citation": {
-              p: {
-                color: "text200",
+          <Box
+            as="article"
+            maxW="container.md"
+            w="full"
+            sx={{
+              ".featured": {
+                ps: 4,
+                ms: -4,
+                borderInlineStart: "1px dotted",
+                borderInlineStartColor: "primary.base",
               },
-            },
-          }}
-        >
-          <Breadcrumbs slug={slug} mb="8" />
-          <Text
-            color="text200"
-          >
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-          </Text>
-          <TableOfContents
-            position="relative"
-            zIndex={2}
-            items={tocItems}
-            isMobile
-            maxDepth={frontmatter.sidebarDepth || 2}
-            hideEditButton={!!frontmatter.hideEditButton}
-          />
-          {children}
 
-          <FeedbackCard isArticle />
+              ".citation": {
+                p: {
+                  color: "text200",
+                },
+              },
+            }}
+          >
+            <TableOfContents
+              position="relative"
+              zIndex={2}
+              items={tocItems}
+              isMobile
+              maxDepth={frontmatter.sidebarDepth || 2}
+              hideEditButton={!!frontmatter.hideEditButton}
+            />
+            {children}
+
+            <FeedbackCard isArticle />
+          </Box>
         </Box>
         <TableOfContents
           editPath={absoluteEditPath}

@@ -48,11 +48,12 @@ const HeroContainer = (props: ChildOnlyProp) => (
     mb={{ base: 8, lg: 0 }}
     maxH={{ base: "100%", lg: "none" }}
     {...props}
+    justify="space-between"
   />
 )
 
 const TitleCard = (props: ChildOnlyProp) => (
-  <Flex p={8} direction="column" justify="flex-start" {...props} />
+  <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
 )
 
 // Roadmap layout components
@@ -140,11 +141,6 @@ export const RoadmapLayout: React.FC<IProps> = ({
         />
       ) : (
         <HeroContainer>
-          <Flex
-            w="full"
-            flexDirection={{ base: "column", lg: "row" }}
-            justify="space-between"
-          >
             <TitleCard>
               {/* TODO: Double check this slug works */}
               <Breadcrumbs slug={slug} mb="8" />
@@ -186,12 +182,11 @@ export const RoadmapLayout: React.FC<IProps> = ({
                 src={frontmatter.image}
                 alt={frontmatter.alt ?? ""}
                 style={{ objectFit: "contain" }}
-                width={700}
+                width={1504}
                 height={345}
                 priority
               />
             </Center>
-          </Flex>
         </HeroContainer>
       )}
       <Page>
