@@ -4,9 +4,9 @@ export async function fetchEthereumEcosystemData() {
   const url = `${COINGECKO_API_BASE_URL}ethereum-ecosystem${COINGECKO_API_URL_PARAMS}`
 
   try {
-    const ethereumEcosystemData = await fetch(url).then((res) => res.json())
+    const res = await fetch(url)
 
-    return ethereumEcosystemData
+    return res.json()
   } catch (error) {
     // In production mode, throw an error to stop the build in case this fetch fails
     console.error(error)
@@ -20,14 +20,14 @@ export async function fetchEthereumStablecoinsData() {
   const url = `${COINGECKO_API_BASE_URL}stablecoins${COINGECKO_API_URL_PARAMS}`
 
   try {
-    const ethereumStablecoinsData = await fetch(url).then((res) => res.json())
+    const res = await fetch(url)
 
-    return ethereumStablecoinsData
+    return res.json()
   } catch (error) {
     // In production mode, throw an error to stop the build in case this fetch fails
     console.error(error)
     throw new Error(
-      "Something went wrong with requesting the Ethereum ecosystem data."
+      "Something went wrong with requesting the Ethereum stablecoins data."
     )
   }
 }
