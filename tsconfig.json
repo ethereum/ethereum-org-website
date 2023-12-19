@@ -74,7 +74,6 @@
     "./src/components/Modal.tsx",
     "./src/components/Morpher.tsx",
     "./src/components/OrderedList.tsx",
-    "./src/components/ReleaseBanner.tsx",
     "./src/components/RollupProductDevDoc.tsx",
     "./src/components/Search/SearchButton.tsx",
     "./src/components/Search/SearchModal.tsx",
