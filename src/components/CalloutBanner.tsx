@@ -11,7 +11,7 @@ export type CalloutBannerProps = FlexProps & {
   children?: React.ReactNode
   image: ImageProps["src"]
   imageWidth?: ImageProps["width"]
-  maxImageWidth?: number
+  maxImageWidth?: string
   titleKey: TranslationKey
   descriptionKey: TranslationKey
   alt: string
@@ -44,7 +44,7 @@ const CalloutBanner = ({
             src={image}
             alt={alt}
             w={imageWidth}
-            maxW={maxImageWidth}
+            maxW={{ base: "auto", md: maxImageWidth }}
             style={{
               objectFit: "contain",
             }}
