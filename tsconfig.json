@@ -78,7 +78,6 @@
     "./src/components/Morpher.tsx",
     "./src/components/OrderedList.tsx",
     "./src/components/ProductList.tsx",
-    "./src/components/ReleaseBanner.tsx",
     "./src/components/RollupProductDevDoc.tsx",
     "./src/components/Search/SearchButton.tsx",
     "./src/components/Search/SearchModal.tsx",
