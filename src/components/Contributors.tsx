@@ -19,7 +19,6 @@ const Contributors = () => {
   const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
     []
   )
-  console.log(data)
   useEffect(() => {
     const list = shuffle(JSON.parse(data).contributors)
     setContributorsList(list)
