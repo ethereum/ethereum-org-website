@@ -104,6 +104,9 @@ const StablecoinAccordion: React.FC = () => {
   const { cardListGroups } = useStablecoinAccordion()
   const { t } = useTranslation("page-stablecoins")
 
+  // Overrides CardList default image width
+  const DEFAULT_IMAGE_WIDTH = 24
+
   return (
     <Accordion borderRadius="base" width="full" allowToggle reduceMotion>
       <AccordionCustomItem category="dapps">
@@ -141,7 +144,10 @@ const StablecoinAccordion: React.FC = () => {
               {t("page-stablecoins-accordion-swap-dapp-link")}
             </InlineLink>
           </p>
-          <CardList items={cardListGroups.dapps} />
+          <CardList
+            items={cardListGroups.dapps}
+            imageWidth={DEFAULT_IMAGE_WIDTH}
+          />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="buy">
@@ -167,7 +173,10 @@ const StablecoinAccordion: React.FC = () => {
           <SectionTitle>
             {t("page-stablecoins-accordion-buy-exchanges-title")}
           </SectionTitle>
-          <CardList items={cardListGroups.exchanges} />
+          <CardList
+            items={cardListGroups.exchanges}
+            imageWidth={DEFAULT_IMAGE_WIDTH}
+          />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="earn">
@@ -189,7 +198,10 @@ const StablecoinAccordion: React.FC = () => {
             {t("page-stablecoins-accordion-earn-projects-title")}
           </SectionTitle>
           <p>{t("page-stablecoins-accordion-earn-projects-copy")}</p>
-          <CardList items={cardListGroups.earn} />
+          <CardList
+            items={cardListGroups.earn}
+            imageWidth={DEFAULT_IMAGE_WIDTH}
+          />
         </RightColumnPanel>
       </AccordionCustomItem>
       <AccordionCustomItem category="generate">
@@ -231,7 +243,10 @@ const StablecoinAccordion: React.FC = () => {
           </SectionTitle>
           <p>{t("page-stablecoins-accordion-borrow-places-intro")}</p>
           <Box mb={8}>
-            <CardList items={cardListGroups.borrow} />
+            <CardList
+              items={cardListGroups.borrow}
+              imageWidth={DEFAULT_IMAGE_WIDTH}
+            />
           </Box>
           <SectionTitle>
             {t("page-stablecoins-accordion-borrow-risks-title")}
