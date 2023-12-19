@@ -22,6 +22,10 @@
   },
   "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
+    "node_modules",
+    "./public/content",
+    "./src/intl",
+    "./src/data",
     "./src/components/StablecoinAccordion/AccordionCustomItem.tsx",
     "./src/components/StablecoinAccordion/index.tsx",
     "./src/components/StablecoinAccordion/useStablecoinAccordion.ts",
