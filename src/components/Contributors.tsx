@@ -1,3 +1,4 @@
+import { shuffle } from "lodash"
 import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import InlineLink from "@/components/Link"
@@ -14,7 +15,7 @@ export interface Contributor {
 }
 
 const Contributors = () => {
-  const contributorsList = JSON.parse(data).contributors
+  const contributorsList = shuffle(JSON.parse(data).contributors)
 
   return (
     <>
