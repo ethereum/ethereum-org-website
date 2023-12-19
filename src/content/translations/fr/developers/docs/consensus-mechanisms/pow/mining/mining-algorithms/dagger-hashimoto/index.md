@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Malheureusement, bien que Hashimoto soit considéré comme de la RAM en dur, il repose sur l'arithmétique 256-bit, qui présente des frais supplémentaires de calcul considérables. Cependant, Dagger-Hashimoto n'utilise que les 64 bits les moins significatifs lors de l'indexation de son jeu de données pour résoudre ce problème.
