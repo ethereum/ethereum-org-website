@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react"
-import { shuffle } from "lodash"
 import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import InlineLink from "@/components/Link"
@@ -16,14 +14,7 @@ export interface Contributor {
 }
 
 const Contributors = () => {
-  const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
-    []
-  )
-  useEffect(() => {
-    const list = shuffle(JSON.parse(data).contributors)
-    setContributorsList(list)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  const contributorsList = JSON.parse(data).contributors
 
   return (
     <>
