@@ -46,3 +46,6 @@ robots.txt
 
 # Local Netlify folder
 .netlify
+
+# Project ignore
+src/data/contributors.json

@@ -3,14 +3,15 @@
   "version": "8.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "yarn run copy-contributors && next dev",
+    "build": "yarn run copy-contributors && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
+    "copy-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' ./src/scripts/copyContributors.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
