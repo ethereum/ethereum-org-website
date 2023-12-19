@@ -43,7 +43,7 @@ const CalloutBanner = ({
           <Image
             src={image}
             alt={alt}
-            w={imageWidth}
+            width={imageWidth}
             maxW={{ base: "auto", md: maxImageWidth }}
             style={{
               objectFit: "contain",
