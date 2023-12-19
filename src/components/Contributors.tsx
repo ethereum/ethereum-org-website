@@ -5,7 +5,7 @@ import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
 
-import data from "@/data/contributors.json"
+import data from "!!raw-loader!../../.all-contributorsrc"
 
 export interface Contributor {
   login: string
@@ -19,9 +19,9 @@ const Contributors = () => {
   const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
     []
   )
-
+  console.log(data)
   useEffect(() => {
-    const list = shuffle(data.contributors)
+    const list = shuffle(JSON.parse(data).contributors)
     setContributorsList(list)
   }, [])
 
