@@ -143,7 +143,7 @@ O algoritmo usado para gerar o conjunto de DAGs usados para computar o trabalho 
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
