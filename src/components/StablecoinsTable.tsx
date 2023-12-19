@@ -81,11 +81,6 @@ const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
             <Td colSpan={4}>{t("page-stablecoins-table-error")}</Td>
           </Tr>
         )}
-        {!hasError && content.length === 0 && (
-          <Tr p={4}>
-            <Td colSpan={4}>{t("page-stablecoins-table-loading")}</Td>
-          </Tr>
-        )}
 
         {content.map(({ name, marketCap, image, type, url }, idx) => (
           <Tr
