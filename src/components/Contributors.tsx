@@ -5,7 +5,7 @@ import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
 
-import data from "!!raw-loader!../../.all-contributorsrc"
+import data from "!!raw-loader!@/../.all-contributorsrc"
 
 export interface Contributor {
   login: string
