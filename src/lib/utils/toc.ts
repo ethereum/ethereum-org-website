@@ -1,6 +1,6 @@
 import { ListProps } from "@chakra-ui/react"
 
-import type { ToCItem,TocNodeType } from "@/lib/types"
+import type { ToCItem, TocNodeType } from "@/lib/types"
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
@@ -44,7 +44,7 @@ export const outerListProps: ListProps = {
   pt: 0,
   sx: {
     // TODO: Flip to object syntax with `lg` token after completion of Chakra migration
-    "@media (max-width: 1024px)": {
+    "@media (max-width: var(--eth-breakpoints-lg))": {
       borderStart: 0,
       borderTop: "1px",
       borderTopColor: "primary300",
