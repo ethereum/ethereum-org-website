@@ -22,6 +22,7 @@ const Contributors = () => {
   useEffect(() => {
     const list = shuffle(JSON.parse(data).contributors)
     setContributorsList(list)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
