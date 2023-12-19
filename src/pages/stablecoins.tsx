@@ -36,12 +36,12 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import {
-  BASE_TIME_UNIT,
-  COINGECKO_API_BASE_URL,
-  COINGECKO_API_URL_PARAMS,
-} from "@/lib/constants"
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
+import {
+  fetchEthereumEcosystemData,
+  fetchEthereumStablecoinsData,
+} from "@/lib/api/stablecoinsData"
 import dogeComputerImg from "@/public/doge-computer.png"
 // -- daps
 import aaveImg from "@/public/stablecoins/aave.png"
@@ -80,17 +80,9 @@ type Props = SSRConfig & {
   lastDeployDate: string
 }
 
-const ethereumDataFetch = runOnlyOnce(() =>
-  fetch(
-    `${COINGECKO_API_BASE_URL}ethereum-ecosystem${COINGECKO_API_URL_PARAMS}`
-  ).then((res) => res.json())
-)
-
-const stablecoinDataFetch = runOnlyOnce(() =>
-  fetch(`${COINGECKO_API_BASE_URL}stablecoins${COINGECKO_API_URL_PARAMS}`).then(
-    (res) => res.json()
-  )
-)
+// Fetch external API data once to avoid hitting rate limit
+const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
+const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
 
 export const getStaticProps = (async (context) => {
   const { locale } = context
@@ -133,15 +125,16 @@ export const getStaticProps = (async (context) => {
 
   try {
     // Fetch token data in the Ethereum ecosystem
-    const ethereumData: EthereumDataResponse = await ethereumDataFetch()
-
+    const ethereumEcosystemData: EthereumDataResponse =
+      await ethereumEcosystemDataFetch()
     // Fetch token data for stablecoins
-    const stablecoinData: StablecoinDataResponse = await stablecoinDataFetch()
+    const stablecoinsData: StablecoinDataResponse =
+      await ethereumStablecoinsDataFetch()
 
     // Get the intersection of stablecoins and Ethereum tokens to only have a list of data for stablecoins in the Ethereum ecosystem
-    const ethereumStablecoinData = stablecoinData.filter(
+    const ethereumStablecoinData = stablecoinsData.filter(
       (stablecoin) =>
-        ethereumData.findIndex(
+        ethereumEcosystemData.findIndex(
           // eslint-disable-next-line
           (etherToken) => stablecoin.id == etherToken.id
         ) > -1
