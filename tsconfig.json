@@ -23,7 +23,7 @@
   "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": [
     "node_modules",
-    "./public/content",
+    "./public/",
     "./src/intl",
     "./src/data",
     "./src/components/StablecoinAccordion/AccordionCustomItem.tsx",
