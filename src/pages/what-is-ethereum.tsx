@@ -62,7 +62,6 @@ import whatAreSmartContracts from "@/public/infrastructure_transparent.png"
 import whoRunsEthereum from "@/public/run-a-node/ethereum-inside.png"
 import stats from "@/public/upgrades/newrings.png"
 import hero from "@/public/what-is-ethereum.png"
-import ogImage from "@/public/what-is-ethereum.png"
 
 const Slogan = (props: ChildOnlyProp) => (
   <Text
@@ -299,7 +298,7 @@ const WhatIsEthereumPage = ({
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}
-        image={ogImage.src}
+        image="what-is-ethereum.png"
       />
       <Content>
         <Flex
