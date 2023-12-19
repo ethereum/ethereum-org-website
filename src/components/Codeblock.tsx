@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
+import { useTranslation } from "next-i18next"
 import Highlight, {
   defaultProps,
   Language,
@@ -9,9 +10,9 @@ import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-
 // https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
-;(typeof global !== "undefined" ? global : window).Prism = Prism
+;
+(typeof global !== "undefined" ? global : window).Prism = Prism
 require("prismjs/components/prism-solidity")
 
 const LINES_BEFORE_COLLAPSABLE = 8
@@ -217,6 +218,7 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
+  const { t } = useTranslation('common')
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 
   const codeText = React.Children.toArray(children)
@@ -321,13 +323,9 @@ const Codeblock: React.FC<IProps> = ({
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                       <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                         {isCollapsed ? (
-                          // TODO: Implement after intl
-                          // <Translation id="show-all" />
-                          <>Show all</>
+                          t("show-all")
                         ) : (
-                          // TODO: Implement after intl
-                          // <Translation id="show-less" />
-                          <>Show less</>
+                          t("show-less")
                         )}
                       </TopBarItem>
                     )}
@@ -338,16 +336,12 @@ const Codeblock: React.FC<IProps> = ({
                           {!isCopied ? (
                             <>
                               <Emoji text=":clipboard:" fontSize="md" />{" "}
-                              {/* TODO: Implement after intl */}
-                              {/* <Translation id="copy" /> */}
-                              Copy
+                               {t("copy")}
                             </>
                           ) : (
                             <>
                               <Emoji text=":white_check_mark:" fontSize="md" />{" "}
-                              {/* TODO: Implement after intl */}
-                              {/* <Translation id="copied" /> */}
-                              Copied
+                              {t("copied")}
                             </>
                           )}
                         </TopBarItem>
