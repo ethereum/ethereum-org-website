@@ -7,7 +7,6 @@ import {
   Icon,
   List,
   ListItem,
-  Show,
   useToken,
 } from "@chakra-ui/react"
 
@@ -68,47 +67,46 @@ const TableOfContents: React.FC<IProps> = ({
   }
 
   return (
-    <Show above={lgBp}>
-      <Box
-        as="aside"
-        position="sticky"
-        top="7.25rem" // Account for navbar
-        p={4}
-        pe={0}
-        maxW="25%"
-        minW={48}
-        height={calc.subtract("100vh", "80px")}
-        overflowY="auto"
-        {...rest}
-      >
-        <List {...outerListProps}>
-          {!hideEditButton && editPath && (
-            <ListItem mb={2}>
-              <ButtonLink
-                leftIcon={<Icon as={FaGithub} />}
-                href={editPath}
-                variant="outline"
-              >
-                {t("edit-page")}
-              </ButtonLink>
-            </ListItem>
-          )}
-          <ListItem>
-            <Box mb={2} textTransform="uppercase">
-              {t("on-this-page")}
-            </Box>
-            <List m={0}>
-              <ItemsList
-                items={items}
-                depth={0}
-                maxDepth={maxDepth ? maxDepth : 1}
-                activeHash={activeHash}
-              />
-            </List>
+    <Box
+      hideBelow={lgBp}
+      as="aside"
+      position="sticky"
+      top="7.25rem" // Account for navbar
+      p={4}
+      pe={0}
+      maxW="25%"
+      minW={48}
+      height={calc.subtract("100vh", "80px")}
+      overflowY="auto"
+      {...rest}
+    >
+      <List {...outerListProps}>
+        {!hideEditButton && editPath && (
+          <ListItem mb={2}>
+            <ButtonLink
+              leftIcon={<Icon as={FaGithub} />}
+              href={editPath}
+              variant="outline"
+            >
+              {t("edit-page")}
+            </ButtonLink>
           </ListItem>
-        </List>
-      </Box>
-    </Show>
+        )}
+        <ListItem>
+          <Box mb={2} textTransform="uppercase">
+            {t("on-this-page")}
+          </Box>
+          <List m={0}>
+            <ItemsList
+              items={items}
+              depth={0}
+              maxDepth={maxDepth ? maxDepth : 1}
+              activeHash={activeHash}
+            />
+          </List>
+        </ListItem>
+      </List>
+    </Box>
   )
 }
 
