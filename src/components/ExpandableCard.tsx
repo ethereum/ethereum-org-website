@@ -34,7 +34,7 @@ const ExpandableCard = ({
   eventName = "",
 }: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(false)
-  const { t } = useTranslation("common") // TODO: Double-check namespace
+  const { t } = useTranslation("common")
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
