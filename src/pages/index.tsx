@@ -211,7 +211,7 @@ export const getStaticProps = (async ({ locale }) => {
       lastDeployDate,
       metricResults,
     },
-    revalidate: 15, // BASE_TIME_UNIT * 24,
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 

@@ -3,7 +3,6 @@ import { join } from "path"
 import { useRouter } from "next/router"
 import { Container } from "@chakra-ui/react"
 
-import { Lang } from "@/lib/types"
 import { Root } from "@/lib/interfaces"
 
 import FeedbackWidget from "@/components/FeedbackWidget"
@@ -13,7 +12,6 @@ import TranslationBanner from "@/components/TranslationBanner"
 import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -47,8 +45,6 @@ export const RootLayout = ({
       (contentNotTranslated && !isPageLanguageEnglish)) &&
     !isLegal
   const shouldShowLegalTranslationBanner = isLegal && !isPageLanguageEnglish
-
-  const isPageRightToLeft = isLangRightToLeft(locale as Lang)
   const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
 
   return (
@@ -58,13 +54,11 @@ export const RootLayout = ({
       <TranslationBanner
         shouldShow={shouldShowTranslationBanner}
         isPageContentEnglish={contentNotTranslated}
-        isPageRightToLeft={isPageRightToLeft}
         originalPagePath={originalPagePath}
       />
 
       <TranslationBannerLegal
         shouldShow={shouldShowLegalTranslationBanner}
-        isPageRightToLeft={isPageRightToLeft}
         originalPagePath={originalPagePath}
       />
 

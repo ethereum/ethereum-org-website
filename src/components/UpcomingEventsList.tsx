@@ -3,15 +3,14 @@ import { Box } from "@chakra-ui/react"
 
 import Translation from "@/components/Translation"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import events from "../data/community-events.json"
 
 import { Button } from "./Buttons"
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
-
-// TODO: add trackCustomEvent when util is migrated
-// import { trackCustomEvent } from "../utils/matomo"
 
 interface ICommunityEventData {
   title: string
@@ -88,12 +87,11 @@ const UpcomingEventsList: React.FC = () => {
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
     setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
-    // TODO: add trackCustomEvent when util is migrated
-    // trackCustomEvent({
-    //   eventCategory: "more events button",
-    //   eventAction: "click",
-    //   eventName: "load more",
-    // })
+    trackCustomEvent({
+      eventCategory: "more events button",
+      eventAction: "click",
+      eventName: "load more",
+    })
   }
 
   if (orderedUpcomingEvents.length === 0) {
