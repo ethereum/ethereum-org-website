@@ -177,6 +177,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
         flexWrap="wrap"
         textOverflow="ellipsis"
         lineHeight="1.6rem"
+        insetInlineStart="5"
       >
         {value}
       </Box>
