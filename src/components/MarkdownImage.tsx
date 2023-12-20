@@ -37,7 +37,7 @@ const MarkdownImage = ({
   }
 
   const fileExt = extname(transformedSrc).toLowerCase()
-  const isAnimated = [".gif", ".apng", ".webp"].includes(fileExt)  
+  const isAnimated = [".gif", ".apng", ".webp"].includes(fileExt)
 
   return (
     // display the wrapper as a `span` to avoid dom nesting warnings as mdx
@@ -51,6 +51,7 @@ const MarkdownImage = ({
           loading="lazy"
           src={transformedSrc}
           unoptimized={isAnimated}
+          h="auto"
           {...rest}
         />
       </Link>
