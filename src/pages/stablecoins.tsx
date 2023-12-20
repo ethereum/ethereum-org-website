@@ -32,6 +32,7 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -77,6 +78,7 @@ interface Market {
 }
 
 type Props = SSRConfig & {
+  contentNotTranslated: boolean
   lastDeployDate: string
 }
 
@@ -84,11 +86,12 @@ type Props = SSRConfig & {
 const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
 const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+
+  const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   let marketsHasError = false
   let markets: Market[] = []
@@ -168,6 +171,7 @@ export const getStaticProps = (async (context) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
       markets,
       marketsHasError,
