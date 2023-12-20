@@ -10,8 +10,8 @@ import Text from "@/components/OldText"
 export type CalloutBannerProps = FlexProps & {
   children?: React.ReactNode
   image: ImageProps["src"]
-  imageWidth?: ImageProps["width"]
-  maxImageWidth?: number
+  imageWidth?: number
+  maxImageWidth?: ImageProps["width"]
   titleKey: TranslationKey
   descriptionKey: TranslationKey
   alt: string
@@ -43,7 +43,8 @@ const CalloutBanner = ({
           <Image
             src={image}
             alt={alt}
-            w={imageWidth}
+            width={imageWidth}
+            maxW={{ base: "auto", md: maxImageWidth }}
             style={{
               objectFit: "contain",
             }}
