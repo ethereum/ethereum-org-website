@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -11,6 +11,8 @@ import {
   Icon,
   SimpleGrid,
 } from "@chakra-ui/react"
+
+import { BasePageProps } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -77,9 +79,9 @@ interface Market {
   url: string
 }
 
-type Props = SSRConfig & {
-  contentNotTranslated: boolean
-  lastDeployDate: string
+type Props = BasePageProps & {
+  markets: Market[]
+  marketsHasError: boolean
 }
 
 // Fetch external API data once to avoid hitting rate limit
