@@ -695,7 +695,6 @@ const BugBountiesPage = () => {
               <Translation id="page-bug-bounty:page-upgrades-bug-bounty-quality-fix" />
             </Text>
           </SubmitInstructions>
-          {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
       </Content>
       <BugBountyCards />
