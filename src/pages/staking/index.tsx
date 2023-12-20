@@ -6,10 +6,10 @@ import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
 
 import type {
   BasePageProps,
-  BeaconchainData,
   ChildOnlyProp,
   EpochResponse,
   EthStoreResponse,
+  StakingStatsData,
 } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
@@ -172,7 +172,7 @@ const StyledCard = (props: {
   </Card>
 )
 
-const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
+const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
   const base = "https://beaconcha.in"
   const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
@@ -204,7 +204,7 @@ const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
 const cachedFetchBeaconchainData = runOnlyOnce(fetchBeaconchainData)
 
 type Props = BasePageProps & {
-  data: BeaconchainData
+  data: StakingStatsData
 }
 
 export const getStaticProps = (async ({ locale }) => {

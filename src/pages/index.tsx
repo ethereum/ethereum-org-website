@@ -18,7 +18,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -30,8 +30,7 @@ import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import PageMetadata from "@/components/PageMetadata"
-// TODO: migrate stats fetching on build time
-// import StatsBoxGrid from "../components/StatsBoxGrid"
+import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
@@ -50,6 +49,10 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
+import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import devfixed from "@/public/developers-eth-blocks.png"
 import dogefixed from "@/public/doge-computer.png"
 import enterprise from "@/public/enterprise-eth.png"
@@ -176,14 +179,25 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
+const cachedFetchNodes = runOnlyOnce(fetchNodes)
+const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
+const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
+  metricResults: AllMetricData
 }
 
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
-
 export const getStaticProps = (async ({ locale }) => {
-  // fetch community events for homepage
+  const metricResults: AllMetricData = {
+    totalEthStaked: await cachedFetchTotalEthStaked(),
+    nodeCount: await cachedFetchNodes(),
+    totalValueLocked: await cachedFetchTotalValueLocked(),
+    txCount: await cachedFetchTxCount(),
+  }
+
   const communityEvents = await cachedFetchCommunityEvents()
 
   // load i18n required namespaces for the given page
@@ -201,6 +215,7 @@ export const getStaticProps = (async ({ locale }) => {
       communityEvents,
       contentNotTranslated,
       lastDeployDate,
+      metricResults,
     },
     revalidate: BASE_TIME_UNIT * 24,
   }
@@ -208,6 +223,7 @@ export const getStaticProps = (async ({ locale }) => {
 
 const HomePage = ({
   communityEvents,
+  metricResults,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
@@ -556,8 +572,7 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        {/* // TODO: migrate stats fetching the necessary data on build time */}
-        {/* <StatsBoxGrid /> */}
+        <StatsBoxGrid data={metricResults} />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
       <CommunityEvents events={communityEvents} />
