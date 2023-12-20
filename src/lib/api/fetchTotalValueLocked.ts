@@ -11,16 +11,18 @@ export const fetchTotalValueLocked = async (): Promise<MetricReturnData> => {
 
   try {
     const response = await fetch(`https://api.llama.fi/charts/Ethereum`)
-    if (!response.ok) throw new Error("Failed to fetch Defi Llama TVL data")
+    if (!response.ok) {
+      console.log(response.status, response.statusText)
+      throw new Error("Failed to fetch Defi Llama TVL data")
+    }
 
     const json: DefiLlamaTVLResponse = await response.json()
-    const data = takeRightWhile(
-      json,
-      ({ date }) => +date > startTimestamp
-    ).map(({ date, totalLiquidityUSD }) => ({
-      timestamp: +date * 1000,
-      value: totalLiquidityUSD,
-    })).sort((a, b) => a.timestamp - b.timestamp)
+    const data = takeRightWhile(json, ({ date }) => +date > startTimestamp)
+      .map(({ date, totalLiquidityUSD }) => ({
+        timestamp: +date * 1000,
+        value: totalLiquidityUSD,
+      }))
+      .sort((a, b) => a.timestamp - b.timestamp)
     const { value } = data[data.length - 1]
 
     return {

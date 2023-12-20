@@ -1,4 +1,8 @@
-import type { EtherscanTxCountResponse, MetricReturnData, TimestampedData } from "@/lib/types"
+import type {
+  EtherscanTxCountResponse,
+  MetricReturnData,
+  TimestampedData,
+} from "@/lib/types"
 
 import { DAYS_TO_FETCH, ETHERSCAN_API_URL } from "@/lib/constants"
 
@@ -23,13 +27,18 @@ export const fetchTxCount = async (): Promise<MetricReturnData> => {
 
   try {
     const response = await fetch(href)
-    if (!response.ok) throw new Error("Failed to fetch Etherscan tx count data")
+    if (!response.ok) {
+      console.log(response.status, response.statusText)
+      throw new Error("Failed to fetch Etherscan tx count data")
+    }
 
     const json: EtherscanTxCountResponse = await response.json()
-    const data: TimestampedData<number>[] = json.result.map(({ unixTimeStamp, transactionCount }) => ({
-      timestamp: +unixTimeStamp * 1000, // unix milliseconds
-      value: transactionCount,
-    })).sort((a, b) => a.timestamp - b.timestamp)
+    const data: TimestampedData<number>[] = json.result
+      .map(({ unixTimeStamp, transactionCount }) => ({
+        timestamp: +unixTimeStamp * 1000, // unix milliseconds
+        value: transactionCount,
+      }))
+      .sort((a, b) => a.timestamp - b.timestamp)
     const { value } = data[data.length - 1]
 
     return {
@@ -39,7 +48,7 @@ export const fetchTxCount = async (): Promise<MetricReturnData> => {
   } catch (error: unknown) {
     console.error((error as Error).message)
     return {
-      error: (error as Error).message
+      error: (error as Error).message,
     }
   }
 }

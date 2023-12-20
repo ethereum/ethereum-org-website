@@ -1,6 +1,6 @@
-import axios from 'axios'
+import axios from "axios"
 
-import { Framework } from '@/lib/interfaces'
+import { Framework } from "@/lib/interfaces"
 
 import EthDiamondBlackImage from "@/public/assets/eth-diamond-black.png"
 import EpirusImage from "@/public/dev-tools/epirus.png"
@@ -128,12 +128,26 @@ export const ghRepoData = async (githubUrl: string) => {
   const split = githubUrl.split("/")
   const repoOwner = split[split.length - 2]
   const repoName = split[split.length - 1]
-  const repoData = await axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}`, { headers: { 'Authorization': `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}` }}) 
-const languageData = await axios.get(`https://api.github.com/repos/${repoOwner}/${repoName}/languages`, { headers: { 'Authorization': `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}` }})
-    return {
-        starCount: repoData.data.stargazers_count,
-        languages: Object.keys(languageData.data),
+  const repoData = await axios.get(
+    `https://api.github.com/repos/${repoOwner}/${repoName}`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
+      },
     }
+  )
+  const languageData = await axios.get(
+    `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
+    {
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
+      },
+    }
+  )
+  return {
+    starCount: repoData.data.stargazers_count,
+    languages: Object.keys(languageData.data),
+  }
 }
 
 export const getLocalEnvironmentFrameworkData = async () => {
