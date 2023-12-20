@@ -1,8 +1,7 @@
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
   type BoxProps,
@@ -11,7 +10,6 @@ import {
   type FlexProps,
   Heading,
   type HeadingProps,
-  Icon,
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
@@ -21,16 +19,10 @@ import {
 //   defaultFormatter,
 //   IFetchStat,
 // } from "../hooks/useFetchStat" // TODO!
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
-import {
-  Banner,
-  BannerBody,
-  BannerGrid,
-  BannerGridCell,
-  BannerImage,
-} from "@/components/BannerGrid"
+import { Banner, BannerImage } from "@/components/BannerGrid"
 import Button from "@/components/Buttons/Button"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -44,12 +36,10 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Slider, { EmblaSlide } from "@/components/Slider"
-import StatErrorMessage from "@/components/StatErrorMessage"
-import StatLoadingMessage from "@/components/StatLoadingMessage"
 import Tabs from "@/components/Tabs"
-import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
@@ -194,20 +184,21 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <Image src={src} alt="" width={400} />
 )
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+
+  const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const WhatIsEthereumPage = () => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
@@ -663,7 +654,9 @@ const WhatIsEthereumPage = () => {
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
               <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
-              <Text><Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2"/></Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2" />
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}
