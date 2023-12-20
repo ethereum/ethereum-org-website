@@ -1,5 +1,3 @@
-// TODO: Refactor to fetch and remove axios package
-import axios, { AxiosResponse } from "axios"
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
 import {
@@ -107,10 +105,11 @@ export async function downloadReport(
       `${crowdinLangCode}—Retrieved JSON URL for report of file ID ${fileId}`
     )
 
-    const reportData: AxiosResponse<ReportData> = await axios.get(jsonUrl)
+    const reportReq = await fetch(jsonUrl)
     console.log(`Downloaded report data for file ID ${fileId}`)
+    const reportData: ReportData = await reportReq.json()
 
-    await saveReportDataToJson(reportData.data, fileId, crowdinLangCode)
+    await saveReportDataToJson(reportData, fileId, crowdinLangCode)
     console.log(`Saved report data for file ID ${fileId} to JSON file`)
   } catch (error: unknown) {
     if (error instanceof Error) {

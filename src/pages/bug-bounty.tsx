@@ -747,7 +747,6 @@ const BugBountiesPage = () => {
                 <Translation id="page-bug-bounty:bug-bounty-faq-q1-contentPreview" />
               }
             >
-              {/* TODO: Check <code> styling compared to Gatsby repo */}
               <Text>
                 <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-1" />
               </Text>

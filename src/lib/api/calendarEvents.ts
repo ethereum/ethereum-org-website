@@ -22,22 +22,26 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
     const pastEvents = await pastEventsReq.json()
     const pastEventsReqData: ReqCommunityEvent[] = pastEvents.items
 
-    const pastEventData = pastEventsReqData.map((event) => {
-      return {
-        date: event.start.dateTime,
-        title: event.summary,
-        calendarLink: event.htmlLink,
-        pastEventLink: event.location,
-      }
-    })
-    const upcomingEventData = futureEventsReqData.map((event) => {
-      return {
-        date: event.start.dateTime,
-        title: event.summary,
-        calendarLink: event.htmlLink,
-        pastEventLink: event.location,
-      }
-    })
+    const pastEventData = pastEventsReqData
+      .filter((event) => event.start)
+      .map((event) => {
+        return {
+          date: event.start.dateTime,
+          title: event.summary,
+          calendarLink: event.htmlLink,
+          pastEventLink: event.location,
+        }
+      })
+    const upcomingEventData = futureEventsReqData
+      .filter((event) => event.start)
+      .map((event) => {
+        return {
+          date: event.start.dateTime,
+          title: event.summary,
+          calendarLink: event.htmlLink,
+          pastEventLink: event.location,
+        }
+      })
 
     return {
       pastEventData,
