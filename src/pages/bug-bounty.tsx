@@ -695,7 +695,6 @@ const BugBountiesPage = () => {
               <Translation id="page-bug-bounty:page-upgrades-bug-bounty-quality-fix" />
             </Text>
           </SubmitInstructions>
-          {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
       </Content>
       <BugBountyCards />
@@ -748,7 +747,6 @@ const BugBountiesPage = () => {
                 <Translation id="page-bug-bounty:bug-bounty-faq-q1-contentPreview" />
               }
             >
-              {/* TODO: Check <code> styling compared to Gatsby repo */}
               <Text>
                 <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-1" />
               </Text>

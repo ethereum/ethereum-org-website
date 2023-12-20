@@ -144,7 +144,6 @@ export interface SideNavProps {
 // TODO set tree state based on if current path is a child
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
-// e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav = ({ path }: SideNavProps) => {
   const { t } = useTranslation("page-developers-docs")
 
