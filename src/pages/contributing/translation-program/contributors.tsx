@@ -12,6 +12,8 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
+import { BasePageProps } from "@/lib/types"
+
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import InlineLink from "@/components/Link"
@@ -19,6 +21,7 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -28,21 +31,23 @@ type Props = SSRConfig & {
   lastDeployDate: string
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
+
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/contributing/translation-program/contributors"
   )
-  const lastDeployDate = getLastDeployDate()
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const Content = (props: BoxProps) => <Box py={4} px={10} w="full" {...props} />
 const ContentHeading = (props: HeadingProps) => (
