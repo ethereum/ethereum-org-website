@@ -24,6 +24,7 @@ export type CardListItem = {
   link?: string
   id?: string
   image?: ImageProps["src"]
+  imageWidth?: number
   alt?: string
 }
 
@@ -51,6 +52,7 @@ const Card = ({
   caption,
   link,
   image,
+  imageWidth = 20, // Set 20px as default image width, can be overrided if needed
   alt,
   ...props
 }: CardProps) => {
@@ -62,7 +64,7 @@ const Card = ({
 
   return (
     <CardContainer {...props}>
-      {image && <Image src={image} alt={alt ?? ""} width={20} />}
+      {image && <Image src={image} alt={alt ?? ""} width={imageWidth} />}
       <Flex flex="1 1 75%" direction="column">
         {isLink ? (
           <LinkOverlay
@@ -97,11 +99,13 @@ const Card = ({
 
 export type CardListProps = BoxProps & {
   items: CardProps[]
+  imageWidth?: number
   clickHandler?: (idx: string | number) => void
 }
 
 const CardList = ({
   items,
+  imageWidth,
   clickHandler = () => null,
   ...props
 }: CardListProps) => (
@@ -112,7 +116,7 @@ const CardList = ({
 
       return isLink ? (
         <LinkBox key={id || idx}>
-          <Card {...listItem} />
+          <Card {...listItem} imageWidth={imageWidth} />
         </LinkBox>
       ) : (
         <Card
