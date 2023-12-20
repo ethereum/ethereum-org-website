@@ -1,4 +1,4 @@
-import React from "react"
+import { useTranslation } from "next-i18next"
 import {
   Flex,
   Image,
@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react"
 
 import { ButtonLink } from "./Buttons"
-import Translation from "./Translation"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -31,10 +30,17 @@ export interface IProps {
   hasError: boolean
 }
 
-// TODO generalize this component - currently tailored for stablecoin market caps
-const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
+const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
   const [textColor] = useToken("colors", ["text"])
   const { flipForRtl } = useRtlFlip()
+  const { t } = useTranslation("page-stablecoins")
+
+  const stablecoinsType = {
+    FIAT: t("page-stablecoins-stablecoins-table-type-fiat-backed"),
+    CRYPTO: t("page-stablecoins-stablecoins-table-type-crypto-backed"),
+    ASSET: t("page-stablecoins-stablecoins-table-type-precious-metals-backed"),
+    ALGORITHMIC: t("page-stablecoins-algorithmic"),
+  }
 
   return (
     <Table
@@ -72,16 +78,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
       <Tbody>
         {hasError && (
           <Tr p={4}>
-            <Td colSpan={4}>
-              <Translation id="page-stablecoins-table-error" />
-            </Td>
-          </Tr>
-        )}
-        {!hasError && content.length === 0 && (
-          <Tr p={4}>
-            <Td colSpan={4}>
-              <Translation id="page-stablecoins-table-loading" />
-            </Td>
+            <Td colSpan={4}>{t("page-stablecoins-table-error")}</Td>
           </Tr>
         )}
 
@@ -112,7 +109,7 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
               <Flex align="center">{marketCap}</Flex>
             </Td>
             <Td>
-              <Flex align="center">{type}</Flex>
+              <Flex align="center">{stablecoinsType[type]}</Flex>
             </Td>
             {url && (
               <Td textAlign="end">
@@ -127,4 +124,4 @@ const SimpleTable: React.FC<IProps> = ({ columns, content, hasError }) => {
     </Table>
   )
 }
-export default SimpleTable
+export default StablecoinsTable

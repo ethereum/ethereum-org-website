@@ -97,6 +97,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
 
+  if (path.startsWith("/stablecoins")) {
+    requiredNamespaces = [...requiredNamespaces, "page-stablecoins"]
+  }
+
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
