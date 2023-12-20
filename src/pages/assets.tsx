@@ -65,6 +65,14 @@ import eth from "@/public/eth.png"
 import finance from "@/public/finance_transparent.png"
 import future from "@/public/future_transparent.png"
 import hackathon from "@/public/hackathon_transparent.png"
+import communityHero from "@/public/heroes/community-hero.png"
+import developersHero from "@/public/heroes/developers-hub-hero.jpg"
+import garden from "@/public/heroes/garden.jpg"
+import guidesHero from "@/public/heroes/guides-hub-hero.jpg"
+import layer2Hero from "@/public/heroes/layer-2-hub-hero.jpg"
+import learnHero from "@/public/heroes/learn-hub-hero.png"
+import quizzesHub from "@/public/heroes/quizzes-hub-hero.png"
+import roadmapHero from "@/public/heroes/roadmap-hub-hero.jpg"
 import hero from "@/public/home/hero.png"
 import heroPanda from "@/public/home/hero-panda.png"
 import mergePanda from "@/public/home/merge-panda.png"
@@ -174,6 +182,70 @@ const AssetsPage = () => {
             title={t("page-assets-hero")}
             alt={t("page-assets-hero")}
             image={hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-learn-hero-name")}
+            alt={t("page-assets-learn-hero-name")}
+            image={learnHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-community-hero-name")}
+            alt={t("page-assets-community-hero-name")}
+            image={communityHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-quizzes-hero-name")}
+            alt={t("page-assets-quizzes-hero-name")}
+            image={quizzesHub}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-developers-hero-name")}
+            alt={t("page-assets-developers-hero-name")}
+            image={developersHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-garden-name")}
+            alt={t("page-assets-garden-name")}
+            image={garden}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-roadmap-hero-name")}
+            alt={t("page-assets-roadmap-hero-name")}
+            image={roadmapHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-layer-2-hero-name")}
+            alt={t("page-assets-layer-2-hero-name")}
+            image={layer2Hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-guides-hero-name")}
+            alt={t("page-assets-guides-hero-name")}
+            image={guidesHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />

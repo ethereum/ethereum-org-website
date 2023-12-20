@@ -139,6 +139,7 @@ const MeetupList: React.FC<IProps> = () => {
                 ms: 0.5,
                 me: 1.5,
                 transform: flipForRtl,
+                display: "inline-block",
               }}
             ></Box>
           </LinkBox>

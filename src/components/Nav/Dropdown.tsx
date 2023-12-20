@@ -42,14 +42,13 @@ const DropdownContext = React.createContext<IDropdownContext | null>(null)
 export interface IProps {
   children?: React.ReactNode
   section: ISection
-  hasSubNav: boolean
 }
 
 const NavDropdown: React.FC<IProps> & {
   Item: typeof Item
   Link: typeof BaseLink
   Title: typeof Title
-} = ({ children, section, hasSubNav }) => {
+} = ({ children, section }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const ref = createRef<HTMLLIElement>()
@@ -122,10 +121,8 @@ const NavDropdown: React.FC<IProps> & {
           bg="dropdownBackground"
           border="1px"
           borderColor="dropdownBorder"
-          m={0}
-          mt={hasSubNav ? "-4.5rem" : -4}
+          mt="1"
           position="absolute"
-          top="100%"
           py={4}
           borderRadius="base"
           width="auto"

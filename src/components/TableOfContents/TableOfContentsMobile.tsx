@@ -37,49 +37,47 @@ const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
   }
 
   return (
-    <Show below={lgBp}>
-      {/* TODO: switch `l` to `lg` after UI migration and use `hideBelow` prop */}
-      <Box
-        as="aside"
-        background="background.base"
-        border="1px"
-        borderColor="border"
-        borderRadius="4px"
-        py={2}
-        px={4}
+    <Box
+      hideFrom={lgBp}
+      as="aside"
+      background="background.base"
+      border="1px"
+      borderColor="border"
+      borderRadius="4px"
+      py={2}
+      px={4}
+    >
+      <Flex
+        color="text200"
+        cursor="pointer"
+        alignItems="center"
+        justify="space-between"
+        {...getButtonProps()}
       >
-        <Flex
-          color="text200"
-          cursor="pointer"
-          alignItems="center"
-          justify="space-between"
-          {...getButtonProps()}
-        >
-          <chakra.span flex={1} fontWeight={500}>
-            {t("on-this-page")}
-          </chakra.span>
-          <Icon
-            as={MdExpandMore}
-            transform={isOpen ? "rotate(0)" : "rotate(-90deg)"}
-            boxSize={6}
-            transition="transform .4s"
+        <chakra.span flex={1} fontWeight={500}>
+          {t("on-this-page")}
+        </chakra.span>
+        <Icon
+          as={MdExpandMore}
+          transform={isOpen ? "rotate(0)" : "rotate(-90deg)"}
+          boxSize={6}
+          transition="transform .4s"
+        />
+      </Flex>
+      <Fade
+        in={isOpen}
+        {...getDisclosureProps()}
+        transition={{ enter: { duration: 0.6 } }}
+      >
+        <List {...outerListProps}>
+          <ItemsList
+            items={items}
+            depth={0}
+            maxDepth={maxDepth ? maxDepth : 1}
           />
-        </Flex>
-        <Fade
-          in={isOpen}
-          {...getDisclosureProps()}
-          transition={{ enter: { duration: 0.6 } }}
-        >
-          <List {...outerListProps}>
-            <ItemsList
-              items={items}
-              depth={0}
-              maxDepth={maxDepth ? maxDepth : 1}
-            />
-          </List>
-        </Fade>
-      </Box>
-    </Show>
+        </List>
+      </Fade>
+    </Box>
   )
 }
 

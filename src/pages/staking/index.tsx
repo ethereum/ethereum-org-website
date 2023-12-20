@@ -36,7 +36,10 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import rhino from "@/public/upgrades/upgrade_rhino.png"
 
@@ -198,6 +201,8 @@ const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
   return { totalEthStaked, validatorscount, apr }
 }
 
+const cachedFetchBeaconchainData = runOnlyOnce(fetchBeaconchainData)
+
 type Props = BasePageProps & {
   data: BeaconchainData
 }
@@ -209,7 +214,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
-  const data = await fetchBeaconchainData()
+  const data = await cachedFetchBeaconchainData()
 
   return {
     props: {
@@ -218,6 +223,8 @@ export const getStaticProps = (async ({ locale }) => {
       data,
       lastDeployDate,
     },
+    // Updated once a day
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 

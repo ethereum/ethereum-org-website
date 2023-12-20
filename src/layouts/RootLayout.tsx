@@ -3,7 +3,7 @@ import { join } from "path"
 import { useRouter } from "next/router"
 import { Container } from "@chakra-ui/react"
 
-import type { Lang, Root } from "@/lib/types"
+import type { Root } from "@/lib/types"
 
 import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
@@ -12,7 +12,6 @@ import TranslationBanner from "@/components/TranslationBanner"
 import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 
 import { toPosixPath } from "@/lib/utils/relativePath"
-import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -26,19 +25,24 @@ export const RootLayout = ({
 }: Root) => {
   const { locale, asPath } = useRouter()
 
+  const CONTRIBUTING = "/contributing"
+  const isUntranslatedContributingPage =
+    asPath.includes(CONTRIBUTING) &&
+    !(asPath.endsWith(CONTRIBUTING) || asPath.includes("/translation-program"))
+
   const isLegal =
+    isUntranslatedContributingPage ||
     asPath.includes(`/cookie-policy/`) ||
     asPath.includes(`/privacy-policy/`) ||
     asPath.includes(`/terms-of-use/`) ||
-    asPath.includes(`/contributing/`) ||
     asPath.includes(`/style-guide/`)
 
   const isPageLanguageEnglish = locale === DEFAULT_LOCALE
+
   const shouldShowTranslationBanner =
-    (contentIsOutdated ||
-      (contentNotTranslated && !isPageLanguageEnglish)) &&
+    (contentIsOutdated || (contentNotTranslated && !isPageLanguageEnglish)) &&
     !isLegal
-  const isPageRightToLeft = isLangRightToLeft(locale as Lang)
+  const shouldShowLegalTranslationBanner = isLegal && !isPageLanguageEnglish
   const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))
 
   return (
@@ -48,13 +52,11 @@ export const RootLayout = ({
       <TranslationBanner
         shouldShow={shouldShowTranslationBanner}
         isPageContentEnglish={contentNotTranslated}
-        isPageRightToLeft={isPageRightToLeft}
         originalPagePath={originalPagePath}
       />
 
       <TranslationBannerLegal
-        shouldShow={isLegal}
-        isPageRightToLeft={isPageRightToLeft}
+        shouldShow={shouldShowLegalTranslationBanner}
         originalPagePath={originalPagePath}
       />
 
