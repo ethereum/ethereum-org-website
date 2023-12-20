@@ -121,7 +121,6 @@ export const GridItem = ({ metric }: GridItemProps) => {
       height={80}
       flexDirection="column"
       justifyContent="space-between"
-      alignItems="flex-start"
       borderX={{
         base: "0px solid #000000",
         lg: "1px solid",
@@ -146,41 +145,28 @@ export const GridItem = ({ metric }: GridItemProps) => {
         <OldText>{description}</OldText>
       </Box>
       {hasData && (
-        <>
-          <Box
-            position="absolute"
-            insetInlineStart={0}
-            bottom={0}
-            width="100%"
-            height="65%"
-          >
-            {chart}
-          </Box>
-          <Box
-            position="absolute"
-            bottom="20px"
-            fontFamily="monospace"
-            insetInlineEnd="20px"
-          >
+        <Box position="absolute" insetInline="0" bottom={0} height="65%">
+          {chart}
+        </Box>
+      )}
+      <Flex justifyContent="space-between">
+        <Box
+          fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
+          fontWeight={600}
+          color="text"
+          flexWrap="wrap"
+          textOverflow="ellipsis"
+          lineHeight="1.6rem"
+          mb="2"
+        >
+          {value}
+        </Box>
+        {hasData && (
+          <Box fontFamily="monospace" me="-1" mb="-1">
             {buttonContainer}
           </Box>
-        </>
-      )}
-      <Box
-        position="absolute"
-        bottom="8%"
-        fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
-        fontWeight={600}
-        marginTop={0}
-        marginBottom={4}
-        color="text"
-        flexWrap="wrap"
-        textOverflow="ellipsis"
-        lineHeight="1.6rem"
-        insetInlineStart="5"
-      >
-        {value}
-      </Box>
+        )}
+      </Flex>
     </Flex>
   )
 }
