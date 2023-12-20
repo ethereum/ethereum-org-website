@@ -1,12 +1,10 @@
-import { useEffect, useState } from "react"
 import { shuffle } from "lodash"
 import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
 
-// TODO: Re-import once Crowdin scripts are functional and data available
-// import data from "../data/contributors.json"
+import data from "!!raw-loader!@/../.all-contributorsrc"
 
 export interface Contributor {
   login: string
@@ -17,15 +15,7 @@ export interface Contributor {
 }
 
 const Contributors = () => {
-  const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
-    []
-  )
-
-  // TODO: Re-enable once Crowdin scripts are functional and data available
-  // useEffect(() => {
-  //   const list = shuffle(data.contributors)
-  //   setContributorsList(list)
-  // }, [])
+  const contributorsList = shuffle(JSON.parse(data).contributors)
 
   return (
     <>

@@ -26,16 +26,5 @@
     "./public",
     "./src/intl",
     "./src/data",
-    "./src/components/StablecoinAccordion/AccordionCustomItem.tsx",
-    "./src/components/StablecoinAccordion/index.tsx",
-    "./src/components/StablecoinAccordion/useStablecoinAccordion.ts",
-    "./src/components/StablecoinAccordion/utils.ts",
-    "./src/components/StablecoinBoxGrid.tsx",
-    "./src/components/StatErrorMessage.tsx",
-    "./src/components/StatLoadingMessage.tsx",
-    "./src/components/StatsBoxGrid/GridItem.tsx",
-    "./src/components/StatsBoxGrid/RangeSelector.tsx",
-    "./src/components/StatsBoxGrid/index.tsx",
-    "./src/components/StatsBoxGrid/useStatsBoxGrid.tsx",
   ]
 }

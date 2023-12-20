@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, VStack } from "@chakra-ui/react"
 
-import type { BeaconchainData, ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
@@ -64,7 +64,7 @@ const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
 
 // StatsBox component
 type StakingStatsBoxProps = {
-  data: BeaconchainData
+  data: StakingStatsData
 }
 const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
   const { locale } = useRouter()

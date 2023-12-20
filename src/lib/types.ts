@@ -201,8 +201,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -247,6 +247,7 @@ type Data<T> = {
 
 export type EthStoreResponse = Data<{
   apr: number
+  day: number
   effective_balances_sum_wei: number
 }>
 
@@ -254,8 +255,61 @@ export type EpochResponse = Data<{
   validatorscount: number
 }>
 
-export type BeaconchainData = {
+export type StakingStatsData = {
   totalEthStaked: number
   validatorscount: number
   apr: number
+}
+
+export type TimestampedData<T> = {
+  timestamp: number
+  value: T
+}
+
+export type MetricDataValue<Data, Value> = {
+  error: string
+} | {
+  data: Data
+  value: Value
+}
+
+export type EtherscanNodeResponse = {
+  result: {
+    UTCDate: number
+    TotalNodeCount: number
+  }[]
+}
+
+type EtherscanTxCountItem = {
+  unixTimeStamp: string
+  transactionCount: number
+}
+
+export type EtherscanTxCountResponse = {
+  status: string
+  message: string
+  result: EtherscanTxCountItem[]
+}
+
+export type DefiLlamaTVLResponse = {
+  date: string
+  totalLiquidityUSD: number
+}[]
+
+export type MetricReturnData = MetricDataValue<TimestampedData<number>[], number>
+
+export type StatsBoxState = MetricDataValue<TimestampedData<number>[], string>
+
+export type MetricSection = "totalEthStaked" | "nodeCount" | "totalValueLocked" | "txCount"
+
+export type AllMetricData = Record<MetricSection, MetricReturnData>
+
+export type StatsBoxMetric = {
+  title: string
+  description: string
+  state: StatsBoxState
+  buttonContainer: JSX.Element
+  range: string
+  apiUrl: string
+  apiProvider: string
 }

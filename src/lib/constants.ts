@@ -27,6 +27,10 @@ export const GITHUB_BASE_API =
   "https://api.github.com/repos/ethereum/ethereum-org-website"
 export const GITHUB_COMMITS_URL = GITHUB_BASE_API + "/commits"
 export const GITHUB_URL = `https://github.com/`
+export const COINGECKO_API_BASE_URL =
+  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&category="
+export const COINGECKO_API_URL_PARAMS =
+  "&order=market_cap_desc&per_page=100&page=1&sparkline=false"
 export const BASE_TIME_UNIT = 3600 // 1 hour
 
 // Quiz Hub
@@ -54,6 +58,12 @@ export const REGULAR_RATES: ReportsModel.RegularRate[] = [
 ]
 
 export const languagePathRootRegExp = /^.+\/content\/translations\/[a-z\-]*\//
+
+// Metrics
+export const DAYS_TO_FETCH = 90
+export const RANGES = ["30d", "90d"] as const
+export const BEACONCHA_IN_URL = "https://beaconcha.in/"
+export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 
 export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"

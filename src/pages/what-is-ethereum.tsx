@@ -1,4 +1,4 @@
-import { GetStaticProps } from "next"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -16,12 +16,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-// import { GATSBY_FUNCTIONS_PATH } from "@/lib/constants" // TODO!
-// import useFetchStat, {
-//   defaultFormatter,
-//   IFetchStat,
-// } from "../hooks/useFetchStat" // TODO!
-import type { ChildOnlyProp, Lang } from "@/lib/types"
+import type { ChildOnlyProp, Lang, MetricReturnData } from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
 import {
@@ -45,18 +40,19 @@ import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Slider, { EmblaSlide } from "@/components/Slider"
 import StatErrorMessage from "@/components/StatErrorMessage"
-import StatLoadingMessage from "@/components/StatLoadingMessage"
 import Tabs from "@/components/Tabs"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import {
   getLocaleForNumberFormat,
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
+import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import developers from "@/public/developers-eth-blocks.png"
 import community from "@/public/enterprise.png"
 import diffEthAndBtc from "@/public/eth.png"
@@ -66,7 +62,6 @@ import whatAreSmartContracts from "@/public/infrastructure_transparent.png"
 import whoRunsEthereum from "@/public/run-a-node/ethereum-inside.png"
 import stats from "@/public/upgrades/newrings.png"
 import hero from "@/public/what-is-ethereum.png"
-import ogImage from "@/public/what-is-ethereum.png"
 
 const Slogan = (props: ChildOnlyProp) => (
   <Text
@@ -174,18 +169,6 @@ const ButtonRow = (props: ChildOnlyProp) => (
   <Flex align="center" mt={4} mb={6} wrap="wrap" gap={4} {...props} />
 )
 
-// const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
-//   const isLoading = !stat.value
-
-//   return stat.hasError ? (
-//     <StatErrorMessage fontSize="1rem" />
-//   ) : isLoading ? (
-//     <StatLoadingMessage fontSize="1rem" />
-//   ) : (
-//     <>{stat.formattedValue}</>
-//   )
-// }
-
 const NoWrapText = (props: ChildOnlyProp) => (
   <Text as="span" whiteSpace="nowrap" {...props} />
 )
@@ -194,8 +177,16 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
   <Image src={src} alt="" width={400} />
 )
 
+const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+
+type Props = SSRConfig & {
+  data: MetricReturnData
+}
+
 export const getStaticProps = (async (context) => {
   const { locale } = context
+
+  const data = await cachedFetchTxCount()
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
@@ -205,32 +196,27 @@ export const getStaticProps = (async (context) => {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       lastDeployDate,
+      data,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<Props>
 
-const WhatIsEthereumPage = () => {
+const WhatIsEthereumPage = ({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["page-what-is-ethereum", "learn-quizzes"])
 
   const { locale } = useRouter()
+  const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
-  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
+  const formatNumber = (value: number) =>
+    new Intl.NumberFormat(localeForNumberFormat, {
+      notation: "compact",
+      minimumSignificantDigits: 3,
+      maximumSignificantDigits: 4,
+    }).format(value)
 
-  // TODO! Fetch txCount from etherscan API
-  // const txCount = useFetchStat<
-  //   Array<{ unixTimeStamp: string; transactionCount: number }>
-  // >(
-  //   `${GATSBY_FUNCTIONS_PATH}/txs`,
-  //   (response) => {
-  //     return response
-  //       .map(({ unixTimeStamp, transactionCount }) => ({
-  //         timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
-  //         value: transactionCount,
-  //       }))
-  //       .sort((a, b) => a.timestamp - b.timestamp)
-  //   },
-  //   (value) => defaultFormatter(value, localeForStatsBoxNumbers)
-  // )
+  const txStat = "error" in data ? "" : formatNumber(data.value)
 
   const cards = [
     {
@@ -312,7 +298,7 @@ const WhatIsEthereumPage = () => {
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}
-        image={ogImage.src}
+        image="what-is-ethereum.png"
       />
       <Content>
         <Flex
@@ -462,11 +448,8 @@ const WhatIsEthereumPage = () => {
 
         <Section>
           <Banner>
-            {/* TODO: Update stats box */}
-            {/* <BannerBody>
-              <H2>
-                {t("page-what-is-ethereum-ethereum-in-numbers-title")}
-              </H2>
+            <BannerBody>
+              <H2>{t("page-what-is-ethereum-ethereum-in-numbers-title")}</H2>
               <BannerGrid>
                 <BannerGridCell>
                   <StatPrimary>4k+</StatPrimary>
@@ -565,8 +548,9 @@ const WhatIsEthereumPage = () => {
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>
-                    <Stat stat={txCount} />
+                    {txStat || <StatErrorMessage fontSize="1rem" />}
                   </StatPrimary>
+                  {/* TODO: Extract strings for translation */}
                   <StatDescription>
                     Number of transactions{" "}
                     <NoWrapText>
@@ -585,7 +569,7 @@ const WhatIsEthereumPage = () => {
                   </StatDescription>
                 </BannerGridCell>
               </BannerGrid>
-            </BannerBody> */}
+            </BannerBody>
             <BannerImage>
               <Image400 src={stats} />
             </BannerImage>
@@ -663,7 +647,9 @@ const WhatIsEthereumPage = () => {
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
               <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
-              <Text><Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2"/></Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2" />
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}

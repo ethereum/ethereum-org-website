@@ -5,10 +5,10 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
 
 import type {
-  BeaconchainData,
   ChildOnlyProp,
   EpochResponse,
   EthStoreResponse,
+  StakingStatsData,
 } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
@@ -50,7 +50,7 @@ type BenefitsType = {
 }
 
 type Props = SSRConfig & {
-  data: BeaconchainData
+  data: StakingStatsData
 }
 
 const PageContainer = (props: ChildOnlyProp) => (
@@ -174,7 +174,7 @@ const StyledCard = (props: {
   </Card>
 )
 
-const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
+const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
   const base = "https://beaconcha.in"
   const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
