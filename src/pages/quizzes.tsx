@@ -1,11 +1,11 @@
 import { useMemo, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
 
-import { QuizStatus } from "@/lib/types"
+import { BasePageProps, QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -18,6 +18,7 @@ import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -34,6 +35,22 @@ const handleGHAdd = () =>
     eventAction: "Secondary button clicks",
     eventName: "GH_add",
   })
+
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
 
 const QuizzesHubPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
@@ -139,15 +156,3 @@ const QuizzesHubPage: NextPage<
 }
 
 export default QuizzesHubPage
-
-export const getStaticProps = (async ({ locale }) => {
-  const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
-  const lastDeployDate = getLastDeployDate()
-
-  return {
-    props: {
-      ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      lastDeployDate,
-    },
-  }
-}) satisfies GetStaticProps<SSRConfig>

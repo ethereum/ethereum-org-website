@@ -3,13 +3,14 @@ import { join } from "path"
 import React, { useState } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdClose } from "react-icons/md"
 import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
-import { I18nLocale, TranslationKey } from "@/lib/types"
+import { BasePageProps, I18nLocale, TranslationKey } from "@/lib/types"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
@@ -24,23 +25,21 @@ import OldHeading from "../components/OldHeading"
 import Text from "../components/OldText"
 import PageMetadata from "../components/PageMetadata"
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/languages")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const LanguagesPage = () => {
   const { t } = useTranslation("page-languages")

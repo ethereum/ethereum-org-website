@@ -2,7 +2,6 @@ import { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
@@ -19,7 +18,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { AllMetricData, ChildOnlyProp, Lang } from "@/lib/types"
+import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -35,6 +34,7 @@ import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import {
@@ -185,7 +185,7 @@ const cachedFetchNodes = runOnlyOnce(fetchNodes)
 const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
 const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 
-type Props = SSRConfig & {
+type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
 }
@@ -202,12 +202,18 @@ export const getStaticProps = (async ({ locale }) => {
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/")
+
+  // check if the translated page content file exists for locale
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
+
+  // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
+      contentNotTranslated,
       lastDeployDate,
       metricResults,
     },

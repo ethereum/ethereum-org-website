@@ -3,7 +3,7 @@ import { join } from "path"
 import { useRouter } from "next/router"
 import { Container } from "@chakra-ui/react"
 
-import { Root } from "@/lib/interfaces"
+import type { Root } from "@/lib/types"
 
 import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
@@ -37,12 +37,10 @@ export const RootLayout = ({
     asPath.includes(`/terms-of-use/`) ||
     asPath.includes(`/style-guide/`)
 
-  const isPageTranslationOutdated = contentIsOutdated ?? false
   const isPageLanguageEnglish = locale === DEFAULT_LOCALE
 
   const shouldShowTranslationBanner =
-    (isPageTranslationOutdated ||
-      (contentNotTranslated && !isPageLanguageEnglish)) &&
+    (contentIsOutdated || (contentNotTranslated && !isPageLanguageEnglish)) &&
     !isLegal
   const shouldShowLegalTranslationBanner = isLegal && !isPageLanguageEnglish
   const originalPagePath = toPosixPath(join(DEFAULT_LOCALE, asPath))

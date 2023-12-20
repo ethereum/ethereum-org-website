@@ -11,7 +11,7 @@ import {
   Text as ChakraText,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -29,8 +29,8 @@ import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
-import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -127,24 +127,21 @@ const CalloutCardContainer = (props: ChildOnlyProp) => (
   <CardContainer mt={16} {...props} />
 )
 
-
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
 
-  // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const WalletsPage = () => {
   const { locale } = useRouter()
@@ -210,7 +207,7 @@ const WalletsPage = () => {
       description: t("page-wallets-your-login-desc"),
     },
   ]
-  
+
   const types = [
     {
       emoji: ":cd:",
@@ -233,7 +230,7 @@ const WalletsPage = () => {
       description: t("page-wallets-desktop"),
     },
   ]
-  
+
   const articles = [
     {
       title: t("page-wallets-protecting-yourself"),
@@ -251,7 +248,7 @@ const WalletsPage = () => {
       link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
     },
   ]
-  
+
   const guides = [
     {
       title: t("additional-reading-how-to-create-an-ethereum-account"),

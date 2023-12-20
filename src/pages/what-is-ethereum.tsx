@@ -1,6 +1,6 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdInfoOutline } from "react-icons/md"
 import {
@@ -16,7 +16,12 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang, MetricReturnData } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  Lang,
+  MetricReturnData,
+} from "@/lib/types"
 
 import AdoptionChart from "@/components/AdoptionChart"
 import {
@@ -44,6 +49,7 @@ import Tabs from "@/components/Tabs"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
@@ -179,22 +185,23 @@ const Image400 = ({ src }: Pick<ImageProps, "src">) => (
 
 const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 
-type Props = SSRConfig & {
+type Props = BasePageProps & {
   data: MetricReturnData
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
+
+  const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   const data = await cachedFetchTxCount()
-
-  // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage("/what-is-ethereum")
-  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
       data,
     },

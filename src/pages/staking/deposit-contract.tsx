@@ -2,7 +2,7 @@ import { ReactNode, useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -16,7 +16,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import ButtonLink, {
@@ -33,6 +33,7 @@ import PageMetadata from "@/components/PageMetadata"
 import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -207,22 +208,23 @@ const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  const lastDeployDate = getLastDeployDate()
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/staking/deposit-contract"
   )
 
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
+  const lastDeployDate = getLastDeployDate()
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const DepositContractPage = () => {
   const { asPath } = useRouter()

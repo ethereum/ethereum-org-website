@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -11,6 +11,8 @@ import {
   Icon,
   SimpleGrid,
 } from "@chakra-ui/react"
+
+import { BasePageProps } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
@@ -32,6 +34,7 @@ import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -76,19 +79,21 @@ interface Market {
   url: string
 }
 
-type Props = SSRConfig & {
-  lastDeployDate: string
+type Props = BasePageProps & {
+  markets: Market[]
+  marketsHasError: boolean
 }
 
 // Fetch external API data once to avoid hitting rate limit
 const ethereumEcosystemDataFetch = runOnlyOnce(fetchEthereumEcosystemData)
 const ethereumStablecoinsDataFetch = runOnlyOnce(fetchEthereumStablecoinsData)
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+
+  const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   let marketsHasError = false
   let markets: Market[] = []
@@ -168,6 +173,7 @@ export const getStaticProps = (async (context) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
       markets,
       marketsHasError,
