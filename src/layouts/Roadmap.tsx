@@ -141,52 +141,50 @@ export const RoadmapLayout: React.FC<IProps> = ({
         />
       ) : (
         <HeroContainer>
-            <TitleCard>
-              {/* TODO: Double check this slug works */}
-              <Breadcrumbs slug={slug} mb="8" />
-              <Title>{frontmatter.title}</Title>
-              <OldText>{frontmatter.description}</OldText>
-              {frontmatter?.buttons && (
-                // FIXME: remove the `ul` override once removed the corresponding
-                // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
-                <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
-                  {frontmatter.buttons.map((button, idx) => {
-                    if (button?.to) {
-                      return (
-                        <WrapItem key={idx}>
-                          <ButtonLink variant={button?.variant} to={button?.to}>
-                            {button.label}
-                          </ButtonLink>
-                        </WrapItem>
-                      )
-                    }
+          <TitleCard>
+            {/* TODO: Double check this slug works */}
+            <Breadcrumbs slug={slug} mb="8" />
+            <Title>{frontmatter.title}</Title>
+            <OldText>{frontmatter.description}</OldText>
+            {frontmatter?.buttons && (
+              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
+                {frontmatter.buttons.map((button, idx) => {
+                  if (button?.to) {
                     return (
                       <WrapItem key={idx}>
-                        <Button variant={button?.variant} toId={button?.toId}>
-                          {button?.label}
-                        </Button>
+                        <ButtonLink variant={button?.variant} to={button?.to}>
+                          {button.label}
+                        </ButtonLink>
                       </WrapItem>
                     )
-                  })}
-                </Wrap>
-              )}
-              <TableOfContents
-                position="relative"
-                zIndex="2"
-                items={tocItems}
-                isMobile
-              />
-            </TitleCard>
-            <Center>
-              <Image
-                src={frontmatter.image}
-                alt={frontmatter.alt ?? ""}
-                style={{ objectFit: "contain" }}
-                width={1504}
-                height={345}
-                priority
-              />
-            </Center>
+                  }
+                  return (
+                    <WrapItem key={idx}>
+                      <Button variant={button?.variant} toId={button?.toId}>
+                        {button?.label}
+                      </Button>
+                    </WrapItem>
+                  )
+                })}
+              </Wrap>
+            )}
+            <TableOfContents
+              position="relative"
+              zIndex="2"
+              items={tocItems}
+              isMobile
+            />
+          </TitleCard>
+          <Center>
+            <Image
+              src={frontmatter.image}
+              alt={frontmatter.alt ?? ""}
+              style={{ objectFit: "contain" }}
+              width={1504}
+              height={345}
+              priority
+            />
+          </Center>
         </HeroContainer>
       )}
       <Page>
