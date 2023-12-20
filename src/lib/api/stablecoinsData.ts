@@ -6,7 +6,12 @@ export async function fetchEthereumEcosystemData() {
   try {
     const res = await fetch(url)
 
-    return res.json()
+    if (!res.ok) {
+      console.log(res.status, res.statusText)
+      throw new Error("Failed to fetch Ethereum ecosystem data")
+    }
+
+    return await res.json()
   } catch (error) {
     // In production mode, throw an error to stop the build in case this fetch fails
     console.error(error)
@@ -22,7 +27,12 @@ export async function fetchEthereumStablecoinsData() {
   try {
     const res = await fetch(url)
 
-    return res.json()
+    if (!res.ok) {
+      console.log(res.status, res.statusText)
+      throw new Error("Failed to fetch Ethereum stablecoins data")
+    }
+
+    return await res.json()
   } catch (error) {
     // In production mode, throw an error to stop the build in case this fetch fails
     console.error(error)
