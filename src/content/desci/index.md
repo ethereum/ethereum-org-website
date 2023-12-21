@@ -112,6 +112,8 @@ Explore projects and join the DeSci community.
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
+- [DeSci Asia: DeSci community in Asia](https://t.me/DeSciAsia)
+
 
 We welcome suggestions for new projects to list - please look at our [listing policy](/contributing/adding-desci-projects/) to get started!
 
