@@ -14,6 +14,7 @@ import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
 import Logo from "@/components/Logo"
+import MainArticle from "@/components/MainArticle"
 import MatomoOptOut from "@/components/MatomoOptOut"
 import {
   Heading1 as MdHeading1,
@@ -127,7 +128,7 @@ export const StaticLayout: React.FC<IProps> = ({
           )}
 
           <Box
-            as="article"
+            as={MainArticle}
             maxW="container.md"
             w="full"
             sx={{

@@ -20,6 +20,7 @@ import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InlineLink, { BaseLink } from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import Modal from "@/components/Modal"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
@@ -195,6 +196,7 @@ const TutorialPage = ({
 
   return (
     <Flex
+      as={MainArticle}
       flexDirection="column"
       alignItems="center"
       w="full"
@@ -208,6 +210,9 @@ const TutorialPage = ({
           "page-developers-tutorials:page-tutorials-meta-description"
         )}
       />
+      <MainArticle>
+        
+      </MainArticle>
       <Heading
         fontStyle="normal"
         fontWeight="semibold"

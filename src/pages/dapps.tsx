@@ -33,6 +33,7 @@ import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink, { BaseLink } from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
@@ -121,7 +122,7 @@ import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
-  <Flex direction="column" align="center" mx="auto" w="full" {...props} />
+  <Flex as={MainArticle} direction="column" align="center" mx="auto" w="full" {...props} />
 )
 
 const Divider = (props: DividerProps) => (

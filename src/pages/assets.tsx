@@ -18,6 +18,7 @@ import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 
@@ -144,7 +145,7 @@ const AssetsPage = () => {
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box py="4" px="8">
+      <Box as={MainArticle} py="4" px="8">
         <Flex direction="column" px="8" py="4">
           <Center>
             <Image

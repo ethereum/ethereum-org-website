@@ -195,7 +195,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
           maxDepth={frontmatter.sidebarDepth!}
           tocItems={tocItems}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           {children}
           <FeedbackCard />
         </ContentContainer>

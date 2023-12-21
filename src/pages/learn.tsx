@@ -29,6 +29,7 @@ import { HubHero } from "@/components/Hero"
 import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
@@ -217,6 +218,7 @@ const LearnPage = () => {
       <HubHero {...heroContent} />
 
       <Flex
+        as={MainArticle}
         direction={{ base: "column", lg: "row" }}
         justifyContent="space-between"
         w="full"

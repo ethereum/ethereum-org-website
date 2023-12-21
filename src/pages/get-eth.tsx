@@ -23,6 +23,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import { Divider } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
@@ -45,6 +46,7 @@ import wallet from "@/public/wallet.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
+    as={MainArticle}
     direction="column"
     align="center"
     width="full"

@@ -39,6 +39,7 @@ import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image, type ImageProps } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -301,7 +302,7 @@ const WhatIsEthereumPage = ({
   )
 
   return (
-    <Flex direction="column" align="center" w="full" m="0 auto">
+    <Flex as={MainArticle} direction="column" align="center" w="full" m="0 auto">
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}

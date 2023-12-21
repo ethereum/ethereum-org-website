@@ -39,6 +39,7 @@ import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import InfoBanner from "./InfoBanner"
+import MainArticle from "./MainArticle"
 
 /**
  * Base HTML elements
@@ -185,7 +186,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 
   return (
     <Box
-      as="article"
+      as={MainArticle}
       flex={`1 1 ${lgBp}`}
       position="relative"
       px={8}

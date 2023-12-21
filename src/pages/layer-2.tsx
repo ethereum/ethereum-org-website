@@ -30,6 +30,7 @@ import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import Layer2ProductCard from "@/components/Layer2ProductCard"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import OrderedList from "@/components/OrderedList"
@@ -243,7 +244,7 @@ const Layer2Page = () => {
   }
 
   return (
-    <Flex flexDirection="column" alignItems="center">
+    <Flex as={MainArticle} flexDirection="column" alignItems="center">
       <PageMetadata
         title={t("layer-2-hero-title")}
         description={t("layer-2-metadata-description")}

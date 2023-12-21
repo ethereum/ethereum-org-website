@@ -10,6 +10,12 @@ import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { BasePageProps, I18nLocale, TranslationKey } from "@/lib/types"
 
+import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
+
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
@@ -19,11 +25,7 @@ import {
 
 import { FROM_QUERY } from "@/lib/constants"
 
-import Input from "../components/Input"
-import InlineLink, { BaseLink } from "../components/Link"
 import OldHeading from "../components/OldHeading"
-import Text from "../components/OldText"
-import PageMetadata from "../components/PageMetadata"
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/languages")
@@ -78,7 +80,7 @@ const LanguagesPage = () => {
         description={t("page-languages-meta-desc")}
       />
 
-      <Flex direction="column" align="center" w="full" mx="auto" mt={16}>
+      <Flex as={MainArticle} direction="column" align="center" w="full" mx="auto" mt={16}>
         <PageMetadata
           title={t("page-languages-meta-title")}
           description={t("page-languages-meta-desc")}

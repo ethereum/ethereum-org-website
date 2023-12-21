@@ -30,6 +30,7 @@ import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
 import WalletTable from "@/components/FindWallet/WalletTable"
 import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
 import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 
@@ -137,7 +138,7 @@ const FindWalletPage = () => {
   }
 
   return (
-    <Flex direction="column" position="relative" w="full">
+    <Flex as={MainArticle} direction="column" position="relative" w="full">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}

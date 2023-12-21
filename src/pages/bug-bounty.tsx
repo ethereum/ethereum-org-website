@@ -23,6 +23,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -49,6 +50,7 @@ import tekuLight from "@/public/upgrades/teku-light.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Box
+    as={MainArticle}
     display="flex"
     flexDirection="column"
     alignItems="center"

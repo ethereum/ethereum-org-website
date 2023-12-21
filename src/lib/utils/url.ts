@@ -1,4 +1,4 @@
-import { DISCORD_PATH } from "@/lib/constants"
+import { DISCORD_PATH, MAIN_CONTENT_ID } from "@/lib/constants"
 
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
@@ -17,7 +17,7 @@ export const isPdf = (href: string): boolean => href.endsWith(".pdf")
 export const sanitizeHitUrl = (url: string): string =>
   url
     .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
-    .replace("#main-content", "")
+    .replace(`#${MAIN_CONTENT_ID}`, "")
     .replace("#content", "")
     .replace("#top", "")
 
