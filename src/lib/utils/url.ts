@@ -17,7 +17,7 @@ export const isPdf = (href: string): boolean => href.endsWith(".pdf")
 export const sanitizeHitUrl = (url: string): string =>
   url
     .replace(/^https?:\/\/[^\/]+(?=\/)/, "")
-    .replace(MAIN_CONTENT_ID, "")
+    .replace(`#${MAIN_CONTENT_ID}`, "")
     .replace("#content", "")
     .replace("#top", "")
 

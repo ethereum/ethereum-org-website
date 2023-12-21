@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -10,7 +10,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
@@ -28,6 +28,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -321,20 +322,21 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
   return b.score - a.score
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("bug-bounty")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const BugBountiesPage = () => {
   const { pathname } = useRouter()
@@ -693,7 +695,6 @@ const BugBountiesPage = () => {
               <Translation id="page-bug-bounty:page-upgrades-bug-bounty-quality-fix" />
             </Text>
           </SubmitInstructions>
-          {/* TODO: Re-add Points Exchange (BugBountyPoints Component) */}
         </Row>
       </Content>
       <BugBountyCards />
@@ -746,7 +747,6 @@ const BugBountiesPage = () => {
                 <Translation id="page-bug-bounty:bug-bounty-faq-q1-contentPreview" />
               }
             >
-              {/* TODO: Check <code> styling compared to Gatsby repo */}
               <Text>
                 <Translation id="page-bug-bounty:bug-bounty-faq-q1-content-1" />
               </Text>

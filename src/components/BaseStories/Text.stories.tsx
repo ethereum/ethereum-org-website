@@ -10,7 +10,8 @@ import {
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import components from "../../@chakra-ui/gatsby-plugin/components"
+import components from "@/@chakra-ui/components"
+
 import Translation from "../Translation"
 
 type TextType = typeof Text

@@ -1,8 +1,7 @@
-import React, { ReactNode, useState } from "react"
+import { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import {
@@ -19,7 +18,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, Lang } from "@/lib/types"
+import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
@@ -31,11 +30,11 @@ import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import PageMetadata from "@/components/PageMetadata"
-// TODO: migrate stats fetching on build time
-// import StatsBoxGrid from "../components/StatsBoxGrid"
+import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import {
@@ -50,6 +49,10 @@ import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistr
 import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
 import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
 import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
+import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import devfixed from "@/public/developers-eth-blocks.png"
 import dogefixed from "@/public/doge-computer.png"
 import enterprise from "@/public/enterprise-eth.png"
@@ -176,32 +179,51 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
-type Props = SSRConfig & {
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
+const cachedFetchNodes = runOnlyOnce(fetchNodes)
+const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
+const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+
+type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
+  metricResults: AllMetricData
 }
 
-const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+export const getStaticProps = (async ({ locale }) => {
+  const metricResults: AllMetricData = {
+    totalEthStaked: await cachedFetchTotalEthStaked(),
+    nodeCount: await cachedFetchNodes(),
+    totalValueLocked: await cachedFetchTotalValueLocked(),
+    txCount: await cachedFetchTxCount(),
+  }
 
   const communityEvents = await cachedFetchCommunityEvents()
 
   // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/")
+
+  // check if the translated page content file exists for locale
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
+
+  // load last deploy date to pass to Footer in RootLayout
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
       communityEvents,
+      contentNotTranslated,
       lastDeployDate,
+      metricResults,
     },
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
 const HomePage = ({
   communityEvents,
+  metricResults,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
@@ -363,6 +385,7 @@ const HomePage = ({
                 alt={card.alt}
                 to={card.to}
                 image={card.image}
+                imageWidth={320}
               />
             ))}
           </CardContainer>
@@ -549,8 +572,7 @@ const HomePage = ({
             <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        {/* // TODO: migrate stats fetching the necessary data on build time */}
-        {/* <StatsBoxGrid /> */}
+        <StatsBoxGrid data={metricResults} />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
       <CommunityEvents events={communityEvents} />
@@ -571,6 +593,7 @@ const HomePage = ({
                 alt={tout.alt}
                 to={tout.to}
                 image={tout.image}
+                imageWidth={320}
                 boxShadow={cardBoxShadow}
               />
             )

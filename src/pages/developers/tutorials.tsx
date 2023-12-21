@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useState } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
-import { SSRConfig } from "next-i18next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useTranslation } from "react-i18next"
 import { FaGithub } from "react-icons/fa"
 import {
   Badge,
@@ -14,7 +14,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { Lang } from "@/lib/types"
+import { BasePageProps, Lang } from "@/lib/types"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
@@ -28,6 +28,7 @@ import Translation from "@/components/Translation"
 import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
 import TutorialTags from "@/components/TutorialTags"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTutorialsData } from "@/lib/utils/md"
@@ -71,25 +72,24 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   }
 )
 
-type Props = SSRConfig & {
+type Props = BasePageProps & {
   internalTutorials: ITutorial[]
-  locale: string | undefined
-  lastDeployDate: string
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/tutorials"
   )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       internalTutorials: getTutorialsData(locale!),
-      locale,
       lastDeployDate,
     },
   }
@@ -132,8 +132,8 @@ const published = (locale: string, published: string) => {
 
 const TutorialPage = ({
   internalTutorials,
-  locale,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
+  const { locale } = useRouter()
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(

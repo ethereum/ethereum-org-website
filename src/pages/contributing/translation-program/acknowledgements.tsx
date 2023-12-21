@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -12,6 +12,8 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
+import { BasePageProps } from "@/lib/types"
+
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -22,6 +24,7 @@ import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import TranslationLeaderboard from "@/components/TranslationLeaderboard"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -40,25 +43,23 @@ const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
 )
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/contributing/translation-program/acknowledgements"
   )
-  const lastDeployDate = getLastDeployDate()
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const TranslatorAcknowledgements = () => {
   const router = useRouter()

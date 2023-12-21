@@ -97,8 +97,6 @@ const PageHero = ({
           {subtitle}
         </Text>
         {buttons && (
-          // FIXME: remove the `ul` override once removed the corresponding
-          // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
           <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
             {buttons.map((button, idx) => {
               if (isButtonLink(button)) {
@@ -155,7 +153,7 @@ const PageHero = ({
       >
         <Image
           src={image}
-          sizes="100%"
+          sizes="(max-width: 992px) 100vw, 50vw"
           style={{
             width: "100%",
             height: "auto",

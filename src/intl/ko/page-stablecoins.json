@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "명목화폐",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "귀금속",
   "page-stablecoins-table-error": "스테이블 코인을 불러오지 못했습니다. 페이지를 새로 고쳐보세요.",
-  "page-stablecoins-table-loading": "스테이블 코인 데이터를 로드하는 중...",
   "page-stablecoins-title": "스테이블 코인",
   "page-stablecoins-top-coins": "시가총액에 따른 상위 스테이블 코인",
   "page-stablecoins-top-coins-intro": "시가총액이란",

@@ -66,11 +66,13 @@ const SideNavLink = ({ children, ...props }: LinkProps) => {
 export interface IPropsNavLink {
   item: DeveloperDocsLink
   path: string
+  isTopLevel?: boolean
 }
 
-const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
+const NavLink: React.FC<IPropsNavLink> = ({ item, path, isTopLevel }) => {
   const { t } = useTranslation("page-developers-docs")
-  const isLinkInPath = path.includes(item.to) || path.includes(item.path)
+  const isLinkInPath =
+    isTopLevel || path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
   useEffect(() => {
@@ -115,7 +117,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
-          initial="closed"
+          initial={isOpen ? "open" : "closed"}
         >
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} />
@@ -142,7 +144,6 @@ export interface SideNavProps {
 // TODO set tree state based on if current path is a child
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
-// e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
 const SideNav = ({ path }: SideNavProps) => {
   const { t } = useTranslation("page-developers-docs")
 
@@ -166,7 +167,7 @@ const SideNav = ({ path }: SideNavProps) => {
       aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
-        <NavLink item={item} path={path} key={idx} />
+        <NavLink item={item} path={path} key={idx} isTopLevel />
       ))}
     </Box>
   )

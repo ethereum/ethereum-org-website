@@ -1,7 +1,7 @@
 import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
@@ -18,7 +18,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import BoxGrid from "@/components/BoxGrid"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -38,8 +38,11 @@ import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
-import ProductList from "@/components/ProductList"
+import ProductListComponent, {
+  type ProductListProps,
+} from "@/components/ProductList"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -61,13 +64,11 @@ import cryptopunks from "@/public/dapps/cryptopunks.png"
 import cryptovoxels from "@/public/dapps/cryptovoxels.png"
 import curve from "@/public/dapps/curve.png"
 import cyberconnect from "@/public/dapps/cyberconnect.png"
-import darkforestec from "@/public/dapps/darkforest.png"
 import darkforest from "@/public/dapps/darkforest.png"
 import decentraland from "@/public/dapps/decentraland.png"
 import dodo from "@/public/dapps/dodo.png"
 import ens from "@/public/dapps/ens.png"
 import etherisc from "@/public/dapps/etherisc.png"
-import foundationec from "@/public/dapps/foundation.png"
 import foundation from "@/public/dapps/foundation.png"
 import gitcoin from "@/public/dapps/gitcoin.png"
 import gm from "@/public/dapps/gm.png"
@@ -91,7 +92,6 @@ import opera from "@/public/dapps/opera.png"
 import osuvox from "@/public/dapps/osuvox.png"
 import poap from "@/public/dapps/poap.png"
 import polymarket from "@/public/dapps/polymarket.png"
-import pooltogetherec from "@/public/dapps/pooltogether.png"
 import pooltogether from "@/public/dapps/pooltogether.png"
 import pwn from "@/public/dapps/pwn.png"
 import radicle from "@/public/dapps/radicle.png"
@@ -388,6 +388,16 @@ const MoreButtonContainer = (props: ChildOnlyProp) => (
   <Flex justify="center" mt={12} mb={4} {...props} />
 )
 
+const ProductList = (props: Omit<ProductListProps, "actionLabel">) => {
+  const { t } = useTranslation("page-dapps")
+  return (
+    <ProductListComponent
+      actionLabel={t("page-dapps-ready-button")}
+      {...props}
+    />
+  )
+}
+
 enum CategoryType {
   FINANCE = "finance",
   TECHNOLOGY = "technology",
@@ -413,20 +423,21 @@ interface Categories {
   [key: string]: Category
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const DappsPage = () => {
   const { t } = useTranslation(["page-dapps", "common"])

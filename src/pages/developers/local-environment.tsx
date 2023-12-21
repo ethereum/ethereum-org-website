@@ -1,5 +1,4 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { SSRConfig } from "next-i18next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -10,7 +9,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
@@ -21,6 +20,7 @@ import PageMetadata from "@/components/PageMetadata"
 import ProductCard from "@/components/ProductCard"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -51,18 +51,20 @@ const Column = ({ children }: ChildOnlyProp) => {
   )
 }
 
-interface Props extends SSRConfig {
-  frameworksList: Array<Framework>
+type Props = BasePageProps & {
+  frameworksList: Framework[]
 }
 
-const cachedFetchLocalEnvironmentFrameworkData = runOnlyOnce(getLocalEnvironmentFrameworkData)
+const cachedFetchLocalEnvironmentFrameworkData = runOnlyOnce(
+  getLocalEnvironmentFrameworkData
+)
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/local-environment"
   )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
 
@@ -71,6 +73,7 @@ export const getStaticProps = (async (context) => {
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       frameworksList: frameworksListData,
       lastDeployDate,
     },

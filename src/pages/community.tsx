@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -10,9 +10,10 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, CommonHeroProps } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, CommonHeroProps } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -39,23 +40,21 @@ import communityHeroImg from "@/public/heroes/community-hero.png"
 import upgradesCoreImg from "@/public/upgrades/core.png"
 import whatIsEthereumImg from "@/public/what-is-ethereum.png"
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const CardContainer = ({ children }: ChildOnlyProp) => {
   return (
@@ -304,6 +303,7 @@ const CommunityPage = () => {
                 description={card.description}
                 to={card.to}
                 image={card.image}
+                imageWidth={320}
                 alt={card.alt}
               />
             ))}

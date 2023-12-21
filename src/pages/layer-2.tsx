@@ -1,6 +1,6 @@
 import { merge } from "lodash"
 import { GetStaticProps } from "next"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
@@ -15,7 +15,11 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import type { CommonHeroProps, TranslationKey } from "@/lib/types"
+import type {
+  BasePageProps,
+  CommonHeroProps,
+  TranslationKey,
+} from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
@@ -33,6 +37,7 @@ import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -104,23 +109,21 @@ const Layer2CardGrid = (props) => (
   />
 )
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
-  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
+
+  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const Layer2Page = () => {
   const { t } = useTranslation("page-layer-2")
@@ -591,12 +594,14 @@ const Layer2Page = () => {
             <ProductList
               category="Information"
               content={toolsData.information}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
         </TwoColumnContent>

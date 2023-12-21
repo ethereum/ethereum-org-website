@@ -2,6 +2,7 @@ import type { Options } from "mdast-util-toc"
 import type { NextPage } from "next"
 import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
+import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
 
 import type {
@@ -15,7 +16,6 @@ import type {
 } from "@/lib/interfaces"
 
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
-import { ImageProps } from "@/components/Image"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -28,6 +28,15 @@ export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
 export type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
+
+export type Root = {
+  children: ReactNode
+  contentIsOutdated: boolean
+  contentNotTranslated: boolean
+  lastDeployDate: string
+}
+
+export type BasePageProps = SSRConfig & Pick<Root, "contentNotTranslated" | "lastDeployDate">
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -201,8 +210,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -247,6 +256,7 @@ type Data<T> = {
 
 export type EthStoreResponse = Data<{
   apr: number
+  day: number
   effective_balances_sum_wei: number
 }>
 
@@ -254,8 +264,61 @@ export type EpochResponse = Data<{
   validatorscount: number
 }>
 
-export type BeaconchainData = {
+export type StakingStatsData = {
   totalEthStaked: number
   validatorscount: number
   apr: number
+}
+
+export type TimestampedData<T> = {
+  timestamp: number
+  value: T
+}
+
+export type MetricDataValue<Data, Value> = {
+  error: string
+} | {
+  data: Data
+  value: Value
+}
+
+export type EtherscanNodeResponse = {
+  result: {
+    UTCDate: number
+    TotalNodeCount: number
+  }[]
+}
+
+type EtherscanTxCountItem = {
+  unixTimeStamp: string
+  transactionCount: number
+}
+
+export type EtherscanTxCountResponse = {
+  status: string
+  message: string
+  result: EtherscanTxCountItem[]
+}
+
+export type DefiLlamaTVLResponse = {
+  date: string
+  totalLiquidityUSD: number
+}[]
+
+export type MetricReturnData = MetricDataValue<TimestampedData<number>[], number>
+
+export type StatsBoxState = MetricDataValue<TimestampedData<number>[], string>
+
+export type MetricSection = "totalEthStaked" | "nodeCount" | "totalValueLocked" | "txCount"
+
+export type AllMetricData = Record<MetricSection, MetricReturnData>
+
+export type StatsBoxMetric = {
+  title: string
+  description: string
+  state: StatsBoxState
+  buttonContainer: JSX.Element
+  range: string
+  apiUrl: string
+  apiProvider: string
 }

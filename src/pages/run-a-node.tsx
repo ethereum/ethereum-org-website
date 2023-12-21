@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next/types"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps, ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
@@ -14,7 +14,7 @@ import {
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
@@ -39,6 +39,7 @@ import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -324,20 +325,21 @@ type RunANodeCard = {
   alt: string
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  const lastDeployDate = getLastDeployDate()
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("run-a-node")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const RunANodePage = () => {
   const { t } = useTranslation("page-run-a-node")

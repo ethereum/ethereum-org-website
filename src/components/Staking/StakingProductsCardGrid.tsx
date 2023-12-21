@@ -25,7 +25,6 @@ import {
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
-import Translation from "@/components/Translation"
 
 import { MatomoEventOptions } from "@/lib/utils/matomo"
 
@@ -276,8 +275,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         </List>
       </Box>
       <Box {...PADDED_DIV_STYLE}>
-        {/* TODO: Matomo - re-enable */}
-        <ButtonLink to={url} /* customEventOptions={matomo} */ width="100%">
+        <ButtonLink to={url} customEventOptions={matomo} width="100%">
           {t("page-staking-products-get-started")}
         </ButtonLink>
       </Box>

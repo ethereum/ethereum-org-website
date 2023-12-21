@@ -209,11 +209,6 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          canonicalUrl={frontmatter.sourceUrl}
-        />
         <ContentContainer>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />

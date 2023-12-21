@@ -21,7 +21,7 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -33,6 +33,7 @@ import { Image } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
@@ -86,21 +87,23 @@ const filterDefault = {
 
 export type FiltersType = typeof filterDefault
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
+
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/wallets/find-wallet"
   )
-  const lastDeployDate = getLastDeployDate()
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[3])
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const FindWalletPage = () => {
   const randomizedWalletData = shuffle(walletData)
