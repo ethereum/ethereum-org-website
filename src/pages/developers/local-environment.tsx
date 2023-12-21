@@ -14,6 +14,7 @@ import { Framework } from "@/lib/interfaces"
 
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
 import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -30,7 +31,7 @@ import EthBlocksImage from "@/public/developers-eth-blocks.png"
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
-    <Box py={4} px={8} w="full">
+    <Box as={MainArticle} py={4} px={8} w="full">
       {children}
     </Box>
   )

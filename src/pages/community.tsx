@@ -13,19 +13,20 @@ import {
 import { BasePageProps, ChildOnlyProp, CommonHeroProps } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
+import ActionCard from "@/components/ActionCard"
+import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
+import Callout from "@/components/Callout"
+import Card from "@/components/Card"
+import FeedbackCard from "@/components/FeedbackCard"
+import { HubHero } from "@/components/Hero"
+import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
+
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import ActionCard from "../components/ActionCard"
-import ButtonLink, { ButtonLinkProps } from "../components/Buttons/ButtonLink"
-import Callout from "../components/Callout"
-import Card from "../components/Card"
-import FeedbackCard from "../components/FeedbackCard"
-import { HubHero } from "../components/Hero"
-import { Image } from "../components/Image"
-import OldHeading from "../components/OldHeading"
-import PageMetadata from "../components/PageMetadata"
 
 // Static assets
 import developersEthBlockImg from "@/public/developers-eth-blocks.png"
@@ -78,7 +79,7 @@ const Divider = () => {
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex direction="column" alignItems="center" w="full" mx="auto">
+    <Flex as={MainArticle} direction="column" alignItems="center" w="full" mx="auto">
       {children}
     </Flex>
   )

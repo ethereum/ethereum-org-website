@@ -19,6 +19,7 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -37,7 +38,8 @@ import lightThemeCertificateImg from "@/public/certificates/light-certificate.pn
 import dogeComputerImg from "@/public/doge-computer.png"
 import whatIsEthereumImg from "@/public/what-is-ethereum.png"
 
-const Content = (props: BoxProps) => <Box py={4} px={10} w="full" {...props} />
+
+const Content = (props: BoxProps) => <Box as={MainArticle} py={4} px={10} w="full" {...props} />
 
 const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />

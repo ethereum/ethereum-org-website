@@ -22,27 +22,28 @@ import {
 
 import { BasePageProps } from "@/lib/types"
 
+import { ButtonLink } from "@/components/Buttons"
+import Callout from "@/components/Callout"
+import Card from "@/components/Card"
+import Emoji from "@/components/Emoji"
+import ExpandableCard from "@/components/ExpandableCard"
+import FeedbackCard from "@/components/FeedbackCard"
+import GhostCard from "@/components/GhostCard"
+import HorizontalCard from "@/components/HorizontalCard"
+import { Image } from "@/components/Image"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import PageHero from "@/components/PageHero"
+import PageMetadata from "@/components/PageMetadata"
+import Pill from "@/components/Pill"
+import Translation from "@/components/Translation"
+
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { ButtonLink } from "../components/Buttons"
-import Callout from "../components/Callout"
-import Card from "../components/Card"
-import Emoji from "../components/Emoji"
-import ExpandableCard from "../components/ExpandableCard"
-import FeedbackCard from "../components/FeedbackCard"
-import GhostCard from "../components/GhostCard"
-import HorizontalCard from "../components/HorizontalCard"
-import { Image } from "../components/Image"
-import InfoBanner from "../components/InfoBanner"
-import InlineLink from "../components/Link"
-import OldHeading from "../components/OldHeading"
-import Text from "../components/OldText"
-import PageHero from "../components/PageHero"
-import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
-import Translation from "../components/Translation"
 
 // Static assets
 import dogeComputerImg from "@/public/doge-computer.png"
@@ -59,6 +60,7 @@ const Divider = (props: BoxProps) => (
 
 const Page = (props: FlexProps) => (
   <Flex
+    as={MainArticle}
     width="full"
     direction="column"
     align="center"

@@ -11,6 +11,7 @@ import CalloutBanner from "@/components/CalloutBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
+import MainArticle from "@/components/MainArticle"
 import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -62,6 +63,7 @@ const Header = (props: ChildOnlyProp) => (
     maxW="896px"
     py={0}
     px={8}
+    m="auto"
     {...props}
   />
 )
@@ -403,70 +405,75 @@ const LearningToolsPage = () => {
           "page-developers-learning-tools:page-learning-tools-meta-desc"
         )}
       />
-      <Header>
-        <H1>
-          <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
-        </H1>
-        <Subtitle>
-          <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
-        </Subtitle>
-      </Header>
-      <StackContainer>
-        <SubtitleTwo>
-          <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
-        </SubtitleTwo>
-        <Text>
-          <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
-        </Text>
-        <LearningToolsCardGrid category={randomizedSandboxes} />
-        <InfoBanner emoji=":point_up:" shouldCenter>
-          <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-        </InfoBanner>
-      </StackContainer>
-      <StackContainer>
-        <SubtitleTwo>
-          <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
-        </SubtitleTwo>
-        <Text>
-          <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
-        </Text>
-        <LearningToolsCardGrid category={games} />
-      </StackContainer>
-      <StackContainer>
-        <SubtitleTwo>
-          <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
-        </SubtitleTwo>
-        <Text>
-          <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
-        </Text>
-        <LearningToolsCardGrid category={bootcamps} />
-      </StackContainer>
-      <ContentBox>
-        <CalloutBanner
-          mx={4}
-          mt={24}
-          mb={40}
-          image={EnterpriseEth}
-          alt={t(
-            "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
-          )}
-          titleKey={
-            "page-developers-learning-tools:page-learning-tools-documentation"
-          }
-          descriptionKey={
-            "page-developers-learning-tools:page-learning-tools-documentation-desc"
-          }
-        >
-          <Box>
-            <ButtonLink to="/developers/docs/">
-              <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
-            </ButtonLink>
-          </Box>
-        </CalloutBanner>
-      </ContentBox>
-      <ContentBox>
-        <FeedbackCard />
-      </ContentBox>
+      <MainArticle w="full">
+        <Box w="full">
+          <Header>
+            <H1>
+              <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
+            </H1>
+            <Subtitle>
+              <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
+            </Subtitle>
+          </Header>
+        </Box>
+        <StackContainer>
+          <SubtitleTwo>
+            <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
+          </SubtitleTwo>
+          <Text>
+            <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
+          </Text>
+          <LearningToolsCardGrid category={randomizedSandboxes} />
+          <InfoBanner emoji=":point_up:" shouldCenter>
+            <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
+          </InfoBanner>
+        </StackContainer>
+        <StackContainer>
+          <SubtitleTwo>
+            <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
+          </SubtitleTwo>
+          <Text>
+            <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
+          </Text>
+          <LearningToolsCardGrid category={games} />
+        </StackContainer>
+        <StackContainer>
+          <SubtitleTwo>
+            <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
+          </SubtitleTwo>
+          <Text>
+            <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
+          </Text>
+          <LearningToolsCardGrid category={bootcamps} />
+        </StackContainer>
+        <ContentBox>
+          <CalloutBanner
+            mx={4}
+            mt={24}
+            mb={40}
+            image={EnterpriseEth}
+            alt={t(
+              "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
+            )}
+            titleKey={
+              "page-developers-learning-tools:page-learning-tools-documentation"
+            }
+            descriptionKey={
+              "page-developers-learning-tools:page-learning-tools-documentation-desc"
+            }
+          >
+            <Box>
+              <ButtonLink to="/developers/docs/">
+                <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
+              </ButtonLink>
+            </Box>
+          </CalloutBanner>
+        </ContentBox>
+        <ContentBox>
+          <FeedbackCard />
+        </ContentBox>
+      </MainArticle>
+      
     </Page>
   )
 }

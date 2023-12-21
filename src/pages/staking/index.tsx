@@ -379,7 +379,7 @@ const StakingPage = ({
           tocItems={tocArray}
           hideBelow={lgBp}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           <Flex direction="column" gap={16} mt={{ base: 16, lg: 0 }}>
             <Box>
               <H2 id={tocItems.whatIsStaking.id}>

@@ -29,6 +29,7 @@ import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
@@ -334,7 +335,7 @@ const HomePage = ({
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
   return (
-    <Flex flexDirection="column" alignItems="center" dir={dir} width="full">
+    <Flex as={MainArticle} flexDirection="column" alignItems="center" dir={dir} width="full">
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}

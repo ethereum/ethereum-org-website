@@ -24,6 +24,7 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero, {
@@ -39,7 +40,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import oldship from "@/public/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex direction="column" align="center" w="full" {...props} />
+  <Flex as={MainArticle} direction="column" align="center" w="full" {...props} />
 )
 
 const PageDivider = () => (

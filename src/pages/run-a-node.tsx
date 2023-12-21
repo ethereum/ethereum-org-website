@@ -33,6 +33,7 @@ import {
 } from "@/components/icons/run-a-node"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
@@ -57,6 +58,7 @@ const Divider = () => <Box my="16" w="10%" h="1" bg="homeDivider" />
 
 const GappedPage = (props: ChildOnlyProp) => (
   <Flex
+    as={MainArticle}
     direction="column"
     align="center"
     w="full"

@@ -20,6 +20,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -57,7 +58,7 @@ const GrayContainer = (props: ChildOnlyProp) => (
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Box as={MainArticle} py={4} px={8} w="full" {...props} />
 )
 
 const Subtitle = (props: TextProps) => (

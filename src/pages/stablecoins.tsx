@@ -24,6 +24,7 @@ import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
@@ -398,7 +399,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   ]
 
   return (
-    <Page>
+    <Page as={MainArticle}>
       <PageMetadata
         title={t("page-stablecoins-title")}
         description={t("page-stablecoins-meta-description")}

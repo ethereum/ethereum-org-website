@@ -28,6 +28,7 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 import Tooltip from "@/components/Tooltip"
@@ -337,7 +338,7 @@ const DepositContractPage = () => {
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
-    <Box w="100%">
+    <Box as={MainArticle} w="100%">
       <FlexBox>
         <PageMetadata
           title={t("page-staking-deposit-contract-meta-title")}

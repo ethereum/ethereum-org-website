@@ -26,6 +26,7 @@ import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -43,6 +44,7 @@ import ethereum from "@/public/what-is-ethereum.png"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
+    as={MainArticle}
     direction="column"
     align="center"
     w="full"
