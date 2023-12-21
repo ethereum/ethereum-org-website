@@ -11,7 +11,7 @@ export async function fetchCommunityEvents(): Promise<CommunityEventsReturnType>
 
   try {
     const futureEventsReq = await fetch(
-      `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${new Date().toISOString()}&singleEvents=true&orderby=starttime`
+      `https://content.googleapis.com/calendar/v3/calendars/${calendarId}/events?key=${apiKey}&timeMin=${new Date().toISOString()}&maxResults=3&singleEvents=true&orderby=starttime`
     )
     const futureEvents = await futureEventsReq.json()
     const futureEventsReqData: ReqCommunityEvent[] = futureEvents.items
