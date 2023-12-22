@@ -33,7 +33,7 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 - [Quiz](/contributing/quizzes/)_: aggiungi, aggiorna ed elimina le banche di domande dei quiz per una pagina rilevante_
 - [Suggerisci una risorsa di progettazione](/contributing/design/adding-design-resources/)_: aggiungi, aggiorna ed elimina le risorse di progettazione utili_
 
-_Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/CetY6Y4)
+_Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/ethereum-org)
 
 ## Come lavorare su ethereum.org {#how-to-update-content}
 
@@ -44,7 +44,7 @@ Tutti gli aggiornamenti sono effettuati tramite il processo PR di GitHub. Questo
 Non necessiti di autorizzazioni per iniziare a lavorare, ma è sempre meglio farci sapere che cosa hai in mente di fare. Puoi farlo:
 
 - Commentando su un ticket o PR su [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Messaggiando sul nostro [server di Discord](https://discord.gg/CetY6Y4)
+- Messaggiando sul nostro [server di Discord](https://discord.gg/ethereum-org)
 
 Prima di contribuire, assicurati di avere familiarità con:
 
@@ -59,7 +59,7 @@ Le decisioni sui singoli PR, l'evoluzione del design e gli aggiornamenti princip
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Server Discord](https://discord.gg/CetY6Y4)
+- [Server Discord](https://discord.gg/ethereum-org)
 
 ### Due parole sul plagio {#plagiarism}
 
@@ -77,7 +77,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 
 ### Come richiederlo {#how-to-claim}
 
-1. Unisciti al nostro [server Discord](https://discord.gg/E8dET2ux8y).
+1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).
 2. Incolla un link al tuo contributo nel [canale](https://discord.com/channels/714888181740339261/804005643211898911) `# | poaps`.
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!

@@ -94,7 +94,7 @@ Afin de rendre notre travail plus accessible et de favoriser davantage la collab
 
 **Comment avez-vous trouvé cela ?** Nous nous réjouissons toujours de recevoir des feedbacks sur notre feuille de route - Y a-t-il encore des choses auxquelles nous devrions travailler ? N'hésitez pas à nous le faire savoir ! Nous accueillons avec plaisir les idées et les RP de n'importe quel membre de la communauté.
 
-**Vous souhaitez vous impliquer ?** [Apprenez-en davantage sur la manière dont vous pouvez contribuer](/contributing/). [Rejoignez-nous sur Twitter](https://twitter.com/ethdotorg), ou rejoignez les discussions communautaires par [le biais de notre serveur Discord](https://discord.gg/CetY6Y4).
+**Vous souhaitez vous impliquer ?** [Apprenez-en davantage sur la manière dont vous pouvez contribuer](/contributing/). [Rejoignez-nous sur Twitter](https://twitter.com/ethdotorg), ou rejoignez les discussions communautaires par [le biais de notre serveur Discord](https://discord.gg/ethereum-org).
 
 ## Principes de conception {#design-principles}
 
@@ -104,7 +104,7 @@ Nous utilisons un ensemble de [principes de conception](/contributing/design-pri
 
 Nous avons construit et publié un [système de conception](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) pour livrer plus rapidement des fonctionnalités et permettre aux membres de la communauté de participer à la conception ouverte de ethereum.org.
 
-Vous voulez vous impliquer ? [Suivez l'évolution sur Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), le [problème GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) et rejoignez la conversation sur notre [canal Discord #design](https://discord.gg/bKycYhVUwV).
+Vous voulez vous impliquer ? [Suivez l'évolution sur Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), le [problème GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) et rejoignez la conversation sur notre [canal Discord #design](https://discord.gg/ethereum-org).
 
 ## Guide de style {#style-guide}
 
@@ -118,6 +118,6 @@ Nous apprécions les commentaires sur nos principes de conception, notre systèm
 
 Bien que ce site soit open source et que tout le monde puisse y travailler, nous disposons d'une équipe dédiée à ethereum.org et à d'autres projets web de l'Ethereum Foundation.
 
-Nous publierons les offres d'emploi ici. Si vous ne trouvez pas de poste qui vous corresponde, rendez-vous sur [notre serveur Discord,](https://discord.gg/CetY6Y4) et faites-nous savoir comment vous aimeriez travailler avec nous !
+Nous publierons les offres d'emploi ici. Si vous ne trouvez pas de poste qui vous corresponde, rendez-vous sur [notre serveur Discord,](https://discord.gg/ethereum-org) et faites-nous savoir comment vous aimeriez travailler avec nous !
 
 Vous cherchez un poste en dehors de l'équipe ethereum.org ? [Découvrez d'autres emplois liés à Ethereum](/community/get-involved/#ethereum-jobs/).

@@ -78,7 +78,7 @@ For other useful translation tools, translator communities and Translation Progr
 
 ## Get in touch {#get-in-touch}
 
-Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/6WX7E97)
+Do you have any questions? Or want to collaborate with our team and other translators? Please post in the #translations channel of our [ethereum.org Discord server](https://discord.gg/ethereum-org)
 
 You can also reach out to us at translations@ethereum.org
 

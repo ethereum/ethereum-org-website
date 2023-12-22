@@ -10,7 +10,7 @@ Ehereum.org 翻译风格指南包含一些最重要的指南、说明和翻译�
 
 本文档是一份一般性指南，并不特定于任何一种语言。
 
-如果您有任何问题、建议或反馈，请随时通过 translations@ethereum.org 与我们联系，在 Crowdin 上向 @ethdotorg 发送消息，或 [ 加入我们的 Discord](https://discord.gg/XVepFu7sqR)，您可以在其中通过#translations 频道向我们发送消息或联系任何团队成员。
+如果您有任何问题、建议或反馈，请随时通过 translations@ethereum.org 与我们联系，在 Crowdin 上向 @ethdotorg 发送消息，或 [ 加入我们的 Discord](https://discord.gg/ethereum-org)，您可以在其中通过#translations 频道向我们发送消息或联系任何团队成员。
 
 ### 使用 Crowdin {#using-crowdin}
 

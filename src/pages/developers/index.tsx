@@ -214,7 +214,7 @@ const DevelopersPage = ({
             </Text>
             <Text>
               <Translation id="page-developers-feedback" />{" "}
-              <InlineLink to="https://discord.gg/CetY6Y4">
+              <InlineLink to="https://discord.gg/ethereum-org">
                 <Translation id="page-developers-discord" />
               </InlineLink>
             </Text>

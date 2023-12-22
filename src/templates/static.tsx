@@ -55,6 +55,9 @@ import { Lang } from "../utils/languages"
 
 import { ChildOnlyProp, Context } from "../types"
 
+import { HubHero } from "../components/Hero"
+import { getImage } from "gatsby-plugin-image"
+
 const Pre = (props: ChildOnlyProp) => (
   <Text
     as="pre"
@@ -215,7 +218,7 @@ const components = {
 }
 
 const StaticPage = ({
-  data: { siteData, pageData: mdx },
+  data: { siteData, pageData: mdx, heroImage },
   pageContext: { relativePath, slug },
   location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
@@ -246,6 +249,14 @@ const StaticPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
+  const parsedPathname = location.pathname
+    .split("/")
+    .filter((item) => item !== "")
+    .slice(1)
+    .join("/")
+
+  console.log(parsedPathname)
+
   return (
     <Box w="full">
       {showPostMergeBanner && (
@@ -267,46 +278,59 @@ const StaticPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Box
-          as="article"
-          maxW="container.md"
-          w="full"
-          sx={{
-            ".featured": {
-              pl: 4,
-              ml: -4,
-              borderLeft: "1px dotted",
-              borderLeftColor: "primary.base",
-            },
-
-            ".citation": {
-              p: {
-                color: "text200",
+        <Box>
+          {parsedPathname === "guides" ? (
+            <HubHero
+              heroImgSrc={getImage(heroImage)!}
+              header={mdx.frontmatter.title}
+              title={""}
+              description={mdx.frontmatter.description}
+            />
+          ) : (
+            <>
+              <Breadcrumbs slug={slug} mb="8" />
+              <Text
+                color="text200"
+                dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+              >
+                <Translation id="page-last-updated" />:{" "}
+                {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+              </Text>
+            </>
+          )}
+          <Box
+            as="article"
+            maxW="container.md"
+            w="full"
+            sx={{
+              ".featured": {
+                pl: 4,
+                ml: -4,
+                borderLeft: "1px dotted",
+                borderLeftColor: "primary.base",
               },
-            },
-          }}
-        >
-          <Breadcrumbs slug={slug} mb="8" />
-          <Text
-            color="text200"
-            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+
+              ".citation": {
+                p: {
+                  color: "text200",
+                },
+              },
+            }}
           >
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
-          </Text>
-          <TableOfContents
-            position="relative"
-            zIndex={2}
-            editPath={absoluteEditPath}
-            items={tocItems}
-            isMobile
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-            hideEditButton={!!mdx.frontmatter.hideEditButton}
-          />
-          <MDXProvider components={components}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-          <FeedbackCard isArticle />
+            <TableOfContents
+              position="relative"
+              zIndex={2}
+              editPath={absoluteEditPath}
+              items={tocItems}
+              isMobile
+              maxDepth={mdx.frontmatter.sidebarDepth!}
+              hideEditButton={!!mdx.frontmatter.hideEditButton}
+            />
+            <MDXProvider components={components}>
+              <MDXRenderer>{mdx.body}</MDXRenderer>
+            </MDXProvider>
+            <FeedbackCard isArticle />
+          </Box>
         </Box>
         {tocItems && (
           <TableOfContents
@@ -344,6 +368,16 @@ export const staticPageQuery = graphql`
           data
           language
         }
+      }
+    }
+    heroImage: file(relativePath: { eq: "heroes/guides-hub-hero.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     siteData: site {

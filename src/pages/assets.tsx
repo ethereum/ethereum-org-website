@@ -115,6 +115,70 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
         </Row>
         <Row>
           <AssetDownload
+            title={t("page-assets-learn-hero-name")}
+            alt={t("page-assets-learn-hero-name")}
+            image={data.learnHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-community-hero-name")}
+            alt={t("page-assets-community-hero-name")}
+            image={data.communityHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-quizzes-hero-name")}
+            alt={t("page-assets-quizzes-hero-name")}
+            image={data.quizzesHub}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-developers-hero-name")}
+            alt={t("page-assets-developers-hero-name")}
+            image={data.developersHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-garden-name")}
+            alt={t("page-assets-garden-name")}
+            image={data.garden}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-roadmap-hero-name")}
+            alt={t("page-assets-roadmap-hero-name")}
+            image={data.roadmapHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-layer-2-hero-name")}
+            alt={t("page-assets-layer-2-hero-name")}
+            image={data.layer2Hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-guides-hero-name")}
+            alt={t("page-assets-guides-hero-name")}
+            image={data.guidesHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
             image={data.doge}
@@ -700,6 +764,32 @@ export const query = graphql`
     ethWordmarkPurpleWhite: file(
       relativePath: { eq: "assets/ethereum-wordmark-purple-white.png" }
     ) {
+      ...assetItem
+    }
+    communityHero: file(relativePath: { eq: "heroes/community-hero.png" }) {
+      ...assetItem
+    }
+    developersHero: file(
+      relativePath: { eq: "heroes/developers-hub-hero.jpg" }
+    ) {
+      ...assetItem
+    }
+    garden: file(relativePath: { eq: "heroes/garden.jpg" }) {
+      ...assetItem
+    }
+    guidesHero: file(relativePath: { eq: "heroes/guides-hub-hero.jpg" }) {
+      ...assetItem
+    }
+    layer2Hero: file(relativePath: { eq: "heroes/layer-2-hub-hero.jpg" }) {
+      ...assetItem
+    }
+    learnHero: file(relativePath: { eq: "heroes/learn-hub-hero.png" }) {
+      ...assetItem
+    }
+    quizzesHub: file(relativePath: { eq: "heroes/quizzes-hub-hero.png" }) {
+      ...assetItem
+    }
+    roadmapHero: file(relativePath: { eq: "heroes/roadmap-hub-hero.jpg" }) {
       ...assetItem
     }
   }
