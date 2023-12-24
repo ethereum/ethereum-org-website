@@ -720,6 +720,10 @@
     "path": "/page-eth.json"
   },
   {
+    "id": 8212,
+    "path": "/page-gas.json"
+  },
+  {
     "id": 5563,
     "path": "/governance/index.md"
   },
@@ -1102,10 +1106,6 @@
   {
     "id": 2966,
     "path": "/about/index.md"
-  },
-  {
-    "id": 8031,
-    "path": "/deprecated-software/index.md"
   },
   {
     "id": 8037,
