@@ -196,9 +196,8 @@ const LearnPage = ({ data }: PageProps<Queries.LearnPageQuery, Context>) => {
         pt={{ base: "10", lg: "16" }}
         dir={isRightToLeft ? "rtl" : "ltr"}
       >
-        <Show above={lgBp}>
-          <LeftNavBar tocItems={tocItems} />
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar tocItems={tocItems} hideBelow={lgBp} />
 
         <ContentContainer id="content">
           <Section>

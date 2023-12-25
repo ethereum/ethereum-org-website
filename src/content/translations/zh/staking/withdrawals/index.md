@@ -23,7 +23,7 @@ summaryPoints:
 
 ## 质押奖励 {#staking-rewards}
 
-对于有效余额已满 32 ETH 的活跃验证者账户，奖励支付将自动处理。
+对于有效余额已满 32 ETH 的活跃验证者帐户，奖励支付将自动处理。
 
 通过奖励获得的超过 32 ETH 的余额实际上并不构成本金，也不会增加该验证者在网络上的权重，因此每隔几天会自动提取作为奖励支付。 除了一次性提供提款地址外，这些奖励不需要验证者操作员采取任何行动。 这都是在共识层启动的，因此在任何步骤都不需要燃料（交易费）。
 
@@ -57,7 +57,7 @@ summaryPoints:
 
 验证者从抵押退出的过程所需时间不同，具体取决于同时退出的人数。 一旦完成，此帐户将不再负责执行验证者网络职责，不再有资格获得奖励，并且不再拥有“质押”的以太币。 此时，该帐户将被标记为完全“可提款”。
 
-一旦帐户被标记为“可提款”，并且已提供提款凭据，用户除了等待之外，无需再做任何事情。 区块提议者会自动且持续地扫描是否有可退出资金，并在下一次<a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>扫描</a>期间将您帐户的余额全额转移（也称为“全额提款”）。
+一旦帐户被标记为“可提款”，并且已提供提款凭据，用户除了等待之外，无需再做任何事情。 区块提议者会自动且持续地扫描是否有可退出资金，并在下一次<a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>扫描</a>期间将你帐户的余额全额转移（也称为“全额提款”）。
 
 ## 何时启用质押提款？ {#when}
 
@@ -123,7 +123,7 @@ summaryPoints:
 
 </TableContainer>
 
-正如您所看到的，随着网络上的验证者数量增加，完成该过程的速度也会变慢。 错过的时隙数增加可能成比例减慢提款速度，但这通常代表了可能的结果中较慢的情况。
+正如你所看到的，随着网络上的验证者数量增加，完成该过程的速度也会变慢。 错过的时隙数增加可能成比例减慢提款速度，但这通常代表了可能的结果中较慢的情况。
 
 ## 常见问题 {#faq}
 
@@ -142,7 +142,7 @@ eventAction="Why can a withdrawal address only be set once?"
 eventName="read more">
 通过设置执行层提款地址，该验证者的提款凭证已永久更改。 这意味着旧的提款凭证将不再起作用，新的提款凭证将指向执行层帐户。
 
-提款地址可以是智能合约（由其代码控制），也可以是外部拥有的账户（EOA，由其私钥控制）。 目前，这些帐户无法向共识层传回信息以表示验证者凭证已更改，而添加此功能将给协议增加不必要的复杂性。
+提款地址可以是智能合约（由其代码控制），也可以是外部拥有的帐户（EOA，由其私钥控制）。 目前，这些帐户无法向共识层传回信息以表示验证者凭证已更改，而添加此功能将给协议增加不必要的复杂性。
 
 作为更改特定验证者提款地址的替代方案，用户可以选择设置智能合约作为他们的提款地址，该智能合约可以处理密钥轮换，例如 Safe。 将资金去向设置为自己的外部帐户的用户可以执行完全退出以提取所有的质押资金，然后使用新的凭证重新进行质押。
 </ExpandableCard>
@@ -173,7 +173,7 @@ eventCategory="FAQ"
 eventAction="Do full withdrawals happen automatically?"
 eventName="read more">
 
-不。如果您的验证者仍在网络上运行，则不会自动执行完全提款。 需要手动发起自愿退出。
+不。如果你的验证者仍在网络上运行，则不会自动执行完全提款。 需要手动发起自愿退出。
 
 一旦验证者完成退出流程，并且假设该帐户具有提款凭证，则剩余余额<em>随后将在</em>下一次<a href="#validator-sweeping">验证者扫描</a>期间提取。
 
@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-建议验证者操作员访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，了解有关如何准备验证者以进行提款的更多详细信息。 做好准备、安排好事件进行时间，了解有关提款功能的更多详细信息。
+建议验证者运营商访问<a href="https://launchpad.ethereum.org/withdrawals/">质押启动板提款</a>页面，你可以在其中找到有关如何准备验证者以便提款的更多详细信息、事件的时间安排，以及有关提款如何运作的更多详细信息。
 
 要首先在测试网上测试你的设置，请访问 <a href="https://goerli.launchpad.ethereum.org">Goerli 测试网质押启动板</a>开始测试。
 
@@ -214,5 +214,5 @@ eventName="read more">
 - [EIP-4895：信标链提款推送操作](https://eips.ethereum.org/EIPS/eip-4895)
 - [以太坊牧猫人组织 - 上海](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94：质押以太币提取（测试）与 Potuz 和王筱维](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68：EIP-4895：信标链推送提款操作与 Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68：与 Alex Stokes 讨论 EIP-4895：信标链推送提款操作](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [了解验证者有效余额](https://www.attestant.io/posts/understanding-validator-effective-balance/)

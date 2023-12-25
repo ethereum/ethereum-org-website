@@ -30,7 +30,7 @@ lang: uk
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Це не вичерпний список. Потрібна допомога в пошуку підтримки для конкретного гаманця? Приєднуйтеся до [ethereum.org на платформі Discord](https://discord.gg/rZz26QWfCg), і ми спробуємо допомогти._
+_Це не вичерпний список. Потрібна допомога в пошуку підтримки для конкретного гаманця? Приєднуйтеся до [ethereum.org на платформі Discord](https://discord.gg/ethereum-org), і ми спробуємо допомогти._
 
 Шукаєте гаманець Ethereum? [Перегляньте наш повний список гаманців Ethereum](/wallets/find-wallet/).
 

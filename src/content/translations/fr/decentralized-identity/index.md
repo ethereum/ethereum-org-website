@@ -170,6 +170,7 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Qu'est-ce qu'Ethereum ERC725 ? Gestion des identités autonomes sur la Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Comment la Blockchain pourrait-elle résoudre le problème de l'identité numérique](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Qu'est-ce que l'identité décentralisée et pourquoi devriez-vous vous en préocupper ?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Introduction à l'Identité Décentralisée](https://walt.id/white-paper/digital-identity)— _Dominik Beron_
 
 ### Vidéos {#videos}
 
@@ -177,9 +178,11 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - [Connexion avec Ethereum et Decentralized Identity avec Ceramic, IDX, React, et 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutoriel YouTube sur la création d'un système de gestion d'identité pour créer, lire et mettre à jour un profil d'utilisateur en utilisant son portefeuille Ethereum par Nader Dabit_
 - [BrightID - Identité décentralisée sur Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Épisode de podcast non bancaire parlant de BrightID, une solution d'identité décentralisée pour Ethereum_
 - [The Off Chain Internet : Identités décentralisées & Références vérifiables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Présentation EthDenver 2022 par Evin McMullen
+- [Explication des Justificatifs Vérifiables](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Vidéo explicative sur YouTube avec démonstration par Tamino Baumann
 
 ### Communautés {#communities}
 
 - [ERC-725 Alliance sur GitHub](https://github.com/erc725alliance) — _Supporters de la norme ERC725 pour la gestion d'identité sur la blockchain Ethereum_
 - [Serveur Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Communauté pour les adeptes et les développeurs travaillant sur la connexion avec Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Une communauté de développeurs contribuant à la construction d'un framework de données vérifiables pour les applications_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Une communauté de développeurs et constructeurs travaillant sur des cas d'utilisation d'identité décentralisée dans diverses industries._

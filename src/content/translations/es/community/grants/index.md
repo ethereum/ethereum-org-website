@@ -15,31 +15,27 @@ Esta lista ha sido creada por nuestra comunidad. Si falta algo o encuentra infor
 Estos programas apoyan al ecosistema Ethereum ofreciendo subvenciones para una amplia gama de proyectos. Incluyen soluciones de escalabilidad, construcción de comunidad, seguridad y privacidad, entre otras cosas. Las subvenciones no son específicas de ninguna plataforma Ethereum en particular y sirven de acertado punto de partida en caso de duda.
 
 - [Programa de apoyo al ecosistema EF](https://esp.ethereum.foundation): _ financia proyectos de código abierto que beneficien a Ethereum, con enfoque particular en herramientas universales, infraestructura, investigación y bienes públicos_
-- [Ethereum RFP](https://github.com/ethereum/requests-for-proposals): _ solicitudes de propuestas («requests for proposals» o RFP en inglés) de Ethereum Foundation para trabajos y proyectos en el ecosistema Ethereum_.
 - [MetaCartel](https://www.metacartel.org/grants/): _desarrollo de DApp, creación de DAO_
 - [Moloch DAO](https://www.molochdao.com/): _privacidad, escalabilidad en capa 2, seguridad del cliente y más_.
-- [Subvenciones abiertas](https://opengrants.com/explore)
 - [Subvenciones DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _hoja de cálculo de Google de organizaciones que ofrecen subvenciones_
-- [Crunchbase para subvenciones Web3](https://www.cryptoneur.xyz/web3-grants): _filtrar y buscar subvenciones por categoría, caso de uso y cantidad, entre otras opciones. Contribuya a ayudar a otros a encontrar la subvención correcta._
+- [Crunchbase para subvenciones Web3](https://www.cryptoneur.xyz/web3-grants): _filtrar y buscar subvenciones por categoría, caso de uso y cantidad, entre otras opciones. Contribuya para que otros puedan encontrar la subvención correcta._
 - [Becas académicas](https://esp.ethereum.foundation/academic-grants): _becas para apoyar el trabajo académico relacionado con Ethereum_
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks ha elaborado un directorio exhaustivo de todas las subvenciones, solicitudes de propuestas (o RFP) y recompensas por detección de errores_
 
 ## Para proyectos concretos {#project-specific}
 
 Estos proyectos han creado sus propias subvenciones para proyectos con fines de desarrollo y experimentación de su propia tecnología.
 
 - [Programa de Subvenciones Aave](https://aavegrants.org/) – _[Aave](https://aave.com/) subvenciones DAO_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6): _[fondo de ecosistemas](https://balancer.fi/) Balancer_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41): _[fondo de ecosistemas](https://balancer.fi/) Balancer_
 - [Programa de subvenciones de Chainlink](https://chain.link/community/grants): _subvenciones para la comunidad[Chainlink](https://chain.link/)_
-- [Programa de subvenciones Compound](https://compoundgrants.org/): _[ecosistema financiero](https://compound.finance/) Compound_
-- [Programa de subvenciones Decentraland](https://governance.decentraland.org/grants/): _[metaverso DAO](https://decentraland.org/) Decentraland_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/): _[ecosistema financiero](https://lido.fi/) Lido_
-- [Programa de MetaMask](https://metamaskgrants.org/): _[MetaMask](https://metamask.io/) subvenciones lideradas por empleados DAO_
-- [Programa de subvenciones mStable](https://docs.mstable.org/advanced/grants-program): _[comunidad](https://mstable.org/) mStable_
+- [Programa de subvenciones Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) Metaverso DAO_
+- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego): _[ecosistema financiero](https://lido.fi/) Lido_
+- [Programa MetaMask](https://metamaskgrants.org/): _[MetaMask](https://metamask.io/) subvenciones lideradas por empleados DAO_
 - [Programa de subvenciones para la red SKALE](https://skale.space/developers#grants): _[ecosistema](https://skale.space/) de la red SKALE_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm): _[ecosistema The Graph](https://thegraph.com/)_
-- [Programa de subvenciones UMA](https://grants.umaproject.org/): _[ayuda para el desarrollador](https://umaproject.org/)UMA_
-- [Programa de subvenciones Uniswap](https://www.unigrants.org/): _[comunidad Uniswap](https://uniswap.org/)_
-- [Subvenciones Web3](https://web3grants.net): _una lista extensa de programas de subvenciones web3/cripto_
+- [Programa de subvenciones Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant): _[Comunidad](https://uniswap.org/)Uniswap_
+- [Subvenciones Web3](https://web3grants.net): _una exhaustiva lista de programas de subvenciones relacionados con la Web3/crypto_
 
 ## Financiamiento cuadrático {#quadratic-funding}
 

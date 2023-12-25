@@ -89,4 +89,4 @@ if (window.ethereum != null) {
 }
 ```
 
-Alternatives to web3.js like [Ethers.js](https://docs.ethers.io/) do exist and are also commonly used. In the next tutorial we’ll see [how to easily listen to new incoming blocks on the blockchain and see what they contains](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).
+Alternatives to web3.js like [Ethers.js](https://docs.ethers.io/) do exist and are also commonly used. In the next tutorial we’ll see [how to easily listen to new incoming blocks on the blockchain and see what they contain](https://ethereumdev.io/listening-to-new-transactions-happening-on-the-blockchain/).

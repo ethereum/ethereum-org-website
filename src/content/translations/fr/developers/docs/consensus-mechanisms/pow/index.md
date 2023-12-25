@@ -68,7 +68,7 @@ Mais pour compliquer davantage les choses, les transactions rejetées sur la fou
 
 ## Consommation d'énergie et preuve de travail {#energy}
 
-Une critique majeure de la preuve de travail est la quantité d'énergie nécessaire pour assurer la sécurité du réseau. Pour maintenir la sécurité et la décentralisation, Ethereum consommait de grandes quantités d'énergie avec la preuve de travail. Peu avant de passer à la preuve d'enjeu, les mineurs d'Ethereum consommaient collectivement environ 70 TWh/an (à peu près autant que la République tchèque - selon le [digiconomist](https://digiconomist.net/) le 18 juillet-2022).
+Une critique majeure de la preuve de travail est la quantité d'énergie nécessaire pour assurer la sécurité du réseau. Pour maintenir la sécurité et la décentralisation, Ethereum consommait de grandes quantités d'énergie avec la preuve de travail. Peu avant de passer à la preuve d'enjeu, les mineurs d'Ethereum consommaient collectivement environ 70 TWh/an (à peu près autant que la République tchèque - selon le [digiconomist](https://digiconomist.net/) le 18 juillet 2022).
 
 ## Avantages et inconvénients {#pros-and-cons}
 

@@ -10,7 +10,7 @@ Ethereum.org çeviri stili rehberi, web sitesini yerelleştirmemize yardımcı o
 
 Bu belge, genel bir rehber görevi görür ve herhangi bir dile özgü değildir.
 
-Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen bize translations@ethereum.org adresinden bize ulaşın, Crowdin'de @ethdotorg'a bir mesaj gönderin veya #translations kanalından bize mesaj gönderebileceğiniz veya ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord](https://discord.gg/XVepFu7sqR)'umuza katılın.
+Herhangi bir sorunuz, öneriniz veya geri bildiriminiz varsa lütfen bize translations@ethereum.org adresinden bize ulaşın, Crowdin'de @ethdotorg'a bir mesaj gönderin veya #translations kanalından bize mesaj gönderebileceğiniz veya ekip üyelerinden herhangi birine ulaşabileceğiniz [Discord](https://discord.gg/ethereum-org)'umuza katılın.
 
 ### Crowdin kullanma {#using-crowdin}
 

@@ -29,7 +29,7 @@ export const StyledButtonDropdown = ({
   </Flex>
 )
 
-interface IProps {
+interface IProps extends FlexProps {
   dropdownLinks?: ButtonDropdownList
   maxDepth?: number
   tocItems: any[]
@@ -39,6 +39,7 @@ const LeftNavBar: React.FC<IProps> = ({
   dropdownLinks,
   maxDepth = 1,
   tocItems,
+  ...props
 }) => {
   return (
     <Flex
@@ -50,6 +51,8 @@ const LeftNavBar: React.FC<IProps> = ({
       position="sticky"
       top="6.25rem"
       height={calc("100vh").subtract("80px").toString()}
+      zIndex={99}
+      {...props}
     >
       {dropdownLinks && <StyledButtonDropdown list={dropdownLinks} />}
       <H2>

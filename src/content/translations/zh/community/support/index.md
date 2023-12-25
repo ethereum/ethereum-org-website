@@ -30,7 +30,7 @@ lang: zh
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加入 [ethereum.org Discord](https://discord.gg/rZz26QWfCg)，我们会尝试帮助您。_
+_这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加入 [ethereum.org Discord](https://discord.gg/ethereum-org)，我们会尝试帮助您。_
 
 正在寻找以太坊钱包？ [深入了解我们完整的以太坊钱包列表](/wallets/find-wallet/)。
 

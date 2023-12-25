@@ -1,38 +1,34 @@
 ---
 title: Ajouter des produits
-description: La politique que nous appliquons pour l'ajout de portefeuilles et de dApps à ethereum.org
+description: La politique que nous appliquons pour ajouter des DApps sur ethereum.org
 lang: fr
 ---
 
-_Remarque sur l'ajout de portefeuilles : dans le cadre de [notre feuille de route sur les produits pour le premier trimestre](https://github.com/ethereum/ethereum-org-website/issues/5105), nous remanions notre page de portefeuilles. Cela comprend la révision des critères de listage sur notre page des portefeuilles. Tant que nous n'aurons pas étudié, défini et publié les nouveaux critères de listage, nous n'ajouterons aucun nouveau portefeuille au site web._
-
 # Ajouter des produits Ethereum {#adding-products}
 
-N'importe qui est libre de suggérer l'ajout de nouveaux portefeuilles et de nouvelles dApps au contenu d'ethereum.org, tant que cela est fait sur la page appropriée. **Non, nous ne listerons pas votre dApp sur notre page d'accueil** 😜
+N'importe qui est libre de suggérer l'ajout de nouvelles DApps au contenu d'ethereum.org, tant que cela est fait sur la page appropriée. **Non, nous ne listerons pas votre DApp sur notre page d’accueil** 😜
 
-Les portefeuilles et les dApps sont actuellement répertoriés sur :
+Les Dapps sont actuellement listés sur:
 
-- ethereum.org/wallets
-- ethereum.org/wallets/find-wallet
-- ethereum.org/dapps
+- ethereum.org/DApps
 - ethereum.org/get-eth
 
 **Veuillez ne suggérer que de nouveaux ajouts sur ces pages.**
 
-Bien que nous apprécions les nouveaux ajouts, nous avons choisi les portefeuilles et dApps actuels en fonction d'une expérience que nous essayons de créer pour nos utilisateurs. Ils sont basés sur certains de nos principes de conception:
+Bien que nous appréciions les nouveaux ajouts, nous avons choisi les DApps actuelles en fonction d'une expérience que nous essayons de créer pour nos utilisateurs. Ceux-ci sont basés sur certains de nos principes de conception :
 
 - *Inspirant* : tout ce qui est sur ethereum.org devrait offrir quelque chose de nouveau aux utilisateurs
 - *Une bonne histoire* : ce qui est répertorié devrait entraîner un moment de révélation (ah, ah !)
 - _Crédible_ : toutes les entreprises/projets doivent être légitimes pour minimiser les risques pour les utilisateurs
 
-Dans l'ensemble, **ethereum.org souhaite offrir une « expérience d'intégration transparente » aux nouveaux utilisateurs**. C'est pourquoi nous ajoutons des portefeuilles/dApps en fonction de leur :
+Dans l’ensemble, **ethereum.org souhaite offrir une « expérience d’intégration transparente » aux nouveaux utilisateurs**. C'est pourquoi nous ajoutons des DApps en fonction de leur :
 
 - facilité d'utilisation
 - interopérabilité avec d'autres produits
 - sécurité
 - longévité
 
-Vous trouverez ci-dessous notre cadre décisionnel plus en détail. N'hésitez pas à nous faire part de vos commentaires ou à suggérer des changements.
+Voici notre cadre de décision plus en détail. N’hésitez pas à nous faire part de vos commentaires ou à suggérer des changements.
 
 ## Le cadre décisionnel {#decision-framework}
 
@@ -45,21 +41,13 @@ Vous trouverez ci-dessous notre cadre décisionnel plus en détail. N'hésitez p
 
 ### Critères de classement : les souhaitables {#criteria-for-ranking-the-nice-to-haves}
 
-Votre dApp ou votre portefeuille peut ne pas mis(e) en évidence autant que d'autres sur ethereum.org en raison des critères suivants.
+Votre DApp peut ne pas mise en évidence autant que d'autres sur ethereum.org en raison des critères suivants.
 
-**Portefeuilles**
+**DApps**
 
-- **Rampes d'accès fiduciaires** : cela évite beaucoup de frictions potentielles dans l'expérience d'un nouvel utilisateur avec un portefeuille. Si un utilisateur doit approvisionner un portefeuille par le biais d'un échange, il peut s'écouler des jours avant qu'il puisse essayer le portefeuille en raison de vérifications de connaissance du client (KYC).
-- **Compatible avec la majorité des applications DApps** : le contenu d'ethereum.org vise à rendre les utilisateurs opérationnels avec un portefeuille et des ETH avant de leur montrer des DApps. Si les DApps ne prennent pas en charge la connexion avec votre portefeuille, cela peut nuire à l'expérience des utilisateurs.
-
-**dApps**
-
-- **Possibilité d'y accéder via la majorité des portefeuilles répertoriés** : les dApps devraient fonctionner avec la majorité des portefeuilles répertoriés sur ethereum.org.
-- **Possibilité pour les utilisateurs de les essayer eux-mêmes** : un utilisateur individuel devrait pouvoir utiliser votre dApp et réaliser quelque chose de concret.
-
-**Les deux**
-
-- **Intégration** : votre produit doit inclure une expérience d'intégration bien conçue pour aider et former les utilisateurs. Autrement, il doit justifier de contenu pratique comme des articles ou des vidéos d'aide.
+- **Possibilité d'y accéder via la majorité des portefeuilles répertoriés** : les DApps devraient fonctionner avec la majorité des portefeuilles répertoriés sur ethereum.org.
+- **Possibilité pour les utilisateurs de les essayer eux-mêmes** : un utilisateur individuel devrait pouvoir utiliser votre DApp et réaliser quelque chose de concret.
+- **Intégration** : votre produit doit inclure une expérience d'intégration bien conçue pour aider et former les utilisateurs. Autrement, il doit justifier de son contenu pratique comme des articles ou des vidéos d'aide.
 - **Non-dépositaire** : les utilisateurs contrôlent leurs fonds. Si votre produit disparaît, les utilisateurs peuvent toujours accéder à leurs fonds et les déplacer.
 - ** Accessible dans le monde entier** : votre produit n'a pas de restrictions géographiques ou d'exigences de connaissance du client (KYC) qui empêchent certaines personnes d'accéder à votre service.
 - **Open source** : votre code doit être accessible et vous devez accepter les demandes PR de la communauté au sens large.
@@ -76,15 +64,15 @@ Autres éléments qui entreront en ligne de compte dans cette décision :
 - L'ajout plutôt que le remplacement interférera-t-il avec l'expérience utilisateur sur la page ?
   - Notre site est principalement éducatif et le but principal est d'expliquer Ethereum et ses concepts pertinents. Ajouter trop d'options pour les utilisateurs peut rendre les pages moins lisibles et donc moins utiles.
 - Cette page paralyse-t-elle maintenant l'utilisateur en raison d'un trop grand nombre de choix ?
-  - Comme lorsque vous naviguez sur Netflix pendant des heures parce que vous n'arrivez pas à vous décider sur ce que vous souhaitez regarder, offrir trop de choix aux nouveaux utilisateurs risque de susciter de la confusion.
+  - Comme lorsque vous naviguez sur Netflix pendant des heures parce que vous n'arrivez pas à vous décider sur ce que vous souhaitez regarder, Offrir trop de choix aux nouveaux utilisateurs risque de susciter de la confusion.
 
 L'ajout de produits est une décision de conception dont ethereum.org est responsable.
 
-Mais rassurez-vous, **il y aura des liens vers d'autres sites web qui classent plus de dApps et de portefeuilles**
+Mais rassurez-vous, **il y aura des liens vers d'autres sites web qui classent plus de DApps **
 
 ### Ordre des produits {#product-ordering}
 
-À moins que les produits ne soient délibérément classés autrement, par exemple par ordre alphabétique, ils seront affichés par ordre d'ajout sur la page : du plus récent au moins récent. En d'autres termes, les produits les plus récents sont ajoutés au bas de la liste.
+À moins que les produits ne soient délibérément classés autrement, par exemple par ordre alphabétique, ils seront affichés par ordre d'ajout sur la page : du plus récent au moins récent. En d'autres termes, les derniers produits ajoutés figureront en bas de liste.
 
 ### Conditions d'utilisation {#terms-of-use}
 
@@ -94,10 +82,10 @@ Veuillez également vous reporter à nos [conditions d'utilisation](/terms-of-us
 
 Ethereum étant flexible par nature, les équipes et les produits vont et viennent et l'innovation est quotidienne. Nous procéderons donc à des vérifications de routine de notre contenu pour :
 
-- nous assurer que tous les portefeuilles et dApps répertoriés répondent toujours à nos critères ;
-- vérifier si de nouveaux produits suggérés répondent à plus de nos critères que ceux actuellement répertoriés.
+- nous assurer que toutes les DApps répertoriées répondent toujours à nos critères
+- vérifier qu'aucun produit suggéré ne répond à plus de nos critères que ceux actuellement répertoriés
 
-Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
+Vous pouvez nous aider en vérifiant par vous-même et en nous le faisant savoir. [Créez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.md&title=) ou envoyez un email à l'adresse [website@ethereum.org](mailto:website@ethereum.org)
 
 _Nous étudions également des options de vote afin que la communauté puisse indiquer ses préférences et mettre en évidence les meilleurs produits pour que nous puissions les recommander._
 
@@ -105,8 +93,8 @@ _Nous étudions également des options de vote afin que la communauté puisse in
 
 ## Ajout de votre produit {#add-your-product}
 
-Si vous souhaitez ajouter un portefeuille ou une dApp à ethereum.org et qu'il/elle répond aux critères, créez un ticket sur GitHub.
+Si vous souhaitez ajouter une DApp à ethereum.org et qu’elle répond aux critères, créez un ticket sur GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Créez un ticket
 </ButtonLink>

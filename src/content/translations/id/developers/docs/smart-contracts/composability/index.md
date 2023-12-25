@@ -12,7 +12,7 @@ Kontrak pintar bersifat publik di Ethereum dan bisa dianggap sebagai API terbuka
 ## Tutorial terkait {#related-tutorials}
 
 - [Komposabilitas Kontrak: Blok Pembangun dari Pengembangan Kontrak Pintar Ethereum](https://blog.decentlabs.io/contract-composability-the-building-blocks-of-ethereum-smart-contract-development/)
-- [Mulai pengembangan frontend Dapp Anda dengan create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/) _– Gambaran umum tentang cara menggunakan create-eth-app untuk membuat aplikasi dengan kontrak pintar non-konvensional yang populer._
+- [Mulai pengembangan frontend Dapp Anda dengan create-eth-app](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– Gambaran umum tentang cara menggunakan create-eth-app untuk membuat aplikasi dengan kontrak pintar non-konvensional yang populer._
 
 ## Bacaan lebih lanjut {#further-reading}
 

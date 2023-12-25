@@ -90,4 +90,4 @@ Tasarım ilkelerimizi [sitemizde](/) faaliyet hâlinde görebilirsiniz.
 
 Bu ilkeler ethereum.org web sitesine odaklanmış olsa da, birçoğunun genel olarak Ethereum ekosisteminin değerlerini temsil ettiğini umuyoruz (örn. [Ethereum Teknik Raporunun ilkelerinin](https://github.com/ethereum/wiki/wiki/White-Paper#philosophy) etkilerini görebilmeniz). Bazılarını kendi projenize dahil etmek bile isteyebilirsiniz!
 
-Düşüncelerinizi, [Discord sunucusunda](https://discord.gg/CetY6Y4) ya da [bir konu yaratarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) bize aktarın.
+Düşüncelerinizi, [Discord sunucusunda](https://discord.gg/ethereum-org) ya da [bir konu yaratarak](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) bize aktarın.

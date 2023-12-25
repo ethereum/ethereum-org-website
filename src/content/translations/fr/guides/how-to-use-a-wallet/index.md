@@ -6,7 +6,7 @@ lang: fr
 
 # Comment utiliser un portefeuille
 
-Apprenez à utiliser toutes les fonctions de base d'un portefeuille. Si vous n'en possédez pas encore, consultez notre[Comment : créer un compte Ethereum](/guides/how-to-create-an-ethereum-account/).
+Apprenez à utiliser toutes les fonctions de base d'un portefeuille. Si vous n'en possédez pas encore, consultez notre[Comment créer un compte Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Ouvrir votre portefeuille
 
