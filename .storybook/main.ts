@@ -15,13 +15,8 @@ import { propNames } from "@chakra-ui/react"
  * The primary recommendation is to upgrade to Yarn 3 if possible
  */
 
-/**
- * Temporary list of allowed stories during migration to NextJS
- */
-const tempStoryList = ["../src/components/Buttons/**/*.stories.@(ts|tsx)"]
-
 const config: StorybookConfig = {
-  stories: tempStoryList,
+  stories: ["../src/components/**/*.stories.{ts,tsx}"],
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",

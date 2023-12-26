@@ -18,7 +18,7 @@ export default {
  * and content from `../../content/developers/tutorials/hello-world-smart-contract-fullstack/index.md`
  */
 export const PostMergeBanner: StoryFn<typeof BannerNotification> = (args) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-upgrades")
 
   return (
     <BannerNotification {...args}>
