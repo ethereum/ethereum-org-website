@@ -210,9 +210,6 @@ const TutorialPage = ({
           "page-developers-tutorials:page-tutorials-meta-description"
         )}
       />
-      <MainArticle>
-        
-      </MainArticle>
       <Heading
         fontStyle="normal"
         fontWeight="semibold"
