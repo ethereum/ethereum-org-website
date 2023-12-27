@@ -30,18 +30,20 @@ A pesar de la falta de apoyo oficial, muchos grupos, comunidades y proyectos en 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Esta lista no es exhaustiva. ¿Necesita ayuda para encontrar soporte sobre una cartera específica? Únase al Discord de [ethereum.org](https://discord.gg/rZz26QWfCg) e intentaremos ayudarle._
+_Esta lista no es exhaustiva. ¿Necesita ayuda para encontrar soporte sobre una cartera específica? Únase al Discord de [ethereum.org](https://discord.gg/ethereum-org) e intentaremos ayudarle._
 
 ¿Busca una cartera de Ethereum? [Explore nuestra lista completa de carteras Ethereum](/wallets/find-wallet/).
 
-## Creación de dapps {#building-support}
+## Creación de DApps {#building-support}
 
 Crear puede ser difícil. A continuación, le indicamos algunos espacios centrados en el desarrollo con experimentados desarrolladores de Ethereum que estarán dispuestos a ayudarle.
 
+- [Alchemy University](https://university.alchemy.com/#starter_code)
 - [Discord de CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [Ethereum Stackexchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 También puede encontrar documentación y guías de desarrollo en nuestra sección de recursos para desarrolladores de [Ethereum](/developers/).
 
@@ -63,7 +65,7 @@ He aquí algunos ejemplos:
 
 Si está ejecutando un nodo o validador, estas son algunas comunidades dedicadas a ayudar a los usuarios en sus comienzos.
 
-- [Discord de EthStaker](https://discord.io/ethstaker)
+- [Discord de EthStaker](https://discord.gg/ethstaker)
 - [Reddit de EthStaker](https://www.reddit.com/r/ethstaker)
 
 La mayoría de los equipos que se encargan de la creación de clientes de Ethereum también cuentan con espacios especializados, orientados al público, en los que se puede obtener ayuda y hacer preguntas.

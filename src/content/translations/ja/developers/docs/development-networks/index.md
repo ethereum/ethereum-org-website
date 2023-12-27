@@ -32,7 +32,7 @@ lang: ja
 
 テストの実行、コマンドの実行、状態の調査に使用できる専用のイーサリアムブロックチェーンを迅速に起動し、チェーンの動作を制御します。
 
-Ganache は、デスクトップアプリケーション (Ganache UI) とコマンドラインツール (`ganache-cli`) の両方を提供しています。 Truffle Suite というツールスイートに組み込まれています。
+Ganache は、デスクトップアプリケーション(Ganache UI)とコマンドラインツール(`ganache-cli`)の両方を提供しています。 Truffle Suite というツールスイートに組み込まれています。
 
 - [ウェブサイト](https://www.trufflesuite.com/ganache)
 - [GitHub](https://github.com/trufflesuite/ganache)
@@ -57,16 +57,27 @@ Hardhat Network には、プロフェッショナルのためのイーサリア�
 
 ### 公開イーサリアムテストチェーン {#public-beacon-testchains}
 
-また、イーサリアムには Goerli と Sepolia という、2 つの維持されている公開テスト環境の実装もあります。 長期的なサポートが受けられる推奨テストネットは Goerli です。Goerli は、誰でも自由に検証できます。 Sepolia は、より新しい小規模なチェーンであり、当面は維持されると予測されています。許可されたバリデータのみがアクセスできます (つまり、このテストネットには、新規のバリデータは通常アクセスできません)。 Ropsten チェーンは、2022 年の第 4 期に廃止される予定です。Rinkeby チェーンは、2023 年の第 2 期または第 3 期に廃止される予定です。
+また、イーサリアムには Goerli と Sepolia という、2 つの維持されている公開テスト環境の実装もあります。 長期的なサポートが受けられる推奨テストネットは Goerli です。Goerli は、誰でも自由に検証できます。 Sepolia は、より新しい小規模なチェーンであり、当面は維持されると予測されています。許可されたバリデータのみがアクセスできます(つまり、このテストネットには、新規のバリデータは通常アクセスできません)。 Ropsten チェーンは、2022 年の第 4 期に廃止される予定です。Rinkeby チェーンは、2023 年の第 2 期または第 3 期に廃止される予定です。
 
 - [Goerli ステーキングランチパッド](https://goerli.launchpad.ethereum.org/)
 - [Ropsten、Rinkeby、Kiln の廃止のお知らせ](https://blog.ethereum.org/2022/06/21/testnet-deprecation)
 
+### Kurtosis イーサリアムパッケージ {#kurtosis}
+
+Kurtosis は、マルチコンテナテスト環境のビルドシステムで、デベロッパーがブロックチェーンネットワークの再現可能なインスタンスをローカルで起動できるようにします。
+
+イーサリアム Kurtosis パッケージでは、複数の異なる実行レイヤー(EL)およびコンセンサスレイヤー(CL)クライアントと n 個のノードをサポートし、コンテナ化されたパラメータ化可能なイーサリアムテストネットをローカルでインスタンス化します。 Kurtosis によって、すべてのローカルポートマッピングとサービス接続を適切に処理することで、dApp やスマートコントラクトのプロトタイピングとテストを容易にします。
+
+- [イーサリアムネットワークパッケージ](https://github.com/kurtosis-tech/eth-network-package)
+- [ウェブサイト](https://www.kurtosis.com/)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
+- [ドキュメント](https://docs.kurtosis.com/)
+
 ## 参考文献 {#further-reading}
 
-_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ もしあればページを編集して追加してください！_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
 ## 関連トピック {#related-topics}
 
 - [開発フレームワーク](/developers/docs/frameworks/)
-- [ローカル開発環境の構築](/developers/local-environment/)
+- [ローカル開発環境のセットアップ](/developers/local-environment/)

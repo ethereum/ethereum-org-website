@@ -59,7 +59,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 **Para desarrolladores**
 
-- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning): un grupo de aprendizaje que estudia los proyectos dapp más populares y comparte sus visiones y opiniones todas las semanas.
+- [DappLearning](https://github.com/Dapp-Learning-DAO/Dapp-Learning): un grupo de aprendizaje que estudia los proyectos DApp más populares y comparte sus visiones y opiniones todas las semanas.
 - [LearnBlockchain](https://learnblockchain.cn/): una comunidad de desarrolladores, que comparte información acerca de la tecnología de cadena de bloques.
 
 **Para investigadores en criptografía**
@@ -72,7 +72,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [Gwei.cz](https://gwei.cz): comunidad local con enfoque en Web3 que crea contenido educativo y organiza eventos tanto en línea como presenciales.
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/): guía de Ethereum para principiantes.
 - [DAO Příručka](https://dao.gwei.cz/): guía sobre las DAO para principiantes.
-- [Dominar Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m): dominar Ethereum en checo.
+- [Dominar Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m): dominar Ethereum en checo.
 
 ### Francés {#fr}
 
@@ -94,7 +94,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 - [Pódcast Ethereum Italia](https://www.ethereum-italia.it/podcast/): pódcast en italiano sobre Ethereum.
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/it-it/learn/modules/blockchain-learning-solidity/): aprenda a usar Solidity.
 - [Microsoft Learn (contratos inteligentes)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/): aprenda acerca de cómo escribir contratos inteligentes usando Solidity.
-- [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/): cree una interfaz de usuario con aplicaciones descentralizadas.
+- [Microsoft Learn (DApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/): cree una interfaz de usuario con aplicaciones descentralizadas.
 
 ### Ruso {#ru}
 
@@ -117,7 +117,7 @@ Si es bilingüe y quiere ayudarnos a llegar a más personas, también puede invo
 
 ### Vietnamita {#vi}
 
-- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): visión general sobre Ethereum, dapps, carteras, preguntas y respuestas.
+- [Tino Group](https://wiki.tino.org/ethereum-la-gi/): visión general sobre Ethereum, DApps, carteras, preguntas y respuestas.
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth): plataforma web con subpáginas de noticias y educación de Ethereum.
 - [Coin68](https://coin68.com/ethereum-tieu-diem/): portal de criptomonedas con contenido educativo y noticias de Ethereum
 

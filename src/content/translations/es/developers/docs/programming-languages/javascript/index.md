@@ -12,7 +12,7 @@ Hay posibilidad de programar en JavaScript (o algo similar) en [todos los nivele
 
 ### Bibliotecas API JavaScript {#javascript-api-libraries}
 
-Si quieres escribir JavaScript para consultas del blockchain, enviar transacciones y demás, la forma más conveniente es utilizando la [biblioteca de API de JavaScript](/developers/docs/apis/javascript/). Estas API permiten a los desarrolladores interactuar fácilmente con los nodos [de la red Ethereum](/developers/docs/nodes-and-clients/).
+Si quiere escribir JavaScript para consultar la cadena de bloques, enviar transacciones y demás, la forma más conveniente es utilizando la [biblioteca de API de JavaScript](/developers/docs/apis/javascript/). Estas API permiten a los desarrolladores interactuar fácilmente con los [nodos de la red Ethereum](/developers/docs/nodes-and-clients/).
 
 Puedes utilizar estas bibliotecas para interactuar con contratos inteligentes en Ethereum de modo que es posible construir una dapp que solo utilice JavaScript para interactuar con contratos preexistentes.
 
@@ -20,10 +20,11 @@ Puedes utilizar estas bibliotecas para interactuar con contratos inteligentes en
 
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js](https://docs.ethers.io/) _: Incluye la implementación de una cartera de Ethereum y utilidades en JavaScript y TypeScript._
+- [viem:](https://viem.sh) interfaz de TypeScript para Ethereum que proporciona primitives de bajo nivel sin estado para interactuar con Ethereum.
 
 ### Contratos inteligentes {#smart-contracts}
 
-Si eres un programador de JavaScript y deseas escribir un contrato inteligente propio, te interesa familiarizarte con [Solidity](https://solidity.readthedocs.io). Es el lenguaje más popular para contratos y está muy inspirado en JavaScript.
+Si es desarrollador de JavaScript y quiere escribir su propio contrato inteligente, tal vez quiera familiarizarse con [Solidity](https://solidity.readthedocs.io). Este es el contrato de lenguaje inteligente más popular y es sintácticamente similar a JavaScript, lo que hace que sea más fácil de aprender.
 
 Más información sobre [contratos inteligentes](/developers/docs/smart-contracts/).
 
@@ -31,7 +32,7 @@ Más información sobre [contratos inteligentes](/developers/docs/smart-contract
 
 ### La máquina virtual de Ethereum {#the-ethereum-virtual-machine}
 
-Hay una implementación de la máquina virtual de [Ethereum](/developers/docs/evm/) en JavaScript. Soporta las últimas reglas de bifurcación. Las reglas de bifurcación se refieren a los cambios realizados a la EVM como resultado de las actualizaciones previstas.
+Hay una implementación JavaScript de la [máquina virtual de Ethereum](/developers/docs/evm/). Soporta las últimas reglas de bifurcación. Las reglas de bifurcación se refieren a los cambios realizados a la EVM como resultado de las actualizaciones previstas.
 
 Esto está dividido en varios paquetes de JavaScript, los cuales pueden ser revisados para un mayor entendimiento:
 
@@ -50,10 +51,12 @@ Si prefieres leer el código, JavaScript podría ser una buena alternativa para 
 
 ### Nodos y clientes {#nodes-and-clients}
 
-Hay un cliente Ethereumjs en desarrollo. Esto te permitirá profundizar en cómo trabajan los clientes de Ethereum en un idioma que puedas comprender.
+Un cliente de Ethereumjs es un desarrollo activo que le permite profundizar en cómo funcionan los clientes Ethereum en un idioma que comprenda; JavaScript.
 
-**Revisa el cliente**  
-[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-client)
+Solía ​​estar alojado en un [`repositorio`](https://github.com/ethereumjs/ethereumjs-client) independiente; sin embargo, luego se fusionó con el monorepo EthereumVM como un paquete.
+
+**Revise el cliente**  
+[`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
 ## Otros proyectos {#other-projects}
 
@@ -63,8 +66,8 @@ También están ocurriendo muchas otras cosas en la tierra de Ethereum JavaScrip
 - herramientas para generar, importar y exportar claves de Ethereum.
 - una implementación del `merkle-patricia-tree`: Una estructura de datos descrita en el papel amarillo de Ethereum.
 
-Accede a aquello que más te interesa en el repositorio [EthereumJS repo](https://github.com/ethereumjs)
+Profundice en cualquier tema que le interese en el [repositorio EthereumJS](https://github.com/ethereumjs).
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

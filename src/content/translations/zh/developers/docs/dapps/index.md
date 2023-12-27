@@ -4,11 +4,11 @@ description:
 lang: zh
 ---
 
-去中心化应用 (dapp) 是在去中心化网络上构建的应用程序，结合了[智能合约](/developers/docs/smart-contracts/)和前端用户界面。 请注意，以太坊智能合约具有可访问性和透明性——就像开放 API 一样 ——所以你的 dapp 里甚至可以包含其他人写过的智能合约。
+去中心化应用程序 (dapp) 是在去中心化网络上构建的应用程序，结合了[智能合约](/developers/docs/smart-contracts/)和前端用户界面。 请注意，就像开放 API 一样，以太坊智能合约具有可访问性和透明性，所以你的 dapp 里甚至可以包含其他人写过的智能合约。
 
 ## 前提条件 {#prerequisites}
 
-在学习 dapp 之前，您应该了解[区块链基础知识](/developers/docs/intro-to-ethereum/)，并了解以太坊网络及其去中心化方式。
+在学习 dapp 之前，你应该了解[区块链基础知识](/developers/docs/intro-to-ethereum/)，并了解以太坊网络及其去中心化方式。
 
 ## dapp 的定义 {#definition-of-a-dapp}
 
@@ -17,7 +17,7 @@ lang: zh
 dapp 可以用任何语言编写（就像是一个 app）。它有前端代码和用户界面，能调用其后端。 此外，它的前端可以托管在去中心化存储上，例如 [IPFS](https://ipfs.io/)。
 
 - **去中心化** - dapp 在以太坊上运行，这是一个开放的公共去中心化平台，没有任何一个人或团体可以控制
-- **确定性** ，无论执行的环境如何，都执行相同的功能。
+- **确定性** ，无论执行的环境如何，都执行相同的功能
 - **图灵完备** - dapp 可以根据所需资源执行任何操作
 - **隔离性** - 它们在称为 EVM 的虚拟环境中执行。即使智能合约出现问题，也不会妨碍区块链网络的正常运行
 
@@ -30,10 +30,10 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 ## Dapp 开发的好处 {#benefits-of-dapp-development}
 
 - **零停机时间** – 一旦将某 dapp 的智能合约部署到区块链上，整个网络都能为那些希望与合约互动的客户提供服务。 因此，恶意参与者无法针对单个 dapp 发起 DoS 攻击。
-- **隐私** – 您不需要提供真实世界的身份来部署或与 dapp 进行交互。
+- **隐私** – 你不需要提供真实世界的身份来部署或与 dapp 进行交互。
 - **抵制审查** – 网络上没有任何一个实体可以阻止用户提交交易、部署 dapp 或读取区块链上的数据。
 - **数据完整性** – 由于采用了加密基元，存储在区块链上的数据是不可更改和无可争议的。 恶意行为者无法伪造已经公开的交易或其他数据。
-- **无需信任的计算/可验证的行为** – 智能合约可以分析并保证以可预测的方式执行，而无需信任中心化组织。 这在传统模式下是不存在的，比如我们使用网上银行系统时，我们要相信金融机构不会滥用我们的金融数据，不会篡改记录，也不会被黑客攻击。
+- **去信任的计算/可验证的行为** – 智能合约可以分析并保证以可预测的方式执行，而去信任中心化组织。 这在传统模式下是不存在的，比如我们使用网上银行系统时，我们要相信金融机构不会滥用我们的金融数据，不会篡改记录，也不会被黑客攻击。
 
 ## Dapp 开发的缺陷 {#drawbacks-of-dapp-development}
 
@@ -54,7 +54,7 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [示例 dapp](https://punkwallet.io/)
 
-**创建 Eth App _- 使用一个命令创建支持以太坊的应用程序。_**
+**创建以太坊应用程序 _- 使用一个命令创建以太坊驱动的应用程序。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
@@ -67,6 +67,12 @@ dapp 可以用任何语言编写（就像是一个 app）。它有前端代码�
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
+
+**thirdweb _- 为 Web3 开发提供各种语言的软件开发工具包、智能合约、工具和基础设施。_**
+
+- [主页](https://thirdweb.com/)
+- [相关文档](https://portal.thirdweb.com/)
+- [GitHub](https://github.com/thirdweb-dev/)
 
 ## 延伸阅读 {#further-reading}
 

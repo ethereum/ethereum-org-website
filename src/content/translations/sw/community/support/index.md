@@ -30,7 +30,7 @@ Je unapata shida na pochi yako? Pochi nyingi zina timu inayojiyuma inayoweza kuk
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Hii sio orodha kamili. Unahitaji msaada kupata huduma juu ya pochi maalum? Jiunge na [ discord ya etehreum.org](https://discord.gg/rZz26QWfCg) na tutajaribu kusaidia._
+_Hii sio orodha kamili. Unahitaji msaada kupata huduma juu ya pochi maalum? Jiunge na [ discord ya etehreum.org](https://discord.gg/ethereum-org) na tutajaribu kusaidia._
 
 Unatafuta pochi ya Ethereum? [Chunguza orodha yetu yote ya Ethereum](/wallets/find-wallet/).
 
@@ -62,7 +62,7 @@ Hii ni baadhi ya mifano maalum:
 
 Kama unaendesha nodi am mthibitishaji, hizi ni baadhi ya jamii zinazotoa msaada ili upate kuanza katika Ethereum.
 
-- [Discord ya EthStaker](https://discord.io/ethstaker)
+- [Discord ya EthStaker](https://discord.gg/ethstaker)
 - [Reddit ya EthStaker](https://www.reddit.com/r/ethstaker)
 
 Timu zilizo nyingi za usanidi programu za Ethereum zinajitolea kusaidia mikutano ya hadhara amabayo unaweza kupata waunga mkono na kuuliza maswaloi muhimu.

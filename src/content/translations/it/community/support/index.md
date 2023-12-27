@@ -30,7 +30,7 @@ Hai problemi con il tuo portafoglio? La maggior parte dei portafogli dispone di 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Questo non è un elenco esaustivo. Hai bisogno di aiuto nel trovare il supporto per un portafoglio specifico? Unisciti a [server Discord di ethereum.org](https://discord.gg/rZz26QWfCg) e proveremo ad aiutarti._
+_Questo non è un elenco esaustivo. Hai bisogno di aiuto nel trovare il supporto per un portafoglio specifico? Unisciti a [server Discord di ethereum.org](https://discord.gg/ethereum-org) e proveremo ad aiutarti._
 
 Cerchi un portafoglio Ethereum? [Esplora il nostro elenco completo di portafogli Ethereum](/wallets/find-wallet/).
 
@@ -43,6 +43,7 @@ La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo svilup
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 Puoi anche trovare la documentazione e le guide di sviluppo nella nostra sezione [risorse per sviluppatore Ethereum](/developers/).
 

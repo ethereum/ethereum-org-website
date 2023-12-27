@@ -3,7 +3,7 @@ title: Ethereum roadmap
 description: The path to more scalability, security and sustainability for Ethereum.
 lang: en
 template: roadmap
-image: ../../assets/roadmap/roadmap-main.png
+image: ../../assets/heroes/roadmap-hub-hero.jpg
 alt: "Ethereum roadmap"
 summaryPoints:
 buttons:
@@ -59,14 +59,14 @@ Ethereum gets regular upgrades that enhance its scalability, security, or sustai
 
 <RoadmapImageContent title="How the roadmap is defined">
 
-The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds). When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). This is all done in public so that anyone from the community can weigh in at any time.
+The roadmap is mostly the result of years of work by researchers and developers - because the protocol is very technical - but any motivated person can participate. Ideas usually start off as discussions on a forum such as [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) or the Eth R&D discord server. They may be responses to new vulnerabilities that are discovered, suggestions from organizations working in the application layer (such as dapps and exchanges) or from known frictions for end users (such as costs or transaction speeds). When these ideas mature, they can be proposed as [Ethereum Improvement Proposals](https://eips.ethereum.org/). This is all done in public so that anyone from the community can weigh in at any time.
 
 [More on Ethereum governance](/governance/)
 
 </RoadmapImageContent>
 
 <InfoBanner mb={8}>
-  <h4 style="margin-top: 0">What was ETH2?</h4>
+  <h4 style={{ marginTop: 0 }}>What was ETH2?</h4>
 
   <p>The term 'Eth2' was commonly used to describe the future of Ethereum before the switch to proof-of-stake but it was <strong>phased out in favor of more precise terminology.</strong> It was originally used to differentiate the Ethereum network before the switch to proof-of-stake and the network after, or sometimes to refer to the different Ethereum clients (execution clients were sometimes referred to as ETH1 clients and consensus clients were sometimes referred to as ETH2 clients).</p>
 
@@ -114,4 +114,4 @@ Sharding is splitting up the Ethereum blockchain so that subsets of validators a
 - [Secret leader election](/roadmap/secret-leader-election) - Clever cryptography can be used to ensure that the identity of the current block proposer is not made public, protecting them from certain types of attack.
 - [Account abstraction](/roadmap/account-abstraction) - Account abstraction is a class of upgrades that support smart contract wallets natively on Ethereum, rather than having to use complex middleware.
 - [Verkle trees](/roadmap/verkle-trees) - Verkle trees are a data structure that can be used to enable stateless clients on Ethereum. These “stateless” clients will require a tiny amount of storage space but will still be able to verify new blocks.
-- [Statelessness](/roadmap/statelessness) - stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.
+- [Statelessness](/roadmap/statelessness) - Stateless clients will be able to verify new blocks without having to store large amounts of data. This will provide all the benefits of running a node with only a tiny fraction of today’s costs.

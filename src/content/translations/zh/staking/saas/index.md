@@ -23,15 +23,15 @@ summaryPoints:
 
 <CardGrid>
   <Card title="你自己的验证者" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
-  <Card title="简单起步" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you to outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
-  <Card title="限制你的风险" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different than the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
+  <Card title="简单起步" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
+  <Card title="限制你的风险" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
 <StakingComparison page="saas" />
 
 ## 需考虑事项 {#what-to-consider}
 
-为了满足人们质押以太币的需求，质押即服务提供商的数量不断增长，但每位提供商的优势与风险不尽相同。 你应该考虑到，相比于自行质押，所有质押即服务方案都需要进一步的信任假设。 质押即服务方案可能使用更多代码包装以太坊客户端，而且这些代码未公开且不可审计。 质押即服务还会对网络去中心化造成有害影响。 取决于设置情况，你可能无法控制自己的验证者 - 运营者在使用你的以太币时可能会缺失诚信。
+为了满足人们质押以太币的需求，质押即服务提供商的数量不断增长，但每位提供商的优势与风险不尽相同。 相比于自行质押，所有质押即服务方案都需要进一步的信任假设。 质押即服务方案可能使用更多代码包装以太坊客户端，而且这些代码未公开且不可审计。 质押即服务还会对网络去中心化造成有害影响。 取决于设置情况，你可能无法控制自己的验证者 - 运营者在使用你的以太币时可能会缺失诚信。
 
 下列属性指标可以用来衡量市场上质押即服务供应商的优势或劣势。 在选择帮你度过质押之旅的服务时，请使用本节作为参考，了解我们如何定义这些属性。
 
@@ -41,19 +41,19 @@ summaryPoints:
 
 以下是一些可用的质押即服务提供商。 你可以利用上述指标来辅助你选择。
 
-<InfoBanner emoji="⚠️" isWarning>
-请注意支持<a href="/developers/docs/nodes-and-clients/client-diversity/">客户端多样性</a>的重要性，因为它可以提高网络安全性，并限制你的风险。 如果有证据表明服务限制了主流客户端的使用，则这些服务会被标记为<em style="text-transform: uppercase;">“多样性客户端”</em>。
-</InfoBanner>
+<ProductDisclaimer />
 
 #### 质押即服务提供商
 
 <StakingProductsCardGrid category="saas" />
 
+请注意支持[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)的重要性，因为它可以提高网络安全性，并限制你的风险。 <em style={{ textTransform: "uppercase" }}>“执行客户端多样性”</em>和<em style={{ textTransform: "uppercase" }}>“共识客户端多样性”</em>表明服务可证明其在限制使用主流客户端。
+
 #### 密钥生成器
 
 <StakingProductsCardGrid category="keyGen" />
 
-想要推荐其他未提到的质押即服务提供商吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的内容是否合适，合适的话，请提交以供审核。
+想要推荐其他未提到的质押即服务提供商吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 
 ## 常见问题 {#faq}
 
@@ -91,4 +91,5 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 ## 延伸阅读 {#further-reading}
 
+- [以太坊质押目录](https://www.staking.directory/) - _Eridian 和 Spacesider_
 - [评估质押服务](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

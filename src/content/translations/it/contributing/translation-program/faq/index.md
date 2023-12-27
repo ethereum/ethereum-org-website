@@ -83,7 +83,7 @@ Il glossario Crowdin è la risorsa più adatta per chiarire termini e definizion
 
 ### Politica sulla traduzione della terminologia {#terminology}
 
-_Per i nomi (marchi, aziende, persone) e i nuovi termini tecnologici (Beacon Chain, catene di frammenti, etc.)_
+_Per i nomi (marchi, aziende, persone) e i nuovi termini tecnologici (Beacon Chain, catene di frammenti, ecc.)_
 
 Ethereum presenta molti termini nuovi, che sono stati coniati di recente. Può succedere che alcuni termini varino da un traduttore all'altro, in ragione dell'assenza di una traduzione ufficiale nella rispettiva lingua. Tali incongruenze possono causare malintesi e ridurre la leggibilità.
 
@@ -116,4 +116,4 @@ A breve prevediamo di aggiungere il supporto per l'inserimento di contenuti non 
 
 ## Contattaci {#contact}
 
-Grazie per aver letto tutte queste informazioni. Speriamo che ti aiutino a muovere i primi passi nel nostro programma. Sentiti libero/a di unirti al nostro [canale di traduzione Discord](https://discord.gg/XVepFu7sqR) per fare domande e collaborare con altri traduttori, o contattarci a translations@ethereum.org!
+Grazie per aver letto tutte queste informazioni. Speriamo che ti aiutino a muovere i primi passi nel nostro programma. Sentiti libero/a di unirti al nostro [canale di traduzione Discord](https://discord.gg/ethereum-org) per fare domande e collaborare con altri traduttori, o contattarci a translations@ethereum.org!

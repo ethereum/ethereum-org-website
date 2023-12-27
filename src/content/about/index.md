@@ -99,7 +99,7 @@ To make our work more accessible and to foster more community collaboration, the
 
 **How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 
-**Want to get involved?** [Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/CetY6Y4).
+**Want to get involved?** [Learn more about contributing](/contributing/), [hit us up on Twitter](https://twitter.com/ethdotorg), or join the community discussions in [our Discord server](https://discord.gg/ethereum-org).
 
 ## Design principles {#design-principles}
 
@@ -109,7 +109,7 @@ We use a set of [design principles](/contributing/design-principles/) to guide o
 
 We built and released a [design system](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) to ship features more quickly and let community members participate in the open design of ethereum.org.
 
-Want to get involved? [Follow along in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), the [GitHub issue](https://github.com/ethereum/ethereum-org-website/issues/6284) and join the conversation in our [#design Discord channel](https://discord.gg/bKycYhVUwV).
+Want to get involved? [Follow along in Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), the [GitHub issue](https://github.com/ethereum/ethereum-org-website/issues/6284) and join the conversation in our [#design Discord channel](https://discord.gg/ethereum-org).
 
 ## Style guide {#style-guide}
 
@@ -123,6 +123,6 @@ We welcome feedback on our design principles, design system and the style guide.
 
 Although this website is open-source and anyone can work on it, we do have a team dedicated to ethereum.org and other Ethereum Foundation web projects.
 
-We'll post any job openings here. If you don't see a role here for you, head over to [our Discord server](https://discord.gg/CetY6Y4) and let us know how you'd like to work with us!
+We'll post any job openings here. If you don't see a role here for you, head over to [our Discord server](https://discord.gg/ethereum-org) and let us know how you'd like to work with us!
 
 Looking beyond the ethereum.org team? [Check out other Ethereum related jobs](/community/get-involved/#ethereum-jobs/).

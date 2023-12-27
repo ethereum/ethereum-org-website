@@ -6,7 +6,6 @@ import {
   Button as ChakraButton,
   Flex,
   Img,
-  Text,
   useColorModeValue,
   useRadio,
   useRadioGroup,
@@ -15,6 +14,7 @@ import {
 // Components
 import Emoji from "./Emoji"
 import Translation from "./Translation"
+import Text from "./OldText"
 
 export interface IProps {
   monthData: any
@@ -84,6 +84,36 @@ const RadioCard = (props) => {
   )
 }
 
+const filterLeaderboardUsers = (item) => {
+  const username = item.user.username.toLowerCase()
+  const fullName = item.user.fullName?.toLowerCase() || ""
+
+  const excludedUsernames = new Set([
+    "ethdotorg",
+    "finnish_sandberg",
+    "norwegian_sandberg",
+    "swedish_sandberg",
+  ])
+
+  return (
+    !excludedUsernames.has(username) &&
+    !username.includes("lqs_") &&
+    !username.includes("removed_user") &&
+    !username.includes("aco_") &&
+    !fullName.includes("aco_") &&
+    !username.includes("aco-") &&
+    !fullName.includes("aco-") &&
+    !username.includes("acc_") &&
+    !fullName.includes("acc_")
+  )
+}
+
+const sortAndFilterData = (data) => {
+  return reverse(sortBy(data, ({ user }) => user.totalCosts)).filter(
+    filterLeaderboardUsers
+  )
+}
+
 const TranslationLeaderboard: React.FC<IProps> = ({
   monthData,
   quarterData,
@@ -94,15 +124,13 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     "tableItemBox.light",
     "tableItemBox.dark"
   )
+
   const leaderboardData = {
-    monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
-    quarterData: reverse(
-      sortBy(quarterData.data, ({ user }) => user.totalCosts)
-    ),
-    allTimeData: reverse(
-      sortBy(allTimeData.data, ({ user }) => user.totalCosts)
-    ),
+    monthData: sortAndFilterData(monthData.data),
+    quarterData: sortAndFilterData(quarterData.data),
+    allTimeData: sortAndFilterData(allTimeData.data),
   }
+
   const [filterAmount, updateFilterAmount] = useState(10)
   const [dateRangeType, updateDateRangeType] = useState("monthData")
 
@@ -174,22 +202,8 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
           </Flex>
         </Flex>
-        {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
         {leaderboardData[dateRangeType]
-          .filter(
-            (item) =>
-              item.user.username !== "ethdotorg" &&
-              !item.user.username.includes("LQS_") &&
-              !item.user.username.includes("REMOVED_USER") &&
-              !item.user.username.includes("Aco_") &&
-              !item.user.fullName.includes("Aco_") &&
-              !item.user.username.includes("Acc_") &&
-              !item.user.fullName.includes("Acc_") &&
-              item.user.username !== "Finnish_Sandberg" &&
-              item.user.username !== "Norwegian_Sandberg" &&
-              item.user.username !== "Swedish_Sandberg"
-          )
-          .filter((item, idx) => idx < filterAmount)
+          .slice(0, filterAmount)
           .map((item, idx) => {
             const { user, languages } = item
             const sortedLanguages = reverse(

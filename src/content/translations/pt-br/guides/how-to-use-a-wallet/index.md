@@ -6,7 +6,7 @@ lang: pt-br
 
 # Como usar uma carteira
 
-Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, registre-se em [Como “registrar” uma conta Ethereum](/guides/how-to-register-an-ethereum-account/).
+Aprenda como operar todas as funções básicas de uma carteira. Se você ainda não tem uma conta, confira o nosso guia [Como criar uma conta Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Abra sua conta
 
@@ -18,7 +18,7 @@ Você quer receber criptomoedas na sua carteira?
 
 Cada conta do Ethereum possui seu próprio endereço de recebimento, que é uma sequência única de números e letras. O endereço funciona como um número de conta bancária ou chave pix. Os endereços Ethereum sempre começarão com “0x”. Você pode compartilhar esse endereço com qualquer pessoa: é seguro fazê-lo.
 
-Seu endereço (que é às vezes chamado de “chave pública”) é como seu endereço residencial: você precisa dizer às pessoas o que é para que elas possam te encontrar. É seguro fazer isso, porque você ainda pode trancar a porta da frente com outra chave que só você controla para que ninguém possa entrar, mesmo que saibam onde você mora.
+O seu endereço é como o endereço da sua casa: você precisa dizer às pessoas para que elas possam encontrar você. É seguro fazer isso, porque você ainda pode trancar a porta da frente com outra chave que só você controla para que ninguém possa entrar, mesmo que saibam onde você mora.
 
 Você precisa fornecer seu endereço público a quem desejar enviar dinheiro a você. Muitos aplicativos de carteira permitem que você copie seu endereço ou mostre um código QR para facilitar o uso. Evite digitar qualquer endereço Ethereum manualmente. Isso pode facilmente levar a erros administrativos e perda de fundos.
 
@@ -73,11 +73,11 @@ Seu endereço será o mesmo em todos os projetos do Ethereum. Você não precisa
 
 ### Se eu tenho um endereço de ETH, o endereço é o mesmo para outras blockchains?
 
-Você pode usar o mesmo endereço em todas as blockchains compatíveis com EVM (se você tiver o tipo de carteira com uma frase de recuperação). Esta [lista](https://chainlist.org/) mostra quais blockchains você pode usar com o mesmo endereço. Algumas blockchains, como o Bitcoin, implementam um conjunto completamente separado de regras de rede e você precisará de um endereço diferente com um formato diferente. Se você tem uma carteira de contrato inteligente, você deve verificar o site do produto para mais informações sobre quais blockchains são suportadas.
+Você pode utilizar o mesmo endereço em todos os blockchains compatíveis com EVM (se você tiver o tipo de carteira com uma frase de recuperação). Esta [lista](https://chainlist.org/) mostra quais blockchains você pode usar com o mesmo endereço. Algumas blockchains, como o Bitcoin, implementam um conjunto completamente separado de regras de rede e você precisará de um endereço diferente com um formato diferente. Se você tem uma carteira de contrato inteligente, você deve verificar o site do produto para mais informações sobre quais blockchains são suportadas.
 
 ### Posso usar o mesmo endereço em vários dispositivos?
 
-Sim, você pode usar o mesmo endereço em vários dispositivos. Tecnicamente, carteiras são apenas uma interface para mostrar o seu saldo e fazer transações — sua conta não está armazenada na carteira, mas na blockchain.
+Sim, você pode utilizar o mesmo endereço em diversos dispositivos. Tecnicamente, carteiras são apenas uma interface para mostrar o seu saldo e fazer transações — sua conta não está armazenada na carteira, mas na blockchain.
 
 ### Eu não recebi a criptomoeda. Onde posso verificar o status da transação?
 

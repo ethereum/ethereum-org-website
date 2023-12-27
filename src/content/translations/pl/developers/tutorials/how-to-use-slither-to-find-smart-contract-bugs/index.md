@@ -234,7 +234,3 @@ Obiekt `Function` lub `Modifier` ma:
 - `variables_written (list(Variable))`: lista zapisanych zmiennych
 - `state_variables_read (list(StateVariable))`: lista odczytanych zmiennych stanu (podzbiór zmiennych`read)
 - `state_variables_written (list(StateVariable))`: lista zapisanych zmiennych stanu (podzbiór zmiennych`written)
-
-### Przykład: Drukuj podstawowe informacje {#example-print-basic-information}
-
-[print_basic_information.py](./examples/print_basic_information.py) pokazuje, jak wydrukować podstawowe informacje o projekcie.

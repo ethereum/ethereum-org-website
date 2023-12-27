@@ -30,7 +30,7 @@ lang: uk
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Це не вичерпний список. Потрібна допомога в пошуку підтримки для конкретного гаманця? Приєднуйтеся до [ethereum.org на платформі Discord](https://discord.gg/rZz26QWfCg), і ми спробуємо допомогти._
+_Це не вичерпний список. Потрібна допомога в пошуку підтримки для конкретного гаманця? Приєднуйтеся до [ethereum.org на платформі Discord](https://discord.gg/ethereum-org), і ми спробуємо допомогти._
 
 Шукаєте гаманець Ethereum? [Перегляньте наш повний список гаманців Ethereum](/wallets/find-wallet/).
 
@@ -64,7 +64,7 @@ _Це не вичерпний список. Потрібна допомога в
 
 Якщо ви використовуєте вузол або валідатор, ось кілька спільнот, які допоможуть вам розпочати роботу.
 
-- [EthStaker на платформі Discord](https://discord.io/ethstaker)
+- [EthStaker на платформі Discord](https://discord.gg/ethstaker)
 - [EthStaker на платформі Reddit](https://www.reddit.com/r/ethstaker)
 
 Більшість команд, які створюють клієнти Ethereum, мають також спеціальні відкриті майданчики, де ви можете отримати підтримку й поставити запитання.

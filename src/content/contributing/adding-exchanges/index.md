@@ -20,7 +20,7 @@ Because of this context, we need some specific information when you suggest an e
 
 ## What we need {#what-we-need}
 
-- The geographical restrictions that apply to the exchange
+- The geographical restrictions that apply to the exchange. Geographic restrictions associated with the exchange should be detailed on a dedicated page or section of the exchange's website.
 - The currencies users can use to buy ETH
 - Proof that the exchange is a legitimate trading company
 - Any additional information you might have – this might be information about the company like years of operation, financial backing etc.

@@ -1,12 +1,12 @@
 // Libraries
 import React, { ReactNode } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { useTranslation } from "gatsby-plugin-react-i18next"
 import Select from "react-select"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
   Box,
+  calc,
   chakra,
   Flex,
   FlexProps,
@@ -19,7 +19,6 @@ import {
   Table,
   TableProps,
   Td,
-  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
@@ -27,6 +26,8 @@ import {
 // Components
 import InlineLink, { IProps as LinkProps } from "../../Link"
 import { WalletMoreInfo } from "./WalletMoreInfo"
+import GatsbyImage from "../../GatsbyImage"
+import Text from "../../OldText"
 
 // Icons
 import {
@@ -40,6 +41,7 @@ import { trackCustomEvent } from "../../../utils/matomo"
 import { getImage } from "../../../utils/image"
 import { WalletData } from "../../../data/wallets/wallet-data"
 import { ChildOnlyProp } from "../../../types"
+import { NAV_BAR_PX_HEIGHT } from "../../../constants"
 
 const Container = (props: TableProps) => (
   <Table
@@ -60,7 +62,7 @@ const WalletContainer = (props: ChildOnlyProp) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
-    _hover={{ bg: "boxShadow", transition: "0.5s all" }}
+    _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
     {...props}
   />
 )
@@ -90,8 +92,11 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={0}
-    zIndex="docked"
+    top={{
+      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
+      lg: NAV_BAR_PX_HEIGHT,
+    }}
+    zIndex={1}
     sx={{
       th: {
         p: 0,
@@ -237,7 +242,7 @@ const FlexInfo = (props: FlexProps) => (
         "& + p": {
           mt: "0.1rem",
           fontSize: "0.9rem",
-          lineHeight: 4,
+          lineHeight: 5,
           fontWeight: "normal",
         },
       },
@@ -422,18 +427,19 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
             <Wallet
               onClick={() => {
                 updateMoreInfo(wallet.key)
-                trackCustomEvent({
-                  eventCategory: "WalletMoreInfo",
-                  eventAction: `More info wallet`,
-                  eventName: `More info ${wallet.name} ${wallet.moreInfo}`,
-                })
+                // Log "more info" event only on expanding
+                wallet.moreInfo &&
+                  trackCustomEvent({
+                    eventCategory: "WalletMoreInfo",
+                    eventAction: `More info wallet`,
+                    eventName: `More info ${wallet.name}`,
+                  })
               }}
             >
               <Td lineHeight="revert">
                 <FlexInfo>
                   <Box>
-                    <Img
-                      as={GatsbyImage}
+                    <GatsbyImage
                       image={getImage(data[wallet.image_name])!}
                       alt=""
                       objectFit="contain"
@@ -469,7 +475,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                           customEventOptions={{
                             eventCategory: "WalletExternalLinkList",
                             eventAction: `Go to wallet`,
-                            eventName: `${wallet.name} ${idx}`,
+                            eventName: `Website: ${wallet.name} ${idx}`,
                             eventValue: JSON.stringify(filters),
                           }}
                         >
@@ -482,7 +488,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `${wallet.name} ${idx}`,
+                              eventName: `Twitter: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >
@@ -500,7 +506,7 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `${wallet.name} ${idx}`,
+                              eventName: `Discord: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >

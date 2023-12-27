@@ -24,7 +24,7 @@ The Portal Network aims to provide an alternative way for light nodes to get the
 
 ## How does the Portal Network work? {#how-does-portal-network-work}
 
-Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes.
+Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](/developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes.
 
 ![devP2P and libP2P](portal-network-devp2p-libp2p.png)
 
@@ -78,5 +78,5 @@ If one client experiences issues or vulnerabilities, other clients can continue 
 ## Further reading {#futher-reading}
 
 - [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [The Portal Network discord](https://discord.gg/6XFs56cX)
-- [The Portal Network website](ethportal.net)
+- [The Portal Network discord](https://discord.gg/CFFnmE7Hbs)
+- [The Portal Network website](https://www.ethportal.net/)

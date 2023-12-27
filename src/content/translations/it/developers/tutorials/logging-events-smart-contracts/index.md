@@ -3,7 +3,7 @@ title: Registrare dati dagli Smart Contract con gli eventi
 description: Introduzione agli eventi degli Smart Contract e come usarli per registrare dati
 author: "jdourlens"
 tags:
-  - "smart contract"
+  - "contratti intelligenti"
   - "remix"
   - "solidity"
   - "eventi"

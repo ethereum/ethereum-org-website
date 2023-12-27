@@ -11,7 +11,7 @@
   "page-stake-eth": "Частка ETH",
   "page-find-wallet-open-source": "Відкрите джерело коду",
   "page-find-wallet-open-source-desc": "Програмне забезпечення з відкритим кодом дає змогу будь-кому перевіряти цілісність та безпеку програми.",
-  "page-find-wallet-self-custody": "Self custody",
+  "page-find-wallet-self-custody": "Самозахист",
   "page-find-wallet-non-custodial": "Без зберігання",
   "page-find-wallet-non-custodial-desc": "Гаманці, які не контролюють ваші приватні ключі",
   "page-find-wallet-hardware-wallet-support": "Підтримка апаратних гаманців",
@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Фільтри функцій",
   "page-find-wallet-footnote-1": "Гаманці, перераховані на цій сторінці, не є офіційно схваленими, і надаються тільки в інформаційних цілях.",
   "page-find-wallet-footnote-2": "Їхні описи були надані самими проєктами гаманців.",
-  "page-find-wallet-footnote-3": "Ми додаємо продукти на цю сторінку згідно з критеріями нашої <a href=\"/contributing/adding-products/\">політики лістингу</a>. Якщо ви хочете, щоб ми додали гаманець, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">створіть запит на GitHub</a>.",
+  "page-find-wallet-footnote-3": "Ми додаємо продукти на цю сторінку згідно з критеріями нашої <a href=\"/contributing/adding-wallets/\">політики лістингу</a>. Якщо ви хочете, щоб ми додали гаманець, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">створіть запит на GitHub</a>.",
   "page-find-wallet-mobile": "Мобільний пристрій",
   "page-find-wallet-mobile-desc": "Гаманці з мобільними програмами",
   "page-find-wallet-desktop": "Настільний комп’ютер",
@@ -89,5 +89,6 @@
   "page-find-wallet-browser": "Браузер",
   "page-find-wallet-browser-desc": "Гаманці з розширенням для браузера",
   "page-find-wallet-device": "Пристрій",
-  "page-find-choose-to-compare": "Виберіть для порівняння"
+  "page-find-choose-to-compare": "Виберіть для порівняння",
+  "page-find-wallet-choose-features": "Виберіть функції"
 }

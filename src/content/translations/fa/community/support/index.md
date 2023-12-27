@@ -30,7 +30,7 @@ lang: fa
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_این یک فهرست جامع نیست. برای پیدا کردن پشتیبانی برای یک کیف پول خاص به کمک نیاز دارید؟ به [دیسکورد ethereum.org](https://discord.gg/rZz26QWfCg) بپیوندید و ما سعی خواهیم کرد به شما کمک کنیم._
+_این یک فهرست جامع نیست. برای پیدا کردن پشتیبانی برای یک کیف پول خاص به کمک نیاز دارید؟ به [دیسکورد ethereum.org](https://discord.gg/ethereum-org) بپیوندید و ما سعی خواهیم کرد به شما کمک کنیم._
 
 به دنبال کیف پول اتریوم می‌گردید؟ [فهرست کامل کیف پول‌های اتریوم ما را جستجو کنید](/wallets/find-wallet/).
 
@@ -38,10 +38,12 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 
 ساختن می‌تواند سخت باشد. در اینجا برخی از فضاهای متمرکز توسعه با توسعه‌دهندگان باتجربه‌ای وجود دارند که خوشحال می‌شوند به شما کمکی کنند.
 
+- [دانشگاه شیمی](https://university.alchemy.com/#starter_code)
 - [دیسکورد CryptoDevs](https://discord.gg/Z9TA39m8Yu)
 - [StackExchange اتریوم](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [دانشگاه Web3](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 همچنین می‌توانید مستندات و راهنمای توسعه را در بخش [منابع توسعه‌دهندگان اتریوم](/developers/) ما بیابید.
 
@@ -57,6 +59,7 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
+- [Tenderly](https://discord.gg/fBvDJYR)
 
 ## راه‌اندازی یک گره {#node-support}
 

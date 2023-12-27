@@ -30,7 +30,7 @@ Mengalami masalah dengan dompet Anda? Kebanyakan dompet telah mendedikasikan tim
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Ini bukanlah daftar yang lengkap. Perlu bantuan menemukan bantuan untuk dompet yang khusus? Bergabunglah dengan [discord ethereum.org](https://discord.gg/rZz26QWfCg) dan kami akan mencoba menolong Anda._
+_Ini bukanlah daftar yang lengkap. Perlu bantuan menemukan bantuan untuk dompet yang khusus? Bergabunglah dengan [discord ethereum.org](https://discord.gg/ethereum-org) dan kami akan mencoba menolong Anda._
 
 Sedang mencari dompet Ethereum? [Jelajahi daftar lengkap dompet Ethereum kami](/wallets/find-wallet/).
 
@@ -62,7 +62,7 @@ Berikut adalah beberapa contoh populer:
 
 Jika Anda menjalankan node atau validator, berikut adalah beberapa komunitas yang dikhususkan untuk menolong Anda memulai.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 Kebanyakan tim yang membangun klien Ethereum juga telah mendedikasikan lingkungan untuk publik di mana Anda dapat mendapatkan dukungan dan mengajukan pertanyaan.

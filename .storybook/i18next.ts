@@ -1,6 +1,5 @@
 import i18n, { Resource } from "i18next"
 import { initReactI18next } from "gatsby-plugin-react-i18next"
-import fs from "fs"
 
 export const baseLocales = {
   en: { title: "English", left: "En" },
@@ -14,6 +13,8 @@ const ns = [
   "common",
   "glossary",
   "page-about",
+  "page-index",
+  "page-learn",
   "page-upgrades",
   "page-developers-index",
 ]

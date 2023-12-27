@@ -23,7 +23,7 @@ This section is for software for the desktop, command line, or server which has 
 
 <p align="center">
   <img width="300" height="180" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://miro.medium.com/max/1400/1*npKIT4jX5WwlRZmcBPusig.png" />
 </p>
 
@@ -49,7 +49,7 @@ OpenEthereum was built for miners, service providers, and exchanges which need f
 
 <p align="center">
   <img width="300" height="150" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://user-images.githubusercontent.com/47108/53807420-80433380-3f1d-11e9-80cd-967aabb26506.png" />
 </p>
 
@@ -75,7 +75,7 @@ Grid could be seen as a successor to Mist, also a standalone, JavaScript-based d
 
 <p align="center">
   <img width="500" height="350" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://user-images.githubusercontent.com/7814134/78335917-d0f8e600-758e-11ea-91e1-2433eaaef6f4.png" />
 </p>
 
@@ -101,7 +101,7 @@ Ethereum Studio was developed to provide users with an IDE that had a built-in E
 
 <p align="center">
   <img width="600" height="450" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://miro.medium.com/max/700/0*L222OAjPhe_KL1Iy." />
 </p>
 
@@ -133,7 +133,7 @@ See the [Ethereum Wallets](/wallets/) page on ethereum.org.
 
 <p align="center">
   <img width="120" height="200" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://mist.ethereum.org/images/logo@2x.png" />
 </p>
 
@@ -269,7 +269,7 @@ ruby-ethereum was an Ethereum client written in Ruby. It was deprecated around 2
 
 <p align="center">
   <img width="240" height="180" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://davidgerard.co.uk/blockchain/wp-content/uploads/2017/11/parity-logo.png" />
 </p>
 
@@ -299,7 +299,7 @@ The ["Spin up your own Ethereum node"](/developers/docs/nodes-and-clients/run-a-
 
 <p align="center">
   <img width="230" height="150" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://trinity.ethereum.org/images/trinity-logo-icon.svg" />
 </p>
 
@@ -331,7 +331,7 @@ This section is for services deployed to Ethereum Mainnet and other EVM-based ne
 
 <p align="center">
   <img width="400" height="267" 
-  	style="background-color:#fff; padding:0px 0px 0px 0px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 0px 0px 0px" }}
   	src="https://miro.medium.com/max/1838/0*kA6PGbaYHLJOI66O" />
 </p>
 
@@ -339,7 +339,7 @@ Shut down in Fall 2021
 
 **Summary**
 
-Cover was an DeFi insurance protocol running on Ethereum and other EVM-based networks.
+Cover was a DeFi insurance protocol running on Ethereum and other EVM-based networks.
 
 **Archives**
 
@@ -383,7 +383,7 @@ While The DAO failed, the concept endured. The basic technical, social, and gove
 
 <p align="center">
   <img width="562" height="124" 
-  	style="background-color:#fff; padding:0px 10px 0px 10px;"
+  	style={{ backgroundColor: "#fff", padding: "0px 10px 0px 10px" }}
   	src="https://cryptodiffer.com/src/images/person/SparkPool-cryptodiffer.png" />
 </p>
 

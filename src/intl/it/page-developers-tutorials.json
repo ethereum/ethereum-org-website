@@ -24,5 +24,6 @@
   "page-tutorial-intermediate": "Intermedio",
   "page-tutorial-advanced": "Argomenti avanzati",
   "page-find-wallet-try-removing": "Prova rimuovere una o due funzionalità",
-  "page-find-wallet-clear": "Cancella filtri"
+  "page-find-wallet-clear": "Cancella filtri",
+  "page-tutorials-env-banner": "Non eseguire l'<code>.env</code>! Si sconsiglia vivamente d'esporre i propri dati personali contenuti nel file<code>.env</code> o di condividerli con altri, poiché questo potrebbe compromettere la segretezza dei tuoi dati personali. Se utilizzi già un modello per il controllo dei dati, aggiungi il tuo <code>.env</code> al file <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
 }

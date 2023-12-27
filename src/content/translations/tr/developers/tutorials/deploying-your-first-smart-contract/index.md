@@ -1,14 +1,13 @@
 ---
 title: İlk akıllı sözleşmenizi dağıtın
-description: Ethereum test ağında ilk akıllı sözleşmenizi nasıl dağıtacağınızı öğrenin
+description: Ethereum test ağında ilk akıllı sözleşmenizi dağıtmaya giriş
 author: "jdourlens"
 tags:
-  - "akıllı kontratlar"
+  - "akıllı sözleşmeler"
   - "karışım"
   - "katılık"
-  - "başlarken"
   - "dağıtma"
-skill: beginner
+skill: advanced
 lang: tr
 published: 2020-04-03
 source: EthereumDev
@@ -50,14 +49,14 @@ contract Counter {
 }
 ```
 
-Temel programlama bilgisi olanlar bu kod parçasının ne yaptığını tahmin edeceklerdir. Satır satır açıklayacak olursak:
+Programlama konusunda bilgisi olanlar, bu programın ne yaptığını tahmin edeceklerdir. Satır satır açıklayacak olursak:
 
-- Satır 3: `Counter` adında yeni bir sözleşme tanımlıyoruz.
-- Satır 6: Sözleşmemiz ilk değeri sıfır olan `count` adında pozitif tam sayı değişkenini içeriyor.
-- Satır 9: İlk fonksiyon `increment()` değişkenimiz `count` değerini değiştirir ve sözleşmemizin durumu günceller.
-- Satır 14: İkinci fonksiyon, basitçe `count` değerini akıllı sözleşmenin dışından okumamızı sağlayan bir alıcıdır. Aslında `count` değişkenini zaten herkesin erişime açık (public) tanımladığımız için bunu yapmamıza gerek yoktu ama sadece örnek olarak göstermek istedik.
+- Satır 4: `Counter` adında yeni bir sözleşme tanımlıyoruz.
+- Satır 7: Sözleşmemiz, ilk değeri 0 olan `count` adında bir işaretsiz tam sayı depoluyor.
+- Satır 10: İlk fonksiyon, sözleşmenin durumunu değiştirir ve değişken `count` değerine `increment()` uygular.
+- Satır 15: İkinci fonksiyon, basitçe `count` değerini akıllı sözleşmenin dışından okumamızı sağlayan bir alıcıdır. Aslında `count` değişkenini zaten herkesin erişime açık (public) tanımladığımız için bunu yapmamıza gerek yoktu ama sadece örnek olarak göstermek istedik.
 
-İlk akıllı sözleşmemiz için hepsi bu kadar. Bilenler tahmin edecektir ki bu Java veya C++ dillerindeki sınıflara benziyor. Şimdi sözleşmemizle oynamaya başlayalım.
+İlk akıllı sözleşmemiz için hepsi bu kadar. Bildiğiniz gibi, Java veya C++ gibi OOP (Nesne Odaklı Programlama) dillerinden bir sınıfa benziyor. Şimdi sözleşmemizle oynamaya başlayalım.
 
 ## Sözleşmemizi dağıtma {#deploying-our-contract}
 
@@ -79,7 +78,7 @@ Ardından "deploy and run transactions" ekranına gidin:
 
 ![Remix araç çubuğundaki yayınla simgesi](./remix-deploy.png)
 
-Bu ekranda öncelikle sözleşmeye verdiğimiz ismin göründüğünden emin olmalısınız. Sözleşme adını görüyorsanız Deploy butonuna tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam “JavaScript VM”, yani bu daha hızlı ve herhangi bir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blok zincirinde dağıtıp etkileşime geçeceğimiz anlamına geliyor.
+Bu ekranda öncelikle sözleşmeye verdiğimiz ismin göründüğünden emin olmalısınız. Sözleşme adını görüyorsanız Deploy butonuna tıklayın. Sayfanın üst kısmında görebileceğiniz gibi, mevcut ortam “Javascript VM”, yani bu daha hızlı ve herhangi bir ücret ödemeden test edebilmek için akıllı sözleşmemizi yerel bir test blok zincirinde dağıtıp etkileşime geçeceğimiz anlamına geliyor.
 
 ![Remix solidity derleyicisindeki deploy (dağıt) düğmesi](./remix-deploy-button.png)
 

@@ -55,7 +55,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 2. **Buka bahasa yang ingin Anda terjemahkan dan cari dokumen yang akan dikerjakan**  
    Konten situs web dibagi menjadi beberapa versi dokumen dan bahasa. Anda dapat memeriksa kemajuan setiap dokumen di sebelah kanan – jika kemajuan terjemahan di bawah 100%, silakan beri kontribusi!
 
-   Tidak melihat bahasa Anda dicantumkan? [Buat masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](https://discord.gg/6WX7E97) kami
+   Tidak melihat bahasa Anda dicantumkan? [Buat masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose) atau ajukan pertanyaan di [Discord](https://discord.gg/ethereum-org) kami
 
    ![File yang diterjemahkan dan tidak diterjemahkan di Crowdin](./crowdin-files.png)
 
@@ -99,7 +99,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
   Harap tdak menggunakan terjemahan mesin untuk menerjemahkan proyek tersebut. Semua terjemahan akan diulas sebelum ditambahkan ke situs web. Jika terjemahan usulan Anda didapati sebagai diterjemahkan mesin, terjemahan akan ditolak dan para kontributor yang sering menggunakan terjemahan mesin akan dikeluarkan dari proyek.
 </InfoBanner>
 
-Ada pertanyaan? Atau ingin kolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](https://discord.gg/6WX7E97) kami
+Ada pertanyaan? Atau ingin kolaborasi dengan tim kami atau penerjemah lainnya? Silakan posting di kanal #translations dari server [Discord ethereum.org](https://discord.gg/ethereum-org) kami
 
 Anda juga dapat menghubungi kami ke translations@ethereum.org
 
@@ -135,7 +135,7 @@ Jika Anda adalah seorang penerjemah ethereum.org atau ingin menjadi salah satuny
 
 ### Komunitas {#communities}
 
-- [Grup penerjemahan Discord khusus bahasa](https://discord.gg/6WX7E97) _– sebuah inisiatif untuk menghubungkan para penerjemah ethereum.org ke dalam Grup Penerjemahan_
+- [Grup penerjemahan Discord khusus bahasa](https://discord.gg/ethereum-org) _– sebuah inisiatif untuk menghubungkan para penerjemah ethereum.org ke dalam Grup Penerjemahan_
 - [Grup penerjemah bahasa Mandarin](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– Halaman gagasan untuk memudahkan koordinasi di antara para penerjemah bahasa Mandarin_
 
 ### Pembaruan terbaru {#latest-updates}

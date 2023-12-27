@@ -30,7 +30,7 @@ Haben Sie Probleme mit Ihrer Wallet? Die meisten Wallets haben spezielle Support
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/rZz26QWfCg) bei, dann versuchen wir, Ihnen zu helfen._
+_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/ethereum-org) bei, dann versuchen wir, Ihnen zu helfen._
 
 Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der Ethereum-Wallets an](/wallets/find-wallet/).
 
@@ -43,6 +43,7 @@ Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpu
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 In unserem Bereich mit [Ethereum-Entwicklerressourcen](/developers/) finden Sie auch Dokumentationen und Entwicklungsleitfäden.
 

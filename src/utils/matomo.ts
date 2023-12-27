@@ -13,19 +13,17 @@ export const trackCustomEvent = ({
   eventName,
   eventValue,
 }: MatomoEventOptions): void => {
-  if (process.env.NODE_ENV === "production" || window.dev === true) {
-    const optedOutValue = localStorage.getItem(MATOMO_LS_KEY) || "false"
-    const isOptedOut = JSON.parse(optedOutValue)
-    if (!window._paq || isOptedOut) return
+  if (process.env.NODE_ENV !== "production" && !window.dev) return
+  const optedOutValue = localStorage.getItem(MATOMO_LS_KEY) || "false"
+  const isOptedOut = JSON.parse(optedOutValue)
+  if (!window._paq || isOptedOut) return
 
-    const { _paq, dev } = window
+  const { _paq, dev } = window
 
-    _paq.push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
+  _paq.push([`trackEvent`, eventCategory, eventAction, eventName, eventValue])
+  if (!dev) return
 
-    if (dev) {
-      console.debug(
-        `[Matomo] event tracked, category: ${eventCategory}, action: ${eventAction}, name: ${eventName}, value: ${eventValue}`
-      )
-    }
-  }
+  console.debug(
+    `[Matomo] event tracked, category: ${eventCategory}, action: ${eventAction}, name: ${eventName}, value: ${eventValue}`
+  )
 }

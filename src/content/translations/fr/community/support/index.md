@@ -30,7 +30,7 @@ Vous rencontrez un problème avec votre portefeuille ? La plupart des portefeuil
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Cette liste est non-exhaustive. Vous avez besoin d'aide pour trouver l'assistance pour un portefeuille spécifique ? Rejoignez le [Discord Ethereum.org](https://discord.gg/rZz26QWfCg) et nous essaierons de vous aider._
+_Cette liste est non-exhaustive. Vous avez besoin d'aide pour trouver l'assistance pour un portefeuille spécifique ? Rejoignez le [Discord Ethereum.org](https://discord.gg/ethereum-org) et nous essaierons de vous aider._
 
 Vous êtes à la recherche d'un portefeuille Ethereum ? [Explorez notre liste complète de portefeuilles Ethereum](/wallets/find-wallet/).
 
@@ -43,6 +43,7 @@ Le développement d'une application décentralisée peut être difficile. Voici 
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 Vous pouvez aussi consulter notre documentation ainsi que des guides de développement dans notre section [Ressources pour les développeurs Ethereum](/developers/).
 
@@ -64,7 +65,7 @@ Voici quelques exemples connus :
 
 Si vous exécutez un nœud ou un validateur, voici quelques communautés qui sont consacrées à aider ceux qui débutent.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 La plupart des équipes qui créent des clients Ethereum disposent aussi d'espaces dédiés, ouverts au public, dans lesquels vous pouvez obtenir une aide et poser des questions.

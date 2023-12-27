@@ -14,15 +14,15 @@ summaryPoint3: Powered by smart contracts on the Ethereum blockchain.
 
 ## What are NFTs? {#what-are-nfts}
 
-NFTs are tokens that are individually unique. Each NFT has different properties (non-fungible) and is provably scarce. This is different from tokens such as ERC-20s where every token in a set is identical and has the same properties ('fungible'). You don't care which specific dollar bill you have in your wallet, because they are all identical and worth the same. However, you _do_ care which specific NFT you own, because they all have individual properties that distinguish them from others ('non-fungible').
+NFTs are tokens that are individually unique. Each NFT has different properties (non-fungible) and is provably scarce. This is different from tokens such as ETH or other Ethereum based tokens like USDC where every token is identical and has the same properties ('fungible'). You don't care which specific dollar bill (or ETH) you have in your wallet, because they are all identical and worth the same. However, you _do_ care which specific NFT you own, because they all have individual properties that distinguish them from others ('non-fungible').
 
-The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence.
+The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum blockchain.
 
 <YouTube id="Xdkkux6OxfM" />
 
 ## The internet of assets {#internet-of-assets}
 
-NFTs and Ethereum solve some of the problems that exist on the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership in a way that isn't controlled by a central organization. For example, with NFTs, you can own a music mp3 that is not specific to one company's specific music app, or you can own a social media handle that you can sell or swap, but can't be arbitrarily taken away from you by a platform provider.
+NFTs and Ethereum solve some of the problems that exist on the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership in a way that isn't controlled by a central organization. For example, with NFTs, you can own a music mp3 file across all Ethereum based apps and not be bound to one company's specific music app like Spotify or Apple Music. You can own a social media handle that you can sell or swap, but can't be arbitrarily taken away from you by a platform provider.
 
 Here's how an internet of NFTs compared to the internet most of us use today looks...
 
@@ -30,18 +30,12 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 
 | An NFT internet                                                                                                         | The internet today                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| You own your assets! Only you can sell or swap them.                                                                    | You rent an asset from some organization.                                                                                                              |
+| You own your assets! Only you can sell or swap them.                                                                    | You rent an asset from some organization and it can be taken away from you.                                                                            |
 | NFTs are digitally unique, no two NFTs are the same.                                                                    | A copy of an entity often cannot be distinguished from the original.                                                                                   |
 | Ownership of an NFT is stored on the blockchain for anyone to verify.                                                   | Ownership records of digital items are stored on servers controlled by institutions – you must take their word for it.                                 |
 | NFTs are smart contracts on Ethereum. This means they can easily be used in other smart contracts and apps on Ethereum! | Companies with digital items usually require their own "walled garden" infrastructure.                                                                 |
 | Content creators can sell their work anywhere and can access a global market.                                           | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions. |
 | NFT creators can retain ownership rights over their own work, and program royalties directly into the NFT contract.     | Platforms, such as music streaming services, retain the majority of profits from sales.                                                                |
-
-## How do NFTs work? {#how-nfts-work}
-
-Like any token issued on Ethereum, NFTs are issued by a smart contract. The smart contract conforms to one of several NFT standards (commonly ERC-721 or ERC-1155) that define what functions the contract has. The contract can create ('mint') NFTs and assign them to a specific owner. Ownership is defined in the contract by mapping specific NFTs to specific addresses. The NFT has an ID and typically metadata associated with it that make the specific token unique.
-
-When someone creates or mints an NFT, they are really executing a function in the smart contract that assigns a specific NFT to their address. This information is stored in the contract's storage, which is part of the blockchain. The contract creator can write additional logic into the contract, for example limiting the total supply or defining a royalty to be paid to the creator each time a token is transferred.
 
 ## What are NFTs used for? {#nft-use-cases}
 
@@ -62,7 +56,7 @@ Maybe you are an artist that wants to share their work using NFTs, without losin
 
 Or consider a ticket to a sporting event. Just as an organizer of an event can choose how many tickets to sell, the creator of an NFT can decide how many replicas exist. Sometimes these are exact replicas, such as 5000 General Admission tickets. Sometimes several are minted that are very similar, but each slightly different, such as a ticket with an assigned seat. These can be bought and sold peer-to-peer without paying ticket handlers and the buyer always with assurance of the ticket authenticity by checking the contract address.
 
-On ethereum.org, NFTs are used to demonstrate that people have contributed to our Github repository or attended calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a POAP NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap).
+On ethereum.org, NFTs are used to demonstrate that people have meaningfully contributed to our Github repository (programmed the website, written or modified an article...), translated our content, or attended our community calls, and we've even got our own NFT domain name. If you contribute to ethereum.org, you can claim a POAP NFT. Some crypto meetups have used POAPs as tickets. [More on contributing](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
@@ -71,6 +65,20 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 [More on ENS](https://app.ens.domains)
 
 <Divider />
+
+## How do NFTs work? {#how-nfts-work}
+
+NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract." These contracts follow certain rules, like the ERC-721 or ERC-1155 standards, which determine what the contract can do.
+
+The NFT smart contract can do a few key things:
+
+- **Create NFTs:** It can make new NFTs.
+- **Assign Ownership:** It keeps track of who owns which NFTs by linking them to specific Ethereum addresses.
+- **Give Each NFT an ID:** Each NFT has a number that makes it unique. Additionally, there's usually some information (metadata) attached to it, describing what the NFT represents.
+
+When someone "creates" or "mints" an NFT, they're basically telling the smart contract to give them ownership of a particular NFT. This information is securely and publicly stored in the blockchain.
+
+Furthermore, the creator of the contract can add extra rules. They might limit how many of a certain NFT can be made or decide that they should get a small royalty fee whenever the NFT changes hands.
 
 ### NFT security {#nft-security}
 

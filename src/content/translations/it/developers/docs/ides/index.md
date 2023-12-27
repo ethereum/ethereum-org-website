@@ -66,4 +66,6 @@ Gli IDE più diffusi hanno plugin integrati che migliorano l'esperienza di svilu
 
 ## Letture consigliate {#further-reading}
 
+- [IDE di Ethereum](https://www.alchemy.com/list-of/web3-ides-on-ethereum)_- Lista degli IDE di Ethereum di Alchemy_
+
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

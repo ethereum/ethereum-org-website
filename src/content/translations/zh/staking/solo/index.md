@@ -53,9 +53,9 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
-就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何确保助记词或私钥安全无虞。
+就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何保护好助记词或私钥的安全。{' '}
 
-<a href="/security/">以太坊安全和预防诈骗</a>
+<a href="/security/">以太坊的安全性和防范欺诈</a>
 </ExpandableCard>
 
 <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
@@ -69,7 +69,7 @@ summaryPoints:
 <ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
 与离线导致的怠工处罚不同，<em>罚没</em>是一种更严重的处罚，专门针对恶意违规。 同一时间只在一台机器上运行加载你密钥的客户端，你被罚没的风险可以降到最低。 总得来说，所有质押人都必须意识到被罚没的风险。
 
-<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多关于罚没和验证者生命周期的信息</a>
+<a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">更多关于惩罚和验证者生命周期的信息</a>
 </ExpandableCard>
 </InfoGrid>
 
@@ -103,21 +103,21 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 有多种方案可帮助你进行设置。 上述指标可引导你了解如何使用下方的工具。
 
-<InfoBanner emoji="⚠️" isWarning>
-请注意选择<a href="/developers/docs/nodes-and-clients/client-diversity/">非主流客户端</a>的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style="text-transform: uppercase;">“多客户端”。</em>
-</InfoBanner>
+<ProductDisclaimer />
 
 #### 节点工具
 
 <StakingProductsCardGrid category="nodeTools" />
 
+请注意选择[非主流客户端](/developers/docs/nodes-and-clients/client-diversity/)的重要性，因为可以提高网络安全性，并限制你的风险。 可让你设置非主流客户端的工具称为<em style={{ textTransform: "uppercase" }}>“多客户端”。</em>
+
 #### 密钥生成器
 
-这些工具可用于替代[质押存款命令行接口](https://github.com/ethereum/staking-deposit-cli/)，帮助生成密钥。
+这些工具可用来替代[质押存款命令行接口](https://github.com/ethereum/staking-deposit-cli/)，帮助生成密钥。
 
 <StakingProductsCardGrid category="keyGen" />
 
-想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品清单政策](/contributing/adding-staking-products/)，思考你想要推荐的内容是否合适，合适的话，请提交以供审核。
+想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 
 ## 探索单独质押指南 {#staking-guides}
 
@@ -125,7 +125,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 ## 常见问题 {#faq}
 
-以下关于质押的问题是值得了解的几个最常见问题。
+下面是一些关于质押的最常见问题，值得了解一下。
 
 <ExpandableCard title="什么是验证者？">
 
@@ -146,7 +146,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 请注意，对怠工验证者的处罚与有多少个验证者同时下线成正比。 在大部分网络参与者同时离线的情况下，对每个验证者的处罚会比单个验证者怠工所受的处罚大。
 
-在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确认，这些验证者将受到所谓的<em>二次怠工惩罚</em>，离线验证者账户中的以太币将遭受指数级损失。 这时以太坊网络将通过消耗怠工验证者的以太币进行自我修复，直到他们的余额达到 16 个以太币，此时他们将自动从验证者池中退出。 剩余在线的验证者最终将再次超过 2/3，从而满足再次最终确认链的绝对多数要求。
+在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确认，这些验证者将受到所谓的<em>二次怠惰惩罚</em>，离线验证者帐户中的以太币将遭受指数级损失。 这时以太坊网络将通过消耗怠工验证者的以太币进行自我修复，直到他们的余额达到 16 个以太币，此时他们将自动从验证者池中退出。 剩余在线的验证者最终将再次超过 2/3，从而满足再次最终确认链的绝对多数要求。
 </ExpandableCard>
 
 <ExpandableCard title="如何保证我不会被罚没？">
@@ -173,7 +173,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 </ExpandableCard>
 
 <ExpandableCard title="我可以仅使用 VPS（虚拟专用服务器）吗？">
-虽然虚拟专用服务器 (VPS) 可用于替代家庭硬件设施，但您的验证者客户端的物理访问和位置<em>确实很重要</em>。 使用中心化云计算解决方案（如亚马逊网络服务或 Digital Ocean）的便捷之处在于，你不必拥有和操作硬件设施，但代价是网络需要中心化。
+虽然虚拟专用服务器 (VPS) 可用于替代家庭硬件设施，但你的验证者客户端的物理访问和位置<em>确实很重要</em>。 使用中心化云计算解决方案（如亚马逊网络服务或 Digital Ocean）的便捷之处在于，你不必拥有和操作硬件设施，但代价是网络需要中心化。
 
 在一个中心化云存储解决方案上运行的验证者客户端越多，对这些用户来说就越危险。 任何使这些提供商离线的事件，无论是攻击、监管要求，还是电力/互联网中断，都会导致每个依赖于该服务器的验证者客户端同时离线。
 
@@ -181,6 +181,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 </ExpandableCard>
 
 <ExpandableCard title="我如何解锁我的奖励或收回我的以太币？">
+
 从信标链上进行任何类型的提款都需要设置提款凭据。
 
 新质押人在生成密钥和存款时设置提款凭据。 尚未设置提款凭证的现有质押人可以升级他们的密钥，以支持提款功能。
@@ -194,6 +195,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 ## 延伸阅读 {#further-reading}
 
+- [以太坊质押目录](https://www.staking.directory/) - _Eridian 和 Spacesider_
 - [以太坊客户端多样性问题](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [帮助实现客户端多样性](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [以太坊共识层的客户端多样性](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_

@@ -22,10 +22,12 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 ## Infrastructures disponibles {#available-frameworks}
 
-**Truffle -** **_ Environnement de développement, infrastructure de test, pipeline de construction et autres outils_**
+**Foundry -** - **_Foundry est une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum_**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Installer Foundry](https://book.getfoundry.sh/)
+- [Livre sur Foundry](https://book.getfoundry.sh/)
+- [Discussions de la communauté sur le Telegram de Foundry](https://t.me/foundry_support)
+- [L'incroyable Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_Environnement de développement Ethereum pour les professionnels._**
 
@@ -37,33 +39,22 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Documentation](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Brownie -** **_Environnement de développement en Python et infrastructure de test_**
-
-- [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
-
 **Web3j -** **_Une plateforme pour le développement d'applications blockchain sur JVM._**
 
 - [Page d'accueil](https://www.web3labs.com/web3j-sdk)
 - [Documentation](https://docs.web3j.io)
-- [Github](https://github.com/web3j/web3j)
+- [GitHub](https://github.com/web3j/web3j)
 
-**OpenZeppelin SDK - \*\***_The Ultimate Smart Contract Toolkit : la suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
+**Créer une application Eth -** **_Créer des applications alimentées par Ethereum avec une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [Github](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Forum communautaire](https://forum.openzeppelin.com/c/support/17)
-
-**Create Eth App -** **_Création d'applications alimentées par Ethereum en une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
-
-- [Github](https://github.com/paulrberg/create-eth-app)
+- [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Modèles (Templates)](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
 **Scaffold-eth -** **_Les composants Ethers.js + Hardhat + React et les boucles pour web3 : tout ce dont vous avez besoin pour commencer à bâtir des applications décentralisées alimentées par des contrats intelligents._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**Probablement -** **_Plateforme de développement Web3 qui permet aux développeurs de blockchain de construire, tester, déboger, surveiller et gérer des contrats intelligents et améliorer la dApp UX._**
+**Probablement -** **_Plateforme de développement Web3 qui permet aux développeurs de blockchain de construire, tester, déboger, surveiller et gérer des contrats intelligents et améliorer la DApp UX._**
 
 - [Site Web](https://tenderly.co/)
 - [Documentation](https://docs.tenderly.co/ethereum-development-practices)
@@ -76,20 +67,44 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 **Alchemy -** **_Plateforme de développement Ethereum._**
 
 - [alchemy.com](https://www.alchemy.com/)
-- [Github](https://github.com/alchemyplatform)
+- [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
-
-**Foundry -** **_Une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum écrites en Rust._**
-
-- [Documentation](https://book.getfoundry.sh/)
-- [GitHub](https://github.com/gakonst/foundry/)
-- [Outils pour Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **NodeReal -** **_Plateforme de développement Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
+
+**thirdweb SDK -** **_Créez des applications web3 capables d'interagir avec vos contrats intelligents à l'aide de nos puissants SDK et CLI._**
+
+- [Documentation](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Plateforme de développement Web3 (Ethereum et autres)._**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Brownie -** **_Environnement de développement en Python et infrastructure de test_**
+
+- [Documentation](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **Brownie n'est plus développé actuellement**
+
+**Truffle -** **_ Environnement de développement, infrastructure de test, pipeline de construction et autres outils_**
+
+- [trufflesuite.com](https://www.trufflesuite.com/)
+- [GitHub](https://github.com/trufflesuite/truffle)
+- **Le développement de Truffle a été arrêté** - [en savoir plus](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
+
+**OpenZeppelin SDK - \*\***_The Ultimate Smart Contract Toolkit : la suite d'outils par excellence pour vous aider à développer, compiler, mettre à niveau, déployer et interagir avec des contrats intelligents._\*\*
+
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Forum communautaire](https://forum.openzeppelin.com/c/support/17)
+- **Le développement de OpenZeppelin SDK a été arrêté**
 
 ## Complément d'information {#further-reading}
 

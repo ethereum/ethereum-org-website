@@ -1,11 +1,17 @@
 import React from "react"
-import { Box, Center, useBreakpointValue, useToken } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  chakra,
+  useBreakpointValue,
+  useToken,
+} from "@chakra-ui/react"
 import {
   BarChart,
   Bar,
   Cell,
-  XAxis,
   Text,
+  XAxis,
   LabelList,
   ResponsiveContainer,
   Legend,
@@ -26,23 +32,43 @@ type Data = Array<{
   color: string
 }>
 
-const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
-  const textColor = useToken("colors", "text")
+const RechartText = chakra(Text, {
+  shouldForwardProp: (prop) => {
+    const isValidRechartProp = [
+      "width",
+      "children",
+      "x",
+      "y",
+      "dy",
+      "angle",
+      "scaleToFit",
+      "textAnchor",
+      "verticalAnchor",
+      "breakAll",
+      "maxLines",
+    ].includes(prop)
 
+    if (isValidRechartProp) return true
+
+    return false
+  },
+})
+
+const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   return (
     <g transform={`translate(${x},${y})`}>
-      <Text
+      <RechartText
         x={0}
         y={0}
         dy={15}
+        fill="text"
         width={50}
-        fill={textColor}
         textAnchor="middle"
         verticalAnchor="middle"
-        fontSize="10px"
+        fontSize="2xs"
       >
         {payload.value}
-      </Text>
+      </RechartText>
     </g>
   )
 }
@@ -56,23 +82,23 @@ const EnergyConsumptionChart: React.FC = () => {
     base: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
       },
       {
         name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
+        amount: 149,
         color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-eth-pos-label"),
@@ -83,8 +109,13 @@ const EnergyConsumptionChart: React.FC = () => {
     sm: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
       },
       {
         name: t("energy-consumption-gold-mining-cbeci-label"),
@@ -92,18 +123,13 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
         name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
+        amount: 21,
         color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.451,
+        amount: 0.457,
         color: "#E50914",
       },
       {
@@ -115,8 +141,13 @@ const EnergyConsumptionChart: React.FC = () => {
     md: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
       },
       {
         name: t("energy-consumption-gold-mining-cbeci-label"),
@@ -124,23 +155,23 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
-      },
-      {
         name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: "Google",
+        amount: 19,
+        color: "#E50914",
+      },
+      {
         name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.451,
+        amount: 0.457,
         color: "#E50914",
       },
       {
@@ -175,8 +206,7 @@ const EnergyConsumptionChart: React.FC = () => {
               dataKey="name"
               tickLine={false}
               axisLine={false}
-              // @ts-ignore
-              tick={<CustomTick />}
+              tick={(props) => <CustomTick {...props} />}
               interval={0}
             />
             <Legend

@@ -1,14 +1,12 @@
 import React from "react"
 import { graphql, PageProps } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { MDXProvider } from "@mdx-js/react"
 import {
   Badge,
   Box,
   BoxProps,
   Flex,
-  Heading,
   SimpleGrid,
   Text,
   chakra,
@@ -19,7 +17,7 @@ import {
   Show,
 } from "@chakra-ui/react"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import { List as ButtonDropdownList } from "../components/ButtonDropdown"
 import Card from "../components/Card"
 import ExpandableCard from "../components/ExpandableCard"
@@ -33,7 +31,6 @@ import MeetupList from "../components/MeetupList"
 import PageMetadata from "../components/PageMetadata"
 import ProductDisclaimer from "../components/ProductDisclaimer"
 import RandomAppList from "../components/RandomAppList"
-import UpgradeTableOfContents from "../components/UpgradeTableOfContents"
 import TableOfContents, {
   type Item as ItemTableOfContents,
 } from "../components/TableOfContents"
@@ -54,6 +51,8 @@ import WithdrawalsTabComparison from "../components/Staking/WithdrawalsTabCompar
 import Callout from "../components/Callout"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
+import LeftNavBar from "../components/LeftNavBar"
 
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
@@ -64,13 +63,11 @@ import { ChildOnlyProp, Context } from "../types"
 // TODO: move these components to a new folder under /components
 import {
   ContentContainer,
-  InfoColumn,
-  InfoTitle,
   MobileButton,
   MobileButtonDropdown,
   Page,
-  StyledButtonDropdown,
 } from "./use-cases"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Apply styles for classes within markdown here
 const Divider = (props: ChildOnlyProp) => (
@@ -82,7 +79,7 @@ const Paragraph = (props: ChildOnlyProp) => (
 )
 
 const Header1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", md: "5xl" }}
     lineHeight={1.4}
@@ -104,7 +101,7 @@ const Header1 = (props: ChildOnlyProp) => (
 )
 
 const Header4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}
@@ -159,7 +156,7 @@ const Pre = (props: ChildOnlyProp) => (
 )
 
 const H2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize="2rem"
     lineHeight={1.4}
     fontWeight="bold"
@@ -191,7 +188,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize="2xl"
     lineHeight={1.4}
@@ -237,7 +234,7 @@ const CardGrid = (props: ChildOnlyProp) => (
 )
 
 const Title = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize="2.5rem"
     lineHeight={1.4}
@@ -346,11 +343,11 @@ const StakingPage = ({
   const { summaryPoints } = mdx.frontmatter
 
   const dropdownLinks: ButtonDropdownList = {
-    text: "Staking Options",
-    ariaLabel: "Staking options dropdown menu",
+    text: "page-staking-dropdown-staking-options",
+    ariaLabel: "page-staking-dropdown-staking-options-alt",
     items: [
       {
-        text: "Staking home",
+        text: "page-staking-dropdown-home",
         to: "/staking/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -359,7 +356,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Solo staking",
+        text: "page-staking-dropdown-solo",
         to: "/staking/solo/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -368,7 +365,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Staking as a service",
+        text: "page-staking-dropdown-saas",
         to: "/staking/saas/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -377,7 +374,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "Pooled staking",
+        text: "page-staking-dropdown-pools",
         to: "/staking/pools/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -386,7 +383,7 @@ const StakingPage = ({
         },
       },
       {
-        text: "About withdrawals" as TranslationKey,
+        text: "page-staking-dropdown-withdrawals",
         to: "/staking/withdrawals/",
         matomo: {
           eventCategory: `Staking dropdown`,
@@ -401,7 +398,7 @@ const StakingPage = ({
     <Box position="relative" width="full">
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
-          <Breadcrumbs slug={location.pathname} />
+          <Breadcrumbs slug={location.pathname} mb="8" />
           <Title>{mdx.frontmatter.title}</Title>
           <UnorderedList>
             {(summaryPoints || []).map((point, idx) => (
@@ -416,8 +413,7 @@ const StakingPage = ({
             isMobile
           />
         </Flex>
-        <Image
-          as={GatsbyImage}
+        <GatsbyImage
           flex="1 1 100%"
           bgRepeat="no-repeat"
           right={0}
@@ -437,20 +433,13 @@ const StakingPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show above={lgBp}>
-          <InfoColumn>
-            <StyledButtonDropdown list={dropdownLinks} />
-            <InfoTitle>{mdx.frontmatter.title}</InfoTitle>
-
-            {tocItems && (
-              <UpgradeTableOfContents
-                items={tocItems}
-                maxDepth={mdx.frontmatter.sidebarDepth!}
-              />
-            )}
-          </InfoColumn>
-        </Show>
+        {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
+        <LeftNavBar
+          hideBelow={lgBp}
+          dropdownLinks={dropdownLinks}
+          tocItems={tocItems}
+          maxDepth={mdx.frontmatter.sidebarDepth!}
+        />
         <ContentContainer id="content">
           <MDXProvider components={components}>
             <MDXRenderer>{mdx.body}</MDXRenderer>

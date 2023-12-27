@@ -30,7 +30,7 @@ lang: ru
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Это не полный список. Нужна помощь в поиске поддержки для определенного кошелька? Присоединяйтесь к [ethereum.org на платформе Discord](https://discord.gg/rZz26QWfCg), и мы постараемся помочь._
+_Это не полный список. Нужна помощь в поиске поддержки для определенного кошелька? Присоединяйтесь к [ethereum.org на платформе Discord](https://discord.gg/ethereum-org), и мы постараемся помочь._
 
 Ищете кошелек Ethereum? [Ознакомьтесь с полным списком кошельков Ethereum](/wallets/find-wallet/).
 
@@ -43,6 +43,7 @@ _Это не полный список. Нужна помощь в поиске 
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Университет Web3](https://www.web3.university/)
+- [LearnWeb3](https://discord.com/invite/learnweb3)
 
 Вы также можете найти документацию и руководства по разработке в нашем разделе [ресурсов для разработчиков Ethereum](/developers/).
 

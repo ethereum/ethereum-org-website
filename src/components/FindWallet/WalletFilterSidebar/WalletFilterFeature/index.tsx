@@ -56,7 +56,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
 }) => {
   const { filterOptions, setShowOptions } = useWalletFilterFeature(restProps)
 
-  const filterPanelBg = useColorModeValue("primary100", "black400")
+  const filterPanelBg = useColorModeValue("chakra-subtle-bg", "black400")
   return (
     <Accordion
       as={VStack}
@@ -85,12 +85,13 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                   color="primary.base"
                   borderBottom={isExpanded ? "1px" : "none"}
                   borderColor="currentColor"
-                  fontSize="2xl"
+                  fontSize="lg"
                   fontWeight={600}
                   lineHeight={1.4}
-                  m={0}
-                  pb={isExpanded ? 3 : 0}
+                  py={1}
                   px={4}
+                  borderRadius={1}
+                  _hover={{ color: "primary.hover" }}
                 >
                   <AccordionButton
                     color="inherit"
@@ -98,11 +99,16 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                     fontSize="inherit"
                     p={0}
                     textAlign="initial"
+                    _hover={{ background: "transparent" }}
                   >
                     <Box as="span" flex={1}>
                       {filterOption.title}
                     </Box>
-                    <AccordionIcon color="primary.base" boxSize={9} />
+                    <AccordionIcon
+                      color="primary.base"
+                      boxSize={9}
+                      _hover={{ color: "primary.hover" }}
+                    />
                   </AccordionButton>
                 </Heading>
                 <AccordionPanel as={List} p={0} m={0}>
@@ -238,7 +244,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                                   width="full"
                                   onChange={handleClick}
                                 >
-                                  <Text as="p" aria-hidden="true" m={0}>
+                                  <Text as="p" aria-hidden="true">
                                     {option.name}
                                   </Text>
                                 </Checkbox>

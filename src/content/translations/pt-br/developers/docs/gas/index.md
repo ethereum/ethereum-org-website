@@ -14,41 +14,43 @@ Para entender melhor esta página, recomendamos que você leia primeiro sobre [t
 
 Gás refere-se à unidade que mede a quantidade de esforço computacional necessário para executar operações específicas na rede Ethereum.
 
-Dado que as transações Ethereum requer recursos computacionais para ser executada, cada uma delas requer uma taxa. Gás refere-se à taxa necessária para executar uma transação no Ethereum, independentemente do sucesso ou falha da transação.
+Como cada transação Ethereum requer recursos computacionais para executar, estes recursos têm de ser pagos para garantir que o Ethereum não seja vulnerável a spam e não possa ficar preso em loops computacionais infinitos. Pagamentos por computação são feitos na forma de uma taxa de gas.
 
-![Diagrama mostrando onde o consumo de gás é utilizado para as operações da EVM](./gas.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+A taxa de gas é **a quantia de gas usada para fazer alguma operação, multiplicada pelo custo da unidade de gas**. A taxa é paga independentemente da transação ter sucesso ou falhar.
 
-Essencialmente, as taxas de gas são pagas na moeda nativa do Ethereum (ETH). Os preços do gás são indicados em Gwei, uma denominação propria do ETH na qual cada Gwei é igual a 0,00000001 ETH (10<sup>-9</sup> OTH). Por exemplo, em vez de dizer que seu gás custa 0.000000001 Ether, pode-se dizer que ele custa 1 Gwei. A própria palavra "gwei" quer dizer "giga-wei", e equivale a 1.000.000.000 "wei". O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
+![Diagrama mostrando onde o consumo de gás é utilizado para as operações da EVM](./gas.png) _Diagrama adaptado do [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Antes da atualização de Londres {#pre-london}
+Taxas de gas tem que ser pagas na moeda nativa do Ethereum, ether (ETH). Preços de gas são geralmente cotados em gwei, que é uma denominação do ETH. Cada gwei é igual a um bilionésimo de um ETH (0,000000001 ETH ou 10<sup>-9</sup> ETH).
 
-A forma como as taxas de transação na rede Ethereum são calculadas foram alteradas com a [atualização de Londres](/history/#london) de agosto de 2021. Aqui está uma recapitulação de como as coisas funcionavam:
+Por exemplo, em vez de dizer que seu gás custa 0.000000001 Ether, pode-se dizer que ele custa 1 Gwei.
 
-Digamos que Alice tenha que pagar a Roberto 1 ETH. Na transação, o limite de gás é de 21.000 unidades e o preço do gás é de 200 gwei.
+A palavra 'gwei' é uma contração de 'giga-wei', significando 'bilhão de wei'. Um gwei é igual a um bilhão de wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
 
-A taxa total fica sendo:: `Gas units (limit) * Gas price per unit`, ou seja, `21,000 * 200 = 4,200,000 gwei` ou 0,0042 ETH
+## Como são calculadas as taxas de gás? {#how-are-gas-fees-calculated}
 
-## Depois da atualização de Londres {#post-london}
+Você pode definir a quantidade de gás que está disposto a pagar ao enviar uma transação. Ao oferecer uma certa quantidade de gás, você está fazendo um lance para que sua transação seja incluída no próximo bloco. Se você oferecer muito pouco, é menos provável que os validadores escolham sua transação para inclusão, o que significa que sua transação pode ser executada com atraso ou simplesmente não. Se você oferecer muito, pode desperdiçar algum ETH. Então, como você pode saber quanto deve pagar?
 
-Digamos que João tenha que pagar a Tomé 1 ETH. Na transação, o limite de gás é de 21.000 unidades e a taxa base é de 10 gwei. João inclui uma gorjeta de 2 gwei.
+O total de gás que você paga é dividido em dois componentes: a `base_fee` e a `priority fee` (gorjeta).
 
-A taxa total agora seria: `unidades de gás usadas * (taxa base + taxa de prioridade)` em que a `taxa base` é um valor definido pelo protocolo e a `prioridade taxa` é um valor definido pelo usuário como uma gorjeta para o validador.
+A `base_fee` é definida pelo protocolo - você tem que pagar pelo menos este valor para que sua transação seja considerada válida. A `priority fee` é uma gorjeta que você adiciona à taxa base (base fee) para tornar sua transação atrativa para os validadores, para que eles a escolham para inclusão no próximo bloco.
 
-ou seja, `21.000 * (10 + 2) = 252.000 gwei` ou 0,000252 ETH.
+Uma transação que paga apenas a `base_fee` é tecnicamente válida, mas é improvável que seja incluída, porque não oferece incentivo aos validadores para a escolhê-la em detrimento de qualquer outra transação. A taxa de `priority` 'correta' é determinada pelo uso da rede no momento em que você envia sua transação - se houver muita demanda, então você pode ter que definir sua taxa de `priority` maior, mas quando há menos demanda você pode pagar menos.
 
-Quando João enviar o dinheiro, 1,000252 ETH serão deduzidos da conta de João. Tomé receberá 1,0000 ETH. O validador recebe a gorjeta de 0,000042 ETH. A taxa base de 0,00021 ETH é queimada.
+Por exemplo, digamos que Jordan tem que pagar a Taylor 1 ETH. Uma transferência de ETH requer 21.000 unidades de gás e a taxa básica é de 10 gwei. João inclui uma gorjeta de 2 gwei.
 
-Além disso, João também pode definir uma taxa máxima (`maxFeePerGas`) para a transação. A diferença entre a taxa máxima e a taxa real é reembolsada a João, ou seja, `reembolso = taxa máxima - (taxa base + taxa de prioridade)`. João pode definir um valor máximo a pagar pela execução da transação e não se preocupar em pagar "além" da taxa base quando a transação for executada.
+A taxa total agora seria igual a:
 
-### Tamanho do bloco {#block-size}
+`unidades de gás usadas * (taxa de base + taxa de prioridade)`
 
-Antes da atualização London, o Ethereum tinha blocos de tamanho fixo. Em momentos de alta demanda de rede, esses blocos operaram em capacidade máxima. Como resultado, os usuários muitas vezes tiveram que esperar a redução da demanda para serem incluídos em um bloco, o que levou a uma má experiência do usuário.
+onde a `base_fee` é um valor definido pelo protocolo e a `priority fee` é um valor definido pelo usuário como gorjeta ao validador.
 
-A atualização London introduziu blocos de tamanho variável no Ethereum. Cada bloco tem um tamanho alvo de 15 milhões de gás, mas o tamanho dos blocos aumentará ou diminuirá de acordo com a demanda da rede, até o limite do bloco de 30 milhões de gás (2x o tamanho do bloco alvo). O protocolo atinge um tamanho de bloco de equilíbrio de 15 milhões em média através do processo de _tentativa e erro_. Isso significa que se o tamanho do bloco for maior que o tamanho do bloco alvo, o protocolo aumentará a taxa base para o bloco a seguir. Da mesma forma, o protocolo diminuirá a taxa base se o tamanho do bloco for menor que o tamanho do bloco de destino. A quantidade pela qual a taxa base é ajustada é proporcional ao quão longe o tamanho do bloco atual está do alvo. [Mais sobre blocos](/developers/docs/blocks/).
+ou seja, `21.000 * (10 + 2) = 252.000 gwei` (0.000252 ETH).
 
-### Taxa de base {#base-fee}
+Quando João enviar o dinheiro, 1,000252 ETH serão deduzidos da conta de João. Tomé receberá 1,0000 ETH. O validador recebe a gorjeta de 0,000042 ETH. A `taxa base` de 0,00021 ETH foi queimada.
 
-Cada bloco tem uma taxa base que funciona como um preço de reserva. Para ser elegível para inclusão em um bloco, o preço oferecido por gás deve ser pelo menos igual à taxa base. A taxa base é calculada independentemente do bloco atual e, em vez disso, é determinada pelos blocos anteriores, tornando as taxas de transação mais previsíveis para os usuários. Quando o bloco é minerado, essa taxa base é “queimada”, retirando-o de circulação.
+### Taxa base {#base-fee}
+
+Cada bloco tem uma taxa base que funciona como um preço de reserva. Para ser elegível para inclusão em um bloco, o preço oferecido por gás deve ser pelo menos igual à taxa base. A taxa base é calculada independentemente do bloco atual e, em vez disso, é determinada pelos blocos anteriores, tornando as taxas de transação mais previsíveis para os usuários. Quando o bloco é criado, esta **taxa base é "queimada"**, removendo-a de circulação.
 
 A taxa base é calculada por uma fórmula que compara o tamanho do bloco anterior (a quantidade de gás utilizada para todas as transações) com o tamanho do alvo. A taxa base aumentará em um máximo de 12,5% por bloco se o tamanho do bloco de destino for excedido. Esse crescimento exponencial torna economicamente inviável que o tamanho do bloco permaneça elevado indefinidamente.
 
@@ -63,9 +65,9 @@ A taxa base é calculada por uma fórmula que compara o tamanho do bloco anterio
 | 7               |          30M |           12,5% |      180,2 gwei |
 | 8               |          30M |           12,5% |      202,7 gwei |
 
-Em relação ao mercado de leilão de gás antes da atualização London, essa mudança no mecanismo de taxa de transação faz com que a previsão de taxa seja mais confiável. Conforme a tabela acima, para criar uma transação no bloco número 9, uma carteira informará o usuário que a **taxa base máxima** a ser adicionada ao próximo bloco é a `taxa base atual * 112,5%` ou `202,7 gwei * 112,5% = 228,1 gwei`.
+Conforme a tabela acima, para criar uma transação no bloco número 9, uma carteira informará o usuário que a **taxa base máxima** a ser adicionada ao próximo bloco é a `taxa base atual * 112,5%` ou `202,7 gwei * 112,5% = 228,1 gwei`.
 
-Também é importante notar que é improvável que vejamos picos prolongados de blocos cheios devido à velocidade com que a taxa base aumenta após um bloco cheio.
+Também é importante notar que, é improvável que veremos picos prolongados de blocos completos, devido à velocidade com que a taxa base aumenta antes de um bloco completo.
 
 | Número do bloco | Gás incluído | Aumento da taxa | Taxa base atual |
 | --------------- | -----------: | --------------: | --------------: |
@@ -77,29 +79,19 @@ Também é importante notar que é improvável que vejamos picos prolongados de 
 
 ### Taxa de prioridade (gorjetas) {#priority-fee}
 
-Antes da atualização London, os mineradores receberiam a taxa total de gás de qualquer transação incluída em um bloco.
-
-Com a nova taxa básica sendo queimada, a atualização London introduziu uma taxa prioritária (gorjeta) para incentivar os mineradores a incluir uma transação no bloco. Sem gorjetas, os mineradores achariam economicamente viável minerar blocos vazios, pois receberiam a mesma recompensa de bloco. Em condições normais, uma pequena gorjeta fornece aos mineradores um incentivo mínimo para incluir uma transação. Para transações que precisam ser executadas preferencialmente antes de outras transações no mesmo bloco, uma gorjeta mais alta será necessária para tentar superar transações concorrentes.
+A taxa de prioridade (gorjeta) incentiva os validadores a incluir uma transação no bloco. Sem gorjetas, os validadores achariam economicamente viável minerar blocos vazios, pois receberiam a mesma recompensa pelo bloco. Pequenas gorjetas dão aos validadores um incentivo mínimo para incluir uma transação. Para que as transações sejam executadas preferencialmente antes de outras transações no mesmo bloco, uma gorjeta maior pode ser adicionada para tentar ultrapassar as transações concorrentes.
 
 ### Taxa máxima {#maxfee}
 
 Para executar uma transação na rede, os usuários podem especificar um limite máximo que estão dispostos a pagar para que a sua transação seja executada. Este parâmetro opcional é conhecido como `maxFeePerGas`. Para que uma transação seja executada, a taxa máxima deve exceder a soma da taxa base e da gorjeta. O remetente da transação é reembolsado pela diferença entre a taxa máxima e a soma da taxa base e da gorjeta.
 
-### Calculando as taxas {#calculating-fees}
+### Tamanho do bloco {#block-size}
 
-Um dos principais benefícios da atualização London é melhorar a experiência do usuário ao definir as taxas de transação. Para carteiras que suportam a atualização, em vez de declarar explicitamente quanto você está disposto a pagar para realizar sua transação, os provedores de carteira definirão automaticamente uma taxa de transação recomendada (taxa base + taxa de prioridade recomendada) para reduzir a quantidade de complexidade imposta a seus usuários.
+Cada bloco tem um tamanho alvo de 15 milhões de gás, mas o tamanho dos blocos aumentará ou diminuirá de acordo com a demanda da rede, até o limite do bloco de 30 milhões de gás (2x o tamanho do bloco alvo). O protocolo atinge um tamanho de bloco de equilíbrio de 15 milhões em média através do processo de _tentativa e erro_. Isso significa que se o tamanho do bloco for maior que o tamanho do bloco alvo, o protocolo aumentará a taxa base para o bloco a seguir. Da mesma forma, o protocolo diminuirá a taxa base se o tamanho do bloco for menor que o tamanho do bloco de destino. A quantidade pela qual a taxa base é ajustada é proporcional ao quão longe o tamanho do bloco atual está do alvo. [Mais sobre blocos](/developers/docs/blocks/).
 
-## EIP-1559 {#eip-1559}
+### Calculando taxas de gás na prática {#calculating-fees-in-practice}
 
-A implementação de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) na atualização London tornou o mecanismo de taxa de transação mais complexo do que o leilão anterior sobre o preço de gás, mas tem a vantagem de tornar as taxas de gás mais previsíveis, resultando em um mercado de taxas de transação mais eficiente. Os usuários podem enviar transações com um `maxFeePerGas` correspondente ao quanto estão dispostos a pagar para a transação ser executada, sabendo que não pagarão mais do que o preço de mercado do gás (`baseFeePerGas`), e não receberão nenhum extra, exceto a gorjeta, de reembolso.
-
-Este vídeo explica o EIP-1559 e os benefícios que ele traz:
-
-<YouTube id="MGemhK9t44Q" />
-
-Se você estiver interessado, pode ler [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-
-Continue seguindo o coelho pela toca com estes [Recursos EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+Você pode explicitamente declarar o quanto está disposto a pagar para que sua transação seja executada. No entanto, a maioria dos provedores de carteira definirá automaticamente uma taxa de transação recomendada (taxa base + taxa prioritária recomendada) para reduzir a quantidade de complexidade que pesa sobre seus usuários.
 
 ## Porque as taxas de gás existem? {#why-do-gas-fees-exist}
 
@@ -107,19 +99,17 @@ Em resumo, as taxas de gás ajudam a manter a rede Ethereum segura. Ao exigir um
 
 Embora uma transação inclua um limite, qualquer gás não usado em uma transação é devolvido ao usuário (ou seja, `taxa máxima - (taxa base + gorjeta)` é retornada).
 
-![Diagrama mostrando como o gás não utilizado é reembolsado](../transactions/gas-tx.png) _Diagrama adaptado do [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![Diagrama que mostra como o gás não utilizado é reembolsado](../transactions/gas-tx.png) _Diagrama adaptado do [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 ## Qual é o limite de gás? {#what-is-gas-limit}
 
-O limite de gás refere-se à quantidade máxima de gás que você está disposto a consumir em uma transação. Transações mais complicadas envolvendo [contratos inteligentes](/developers/docs/smart-contracts/) exigem mais trabalho de cálculo, portanto, exigem um limite de gás mais alto do que um simples pagamento. Uma transferência ETH padrão requer um limite de gás de 21.000 unidades de gás.
+O limite de gás se refere à quantidade máxima de gás que você está disposto a consumir em uma transação. Transações mais complicadas envolvendo [contratos inteligentes](/developers/docs/smart-contracts/) exigem mais trabalho de cálculo, portanto, exigem um limite de gás mais alto do que um simples pagamento. Uma transferência ETH padrão requer um limite de gás de 21.000 unidades de gás.
 
-Por exemplo, se você colocar um limite de gás de 50.000 para uma simples transferência de ETH, a EVM consumirá 21.000 e você receberá de volta os 29.000 restantes. No entanto, se você especificar muito pouco gás, por exemplo, um limite de gás de 20.000 para uma simples transferência de ETH, a EVM consumirá suas 20.000 unidades de gás tentando cumprir a transação, mas não será concluída. A EVM então reverte quaisquer alterações, mas como o minerador já fez 20 mil unidades de gás de trabalho, esse gás é consumido.
+Por exemplo, se você colocar um limite de gás de 50.000 para uma simples transferência de ETH, a EVM consumirá 21.000 e você receberá de volta os 29.000 restantes. No entanto, se você especificar muito pouco gás, por exemplo, um limite de gás de 20.000 para uma simples transferência de ETH, a EVM consumirá suas 20.000 unidades de gás tentando cumprir a transação, mas não será concluída. A EVM então reverte quaisquer alterações, mas como o validador já fez 20 mil unidades de gás de trabalho, esse gás é consumido.
 
 ## Por que as taxas de gás são tão altas? {#why-can-gas-fees-get-so-high}
 
-As altas taxas de gás são devidas à popularidade do Ethereum. A execução de qualquer operação no Ethereum requer o consumo de gás e o espaço de gás é limitado por bloco. As taxas são usadas para pagar cálculos, armazenar, manipular dados ou transferir tokens, com cada um deles consumindo diferentes quantidades de unidades de “gás”. Conforme a funcionalidade do dapp se torna mais complexa, o número de operações que um contrato inteligente realiza também cresce, o que significa que cada transação ocupa mais espaço dentro de um bloco de tamanho limitado. Se houver muita demanda, os usuários devem oferecer um valor de gorjeta mais alto para tentar superar as transações de outros usuários. Uma gorjeta mais alta pode aumentar a probabilidade de sua transação entrar no próximo bloco.
-
-O preço do gás por si só não determina realmente quanto temos de pagar por uma determinada transação. Para calcular a taxa de transação, temos que multiplicar o gás usado pela taxa de gás base, que é medida em gwei.
+As altas taxas de gás são devidas à popularidade do Ethereum. Se houver muita demanda, os usuários devem oferecer valores mais altos de gorjeta e tentar superar as transações de outros usuários. Uma gorjeta mais alta pode aumentar a probabilidade de sua transação entrar no próximo bloco. Além disso, aplicativos de contratos inteligentes mais complexos podem estar realizando muitas operações para dar suporte a suas funções, fazendo com que consumam muito combustível.
 
 ## Iniciativas para reduzir os custos do gás {#initiatives-to-reduce-gas-costs}
 
@@ -127,16 +117,28 @@ As [atualizações de escalabilidade](/roadmap/) do Ethereum deverão em última
 
 A escalabilidade da camada 2 é uma iniciativa primária para melhorar significativamente os custos do gás, a experiência do usuário e a escalabilidade. [Mais sobre a escalabilidade de camada 2](/developers/docs/scaling/#layer-2-scaling).
 
-## Estratégias para pagar menos gás {#strategies-for-you-to-reduce-gas-costs}
+## O que foi a atualização London / EIP-1559? {#what-was-the-london-upgrade-eip-1559}
 
-Se você estiver procurando reduzir os custos de gás para suas transações, você pode definir uma dica para indicar o nível de prioridade de sua transação. Os mineradores "trabalham" e executam transações que oferecem uma gorjeta mais alta por gás, pois eles mantêm as gorjetas que você paga e estarão menos inclinados a executar transações com gorjetas mais baixas definidas.
+Antes da atualização London, o Ethereum tinha blocos de tamanho fixo. Em momentos de alta demanda de rede, esses blocos operaram em capacidade máxima. Como resultado, os usuários muitas vezes tiveram que esperar a redução da demanda para serem incluídos em um bloco, o que levou a uma má experiência do usuário. A atualização London introduziu blocos de tamanho variável ao Ethereum.
+
+A forma como as taxas de transação na rede Ethereum são calculadas foram alteradas com a [atualização de Londres](/history/#london) de agosto de 2021. Antes da atualização London, as taxas eram calculadas sem separar as taxas `base` e `priority`, como segue:
+
+Digamos que Alice tenha que pagar a Roberto 1 ETH. Na transação, o limite de gás é de 21.000 unidades e o preço do gás é de 200 gwei.
+
+A taxa total teria sido: `Unidades de gás (limite) * Preço do gás por unidade` ou seja, `21.000 * 200 = 4.200.000 gwei` ou 0,0042 ETH
+
+A implementação da [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) na atualização London tornou o mecanismo de taxa de transação mais complexo, mas tornou as taxas de gás mais previsíveis, resultando em um mercado de taxas de transação mais eficiente. Os usuários podem enviar transações com um `maxFeePerGas` correspondente ao quanto estão dispostos a pagar para a transação ser executada, sabendo que não pagarão mais do que o preço de mercado do gás (`baseFeePerGas`), e não receberão nenhum extra, exceto a gorjeta, de reembolso.
+
+Este vídeo explica o EIP-1559 e os benefícios que ele traz:
+
+<YouTube id="MGemhK9t44Q" />
+
+## Monitoramento de taxas de gás {#moitoring-gas-fees}
 
 Se você deseja monitorar os preços do gás, para poder enviar seu ETH por menos, pode usar muitas ferramentas diferentes, como:
 
 - [Etherscan Gas Tracker](https://etherscan.io/gastracker): _calculadora do preço do gas de uma transação_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm): _uma extensão do Chrome para estimar o preço do gás e que suporta transações do tipo 0 e do tipo 2 EIP-1559._
-
-- [ ETH Gas StationH](https://ethgasstation.info/): _métricas orientadas ao consumidor no mercado de gás de Ethereum_
 - [Calculadora de taxas de gás Cryptoneur](https://www.cryptoneur.xyz/gas-fees-calculator) _Calcule as taxas de gás em sua moeda local para diferentes tipos de transação na Rede principal, no Arbitrum e Polygon._
 
 ## Ferramentas relacionadas {#related-tools}
@@ -149,7 +151,5 @@ Se você deseja monitorar os preços do gás, para poder enviar seu ETH por meno
 - [Reduzindo o consumo de gás de seus Contratos Inteligentes](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)
 - [Prova de participação em comparação à Prova de trabalho](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Estratégias de otimização de gás para desenvolvedores](https://www.alchemy.com/overviews/solidity-gas-optimization)
-
-## Tópicos relacionados {#related-topics}
-
-- [Mineração](/developers/docs/consensus-mechanisms/pow/mining/)
+- [Documentos EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
+- [Recursos da EIP-1559 pelo Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).

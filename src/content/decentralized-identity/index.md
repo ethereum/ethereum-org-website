@@ -119,7 +119,7 @@ Here's an example to show how on-chain attestations might work in practice:
 
 3. Decentralized identity harnesses blockchain technology, which creates trust between different parties and provides cryptographic guarantees to prove the validity of attestations.
 
-4. Decentralized identity makes identity data portable. Users store attestations and identifiers in mobile wallet and can share with any party of their choice. Decentralized identifiers and attestations are not locked into the database of the issuing organization.
+4. Decentralized identity makes identity data portable. Users store attestations and identifiers in a mobile wallet and can share with any party of their choice. Decentralized identifiers and attestations are not locked into the database of the issuing organization.
 
 5. Decentralized identity should work well with emerging zero-knowledge technologies that will enable individuals to prove they own or have done something without revealing what that thing is. This could become a powerful way to combine trust and privacy for applications such as voting.
 
@@ -161,6 +161,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _A decentralized digital identity aggregator._
+- **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._
 
 ## Further reading {#further-reading}
 
@@ -170,6 +171,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - [What is Ethereum ERC725? Self-Sovereign Identity Management on the Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [How Blockchain Could Solve the Problem of Digital Identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [What Is Decentralized Identity And Why Should You Care?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Introduction to Decentralized Identity](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Videos {#videos}
 
@@ -177,9 +179,11 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - [Sign In with Ethereum and Decentralized Identity with Ceramic, IDX, React, and 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube tutorial on building out an identity management system for creating, reading, and updating a user's profile using their Ethereum wallet by Nader Dabit_
 - [BrightID - Decentralized Identity on Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless podcast episode discussing BrightID, a decentralized identity solution for Ethereum_
 - [The Off Chain Internet: Decentralized Identity & Verifiable Credentials](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentation by Evin McMullen
+- [Verifiable Credentials Explained](https://www.youtube.com/watch?v=ce1IdSr-Kig) - YouTube explainer video with demo by Tamino Baumann
 
 ### Communities {#communities}
 
 - [ERC-725 Alliance on GitHub](https://github.com/erc725alliance) — _Supporters of the ERC725 standard for managing identity on the Ethereum blockchain_
 - [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) — _Community for enthusiasts and developers working on Sign-in with Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _A community of developers contributing to building a framework for verifiable data for applications_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _A community of developers and builders working on decentralized identity use cases across various industries_

@@ -30,7 +30,7 @@ Een probleem met uw portemonnee? De meeste portemonnees hebben speciale onderste
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Dit is geen uitputtende lijst. Hulp nodig bij het vinden van ondersteuning voor een specifieke portemonnee? Doe mee met de [ethereum.org discord](https://discord.gg/rZz26QWfCg) en we zullen proberen te helpen._
+_Dit is geen uitputtende lijst. Hulp nodig bij het vinden van ondersteuning voor een specifieke portemonnee? Doe mee met de [ethereum.org discord](https://discord.gg/ethereum-org) en we zullen proberen te helpen._
 
 Op zoek naar een Ethereum-portemonnee? [Ontdek onze volledige lijst van Ethereum-portemonnees](/wallets/find-wallet/).
 
@@ -63,7 +63,7 @@ Hier zijn enkele populaire voorbeelden:
 
 Als u een node of validator uitvoert, zijn hier enkele gemeenschappen die u kunnen helpen om aan de slag te gaan.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 De meeste teams die Ethereum clients bouwen, hebben ook speciale op het publiek gerichte ruimtes waar u ondersteuning kunt krijgen en vragen kunt stellen.

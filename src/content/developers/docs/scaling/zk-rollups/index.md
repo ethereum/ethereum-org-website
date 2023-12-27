@@ -12,7 +12,7 @@ You should have read and understood our page on [Ethereum scaling](/developers/d
 
 ## What are zero-knowledge rollups? {#what-are-zk-rollups}
 
-**Zero-knowledge rollups (ZK-rollups)** bundle (or 'roll up') transactions into batches that are executed off-chain. Off-chain computation reduces the amount of data that has to be posted to the blockchain. ZK-rollup operators submit a summary of the changes required to represent all the transactions in a batch rather than sending each transaction individually. They also produce [validity proofs](/glossary/#validity-proof) to prove the correctness of their changes. The validity proof demonstrates with cryptographic certainty that the proposed changes to Ethereum's state are truly the end-result of executing all the transactions in the batch.
+**Zero-knowledge rollups (ZK-rollups)** bundle (or 'roll up') transactions into batches that are executed off-chain. Off-chain computation reduces the amount of data that has to be posted to the blockchain. ZK-rollup operators submit a summary of the changes required to represent all the transactions in a batch rather than sending each transaction individually. They also produce [validity proofs](/glossary/#validity-proof) to prove the correctness of their changes.
 
 The ZK-rollup's state is maintained by a smart contract deployed on the Ethereum network. To update this state, ZK-rollup nodes must submit a validity proof for verification. As mentioned, the validity proof is a cryptographic assurance that the state-change proposed by the rollup is really the result of executing the given batch of transactions. This means that ZK-rollups only need to provide validity proofs to finalize transactions on Ethereum instead of posting all transaction data on-chain like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
 
@@ -117,7 +117,7 @@ Before accepting transactions, the operator will perform the usual checks. This 
 
 Once the ZK-rollup node has enough transactions, it aggregates them into a batch and compiles inputs for the proving circuit to compile into a succinct ZK-proof. This includes:
 
-- A Merkle tree comprising all the transactions in the batch.
+- A Merkle tree root comprising all the transactions in the batch.
 - Merkle proofs for transactions to prove inclusion in the batch.
 - Merkle proofs for each sender-receiver pair in transactions to prove those accounts are part of the rollup's state tree.
 - A set of intermediate state roots, derived from updating the state root after applying state updates for each transaction (i.e., decreasing sender accounts and increasing receiver accounts).
@@ -240,7 +240,9 @@ Projects working on zkEVMs include:
 
 - **[Taiko](https://taiko.xyz)** - _Taiko is a decentralized, Ethereum-equivalent ZK-rollup (a [Type 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 is an EVM-compatible ZK Rollup being built by Matter Labs, powered by its own zkEVM._
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 
 ## Further reading on ZK-rollups reading {#further-reading-on-zk-rollups}
 

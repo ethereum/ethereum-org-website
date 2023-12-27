@@ -31,7 +31,7 @@ Jednym z najlepszych sposobów na dostrzeżenie potencjału DeFi jest zrozumieni
 - Usługodawcy finansowi mogą zablokować Twoje wynagrodzenie.
 - Ukrytą opłatą za usługi finansowe są Twoje dane osobowe.
 - Rządy i scentralizowane instytucje mogą zamknąć rynki finansowe w dowolnym momencie.
-- Godziny handlu często są ograniczone do poszczególnych stref czasowych.
+- Godziny handlu są często ograniczone do godzin pracy poszczególnych stref czasowych.
 - Przelewy pieniężne mogą trwać nawet kilka dni z powodu procesów zatwierdzania przez pracowników danej instytucji.
 - Za korzystanie z usług finansowych płacimy prowizję, którą instytucje pobierają na potrzeby swojego funkcjonowania.
 
@@ -40,7 +40,7 @@ Jednym z najlepszych sposobów na dostrzeżenie potencjału DeFi jest zrozumieni
 | DeFi                                                                                                                       | Tradycyjne finanse                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Twoje pieniądze rzeczywiście należą do Ciebie.                                                                             | Twoje pieniądze są przetrzymywane przez korporacje.                                                                                         |
-| Kontrolujesz, gdzie trafiają Twoje pieniądze i jak je wydajesz.                                                            | Musisz ufać instytucjom, że rozsądnie zarządzają Twoimi pieniędzmi i nie pożyczają ich niepewnym kredytobiorcom.                            |
+| Kontrolujesz, gdzie trafiają Twoje pieniądze i jak je wydajesz.                                                            | Musisz ufać firmom, że rozsądnie zarządzają Twoimi pieniędzmi i np. nie pożyczają ich ryzykownym kredytobiorcom.                            |
 | Przelewy środków trwają kilka minut.                                                                                       | Płatności mogą trwać kilka dni z powodu czynnika ludzkiego.                                                                                 |
 | Transakcje są pseudoanonimowe.                                                                                             | Cała aktywność finansowa jest ściśle związana z Twoją tożsamością.                                                                          |
 | Usługi DeFi są dostępne dla każdego.                                                                                       | Musisz złożyć wniosek o korzystanie z usług finansowych.                                                                                    |
@@ -53,7 +53,7 @@ Jednym z najlepszych sposobów na dostrzeżenie potencjału DeFi jest zrozumieni
 
 ## Wszystko zaczęło się od bitcoina... {#bitcoin}
 
-Bitcoin był pod wieloma względami pierwszą aplikacją DeFi. Bitcoin pozwala naprawdę posiadać i kontrolować wartość oraz wysyłać ją w dowolne miejsce na świecie. Jest to możliwe dzięki temu, że duża liczba osób, które sobie nie ufają, może uzgodnić księgę rachunkową bez potrzeby korzystania z zaufanego pośrednika. Bitcoin jest otwarty dla każdego i nikt nie ma prawa zmienić zasad jego działania. Zasady funkcjonowania bitcoinów, takie jak otwartość i transparentność, są wpisane do kodu źródłowego. Inaczej niż w przypadku tradycyjnych finansów, gdzie rządy mogą dodrukowywać pieniądze, co dewaluuje nasze oszczędności, a instytucje mogą zamknąć rynki.
+Bitcoin był pod wieloma względami pierwszą aplikacją DeFi. Bitcoin pozwala naprawdę posiadać i kontrolować wartość oraz wysyłać ją w dowolne miejsce na świecie. Jest to możliwe dzięki temu, że duża liczba osób, które sobie nie ufają, może uzgodnić księgę rachunkową bez potrzeby korzystania z zaufanego pośrednika. Bitcoin jest otwarty dla każdego i nikt nie ma prawa zmienić zasad jego działania. Zasady funkcjonowania bitcoinów, takie jak otwartość i transparentność, są wpisane do kodu źródłowego. Inaczej jest w przypadku tradycyjnych finansów, gdzie rządy mogą dodrukowywać pieniądze, co dewaluuje Twoje oszczędności, a instytucje mogą zamknąć rynki.
 
 Ethereum opiera się na tych zasadach. Podobnie jak w przypadku Bitcoin, są one ściśle określone i każdy może się z nimi zapoznać. Ale powoduje to również, że te cyfrowe pieniądze można programować za pomocą [inteligentnych kontraktów](/glossary#smart-contract), dzięki czemu można robić z nimi znacznie więcej niż tylko je przechowywać i wysyłać wartości.
 
@@ -143,7 +143,7 @@ Korzystanie ze zdecentralizowanego pożyczkodawcy umożliwia dostęp do funduszy
 
 #### Efektywność podatkowa {#tax-efficiencies}
 
-Pożyczki mogą dać Ci dostęp do potrzebnych środków bez konieczności sprzedaży ETH (zdarzenie podlegające opodatkowaniu). Zamiast tego można wykorzystać ETH jako zabezpieczenie kredytu na stabilne kryptowaluty. Pozwala to utrzymać płynność finansową i zachować ETH. Stabilne kryptowaluty to tokeny, które są znacznie lepsze, kiedy potrzebujesz gotówki, ponieważ nie zmieniają wartości jak np. ETH. [Więcej o stabilnych kryptowalutach](#stablecoins)
+Pożyczki mogą dać Ci dostęp do potrzebnych środków bez konieczności sprzedaży ETH (zdarzenie podlegające opodatkowaniu). Zamiast tego możesz użyć ETH jako zabezpieczenia kredytu na stablecoiny. Pozwala to utrzymać płynność finansową i zachować ETH. Stabilne kryptowaluty to tokeny, które są znacznie lepsze, kiedy potrzebujesz gotówki, ponieważ nie zmieniają wartości jak np. ETH. [Więcej o stabilnych kryptowalutach](#stablecoins)
 
 #### Pożyczki błyskawiczne {#flash-loans}
 
@@ -157,7 +157,7 @@ Fundusze, które są często wykorzystywane, znajdują się w pulach płynności
 
 Oznacza to wiele logiki biznesowej, która musi być zawarta w pojedynczej transakcji. Prostym przykładem może być ktoś, kto używa pożyczki błyskawicznej, aby pożyczyć jak najwięcej aktywów po jednej cenie, i sprzedać je na innej giełdzie, gdzie cena jest wyższa.
 
-Tak więc w ramach jednej transakcji:
+Tak więc w ramach jednej transakcji dzieje się to:
 
 - Pożyczasz ilość X zasobu $asset w cenie 1,00 USD na giełdzie A.
 - Sprzedajesz ilość X zasobu $asset na giełdzie B po 1,10 USD.
@@ -317,7 +317,7 @@ Możesz myśleć o DeFi jak o systemie wielowarstwowym:
 
 1. Łańcuch bloków — Ethereum zawiera historię transakcji i stany kont.
 2. Aktywa — [ETH](/eth/) i inne tokeny (waluty).
-3. Protokoły — [inteligentne kontrakty contracts](/glossary/#smart-contract), które zapewniają funkcjonalność, na przykład usługę pozwalającą na zdecentralizowane pożyczanie aktywów.
+3. Protokoły — [inteligentne kontrakty](/glossary/#smart-contract), które zapewniają funkcjonalność, na przykład usługę pozwalającą na zdecentralizowane pożyczanie aktywów.
 4. [Aplikacje](/dapps/) — produkty, których używamy do zarządzania protokołami i uzyskiwania dostępu do nich.
 
 ## Pomóż nam budować DeFi {#build-defi}

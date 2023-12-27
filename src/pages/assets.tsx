@@ -1,7 +1,6 @@
 // Libraries
 import React from "react"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { GatsbyImage } from "gatsby-plugin-image"
 import { graphql, PageProps } from "gatsby"
 import {
   Box,
@@ -9,7 +8,6 @@ import {
   Flex,
   Heading,
   HeadingProps,
-  Img,
   SimpleGrid,
   SimpleGridProps,
   useTheme,
@@ -21,6 +19,8 @@ import InlineLink from "../components/Link"
 import PageMetadata from "../components/PageMetadata"
 import Translation from "../components/Translation"
 import FeedbackCard from "../components/FeedbackCard"
+import OldHeading from "../components/OldHeading"
+import GatsbyImage from "../components/GatsbyImage"
 
 // Types
 import type { ChildOnlyProp, Context } from "../types"
@@ -48,7 +48,7 @@ const H2 = (prop: ChildOnlyProp & HeadingProps) => (
 )
 
 const H3 = (prop: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -73,16 +73,15 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
       <Box py={4} px={8}>
         <Flex direction="column" px={8} py={4}>
           <Center>
-            <Img
-              as={GatsbyImage}
+            <GatsbyImage
               image={getImage(assetPageHeroImage)!}
               alt={t("page-assets-eth-diamond-gray")}
             />
           </Center>
           <Center>
-            <h1>
+            <Heading as="h1" size="2xl" my={8}>
               <Translation id="page-assets-h1" />
-            </h1>
+            </Heading>
           </Center>
           <Center>
             <InlineLink to="/assets/#illustrations">
@@ -110,6 +109,70 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
             title={t("page-assets-hero")}
             alt={t("page-assets-hero")}
             image={data.hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-learn-hero-name")}
+            alt={t("page-assets-learn-hero-name")}
+            image={data.learnHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-community-hero-name")}
+            alt={t("page-assets-community-hero-name")}
+            image={data.communityHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-quizzes-hero-name")}
+            alt={t("page-assets-quizzes-hero-name")}
+            image={data.quizzesHub}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-developers-hero-name")}
+            alt={t("page-assets-developers-hero-name")}
+            image={data.developersHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-garden-name")}
+            alt={t("page-assets-garden-name")}
+            image={data.garden}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-roadmap-hero-name")}
+            alt={t("page-assets-roadmap-hero-name")}
+            image={data.roadmapHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-layer-2-hero-name")}
+            alt={t("page-assets-layer-2-hero-name")}
+            image={data.layer2Hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-guides-hero-name")}
+            alt={t("page-assets-guides-hero-name")}
+            image={data.guidesHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -701,6 +764,32 @@ export const query = graphql`
     ethWordmarkPurpleWhite: file(
       relativePath: { eq: "assets/ethereum-wordmark-purple-white.png" }
     ) {
+      ...assetItem
+    }
+    communityHero: file(relativePath: { eq: "heroes/community-hero.png" }) {
+      ...assetItem
+    }
+    developersHero: file(
+      relativePath: { eq: "heroes/developers-hub-hero.jpg" }
+    ) {
+      ...assetItem
+    }
+    garden: file(relativePath: { eq: "heroes/garden.jpg" }) {
+      ...assetItem
+    }
+    guidesHero: file(relativePath: { eq: "heroes/guides-hub-hero.jpg" }) {
+      ...assetItem
+    }
+    layer2Hero: file(relativePath: { eq: "heroes/layer-2-hub-hero.jpg" }) {
+      ...assetItem
+    }
+    learnHero: file(relativePath: { eq: "heroes/learn-hub-hero.png" }) {
+      ...assetItem
+    }
+    quizzesHub: file(relativePath: { eq: "heroes/quizzes-hub-hero.png" }) {
+      ...assetItem
+    }
+    roadmapHero: file(relativePath: { eq: "heroes/roadmap-hub-hero.jpg" }) {
       ...assetItem
     }
   }

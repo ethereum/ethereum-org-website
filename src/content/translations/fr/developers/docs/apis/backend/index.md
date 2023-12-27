@@ -143,10 +143,27 @@ Les bibliothèques suppriment une grande partie de la complexité de l'interacti
 - [Discord](https://discord.com/invite/KYswaxwEtg)
 - [Forum](https://forum.moralis.io/)
 
-**GetBlock - _Blockchain-as-a-service pour le développement Web3_**
+- [chainbase.com](https://chainbase.com/)
+- [Documentation](https://docs.chainbase.com/)
+- [Discord](https://discord.gg/Wx6qpqz4AF)
+
+**GetBlock-** **_Blockchain-as-a-service pour le développement du Web3_**
 
 - [GetBlock.io](https://getblock.io/)
 - [Documentation](https://getblock.io/docs/)
+
+**BlockPi -** **_Fournit des services RPC plus efficaces et plus rapides_**
+
+- [blockpi.io](https://blockpi.io/)
+- [Documentation](https://docs.blockpi.io/)
+- [GitHub](https://github.com/BlockPILabs)
+- [Discord](https://discord.com/invite/xTvGVrGVZv)
+
+**Tokenview -** **_La plateforme générale d'API de blockchain multi-crypto._**
+
+- [services.tokenview.io](https://services.tokenview.io/)
+- [Documentation](https://services.tokeniew/docs?type=api)
+- [GitHub](https://github.com/Tokenview)
 
 ## Complément d'information {#further-reading}
 
@@ -154,8 +171,8 @@ _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
 ## Sujets connexes {#related-topics}
 
-- [Nœuds et clients](/developers/docs/nodes-and-clients/)
-- [Infrastructures de développement](/developers/docs/frameworks/)
+- [ Nœuds et clients](/developers/docs/nodes-and-clients/)
+- [Frameworks de développement](/developers/docs/frameworks/)
 
 ## Tutoriels connexes {#related-tutorials}
 

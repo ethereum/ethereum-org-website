@@ -30,7 +30,7 @@ Aveți probleme cu portofelul dvs.? Majoritatea portofelelor au echipe de asiste
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Aceasta nu este o listă exhaustivă. Aveți nevoie de ajutor ca să găsiți asistență pentru un anumit portofel? Alăturați-vă la [ethereum.org discord](https://discord.gg/rZz26QWfCg) și vom încerca să vă ajutăm._
+_Aceasta nu este o listă exhaustivă. Aveți nevoie de ajutor ca să găsiți asistență pentru un anumit portofel? Alăturați-vă la [ethereum.org discord](https://discord.gg/ethereum-org) și vom încerca să vă ajutăm._
 
 Căutați un portofel Ethereum? [Explorați lista noastră completă de portofele Ethereum](/wallets/find-wallet/).
 
@@ -62,7 +62,7 @@ Iată doar câteva exemple populare:
 
 Dacă rulați un nod sau un validator, iată câteva comunități dedicate să vă ofere ajutor să începeți.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Cele mai multe dintre echipele care construiesc clienți Ethereum au de asemenea spații dedicate, cu caracter public, unde puteți obține asistență și pune întrebări.

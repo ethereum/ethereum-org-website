@@ -2,7 +2,6 @@ import React from "react"
 import {
   Icon,
   Box,
-  Text,
   Flex,
   LinkBox,
   LinkOverlay,
@@ -11,6 +10,7 @@ import {
 import { AiOutlineArrowRight } from "react-icons/ai"
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
+import Text from "./OldText"
 
 export interface IProps {
   children?: React.ReactNode

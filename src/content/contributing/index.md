@@ -48,7 +48,7 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 - [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
 - [Suggest a design resource](/contributing/design/adding-design-resources/) _- Add, update, and delete helpful design resources_
 
-_Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/CetY6Y4)
+_Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/ethereum-org)
 
 ## How to work on ethereum.org {#how-to-update-content}
 
@@ -59,7 +59,7 @@ All updates are made via the GitHub PR process. This means you create a local co
 You don't need permission to work on anything, but it's always best to let us know what you're planning to do. You can do this by:
 
 - Commenting on an issue or PR in [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Messaging on our [Discord server](https://discord.gg/CetY6Y4)
+- Messaging on our [Discord server](https://discord.gg/ethereum-org)
 
 Before contributing, make sure you're familiar with:
 
@@ -74,7 +74,7 @@ Decisions about individual PRs, design evolution and major upgrades are made by 
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Discord server](https://discord.gg/CetY6Y4)
+- [Discord server](https://discord.gg/ethereum-org)
 
 ### A note on plagiarism {#plagiarism}
 
@@ -92,12 +92,23 @@ If your contribution gets merged into ethereum.org, we'll mint you a unique cont
 
 ### How to claim {#how-to-claim}
 
-1. Join our [Discord server](https://discord.gg/E8dET2ux8y).
+1. Join our [Discord server](https://discord.gg/ethereum-org).
 2. Paste a link to your contribution in the `#🥇 | poaps` [channel](https://discord.com/channels/714888181740339261/804005643211898911).
 3. Wait for a member of our team to send you a link to your POAP.
 4. Claim your POAP!
 
 You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
+
+## Claim your GitPOAP {#claim-gitpoap}
+
+GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
+
+### How to claim {#how-to-claim}
+
+1. Visit [GitPOAP](https://www.gitpoap.io).
+2. Connect with your wallet or even with your email through sign in option.
+3. Search for your GitHub username, ETH address, ENS names or any GitPOAP to check if you're eligible.
+4. If your GitHub account is eligible, then you would be able to mint a GitPOAP!
 
 ## Contributors {#contributors}
 

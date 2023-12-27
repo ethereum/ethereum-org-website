@@ -3,9 +3,7 @@ import {
   Badge,
   Box,
   Flex,
-  Text,
   Divider as ChakraDivider,
-  Heading,
   Icon,
   chakra,
 } from "@chakra-ui/react"
@@ -14,7 +12,7 @@ import { useI18next } from "gatsby-plugin-react-i18next"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import ButtonLink from "../components/ButtonLink"
+import ButtonLink from "../components/Buttons/ButtonLink"
 import Breadcrumbs from "../components/Breadcrumbs"
 import Card from "../components/Card"
 import Callout from "../components/Callout"
@@ -43,17 +41,22 @@ import NetworkUpgradeSummary from "../components/History/NetworkUpgradeSummary"
 import TranslationChartImage from "../components/TranslationChartImage"
 import PostMergeBanner from "../components/Banners/PostMergeBanner"
 import EnergyConsumptionChart from "../components/EnergyConsumptionChart"
-import QuizWidget from "../components/Quiz/QuizWidget"
+import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
 import { Item as ItemTableOfContents } from "../components/TableOfContents/utils"
+import Text from "../components/OldText"
 import GlossaryDefinition from "../components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import MdLink from "../components/MdLink"
+import OldHeading from "../components/OldHeading"
 
 import { getLocaleTimestamp } from "../utils/time"
 import { isLangRightToLeft, TranslationKey } from "../utils/translations"
 import { Lang } from "../utils/languages"
 
 import { ChildOnlyProp, Context } from "../types"
+
+import { HubHero } from "../components/Hero"
+import { getImage } from "gatsby-plugin-image"
 
 const Pre = (props: ChildOnlyProp) => (
   <Text
@@ -83,7 +86,7 @@ const HR = () => (
 const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
 
 const Header1 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h1"
     fontSize={{ base: "2.5rem", md: "5xl" }}
     lineHeight={1.4}
@@ -106,7 +109,7 @@ const Header1 = (props: ChildOnlyProp) => (
 )
 
 const Header2 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     fontSize={{ base: "2xl", md: "2rem" }}
     lineHeight={1.4}
     fontWeight="bold"
@@ -123,7 +126,7 @@ const Header2 = (props: ChildOnlyProp) => (
 )
 
 const Header3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
@@ -140,7 +143,7 @@ const Header3 = (props: ChildOnlyProp) => (
 )
 
 const Header4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     lineHeight={1.4}
@@ -208,14 +211,14 @@ const components = {
   NetworkUpgradeSummary,
   TranslationChartImage,
   EnergyConsumptionChart,
-  QuizWidget,
+  QuizWidget: StandaloneQuizWidget,
   UpgradeStatus,
   GlossaryDefinition,
   GlossaryTooltip,
 }
 
 const StaticPage = ({
-  data: { siteData, pageData: mdx },
+  data: { siteData, pageData: mdx, heroImage },
   pageContext: { relativePath, slug },
   location,
 }: PageProps<Queries.StaticPageQuery, Context>) => {
@@ -246,6 +249,14 @@ const StaticPage = ({
   const { editContentUrl } = siteData.siteMetadata || {}
   const absoluteEditPath = `${editContentUrl}${relativePath}`
 
+  const parsedPathname = location.pathname
+    .split("/")
+    .filter((item) => item !== "")
+    .slice(1)
+    .join("/")
+
+  console.log(parsedPathname)
+
   return (
     <Box w="full">
       {showPostMergeBanner && (
@@ -253,6 +264,7 @@ const StaticPage = ({
           translationString={postMergeBannerTranslationString!}
         />
       )}
+
       <Flex
         justifyContent="space-between"
         w="full"
@@ -266,46 +278,59 @@ const StaticPage = ({
           title={mdx.frontmatter.title}
           description={mdx.frontmatter.description}
         />
-        <Box
-          as="article"
-          maxW="container.md"
-          w="full"
-          sx={{
-            ".featured": {
-              pl: 4,
-              ml: -4,
-              borderLeft: "1px dotted",
-              borderLeftColor: "primary.base",
-            },
-
-            ".citation": {
-              p: {
-                color: "text200",
+        <Box>
+          {parsedPathname === "guides" ? (
+            <HubHero
+              heroImgSrc={getImage(heroImage)!}
+              header={mdx.frontmatter.title}
+              title={""}
+              description={mdx.frontmatter.description}
+            />
+          ) : (
+            <>
+              <Breadcrumbs slug={slug} mb="8" />
+              <Text
+                color="text200"
+                dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+              >
+                <Translation id="page-last-updated" />:{" "}
+                {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
+              </Text>
+            </>
+          )}
+          <Box
+            as="article"
+            maxW="container.md"
+            w="full"
+            sx={{
+              ".featured": {
+                pl: 4,
+                ml: -4,
+                borderLeft: "1px dotted",
+                borderLeftColor: "primary.base",
               },
-            },
-          }}
-        >
-          <Breadcrumbs slug={slug} />
-          <Text
-            color="text200"
-            dir={isLangRightToLeft(language as Lang) ? "rtl" : "ltr"}
+
+              ".citation": {
+                p: {
+                  color: "text200",
+                },
+              },
+            }}
           >
-            <Translation id="page-last-updated" />:{" "}
-            {getLocaleTimestamp(language as Lang, lastUpdatedDate)}
-          </Text>
-          <TableOfContents
-            position="relative"
-            zIndex={2}
-            editPath={absoluteEditPath}
-            items={tocItems}
-            isMobile
-            maxDepth={mdx.frontmatter.sidebarDepth!}
-            hideEditButton={!!mdx.frontmatter.hideEditButton}
-          />
-          <MDXProvider components={components}>
-            <MDXRenderer>{mdx.body}</MDXRenderer>
-          </MDXProvider>
-          <FeedbackCard isArticle />
+            <TableOfContents
+              position="relative"
+              zIndex={2}
+              editPath={absoluteEditPath}
+              items={tocItems}
+              isMobile
+              maxDepth={mdx.frontmatter.sidebarDepth!}
+              hideEditButton={!!mdx.frontmatter.hideEditButton}
+            />
+            <MDXProvider components={components}>
+              <MDXRenderer>{mdx.body}</MDXRenderer>
+            </MDXProvider>
+            <FeedbackCard isArticle />
+          </Box>
         </Box>
         {tocItems && (
           <TableOfContents
@@ -343,6 +368,16 @@ export const staticPageQuery = graphql`
           data
           language
         }
+      }
+    }
+    heroImage: file(relativePath: { eq: "heroes/guides-hub-hero.jpg" }) {
+      childImageSharp {
+        gatsbyImageData(
+          width: 1504
+          layout: CONSTRAINED
+          placeholder: BLURRED
+          quality: 100
+        )
       }
     }
     siteData: site {

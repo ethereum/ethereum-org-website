@@ -30,7 +30,7 @@ Having trouble with your wallet? Most wallets have dedicated support teams that 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_This is not an exhaustive list. Need help finding support for a specific wallet? Join the [ethereum.org discord](https://discord.gg/rZz26QWfCg) and we'll try to help._
+_This is not an exhaustive list. Need help finding support for a specific wallet? Join the [ethereum.org discord](https://discord.gg/ethereum-org) and we'll try to help._
 
 Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Looking for an Ethereum wallet? [Explore our full list of Ethereum wallets](/wal
 Building can be hard. Here are some development focused spaces with experienced Ethereum developers that are happy to help.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -65,7 +65,7 @@ Here are some popular examples:
 
 If you're running a node or validator, here are some communities that are dedicated to helping you get started.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Most of the teams building Ethereum clients also have dedicated, public-facing, spaces where you can get support and ask questions.

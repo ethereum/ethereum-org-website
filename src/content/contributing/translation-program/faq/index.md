@@ -18,7 +18,7 @@ The goal of the Translation Program is to make Ethereum content accessible to ev
 
 For this reason, the Translation Program is open and voluntary, and participation is not subject to compensation. If we were to compensate translators for the number of words they translate, we could only invite those with sufficient translation experience (professional translators) to join the Translation Program. This would make the Translation Program exclusionary and prevent us from reaching the outlined goals, specifically: allowing everyone to participate and get involved with the ecosystem.
 
-We make every effort to enable our contributors to succeed in the Ethereum ecosystem; many non-monteary incentives are in place such as: [offering POAPs](/contributing/translation-program/acknowledgements/#poap) and a [translator certificate](/contributing/translation-program/acknowledgements/#certificate), as well as organizing the [Translation Leaderboards](/contributing/translation-program/acknowledgements/) and [listing all of our translators on the site](/contributing/translation-program/contributors/).
+We make every effort to enable our contributors to succeed in the Ethereum ecosystem; many non-monetary incentives are in place such as: [offering POAPs](/contributing/translation-program/acknowledgements/#poap) and a [translator certificate](/contributing/translation-program/acknowledgements/#certificate), as well as organizing the [Translation Leaderboards](/contributing/translation-program/acknowledgements/) and [listing all of our translators on the site](/contributing/translation-program/contributors/).
 
 ## How do I translate strings with `<HTML tags>`? {#tags}
 
@@ -116,4 +116,4 @@ We plan to add support for non-English content additions in the near future.
 
 ## Get in touch {#contact}
 
-Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/XVepFu7sqR) to ask questions and collaborate with other translators, or reach out to us at translations@ethereum.org!
+Thank you for reading through all of these. We hope this helps you to onboard our program. Feel free to join our [Discord translation channel](https://discord.gg/ethereum-org) to ask questions and collaborate with other translators, or reach out to us at translations@ethereum.org!

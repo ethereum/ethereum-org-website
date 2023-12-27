@@ -10,7 +10,7 @@ O Guia de Estilo de Tradução do ethereum.org contém algumas das diretrizes, i
 
 Este documento serve como um guia geral e não é específico para nenhum idioma.
 
-Se você tiver alguma dúvida, sugestão ou feedback, entre em contato conosco em translations@ethereum.org, envie uma mensagem para @ethdotorg no Crowdin, ou [inscreva-se no nosso Discord](https://discord.gg/XVepFu7sqR), onde você poderá nos enviar mensagens no canal #translations ou entrar em contato com qualquer um dos membros da equipe.
+Se você tiver alguma dúvida, sugestão ou feedback, entre em contato conosco em translations@ethereum.org, envie uma mensagem para @ethdotorg no Crowdin, ou [inscreva-se no nosso Discord](https://discord.gg/ethereum-org), onde você poderá nos enviar mensagens no canal #translations ou entrar em contato com qualquer um dos membros da equipe.
 
 ### Como usar o Crowdin {#using-crowdin}
 
