@@ -30,9 +30,9 @@ import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
   args: {
-    title: "learn-hub",
-    header: "hero-header",
-    description: "hero-subtitle",
+    title: "common:learn-hub",
+    header: "page-learn:hero-header",
+    description: "page-learn:hero-subtitle",
     heroImg: learnHubHeroImg,
   },
 
@@ -42,7 +42,7 @@ export const HubHero: StoryObj<typeof meta> = {
 
     const buttons: CommonHeroProps["buttons"] = [
       {
-        content: t("hero-button-lets-get-started"),
+        content: t("page-learn:hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
