@@ -77,3 +77,4 @@ By shifting the direction of capital away from extractive practices toward a reg
 - [The Ministry for the Future, a novel depicting the role of a carbon-backed currency in fighting climate change](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
 - [A detailed report by the Taskforce for Scaling Voluntary Carbon Markets](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
 - [Kevin Owocki and Evan Miyazono’s CoinMarketCap Glossary entry on ReFi](https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)
+- [What is ReFi? Regenerative Finance Explained](https://frankiefab.hashnode.dev/what-is-refi-regenerative-finance-explained)
