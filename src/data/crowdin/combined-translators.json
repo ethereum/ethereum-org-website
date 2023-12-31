@@ -2418,7 +2418,7 @@
           {
             "id": 15123193,
             "username": "Coram_Deo",
-            "totalCosts": 3003.74,
+            "totalCosts": 3535,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15123193/medium/b3211607cc43c707c0034f7502299d8d.jpeg"
           },
           {
@@ -2426,6 +2426,12 @@
             "username": "Ndjsl01",
             "totalCosts": 48.48,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16141426/medium/8076d339c9504fd8c8ada15918b38175_default.png"
+          },
+          {
+            "id": 16157350,
+            "username": "Veri88",
+            "totalCosts": 48.48,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16157350/medium/2dfe0cfc9a703b0640e740eae153e2e1.png"
           },
           {
             "id": 14920111,
@@ -19346,6 +19352,12 @@
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/17361/medium/fecfafa7716ac9d6838b43c31f48f6b9.png"
           },
           {
+            "id": 12844463,
+            "username": "MATsxm",
+            "totalCosts": 14.14,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
+          },
+          {
             "id": 14572502,
             "username": "Little_UY_Scuti",
             "totalCosts": 12.12,
@@ -19368,12 +19380,6 @@
             "username": "Elikill58",
             "totalCosts": 5.05,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/14587890/medium/1d5b3a9de8a7b7f6082357f1fe99d654.jpeg"
-          },
-          {
-            "id": 12844463,
-            "username": "MATsxm",
-            "totalCosts": 5.05,
-            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/12844463/medium/6fae27edb4b41f363587f737ea2f96de.jpg"
           }
         ]
       },
@@ -34796,7 +34802,7 @@
           {
             "id": 15208868,
             "username": "HiroyukiNaito",
-            "totalCosts": 923.14,
+            "totalCosts": 935.26,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg"
           },
           {
@@ -62170,6 +62176,12 @@
             "username": "linxd",
             "totalCosts": 16.16,
             "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/13555518/medium/7857fc7cd3690f272e61c6c33185c508.png"
+          },
+          {
+            "id": 16156296,
+            "username": "ningxxu",
+            "totalCosts": 16.16,
+            "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16156296/medium/086e5585aa0d1a2d037cd72e68e26988_default.png"
           },
           {
             "id": 15327162,
