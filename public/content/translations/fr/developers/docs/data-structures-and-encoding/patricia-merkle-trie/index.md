@@ -160,14 +160,14 @@ Voici le code étendu pour obtenir un nœud dans l'arbre de Merkle Patricia :
 
 ### Exemple d'arbre {#example-trie}
 
-Supposons que nous voulions un tableau contenant quatre couples chemin/valeur `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Supposons que nous voulions un tableau contenant quatre couples chemin/valeur `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Tout d'abord, nous convertissons les chemins et les valeurs en `bytes` (octets). Ci-dessous, les représentations réelles d'octets pour les _chemins_ sont désignées par `<>`, bien que les _valeurs_ soient toujours représentées sous forme de chaînes, désignées par `''`, pour une compréhension plus facile (elles aussi seraient en fait des `octets`) :
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -176,12 +176,12 @@ Nous construisons un tel arbre avec les paires clé/valeur suivantes dans la bas
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Lorsqu'un nœud est référencé à l'intérieur d'un autre nœud, ce qui est inclus est `H(rlp.encode(x))`, où `H(x) = keccak256(x) if len(x) >= 32 else x` et `rlp.encode` est la fonction d'encodage [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Lorsqu'un nœud est référencé à l'intérieur d'un autre nœud, ce qui est inclus est `H(rlp.encode(node))`, où `H(x) = keccak256(x) if len(x) >= 32 else x` et `rlp.encode` est la fonction d'encodage [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Notez que lors de la mise à jour d'un arbre, on doit stocker la paire clé/valeur `(keccak256(x), x)`dans une table de consultation persistante _si_ le nœud nouvellement créé a une longueur >= 32. Toutefois, si le nœud est plus court que cela, il n'est pas nécessaire de stocker quoi que ce soit, puisque la fonction f(x) = x est réversible.
 
