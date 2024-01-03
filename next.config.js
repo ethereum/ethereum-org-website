@@ -34,6 +34,9 @@ module.exports = (phase, { defaultConfig }) => {
       return config
     },
     i18n,
+    images: {
+      deviceSizes: [640, 750, 828, 1080, 1200, 1504],
+    },
   }
 
   if (phase !== PHASE_DEVELOPMENT_SERVER) {
