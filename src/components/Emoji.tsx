@@ -4,9 +4,11 @@ import { Twemoji, BaseProps } from "react-emoji-render"
 
 import { IS_DEV } from "../utils/env"
 
-export interface IProps extends Omit<BoxProps, "children">, BaseProps {}
+export interface IProps extends Omit<BoxProps, "children">, BaseProps {
+  isFlag?: boolean;
+}
 
-const Emoji = (props: IProps) => {
+const Emoji = ({ isFlag, ...props }: IProps) => {
   return (
     <Box
       as={Twemoji}
@@ -18,7 +20,7 @@ const Emoji = (props: IProps) => {
       options={{ protocol: IS_DEV ? "http" : "https" }}
       svg
       display="inline-block"
-      lineHeight="none"
+      lineHeight={isFlag ? "" : "none"}
       sx={{
         "& > img": {
           margin: "0 !important",
