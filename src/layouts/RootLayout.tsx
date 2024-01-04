@@ -8,6 +8,7 @@ import type { Root } from "@/lib/types"
 import FeedbackWidget from "@/components/FeedbackWidget"
 import Footer from "@/components/Footer"
 import Nav from "@/components/Nav"
+import { SkipLink } from "@/components/SkipLink"
 import TranslationBanner from "@/components/TranslationBanner"
 import TranslationBannerLegal from "@/components/TranslationBannerLegal"
 
@@ -47,6 +48,8 @@ export const RootLayout = ({
 
   return (
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
+      <SkipLink />
+
       <Nav path={asPath} />
 
       <TranslationBanner
