@@ -35,7 +35,7 @@ module.exports = (phase, { defaultConfig }) => {
     },
     i18n,
     images: {
-      deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920, 2048],
+      deviceSizes: [640, 750, 828, 1080, 1200, 1504, 1920],
     },
   }
 
