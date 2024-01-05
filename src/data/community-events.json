@@ -178,5 +178,14 @@
     "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
     "startDate": "2023-12-8",
     "endDate": "2023-12-10"
+  },
+  {
+    "title": "ETHVietnam 2024",
+    "to": "https://www.eth-vietnam.com/",
+    "sponsor": null,
+    "location": "Hanoi, Vietnam",
+    "description": "ETH Community in SEA to build, learn and share together.",
+    "startDate": "2024-3-9",
+    "endDate": "2024-3-10"
   }
 ]
