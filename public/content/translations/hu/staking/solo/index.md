@@ -4,7 +4,7 @@ description: Az önálló letétbe helyezés áttekintése
 lang: hu
 template: staking
 emoji: ":money_with_wings:"
-image: ..//staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Leslie, a rinocérosz a saját számítógépes chipjén.
 sidebarDepth: 2
 summaryPoints:
