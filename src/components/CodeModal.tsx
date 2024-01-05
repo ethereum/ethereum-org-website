@@ -30,7 +30,12 @@ const CodeModal: React.FC<IProps> = ({
       <ModalOverlay />
       <ModalContent>
         <ModalHeader>{title}</ModalHeader>
-        <ModalCloseButton />
+        <ModalCloseButton
+          style={{
+            right: "unset",
+            insetInlineEnd: "var(--eth-sizes-4)",
+          }}
+        />
 
         <ModalBody>{children}</ModalBody>
       </ModalContent>
