@@ -1,14 +1,15 @@
 import { ReactNode } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
 
 import type {
-  BeaconchainData,
+  BasePageProps,
   ChildOnlyProp,
   EpochResponse,
   EthStoreResponse,
+  StakingStatsData,
 } from "@/lib/types"
 
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
@@ -33,8 +34,12 @@ import StakingHierarchy from "@/components/Staking/StakingHierarchy"
 import StakingStatsBox from "@/components/Staking/StakingStatsBox"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { BASE_TIME_UNIT } from "@/lib/constants"
 
 import rhino from "@/public/upgrades/upgrade_rhino.png"
 
@@ -44,10 +49,6 @@ type BenefitsType = {
   description: string
   linkText?: string
   to?: string
-}
-
-type Props = SSRConfig & {
-  data: BeaconchainData
 }
 
 const PageContainer = (props: ChildOnlyProp) => (
@@ -171,7 +172,7 @@ const StyledCard = (props: {
   </Card>
 )
 
-const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
+const fetchBeaconchainData = async (): Promise<StakingStatsData> => {
   // Fetch Beaconcha.in data
   const base = "https://beaconcha.in"
   const { href: ethstore } = new URL("api/v1/ethstore/latest", base)
@@ -200,21 +201,30 @@ const fetchBeaconchainData = async (): Promise<BeaconchainData> => {
   return { totalEthStaked, validatorscount, apr }
 }
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
+const cachedFetchBeaconchainData = runOnlyOnce(fetchBeaconchainData)
+
+type Props = BasePageProps & {
+  data: StakingStatsData
+}
+
+export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
 
-  // load i18n required namespaces for the given page
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
-  const data = await fetchBeaconchainData()
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  const data = await cachedFetchBeaconchainData()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
-      lastDeployDate,
+      contentNotTranslated,
       data,
+      lastDeployDate,
     },
+    // Updated once a day
+    revalidate: BASE_TIME_UNIT * 24,
   }
 }) satisfies GetStaticProps<Props>
 
@@ -369,7 +379,7 @@ const StakingPage = ({
           tocItems={tocArray}
           hideBelow={lgBp}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           <Flex direction="column" gap={16} mt={{ base: 16, lg: 0 }}>
             <Box>
               <H2 id={tocItems.whatIsStaking.id}>

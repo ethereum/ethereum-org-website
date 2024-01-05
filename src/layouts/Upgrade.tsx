@@ -3,7 +3,6 @@ import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
-  Center,
   Flex,
   type FlexProps,
   Icon,
@@ -14,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, Lang /* Context */ } from "@/lib/types"
+import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
 import BeaconChainActions from "@/components/BeaconChainActions"
@@ -37,6 +36,8 @@ import UpgradeStatus from "@/components/UpgradeStatus"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
@@ -205,7 +206,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
         )}
       </HeroContainer>
       <Show above={lgBreakpoint}>
-        <MoreContent to="#content">
+        <MoreContent to={"#" + MAIN_CONTENT_ID}>
           <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
         </MoreContent>
       </Show>
@@ -217,7 +218,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           tocItems={tocItems}
           maxDepth={frontmatter.sidebarDepth!}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           {children}
           <FeedbackCard />
         </ContentContainer>

@@ -1,6 +1,6 @@
 import { ReactNode } from "react"
 import { GetStaticProps } from "next"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -11,7 +11,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
@@ -20,11 +20,13 @@ import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -56,7 +58,7 @@ const GrayContainer = (props: ChildOnlyProp) => (
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Box as={MainArticle} py={4} px={8} w="full" {...props} />
 )
 
 const Subtitle = (props: TextProps) => (
@@ -134,19 +136,21 @@ const StyledCallout = chakra(Callout, {
   },
 })
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/developers")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 interface IDevelopersPath {
   emoji: string

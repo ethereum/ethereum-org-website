@@ -1,35 +1,36 @@
-import React from "react"
-import type { GetStaticProps, NextPage } from "next"
-import type { SSRConfig } from "next-i18next"
+import type { GetStaticProps } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
+import { BasePageProps } from "@/lib/types"
+
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import Translation from "@/components/Translation"
+
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import InlineLink from "../components/Link"
-import Translation from "../components/Translation"
-
-type Props = SSRConfig
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const NotFoundPage = () => (
   <Flex flexDir="column" align="center" w="full" mt={16} mb={0} mx="auto">
-    <Box py={4} px={8} w="full">
+    <Box as={MainArticle} py={4} px={8} w="full">
       <Heading as="h1" size="2xl" my={8}>
         <Translation id="we-couldnt-find-that-page" />
       </Heading>

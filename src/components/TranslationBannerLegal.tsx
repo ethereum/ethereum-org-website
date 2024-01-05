@@ -14,14 +14,12 @@ import Translation from "./Translation"
 
 export interface IProps {
   shouldShow: boolean
-  isPageRightToLeft: boolean
   originalPagePath: string
 }
 
 const TranslationBannerLegal: React.FC<IProps> = ({
   shouldShow,
   originalPagePath,
-  isPageRightToLeft,
 }) => {
   // Default to isOpen being false, and let the useEffect set this.
   const [isOpen, setIsOpen] = useState(false)
@@ -61,12 +59,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
           md: "rgba(0, 0, 0, 0.16) 0px 2px 4px 0px",
         }}
       >
-        <Flex
-          direction="column"
-          align={isPageRightToLeft ? "flex-end" : "flex-start"}
-          m={4}
-          mt={{ base: 10, sm: 4 }}
-        >
+        <Flex direction="column" m={4} mt={{ base: 10, sm: 4 }}>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
             flexDirection={{ base: "column-reverse", sm: "row" }}
@@ -111,7 +104,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top={0}
-          insetInlineEnd={isPageRightToLeft ? "auto" : 0}
+          insetInlineEnd="0"
           margin={4}
           color="secondary"
           _hover={{

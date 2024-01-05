@@ -1,22 +1,23 @@
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
-import { SSRConfig } from "next-i18next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
 
-import { ChildOnlyProp, LearningTool } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, LearningTool } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
+import MainArticle from "@/components/MainArticle"
 import Heading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import Translation from "@/components/Translation"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -62,6 +63,7 @@ const Header = (props: ChildOnlyProp) => (
     maxW="896px"
     py={0}
     px={8}
+    m="auto"
     {...props}
   />
 )
@@ -115,23 +117,25 @@ const StackContainer = (props: ChildOnlyProp) => (
   />
 )
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage(
     "/developers/learning-tools"
   )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
-const DevelopersPage = () => {
+const LearningToolsPage = () => {
   const { t } = useTranslation(["page-developers-learning-tools"])
 
   const randomizedSandboxes: Array<LearningTool> = shuffle([
@@ -401,72 +405,77 @@ const DevelopersPage = () => {
           "page-developers-learning-tools:page-learning-tools-meta-desc"
         )}
       />
-      <Header>
-        <H1>
-          <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
-        </H1>
-        <Subtitle>
-          <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
-        </Subtitle>
-      </Header>
-      <StackContainer>
-        <SubtitleTwo>
-          <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
-        </SubtitleTwo>
-        <Text>
-          <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
-        </Text>
-        <LearningToolsCardGrid category={randomizedSandboxes} />
-        <InfoBanner emoji=":point_up:" shouldCenter>
-          <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
-        </InfoBanner>
-      </StackContainer>
-      <StackContainer>
-        <SubtitleTwo>
-          <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
-        </SubtitleTwo>
-        <Text>
-          <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
-        </Text>
-        <LearningToolsCardGrid category={games} />
-      </StackContainer>
-      <StackContainer>
-        <SubtitleTwo>
-          <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
-        </SubtitleTwo>
-        <Text>
-          <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
-        </Text>
-        <LearningToolsCardGrid category={bootcamps} />
-      </StackContainer>
-      <ContentBox>
-        <CalloutBanner
-          mx={4}
-          mt={24}
-          mb={40}
-          image={EnterpriseEth}
-          alt={t(
-            "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
-          )}
-          titleKey={
-            "page-developers-learning-tools:page-learning-tools-documentation"
-          }
-          descriptionKey={
-            "page-developers-learning-tools:page-learning-tools-documentation-desc"
-          }
-        >
-          <Box>
-            <ButtonLink to="/developers/docs/">
-              <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
-            </ButtonLink>
-          </Box>
-        </CalloutBanner>
-      </ContentBox>
-      <ContentBox>
-        <FeedbackCard />
-      </ContentBox>
+      <MainArticle w="full">
+        <Box w="full">
+          <Header>
+            <H1>
+              <Translation id="page-developers-learning-tools:page-learning-tools-coding" />
+            </H1>
+            <Subtitle>
+              <Translation id="page-developers-learning-tools:page-learning-tools-coding-subtitle" />
+            </Subtitle>
+          </Header>
+        </Box>
+        <StackContainer>
+          <SubtitleTwo>
+            <Translation id="page-developers-learning-tools:page-learning-tools-sandbox" />
+          </SubtitleTwo>
+          <Text>
+            <Translation id="page-developers-learning-tools:page-learning-tools-sandbox-desc" />
+          </Text>
+          <LearningToolsCardGrid category={randomizedSandboxes} />
+          <InfoBanner emoji=":point_up:" shouldCenter>
+            <Translation id="page-developers-learning-tools:page-learning-tools-remix-description-2" />
+          </InfoBanner>
+        </StackContainer>
+        <StackContainer>
+          <SubtitleTwo>
+            <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials" />
+          </SubtitleTwo>
+          <Text>
+            <Translation id="page-developers-learning-tools:page-learning-tools-game-tutorials-desc" />
+          </Text>
+          <LearningToolsCardGrid category={games} />
+        </StackContainer>
+        <StackContainer>
+          <SubtitleTwo>
+            <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps" />
+          </SubtitleTwo>
+          <Text>
+            <Translation id="page-developers-learning-tools:page-learning-tools-bootcamps-desc" />
+          </Text>
+          <LearningToolsCardGrid category={bootcamps} />
+        </StackContainer>
+        <ContentBox>
+          <CalloutBanner
+            mx={4}
+            mt={24}
+            mb={40}
+            image={EnterpriseEth}
+            alt={t(
+              "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
+            )}
+            titleKey={
+              "page-developers-learning-tools:page-learning-tools-documentation"
+            }
+            descriptionKey={
+              "page-developers-learning-tools:page-learning-tools-documentation-desc"
+            }
+          >
+            <Box>
+              <ButtonLink to="/developers/docs/">
+                <Translation id="page-developers-learning-tools:page-learning-tools-browse-docs" />
+              </ButtonLink>
+            </Box>
+          </CalloutBanner>
+        </ContentBox>
+        <ContentBox>
+          <FeedbackCard />
+        </ContentBox>
+      </MainArticle>
+      
     </Page>
   )
 }
 
-export default DevelopersPage
+export default LearningToolsPage

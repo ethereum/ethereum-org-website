@@ -1,5 +1,5 @@
 import { useCallback } from "react"
-import { Text, VStack } from "@chakra-ui/react"
+import { Text, type TextProps, VStack } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -12,13 +12,20 @@ export const QuizContent = ({ children }: QuizContentProps) => {
 
   const getTitleContent = useCallback((): string => {
     if (!answerStatus) return title
-    
-    return answerStatus === 'correct' ? "Correct!" : "Incorrect"
+
+    return answerStatus === "correct" ? "Correct!" : "Incorrect"
   }, [answerStatus, title])
-  
+
+  const getTitleTextColor = (): TextProps["color"] => {
+    if (!answerStatus) return "primary.hover"
+    return answerStatus === "correct" ? "success.base" : "fail.base"
+  }
+
   return (
     <VStack spacing="4">
-      <Text>{getTitleContent()}</Text>
+      <Text fontWeight="bold" textAlign="center" color={getTitleTextColor()}>
+        {getTitleContent()}
+      </Text>
       {children}
     </VStack>
   )

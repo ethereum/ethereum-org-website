@@ -2,7 +2,6 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
-  type BoxProps,
   chakra,
   Divider,
   Flex,
@@ -16,10 +15,7 @@ import {
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-// TODO: Import once intl implements?
-// import PageMetadata from "@/components/PageMetadata"
 import PostMergeBanner from "@/components/Banners/PostMergeBanner"
-// Components
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
@@ -31,6 +27,7 @@ import FeedbackCard from "@/components/FeedbackCard"
 import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
+import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -38,6 +35,7 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
+import PageMetadata from "@/components/PageMetadata"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
@@ -47,13 +45,13 @@ import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
-const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
+const ContentContainer = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
   const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
-      as="article"
+      as={MainArticle}
       maxW="1000px"
       minW={0}
       background="background.base"
@@ -211,12 +209,6 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        {/* TODO: Implement PageMetaData after intl */}
-        {/* <PageMetadata
-          title={frontmatter.title}
-          description={frontmatter.description}
-          canonicalUrl={frontmatter.sourceUrl}
-        /> */}
         <ContentContainer>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />

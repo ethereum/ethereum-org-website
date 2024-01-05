@@ -118,10 +118,17 @@ const CustomRadio = ({
   ...radioProps
 }: CustomRadioProps) => {
   const INPUT_ID = `quiz-question-answer-${index}`
-  const { getInputProps, getRadioProps, getLabelProps } = useRadio({
+  const { state, getInputProps, getRadioProps, getLabelProps } = useRadio({
     ...radioProps,
     id: INPUT_ID,
   })
+
+  const buttonBg = useMemo<string>(() => {
+    if (!state.isChecked) return "body.inverted"
+    if (!isAnswerVisible) return "primary.base"
+    if (!isSelectedCorrect) return "error.base"
+    return "success.base"
+  }, [state.isChecked, isAnswerVisible, isSelectedCorrect])
 
   const primaryBaseColor = useToken("colors", "primary.base")
 
@@ -149,6 +156,7 @@ const CustomRadio = ({
           w="full"
           p="2"
           color="text"
+          bg={buttonBg}
           borderRadius="base"
           _hover={{
             outline: isAnswerVisible ? "none" : `1px solid ${primaryBaseColor}`,

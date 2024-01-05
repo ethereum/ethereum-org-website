@@ -39,19 +39,20 @@ import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import InfoBanner from "./InfoBanner"
+import MainArticle from "./MainArticle"
 
 /**
  * Base HTML elements
  */
-const headingPropsForAnchor = (id?: string): HeadingProps =>
-  id
-    ? ({
-        scrollMarginTop: 28,
-        id,
-        "data-group": true,
-        position: "relative",
-      } as HeadingProps)
-    : {}
+const headingPropsForAnchor = (id?: string): HeadingProps => {
+  if (!id) return {}
+  return {
+    scrollMarginTop: 28,
+    id,
+    "data-group": true,
+    position: "relative",
+  } as HeadingProps
+}
 
 export const commonHeadingProps = (id?: string): HeadingProps => ({
   fontWeight: 700,
@@ -59,24 +60,23 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
   ...headingPropsForAnchor(id),
 })
 
-const IdAnchor: React.FC<{ id?: string }> = ({ id }) =>
-  id ? (
+const IdAnchor: React.FC<{ id?: string }> = ({ id }) => {
+  if (!id) return null
+  return (
     <Link
-      href={`#${id}`}
+      href={"#" + id}
       position="absolute"
       insetInlineEnd="100%"
       aria-label={id.replaceAll("-", " ") + " permalink"}
+      opacity={0}
+      _groupHover={{ opacity: 1 }}
+      _focus={{ opacity: 1 }}
+      transition="opacity 0.1s ease-in-out"
     >
-      <Icon
-        as={CiLink}
-        opacity={0}
-        _groupHover={{ opacity: 1 }}
-        transition="opacity 0.1s ease-in-out"
-        fontSize="xl"
-        me={1}
-      />
+      <Icon as={CiLink} fontSize="xl" me="1" />
     </Link>
-  ) : null
+  )
+}
 
 export const Heading1 = ({ children, ...rest }: HeadingProps) => (
   <OldHeading as="h1" {...commonHeadingProps()} fontSize="2.5rem" {...rest}>
@@ -186,7 +186,7 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
 
   return (
     <Box
-      as="article"
+      as={MainArticle}
       flex={`1 1 ${lgBp}`}
       position="relative"
       px={8}

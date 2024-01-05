@@ -68,7 +68,7 @@ const headingScale: Array<HeadingProps> = [
 
 export const Heading: Story = {
   args: {
-    children: <Translation id="page-index-title" />,
+    children: <Translation id="page-index:page-index-title" />,
   },
   render: (args) => (
     <VStack w="full">
@@ -85,7 +85,7 @@ export const Heading: Story = {
               textAlign="end"
               size={obj.size}
             >
-              {obj.size || "xl"}
+              {(obj.size as string) || "xl"}
             </HeadingComponent>
             <HeadingComponent flex="3" {...obj}>
               {args.children}

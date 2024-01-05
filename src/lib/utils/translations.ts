@@ -54,8 +54,27 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-index"]
   }
 
+  if (path === "/contributing/translation-program/acknowledgements") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-contributing-translation-program-acknowledgements",
+    ]
+  }
+
+  if (path === "/contributing/translation-program/contributors") {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-contributing-translation-program-contributors",
+      "page-languages",
+    ]
+  }
+
   if (path.startsWith("/community")) {
     requiredNamespaces = [...requiredNamespaces, "page-community"]
+  }
+
+  if (path.startsWith("/dapps")) {
+    requiredNamespaces = [...requiredNamespaces, "page-dapps"]
   }
 
   if (path.startsWith("/energy-consumption")) {
@@ -70,7 +89,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-eth"]
   }
 
-  if (path.startsWith("/glossary")) {
+  if (path.startsWith("/glossary") || path.startsWith("/dapps")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
@@ -78,12 +97,19 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-history"]
   }
 
+  if (path.startsWith("/stablecoins")) {
+    requiredNamespaces = [...requiredNamespaces, "page-stablecoins"]
+  }
+
   if (path.startsWith("/staking")) {
     requiredNamespaces = [...requiredNamespaces, "page-staking"]
   }
 
   if (path.startsWith("/staking/deposit-contract")) {
-    requiredNamespaces = [...requiredNamespaces, "page-staking-deposit-contract"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-staking-deposit-contract",
+    ]
   }
 
   if (path.startsWith("/developers")) {
@@ -104,7 +130,6 @@ const getRequiredNamespacesForPath = (path: string) => {
   if (path.startsWith("/developers/learning-tools")) {
     requiredNamespaces = [
       ...requiredNamespaces,
-      "page-developers-index",
       "page-developers-learning-tools",
     ]
   }
@@ -137,15 +162,21 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
+  if (path.startsWith("/what-is-ethereum")) {
+    requiredNamespaces = [...requiredNamespaces, "page-what-is-ethereum"]
+  }
+
   // Quizzes
   // Note: Add any URL paths that have quizzes here
   if (
+    path.startsWith("/eth") ||
+    path.startsWith("/layer-2") ||
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
-    path.startsWith("/eth") ||
     path.startsWith("/wallets") ||
     path.startsWith("/web3") ||
+    path.startsWith("/what-is-ethereum") ||
     path.startsWith("/quizzes")
   ) {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
@@ -160,7 +191,19 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/wallets")) {
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets", "glossary"]
+  }
+
+  if (path.startsWith("/wallets/find-wallet")) {
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-wallets",
+      "page-wallets-find-wallet",
+    ]
+  }
+
+  if (path.startsWith("/layer-2")) {
+    requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
   }
 
   return requiredNamespaces
@@ -168,6 +211,11 @@ const getRequiredNamespacesForPath = (path: string) => {
 
 const getRequiredNamespacesForLayout = (layout?: string) => {
   let requiredNamespaces: string[] = []
+
+  // namespaces required for all layouts
+  if (layout) {
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
 
   if (layout === "docs") {
     requiredNamespaces = [...requiredNamespaces, "page-developers-docs"]

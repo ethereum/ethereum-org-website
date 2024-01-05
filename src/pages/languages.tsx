@@ -1,46 +1,51 @@
+import { join } from "path"
+
 import React, { useState } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdClose } from "react-icons/md"
 import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
-import { I18nLocale, TranslationKey } from "@/lib/types"
+import { BasePageProps, I18nLocale, TranslationKey } from "@/lib/types"
 
+import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
+
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import {
   getRequiredNamespacesForPage,
   languages,
 } from "@/lib/utils/translations"
 
-import Input from "../components/Input"
-import InlineLink, { BaseLink } from "../components/Link"
+import { FROM_QUERY } from "@/lib/constants"
+
 import OldHeading from "../components/OldHeading"
-import Text from "../components/OldText"
-import PageMetadata from "../components/PageMetadata"
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/languages")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const LanguagesPage = () => {
   const { t } = useTranslation("page-languages")
-  const { locale } = useRouter()
+  const { locale, query } = useRouter()
 
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -75,7 +80,7 @@ const LanguagesPage = () => {
         description={t("page-languages-meta-desc")}
       />
 
-      <Flex direction="column" align="center" w="full" mx="auto" mt={16}>
+      <Flex as={MainArticle} direction="column" align="center" w="full" mx="auto" mt={16}>
         <PageMetadata
           title={t("page-languages-meta-title")}
           description={t("page-languages-meta-desc")}
@@ -132,7 +137,9 @@ const LanguagesPage = () => {
           <Flex my={8} wrap="wrap" w="full">
             {translationsCompleted.map((lang) => {
               const isActive = locale === lang.code
-              const redirectTo = `/${lang.code}`
+              const fromPath =
+                FROM_QUERY in query ? (query[FROM_QUERY] as string) : ""
+              const redirectTo = `/${lang.code}` + fromPath
 
               return (
                 <LinkBox
@@ -173,7 +180,7 @@ const LanguagesPage = () => {
                     <LinkOverlay
                       as={BaseLink}
                       to={redirectTo}
-                      lang={lang.code}
+                      locale={lang.code}
                       textDecoration="none"
                       fontWeight="medium"
                       color="body.base"

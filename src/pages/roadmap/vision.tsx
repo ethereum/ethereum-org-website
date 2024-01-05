@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
 import {
@@ -15,7 +15,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -24,6 +24,7 @@ import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero, {
@@ -32,13 +33,14 @@ import PageHero, {
 import PageMetadata from "@/components/PageMetadata"
 import Trilemma from "@/components/Trilemma"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import oldship from "@/public/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex direction="column" align="center" w="full" {...props} />
+  <Flex as={MainArticle} direction="column" align="center" w="full" {...props} />
 )
 
 const PageDivider = () => (
@@ -108,24 +110,21 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
   <Box w="full" my={8} mx={0} p={8} background="cardGradient" {...props} />
 )
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/roadmap/vision")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const VisionPage = () => {
   const { t } = useTranslation(["page-roadmap-vision", "page-upgrades-index"])

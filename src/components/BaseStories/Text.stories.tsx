@@ -10,7 +10,8 @@ import {
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import components from "../../@chakra-ui/gatsby-plugin/components"
+import components from "@/@chakra-ui/components"
+
 import Translation from "../Translation"
 
 type TextType = typeof Text
@@ -36,9 +37,11 @@ type Story = StoryObj<typeof meta>
 
 const textSizes = components.Text.sizes
 
+const SINGLE_TEXT_CHILD = <Translation id="page-index:page-index-title" />
+
 export const Normal: Story = {
   args: {
-    children: <Translation id="page-index-title" />,
+    children: SINGLE_TEXT_CHILD,
   },
   render: (args) => {
     return (
@@ -64,7 +67,7 @@ export const Normal: Story = {
 
 export const Bold: Story = {
   args: {
-    children: <Translation id="page-index-title" />,
+    children: SINGLE_TEXT_CHILD,
     fontWeight: "bold",
   },
   render: (args) => {
@@ -90,7 +93,7 @@ export const Bold: Story = {
 }
 export const Italic: Story = {
   args: {
-    children: <Translation id="page-index-title" />,
+    children: SINGLE_TEXT_CHILD,
     fontStyle: "italic",
   },
   render: (args) => {
@@ -117,7 +120,7 @@ export const Italic: Story = {
 
 export const Link: StoryObj<typeof ChakraLink> = {
   args: {
-    children: <Translation id="page-index-title" />,
+    children: SINGLE_TEXT_CHILD,
   },
   render: (args) => {
     return (

@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -12,7 +12,12 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, CommonHeroProps, ToCItem } from "@/lib/types"
+import type {
+  BasePageProps,
+  ChildOnlyProp,
+  CommonHeroProps,
+  ToCItem,
+} from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
@@ -24,11 +29,13 @@ import { HubHero } from "@/components/Hero"
 import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import { ContentContainer } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
@@ -121,24 +128,21 @@ const H3 = ({ children, ...props }: HeadingProps) => (
   </OldHeading>
 )
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/learn")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const LearnPage = () => {
   const { t } = useTranslation("page-learn")
@@ -181,7 +185,7 @@ const LearnPage = () => {
   }))
 
   const heroContent: CommonHeroProps = {
-    title: t("learn-hub"),
+    title: t("common:learn-hub"),
     header: t("hero-header"),
     description: t("hero-subtitle"),
     heroImg: heroImage,
@@ -206,11 +210,15 @@ const LearnPage = () => {
 
   return (
     <Box position="relative" w="full">
-      <PageMetadata title={t("learn-hub")} description={t("hero-subtitle")} />
+      <PageMetadata
+        title={t("common:learn-hub")}
+        description={t("hero-subtitle")}
+      />
 
       <HubHero {...heroContent} />
 
       <Flex
+        as={MainArticle}
         direction={{ base: "column", lg: "row" }}
         justifyContent="space-between"
         w="full"

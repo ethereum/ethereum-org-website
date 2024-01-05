@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -10,21 +10,23 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, CommonHeroProps } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, CommonHeroProps } from "@/lib/types"
 import { ICard, IGetInvolvedCard } from "@/lib/interfaces"
 
+import ActionCard from "@/components/ActionCard"
+import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
+import Callout from "@/components/Callout"
+import Card from "@/components/Card"
+import FeedbackCard from "@/components/FeedbackCard"
+import { HubHero } from "@/components/Hero"
+import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
+
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import ActionCard from "../components/ActionCard"
-import ButtonLink, { ButtonLinkProps } from "../components/Buttons/ButtonLink"
-import Callout from "../components/Callout"
-import Card from "../components/Card"
-import FeedbackCard from "../components/FeedbackCard"
-import { HubHero } from "../components/Hero"
-import { Image } from "../components/Image"
-import OldHeading from "../components/OldHeading"
-import PageMetadata from "../components/PageMetadata"
 
 // Static assets
 import developersEthBlockImg from "@/public/developers-eth-blocks.png"
@@ -39,23 +41,21 @@ import communityHeroImg from "@/public/heroes/community-hero.png"
 import upgradesCoreImg from "@/public/upgrades/core.png"
 import whatIsEthereumImg from "@/public/what-is-ethereum.png"
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const CardContainer = ({ children }: ChildOnlyProp) => {
   return (
@@ -79,7 +79,7 @@ const Divider = () => {
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex direction="column" alignItems="center" w="full" mx="auto">
+    <Flex as={MainArticle} direction="column" alignItems="center" w="full" mx="auto">
       {children}
     </Flex>
   )
@@ -304,6 +304,7 @@ const CommunityPage = () => {
                 description={card.description}
                 to={card.to}
                 image={card.image}
+                imageWidth={320}
                 alt={card.alt}
               />
             ))}

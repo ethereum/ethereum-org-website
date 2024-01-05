@@ -1,5 +1,5 @@
 import type { GetStaticProps } from "next/types"
-import { type SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -12,15 +12,17 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp } from "@/lib/types"
+import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
 import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 // import efLogo from "@/public/ef-logo.png"
 // import efLogoWhite from "@/public/ef-logo-white.png"
@@ -64,6 +66,14 @@ import eth from "@/public/eth.png"
 import finance from "@/public/finance_transparent.png"
 import future from "@/public/future_transparent.png"
 import hackathon from "@/public/hackathon_transparent.png"
+import communityHero from "@/public/heroes/community-hero.png"
+import developersHero from "@/public/heroes/developers-hub-hero.jpg"
+import garden from "@/public/heroes/garden.jpg"
+import guidesHero from "@/public/heroes/guides-hub-hero.jpg"
+import layer2Hero from "@/public/heroes/layer-2-hub-hero.jpg"
+import learnHero from "@/public/heroes/learn-hub-hero.png"
+import quizzesHub from "@/public/heroes/quizzes-hub-hero.png"
+import roadmapHero from "@/public/heroes/roadmap-hub-hero.jpg"
 import hero from "@/public/home/hero.png"
 import heroPanda from "@/public/home/hero-panda.png"
 import mergePanda from "@/public/home/merge-panda.png"
@@ -107,19 +117,21 @@ const H3 = (props: ChildOnlyProp) => (
   />
 )
 
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("assets")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<SSRConfig>
+}) satisfies GetStaticProps<BasePageProps>
 
 const AssetsPage = () => {
   const { t } = useTranslation("page-assets")
@@ -133,7 +145,7 @@ const AssetsPage = () => {
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box py="4" px="8">
+      <Box as={MainArticle} py="4" px="8">
         <Flex direction="column" px="8" py="4">
           <Center>
             <Image
@@ -171,6 +183,70 @@ const AssetsPage = () => {
             title={t("page-assets-hero")}
             alt={t("page-assets-hero")}
             image={hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-learn-hero-name")}
+            alt={t("page-assets-learn-hero-name")}
+            image={learnHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-community-hero-name")}
+            alt={t("page-assets-community-hero-name")}
+            image={communityHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-quizzes-hero-name")}
+            alt={t("page-assets-quizzes-hero-name")}
+            image={quizzesHub}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-developers-hero-name")}
+            alt={t("page-assets-developers-hero-name")}
+            image={developersHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-garden-name")}
+            alt={t("page-assets-garden-name")}
+            image={garden}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-roadmap-hero-name")}
+            alt={t("page-assets-roadmap-hero-name")}
+            image={roadmapHero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+        </Row>
+        <Row>
+          <AssetDownload
+            title={t("page-assets-layer-2-hero-name")}
+            alt={t("page-assets-layer-2-hero-name")}
+            image={layer2Hero}
+            artistName="Liam Cobb"
+            artistUrl="https://liamcobb.com/"
+          />
+          <AssetDownload
+            title={t("page-assets-guides-hero-name")}
+            alt={t("page-assets-guides-hero-name")}
+            image={guidesHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />

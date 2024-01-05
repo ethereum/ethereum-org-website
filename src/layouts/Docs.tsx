@@ -31,6 +31,7 @@ import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
 import {
   Heading1 as MdHeading1,
   Heading2 as MdHeading2,
@@ -38,8 +39,6 @@ import {
   Heading4 as MdHeading4,
   Paragraph,
 } from "@/components/MdComponents"
-// TODO: IMPLEMENT PAGEMETADATA
-// import PageMetadata from "@/components/PageMetadata"
 import RollupProductDevDoc from "@/components/RollupProductDevDoc"
 import SideNav from "@/components/SideNav"
 import SideNavMobile from "@/components/SideNavMobile"
@@ -88,6 +87,7 @@ const baseHeadingStyle: HeadingProps = {
   fontFamily: "mono",
   textTransform: "uppercase",
   fontWeight: "bold",
+  scrollMarginTop: 40,
 }
 
 const H1 = (props: HeadingProps) => (
@@ -143,7 +143,7 @@ const Content = (props: ChildOnlyProp) => {
 
   return (
     <Box
-      as="article"
+      as={MainArticle}
       flex={`1 1 ${mdBreakpoint}`}
       maxW={{ base: "full", lg: mdBreakpoint }}
       pt={{ base: 32, md: 12 }}
@@ -235,11 +235,6 @@ export const DocsLayout = ({
 
   return (
     <Page>
-      {/* // TODO: IMPLEMENT PAGEMETADATA */}
-      {/* <PageMetadata
-        title={frontmatter.title}
-        description={frontmatter.description}
-      /> */}
       <SideNavMobile path={relativePath} />
       {isPageIncomplete && (
         <BannerNotification shouldShow={isPageIncomplete}>

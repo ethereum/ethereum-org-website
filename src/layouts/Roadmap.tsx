@@ -48,11 +48,12 @@ const HeroContainer = (props: ChildOnlyProp) => (
     mb={{ base: 8, lg: 0 }}
     maxH={{ base: "100%", lg: "none" }}
     {...props}
+    justify="space-between"
   />
 )
 
 const TitleCard = (props: ChildOnlyProp) => (
-  <Flex p={8} direction="column" justify="flex-start" {...props} />
+  <Flex w="full" p={8} direction="column" justify="flex-start" {...props} />
 )
 
 // Roadmap layout components
@@ -140,58 +141,50 @@ export const RoadmapLayout: React.FC<IProps> = ({
         />
       ) : (
         <HeroContainer>
-          <Flex
-            w="full"
-            flexDirection={{ base: "column", lg: "row" }}
-            justify="space-between"
-          >
-            <TitleCard>
-              {/* TODO: Double check this slug works */}
-              <Breadcrumbs slug={slug} mb="8" />
-              <Title>{frontmatter.title}</Title>
-              <OldText>{frontmatter.description}</OldText>
-              {frontmatter?.buttons && (
-                // FIXME: remove the `ul` override once removed the corresponding
-                // global styles in `src/@chakra-ui/gatsby-plugin/styles.ts`
-                <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
-                  {frontmatter.buttons.map((button, idx) => {
-                    if (button?.to) {
-                      return (
-                        <WrapItem key={idx}>
-                          <ButtonLink variant={button?.variant} to={button?.to}>
-                            {button.label}
-                          </ButtonLink>
-                        </WrapItem>
-                      )
-                    }
+          <TitleCard>
+            {/* TODO: Double check this slug works */}
+            <Breadcrumbs slug={slug} mb="8" />
+            <Title>{frontmatter.title}</Title>
+            <OldText>{frontmatter.description}</OldText>
+            {frontmatter?.buttons && (
+              <Wrap spacing={2} marginBottom={4} sx={{ ul: { m: 0 } }}>
+                {frontmatter.buttons.map((button, idx) => {
+                  if (button?.to) {
                     return (
                       <WrapItem key={idx}>
-                        <Button variant={button?.variant} toId={button?.toId}>
-                          {button?.label}
-                        </Button>
+                        <ButtonLink variant={button?.variant} to={button?.to}>
+                          {button.label}
+                        </ButtonLink>
                       </WrapItem>
                     )
-                  })}
-                </Wrap>
-              )}
-              <TableOfContents
-                position="relative"
-                zIndex="2"
-                items={tocItems}
-                isMobile
-              />
-            </TitleCard>
-            <Center>
-              <Image
-                src={frontmatter.image}
-                alt={frontmatter.alt ?? ""}
-                style={{ objectFit: "contain" }}
-                width={700}
-                height={345}
-                priority
-              />
-            </Center>
-          </Flex>
+                  }
+                  return (
+                    <WrapItem key={idx}>
+                      <Button variant={button?.variant} toId={button?.toId}>
+                        {button?.label}
+                      </Button>
+                    </WrapItem>
+                  )
+                })}
+              </Wrap>
+            )}
+            <TableOfContents
+              position="relative"
+              zIndex="2"
+              items={tocItems}
+              isMobile
+            />
+          </TitleCard>
+          <Center>
+            <Image
+              src={frontmatter.image}
+              alt={frontmatter.alt ?? ""}
+              style={{ objectFit: "contain" }}
+              width={1504}
+              height={345}
+              priority
+            />
+          </Center>
         </HeroContainer>
       )}
       <Page>
@@ -202,7 +195,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
           maxDepth={frontmatter.sidebarDepth!}
           tocItems={tocItems}
         />
-        <ContentContainer id="content">
+        <ContentContainer>
           {children}
           <FeedbackCard />
         </ContentContainer>

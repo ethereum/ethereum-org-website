@@ -1,6 +1,6 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -20,26 +20,30 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
+import { BasePageProps } from "@/lib/types"
+
+import { ButtonLink } from "@/components/Buttons"
+import Callout from "@/components/Callout"
+import Card from "@/components/Card"
+import Emoji from "@/components/Emoji"
+import ExpandableCard from "@/components/ExpandableCard"
+import FeedbackCard from "@/components/FeedbackCard"
+import GhostCard from "@/components/GhostCard"
+import HorizontalCard from "@/components/HorizontalCard"
+import { Image } from "@/components/Image"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import PageHero from "@/components/PageHero"
+import PageMetadata from "@/components/PageMetadata"
+import Pill from "@/components/Pill"
+import Translation from "@/components/Translation"
+
+import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
-
-import { ButtonLink } from "../components/Buttons"
-import Callout from "../components/Callout"
-import Card from "../components/Card"
-import Emoji from "../components/Emoji"
-import ExpandableCard from "../components/ExpandableCard"
-import FeedbackCard from "../components/FeedbackCard"
-import GhostCard from "../components/GhostCard"
-import HorizontalCard from "../components/HorizontalCard"
-import { Image } from "../components/Image"
-import InfoBanner from "../components/InfoBanner"
-import InlineLink from "../components/Link"
-import OldHeading from "../components/OldHeading"
-import Text from "../components/OldText"
-import PageHero from "../components/PageHero"
-import PageMetadata from "../components/PageMetadata"
-import Pill from "../components/Pill"
-import Translation from "../components/Translation"
 
 // Static assets
 import dogeComputerImg from "@/public/doge-computer.png"
@@ -56,6 +60,7 @@ const Divider = (props: BoxProps) => (
 
 const Page = (props: FlexProps) => (
   <Flex
+    as={MainArticle}
     width="full"
     direction="column"
     align="center"
@@ -92,23 +97,21 @@ const H3 = (props: HeadingProps) => (
   />
 )
 
-type Props = SSRConfig & {
-  lastDeployDate: string
-}
-
-export const getStaticProps = (async (context) => {
-  const { locale } = context
-  // load i18n required namespaces for the given page
+export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/gas")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
   const lastDeployDate = getLastDeployDate()
 
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
       lastDeployDate,
     },
   }
-}) satisfies GetStaticProps<Props>
+}) satisfies GetStaticProps<BasePageProps>
 
 const GasPage = () => {
   const { t } = useTranslation("page-gas")

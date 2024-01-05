@@ -5,6 +5,8 @@ import { useColorMode } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { FROM_QUERY } from "@/lib/constants"
+
 import { IItem, ISections } from "./types"
 
 export const useNav = ({ path }: { path: string }) => {
@@ -287,8 +289,8 @@ export const useNav = ({ path }: { path: string }) => {
   const shouldShowSubNav = path.includes("/developers")
   const splitPath = path.split("/")
   const fromPageParameter =
-    splitPath.length > 3 && splitPath[2] !== "languages"
-      ? `?from=/${splitPath.slice(2).join("/")}`
+    splitPath.length > 1 && splitPath[1] !== "languages"
+      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
       : ""
 
   const changeColorMode = () => {
