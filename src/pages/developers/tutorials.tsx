@@ -126,7 +126,7 @@ const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
-      <Emoji text=":calendar:" fontSize="sm" ml={2} mr={2} /> {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} /> {localeTimestamp}
     </span>
   ) : null
 }
@@ -263,8 +263,8 @@ const TutorialPage = ({
             justifyContent="space-between"
             mt={2}
             mb={{ base: 2, md: 6 }}
-            ml={0}
-            mr={{ base: 0, md: 2 }}
+            ms={0}
+            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-new-github" />
@@ -291,8 +291,8 @@ const TutorialPage = ({
             justifyContent="space-between"
             mt={2}
             mb={{ base: 2, md: 6 }}
-            ml={0}
-            mr={{ base: 0, md: 2 }}
+            ms={0}
+            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
@@ -445,11 +445,11 @@ const TutorialPage = ({
                   color="text"
                   fontWeight="semibold"
                   fontSize="2xl"
-                  mr={{ base: 0, md: 24 }}
+                  me={{ base: 0, md: 24 }}
                   _after={{
-                    ml: 0.5,
-                    mr: "0.3rem",
                     display: tutorial.isExternal ? "inline" : "none",
+                    ms: 0.5,
+                    me: "0.3rem",
                     content: `"↗"`,
                     transitionProperty: "all",
                     transitionDuration: "0.1s",
@@ -464,14 +464,14 @@ const TutorialPage = ({
                 </Badge>
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
-                <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
+                <Emoji text=":writing_hand:" fontSize="sm" me={2} />
                 {tutorial.author} •
                 {published(locale!, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
                     •
-                    <Emoji text=":stopwatch:" fontSize="sm" ml={2} mr={2} />
+                    <Emoji text=":stopwatch:" fontSize="sm" mx={2} />
                     {tutorial.timeToRead}{" "}
                     <Translation id="page-developers-tutorials:page-tutorial-read-time" />
                   </>
@@ -479,7 +479,7 @@ const TutorialPage = ({
                 {tutorial.isExternal && (
                   <>
                     {" "}
-                    •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
+                    •<Emoji text=":link:" fontSize="sm" mx={2} />
                     <Box as="span" color="primary.base" cursor="pointer">
                       <Translation id="page-developers-tutorials:page-tutorial-external-link" />
                     </Box>

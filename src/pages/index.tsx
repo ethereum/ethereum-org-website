@@ -411,7 +411,7 @@ const HomePage = ({
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
-          <ImageContainer pl={{ lg: 8 }}>
+          <ImageContainer ps={{ lg: 8 }}>
             <Image
               src={ethereum}
               alt={t("page-index:page-index-what-is-ethereum-image-alt")}
@@ -472,7 +472,7 @@ const HomePage = ({
       </MainSectionContainer>
       {/* Internet Section */}
       <MainSectionContainer containerBg="homeBoxPink">
-        <Box pl={{ lg: 8 }}>
+        <Box ps={{ lg: 8 }}>
           <Row>
             <FeatureContent>
               <SectionHeading>
@@ -513,7 +513,7 @@ const HomePage = ({
               borderColor="text"
               boxShadow={cardBoxShadow}
               maxWidth={{ lg: "624px" }}
-              ml={{ lg: 16 }}
+              ms={{ lg: 16 }}
             />
           </Box>
           <FeatureContent>

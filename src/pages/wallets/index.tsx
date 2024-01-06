@@ -76,11 +76,11 @@ const TwoColumnContent = (props: BoxProps) => (
 )
 
 const LeftColumn = (props: BoxProps) => (
-  <Box flex="0 1 50%" mr={{ base: 0, lg: 8 }} maxW="full" {...props} />
+  <Box flex="0 1 50%" me={{ base: 0, lg: 8 }} maxW="full" {...props} />
 )
 
 const RightColumn = (props: BoxProps) => (
-  <Box flex="0 1 50%" ml={{ lg: 8 }} maxW="full" {...props} />
+  <Box flex="0 1 50%" ms={{ lg: 8 }} maxW="full" {...props} />
 )
 
 const H2 = (props: ChildOnlyProp) => (
@@ -95,8 +95,8 @@ const CardContainer = (props: BoxProps) => (
   <Box
     display={"flex"}
     flexWrap={"wrap"}
-    marginLeft={-4}
-    marginRight={-4}
+    ms={-4}
+    me={-4}
     {...props}
   />
 )
@@ -277,7 +277,7 @@ const WalletsPage = () => {
             flexGrow="0"
             flexShrink="1"
             flexBasis="50%"
-            mr={{ base: 0, lg: 8 }}
+            me={{ base: 0, lg: 8 }}
             mt={{ lg: 0 }}
             maxWidth={{ lg: "100%" }}
           >
@@ -329,8 +329,8 @@ const WalletsPage = () => {
                 minWidth="100%"
                 marginTop={2}
                 marginBottom={2}
-                marginLeft={0}
-                marginRight={0}
+                ms={0}
+                me={0}
                 key={idx}
                 emoji={type.emoji}
                 description={type.description}
