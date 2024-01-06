@@ -357,7 +357,7 @@ You can also use a [pull payments](https://docs.openzeppelin.com/contracts/4.x/a
 
 An integer overflow occurs when the results of an arithmetic operation falls outside the acceptable range of values, causing it to "roll over" to the lowest representable value. For example, a `uint8` can only store values up to 2^8-1=255. Arithmetic operations that result in values higher than `255` will overflow and reset `uint` to `0`, similar to how the odometer on a car resets to 0 once it reaches the maximum mileage (999999).
 
-Integer underflows happen for similar reasons: the the results of an arithmetic operation falls below the acceptable range. Say you tried decrementing `0` in a `uint8`, the result would simply roll over to the maximum representable value (`255`).
+Integer underflows happen for similar reasons: the results of an arithmetic operation falls below the acceptable range. Say you tried decrementing `0` in a `uint8`, the result would simply roll over to the maximum representable value (`255`).
 
 Both integer overflows and underflows can lead to unexpected changes to a contract’s state variables and result in unplanned execution. Below is an example showing how an attacker can exploit arithmetic overflow in a smart contract to perform an invalid operation:
 
