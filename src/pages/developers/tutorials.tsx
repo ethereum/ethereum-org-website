@@ -42,6 +42,8 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
@@ -135,6 +137,7 @@ const TutorialPage = ({
   internalTutorials,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const { locale } = useRouter()
+  const { flipForRtl } = useRtlFlip()
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
@@ -447,10 +450,11 @@ const TutorialPage = ({
                   fontSize="2xl"
                   me={{ base: 0, md: 24 }}
                   _after={{
-                    display: tutorial.isExternal ? "inline" : "none",
                     ms: 0.5,
                     me: "0.3rem",
+                    display: tutorial.isExternal ? "inline-block" : "none",
                     content: `"↗"`,
+                    transform: flipForRtl,
                     transitionProperty: "all",
                     transitionDuration: "0.1s",
                     transitionTimingFunction: "ease-in-out",
