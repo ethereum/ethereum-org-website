@@ -513,7 +513,7 @@ const HomePage = ({
               borderColor="text"
               boxShadow={cardBoxShadow}
               maxWidth={{ lg: "624px" }}
-              ml={{ lg: 16 }}
+              ms={{ lg: 16 }}
             />
           </Box>
           <FeatureContent>
