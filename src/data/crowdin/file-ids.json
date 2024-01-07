@@ -104,28 +104,12 @@
     "path": "/developers/docs/evm/opcodes/index.md"
   },
   {
-    "id": 7767,
-    "path": "/developers/docs/accounts/accounts.svg"
-  },
-  {
     "id": 7769,
     "path": "/developers/docs/transactions/gas-tx.svg"
   },
   {
     "id": 7771,
     "path": "/developers/docs/transactions/tx.svg"
-  },
-  {
-    "id": 7773,
-    "path": "/developers/docs/blocks/tx-block.svg"
-  },
-  {
-    "id": 7775,
-    "path": "/developers/docs/evm/evm.svg"
-  },
-  {
-    "id": 7777,
-    "path": "/developers/docs/evm/gas.svg"
   },
   {
     "id": 8171,
@@ -660,10 +644,6 @@
     "path": "/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md"
   },
   {
-    "id": 7797,
-    "path": "/developers/docs/networking-layer/cons_client_net_layer.svg"
-  },
-  {
     "id": 8011,
     "path": "/developers/docs/networking-layer/portal-network/index.md"
   },
@@ -720,6 +700,10 @@
     "path": "/page-eth.json"
   },
   {
+    "id": 8212,
+    "path": "/page-gas.json"
+  },
+  {
     "id": 5563,
     "path": "/governance/index.md"
   },
@@ -742,22 +726,6 @@
   {
     "id": 7465,
     "path": "/zero-knowledge-proofs/index.md"
-  },
-  {
-    "id": 7759,
-    "path": "/web3/web1.svg"
-  },
-  {
-    "id": 7761,
-    "path": "/web3/web2.svg"
-  },
-  {
-    "id": 7763,
-    "path": "/web3/web3.svg"
-  },
-  {
-    "id": 7765,
-    "path": "/energy-consumption/energy_consumption_pre_post_merge.svg"
   },
   {
     "id": 8163,
@@ -868,22 +836,6 @@
     "path": "/developers/docs/nodes-and-clients/node-architecture/index.md"
   },
   {
-    "id": 7779,
-    "path": "/developers/docs/nodes-and-clients/eth1eth2client.svg"
-  },
-  {
-    "id": 7781,
-    "path": "/developers/docs/nodes-and-clients/nodes.svg"
-  },
-  {
-    "id": 7783,
-    "path": "/developers/docs/nodes-and-clients/run-a-node/diagram.svg"
-  },
-  {
-    "id": 7785,
-    "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg"
-  },
-  {
     "id": 8183,
     "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg.xlsx"
   },
@@ -938,22 +890,6 @@
   {
     "id": 7605,
     "path": "/developers/docs/consensus-mechanisms/pos/block-proposal/index.md"
-  },
-  {
-    "id": 7787,
-    "path": "/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.svg"
-  },
-  {
-    "id": 7789,
-    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.svg"
-  },
-  {
-    "id": 7791,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/multiple-keys.svg"
-  },
-  {
-    "id": 7793,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/validator-key-schematic.svg"
   },
   {
     "id": 7927,
@@ -1040,10 +976,6 @@
     "path": "/developers/docs/smart-contracts/upgrading/index.md"
   },
   {
-    "id": 7795,
-    "path": "/developers/docs/smart-contracts/verifying/source-code-verification.svg"
-  },
-  {
     "id": 7801,
     "path": "/developers/docs/smart-contracts/verifying/index.md"
   },
@@ -1102,10 +1034,6 @@
   {
     "id": 2966,
     "path": "/about/index.md"
-  },
-  {
-    "id": 8031,
-    "path": "/deprecated-software/index.md"
   },
   {
     "id": 8037,
