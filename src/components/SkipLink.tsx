@@ -1,19 +1,16 @@
-import React from "react"
+import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 
-import { BaseLink } from "../components/Link"
+import { BaseLink } from "@/components/Link"
 
-import Translation from "./Translation"
+import { MAIN_CONTENT_ID } from "@/lib/constants"
 
-export interface IProps {
-  hrefId: string
-}
-
-export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
+export const SkipLink = () => {
+  const { t } = useTranslation()
   return (
     <Box bg="primary.base">
       <BaseLink
-        href={hrefId}
+        href={"#" + MAIN_CONTENT_ID}
         lineHeight="taller"
         position="absolute"
         top="-12"
@@ -23,7 +20,7 @@ export const SkipLink: React.FC<IProps> = ({ hrefId }) => {
         _hover={{ textDecoration: "none" }}
         _focus={{ position: "static" }}
       >
-        <Translation id="skip-to-main-content" />
+        {t("skip-to-main-content")}
       </BaseLink>
     </Box>
   )

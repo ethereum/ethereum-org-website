@@ -67,6 +67,7 @@ export const BaseLink = forwardRef(function Link(
   const isPdf = url.isPdf(href)
   const isExternal = url.isExternal(href)
   const isInternalPdf = isPdf && !isExternal
+  const isHash = url.isHash(href)
 
   // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
   // Opens in separate window.
@@ -115,6 +116,27 @@ export const BaseLink = forwardRef(function Link(
             transform={flipForRtl}
           />
         )}
+      </ChakraLink>
+    )
+  }
+
+  if (isHash) {
+    return (
+      <ChakraLink
+        onClick={(e) => {
+          e.stopPropagation()
+          trackCustomEvent(
+            customEventOptions ?? {
+              eventCategory: "Link",
+              eventAction: "Clicked",
+              eventName: "Clicked on hash link",
+              eventValue: href,
+            }
+          )
+        }}
+        {...commonProps}
+      >
+        {children}
       </ChakraLink>
     )
   }
