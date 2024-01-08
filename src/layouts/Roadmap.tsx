@@ -181,7 +181,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
               alt={frontmatter.alt ?? ""}
               style={{ objectFit: "contain" }}
               width={1504}
-              height={345}
+              height={336}
               priority
             />
           </Center>
