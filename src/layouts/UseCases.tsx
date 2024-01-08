@@ -7,7 +7,6 @@ import {
   Hide,
   Icon,
   ListItem,
-  Show,
   Text,
   UnorderedList,
   useToken,
@@ -179,17 +178,15 @@ export const UseCasesLayout: React.FC<IProps> = ({
 
   return (
     <Box position="relative" width="full">
-      <Show above={lgBp}>
-        <BannerNotification shouldShow zIndex="sticky">
-          <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
-          <Text m={0}>
-            {t("template-usecase:template-usecase-banner")}{" "}
-            <InlineLink href={absoluteEditPath}>
-              {t("template-usecase-edit-link")}
-            </InlineLink>
-          </Text>
-        </BannerNotification>
-      </Show>
+      <BannerNotification shouldShow zIndex="sticky" hideBelow={lgBp}>
+        <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
+        <Text m={0}>
+          {t("template-usecase:template-usecase-banner")}{" "}
+          <InlineLink href={absoluteEditPath}>
+            {t("template-usecase-edit-link")}
+          </InlineLink>
+        </Text>
+      </BannerNotification>
       <HeroContainer key={frontmatter.title}>
         <TitleCard>
           <Emoji fontSize="4rem" text={frontmatter.emoji!} />
@@ -233,21 +230,20 @@ export const UseCasesLayout: React.FC<IProps> = ({
           }}
         />
       </HeroContainer>
-      <Show above={lgBp}>
-        <Flex
-          as={BaseLink}
-          to={"#" + MAIN_CONTENT_ID}
-          bg="ednBackground"
-          justifyContent="center"
-          p={4}
-          width="full"
-          _hover={{
-            bg: "background.base",
-          }}
-        >
-          <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
-        </Flex>
-      </Show>
+      <Flex
+        as={BaseLink}
+        to={"#" + MAIN_CONTENT_ID}
+        bg="ednBackground"
+        justifyContent="center"
+        p={4}
+        width="full"
+        _hover={{
+          bg: "background.base",
+        }}
+        hideBelow={lgBp}
+      >
+        <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
+      </Flex>
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar

@@ -33,3 +33,5 @@ export const isHrefActive = (
     ? pathname.startsWith(cleanHref)
     : pathname === cleanHref
 }
+
+export const isHash = (href: string): boolean => href.startsWith("#")
