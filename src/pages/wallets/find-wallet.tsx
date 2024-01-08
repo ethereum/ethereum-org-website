@@ -95,7 +95,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/wallets/find-wallet"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[3])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   return {
     props: {
