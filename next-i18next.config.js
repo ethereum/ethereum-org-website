@@ -17,4 +17,10 @@ module.exports = {
   localePath: "./src/intl",
   // see updates to your translation JSON files without having to restart your development server each time
   reloadOnPrerender: true,
+  // Language codes to lookup, given set language is 'en-US': 'all' --> ['en-US', 'en', 'dev'], 'currentOnly' --> 'en-US', 'languageOnly' --> 'en'
+  load: "currentOnly",
+  // Language will be lowercased EN --> en while leaving full locales like en-US
+  cleanCode: true,
+  // Language will be lowercased eg. en-US --> en-us
+  lowerCaseLng: true,
 }
