@@ -98,6 +98,7 @@ interface SummaryPoints {
 interface ImageInfo {
   image: string
   alt: string
+  imageBlurData: string
 }
 
 export interface UpgradeFrontmatter

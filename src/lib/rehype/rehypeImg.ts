@@ -1,7 +1,9 @@
+import fs from "fs"
 import path from "path"
 
 import type { Root } from "hast"
 import sizeOf from "image-size"
+import { getPlaiceholder } from "plaiceholder"
 import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
@@ -18,6 +20,19 @@ interface Options {
   locale: string
 }
 
+type ImageNode = {
+  type: 'element'
+  tagName: 'img'
+  properties: {
+    src: string
+    height?: number
+    width?: number
+    aspectRatio?: number
+    blurDataURL?: string
+    placeholder?: 'blur' | 'empty'
+  }
+}
+
 /**
  * Handles:
  * "//"
@@ -26,6 +41,12 @@ interface Options {
  * "ftp://"
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
+
+const generateInternalImagePlaceholder = async (node: ImageNode): Promise<void> => {
+  const buffer: Buffer = fs.readFileSync(path.join("public", node.properties.src))
+  node.properties.blurDataURL = (await getPlaiceholder(buffer)).base64
+  node.properties.placeholder = "blur"
+}
 
 const getImageSize = (src: string, dir: string) => {
   if (absolutePathRegex.exec(src)) {
@@ -56,7 +77,10 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
   const srcPath = opts.srcPath
   const locale = opts.locale
 
-  return (tree, _file) => {
+  return async (tree, _file) => {
+    // Instantiate an empty array for image nodes
+    const images: ImageNode[] = []
+
     visit(tree, "element", (node) => {
       if (node.tagName === "img" && node.properties) {
         const src = node.properties.src as string
@@ -80,8 +104,19 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
         node.properties.height = dimensions.height
         node.properties.aspectRatio =
           (dimensions.width || 1) / (dimensions.height || 1)
+
+        // Add image node to images array
+        images.push(node)
       }
     })
+
+    // Generate placeholder for internal images (requires async/await; keep this at the end outside of the visit function)
+    for (const image of images) {
+      // Skip externally hosted images
+      if (!image.properties.src.startsWith("http")) {
+        await generateInternalImagePlaceholder(image)
+      }
+    }
   }
 }
 
