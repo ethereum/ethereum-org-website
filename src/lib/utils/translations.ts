@@ -156,22 +156,6 @@ const getRequiredNamespacesForPath = (path: string) => {
     primaryNamespace = "page-what-is-ethereum"
   }
 
-  // Quizzes
-  // Note: Add any URL paths that have quizzes here
-  if (
-    path.startsWith("/eth") ||
-    path.startsWith("/layer-2") ||
-    path.startsWith("/nft") ||
-    path.startsWith("/roadmap/merge") ||
-    path.startsWith("/security") ||
-    path.startsWith("/wallets") ||
-    path.startsWith("/web3") ||
-    path.startsWith("/what-is-ethereum") ||
-    path.startsWith("/quizzes")
-  ) {
-    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
-  }
-
   if (path === "bug-bounty") {
     primaryNamespace = "page-bug-bounty"
   }
@@ -195,6 +179,22 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/layer-2")) {
     primaryNamespace = "page-layer-2"
+  }
+
+  // Quizzes
+  // Note: Add any URL paths that have quizzes here
+  if (
+    path.startsWith("/eth") ||
+    path.startsWith("/layer-2") ||
+    path.startsWith("/nft") ||
+    path.startsWith("/roadmap/merge") ||
+    path.startsWith("/security") ||
+    path.startsWith("/wallets") ||
+    path.startsWith("/web3") ||
+    path.startsWith("/what-is-ethereum") ||
+    path.startsWith("/quizzes")
+  ) {
+    requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
 
   // Ensures that the primary namespace is always the first item in the array
