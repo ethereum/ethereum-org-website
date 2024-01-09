@@ -1,14 +1,19 @@
 import React, { useState } from "react"
-import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
 import Highlight, {
   defaultProps,
   Language,
   PrismTheme,
 } from "prism-react-renderer"
+import Prism from "prism-react-renderer/prism"
+import { Box, BoxProps, Flex, useColorModeValue } from "@chakra-ui/react"
 
-import Translation from "./Translation"
-import CopyToClipboard from "./CopyToClipboard"
-import Emoji from "./Emoji"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+// https://github.com/FormidableLabs/prism-react-renderer/tree/master#custom-language-support
+;
+(typeof global !== "undefined" ? global : window).Prism = Prism
+require("prismjs/components/prism-solidity")
 
 const LINES_BEFORE_COLLAPSABLE = 8
 
@@ -21,7 +26,7 @@ const TopBarItem = (props: BoxProps) => {
       borderRadius="base"
       borderColor="searchBorder"
       bg={bgColor}
-      ml={2}
+      ms={2}
       py={1}
       px={2}
       _hover={{
@@ -213,6 +218,7 @@ const Codeblock: React.FC<IProps> = ({
   codeLanguage,
   fromHomepage = false,
 }) => {
+  const { t } = useTranslation('common')
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 
   const codeText = React.Children.toArray(children)
@@ -271,7 +277,7 @@ const Codeblock: React.FC<IProps> = ({
               style={style}
               className={className}
               pt={hasTopBar ? "2.75rem" : 6}
-              pl={4}
+              ps={4}
               m={0}
               overflow="visible"
               minW="full"
@@ -289,8 +295,8 @@ const Codeblock: React.FC<IProps> = ({
                       <Box
                         as="span"
                         display="table-cell"
-                        textAlign="right"
-                        pr={8}
+                        textAlign="end"
+                        pe={8}
                         userSelect="none"
                         opacity={0.4}
                       >
@@ -311,15 +317,15 @@ const Codeblock: React.FC<IProps> = ({
                   justify="flex-end"
                   position="absolute"
                   top={3}
-                  right={4}
+                  insetInlineEnd={4}
                 >
                   {allowCollapse &&
                     totalLines - 1 > LINES_BEFORE_COLLAPSABLE && (
                       <TopBarItem onClick={() => setIsCollapsed(!isCollapsed)}>
                         {isCollapsed ? (
-                          <Translation id="show-all" />
+                          t("show-all")
                         ) : (
-                          <Translation id="show-less" />
+                          t("show-less")
                         )}
                       </TopBarItem>
                     )}
@@ -330,12 +336,12 @@ const Codeblock: React.FC<IProps> = ({
                           {!isCopied ? (
                             <>
                               <Emoji text=":clipboard:" fontSize="md" />{" "}
-                              <Translation id="copy" />
+                               {t("copy")}
                             </>
                           ) : (
                             <>
                               <Emoji text=":white_check_mark:" fontSize="md" />{" "}
-                              <Translation id="copied" />
+                              {t("copied")}
                             </>
                           )}
                         </TopBarItem>

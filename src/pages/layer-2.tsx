@@ -1,7 +1,7 @@
-// Libraries
-import React, { ReactNode } from "react"
-import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { merge } from "lodash"
+import { GetStaticProps } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
   Box,
@@ -15,44 +15,76 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-// Data
-import layer2Data from "../data/layer-2/layer-2.json"
+import type {
+  BasePageProps,
+  CommonHeroProps,
+  TranslationKey,
+} from "@/lib/types"
 
-// Components
-import ButtonLink from "../components/Buttons/ButtonLink"
-import Card from "../components/Card"
-import ExpandableCard from "../components/ExpandableCard"
-import FeedbackCard from "../components/FeedbackCard"
-import InfoBanner from "../components/InfoBanner"
+import { ButtonLink } from "@/components/Buttons"
+import Card from "@/components/Card"
+import ExpandableCard from "@/components/ExpandableCard"
+import FeedbackCard from "@/components/FeedbackCard"
+import { HubHero } from "@/components/Hero"
+import { Image } from "@/components/Image"
+import InfoBanner from "@/components/InfoBanner"
+import Layer2ProductCard from "@/components/Layer2ProductCard"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import OrderedList from "@/components/OrderedList"
+import PageMetadata from "@/components/PageMetadata"
+import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
+import Translation from "@/components/Translation"
+
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { layer2Data } from "@/data/layer-2/layer-2"
+
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
-import Layer2ProductCard from "../components/Layer2ProductCard"
-import InlineLink from "../components/Link"
-import OrderedList from "../components/OrderedList"
-import PageMetadata from "../components/PageMetadata"
 import ProductList from "../components/ProductList"
-import { StandaloneQuizWidget } from "../components/Quiz/QuizWidget"
-import Translation from "../components/Translation"
-import Text from "../components/OldText"
-import OldHeading from "../components/OldHeading"
-import GatsbyImage from "../components/GatsbyImage"
-import { HubHero, type HubHeroProps } from "../components/Hero"
 
-// Utils
-// Todo: Reimplement Big Numbers
-// import { getData } from "../utils/cache"
-// import { Lang } from "../utils/languages"
-import { TranslationKey } from "../utils/translations"
-import { getImage } from "../utils/image"
+import DogeImage from "@/public/doge-computer.png"
+import EthHomeImage from "@/public/eth-home-icon.png"
+import HeroImage from "@/public/heroes/layer-2-hub-hero.jpg"
+import DebankImage from "@/public/layer-2/debank.png"
+import L2BEATImage from "@/public/layer-2/l2beat.jpg"
+import OptimisticRollupImage from "@/public/layer-2/optimistic_rollup.png"
+import RollupImage from "@/public/layer-2/rollup-2.png"
+import ZapperImage from "@/public/layer-2/zapper.png"
+import ZerionImage from "@/public/layer-2/zerion.png"
+import ZKRollupImage from "@/public/layer-2/zk_rollup.png"
+import DAOImage from "@/public/use-cases/dao-2.png"
+import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
 
-// Constants
-// Todo: Reimplement Big Numbers
-// import { GATSBY_FUNCTIONS_PATH } from "../constants"
-// import { MdInfoOutline } from "react-icons/md"
-import { merge } from "lodash"
-
-type ChildOnlyType = {
-  children: ReactNode
+interface ContentBoxProps extends BoxProps {
+  isLightGrayBg?: boolean
 }
+const ContentBox: React.FC<ContentBoxProps> = ({
+  isLightGrayBg,
+  ...rest
+}: ContentBoxProps) => (
+  <Box
+    px={8}
+    py={12}
+    width="full"
+    {...(isLightGrayBg && { background: "layer2ContentSecondary" })}
+    {...rest}
+  />
+)
+
+const TwoColumnContent = (props) => (
+  <Flex
+    justifyContent="space-between"
+    gap={16}
+    flexDirection={{ base: "column", lg: "row" }}
+    alignItems={{ base: "flex-start", lg: "normal" }}
+    {...props}
+  />
+)
 
 const SectionHeading = (props: HeadingProps) => {
   const headingSpecificProps = {
@@ -70,86 +102,7 @@ const SectionHeading = (props: HeadingProps) => {
   return <OldHeading {...mergeProps} />
 }
 
-interface ContentBoxProps extends BoxProps {
-  isLightGrayBg?: boolean
-}
-const ContentBox: React.FC<ContentBoxProps> = ({ isLightGrayBg, ...rest }) => (
-  <Box
-    px={8}
-    py={12}
-    width="full"
-    {...(isLightGrayBg && { background: "layer2ContentSecondary" })}
-    {...rest}
-  />
-)
-
-const TwoColumnContent = (props: ChildOnlyType) => (
-  <Flex
-    justifyContent="space-between"
-    gap={16}
-    flexDirection={{ base: "column", lg: "row" }}
-    alignItems={{ base: "flex-start", lg: "normal" }}
-    {...props}
-  />
-)
-
-// Todo: Reimplement Big Numbers
-// const StyledInfoIcon = () => (
-//   <Icon
-//     as={MdInfoOutline}
-//     color="text"
-//     mr={2}
-//     opacity={0.8}
-//     boxSize="full"
-//     _hover={{ color: "primary.base" }}
-//     _active={{ color: "primary.base" }}
-//     _focus={{ color: "primary.base" }}
-//   />
-// )
-
-// const StatDivider = () => {
-//   const responsiveOrientation = useBreakpointValue<DividerProps["orientation"]>(
-//     { base: "horizontal", md: "vertical" }
-//   )
-//   return (
-//     <Divider
-//       orientation={responsiveOrientation}
-//       borderColor="homeDivider"
-//       my={{ base: 8, md: 0 }}
-//     />
-//   )
-// }
-
-// const StatBox = (props: ChildOnlyType) => (
-//   <Center
-//     flexDirection="column"
-//     flex={{ base: "100%", md: "33%" }}
-//     textAlign="center"
-//     px={5}
-//     {...props}
-//   />
-// )
-
-// const StatPrimary = (props: { content: string }) => (
-//   <Text
-//     color="primary.base"
-//     fontFamily="monospace"
-//     fontWeight="bold"
-//     fontSize="2rem"
-//   >
-//     {props.content}
-//   </Text>
-// )
-
-// const StatSpan = (props: ChildOnlyType) => (
-//   <Flex justifyContent="center" gap={2} {...props} />
-// )
-
-// const StatDescription = (props: ChildOnlyType) => (
-//   <Text opacity={0.8} m={0} {...props} />
-// )
-
-const Layer2CardGrid = (props: ChildOnlyType) => (
+const Layer2CardGrid = (props) => (
   <SimpleGrid
     templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"
     gap={8}
@@ -157,119 +110,36 @@ const Layer2CardGrid = (props: ChildOnlyType) => (
   />
 )
 
-// Todo: Reimplement Big Numbers
-// interface L2DataResponseItem {
-//   daily: {
-//     data: Array<[string, number, number]>
-//   }
-// }
-// interface L2DataResponse {
-//   layers2s: L2DataResponseItem
-//   combined: L2DataResponseItem
-//   bridges: L2DataResponseItem
-// }
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
 
-// interface FeeDataResponse {
-//   data: Array<{
-//     id: string
-//     results: { feeTransferEth: number }
-//     errors?: { [key: string]: string }
-//   }>
-// }
+  const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
 
-const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
-  const { t } = useTranslation()
-  // Todo: Reimplement Big Numbers
-  // const { language } = useI18next()
-  // const [tvl, setTVL] = useState("loading...")
-  // const [percentChangeL2, setL2PercentChange] = useState("loading...")
-  // const [averageFee, setAverageFee] = useState("loading...")
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
-  // Todo: Reimplement Big Numbers
-  // useEffect(() => {
-  //   const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
 
-  //   const fetchL2Beat = async (): Promise<void> => {
-  //     try {
-  //       const l2BeatData = await getData<L2DataResponse>(
-  //         `${GATSBY_FUNCTIONS_PATH}/l2beat`
-  //       )
+const Layer2Page = () => {
+  const { t } = useTranslation("page-layer-2")
+  const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
 
-  //       const dailyData = l2BeatData.layers2s.daily.data
-
-  //       // formatted TVL from L2beat API formatted
-  //       const TVL = new Intl.NumberFormat(localeForStatsBoxNumbers, {
-  //         style: "currency",
-  //         currency: "USD",
-  //         notation: "compact",
-  //         minimumSignificantDigits: 2,
-  //         maximumSignificantDigits: 3,
-  //       }).format(dailyData[dailyData.length - 1][1])
-
-  //       setTVL(`${TVL}`)
-  //       // Calculate percent change ((new value - old value) / old value) *100)
-  //       const percentage =
-  //         ((dailyData[dailyData.length - 1][1] -
-  //           dailyData[dailyData.length - 31][1]) /
-  //           dailyData[dailyData.length - 31][1]) *
-  //         100
-  //       setL2PercentChange(
-  //         percentage > 0
-  //           ? `+${percentage.toFixed(2)}%`
-  //           : `${percentage.toFixed(2)}%`
-  //       )
-  //     } catch (error) {
-  //       console.error(error)
-  //       setTVL("Error, please refresh.")
-  //       setL2PercentChange("Error, please refresh.")
-  //     }
-  //   }
-  //   fetchL2Beat()
-  //
-  //
-  //   const fetchCryptoStats = async (): Promise<void> => {
-  //     try {
-  //       // Average eth transfer fee from L2's supported by cryptostats API
-  //       const feeDataResponse = await getData<FeeDataResponse>(
-  //         "https://api.cryptostats.community/api/v1/l2-fees/feeTransferEth?metadata=false"
-  //       )
-
-  //       // filtering out L2's we arent listing
-  //       const feeData = feeDataResponse.data.filter(
-  //         (l2) => l2.id !== "hermez" && !l2.errors
-  //       )
-
-  //       const feeAverage =
-  //         feeData.reduce(
-  //           (acc, curr) => (acc += curr.results.feeTransferEth),
-  //           0
-  //         ) / feeData.length
-
-  //       const intlFeeAverage = new Intl.NumberFormat(localeForStatsBoxNumbers, {
-  //         style: "currency",
-  //         currency: "USD",
-  //         notation: "compact",
-  //         minimumSignificantDigits: 2,
-  //         maximumSignificantDigits: 3,
-  //       }).format(feeAverage)
-  //       setAverageFee(`${intlFeeAverage}`)
-  //     } catch (error) {
-  //       setAverageFee("Error, please refresh.")
-  //       console.error(error)
-  //     }
-  //   }
-  //   fetchCryptoStats()
-  // }, [language])
-
-  const heroContent: HubHeroProps = {
+  const heroContent: CommonHeroProps = {
     title: t("layer-2-hero-title"),
     header: t("layer-2-hero-header"),
     description: t("layer-2-hero-subtitle"),
-    heroImgSrc: getImage(data.heroImage)!,
+    heroImg: HeroImage,
     buttons: [
       {
         content: t("layer-2-hero-button-1"),
         toId: "what-is-layer-2",
+        variant: "solid",
         matomo: {
           eventCategory: "layer 2 hero buttons",
           eventAction: "click",
@@ -309,14 +179,14 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 
   const rollupCards = [
     {
-      image: getImage(data.optimisticRollup),
+      image: OptimisticRollupImage,
       title: t("layer-2-optimistic-rollups-title"),
       description: t("layer-2-optimistic-rollups-description"),
       childSentence: t("layer-2-optimistic-rollups-childSentance"),
       childLink: "/developers/docs/scaling/optimistic-rollups/",
     },
     {
-      image: getImage(data.zkRollup),
+      image: ZKRollupImage,
       title: t("layer-2-zk-rollups-title"),
       description: t("layer-2-zk-rollups-description"),
       childSentence: t("layer-2-zk-rollups-childSentance"),
@@ -330,21 +200,21 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         title: "L2BEAT",
         description: t("layer-2-tools-l2beat-description"),
         link: "https://l2beat.com",
-        image: getImage(data.l2beat),
+        image: L2BEATImage,
         alt: "L2BEAT",
       },
       {
         title: "L2 Fees",
         description: t("layer-2-tools-l2fees-description"),
         link: "https://l2fees.info",
-        image: getImage(data.doge),
+        image: DogeImage,
         alt: "L2 Fees",
       },
       {
         title: "Chainlist",
         description: t("layer-2-tools-chainlist-description"),
         link: "https://chainlist.org",
-        image: getImage(data.doge),
+        image: DogeImage,
         alt: "Chainlist",
       },
     ],
@@ -353,78 +223,32 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         title: "Zapper",
         description: t("layer-2-tools-zapper-description"),
         link: "https://zapper.fi/",
-        image: getImage(data.zapper),
+        image: ZapperImage,
         alt: "Zapper",
       },
       {
         title: "Zerion",
         description: t("layer-2-tools-zerion-description"),
         link: "https://zerion.io",
-        image: getImage(data.zerion),
+        image: ZerionImage,
         alt: "Zerion",
       },
       {
         title: "DeBank",
         description: t("layer-2-tools-debank-description"),
         link: "https://debank.com",
-        image: getImage(data.debank),
+        image: DebankImage,
         alt: "DeBank",
       },
     ],
   }
 
-  const layer2DataCombined = [...layer2Data.optimistic, ...layer2Data.zk]
-
-  // Todo: Reimplement Big Numbers
-  // type ToolTipContentMetric = {
-  //   apiUrl: string
-  //   apiProvider: string
-  // }
-  // const tooltipContent = (metric: ToolTipContentMetric): JSX.Element => (
-  //   <div>
-  //     <Translation id="data-provided-by" />{" "}
-  //     <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
-  //   </div>
-  // )
-
-  // const statBoxGroupData: Array<{
-  //   content: string
-  //   descriptionId: TranslationKey
-  //   tooltipContent: ToolTipContentMetric
-  // }> = [
-  //   {
-  //     content: tvl,
-  //     descriptionId: "layer-2-statsbox-1",
-  //     tooltipContent: {
-  //       apiUrl: "https://l2beat.com/",
-  //       apiProvider: "L2BEAT",
-  //     },
-  //   },
-  //   {
-  //     content: averageFee,
-  //     descriptionId: "layer-2-statsbox-2",
-  //     tooltipContent: {
-  //       apiUrl: "https://cryptostats.community/",
-  //       apiProvider: "CryptoStats",
-  //     },
-  //   },
-  //   {
-  //     content: percentChangeL2,
-  //     descriptionId: "layer-2-statsbox-3",
-  //     tooltipContent: {
-  //       apiUrl: "https://l2beat.com/",
-  //       apiProvider: "L2BEAT",
-  //     },
-  //   },
-  // ]
-
   return (
-    <Flex flexDirection="column" alignItems="center">
+    <Flex as={MainArticle} flexDirection="column" alignItems="center">
       <PageMetadata
-        title={"Layer 2"}
-        description={"Introduction page to layer 2"}
+        title={t("layer-2-hero-title")}
+        description={t("layer-2-metadata-description")}
       />
-
       {/* Hero Section */}
       <HubHero {...heroContent} />
       {/* What is Layer 2 Section */}
@@ -432,63 +256,66 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <TwoColumnContent>
           <Box flex="50%">
             <SectionHeading>
-              <Translation id="layer-2-what-is-layer-2-title" />
+              {t("layer-2-what-is-layer-2-title")}
             </SectionHeading>
             <Text>
-              <Translation id="layer-2-what-is-layer-2-1" />
+              <Translation id="page-layer-2:layer-2-what-is-layer-2-1" />
             </Text>
-            <Text>
-              <Translation id="layer-2-what-is-layer-2-2" />
-            </Text>
+            <Text>{t("layer-2-what-is-layer-2-2")}</Text>
           </Box>
-          <Box flex="50%">
-            <GatsbyImage
-              image={getImage(data.whatIsEthereum)!}
+          <Center flex="50%" w="full">
+            <Image
+              src={WhatIsEthereumImage}
               alt=""
+              width={624}
               maxH="400px"
-              objectFit="contain"
+              style={{ objectFit: "contain" }}
             />
-          </Box>
+          </Center>
         </TwoColumnContent>
       </ContentBox>
       {/* What is Layer 1 Section */}
       <ContentBox isLightGrayBg>
-        <SectionHeading>
-          <Translation id="layer-2-what-is-layer-1-title" />
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-what-is-layer-1-title")}</SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <Text>
-              <Translation id="layer-2-what-is-layer-1-1" />
+              <Translation id="page-layer-2:layer-2-what-is-layer-1-1" />
             </Text>
-            <Text>
-              <Translation id="layer-2-what-is-layer-1-2" />
-            </Text>
+            <Text>{t("layer-2-what-is-layer-1-2")}</Text>
           </Box>
           <Box flex="50%">
             <Text>
-              <Translation id="layer-2-what-is-layer-1-list-title" />
+              <Translation id="page-layer-2:layer-2-what-is-layer-1-list-title" />
             </Text>
             <OrderedList
               listData={[
-                <Text>
-                  <Translation id="layer-2-what-is-layer-1-list-1" />
-                </Text>,
-                <Text>
-                  <Translation id="layer-2-what-is-layer-1-list-2" />
-                </Text>,
-                <Text>
-                  <Translation id="layer-2-what-is-layer-1-list-3" />
-                </Text>,
-                <Text>
-                  <Translation id="layer-2-what-is-layer-1-list-4" />
-                </Text>,
+                <>
+                  <Text>
+                    <Translation id="page-layer-2:layer-2-what-is-layer-1-list-1" />
+                  </Text>
+                </>,
+                <>
+                  <Text>
+                    <Translation id="page-layer-2:layer-2-what-is-layer-1-list-2" />
+                  </Text>
+                </>,
+                <>
+                  <Text>
+                    <Translation id="page-layer-2:layer-2-what-is-layer-1-list-3" />
+                  </Text>
+                </>,
+                <>
+                  <Text>
+                    <Translation id="page-layer-2:layer-2-what-is-layer-1-list-4" />
+                  </Text>
+                </>,
               ]}
             />
             <Text>
-              <Translation id="layer-2-what-is-layer-1-list-link-1" />{" "}
+              {t("layer-2-what-is-layer-1-list-link-1")}{" "}
               <InlineLink to="/what-is-ethereum/">
-                <Translation id="layer-2-what-is-layer-1-list-link-2" />
+                {t("layer-2-what-is-layer-1-list-link-2")}
               </InlineLink>
             </Text>
           </Box>
@@ -497,41 +324,39 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {/* Why Layer 2 Section */}
       <ContentBox>
         <TwoColumnContent>
-          <Center flex="50%">
-            <GatsbyImage
-              image={getImage(data.dao)!}
+          <Center flex="50%" w="full">
+            <Image
+              src={DAOImage}
               alt=""
-              w="full"
-              objectFit="contain"
+              width={500}
+              style={{ objectFit: "contain" }}
             />
           </Center>
           <Box flex="50%">
             <SectionHeading>
-              <Translation id="layer-2-why-do-we-need-layer-2-title" />
+              {t("layer-2-why-do-we-need-layer-2-title")}
             </SectionHeading>
             <Text>
-              <Translation id="layer-2-why-do-we-need-layer-2-1" />
+              <Translation id="page-layer-2:layer-2-why-do-we-need-layer-2-1" />
             </Text>
             <Text>
-              <Translation id="layer-2-why-do-we-need-layer-2-2" />
+              <Translation id="page-layer-2:layer-2-why-do-we-need-layer-2-2" />
             </Text>
 
             <SectionHeading as="h3">
-              <Translation id="layer-2-why-do-we-need-layer-2-scalability" />
+              {t("layer-2-why-do-we-need-layer-2-scalability")}
             </SectionHeading>
+            <Text>{t("layer-2-why-do-we-need-layer-2-scalability-1")}</Text>
             <Text>
-              <Translation id="layer-2-why-do-we-need-layer-2-scalability-1" />
-            </Text>
-            <Text>
-              <Translation id="layer-2-why-do-we-need-layer-2-scalability-2" />
+              <Translation id="page-layer-2:layer-2-why-do-we-need-layer-2-scalability-2" />
             </Text>
             <InlineLink to="/roadmap/vision/">
-              <Translation id="layer-2-why-do-we-need-layer-2-scalability-3" />
+              {t("layer-2-why-do-we-need-layer-2-scalability-3")}
             </InlineLink>
           </Box>
         </TwoColumnContent>
         <SectionHeading as="h3">
-          <Translation id="layer-2-benefits-of-layer-2-title" />
+          {t("layer-2-benefits-of-layer-2-title")}
         </SectionHeading>
         <SimpleGrid
           columnGap={8}
@@ -562,30 +387,24 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
         <TwoColumnContent>
           <Box flex="50%">
             <SectionHeading>
-              <Translation id="layer-2-how-does-layer-2-work-title" />
+              {t("layer-2-how-does-layer-2-work-title")}
             </SectionHeading>
             <Text>
-              <Translation id="layer-2-how-does-layer-2-work-1" />
+              <Translation id="page-layer-2:layer-2-how-does-layer-2-work-1" />
             </Text>
-            <Text>
-              <Translation id="layer-2-how-does-layer-2-work-2" />
-            </Text>
+            <Text>{t("layer-2-how-does-layer-2-work-2")}</Text>
             <SectionHeading as="h3">
-              <Translation id="layer-2-rollups-title" />
+              {t("layer-2-rollups-title")}
             </SectionHeading>
-            <Text>
-              <Translation id="layer-2-rollups-1" />
-            </Text>
-            <Text>
-              <Translation id="layer-2-rollups-2" />
-            </Text>
+            <Text>{t("layer-2-rollups-1")}</Text>
+            <Text>{t("layer-2-rollups-2")}</Text>
           </Box>
-          <Center flex="50%">
-            <GatsbyImage
-              image={getImage(data.rollup)!}
+          <Center flex="50%" w="full">
+            <Image
+              src={RollupImage}
               alt=""
-              w="full"
-              objectFit="contain"
+              width={800}
+              style={{ objectFit: "contain" }}
             />
           </Center>
         </TwoColumnContent>
@@ -603,8 +422,8 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
                 flexDirection="column"
                 justifyContent="space-between"
               >
-                <GatsbyImage
-                  image={image!}
+                <Image
+                  src={image!}
                   alt=""
                   objectPosition="0"
                   objectFit="contain"
@@ -622,131 +441,141 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       {/* DYOR Section */}
       <ContentBox>
         <InfoBanner isWarning>
-          <SectionHeading>
-            <Translation id="layer-2-dyor-title" />
-          </SectionHeading>
-          <Text>
-            <Translation id="layer-2-dyor-1" />
-          </Text>
-          <Text>
-            <Translation id="layer-2-dyor-2" />
-          </Text>
+          <SectionHeading>{t("layer-2-dyor-title")}</SectionHeading>
+          <Text>{t("layer-2-dyor-1")}</Text>
+          <Text>{t("layer-2-dyor-2")}</Text>
           <Text>
             <ButtonLink to="https://l2beat.com/scaling/risk">
-              <Translation id="layer-2-dyor-3" />
+              {t("layer-2-dyor-3")}
             </ButtonLink>
           </Text>
         </InfoBanner>
       </ContentBox>
       {/* Use Layer 2 Section */}
       <ContentBox id="use-layer-2">
-        <SectionHeading>
-          <Translation id="layer-2-use-layer-2-title" />
-        </SectionHeading>
-        <Text>
-          <Translation id="layer-2-use-layer-2-1" />
-        </Text>
-        <Text>
-          <Translation id="layer-2-contract-accounts" />
-        </Text>
+        <SectionHeading>{t("layer-2-use-layer-2-title")}</SectionHeading>
+        <Text>{t("layer-2-use-layer-2-1")}</Text>
+        <Text>{t("layer-2-contract-accounts")}</Text>
         <SectionHeading as="h3">
-          <Translation id="layer-2-use-layer-2-generalized-title" />
+          {t("layer-2-use-layer-2-generalized-title")}
         </SectionHeading>
-        <Text>
-          <Translation id="layer-2-use-layer-2-generalized-1" />
-        </Text>
+        <Text>{t("layer-2-use-layer-2-generalized-1")}</Text>
         <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
-            .map((l2, idx) => {
-              return (
-                <Layer2ProductCard
-                  key={idx}
-                  background={l2.background}
-                  image={getImage(data[l2.imageKey])!}
-                  description={t(l2.descriptionKey as TranslationKey)}
-                  url={l2.website}
-                  note={t(l2.noteKey as TranslationKey)}
-                  name={l2.name}
-                  bridge={l2.bridge}
-                  ecosystemPortal={l2.ecosystemPortal}
-                  tokenLists={l2.tokenLists}
-                >
-                  {l2.purpose.map((purpose, index) => (
-                    <Badge key={index} me={2}>
-                      {purpose}
-                    </Badge>
-                  ))}
-                </Layer2ProductCard>
-              )
-            })}
+            .map(
+              (
+                {
+                  background,
+                  image,
+                  descriptionKey,
+                  website,
+                  noteKey,
+                  name,
+                  bridge,
+                  ecosystemPortal,
+                  tokenLists,
+                  purpose,
+                },
+                idx
+              ) => {
+                return (
+                  <Layer2ProductCard
+                    key={idx}
+                    background={background}
+                    image={image}
+                    description={t(descriptionKey as TranslationKey)}
+                    url={website}
+                    note={t(noteKey as TranslationKey)}
+                    name={name}
+                    bridge={bridge}
+                    ecosystemPortal={ecosystemPortal}
+                    tokenLists={tokenLists}
+                  >
+                    {purpose.map((purpose, index) => (
+                      <Badge key={index} me={2}>
+                        {purpose}
+                      </Badge>
+                    ))}
+                  </Layer2ProductCard>
+                )
+              }
+            )}
         </Layer2CardGrid>
       </ContentBox>
       {/* Layer 2 App Specific Section */}
       <ContentBox id="use-layer-2">
         <SectionHeading as="h3">
-          <Translation id="layer-2-use-layer-2-application-specific-title" />
+          {t("layer-2-use-layer-2-application-specific-title")}
         </SectionHeading>
-        <Text>
-          <Translation id="layer-2-use-layer-2-application-specific-1" />
-        </Text>
+        <Text>{t("layer-2-use-layer-2-application-specific-1")}</Text>
         <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => l2.purpose.indexOf("universal"))
-            .map((l2, idx) => {
-              return (
-                <Layer2ProductCard
-                  key={idx}
-                  background={l2.background}
-                  image={getImage(data[l2.imageKey])!}
-                  description={t(l2.descriptionKey as TranslationKey)}
-                  url={l2.website}
-                  note={t(l2.noteKey as TranslationKey)}
-                  name={l2.name}
-                  bridge={l2.bridge}
-                  ecosystemPortal={l2.ecosystemPortal}
-                  tokenLists={l2.tokenLists}
-                >
-                  {l2.purpose.map((purpose, index) => (
-                    <Badge key={index} me={2}>
-                      {purpose}
-                    </Badge>
-                  ))}
-                </Layer2ProductCard>
-              )
-            })}
+            .map(
+              (
+                {
+                  background,
+                  image,
+                  descriptionKey,
+                  website,
+                  noteKey,
+                  name,
+                  bridge,
+                  ecosystemPortal,
+                  tokenLists,
+                  purpose,
+                },
+                idx
+              ) => {
+                return (
+                  <Layer2ProductCard
+                    key={idx}
+                    background={background}
+                    image={image}
+                    description={t(descriptionKey as TranslationKey)}
+                    url={website}
+                    note={t(noteKey as TranslationKey)}
+                    name={name}
+                    bridge={bridge}
+                    ecosystemPortal={ecosystemPortal}
+                    tokenLists={tokenLists}
+                  >
+                    {purpose.map((purpose, index) => (
+                      <Badge key={index} me={2}>
+                        {purpose}
+                      </Badge>
+                    ))}
+                  </Layer2ProductCard>
+                )
+              }
+            )}
         </Layer2CardGrid>
       </ContentBox>
       {/* Layer 2 Sidechain Section */}
       <ContentBox>
-        <SectionHeading>
-          <Translation id="layer-2-sidechains-title" />
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-sidechains-title")}</SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <Text>
-              <Translation id="layer-2-sidechains-1" />
+              <Translation id="page-layer-2:layer-2-sidechains-1" />
             </Text>
-            <Text>
-              <Translation id="layer-2-sidechains-2" />
-            </Text>
+            <Text>{t("layer-2-sidechains-2")}</Text>
             <UnorderedList>
               <ListItem>
                 <InlineLink to="/developers/docs/scaling/sidechains/">
-                  <Translation id="layer-2-more-on-sidechains" />
+                  {t("layer-2-more-on-sidechains")}
                 </InlineLink>
               </ListItem>
               <ListItem>
                 <InlineLink to="/developers/docs/scaling/validium/">
-                  <Translation id="layer-2-more-on-validiums" />
+                  {t("layer-2-more-on-validiums")}
                 </InlineLink>
               </ListItem>
             </UnorderedList>
           </Box>
           <Box flex="50%">
-            <Text>
-              <Translation id="layer-2-sidechains-4" />
-            </Text>
+            <Text>{t("layer-2-sidechains-4")}</Text>
           </Box>
         </TwoColumnContent>
       </ContentBox>
@@ -754,122 +583,108 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
       <ContentBox id="how-to-get-onto-layer-2">
         <Layer2Onboard
           layer2DataCombined={layer2DataCombined}
-          ethIcon={getImage(data.ethHome)!}
+          ethIcon={EthHomeImage}
           ethIconAlt={t("ethereum-logo")}
         />
       </ContentBox>
       {/* Layer 2 Tools Section */}
       <ContentBox>
-        <SectionHeading>
-          <Translation id="layer-2-tools-title" />
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-tools-title")}</SectionHeading>
         <TwoColumnContent>
           <Box flex="50%">
             <ProductList
               category="Information"
               content={toolsData.information}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
           <Box flex="50%">
             <ProductList
               category="Wallet managers"
               content={toolsData.walletManagers}
+              actionLabel={t("page-dapps-ready-button")}
             />
           </Box>
         </TwoColumnContent>
       </ContentBox>
       {/* Layer 2 FAQ Section */}
       <ContentBox>
-        <SectionHeading>
-          <Translation id="layer-2-faq-title" />
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-faq-title")}</SectionHeading>
         <ExpandableCard title={`${t("layer-2-faq-question-1-title")}`}>
-          <Text>
-            <Translation id="layer-2-faq-question-1-description-1" />
-          </Text>
+          <Text>{t("layer-2-faq-question-1-description-1")}</Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-2-title")}`}>
-          <Text>
-            <Translation id="layer-2-faq-question-2-description-1" />
-          </Text>
-          <Text>
-            <Translation id="layer-2-faq-question-2-description-2" />
-          </Text>
-          <Text>
-            <Translation id="layer-2-faq-question-2-description-3" />
-          </Text>
+          <Text>{t("layer-2-faq-question-2-description-1")}</Text>
+          <Text>{t("layer-2-faq-question-2-description-2")}</Text>
+          <Text>{t("layer-2-faq-question-2-description-3")}</Text>
           <Text>
             <InlineLink to="/developers/docs/scaling/optimistic-rollups/">
-              <Translation id="layer-2-more-info-on-optimistic-rollups" />
+              {t("layer-2-more-info-on-optimistic-rollups")}
             </InlineLink>
           </Text>
           <Text>
             <InlineLink to="/developers/docs/scaling/zk-rollups/">
-              <Translation id="layer-2-more-info-on-zk-rollups" />
+              {t("layer-2-more-info-on-zk-rollups")}
             </InlineLink>
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
+          <Text>{t("layer-2-faq-question-4-description-1")}</Text>
           <Text>
-            <Translation id="layer-2-faq-question-4-description-1" />
+            <Translation id="page-layer-2:layer-2-faq-question-4-description-2" />
           </Text>
           <Text>
-            <Translation id="layer-2-faq-question-4-description-2" />
-          </Text>
-          <Text>
-            <Translation id="layer-2-faq-question-4-description-3" />
+            <Translation id="page-layer-2:layer-2-faq-question-4-description-3" />
           </Text>
           <Text>
             <InlineLink to="/bridges/">
-              <Translation id="layer-2-more-on-bridges" />
+              {t("layer-2-more-on-bridges")}
             </InlineLink>
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-5-title")}`}>
           <Text>
-            <Translation id="layer-2-faq-question-5-description-1" />{" "}
+            {t("layer-2-faq-question-5-description-1")}{" "}
             <InlineLink to="/contributing/adding-layer-2s/">
-              <Translation id="layer-2-faq-question-5-view-listing-policy" />
+              {t("layer-2-faq-question-5-view-listing-policy")}
             </InlineLink>
           </Text>
           <Text>
-            <Translation id="layer-2-faq-question-5-description-2" />
+            <Translation id="page-layer-2:layer-2-faq-question-5-description-2" />
           </Text>
         </ExpandableCard>
       </ContentBox>
       {/* Layer 2 Further Reading Section */}
       <ContentBox>
-        <SectionHeading>
-          <Translation id="layer-2-further-reading-title" />
-        </SectionHeading>
+        <SectionHeading>{t("layer-2-further-reading-title")}</SectionHeading>
         <UnorderedList ms="1.45rem" mb="1.45rem">
           <ListItem>
             <InlineLink to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
-              <Translation id="a-rollup-centric-ethereum-roadmap" />
+              {t("a-rollup-centric-ethereum-roadmap")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin </i>
           </ListItem>
           <ListItem>
             <InlineLink to="https://vitalik.ca/general/2021/01/05/rollup.html">
-              <Translation id="an-incomplete-guide-to-rollups" />
+              {t("an-incomplete-guide-to-rollups")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin</i>
           </ListItem>
           <ListItem>
             <InlineLink to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
-              <Translation id="polygon-sidechain-vs-ethereum-rollups" />
+              {t("polygon-sidechain-vs-ethereum-rollups")}
             </InlineLink>{" "}
             <i>- Lex Clips</i>
           </ListItem>
           <ListItem>
             <InlineLink to="https://www.youtube.com/watch?v=7pWxCklcNsU">
-              <Translation id="rollups-the-ultimate-ethereum-scaling-strategy" />
+              {t("rollups-the-ultimate-ethereum-scaling-strategy")}
             </InlineLink>{" "}
             <i>- Finematics</i>
           </ListItem>
           <ListItem>
             <InlineLink to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
-              <Translation id="understanding-rollup-economics-from-first-principals" />
+              {t("understanding-rollup-economics-from-first-principals")}
             </InlineLink>{" "}
             <i>- Barnabé Monnot</i>
           </ListItem>
@@ -886,270 +701,3 @@ const Layer2Page = ({ data }: PageProps<Queries.Layer2PageQuery>) => {
 }
 
 export default Layer2Page
-
-export const query = graphql`
-  query Layer2Page($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-layer-2", "learn-quizzes", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 500
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 624
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ethBlocks: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 624
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ethHome: file(relativePath: { eq: "eth-home-icon.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 50
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    financeTransparent: file(relativePath: { eq: "finance_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 300
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    heroImage: file(relativePath: { eq: "heroes/layer-2-hub-hero.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 1504
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    impact: file(relativePath: { eq: "impact_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 300
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    optimisticRollup: file(
-      relativePath: { eq: "layer-2/optimistic_rollup.png" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-          width: 122
-        )
-      }
-    }
-    rollup: file(relativePath: { eq: "layer-2/rollup-2.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: CONSTRAINED, placeholder: BLURRED, quality: 100)
-      }
-    }
-    zkRollup: file(relativePath: { eq: "layer-2/zk_rollup.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-          width: 122
-        )
-      }
-    }
-    whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 624
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    arbitrum: file(relativePath: { eq: "layer-2/arbitrum.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    aztec: file(relativePath: { eq: "layer-2/aztec.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 200
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    starknet: file(relativePath: { eq: "layer-2/starknet.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    boba: file(relativePath: { eq: "layer-2/boba.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    chainlist: file(relativePath: { eq: "layer-2/chainlist.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    debank: file(relativePath: { eq: "layer-2/debank.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-
-    l2beat: file(relativePath: { eq: "layer-2/l2beat.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    loopring: file(relativePath: { eq: "layer-2/loopring.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    metis: file(relativePath: { eq: "layer-2/metis-dark.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    optimism: file(relativePath: { eq: "layer-2/optimism.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    zapper: file(relativePath: { eq: "layer-2/zapper.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    zerion: file(relativePath: { eq: "layer-2/zerion.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    zkspace: file(relativePath: { eq: "layer-2/zkspace.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    zksync: file(relativePath: { eq: "layer-2/zksync.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 100
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-  }
-`

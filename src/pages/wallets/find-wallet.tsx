@@ -1,47 +1,49 @@
-// Libraries
+import { useRef, useState } from "react"
+import { shuffle } from "lodash"
+import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { SSRConfig, useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
-  Flex,
   Box,
-  useTheme,
-  useDisclosure,
+  Center,
   Drawer,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
   DrawerBody,
-  Hide,
+  DrawerCloseButton,
+  DrawerContent,
   DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Hide,
   Show,
   Text,
+  useDisclosure,
+  useTheme,
 } from "@chakra-ui/react"
-import React, { useState } from "react"
-import { graphql } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { shuffle } from "lodash"
 
-// Components
-import BannerNotification from "../../components/BannerNotification"
-import Breadcrumbs from "../../components/Breadcrumbs"
-import PageMetadata from "../../components/PageMetadata"
-import Translation from "../../components/Translation"
-import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
-import WalletTable from "../../components/FindWallet/WalletTable"
-import OldHeading from "../../components/OldHeading"
-import GatsbyImage from "../../components/GatsbyImage"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
-// Data
-import walletData from "../../data/wallets/wallet-data"
+import BannerNotification from "@/components/BannerNotification"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import { Button } from "@/components/Buttons"
+import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
+import WalletTable from "@/components/FindWallet/WalletTable"
+import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
+import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
 
-// Icons
-import { FilterBurgerIcon } from "../../components/icons/wallets"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
-import { getImage } from "../../utils/image"
+import walletData from "@/data/wallets/wallet-data"
 
-import type { ChildOnlyProp } from "../../types"
-import { NAV_BAR_PX_HEIGHT } from "../../constants"
-import { Button } from "../../components/Buttons"
+import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+
+import FindWalletHeroImage from "@/public/wallets/find-wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -86,14 +88,31 @@ const filterDefault = {
 
 export type FiltersType = typeof filterDefault
 
-const randomizedWalletData = shuffle(walletData)
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
 
-const FindWalletPage = ({ data, location }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/wallets/find-wallet"
+  )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[3])
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
+const FindWalletPage = () => {
+  const randomizedWalletData = shuffle(walletData)
+  const { pathname } = useRouter()
   const theme = useTheme()
-  const { t } = useTranslation()
-  const resetWalletFilter = React.useRef(() => {})
+  const { t } = useTranslation("page-wallets-find-wallet")
+  const resetWalletFilter = useRef(() => {})
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
-
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
@@ -119,14 +138,14 @@ const FindWalletPage = ({ data, location }) => {
   }
 
   return (
-    <Flex direction="column" position="relative" w="full">
+    <Flex as={MainArticle} direction="column" position="relative" w="full">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
       />
 
       <BannerNotification shouldShow={true}>
-        <Translation id="page-find-wallet-footnote-1" />
+        {t("page-find-wallet-footnote-1")}
       </BannerNotification>
 
       <Flex
@@ -138,28 +157,28 @@ const FindWalletPage = ({ data, location }) => {
         mb="44px"
       >
         <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
-          <Breadcrumbs slug={location.pathname} />
+          <Breadcrumbs slug={pathname} />
           <OldHeading
             as="h1"
             fontSize={{ base: "2.5rem", md: "5xl" }}
             lineHeight={1.4}
           >
-            <Translation id="page-find-wallet-title" />
+            {t("page-find-wallet-title")}
           </OldHeading>
-          <Subtitle>
-            <Translation id="page-find-wallet-description" />
-          </Subtitle>
-          <Subtitle>
-            <Translation id="page-find-wallet-desc-2" />
-          </Subtitle>
+          <Subtitle>{t("page-find-wallet-description")}</Subtitle>
+          <Subtitle>{t("page-find-wallet-desc-2")}</Subtitle>
         </Box>
-        <GatsbyImage
-          w={{ base: "full", sm: "50%" }}
-          image={getImage(data.hero)!}
-          alt=""
-          loading="eager"
-          objectFit="contain"
-        />
+        <Center w={{ base: "full", sm: "50%" }}>
+          <Image
+            src={FindWalletHeroImage}
+            width={600}
+            alt=""
+            priority
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </Center>
       </Flex>
 
       <Hide above="lg">
@@ -195,9 +214,7 @@ const FindWalletPage = ({ data, location }) => {
             }}
           >
             <Box>
-              <Text>
-                <Translation id="page-find-wallet-filters" />
-              </Text>
+              <Text>{t("page-find-wallet-filters")}</Text>
               <Text fontSize="sm" lineHeight="14px" color="body.medium">
                 {Object.values(filters).reduce(
                   (acc, filter) => (filter ? acc + 1 : acc),
@@ -239,6 +256,7 @@ const FindWalletPage = ({ data, location }) => {
           </DrawerContent>
         </Drawer>
       </Hide>
+
       <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} gap={6}>
         <Show above="lg">
           <WalletFilterSidebar
@@ -279,238 +297,11 @@ const FindWalletPage = ({ data, location }) => {
             },
           }}
         >
-          <WalletTable
-            data={data}
-            filters={filters}
-            walletData={randomizedWalletData}
-          />
+          <WalletTable filters={filters} walletData={randomizedWalletData} />
         </Box>
       </Flex>
-      <Box
-        textAlign="center"
-        p={4}
-        m={4}
-        sx={{
-          p: {
-            fontSize: "sm",
-            lineHeight: "18px",
-            p: "1",
-            m: 0,
-          },
-        }}
-      >
-        <Text fontStyle="italic">
-          <Translation id="page-find-wallet-footnote-1" />
-        </Text>
-        <Text fontStyle="italic">
-          <Translation id="page-find-wallet-footnote-2" />
-        </Text>
-        <Text fontStyle="italic">
-          <Translation id="page-find-wallet-footnote-3" />
-        </Text>
-      </Box>
     </Flex>
   )
 }
 
 export default FindWalletPage
-
-export const walletImage = graphql`
-  fragment walletImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        width: 56
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
-
-export const query = graphql`
-  query FindWalletPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-wallets-find-wallet", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
-      ...walletImage
-    }
-    argent: file(relativePath: { eq: "wallets/argent.png" }) {
-      ...walletImage
-    }
-    brave: file(relativePath: { eq: "wallets/brave.png" }) {
-      ...walletImage
-    }
-    coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
-      ...walletImage
-    }
-    coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
-      ...walletImage
-    }
-    frame: file(relativePath: { eq: "wallets/frame.png" }) {
-      ...walletImage
-    }
-    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
-      ...walletImage
-    }
-    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
-      ...walletImage
-    }
-    metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
-      ...walletImage
-    }
-    numio: file(relativePath: { eq: "wallets/numio.png" }) {
-      ...walletImage
-    }
-    portis: file(relativePath: { eq: "wallets/portis.png" }) {
-      ...walletImage
-    }
-    taho: file(relativePath: { eq: "wallets/taho.png" }) {
-      ...walletImage
-    }
-    safe: file(relativePath: { eq: "wallets/safe.png" }) {
-      ...walletImage
-    }
-    coinwallet: file(relativePath: { eq: "wallets/coinwallet.png" }) {
-      ...walletImage
-    }
-    ambire: file(relativePath: { eq: "wallets/ambire.png" }) {
-      ...walletImage
-    }
-    zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
-      ...walletImage
-    }
-    imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
-      ...walletImage
-    }
-    foxwallet: file(relativePath: { eq: "wallets/foxwallet.png" }) {
-      ...walletImage
-    }
-    mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
-      ...walletImage
-    }
-    pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
-      ...walletImage
-    }
-    mew: file(relativePath: { eq: "wallets/mew.png" }) {
-      ...walletImage
-    }
-    unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
-      ...walletImage
-    }
-    myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-      ...walletImage
-    }
-    alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
-      ...walletImage
-    }
-    opera: file(relativePath: { eq: "wallets/opera.png" }) {
-      ...walletImage
-    }
-    guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
-      ...walletImage
-    }
-    web3auth: file(relativePath: { eq: "wallets/web3auth.png" }) {
-      ...walletImage
-    }
-    bridge: file(relativePath: { eq: "wallets/bridge.png" }) {
-      ...walletImage
-    }
-    torus: file(relativePath: { eq: "wallets/torus.png" }) {
-      ...walletImage
-    }
-    tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-      ...walletImage
-    }
-    oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
-      ...walletImage
-    }
-    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
-      ...walletImage
-    }
-    status: file(relativePath: { eq: "wallets/status.png" }) {
-      ...walletImage
-    }
-    aktionariat: file(relativePath: { eq: "wallets/aktionariat.png" }) {
-      ...walletImage
-    }
-    sequence: file(relativePath: { eq: "wallets/sequence.png" }) {
-      ...walletImage
-    }
-    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
-      ...walletImage
-    }
-    ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-      ...walletImage
-    }
-    infinity_wallet: file(relativePath: { eq: "wallets/infinity_wallet.png" }) {
-      ...walletImage
-    }
-    exodus: file(relativePath: { eq: "wallets/exodus.png" }) {
-      ...walletImage
-    }
-    rabbywallet: file(relativePath: { eq: "wallets/rabbywallet.png" }) {
-      ...walletImage
-    }
-    bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-      ...walletImage
-    }
-    zerion: file(relativePath: { eq: "wallets/zerion.png" }) {
-      ...walletImage
-    }
-    enkrypt: file(relativePath: { eq: "wallets/enkrypt.png" }) {
-      ...walletImage
-    }
-    gridplus: file(relativePath: { eq: "wallets/gridplus.png" }) {
-      ...walletImage
-    }
-    bitkeep: file(relativePath: { eq: "wallets/bitkeep.png" }) {
-      ...walletImage
-    }
-    blockwallet: file(relativePath: { eq: "wallets/blockwallet.png" }) {
-      ...walletImage
-    }
-    okx: file(relativePath: { eq: "wallets/okx.jpeg" }) {
-      ...walletImage
-    }
-    onekey: file(relativePath: { eq: "wallets/onekey.png" }) {
-      ...walletImage
-    }
-    apex: file(relativePath: { eq: "wallets/apex.png" }) {
-      ...walletImage
-    }
-    shapeshift: file(relativePath: { eq: "wallets/shapeshift.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    phantom: file(relativePath: { eq: "wallets/phantom.png" }) {
-      ...walletImage
-    }
-    XDEFI: file(relativePath: { eq: "wallets/XDEFI.png" }) {
-      ...walletImage
-    }
-  }
-`
