@@ -1,6 +1,7 @@
-import React, { ReactNode } from "react"
-import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { ReactNode } from "react"
+import { GetStaticProps } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   chakra,
@@ -10,21 +11,28 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import Card, { IProps as ICardProps } from "../../components/Card"
-import Callout from "../../components/Callout"
-import InlineLink from "../../components/Link"
-import Translation from "../../components/Translation"
-import ButtonLink from "../../components/Buttons/ButtonLink"
-import PageMetadata from "../../components/PageMetadata"
-import FeedbackCard from "../../components/FeedbackCard"
-import Text from "../../components/OldText"
-import OldHeading from "../../components/OldHeading"
-import { HubHero } from "../../components/Hero"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
-import { getImage } from "../../utils/image"
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import Callout from "@/components/Callout"
+import Card, { IProps as ICardProps } from "@/components/Card"
+import FeedbackCard from "@/components/FeedbackCard"
+import HubHero from "@/components/Hero/HubHero"
+import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
+import Translation from "@/components/Translation"
 
-import type { ChildOnlyProp, Context } from "../../types"
-import GatsbyImage from "../../components/GatsbyImage"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import DevelopersImage from "@/public/developers-eth-blocks.png"
+import DogeImage from "@/public/doge-computer.png"
+import HeroImage from "@/public/heroes/developers-hub-hero.jpg"
 
 const Page = (props: ChildOnlyProp) => (
   <Flex
@@ -50,7 +58,7 @@ const GrayContainer = (props: ChildOnlyProp) => (
 )
 
 const Content = (props: ChildOnlyProp) => (
-  <Box py={4} px={8} w="full" {...props} />
+  <Box as={MainArticle} py={4} px={8} w="full" {...props} />
 )
 
 const Subtitle = (props: TextProps) => (
@@ -128,6 +136,22 @@ const StyledCallout = chakra(Callout, {
   },
 })
 
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage("/developers")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
 interface IDevelopersPath {
   emoji: string
   title: ReactNode
@@ -139,55 +163,72 @@ interface IDevelopersPath {
 const paths: Array<IDevelopersPath> = [
   {
     emoji: ":woman_student:",
-    title: <Translation id="page-developers-learn" />,
-    description: <Translation id="page-developers-learn-desc" />,
+    title: <Translation id="page-developers-index:page-developers-learn" />,
+    description: (
+      <Translation id="page-developers-index:page-developers-learn-desc" />
+    ),
     url: "/developers/docs/",
-    button: <Translation id="page-developers-read-docs" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-read-docs" />
+    ),
   },
   {
     emoji: ":woman_teacher:",
-    title: <Translation id="page-developers-learn-tutorials" />,
-    description: <Translation id="page-developers-learn-tutorials-desc" />,
+    title: (
+      <Translation id="page-developers-index:page-developers-learn-tutorials" />
+    ),
+    description: (
+      <Translation id="page-developers-index:page-developers-learn-tutorials-desc" />
+    ),
     url: "/developers/tutorials/",
-    button: <Translation id="page-developers-learn-tutorials-cta" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-learn-tutorials-cta" />
+    ),
   },
   {
     emoji: ":woman_scientist:",
-    title: <Translation id="page-developers-start" />,
-    description: <Translation id="page-developers-start-desc" />,
+    title: <Translation id="page-developers-index:page-developers-start" />,
+    description: (
+      <Translation id="page-developers-index:page-developers-start-desc" />
+    ),
     url: "/developers/learning-tools/",
-    button: <Translation id="page-developers-play-code" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-play-code" />
+    ),
   },
   {
     emoji: ":construction_worker:",
-    title: <Translation id="page-developers-set-up" />,
-    description: <Translation id="page-developers-setup-desc" />,
+    title: <Translation id="page-developers-index:page-developers-set-up" />,
+    description: (
+      <Translation id="page-developers-index:page-developers-setup-desc" />
+    ),
     url: "/developers/local-environment/",
-    button: <Translation id="page-developers-choose-stack" />,
+    button: (
+      <Translation id="page-developers-index:page-developers-choose-stack" />
+    ),
   },
 ]
 
-const DevelopersPage = ({
-  data,
-}: PageProps<Queries.DevelopersIndexPageQuery, Context>) => {
-  const { t } = useTranslation()
+const DevelopersPage = () => {
+  const { t } = useTranslation("page-developers-index")
+
   return (
     <Page>
       <PageMetadata
-        title={t("page-developer-meta-title")}
-        description={t("page-developers-meta-desc")}
+        title={t("page-developers-index:page-developer-meta-title")}
+        description={t("page-developers-index:page-developers-meta-desc")}
       />
       <HubHero
-        heroImgSrc={getImage(data.heroImage)!}
-        header={`${t("page-developers-title-1")} ${t(
-          "page-developers-title-2"
-        )} ${t("page-developers-title-3")}`}
-        title={t("developers")} // TODO: Update to use "Developers Home"?
-        description={t("page-developers-subtitle")}
+        heroImg={HeroImage}
+        header={`${t("page-developers-index:page-developers-title-1")} ${t(
+          "page-developers-index:page-developers-title-2"
+        )} ${t("page-developers-index:page-developers-title-3")}`}
+        title={t("developers")}
+        description={t("page-developers-index:page-developers-subtitle")}
       />
       <Content>
         <MonoSubtitle>
-          <Translation id="page-developers-get-started" />
+          <Translation id="page-developers-index:page-developers-get-started" />
         </MonoSubtitle>
         <StyledCardContainer>
           {paths.map((path, idx) => (
@@ -204,30 +245,30 @@ const DevelopersPage = ({
         <TwoColumnContent>
           <IntroColumn>
             <OldHeading>
-              <Translation id="page-developers-about" />
+              <Translation id="page-developers-index:page-developers-about" />
             </OldHeading>
             <Subtitle mb={6}>
-              <Translation id="page-developers-about-desc" />
+              <Translation id="page-developers-index:page-developers-about-desc" />
             </Subtitle>
             <Text>
-              <Translation id="page-developers-about-desc-2" />
+              <Translation id="page-developers-index:page-developers-about-desc-2" />
             </Text>
             <Text>
-              <Translation id="page-developers-feedback" />{" "}
+              <Translation id="page-developers-index:page-developers-feedback" />{" "}
               <InlineLink to="https://discord.gg/ethereum-org">
-                <Translation id="page-developers-discord" />
+                <Translation id="page-developers-index:page-developers-discord" />
               </InlineLink>
             </Text>
           </IntroColumn>
           <StyledCallout
-            image={getImage(data.developers)}
-            titleKey="page-developers-improve-ethereum"
-            descriptionKey="page-developers-improve-ethereum-desc"
-            alt={t("alt-eth-blocks")}
+            image={DevelopersImage}
+            titleKey="page-developers-index:page-developers-improve-ethereum"
+            descriptionKey="page-developers-index:page-developers-improve-ethereum-desc"
+            alt={t("page-developers-index:alt-eth-blocks")}
           >
             <div>
               <ButtonLink to="https://github.com/ethereum/ethereum-org-website">
-                <Translation id="page-developers-contribute" />
+                <Translation id="page-developers-index:page-developers-contribute" />
               </ButtonLink>
             </div>
           </StyledCallout>
@@ -236,59 +277,59 @@ const DevelopersPage = ({
       <GrayContainer>
         <Content>
           <OldHeading>
-            <Translation id="page-developers-explore-documentation" />
+            <Translation id="page-developers-index:page-developers-explore-documentation" />
           </OldHeading>
         </Content>
-        {/* TODO use the same source as SideNav for these sections */}
+
         <ThreeColumnContent>
           <Column>
             <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
-              <Translation id="page-developers-docs-introductions" />
+              <Translation id="page-developers-index:page-developers-docs-introductions" />
             </OldHeading>
             <InlineLink to="/developers/docs/intro-to-ethereum/">
-              <Translation id="page-developers-intro-eth-link" />
+              <Translation id="page-developers-index:page-developers-intro-eth-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-into-eth-desc" />
+              <Translation id="page-developers-index:page-developers-into-eth-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/intro-to-ether/">
-              <Translation id="page-developers-intro-ether-link" />
+              <Translation id="page-developers-index:page-developers-intro-ether-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-intro-ether-desc" />
+              <Translation id="page-developers-index:page-developers-intro-ether-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/dapps/">
-              <Translation id="page-developers-intro-dapps-link" />
+              <Translation id="page-developers-index:page-developers-intro-dapps-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-intro-dapps-desc" />
+              <Translation id="page-developers-index:page-developers-intro-dapps-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/ethereum-stack/">
-              <Translation id="page-developers-intro-stack" />
+              <Translation id="page-developers-index:page-developers-intro-stack" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-intro-stack-desc" />
+              <Translation id="page-developers-index:page-developers-intro-stack-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/web2-vs-web3/">
-              <Translation id="page-developers-web3-link" />
+              <Translation id="page-developers-index:page-developers-web3-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-web3-desc" />
+              <Translation id="page-developers-index:page-developers-web3-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/programming-languages/">
-              <Translation id="page-developers-languages" />
+              <Translation id="page-developers-index:page-developers-languages" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-language-desc" />
+              <Translation id="page-developers-index:page-developers-language-desc" />
             </Text>
-            <GatsbyImage
+            <Image
               hideBelow="lg"
-              image={getImage(data.doge)!}
+              src={DogeImage}
               alt={t("page-assets-doge")}
               maxW="400px"
               mt={16}
@@ -296,161 +337,161 @@ const DevelopersPage = ({
           </Column>
           <Column>
             <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
-              <Translation id="page-developers-fundamentals" />
+              <Translation id="page-developers-index:page-developers-fundamentals" />
             </OldHeading>
             <InlineLink to="/developers/docs/accounts/">
-              <Translation id="page-developers-accounts-link" />
+              <Translation id="page-developers-index:page-developers-accounts-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-account-desc" />
+              <Translation id="page-developers-index:page-developers-account-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/transactions/">
-              <Translation id="page-developers-transactions-link" />
+              <Translation id="page-developers-index:page-developers-transactions-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-transactions-desc" />
+              <Translation id="page-developers-index:page-developers-transactions-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/blocks/">
-              <Translation id="page-developers-blocks-link" />
+              <Translation id="page-developers-index:page-developers-blocks-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-block-desc" />
+              <Translation id="page-developers-index:page-developers-block-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/evm/">
-              <Translation id="page-developers-evm-link" />
+              <Translation id="page-developers-index:page-developers-evm-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-evm-desc" />
+              <Translation id="page-developers-index:page-developers-evm-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/gas/">
-              <Translation id="page-developers-gas-link" />
+              <Translation id="page-developers-index:page-developers-gas-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-gas-desc" />
+              <Translation id="page-developers-index:page-developers-gas-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/nodes-and-clients/">
-              <Translation id="page-developers-node-clients-link" />
+              <Translation id="page-developers-index:page-developers-node-clients-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-node-clients-desc" />
+              <Translation id="page-developers-index:page-developers-node-clients-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/networks/">
-              <Translation id="page-developers-networks-link" />
+              <Translation id="page-developers-index:page-developers-networks-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-networks-desc" />
+              <Translation id="page-developers-index:page-developers-networks-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining/">
-              <Translation id="page-developers-mining-link" />
+              <Translation id="page-developers-index:page-developers-mining-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-mining-desc" />
+              <Translation id="page-developers-index:page-developers-mining-desc" />
             </Text>
 
             <InlineLink to="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
-              <Translation id="page-developers-mining-algorithms-link" />
+              <Translation id="page-developers-index:page-developers-mining-algorithms-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-mining-algorithms-desc" />
+              <Translation id="page-developers-index:page-developers-mining-algorithms-desc" />
             </Text>
           </Column>
           <RightColumn>
             <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
-              <Translation id="page-developers-stack" />
+              <Translation id="page-developers-index:page-developers-stack" />
             </OldHeading>
             <InlineLink to="/developers/docs/smart-contracts/">
-              <Translation id="page-developers-smart-contracts-link" />
+              <Translation id="page-developers-index:page-developers-smart-contracts-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-smart-contracts-desc" />
+              <Translation id="page-developers-index:page-developers-smart-contracts-desc" />
             </Text>
             <InlineLink to="/developers/docs/frameworks/">
-              <Translation id="page-developers-frameworks-link" />
+              <Translation id="page-developers-index:page-developers-frameworks-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-frameworks-desc" />
+              <Translation id="page-developers-index:page-developers-frameworks-desc" />
             </Text>
             <InlineLink to="/developers/docs/apis/javascript/">
-              <Translation id="page-developers-js-libraries-link" />
+              <Translation id="page-developers-index:page-developers-js-libraries-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-js-libraries-desc" />
+              <Translation id="page-developers-index:page-developers-js-libraries-desc" />
             </Text>
             <InlineLink to="/developers/docs/apis/backend/">
-              <Translation id="page-developers-api-link" />
+              <Translation id="page-developers-index:page-developers-api-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-api-desc" />
+              <Translation id="page-developers-index:page-developers-api-desc" />
             </Text>
             <InlineLink to="/developers/docs/data-and-analytics/block-explorers/">
-              <Translation id="page-developers-block-explorers-link" />
+              <Translation id="page-developers-index:page-developers-block-explorers-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-block-explorers-desc" />
+              <Translation id="page-developers-index:page-developers-block-explorers-desc" />
             </Text>
             <InlineLink to="/developers/docs/smart-contracts/security/">
-              <Translation id="page-developers-smart-contract-security-link" />
+              <Translation id="page-developers-index:page-developers-smart-contract-security-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-smart-contract-security-desc" />
+              <Translation id="page-developers-index:page-developers-smart-contract-security-desc" />
             </Text>
             <InlineLink to="/developers/docs/storage/">
-              <Translation id="page-developers-storage-link" />
+              <Translation id="page-developers-index:page-developers-storage-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-storage-desc" />
+              <Translation id="page-developers-index:page-developers-storage-desc" />
             </Text>
             <InlineLink to="/developers/docs/ides/">
-              <Translation id="page-developers-dev-env-link" />
+              <Translation id="page-developers-index:page-developers-dev-env-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-dev-env-desc" />
+              <Translation id="page-developers-index:page-developers-dev-env-desc" />
             </Text>
             <OldHeading as="h3" fontSize={{ base: "xl", md: "2xl" }}>
-              <Translation id="page-developers-advanced" />
+              <Translation id="page-developers-index:page-developers-advanced" />
             </OldHeading>
             <InlineLink to="/developers/docs/standards/tokens/">
-              <Translation id="page-developers-token-standards-link" />
+              <Translation id="page-developers-index:page-developers-token-standards-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-token-standards-desc" />
+              <Translation id="page-developers-index:page-developers-token-standards-desc" />
             </Text>
             <InlineLink to="/developers/docs/mev/">
-              <Translation id="page-developers-mev-link" />
+              <Translation id="page-developers-index:page-developers-mev-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-mev-desc" />
+              <Translation id="page-developers-index:page-developers-mev-desc" />
             </Text>
             <InlineLink to="/developers/docs/oracles/">
-              <Translation id="page-developers-oracles-link" />
+              <Translation id="page-developers-index:page-developers-oracles-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-oracle-desc" />
+              <Translation id="page-developers-index:page-developers-oracle-desc" />
             </Text>
             <InlineLink to="/developers/docs/scaling/">
-              <Translation id="page-developers-scaling-link" />
+              <Translation id="page-developers-index:page-developers-scaling-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-scaling-desc" />
+              <Translation id="page-developers-index:page-developers-scaling-desc" />
             </Text>
             <InlineLink to="/developers/docs/networking-layer/">
-              <Translation id="page-developers-networking-layer-link" />
+              <Translation id="page-developers-index:page-developers-networking-layer-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-networking-layer-desc" />
+              <Translation id="page-developers-index:page-developers-networking-layer-desc" />
             </Text>
             <InlineLink to="/developers/docs/data-structures-and-encoding/">
-              <Translation id="page-developers-data-structures-and-encoding-link" />
+              <Translation id="page-developers-index:page-developers-data-structures-and-encoding-link" />
             </InlineLink>
             <Text>
-              <Translation id="page-developers-data-structures-and-encoding-desc" />
+              <Translation id="page-developers-index:page-developers-data-structures-and-encoding-desc" />
             </Text>
           </RightColumn>
         </ThreeColumnContent>
@@ -459,73 +500,5 @@ const DevelopersPage = ({
     </Page>
   )
 }
-export default DevelopersPage
 
-export const query = graphql`
-  query DevelopersIndexPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-index", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    ednHero: file(relativePath: { eq: "enterprise-eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          height: 200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          height: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ogImage: file(relativePath: { eq: "enterprise-eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    heroImage: file(relativePath: { eq: "heroes/developers-hub-hero.jpg" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 1504
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-  }
-`
+export default DevelopersPage

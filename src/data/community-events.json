@@ -36,6 +36,15 @@
     "endDate": "2024-03-24"
   },
   {
+    "title": "DappConn",
+    "to": "https://www.dappcon.io/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "A 3-day Developer Conference for Ethereum Infrastructure and dApps that would bring together over 900 builders together, hosted by Gnosis since 2018.",
+    "startDate": "2024-05-21",
+    "endDate": "2024-05-23"
+  },
+  {
     "title": "ETHKL 2023",
     "to": "https://hack.ethkl.org/",
     "sponsor": null,

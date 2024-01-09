@@ -1,11 +1,14 @@
-import { Circle, SquareProps } from "@chakra-ui/react"
 import * as React from "react"
-import { ChildOnlyProp } from "../../../types"
+import { Circle, SquareProps } from "@chakra-ui/react"
+
+import { ChildOnlyProp } from "@/lib/types"
+
 import { CorrectIcon, IncorrectIcon, TrophyIcon } from "../../icons/quiz"
 
+import { AnswerStatus } from "./useQuizWidget"
+
 interface AnswerIconProps {
-  showAnswer: boolean
-  isCurrentQuestionCorrect: boolean | undefined
+  answerStatus: AnswerStatus
 }
 
 /**
@@ -14,8 +17,7 @@ interface AnswerIconProps {
  * Defaults to the `TrophyIcon` prior to answering a question
  */
 export const AnswerIcon = ({
-  showAnswer,
-  isCurrentQuestionCorrect,
+  answerStatus
 }: AnswerIconProps) => {
   const commonProps = {
     color: "neutral",
@@ -23,10 +25,10 @@ export const AnswerIcon = ({
 
   const IconWrapper = (props: ChildOnlyProp) => {
     const getWrapperBg = (): SquareProps["bg"] => {
-      if (!showAnswer) {
+      if (!answerStatus) {
         return "primary.base"
       }
-      if (isCurrentQuestionCorrect) {
+      if (answerStatus === "correct") {
         return "success.base"
       }
       return "error.base"
@@ -35,7 +37,7 @@ export const AnswerIcon = ({
     return <Circle size="50px" bg={getWrapperBg()} {...props} />
   }
 
-  if (!showAnswer) {
+  if (!answerStatus) {
     return (
       <IconWrapper>
         <TrophyIcon {...commonProps} />
@@ -43,7 +45,7 @@ export const AnswerIcon = ({
     )
   }
 
-  if (isCurrentQuestionCorrect) {
+  if (answerStatus === "correct") {
     return (
       <IconWrapper>
         <CorrectIcon {...commonProps} />

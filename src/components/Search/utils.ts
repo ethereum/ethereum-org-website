@@ -17,7 +17,7 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   bg: "none",
   gap: 4,
   m: 0,
-  pl: 3,
+  ps: 3,
   _hover: {
     ...commonBtnStateStyles,
     ".DocSearch-Button-Keys kbd": {
@@ -102,9 +102,9 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-Container--Stalled .DocSearch-LoadingIndicator":
-    {
-      color: "primary.highContrast",
-    },
+  {
+    color: "primary.highContrast",
+  },
 
   ".DocSearch-Dropdown": {
     ps: { base: 4, md: 8 },
