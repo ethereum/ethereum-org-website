@@ -32,7 +32,7 @@ Wcześniejsza znajomość języków programowania, zwłaszcza JavaScript lub Pyt
 - [Portal poświęcony językowi Solidity](https://soliditylang.org/)
 - [Solidity w przykładach](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Czat dotyczący Solidity na Glitterze](https://gitter.im/ethereum/solidity/)
+- [Czat dotyczący Solidity na Glitterze](https://gitter.im/ethereum/solidity)
 - [Ściągawka](https://reference.auditless.com/cheatsheet)
 - [Blog poświęcony Solidity](https://blog.soliditylang.org/)
 

@@ -27,7 +27,7 @@ lang: fa
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">دیسکورد EthStaker </Link> - راهنمایی، آموزش، حمایت و مجموعه منابعی برای سهام گذاران کنونی و آینده که از سوی اعضای جامعه Ethstaker تهیه شده و اداره میشود</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">تیم وب سایت Ethereum.org</Link> - با تیم و افراد جامعه توسعه و طراحی وب ethereum.org گفتگو کنید</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">دیسکورد Matos</Link> - جامعه‌ خالقان web3 که در آن سازندگان، چهره‌های مطرح صنعت و علاقه‌مندان به اتریوم دور هم جمع می‌شوند. ما مشتاق توسعه، طراحی و فرهنگ Web3 هستیم. بیایید در ساختن، همراه ما شوید.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - فضای گفتگو برای توسعه‌ solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - فضای گفتگو برای توسعه‌ solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - فضای گفتگو برای توسعه‌ solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">بورس سهام اتریوم</Link> _- انجمن پرسش و پاسخ_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- انجمن پرسش و پاسخ غیرمتمرکز_</SocialListItem>

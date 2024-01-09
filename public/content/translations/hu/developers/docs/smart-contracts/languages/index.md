@@ -32,7 +32,7 @@ A programozási nyelvek, különösen a JavaScript vagy a Python korábbi ismere
 - [Solidity Nyelv Portál](https://soliditylang.org/)
 - [Solidity egy példa alapján](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatszoba](https://gitter.im/ethereum/solidity/)
+- [Solidity Gitter Chatszoba](https://gitter.im/ethereum/solidity)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://blog.soliditylang.org/)
 

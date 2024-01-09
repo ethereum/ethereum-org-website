@@ -35,7 +35,7 @@ El conocimiento previo de lenguajes de programación, especialmente de JavaScrip
 - [Portal de lenguaje de Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Sala de chat Solidity Glitter](https://gitter.im/ethereum/solidity/) puenteada a [Sala de chat Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Sala de chat Solidity Glitter](https://gitter.im/ethereum/solidity) puenteada a [Sala de chat Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Hoja de trampas](https://reference.auditless.com/cheatsheet)
 - [Blog de Solidity](https://blog.soliditylang.org/)
 - [Twitter de Solidity](https://twitter.com/solidity_lang)

@@ -53,7 +53,7 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 
 در اینجا برخی از نمونه‌های محبوب آورده شده است:
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)

@@ -35,7 +35,7 @@ Previous knowledge of programming languages, especially of JavaScript or Python,
 - [Solidity Language Portal](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) bridged to [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) bridged to [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Solidity Blog](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)

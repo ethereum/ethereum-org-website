@@ -53,7 +53,7 @@ Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? D
 
 Hier sind einige beliebte Beispiele:
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
