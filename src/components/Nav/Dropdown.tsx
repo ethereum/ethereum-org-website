@@ -1,23 +1,12 @@
-import React, { useState, createRef, useContext } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Fade,
-  Flex,
-  Heading,
-  Icon,
-  List,
-  ListItem,
-} from "@chakra-ui/react"
+import React, { createRef, useContext, useState } from "react"
 import { MdExpandMore } from "react-icons/md"
+import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 
-import { BaseLink, IProps as LinkProps } from "../Link"
-
-import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { getDirection } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+import { BaseLink, type LinkProps } from "../Link"
 
 import { ISection } from "./types"
+
+import { useOnClickOutside } from "@/hooks/useOnClickOutside"
 
 const NavLink = (props: LinkProps) => (
   <BaseLink
@@ -53,19 +42,16 @@ const DropdownContext = React.createContext<IDropdownContext | null>(null)
 export interface IProps {
   children?: React.ReactNode
   section: ISection
-  hasSubNav: boolean
 }
 
 const NavDropdown: React.FC<IProps> & {
   Item: typeof Item
   Link: typeof BaseLink
   Title: typeof Title
-} = ({ children, section, hasSubNav }) => {
+} = ({ children, section }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { language } = useI18next()
-  const ref = createRef<HTMLLIElement>()
 
-  const direction = getDirection(language as Lang)
+  const ref = createRef<HTMLLIElement>()
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
@@ -106,7 +92,6 @@ const NavDropdown: React.FC<IProps> & {
       >
         <Flex
           as="span"
-          dir={direction}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}
@@ -136,10 +121,8 @@ const NavDropdown: React.FC<IProps> & {
           bg="dropdownBackground"
           border="1px"
           borderColor="dropdownBorder"
-          m={0}
-          mt={hasSubNav ? "-4.5rem" : -4}
+          mt="1"
           position="absolute"
-          top="100%"
           py={4}
           borderRadius="base"
           width="auto"

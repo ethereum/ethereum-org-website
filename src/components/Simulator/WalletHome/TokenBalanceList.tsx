@@ -1,5 +1,6 @@
-import { Flex, type FlexProps } from "@chakra-ui/react"
 import React from "react"
+import { Flex, type FlexProps } from "@chakra-ui/react"
+
 import { type TokenBalance } from "./interfaces"
 import { TokenBalanceItem } from "./TokenBalanceItem"
 

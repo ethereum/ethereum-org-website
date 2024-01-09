@@ -1,19 +1,16 @@
-// Libraries
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { Box } from "@chakra-ui/react"
 
-// Components
+import Translation from "@/components/Translation"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import events from "../data/community-events.json"
+
+import { Button } from "./Buttons"
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
-import Translation from "./Translation"
-import { Button } from "./Buttons"
-
-// Data
-import events from "../data/community-events.json"
-
-// Utils
-import { trackCustomEvent } from "../utils/matomo"
 
 interface ICommunityEventData {
   title: string
@@ -30,9 +27,7 @@ interface IOrderedUpcomingEventType extends ICommunityEventData {
   formattedDetails: string
 }
 
-export interface IProps {}
-
-const UpcomingEventsList: React.FC<IProps> = () => {
+const UpcomingEventsList: React.FC = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
     Array<IOrderedUpcomingEventType>
@@ -104,7 +99,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
       <InfoBanner emoji=":information_source:">
         <Translation id="page-community-upcoming-events-no-events" />{" "}
         <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
-          <Translation id="page-community-please-add-to-page" />
+          <Translation id="page-community:page-community-please-add-to-page" />
         </InlineLink>
       </InfoBanner>
     )
@@ -125,7 +120,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
           height: "full",
           background: "primary.base",
           top: 0,
-          left: "50%",
+          insetInlineStart: "50%",
         }}
         _after={{
           content: '""',
@@ -158,7 +153,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
       >
         {isVisible && (
           <Button onClick={loadMoreEvents}>
-            <Translation id="page-community-upcoming-events-load-more" />
+            <Translation id="page-community:page-community-upcoming-events-load-more" />
           </Button>
         )}
       </Box>

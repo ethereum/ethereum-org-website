@@ -1,7 +1,62 @@
+import { StaticImageData } from "next/image"
+
+import OneInchWalletImage from "@/public/wallets/1inch.png"
+import AirgapImage from "@/public/wallets/airgap.png"
+import AktionariatImage from "@/public/wallets/aktionariat.png"
+import AlphaWalletImage from "@/public/wallets/alpha.png"
+import AmbireImage from "@/public/wallets/ambire.png"
+import ApexImage from "@/public/wallets/apex.png"
+import ArgentImage from "@/public/wallets/argent.png"
+import BitcoindotcomImage from "@/public/wallets/bitcoindotcom.png"
+import BitkeepImage from "@/public/wallets/bitkeep.png"
+import BlockWalletImage from "@/public/wallets/blockwallet.png"
+import BraveImage from "@/public/wallets/brave.png"
+import BridgeWalletImage from "@/public/wallets/bridge.png"
+import Coin98Image from "@/public/wallets/coin98.png"
+import CoinbaseImage from "@/public/wallets/coinbase.png"
+import CoinwalletImage from "@/public/wallets/coinwallet.png"
+import EnkryptImage from "@/public/wallets/enkrypt.png"
+import ExodusImage from "@/public/wallets/exodus.png"
+import FoxWalletImage from "@/public/wallets/foxwallet.png"
+import FrameImage from "@/public/wallets/frame.png"
+import GridPlusImage from "@/public/wallets/gridplus.png"
+import GuardaImage from "@/public/wallets/guarda.png"
+import imTokenImage from "@/public/wallets/imtoken.png"
+import InfinityWalletImage from "@/public/wallets/infinity_wallet.png"
+import KeystoneImage from "@/public/wallets/keystone.png"
+import LedgerImage from "@/public/wallets/ledger.png"
+import LoopringImage from "@/public/wallets/loopring.png"
+import MetaMaskImage from "@/public/wallets/metamask.png"
+import MewImage from "@/public/wallets/mew.png"
+import MyCryptoImage from "@/public/wallets/mycrypto.png"
+import MyEtherWalletImage from "@/public/wallets/myetherwallet.png"
+import NumioImage from "@/public/wallets/numio.png"
+import OKXImage from "@/public/wallets/okx.jpeg"
+import OneKeyImage from "@/public/wallets/onekey.png"
+import OperaImage from "@/public/wallets/opera.png"
+import PhantomImage from "@/public/wallets/phantom.png"
+import PillarImage from "@/public/wallets/pillar.png"
+import PortisImage from "@/public/wallets/portis.png"
+import RabbyWalletImage from "@/public/wallets/rabbywallet.png"
+import RainbowImage from "@/public/wallets/rainbow.png"
+import SafeImage from "@/public/wallets/safe.png"
+import SequenceImage from "@/public/wallets/sequence.png"
+import ShapeShiftImage from "@/public/wallets/shapeshift.png"
+import StatusImage from "@/public/wallets/status.png"
+import TahoImage from "@/public/wallets/taho.png"
+import TokenPocketImage from "@/public/wallets/tokenpocket.png"
+import TorusImage from "@/public/wallets/torus.png"
+import TrezorImage from "@/public/wallets/trezor.png"
+import UnstoppableWalletImage from "@/public/wallets/unstoppable.png"
+import Web3AuthImage from "@/public/wallets/web3auth.png"
+import XDEFIImage from "@/public/wallets/xdefi.png"
+import ZengoImage from "@/public/wallets/zengo.png"
+import ZerionImage from "@/public/wallets/zerion.png"
+
 export interface WalletData {
   last_updated: string
   name: string
-  image_name: string
+  image: StaticImageData
   brand_color: string
   url: string
   wallet_live_date: string
@@ -50,7 +105,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Keystone",
-    image_name: "keystone",
+    image: KeystoneImage,
     brand_color: "#ffffff",
     url: "https://keyst.one/",
     wallet_live_date: "Dec 2018",
@@ -98,7 +153,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Numio",
-    image_name: "numio",
+    image: NumioImage,
     brand_color: "#3F3F3F",
     url: "https://www.numio.one/",
     wallet_live_date: "December 2020",
@@ -143,7 +198,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Coin98",
-    image_name: "coin98",
+    image: Coin98Image,
     brand_color: "#ffffff",
     url: "https://coin98.com/wallet",
     wallet_live_date: "2018",
@@ -201,7 +256,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Loopring wallet",
-    image_name: "loopring",
+    image: LoopringImage,
     brand_color: "#ffffff",
     url: "https://loopring.io/#/wallet",
     wallet_live_date: "Nov 25, 2020",
@@ -250,7 +305,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "AirGap wallet",
-    image_name: "airgap",
+    image: AirgapImage,
     brand_color: "#50249F",
     url: "https://airgap.it/",
     wallet_live_date: "July 2017",
@@ -297,7 +352,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Argent",
-    image_name: "argent",
+    image: ArgentImage,
     brand_color: "#ffffff",
     url: "https://www.argent.xyz/",
     wallet_live_date: "2018",
@@ -345,7 +400,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Portis",
-    image_name: "portis",
+    image: PortisImage,
     brand_color: "#ffffff",
     url: "https://www.portis.io",
     wallet_live_date: "Nov, 2018",
@@ -390,7 +445,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "November 15, 2022",
     name: "Coinbase Wallet",
-    image_name: "coinbase",
+    image: CoinbaseImage,
     brand_color: "#0052FF",
     url: "https://www.coinbase.com/wallet",
     wallet_live_date: "2018",
@@ -436,7 +491,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Frame",
-    image_name: "frame",
+    image: FrameImage,
     brand_color: "#222021",
     url: "https://frame.sh",
     wallet_live_date: "April 2019",
@@ -482,7 +537,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Brave Wallet",
-    image_name: "brave",
+    image: BraveImage,
     brand_color: "#fe1f02",
     url: "https://brave.com/wallet",
     wallet_live_date: "November 2021",
@@ -529,7 +584,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "MetaMask",
-    image_name: "metamask",
+    image: MetaMaskImage,
     brand_color: "#ffffff",
     url: "https://metamask.io",
     wallet_live_date: "2016",
@@ -574,7 +629,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-01-25",
     name: "Safe",
-    image_name: "safe",
+    image: SafeImage,
     brand_color: "#12ff80",
     url: "https://safe.global/",
     wallet_live_date: "2017",
@@ -619,7 +674,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 22, 2022",
     name: "Coin wallet",
-    image_name: "coinwallet",
+    image: CoinwalletImage,
     brand_color: "#ffffff",
     url: "https://coin.space/",
     wallet_live_date: "July 2015",
@@ -690,7 +745,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "August 23, 2023",
     name: "Ambire",
-    image_name: "ambire",
+    image: AmbireImage,
     brand_color: "#aa6aff",
     url: "https://www.ambire.com",
     wallet_live_date: "December 2021",
@@ -736,7 +791,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 23, 2022",
     name: "ZenGo",
-    image_name: "zengo",
+    image: ZengoImage,
     brand_color: "#35C4BA",
     url: "https://zengo.com/",
     wallet_live_date: "Jan, 2020",
@@ -781,7 +836,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "imToken",
-    image_name: "imtoken",
+    image: imTokenImage,
     brand_color: "#098de6",
     url: "https://token.im/",
     wallet_live_date: "2016",
@@ -837,7 +892,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-22",
     name: "1inch Wallet",
-    image_name: "oneinch",
+    image: OneInchWalletImage,
     brand_color: "#082D6E",
     url: "https://1inch.io/",
     wallet_live_date: "2022-04-27",
@@ -896,7 +951,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "FoxWallet",
-    image_name: "foxwallet",
+    image: FoxWalletImage,
     brand_color: "#ffffff",
     url: "https://foxwallet.com/en",
     wallet_live_date: "November, 2021",
@@ -941,7 +996,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "MyCrypto",
-    image_name: "mycrypto",
+    image: MyCryptoImage,
     brand_color: "#FFFFFF",
     url: "https://mycrypto.com",
     wallet_live_date: "Feb, 2018",
@@ -1007,7 +1062,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "Pillar",
-    image_name: "pillar",
+    image: PillarImage,
     brand_color: "#7501D9",
     url: "https://www.pillar.fi/",
     wallet_live_date: "December 18 2018 V1, June 2020 V2",
@@ -1055,7 +1110,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "MEW wallet",
-    image_name: "mew",
+    image: MewImage,
     brand_color: "#05C0A5",
     url: "https://www.mewwallet.com",
     wallet_live_date: "13 March 2020",
@@ -1101,7 +1156,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "Unstoppable wallet",
-    image_name: "unstoppable",
+    image: UnstoppableWalletImage,
     brand_color: "#ffbe43",
     url: "https://unstoppable.money/",
     wallet_live_date: "2017",
@@ -1147,7 +1202,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "MyEtherWallet",
-    image_name: "myetherwallet",
+    image: MyEtherWalletImage,
     brand_color: "#ffffff",
     url: "https://www.myetherwallet.com/",
     wallet_live_date: "August 2015",
@@ -1193,7 +1248,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "AlphaWallet",
-    image_name: "alpha",
+    image: AlphaWalletImage,
     brand_color: "#ffffff",
     url: "https://alphawallet.com/",
     wallet_live_date: "2018",
@@ -1239,7 +1294,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "Opera wallet",
-    image_name: "opera",
+    image: OperaImage,
     brand_color: "#ffffff",
     url: "https://crypto.opera.com/",
     wallet_live_date: "January 19 2022",
@@ -1285,7 +1340,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "Guarda",
-    image_name: "guarda",
+    image: GuardaImage,
     brand_color: "#ffffff",
     url: "https://guarda.com/",
     wallet_live_date: "2017",
@@ -1331,7 +1386,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "September 14, 2022",
     name: "Web3Auth",
-    image_name: "web3auth",
+    image: Web3AuthImage,
     brand_color: "#0364ff",
     url: "https://web3auth.io",
     wallet_live_date: "Jan, 2022",
@@ -1378,7 +1433,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 24, 2022",
     name: "Bridge wallet",
-    image_name: "bridge",
+    image: BridgeWalletImage,
     brand_color: "#ffffff",
     url: "https://www.mtpelerin.com/bridge-wallet",
     wallet_live_date: "April 2020",
@@ -1424,7 +1479,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "September 14, 2022",
     name: "Torus Wallet",
-    image_name: "torus",
+    image: TorusImage,
     brand_color: "#0364ff",
     url: "https://app.tor.us",
     wallet_live_date: "May 2019",
@@ -1471,7 +1526,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "July 18, 2022",
     name: "TokenPocket",
-    image_name: "tokenpocket",
+    image: TokenPocketImage,
     brand_color: "#2980fe",
     url: "https://www.tokenpocket.pro/",
     wallet_live_date: "April, 2018",
@@ -1528,7 +1583,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 30, 2022",
     name: "Rainbow",
-    image_name: "rainbow",
+    image: RainbowImage,
     brand_color: "#001A4D",
     url: "https://rainbow.me",
     wallet_live_date: "June 2019",
@@ -1574,7 +1629,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 30, 2022",
     name: "Status",
-    image_name: "status",
+    image: StatusImage,
     brand_color: "#4360DF",
     url: "https://status.im/",
     wallet_live_date:
@@ -1645,7 +1700,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "June 30, 2022",
     name: "Aktionariat",
-    image_name: "aktionariat",
+    image: AktionariatImage,
     brand_color: "#ffffff",
     url: "https://www.aktionariat.com/",
     wallet_live_date: "28.01.2021",
@@ -1691,7 +1746,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-21",
     name: "Sequence",
-    image_name: "sequence",
+    image: SequenceImage,
     brand_color: "#000000",
     url: "https://www.sequence.xyz",
     wallet_live_date: "2021-11-04",
@@ -1739,7 +1794,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-21",
     name: "Trezor",
-    image_name: "trezor",
+    image: TrezorImage,
     brand_color: "#ffffff",
     url: "https://trezor.io/",
     wallet_live_date: "2012-12-31",
@@ -1785,7 +1840,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-21",
     name: "Ledger",
-    image_name: "ledger",
+    image: LedgerImage,
     brand_color: "#fb5e01",
     url: "https://www.ledger.com/",
     wallet_live_date: "2014-12-31",
@@ -1843,7 +1898,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-19",
     name: "Infinity Wallet",
-    image_name: "infinity_wallet",
+    image: InfinityWalletImage,
     brand_color: "#137dc7",
     url: "https://infinitywallet.io/",
     wallet_live_date: "2019-11-01",
@@ -1889,7 +1944,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-19",
     name: "Exodus",
-    image_name: "exodus",
+    image: ExodusImage,
     brand_color: "#1F2033",
     url: "https://exodus.com",
     wallet_live_date: "2015-12-31",
@@ -1941,7 +1996,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-22",
     name: "Rabby Wallet",
-    image_name: "rabbywallet",
+    image: RabbyWalletImage,
     brand_color: "#FFFFFF",
     url: "https://rabby.io",
     wallet_live_date: "2021-07-27",
@@ -1989,7 +2044,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-22",
     name: "Bitcoin.com Wallet",
-    image_name: "bitcoindotcom",
+    image: BitcoindotcomImage,
     brand_color: "#F2F7FC",
     url: "https://wallet.bitcoin.com",
     wallet_live_date: "2017-06-18",
@@ -2059,7 +2114,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-31",
     name: "Zerion Wallet",
-    image_name: "zerion",
+    image: ZerionImage,
     brand_color: "#2962EF",
     url: "https://zerion.io/",
     wallet_live_date: "2022-05-26",
@@ -2105,7 +2160,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-08-31",
     name: "Enkrypt",
-    image_name: "enkrypt",
+    image: EnkryptImage,
     brand_color: "#ffffff",
     url: "https://www.enkrypt.com",
     wallet_live_date: "2022-08-03",
@@ -2151,7 +2206,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-10-31",
     name: "GridPlus Lattice1",
-    image_name: "gridplus",
+    image: GridPlusImage,
     brand_color: "#ffffff",
     url: "https://gridplus.io/",
     wallet_live_date: "2020-10-01",
@@ -2197,7 +2252,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-01-24",
     name: "Bitkeep",
-    image_name: "bitkeep",
+    image: BitkeepImage,
     brand_color: "#ffffff",
     url: "https://www.bitkeep.com/",
     wallet_live_date: "2018-07-01",
@@ -2243,7 +2298,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-11-21",
     name: "BlockWallet",
-    image_name: "blockwallet",
+    image: BlockWalletImage,
     brand_color: "#52C200",
     url: "https://blockwallet.io",
     wallet_live_date: "2022-02-28",
@@ -2295,7 +2350,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-01-25",
     name: "OKX",
-    image_name: "okx",
+    image: OKXImage,
     brand_color: "#000000",
     url: "https://www.okx.com/web3",
     wallet_live_date: "2019-03-25",
@@ -2343,7 +2398,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2022-01-24",
     name: "OneKey",
-    image_name: "onekey",
+    image: OneKeyImage,
     brand_color: "#00B812",
     url: "https://onekey.so/",
     wallet_live_date: "2022-07-31",
@@ -2389,7 +2444,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-01-25",
     name: "Apex",
-    image_name: "apex",
+    image: ApexImage,
     brand_color: "CF9500",
     url: "https://apexwallet.xyz/",
     wallet_live_date: "2022-08-31",
@@ -2435,7 +2490,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-04-21",
     name: "Taho",
-    image_name: "taho",
+    image: TahoImage,
     brand_color: "#FDAE49",
     url: "https://taho.xyz",
     wallet_live_date: "2021-12-20",
@@ -2486,7 +2541,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-05-01",
     name: "ShapeShift Wallet",
-    image_name: "shapeshift",
+    image: ShapeShiftImage,
     brand_color: "#386FF9",
     url: "https://app.shapeshift.com/",
     wallet_live_date: "2020-07-01",
@@ -2532,7 +2587,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-07-19",
     name: "Phantom",
-    image_name: "phantom",
+    image: PhantomImage,
     brand_color: "#AB9FF2",
     url: "https://phantom.app/",
     wallet_live_date: "2021-05-17",
@@ -2611,7 +2666,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-08-29",
     name: "XDEFI Wallet",
-    image_name: "XDEFI",
+    image: XDEFIImage,
     brand_color: "#2041E0",
     url: "https://www.xdefi.io",
     wallet_live_date: "2021-10-12",

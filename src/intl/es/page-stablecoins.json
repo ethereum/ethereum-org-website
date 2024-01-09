@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Dinero fiduciario",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Metales preciosos",
   "page-stablecoins-table-error": "No se pudieron cargar las monedas estables. Intente actualizar la página.",
-  "page-stablecoins-table-loading": "Cargando datos de monedas estables...",
   "page-stablecoins-title": "Monedas estables",
   "page-stablecoins-top-coins": "Mejores monedas estables por capitalización de mercado",
   "page-stablecoins-top-coins-intro": "La capitalización del mercado es",
