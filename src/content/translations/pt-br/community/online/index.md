@@ -27,7 +27,7 @@ Centenas de milhares de entusiastas do Ethereum se reúnem nestes fóruns na Int
 <SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - orientação, educação, apoio e recursos geridos pela comunidade para stakers existentes e potenciais</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Equipe do site Ethereum.org</Link> – pare e converse sobre desenvolvimento e design do site ethereum.org com a equipe e pessoas da comunidade</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> – comunidade de criadores da Web3 na qual construtores, líderes do setor e entusiastas do Ethereum se encontram. Somos apaixonados pelo desenvolvimento, design e cultura Web3. Venha criar conosco.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — chat para desenvolvimento do solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> — chat para desenvolvimento do solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — chat para desenvolvimento do solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _ — fórum de perguntas e respostas_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _ — fórum descentralizado de perguntas e respostas_</SocialListItem>
