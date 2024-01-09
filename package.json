@@ -33,7 +33,7 @@
     "lodash.merge": "^4.6.2",
     "lodash.shuffle": "^4.2.0",
     "luxon": "^3.4.3",
-    "next": "13.4.8",
+    "next": "13.5.0",
     "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
     "next-sitemap": "^4.2.3",
