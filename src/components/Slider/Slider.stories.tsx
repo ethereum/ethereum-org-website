@@ -1,3 +1,4 @@
+import React from "react"
 import {
   Heading,
   HeadingProps,
@@ -6,7 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { Meta, StoryFn } from "@storybook/react"
-import React from "react"
+
 import Slider, { EmblaSlide } from "."
 
 const Component = Slider

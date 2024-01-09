@@ -1,6 +1,9 @@
-import React, { ReactNode, useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { graphql, PageProps } from "gatsby"
+import { ReactNode, useState } from "react"
+import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { FaGithub } from "react-icons/fa"
 import {
   Box,
   chakra,
@@ -14,30 +17,57 @@ import {
   Stack,
   useToken,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 
-import type { ChildOnlyProp, Context } from "../types"
+import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
+import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
-import ActionCard from "../components/ActionCard"
-import ButtonLink from "../components/Buttons/ButtonLink"
-import CalloutBanner from "../components/CalloutBanner"
-import CodeModal from "../components/CodeModal"
-import Codeblock from "../components/Codeblock"
-import CommunityEvents from "../components/CommunityEvents"
-import PageMetadata from "../components/PageMetadata"
-import StatsBoxGrid from "../components/StatsBoxGrid"
-import Translation from "../components/Translation"
-import TitleCardList, { ITitleCardItem } from "../components/TitleCardList"
-import GatsbyImage from "../components/GatsbyImage"
-import { HomeHero } from "../components/Hero"
+import ActionCard from "@/components/ActionCard"
+import ButtonLink from "@/components/Buttons/ButtonLink"
+import CalloutBanner from "@/components/CalloutBanner"
+import Codeblock from "@/components/Codeblock"
+import CodeModal from "@/components/CodeModal"
+import CommunityEvents from "@/components/CommunityEvents"
+import HomeHero from "@/components/Hero/HomeHero"
+import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
+import PageMetadata from "@/components/PageMetadata"
+import StatsBoxGrid from "@/components/StatsBoxGrid"
+import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
+import Translation from "@/components/Translation"
 
-import { isLangRightToLeft } from "../utils/translations"
-import { getImage } from "../utils/image"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import {
+  getRequiredNamespacesForPage,
+  isLangRightToLeft,
+} from "@/lib/utils/translations"
 
-import SimpleWalletContent from "!!raw-loader!../data/SimpleWallet.sol"
-import SimpleTokenContent from "!!raw-loader!../data/SimpleToken.sol"
-import CreateWalletContent from "!!raw-loader!../data/CreateWallet.js"
-import SimpleDomainRegistryContent from "!!raw-loader!../data/SimpleDomainRegistry.sol"
+import { BASE_TIME_UNIT } from "@/lib/constants"
+
+import CreateWalletContent from "!!raw-loader!@/data/CreateWallet.js"
+import SimpleDomainRegistryContent from "!!raw-loader!@/data/SimpleDomainRegistry.sol"
+import SimpleTokenContent from "!!raw-loader!@/data/SimpleToken.sol"
+import SimpleWalletContent from "!!raw-loader!@/data/SimpleWallet.sol"
+import { fetchCommunityEvents } from "@/lib/api/calendarEvents"
+import { fetchNodes } from "@/lib/api/fetchNodes"
+import { fetchTotalEthStaked } from "@/lib/api/fetchTotalEthStaked"
+import { fetchTotalValueLocked } from "@/lib/api/fetchTotalValueLocked"
+import { fetchTxCount } from "@/lib/api/fetchTxCount"
+import devfixed from "@/public/developers-eth-blocks.png"
+import dogefixed from "@/public/doge-computer.png"
+import enterprise from "@/public/enterprise-eth.png"
+import ethfixed from "@/public/eth.png"
+import finance from "@/public/finance_transparent.png"
+import future from "@/public/future_transparent.png"
+import hackathon from "@/public/hackathon_transparent.png"
+import hero from "@/public/home/hero.png"
+import impact from "@/public/impact_transparent.png"
+import infrastructure from "@/public/infrastructure_transparent.png"
+import infrastructurefixed from "@/public/infrastructure_transparent.png"
+import merge from "@/public/upgrades/merge.png"
+import robotfixed from "@/public/wallet-cropped.png"
+import ethereum from "@/public/what-is-ethereum.png"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
@@ -150,15 +180,57 @@ const ButtonLinkRow = (props: ChildOnlyProp) => (
   />
 )
 
+const cachedFetchCommunityEvents = runOnlyOnce(fetchCommunityEvents)
+const cachedFetchTotalEthStaked = runOnlyOnce(fetchTotalEthStaked)
+const cachedFetchNodes = runOnlyOnce(fetchNodes)
+const cachedFetchTotalValueLocked = runOnlyOnce(fetchTotalValueLocked)
+const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
+
+type Props = BasePageProps & {
+  communityEvents: CommunityEventsReturnType
+  metricResults: AllMetricData
+}
+
+export const getStaticProps = (async ({ locale }) => {
+  const metricResults: AllMetricData = {
+    totalEthStaked: await cachedFetchTotalEthStaked(),
+    nodeCount: await cachedFetchNodes(),
+    totalValueLocked: await cachedFetchTotalValueLocked(),
+    txCount: await cachedFetchTxCount(),
+  }
+
+  const communityEvents = await cachedFetchCommunityEvents()
+
+  // load i18n required namespaces for the given page
+  const requiredNamespaces = getRequiredNamespacesForPage("/")
+
+  // check if the translated page content file exists for locale
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
+
+  // load last deploy date to pass to Footer in RootLayout
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      communityEvents,
+      contentNotTranslated,
+      lastDeployDate,
+      metricResults,
+    },
+    revalidate: BASE_TIME_UNIT * 24,
+  }
+}) satisfies GetStaticProps<Props>
+
 const HomePage = ({
-  data,
-  pageContext: { language = "en" },
-  location,
-}: PageProps<Queries.IndexPageQuery, Context>) => {
-  const { t } = useTranslation()
+  communityEvents,
+  metricResults,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { t } = useTranslation(["common", "page-index"])
+  const { locale } = useRouter()
   const [isModalOpen, setModalOpen] = useState(false)
   const [activeCode, setActiveCode] = useState(0)
-  const dir = isLangRightToLeft(language) ? "rtl" : "ltr"
+  const dir = isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"
 
   const toggleCodeExample = (id: number): void => {
     setActiveCode(id)
@@ -167,55 +239,55 @@ const HomePage = ({
 
   const cards = [
     {
-      image: getImage(data.robotfixed),
-      title: t("page-index-get-started-wallet-title"),
-      description: t("page-index-get-started-wallet-description"),
-      alt: t("page-index-get-started-wallet-image-alt"),
+      image: robotfixed,
+      title: t("page-index:page-index-get-started-wallet-title"),
+      description: t("page-index:page-index-get-started-wallet-description"),
+      alt: t("page-index:page-index-get-started-wallet-image-alt"),
       to: "/wallets/find-wallet/",
     },
     {
-      image: getImage(data.ethfixed),
-      title: t("page-index-get-started-eth-title"),
-      description: t("page-index-get-started-eth-description"),
-      alt: t("page-index-get-started-eth-image-alt"),
+      image: ethfixed,
+      title: t("page-index:page-index-get-started-eth-title"),
+      description: t("page-index:page-index-get-started-eth-description"),
+      alt: t("page-index:page-index-get-started-eth-image-alt"),
       to: "/get-eth/",
     },
     {
-      image: getImage(data.dogefixed),
-      title: t("page-index-get-started-dapps-title"),
-      description: t("page-index-get-started-dapps-description"),
-      alt: t("page-index-get-started-dapps-image-alt"),
+      image: dogefixed,
+      title: t("page-index:page-index-get-started-dapps-title"),
+      description: t("page-index:page-index-get-started-dapps-description"),
+      alt: t("page-index:page-index-get-started-dapps-image-alt"),
       to: "/dapps/",
     },
     {
-      image: getImage(data.devfixed),
-      title: t("page-index-get-started-devs-title"),
-      description: t("page-index-get-started-devs-description"),
-      alt: t("page-index-get-started-devs-image-alt"),
+      image: devfixed,
+      title: t("page-index:page-index-get-started-devs-title"),
+      description: t("page-index:page-index-get-started-devs-description"),
+      alt: t("page-index:page-index-get-started-devs-image-alt"),
       to: "/developers/",
     },
   ]
 
   const touts = [
     {
-      image: getImage(data.merge),
-      alt: t("page-index-tout-upgrades-image-alt"),
-      title: t("page-index-tout-upgrades-title"),
-      description: t("page-index-tout-upgrades-description"),
+      image: merge,
+      alt: t("page-index:page-index-tout-upgrades-image-alt"),
+      title: t("page-index:page-index-tout-upgrades-title"),
+      description: t("page-index:page-index-tout-upgrades-description"),
       to: "/roadmap/",
     },
     {
-      image: getImage(data.infrastructurefixed),
-      alt: t("page-index-tout-enterprise-image-alt"),
-      title: t("page-index-tout-enterprise-title"),
-      description: t("page-index-tout-enterprise-description"),
+      image: infrastructurefixed,
+      alt: t("page-index:page-index-tout-enterprise-image-alt"),
+      title: t("page-index:page-index-tout-enterprise-title"),
+      description: t("page-index:page-index-tout-enterprise-description"),
       to: "/enterprise/",
     },
     {
-      image: getImage(data.enterprise),
-      alt: t("page-index-tout-community-image-alt"),
-      title: t("page-index-tout-community-title"),
-      description: t("page-index-tout-community-description"),
+      image: enterprise,
+      alt: t("page-index:page-index-tout-community-image-alt"),
+      title: t("page-index:page-index-tout-community-title"),
+      description: t("page-index:page-index-tout-community-description"),
       to: "/community/",
     },
   ]
@@ -227,26 +299,34 @@ const HomePage = ({
 
   const codeExamples: Array<CodeExample> = [
     {
-      title: t("page-index-developers-code-example-title-0"),
-      description: t("page-index-developers-code-example-description-0"),
+      title: t("page-index:page-index-developers-code-example-title-0"),
+      description: t(
+        "page-index:page-index-developers-code-example-description-0"
+      ),
       codeLanguage: "language-solidity",
       code: SimpleWalletContent,
     },
     {
-      title: t("page-index-developers-code-example-title-1"),
-      description: t("page-index-developers-code-example-description-1"),
+      title: t("page-index:page-index-developers-code-example-title-1"),
+      description: t(
+        "page-index:page-index-developers-code-example-description-1"
+      ),
       codeLanguage: "language-solidity",
       code: SimpleTokenContent,
     },
     {
-      title: t("page-index-developers-code-example-title-2"),
-      description: t("page-index-developers-code-example-description-2"),
+      title: t("page-index:page-index-developers-code-example-title-2"),
+      description: t(
+        "page-index:page-index-developers-code-example-description-2"
+      ),
       codeLanguage: "language-javascript",
       code: CreateWalletContent,
     },
     {
-      title: t("page-index-developers-code-example-title-3"),
-      description: t("page-index-developers-code-example-description-3"),
+      title: t("page-index:page-index-developers-code-example-title-3"),
+      description: t(
+        "page-index:page-index-developers-code-example-description-3"
+      ),
       codeLanguage: "language-solidity",
       code: SimpleDomainRegistryContent,
     },
@@ -255,13 +335,13 @@ const HomePage = ({
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
   return (
-    <Flex flexDirection="column" alignItems="center" dir={dir} width="full">
+    <Flex as={MainArticle} flexDirection="column" alignItems="center" dir={dir} width="full">
       <PageMetadata
-        title={t("page-index-meta-title")}
-        description={t("page-index-meta-description")}
+        title={t("page-index:page-index-meta-title")}
+        description={t("page-index:page-index-meta-description")}
       />
       <Box w="full">
-        <HomeHero heroImgSrc={getImage(data.hero)!} />
+        <HomeHero heroImg={hero} />
       </Box>
       {/* Getting Started Section */}
       <GrayContainer>
@@ -279,17 +359,17 @@ const HomePage = ({
               boxSize="full"
             >
               <SectionHeading fontFamily="inherit" mb={6}>
-                <Translation id="page-index-get-started" />
+                <Translation id="page-index:page-index-get-started" />
               </SectionHeading>
               <SectionDecription>
-                <Translation id="page-index-get-started-description" />
+                <Translation id="page-index:page-index-get-started-description" />
               </SectionDecription>
             </Box>
             <ImageContainer>
-              <GatsbyImage
-                image={getImage(data.hackathon)!}
-                alt={t("page-index-get-started-image-alt")}
-                width="full"
+              <Image
+                src={hackathon}
+                alt={t("page-index:page-index-get-started-image-alt")}
+                width={720}
                 backgroundSize="cover"
                 background="no-repeat 50px"
               />
@@ -305,7 +385,8 @@ const HomePage = ({
                 description={card.description}
                 alt={card.alt}
                 to={card.to}
-                image={card.image!}
+                image={card.image}
+                imageWidth={320}
               />
             ))}
           </CardContainer>
@@ -316,25 +397,25 @@ const HomePage = ({
         <Row isReversed>
           <FeatureContent>
             <SectionHeading>
-              <Translation id="page-index-what-is-ethereum" />
+              <Translation id="page-index:page-index-what-is-ethereum" />
             </SectionHeading>
             <SectionDecription>
-              <Translation id="page-index-what-is-ethereum-description" />
+              <Translation id="page-index:page-index-what-is-ethereum-description" />
             </SectionDecription>
             <ButtonLinkRow>
               <ButtonLink to="/what-is-ethereum/">
-                <Translation id="page-index-what-is-ethereum-button" />
+                <Translation id="page-index:page-index-what-is-ethereum-button" />
               </ButtonLink>
               <ButtonLink to="/eth/" variant="outline">
-                <Translation id="page-index-what-is-ethereum-secondary-button" />
+                <Translation id="page-index:page-index-what-is-ethereum-secondary-button" />
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
-            <GatsbyImage
-              width="full"
-              image={getImage(data.ethereum)!}
-              alt={t("page-index-what-is-ethereum-image-alt")}
+            <Image
+              src={ethereum}
+              alt={t("page-index:page-index-what-is-ethereum-image-alt")}
+              width={700}
             />
           </ImageContainer>
         </Row>
@@ -344,22 +425,22 @@ const HomePage = ({
         <Row>
           <FeatureContent>
             <SectionHeading>
-              <Translation id="page-index-defi" />
+              <Translation id="page-index:page-index-defi" />
             </SectionHeading>
             <SectionDecription>
-              <Translation id="page-index-defi-description" />
+              <Translation id="page-index:page-index-defi-description" />
             </SectionDecription>
             <ButtonLinkRow>
               <ButtonLink to="/defi/">
-                <Translation id="page-index-defi-button" />
+                <Translation id="page-index:page-index-defi-button" />
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <GatsbyImage
-              width="full"
-              image={getImage(data.impact)!}
-              alt={t("page-index-defi-image-alt")}
+            <Image
+              src={impact}
+              alt={t("page-index:page-index-defi-image-alt")}
+              width={700}
             />
           </ImageContainer>
         </Row>
@@ -369,22 +450,22 @@ const HomePage = ({
         <Row isReversed>
           <FeatureContent>
             <SectionHeading>
-              <Translation id="page-index-nft" />
+              <Translation id="page-index:page-index-nft" />
             </SectionHeading>
             <SectionDecription>
-              <Translation id="page-index-nft-description" />
+              <Translation id="page-index:page-index-nft-description" />
             </SectionDecription>
             <ButtonLinkRow>
               <ButtonLink to="/nft/">
-                <Translation id="page-index-nft-button" />
+                <Translation id="page-index:page-index-nft-button" />
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
           <ImageContainer>
-            <GatsbyImage
-              width="full"
-              image={getImage(data.infrastructure)!}
-              alt={t("page-index-nft-alt")}
+            <Image
+              src={infrastructure}
+              alt={t("page-index:page-index-nft-alt")}
+              width={700}
             />
           </ImageContainer>
         </Row>
@@ -395,25 +476,25 @@ const HomePage = ({
           <Row>
             <FeatureContent>
               <SectionHeading>
-                <Translation id="page-index-internet" />
+                <Translation id="page-index:page-index-internet" />
               </SectionHeading>
               <SectionDecription>
-                <Translation id="page-index-internet-description" />
+                <Translation id="page-index:page-index-internet-description" />
               </SectionDecription>
               <ButtonLinkRow>
                 <ButtonLink to="/dapps/?category=technology">
-                  <Translation id="page-index-internet-button" />
+                  <Translation id="page-index:page-index-internet-button" />
                 </ButtonLink>
                 <ButtonLink to="/wallets/" variant="outline">
-                  <Translation id="page-index-internet-secondary-button" />
+                  <Translation id="page-index:page-index-internet-secondary-button" />
                 </ButtonLink>
               </ButtonLinkRow>
             </FeatureContent>
             <ImageContainer>
-              <GatsbyImage
-                width="full"
-                image={getImage(data.future)!}
-                alt={t("page-index-internet-image-alt")}
+              <Image
+                src={future}
+                alt={t("page-index:page-index-internet-image-alt")}
+                width={700}
               />
             </ImageContainer>
           </Row>
@@ -426,7 +507,7 @@ const HomePage = ({
             <StyledTitleCardList
               content={codeExamples}
               clickHandler={toggleCodeExample}
-              headerKey="page-index-developers-code-examples"
+              headerKey="page-index:page-index-developers-code-examples"
               isCode
               border="1px"
               borderColor="text"
@@ -437,14 +518,14 @@ const HomePage = ({
           </Box>
           <FeatureContent>
             <SectionHeading>
-              <Translation id="page-index-developers" />
+              <Translation id="page-index:page-index-developers" />
             </SectionHeading>
             <SectionDecription>
-              <Translation id="page-index-developers-description" />
+              <Translation id="page-index:page-index-developers-description" />
             </SectionDecription>
             <ButtonLinkRow>
               <ButtonLink to="/dapps/?category=technology">
-                <Translation id="page-index-developers-button" />
+                <Translation id="page-index:page-index-developers-button" />
               </ButtonLink>
             </ButtonLinkRow>
           </FeatureContent>
@@ -486,21 +567,21 @@ const HomePage = ({
       <GrayContainer>
         <ContentBox>
           <SectionHeading mt={12} mb={8} fontFamily="heading">
-            <Translation id="page-index-network-stats-title" />
+            <Translation id="page-index:page-index-network-stats-title" />
           </SectionHeading>
           <SectionDecription>
-            <Translation id="page-index-network-stats-subtitle" />
+            <Translation id="page-index:page-index-network-stats-subtitle" />
           </SectionDecription>
         </ContentBox>
-        <StatsBoxGrid />
+        <StatsBoxGrid data={metricResults} />
       </GrayContainer>
       <Divider mb={16} mt={16} w="10%" height="0.25rem" bgColor="homeDivider" />
-      <CommunityEvents />
+      <CommunityEvents events={communityEvents} />
       {/* Explore Section */}
       <ContentBox>
         <Box pb={4}>
           <SectionHeading mt={12} mb={8} fontFamily="heading">
-            <Translation id="page-index-touts-header" />
+            <Translation id="page-index:page-index-touts-header" />
           </SectionHeading>
         </Box>
         <CardContainer minChildWidth={{ lg: "400px" }}>
@@ -512,25 +593,28 @@ const HomePage = ({
                 description={tout.description}
                 alt={tout.alt}
                 to={tout.to}
-                image={tout.image!}
+                image={tout.image}
+                imageWidth={320}
                 boxShadow={cardBoxShadow}
               />
             )
           })}
         </CardContainer>
         <CalloutBanner
-          titleKey={"page-index-contribution-banner-title"}
-          descriptionKey={"page-index-contribution-banner-description"}
-          image={getImage(data.finance)!}
-          maxImageWidth={600}
-          alt={t("page-index-contribution-banner-image-alt")}
+          titleKey={"page-index:page-index-contribution-banner-title"}
+          descriptionKey={
+            "page-index:page-index-contribution-banner-description"
+          }
+          image={finance}
+          imageWidth={600}
+          alt={t("page-index:page-index-contribution-banner-image-alt")}
           mt={32}
           mb={16}
           mx={0}
         >
           <ButtonLinkRow>
             <ButtonLink to="/contributing/">
-              <Translation id="page-index-contribution-banner-button" />
+              <Translation id="page-index:page-index-contribution-banner-button" />
             </ButtonLink>
             <ButtonLink
               to="https://github.com/ethereum/ethereum-org-website"
@@ -547,156 +631,3 @@ const HomePage = ({
 }
 
 export default HomePage
-
-export const query = graphql`
-  query IndexPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-index", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    hero: file(relativePath: { eq: "home/hero.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    ethereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 740
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    dogefixed: file(relativePath: { eq: "doge-computer.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    robotfixed: file(relativePath: { eq: "wallet-cropped.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ethfixed: file(relativePath: { eq: "eth.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    devfixed: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    future: file(relativePath: { eq: "future_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    impact: file(relativePath: { eq: "impact_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 760
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    finance: file(relativePath: { eq: "finance_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 600
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 720
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    infrastructure: file(
-      relativePath: { eq: "infrastructure_transparent.png" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 760
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    infrastructurefixed: file(
-      relativePath: { eq: "infrastructure_transparent.png" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 320
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-  }
-`
