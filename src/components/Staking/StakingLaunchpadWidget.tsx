@@ -1,14 +1,15 @@
-import React, { useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
+import { useTranslation } from "next-i18next"
+import { FaTools } from "react-icons/fa"
+import { Link } from "@chakra-ui/next-js"
 import { Box, chakra, Flex } from "@chakra-ui/react"
 
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import { ButtonLink } from "../Buttons"
-import Translation from "../Translation"
-import Text from "../OldText"
+import { ButtonLink } from "@/components/Buttons"
+import Text from "@/components/OldText"
+import { StyledSelect as Select } from "@/components/SharedStyledComponents"
+import Translation from "@/components/Translation"
 
-import { trackCustomEvent } from "../../utils/matomo"
-import { FaTools } from "react-icons/fa"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 const StyledSelect = chakra(Select, {
   baseStyle: {
@@ -16,10 +17,8 @@ const StyledSelect = chakra(Select, {
   },
 })
 
-export interface IProps {}
-
-const StakingLaunchpadWidget: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+const StakingLaunchpadWidget: React.FC = () => {
+  const { t } = useTranslation("page-staking")
   const [selection, setSelection] = useState("testnet")
 
   const handleChange = (e) => {
@@ -56,7 +55,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
       p={{ base: 6, md: 8 }}
     >
       <Text as="span" color="text200">
-        <Translation id="page-staking-launchpad-widget-span" />
+        <Translation id="page-staking:page-staking-launchpad-widget-span" />
       </Text>
       <Box my={4}>
         <StyledSelect
@@ -68,10 +67,10 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
         />
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p1" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p1" />
       </Text>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p2" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p2" />
       </Text>
       <Box mb={4}>
         <ButtonLink
@@ -79,12 +78,12 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           width={{ base: "full", md: "auto" }}
         >
           {selection === "mainnet"
-            ? t("page-staking-launchpad-widget-mainnet-start")
-            : t("page-staking-launchpad-widget-testnet-start")}
+            ? t("page-staking:page-staking-launchpad-widget-mainnet-start")
+            : t("page-staking:page-staking-launchpad-widget-testnet-start")}
         </ButtonLink>
       </Box>
       <Text>
-        <Translation id="page-staking-launchpad-widget-p3" />
+        <Translation id="page-staking:page-staking-launchpad-widget-p3" />
       </Text>
       <Box>
         <ButtonLink
@@ -93,7 +92,7 @@ const StakingLaunchpadWidget: React.FC<IProps> = () => {
           width={{ base: "full", md: "auto" }}
           leftIcon={<FaTools />}
         >
-          <Translation id="page-staking-launchpad-widget-link" />
+          <Translation id="page-staking:page-staking-launchpad-widget-link" />
         </ButtonLink>
       </Box>
     </Flex>
