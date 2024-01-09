@@ -51,7 +51,7 @@ La vostra pregunta fa referència a alguna eina, projecte o biblioteca en partic
 
 Aquí teniu alguns exemples populars:
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
