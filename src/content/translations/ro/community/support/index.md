@@ -51,7 +51,7 @@ Puteți să găsiți documentație și ghiduri de dezvoltare și în secțiunea 
 
 Iată doar câteva exemple populare:
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
