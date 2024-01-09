@@ -35,7 +35,7 @@ Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiy
 - [Solidity Dil Portalı](https://soliditylang.org/)
 - [Örnekle Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im) ile köprülenmiş [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/)
+- [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im) ile köprülenmiş [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity)
 - [Kopya Kağıdı](https://reference.auditless.com/cheatsheet)
 - [Solidity Bloğu](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
