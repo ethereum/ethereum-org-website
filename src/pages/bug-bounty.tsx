@@ -18,6 +18,7 @@ import ExpandableCard from "../components/ExpandableCard"
 import FeedbackCard from "../components/FeedbackCard"
 import Text from "../components/OldText"
 import OldHeading from "../components/OldHeading"
+import BugBountyBanner from "../components/Banners/BugBountyBanner"
 import GatsbyImage from "../components/GatsbyImage"
 
 import { getImage } from "../utils/image"
@@ -439,6 +440,8 @@ const BugBountiesPage = ({
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
+      {/* TODO: Remove two weeks prior to scheduled mainnet Dencun hardfork */}
+      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>
