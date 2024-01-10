@@ -44,49 +44,47 @@ export const getRequiredNamespacesForPage = (
 }
 
 const getRequiredNamespacesForPath = (path: string) => {
-  let requiredNamespaces: string[] = []
+  let primaryNamespace: string | undefined // the primary namespace for the page
+  let requiredNamespaces: string[] = [] // any additional namespaces required for the page
 
   if (path === "assets") {
-    requiredNamespaces = [...requiredNamespaces, "page-assets"]
+    primaryNamespace = "page-assets"
   }
 
   if (path === "/") {
-    requiredNamespaces = [...requiredNamespaces, "page-index"]
+    primaryNamespace = "page-index"
   }
 
   if (path === "/contributing/translation-program/acknowledgements") {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-contributing-translation-program-acknowledgements",
-    ]
+    primaryNamespace = "page-contributing-translation-program-acknowledgements"
   }
 
   if (path === "/contributing/translation-program/contributors") {
+    primaryNamespace = "page-contributing-translation-program-contributors"
     requiredNamespaces = [
       ...requiredNamespaces,
-      "page-contributing-translation-program-contributors",
       "page-languages",
     ]
   }
 
   if (path.startsWith("/community")) {
-    requiredNamespaces = [...requiredNamespaces, "page-community"]
+    primaryNamespace = "page-community"
   }
 
   if (path.startsWith("/dapps")) {
-    requiredNamespaces = [...requiredNamespaces, "page-dapps"]
+    primaryNamespace = "page-dapps"
   }
 
   if (path.startsWith("/energy-consumption")) {
+    primaryNamespace = "page-what-is-ethereum"
     requiredNamespaces = [
       ...requiredNamespaces,
       "page-about",
-      "page-what-is-ethereum",
     ]
   }
 
   if (path.startsWith("/eth")) {
-    requiredNamespaces = [...requiredNamespaces, "page-eth"]
+    primaryNamespace = "page-eth"
   }
 
   if (path.startsWith("/glossary") || path.startsWith("/dapps")) {
@@ -94,48 +92,39 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path.startsWith("/history")) {
-    requiredNamespaces = [...requiredNamespaces, "page-history"]
+    primaryNamespace = "page-history"
   }
 
   if (path.startsWith("/stablecoins")) {
-    requiredNamespaces = [...requiredNamespaces, "page-stablecoins"]
+    primaryNamespace = "page-stablecoins"
   }
 
   if (path.startsWith("/staking")) {
-    requiredNamespaces = [...requiredNamespaces, "page-staking"]
+    primaryNamespace = "page-staking"
   }
 
   if (path.startsWith("/staking/deposit-contract")) {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-staking-deposit-contract",
-    ]
+    primaryNamespace = "page-staking-deposit-contract"
   }
 
   if (path.startsWith("/developers")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-index"]
+    primaryNamespace = "page-developers-index"
   }
 
   if (path.startsWith("/learn")) {
-    requiredNamespaces = [...requiredNamespaces, "page-learn"]
+    primaryNamespace = "page-learn"
   }
 
   if (path.startsWith("/developers/local-environment")) {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-developers-local-environment",
-    ]
+    primaryNamespace = "page-developers-local-environment"
   }
 
   if (path.startsWith("/developers/learning-tools")) {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-developers-learning-tools",
-    ]
+    primaryNamespace = "page-developers-learning-tools"
   }
 
   if (path.startsWith("/developers/tutorials")) {
-    requiredNamespaces = [...requiredNamespaces, "page-developers-tutorials"]
+    primaryNamespace = "page-developers-tutorials"
   }
 
   if (path.startsWith("/developers/docs/scaling")) {
@@ -143,27 +132,53 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   if (path === "get-eth") {
-    requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
+    primaryNamespace = "page-get-eth"
   }
 
   if (path.startsWith("/languages")) {
-    requiredNamespaces = [...requiredNamespaces, "page-languages"]
+    primaryNamespace = "page-languages"
   }
 
   if (path.startsWith("/roadmap/vision")) {
+    primaryNamespace = "page-roadmap-vision"
     requiredNamespaces = [
       ...requiredNamespaces,
-      "page-roadmap-vision",
       "page-upgrades-index",
     ]
   }
 
   if (path.startsWith("/gas")) {
-    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
+    primaryNamespace = "page-gas"
+    requiredNamespaces = [...requiredNamespaces, "page-gas"]
   }
 
   if (path.startsWith("/what-is-ethereum")) {
-    requiredNamespaces = [...requiredNamespaces, "page-what-is-ethereum"]
+    primaryNamespace = "page-what-is-ethereum"
+  }
+
+  if (path === "bug-bounty") {
+    primaryNamespace = "page-bug-bounty"
+  }
+
+  if (path === "run-a-node") {
+    primaryNamespace = "page-run-a-node"
+  }
+
+  if (path.startsWith("/wallets")) {
+    primaryNamespace = "page-wallets"
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
+  }
+
+  if (path.startsWith("/wallets/find-wallet")) {
+    primaryNamespace = "page-wallets-find-wallet"
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-wallets",
+    ]
+  }
+
+  if (path.startsWith("/layer-2")) {
+    primaryNamespace = "page-layer-2"
   }
 
   // Quizzes
@@ -182,31 +197,8 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [...requiredNamespaces, "learn-quizzes"]
   }
 
-  if (path === "bug-bounty") {
-    requiredNamespaces = [...requiredNamespaces, "page-bug-bounty"]
-  }
-
-  if (path === "run-a-node") {
-    requiredNamespaces = [...requiredNamespaces, "page-run-a-node"]
-  }
-
-  if (path.startsWith("/wallets")) {
-    requiredNamespaces = [...requiredNamespaces, "page-wallets", "glossary"]
-  }
-
-  if (path.startsWith("/wallets/find-wallet")) {
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-wallets",
-      "page-wallets-find-wallet",
-    ]
-  }
-
-  if (path.startsWith("/layer-2")) {
-    requiredNamespaces = [...requiredNamespaces, "page-layer-2"]
-  }
-
-  return requiredNamespaces
+  // Ensures that the primary namespace is always the first item in the array
+  return primaryNamespace ? [primaryNamespace, ...requiredNamespaces] : [...requiredNamespaces]
 }
 
 const getRequiredNamespacesForLayout = (layout?: string) => {
