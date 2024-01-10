@@ -2,7 +2,7 @@ import { ReactNode } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex, Grid, HeadingProps, Show, useToken } from "@chakra-ui/react"
+import { Box, Flex, Grid, HeadingProps, useToken } from "@chakra-ui/react"
 
 import type {
   BasePageProps,
@@ -742,12 +742,9 @@ const StakingPage = ({
             </Box>
           </Flex>
         </ContentContainer>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show below={lgBp}>
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Show>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </PageContainer>
   )

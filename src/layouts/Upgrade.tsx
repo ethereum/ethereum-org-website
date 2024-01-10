@@ -222,11 +222,9 @@ export const UpgradeLayout: React.FC<IProps> = ({
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Show below={lgBreakpoint}>
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Show>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Container>
   )
