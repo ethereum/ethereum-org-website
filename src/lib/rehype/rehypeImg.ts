@@ -12,7 +12,7 @@ import {
   getTranslatedImgPath,
 } from "@/lib/utils/i18n"
 
-import { DEFAULT_LOCALE } from "../constants"
+import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
 
 interface Options {
   dir: string
@@ -61,7 +61,7 @@ const getImageSize = (src: string, dir: string) => {
 }
 
 const setImagePlaceholders = async (images: ImageNode[], srcPath: string) => {
-  const DATA_DIR = path.join("src/data/placeholders", srcPath)
+  const DATA_DIR = path.join(PLACEHOLDER_IMAGE_DIR, srcPath)
   // Create placeholder data directory for current page if none exists
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
 
