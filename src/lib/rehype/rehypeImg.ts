@@ -42,10 +42,9 @@ type ImageNode = {
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-const generateInternalImagePlaceholder = async (node: ImageNode): Promise<void> => {
+const generateInternalImagePlaceholder = async (node: ImageNode): Promise<string> => {
   const buffer: Buffer = fs.readFileSync(path.join("public", node.properties.src))
-  node.properties.blurDataURL = (await getPlaiceholder(buffer)).base64
-  node.properties.placeholder = "blur"
+  return (await getPlaiceholder(buffer)).base64
 }
 
 const getImageSize = (src: string, dir: string) => {
@@ -59,6 +58,47 @@ const getImageSize = (src: string, dir: string) => {
     src = path.join(dir, src)
   }
   return sizeOf(src)
+}
+
+const setImagePlaceholders = async (images: ImageNode[], srcPath: string) => {
+  const DATA_DIR = path.join("src/data/placeholders", srcPath)
+  // Create placeholder data directory for current page if none exists
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
+
+  const DATA_PATH = path.join(DATA_DIR, "data.json")
+  // Create placeholder data file if none exists
+  if (!fs.existsSync(DATA_PATH)) fs.writeFileSync(DATA_PATH, "{}")
+
+  const placeholdersCached = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
+  const placeholdersClone = structuredClone(placeholdersCached)
+  // Generate placeholder for internal images (requires async/await; keep this at the end outside of the visit function)
+  for (const image of images) {
+    const { src } = image.properties
+
+    // Skip externally hosted images
+    if (src.startsWith("http")) continue
+
+    // Look for cached placeholder data
+    const cachedPlaceholder: string | undefined = placeholdersClone[src]
+    // Assign cached placeholder data if available, else generate new placeholder
+    const base64 = cachedPlaceholder || await generateInternalImagePlaceholder(image)
+    // Assign base64 placeholder data to image node `blurDataURL` property
+    image.properties.blurDataURL = base64
+    // If cached value was not available, add newly generated placeholder data to clone
+    if (!cachedPlaceholder) {
+      placeholdersClone[src] = base64
+    }
+  }
+  const isEmpty = Object.keys(placeholdersClone).length === 0
+  if (isEmpty) {
+    fs.rmSync(DATA_PATH)
+    return
+  }
+  const isUnchanged = JSON.stringify(placeholdersCached) === JSON.stringify(placeholdersClone)
+  if (isUnchanged) return
+
+  // Write placeholdersClone to DATA_PATH as JSON
+  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersClone, null, 2))
 }
 
 /**
@@ -110,13 +150,7 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
       }
     })
 
-    // Generate placeholder for internal images (requires async/await; keep this at the end outside of the visit function)
-    for (const image of images) {
-      // Skip externally hosted images
-      if (!image.properties.src.startsWith("http")) {
-        await generateInternalImagePlaceholder(image)
-      }
-    }
+    setImagePlaceholders(images, srcPath)
   }
 }
 
