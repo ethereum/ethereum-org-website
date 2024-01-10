@@ -179,3 +179,5 @@
 /studio /en/deprecated-software/#ethereum-studio 301!
 
 /*/studio /:splat/deprecated-software/#ethereum-studio 301!
+
+/en/stablecoins /stablecoins 301!
