@@ -1,0 +1,18 @@
+{
+  "/content/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.png": {
+    "hash": "78675710",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AMW9zlni2eRw9eDnJvz8/BMA19riXdXV7UrW2fZG7/L4VQDl3uJI6+jwU8Pa/yHs7PZNAMC+zlvX0eNe9NjmJQAAAAA93CvO1+mVqAAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/it/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.png": {
+    "hash": "6f90b0ee",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AMK9zlni2+Rw++D1Jvz8/BMA39/nXNfV7UrZ2fpG8vL7VQDp4uVI8ev0U9La/yHv8vZNAMC+zlva1eVe9Nj0JQAAAABNYixIDXHFEgAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/ja/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.png": {
+    "hash": "57f56e8a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/ALy2ylni2ORw9NjfJvT/9BMA29vmXNDQ5krR0fJG7e3zVQDl3eJI6ebuU8rS+iHq6u5NALq4yFvV0OBe7dftJQAAAAAoYitDhWBJKAAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/zh/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.png": {
+    "hash": "daa8901e",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAT0lEQVR4nAFEALv/AL20yFna1uFw8dbqJv///xMA2NjjXNLO5krP0/BG6urwVQDf299I5uPsU9DY/yHn6+5NALu2xlvWzt5e6tXqJQAAAAAluispe9IxOgAAAABJRU5ErkJggg=="
+  }
+}

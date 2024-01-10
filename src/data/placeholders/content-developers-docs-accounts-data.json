@@ -1,0 +1,30 @@
+{
+  "/content/developers/docs/accounts/accounts.png": {
+    "hash": "a95ce6de",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGO4df2/4p1L/2WeP/yfEus7W4IhPu0Sp5VRDf/m9f8zGbiS9QFDHBAgFKWrQwAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/de/developers/docs/accounts/accounts.png": {
+    "hash": "abae6b89",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/ANrX/yHc0v8c1c3/ZF1NmxgAX2bSCamW8g6tqv9pAABVL00AER+bABKnAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/fa/developers/docs/accounts/accounts.png": {
+    "hash": "0ae7ea59",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AOTf/yHl2v8c7OT/ZB8kaxgATFa/CZ2L5g7f3P9pAApfLkgwEPfp2a8CAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/it/developers/docs/accounts/accounts.png": {
+    "hash": "fd88e46b",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AN3a/yHr3/8c7+f/ZG1crBgAb3LhCU1DkA+1sf9pAAFaMFD0ENbx0zUVAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/pt-br/developers/docs/accounts/accounts.png": {
+    "hash": "a7597f86",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGO4duW/4o2z/2XePPmfkhk+W5LBJ2w/p4JcKn9v9/NMBgY/AwA6rA80hJfFSQAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/zh/developers/docs/accounts/accounts.png": {
+    "hash": "02642adc",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AN3a/yHr3/8c1s//ZKSP2xcAb3LhCU1DkA+in/1pAA5aMVczESQI8aNtAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/zh-tw/developers/docs/accounts/accounts.png": {
+    "hash": "a2725091",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AMrH/yHy3P8curb/ZGhVmxgAbXHfCaiW8g6Xle9pAAdWMUnnEPRv4ZSNAAAAAElFTkSuQmCC"
+  }
+}

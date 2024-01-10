@@ -1,0 +1,46 @@
+{
+  "/content/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "b6fd7cc3",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAADLAAAAywAEoZFrbAAAAK0lEQVR4nGPQ0dHhWTB5ssivXy8U/v37JMXg5eUgHurvqZVZnCnBzs4uCQDsugv8WMUDfQAAAABJRU5ErkJggg=="
+  },
+  "/content/energy-consumption/energy_use_per_transaction.png": {
+    "hash": "12d480c9",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAOElEQVR4nBXKMQHAMAgAQXYkMbE0ijCAGEzgAiU4+KQ3n3Q37k5EUFXIzGBmZCa7i/CoKud8/PsCJqMf2lr/vJ0AAAAASUVORK5CYII="
+  },
+  "/content/translations/de/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "5ba41a9f",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGNYunQp96EtW0T+/3mt+PTpTUmG0FBfqcriXK3o6Ggpbi4GKQAllg3qbu+iTAAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/es/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "ea1322ef",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGNISkri2bd+vcif3y8V/v37LMXg5GQh2d3dop2ZmSklIiIiDQARRw2ypYCfGwAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/fa/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "db7c5eb2",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGMIDw/neXfvnvCf36+VTu7bJ8VQkJYm0dNar9nYWC7JyckpAQAX8g4E8wEM7gAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/it/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "b778eb85",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGPw9vbm2bR4scjv3y8V/v37LMXg5mYjUZCZrFVenivJxckgBQABqwzp1zZG4gAAAABJRU5ErkJggg=="
+  },
+  "/content/energy-consumption/energy.png": {
+    "hash": "be71e967",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGP43+vb/v9jcTIDgx2/oqKQIMP/Tq/c/2/nd92Ob3LgsePjBwD5cg2QJCWKBgAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/fil/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "29d225d1",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGNYunQp96EtW0T+/3mtuGnTcikGAwMDyczMZK0gT09pbi4GKQAQ6gybSgWVpQAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/pt-br/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "9bc5f7c6",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/APr6+f+7u7v/Xl5d/4B/fv8Am5ub/xISEf+Qj4//bm5u/3v5FKuY5GqFAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/zh/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "cf50c27a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGPo7e3l/vPnrcj7Z3cVT58+JM0QGeknPn9+t+bEiW0SEhJ8kgAwOw8SnxCU2AAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/zh-tw/energy-consumption/energy_consumption_pre_post_merge.png": {
+    "hash": "f38313a4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGOYP38+94cPH0Rev76ldHjnTimGxMQwiUldLZrt7bWSfHx8kgAwVw7OmnTu5wAAAABJRU5ErkJggg=="
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana1.png": {
+    "hash": "d1bd3332",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AK268/8ACSr/FipI/yg7Z/8AOEd3/3eKrv+ClLn/f43C/xpCEhrtEk9mAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana2.png": {
+    "hash": "c1c194d4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AIiYuf85SGD/JC9B/19tjf8AGB8n/z5GTf/l6/X/vMXS/yA3EudEEGaEAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana3.png": {
+    "hash": "525b6f0a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AO3v8//U2uT/trzF/3d6gP8AJSYo/9DZ6f+8xdL/GRob/6NZFqjBGZ4hAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana4.png": {
+    "hash": "13815185",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AO7x+P+kp6//ZWlx/8XJ0P8AaWtv/1NXYP8DCRD/Wlxh/30+E+ckJLx6AAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana5.png": {
+    "hash": "9f61abb4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKklEQVR4nGOYPmve/9MXrv2vbWj+P2X6nP8MSSnp/0GCyqqa/718/P4DAGySE9E/RqeyAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana6.png": {
+    "hash": "98659028",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGPwCAr67xYQ+N/G1e0/Ax/ff4Zn/7//D8yJ+G8d6f5fRFvuPwAE1Q/YbIMhjAAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana7.png": {
+    "hash": "e8e3ad66",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/ANDR2P+eoaj/a2xy/4uMlP8AX2Jl/w0QFf8qLDH/QkVI/1mOEfsHdF8pAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/grafana8.png": {
+    "hash": "b4ee39ff",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AGZpa/9LTk//WFxd/xscIP8A9vv4//3////19vr/ys/T/0SLFrjFYINtAAAAAElFTkSuQmCC"
+  }
+}

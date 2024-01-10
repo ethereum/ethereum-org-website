@@ -1,0 +1,42 @@
+{
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/create-your-app.png": {
+    "hash": "3993de8d",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJUlEQVR4nAEaAOX/AAAAcwA/nwBCngBtuQD2+P/U2fPa3vbv9f+DsA52R4QUXwAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/alchemy-explorer-sepolia.png": {
+    "hash": "5fbc4b21",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKklEQVR4nGPg4tH+L6lq/9/INeq/Q0zuf4bDR4/9//v3BxD//H/37r3/ABibFVxUiNKkAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/metamask-goerli.png": {
+    "hash": "48bf7658",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAYAAABLLYUHAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAP0lEQVR4nAE0AMv/AAcAAP8lJyj/AQMJ/wC8vb//ERMV/9/f4P8Ac3d8/xEYH/+Ym5//AN7e3v/Pz9D/ubu+/1sxHEYuhlUpAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/copy-alchemy-api-url.gif": {
+    "hash": "6a9b2131",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAK0lEQVR4nGNgYGj+zyA55T+D9fL/DHlH/jP8+vv//5Pn//8/BuJvv///BwAwuRa2XnnFhQAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/etherscan-sepoila-contract-creation.png": {
+    "hash": "c8218aae",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKUlEQVR4nGPw9PT6//Tps//LVq76f/zEyf8MHt4+/0FYRFzqv52L+38AW3ISokrWNF4AAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/etherscan-sepolia-tx-details.png": {
+    "hash": "b02d3bd9",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR4nAEiAN3/ADIzNf/+/v//x8jJ/+Xl5v8AmJqb/zI1N/+TlJX/wsTE/4UlFwfek1SLAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/alchemy-explorer-goerli.png": {
+    "hash": "a88ab96c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAALUlEQVR4nAEiAN3/AC0uRP8QGS3/BhIj/zpFUP8A0NDN//b28//m5uL/vb3B/wu7FC36cq+zAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/configure-and-publish-your-app.png": {
+    "hash": "e393f93c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR4nGMQENHwCkhKzqosrW1luHf/7qtXz548fnDw4GEAjLcORpHFW+4AAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/etherscan-goerli-contract-creation.png": {
+    "hash": "70f486f3",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAKUlEQVR4nGNwdHL+/+/f//+7d+/+X1hS/p+hq7f//7kLF/9fvXYdTAMAg/UYTZmf7fAAAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/how-to-write-and-deploy-an-nft/etherscan-goerli-tx-details.png": {
+    "hash": "8201d105",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAKElEQVR4nGPw9PT8H5+Q+H/fvn1gzNDc3PJfVU39/7YdO/5fu379PwBLFxUOQF2HUQAAAABJRU5ErkJggg=="
+  }
+}

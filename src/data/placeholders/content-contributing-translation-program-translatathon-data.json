@@ -1,0 +1,14 @@
+{
+  "/content/contributing/translation-program/translatathon/untranslated.png": {
+    "hash": "3b96f7aa",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAF0lEQVR4nGPQVNf4f+7cuf8g8O7du/8AWtUMpogn7jgAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translatathon/translated.png": {
+    "hash": "e3508821",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAF0lEQVR4nGNQUVP9f/78hf8g8PvPn/8AWvEMygCPok4AAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translatathon/approved.png": {
+    "hash": "3679fde5",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAFklEQVR4nGNQUlb6f+DAgf+/fv8GYwBYHAyEg+ZxGAAAAABJRU5ErkJggg=="
+  }
+}

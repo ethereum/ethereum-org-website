@@ -1,0 +1,14 @@
+{
+  "/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/tree.png": {
+    "hash": "7f3e6301",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/APLt7f+SiYf/joSC//76+v8ALB8e/yYYGP8gExL/PTEu/3GeEo1QwVptAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/proof-c.png": {
+    "hash": "af29dece",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AOHg3P+uo6P/dndt/+fo4/8AGhYL/xAHBP9CNzL/V0pI/2i6EoDFaCISAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/merkle-empty-hash.png": {
+    "hash": "426a7e58",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAO0lEQVR4nGP4+ePH/4bc7P+99dX/////+58BxChKiP+fGxXxf2pb838GBQaG/5pCvP81BTn/H9+39z8AMyIdGv8TXHQAAAAASUVORK5CYII="
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "/content/developers/docs/blocks/tx-block.png": {
+    "hash": "00f61ce4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIklEQVR4nGM4fva/GQODbaCJdVMAmL19x/8aBtHwKBAGsQH5Sw7CkL43dgAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/de/developers/docs/blocks/tx-block.png": {
+    "hash": "1fa2409d",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKElEQVR4nGOYMvePGQOvbyCDSGjAyeP/zRgiE3fVWDhMiGQQCooCsQHXEwyM/gbR1wAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/fa/developers/docs/blocks/tx-block.png": {
+    "hash": "4a855fa1",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAJklEQVR4nGPYdei/Gb9KZgAIN7U8MGPwDFlTo2RcF8mrmB4FYgMA22gMSw8CzF8AAAAASUVORK5CYII="
+  },
+  "/content/translations/it/developers/docs/blocks/tx-block.png": {
+    "hash": "f77e6903",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAKUlEQVR4nGNYvv6/mbhySqCLa2/A5Qv/zRjmzPtT4+k9MwqEJ0//UgMACfIQE+Y617wAAAAASUVORK5CYII="
+  },
+  "/content/translations/pt-br/developers/docs/blocks/tx-block.png": {
+    "hash": "5b9d226f",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGOYMvePGQODQ6C8ZmHAzh3/zRj6J3+qkVLPj4qIWBEVmbirBgDlnw3gBkxbPAAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/zh/developers/docs/blocks/tx-block.png": {
+    "hash": "da0f9d1c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/ANXb/zZGR5BRl5LnUL/G/zYAr7L/fC42gFpPVqZaen7ZfDeLEXpB4lIyAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/zh-tw/developers/docs/blocks/tx-block.png": {
+    "hash": "bfe92f12",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGM4dem/aUDAzEBbh+6AXTv/mzEExW6usXadHMnAFxClaNZRAwAHeQ24o97b0gAAAABJRU5ErkJggg=="
+  }
+}

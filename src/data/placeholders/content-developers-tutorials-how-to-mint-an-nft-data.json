@@ -1,0 +1,34 @@
+{
+  "/content/developers/tutorials/how-to-mint-an-nft/instructionsPinata.gif": {
+    "hash": "bc5ac772",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAALUlEQVR4nAEiAN3/AAwBJf9DN1b/Kxg9/zIiRf8A7fLv//n79//4+PX/9vf1/xdwFZSVOekLAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/uploadPinata.gif": {
+    "hash": "21942a95",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAALUlEQVR4nAEiAN3/ABIKKv9MP1//OCRK/zsoTf8A4+nj/+vw6f/s7ur/8vTv/x2dFYtEE36eAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/view-contract-etherscan.png": {
+    "hash": "c8218aae",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKUlEQVR4nGPw9PT6//Tps//LVq76f/zEyf8MHt4+/0FYRFzqv52L+38AW3ISokrWNF4AAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/metadataPinata.gif": {
+    "hash": "165f37ef",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAKklEQVR4nGPgYVT972QW9l9H0u6/vqzjf4b7zx/8fwjET549/P/x87v/AA+TFNQ3RXSfAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/metadataJSON.png": {
+    "hash": "e2d97ab8",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAJklEQVR4nGOwtLT87+Hh8b+mpvZ/R2fnfwZpaen/IMHe3t7/IAAADFMSK01kM0cAAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/view-nft-etherscan.png": {
+    "hash": "b02d3bd9",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR4nAEiAN3/ADIzNf/+/v//x8jJ/+Xl5v8AmJqb/zI1N/+TlJX/wsTE/4UlFwfek1SLAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/viewContractEtherscan.png": {
+    "hash": "9105a8b4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKklEQVR4nGPw9fH539HR8X/Lli3/165b/59hwYKF/8XFxP/v2b37PwgAAFfMFfC67NCXAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/how-to-mint-an-nft/viewNFTEtherscan.png": {
+    "hash": "28c4f9db",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR4nAEiAN3/AEhISf+UlZX/tra2/6KipP8AiIiI/yUoKf/g4eH/5ubm/1hiFfxUdkEvAAAAAElFTkSuQmCC"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "/content/developers/docs/nodes-and-clients/eth1eth2client.png": {
+    "hash": "ca73e11f",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAIAAAA7ljmRAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAL0lEQVR4nGP4//9/SkqKnp7eunXrGKytrcXFxdnY2IBCDO/evZs/f35YWNiECRMAP4YQS8RVx+kAAAAASUVORK5CYII="
+  },
+  "/content/developers/docs/nodes-and-clients/nodes.png": {
+    "hash": "beafff5a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/ABoAAB3q3dEp9fLs0P/7/54AMyYtIeLVzib79fG1+fX5jTe/FI+78YsDAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/de/developers/docs/nodes-and-clients/eth1eth2client.png": {
+    "hash": "265d5e16",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAN0lEQVR4nGP4DwQpKSn/9fT0/s+fP/8vg7W19X82Nrb/4uLi/8PCwv4y3Lt3DyQD4vyfMGHCXwC7VBuyyffY5wAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/de/developers/docs/nodes-and-clients/nodes.png": {
+    "hash": "d911a514",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/AB4AAB3j1sop7urlz/34/Z0AQDM6IdvOyCbw6+a18uzwjTN2FDkcX49kAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/docs/nodes-and-clients/client-diagram.png": {
+    "hash": "250323f1",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAI0lEQVR4nGM4ceyImZnpzm2bLp09xlBTXdXa1qqlqXHy2AEAssENRUevKEUAAAAASUVORK5CYII="
+  },
+  "/content/translations/it/developers/docs/nodes-and-clients/eth1eth2client.png": {
+    "hash": "5d5baad2",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAMklEQVR4nGP4DwQpKSn/lZSU/q9bt+4/g7W19X82NjYwBkkwvHv37v+ECRP+h4WFgWkAu94buwzlIkAAAAAASUVORK5CYII="
+  },
+  "/content/translations/it/developers/docs/nodes-and-clients/nodes.png": {
+    "hash": "a707c602",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/ABYDAh3iz8Mp9fHs0P/7/54AUEJJIdnFvyb38u+18+/1jTauFH/PS6d0AAAAAElFTkSuQmCC"
+  },
+  "/content/translations/pt-br/developers/docs/nodes-and-clients/eth1eth2client.png": {
+    "hash": "087c5a01",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAAAsTAAALEwEAmpwYAAAANklEQVR4nA3JQREAAAQEQFnU0EMCRTTQQDO/i2GO766QXHdfVd3uXslMPjAi+ECZGVQVzAyfOAEgHdNzoxtgAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/pt-br/developers/docs/nodes-and-clients/nodes.png": {
+    "hash": "9e54eeae",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAALUlEQVR4nAEiAN3/ABYCAh3Yxrsp6+fi0Pf2+50ATUBHIdTNwCbw6ea18OzwjS5OFAzBxSkPAAAAAElFTkSuQmCC"
+  }
+}

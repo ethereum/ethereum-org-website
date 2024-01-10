@@ -1,0 +1,22 @@
+{
+  "/content/security/passwordManager.png": {
+    "hash": "4403e72d",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVR4nGPIzs75Lykp9f/t23f/QYBhQn/f/4y0+P+/fn2DCPR2t/43N1b4//zZfbAAAF0WI9neCzC+AAAAAElFTkSuQmCC"
+  },
+  "/content/security/appleTwitterScam.png": {
+    "hash": "1640bcde",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAJ0lEQVR4nGN49+7dfz09vf+ioqL/ubi4/jPY2dn9DwoKAmMVFZX/AAnDDrywBaiKAAAAAElFTkSuQmCC"
+  },
+  "/content/security/youtubeScam.png": {
+    "hash": "141319ca",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAK0lEQVR4nGOQkRD9n5nU+b+xfu9/Biam/wxW5ub/1ZWM/r989f9/fVvDfwD69hDR3gPeJwAAAABJRU5ErkJggg=="
+  },
+  "/content/security/discordScam.png": {
+    "hash": "36cd6ff7",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAGklEQVR4nGN49Pj1/zVrN/+vrGn5L8Av/h8AZZgKaASiFK4AAAAASUVORK5CYII="
+  },
+  "/content/security/brokerScam.png": {
+    "hash": "82e65321",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR4nAEiAN3/ABEREv97e3v/yMjI/+np6f8AXl5e/21tbf+5ubn/2NjY/07EFcW9qHoJAAAAAElFTkSuQmCC"
+  }
+}

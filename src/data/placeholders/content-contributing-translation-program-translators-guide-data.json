@@ -1,0 +1,46 @@
+{
+  "/content/contributing/translation-program/translators-guide/article-titles-in-sidebar.png": {
+    "hash": "933a37ca",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAGklEQVR4nGP48Obf/yndi/9r6Zj/F5VS+A8AXqQJdYAZJt4AAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/article-titles-in-editor.png": {
+    "hash": "1d92eb2b",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAKElEQVR4nGPIKq7/r2Fo/V9UVv2/vLrRf4ZPv/7/Z2AW+S8hpwkWBAD44w50ZBhVzgAAAABJRU5ErkJggg=="
+  },
+  "/content/contributing/translation-program/translators-guide/crowdin-warning-example.png": {
+    "hash": "4cc91f46",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAO0lEQVR4nGNg4xP/b23v9N/IxPw/C6/wf4bPv///d/YO/6+mZw3EVv8Z/MKS/pvaef1X17f+b+4U/B8AEwMVrMX2bNYAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/editor-settings.png": {
+    "hash": "ae4e745e",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAGklEQVR4nGOQlpb8f/TY4f8fP3/4P3vOvP8AUz0LQyHHqJ0AAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/hide-tags.png": {
+    "hash": "eefc5659",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAYAAABLLYUHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAP0lEQVR4nAE0AMv/ABAQDf+vr6//4+Pj/wAmKCX/vby8//Hx8f8AO0A8/9/g4P/V1dX/AHB1cP++wL7/kpSS/zhqIXHqqGIBAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-link.png": {
+    "hash": "78d0640d",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAABJ0AAASdAHeZh94AAAAIUlEQVR4nGNQUZF3c3XIzEytqa5gCAkJefXq5b9/f4EIAHtpDYSFErahAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-links-inside-tags.png": {
+    "hash": "941f0f05",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAABJ0AAASdAHeZh94AAAAIUlEQVR4nGNg52TPy8vu6e6qKC9nKCoqevbs2f///4EkAIf+Dh0GglTRAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-strong-tags.png": {
+    "hash": "011523aa",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAABJ0AAASdAHeZh94AAAAHUlEQVR4nGPg5eXy8PAEoqKiIoaIyMhnz579BwMAbnwM4+uhUccAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-code-snippets.png": {
+    "hash": "e870a5f9",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAABJ0AAASdAHeZh94AAAAHklEQVR4nGPg5eXy8PDs6OjYtm0bA5B17ty5/2AAAIOEDfU8Fh0KAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-ambiguous-tags.png": {
+    "hash": "e1c6055f",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAABJ0AAASdAHeZh94AAAAH0lEQVR4nGNISEgICQmRkZGeP38+Q29f71Uw+PjxIwCJ4Q3GoI0LnwAAAABJRU5ErkJggg=="
+  },
+  "/content/contributing/translation-program/translators-guide/how-to-find-a-button.png": {
+    "hash": "1cbb1987",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAIAAADwyuo0AAAACXBIWXMAABJ0AAASdAHeZh94AAAAJUlEQVR4nAEaAOX/AFxbWtbV1f///97e3gANBgaIhobKy8u+vr7JFA9wzNW55QAAAABJRU5ErkJggg=="
+  }
+}
