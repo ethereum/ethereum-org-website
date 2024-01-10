@@ -7,6 +7,7 @@ import { getPlaiceholder } from "plaiceholder"
 import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
+import { getHashFromBuffer } from "@/lib/utils/crypto"
 import {
   checkIfImageIsTranslated,
   getTranslatedImgPath,
@@ -33,6 +34,15 @@ type ImageNode = {
   }
 }
 
+type Path = string
+
+type Placeholder = {
+  hash: string
+  base64: string
+}
+
+type PlaceholderData = Record<Path, Placeholder>
+
 /**
  * Handles:
  * "//"
@@ -42,8 +52,7 @@ type ImageNode = {
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-const generateInternalImagePlaceholder = async (node: ImageNode): Promise<string> => {
-  const buffer: Buffer = fs.readFileSync(path.join("public", node.properties.src))
+const generateInternalImagePlaceholder = async (buffer: Buffer): Promise<string> => {
   return (await getPlaiceholder(buffer)).base64
 }
 
@@ -60,38 +69,61 @@ const getImageSize = (src: string, dir: string) => {
   return sizeOf(src)
 }
 
-const setImagePlaceholders = async (images: ImageNode[], srcPath: string) => {
-  const DATA_DIR = path.join(PLACEHOLDER_IMAGE_DIR, srcPath)
-  // Create placeholder data directory for current page if none exists
-  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true })
 
-  const DATA_PATH = path.join(DATA_DIR, "data.json")
-  // Create placeholder data file if none exists
-  if (!fs.existsSync(DATA_PATH)) fs.writeFileSync(DATA_PATH, "{}")
+/**
+ * Sets image placeholders for the given array of images.
+ * 
+ * @param images - The array of images to set placeholders for.
+ * @param srcPath - The source page path for the images.
+ * @returns A promise that resolves to void.
+ */
+const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promise<void> => {
+  // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
+  const FILENAME = path.join(srcPath, "data.json").replaceAll("/", "-").slice(1)
 
-  const placeholdersCached = JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
-  const placeholdersClone = structuredClone(placeholdersCached)
-  // Generate placeholder for internal images (requires async/await; keep this at the end outside of the visit function)
+  // Make directory for current page if none exists
+  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR)) fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+
+  const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
+  const existsCache = fs.existsSync(DATA_PATH)
+
+  const placeholdersCached: PlaceholderData = existsCache ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) : {}
+  const placeholdersClone: PlaceholderData = structuredClone(placeholdersCached)
+
+  // Generate placeholder for internal images (requires async/await; keep after/outside the `visit` function)
   for (const image of images) {
     const { src } = image.properties
 
     // Skip externally hosted images
     if (src.startsWith("http")) continue
 
-    // Look for cached placeholder data
-    const cachedPlaceholder: string | undefined = placeholdersClone[src]
+    // Load image data from file system as buffer
+    const buffer: Buffer = fs.readFileSync(path.join("public", src))
+
+    // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
+    const hash = await getHashFromBuffer(buffer, { algorithm: "SHA-1", length: 8 })
+
+    // Look for cached placeholder data with matching hash
+    const cachedPlaceholder = placeholdersClone[src]?.hash === hash ? placeholdersClone[src].base64 : undefined
+
     // Assign cached placeholder data if available, else generate new placeholder
-    const base64 = cachedPlaceholder || await generateInternalImagePlaceholder(image)
+    const base64 = cachedPlaceholder || await generateInternalImagePlaceholder(buffer)
+
     // Assign base64 placeholder data to image node `blurDataURL` property
     image.properties.blurDataURL = base64
+    image.properties.placeholder = "blur"
     // If cached value was not available, add newly generated placeholder data to clone
     if (!cachedPlaceholder) {
-      placeholdersClone[src] = base64
+      placeholdersClone[src] = {
+        hash,
+        base64,
+      }
     }
   }
+
   const isEmpty = Object.keys(placeholdersClone).length === 0
   if (isEmpty) {
-    fs.rmSync(DATA_PATH)
+    fs.rmSync(DATA_PATH, { recursive: true, force: true })
     return
   }
   const isUnchanged = JSON.stringify(placeholdersCached) === JSON.stringify(placeholdersClone)
@@ -150,7 +182,7 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
       }
     })
 
-    setImagePlaceholders(images, srcPath)
+    await setImagePlaceholders(images, srcPath)
   }
 }
 
