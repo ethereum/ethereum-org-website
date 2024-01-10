@@ -1,0 +1,8 @@
+{
+  "/content/whitepaper/ethereum-state-transition.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAGklEQVR4nGPoyAy/uXNay8XdszqumMvxnwUATaEIqOLYhbIAAAAASUVORK5CYII=",
+  "/content/whitepaper/ethereum-blocks.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAGElEQVR4nGOoy0pYCsRbeivyDtvrqnQDAEC7BzsGxExOAAAAAElFTkSuQmCC",
+  "/content/whitepaper/spv-bitcoin.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR4nAEiAN3/ALLl1kp5oJw5xrHBPbW9vR0AfZqsT0d1mzr/yMtDSgAAJDd+EE3+vd0LAAAAAElFTkSuQmCC",
+  "/content/whitepaper/ether-state-transition.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAALUlEQVR4nAEiAN3/AJWBdvry1siqUDgssdTAtu0ARjw63aKKgKUoGRCqlIyG0UEiEbljASiNAAAAAElFTkSuQmCC",
+  "/content/whitepaper/ethereum-apply-block-diagram.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAABCAYAAAD5PA/NAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAGUlEQVR4nGPo66xP8nF38ulqq7PYuXupDwA7cgdFmaTD1wAAAABJRU5ErkJggg==",
+  "/content/whitepaper/ethereum-inflation.png": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAACCAYAAAB/qH1jAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAK0lEQVR4nGNwNDeIm9BaX5QRF1G8avGiOIYwf+/UWdOmVN65ca1i+6Y16QDv4g/72naSwQAAAABJRU5ErkJggg=="
+}
