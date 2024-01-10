@@ -31,7 +31,7 @@ const imageProps: (keyof NextImageProps)[] = [
 ]
 
 const DefaultNextImage = (props: ImageProps) => {
-  const hasBlurData = !!(props.src as StaticImageData).blurDataURL
+  const hasBlurData = !!((props.src as StaticImageData).blurDataURL || props.blurDataURL)
   return <NextImage placeholder={hasBlurData ? "blur" : "empty"} {...props}  />
 }
 
