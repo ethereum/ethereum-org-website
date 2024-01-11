@@ -115,6 +115,7 @@ const MeetupList: React.FC<IProps> = () => {
                   textDecor="none"
                   color="text"
                   hideArrow
+                  isExternal
                 >
                   {meetup.title}
                 </LinkOverlay>
