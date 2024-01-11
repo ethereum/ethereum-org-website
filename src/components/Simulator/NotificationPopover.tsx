@@ -1,16 +1,16 @@
+import React, { type ReactNode } from "react"
 import {
-  Popover,
-  PopoverTrigger,
-  PopoverContent,
-  PopoverBody,
-  PopoverContentProps,
-  PopoverProps,
-  PopoverHeader,
-  PopoverCloseButton,
   Flex,
+  Popover,
+  PopoverBody,
+  PopoverCloseButton,
+  PopoverContent,
+  PopoverContentProps,
+  PopoverHeader,
+  PopoverProps,
+  PopoverTrigger,
   Portal,
 } from "@chakra-ui/react"
-import React, { type ReactNode } from "react"
 
 interface IProps
   extends Omit<PopoverContentProps, "children">,
@@ -27,7 +27,6 @@ export const NotificationPopover: React.FC<IProps> = ({
   return (
     <Popover placement={placement}>
       <PopoverTrigger>{children}</PopoverTrigger>
-      <Portal>
         <PopoverContent
           bg="background.highlight"
           px={4}
@@ -46,7 +45,6 @@ export const NotificationPopover: React.FC<IProps> = ({
           </Flex>
           <PopoverBody>{content}</PopoverBody>
         </PopoverContent>
-      </Portal>
     </Popover>
   )
 }
