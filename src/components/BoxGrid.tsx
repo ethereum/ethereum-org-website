@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { Box, Flex, GridItem, SimpleGrid } from "@chakra-ui/react"
 
-import Emoji from "./Emoji"
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
-import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
+import Emoji from "./Emoji"
+import OldHeading from "./OldHeading"
+import Text from "./OldText"
 
 export interface IBoxItem {
   emoji: string

@@ -1,26 +1,27 @@
 import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import { IoCodeOutline } from "react-icons/io5"
 import {
-  Flex,
   Box,
+  Flex,
   Hide,
   Icon,
   LinkBox,
   LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { IoCodeOutline } from "react-icons/io5"
-import { BaseLink } from "./Link"
-import Translation from "./Translation"
-import GatsbyImage from "./GatsbyImage"
-import { TranslationKey } from "../utils/translations"
+
+import { TranslationKey } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
 
 export interface ITitleCardItem {
   title: string
   description: string
   caption?: string
   link?: string
-  image?: IGatsbyImageData
+  image?: string
   alt?: string
   id?: number
 }
@@ -78,21 +79,21 @@ const TitleCardList: React.FC<IProps> = ({
                 width="12px"
                 height="12px"
                 bg="fail300"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
               <Box
                 width="12px"
                 height="12px"
                 bg="gridYellow"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
               <Box
                 width="12px"
                 height="12px"
                 bg="success300"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
             </Flex>
@@ -122,15 +123,15 @@ const TitleCardList: React.FC<IProps> = ({
             }}
           >
             {image && (
-              <GatsbyImage
-                marginTop={1}
-                marginRight={4}
-                minWidth={5}
-                image={image}
+              <Image
+                src={image}
                 alt={alt || ""}
+                marginTop={1}
+                me={4}
+                minWidth={5}
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
+            <Flex flex="1 1 75%" flexDirection="column" me={8}>
               <LinkOverlay
                 as={BaseLink}
                 href={link}
@@ -157,7 +158,7 @@ const TitleCardList: React.FC<IProps> = ({
                 flex="1 0 25%"
                 alignItems="center"
                 flexWrap="wrap"
-                marginRight={4}
+                me={4}
               >
                 <Box
                   fontSize="sm"
@@ -188,15 +189,15 @@ const TitleCardList: React.FC<IProps> = ({
             }}
           >
             {image && (
-              <GatsbyImage
-                marginTop={1}
-                marginRight={4}
-                minWidth={5}
-                image={image}
+              <Image
+                src={image}
                 alt={alt || ""}
+                marginTop={1}
+                me={4}
+                minWidth={5}
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
+            <Flex flex="1 1 75%" flexDirection="column" me={8}>
               <Box>{title}</Box>
 
               <Box
@@ -212,7 +213,7 @@ const TitleCardList: React.FC<IProps> = ({
                 flex="1 0 25%"
                 alignItems="center"
                 flexWrap="wrap"
-                marginRight={4}
+                me={4}
               >
                 <Box
                   fontSize="sm"

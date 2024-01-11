@@ -1,11 +1,11 @@
 import React from "react"
 import {
   Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
   ModalBody,
   ModalCloseButton,
+  ModalContent,
+  ModalHeader,
+  ModalOverlay,
 } from "@chakra-ui/react"
 export interface IProps {
   children?: React.ReactNode
