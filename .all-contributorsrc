@@ -10911,6 +10911,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "vuvoth",
+      "name": "Vu Vo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45826131?v=4",
+      "profile": "https://github.com/vuvoth",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

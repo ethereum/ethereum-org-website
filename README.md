@@ -1703,6 +1703,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Messi-Q"><img src="https://avatars.githubusercontent.com/u/21357985?v=4?s=100" width="100px;" alt="QIAN"/><br /><sub><b>QIAN</b></sub></a><br /><a href="#content-Messi-Q" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SanShi2023"><img src="https://avatars.githubusercontent.com/u/136459117?v=4?s=100" width="100px;" alt="SanShi2023"/><br /><sub><b>SanShi2023</b></sub></a><br /><a href="#content-SanShi2023" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/kamuik16"><img src="https://avatars.githubusercontent.com/u/93703995?v=4?s=100" width="100px;" alt="Krishang Shah"/><br /><sub><b>Krishang Shah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kamuik16" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vuvoth"><img src="https://avatars.githubusercontent.com/u/45826131?v=4?s=100" width="100px;" alt="Vu Vo"/><br /><sub><b>Vu Vo</b></sub></a><br /><a href="#content-vuvoth" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
