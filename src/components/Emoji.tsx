@@ -3,9 +3,11 @@ import { Box, type BoxProps } from "@chakra-ui/react"
 
 import { IS_DEV } from "@/lib/utils/env"
 
-export type EmojiProps = Omit<BoxProps, "children"> & BaseProps
+export type EmojiProps = Omit<BoxProps, "children"> & BaseProps & {
+  isFlag?: boolean;
+};
 
-const Emoji = (props: EmojiProps) => (
+const Emoji = ({ isFlag, ...props}: EmojiProps) => (
   <Box
     as={Twemoji}
     // The emoji lib is switching the protocol based on the existence of the
