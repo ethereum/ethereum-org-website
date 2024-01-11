@@ -1,46 +1,46 @@
-// Libraries
-import React, { useEffect, useMemo, useState } from "react"
-import { graphql, PageProps } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useEffect, useMemo, useState } from "react"
+import { GetStaticProps, InferGetServerSidePropsType } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { FaGithub } from "react-icons/fa"
 import {
   Badge,
-  Button,
-  chakra,
-  forwardRef,
   Box,
+  chakra,
   Flex,
+  forwardRef,
   Heading,
   useToken,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 
-// Components
-import Translation from "../../components/Translation"
-import ButtonLink from "../../components/Buttons/ButtonLink"
-import InlineLink, { BaseLink } from "../../components/Link"
-import Modal from "../../components/Modal"
-import PageMetadata from "../../components/PageMetadata"
-import TutorialTags from "../../components/TutorialTags"
-import Emoji from "../../components/Emoji"
-import FeedbackCard from "../../components/FeedbackCard"
-import { getSkillTranslationId, Skill } from "../../components/TutorialMetadata"
-import Text from "../../components/OldText"
-import OldHeading from "../../components/OldHeading"
+import { BasePageProps, Lang } from "@/lib/types"
 
-// Data
-import externalTutorials from "../../data/externalTutorials.json"
+import { Button, ButtonLink } from "@/components/Buttons"
+import Emoji from "@/components/Emoji"
+import FeedbackCard from "@/components/FeedbackCard"
+import InlineLink, { BaseLink } from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import Modal from "@/components/Modal"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
+import Translation from "@/components/Translation"
+import { getSkillTranslationId, Skill } from "@/components/TutorialMetadata"
+import TutorialTags from "@/components/TutorialTags"
 
-// Utils
-import { getLocaleTimestamp, INVALID_DATETIME } from "../../utils/time"
-import { Lang } from "../../utils/languages"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getTutorialsData } from "@/lib/utils/md"
+import { getLocaleTimestamp, INVALID_DATETIME } from "@/lib/utils/time"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   filterTutorialsByLang,
   getSortedTutorialTagsForLang,
-} from "../../utils/tutorials"
-import { trackCustomEvent } from "../../utils/matomo"
+} from "@/lib/utils/tutorial"
 
-// Types
-import { Context } from "../../types"
+import externalTutorials from "@/data/externalTutorials.json"
 
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
@@ -73,14 +73,28 @@ const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   }
 )
 
-const published = (locale: string, published: string) => {
-  const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
-  return localeTimestamp !== INVALID_DATETIME ? (
-    <span>
-      <Emoji text=":calendar:" fontSize="sm" ml={2} mr={2} /> {localeTimestamp}
-    </span>
-  ) : null
+type Props = BasePageProps & {
+  internalTutorials: ITutorial[]
 }
+
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/developers/tutorials"
+  )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      internalTutorials: getTutorialsData(locale!),
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<Props>
 
 export interface IExternalTutorial {
   url: string
@@ -108,25 +122,29 @@ export interface ITutorial {
   isExternal: boolean
 }
 
-export interface ITutorialsState {
-  activeTagNames: Array<string>
-  filteredTutorials: Array<ITutorial>
+const published = (locale: string, published: string) => {
+  const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
+  return localeTimestamp !== INVALID_DATETIME ? (
+    <span>
+      <Emoji text=":calendar:" fontSize="sm" ml={2} mr={2} /> {localeTimestamp}
+    </span>
+  ) : null
 }
 
-const TutorialsPage = ({
-  data,
-  pageContext,
-}: PageProps<Queries.DevelopersTutorialsPageQuery, Context>) => {
+const TutorialPage = ({
+  internalTutorials,
+}: InferGetServerSidePropsType<typeof getStaticProps>) => {
+  const { locale } = useRouter()
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
     () =>
       filterTutorialsByLang(
-        data.allTutorials.nodes,
+        internalTutorials,
         externalTutorials,
-        pageContext.language
+        locale as Lang
       ),
-    [pageContext.language]
+    [internalTutorials, locale]
   )
 
   const allTags = useMemo(
@@ -135,7 +153,6 @@ const TutorialsPage = ({
   )
 
   const { t } = useTranslation()
-  const { language } = useI18next()
   const [isModalOpen, setModalOpen] = useState(false)
   const [filteredTutorials, setFilteredTutorials] = useState(
     filteredTutorialsByLang
@@ -152,7 +169,7 @@ const TutorialsPage = ({
     }
 
     setFilteredTutorials(tutorials)
-  }, [selectedTags])
+  }, [filteredTutorialsByLang, selectedTags])
 
   const handleTagSelect = (tagName: string) => {
     const tempSelectedTags = selectedTags
@@ -179,6 +196,7 @@ const TutorialsPage = ({
 
   return (
     <Flex
+      as={MainArticle}
       flexDirection="column"
       alignItems="center"
       w="full"
@@ -187,8 +205,10 @@ const TutorialsPage = ({
       mt={16}
     >
       <PageMetadata
-        title={t("page-tutorials-meta-title")}
-        description={t("page-tutorials-meta-description")}
+        title={t("page-developers-tutorials:page-tutorials-meta-title")}
+        description={t(
+          "page-developers-tutorials:page-tutorials-meta-description"
+        )}
       />
       <Heading
         fontStyle="normal"
@@ -202,7 +222,7 @@ const TutorialsPage = ({
         mx={{ base: 4, sm: 0 }}
         mb={{ base: 4, sm: "1.625rem" }}
       >
-        <Translation id="page-tutorial-title" />
+        <Translation id="page-developers-tutorials:page-tutorial-title" />
       </Heading>
       <Text
         fontSize="xl"
@@ -211,21 +231,21 @@ const TutorialsPage = ({
         mb={4}
         textAlign="center"
       >
-        <Translation id="page-tutorial-subtitle" />
+        <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
       <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
         <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
-          <Translation id="page-tutorial-submit-btn" />
+          <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         </Heading>
         <Text>
-          <Translation id="page-tutorial-listing-policy-intro" />{" "}
+          <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
           <InlineLink to="/contributing/content-resources/">
-            <Translation id="page-tutorial-listing-policy" />
+            <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
           </InlineLink>
         </Text>
         <Text>
-          <Translation id="page-tutorial-submit-tutorial" />
+          <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
         </Text>
         <Flex
           flexDirection={{ base: "column", md: "initial" }}
@@ -247,17 +267,17 @@ const TutorialsPage = ({
             mr={{ base: 0, md: 2 }}
           >
             <Text as="b">
-              <Translation id="page-tutorial-new-github" />
+              <Translation id="page-developers-tutorials:page-tutorial-new-github" />
             </Text>
             <Text>
-              <Translation id="page-tutorial-new-github-desc" />
+              <Translation id="page-developers-tutorials:page-tutorial-new-github-desc" />
             </Text>
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=suggest_tutorial.yaml&title="
             >
-              <Translation id="page-tutorial-raise-issue-btn" />
+              <Translation id="page-developers-tutorials:page-tutorial-raise-issue-btn" />
             </ButtonLink>
           </Flex>
           <Flex
@@ -275,21 +295,21 @@ const TutorialsPage = ({
             mr={{ base: 0, md: 2 }}
           >
             <Text as="b">
-              <Translation id="page-tutorial-pull-request" />
+              <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
             </Text>
             <Text>
-              <Translation id="page-tutorial-pull-request-desc-1" />{" "}
+              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-1" />{" "}
               <code>
-                <Translation id="page-tutorial-pull-request-desc-2" />
+                <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-2" />
               </code>{" "}
-              <Translation id="page-tutorial-pull-request-desc-3" />
+              <Translation id="page-developers-tutorials:page-tutorial-pull-request-desc-3" />
             </Text>
             <ButtonLink
               leftIcon={<FaGithub />}
               variant="outline"
               to="https://github.com/ethereum/ethereum-org-website/new/dev/src/content/developers/tutorials"
             >
-              <Translation id="page-tutorial-pull-request-btn" />
+              <Translation id="page-developers-tutorials:page-tutorial-pull-request-btn" />
             </ButtonLink>
           </Flex>
         </Flex>
@@ -318,7 +338,7 @@ const TutorialsPage = ({
           })
         }}
       >
-        <Translation id="page-tutorial-submit-btn" />
+        <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
       </Button>
 
       <Box
@@ -345,11 +365,12 @@ const TutorialsPage = ({
             maxW={{ base: "full", md: "initial" }}
             mb={{ base: 4, md: "initial" }}
           >
-            {Object.entries(allTags).map(([tagName, tagCount]) => {
+            {Object.entries(allTags).map(([tagName, tagCount], idx) => {
               const name = `${tagName} (${tagCount})`
               const isActive = selectedTags.includes(tagName)
               return (
                 <FilterTag
+                  key={idx}
                   onClick={() => handleTagSelect(tagName)}
                   {...{ name, isActive }}
                 />
@@ -375,7 +396,7 @@ const TutorialsPage = ({
                   })
                 }}
               >
-                <Translation id="page-find-wallet-clear" />
+                <Translation id="page-developers-tutorials:page-find-wallet-clear" />
               </Button>
             )}
           </Flex>
@@ -384,10 +405,10 @@ const TutorialsPage = ({
           <Box mt={0} textAlign="center" padding={12}>
             <Emoji text=":crying_face:" fontSize="5xl" mb={8} mt={8} />
             <OldHeading>
-              <Translation id="page-tutorial-tags-error" />
+              <Translation id="page-developers-tutorials:page-tutorial-tags-error" />
             </OldHeading>
             <Text>
-              <Translation id="page-find-wallet-try-removing" />
+              <Translation id="page-developers-tutorials:page-find-wallet-try-removing" />
             </Text>
           </Box>
         )}
@@ -443,17 +464,16 @@ const TutorialsPage = ({
                 </Badge>
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
-                {/* TODO: Refactor each tutorial tag as a component */}
                 <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
                 {tutorial.author} •
-                {published(language, tutorial.published ?? "")}
+                {published(locale!, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
                     •
                     <Emoji text=":stopwatch:" fontSize="sm" ml={2} mr={2} />
                     {tutorial.timeToRead}{" "}
-                    <Translation id="page-tutorial-read-time" />
+                    <Translation id="page-developers-tutorials:page-tutorial-read-time" />
                   </>
                 )}
                 {tutorial.isExternal && (
@@ -461,7 +481,7 @@ const TutorialsPage = ({
                     {" "}
                     •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
                     <Box as="span" color="primary.base" cursor="pointer">
-                      <Translation id="page-tutorial-external-link" />
+                      <Translation id="page-developers-tutorials:page-tutorial-external-link" />
                     </Box>
                   </>
                 )}
@@ -478,45 +498,5 @@ const TutorialsPage = ({
     </Flex>
   )
 }
-export default TutorialsPage
 
-export const query = graphql`
-  query DevelopersTutorialsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-tutorials", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    allTutorials: allMdx(
-      filter: { slug: { regex: "/tutorials/" } }
-      sort: { frontmatter: { published: DESC } }
-    ) {
-      nodes {
-        fields {
-          slug
-          readingTime {
-            minutes
-          }
-        }
-        frontmatter {
-          title
-          description
-          tags
-          author
-          skill
-          published
-          lang
-        }
-      }
-    }
-  }
-`
+export default TutorialPage

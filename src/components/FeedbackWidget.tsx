@@ -1,5 +1,8 @@
-// Library imports
-import React, { useState, useEffect, useRef, useMemo } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
+import FocusTrap from "focus-trap-react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { MdClose } from "react-icons/md"
 import {
   Box,
   Button,
@@ -8,31 +11,28 @@ import {
   Icon,
   ScaleFade,
 } from "@chakra-ui/react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
-import { MdClose } from "react-icons/md"
-import FocusTrap from "focus-trap-react"
-// Component imports
-import Translation from "./Translation"
-import Text from "./OldText"
-// SVG imports
-import { FeedbackGlyphIcon } from "./icons"
-// Utility imports
-import { trackCustomEvent } from "../utils/matomo"
-// Hook imports
-import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { useKeyPress } from "../hooks/useKeyPress"
-import { useSurvey } from "../hooks/useSurvey"
 
-interface FixedDotProps extends ButtonProps {
+import { FeedbackGlyphIcon } from "@/components/icons"
+import Text from "@/components/OldText"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import { useKeyPress } from "@/hooks/useKeyPress"
+import { useOnClickOutside } from "@/hooks/useOnClickOutside"
+import { useSurvey } from "@/hooks/useSurvey"
+
+type FixedDotProps = ButtonProps & {
   bottomOffset: number
   isExpanded: boolean
 }
-const FixedDot: React.FC<FixedDotProps> = ({
+const FixedDot = ({
   children,
   bottomOffset,
   isExpanded,
   ...props
-}) => {
+}: FixedDotProps) => {
   const size = "3rem"
   return (
     <Button
@@ -65,12 +65,9 @@ const FixedDot: React.FC<FixedDotProps> = ({
   )
 }
 
-interface FeedbackWidgetProps {
-  location: string
-}
-const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+const FeedbackWidget = () => {
+  const { t } = useTranslation("common")
+  const { asPath, locale } = useRouter()
 
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
@@ -79,7 +76,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
 
   useEffect(() => {
-    // Reset component state when path (location) changes
+    // Reset component state when path (asPath) changes
     setIsOpen(false)
     setFeedbackSubmitted(false)
     setIsExpanded(false)
@@ -87,7 +84,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
     let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
 
     return () => clearTimeout(expandTimeout)
-  }, [location])
+  }, [asPath])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
@@ -96,12 +93,12 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
-      if (location.includes(path)) {
+      if (asPath.includes(path)) {
         offset = CONDITIONAL_OFFSET
       }
     })
     return offset
-  }, [location])
+  }, [asPath])
 
   const handleClose = (): void => {
     setIsOpen(false)
@@ -141,7 +138,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
 
   useKeyPress(`Escape`, handleClose)
 
-  if (language !== "en") return null
+  if (locale! !== DEFAULT_LOCALE) return null
   const closeButtonSize = "24px"
   return (
     <>
@@ -172,7 +169,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                 alignItems="center"
                 display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
               >
-                <Translation id="feedback-widget-prompt" />
+                {t("feedback-widget-prompt")}
               </Text>
             </ScaleFade>
           )}
@@ -238,15 +235,13 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
               </Button>
 
               <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
-                {feedbackSubmitted ? (
-                  <Translation id="feedback-widget-thank-you-title" />
-                ) : (
-                  <Translation id="feedback-widget-prompt" />
-                )}
+                {feedbackSubmitted
+                  ? t("feedback-widget-thank-you-title")
+                  : t("feedback-widget-prompt")}
               </Text>
               {feedbackSubmitted && (
                 <Text fontWeight="normal" fontSize="md" lineHeight={5}>
-                  <Translation id="feedback-widget-thank-you-subtitle" />
+                  {t("feedback-widget-thank-you-subtitle")}
                 </Text>
               )}
               {feedbackSubmitted && (
@@ -257,7 +252,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                   letterSpacing="wide"
                   color="searchBorder"
                 >
-                  <Translation id="feedback-widget-thank-you-timing" />
+                  {t("feedback-widget-thank-you-timing")}
                 </Text>
               )}
               <Flex flexWrap="nowrap" gap={6} width="full">
@@ -267,7 +262,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                     aria-label={t("feedback-widget-thank-you-cta")}
                     flex={1}
                   >
-                    <Translation id="feedback-widget-thank-you-cta" />
+                    {t("feedback-widget-thank-you-cta")}
                   </Button>
                 ) : (
                   <>
@@ -277,7 +272,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                       aria-label={t("yes")}
                       flex={1}
                     >
-                      <Translation id="yes" />
+                      {t("yes")}
                     </Button>
                     <Button
                       variant="solid"
@@ -285,7 +280,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                       aria-label={t("no")}
                       flex={1}
                     >
-                      <Translation id="no" />
+                      {t("no")}
                     </Button>
                   </>
                 )}

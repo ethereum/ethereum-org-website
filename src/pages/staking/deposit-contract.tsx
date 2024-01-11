@@ -1,11 +1,13 @@
-import React, { useState, useEffect, ReactNode } from "react"
-import { graphql, PageProps } from "gatsby"
+import { ReactNode, useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { type GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Button,
-  ButtonProps,
+  type ButtonProps,
   Checkbox,
   Flex,
   Heading,
@@ -14,24 +16,33 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/Buttons/ButtonLink"
-import CardList from "../../components/CardList"
-import CopyToClipboard from "../../components/CopyToClipboard"
-import Emoji from "../../components/Emoji"
-import InfoBanner from "../../components/InfoBanner"
-import InlineLink from "../../components/Link"
-import PageMetadata from "../../components/PageMetadata"
-import Translation from "../../components/Translation"
-import Tooltip from "../../components/Tooltip"
-import FeedbackCard from "../../components/FeedbackCard"
-import OldHeading from "../../components/OldHeading"
+import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"
 
-import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
-import { TranslationKey } from "../../utils/translations"
-import { getImage } from "../../utils/image"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import ButtonLink, {
+  type ButtonLinkProps,
+} from "@/components/Buttons/ButtonLink"
+import CardList from "@/components/CardList"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import FeedbackCard from "@/components/FeedbackCard"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
+import Tooltip from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
-import type { ChildOnlyProp, Context } from "../../types"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
+
+import consensys from "@/public/projects/consensys.png"
+import etherscan from "@/public/projects/etherscan-logo-circle.png"
+import ef from "@/public/staking/ef-blog-logo.png"
 
 const FlexBox = (props: ChildOnlyProp) => (
   <Flex
@@ -81,9 +92,12 @@ const ButtonRow = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledButton = (props: { id: TranslationKey; to: string }) => (
-  <ButtonLink to={props.to} mt="0" mb={12}>
-    <Translation id={props.id} />
+const StyledButton = ({
+  href,
+  children,
+}: Pick<ButtonLinkProps, "href" | "children">) => (
+  <ButtonLink href={href} mt="0" mb="12">
+    {children}
   </ButtonLink>
 )
 
@@ -195,11 +209,28 @@ const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-const DepositContractPage = ({
-  data,
-  location,
-}: PageProps<Queries.DepositContractPageQuery, Context>) => {
-  const { t } = useTranslation()
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/staking/deposit-contract"
+  )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
+const DepositContractPage = () => {
+  const { asPath } = useRouter()
+
+  const { t } = useTranslation("page-staking-deposit-contract")
 
   const [state, setState] = useState<{
     browserHasTextToSpeechSupport: boolean
@@ -221,9 +252,7 @@ const DepositContractPage = ({
 
   useEffect(() => {
     const browserHasTextToSpeechSupport = !!window.speechSynthesis
-    if (!browserHasTextToSpeechSupport) {
-      return
-    }
+    if (!browserHasTextToSpeechSupport) return
     // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
@@ -280,19 +309,19 @@ const DepositContractPage = ({
     {
       title: "ConsenSys",
       link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: getImage(data.consensys)!,
+      image: consensys,
       alt: "",
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: getImage(data.ef)!,
+      image: ef,
       alt: "",
     },
     {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: getImage(data.etherscan)!,
+      image: etherscan,
       alt: "",
     },
   ]
@@ -309,52 +338,43 @@ const DepositContractPage = ({
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
-    <Box w="100%">
+    <Box as={MainArticle} w="100%">
       <FlexBox>
         <PageMetadata
           title={t("page-staking-deposit-contract-meta-title")}
           description={t("page-staking-deposit-contract-meta-desc")}
         />
         <LeftColumn>
-          <Breadcrumbs slug={location.pathname} startDepth={1} />
-          <Title>
-            <Translation id="page-staking-deposit-contract-title" />
-          </Title>
-          <Subtitle>
-            <Translation id="page-staking-deposit-contract-subtitle" />
-          </Subtitle>
-          <OldHeading>
-            <Translation id="page-staking-deposit-contract-h2" />
-          </OldHeading>
+          <Breadcrumbs slug={asPath} startDepth={1} />
+          <Title>{t("page-staking-deposit-contract-title")}</Title>
+          <Subtitle>{t("page-staking-deposit-contract-subtitle")}</Subtitle>
+          <OldHeading>{t("page-staking-deposit-contract-h2")}</OldHeading>
           <Text>
-            <Translation id="page-staking-deposit-contract-staking" />{" "}
+            {t("page-staking-deposit-contract-staking")}{" "}
             <InlineLink to="/staking/">
-              <Translation id="page-staking-deposit-contract-staking-more-link" />
+              {t("page-staking-deposit-contract-staking-more-link")}
             </InlineLink>
           </Text>
-          <StyledButton
-            to="https://launchpad.ethereum.org"
-            id="page-staking-deposit-contract-launchpad"
-          />
+          <StyledButton href="https://launchpad.ethereum.org">
+            {t("page-staking-deposit-contract-launchpad")}
+          </StyledButton>
           <OldHeading>
-            <Translation id="page-staking-deposit-contract-staking-check" />
+            {t("page-staking-deposit-contract-staking-check")}
           </OldHeading>
-          <Text>
-            <Translation id="page-staking-deposit-contract-staking-check-desc" />
-          </Text>
+          <Text>{t("page-staking-deposit-contract-staking-check-desc")}</Text>
           <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
           <AddressCard>
             <CardTag>
-              <Translation id="page-staking-deposit-contract-address-check-btn" />
+              {t("page-staking-deposit-contract-address-check-btn")}
             </CardTag>
             <Box m={8}>
               {!state.showAddress && (
                 <>
                   <Row>
                     <CardTitle>
-                      <Translation id="page-staking-deposit-contract-confirm-address" />
+                      {t("page-staking-deposit-contract-confirm-address")}
                     </CardTitle>
                   </Row>
                   <Checkbox
@@ -367,7 +387,7 @@ const DepositContractPage = ({
                       })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-checkbox1" />
+                    {t("page-staking-deposit-contract-checkbox1")}
                   </Checkbox>
                   <Checkbox
                     mb={2}
@@ -379,7 +399,7 @@ const DepositContractPage = ({
                       })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-checkbox2" />
+                    {t("page-staking-deposit-contract-checkbox2")}
                   </Checkbox>
                   <Checkbox
                     mb={2}
@@ -392,7 +412,7 @@ const DepositContractPage = ({
                       })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-checkbox3" />
+                    {t("page-staking-deposit-contract-checkbox3")}
                   </Checkbox>
                   <CopyButton
                     isDisabled={!isButtonEnabled}
@@ -401,7 +421,7 @@ const DepositContractPage = ({
                       setState({ ...state, showAddress: !state.showAddress })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-reveal-address-btn" />
+                    {t("page-staking-deposit-contract-reveal-address-btn")}
                   </CopyButton>
                 </>
               )}
@@ -410,10 +430,10 @@ const DepositContractPage = ({
                   <Row>
                     <Box>
                       <CardTitle>
-                        <Translation id="page-staking-deposit-contract-address" />
+                        {t("page-staking-deposit-contract-address")}
                       </CardTitle>
                       <Caption>
-                        <Translation id="page-staking-deposit-contract-address-caption" />
+                        {t("page-staking-deposit-contract-address-caption")}
                       </Caption>
                     </Box>
                     <Blockie src={blockieSrc} />
@@ -441,27 +461,25 @@ const DepositContractPage = ({
                             )
                           }
                         >
-                          {!isCopied ? (
-                            <Translation id="page-staking-deposit-contract-copy" />
-                          ) : (
-                            <Translation id="page-staking-deposit-contract-copied" />
-                          )}
+                          {!isCopied
+                            ? t("page-staking-deposit-contract-copy")
+                            : t("page-staking-deposit-contract-copied")}
                         </CopyButton>
                       )}
                     </CopyToClipboard>
                     <InlineLink
                       to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
-                      <Translation id="page-staking-deposit-contract-etherscan" />
+                      {t("page-staking-deposit-contract-etherscan")}
                     </InlineLink>
                   </ButtonRow>
                 </>
               )}
               <InfoBanner isWarning emoji=":warning:">
                 <div>
-                  <Translation id="page-staking-deposit-contract-warning-2" />{" "}
+                  {t("page-staking-deposit-contract-warning-2")}{" "}
                   <InlineLink to="https://launchpad.ethereum.org">
-                    <Translation id="page-staking-deposit-contract-launchpad-2" />
+                    {t("page-staking-deposit-contract-launchpad-2")}
                   </InlineLink>
                 </div>
               </InfoBanner>
@@ -475,46 +493,3 @@ const DepositContractPage = ({
 }
 
 export default DepositContractPage
-
-export const sourceImage = graphql`
-  fragment sourceImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        height: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
-
-export const query = graphql`
-  query DepositContractPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-staking-deposit-contract", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
-      ...sourceImage
-    }
-    ef: file(relativePath: { eq: "staking/ef-blog-logo.png" }) {
-      ...sourceImage
-    }
-    etherscan: file(
-      relativePath: { eq: "projects/etherscan-logo-circle.png" }
-    ) {
-      ...sourceImage
-    }
-  }
-`
