@@ -1,12 +1,28 @@
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
+import {
+  Box,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  useBreakpointValue,
+  useToken,
+} from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
-const HubHero = (props: CommonHeroProps) => {
-  const { heroImg, title, header, description, buttons } = props
+const HubHero = ({
+  dir,
+  heroImg,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
+  const spacing = useToken("space", "8")
+  const insetInlineStart = useBreakpointValue({ xl: spacing })
 
   if (buttons && buttons.length > 2) {
     throw Error(
@@ -15,7 +31,7 @@ const HubHero = (props: CommonHeroProps) => {
   }
 
   return (
-    <Box position="relative">
+    <Box position="relative" dir={dir}>
       <Image
         src={heroImg}
         alt=""
@@ -37,7 +53,7 @@ const HubHero = (props: CommonHeroProps) => {
         borderRadius={{ xl: "base" }}
         bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
-        insetStart={{ xl: "8" }}
+        style={{ insetInlineStart }}
         maxW={{ xl: "sm" }}
         top={{ xl: "50%" }}
         transform={{ xl: "translateY(-50%)" }}

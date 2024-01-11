@@ -1,6 +1,18 @@
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
+import {
+  Box,
+  CloseButton,
+  Flex,
+  Heading,
+  useBreakpointValue,
+  useToken,
+} from "@chakra-ui/react"
+
+import type { Lang } from "@/lib/types"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { DEFAULT_LOCALE } from "../lib/constants"
 
@@ -21,6 +33,8 @@ const TranslationBanner: React.FC<IProps> = ({
   const [isOpen, setIsOpen] = useState(shouldShow)
   const [textColor] = useToken("colors", ["text"])
   const { t } = useTranslation("common")
+  const { locale } = useRouter()
+  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   useEffect(() => {
     setIsOpen(shouldShow)
@@ -34,14 +48,17 @@ const TranslationBanner: React.FC<IProps> = ({
     ? "translation-banner-body-new"
     : "translation-banner-body-update"
 
+  const spacing = useToken("space", 8)
+  const insetInlineEnd = useBreakpointValue({ base: 0, md: spacing })
   return (
     <Box
       as="aside"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      insetInlineEnd={{ base: 0, md: 8 }}
+      style={{ insetInlineEnd }}
       position="fixed"
-      zIndex="99"
+      zIndex="banner"
+      dir={dir}
     >
       <Flex
         p="1rem"
@@ -56,11 +73,7 @@ const TranslationBanner: React.FC<IProps> = ({
         }}
         borderRadius="sm"
       >
-        <Flex
-          flexDirection="column"
-          m={4}
-          mt={{ base: 10, sm: 4 }}
-        >
+        <Flex flexDirection="column" m={4} mt={{ base: 10, sm: 4 }}>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
             mb={4}
@@ -112,7 +125,7 @@ const TranslationBanner: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top="0"
-          insetInlineEnd="0"
+          style={{ insetInlineEnd: 0 }}
           margin={2}
           color="secondary"
           _hover={{

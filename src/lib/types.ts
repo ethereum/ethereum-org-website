@@ -230,6 +230,7 @@ export type CommonHeroProps = {
   title: string
   description: string
   buttons?: [CallToActionProps, CallToActionProps?]
+  dir?: "rtl" | "ltr"
 }
 
 // Learning Tools

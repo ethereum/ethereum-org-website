@@ -34,6 +34,7 @@ const Trilemma = () => {
 
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
+  const insetInlineEnd = useToken("space", "6")
 
   return (
     <Flex
@@ -87,7 +88,7 @@ const Trilemma = () => {
               justifyContent="flex-start"
               my={8}
             />
-            <DrawerCloseButton top={6} insetInlineEnd={6} />
+            <DrawerCloseButton top={6} right="unset" style={{ insetInlineEnd }} />
           </DrawerContent>
         </Drawer>
       </Hide>
