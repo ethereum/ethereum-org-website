@@ -102,7 +102,7 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
     const cachedPlaceholder: Placeholder | null = placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
 
     // Get base64 from cached placeholder if available, else generate new placeholder
-    const { base64 } = cachedPlaceholder || await getPlaiceholder(buffer)
+    const { base64 } = cachedPlaceholder || await getPlaiceholder(buffer, { size: 16 })
 
     // Assign base64 placeholder data to image node `blurDataURL` property
     image.properties.blurDataURL = base64

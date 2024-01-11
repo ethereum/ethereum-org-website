@@ -135,7 +135,7 @@ export const getStaticProps = (async (context) => {
   if ("image" in frontmatter) {
     const heroImagePath = join(process.cwd(), "public", frontmatter.image)
     const imageBuffer = fs.readFileSync(heroImagePath)
-    const { base64 } = await getPlaiceholder(imageBuffer)
+    const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
     frontmatter.blurDataURL = base64
   }
 
