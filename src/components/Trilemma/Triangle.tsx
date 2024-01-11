@@ -1,6 +1,7 @@
-import React, { ReactNode } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { chakra, HTMLChakraProps } from "@chakra-ui/react"
+
 import { HandleClickParam } from "./useTrilemma"
 
 export interface IProps {
@@ -24,7 +25,7 @@ export const TriangleSVG: React.FC<IProps> = ({
   isSecure,
   isScalable,
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-roadmap-vision")
 
   const Path = () => (
     <chakra.path
@@ -118,7 +119,7 @@ export const TriangleSVG: React.FC<IProps> = ({
       width={{ base: "full", lg: "auto" }}
       my={{ base: -28, sm: -16, lg: 0 }}
       mt={{ lg: 32 }}
-      mr={{ lg: 32 }}
+      me={{ lg: 32 }}
     >
       <Path />
       <Path />
