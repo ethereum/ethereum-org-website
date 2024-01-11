@@ -1,21 +1,20 @@
 import React from "react"
-
-import { IGatsbyImageData } from "gatsby-plugin-image"
+import { StaticImageData } from "next/image"
 import {
   Box,
   Flex,
   Heading,
-  Image,
-  LinkOverlay,
   LinkBox,
+  LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
 
+import { Image } from "@/components/Image"
+
 import Text from "./OldText"
-import GatsbyImage from "./GatsbyImage"
 
 export interface DataRow {
-  logo: IGatsbyImageData
+  logo: StaticImageData
   coin: string
   apy: string
 }
@@ -23,7 +22,8 @@ export interface DataRow {
 export interface IProps {
   url: string
   background: string
-  image: IGatsbyImageData
+  image: StaticImageData
+  imgWidth: string
   alt?: string
   name: string
   description?: string
@@ -34,6 +34,7 @@ const DataProductCard: React.FC<IProps> = ({
   url,
   background,
   image,
+  imgWidth,
   alt,
   name,
   description,
@@ -66,18 +67,18 @@ const DataProductCard: React.FC<IProps> = ({
         minH="200px"
         bg={background}
       >
-        <GatsbyImage
-          image={image}
+        <Image
+          src={image}
           objectFit="cover"
           alt={alt ? alt : `${name} logo`}
-          width="100%"
+          w={imgWidth}
           alignSelf="center"
           maxWidth={{ base: "311px", sm: "372px" }}
           maxHeight="257px"
         />
       </Flex>
       <Flex
-        textAlign="left"
+        textAlign="start"
         flexDirection="column"
         justifyContent="space-between"
       >
@@ -118,17 +119,17 @@ const DataProductCard: React.FC<IProps> = ({
                 textTransform="uppercase"
                 border="1px solid"
                 borderColor="lightBorder"
-                borderLeft="0"
-                borderRight="0"
+                borderInlineStart="0"
+                borderInlineEnd="0"
               >
                 <Flex alignItems="center">
                   {logo && (
-                    <GatsbyImage
-                      image={logo}
+                    <Image
+                      src={logo}
                       objectFit="cover"
                       alt=""
                       minWidth="24px"
-                      marginRight="0.5rem"
+                      me="0.5rem"
                     />
                   )}
                   {coin}

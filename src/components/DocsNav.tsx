@@ -1,3 +1,4 @@
+// TODO: Implement with RTL locale responsiveness
 import React from "react"
 import {
   Box,
@@ -8,15 +9,17 @@ import {
   Spacer,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "./Link"
-import Emoji from "./Emoji"
-import Translation from "./Translation"
-import Text from "./OldText"
+import { TranslationKey } from "@/lib/types"
+import type { DeveloperDocsLink } from "@/lib/interfaces"
 
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { TranslationKey } from "../utils/translations"
-import { trackCustomEvent } from "../utils/matomo"
+import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import docLinks from "@/data/developer-docs-links.yaml"
 
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex
@@ -24,7 +27,7 @@ const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
     justify="space-between"
     maxW="166px"
     h="100%"
-    wordWrap="break-word"
+    wordwrap="break-word"
     p={4}
     lineHeight={4}
     {...props}
@@ -68,7 +71,7 @@ const CardLink = (props: {
           fontSize="5xl"
         />
       </Box>
-      <TextDiv {...xPadding} {...(isNext && { textAlign: "right" })}>
+      <TextDiv {...xPadding} {...(isNext && { textAlign: "end" })}>
         <Text textTransform="uppercase" m="0">
           <Translation id={isPrev ? "previous" : "next"} />
         </Text>
@@ -85,7 +88,7 @@ const CardLink = (props: {
             })
           }}
         >
-          <Translation id={docData.id} />
+          <Translation id={`page-developers-docs:${docData.id}`} />
         </LinkOverlay>
       </TextDiv>
     </LinkBox>

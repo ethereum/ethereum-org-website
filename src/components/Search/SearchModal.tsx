@@ -1,6 +1,7 @@
 import * as React from "react"
-import { chakra, useBreakpoint, useToken } from "@chakra-ui/react"
+import { chakra } from "@chakra-ui/react"
 import { DocSearchModal, DocSearchModalProps } from "@docsearch/react"
+
 import { getSearchModalStyles } from "./utils"
 
 type ModalPropsNoScroll = Omit<DocSearchModalProps, "initialScrollY">

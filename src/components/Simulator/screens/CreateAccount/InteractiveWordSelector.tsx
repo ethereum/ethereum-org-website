@@ -1,9 +1,11 @@
 import React, { useState } from "react"
+import { Box, Text } from "@chakra-ui/react"
+
 import { PhoneScreenProps } from "../../interfaces"
+import { ProgressCta } from "../../ProgressCta"
+
 import { WordList } from "./WordList"
 import { WordSelectorButtons } from "./WordSelectorButtons"
-import { ProgressCta } from "../../ProgressCta"
-import { Box, Text } from "@chakra-ui/react"
 
 interface IProps extends PhoneScreenProps {
   words: Array<string>
