@@ -1,5 +1,6 @@
 // Import data types
-import { QuizzesSection, RawQuizzes } from "../../types"
+import type { QuizzesSection } from "@/lib/types"
+import type { RawQuizzes } from "@/lib/interfaces"
 
 // Declare hash-map of quizzes based on slug key
 const quizzes: RawQuizzes = {
@@ -32,7 +33,7 @@ const quizzes: RawQuizzes = {
     questions: ["g001", "g002", "g003", "g004"],
   },
   merge: {
-    title: "page-assets-merge",
+    title: "learn-quizzes:page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
 }
