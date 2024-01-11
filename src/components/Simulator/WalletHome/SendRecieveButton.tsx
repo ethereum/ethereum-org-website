@@ -1,15 +1,16 @@
+import React from "react"
 import {
   type As,
+  Box,
   Grid,
   Icon,
   Text,
   type TextProps,
-  Box,
 } from "@chakra-ui/react"
-import React from "react"
+
+import { Button } from "../../Buttons"
 import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
-import { Button } from "../../Buttons"
 
 interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   icon: As

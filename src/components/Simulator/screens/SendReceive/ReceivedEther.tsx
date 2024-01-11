@@ -1,11 +1,12 @@
-import { Flex, Icon, Text } from "@chakra-ui/react"
-import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useMemo, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { MdClose, MdInfo } from "react-icons/md"
+import { Flex, Icon, Text } from "@chakra-ui/react"
+
 import { SimulatorNavProps } from "../../interfaces"
-import type { TokenBalance } from "../../WalletHome/interfaces"
-import { WalletHome } from "../../WalletHome"
 import { getMaxFractionDigitsUsd } from "../../utils"
+import { WalletHome } from "../../WalletHome"
+import type { TokenBalance } from "../../WalletHome/interfaces"
 
 interface IProps extends SimulatorNavProps {
   defaultTokenBalances: Array<TokenBalance>
@@ -54,7 +55,7 @@ export const ReceivedEther: React.FC<IProps> = ({
             }
           : token
       ),
-    [ethPrice]
+    [defaultTokenBalances, ethPrice, ethReceiveAmount]
   )
 
   const tokenBalances = received ? tokensWithEthBalance : defaultTokenBalances
