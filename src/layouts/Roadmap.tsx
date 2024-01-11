@@ -2,6 +2,7 @@ import {
   Box,
   Center,
   Flex,
+  type FlexProps,
   Show,
   SimpleGrid,
   useToken,
@@ -38,7 +39,9 @@ const CardGrid = (props: ChildOnlyProp) => (
   <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} {...props} />
 )
 
-const HeroContainer = (props: ChildOnlyProp) => (
+type HeroContainerProps = Pick<FlexProps, "children" | "dir">
+
+const HeroContainer = (props: HeroContainerProps) => (
   <Flex
     flexDirection={{ base: "column", lg: "row" }}
     align="center"
@@ -66,7 +69,7 @@ export const roadmapComponents = {
 
 interface IProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems"> {
+    Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> {
   frontmatter: RoadmapFrontmatter
 }
 export const RoadmapLayout: React.FC<IProps> = ({
@@ -74,6 +77,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
   frontmatter,
   slug,
   tocItems,
+  contentNotTranslated,
 }) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
@@ -131,7 +135,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative">
+    <Box position="relative" dir={contentNotTranslated ? "ltr" : "unset"}>
       {slug === "/roadmap/" ? (
         <HubHero
           heroImg={RoadmapHubHeroImage}
