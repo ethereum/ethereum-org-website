@@ -42,7 +42,7 @@ Ethereum.org prevajalski program želi narediti Ethereum dostopen za vse, s prev
 
 ## Kako prevajate? {#how-to-translate}
 
-1. **[Pridružite se našemu projektu na Crowdinu](https://crowdin.com/project/ethereum-org/invite)**  
+1. **[Pridružite se našemu projektu na Crowdinu](https://crowdin.com/project/ethereum-org/)**  
    Morali se boste prijaviti v vaš Crowdin račun ali ga ustvariti, če ga še nimate. Vse kar je potrebno za prijavo, je le e-poštni naslov in geslo.
 
 2. **Odprite jezik, ki ga želite prevajati in poiščite dokument za delo**  
