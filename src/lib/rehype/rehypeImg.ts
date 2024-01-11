@@ -52,10 +52,6 @@ type PlaceholderData = Record<Path, Placeholder>
  */
 const absolutePathRegex = /^(?:[a-z]+:)?\/\//
 
-const generateInternalImagePlaceholder = async (buffer: Buffer): Promise<string> => {
-  return (await getPlaiceholder(buffer)).base64
-}
-
 const getImageSize = (src: string, dir: string) => {
   if (absolutePathRegex.exec(src)) {
     return
@@ -86,11 +82,10 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
 
   const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
   const existsCache = fs.existsSync(DATA_PATH)
-
   const placeholdersCached: PlaceholderData = existsCache ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) : {}
   const placeholdersClone: PlaceholderData = structuredClone(placeholdersCached)
 
-  // Generate placeholder for internal images (requires async/await; keep after/outside the `visit` function)
+  // Generate placeholder for internal images
   for (const image of images) {
     const { src } = image.properties
 
@@ -104,30 +99,29 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
     const hash = await getHashFromBuffer(buffer, { algorithm: "SHA-1", length: 8 })
 
     // Look for cached placeholder data with matching hash
-    const cachedPlaceholder = placeholdersClone[src]?.hash === hash ? placeholdersClone[src].base64 : undefined
+    const cachedPlaceholder: Placeholder | null = placeholdersClone[src]?.hash === hash ? placeholdersClone[src] : null
 
-    // Assign cached placeholder data if available, else generate new placeholder
-    const base64 = cachedPlaceholder || await generateInternalImagePlaceholder(buffer)
+    // Get base64 from cached placeholder if available, else generate new placeholder
+    const { base64 } = cachedPlaceholder || await getPlaiceholder(buffer)
 
     // Assign base64 placeholder data to image node `blurDataURL` property
     image.properties.blurDataURL = base64
     image.properties.placeholder = "blur"
+
     // If cached value was not available, add newly generated placeholder data to clone
     if (!cachedPlaceholder) {
-      placeholdersClone[src] = {
-        hash,
-        base64,
-      }
+      placeholdersClone[src] = { hash, base64 }
     }
   }
 
-  const isEmpty = Object.keys(placeholdersClone).length === 0
-  if (isEmpty) {
+  // If placeholderClone is empty, delete DATA_PATH JSON file and return
+  if (Object.keys(placeholdersClone).length === 0) {
     fs.rmSync(DATA_PATH, { recursive: true, force: true })
     return
   }
-  const isUnchanged = JSON.stringify(placeholdersCached) === JSON.stringify(placeholdersClone)
-  if (isUnchanged) return
+
+  // If cached value is identical to clone, return without writing to file system
+  if (JSON.stringify(placeholdersCached) === JSON.stringify(placeholdersClone)) return
 
   // Write placeholdersClone to DATA_PATH as JSON
   fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersClone, null, 2))
