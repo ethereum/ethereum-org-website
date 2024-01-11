@@ -133,6 +133,7 @@ const published = (locale: string, published: string) => {
 
 const TutorialPage = ({
   internalTutorials,
+  contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const { locale } = useRouter()
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
@@ -194,6 +195,7 @@ const TutorialPage = ({
     setSelectedTags([...tempSelectedTags])
   }
 
+  const dir = contentNotTranslated ? "ltr" : "unset"
   return (
     <Flex
       as={MainArticle}
@@ -203,6 +205,7 @@ const TutorialPage = ({
       my={0}
       mx="auto"
       mt={16}
+      dir={dir}
     >
       <PageMetadata
         title={t("page-developers-tutorials:page-tutorials-meta-title")}
@@ -234,7 +237,7 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} dir={dir}>
         <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         </Heading>
