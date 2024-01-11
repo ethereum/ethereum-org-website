@@ -4,7 +4,6 @@ import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
-  Hide,
   Icon,
   ListItem,
   Text,
@@ -256,11 +255,9 @@ export const UseCasesLayout: React.FC<IProps> = ({
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Hide above={lgBp}>
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Hide>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Box>
   )

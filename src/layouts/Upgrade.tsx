@@ -8,7 +8,6 @@ import {
   Icon,
   List,
   ListItem,
-  Show,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -75,6 +74,7 @@ const HeroContainer = (props: ChildOnlyProp) => (
 
 const MoreContent = (props: ChildOnlyProp & { to: string }) => (
   <Flex
+    hideBelow="lg"
     as={BaseLink}
     bg="ednBackground"
     justify="center"
@@ -205,11 +205,9 @@ export const UpgradeLayout: React.FC<IProps> = ({
           />
         )}
       </HeroContainer>
-      <Show above={lgBreakpoint}>
-        <MoreContent to={"#" + MAIN_CONTENT_ID}>
-          <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
-        </MoreContent>
-      </Show>
+      <MoreContent to={"#" + MAIN_CONTENT_ID}>
+        <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
+      </MoreContent>
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
@@ -222,11 +220,9 @@ export const UpgradeLayout: React.FC<IProps> = ({
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Show below={lgBreakpoint}>
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Show>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Container>
   )
