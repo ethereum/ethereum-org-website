@@ -83,7 +83,7 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
   const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
   const existsCache = fs.existsSync(DATA_PATH)
   const placeholdersCached: PlaceholderData = existsCache ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) : {}
-  const placeholdersClone: PlaceholderData = structuredClone(placeholdersCached)
+  let isChanged = false
 
   // Generate placeholder for internal images
   for (const image of images) {
@@ -99,7 +99,7 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
     const hash = await getHashFromBuffer(buffer, { algorithm: "SHA-1", length: 8 })
 
     // Look for cached placeholder data with matching hash
-    const cachedPlaceholder: Placeholder | null = placeholdersClone[src]?.hash === hash ? placeholdersClone[src] : null
+    const cachedPlaceholder: Placeholder | null = placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
 
     // Get base64 from cached placeholder if available, else generate new placeholder
     const { base64 } = cachedPlaceholder || await getPlaiceholder(buffer)
@@ -108,23 +108,24 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
     image.properties.blurDataURL = base64
     image.properties.placeholder = "blur"
 
-    // If cached value was not available, add newly generated placeholder data to clone
+    // If cached value was not available, add newly generated placeholder data
     if (!cachedPlaceholder) {
-      placeholdersClone[src] = { hash, base64 }
+      placeholdersCached[src] = { hash, base64 }
+      isChanged = true
     }
   }
 
-  // If placeholderClone is empty, delete DATA_PATH JSON file and return
-  if (Object.keys(placeholdersClone).length === 0) {
+  // If cache is still empty, delete JSON file and return
+  if (Object.keys(placeholdersCached).length === 0) {
     fs.rmSync(DATA_PATH, { recursive: true, force: true })
     return
   }
 
-  // If cached value is identical to clone, return without writing to file system
-  if (JSON.stringify(placeholdersCached) === JSON.stringify(placeholdersClone)) return
+  // If cached value has not changed, return without writing to file system
+  if (!isChanged) return
 
-  // Write placeholdersClone to DATA_PATH as JSON
-  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersClone, null, 2))
+  // Write results to cache file
+  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
 }
 
 /**
