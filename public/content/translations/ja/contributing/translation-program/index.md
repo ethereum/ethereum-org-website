@@ -22,7 +22,7 @@ ethereum.org 翻訳プログラムはオープンで、誰でも貢献できま�
 
 _[ethereum.org の Discord](/discord/)に参加すると、翻訳でのコラボレーション、質問、フィードバックやアイデアの共有、または翻訳グループへの参加ができます。_
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/">
   翻訳を始める
 </ButtonLink>
 
