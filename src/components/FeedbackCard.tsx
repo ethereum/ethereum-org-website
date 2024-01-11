@@ -1,40 +1,40 @@
-// Library imports
-import React, { ReactNode, useState } from "react"
-import { Flex, FlexProps, Heading } from "@chakra-ui/react"
-// Component imports
-import { Button } from "./Buttons"
-import Translation from "./Translation"
-// SVG imports
-import { FeedbackThumbsUpIcon } from "./icons"
-// Utility imports
-import { trackCustomEvent } from "../utils/matomo"
-// Hook imports
-import { useSurvey } from "../hooks/useSurvey"
+import { type ReactNode, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
 
-export interface IProps extends FlexProps {
+import { Button } from "@/components/Buttons"
+import { FeedbackThumbsUpIcon } from "@/components/icons"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import Translation from "./Translation"
+
+import { useSurvey } from "@/hooks/useSurvey"
+
+type FeedbackCardProps = FlexProps & {
   prompt?: string
   isArticle?: boolean
 }
 
-const FeedbackCard: React.FC<IProps> = ({
-  prompt,
-  isArticle = false,
-  ...props
-}) => {
+const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
+  const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
+  const { asPath } = useRouter()
 
-  const location = typeof window !== "undefined" ? window.location.href : ""
-  const isTutorial = location.includes("tutorials")
+  const isTutorial = asPath?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
       if (prompt) return prompt
-      if (isTutorial) return <Translation id="feedback-card-prompt-tutorial" />
-      if (isArticle) return <Translation id="feedback-card-prompt-article" />
-      return <Translation id="feedback-card-prompt-page" />
+      if (isTutorial) return t("feedback-card-prompt-tutorial")
+      if (isArticle) return t("feedback-card-prompt-article")
+
+      return t("feedback-card-prompt-page")
     }
-    return <Translation id="feedback-widget-thank-you-title" />
+
+    return t("feedback-widget-thank-you-title")
   }
 
   const handleSubmit = (choice: boolean): void => {
@@ -45,6 +45,7 @@ const FeedbackCard: React.FC<IProps> = ({
     })
     setFeedbackSubmitted(true)
   }
+
   const handleSurveyOpen = (): void => {
     trackCustomEvent({
       eventCategory: `Feedback survey opened`,
@@ -53,21 +54,22 @@ const FeedbackCard: React.FC<IProps> = ({
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
   }
+
   return (
     <Flex
       border="1px"
       borderColor="border"
       bg="feedbackGradient"
       borderRadius="base"
-      p={6}
+      p="6"
       direction="column"
-      mb={4}
-      mt={8}
+      mb="4"
+      mt="8"
       w="full"
       {...props}
     >
-      <Flex direction="column" gap={4}>
-        <Heading as="h3" m={0} mb={2} fontSize="1.375rem" fontWeight="bold">
+      <Flex direction="column" gap="4">
+        <Heading as="h3" m="0" mb="2" fontSize="1.375rem" fontWeight="bold">
           {getTitle(feedbackSubmitted)}
         </Heading>
         {feedbackSubmitted && (
@@ -76,7 +78,7 @@ const FeedbackCard: React.FC<IProps> = ({
             <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}
-        <Flex gap={4}>
+        <Flex gap="4">
           {!feedbackSubmitted ? (
             <>
               <Button
@@ -84,19 +86,19 @@ const FeedbackCard: React.FC<IProps> = ({
                 leftIcon={<FeedbackThumbsUpIcon />}
                 onClick={() => handleSubmit(true)}
               >
-                <Translation id="yes" />
+                {t("yes")}
               </Button>
               <Button
                 variant="outline-color"
                 leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
                 onClick={() => handleSubmit(false)}
               >
-                <Translation id="no" />
+                {t("no")}
               </Button>
             </>
           ) : (
             <Button variant="outline-color" onClick={handleSurveyOpen}>
-              <Translation id="feedback-widget-thank-you-cta" />
+              {t("feedback-widget-thank-you-cta")}
             </Button>
           )}
         </Flex>

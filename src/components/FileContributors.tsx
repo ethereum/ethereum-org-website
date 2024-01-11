@@ -1,14 +1,10 @@
-import React, { useState } from "react"
-
-import { useI18next } from "gatsby-plugin-react-i18next"
-import { gql } from "@apollo/client"
-
+import { useState } from "react"
+import { useRouter } from "next/router"
 import {
   Avatar,
   Flex,
   FlexProps,
   Heading,
-  Icon,
   ListItem,
   ModalBody,
   ModalHeader,
@@ -17,62 +13,17 @@ import {
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 
-import { getLocaleTimestamp } from "../utils/time"
-import { trackCustomEvent } from "../utils/matomo"
-import { Lang } from "../utils/languages"
+import type { Author, Lang } from "@/lib/types"
 
-import { Button, ButtonLink } from "./Buttons"
-import InlineLink from "./Link"
-import Modal from "./Modal"
-import Translation from "./Translation"
-import Text from "./OldText"
+import { Button } from "@/components/Buttons"
+import InlineLink from "@/components/Link"
+import Modal from "@/components/Modal"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-export interface Author {
-  name: string
-  email: string
-  avatarUrl: string
-  user: {
-    login: string
-    url: string
-  }
-}
-
-export interface Commit {
-  author: Author
-  committedDate: string
-}
-
-const COMMIT_HISTORY = gql`
-  query CommitHistory($relativePath: String) {
-    repository(name: "ethereum-org-website", owner: "ethereum") {
-      ref(qualifiedName: "master") {
-        target {
-          ... on Commit {
-            id
-            history(path: $relativePath) {
-              edges {
-                node {
-                  author {
-                    name
-                    email
-                    avatarUrl(size: 100)
-                    user {
-                      login
-                      url
-                    }
-                  }
-                  committedDate
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in
@@ -106,7 +57,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         width="40px"
         src={contributor.avatarUrl}
         name={contributor.name}
-        mr={2}
+        me={2}
       />
       {contributor.user && (
         <InlineLink to={contributor.user.url}>
@@ -118,30 +69,36 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
   )
 }
 
-export interface IProps extends FlexProps {
-  relativePath: string
+export interface FileContributorsProps extends FlexProps {
   editPath?: string
-  contributors: Array<Author>
-  lastContributor: any
-  loading: Boolean
-  error: any
+  contributors: Author[]
+  loading: boolean
+  error?: boolean
   lastEdit: string
 }
 
-const FileContributors: React.FC<IProps> = ({
-  relativePath,
-  editPath,
+const FileContributors: React.FC<FileContributorsProps> = ({
   contributors,
-  lastContributor,
   loading,
   error,
   lastEdit,
   ...props
 }) => {
   const [isModalOpen, setModalOpen] = useState(false)
-  const { language } = useI18next()
+  const { locale } = useRouter()
 
   if (error) return null
+  const lastContributor: Author = contributors.length
+    ? contributors[0]
+    : {
+        name: "",
+        email: "",
+        avatarUrl: "",
+        user: {
+          login: "",
+          url: "",
+        },
+      }
 
   return (
     <>
@@ -175,14 +132,14 @@ const FileContributors: React.FC<IProps> = ({
         p={{ base: 0, md: 2 }}
         {...props}
       >
-        <Flex mr={4} alignItems="center" flex="1">
-          <SkeletonCircle size="10" mr={2} isLoaded={!loading}>
+        <Flex me={4} alignItems="center" flex="1">
+          <SkeletonCircle size="10" me={4} isLoaded={!loading}>
             <Avatar
               height="40px"
               width="40px"
               src={lastContributor.avatarUrl}
               name={lastContributor.name}
-              mr={2}
+              me={2}
             />
           </SkeletonCircle>
 
@@ -195,7 +152,7 @@ const FileContributors: React.FC<IProps> = ({
                 </InlineLink>
               )}
               {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(language as Lang, lastEdit)}
+              {getLocaleTimestamp(locale as Lang, lastEdit)}
             </Text>
           </Skeleton>
         </Flex>
@@ -219,26 +176,6 @@ const FileContributors: React.FC<IProps> = ({
               <Translation id="see-contributors" />
             </Button>
           </Skeleton>
-          {editPath && (
-            <ButtonLink
-              to={editPath}
-              hideArrow
-              variant="outline"
-              hideBelow="lg"
-            >
-              <Flex
-                h="100%"
-                alignItems="center"
-                justifyContent="center"
-                gap={2}
-              >
-                <Icon as={FaGithub} fontSize="2xl" />
-                <span>
-                  <Translation id="edit-page" />
-                </span>
-              </Flex>
-            </ButtonLink>
-          )}
         </VStack>
       </Flex>
     </>

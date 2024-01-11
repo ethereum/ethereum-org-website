@@ -1,11 +1,13 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { PiMagnifyingGlass } from "react-icons/pi"
-import { CategoryTabs } from "../../WalletHome/CategoryTabs"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
+
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
 import type { SimulatorNavProps } from "../../interfaces"
-import { CONTACTS } from "./constants"
 import { NotificationPopover } from "../../NotificationPopover"
+import { CategoryTabs } from "../../WalletHome/CategoryTabs"
+
+import { CONTACTS } from "./constants"
 
 interface IProps extends SimulatorNavProps {
   setRecipient: (name: string) => void

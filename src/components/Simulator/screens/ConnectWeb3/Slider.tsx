@@ -1,8 +1,9 @@
-import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
 import React from "react"
 import { motion } from "framer-motion"
-import { EthGlyphIcon } from "../../icons"
 import { PiCheckThin } from "react-icons/pi"
+import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
+
+import { EthGlyphIcon } from "../../icons"
 
 interface IProps extends Pick<TextProps, "children"> {
   isConnected: boolean
@@ -67,7 +68,7 @@ export const Slider: React.FC<IProps> = ({
                 transition={{ delay: 0.15 }}
               >
                 <Text textAlign="center" px={{ base: 4, md: 8 }}>
-                  You're logged in!
+                  You&apos;re logged in!
                 </Text>
               </motion.div>
             </Flex>
