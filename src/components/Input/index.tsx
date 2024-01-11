@@ -32,7 +32,7 @@ function Input(props: InputProps) {
     return (
       <InputGroup size={size} {...inputGroupProps}>
         <ChakraInput data-peer {...rest} />
-        <InputRightElement children={Icon} />
+        <InputRightElement>{Icon}</InputRightElement>
       </InputGroup>
     )
   }
