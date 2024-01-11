@@ -1,6 +1,7 @@
 import React from "react"
-import { Box } from "@chakra-ui/react"
 import { motion } from "framer-motion"
+import { Box } from "@chakra-ui/react"
+
 import {
   BASE_ANIMATION_DELAY_SEC,
   CIRCLE,
