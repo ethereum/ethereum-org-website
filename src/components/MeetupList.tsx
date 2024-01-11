@@ -115,6 +115,8 @@ const MeetupList: React.FC<IProps> = () => {
                   textDecor="none"
                   color="text"
                   hideArrow
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {meetup.title}
                 </LinkOverlay>
