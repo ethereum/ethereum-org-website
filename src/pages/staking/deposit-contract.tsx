@@ -151,7 +151,7 @@ const CopyButton = (props: ButtonProps) => (
   <Button
     variant="outline"
     mb={4}
-    mr={{ base: 0, md: 6 }}
+    me={{ base: 0, md: 6 }}
     mt={{ base: 4, md: 0 }}
     {...props}
   />
@@ -197,7 +197,7 @@ const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
   <Text
     as="button"
     onClick={props.onClick}
-    mr={2}
+    me={2}
     color="primary.base"
     cursor="pointer"
   >

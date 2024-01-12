@@ -43,7 +43,7 @@ const Column = ({ children }: ChildOnlyProp) => {
       flex="1 0 33%"
       justifyContent="flex-end"
       mb={6}
-      mr={8}
+      me={8}
       w="full"
       maxW={{ base: "full", md: "none" }}
     >
