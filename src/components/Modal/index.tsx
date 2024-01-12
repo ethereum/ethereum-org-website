@@ -1,9 +1,6 @@
 import React from "react"
-
 import {
   Modal as ChakraModal,
-  ModalOverlay,
-  ModalContent,
   ModalCloseButton,
   ModalHeader,
   ModalBody,
@@ -11,6 +8,8 @@ import {
   type ModalContentProps,
   Button,
   ModalFooter,
+  ModalOverlay,
+  ModalContent,
 } from "@chakra-ui/react"
 
 export interface IPropsOverlay {

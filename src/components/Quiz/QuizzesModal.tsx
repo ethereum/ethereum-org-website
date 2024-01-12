@@ -1,31 +1,30 @@
-import React, { useContext } from "react"
 import {
-  Modal as ChakraModal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalProps,
-  ModalContentProps,
   Center,
+  Modal as ChakraModal,
+  ModalCloseButton,
+  ModalContent,
+  ModalContentProps,
+  ModalOverlay,
+  ModalProps,
 } from "@chakra-ui/react"
 import Modal from "../Modal"
 
-import { QuizzesHubContext } from "./context"
+import { QuizStatus } from "@/lib/types"
 
 type props = {
   isQuizModalOpen: boolean
   onQuizModalClose: () => void
   children: React.ReactNode
+  quizStatus: QuizStatus
 }
 
 const QuizzesModal: React.FC<props> = ({
   isQuizModalOpen,
   onQuizModalClose,
   children,
+  quizStatus,
   ...rest
 }) => {
-  const { status: quizStatus } = useContext(QuizzesHubContext)
-
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
       return "neutral"

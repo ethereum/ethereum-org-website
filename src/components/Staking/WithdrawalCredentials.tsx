@@ -1,14 +1,13 @@
-// Import libraries
-import React, { FC, useState, useMemo, ChangeEvent } from "react"
+import { ChangeEvent, FC, useMemo, useState } from "react"
+import { useTranslation } from "next-i18next"
 import { Button, Flex, Text } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-// Components
-import CopyToClipboard from "../CopyToClipboard"
-import Emoji from "../Emoji"
-import Translation from "../Translation"
-import Input from "../Input"
-// Utilites
-import { trackCustomEvent } from "../../utils/matomo"
+
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import Input from "@/components/Input"
+import Translation from "@/components/Translation"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface Validator {
   validatorIndex: number
@@ -17,9 +16,8 @@ interface Validator {
   isTestnet?: boolean
 }
 
-interface IProps {}
-const WithdrawalCredentials: FC<IProps> = () => {
-  const { t } = useTranslation()
+const WithdrawalCredentials: FC = () => {
+  const { t } = useTranslation("page-staking")
   const [isLoading, setIsLoading] = useState<{
     mainnet: boolean
     testnet: boolean
@@ -82,7 +80,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
       return (
         <Flex bg="error.neutral" p={4}>
           <Text m={0} color="error.base">
-            <Translation id="comp-withdrawal-credentials-error" />
+            {t("comp-withdrawal-credentials-error")}
           </Text>
         </Flex>
       )
@@ -93,11 +91,11 @@ const WithdrawalCredentials: FC<IProps> = () => {
           <Text m={0} color="success.base">
             <Text as="span" fontWeight="bold">
               <Translation
-                id="comp-withdrawal-credentials-upgraded-1"
+                id="page-staking:comp-withdrawal-credentials-upgraded-1"
                 options={{ validatorIndex: validator.validatorIndex }}
               />{" "}
             </Text>
-            <Translation id="comp-withdrawal-credentials-upgraded-2" />{" "}
+            {t("comp-withdrawal-credentials-upgraded-2")}{" "}
             <CopyToClipboard text={longAddress} inline>
               {(isCopied) => (
                 <>
@@ -106,13 +104,13 @@ const WithdrawalCredentials: FC<IProps> = () => {
                   </Text>
                   {isCopied ? (
                     <>
-                      <Emoji text="✅" fontSize="lg" mr={2} ml={2} />
+                      <Emoji text="✅" fontSize="lg" mx={2} />
                       <Text as="span" title={longAddress}>
-                        <Translation id="copied" />
+                        {t("copied")}
                       </Text>
                     </>
                   ) : (
-                    <Emoji text="📋" fontSize="lg" mr={2} ml={2} />
+                    <Emoji text="📋" fontSize="lg" mx={2} />
                   )}
                 </>
               )}
@@ -124,17 +122,15 @@ const WithdrawalCredentials: FC<IProps> = () => {
       <Flex bg="error.neutral" p={4}>
         <Text m={0} color="error.base">
           <Text as="span" fontWeight="bold">
-            {validator.isTestnet ? (
-              <Translation id="comp-withdrawal-credentials-not-upgraded-1-testnet" />
-            ) : (
-              <Translation id="comp-withdrawal-credentials-not-upgraded-1" />
-            )}
+            {validator.isTestnet
+              ? t("comp-withdrawal-credentials-not-upgraded-1-testnet")
+              : t("comp-withdrawal-credentials-not-upgraded-1")}
           </Text>{" "}
-          <Translation id="comp-withdrawal-credentials-not-upgraded-2" />
+          <Translation id="page-staking:comp-withdrawal-credentials-not-upgraded-2" />
         </Text>
       </Flex>
     )
-  }, [isLoading, hasError, validator, longAddress, shortAddress])
+  }, [hasError, validator, longAddress, shortAddress, t])
 
   return (
     <Flex direction="column" gap={4}>
@@ -156,7 +152,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
             isDisabled={!inputValue.length}
             isLoading={isLoading.mainnet}
           >
-            <Translation id="comp-withdrawal-credentials-verify-mainnet" />
+            {t("comp-withdrawal-credentials-verify-mainnet")}
           </Button>
           <Button
             onClick={() => checkWithdrawalCredentials(true)}
@@ -164,7 +160,7 @@ const WithdrawalCredentials: FC<IProps> = () => {
             variant="outline"
             isLoading={isLoading.testnet}
           >
-            <Translation id="comp-withdrawal-credentials-verify-goerli" />
+            {t("comp-withdrawal-credentials-verify-goerli")}
           </Button>
         </Flex>
       </Flex>
