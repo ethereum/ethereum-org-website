@@ -1,0 +1,14 @@
+{
+  "/content/contributing/translation-program/how-to-translate/list-of-languages.png": {
+    "hash": "01736331",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAABYlAAAWJQFJUiTwAAABmklEQVR4nEWQS0sbARSFU/wPli50I1gLXVREEKEWBSkiFIQmbgNFNKORNCstsWppqVpF1DzUMQ4iRRKtAQ1COs3DhaZNTKjiZFSM7h27ksHuvk4miy4O9y4u53z3WM7Ozol9lwmuSlwWi+i6jqZppkq7rt+ZuyRJ+P0BVoJBXG/dRCIRlEIBS+nI826IXCbDkCBwqpwSWPKRiMdZFkVC6+vEdndZMgJ+JJPkcr+pe1pvhpaMTYMum5VUIsGrF638Sqf5/OE9siwT2gwzMzXJN2MKTqdJ2dDYRNdrKxOTU/8NRN8Cqlrg09w06YMDBh19XF1fEzWSj0+ODVSVXDbFz8whFkuFoQdYbd3c3v4pG7jdbrJHR7zpd5BIJbH32Mnn82xtb5sE4XCYuS8TRHd2aG55zqPqKjo6O8sEf+/v+SrOcqGcMOZyGV1k+Tg8wrmiIEej7O3FuLosEpLW2E+maGt/Sc3jWuNtW5lA027otXezYZRVXfkQ7/w8z+qe4PUFEIQBxjwjLHr9uPocrIor9DsHGR0fNwtWVZV/EAhCwjD7p50AAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/how-to-translate/crowdin-files.png": {
+    "hash": "00249f32",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAABYlAAAWJQFJUiTwAAABB0lEQVR4nGMoL6/4b2pq9v/EiRP/7927hxPfun3rf2Vz1f/M8qz/ta11/5ctXw7Ww5CSkvrfzNzy/4WLF/+/fPkSJwYZoGik9J+Bn+G/pYfT/8LiMogBDg4O/93c3P6vWrWKoAG6dvr/OWQ4/pu5WvyvqauDGODh4fnfxtb2/9HjxwkaoGOr959BguG/W4jX/4bGZoQBoDDYsGkT2K/4DNB3MP0vqi753zfa739ZeSXYUgY/f///tnb2/7ds2fIfBL58+YIVP3325L+Fh81/K2/H/+VNVWAvgA0Ij4j4LywiAjYkLy/v/5y5c8GGoeOVK1f+VzHS/c8hKfHfxSvgP0jfvn37/gMA7xpET3hHDYkAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/how-to-translate/online-editor.png": {
+    "hash": "030e9636",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAIAAACOQloVAAAACXBIWXMAABJ0AAASdAHeZh94AAABLElEQVR4nGMw1NFxAoPU5OSlc+Y8f/bs5YsXcATkrl+5avrEibt27kyIj5s+bQqDn7dXZnZ2YVFRUWFhe2Pjq9ev/6OCLes31paXf/j08c/fv7du3WBwc3T08PBwd3cPCw5etmDBo8ePgYp+/vgBRBANu7Zt01HXSE5NDQsLmzhhAoOxgb6FsXGwv7+tjc2CWbPfvn0LNOni6dOnjhwBMoBo+eLFsdFRLfX1Xa2tly5dYjAzMfb39wdaYm5q2tPefu/B/W/fvr1/9w6IgIxXr18BNRzatw9s2d/PHz8x2Fhb+fr519XVz5s9e8/2bU+fPwOqAzoM4jYguH/7NtBCCBukQVJMSF9PjwEMinNyNm1c/+zRo08fPgDRm5cvgeSJQ4f2bNkCZAADDSgFAKRW45xXS5CeAAAAAElFTkSuQmCC"
+  }
+}

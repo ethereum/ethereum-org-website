@@ -2,7 +2,7 @@
 title: 将来性のあるイーサリアム
 description: これらのアップグレードにより、イーサリアムは、将来何が起きようとも、回復力のある分散型のベースレイヤーとして確立されます。
 lang: ja
-image: ..//roadmap/roadmap-future.png
+image: /roadmap/roadmap-future.png
 alt: "イーサリアムロードマップ"
 template: roadmap
 ---
