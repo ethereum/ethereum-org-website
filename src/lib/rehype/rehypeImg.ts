@@ -1,47 +1,25 @@
-import fs from "fs"
 import path from "path"
 
 import type { Root } from "hast"
 import sizeOf from "image-size"
-import { getPlaiceholder } from "plaiceholder"
 import type { Plugin } from "unified"
 import { visit } from "unist-util-visit"
 
-import { getHashFromBuffer } from "@/lib/utils/crypto"
+import { ImageNode } from "@/lib/types"
+
 import {
   checkIfImageIsTranslated,
   getTranslatedImgPath,
 } from "@/lib/utils/i18n"
+import { setPlaceholdersFromImageNodes } from "@/lib/utils/placeholders"
 
-import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 interface Options {
   dir: string
   srcPath: string
   locale: string
 }
-
-type ImageNode = {
-  type: 'element'
-  tagName: 'img'
-  properties: {
-    src: string
-    height?: number
-    width?: number
-    aspectRatio?: number
-    blurDataURL?: string
-    placeholder?: 'blur' | 'empty'
-  }
-}
-
-type Path = string
-
-type Placeholder = {
-  hash: string
-  base64: string
-}
-
-type PlaceholderData = Record<Path, Placeholder>
 
 /**
  * Handles:
@@ -63,69 +41,6 @@ const getImageSize = (src: string, dir: string) => {
     src = path.join(dir, src)
   }
   return sizeOf(src)
-}
-
-
-/**
- * Sets image placeholders for the given array of images.
- * 
- * @param images - The array of images to set placeholders for.
- * @param srcPath - The source page path for the images.
- * @returns A promise that resolves to void.
- */
-const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promise<void> => {
-  // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
-  const FILENAME = path.join(srcPath, "data.json").replaceAll("/", "-").slice(1)
-
-  // Make directory for current page if none exists
-  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR)) fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
-
-  const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
-  const existsCache = fs.existsSync(DATA_PATH)
-  const placeholdersCached: PlaceholderData = existsCache ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) : {}
-  let isChanged = false
-
-  // Generate placeholder for internal images
-  for (const image of images) {
-    const { src } = image.properties
-
-    // Skip externally hosted images
-    if (src.startsWith("http")) continue
-
-    // Load image data from file system as buffer
-    const buffer: Buffer = fs.readFileSync(path.join("public", src))
-
-    // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, { algorithm: "SHA-1", length: 8 })
-
-    // Look for cached placeholder data with matching hash
-    const cachedPlaceholder: Placeholder | null = placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
-
-    // Get base64 from cached placeholder if available, else generate new placeholder
-    const { base64 } = cachedPlaceholder || await getPlaiceholder(buffer, { size: 16 })
-
-    // Assign base64 placeholder data to image node `blurDataURL` property
-    image.properties.blurDataURL = base64
-    image.properties.placeholder = "blur"
-
-    // If cached value was not available, add newly generated placeholder data
-    if (!cachedPlaceholder) {
-      placeholdersCached[src] = { hash, base64 }
-      isChanged = true
-    }
-  }
-
-  // If cache is still empty, delete JSON file and return
-  if (Object.keys(placeholdersCached).length === 0) {
-    fs.rmSync(DATA_PATH, { recursive: true, force: true })
-    return
-  }
-
-  // If cached value has not changed, return without writing to file system
-  if (!isChanged) return
-
-  // Write results to cache file
-  fs.writeFileSync(DATA_PATH, JSON.stringify(placeholdersCached, null, 2))
 }
 
 /**
@@ -177,7 +92,7 @@ const setImageSize: Plugin<[Options], Root> = (options) => {
       }
     })
 
-    await setImagePlaceholders(images, srcPath)
+    await setPlaceholdersFromImageNodes(images, srcPath)
   }
 }
 

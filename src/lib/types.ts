@@ -322,3 +322,29 @@ export type StatsBoxMetric = {
   apiUrl: string
   apiProvider: string
 }
+
+// Placeholders
+export type ImageNode = {
+  type: 'element'
+  tagName: 'img'
+  properties: {
+    src: string
+    height?: number
+    width?: number
+    aspectRatio?: number
+    blurDataURL?: string
+    placeholder?: 'blur' | 'empty'
+  }
+}
+
+export type ImagePlaceholder = {
+  hash: string
+  base64: string
+}
+
+export type PlaceholderData = Record<string, ImagePlaceholder>
+
+export type PlaceholderCache = {
+  cache: PlaceholderData
+  cachePath: string
+}
