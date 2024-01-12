@@ -19,7 +19,6 @@ export interface IPropsOverlay {
 export interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
   children?: React.ReactNode
   title?: string
-  description?: string
   actionButtonLabel?: string
   isOpen: boolean
   setIsOpen: (isOpen: boolean) => void
@@ -28,7 +27,6 @@ export interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
 const Modal: React.FC<IProps> = ({
   children,
   title,
-  description,
   actionButtonLabel,
   isOpen,
   setIsOpen,
