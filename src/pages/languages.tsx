@@ -80,7 +80,14 @@ const LanguagesPage = () => {
         description={t("page-languages-meta-desc")}
       />
 
-      <Flex as={MainArticle} direction="column" align="center" w="full" mx="auto" mt={16}>
+      <Flex
+        as={MainArticle}
+        direction="column"
+        align="center"
+        w="full"
+        mx="auto"
+        mt={16}
+      >
         <PageMetadata
           title={t("page-languages-meta-title")}
           description={t("page-languages-meta-desc")}

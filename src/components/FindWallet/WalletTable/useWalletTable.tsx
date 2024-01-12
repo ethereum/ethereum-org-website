@@ -303,7 +303,7 @@ export const useWalletTable = ({
   ) => {
     const domItems: HTMLCollectionOf<Element> =
       document.getElementsByClassName(className)
-    
+
     Array.from(domItems).forEach((item) => {
       item.classList.add("fade")
     })

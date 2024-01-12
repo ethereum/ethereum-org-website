@@ -1,5 +1,5 @@
 import React, { ReactNode, useState } from "react"
-import { AnimatePresence,motion } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { Box, useColorModeValue, useToken } from "@chakra-ui/react"
 
 import { isMobile as isMobileCheck } from "../lib/utils/isMobile"

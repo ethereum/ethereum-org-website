@@ -335,7 +335,13 @@ const HomePage = ({
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
   return (
-    <Flex as={MainArticle} flexDirection="column" alignItems="center" dir={dir} width="full">
+    <Flex
+      as={MainArticle}
+      flexDirection="column"
+      alignItems="center"
+      dir={dir}
+      width="full"
+    >
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}

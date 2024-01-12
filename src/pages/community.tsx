@@ -79,7 +79,13 @@ const Divider = () => {
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex as={MainArticle} direction="column" alignItems="center" w="full" mx="auto">
+    <Flex
+      as={MainArticle}
+      direction="column"
+      alignItems="center"
+      w="full"
+      mx="auto"
+    >
       {children}
     </Flex>
   )

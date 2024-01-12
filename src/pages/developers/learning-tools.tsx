@@ -473,7 +473,6 @@ const LearningToolsPage = () => {
           <FeedbackCard />
         </ContentBox>
       </MainArticle>
-      
     </Page>
   )
 }

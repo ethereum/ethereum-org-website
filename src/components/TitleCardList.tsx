@@ -154,12 +154,7 @@ const TitleCardList: React.FC<IProps> = ({
               </Box>
             </Flex>
             {caption && (
-              <Flex
-                flex="1 0 25%"
-                alignItems="center"
-                flexWrap="wrap"
-                me={4}
-              >
+              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
                 <Box
                   fontSize="sm"
                   marginBottom="0"
@@ -209,12 +204,7 @@ const TitleCardList: React.FC<IProps> = ({
               </Box>
             </Flex>
             {caption && (
-              <Flex
-                flex="1 0 25%"
-                alignItems="center"
-                flexWrap="wrap"
-                me={4}
-              >
+              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
                 <Box
                   fontSize="sm"
                   marginBottom="0"
