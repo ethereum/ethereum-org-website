@@ -1,5 +1,6 @@
 import { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import { StaticImageData } from "next/image"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -37,6 +38,7 @@ import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { setPlaceholderFromStatic } from "@/lib/utils/placeholders"
 import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import {
   getRequiredNamespacesForPage,
@@ -189,9 +191,31 @@ const cachedFetchTxCount = runOnlyOnce(fetchTxCount)
 type Props = BasePageProps & {
   communityEvents: CommunityEventsReturnType
   metricResults: AllMetricData
+  images: Record<string, StaticImageData>
 }
 
 export const getStaticProps = (async ({ locale }) => {
+  const images = {
+    devfixed,
+    dogefixed,
+    enterprise,
+    ethereum,
+    ethfixed,
+    finance,
+    future,
+    hackathon,
+    hero,
+    impact,
+    infrastructure,
+    infrastructurefixed,
+    merge,
+    robotfixed,
+  }
+
+  for (const image of Object.values(images)) {
+    await setPlaceholderFromStatic(image)
+  }
+
   const metricResults: AllMetricData = {
     totalEthStaked: await cachedFetchTotalEthStaked(),
     nodeCount: await cachedFetchNodes(),
@@ -217,6 +241,7 @@ export const getStaticProps = (async ({ locale }) => {
       contentNotTranslated,
       lastDeployDate,
       metricResults,
+      images,
     },
     revalidate: BASE_TIME_UNIT * 24,
   }
@@ -225,6 +250,7 @@ export const getStaticProps = (async ({ locale }) => {
 const HomePage = ({
   communityEvents,
   metricResults,
+  images,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation(["common", "page-index"])
   const { locale } = useRouter()
@@ -239,28 +265,28 @@ const HomePage = ({
 
   const cards = [
     {
-      image: robotfixed,
+      image: images.robotfixed,
       title: t("page-index:page-index-get-started-wallet-title"),
       description: t("page-index:page-index-get-started-wallet-description"),
       alt: t("page-index:page-index-get-started-wallet-image-alt"),
       to: "/wallets/find-wallet/",
     },
     {
-      image: ethfixed,
+      image: images.ethfixed,
       title: t("page-index:page-index-get-started-eth-title"),
       description: t("page-index:page-index-get-started-eth-description"),
       alt: t("page-index:page-index-get-started-eth-image-alt"),
       to: "/get-eth/",
     },
     {
-      image: dogefixed,
+      image: images.dogefixed,
       title: t("page-index:page-index-get-started-dapps-title"),
       description: t("page-index:page-index-get-started-dapps-description"),
       alt: t("page-index:page-index-get-started-dapps-image-alt"),
       to: "/dapps/",
     },
     {
-      image: devfixed,
+      image: images.devfixed,
       title: t("page-index:page-index-get-started-devs-title"),
       description: t("page-index:page-index-get-started-devs-description"),
       alt: t("page-index:page-index-get-started-devs-image-alt"),
@@ -270,21 +296,21 @@ const HomePage = ({
 
   const touts = [
     {
-      image: merge,
+      image: images.merge,
       alt: t("page-index:page-index-tout-upgrades-image-alt"),
       title: t("page-index:page-index-tout-upgrades-title"),
       description: t("page-index:page-index-tout-upgrades-description"),
       to: "/roadmap/",
     },
     {
-      image: infrastructurefixed,
+      image: images.infrastructurefixed,
       alt: t("page-index:page-index-tout-enterprise-image-alt"),
       title: t("page-index:page-index-tout-enterprise-title"),
       description: t("page-index:page-index-tout-enterprise-description"),
       to: "/enterprise/",
     },
     {
-      image: enterprise,
+      image: images.enterprise,
       alt: t("page-index:page-index-tout-community-image-alt"),
       title: t("page-index:page-index-tout-community-title"),
       description: t("page-index:page-index-tout-community-description"),
@@ -292,6 +318,7 @@ const HomePage = ({
     },
   ]
 
+  // TODO: Update to type and relocate to src/lib/types.ts
   interface CodeExample extends ITitleCardItem {
     codeLanguage: string
     code: string
@@ -335,13 +362,19 @@ const HomePage = ({
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
   return (
-    <Flex as={MainArticle} flexDirection="column" alignItems="center" dir={dir} width="full">
+    <Flex
+      as={MainArticle}
+      flexDirection="column"
+      alignItems="center"
+      dir={dir}
+      width="full"
+    >
       <PageMetadata
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
       <Box w="full">
-        <HomeHero heroImg={hero} />
+        <HomeHero heroImg={images.hero} />
       </Box>
       {/* Getting Started Section */}
       <GrayContainer>
@@ -367,7 +400,7 @@ const HomePage = ({
             </Box>
             <ImageContainer>
               <Image
-                src={hackathon}
+                src={images.hackathon}
                 alt={t("page-index:page-index-get-started-image-alt")}
                 width={720}
                 backgroundSize="cover"
@@ -413,7 +446,7 @@ const HomePage = ({
           </FeatureContent>
           <ImageContainer pl={{ lg: 8 }}>
             <Image
-              src={ethereum}
+              src={images.ethereum}
               alt={t("page-index:page-index-what-is-ethereum-image-alt")}
               width={700}
             />
@@ -438,7 +471,7 @@ const HomePage = ({
           </FeatureContent>
           <ImageContainer>
             <Image
-              src={impact}
+              src={images.impact}
               alt={t("page-index:page-index-defi-image-alt")}
               width={700}
             />
@@ -463,7 +496,7 @@ const HomePage = ({
           </FeatureContent>
           <ImageContainer>
             <Image
-              src={infrastructure}
+              src={images.infrastructure}
               alt={t("page-index:page-index-nft-alt")}
               width={700}
             />
@@ -492,7 +525,7 @@ const HomePage = ({
             </FeatureContent>
             <ImageContainer>
               <Image
-                src={future}
+                src={images.future}
                 alt={t("page-index:page-index-internet-image-alt")}
                 width={700}
               />
@@ -605,7 +638,7 @@ const HomePage = ({
           descriptionKey={
             "page-index:page-index-contribution-banner-description"
           }
-          image={finance}
+          image={images.finance}
           imageWidth={600}
           alt={t("page-index:page-index-contribution-banner-image-alt")}
           mt={32}
