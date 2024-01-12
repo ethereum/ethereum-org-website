@@ -3,7 +3,6 @@ import {
   Center,
   Flex,
   type FlexProps,
-  Show,
   SimpleGrid,
   useToken,
   Wrap,
@@ -203,11 +202,9 @@ export const RoadmapLayout: React.FC<IProps> = ({
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Show below="lg">
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Show>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Box>
   )

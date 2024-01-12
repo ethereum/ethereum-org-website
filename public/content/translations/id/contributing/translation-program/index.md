@@ -49,7 +49,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
   {" "}<Link to="/en/contributing/translation-program/translators-guide/">Lihat Panduan Gaya Penerjemahan</Link>
 </InfoBanner>
 
-1. **[Bergabung dengan projek kami di Crowdin](https://crowdin.com/project/ethereum-org/invite)**  
+1. **[Bergabung dengan projek kami di Crowdin](https://crowdin.com/project/ethereum-org/)**  
    Anda harus masuk ke akun Crowdin atau mendaftar jika belum memilikinya. Yang diperlukan untuk mendaftar hanyalah akun email dan kata sandi.
 
 2. **Buka bahasa yang ingin Anda terjemahkan dan cari dokumen yang akan dikerjakan**  

@@ -234,6 +234,7 @@ export const MobileButton = (props: ChildOnlyProp) => {
   const borderColor = useToken("colors", "border")
   return (
     <Box
+      hideFrom="lg"
       bg="background.base"
       boxShadow={`0 -1px 0 ${borderColor}`}
       position="sticky"

@@ -52,7 +52,7 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 
 以下是一些比较常见的例子：
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [安全帽](https://discord.gg/xtrMGhmbfZ)

@@ -203,7 +203,7 @@ ZK-STARK is considered immune to the threat of quantum computing, as it uses col
 ## Further reading {#further-reading}
 
 - [Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube channel_
-- [Overview of use cases for zero-knowledge proofs](https://appliedzkp.org/#Projects) — _Privacy and Scaling Explorations Team_
+- [Overview of use cases for zero-knowledge proofs](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [SNARKs vs. STARKS vs. Recursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [A Zero-Knowledge Proof: Improving Privacy on a Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — A Realistic Zero-Knowledge Example and Deep Dive](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_

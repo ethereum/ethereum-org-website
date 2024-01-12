@@ -16,7 +16,7 @@ Ultimately, this is a great way to build a diverse and impressive portfolio that
 
 We sometimes need a help testing our raw ideas. This is a great way how to contribute without any technical knowledge.
 
-1. The design team will share a mockup design on [Discord](https://discord.com/invite/CetY6Y4) and on [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
+1. The design team will share a mockup design on [Discord](https://discord.com/invite/ethereum-org) and on [GitHub](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8).
 2. You will be guided through the designs to provide feedback via comments function.
 3. The outcome will be shared in the GitHub issue and then closed by the team.
 

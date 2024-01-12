@@ -6,7 +6,6 @@ import {
   Flex,
   Grid,
   type HeadingProps,
-  Show,
   SimpleGrid,
   Text,
   UnorderedList,
@@ -297,12 +296,9 @@ export const StakingLayout: React.FC<IProps> = ({
           <StakingCommunityCallout my={16} />
           <FeedbackCard />
         </ContentContainer>
-        {/* // TODO: Switch to `above="lg"` after completion of Chakra Migration */}
-        <Show below={lgBp}>
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Show>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Box>
   )

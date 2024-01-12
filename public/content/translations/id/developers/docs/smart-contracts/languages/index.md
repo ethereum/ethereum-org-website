@@ -35,7 +35,7 @@ Pengetahuan dasar bahasa pemrograman, khususnya JavaScript atau Pyhton, bisa men
 - [Portal Bahasa Solidity](https://soliditylang.org/)
 - [Contoh Solidity](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Ruang Obrolan Gitter Solidity](https://gitter.im/ethereum/solidity/) menjembatani [Ruang Obrolan Matrix Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Ruang Obrolan Gitter Solidity](https://gitter.im/ethereum/solidity) menjembatani [Ruang Obrolan Matrix Solidity](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Lembar Kecurangan](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
 - [Twitter Solidity](https://twitter.com/solidity_lang)

@@ -53,7 +53,7 @@ La tua domanda riguarda un particolare strumento, progetto o libreria? La maggio
 
 Ecco alcuni esempi più diffusi:
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
