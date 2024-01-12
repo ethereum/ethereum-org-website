@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WIWI - Internet Gratuito - Navegar</title>
+    <link rel="stylesheet" href="css/navegar.css" />
+  </head>
+  <body>
+    <script type="text/javascript">
+      // GET REAL VIEWPORT HEIGHT - factoring in chrome/safari's header and footer bars
+      var vh = Math.max(
+        document.documentElement.clientHeight || 0,
+        window.innerHeight || 0
+      );
+
+      //cuando termina de cargar la pagina redirecciona a la pagina google.com
+      window.onload = function () {
+        document.querySelector("body").style.minHeight = vh + "px";
+        document.querySelector(".main").style.minHeight = vh + "px";
+        document.querySelector(".main").style.maxHeight = vh + "px";
+        // setTimeout(function () {
+        //   window.location.href = "https://news-staging.nmas.live/wiwi";
+        // }, 5000);
+      };
+    </script>
+
+    <main class="main">
+      <h3>Wiwi - todos conectados</h3>
+      <h1>Tienes 30 minutos de internet gratis</h1>
+      <h2>En estaciones y autobuses durante todo tu viaje</h2>
+    </main>
+    <!-- .main-->
+  </body>
+</html>
