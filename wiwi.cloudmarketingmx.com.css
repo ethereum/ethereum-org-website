@@ -1,0 +1,211 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <title>Wiwi - Internet para todo México</title>
+    <link rel="stylesheet" href="../css/prelogin.css">
+
+</head>
+
+<body class="prelogin">
+    
+    <section class="main prelogin option-3">
+        <div class="wrapper">
+
+            <div class="header">
+                <span class="logo text-white"></span>
+                <span class="logo isotype-green"></span>
+            </div><!-- .header -->
+
+            <div class="call-to-action">
+                <h2>Internet <strong>Gratis</strong></h2>
+                <form id="form" action="phone_request.php" method="POST">
+                    <input id="emp" type="submit" class="button gray" value="Empezar">
+                </form><!-- FORM -->
+                <p class="disclaimer">Al ingresar estas aceptando nuestros <a href="#" id="tc"><u>términos, condiciones y políticas de privacidad.</u></a>
+                </p>
+            </div><!-- .call-to-action -->
+            
+        </div><!-- .wrapper -->
+    </section><!-- .main -->
+    
+    <footer class="footer">
+        <div class="wrapper">
+            <ul class="partners">
+                <li class="optibus"></li>
+                <li class="pagobus"></li>
+            </ul>
+        </div><!-- .wrapper -->
+        
+    </footer><!-- .footer -->
+    
+    <div class="terms-and-conditions">
+        
+        <a class="terms-and-conditions-close" href="#">
+            <span>Cerrar</span>
+        </a>
+        
+        <span class="logo isotype-green"></span>
+        <h2>Política de <strong>Privacidad</strong></h2>
+        <h3>TÉRMINOS Y CONDICIONES DE USO DE LA RED WI–FI, GESTIONADA POR NETDR S.A. DE C.V.</h3>
+
+        <p>Al acceder y utilizar la red WI–FI en el Sistema Integrado de Transporte y Rutas Remanentes, OPTIBUS de la Ciudad de León, Guanajuato, usted declara que ha leído, entendido y acepta tácitamente los términos y condiciones para su utilización. Si usted no está de acuerdo con esta norma, se recomienda que no utilice este servicio. El uso que se da a la red es responsabilidad del que utilice el servicio.</p>
+        
+        <p>La red WI-FI está destinada para el uso libre de todos los usuarios que utilicen el Sistema Integrado de Transporte y
+        Rutas Remanentes, OPTIBUS y los autobuses del Consorcio PAGOBUS de la Ciudad de León, Guanajuato.</p>
+        
+        <p>El servicio puede no estar disponible o ser limitado en cualquier momento y por cualquier motivo, incluyendo
+        emergencias, fallo del enlace, problemas en equipos de red, interferencias o fuerza de la señal. NETDR S.A. DE C.V. no
+        garantiza el permanente nivel de desempeño de la red WI-FI, ni se responsabiliza por datos, mensajes o páginas perdidas,
+        no guardadas o retrasos por interrupciones o problemas de rendimiento con el servicio.</p>
+        
+        <p>NETDR S.A. DE C.V. puede establecer límites de uso, suspender el servicio o bloquear ciertas páginas y/o
+        comportamientos, acceso a ciertos servicios o dominios para proteger la red WI-FI de fraudes o actividades que atenten
+        contra las leyes nacionales o internacionales.</p>
+        
+        <p>Los Usuarios NO podrán utilizar la red WI-FI del Sistema Integrado de Transporte OPTIBUS de la Ciudad de León,
+        Guanajuato, con los siguientes fines:
+        Interceptar, recopilar o almacenar datos sobre terceros sin su conocimiento o consentimiento; Escanear o probar la
+        vulnerabilidad de equipos, sistemas o segmentos de red; Enviar mensajes no solicitados (spam), virus, o ataques internos
+        o externos a la red WI-FI.</p>
+        
+        <p>Transmitir, copiar y/o descargar cualquier material que viole cualquier ley. Esto incluye entre otros: material con
+        derecho de autor, pornografía infantil, material amenazante u obsceno, o material protegido por secreto comercial o
+        patentes; Documentos que acrediten su personalidad (INE, pasaporte, cartilla, cédula profesional). En caso de actuar a
+        través de un representante legal, será necesario acreditar la personalidad a través de un poder otorgado e
+        identificación; Dañar equipos, sistemas informáticos o redes y/o perturbar el normal funcionamiento de la red. Ser usada
+        con fines de lucro, actividades comerciales o ilegales, por ejemplo, hacking; Ser utilizada para crear y/o la colocar un
+        virus informático o malware en la red.</p>
+        </p>
+
+        <h3>TÉRMINOS Y CONDICIONES DE USO PARA EL TRATATAMIENTO DE DATOS CON FINES MERCADOTÉCNICOS:</h3>
+        
+        <p>Queda establecido que es decisión del Usuario, otorgar la información personal a NETDR S.A. DE C.V. Por lo anterior, el
+        Usuario es responsable de la veracidad y confiabilidad sobre dicha información. En caso de que el Usuario decida enviar información personal a través de los medios dispuestos para tal efecto, el Usuario, con base en lo establecido en el artículo 76 BIS de la Ley Federal de Protección al Consumidor, otorga su consentimiento tácito de manera electrónica, para que NETDR S.A. DE C.V. comparta su información con terceras personas. Asimismo, el Usuario declara que no se encuentra registrado en el Registro Público de Consumidores de la Procuraduría Federal del Consumidor, y en caso de encontrarse inscrito en el mismo, para efectos de los dispuesto en los artículos 16, 18 y 18bis de la Ley Federal de Protección al Consumidor, el Usuario, en este acto, otorga su consentimiento expreso y aceptación para recibir información con carácter o fines mercadotécnicos o publicitarios. Del mismo modo, el Usuario faculta a NETDR S.A. DE C.V., de la forma más amplia que legalmente proceda, para utilizar la información personal para: (1) resolver controversias o disputas relacionadas con NETDR S.A. DE C.V. y violaciones al presente convenio; (2) para posibilitar a NETDR S.A. DE C.V. que opere correctamente; y (3) en los casos que la ley así lo requiera. El Usuario faculta a NETDR S.A. DE C.V., de la forma más amplia que legalmente proceda, así como a proveedores y asesores y demás terceros con quien contrate, a utilizar la información personal e información agregada del Usuario (incluyendo, sin limitación alguna, información sobre el número de ocasiones que ha visto e/o ingresado a las ligas de otros sitios o páginas electrónicas a través de los anuncios y demás información que se publique en la página de Internet y/o en el portal cautivo y/o aplicativos de NETDR S.A. DE C.V., a través de su marca comercial en <strong>www.wiwi.mx</strong></p>
+
+        <h3>AVISO DE PRIVACIDAD SISTEMA INTEGRADO DE TRANSPORTE OPTIBUS DE LA CIUDAD DE LEÓN, GUANAJUATO</h3>
+        <p>En cumplimiento con la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP), y con el fin de asegurar la protección y privacidad de los datos personales, así como regular el acceso, rectificación, cancelación y oposición del manejo de los mismo, de conformidad con lo establecido por los artículos 15, 16 y 17 de la LFPDPPP, NETDR S.A. DE C.V., con domicilio en Gobernador José Guadalupe Covarrubias 78, 11580, Miguel Hidalgo, Ciudad de México. mismo que señala para todos los efectos legales derivados del manejo de la información proporcionada en los formularios de registro de datos personales contenidos en el sitio web. NETDR.MX, sus aplicativos o por cualquier otro medio o tecnología (el ''Sitio''), está comprometida y es responsable de la protección y tratamiento de sus datos personales. NETDR S.A. DE C.V. hace de su conocimiento que sus datos personales, incluyendo los sensibles, que actualmente o en el futuro obren en nuestras bases de datos, serán tratados y/o utilizados por: NETDR S.A. DE C.V. y/o las empresas controladoras de ésta y/o empresas filiales y/o subsidiarias y/o aquellos terceros que, por la naturaleza de su trabajo o funciones tengan la necesidad de tratar y/o utilizar sus datos personales (''Afiliadas''). </p>
+
+        <h3>DATOS PERSONALES RECABADOS</h3>
+        <p>Los datos que Usted proporcione en este Sitio, a través de los formatos de registro que NETDR S.A. DE C.V. pone a su disposición son comunicados por Usted de forma libre y voluntaria por lo que Usted declara que los siguientes datos personales de contacto y/o de identificación proporcionados:</p>
+        
+        <p>Nombre, Sexo, Edad, Correo Electrónico, Fecha De Nacimiento, Estado Civil, Número Telefónico, Nacionalidad y/o Tipo de
+        Equipo </p>
+        
+        <p>Al ingresar sus datos personales en el Sitio, usted acepta este Aviso de Privacidad y usted otorga su consentimiento y/o
+        autorización expresa a NETDR S.A. DE C.V. para recolectar, procesar/tratar, utilizar y almacenar su información personal
+        para las finalidades que son descritas a continuación: </p>
+
+        <h3>FINALIDAD DEL TRATAMIENTO DE LOS DATOS.</h3> 
+        <p>Los datos personales que se proporcione a NETDR S.A. DE C.V.; en los formularios de registro contenidos en el Sitio, y
+        los demás portales de su propiedad, vía electrónica, óptica, sonora, visual, signos inequívocos u otra tecnología, que actualmente o en el futuro se encuentren en sus bases de datos, poseen su autorización voluntaria como titular de los mismos dando consentimiento para que NETDR S.A. DE C.V.; sus filiales; subsidiarias; o terceros de acuerdo a la naturaleza de sus funciones, puedan utilizar; tratar; recolectar; procesar; y/o almacenar su información para evaluar la calidad en el servicio; informarle de todos los beneficios de servicios y productos manejados con fines promocionales; para otorgarle los servicios que puede usted obtener por la descarga de aplicaciones tecnológicas en sus aplicativos móviles, para información estadística y generación de reportes; análisis de uso de productos; para encuestas de calidad y satisfacción; estadísticas para el envío de avisos acerca de productos y servicios operados; así como para brindarle soporte técnico, así como para todos los fines relacionados con el cumplimiento de nuestras obligaciones de conformidad con lo establecido en nuestros términos y condiciones.</p>
+
+        <h3>FINALIDAD SECUNDARIAS</h3>
+        <p>Asimismo, le informamos que sus datos personales se tratarán para fines mercadotécnicos, publicitarios y de prospección
+        comercial, incluyendo el ofrecimiento y promoción de bienes y servicios de NETDR S.A. DE C.V., sus Afiliadas y sus
+        clientes. No obstante, lo anterior, Usted puede manifestar su negativa para que sus datos no sean tratados para los
+        fines descritos en este párrafo a través del procedimiento detallado en el presente Aviso de Privacidad.</p>
+        
+        <h3>COMO LIMITAR EL USO O DIVULGACION DE LOS DATOS PERSONALES</h3>
+        <p>NETDR S.A. DE C.V., ha adoptado los niveles de seguridad y de protección de datos personales requeridos por Ley, sin perjuicio de que pueda implementar otros medios y medidas técnicas para evitar la alteración, acceso no autorizado de manera enunciativa no limitativa, de los datos personales proporcionados por Usted. </p>
+        
+        <p>La información proporcionada puede ser revocada en cualquier momento de acuerdo al procedimiento que se menciona en el presente aviso de privacidad, exceptuando aquellas que: deban ser tratadas por disposición legal; se refieran a las partes de un contrato privado, social o administrativo y sean necesarios para su desarrollo y cumplimiento; cuando obstaculice actuaciones judiciales o administrativas vinculadas a obligaciones fiscales, la investigación y persecución de delitos o la actualización de sanciones administrativas; aquellas que sean necesarias para proteger los intereses jurídicamente tutelados del titular; sean necesarias para realizar una acción en función del interés público; sean necesarios para cumplir con una obligación legalmente adquirida por Usted.</p>
+
+        <h3>MEDIOS PARA EJERCER LOS DERECHOS ''ARCO''</h3> 
+        <p>Para el ejercicio de sus Derechos ARCO (Acceso, Rectificación, Cancelación y Oposición) el titular deberá enviar a NETDR
+        S.A. DE C.V., una solicitud por escrito a la dirección: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="4f2e3d2c200f010a1b0b1d612237">[email&#160;protected]</a>, a través de la cual podrá explicar cuáles son los
+        datos personales que desea rectificar, revocar o eliminar, debiendo redactar en idioma español una nota dirigida al
+        Responsable de Datos Personales, que deberá contener:</p>
+        
+        <ul class="simple-ul">
+            <li>Nombre del titular</li>
+            <li>Domicilio u otro medio para comunicarle la respuesta (si no cumple con este requisito se tendrá por no presentada la
+            solicitud)</li>
+            <li>Documentos que acrediten su personalidad (INE, pasaporte, cartilla, cédula profesional). En caso de actuar a través de
+            un representante legal, será necesario acreditar la personalidad a través de un poder otorgado e identificación.</li>
+            <li>Descripción clara y precisa de los datos personales respecto de los cuales se busca ejercer los Derechos ARCO.</li>
+            <li>Cualquier otro elemento o documentación que facilite la localización de sus datos personales.</li>
+        </ul>
+
+        <h3>TRANSFERENCIAS DE DATOS </h3>
+        <p>
+        El Titular de la Información entiende y acepta que NETDR S.A. DE C.V., y/o cualquiera de sus subsidiarias y/o filiales, podrá transferir sus datos personales a: una afiliada con la finalidad de ofrecerle otros productos y servicios, autoridades judiciales, mexicanas, con la finalidad de dar cumplimiento a la ley, notificaciones, requerimientos u oficios de carácter judicial, algún tercero con el que NETDR S.A. DE C.V. y/o sus Afiliadas hayan celebrado un contrato con la finalidad de ofrecer y promover productos y/o servicios de dicho tercero a través del Sitio, algún tercero con el que NETDR S.A. DE C.V. y/o sus afiliadas hayan celebrado un contrato y ofrezcan productos y servicios mediante sus plataformas o medios tecnológicos con la finalidad de ofrecer y promover productos y/o servicios de dicho tercero a través del Sitio, proveedores de servicios de internet sobre la cual esté montada la plataforma o infraestructura tecnológica de NETDR S.A. DE C.V., y en sí a cualquier terceros, para que realicen en su nombre y representación ciertas tareas relacionadas con las actividades comerciales y de promoción de sus productos y/o servicios. Estas terceras partes pueden tratar los datos y/ o tomar decisiones sobre ellos como parte de la prestación de sus servicios, para lo cual NETDR S.A. DE C.V., seleccionara proveedores que considere confiables y que se comprometan, mediante un contrato u otros medios legales aplicables, a implementar las medidas de seguridad necesarias para garantizar un nivel de protección adecuado a sus datos personales.</p>
+        
+        
+        <h3>MODIFICACIONES AL PRESENTE AVISO DE PRIVACIDAD</h3>
+        <p>NETDR S.A. DE C.V. se reserva el derecho de modificar total o parcialmente los términos y condiciones de este Aviso de Privacidad, en cuyo caso notificaremos estos cambios a través de nuestro sitio web www.wiwi.mx Por lo que le recomendamos visitarlo periódicamente. O enviar un correo electrónico a <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3f565159507f48564856115247">[email&#160;protected]</a> </p>
+
+
+
+        <p>Al proporcionarnos sus datos, Usted acepta de manera tácita que tratemos dichos datos para los fines señalados con
+        anterioridad.</p>
+
+    </div><!-- .terms-and-conditions-->
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+
+        // GET REAL VIEWPORT HEIGHT - factoring in chrome/safari's header and footer bars
+        var vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+        document.querySelector("body").style.minHeight = vh + "px";
+        document.querySelector(".main").style.minHeight = vh - 70 + "px";
+
+        // OPEN TERMS AND CONDITIONS
+        document.querySelector("#tc").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.querySelector(".terms-and-conditions").classList.add('on');
+            document.querySelector('.main').classList.add('hide');
+            document.querySelector('.footer').classList.add('hide');
+        });
+        // CLOSE TERMS AND CONDITIONS
+        document.querySelector(".terms-and-conditions-close").addEventListener("click", function (event) {
+            event.preventDefault();
+            document.querySelector(".terms-and-conditions").classList.remove('on');
+            document.querySelector('.main').classList.remove('hide');
+            document.querySelector('.footer').classList.remove('hide');
+        });
+
+        function crear_impresion(){
+            const url = 'https://trackers.cloudmarketingmx.com/trackers/trackevent';
+            const data = {
+                'categoria': 'CLICK',
+                'tipo': 'EVENTO',
+                'elemento': 'BIENVENIDA_REAL',
+                'id_client': '16',
+                'id_camp': '257',
+                'id_pantalla': '1',
+                'funel': '1.1',
+                'macu': '',
+                'node': '',
+                'wiwichallenge': '',
+                'ciudad': 'LEON'
+            }
+
+            const options = {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            };
+
+            fetch(url, options).then(res => res.json()).then(function(res){
+                console.log(res);
+                document.querySelector("#form").submit();
+            });
+        }
+
+        document.querySelector("#emp").addEventListener("click", function (event) {
+            event.preventDefault();
+            this.disabled = true;
+            crear_impresion();
+        });
+
+
+    </script>
+
+</body>
+
+</html>
