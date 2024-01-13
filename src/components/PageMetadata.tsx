@@ -4,7 +4,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { SITE_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
   name: string
@@ -47,7 +47,7 @@ const PageMetadata: React.FC<IProps> = ({
 
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-  const url = new URL(join(locale!, path), origin).href
+  const url = new URL(join(locale === DEFAULT_LOCALE ? "" : locale!, path), origin).href
   const canonical = canonicalUrl || url
 
   /* Set fallback ogImage based on path */
