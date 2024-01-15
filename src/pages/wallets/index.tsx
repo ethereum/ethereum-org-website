@@ -43,7 +43,14 @@ import FindWalletImage from "@/public/wallets/find-wallet.png"
 import HeroImage from "@/public/wallets/wallet-hero.png"
 
 const Page = (props: BoxProps) => (
-  <Flex as={MainArticle} direction="column" align="center" width="full" m="0 auto" {...props} />
+  <Flex
+    as={MainArticle}
+    direction="column"
+    align="center"
+    width="full"
+    m="0 auto"
+    {...props}
+  />
 )
 
 const GrayContainer = (props: BoxProps) => (

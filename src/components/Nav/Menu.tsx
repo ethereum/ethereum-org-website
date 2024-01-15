@@ -79,10 +79,7 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
         const section = restSections[sectionKey]
 
         return (
-          <NavDropdown
-            key={sectionKey}
-            section={section}
-          >
+          <NavDropdown key={sectionKey} section={section}>
             {section.items.map((item, index) => (
               <NavDropdown.Item
                 key={index}
