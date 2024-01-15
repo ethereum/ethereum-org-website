@@ -2,7 +2,7 @@
 title: Melhoria da experiência do usuário
 description: Para a maioria das pessoas, ainda é complicado usar o Ethereum. Para incentivar a adoção em massa, o Ethereum precisa reduzir drasticamente as barreiras de entrada. Os usuários devem obter os benefícios do acesso descentralizado, sem permissão e resistente à censura ao Ethereum, mas isso precisa ser tão simples quanto usar um aplicativo web2 tradicional.
 lang: pt-br
-image: ..//roadmap/roadmap-ux.png
+image: /roadmap/roadmap-ux.png
 alt: "Planejamento Ethereum"
 template: roadmap
 ---

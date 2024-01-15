@@ -4,7 +4,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { SITE_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
   name: string
@@ -39,7 +39,6 @@ const PageMetadata: React.FC<IProps> = ({
   const desc = description || t("site-description")
   const siteTitle = t("site-title")
   const fullTitle = `${title} | ${siteTitle}`
-  const origin = process.env.NEXT_PUBLIC_SITE_URL || SITE_URL // TODO: Remove .env var usage after launch
 
   // Remove any query params (?) or hash links (#)
   const path = asPath.replace(/[\?\#].*/, "")
@@ -47,7 +46,7 @@ const PageMetadata: React.FC<IProps> = ({
 
   /* Set canonical URL w/ language path to avoid duplicate content */
   /* e.g. set ethereum.org/about/ to ethereum.org/en/about/ */
-  const url = new URL(join(locale!, path), origin).href
+  const url = new URL(join(locale === DEFAULT_LOCALE ? "" : locale!, path), SITE_URL).href
   const canonical = canonicalUrl || url
 
   /* Set fallback ogImage based on path */
@@ -69,7 +68,7 @@ const PageMetadata: React.FC<IProps> = ({
     ogImage = image
   }
 
-  const ogImageUrl = new URL(ogImage, origin).href
+  const ogImageUrl = new URL(ogImage, SITE_URL).href
   const metadata: Meta[] = [
     { name: `description`, content: desc },
     { name: `image`, content: ogImageUrl },

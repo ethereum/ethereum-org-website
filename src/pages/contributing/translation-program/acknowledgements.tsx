@@ -99,8 +99,8 @@ const TranslatorAcknowledgements = () => {
           direction={{ base: "column", lg: "row" }}
           align={{ base: "flex-start", lg: "normal" }}
           w="full"
-          ml={0}
-          mr={{ base: 0, lg: 8 }}
+          ms={0}
+          me={{ base: 0, lg: 8 }}
         >
           {/* LEFT COLUMN */}
           <Box
@@ -215,7 +215,7 @@ const TranslatorAcknowledgements = () => {
               display: { sm: "flex" },
               justifyContent: { sm: "center" },
               flexDirection: { sm: "column" },
-              ml: { sm: 4 },
+              ms: { sm: 4 },
             },
             p: {
               mb: 0,

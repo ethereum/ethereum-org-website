@@ -5,7 +5,7 @@ lang: pcm
 template: use-cases
 emoji: ":handshake:"
 sidebarDepth: 2
-image: /use-cases/dao.png
+image: /use-cases/dao-2.png
 alt: One show of hau one DAO dey vote on top one proposal.
 summaryPoint1: Kommunitis wey membas own and nor get one pesin wey dey kontrol evrytin.
 summaryPoint2: One way wey bam wey u fit join pipol wey yu nor sabi for intanet witout wahala.
