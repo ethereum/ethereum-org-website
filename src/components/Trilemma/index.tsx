@@ -54,15 +54,9 @@ const Trilemma = () => {
         <OldHeading fontSize="2rem" mt={0}>
           {t("page-roadmap-vision-trilemma-h2")}
         </OldHeading>
-        <Text>
-          {t("page-roadmap-vision-trilemma-p")}
-        </Text>
-        <Text>
-          {t("page-roadmap-vision-trilemma-p-1")}
-        </Text>
-        <Text>
-          {t("page-roadmap-vision-trilemma-p-2")}
-        </Text>
+        <Text>{t("page-roadmap-vision-trilemma-p")}</Text>
+        <Text>{t("page-roadmap-vision-trilemma-p-1")}</Text>
+        <Text>{t("page-roadmap-vision-trilemma-p-2")}</Text>
         <Text fontWeight={600} hideFrom={lgBp}>
           {t("page-roadmap-vision-trilemma-modal-tip")}:
         </Text>

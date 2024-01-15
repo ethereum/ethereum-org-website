@@ -1,3 +1,4 @@
+import fs from "fs"
 import { join } from "path"
 import { ParsedUrlQuery } from "querystring"
 
@@ -10,6 +11,7 @@ import type { SSRConfig } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
+import { getPlaiceholder } from "plaiceholder"
 import readingTime from "reading-time"
 import remarkGfm from "remark-gfm"
 
@@ -129,6 +131,13 @@ export const getStaticProps = (async (context) => {
       ],
     },
   })
+
+  if ("image" in frontmatter) {
+    const heroImagePath = join(process.cwd(), "public", frontmatter.image)
+    const imageBuffer = fs.readFileSync(heroImagePath)
+    const { base64 } = await getPlaiceholder(imageBuffer, { size: 16 })
+    frontmatter.blurDataURL = base64
+  }
 
   const timeToRead = readingTime(markdown.content)
   const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)

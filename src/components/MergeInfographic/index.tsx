@@ -60,7 +60,9 @@ const MergeInfographic: React.FC<IProps> = ({ className }) => {
     <AspectRatio
       className={className}
       role="img"
-      aria-label={t("page-upgrades-index:page-upgrades-merge-infographic-alt-text")}
+      aria-label={t(
+        "page-upgrades-index:page-upgrades-merge-infographic-alt-text"
+      )}
       position="relative"
       width="100%"
       ratio={25 / 11}

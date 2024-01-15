@@ -211,6 +211,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         </TitleCard>
         <Image
           src={frontmatter.image}
+          blurDataURL={frontmatter.blurDataURL}
           alt={frontmatter.alt || ""}
           width={1200}
           height={610}

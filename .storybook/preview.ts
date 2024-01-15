@@ -11,7 +11,7 @@ const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
 
 const preview: Preview = {
   globals: {
-    locale: 'en',
+    locale: "en",
     locales: baseLocales,
   },
   parameters: {

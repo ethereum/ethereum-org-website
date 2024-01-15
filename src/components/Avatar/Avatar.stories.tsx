@@ -1,5 +1,5 @@
 import * as React from "react"
-import { AvatarGroup, HStack,VStack } from "@chakra-ui/react"
+import { AvatarGroup, HStack, VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Avatar from "."

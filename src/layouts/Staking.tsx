@@ -276,6 +276,7 @@ export const StakingLayout: React.FC<IProps> = ({
         </Flex>
         <Image
           src={frontmatter.image}
+          blurDataURL={frontmatter.blurDataURL}
           alt={frontmatter.alt || ""}
           style={{ objectFit: "contain" }}
           width={400}

@@ -1,4 +1,4 @@
-import { loadExcludedTranslators,UserData } from "./fileHelpers"
+import { loadExcludedTranslators, UserData } from "./fileHelpers"
 
 export async function filterAndFormatData(data: UserData[]) {
   const excludedTranslators = await loadExcludedTranslators()

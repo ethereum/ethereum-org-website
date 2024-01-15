@@ -1,7 +1,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import { MdArrowBack } from "react-icons/md"
-import { Box, Flex, Grid, Heading,Text } from "@chakra-ui/react"
+import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react"
 
 import { Button, ButtonLink } from "../Buttons"
 
