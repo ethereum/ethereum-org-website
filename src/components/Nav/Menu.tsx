@@ -1,11 +1,8 @@
-import React from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
 import { Flex, FlexProps, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
-import { getDirection } from "../../utils/translations"
-
-import { Lang } from "../../utils/languages"
+// import { getDirection } from "../../utils/translations"
+// import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
 export interface IProps extends FlexProps {
@@ -14,8 +11,9 @@ export interface IProps extends FlexProps {
 }
 
 const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
-  const { language } = useI18next()
-  const direction = getDirection(language as Lang)
+  // const { locale } = useRouter()
+  const direction = "ltr"
+  // const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
@@ -30,7 +28,7 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
       gap={{ base: 3, xl: 6 }}
       {...props}
     >
-      <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
+      <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, index) => (
           <NavDropdown.Item
             key={index}
@@ -43,8 +41,8 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
         ))}
       </NavDropdown>
 
-      <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
-        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"}>
+      <NavDropdown section={learn}>
+        <Flex flexDir={direction === "ltr" ? "row" : "row-reverse"}>
           <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
               <List m={0} key={index}>
@@ -84,7 +82,6 @@ const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
           <NavDropdown
             key={sectionKey}
             section={section}
-            hasSubNav={shouldShowSubNav}
           >
             {section.items.map((item, index) => (
               <NavDropdown.Item

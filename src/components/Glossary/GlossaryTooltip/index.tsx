@@ -1,8 +1,8 @@
 import React, { ReactNode } from "react"
 import { Text, useBreakpointValue } from "@chakra-ui/react"
 
-import GlossaryDefinition from "../GlossaryDefinition"
-import Tooltip from "../../Tooltip"
+import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import Tooltip from "@/components/Tooltip"
 
 interface IProps {
   children: ReactNode
