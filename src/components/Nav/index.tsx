@@ -1,10 +1,23 @@
-import React, { FC, useRef } from "react"
+import { FC, useRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
-import { Box, Flex, HStack, Icon, useDisclosure } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  HStack,
+  Icon,
+  Menu as ChakraMenu,
+  MenuButton,
+  MenuDivider,
+  MenuItem,
+  MenuList,
+  useDisclosure,
+} from "@chakra-ui/react"
 
-import { ButtonLink, IconButton } from "../Buttons"
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import { IconButton } from "../Buttons"
 import { EthHomeIcon } from "../icons"
 import { BaseLink } from "../Link"
 import Search from "../Search"
@@ -28,7 +41,7 @@ const Nav: FC<IProps> = ({ path }) => {
     linkSections,
     mobileNavProps,
   } = useNav({ path })
-  const { locale } = useRouter()
+  const { asPath, locale, locales } = useRouter()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
@@ -99,24 +112,70 @@ const Nav: FC<IProps> = ({ path }) => {
                     color: "primary.hover",
                   }}
                   onClick={toggleColorMode}
-                ></IconButton>
-                <ButtonLink
-                  to={`/languages/${fromPageParameter}`}
-                  transition="color 0.2s"
-                  leftIcon={<Icon as={MdLanguage} />}
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
-                  _hover={{
-                    color: "primary.hover",
-                    "& svg": {
-                      transform: "rotate(10deg)",
-                      transition: "transform 0.5s",
-                    },
-                  }}
-                >
-                  {t("languages")} {locale!.toUpperCase()}
-                </ButtonLink>
+                />
+
+                {/* Locale-picker menu */}
+                <ChakraMenu isLazy>
+                  <MenuButton
+                    transition="color 0.2s"
+                    px={1.5}
+                    _hover={{
+                      color: "primary.hover",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                  >
+                    <Icon
+                      as={MdLanguage}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                    {t("languages")} {locale!.toUpperCase()}
+                  </MenuButton>
+                  <MenuList overflow="auto" maxH="30rem">
+                    <MenuItem key="all-locales-option">
+                      <BaseLink href={`/languages/${fromPageParameter}`}>
+                        View all languages
+                      </BaseLink>
+                    </MenuItem>
+                    <MenuDivider />
+                    {locales
+                      ?.map(
+                        (
+                          localeChoice: string
+                        ): {
+                          localeChoice: string
+                          source: string
+                          target: string
+                        } => ({
+                          localeChoice,
+                          source:
+                            new Intl.DisplayNames([locale!], {
+                              type: "language",
+                            }).of(localeChoice) || "",
+                          target:
+                            new Intl.DisplayNames([localeChoice], {
+                              type: "language",
+                            }).of(localeChoice) || "",
+                        })
+                      )
+                      .sort((a, b) =>
+                        b.localeChoice === DEFAULT_LOCALE
+                          ? 1
+                          : a.source.localeCompare(b.source)
+                      )
+                      .map(({ localeChoice, source, target }) => (
+                        <MenuItem key={locale}>
+                          <BaseLink href={asPath} locale={localeChoice}>
+                            {source} ({target})
+                          </BaseLink>
+                        </MenuItem>
+                      ))}
+                  </MenuList>
+                </ChakraMenu>
               </HStack>
             </Flex>
           </Flex>
