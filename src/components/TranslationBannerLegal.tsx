@@ -5,7 +5,6 @@ import {
   CloseButton,
   Flex,
   Heading,
-  useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
 
@@ -38,16 +37,13 @@ const TranslationBannerLegal: React.FC<IProps> = ({
     }
   }, [originalPagePath, shouldShow])
 
-  const spacing = useToken("space", 8)
-  const insetInlineEnd = useBreakpointValue({ base: 0, md: spacing })
-
   return (
     <Box
       as="aside"
       position="fixed"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      style={{ insetInlineEnd }}
+      insetInlineEnd={{ base: 0, md: 8 }}
       zIndex="99"
     >
       <Flex
@@ -108,7 +104,7 @@ const TranslationBannerLegal: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top={0}
-          style={{ insetInlineEnd: 0 }}
+          insetInlineEnd="0"
           margin={4}
           color="secondary"
           _hover={{

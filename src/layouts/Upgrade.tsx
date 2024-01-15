@@ -10,7 +10,6 @@ import {
   List,
   ListItem,
   Text,
-  useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
 
@@ -94,8 +93,6 @@ const MoreContent = (props: ChildOnlyProp & { to: string }) => (
 const TitleCard = (props: ChildOnlyProp) => {
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
-  const spacing = useToken("space", 24)
-  const insetInlineStart = useBreakpointValue({ lg: spacing })
   return (
     <Flex
       direction="column"
@@ -109,7 +106,7 @@ const TitleCard = (props: ChildOnlyProp) => {
       maxW={{ base: "full", lg: "640px" }}
       p={8}
       top={{ lg: 24 }}
-      style={{ insetInlineStart }}
+      insetInlineStart={{ lg: 24 }}
       zIndex={10}
       {...props}
     />

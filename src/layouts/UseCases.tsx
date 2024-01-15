@@ -8,7 +8,6 @@ import {
   ListItem,
   Text,
   UnorderedList,
-  useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
 
@@ -50,9 +49,6 @@ const HeroContainer = (props: ChildOnlyProp) => (
 
 const TitleCard = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "cardBoxShadow")
-  const spacing = useToken("space", 24)
-  const insetInlineStart = useBreakpointValue({ base: 0, lg: spacing })
-  const insetInlineEnd = useBreakpointValue({ base: 0, lg: "unset" })
   return (
     <Flex
       bg={{ base: "ednBackground", lg: "background.base" }}
@@ -68,7 +64,8 @@ const TitleCard = (props: ChildOnlyProp) => {
       position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
-      style={{ insetInlineStart, insetInlineEnd }}
+      insetInlineStart={{ base: 0, lg: 24 }}
+      insetInlineEnd={{ base: 0, lg: "unset" }}
       {...props}
     />
   )

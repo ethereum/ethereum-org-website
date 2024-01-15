@@ -1,12 +1,4 @@
-import {
-  Box,
-  Heading,
-  HStack,
-  Stack,
-  Text,
-  useBreakpointValue,
-  useToken,
-} from "@chakra-ui/react"
+import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
 
 import type { CommonHeroProps } from "@/lib/types"
 
@@ -21,9 +13,6 @@ const HubHero = ({
   description,
   buttons,
 }: CommonHeroProps) => {
-  const spacing = useToken("space", "8")
-  const insetInlineStart = useBreakpointValue({ xl: spacing })
-
   if (buttons && buttons.length > 2) {
     throw Error(
       "Can not have more than two call-to-action buttons in this hero component."
@@ -53,7 +42,7 @@ const HubHero = ({
         borderRadius={{ xl: "base" }}
         bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
-        style={{ insetInlineStart }}
+        insetInlineStart="8"
         maxW={{ xl: "sm" }}
         top={{ xl: "50%" }}
         transform={{ xl: "translateY(-50%)" }}

@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import {
-  Box,
-  CloseButton,
-  Flex,
-  Heading,
-  useBreakpointValue,
-  useToken,
-} from "@chakra-ui/react"
+import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 
@@ -48,14 +41,12 @@ const TranslationBanner: React.FC<IProps> = ({
     ? "translation-banner-body-new"
     : "translation-banner-body-update"
 
-  const spacing = useToken("space", 8)
-  const insetInlineEnd = useBreakpointValue({ base: 0, md: spacing })
   return (
     <Box
       as="aside"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      style={{ insetInlineEnd }}
+      insetInlineEnd={{ base: 0, md: 8 }}
       position="fixed"
       zIndex="banner"
       dir={dir}
@@ -125,7 +116,7 @@ const TranslationBanner: React.FC<IProps> = ({
         <CloseButton
           position="absolute"
           top="0"
-          style={{ insetInlineEnd: 0 }}
+          insetInlineEnd="0"
           margin={2}
           color="secondary"
           _hover={{
