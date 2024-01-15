@@ -153,7 +153,7 @@ const LanguagesPage = () => {
                   key={lang["name"]}
                   textDecor="none"
                   m={4}
-                  ml={0}
+                  ms={0}
                   p={4}
                   flexBasis="240px"
                   flexGrow={{ base: 1, sm: 0 }}

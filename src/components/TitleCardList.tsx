@@ -65,12 +65,7 @@ const TitleCardList: React.FC<IProps> = ({
         borderBottomStyle="solid"
         borderBottomColor="text"
       >
-        <Icon
-          as={IoCodeOutline}
-          _hover={{
-            path: { fill: "tranparent" },
-          }}
-        />
+        <Icon as={IoCodeOutline} />
         <Translation id={headerKey} />
         {isCode && (
           <Hide below="s">
@@ -180,7 +175,7 @@ const TitleCardList: React.FC<IProps> = ({
             _hover={{
               boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
-              color: "black",
+              "*": { color: "black" },
             }}
           >
             {image && (
