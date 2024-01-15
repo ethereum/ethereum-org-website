@@ -94,17 +94,17 @@ const ThreeColumnContent = (props: ChildOnlyProp) => (
 )
 
 const Column = (props: ChildOnlyProp) => (
-  <Box flex="1 1 33%" mb={6} mr={8} w="full" {...props} />
+  <Box flex="1 1 33%" mb={6} me={8} w="full" {...props} />
 )
 const RightColumn = (props: ChildOnlyProp) => (
-  <Box flex="1 1 33%" mb={6} mr={0} w="full" {...props} />
+  <Box flex="1 1 33%" mb={6} me={0} w="full" {...props} />
 )
 const IntroColumn = (props: ChildOnlyProp) => (
   <Box
     flex="1 1 33%"
     mb={6}
     mt={{ base: 0, lg: 32 }}
-    mr={{ base: 0, sm: 8 }}
+    me={{ base: 0, sm: 8 }}
     w="full"
     {...props}
   />

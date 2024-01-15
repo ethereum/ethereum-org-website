@@ -74,6 +74,7 @@
     "image-size": "^1.0.2",
     "mdast-util-toc": "^7.0.0",
     "minimist": "^1.2.8",
+    "plaiceholder": "^3.0.0",
     "polished": "^4.2.2",
     "raw-loader": "^4.0.2",
     "storybook": "7.6.6",
