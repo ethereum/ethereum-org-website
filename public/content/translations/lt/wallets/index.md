@@ -6,11 +6,11 @@ lang: lt
 
 # Ethereum piniginės {#ethereum-wallets}
 
-<div class="featured">
+<FeaturedText>
 
 **Norite sužinoti daugiau apie Ethereum pinigines?** Šiame puslapyje paaiškinsime pagrindinę informaciją ir suteiksime keletą paprastų pasirinkimo galimybių.
 
-</div>
+</FeaturedText>
 
 ## Kas yra Ethereum piniginė ir kokią turėčiau naudoti? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 

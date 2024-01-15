@@ -132,13 +132,6 @@ export const StaticLayout: React.FC<IProps> = ({
             maxW="container.md"
             w="full"
             sx={{
-              ".featured": {
-                ps: 4,
-                ms: -4,
-                borderInlineStart: "1px dotted",
-                borderInlineStartColor: "primary.base",
-              },
-
               ".citation": {
                 p: {
                   color: "text200",

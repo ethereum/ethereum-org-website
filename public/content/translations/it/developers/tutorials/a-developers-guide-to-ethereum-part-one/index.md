@@ -41,7 +41,7 @@ Ci sono molti modi per descrivere Ethereum, ma il suo fulcro è costituito dalla
 
 Ogni [blocco](/developers/docs/blocks/) contiene un riferimento al blocco precedente; il `parentHash` è semplicemente l'hash del blocco precedente.
 
-<div class="featured">Nota: Ethereum fa uso regolare delle <a href="https://wikipedia.org/wiki/Hash_function">funzioni di hash</a> per produrre valori di dimensioni fisse ("hash"). Gli hash giocano un ruolo importante in Ethereum, ma per il momento puoi tranquillamente vederli come ID unici.</div>
+<FeaturedText>Nota: Ethereum fa uso regolare delle <a href="https://wikipedia.org/wiki/Hash_function">funzioni di hash</a> per produrre valori di dimensioni fisse ("hash"). Gli hash giocano un ruolo importante in Ethereum, ma per il momento puoi tranquillamente vederli come ID unici.</FeaturedText>
 
 ![Un diagramma raffigurante una blockchain che include i dati in ogni blocco](./blockchain-diagram.png)
 
@@ -57,7 +57,7 @@ Questa nuova tecnologia decentralizzata ha generato nuovi strumenti per sviluppa
 
 Gli sviluppatori di Python che desiderano interagire con Ethereum, probabilmente sceglieranno [Web3.py](https://web3py.readthedocs.io/). Web3.py è una libreria che semplifica notevolmente la connessione a un nodo di Ethereum e l'invio e la ricezione di dati da esso.
 
-<div class="featured">Nota: "nodo di Ethereum" e "client di Ethereum" sono usati in modo intercambiabile. Ad ogni modo, ci riferiamo al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando i nuovi blocchi sono aggiunti alla catena, trasmettere le nuove transazioni e tanto altro. Tecnicamente, il client è il software, il nodo è il computer che esegue il software.</div>
+<FeaturedText>Nota: "nodo di Ethereum" e "client di Ethereum" sono usati in modo intercambiabile. Ad ogni modo, ci riferiamo al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando i nuovi blocchi sono aggiunti alla catena, trasmettere le nuove transazioni e tanto altro. Tecnicamente, il client è il software, il nodo è il computer che esegue il software.</FeaturedText>
 
 I [client di Ethereum](/developers/docs/nodes-and-clients/) sono configurabili per esser raggiungibili da [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, o Websocket, quindi Web3.py dovrà rispecchiare tale configurazione. Web3.py si riferisce a queste opzioni di connessione come **provider**. Occorre scegliere uno dei tre provider per collegare l'istanza di Web3.py al tuo nodo.
 
@@ -79,7 +79,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 In questa guida, lavoreremo solo all'interno di un interprete Python. Non creeremo cartelle, file, classi o funzioni.
 
-<div class="featured">Nota: Negli esempi seguenti, i comandi che iniziano con "$" sono intesi come da eseguire nel terminale. (Non occorre digitare "$", indica solo l'inizio della riga.)</div>
+<FeaturedText>Nota: Negli esempi seguenti, i comandi che iniziano con "$" sono intesi come da eseguire nel terminale. (Non occorre digitare "$", indica solo l'inizio della riga.)</FeaturedText>
 
 Innanzi tutto, installa [IPython](https://ipython.org/) per un ambiente user-friendly da esplorare. IPython offre il completamento delle schede, tra le altre funzionalità, facilitando notevolmente la visualizzazione di cosa è possibile in Web3.py.
 
@@ -129,7 +129,7 @@ Oltre all'essere un gateway per Ethereum, il modulo [Web3](https://web3py.readth
 
 In un'applicazione di Ethereum, normalmente occorre convertire le denominazioni delle valute. Il modulo Web3 fornisce un paio di metodi di supporto appositamente per questo: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) e [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
-<div class="featured">
+<FeaturedText>
 Nota: I computer sono notoriamente inefficaci nella gestione della matematica decimale. Per aggirare ciò, gli sviluppatori archiviano spesso importi di dollari in centesimi. Per esempio, un oggetto con un prezzo di $5,99 potrebbe esser memorizzato nel database come 599.
 
 Uno schema simile è usato per gestire le transazioni in <b>ether</b>. Tuttavia, invece di due punti decimali, ether ne ha 18! La più piccola denominazione di ether è chiamata <b>wei</b>, ovvero il valore specificato inviando le transazioni.
@@ -138,7 +138,7 @@ Uno schema simile è usato per gestire le transazioni in <b>ether</b>. Tuttavia,
 
 1 wei = 0,000000000000000001 ether
 
-</div>
+</FeaturedText>
 
 Prova a convertire dei valori da e verso wei. Nota che [esistono nomi per molte delle denominazioni](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) tra ether e wei. Una delle più note è **gwei**, spesso utilizzata per rappresentare le commissioni di transazione.
 
@@ -290,7 +290,7 @@ Quest'ultima parte sembra a posto! Il saldo è passato da 1.000.000 a 1.000.003 
 
 Maggiori informazioni sul [gas](/developers/docs/gas/#post-london)
 
-<div class="featured">Nota: Sulla rete pubblica, le commissioni di transazione sono variabili in base alla domanda della rete ella rapidità con cui vorresti che una transazione fosse elaborata. Se sei interessato a una ripartizione di come sono calcolate le commissioni, vedi il mio post precedente su <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">come sono incluse le transazioni in un blocco</a>.</div>
+<FeaturedText>Nota: Sulla rete pubblica, le commissioni di transazione sono variabili in base alla domanda della rete ella rapidità con cui vorresti che una transazione fosse elaborata. Se sei interessato a una ripartizione di come sono calcolate le commissioni, vedi il mio post precedente su <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">come sono incluse le transazioni in un blocco</a>.</FeaturedText>
 
 ## E respira {#and-breathe}
 

@@ -41,7 +41,7 @@ Il y a de nombreuses façons de décrire Ethereum, mais son cœur repose sur la 
 
 Chaque bloc [](/developers/docs/blocks/) possède une référence du bloc l'ayant précédé ; le `parentHash` est simplement le hash du bloc précédent.
 
-<div class="featured">Note : le réseau Ethereum utilise régulièrement <a href="https://wikipedia.org/wiki/Hash_function">des fonctions de hachage</a> pour produire des valeurs de taille fixe (« hashes »). Les hachages (« hashes ») jouent un rôle important dans le réseau Ethereum, vous pouvez les considérer comme des identifiants uniques pour le moment.</div>
+<FeaturedText>Note : le réseau Ethereum utilise régulièrement <a href="https://wikipedia.org/wiki/Hash_function">des fonctions de hachage</a> pour produire des valeurs de taille fixe (« hashes »). Les hachages (« hashes ») jouent un rôle important dans le réseau Ethereum, vous pouvez les considérer comme des identifiants uniques pour le moment.</FeaturedText>
 
 ![Un diagramme décrivant la blockchain ainsi que les données internes de chaque bloc](./blockchain-diagram.png)
 
@@ -57,7 +57,7 @@ Cette nouvelle pile de technologies décentralisées a créé de nouveaux outils
 
 Les développeurs Python qui veulent interagir avec le réseau Ethereum sont encouragés à utiliser [Web3.py](https://web3py.readthedocs.io/). Web3.py est une bibliothèque qui simplifie grandement la façon dont vous vous connectez à un nœud Ethereum, et par la suite envoyer et recevoir des données.
 
-<div class="featured">Note : Les notions de « noeud Ethereum » et de « client Ethereum » sont utilisées de façon interchangeable. Dans les deux cas, il se réfère au logiciel qu'un participant au réseau Ethereum exécute. Ce logiciel peut lire les données de bloc, recevoir des mises à jour lorsque de nouveaux blocs sont ajoutés à la chaîne, diffuser de nouvelles transactions, et encore bien davantage. Techniquement, le client est le logiciel , le nœud est l'ordinateur qui exécute le logiciel.</div>
+<FeaturedText>Note : Les notions de « noeud Ethereum » et de « client Ethereum » sont utilisées de façon interchangeable. Dans les deux cas, il se réfère au logiciel qu'un participant au réseau Ethereum exécute. Ce logiciel peut lire les données de bloc, recevoir des mises à jour lorsque de nouveaux blocs sont ajoutés à la chaîne, diffuser de nouvelles transactions, et encore bien davantage. Techniquement, le client est le logiciel , le nœud est l'ordinateur qui exécute le logiciel.</FeaturedText>
 
 [Les clients Ethereum](/developers/docs/nodes-and-clients/) peuvent être configurés pour être accessibles par [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP ou Websockets, donc Web3. devra respecter cette configuration. Web3.py fait référence à ces options de connexion en tant que **fournisseurs**. Il vous faudra choisir l'un des trois fournisseurs pour lier l'instance Web3.py à votre nœud.
 
@@ -79,7 +79,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 Dans ce qui suit, nous allons juste travailler au sein de l'interpréteur Python. Nous n'allons pas créer de répertoires, fichiers, classes ou fonctions.
 
-<div class="featured">Note : dans les exemples ci-dessous, les commandes qui commencent par `$` sont censées être exécutées dans le terminal. (Ne tapez pas le `$`, cela signifie simplement que c'est le début de la ligne.)</div>
+<FeaturedText>Note : dans les exemples ci-dessous, les commandes qui commencent par `$` sont censées être exécutées dans le terminal. (Ne tapez pas le `$`, cela signifie simplement que c'est le début de la ligne.)</FeaturedText>
 
 Tout d'abord, installez [IPython](https://ipython.org/) pour avoir un environnement convivial à explorer. IPython propose entre autres une fonctionnalité d'auto-completion en appuyant sur la touche TAB, ce qui facilite la navigation dans Web3.py.
 
@@ -127,7 +127,7 @@ En plus d'être une passerelle vers Ethereum, le module [Web3](https://web3py.re
 
 Dans une application Ethereum, vous devrez généralement convertir des valeurs de devises. Le module Web3 fournit quelques méthodes juste pour cela : [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) et [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
-<div class="featured">
+<FeaturedText>
 Remarque : les ordinateurs sont notoirement peu efficaces pour la gestion des nombres décimaux. Pour contourner cela, les développeurs stockent souvent les montants en dollar en centimes. Par exemple, un article avec un prix de 5,99 $ peut être stocké dans la base de données comme 599.
 
 Un schéma similaire est utilisé lors de la gestion des transactions en <b>ether</b>. Cependant, au lieu de deux décimaux, l'ether en a 18 ! La plus petite dénomination d'ether s'appelle <b>wei</b>, c'est la valeur spécifiée lors de l'envoi des transactions.
@@ -136,7 +136,7 @@ Un schéma similaire est utilisé lors de la gestion des transactions en <b>ethe
 
 1 wei = 0,00000000000001 ether
 
-</div>
+</FeaturedText>
 
 Essayez de convertir certaines valeurs depuis et vers le wei. Notez qu'il y a [des noms pour beaucoup de dénominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) entre ether et wei. L'une des plus connues est le **gwei**, car c'est souvent la façon dont les frais de transaction sont représentés.
 
@@ -288,7 +288,7 @@ Ce dernier semble bon ! Le solde est passé de 1 000 000 à 1 000 003 ethers. Ma
 
 En savoir plus sur les[gaz](/developers/docs/gas/#post-london)
 
-<div class="featured">Remarque : sur le réseau public, les commissions de transaction sont variables en fonction de la demande du réseau et de la rapidité avec laquelle vous souhaitez que soit traitée une transaction. Si vous êtes intéressé par la façon dont les frais sont calculés, vous pouvez consulter mon précédent article sur <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">la manière dont les transactions sont incluses dans un bloc</a>.</div>
+<FeaturedText>Remarque : sur le réseau public, les commissions de transaction sont variables en fonction de la demande du réseau et de la rapidité avec laquelle vous souhaitez que soit traitée une transaction. Si vous êtes intéressé par la façon dont les frais sont calculés, vous pouvez consulter mon précédent article sur <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">la manière dont les transactions sont incluses dans un bloc</a>.</FeaturedText>
 
 ## Et respirez... {#and-breathe}
 

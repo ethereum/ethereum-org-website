@@ -5,7 +5,7 @@ lang: hu
 incomplete: true
 ---
 
-<div class="featured">Tanulj meg Ethereumra fejleszteni Go-alapú projektek és eszközök használatával</div>
+<FeaturedText>Tanulj meg Ethereumra fejleszteni Go-alapú projektek és eszközök használatával</FeaturedText>
 
 Használd az Ethereumot decentraizált alkalmazások (avagy "dappok") fejlesztésére. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Decentralizáltak, ami azt jelenti, hogy egy peer-to-peer hálózaton futnak és nincs lehetőség egyetlen hiba miatti leállásra (single point of failure). Nincs olyan entitás vagy személy, ami irányítaná őket és szinte lehetetlen őket cenzúrázni. Digitális eszközöket irányíthatnak, lehetőséget teremtve ezzel újfajta alkalmazások létrejöveteléhez.
 

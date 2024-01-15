@@ -5,7 +5,7 @@ lang: fr
 incomplete: true
 ---
 
-<div class="featured">Apprendre à développer pour Ethereum avec des projets et des outils basés sur Go</div>
+<FeaturedText>Apprendre à développer pour Ethereum avec des projets et des outils basés sur Go</FeaturedText>
 
 Utilisez Ethereum pour créer des applications décentralisées (ou « dApps »). Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Étant décentralisées, elles fonctionnent sur un réseau P2P et il n'existe aucun point de défaillance. Aucune personne ni entité ne les contrôle, et il est pratiquement impossible de les censurer. Elles peuvent contrôler des actifs numériques afin de créer de nouveaux types d'applications.
 

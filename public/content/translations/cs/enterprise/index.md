@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Ethereum pro firmy {#ethereum-for-enterprise}
 
-<div class="featured">Příručky, články a nástroje o veřejných a soukromých blockchainech Etherea pro firmy.</div>
+<FeaturedText>Příručky, články a nástroje o veřejných a soukromých blockchainech Etherea pro firmy.</FeaturedText>
 
 ## K čemu je Ethereum pro firmy? {#why-enterprise-ethereum}
 
