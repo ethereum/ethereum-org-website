@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { ElementType, useState } from "react"
 import { useTranslation } from "next-i18next"
 import { chakra } from "@chakra-ui/react"
 
@@ -27,7 +27,7 @@ type DataType = {
   valid: string
   caution: string
   warning: string
-  Svg: unknown
+  Svg: ElementType
   matomo: MatomoEventOptions
 }
 
