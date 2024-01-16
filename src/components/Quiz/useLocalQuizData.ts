@@ -3,7 +3,7 @@ import { RawQuizzes } from "@/lib/interfaces"
 
 import { useLocalStorage } from "@/hooks/useLocalStorage"
 
-type UseLocalQuizDataProps = {
+export type UseLocalQuizDataProps = {
   userStatsKey: string
   allQuizData: RawQuizzes
 }
