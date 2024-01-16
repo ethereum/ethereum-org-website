@@ -33,7 +33,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
 
   // calculate date format only on the client side to avoid hydration issues
   useEffect(() => {
-    const date = new Date(dateTimeAsString as unknown)
+    const date = new Date(dateTimeAsString)
     const formattedDate = date.toLocaleString(locale, {
       timeZone: "UTC",
       month: "short",
