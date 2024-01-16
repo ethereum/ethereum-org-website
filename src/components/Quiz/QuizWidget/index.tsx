@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useRef } from "react"
+import { Dispatch, ReactPropTypes, SetStateAction, useEffect, useRef } from "react"
 import {
   Center,
   Heading,
@@ -184,9 +184,9 @@ export default QuizWidget
  * For use of the widget on single pages (not the quizzes page)
  */
 export const StandaloneQuizWidget = (
-  props: Pick<QuizWidgetProps, "quizKey">
+  props: Pick<QuizWidgetProps, "quizKey"> & Parameters<typeof useLocalQuizData>[0]
 ) => {
-  const [_, updateUserStats] = useLocalQuizData()
+  const [_, updateUserStats] = useLocalQuizData({userStatsKey: props.userStatsKey, allQuizData: props.allQuizData})
   return (
     <VStack spacing="12" my="16">
       <Heading

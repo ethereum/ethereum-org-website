@@ -36,6 +36,8 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import allQuizzesData from "@/data/quizzes/index"
+
 import eth from "@/public/eth.png"
 import ogImage from "@/public/eth.png"
 import ethCat from "@/public/eth-gif-cat.png"
@@ -557,7 +559,11 @@ const EthPage = () => {
         </RightColumn>
       </TwoColumnContent>
       <Content>
-        <StandaloneQuizWidget quizKey="what-is-ether" />
+        <StandaloneQuizWidget
+          quizKey="what-is-ether"
+          userStatsKey="quizzes-stats"
+          allQuizData={allQuizzesData}
+        />
       </Content>
       <Content>
         <FeedbackCard />
