@@ -5,7 +5,7 @@ lang: pl
 incomplete: true
 ---
 
-<div class="featured">Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na Rust</div>
+<FeaturedText>Dowiedz się, jak programować dla Ethereum przy użyciu projektów i narzędzi opartych na Rust</FeaturedText>
 
 Użyj Ethereum do tworzenia zdecentralizowanych aplikacji (lub „dappów”), które wykorzystują zalety kryptowaluty i technologii blockchain. Te zdecentralizowane aplikacje mogą być godne zaufania, co oznacza, że ​​po wdrożeniu w Ethereum zawsze będą działać zgodnie z programem. Mogą kontrolować zasoby cyfrowe w celu tworzenia nowych rodzajów aplikacji finansowych. Mogą być zdecentralizowane, co oznacza, że ​​nie kontroluje ich żadna pojedyncza jednostka ani osoba i są prawie niemożliwe do cenzurowania.
 

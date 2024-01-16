@@ -5,11 +5,11 @@ lang: hu
 incomplete: true
 ---
 
-<div class="featured">
+<FeaturedText>
 
 Tanuld meg az Ethereum fejlesztést a Delphi programozási nyelv használatával
 
-</div>
+</FeaturedText>
 
 Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztésére, melyek kihasználják a kriptovaluta és a blokklánc technológia nyújtotta előnyöket. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Digitális vagyontárgyakat irányíthatnak, lehetőséget teremtve ezzel újfajta pénzügyi alkalmazások létrejöveteléhez. Decentralizáltak lehetnek, mely azt jelenti, hogy semmilyen entitás vagy személy nem irányítja őket és közel lehetetlen őket cenzúrázni.
 

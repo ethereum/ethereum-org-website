@@ -6,11 +6,11 @@ lang: nb
 
 # Bruke Ethereum {#using-ethereum}
 
-<div class="featured">
+<FeaturedText>
 
 **Vil du begynne å bruke Ethereum?** Det er hundrevis av desentraliserte applikasjoner (dapps) bygd på Ethereum som du kan bruke i dag.
 
-</div>
+</FeaturedText>
 
 ## Slik bruker du en applikasjon bygget på Ethereum {#how-to-use-an-application-built-on-ethereum}
 

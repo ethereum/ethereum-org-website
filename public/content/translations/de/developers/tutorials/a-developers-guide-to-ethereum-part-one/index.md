@@ -43,7 +43,7 @@ Es gibt viele Möglichkeiten, Ethereum zu beschreiben, doch im Kern ist es eine 
 
 Jeder [Block](/developers/docs/blocks/) hat eine Referenz auf den vor ihm liegenden Block. Der `parentHash` ist einfach der Hash des vorherigen Blocks.
 
-<div class="featured">Hinweis: Ethereum nutzt regelmäßig <a href="https://wikipedia.org/wiki/Hash_function">Hashfunktionen</a>, um Werte mit fester Länge (Hashes) zu erzeugen. Hashes spielen eine wichtige Rolle in Ethereum, für den Einstieg können Sie sie einfach als eindeutige ID vorstellen.</div>
+<FeaturedText>Hinweis: Ethereum nutzt regelmäßig <a href="https://wikipedia.org/wiki/Hash_function">Hashfunktionen</a>, um Werte mit fester Länge (Hashes) zu erzeugen. Hashes spielen eine wichtige Rolle in Ethereum, für den Einstieg können Sie sie einfach als eindeutige ID vorstellen.</FeaturedText>
 
 ![Ein Diagramm, das eine Blockchain einschließlich der Daten in jedem Block darstellt](./blockchain-diagram.png)
 
@@ -59,7 +59,7 @@ Dieser neue dezentralisierte Technologie-Stack hat neue Entwicklertools hervorge
 
 Python-Entwickler, die mit Ethereum interagieren möchten, nutzen wahrscheinlich [Web3.py](https://web3py.readthedocs.io/). Web3.py ist eine Bibliothek, die es sehr einfach macht, sich mit einem Ethereum-Node zu verbinden und dann Daten zu senden und zu empfangen.
 
-<div class="featured">Hinweis: "Ethereum-Node" und "Ethereum-Client" werden synonym verwendet. In beiden Fällen ist Software gemeint, die ein Teilnehmer am Ethereum-Netzwerk ausführt. Diese Software kann Blockdaten lesen, Updates empfangen, wenn neue Blöcke zur Kette hinzugefügt ("geminted") werden, neue Transaktionen übertragen und vieles mehr.</div>
+<FeaturedText>Hinweis: "Ethereum-Node" und "Ethereum-Client" werden synonym verwendet. In beiden Fällen ist Software gemeint, die ein Teilnehmer am Ethereum-Netzwerk ausführt. Diese Software kann Blockdaten lesen, Updates empfangen, wenn neue Blöcke zur Kette hinzugefügt ("geminted") werden, neue Transaktionen übertragen und vieles mehr.</FeaturedText>
 
 [Ethereum-Clients](/developers/docs/nodes-and-clients/) können so konfiguriert werden, dass sie über [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP oder Websockets erreichbar sind. Daher muss Web3.py diese Konfiguration spiegeln. Web3.py bezeichnet diese Verbindungsoptionen als **Anbieter**. Sie müssen einen der drei Anbieter wählen, um eine Web3.py-Instanz mit Ihrem Node zu verbinden.
 
@@ -81,7 +81,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 In dieser Einführung arbeiten wir nur mit dem Python-Interpreter. Wir erzeugen keine Verzeichnisse, Dateien, Klassen oder Funktionen.
 
-<div class="featured">Hinweis: In den folgenden Beispielen kennzeichnet '$' Befehle, die im Terminal ausgeführt werden. (Geben Sie dabei das '$' nicht mit ein. Es ist nur ein Hinweis auf den Beginn einer Zeile.)</div>
+<FeaturedText>Hinweis: In den folgenden Beispielen kennzeichnet '$' Befehle, die im Terminal ausgeführt werden. (Geben Sie dabei das '$' nicht mit ein. Es ist nur ein Hinweis auf den Beginn einer Zeile.)</FeaturedText>
 
 Installieren Sie zuerst [IPython](https://ipython.org/), um eine benutzerfreundliche Umgebung zu erstellen. IPython bietet neben anderen Funktionen eine Tab-Vervollständigung an. Damit lässt sich einfacher heruasfinden, was innerhalb von Web3.py möglich ist.
 
@@ -129,7 +129,7 @@ Das [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api)-Modul
 
 In einer Ethereum-Anwendung müssen Sie üblicherweise Währungsbezeichnungen umrechnen. Das Web3-Modul stellt Ihnen dazu hilfreiche Methoden zur Verfügung: [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) und [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei).
 
-<div class="featured">
+<FeaturedText>
 Hinweis: Computer sind bekanntermaßen schlecht bei der Verarbeitung von Dezimalmathematik. Um das zu umgehen, geben Entwickler Dollarbeträge oft in Cent an. Beispiel: Ein Artikel mit einem Preis von 5,99 USD wird in der Datenbank als 599 angelegt.
 
 Transaktionen in <b>Ether</b> werden in ähnlicher Weise verwaltet. Aber statt zwei Dezimalstellen hat Ether 18 Stück. Die kleinste Einheit von Ether wird <b>Wei</b> genannt. Das ist auch der Wert, der beim Senden von Transaktionen angegeben wird.
@@ -138,7 +138,7 @@ Transaktionen in <b>Ether</b> werden in ähnlicher Weise verwaltet. Aber statt z
 
 1 Wei = 0.000000000000000001 Ether
 
-</div>
+</FeaturedText>
 
 Versuchen Sie, einige Werte nach und von Wei zu konvertieren. [](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations)Beachten Sie, dass es zwischen Ether und Wei noch andere Einheiten gibt. Eine der bekanntesten ist **Gwei**, da Transaktionsgebühren in dieser Einheit angegeben werden.
 
@@ -288,7 +288,7 @@ Out[13]: 1000003000000000000000000
 
 Letzteres sieht gut aus. Der Saldo hat sich von 1.000.000 auf 1.000.003 Ether erhöht. Aber was ist mit dem ersten Konto passiert? Es scheint etwas mehr, als drei Ether verloren zu haben. Leider ist nichts im Leben kostenlos. Die Nutzung des öffentlichen Netzes von Ethereum erfordert, dass das Netzwerk für seine Unterstützung eine Aufwandsentschädigung erhält. Eine kleine Transaktionsgebühr wurde vom Konto abgezogen, in Größenordnung von 31000 Wei.
 
-<div class="featured">Hinweis: Im öffentlichen Netzwerk basieren Transaktionsgebühren auf variablen Netzanforderungen und wie schnell Sie eine Transaktion verarbeiten möchten. Wenn Sie an einer Aufschlüsselung der Berechnung der Gebühren interessiert sind, sehen Sie sich meinen früheren Beitrag auf <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">"Wie Transaktionen in einem Block enthalten sind"</a> an.</div>
+<FeaturedText>Hinweis: Im öffentlichen Netzwerk basieren Transaktionsgebühren auf variablen Netzanforderungen und wie schnell Sie eine Transaktion verarbeiten möchten. Wenn Sie an einer Aufschlüsselung der Berechnung der Gebühren interessiert sind, sehen Sie sich meinen früheren Beitrag auf <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">"Wie Transaktionen in einem Block enthalten sind"</a> an.</FeaturedText>
 
 ## Und atmen {#and-breathe}
 

@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Ethereum для корпоративного сектора {#ethereum-for-enterprise}
 
-<div class="featured">Посібники, статті та інструменти для надання як відкритих, так і приватних блокчейнів Ethereum для корпоративного сектора.</div>
+<FeaturedText>Посібники, статті та інструменти для надання як відкритих, так і приватних блокчейнів Ethereum для корпоративного сектора.</FeaturedText>
 
 ## Чому Ethereum для корпоративного сектора? {#why-enterprise-ethereum}
 
