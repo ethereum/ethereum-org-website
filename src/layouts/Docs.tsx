@@ -210,7 +210,7 @@ export const docsComponents = {
 interface DocsLayoutProps
   extends Pick<
       MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
     >,
     ChildOnlyProp {
   frontmatter: DocsFrontmatter
@@ -219,7 +219,6 @@ interface DocsLayoutProps
 export const DocsLayout = ({
   children,
   frontmatter,
-  slug,
   tocItems,
   lastUpdatedDate,
   crowdinContributors,
@@ -258,7 +257,6 @@ export const DocsLayout = ({
             />
           )}
           <TableOfContents
-            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile
@@ -273,7 +271,6 @@ export const DocsLayout = ({
         </Content>
         {tocItems && (
           <TableOfContents
-            slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
             maxDepth={frontmatter.sidebarDepth!}
