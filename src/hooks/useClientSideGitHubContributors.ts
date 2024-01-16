@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 import type { Author, FileContributorsState } from "@/lib/types"
 
-import { GITHUB_COMMITS_URL, OLD_CONTENT_DIR } from "@/lib/constants"
+import { CONTENT_DIR,GITHUB_COMMITS_URL } from "@/lib/constants"
 
 export const gitHubAuthHeaders = {
   headers: new Headers({
@@ -17,8 +17,7 @@ const fetchGitHubContributors = async (
   relativePath: string
 ): Promise<FileContributorsState> => {
   const url = new URL(GITHUB_COMMITS_URL)
-  // TODO: OLD_CONTENT_DIR -> CONTENT_DIR for production
-  const filePath = join(OLD_CONTENT_DIR, relativePath, "index.md")
+  const filePath = join(CONTENT_DIR, relativePath, "index.md")
   url.searchParams.set("path", filePath)
 
   try {
