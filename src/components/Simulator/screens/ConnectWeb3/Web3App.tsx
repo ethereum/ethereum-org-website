@@ -1,13 +1,14 @@
+import React from "react"
+import { GrMenu } from "react-icons/gr"
 import {
   Box,
   type BoxProps,
+  Flex,
   Icon,
   Text,
-  Flex,
   useColorModeValue,
 } from "@chakra-ui/react"
-import React from "react"
-import { GrMenu } from "react-icons/gr"
+
 import { FAKE_DEMO_ADDRESS } from "../../constants"
 import { EthGlyphIcon } from "../../icons"
 import { NotificationPopover } from "../../NotificationPopover"

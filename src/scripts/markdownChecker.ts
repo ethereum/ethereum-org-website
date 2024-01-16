@@ -1,13 +1,14 @@
-import { Lang } from "../utils/languages"
+import fs from "fs"
+import path from "path"
 
-const fs = require("fs")
-const path = require("path")
-const matter = require("gray-matter")
+import matter from "gray-matter"
+
+import type { Lang } from "../lib/types"
 const argv = require("minimist")(process.argv.slice(2))
 
 const LANG_ARG: string | null = argv.lang || null
-const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
-const PATH_TO_ALL_CONTENT = "./src/content/"
+const PATH_TO_INTL_MARKDOWN = "./public/content/translations/"
+const PATH_TO_ALL_CONTENT = "./public/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
 // Original
 const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
@@ -59,7 +60,7 @@ const SPELLING_MISTAKES: Array<string> = [
   "Ehtereum",
   "Eferum",
 ]
-const CASE_SENSITVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
+const CASE_SENSITIVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 // We should have case sensitive spelling mistakes && check they are not in links.
@@ -68,7 +69,7 @@ interface Languages {
   lang?: Array<Lang>
 }
 
-const langsArray: Array<Lang> = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
+const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN) as Array<Lang>
 langsArray.push("en")
 
 function getAllMarkdownPaths(
@@ -139,19 +140,9 @@ export async function getTranslatedMarkdownPaths() {
   return languages
 }
 
-interface MatterData {
-  title: string
-  description: string
-  lang: Lang
-  published: Date
-  sidebar: string
-  skill: string
-  emoji: string
-}
-
 function processFrontmatter(path: string, lang: string): void {
-  const file: Buffer = fs.readFileSync(path, "utf-8")
-  const frontmatter: MatterData = matter(file).data
+  const file = fs.readFileSync(path, "utf-8")
+  const frontmatter = matter(file).data
 
   if (!frontmatter.title) {
     console.warn(`Missing 'title' frontmatter at ${path}:`)
@@ -286,7 +277,7 @@ function processMarkdown(path: string) {
 
   checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
   // Turned this off for testing as there are lots of Github (instead of GitHub) and Metamask (instead of MetaMask).
-  // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITVE_SPELLING_MISTAKES, true)
+  // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITIVE_SPELLING_MISTAKES, true)
 }
 
 function checkMarkdownSpellingMistakes(

@@ -1,6 +1,8 @@
-import { Box, Flex, type FlexProps, Text } from "@chakra-ui/react"
 import React from "react"
+import { Box, Flex, type FlexProps, Text } from "@chakra-ui/react"
+
 import { getMaxFractionDigitsUsd } from "../utils"
+
 import { TokenBalance } from "./interfaces"
 
 interface IProps extends FlexProps {
