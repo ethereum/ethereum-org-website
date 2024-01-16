@@ -68,7 +68,7 @@ const Nav: FC<IProps> = ({ path }) => {
             justifyContent={{ base: "flex-end", lg: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="lg" path={path} sections={linkSections} />
+            <Menu hideBelow="lg" sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
