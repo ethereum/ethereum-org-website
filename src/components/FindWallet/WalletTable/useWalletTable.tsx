@@ -25,6 +25,8 @@ import {
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { WalletData } from "@/data/wallets/wallet-data"
+
 export interface DropdownOption {
   label: string
   value: string
@@ -34,6 +36,8 @@ export interface DropdownOption {
 }
 
 export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
+
+export type WalletMoreInfoData = WalletData & { moreInfo: boolean; key: string }
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
@@ -173,7 +177,7 @@ export const useWalletTable = ({
     },
   ]
 
-  const [walletCardData, setWalletData] = useState(
+  const [walletCardData, setWalletData] = useState<WalletMoreInfoData[]>(
     walletData.map((wallet) => {
       return { ...wallet, moreInfo: false, key: wallet.name }
     })

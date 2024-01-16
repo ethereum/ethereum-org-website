@@ -3,11 +3,11 @@ import { Box, SimpleGrid, Text, VStack } from "@chakra-ui/react"
 
 import { ButtonLink } from "../../Buttons"
 
-import { DropdownOption } from "./useWalletTable"
+import { DropdownOption, WalletMoreInfoData } from "./useWalletTable"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 
 interface WalletMoreInfoProps {
-  wallet: Record<string, unknown>
+  wallet: WalletMoreInfoData
   filters: Record<string, boolean>
   idx: number
   featureDropdownItems: DropdownOption[]
