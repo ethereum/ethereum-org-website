@@ -1,114 +1,188 @@
-// Libraries
-import React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { graphql, PageProps } from "gatsby"
+import type { GetStaticProps } from "next/types"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
   Flex,
   Heading,
-  HeadingProps,
+  type HeadingProps,
   SimpleGrid,
-  SimpleGridProps,
-  useTheme,
+  type SimpleGridProps,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
-// Components
-import AssetDownload from "../components/AssetDownload"
-import InlineLink from "../components/Link"
-import PageMetadata from "../components/PageMetadata"
-import Translation from "../components/Translation"
-import FeedbackCard from "../components/FeedbackCard"
-import OldHeading from "../components/OldHeading"
-import GatsbyImage from "../components/GatsbyImage"
+import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
-// Types
-import type { ChildOnlyProp, Context } from "../types"
+import AssetDownload from "@/components/AssetDownload"
+import FeedbackCard from "@/components/FeedbackCard"
+import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
 
-// Utils
-import { getImage } from "../utils/image"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+// import efLogo from "@/public/ef-logo.png"
+// import efLogoWhite from "@/public/ef-logo-white.png"
+// import ethDiamondBlackHero from "@/public/assets/eth-diamond-black.png"
+// import ethDiamondPurpleHero from "@/public/assets/eth-diamond-purple.png"
+// import ethGifCat from "@/public/eth-gif-cat.png"
+// import ethGifChalk from "@/public/eth-gif-chalk.png"
+// import ethGifSun from "@/public/eth-gif-sun.png"
+// import ethGifWaves from "@/public/eth-gif-waves.png"
+// import ethPortraitPurpleWhite from "@/public/assets/ethereum-logo-portrait-purple-white.png"
+// import leslieTheRhino from "@/public/upgrades/upgrade_rhino.png"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+import ethDiamondBlack from "@/public/assets/eth-diamond-black.png"
+import ethDiamondBlackGray from "@/public/assets/eth-diamond-black-gray.png"
+import ethDiamondBlackWhite from "@/public/assets/eth-diamond-black-white.jpg"
+import ethDiamondGlyph from "@/public/assets/eth-diamond-glyph.png"
+import ethDiamondPurple from "@/public/assets/eth-diamond-purple.png"
+import ethDiamondPurplePurple from "@/public/assets/eth-diamond-purple-purple.png"
+import ethDiamondPurpleWhite from "@/public/assets/eth-diamond-purple-white.jpg"
+import ethDiamondColor from "@/public/assets/eth-diamond-rainbow.png"
+import ethGlyphColored from "@/public/assets/eth-glyph-colored.png"
+import ethLandscapeBlack from "@/public/assets/ethereum-logo-landscape-black.png"
+import ethLandscapeBlackGray from "@/public/assets/ethereum-logo-landscape-black-gray.png"
+import ethLandscapePurple from "@/public/assets/ethereum-logo-landscape-purple.png"
+import ethLandscapePurplePurple from "@/public/assets/ethereum-logo-landscape-purple-purple.png"
+import ethLandscapePurpleWhite from "@/public/assets/ethereum-logo-landscape-purple-white.png"
+import ethPortraitBlack from "@/public/assets/ethereum-logo-portrait-black.png"
+import ethPortraitBlackGray from "@/public/assets/ethereum-logo-portrait-black-gray.png"
+import ethPortraitPurple from "@/public/assets/ethereum-logo-portrait-purple.png"
+import ethPortraitPurplePurple from "@/public/assets/ethereum-logo-portrait-purple-purple.png"
+import ethWordmarkBlack from "@/public/assets/ethereum-wordmark-black.png"
+import ethWordmarkBlackGray from "@/public/assets/ethereum-wordmark-black-gray.png"
+import ethWordmarkPurple from "@/public/assets/ethereum-wordmark-purple.png"
+import ethWordmarkPurplePurple from "@/public/assets/ethereum-wordmark-purple-purple.png"
+import ethWordmarkPurpleWhite from "@/public/assets/ethereum-wordmark-purple-white.png"
+import developers from "@/public/developers-eth-blocks.png"
+import doge from "@/public/doge-computer.png"
+import enterprise from "@/public/enterprise-eth.png"
+import eth from "@/public/eth.png"
+import finance from "@/public/finance_transparent.png"
+import future from "@/public/future_transparent.png"
+import hackathon from "@/public/hackathon_transparent.png"
+import communityHero from "@/public/heroes/community-hero.png"
+import developersHero from "@/public/heroes/developers-hub-hero.jpg"
+import garden from "@/public/heroes/garden.jpg"
+import guidesHero from "@/public/heroes/guides-hub-hero.jpg"
+import layer2Hero from "@/public/heroes/layer-2-hub-hero.jpg"
+import learnHero from "@/public/heroes/learn-hub-hero.png"
+import quizzesHub from "@/public/heroes/quizzes-hub-hero.png"
+import roadmapHero from "@/public/heroes/roadmap-hub-hero.jpg"
+import hero from "@/public/home/hero.png"
+import heroPanda from "@/public/home/hero-panda.png"
+import mergePanda from "@/public/home/merge-panda.png"
+import impact from "@/public/impact_transparent.png"
+import infrastructure from "@/public/infrastructure_transparent.png"
+import beaconChain from "@/public/upgrades/core.png"
+import merge from "@/public/upgrades/merge.png"
+import newRings from "@/public/upgrades/newrings.png"
+import oldShip from "@/public/upgrades/oldship.png"
+import dao from "@/public/use-cases/dao-2.png"
+import defi from "@/public/use-cases/defi.png"
+import wallet from "@/public/wallet.png"
+import whatIsEthereum from "@/public/what-is-ethereum.png"
 
 const Row = (props: SimpleGridProps) => (
   <SimpleGrid
     templateColumns="repeat(auto-fit, minmax(min(288px, 100%), 1fr))"
     mx={-4}
-    mb={8}
+    mb="8"
     {...props}
   />
 )
 
-const H2 = (prop: ChildOnlyProp & HeadingProps) => (
+const H2 = (props: ChildOnlyProp & HeadingProps) => (
   <Heading
     fontSize={{ base: "2xl", md: "3xl" }}
     lineHeight={1.4}
     mt={16}
-    mb={6}
-    {...prop}
+    mb="6"
+    {...props}
   />
 )
 
-const H3 = (prop: ChildOnlyProp) => (
+const H3 = (props: ChildOnlyProp) => (
   <OldHeading
     as="h3"
     fontSize={{ base: "xl", md: "2xl" }}
     lineHeight={1.4}
-    mb={0}
-    {...prop}
+    mb="0"
+    {...props}
   />
 )
 
-const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
-  const { t } = useTranslation()
-  const theme = useTheme()
-  const isDarkTheme = theme.isDark
-  const assetPageHeroImage = isDarkTheme
-    ? data.ethDiamondPurpleHero
-    : data.ethDiamondBlackHero
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage("assets")
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
+const AssetsPage = () => {
+  const { t } = useTranslation("page-assets")
+  const assetPageHeroImage = useColorModeValue(
+    ethDiamondBlack,
+    ethDiamondPurple
+  )
   return (
     <Flex direction="column" width="full">
       <PageMetadata
         title={t("page-assets-meta-title")}
         description={t("page-assets-meta-desc")}
       />
-      <Box py={4} px={8}>
-        <Flex direction="column" px={8} py={4}>
+      <Box as={MainArticle} py="4" px="8">
+        <Flex direction="column" px="8" py="4">
           <Center>
-            <GatsbyImage
-              image={getImage(assetPageHeroImage)!}
+            <Image
+              src={assetPageHeroImage}
               alt={t("page-assets-eth-diamond-gray")}
+              w="5rem"
             />
           </Center>
           <Center>
-            <Heading as="h1" size="2xl" my={8}>
-              <Translation id="page-assets-h1" />
+            <Heading as="h1" size="2xl" my="8">
+              {t("page-assets-h1")}
             </Heading>
           </Center>
           <Center>
             <InlineLink to="/assets/#illustrations">
-              <Translation id="page-assets-illustrations" />
+              {t("page-assets-illustrations")}
             </InlineLink>
           </Center>
           <Center>
             <InlineLink to="/assets/#historical">
-              <Translation id="page-assets-historical-artwork" />
+              {t("page-assets-historical-artwork")}
             </InlineLink>
           </Center>
           <Center>
             <InlineLink to="/assets/#brand">
-              <Translation id="page-assets-ethereum-brand-assets" />
+              {t("page-assets-ethereum-brand-assets")}
             </InlineLink>
           </Center>
         </Flex>
 
-        <H2 id="illustrations">
-          <Translation id="page-assets-illustrations" />
-        </H2>
+        <H2 id="illustrations">{t("page-assets-illustrations")}</H2>
 
         <Row>
           <AssetDownload
             title={t("page-assets-hero")}
             alt={t("page-assets-hero")}
-            image={data.hero}
+            image={hero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -117,14 +191,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-learn-hero-name")}
             alt={t("page-assets-learn-hero-name")}
-            image={data.learnHero}
+            image={learnHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
           <AssetDownload
             title={t("page-assets-community-hero-name")}
             alt={t("page-assets-community-hero-name")}
-            image={data.communityHero}
+            image={communityHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -133,14 +207,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-quizzes-hero-name")}
             alt={t("page-assets-quizzes-hero-name")}
-            image={data.quizzesHub}
+            image={quizzesHub}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
           <AssetDownload
             title={t("page-assets-developers-hero-name")}
             alt={t("page-assets-developers-hero-name")}
-            image={data.developersHero}
+            image={developersHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -149,14 +223,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-garden-name")}
             alt={t("page-assets-garden-name")}
-            image={data.garden}
+            image={garden}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
           <AssetDownload
             title={t("page-assets-roadmap-hero-name")}
             alt={t("page-assets-roadmap-hero-name")}
-            image={data.roadmapHero}
+            image={roadmapHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -165,14 +239,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-layer-2-hero-name")}
             alt={t("page-assets-layer-2-hero-name")}
-            image={data.layer2Hero}
+            image={layer2Hero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
           <AssetDownload
             title={t("page-assets-guides-hero-name")}
             alt={t("page-assets-guides-hero-name")}
-            image={data.guidesHero}
+            image={guidesHero}
             artistName="Liam Cobb"
             artistUrl="https://liamcobb.com/"
           />
@@ -181,21 +255,21 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-doge")}
             alt={t("page-assets-doge")}
-            image={data.doge}
+            image={doge}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={t("page-assets-blocks")}
             alt={t("page-assets-blocks")}
-            image={data.developers}
+            image={developers}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={t("page-assets-enterprise")}
             alt={t("page-assets-enterprise")}
-            image={data.enterprise}
+            image={enterprise}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -204,21 +278,21 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-infrastructure")}
             alt={t("page-assets-infrastructure")}
-            image={data.infrastructure}
+            image={infrastructure}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={t("page-assets-finance")}
             alt={t("page-assets-finance")}
-            image={data.finance}
+            image={finance}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={t("page-assets-impact")}
             alt={t("page-assets-impact")}
-            image={data.impact}
+            image={impact}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -227,21 +301,21 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-future")}
             alt={t("page-assets-future")}
-            image={data.future}
+            image={future}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={t("page-assets-hackathon")}
             alt={t("page-assets-hackathon")}
-            image={data.hackathon}
+            image={hackathon}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
           <AssetDownload
             title={t("page-assets-robot")}
             alt={t("page-assets-robot")}
-            image={data.wallet}
+            image={wallet}
             artistName="William Tempest"
             artistUrl="https://cargocollective.com/willtempest"
           />
@@ -250,14 +324,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-bazaar")}
             alt={t("page-assets-bazaar")}
-            image={data.whatIsEthereum}
+            image={whatIsEthereum}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
             title={t("page-assets-eth")}
             alt={t("page-assets-eth")}
-            image={data.eth}
+            image={eth}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
@@ -266,14 +340,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-mainnet")}
             alt={t("page-assets-mainnet")}
-            image={data.oldShip}
+            image={oldShip}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
           <AssetDownload
             title={t("page-assets-merge")}
             alt={t("page-assets-merge")}
-            image={data.merge}
+            image={merge}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -282,14 +356,14 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-beacon-chain")}
             alt={t("page-assets-beacon-chain")}
-            image={data.beaconChain}
+            image={beaconChain}
             artistName="Viktor Hachmang"
             artistUrl="http://viktorhachmang.nl/"
           />
           <AssetDownload
             title={t("page-assets-sharding")}
             alt={t("page-assets-sharding")}
-            image={data.newRings}
+            image={newRings}
             artistName="Viktor Hachmang"
             artistUrl="https://viktorhachmang.nl"
           />
@@ -298,122 +372,114 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-defi")}
             alt={t("page-assets-defi")}
-            image={data.defi}
+            image={defi}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
           <AssetDownload
             title={t("page-assets-dao")}
             alt={t("page-assets-dao")}
-            image={data.dao}
+            image={dao}
             artistName="Patrick Atkins"
             artistUrl="https://www.patrickatkins.co.uk/"
           />
         </Row>
-        <H2 id="historical">
-          <Translation id="page-assets-historical-artwork" />
-        </H2>
-        <H2 id="brand">
-          <Translation id="page-assets-ethereum-brand-assets" />
-        </H2>
-        <H3>
-          <Translation id="page-assets-page-assets-transparent-background" />
-        </H3>
+        <H2 id="historical">{t("page-assets-historical-artwork")}</H2>
+        <H2 id="brand">{t("page-assets-ethereum-brand-assets")}</H2>
+        <H3>{t("page-assets-page-assets-transparent-background")}</H3>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-diamond-glyph")}
             alt={t("page-assets-eth-diamond-glyph")}
-            image={data.ethDiamondGlyph}
-            svgUrl="/static/eth-diamond-glyph.svg"
+            image={ethDiamondGlyph}
+            svgUrl="/assets/svgs/eth-diamond-glyph.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
-            image={data.ethDiamondBlack}
-            svgUrl="/static/eth-diamond-black.svg"
+            image={ethDiamondBlack}
+            svgUrl="/assets/svgs/eth-diamond-black.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-color")}
             alt={t("page-assets-eth-diamond-color")}
-            image={data.ethDiamondColor}
-            svgUrl="/static/eth-diamond-rainbow.svg"
+            image={ethDiamondColor}
+            svgUrl="/assets/svgs/eth-diamond-rainbow.svg"
           />
         </Row>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
-            image={data.ethDiamondPurple}
-            svgUrl="/static/eth-diamond-purple.svg"
+            image={ethDiamondPurple}
+            svgUrl="/assets/svgs/eth-diamond-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-colored")}
             alt={t("page-assets-eth-diamond-colored")}
-            image={data.ethGlyphColored}
-            svgUrl="/static/eth-glyph-colored.svg"
+            image={ethGlyphColored}
+            svgUrl="/assets/svgs/eth-glyph-colored.svg"
           />
         </Row>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
-            image={data.ethPortraitBlack}
-            svgUrl="/static/ethereum-logo-portrait-black.svg  "
+            image={ethPortraitBlack}
+            svgUrl="/assets/svgs/ethereum-logo-portrait-black.svg  "
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
-            image={data.ethLandscapeBlack}
-            svgUrl="/static/ethereum-logo-landscape-black.svg"
+            image={ethLandscapeBlack}
+            svgUrl="/assets/svgs/ethereum-logo-landscape-black.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
-            image={data.ethWordmarkBlack}
-            svgUrl="/static/ethereum-wordmark-black.svg"
+            image={ethWordmarkBlack}
+            svgUrl="/assets/svgs/ethereum-wordmark-black.svg"
           />
         </Row>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
-            image={data.ethPortraitPurple}
-            svgUrl="/static/ethereum-logo-portrait-purple.svg"
+            image={ethPortraitPurple}
+            svgUrl="/assets/svgs/ethereum-logo-portrait-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
-            image={data.ethLandscapePurple}
-            svgUrl="/static/ethereum-logo-landscape-purple.svg"
+            image={ethLandscapePurple}
+            svgUrl="/assets/svgs/ethereum-logo-landscape-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
-            image={data.ethWordmarkPurple}
-            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
+            image={ethWordmarkPurple}
+            svgUrl="/assets/svgs/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
-        <H3>
-          <Translation id="page-assets-page-assets-solid-background" />
-        </H3>
+        <H3>{t("page-assets-page-assets-solid-background")}</H3>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
-            image={data.ethDiamondBlackWhite}
-            svgUrl="/static/eth-diamond-black-white.svg"
+            image={ethDiamondBlackWhite}
+            svgUrl="/assets/svgs/eth-diamond-black-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-gray")}
             alt={t("page-assets-eth-diamond-gray")}
-            image={data.ethDiamondBlackGray}
-            svgUrl="/static/eth-diamond-black-gray.svg"
+            image={ethDiamondBlackGray}
+            svgUrl="/assets/svgs/eth-diamond-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-purple")}
             alt={t("page-assets-eth-diamond-purple")}
-            image={data.ethDiamondPurplePurple}
-            svgUrl="/static/eth-diamond-purple-purple.svg"
+            image={ethDiamondPurplePurple}
+            svgUrl="/assets/svgs/eth-diamond-purple-purple.svg"
           />
         </Row>
 
@@ -421,84 +487,82 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
-            image={data.ethDiamondPurpleWhite}
-            svgUrl="/static/eth-diamond-purple-white.svg"
+            image={ethDiamondPurpleWhite}
+            svgUrl="/assets/svgs/eth-diamond-purple-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-diamond-white")}
             alt={t("page-assets-eth-diamond-white")}
-            image={data.ethDiamondPurpleWhite}
-            svgUrl="/static/eth-diamond-purple-white.svg"
+            image={ethDiamondPurpleWhite}
+            svgUrl="/assets/svgs/eth-diamond-purple-white.svg"
           />
         </Row>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-logo-portrait-gray")}
             alt={t("page-assets-eth-logo-portrait-gray")}
-            image={data.ethPortraitBlackGray}
-            svgUrl="/static/ethereum-logo-portrait-black-gray.svg"
+            image={ethPortraitBlackGray}
+            svgUrl="/assets/svgs/ethereum-logo-portrait-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-gray")}
             alt={t("page-assets-eth-logo-landscape-gray")}
-            image={data.ethLandscapeBlackGray}
-            svgUrl="/static/ethereum-logo-landscape-black-gray.svg"
+            image={ethLandscapeBlackGray}
+            svgUrl="/assets/svgs/ethereum-logo-landscape-black-gray.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-gray")}
             alt={t("page-assets-eth-wordmark-gray")}
-            image={data.ethWordmarkBlackGray}
-            svgUrl="/static/ethereum-wordmark-black-gray.svg"
+            image={ethWordmarkBlackGray}
+            svgUrl="/assets/svgs/ethereum-wordmark-black-gray.svg"
           />
         </Row>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-logo-portrait-purple")}
             alt={t("page-assets-eth-logo-portrait-purple")}
-            image={data.ethPortraitPurplePurple}
-            svgUrl="/static/ethereum-logo-portrait-purple-purple.svg"
+            image={ethPortraitPurplePurple}
+            svgUrl="/assets/svgs/ethereum-logo-portrait-purple-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-purple")}
             alt={t("page-assets-eth-logo-landscape-purple")}
-            image={data.ethLandscapePurplePurple}
-            svgUrl="/static/ethereum-logo-landscape-purple-purple.svg"
+            image={ethLandscapePurplePurple}
+            svgUrl="/assets/svgs/ethereum-logo-landscape-purple-purple.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-purple")}
             alt={t("page-assets-eth-wordmark-purple")}
-            image={data.ethWordmarkPurplePurple}
-            svgUrl="/static/ethereum-wordmark-purple-purple.svg"
+            image={ethWordmarkPurplePurple}
+            svgUrl="/assets/svgs/ethereum-wordmark-purple-purple.svg"
           />
         </Row>
         <Row>
           <AssetDownload
             title={t("page-assets-eth-logo-landscape-white")}
             alt={t("page-assets-eth-logo-landscape-white")}
-            image={data.ethLandscapePurpleWhite}
-            svgUrl="/static/ethereum-logo-landscape-purple-white.svg"
+            image={ethLandscapePurpleWhite}
+            svgUrl="/assets/svgs/ethereum-logo-landscape-purple-white.svg"
           />
           <AssetDownload
             title={t("page-assets-eth-wordmark-white")}
             alt={t("page-assets-eth-wordmark-white")}
-            image={data.ethWordmarkPurpleWhite}
-            svgUrl="/static/ethereum-wordmark-purple-white.svg"
+            image={ethWordmarkPurpleWhite}
+            svgUrl="/assets/svgs/ethereum-wordmark-purple-white.svg"
           />
         </Row>
-        <H2 id="historical-illustrations">
-          <Translation id="page-assets-illustrations" />
-        </H2>
+        <H2 id="historical-illustrations">{t("page-assets-illustrations")}</H2>
         <Row>
           <AssetDownload
             title={t("page-assets-hero-panda")}
             alt={t("page-assets-hero-panda")}
-            image={data.heroPanda}
+            image={heroPanda}
           />
           <AssetDownload
             title={t("page-assets-merge-panda")}
             alt={t("page-assets-merge-panda")}
-            image={data.mergePanda}
-            svgUrl="/static/merge-panda.svg"
+            image={mergePanda}
+            svgUrl="/assets/svgs/merge-panda.svg"
           />
         </Row>
       </Box>
@@ -508,289 +572,3 @@ const AssetsPage = ({ data }: PageProps<Queries.AssetsPageQuery, Context>) => {
 }
 
 export default AssetsPage
-
-export const assetItem = graphql`
-  fragment assetItem on File {
-    childImageSharp {
-      gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-    }
-  }
-`
-
-export const query = graphql`
-  query AssetsPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-assets", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    ethDiamondBlackHero: file(
-      relativePath: { eq: "assets/eth-diamond-black.png" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ethDiamondPurpleHero: file(
-      relativePath: { eq: "assets/eth-diamond-purple.png" }
-    ) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 80
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    hero: file(relativePath: { eq: "home/hero.png" }) {
-      ...assetItem
-    }
-    heroPanda: file(relativePath: { eq: "home/hero-panda.png" }) {
-      ...assetItem
-    }
-    mergePanda: file(relativePath: { eq: "home/merge-panda.png" }) {
-      ...assetItem
-    }
-    doge: file(relativePath: { eq: "doge-computer.png" }) {
-      ...assetItem
-    }
-    developers: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      ...assetItem
-    }
-    enterprise: file(relativePath: { eq: "enterprise-eth.png" }) {
-      ...assetItem
-    }
-    wallet: file(relativePath: { eq: "wallet.png" }) {
-      ...assetItem
-    }
-    hackathon: file(relativePath: { eq: "hackathon_transparent.png" }) {
-      ...assetItem
-    }
-    impact: file(relativePath: { eq: "impact_transparent.png" }) {
-      ...assetItem
-    }
-    future: file(relativePath: { eq: "future_transparent.png" }) {
-      ...assetItem
-    }
-    finance: file(relativePath: { eq: "finance_transparent.png" }) {
-      ...assetItem
-    }
-    infrastructure: file(
-      relativePath: { eq: "infrastructure_transparent.png" }
-    ) {
-      ...assetItem
-    }
-    whatIsEthereum: file(relativePath: { eq: "what-is-ethereum.png" }) {
-      ...assetItem
-    }
-    eth: file(relativePath: { eq: "eth.png" }) {
-      ...assetItem
-    }
-    oldShip: file(relativePath: { eq: "upgrades/oldship.png" }) {
-      ...assetItem
-    }
-    merge: file(relativePath: { eq: "upgrades/merge.png" }) {
-      ...assetItem
-    }
-    beaconChain: file(relativePath: { eq: "upgrades/core.png" }) {
-      ...assetItem
-    }
-    newRings: file(relativePath: { eq: "upgrades/newrings.png" }) {
-      ...assetItem
-    }
-    defi: file(relativePath: { eq: "use-cases/defi.png" }) {
-      ...assetItem
-    }
-    dao: file(relativePath: { eq: "use-cases/dao-2.png" }) {
-      ...assetItem
-    }
-    leslieTheRhino: file(relativePath: { eq: "upgrades/upgrade_rhino.png" }) {
-      ...assetItem
-    }
-    ethGifCat: file(relativePath: { eq: "eth-gif-cat.png" }) {
-      ...assetItem
-    }
-    ethGifChalk: file(relativePath: { eq: "eth-gif-chalk.png" }) {
-      ...assetItem
-    }
-    ethGifSun: file(relativePath: { eq: "eth-gif-sun.png" }) {
-      ...assetItem
-    }
-    ethGifWaves: file(relativePath: { eq: "eth-gif-waves.png" }) {
-      ...assetItem
-    }
-    # oldHero: file(relativePath: { eq: "assets/hero.png" }) {
-    #   ...assetItem
-    # }
-    # oldHeroDark: file(relativePath: { eq: "assets/hero-dark.png" }) {
-    #   ...assetItem
-    # }
-    efLogo: file(relativePath: { eq: "ef-logo.png" }) {
-      ...assetItem
-    }
-    efLogoWhite: file(relativePath: { eq: "ef-logo-white.png" }) {
-      ...assetItem
-    }
-    ethDiamondGlyph: file(
-      relativePath: { eq: "assets/eth-diamond-glyph.png" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondColor: file(
-      relativePath: { eq: "assets/eth-diamond-rainbow.png" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondPurple: file(
-      relativePath: { eq: "assets/eth-diamond-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondPurplePurple: file(
-      relativePath: { eq: "assets/eth-diamond-purple-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondBlackGray: file(
-      relativePath: { eq: "assets/eth-diamond-black-gray.png" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondBlackWhite: file(
-      relativePath: { eq: "assets/eth-diamond-black-white.jpg" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondPurpleWhite: file(
-      relativePath: { eq: "assets/eth-diamond-purple-white.jpg" }
-    ) {
-      ...assetItem
-    }
-    ethGlyphColored: file(
-      relativePath: { eq: "assets/eth-glyph-colored.png" }
-    ) {
-      ...assetItem
-    }
-    ethPortraitBlackGray: file(
-      relativePath: { eq: "assets/ethereum-logo-portrait-black-gray.png" }
-    ) {
-      ...assetItem
-    }
-    ethLandscapeBlackGray: file(
-      relativePath: { eq: "assets/ethereum-logo-landscape-black-gray.png" }
-    ) {
-      ...assetItem
-    }
-    ethWordmarkBlackGray: file(
-      relativePath: { eq: "assets/ethereum-wordmark-black-gray.png" }
-    ) {
-      ...assetItem
-    }
-    ethDiamondBlack: file(
-      relativePath: { eq: "assets/eth-diamond-black.png" }
-    ) {
-      ...assetItem
-    }
-    ethPortraitBlack: file(
-      relativePath: { eq: "assets/ethereum-logo-portrait-black.png" }
-    ) {
-      ...assetItem
-    }
-    ethLandscapeBlack: file(
-      relativePath: { eq: "assets/ethereum-logo-landscape-black.png" }
-    ) {
-      ...assetItem
-    }
-    ethWordmarkBlack: file(
-      relativePath: { eq: "assets/ethereum-wordmark-black.png" }
-    ) {
-      ...assetItem
-    }
-    ethPortraitPurple: file(
-      relativePath: { eq: "assets/ethereum-logo-portrait-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethLandscapePurple: file(
-      relativePath: { eq: "assets/ethereum-logo-landscape-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethWordmarkPurple: file(
-      relativePath: { eq: "assets/ethereum-wordmark-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethPortraitPurplePurple: file(
-      relativePath: { eq: "assets/ethereum-logo-portrait-purple-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethLandscapePurplePurple: file(
-      relativePath: { eq: "assets/ethereum-logo-landscape-purple-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethWordmarkPurplePurple: file(
-      relativePath: { eq: "assets/ethereum-wordmark-purple-purple.png" }
-    ) {
-      ...assetItem
-    }
-    ethPortraitPurpleWhite: file(
-      relativePath: { eq: "assets/ethereum-logo-portrait-purple-white.png" }
-    ) {
-      ...assetItem
-    }
-    ethLandscapePurpleWhite: file(
-      relativePath: { eq: "assets/ethereum-logo-landscape-purple-white.png" }
-    ) {
-      ...assetItem
-    }
-    ethWordmarkPurpleWhite: file(
-      relativePath: { eq: "assets/ethereum-wordmark-purple-white.png" }
-    ) {
-      ...assetItem
-    }
-    communityHero: file(relativePath: { eq: "heroes/community-hero.png" }) {
-      ...assetItem
-    }
-    developersHero: file(
-      relativePath: { eq: "heroes/developers-hub-hero.jpg" }
-    ) {
-      ...assetItem
-    }
-    garden: file(relativePath: { eq: "heroes/garden.jpg" }) {
-      ...assetItem
-    }
-    guidesHero: file(relativePath: { eq: "heroes/guides-hub-hero.jpg" }) {
-      ...assetItem
-    }
-    layer2Hero: file(relativePath: { eq: "heroes/layer-2-hub-hero.jpg" }) {
-      ...assetItem
-    }
-    learnHero: file(relativePath: { eq: "heroes/learn-hub-hero.png" }) {
-      ...assetItem
-    }
-    quizzesHub: file(relativePath: { eq: "heroes/quizzes-hub-hero.png" }) {
-      ...assetItem
-    }
-    roadmapHero: file(relativePath: { eq: "heroes/roadmap-hub-hero.jpg" }) {
-      ...assetItem
-    }
-  }
-`

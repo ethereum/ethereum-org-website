@@ -1,0 +1,56 @@
+{
+  "short_name": "ethereum.org",
+  "name": "ethereum.org",
+  "icons": [
+    {
+      "src": "/assets/manifest-app-icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/manifest-app-icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/assets/manifest-app-icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "id": "/",
+  "start_url": "/en/",
+  "background_color": "#222",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#fff",
+  "shortcuts": [
+    {
+      "name": "ethereum.org Developer Hub",
+      "short_name": "Developer Hub",
+      "description": "Documentation, tutorials, and tools for developers building on Ethereum.",
+      "url": "/developers",
+      "icons": [
+        {
+          "src": "/assets/manifest-app-icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ],
+  "description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.",
+  "screenshots": [
+    {
+      "src": "/assets/manifest-homepage-screenshot.png",
+      "type": "image/png",
+      "sizes": "2048x1734",
+      "form_factor": "wide"
+    },
+    {
+      "src": "/assets/manifest-homepage-screenshot-mobile.png",
+      "type": "image/png",
+      "sizes": "1290x2195",
+      "form_factor": "narrow"
+    }
+  ]
+}
