@@ -44,17 +44,16 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   />
 )
 
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props: unknown) => (
-  <Box mt="auto">
-    <ChakraSelect
-      maxW="none"
-      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
-      {...props}
-    />
-  </Box>
+const StyledSelect = chakra(
+  (props: { className?: string; classNamePrefix?: string }) => (
+    <Box mt="auto">
+      <Select
+        maxW="none"
+        sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
+        {...props}
+      />
+    </Box>
+  )
 )
 
 const SelectedContainer = (props: ChildOnlyProp) => (
@@ -249,6 +248,7 @@ const Layer2Onboard: React.FC<IProps> = ({
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
+            // @ts-expect-error Missing type for options prop
             options={layer2Options}
             onChange={(selectedOption: Layer2Option) => {
               trackCustomEvent({
@@ -278,6 +278,7 @@ const Layer2Onboard: React.FC<IProps> = ({
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
+            // @ts-expect-error Missing type for options prop
             options={[
               {
                 options: [...cexSupportOptions],
