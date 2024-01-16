@@ -1,8 +1,9 @@
 import * as React from "react"
+import { BsSlashSquare } from "react-icons/bs"
 import { VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import Input from "."
-import { BsSlashSquare } from "react-icons/bs"
 
 type InputType = typeof Input
 
