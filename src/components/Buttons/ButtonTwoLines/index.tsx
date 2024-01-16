@@ -1,12 +1,14 @@
-import * as React from "react"
-import { Icon, Stack, Text } from "@chakra-ui/react"
 import type { IconType } from "react-icons/lib"
-import Button, { type IProps as ButtonProps } from "../Button"
-import ButtonLink, { type IProps as ButtonLinkProps } from "../ButtonLink"
+import { Icon, Stack, Text } from "@chakra-ui/react"
+
+import { Button, type ButtonProps } from "@/components/Buttons"
+import ButtonLink, {
+  type ButtonLinkProps,
+} from "@/components/Buttons/ButtonLink"
 
 type CommonProps = {
   icon: IconType | typeof Icon
-  iconAlignment?: "left" | "right"
+  iconAlignment?: "left" | "right" | "start" | "end"
   /**
    * Reduced choices of the button variant.
    *
@@ -48,7 +50,7 @@ const hasHref = (props: ButtonTwoLinesProps): props is ButtonLinkTypeProps => {
 const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
   const {
     icon: Icon,
-    iconAlignment = "left",
+    iconAlignment = "start",
     mainText,
     helperText,
     reverseTextOrder = false,
@@ -56,7 +58,7 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
     ...rest
   } = props
 
-  const isIconLeft = iconAlignment === "left"
+  const isIconLeft = ["left", "start"].includes(iconAlignment)
 
   const vertPadding: ButtonTwoLinesProps["py"] = size === "md" ? "4" : "2"
 
@@ -69,6 +71,8 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
   const Component = hasHref(props) ? ButtonLink : Button
 
   return (
+    // TODO: fix type error
+    // @ts-ignore
     <Component
       {...buttonStyles}
       size={size}
@@ -82,7 +86,7 @@ const ButtonTwoLines = (props: ButtonTwoLinesProps) => {
       }}
     >
       <Stack
-        spacing={0}
+        spacing="0"
         flexDir={reverseTextOrder ? "column-reverse" : "column"}
       >
         <Text

@@ -1,20 +1,20 @@
-import React from "react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbProps,
+  type BreadcrumbProps as ChakraBreadcrumbProps,
 } from "@chakra-ui/react"
 
-import { BaseLink } from "../Link"
+import { BaseLink } from "@/components/Link"
 
-export interface IProps extends BreadcrumbProps {
+export type BreadcrumbsProps = ChakraBreadcrumbProps & {
   slug: string
   startDepth?: number
 }
 
-interface Crumb {
+type Crumb = {
   fullPath: string
   text: string
 }
@@ -32,17 +32,16 @@ interface Crumb {
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs: React.FC<IProps> = ({
+const Breadcrumbs = ({
   slug: originalSlug,
   startDepth = 0,
-  ...restProps
-}) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
+  ...props
+}: BreadcrumbsProps) => {
+  const { t } = useTranslation("common")
+  const { locale, asPath } = useRouter()
 
-  const hasHome = originalSlug.includes(`/${language}/`)
-  const slug = originalSlug.replace(`/${language}/`, "/")
-
+  const hasHome = asPath !== "/"
+  const slug = originalSlug.replace(`/${locale}/`, "/")
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 
@@ -57,28 +56,27 @@ const Breadcrumbs: React.FC<IProps> = ({
         ]
       : []),
     ,
-    ...sliced.map((path, idx) => {
-      return {
-        fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
-        text: t(path),
-      }
-    }),
+    ...sliced.map((path, idx) => ({
+      fullPath: slugChunk.slice(0, idx + 2).join("/") + "/",
+      text: t(path),
+    })),
   ]
     .filter((item): item is Crumb => !!item)
     .slice(startDepth)
 
   return (
-    <Breadcrumb dir="auto" {...restProps}>
-      {crumbs.map((crumb, idx) => {
-        const isCurrentPage = slug === crumb.fullPath
+    <Breadcrumb {...props}>
+      {crumbs.map(({ fullPath, text }) => {
+        const isCurrentPage = slug === fullPath
         return (
-          <BreadcrumbItem key={idx} isCurrentPage={isCurrentPage}>
+          <BreadcrumbItem key={fullPath} isCurrentPage={isCurrentPage}>
             <BreadcrumbLink
               as={BaseLink}
-              to={crumb.fullPath}
+              to={fullPath}
               isPartiallyActive={isCurrentPage}
+              textTransform="uppercase"
             >
-              {crumb.text.toUpperCase()}
+              {text}
             </BreadcrumbLink>
           </BreadcrumbItem>
         )

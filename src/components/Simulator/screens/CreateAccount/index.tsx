@@ -1,8 +1,11 @@
 import React, { useState } from "react"
+
+import { generateInvalidSafeSeed } from "@/lib/utils/generateSeed"
+
 import type { PhoneScreenProps } from "../../interfaces"
-import { generateInvalidSafeSeed } from "../../../../utils/generateSeed"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
+
 import { GeneratingKeys } from "./GeneratingKeys"
 import { HomeScreen } from "./HomeScreen"
 import { InitialWordDisplay } from "./InitialWordDisplay"
