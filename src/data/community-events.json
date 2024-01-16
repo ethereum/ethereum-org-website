@@ -187,5 +187,14 @@
     "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
     "startDate": "2023-12-8",
     "endDate": "2023-12-10"
+  },
+  {
+    "title": "Devcon 7 - Southeast Asia",
+    "to": "https://devcon.org/",
+    "sponsor": null,
+    "location": "Bangkok, Thailand",
+    "description": "Discover Ethereum and its community at Devcon, the conference for developers, thinkers, and makers and a place for learning, knowledge sharing, and fun.",
+    "startDate": "2024-11-12",
+    "endDate": "2024-11-15"
   }
 ]
