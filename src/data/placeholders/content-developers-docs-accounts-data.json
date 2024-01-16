@@ -26,5 +26,9 @@
   "/content/translations/zh-tw/developers/docs/accounts/accounts.png": {
     "hash": "a2725091",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB0ElEQVR4nGM4W7uEd1PhbB4Zrv+MQMwExMxx0f/Zykr+s0+teM053Xc6e4tLC0ur61GWBbkLWEFiIDkQrqv9z8uwqX0Tz7llu3hXr/4vPGvmX3EQnb/oKuv/zg6m/00qou+b0jWOtO9VWjvlmPzBxdck/0924b3XHsvGAAQd7f9FQDTj+o3/w5et/H9i9twvl1at/b972fr/ZiCJjzXV3Bs3/C+YN+/boalTXx1bve7/tC0Lbkj/l+ZiBMlXVvwQYpg16wn7li3/2YCYB4j59+79z7Xz/3/m/55uLP87MjhWrfufunjxv1UzZrxdt3bd//a9Cx5LM0BBVcV/IYbZs/6zM2AB/zs8WP7nC7Ku2vA/e/7C37vnzP2yd9Xq/5MPLbkgtK39hMXqCY/0w3L/c6EYAApIkJfABsTxM/8vC2AHGpAxfdrbdRMnPNiwdPn/3qNzjgrPbnkeN6fzQ6gFMLBxu2CrFPO9dmO25ev+Z8+e/Wn/pCnPDy9Y/n/qjlWXhecVnYxfWn4uLL4NnwEgF1QJcf4v02UHhcX7jhAuEP2/Q4Sptv6/d0XDf8vpU/9zgqKCD4glgFgME/+V6Gn6LDm55q8ECIPYYP6k/7xQfVIAixwCZg8/fsIAAAAASUVORK5CYII="
+  },
+  "/content/translations/hu/developers/docs/accounts/accounts.png": {
+    "hash": "a050ce79",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB4klEQVR4nHVRS2gTURR97SSZydQ2mIQ2rdm4cWUXIojiwo1YXVQpiCjVLkQ0EqwUtSahikr0PUPFT4ifmTQzOiExMzKJMAqaBsGSWnQnKrjJShSUVrDSBjUemVoE0R443B/3cC6XMApBj+kte3iTC4poDorgBvrhGj4OPhX55M4dzAnKhrAzvjnuUI+oTrtnz2yePoVWEo18dL+nQ+3l7JcO6VajwzDgSzyH4/7efg5nVntm2LFVrxNy91P5xcqH2pvOebaprUb3uQghhFH47dikl7Arb+CZcuf7S/0eyrki1tmDz4yKRROD2RwmFO3npGHiekV9u4IsIhqpe4kkveMtCy7LwjJNg6eiQXwEcNi2xQEWEvQiDmTG5vWb0rR5Vwet6NN/BGIReIksgSf/AdhWB44ud+YLCGfUb+WMWq9kC0hWjVe+x6NT660rtTU79qPlL4GgiCb7pAWBAQ8H+SSvFxCSx76acnq2dDuLS9V01Xc1Prf7cgLb+3rBL+3gQRdXo2tdeglhRfvxJK3UJ/IFpMa1Kf/5Ex/6Lkbneg5fgLC0gO0g5nVjuJtHqEeYGdwpInRIAPM3j8TQGz2LjTdScNuvaGMUAUbR/i8bgdFzs51J2ggkR37nC/U1tC7udf0CdK8BM4Vbt1AAAAAASUVORK5CYII="
   }
 }
