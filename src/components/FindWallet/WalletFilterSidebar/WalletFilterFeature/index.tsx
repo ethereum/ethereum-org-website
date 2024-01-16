@@ -1,4 +1,5 @@
 import React, { MutableRefObject } from "react"
+import { uniqueId } from "lodash"
 import { BsToggleOff, BsToggleOn } from "react-icons/bs"
 import {
   Accordion,
@@ -18,9 +19,10 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react"
-import { uniqueId } from "lodash"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { useWalletFilterFeature } from "./useWalletFilterFeature"
-import { trackCustomEvent } from "../../../../utils/matomo"
 
 const FilterToggle = ({
   ariaLabel,
@@ -116,6 +118,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                     const LabelIcon = item.icon
                     return (
                       <Box
+                        key={itemIdx}
                         borderBottom="1px"
                         borderColor="lightBorder"
                         pt="1.16rem"
@@ -195,7 +198,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                         </SimpleGrid>
                         {item.options.length > 0 && item.showOptions && (
                           <HStack mt={3.5} spacing={2}>
-                            {item.options.map((option) => {
+                            {item.options.map((option, optionIdx) => {
                               const handleClick = () => {
                                 let closeShowOptions = true
 
@@ -237,6 +240,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                               }
                               return (
                                 <Checkbox
+                                  key={optionIdx}
                                   aria-label={option.name}
                                   isChecked={
                                     restProps.filters[option.filterKey!]

@@ -1,4 +1,4 @@
-import * as React from "react"
+/* eslint-disable react/jsx-key */
 import { createIcon } from "@chakra-ui/react"
 
 export const CautionProductGlyphIcon = createIcon({

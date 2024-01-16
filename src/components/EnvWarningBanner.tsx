@@ -1,5 +1,6 @@
 import React from "react"
 import { FlexProps } from "@chakra-ui/react"
+
 import InfoBanner from "./InfoBanner"
 import Translation from "./Translation"
 
