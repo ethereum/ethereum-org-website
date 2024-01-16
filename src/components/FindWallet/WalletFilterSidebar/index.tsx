@@ -56,8 +56,8 @@ interface WalletFilterSidebarProps extends Omit<TabsProps, "children"> {
   setFilters: React.Dispatch<React.SetStateAction<FiltersType>>
   selectedPersona: number
   setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
-  updateFilterOption: (key: any) => void
-  updateFilterOptions: (keys: any, value: any) => void
+  updateFilterOption: (key: unknown) => void
+  updateFilterOptions: (keys: unknown, value: unknown) => void
 }
 
 const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({

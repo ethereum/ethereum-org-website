@@ -76,7 +76,7 @@ const Title: React.FC<{ title: string }> = ({ title }) => {
   )
 }
 
-const Subtitle: React.FC<{ children: any }> = ({ children }) => {
+const Subtitle: React.FC<{ children: unknown }> = ({ children }) => {
   return (
     <OldHeading
       as="h4"
@@ -93,7 +93,7 @@ const Subtitle: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const Body: React.FC<{ children: any }> = ({ children }) => {
+const Body: React.FC<{ children: unknown }> = ({ children }) => {
   return (
     <Box fontSize="xl" lineHeight="140%" color="black300">
       {children}
@@ -117,7 +117,7 @@ const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
   )
 }
 
-const Row: React.FC<{ children: any }> = ({ children }) => {
+const Row: React.FC<{ children: unknown }> = ({ children }) => {
   return (
     <Flex
       justify="space-between"
@@ -129,7 +129,7 @@ const Row: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const Column: React.FC<{ children: any }> = ({ children }) => {
+const Column: React.FC<{ children: unknown }> = ({ children }) => {
   return <Box width="100%">{children}</Box>
 }
 
@@ -287,8 +287,8 @@ const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
       maxW="100%"
     >
       {items.map((item, idx) => {
-        let columnNumber = 1
-        let rowNumber = 1
+        const columnNumber = 1
+        const rowNumber = 1
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
         return (

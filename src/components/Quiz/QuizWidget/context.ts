@@ -1,6 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from "react"
 
-import { QuizStatus, UserStats } from "@/lib/types"
+import { QuizStatus } from "@/lib/types"
 import { AnswerChoice, Quiz } from "@/lib/interfaces"
 
 import { AnswerStatus } from "./useQuizWidget"

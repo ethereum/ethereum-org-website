@@ -35,7 +35,6 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
-import PageMetadata from "@/components/PageMetadata"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"

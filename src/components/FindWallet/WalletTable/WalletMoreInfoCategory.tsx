@@ -9,9 +9,9 @@ import Tooltip from "../../Tooltip"
 import { DropdownOption } from "./useWalletTable"
 
 interface WalletMoreInfoCategoryProps {
-  wallet: any
+  wallet: unknown
   orderedFeatureDropdownItems: DropdownOption[]
-  headingLabel: any
+  headingLabel: unknown
   sectionName: string
 }
 

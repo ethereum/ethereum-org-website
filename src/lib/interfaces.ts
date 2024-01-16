@@ -1,5 +1,4 @@
 import { StaticImageData } from "next/image"
-import type { ReactNode } from "react"
 
 import type {
   CrowdinContributor,

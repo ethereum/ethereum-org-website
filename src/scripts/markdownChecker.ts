@@ -76,7 +76,7 @@ function getAllMarkdownPaths(
   dirPath: string,
   arrayOfMarkdownPaths: Array<string> = []
 ): Array<string> {
-  let files: Array<string> = fs.readdirSync(dirPath)
+  const files: Array<string> = fs.readdirSync(dirPath)
 
   arrayOfMarkdownPaths = arrayOfMarkdownPaths || []
 
@@ -174,7 +174,7 @@ function processFrontmatter(path: string, lang: string): void {
       console.warn(`Missing 'published' frontmatter at ${path}:`)
     } else {
       try {
-        let stringDate = frontmatter.published.toISOString().slice(0, 10)
+        const stringDate = frontmatter.published.toISOString().slice(0, 10)
         const dateIsFormattedCorrectly = TUTORIAL_DATE_REGEX.test(stringDate)
 
         if (!dateIsFormattedCorrectly) {

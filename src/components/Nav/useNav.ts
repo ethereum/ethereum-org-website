@@ -281,7 +281,7 @@ export const useNav = ({ path }: { path: string }) => {
     },
   ]
 
-  let mobileLinkSections = cloneDeep(linkSections)
+  const mobileLinkSections = cloneDeep(linkSections)
   const toggleMenu = (): void => {
     setIsMenuOpen((prev) => !prev)
   }

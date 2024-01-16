@@ -15,9 +15,9 @@ import Emoji from "./Emoji"
 import Text from "./OldText"
 
 export interface IProps {
-  monthData: any
-  quarterData: any
-  allTimeData: any
+  monthData: unknown
+  quarterData: unknown
+  allTimeData: unknown
 }
 
 const Button = (props) => {

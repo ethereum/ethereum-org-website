@@ -47,7 +47,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
 const ChakraSelect = chakra((props: { className?: string }) => (
   <Select {...props} />
 ))
-const StyledSelect = (props: any) => (
+const StyledSelect = (props: unknown) => (
   <Box mt="auto">
     <ChakraSelect
       maxW="none"

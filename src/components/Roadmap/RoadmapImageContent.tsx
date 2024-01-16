@@ -6,7 +6,7 @@ import wallet from "@/public/wallet.png"
 
 export interface IProps {
   children: React.ReactNode
-  title: String
+  title: string
 }
 
 const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => (

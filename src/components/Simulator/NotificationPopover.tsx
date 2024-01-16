@@ -9,7 +9,6 @@ import {
   PopoverHeader,
   PopoverProps,
   PopoverTrigger,
-  Portal,
 } from "@chakra-ui/react"
 
 interface IProps

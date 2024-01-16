@@ -193,7 +193,7 @@ const Blockie = (props: { src: string }) => (
   <Img src={props.src} borderRadius="base" height={16} width={16} />
 )
 
-const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
+const StyledFakeLink = (props: { onClick: unknown; children: ReactNode }) => (
   <Text
     as="button"
     onClick={props.onClick}
@@ -254,7 +254,7 @@ const DepositContractPage = () => {
     const browserHasTextToSpeechSupport = !!window.speechSynthesis
     if (!browserHasTextToSpeechSupport) return
     // Create textToSpeechRequest
-    let speech = new SpeechSynthesisUtterance()
+    const speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
     speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
     speech.volume = 1

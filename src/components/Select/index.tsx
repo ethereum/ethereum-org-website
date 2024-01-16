@@ -8,10 +8,10 @@ import {
 interface SelectProps
   extends Omit<ChakraSelectProps, "defaultValue">,
     Pick<ThemingProps<"Select">, "variant"> {
-  defaultValue?: { label: string; value: string; [x: string]: any }
-  onChange(selectedOption: any | ""): void
+  defaultValue?: { label: string; value: string; [x: string]: unknown }
+  onChange(selectedOption: unknown | ""): void
   placeholder?: string
-  options: Record<string, any>[]
+  options: Record<string, unknown>[]
 }
 
 const Select = (props: SelectProps) => {

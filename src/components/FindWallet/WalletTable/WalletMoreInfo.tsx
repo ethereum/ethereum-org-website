@@ -7,7 +7,7 @@ import { DropdownOption } from "./useWalletTable"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 
 interface WalletMoreInfoProps {
-  wallet: Record<string, any>
+  wallet: Record<string, unknown>
   filters: Record<string, boolean>
   idx: number
   featureDropdownItems: DropdownOption[]

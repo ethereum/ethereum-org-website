@@ -12,8 +12,8 @@ import {
 export interface EthTagProps extends TagProps {
   label: string
   isCloseable?: boolean
-  leftIcon?: any
-  rightIcon?: any
+  leftIcon?: unknown
+  rightIcon?: unknown
   status?: "normal" | "tag" | "success" | "error" | "warning"
 }
 

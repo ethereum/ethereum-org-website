@@ -27,7 +27,7 @@ type DataType = {
   valid: string
   caution: string
   warning: string
-  Svg: any
+  Svg: unknown
   matomo: MatomoEventOptions
 }
 

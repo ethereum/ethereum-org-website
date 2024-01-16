@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -125,7 +125,7 @@ const FindWalletPage = () => {
 
   const updateFilterOptions = (keys, value) => {
     const updatedFilters = { ...filters }
-    for (let key of keys) {
+    for (const key of keys) {
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)

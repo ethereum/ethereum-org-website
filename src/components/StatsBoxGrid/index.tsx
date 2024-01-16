@@ -1,6 +1,6 @@
 import { SimpleGrid } from "@chakra-ui/react"
 
-import type { AllMetricData, MetricReturnData } from "@/lib/types"
+import type { AllMetricData } from "@/lib/types"
 
 import { GridItem } from "./GridItem"
 import { useStatsBoxGrid } from "./useStatsBoxGrid"
