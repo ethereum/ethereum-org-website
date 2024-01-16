@@ -19,7 +19,7 @@ const liCustomType: SystemStyleObject = {
   content: `counter(li-counter)`,
   position: "absolute",
   top: "-3px", // adjusts circle + number up and down
-  left: "-3rem",
+  insetInlineStart: "-3rem",
   width: "34px",
   height: "1.6rem",
   pt: "9px", // adjusts number up and down,
@@ -36,7 +36,7 @@ const OrderedList: React.FC<IProps> = ({ listData, className }) => {
     <Box mb="1.45rem" className={className}>
       <ChakraOrderedList
         styleType="none"
-        pl={8}
+        ps={8}
         mb="0"
         ms="1.45rem"
         sx={{
