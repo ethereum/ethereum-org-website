@@ -14,7 +14,7 @@ export const gitHubAuthHeaders = {
 }
 
 const fetchGitHubContributors = async (
-  relativePath: string,
+  relativePath: string
 ): Promise<FileContributorsState> => {
   const url = new URL(GITHUB_COMMITS_URL)
   // TODO: OLD_CONTENT_DIR -> CONTENT_DIR for production
@@ -63,7 +63,7 @@ export const useClientSideGitHubContributors = (
 ): FileContributorsState => {
   const [state, setState] = useState<FileContributorsState>({ loading: true })
   useEffect(() => {
-    ; (async () => {
+    ;(async () => {
       setState(await fetchGitHubContributors(relativePath))
     })()
   }, [relativePath])

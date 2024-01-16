@@ -122,7 +122,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/learning-tools"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -473,7 +473,6 @@ const LearningToolsPage = () => {
           <FeedbackCard />
         </ContentBox>
       </MainArticle>
-      
     </Page>
   )
 }

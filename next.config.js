@@ -6,14 +6,14 @@ const LIMIT_CPUS = Number(process.env.LIMIT_CPUS || 2)
 
 const experimental = LIMIT_CPUS
   ? {
-    // This option could be enabled in the future when flagged as stable, to speed up builds
-    // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
-    // mdxRs: true,
+      // This option could be enabled in the future when flagged as stable, to speed up builds
+      // (see https://nextjs.org/docs/pages/building-your-application/configuring/mdx#using-the-rust-based-mdx-compiler-experimental)
+      // mdxRs: true,
 
-    // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
-    workerThreads: false,
-    cpus: LIMIT_CPUS,
-  }
+      // Reduce the number of cpus and disable parallel threads in prod envs to consume less memory
+      workerThreads: false,
+      cpus: LIMIT_CPUS,
+    }
   : {}
 
 /** @type {import('next').NextConfig} */

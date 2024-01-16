@@ -3,7 +3,7 @@ title: A letétbe helyezés visszavonása
 description: A letétvisszavonás működésének és a jutalmak megszerzésének áttekintése
 lang: hu
 template: staking
-image: ..//staking/leslie-withdrawal.png
+image: /staking/leslie-withdrawal.png
 alt: Leslie, a rinocérosz a letétbe helyezésből származó jutalmaival
 sidebarDepth: 2
 summaryPoints:

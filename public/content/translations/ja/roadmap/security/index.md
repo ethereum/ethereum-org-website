@@ -2,7 +2,7 @@
 title: より安全なイーサリアム
 description: イーサリアムは、現存するスマートコントラクトプラットフォームの中で、最も安全かつ分散化されています。 しかし、将来にわたってあらゆるレベルの攻撃に対して耐性を維持するためには、改善すべき点がまだあります。
 lang: ja
-image: ..//roadmap/roadmap-security.png
+image: /roadmap/roadmap-security.png
 alt: "イーサリアムロードマップ"
 template: roadmap
 ---

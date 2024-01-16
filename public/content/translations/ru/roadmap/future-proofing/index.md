@@ -2,7 +2,7 @@
 title: Ethereum, готовый к будущему
 description: Эти обновления закрепляют положение Ethereum в качестве устойчивого и децентрализованного базового блокчейна для будущего независимо от того, каким оно будет.
 lang: ru
-image: ..//roadmap/roadmap-future.png
+image: /roadmap/roadmap-future.png
 alt: "Дорожная карта Ethereum"
 template: roadmap
 ---
