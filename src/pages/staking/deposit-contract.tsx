@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
@@ -10,9 +10,11 @@ import {
   type ButtonProps,
   Checkbox,
   Flex,
+  forwardRef,
   Heading,
   Img,
   Text,
+  TextProps,
   useToken,
 } from "@chakra-ui/react"
 
@@ -193,17 +195,16 @@ const Blockie = (props: { src: string }) => (
   <Img src={props.src} borderRadius="base" height={16} width={16} />
 )
 
-const StyledFakeLink = (props: { onClick: unknown; children: ReactNode }) => (
+const StyledFakeLink = forwardRef<TextProps, "button">((props, ref) => (
   <Text
+    ref={ref}
     as="button"
-    onClick={props.onClick}
     me={2}
     color="primary.base"
     cursor="pointer"
-  >
-    {props.children}
-  </Text>
-)
+    {...props}
+  />
+))
 
 const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
