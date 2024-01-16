@@ -1,0 +1,10 @@
+{
+  "/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-bought-events.png": {
+    "hash": "619d9193",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nGOYOHny2XPnnjx9Ckdv3r6dMmVKbFxcbV1dXX3dlClTjx0/fufuXYgsQ2xcPJAPVISsobevv6KiAii+Y+eu7Tt3AhFCQ1Z2NlDi5evXyJYAVew7cACo6Oq1axAENAViKAOQg6wUbgnQnWXl5UDjgFbV19evXLUKYg8Dpmokn0xlZePg5xewsLRsbGwCCuLTALR50eLFza2tbW3tQOOBFkLcgl0D0HigdGFRkYurW3JKCsQ9UCehhSlENVAOogjodaACiI8hngYAxoApHUENSzIAAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/transfer-and-sold-events.png": {
+    "hash": "757494fc",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA0ElEQVR4nGOIio6+dv3a/QcP4OjFy5er16zx9vFpamqeNHnyrNmzgeSevXshsgz9EyeeO3cOWQMQXbt+HagCqO3osWMfP30CIqApUA1A3ZgazoHBli1bFi9eDNQG0QkUARrEAHEDmgYQun+/sqpKRFRUWESEmZ3dxtZu/qJFh44cYsCiFMkebV1de0fHzKycxqYmiNE4NQBVd3Z1ZWZlFRUVA60Ceh3oPKDH8NkA1ODh5QVUevTY8bPnzp47fwHkB6AmTD8AvQj0MVAcqAJNCgBUbCJzpjphJgAAAABJRU5ErkJggg=="
+  }
+}
