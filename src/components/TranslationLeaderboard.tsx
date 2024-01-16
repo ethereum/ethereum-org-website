@@ -123,8 +123,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
   )
 
   const leaderboardData = {
+    // @ts-expect-error monthData not typed from JSON
     monthData: sortAndFilterData(monthData.data),
+    // @ts-expect-error quarterData not typed from JSON
     quarterData: sortAndFilterData(quarterData.data),
+    // @ts-expect-error allTimeData not typed from JSON
     allTimeData: sortAndFilterData(allTimeData.data),
   }
 
