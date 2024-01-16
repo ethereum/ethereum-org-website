@@ -1,3 +1,8 @@
+// TODO
+import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
   Flex,
@@ -8,16 +13,13 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-import { graphql, useStaticQuery } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import React from "react"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 
-import { Lang } from "../utils/languages"
-import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-import { BaseLink } from "./Link"
-import Translation from "./Translation"
+import { Lang, TranslationKey } from "@/lib/types"
+
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const socialLinks = [
   {
@@ -48,16 +50,16 @@ export interface LinkSection {
   }>
 }
 
-export interface IProps {}
+export interface IProps {
+  lastDeployDate: string
+}
 
-const Footer: React.FC<IProps> = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
 
-  const isPageRightToLeft = isLangRightToLeft(language as Lang)
-
+  // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
-
   const linkSections: Array<LinkSection> = [
     {
       title: t("use-ethereum"),
@@ -288,18 +290,6 @@ const Footer: React.FC<IProps> = () => {
     },
   ]
 
-  const data = useStaticQuery(graphql`
-    query {
-      allSiteBuildMetadata {
-        edges {
-          node {
-            buildTime
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Box as="footer" p="1rem 2rem">
       <Flex
@@ -310,10 +300,7 @@ const Footer: React.FC<IProps> = () => {
       >
         <Box color="text200">
           <Translation id="website-last-updated" />:{" "}
-          {getLocaleTimestamp(
-            language as Lang,
-            data.allSiteBuildMetadata.edges[0].node.buildTime
-          )}
+          {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
         </Box>
         <Box my={4}>
           {socialLinks.map((link, idk) => {
@@ -333,7 +320,7 @@ const Footer: React.FC<IProps> = () => {
                       "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                   }}
                   fontSize="4xl"
-                  ml={4}
+                  ms={4}
                 />
               </BaseLink>
             )
@@ -361,7 +348,6 @@ const Footer: React.FC<IProps> = () => {
                   <BaseLink
                     to={link.to}
                     isPartiallyActive={false}
-                    dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
                     fontWeight="normal"

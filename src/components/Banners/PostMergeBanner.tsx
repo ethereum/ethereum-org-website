@@ -1,10 +1,10 @@
 import React from "react"
 import { Text } from "@chakra-ui/react"
 
+import type { TranslationKey } from "@/lib/types"
+
 import BannerNotification from "../BannerNotification"
 import Translation from "../Translation"
-
-import { TranslationKey } from "../../utils/translations"
 
 export interface IProps {
   translationString: TranslationKey

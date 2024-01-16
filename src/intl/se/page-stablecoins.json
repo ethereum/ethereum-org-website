@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Ädelmetaller",
   "page-stablecoins-table-error": "Det gick inte att ladda stablecoins. Prova att uppdatera sidan.",
-  "page-stablecoins-table-loading": "Laddar stablecoin-data ...",
   "page-stablecoins-title": "Stablecoins",
   "page-stablecoins-top-coins": "Stablecoins sorterade efter marknadsvärde",
   "page-stablecoins-top-coins-intro": "Marknadsvärde är",
