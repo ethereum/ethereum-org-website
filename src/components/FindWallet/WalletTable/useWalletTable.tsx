@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import { Icon } from "@chakra-ui/react"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
@@ -296,9 +296,9 @@ export const useWalletTable = ({
    *
    * This method gets the elements with the className, adds a fade class to fade icons out, after 0.5s it will then update state for the dropdown with the selectedOption, and then remove the fade class to fade the icons back in. Then it will send a matomo event for updating the dropdown.
    */
-  const updateDropdown = (
-    selectedOption: DropdownOption,
-    stateUpdateMethod: Function,
+  const updateDropdown = <D extends DropdownOption>(
+    selectedOption: D,
+    stateUpdateMethod: Dispatch<SetStateAction<D>>,
     className: ColumnClassName
   ) => {
     const domItems: HTMLCollectionOf<Element> =

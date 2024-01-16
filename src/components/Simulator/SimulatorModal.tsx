@@ -5,23 +5,21 @@ import {
   ModalContent,
   type ModalContentProps,
   ModalOverlay,
-  type ModalProps,
   UseDisclosureReturn,
 } from "@chakra-ui/react"
 
-interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
+type SimulatorModalProps = ModalContentProps & {
   isOpen: UseDisclosureReturn["isOpen"]
   onClose: UseDisclosureReturn["onClose"]
   children?: React.ReactNode
 }
 
-export const SimulatorModal: React.FC<IProps> = ({
+export const SimulatorModal = ({
   isOpen,
   onClose,
   children,
-  size,
   ...restProps
-}) => {
+}: SimulatorModalProps) => {
   return (
     <ChakraModal
       isOpen={isOpen}

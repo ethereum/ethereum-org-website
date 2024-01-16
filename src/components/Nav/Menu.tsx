@@ -6,15 +6,13 @@ import NavDropdown from "./Dropdown"
 import { ISections } from "./types"
 
 export interface IProps extends FlexProps {
-  path: string
   sections: ISections
 }
 
-const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
+const Menu: React.FC<IProps> = ({ sections, ...props }) => {
   // const { locale } = useRouter()
   const direction = "ltr"
   // const direction = getDirection(language as Lang)
-  const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
 

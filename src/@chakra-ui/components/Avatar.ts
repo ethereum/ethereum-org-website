@@ -89,6 +89,6 @@ const sizes = defineMergeStyles(pickedDefaultSizes, {
 
 export const Avatar = defineMultiStyleConfig({
   baseStyle,
-  // @ts-expect-error
+  // @ts-expect-error incompatible type shapes
   sizes,
 })

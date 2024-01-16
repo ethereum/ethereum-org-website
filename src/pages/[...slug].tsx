@@ -188,7 +188,7 @@ const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
 > = ({ mdxSource, layout }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
-  // @ts-expect-error
+  // @ts-expect-error Incompatible component function signatures
   const components: Record<string, React.ReactNode> = {
     ...mdComponents,
     ...componentsMapping[layout],

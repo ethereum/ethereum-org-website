@@ -87,7 +87,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
             {pageData.map(({ title, matomo }, idx) => (
               <ListItem
                 key={idx}
-                onClick={(e) => {
+                onClick={() => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
                 }}

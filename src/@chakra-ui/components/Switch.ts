@@ -15,8 +15,7 @@ const { baseStyle: defaultBaseStyle, sizes: defaultSizes } = switchDefaultTheme
 
 const switchSmSize = defaultSizes?.sm
 
-const { commonControlProps, commonContainerProps, commonLabelProps } =
-  commonInputTriggerStyles
+const { commonControlProps, commonContainerProps } = commonInputTriggerStyles
 
 const baseStyleContainer = defineMergeStyles(
   defaultBaseStyle?.({} as never).container,

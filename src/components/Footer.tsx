@@ -1,4 +1,3 @@
-// TODO
 import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -11,7 +10,6 @@ import {
   List,
   ListItem,
   SimpleGrid,
-  useToken,
 } from "@chakra-ui/react"
 
 import { Lang, TranslationKey } from "@/lib/types"
@@ -58,8 +56,6 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
 
-  // TODO: check if `medBp` is being used or remove it
-  const [medBp] = useToken("breakpoints", ["md"])
   const linkSections: Array<LinkSection> = [
     {
       title: t("use-ethereum"),

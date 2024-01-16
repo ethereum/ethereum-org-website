@@ -6,7 +6,6 @@ import Text from "@/components/OldText"
 
 type InfoBannerProps = FlexProps & {
   children?: ReactNode
-  className?: string
   emoji?: string
   isWarning?: boolean
   shouldCenter?: boolean
@@ -16,7 +15,6 @@ type InfoBannerProps = FlexProps & {
 
 const InfoBanner = ({
   children,
-  className,
   emoji,
   isWarning,
   shouldCenter,

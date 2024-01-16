@@ -23,7 +23,6 @@ import { useActiveHash } from "@/hooks/useActiveHash"
 export interface IProps extends BoxProps {
   items: Array<ToCItem>
   maxDepth?: number
-  slug?: string
   editPath?: string
   hideEditButton?: boolean
   isMobile?: boolean
@@ -32,7 +31,6 @@ export interface IProps extends BoxProps {
 const TableOfContents: React.FC<IProps> = ({
   items,
   maxDepth = 1,
-  slug,
   editPath,
   hideEditButton = false,
   isMobile = false,

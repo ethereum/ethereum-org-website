@@ -2,9 +2,10 @@ import fs from "fs"
 import path from "path"
 
 import matter from "gray-matter"
+import minimist from "minimist"
 
 import type { Lang } from "../lib/types"
-const argv = require("minimist")(process.argv.slice(2))
+const argv = minimist(process.argv.slice(2))
 
 const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./public/content/translations/"
@@ -60,6 +61,9 @@ const SPELLING_MISTAKES: Array<string> = [
   "Ehtereum",
   "Eferum",
 ]
+
+// ! Current usage of this const is commented out
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const CASE_SENSITIVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
