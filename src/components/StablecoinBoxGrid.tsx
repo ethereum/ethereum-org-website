@@ -3,6 +3,8 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { isMobile } from "../lib/utils/isMobile"
 
 import Emoji from "./Emoji"
@@ -76,7 +78,7 @@ const Title: React.FC<{ title: string }> = ({ title }) => {
   )
 }
 
-const Subtitle: React.FC<{ children: unknown }> = ({ children }) => {
+const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
     <OldHeading
       as="h4"
@@ -93,7 +95,7 @@ const Subtitle: React.FC<{ children: unknown }> = ({ children }) => {
   )
 }
 
-const Body: React.FC<{ children: unknown }> = ({ children }) => {
+const Body = ({ children }: ChildOnlyProp) => {
   return (
     <Box fontSize="xl" lineHeight="140%" color="black300">
       {children}
@@ -117,7 +119,7 @@ const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
   )
 }
 
-const Row: React.FC<{ children: unknown }> = ({ children }) => {
+const Row = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       justify="space-between"
@@ -129,7 +131,7 @@ const Row: React.FC<{ children: unknown }> = ({ children }) => {
   )
 }
 
-const Column: React.FC<{ children: unknown }> = ({ children }) => {
+const Column = ({ children }: ChildOnlyProp) => {
   return <Box width="100%">{children}</Box>
 }
 
