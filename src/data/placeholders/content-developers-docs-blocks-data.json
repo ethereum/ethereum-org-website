@@ -26,5 +26,9 @@
   "/content/translations/zh-tw/developers/docs/blocks/tx-block.png": {
     "hash": "bfe92f12",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWUlEQVR4nI2RS04CQRCGGxATjHvcaELCggtIiFfQpazVBazYcII5gA5GHcSedl49A8SJGw7hMdiwMSQ+eA2PGPmt0ZAQTSZWUt2V1Nd/d//FWEQoCuKrjOKY7yOxngBiKLMkGIuFfSgsDkWJF39xkaJPF50ju9Y9rtUnh23eP1iJ/QlVRcqycOp5KDkOSoaBM67wLcdaulf14aB+N323rc9mr1pNhT2PmHtKYeJE07DN6PCO18bUkgDtaD4g8PVZRppz9/p2NL1pBIFpfMiOfM64xNku4LaIa2NEF+6xVgtp3ZhP1MsehLmAIzGWWj/7KN4qutZv6o1X1xcvlY6cZXVjMTlXu+AiAAkNTBO7TAikbQeB9ACH1E0HY87nuR/zlA2Uy8mw5hZy1JtIYkKW6iHn9AJakraNvK4vC/SdQkMgH/ryPZ2in1BIZOXVOsdN7NMkNiMn8Z/4Aukp90d29r6eAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/hu/developers/docs/blocks/tx-block.png": {
+    "hash": "dc634412",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABVklEQVR4nI2Rv0rDUBTGb/8JFfe6WCh06AtYioujg6N01g528h3uE8TaNDXexCS9SdpINruIk7j4Fi4iFlyatklbFPzktgZErHjgg4/Dj+8cziFkZSFBKZKxVnOEEN9H6rsAJEBJGoQkFlGUJEFpsvqD+zP0vnGzZ7UeD2Q53PfY804c9tv0rGXhiHMcC+kGan3aX9f1uX2mBEO5PRpearPugyRlDQO1mDM5DhUFG8SysOl6mHIHcFyge4XIt1Ew2dhpKsG02R5H+kVk39qzguBsFxByPYwZR570eshpxjxstgZQtQlMGxNbCYqeOjhR5Zeuprw6wl/bs6JmvIenjaclxxF4HraIriPX4YjiZJNjwti8tDweTaNezwjPLJRMjlBs+sWNGEOeMIZMp4OyZb1VzjVUVB1lSUJ2cZ+qn6K7d2nhRU9wgtG0jwozse37WPvzE/+pT6Ga+IWLQWLiAAAAAElFTkSuQmCC"
   }
 }
