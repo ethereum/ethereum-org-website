@@ -114,7 +114,7 @@ Dapp submissions will be assessed on the following criteria:
 Decisions about individual PRs, design evolution, and major upgrades to the website are made by a team of people from across the Ethereum ecosystem. This team includes project managers, developers, designers, marketing and communications, and subject matter experts. Community input informs every decision: raising questions in issues, submitting PRs, or contacting the team at website@ethereum.org is helpful!
 
 This team currently includes:
-
+- Koray Durgut (Ethereum Owner)
 - Anuj Gupta (Ethereum Foundation)
 - Amanda Gutterman (ConsenSys)
 - Hudson Jameson (Ethereum Foundation Devops)
