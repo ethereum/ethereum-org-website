@@ -6,9 +6,9 @@ import { useRouter } from "next/router"
 import type { Lang, LastUpdatedState } from "@/lib/types"
 
 import {
+  CONTENT_DIR,
   DEFAULT_LOCALE,
   GITHUB_COMMITS_URL,
-  CONTENT_DIR,
 } from "@/lib/constants"
 
 import { gitHubAuthHeaders } from "@/hooks/useClientSideGitHubContributors"

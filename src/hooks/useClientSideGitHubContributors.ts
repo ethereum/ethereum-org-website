@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 
 import type { Author, FileContributorsState } from "@/lib/types"
 
-import { GITHUB_COMMITS_URL, CONTENT_DIR } from "@/lib/constants"
+import { CONTENT_DIR,GITHUB_COMMITS_URL } from "@/lib/constants"
 
 export const gitHubAuthHeaders = {
   headers: new Headers({
