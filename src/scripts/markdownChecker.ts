@@ -42,7 +42,7 @@ const INCORRECT_PATH_IN_TRANSLATED_MARKDOWN = new RegExp(
   "g"
 )
 
-const LINK_TEXT_MISSING_REGEX = new RegExp("\\[\\]\\(([^)]+)\\)", "g");
+const LINK_TEXT_MISSING_REGEX = new RegExp("(?<![\\S])\\[\\]\\(([^)]+)\\)", "g")
 
 // add <emoji
 // add /developers/docs/scaling/#layer-2-scaling
@@ -222,7 +222,6 @@ function processMarkdown(path: string) {
 
   // Check for links missing text
   while ((linkTextMissingMatch = LINK_TEXT_MISSING_REGEX.exec(markdownFile))) {
-    console.log('here')
     const lineNumber = getLineNumber(
       markdownFile,
       linkTextMissingMatch.index
