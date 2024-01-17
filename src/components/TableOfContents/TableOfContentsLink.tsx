@@ -38,7 +38,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",
-      insetInlineStart: "-1.29rem",
+      insetInlineStart: `calc(-1 * (1rem * ${depth + 1} + 5.5px))`,
       top: "50%",
       mt: -1,
     },
