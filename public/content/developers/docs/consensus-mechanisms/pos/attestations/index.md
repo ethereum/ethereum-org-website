@@ -56,9 +56,7 @@ Each of the participation flags can be either true or false, depending on the su
 
 The best scenario occurs when all three flags are true, in which case a validator would earn (per correct flag):
 
-`
-reward += base reward * flag weight * flag attesting rate / 64
-`
+`reward += base reward * flag weight * flag attesting rate / 64`
 
 The flag attesting rate is measured using the sum of effective balances of all attesting validators for the given flag compared the total active effective balance.
 
