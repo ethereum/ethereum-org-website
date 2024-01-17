@@ -15,13 +15,14 @@ import {
   Icon,
   List,
   ListItem,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import type { ChildOnlyProp } from "../../lib/types"
 import { Button } from "../Buttons"
 import { BaseLink } from "../Link"
 
-import { ISections } from "./types"
+import { NavSections } from "./types"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
   (props, ref) => <ListItem ref={ref} mb={12} {...props} />
@@ -103,38 +104,34 @@ const glyphPathVariants = {
   },
 }
 
-export interface IProps extends ButtonProps {
-  isMenuOpen: boolean
-  isDarkTheme: boolean
-  toggleMenu: () => void
-  toggleTheme: () => void
+export type MobileNavMenuProps = ButtonProps & {
+  isOpen: boolean
+  onToggle: () => void
+  toggleColorMode: () => void
   toggleSearch: () => void
-  linkSections: ISections
+  linkSections: NavSections
   fromPageParameter: string
   drawerContainerRef: RefObject<HTMLElement | null>
 }
 
-const MobileNavMenu: React.FC<IProps> = ({
-  isMenuOpen,
-  isDarkTheme,
-  toggleMenu,
-  toggleTheme,
+const MobileNavMenu = ({
+  isOpen: isMenuOpen,
+  onToggle,
+  toggleColorMode: toggleTheme,
   toggleSearch,
   linkSections,
   fromPageParameter,
   drawerContainerRef,
   ...props
-}) => {
+}: MobileNavMenuProps) => {
   const { t } = useTranslation("common")
-
-  const handleClick = (): void => {
-    toggleMenu()
-  }
+  const themeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
 
   return (
     <>
       <Button
-        onClick={toggleMenu}
+        onClick={onToggle}
         aria-label={t("aria-toggle-search-button")}
         variant="ghost"
         isSecondary
@@ -174,7 +171,7 @@ const MobileNavMenu: React.FC<IProps> = ({
       <Drawer
         portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
-        onClose={handleClick}
+        onClose={onToggle}
         placement="start"
         size="sm"
       >
@@ -204,7 +201,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                               {item.text}
                             </Box>
                             {item.items.map((item, idx) => (
-                              <SectionItem key={idx} onClick={handleClick}>
+                              <SectionItem key={idx} onClick={onToggle}>
                                 <StyledNavLink
                                   to={item.to}
                                   isPartiallyActive={item.isPartiallyActive}
@@ -215,7 +212,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                             ))}
                           </Fragment>
                         ) : (
-                          <SectionItem key={idx} onClick={handleClick}>
+                          <SectionItem key={idx} onClick={onToggle}>
                             <StyledNavLink
                               to={item.to}
                               isPartiallyActive={item.isPartiallyActive}
@@ -228,7 +225,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                     </List>
                   </NavListItem>
                 ) : (
-                  <NavListItem key={idx} onClick={handleClick}>
+                  <NavListItem key={idx} onClick={onToggle}>
                     <StyledNavLink
                       to={section.to}
                       isPartiallyActive={section.isPartiallyActive}
@@ -253,7 +250,7 @@ const MobileNavMenu: React.FC<IProps> = ({
             <FooterItem
               onClick={() => {
                 // Workaround to ensure the input for the search modal can have focus
-                toggleMenu()
+                onToggle()
                 toggleSearch()
               }}
             >
@@ -261,12 +258,10 @@ const MobileNavMenu: React.FC<IProps> = ({
               <FooterItemText>{t("search")}</FooterItemText>
             </FooterItem>
             <FooterItem onClick={toggleTheme}>
-              <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
-              <FooterItemText>
-                {t(isDarkTheme ? "light-mode" : "dark-mode")}
-              </FooterItemText>
+              <Icon as={themeIcon} />
+              <FooterItemText>{t(themeLabelKey)}</FooterItemText>
             </FooterItem>
-            <FooterItem onClick={handleClick}>
+            <FooterItem onClick={onToggle}>
               <Flex
                 as={BaseLink}
                 to={`/languages/${fromPageParameter}`}
