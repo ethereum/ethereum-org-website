@@ -4,7 +4,7 @@ import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 
 import { BaseLink, type LinkProps } from "../Link"
 
-import { ISection } from "./types"
+import { NavSectionDetail } from "./types"
 
 import { useOnClickOutside } from "@/hooks/useOnClickOutside"
 
@@ -41,7 +41,7 @@ const DropdownContext = React.createContext<IDropdownContext | null>(null)
 
 export interface IProps {
   children?: React.ReactNode
-  section: ISection
+  section: NavSectionDetail
 }
 
 const NavDropdown: React.FC<IProps> & {
@@ -76,7 +76,7 @@ const NavDropdown: React.FC<IProps> & {
     }
   }
 
-  const ariaLabel = section.ariaLabel || section.text
+  const ariaLabel = section.ariaLabel || section.label
 
   return (
     <DropdownContext.Provider
@@ -106,7 +106,7 @@ const NavDropdown: React.FC<IProps> & {
             },
           }}
         >
-          {section.text}
+          {section.label}
           <Icon
             as={MdExpandMore}
             color="text200"

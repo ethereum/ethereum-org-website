@@ -1,8 +1,15 @@
-import React, { FC, useRef } from "react"
+import { useRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
-import { Box, Flex, HStack, Icon, useDisclosure } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  HStack,
+  Icon,
+  useColorModeValue,
+  useDisclosure,
+} from "@chakra-ui/react"
 
 import { ButtonLink, IconButton } from "../Buttons"
 import { EthHomeIcon } from "../icons"
@@ -13,28 +20,24 @@ import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
 
-export interface IProps {
-  path: string
-}
-
 // TODO display page title on mobile
-const Nav: FC<IProps> = ({ path }) => {
-  const {
-    ednLinks,
-    fromPageParameter,
-    isDarkTheme,
-    shouldShowSubNav,
-    toggleColorMode,
-    linkSections,
-    mobileNavProps,
-  } = useNav({ path })
+const Nav = () => {
+  const { fromPageParameter, toggleColorMode, linkSections, mobileNavProps } =
+    useNav()
+
   const { locale } = useRouter()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
 
+  const themeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
+  const themeIconAriaLabel = useColorModeValue(
+    "Switch to Dark Theme",
+    "Switch to Light Theme"
+  )
+
   return (
-    <Box position="sticky" top={0} zIndex={100} width="full">
+    <Box position="sticky" top={0} zIndex="sticky" width="full">
       <Flex
         ref={navWrapperRef}
         as="nav"
@@ -54,7 +57,7 @@ const Nav: FC<IProps> = ({ path }) => {
           maxW="container.2xl"
         >
           <BaseLink
-            to="/"
+            href="/"
             aria-label={t("home")}
             display="inline-flex"
             alignItems="center"
@@ -68,7 +71,7 @@ const Nav: FC<IProps> = ({ path }) => {
             justifyContent={{ base: "flex-end", lg: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="lg" path={path} sections={linkSections} />
+            <Menu hideBelow="lg" sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
@@ -78,6 +81,7 @@ const Nav: FC<IProps> = ({ path }) => {
               {/* Mobile */}
               <MobileNavMenu
                 {...mobileNavProps}
+                linkSections={linkSections}
                 hideFrom="lg"
                 toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
@@ -85,12 +89,8 @@ const Nav: FC<IProps> = ({ path }) => {
               <HStack spacing={2} hideBelow="lg">
                 <IconButton
                   transition="transform 0.5s, color 0.2s"
-                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
-                  aria-label={
-                    isDarkTheme
-                      ? "Switch to Light Theme"
-                      : "Switch to Dark Theme"
-                  }
+                  icon={themeIcon}
+                  aria-label={themeIconAriaLabel}
                   variant="ghost"
                   isSecondary
                   px={1.5}
@@ -99,9 +99,9 @@ const Nav: FC<IProps> = ({ path }) => {
                     color: "primary.hover",
                   }}
                   onClick={toggleColorMode}
-                ></IconButton>
+                />
                 <ButtonLink
-                  to={`/languages/${fromPageParameter}`}
+                  href={`/languages/${fromPageParameter}`}
                   transition="color 0.2s"
                   leftIcon={<Icon as={MdLanguage} />}
                   variant="ghost"
@@ -122,45 +122,6 @@ const Nav: FC<IProps> = ({ path }) => {
           </Flex>
         </Flex>
       </Flex>
-      {shouldShowSubNav && (
-        <Flex
-          as="nav"
-          aria-label={t("nav-developers")}
-          display={{ base: "none", lg: "flex" }}
-          bg="ednBackground"
-          borderBottom="1px"
-          borderColor="border"
-          boxSizing="border-box"
-          py={4}
-          px={8}
-        >
-          {ednLinks.map((link, idx) => (
-            <BaseLink
-              key={idx}
-              to={link.to}
-              isPartiallyActive={link.isPartiallyActive}
-              color="text"
-              fontWeight="normal"
-              textDecor="none"
-              me={8}
-              _hover={{
-                color: "primary.base",
-                svg: {
-                  fill: "currentColor",
-                },
-              }}
-              _visited={{}}
-              sx={{
-                svg: {
-                  fill: "currentColor",
-                },
-              }}
-            >
-              {link.text}
-            </BaseLink>
-          ))}
-        </Flex>
-      )}
     </Box>
   )
 }
