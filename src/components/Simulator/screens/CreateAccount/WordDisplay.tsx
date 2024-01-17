@@ -1,10 +1,10 @@
+import React from "react"
 import {
   Box,
   type BoxProps,
   ListItem,
   type ListItemProps,
 } from "@chakra-ui/react"
-import React from "react"
 
 const wordStyleVariants = {
   initial: {

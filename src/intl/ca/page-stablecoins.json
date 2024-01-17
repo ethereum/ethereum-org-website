@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Metalls preciosos",
   "page-stablecoins-table-error": "No es poden carregar les monedes estables. Proveu d'actualitzar la pàgina.",
-  "page-stablecoins-table-loading": "S'estan carregant dades de la moneda estable...",
   "page-stablecoins-title": "Monedes estables",
   "page-stablecoins-top-coins": "Millors monedes estables per capitalització de mercat",
   "page-stablecoins-top-coins-intro": "La capitalització del mercat és",
