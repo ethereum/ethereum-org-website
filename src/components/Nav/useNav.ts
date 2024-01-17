@@ -1,5 +1,24 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import {
+  BsBook,
+  BsBuildings,
+  BsCompass,
+  BsFire,
+  BsJournalCode,
+  BsLayers,
+  BsLightbulb,
+  BsMegaphone,
+  BsMortarboard,
+  BsPersonArmsUp,
+  BsPinAngle,
+  BsSafe,
+  BsSignpost,
+  BsSliders,
+  BsTools,
+  BsUiChecksGrid,
+} from "react-icons/bs"
+import { PiFlask } from "react-icons/pi";
 import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -24,11 +43,13 @@ export const useNav = () => {
         {
           label: "Overview",
           description: "All things Ethereum education",
-          href: "/learn"
+          icon: BsCompass,
+          href: "/learn",
         },
         {
           label: "Basics",
           description: "Understand the fundamentals of Ethereum",
+          icon: BsUiChecksGrid,
           items: [
             {
               label: t("what-is-ethereum"),
@@ -60,6 +81,7 @@ export const useNav = () => {
         {
           label: "Advanced",
           description: "Learn the more complex topics",
+          icon: BsSliders,
           items: [
             {
               label: "Gas fees",
@@ -91,6 +113,7 @@ export const useNav = () => {
         {
           label: "Test your knowledge",
           description: "Find out how well you understand Ethereum and cryptocurrencies",
+          icon: BsMortarboard,
           href: "/quizzes",
         }
       ],
@@ -102,6 +125,7 @@ export const useNav = () => {
         {
           label: "Get started",
           description: "Your first steps to use Ethereum",
+          icon: BsPinAngle,
           items: [
             {
               label: "Choose your wallet",
@@ -145,6 +169,7 @@ export const useNav = () => {
         {
           label: "Use cases",
           description: "Discover different ideas for Ethereum usage",
+          icon: BsLightbulb,
           items: [
             {
               label: t("stablecoins"),
@@ -197,6 +222,7 @@ export const useNav = () => {
         {
           label: "Stake",
           description: "Earn rewards for securing Ethereum",
+          icon: BsSafe,
           items: [
             {
               label: "Staking home",
@@ -223,6 +249,7 @@ export const useNav = () => {
         {
           label: t("layer-2"),
           description: "Cheaper and faster transactions for Ethereum",
+          icon: BsLayers,
           href: "/layer-2",
         }
       ]
@@ -234,11 +261,13 @@ export const useNav = () => {
         {
           label: "Builder's home",
           description: "A builder's manual for Ethereum—by builders, for builders",
+          icon: BsTools,
           href: "/developers",
         },
         {
           label: "Get started",
           description: "Useful information for newcomers",
+          icon: BsPinAngle,
           items: [
             {
               label: "Tutorials",
@@ -265,6 +294,7 @@ export const useNav = () => {
         {
           label: "Documentation",
           description: "Docs to help you understand and build with Ethereum",
+          icon: BsJournalCode,
           items: [
             {
               label: "Overview",
@@ -291,6 +321,7 @@ export const useNav = () => {
         {
           label: "Enterprise",
           description: "Business applications for Ethereum",
+          icon: BsBuildings,
           items: [
             {
               label: "Mainnet Ethereum",
@@ -313,11 +344,13 @@ export const useNav = () => {
         {
           label: t("community-hub"),
           description: "Overview on how to participate",
+          icon: BsPersonArmsUp,
           href: "/community",
         },
         {
           label: "Communities and events",
           description: "Decentralization and freedom to participate for anyone",
+          icon: BsMegaphone,
           items: [
             {
               label: t("ethereum-online"),
@@ -334,6 +367,7 @@ export const useNav = () => {
         {
           label: "Ethereum.org",
           description: "This website is community driven—join us and contribute too",
+          icon: BsFire,
           items: [
             {
               label: "Contributing to ethereum.org",
@@ -361,11 +395,13 @@ export const useNav = () => {
         {
           label: t("ethereum-whitepaper"),
           description: "The original Ethereum whitepaper written by Vitalik Buterin in 2014",
+          icon: BsBook,
           href: "/whitepaper",
         },
         {
           label: "Roadmap",
           description: "The path to more scalability, security and sustainabillity for Ethereum",
+          icon: BsSignpost,
           items: [
             {
               label: "Improved security",
@@ -392,6 +428,7 @@ export const useNav = () => {
         {
           label: "Research and development",
           description: "PRocesses used to improve Ethereum",
+          icon: PiFlask,
           items: [
             {
               label: "Technical history of Ethereum",
