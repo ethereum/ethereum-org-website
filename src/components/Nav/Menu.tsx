@@ -103,7 +103,9 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
       {...getHoverActions(lvl, index, isLink)}
     >
       <Box me="auto" textAlign="start">
-        <Text color={`menu.lvl${lvl}.main`}>{label}</Text>
+        <Text fontWeight="bold" color={`menu.lvl${lvl}.main`}>
+          {label}
+        </Text>
         <Text fontSize="sm" color={`menu.lvl${lvl}.subtext`}>
           {description}
         </Text>
