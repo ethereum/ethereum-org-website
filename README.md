@@ -1707,6 +1707,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://o2stake.com"><img src="https://avatars.githubusercontent.com/u/77958700?v=4?s=100" width="100px;" alt="Tim - o2Stake"/><br /><sub><b>Tim - o2Stake</b></sub></a><br /><a href="#content-o2Stake" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://benedikt-wagner.dev"><img src="https://avatars.githubusercontent.com/u/113296072?v=4?s=100" width="100px;" alt="Benedikt Wagner"/><br /><sub><b>Benedikt Wagner</b></sub></a><br /><a href="#content-b-wagn" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

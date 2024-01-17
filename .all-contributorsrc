@@ -10929,6 +10929,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "b-wagn",
+      "name": "Benedikt Wagner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/113296072?v=4",
+      "profile": "http://benedikt-wagner.dev",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
