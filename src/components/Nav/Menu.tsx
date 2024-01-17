@@ -1,12 +1,13 @@
-import { ReactElement, useState } from "react"
+import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useRouter } from "next/router"
 import { BsCircle } from "react-icons/bs"
 import { MdChevronLeft, MdChevronRight, MdExpandMore } from "react-icons/md"
 import {
   Box,
+  type ButtonProps,
   Flex,
-  FlexProps,
+  type FlexProps,
   Icon,
   List,
   Popover,
@@ -17,7 +18,7 @@ import {
 
 import type { Lang } from "@/lib/types"
 
-import { Button, ButtonLink } from "@/components/Buttons"
+import { Button } from "@/components/Buttons"
 import Link from "@/components/Link"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
@@ -40,13 +41,84 @@ const activeNull: ActiveState = {
   lvl3: null,
 }
 
+type NextChevronProps = {
+  lvl: Level
+  isLink: boolean
+}
+
+const NextChevron = ({ lvl, isLink }: NextChevronProps) => {
+  const { locale } = useRouter()
+  if (isLink) return undefined
+  const isRtl = isLangRightToLeft(locale! as Lang)
+  return (
+    <Icon
+      as={isRtl ? MdChevronLeft : MdChevronRight}
+      fill={`menu.lvl${lvl}.main`}
+    />
+  )
+}
+
+type MenuButtonProps = {
+  item: NavItem
+  lvl: Level
+  index: number
+  getHoverActions: (
+    lvl: Level,
+    index: number,
+    isLink: boolean
+  ) => Partial<ButtonProps>
+}
+
+const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
+  const {
+    label,
+    description,
+    icon: CustomIcon,
+    isPartiallyActive,
+    ...action
+  } = item
+  const isLink = "href" in action
+  return (
+    <Button
+      as={isLink ? Link : undefined}
+      href={action.href}
+      rightIcon={<NextChevron lvl={lvl} isLink={isLink} />}
+      leftIcon={
+        <Icon as={CustomIcon || BsCircle} color={`menu.lvl${lvl}.main`} />
+      }
+      sx={{ "span:first-of-type": { m: 0, me: 4 } }}
+      py="4"
+      bg={`menu.lvl${lvl}.background`}
+      me={isLink ? undefined : -4}
+      _hover={{
+        bg: `menu.lvl${lvl + 1}.background`,
+        borderInlineEndRadius: isLink ? undefined : "none",
+        boxShadow: "none",
+      }}
+      _active={{
+        bg: `menu.lvl${lvl + 1}.background`,
+        borderInlineEndRadius: isLink ? undefined : "none",
+        boxShadow: "none",
+      }}
+      {...getHoverActions(lvl, index, isLink)}
+    >
+      <Box me="auto" textAlign="start">
+        <Text color={`menu.lvl${lvl}.main`}>{label}</Text>
+        <Text fontSize="sm" color={`menu.lvl${lvl}.subtext`}>
+          {description}
+        </Text>
+      </Box>
+    </Button>
+  )
+}
+
 export type MenuProps = FlexProps & {
   sections: NavSections
 }
 
 // TODO (a11y): Keyboard arrow navigation
 // TODO (style): Implement custom icons
-// TODO (style): Implement asPath active styling
+// TODO (style): Implement asPath active styling (isPartiallyActive)
 
 const Menu = ({ sections, ...props }: MenuProps) => {
   const { locale } = useRouter()
@@ -138,23 +210,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
     transition: "0.05s ease-in-out",
   } as const
 
-  const getButtonStyles = (lvl: Level, isLink?: boolean) => ({
-    py: 4,
-    bg: `menu.lvl${lvl}.background`,
-    me: isLink ? undefined : -4,
-    _hover: {
-      bg: `menu.lvl${lvl + 1}.background`,
-      borderInlineEndRadius: isLink ? undefined : "none",
-      boxShadow: "none",
-    },
-    _active: {
-      bg: `menu.lvl${lvl + 1}.background`,
-      borderInlineEndRadius: isLink ? undefined : "none",
-      boxShadow: "none",
-    },
-  })
-
-  const getHoverActions = (lvl: Level, index: number, isLink?: boolean) => ({
+  const getHoverActions = (lvl: Level, index: number, isLink: boolean) => ({
     isActive: active[`lvl${lvl}`] === index,
     onClick: () => {
       isLink ? onClose() : setActiveIndex(1, index)
@@ -162,19 +218,6 @@ const Menu = ({ sections, ...props }: MenuProps) => {
     onMouseEnter: () => setActiveIndex(lvl, index),
     onFocusCapture: () => setActiveIndex(lvl, index),
   })
-
-  const getNextChevron = (
-    lvl: Level,
-    isLink: boolean
-  ): ReactElement | undefined => {
-    if (isLink) return undefined
-    const iconProps = { fill: `menu.lvl${lvl}.main` }
-    return isRtl ? (
-      <Icon as={MdChevronLeft} {...iconProps} />
-    ) : (
-      <Icon as={MdChevronRight} {...iconProps} />
-    )
-  }
 
   return (
     <Popover
@@ -232,130 +275,53 @@ const Menu = ({ sections, ...props }: MenuProps) => {
         border="1px"
         borderColor="menu.stroke"
         position="absolute"
-        left="-5.375rem"
         bg="menu.lvl1.background"
+        insetInlineStart="-5.375rem"
         w="min(100vw, 1504px)"
         mx="auto"
         zIndex={0}
         onMouseLeave={() => setActiveIndex(1, null)}
       >
-        {active.section && (
+        {has.lvl1Items && (
           <Flex {...getLvlContainerProps(1)}>
-            {sections[active.section as NavSectionKey].items.map(
-              (
-                { label, description, icon, isPartiallyActive, ...action },
-                index
-              ) => {
-                const isLink = "href" in action
-                return (
-                  <Button
-                    key={label}
-                    as={isLink ? Link : undefined}
-                    href={isLink ? action.href : undefined}
-                    rightIcon={getNextChevron(1, isLink)}
-                    leftIcon={<Icon as={BsCircle} color="menu.lvl1.main" />}
-                    {...getButtonStyles(1, isLink)}
-                    {...getHoverActions(1, index, isLink)}
-                  >
-                    <Box me="auto" textAlign="start">
-                      <Text color="menu.lvl1.main">{label}</Text>
-                      <Text fontSize="sm" color="menu.lvl1.subtext">
-                        {description || "Hello description"}
-                      </Text>
-                    </Box>
-                  </Button>
-                )
-              }
-            )}
+            {getLvl1Items().map((item, index) => (
+              <MenuButton
+                key={item.label}
+                item={item}
+                lvl={1}
+                index={index}
+                getHoverActions={getHoverActions}
+              />
+            ))}
           </Flex>
         )}
         <AnimatePresence>
           {has.lvl2Items && (
-            <Flex
-              as={motion.div}
-              initial={{ x }}
-              animate={{ x: 0 }}
-              exit={{ x }}
-              transition="0.05s ease-in-out"
-              {...getLvlContainerProps(2)}
-            >
-              {getLvl2Items().map(
-                (
-                  {
-                    label,
-                    description,
-                    icon, //  TODO: implement
-                    isPartiallyActive,
-                    ...action
-                  },
-                  index
-                ) => {
-                  const isLink = "href" in action
-                  return (
-                    <Button
-                      key={label}
-                      as={isLink ? ButtonLink : undefined}
-                      href={isLink ? action.href : undefined}
-                      rightIcon={getNextChevron(2, isLink)}
-                      leftIcon={<Icon as={BsCircle} color="menu.lvl2.main" />}
-                      variant="ghost"
-                      {...getButtonStyles(2, isLink)}
-                      {...getHoverActions(2, index)}
-                    >
-                      <Box me="auto" textAlign="start">
-                        <Text color="menu.lvl2.main">{label}</Text>
-                        <Text fontSize="sm" color="menu.lvl2.subtext">
-                          {description || "Hello description"}
-                        </Text>
-                      </Box>
-                    </Button>
-                  )
-                }
-              )}
+            <Flex {...slideAnimationProps} {...getLvlContainerProps(2)}>
+              {getLvl2Items().map((item, index) => (
+                <MenuButton
+                  key={item.label}
+                  item={item}
+                  lvl={2}
+                  index={index}
+                  getHoverActions={getHoverActions}
+                />
+              ))}
             </Flex>
           )}
         </AnimatePresence>
         <AnimatePresence>
           {has.lvl3Items && (
             <Flex {...slideAnimationProps} {...getLvlContainerProps(3)}>
-              {getLvl3Items().map(
-                (
-                  {
-                    label,
-                    description,
-                    icon: CustomIcon, //  TODO: implement
-                    isPartiallyActive,
-                    ...action
-                  },
-                  index
-                ) => {
-                  const isLink = "href" in action
-                  return (
-                    <Button
-                      key={label}
-                      as={isLink ? ButtonLink : undefined}
-                      href={isLink ? action.href : undefined}
-                      rightIcon={getNextChevron(3, isLink)}
-                      leftIcon={
-                        <Icon
-                          as={CustomIcon || BsCircle}
-                          fill="menu.lvl3.main"
-                        />
-                      }
-                      variant="ghost"
-                      {...getButtonStyles(3, isLink)}
-                      {...getHoverActions(3, index)}
-                    >
-                      <Box me="auto" textAlign="start">
-                        <Text color="menu.lvl3.main">{label}</Text>
-                        <Text fontSize="sm" color="menu.lvl3.subtext">
-                          {description}
-                        </Text>
-                      </Box>
-                    </Button>
-                  )
-                }
-              )}
+              {getLvl3Items().map((item, index) => (
+                <MenuButton
+                  key={item.label}
+                  item={item}
+                  lvl={3}
+                  index={index}
+                  getHoverActions={getHoverActions}
+                />
+              ))}
             </Flex>
           )}
         </AnimatePresence>
