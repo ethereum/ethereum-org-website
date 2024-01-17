@@ -22,7 +22,7 @@ Hypothèses:
 
 - vous savez utiliser un terminal,
 - vous avez déjà écrit quelques lignes de code Python,
-- La version 3.6 ou supérieure de Python est installée sur votre machine (l'utilisation d'un environnement virtuel [](https://realpython.com/effective-python-environment/#virtual-environments) est fortement recommandée), et
+- La version 3.6 ou supérieure de Python est installée sur votre machine (l'utilisation d'un [environnement virtuel](https://realpython.com/effective-python-environment/#virtual-environments) est fortement recommandée), et
 - vous avez déjà utilisé `pip`, l'installateur de paquets de Python. Encore une fois, si l'un de ces éléments n'est pas vrai, ou si vous ne prévoyez pas de reproduire le code de cet article, vous resterez capable de comprendre son contenu sans grande difficulté.
 
 ## Blockchains, en bref {#blockchains-briefly}
@@ -39,7 +39,7 @@ Il y a de nombreuses façons de décrire Ethereum, mais son cœur repose sur la 
 }
 ```
 
-Chaque bloc [](/developers/docs/blocks/) possède une référence du bloc l'ayant précédé ; le `parentHash` est simplement le hash du bloc précédent.
+Chaque [bloc](/developers/docs/blocks/) possède une référence du bloc l'ayant précédé ; le `parentHash` est simplement le hash du bloc précédent.
 
 <FeaturedText>Note : le réseau Ethereum utilise régulièrement <a href="https://wikipedia.org/wiki/Hash_function">des fonctions de hachage</a> pour produire des valeurs de taille fixe (« hashes »). Les hachages (« hashes ») jouent un rôle important dans le réseau Ethereum, vous pouvez les considérer comme des identifiants uniques pour le moment.</FeaturedText>
 

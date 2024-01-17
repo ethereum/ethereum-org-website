@@ -8,7 +8,7 @@ Blocks are the fundamental units of the blockchain. Blocks are discrete units of
 
 ## Prerequisites {#prerequisites}
 
-Block proposal is part of the proof-of-stake protocol. To help understand this page, we recommend you read about [proof-of-stake](public/content/developers/docs/consensus-mechanisms/pos/) and [block architecture](public/content/developers/docs/blocks/).
+Block proposal is part of the proof-of-stake protocol. To help understand this page, we recommend you read about [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) and [block architecture](/developers/docs/blocks/).
 
 ## Who produces blocks? {#who-produces-blocks}
 
