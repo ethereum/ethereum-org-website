@@ -96,6 +96,36 @@ const semanticTokens = {
       _light: "rgba(255, 255, 255, 0.80)",
       _dark: "rgba(34, 34, 34, 0.80)",
     },
+
+    // Menu
+    menu: {
+      stroke: { _light: "gray.200", _dark: "gray.600" },
+      highlight: "primary.base",
+      lvl1: {
+        main: "body.base",
+        subtext: { _light: "gray.400", _dark: "gray.400" },
+        background: { _light: "white", _dark: "black" },
+        activeBackground: { _light: "gray.150", _dark: "gray.700" },
+      },
+      lvl2: {
+        main: "body.base",
+        subtext: { _light: "gray.400", _dark: "gray.300" },
+        background: { _light: "gray.150", _dark: "gray.700" },
+        activeBackground: { _light: "gray.200", _dark: "gray.600" },
+      },
+      lvl3: {
+        main: "body.base",
+        subtext: { _light: "gray.500", _dark: "gray.300" },
+        background: { _light: "gray.200", _dark: "gray.600" },
+        activeBackground: { _light: "gray.100", _dark: "gray.700" },
+      },
+      lvl4: {
+        main: "body.base",
+        subtext: { _light: "gray.700", _dark: "gray.300" },
+        background: { _light: "gray.300", _dark: "gray.700" },
+        activeBackground: { _light: "gray.200", _dark: "gray.800" },
+      },
+    }
   },
   gradients: {
     bgMainGradient: {
