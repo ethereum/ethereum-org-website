@@ -1,7 +1,8 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
-import { NotificationPopover } from "../../NotificationPopover"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
+
 import { EthTokenIcon } from "../../icons"
+import { NotificationPopover } from "../../NotificationPopover"
 
 interface IProps {
   ethPrice: number

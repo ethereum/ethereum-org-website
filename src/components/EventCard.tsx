@@ -1,5 +1,6 @@
 import React from "react"
 import { Box, Heading } from "@chakra-ui/react"
+
 import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
 import Text from "./OldText"
@@ -42,9 +43,9 @@ const EventCard: React.FC<IProps> = ({
       h="24px"
       position="absolute"
       top="0"
-      left="50%"
+      insetInlineStart="50%"
       overflow="hidden"
-      marginLeft="-12px"
+      ms="-12px"
       backgroundColor="primary.base"
       display={{ base: "none", md: "block" }}
     />
@@ -55,7 +56,7 @@ const EventCard: React.FC<IProps> = ({
       borderRadius="sm"
       border="1px solid"
       borderColor="lightBorder"
-      float={isEven ? "right" : { base: "right", md: "none" }}
+      float={isEven ? "inline-end" : { base: "inline-end", md: "none" }}
       marginTop={isEven ? { base: 0, md: "-25%" } : 0}
       _before={{
         content: '""',
@@ -66,28 +67,28 @@ const EventCard: React.FC<IProps> = ({
         display: { base: "none", md: "inline" },
         ...(isEven
           ? {
-              left: "inherit",
-              right: "45%",
-              borderLeft: 0,
-              borderRight: "25px solid",
+              insetInlineStart: "inherit",
+              insetInlineEnd: "45%",
+              borderInlineStart: 0,
+              borderInlineEnd: "25px solid",
             }
           : {
-              left: "45%",
-              borderLeft: "25px solid",
-              borderRight: 0,
+              insetInlineStart: "45%",
+              borderInlineStart: "25px solid",
+              borderInlineEnd: 0,
             }),
         borderColor: "primary.base",
       }}
     >
-      <Text color="primary.base" marginBottom={0} textAlign="right">
+      <Text color="primary.base" marginBottom={0} textAlign="end">
         {date}
-        <Emoji text=":spiral_calendar:" fontSize="md" marginLeft={2} />
+        <Emoji text=":spiral_calendar:" fontSize="md" ms={2} />
       </Text>
-      <Text marginBottom={0} textAlign="right">
+      <Text marginBottom={0} textAlign="end">
         <Text as="span" opacity={0.6}>
           {location}
         </Text>
-        <Emoji text=":round_pushpin:" fontSize="md" marginLeft={2} />
+        <Emoji text=":round_pushpin:" fontSize="md" ms={2} />
       </Text>
       <Heading as="h3" marginTop={0} fontWeight="semibold" lineHeight={1.4}>
         {title}
