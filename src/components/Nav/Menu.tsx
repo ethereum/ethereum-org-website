@@ -2,7 +2,7 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useRouter } from "next/router"
 import { BsCircle } from "react-icons/bs"
-import { MdChevronLeft, MdChevronRight, MdExpandMore } from "react-icons/md"
+import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import {
   Box,
   type ButtonProps,
@@ -239,15 +239,6 @@ const Menu = ({ sections, ...props }: MenuProps) => {
                 variant="ghost"
                 color="menu.lvl1.main"
                 sx={{ span: { m: 0 } }}
-                rightIcon={
-                  <Icon
-                    as={MdExpandMore}
-                    transform={
-                      active.section === key ? "scaleY(-1)" : undefined
-                    }
-                    transition="transform 0.2s linear"
-                  />
-                }
                 _hover={{
                   color: "menu.highlight",
                 }}
