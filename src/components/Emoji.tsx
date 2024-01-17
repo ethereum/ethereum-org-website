@@ -3,11 +3,9 @@ import { Box, type BoxProps } from "@chakra-ui/react"
 
 import { IS_DEV } from "@/lib/utils/env"
 
-export type EmojiProps = Omit<BoxProps, "children"> & BaseProps & {
-  isFlag?: boolean;
-};
+export type EmojiProps = Omit<BoxProps, "children"> & BaseProps
 
-const Emoji = ({ isFlag, ...props}: EmojiProps) => (
+const Emoji = (props: EmojiProps) => (
   <Box
     as={Twemoji}
     // The emoji lib is switching the protocol based on the existence of the
@@ -18,7 +16,7 @@ const Emoji = ({ isFlag, ...props}: EmojiProps) => (
     options={{ protocol: IS_DEV ? "http" : "https" }}
     svg
     display="inline-block"
-    lineHeight={isFlag ? "" : "none"}
+    lineHeight="none"
     sx={{
       "& > img": {
         margin: "0 !important",
