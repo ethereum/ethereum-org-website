@@ -1,4 +1,4 @@
-import { useEffect, useRef,useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import ClipboardJS from "clipboard"
 import { Box } from "@chakra-ui/react"
 

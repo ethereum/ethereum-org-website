@@ -1,4 +1,4 @@
-import { cssVar,SystemStyleObject } from "@chakra-ui/react"
+import { cssVar, SystemStyleObject } from "@chakra-ui/react"
 
 import type { ToCItem } from "@/lib/types"
 

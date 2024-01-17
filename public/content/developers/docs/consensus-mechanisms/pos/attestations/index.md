@@ -50,9 +50,15 @@ The attestation lifecycle is outlined in the schematic below:
 
 ## Rewards {#rewards}
 
-Validators are rewarded for submitting attestations. The attestation reward is dependent on two variables, the `base reward` and the `inclusion delay`. The best case for the inclusion delay is to be equal to 1.
+Validators are rewarded for submitting attestations. The attestation reward depends on the participation flags (source, target and head), the base reward and the participation rate.
 
-`attestation reward = 7/8 x base reward x (1/inclusion delay)`
+Each of the participation flags can be either true or false, depending on the submitted attestation and its inclusion delay.
+
+The best scenario occurs when all three flags are true, in which case a validator would earn (per correct flag):
+
+`reward += base reward * flag weight * flag attesting rate / 64`
+
+The flag attesting rate is measured using the sum of effective balances of all attesting validators for the given flag compared the total active effective balance.
 
 ### Base reward {#base-reward}
 

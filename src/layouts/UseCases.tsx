@@ -4,7 +4,6 @@ import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   Flex,
-  Hide,
   Icon,
   ListItem,
   Text,
@@ -208,6 +207,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         </TitleCard>
         <Image
           src={frontmatter.image}
+          blurDataURL={frontmatter.blurDataURL}
           alt={frontmatter.alt || ""}
           width={1200}
           height={610}
@@ -256,11 +256,9 @@ export const UseCasesLayout: React.FC<IProps> = ({
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Hide above={lgBp}>
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Hide>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Box>
   )

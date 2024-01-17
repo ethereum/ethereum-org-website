@@ -43,7 +43,7 @@ const Column = ({ children }: ChildOnlyProp) => {
       flex="1 0 33%"
       justifyContent="flex-end"
       mb={6}
-      mr={8}
+      me={8}
       w="full"
       maxW={{ base: "full", md: "none" }}
     >
@@ -65,7 +65,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/local-environment"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
 

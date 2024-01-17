@@ -29,7 +29,7 @@ export interface Rollup {
   image: StaticImageData
   background: string
 }
- 
+
 export type Rollups = { [type in RollupType]: Array<Rollup> }
 
 export const layer2Data: Rollups = {
@@ -48,7 +48,7 @@ export const layer2Data: Rollups = {
       purpose: ["universal"],
       descriptionKey: "arbitrum-description",
       image: ArbitrumImage,
-      background: "white"
+      background: "white",
     },
     {
       name: "Optimism",
@@ -59,12 +59,13 @@ export const layer2Data: Rollups = {
       bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
       blockExplorer: "https://optimistic.etherscan.io/",
       ecosystemPortal: "https://www.optimism.io/apps/all",
-      tokenLists: "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
+      tokenLists:
+        "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
       noteKey: "layer-2-optimism-note",
       purpose: ["universal"],
       descriptionKey: "optimism-description",
       image: OptimismImage,
-      background: "white"
+      background: "white",
     },
     {
       name: "Boba Network",
@@ -80,8 +81,8 @@ export const layer2Data: Rollups = {
       purpose: ["universal"],
       descriptionKey: "boba-description",
       image: BobaImage,
-      background: "black"
-    }
+      background: "black",
+    },
   ],
   zk: [
     {
@@ -98,7 +99,7 @@ export const layer2Data: Rollups = {
       purpose: ["payments", "exchange"],
       descriptionKey: "loopring-description",
       image: LoopringImage,
-      background: "white"
+      background: "white",
     },
     {
       name: "zkSync",
@@ -117,7 +118,7 @@ export const layer2Data: Rollups = {
         "Portis",
         "Opera",
         "Torus",
-        "Coinbase Wallet"
+        "Coinbase Wallet",
       ],
       blockExplorer: "https://zkscan.io/",
       ecosystemPortal: "",
@@ -126,7 +127,7 @@ export const layer2Data: Rollups = {
       purpose: ["tokens", "nft"],
       descriptionKey: "zksync-description",
       image: zkSyncImage,
-      background: "#11142b"
+      background: "#11142b",
     },
     {
       name: "ZKSpace",
@@ -140,7 +141,7 @@ export const layer2Data: Rollups = {
         "imToken",
         "TokenPocket",
         "MathWallet",
-        "Trust Wallet"
+        "Trust Wallet",
       ],
       blockExplorer: "",
       ecosystemPortal: "",
@@ -149,7 +150,7 @@ export const layer2Data: Rollups = {
       purpose: ["payments", "exchange"],
       descriptionKey: "zkspace-description",
       image: ZKSpaceImage,
-      background: "black"
+      background: "black",
     },
     {
       name: "Aztec",
@@ -165,7 +166,7 @@ export const layer2Data: Rollups = {
       purpose: ["payments", "integrations"],
       descriptionKey: "aztec-description",
       image: AztecImage,
-      background: "white"
+      background: "white",
     },
     {
       name: "Starknet",
@@ -180,16 +181,17 @@ export const layer2Data: Rollups = {
         "Trust Wallet",
         "Rainbow",
         "Argent X",
-        "Braavos"
+        "Braavos",
       ],
       blockExplorer: "https://starkscan.co",
       ecosystemPortal: "https://www.starknet-ecosystem.com",
-      tokenLists: "https://github.com/starknet-io/starknet-addresses/blob/master/bridged_tokens/mainnet.json",
+      tokenLists:
+        "https://github.com/starknet-io/starknet-addresses/blob/master/bridged_tokens/mainnet.json",
       noteKey: "",
       purpose: ["universal"],
       descriptionKey: "starknet-description",
       image: StarknetImage,
-      background: "white"
-    }
-  ]
+      background: "white",
+    },
+  ],
 }

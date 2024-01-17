@@ -27,7 +27,7 @@ lang: el
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - καθοδήγηση, εκπαίδευση, υποστήριξη και πόροι από την κοινότητα για υπάρχοντες και πιθανούς συμμετέχοντες.</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ομάδα ιστότοπου Ethereum.org</Link> - ελάτε και συζητήστε για την ανάπτυξη και τον σχεδιασμό του ιστότοπου ethereum.org με την ομάδα και τους ανθρώπους από την κοινότητα.</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - κοινότητα δημιουργών web3, όπου δημιουργοί, βιομηχανικοί δημιουργοί και λάτρεις του Ethereum κάνουν παρέα. Είμαστε παθιασμένοι με την ανάπτυξη, τον σχεδιασμό και την κουλτούρα web3. Ελάτε να δημιουργήσετε μαζί μας.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - συνομιλία για ανάπτυξη με τη solidity (Gitter).</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - συνομιλία για ανάπτυξη με τη solidity (Gitter).</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - συνομιλία για ανάπτυξη με τη solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- φόρουμ ερωτήσεων και απαντήσεων_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων_</SocialListItem>

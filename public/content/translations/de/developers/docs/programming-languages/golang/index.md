@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-<div class="featured">Erfahren Sie, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können</div>
+<FeaturedText>Erfahren Sie, wie Sie mit Go-basierten Projekten und Werkzeugen für Ethereum entwickeln können</FeaturedText>
 
 Verwenden Sie Ethereum, um dezentrale Anwendungen (oder "dApps") zu erstellen. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Sie sind dezentralisiert. Das bedeutet, dass sie auf einem Peer-to-Peer-Netzwerk laufen und es keine einzelne Fehlerquelle gibt. Keine einzelne Eintität oder Person kontrolliert sie und es ist fast unmöglich, sie zu zensieren. Sie können digitale Vermögenswerte kontrollieren, um neue Arten von Anwendungen zu erstellen.
 

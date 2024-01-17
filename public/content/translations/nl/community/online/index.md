@@ -27,7 +27,7 @@ Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - gemeenschap gericht op het aanbieden van projectbeheerondersteuning voor Ethereum-ontwikkeling</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Websiteteam van Ethereum.org</Link> - kom langs en chat over webontwikkeling en -ontwerp van ethereum.org met het team en de mensen van de gemeenschap</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - web3-makergemeenschap waar builders, industriële figuren, en Ethereum-enthousiasten uithangen. We zijn gepassioneerd over web3-ontwikkeling, ontwerp en cultuur. Kom met ons bouwen.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - chat voor solidity-ontwikkeling (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - chat voor solidity-ontwikkeling (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat voor solidity-ontwikkeling (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- vraag en antwoord forum_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- gedecentraliseerd vraag- en antwoordforum_</SocialListItem>

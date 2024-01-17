@@ -411,13 +411,13 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           direction={{ base: "column", lg: "row" }}
           align="flex-start"
           width="full"
-          mr={8}
+          me={8}
           mb={8}
         >
           <Box
             w="full"
-            ml={{ base: "auto", lg: 0 }}
-            mr={{ base: "auto", lg: 2 }}
+            ms={{ base: "auto", lg: 0 }}
+            me={{ base: "auto", lg: 2 }}
           >
             <H2 mt={0}>{t("page-stablecoins-why-stablecoins")}</H2>
             <Text>
@@ -432,7 +432,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           direction={{ base: "column", lg: "row" }}
           align="flex-start"
           width="full"
-          mr={{ base: 0, lg: 8 }}
+          me={{ base: 0, lg: 8 }}
           mb={8}
         >
           <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
@@ -448,7 +448,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           </Box>
           <GhostCard
             maxW="640px"
-            mr={{ base: 0, lg: 8 }}
+            me={{ base: 0, lg: 8 }}
             mt={{ base: 16, lg: 2 }}
           >
             <Emoji text=":pizza:" fontSize="5xl" />
@@ -473,8 +473,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             width={{ base: "full", lg: "50%" }}
             justifyContent="center"
             flexDirection="column"
-            ml={{ base: "auto", lg: 0 }}
-            mr={{ base: "auto", lg: 2 }}
+            ms={{ base: "auto", lg: 0 }}
+            me={{ base: "auto", lg: 2 }}
           >
             <Text>{t("page-stablecoins-find-stablecoin-intro")}</Text>
             <ul>
@@ -502,8 +502,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 width={{ base: "full", lg: "50%" }}
                 justifyContent="center"
                 flexDirection="column"
-                ml={{ base: "auto", lg: 0 }}
-                mr={{ base: "auto", lg: 8 }}
+                ms={{ base: "auto", lg: 0 }}
+                me={{ base: "auto", lg: 8 }}
               >
                 <Box>
                   <H2 fontSize="2rem" mt={0} mb={2}>
@@ -514,7 +514,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   </Text>
                   <Flex direction="column">
                     <Box>
-                      <ButtonLink mb={4} mr={4} to="https://1inch.exchange">
+                      <ButtonLink mb={4} me={4} to="https://1inch.exchange">
                         {t("page-stablecoins-dai-banner-swap-button")}
                       </ButtonLink>
                     </Box>
@@ -549,8 +549,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                 width={{ base: "full", lg: "50%" }}
                 justifyContent="center"
                 flexDirection="column"
-                ml={{ base: "auto", lg: 0 }}
-                mr={{ base: "auto", lg: 8 }}
+                ms={{ base: "auto", lg: 0 }}
+                me={{ base: "auto", lg: 8 }}
               >
                 <H2 fontSize="2rem" mt={0} mb={2}>
                   {t("page-stablecoins-usdc-banner-title")}
@@ -562,7 +562,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                   <Box>
                     <ButtonLink
                       mb={4}
-                      mr={4}
+                      me={4}
                       to="https://matcha.xyz/markets/ETH/USDC"
                     >
                       {t("page-stablecoins-usdc-banner-swap-button")}
@@ -594,7 +594,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           <H3>
             {t("page-stablecoins-top-coins")}
             <Tooltip content={tooltipContent}>
-              <Icon ml={2} fill="'text" name="info" boxSize={4} />
+              <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
           <Text>
@@ -616,8 +616,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <Flex
         alignItems="center"
         w="full"
-        pl={{ base: "0rem", lg: "2rem" }}
-        pr={{ base: "0rem", lg: "2rem" }}
+        ps={{ base: "0rem", lg: "2rem" }}
+        pe={{ base: "0rem", lg: "2rem" }}
         pb={16}
       >
         <StablecoinAccordion />
@@ -650,13 +650,13 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           flexDirection={{ base: "column", lg: "row" }}
           alignItems="flex-start"
           width="full"
-          mr={8}
+          me={8}
           mb={8}
         >
           <Box
             w="full"
-            ml={{ base: "auto", lg: 0 }}
-            mr={{ base: "auto", lg: 2 }}
+            ms={{ base: "auto", lg: 0 }}
+            me={{ base: "auto", lg: 2 }}
           >
             <Text>{t("page-stablecoins-save-stablecoins-body")}</Text>
             <H3>{t("page-stablecoins-interest-earning-dapps")}</H3>
@@ -722,7 +722,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
         <Flex
           alignItems="flex-start"
           width="full"
-          mr={8}
+          me={8}
           mb={8}
           flexDirection={{ base: "column", lg: "row" }}
         >
@@ -732,8 +732,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             width={{ base: "full", lg: "50%" }}
             justifyContent="center"
             flexDirection="column"
-            ml={{ base: "auto", lg: 0 }}
-            mr={{ base: "auto", lg: 2 }}
+            ms={{ base: "auto", lg: 0 }}
+            me={{ base: "auto", lg: 2 }}
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}

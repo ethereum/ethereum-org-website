@@ -18,9 +18,7 @@ export const filterTutorialsByLang = (
       title: tutorial?.title || "",
       description: tutorial?.description || "",
       author: tutorial?.author || "",
-      tags: tutorial?.tags?.map((tag) =>
-        (tag || "").toLowerCase().trim()
-      ),
+      tags: tutorial?.tags?.map((tag) => (tag || "").toLowerCase().trim()),
       skill: tutorial?.skill as Skill,
       timeToRead: tutorial?.timeToRead,
       published: tutorial?.published,

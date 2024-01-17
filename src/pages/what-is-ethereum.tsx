@@ -302,7 +302,13 @@ const WhatIsEthereumPage = ({
   )
 
   return (
-    <Flex as={MainArticle} direction="column" align="center" w="full" m="0 auto">
+    <Flex
+      as={MainArticle}
+      direction="column"
+      align="center"
+      w="full"
+      m="0 auto"
+    >
       <PageMetadata
         title={t("page-what-is-ethereum-meta-title")}
         description={t("page-what-is-ethereum-meta-description")}

@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Ethereum yrityksille {#ethereum-for-enterprise}
 
-<div class="featured">Ohjeita, artikkeleita ja työkaluja julkisten ja yksityisten Ethereum-lohkoketjujen rakentamiseen yrityksille.</div>
+<FeaturedText>Ohjeita, artikkeleita ja työkaluja julkisten ja yksityisten Ethereum-lohkoketjujen rakentamiseen yrityksille.</FeaturedText>
 
 ## Miksi Ethereum yrityksille? {#why-enterprise-ethereum}
 

@@ -5,7 +5,7 @@ lang: ro
 incomplete: true
 ---
 
-<div class="featured">Învațaţi să faceţi dezvoltarei pentru Ethereum folosind proiecte și instrumente Go</div>
+<FeaturedText>Învațaţi să faceţi dezvoltarei pentru Ethereum folosind proiecte și instrumente Go</FeaturedText>
 
 Folosiţi Ethereum pentru a crea aplicații descentralizate (sau „dapp-uri”). Aceste aplicații dapp pot fi demne de încredere, întrucât, odată implementate pe Ethereum, vor rula întotdeauna așa cum au fost programate. Ele sunt descentralizate, ceea ce înseamnă că rulează pe o rețea peer-to-peer și nu există nici un singur punct de eșec. Nu există o entitate sau o persoană care să le controleze și sunt aproape imposibil de cenzurat. Ele pot controla activele digitale pentru a crea noi tipuri de aplicații.
 

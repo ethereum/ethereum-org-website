@@ -47,7 +47,6 @@ import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit
 
 const ContentContainer = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
-  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
@@ -61,11 +60,6 @@ const ContentContainer = (props: ChildOnlyProp) => {
       borderRadius="4px"
       {...props}
       sx={{
-        ".featured": {
-          ps: "1rem",
-          ms: "-1rem",
-          borderInlineStart: `1px dotted ${borderColor}`,
-        },
         ".citation": {
           p: { color: "text200" },
         },
