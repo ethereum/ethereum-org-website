@@ -1,23 +1,26 @@
-export type SectionKey =
-  | "useEthereum"
-  | "learn"
-  | "developers"
-  | "enterprise"
-  | "community"
+import { IconType } from "react-icons"
 
-export interface IItem {
-  text: string
-  to?: string
-  items?: Array<IItem>
+export type NavItem = {
+  label: string
+  description: string
+  icon?: IconType
   isPartiallyActive?: boolean
-}
+} & (
+    | { items: NavItem[], href?: never }
+    | { href: string, items?: never }
+  )
 
-export interface ISection {
-  text: string
+export type NavSectionKey =
+  | "learn"
+  | "use"
+  | "build"
+  | "participate"
+  | "research"
+
+export type NavSectionDetail = {
+  label: string
   ariaLabel: string
-  items: Array<IItem>
+  items: NavItem[]
 }
 
-export type ISections = {
-  [key in SectionKey]: ISection
-}
+export type NavSections = Record<NavSectionKey, NavSectionDetail>
