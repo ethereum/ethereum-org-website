@@ -1,4 +1,3 @@
-import { useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
@@ -7,7 +6,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { FROM_QUERY } from "@/lib/constants"
 
-import type { NavItem, NavSections } from "./types"
+import type { NavSections } from "./types"
 
 export const useNav = () => {
   const { asPath } = useRouter()
@@ -25,7 +24,7 @@ export const useNav = () => {
         {
           label: "Overview",
           description: "All things Ethereum education",
-          href: "/learn/"
+          href: "/learn"
         },
         {
           label: "Basics",
@@ -34,27 +33,27 @@ export const useNav = () => {
             {
               label: t("what-is-ethereum"),
               description: "Understand what makes Ethereum special",
-              href: "/what-is-ethereum/",
+              href: "/what-is-ethereum",
             },
             {
               label: t("what-is-ether"),
               description: "The currency of Ethereum apps",
-              href: "/eth/",
+              href: "/eth",
             },
             {
               label: t("ethereum-wallets"),
               description: "An app to interact with your Ethereum account",
-              href: "/wallets/",
+              href: "/wallets",
             },
             {
               label: "What is Web3?",
               description: "An alternative to centralized monopolies dictating the rules",
-              href: "/web3/",
+              href: "/web3",
             },
             {
               label: t("smart-contracts"),
               description: "The fundamental buliding blocks of the Ethereum ecosystem",
-              href: "/smart-contracts/",
+              href: "/smart-contracts",
             },
           ],
         },
@@ -65,34 +64,34 @@ export const useNav = () => {
             {
               label: "Gas fees",
               description: "How are ETH transaction fees calculated",
-              href: "/gas/",
+              href: "/gas",
             },
             {
               label: t("bridges"),
               description: "Web3 has evolved into an ecosystem of primary L1 blockchains and L2 scaling solutions",
-              href: "/bridges/",
+              href: "/bridges",
             },
             {
               label: t("zero-knowledge-proofs"),
               description: "A way to prove the validity of a statement without reveling the statement itself",
-              href: "/zero-knowledge-proofs/",
+              href: "/zero-knowledge-proofs",
             },
             {
               label: t("run-a-node"),
               description: "Become fully sovereign while helping secure the network",
-              href: "/run-a-node/",
+              href: "/run-a-node",
             },
             {
               label: t("ethereum-security"),
               description: "Learn best practices when using cryptocurrency",
-              href: "/security/",
+              href: "/security",
             },
           ],
         },
         {
           label: "Test your knowledge",
           description: "Find out how well you understand Ethereum and cryptocurrencies",
-          href: "/quizzes/",
+          href: "/quizzes",
         }
       ],
     },
@@ -107,17 +106,17 @@ export const useNav = () => {
             {
               label: "Choose your wallet",
               description: "Wallets allow you to use crypto",
-              href: "/wallets/find-wallet/",
+              href: "/wallets/find-wallet",
             },
             {
               label: t("get-eth"),
               description: "You need ether (ETH) to use Ethereum applications",
-              href: "/get-eth/",
+              href: "/get-eth",
             },
             {
               label: t("decentralized-applications-dapps"),
               description: "Explore a rich ecosystem of apps using Ethereum",
-              href: "/dapps/",
+              href: "/dapps",
             },
             {
               label: "How to guides",
@@ -127,17 +126,17 @@ export const useNav = () => {
                 {
                   label: "How to create an Ethereum account",
                   description: "Anyone can create an Ethereum account at any time, for free with a wallet app",
-                  href: "/guides/how-to-create-an-ethereum-account/",
+                  href: "/guides/how-to-create-an-ethereum-account",
                 },
                 {
                   label: "How to use a wallet",
                   description: "Learn how to operate all the basic functions of a wallet",
-                  href: "/guides/how-to-use-a-wallet/",
+                  href: "/guides/how-to-use-a-wallet",
                 },
                 {
                   label: "How to revoke smart contract access",
                   description: "Stay safe when interacting with smart contracts and applications in the Ethereum ecosystem",
-                  href: "/guides/how-to-revoke-token-access/",
+                  href: "/guides/how-to-revoke-token-access",
                 },
               ]
             },
@@ -150,22 +149,22 @@ export const useNav = () => {
             {
               label: t("stablecoins"),
               description: "Stablecoins are Ethereum tokens designed to stay at a fixed value",
-              href: "/stablecoins/",
+              href: "/stablecoins",
             },
             {
               label: t("nft-page"),
               description: "A way to represent anything unique as an Ethereum-based asset",
-              href: "/nft/",
+              href: "/nft",
             },
             {
               label: t("defi-page"),
               description: "A global, open alternative to the traditional financial market",
-              href: "/defi/",
+              href: "/defi",
             },
             {
               label: t("dao-page"),
               description: "Member-owned communities without centralized authority",
-              href: "/dao/",
+              href: "/dao",
             },
             {
               label: "Emerging use cases",
@@ -174,22 +173,22 @@ export const useNav = () => {
                 {
                   label: t("decentralized-identity"),
                   description: "Issue and own your unique decentralized identifiers",
-                  href: "/decentralized-identity/",
+                  href: "/decentralized-identity",
                 },
                 {
                   label: t("decentralized-social-networks"),
                   description: "Blockchain-based platforms for social interaction and content creation",
-                  href: "/social-networks/",
+                  href: "/social-networks",
                 },
                 {
                   label: t("decentralized-science"),
                   description: "A global, open alternative to th current scientific system",
-                  href: "/desci/",
+                  href: "/desci",
                 },
                 {
                   label: t("regenerative-finance"),
                   description: "An alternative economic system build on regenerative principles",
-                  href: "/refi/",
+                  href: "/refi",
                 },
               ]
             }
@@ -202,29 +201,29 @@ export const useNav = () => {
             {
               label: "Staking home",
               description: "An overview of different options for staking",
-              href: "/staking/",
+              href: "/staking",
             },
             {
               label: "Staking from home",
               description: "Run home hardware and personally add to the security and decentralization of the Ethereum network",
-              href: "/staking/solo/",
+              href: "/staking/solo",
             },
             {
               label: "Staking with a service",
               description: "Third-party node operators handle the operation of your validator client",
-              href: "/staking/saas/",
+              href: "/staking/saas",
             },
             {
               label: "Pooled staking",
               description: "Stake and earn rewards with any amount of ETH by joining with others",
-              href: "/staking/pools/",
+              href: "/staking/pools",
             },
           ],
         },
         {
           label: t("layer-2"),
           description: "Cheaper and faster transactions for Ethereum",
-          href: "/layer-2/",
+          href: "/layer-2",
         }
       ]
     },
@@ -235,7 +234,7 @@ export const useNav = () => {
         {
           label: "Builder's home",
           description: "A builder's manual for Ethereum—by builders, for builders",
-          href: "/developers/",
+          href: "/developers",
         },
         {
           label: "Get started",
@@ -244,22 +243,22 @@ export const useNav = () => {
             {
               label: "Tutorials",
               description: "Curated list of community tutorials",
-              href: "/developers/tutorials/",
+              href: "/developers/tutorials",
             },
             {
               label: "Learn by coding",
               description: "Tools that help you experiment with Ethereum",
-              href: "/developers/learning-tools/",
+              href: "/developers/learning-tools",
             },
             {
               label: "Set up local environment",
               description: "Choose and set up your Ethereum development stack",
-              href: "/developers/local-environment/",
+              href: "/developers/local-environment",
             },
             {
               label: "Grants",
               description: "A curated list by our community on projects that provide grant funding programs",
-              href: "/community/grants/",
+              href: "/community/grants",
             }
           ]
         },
@@ -270,22 +269,22 @@ export const useNav = () => {
             {
               label: "Overview",
               description: "Your home for developer docs",
-              href: "/developers/docs/",
+              href: "/developers/docs",
             },
             {
               label: "Foundational topics",
               description: "Core fundamentals to develop on Ethereum",
-              href: "/developers/docs/intro-to-ethereum/",
+              href: "/developers/docs/intro-to-ethereum",
             },
             {
               label: "Ethereum stack",
               description: "Understand all the details of the Ethereum stack",
-              href: "/developers/docs/ethereum-stack/",
+              href: "/developers/docs/ethereum-stack",
             },
             {
               label: "UX/UI design fundamentals",
               description: "Description of unique web3 design challenges, best practices and user research insights",
-              href: "/developers/docs/design-and-ux/"
+              href: "/developers/docs/design-and-ux"
             }
           ],
         },
@@ -296,12 +295,12 @@ export const useNav = () => {
             {
               label: "Mainnet Ethereum",
               description: "Enterprise blockchain applications can be built on the public Ethereum Mainnet",
-              href: "/enterprise/",
+              href: "/enterprise",
             },
             {
               label: "Private Ethereum",
               description: "Developer resources for private enterprise Ethereum",
-              href: "/enterprise/private-ethereum/"
+              href: "/enterprise/private-ethereum"
             }
           ]
         }
@@ -314,7 +313,7 @@ export const useNav = () => {
         {
           label: t("community-hub"),
           description: "Overview on how to participate",
-          href: "/community/",
+          href: "/community",
         },
         {
           label: "Communities and events",
@@ -323,12 +322,12 @@ export const useNav = () => {
             {
               label: t("ethereum-online"),
               description: "Hundreds of thousands of Ethereum enthusiasts father in these online communities",
-              href: "/community/online/",
+              href: "/community/online",
             },
             {
               label: t("ethereum-events"),
               description: "Every month there are major Ethereum events in-person and online",
-              href: "/community/events/",
+              href: "/community/events",
             },
           ]
         },
@@ -339,17 +338,17 @@ export const useNav = () => {
             {
               label: "Contributing to ethereum.org",
               description: "If you want to help, this will guide you",
-              href: "/contributing/",
+              href: "/contributing",
             },
             {
               label: "Translation program",
               description: "A collaborative effort to translate ethereum.org to all languages",
-              href: "/contributing/translation-program/",
+              href: "/contributing/translation-program",
             },
             {
               label: "About ethereum.org",
               description: "A public, open-source project for the Ethereum community",
-              href: "/about/",
+              href: "/about",
             },
           ],
         }
@@ -362,7 +361,7 @@ export const useNav = () => {
         {
           label: t("ethereum-whitepaper"),
           description: "The original Ethereum whitepaper written by Vitalik Buterin in 2014",
-          href: "/whitepaper/",
+          href: "/whitepaper",
         },
         {
           label: "Roadmap",
@@ -371,22 +370,22 @@ export const useNav = () => {
             {
               label: "Improved security",
               description: "Making sure Ethereum stays resilient to all kinds of attacks into the future",
-              href: "/roadmap/security/",
+              href: "/roadmap/security",
             },
             {
               label: "Cheaper transactions",
               description: "Network updates to further reduce transaction costs and speed",
-              href: "/roadmap/scaling/",
+              href: "/roadmap/scaling",
             },
             {
               label: "Better user experience",
               description: "Using Ethereum needs to be simplified",
-              href: "/roadmap/user-experience/",
+              href: "/roadmap/user-experience",
             },
             {
               label: "Future-proofing",
               description: "Solidifying Ethereum as a robust and decentralized network",
-              href: "/roadmap/future-proofing/",
+              href: "/roadmap/future-proofing",
             },
           ]
         },
@@ -397,22 +396,22 @@ export const useNav = () => {
             {
               label: "Technical history of Ethereum",
               description: "A timeline of all the major forks and updates",
-              href: "/history/",
+              href: "/history",
             },
             {
               label: "Open research",
               description: "One of the primary strengths of Ethereum is its active research community",
-              href: "/community/research/",
+              href: "/community/research",
             },
             {
               label: "Ethereum improvement proposals (EIPs)",
               description: "Standards that specify new features or processes",
-              href: "/eips/",
+              href: "/eips",
             },
             {
               label: "Governance",
               description: "The process involved in upgrading the Ethereum protocol",
-              href: "/governance/",
+              href: "/governance",
             },
           ]
         },

@@ -9,6 +9,7 @@ import {
   Flex,
   type FlexProps,
   Icon,
+  IconProps,
   List,
   Popover,
   PopoverContent,
@@ -41,12 +42,12 @@ const activeNull: ActiveState = {
   lvl3: null,
 }
 
-type NextChevronProps = {
+type NextChevronProps = IconProps & {
   lvl: Level
   isLink: boolean
 }
 
-const NextChevron = ({ lvl, isLink }: NextChevronProps) => {
+const NextChevron = ({ lvl, isLink, ...props }: NextChevronProps) => {
   const { locale } = useRouter()
   if (isLink) return undefined
   const isRtl = isLangRightToLeft(locale! as Lang)
@@ -54,42 +55,54 @@ const NextChevron = ({ lvl, isLink }: NextChevronProps) => {
     <Icon
       as={isRtl ? MdChevronLeft : MdChevronRight}
       fill={`menu.lvl${lvl}.main`}
+      {...props}
     />
   )
+}
+
+type GetHoverActionsArgs = {
+  lvl: Level
+  index: number
+  href?: string
 }
 
 type MenuButtonProps = {
   item: NavItem
   lvl: Level
   index: number
-  getHoverActions: (
-    lvl: Level,
-    index: number,
-    isLink: boolean
-  ) => Partial<ButtonProps>
+  getHoverActions: (args: GetHoverActionsArgs) => Partial<ButtonProps>
 }
 
 const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
-  const {
-    label,
-    description,
-    icon: CustomIcon,
-    isPartiallyActive,
-    ...action
-  } = item
+  const { label, description, icon: CustomIcon, ...action } = item
+  const { asPath } = useRouter()
   const isLink = "href" in action
+  const isPartiallyActive = action.href && asPath.includes(action.href)
   return (
     <Button
       as={isLink ? Link : undefined}
       href={action.href}
-      rightIcon={<NextChevron lvl={lvl} isLink={isLink} />}
+      rightIcon={
+        <NextChevron
+          lvl={lvl}
+          isLink={isLink}
+          _groupHover={{ fill: "menu.highlight" }}
+        />
+      }
       leftIcon={
-        <Icon as={CustomIcon || BsCircle} color={`menu.lvl${lvl}.main`} />
+        lvl === 1 ? (
+          <Icon
+            as={CustomIcon || BsCircle}
+            color={`menu.lvl${lvl}.main`}
+            _groupHover={{ color: "menu.highlight" }}
+          />
+        ) : undefined
       }
       sx={{ "span:first-of-type": { m: 0, me: 4 } }}
       py="4"
       bg={`menu.lvl${lvl}.background`}
       me={isLink ? undefined : -4}
+      data-group
       _hover={{
         bg: `menu.lvl${lvl + 1}.background`,
         borderInlineEndRadius: isLink ? undefined : "none",
@@ -100,13 +113,24 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
         borderInlineEndRadius: isLink ? undefined : "none",
         boxShadow: "none",
       }}
-      {...getHoverActions(lvl, index, isLink)}
+      // TODO: _focus styles
+      {...getHoverActions({ lvl, index, href: action.href })}
     >
       <Box me="auto" textAlign="start">
-        <Text fontWeight="bold" color={`menu.lvl${lvl}.main`}>
+        <Text
+          fontWeight="bold"
+          color={isPartiallyActive ? "menu.highlight" : `menu.lvl${lvl}.main`}
+          _groupHover={{ color: "menu.highlight" }}
+        >
           {label}
         </Text>
-        <Text fontSize="sm" color={`menu.lvl${lvl}.subtext`}>
+        <Text
+          fontSize="sm"
+          color={
+            isPartiallyActive ? "menu.highlight" : `menu.lvl${lvl}.subtext`
+          }
+          _groupHover={{ color: "menu.highlight" }}
+        >
           {description}
         </Text>
       </Box>
@@ -206,16 +230,19 @@ const Menu = ({ sections, ...props }: MenuProps) => {
 
   const slideAnimationProps = {
     as: motion.div,
-    initial: { x },
-    animate: { x: 0 },
-    exit: { x },
-    transition: "0.05s ease-in-out",
+    initial: { x, scaleX: 0 },
+    animate: { x: 0, scaleX: 1 },
+    exit: { x, scaleX: 0 },
   } as const
 
-  const getHoverActions = (lvl: Level, index: number, isLink: boolean) => ({
+  const getHoverActions = ({
+    lvl,
+    index,
+    href,
+  }: GetHoverActionsArgs): Partial<ButtonProps> => ({
     isActive: active[`lvl${lvl}`] === index,
     onClick: () => {
-      isLink ? onClose() : setActiveIndex(1, index)
+      href ? onClose() : setActiveIndex(1, index)
     },
     onMouseEnter: () => setActiveIndex(lvl, index),
     onFocusCapture: () => setActiveIndex(lvl, index),
@@ -268,7 +295,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
         border="1px"
         borderColor="menu.stroke"
         position="absolute"
-        bg="menu.lvl1.background"
+        bg={`menu.lvl${has.lvl3Items ? 3 : has.lvl2Items ? 2 : 1}.background`}
         insetInlineStart="-5.375rem"
         w="min(100vw, 1504px)"
         mx="auto"

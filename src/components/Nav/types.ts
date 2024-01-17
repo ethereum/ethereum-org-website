@@ -4,7 +4,6 @@ export type NavItem = {
   label: string
   description: string
   icon?: IconType
-  isPartiallyActive?: boolean
 } & (
     | { items: NavItem[], href?: never }
     | { href: string, items?: never }
