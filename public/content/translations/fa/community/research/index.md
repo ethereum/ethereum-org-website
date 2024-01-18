@@ -67,7 +67,7 @@ lang: fa
 #### جدیدترین تحقیقات {#recent-research-1}
 
 - [بهینه‌سازی پایگاه داده](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [انقضا حالت](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [انقضای حالت](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [مسیرهای منقضی شدن وضعیت](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [طرح Verkel و منقضی شدن وضعیت](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [مدیریت تاریخچه فعالیت‌ها](https://eips.ethereum.org/EIPS/eip-4444)
@@ -124,7 +124,7 @@ lang: fa
 - [مقدمه‌ای بر پل‌های بلاک‌چین](/bridges/)
 - [نظرات ویتالیک درباره پل‌ها](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [مقاله‌ای درباره پل‌های بلاکچینی](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [مقدار قفل‌شده در پل‌ها](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [مقدار قفل‌شده در پل‌ها](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### جدیدترین تحقیقات {#recent-research-3}
 
@@ -156,7 +156,7 @@ lang: fa
 
 #### جدیدترین تحقیقات {#recent-research-5}
 
-- [ecdsa در FGPAها](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa روی FPGAها](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## ایمنی {#security}
 
@@ -346,7 +346,6 @@ lang: fa
 - [چارچوب‌های توسعه‌دهندگان](/developers/docs/frameworks/)
 - [فهرست ابزارهای توسعه‌دهندگان اجماع](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [استانداردهای توکن](/developers/docs/standards/tokens/)
-- [بیاستک: ابزارهای اتریوم](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: ابزارهای EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### جدیدترین تحقیقات {#recent-research-17}
