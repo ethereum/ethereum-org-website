@@ -24,6 +24,8 @@ import Link from "@/components/Link"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import { SECTION_LABELS } from "@/lib/constants"
+
 import type { NavItem, NavSectionKey, NavSections } from "./types"
 
 type ActiveState =
@@ -152,15 +154,6 @@ const Menu = ({ sections, ...props }: MenuProps) => {
 
   const [active, setActive] = useState<ActiveState>(activeNull)
 
-  // Order of sections in the menu
-  const sectionLabels: NavSectionKey[] = [
-    "learn",
-    "use",
-    "build",
-    "participate",
-    "research",
-  ]
-
   const onOpen = (key: NavSectionKey) => {
     setActive((prev) => ({ ...prev, section: key } as ActiveState))
   }
@@ -257,7 +250,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
     >
       <PopoverTrigger>
         <Flex as={List} display="flex" alignItems="center" m="0" {...props}>
-          {sectionLabels.map((key) => {
+          {SECTION_LABELS.map((key) => {
             const { label, ariaLabel } = sections[key]
             return (
               <Button

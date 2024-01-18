@@ -1,6 +1,7 @@
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
 import i18nConfig from "../../i18n.config.json"
+import { NavSectionKey } from "@/components/Nav/types"
 
 export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"
@@ -70,3 +71,16 @@ export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 
 export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"
+
+/**
+ * Navigation
+ */
+
+// Determines the order of sections in the menu
+export const SECTION_LABELS: NavSectionKey[] = [
+  "learn",
+  "use",
+  "build",
+  "participate",
+  "research",
+]
