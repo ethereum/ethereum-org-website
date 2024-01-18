@@ -26,7 +26,7 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { NavItem, NavSectionKey, NavSections } from "./types"
+import type { Level, NavItem, NavSectionKey, NavSections } from "./types"
 
 type ActiveState =
   | { section: null; lvl1: null; lvl2: null; lvl3: null }
@@ -34,8 +34,6 @@ type ActiveState =
   | { section: NavSectionKey; lvl1: number; lvl2: null; lvl3: null }
   | { section: NavSectionKey; lvl1: number; lvl2: number; lvl3: null }
   | { section: NavSectionKey; lvl1: number; lvl2: number; lvl3: number }
-
-type Level = 1 | 2 | 3
 
 const activeNull: ActiveState = {
   section: null,

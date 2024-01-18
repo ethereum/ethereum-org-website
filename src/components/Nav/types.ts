@@ -23,3 +23,5 @@ export type NavSectionDetail = {
 }
 
 export type NavSections = Record<NavSectionKey, NavSectionDetail>
+
+export type Level = 1 | 2 | 3 | 4
