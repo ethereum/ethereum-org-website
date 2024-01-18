@@ -1096,6 +1096,111 @@ const questionBank: QuestionBank = {
     ],
     correctAnswerId: "j008-d",
   },
+  // Scaling
+  k001: {
+    prompt: "k001-prompt",
+    answers: [
+      {
+        id: "k001-a",
+        label: "k001-a-label",
+        explanation: "k001-a-explanation",
+      },
+      {
+        id: "k001-b",
+        label: "k001-b-label",
+        explanation: "k001-b-explanation",
+      },
+      {
+        id: "k001-c",
+        label: "k001-c-label",
+        explanation: "k001-c-explanation",
+      },
+      {
+        id: "k001-d",
+        label: "k001-d-label",
+        explanation: "k001-d-explanation",
+      },
+    ],
+    correctAnswerId: "k001-d",
+  },
+  k002: {
+    prompt: "k002-prompt",
+    answers: [
+      {
+        id: "k002-a",
+        label: "k002-a-label",
+        explanation: "k002-a-explanation",
+      },
+      {
+        id: "k002-b",
+        label: "k002-b-label",
+        explanation: "k002-b-explanation",
+      },
+      {
+        id: "k002-c",
+        label: "k002-c-label",
+        explanation: "k002-c-explanation",
+      },
+      {
+        id: "k002-d",
+        label: "k002-d-label",
+        explanation: "k002-d-explanation",
+      },
+    ],
+    correctAnswerId: "k002-c",
+  },
+  k003: {
+    prompt: "k003-prompt",
+    answers: [
+      {
+        id: "k003-a",
+        label: "k003-a-label",
+        explanation: "k003-a-explanation",
+      },
+      {
+        id: "k003-b",
+        label: "k003-b-label",
+        explanation: "k003-b-explanation",
+      },
+      {
+        id: "k003-c",
+        label: "k003-c-label",
+        explanation: "k003-c-explanation",
+      },
+      {
+        id: "k003-d",
+        label: "k003-d-label",
+        explanation: "k003-d-explanation",
+      },
+    ],
+    correctAnswerId: "k003-d",
+  },
+  k004: {
+    prompt: "k004-prompt",
+    answers: [
+      {
+        id: "k004-a",
+        label: "k004-a-label",
+        explanation: "k004-a-explanation",
+      },
+      {
+        id: "k004-b",
+        label: "k004-b-label",
+        explanation: "k004-b-explanation",
+      },
+      {
+        id: "k004-c",
+        label: "k004-c-label",
+        explanation: "k004-c-explanation",
+      },
+      {
+        id: "k004-d",
+        label: "k004-d-label",
+        explanation: "k004-d-explanation",
+      },
+    ],
+    correctAnswerId: "k004-b",
+  }
 }
 
 export default questionBank

@@ -40,6 +40,10 @@ const quizzes: RawQuizzes = {
     title: "solo",
     questions: ["j001", "j002", "j004", "j005", "j006", "j007", "j008"],
   },
+  scaling: {
+    title: "scaling",
+    questions: ["k001", "k002", "k003", "k004"],
+  },
 }
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -78,6 +82,11 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
     level: "beginner",
+    next: "scaling",
+  },
+  {
+    id: "scaling",
+    level: "intermediate",
     next: "layer-2",
   },
   {

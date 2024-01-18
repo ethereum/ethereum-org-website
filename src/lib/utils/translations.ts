@@ -188,6 +188,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     path.startsWith("/layer-2") ||
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
+    path.startsWith("/roadmap/scaling") ||
     path.startsWith("/security") ||
     path.startsWith("/staking/solo") ||
     path.startsWith("/wallets") ||
