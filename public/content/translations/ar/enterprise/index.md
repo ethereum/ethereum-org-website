@@ -6,7 +6,7 @@ lang: ar
 
 # إيثريوم للمؤسسات {#ethereum-for-enterprise}
 
-<div class="featured">إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة.</div>
+<FeaturedText>إرشادات ومقالات وأدوات عن سلاسل كتل إيثريوم العامة والخاصة ذات الصلة بالمؤسسة.</FeaturedText>
 
 ## لماذا إيثريوم للمؤسسات؟ {#why-enterprise-ethereum}
 

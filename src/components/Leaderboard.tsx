@@ -59,8 +59,7 @@ const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
         .filter((_, idx) => idx < limit)
         .map(({ name, username, score }, idx) => {
           const hasGitHub = !!username
-          const avatarImg =
-            GITHUB_URL + (username || "random") + ".png?size=40"
+          const avatarImg = GITHUB_URL + (username || "random") + ".png?size=40"
           const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
 
           let emoji: string | null = null

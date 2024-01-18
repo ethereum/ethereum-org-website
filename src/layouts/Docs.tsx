@@ -151,12 +151,6 @@ const Content = (props: ChildOnlyProp) => {
       px={{ base: 8, md: 16 }}
       m="0 auto"
       sx={{
-        ".featured": {
-          ps: 4,
-          ms: -4,
-          borderInlineStart: "1px dotted",
-          borderColor: "primary",
-        },
         ".citation": {
           p: {
             color: "text200",

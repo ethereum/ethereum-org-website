@@ -80,7 +80,14 @@ const LanguagesPage = () => {
         description={t("page-languages-meta-desc")}
       />
 
-      <Flex as={MainArticle} direction="column" align="center" w="full" mx="auto" mt={16}>
+      <Flex
+        as={MainArticle}
+        direction="column"
+        align="center"
+        w="full"
+        mx="auto"
+        mt={16}
+      >
         <PageMetadata
           title={t("page-languages-meta-title")}
           description={t("page-languages-meta-desc")}
@@ -146,7 +153,7 @@ const LanguagesPage = () => {
                   key={lang["name"]}
                   textDecor="none"
                   m={4}
-                  ml={0}
+                  ms={0}
                   p={4}
                   flexBasis="240px"
                   flexGrow={{ base: 1, sm: 0 }}

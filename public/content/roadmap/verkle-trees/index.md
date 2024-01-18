@@ -49,12 +49,13 @@ Verkle trees are `(key,value)` pairs where the keys are 32-byte elements compose
 
 Verkle tree testnets are already up and running, but there are still substantial outstanding updates to clients that are required to support Verkle trees. You can help accelerate progress by deploying contracts to the testnets or running testnet clients.
 
-[Explore the Beverly Hills Verkle testnet](https://beverlyhills.ethpandaops.io)
+[Explore the Verkle Gen Devnet 2 testnet](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Watch Guillaume Ballet explain the Condrieu Verkle testnet](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (note that the Condrieu testnet was proof-of-work and has now been superseded by the [Kaustinen testnet](https://kaustinen.ethdevops.io)).
+[Watch Guillaume Ballet explain the Condrieu Verkle testnet](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (note that the Condrieu testnet was proof-of-work and has now been superseded by the Verkle Gen Devnet 2 testnet).
 
 ## Further reading {#further-reading}
 
+- [Verkle Trees for Statelessness](https://verkle.info/)
 - [Dankrad Feist explain Verkle trees on PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet explain verkle trees at ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["How Verkle trees make Ethereum lean and mean" by Guillaume Ballet at Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)

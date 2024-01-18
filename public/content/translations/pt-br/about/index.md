@@ -108,7 +108,7 @@ Quer se envolver?[Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrN
 
 ## Guia de estilo {#style-guide}
 
-Temos um guia de estilo [](/contributing/style-guide/) para padronizar certos aspectos do conteúdo de escrita para facilitar o processo de contribuição.
+Temos um [guia de estilo](/contributing/style-guide/) para padronizar certos aspectos do conteúdo de escrita para facilitar o processo de contribuição.
 
 Certifique-se de ler [nossos princípios](/contributing/design-principles/) e [nosso guia de estilo](/contributing/style-guide/) se você quiser [contribuir para o site](/contributing/).
 

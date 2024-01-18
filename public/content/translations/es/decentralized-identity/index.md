@@ -91,7 +91,7 @@ Este es un escenario hipotético para explicar los certificados fuera de la cade
 
 ### Certificaciones fuera de cadena con acceso permanente {#offchain-attestations-with-persistent-access}
 
-Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un hash [](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
+Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un [hash](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
 
 Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de reclamaciones cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
 

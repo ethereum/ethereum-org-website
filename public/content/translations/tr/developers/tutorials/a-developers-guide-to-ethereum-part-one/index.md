@@ -41,7 +41,7 @@ Ethereum'u tanımlamanın birçok yolu bulunsa da Ethereum, özünde bir blok zi
 
 Her [blok](/developers/docs/blocks/) kendinden önceki bloğa doğru bir referansa sahiptir; `parentHash` kısaca önceki bloğun hash değeridir.
 
-<div class="featured">Not: Ethereum, <a href="https://wikipedia.org/wiki/Hash_function">hash fonksiyonlarını</a> sürekli sabit büyüklükteki değerler ("hash değerleri") oluşturmak için kullanır. Hash değerleri, Ethereum'da büyük bir rol oynar ama şimdilik onları benzersiz kimlikler olarak düşünebilirsiniz.</div>
+<FeaturedText>Not: Ethereum, <a href="https://wikipedia.org/wiki/Hash_function">hash fonksiyonlarını</a> sürekli sabit büyüklükteki değerler ("hash değerleri") oluşturmak için kullanır. Hash değerleri, Ethereum'da büyük bir rol oynar ama şimdilik onları benzersiz kimlikler olarak düşünebilirsiniz.</FeaturedText>
 
 ![Her bloğun içindeki verileri içeren bir blok zincirini gösteren bir diyagram](./blockchain-diagram.png)
 
@@ -57,7 +57,7 @@ Bu merkeziyetsiz yeni teknoloji yığını, yeni geliştirici araçları ortaya 
 
 Ethereum ile etkileşim kurmak isteyen Python geliştiricilerinin [Web3.py](https://web3py.readthedocs.io/).'ye ulaşması muhtemeldir. Web3.py, bir Ethereum düğümüne bağlanma ve ondan veri gönderme ve alma şeklinizi büyük ölçüde basitleştiren bir kütüphanedir.
 
-<div class="featured">Not: “Ethereum düğümü” ve “Ethereum istemcisi” birbirinin yerine kullanılan terimlerdir. Her iki durumda da, Ethereum ağındaki bir katılımcının çalıştırdığı yazılım ifade edilir. Bu yazılım blok verilerini okuyabilir, zincire yeni bloklar eklendiğinde güncellemeler alabilir, yeni işlemler yayımlayabilir ve daha fazlasını yapabilir. Teknik olarak istemci yazılımdır, düğüm ise yazılımı çalıştıran bilgisayardır.</div>
+<FeaturedText>Not: “Ethereum düğümü” ve “Ethereum istemcisi” birbirinin yerine kullanılan terimlerdir. Her iki durumda da, Ethereum ağındaki bir katılımcının çalıştırdığı yazılım ifade edilir. Bu yazılım blok verilerini okuyabilir, zincire yeni bloklar eklendiğinde güncellemeler alabilir, yeni işlemler yayımlayabilir ve daha fazlasını yapabilir. Teknik olarak istemci yazılımdır, düğüm ise yazılımı çalıştıran bilgisayardır.</FeaturedText>
 
 [Ethereum istemcileri](/developers/docs/nodes-and-clients/); [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP veya Websocket'ler tarafından erişilebilir olacak şekilde yapılandırılabilir, bu nedenle Web3.py'nin bu yapılandırmayı yansıtması gerekecek. Web3.py, bu bağlanma seçeneklerini **sağlayıcı** (provider) olarak ifade eder. Web3.py örneğini düğümünüze bağlamak için üç sağlayıcıdan birini seçmeniz gerekir.
 
@@ -79,7 +79,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 Bu örnekte, sadece bir Python yorumlayıcısı içinde çalışacağız. Herhangi bir dizin, dosya, sınıf veya fonksiyon oluşturmayacağız.
 
-<div class="featured">Not: Aşağıdaki örneklerde "$" ile başlayan komutların terminalde çalıştırılması amaçlanmıştır. ("$" işaretini yazmayınız, bu sadece satır başlangıcını belli etmek içindir.)</div>
+<FeaturedText>Not: Aşağıdaki örneklerde "$" ile başlayan komutların terminalde çalıştırılması amaçlanmıştır. ("$" işaretini yazmayınız, bu sadece satır başlangıcını belli etmek içindir.)</FeaturedText>
 
 İlk olarak, deney yapabileceğiniz kullanıcı dostu bir ortam yaratmak için [IPython](https://ipython.org/) indirin. IPython, diğer özelliklerin yanı sıra tab tuşu ile tamamlama özelliği sunarak Web3.py içinde nelerin mümkün olduğunu görmeyi çok daha kolaylaştırır.
 
@@ -129,7 +129,7 @@ In [1]: from web3 import Web3
 
 Bir Ethereum uygulamasında, genellikle para birimlerini dönüştürmeniz gerekir. Web3 modülü bunun için birkaç yardımcı yöntem sağlar: [wei_den](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) ve [wei_ye](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
-<div class="featured">
+<FeaturedText>
 Not: Bilgisayarlar, ondalık matematiği işlemede çok kötüdür. Bunu aşmak için geliştiriciler genellikle dolar tutarlarını sent olarak saklar. Örneğin fiyatı $5,99 olan bir ürün veritabanında 599 olarak saklanabilir.
 
 <b>Ether</b> bazındaki işlemler işlenirken benzer bir model kullanılır. Ancak, ether'da iki ondalık nokta yerine 18 ondalık nokta bulunur! Ether'ın en küçük birimine <b>wei</b> denir, bu nedenle işlem gönderirken belirtilen değer budur.
@@ -138,7 +138,7 @@ Not: Bilgisayarlar, ondalık matematiği işlemede çok kötüdür. Bunu aşmak 
 
 1 wei = 0,000000000000000001 ether
 
-</div>
+</FeaturedText>
 
 Bazı değerleri wei'ye ve wei'den dönüştürmeyi deneyin. Ether ve wei [arasındaki çok sayıda birim için isimler olduğunu](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) unutmayın. Bunlar arasında daha iyi bilinenlerden biri **gwei**'dir, çünkü genellikle işlem ücretleri bu şekilde gösterilir.
 
@@ -290,7 +290,7 @@ Out[13]: 1000003000000000000000000
 
 [Gaz](/developers/docs/gas/#post-london) hakkında daha fazla bilgi
 
-<div class="featured">Not: Genel ağda işlem ücretleri, ağ talebine ve bir işlemin ne kadar hızlı işlenmesini istediğinize göre değişir. Ücretlerin nasıl hesaplandığına dair bir belge görmek istiyorasanız, işlemlerin bir bloğa <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">nasıl dahil edildiğine ilişkin önceki gönderime göz atabilirsiniz</a>.</div>
+<FeaturedText>Not: Genel ağda işlem ücretleri, ağ talebine ve bir işlemin ne kadar hızlı işlenmesini istediğinize göre değişir. Ücretlerin nasıl hesaplandığına dair bir belge görmek istiyorasanız, işlemlerin bir bloğa <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">nasıl dahil edildiğine ilişkin önceki gönderime göz atabilirsiniz</a>.</FeaturedText>
 
 ## Ve derin bir nefes alın {#and-breathe}
 

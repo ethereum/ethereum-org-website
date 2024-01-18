@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Ethereum verslui {#ethereum-for-enterprise}
 
-<div class="featured">Vadovai, straipsniai ir įrankiai apie viešųjų ir privačiųjų Ethereum blokų grandinių teikimą verslui.</div>
+<FeaturedText>Vadovai, straipsniai ir įrankiai apie viešųjų ir privačiųjų Ethereum blokų grandinių teikimą verslui.</FeaturedText>
 
 ## Kodėl rinktis Ethereum verslui? {#why-enterprise-ethereum}
 

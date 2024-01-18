@@ -10920,6 +10920,42 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "o2Stake",
+      "name": "Tim - o2Stake",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77958700?v=4",
+      "profile": "http://o2stake.com",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "b-wagn",
+      "name": "Benedikt Wagner",
+      "avatar_url": "https://avatars.githubusercontent.com/u/113296072?v=4",
+      "profile": "http://benedikt-wagner.dev",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "tdahar",
+      "name": "Tarun Mohandas Daryanani",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18716811?v=4",
+      "profile": "https://github.com/tdahar",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "Crosstons",
+      "name": "Shubh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/110349596?v=4",
+      "profile": "https://github.com/Crosstons",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

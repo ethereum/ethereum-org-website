@@ -195,6 +195,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
         {frontmatter.image && (
           <Image
             src={frontmatter.image}
+            blurDataURL={frontmatter.blurDataURL}
             alt={frontmatter.alt}
             width={816}
             height={525}

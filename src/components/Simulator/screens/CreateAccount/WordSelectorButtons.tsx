@@ -36,7 +36,7 @@ export const WordSelectorButtons: React.FC<IProps> = ({
       return [...acc.slice(0, randIndex), item, ...acc.slice(randIndex)]
     }, restRandom)
     return pseudoRandom
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const incrementWordsSelected = useCallback(() => {

@@ -56,11 +56,7 @@ const TranslationBanner: React.FC<IProps> = ({
         }}
         borderRadius="sm"
       >
-        <Flex
-          flexDirection="column"
-          m={4}
-          mt={{ base: 10, sm: 4 }}
-        >
+        <Flex flexDirection="column" m={4} mt={{ base: 10, sm: 4 }}>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
             mb={4}

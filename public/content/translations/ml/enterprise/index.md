@@ -6,7 +6,7 @@ lang: ml
 
 # എന്റർപ്രൈസിനായുള്ള Ethereum {#ethereum-for-enterprise}
 
-<div class="featured">എന്റർപ്രൈസിനായി പൊതു, സ്വകാര്യ Ethereum ബ്ലോക്ക്‌ചെയിനുകൾ എത്തിക്കുന്നതിനുള്ള ഗൈഡുകൾ, ലേഖനങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.</div>
+<FeaturedText>എന്റർപ്രൈസിനായി പൊതു, സ്വകാര്യ Ethereum ബ്ലോക്ക്‌ചെയിനുകൾ എത്തിക്കുന്നതിനുള്ള ഗൈഡുകൾ, ലേഖനങ്ങൾ, ഉപകരണങ്ങൾ എന്നിവ.</FeaturedText>
 
 ## എന്തുകൊണ്ട് Ethereum എന്റർപ്രൈസ്? {#why-enterprise-ethereum}
 

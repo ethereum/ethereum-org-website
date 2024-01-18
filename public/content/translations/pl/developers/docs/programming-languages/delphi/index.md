@@ -5,11 +5,11 @@ lang: pl
 incomplete: true
 ---
 
-<div class="featured">
+<FeaturedText>
 
 Dowiedz się, jak programować dla Ethereum przy użyciu języka programowania Delphi
 
-</div>
+</FeaturedText>
 
 Użyj Ethereum do tworzenia aplikacji zdecentralizowanych (lub „dapp”), które wykorzystują zalety kryptowaluty i technologii blockchain. Te aplikacje zdecentralizowane mogą być godne zaufania, co oznacza, że ​​po wdrożeniu w Ethereum zawsze będą działać tak, jak zaprogramowano. Mogą kontrolować zasoby cyfrowe w celu tworzenia nowych rodzajów aplikacji finansowych. Mogą być zdecentralizowane, co oznacza, że ​​nie kontroluje ich żadna pojedyncza jednostka ani osoba i są prawie niemożliwe do cenzurowania.
 

@@ -2,10 +2,11 @@ import { ReportsModel } from "@crowdin/crowdin-api-client"
 
 import i18nConfig from "../../i18n.config.json"
 
-export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
+export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
+export const INTL_JSON_DIR = "src/intl"
 
 // i18n
 export const DEFAULT_LOCALE = "en"

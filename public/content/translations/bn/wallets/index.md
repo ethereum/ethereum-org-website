@@ -6,11 +6,11 @@ lang: bn
 
 # ইথেরিয়াম ওয়ালেট {#ethereum-wallets}
 
-<div class="featured">
+<FeaturedText>
 
 **ইথেরিয়াম ওয়ালেট সম্বন্ধে আরও জানতে চান?** এই পাতাটি মৌলিক বিষয়গুলি ব্যাখ্যা করবে এবং আপনাকে কয়েকটি সহজ বিকল্প দেবে।
 
-</div>
+</FeaturedText>
 
 ## ইথেরিয়াম ওয়ালেট কী এবং আমার কোনটি ব্যবহার করা উচিত? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
