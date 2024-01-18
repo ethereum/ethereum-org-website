@@ -2,7 +2,7 @@
 title: Staking, mint szolgáltatás
 description: Egy áttekintő a pooled ETH staking elkezdéséről
 lang: hu
-template: staking
+template: staking (letétbe helyezés)
 emoji: ":money_with_wings:"
 image: /staking/leslie-saas.png
 alt: Leslie, a rinocérosz a felhőkön lebeg.
@@ -43,13 +43,13 @@ Néhány elérhető SaaS-szolgáltatót soroltunk fel alább. A fenti jellemzők
 
 <ProductDisclaimer />
 
-### SaaS-szolgáltatók
+#### SaaS-szolgáltatók
 
 <StakingProductsCardGrid category="saas" />
 
-Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>sokrétű végrehajtás</em> és <em style={{ textTransform: "uppercase" }}>sokrétű konszenzus</em>
+Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>végrehajtási kliens sokrétűsége</em> és <em style={{ textTransform: "uppercase" }}>konszenzusos kliens sokrétűgése</em>
 
-### Kulcsgenerátorok
+#### Kulcsgenerátorok
 
 <StakingProductsCardGrid category="keyGen" />
 
@@ -91,4 +91,5 @@ Kérdezze meg az SaaS-szolgáltatóját a lehetséges garanciákról vagy biztos
 
 ## További olvasnivaló {#further-reading}
 
+- [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [A letétbe helyezési szolgáltatások értékelése](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020._

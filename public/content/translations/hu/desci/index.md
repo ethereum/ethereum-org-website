@@ -103,7 +103,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [OceanDAO: az adattal kapcsolatos tudományok DAO által irányított finanszírozása](https://oceanprotocol.com/dao)
 - [Opscientia: nyílt, decentralizált, tudományos munkafolyamatok](https://opsci.io/research/)
 - [LabDAO: fehérjék számítógépes szimulációja](https://alphafodl.vercel.app/)
-- [Bio.xyz: finanszírozás szerzése a biotechnológiai DAO-jához vagy decentralizált tudományos projektjéhez](https://www.molecule.to/)
+- [Bio.xyz: finanszírozás szerzése a biotechnológiai DAO-jához vagy decentralizált tudományos projektjéhez](https://www.bio.xyz/)
 - [ResearchHub: tudományos eredmények publikálása és azok megvitatása munkatársaival](https://www.researchhub.com/)
 - [VitaDAO: hosszútávú kutatások finanszírozása a szponzorált kutatási megállapodások alapján](https://www.vitadao.com/)
 - [Fleming Protocol: nyílt forráskódú adatgazdaság, amely fűti a kollaboratív orvosbiológiai felfedezéseket](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

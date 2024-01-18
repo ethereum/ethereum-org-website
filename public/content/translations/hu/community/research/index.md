@@ -26,7 +26,7 @@ Ez a riport 2022. májusában készült, melyben a [DelphiDigital](https://membe
 
 A protokollkutatás az Ethereum alaprétegével foglalkozik – szabályok összessége, hogy a csomópontok hogyan kapcsolódnak, kommunikálnak, cserélik és tárolják az adatot, és hogyan jutnak konszenzusra a blokklánc státuszát illetően. A protokollkutatás két fő kategóriára oszlik: konszenzus és végrehajtási.
 
-### Consensus {#consensus}
+### Konszenzus {#consensus}
 
 A konszenzuskutatás az [Ethereum proof-of-stake mechanizmusával](/developers/docs/consensus-mechanisms/pos/) foglalkozik. Néhány példa:
 
@@ -39,16 +39,16 @@ Emellett a jövőbe előretekintő kutatások, a protokoll alapvető újratervez
 
 #### Háttér olvasmányok {#background-reading}
 
-- [Introduction to proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Casper-FFG paper](https://arxiv.org/abs/1710.09437)
+- [Bevezetés a proof-of-stake mechanizmusba](/developers/docs/consensus-mechanisms/pos/)
+- [Casper-FFG leírás](https://arxiv.org/abs/1710.09437)
 - [Casper-FFG magyarázat](https://arxiv.org/abs/1710.09437)
-- [Gasper paper](https://arxiv.org/abs/2003.03052)
+- [Gasper leírás](https://arxiv.org/abs/2003.03052)
 
 #### Jelenlegi kutatás {#recent-research}
 
 - [Ethresear.ch konszenzus](https://ethresear.ch/c/consensus/29)
 - [Elérhetőség/Véglegesség dilemma](https://arxiv.org/abs/2009.04987)
-- [Single slot finality](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
+- [Egy sloton belüli véglegesség](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
 - [Javaslattevő-építő szétválasztása](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 
 ### Végrehajtási {#execution}
@@ -67,7 +67,7 @@ A végrehajtási réteg a tranzakciók feldolgozását végzi, az [Ethereum virt
 #### Jelenlegi kutatás {#recent-research-1}
 
 - [Adatbázis optimalizáció](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
-- [State expiry](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
+- [A státusz lejárata](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [Utak a státusz lejáratának beállításához](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkle és státusz lejáratának beállítása](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Előzmények kezelése](https://eips.ethereum.org/EIPS/eip-4444)
@@ -124,7 +124,7 @@ Az L2 az egyik területe még több kutatást és fejlesztést igényel – ez p
 - [Bevezetés a blokklánchidak működésébe](/bridges/)
 - [Vitalik a hidakról](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [A blokklánchidakról szóló cikk](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [A hidakba ragadt érték](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [A hidakba ragadt érték](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Jelenlegi kutatás {#recent-research-3}
 
@@ -156,7 +156,7 @@ A [csomópontok futtatása](/developers/docs/nodes-and-clients/run-a-node/) szer
 
 #### Jelenlegi kutatás {#recent-research-5}
 
-- [ecdsa a FGPA-król](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa a FPGA-król](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Biztonság {#security}
 
@@ -346,7 +346,6 @@ Az Ethereum fejlesztők eszközei gyorsan fejlődnek. Ezen a területen is sok a
 - [Fejlesztői keretrendszerek](/developers/docs/frameworks/)
 - [Konszenzusfejlesztői eszközök listája](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Token szabványok](/developers/docs/standards/tokens/)
-- [Biastek: Ethereum-eszközök](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: EVM-eszközök](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Jelenlegi kutatás {#recent-research-17}
