@@ -30,7 +30,7 @@ Masz problemy z portfelem? Większość portfeli ma dedykowane zespoły wsparcia
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Nie jest to pełna lista. Potrzebujesz pomocy w znalezieniu wsparcia konkretnego portfela? Dołącz do [Discorda ethereum.org](https://discord.gg/ethereum-org), a my postaramy się pomóc._
+_Nie jest to pełna lista. Potrzebujesz pomocy w znalezieniu wsparcia konkretnego portfela? Dołącz do [Discorda ethereum.org](https://discord.gg/rZz26QWfCg), a my postaramy się pomóc._
 
 Szukasz portfela Ethereum? [ Zapoznaj się z naszą pełną listą portfeli Ethereum](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Szukasz portfela Ethereum? [ Zapoznaj się z naszą pełną listą portfeli Ethe
 Budowanie może być trudne. Oto kilka miejsc skoncentrowanych na rozwoju z doświadczonymi deweloperami Ethereum, którzy chętnie pomogą.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
+- [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ Czy twoje pytanie dotyczy konkretnego narzędzia, projektu lub biblioteki? Więk
 
 Oto kilka popularnych przykładów:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Oto kilka popularnych przykładów:
 
 Jeśli uruchamiasz węzeł lub walidator, oto kilka społeczności, które pomogą Ci zacząć.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 Większość zespołów tworzących klienty Ethereum ma również dedykowane, publiczne przestrzenie, w których można uzyskać wsparcie i zadawać pytania.
@@ -89,17 +89,17 @@ Możesz także [ dowiedzieć się, jak uruchomić węzeł tutaj](/developers/doc
 
 ## Najczęściej zadawane pytania (FAQ) {#faq}
 
-### Wysłałem ETH do niewłaściwego portfela {#wrong-wallet}
+#### Wysłałem ETH do niewłaściwego portfela {#wrong-wallet}
 
 Transakcja wysłana na Ethereum jest nieodwracalna. Niestety, jeśli wysłałeś ETH do niewłaściwego portfela, nie ma sposobu na odzyskanie tych środków. Żadna centralna organizacja, podmiot ani osoba nie jest właścicielem Ethereum, co oznacza, że nikt nie może cofnąć transakcji. Dlatego ważne jest, aby zawsze dokładnie sprawdzać transakcje przed ich wysłaniem.
 
-### Jak mogę odebrać wygraną w konkursie Ethereum? {#giveaway-scam}
+#### Jak mogę odebrać wygraną w konkursie Ethereum? {#giveaway-scam}
 
 Konkursy z nagrodami Ethereum to oszustwa mające na celu kradzież twojego ETH. Nie daj się skusić ofertom, które wydają się zbyt piękne, aby były prawdziwe — jeśli wyślesz ETH na adres konkursowy, nie otrzymasz nagrody i nie będziesz w stanie odzyskać swoich środków.
 
 [Więcej informacji na temat zapobiegania oszustwom](/security/#common-scams)
 
-### Moja transakcja utknęła {#stuck-transaction}
+#### Moja transakcja utknęła {#stuck-transaction}
 
 Transakcje na Ethereum mogą czasami utknąć, jeśli złożyłeś niższą opłatę transakcyjną niż jest to wymagane ze względu na zapotrzebowanie sieci. Wiele portfeli oferuje opcję ponownego przesłania tej samej transakcji z wyższą opłatą transakcyjną, aby umożliwić przetworzenie transakcji. Alternatywnie możesz anulować oczekującą transakcję, wysyłając transakcję na swój własny adres i używając tego samego nonce, co oczekująca transakcja.
 
@@ -107,10 +107,10 @@ Transakcje na Ethereum mogą czasami utknąć, jeśli złożyłeś niższą opł
 
 [Jak anulować oczekujące transakcje Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Jak wydobywać Ethereum? {#mining-ethereum}
+#### Jak wydobywać Ethereum? {#mining-ethereum}
 
 Kopanie Ethereum nie jest już dłużej możliwe. Wydobywanie zostało wyłączone, gdy Ethereum przeszło z proof-of-work na proof-of-stake. Teraz, zamiast górników, Ethereum ma walidatorów. Walidatorzy stakują ETH i otrzymują nagrody za zabezpieczenie sieci.
 
-### Jak zostać stakerem/walidatorem? {#become-validator}
+#### Jak zostać stakerem/walidatorem? {#become-validator}
 
 Aby zostać walidatorem, musisz zestakować 32 ETH w kontrakcie depozytowym Ethereum i skonfigurować węzeł walidatora. Więcej informacji można znaleźć na naszych[ stronach poświęconych stakingowi](/staking) oraz na[ launchpadzie stakingu](https://launchpad.ethereum.org/).
