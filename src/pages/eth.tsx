@@ -253,7 +253,7 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
         display: { sm: "flex" },
         justifyContent: { sm: "center" },
         flexDirection: { sm: "column" },
-        ml: { sm: 4 },
+        ms: { sm: 4 },
       },
       p: {
         mb: { sm: 0 },

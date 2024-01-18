@@ -35,19 +35,19 @@ import {
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
 import MdLink from "@/components/MdLink"
-import PageMetadata from "@/components/PageMetadata"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import { getEditPath } from "@/lib/utils/editPath"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
 const ContentContainer = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
-  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
@@ -61,11 +61,6 @@ const ContentContainer = (props: ChildOnlyProp) => {
       borderRadius="4px"
       {...props}
       sx={{
-        ".featured": {
-          ps: "1rem",
-          ms: "-1rem",
-          borderInlineStart: `1px dotted ${borderColor}`,
-        },
         ".citation": {
           p: { color: "text200" },
         },
@@ -186,7 +181,8 @@ export const TutorialLayout = ({
   crowdinContributors,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
+
   const borderColor = useToken("colors", "border")
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null

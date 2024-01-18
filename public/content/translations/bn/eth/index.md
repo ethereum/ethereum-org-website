@@ -6,11 +6,11 @@ lang: bn
 
 # ইথার (ETH) কী? {#what-is-ether-eth}
 
-<div class="featured">
+<FeaturedText>
 
 **ETH হল ইথেরিয়ামের স্থানীয় মুদ্রা** ETH ব্যবহার করা শুরু করতে আপনার যে মৌলিক তথ্য প্রয়োজন, তা এই পাতাটি আপনাকে দেয়।
 
-</div>
+</FeaturedText>
 
 ## ETH কী এবং আমি কীভাবে এটি পেতে পারি? {#what-is-eth-and-how-do-i-get-it}
 

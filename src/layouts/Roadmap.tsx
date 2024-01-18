@@ -2,7 +2,6 @@ import {
   Box,
   Center,
   Flex,
-  Show,
   SimpleGrid,
   useToken,
   Wrap,
@@ -178,10 +177,11 @@ export const RoadmapLayout: React.FC<IProps> = ({
           <Center>
             <Image
               src={frontmatter.image}
+              blurDataURL={frontmatter.blurDataURL}
               alt={frontmatter.alt ?? ""}
               style={{ objectFit: "contain" }}
               width={1504}
-              height={345}
+              height={336}
               priority
             />
           </Center>
@@ -199,11 +199,9 @@ export const RoadmapLayout: React.FC<IProps> = ({
           {children}
           <FeedbackCard />
         </ContentContainer>
-        <Show below="lg">
-          <MobileButton>
-            <MobileButtonDropdown list={dropdownLinks} />
-          </MobileButton>
-        </Show>
+        <MobileButton>
+          <MobileButtonDropdown list={dropdownLinks} />
+        </MobileButton>
       </Page>
     </Box>
   )

@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # 엔터프라이즈용 이더리움 {#ethereum-for-enterprise}
 
-<div class="featured">엔터프라이즈용 공개 및 비공개 이더리움 블록체인 개발을 위한 각종 가이드, 문서 및 도구</div>
+<FeaturedText>엔터프라이즈용 공개 및 비공개 이더리움 블록체인 개발을 위한 각종 가이드, 문서 및 도구</FeaturedText>
 
 ## 엔터프라이즈 이더리움을 선택해야 하는 이유 {#why-enterprise-ethereum}
 

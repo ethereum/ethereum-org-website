@@ -51,7 +51,7 @@ const semanticTokens = {
     },
     body: {
       base: { _light: "gray.800", _dark: "gray.100" },
-      medium: { _light: "gray.500", _dark: "gray.300" },
+      medium: { _light: "gray.500", _dark: "gray.400" },
       light: { _light: "gray.200", _dark: "gray.600" },
       // ! Deprecating body.inverted
       inverted: { _light: "gray.100", _dark: "gray.800" },

@@ -28,7 +28,7 @@ lang: uk
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org website team</Link> — можливість поспілкуватися з командою та спільнотою щодо розробки й дизайну ethereum.org</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ZH5aXDgWEU">Web3 University</Link> — спільнота, орієнтована на вивчення процесу розробки Web3 </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> — спільнота авторів Web3, де збираються конструктори, представники індустрії та ентузіасти Ethereum. Ми зацікавлені в розробці, дизайні та культурі Web3. Створюйте з нами.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> — чат для розробки Solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> — чат для розробки Solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для розробки Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- форум із запитаннями й відповідями_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- децентралізований форум із запитаннями й відповідями_</SocialListItem>

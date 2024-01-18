@@ -35,7 +35,7 @@ lang: ja
 - [Solidity 言語ポータル](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Matrix チャットルーム](https://matrix.to/#/#ethereum_solidity:gitter.im)にブリッジされた[Solidity Gitter チャットルーム](https://gitter.im/ethereum/solidity/)
+- [Solidity Matrix チャットルーム](https://matrix.to/#/#ethereum_solidity:gitter.im)にブリッジされた[Solidity Gitter チャットルーム](https://gitter.im/ethereum/solidity)
 - [チートシート](https://reference.auditless.com/cheatsheet)
 - [Solidity ブログ](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)

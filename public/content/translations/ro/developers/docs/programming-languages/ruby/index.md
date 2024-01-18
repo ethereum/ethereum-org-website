@@ -5,7 +5,7 @@ lang: ro
 incomplete: false
 ---
 
-<div class="featured">Învăţaţi să programaţi pentru Ethereum folosind proiecte și instrumente Ruby.</div>
+<FeaturedText>Învăţaţi să programaţi pentru Ethereum folosind proiecte și instrumente Ruby.</FeaturedText>
 
 Folosiţi Ethereum pentru a crea aplicații descentralizate („dapp”) care valorifică avantajele criptomonedelor și ale tehnologiei blockchain. These dapps can be trustless, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets to create new kinds of financial applications. Pot fi descentralizate, adică nicio entitate sau persoană unică nu le poate controla și sunt aproape imposibil de cenzurat.
 

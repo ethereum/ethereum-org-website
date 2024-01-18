@@ -12,6 +12,7 @@ import {
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
+import BugBountyBanner from "@/components/Banners/BugBountyBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import ButtonLink from "@/components/Buttons/ButtonLink"
@@ -451,6 +452,8 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
+      {/* TODO: Remove two weeks prior to scheduled mainnet Dencun hardfork */}
+      <BugBountyBanner />
       <Content>
         <HeroCard>
           <HeroContainer>

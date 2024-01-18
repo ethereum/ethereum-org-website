@@ -48,11 +48,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
       borderColor="lightBorder"
     >
       <Center background="cardGradient" h="260px">
-        <Image
-          src={imgSrc}
-          alt={alt}
-          style={{ objectFit: "contain" }}
-        />
+        <Image src={imgSrc} alt={alt} style={{ objectFit: "contain" }} />
       </Center>
       <Flex p={6} flex="1" flexDir="column" justify="space-between" gap={4}>
         <Heading as="h3" size="md">

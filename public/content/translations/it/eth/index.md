@@ -6,11 +6,11 @@ lang: it
 
 # Cos'è ether (ETH)? {#what-is-ether-eth}
 
-<div class="featured">
+<FeaturedText>
 
 **ETH è la valuta nativa di Ethereum** Questa pagina contiene le informazioni di base che ti servono per iniziare a usare ETH.
 
-</div>
+</FeaturedText>
 
 ## Cosa sono gli ETH e come si ottengono? {#what-is-eth-and-how-do-i-get-it}
 

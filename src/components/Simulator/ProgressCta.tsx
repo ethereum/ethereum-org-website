@@ -1,6 +1,6 @@
 import React from "react"
 import { motion } from "framer-motion"
-import { Button, ButtonProps,Flex, type FlexProps } from "@chakra-ui/react"
+import { Button, ButtonProps, Flex, type FlexProps } from "@chakra-ui/react"
 
 import { ClickAnimation } from "./ClickAnimation"
 import { PulseAnimation } from "./PulseAnimation"

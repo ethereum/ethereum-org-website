@@ -6,7 +6,7 @@ lang: zh-tw
 
 # 企業級 Ethereum {#ethereum-for-enterprise}
 
-<div class="featured">企業級公開或私有 Ethereum 區塊鏈的相關指南、文章和工具。</div>
+<FeaturedText>企業級公開或私有 Ethereum 區塊鏈的相關指南、文章和工具。</FeaturedText>
 
 ## 為什麼選擇企業版 Ethereum？ {#why-enterprise-ethereum}
 

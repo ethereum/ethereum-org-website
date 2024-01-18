@@ -53,7 +53,7 @@ Sua pergunta está relacionada a uma ferramenta, projeto ou biblioteca em partic
 
 Aqui estão alguns exemplos populares:
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)

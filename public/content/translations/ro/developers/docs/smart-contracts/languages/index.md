@@ -35,7 +35,7 @@ Dacă aveţi deja cunoştinţe de limbaje de programare, în special JavaScript 
 - [Portalul limbajului Solidity](https://soliditylang.org/)
 - [Solidity prin exemple](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Camera de chat Solidity Gitter](https://gitter.im/ethereum/solidity/) legată de [Camera de chat Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Camera de chat Solidity Gitter](https://gitter.im/ethereum/solidity) legată de [Camera de chat Solidity Matrix](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Blogul Solidity](https://blog.soliditylang.org/)
 - [Contul de Twitter Solidity](https://twitter.com/solidity_lang)

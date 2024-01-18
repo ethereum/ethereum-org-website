@@ -79,7 +79,13 @@ const Divider = () => {
 
 const Page = ({ children }: ChildOnlyProp) => {
   return (
-    <Flex as={MainArticle} direction="column" alignItems="center" w="full" mx="auto">
+    <Flex
+      as={MainArticle}
+      direction="column"
+      alignItems="center"
+      w="full"
+      mx="auto"
+    >
       {children}
     </Flex>
   )
@@ -97,7 +103,7 @@ const StyledButtonLink = ({ children, ...props }: ButtonLinkProps) => {
   return (
     <ButtonLink
       mt={{ base: 4, md: 0 }}
-      ml={{ base: 0, md: 2 }}
+      ms={{ base: 0, md: 2 }}
       display="flex"
       alignItems="center"
       {...props}
@@ -228,7 +234,7 @@ const CommunityPage = () => {
         alignItems="center"
         direction="row-reverse"
         py={{ base: 8, lg: 0 }}
-        pl={{ base: 0, lg: 8 }}
+        ps={{ base: 0, lg: 8 }}
         w="full"
         h={{ base: "full", lg: "720px" }}
         mt="-1px"
@@ -315,7 +321,7 @@ const CommunityPage = () => {
         bg="homeBoxTurquoise"
         alignItems="center"
         direction={{ base: "column-reverse", lg: "row-reverse" }}
-        pl={{ base: 0, lg: 8 }}
+        ps={{ base: 0, lg: 8 }}
         py={{ base: 8, lg: 0 }}
         w="full"
         h={{ base: "full", lg: "720px" }}
@@ -352,7 +358,7 @@ const CommunityPage = () => {
         bg="homeBoxPink"
         alignItems="center"
         direction={{ base: "column-reverse", lg: "row-reverse" }}
-        pl={{ base: 0, lg: 8 }}
+        ps={{ base: 0, lg: 8 }}
         py={{ base: 8, lg: 0 }}
         h={{ base: "full", lg: "720px" }}
         w="full"
