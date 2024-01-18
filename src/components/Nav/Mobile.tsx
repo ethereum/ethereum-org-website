@@ -9,6 +9,7 @@ import {
   AccordionPanel,
   Box,
   ButtonProps,
+  chakra,
   Drawer,
   DrawerBody,
   DrawerContent,
@@ -31,7 +32,7 @@ import { BaseLink } from "@/components/Link"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { NavSections } from "./types"
+import type { Level, NavItem, NavSections } from "./types"
 
 const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   <Flex
@@ -76,18 +77,98 @@ const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
 const glyphSvg =
   "M 2 19 l 10 -14 l 0 0 l 10 14 M 2 19 l 10 7 M 12 26 l 10 -7 M 2 22 l 10 15 l 0 0 l 10 -15"
-const closeSvg =
-  "M 2 13 l 0 -3 l 20 0 l 0 3 M 7 14 l 10 10 M 7 24 l 10 -10 M 2 25 l 0 3 l 20 0 l 0 -3"
 
-const glyphPathVariants = {
-  closed: {
-    d: hamburgerSvg,
-    transition: { duration: 0.4 },
-  },
-  open: {
-    d: [hamburgerSvg, glyphSvg, glyphSvg, glyphSvg, closeSvg],
-    transition: { duration: 1.2 },
-  },
+const hamburgerVariants = {
+  closed: { d: hamburgerSvg, transition: { duration: 0.25 } },
+  open: { d: glyphSvg, transition: { duration: 0.25 } },
+}
+
+type HamburgerProps = ButtonProps & {
+  isMenuOpen: boolean
+  onToggle: () => void
+}
+
+const HamburgerButton = ({
+  isMenuOpen,
+  onToggle,
+  ...props
+}: HamburgerProps) => {
+  const { t } = useTranslation("common")
+  return (
+    <IconButton
+      onClick={onToggle}
+      aria-label={t("aria-toggle-search-button")}
+      variant="ghost"
+      isSecondary
+      px={0}
+      color="body.base"
+      icon={
+        <Icon
+          viewBox="0 0 24 40"
+          pointerEvents={isMenuOpen ? "none" : "auto"}
+          mx={0.5}
+          width={6}
+          height={10}
+          position="relative"
+          strokeWidth="2px"
+          _hover={{
+            color: "primary.base",
+            "& > path": {
+              stroke: "primary.base",
+            },
+          }}
+          sx={{
+            "& > path": {
+              stroke: "text",
+              fill: "none",
+            },
+          }}
+        >
+          <motion.path
+            variants={hamburgerVariants}
+            initial={false}
+            animate={isMenuOpen ? "open" : "closed"}
+          />
+        </Icon>
+      }
+      {...props}
+    />
+  )
+}
+
+type CloseButtonProps = ButtonProps & {
+  onToggle: () => void
+}
+
+const CloseButton = ({ onToggle, ...props }: CloseButtonProps) => {
+  const { t } = useTranslation("common")
+  return (
+    <IconButton
+      onClick={onToggle}
+      aria-label={t("aria-toggle-search-button")}
+      variant="ghost"
+      isSecondary
+      px={0}
+      color="menu.lvl1.main"
+      icon={
+        <Icon
+          viewBox="0 0 24 24"
+          width={6}
+          height={6}
+          position="relative"
+          strokeWidth="2px"
+          display="inline-block"
+          stroke="currentColor"
+        >
+          <path d="M 2 4 l 0 -3 l 20 0 l 0 3" />
+          <path d="M 7 15 l 10 -10 " />
+          <path d="M 7 5 l 10 10" />
+          <path d="M 2 16 l 0 3 l 20 0 l 0 -3" />
+        </Icon>
+      }
+      {...props}
+    />
+  )
 }
 
 const expandedPathVariants = {
@@ -122,52 +203,103 @@ const OpenCloseIcon = ({ isOpen }: { isOpen: boolean }) => (
   </Icon>
 )
 
-type HamburgerProps = ButtonProps & {
-  isMenuOpen: boolean
+type LvlAccordionProps = {
+  lvl: Level
+  items: NavItem[]
   onToggle: () => void
 }
-const Hamburger = ({ isMenuOpen, onToggle, ...props }: HamburgerProps) => {
-  const { t } = useTranslation("common")
-  return (
-    <Button
-      onClick={onToggle}
-      aria-label={t("aria-toggle-search-button")}
-      variant="ghost"
-      isSecondary
-      px={0}
-      {...props}
-    >
-      <Icon
-        viewBox="0 0 24 40"
-        pointerEvents={isMenuOpen ? "none" : "auto"}
-        mx={0.5}
-        width={6}
-        height={10}
-        position="relative"
-        strokeWidth="2px"
-        // zIndex={100}
-        _hover={{
-          color: "primary.base",
-          "& > path": {
-            stroke: "primary.base",
-          },
-        }}
-        sx={{
-          "& > path": {
-            stroke: "text",
-            fill: "none",
-          },
-        }}
-      >
-        <motion.path
-          variants={glyphPathVariants}
-          initial={false}
-          animate={isMenuOpen ? "open" : "closed"}
-        />
-      </Icon>
-    </Button>
-  )
-}
+
+const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
+  <Accordion allowToggle>
+    {items.map(({ label, description, ...actions }) => {
+      if ("href" in actions)
+        return (
+          <AccordionItem key={label}>
+            <Button
+              as={BaseLink}
+              w="full"
+              href={actions.href}
+              onClick={onToggle}
+              variant="ghost"
+              borderRadius="none"
+              justifyContent="start"
+              gap="2"
+              ps={(lvl + 2) * 4}
+              py="4"
+              _hover={{
+                color: "menu.highlight",
+              }}
+            >
+              <Box flex="1" textAlign="left">
+                <Text
+                  fontWeight="bold"
+                  fontSize="md"
+                  color={`menu.lvl${lvl}.main`}
+                >
+                  {label}
+                </Text>
+                <Text
+                  fontWeight="regular"
+                  fontSize="sm"
+                  color={`menu.lvl${lvl}.subtext`}
+                >
+                  {description}
+                </Text>
+              </Box>
+            </Button>
+          </AccordionItem>
+        )
+      return (
+        <AccordionItem key={label}>
+          {({ isExpanded }) => (
+            <>
+              <Heading
+                as={chakra[`h${lvl + 1}`]}
+                color={`menu.lvl${lvl}.main`}
+                py="0"
+              >
+                <AccordionButton
+                  justifyContent="start"
+                  gap="2"
+                  ps={lvl * 4}
+                  pe="4"
+                  py="4"
+                >
+                  <OpenCloseIcon isOpen={isExpanded} />
+                  <Box flex="1" textAlign="left">
+                    <Text
+                      fontWeight="bold"
+                      fontSize="md"
+                      color={`menu.lvl${lvl}.main`}
+                    >
+                      {label}
+                    </Text>
+                    <Text
+                      fontWeight="regular"
+                      fontSize="sm"
+                      color={`menu.lvl${lvl}.subtext`}
+                    >
+                      {description}
+                    </Text>
+                  </Box>
+                </AccordionButton>
+              </Heading>
+
+              <AccordionPanel p="0" bg={`menu.lvl${lvl + 1}.background`}>
+                <LvlAccordion
+                  lvl={(lvl + 1) as Level}
+                  items={actions.items}
+                  onToggle={onToggle}
+                />
+              </AccordionPanel>
+            </>
+          )}
+        </AccordionItem>
+      )
+    })}
+  </Accordion>
+)
+
 export type MobileNavMenuProps = ButtonProps & {
   isOpen: boolean
   onToggle: () => void
@@ -194,7 +326,7 @@ const MobileNavMenu = ({
 
   return (
     <>
-      <Hamburger isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
+      <HamburgerButton isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
 
       {/* DRAWER MENU */}
       <Drawer
@@ -223,38 +355,35 @@ const MobileNavMenu = ({
               Ethereum.org
             </DrawerHeader>
             <IconButton
-              size="6"
-              icon={<Hamburger isMenuOpen onToggle={onToggle} p="0" />}
+              icon={<CloseButton onToggle={onToggle} />}
               aria-label={t("aria-toggle-search-button")}
               variant="ghost"
-              w="fit-content"
-              p="0"
             />
           </Flex>
 
           {/* MAIN NAV CONTENTS OF MOBILE MENU */}
           <DrawerBody as="nav" px="0">
             <Accordion allowToggle>
-              {SECTION_LABELS.map((key) => {
-                const { label, ariaLabel, items } = linkSections[key]
-                return (
+              {SECTION_LABELS.map((key) => linkSections[key]).map(
+                ({ label, items }) => (
                   <AccordionItem key={label}>
                     {({ isExpanded }) => (
                       <>
                         <Heading
                           as="h2"
                           color="menu.lvl1.main"
+                          py="0"
                           bg={
                             isExpanded
                               ? "menu.lvl1.background"
                               : "background.base"
                           }
-                          py="4"
                         >
                           <AccordionButton
                             justifyContent="start"
                             gap="2"
                             _hover={{ bg: "none" }}
+                            py="4"
                           >
                             <OpenCloseIcon isOpen={isExpanded} />
                             <Box
@@ -269,289 +398,18 @@ const MobileNavMenu = ({
                           </AccordionButton>
                         </Heading>
 
-                        {/* LVL2 */}
                         <AccordionPanel p="0" bg="menu.lvl2.background">
-                          <Accordion allowToggle>
-                            {items.map(
-                              (
-                                {
-                                  label: lvl2Label,
-                                  description: lvl2Description,
-                                  ...lvl2Action
-                                },
-                                idx
-                              ) => (
-                                <AccordionItem key={lvl2Label}>
-                                  {"href" in lvl2Action ? (
-                                    <Button
-                                      as={BaseLink}
-                                      w="full"
-                                      href={lvl2Action.href}
-                                      onClick={onToggle}
-                                      variant="ghost"
-                                      borderRadius="none"
-                                      justifyContent="start"
-                                      gap="2"
-                                      _hover={{
-                                        color: "menu.highlight",
-                                      }}
-                                    >
-                                      <Box flex="1" textAlign="left" ps={12}>
-                                        <Text
-                                          fontWeight="bold"
-                                          fontSize="md"
-                                          color="menu.lvl2.main"
-                                        >
-                                          {lvl2Label}
-                                        </Text>
-                                        <Text
-                                          fontWeight="regular"
-                                          fontSize="sm"
-                                          color="menu.lvl2.subtext"
-                                        >
-                                          {lvl2Description}
-                                        </Text>
-                                      </Box>
-                                    </Button>
-                                  ) : (
-                                    <AccordionItem>
-                                      {({ isExpanded }) => (
-                                        <>
-                                          <Heading
-                                            as="h3"
-                                            color="menu.lvl2.main"
-                                            py="4"
-                                            px="4"
-                                          >
-                                            <AccordionButton
-                                              justifyContent="start"
-                                              gap="2"
-                                              _hover={{ bg: "none" }}
-                                            >
-                                              <OpenCloseIcon
-                                                isOpen={isExpanded}
-                                              />
-                                              <Box flex="1" textAlign="left">
-                                                <Text
-                                                  fontWeight="bold"
-                                                  fontSize="md"
-                                                  color="menu.lvl2.main"
-                                                >
-                                                  {lvl2Label}
-                                                </Text>
-                                                <Text
-                                                  fontWeight="regular"
-                                                  fontSize="sm"
-                                                  color="menu.lvl2.subtext"
-                                                >
-                                                  {lvl2Description}
-                                                </Text>
-                                              </Box>
-                                            </AccordionButton>
-                                          </Heading>
-
-                                          {/* LVL3 */}
-                                          <AccordionPanel
-                                            p="0"
-                                            bg="menu.lvl3.background"
-                                          >
-                                            <Accordion allowToggle>
-                                              {lvl2Action.items.map(
-                                                (
-                                                  {
-                                                    label: lvl3Label,
-                                                    description:
-                                                      lvl3Description,
-                                                    ...lvl3Action
-                                                  },
-                                                  idx
-                                                ) => (
-                                                  <AccordionItem
-                                                    key={lvl3Label}
-                                                  >
-                                                    {"href" in lvl3Action ? (
-                                                      <Button
-                                                        as={BaseLink}
-                                                        w="full"
-                                                        href={lvl3Action.href}
-                                                        onClick={onToggle}
-                                                        variant="ghost"
-                                                        borderRadius="none"
-                                                        justifyContent="start"
-                                                        gap="2"
-                                                        _hover={{
-                                                          color:
-                                                            "menu.highlight",
-                                                        }}
-                                                      >
-                                                        <Box
-                                                          flex="1"
-                                                          textAlign="left"
-                                                          ps={16}
-                                                        >
-                                                          <Text
-                                                            fontWeight="bold"
-                                                            fontSize="md"
-                                                            color="menu.lvl3.main"
-                                                          >
-                                                            {lvl3Label}
-                                                          </Text>
-                                                          <Text
-                                                            fontWeight="regular"
-                                                            fontSize="sm"
-                                                            color="menu.lvl3.subtext"
-                                                          >
-                                                            {lvl3Description}
-                                                          </Text>
-                                                        </Box>
-                                                      </Button>
-                                                    ) : (
-                                                      ({ isExpanded }) => (
-                                                        <>
-                                                          <Heading
-                                                            as="h4"
-                                                            color="menu.lvl3.main"
-                                                            py="4"
-                                                            pe="4"
-                                                            ps="8"
-                                                          >
-                                                            <AccordionButton
-                                                              justifyContent="start"
-                                                              gap="2"
-                                                              _hover={{
-                                                                bg: "none",
-                                                              }}
-                                                            >
-                                                              <OpenCloseIcon
-                                                                isOpen={
-                                                                  isExpanded
-                                                                }
-                                                              />
-                                                              <Box
-                                                                flex="1"
-                                                                textAlign="left"
-                                                              >
-                                                                <Text
-                                                                  fontWeight="bold"
-                                                                  fontSize="md"
-                                                                  color="menu.lvl3.main"
-                                                                >
-                                                                  {lvl2Label}
-                                                                </Text>
-                                                                <Text
-                                                                  fontWeight="regular"
-                                                                  fontSize="sm"
-                                                                  color="menu.lvl3.subtext"
-                                                                >
-                                                                  {
-                                                                    lvl2Description
-                                                                  }
-                                                                </Text>
-                                                              </Box>
-                                                            </AccordionButton>
-                                                          </Heading>
-
-                                                          {/* LVL4 */}
-                                                          <AccordionPanel
-                                                            p="0"
-                                                            bg="menu.lvl4.background"
-                                                          >
-                                                            <Accordion
-                                                              allowToggle
-                                                            >
-                                                              {lvl3Action.items.map(
-                                                                (
-                                                                  {
-                                                                    label:
-                                                                      lvl4Label,
-                                                                    description:
-                                                                      lvl4Description,
-                                                                    ...lvl4Action
-                                                                  },
-                                                                  idx
-                                                                ) => (
-                                                                  <AccordionItem
-                                                                    key={
-                                                                      lvl4Label
-                                                                    }
-                                                                  >
-                                                                    {"href" in
-                                                                      lvl4Action && (
-                                                                      <Button
-                                                                        as={
-                                                                          BaseLink
-                                                                        }
-                                                                        w="full"
-                                                                        href={
-                                                                          lvl4Action.href
-                                                                        }
-                                                                        onClick={
-                                                                          onToggle
-                                                                        }
-                                                                        variant="ghost"
-                                                                        borderRadius="none"
-                                                                        justifyContent="start"
-                                                                        gap="2"
-                                                                        _hover={{
-                                                                          color:
-                                                                            "menu.highlight",
-                                                                        }}
-                                                                      >
-                                                                        <Box
-                                                                          flex="1"
-                                                                          textAlign="left"
-                                                                          ps={
-                                                                            20
-                                                                          }
-                                                                        >
-                                                                          <Text
-                                                                            fontWeight="bold"
-                                                                            fontSize="md"
-                                                                            color="menu.lvl4.main"
-                                                                          >
-                                                                            {
-                                                                              lvl4Label
-                                                                            }
-                                                                          </Text>
-                                                                          <Text
-                                                                            fontWeight="regular"
-                                                                            fontSize="sm"
-                                                                            color="menu.lvl4.subtext"
-                                                                          >
-                                                                            {
-                                                                              lvl4Description
-                                                                            }
-                                                                          </Text>
-                                                                        </Box>
-                                                                      </Button>
-                                                                    )}
-                                                                  </AccordionItem>
-                                                                )
-                                                              )}
-                                                            </Accordion>
-                                                          </AccordionPanel>
-                                                        </>
-                                                      )
-                                                    )}
-                                                  </AccordionItem>
-                                                )
-                                              )}
-                                            </Accordion>
-                                          </AccordionPanel>
-                                        </>
-                                      )}
-                                    </AccordionItem>
-                                  )}
-                                </AccordionItem>
-                              )
-                            )}
-                          </Accordion>
+                          <LvlAccordion
+                            lvl={2 as Level}
+                            items={items}
+                            onToggle={onToggle}
+                          />
                         </AccordionPanel>
                       </>
                     )}
                   </AccordionItem>
                 )
-              })}
+              )}
             </Accordion>
           </DrawerBody>
 
