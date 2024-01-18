@@ -151,7 +151,7 @@ Ecco le pagine delle release dei client, in cui puoi trovare i loro binari preco
 ##### Client di esecuzione
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (Non fornisce un binario precompilato, dev'essere compilato)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 

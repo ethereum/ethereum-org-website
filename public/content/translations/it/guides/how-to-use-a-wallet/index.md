@@ -6,7 +6,7 @@ lang: it
 
 # Come utilizzare un portafoglio
 
-Impara come gestire tutte le funzioni di base di un portafoglio. Se non ne hai ancora uno, dai un'occhiata alla nostra guida [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/).
+Impara come gestire tutte le funzioni di base di un portafoglio. Se ancora non ne possiedi uno, consulta [Come creare un conto di Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Apri il tuo portafoglio
 
@@ -51,7 +51,7 @@ Il tuo indirizzo sarà lo stesso in tutti i progetti di Ethereum. Non devi regis
 
 1. Visita il sito web di qualsiasi progetto.
 2. Se la pagina iniziale del progetto è una semplice descrizione statica del progetto, dovresti poter cliccare su un pulsante "Apri l'App" nel menu, che ti condurrà all'app web effettiva.
-3. Una volta nell'app, clicca su "Connettiti"
+3. Una volta nell'app, fai clic su "Connetti".
 
 ![Pulsante che consente all'utente di connettersi al sito web con un portafoglio](./connect1.png)
 

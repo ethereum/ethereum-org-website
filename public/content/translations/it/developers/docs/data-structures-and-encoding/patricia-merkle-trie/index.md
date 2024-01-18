@@ -62,7 +62,7 @@ Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono defi
                 return hash(newnode)
 ```
 
-Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente, allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
+Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente,  allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire  una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
 
 È impossibile, per un utente malevolo, fornire una prova di una coppia `(percorso, valore)` che non esiste, poiché l'hash radice in definitiva si basa su tutti gli hash inferiori. Qualsiasi modifica sottostante modificherebbe l'hash radice. Si può pensare all'hash come una rappresentazione compressa delle informazioni strutturali sui dati, assicurata da una protezione pre-immagine della funzione di hashing.
 

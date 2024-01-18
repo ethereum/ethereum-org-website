@@ -123,7 +123,7 @@ sudo journalctl -u lighthouse-beacon
 
 Si noti che il client di consenso si sincronizzerà in pochi minuti perché utilizza la sincronizzazione dei checkpoint. Il client di esecuzione richiederà più tempo, potenzialmente diverse ore, e si avvierà quando il client di consenso avrà già terminato la sincronizzazione (questo perché il client di esecuzione ha bisogno di un obiettivo per la sincronizzazione fornito dal client di consenso).
 
-Con i servizi Geth e Lighthouse in esecuzione e sincronizzati, il tuo Raspberry Pi è ora un nodo Ethereum! È più comune interagire con la rete Ethereum utilizzando la console Javascript di Geth, che può essere collegata al client Geth sulla porta 8545. È anche possibile inviare comandi formattati come oggetti JSON utilizzando uno strumento di richiesta come Curl. Maggiori informazioni nella [documentazione di Geth](https://geth.ethereum.org).
+Con i servizi Geth e Lighthouse in esecuzione e sincronizzati, il tuo Raspberry Pi è ora un nodo Ethereum! È più comune interagire con la rete Ethereum utilizzando la console Javascript di Geth, che può essere collegata al client Geth sulla porta 8545. È anche possibile inviare comandi formattati come oggetti JSON utilizzando uno strumento di richiesta come Curl. Maggiori informazioni nella [documentazione di Geth](https://geth.ethereum.org/).
 
 Geth è preconfigurato per segnalare le metriche a un pannello Grafana che può essere visualizzato nel browser. Gli utenti più avanzati potrebbero voler utilizzare questa funzione per monitorare lo stato di salute del loro nodo accedendo a `ipaddress:3000` con nome `utente: admin` e `passwd: ethereum`.
 

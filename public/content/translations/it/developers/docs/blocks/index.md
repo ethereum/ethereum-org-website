@@ -1,6 +1,6 @@
 ---
 title: Blocchi
-description: "Panoramica dei blocchi nella blockchain Ethereum: struttura dati, a cosa servono e come sono fatti."
+description: 'Panoramica dei blocchi nella blockchain Ethereum: struttura dati, a cosa servono e come sono fatti.'
 lang: it
 ---
 
@@ -40,7 +40,7 @@ Proof of Stake significa quanto segue:
 In un blocco sono contenute molte informazioni. Al livello più alto, un blocco contiene i seguenti campi:
 
 | Campo               | Descrizione                                               |
-| :------------------ | :-------------------------------------------------------- |
+|:------------------- |:--------------------------------------------------------- |
 | `slot`              | lo slot a cui appartiene il blocco                        |
 | `indice_proponente` | l'ID del validatore che propone il blocco                 |
 | `parent_root`       | l'hash del blocco precedente                              |
@@ -50,7 +50,7 @@ In un blocco sono contenute molte informazioni. Al livello più alto, un blocco 
 Il blocco `body` contiene a sua volta diversi campi:
 
 | Campo                | Descrizione                                                            |
-| :------------------- | :--------------------------------------------------------------------- |
+|:-------------------- |:---------------------------------------------------------------------- |
 | `randao_reveal`      | un valore utilizzato per selezionare il prossimo proponente di blocchi |
 | `et1_data`           | informazioni sul contratto di deposito                                 |
 | `graffiti`           | dati arbitrari utilizzati per contrassegnare blocchi                   |
@@ -65,7 +65,7 @@ Il blocco `body` contiene a sua volta diversi campi:
 Il campo `attestations` contiene un elenco di tutte le attestazioni nel blocco. Le attestazioni hanno il proprio tipo di dati, contenente diversi pezzi di dati. Ogni attestazione contiene:
 
 | Campo              | Descrizione                                                          |
-| :----------------- | :------------------------------------------------------------------- |
+|:------------------ |:-------------------------------------------------------------------- |
 | `aggregation_bits` | un elenco dei validatori che hanno partecipato a questa attestazione |
 | `dati`             | un contenitore con diversi campi secondari                           |
 | `firma`            | firma aggregata di tutti i validatori attestanti                     |
@@ -73,7 +73,7 @@ Il campo `attestations` contiene un elenco di tutte le attestazioni nel blocco. 
 Il campo `data` nell'`attestation` contiene quanto segue:
 
 | Campo               | Descrizione                                               |
-| :------------------ | :-------------------------------------------------------- |
+|:------------------- |:--------------------------------------------------------- |
 | `slot`              | lo slot cui si riferisce l'attestazione                   |
 | `indice`            | indici per l'attestazione dei validatori                  |
 | `beacon_block_root` | l'hash radice del blocco Beacon contenente questo oggetto |
@@ -85,7 +85,7 @@ L'esecuzione delle transazioni nell'`execution_payload` aggiorna lo stato global
 L'`execution_payload_header` contiene i seguenti campi:
 
 | Campo               | Descrizione                                                                           |
-| :------------------ | :------------------------------------------------------------------------------------ |
+|:------------------- |:------------------------------------------------------------------------------------- |
 | `parent_hash`       | hash del blocco padre                                                                 |
 | `fee_recipient`     | indirizzo del conto a cui pagare le commissioni sulla transazione                     |
 | `state_root`        | hash radice per lo stato globale dopo l'applicazione delle modifiche in questo blocco |
@@ -105,7 +105,7 @@ L'`execution_payload_header` contiene i seguenti campi:
 Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all'intestazione, tranne per il fatto che, invece dell'hash radice delle transazioni, include l'elenco effettivo delle transazioni e informazioni sui prelievi):
 
 | Campo              | Descrizione                                                                         |
-| :----------------- | :---------------------------------------------------------------------------------- |
+|:------------------ |:----------------------------------------------------------------------------------- |
 | `parent_hash`      | hash del blocco genitore                                                            |
 | `fee_recipient`    | indirizzo del conto a cui pagare le commissioni di transazione                      |
 | `stato_del_root`   | hash radice per lo stato globale, dopo l'applicazione di modifiche in questo blocco |
@@ -125,7 +125,7 @@ Lo stesso `execution_payload` contiene quanto segue (si noti che è identico all
 L'elenco dei `withdrawals` contiene oggetti `withdrawal` strutturati nel modo seguente:
 
 | Campo            | Descrizione                          |
-| :--------------- | :----------------------------------- |
+|:---------------- |:------------------------------------ |
 | `address`        | indirizzo del conto che ha prelevato |
 | `amount`         | importo del prelievo                 |
 | `indice`         | valore dell'indice di prelievo       |

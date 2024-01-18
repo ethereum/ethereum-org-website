@@ -30,7 +30,7 @@ Usando [GraphQL](https://graphql.org/), gli sviluppatori possono interrogare una
 
 ## Diversità dei client
 
-La [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/) è importante per la salute complessiva della rete di Ethereum, poiché fornisce resilienza a bug ed exploit. Attualmente esistono vari pannelli di controllo della diversità del client, tra cui [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://rated.network), [execution-diversity.info](https://execution-diversity.info/) ed [Ethernodes](https://ethernodes.org/).
+La [diversità dei client](/developers/docs/nodes-and-clients/client-diversity/) è importante per la salute complessiva della rete di Ethereum, poiché fornisce resilienza a bug ed exploit. Attualmente esistono vari pannelli di controllo della diversità del client, tra cui [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [execution-diversity.info](https://execution-diversity.info/) ed [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 

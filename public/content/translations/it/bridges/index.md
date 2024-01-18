@@ -6,7 +6,7 @@ lang: it
 
 # Ponti della blockchain {#prerequisites}
 
-_Web3 si è evoluto in un ecosistema delle blockchain del L1 e soluzioni di ridimensionamento del L2, ognuna progettata con capacità e compromessi unici. All'aumentare del numero di protocolli delle blockchain, aumenta anche [la domanda di spostare risorse tra le catene](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Per soddisfare questa domanda, necessitiamo dei ponti._
+_Web3 si è evoluto in un ecosistema delle blockchain del L1 e soluzioni di ridimensionamento del L2, ognuna progettata con capacità e compromessi unici. All'aumentare del numero di protocolli delle blockchain, aumenta anche [la domanda di spostare risorse tra le catene](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Per soddisfare questa domanda, necessitiamo dei ponti._
 
 <Divider />
 
@@ -30,7 +30,7 @@ I ponti esistono per connettere le blockchain, consentendo il trasferimento di i
 
 I ponti consentono:
 
-- il trasferimento incrociato tra catene di risorse e informazioni
+- il trasferimento tra catene di risorse e informazioni.
 - alle dapp, l'accesso ai punti di forza di varie blockchain, dunque, migliorandone le capacità (poiché i protocolli hanno ora più spazio di design per l'innovazione).
 - agli utenti di accedere a nuove piattaforme e sfruttare i benefici di catene differenti.
 - agli sviluppatori da ecosistemi della blockchain differenti, di collaborare e creare nuove piattaforme per gli utenti.

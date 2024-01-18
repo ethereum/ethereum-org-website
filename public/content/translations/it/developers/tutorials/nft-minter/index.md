@@ -195,7 +195,7 @@ Se vai al file `App.js`, che è il componente principale su React e che agisce c
 
 Ora che ci è chiaro con cosa stiamo lavorando, configuriamo il portafoglio di Ethereum!
 
-## : Configura il tuo portafoglio di Ethereum {#set-up-your-ethereum-wallet}
+## Configura il tuo wallet Ethereum {#set-up-your-ethereum-wallet}
 
 Per poter interagire con il tuo smart contract, gli utenti dovranno connettere il proprio portafoglio di Ethereum alla tua dapp.
 

@@ -1,6 +1,6 @@
 ---
 title: Conti di Ethereum
-description: "Una spiegazione dei conti di Ethereum: loro struttura dei dati e relazioni con la crittografia con coppie di chiavi."
+description: 'Una spiegazione dei conti di Ethereum: loro struttura dei dati e relazioni con la crittografia con coppie di chiavi.'
 lang: it
 ---
 

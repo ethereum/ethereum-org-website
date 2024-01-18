@@ -70,7 +70,7 @@ Il pacchetto Ethereum di Kurtosis istanzia localmente una rete di prova di Ether
 
 - [Pacchetto rete Ethereum](https://github.com/kurtosis-tech/eth-network-package)
 - [Sito Web](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentazione](https://docs.kurtosis.com/)
 
 ## Letture consigliate {#further-reading}

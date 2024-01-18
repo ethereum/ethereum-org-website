@@ -72,7 +72,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Gwei.cz](https://gwei.cz) - community locale sul Web3, crea contenuti educativi, organizza eventi online e di persona
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Guida per principianti di Ethereum
 - [DAO Příručka](https://dao.gwei.cz/) - guida per principianti alle DAO
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
 
 ### Francese {#fr}
 

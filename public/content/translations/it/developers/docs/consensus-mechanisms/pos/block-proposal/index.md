@@ -64,6 +64,6 @@ Il propositore del blocco riceve il pagamento per il proprio lavoro. Esiste una 
 
 - [Introduzione ai blocchi](/developers/docs/blocks/)
 - [Introduzione al proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Specifiche del consenso di Ethereum](https://www.github.com/ethereum/consensus-specs)
+- [Specifiche del consenso di Ethereum](https://github.com/ethereum/consensus-specs)
 - [Introduzione a Gasper](/developers/docs/consensus-mechanisms/pos/)
 - [Aggiornare Ethereum](https://eth2book.info/)

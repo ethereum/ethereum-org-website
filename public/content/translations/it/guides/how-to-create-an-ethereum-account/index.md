@@ -20,7 +20,7 @@ Un portafoglio è un'applicazione che ti aiuta a gestire il tuo conto di Ethereu
 
 Se si è nuovi, è possibile selezionare il filtro "Senza conoscenza di criptovalute" nella pagina "Trova un portafoglio" per identificare i portafogli che dovrebbero includere tutte le caratteristiche necessarie adatte ai principianti.
 
-![filtra la selezione nella pagina "trova un portafoglio"](./wallet-box.png)
+![Filtra la selezione sulla pagina 'trova un portafoglio'](./wallet-box.png)
 
 Esistono poi altri filtri del profilo per provvedere alle tue esigenze. Questi sono esempi di portafogli comunemente utilizzati - prima di fidarsi di qualsiasi software, è bene fare le proprie ricerche.
 

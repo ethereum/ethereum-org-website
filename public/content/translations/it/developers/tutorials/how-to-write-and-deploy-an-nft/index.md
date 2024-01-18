@@ -87,7 +87,7 @@ Non è importante come rispondi alle domande d'installazione; a titolo di esempi
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-
+    
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -155,7 +155,7 @@ Apri il progetto my-nft nel tuo editor preferito (a noi piace [VSCode](https://c
 
 1. Vai alla cartella `contracts` e crea un nuovo file chiamato MyNFT.sol
 
-2. Segue il codice del contratto intelligente del nostro NFT, che abbiamo basato sull'implementazione ERC-721 della libreria di [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721). Copia e incolla i seguenti contenuti nel tuo file MyNFT.sol.
+2. Segue il codice del contratto intelligente del nostro NFT, che abbiamo basato sull'implementazione ERC-721 della libreria di [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc721).  Copia e incolla i seguenti contenuti nel tuo file MyNFT.sol.
 
    ```solidity
    //Contratto basato su [https://docs.openzeppelin.com/contracts/3.x/erc721](https://docs.openzeppelin.com/contracts/3.x/erc721)

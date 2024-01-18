@@ -164,8 +164,8 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 **Tokenview -** **_La piattaforma generale per API blockchain multi-criptovaluta._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
-- [Documentazione](https://services.tokeniew/docs?type=api)
-- [Github](https://github.com/Tokenview)
+- [Documentazione](https://services.tokenview.io/docs?type=api)
+- [GitHub](https://github.com/Tokenview)
 
 ## Letture consigliate {#further-reading}
 

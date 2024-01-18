@@ -37,7 +37,7 @@ In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'i
 - assicurarsi che tutti i progetti soddisfino ancora i nostri criteri
 - verificare che non ci siano prodotti suggeriti che soddisfano più criteri rispetto a quelli attualmente elencati
 
-Ethereum.org è mantenuto dalla comunità open source e ci affidiamo a essa per mantenere aggiornato questo elenco. Se noti che qualche informazione sui progetti elencati dev'essere aggiornata, sei pregato di aprire un ticket o una richiesta di pull sulla nostra repository di GitHub.
+Ethereum.org è mantenuto dalla comunità open source e ci affidiamo a essa per mantenere aggiornato questo elenco. Se noti qualche informazione sui progetti elencati che necessita di essere aggiornata, ti preghiamo di aprire un ticket o una richiesta di pull sulla nostra repository di GitHub.
 
 ## Condizioni d'uso {#terms-of-use}
 
