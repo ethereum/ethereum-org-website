@@ -189,6 +189,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
     path.startsWith("/security") ||
+    path.startsWith("/staking/solo") ||
     path.startsWith("/wallets") ||
     path.startsWith("/web3") ||
     path.startsWith("/what-is-ethereum") ||
