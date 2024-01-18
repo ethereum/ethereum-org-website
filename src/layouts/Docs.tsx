@@ -277,7 +277,7 @@ export const DocsLayout = ({
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop />
           <FeedbackCard isArticle />
-          <DocsNav relativePath={relativePath} />
+          <DocsNav contentNotTranslated={contentNotTranslated} />
         </Content>
         {tocItems && (
           <TableOfContents

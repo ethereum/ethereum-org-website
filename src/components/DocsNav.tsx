@@ -1,5 +1,6 @@
 // TODO: Implement with RTL locale responsiveness
 import React from "react"
+import { useRouter } from "next/router"
 import {
   Box,
   Flex,
@@ -21,6 +22,8 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   <Flex
     direction="column"
@@ -36,22 +39,22 @@ const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
   </Flex>
 )
 
-export interface DocsArrayProps {
+type DocsArrayProps = {
   to: string
   id: TranslationKey
 }
 
-const CardLink = (props: {
+type CardLinkProps = {
   docData: DocsArrayProps
+  contentNotTranslated: boolean
   isPrev?: boolean
-  isNext?: boolean
-}) => {
-  const { docData, isPrev, isNext } = props
+}
 
-  const xPadding = {
-    ...(isPrev && { ps: "0" }),
-    ...(isNext && { pe: "0" }),
-  }
+const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
+  const { flipForRtl } = useRtlFlip()
+
+  const xPadding = isPrev ? { ps: "0" } : { pe: 0 } 
+
   return (
     <LinkBox
       as={Flex}
@@ -69,9 +72,10 @@ const CardLink = (props: {
         <Emoji
           text={isPrev ? ":point_left:" : ":point_right:"}
           fontSize="5xl"
+          transform={contentNotTranslated ? undefined : flipForRtl}
         />
       </Box>
-      <TextDiv {...xPadding} {...(isNext && { textAlign: "end" })}>
+      <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>
         <Text textTransform="uppercase" m="0">
           <Translation id={isPrev ? "previous" : "next"} />
         </Text>
@@ -95,11 +99,12 @@ const CardLink = (props: {
   )
 }
 
-export interface IProps {
-  relativePath: string
+type DocsNavProps = {
+  contentNotTranslated: boolean
 }
 
-const DocsNav: React.FC<IProps> = ({ relativePath }) => {
+const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
+  const { asPath } = useRouter()
   // Construct array of all linkable documents in order recursively
   const docsArray: DocsArrayProps[] = []
   const getDocs = (links: Array<DeveloperDocsLink>): void => {
@@ -124,7 +129,7 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
   // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
-    if (relativePath.indexOf(docsArray[i].to) > -1) {
+    if (asPath.indexOf(docsArray[i].to) > -1) {
       currentIndex = i
     }
   }
@@ -142,8 +147,8 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
       justify="space-between"
       alignItems={{ base: "center", md: "flex-start" }}
     >
-      {previousDoc ? <CardLink docData={previousDoc} isPrev /> : <Spacer />}
-      {nextDoc ? <CardLink docData={nextDoc} isNext /> : <Spacer />}
+      {previousDoc ? <CardLink docData={previousDoc} contentNotTranslated={contentNotTranslated} isPrev /> : <Spacer />}
+      {nextDoc ? <CardLink docData={nextDoc} contentNotTranslated={contentNotTranslated} /> : <Spacer />}
     </Flex>
   )
 }
