@@ -122,15 +122,11 @@ const OpenCloseIcon = ({ isOpen }: { isOpen: boolean }) => (
   </Icon>
 )
 
-type HamburgerMenuProps = ButtonProps & {
+type HamburgerProps = ButtonProps & {
   isMenuOpen: boolean
   onToggle: () => void
 }
-const HamburgerMenu = ({
-  isMenuOpen,
-  onToggle,
-  ...props
-}: HamburgerMenuProps) => {
+const Hamburger = ({ isMenuOpen, onToggle, ...props }: HamburgerProps) => {
   const { t } = useTranslation("common")
   return (
     <Button
@@ -139,7 +135,6 @@ const HamburgerMenu = ({
       variant="ghost"
       isSecondary
       px={0}
-      // zIndex={2000}
       {...props}
     >
       <Icon
@@ -199,7 +194,7 @@ const MobileNavMenu = ({
 
   return (
     <>
-      <HamburgerMenu isMenuOpen={isMenuOpen} onToggle={onToggle} />
+      <Hamburger isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
 
       {/* DRAWER MENU */}
       <Drawer
@@ -229,7 +224,7 @@ const MobileNavMenu = ({
             </DrawerHeader>
             <IconButton
               size="6"
-              icon={<HamburgerMenu isMenuOpen onToggle={onToggle} p="0" />}
+              icon={<Hamburger isMenuOpen onToggle={onToggle} p="0" />}
               aria-label={t("aria-toggle-search-button")}
               variant="ghost"
               w="fit-content"
