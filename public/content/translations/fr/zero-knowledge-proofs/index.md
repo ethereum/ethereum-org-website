@@ -88,7 +88,7 @@ ZK-STARK est un acronyme pour **Zero-Knowledge Scalable Transparent Argument of 
 
 - **Évolutifs** : ZK-STARK est plus rapide que ZK-SNARK pour générer et vérifier des preuves avec un témoin de taille plus importante. Avec les preuves STARK, les temps de preuve et de vérification n'augmentent que légèrement lorsque le témoin (witness) augmente (tandis que pour les SNARK ils augmentent linéairement selon la taille du témoin).
 
-- **Transparents**: Contrairement à ZK-SNARK (qui se base sur une configuration de confiance), ZK-STARK repose sur un aléa publiquement vérifiable pour générer les paramètres publics de preuve et de vérification. Ainsi, ils sont plus transparents que les ZK-SNARKs.
+- **Transparents**: Contrairement à ZK-SNARK (qui se base sur une configuration de confiance), ZK-STARK repose sur un aléa publiquement vérifiable pour générer les paramètres publics de preuve et de vérification.  Ainsi, ils sont plus transparents que les ZK-SNARKs.
 
 Les ZK-STARKs produisent des preuves plus volumineuses que les ZK-SNARKs, engendrant des frais de vérification généralement plus élevés. Cependant, il y a des cas (comme la preuve de grands ensembles de données) où les ZK-STARKs peuvent être plus intéressants que les ZK-SNARKs.
 
@@ -176,7 +176,7 @@ L'utilisation de MACI _nécessite_ de faire confiance au coordinateur pour ne pa
 
 Mais dans les cas où le coordinateur reste honnête, MACI représente un outil puissant pour garantir le caractère inviolable du vote en chaîne. Ceci explique sa popularité parmi les demandes de financement quadratiques (par exemple, [clr.fund](https://clr.fund/#/about/maci)) qui dépendent fortement de l'intégrité des choix de vote de chaque individu.
 
-[En savoir plus sur MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[En savoir plus sur MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Inconvénients à utiliser des preuves à divulgation nulle {#drawbacks-of-using-zero-knowledge-proofs}
 
