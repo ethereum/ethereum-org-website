@@ -47,8 +47,10 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
+import { getEditPath } from "@/lib/utils/editPath"
+
 // Utils
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
@@ -220,7 +222,7 @@ export const DocsLayout = ({
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
 
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
   const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
