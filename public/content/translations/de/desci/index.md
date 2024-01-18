@@ -18,7 +18,7 @@ Dezentralisierte Wissenschaft (DeSci) ist eine Bewegung, die darauf abzielt, ein
 
 DeSci zielt darauf ab, ein Ökosystem zu schaffen, in dem Wissenschaftler ermutigt werden, ihre Forschungsergebnisse offen zu teilen und Anerkennung für ihre Arbeit zu erhalten. Gleichzeitig wird Fachleuten, die ihre eigenen Leistungen einbringen möchten, der Zugang zur Forschung ermöglicht. DeSci arbeitet mit der Idee, dass wissenschaftliche Erkenntnisse für alle zugänglich und der Prozess der wissenschaftlichen Forschung transparent sein sollte. DeSci schafft ein dezentraleres und verteiltes wissenschaftliches Forschungsmodell, das widerstandsfähiger gegen Zensur und Kontrolle durch zentrale Behörden ist. DeSci hofft, eine Umgebung zu schaffen, in der neue und unkonventionelle Ideen gedeihen können, indem der Zugang zu Finanzierung, wissenschaftlichen Werkzeugen und Kommunikationskanälen dezentralisiert wird.
 
-Dezentralisierte Wissenschaft ermöglicht eine Vielzahl von Finanzierungsmöglichkeiten (von [DAOs](/dao/), [quadratischen Spenden](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) bis hin zu Crowdfunding und mehr), einen leichteren Zugang zu Daten und Methoden sowie Anreize für Reproduzierbarkeit.
+Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible data and methods, and by providing incentives for reproducibility.
 
 ### Juan Benet - Die DeSci-Bewegung
 
@@ -103,7 +103,7 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [OceanDAO: DAO regelte die Finanzierung der datenbezogenen Wissenschaft](https://oceanprotocol.com/dao)
 - [OpScientia: offene dezentrale wissenschaftliche Workflows](https://opsci.io/research/)
 - [LabDAO: Falten eines Proteins in Silizium](https://alphafodl.vercel.app/)
-- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.molecule.to/)
+- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.bio.xyz/)
 - [ResearchHub: Poste ein wissenschaftliches Ergebnis und führe ein Gespräch mit Partnern](https://www.researchhub.com/)
 - [VitaDAO: Langfristige Forschung finanziert durch gesponserte Forschungsverträge](https://www.vitadao.com/)
 - [Flamming-Protokoll: Open-Source-Datenwirtschaft, die die kollaborative biomedizinische Entdeckung fördert](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

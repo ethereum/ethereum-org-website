@@ -30,7 +30,7 @@ Haben Sie Probleme mit Ihrer Wallet? Die meisten Wallets haben spezielle Support
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/ethereum-org) bei, dann versuchen wir, Ihnen zu helfen._
+_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/rZz26QWfCg) bei, dann versuchen wir, Ihnen zu helfen._
 
 Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der Ethereum-Wallets an](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der 
 Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs-Discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs-Discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? D
 
 Hier sind einige beliebte Beispiele:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Hier sind einige beliebte Beispiele:
 
 Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
 
-- [EthStaker-Discord](https://discord.io/ethstaker)
+- [EthStaker-Discord](https://discord.gg/ethstaker)
 - [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
 
 Die meisten Teams, die Ethereum-Clients entwickeln, haben auch eigene, öffentlich zugängliche Bereiche, in denen Sie Unterstützung erhalten und Fragen stellen können.
@@ -89,17 +89,17 @@ Sie können hier auch [lernen, wie ein Knoten betrieben wird](/developers/docs/n
 
 ## Häufig gestellte Fragen {#faq}
 
-### Ich habe ETH an die falsche Wallet gesendet {#wrong-wallet}
+#### Ich habe ETH an die falsche Wallet gesendet {#wrong-wallet}
 
 Eine auf Ethereum gesendete Transaktion ist unumkehrbar. Wenn Sie ETH an die falsche Wallet geschickt haben, gibt es leider keine Möglichkeit, diese Gelder zurückzuholen. Keine zentrale Organisation, Entität oder Person ist Eigentümer von Ethereum. Das bedeutet, dass auch niemand Transaktionen rückgängig machen kann. Deshalb ist es wichtig, dass Sie alle Transaktionen vor dem Versenden immer noch einmal überprüfen.
 
-### Wie kann ich mein Ethereum-Giveaway erhalten? {#giveaway-scam}
+#### Wie kann ich mein Ethereum-Giveaway erhalten? {#giveaway-scam}
 
 Ethereum-Giveaways sind Betrugsmaschen, die darauf abzielen, Ihr ETH zu stehlen. Lassen Sie sich nicht von Angeboten verleiten, die zu schön sind, um wahr zu sein. Wenn Sie ETH an eine Giveaway-Adresse schicken, erhalten Sie kein Giveaway und Sie können Ihr Geld nicht zurückfordern.
 
 [Mehr zum Thema Betrugsprävention](/security/#common-scams)
 
-### Meine Transaktion steckt fest {#stuck-transaction}
+#### Meine Transaktion steckt fest {#stuck-transaction}
 
 Transaktionen auf Ethereum können manchmal stecken bleiben, wenn Sie eine niedrigere Transaktionsgebühr eingereicht haben, als aufgrund der Netzwerknachfrage erforderlich ist. Viele Wallets bieten die Möglichkeit, dieselbe Transaktion mit einer höheren Transaktionsgebühr erneut zu übermitteln, damit die Transaktion bearbeitet werden kann. Alternativ können Sie eine ausstehende Transaktion abbrechen. Senden Sie dafür eine Transaktion an Ihre eigene Adresse und verwenden Sie dieselbe Nonce wie für die ausstehende Transaktion.
 
@@ -107,10 +107,10 @@ Transaktionen auf Ethereum können manchmal stecken bleiben, wenn Sie eine niedr
 
 [So stornieren Sie ausstehende Ethereum-Transaktionen](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Wie kann ich Ethereum minen? {#mining-ethereum}
+#### Wie kann ich Ethereum minen? {#mining-ethereum}
 
 Ethereum-Mining ist nicht mehr möglich. Das Mining wurde abgeschaltet, als Ethereum von Proof-of-Work zu Proof-of-Stake wechselte. Anstatt Miner hat Ethereum jetzt Validatoren. Validatoren setzen ETH ein und erhalten für das Staking des Netzwerkes eine Belohnung.
 
-### Wie werde ich Staker/Validator? {#become-validator}
+#### Wie werde ich Staker/Validator? {#become-validator}
 
 Um ein Validator zu werden, müssen Sie 32 ETH in den Einlagenvertrag von Ethereum einzahlen und einen Validator-Knoten aufbauen. Weitere Informationen dazu finden Sie auf den [Staking-Seiten](/staking) und [dem Staking-Launchpad](https://launchpad.ethereum.org/).

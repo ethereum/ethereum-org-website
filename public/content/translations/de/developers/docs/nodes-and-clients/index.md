@@ -136,6 +136,7 @@ Diese Tabelle gibt einen Überblick über die verschiedenen Clients. Sie alle be
 | [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, MacOS | Mainnet, Sepolia, Goerli und weitere | Snap (ohne Serving), Fast, Full | Archive, Pruned     |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, MacOS | Mainnet, Sepolia, Goerli und weitere | Snap, Fast, Full                | Archive, Pruned     |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, MacOS | Mainnet, Sepolia, Goerli und weitere | Full                            | Archive, Pruned     |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust     | Linux, Windows, MacOS | Mainnet, Sepolia, Goerli und weitere | Full                            | Archiv, Reduziert   |
 
 Weitere Informationen zu unterstützten Netzwerken finden Sie unter [Ethereum-Netzwerke](/developers/docs/networks/).
 
