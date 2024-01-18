@@ -1,7 +1,8 @@
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
-import i18nConfig from "../../i18n.config.json"
 import { NavSectionKey } from "@/components/Nav/types"
+
+import i18nConfig from "../../i18n.config.json"
 
 export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"

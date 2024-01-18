@@ -239,7 +239,7 @@ const MobileNavMenu = ({
 
           {/* MAIN NAV CONTENTS OF MOBILE MENU */}
           <DrawerBody as="nav" px="0">
-            <Accordion>
+            <Accordion allowToggle>
               {SECTION_LABELS.map((key) => {
                 const { label, ariaLabel, items } = linkSections[key]
                 return (
@@ -272,7 +272,7 @@ const MobileNavMenu = ({
 
                         {/* LVL2 */}
                         <AccordionPanel p="0" bg="menu.lvl2.background">
-                          <Accordion>
+                          <Accordion allowToggle>
                             {items.map(
                               (
                                 {
@@ -354,7 +354,7 @@ const MobileNavMenu = ({
                                           p="0"
                                           bg="menu.lvl3.background"
                                         >
-                                          <Accordion>
+                                          <Accordion allowToggle>
                                             {lvl2Action.items.map(
                                               (
                                                 {
@@ -403,7 +403,7 @@ const MobileNavMenu = ({
                                                     ({ isExpanded }) => (
                                                       <>
                                                         <Heading
-                                                          as="h3"
+                                                          as="h4"
                                                           color="menu.lvl3.main"
                                                           py="4"
                                                           pe="4"
@@ -447,8 +447,10 @@ const MobileNavMenu = ({
                                                           p="0"
                                                           bg="menu.lvl4.background"
                                                         >
-                                                          <Accordion>
-                                                            {lvl2Action.items.map(
+                                                          <Accordion
+                                                            allowToggle
+                                                          >
+                                                            {lvl3Action.items.map(
                                                               (
                                                                 {
                                                                   label:
