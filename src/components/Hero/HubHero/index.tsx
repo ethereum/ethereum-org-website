@@ -6,7 +6,6 @@ import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
 const HubHero = ({
-  dir,
   heroImg,
   title,
   header,
@@ -20,7 +19,7 @@ const HubHero = ({
   }
 
   return (
-    <Box position="relative" dir={dir}>
+    <Box position="relative">
       <Image
         src={heroImg}
         alt=""

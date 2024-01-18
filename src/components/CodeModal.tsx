@@ -25,7 +25,7 @@ const CodeModal = ({ children, isOpen, setIsOpen, title }: CodeModalProps) => (
     <ModalOverlay />
     <ModalContent>
       <ModalHeader>{title}</ModalHeader>
-      <ModalCloseButton right="unset" insetInlineEnd="4" />
+      <ModalCloseButton />
       <ModalBody>{children}</ModalBody>
     </ModalContent>
   </Modal>
