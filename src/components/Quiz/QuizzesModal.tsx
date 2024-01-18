@@ -7,9 +7,10 @@ import {
   ModalOverlay,
   ModalProps,
 } from "@chakra-ui/react"
-import Modal from "../Modal"
 
 import { QuizStatus } from "@/lib/types"
+
+import Modal from "../Modal"
 
 type props = {
   isQuizModalOpen: boolean

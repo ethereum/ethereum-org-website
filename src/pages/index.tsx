@@ -29,6 +29,7 @@ import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Modal from "@/components/Modal"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
@@ -67,7 +68,6 @@ import infrastructurefixed from "@/public/infrastructure_transparent.png"
 import merge from "@/public/upgrades/merge.png"
 import robotfixed from "@/public/wallet-cropped.png"
 import ethereum from "@/public/what-is-ethereum.png"
-import Modal from "@/components/Modal"
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
