@@ -1200,7 +1200,154 @@ const questionBank: QuestionBank = {
       },
     ],
     correctAnswerId: "k004-b",
-  }
+  },
+  // Run a node
+  l001: {
+    prompt: "l001-prompt",
+    answers: [
+      {
+        id: "l001-a",
+        label: "l001-a-label",
+        explanation: "l001-a-explanation",
+      },
+      {
+        id: "l001-b",
+        label: "l001-b-label",
+        explanation: "l001-b-explanation",
+      },
+      {
+        id: "l001-c",
+        label: "l001-c-label",
+        explanation: "l001-c-explanation",
+      },
+      {
+        id: "l001-d",
+        label: "l001-d-label",
+        explanation: "l001-d-explanation",
+      },
+    ],
+    correctAnswerId: "l001-a",
+  },
+  l002: {
+    prompt: "l002-prompt",
+    answers: [
+      {
+        id: "l002-a",
+        label: "l002-a-label",
+        explanation: "l002-a-explanation",
+      },
+      {
+        id: "l002-b",
+        label: "l002-b-label",
+        explanation: "l002-a-explanation",
+      },
+      {
+        id: "l002-c",
+        label: "l002-c-label",
+        explanation: "l002-a-explanation",
+      },
+      {
+        id: "l002-d",
+        label: "l002-d-label",
+        explanation: "l002-d-explanation",
+      },
+    ],
+    correctAnswerId: "l002-a",
+  },
+  l003: {
+    prompt: "l003-prompt",
+    answers: [
+      {
+        id: "l003-a",
+        label: "l003-a-label",
+        explanation: "l003-a-explanation",
+      },
+      {
+        id: "l003-b",
+        label: "l003-b-label",
+        explanation: "l003-b-explanation",
+      },
+      {
+        id: "l003-c",
+        label: "l003-c-label",
+        explanation: "l003-c-explanation",
+      },
+      {
+        id: "l003-d",
+        label: "l003-d-label",
+        explanation: "l003-d-explanation",
+      },
+    ],
+    correctAnswerId: "l003-d",
+  },
+  l004: {
+    prompt: "l004-prompt",
+    answers: [
+      {
+        id: "l004-a",
+        label: "l004-a-label",
+        explanation: "l004-a-explanation",
+      },
+      {
+        id: "l004-b",
+        label: "l004-b-label",
+        explanation: "l004-b-explanation",
+      },
+      {
+        id: "l004-c",
+        label: "l004-c-label",
+        explanation: "l004-c-explanation",
+      },
+      {
+        id: "l004-d",
+        label: "l004-d-label",
+        explanation: "l004-d-explanation",
+      },
+    ],
+    correctAnswerId: "l004-c",
+  },
+  l005: {
+    prompt: "l005-prompt",
+    answers: [
+      {
+        id: "l005-a",
+        label: "l005-a-label",
+        explanation: "l005-a-explanation",
+      },
+      {
+        id: "l005-b",
+        label: "l005-b-label",
+        explanation: "l005-b-explanation",
+      },
+      {
+        id: "l005-c",
+        label: "l005-c-label",
+        explanation: "l005-c-explanation",
+      },
+      {
+        id: "l005-d",
+        label: "l005-d-label",
+        explanation: "l005-d-explanation",
+      },
+    ],
+    correctAnswerId: "l005-a",
+  },
+  l006: {
+    prompt: "l006-prompt",
+    answers: [
+      {
+        id: "l006-a",
+        label: "l006-a-label",
+        explanation: "l006-a-explanation",
+      },
+      {
+        id: "l006-b",
+        label: "l006-b-label",
+        explanation: "l006-a-explanation",
+      },
+    ],
+    correctAnswerId: "l006-b",
+  },
 }
 
 export default questionBank

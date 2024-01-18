@@ -44,6 +44,10 @@ const quizzes: RawQuizzes = {
     title: "scaling",
     questions: ["k001", "k002", "k003", "k004"],
   },
+  "run-a-node": {
+    title: "run-a-node",
+    questions: ["l001", "l002", "l003", "l004", "l005", "l006"],
+  },
 }
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -91,6 +95,11 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   },
   {
     id: "layer-2",
+    level: "intermediate",
+    next: "run-a-node",
+  },
+  {
+    id: "run-a-node",
     level: "intermediate",
     next: "solo-staking",
   },

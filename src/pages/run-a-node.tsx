@@ -38,6 +38,7 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
+import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -328,7 +329,7 @@ type RunANodeCard = {
 }
 
 export const getStaticProps = (async ({ locale }) => {
-  const requiredNamespaces = getRequiredNamespacesForPage("run-a-node")
+  const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
@@ -917,6 +918,7 @@ const RunANodePage = () => {
         </ul>
       </Content>
       <Content>
+        <QuizWidget quizKey="run-a-node" />
         <FeedbackCard />
       </Content>
     </GappedPage>
