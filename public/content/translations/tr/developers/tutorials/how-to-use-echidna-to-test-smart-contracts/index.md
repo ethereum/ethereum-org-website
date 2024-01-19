@@ -45,7 +45,7 @@ Echidna, önceki blog yazılarımızda tanımladığımız bir özellik tabanlı
 
 ### Bulandırma {#fuzzing}
 
-[Bulandırma ](https://wikipedia.org/wiki/Fuzzing) (Fuzzing), güvenlik topluluğunda iyi bilinen bir tekniktir. Programdaki hataları bulmak için hemen hemen rastgele girdiler oluşturmayı içerir. Geleneksel yazılım için bulandırıcılar ([AFL](http://lcamtuf.coredump.cx/afl/) veya [LibFuzzer](https://llvm.org/docs/LibFuzzer.html) gibi) hata tespiti için verimli araçlar olarak bilinirler.
+[Bulandırma ](https://wikipedia.org/wiki/Fuzzing) (Fuzzing), güvenlik topluluğunda iyi bilinen bir tekniktir. It consists of generating inputs that are more or less random to find bugs in the program. Geleneksel yazılım için bulandırıcılar ([AFL](http://lcamtuf.coredump.cx/afl/) veya [LibFuzzer](https://llvm.org/docs/LibFuzzer.html) gibi) hata tespiti için verimli araçlar olarak bilinirler.
 
 Tamamen rastgele girdi oluşturmanın ötesinde, iyi girdiler üretmek için aşağıdakiler de dahil olmak üzere birçok teknik ve strateji vardır:
 

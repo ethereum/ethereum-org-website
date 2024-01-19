@@ -30,7 +30,7 @@ Cüzdanınızla ilgili sorun mu yaşıyorsunuz? Çoğu cüzdan, aşağıdakilere
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Bu kapsamlı bir liste değildir. Belirli bir cüzdan için destek bulma konusunda yardıma mı ihtiyacınız var? [ethereum.org Discord](https://discord.gg/ethereum-org)'una katılın, yardım etmeye çalışacağız._
+_Bu kapsamlı bir liste değildir. Belirli bir cüzdan için destek bulma konusunda yardıma mı ihtiyacınız var? [ethereum.org Discord](https://discord.gg/rZz26QWfCg)'una katılın, yardım etmeye çalışacağız._
 
 Ethereum cüzdanı mı arıyorsunuz? [Ethereum cüzdanlarının tam listesini keşfedin](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Ethereum cüzdanı mı arıyorsunuz? [Ethereum cüzdanlarının tam listesini ke
 Geliştirme zor olabilir. İşte size yardımcı olmaktan mutluluk duyan deneyimli Ethereum geliştiricileri bulunan geliştirme odaklı bazı alanlar.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs Discord'u](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs Discord'u](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede 
 
 İşte bazı popüler örnekler:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede 
 
 Bir düğüm veya doğrulayıcı çalıştırıyorsanız, başlamanıza yardımcı olmaya adanmış bazı toplulukları burada bulabilirsiniz.
 
-- [EthStaker Discord'u](https://discord.io/ethstaker)
+- [EthStaker Discord'u](https://discord.gg/ethstaker)
 - [EthStaker Reddit'i](https://www.reddit.com/r/ethstaker)
 
 Ethereum istemcileri geliştiren ekiplerin çoğu, destek alabileceğiniz ve soru sorabileceğiniz özel, herkese açık alanlara da sahiptir.
@@ -89,17 +89,17 @@ Ayrıca [burada bir düğümün nasıl çalıştırılacağını öğrenebilirsi
 
 ## Sıkça sorulan sorular {#faq}
 
-### ETH'yi yanlış cüzdana gönderdim {#wrong-wallet}
+#### ETH'yi yanlış cüzdana gönderdim {#wrong-wallet}
 
 Ethereum'da gönderilen bir işlem geri alınamaz. Ne yazık ki, ETH'yi yanlış cüzdana gönderdiyseniz bunu geri almanın bir yolu yoktur. Hiçbir merkezi organizasyon, kuruluş veya kişi Ethereum'a sahip değildir, bu da hiç kimsenin işlemleri tersine çeviremeyeceği anlamına gelir. Bu nedenle işlemlerinizi göndermeden önce her zaman iki kez kontrol etmeniz çok önemlidir.
 
-### Ethereum çekilişimi nasıl talep edebilirim? {#giveaway-scam}
+#### Ethereum çekilişimi nasıl talep edebilirim? {#giveaway-scam}
 
 Ethereum çekilişleri, ETH'nizi çalmak için tasarlanmış dolandırıcılıklardır. Gerçek olamayacak kadar iyi görünen tekliflere kapılmayın. Bir çekiliş adresine ETH gönderirseniz, hem bir çekilişe katılmazsınız hem de paranızı geri alamazsınız.
 
 [Dolandırıcılığı önleme hakkında daha fazla bilgi](/security/#common-scams)
 
-### İşlemim sıkıştı {#stuck-transaction}
+#### İşlemim sıkıştı {#stuck-transaction}
 
 Ağ talebi nedeniyle gerekenden daha düşük bir işlem ücreti gönderdiyseniz, Ethereum'daki işlemler bazen sıkışabilir. Birçok cüzdan, işleme izin vermek için aynı işlemi daha yüksek bir ücretle yeniden gönderme seçeneği sunar. Alternatif olarak, kendi adresinize bir işlem göndererek ve bekleyen işlemle aynı nonce değerini kullanarak bekleyen bir işlemi iptal edebilirsiniz.
 
@@ -107,10 +107,10 @@ Ağ talebi nedeniyle gerekenden daha düşük bir işlem ücreti gönderdiyseniz
 
 [Bekleyen Ethereum işlemleri nasıl iptal edilir](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
+#### Ethereum madenciliği nasıl yapılır? {#mining-ethereum}
 
 Ethereum madenciliği artık mümkün değildir. Ethereum iş isoatından hisse ispatına geçtiğinde madencilik kapatılmıştı. Artık madenciler yerine Ethereum'un doğrulayıcıları var. Doğrulayıcılar, ağın güvenliğini sağlamak için ETH'yi hisseler ve hisseleme ödülleri alır.
 
-### Nasıl bir paydaş/doğrulayıcı olabilirim? {#become-validator}
+#### Nasıl bir paydaş/doğrulayıcı olabilirim? {#become-validator}
 
 Doğrulayıcı olmak için Ethereum para yatırma sözleşmesine 32 ETH yatırmanız ve bir doğrulayıcı düğümü kurmanız gerekir. [Hisseleme sayfalarımızda](/staking) ve [hisseleme başlama noktasında](https://launchpad.ethereum.org/) daha fazla bilgi mevcuttur.

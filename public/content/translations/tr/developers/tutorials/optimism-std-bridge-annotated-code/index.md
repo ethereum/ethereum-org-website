@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "köprü"
   - "katman 2"
-skill: intermediate
+skill: advanced
 published: 2022-03-30
 lang: tr
 ---
@@ -47,13 +47,13 @@ Köprünün iki ana akışı vardır:
 
 ### Çekme akışı {#withdrawal-flow}
 
-#### Katman 2 {#withdrawal-flow-layer-2}
+#### Katman 2 {#withdrawl-flow-layer-2}
 
 1. Çeken kişi K2 köprüsünü çağırır (`draw` veya `withdrawTo`)
 2. K2 köprüsü, `msg.sender`'a ait uygun sayıda token'ı yakar
 3. K2 köprüsü, K1 köprüsünde `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal`'ı çağırmak için etki alanları arası mesaj mekanizmasını kullanır
 
-#### Katman 1 {#withdrawal-flow-layer-1}
+#### Katman 1 {#withdrawl-flow-layer-1}
 
 4. K1 köprüsü, `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal` çağrısının meşru olduğunu doğrular:
    - Etki alanları arası mesaj mekanizmasından geldi
@@ -671,13 +671,13 @@ Etki alanları arası mesajların çalışma şekli, hedef sözleşmenin çağr�
 
 Buradaki mesaj, şu parametrelerle [`finalizeDeposit` fonksiyonunu](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) çağırmaktır:
 
-| Parametre | Değer                          | Anlam                                                                                                                                           |
-| --------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| \_l1Token | address(0)                     | K1'de ETH'yi (ERC-20 token'ı değildir) temsil eden özel değer                                                                                   |
+| Parametre   | Değer                            | Anlam                                                                                                                                           |
+| ----------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| \_l1Token | address(0)                       | K1'de ETH'yi (ERC-20 token'ı değildir) temsil eden özel değer                                                                                   |
 | \_l2Token | Lib_PredeployAddresses.OVM_ETH | Optimism'de ETH'yi yöneten K2 sözleşmesi, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (bu sözleşme yalnızca dahili Optimism kullanımı içindir) |
 | \_from    | \_from                         | ETH'yi gönderen K1 üzerindeki adres                                                                                                             |
 | \_to      | \_to                           | ETH'yi alan K2'deki adres                                                                                                                       |
-| amount    | msg.value                      | Gönderilen wei miktarı (zaten köprüye gönderildi)                                                                                               |
+| amount      | msg.value                        | Gönderilen wei miktarı (zaten köprüye gönderildi)                                                                                               |
 | \_data    | \_data                         | Yatırmaya eklenecek ek tarih                                                                                                                    |
 
 ```solidity
