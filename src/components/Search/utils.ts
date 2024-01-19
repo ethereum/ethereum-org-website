@@ -101,6 +101,10 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     },
   },
 
+  ".DocSearch-Container.DocSearch[aria-expanded='true']": {
+    zIndex: "modal",
+  },
+
   ".DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-Container--Stalled .DocSearch-LoadingIndicator":
   {
     color: "primary.highContrast",
