@@ -125,7 +125,7 @@ Ambos os clientes de consenso e execução executam em paralelo. Eles precisam e
 
 Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante entre colchetes.
 
-### Quando o cliente de consenso não é produtor de bloco:
+##### Quando o cliente de consenso não é produtor de bloco:
 
 - O cliente de consenso recebe um bloco através do protocolo gossip do bloco (consenso p2p)
 - O cliente de consenso pré-valida o bloco, ou seja, garante que chegou de um remetente válido com metadados corretos
@@ -134,7 +134,7 @@ Um resumo do fluxo de controle é mostrado abaixo, com a pilha de rede relevante
 - A camada de execução passa os dados de validação de volta para a camada de consenso, bloco agora considerado validado (conexão RPC local)
 - A camada de consenso adiciona bloco no nício de sua própria blockchain e o atesta, transmitindo o atestado pela rede (consenso p2p)
 
-### Quando o cliente de consenso é produtor de blocos:
+##### Quando o cliente de consenso é produtor de blocos:
 
 - O cliente de consenso recebe o aviso de que é o próximo produtor de bloco (consenso p2p)
 - A camada de consenso chama o método `create block` no cliente de execução (RPC local)
