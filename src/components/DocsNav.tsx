@@ -1,6 +1,5 @@
-// TODO: Implement with RTL locale responsiveness
-import React from "react"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   Flex,
@@ -16,7 +15,6 @@ import type { DeveloperDocsLink } from "@/lib/interfaces"
 import Emoji from "@/components/Emoji"
 import { BaseLink } from "@/components/Link"
 import Text from "@/components/OldText"
-import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -51,9 +49,10 @@ type CardLinkProps = {
 }
 
 const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
+  const { t } = useTranslation("page-developers-docs")
   const { flipForRtl } = useRtlFlip()
 
-  const xPadding = isPrev ? { ps: "0" } : { pe: 0 } 
+  const xPadding = isPrev ? { ps: "0" } : { pe: 0 }
 
   return (
     <LinkBox
@@ -77,7 +76,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
       </Box>
       <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>
         <Text textTransform="uppercase" m="0">
-          <Translation id={isPrev ? "previous" : "next"} />
+          {t(isPrev ? "previous" : "next")}
         </Text>
         <LinkOverlay
           as={BaseLink}
@@ -92,7 +91,7 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
             })
           }}
         >
-          <Translation id={`page-developers-docs:${docData.id}`} />
+          {t(docData.id)}
         </LinkOverlay>
       </TextDiv>
     </LinkBox>
@@ -147,8 +146,23 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
       justify="space-between"
       alignItems={{ base: "center", md: "flex-start" }}
     >
-      {previousDoc ? <CardLink docData={previousDoc} contentNotTranslated={contentNotTranslated} isPrev /> : <Spacer />}
-      {nextDoc ? <CardLink docData={nextDoc} contentNotTranslated={contentNotTranslated} /> : <Spacer />}
+      {previousDoc ? (
+        <CardLink
+          docData={previousDoc}
+          contentNotTranslated={contentNotTranslated}
+          isPrev
+        />
+      ) : (
+        <Spacer />
+      )}
+      {nextDoc ? (
+        <CardLink
+          docData={nextDoc}
+          contentNotTranslated={contentNotTranslated}
+        />
+      ) : (
+        <Spacer />
+      )}
     </Flex>
   )
 }
