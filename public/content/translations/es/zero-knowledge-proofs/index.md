@@ -62,7 +62,7 @@ Las pruebas no interactivas representaron un avance para la tecnología de conoc
 
 ### Tipos de pruebas de conocimiento cero {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs {#zk-snarks}
+#### ZK-SNARK {#zk-snarks}
 
 ZK-SNARK es el acrónimo en inglés de **argumento de conocimiento sucinto no interactivo de conocimiento cero** (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge). El protocolo ZK-SNARK tiene las siguientes cualidades:
 
@@ -82,7 +82,7 @@ El [cálculo de varias partes (CMP)](https://en.wikipedia.org/wiki/Secure_multi-
 
 Las configuraciones de confianza requieren que los usuarios confíen en los participantes en la generación de parámetros. Sin embargo, el desarrollo de ZK-STARK ha permitido protocolos de prueba que funcionen con una configuración sin confianza.
 
-#### ZK-STARKs {#zk-starks}
+#### ZK-STARK {#zk-starks}
 
 ZK-STARK es el acrónimo en inglés de **argumento de conocimiento transparente escalable de conocimiento cero** (Zero-Knowledge Scalable Transparent Argument of Knowledge). Los ZK-STARK son similares a los ZK-SNARK, salvo que son:
 
@@ -176,7 +176,7 @@ Usar la MACI _requiere_ confiar en que el coordinador no complote con los soborn
 
 Pero en los casos en que el coordinador sea honesto, la MACI representa una herramienta potente para garantizar la legalidad de la votación en cadena. Esto explica su popularidad entre las aplicaciones de financiación cuadrática (por ejemplo, [clr.fund](https://clr.fund/#/about/maci)) que dependen en gran medida de la integridad de las opciones de votación de cada individuo.
 
-[Obtenga más información sobre la MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Obtenga más información sobre la MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Inconvenientes del uso de las pruebas de conocimiento cero {#drawbacks-of-using-zero-knowledge-proofs}
 

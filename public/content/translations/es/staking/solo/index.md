@@ -105,13 +105,13 @@ Hay una variedad de opciones disponibles para ayudarle con su configuración. Ut
 
 <ProductDisclaimer />
 
-### Herramientas de nodo
+#### Herramientas de nodo
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Por favor, tenga en cuenta la importancia de elegir un [cliente minoritario](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Las herramientas que le permiten configurar un cliente minoritario se expresan como <em style={{ textTransform: "uppercase" }}>«multi-cliente».</em>
+Por favor, tenga en cuenta la importancia de elegir un [cliente minoritario](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Las herramientas que le permiten configurar un cliente minoritario se expresan como <em style={{ textTransform: "uppercase" }}>«multicliente».</em>
 
-### Generadores de claves
+#### Generadores de claves
 
 Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de participación](https://github.com/ethereum/staking-deposit-cli/) para ayudar con la generación de claves.
 
@@ -195,6 +195,7 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 
 ## Para profundizar sobre el tema {#further-reading}
 
+- [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [ El problema de la diversidad de clientes de Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Controbuir a la diversidad de clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [Diversidad de clientes en la capa de consenso de Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_

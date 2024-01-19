@@ -6,7 +6,7 @@ lang: es
 
 El valor máximo extraíble (MEV) se refiere al valor máximo que se puede extraer de la producción de bloques por encima de la recompensa de bloques y las tarifas de gas estándares incluyendo, excluyendo y cambiando el orden de las transacciones en un bloque.
 
-## Valor extraíble del minero {#miner-extractable-value}
+### Valor extraíble del minero {#miner-extractable-value}
 
 El valor máximo extraíble se aplicó por primera vez en el contexto de [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/), e inicialmente se refería a él como "valor extraíble de minero". Esto es porque en la prueba de trabajo, los mineros controlan la inclusión, la exclusión y el orden de las transacciones. No obstante, desde la transición a la prueba de participación a través de [La Fusión](/roadmap/merge), los validadores han sido responsables de estas funciones, y la minería ya no forma parte del protocolo Ethereum. Como los métodos de extracción de valor todavía existen, se utiliza en su lugar el término "valor máximo extraíble" actualmente.
 
@@ -218,4 +218,4 @@ Algunos proyectos, como MEV Boost, utilizan la Builder API como parte de una est
 - [MEV-Boost: Fusionar la arquitectura de Flashbots lista](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [¿Qué es el impulso de MEV?](https://www.alchemy.com/overviews/mev-boost)
 - [¿Por qué ejecutar mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)
-- [La Guía de Hitchhikers hacia Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)
+- [La guía del autoestopista de Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

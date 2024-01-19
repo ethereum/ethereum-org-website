@@ -20,7 +20,7 @@ Debido a este contexto, necesitamos información específica cuando usted sugier
 
 ## Lo que necesitamos {#what-we-need}
 
-- Las restricciones geográficas aplicables al intercambio.
+- Restricciones geográficas aplicables al intercambio. Las restricciones geográficas relacionadas con el intercambio deben detallarse en una página o sección específica del sitio web del intercambio.
 - Las divisas que los usuarios pueden usar para comprar ETH.
 - Prueba de que el intercambio es una operación legítima.
 - Cualquier información adicional que usted pueda aportar, como años en activo de la empresa, respaldo financiero, etc.
@@ -35,6 +35,6 @@ Y para que ethereum.org pueda estar más seguro de que el intercambio es un serv
 
 Si desea añadir un interambio a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=content+%3Afountain_pen%3A&template=suggest_exchange.yaml">
   Crear una incidencia
 </ButtonLink>
