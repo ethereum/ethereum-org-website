@@ -1,9 +1,8 @@
-// Libraries
-import React, { ReactNode } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import Select from "react-select"
-import { MdExpandLess, MdExpandMore } from "react-icons/md"
+import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
+import { MdExpandLess, MdExpandMore } from "react-icons/md"
+import Select from "react-select"
 import {
   Box,
   calc,
@@ -12,7 +11,6 @@ import {
   FlexProps,
   forwardRef,
   Icon,
-  Img,
   keyframes,
   SimpleGrid,
   SimpleGridProps,
@@ -23,25 +21,23 @@ import {
   Tr,
 } from "@chakra-ui/react"
 
-// Components
-import InlineLink, { IProps as LinkProps } from "../../Link"
-import { WalletMoreInfo } from "./WalletMoreInfo"
-import GatsbyImage from "../../GatsbyImage"
-import Text from "../../OldText"
+import { ChildOnlyProp } from "@/lib/types"
 
-// Icons
+import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
+import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../../icons/staking"
+} from "@/components/icons/staking"
+import { Image } from "@/components/Image"
+import InlineLink, { LinkProps } from "@/components/Link"
+import Text from "@/components/OldText"
 
-// Utils
-import { useWalletTable } from "./useWalletTable"
-import { trackCustomEvent } from "../../../utils/matomo"
-import { getImage } from "../../../utils/image"
-import { WalletData } from "../../../data/wallets/wallet-data"
-import { ChildOnlyProp } from "../../../types"
-import { NAV_BAR_PX_HEIGHT } from "../../../constants"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { WalletData } from "@/data/wallets/wallet-data"
+
+import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
 const Container = (props: TableProps) => (
   <Table
@@ -233,7 +229,7 @@ const FlexInfo = (props: FlexProps) => (
   <Flex
     alignItems="center"
     gap={4}
-    pl="0.3rem"
+    ps="0.3rem"
     sx={{
       p: {
         p: 0,
@@ -314,13 +310,12 @@ const secondCol = "secondCol"
 const thirdCol = "thirdCol"
 
 export interface WalletTableProps {
-  data: Record<string, any>
   filters: Record<string, boolean>
   walletData: WalletData[]
 }
 
-const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
-  const { t } = useTranslation()
+const WalletTable = ({ filters, walletData }: WalletTableProps) => {
+  const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
     filteredFeatureDropdownItems,
@@ -439,8 +434,8 @@ const WalletTable = ({ data, filters, walletData }: WalletTableProps) => {
               <Td lineHeight="revert">
                 <FlexInfo>
                   <Box>
-                    <GatsbyImage
-                      image={getImage(data[wallet.image_name])!}
+                    <Image
+                      src={wallet.image}
                       alt=""
                       objectFit="contain"
                       boxSize="56px"
