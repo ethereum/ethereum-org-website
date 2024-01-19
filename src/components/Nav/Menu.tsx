@@ -93,7 +93,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
         lvl === 1 ? (
           <Icon
             as={CustomIcon || BsCircle}
-            color={`menu.lvl${lvl}.main`}
+            color={isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.main`}
             _groupHover={{ color: "menu.highlight" }}
           />
         ) : undefined
@@ -119,7 +119,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
       <Box me="auto" textAlign="start">
         <Text
           fontWeight="bold"
-          color={isPartiallyActive ? "menu.highlight" : `menu.lvl${lvl}.main`}
+          color={isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.main`}
           _groupHover={{ color: "menu.highlight" }}
         >
           {label}
@@ -127,7 +127,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
         <Text
           fontSize="sm"
           color={
-            isPartiallyActive ? "menu.highlight" : `menu.lvl${lvl}.subtext`
+            isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.subtext`
           }
           _groupHover={{ color: "menu.highlight" }}
         >
