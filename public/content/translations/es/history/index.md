@@ -97,7 +97,7 @@ El paso de la cadena de bloque de la prueba de trabajo a la [dificultad total te
 
 #### Resumen {#bellatrix-summary}
 
-La actualización Bellatrix fue la segunda actualización programada para la [cadena de baliza](/roadmap/beacon-chain), como prepración de la cadena para [La Fusión](/roadmap/merge/). Incorpora penalizaciones del validador a sus valores completos por inactividad y recortes por malas conductas. Bellatrix también incluye una actualización de las reglas de elección de la bifurcación para preparar la cadena de cara a La Fusión y la transición del último bloque de prueba de trabajo al primer bloque de prueba de participación. Esto incluye sensibilizar a los clientes sobre la dificultad total de la terminal [](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
+La actualización Bellatrix fue la segunda actualización programada para la [cadena de baliza](/roadmap/beacon-chain), como prepración de la cadena para [La Fusión](/roadmap/merge/). Incorpora penalizaciones del validador a sus valores completos por inactividad y recortes por malas conductas. Bellatrix también incluye una actualización de las reglas de elección de la bifurcación para preparar la cadena de cara a La Fusión y la transición del último bloque de prueba de trabajo al primer bloque de prueba de participación. Esto incluye sensibilizar a los clientes sobre la dificultad [total de la terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
 - [Lea las especificaciones de actualización Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -462,7 +462,7 @@ Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios d
 
 #### Resumen {#frontier-thawing-summary}
 
-La bifurcación de deshielo Frontier elevó el limite del [gas](/glossary/#gas) de 5.000 por [bloque](/glossary/#block) y fijó el precio por defecto en 51 [gwei](/glossary/#gwei). Esto permitió que se realizaran transacciones que requiriesen 21.000 unidades de gas. La bomba de dificultad [](/glossary/#difficulty-bomb)se introdujo para asegurar un futuro de bifurcación dura a la [prueba de participación](/glossary/#pos).
+La bifurcación de deshielo Frontier elevó el limite del [gas](/glossary/#gas) de 5.000 por [bloque](/glossary/#block) y fijó el precio por defecto en 51 [gwei](/glossary/#gwei). Esto permitió que se realizaran transacciones que requiriesen 21.000 unidades de gas. La [bomba de dificultad](/glossary/#difficulty-bomb)se introdujo para asegurar un futuro de bifurcación dura a la [prueba de participación](/glossary/#pos).
 
 - [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Lea la actualización 1 del protocolo de Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)

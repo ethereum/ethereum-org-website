@@ -26,7 +26,7 @@ Hay muchas maneras de hacer solicitudes a la cadena Ethereum. Por simplicidad, u
 
 ## Paso 2: Crear su aplicación (y llave API) {#step-2}
 
-Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer peticiones a la red de pruebas de Ropsten. Si no está familiarizado con las redes de pruebas, revise la página [](/developers/docs/networks/).
+Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer peticiones a la red de pruebas de Ropsten. Si no está familiarizado con las redes de pruebas, revise [la página](/developers/docs/networks/).
 
 1.  Navegue a la página «Crear App» en su tablero Alchemy pasando el cursor sobre «Apps» en la barra de navegación y haciendo clic en «Crear App».
 
@@ -355,4 +355,4 @@ Aquí verá un puñado de ejecuciones JSON-RPC que Hardhat/Ethers hizo intername
 
 Aquí acaba la parte 1 de este tutorial, en la parte 2, [Interacción con nuestro contrato inteligente](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract), actualizaremos nuestro mensaje inicial, y en la parte 3 [Publicación de nuestro contrato inteligente en Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan), veremos como publicar para que todo el mundo sepa cómo interactuar con él.
 
-**¿Quiere saber más sobre Alchemy? Eche un vistazo a nuestra página web [](https://alchemyapi.io/eth). ¿No quiere perderse ninguna actualización? Suscríbase [aquí](https://www.alchemyapi.io/newsletter) a nuestro boletín de noticias. Asegúrese de seguir también nuestro [Twitter](https://twitter.com/alchemyplatform) y unirse a nuestro [Discord](https://discord.com/invite/u72VCg3)**.
+**¿Quiere saber más sobre Alchemy? Eche un vistazo a nuestra [página web](https://alchemyapi.io/eth). ¿No quiere perderse ninguna actualización? Suscríbase [aquí](https://www.alchemyapi.io/newsletter) a nuestro boletín de noticias. Asegúrese de seguir también nuestro [Twitter](https://twitter.com/alchemyplatform) y unirse a nuestro [Discord](https://discord.com/invite/u72VCg3)**.

@@ -30,10 +30,9 @@ import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
+import { getEditPath } from "@/lib/utils/editPath"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-
-import { CONTENT_DIR } from "@/lib/constants"
 
 import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
 
@@ -91,10 +90,7 @@ export const StaticLayout: React.FC<IProps> = ({
 }) => {
   const { locale } = useRouter()
 
-  const repo =
-    process.env.NEXT_PUBLIC_GITHUB_REPO || "ethereum/ethereum-org-website"
-  const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
-  const absoluteEditPath = baseEditPath + slug + "index.md"
+  const absoluteEditPath = getEditPath(slug)
 
   return (
     <Box w="full">
