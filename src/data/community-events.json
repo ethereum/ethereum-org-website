@@ -45,6 +45,15 @@
     "endDate": "2024-05-23"
   },
   {
+    "title": "ETHBerlin04",
+    "to": "https://www.ethberlin.org",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "ETHBerlin is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.",
+    "startDate": "2024-05-24",
+    "endDate": "2024-05-26"
+  },
+  {
     "title": "ETHKL 2023",
     "to": "https://hack.ethkl.org/",
     "sponsor": null,
