@@ -1,8 +1,8 @@
 // Import data types
-import type { QuestionBank } from "@/lib/interfaces"
+import type { QuestionBank } from "@/lib/types"
 
 // Declare hash map of question bank
-const questionBank: QuestionBank = {
+const questionBank = {
   // What is Ethereum?
   a001: {
     prompt: "a001-prompt",
@@ -887,6 +887,6 @@ const questionBank: QuestionBank = {
     ],
     correctAnswerId: "h005-b",
   },
-}
+} as const satisfies QuestionBank
 
 export default questionBank

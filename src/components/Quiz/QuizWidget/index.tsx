@@ -8,7 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import { QuizStatus, UserStats } from "@/lib/types"
+import type { QuizKey, QuizStatus, UserStats } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 
@@ -25,7 +25,7 @@ import { QuizSummary } from "./QuizSummary"
 import { useQuizWidget } from "./useQuizWidget"
 
 type CommonProps = {
-  quizKey: string
+  quizKey: QuizKey
   updateUserStats: Dispatch<SetStateAction<UserStats>>
 }
 
@@ -36,7 +36,7 @@ type StandaloneQuizProps = CommonProps & {
 }
 
 type QuizPageProps = CommonProps & {
-  currentHandler: (nextKey: string) => void
+  currentHandler: (nextKey: QuizKey) => void
   statusHandler: (status: QuizStatus) => void
   isStandaloneQuiz?: false
 }
@@ -71,7 +71,7 @@ const QuizWidget = ({
 
   const quizPageProps = useRef<
     | (Required<Pick<QuizWidgetProps, "currentHandler" | "statusHandler">> & {
-        nextQuiz: string | undefined
+        nextQuiz: QuizKey | undefined
       })
     | false
   >(false)
