@@ -278,7 +278,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
         </Flex>
       </PopoverTrigger>
       <PopoverContent
-        hideBelow="lg"
+        hideBelow="md"
         display="grid"
         gridTemplateColumns="repeat(3, 1fr)"
         shadow="md"

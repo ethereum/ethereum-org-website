@@ -51,8 +51,8 @@ const Nav = () => {
         px={{ base: 4, xl: 8 }}
       >
         <Flex
-          alignItems={{ base: "center", lg: "normal" }}
-          justifyContent={{ base: "space-between", lg: "normal" }}
+          alignItems={{ base: "center", md: "normal" }}
+          justifyContent={{ base: "space-between", md: "normal" }}
           width="full"
           maxW="container.2xl"
         >
@@ -68,10 +68,10 @@ const Nav = () => {
           {/* Desktop */}
           <Flex
             w="full"
-            justifyContent={{ base: "flex-end", lg: "space-between" }}
+            justifyContent={{ base: "flex-end", md: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="lg" sections={linkSections} />
+            <Menu hideBelow="md" sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
@@ -82,11 +82,11 @@ const Nav = () => {
               <MobileNavMenu
                 {...mobileNavProps}
                 linkSections={linkSections}
-                hideFrom="lg"
+                hideFrom="md"
                 toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
               />
-              <HStack spacing={2} hideBelow="lg">
+              <HStack spacing={2} hideBelow="md">
                 <IconButton
                   transition="transform 0.5s, color 0.2s"
                   icon={themeIcon}
