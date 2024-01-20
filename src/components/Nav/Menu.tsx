@@ -8,6 +8,7 @@ import {
   type ButtonProps,
   Flex,
   type FlexProps,
+  Grid,
   Icon,
   IconProps,
   List,
@@ -82,6 +83,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
     <Button
       as={isLink ? Link : undefined}
       href={action.href}
+      minW="sm"
       rightIcon={
         <NextChevron
           lvl={lvl}
@@ -93,7 +95,9 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
         lvl === 1 ? (
           <Icon
             as={CustomIcon || BsCircle}
-            color={isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.main`}
+            color={
+              isPartiallyActive ? "primary.highContrast" : `menu.lvl${lvl}.main`
+            }
             _groupHover={{ color: "menu.highlight" }}
           />
         ) : undefined
@@ -119,14 +123,20 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
       <Box me="auto" textAlign="start">
         <Text
           fontWeight="bold"
-          color={isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.main`}
+          color={
+            isPartiallyActive ? "primary.highContrast" : `menu.lvl${lvl}.main`
+          }
           _groupHover={{ color: "menu.highlight" }}
         >
           {label}
         </Text>
         <Text
           fontSize="sm"
-          color={isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.subtext`}
+          color={
+            isPartiallyActive
+              ? "primary.highContrast"
+              : `menu.lvl${lvl}.subtext`
+          }
           _groupHover={{ color: "menu.highlight" }}
         >
           {description}
@@ -280,7 +290,6 @@ const Menu = ({ sections, ...props }: MenuProps) => {
       <PopoverContent
         hideBelow="md"
         display="grid"
-        gridTemplateColumns="repeat(3, 1fr)"
         shadow="md"
         border="1px"
         borderColor="menu.stroke"
@@ -289,52 +298,55 @@ const Menu = ({ sections, ...props }: MenuProps) => {
         insetInlineStart={{ base: "-3rem", xl: "-5.375rem" }}
         w="min(100vw, 1504px)"
         mx="auto"
-        zIndex={0}
+        isolation="isolate"
         onMouseLeave={() => setActiveIndex(1, null)}
+        overflow="auto"
       >
-        {has.lvl1Items && (
-          <Flex {...getLvlContainerProps(1)}>
-            {getLvl1Items().map((item, index) => (
-              <MenuButton
-                key={item.label}
-                item={item}
-                lvl={1}
-                index={index}
-                getHoverActions={getHoverActions}
-              />
-            ))}
-          </Flex>
-        )}
-        <AnimatePresence>
-          {has.lvl2Items && (
-            <Flex {...slideAnimationProps} {...getLvlContainerProps(2)}>
-              {getLvl2Items().map((item, index) => (
+        <Grid gridTemplateColumns="repeat(3, 1fr)" zIndex={0}>
+          {has.lvl1Items && (
+            <Flex {...getLvlContainerProps(1)}>
+              {getLvl1Items().map((item, index) => (
                 <MenuButton
                   key={item.label}
                   item={item}
-                  lvl={2}
+                  lvl={1}
                   index={index}
                   getHoverActions={getHoverActions}
                 />
               ))}
             </Flex>
           )}
-        </AnimatePresence>
-        <AnimatePresence>
-          {has.lvl3Items && (
-            <Flex {...slideAnimationProps} {...getLvlContainerProps(3)}>
-              {getLvl3Items().map((item, index) => (
-                <MenuButton
-                  key={item.label}
-                  item={item}
-                  lvl={3}
-                  index={index}
-                  getHoverActions={getHoverActions}
-                />
-              ))}
-            </Flex>
-          )}
-        </AnimatePresence>
+          <AnimatePresence>
+            {has.lvl2Items && (
+              <Flex {...slideAnimationProps} {...getLvlContainerProps(2)}>
+                {getLvl2Items().map((item, index) => (
+                  <MenuButton
+                    key={item.label}
+                    item={item}
+                    lvl={2}
+                    index={index}
+                    getHoverActions={getHoverActions}
+                  />
+                ))}
+              </Flex>
+            )}
+          </AnimatePresence>
+          <AnimatePresence>
+            {has.lvl3Items && (
+              <Flex {...slideAnimationProps} {...getLvlContainerProps(3)}>
+                {getLvl3Items().map((item, index) => (
+                  <MenuButton
+                    key={item.label}
+                    item={item}
+                    lvl={3}
+                    index={index}
+                    getHoverActions={getHoverActions}
+                  />
+                ))}
+              </Flex>
+            )}
+          </AnimatePresence>
+        </Grid>
       </PopoverContent>
     </Popover>
   )

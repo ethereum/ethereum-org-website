@@ -211,7 +211,7 @@ type LvlAccordionProps = {
 }
 
 const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
-  <Accordion allowToggle>
+  <Accordion allowToggle boxShadow="menu.accordion">
     {items.map(({ label, description, ...actions }) => {
       if ("href" in actions)
         return (
@@ -223,6 +223,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
               onClick={onToggle}
               variant="ghost"
               borderRadius="none"
+              borderColor="menu.stroke"
               justifyContent="start"
               gap="2"
               ps={(lvl + 2) * 4}
@@ -258,6 +259,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
                 as={chakra[`h${lvl + 1}`]}
                 color={`menu.lvl${lvl}.main`}
                 py="0"
+                borderColor="menu.stroke"
               >
                 <AccordionButton
                   justifyContent="start"
@@ -338,7 +340,7 @@ const MobileNavMenu = ({
         placement="start"
         size="md"
       >
-        <DrawerOverlay onClick={onToggle} bg="modalBackground"/>
+        <DrawerOverlay onClick={onToggle} bg="modalBackground" />
         <DrawerContent bg="background.base">
           <Flex
             pt="4"
@@ -356,11 +358,7 @@ const MobileNavMenu = ({
             >
               Ethereum.org
             </DrawerHeader>
-            <IconButton
-              icon={<CloseButton onToggle={onToggle} />}
-              aria-label={t("aria-toggle-search-button")}
-              variant="ghost"
-            />
+            <CloseButton onToggle={onToggle} />
           </Flex>
 
           {/* MAIN NAV CONTENTS OF MOBILE MENU */}
@@ -380,6 +378,8 @@ const MobileNavMenu = ({
                               ? "menu.lvl1.background"
                               : "background.base"
                           }
+                          borderBottom={isExpanded ? "1px" : "none"}
+                          borderColor="disabled"
                         >
                           <AccordionButton
                             justifyContent="start"
@@ -419,7 +419,7 @@ const MobileNavMenu = ({
           <DrawerFooter
             bg="background.base"
             borderTop="1px"
-            borderColor="lightBorder"
+            borderColor="primary.lowContrast"
             justifyContent="space-between"
             height="108px"
             px={4}
