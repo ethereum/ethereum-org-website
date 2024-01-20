@@ -22,6 +22,7 @@ import {
   Icon,
   IconButton,
   Text,
+  useBreakpointValue,
   useColorModeValue,
 } from "@chakra-ui/react"
 
@@ -311,7 +312,7 @@ export type MobileNavMenuProps = ButtonProps & {
 }
 
 const MobileNavMenu = ({
-  isOpen: isMenuOpen,
+  isOpen,
   onToggle,
   toggleColorMode: toggleTheme,
   toggleSearch,
@@ -323,6 +324,7 @@ const MobileNavMenu = ({
   const { t } = useTranslation("common")
   const themeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
+  const isMenuOpen = !!useBreakpointValue({ base: isOpen, md: false })
 
   return (
     <>
@@ -336,7 +338,7 @@ const MobileNavMenu = ({
         placement="start"
         size="md"
       >
-        <DrawerOverlay bg="modalBackground" />
+        <DrawerOverlay onClick={onToggle} bg="modalBackground"/>
         <DrawerContent bg="background.base">
           <Flex
             pt="4"

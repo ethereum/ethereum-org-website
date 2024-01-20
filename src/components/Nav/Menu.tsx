@@ -126,9 +126,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
         </Text>
         <Text
           fontSize="sm"
-          color={
-            isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.subtext`
-          }
+          color={isPartiallyActive ? "highContrast" : `menu.lvl${lvl}.subtext`}
           _groupHover={{ color: "menu.highlight" }}
         >
           {description}
@@ -280,6 +278,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
         </Flex>
       </PopoverTrigger>
       <PopoverContent
+        hideBelow="lg"
         display="grid"
         gridTemplateColumns="repeat(3, 1fr)"
         shadow="md"
@@ -287,7 +286,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
         borderColor="menu.stroke"
         position="absolute"
         bg={`menu.lvl${has.lvl3Items ? 3 : has.lvl2Items ? 2 : 1}.background`}
-        insetInlineStart="-5.375rem"
+        insetInlineStart={{ base: "-3rem", xl: "-5.375rem" }}
         w="min(100vw, 1504px)"
         mx="auto"
         zIndex={0}
