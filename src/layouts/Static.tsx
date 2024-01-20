@@ -140,7 +140,7 @@ export const StaticLayout: React.FC<IProps> = ({
               zIndex={2}
               items={tocItems}
               isMobile
-              maxDepth={frontmatter.sidebarDepth || 2}
+              maxDepth={frontmatter.sidebarDepth}
               hideEditButton={!!frontmatter.hideEditButton}
             />
             {children}
@@ -151,7 +151,7 @@ export const StaticLayout: React.FC<IProps> = ({
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={frontmatter.sidebarDepth || 2}
+          maxDepth={frontmatter.sidebarDepth}
           hideEditButton={!!frontmatter.hideEditButton}
         />
       </Flex>

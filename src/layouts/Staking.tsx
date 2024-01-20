@@ -265,7 +265,7 @@ export const StakingLayout: React.FC<IProps> = ({
             position="relative"
             zIndex={2}
             items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
+            maxDepth={frontmatter.sidebarDepth}
             isMobile
           />
         </Flex>

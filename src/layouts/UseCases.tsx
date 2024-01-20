@@ -201,7 +201,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
             </UnorderedList>
             <TableOfContents
               items={tocItems}
-              maxDepth={frontmatter.sidebarDepth || 2}
+              maxDepth={frontmatter.sidebarDepth}
               isMobile
             />
           </Box>

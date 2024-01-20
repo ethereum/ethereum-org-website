@@ -210,7 +210,7 @@ export const TutorialLayout = ({
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents
             items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
+            maxDepth={frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
             isMobile
             pt={8}
@@ -233,7 +233,7 @@ export const TutorialLayout = ({
         {tocItems && (
           <TableOfContents
             items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
+            maxDepth={frontmatter.sidebarDepth}
             editPath={absoluteEditPath}
             hideEditButton={!!frontmatter.hideEditButton}
             pt={16}
