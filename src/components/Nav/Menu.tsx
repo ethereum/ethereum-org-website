@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { type RefObject, useCallback, useEffect, useRef, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useRouter } from "next/router"
 import { BsCircle } from "react-icons/bs"
@@ -10,7 +10,7 @@ import {
   type FlexProps,
   Grid,
   Icon,
-  IconProps,
+  type IconProps,
   List,
   Popover,
   PopoverContent,
@@ -160,6 +160,8 @@ const Menu = ({ sections, ...props }: MenuProps) => {
 
   const [active, setActive] = useState<ActiveState>(activeNull)
 
+  const menuGridRef = useRef<HTMLDivElement>(null)
+
   const onOpen = (key: NavSectionKey) => {
     setActive((prev) => ({ ...prev, section: key } as ActiveState))
   }
@@ -197,6 +199,21 @@ const Menu = ({ sections, ...props }: MenuProps) => {
     lvl2Items: getLvl2Items().length > 0,
     lvl3Items: getLvl3Items().length > 0,
   } as const
+
+  const scrollToEnd = useCallback(
+    (ref: RefObject<HTMLElement>) => {
+      ref.current?.scrollTo({
+        left: ref.current.scrollWidth * (isRtl ? -1 : 1),
+      })
+    },
+    [isRtl]
+  )
+
+  useEffect(() => {
+    if (has.lvl3Items) {
+      scrollToEnd(menuGridRef)
+    }
+  }, [has.lvl2Items, has.lvl3Items, scrollToEnd])
 
   const setActiveIndex = (lvl: Level, index: number | null) => {
     if (lvl === 3) {
@@ -290,6 +307,8 @@ const Menu = ({ sections, ...props }: MenuProps) => {
       <PopoverContent
         hideBelow="md"
         display="grid"
+        scrollBehavior="smooth"
+        ref={menuGridRef}
         shadow="md"
         border="1px"
         borderColor="menu.stroke"
