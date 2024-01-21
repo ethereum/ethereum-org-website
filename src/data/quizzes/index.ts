@@ -34,7 +34,7 @@ const quizzes = {
     title: "learn-quizzes:page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
-} as const satisfies RawQuizzes
+} satisfies RawQuizzes
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
   {

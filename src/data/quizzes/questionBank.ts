@@ -887,6 +887,6 @@ const questionBank = {
     ],
     correctAnswerId: "h005-b",
   },
-} as const satisfies QuestionBank
+} satisfies QuestionBank
 
 export default questionBank
