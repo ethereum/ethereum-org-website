@@ -35,3 +35,5 @@ export const isHrefActive = (
 }
 
 export const isHash = (href: string): boolean => href.startsWith("#")
+
+export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")

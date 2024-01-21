@@ -24,6 +24,7 @@ import { Button } from "@/components/Buttons"
 import Link from "@/components/Link"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+import { cleanPath } from "@/lib/utils/url"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
@@ -77,8 +78,8 @@ type MenuButtonProps = {
 const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
   const { label, description, icon: CustomIcon, ...action } = item
   const { asPath } = useRouter()
-  const isLink = "href" in action
-  const isPartiallyActive = action.href && asPath.includes(action.href)
+  const isLink = !!action.href
+  const isActive = isLink && cleanPath(asPath) === action.href
   return (
     <Button
       as={isLink ? Link : undefined}
@@ -95,9 +96,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
         lvl === 1 ? (
           <Icon
             as={CustomIcon || BsCircle}
-            color={
-              isPartiallyActive ? "primary.highContrast" : `menu.lvl${lvl}.main`
-            }
+            color={isActive ? "menu.active" : `menu.lvl${lvl}.main`}
             _groupHover={{ color: "menu.highlight" }}
           />
         ) : undefined
@@ -123,20 +122,14 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
       <Box me="auto" textAlign="start">
         <Text
           fontWeight="bold"
-          color={
-            isPartiallyActive ? "primary.highContrast" : `menu.lvl${lvl}.main`
-          }
+          color={isActive ? "highContrast" : `menu.lvl${lvl}.main`}
           _groupHover={{ color: "menu.highlight" }}
         >
           {label}
         </Text>
         <Text
           fontSize="sm"
-          color={
-            isPartiallyActive
-              ? "primary.highContrast"
-              : `menu.lvl${lvl}.subtext`
-          }
+          color={isActive ? "menu.active" : `menu.lvl${lvl}.subtext`}
           _groupHover={{ color: "menu.highlight" }}
         >
           {description}
@@ -152,7 +145,6 @@ export type MenuProps = FlexProps & {
 
 // TODO (a11y): Keyboard arrow navigation
 // TODO (style): Implement custom icons
-// TODO (style): Implement asPath active styling (isPartiallyActive)
 
 const Menu = ({ sections, ...props }: MenuProps) => {
   const { locale } = useRouter()
