@@ -81,62 +81,86 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
   const { label, description, icon: CustomIcon, ...action } = item
   const { asPath } = useRouter()
   const isLink = !!action.href
-  const isActive = isLink && cleanPath(asPath) === action.href
+  const isActivePage = isLink && cleanPath(asPath) === action.href
+  const hoverActions = getHoverActions({ lvl, index, href: action.href })
+  const { isActive: isHovered } = hoverActions
   const minW = calc.subtract(
     calc.multiply(useToken("sizes.container", "md"), 0.5),
     useToken("space", 8)
   ) // Half of `md` container (smallest desktop width) minus padding
-
   return (
     <Button
       as={isLink ? Link : undefined}
       href={action.href}
-      minW={minW}
       rightIcon={
         <NextChevron
           lvl={lvl}
           isLink={isLink}
           _groupHover={{ fill: "menu.highlight" }}
+          position="relative"
+          zIndex="1"
         />
       }
       leftIcon={
         lvl === 1 ? (
           <Icon
             as={CustomIcon || BsCircle}
-            color={isActive ? "menu.active" : `menu.lvl${lvl}.main`}
+            color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
             _groupHover={{ color: "menu.highlight" }}
+            position="relative"
+            zIndex="1"
           />
         ) : undefined
       }
+      position="relative"
+      minW={minW}
       sx={{ "span:first-of-type": { m: 0, me: 4 } }}
-      py="4"
-      bg={`menu.lvl${lvl}.background`}
       me={isLink ? undefined : -4}
+      py="4"
+      bg="none"
       data-group
       _hover={{
-        bg: `menu.lvl${lvl + 1}.background`,
-        borderInlineEndRadius: isLink ? undefined : "none",
         boxShadow: "none",
       }}
       _active={{
-        bg: `menu.lvl${lvl + 1}.background`,
-        borderInlineEndRadius: isLink ? undefined : "none",
+        outlineOffset: "2px",
         boxShadow: "none",
       }}
       // TODO: _focus styles
-      {...getHoverActions({ lvl, index, href: action.href })}
+      {...hoverActions}
     >
-      <Box me="auto" textAlign="start">
+      {isHovered && (
+        <motion.div
+          style={{
+            position: "absolute",
+            inset: 0,
+            insetInlineEnd: isLink ? 0 : -1,
+            background: `var(--eth-colors-menu-lvl${lvl + 1}-background)`,
+            borderStartStartRadius: "var(--eth-radii-base)",
+            borderEndStartRadius: "var(--eth-radii-base)",
+            borderStartEndRadius: isLink
+              ? "var(--eth-radii-base)"
+              : "var(--eth-radii-none)",
+            borderEndEndRadius: isLink
+              ? "var(--eth-radii-base)"
+              : "var(--eth-radii-none)",
+            zIndex: 0,
+          }}
+          transition={{ duration: 0.2 }}
+          layoutId={`menu-lvl${lvl + 1}-highlight`}
+        />
+      )}
+      <Box me="auto" textAlign="start" position="relative" zIndex="1">
         <Text
           fontWeight="bold"
-          color={isActive ? "highContrast" : `menu.lvl${lvl}.main`}
+          color={isActivePage ? "highContrast" : `menu.lvl${lvl}.main`}
           _groupHover={{ color: "menu.highlight" }}
         >
           {label}
         </Text>
         <Text
           fontSize="sm"
-          color={isActive ? "menu.active" : `menu.lvl${lvl}.subtext`}
+          color={isActivePage ? "menu.active" : `menu.lvl${lvl}.subtext`}
           _groupHover={{ color: "menu.highlight" }}
         >
           {description}
@@ -159,7 +183,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
 
   const [active, setActive] = useState<ActiveState>(activeNull)
 
-  const menuGridRef = useRef<HTMLDivElement>(null)
+  const menuContentRef = useRef<HTMLDivElement>(null)
 
   const onOpen = (key: NavSectionKey) => {
     setActive((prev) => ({ ...prev, section: key } as ActiveState))
@@ -210,7 +234,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
 
   useEffect(() => {
     if (has.lvl3Items) {
-      scrollToEnd(menuGridRef)
+      scrollToEnd(menuContentRef)
     }
   }, [has.lvl2Items, has.lvl3Items, scrollToEnd])
 
@@ -241,13 +265,11 @@ const Menu = ({ sections, ...props }: MenuProps) => {
     zIndex: 1 - lvl,
   })
 
-  const x = isRtl ? "100%" : "-100%"
-
-  const slideAnimationProps = {
+  const lvlAnimationProps = {
     as: motion.div,
-    initial: { x, scaleX: 0 },
-    animate: { x: 0, scaleX: 1 },
-    exit: { x, scaleX: 0 },
+    initial: { opacity: 0, height: 0 },
+    animate: { opacity: 1, height: "auto" },
+    exit: { opacity: 0, height: 0 },
   } as const
 
   const getHoverActions = ({
@@ -297,7 +319,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
                     style={{
                       position: "absolute",
                       inset: 0,
-                      background: "var(--eth-colors-primary-lowContrast",
+                      background: "var(--eth-colors-primary-lowContrast)",
                       borderRadius: "var(--eth-radii-base)",
                     }}
                     transition={{ duration: 0.2 }}
@@ -314,9 +336,8 @@ const Menu = ({ sections, ...props }: MenuProps) => {
       </PopoverTrigger>
       <PopoverContent
         hideBelow="md"
-        display="grid"
         scrollBehavior="smooth"
-        ref={menuGridRef}
+        ref={menuContentRef}
         shadow="md"
         border="1px"
         borderColor="menu.stroke"
@@ -345,7 +366,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
           )}
           <AnimatePresence>
             {has.lvl2Items && (
-              <Flex {...slideAnimationProps} {...getLvlContainerProps(2)}>
+              <Flex {...lvlAnimationProps} {...getLvlContainerProps(2)}>
                 {getLvl2Items().map((item, index) => (
                   <MenuButton
                     key={item.label}
@@ -360,7 +381,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
           </AnimatePresence>
           <AnimatePresence>
             {has.lvl3Items && (
-              <Flex {...slideAnimationProps} {...getLvlContainerProps(3)}>
+              <Flex {...lvlAnimationProps} {...getLvlContainerProps(3)}>
                 {getLvl3Items().map((item, index) => (
                   <MenuButton
                     key={item.label}
