@@ -6,7 +6,7 @@ lang: hu
 
 Az okosszerződés egy olyan program, mely egy cím alatt fut az Ethereumon. Adatokból és függvényekből állnak, melyeket végre lehet hajtani bemenő tranzakciók által. Ez az áttekintés az okosszerződések felépítéséről szól.
 
-### Előfeltételek {#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Először tekintse meg az [okosszerződésekről](/developers/docs/smart-contracts/) szóló cikket. Ez a dokumentum feltételezi, hogy már jártas a programozási nyelvekben, mint a JavaScript vagy a Python.
 

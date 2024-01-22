@@ -89,17 +89,17 @@ Tudja meg, hogy [futtathat csomópontot](/developers/docs/nodes-and-clients/run-
 
 ## Gyakran ismételt kérdések {#faq}
 
-#### Rossz tárcába küldtem az ETH-t {#wrong-wallet}
+### Rossz tárcába küldtem az ETH-t {#wrong-wallet}
 
 Az Ethereumon küldött tranzakció visszavonhatatlan. Sajnos, ha rossz pénztárcába küldte az ETH-t, nincs mód arra, hogy visszaszerezze ezeket az összegeket. Nincs központi szervezet, entitás vagy személy, aki birtokolja az Ethereumot, tehát nincs, aki visszafordítaná a tranzakciót. Ezért létfontosságú, hogy mindig ellenőrizze a tranzakcióit, mielőtt elküldi azokat.
 
-#### Hogyan juthatok hozzá az Ethereum-ajándékhoz? {#giveaway-scam}
+### Hogyan juthatok hozzá az Ethereum-ajándékhoz? {#giveaway-scam}
 
 Az Ethereum ajándékok csalások, amik el akarják lopni az Ön ETH-ját. Ne essen kísértésbe az olyan ajánlatoktól, amelyek túl szépnek tűnnek ahhoz, hogy igazak legyenek – ha az ETH-t egy ajándékcímre küldi, akkor nem kap ajándékot, és nem tudja visszaszerezni a pénzét.
 
 [Bővebben a csalás elkerüléséről](/security/#common-scams)
 
-#### A tranzakcióm beragadt {#stuck-transaction}
+### A tranzakcióm beragadt {#stuck-transaction}
 
 A tranzakciók az Ethereumon néha várakoznak, ha a tranzakciós díj alacsonyabb, mint amit épp megkíván a hálózati kereslet. Számos tárcában lehetősége van újraküldeni ugyanazt a tranzakciót egy magasabb díjjal, hogy az át tudjon menni. Alternatívaként leállíthatja a függőben lévő tételt úgy, hogy egy tranzakciót küld a címéről és ugyanazt a Nonce-t használja, mint a függőben lévő tételnél.
 
@@ -107,10 +107,10 @@ A tranzakciók az Ethereumon néha várakoznak, ha a tranzakciós díj alacsonya
 
 [Hogyan lehet leállítani a függőben lévő Ethereum-tranzakciókat](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-#### Hogyan lehet Ethereumot bányászni? {#mining-ethereum}
+### Hogyan lehet Ethereumot bányászni? {#mining-ethereum}
 
 Az Ethereum bányászat többé nem elérhető. Az Ethereum áttért a proof-of-work mechanizmusról a proof-of-stake-re, így a bányászat nem létezik. Ehelyett validátorok vannak. A validátorok letétbe helyeznek ETH-t és ezért jutalmakat kapnak, miközben biztosítják a hálózatot.
 
-#### Hogyan válhat letétbe helyezővé/validátorrá? {#become-validator}
+### Hogyan válhat letétbe helyezővé/validátorrá? {#become-validator}
 
 A validátornak 32 ETH-t kell letétbe helyezni az Ethereum letéti szerződésben és fel kell állítani egy csomópontot. További információk [a letétbehelyezésről szóló oldalon](/staking) és a[letéti launchpaden](https://launchpad.ethereum.org/) érhetők el.
