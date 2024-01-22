@@ -274,13 +274,8 @@ const Menu = ({ sections, ...props }: MenuProps) => {
                 variant="ghost"
                 color="menu.lvl1.main"
                 sx={{ span: { m: 0 } }}
-                _hover={{
-                  color: "menu.highlight",
-                }}
-                _active={{
-                  color: "menu.highlight",
-                  bg: "primary.lowContrast",
-                }}
+                _hover={{ color: "menu.highlight" }}
+                _active={{ color: "menu.highlight" }}
                 onClick={() => onOpen(key)}
                 onMouseEnter={() => {
                   if (!isOpen) return
@@ -290,7 +285,21 @@ const Menu = ({ sections, ...props }: MenuProps) => {
                 }}
                 aria-label={ariaLabel}
               >
-                {label}
+                {active.section === key && (
+                  <motion.div
+                    style={{
+                      position: "absolute",
+                      inset: 0,
+                      background: "var(--eth-colors-primary-lowContrast",
+                      borderRadius: "var(--eth-radii-base)",
+                    }}
+                    transition={{ duration: 0.2 }}
+                    layoutId="menu-section-highlight"
+                  />
+                )}
+                <Text as="span" position="relative" zIndex="1">
+                  {label}
+                </Text>
               </Button>
             )
           })}
