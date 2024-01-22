@@ -105,13 +105,13 @@ Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyżs
 
 <ProductDisclaimer />
 
-#### Narzędzia węzła
+### Narzędzia węzła
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego, są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
 
-#### Generatory kluczy
+### Generatory kluczy
 
 Narzędzia te mogą być używane jako alternatywa dla [CLI depozytu stakingu](https://github.com/ethereum/staking-deposit-cli/), aby pomóc w generowaniu kluczy.
 
