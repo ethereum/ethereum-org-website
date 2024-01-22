@@ -97,7 +97,7 @@ export const StaticLayout: React.FC<IProps> = ({
   const absoluteEditPath = baseEditPath + slug + "index.md"
 
   return (
-    <Box w="full" ms={2}>
+    <Box w="full">
       <Flex
         justifyContent="space-between"
         w="full"

@@ -232,7 +232,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
                 color: "menu.highlight",
               }}
             >
-              <Box flex="1" textAlign="left">
+              <Box flex="1" textAlign="start">
                 <Text
                   fontWeight="bold"
                   fontSize="md"
@@ -269,7 +269,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
                   py="4"
                 >
                   <OpenCloseIcon isOpen={isExpanded} />
-                  <Box flex="1" textAlign="left">
+                  <Box flex="1" textAlign="start">
                     <Text
                       fontWeight="bold"
                       fontSize="md"
@@ -391,7 +391,7 @@ const MobileNavMenu = ({
                             <Box
                               as="span"
                               flex="1"
-                              textAlign="left"
+                              textAlign="start"
                               fontWeight="bold"
                               fontSize="lg"
                             >
