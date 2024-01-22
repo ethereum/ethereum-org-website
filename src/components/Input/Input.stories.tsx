@@ -1,9 +1,9 @@
 import * as React from "react"
+import { BsSlashSquare } from "react-icons/bs"
 import { VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import Input from "."
-import { MdSearch } from "react-icons/md"
-import { BsSlashSquare } from "react-icons/bs"
 
 type InputType = typeof Input
 
@@ -19,17 +19,8 @@ type Story = StoryObj<InputType>
 export const Sizes: Story = {
   render: () => (
     <VStack width="154px">
-      <Input
-        leftElement={<MdSearch />}
-        rightElement={<BsSlashSquare />}
-        placeholder="Search"
-      />
-      <Input
-        leftElement={<MdSearch />}
-        rightElement={<BsSlashSquare />}
-        placeholder="Search"
-        size="sm"
-      />
+      <Input rightIcon={<BsSlashSquare />} placeholder="Search" />
+      <Input rightIcon={<BsSlashSquare />} placeholder="Search" size="sm" />
     </VStack>
   ),
 }
@@ -37,16 +28,10 @@ export const Sizes: Story = {
 export const ElementVariations: Story = {
   render: () => (
     <VStack width="258px" spacing={4}>
-      <Input
-        leftElement={<MdSearch />}
-        rightElement={<BsSlashSquare />}
-        placeholder="input text"
-      />
-      <Input leftElement={<MdSearch />} placeholder="input text" />
       <Input placeholder="input text" />
-      <Input rightElement={<BsSlashSquare />} placeholder="input text" />
+      <Input rightIcon={<BsSlashSquare />} placeholder="input text" />
       <Input
-        rightElement={<BsSlashSquare />}
+        rightIcon={<BsSlashSquare />}
         placeholder="input text"
         isDisabled
       />

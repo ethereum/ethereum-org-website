@@ -1,6 +1,7 @@
 import React from "react"
 import { Flex, type FlexProps, Text } from "@chakra-ui/react"
-import Button from "../../Button"
+
+import { Button } from "../../Buttons"
 
 interface IProps extends FlexProps {
   categories: Array<string>
