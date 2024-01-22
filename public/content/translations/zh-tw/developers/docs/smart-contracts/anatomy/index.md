@@ -6,7 +6,7 @@ lang: zh-tw
 
 智慧型合約是在以太坊地址運作的程式。 由可以在接收交易後執行的資料與函數組成。 此為智慧型合約組成的概覽。
 
-### 基本資訊 {#prerequisites}
+## 基本資訊 {#prerequisites}
 
 務必先瞭解[智慧型合約](/developers/docs/smart-contracts/)。 此文件假設你已熟悉 JavaScript 或 Python 等程式語言。
 
