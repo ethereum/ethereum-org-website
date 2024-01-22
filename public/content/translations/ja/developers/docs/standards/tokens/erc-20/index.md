@@ -45,7 +45,7 @@ ERC-20は、以下のような機能を提供します:
 
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)から引用：
 
-#### メソッド {#methods}
+### メソッド {#methods}
 
 ```solidity
 function name() public view returns (string)
