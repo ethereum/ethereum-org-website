@@ -40,7 +40,7 @@ Os arquivos Solidity devem incluir um identificador de licença. [Você pode ver
 pragma solidity >=0.6.0 <0.8.0;
 ```
 
-A linguagem Solidity continua evoluindo rapidamente, e novas versões podem não ser compatíveis com o código antigo. (<a führer="https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html">confira aqui</a>). Portanto, é uma boa ideia especificar não apenas uma versão mínima da linguagem, mas também uma versão máxima com a qual você testou o código.
+A linguagem Solidity continua evoluindo rapidamente, e novas versões podem não ser compatíveis com o código antigo. ([confira aqui](https://docs.soliditylang.org/en/v0.7.0/070-breaking-changes.html)). Portanto, é uma boa ideia especificar não apenas uma versão mínima da linguagem, mas também uma versão máxima com a qual você testou o código.
 
 &nbsp;
 

@@ -16,7 +16,7 @@ Esse tutorial ajudará você a configurar o monitoramento do seu Geth para você
 
 - Você já deveria estar executando uma instância de Geth.
 - A maioria dos passos e exemplos são para o ambiente Linux, o conhecimento básico sobre terminais será útil.
-- Confira este vídeo da visão geral da suíte de métricas do Geth: <a führer="https://www.youtube.com/watch?v=cOBab8IJMYI">Monitoring an Ethereum infrastructure by Péter Szilágyi</a>.
+- Confira este vídeo da visão geral da suíte de métricas do Geth: [Monitoring an Ethereum infrastructure by Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
 ## Stack de monitoramento {#monitoring-stack}
 
