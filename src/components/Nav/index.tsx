@@ -1,26 +1,18 @@
 import { FC, useRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
+import { MdBrightness2, MdWbSunny } from "react-icons/md"
 import {
   Box,
   Flex,
-  HStack,
-  Icon,
-  Menu as ChakraMenu,
-  MenuButton,
-  MenuDivider,
-  MenuItem,
-  MenuList,
-  useDisclosure,
+  HStack, useDisclosure
 } from "@chakra-ui/react"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { IconButton } from "../Buttons"
-import { EthHomeIcon } from "../icons"
-import { BaseLink } from "../Link"
-import Search from "../Search"
+import { IconButton } from "@/components/Buttons"
+import { EthHomeIcon } from "@/components/icons"
+import LanguagePicker from "@/components/LanguagePicker"
+import { BaseLink } from "@/components/Link"
+import Search from "@/components/Search"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -115,67 +107,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 />
 
                 {/* Locale-picker menu */}
-                <ChakraMenu isLazy>
-                  <MenuButton
-                    transition="color 0.2s"
-                    px={1.5}
-                    _hover={{
-                      color: "primary.hover",
-                      "& svg": {
-                        transform: "rotate(10deg)",
-                        transition: "transform 0.5s",
-                      },
-                    }}
-                  >
-                    <Icon
-                      as={MdLanguage}
-                      fontSize="2xl"
-                      verticalAlign="middle"
-                      me={2}
-                    />
-                    {t("languages")} {locale!.toUpperCase()}
-                  </MenuButton>
-                  <MenuList overflow="auto" maxH="30rem">
-                    <MenuItem key="all-locales-option">
-                      <BaseLink href={`/languages/${fromPageParameter}`}>
-                        View all languages
-                      </BaseLink>
-                    </MenuItem>
-                    <MenuDivider />
-                    {locales
-                      ?.map(
-                        (
-                          localeChoice: string
-                        ): {
-                          localeChoice: string
-                          source: string
-                          target: string
-                        } => ({
-                          localeChoice,
-                          source:
-                            new Intl.DisplayNames([locale!], {
-                              type: "language",
-                            }).of(localeChoice) || "",
-                          target:
-                            new Intl.DisplayNames([localeChoice], {
-                              type: "language",
-                            }).of(localeChoice) || "",
-                        })
-                      )
-                      .sort((a, b) =>
-                        b.localeChoice === DEFAULT_LOCALE
-                          ? 1
-                          : a.source.localeCompare(b.source)
-                      )
-                      .map(({ localeChoice, source, target }) => (
-                        <MenuItem key={locale}>
-                          <BaseLink href={asPath} locale={localeChoice}>
-                            {source} ({target})
-                          </BaseLink>
-                        </MenuItem>
-                      ))}
-                  </MenuList>
-                </ChakraMenu>
+                <LanguagePicker fromPageParameter={fromPageParameter} />
               </HStack>
             </Flex>
           </Flex>
