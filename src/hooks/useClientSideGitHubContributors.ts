@@ -2,7 +2,7 @@ import { join } from "path"
 
 import { useEffect, useState } from "react"
 
-import type { Author, FileContributorsState } from "@/lib/types"
+import type { Author, Commit, FileContributorsState } from "@/lib/types"
 
 import {
   CONTENT_DIR,
@@ -17,14 +17,14 @@ export const gitHubAuthHeaders = {
   }),
 }
 
-const fetchGitHubCommits = async (filePath: string): Promise<any[]> => {
+const fetchGitHubCommits = async (filePath: string): Promise<Commit[]> => {
   const url = new URL(GITHUB_COMMITS_URL)
   url.searchParams.set("path", filePath)
 
   try {
     const response = await fetch(url, gitHubAuthHeaders)
     if (!response.ok) throw new Error(response.statusText)
-    return await response.json()
+    return (await response.json()) as Commit[]
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error(filePath, error.message)
