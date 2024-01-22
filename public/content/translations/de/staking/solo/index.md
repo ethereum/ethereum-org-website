@@ -105,13 +105,13 @@ Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwen
 
 <ProductDisclaimer />
 
-#### Node-Tools
+### Node-Tools
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Bitte beachten Sie, wie wichtig es ist, einen [Minderheits-Client](/developers/docs/nodes-and-clients/client-diversity/) zu wählen, da er die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Tools, mit denen Sie einen Minderheits-Client einrichten können, werden als <em style={{ textTransform: "uppercase" }}>„Multi-Client"</em> bezeichnet.
 
-#### Schlüssel-Generatoren
+### Schlüssel-Generatoren
 
 Diese Tools können als Alternative zur [Staking-Einlage-CLI](https://github.com/ethereum/staking-deposit-cli/) genutzt werden, um bei der Schlüsselgenerierung zu helfen.
 
