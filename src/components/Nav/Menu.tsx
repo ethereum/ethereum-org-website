@@ -175,7 +175,6 @@ export type MenuProps = FlexProps & {
 }
 
 // TODO (a11y): Keyboard arrow navigation
-// TODO (style): Implement custom icons
 
 const Menu = ({ sections, ...props }: MenuProps) => {
   const { locale } = useRouter()

@@ -7,6 +7,7 @@ import {
   Flex,
   HStack,
   Icon,
+  Text,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react"
@@ -72,21 +73,10 @@ const Nav = () => {
             ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="md" sections={linkSections} />
-            <Flex
-              alignItems="center"
-              justifyContent="space-between"
-              gap={{ base: 2, xl: 4 }}
-            >
+            <Flex alignItems="center" justifyContent="space-between">
               <Search {...searchModalDisclosure} />
-              {/* Mobile */}
-              <MobileNavMenu
-                {...mobileNavProps}
-                linkSections={linkSections}
-                hideFrom="md"
-                toggleSearch={searchModalDisclosure.onOpen}
-                drawerContainerRef={navWrapperRef}
-              />
-              <HStack spacing={2} hideBelow="md">
+              {/* Desktop */}
+              <HStack spacing={2} hideBelow="md" ms="2">
                 <IconButton
                   transition="transform 0.5s, color 0.2s"
                   icon={themeIcon}
@@ -118,6 +108,15 @@ const Nav = () => {
                   {t("languages")} {locale!.toUpperCase()}
                 </ButtonLink>
               </HStack>
+              {/* Mobile */}
+              <MobileNavMenu
+                ms={{ base: 2, lg: 4 }}
+                {...mobileNavProps}
+                linkSections={linkSections}
+                hideFrom="md"
+                toggleSearch={searchModalDisclosure.onOpen}
+                drawerContainerRef={navWrapperRef}
+              />
             </Flex>
           </Flex>
         </Flex>
