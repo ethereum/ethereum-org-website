@@ -141,7 +141,12 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                 Your collection (1)
               </Text>
               <Flex gap={2} mb={6}>
-                <Image src={NFTs[0].image} width={120} height={120} alt="NFT Image" />
+                <Image
+                  src={NFTs[0].image}
+                  width={120}
+                  height={120}
+                  alt="NFT Image"
+                />
                 <NotificationPopover
                   title="Example walkthrough"
                   content="These are some things you could do as the owner of your NFTs"

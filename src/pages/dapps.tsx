@@ -122,7 +122,14 @@ import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
-  <Flex as={MainArticle} direction="column" align="center" mx="auto" w="full" {...props} />
+  <Flex
+    as={MainArticle}
+    direction="column"
+    align="center"
+    mx="auto"
+    w="full"
+    {...props}
+  />
 )
 
 const Divider = (props: DividerProps) => (

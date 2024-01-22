@@ -6,11 +6,11 @@ lang: sk
 
 # Používanie Etherea {#use-ethereum-applications}
 
-<div class="featured">
+<FeaturedText>
 
 **Chcete začať používať Ethereum?** Existujú stovky decentralizovaných aplikácií (dappiek) postavených na Ethereu, ktoré môžete používať už dnes.
 
-</div>
+</FeaturedText>
 
 ## Ako používať aplikácie postavené na Ethereu {#how-to-use-an-application-built-on-ethereum}
 

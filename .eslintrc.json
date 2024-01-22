@@ -1,5 +1,9 @@
 {
-  "extends": ["next/core-web-vitals", "prettier", "plugin:storybook/recommended"],
+  "extends": [
+    "next/core-web-vitals",
+    "prettier",
+    "plugin:storybook/recommended"
+  ],
   "env": { "es6": true },
   "plugins": ["simple-import-sort"],
   "rules": {

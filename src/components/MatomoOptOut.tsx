@@ -1,5 +1,5 @@
-import { useEffect,useState } from "react"
-import { Checkbox,Flex } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { Checkbox, Flex } from "@chakra-ui/react"
 
 import Text from "@/components/OldText"
 

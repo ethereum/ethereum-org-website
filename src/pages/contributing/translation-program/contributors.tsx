@@ -50,7 +50,9 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Content = (props: BoxProps) => <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+const Content = (props: BoxProps) => (
+  <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+)
 const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
 )

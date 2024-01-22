@@ -22,10 +22,7 @@ export const INITIAL_USER_STATS: UserStats = {
 }
 
 export const useLocalQuizData = () => {
-  const data = useLocalStorage(
-    USER_STATS_KEY,
-    INITIAL_USER_STATS
-  )
+  const data = useLocalStorage(USER_STATS_KEY, INITIAL_USER_STATS)
 
   return data
 }
