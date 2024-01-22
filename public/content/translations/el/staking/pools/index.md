@@ -2,7 +2,7 @@
 title: Αποθήκευση κεφαλαίου σε δεξαμενή
 description: Μια επισκόπηση πώς να ξεκινήσετε με αποθήκευση ETH σε δεξαμενή
 lang: el
-template: staking (αποθήκευση)
+template: staking
 emoji: ":money_with_wings:"
 image: /staking/leslie-pool.png
 alt: Η Leslie ο ρινόκερος κολυμπά στην πισίνα.

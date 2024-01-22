@@ -2,9 +2,9 @@
 title: Η αποθήκευση κεφαλαίου ως υπηρεσία
 description: Μια επισκόπηση πώς να ξεκινήσετε με αποθήκευση ETH σε δεξαμενή
 lang: el
-template: staking (αποθήκευση)
+template: staking
 emoji: ":money_with_wings:"
-image: /assets/staking/leslie-saas.png
+image: /staking/leslie-saas.png
 alt: Η Leslie ο ρινόκερος πετάει στα σύννεφα.
 sidebarDepth: 2
 summaryPoints:
@@ -43,13 +43,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### Πάροχοι SaaS
+### Πάροχοι SaaS
 
 <StakingProductsCardGrid category="saas" />
 
 Παρακαλούμε λάβετε υπόψιν σας τη σημασία σε υποστήριξη των [διαφορετικών λογισμικών πελάτη](/developers/docs/nodes-and-clients/client-diversity/), καθώς βελτιώνει την ασφάλεια του δικτύου και περιορίζει τους κινδύνους σας. Οι υπηρεσίες που έχουν αποδεικτικά στοιχεία περιορισμού της πλειοψηφικής χρήσης πελατών υποδεικνύονται με <em style={{ textTransform: "uppercase" }}>"ποικιλομορφια πελατη εκτελεσης"</em> και τη <em style={{ textTransform: "uppercase" }}>"συναινετικη ποικιλομορφια πελατων."</em>
 
-#### Γεννήτριες κλειδιών
+## Γεννήτριες κλειδιών
 
 <StakingProductsCardGrid category="keyGen" />
 

@@ -2,9 +2,9 @@
 title: Αποθηκεύστε τα ETH σας μόνοι σας
 description: Μια επισκόπηση πώς να ξεκινήσετε μόνοι σας την αποθήκευση των ETH σας
 lang: el
-template: staking (αποθήκευση)
+template: staking
 emoji: ":money_with_wings:"
-image: /assets/staking/leslie-solo.png
+image: /staking/leslie-solo.png
 alt: Η Leslie ο ρινόκερος στο δικό της υπολογιστή.
 sidebarDepth: 2
 summaryPoints:
@@ -105,13 +105,13 @@ summaryPoints:
 
 <ProductDisclaimer />
 
-#### Εργαλεία Κόμβων
+### Εργαλεία Κόμβων
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Παρακαλούμε λάβετε υπόψη τη σημασία της επιλογής ενός [πελάτη minority](/developers/docs/nodes-and-clients/client-diversity/) καθώς βελτιώνει την ασφάλεια του δικτύου και περιορίζει τον κίνδυνο. Εργαλεία που σας επιτρέπουν να ρυθμίσετε τον πελάτη minority συμβολίζονται ως <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
-#### Γεννήτρια κλειδιών
+### Γεννήτρια κλειδιών
 
 Αυτά τα εργαλεία μπορούν να χρησιμοποιηθούν ως εναλλακτική λύση στην [κατάθεση αποθηκευμένου κεφαλαίου CLI](https://github.com/ethereum/staking-deposit-cli/) για να βοηθήσουν με τη δημιουργία κλειδιών.
 
