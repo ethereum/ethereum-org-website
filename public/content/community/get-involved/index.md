@@ -114,6 +114,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
 - [Ethereum Jobs](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
+- [Ethereum Jobs](https://workwithweb3.com/ethereum)
 
 ## Join a DAO {#decentralized-autonomous-organizations-daos}
 
