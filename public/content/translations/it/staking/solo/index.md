@@ -105,13 +105,13 @@ Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazi
 
 <ProductDisclaimer />
 
-#### Strumenti del nodo
+### Strumenti del nodo
 
 <StakingProductsCardGrid category="nodeTools" />
 
 Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono contrassegnati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
 
-#### Generatori di chiavi
+### Generatori di chiavi
 
 Questi strumenti sono utilizzabili come un'alternativa alla [CLI di deposito di staking](https://github.com/ethereum/staking-deposit-cli/) per contribuire alla generazione di chiavi.
 
