@@ -6,6 +6,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import {
   Box,
   type ButtonProps,
+  calc,
   Flex,
   type FlexProps,
   Grid,
@@ -16,6 +17,7 @@ import {
   PopoverContent,
   PopoverTrigger,
   Text,
+  useToken,
 } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
@@ -80,11 +82,16 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
   const { asPath } = useRouter()
   const isLink = !!action.href
   const isActive = isLink && cleanPath(asPath) === action.href
+  const minW = calc.subtract(
+    calc.multiply(useToken("sizes.container", "md"), 0.5),
+    useToken("space", 8)
+  ) // Half of `md` container (smallest desktop width) minus padding
+
   return (
     <Button
       as={isLink ? Link : undefined}
       href={action.href}
-      minW="sm"
+      minW={minW}
       rightIcon={
         <NextChevron
           lvl={lvl}
