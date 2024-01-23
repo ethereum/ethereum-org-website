@@ -27,14 +27,15 @@ type LocaleDisplayInfo = {
   target: string
 }
 
-type ItemProps = MenuItemProps & Pick<LinkProps, "href" | "locale">
+type ItemProps = MenuItemProps & Pick<LinkProps, "href" | "locale" | "onClick">
 
-const Item = forwardRef((props: ItemProps, ref) => (
+const Item = forwardRef(({ onClick, ...props }: ItemProps, ref) => (
   <MenuItem
     as={BaseLink}
     ref={ref}
     flexDir="column"
     w="full"
+    onClick={onClick}
     alignItems="start"
     borderRadius="base"
     bg="transparent"
@@ -58,10 +59,12 @@ const Item = forwardRef((props: ItemProps, ref) => (
 type LanguagePickerProps = Omit<MenuListProps, "children"> & {
   children: React.ReactNode
   placement: MenuProps["placement"]
+  handleClose?: () => void
 }
 const LanguagePicker = ({
   children,
   placement,
+  handleClose,
   ...props
 }: LanguagePickerProps) => {
   const { t } = useTranslation("page-languages")
@@ -116,94 +119,122 @@ const LanguagePicker = ({
   )
 
   return (
-    <Menu isLazy initialFocusRef={inputRef} placement={placement}>
-      {children}
-      <MenuList
-        position="relative"
-        overflow="auto"
-        borderRadius="none"
-        p="4"
-        bg="primary.lowContrast"
-        {...props}
-      >
-        <Text fontSize="xs" color="body.medium">
-          Last language used
-        </Text>
-        <Item key="item-en" href={asPath} locale="en">
-          <Text fontSize="lg" color="body.base">
-            {
-              displayNames.find(
-                ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
-              )?.target
-            }
-          </Text>
-          <Text textTransform="uppercase" fontSize="xs" color="body.medium">
-            {
-              displayNames.find(
-                ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
-              )?.source
-            }
-          </Text>
-        </Item>
-        <MenuDivider borderColor="body.medium" my="4" />
-        <Text fontSize="xs" color="body.medium">
-          Filter languages list (## LANGS)
-        </Text>
-        <MenuItem
-          onFocus={() => inputRef.current?.focus()}
-          p="0"
-          bg="transparent"
-          position="relative"
-          pointerEvents="none"
-        >
-          <Box
-            position="absolute"
-            inset="0"
-            zIndex="docked"
-            pointerEvents="auto"
-            cursor="text"
-            onClick={(e) => e.stopPropagation()}
-          />
-          <Input
-            placeholder="Type to filter"
-            value={filterValue}
-            onChange={(e) => setFilterValue(e.target.value)}
-            ref={inputRef}
-            h="8"
-            mt="1"
-            mb="2"
-            bg="background.base"
-            color="body.base"
-            onKeyDown={(e) => {
-              // If Enter, navigate to first result
-              if (e.key === "Enter") {
-                e.preventDefault()
-                firstItemRef.current?.click()
-              }
-              // If ArrowDown, move focus to first result
-              if (e.key === "ArrowDown") {
-                e.preventDefault()
-                firstItemRef.current?.focus()
-              }
-            }}
-          />
-        </MenuItem>
-        {filteredNames.map(({ localeChoice, source, target }, index) => (
-          <Item
-            key={"item-" + localeChoice}
-            href={asPath}
-            locale={localeChoice}
-            ref={index === 0 ? firstItemRef : null}
-          >
-            <Text fontSize="lg" color="body.base">
-              {target}
-            </Text>
-            <Text textTransform="uppercase" fontSize="xs" color="body.medium">
-              {source}
-            </Text>
-          </Item>
-        ))}
-      </MenuList>
+    <Menu
+      isLazy
+      initialFocusRef={inputRef}
+      placement={placement}
+      closeOnSelect={false}
+    >
+      {({ onClose }) => {
+        const onMenuClose = () => {
+          handleClose ? handleClose() : onClose()
+        }
+        return (
+          <>
+            {children}
+            <MenuList
+              position="relative"
+              overflow="auto"
+              borderRadius="none"
+              p="4"
+              bg="primary.lowContrast"
+              {...props}
+            >
+              <Text fontSize="xs" color="body.medium">
+                Last language used
+              </Text>
+              <Item
+                key="item-en"
+                href={asPath}
+                locale="en"
+                onClick={onMenuClose}
+              >
+                <Text fontSize="lg" color="body.base">
+                  {
+                    displayNames.find(
+                      ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
+                    )?.target
+                  }
+                </Text>
+                <Text
+                  textTransform="uppercase"
+                  fontSize="xs"
+                  color="body.medium"
+                >
+                  {
+                    displayNames.find(
+                      ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
+                    )?.source
+                  }
+                </Text>
+              </Item>
+              <MenuDivider borderColor="body.medium" my="4" />
+              <Text fontSize="xs" color="body.medium">
+                Filter languages list (## LANGS)
+              </Text>
+              <MenuItem
+                onFocus={() => inputRef.current?.focus()}
+                p="0"
+                bg="transparent"
+                position="relative"
+                pointerEvents="none"
+              >
+                <Box
+                  position="absolute"
+                  inset="0"
+                  zIndex="docked"
+                  pointerEvents="auto"
+                  cursor="text"
+                  onClick={(e) => e.stopPropagation()}
+                />
+                <Input
+                  placeholder="Type to filter"
+                  value={filterValue}
+                  onChange={(e) => setFilterValue(e.target.value)}
+                  ref={inputRef}
+                  h="8"
+                  mt="1"
+                  mb="2"
+                  bg="background.base"
+                  color="body.base"
+                  onKeyDown={(e) => {
+                    // If Enter, navigate to first result
+                    if (e.key === "Enter") {
+                      e.preventDefault()
+                      firstItemRef.current?.click()
+                    }
+                    // If ArrowDown, move focus to first result
+                    if (e.key === "ArrowDown") {
+                      e.preventDefault()
+                      firstItemRef.current?.focus()
+                    }
+                  }}
+                />
+              </MenuItem>
+              {filteredNames.map(({ localeChoice, source, target }, index) => (
+                <Item
+                  key={"item-" + localeChoice}
+                  href={asPath}
+                  locale={localeChoice}
+                  ref={index === 0 ? firstItemRef : null}
+                  onClick={onMenuClose}
+                >
+                  <Text fontSize="lg" color="body.base">
+                    {target}
+                  </Text>
+                  <Text
+                    textTransform="uppercase"
+                    fontSize="xs"
+                    color="body.medium"
+                  >
+                    {source}
+                  </Text>
+                </Item>
+              ))}
+            </MenuList>
+          </>
+        )
+      }}
     </Menu>
   )
 }

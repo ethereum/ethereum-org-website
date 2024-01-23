@@ -278,6 +278,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 w="calc(100vw - var(--eth-sizes-8))"
                 insetInlineStart="4"
                 top="4.75rem"
+                handleClose={toggleMenu}
               >
                 <MenuButton
                   alignItems="center"
