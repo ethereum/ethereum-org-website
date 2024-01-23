@@ -2,6 +2,7 @@ import { useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
+  Box,
   forwardRef,
   Input,
   Menu,
@@ -152,16 +153,26 @@ const LanguagePicker = ({
           onFocus={() => inputRef.current?.focus()}
           p="0"
           bg="transparent"
+          position="relative"
+          pointerEvents="none"
         >
+          <Box
+            position="absolute"
+            inset="0"
+            zIndex="docked"
+            pointerEvents="auto"
+            cursor="text"
+            onClick={(e) => e.stopPropagation()}
+          />
           <Input
+            placeholder="Type to filter"
             value={filterValue}
             onChange={(e) => setFilterValue(e.target.value)}
             ref={inputRef}
             h="8"
-            placeholder="Type to filter"
-            bg="background.base"
             mt="1"
             mb="2"
+            bg="background.base"
             onKeyDown={(e) => {
               // If Enter, navigate to first result
               if (e.key === "Enter") {
@@ -182,7 +193,6 @@ const LanguagePicker = ({
             href={asPath}
             locale={localeChoice}
             ref={index === 0 ? firstItemRef : null}
-            onClick={onClick}
           >
             <Text fontSize="lg" color="body.base">
               {target}
