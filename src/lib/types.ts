@@ -36,7 +36,8 @@ export type Root = {
   lastDeployDate: string
 }
 
-export type BasePageProps = SSRConfig & Pick<Root, "contentNotTranslated" | "lastDeployDate">
+export type BasePageProps = SSRConfig &
+  Pick<Root, "contentNotTranslated" | "lastDeployDate">
 
 export type Frontmatter = RoadmapFrontmatter &
   UpgradeFrontmatter &
@@ -187,6 +188,20 @@ export type LocaleContributions = {
 }
 
 // GitHub contributors
+export type Commit = {
+  commit: {
+    author: {
+      name: string
+      email: string
+    }
+  }
+  author: {
+    avatar_url: string
+    login: string
+    html_url: string
+  }
+}
+
 export type Author = {
   name: string
   email: string
@@ -210,8 +225,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -275,12 +290,14 @@ export type TimestampedData<T> = {
   value: T
 }
 
-export type MetricDataValue<Data, Value> = {
-  error: string
-} | {
-  data: Data
-  value: Value
-}
+export type MetricDataValue<Data, Value> =
+  | {
+      error: string
+    }
+  | {
+      data: Data
+      value: Value
+    }
 
 export type EtherscanNodeResponse = {
   result: {
@@ -305,11 +322,18 @@ export type DefiLlamaTVLResponse = {
   totalLiquidityUSD: number
 }[]
 
-export type MetricReturnData = MetricDataValue<TimestampedData<number>[], number>
+export type MetricReturnData = MetricDataValue<
+  TimestampedData<number>[],
+  number
+>
 
 export type StatsBoxState = MetricDataValue<TimestampedData<number>[], string>
 
-export type MetricSection = "totalEthStaked" | "nodeCount" | "totalValueLocked" | "txCount"
+export type MetricSection =
+  | "totalEthStaked"
+  | "nodeCount"
+  | "totalValueLocked"
+  | "txCount"
 
 export type AllMetricData = Record<MetricSection, MetricReturnData>
 

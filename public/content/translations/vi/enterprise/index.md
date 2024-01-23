@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Ethereum cho Doanh nghiệp {#ethereum-for-enterprise}
 
-<div class="featured">Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp.</div>
+<FeaturedText>Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp.</FeaturedText>
 
 ## Vì sao nên sử dụng Enterprise Ethereum? {#why-enterprise-ethereum}
 

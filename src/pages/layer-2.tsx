@@ -115,7 +115,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[3])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {

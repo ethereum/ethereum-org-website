@@ -6,7 +6,7 @@ lang: nb
 
 # Ethereum for bedrifter {#ethereum-for-enterprise}
 
-<div class="featured">Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter.</div>
+<FeaturedText>Veiledninger, artikler og verktøy om offentlige og private Ethereum-blokkjeder for bedrifter.</FeaturedText>
 
 ## Hvorfor velge Enterprise Ethereum? {#why-enterprise-ethereum}
 

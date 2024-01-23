@@ -122,7 +122,14 @@ import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
 
 const Page = (props: ChildOnlyProp & FlexProps) => (
-  <Flex as={MainArticle} direction="column" align="center" mx="auto" w="full" {...props} />
+  <Flex
+    as={MainArticle}
+    direction="column"
+    align="center"
+    mx="auto"
+    w="full"
+    {...props}
+  />
 )
 
 const Divider = (props: DividerProps) => (
@@ -244,7 +251,7 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
     w="full"
     direction={{ base: "column", lg: "row" }}
     align="flex-start"
-    mr={{ lg: 8 }}
+    me={{ lg: 8 }}
     {...props}
   />
 )
@@ -302,7 +309,7 @@ const StyledInfoBanner = (props: ComponentPropsWithRef<typeof InfoBanner>) => (
 )
 
 const Column = (props: ChildOnlyProp) => (
-  <Box flex="1 1 75%" mb={6} mr={{ lg: 8 }} {...props} />
+  <Box flex="1 1 75%" mb={6} me={{ lg: 8 }} {...props} />
 )
 
 const FullWidthContainer = (
@@ -370,11 +377,11 @@ const CenterText = (props: ChildOnlyProp) => (
 )
 
 const LeftColumn = (props: ChildOnlyProp) => (
-  <Box w="full" m={{ base: "auto 0", lg: 0 }} mr={{ lg: 8 }} {...props} />
+  <Box w="full" m={{ base: "auto 0", lg: 0 }} me={{ lg: 8 }} {...props} />
 )
 
 const RightColumn = (props: ChildOnlyProp) => (
-  <Box w="full" m={{ base: "auto 0", lg: 0 }} ml={{ lg: 8 }} {...props} />
+  <Box w="full" m={{ base: "auto 0", lg: 0 }} ms={{ lg: 8 }} {...props} />
 )
 
 const StyledCallout = (props: ComponentPropsWithRef<typeof Callout>) => (
@@ -1449,7 +1456,7 @@ const DappsPage = () => {
                   })
                 }}
               >
-                <Emoji fontSize="2xl" mr={`1rem`} text={category.emoji} />
+                <Emoji fontSize="2xl" me={`1rem`} text={category.emoji} />
                 <OptionText>{category.title}</OptionText>
               </Option>
             )
@@ -1462,7 +1469,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-finance-title")}{" "}
-                  <Emoji fontSize="5xl" ml="2" text=":money_with_wings:" />
+                  <Emoji fontSize="5xl" ms="2" text=":money_with_wings:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-finance-description")}</Subtitle>
               </Column>
@@ -1581,7 +1588,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-gaming-title")}{" "}
-                  <Emoji fontSize="5xl" ml="2" text=":video_game:" />
+                  <Emoji fontSize="5xl" ms="2" text=":video_game:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-gaming-description")}</Subtitle>
               </Column>
@@ -1607,7 +1614,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-technology-title")}{" "}
-                  <Emoji fontSize="5xl" ml="2" text=":keyboard:" />
+                  <Emoji fontSize="5xl" ms="2" text=":keyboard:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-technology-description")}</Subtitle>
               </Column>
@@ -1654,7 +1661,7 @@ const DappsPage = () => {
                   {t("page-dapps-collectibles-title")}{" "}
                   <Emoji
                     fontSize="5xl"
-                    ml={"0.5rem"}
+                    ms={"0.5rem"}
                     text=":frame_with_picture:"
                   />
                 </StyledH2>
@@ -1705,7 +1712,7 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-metaverse-title")}{" "}
-                  <Emoji fontSize="5xl" ml="2" text=":globe_with_meridians:" />
+                  <Emoji fontSize="5xl" ms="2" text=":globe_with_meridians:" />
                 </H2>
                 <Subtitle>{t("page-dapps-metaverse-description")}</Subtitle>
               </Column>
@@ -1736,7 +1743,7 @@ const DappsPage = () => {
               <Column>
                 <H2>
                   {t("page-dapps-social-title")}{" "}
-                  <Emoji fontSize="5xl" ml="2" text=":incoming_envelope:" />
+                  <Emoji fontSize="5xl" ms="2" text=":incoming_envelope:" />
                 </H2>
                 <Subtitle>{t("page-dapps-social-description")}</Subtitle>
               </Column>

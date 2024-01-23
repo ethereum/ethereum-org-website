@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, type BoxProps, Flex,Text } from "@chakra-ui/react"
+import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
 
 import { getMaxFractionDigitsUsd } from "../utils"
 

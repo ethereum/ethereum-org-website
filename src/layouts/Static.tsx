@@ -30,10 +30,9 @@ import Translation from "@/components/Translation"
 import TranslationChartImage from "@/components/TranslationChartImage"
 import UpcomingEventsList from "@/components/UpcomingEventsList"
 
+import { getEditPath } from "@/lib/utils/editPath"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
-
-import { CONTENT_DIR } from "@/lib/constants"
 
 import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
 
@@ -79,7 +78,10 @@ export const staticComponents = {
 
 interface IProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
+    Pick<
+      MdPageContent,
+      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+    > {
   frontmatter: StaticFrontmatter
 }
 export const StaticLayout: React.FC<IProps> = ({
@@ -88,16 +90,14 @@ export const StaticLayout: React.FC<IProps> = ({
   slug,
   tocItems,
   lastUpdatedDate,
+  contentNotTranslated,
 }) => {
   const { locale } = useRouter()
 
-  const repo =
-    process.env.NEXT_PUBLIC_GITHUB_REPO || "ethereum/ethereum-org-website"
-  const baseEditPath = `https://github.com/${repo}/tree/dev/${CONTENT_DIR}/`
-  const absoluteEditPath = baseEditPath + slug + "index.md"
+  const absoluteEditPath = getEditPath(slug)
 
   return (
-    <Box w="full" ms={2}>
+    <Box w="full">
       <Flex
         justifyContent="space-between"
         w="full"
@@ -105,6 +105,7 @@ export const StaticLayout: React.FC<IProps> = ({
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
+        dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <Box>
           {slug === "/guides/" ? (
@@ -132,13 +133,6 @@ export const StaticLayout: React.FC<IProps> = ({
             maxW="container.md"
             w="full"
             sx={{
-              ".featured": {
-                ps: 4,
-                ms: -4,
-                borderInlineStart: "1px dotted",
-                borderInlineStartColor: "primary.base",
-              },
-
               ".citation": {
                 p: {
                   color: "text200",

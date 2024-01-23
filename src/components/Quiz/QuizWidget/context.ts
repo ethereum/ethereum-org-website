@@ -18,10 +18,10 @@ type QuizWidgetContextType = Quiz & {
         nextQuiz: string | undefined
       }
     | false
-    numberOfCorrectAnswers: number
-    quizScore: number
-    ratioCorrect: number
-    isPassingScore: boolean
+  numberOfCorrectAnswers: number
+  quizScore: number
+  ratioCorrect: number
+  isPassingScore: boolean
   initialize: () => void
   setUserQuizProgress: Dispatch<SetStateAction<AnswerChoice[]>>
   setShowAnswer: (prev: boolean) => void

@@ -7,7 +7,11 @@ import {
   type BreadcrumbProps as ChakraBreadcrumbProps,
 } from "@chakra-ui/react"
 
+import type { Lang } from "@/lib/types"
+
 import { BaseLink } from "@/components/Link"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 export type BreadcrumbsProps = ChakraBreadcrumbProps & {
   slug: string
@@ -39,6 +43,7 @@ const Breadcrumbs = ({
 }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const { locale, asPath } = useRouter()
+  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   const hasHome = asPath !== "/"
   const slug = originalSlug.replace(`/${locale}/`, "/")
@@ -65,7 +70,7 @@ const Breadcrumbs = ({
     .slice(startDepth)
 
   return (
-    <Breadcrumb {...props}>
+    <Breadcrumb {...props} dir={dir}>
       {crumbs.map(({ fullPath, text }) => {
         const isCurrentPage = slug === fullPath
         return (

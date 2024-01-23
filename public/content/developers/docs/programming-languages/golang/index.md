@@ -5,7 +5,7 @@ lang: en
 incomplete: true
 ---
 
-<div class="featured">Learn how to develop for Ethereum using Go-based projects and tooling</div>
+<FeaturedText>Learn how to develop for Ethereum using Go-based projects and tooling</FeaturedText>
 
 Use Ethereum to create decentralized applications (or "dapps"). These dapps can be trustworthy, meaning that once they are deployed to Ethereum, they will always run as programmed. They are decentralized, meaning that they run on a peer-to-peer network and there is no single point of failure. No single entity or person controls them and they are nearly impossible to censor. They can control digital assets in order to create new kinds of applications.
 

@@ -99,7 +99,7 @@ Exemple de réponse :
 }
 ```
 
-- dans la Structure de Données Récursives (SDR), la transaction signée prend essentiellement la forme d'une séquence d'instructions codées`` [](/developers/docs/data-structures-and-encoding/rlp)
+- dans la Structure de Données Récursives (SDR), la transaction signée prend essentiellement la forme d'une séquence d'instructions codées``. [Préfixe de longueur récursive (RLP)](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` est la transaction signée sous la forme JSON
 
 Grâce au hachage de la signature, il est possible de prouver de façon cryptographique que la transaction provient de l'expéditeur et qu'elle a été soumise au réseau.
