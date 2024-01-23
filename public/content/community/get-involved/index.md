@@ -19,7 +19,7 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 - Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
-- Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+- Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -33,7 +33,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
   - Learn how to become an [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
     - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
   - Participate in [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP)
-    - Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+    - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [More on EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
