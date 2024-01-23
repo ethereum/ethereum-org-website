@@ -17,7 +17,7 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   bg: "none",
   gap: 4,
   m: 0,
-  pl: 3,
+  ps: 3,
   _hover: {
     ...commonBtnStateStyles,
     ".DocSearch-Button-Keys kbd": {
