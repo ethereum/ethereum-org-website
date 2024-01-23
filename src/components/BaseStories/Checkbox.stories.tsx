@@ -1,7 +1,7 @@
 import * as React from "react"
 import {
-  CheckboxGroup,
   Checkbox as CheckboxComponent,
+  CheckboxGroup,
   VStack,
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
