@@ -43,7 +43,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 每个 [块](/developers/docs/blocks/) 会引用它前面的区块； `parentHash` 是前一个区块的哈希值。
 
-<div class="featured">注：以太坊广泛使用<a href="https://wikipedia.org/wiki/Hash_function">哈希函数</a>来生成固定大小的值（“哈希”）。 哈希值在以太坊中发挥着重要作用，但您现在可以放心地将其视为是唯一的 ID 值。</div>
+<FeaturedText>注：以太坊广泛使用<a href="https://wikipedia.org/wiki/Hash_function">哈希函数</a>来生成固定大小的值（“哈希”）。 哈希值在以太坊中发挥着重要作用，但您现在可以放心地将其视为是唯一的 ID 值。</FeaturedText>
 
 ![描述区块链的示意图，其中包括每个区块内的数据](./blockchain-diagram.png)
 
@@ -59,7 +59,7 @@ _区块链本质上是一个链表；每个区块都有一个对前一个区块�
 
 想要与以太坊进行互动的 Python 开发人员可能会接触到 [Web3.py](https://web3py.readthedocs.io/)。 Web3.py 是一个库，可以帮助我们简化连接以太坊节点，以及发送和接收数据。
 
-<div class="featured">注：“以太坊节点”和“以太坊客户端”可互换使用。 这两种说法都是指以太坊网络中参与者所运行的软件。 该软件可以读取区块数据，在新区块添加到链中时接收更新，广播新交易等等。 从技术角度讲，客户端是软件，节点是运行软件的计算机。</div>
+<FeaturedText>注：“以太坊节点”和“以太坊客户端”可互换使用。 这两种说法都是指以太坊网络中参与者所运行的软件。 该软件可以读取区块数据，在新区块添加到链中时接收更新，广播新交易等等。 从技术角度讲，客户端是软件，节点是运行软件的计算机。</FeaturedText>
 
 [以太坊客户端](/developers/docs/nodes-and-clients/)可以配置为通过[进程间通信 (IPC)](https://wikipedia.org/wiki/Inter-process_communication)、超文本传输协议 (HTTP) 或网络套接字 (Websockets) 进行访问，因此 Web3.py 也需要完成这个配置。 Web3.py 将这些连接选项称为**提供者**。 您需要从三个提供者中选择一个来连接 Web3.py 实例和您的节点。
 
@@ -81,7 +81,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 在这个演练中，我们仅在 Python 解释器中进行。 我们不会创建任何目录、文件、类或函数。
 
-<div class="featured">注：在下面的例子中，以“$”开头的命令是要在终端中运行的。 （不要输入 `$`，它只是表示行的开始。）</div>
+<FeaturedText>注：在下面的例子中，以“$”开头的命令是要在终端中运行的。 （不要输入 `$`，它只是表示行的开始。）</FeaturedText>
 
 首先，安装 [IPython](https://ipython.org/)，以方便用户在其中进行探索。 IPython 提供了 tab 补全等功能，使得我们更容易看到 Web3.py 中有哪些可用方法。
 
@@ -129,7 +129,7 @@ In [1]: from web3 import Web3
 
 在以太坊应用中，您通常需要转换货币面额。 Web3 模块为此提供几个辅助方法： [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) 和 [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei)。
 
-<div class="featured">
+<FeaturedText>
 注：计算机不擅长处理十进制数学。 为了规避这个问题，开发者通常会以美分存储美元。 例如，价格为 5.99 美元的物品在数据库中存储为 599。
 
 在以 <b>ETH</b> 处理交易时，也使用了类似的模式。 但是，ETH 不是只有两个小数位，而是有 18 位。 ether 的最小单位是 <b>wei</b>，所以发送交易时指定的就是这个值。
@@ -138,7 +138,7 @@ In [1]: from web3 import Web3
 
 1 wei = 0.000000000000000001 ETH
 
-</div>
+</FeaturedText>
 
 试一下将一些数值转换为 wei 或反向转换。 请注意， [ETH 和 wei 之间还有其他面额](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations)名称。 其中比较有名的是 **gwei**，因为它通常用于表示交易费用。
 
@@ -288,7 +288,7 @@ Out[13]: 1000003000000000000000000
 
 后者看起来不错！ 余额从 1000000 增加到 1000003 个 ETH。 但第一个账户发生了什么情况？ 它减少的数量看起来略大于三个 ETH？ 是的，没有免费的午餐，使用以太坊公网需要支付矿工手续费， 一笔小额交易费从进行交易的帐户中扣除，金额为 31000 wei。
 
-<div class="featured">注：在公共网络上，交易费用根据网络需求和您希望交易处理的速度而变化。 如果您对费用的计算方式感兴趣，请查看我之前关于<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">如何将交易包含在一个区块中</a>的文章。</div>
+<FeaturedText>注：在公共网络上，交易费用根据网络需求和您希望交易处理的速度而变化。 如果您对费用的计算方式感兴趣，请查看我之前关于<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">如何将交易包含在一个区块中</a>的文章。</FeaturedText>
 
 ## 结尾 {#and-breathe}
 

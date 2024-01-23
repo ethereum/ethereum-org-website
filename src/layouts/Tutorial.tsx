@@ -41,7 +41,9 @@ import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import { getEditPath } from "@/lib/utils/editPath"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
@@ -49,7 +51,6 @@ type ContentContainerProps = Pick<BoxProps, "children" | "dir">
 
 const ContentContainer = (props: ContentContainerProps) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
-  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
@@ -63,11 +64,6 @@ const ContentContainer = (props: ContentContainerProps) => {
       borderRadius="4px"
       {...props}
       sx={{
-        ".featured": {
-          ps: "1rem",
-          ms: "-1rem",
-          borderInlineStart: `1px dotted ${borderColor}`,
-        },
         ".citation": {
           p: { color: "text200" },
         },
@@ -192,7 +188,8 @@ export const TutorialLayout = ({
   contentNotTranslated,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
+
   const borderColor = useToken("colors", "border")
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null

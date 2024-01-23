@@ -6,5 +6,13 @@
   "/content/translations/it/developers/docs/smart-contracts/verifying/source-code-verification.png": {
     "hash": "ffbba644",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/UlEQVR4nE2QwUrDQBCGN69hX85n8OAD6MFLDx5Fz76B+ACSkLJFkJQKJQS8GEXabuuaHZNN9ndnisYfBnZnhu//GRUwahgGKWDshjDOWHVdoygKefd9D9U4gv0iEPnYGPBpnQxY1lq81h8wZic93wfZ3ca/j7veeyhumL0Tzwc9x/HJKfL5owDYKcsyaK1BLu5ECBHB0Te6rpMdZfZNBFB0CHhbr3F7d4/3zUaiL5fPyPMcT4sFmuoF21WJ2UwLtCzLA4BjsztRi+urG5yfXWA6vZTI7MKObdvKMXbGCDBNU1RVdQD8HsfFiJPJEZRSSJLkL+J/MZTvwiXQqB+mbWFPMLZAAAAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/es/developers/docs/smart-contracts/verifying/source-code-verification.png": {
+    "hash": "9e1984a6",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAklEQVR4nF1OwUrDUBB80s+wv+c/iB+hnhWP2i8QvHtobEwLIVIlorm0KNK0fWk2xreZkfckCi4MzM4yM2tIdj1U9Zf36P7ti+WyS9M0cKfamVo+WckX29YRIG3V0DlHP9ZWXCw/WJZr+mxVcFc3LMtt4E6VxnphUwfz7f2MB4dHnExnISDLMkbRmMk0YSNCoqNIw1r+Ssx6s8N6K3AKvK1WuLq+wfuqBBSYzx8RRRHShwzy8ory6Rl3cYxoPEae5yAJ45v9+MTR5Ygnx6c8P7ugqlI7DXrfVlnLOEk4iWMWRfHzAQAhKVLtZDjcF2OMDPYG0rZt0HuAFKcq1toAf/febxXDYcY+OBTTAAAAAElFTkSuQmCC"
+  },
+  "/content/translations/tr/developers/docs/smart-contracts/verifying/source-code-verification.png": {
+    "hash": "1faaf96c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAABAklEQVR4nHVOMU7DQBA8lGeQ7/EGCv4ABX3awAOQqGlsYpzCMgpREISCiCDixOd4jbn1DLqLLNGw0kij2d2ZMSS7Ht0f/h/eV6suy7LAnWpnavlmJT9sW0ftyNJK4H6qquL684vWWqpq2O/rhkVRUhV0qjTWC7uaAHk3mfLk9IzRwzQY5HnOOI6YpikbEfojkYa1NHTuEGK2uz22pcAp8LHZYHxzi/WmABSYzZ4QxzGyxxzy8opi/oz7JEEURVgsFiAJ45P9eMfrqzEvzi85Go2ona+sQe/TKmuZpCknScLl8u3QAICQFKlrGQ6PxRgjg6OBtG0b9B4gxamKtTbA7/3vLy+/Yedw/DWAAAAAAElFTkSuQmCC"
   }
 }

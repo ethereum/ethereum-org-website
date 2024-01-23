@@ -14,5 +14,13 @@
   "/content/translations/zh/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.png": {
     "hash": "8b7d12b7",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABKElEQVR4nHWRTUrDQBTHZ+UR7AVcCeIZRDyB+HGBggju3OoJXLsVERcKEpB26S5gWzWp4i6SNpIaCU1IjE46adq/M2OnlCb+Z/PmvcfvfRFMFEURHMdBnueglMK2bWkLCVv4ykSUkSQJB3Sh6zosy4Lv+2CMyZjwf/N4KYCxTBo7+0cglVV4vQ+YpokbTcOn56EfBCALSzg4Pvkr9EMxngWoNk/PrrBZPUREY1ktDHzZ9jAbYmN7DxfXNZmn8gsjKPlffTy8PmNlfRd3epN7RkgHqYzpLQPLa1t4s9+nsClAfNLJzK12G4Qs4lyrY5BTWD0HcRbj8rbO/RU0H1+KAKURf0JhGMJ4MtC4b2C2SGGJpavlcl0XnW5HXkSBxyV5/wLUCec1D/kFi98UpYY6dRoAAAAASUVORK5CYII="
+  },
+  "/content/translations/es/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.png": {
+    "hash": "2e38c778",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABV0lEQVR4nGNggIJQFxf++vp6GRDbwsKCs7q6Wtbe3p4FxG9ubpYNDQ3lYcAH/v//L3Dv5k19c3Nz1ZKSEuXPnz9r////nw0k9/jxY713797xY9UYGrqKGURP2nxl0cRN1/9fu3BB5+HDh5m/fv3+//bVq1AZGRnOKTvv/p+25XIvWH39Krb///8zwg2or69nAtEzN51Lmbjx1EIGBgamT2/eaP399m7+/59f9O3t61l6VxzdOG3NiVioS5nweYORYRUD29QDm0zr5h9dOWfHGUew4TPPsILoxfvPO7QuO7lty4lLxmDLUQz7/58xDapw4/Hjrt2bbv6fc/BsBohvv79HBETP3ns8sW3N1f87j9/wBPFXrfoP9j6mKxgYGD6/faidkJAgy8DAIMHAwCAEc/7////Z8XoDCpiys7OljI2NQSEPij5wbJACmBggaQAR2lBvgjESAADL9pnU+G6EAgAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/tr/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.png": {
+    "hash": "4c8075cb",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWklEQVR4nGNggIKsrCyevr4+SRA7LS2Ntb6+Xqa+vp4JxO/t7ZWur6/nYMAHHj58KHjz8jl9GxsbpYqKCqW3b9/q3Lp1ix0kd/PmZf37988LYNUYGrqKGURP3Xxt0YRNV/9fP3NG9/79+5m/fv/5/+rVq1AZGQvOaTvu/J+y+WIvWH39Krb///8zwg2ohzpz9vbLKZM3nlnIwMDA+ObNG63/vz7N///ziz7Igr5VxzZOWXM0FqTuf/1/sHqs4D/I5FUMbFMPbDKtmX90xbSdZ5xA4vv3/2cB0Yv3n3doXXZs25YTl4zBlv9HNuz/f8a0mWdYQcyNx4+7dq2//n/B4fPpIL7NtlZRsCv3Hk9sXXXx/87jNzxB/FWr/oO9j+kKBgaGT2+eaaWnp0szMDDwg7wFlWP6//8/O4jGGyMgUFlZKa6mpibCwMCAPfQJgtBQkPMQoQ31JhgjAQAu9ZuAXmG5NgAAAABJRU5ErkJggg=="
   }
 }

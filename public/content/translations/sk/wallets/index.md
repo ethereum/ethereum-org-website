@@ -6,11 +6,11 @@ lang: sk
 
 # Peňaženky pre Ethereum {#ethereum-wallets}
 
-<div class="featured">
+<FeaturedText>
 
 ** Chcete sa dozvedieť viac o peňaženkách pre Ethereum? ** Na tejto stránke nájdete základné informácie a niekoľko jednoduchých možností, ako na to.
 
-</div>
+</FeaturedText>
 
 ## Čo je peňaženka pre Ethereum a ktorú mám používať? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 

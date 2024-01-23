@@ -14,5 +14,17 @@
   "/content/translations/pt-br/developers/docs/nodes-and-clients/run-a-node/diagram.png": {
     "hash": "e3b11c5c",
     "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXklEQVR4nHVRoaoCURS83WL2B/wCf2HbRptB2GJb2CJsEQwGg8FgWTBYBIuwYYvBIhgsBoPFYBAOBoPBcIU778zhKbzwLhx0zjk7d2aue71eHoA/Ho++qiq/Xq99WZb2f7PZ/MG73c56xIfDwWdZ5h1+jzZwPp/xfr+hpN8aj8dI0xRKZPj5fFo9Hg8oKdxoNEKe55jNZtjv97bY7Xat5vM5lsulkaxWKxRFgTiObV+VYLvdwiVJgiiKrMllDvr9Pnq9nuHJZGIKPkTOOXQ6HbuIu18LZKOFy+WC0+lkRUxl6tXkckbFmoHNaNvRMw/lX69XKy5ygSS32w33+x0asqmgUlojZp8KAksTDhpM+OBPaXD2q4RBlQS1ENrttmG9LHwtkJEp/3eohKqm0yn0Mnsty0A/Ep2LepTBYCDqUYbDoWh40mw2pV6vS6PRkFqtJvoyslgsbEdfRFqtlvwAwibC8s8h8BsAAAAASUVORK5CYII="
+  },
+  "/content/translations/es/developers/docs/nodes-and-clients/run-a-node/diagram.png": {
+    "hash": "563703bd",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQklEQVR4nFXQIavDMBAH8H6BfZrZ6UFhYqpiMDE3mKsoRFQEJiYKE5OBioqJQl1MxEFExImKiEJERURFRETFREVFH6TvMd5PHX+4O+6ieZ6XZTHGAIAQAgCklADAOYcAEZVSAKC1zvM8WgKtdd/3n8/Hez/Pc9u2hBBK6ePxWJNpmsZxFEJEnPO6rmWAiEWAiGVZVlUlhKCUXi6X2+3GOW/bNkrTdLfbVVX1fr8ZY/f7vSiK5/P5er3yPG+aJsuyNE0JIWVZKqUia61zDgD6vnfOdYG1tq7rLMvWnDEGAMYYrfX3hiGw1vbBMAze+67rlFKMMSGEMcY599uAiOM4zv8ty9J1HaU0jmNCiJTSe//dME3TWq/Wjw3DUP0xxiBitE5qmma/3x+Px8PhEMdxkiRRsN1uz+fz6XRKkuR6vW42mx9zhTgBxkIKKgAAAABJRU5ErkJggg=="
+  },
+  "/content/translations/fr/developers/docs/nodes-and-clients/run-a-node/diagram.png": {
+    "hash": "7e3c66e0",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABWElEQVR4nG1Qq67CQBBdwU/wL/wA31BBgiDhA0gQOERFRcUmNU0qEEhERcUKREUFoqICUVFRtUHUkKxYkj03ZwIk9+ZOcrIzZx57ZpRzzgPwXdd5Y4wvy9JXVSU+QZ8c/bquBeTatvX7/d4rvK1tW/R9D+ccns+ncIwPhwN2ux2yLMM0Td/84/GAMQYqSRKkaSpBXdcoyxKr1Qrb7RaXy0VyRVEgz3N5l8sl4jhG0zRSr6IoAsHk+XwW8vNrVVXybjYbaK1xOp0wm82E4wBRgLexkZKHYcD9fv8FKmHudruJIsbku66Der1e3xuM4yjgEDZ8QI55rkd1VMJm3oEKAtE0TZimSfz/0Pd90FoHpVSIoigMwxDGcQzfFTiRF/5r/IWgCqrhMbkKa6/XK5RzzgKwxhh7PB5tkiSCOI5tlmV2Pp9bpZRdr9dWa23zPLdpmtqiKOxisbA/E4zKlib/CsIAAAAASUVORK5CYII="
+  },
+  "/content/translations/tr/developers/docs/nodes-and-clients/run-a-node/diagram.png": {
+    "hash": "8a127415",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAAAsTAAALEwEAmpwYAAABJ0lEQVR4nFXQoa6DMBQGYF6A19iDTCxZMoHCIdAVJDjEHAI3ObGkYgJXh6k4SUVFBeKIJogKBGKiAoGoQHS57XZv7qeOaP5z/ib7vnvvp2kCAM45AEgpf2fOuZRSKQUAiHi9XhMfIKIxxjm3bZv3XinVfFlrXWCtBYCk67rb7RaDh2EghNR1zRh7PB7P57Pv+6ZpiqIghDDGxnFMqqqKLyilWmsajONIKW3bVghxv98JIW3bcs6FEJ+TpJTGmHmedWCMQcSu65ZliSkAME0TIiaxNCIuwTzP5stai4hxyTAMWuvX6/XZoJRa13X/LwbVdX08HquqEkJYa/9+yTkX52gN4kmx7rZtPx1iEmPsdDplWXa5XM7nc57nSXA4HPIgy7KyLNM0fQNS+DrgBJSHbwAAAABJRU5ErkJggg=="
   }
 }

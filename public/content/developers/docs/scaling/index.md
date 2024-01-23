@@ -109,5 +109,6 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Why rollups + data shards are the only sustainable solution for high scalability](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [What kind of Layer 3s make sense?](https://vitalik.ca/general/2022/09/17/layer_3.html)
+- [Data Availability Or: How Rollups Learned To Stop Worrying And Love Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _Know of a community resource that helped you? Edit this page and add it!_

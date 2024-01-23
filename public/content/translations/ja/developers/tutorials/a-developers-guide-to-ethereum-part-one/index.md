@@ -41,7 +41,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 各[ブロック](/developers/docs/blocks/)は、その前のブロックを参照します。`parentHash`は、単に前のブロックのハッシュ値です。
 
-<div class="featured">注: イーサリアムは<a href="https://wikipedia.org/wiki/Hash_function">ハッシュ関数</a>を定期的に使用して、固定サイズの値(ハッシュ)を生成します。 イーサリアムではハッシュ値が重要な役割を果たしますが、今のところは固有のIDと考えておくとよいでしょう。</div>
+<FeaturedText>注: イーサリアムは<a href="https://wikipedia.org/wiki/Hash_function">ハッシュ関数</a>を定期的に使用して、固定サイズの値(ハッシュ)を生成します。 イーサリアムではハッシュ値が重要な役割を果たしますが、今のところは固有のIDと考えておくとよいでしょう。</FeaturedText>
 
 ![ブロックチェーンと各ブロック内のデータを表す図](./blockchain-diagram.png)
 
@@ -57,7 +57,7 @@ _ブロックチェーンは基本的にはリンクリストであり、各ブ�
 
 イーサリアムと対話する必要がある Python デベロッパーは、[Web3.py](https://web3py.readthedocs.io/)にアクセスしてください。 Web3.py は、イーサリアムノードへの接続と、そのノードとのデータの送受信を簡単に行えるようにするライブラリです。
 
-<div class="featured">注: 「イーサリアムノード」と「イーサリアムクライアント」は同じ意味で使用されます。 どちらもイーサリアムネットワークの参加者が実行するソフトウェアを指します。 このソフトウェアは、ブロックデータの読み取り、新しいブロックがチェーンに追加されたときの更新データの受信、新しいトランザクションのブロードキャストなどを行います。 技術的には、クライアントはソフトウェアを意味し、ノードはソフトウェアを実行しているコンピュータを意味します。</div>
+<FeaturedText>注: 「イーサリアムノード」と「イーサリアムクライアント」は同じ意味で使用されます。 どちらもイーサリアムネットワークの参加者が実行するソフトウェアを指します。 このソフトウェアは、ブロックデータの読み取り、新しいブロックがチェーンに追加されたときの更新データの受信、新しいトランザクションのブロードキャストなどを行います。 技術的には、クライアントはソフトウェアを意味し、ノードはソフトウェアを実行しているコンピュータを意味します。</FeaturedText>
 
 [イーサリアムクライアント](/developers/docs/nodes-and-clients/) は、[プロセス間通信(IPC)](https://wikipedia.org/wiki/Inter-process_communication)、HTTP、または WebSocket で接続するように設定できるため、Web3.py でも同じ設定にする必要があります。 Web3.py は、これらの接続オプションを**プロバイダー**として参照します。 Web3.py インスタンスをノードに接続するために、3 つのプロバイダーのいずれかを選択する必要があります。
 
@@ -79,7 +79,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 このチュートリアルでは、Python インタプリタ内で作業します。 ディレクトリ、ファイル、クラス、関数は作成しません。
 
-<div class="featured">注: 以下の例では、「$」で始まるコマンドはターミナルで実行することを意味しています。 (「$」を入力しないでください。「$」は単に行の始まりを意味します。)</div>
+<FeaturedText>注: 以下の例では、「$」で始まるコマンドはターミナルで実行することを意味しています。 (「$」を入力しないでください。「$」は単に行の始まりを意味します。)</FeaturedText>
 
 まず、使いやすい環境となるように[IPython](https://ipython.org/)をインストールしてください。 IPython には、数ある機能の中でも特に便利なタブ補完機能があり、Web3.py での補完の候補を簡単に確認できます。
 
@@ -127,7 +127,7 @@ In [1]: from web3 import Web3
 
 イーサリアムのアプリケーションでは、通常、通貨の単位を変換する必要があります。 Web3 のモジュールには、この変換のためだけの[fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei)や[toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei)のようなヘルパーメソッドがあります。
 
-<div class="featured">
+<FeaturedText>
 注: コンピュータは小数の計算処理が苦手です。 小数点以下を含む計算を避けるため、デベロッパーはしばしばドルをセントに換算して格納します。 例えば、価格が $5.99の商品は、599としてデータベースに保存されます。
 
 <b>イーサ(ETH)</b>でトランザクションを処理する場合も、同様のパターンが使用されます。 ただし、ETH の小数点は 2 桁ではなく、18 桁です! ETH の最小単位は<b>wei</b>と呼ばれます。これが、トランザクションを送信するときに指定される値です。
@@ -136,7 +136,7 @@ In [1]: from web3 import Web3
 
 1 wei = 0.000000000000000001 ETH
 
-</div>
+</FeaturedText>
 
 好きな数字で wei と ETH(ether)を変換してみてください。 なお、ETH と wei の間には、[さまざまな単位の名称があります](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations)。 その中でよく使われているのは **gwei**です。これは基本的に手数料を意味します。
 
@@ -288,7 +288,7 @@ Out[13]: 1000003000000000000000000
 
 [ガスの詳細](/developers/docs/gas/#post-london)
 
-<div class="featured">注: パブリックネットワークにおいてトランザクションフィーは、ネットワークの需要やどれだけ迅速にトランザクションを処理する必要があるのかによって変動します。 フィー(手数料)の計算方法の内訳に興味がある場合は、<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">ブロックに含まれるトランザクションの仕組み</a>に関する以前の投稿をご覧ください。</div>
+<FeaturedText>注: パブリックネットワークにおいてトランザクションフィーは、ネットワークの需要やどれだけ迅速にトランザクションを処理する必要があるのかによって変動します。 フィー(手数料)の計算方法の内訳に興味がある場合は、<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">ブロックに含まれるトランザクションの仕組み</a>に関する以前の投稿をご覧ください。</FeaturedText>
 
 ## ちょっと一息 {#and-breathe}
 

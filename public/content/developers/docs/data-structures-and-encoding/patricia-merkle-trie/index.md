@@ -5,13 +5,17 @@ lang: en
 sidebarDepth: 2
 ---
 
-A Merkle Patricia Trie provides a cryptographically authenticated data structure that can be used to store all `(key, value)` bindings.
+The state of Ethereum (the totality of all accounts, balances, and smart contracts), is encoded into a special version of the data structure known generally in computer science as a Merkle Tree. This structure is useful for many applications in cryptography because it creates a verifiable relationship between all the individual pieces of data entangled in the tree, resulting in a single **root** value that can be used to prove things about the data. 
 
-Merkle Patricia Tries are fully deterministic, meaning that tries with the same `(key, value)` bindings are guaranteed to be identical—down to the last byte. This means that they have the same root hash, providing the holy grail of `O(log(n))` efficiency for inserts, lookups and deletes. Moreover, they are simpler to understand and code than more complex comparison-based alternatives, like red-black trees.
+Ethereum's data structure is a 'modified Merkle-Patricia Trie', named so because it borrows some features of PATRICIA (the Practical Algorithm To Retrieve Information Coded in Alphanumeric), and because it is designed for efficient data re**trie**val of items that comprise the Ethereum state. 
+
+A Merkle-Patricia trie is deterministic and cryptographically verifiable: The only way to generate a state root is by computing it from each individual piece of the state, and two states that are identical can be easily proven so by comparing the root hash and the hashes that led to it (_a Merkle proof_). Conversely, there is no way to create two different states with the same root hash, and any attempt to modify state with different values will result in a different state root hash. Theoretically, this structure provides the 'holy grail' of `O(log(n))` efficiency for inserts, lookups and deletes. 
+
+In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements. 
 
 ## Prerequisites {#prerequisites}
 
-To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization).
+To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization). This article begins with a description of a basic [radix tree](https://en.wikipedia.org/wiki/Radix_tree), then gradually introduces the modifications necessary for Ethereum's more optimized data structure. 
 
 ## Basic radix tries {#basic-radix-tries}
 

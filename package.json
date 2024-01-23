@@ -13,7 +13,10 @@
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
+    "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
+    "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",

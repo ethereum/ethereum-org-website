@@ -30,9 +30,10 @@ import {
 } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
 
+import { getEditPath } from "@/lib/utils/editPath"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
-import { EDIT_CONTENT_URL, MAIN_CONTENT_ID } from "@/lib/constants"
+import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -94,7 +95,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
 
   // Assign hero styling, default to "defi"
   let useCase = "defi"
