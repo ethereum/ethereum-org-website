@@ -274,10 +274,9 @@ const MobileNavMenu: React.FC<IProps> = ({
             <FooterItem /* onClick={handleClick} */>
               <LanguagePicker
                 placement="top-end"
-                minH="calc(100svh - 2rem)"
-                maxH="calc(100svh - 2rem)"
-                w="calc(100vw - 2rem)"
-                inset="4"
+                h="calc(100svh - var(--eth-sizes-8))"
+                w="calc(100vw - var(--eth-sizes-8))"
+                insetInlineStart="4"
                 top="4.75rem"
               >
                 <MenuButton

@@ -173,6 +173,7 @@ const LanguagePicker = ({
             mt="1"
             mb="2"
             bg="background.base"
+            color="body.base"
             onKeyDown={(e) => {
               // If Enter, navigate to first result
               if (e.key === "Enter") {
