@@ -31,7 +31,7 @@ export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
 ) => {
-  const baseNamespaces = ["common"]
+  const baseNamespaces = ["common", "page-languages"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
@@ -65,7 +65,6 @@ const getRequiredNamespacesForPath = (path: string) => {
     requiredNamespaces = [
       ...requiredNamespaces,
       "page-contributing-translation-program-contributors",
-      "page-languages",
     ]
   }
 
@@ -144,10 +143,6 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path === "get-eth") {
     requiredNamespaces = [...requiredNamespaces, "page-get-eth"]
-  }
-
-  if (path.startsWith("/languages")) {
-    requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
 
   if (path.startsWith("/roadmap/vision")) {

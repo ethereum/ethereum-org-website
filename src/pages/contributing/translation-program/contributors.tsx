@@ -39,7 +39,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/contributing/translation-program/contributors"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {

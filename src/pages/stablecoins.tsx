@@ -94,7 +94,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   let marketsHasError = false
   let markets: Market[] = []

@@ -82,7 +82,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/tutorials"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[3])
 
   const lastDeployDate = getLastDeployDate()
 

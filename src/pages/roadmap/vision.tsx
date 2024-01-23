@@ -113,7 +113,7 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/roadmap/vision")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 

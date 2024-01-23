@@ -44,7 +44,7 @@ import whatIsEthereumImg from "@/public/what-is-ethereum.png"
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/community")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 

@@ -63,7 +63,7 @@ const LanguagePicker = ({
   placement,
   ...props
 }: LanguagePickerProps) => {
-  const { t } = useTranslation("page-translation")
+  const { t } = useTranslation("page-languages")
   const router = useRouter()
   const { asPath, locale, locales } = router
   const inputRef = useRef<HTMLInputElement>(null)
@@ -73,20 +73,34 @@ const LanguagePicker = ({
   const displayNames: LocaleDisplayInfo[] =
     locales
       ?.map((localeChoice): LocaleDisplayInfo => {
-        const sourceFallback = new Intl.DisplayNames([locale!], {
-          type: "language",
-        }).of(localeChoice)
-        const targetFallback = new Intl.DisplayNames([localeChoice], {
-          type: "language",
-        }).of(localeChoice)
+        const i18nConfigItem = i18nConfig.find(
+          ({ code }) => localeChoice === code
+        )
+        if (!i18nConfigItem)
+          throw new Error("Missing i18n config for " + localeChoice)
 
-        const i18nKey = "language-" + locale!.toLowerCase()
-        const source = t(i18nKey) === i18nKey ? sourceFallback : t(i18nKey)
-        const target =
-          i18nConfig.find(({ code }) => code === localeChoice)?.name ||
-          targetFallback
+        // Get "source" display name (Language choice displayed in language of current locale)
+        const intlSource = new Intl.DisplayNames([locale!], {
+          type: "language",
+        }).of(localeChoice)
+        // For languages that do not have an Intl display name, use English name as fallback
+        const fallbackSource =
+          intlSource !== localeChoice ? intlSource : i18nConfigItem.name
+        const i18nKey = "language-" + localeChoice.toLowerCase()
+        const i18nSource = t(i18nKey)
+        const source = i18nSource === i18nKey ? fallbackSource : i18nSource
+
+        // Get "target" display name (Language choice displayed in that language)
+        const fallbackTarget = new Intl.DisplayNames([localeChoice], {
+          type: "language",
+        }).of(localeChoice)
+        const i18nConfigTarget = i18nConfigItem?.localName
+        const target = i18nConfigTarget || fallbackTarget
+
         if (!source || !target)
-          throw new Error("Missing language name, locale: " + localeChoice)
+          throw new Error(
+            "Missing language display name, locale: " + localeChoice
+          )
         return { localeChoice, source, target }
       })
       .sort((a, b) =>
@@ -119,14 +133,14 @@ const LanguagePicker = ({
             {
               displayNames.find(
                 ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
-              )?.source
+              )?.target
             }
           </Text>
           <Text textTransform="uppercase" fontSize="xs" color="body.medium">
             {
               displayNames.find(
                 ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
-              )?.target
+              )?.source
             }
           </Text>
         </Item>
@@ -168,12 +182,13 @@ const LanguagePicker = ({
             href={asPath}
             locale={localeChoice}
             ref={index === 0 ? firstItemRef : null}
+            onClick={onClick}
           >
             <Text fontSize="lg" color="body.base">
-              {source}
+              {target}
             </Text>
             <Text textTransform="uppercase" fontSize="xs" color="body.medium">
-              {target}
+              {source}
             </Text>
           </Item>
         ))}
