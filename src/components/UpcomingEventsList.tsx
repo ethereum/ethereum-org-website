@@ -5,24 +5,14 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import events from "../data/community-events.json"
+import CommunityEvents, { CommunityEvent } from "../data/community-events"
 
 import { Button } from "./Buttons"
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
 
-interface ICommunityEventData {
-  title: string
-  to: string
-  sponsor: string | null
-  location: string
-  description: string
-  startDate: string
-  endDate: string
-}
-
-interface IOrderedUpcomingEventType extends ICommunityEventData {
+interface IOrderedUpcomingEventType extends CommunityEvent {
   date: string
   formattedDetails: string
 }
@@ -33,7 +23,6 @@ const UpcomingEventsList: React.FC = () => {
     Array<IOrderedUpcomingEventType>
   >([])
   const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
-  const [isVisible, setIsVisible] = useState<boolean>(true)
 
   // Create Date object from each YYYY-MM-DD JSON date string
   const dateParse = (dateString: string): Date => {
@@ -46,7 +35,7 @@ const UpcomingEventsList: React.FC = () => {
   }
 
   useEffect(() => {
-    const eventsList: Array<ICommunityEventData> = [...events]
+    const eventsList: CommunityEvent[] = [...CommunityEvents]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -70,9 +59,7 @@ const UpcomingEventsList: React.FC = () => {
               event.endDate
             ).toLocaleDateString()}`
 
-      const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} ${
-        event.description
-      }`
+      const details = `${event.description}`
 
       return {
         ...event,
@@ -86,7 +73,6 @@ const UpcomingEventsList: React.FC = () => {
 
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
-    setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
     trackCustomEvent({
       eventCategory: "more events button",
       eventAction: "click",
@@ -151,7 +137,7 @@ const UpcomingEventsList: React.FC = () => {
         maxWidth="620px"
         marginTop="5"
       >
-        {isVisible && (
+        {maxRange <= orderedUpcomingEvents.length && (
           <Button onClick={loadMoreEvents}>
             <Translation id="page-community:page-community-upcoming-events-load-more" />
           </Button>
