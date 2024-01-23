@@ -1,6 +1,7 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
+import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import {
   Box,
@@ -15,7 +16,10 @@ import {
   Icon,
   List,
   ListItem,
+  MenuButton,
 } from "@chakra-ui/react"
+
+import LanguagePicker from "@/components/LanguagePicker"
 
 import type { ChildOnlyProp } from "../../lib/types"
 import { Button } from "../Buttons"
@@ -266,22 +270,30 @@ const MobileNavMenu: React.FC<IProps> = ({
                 {t(isDarkTheme ? "light-mode" : "dark-mode")}
               </FooterItemText>
             </FooterItem>
-            <FooterItem onClick={handleClick}>
-              <Flex
-                as={BaseLink}
-                to={`/languages/${fromPageParameter}`}
-                alignItems="center"
-                color="text"
-                flexDir="column"
-                textDecor="none"
-                _hover={{
-                  color: "primary.base",
-                  textDecor: "none",
-                }}
+            {/* TODO: Close mobile menu when language search is engaged */}
+            <FooterItem /* onClick={handleClick} */>
+              <LanguagePicker
+                placement="top-end"
+                minH="calc(100svh - 2rem)"
+                maxH="calc(100svh - 2rem)"
+                w="calc(100vw - 2rem)"
+                inset="4"
+                top="4.75rem"
               >
-                <Icon as={MdLanguage} />
-                <FooterItemText>{t("languages")}</FooterItemText>
-              </Flex>
+                <MenuButton
+                  alignItems="center"
+                  color="text"
+                  flexDir="column"
+                  textDecor="none"
+                  _hover={{
+                    color: "primary.base",
+                    textDecor: "none",
+                  }}
+                >
+                  <Icon as={BsTranslate} />
+                  <FooterItemText>{t("languages")}</FooterItemText>
+                </MenuButton>
+              </LanguagePicker>
             </FooterItem>
           </DrawerFooter>
         </DrawerContent>

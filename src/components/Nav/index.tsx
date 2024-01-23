@@ -1,11 +1,16 @@
 import { FC, useRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
 import {
   Box,
+  Button,
   Flex,
-  HStack, useDisclosure
+  HStack,
+  Icon,
+  MenuButton,
+  useDisclosure,
 } from "@chakra-ui/react"
 
 import { IconButton } from "@/components/Buttons"
@@ -87,6 +92,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
               />
+              {/* Desktop */}
               <HStack spacing={2} hideBelow="lg">
                 <IconButton
                   transition="transform 0.5s, color 0.2s"
@@ -107,7 +113,47 @@ const Nav: FC<IProps> = ({ path }) => {
                 />
 
                 {/* Locale-picker menu */}
-                <LanguagePicker fromPageParameter={fromPageParameter} />
+                <LanguagePicker
+                  placement="bottom-end"
+                  minH="unset"
+                  maxH="calc(100svh - 5rem)" // May conflict with banners
+                  w="xs"
+                  inset="unset"
+                  top="unset"
+                >
+                  <MenuButton
+                    as={Button}
+                    variant="ghost"
+                    color="body.base"
+                    transition="color 0.2s"
+                    _hover={{
+                      color: "primary.hover",
+                      bg: "primary.lowContrast",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                    _active={{
+                      color: "primary.hover",
+                      bg: "primary.lowContrast",
+                    }}
+                    sx={{
+                      "& svg": {
+                        transform: "rotate(0deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                  >
+                    <Icon
+                      as={BsTranslate}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                    {t("common:languages")} {locale!.toUpperCase()}
+                  </MenuButton>
+                </LanguagePicker>
               </HStack>
             </Flex>
           </Flex>

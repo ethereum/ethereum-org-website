@@ -1,25 +1,22 @@
 import { useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { BsTranslate } from "react-icons/bs"
 import {
   forwardRef,
-  Icon,
   Input,
   Menu,
-  MenuButton,
   MenuDivider,
   MenuItem,
-  MenuItemProps,
+  type MenuItemProps,
   MenuList,
+  type MenuListProps,
+  type MenuProps,
   Text,
 } from "@chakra-ui/react"
 
 import { BaseLink, LinkProps } from "@/components/Link"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
-
-import { Button } from "./Buttons"
 
 import i18nConfig from "@/../i18n.config.json"
 
@@ -57,7 +54,15 @@ const Item = forwardRef((props: ItemProps, ref) => (
   />
 ))
 
-const LanguagePicker = () => {
+type LanguagePickerProps = Omit<MenuListProps, "children"> & {
+  children: React.ReactNode
+  placement: MenuProps["placement"]
+}
+const LanguagePicker = ({
+  children,
+  placement,
+  ...props
+}: LanguagePickerProps) => {
   const { t } = useTranslation("page-translation")
   const router = useRouter()
   const { asPath, locale, locales } = router
@@ -96,39 +101,15 @@ const LanguagePicker = () => {
   )
 
   return (
-    <Menu isLazy initialFocusRef={inputRef}>
-      <MenuButton
-        as={Button}
-        variant="ghost"
-        color="body.base"
-        transition="color 0.2s"
-        _hover={{
-          color: "primary.hover",
-          bg: "primary.lowContrast",
-          "& svg": {
-            transform: "rotate(10deg)",
-            transition: "transform 0.5s",
-          },
-        }}
-        sx={{
-          "& svg": {
-            transform: "rotate(0deg)",
-            transition: "transform 0.5s",
-          },
-        }}
-      >
-        <Icon as={BsTranslate} fontSize="2xl" verticalAlign="middle" me={2} />
-        {t("common:languages")} {locale!.toUpperCase()}
-      </MenuButton>
+    <Menu isLazy initialFocusRef={inputRef} placement={placement}>
+      {children}
       <MenuList
+        position="relative"
         overflow="auto"
-        maxH="calc(100svh - 5rem)"
-        position="absolute"
-        w="xs"
-        insetInlineStart={{ base: "-40", xl: "-36" }}
-        bg="primary.lowContrast"
-        p="4"
         borderRadius="none"
+        p="4"
+        bg="primary.lowContrast"
+        {...props}
       >
         <Text fontSize="xs" color="body.medium">
           Last language used
@@ -202,4 +183,3 @@ const LanguagePicker = () => {
 }
 
 export default LanguagePicker
-
