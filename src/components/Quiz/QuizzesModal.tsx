@@ -1,27 +1,30 @@
-import React, { useContext } from "react"
 import {
+  Center,
   Modal as ChakraModal,
-  ModalOverlay,
-  ModalContent,
   ModalCloseButton,
+  ModalContent,
+  ModalContentProps,
+  ModalOverlay,
   ModalProps,
 } from "@chakra-ui/react"
 
-import { QuizzesHubContext } from "./context"
+import { QuizStatus } from "@/lib/types"
 
-interface IProps extends ModalProps {
+interface IProps extends Omit<ModalProps, "isCentered" | "scrollBehavior"> {
   children: React.ReactNode
+  quizStatus: QuizStatus
 }
 
-const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
-  const { status: quizStatus } = useContext(QuizzesHubContext)
-
-  const statusColor =
-    quizStatus === "neutral"
-      ? "neutral"
-      : quizStatus === "success"
-      ? "success.light"
-      : "error.light"
+const QuizzesModal: React.FC<IProps> = ({ children, quizStatus, ...rest }) => {
+  const getStatusColor = (): ModalContentProps["bg"] => {
+    if (quizStatus === "neutral") {
+      return "neutral"
+    }
+    if (quizStatus === "success") {
+      return "success.neutral"
+    }
+    return "error.neutral"
+  }
 
   return (
     <ChakraModal
@@ -30,12 +33,12 @@ const QuizzesModal: React.FC<IProps> = ({ children, ...rest }) => {
       scrollBehavior="inside"
       {...rest}
     >
-      <ModalOverlay bg="blackAlpha.700" hideBelow="md" />
+      <ModalOverlay bg="blackAlpha.700" />
 
-      <ModalContent justifyContent="center" bg={statusColor}>
-        <ModalCloseButton size="lg" p={6} zIndex={1} />
+      <Center as={ModalContent} m={0} bg={getStatusColor()} py="16">
+        <ModalCloseButton size="lg" p="6" />
         {children}
-      </ModalContent>
+      </Center>
     </ChakraModal>
   )
 }

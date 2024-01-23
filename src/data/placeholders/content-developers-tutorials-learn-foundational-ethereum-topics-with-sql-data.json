@@ -1,0 +1,46 @@
+{
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/etherscan_view.png": {
+    "hash": "9640c23a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAABU0lEQVR4nEWQzUoCARSFZ1E9QS8QIZG70FahiRIOFpU1YoKBlQhGI2FZmYmmRJT4kyP9MJpIWWZpMdUwMq0i6A100cOcmrtpcReHeznnO5e5EkUE10N4kxW4PF5EdvexFz+ErHxALFdJf3590z6ZSpNWOioSRxlcilUwp9kCWKcHW9EkVgNBZIrn8PkDGDcaycTscNJxpV6HxWqDf82PbreHcuUazeYjmFB4ByOGCawEQ7DY7OAjMThmnRjo70O98YTBYT0CfATl+zsM6XRgWRaqqv4b5AolWGdc2NiOIpZIIV8SiWDSbCL0MdMU0id5SGoHdsc0DAYjTavVRq12C0brqaVq6FqF6k0DhTOBkl7fZTJ+lmQ0JQmcewnxgzh6vR9Kl5UOmGy+CHbe/YcZhnfZh5xwAX4zDP2onp6o7VLHGTy8tDG3uACO48DzPAShRDV+AbHq7FJCBmyqAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/dune_view.png": {
+    "hash": "a43d9e0a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAFCAYAAABM6GxJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA/ElEQVR4nGO4deXK//u3b/8H0RdPn/5//dIlMAaJ4cIgtTD1DL5ubv/DAgP+B3l7/w8PCvof4OX1Pyo4GMwH4cToaDDf29X1v7+X5/+8jIz/G1atAqs7cejQfwYFefn/Kioq/wsLCv/39fX9DwsL++/h4fFfTk4OjB0cHMBYQkLiv4CAwH9/f///y5cvB9OXgC5lsLWx+e/k5PS/ob7+/8QJE/5nAG1ISEj4b2Nt/d/S0uJ/XFwc2FBdHR0wBsmtWrnyf2REBJhmKC8s+p+TlPx/384d/+/dvfv//Nmz/88A/XbsyJH/R4BOBPFB7L27d4MxiP/+3TuwGhANAOlLzjNZXJ80AAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/parent_hash.png": {
+    "hash": "394946c8",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAFCAYAAABM6GxJAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA0UlEQVR4nGPYvXXr/wd37vx/8+oVEL/+/+nDRzj++P49mP765fP/79++/f/96xcY////D4xB8gyVJcX/y4uL/kcFh/4X5RH6L84n+l9WXBqMpQTE/4txCv3nZ+H7r6qg8t9Qy+C/hbH5f2Ndo//aqlr/i3Ly/jMc2r37/wEgPnLo8P/502f8n9zd/X/GxIlAPOn/3GnT/k/p6f1fk1f4vzgr539hSvr//OS0/7lJqf/To+L+b1q95j8DyGnkApB3GL5++fL/58+fYA6ITQoGWQ4A9Xf942QHjKIAAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/list_of_txn.png": {
+    "hash": "0365ea4a",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAFCAYAAABM6GxJAAAACXBIWXMAAAsTAAALEwEAmpwYAAABEklEQVR4nB2PsUrDcBDG8xgZJBUSMlWKkCx2ql2qS6VFbZY0g5IMGjulVVx0aQfBB1BITQrJIM6hTgkdmhQEQ0FsqX2Uz/zv4Mdx391x33EHqor9chk7PI+n4RCr5RLfiwW26zXxk+ekbVe/BOvNkwRfaUpwaqWC05MmLro6nkcjnLdaqFWraB4fEV1NQ6NeR+OwRtiWhdDzaP7KNMGdtduwCjGKIuTFNcdxwBduBEGAJEnQdR2iKFLNdNu24bou5SAIwGmdDi2l6RxZlmHQ72O3VIKiKIRhGNgrXpRlmWD9ie+jd9PD23gM7uF2gMe7e7z7HrJZAvflFdeXJj7CELPiV+YqjmN8TqfE32YDFiwz/gGDyMhzYLp1XwAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/successful_txn.png": {
+    "hash": "ff4f6fea",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAAAsTAAALEwEAmpwYAAABI0lEQVR4nGPYvGjB/4l1df9nt7eB6WWTJv7vqaz8v2TihP9VGen/7x4/+v/vq5f/vz96+P/Xs6dw/OXe3f+PLl74z/ASSNw4sO//nSOHwPS9I0fg9KVdu/6/vnTp/8dbN/+/u3YVTMMwiA8yhAFmGjIG2fbx1q3/D48d/n97314MzTADQHoZvty7h1XyxPJF/48vnfv/xLL5/0+vWobVBVgNALng3qH9/9e2NP5XZhH8r84j/n9WUSHYNSA5ogx4cPTQ/8U1Vf/lGQT/y7KI/M+PTPx/dfde4gyASa6fMvX/lLrm/9Ob2v8v6pkED0yiDABhkIaTm7aAMbpmNAPugjnYMLJidPz60kVwbDH8f/cOnFCw4d/Pn4MxNjmQ7f+/ffsPABkDKGXkg+owAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/daily_blocks.png": {
+    "hash": "ccbf99f0",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB3klEQVR4nF2STUhUYRSGDxER4SJnYSY5Nv0MtAijBgqZUkvtZ6aiKMyNg4XEBAqtIjctU8qdi2hhtCyIoG0QGIHQNI2FWU53fprBkrH5v441Lp6+717JpgsP5577nve95/JduT82xkAgwPXBQW4Eg/Rd6WV4eIhIOEz19y+KxTxmuUhluVJDIVfgzdQUYkSjhELvCEciJBNJMguLpL+llcnk3ytbylM0SyzmlsiUcvwoZMj+XEIqpkkqnbKGJl8+5drELUafP8BYiDH+7CF3Ht9j5NEoruBxWm/62Rw4gnRuQ87vYc74bAcUzTJ3n0wgfQeQg4K0Oxh/MYn0H0IOb0J69yMX3MiJRqSnCfFuRc44mf06h6xWV5l+/1alNiBHleDbiewW6jzqLd7tiFsFntyhDC0qQM10NdrV12IHrCyvWN8jp5zIMQdybheyUZlE4VJsUTgVrRts8/8BeoNX06/VBmuiXrFb0dVk93ozr8OuWutZe+53rQfEvqfUBkpor0fa6tbpbqjtOxw2+t7fzIf5TzqgynzcYO/FNtyXvZwdGcB3O0DH0CXqO/dZVfcarWs8V0/T7POQSMaQUj5vHWHsS5S4Yfw9d7NcZiYUrvkfEkbcmslls8zOfER7/wDLc4lUy4z13gAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/avg_daily_blocks.png": {
+    "hash": "4587999c",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAACXBIWXMAAAsTAAALEwEAmpwYAAABSUlEQVR4nIXRQUsCQRQH8CE/wB7yO/gJ8it4KAUNoqTIDgZbdukSSODFbp4U9LAHAw+KqSumCyu6hi5JeemwIVheWpBizaCjBv9mh1pMDz34wQw83rz3hhijEbqdDlRFQZtSfzRl2VIuFJh6rQalXseHYeBzMmFIU5bAcRxWbDY4HA6s2u1wuVzsvuZ0gud5uD0eeH0+BAIBZkQf/Q3y3O8jlUwiEY+jVCziMp2GJFVxHg6j1WqxpOl0ivn4ms0s5KYsIkirn+zvIRI6Rsi/AyEWg3aroi2WIGcyS5SrvIUo1Sq23G4c+P3Y3FjHtteL0yMeWu8O+mDwLzaCJEm4rlQgCALyuRwb4308XmrXtBjkTdeRuoji7DCILt140LeLRCSKRjb7h9l6WxSXihDzS/ThEE+ahtcXHQ/3PXp+hFl4TLc9z8xdLPANFA+VY5NqmC4AAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/avg_gas_limit.png": {
+    "hash": "249ebc64",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAABNUlEQVR4nGWQPUvDUBiFb1EqWhAcdNIlCKkENVTBra7ix6KTuwoO/gX/gNJZKLZqtIMlDqFEUVoU/EIwLhWpaFU6lNJoWyVXG5MebyIK1gNnOAfO+8BLLs5OoKoqrjQNz7qOmm3/2rKsP/nTNGEyO70jahggt5kMKKWol2XZ/7of5fNFXGo3eLjPgThknZHrh7ZVRblURqXyxkgUH+9VJJPnCIXWIQ5MgZAeSJICcp1Ow6CGOywUimxac0ez0wvguCA6uWH4hVGIgUl0dAXR0NIHX/sQvK2B7wO5pyykTQXjE/PghTHMzC2imx9hBD+zAI+316V5mvvR6BPR1DbomhAe0cgOyGvpBanUKZaXVtgzDxFZ3UZsS0EikYK0EcfB/jHWonE3y7LKOhl7u0cIh2PI3j3iCxa5JoFbphgIAAAAAElFTkSuQmCC"
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/daily_gas_used.png": {
+    "hash": "5fcce5c4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOklEQVR4nH2Ru0sDQRDGF0RsbNTGwiKFoIIgSoSIio9CsbAJKSxsLKztLPwX7E2w0PI0oI2PLpKXxMYmYiMcKoFzLznukazEO9f73L14UREc+DE7387M7s6SYjYLRVFwkk6Dahp8zsE971/cZjPAMgyQ56dHqKoKSim4KP5pviDUwjXnH0EsPas3QO7KZVi2/SXyNj7+WqgdHpwintjC5UWu1cA0rV8NZGJNfUCpWEIufyP2bVQqFIXCLZKpY3T1RkFIBPvJI5B70YAx1j4lvOLO9i66e8ZF4iAGIvPo659CR+eoiIcFI4IhpPYUkKpO4TgOdL0KwzChaS/IZK6xuLSByVgCyyubiMbimF1Yx5xgemYt0MYmVnF+dgUSTlX+gPQ1XYdj2XgXet1pzUZ6+TTXfcMra3xrnotPie931o4yY2EAAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/gas_demand_supply.png": {
+    "hash": "fe379df0",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAAAsTAAALEwEAmpwYAAABK0lEQVR4nF2QTUsCURSGLyHUMgjc1ypoFQQVRFQQ2KIQpFUbC1rkrr8Q1F9p08aFhtCihYjQIhCsKD9iLB0XjTl3dLyO49PMWAq98JwXDuc993JELpvlLpMJuE2nKRYKdC2LoeviOM4EpQL35XruY5kmwi9SSkyPdtvEsjrjwYmGo6C3VH636Xj8LRJ2t4vq9/kv1VNIu4dUDobZ4eHxjaujOAfTYZ5yOdRgMPqBo0bhVsukpulIy+bmOs3J8gbR+SWON/c4XdsmGl5gVQjWPfKpFMXnF+qahvDDyeQ9sdg5icQlibMLDhdX2PIGI2KGnV/fFSH2Q3NEpmZ5zeeDR/27iKE7oFFvUi1rtL4M3ktljA+NWqmE0WzyWaliNHRqlQqGrgd9x7bHN/gBMi0/UyLS2r0AAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/learn-foundational-ethereum-topics-with-sql/ef_daily_gas.png": {
+    "hash": "304334e5",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAHCAYAAAABIM1CAAAACXBIWXMAAAsTAAALEwEAmpwYAAABS0lEQVR4nIVQv0tCURS+ew39AeHq0Frh7ujkEgj2w6RRWh1cLNSaosVBG6SEF4GDlENpb5DAKBv0VYql2H0F2qCUz19P8uvdA5VbH3z3HO495/vuOWw3GMCK04n1tVW4XS6cSMeo12ro93r/8rlSAbvKZhGPSzg9S0GWZaTTMhqNBobD4S+/xmP8QOS6PqLY1TSwp3IF9ReOYvGRijOZLMVJTIoJaFqXOOj1waKRCHy+bbjdm4hGD2G3L4OxGSRiMWMcCecXl9TIuUpRVd8QDO7B4/Hi5voW7C6fR6FwT86h0L4hcoSp6VlDhMFkmoPFYoXDsQGzeRHzC1Z4vVuQpATViz0wcQhlMbdAp/NJbgHDJZlMIZfLw+/fIWGbbQnh8AHVcc7/BD7abShFhS7KpRLem01aUK1axUjX8aqK7w/QbrWMnNPbg6JQ3zf3JHPNaFa5+wAAAABJRU5ErkJggg=="
+  }
+}
