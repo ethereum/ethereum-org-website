@@ -129,17 +129,10 @@ const LanguagePicker = () => {
         bg="primary.lowContrast"
         p="4"
         borderRadius="none"
-        onKeyDown={(e) => {
-          if (e.key === "l") {
-            e.preventDefault()
-            inputRef.current?.focus()
-          }
-        }} // TODO: Fix keyboard focus
       >
         <Text fontSize="xs" color="body.medium">
           Last language used
         </Text>
-
         <Item key="item-en" href={asPath} locale="en">
           <Text fontSize="lg" color="body.base">
             {
@@ -160,30 +153,34 @@ const LanguagePicker = () => {
         <Text fontSize="xs" color="body.medium">
           Filter languages list (## LANGS)
         </Text>
-        <Input
-          // as={MenuItem} // TODO: Fix keyboard focus
-          value={filterValue}
-          onChange={(e) => setFilterValue(e.target.value)}
-          ref={inputRef}
-          h="8"
-          placeholder="Type to filter"
-          bg="background.base"
-          mt="1"
-          mb="2"
-          onKeyDown={(e) => {
-            // If Enter, navigate to first result
-            if (e.key === "Enter") {
-              e.preventDefault()
-              firstItemRef.current?.click()
-            }
-            // If ArrowDown, move focus to first result
-            if (e.key === "ArrowDown") {
-              e.preventDefault()
-              firstItemRef.current?.focus()
-            }
-          }}
-        />
-
+        <MenuItem
+          onFocus={() => inputRef.current?.focus()}
+          p="0"
+          bg="transparent"
+        >
+          <Input
+            value={filterValue}
+            onChange={(e) => setFilterValue(e.target.value)}
+            ref={inputRef}
+            h="8"
+            placeholder="Type to filter"
+            bg="background.base"
+            mt="1"
+            mb="2"
+            onKeyDown={(e) => {
+              // If Enter, navigate to first result
+              if (e.key === "Enter") {
+                e.preventDefault()
+                firstItemRef.current?.click()
+              }
+              // If ArrowDown, move focus to first result
+              if (e.key === "ArrowDown") {
+                e.preventDefault()
+                firstItemRef.current?.focus()
+              }
+            }}
+          />
+        </MenuItem>
         {filteredNames.map(({ localeChoice, source, target }, index) => (
           <Item
             key={"item-" + localeChoice}
