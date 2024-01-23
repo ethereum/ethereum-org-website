@@ -188,6 +188,20 @@ export type LocaleContributions = {
 }
 
 // GitHub contributors
+export type Commit = {
+  commit: {
+    author: {
+      name: string
+      email: string
+    }
+  }
+  author: {
+    avatar_url: string
+    login: string
+    html_url: string
+  }
+}
+
 export type Author = {
   name: string
   email: string
