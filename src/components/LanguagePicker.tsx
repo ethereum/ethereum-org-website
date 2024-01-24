@@ -7,16 +7,20 @@ import {
   forwardRef,
   Input,
   Menu,
+  MenuDivider,
   MenuItem,
   type MenuItemProps,
   MenuList,
   type MenuListProps,
   type MenuProps,
-  Progress,
+  Progress as ChakraProgress,
+  ProgressProps,
   Text,
 } from "@chakra-ui/react"
 
-import { BaseLink, LinkProps } from "@/components/Link"
+import type { Lang } from "@/lib/types"
+
+import { BaseLink, type LinkProps } from "@/components/Link"
 
 import progressData from "@/data/translationProgress.json"
 
@@ -59,6 +63,22 @@ const Item = forwardRef(({ onClick, ...props }: ItemProps, ref) => (
     {...props}
   />
 ))
+
+const Progress = ({ value }: Pick<ProgressProps, "value">) => (
+  <ChakraProgress
+    value={value}
+    h="0.5"
+    mt="1"
+    w="full"
+    borderRadius="none"
+    bg="background.base"
+    sx={{
+      "[role=progressbar]": {
+        backgroundColor: "primary.highContrast",
+      },
+    }}
+  />
+)
 
 type LanguagePickerProps = Omit<MenuListProps, "children"> & {
   children: React.ReactNode
@@ -129,6 +149,19 @@ const LanguagePicker = ({
         .includes(filterValue.toLowerCase())
   )
 
+  // Get the preferred language for the users browser
+  const navLang = navigator.language.toLowerCase()
+  const browserLocale = locales?.reduce((acc, cur) => {
+    if (cur.toLowerCase() === navLang) return cur
+    if (navLang.includes(cur.toLowerCase()) && acc !== navLang) return cur
+    return acc
+  }, "")
+  const showBrowserLocale = browserLocale && browserLocale !== DEFAULT_LOCALE
+
+  const browserLocaleInfo = displayNames.find(
+    ({ localeChoice }) => localeChoice === browserLocale
+  )
+
   return (
     <Menu
       isLazy
@@ -138,6 +171,7 @@ const LanguagePicker = ({
     >
       {({ onClose }) => {
         const onMenuClose = () => {
+          setFilterValue("")
           handleClose ? handleClose() : onClose()
         }
         return (
@@ -149,38 +183,35 @@ const LanguagePicker = ({
               borderRadius="none"
               p="4"
               bg="primary.lowContrast"
+              sx={{ "[role=menuitem]": { p: "2" } }}
               {...props}
             >
-              {/* TODO: Implement highlighted locale(s) */}
-              {/* <Text fontSize="xs" color="body.medium">
-                Last language used
-              </Text>
-              <Item
-                key="item-en"
-                href={asPath}
-                locale="en"
-                onClick={onMenuClose}
-              >
-                <Text fontSize="lg" color="body.base">
-                  {
-                    displayNames.find(
-                      ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
-                    )?.target
-                  }
-                </Text>
-                <Text
-                  textTransform="uppercase"
-                  fontSize="xs"
-                  color="body.medium"
-                >
-                  {
-                    displayNames.find(
-                      ({ localeChoice }) => localeChoice === DEFAULT_LOCALE
-                    )?.source
-                  }
-                </Text>
-              </Item>
-              <MenuDivider borderColor="body.medium" my="4" /> */}
+              {showBrowserLocale && (
+                <>
+                  <Text fontSize="xs" color="body.medium">
+                    Browser default
+                  </Text>
+                  <Item
+                    key={`item-${browserLocale}`}
+                    href={asPath}
+                    locale={browserLocale as Lang}
+                    onClick={onMenuClose}
+                  >
+                    <Text fontSize="lg" color="body.base">
+                      {browserLocaleInfo!.target}
+                    </Text>
+                    <Text
+                      textTransform="uppercase"
+                      fontSize="xs"
+                      color="body.medium"
+                    >
+                      {browserLocaleInfo!.source}
+                    </Text>
+                    <Progress value={browserLocaleInfo!.approvalProgress} />
+                  </Item>
+                  <MenuDivider borderColor="body.medium" my="4" />
+                </>
+              )}
 
               <Text fontSize="xs" color="body.medium">
                 Filter list ({filteredNames.length} languages)
@@ -235,33 +266,31 @@ const LanguagePicker = ({
                       ref={firstResult ? firstItemRef : null}
                       onClick={onMenuClose}
                     >
-                      <Flex justifyContent="space-between" w="full">
-                        <Text fontSize="lg" color="body.base">
-                          {target}
+                      <Text fontSize="lg" color="body.base">
+                        {target}
+                      </Text>
+                      <Flex w="full">
+                        <Text
+                          textTransform="uppercase"
+                          fontSize="xs"
+                          color="body.medium"
+                          maxW="full"
+                        >
+                          {source} ·{" "}
                         </Text>
-                      </Flex>
-                      <Text
-                        textTransform="uppercase"
-                        fontSize="xs"
-                        color="body.medium"
-                      >
-                        {source} ·{" "}
-                        <Text as="span" textTransform="capitalize">
+                        <Text
+                          textTransform="capitalize"
+                          fontSize="xs"
+                          color="body.medium"
+                          maxW="full"
+                        >
                           {new Intl.NumberFormat(locale!, {
                             style: "percent",
                           }).format(approvalProgress / 100)}{" "}
                           translated
                         </Text>
-                      </Text>
-                      <Progress
-                        value={approvalProgress}
-                        h="0.5"
-                        mt="1"
-                        w="full"
-                        borderRadius="none"
-                        bg="background.base"
-                        sx={{ "&>div": { backgroundColor: "primary.highContrast" } }}
-                      />
+                      </Flex>
+                      <Progress value={approvalProgress} />
                     </Item>
                   )
                 }
