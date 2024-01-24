@@ -116,7 +116,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 <LanguagePicker
                   placement="bottom-end"
                   minH="unset"
-                  maxH="calc(100svh - 5rem)" // May conflict with banners
+                  maxH="75vh"
                   w="xs"
                   inset="unset"
                   top="unset"
