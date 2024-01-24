@@ -1,5 +1,17 @@
 [
   {
+    "title": "CryptoCanal",
+    "emoji": ":nl:",
+    "location": "Amsterdam",
+    "link": "https://www.cryptocanal.org/agenda"
+  },
+  {
+    "title": "CryptoCanal",
+    "emoji": ":ch:",
+    "location": "Zurich",
+    "link": "https://www.cryptocanal.org/agenda"
+  },
+  {
     "title": "Web3.NE",
     "emoji": ":us:",
     "location": "Omaha",
