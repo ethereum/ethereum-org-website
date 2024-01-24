@@ -270,14 +270,14 @@ const MobileNavMenu: React.FC<IProps> = ({
                 {t(isDarkTheme ? "light-mode" : "dark-mode")}
               </FooterItemText>
             </FooterItem>
-            {/* TODO: Close mobile menu when language search is engaged */}
-            <FooterItem /* onClick={handleClick} */>
+            <FooterItem>
               <LanguagePicker
                 placement="top-end"
                 h="calc(100svh - var(--eth-sizes-8))"
                 w="calc(100vw - var(--eth-sizes-8))"
                 insetInlineStart="4"
                 top="4.75rem"
+                boxShadow="dark-lg" // TODO: Replace with an overlay
                 handleClose={toggleMenu}
               >
                 <MenuButton

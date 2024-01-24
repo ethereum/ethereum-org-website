@@ -26,6 +26,8 @@ import progressData from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { Button } from "./Buttons"
+
 import i18nConfig from "@/../i18n.config.json"
 
 type LocaleDisplayInfo = {
@@ -150,7 +152,7 @@ const LanguagePicker = ({
   )
 
   // Get the preferred language for the users browser
-  const [navLang, setNavLang] = useState('')
+  const [navLang, setNavLang] = useState("")
   useEffect(() => {
     setNavLang(navigator.language.toLowerCase())
   }, [])
@@ -159,8 +161,6 @@ const LanguagePicker = ({
     if (navLang.includes(cur.toLowerCase()) && acc !== navLang) return cur
     return acc
   }, "")
-  const showBrowserLocale = browserLocale && browserLocale !== DEFAULT_LOCALE
-
   const browserLocaleInfo = displayNames.find(
     ({ localeChoice }) => localeChoice === browserLocale
   )
@@ -183,121 +183,148 @@ const LanguagePicker = ({
             <MenuList
               position="relative"
               overflow="auto"
-              borderRadius="none"
-              p="4"
-              bg="primary.lowContrast"
-              sx={{ "[role=menuitem]": { p: "2" } }}
+              borderRadius={{ base: "base", md: "none" }}
+              py="0"
               {...props}
             >
-              {showBrowserLocale && (
-                <>
-                  <Text fontSize="xs" color="body.medium">
-                    Browser default
-                  </Text>
-                  <Item
-                    key={`item-${browserLocale}`}
-                    href={asPath}
-                    locale={browserLocale as Lang}
-                    onClick={onMenuClose}
-                  >
-                    <Text fontSize="lg" color="body.base">
-                      {browserLocaleInfo!.target}
-                    </Text>
-                    <Text
-                      textTransform="uppercase"
-                      fontSize="xs"
-                      color="body.medium"
-                    >
-                      {browserLocaleInfo!.source}
-                    </Text>
-                    <Progress value={browserLocaleInfo!.approvalProgress} />
-                  </Item>
-                  <MenuDivider borderColor="body.medium" my="4" />
-                </>
-              )}
-
-              <Text fontSize="xs" color="body.medium">
-                Filter list ({filteredNames.length} languages)
-              </Text>
-              <MenuItem
-                onFocus={() => inputRef.current?.focus()}
-                p="0"
-                bg="transparent"
+              <Flex justifyContent="end" hideFrom="md">
+                <Button
+                  p="4"
+                  variant="ghost"
+                  alignSelf="end"
+                  onClick={onClose}
+                  textTransform="uppercase"
+                  fontSize="xs"
+                >
+                  Close
+                </Button>
+              </Flex>
+              <Box
                 position="relative"
-                pointerEvents="none"
+                w="100%"
+                minH="calc(100% - 53px)" // Fill height with space for close button on mobile
+                p="4"
+                bg="primary.lowContrast"
+                sx={{ "[role=menuitem]": { p: "2" } }}
               >
-                <Box
-                  position="absolute"
-                  inset="0"
-                  zIndex="docked"
-                  pointerEvents="auto"
-                  cursor="text"
-                  onClick={(e) => e.stopPropagation()}
-                />
-                <Input
-                  placeholder="Type to filter"
-                  value={filterValue}
-                  onChange={(e) => setFilterValue(e.target.value)}
-                  ref={inputRef}
-                  h="8"
-                  mt="1"
-                  mb="2"
-                  bg="background.base"
-                  color="body.base"
-                  onKeyDown={(e) => {
-                    // If Enter, navigate to first result
-                    if (e.key === "Enter") {
-                      e.preventDefault()
-                      firstItemRef.current?.click()
-                    }
-                    // If ArrowDown, move focus to first result
-                    if (e.key === "ArrowDown") {
-                      e.preventDefault()
-                      firstItemRef.current?.focus()
-                    }
-                  }}
-                />
-              </MenuItem>
-              {filteredNames.map(
-                ({ localeChoice, source, target, approvalProgress }, index) => {
-                  const firstResult = index === 0
-                  return (
+                {browserLocaleInfo && (
+                  <>
+                    <Text fontSize="xs" color="body.medium">
+                      Browser default
+                    </Text>
                     <Item
-                      key={"item-" + localeChoice}
+                      key={`item-${browserLocale}`}
                       href={asPath}
-                      locale={localeChoice}
-                      ref={firstResult ? firstItemRef : null}
+                      locale={browserLocale as Lang}
                       onClick={onMenuClose}
                     >
                       <Text fontSize="lg" color="body.base">
-                        {target}
+                        {browserLocaleInfo.target}
                       </Text>
-                      <Flex w="full">
-                        <Text
-                          textTransform="uppercase"
-                          fontSize="xs"
-                          color="body.medium"
-                          maxW="full"
-                        >
-                          {source} ·{" "}
-                        </Text>
-                        <Text
-                          textTransform="capitalize"
-                          fontSize="xs"
-                          color="body.medium"
-                          maxW="full"
-                        >
-                          {new Intl.NumberFormat(locale!, {
-                            style: "percent",
-                          }).format(approvalProgress / 100)}{" "}
-                          translated
-                        </Text>
-                      </Flex>
-                      <Progress value={approvalProgress} />
+                      <Text
+                        textTransform="uppercase"
+                        fontSize="xs"
+                        color="body.medium"
+                      >
+                        {browserLocaleInfo.source}
+                      </Text>
+                      <Progress value={browserLocaleInfo.approvalProgress} />
                     </Item>
-                  )
-                }
-              )}
+                    <MenuDivider borderColor="body.medium" my="4" />
+                  </>
+                )}
+
+                <Text fontSize="xs" color="body.medium">
+                  Filter list ({filteredNames.length} languages)
+                </Text>
+                <MenuItem
+                  onFocus={() => inputRef.current?.focus()}
+                  p="0"
+                  bg="transparent"
+                  position="relative"
+                  pointerEvents="none"
+                >
+                  <Box
+                    position="absolute"
+                    inset="0"
+                    zIndex="docked"
+                    pointerEvents="auto"
+                    cursor="text"
+                    onClick={(e) => e.stopPropagation()}
+                  />
+                  <Input
+                    placeholder="Type to filter"
+                    value={filterValue}
+                    onChange={(e) => setFilterValue(e.target.value)}
+                    ref={inputRef}
+                    h="8"
+                    mt="1"
+                    mb="2"
+                    bg="background.base"
+                    color="body.base"
+                    onKeyDown={(e) => {
+                      // If Enter, navigate to first result
+                      if (e.key === "Enter") {
+                        e.preventDefault()
+                        firstItemRef.current?.click()
+                      }
+                      // If ArrowDown, move focus to first result
+                      if (e.key === "ArrowDown") {
+                        e.preventDefault()
+                        firstItemRef.current?.focus()
+                      }
+                    }}
+                  />
+                </MenuItem>
+                {filteredNames.map(
+                  (
+                    { localeChoice, source, target, approvalProgress },
+                    index
+                  ) => {
+                    const firstResult = index === 0
+                    const percentage = new Intl.NumberFormat(locale!, {
+                      style: "percent",
+                    }).format(approvalProgress / 100)
+                    const progress =
+                      approvalProgress === 0
+                        ? "<" + percentage.replace("0", "1")
+                        : percentage
+                    return (
+                      <Item
+                        key={"item-" + localeChoice}
+                        href={asPath}
+                        locale={localeChoice}
+                        ref={firstResult ? firstItemRef : null}
+                        onClick={onMenuClose}
+                      >
+                        <Text fontSize="lg" color="body.base">
+                          {target}
+                        </Text>
+                        <Flex w="full">
+                          <Text
+                            textTransform="uppercase"
+                            fontSize="xs"
+                            color="body.medium"
+                            maxW="full"
+                          >
+                            {source} ·{" "}
+                            <Text
+                              as="span"
+                              textTransform="capitalize"
+                              fontSize="xs"
+                              color="body.medium"
+                              maxW="full"
+                            >
+                              {progress} translated
+                            </Text>
+                          </Text>
+                        </Flex>
+                        <Progress value={approvalProgress} />
+                      </Item>
+                    )
+                  }
+                )}
+              </Box>
             </MenuList>
           </>
         )
