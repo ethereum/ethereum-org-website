@@ -221,6 +221,14 @@ export type ProjectProgressData = {
   approvalProgress: number
 }
 
+export type LocaleDisplayInfo = {
+  localeOption: string
+  sourceName: string
+  targetName: string
+  englishName: string
+  approvalProgress: number
+}
+
 // GitHub contributors
 export type Commit = {
   commit: {

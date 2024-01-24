@@ -18,7 +18,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import type { Lang } from "@/lib/types"
+import type { Lang, LocaleDisplayInfo } from "@/lib/types"
 
 import { BaseLink, type LinkProps } from "@/components/Link"
 
@@ -29,13 +29,6 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 import { Button } from "./Buttons"
 
 import i18nConfig from "@/../i18n.config.json"
-
-type LocaleDisplayInfo = {
-  localeChoice: string
-  source: string
-  target: string
-  approvalProgress: number
-}
 
 type ItemProps = MenuItemProps & Pick<LinkProps, "href" | "locale" | "onClick">
 
@@ -100,53 +93,58 @@ const LanguagePicker = ({
   const firstItemRef = useRef<HTMLAnchorElement>(null)
   const [filterValue, setFilterValue] = useState("")
 
+  const localeToDisplayInfo = (localeOption: string): LocaleDisplayInfo => {
+    const i18nConfigItem = i18nConfig.find(({ code }) => localeOption === code)
+    if (!i18nConfigItem)
+      throw new Error("Missing i18n config for " + localeOption)
+
+    const englishName = i18nConfigItem.name
+
+    // Get "source" display name (Language choice displayed in language of current locale)
+    const intlSource = new Intl.DisplayNames([locale!], {
+      type: "language",
+    }).of(localeOption)
+    // For languages that do not have an Intl display name, use English name as fallback
+    const fallbackSource =
+      intlSource !== localeOption ? intlSource : englishName
+    const i18nKey = "language-" + localeOption.toLowerCase()
+    const i18nSource = t(i18nKey)
+    const sourceName = i18nSource === i18nKey ? fallbackSource : i18nSource
+
+    // Get "target" display name (Language choice displayed in that language)
+    const fallbackTarget = new Intl.DisplayNames([localeOption], {
+      type: "language",
+    }).of(localeOption)
+    const i18nConfigTarget = i18nConfigItem?.localName
+    const targetName = i18nConfigTarget || fallbackTarget
+
+    if (!sourceName || !targetName) {
+      throw new Error("Missing language display name, locale: " + localeOption)
+    }
+
+    const dataItem = progressData.find(
+      ({ languageId }) => i18nConfigItem.crowdinCode === languageId
+    )
+    const approvalProgress =
+      dataItem?.approvalProgress || (localeOption === DEFAULT_LOCALE ? 100 : 0)
+
+    return {
+      localeOption,
+      approvalProgress,
+      sourceName,
+      targetName,
+      englishName,
+    }
+  }
+
   const displayNames: LocaleDisplayInfo[] =
     locales
-      ?.map((localeChoice): LocaleDisplayInfo => {
-        const i18nConfigItem = i18nConfig.find(
-          ({ code }) => localeChoice === code
-        )
-        if (!i18nConfigItem)
-          throw new Error("Missing i18n config for " + localeChoice)
-
-        // Get "source" display name (Language choice displayed in language of current locale)
-        const intlSource = new Intl.DisplayNames([locale!], {
-          type: "language",
-        }).of(localeChoice)
-        // For languages that do not have an Intl display name, use English name as fallback
-        const fallbackSource =
-          intlSource !== localeChoice ? intlSource : i18nConfigItem.name
-        const i18nKey = "language-" + localeChoice.toLowerCase()
-        const i18nSource = t(i18nKey)
-        const source = i18nSource === i18nKey ? fallbackSource : i18nSource
-
-        // Get "target" display name (Language choice displayed in that language)
-        const fallbackTarget = new Intl.DisplayNames([localeChoice], {
-          type: "language",
-        }).of(localeChoice)
-        const i18nConfigTarget = i18nConfigItem?.localName
-        const target = i18nConfigTarget || fallbackTarget
-
-        if (!source || !target) {
-          throw new Error(
-            "Missing language display name, locale: " + localeChoice
-          )
-        }
-
-        const dataItem = progressData.find(
-          ({ languageId }) => i18nConfigItem.crowdinCode === languageId
-        )
-        const approvalProgress =
-          dataItem?.approvalProgress ||
-          (localeChoice === DEFAULT_LOCALE ? 100 : 0)
-
-        return { localeChoice, source, target, approvalProgress }
-      })
+      ?.map(localeToDisplayInfo)
       .sort((a, b) => b.approvalProgress - a.approvalProgress) || []
 
   const filteredNames = displayNames.filter(
-    ({ localeChoice, source, target }) =>
-      (localeChoice + source + target)
+    ({ localeOption, sourceName, targetName, englishName }) =>
+      (localeOption + sourceName + targetName + englishName)
         .toLowerCase()
         .includes(filterValue.toLowerCase())
   )
@@ -162,7 +160,7 @@ const LanguagePicker = ({
     return acc
   }, "")
   const browserLocaleInfo = displayNames.find(
-    ({ localeChoice }) => localeChoice === browserLocale
+    ({ localeOption }) => localeOption === browserLocale
   )
 
   return (
@@ -219,14 +217,14 @@ const LanguagePicker = ({
                       onClick={onMenuClose}
                     >
                       <Text fontSize="lg" color="body.base">
-                        {browserLocaleInfo.target}
+                        {browserLocaleInfo.targetName}
                       </Text>
                       <Text
                         textTransform="uppercase"
                         fontSize="xs"
                         color="body.medium"
                       >
-                        {browserLocaleInfo.source}
+                        {browserLocaleInfo.sourceName}
                       </Text>
                       <Progress value={browserLocaleInfo.approvalProgress} />
                     </Item>
@@ -278,7 +276,7 @@ const LanguagePicker = ({
                 </MenuItem>
                 {filteredNames.map(
                   (
-                    { localeChoice, source, target, approvalProgress },
+                    { localeOption, sourceName, targetName, approvalProgress },
                     index
                   ) => {
                     const firstResult = index === 0
@@ -291,14 +289,14 @@ const LanguagePicker = ({
                         : percentage
                     return (
                       <Item
-                        key={"item-" + localeChoice}
+                        key={"item-" + localeOption}
                         href={asPath}
-                        locale={localeChoice}
+                        locale={localeOption}
                         ref={firstResult ? firstItemRef : null}
                         onClick={onMenuClose}
                       >
                         <Text fontSize="lg" color="body.base">
-                          {target}
+                          {targetName}
                         </Text>
                         <Flex w="full">
                           <Text
@@ -307,7 +305,7 @@ const LanguagePicker = ({
                             color="body.medium"
                             maxW="full"
                           >
-                            {source} ·{" "}
+                            {sourceName} ·{" "}
                             <Text
                               as="span"
                               textTransform="capitalize"
