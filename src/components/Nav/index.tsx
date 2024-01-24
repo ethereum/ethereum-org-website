@@ -11,6 +11,7 @@ import {
   Icon,
   MenuButton,
   useDisclosure,
+  useEventListener,
 } from "@chakra-ui/react"
 
 import { IconButton } from "@/components/Buttons"
@@ -31,17 +32,31 @@ export interface IProps {
 const Nav: FC<IProps> = ({ path }) => {
   const {
     ednLinks,
-    fromPageParameter,
     isDarkTheme,
     shouldShowSubNav,
     toggleColorMode,
     linkSections,
     mobileNavProps,
   } = useNav({ path })
-  const { asPath, locale, locales } = useRouter()
+  const { locale } = useRouter()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
+  const languagePickerRef = useRef<HTMLButtonElement>(null)
+  /**
+   * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
+   * or open the language picker (\).
+   * @param {string} event - The keydown event.
+   */
+  useEventListener("keydown", (e) => {
+    if (e.key !== "\\") return
+    e.preventDefault()
+    if (e.metaKey) {
+      toggleColorMode()
+    } else {
+      languagePickerRef.current?.click()
+    }
+  })
 
   return (
     <Box position="sticky" top={0} zIndex={100} width="full">
@@ -123,6 +138,7 @@ const Nav: FC<IProps> = ({ path }) => {
                 >
                   <MenuButton
                     as={Button}
+                    ref={languagePickerRef}
                     variant="ghost"
                     color="body.base"
                     transition="color 0.2s"
