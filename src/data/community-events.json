@@ -44,6 +44,15 @@
     "startDate": "2024-04-19",
     "endDate": "2024-04-21"
   },
+    {
+    "title": "ETHSamba",
+    "to": "https://www.ethsamba.org/",
+    "sponsor": null,
+    "location": "Rio de Janeiro, Brazil",
+    "description": "Bootcamp & Hackathon for builders in sunny Rio de Janeiro with the usual ETHSamba vibes",
+    "startDate": "2024-03-22",
+    "endDate": "2024-03-24"
+  },
   {
     "title": "Ethereum Rio",
     "to": "https://www.ethereumbrasil.com/",
