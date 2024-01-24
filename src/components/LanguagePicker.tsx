@@ -3,19 +3,22 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Box,
+  Flex,
   forwardRef,
   Input,
   Menu,
-  MenuDivider,
   MenuItem,
   type MenuItemProps,
   MenuList,
   type MenuListProps,
   type MenuProps,
+  Progress,
   Text,
 } from "@chakra-ui/react"
 
 import { BaseLink, LinkProps } from "@/components/Link"
+
+import progressData from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
@@ -25,6 +28,7 @@ type LocaleDisplayInfo = {
   localeChoice: string
   source: string
   target: string
+  approvalProgress: number
 }
 
 type ItemProps = MenuItemProps & Pick<LinkProps, "href" | "locale" | "onClick">
@@ -101,15 +105,22 @@ const LanguagePicker = ({
         const i18nConfigTarget = i18nConfigItem?.localName
         const target = i18nConfigTarget || fallbackTarget
 
-        if (!source || !target)
+        if (!source || !target) {
           throw new Error(
             "Missing language display name, locale: " + localeChoice
           )
-        return { localeChoice, source, target }
+        }
+
+        const dataItem = progressData.find(
+          ({ languageId }) => i18nConfigItem.crowdinCode === languageId
+        )
+        const approvalProgress =
+          dataItem?.approvalProgress ||
+          (localeChoice === DEFAULT_LOCALE ? 100 : 0)
+
+        return { localeChoice, source, target, approvalProgress }
       })
-      .sort((a, b) =>
-        b.localeChoice === DEFAULT_LOCALE ? 1 : a.source.localeCompare(b.source)
-      ) || []
+      .sort((a, b) => b.approvalProgress - a.approvalProgress) || []
 
   const filteredNames = displayNames.filter(
     ({ localeChoice, source, target }) =>
@@ -140,7 +151,8 @@ const LanguagePicker = ({
               bg="primary.lowContrast"
               {...props}
             >
-              <Text fontSize="xs" color="body.medium">
+              {/* TODO: Implement highlighted locale(s) */}
+              {/* <Text fontSize="xs" color="body.medium">
                 Last language used
               </Text>
               <Item
@@ -168,9 +180,10 @@ const LanguagePicker = ({
                   }
                 </Text>
               </Item>
-              <MenuDivider borderColor="body.medium" my="4" />
+              <MenuDivider borderColor="body.medium" my="4" /> */}
+
               <Text fontSize="xs" color="body.medium">
-                Filter languages list (## LANGS)
+                Filter list ({filteredNames.length} languages)
               </Text>
               <MenuItem
                 onFocus={() => inputRef.current?.focus()}
@@ -211,26 +224,48 @@ const LanguagePicker = ({
                   }}
                 />
               </MenuItem>
-              {filteredNames.map(({ localeChoice, source, target }, index) => (
-                <Item
-                  key={"item-" + localeChoice}
-                  href={asPath}
-                  locale={localeChoice}
-                  ref={index === 0 ? firstItemRef : null}
-                  onClick={onMenuClose}
-                >
-                  <Text fontSize="lg" color="body.base">
-                    {target}
-                  </Text>
-                  <Text
-                    textTransform="uppercase"
-                    fontSize="xs"
-                    color="body.medium"
-                  >
-                    {source}
-                  </Text>
-                </Item>
-              ))}
+              {filteredNames.map(
+                ({ localeChoice, source, target, approvalProgress }, index) => {
+                  const firstResult = index === 0
+                  return (
+                    <Item
+                      key={"item-" + localeChoice}
+                      href={asPath}
+                      locale={localeChoice}
+                      ref={firstResult ? firstItemRef : null}
+                      onClick={onMenuClose}
+                    >
+                      <Flex justifyContent="space-between" w="full">
+                        <Text fontSize="lg" color="body.base">
+                          {target}
+                        </Text>
+                      </Flex>
+                      <Text
+                        textTransform="uppercase"
+                        fontSize="xs"
+                        color="body.medium"
+                      >
+                        {source} ·{" "}
+                        <Text as="span" textTransform="capitalize">
+                          {new Intl.NumberFormat(locale!, {
+                            style: "percent",
+                          }).format(approvalProgress / 100)}{" "}
+                          translated
+                        </Text>
+                      </Text>
+                      <Progress
+                        value={approvalProgress}
+                        h="0.5"
+                        mt="1"
+                        w="full"
+                        borderRadius="none"
+                        bg="background.base"
+                        sx={{ "&>div": { backgroundColor: "primary.highContrast" } }}
+                      />
+                    </Item>
+                  )
+                }
+              )}
             </MenuList>
           </>
         )
