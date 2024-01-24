@@ -1,20 +1,18 @@
 // Libraries
-import React from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
+import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 
-// Components
-import { ButtonLink } from "./Buttons"
-import InlineLink from "./Link"
-import Text from "./OldText"
-import GatsbyImage from "./GatsbyImage"
+import { ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
 
 export interface IProps {
   children?: React.ReactNode
   url?: string
   background: string
-  image: IGatsbyImageData
+  image: StaticImageData
   name: string
   description: string
   note?: string
@@ -37,7 +35,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
   tokenLists,
   ecosystemPortal,
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-layer-2")
 
   return (
     <Flex
@@ -57,13 +55,12 @@ const Layer2ProductCard: React.FC<IProps> = ({
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
         minH="200px"
       >
-        <GatsbyImage
-          image={image}
+        <Image
+          src={image}
           alt={alt}
-          objectFit="contain"
-          alignSelf="center"
-          maxW={{ base: "311px", sm: "372px" }}
+          width={100}
           maxH={"257px"}
+          style={{ objectFit: "contain" }}
         />
       </Center>
       <Flex p={6} h="100%" direction="column">

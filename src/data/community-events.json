@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHDam",
+    "to": "https://www.ethdam.com/",
+    "sponsor": null,
+    "location": "Amsterdam, Netherlands",
+    "description": "Conference and hackathon gathering the best Privacy and Security builders",
+    "startDate": "2024-04-12",
+    "endDate": "2024-04-14"
+  },
+  {
     "title": "ETH Abu Dhabi",
     "to": "https://www.ethabudhabi.org/",
     "sponsor": null,
@@ -18,6 +27,24 @@
     "endDate": "2023-10-21"
   },
   {
+    "title": "Web3FC³",
+    "to": "https://www.web3fc.xyz/",
+    "sponsor": null,
+    "location": "Barcelona, Spain",
+    "description": "A chain-agnostic conference for the grassroots community. An event by Web3 Family, running in-person meetups and conference in Barcelona.",
+    "startDate": "2024-04-17",
+    "endDate": "2024-04-19"
+  },
+  {
+    "title": "ETH Belgrade",
+    "to": "https://ethbelgrade.rs/",
+    "sponsor": null,
+    "location": "Belgrade, Serbia",
+    "description": "ETH Belgrade is a playground for exploring Ethereum possibilities. As part of Belgrade Blockchain Week, this three-day conference gathers extraordinary minds and Ethereum enthusiasts to share knowledge and spark ideas that will ignite the whole ecosystem.",
+    "startDate": "2024-06-03",
+    "endDate": "2024-06-05"
+  },
+  {
     "title": "ETHDubai",
     "to": "https://www.ethdubaiconf.org/",
     "sponsor": null,
@@ -25,6 +52,15 @@
     "description": "The Ethereum dev conference and hackathon in Dubai on everything DeFi, privacy, EVM scaling, layers 2, Account Abstraction and more with a focus on decentralization and community projects. We also organize a Demo Pitch Day with VCs.",
     "startDate": "2024-04-19",
     "endDate": "2024-04-21"
+  },
+    {
+    "title": "ETHSamba",
+    "to": "https://www.ethsamba.org/",
+    "sponsor": null,
+    "location": "Rio de Janeiro, Brazil",
+    "description": "Bootcamp & Hackathon for builders in sunny Rio de Janeiro with the usual ETHSamba vibes",
+    "startDate": "2024-03-22",
+    "endDate": "2024-03-24"
   },
   {
     "title": "Ethereum Rio",
@@ -34,6 +70,24 @@
     "description": "3rd Edition of LATAM's most loved ETH event. Bootcamp, Buildathon & Conference",
     "startDate": "2024-03-19",
     "endDate": "2024-03-24"
+  },
+  {
+    "title": "DappConn",
+    "to": "https://www.dappcon.io/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "A 3-day Developer Conference for Ethereum Infrastructure and dApps that would bring together over 900 builders together, hosted by Gnosis since 2018.",
+    "startDate": "2024-05-21",
+    "endDate": "2024-05-23"
+  },
+  {
+    "title": "ETHBerlin04",
+    "to": "https://www.ethberlin.org",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "ETHBerlin is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.",
+    "startDate": "2024-05-24",
+    "endDate": "2024-05-26"
   },
   {
     "title": "ETHKL 2023",
@@ -49,9 +103,9 @@
     "to": "https://www.eth-vietnam.com/",
     "sponsor": null,
     "location": "Hanoi, Vietnam",
-    "description": "ETH Community in SEA to build, learn and share together.",
-    "startDate": "2023-10-27",
-    "endDate": "2023-10-29"
+    "description": "ETH Community in SEA to #Build, #Learn and #Share together.",
+    "startDate": "2024-03-16",
+    "endDate": "2024-03-17"
   },
   {
     "title": "AB-Summit",
@@ -187,5 +241,149 @@
     "description": "Switzerland's largest Ethereum research and development-focused community conference and hackathon, with the goal of connecting academics, developers, researchers, and enthusiasts, and creating a space for collaboration and innovation.",
     "startDate": "2023-04-05",
     "endDate": "2023-04-07"
+  },
+  {
+    "title": "LFGHO",
+    "to": "https://ethglobal.com/events/lfgho",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "We’re kicking off the new year with one of our favorite new protocols! Our first hackathon of the year will be all about the GHO Stablecoin by AAVE. Dream of a future where GHO functions as the efficient online payment layer and hack on amazing payment and DeFi projects with us!",
+    "startDate": "2024-1-12",
+    "endDate": "2024-1-24"
+  },
+  {
+    "title": "Circuit Breaker",
+    "to": "https://ethglobal.com/events/circuitbreaker",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "It’s finally the time to do a dedicated event all about Zero Knowledge Proofs. Build, learn, and understand how to write ZK Circuits at Circuit Breaker and play a role in making ZK Tooling better. Join us for the month of Feb to do everything ZK.",
+    "startDate": "2024-2-2",
+    "endDate": "2024-2-21"
+  },
+  {
+    "title": "Pragma Denver",
+    "to": "https://ethglobal.com/events/pragma-denver",
+    "sponsor": null,
+    "location": "Denver, Colorado",
+    "description": "Our first IRL event of the year will be our One Day Founders Only Pragma conference in Denver just before the big weekend. We’re excited to show you our new format for how we believe amazing content focused web3 summits should be executed!",
+    "startDate": "2024-2-28",
+    "endDate": "2024-2-28"
+  },
+  {
+    "title": "Pragma London",
+    "to": "https://ethglobal.com/events/pragma-london",
+    "sponsor": null,
+    "location": "London, United Kingdom",
+    "description": "Pragma is a one-day, single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond. Join us on Pi Day in London to catchup on all things pushing this ecosystem forward",
+    "startDate": "2024-3-14",
+    "endDate": "2024-3-14"
+  },
+  {
+    "title": "ETHGlobal London",
+    "to": "https://ethglobal.com/events/london2024",
+    "sponsor": null,
+    "location": "London, United Kingdom",
+    "description": "ETHGlobal London is going to be an event full of hacking, networking, side events and fun activities. We are excited to be back in London for our inaugural event of 2024, marking our first return since 2020.",
+    "startDate": "2024-3-15",
+    "endDate": "2024-3-17"
+  },
+  {
+    "title": "Scaling Ethereum 2024",
+    "to": "https://ethglobal.com/events/scaling2024",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Join us April as we bring back our community favorite — Scaling Ethereum. Strap in for three weeks of hacking and summits devoted to pushing the envelope and building the future L2 infrastructure of our ecosystem.",
+    "startDate": "2024-4-5",
+    "endDate": "2024-4-26"
+  },
+  {
+    "title": "Pragma Sydney",
+    "to": "https://ethglobal.com/events/pragma-sydney",
+    "sponsor": null,
+    "location": "Sydney, Australia",
+    "description": "Pragma is a one-day, single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond. Join us at our first event in Oceania and meet incredible founders helping shape this ecosystem.",
+    "startDate": "2024-5-2",
+    "endDate": "2024-5-2"
+  },
+  {
+    "title": "ETHGlobal Sydney",
+    "to": "https://ethglobal.com/events/sydney",
+    "sponsor": null,
+    "location": "Sydney, Australia",
+    "description": "ETHGlobal Sydney is going to be an event full of hacking, networking, side events and fun activities. This will be our inaugural event on the continent of Oceania-completing the global in ETHGlobal as the sixth and final continent in our world tour.",
+    "startDate": "2024-5-3",
+    "endDate": "2024-5-5"
+  },
+  {
+    "title": "Pragma Brussels",
+    "to": "https://ethglobal.com/events/pragma-brussels",
+    "sponsor": null,
+    "location": "Brussels, Belgium",
+    "description": "Pragma is a one-day, single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond.",
+    "startDate": "2024-7-11",
+    "endDate": "2024-7-11"
+  },
+  {
+    "title": "ETHGlobal Brussels",
+    "to": "https://ethglobal.com/events/brussels",
+    "sponsor": null,
+    "location": "Brussels, Belgium",
+    "description": "ETHGlobal Brussels is going to be an event full of hacking, networking, side events and fun activities. This marks our first event in Belgium and our 3rd hackathon alongside EthCC.",
+    "startDate": "2024-7-12",
+    "endDate": "2024-7-14"
+  },
+  {
+    "title": "ETHOnline 2024",
+    "to": "https://ethglobal.com/events/ethonline2024",
+    "sponsor": null,
+    "location": "Remote",
+    "description": "Our community favorite and flagship event is back once again. Join thousands of developers and creatives online next August for ETHOnline 2024!",
+    "startDate": "2024-8-23",
+    "endDate": "2024-9-13"
+  },
+  {
+    "title": "ETHGlobal Singapore",
+    "to": "https://ethglobal.com/events/singapore2024",
+    "sponsor": null,
+    "location": "Singapore, Singapore",
+    "description": "ETHGlobal Singapore is going to be an event full of hacking, networking, side events and fun activities. We cannot wait to at long last return to Singapore. Since our last ETHSingapore in 2018, so much has changed.",
+    "startDate": "2024-9-20",
+    "endDate": "2024-9-22"
+  },
+  {
+    "title": "Pragma San Francisco",
+    "to": "https://ethglobal.com/events/pragma-sanfrancisco",
+    "sponsor": null,
+    "location": "San Francisco, California",
+    "description": "Pragma is a single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond. For the first time, we’re excited to introduce a multi-day format to cover an even wider range for all things happening in web3",
+    "startDate": "2024-10-15",
+    "endDate": "2024-10-17"
+  },
+  {
+    "title": "ETHGlobal San Francisco",
+    "to": "https://ethglobal.com/events/sanfrancisco2024",
+    "sponsor": null,
+    "location": "San Francisco, California",
+    "description": "ETHGlobal Singapore is going to be an event full of hacking, networking, side events and fun activities. In our third iteration of ETHGlobal San Francisco, we're going bigger than ever.",
+    "startDate": "2024-10-18",
+    "endDate": "2024-10-20"
+  },
+  {
+    "title": "ETHGlobal Devcon 2024",
+    "to": "https://ethglobal.com/events/devcon2024",
+    "sponsor": null,
+    "location": "TBD",
+    "description": "Whenever Devcon happens, we’ll be running a large hackathon right alongside it. Don’t miss the biggest web3 developer meetup of the year in South East Asia.",
+    "startDate": "TBD",
+    "endDate": "TBD"
+  },
+  {
+    "title": "Devcon 7 - Southeast Asia",
+    "to": "https://devcon.org/",
+    "sponsor": null,
+    "location": "Bangkok, Thailand",
+    "description": "Discover Ethereum and its community at Devcon, the conference for developers, thinkers, and makers and a place for learning, knowledge sharing, and fun.",
+    "startDate": "2024-11-12",
+    "endDate": "2024-11-15"
   }
 ]
