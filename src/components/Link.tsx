@@ -86,7 +86,7 @@ export const BaseLink = forwardRef(function Link(
     href,
   }
 
-  if (isInternalPdf || isExternal) {
+  if (isExternal) {
     return (
       <ChakraLink
         isExternal
@@ -95,9 +95,7 @@ export const BaseLink = forwardRef(function Link(
             customEventOptions ?? {
               eventCategory: `Link`,
               eventAction: `Clicked`,
-              eventName: `Clicked on ${
-                isInternalPdf ? "internal PDF" : "external link"
-              }`,
+              eventName: "Clicked on external link",
               eventValue: href,
             }
           )
@@ -117,6 +115,27 @@ export const BaseLink = forwardRef(function Link(
           />
         )}
       </ChakraLink>
+    )
+  }
+
+  if (isInternalPdf) {
+    return (
+      <NextLink
+        isExternal
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ?? {
+              eventCategory: `Link`,
+              eventAction: `Clicked`,
+              eventName: "Clicked on internal PDF",
+              eventValue: href,
+            }
+          )
+        }
+        {...commonProps}
+      >
+        {children}
+      </NextLink>
     )
   }
 
