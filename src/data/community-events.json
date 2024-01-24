@@ -1,5 +1,14 @@
 [
   {
+    "title": "ETHDam",
+    "to": "https://www.ethdam.com/",
+    "sponsor": null,
+    "location": "Amsterdam, Netherlands",
+    "description": "Conference and hackathon gathering the best Privacy and Security builders",
+    "startDate": "2024-04-12",
+    "endDate": "2024-04-14"
+  },
+  {
     "title": "ETH Abu Dhabi",
     "to": "https://www.ethabudhabi.org/",
     "sponsor": null,
@@ -16,6 +25,15 @@
     "description": "Preheating activities for DEVCON 7 in the China region.Developers and communities, let us gather at Devcon！",
     "startDate": "2023-10-21",
     "endDate": "2023-10-21"
+  },
+  {
+    "title": "ETH Belgrade",
+    "to": "https://ethbelgrade.rs/",
+    "sponsor": null,
+    "location": "Belgrade, Serbia",
+    "description": "ETH Belgrade is a playground for exploring Ethereum possibilities. As part of Belgrade Blockchain Week, this three-day conference gathers extraordinary minds and Ethereum enthusiasts to share knowledge and spark ideas that will ignite the whole ecosystem.",
+    "startDate": "2024-06-03",
+    "endDate": "2024-06-05"
   },
   {
     "title": "ETHDubai",
@@ -45,6 +63,24 @@
     "endDate": "2024-03-24"
   },
   {
+    "title": "DappConn",
+    "to": "https://www.dappcon.io/",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "A 3-day Developer Conference for Ethereum Infrastructure and dApps that would bring together over 900 builders together, hosted by Gnosis since 2018.",
+    "startDate": "2024-05-21",
+    "endDate": "2024-05-23"
+  },
+  {
+    "title": "ETHBerlin04",
+    "to": "https://www.ethberlin.org",
+    "sponsor": null,
+    "location": "Berlin, Germany",
+    "description": "ETHBerlin is a hackathon, a cultural festival, an educational event, a platform for hacktivism, and a community initiative to push the decentralized ecosystem forward.",
+    "startDate": "2024-05-24",
+    "endDate": "2024-05-26"
+  },
+  {
     "title": "ETHKL 2023",
     "to": "https://hack.ethkl.org/",
     "sponsor": null,
@@ -58,9 +94,9 @@
     "to": "https://www.eth-vietnam.com/",
     "sponsor": null,
     "location": "Hanoi, Vietnam",
-    "description": "ETH Community in SEA to build, learn and share together.",
-    "startDate": "2023-10-27",
-    "endDate": "2023-10-29"
+    "description": "ETH Community in SEA to #Build, #Learn and #Share together.",
+    "startDate": "2024-03-16",
+    "endDate": "2024-03-17"
   },
   {
     "title": "AB-Summit",
@@ -187,5 +223,14 @@
     "description": "ETHIndia is a hackathon — a movement with the goal of inspiring and fostering a community of builders promoting technological advancements for Ethereum.",
     "startDate": "2023-12-8",
     "endDate": "2023-12-10"
+  },
+  {
+    "title": "Devcon 7 - Southeast Asia",
+    "to": "https://devcon.org/",
+    "sponsor": null,
+    "location": "Bangkok, Thailand",
+    "description": "Discover Ethereum and its community at Devcon, the conference for developers, thinkers, and makers and a place for learning, knowledge sharing, and fun.",
+    "startDate": "2024-11-12",
+    "endDate": "2024-11-15"
   }
 ]

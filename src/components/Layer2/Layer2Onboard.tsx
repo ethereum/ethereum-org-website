@@ -1,39 +1,35 @@
-// Libraries
-import React, { useState } from "react"
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
   Flex,
-  Img,
   ListItem,
   SimpleGrid,
   Stack,
   UnorderedList,
 } from "@chakra-ui/react"
 
-// Components
-import { ButtonLink } from "../Buttons"
-import InlineLink from "../Link"
-import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
-import GatsbyImage from "../GatsbyImage"
+import type { ChildOnlyProp } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 // Data
 import {
-  cexOnboardData,
   CexOnboard,
+  cexOnboardData,
 } from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
+// Components
+import { ButtonLink } from "../Buttons"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 
-//Utils
-import { trackCustomEvent } from "../../utils/matomo"
-import { ChildOnlyProp } from "../../types"
-
-// Styles
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
 )
@@ -118,7 +114,7 @@ interface CexOnboardOption extends Option {
 
 export interface IProps {
   layer2DataCombined: Array<Layer2>
-  ethIcon: IGatsbyImageData
+  ethIcon: StaticImageData
   ethIconAlt: string
 }
 
@@ -127,7 +123,7 @@ const Layer2Onboard: React.FC<IProps> = ({
   ethIcon,
   ethIconAlt,
 }) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-layer-2")
 
   const [selectedCexOnboard, setSelectedCexOnboard] = useState<
     CexOnboard | undefined
@@ -233,25 +229,19 @@ const Layer2Onboard: React.FC<IProps> = ({
           fontWeight={600}
           lineHeight={1.4}
         >
-          <Translation id="layer-2-onboard-title" />
+          {t("layer-2-onboard-title")}
         </OldHeading>
-        <Text>
-          <Translation id="layer-2-onboard-1" />
-        </Text>
+        <Text>{t("layer-2-onboard-1")}</Text>
       </Box>
       <SimpleGrid {...gridContentPlacementStyles.gridContainer}>
         <Flex flexDir="column">
           {/* LeftDescription */}
           <Box>
-            <H4>
-              <Translation id="layer-2-onboard-wallet-title" />
-            </H4>
-            <Text>
-              <Translation id="layer-2-onboard-wallet-1" />
-            </Text>
+            <H4>{t("layer-2-onboard-wallet-title")}</H4>
+            <Text>{t("layer-2-onboard-wallet-1")}</Text>
             <Text>
               <InlineLink to="/bridges/">
-                <Translation id="layer-2-more-on-bridges" />
+                {t("layer-2-more-on-bridges")}
               </InlineLink>
             </Text>
           </Box>
@@ -275,16 +265,12 @@ const Layer2Onboard: React.FC<IProps> = ({
         <Flex flexDir="column">
           {/* RightDescription */}
           <Box>
-            <H4>
-              <Translation id="layer-2-onboard-exchange-title" />
-            </H4>
+            <H4>{t("layer-2-onboard-exchange-title")}</H4>
+            <Text>{t("layer-2-onboard-exchange-1")}</Text>
             <Text>
-              <Translation id="layer-2-onboard-exchange-1" />
-            </Text>
-            <Text>
-              <Translation id="layer-2-onboard-exchange-2" />{" "}
+              {t("layer-2-onboard-exchange-2")}{" "}
               <InlineLink to="/wallets/find-wallet/">
-                <Translation id="layer-2-onboard-find-a-wallet" />
+                {t("layer-2-onboard-find-a-wallet")}
               </InlineLink>
             </Text>
           </Box>
@@ -331,9 +317,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             <SelectedContainer>
               <TwoColumnContent>
                 <Flex50>
-                  <H3>
-                    <Translation id="layer-2-deposits" />
-                  </H3>
+                  <H3>{t("layer-2-deposits")}</H3>
                   <UnorderedList>
                     {selectedExchange.supports_deposits.map((l2) => (
                       <ListItem key={l2}>{l2}</ListItem>
@@ -341,9 +325,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                   </UnorderedList>
                 </Flex50>
                 <Flex50>
-                  <H3>
-                    <Translation id="layer-2-withdrawals" />
-                  </H3>
+                  <H3>{t("layer-2-withdrawals")}</H3>
                   <UnorderedList>
                     {selectedExchange.supports_withdrawals.map((l2) => (
                       <ListItem key={l2}>{l2}</ListItem>
@@ -373,11 +355,11 @@ const Layer2Onboard: React.FC<IProps> = ({
         )}
         {/* EthLogo */}
         <Box {...gridContentPlacementStyles.logo}>
-          <GatsbyImage
-            image={ethIcon}
-            objectFit="contain"
+          <Image
+            src={ethIcon}
             alt={ethIconAlt}
-            w="full"
+            width={50}
+            style={{ objectFit: "contain" }}
           />
         </Box>
       </SimpleGrid>

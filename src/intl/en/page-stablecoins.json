@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Precious metals",
   "page-stablecoins-table-error": "Couldn't load stablecoins. Try refreshing the page.",
-  "page-stablecoins-table-loading": "Loading stablecoin data...",
   "page-stablecoins-title": "Stablecoins",
   "page-stablecoins-top-coins": "Top stablecoins by market capitalisation",
   "page-stablecoins-top-coins-intro": "Market capitalisation is",
