@@ -1,13 +1,15 @@
 import * as React from "react"
-import { HStack, ThemingProps, Text, VStack } from "@chakra-ui/react"
+import { MdChevronRight, MdExpandMore, MdNightlight } from "react-icons/md"
+import { HStack, Text, ThemingProps, VStack } from "@chakra-ui/react"
 import { getThemingArgTypes } from "@chakra-ui/storybook-addon"
 import { Meta, StoryObj } from "@storybook/react"
-import { MdExpandMore, MdChevronRight, MdNightlight } from "react-icons/md"
-import theme from "../../@chakra-ui/gatsby-plugin/theme"
+
+import theme from "../../@chakra-ui/theme"
+import Translation from "../Translation"
+
+import Button from "./Button"
 import ButtonLink from "./ButtonLink"
 import IconButton from "./IconButton"
-import Translation from "../Translation"
-import Button from "./Button"
 
 type ButtonType = typeof Button
 
@@ -41,7 +43,6 @@ const variants: ThemingProps<"Button">["variant"][] = [
 export const StyleVariants: Story = {
   argTypes: {
     size: {
-      //@ts-expect-error
       ...getThemingArgTypes(theme, "Button")?.size,
       defaultValue: "md",
     },
@@ -128,7 +129,7 @@ export const OverrideStyles: Story = {
       </Text>
       <VStack>
         <IconButton aria-label="toggle" icon={<MdNightlight />} px="1.5" />
-        <ButtonLink to="#" borderRadius="full" px="0" py="0">
+        <ButtonLink href="#" borderRadius="full" px="0" py="0">
           <Translation id="get-involved" />
         </ButtonLink>
       </VStack>

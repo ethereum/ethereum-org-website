@@ -1,19 +1,17 @@
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+import { CompletedQuizzes, type Lang, QuizShareStats } from "@/lib/types"
 
-import { CompletedQuizzes, QuizShareStats } from "../../types"
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+import allQuizzesData, {
+  ethereumBasicsQuizzes,
+  usingEthereumQuizzes,
+} from "@/data/quizzes"
 
 import {
   TOTAL_QUIZ_AVERAGE_SCORE,
   TOTAL_QUIZ_QUESTIONS_ANSWERED,
   TOTAL_QUIZ_RETRY_RATE,
-  USER_STATS_KEY,
-} from "../../constants"
-
-import allQuizzesData, {
-  ethereumBasicsQuizzes,
-  usingEthereumQuizzes,
-} from "../../data/quizzes"
+} from "@/lib/constants"
 
 export const getTotalQuizzesPoints = () =>
   Object.values(allQuizzesData)
@@ -32,49 +30,6 @@ export const getNextQuiz = (currentQuiz?: string) => {
   const nextQuiz = allQuizzes.find((quiz) => quiz.id === currentQuiz)
 
   return nextQuiz ? nextQuiz.next : undefined
-}
-
-export const updateUserStats = ({
-  quizKey,
-  quizScore,
-  numberOfCorrectAnswers,
-  setUserStats,
-}) => {
-  // Read userStats from localStorage as quiz could be standalone (out of Quiz Hub page)
-  const userStats = JSON.parse(localStorage.getItem(USER_STATS_KEY)!)
-  const { score: userScore, average, completed } = userStats
-  const completedQuizzes = JSON.parse(completed)
-  // Get previous score on quiz to compare on retry, if previous score is higher then keep it
-  const lastScore = completedQuizzes[quizKey][1]
-  // Update user score, average and save to local storage
-  const newUserScore = userScore + numberOfCorrectAnswers - lastScore
-  const newAverage = [...average, quizScore]
-  const newCompleted = JSON.stringify({
-    ...completedQuizzes,
-    [quizKey!]: [
-      quizScore === 100,
-      quizScore > lastScore ? numberOfCorrectAnswers : lastScore,
-    ],
-  })
-
-  if (numberOfCorrectAnswers > lastScore) {
-    setUserStats({
-      ...userStats,
-      score: newUserScore,
-      average: newAverage,
-      completed: newCompleted,
-    })
-
-    localStorage.setItem(
-      USER_STATS_KEY,
-      JSON.stringify({
-        ...userStats,
-        score: newUserScore,
-        average: newAverage,
-        completed: newCompleted,
-      })
-    )
-  }
 }
 
 export const shareOnTwitter = ({ score, total }: QuizShareStats): void => {

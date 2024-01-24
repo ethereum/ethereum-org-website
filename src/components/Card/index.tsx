@@ -1,6 +1,7 @@
-import React, { ReactNode } from "react"
+import { ReactNode } from "react"
 import { Heading, Stack, StackProps, Text } from "@chakra-ui/react"
-import Emoji from "../Emoji"
+
+import Emoji from "@/components/Emoji"
 
 export interface IProps extends Omit<StackProps, "children" | "title"> {
   children?: ReactNode
