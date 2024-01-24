@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 import {
+  calc,
   Center,
   Heading,
   Spinner,
@@ -23,6 +24,8 @@ import { QuizProgressBar } from "./QuizProgressBar"
 import { QuizRadioGroup } from "./QuizRadioGroup"
 import { QuizSummary } from "./QuizSummary"
 import { useQuizWidget } from "./useQuizWidget"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type CommonProps = {
   quizKey: string
@@ -68,6 +71,8 @@ const QuizWidget = ({
     setUserQuizProgress,
     setCurrentQuestionAnswerChoice,
   } = useQuizWidget({ quizKey, updateUserStats })
+
+  const { isRtl } = useRtlFlip()
 
   const quizPageProps = useRef<
     | (Required<Pick<QuizWidgetProps, "currentHandler" | "statusHandler">> & {
@@ -129,7 +134,7 @@ const QuizWidget = ({
           top={{ base: 2, md: 0 }}
           insetInlineStart={{ md: "50%" }}
           transform="auto"
-          translateX={{ md: "-50%" }}
+          translateX={{ md: calc.multiply("50%", isRtl ? 1 : -1) }}
           translateY={{ md: "-50%" }}
         >
           <AnswerIcon answerStatus={answerStatus} />

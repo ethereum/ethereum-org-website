@@ -226,7 +226,7 @@ lang: en
 
 <GlossaryDefinition term="immutable-deployed-code-problem" />
 
-<GlossaryDefinition term="internal-transactions" />
+<GlossaryDefinition term="internal-transaction" />
 
 <GlossaryDefinition term="issuance" />
 
