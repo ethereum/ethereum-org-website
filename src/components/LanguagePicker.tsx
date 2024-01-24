@@ -261,16 +261,8 @@ const LanguagePicker = ({
                   p="0"
                   bg="transparent"
                   position="relative"
-                  pointerEvents="none"
+                  closeOnSelect={false}
                 >
-                  <Box
-                    position="absolute"
-                    inset="0"
-                    zIndex="docked"
-                    pointerEvents="auto"
-                    cursor="text"
-                    onClick={(e) => e.stopPropagation()}
-                  />
                   <Input
                     placeholder="Type to filter"
                     value={filterValue}
