@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
@@ -150,7 +150,10 @@ const LanguagePicker = ({
   )
 
   // Get the preferred language for the users browser
-  const navLang = navigator.language.toLowerCase()
+  const [navLang, setNavLang] = useState('')
+  useEffect(() => {
+    setNavLang(navigator.language.toLowerCase())
+  }, [])
   const browserLocale = locales?.reduce((acc, cur) => {
     if (cur.toLowerCase() === navLang) return cur
     if (navLang.includes(cur.toLowerCase()) && acc !== navLang) return cur
