@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Edele metalen",
   "page-stablecoins-table-error": "Kan stablecoins niet laden. Probeer de pagina te vernieuwen.",
-  "page-stablecoins-table-loading": "Stablecoindata wordt geladen...",
   "page-stablecoins-title": "Stablecoins",
   "page-stablecoins-top-coins": "Beste stablecoins per marktkapitalisatie",
   "page-stablecoins-top-coins-intro": "Marktkapitalisatie is",
@@ -154,13 +153,13 @@
   "bittrex-logo": "Bittrex-logo",
   "coinbase-logo": "Coinbase-logo",
   "coinmama-logo": "Coinmama-logo",
-  "compound-logo": "Compound-logo",
+  "compound-logo": "Compound logo",
   "example-projects": "Voorbeeldprojecten",
   "gemini-logo": "Gemini-logo",
-  "gitcoin-logo": "Gitcoin-logo",
-  "loopring-logo": "Loopring-logo",
+  "gitcoin-logo": "Gitcoin logo",
+  "loopring-logo": "Loopring logo",
   "makerdao-logo": "MakerDao-logo",
-  "matcha-logo": "Matcha-logo",
-  "oasis-logo": "Oasis-logo",
-  "uniswap-logo": "Uniswap-logo"
+  "matcha-logo": "Matcha logo",
+  "oasis-logo": "Oasis logo",
+  "uniswap-logo": "Uniswap logo"
 }

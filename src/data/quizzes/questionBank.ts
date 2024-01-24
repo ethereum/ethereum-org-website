@@ -1,5 +1,5 @@
 // Import data types
-import { QuestionBank } from "../../types"
+import type { QuestionBank } from "@/lib/interfaces"
 
 // Declare hash map of question bank
 const questionBank: QuestionBank = {

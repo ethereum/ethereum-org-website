@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Precious metals",
   "page-stablecoins-table-error": "Hindi ma-load ang mga stablecoin. Subukang i-refresh ang page.",
-  "page-stablecoins-table-loading": "Nilo-load ang data ng stablecoin...",
   "page-stablecoins-title": "Mga Stablecoin",
   "page-stablecoins-top-coins": "Mga nangungunang stablecoin ayon sa market capitalization",
   "page-stablecoins-top-coins-intro": "Ang market capitalization ay",
