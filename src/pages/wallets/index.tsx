@@ -1,7 +1,7 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -99,13 +99,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const CardContainer = (props: BoxProps) => (
-  <Box
-    display={"flex"}
-    flexWrap={"wrap"}
-    ms={-4}
-    me={-4}
-    {...props}
-  />
+  <Box display={"flex"} flexWrap={"wrap"} ms={-4} me={-4} {...props} />
 )
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
