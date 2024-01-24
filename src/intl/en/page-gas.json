@@ -48,7 +48,7 @@
   "page-gas-table-header-2": "Units of gas used",
   "page-gas-table-item-1-transaction-type": "Sending ETH",
   "page-gas-table-item-2-transaction-type": "Sending ERC-20 tokens",
-  "page-gas-table-item-3-transaction-type": "Transferring and NFT",
+  "page-gas-table-item-3-transaction-type": "Transferring an NFT",
   "page-gas-table-item-4-transaction-type": "Swapping on Uniswap",
   "page-gas-faq-header": "Frequency asked questions",
   "page-gas-faq-question-1-q": "Who gets paid the gas fee in my transaction?",

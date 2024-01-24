@@ -78,7 +78,10 @@ export const staticComponents = {
 
 interface IProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
+    Pick<
+      MdPageContent,
+      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+    > {
   frontmatter: StaticFrontmatter
 }
 export const StaticLayout: React.FC<IProps> = ({
@@ -87,6 +90,7 @@ export const StaticLayout: React.FC<IProps> = ({
   slug,
   tocItems,
   lastUpdatedDate,
+  contentNotTranslated,
 }) => {
   const { locale } = useRouter()
 
@@ -101,6 +105,7 @@ export const StaticLayout: React.FC<IProps> = ({
         mb={16}
         p={8}
         pt={{ base: 8, lg: 16 }}
+        dir={contentNotTranslated ? "ltr" : "unset"}
       >
         <Box>
           {slug === "/guides/" ? (
