@@ -17,8 +17,7 @@ export const useLocalQuizData = () => {
   // `completed` value from a string to an object.
   const [current, setCurrent] = data
   if (typeof current.completed === "string") {
-    const newCompleted = JSON.parse(current.completed)
-    setCurrent({ ...current, completed: newCompleted })
+    setCurrent({ ...current, completed: JSON.parse(current.completed) })
   }
 
   return data
