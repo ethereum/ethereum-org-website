@@ -3,10 +3,10 @@ import { Box, Flex, ListItem, Stack, Text } from "@chakra-ui/react"
 
 import type { QuizzesSection } from "@/lib/types"
 
-import { Button } from "../Buttons"
-import { GreenTickIcon } from "../icons/quiz"
-import Tag from "../Tag"
-import Translation from "../Translation"
+import { Button } from "../../Buttons"
+import { GreenTickIcon } from "../../icons/quiz"
+import Tag from "../../Tag"
+import Translation from "../../Translation"
 
 export type QuizzesListItemProps = Omit<QuizzesSection, "id"> & {
   isCompleted: boolean

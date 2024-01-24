@@ -43,6 +43,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { layer2Data } from "@/data/layer-2/layer-2"
+import allQuizzesData from "@/data/quizzes/index"
 
 import Layer2Onboard from "../components/Layer2/Layer2Onboard"
 import ProductList from "../components/ProductList"
@@ -691,7 +692,11 @@ const Layer2Page = () => {
         </UnorderedList>
       </ContentBox>
       {/* Layer 2 Quiz Section */}
-      <StandaloneQuizWidget quizKey="layer-2" />
+      <StandaloneQuizWidget
+        quizKey="layer-2"
+        userStatsKey="quizzes-stats"
+        allQuizData={allQuizzesData}
+      />
       {/* Layer 2 Feedback Section */}
       <ContentBox>
         <FeedbackCard />

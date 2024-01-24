@@ -35,6 +35,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import allQuizzesData from "@/data/quizzes/index"
 import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
 
 import DappsImage from "@/public/doge-computer.png"
@@ -99,13 +100,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const CardContainer = (props: BoxProps) => (
-  <Box
-    display={"flex"}
-    flexWrap={"wrap"}
-    ms={-4}
-    me={-4}
-    {...props}
-  />
+  <Box display={"flex"} flexWrap={"wrap"} ms={-4} me={-4} {...props} />
 )
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
@@ -488,7 +483,11 @@ const WalletsPage = () => {
         </CalloutCardContainer>
       </Content>
       <Content>
-        <StandaloneQuizWidget quizKey="wallets" />
+        <StandaloneQuizWidget
+          quizKey="wallets"
+          userStatsKey="quizzes-stats"
+          allQuizData={allQuizzesData}
+        />
       </Content>
       <Content>
         <FeedbackCard />

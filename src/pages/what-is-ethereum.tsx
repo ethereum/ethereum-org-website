@@ -59,6 +59,8 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
+import allQuizzesData from "@/data/quizzes/index"
+
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import developers from "@/public/developers-eth-blocks.png"
 import community from "@/public/enterprise.png"
@@ -787,7 +789,11 @@ const WhatIsEthereumPage = ({
       </Content>
 
       <Content>
-        <StandaloneQuizWidget quizKey="what-is-ethereum" />
+        <StandaloneQuizWidget
+          quizKey="what-is-ethereum"
+          userStatsKey="quizzes-stats"
+          allQuizData={allQuizzesData}
+        />
       </Content>
 
       <Content>
