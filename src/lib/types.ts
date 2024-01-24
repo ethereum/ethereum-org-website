@@ -187,6 +187,40 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
+// Crowdin translation progress
+type Language = {
+  id: string
+  name: string
+  editorCode: string
+  twoLettersCode: string
+  threeLettersCode: string
+  locale: string
+  androidCode: string
+  osxCode: string
+  osxLocale: string
+  pluralCategoryNames: string[]
+  pluralRules: string
+  pluralExamples: string[]
+  textDirection: string
+  dialectOf: unknown
+}
+
+type CountSummary = {
+  total: number
+  translated: number
+  preTranslateAppliedTo: number
+  approved: number
+}
+
+export type ProjectProgressData = {
+  languageId: string,
+  language?: Language,
+  words: CountSummary,
+  phrases: CountSummary,
+  translationProgress: number
+  approvalProgress: number
+}
+
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -225,8 +259,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -292,12 +326,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-      error: string
-    }
+    error: string
+  }
   | {
-      data: Data
-      value: Value
-    }
+    data: Data
+    value: Value
+  }
 
 export type EtherscanNodeResponse = {
   result: {
