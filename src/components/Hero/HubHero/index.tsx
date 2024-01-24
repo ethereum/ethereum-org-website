@@ -1,14 +1,17 @@
-import * as React from "react"
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/react"
-import GatsbyImage from "../../GatsbyImage"
-import { CallToAction } from "../CallToAction"
-import { CommonHeroProps } from "../utils"
 
-export interface HubHeroProps extends CommonHeroProps {}
+import type { CommonHeroProps } from "@/lib/types"
 
-const HubHero = (props: HubHeroProps) => {
-  const { heroImgSrc, title, header, description, buttons } = props
+import { CallToAction } from "@/components/Hero/CallToAction"
+import { Image } from "@/components/Image"
 
+const HubHero = ({
+  heroImg,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
   if (buttons && buttons.length > 2) {
     throw Error(
       "Can not have more than two call-to-action buttons in this hero component."
@@ -17,18 +20,19 @@ const HubHero = (props: HubHeroProps) => {
 
   return (
     <Box position="relative">
-      <GatsbyImage
-        image={heroImgSrc}
+      <Image
+        src={heroImg}
         alt=""
-        w="full"
-        height={{
+        priority
+        sizes="100vw"
+        style={{ width: "100vw", objectFit: "cover" }}
+        h={{
           base: "192px",
           md: "256px",
           lg: "320px",
           xl: "576px",
           "2xl": "672px",
         }}
-        loading="eager"
       />
       <Stack
         spacing={{ base: "3", md: "4" }}
@@ -37,7 +41,7 @@ const HubHero = (props: HubHeroProps) => {
         borderRadius={{ xl: "base" }}
         bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
-        insetStart={{ xl: "8" }}
+        insetInlineStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
         top={{ xl: "50%" }}
         transform={{ xl: "translateY(-50%)" }}
@@ -63,12 +67,10 @@ const HubHero = (props: HubHeroProps) => {
           <Text size="lg">{description}</Text>
         </Stack>
         <HStack justify={{ md: "center", xl: "start" }} spacing="4">
-          {buttons
-            ? buttons.map((button, idx) => {
-                if (!button) return
-                return <CallToAction key={idx} {...button} index={idx} />
-              })
-            : null}
+          {(buttons || []).map((button, idx) => {
+            if (!button) return
+            return <CallToAction key={idx} {...button} />
+          })}
         </HStack>
       </Stack>
     </Box>
