@@ -166,7 +166,7 @@ Returns Keccak-256 (_not_ the standardized SHA3-256) of the given data.
 
 **Parameters**
 
-1. `DATA` - the data to convert into a SHA3 hash
+1. `DATA` - The data to convert into a SHA3 hash
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
