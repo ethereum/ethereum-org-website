@@ -75,6 +75,27 @@ const Progress = ({ value }: Pick<ProgressProps, "value">) => (
   />
 )
 
+type NoResultsCalloutProps = { onMenuClose: () => void }
+const NoResultsCallout = ({ onMenuClose }: NoResultsCalloutProps) => {
+  const { t } = useTranslation("page-languages")
+  return (
+    <Box>
+      <Text fontWeight="bold" mb="2">
+        {t("page-languages-want-more-header")}
+      </Text>
+      {t("page-languages-want-more-paragraph")}{" "}
+      <BaseLink
+        as={MenuItem}
+        key="item-no-results"
+        href="contributing/translation-program"
+        onClick={onMenuClose}
+      >
+        {t("page-languages-want-more-link")}
+      </BaseLink>
+    </Box>
+  )
+}
+
 type LanguagePickerProps = Omit<MenuListProps, "children"> & {
   children: React.ReactNode
   placement: MenuProps["placement"]
@@ -190,7 +211,7 @@ const LanguagePicker = ({
                   p="4"
                   variant="ghost"
                   alignSelf="end"
-                  onClick={onClose}
+                  onClick={onMenuClose}
                   textTransform="uppercase"
                   fontSize="xs"
                 >
@@ -321,6 +342,9 @@ const LanguagePicker = ({
                       </Item>
                     )
                   }
+                )}
+                {filteredNames.length === 0 && (
+                  <NoResultsCallout onMenuClose={onMenuClose} />
                 )}
               </Box>
             </MenuList>
