@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Box } from "@chakra-ui/react"
 
-import type{ CommunityConference } from "@/lib/types"
+import type { CommunityConference } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 
@@ -18,8 +18,6 @@ type OrderedUpcomingEventType = CommunityConference & {
   date: string
   formattedDetails: string
 }
-
-
 
 const UpcomingEventsList = () => {
   const eventsPerLoad = 10
