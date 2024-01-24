@@ -128,6 +128,7 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Qiymətli metallar",
   "page-stablecoins-table-error": "Stabilkoinləri yükləmək mümkün olmadı. Səhifəni yeniləməyə çalışın.",
+  "page-stablecoins-table-loading": "Stabilkoin datası yüklənir...",
   "page-stablecoins-title": "Stabilkoinlər",
   "page-stablecoins-top-coins": "Bazar kapitallaşmasına görə ən yaxşı stabilkoinlər",
   "page-stablecoins-top-coins-intro": "Bazar kapitallaşması:",
