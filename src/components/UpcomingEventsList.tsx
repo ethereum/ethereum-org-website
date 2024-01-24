@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react"
 import { Box } from "@chakra-ui/react"
 
+import type{ CommunityConference } from "@/lib/types"
+
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import CommunityConferences from "../data/community-events"
-
-import type{ CommunityConference } from "@/lib/types"
 
 import { Button } from "./Buttons"
 import EventCard from "./EventCard"
