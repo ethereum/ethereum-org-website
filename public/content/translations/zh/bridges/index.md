@@ -6,7 +6,7 @@ lang: zh
 
 # 区块链桥 {#prerequisites}
 
-_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>)。  为了满足这一需求，我们需要桥接。_
+_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum))。 为了满足这一需求，我们需要桥接。_
 
 <Divider />
 
@@ -18,7 +18,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 你来自美国，正计划去欧洲旅行。 你有美元，但你需要欧元来消费。 要将你的美元兑换成欧元，你可以使用货币兑换并支付少量费用。
 
-但是，如果你想使用不同的区块链进行类似的兑换，您会怎么做？ 假设你想用以太坊主网的以太币兑换 [Arbitrum](https://arbitrum.io/) 上的以太币。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的以太币从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在本例中，[Arbitrum 有一个原生桥梁](https://bridge.arbitrum.io/)，可以将以太币从主网转移到 Arbitrum。
+但是，如果你想使用不同的区块链进行类似的兑换，你会怎么做？ 假设你想用以太坊主网的以太币兑换 [Arbitrum](https://arbitrum.io/) 上的以太币。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的以太币从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在本例中，[Arbitrum 有一个原生桥梁](https://bridge.arbitrum.io/)，可以将以太币从主网转移到 Arbitrum。
 
 ## 我们为什么需要桥梁？ {#why-do-we-need-bridges}
 
@@ -30,7 +30,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 桥梁能够：
 
-- 跨链传输资产和信息
+- 跨链传输资产和信息。
 - 使去中心化应用程序可以利用各种区块链的优势 - 从而增强它们的能力（因为协议现在有更多的创新设计空间）。
 - 使用户能够访问新平台并利用不同链的优势。
 - 使来自不同区块链生态系统的开发人员相互协作并为用户构建新平台。
@@ -57,7 +57,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 ### 拥有原生加密资产 {#own-native}
 
-如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 但 WBTC 是以太坊网络上的 ERC-20 代币，仍不是原生比特币。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 当然你也可以反向跨链，通过跨链桥，将原生 BTC 转换为 WBTC， 用于以太坊网络的 DeFi 协议中。
+如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 但 WBTC 是以太坊网络上的 ERC-20 代币，仍不是原生比特币。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 或者，你可能拥有以太币并希望在以太坊去中心化金融协议中使用。 用于以太坊网络的 DeFi 协议中。
 
 <InfoBanner shouldCenter emoji=":bulb:">
   你还可以使用<a href="/get-eth/">中心化交易所</a>完成上述所有操作。 但是，除非你的资金已经在交易所，否则将涉及多个步骤，而且你最好使用桥梁。
@@ -67,17 +67,17 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 ## 桥梁类型 {#types-of-bridge}
 
-桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和免信任桥梁。
+桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和去信任桥梁。
 
-| 需信任桥梁                                                                | 免信任桥梁                                                 |
-| ------------------------------------------------------------------------- | ---------------------------------------------------------- |
-| 需信任桥梁依赖于中心实体或系统的运作。                                    | 免信任桥梁使用智能合约和算法运行。                         |
+| 需信任桥梁                                 | 去信任桥梁                         |
+| ------------------------------------- | ----------------------------- |
+| 需信任桥梁依赖于中心实体或系统的运作。                   | 去信任桥梁使用智能合约和算法运行。             |
 | 他们对资金的保管和桥梁的安全性有信任假设。 用户大多依赖桥梁运营商的声誉。 | 这种桥梁免于信任，即桥梁的安全性与底层区块链的安全性相同。 |
-| 用户需要放弃对其加密资产的控制。                                          | 通过智能合约，免信任桥梁使用户能够继续控制他们的资金。     |
+| 用户需要放弃对其加密资产的控制。                      | 通过智能合约，去信任桥梁使用户能够继续控制他们的资金。   |
 
-简而言之，我们可以说需信任桥梁具有信任假设，而免信任桥梁对信任的依赖非常小，因此不会在基础域之外出现新的信任假设。 上述术语的解释如下：
+简而言之，我们可以说需信任桥梁具有信任假设，而去信任桥梁对信任的依赖非常小，因此不会在基础域之外出现新的信任假设。 上述术语的解释如下：
 
-- **免信任**：与底层域具有同等的安全性。 如 [Arjun Bhuptani 在本文中所述。](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
+- **去信任**：与底层域具有同等的安全性。 如 [Arjun Bhuptani 在本文中所述。](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17)
 - **信任假设**：通过在系统中添加外部验证者来摆脱底层域的安全性，从加密经济学的角度来说，这降低了安全性。
 
 为了更好地理解这两种方法之间的主要区别，我们来举个例子：
@@ -89,9 +89,9 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 手动检查站类似于需信任模式，因为它依赖于第三方（即工作人员）进行操作。 作为用户，你相信工作人员会做出正确的决定并正确使用你的私人信息。
 
-自助值机类似于免信任模式，因为它不再需要操作员，而是利用技术进行操作。 用户始终可以控制他们的数据，并且不必信任第三方来处理他们的私人信息。
+自助值机类似于去信任模式，因为它不再需要操作员，而是利用技术进行操作。 用户始终可以控制他们的数据，并且不必信任第三方来处理他们的私人信息。
 
-许多桥梁解决方案采用的模式介于这两个极端之间，具有不同的免信任度。
+许多桥梁解决方案采用的模式介于这两个极端之间，具有不同的去信任度。
 
 <Divider />
 
@@ -115,7 +115,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 - 桥梁运营商对需信任桥梁有恶意
 - 桥梁被非法侵入
 
-最近的一次黑客攻击是 Solana 的虫洞桥，[在黑客攻击期间被窃取了 12 万 wETH（3.25 亿美元）](https://rekt.news/wormhole-rekt/)。 [区块链中的许多顶级黑客攻击都涉及到桥梁](https://rekt.news/leaderboard/)。
+最近的一次黑客攻击是 Solana 的虫洞桥，[在黑客攻击期间被窃取了 12 万 包装以太币（3.25 亿美元）](https://rekt.news/wormhole-rekt/)。 [区块链中的许多顶级黑客攻击都涉及到桥梁](https://rekt.news/leaderboard/)。
 
 桥梁对于让用户加入以太坊二层网络至关重要，甚至对于想要探索不同生态系统的用户也至关重要。 然而，鉴于与桥梁交互所涉及的风险，用户必须了解桥梁正在做出的权衡取舍。 这些是一些确保[跨链安全的策略](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946)。
 
@@ -124,11 +124,11 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 ## 延伸阅读 {#further-reading}
 
 - [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658)_2022 年 6 月 18 日 - Brendan Asselstine_
-- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5 日 - Bartek Kiepuszewski_
+- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5日 - Bartek Kiepuszewski_
 - [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_
 - [什么是区块链桥以及我们如何对其进行分类？](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _2021 年 2 月 18 日 - Arjun Chand_
 - [什么是跨链桥接？](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_
-- [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon_
+- [区块链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) _2021 年 9 月 8 日 - Dmitriy Berenzon _
 - [加密空间中的桥梁](https://medium.com/chainsafe-systems/bridges-in-crypto-space-12e158f5fd1e) _2021 年 8 月 23 日 - Ben Adar Hyman_
 - [互操作性三难困境](https://medium.com/connext/the-interoperability-trilemma-657c2cf69f17) _2021 年 10 月 1 日 - Arjun Bhuptani_
 - [保护桥梁：正确完成跨链通信](https://medium.com/dragonfly-research/secure-the-bridge-cross-chain-communication-done-right-part-i-993f76ffed5d) _2021 年 8 月 23 日 - Celia Wan_
