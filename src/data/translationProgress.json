@@ -1,0 +1,457 @@
+[
+  {
+    "languageId": "af",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "am",
+    "translationProgress": 10,
+    "approvalProgress": 2
+  },
+  {
+    "languageId": "ar",
+    "translationProgress": 30,
+    "approvalProgress": 12
+  },
+  {
+    "languageId": "az",
+    "translationProgress": 8,
+    "approvalProgress": 5
+  },
+  {
+    "languageId": "be",
+    "translationProgress": 2,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "bg",
+    "translationProgress": 10,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "bi",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "bn",
+    "translationProgress": 13,
+    "approvalProgress": 10
+  },
+  {
+    "languageId": "br-FR",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "bs",
+    "translationProgress": 3,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "ca",
+    "translationProgress": 13,
+    "approvalProgress": 5
+  },
+  {
+    "languageId": "cs",
+    "translationProgress": 18,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "da",
+    "translationProgress": 4,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "de",
+    "translationProgress": 70,
+    "approvalProgress": 48
+  },
+  {
+    "languageId": "el",
+    "translationProgress": 30,
+    "approvalProgress": 30
+  },
+  {
+    "languageId": "eo",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "es-EM",
+    "translationProgress": 98,
+    "approvalProgress": 85
+  },
+  {
+    "languageId": "et",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "eu",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "fa",
+    "translationProgress": 44,
+    "approvalProgress": 28
+  },
+  {
+    "languageId": "fa-AF",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "fi",
+    "translationProgress": 13,
+    "approvalProgress": 6
+  },
+  {
+    "languageId": "fil",
+    "translationProgress": 18,
+    "approvalProgress": 16
+  },
+  {
+    "languageId": "fr",
+    "translationProgress": 100,
+    "approvalProgress": 99
+  },
+  {
+    "languageId": "gi",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "gl",
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "gu-IN",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ha",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "he",
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "hi",
+    "translationProgress": 22,
+    "approvalProgress": 17
+  },
+  {
+    "languageId": "hr",
+    "translationProgress": 8,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "hu",
+    "translationProgress": 64,
+    "approvalProgress": 44
+  },
+  {
+    "languageId": "hy-AM",
+    "translationProgress": 3,
+    "approvalProgress": 2
+  },
+  {
+    "languageId": "id",
+    "translationProgress": 83,
+    "approvalProgress": 46
+  },
+  {
+    "languageId": "ig",
+    "translationProgress": 9,
+    "approvalProgress": 6
+  },
+  {
+    "languageId": "it",
+    "translationProgress": 100,
+    "approvalProgress": 99
+  },
+  {
+    "languageId": "ja",
+    "translationProgress": 94,
+    "approvalProgress": 84
+  },
+  {
+    "languageId": "ka",
+    "translationProgress": 4,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "kk",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "km",
+    "translationProgress": 5,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "kn",
+    "translationProgress": 13,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "ko",
+    "translationProgress": 32,
+    "approvalProgress": 15
+  },
+  {
+    "languageId": "ku",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ky",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "lb",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "lt",
+    "translationProgress": 1,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "mai",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "mk",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ml-IN",
+    "translationProgress": 5,
+    "approvalProgress": 3
+  },
+  {
+    "languageId": "mn",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "mr",
+    "translationProgress": 10,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "ms",
+    "translationProgress": 22,
+    "approvalProgress": 11
+  },
+  {
+    "languageId": "my",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ne-NP",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "nl",
+    "translationProgress": 21,
+    "approvalProgress": 11
+  },
+  {
+    "languageId": "no",
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "or",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "pa-IN",
+    "translationProgress": 1,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "pcm",
+    "translationProgress": 8,
+    "approvalProgress": 5
+  },
+  {
+    "languageId": "pl",
+    "translationProgress": 46,
+    "approvalProgress": 28
+  },
+  {
+    "languageId": "pt-BR",
+    "translationProgress": 96,
+    "approvalProgress": 94
+  },
+  {
+    "languageId": "pt-PT",
+    "translationProgress": 11,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "ro",
+    "translationProgress": 30,
+    "approvalProgress": 23
+  },
+  {
+    "languageId": "ru",
+    "translationProgress": 51,
+    "approvalProgress": 28
+  },
+  {
+    "languageId": "sat",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "si-LK",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "sk",
+    "translationProgress": 4,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "sl",
+    "translationProgress": 16,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "sn",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "so",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "sq",
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "sr-CS",
+    "translationProgress": 12,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "sv-SE",
+    "translationProgress": 8,
+    "approvalProgress": 2
+  },
+  {
+    "languageId": "sw",
+    "translationProgress": 7,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "ta",
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "te",
+    "translationProgress": 4,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "tg",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "th",
+    "translationProgress": 3,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "ti",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "tk",
+    "translationProgress": 1,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "tl",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "tr",
+    "translationProgress": 97,
+    "approvalProgress": 95
+  },
+  {
+    "languageId": "uk",
+    "translationProgress": 56,
+    "approvalProgress": 19
+  },
+  {
+    "languageId": "ur-IN",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ur-PK",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "uz",
+    "translationProgress": 6,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "vi",
+    "translationProgress": 18,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "yo",
+    "translationProgress": 1,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "zh-CN",
+    "translationProgress": 95,
+    "approvalProgress": 90
+  },
+  {
+    "languageId": "zh-TW",
+    "translationProgress": 63,
+    "approvalProgress": 33
+  },
+  {
+    "languageId": "zu",
+    "translationProgress": 0,
+    "approvalProgress": 0
+  }
+]
