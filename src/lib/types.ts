@@ -346,3 +346,12 @@ export type StatsBoxMetric = {
   apiUrl: string
   apiProvider: string
 }
+
+export type CommunityConference = {
+  title: string
+  to: string
+  location: string
+  description: string
+  startDate: string
+  endDate: string
+}

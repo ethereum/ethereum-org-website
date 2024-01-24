@@ -1,13 +1,6 @@
-export interface CommunityEvent {
-  title: string
-  to: string
-  location: string
-  description: string
-  startDate: string
-  endDate: string
-}
+import { CommunityConference } from "@/lib/types"
 
-const CommunityEvents: CommunityEvent[] = [
+const CommunityConferences: CommunityConference[] = [
   {
     title: "ETH Cinco de Mayo",
     startDate: "2024-02-02",
@@ -399,4 +392,4 @@ const CommunityEvents: CommunityEvent[] = [
   },
 ]
 
-export default CommunityEvents
+export default CommunityConferences
