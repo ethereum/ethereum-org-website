@@ -1,64 +1,74 @@
 ---
 title: A Beacon Chain
-description: Tudj meg többet a beacon chainről - az Ethereum első nagy Eth2 fejlesztéséről.
+description: Tudjon meg többet Beacon a láncról – arról a frissítésről, amely behozta a proof-of-stake mechanizmust az Ethereum hálózatára.
 lang: hu
 template: upgrade
 image: /upgrades/core.png
-alt: 
-summaryPoint1: A beacon chain nem változtatja meg azt, ahogy az Ethereumot ma használjuk.
-summaryPoint2: A hálózatot fogja koordinálni.
-summaryPoint3: Bevezeti a proof-of-stake rendszert az Ethereum ökoszisztémába.
-summaryPoint4: A technikai ütemtervekben "Fázis 0"-ként is ismerheted.
+summaryPoint1: A Beacon lánc vezette be a proof-of-stake konszenzust az Ethereum-ökoszisztémába.
+summaryPoint2: Az eredeti proof-of-work Ethereum-lánccal 2022 szeptemberében egyesült.
+summaryPoint3: A Beacon lánc vezette be az Ethereumot ma biztosító konszenzuslogikát és block gossip (blokkpletyka) protokollt.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
-    A Beacon Chain december 1.-jén központi idő szerint délben indult el. További információért <a href="https://beaconscan.com/">nézd meg az adatokat</a>. Ha szeretnél segíteni a lánc érvényesítésében, akkor <a href="/staking/">letétbe tudod helyezni az ETH-edet</a>.
+<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+  A Beacon lánc 2020. december 1-jén jelent meg, és 2022 szeptember 15-én a beolvadás frissítéssel hivatalosan is az Ethereum konszenzusmechanizmusává tette a proof-of-stake módszert.
 </UpgradeStatus>
 
-## Mit csinál a Beacon Chain? {#what-does-the-beacon-chain-do}
+## Mi az a Beacon lánc? {#what-is-the-beacon-chain}
 
-A Beacon Chain fogja koordinálni vagy vezetni a [shardokból](/roadmap/danksharding/) és [stakerekből](/staking/) álló kiterjesztett hálózatot. De nem olyan lesz, mint jelenleg az [Ethereum főhálózat](/glossary/#mainnet). Nem fog tudni számlákat vagy okosszerződéseket kezelni.
+A Beacon lánc az eredeti proof-of-stake blokklánc neve, amit 2020-ban vezettek be. Azért hozták létre, hogy meggyőződjenek a proof-of-stake konszenzuslogika stabilitásáról és fenntarthatóságáról, mielőtt az Ethereum fő hálózatára is bevezetnék azt. Éppen ezért az eredeti proof-of-work Ethereum-lánccal párhuzamosan futtatták. A Beacon lánc egy üres blokkokból álló lánc volt, de a proof-of-work leváltásával és a proof-of-stake mechanizmusra való átállásával az Ethereum megkövetelte, hogy a Beacon lánc fogadja a végrehajtói kliensek tranzakcióit, ezután blokkokba, majd egy proof-of-stake alapú konszenzusmechanizmus felhasználásával blokkláncba rendezze azokat. Ugyanebben a pillanatban az eredeti Ethereum-kliensek leállították a bányászatot, a blokk-előterjesztési és konszenzuslogikát, és mindent átadtak a Beacon láncnak. Ez volt az az esemény, amely [A Beolvadás](/roadmap/merge/) nevet kapta. A Beolvadás után nem volt többé két blokklánc. Csak egy proof-of-stake-alapú Ethereum, ami most két különböző klienst igényel minden csomóponthoz. A Beacon lánc most a konszenzusréteg, a konszenzuskliensek peer-to-peer hálózata, amely a blokkpletykát és a konszenzuslogikát kezeli, miközben az eredeti kliensek alkotják a végrehajtási réteget, amely a pletykálásért és a tranzakciók végrehajtásáért felel, illetve az Ethereum státuszát kezeli. A két réteg az Engine API révén kommunikál egymással.
 
-A Beacon Chain szerepe meg fog változni idővel, de egy olyan alapvető összetevője [ a biztonságos, fenntartható és skálázható Ethereumnak, amiért dolgozunk](/roadmap/vision/).
+## Mire szolgál a Beacon lánc? {#what-does-the-beacon-chain-do}
 
-## Beacon Chain tulajdonságok {#beacon-chain-features}
+Beacon lánc a neve annak a számlafőkönyvek, amely az Ethereum-[letétesek](/staking/) hálózatát működtette és koordinálta, mielőtt ezek a letétesek megkezdték a valódi Ethereum-tranzakciók validálását. Nem kezel tranzakciókat vagy okosszerződés-interakciókat, mert ezt a végrehajtási réteg végzi. A Beacon lánc felel a blokk és tanúsítás kezeléséért, az elágazásválasztás algoritmusát futtatja, valamint a jutalmakat és büntetéseket adja. Bővebben a [csomópont-architektúra oldalon](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
+
+## A Beacon lánc hatása {#beacon-chain-features}
 
 ### Letétbe helyezés bevezetése {#introducing-staking}
 
-A Beacon Chain bevezeti [proof-of-stake-et](/developers/docs/consensus-mechanisms/pos/) az Ethereum rendszerbe. Ez egy új módja annak, hogy elősegítsd az Ethereum biztonságát. Gondolj rá úgy, mint egy közjóra, ami egészségesebbé teszi az Ethereumot és közben még több ETH-et tudsz szerezni. A gyakorlatban ez úgy néz ki, hogy ETH-ot helyezel letétbe a validátor szoftver aktiválásához. Validátorként tranzakciókat fogsz feldolgozni és új blokkokat hozol létre a láncon.
+A Beacon lánc vezette be a [proof-of-stake-et](/developers/docs/consensus-mechanisms/pos/) az Ethereum rendszerébe. Ez tartja fent az Ethereum biztonságát, és a folyamat során a validátorokat több ETH-hoz juttatja. A gyakorlatban a letétbe helyezés úgy néz ki, hogy ETH-t helyez letétbe a validátorszoftver aktiválásához. Letétesként futtatja a szoftvert, amely új blokkokat hoz létre és validál a láncon.
 
-A letétbe helyezés és a validátorrá válás egyszerűbb, mint a [bányászat](/developers/docs/mining/) (ahogy jelenleg biztosítva van a hálózat). És remélhetőleg hosszútávon még biztonságosabbá teszi majd az Ethereumot. Minél több ember vesz részt a hálózatban, annál inkább decentralizáltabb és biztonságosabb lesz a támadásokkal szemben.
+A letétbe helyezés hasonló célt szolgál, mint korábban a [bányászat](/developers/docs/mining/), de számos tekintetben különbözik attól. A bányászat nagy összegű kezdeti kiadásokkal járt, nagy teljesítményű hardverek beszerzésével és nagy energiafogyasztással, ami a tehetősebbeknek kedvezett, és elősegítette a centralizációt. Emellett a bányászat nem követelte meg a fedezetként szolgáló eszközök zárolását, ezzel korlátozta a protokoll képességét a rosszindulatú szereplők megbüntetésére egy támadás után.
+
+A proof-of-stake mechanizmusra való áttérés jelentősen fokozta az Ethereum biztonságát és decentralizációját a proof-of-work rendszerhez képest. Minél több ember vesz részt a hálózatban, annál decentralizáltabb és védettebb lesz a támadásokkal szemben.
+
+A proof-of-stake használata, mint konszenzusmechanizmus, egy alapvető komponens [a ma használt biztonságos, környezetbarát és skálázható Ethereum számára](/roadmap/vision/).
 
 <InfoBanner emoji=":money_bag:">
-Ha érdekel a letétbe helyezés és szeretnél segíteni a Beacon Chain biztosításában, akkor <a href="/staking/">tudj meg többet a letétbe helyezésről</a>.
+  Ha Ön szeretne validátorrá válni és segítene az Ethereum biztosításában, akkor <a href="/staking/">tudjon meg többet a letétbe helyezésről</a>.
 </InfoBanner>
 
-Ez a második Eth2 fejlesztésnél is fontos változás: [a shard láncoknál](/roadmap/danksharding/).
+### Felkészülés a szilánkolásra {#setting-up-for-sharding}
 
-### Shard láncok előkészítése {#setting-up-for-shard-chains}
+Amióta a Beacon lánc egybeolvadt az eredeti Ethereum-főhálózattal, az Ethereum közössége elkezdte keresni a lehetőséget a hálózat méretezésére.
 
-A shard láncok bevezetése lesz a második nagy Eth2 fejlesztés. Növelni fogják a hálózat kapacitását és a tranzakciós sebességet úgy, hogy 64 blokklánccal terjesztik ki a hálózatot. A Beacon Chain egy fontos első lépés a shard láncok bevezetésénél, mivel biztonságos működésükhöz a letétbe helyezés működése szükséges.
+A proof-of-stake-nek megvan az az előnye, hogy naprakész nyilvántartása van az összes jóváhagyott blokkelőállítókról, akik mind rendelkeznek ETH-letéttel. Ez a nyilvántartás a konkrét hálózati felelősségi körök megbízható felosztása mellett megalapozza az „oszd meg és uralkodj” ideát.
 
-Végsősoron a Beacon Chain lesz felelős azért, hogy véletlenszerűen kijelöljön letétbe helyezőket (stakereket) a shard láncok validálására. Ez kulcsfontosságú annak érdekében, hogy a letétbe helyezők ne fogjanak össze és ne tudják átvenni a hatalmat egy shard fölött. Nos, ez azt jelenti, hogy [kevesebb, mint 1 a billióhoz az esélye, hogy ez bekövetkezzen](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
+Ez a felelősség ellentétben áll a proof-of-work rendszerével, ahol a bányászoknak semmilyen kötelezettségük nem volt a hálózat felé, és bármikor, mindenféle következmény nélkül felhagyhattak a bányászattal, végleg lekapcsolva a csomópontszoftvert. Ebben a rendszerben nyilvántartás sincs az ismert blokkelőterjesztőkről, és nincs megbízható módja a hálózati felelősségi körök biztonságos felosztásának.
 
-## A fejlesztések közötti kapcsolat {#relationship-between-upgrades}
+[A szilánkolásról bővebben](/roadmap/danksharding/)
 
-Az Eth2 fejlesztések némileg összefüggnek. Foglaljuk össze tehát, hogy a Beacon Chain hogyan hat a többi fejlesztésre.
+## A frissítések közötti kapcsolat {#relationship-between-upgrades}
 
-### Főhálózat és a Beacon Chain {#mainnet-and-beacon-chain}
+Az Ethereum-frissítések némileg összefüggnek egymással. Foglaljuk össze, hogyan hat a Beacon lánc a többi frissítésre.
 
-A Beacon Chain eleinte különállóan fog létezni az Ethereum főhálózattól, melyet ma is használunk. De végül össze lesznek kapcsolva. A terv a főhálózat “dokkolása” a proof-of-stake rendszerhez, melyet a Beacon Chain vezérel és koordinál.
+### A Beacon lánc és a beolvadás {#merge-and-beacon-chain}
 
-<ButtonLink to="/roadmap/merge/">A dokkolás</ButtonLink>
+A Beacon lánc először az Ethereum fő hálózatától különállóan létezett, de 2022-ben egybeolvadtak.
 
-### Shardok és a Beacon Chain {#shards-and-beacon-chain}
+<ButtonLink to="/roadmap/merge/">
+  A beolvadás
+</ButtonLink>
 
-A shard láncokat csak a proof-of-stake konszenzus mechnanizmussal lehet biztonságosan bevezetni az Ethereum ökoszisztémába. A Beacon Chain bevezeti a letétbe helyezést (staking) ezzel lekövezve a shard láncok bevezetéséhez szükséges utat.
+### Szilánkok és a Beacon lánc {#shards-and-beacon-chain}
 
-<ButtonLink to="/roadmap/danksharding/">Shard láncok</ButtonLink>
+A láncszilánkokat csak működő proof-of-stake konszenzusmechanizmussal lehet biztonságosan bevezetni az Ethereum-ökoszisztémába. A Beacon lánc bevezette a letétbe helyezést, ami „egybeolvadt” a fő hálózattal, egyengetve az utat a szilánkolás előtt, amellyel tovább méretezhető az Ethereum.
 
-<Divider />
+<ButtonLink to="/roadmap/danksharding/">
+  Láncszilánkok
+</ButtonLink>
 
-## Beacon Chain interakció {#interact-with-beacon-chain}
+## További olvasnivaló
 
-<BeaconChainActions />
+- [Az Ethereum jövőbeni frissítéseiről bővebben](/roadmap/vision)
+- [Bővebben a csomópont-architektúráról](/developers/docs/nodes-and-clients/node-architecture)
+- [Bővebben a proof-of-stake-ről](/developers/docs/consensus-mechanisms/pos)

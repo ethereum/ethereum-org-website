@@ -231,7 +231,7 @@
   "page-staking-meta-description": "Una descripción general de las apuestas de Ethereum: los riesgos, las recompensas, los requisitos y dónde hacerlo.",
   "page-staking-meta-title": "Apuestas en Ethereum",
   "page-staking-withdrawals-important-notices": "Avisos importantes",
-  "page-staking-withdrawals-important-notices-desc": "Las retiradas de fondos aún no están disponibles. Para más información, consulte <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Preguntas frecuentes sobre la fusión ETh2 y sus efectos posteriores</a>.",
+  "page-staking-withdrawals-important-notices-desc": "Las retiradas de fondos aún no están disponibles. Para más información, consulte <a href=\"https://blog.ethereum.org/2021/12/01/eth2-merge-and-post-merge-faq/\" target=\"_blank\">Preguntas frecuentes sobre La Fusión ETh2 y sus efectos posteriores</a>.",
   "page-upgrades-merge-btn": "Más sobre la fusión",
   "subscribe-to-ef-blog": "<a href=\"https://blog.ethereum.org/category/protocol/#subscribe\" target=\"_blank\">Suscríbase al blog de EF</a> para recibir notificaciones por correo electrónico de los últimos anuncios de protocolo."
 }

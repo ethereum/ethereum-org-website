@@ -175,9 +175,9 @@ Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 sett
 
 La governance in Ethereum non è definita rigidamente. I vari partecipanti della comunità hanno diverse prospettive a riguardo. Eccone alcune:
 
-- [Note sulla governance della blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Note sulla governance della blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Come funziona la governance di Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotester_
 - [Come funziona la governance di Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Cos'è uno sviluppatore core di Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, parte 2: la plutocrazia è ancora una brutta cosa](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Andare oltre la governance con voto tramite token](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Governance, parte 2: la plutocrazia è ancora una brutta cosa](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Andare oltre la governance con voto tramite token](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

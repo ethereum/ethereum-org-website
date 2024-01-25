@@ -665,7 +665,7 @@ const Layer2Page = () => {
             <i>- Vitalik Buterin </i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://vitalik.ca/general/2021/01/05/rollup.html">
+            <InlineLink to="https://vitalik.eth.limo/general/2021/01/05/rollup.html">
               {t("an-incomplete-guide-to-rollups")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin</i>

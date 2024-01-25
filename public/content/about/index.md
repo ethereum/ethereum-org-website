@@ -88,7 +88,7 @@ We're open source, with a community of contributors, so you can propose changes 
 ### 3. ethereum.org is not a typical product website 🦄 {#core-principles-3}
 
 Ethereum is a big thing: it includes a community, a technology, a set of ideas and ideologies, and more.
-This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is"
+This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is".
 "What is the best website for a blockchain platform?" remains an open question - we are pioneers. Building this requires experimentation.
 
 ## Product roadmap {#roadmap}
