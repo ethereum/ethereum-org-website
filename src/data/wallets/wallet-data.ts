@@ -8,7 +8,7 @@ import AmbireImage from "@/public/wallets/ambire.png"
 import ApexImage from "@/public/wallets/apex.png"
 import ArgentImage from "@/public/wallets/argent.png"
 import BitcoindotcomImage from "@/public/wallets/bitcoindotcom.png"
-import BitkeepImage from "@/public/wallets/bitkeep.png"
+import BitgetWalletImage from "@/public/wallets/bitget-wallet.jpeg"
 import BlockWalletImage from "@/public/wallets/blockwallet.png"
 import BraveImage from "@/public/wallets/brave.png"
 import BridgeWalletImage from "@/public/wallets/bridge.png"
@@ -2250,22 +2250,22 @@ const walletData: WalletData[] = [
     documentation: "https://docs.gridplus.io/",
   },
   {
-    last_updated: "2023-01-24",
-    name: "Bitkeep",
-    image: BitkeepImage,
+    last_updated: "2024-01-25",
+    name: "Bitget Wallet",
+    image: BitgetWalletImage,
     brand_color: "#ffffff",
-    url: "https://www.bitkeep.com/",
+    url: "https://web3.bitget.com/en",
     wallet_live_date: "2018-07-01",
     active_development_team: true,
     languages_supported: ["en"],
-    twitter: "https://twitter.com/BitKeepOS",
-    discord: "https://discord.com/invite/qYTatUzNjM",
+    twitter: "https://twitter.com/BitgetWallet",
+    discord: "https://discord.com/invite/bitgetwallet",
     reddit: "",
-    telegram: "https://t.me/bitkeep",
+    telegram: "https://t.me/Bitget_Wallet",
     ios: true,
     android: true,
     linux: false,
-    windows: false,
+    windows: true,
     macOS: false,
     firefox: false,
     chromium: true,
@@ -2280,7 +2280,7 @@ const walletData: WalletData[] = [
     rpc_importing: true,
     nft_support: true,
     connect_to_dapps: true,
-    staking: false,
+    staking: true,
     swaps: true,
     multichain: true,
     layer_2: true,
@@ -2288,12 +2288,12 @@ const walletData: WalletData[] = [
     ens_support: true,
     erc_20_support: true,
     eip_1559_support: true,
-    buy_crypto: false,
+    buy_crypto: true,
     withdraw_crypto: false,
     multisig: false,
     social_recovery: false,
-    onboard_documentation: "https://study.bitkeep.com/en/",
-    documentation: "https://docs.bitkeep.com/guide/",
+    onboard_documentation: "https://www.bitget.com/web3/academy",
+    documentation: "https://docs.bitkeep.com/en/docs/guide/",
   },
   {
     last_updated: "2023-11-21",
