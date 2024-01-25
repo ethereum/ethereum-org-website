@@ -56,7 +56,7 @@ Belki de eserlerinizi NFT'leri kullanarak paylaşmak isteyen, eserlerinizin kont
 
 Yahut bir spor etkinliğine ait bileti düşünün. Bir etkinlik organizatörü kaç bilet satılacağına karar verdiği gibi, bir NFT'nin oluşturucusu da kaç kopya olacağına karar verebilir. Bazen bunlar, 5000 Genel Giriş bileti gibi birebir kopyalardır. Bazen birbirine çok benzer ama her biri biraz farklı olan kopyalar basılır, örneğin sıralı ve sınırlı atanmış koltuk numarası olan bir bilet gibi. Bu biletler, bilet işletmecilerine ödeme yapmadan eşten eşe alınıp satılabilir ve alıcı, sözleşme adresini kontrol ederek biletin özgünlüğünden her zaman emin olabilir.
 
-Ethereum.org'da NFT'ler, insanların Github deposuna anlamlı bir katkıda bulunduklarını (web sitesini programladılar, bir makale yazdılar veya değiştirdiler...), içeriğimizi çevirdiklerini veya topluluk çağrılarımıza katıldıklarını göstermek için kullanılıyor. Hatta kendi NFT alan adımızı bile edindik. Ethereum.org'a katkıda bulunursanız, bir POAP NFT'si talep edebilirsiniz. Bazı kripto buluşmaları için POAP'lar bilet olarak kullanıldı. [Katkıda bulunma hakkında daha fazla bilgi](/contributing/#poap).
+Ethereum.org'da NFT'ler, insanların GitHub deposuna anlamlı bir katkıda bulunduklarını (web sitesini programladılar, bir makale yazdılar veya değiştirdiler...), içeriğimizi çevirdiklerini veya topluluk çağrılarımıza katıldıklarını göstermek için kullanılıyor. Hatta kendi NFT alan adımızı bile edindik. Ethereum.org'a katkıda bulunursanız, bir POAP NFT'si talep edebilirsiniz. Bazı kripto buluşmaları için POAP'lar bilet olarak kullanıldı. [Katkıda bulunma hakkında daha fazla bilgi](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
