@@ -18,7 +18,7 @@ La prueba de participación requiere que los nodos, conocidos como validadores, 
 
 La prueba de trabajo consume mucha más energía, porque la actividad de minería conlleva el consumo de electricidad. La prueba de participación, por otro lado, requiere solo una cantidad muy pequeña de energía: los validadores de Ethereum incluso pueden ejecutarse en un dispositivo de baja potencia como Raspberry Pi. Se cree que el mecanismo de prueba de participación de Ethereum es más seguro que la prueba de trabajo, porque el coste del ataque es mayor y las consecuencias para un atacante son más severas.
 
-La prueba de trabajo frente a la prueba de participación es un tema polémico. [El blog de Vitalik Buterin](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) y el debate entre Justin Drake y Lyn Alden dan un buen resumen de los argumentos.
+La prueba de trabajo frente a la prueba de participación es un tema polémico. [El blog de Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) y el debate entre Justin Drake y Lyn Alden dan un buen resumen de los argumentos.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ El «griding» de participación es una categoría de ataque a las redes de prue
 El recorte social es la capacidad que la comunidad tiene para coordinar una bifurcación de la cadena de bloques en respuesta a un ataque. Permite a la comunidad recuperarse de un atacante que finaliza una cadena deshonesta. El acuchillamiento social también se puede utilizar contra los ataques de censura.
 
 - [Más sobre los recortes sociales](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin sobre los recortes sociales](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin sobre los recortes sociales](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## ¿Me recortarán? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Como validador, es muy difícil que le recorten a menos que tenga una mala condu
 
 El problema de nada-en-participación es un problema conceptual con algunos mecanismos de prueba de participación en los que solo hay recompensas y no hay penalizaciones. Si no hay nada que arriesgar, un validador pragmático está igualmente feliz de certificar cualquiera, o incluso múltiples, bifurcaciones de la cadena de bloques, ya que esto aumenta sus recompensas. Ethereum puede evitar esto usando condiciones de finalidad y recortando para asegurar una cadena predilecta.
 
-[Más información sobre el problema de nada que arriesgar](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Más información sobre el problema de nada que arriesgar](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## ¿Qué es un algoritmo de elección de bifurcación? {#what-is-a-fork-choice-algorithm}
 

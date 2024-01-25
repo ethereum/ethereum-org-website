@@ -117,7 +117,7 @@ Az okosszerződéses tárcák már elérhetők, de több fejlesztésre van szük
 - [„A számlaabsztrakció miért hoz jelentős fejlődést a dappok számára?” – Devcon, Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - [„Számlaabsztrakció ELI5” – Devcon, Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Vitalik „Út a számlaabsztrakcióhoz” jegyzetei](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitalik blogbejegyzése a közösségi médiával visszaállítható tárcákról](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Vitalik blogbejegyzése a közösségi médiával visszaállítható tárcákról](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [EIP-2938 jegyzetek](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [EIP-2938 dokumentáció](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 jegyzetek](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

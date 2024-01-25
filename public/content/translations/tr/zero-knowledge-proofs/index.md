@@ -208,5 +208,5 @@ ZK-STARK şifreleme için çarpışmaya direçli karmalar kullandığı için ku
 - [Bir Sıfır Bilgili İspat: Blok Zincirde Gizliliği İyileştirmek](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK'lar - Gerçekçi Bir Sıfır Bilgi Örneği ve Derinlemesine İnceleme](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK'lar - Kuantum Bilgisayarlara Bile Karşı Doğrulanabilir Güven Oluşturmak](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) —_Adam Luciano_
-- [zk-SNARK'ların nasıl mümkün olduğuna ilişkin yaklaşık bir giriş](https://vitalik.ca/general/2021/01/26/snarks.html) - _Vitalik Buterin_
+- [zk-SNARK'ların nasıl mümkün olduğuna ilişkin yaklaşık bir giriş](https://vitalik.eth.limo/general/2021/01/26/snarks.html) - _Vitalik Buterin_
 - [Sıfır Bilgili İspat ve Blok Zincirdeki Rolü Nedir?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) - _LeewayHertz_
