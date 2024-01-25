@@ -149,7 +149,8 @@ const LanguagePicker = ({
 
     // English will not have a dataItem
     const dataItem = progressData.find(
-      ({ languageId }) => i18nConfigItem.crowdinCode === languageId
+      ({ languageId }) =>
+        i18nConfigItem.crowdinCode.toLowerCase() === languageId.toLowerCase()
     )
 
     const approvalProgress =
