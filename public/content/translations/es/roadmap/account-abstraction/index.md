@@ -1,5 +1,5 @@
 ---
-title: Abstracción de la cuenta
+title: Abstracción de Cuenta
 description: Una visión general de los planes de Ethereum para hacer que las cuentas de usuario sean más sencillas y seguras.
 lang: es
 summaryPoints:
@@ -8,7 +8,7 @@ summaryPoints:
   - Las claves perdidas y expuestas se pueden recuperar usando múltiples copias de seguridad.
 ---
 
-# Abstracción de la cuenta {#account-abstraction}
+# Abstracción de Cuenta {#account-abstraction}
 
 Los usuarios interactúan con Ethereum usando **[cuentas de propiedad externa (o EOA)](/glossary/#eoa)**. Esta es la única forma de empezar una transacción o generar un contrato inteligente. Esto limita cómo los usuarios pueden interactuar con Ethereum. Por ejemplo, dificulta la creación de transacciones en lote y requiere que los usuarios siempre mantengan un saldo en ETH para costear el gas.
 
@@ -47,8 +47,8 @@ Por ejemplo, se pueden añadir claves de copia de seguridad a la cartera por si 
 - **Autorización multifirma**: puede compartir credenciales de autorización entre múltiples personas o dispositivos de confianza. Posteriormente, puede configurarse el contrato para que las transacciones de más de un valor predeterminado requieran la autorización de cierta proporción (p. ej., 3/5) de las partes de confianza. Por ejemplo, las transacciones de alto valor podrían requerir la aprobación tanto de un dispositivo móvil como de una cartera de hardware, o las firmas de cuentas distribuidas a familiares de confianza.
 - **Congelación de cuenta**: si se pierde un dispositivo o está expuesto, la cuenta puede bloquearse desde otro dispositivo autorizado, protegiendo así los activos del usuario.
 - **Recuperación de la cuenta**: ¿Ha perdido un dispositivo u olvidado una contraseña? En la actualidad, esto significa que sus activos podrían congelarse para siempre. Con una cartera de contrato inteligente, se pueden establecer algunas cuentas previamente autorizadas que autoricen nuevos dispositivos y restablezcan el acceso.
-- **Establecer límites de transacción**: especificar umbrales diarios de cantidades máximas que se puedan transferir desde la cuenta al día/semana/mes. Esto significa que si un intruso acede a su cuenta, no podrá sacar todo de una vez y usted tendrá ocasiones de congelar y restablecer el acceso.
-- **Crear listas blancas**: solo permitir transacciones a ciertas direcciones que sepa que son seguras. Esto significa que _incluso en caso de que_ le robaran su clave privada, el intruso no podría enviar fondos a las cuentas destinatarias que no estén en la lista blanca. Para modificar estas listas blancas se requerirían múltiples firmas, de modo que el intruso no pudiera añadir su propia dirección a la lista, a menos que tuviese acceso a varias de sus claves de copias de seguridad.
+- **Establecer limites de transacción**: especificar umbrales diarios dependiendo de cuánto valor se pueda transferir desde la cuenta en un día/mes/año. Esto significa que si un intruso acede a su cuenta, no podrá sacar todo de una vez y usted tendrá ocasiones de congelar y restablecer el acceso.
+- **Crear listas blancas**: solo permite realizar transacciones a ciertas direcciones que se sepa que son seguras con certeza. Esto significa que _incluso en caso de que_ le robaran su clave privada, el intruso no podría enviar fondos a las cuentas destinatarias que no estén en la lista blanca. Para modificar estas listas blancas se requerirían múltiples firmas, de modo que el intruso no pudiera añadir su propia dirección a la lista, a menos que tuviese acceso a varias de sus claves de copias de seguridad.
 
 ## Mejor experiencia de usuario {#better-user-experience}
 

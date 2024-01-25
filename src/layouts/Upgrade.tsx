@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
+  type BoxProps,
   Flex,
   type FlexProps,
   Icon,
@@ -55,7 +56,9 @@ const SummaryPoint = (props: ChildOnlyProp) => (
   <ListItem color="text300" mb={0} {...props} />
 )
 
-const Container = (props: ChildOnlyProp) => (
+type ContainerProps = Pick<BoxProps, "children" | "dir">
+
+const Container = (props: ContainerProps) => (
   <Box position="relative" {...props} />
 )
 
@@ -132,7 +135,10 @@ export const upgradeComponents = {
 
 interface IProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
+    Pick<
+      MdPageContent,
+      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+    > {
   frontmatter: UpgradeFrontmatter
 }
 export const UpgradeLayout: React.FC<IProps> = ({
@@ -141,6 +147,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   slug,
   tocItems,
   lastUpdatedDate,
+  contentNotTranslated,
 }) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
@@ -175,7 +182,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   const lgBreakpoint = useToken("breakpoints", "lg")
 
   return (
-    <Container>
+    <Container dir={contentNotTranslated ? "ltr" : "unset"}>
       <HeroContainer>
         <TitleCard>
           <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />

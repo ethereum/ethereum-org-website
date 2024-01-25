@@ -5,9 +5,13 @@ import type { CommonHeroProps } from "@/lib/types"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
-const HubHero = (props: CommonHeroProps) => {
-  const { heroImg, title, header, description, buttons } = props
-
+const HubHero = ({
+  heroImg,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
   if (buttons && buttons.length > 2) {
     throw Error(
       "Can not have more than two call-to-action buttons in this hero component."
@@ -37,7 +41,7 @@ const HubHero = (props: CommonHeroProps) => {
         borderRadius={{ xl: "base" }}
         bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
-        insetStart={{ xl: "8" }}
+        insetInlineStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
         top={{ xl: "50%" }}
         transform={{ xl: "translateY(-50%)" }}

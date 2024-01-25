@@ -114,12 +114,12 @@ Ezt a kalkulációt kiterjesztve megbecsülhetjük, hogy egy adott számú vissz
 <TableContainer>
 
 | Visszavonások száma | Időszükséglet |
-| :-----------------: | :-----------: |
-|       400 000       |    3,5 nap    |
-|       500 000       |    4,3 nap    |
-|       600 000       |    5,2 nap    |
-|       700 000       |    6,1 nap    |
-|       800 000       |    7,0 nap    |
+| :-------------------: | :--------------: |
+|        400 000        |     3,5 nap     |
+|        500 000        |     4,3 nap     |
+|        600 000        |     5,2 nap     |
+|        700 000        |     6,1 nap     |
+|        800 000        |     7,0 nap     |
 
 </TableContainer>
 
@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-A validátor működtetők látogassanak el a <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> oldalra, ahol a validátorok készítéséről további információkat találhatnak. Továbbá hogyan készüljenek fel, mi az események időzítése, pontosan hogyan működik a visszavonási funkció.
+Javasoljuk, hogy a validátorműködtetők látogassanak el a <a href="https://launchpad.ethereum.org/withdrawals/">Staking Launchpad Withdrawals</a> oldalra, ahol további információkat találhatnak a letét kivonásához kapcsolódó felkészülésről, az események időzítéséről és arról, hogyan működik ez a kivonási funkció.
 
 Próbálja ki először a beállításait egy teszthálózaton, látogasson el a <a href="https://goerli.launchpad.ethereum.org">Goerli-teszthálózat Staking Launchpad</a> oldalára.
 
@@ -214,5 +214,5 @@ Nem. Miután egy validátor kilépett, és a teljes egyenlegét kivette, az adot
 - [EIP-4895: Beacon-lánc operációs műveletként intézi a visszavonásokat](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders – Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: A letétbe helyezett ETH visszavonása (tesztelés) – Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Beacon-lánc operációs műveletként intézi a visszavonásokat – Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Beacon lánc operációs műveletként intézi a visszavonásokat – Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [A validátor valós egyenlegének megértése](https://www.attestant.io/posts/understanding-validator-effective-balance/)

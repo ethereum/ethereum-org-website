@@ -3,12 +3,12 @@ title: Hoja de ruta de Ethereum
 description: El camino hacia una mayor escalabilidad, seguridad y sostenibilidad para Ethereum.
 lang: es
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Hoja de ruta de Ethereum"
 summaryPoints:
 buttons:
   - label: Actualizaciones futuras
-    toId: "¿Qué cambios están pendientes?"
+    toId: '¿Qué cambios están pendientes?'
   - label: Actualizaciones anteriores
     to: /history/
     variant: borrador
@@ -59,7 +59,7 @@ Ethereum se actualiza periódciamente para mejorar su escalabilidad, seguridad o
 
 <RoadmapImageContent title="Cómo se define la hoja de ruta">
 
-La hoja de ruta es principalmente el resultado de años de trabajo de investigadores y desarrolladores, dado que el protocolo es muy técnico. No obstante cualquier persona motivada puede participar. Las ideas suelen comenzar como debates en un foro como [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) o en el servidor de Discord de EthR&D. Pueden haber respuestas a nuevos puntos flacos que se descubren, sugerencias de organizaciones que trabajan en la capa de aplicaciones (como DApps e intercambios) o disuasiones conocidas para los usuarios finales (como costes o velocidades de transacción). Cuando estas ideas maduren, se pueden proponer como [propuestas de mejora de Ethereum o EIP] (https://eips.ethereum.org/). Todo esto se hace en público para que cualquier persona de la comunidad pueda intervenir en cualquier momento.
+La hoja de ruta es principalmente el resultado de años de trabajo de investigadores y desarrolladores, dado que el protocolo es muy técnico. No obstante cualquier persona motivada puede participar. Las ideas usualmente empiezan como discusiones en un foro del estilo [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) o el servidor de Discord de Eth. Pueden haber respuestas a nuevos puntos flacos que se descubren, sugerencias de organizaciones que trabajan en la capa de aplicaciones (como DApps e intercambios) o disuasiones conocidas para los usuarios finales (como costes o velocidades de transacción). Cuando estas ideas maduren, se pueden proponer como [propuestas de mejora de Ethereum o EIP] (https://eips.ethereum.org/). Todo esto se hace en público para que cualquier persona de la comunidad pueda intervenir en cualquier momento.
 
 [Más información sobre la gobernanza de Ethereum](/gobernanza/)
 

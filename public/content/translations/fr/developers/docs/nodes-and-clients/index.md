@@ -5,9 +5,7 @@ lang: fr
 sidebarDepth: 2
 ---
 
-Ethereum est un réseau d'ordinateurs qui exécutent des logiciels (appelés nœuds) dont l'objectif est de valider les blocs et les données de transaction. L'application logicielle, que l'on appelle client, doit être exécutée depuis l'ordinateur qu'on souhaite transformer en nœud Ethereum.
-
-**Remarque : Il n'est plus possible d'exécuter seul un logiciel d'exécution. Depuis [La Fusion](/roadmap/merge), les logiciels d'exécution et de consensus doivent être exécutés ensemble afin qu'un utilisateur puisse avoir accès au réseau Ethereum.**
+Ethereum est un réseau d'ordinateurs qui exécutent des logiciels (appelés nœuds) dont l'objectif est de valider les blocs et les données de transaction. Le logiciel doit être exécuté sur votre ordinateur pour le transformer en nœud Ethereum. Deux logiciels distincts (appelés « clients ») sont requis pour créer un nœud.
 
 ## Prérequis {#prerequisites}
 
@@ -17,18 +15,12 @@ Si vous êtes novice au sujet des nœuds, nous vous recommandons de consulter en
 
 ## En quoi consistent les nœuds et les clients? {#what-are-nodes-and-clients}
 
-Un « nœud » désigne toute instance de logiciel client Ethereum connecté à d'autres ordinateurs exécutant également un logiciel Ethereum, formant ainsi un réseau. Un client est une implémentation d'Ethereum qui vérifie les données en fonction des règles du protocole et maintient la sécurité du réseau.
-
-Depuis la Fusion, Ethereum se compose de deux parties : la couche d'exécution et la couche de consensus. Les deux couches sont exécutées par des logiciels clients différents. Sur cette page, nous les appellerons client d'exécution et client de consensus.
+Un « nœud » désigne toute instance de logiciel client Ethereum connecté à d'autres ordinateurs exécutant également un logiciel Ethereum, formant ainsi un réseau. Un client est une implémentation d'Ethereum qui vérifie les données en fonction des règles du protocole et maintient la sécurité du réseau. Un nœud doit exécuter deux clients : un client de consensus et un client d'exécution.
 
 - Le client d'exécution (également connu sous le nom de moteur d'exécution, de client EL ou anciennement de client Eth1) écoute les nouvelles transactions diffusées sur le réseau, les exécute dans l'EVM, et contient la dernière base de données et l'état de toutes les données Ethereum actuelles.
-- Le client de consensus (également connu sous le nom de Nœud Beacon, client CL ou anciennement de client Eth2) implémente l'algorithme de consensus de la preuve d'enjeu, qui permet au réseau de parvenir à un accord basé sur des données validées du client d'exécution.
+- Le client de consensus (également connu sous le nom de Nœud Beacon, client CL ou anciennement de client Eth2) implémente l'algorithme de consensus de la preuve d'enjeu, qui permet au réseau de parvenir à un accord basé sur des données validées du client d'exécution. Il y a également un troisième logiciel, appelé « validateur », qui peut être ajouté au client de consensus afin de permettre à un nœud de participer à la sécurisation du réseau.
 
-Avant [La Fusion](/roadmap/merge/), la couche de consensus et d'exécution étaient des réseaux séparés, et toutes les transactions et l'activité des utilisateurs sur l'Ethereum étaient réalisées sur ce qui est maintenant la couche d'exécution. Un logiciel client offrait à la fois l'environnement d'exécution et la vérification de consensus des blocs produits par les mineurs. La couche de consensus, [la Chaîne phare](/roadmap/beacon-chain/), fonctionnait séparément depuis décembre 2020. Elle a introduit la preuve d'enjeu et coordonné le réseau de validateurs basé sur les données du réseau Ethereum.
-
-Avec La Fusion, Ethereum est passé à la preuve d'enjeu en connectant ces réseaux. Les clients d'exécution et de consensus travaillent ensemble pour vérifier l'état d'Ethereum.
-
-La conception modulaire dotée de diverses pièces logicielles travaillant ensemble est appelée la [complexité encapsulée](https://vitalik.ca/general/2022/02/28/complexity.html). Cette approche facilite l'exécution de La Fusion de façon transparente en permettant la réutilisation de chaque client, comme par exemple dans [l'écosystème de la couche 2](/layer-2/).
+Ces clients travaillent ensemble pour suivre la tête de la chaîne Ethereum et permettre aux utilisateurs d'interagir avec le réseau Ethereum. La conception modulaire avec plusieurs logiciels fonctionnant ensemble est appelée [complexité encapsulée](https://vitalik.ca/general/2022/02/28/complexity.html). Cette approche a permis de plus facilement exécuter [La Fusion](/roadmap/merge) de manière fluide, facilite la maintenance et le développement du logiciel client et permet la réutilisation des clients individuels, par exemple au sein de [l'écosystème](/layer-2/) de la couche 2.
 
 ![Exécution couplée et clients de consensus](./eth1eth2client.png) Diagramme simplifié d'une exécution couplée et d'un client de consensus.
 
@@ -49,7 +41,7 @@ Ce que ces implémentations ont en commun, c'est qu'elles suivent toutes une seu
 
 ### Suivi des nœuds sur le réseau {#network-overview}
 
-Les trackers multiples offrent une vue d'ensemble en temps réel des nœuds du réseau Ethereum. Notez qu'en raison de la nature décentralisée des réseaux, ces crawlers ne peuvent fournir qu'une vue limitée du réseau et peuvent rapporter des résultats différents.
+Les crackers multiples offrent une vue d'ensemble en temps réel des nœuds du réseau Ethereum. Notez qu'en raison de la nature décentralisée des réseaux, ces crawlers ne peuvent fournir qu'une vue limitée du réseau et peuvent rapporter des résultats différents.
 
 - [Carte des nœuds](https://etherscan.io/nodetracker) par Etherscan
 - [Ethernodes](https://ethernodes.org/) par Bitfly
@@ -58,33 +50,35 @@ Les trackers multiples offrent une vue d'ensemble en temps réel des nœuds du r
 
 ## Types de nœuds {#node-types}
 
-Si vous voulez [exécuter votre propre nœud](/developers/docs/nodes-and-clients/run-a-node/), vous devez comprendre qu'il existe différents types de nœuds et que ceux-ci consomment les données différemment. En fait, les clients peuvent exécuter différents types de nœuds : légers, complets et nœuds d'archives. Il existe également différentes stratégies de synchronisation afin d'accélérer le temps de synchronisation. La synchronisation fait référence à la vitesse à laquelle on peut obtenir les informations les plus récentes sur l'état d'Ethereum.
+Si vous voulez [exécuter votre propre nœud](/developers/docs/nodes-and-clients/run-a-node/), vous devez comprendre qu'il existe différents types de nœuds et que ceux-ci consomment les données différemment. En fait, les clients peuvent exécuter différents types de nœuds : légers, complets et d'archives. Il existe également différentes stratégies de synchronisation afin d'accélérer le temps de synchronisation. La synchronisation fait référence à la vitesse à laquelle on peut obtenir les informations les plus récentes sur l'état d'Ethereum.
 
 ### Nœud complet {#full-node}
 
+Les nœuds complets effectuent une validation bloc par bloc de la blockchain, y compris le téléchargement et la vérification du corps du bloc et des données d'état pour chaque bloc. Il existe différentes classes de nœuds complets - certains commencent à partir du bloc de genèse et vérifient chaque bloc de l'ensemble de l'historique de la blockchain. D'autres commencent leur vérification à partir d'un bloc plus récent qu'ils considèrent comme valide (par exemple, la 'snap sync' de Geth). Indépendamment du point de départ de la vérification, les nœuds complets ne conservent qu'une copie locale des données relativement récentes (généralement les 128 blocs les plus récents), permettant de supprimer les anciennes données pour économiser de l'espace disque. Les anciennes données peuvent être régénérées lorsqu'elles sont nécessaires.
+
 - Stocke toutes les données de la blockchain (même si celles-ci sont régulièrement "« taillées », de sorte qu'un nœud complet ne stocke pas toutes les données de la chaîne depuis la genèse)
 - Participe à la validation de blocs, vérifie tous les blocs et états.
-- Tous les états peuvent être dérivés d'un nœud complet (bien que les états très anciens soient reconstruits à partir de requêtes effectuées sur des nœuds d'archives).
+- Tous les états peuvent être soit récupérés à partir du stockage local, soit régénérés à partir de « snapshots » d'un nœud complet.
 - Sert le réseau et fournit des données sur demande.
 
-### Nœud léger {#light-node}
-
-Au lieu de télécharger chaque bloc, les nœuds légers téléchargent les en-têtes de bloc. Ces en-têtes ne contiennent que des informations sommaires sur le contenu des blocs. Toute autre information que pourrait requérir le nœud léger fera l'objet d'une requête auprès d'un nœud complet. Les nœuds légers peuvent alors comparer indépendamment les données qu'ils reçoivent avec les racines d'état dans les en-têtes de bloc. Les nœuds légers permettent aux utilisateurs de participer au réseau Ethereum sans nécessité de matériel onéreux ou de connexion internet haut débit nécessaires à l'exécution d'un nœud complet. Les nœuds légers peuvent même être exécutés depuis des téléphones portables ou des appareils embarqués. Les nœuds légers ne participent pas au consensus (c'est-à-dire qu'ils ne peuvent pas être des mineurs ou des validateurs), mais ils peuvent accéder à la blockchain Ethereum avec la même efficience et garantie de sécurité qu'un nœud complet.
-
-Le client d'exécution Geth intègre une option de [synchronisation simplifiée](https://github.com/ethereum/devp2p/blob/master/caps/les.md). Cependant, un nœud Geth léger se base sur des nœuds complets servant des données de nœuds légers. Peu de nœuds entiers choisissent de servir les données des nœuds allégés, de sorte que les nœuds légers ne trouvent pas souvent de pairs.
-
-Les clients légers sont un domaine de développement actif pour Ethereum et nous nous attendons à prochainement voir apparaître de nouveaux clients légers pour la couche de consensus et la couche d'exécution. Il existe également des routes potentielles pour fournir des données client légers sur le [réseau gossip](https://www.ethportal.net/). Ceci est avantageux dans la mesure où le réseau gossip pourrait supporter un réseau de nœuds légers sans avoir besoin que des nœuds complets servent les requêtes.
-
-Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), et [LodeStar](https://lodestar.chainsafe.io/) se focalisent actuellement fortement sur les nœuds légers.
-
 ### Nœud d'archive {#archive-node}
+
+Les nœuds d'archive sont des nœuds complets qui vérifient chaque bloc depuis le bloc de genèse et ne suppriment jamais aucune des données téléchargées.
 
 - Stocke tout ce qui est conservé dans le nœud complet et construit une archive des états de l'historique. Il est nécessaire pour aller chercher des informations comme le solde d'un compte au bloc #4 000 000, ou tester vos propres ensembles de transactions simplement et efficacement sans les miner en utilisant le traçage.
 - Ces données représentent des unités de téraoctets qui rendent les nœuds d'archives moins attrayants pour les utilisateurs courants, mais peut être utile pour des services comme les explorateurs de blocs, les fournisseurs de portefeuilles et les analyses de chaînes.
 
-La synchronisation des clients dans un autre mode que celui de l'archivage entraîne la suppression de données de la blockchain. Cela signifie qu'il n'existe pas d'archive de tous les états de l'historique, mais que le nœud complet est capable de les construire sur demande.
+La synchronisation des clients dans un autre mode que celui de l'archivage entraînera la suppression de données de la blockchain. Cela signifie qu'il n'existe pas d'archive de tous les états de l'historique, mais que le nœud complet est capable de les construire sur demande.
 
-En savoir plus sur les [nœuds d'archives](/developers/docs/archive-nodes).
+En savoir plus sur les [nœuds d'archives](/developers/docs/nodes-and-clients/archive-nodes).
+
+### Nœud léger {#light-node}
+
+Au lieu de télécharger chaque bloc, les nœuds légers téléchargent seulement les en-têtes de bloc. Ces en-têtes ne contiennent que des informations sommaires sur le contenu des blocs. Toute autre information que le nœud léger pourrait requérir fait l'objet d'une requête auprès d'un nœud complet. Les nœuds légers peuvent alors comparer indépendamment les données qu'ils reçoivent avec les racines d'état dans les en-têtes de bloc. Les nœuds légers permettent aux utilisateurs de participer au réseau Ethereum sans nécessité de matériel onéreux ou de connexion internet haut débit nécessaires à l'exécution d'un nœud complet. Les nœuds légers peuvent même être exécutés depuis des téléphones portables ou des appareils embarqués. Les nœuds légers ne participent pas au consensus (c'est-à-dire qu'ils ne peuvent pas être des mineurs ou des validateurs), mais ils peuvent accéder à la blockchain Ethereum avec la même efficience et garantie de sécurité qu'un nœud complet.
+
+Les clients légers sont un domaine de développement actif pour Ethereum et nous nous attendons à prochainement voir apparaître de nouveaux clients légers pour la couche de consensus et la couche d'exécution. Il existe également des routes potentielles pour fournir des données client légers sur le [réseau de diffusion](https://www.ethportal.net/). Ceci est avantageux dans la mesure où le réseau de diffusion pourrait supporter un réseau de nœuds légers sans avoir besoin que des nœuds complets servent les requêtes.
+
+Ethereum ne prend pas encore en charge un nombre important de ces nœuds légers mais la prise en charge des nœuds légers est une thématique qui devrait fortement se développer dans un futur proche. En particulier, des clients comme [Nimbus](https://nimbus.team/), [Helios](https://github.com/a16z/helios), et [LodeStar](https://lodestar.chainsafe.io/) se focalisent actuellement fortement sur les nœuds légers.
 
 ## Pourquoi exécuter un nœud Ethereum ? {#why-should-i-run-an-ethereum-node}
 
@@ -95,9 +89,9 @@ Exécuter un nœud vous permet d'utiliser directement Ethereum en toute confianc
 L'exécution de votre propre nœud vous permet d'utiliser Ethereum de façon privée, autonome et fiable. Vous n'avez pas besoin de faire confiance au réseau car vous pouvez vous-même vérifier les données avec votre client. « Ne faites pas confiance, vérifiez » est une devise populaire de la blockchain.
 
 - Votre nœud vérifie lui-même toutes les transactions et tous les blocs par rapport aux règles de consensus. Cela signifie que vous n’avez ni à vous fier à d’autres nœuds du réseau ni à leur faire entièrement confiance.
-- Vous pouvez utiliser un portefeuille Ethereum avec votre propre nœud. Vous pouvez utiliser des dapps de manière plus sécurisée et privée parce que vous n'aurez pas à communiquer vos adresses et soldes avec des nœuds aléatoires. Tout peut être contrôlé avec votre propre client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), et [de nombreux autres portefeuilles](/wallets/find-wallet/) proposent l'importation du RPC, leur permettant d'utiliser votre nœud.
+- Vous pouvez utiliser un portefeuille Ethereum avec votre propre nœud. Vous pouvez utiliser des DApps de manière plus sécurisée et privée parce que vous n'aurez pas à communiquer vos adresses et soldes avec des intermédiaires. Tout peut être contrôlé avec votre propre client. [MetaMask](https://metamask.io), [Frame](https://frame.sh/), et [de nombreux autres portefeuilles](/wallets/find-wallet/) proposent l'importation du RPC, leur permettant d'utiliser votre nœud.
 - Vous pouvez exécuter et autohéberger d'autres services qui dépendent des données d'Ethereum. Par exemple, il peut s'agir d'un validateur de Chaîne Phare, d'un logiciel comme la couche 2, d'une infrastructure, d'explorateur de blocs, de processeurs de paiement, etc.
-- Vous pouvez fournir vos propres [points de terminaison RPC personnalisés](/developers/docs/apis/json-rpc/). Publiquement pour la communauté, ou même hébergé en privé, un point de terminaison Ethereum permet aux gens d'utiliser votre nœud et d'éviter les grands fournisseurs centralisés.
+- Vous pouvez fournir vos propres [points de terminaison RPC personnalisés](/developers/docs/apis/json-rpc/). Vous pourriez même proposer ces points de terminaison publiquement à la communauté pour les aider à éviter les grands fournisseurs centralisés.
 - Vous pouvez vous connecter à votre nœud en utilisant **les communications interprocessus (IPC)** ou réécrire le nœud pour charger votre programme en tant que plugin. Cette démarche garantit une faible latence, or cela est très utile, par exemple lorsque vous traitez beaucoup de données en utilisant des bibliothèques web3 ou lorsque vous avez besoin de remplacer vos transactions le plus rapidement possible (cas du frontrunning).
 - Vous pouvez directement miser de l'ETH pour sécuriser le réseau et gagner des récompenses. Voir [la mise en jeu individuelle](/staking/solo/) pour commencer.
 
@@ -110,9 +104,9 @@ Il est important de disposer d'un ensemble diversifié de nœuds pour garantir l
 - Les nœuds complets appliquent les règles de consensus afin de ne pas se faire piéger en acceptant des blocs qui ne les suivent pas. Cette approche offre une sécurité supplémentaire au sein du réseau. En effet, si tous les nœuds étaient des nœuds légers (qui ne font pas de vérification complète), les validateurs pourraient attaquer le réseau.
 - Dans le cas d'une attaque qui surmonte les défenses crypto-économiques de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/#what-is-pos), une reprise sociale peut être effectuée par les nœuds complets choisissant de suivre la chaîne honnête.
 - Un plus grand nombre de nœuds dans le réseau se traduit par un réseau plus diversifié et robuste, soit l'objectif ultime de la décentralisation, qui favorise un système fiable et résistant à la censure.
-- Ils fournissent un accès aux données de la blockchain pour les clients légers qui en dépendent. Dans les pics d'utilisation, il faut avoir suffisamment de nœuds complets pour pour permettre aux nœuds légers de se synchroniser. Les nœuds légers ne stockent pas toute la blockchain. Au lieu de cela, ils vérifient les données via les [racines d'état des en-têtes de blocs](/developers/docs/blocks/#block-anatomy). Ils peuvent demander plus d'informations aux blocs si besoin est.
+- Les noeuds complets fournissent un accès aux données de la blockchain pour les clients légers qui en dépendent. Les nœuds légers ne stockent pas toute la blockchain. Au lieu de cela, ils vérifient les données via les [racines d'état des en-têtes de blocs](/developers/docs/blocks/#block-anatomy). Ils peuvent demander plus d'informations aux noeuds complets si besoin.
 
-Quand vous exécutez un nœud complet, c'est l'ensemble du réseau Ethereum qui en bénéficie.
+Si vous exécutez un nœud complet, l'ensemble du réseau Ethereum en bénéficie, même si vous ne faites pas fonctionner un validateur.
 
 ## Exécuter son propre nœud {#running-your-own-node}
 
@@ -124,13 +118,13 @@ Si vous connaissez mieux la technique, vous pouvez obtenir plus de détails et d
 
 ## Alternatives {#alternatives}
 
-Mettre en place votre propre nœud peut prendre du temps et nécessiter des ressources, mais vous n'avez pas toujours besoin de faire tourner votre propre instance. Dans ce cas, vous pouvez utiliser un fournisseur d'API tiers comme [Infura](https://infura.io), [Alchemy](https://alchemyapi.io), [Chainstack](https://chainstack.com) ou [QuikNode](https://www.quiknode.io). Autre option : [ArchiveNode](https://archivenode.io/) est un nœud d'archive financé par la communauté. Il a pour objectif d'offrir des données d'archive sur la blockchain Ethereum aux développeurs indépendants qui ne pourraient pas, autrement, se le permettre. Pour un aperçu de l'utilisation de ces services, consultez [les nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
+Mettre en place votre propre nœud peut prendre du temps et nécessiter des ressources, mais vous n'avez pas toujours besoin de faire tourner votre propre instance. Dans ce cas-là, vous pouvez faire appel à un fournisseur de services tiers (API). Pour un aperçu de l'utilisation de ces services, consultez [les nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
-Si quelqu'un exécute un nœud Ethereum avec une API publique dans votre communauté, vous pouvez faire pointer vos portefeuilles légers (comme MetaMask) vers un nœud communautaire [via un RPC personnalisé](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node) et bénéficier d'une plus grande confidentialité qu'avec un tiers de confiance aléatoire.
+Si quelqu'un dans votre communauté venait opérer un noeud Ethereum fonctionnant sous forme d'API ouvertes, vous pouvez utiliser des appels RPC, afin de monter le système de fichiers de l'ordinateur, commun à la chaîne de bloc, sur votre wallet, dans le but de garantir une meilleure protection de votre vie privée que cela ne serait le cas si un tiers de confiance était choisi aléatoirement.
 
 D'autre part, si vous exécutez un client, vous pouvez le partager avec vos amis qui pourraient en avoir besoin.
 
-## Exécuter des clients (anciennement « Clients Eth1 ») {#execution-clients}
+## Clients d'exécution {#execution-clients}
 
 La communauté Ethereum gère plusieurs clients d'exécution open-source (précédemment connus sous le nom de « clients Eth1 » ou simplement « clients Ethereum »), développés par différentes équipes en utilisant différents langages de programmation. Cela rend le réseau plus solide et [diversifié](/developers/docs/nodes-and-clients/client-diversity/). L'idéal est d'atteindre l'objectif de diversité sans qu'aucun client ne prédomine afin de réduire les points de défaillance uniques.
 
@@ -142,9 +136,7 @@ Ce tableau récapitule les différents clients. Tous ont passé [les tests clien
 | [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS   | Réseau principal, Sepolia, Goerli et autres | Snap (without serving), Fast, Full | Archive, élagué |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS   | Réseau principal, Sepolia, Goerli et autres | Snap, Rapide, Plein                | Archive, élagué |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS   | Réseau principal, Sepolia, Goerli et autres | Totale                             | Archive, élagué |
-| [Akula](https://akula.app)                      | Rust     | Linux                   | Réseau principal, Sepolia, Goerli           | Totale                             | Archive, élagué |
-
-**Notez qu'OpenEthereum [est obsolète](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus mis à jour.** Utilisez une autre implémentation client !
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust     | Linux, Windows, macOS   | Réseau principal, Sepolia, Goerli et autres | Totale                             | Archive, élagué |
 
 Pour plus d'information sur les réseaux pris en charge, lisez la page [Réseaux Ethereum](/developers/docs/networks/).
 
@@ -152,13 +144,13 @@ Chaque client est utilisé à des fins uniques et présente des avantages partic
 
 ### Besu {#besu}
 
-Hyperledger Besu est un client Ethereum de qualité professionnelle pour réseaux publics et privés. Il exécute toutes les fonctionnalités du réseau principal Ethereum, du traçage à GraphQL, dispose d'une surveillance étendue et est pris en charge par ConsenSys, à la fois sur les canaux communautaires ouverts et par le biais de SLA commerciaux destinés aux entreprises. Il est écrit en Java et se trouve sous licence Apache 2.0.
+Hyperledger Besu est un client Ethereum de niveau entreprise pour les réseaux autorisés. Il exécute toutes les fonctionnalités du réseau principal Ethereum, du traçage à GraphQL, dispose d'une surveillance étendue et est pris en charge par ConsenSys, à la fois dans les canaux communautaires ouverts et par le biais de SLA commerciaux pour les entreprises. Il est écrit en Java et se trouve sous licence Apache 2.0.
 
 La [documentation](https://besu.hyperledger.org/en/stable/) complète de Besu vous donnera plus de détails sur ses fonctionnalités et sa configuration.
 
 ### Erigon {#erigon}
 
-Erigon, anciennement connu sous le nom de Turbo-Geth, est une fourche de Go Ethereum axée sur la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement repensée d'Ethereum, actuellement écrite en Go mais pour laquelle des implémentations dans d'autres langages sont prévues, par exemple [Akula](https://medium.com/@vorot93/meet-akula-the-fastest-ethereum-implementation-ever-built-58eaca244c39). L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant environs 2 To d'espace disque, et ce en moins de 3 jours.
+Erigon, anciennement connu sous le nom de Turbo-Geth, est une fourche de Go Ethereum axée sur la vitesse et l'efficacité de l'espace disque. Erigon est une implémentation entièrement repensée d'Ethereum, actuellement écrite en Go mais pour laquelle des implémentations dans d'autres langages sont en cours de développement. L'objectif d'Erigon est de fournir une implémentation plus rapide, plus modulaire et plus optimisée d'Ethereum. Il peut effectuer une synchronisation complète des nœuds d'archive en utilisant environ 2 To d'espace disque, et ce, en moins de 3 jours.
 
 ### Go Ethereum {#geth}
 
@@ -176,9 +168,9 @@ Nethermind est une implémentation d'Ethereum créée avec la pile technologique
 
 Nethermind dispose également d'[une documentation détaillée](https://docs.nethermind.io), d'un solide support de développement, d'une communauté en ligne et d'une assistance 24h/24 et 7j/7 offerte aux utilisateurs premium.
 
-## Clients de consensus (anciennement clients 'Eth2') {#consensus-clients}
+## Clients de consensus {#consensus-clients}
 
-De nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') prennent en charge les [mises à niveau du consensus](/roadmap/beacon-chain/). Ils exécutent la Chaîne Phare et fourniront un mécanisme de consensus de preuve d'enjeu pour exécuter les clients après [La Fusion](/roadmap/merge/).
+De nombreux clients de consensus (précédemment connus sous le nom de clients 'Eth2') prennent en charge les [mises à niveau du consensus](/roadmap/beacon-chain/). Ils sont responsables de toute la logique liée au consensus, y compris l'algorithme de choix de fourche, le traitement des attestations et la gestion des récompenses et des pénalités de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos).
 
 | Client                                                        | Langage    | Systèmes d'exploitation | Réseaux                                                                 |
 | ------------------------------------------------------------- | ---------- | ----------------------- | ----------------------------------------------------------------------- |
@@ -204,11 +196,6 @@ De plus amples informations sont disponibles sur notre site [Lodestar](https://l
 
 Nimbus est une implémentation de client de consensus écrite en Nim sous la licence Apache-2.0. Il s'agit d'un client prêt à la production utilisé par les validateurs individuels et les groupes de mise en jeu. Nimbus est conçu pour favoriser l'efficacité des ressources, ce qui le rend facile à utiliser sur des appareils disposant de ressources limitées ou sur des infrastructures d'entreprise sans compromettre la stabilité ou les performances de récompense. Une empreinte plus légère en termes de ressources signifie que le client a une plus grande marge de sécurité lorsque le réseau est sollicité.
 
-Implémenté par Trinity. Fonctionne comme la synchronisation rapide, mais télécharge également les données nécessaires pour exécuter les derniers blocs, vous permettant ainsi d'interroger la chaîne dès les premières minutes de démarrage.
-
-- Synchronise d'abord l'état et vous permet d'interroger RPC en quelques minutes.
-- Encore en développement et pas entièrement fiable, la synchronisation en arrière-plan est ralentie et les réponses RPC peuvent échouer.
-
 En savoir plus avec la [Documentation de Nimbus](https://nimbus.guide/)
 
 ### Prysm {#prysm}
@@ -227,25 +214,27 @@ Teku est écrit en Java et est disponible sous licence Apache 2.0. Il est dével
 
 ## Modes de synchronisation {#sync-modes}
 
-Pour suivre et vérifier les données actuelles sur le réseau, le client Ethereum doit se synchroniser avec le dernier état du réseau. Pour ce faire, il doit télécharger des données auprès de pairs, vérifierler intégrité de manière cryptographique et construire une base de données blockchain locale.
+Pour suivre et vérifier les données actuelles sur le réseau, le client Ethereum doit se synchroniser avec le dernier état du réseau. Pour ce faire, il doit télécharger des données auprès de pairs, vérifier leur intégrité de manière cryptographique et construire une base de données blockchain locale.
 
 Les modes de synchronisation offrent des approches différentes de ce processus, avec divers compromis. Les clients diffèrent également dans leur implémentation des algorithmes de synchronisation. Reportez-vous toujours à la documentation officielle du client choisi pour connaître les détails relatifs à l'implémentation.
 
 ### Modes de synchronisation de la couche d'exécution {#execution-layer-sync-modes}
 
-#### Synchronisation totale {#full-sync}
+#### Synchronisation complète avec archive {#full-sync}
 
 La synchronisation complète permet de télécharger tous les blocs (y compris les en-têtes, les transactions et les reçus) et de générer l'état de la blockchain de façon incrémentielle en exécutant chaque bloc depuis la genèse.
 
 - Minimise la confiance et offre la plus haute sécurité en vérifiant chaque transaction.
 - Avec un nombre croissant de transactions, le traitement de toutes les transactions peut prendre des jours, voire des semaines.
 
-#### Synchronisation rapide {#fast-sync}
+#### Synchronisation complète par snapshot {#snap-sync}
 
-La synchronisation rapide permet de télécharger tous les blocs (y compris les en-têtes, les transactions et les reçus), de vérifier tous les en-têtes, de télécharger l'état et de le vérifier au regard des en-têtes.
+La synchronisation par snapshot vérifie la chaîne bloc par bloc, tout comme une synchronisation d'archive complète ; cependant, au lieu de commencer au bloc de genèse, elle commence à un point de contrôle « fiable » (snapshot) plus récent qui est connu pour faire partie de la véritable blockchain. Le nœud enregistre des points de contrôle périodiques tout en supprimant les données plus anciennes qu'un certain âge. Ces points de contrôle sont utilisés pour régénérer les données d'état lorsque cela est nécessaire, plutôt que de devoir les stocker indéfiniment.
 
-- Repose sur la sécurité du mécanisme de consensus.
-- La synchronisation ne prend que quelques heures.
+- Stratégie de synchronisation la plus rapide, actuellement par défaut dans le réseau principal Ethereum
+- Permet d'économiser l'utilisation du disque et de la bande passante du réseau sans pour autant sacrifier la sécurité
+
+[En savoir plus sur la synchronisation instantanée](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
 
 #### Synchronisation légère {#light-sync}
 
@@ -256,16 +245,7 @@ Le mode client léger permet de télécharger tous les en-têtes de bloc, les do
 
 **NB** La synchronisation légère ne fonctionne pas encore avec la version preuve d'enjeu d'Ethereum - de nouvelles versions prenant en charge la synchronisation légère devraient être bientôt disponibles !
 
-[En savoir plus sur les clients légers](https://www.parity.io/blog/what-is-a-light-client/)
-
-#### Synchronisation instantanée {#snap-sync}
-
-La synchronisation instantanée est le tout dernier mode de synchronisation d'un client, lancé par l'équipe de Geth. L'utilisation d'instantanés dynamiques fournis par des pairs permet de récupérer toutes les données du compte et les données de stockage sans télécharger les nœuds d'arborescence intermédiaires puis de reconstruire ensuite l'arborescence Merkle localement.
-
-- Stratégie de synchronisation la plus rapide, actuellement par défaut dans le réseau principal Ethereum
-- Permet d'économiser l'utilisation du disque et de la bande passante du réseau sans pour autant sacrifier la sécurité
-
-[En savoir plus sur la synchronisation instantanée](https://github.com/ethereum/devp2p/blob/master/caps/snap.md)
+[En savoir plus sur les clients légers](/developers/docs/nodes-and-clients/light-clients/)
 
 ### Modes de synchronisation de la couche de consensus {#consensus-layer-sync-modes}
 
@@ -277,9 +257,9 @@ La synchronisation optimiste est une stratégie de synchronisation post-fusion c
 
 #### Synchronisation des points de contrôle {#checkpoint-sync}
 
-La Synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
+La synchronisation des points de contrôle, également connue sous le nom de synchronisation à faible subjectivité, génère une expérience utilisateur supérieure pour la synchronisation du Nœud Phare. Elle est basée sur des hypothèses de [faible subjectivité](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/) qui permettent de synchroniser la Chaîne phare à partir d'un point de contrôle de faible subjectivité récent plutôt que de la genèse. La synchronisation des points de contrôle réduit sensiblement le temps de synchronisation initiale avec des hypothèses de confiance similaires à la synchronisation effectuée à partir de la [genèse](/glossary/#genesis-block).
 
-En pratique, cela signifie que votre nœud se connecte à un service distant pour télécharger les états finalisés récents et continue de vérifier les données à partir de ce point. Les tiers qui fournissent les données sont de confiance et doivent être soigneusement sélectionnés.
+En pratique, cela signifie que votre nœud se connecte à un service à distance pour télécharger les états finalisés récents et continue de vérifier les données à partir de ce point. Les tiers qui fournissent les données sont dignes de confiance et doivent être soigneusement sélectionnés.
 
 En savoir plus sur [la synchronisation des points de contrôle](https://notes.ethereum.org/@djrtwo/ws-sync-in-practice)
 
@@ -287,8 +267,8 @@ En savoir plus sur [la synchronisation des points de contrôle](https://notes.et
 
 Vous trouverez beaucoup d'informations sur les clients Ethereum sur Internet. Voici quelques ressources qui pourraient être utiles.
 
-- [Ethereum 101 - Part 2 - Understanding Nodes](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes, 13 février 2019_
-- [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _- Justin Leroux, 7 novembre 2019_
+- [Le B-A-BA de l'Ethereum, 2e partie - Comprendre les nœuds](https://kauri.io/ethereum-101-part-2-understanding-nodes/48d5098292fd4f11b251d1b1814f0bba/a) _- Wil Barnes, 13 février 2019_
+- [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_
 
 ## Sujets connexes {#related-topics}
 
@@ -297,4 +277,4 @@ Vous trouverez beaucoup d'informations sur les clients Ethereum sur Internet. Vo
 
 ## Tutoriels connexes {#related-tutorials}
 
-- [Transformez votre Raspberry Pi 4 en validateur de nœud en flashant une carte MicroSD – Le guide d'installation](/developers/tutorials/run-node-raspberry-pi/) _– Flashez votre Raspberry Pi 4, branchez un cable ethernet, connectez le disque SSD et alimentez l'appareil pour transformer votre Raspberry Pi 4 en un nœud Ethereum complet exécutant la couche d'exécution (réseau principal) et/ou la couche de consensus (Chaine Phare / Validateur)._
+- [Transformez votre Raspberry Pi 4 en nœud de validateur en flashant une carte MicroSD – Le guide d'installation](/developers/tutorials/run-node-raspberry-pi/) _– Flashez votre Raspberry Pi 4, branchez un cable ethernet, connectez le disque SSD et alimentez l'appareil pour transformer votre Raspberry Pi 4 en un nœud Ethereum complet exécutant la couche d'exécution (réseau principal) et/ou la couche de consensus (Chaine Phare / Validateur)._

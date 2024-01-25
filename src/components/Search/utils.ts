@@ -91,6 +91,8 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     },
     input: {
       fontSize: { base: "md", md: "xl" },
+      p: 0,
+      ps: 2,
     },
   },
 
@@ -149,7 +151,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Hit-Select-Icon:focus, .DocSearch-Hit-Select-Icon:hover": {
-    color: "switchBackground",
+    color: "switchBackground", // TODO: Remove? Causing low contrast in dark mode
   },
 
   ".DocSearch-Footer": {
@@ -184,17 +186,24 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     display: "grid",
     placeItems: "center",
     borderRadius: "base",
+    mr: "unset",
+    me: 1.5
   },
 
   ".DocSearch-Logo": {
     ".DocSearch-Label": {
-      color: "body.light",
+      color: "body.medium",
       textTransform: "uppercase",
     },
   },
 
+  "svg[aria-label='Algolia']": {
+    ml: "unset",
+    ms: 2,
+  },
+
   "svg[aria-label='Algolia'] *": {
-    fill: "body.light",
+    fill: "body.medium",
   },
 
   "@media (max-width: 768px)": {
