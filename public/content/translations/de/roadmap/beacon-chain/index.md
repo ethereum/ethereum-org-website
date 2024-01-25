@@ -9,7 +9,7 @@ summaryPoint2: Sie wurde 2022 mit der ursprünglichen Ethereum Proof-of-Work Blo
 summaryPoint3: Die Beacon Chain führte die Konsenslogik und das Block-Gossip-Protokoll ein, das nun Ethereum sichert.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Die Beacon Chain, die am 1. Dezember 2020 an den Start ging, formalisierte Proof-of-Stake als Konsensmechanismus von Ethereum mit dem Merge Upgrade am 15. September 2022.
 </UpgradeStatus>
 

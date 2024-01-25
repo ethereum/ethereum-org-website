@@ -18,7 +18,7 @@ Dezentralisierte Wissenschaft (DeSci) ist eine Bewegung, die darauf abzielt, ein
 
 DeSci zielt darauf ab, ein Ökosystem zu schaffen, in dem Wissenschaftler ermutigt werden, ihre Forschungsergebnisse offen zu teilen und Anerkennung für ihre Arbeit zu erhalten. Gleichzeitig wird Fachleuten, die ihre eigenen Leistungen einbringen möchten, der Zugang zur Forschung ermöglicht. DeSci arbeitet mit der Idee, dass wissenschaftliche Erkenntnisse für alle zugänglich und der Prozess der wissenschaftlichen Forschung transparent sein sollte. DeSci schafft ein dezentraleres und verteiltes wissenschaftliches Forschungsmodell, das widerstandsfähiger gegen Zensur und Kontrolle durch zentrale Behörden ist. DeSci hofft, eine Umgebung zu schaffen, in der neue und unkonventionelle Ideen gedeihen können, indem der Zugang zu Finanzierung, wissenschaftlichen Werkzeugen und Kommunikationskanälen dezentralisiert wird.
 
-Decentralized science allows for more diverse funding sources (from [DAOs](/dao/), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible data and methods, and by providing incentives for reproducibility.
+Dezentralisierte Wissenschaft ermöglicht eine Vielzahl von Finanzierungsmöglichkeiten (von [DAOs](/dao/), [quadratischen Spenden](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) bis hin zu Crowdfunding und mehr), einen leichteren Zugang zu Daten und Methoden sowie Anreize für Reproduzierbarkeit.
 
 ### Juan Benet - Die DeSci-Bewegung
 
