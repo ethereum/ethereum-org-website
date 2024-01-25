@@ -1,6 +1,6 @@
 ---
 title: La cadena de baliza
-description: "Descubra todo lo relacionado con la cadena de baliza: la actualización que introdujo la prueba de participación en Ethereum."
+description: 'Descubra todo lo relacionado con la cadena de baliza: la actualización que introdujo la prueba de participación en Ethereum.'
 lang: es
 template: upgrade
 image: /upgrades/core.png

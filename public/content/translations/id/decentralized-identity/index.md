@@ -109,7 +109,7 @@ Berikut contoh bagaimana cara kerja pengesahan di dalam rantai praktiknya:
 
 ### Token dan identitas soulbond {#soulbound}
 
-[Token soulbound](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFT yang tidak dapat ditransfer) dapat digunakan untuk mengumpulkan informasi khas untuk dompet tertentu. Hal ini menciptakan identitas di dalam rantai unik secara efektif yang terikat pada alamat Ethereum khusus yang dapat menyertakan token yang mewakili pencapaian (seperti menyelesaikan beberapa kursus daring tertentu atau melewati skor ambang batas dalam permainan) atau partisipasi komunitas.
+[Token soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT yang tidak dapat ditransfer) dapat digunakan untuk mengumpulkan informasi khas untuk dompet tertentu. Hal ini menciptakan identitas di dalam rantai unik secara efektif yang terikat pada alamat Ethereum khusus yang dapat menyertakan token yang mewakili pencapaian (seperti menyelesaikan beberapa kursus daring tertentu atau melewati skor ambang batas dalam permainan) atau partisipasi komunitas.
 
 ## Manfaat dari identitas yang terdesentralisasi {#benefits-of-decentralized-identity}
 

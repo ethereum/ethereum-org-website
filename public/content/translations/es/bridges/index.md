@@ -6,7 +6,7 @@ lang: es
 
 # Puentes en el blockchain {#prerequisites}
 
-_La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones de escalado L2, cada uno diseñado con capacidades y compensaciones particulares. A medida que aumenta el número de protocolos en las cadenas de bloques, también lo hace [la demanda de mover activos por las diferentes cadenas](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Para satisfacer esta demanda, necesitamos puentes (bridges)._
+_La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones de escalado L2, cada uno diseñado con capacidades y compensaciones particulares. A medida que aumenta el número de protocolos en las cadenas de bloques, también lo hace [la demanda de mover activos por las diferentes cadenas](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Para satisfacer esta demanda, necesitamos puentes (bridges)._
 
 <Divider />
 
@@ -30,7 +30,7 @@ Los puentes existen para conectar cadenas de bloques, permitiendo la transferenc
 
 Los puentes permiten:
 
-- la transferencia de activos e información entre cadenas
+- la transferencia de activos e información entre cadenas.
 - acceso de las DApps a las fortalezas de varias cadenas de bloques, lo que mejora sus capacidades (ya que los protocolos ahora tienen más espacio para la innovación)
 - el acceso a nuevas plataformas y el aprovechamiento de los beneficios de las diferentes cadenas
 - que los desarrolladores de diferentes ecosistemas de cadenas de bloques colaboren y creen nuevas plataformas para los usuarios

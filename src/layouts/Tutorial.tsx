@@ -2,13 +2,14 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
+  type BoxProps,
   chakra,
   Divider,
   Flex,
-  HeadingProps,
+  type HeadingProps,
   Kbd,
   Text,
-  TextProps,
+  type TextProps,
   useToken,
 } from "@chakra-ui/react"
 
@@ -46,7 +47,9 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
-const ContentContainer = (props: ChildOnlyProp) => {
+type ContentContainerProps = Pick<BoxProps, "children" | "dir">
+
+const ContentContainer = (props: ContentContainerProps) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
 
   return (
@@ -166,7 +169,10 @@ interface TutorialLayoutProps
   extends ChildOnlyProp,
     Pick<
       MdPageContent,
-      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+      | "tocItems"
+      | "lastUpdatedDate"
+      | "crowdinContributors"
+      | "contentNotTranslated"
     > {
   frontmatter: TutorialFrontmatter
   timeToRead: number
@@ -179,6 +185,7 @@ export const TutorialLayout = ({
   timeToRead,
   lastUpdatedDate,
   crowdinContributors,
+  contentNotTranslated,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const absoluteEditPath = getEditPath(relativePath)
@@ -205,7 +212,7 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        <ContentContainer>
+        <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents

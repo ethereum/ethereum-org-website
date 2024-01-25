@@ -175,9 +175,9 @@ DAO हैक पर और देखें:
 
 इथेरियम में शासन को सटीक तरह से परिभाषित नहीं किया गया है। विभिन्न समुदाय प्रतिभागियों के इस पर विविध दृष्टिकोण हैं। यहां उनमें से कुछ हैं:
 
-- [ब्लॉकचेन शासन पर नोट्स](https://vitalik.ca/general/2017/12/17/voting.html) - _विटालिक ब्यूटेरिन_
+- [ब्लॉकचेन शासन पर नोट्स](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _विटालिक ब्यूटेरिन_
 - [इथेरियम शासन कैसे काम करता है?](https://cryptotesters.com/blog/ethereum-governance) – _क्रिप्टोटेस्टर_
 - [इथेरियम शासन कैसे काम करता है](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _मीका ज़ोलटू_
 - [इथेरियम कोर डेवलपर क्या है?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _हडसन जेमिसन_
-- [शासन, भाग 2: धनतंत्र अभी भी खराब है](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _विटालिक ब्यूटेरिन_
-- [सिक्का मतदान शासन से आगे बढ़ना](https://vitalik.ca/general/2021/08/16/voting3.html) - _विटालिक ब्यूटेरिन_
+- [शासन, भाग 2: धनतंत्र अभी भी खराब है](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _विटालिक ब्यूटेरिन_
+- [सिक्का मतदान शासन से आगे बढ़ना](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _विटालिक ब्यूटेरिन_

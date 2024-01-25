@@ -1,6 +1,6 @@
 ---
 title: Danksharding
-description: "Más información sobre ProtoDanksharding y Danksharding: dos mejoras secuenciales para escalar Ethereum."
+description: 'Más información sobre ProtoDanksharding y Danksharding: dos mejoras secuenciales para escalar Ethereum.'
 lang: es
 summaryPoints:
   - Danksharding es una actualización multifase para mejorar la escalabilidad y capacidad de Ethereum.

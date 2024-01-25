@@ -156,7 +156,7 @@ _Főleg a protokollok és decentralizált alkalmazások (dapp) decentralizált f
 - [Hogyan lehet létrehozni egy DAO által működtetett digitális közösséget](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Mi az a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Mi az a holografikus konszenzus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) – [DAOstack](https://daostack.io/)
-- [A DAO-k nem vállalatok: hol van a legnagyobb jelentősége a decentralizációnak az autonóm szervezetekben – Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [A DAO-k nem vállalatok: hol van a legnagyobb jelentősége a decentralizációnak az autonóm szervezetekben – Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA és mások: egy nem teljes terminológiai útmutató](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) – [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videók {#videos}

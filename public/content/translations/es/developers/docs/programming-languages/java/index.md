@@ -5,7 +5,7 @@ lang: es
 incomplete: true
 ---
 
-<FeaturedText>Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Java</FeaturedText>
+<div class="featured">Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Java</div>
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser fiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, es decir, ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
@@ -31,7 +31,7 @@ Aprende cómo usar [Web3J](https://github.com/web3j/web3j) y Hyperledger Besu, d
 - [Escuchar eventos de contratos inteligentes de Ethereum](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Uso de Besu (Pantheon), el cliente de Java Ethereum con Linux](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Ejecución de un nodo Besu (Pantheon) de Hyperledger en las pruebas de integración de Java](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Hoja de Cheat Web3j](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
+- [Hoja de Cheat Web3j](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
 
 ## Artículos intermedios {#intermediate-articles}
 

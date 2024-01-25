@@ -208,5 +208,5 @@ ZK-STARK jest uważany za odporny na zagrożenia związane z obliczeniami kwanto
 - [Dowód wiedzy zerowej: poprawa prywatności w blockchainie](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK — Realistyczny przykład wiedzy zerowej i dogłębna analiza](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK — Twórz weryfikowalne zaufanie, nawet względem komputerów kwantowych](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Przybliżone wprowadzenie do tego, w jaki sposób możliwe są dowody zk-SNARK](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Przybliżone wprowadzenie do tego, w jaki sposób możliwe są dowody zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Czym jest dowód wiedzy zerowej i jaka jest jego rola w blockchainie?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

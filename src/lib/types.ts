@@ -188,6 +188,20 @@ export type LocaleContributions = {
 }
 
 // GitHub contributors
+export type Commit = {
+  commit: {
+    author: {
+      name: string
+      email: string
+    }
+  }
+  author: {
+    avatar_url: string
+    login: string
+    html_url: string
+  }
+}
+
 export type Author = {
   name: string
   email: string
@@ -331,4 +345,13 @@ export type StatsBoxMetric = {
   range: string
   apiUrl: string
   apiProvider: string
+}
+
+export type CommunityConference = {
+  title: string
+  to: string
+  location: string
+  description: string
+  startDate: string
+  endDate: string
 }
