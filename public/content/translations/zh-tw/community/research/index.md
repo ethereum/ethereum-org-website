@@ -10,7 +10,7 @@ lang: zh-tw
 
 ## 以太坊研究如何進行 {#how-ethereum-research-works}
 
-以太坊研究是公開透明的，體現了[去中心化科研 (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science) 的原則。 這種文化使研究工具和輸出盡可能開放且可以互動，例如通過可執行筆記本。 以太坊研究進步非常迅速，有新的發現會在開放論壇（如 [ethresear.ch](https://ethresear.ch/)）上發文和討論，而非在經過多輪同行評審後，通過傳統出版物傳達給社群。
+以太坊研究是公開透明的，體現了[去中心化科研 (DeSci)](https://hackernoon.com/desci-decentralized-science-as-our-chance-to-recover-the-real-science) 的原則。 這種文化使研究工具和輸出盡可能開放且可以互動，例如通過可執行筆記本。 以太坊研究進步非常迅速，有新的發現都會在開放論壇（如 [ethresear.ch](https://ethresear.ch/)）上發文和討論，而非經過多輪同行評審後，再透過傳統出版物傳達給社群。
 
 ## 通用研究資源 {#general-research-resources}
 
@@ -35,7 +35,7 @@ lang: zh-tw
 - 提高用戶端實現的安全性或性能；
 - 以及開發輕量用戶端。
 
-除了前瞻性研究外，以太坊還在研究將一些基本的協議重新設計，例如單時隙最終性，以實現以太坊的重大改進。 此外，效率、安全和監控共識用戶端之間的點對點網路也是重要的研究課題。
+除了前瞻性研究外，以太坊也在研究如何重新設計一些基本協議，例如單時隙最終性，以實現以太坊的重大改進。 此外，效率、安全和監控共識用戶端之間的點對點網路也是重要的研究課題。
 
 #### 背景介紹讀物 {#background-reading}
 
@@ -57,7 +57,7 @@ lang: zh-tw
 
 - 發展輕量用戶端支援；
 - 研究燃料限制；
-- 以及與新資料結構的相容性（如 Verkle 樹）。
+- 以及與新資料結構的相容性（如沃克爾樹）。
 
 #### 背景介紹讀物 {#background-reading-1}
 
@@ -70,8 +70,8 @@ lang: zh-tw
 - [狀態過期](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [狀態過期的路徑](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkel 和狀態過期提案](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
-- [歷史記錄管理](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle 樹](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [歷史紀錄管理](https://eips.ethereum.org/EIPS/eip-4444)
+- [沃克爾樹](https://vitalik.ca/general/2021/06/18/verkle.html)
 - [資料可用性取樣](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## 用戶端開發 {#client-development}
@@ -83,7 +83,7 @@ lang: zh-tw
 1. 持續追蹤區塊鏈頭部、流言區塊和處理共識邏輯的共識用戶端
 2. 支援以太坊虛擬機和執行交易及智慧型合約的執行用戶端
 
-查看[節點及用戶端頁面](/developers/docs/nodes-and-clients/)以獲得關於節點和用戶端的詳細資訊，以及所有當前用戶端實現的列表。 你也可以在[歷史記錄頁面](/history/)找到以太坊所有的歷史升級記錄。
+查看[節點及用戶端頁面](/developers/docs/nodes-and-clients/)以獲得關於節點和用戶端的詳細資訊，以及所有當前用戶端實現的列表。 你也可以在[歷史紀錄頁面](/history/)找到以太坊所有的歷史升級紀錄。
 
 ### 執行用戶端 {#execution-clients}
 
@@ -97,7 +97,7 @@ lang: zh-tw
 
 ## 擴容與性能 {#scaling-and-performance}
 
-擴容以太坊是以太坊研究者關注的重大領域。 目前的方法包括了將交易卸載到卷軸上，以及透過資料二进制大对象讓它們儘可能便宜。 以太坊擴容的相關介紹可以在我們的[擴容頁面](/developers/docs/scaling)查看。
+擴容以太坊是以太坊研究者關注的重大領域。 目前的方法包括了將交易卸載到卷軸上，以及透過資料二進位大型物件讓它們儘可能便宜。 以太坊擴容的相關介紹可以在我們的[擴容頁面](/developers/docs/scaling)查看。
 
 ### 第二層 {#layer-2}
 
@@ -124,7 +124,7 @@ lang: zh-tw
 - [區塊鏈跨鏈橋簡介](/bridges/)
 - [Vitalik 討論跨鏈橋](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [區塊鏈跨鏈橋文章](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [跨鏈橋中鎖定之資金](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [跨鏈橋中鎖定之資金](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### 近期研究 {#recent-research-3}
 
@@ -156,15 +156,15 @@ lang: zh-tw
 
 #### 近期研究 {#recent-research-5}
 
-- [FGPAs 上的橢圓曲線簽章演算法](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [FPGA 上的橢圓曲線加密演算法](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## 安全性 {#security}
 
-安全是個廣泛的議題，可能包含了垃圾訊息/詐騙預防、錢包安全、硬體安全、加密經濟安全、漏洞懸賞、應用程式測試和用戶端軟體及密鑰管理。 貢獻知識至這些領域將有助於加速主流採用。
+安全是個廣泛的議題，可能包含了垃圾訊息/詐騙預防、錢包安全、硬體安全、加密經濟安全、漏洞懸賞、應用程式測試和用戶端軟體及金鑰管理。 貢獻知識至這些領域將有助於加速主流採用。
 
 ### 密碼學與零知識證明 {#cryptography--zkp}
 
-零知識證明 (ZKP) 和密碼學都對在以太坊和其應用程式上實現隱私性及安全性非常重要。 零知識證明是一個相對年輕但快速發展的領域，有許多開放研究與開發機會。 一些可能性包括開發更高效的[Keccak 雜湊演算法](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview)實現、找到比現存更好的多項式承諾或降低橢圓曲線簽章演算法產生公鑰和驗證簽名邏輯的費用。
+零知識證明 (ZKP) 和密碼學都對在以太坊和其應用程式上實現隱私性及安全性非常重要。 零知識證明是一個相對年輕但快速發展的領域，有許多開放研究與開發機會。 一些可能性包括開發更高效的 [Keccak 雜湊演算法](https://hackmd.io/sK7v0lr8Txi1bgION1rRpw?view#Overview)實現、找到比現存更好的多項式承諾，或降低橢圓曲線簽章演算法產生公鑰和驗證簽名邏輯的費用。
 
 #### 背景介紹讀物 {#background-reading-6}
 
@@ -179,7 +179,7 @@ lang: zh-tw
 
 ### 錢包 {#wallets}
 
-以太坊錢包可以是瀏覽器插件、桌面版和手機應用程式，又或者是以太坊上的智慧型合約。 目前正在積極研究社交恢復錢包，該錢包可以降低與個人私鑰管理相關的風險。 與錢包開發相關的是研究帳戶抽象的替代形式，這是新興研究的一個重要領域。
+以太坊錢包可以是瀏覽器插件、桌面版和手機應用程式，又或者是以太坊上的智慧型合約。 目前正在積極研究社交恢復錢包，該錢包可以降低與個人金鑰管理相關的風險。 與錢包開發相關的是研究帳戶抽象的替代形式，這是新興研究的一個重要領域。
 
 #### 背景介紹讀物 {#background-reading-7}
 
@@ -194,7 +194,7 @@ lang: zh-tw
 - [專注於智慧型合約錢包的驗證](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [以太坊帳戶的未來](https://ethereum-magicians.org/t/validation-focused-smart-contract-wallets/6603)
 - [EIP-3074 AUTH 和 AUTHCALL 操作碼](https://eips.ethereum.org/EIPS/eip-3074)
-- [在外部擁有帳戶地址發佈程式碼](https://eips.ethereum.org/EIPS/eip-5003)
+- [在外部帳戶地址發佈程式碼](https://eips.ethereum.org/EIPS/eip-5003)
 
 ## 社群、教育及外展 {#community-education-and-outreach}
 
@@ -238,7 +238,7 @@ lang: zh-tw
 - [為以太坊區塊鏈設計的交易費機制：EIP-1559 的經濟學分析（Tim Roughgarden，2020 年）](https://timroughgarden.org/papers/eip1559.pdf)
 - [EIP-1559 模擬（穩健激勵群組）](https://ethereum.github.io/abm1559)
 - [由第一原理（註：最基本的命題或假設，不能被省略或刪除）了解卷軸經濟](https://barnabe.substack.com/p/understanding-rollup-economics-from?utm_source=url)
-- [Flash Boys 2.0：去中心化交易所的交易搶跑、交易記錄和共識不穩定](https://arxiv.org/abs/1904.05234)
+- [Flash Boys 2.0：去中心化交易所的交易搶跑、交易紀錄和共識不穩定](https://arxiv.org/abs/1904.05234)
 
 #### 近期研究 {#recent-research-10}
 
@@ -262,7 +262,7 @@ lang: zh-tw
 
 ### 流動性質押及衍生品 {#liquid-staking-and-derivatives}
 
-流動性質押藉由將以太幣兌換成一種代表質押以太幣，且可以用於去中心化金融的代幣，讓持有低於 32 以太幣的使用者也能獲得質押收益。 然而，流動性質押相關的激勵措施和市場動態仍在發掘階段，它對以太坊安全性的影響（例如中心化風險）也是。
+流動性質押藉由將以太幣兌換成一種代表質押以太幣，且可以用於去中心化金融的代幣，讓持有低於 32 個以太幣的使用者也能獲得質押收益。 然而，流動性質押相關的激勵措施和市場動態仍在發掘階段，它對以太坊安全性的影響（例如中心化風險）亦然。
 
 #### 背景介紹讀物 {#background-reading-12}
 
@@ -311,7 +311,7 @@ lang: zh-tw
 
 ### 去中央化金融 {#defi}
 
-去中心化金融 (DeFi) 是建立在以太坊之上的主要應用程式類別之一。 去中心化金融目標是建立可組合的「貨幣樂高」，讓使用者可以透過智慧型合約儲存、轉移、出借、借用和投資加密資產。 去中心化金融是發展快速且常常更新的領域。 需要持續對安全、效率及可存取協議進行研究。
+去中心化金融 (DeFi) 是建立在以太坊之上的主要應用程式類別之一。 去中心化金融旨在建立可組合的「貨幣樂高」，讓使用者可以透過智慧型合約儲存、轉移、出借、借用和投資加密資產。 去中心化金融是發展快速且常常更新的領域。 需要持續對安全、效率及可存取協議進行研究。
 
 #### 背景介紹讀物 {#background-reading-15}
 
@@ -325,7 +325,7 @@ lang: zh-tw
 
 ### 去中心化自治組織 {#daos}
 
-以太坊一個頗具影響力的使用案例是透過使用去中心化自治組織，以去中心化的方式進行整合。 以太坊上有許多活躍的研究，是關於如何開發和利用去中心化自治組織執行管理體係的改進形態，作為一種所需信任最小化的協調工具，大幅擴展了除了傳統公司和組織之外的選擇。
+以太坊一個頗具影響力的使用案例是透過使用去中心化自治組織，以去中心化的方式進行整合。 以太坊上有許多活躍的研究，關乎如何開發和利用去中心化自治組織執行管理體系的改進形態，作為一種所需信任最小化的協調工具，大幅擴展了除了傳統公司和組織之外的選擇。
 
 #### 背景介紹讀物 {#background-reading-16}
 
@@ -338,7 +338,7 @@ lang: zh-tw
 
 ### 開發人員工具 {#developer-tools}
 
-為以太坊開發者打造的工具進步十分迅速。 在這個領域中，有許多積極的研究和發展工作要做。
+為以太坊開發者打造的工具日新月異。 在這個領域中，有許多積極的研究和發展工作要做。
 
 #### 背景介紹讀物 {#background-reading-17}
 
@@ -352,7 +352,7 @@ lang: zh-tw
 
 - [以太坊研發 Discord 的共識工具頻道](https://discordapp.com/channels/595666850260713488/746343380900118528)
 
-### Oracles {#oracles}
+### 預言機 {#oracles}
 
 預言機透過無需許可和去中心化的方式將鏈下資料導入鏈上。 將此資料上鏈使去中心化應用程式可對現實世界的現象做出反應，如現實世界的資產價格波動、鏈下應用程式的事件，甚至是天氣變化。
 
@@ -367,7 +367,7 @@ lang: zh-tw
 
 ### 應用程式安全 {#app-security}
 
-一般發生在以太坊上的攻擊都是利用單一應用程式的漏洞，而非協議本身的漏洞。 駭客和應用程式開發者正在進行一場軍備競賽，以開發新的攻擊和防禦手段。 這表示研究和發展對保持應用程式的安全和遠離被駭一直都很重要。
+一般發生在以太坊上的攻擊都是利用單一應用程式的漏洞，而非協議本身的漏洞。 駭客和應用程式開發者正在進行一場軍備競賽，以開發新的攻擊和防禦手段。 這表示研究和發展對保持應用程式的安全、遠離被駭一直都很重要。
 
 #### 背景介紹讀物 {#background-reading-19}
 

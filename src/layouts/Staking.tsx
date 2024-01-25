@@ -182,7 +182,7 @@ export const stakingComponents = {
 
 interface IProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems"> {
+    Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> {
   frontmatter: StakingFrontmatter
 }
 
@@ -191,6 +191,7 @@ export const StakingLayout: React.FC<IProps> = ({
   frontmatter,
   slug,
   tocItems,
+  contentNotTranslated,
 }) => {
   const { t } = useTranslation("page-staking")
   // TODO: Replace with direct token implementation after UI migration is completed
@@ -251,7 +252,11 @@ export const StakingLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative" width="full">
+    <Box
+      position="relative"
+      width="full"
+      dir={contentNotTranslated ? "ltr" : "unset"}
+    >
       <HeroContainer>
         <Flex direction="column" justify="flex-start" w="full" p={8}>
           <Breadcrumbs slug={slug} mb="8" />
