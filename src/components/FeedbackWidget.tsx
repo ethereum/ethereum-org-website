@@ -100,7 +100,6 @@ const FeedbackWidget = () => {
   }, [asPath])
 
   const handleClose = (): void => {
-    console.log("HANDLE CLOSE TRIGGERED")
     onClose()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
