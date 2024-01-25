@@ -9,7 +9,7 @@ summaryPoint2: این زنجیره در ماه سپتامبر 2022 با زنجی
 summaryPoint3: زنجیره بیکن منطق اجماع و پروتکل شایعه (گاسیپ) را برای اولین بار ارائه کرد که اکنون امنیت اتریوم را تأمین می‌کند.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   زنجیره بیکن در تاریخ 1 دسامبر 2020 عرضه شد و با ارتقای The Merge در تاریخ 15 سپتامبر 2022، اثبات سهام را به عنوان مکانیزم اجماع اتریوم رسمیت داد.
 </UpgradeStatus>
 
