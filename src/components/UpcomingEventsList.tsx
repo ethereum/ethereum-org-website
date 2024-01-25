@@ -7,14 +7,14 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import CommunityConferences from "../data/community-events"
+import communityConferences from "../data/community-events"
 
 import { Button } from "./Buttons"
 import EventCard from "./EventCard"
 import InfoBanner from "./InfoBanner"
 import InlineLink from "./Link"
 
-type OrderedUpcomingEventType = CommunityConference & {
+type OrderedUpcomingEvent = CommunityConference & {
   date: string
   formattedDetails: string
 }
@@ -22,7 +22,7 @@ type OrderedUpcomingEventType = CommunityConference & {
 const UpcomingEventsList = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-    OrderedUpcomingEventType[]
+  OrderedUpcomingEvent[]
   >([])
   const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
 
@@ -37,7 +37,7 @@ const UpcomingEventsList = () => {
   }
 
   useEffect(() => {
-    const eventsList: CommunityConference[] = [...CommunityConferences]
+    const eventsList: CommunityConference[] = [...communityConferences]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 

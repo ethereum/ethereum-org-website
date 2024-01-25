@@ -1,6 +1,6 @@
 import { CommunityConference } from "@/lib/types"
 
-const CommunityConferences: CommunityConference[] = [
+const communityConferences: CommunityConference[] = [
   {
     title: "ETH Cinco de Mayo",
     startDate: "2024-02-02",
@@ -392,4 +392,4 @@ const CommunityConferences: CommunityConference[] = [
   },
 ]
 
-export default CommunityConferences
+export default communityConferences
