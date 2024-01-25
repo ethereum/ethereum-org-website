@@ -46,6 +46,10 @@ const Item = forwardRef(({ onClick, ...props }: ItemProps, ref) => (
     color="body.base"
     textDecoration="none"
     data-group
+    onFocus={(e) => {
+      e.target.scrollIntoView({ block: "nearest" })
+    }}
+    scrollMarginY="16"
     _hover={{ bg: "primary.lowContrast", textDecoration: "none" }}
     _focus={{ bg: "primary.lowContrast" }}
     sx={{
@@ -297,15 +301,10 @@ const LanguagePicker = ({
                     bg="background.base"
                     color="body.base"
                     onKeyDown={(e) => {
-                      // If Enter, navigate to first result
+                      // Navigate to first result on enter
                       if (e.key === "Enter") {
                         e.preventDefault()
                         firstItemRef.current?.click()
-                      }
-                      // If ArrowDown, move focus to first result
-                      if (e.key === "ArrowDown") {
-                        e.preventDefault()
-                        firstItemRef.current?.focus()
                       }
                     }}
                   />
@@ -383,7 +382,10 @@ const LanguagePicker = ({
               >
                 <Text fontSize="xs" textAlign="center" color="body.base">
                   Help us translate ethereum.org.{" "}
-                  <BaseLink href="/contributing/translation-program" onClick={onMenuClose}>
+                  <BaseLink
+                    href="/contributing/translation-program"
+                    onClick={onMenuClose}
+                  >
                     Learn more
                   </BaseLink>
                 </Text>
