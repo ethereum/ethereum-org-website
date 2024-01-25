@@ -3,16 +3,15 @@ import { Box } from "@chakra-ui/react"
 
 import type { CommunityConference } from "@/lib/types"
 
+import { Button } from "@/components/Buttons"
+import EventCard from "@/components/EventCard"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink from "@/components/Link"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import communityConferences from "../data/community-events"
-
-import { Button } from "./Buttons"
-import EventCard from "./EventCard"
-import InfoBanner from "./InfoBanner"
-import InlineLink from "./Link"
+import communityConferences from "@/data/community-events"
 
 type OrderedUpcomingEvent = CommunityConference & {
   date: string
