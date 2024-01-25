@@ -4,17 +4,21 @@ import { Button, type ButtonProps } from "@/components/Buttons"
 
 import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
-export type CallToActionProps = Omit<ButtonProps, "children" | "content"> & {
+export type CallToActionProps = Omit<
+  ButtonProps,
+  "children" | "content" | "variant" | "isSecondary"
+> & {
   content: ReactNode
   matomo: MatomoEventOptions
+  index: number
 }
 
-export function CallToAction({
+export const CallToAction = ({
   content,
   matomo,
-  key: index,
+  index,
   ...props
-}: CallToActionProps) {
+}: CallToActionProps) => {
   const handleClick = () => trackCustomEvent(matomo)
 
   const buttonProps: ButtonProps = {

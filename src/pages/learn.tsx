@@ -198,7 +198,6 @@ const LearnPage = () => {
           eventAction: "click",
           eventName: "lets get started",
         },
-        variant: "solid",
       },
     ],
   }
