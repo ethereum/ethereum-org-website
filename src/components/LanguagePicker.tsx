@@ -113,7 +113,8 @@ const LanguagePicker = ({
   const firstItemRef = useRef<HTMLAnchorElement>(null)
   const [filterValue, setFilterValue] = useState("")
 
-  if (!(progressData?.length > 0)) throw new Error("Missing translation progress data; check GitHub action")
+  if (!(progressData?.length > 0))
+    throw new Error("Missing translation progress data; check GitHub action")
 
   const totalWords = progressData[0].words.total
 
@@ -151,9 +152,13 @@ const LanguagePicker = ({
       ({ languageId }) => i18nConfigItem.crowdinCode === languageId
     )
 
-    const approvalProgress = localeOption === DEFAULT_LOCALE ? 100 : (dataItem?.approvalProgress || 0)
+    const approvalProgress =
+      localeOption === DEFAULT_LOCALE ? 100 : dataItem?.approvalProgress || 0
 
-    const wordsApproved = localeOption === DEFAULT_LOCALE ? (totalWords || 0) : (dataItem?.words.approved || 0)
+    const wordsApproved =
+      localeOption === DEFAULT_LOCALE
+        ? totalWords || 0
+        : dataItem?.words.approved || 0
 
     return {
       localeOption,
@@ -209,11 +214,19 @@ const LanguagePicker = ({
             <MenuList
               position="relative"
               overflow="auto"
-              borderRadius={{ base: "base", md: "none" }}
+              borderRadius="base"
               py="0"
               {...props}
             >
-              <Flex justifyContent="end" hideFrom="md">
+              {/* Mobile Close bar */}
+              <Flex
+                justifyContent="end"
+                hideFrom="md"
+                position="sticky"
+                zIndex="sticky"
+                top="0"
+                bg="background.base"
+              >
                 <Button
                   p="4"
                   variant="ghost"
@@ -225,6 +238,8 @@ const LanguagePicker = ({
                   Close
                 </Button>
               </Flex>
+
+              {/* Main Language selection menu */}
               <Box
                 position="relative"
                 w="100%"
@@ -294,6 +309,7 @@ const LanguagePicker = ({
                     }}
                   />
                 </MenuItem>
+
                 {filteredNames.map(
                   (
                     {
@@ -313,7 +329,9 @@ const LanguagePicker = ({
                       approvalProgress === 0
                         ? "<" + percentage.replace("0", "1")
                         : percentage
-                    const words = new Intl.NumberFormat(locale!).format(wordsApproved)
+                    const words = new Intl.NumberFormat(locale!).format(
+                      wordsApproved
+                    )
                     return (
                       <Item
                         key={"item-" + localeOption}
@@ -346,10 +364,29 @@ const LanguagePicker = ({
                     )
                   }
                 )}
+
                 {filteredNames.length === 0 && (
                   <NoResultsCallout onMenuClose={onMenuClose} />
                 )}
               </Box>
+
+              {/* Footer callout */}
+              <Flex
+                borderTop="2px"
+                borderColor="primary.base"
+                bg="primary.lowContrast"
+                p="3"
+                position="sticky"
+                bottom="0"
+                justifyContent="center"
+              >
+                <Text fontSize="xs" textAlign="center" color="body.base">
+                  Help us translate ethereum.org.{" "}
+                  <BaseLink href="/contributing/translation-program" onClick={onMenuClose}>
+                    Learn more
+                  </BaseLink>
+                </Text>
+              </Flex>
             </MenuList>
           </>
         )
