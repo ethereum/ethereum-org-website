@@ -1,8 +1,8 @@
 import localFont from "next/font/local"
 
-// downloaded from https://github.com/rsms/inter/
+// downloaded from https://fonts.google.com/specimen/Inter
 export const inter = localFont({
-  src: "../fonts/InterVariable.woff2",
+  src: "../fonts/Inter-VariableFont_slnt,wght.ttf",
   display: "swap",
   fallback: ["sans-serif"],
 })
