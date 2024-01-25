@@ -9,7 +9,7 @@ summaryPoint2: Elle a été fusionnée avec la chaîne originale de preuve de tr
 summaryPoint3: La Chaîne phare a introduit la logique de consensus et le protocole de commutation de bloc qui sécurise désormais Ethereum.
 ---
 
-<UpgradeStatus isShipped dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Chaîne phare a été présentée le 1er décembre 2020 et a formalisé la preuve d'enjeu comme mécanisme de consensus d'Ethereum avec La Fusion du 15 septembre 2022.
 </UpgradeStatus>
 
