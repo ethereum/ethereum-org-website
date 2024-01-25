@@ -169,7 +169,7 @@ Multiple projects provide implementations of Plasma that you can integrate into 
 
 - [Learn Plasma](https://www.learnplasma.org/en/)
 - [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [Sidechains vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [The Life and Death of Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 

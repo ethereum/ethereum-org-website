@@ -117,7 +117,7 @@ EIP-4337 اولین گام به سمت پشتیبانی بومی کیف پول �
 - [«چرا انتزاع حساب یک تغییردهنده بازی برای dappها است» از Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - [«انتزاع حساب ELI5» از Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [یادداشت‌های «راهی به انتزاع حساب» از ویتالیک](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [پست وبلاگ Vitalik با موضوع کیف پول‌های بازیابی اجتماعی](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [پست وبلاگ Vitalik با موضوع کیف پول‌های بازیابی اجتماعی](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [یادداشت‌های EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [اسناد EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [یادداشت‌های EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

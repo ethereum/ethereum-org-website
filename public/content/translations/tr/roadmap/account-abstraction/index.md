@@ -117,7 +117,7 @@ Akıllı sözleşme cüzdanları çoktan beri mevcut, ancak bu cüzdanları olab
 - ["Hesap soyutlama neden merkeziyetsiz uygulamalar için ezber bozan bir şey?", Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Hesap soyutlama ELI5", Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Vitalik'in "Hesap Soyutlamaya Doğru" notları](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitalik'in sosyal toparlanma cüzdanları hakkındaki blog gönderisi](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Vitalik'in sosyal toparlanma cüzdanları hakkındaki blog gönderisi](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [EIP-2938 notları](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [EIP-2938 belgeleri](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 notları](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

@@ -117,7 +117,7 @@ Las billeteras de contrato inteligente ya están disponibles, pero existen más 
 - [«¿Por qué la abstracción de cuenta es un punto de inflexión para DApps?» Devcon, Bogotá](https://www.youtube.com/watch?v=OwppworJGzs)
 - [«ELI5 La abstracción de cuenta» en Devcon, Bogotá](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Notas de Vitalik «El camino a la abstracción de cuenta»](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Publicación de blog de Vitalik sobre carteras de recuperación social](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Publicación de blog de Vitalik sobre carteras de recuperación social](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Notas de EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Documentación de EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Notas de EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

@@ -18,7 +18,7 @@ La preuve d'enjeu nécessite que les nœuds, appelés validateurs, soumettent ex
 
 La preuve de travail est beaucoup plus gourmande en énergie car de l'électricité est consommée lors du processus de minage. La preuve d'enjeu, en revanche, ne nécessite qu'une très faible quantité d'énergie - les validateurs Ethereum peuvent même fonctionner sur un appareil à faible puissance tel qu'un Raspberry Pi. Le mécanisme de preuve d'enjeu d'Ethereum est considéré comme plus sûr que la preuve de travail car le coût d'une attaque est plus élevé et les conséquences pour un attaquant sont plus graves.
 
-La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le blog de [Vitalik Buterin](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ainsi que le débat entre Justin Drake et Lyn Alden offrent un bon résumé des arguments.
+La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le blog de [Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ainsi que le débat entre Justin Drake et Lyn Alden offrent un bon résumé des arguments.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ La « manipulation d'enjeu » est une catégorie d'attaque sur les réseaux de p
 Le « sanction communautaire » est la capacité de la communauté à coordonner une fourche de la blockchain en réponse à une attaque. Elle permet à la communauté de se remettre d'une attaque ayant finalisé une chaîne malhonnête. La répression sociale peut également être utilisée contre les attaques de censure.
 
 - [En savoir plus sur la sanction communautaire](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin à propos des sanctions communautaires](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin à propos des sanctions communautaires](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Vais-je être sanctionné ? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ En tant que validateur, il est très difficile d'être sanctionné à moins de v
 
 Le problème de l'absence d'enjeu est un problème conceptuel avec certains mécanismes de preuve d'enjeu où il n'y a que des récompenses et aucune pénalité. Si rien n'est en jeu, un validateur pragmatique est tout aussi heureux d'attester de n'importe quelle fourche, voire de plusieurs fourches, de la blockchain, car cela augmente ses récompenses. Ethereum contourne ce problème en utilisant des conditions de finalité et des sanctions pour garantir une chaîne canonique unique.
 
-[En savoir plus le problème dit de l'absence d'enjeu](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[En savoir plus le problème dit de l'absence d'enjeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## Qu'est-ce que l'algorithme de choix de fourche ? {#what-is-a-fork-choice-algorithm}
 

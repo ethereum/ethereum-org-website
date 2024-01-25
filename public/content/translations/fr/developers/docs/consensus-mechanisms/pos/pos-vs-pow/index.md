@@ -65,5 +65,5 @@ Regardez Justin Drake expliquer les avantages de la preuve d'enjeu par rapport �
 ## Complément d'information {#further-reading}
 
 - [La philosophie de conception de la preuve d'enjeu par Vitalik](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [Les FAQ de Vitalik sur la preuve d'enjeu](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Les FAQ de Vitalik sur la preuve d'enjeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 - [Vidéo de « Simply Explained » sur pas vs pow](https://www.youtube.com/watch?v=M3EFi_POhps)

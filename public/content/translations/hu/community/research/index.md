@@ -71,7 +71,7 @@ A végrehajtási réteg a tranzakciók feldolgozását végzi, az [Ethereum virt
 - [Utak a státusz lejáratának beállításához](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkle és státusz lejáratának beállítása](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Előzmények kezelése](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle-fák](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle-fák](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Adatelérhetőség mintavétele](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Kliensfejlesztés {#client-development}

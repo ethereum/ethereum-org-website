@@ -109,7 +109,7 @@ Voici un exemple pour montrer comment les attestations sur la chaîne pourraient
 
 ### Jetons d'âme et identité {#soulbound}
 
-[Les jetons d'âme](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFT non transférables) pourraient être utilisés pour collecter des informations propres à un portefeuille spécifique. Cela crée effectivement une identité unique sur la chaîne, liée à une adresse Ethereum particulière, qui peut inclure des jetons représentant des réalisations (par exemple, terminer un cours en ligne spécifique ou atteindre un score seuil dans un jeu) ou la participation à une communauté.
+[Les jetons d'âme](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT non transférables) pourraient être utilisés pour collecter des informations propres à un portefeuille spécifique. Cela crée effectivement une identité unique sur la chaîne, liée à une adresse Ethereum particulière, qui peut inclure des jetons représentant des réalisations (par exemple, terminer un cours en ligne spécifique ou atteindre un score seuil dans un jeu) ou la participation à une communauté.
 
 ## Avantages d'une identité décentralisée {#benefits-of-decentralized-identity}
 

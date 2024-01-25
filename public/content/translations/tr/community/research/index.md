@@ -71,7 +71,7 @@ Yürütüm katmanı, işlemlerin yürütülmesi, [Ethereum sanal makinesinin (EV
 - [Durum sonlanmasına giden yollar](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkel ve durum sonlanması teklifleri](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Geçmiş yönetimi](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Ağaçları](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle Ağaçları](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Veri kullanılabilirlik örneklendirmesi](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## İstemci Geliştirme {#client-development}
