@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 
 import type { CommunityConference } from "@/lib/types"
@@ -7,7 +8,6 @@ import { Button } from "@/components/Buttons"
 import EventCard from "@/components/EventCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
-import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -19,9 +19,10 @@ type OrderedUpcomingEvent = CommunityConference & {
 }
 
 const UpcomingEventsList = () => {
+  const { t } = useTranslation("page-community")
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-  OrderedUpcomingEvent[]
+    OrderedUpcomingEvent[]
   >([])
   const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
 
@@ -84,9 +85,9 @@ const UpcomingEventsList = () => {
   if (orderedUpcomingEvents.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
-        <Translation id="page-community-upcoming-events-no-events" />{" "}
+        {t("page-community-upcoming-events-no-events")}{" "}
         <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
-          <Translation id="page-community:page-community-please-add-to-page" />
+          {t("page-community-please-add-to-page")}
         </InlineLink>
       </InfoBanner>
     )
@@ -140,7 +141,7 @@ const UpcomingEventsList = () => {
       >
         {maxRange <= orderedUpcomingEvents.length && (
           <Button onClick={loadMoreEvents}>
-            <Translation id="page-community:page-community-upcoming-events-load-more" />
+            {t("page-community-upcoming-events-load-more")}
           </Button>
         )}
       </Box>
