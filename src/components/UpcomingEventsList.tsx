@@ -27,7 +27,7 @@ interface IOrderedUpcomingEventType extends ICommunityEventData {
   formattedDetails: string
 }
 
-const UpcomingEventsList: React.FC = () => {
+const UpcomingEventsList = () => {
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
     Array<IOrderedUpcomingEventType>

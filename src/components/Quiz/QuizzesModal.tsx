@@ -10,12 +10,12 @@ import {
 
 import { QuizStatus } from "@/lib/types"
 
-interface IProps extends Omit<ModalProps, "isCentered" | "scrollBehavior"> {
+type QuizzesModalProps = Omit<ModalProps, "isCentered" | "scrollBehavior"> & {
   children: React.ReactNode
   quizStatus: QuizStatus
 }
 
-const QuizzesModal: React.FC<IProps> = ({ children, quizStatus, ...rest }) => {
+const QuizzesModal = ({ children, quizStatus, ...rest }: QuizzesModalProps) => {
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
       return "neutral"

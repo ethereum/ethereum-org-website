@@ -25,11 +25,11 @@ const colors = [
   "tagPink",
 ] as const
 
-export interface IProps {
+export type TutorialTagsProps = {
   tags: Array<string>
 }
 
-const TutorialTags: React.FC<IProps> = ({ tags }) => {
+const TutorialTags = ({ tags }: TutorialTagsProps) => {
   return (
     <>
       {tags.map((tag, idx) => {

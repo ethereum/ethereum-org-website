@@ -16,6 +16,7 @@ import type {
 } from "@/lib/interfaces"
 
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -345,4 +346,12 @@ export type StatsBoxMetric = {
   range: string
   apiUrl: string
   apiProvider: string
+}
+
+export type SimulatorNavProps = {
+  nav: SimulatorNav
+}
+
+export type PhoneScreenProps = SimulatorNavProps & {
+  ctaLabel: string
 }
