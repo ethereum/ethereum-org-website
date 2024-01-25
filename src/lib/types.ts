@@ -227,6 +227,7 @@ export type LocaleDisplayInfo = {
   targetName: string
   englishName: string
   approvalProgress: number
+  wordsApproved: number
 }
 
 // GitHub contributors

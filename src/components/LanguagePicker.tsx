@@ -38,6 +38,7 @@ const Item = forwardRef(({ onClick, ...props }: ItemProps, ref) => (
     ref={ref}
     flexDir="column"
     w="full"
+    mb="1"
     onClick={onClick}
     alignItems="start"
     borderRadius="base"
@@ -45,8 +46,8 @@ const Item = forwardRef(({ onClick, ...props }: ItemProps, ref) => (
     color="body.base"
     textDecoration="none"
     data-group
-    _hover={{ bg: "background.base", textDecoration: "none" }}
-    _focus={{ bg: "background.base" }}
+    _hover={{ bg: "primary.lowContrast", textDecoration: "none" }}
+    _focus={{ bg: "primary.lowContrast" }}
     sx={{
       p: {
         textDecoration: "none",
@@ -63,10 +64,8 @@ const Progress = ({ value }: Pick<ProgressProps, "value">) => (
   <ChakraProgress
     value={value}
     h="0.5"
-    mt="1"
     w="full"
-    borderRadius="none"
-    bg="background.base"
+    bg="body.light"
     sx={{
       "[role=progressbar]": {
         backgroundColor: "primary.highContrast",
@@ -114,6 +113,10 @@ const LanguagePicker = ({
   const firstItemRef = useRef<HTMLAnchorElement>(null)
   const [filterValue, setFilterValue] = useState("")
 
+  if (!(progressData?.length > 0)) throw new Error("Missing translation progress data; check GitHub action")
+
+  const totalWords = progressData[0].words.total
+
   const localeToDisplayInfo = (localeOption: string): LocaleDisplayInfo => {
     const i18nConfigItem = i18nConfig.find(({ code }) => localeOption === code)
     if (!i18nConfigItem)
@@ -143,11 +146,14 @@ const LanguagePicker = ({
       throw new Error("Missing language display name, locale: " + localeOption)
     }
 
+    // English will not have a dataItem
     const dataItem = progressData.find(
       ({ languageId }) => i18nConfigItem.crowdinCode === languageId
     )
-    const approvalProgress =
-      dataItem?.approvalProgress || (localeOption === DEFAULT_LOCALE ? 100 : 0)
+
+    const approvalProgress = localeOption === DEFAULT_LOCALE ? 100 : (dataItem?.approvalProgress || 0)
+
+    const wordsApproved = localeOption === DEFAULT_LOCALE ? (totalWords || 0) : (dataItem?.words.approved || 0)
 
     return {
       localeOption,
@@ -155,6 +161,7 @@ const LanguagePicker = ({
       sourceName,
       targetName,
       englishName,
+      wordsApproved,
     }
   }
 
@@ -223,13 +230,13 @@ const LanguagePicker = ({
                 w="100%"
                 minH="calc(100% - 53px)" // Fill height with space for close button on mobile
                 p="4"
-                bg="primary.lowContrast"
-                sx={{ "[role=menuitem]": { p: "2" } }}
+                bg="background.highlight"
+                sx={{ "[role=menuitem]": { py: "3", px: "2" } }}
               >
                 {browserLocaleInfo && (
                   <>
                     <Text fontSize="xs" color="body.medium">
-                      Browser default
+                      Browser language
                     </Text>
                     <Item
                       key={`item-${browserLocale}`}
@@ -249,7 +256,7 @@ const LanguagePicker = ({
                       </Text>
                       <Progress value={browserLocaleInfo.approvalProgress} />
                     </Item>
-                    <MenuDivider borderColor="body.medium" my="4" />
+                    <MenuDivider borderColor="body.medium" my="4" mx="-2" />
                   </>
                 )}
 
@@ -289,7 +296,13 @@ const LanguagePicker = ({
                 </MenuItem>
                 {filteredNames.map(
                   (
-                    { localeOption, sourceName, targetName, approvalProgress },
+                    {
+                      localeOption,
+                      sourceName,
+                      targetName,
+                      approvalProgress,
+                      wordsApproved,
+                    },
                     index
                   ) => {
                     const firstResult = index === 0
@@ -300,6 +313,7 @@ const LanguagePicker = ({
                       approvalProgress === 0
                         ? "<" + percentage.replace("0", "1")
                         : percentage
+                    const words = new Intl.NumberFormat(locale!).format(wordsApproved)
                     return (
                       <Item
                         key={"item-" + localeOption}
@@ -308,28 +322,25 @@ const LanguagePicker = ({
                         ref={firstResult ? firstItemRef : null}
                         onClick={onMenuClose}
                       >
-                        <Text fontSize="lg" color="body.base">
+                        <Text fontSize="lg" color="primary.base">
                           {targetName}
                         </Text>
-                        <Flex w="full">
-                          <Text
-                            textTransform="uppercase"
-                            fontSize="xs"
-                            color="body.medium"
-                            maxW="full"
-                          >
-                            {sourceName} ·{" "}
-                            <Text
-                              as="span"
-                              textTransform="capitalize"
-                              fontSize="xs"
-                              color="body.medium"
-                              maxW="full"
-                            >
-                              {progress} translated
-                            </Text>
-                          </Text>
-                        </Flex>
+                        <Text
+                          textTransform="uppercase"
+                          fontSize="sm"
+                          color="body.base"
+                          maxW="full"
+                        >
+                          {sourceName}
+                        </Text>
+                        <Text
+                          textTransform="lowercase"
+                          fontSize="xs"
+                          color="body.medium"
+                          maxW="full"
+                        >
+                          {progress} translated • {words} words
+                        </Text>
                         <Progress value={approvalProgress} />
                       </Item>
                     )
