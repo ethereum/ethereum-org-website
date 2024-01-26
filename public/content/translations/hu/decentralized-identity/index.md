@@ -109,7 +109,7 @@ A következő példa bemutatja, hogyan működik a láncon belüli tanúsítás 
 
 ### Egyénhez kötött tokenek és identitás {#soulbound}
 
-Az [egyénhez kötött tokeneket](https://vitalik.ca/general/2022/01/26/soulbound.html) (nem átadható NFT-k) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
+Az [egyénhez kötött tokeneket](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nem átadható NFT-k) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
 
 ## A decentralizált identitás előnyei {#benefits-of-decentralized-identity}
 

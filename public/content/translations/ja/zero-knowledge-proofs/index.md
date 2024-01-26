@@ -208,5 +208,5 @@ ZK-STARK は、暗号化に耐衝突ハッシュを使用するため、量子�
 - [ゼロ知識証明: ブロックチェーンでのプライバシーの強化](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — ゼロ知識の実例と深掘り](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK: 検証可能な信頼の創造 量子コンピュータに対する備え](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [zk-SNARK がいかにして実現されるのかについての概要の紹介](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [zk-SNARK がいかにして実現されるのかについての概要の紹介](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [ゼロ知識証明とブロックチェーンにおけるその役割について](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

@@ -18,7 +18,7 @@ A proof-of-stake-hez validátor szerepű csomópontokra van szükség, amelyek e
 
 A proof-of-work sokkal eneriaigényesebb, mert a bányászati folyamatban elektromosságot égetnek el. A proof-of-stake ezzel szemben csak nagyon kevés energiát igényel – az Ethereum validátorokat igen alacsony kapacitású eszközön is futtathatják, mint amilyen a Raspberry Pi. Az Ethereum proof-of-stake mechanizmusát sokkal biztonságosabbnak vélik, mint a proof-of-work metódust, mert a támadás költsége sokkal nagyobb, a támadót pedig sokkal súlyosabb következmények sújtják.
 
-A proof-of-work versus proof-of-stake egy állandó téma. [Vitalik Buterin blogja](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work), valamint a Justin Drake és Lyn Alden közötti vita remekül összefoglalja az érveket.
+A proof-of-work versus proof-of-stake egy állandó téma. [Vitalik Buterin blogja](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work), valamint a Justin Drake és Lyn Alden közötti vita remekül összefoglalja az érveket.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ A letét grinding egy proof-of-stake hálózat elleni támadás, ahol a támadó
 A közösségi slashing a közösség azon lehetősége, hogy egy támadás esetén eldöntse a blokklánc elágazását. Ez lehetővé teszi a közösség számára, hogy helyreálljon egy helytelen láncot véglegesítő támadás esetén. A közösségi slashing a cenzoráló támadások ellen is használható.
 
 - [Bővebben a közösségi slashingről](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin a közösségi slashingről](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin a közösségi slashingről](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Engem is érhet súlyos büntetés (slashing)? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Validátorként nehéz súlyos büntetést szerezni, hacsak nem valaki szándék
 
 A nincs kockázat probléma egy koncepcionális hiányosság néhány proof-of-stake mechanizmus esetén, ahol csak jutalmak vannak, s nincsenek büntetések. Ha nincs kockázat, tehát nem lehet a letétet elveszíteni, akkor a gyakorlatias validátor ugyanúgy tanúsítja bármelyik vagy akár több elágazását is a blokkláncnak, mert ebből több jutalmat kap. Az Ethereum ezt úgy kezeli, hogy véglegességi feltételeket szab és létezik súlyos büntetés, így biztosítható a kanonikus lánc.
 
-[Bővebben a nincs kockázat problémáról](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Bővebben a nincs kockázat problémáról](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## Mi az az elágazásválasztó-algoritmus? {#what-is-a-fork-choice-algorithm}
 

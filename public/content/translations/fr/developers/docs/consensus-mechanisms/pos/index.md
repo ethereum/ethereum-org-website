@@ -79,10 +79,10 @@ Ethereum n’a pas toujours été un réseau de preuve d'enjeu. Ethereum utilisa
 
 ## Complément d'information {#further-reading}
 
-- [FAQ Preuve d'enjeu](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [FAQ Preuve d'enjeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Qu'est-ce qu'une Preuve d'enjeu ?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [Qu'est-ce qu'une preuve d'enjeu et pourquoi c'est important ?](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [Une Preuve d'enjeu pourquoi faire ? (Nov 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Une Preuve d'enjeu pourquoi faire ? (Nov 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Preuve d'enjeu : comment j'ai appris à aimer la subjectivité faible ?](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Attaque et défense des preuves d'enjeu pour Ethereum](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Une philosophie de design pour la Preuve d'enjeu](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

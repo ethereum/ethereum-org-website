@@ -833,7 +833,7 @@ const RunANodePage = () => {
             </InlineLink>
           </li>
           <li>
-            <InlineLink to="https://vitalik.ca/general/2021/05/23/scaling.html">
+            <InlineLink to="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
               {t("page-run-a-node-further-reading-3-link")}
             </InlineLink>{" "}
             -{" "}
