@@ -71,7 +71,7 @@ A camada de execução se preocupa com a execução de transações, com a execu
 - [Caminhos para a expiração do estado](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkel e proposta de expiração de estado](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Gerenciamento de histórico](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Amostragem da disponibilidade dos dados](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Desenvolvimento de cliente {#client-development}

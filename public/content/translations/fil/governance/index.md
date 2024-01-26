@@ -175,9 +175,9 @@ Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Set
 
 Walang partikular na pagpapakahulugan ang pamamahala sa Ethereum. May iba't ibang pananaw dito ang iba't ibang miyembro ng komunidad. Narito ang ilan sa mga ito:
 
-- [Mga Tala sa Pamamahala ng Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Mga Tala sa Pamamahala ng Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Paano gumagana ang Pamamahala ng Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Paano gumagana ang pamamahala ng Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Ano ang Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Pamamahala, Bahagi 2: Hindi Pa Rin Maganda ang Plutocracy](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Higitan ang coin voting governance](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Pamamahala, Bahagi 2: Hindi Pa Rin Maganda ang Plutocracy](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Higitan ang coin voting governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

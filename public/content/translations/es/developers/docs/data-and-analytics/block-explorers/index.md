@@ -81,7 +81,7 @@ Los exploradores de bloques se han convertido en un lugar común para que las pe
 - Hacia: La dirección del receptor o contrato inteligente con el que interactúa la transacción
 - Tokens transferidos: Todos los tokens que fueron transferidos como parte de la transacción
 - Valor: El valor total de ETH transferidos
-- Comisión de transacción: La cantidad pagada para que el minero procese la transacción (precio del gas \* gas usado)
+- Comisión de transacción: La cantidad pagada para que el minero procese la transacción (precio del gas * gas usado)
 
 **Datos avanzados**
 

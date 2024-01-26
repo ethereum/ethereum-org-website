@@ -208,7 +208,7 @@ Açıklandığı gibi, iyimser toplamalar, veri erişilebilirliğini garanti etm
 
 Ana Ethereum zinciri, blokların ne kadar veriyi tutabileceğine dair sınırlamalar getirir ve bu, gaz birimleriyle ifade edilir ([ortalama blok boyutu](/developers/docs/blocks/#block-size) 15 milyon gazdır). Bu, her işlemin ne kadar gaz kullanabileceğini kısıtlasa da, aynı zamanda her işlemle ilişkili veriyi azaltarak blok başına işlenen işlem sayısını artırabileceğimiz anlamına gelir ve bu durum ölçeklenebilirliği doğrudan artırır.
 
-İyimser toplamalar, işlem verisi sıkıştırmasını gerçekleştirmek ve TPS oranlarını artırmak için birkaç teknik kullanır. Örneğin [bu makale](https://vitalik.ca/general/2021/01/05/rollup.html), temel bir kullanıcı işleminin (ether gönderme) Ana Ağ'da ürettiği veri miktarı ile aynı işlemin bir toplamada ürettiği veri miktarını karşılaştırıyor:
+İyimser toplamalar, işlem verisi sıkıştırmasını gerçekleştirmek ve TPS oranlarını artırmak için birkaç teknik kullanır. Örneğin [bu makale](https://vitalik.eth.limo/general/2021/01/05/rollup.html), temel bir kullanıcı işleminin (ether gönderme) Ana Ağ'da ürettiği veri miktarı ile aynı işlemin bir toplamada ürettiği veri miktarını karşılaştırıyor:
 
 | Parametre  | Ethereum (L1)           | Toplama (L2) |
 | ---------- | ----------------------- | ------------ |

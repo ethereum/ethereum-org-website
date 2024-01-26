@@ -24,7 +24,7 @@ Exemple de mot de passe faible : CuteFluffyKittens!
 Exemple de mot de passe fort : ymv\*azu.EAC8eyp8umf
 ```
 
-Une autre erreur courante est d'utiliser des mots de passe qui peuvent être facilement devinés par le biais de l'[ingénierie sociale](<https://wikipedia.org/wiki/Social_engineering_(security)>). Par exemple, le fait d'inclure le nom de jeune fille de votre mère, le nom de vos enfants ou de votre animal de compagnie, ou encore des dates d'anniversaire dans votre mot de passe n'est pas sécurisé et augmente le risque que votre mot de passe soit compromis.
+Une autre erreur courante est d'utiliser des mots de passe qui peuvent être facilement devinés par le biais de l'[ingénierie sociale](https://wikipedia.org/wiki/Social_engineering_(security)). Par exemple, le fait d'inclure le nom de jeune fille de votre mère, le nom de vos enfants ou de votre animal de compagnie, ou encore des dates d'anniversaire dans votre mot de passe n'est pas sécurisé et augmente le risque que votre mot de passe soit compromis.
 
 #### Bonnes pratiques pour des mots de passe forts : {#good-password-practices}
 
@@ -263,7 +263,6 @@ Les arnaques au airdrop : il s'agit d'un projet factice de distribution d'actif 
 
 ### Sécurité sur le Web {#reading-web-security}
 
-- [This is why you shouldn't use texts for two-factor authentication](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Up to 3 million devices infected by malware-laced Chrome and Edge add-ons](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [How to Create a Strong Password — That You Won’t Forget](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [What is a security key?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
@@ -271,7 +270,7 @@ Les arnaques au airdrop : il s'agit d'un projet factice de distribution d'actif 
 ### Sécurité des cryptomonnaies {#reading-crypto-security}
 
 - [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 Ways to Stay Safe in Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Security issues in common crypto communication software](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
 - [Security Guide For Dummies And Smart People Too](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

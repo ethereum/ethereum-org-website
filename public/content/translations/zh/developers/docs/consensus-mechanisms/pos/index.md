@@ -79,10 +79,10 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [Proof of Stake FAQ](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Proof of Stake FAQ](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [为什么采用权益证明（2020 年 11 月）](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [为什么采用权益证明（2020 年 11 月）](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [权益证明：我如何爱上弱主观性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [权益证明以太坊的攻击和防御](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [权益证明设计原则](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
