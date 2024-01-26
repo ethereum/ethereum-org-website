@@ -30,6 +30,7 @@ import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
 import WalletTable from "@/components/FindWallet/WalletTable"
 import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
 import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
@@ -138,7 +139,13 @@ const FindWalletPage = () => {
   }
 
   return (
-    <Flex as={MainArticle} direction="column" position="relative" w="full">
+    <Flex
+      as={MainArticle}
+      direction="column"
+      position="relative"
+      w="full"
+      suppressHydrationWarning
+    >
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -166,7 +173,12 @@ const FindWalletPage = () => {
             {t("page-find-wallet-title")}
           </OldHeading>
           <Subtitle>{t("page-find-wallet-description")}</Subtitle>
-          <Subtitle>{t("page-find-wallet-desc-2")}</Subtitle>
+          <Subtitle>
+            {t("page-find-wallet-desc-2")}{" "}
+            <InlineLink to="/wallets">
+              {t("page-find-wallet-desc-2-wallets-link")}
+            </InlineLink>
+          </Subtitle>
         </Box>
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
