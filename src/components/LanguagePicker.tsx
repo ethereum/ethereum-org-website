@@ -70,9 +70,14 @@ const Progress = ({ value }: Pick<ProgressProps, "value">) => (
     h="0.5"
     w="full"
     bg="body.light"
-    sx={{
+    _groupHover={{
       "[role=progressbar]": {
         backgroundColor: "primary.highContrast",
+      },
+    }}
+    sx={{
+      "[role=progressbar]": {
+        backgroundColor: "body.medium",
       },
     }}
   />
@@ -264,7 +269,7 @@ const LanguagePicker = ({
                       locale={browserLocale as Lang}
                       onClick={onMenuClose}
                     >
-                      <Text fontSize="lg" color="body.base">
+                      <Text fontSize="lg" color="primary.base">
                         {browserLocaleInfo.targetName}
                       </Text>
                       <Text
