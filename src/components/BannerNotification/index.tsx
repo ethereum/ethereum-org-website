@@ -1,5 +1,6 @@
 import React from "react"
 import { Center, FlexProps, useMediaQuery } from "@chakra-ui/react"
+
 import { lightTheme as oldTheme } from "../../theme"
 
 export interface IProps extends FlexProps {

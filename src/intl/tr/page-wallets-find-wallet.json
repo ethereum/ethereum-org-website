@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Özellik filtreleri",
   "page-find-wallet-footnote-1": "Bu sayfada listelenen cüzdanlar resmi onaylı değildir ve yalnızca bilgilendirme amaçlıdır.",
   "page-find-wallet-footnote-2": "Açıklamaları, cüzdan projelerinin kendileri tarafından sağlanmıştır.",
-  "page-find-wallet-footnote-3": "Bu sayfaya <a href=\"/contributing/adding-products/\">listeleme politikamıza</a> göre ürün ekliyoruz. Bir cüzdan eklememizi isterseniz, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title= Suggest+a+wallet\" target=\"_blank\">GitHub ile iletişime geçin</a>.",
+  "page-find-wallet-footnote-3": "Bu sayfaya <a href=\"/contributing/adding-wallets/\">listeleme politikamıza</a> göre ürün ekliyoruz. Bir cüzdan eklememizi isterseniz, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title= Suggest+a+wallet\" target=\"_blank\">GitHub ile iletişime geçin</a>.",
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-mobile-desc": "Mobil uygulaması olan cüzdanlar",
   "page-find-wallet-desktop": "Masaüstü",

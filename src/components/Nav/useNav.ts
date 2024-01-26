@@ -1,15 +1,18 @@
-import { useColorMode } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
 import { cloneDeep } from "lodash"
-import { useRef, useState } from "react"
-import { IItem, ISections } from "./types"
+import { useTranslation } from "next-i18next"
+import { useColorMode } from "@chakra-ui/react"
 
-import { trackCustomEvent } from "../../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { FROM_QUERY } from "@/lib/constants"
+
+import { IItem, ISections } from "./types"
 
 export const useNav = ({ path }: { path: string }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { colorMode, toggleColorMode } = useColorMode()
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation("common")
 
   const isDarkTheme = colorMode === "dark"
 
@@ -109,6 +112,10 @@ export const useNav = ({ path }: { path: string }) => {
               to: "/wallets/",
             },
             {
+              text: "Gas fees",
+              to: "/gas/",
+            },
+            {
               text: t("ethereum-security"),
               to: "/security/",
             },
@@ -120,6 +127,7 @@ export const useNav = ({ path }: { path: string }) => {
               text: t("smart-contracts"),
               to: "/smart-contracts/",
             },
+
             {
               text: t("quizzes-title"),
               to: "/quizzes/",
@@ -278,16 +286,11 @@ export const useNav = ({ path }: { path: string }) => {
     setIsMenuOpen((prev) => !prev)
   }
 
-  const searchRef = useRef<HTMLButtonElement>(null)
-
-  const toggleSearch = (): void => {
-    searchRef.current?.click()
-  }
-  const shouldShowSubNav = path.includes("/developers/")
+  const shouldShowSubNav = path.includes("/developers")
   const splitPath = path.split("/")
   const fromPageParameter =
-    splitPath.length > 3 && splitPath[2] !== "languages"
-      ? `?from=/${splitPath.slice(2).join("/")}`
+    splitPath.length > 1 && splitPath[1] !== "languages"
+      ? `?${FROM_QUERY}=/${splitPath.slice(1).join("/")}`
       : ""
 
   const changeColorMode = () => {
@@ -304,19 +307,15 @@ export const useNav = ({ path }: { path: string }) => {
     isDarkTheme,
     toggleMenu,
     toggleTheme: changeColorMode,
-    toggleSearch,
     linkSections: mobileLinkSections,
     fromPageParameter,
   }
 
   return {
     toggleColorMode: changeColorMode,
-    t,
-    i18n,
     isDarkTheme,
     ednLinks,
     linkSections,
-    searchRef,
     shouldShowSubNav,
     fromPageParameter,
     mobileNavProps,
