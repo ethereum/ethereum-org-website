@@ -22,7 +22,7 @@ El programa de traducción es un esfuerzo colaborativo para traducir ethereum.or
 
 _Únase a [ethereum.org Discord](/discord/) para colaborar en traducciones, hacer preguntas, compartir comentarios e ideas o unirse a un grupo de traducción._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Empezar a traducir
 </ButtonLink>
 
@@ -36,8 +36,8 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 
 ### Nuestra evolución hasta la fecha {#our-progress}
 
-- [**+ 4.700** traductores](/contributing/translation-program/contributors/)
-- [**52** idiomas disponibles en el sitio](/languages/)
+- [**+ 5.100** traductores](/contributing/translation-program/contributors/)
+- [**54** idiomas disponibles en el sitio](/languages/)
 - [3 millones de palabras traducidas en 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -56,7 +56,7 @@ Todos nuestros traductores pueden optar a una POAP (siglas en inglés de prueba 
 
 #### Reconocimientos a los traductores {#translator-acknowledgements}
 
-Reconocimientos públicos a nuestros mejores traductores a través de las [Tablas de clasificacion](/contributing/translation-program/acknowledgements/) y una lista [de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
+Reconocimientos públicos a nuestros mejores traductores a través de las [Tablas de clasificacion](/contributing/translation-program/acknowledgements/) y una lista[ de todos los contribuyentes al Programa de traduccion](/contributing/translation-program/contributors/).
 
 #### Recompensas {#rewards}
 
@@ -66,7 +66,7 @@ Ideamos constantemente novedosas maneras de recompensar a nuestros colaboradores
 
 ### Guías y recursos {#guides-and-resources}
 
-Si está contribuyendo al Programa de traducción o pensando en participar, le aconsejamos que consulte las guías de traducción siguientes:
+Si ya está colaborando con el Programa de traducción o tiene pensando colaborar, le aconsejamos que consulte las siguientes guías de traducción:
 
 - [Guía de estilo de traducción](/contributing/translation-program/translators-guide/) _: Instrucciones y consejos para los traductores de ethereum.org_
 - [Preguntas frecuentes sobre la traducción](/contributing/translation-program/faq/) _: Preguntas y respuestas frecuentes sobre el Programa de traducción de ethereum.org_
@@ -77,14 +77,14 @@ Si desea informarse sobre herramientas de traducción útiles, comunidades de tr
 
 ## Contáctenos {#get-in-touch}
 
-¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de [servidor de Discord de ethereum.org](https://discord.gg/ethereum-org)
+¿Tiene alguna pregunta? ¿O quiere colaborar con nuestro equipo y otros traductores? Envíe un mensaje al canal #translations de nuestro [servidor Discord de ethereum.org](https://discord.gg/6WX7E97)
 
-También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org
+También puede contactarnos a través de nuestro correo electrónico translations@ethereum.org.
 
 ## Lanzar un programa de traducción propio {#starting-a-translation-program}
 
 Nos comprometemos a traducir el contenido de Ethereum a tantos idiomas como sea posible y a poner el contenido divulgativo a disposición de todos. En sintonía con el enfoque lingüístico que adoptamos, queremos ayudar a otros proyectos de Ethereum a organizar, administrar y mejorar sus propias iniciativas de traducción.
 
-Por esta razón, hemos creado una [guía audiovisual del Programa de traducción](/contributing/translation-program/playbook/) con algunos consejos y mejores prácticas recopiladas durante el proceso de traducción de ethereum.org.
+Por esta razón, hemos creado una [guía audiovisual del Programa de traducción](/contributing/translation-program/playbook/) con algunos consejos y mejores prácticas recopilados durante el proceso de traducción de ethereum.org.
 
 ¿Quiere colaborar más o utilizar algunos de nuestros recursos de traducción? ¿Tiene algún comentario sobre la guía audiovisual? Nos encantaría saber su opinión en translations@ethereum.org.

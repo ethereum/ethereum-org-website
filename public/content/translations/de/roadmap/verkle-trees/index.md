@@ -60,6 +60,6 @@ Verkle Tree Testnetzwerke laufen bereits, aber es sind noch substantielle Update
 - ["Wie Verkle Trees Ethereum schlank und super machen" von Guillaume Ballet bei Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam über zustandsfreie Clients bei ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Feist erklärt Verkle Trees und Zustandsfreiheit auf dem Zero Knowledge Podcast](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Vitalik Buterin über Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Vitalik Buterin über Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist über Verkle Trees](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Verkle Trees EIP Dokumentation](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

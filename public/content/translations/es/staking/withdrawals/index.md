@@ -113,13 +113,13 @@ Ampliando este cálculo podemos estimar el tiempo que llevará el procesar un n�
 
 <TableContainer>
 
-| Número de retiradas | Tiempo que llevará |
-| :-----------------: | :----------------: |
-|       400.000       |      3,5 días      |
-|       500.00        |      4,3 días      |
-|       600.000       |      5,2 días      |
-|       700.000       |      6,1 días      |
-|       800.000       |       7 días       |
+| Número de retiradas | Tiempo que llevará|
+| :-------------------: | :--------------: |
+| 400.000 | 3,5 días |
+| 500.00 | 4,3 días |
+| 600.000 | 5,2 días |
+| 700.000 | 6,1 días |
+| 800.000 | 7 días |
 
 </TableContainer>
 
@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Se recomienda a los operadores de validadores visitar la página <a href="https://launchpad.ethereum.org/withdrawals/">Retiradas en la plataforma de lanzamiento de participaciones</a> donde encontrarás más detalles sobre cómo preparar tu validador para retiradas. Preparado, el momento de los eventos y más detalles sobre cómo funcionan las retiradas.
+Se recomienda a los operadores validadores visitar la página <a href="https://launchpad.ethereum.org/withdrawals/">Retiradas del lanzador de apuestas</a> donde encontrará más detalles sobre cómo preparar su validador para las retiradas, la sincronización de los eventos y más detalles sobre cómo funcionan las retiradas.
 
 Para probar primero su configuración en una red de pruebas, visite el <a href="https://goerli.launchpad.ethereum.org">Lanzador de apuestas de red de prueba Goerli</a> para empezar.
 
@@ -215,4 +215,4 @@ No. Una vez que un validador ha salido y su saldo total se ha retirado, cualquie
 - [ Ethereum Cat Herders - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Retirada de ETH apostados (Prueba) con Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
 - [PEEPanEIP#68: EIP-4895: La cadena de baliza impulsa retiradas como operaciones con Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
-- [Entender el saldo de efectivo del validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)
+- [Entender el saldo efectivo del validador](https://www.attestant.io/posts/understanding-validator-effective-balance/)

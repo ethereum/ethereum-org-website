@@ -81,7 +81,7 @@ Zayıf durumsuzluk geliştirilmiş bir araştırma aşamasındadır, ancak öner
 
 ### Güçlü durumsuzluk {#strong-statelessness}
 
-Güçlü durumsuzluk herhangi bir blokun durum verisi depolaması ihtiyacını ortadan kaldırır. Bunun yerine, işlemler blok oluşturucular tarafından toplanabilen tanıklar aracılığıyla gönderilir. Blok oluşturucular sonrasında sadece alakalı hesaplara gerekli tanıkları oluşturman durumu depolamaktan sorumludur. Durumun sorumluluğu neredeyse tamamen kullanıcılara verilmiştir, yani kullanıcılar hangi hesap ve depolama anahtarlarıyla etkileşimde olduklarını tanımlamak için tanıkları ve "erişim listelerini" gönderirler.
+Güçlü durumsuzluk herhangi bir blokun durum verisi depolaması ihtiyacını ortadan kaldırır. Bunun yerine, işlemler blok oluşturucular tarafından toplanabilen tanıklar aracılığıyla gönderilir. Blok oluşturucular sonrasında sadece alakalı hesaplara gerekli tanıkları oluşturman durumu depolamaktan sorumludur. Durumun sorumluluğu neredeyse tamamen kullanıcılara verilmiştir, yani kullanıcılar hangi hesap ve depolama anahtarlarıyla etkileşimde olduklarını tanımlamak için tanıkları ve "erişim listelerini" gönderirler. Bu, son derece hafif düğümleri olanaklı kılardı ancak akıllı sözleşmelerle işlem yapmayı zorlaştırmak gibi bazı bedeller söz konusudur.
 
 Güçlü durumsuzluk araştırmacılar tarafından incelendi fakat şu anda Ethereum Yol Haritasının bir parçası olması beklenmiyor - Ethereum'un ölçeklendirilme gereklilikleri için şu anda zayıf durumsuzluk yeterli gibi görünüyor.
 
@@ -95,7 +95,7 @@ Zayıf durumsuzluk, tarih sonlanması ve durum sonlanması hâlâ araştırma a�
 - [Durum boyutu yönetimi teorisi](https://hackmd.io/@vbuterin/state_size_management)
 - [Diriliş-anlaşmazlık-minimize edilmiş durum sınırlaması](https://ethresear.ch/t/resurrection-conflict-minimized-state-bounding-take-2/8739)
 - [Durumsuzluğa giden yollar ve durum sonlanması](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [EIP-4444 şartnamesi](https://eips.ethereum.org/EIPS/eip-4444)
+- [EIP-4444 özellikleri](https://eips.ethereum.org/EIPS/eip-4444)
 - [Alex Stokes'un EIP-4444 hakkındaki görüşleri](https://youtu.be/SfDC_qUZaos)
 - [Durumsuzluk neden bu kadar önemli](https://dankradfeist.de/ethereum/2021/02/14/why-stateless.html)
 - [Orijinal durumsuz istemcinin konsept notları](https://ethresear.ch/t/the-stateless-client-concept/172)

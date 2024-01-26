@@ -169,7 +169,7 @@ Vários projetos fornecem implementações da cadeia Plasma que você pode integ
 
 - [Aprenda sobre a cadeia Plasma](https://www.learnplasma.org/en/)
 - [Um lembrete rápido do que significa "segurança compartilhada" e por que é tão importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [Sidechains vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Entenda a cadeia Plasma - parte 1: O básico](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [A vida e a morte da cadeia Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 

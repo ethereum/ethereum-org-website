@@ -109,7 +109,7 @@ Narito ang isang halimbawa upang ipakita kung paano gumagana ang mga on-chain na
 
 ### Soulbound tokens at identity {#soulbound}
 
-Puwedeng gamitin ang [soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html)(mga non-transferable na NFT) upang kolektahin ang impormasyon na partikular sa isang wallet. Epektibo itong gumagawa ng natatanging on-chain na identity patungo sa isang partikular na Ethereum address na maaaring kinabibilangan ng mga token na kumakatawan sa mga napagtagumpayan (hal. pagtatapos ng ilang partikular na online na kurso o paglampas sa isang threshold score sa isang laro) o pakikilahok sa komunidad.
+Puwedeng gamitin ang [soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)(mga non-transferable na NFT) upang kolektahin ang impormasyon na partikular sa isang wallet. Epektibo itong gumagawa ng natatanging on-chain na identity patungo sa isang partikular na Ethereum address na maaaring kinabibilangan ng mga token na kumakatawan sa mga napagtagumpayan (hal. pagtatapos ng ilang partikular na online na kurso o paglampas sa isang threshold score sa isang laro) o pakikilahok sa komunidad.
 
 ## Mga benepisyo ng decentralized identity {#benefits-of-decentralized-identity}
 

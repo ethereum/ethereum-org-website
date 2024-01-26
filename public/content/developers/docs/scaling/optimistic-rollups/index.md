@@ -208,7 +208,7 @@ As explained, optimistic rollups publish compressed transaction data on Ethereum
 
 The main Ethereum chain places limits on how much data blocks can hold, denominated in gas units (the [average block size](/developers/docs/blocks/#block-size) is 15 million gas). While this restricts how much gas each transaction can use, it also means we can increase transactions processed per block by reducing transaction-related data—directly improving scalability.
 
-Optimistic rollups use several techniques to achieve transaction data compression and improve TPS rates. For example, this [article](https://vitalik.ca/general/2021/01/05/rollup.html) compares the data a basic user transaction (sending ether) generates on Mainnet vs how much data the same transaction generates on a rollup:
+Optimistic rollups use several techniques to achieve transaction data compression and improve TPS rates. For example, this [article](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compares the data a basic user transaction (sending ether) generates on Mainnet vs how much data the same transaction generates on a rollup:
 
 | Parameter | Ethereum (L1)          | Rollup (L2)   |
 | --------- | ---------------------- | ------------- |

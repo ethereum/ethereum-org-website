@@ -30,7 +30,7 @@ Gondjai vannak a tárcájával? A legtöbb tárcának van dedikált támogatói 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Ez nem egy teljes lista. Segítségre van szüksége, hogy megtalálja az adott tárca támogatói csapatát? Csatlakozzon az [ethereum.org Discord](https://discord.gg/ethereum-org) csatornához, és megpróbálunk segíteni._
+_Ez nem egy teljes lista. Segítségre van szüksége, hogy megtalálja az adott tárca támogatói csapatát? Csatlakozzon az [ethereum.org Discord](https://discord.gg/rZz26QWfCg) csatornához, és megpróbálunk segíteni._
 
 Ethereum-tárcát keres? [Fedezze fel az Ethereum-tárcák teljes választékát](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Ethereum-tárcát keres? [Fedezze fel az Ethereum-tárcák teljes választékát
 A fejlesztés tele van kihívásokkal. Alább található néhány fejlesztőket támogató platform, tapasztalt Ethereum-fejlesztőkkel.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ A kérdése egy bizonyos eszközhöz, projekthez vagy könyvtárhoz kapcsolódik
 
 Néhány népszerű példa:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Néhány népszerű példa:
 
 Ha Ön csomópontot vagy validátort futtat, a következő közösségek segítenek belevágni.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 Az Ethereum klienseket építő csapatok is dedikált, nyilvános fórumokkal rendelkeznek, ahol kérdezni lehet.

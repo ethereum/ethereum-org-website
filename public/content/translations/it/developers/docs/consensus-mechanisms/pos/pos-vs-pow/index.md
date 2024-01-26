@@ -65,5 +65,5 @@ Guarda Justin Drake spiegare i benefici del proof-of-stake rispetto al proof-of-
 ## Letture consigliate {#further-reading}
 
 - [Filosofia di design del proof-of-stake di Vitalik](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [FAQ sul proof-of-stake di Vitalik](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [FAQ sul proof-of-stake di Vitalik](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 - [Video di "Spiegazione semplice" su PoS e PoW a confronto](https://www.youtube.com/watch?v=M3EFi_POhps)

@@ -18,7 +18,7 @@ A prova de participação requer nós, conhecidos como validadores, para enviar 
 
 A prova de trabalho consome muito mais energia porque a eletricidade é consumida no processo de mineração. Por outro lado, a prova de participação requer apenas uma quantidade muito pequena de energia: os validadores do Ethereum podem até ser executados em um dispositivo de baixa potência, como o Raspberry Pi. O mecanismo de prova de participação do Ethereum é considerado mais seguro do que a prova de trabalho, porque o custo do ataque é maior e as consequências para um invasor são mais severas.
 
-A comparação entre prova de trabalho e prova de participação é um tópico controverso. [O blog de Vitalik Buterin](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e o debate entre Justin Drake e Lyn Alden dão um bom resumo dos argumentos.
+A comparação entre prova de trabalho e prova de participação é um tópico controverso. [O blog de Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e o debate entre Justin Drake e Lyn Alden dão um bom resumo dos argumentos.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ O ataque forçado de participação é uma categoria de ataque em redes de prova
 A remoção social consiste na capacidade de uma comunidade em coordenar uma bifurcação (fork) da blockchain em resposta a um ataque. Ela permite à comunidade se recuperar do ataque de um invasor, finalizando uma cadeia desonesta. O corte social também pode ser utilizado contra ataques de censura.
 
 - [Mais a respeito de remoção social](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin sobre remoção social](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin sobre remoção social](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Eu serei removido? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Como validador, é muito difícil ser removido, a menos que você se envolva del
 
 O problema do nada em participação (stake) é uma questão conceitual com alguns mecanismos de prova de participação, nos quais há apenas recompensas e nenhuma penalidade. Se não há nada em participação (stake), um validador pragmático poderá sem problemas atestar qualquer uma, ou mesmo várias, bifurcações (forks) da blockchain, pois isso aumenta suas recompensas. O Ethereum contorna isso usando condições de finalidade e remoções para garantir uma cadeia padronizada.
 
-[Mais sobre o problema do “nada em participação”](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Mais sobre o problema do “nada em participação”](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## O que é um algoritmo de escolha de bifurcação (fork)? {#what-is-a-fork-choice-algorithm}
 
