@@ -77,7 +77,7 @@ export const SendSummary: React.FC<IProps> = ({
           <Text fontWeight="bold">est. about 12 seconds</Text>
         </Box>
         <Box>
-          <Text>Nework fees</Text>
+          <Text>Network fees</Text>
           <Text m={0} fontWeight="bold">
             {Intl.NumberFormat("en", {
               maximumFractionDigits: getMaxFractionDigitsUsd(usdFee),
