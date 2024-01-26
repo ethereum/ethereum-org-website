@@ -1,132 +1,133 @@
-import React, { ReactNode } from "react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import Image, { type ImageProps } from "next/image"
+import type { ReactNode } from "react"
+import {
+  Box,
+  type BoxProps,
+  Flex,
+  HStack,
+  LinkBox,
+  LinkOverlay,
+  type StackProps,
+  useColorModeValue,
+} from "@chakra-ui/react"
 
-import Link from "./Link"
-import { ImageProp } from "../types"
+import { BaseLink } from "@/components/Link"
 
-const Table = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  width: 100%;
-`
+import * as url from "@/lib/utils/url"
 
-const Item = styled.div`
-  cursor: pointer;
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-  margin-bottom: 1rem;
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const ItemLink = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  border: 1px solid ${(props) => props.theme.colors.border};
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-  &:hover {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const ItemTitle = styled.div``
-
-const ItemDesc = styled.div`
-  font-size: ${(props) => props.theme.fontSizes.s};
-  margin-bottom: 0;
-  opacity: 0.6;
-`
-
-const LeftContainer = styled.div`
-  flex: 1 1 75%;
-  display: flex;
-  flex-direction: column;
-  margin-right: 2rem;
-`
-const RightContainer = styled.div`
-  flex: 1 0 25%;
-  display: flex;
-  align-items: center;
-  margin-right: 1rem;
-  flex-wrap: wrap;
-`
-
-const Image = styled(GatsbyImage)`
-  min-width: 20px;
-  margin-right: 1rem;
-  margin-top: 4px;
-`
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export type CardListItem = {
   title?: ReactNode
   description?: ReactNode
   caption?: ReactNode
   link?: string
-  id?: string | number
-} & ImageProp
+  id?: string
+  image?: ImageProps["src"]
+  imageWidth?: number
+  alt?: string
+}
 
-export interface IProps {
-  content: Array<CardListItem>
-  className?: string
+const CardContainer = (props: StackProps) => (
+  <HStack
+    spacing={4}
+    p={4}
+    color="text"
+    border="1px solid"
+    borderColor="border"
+    _hover={{
+      borderRadius: "base",
+      boxShadow: "0 0 1px var(--eth-colors-primary)",
+      background: "tableBackgroundHover",
+    }}
+    {...props}
+  />
+)
+
+type CardProps = CardListItem & Omit<StackProps, "title" | "id">
+
+const Card = ({
+  title,
+  description,
+  caption,
+  link,
+  image,
+  imageWidth = 20, // Set 20px as default image width, can be overrided if needed
+  alt,
+  ...props
+}: CardProps) => {
+  const { flipForRtl } = useRtlFlip()
+  const isLink = !!link
+  const isExternal = url.isExternal(link || "")
+
+  const descriptionColor = useColorModeValue("gray.500", "gray.400")
+
+  return (
+    <CardContainer {...props}>
+      {image && <Image src={image} alt={alt ?? ""} width={imageWidth} />}
+      <Flex flex="1 1 75%" direction="column">
+        {isLink ? (
+          <LinkOverlay
+            as={BaseLink}
+            href={link}
+            hideArrow
+            color="text"
+            textDecoration="none"
+            _hover={{ textDecoration: "none" }}
+          >
+            {title}
+          </LinkOverlay>
+        ) : (
+          <Box>{title}</Box>
+        )}
+
+        <Box fontSize="sm" mb={0} color={descriptionColor}>
+          {description}
+        </Box>
+      </Flex>
+      {caption && (
+        <Flex flex="1 0 25%" align="center" wrap="wrap" me={4}>
+          <Box fontSize="sm" mb={0} opacity={0.6}>
+            {caption}
+          </Box>
+        </Flex>
+      )}
+      {isExternal && <Box transform={flipForRtl}>↗</Box>}
+    </CardContainer>
+  )
+}
+
+export type CardListProps = BoxProps & {
+  items: CardProps[]
+  imageWidth?: number
   clickHandler?: (idx: string | number) => void
 }
 
-const CardList: React.FC<IProps> = ({
-  content,
-  className,
+const CardList = ({
+  items,
+  imageWidth,
   clickHandler = () => null,
-}) => (
-  <Table className={className}>
-    {content.map((listItem, idx) => {
-      const { title, description, caption, link, image, alt, id } = listItem
+  ...props
+}: CardListProps) => (
+  <Box bg="background.base" w="full" {...props}>
+    {items.map((listItem, idx) => {
+      const { link, id } = listItem
       const isLink = !!link
+
       return isLink ? (
-        <ItemLink key={id || idx} to={link}>
-          {image && <Image image={image} alt={alt} />}
-          <LeftContainer>
-            <ItemTitle>{title}</ItemTitle>
-
-            <ItemDesc>{description}</ItemDesc>
-          </LeftContainer>
-          {caption && (
-            <RightContainer>
-              <ItemDesc>{caption}</ItemDesc>
-            </RightContainer>
-          )}
-        </ItemLink>
+        <LinkBox key={id || idx}>
+          <Card {...listItem} imageWidth={imageWidth} />
+        </LinkBox>
       ) : (
-        <Item key={idx} onClick={() => clickHandler(idx)}>
-          {image && <Image image={image} alt={alt} />}
-          <LeftContainer>
-            <ItemTitle>{title}</ItemTitle>
-
-            <ItemDesc>{description}</ItemDesc>
-          </LeftContainer>
-          {caption && (
-            <RightContainer>
-              <ItemDesc>{caption}</ItemDesc>
-            </RightContainer>
-          )}
-        </Item>
+        <Card
+          key={idx}
+          onClick={() => clickHandler(idx)}
+          mb={4}
+          {...listItem}
+        />
       )
     })}
-  </Table>
+  </Box>
 )
 
 export default CardList

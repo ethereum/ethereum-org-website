@@ -1,90 +1,37 @@
-import React, { useContext } from "react"
-import styled from "@emotion/styled"
-import { useTheme } from "@emotion/react"
+import { useTranslation } from "next-i18next"
+import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 
-import Link from "../Link"
-import Translation from "../Translation"
+import type { StakingPage, TranslationKey } from "@/lib/types"
 
-import { EventOptions, trackCustomEvent } from "../../utils/matomo"
-import { TranslationKey } from "../../utils/translations"
+import {
+  StakingGlyphCloudIcon,
+  StakingGlyphCPUIcon,
+  StakingGlyphTokenWalletIcon,
+} from "@/components/icons/staking"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
 
-import SoloGlyph from "../../assets/staking/staking-glyph-cpu.svg"
-import SaasGlyph from "../../assets/staking/staking-glyph-cloud.svg"
-import PoolGlyph from "../../assets/staking/staking-glyph-token-wallet.svg"
-
-const GradientContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  background: linear-gradient(
-    83.46deg,
-    rgba(127, 127, 213, 0.2) 7.03%,
-    rgba(138, 168, 231, 0.2) 52.42%,
-    rgba(145, 234, 228, 0.2) 98.77%
-  );
-  padding: 2rem;
-  margin-top: 4rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    padding: 2rem 1.5rem;
-  }
-
-  h3 {
-    margin: 0 0 0.5rem;
-  }
-`
-
-const Flex = styled.div`
-  display: flex;
-  gap: 1.5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
-
-const Glyph = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 3rem;
-  max-height: 3rem;
-`
-
-const StyledSoloGlyph = styled(SoloGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.stakingGold};
-  }
-`
-const StyledSaasGlyph = styled(SaasGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.stakingGreen};
-  }
-`
-const StyledPoolGlyph = styled(PoolGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.stakingBlue};
-  }
-`
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 interface DataType {
   title: TranslationKey
   linkText: TranslationKey
   to: string
-  matomo: EventOptions
-  color: any
-  glyph: any
+  matomo: MatomoEventOptions
+  color: string
+  glyph: JSX.Element
 }
 
-type StakingTypePage = "solo" | "saas" | "pools"
-
 export interface IProps {
-  page: StakingTypePage
+  page: StakingPage
   className?: string
 }
 
 const StakingComparison: React.FC<IProps> = ({ page, className }) => {
   const theme = useTheme()
   const { stakingGold, stakingGreen, stakingBlue } = theme.colors
+  const { t } = useTranslation("page-staking")
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
@@ -96,7 +43,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked solo staking",
     },
     color: stakingGold,
-    glyph: <StyledSoloGlyph />,
+    glyph: <StakingGlyphCPUIcon color="stakingGold" boxSize="50px" />,
   }
   const saas: DataType = {
     title: "page-staking-saas-with-abbrev",
@@ -108,7 +55,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked staking as a service",
     },
     color: stakingGreen,
-    glyph: <StyledSaasGlyph />,
+    glyph: <StakingGlyphCloudIcon color="stakingGreen" w="50px" h="28px" />,
   }
   const pools: DataType = {
     title: "page-staking-dropdown-pools",
@@ -120,10 +67,12 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
       eventName: "clicked pooled staking",
     },
     color: stakingBlue,
-    glyph: <StyledPoolGlyph />,
+    glyph: (
+      <StakingGlyphTokenWalletIcon color="stakingBlue" w="50px" h="39px" />
+    ),
   }
   const data: {
-    [key in StakingTypePage]: (DataType & {
+    [key in StakingPage]: (DataType & {
       content: TranslationKey
     })[]
   } = {
@@ -162,32 +111,53 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
   const selectedData = data[page]
 
   return (
-    <GradientContainer className={className}>
-      <h2>Comparison with other options</h2>
+    <Flex
+      direction="column"
+      gap={8}
+      bg="linear-gradient(
+      83.46deg,
+      rgba(127, 127, 213, 0.2) 7.03%,
+      rgba(138, 168, 231, 0.2) 52.42%,
+      rgba(145, 234, 228, 0.2) 98.77%
+    )"
+      py={8}
+      px={{ base: 6, md: 8 }}
+      mt={16}
+      className={className}
+    >
+      <OldHeading fontSize="2rem">Comparison with other options</OldHeading>
       {selectedData.map(
         ({ title, linkText, to, color, content, glyph, matomo }, idx) => (
-          <Flex key={idx}>
-            {!!glyph && <Glyph>{glyph}</Glyph>}
-            <div>
-              <h3 style={{ color }}>
-                <Translation id={title} />
-              </h3>
-              <p>
-                <Translation id={content} />
-              </p>
-              <Link
+          <Flex gap={6} direction={{ base: "column", md: "row" }} key={idx}>
+            {!!glyph && (
+              <Flex
+                direction="column"
+                justify="flex-start"
+                align="center"
+                w={12}
+                maxH={12}
+              >
+                {glyph}
+              </Flex>
+            )}
+            <Box>
+              <Heading as="h3" fontSize="2xl" color={color} mb={2}>
+                {t(title)}
+              </Heading>
+              <Text>{t(content)}</Text>
+              <InlineLink
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
                 to={to}
               >
-                <Translation id={linkText} />
-              </Link>
-            </div>
+                {t(linkText)}
+              </InlineLink>
+            </Box>
           </Flex>
         )
       )}
-    </GradientContainer>
+    </Flex>
   )
 }
 

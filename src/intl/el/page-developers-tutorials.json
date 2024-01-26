@@ -18,5 +18,7 @@
   "page-tutorial-tags-error": "Δεν υπάρχουν οδηγοί με όλες αυτές τις ετικέτες ακόμη",
   "page-tutorial-title": "Μαθήματα προγραμματισμού Ethereum",
   "page-tutorials-meta-description": "Περιήγηση και φιλτράρισμα των ελεγμένων μαθημάτων της κοινότητας Ethereum ανά θέμα.",
-  "page-tutorials-meta-title": "Μαθήματα προγραμματισμού Ethereum"
+  "page-tutorials-meta-title": "Μαθήματα προγραμματισμού Ethereum",
+  "page-find-wallet-try-removing": "Δοκιμάστε να αφαιρέσετε ένα ή δύο χαρακτηριστικά",
+  "page-find-wallet-clear": "Κατάργηση φίλτρων"
 }

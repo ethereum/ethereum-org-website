@@ -1,94 +1,64 @@
+import { join } from "path"
+
 import React, { useState } from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { MdClose } from "react-icons/md"
+import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
-import PageMetadata from "../components/PageMetadata"
-import Translation from "../components/Translation"
-import Link from "../components/Link"
-import { Page, Content } from "../components/SharedStyledComponents"
+import { BasePageProps, I18nLocale, TranslationKey } from "@/lib/types"
 
-import { Lang, Language, languageMetadata } from "../utils/languages"
-import { translateMessageId, TranslationKey } from "../utils/translations"
-import { CardItem as LangItem } from "../components/SharedStyledComponents"
-import Icon from "../components/Icon"
-import NakedButton from "../components/NakedButton"
+import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
 
-const StyledPage = styled(Page)`
-  margin-top: 4rem;
-`
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import {
+  getRequiredNamespacesForPage,
+  languages,
+} from "@/lib/utils/translations"
 
-const ContentContainer = styled.div``
+import { FROM_QUERY } from "@/lib/constants"
 
-const LangContainer = styled.div`
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-`
+import OldHeading from "../components/OldHeading"
 
-const LangTitle = styled.div`
-  font-size: 0.875rem;
-  line-height: 1.6;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  margin: 1.14em 0;
-  text-transform: uppercase;
-`
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage("/languages")
 
-const Form = styled.form`
-  margin: 0;
-  position: relative;
-  border-radius: 0.25em;
-  width: clamp(min(400px, 100%), 50%, 600px);
-`
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
-const StyledInput = styled.input`
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackground};
-  padding: 0.5rem;
-  padding-right: 2rem;
-  border-radius: 0.25em;
-  width: 100%;
+  const lastDeployDate = getLastDeployDate()
 
-  &:focus {
-    outline: ${(props) => props.theme.colors.primary} auto 1px;
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
   }
-`
-
-const IconButton = styled(NakedButton)`
-  position: absolute;
-  top: 50%;
-  margin-top: -12px;
-  right: 6px;
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.text};
-`
-
-interface TranslatedLanguage extends Language {
-  path: string
-}
+}) satisfies GetStaticProps<BasePageProps>
 
 const LanguagesPage = () => {
-  const intl = useIntl()
+  const { t } = useTranslation("page-languages")
+  const { locale, query } = useRouter()
+
   const [keyword, setKeyword] = useState<string>("")
   const resetKeyword = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     setKeyword("")
   }
-  const searchString = translateMessageId(
-    "page-languages-filter-placeholder",
-    intl
-  )
-  let translationsCompleted: Array<TranslatedLanguage> = []
-  for (const lang in languageMetadata) {
+  const searchString = t("page-languages-filter-placeholder")
+  let translationsCompleted: Array<I18nLocale> = []
+
+  for (const lang in languages) {
     const langMetadata = {
-      ...languageMetadata[lang],
-      path: "/",
-      name: translateMessageId(`language-${lang}` as TranslationKey, intl),
+      ...languages[lang],
+      name: t(`language-${lang}` as TranslationKey),
     }
 
     const nativeLangTitle = langMetadata.localName
@@ -100,72 +70,149 @@ const LanguagesPage = () => {
       translationsCompleted.push(langMetadata)
     }
   }
+
   translationsCompleted.sort((a, b) => a["name"].localeCompare(b["name"]))
 
   return (
-    <StyledPage>
+    <>
       <PageMetadata
-        title={translateMessageId("page-languages-meta-title", intl)}
-        description={translateMessageId("page-languages-meta-desc", intl)}
+        title={t("page-languages-meta-title")}
+        description={t("page-languages-meta-desc")}
       />
-      <Content>
-        <ContentContainer>
-          <h1>
-            <Translation id="page-languages-h1" />
-          </h1>
-          <p>
-            <Translation id="page-languages-p1" />
-          </p>
-          <p>
-            <Translation id="page-languages-interested" />{" "}
-            <Link to="/contributing/translation-program/">
-              <Translation id="page-languages-learn-more" />
-            </Link>
+
+      <Flex
+        as={MainArticle}
+        direction="column"
+        align="center"
+        w="full"
+        mx="auto"
+        mt={16}
+      >
+        <PageMetadata
+          title={t("page-languages-meta-title")}
+          description={t("page-languages-meta-desc")}
+        />
+        <Box py={4} px={8} w="full">
+          <OldHeading
+            as="h1"
+            lineHeight={1.4}
+            fontSize={{ base: "2.5rem", md: "3rem" }}
+          >
+            {t("page-languages-h1")}
+          </OldHeading>
+          <Text>{t("page-languages-p1")}</Text>
+          <Text>
+            {t("page-languages-interested")}{" "}
+            <InlineLink to="/contributing/translation-program/">
+              {t("page-languages-learn-more")}
+            </InlineLink>
             .
-          </p>
-          <p>
-            <Translation id="page-languages-resources-paragraph" />{" "}
-            <Link to="/community/language-resources">
-              <Translation id="page-languages-resources-link" />
-            </Link>
+          </Text>
+          <Text>
+            {t("page-languages-resources-paragraph")}{" "}
+            <InlineLink to="/community/language-resources">
+              {t("page-languages-resources-link")}
+            </InlineLink>
             .
-          </p>
-          <h2>
-            <Translation id="page-languages-translations-available" />:
-          </h2>
-          <Form>
-            <StyledInput
+          </Text>
+          <OldHeading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+            {t("page-languages-translations-available")}:
+          </OldHeading>
+          <Box
+            as="form"
+            position="relative"
+            borderRadius="0.25em"
+            w="clamp(min(400px, 100%), 50%, 600px)"
+          >
+            <Input
+              w="full"
               value={keyword}
               placeholder={searchString}
               onChange={(e) => setKeyword(e.target.value)}
+              rightIcon={
+                <IconButton
+                  icon={<MdClose />}
+                  onClick={resetKeyword}
+                  display={keyword === "" ? "none" : undefined}
+                  aria-label={t("clear")}
+                  variant="ghost"
+                  _hover={{ svg: { fill: "primary" } }}
+                />
+              }
             />
-            {keyword === "" ? null : (
-              <IconButton onClick={resetKeyword}>
-                <ResetIcon name="close" />
-              </IconButton>
-            )}
-          </Form>
-          <LangContainer>
-            {translationsCompleted.map((lang) => (
-              <LangItem to={lang.path} language={lang.code} key={lang["name"]}>
-                <LangTitle>{lang["name"]}</LangTitle>
-                <h4>{lang.localName}</h4>
-              </LangItem>
-            ))}
-          </LangContainer>
-          <h2>
-            <Translation id="page-languages-want-more-header" />
-          </h2>
-          <p>
-            <Translation id="page-languages-want-more-paragraph" />{" "}
-            <Link to="/contributing/translation-program/">
-              <Translation id="page-languages-want-more-link" />
-            </Link>
+          </Box>
+          <Flex my={8} wrap="wrap" w="full">
+            {translationsCompleted.map((lang) => {
+              const isActive = locale === lang.code
+              const fromPath =
+                FROM_QUERY in query ? (query[FROM_QUERY] as string) : ""
+              const redirectTo = `/${lang.code}` + fromPath
+
+              return (
+                <LinkBox
+                  key={lang["name"]}
+                  textDecor="none"
+                  m={4}
+                  ms={0}
+                  p={4}
+                  flexBasis="240px"
+                  flexGrow={{ base: 1, sm: 0 }}
+                  flexShrink={0}
+                  border="1px solid"
+                  borderColor="lightBorder"
+                  borderRadius="sm"
+                  color={isActive ? "primary.base" : "text"}
+                  transitionProperty="common"
+                  transitionDuration="normal"
+                  _hover={{
+                    boxShadow: "primary.base",
+                    borderColor: "black300",
+                  }}
+                >
+                  <Box
+                    fontSize="sm"
+                    lineHeight={1.6}
+                    fontWeight="normal"
+                    letterSpacing="0.04em"
+                    my="1.14em"
+                    textTransform="uppercase"
+                  >
+                    {lang["name"]}
+                  </Box>
+                  <OldHeading
+                    as="h4"
+                    lineHeight={1.4}
+                    fontSize={{ base: "md", md: "xl" }}
+                  >
+                    <LinkOverlay
+                      as={BaseLink}
+                      to={redirectTo}
+                      locale={lang.code}
+                      textDecoration="none"
+                      fontWeight="medium"
+                      color="body.base"
+                      _hover={{ textDecoration: "none" }}
+                    >
+                      {lang.localName}
+                    </LinkOverlay>
+                  </OldHeading>
+                </LinkBox>
+              )
+            })}
+          </Flex>
+          <OldHeading lineHeight={1.4} fontSize={{ base: "2xl", md: "2rem" }}>
+            {t("page-languages-want-more-header")}
+          </OldHeading>
+          <Text>
+            {t("page-languages-want-more-paragraph")}{" "}
+            <InlineLink to="/contributing/translation-program/">
+              {t("page-languages-want-more-link")}
+            </InlineLink>
             .
-          </p>
-        </ContentContainer>
-      </Content>
-    </StyledPage>
+          </Text>
+        </Box>
+      </Flex>
+    </>
   )
 }
 

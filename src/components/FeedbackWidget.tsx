@@ -1,187 +1,104 @@
-// Library imports
-import React, { useState, useEffect, useRef, useMemo } from "react"
-import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
+import { useEffect, useMemo, useRef, useState } from "react"
 import FocusTrap from "focus-trap-react"
-// Component imports
-import Translation from "./Translation"
-import Button from "./Button"
-import Icon from "./Icon"
-import NakedButton from "./NakedButton"
-// SVG imports
-import FeedbackGlyph from "../assets/feedback-glyph.svg"
-// Utility imports
-import { trackCustomEvent } from "../utils/matomo"
-import { translateMessageId } from "../utils/translations"
-// Hook imports
-import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { useKeyPress } from "../hooks/useKeyPress"
-import { useSurvey } from "../hooks/useSurvey"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { MdClose } from "react-icons/md"
+import {
+  Box,
+  Button,
+  ButtonProps,
+  Flex,
+  Icon,
+  ScaleFade,
+} from "@chakra-ui/react"
 
-const FixedDot = styled(NakedButton)<{
+import { FeedbackGlyphIcon } from "@/components/icons"
+import Text from "@/components/OldText"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import { useKeyPress } from "@/hooks/useKeyPress"
+import { useOnClickOutside } from "@/hooks/useOnClickOutside"
+import { useSurvey } from "@/hooks/useSurvey"
+
+type FixedDotProps = ButtonProps & {
   bottomOffset: number
-}>`
-  width: 3rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: ${({ theme }) => theme.colors.primary};
-  box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
-  position: sticky;
-  bottom: 1rem;
-  margin-left: auto;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    bottom: ${({ bottomOffset }) => 1 + bottomOffset}rem;
-    margin-top: 150vh;
-  }
-  right: 1rem;
-  z-index: 98; /* Below the mobile menu */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  transition: transform 0.2s ease-in-out;
-`
-
-const ModalBackground = styled.div`
-  display: block;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 1001; /* Above the nav bar */
-`
-
-const Container = styled.div<{
-  bottomOffset: number
-}>`
-  display: flex;
-  box-sizing: border-box;
-  width: 300px;
-  background-color: ${({ theme }) => theme.colors.ednBackground};
-  border: 1px solid ${({ theme }) => theme.colors.buttonColor};
-  box-shadow: 0px 4px 4px ${({ theme }) => theme.colors.tableItemBoxShadow};
-  border-radius: 0.25rem;
-  position: fixed;
-  right: 2rem;
-  bottom: 5rem;
-  @media (max-width: ${({ theme }) => theme.breakpoints.l}) {
-    offset-position: bottom -300px;
-    bottom: ${({ bottomOffset }) => 5 + bottomOffset}rem;
-  }
-  z-index: 1002; /* Above the ModalBackground */
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.s}) {
-    width: auto;
-    left: 1rem;
-    right: 1rem;
-  }
-
-  &:hover {
-    transform: scale(1.02);
-    transition: transform 0.2s ease-in-out;
-  }
-  transition: transform 0.2s ease-in-out;
-
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem;
-
-  .title {
-    font-weight: 700;
-    font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-
-  .subtitle {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.25rem;
-  }
-
-  .timing {
-    font-weight: 700;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    letter-spacing: 0.025em;
-    color: ${({ theme }) => theme.colors.searchBorder};
-  }
-
-  a {
-    width: 100%;
-    color: ${({ theme }) => theme.colors.text} !important;
-  }
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1.25rem;
-  width: 100%;
-  * {
-    flex: 1;
-    color: ${({ theme }) => theme.colors.white};
-    font-weight: 700;
-  }
-`
-
-const StyledFeedbackGlyph = styled(FeedbackGlyph)`
-  path {
-    fill: ${({ theme }) => theme.colors.white};
-  }
-`
-
-const IconContainer = styled(NakedButton)`
-  position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.2s ease-in-out;
-  }
-  transition: transform 0.2s ease-in-out;
-`
-
-export interface IProps {
-  className?: string
+  isExpanded: boolean
+}
+const FixedDot = ({
+  children,
+  bottomOffset,
+  isExpanded,
+  ...props
+}: FixedDotProps) => {
+  const size = "3rem"
+  return (
+    <Button
+      w={{ base: size, lg: isExpanded ? "15rem" : size }}
+      h={size}
+      borderRadius="full"
+      variant="solid"
+      boxShadow="tableItemBox"
+      position="sticky"
+      bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
+      ms="auto"
+      mt={{ lg: "inherit" }}
+      insetEnd={4}
+      zIndex={98} /* Below the mobile menu */
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      whiteSpace="normal"
+      _hover={{
+        cursor: "pointer",
+        transform: "scale(1.1)",
+        transition: "transform 0.2s ease-in-out",
+      }}
+      transition="transform 0.2s ease-in-out, width 0.25s linear,
+      border-radius 0.25s linear"
+      {...props}
+    >
+      {children}
+    </Button>
+  )
 }
 
-const FeedbackWidget: React.FC<IProps> = ({ className }) => {
-  const intl = useIntl()
+const FeedbackWidget = () => {
+  const { t } = useTranslation("common")
+  const { asPath, locale } = useRouter()
+
   const containerRef = useRef<HTMLInputElement>(null)
   useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
-  const [location, setLocation] = useState("")
   const [isOpen, setIsOpen] = useState<boolean>(false)
+  const [isExpanded, setIsExpanded] = useState<boolean>(false)
   const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
-  const [isHelpful, setIsHelpful] = useState<boolean | null>(null)
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setLocation(window.location.href)
-      // Reset component state when path (location) changes
-      setIsOpen(false)
-      setFeedbackSubmitted(false)
-      setIsHelpful(null)
-    }
-  }, [])
+    // Reset component state when path (asPath) changes
+    setIsOpen(false)
+    setFeedbackSubmitted(false)
+    setIsExpanded(false)
 
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+    let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
+
+    return () => clearTimeout(expandTimeout)
+  }, [asPath])
+
+  const surveyUrl = useSurvey(feedbackSubmitted)
 
   const bottomOffset = useMemo(() => {
     const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
-      if (location.includes(path)) {
+      if (asPath.includes(path)) {
         offset = CONDITIONAL_OFFSET
       }
     })
     return offset
-  }, [location])
+  }, [asPath])
 
   const handleClose = (): void => {
     setIsOpen(false)
@@ -193,6 +110,7 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
   }
   const handleOpen = (): void => {
     setIsOpen(true)
+    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
@@ -205,7 +123,6 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
   const handleSurveyOpen = (): void => {
@@ -216,87 +133,161 @@ const FeedbackWidget: React.FC<IProps> = ({ className }) => {
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
     setIsOpen(false) // Close widget without triggering redundant tracker event
+    setIsExpanded(false)
   }
 
   useKeyPress(`Escape`, handleClose)
 
-  if (!location.includes("/en/")) return null
-
+  if (locale! !== DEFAULT_LOCALE) return null
+  const closeButtonSize = "24px"
   return (
     <>
-      <FixedDot onClick={handleOpen} bottomOffset={bottomOffset} id="dot">
-        <StyledFeedbackGlyph />
+      <FixedDot
+        onClick={handleOpen}
+        bottomOffset={bottomOffset}
+        isExpanded={isExpanded}
+        id="dot"
+      >
+        <Box
+          display="flex"
+          justifyContent="space-evenly"
+          width={{ base: "3rem", lg: isExpanded ? "13.5rem" : "3rem" }}
+          position={{
+            base: "inherit",
+            lg: isExpanded ? "absolute" : "inherit",
+          }}
+        >
+          <FeedbackGlyphIcon color="white" my="11px" />
+          {isExpanded && (
+            <ScaleFade in={isExpanded} delay={0.25}>
+              <Text
+                as="div"
+                color="white"
+                fontWeight="bold"
+                noOfLines={2}
+                height="100%"
+                alignItems="center"
+                display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
+              >
+                {t("feedback-widget-prompt")}
+              </Text>
+            </ScaleFade>
+          )}
+        </Box>
       </FixedDot>
       {isOpen && (
-        <ModalBackground>
+        <Box
+          display="block"
+          position="fixed"
+          inset={0}
+          bgColor="blackAlpha.400"
+          zIndex={1001} /* Above the nav bar */
+        >
           <FocusTrap
             focusTrapOptions={{
               fallbackFocus: `#dot`,
             }}
           >
-            <Container
-              bottomOffset={bottomOffset}
-              ref={containerRef}
-              className={className}
+            <Flex
               id="modal"
+              ref={containerRef}
+              boxSizing="border-box"
+              w={{ base: "auto", sm: "300px" }}
+              bgColor="ednBackground"
+              border="1px"
+              borderColor="buttonColor"
+              boxShadow="tableItemBox"
+              borderRadius="base" /* 0.25rem */
+              position="fixed"
+              insetEnd={{ base: 4, sm: 8 }}
+              insetStart={{ base: 4, sm: "auto" }}
+              bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
+              zIndex={1002} /* Above the modal background */
+              _hover={{
+                transform: "scale(1.02)",
+                transition: "transform 0.2s ease-in-out",
+              }}
+              transition="transform 0.2s ease-in-out"
+              direction="column"
+              alignItems="center"
+              textAlign="center"
+              p={8}
             >
-              <p className="title">
-                {feedbackSubmitted ? (
-                  <Translation id="feedback-widget-thank-you-title" />
-                ) : (
-                  <Translation id="feedback-widget-prompt" />
-                )}
-              </p>
+              <Button
+                variant="ghost"
+                onClick={handleClose}
+                aria-label={t("close")}
+                position="absolute"
+                insetEnd={2}
+                top={2}
+                cursor="pointer"
+                h={closeButtonSize}
+                w={closeButtonSize}
+                minW={closeButtonSize}
+                minH={closeButtonSize}
+                _hover={{
+                  transform: "scale(1.1)",
+                  transition: "transform 0.2s ease-in-out",
+                }}
+                transition="transform 0.2s ease-in-out"
+              >
+                <Icon as={MdClose} h={closeButtonSize} w={closeButtonSize} />
+              </Button>
+
+              <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
+                {feedbackSubmitted
+                  ? t("feedback-widget-thank-you-title")
+                  : t("feedback-widget-prompt")}
+              </Text>
               {feedbackSubmitted && (
-                <p className="subtitle">
-                  <Translation id="feedback-widget-thank-you-subtitle" />
-                </p>
+                <Text fontWeight="normal" fontSize="md" lineHeight={5}>
+                  {t("feedback-widget-thank-you-subtitle")}
+                </Text>
               )}
               {feedbackSubmitted && (
-                <p className="timing">
-                  <Translation id="feedback-widget-thank-you-timing" />
-                </p>
+                <Text
+                  fontWeight="bold"
+                  fontSize="xs"
+                  lineHeight={4}
+                  letterSpacing="wide"
+                  color="searchBorder"
+                >
+                  {t("feedback-widget-thank-you-timing")}
+                </Text>
               )}
-              <ButtonContainer>
+              <Flex flexWrap="nowrap" gap={6} width="full">
                 {feedbackSubmitted ? (
                   <Button
-                    variant="outline-color"
                     onClick={handleSurveyOpen}
-                    aria-label={translateMessageId(
-                      "feedback-widget-thank-you-cta",
-                      intl
-                    )}
+                    aria-label={t("feedback-widget-thank-you-cta")}
+                    flex={1}
                   >
-                    <Translation id="feedback-widget-thank-you-cta" />
+                    {t("feedback-widget-thank-you-cta")}
                   </Button>
                 ) : (
                   <>
                     <Button
-                      variant="outline-color"
+                      variant="solid"
                       onClick={() => handleSubmit(true)}
-                      aria-label={translateMessageId("yes", intl)}
+                      aria-label={t("yes")}
+                      flex={1}
                     >
-                      <Translation id="yes" />
+                      {t("yes")}
                     </Button>
                     <Button
-                      variant="outline-color"
+                      variant="solid"
                       onClick={() => handleSubmit(false)}
-                      aria-label={translateMessageId("no", intl)}
+                      aria-label={t("no")}
+                      flex={1}
                     >
-                      <Translation id="no" />
+                      {t("no")}
                     </Button>
                   </>
                 )}
-              </ButtonContainer>
-              <IconContainer
-                onClick={handleClose}
-                aria-label={translateMessageId("close", intl)}
-              >
-                <Icon name="close" />
-              </IconContainer>
-            </Container>
+              </Flex>
+            </Flex>
           </FocusTrap>
-        </ModalBackground>
+        </Box>
       )}
     </>
   )

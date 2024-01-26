@@ -1,113 +1,112 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import {
+  Box,
+  Flex,
+  List,
+  ListItem,
+  useColorModeValue,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 
-import ButtonLink from "./ButtonLink"
-import Translation from "./Translation"
+import { ButtonLink } from "@/components/Buttons"
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
 
-const Product = styled.div`
-  width: 100%;
-`
-
-const Item = styled.div`
-  display: flex;
-  color: ${(props) => props.theme.colors.text} !important;
-  margin-bottom: 1px;
-  margin-top: 2rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    align-items: flex-start;
-  }
-`
-
-const ItemTitle = styled.div``
-
-const CategoryTitle = styled.h3`
-  border-bottom: 2px solid ${(props) => props.theme.colors.border};
-  padding-bottom: 1rem;
-  margin-bottom: 0rem;
-`
-
-const TextContent = styled.div`
-  padding-bottom: 1rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-left: 1.5rem;
-  justify-content: space-between;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 1rem;
-  }
-`
-
-const ItemDesc = styled.div`
-  font-size: ${(props) => props.theme.fontSizes.s};
-  margin-bottom: 0;
-  opacity: 0.6;
-`
-
-const ImageContainer = styled.div`
-  width: 80px;
-`
-
-const LeftContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`
-
-const Image = styled(GatsbyImage)`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  border-radius: 2px;
-`
-
-const StyledButton = styled(ButtonLink)`
-  margin-left: 2rem;
-  padding: 0.25rem 1.5rem;
-  border-radius: 2px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 1rem;
-    margin-left: 0rem;
-  }
-`
-
-export interface Content {
+type Content = {
   title: string
   description: string
   link?: string
-  image?: any
+  image?: ImageProps["src"]
   alt: string
   id?: string
 }
 
-export interface IProps {
-  content: Array<Content>
+export type ProductListProps = {
+  content: Content[]
   category: string
+  actionLabel: string
 }
 
-const ProductList: React.FC<IProps> = ({ content, category }) => (
-  <Product>
-    <CategoryTitle>{category}</CategoryTitle>
-    {content.map(({ title, description, link, image, alt, id }, idx) => (
-      <Item key={id || idx}>
-        <ImageContainer>
-          {image && <Image image={image} alt={alt} />}
-        </ImageContainer>
-        <TextContent>
-          <LeftContainer>
-            <ItemTitle>{title}</ItemTitle>
-            <ItemDesc>{description}</ItemDesc>
-          </LeftContainer>
-          {link && (
-            <StyledButton variant="outline" to={link}>
-              <Translation id="page-dapps-ready-button" />
-            </StyledButton>
-          )}
-        </TextContent>
-      </Item>
-    ))}
-  </Product>
-)
+const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+
+  const CATEGORY_NAME = "category-name"
+
+  return (
+    <Box boxSize="full">
+      <OldHeading
+        as="h3"
+        id={CATEGORY_NAME}
+        fontSize="2xl"
+        borderBottom="2px solid"
+        borderColor="border"
+        paddingBottom={4}
+        marginBottom={0}
+      >
+        {category}
+      </OldHeading>
+      <Flex
+        as={List}
+        aria-labelledby={CATEGORY_NAME}
+        m={0}
+        flexDirection="column"
+        height="inherit"
+      >
+        {content.map(({ title, description, link, image, alt, id }, idx) => (
+          <Flex
+            as={ListItem}
+            key={id || idx}
+            color="text"
+            marginBottom="px"
+            marginTop={8}
+            height="inherit"
+          >
+            <Box width="5rem">
+              {image && (
+                <Image
+                  src={image}
+                  alt={alt}
+                  width={66}
+                  boxShadow={shadow}
+                  borderRadius="sm"
+                />
+              )}
+            </Box>
+            <Flex
+              justifyContent="space-between"
+              flexDir={{ base: "column", sm: "row" }}
+              paddingBottom={4}
+              width="full"
+              ms={{ base: 4, sm: 6 }}
+              borderBottom="1px solid"
+              borderColor="border"
+            >
+              <Box flex={1}>
+                <Box>{title}</Box>
+                <Box fontSize="sm" marginBottom={0} opacity="0.6">
+                  {description}
+                </Box>
+              </Box>
+              {link && (
+                <ButtonLink
+                  variant="outline"
+                  href={link}
+                  alignSelf="center"
+                  ms={{ base: 0, sm: 8 }}
+                  paddingY={1}
+                  paddingX={6}
+                  borderRadius="sm"
+                  marginTop={{ base: 4, sm: 0 }}
+                >
+                  {actionLabel}
+                  <VisuallyHidden>to {title} website</VisuallyHidden>
+                </ButtonLink>
+              )}
+            </Flex>
+          </Flex>
+        ))}
+      </Flex>
+    </Box>
+  )
+}
 
 export default ProductList

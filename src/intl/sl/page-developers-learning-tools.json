@@ -10,8 +10,6 @@
   "page-learning-tools-coding-subtitle": "Ta orodja vam bodo pomagala eksperimentirati z Ethereumom, če imate raje interaktivno učno izkušnjo.",
   "page-learning-tools-consensys-academy-description": "Spletni izobraževalni tabor za razvijalce na Ethereumu.",
   "page-learning-tools-consensys-academy-logo-alt": "Logotip ConsenSys Academy",
-  "page-learning-tools-lambdaschool-description": "Naučite se razvoja blokovnih verig z Ethereumom.",
-  "page-learning-tools-lambdaschool-logo-alt": "Lambda School logotip",
   "page-learning-tools-buildspace-description": "Naučite se o kriptu z razvojem super projektov.",
   "page-learning-tools-buildspace-logo-alt": "_buildspace logotip",
   "page-learning-tools-cryptozombies-description": "Naučite se jezika Solidity z razvijanjem igre z zombiji.",
@@ -37,5 +35,6 @@
   "page-learning-tools-vyperfun-description": "Naučite se programskega jezika Vyper tako, da ustvarite igro Pokémon.",
   "page-learning-tools-vyperfun-logo-alt": "Logotip Vyper.fun",
   "page-learning-tools-nftschool-description": "Raziščite kaj se dogaja z nezamenljivimi žetoni ali NFT-ji s tehnične strani.",
-  "page-learning-tools-nftschool-logo-alt": "Logotip šole NFT"
+  "page-learning-tools-nftschool-logo-alt": "Logotip šole NFT",
+  "alt-eth-blocks": "Ilustracija blokov, ki jih organizirajo kot simbol ETH"
 }

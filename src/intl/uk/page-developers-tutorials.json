@@ -18,5 +18,7 @@
   "page-tutorial-tags-error": "Жоден посібник не містить усіх цих міток ще",
   "page-tutorial-title": "Посібник із розробки Ethereum",
   "page-tutorials-meta-description": "Перегляньте й відфільтруйте за темою перевірені посібники спільноти Ethereum.",
-  "page-tutorials-meta-title": "Посібники з розробки Ethereum"
+  "page-tutorials-meta-title": "Посібники з розробки Ethereum",
+  "page-find-wallet-try-removing": "Спробуйте вилучити одну або дві функції",
+  "page-find-wallet-clear": "Очистити фільтри"
 }

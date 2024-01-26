@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Deixar de llegir",
   "page-staking-deposit-contract-subtitle": "Aquesta és l'adreça del contracte de participació d'Ethereum. Utilitza aquesta pàgina per a confirmar que estàs enviant fons a l'adreça correcta quan fas participació.",
   "page-staking-deposit-contract-warning": "Comproveu cada caràcter amb deteniment.",
-  "page-staking-deposit-contract-warning-2": "Enviar fons a aquesta adreça no funcionarà i no us convertirà en apostador. Heu de seguir les instruccions de la plataforma."
+  "page-staking-deposit-contract-warning-2": "Enviar fons a aquesta adreça no funcionarà i no us convertirà en apostador. Heu de seguir les instruccions de la plataforma.",
+  "page-staking-deposit-contract-title": "Consulteu l'adreça del contracte de dipòsit"
 }

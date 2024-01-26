@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Stop reading",
   "page-staking-deposit-contract-subtitle": "This is the address for the Ethereum staking contract. Use this page to confirm you’re sending funds to the correct address when you stake.",
   "page-staking-deposit-contract-warning": "Check each character carefully.",
-  "page-staking-deposit-contract-warning-2": "Sending funds to this address won’t work and won’t make you a staker. You must follow the launchpad instructions."
+  "page-staking-deposit-contract-warning-2": "Sending funds to this address won’t work and won’t make you a staker. You must follow the launchpad instructions.",
+  "page-staking-deposit-contract-title": "Check the deposit contract address"
 }

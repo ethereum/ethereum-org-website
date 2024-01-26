@@ -18,10 +18,11 @@
   "page-staking-deposit-contract-reveal-address-btn": "Rivela indirizzo",
   "page-staking-deposit-contract-staking": "Per fare staking con i tuoi ETH in Eth2 devi utilizzare il prodotto launchpad dedicato e seguire le istruzioni. L'invio di ETH all'indirizzo di questa pagina non ti renderà un staker e produrrà una transazione non riuscita.",
   "page-staking-deposit-contract-staking-check": "Controlla queste fonti",
-  "page-staking-deposit-contract-staking-check-desc": "È facile imbattersi in truffe e account fasulli. Per sicurezza, confronta l'indirizzo di staking Eth2 che stai utilizzando con l'indirizzo presente su questa pagina. Consigliamo inoltre di verificarlo con altre fonti affidabili.",
+  "page-staking-deposit-contract-staking-check-desc": "Immaginiamo che ci siano molti indirizzi falsi e truffe là fuori. Per sicurezza, confronta l'indirizzo del contratto di staking che stai usando rispetto all'indirizzo su questa pagina. Consigliamo di verificare anche con altre fonti affidabili.",
   "page-staking-deposit-contract-staking-more-link": "Maggiori informazioni sullo staking",
   "page-staking-deposit-contract-stop-reading": "Interrompi lettura",
   "page-staking-deposit-contract-subtitle": "Questo è l'indirizzo del contratto per lo staking Eth2. Usa questa pagina per confermare che stai inviando fondi all'indirizzo corretto quando fai staking.",
   "page-staking-deposit-contract-warning": "Controlla attentamente ogni carattere.",
-  "page-staking-deposit-contract-warning-2": "L'invio di fondi a questo indirizzo non funzionerà e non ti renderà uno staker. Devi seguire le istruzioni del launchpad."
+  "page-staking-deposit-contract-warning-2": "L'invio di fondi a questo indirizzo non funzionerà e non ti renderà uno staker. Devi seguire le istruzioni del launchpad.",
+  "page-staking-deposit-contract-title": "Controlla l'indirizzo del contratto di deposito"
 }

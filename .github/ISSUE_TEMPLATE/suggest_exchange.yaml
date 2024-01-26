@@ -1,0 +1,66 @@
+name: Suggest an exchange
+description: Suggest a new exchange to list on ethereum.org
+title: Suggest an exchange
+labels: ["content :fountain_pen:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting an exchange, make sure you've read [our exchange listing policy](https://ethereum.org/en/contributing/adding-exchanges/). If it's a decentralized exchange (DEX) you'd like to list, please take a look at our [policy for listing dapps](https://ethereum.org/en/contributing/adding-products/).
+  - type: markdown
+    attributes:
+      value: |
+        Please fill out this short form if you'd like an exchange added to ethereum.org:
+  - type: markdown
+    id: exchange_info
+    attributes:
+      value: "## Exchange info"
+  - type: input
+    id: exchange_name
+    attributes:
+      label: Exchange name
+    validations:
+      required: true
+  - type: textarea
+    id: exchange_description
+    attributes:
+      label: Exchange description
+    validations:
+      required: true
+  - type: textarea
+    id: exchange_restrictions
+    attributes:
+      label: What geographical restrictions apply to this exchange?
+      description: If you don't know, please get in touch with the exchange. They'll likely have a list of restricted countries and jurisdictions.
+    validations:
+      required: true
+  - type: textarea
+    id: exchange_currencies
+    attributes:
+      label: Which currencies are accepted by this exchange?
+      description: If you don't know, please get in touch with the exchange. They'll likely have a list of accepted currencies
+    validations:
+      required: true
+  - type: textarea
+    id: exchange_proof_of_legitimacy
+    attributes:
+      label: Do you have any proof that they're a legitimate company?
+      description: This is a safeguard against listing any malicious sites. You could provide a link to an "About" page from the exchange that provides more information about their legal entity, or a link to an official company registration
+    validations:
+      required: true
+  - type: textarea
+    id: exchange_extra_information
+    attributes:
+      label: Do you have any extra information?
+      description: Add any more info that may make a stronger case for listing this exchange. Consider years of operation, size of company, financial backing etc
+  - type: checkboxes
+    id: exchange_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

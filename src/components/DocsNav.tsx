@@ -1,95 +1,109 @@
-import React from "react"
-import styled from "@emotion/styled"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import {
+  Box,
+  Flex,
+  FlexProps,
+  LinkBox,
+  LinkOverlay,
+  Spacer,
+} from "@chakra-ui/react"
 
-import Link from "./Link"
-import Emoji from "./OldEmoji"
-import Translation from "./Translation"
+import { TranslationKey } from "@/lib/types"
+import type { DeveloperDocsLink } from "@/lib/interfaces"
 
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { TranslationKey } from "../utils/translations"
+import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
 
-const Container = styled.div`
-  display: flex;
-  justify-content: space-between;
-  @media (max-width: 604px) {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-`
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// TODO make entire card a link
-const Card = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-top: 1rem;
-  width: 262px;
-  height: 82px;
-  background-color: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  @media (max-width: 604px) {
-    width: 100%;
-  }
-`
+import docLinks from "@/data/developer-docs-links.yaml"
 
-const PreviousCard = styled(Card)`
-  justify-content: flex-start;
-`
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const NextCard = styled(Card)`
-  justify-content: flex-end;
-`
-const TextDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 166px;
-  height: 100%;
-  word-wrap: break-word;
-  padding: 1rem;
-  line-height: 1rem;
-`
+const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
+  <Flex
+    direction="column"
+    justify="space-between"
+    maxW="166px"
+    h="100%"
+    wordwrap="break-word"
+    p={4}
+    lineHeight={4}
+    {...props}
+  >
+    {children}
+  </Flex>
+)
 
-const PreviousTextDiv = styled(TextDiv)`
-  align-items: flex-start;
-  padding-left: 0rem;
-`
-
-const NextTextDiv = styled(TextDiv)`
-  align-items: flex-end;
-  padding-right: 0rem;
-`
-
-const PreviousNavLink = styled(Link)`
-  text-align: left;
-`
-
-const NextNavLink = styled(Link)`
-  text-align: right;
-`
-
-const EmojiLink = styled(Link)`
-  text-decoration: none;
-  padding: 1rem;
-  height: 100%;
-`
-
-const UppercaseSpan = styled.span`
-  text-transform: uppercase;
-`
-
-export interface DocsArrayProps {
+type DocsArrayProps = {
   to: string
   id: TranslationKey
 }
 
-export interface IProps {
-  relativePath: string
+type CardLinkProps = {
+  docData: DocsArrayProps
+  contentNotTranslated: boolean
+  isPrev?: boolean
 }
 
-const DocsNav: React.FC<IProps> = ({ relativePath }) => {
+const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
+  const { t } = useTranslation("page-developers-docs")
+  const { flipForRtl } = useRtlFlip()
+
+  const xPadding = isPrev ? { ps: "0" } : { pe: 0 }
+
+  return (
+    <LinkBox
+      as={Flex}
+      alignItems="center"
+      mt={4}
+      w="262px"
+      h="82px"
+      bg="background.base"
+      border="1px"
+      borderColor="border"
+      borderRadius={1}
+      justify={isPrev ? "flex-start" : "flex-end"}
+    >
+      <Box textDecoration="none" p={4} h="100%" order={isPrev ? 0 : 1}>
+        <Emoji
+          text={isPrev ? ":point_left:" : ":point_right:"}
+          fontSize="5xl"
+          transform={contentNotTranslated ? undefined : flipForRtl}
+        />
+      </Box>
+      <TextDiv {...xPadding} {...(!isPrev && { textAlign: "end" })}>
+        <Text textTransform="uppercase" m="0">
+          {t(isPrev ? "previous" : "next")}
+        </Text>
+        <LinkOverlay
+          as={BaseLink}
+          href={docData.to}
+          textAlign={isPrev ? "start" : "end"}
+          rel={isPrev ? "prev" : "next"}
+          onClick={() => {
+            trackCustomEvent({
+              eventCategory: "next/previous article DocsNav",
+              eventAction: "click",
+              eventName: isPrev ? "previous" : "next",
+            })
+          }}
+        >
+          {t(docData.id)}
+        </LinkOverlay>
+      </TextDiv>
+    </LinkBox>
+  )
+}
+
+type DocsNavProps = {
+  contentNotTranslated: boolean
+}
+
+const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
+  const { asPath } = useRouter()
   // Construct array of all linkable documents in order recursively
   const docsArray: DocsArrayProps[] = []
   const getDocs = (links: Array<DeveloperDocsLink>): void => {
@@ -114,7 +128,7 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
   // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
-    if (relativePath.indexOf(docsArray[i].to) > -1) {
+    if (asPath.indexOf(docsArray[i].to) > -1) {
       currentIndex = i
     }
   }
@@ -125,42 +139,31 @@ const DocsNav: React.FC<IProps> = ({ relativePath }) => {
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
   return (
-    <Container>
+    <Flex
+      as="nav"
+      aria-label="Paginate to document"
+      direction={{ base: "column-reverse", md: "row" }}
+      justify="space-between"
+      alignItems={{ base: "center", md: "flex-start" }}
+    >
       {previousDoc ? (
-        <PreviousCard>
-          <EmojiLink to={previousDoc.to}>
-            <Emoji text=":point_left:" size={3} />
-          </EmojiLink>
-          <PreviousTextDiv>
-            <UppercaseSpan>
-              <Translation id="previous" />
-            </UppercaseSpan>
-            <PreviousNavLink to={previousDoc.to}>
-              <Translation id={previousDoc.id} />
-            </PreviousNavLink>
-          </PreviousTextDiv>
-        </PreviousCard>
+        <CardLink
+          docData={previousDoc}
+          contentNotTranslated={contentNotTranslated}
+          isPrev
+        />
       ) : (
-        <div />
+        <Spacer />
       )}
       {nextDoc ? (
-        <NextCard>
-          <NextTextDiv>
-            <UppercaseSpan>
-              <Translation id="next" />
-            </UppercaseSpan>
-            <NextNavLink to={nextDoc.to}>
-              <Translation id={nextDoc.id} />
-            </NextNavLink>
-          </NextTextDiv>
-          <EmojiLink to={nextDoc.to}>
-            <Emoji text=":point_right:" size={3} />
-          </EmojiLink>
-        </NextCard>
+        <CardLink
+          docData={nextDoc}
+          contentNotTranslated={contentNotTranslated}
+        />
       ) : (
-        <div />
+        <Spacer />
       )}
-    </Container>
+    </Flex>
   )
 }
 

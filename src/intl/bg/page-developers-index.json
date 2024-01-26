@@ -8,7 +8,6 @@
   "page-developers-advanced": "Разширени",
   "page-developers-api-desc": "Използване на библиотеки за взаимодействие с умните договори",
   "page-developers-api-link": "Бекенд API (приложно-програмен интерфейс)",
-  "page-developers-aria-label": "Меню на разработчиците",
   "page-developers-block-desc": "Партиди от транзакции, добавени към блокчейна",
   "page-developers-block-explorers-desc": "Вашият портал към данните на Етереум",
   "page-developers-block-explorers-link": "Експлорър на блокове",
@@ -84,5 +83,7 @@
   "page-developers-transactions-desc": "Начинът, по който състоянието на Етереум се променя",
   "page-developers-transactions-link": "Трансакции",
   "page-developers-web3-desc": "С какво светът на развитие на web3 е различен",
-  "page-developers-web3-link": "Web2 срещу Web3"
+  "page-developers-web3-link": "Web2 срещу Web3",
+  "alt-eth-blocks": "Илюстрация на блокове, организирани като символ на ETH",
+  "page-assets-doge": "Децентрализирани приложения/dapps, които използват Doge"
 }

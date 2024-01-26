@@ -1,116 +1,18 @@
-// Libraries
 import React, { useState } from "react"
-import styled from "@emotion/styled"
 import { reverse, sortBy } from "lodash"
+import { useTranslation } from "next-i18next"
+import {
+  Box,
+  Button as ChakraButton,
+  Flex,
+  Img,
+  useColorModeValue,
+  useRadio,
+  useRadioGroup,
+} from "@chakra-ui/react"
 
-// Components
-import Emoji from "./OldEmoji"
-import { Option, OptionContainer, OptionText } from "./SharedStyledComponents"
-import Translation from "./Translation"
-
-const Content = styled.div`
-  margin-bottom: 2rem;
-`
-
-const Table = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  width: 100%;
-  margin-bottom: 2rem;
-`
-
-const Header = styled.div`
-  background-color: ${(props) => props.theme.colors.grayBackground};
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-`
-
-const Item = styled.div`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  color: #000000;
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const TextContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 2rem;
-  overflow-wrap: anywhere;
-`
-
-const WordsContainer = styled.div`
-  min-width: 20%;
-  display: flex;
-  flex-direction: row;
-  align-items: left;
-`
-
-const Avatar = styled.img`
-  margin-right: 1rem;
-  height: 40px;
-  width: 40px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    height: 30px;
-    width: 30px;
-  }
-  border-radius: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
-    display: none;
-  }
-`
-
-const NameContainer = styled.div`
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 100px;
-  }
-`
-
-const Width40 = styled.div`
-  width: 40px;
-`
-
-const ItemNumber = styled(Width40)`
-  opacity: 0.4;
-`
-
-const Language = styled.p`
-  margin: 0;
-  display: block;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  opacity: 0.6;
-`
-
-const StyledEmoji = styled(Emoji)`
-  display: block;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    display: none;
-  }
-`
-
-const Flex = styled.div`
-  display: flex;
-`
+import Emoji from "./Emoji"
+import Text from "./OldText"
 
 export interface IProps {
   monthData: any
@@ -118,20 +20,114 @@ export interface IProps {
   allTimeData: any
 }
 
+const Button = (props) => {
+  return (
+    <ChakraButton
+      display="flex"
+      borderRadius="2rem"
+      borderWidth="1px"
+      borderStyle="solid"
+      borderColor="text"
+      color="text"
+      alignItems="center"
+      py={4}
+      px={6}
+      m={2}
+      h="full"
+      cursor="pointer"
+      bg="transparent"
+      w={{ base: "full", lg: "initial" }}
+      justifyContent="center"
+      mx={{ base: "0", lg: "2" }}
+      _hover={{
+        color: "primary.base",
+        borderColor: "primary.base",
+      }}
+      _focus={{}}
+      _active={{}}
+      {...props}
+    />
+  )
+}
+
+const RadioCard = (props) => {
+  const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { getInputProps, getCheckboxProps } = useRadio(props)
+
+  const input = getInputProps()
+  const checkbox = getCheckboxProps()
+
+  return (
+    <Button
+      as="label"
+      {...checkbox}
+      _checked={{
+        borderColor: "primary.base",
+        color: "primary.base",
+        boxShadow: shadow,
+      }}
+    >
+      <input {...input} />
+      <Text
+        as="span"
+        fontSize={{ base: "md", md: "lg" }}
+        lineHeight="100%"
+        textAlign="center"
+        fontWeight={{ base: "semibold", md: "normal" }}
+      >
+        {props.children}
+      </Text>
+    </Button>
+  )
+}
+
+const filterLeaderboardUsers = (item) => {
+  const username = item.user.username.toLowerCase()
+  const fullName = item.user.fullName?.toLowerCase() || ""
+
+  const excludedUsernames = new Set([
+    "ethdotorg",
+    "finnish_sandberg",
+    "norwegian_sandberg",
+    "swedish_sandberg",
+  ])
+
+  return (
+    !excludedUsernames.has(username) &&
+    !username.includes("lqs_") &&
+    !username.includes("removed_user") &&
+    !username.includes("aco_") &&
+    !fullName.includes("aco_") &&
+    !username.includes("aco-") &&
+    !fullName.includes("aco-") &&
+    !username.includes("acc_") &&
+    !fullName.includes("acc_")
+  )
+}
+
+const sortAndFilterData = (data) => {
+  return reverse(sortBy(data, ({ user }) => user.totalCosts)).filter(
+    filterLeaderboardUsers
+  )
+}
+
 const TranslationLeaderboard: React.FC<IProps> = ({
   monthData,
   quarterData,
   allTimeData,
 }) => {
+  const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const tableItemBoxShadow = useColorModeValue(
+    "tableItemBox.light",
+    "tableItemBox.dark"
+  )
+
   const leaderboardData = {
-    monthData: reverse(sortBy(monthData.data, ({ user }) => user.totalCosts)),
-    quarterData: reverse(
-      sortBy(quarterData.data, ({ user }) => user.totalCosts)
-    ),
-    allTimeData: reverse(
-      sortBy(allTimeData.data, ({ user }) => user.totalCosts)
-    ),
+    monthData: sortAndFilterData(monthData.data),
+    quarterData: sortAndFilterData(quarterData.data),
+    allTimeData: sortAndFilterData(allTimeData.data),
   }
+
   const [filterAmount, updateFilterAmount] = useState(10)
   const [dateRangeType, updateDateRangeType] = useState("monthData")
 
@@ -143,62 +139,82 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     updateFilterAmount(50)
   }
 
+  const { getRadioProps } = useRadioGroup({
+    name: "period selection",
+    defaultValue: "monthData",
+    onChange: updateDateRangeType,
+  })
+
+  const { t } = useTranslation(
+    "page-contributing-translation-program-acknowledgements"
+  )
+
   return (
-    <Content>
-      <OptionContainer>
-        <Option
-          onClick={() => updateDateRangeType("monthData")}
-          isActive={dateRangeType === "monthData"}
+    <Box>
+      <Flex
+        justifyContent="center"
+        py={0}
+        px={8}
+        mb={8}
+        flexDirection={{ base: "column", lg: "inherit" }}
+        w="full"
+      >
+        <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view"
+          )}
+        </RadioCard>
+        <RadioCard
+          key="quarterData"
+          {...getRadioProps({ value: "quarterData" })}
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
-          </OptionText>
-        </Option>
-        <Option
-          onClick={() => updateDateRangeType("quarterData")}
-          isActive={dateRangeType === "quarterData"}
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view"
+          )}
+        </RadioCard>
+        <RadioCard
+          key="allTimeData"
+          {...getRadioProps({ value: "allTimeData" })}
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
-          </OptionText>
-        </Option>
-        <Option
-          onClick={() => updateDateRangeType("allTimeData")}
-          isActive={dateRangeType === "allTimeData"}
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view"
+          )}
+        </RadioCard>
+      </Flex>
+      <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
+        <Flex
+          bg="grayBackground"
+          textDecoration="none"
+          justifyContent="space-between"
+          alignItems="center"
+          color="text"
+          mb="1px"
+          p={4}
+          w="full"
         >
-          <OptionText fontSize={"18px"}>
-            <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
-          </OptionText>
-        </Option>
-      </OptionContainer>
-      <Table>
-        <Header>
           <Flex>
-            <ItemNumber>#</ItemNumber>
-            <TextContainer>
-              <Translation id="page-contributing-translation-program-acknowledgements-translator" />
-            </TextContainer>
+            <Box w={10} opacity="0.4">
+              #
+            </Box>
+            <Flex
+              flexDirection="row"
+              alignItems="center"
+              me={8}
+              overflowWrap="anywhere"
+            >
+              {t(
+                "page-contributing-translation-program-acknowledgements-translator"
+              )}
+            </Flex>
           </Flex>
-          <WordsContainer>
-            <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
-          </WordsContainer>
-        </Header>
-        {/* // TODO: Remove specific user checks once Acolad has updated their usernames */}
+          <Flex minW="20%" flexDirection="row" alignItems="start">
+            {t(
+              "page-contributing-translation-program-acknowledgements-total-words"
+            )}
+          </Flex>
+        </Flex>
         {leaderboardData[dateRangeType]
-          .filter(
-            (item) =>
-              item.user.username !== "ethdotorg" &&
-              !item.user.username.includes("LQS_") &&
-              !item.user.username.includes("REMOVED_USER") &&
-              !item.user.username.includes("Aco_") &&
-              !item.user.fullName.includes("Aco_") &&
-              !item.user.username.includes("Acc_") &&
-              !item.user.fullName.includes("Acc_") &&
-              item.user.username !== "Finnish_Sandberg" &&
-              item.user.username !== "Norwegian_Sandberg" &&
-              item.user.username !== "Swedish_Sandberg"
-          )
-          .filter((item, idx) => idx < filterAmount)
+          .slice(0, filterAmount)
           .map((item, idx) => {
             const { user, languages } = item
             const sortedLanguages = reverse(
@@ -214,45 +230,93 @@ const TranslationLeaderboard: React.FC<IProps> = ({
               emoji = ":3rd_place_medal:"
             }
             return (
-              <Item key={idx}>
+              <Flex
+                textDecoration="none"
+                justifyContent="space-between"
+                alignItems="center"
+                color="text"
+                boxShadow={tableItemBoxShadow}
+                mb="1px"
+                py={2}
+                px={4}
+                w="full"
+                _hover={{
+                  borderRadius: "base",
+                  boxShadow: "tableItemBoxHover",
+                  bg: "tableBackgroundHover",
+                }}
+                key={idx}
+              >
                 <Flex>
                   {emoji ? (
-                    <Width40>
-                      <Emoji mr={"1rem"} size={2} text={emoji} />
-                    </Width40>
+                    <Box w={10}>
+                      <Emoji me={4} fontSize="2rem" text={emoji} />
+                    </Box>
                   ) : (
-                    <ItemNumber>{idx + 1}</ItemNumber>
+                    <Box w={10} opacity="0.4">
+                      {idx + 1}
+                    </Box>
                   )}
-                  <TextContainer>
-                    <Avatar src={user.avatarUrl} />
-                    <NameContainer>
+                  <Flex
+                    flexDirection="row"
+                    alignItems="center"
+                    me={8}
+                    overflowWrap="anywhere"
+                  >
+                    <Img
+                      me={4}
+                      h={{ base: "30px", sm: 10 }}
+                      w={{ base: "30px", sm: 10 }}
+                      borderRadius="50%"
+                      display={{ base: "none", s: "block" }}
+                      src={user.avatarUrl}
+                    />
+                    <Box maxW={{ base: "100px", sm: "none" }}>
                       {user.username}
-                      <Language>{sortedLanguages[0].language.name}</Language>
-                    </NameContainer>
-                  </TextContainer>
+                      <Text m={0} display="block" fontSize="sm" opacity="0.6">
+                        {sortedLanguages[0].language.name}
+                      </Text>
+                    </Box>
+                  </Flex>
                 </Flex>
-                <WordsContainer>
-                  <StyledEmoji mr={"0.5rem"} size={1.5} text={":writing:"} />
+                <Flex minW="20%" flexDirection="row" alignItems="start">
+                  <Emoji
+                    display={{ base: "none", sm: "block" }}
+                    me={2}
+                    fontSize="2xl"
+                    text={":writing:"}
+                  />
                   {user.totalCosts}
-                </WordsContainer>
-              </Item>
+                </Flex>
+              </Flex>
             )
           })}
-      </Table>
-      <OptionContainer>
-        <Option onClick={filterAmount === 10 ? showMore : showLess}>
-          <OptionText fontSize={"18px"}>
-            <Translation
-              id={
-                filterAmount === 10
-                  ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
-                  : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
-              }
-            />
-          </OptionText>
-        </Option>
-      </OptionContainer>
-    </Content>
+      </Box>
+      <Flex
+        justifyContent="center"
+        py={0}
+        px={8}
+        mb={8}
+        flexDirection={{ base: "column", lg: "inherit" }}
+        w="full"
+      >
+        <Button onClick={filterAmount === 10 ? showMore : showLess}>
+          <Text
+            as="span"
+            fontSize={{ base: "md", md: "lg" }}
+            lineHeight="100%"
+            textAlign="center"
+            fontWeight={{ base: "semibold", md: "normal" }}
+          >
+            {t(
+              filterAmount === 10
+                ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
+                : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
+            )}
+          </Text>
+        </Button>
+      </Flex>
+    </Box>
   )
 }
 

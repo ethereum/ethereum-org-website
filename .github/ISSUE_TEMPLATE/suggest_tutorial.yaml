@@ -1,0 +1,75 @@
+name: Suggest a tutorial
+description: Suggest a tutorial to our developers platform
+title: Suggest a tutorial
+labels: ["feature :sparkles:", "content :fountain_pen:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We'll consider [our content resources policy](https://ethereum.org/en/contributing/content-resources/) when reviewing the tutorial, so please take a look there first.
+  - type: markdown
+    id: tutorial_info
+    attributes:
+      value: "## Tutorial info"
+  - type: input
+    id: tutorial_title
+    attributes:
+      label: Tutorial title
+      description: What is the title of your tutorial?
+    validations:
+      required: true
+  - type: textarea
+    id: tutorial_description
+    attributes:
+      label: Tutorial description
+      description: Summarize what the user should be able to accomplish by following tutorial
+    validations:
+      required: true
+  - type: input
+    id: tutorial_tags
+    attributes:
+      label: Tutorial tags
+      description: What topics are covered in your tutorial? Check out the current tags on https://ethereum.org/en/developers/tutorials/ but feel free to add new ones
+    validations:
+      required: true
+  - type: dropdown
+    id: tutorial_skill_level
+    attributes:
+      label: Skill level
+      options:
+        - "Beginner"
+        - "Intermediate"
+        - "Advanced"
+    validations:
+      required: true
+  - type: dropdown
+    id: tutorial_hosted
+    attributes:
+      label: Hosted on ethereum.org or hosted elsewhere?
+      description: Let us know if you want your tutorial to be hosted on the ethereum.org website or if it is published elsewhere and you want us to link out to the tutorial
+      options:
+        - "Hosted on ethereum.org"
+        - "Hosted elsewhere"
+    validations:
+      required: true
+  - type: textarea
+    id: tutorial_content
+    attributes:
+      label: "For tutorials to be hosted on Ethereum.org: Tutorial Content"
+      description: Please provide a detailed outline of the content for the tutorial
+  - type: input
+    id: tutorial_url
+    attributes:
+      label: "For tutorials hosted elsewhere: URL to tutorial"
+      description: Please paste the URL to your tutorial
+  - type: checkboxes
+    id: tutorial_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

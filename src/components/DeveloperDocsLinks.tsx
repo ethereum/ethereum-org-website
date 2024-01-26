@@ -1,8 +1,10 @@
 import React from "react"
-import { ListItem } from "./SharedStyledComponents"
-import Translation from "./Translation"
-import Link from "./Link"
-import docLinks from "../data/developer-docs-links.yaml"
+import { ListItem, UnorderedList } from "@chakra-ui/react"
+
+import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
+
+import docLinks from "@/data/developer-docs-links.yaml"
 
 export interface IProps {
   headerId: string
@@ -13,34 +15,39 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <ul key={id}>
+        <UnorderedList ms={6} spacing={3} key={id}>
           {items &&
             items.map(({ id, to, path, description, items }) => (
               <ListItem key={id}>
                 {to || path ? (
-                  <Link to={to || path}>
-                    <Translation id={id} />
-                  </Link>
+                  <InlineLink to={to || path}>
+                    <Translation id={`page-developers-docs:${id}`} />
+                  </InlineLink>
                 ) : (
-                  <Translation id={id} />
+                  <Translation id={`page-developers-docs:${id}`} />
                 )}
                 <i>
                   {" – "}
-                  <Translation id={description} />
+                  <Translation id={`page-developers-docs:${description}`} />
                 </i>
-                <ul>
+                <UnorderedList
+                  ms={6}
+                  mt={3}
+                  spacing={3}
+                  style={{ listStyleType: "circle" }}
+                >
                   {items &&
                     items.map(({ id, to, path }) => (
                       <ListItem key={id}>
-                        <Link to={to || path}>
-                          <Translation id={id} />
-                        </Link>
+                        <InlineLink to={to || path}>
+                          <Translation id={`page-developers-docs:${id}`} />
+                        </InlineLink>
                       </ListItem>
                     ))}
-                </ul>
+                </UnorderedList>
               </ListItem>
             ))}
-        </ul>
+        </UnorderedList>
       ))}
   </React.Fragment>
 )

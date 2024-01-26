@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import ClipboardJS from "clipboard"
+import { Box } from "@chakra-ui/react"
 
 export interface IProps {
   text: string
+  inline?: boolean
   children: (isCopied: boolean) => React.ReactNode
 }
 
-const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
+const CopyToClipboard: React.FC<IProps> = ({
+  children,
+  text,
+  inline = false,
+}) => {
   const [isCopied, setIsCopied] = useState<boolean>(false)
   const targetEl = useRef<HTMLDivElement>(null)
   const timer = useRef(0)
@@ -36,7 +42,11 @@ const CopyToClipboard: React.FC<IProps> = ({ children, text }) => {
     }
   }, [text])
 
-  return <div ref={targetEl}>{children(isCopied)}</div>
+  return (
+    <Box ref={targetEl} display={inline ? "inline" : "block"} cursor="pointer">
+      {children(isCopied)}
+    </Box>
+  )
 }
 
 export default CopyToClipboard

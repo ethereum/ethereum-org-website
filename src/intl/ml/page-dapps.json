@@ -178,5 +178,8 @@
   "page-dapps-wallet-callout-title": "വാലറ്റുകൾ കാണുക",
   "page-dapps-warning-header": "എല്ലായ്പ്പോഴും നിങ്ങളുടെ സ്വന്തം ഗവേഷണം നടത്തുക",
   "page-dapps-warning-message": "Ethereum ഒരു പുതിയ സാങ്കേതികവിദ്യയാണ്, മിക്ക അപ്ലിക്കേഷനുകളും പുതിയതാണ്. ഏതെങ്കിലും വലിയ തുക നിക്ഷേപിക്കുന്നതിന് മുമ്പ്, നിങ്ങൾ അപകടസാധ്യതകൾ മനസ്സിലാക്കിയിട്ടുണ്ടെന്ന് ഉറപ്പാക്കുക.",
-  "page-dapps-what-are-dapps": "എന്താണ് ഡാപ്പുകൾ?"
+  "page-dapps-what-are-dapps": "എന്താണ് ഡാപ്പുകൾ?",
+  "foundation": "ഫൗണ്ടേഷൻ",
+  "transaction-fees": "ഇടപാട് ഫീസ് എന്താണ്?",
+  "page-wallets-get-some": "കുറച്ച് ETH നേടുക"
 }

@@ -18,5 +18,7 @@
   "page-tutorial-tags-error": "Nijedan vodič nema sve ove oznake značajke",
   "page-tutorial-title": "Vodiči za Ethereumov razvoj",
   "page-tutorials-meta-description": "Pregledajte i filtrirajte provjerene vodiče za zajednicu Ethereum po temama.",
-  "page-tutorials-meta-title": "Vodiči za Ethereumov razvoj"
+  "page-tutorials-meta-title": "Vodiči za Ethereumov razvoj",
+  "page-find-wallet-try-removing": "Pokušajte ukloniti jednu ili dvije značajke",
+  "page-find-wallet-clear": "Izbriši filtere"
 }

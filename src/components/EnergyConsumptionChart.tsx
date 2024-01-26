@@ -1,49 +1,27 @@
-import React, { useMemo } from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import {
-  BarChart,
   Bar,
+  BarChart,
   Cell,
-  XAxis,
-  Text,
-  CartesianGrid,
   LabelList,
-  ResponsiveContainer,
   Legend,
+  ResponsiveContainer,
+  Text,
+  XAxis,
 } from "recharts"
+import {
+  Box,
+  Center,
+  chakra,
+  useBreakpointValue,
+  useToken,
+} from "@chakra-ui/react"
 
-import { useWindowSize } from "../hooks/useWindowSize"
+import type { Lang } from "@/lib/types"
 
-const Container = styled.div`
-  max-width: 500px;
-  width: 100%;
-  border-radius: 0.3rem;
-`
-
-// @ts-ignore
-const StyledText = styled(Text)`
-  font-size: 10px;
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.m}) {
-    font-size: 12px;
-  }
-`
-
-const StyledLegend = styled.div`
-  text-align: center;
-  color: ${({ theme }) => (theme.isDark ? theme.colors.text : "#08084d")};
-  font-weight: 600;
-  margin-top: 2rem;
-`
-
-interface ILegendProps {
-  legend: string
-}
-
-const CustomLegend: React.FC<ILegendProps> = ({ legend }) => {
-  return <StyledLegend>{legend}</StyledLegend>
-}
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 interface ITickProps {
   x: number
@@ -51,92 +29,215 @@ interface ITickProps {
   payload: { value: number | string }
 }
 
-const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
-  const theme = useTheme()
+type Data = Array<{
+  name: string
+  amount: number
+  color: string
+}>
 
+const RechartText = chakra(Text, {
+  shouldForwardProp: (prop) => {
+    const isValidRechartProp = [
+      "width",
+      "children",
+      "x",
+      "y",
+      "dy",
+      "angle",
+      "scaleToFit",
+      "textAnchor",
+      "verticalAnchor",
+      "breakAll",
+      "maxLines",
+    ].includes(prop)
+
+    return isValidRechartProp
+  },
+})
+
+const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   return (
     <g transform={`translate(${x},${y})`}>
-      <StyledText
+      <RechartText
         x={0}
         y={0}
         dy={15}
+        fill="text"
         width={50}
-        fill={theme.colors.text}
         textAnchor="middle"
         verticalAnchor="middle"
+        fontSize="2xs"
       >
         {payload.value}
-      </StyledText>
+      </RechartText>
     </g>
   )
 }
 
-export interface IProps {
-  data: Array<{
-    name: string
-    amount: number
-    color: string
-    breakpoint?: number
-  }>
-  legend: string
-}
+const EnergyConsumptionChart: React.FC = () => {
+  const { t } = useTranslation("page-what-is-ethereum")
+  const textColor = useToken("colors", "text")
+  const { locale } = useRouter()
+  const isRtl = isLangRightToLeft(locale as Lang)
 
-const EnergyConsumptionChart: React.FC<IProps> = ({ data, legend }) => {
-  const theme = useTheme()
-  const [width] = useWindowSize()
-
-  const filteredData = useMemo(() => {
-    return data.filter((cell) => {
-      if (!cell.breakpoint) {
-        return true
-      }
-
-      return cell.breakpoint < width
-    })
-  }, [data, width])
+  const data = useBreakpointValue<Data>({
+    base: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 190,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#F2A900",
+      },
+      {
+        name: t("energy-consumption-chart-gaming-us-label"),
+        amount: 34,
+        color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+    sm: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 190,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-gold-mining-cbeci-label"),
+        amount: 131,
+        color: "#F2A900",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-netflix-label"),
+        amount: 0.457,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+    md: [
+      {
+        name: t("energy-consumption-chart-global-data-centers-label"),
+        amount: 190,
+        color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-gold-mining-cbeci-label"),
+        amount: 131,
+        color: "#D7B14A",
+      },
+      {
+        name: t("energy-consumption-chart-gaming-us-label"),
+        amount: 34,
+        color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: "Google",
+        amount: 19,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-netflix-label"),
+        amount: 0.457,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-paypal-label"),
+        amount: 0.26,
+        color: "#C1B6F5",
+      },
+      {
+        name: t("energy-consumption-chart-airbnb-label"),
+        amount: 0.02,
+        color: "#E50914",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pos-label"),
+        amount: 0.0026,
+        color: "#C1B6F5",
+      },
+    ],
+  })
 
   return (
-    <Container>
-      <ResponsiveContainer height={500}>
-        <BarChart
-          margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
-          barGap={15}
-          barSize={38}
-          data={filteredData}
-        >
-          <CartesianGrid
-            vertical={false}
-            strokeDasharray="5 3"
-            stroke="#B9B9B9"
-          />
-          <XAxis
-            dataKey="name"
-            tickLine={false}
-            axisLine={false}
-            // @ts-ignore
-            tick={<CustomTick />}
-            interval={0}
-          />
-          <Legend content={<CustomLegend legend={legend} />} />
-          <Bar
-            dataKey="amount"
-            radius={[4, 4, 0, 0]}
-            // Disable animation ~ issue w/ LabelList. Ref: https://github.com/recharts/recharts/issues/1135
-            isAnimationActive={false}
+    <Center w="full">
+      <Box maxW="500px" w="full">
+        <ResponsiveContainer height={500}>
+          <BarChart
+            margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
+            barGap={15}
+            barSize={38}
+            data={isRtl ? data?.reverse() : data}
           >
-            <LabelList
-              position="top"
-              fill={theme.colors.text}
-              fontSize={14}
-              offset={10}
+            <XAxis
+              dataKey="name"
+              tickLine={false}
+              axisLine={false}
+              tick={(props) => <CustomTick {...props} />}
+              interval={0}
             />
-            {filteredData.map((cell, index) => (
-              <Cell key={`cell-${index}`} fill={cell.color} />
-            ))}
-          </Bar>
-        </BarChart>
-      </ResponsiveContainer>
-    </Container>
+            <Legend
+              content={
+                <Box textAlign="center" color="text" fontWeight="600" mt={8}>
+                  {t("page-what-is-ethereum-energy-consumption-chart-legend")}
+                </Box>
+              }
+            />
+            <Bar
+              dataKey="amount"
+              radius={[4, 4, 0, 0]}
+              // Disable animation ~ issue w/ LabelList. Ref: https://github.com/recharts/recharts/issues/1135
+              isAnimationActive={false}
+            >
+              <LabelList
+                position="top"
+                fill={textColor}
+                fontSize={14}
+                offset={10}
+              />
+              {(data || []).map((cell, index) => (
+                <Cell key={`cell-${index}`} fill={cell.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
+      </Box>
+    </Center>
   )
 }
 

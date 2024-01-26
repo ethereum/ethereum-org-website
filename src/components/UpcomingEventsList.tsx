@@ -1,79 +1,30 @@
-// Libraries
-import React, { useEffect, useState } from "react"
-import styled from "@emotion/styled"
+import { useEffect, useState } from "react"
+import { useTranslation } from "next-i18next"
+import { Box } from "@chakra-ui/react"
 
-// Components
-import EventCard from "./EventCard"
-import InfoBanner from "./InfoBanner"
-import Link from "./Link"
-import Translation from "./Translation"
-import Button from "./Button"
+import type { CommunityConference } from "@/lib/types"
 
-// Data
-import events from "../data/community-events.json"
+import { Button } from "@/components/Buttons"
+import EventCard from "@/components/EventCard"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink from "@/components/Link"
 
-const EventList = styled.div`
-  /* Adding direction ltr as a temporary fix to styling bug */
-  /* https://github.com/ethereum/ethereum-org-website/issues/6221 */
-  direction: ltr;
-  width: 100%;
-  margin: 30px auto;
-  position: relative;
-  padding: 0 10px;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -ms-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-  &:before {
-    content: "";
-    width: 3px;
-    height: 100%;
-    background: ${(props) => props.theme.colors.primary};
-    left: 50%;
-    top: 0;
-    position: absolute;
-  }
+import communityConferences from "@/data/community-events"
 
-  &:after {
-    content: "";
-    clear: both;
-    display: table;
-    width: 100%;
-  }
-`
-
-const ButtonLinkContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  max-width: 620px;
-  margin-top: 1.25rem;
-`
-
-interface ICommunityEventData {
-  title: string
-  to: string
-  sponsor: string | null
-  location: string
-  description: string
-  startDate: string
-  endDate: string
-}
-
-interface IOrderedUpcomingEventType extends ICommunityEventData {
+type OrderedUpcomingEvent = CommunityConference & {
   date: string
   formattedDetails: string
 }
 
-export interface IProps {}
-
-const UpcomingEventsList: React.FC<IProps> = () => {
+const UpcomingEventsList = () => {
+  const { t } = useTranslation("page-community")
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
-    Array<IOrderedUpcomingEventType>
+    OrderedUpcomingEvent[]
   >([])
   const [maxRange, setMaxRange] = useState<number>(eventsPerLoad)
-  const [isVisible, setIsVisible] = useState<boolean>(true)
 
   // Create Date object from each YYYY-MM-DD JSON date string
   const dateParse = (dateString: string): Date => {
@@ -86,7 +37,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
   }
 
   useEffect(() => {
-    const eventsList: Array<ICommunityEventData> = [...events]
+    const eventsList: CommunityConference[] = [...communityConferences]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 
@@ -110,9 +61,7 @@ const UpcomingEventsList: React.FC<IProps> = () => {
               event.endDate
             ).toLocaleDateString()}`
 
-      const details = `${event.sponsor ? "(" + event.sponsor + ")" : ""} ${
-        event.description
-      }`
+      const details = `${event.description}`
 
       return {
         ...event,
@@ -126,23 +75,48 @@ const UpcomingEventsList: React.FC<IProps> = () => {
 
   const loadMoreEvents = () => {
     setMaxRange((counter) => counter + eventsPerLoad)
-    setIsVisible(maxRange + eventsPerLoad <= orderedUpcomingEvents.length)
+    trackCustomEvent({
+      eventCategory: "more events button",
+      eventAction: "click",
+      eventName: "load more",
+    })
   }
 
   if (orderedUpcomingEvents.length === 0) {
     return (
       <InfoBanner emoji=":information_source:">
-        <Translation id="page-community-upcoming-events-no-events" />{" "}
-        <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
-          <Translation id="page-community-please-add-to-page" />
-        </Link>
+        {t("page-community-upcoming-events-no-events")}{" "}
+        <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+          {t("page-community-please-add-to-page")}
+        </InlineLink>
       </InfoBanner>
     )
   }
 
   return (
     <>
-      <EventList>
+      <Box
+        width="100%"
+        margin="30px auto"
+        position="relative"
+        padding="0 10px"
+        transition="all 0.4s ease"
+        _before={{
+          content: '""',
+          position: "absolute",
+          width: "3px",
+          height: "full",
+          background: "primary.base",
+          top: 0,
+          insetInlineStart: "50%",
+        }}
+        _after={{
+          content: '""',
+          display: "table",
+          width: "100%",
+          clear: "both",
+        }}
+      >
         {orderedUpcomingEvents
           ?.slice(0, maxRange)
           .map(({ title, to, formattedDetails, date, location }, idx) => {
@@ -158,14 +132,19 @@ const UpcomingEventsList: React.FC<IProps> = () => {
               />
             )
           })}
-      </EventList>
-      <ButtonLinkContainer>
-        {isVisible && (
+      </Box>
+      <Box
+        display="flex"
+        justifyContent="center"
+        maxWidth="620px"
+        marginTop="5"
+      >
+        {maxRange <= orderedUpcomingEvents.length && (
           <Button onClick={loadMoreEvents}>
-            <Translation id="page-community-upcoming-events-load-more" />
+            {t("page-community-upcoming-events-load-more")}
           </Button>
         )}
-      </ButtonLinkContainer>
+      </Box>
     </>
   )
 }

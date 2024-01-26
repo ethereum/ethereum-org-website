@@ -1,316 +1,61 @@
-// Libraries
-import React, { useState } from "react"
-import { graphql } from "gatsby"
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
-import styled from "@emotion/styled"
+import { useRef, useState } from "react"
 import { shuffle } from "lodash"
+import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { SSRConfig, useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import {
+  Box,
+  Center,
+  Drawer,
+  DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerHeader,
+  DrawerOverlay,
+  Flex,
+  Hide,
+  Show,
+  Text,
+  useDisclosure,
+  useTheme,
+} from "@chakra-ui/react"
 
-// Components
-import Breadcrumbs from "../../components/Breadcrumbs"
-import Icon from "../../components/Icon"
-import Link from "../../components/Link"
-import PageMetadata from "../../components/PageMetadata"
-import { Content, Page } from "../../components/SharedStyledComponents"
-import Translation from "../../components/Translation"
-import WalletFilterSidebar from "../../components/FindWallet/WalletFilterSidebar"
-import WalletPersonasSidebar from "../../components/FindWallet/WalletPersonasSidebar"
-import WalletTable from "../../components/FindWallet/WalletTable"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
-// Data
-import walletData from "../../data/wallets/wallet-data"
+import BannerNotification from "@/components/BannerNotification"
+import Breadcrumbs from "@/components/Breadcrumbs"
+import { Button } from "@/components/Buttons"
+import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
+import WalletTable from "@/components/FindWallet/WalletTable"
+import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
+import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
 
-// Icons
-import FilterBurger from "../../assets/wallets/filter_burger.svg"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-// Utils
-import { translateMessageId } from "../../utils/translations"
-import { trackCustomEvent } from "../../utils/matomo"
+import walletData from "@/data/wallets/wallet-data"
 
-// Styles
-const HeroContainer = styled.div`
-  position: relative;
-  width: 100%;
-  display: flex;
-  padding: 3rem;
-  background: ${(props) => props.theme.colors.layer2Gradient};
-  margin-bottom: 44px;
+import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column-reverse;
-  }
-`
+import FindWalletHeroImage from "@/public/wallets/find-wallet-hero.png"
 
-const HeroContent = styled.div`
-  width: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-top: 2rem;
-    width: 100%;
-  }
-`
-
-const Subtitle = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  &:last-of-type {
-    margin-bottom: 2rem;
-  }
-`
-
-const HeroImage = styled(GatsbyImage)`
-  width: 50%;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-  }
-`
-
-const TableContent = styled(Content)`
-  display: flex;
-  gap: 24px;
-  height: 90vh;
-  overflow: hidden;
-  position: sticky;
-  top: 76px;
-  margin-bottom: 150px;
-  border-bottom: 1px solid ${(props) => props.theme.colors.secondary};
-  padding-bottom: 0;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding: 1rem 0 0;
-    margin-bottom: 120px;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 1rem 0 0;
-    margin-bottom: 230px;
-  }
-`
-
-const MobileFilterToggleContainer = styled.div`
-  position: sticky;
-  top: 76px;
-  background: ${(props) => props.theme.colors.background};
-  width: 100%;
-  z-index: 1;
-  padding: 5px 0;
-`
-
-const MobileFilterToggle = styled.div<{ showMobileSidebar: boolean }>`
-  display: none;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    display: flex;
-    gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid ${(props) => props.theme.colors.primary};
-    border-left: none;
-    border-radius: 0px 4px 4px 0px;
-    padding: 6px 20px 10px 20px;
-    margin: auto;
-    margin-left: 0;
-    z-index: 1;
-    width: 100%;
-    max-width: ${(props) => (props.showMobileSidebar ? "330px" : "150px")};
-    background: ${(props) =>
-      props.showMobileSidebar
-        ? props.theme.colors.background
-        : props.theme.colors.background};
-  }
-
-  p {
-    margin: 0;
-  }
-
-  svg {
-    width: 32px;
-    height: 32px;
-    line {
-      stroke: ${(props) => props.theme.colors.primary};
-    }
-    circle {
-      stroke: ${(props) => props.theme.colors.primary};
-    }
-  }
-`
-
-const StyledIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.primary};
-  width: 24;
-  height: 24;
-`
-
-const SecondaryText = styled.p`
-  font-size: 14px;
-  line-height: 14px;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const FilterSidebar = styled.div<{ showMobileSidebar: boolean }>`
-  max-width: 330px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-  overflow-y: scroll;
-  background: ${(props) => props.theme.colors.background};
-  transition: 0.5s all;
-  z-index: 20;
-  border-radius: 0px 8px 0px 0px;
-  scrollbar-width: thin;
-  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
-    ${(props) => props.theme.colors.background};
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.colors.background};
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.lightBorder};
-    border-radius: 4px;
-    border: 2px solid ${(props) => props.theme.colors.background};
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: ${(props) => (props.showMobileSidebar ? "350px" : "350px")};
-    left: ${(props) => (props.showMobileSidebar ? "0" : "-400px")};
-    height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
-    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
-    position: ${(props) => (props.showMobileSidebar ? "absolute" : "relative")};
-    box-shadow: ${(props) =>
-      props.showMobileSidebar ? "0 800px 0 800px rgb(0 0 0 / 65%)" : "none"};
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: ${(props) => (props.showMobileSidebar ? "90%" : "90%")};
-    height: ${(props) => (props.showMobileSidebar ? "100%" : "100%")};
-    display: ${(props) => (props.showMobileSidebar ? "flex" : "none")};
-  }
-`
-
-const FilterTabs = styled.div`
-  display: flex;
-  border-bottom: 1px solid ${(props) => props.theme.colors.primary};
-  cursor: pointer;
-  position: sticky;
-  top: 0;
-  background: ${(props) => props.theme.colors.background};
-  z-index: 1;
-
-  p {
-    margin: 0;
-    letter-spacing: 0.02rem;
-    font-size: 0.9rem;
-    width: 100%;
-  }
-`
-
-const FilterTab = styled.div<{
-  active: boolean
-}>`
-  width: 50%;
-  text-align: center;
-  background: ${(props) =>
-    props.active === true ? props.theme.colors.primary : "none"};
-  border-radius: 8px 0px 0px 0px;
-  padding: 0.9rem 0.4rem;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-
-  color: ${(props) =>
-    props.active === true
-      ? props.theme.colors.background
-      : props.theme.colors.text};
-
-  :last-child {
-    border-radius: 0px 8px 0px 0px;
-  }
-
-  :hover {
-    background: ${(props) =>
-      props.active === true
-        ? props.theme.colors.primary
-        : props.theme.colors.selectHover};
-  }
-`
-
-const WalletContent = styled.div<{ showMobileSidebar: boolean }>`
-  width: 100%;
-  overflow-y: scroll;
-  scrollbar-width: thin;
-  scrollbar-color: ${(props) => props.theme.colors.lightBorder}
-    ${(props) => props.theme.colors.background};
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-    background: ${(props) => props.theme.colors.background};
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: ${(props) => props.theme.colors.lightBorder};
-    border-radius: 4px;
-    border: 2px solid ${(props) => props.theme.colors.background};
-  }
-  table {
-    margin: 0;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    width: 100%;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    width: 100%;
-    display: ${(props) => (props.showMobileSidebar ? "none" : "")};
-  }
-`
-
-const Note = styled.div`
-  text-align: center;
-  padding: 20px;
-
-  p {
-    font-size: 14px;
-    line-height: 23px;
-    margin: 0;
-    padding-top: 0.2rem;
-  }
-`
-
-const ResetContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 2px 4px;
-  border-radius: 4px;
-  width: 100%;
-  margin: 0 auto;
-  gap: 0.25rem;
-  font-size: 0.75rem;
-  cursor: pointer;
-  :hover {
-    p {
-      color: ${(props) => props.theme.colors.selectHover};
-    }
-    svg {
-      fill: ${(props) => props.theme.colors.selectHover};
-    }
-  }
-
-  p {
-    margin: 0;
-    color: ${(props) => props.theme.colors.primary};
-  }
-  svg {
-    fill: ${(props) => props.theme.colors.primary};
-  }
-`
-
-const ResetIcon = styled(Icon)`
-  fill: ${(props) => props.theme.colors.primary};
-`
+const Subtitle = ({ children }: ChildOnlyProp) => (
+  <Text
+    fontSize="xl"
+    lineHeight={1.4}
+    color="body.medium"
+    mb={6}
+    _last={{ mb: 8 }}
+  >
+    {children}
+  </Text>
+)
 
 const filterDefault = {
   android: false,
@@ -341,13 +86,33 @@ const filterDefault = {
   eip_1559_support: false,
 }
 
-const randomizedWalletData = shuffle(walletData)
+export type FiltersType = typeof filterDefault
 
-const FindWalletPage = ({ data, location }) => {
-  const intl = useIntl()
+export const getStaticProps = (async ({ locale }) => {
+  const lastDeployDate = getLastDeployDate()
 
-  const [showFeatureFilters, setShowFeatureFilters] = useState(false)
-  const [showMobileSidebar, setShowMobileSidebar] = useState(false)
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/wallets/find-wallet"
+  )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
+const FindWalletPage = () => {
+  const randomizedWalletData = shuffle(walletData)
+  const { pathname } = useRouter()
+  const theme = useTheme()
+  const { t } = useTranslation("page-wallets-find-wallet")
+  const resetWalletFilter = useRef(() => {})
+  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
@@ -373,399 +138,170 @@ const FindWalletPage = ({ data, location }) => {
   }
 
   return (
-    <Page>
+    <Flex as={MainArticle} direction="column" position="relative" w="full">
       <PageMetadata
-        title={translateMessageId("page-find-wallet-meta-title", intl)}
-        description={translateMessageId(
-          "page-find-wallet-meta-description",
-          intl
-        )}
+        title={t("page-find-wallet-meta-title")}
+        description={t("page-find-wallet-meta-description")}
       />
 
-      <HeroContainer>
-        <HeroContent>
-          <Breadcrumbs slug={location.pathname} />
-          <h1>
-            <Translation id="page-find-wallet-title" />
-          </h1>
-          <Subtitle>
-            <Translation id="page-find-wallet-description" />
-          </Subtitle>
-          <Subtitle>
-            <Translation id="page-find-wallet-desc-2" />
-          </Subtitle>
-        </HeroContent>
-        <HeroImage
-          image={getImage(data.hero)!}
-          alt=""
-          loading="eager"
-          objectFit="contain"
-        />
-      </HeroContainer>
-      <MobileFilterToggleContainer>
-        <MobileFilterToggle
-          showMobileSidebar={showMobileSidebar}
-          onClick={() => {
-            setShowMobileSidebar(!showMobileSidebar)
-            trackCustomEvent({
-              eventCategory: "MobileFilterToggle",
-              eventAction: `Tap MobileFilterToggle`,
-              eventName: `show mobile filters ${!showMobileSidebar}`,
-            })
-          }}
+      <BannerNotification shouldShow={true}>
+        {t("page-find-wallet-footnote-1")}
+      </BannerNotification>
+
+      <Flex
+        direction={{ base: "column-reverse", sm: "row" }}
+        position="relative"
+        w="full"
+        p={12}
+        bg="layer2Gradient"
+        mb="44px"
+      >
+        <Box w={{ base: "full", sm: "50%" }} mt={{ base: 8, sm: 0 }}>
+          <Breadcrumbs slug={pathname} />
+          <OldHeading
+            as="h1"
+            fontSize={{ base: "2.5rem", md: "5xl" }}
+            lineHeight={1.4}
+          >
+            {t("page-find-wallet-title")}
+          </OldHeading>
+          <Subtitle>{t("page-find-wallet-description")}</Subtitle>
+          <Subtitle>{t("page-find-wallet-desc-2")}</Subtitle>
+        </Box>
+        <Center w={{ base: "full", sm: "50%" }}>
+          <Image
+            src={FindWalletHeroImage}
+            width={600}
+            alt=""
+            priority
+            style={{
+              objectFit: "contain",
+            }}
+          />
+        </Center>
+      </Flex>
+
+      <Hide above="lg">
+        <Box
+          display={{ base: "block", lg: "none" }}
+          position="sticky"
+          top={NAV_BAR_PX_HEIGHT}
+          bg="background.base"
+          w="full"
+          zIndex="docked"
+          py="5px"
         >
-          <div>
-            <p>FILTERS</p>
-            <SecondaryText>
-              {Object.values(filters).reduce((acc, filter) => {
-                if (filter) {
-                  acc += 1
-                }
-                return acc
-              }, 0)}{" "}
-              active
-            </SecondaryText>
-          </div>
-          {showMobileSidebar ? <StyledIcon name="cancel" /> : <FilterBurger />}
-        </MobileFilterToggle>
-      </MobileFilterToggleContainer>
-      <TableContent>
-        <FilterSidebar showMobileSidebar={showMobileSidebar}>
-          <FilterTabs>
-            <FilterTab
-              active={!showFeatureFilters}
-              onClick={() => {
-                setShowFeatureFilters(false)
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: `WalletFilterSidebar tab clicked`,
-                  eventName: `show user personas`,
-                })
-              }}
-            >
-              <p>Profile Filters</p>
-            </FilterTab>
-            <FilterTab
-              active={showFeatureFilters}
-              onClick={() => {
-                setShowFeatureFilters(true)
-                trackCustomEvent({
-                  eventCategory: "WalletFilterSidebar",
-                  eventAction: `WalletFilterSidebar tab clicked`,
-                  eventName: `show feature filters`,
-                })
-              }}
-            >
-              <p>
-                Feature Filters (
-                {Object.values(filters).reduce((acc, filter) => {
-                  if (filter) {
-                    acc += 1
-                  }
-                  return acc
-                }, 0)}
-                )
-              </p>
-            </FilterTab>
-          </FilterTabs>
-          <ResetContainer
-            role="button"
-            aria-labelledby="reset-filter"
+          <Button
+            rightIcon={<FilterBurgerIcon />}
+            variant="outline"
+            borderInlineStart="none"
+            borderInlineStartRadius="none"
+            gap={4}
+            sx={{
+              svg: {
+                boxSize: 8,
+                line: { stroke: "primary.base" },
+                circle: { stroke: "primary.base" },
+              },
+            }}
             onClick={() => {
-              resetFilters()
+              showMobileSidebar ? onClose() : onOpen()
               trackCustomEvent({
-                eventCategory: "WalletFilterReset",
-                eventAction: `WalletFilterReset clicked`,
-                eventName: `reset filters`,
+                eventCategory: "MobileFilterToggle",
+                eventAction: `Tap MobileFilterToggle`,
+                eventName: `show mobile filters ${!showMobileSidebar}`,
               })
             }}
           >
-            <ResetIcon
-              aria-hidden="true"
-              name="arrowCounterClockwise"
-              size="14"
-            />
-            <p id="reset-filter" aria-hidden="true">
-              {"Reset filters".toUpperCase()}
-            </p>
-          </ResetContainer>
-          <div>
-            {showFeatureFilters ? (
+            <Box>
+              <Text>{t("page-find-wallet-filters")}</Text>
+              <Text fontSize="sm" lineHeight="14px" color="body.medium">
+                {Object.values(filters).reduce(
+                  (acc, filter) => (filter ? acc + 1 : acc),
+                  0
+                )}{" "}
+                {t("page-find-wallet-active")}
+              </Text>
+            </Box>
+          </Button>
+        </Box>
+        <Drawer
+          isOpen={showMobileSidebar}
+          placement="start"
+          onClose={onClose}
+          size="sm"
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerHeader mb={4}>
+              <DrawerCloseButton />
+            </DrawerHeader>
+            <DrawerBody position="relative">
               <WalletFilterSidebar
-                filters={filters}
-                updateFilterOption={updateFilterOption}
-                updateFilterOptions={updateFilterOptions}
+                position="absolute"
+                inset={2}
+                overflow="auto"
+                {...{
+                  filters,
+                  resetWalletFilter,
+                  updateFilterOption,
+                  updateFilterOptions,
+                  resetFilters,
+                  selectedPersona,
+                  setFilters,
+                  setSelectedPersona,
+                }}
               />
-            ) : (
-              <WalletPersonasSidebar
-                resetFilters={resetFilters}
-                setFilters={setFilters}
-                selectedPersona={selectedPersona}
-                setSelectedPersona={setSelectedPersona}
-              />
-            )}
-          </div>
-        </FilterSidebar>
-        <WalletContent showMobileSidebar={showMobileSidebar}>
-          <WalletTable
-            data={data}
-            filters={filters}
-            walletData={randomizedWalletData}
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
+      </Hide>
+
+      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} gap={6}>
+        <Show above="lg">
+          <WalletFilterSidebar
+            maxW="330px"
+            top={NAV_BAR_PX_HEIGHT}
+            {...{
+              filters,
+              resetWalletFilter,
+              updateFilterOption,
+              updateFilterOptions,
+              resetFilters,
+              selectedPersona,
+              setFilters,
+              setSelectedPersona,
+            }}
           />
-        </WalletContent>
-      </TableContent>
-      <Note>
-        <p>
-          <i>
-            Wallets listed on this page are not official endorsements, and are
-            provided for informational purposes only.{" "}
-          </i>
-        </p>
-        <p>
-          <i>
-            Their descriptions have been provided by the wallet projects
-            themselves.{" "}
-          </i>
-        </p>
-        <p>
-          <i>
-            We add products to this page based on criteria in our{" "}
-            <Link to="/contributing/adding-products/">listing policy</Link>. If
-            you'd like us to add a wallet,{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet">
-              raise an issue in GitHub
-            </Link>
-            .
-          </i>
-        </p>
-      </Note>
-    </Page>
+        </Show>
+        <Box
+          w="full"
+          sx={{
+            scrollbarWidth: "thin",
+            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
+
+            "::-webkit-scrollbar": {
+              width: 2,
+            },
+            "::-webkit-scrollbar-track": {
+              bg: "background.base",
+            },
+            "::-webkit-scrollbar-thumb": {
+              bgColor: "lightBorder",
+              borderRadius: "base",
+              border: "2px solid",
+              borderColor: "background.base",
+            },
+            table: {
+              m: 0,
+            },
+          }}
+        >
+          <WalletTable filters={filters} walletData={randomizedWalletData} />
+        </Box>
+      </Flex>
+    </Flex>
   )
 }
 
 export default FindWalletPage
-
-export const query = graphql`
-  {
-    hero: file(relativePath: { eq: "wallets/find-wallet-hero.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    airgap: file(relativePath: { eq: "wallets/airgap.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    argent: file(relativePath: { eq: "wallets/argent.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    brave: file(relativePath: { eq: "wallets/brave.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    coin98: file(relativePath: { eq: "wallets/coin98.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    coinbase: file(relativePath: { eq: "wallets/coinbase.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    frame: file(relativePath: { eq: "wallets/frame.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    keystone: file(relativePath: { eq: "wallets/keystone.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    loopring: file(relativePath: { eq: "wallets/loopring.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    metamask: file(relativePath: { eq: "wallets/metamask.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    numio: file(relativePath: { eq: "wallets/numio.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    portis: file(relativePath: { eq: "wallets/portis.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    tallyho: file(relativePath: { eq: "wallets/tallyho.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    gnosis: file(relativePath: { eq: "wallets/gnosis.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    coinwallet: file(relativePath: { eq: "wallets/coinwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    ambire: file(relativePath: { eq: "wallets/ambire.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    zengo: file(relativePath: { eq: "wallets/zengo.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    linen: file(relativePath: { eq: "wallets/linen.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    imtoken: file(relativePath: { eq: "wallets/imtoken.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    foxwallet: file(relativePath: { eq: "wallets/foxwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    mycrypto: file(relativePath: { eq: "wallets/mycrypto.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    pillar: file(relativePath: { eq: "wallets/pillar.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    mew: file(relativePath: { eq: "wallets/mew.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    unstoppable: file(relativePath: { eq: "wallets/unstoppable.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    myetherwallet: file(relativePath: { eq: "wallets/myetherwallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    alpha: file(relativePath: { eq: "wallets/alpha.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    opera: file(relativePath: { eq: "wallets/opera.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    guarda: file(relativePath: { eq: "wallets/guarda.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    web3auth: file(relativePath: { eq: "wallets/web3auth.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    bridge: file(relativePath: { eq: "wallets/bridge.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    torus: file(relativePath: { eq: "wallets/torus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    tokenpocket: file(relativePath: { eq: "wallets/tokenpocket.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    oneinch: file(relativePath: { eq: "wallets/1inch.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    rainbow: file(relativePath: { eq: "wallets/rainbow.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    status: file(relativePath: { eq: "wallets/status.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    aktionariat: file(relativePath: { eq: "wallets/aktionariat.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    sequence: file(relativePath: { eq: "wallets/sequence.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    trezor: file(relativePath: { eq: "wallets/trezor.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    ledger: file(relativePath: { eq: "wallets/ledger.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    infinity_wallet: file(relativePath: { eq: "wallets/infinity_wallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    exodus: file(relativePath: { eq: "wallets/exodus.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    rabbywallet: file(relativePath: { eq: "wallets/rabbywallet.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    bitcoindotcom: file(relativePath: { eq: "wallets/bitcoindotcom.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-    zerion: file(relativePath: { eq: "wallets/zerion.png" }) {
-      childImageSharp {
-        gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED, quality: 100)
-      }
-    }
-  }
-`

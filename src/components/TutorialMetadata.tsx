@@ -1,88 +1,21 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
-import CopyToClipboard from "./CopyToClipboard"
-import Pill from "./Pill"
-import Link from "./Link"
-import TutorialTags from "./TutorialTags"
-import { getLocaleTimestamp } from "../utils/time"
-import { FakeLink } from "./SharedStyledComponents"
-import Emoji from "./OldEmoji"
-import Translation from "./Translation"
-import { Lang } from "../utils/languages"
-import { TranslationKey } from "../utils/translations"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    border-bottom: 0px;
-  }
-`
+import type { Lang, TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
 
-const TagsContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2rem;
-`
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
+import TutorialTags from "@/components/TutorialTags"
 
-const PillContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-`
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
-const SkillPill = styled(Pill)`
-  align-self: flex-start;
-  margin-bottom: 0.5rem;
-  white-space: nowrap;
-`
-
-const HorizontalContainer = styled.div`
-  display: flex;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: -1rem;
-  font-size: 0.875rem;
-  color: ${(props) => props.theme.colors.text300};
-  justify-content: flex-start;
-`
-
-const DataContainer = styled.div`
-  margin-right: 1rem;
-`
-
-const AddressContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-right: 1rem;
-`
-
-const Code = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: ${(props) => props.theme.fonts.monospace};
-  background: ${(props) => props.theme.colors.ednBackground};
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-  font-size: 0.875rem;
-
-  &:hover {
-    background: ${(props) => props.theme.colors.primary100};
-  }
-`
-
-const AllCapsTranslation = styled(Translation)`
-  text-transform: uppercase;
-`
-
-export interface IProps {
-  tutorial: any
+export type TutorialMetadataProps = {
+  frontmatter: TutorialFrontmatter
+  timeToRead: number
 }
 
 export enum Skill {
@@ -92,82 +25,119 @@ export enum Skill {
 }
 
 export const getSkillTranslationId = (skill: Skill): TranslationKey =>
-  `page-tutorial-${Skill[skill.toUpperCase() as keyof typeof Skill]}`
+  `page-developers-tutorials:page-tutorial-${
+    Skill[skill.toUpperCase() as keyof typeof Skill]
+  }`
 
-const TutorialMetadata: React.FC<IProps> = ({ tutorial }) => {
-  const intl = useIntl()
+const TutorialMetadata = ({
+  frontmatter,
+  timeToRead,
+}: TutorialMetadataProps) => {
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-developers-tutorials")
 
-  const frontmatter = tutorial.frontmatter
   const hasSource = frontmatter.source && frontmatter.sourceUrl
   const published = frontmatter.published
   const author = frontmatter.author
   const address = frontmatter.address
 
   return (
-    <Container>
-      <TagsContainer>
-        <PillContainer>
+    <Flex
+      flexDirection="column"
+      justifyContent="space-between"
+      borderBottomWidth={{ base: 0, lg: "1px" }}
+      borderBottomColor="border"
+    >
+      <Flex justifyContent="space-between" alignItems="center" w="full" mb={8}>
+        <Flex flexWrap="wrap" w="full">
           <TutorialTags tags={frontmatter.tags} />
-        </PillContainer>
-        <SkillPill isSecondary={true} className="" color="">
-          <Translation id={getSkillTranslationId(frontmatter.skill)} />
-        </SkillPill>
-      </TagsContainer>
-      <HorizontalContainer>
+        </Flex>
+        <Flex
+          as={Badge}
+          variant="secondary"
+          alignSelf="flex-start"
+          mb={2}
+          whiteSpace="nowrap"
+        >
+          {t(getSkillTranslationId(frontmatter.skill as Skill))}
+        </Flex>
+      </Flex>
+      <HStack
+        mb={6}
+        flexWrap="wrap"
+        mt={-4}
+        fontSize="sm"
+        color="text300"
+        justifyContent="flex-start"
+        alignItems="flex-start"
+        spacing={4}
+      >
         {author && (
-          <DataContainer>
-            <Emoji size={1} mr={`0.5em`} text=":writing_hand:" />
+          <Box>
+            <Emoji fontSize="sm" me={2} text=":writing_hand:" />
             {author}
-          </DataContainer>
+          </Box>
         )}
         {hasSource && (
-          <DataContainer>
-            <Emoji size={1} mr={`0.5em`} text=":books:" />
-            <Link to={frontmatter.sourceUrl}>{frontmatter.source}</Link>
-          </DataContainer>
+          <Box>
+            <Emoji fontSize="sm" me={2} text=":books:" />
+            <InlineLink to={frontmatter.sourceUrl}>
+              {frontmatter.source}
+            </InlineLink>
+          </Box>
         )}
         {published && (
-          <DataContainer>
-            <Emoji size={1} mr={`0.5em`} text=":calendar:" />
-            {getLocaleTimestamp(intl.locale as Lang, published)}
-          </DataContainer>
+          <Box>
+            <Emoji fontSize="sm" me={2} text=":calendar:" />{" "}
+            {getLocaleTimestamp(locale! as Lang, published)}
+          </Box>
         )}
-        <DataContainer>
-          <Emoji size={1} mr={`0.5em`} text=":stopwatch:" />
-          {Math.round(tutorial.fields.readingTime.minutes)}{" "}
-          <Translation id="comp-tutorial-metadata-minute-read" />
-        </DataContainer>
-      </HorizontalContainer>
-      <HorizontalContainer>
+        <Box>
+          <Emoji fontSize="sm" me={2} text=":stopwatch:" />
+          {timeToRead} {t("comp-tutorial-metadata-minute-read")} minute read
+        </Box>
+      </HStack>
+      <HStack
+        mb={6}
+        flexWrap="wrap"
+        mt={-4}
+        fontSize="sm"
+        color="text300"
+        justifyContent="flex-start"
+      >
         {address && (
-          <AddressContainer>
-            <CopyToClipboard text={frontmatter.address}>
+          <Flex flexWrap="wrap" w="full" me={4}>
+            <CopyToClipboard text={address}>
               {(isCopied) => (
-                <FakeLink>
-                  {!isCopied ? (
-                    <Code>
-                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
-                      {frontmatter.address}
-                    </Code>
-                  ) : (
-                    <Code>
-                      <AllCapsTranslation id="comp-tutorial-metadata-tip-author" />{" "}
-                      {frontmatter.address} <Translation id="copied" />
-                      <Emoji
-                        size={1}
-                        ml={`0.5em`}
-                        mr={`0.5em`}
-                        text=":white_check_mark:"
-                      />
-                    </Code>
+                <Box
+                  color="primary.base"
+                  cursor="pointer"
+                  overflow="hidden"
+                  textOverflow="ellipsis"
+                  fontFamily="monospace"
+                  bg="ednBackground"
+                  px={1}
+                  fontSize="sm"
+                  _hover={{
+                    bg: "primary100",
+                  }}
+                >
+                  <Text
+                    as={Translation}
+                    textTransform="uppercase"
+                    id="comp-tutorial-metadata-tip-author"
+                  />{" "}
+                  {address} {isCopied && <Translation id="copied" />}
+                  {isCopied && (
+                    <Emoji fontSize="sm" mx={2} text=":white_check_mark:" />
                   )}
-                </FakeLink>
+                </Box>
               )}
             </CopyToClipboard>
-          </AddressContainer>
+          </Flex>
         )}
-      </HorizontalContainer>
-    </Container>
+      </HStack>
+    </Flex>
   )
 }
 

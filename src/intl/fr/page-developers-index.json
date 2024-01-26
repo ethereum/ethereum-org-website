@@ -8,7 +8,6 @@
   "page-developers-advanced": "Avancé",
   "page-developers-api-desc": "Utiliser les bibliothèques pour interagir avec les contrats intelligents",
   "page-developers-api-link": "API back-end",
-  "page-developers-aria-label": "Menu des développeurs",
   "page-developers-block-desc": "Lots de transactions ajoutés à la blockchain",
   "page-developers-block-explorers-desc": "Votre portail vers les données Ethereum",
   "page-developers-block-explorers-link": "Explorateurs de bloc",
@@ -52,7 +51,7 @@
   "page-developers-meta-desc": "Documentation, tutoriels et outils pour les développeurs Ethereum.",
   "page-developers-mev-desc": "Une introduction à la Valeur Extractible Maximale (Maximal extractable value - MEV)",
   "page-developers-mev-link": "Valeur Extractible Maximale (Maximal extractable value - MEV)",
-  "page-developers-mining-desc": "Comment créer de nouveaux blocs et atteindre un consensus",
+  "page-developers-mining-desc": "Comment de nouveaux blocs sont créés et le consensus a été atteint en utilisant la preuve de travail",
   "page-developers-mining-link": "Minage",
   "page-developers-mining-algorithms-desc": "Informations sur les algorithmes de minage d'Ethereum",
   "page-developers-mining-algorithms-link": "Algorithmes de minage",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "Introduction à la couche réseau Ethereum",
   "page-developers-data-structures-and-encoding": "Structures de données et encodage",
   "page-developers-data-structures-and-encoding-link": "Structures de données et encodage",
-  "page-developers-data-structures-and-encoding-desc": "Introduction aux structures de données et au schéma d'encodage utilisés dans la pile Ethereum"
+  "page-developers-data-structures-and-encoding-desc": "Introduction aux structures de données et au schéma d'encodage utilisés dans la pile Ethereum",
+  "alt-eth-blocks": "Illustration de blocs organisés comme un symbole ETH",
+  "page-assets-doge": "Doge avec DApps"
 }

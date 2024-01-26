@@ -19,7 +19,7 @@ contract SimpleDomainRegistry {
         owner = msg.sender;
     }
 
-    // Registers a domain name (if not already registerd)
+    // Registers a domain name (if not already registered)
     function register(string memory domainName) public payable {
         require(msg.value >= DOMAIN_NAME_COST, "Insufficient amount.");
         require(domainNames[domainName] == address(0), "Domain name already registered.");

@@ -1,28 +1,19 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { Flex, FlexProps, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
-import Translation from "../Translation"
-import { getDirection } from "../../utils/translations"
-
-import { Lang } from "../../utils/languages"
-import { Direction } from "../../types"
+// import { getDirection } from "../../utils/translations"
+// import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
-const TwoColumns = styled.div<{ dir: Direction }>`
-  display: flex;
-  flex-direction: ${({ dir }) => (dir === "rtl" ? "row-reverse" : "row")};
-`
-
-export interface IProps {
+export interface IProps extends FlexProps {
   path: string
   sections: ISections
 }
 
-const Menu: React.FC<IProps> = ({ path, sections }) => {
-  const intl = useIntl()
-  const direction = getDirection(intl.locale as Lang)
+const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
+  // const { locale } = useRouter()
+  const direction = "ltr"
+  // const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
@@ -30,75 +21,79 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
   const [start, basics, protocol] = learn.items
 
   return (
-    <>
-      <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
+    <Flex
+      as={List}
+      alignItems="center"
+      m={0}
+      gap={{ base: 3, xl: 6 }}
+      {...props}
+    >
+      <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, index) => (
           <NavDropdown.Item
             key={index}
             isLast={index === useEthereum.items.length - 1}
           >
             <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-              <Translation id={item.text} />
+              {item.text}
             </NavDropdown.Link>
           </NavDropdown.Item>
         ))}
       </NavDropdown>
 
-      <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
-        <TwoColumns dir={direction}>
-          <div>
+      <NavDropdown section={learn}>
+        <Flex flexDir={direction === "ltr" ? "row" : "row-reverse"}>
+          <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
-              <React.Fragment key={index}>
+              <List m={0} key={index}>
                 <NavDropdown.Title>{section.text}</NavDropdown.Title>
                 {(section.items || []).map((item, index) => (
                   <NavDropdown.Item key={index}>
                     <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                      <Translation id={item.text} />
+                      {item.text}
                     </NavDropdown.Link>
                   </NavDropdown.Item>
                 ))}
-              </React.Fragment>
+              </List>
             ))}
-          </div>
+          </Flex>
           <div>
-            <NavDropdown.Title>{protocol.text}</NavDropdown.Title>
-            {(protocol.items || []).map((item, index) => (
-              <NavDropdown.Item
-                key={index}
-                isLast={index === (protocol.items || []).length - 1}
-              >
-                <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  <Translation id={item.text} />
-                </NavDropdown.Link>
-              </NavDropdown.Item>
-            ))}
+            <List m={0}>
+              <NavDropdown.Title>{protocol.text}</NavDropdown.Title>
+              {(protocol.items || []).map((item, index) => (
+                <NavDropdown.Item
+                  key={index}
+                  isLast={index === (protocol.items || []).length - 1}
+                >
+                  <NavDropdown.Link to={item.to} isPartiallyActive={false}>
+                    {item.text}
+                  </NavDropdown.Link>
+                </NavDropdown.Item>
+              ))}
+            </List>
           </div>
-        </TwoColumns>
+        </Flex>
       </NavDropdown>
 
       {Object.keys(restSections).map((sectionKey) => {
         const section = restSections[sectionKey]
 
         return (
-          <NavDropdown
-            key={sectionKey}
-            section={section}
-            hasSubNav={shouldShowSubNav}
-          >
+          <NavDropdown key={sectionKey} section={section}>
             {section.items.map((item, index) => (
               <NavDropdown.Item
                 key={index}
                 isLast={index === section.items.length - 1}
               >
                 <NavDropdown.Link to={item.to} isPartiallyActive={false}>
-                  <Translation id={item.text} />
+                  {item.text}
                 </NavDropdown.Link>
               </NavDropdown.Item>
             ))}
           </NavDropdown>
         )
       })}
-    </>
+    </Flex>
   )
 }
 

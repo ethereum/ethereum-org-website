@@ -1,90 +1,18 @@
 // Libraries
-import React from "react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
+import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 
-// Components
-import ButtonLink from "./ButtonLink"
-import Link from "./Link"
-
-// Utils
-import { translateMessageId } from "../utils/translations"
-
-// Styles
-const ImageWrapper = styled.div<{
-  background: string
-}>`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background: ${(props) => props.background};
-  box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.1);
-  min-height: 200px;
-`
-
-const Image = styled(GatsbyImage)`
-  width: 100%;
-  align-self: center;
-  max-width: 372px;
-  max-height: 257px;
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    max-width: 311px;
-  }
-`
-
-const Card = styled.div`
-  color: ${(props) => props.theme.colors.text};
-  box-shadow: 0px 14px 66px rgba(0, 0, 0, 0.07);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: ${(props) => props.theme.colors.searchBackground};
-  border-radius: 4px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-  text-decoration: none;
-  padding: 0.5rem;
-  &:hover {
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
-
-const Content = styled.div`
-  padding: 1.5rem;
-  text-align: left;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-`
-
-const Title = styled.h3`
-  margin-top: 0;
-  margin-bottom: 0.75rem;
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-  font-size: ${(props) => props.theme.fontSizes.s};
-  margin-bottom: 0.5rem;
-  line-height: 140%;
-`
-
-const StyledButtonLink = styled(ButtonLink)`
-  margin: 0.5rem;
-`
-
-const Children = styled.div`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-`
+import { ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
 
 export interface IProps {
   children?: React.ReactNode
   url?: string
   background: string
-  image: string
+  image: StaticImageData
   name: string
   description: string
   note?: string
@@ -107,46 +35,75 @@ const Layer2ProductCard: React.FC<IProps> = ({
   tokenLists,
   ecosystemPortal,
 }) => {
-  const intl = useIntl()
+  const { t } = useTranslation("page-layer-2")
 
   return (
-    <Card>
-      <ImageWrapper background={background}>
-        <Image image={image} alt={alt} objectFit="contain" />
-      </ImageWrapper>
-      <Content className="hover">
-        <div>
-          <Title>{name}</Title>
-          {children && <Children>{children}</Children>}
-          <Description>{description}</Description>
-          {note.length > 0 && (
-            <Description>
-              {translateMessageId("layer-2-note", intl)} {note}
-            </Description>
+    <Flex
+      color="text"
+      boxShadow={"0px 14px 66px rgba(0, 0, 0, 0.07)"}
+      direction="column"
+      justify="space-between"
+      bg="searchBackground"
+      borderRadius="base"
+      border={"1px solid lightBorder"}
+      textDecoration="none"
+      padding={2}
+      _hover={{ transition: "transform 0.1s", transform: "scale(1.02)" }}
+    >
+      <Center
+        bg={background}
+        boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
+        minH="200px"
+      >
+        <Image
+          src={image}
+          alt={alt}
+          width={100}
+          maxH={"257px"}
+          style={{ objectFit: "contain" }}
+        />
+      </Center>
+      <Flex p={6} h="100%" direction="column">
+        <Box>
+          <Heading as="h3" fontSize={{ base: "xl", md: "2xl" }} mb={3}>
+            {name}
+          </Heading>
+          {children && (
+            <Box mt={4} mb={4}>
+              {children}
+            </Box>
           )}
-        </div>
+          <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+            {description}
+          </Text>
+          {note.length > 0 && (
+            <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+              {t("layer-2-note")} {note}
+            </Text>
+          )}
+        </Box>
         {bridge && (
-          <Link to={bridge}>
-            {name} {translateMessageId("layer-2-bridge", intl)}
-          </Link>
+          <InlineLink to={bridge}>
+            {name} {t("layer-2-bridge")}
+          </InlineLink>
         )}
         {ecosystemPortal && (
-          <Link to={ecosystemPortal}>
-            {name} {translateMessageId("layer-2-ecosystem-portal", intl)}
-          </Link>
+          <InlineLink to={ecosystemPortal}>
+            {name} {t("layer-2-ecosystem-portal")}
+          </InlineLink>
         )}
         {tokenLists && (
-          <Link to={tokenLists}>
-            {name} {translateMessageId("layer-2-token-lists", intl)}
-          </Link>
+          <InlineLink to={tokenLists}>
+            {name} {t("layer-2-token-lists")}
+          </InlineLink>
         )}
-      </Content>
-      <div>
-        <StyledButtonLink to={url} display="flex">
-          {translateMessageId("layer-2-explore", intl)} {name}
-        </StyledButtonLink>
-      </div>
-    </Card>
+      </Flex>
+      <Box>
+        <ButtonLink m={2} to={url} display="flex">
+          {t("layer-2-explore")} {name}
+        </ButtonLink>
+      </Box>
+    </Flex>
   )
 }
 

@@ -1,97 +1,121 @@
-import styled from "@emotion/styled"
+import React from "react"
+import { Box, Flex, Grid, useToken } from "@chakra-ui/react"
 
-export const Banner = styled.div`
-  width: 100%;
-  display: flex;
-  background: ${(props) => props.theme.colors.bannerGridGradient};
+export type Props = {
+  children: React.ReactNode
+}
 
-  h2 {
-    margin-top: 0;
-  }
+export const Banner: React.FC<Props> = ({ children }) => {
+  return (
+    <Flex
+      w="full"
+      background="bannerGridGradient"
+      direction={{ base: "column", lg: "row" }}
+      wrap="nowrap"
+      sx={{
+        h2: {
+          mt: 0,
+        },
+        ul: {
+          mb: 0,
+        },
+      }}
+    >
+      {children}
+    </Flex>
+  )
+}
 
-  ul {
-    margin-bottom: 0;
-  }
+export const BannerBody: React.FC<Props> = ({ children }) => {
+  return (
+    <Box flex={4} p={10}>
+      {children}
+    </Box>
+  )
+}
 
-  flex-flow: column nowrap;
+export const BannerImage: React.FC<Props> = ({ children }) => {
+  return (
+    <Flex justifyContent="end" flex={2} alignSelf="end">
+      {children}
+    </Flex>
+  )
+}
 
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-flow: row nowrap;
-  }
-`
+export const BannerGrid: React.FC<Props> = ({ children }) => {
+  return (
+    <Grid
+      templateColumns={{
+        base: "repeat(1,1fr)",
+        md: "repeat(2,1fr)",
+        lg: "repeat(3,1fr)",
+      }}
+      templateRows={{
+        md: "repeat(3, 1fr)",
+        lg: "repeat(2, 1fr)",
+      }}
+      columnGap={0}
+      rowGap={0}
+    >
+      {children}
+    </Grid>
+  )
+}
 
-export const BannerBody = styled.div`
-  flex: 4;
-  padding: 40px;
-`
+export const BannerGridCell: React.FC<Props> = ({ children }) => {
+  const [medBp, lgBp] = useToken("breakpoints", ["md", "lg"])
 
-export const BannerImage = styled.div`
-  display: flex;
-  justify-content: end;
-  flex: 2;
-  align-self: end;
-`
-
-export const BannerGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-`
-
-export const BannerGridCell = styled.div`
-  padding: 2rem 3rem;
-  display: flex;
-  flex-direction: column;
-
-  border-top: 1px solid ${({ theme }) => theme.colors.searchBackground};
-
-  border-left: none;
-  &:first-child {
-    border-top: none;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    border-left: 1px solid ${({ theme }) => theme.colors.searchBackground};
-    &:nth-child(-n + 2) {
-      border-top: none;
-    }
-    &:nth-child(2n + 1) {
-      border-left: none;
-    }
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    &:nth-child(-n + 2) {
-      border-top: 1px solid ${({ theme }) => theme.colors.searchBackground};
-    }
-    &:nth-child(2n + 1) {
-      border-left: 1px solid ${({ theme }) => theme.colors.searchBackground};
-    }
-
-    &:nth-child(-n + 3) {
-      border-top: none;
-      justify-content: start;
-      padding-top: 0;
-    }
-    &:first-child,
-    &:nth-child(3n + 1) {
-      padding-left: 0;
-      border-left: none;
-    }
-    &:nth-child(n + 4) {
-      justify-content: start;
-      padding-bottom: 0;
-    }
-  }
-`
+  return (
+    <Flex
+      px={{ base: 0, md: 12 }}
+      py={8}
+      direction="column"
+      borderTop="1px solid"
+      borderTopColor="searchBackground"
+      borderInlineStart={{ base: 0, md: "1px solid" }}
+      borderInlineStartColor={{ md: "searchBackground" }}
+      sx={{
+        "&:first-child": {
+          borderTop: 0,
+        },
+        [`@media (min-width: ${medBp})`]: {
+          "&:nth-child(-n + 2)": {
+            borderTop: 0,
+          },
+          "&:nth-child(2n + 1)": {
+            borderInlineStart: 0,
+          },
+        },
+        [`@media (min-width: ${lgBp})`]: {
+          "&:first-child": {
+            ps: 0,
+            borderInlineStart: 0,
+          },
+          "&:nth-child(-n + 2)": {
+            borderTop: "1px solid",
+            borderTopColor: "searchBackground",
+          },
+          "&:nth-child(2n + 1)": {
+            borderInlineStart: "1px solid",
+            borderInlineStartColor: "searchBackground",
+          },
+          "&:nth-child(-n + 3)": {
+            borderTop: 0,
+            justifyContent: "start",
+            paddingTop: 0,
+          },
+          "&:nth-child(3n + 1)": {
+            ps: 0,
+            borderInlineStart: 0,
+          },
+          "&:nth-child(n + 4)": {
+            justifyContent: "start",
+            paddingBottom: 0,
+          },
+        },
+      }}
+    >
+      {children}
+    </Flex>
+  )
+}

@@ -1,207 +1,236 @@
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
-import { graphql, PageProps } from "gatsby"
+import { ReactNode, useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
-import { getImage } from "gatsby-plugin-image"
-import { useIntl } from "react-intl"
-
-import Breadcrumbs from "../../components/Breadcrumbs"
-import ButtonLink from "../../components/ButtonLink"
-import CardList from "../../components/CardList"
-import Checkbox from "../../components/Checkbox"
-import CopyToClipboard from "../../components/CopyToClipboard"
-import Emoji from "../../components/OldEmoji"
-import InfoBanner from "../../components/InfoBanner"
-import Link from "../../components/Link"
-import PageMetadata from "../../components/PageMetadata"
-import Translation from "../../components/Translation"
-import Tooltip from "../../components/Tooltip"
-
+import { type GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
-  ButtonSecondary,
-  FakeLink,
-} from "../../components/SharedStyledComponents"
-import { DEPOSIT_CONTRACT_ADDRESS } from "../../data/addresses"
-import { translateMessageId, TranslationKey } from "../../utils/translations"
-import type { Context } from "../../types"
-import FeedbackCard from "../../components/FeedbackCard"
+  Box,
+  Button,
+  type ButtonProps,
+  Checkbox,
+  Flex,
+  Heading,
+  Img,
+  Text,
+  useToken,
+} from "@chakra-ui/react"
 
-const Page = styled.div`
-  width: 100%;
-`
+import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"
 
-const Flex = styled.div`
-  display: flex;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-  }
-`
+import Breadcrumbs from "@/components/Breadcrumbs"
+import ButtonLink, {
+  type ButtonLinkProps,
+} from "@/components/Buttons/ButtonLink"
+import CardList from "@/components/CardList"
+import CopyToClipboard from "@/components/CopyToClipboard"
+import Emoji from "@/components/Emoji"
+import FeedbackCard from "@/components/FeedbackCard"
+import InfoBanner from "@/components/InfoBanner"
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import OldHeading from "@/components/OldHeading"
+import PageMetadata from "@/components/PageMetadata"
+import Tooltip from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
-const LeftColumn = styled.div`
-  flex: 1 1 50%;
-  padding: 2rem;
-  padding-top: 5rem;
-`
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-const RightColumn = styled(LeftColumn)`
-  flex: 1 1 50%;
-  padding-top: 8.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    padding-top: 1rem;
-  }
-`
+import consensys from "@/public/projects/consensys.png"
+import etherscan from "@/public/projects/etherscan-logo-circle.png"
+import ef from "@/public/staking/ef-blog-logo.png"
 
-const Title = styled.h1`
-  font-weight: normal;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text};
-`
+const FlexBox = (props: ChildOnlyProp) => (
+  <Flex
+    borderBottom="1px"
+    borderBottomColor="border"
+    direction={{ base: "column", lg: "row" }}
+    {...props}
+  />
+)
 
-const Subtitle = styled.div`
-  font-size: 1.25rem;
-  line-height: 140%;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 3.5rem;
-`
+const LeftColumn = (props: ChildOnlyProp) => (
+  <Box flex="1 1 50%" p={8} pt={20} {...props} />
+)
 
-const ButtonRow = styled.div`
-  display: flex;
-  align-items: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column-reverse;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-`
+const RightColumn = (props: ChildOnlyProp) => (
+  <Flex
+    flex="1 1 50%"
+    p={8}
+    pt={{ base: 4, lg: "8.5rem" }}
+    direction="column"
+    alignItems="center"
+    {...props}
+  />
+)
 
-const StyledButton = styled(ButtonLink)`
-  margin-top: 0rem;
-  margin-bottom: 3rem;
-`
+const Title = (props: ChildOnlyProp) => (
+  <OldHeading
+    as="h1"
+    fontWeight="700"
+    fontSize="2rem"
+    lineHeight="140%"
+    color="text"
+    {...props}
+  />
+)
 
-const CardTag = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  background: ${(props) => props.theme.colors.primary};
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  color: ${(props) => props.theme.colors.buttonColor};
-  border-radius: 3px 3px 0px 0px;
-  text-transform: uppercase;
-  font-size: 0.875rem;
-`
+const Subtitle = (props: ChildOnlyProp) => (
+  <Text fontSize="xl" lineHeight="140%" color="text200" mb={14} {...props} />
+)
 
-const AddressCard = styled.div`
-  background: ${(props) => props.theme.colors.background};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 4px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  margin-bottom: 2rem;
-  max-width: 560px;
+const ButtonRow = (props: ChildOnlyProp) => (
+  <Flex
+    flexDir={{ base: "column-reverse", md: "row" }}
+    alignItems={{ base: "flex-start", md: "center" }}
+    justifyContent={{ base: "flex-start", md: "initial" }}
+    {...props}
+  />
+)
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    max-width: 100%;
-  }
-  @media (min-width: ${(props) => props.theme.breakpoints.l}) {
-    position: sticky;
-    top: 7.25rem; /* account for navbar */
-  }
-`
+const StyledButton = ({
+  href,
+  children,
+}: Pick<ButtonLinkProps, "href" | "children">) => (
+  <ButtonLink href={href} mt="0" mb="12">
+    {children}
+  </ButtonLink>
+)
 
-const Address = styled.div`
-  font-family: ${(props) => props.theme.fonts.monospace};
-  border-radius: 2px;
-  font-size: 2rem;
-  flex-wrap: wrap;
-  text-transform: uppercase;
-  line-height: 140%;
-  margin-bottom: 1rem;
-`
+const CardTag = (props: ChildOnlyProp) => (
+  <Flex
+    alignItems="center"
+    justifyContent="center"
+    p={2}
+    bg="primary.base"
+    borderBottom="1px solid border"
+    color="buttonColor"
+    borderRadius="3px 3px 0px 0px"
+    textTransform="uppercase"
+    fontSize="sm"
+    {...props}
+  />
+)
 
-const CopyButton = styled(ButtonSecondary)`
-  margin-right: 1.5rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-right: 0rem;
-    margin-top: 1rem;
-  }
-`
+const AddressCard = (props: ChildOnlyProp) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
+  return (
+    <Box
+      bg="background.base"
+      border="1px solid"
+      borderColor="border"
+      borderRadius="4px"
+      boxShadow={tableBoxShadow}
+      mb={8}
+      maxWidth={{ base: "100%", lg: "560px" }}
+      position={{ base: "initial", lg: "sticky" }}
+      top={{ base: "initial", lg: "7.25rem" }}
+      {...props}
+    />
+  )
+}
 
-const CardContainer = styled.div`
-  margin: 2rem;
-`
+const Address = (props: ChildOnlyProp) => (
+  <Box
+    fontFamily="monospace"
+    borderRadius="sm"
+    fontSize="2rem"
+    flexWrap="wrap"
+    textTransform="uppercase"
+    lineHeight="140%"
+    mb={4}
+    {...props}
+  />
+)
 
-const Row = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 1rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: left;
-  }
-`
+const CopyButton = (props: ButtonProps) => (
+  <Button
+    variant="outline"
+    mb={4}
+    me={{ base: 0, md: 6 }}
+    mt={{ base: 4, md: 0 }}
+    {...props}
+  />
+)
 
-const TitleText = styled.div``
+const Row = (props: ChildOnlyProp) => (
+  <Flex
+    alignItems="flex-start"
+    mb={4}
+    justifyContent={{ base: "flex-start", md: "space-between" }}
+    flexDir={["column", "column", "row"]}
+    textAlign="left"
+    {...props}
+  />
+)
 
-const CardTitle = styled.h2`
-  margin-top: 0rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-`
+const CardTitle = (props: ChildOnlyProp) => (
+  <Heading
+    as="h2"
+    mb={4}
+    fontWeight="600"
+    fontSize="2rem"
+    lineHeight={1.4}
+    {...props}
+  />
+)
 
-const Caption = styled.div`
-  color: ${(props) => props.theme.colors.text200};
-  font-weight: 400;
-  font-size: 0.875rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-bottom: 2rem;
-  }
-`
+const Caption = (props: ChildOnlyProp) => (
+  <Text
+    color="text200"
+    fontWeight="400"
+    fontSize="sm"
+    mb={[8, 8, 0]}
+    {...props}
+  />
+)
 
-const StyledCheckbox = styled(Checkbox)`
-  display: flex;
-  min-height: 3.5rem;
-  margin-bottom: 0.5rem;
+const Blockie = (props: { src: string }) => (
+  <Img src={props.src} borderRadius="base" height={16} width={16} />
+)
 
-  .styled-checkbox {
-    margin-top: 0.25rem;
-  }
-`
-
-const Blockie = styled.img`
-  border-radius: 4px;
-  height: 4rem;
-  width: 4rem;
-`
-
-const TextToSpeech = styled.div`
-  display: flex;
-  margin-bottom: 2rem;
-`
-
-const StyledFakeLink = styled(FakeLink)`
-  margin-right: 0.5rem;
-`
+const StyledFakeLink = (props: { onClick: any; children: ReactNode }) => (
+  <Text
+    as="button"
+    onClick={props.onClick}
+    me={2}
+    color="primary.base"
+    cursor="pointer"
+  >
+    {props.children}
+  </Text>
+)
 
 const CHUNKED_ADDRESS = DEPOSIT_CONTRACT_ADDRESS.match(/.{1,3}/g)?.join(" ")
 
 const blockieSrc = makeBlockie(DEPOSIT_CONTRACT_ADDRESS)
 
-const DepositContractPage = ({
-  data,
-  location,
-}: PageProps<Queries.DepositContractPageQuery, Context>) => {
-  const intl = useIntl()
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/staking/deposit-contract"
+  )
+
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
+const DepositContractPage = () => {
+  const { asPath } = useRouter()
+
+  const { t } = useTranslation("page-staking-deposit-contract")
 
   const [state, setState] = useState<{
     browserHasTextToSpeechSupport: boolean
@@ -223,18 +252,16 @@ const DepositContractPage = ({
 
   useEffect(() => {
     const browserHasTextToSpeechSupport = !!window.speechSynthesis
-    if (!browserHasTextToSpeechSupport) {
-      return
-    }
+    if (!browserHasTextToSpeechSupport) return
     // Create textToSpeechRequest
     let speech = new SpeechSynthesisUtterance()
     speech.lang = "en-US"
-    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(" ")
+    speech.text = DEPOSIT_CONTRACT_ADDRESS.split("").join(",")
     speech.volume = 1
-    speech.rate = 0.5
+    speech.rate = 1
     speech.pitch = 1
     // Add event listeners
-    // Explicity set state in listener callback
+    // Explicitly set state in listener callback
     const speechCallbackState = {
       browserHasTextToSpeechSupport: true,
       textToSpeechRequest: speech,
@@ -282,22 +309,20 @@ const DepositContractPage = ({
     {
       title: "ConsenSys",
       link: "https://consensys.net/blog/news/eth2-phase-0-deposit-contract-address/",
-      image: getImage(data.consensys),
+      image: consensys,
+      alt: "",
     },
     {
       title: "Ethereum Foundation",
       link: "https://blog.ethereum.org/2020/11/04/eth2-quick-update-no-19/",
-      image: getImage(data.ef),
+      image: ef,
+      alt: "",
     },
     {
       title: "Etherscan",
       link: `https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`,
-      image: getImage(data.etherscan),
-    },
-    {
-      title: "EthHub",
-      link: "https://docs.ethhub.io/ethereum-roadmap/ethereum-2.0/deposit-contract/",
-      image: getImage(data.ethhub),
+      image: etherscan,
+      alt: "",
     },
   ]
 
@@ -307,93 +332,79 @@ const DepositContractPage = ({
     state.userWillCheckOtherSources
 
   const textToSpeechText = state.isSpeechActive
-    ? translateMessageId("page-staking-deposit-contract-stop-reading", intl)
-    : translateMessageId("page-staking-deposit-contract-read-aloud", intl)
+    ? t("page-staking-deposit-contract-stop-reading")
+    : t("page-staking-deposit-contract-read-aloud")
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
   return (
-    <Page>
-      <Flex>
+    <Box as={MainArticle} w="100%">
+      <FlexBox>
         <PageMetadata
-          title={translateMessageId(
-            "page-staking-deposit-contract-meta-title",
-            intl
-          )}
-          description={translateMessageId(
-            "page-staking-deposit-contract-meta-desc",
-            intl
-          )}
+          title={t("page-staking-deposit-contract-meta-title")}
+          description={t("page-staking-deposit-contract-meta-desc")}
         />
         <LeftColumn>
-          <Breadcrumbs slug={location.pathname} startDepth={1} />
-          <Title>
-            <Translation id="page-staking-deposit-contract-title" />
-          </Title>
-          <Subtitle>
-            <Translation id="page-staking-deposit-contract-subtitle" />
-          </Subtitle>
-          <h2>
-            <Translation id="page-staking-deposit-contract-h2" />
-          </h2>
-          <p>
-            <Translation id="page-staking-deposit-contract-staking" />{" "}
-            <Link to="/staking/">
-              <Translation id="page-staking-deposit-contract-staking-more-link" />
-            </Link>
-          </p>
-          <StyledButton to="https://launchpad.ethereum.org">
-            <Translation id="page-staking-deposit-contract-launchpad" />
+          <Breadcrumbs slug={asPath} startDepth={1} />
+          <Title>{t("page-staking-deposit-contract-title")}</Title>
+          <Subtitle>{t("page-staking-deposit-contract-subtitle")}</Subtitle>
+          <OldHeading>{t("page-staking-deposit-contract-h2")}</OldHeading>
+          <Text>
+            {t("page-staking-deposit-contract-staking")}{" "}
+            <InlineLink to="/staking/">
+              {t("page-staking-deposit-contract-staking-more-link")}
+            </InlineLink>
+          </Text>
+          <StyledButton href="https://launchpad.ethereum.org">
+            {t("page-staking-deposit-contract-launchpad")}
           </StyledButton>
-          <h2>
-            <Translation id="page-staking-deposit-contract-staking-check" />
-          </h2>
-          <p>
-            <Translation id="page-staking-deposit-contract-staking-check-desc" />
-          </p>
-          <CardList content={addressSources} />
+          <OldHeading>
+            {t("page-staking-deposit-contract-staking-check")}
+          </OldHeading>
+          <Text>{t("page-staking-deposit-contract-staking-check-desc")}</Text>
+          <CardList items={addressSources} />
         </LeftColumn>
         <RightColumn>
           <AddressCard>
             <CardTag>
-              <Translation id="page-staking-deposit-contract-address-check-btn" />
+              {t("page-staking-deposit-contract-address-check-btn")}
             </CardTag>
-            <CardContainer>
+            <Box m={8}>
               {!state.showAddress && (
                 <>
                   <Row>
                     <CardTitle>
-                      <Translation id="page-staking-deposit-contract-confirm-address" />
+                      {t("page-staking-deposit-contract-confirm-address")}
                     </CardTitle>
                   </Row>
-                  <StyledCheckbox
-                    size={1.5}
-                    checked={state.userHasUsedLaunchpad}
-                    callback={() =>
+                  <Checkbox
+                    mb={2}
+                    isChecked={state.userHasUsedLaunchpad}
+                    onChange={() =>
                       setState({
                         ...state,
                         userHasUsedLaunchpad: !state.userHasUsedLaunchpad,
                       })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-checkbox1" />
-                  </StyledCheckbox>
-                  <StyledCheckbox
-                    size={1.5}
-                    checked={state.userUnderstandsStaking}
-                    callback={() =>
+                    {t("page-staking-deposit-contract-checkbox1")}
+                  </Checkbox>
+                  <Checkbox
+                    mb={2}
+                    isChecked={state.userUnderstandsStaking}
+                    onChange={() =>
                       setState({
                         ...state,
                         userUnderstandsStaking: !state.userUnderstandsStaking,
                       })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-checkbox2" />
-                  </StyledCheckbox>
-                  <StyledCheckbox
-                    size={1.5}
-                    checked={state.userWillCheckOtherSources}
-                    callback={() =>
+                    {t("page-staking-deposit-contract-checkbox2")}
+                  </Checkbox>
+                  <Checkbox
+                    mb={2}
+                    isChecked={state.userWillCheckOtherSources}
+                    onChange={() =>
                       setState({
                         ...state,
                         userWillCheckOtherSources:
@@ -401,121 +412,84 @@ const DepositContractPage = ({
                       })
                     }
                   >
-                    <Translation id="page-staking-deposit-contract-checkbox3" />
-                  </StyledCheckbox>
+                    {t("page-staking-deposit-contract-checkbox3")}
+                  </Checkbox>
                   <CopyButton
-                    disabled={!isButtonEnabled}
+                    isDisabled={!isButtonEnabled}
+                    leftIcon={<Emoji text=":eyes:" boxSize={4} />}
                     onClick={() =>
                       setState({ ...state, showAddress: !state.showAddress })
                     }
                   >
-                    <Emoji text=":eyes:" size={1} />{" "}
-                    <Translation id="page-staking-deposit-contract-reveal-address-btn" />
+                    {t("page-staking-deposit-contract-reveal-address-btn")}
                   </CopyButton>
                 </>
               )}
               {state.showAddress && (
                 <>
                   <Row>
-                    <TitleText>
+                    <Box>
                       <CardTitle>
-                        <Translation id="page-staking-deposit-contract-address" />
+                        {t("page-staking-deposit-contract-address")}
                       </CardTitle>
                       <Caption>
-                        <Translation id="page-staking-deposit-contract-address-caption" />
+                        {t("page-staking-deposit-contract-address-caption")}
                       </Caption>
-                    </TitleText>
+                    </Box>
                     <Blockie src={blockieSrc} />
                   </Row>
                   {state.browserHasTextToSpeechSupport && (
-                    <TextToSpeech>
+                    <Flex mb={8} alignItems="center">
                       <StyledFakeLink onClick={handleTextToSpeech}>
                         <Translation id={textToSpeechText as TranslationKey} />
                       </StyledFakeLink>{" "}
-                      <Emoji text={textToSpeechEmoji} size={1} />
-                    </TextToSpeech>
+                      <Emoji text={textToSpeechEmoji} boxSize={4} />
+                    </Flex>
                   )}
-                  <Tooltip
-                    content={translateMessageId(
-                      "page-staking-deposit-contract-warning",
-                      intl
-                    )}
-                  >
+                  <Tooltip content={t("page-staking-deposit-contract-warning")}>
                     <Address>{CHUNKED_ADDRESS}</Address>
                   </Tooltip>
                   <ButtonRow>
                     <CopyToClipboard text={DEPOSIT_CONTRACT_ADDRESS}>
                       {(isCopied) => (
-                        <CopyButton>
-                          {!isCopied ? (
-                            <div>
-                              <Emoji text=":clipboard:" size={1} />{" "}
-                              <Translation id="page-staking-deposit-contract-copy" />
-                            </div>
-                          ) : (
-                            <div>
-                              <Emoji text=":white_check_mark:" size={1} />{" "}
-                              <Translation id="page-staking-deposit-contract-copied" />
-                            </div>
-                          )}
+                        <CopyButton
+                          leftIcon={
+                            isCopied ? (
+                              <Emoji text=":white_check_mark:" boxSize={4} />
+                            ) : (
+                              <Emoji text=":clipboard:" boxSize={4} />
+                            )
+                          }
+                        >
+                          {!isCopied
+                            ? t("page-staking-deposit-contract-copy")
+                            : t("page-staking-deposit-contract-copied")}
                         </CopyButton>
                       )}
                     </CopyToClipboard>
-                    <Link
+                    <InlineLink
                       to={`https://etherscan.io/address/${DEPOSIT_CONTRACT_ADDRESS}`}
                     >
-                      <Translation id="page-staking-deposit-contract-etherscan" />
-                    </Link>
+                      {t("page-staking-deposit-contract-etherscan")}
+                    </InlineLink>
                   </ButtonRow>
                 </>
               )}
-              <InfoBanner isWarning={true} emoji=":warning:">
+              <InfoBanner isWarning emoji=":warning:">
                 <div>
-                  <Translation id="page-staking-deposit-contract-warning-2" />{" "}
-                  <Link to="https://launchpad.ethereum.org">
-                    <Translation id="page-staking-deposit-contract-launchpad-2" />
-                  </Link>
+                  {t("page-staking-deposit-contract-warning-2")}{" "}
+                  <InlineLink to="https://launchpad.ethereum.org">
+                    {t("page-staking-deposit-contract-launchpad-2")}
+                  </InlineLink>
                 </div>
               </InfoBanner>
-            </CardContainer>
+            </Box>
           </AddressCard>
         </RightColumn>
-      </Flex>
+      </FlexBox>
       <FeedbackCard />
-    </Page>
+    </Box>
   )
 }
 
 export default DepositContractPage
-
-export const sourceImage = graphql`
-  fragment sourceImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        height: 20
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
-
-export const query = graphql`
-  query DepositContractPage {
-    consensys: file(relativePath: { eq: "projects/consensys.png" }) {
-      ...sourceImage
-    }
-    ef: file(relativePath: { eq: "staking/ef-blog-logo.png" }) {
-      ...sourceImage
-    }
-    ethhub: file(relativePath: { eq: "projects/ethhub.png" }) {
-      ...sourceImage
-    }
-    etherscan: file(
-      relativePath: { eq: "projects/etherscan-logo-circle.png" }
-    ) {
-      ...sourceImage
-    }
-  }
-`

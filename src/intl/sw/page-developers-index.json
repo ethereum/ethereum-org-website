@@ -8,7 +8,6 @@
   "page-developers-advanced": "Ya hali ya juu",
   "page-developers-api-desc": "Kutumia maktaba kuingiliana na mikataba-erevu",
   "page-developers-api-link": "Mfumo wa nyuma wa programu",
-  "page-developers-aria-label": "Menyu kwa Wasanidi Programu",
   "page-developers-block-desc": "Makundi ya shughuli zilizoongezwa kwenye pande la mnyororo",
   "page-developers-block-explorers-desc": "Lango lako la data za Ethereum",
   "page-developers-block-explorers-link": "Wachunguzi wa tofali",
@@ -84,5 +83,6 @@
   "page-developers-transactions-desc": "Jinsi hali ya Ethereum inavyobadilika",
   "page-developers-transactions-link": "Miamala",
   "page-developers-web3-desc": "Jinsi ulimwengu wa wavuti-3 wa maendeleo ni tofauti",
-  "page-developers-web3-link": "Wavuti-2 dhidi ya Wavuti-3"
+  "page-developers-web3-link": "Wavuti-2 dhidi ya Wavuti-3",
+  "alt-eth-blocks": "Kielelezo cha matofali yaliopangwa kama nembo ya ETH"
 }

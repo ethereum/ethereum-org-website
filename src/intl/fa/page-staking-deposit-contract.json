@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "توقف خواندن",
   "page-staking-deposit-contract-subtitle": "این آدرس قرارداد سهام‌گذاری اتریوم است. از این صفحه برای تأیید‌ کردن ارسال وجوه به آدرس صحیح هنگام سهام‌گذاری استفاده کنید.",
   "page-staking-deposit-contract-warning": "هر نویسه را به دقت بررسی کنید.",
-  "page-staking-deposit-contract-warning-2": "ارسال وجه به این آدرس انجام نخواهد شد و شما را سهام‌گذار نخواهد کرد. باید مطابق دستورالعمل‌های سکوی پرتاب عمل کنید."
+  "page-staking-deposit-contract-warning-2": "ارسال وجه به این آدرس انجام نخواهد شد و شما را سهام‌گذار نخواهد کرد. باید مطابق دستورالعمل‌های سکوی پرتاب عمل کنید.",
+  "page-staking-deposit-contract-title": "آدرس قرارداد سپرده را بررسی کنید"
 }

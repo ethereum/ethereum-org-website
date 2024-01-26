@@ -1,0 +1,211 @@
+name: Suggest a staking product or service
+description: Suggest a staking product or service to list on ethereum.org
+title: Suggest a staking product or service
+labels: ["feature :sparkles:", "content :fountain_pen:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting a staking product or service, make sure you've read [our listing policy](https://ethereum.org/en/contributing/adding-staking-products/).
+  - type: markdown
+    attributes:
+      value: |
+        Only continue with the issue if the staking product meets the criteria listed there.
+  - type: markdown
+    attributes:
+      value: |
+        If it does, complete the following information which we need to accurately list the product/service.
+  - type: markdown
+    id: staking_project_info
+    attributes:
+      value: "## Project info"
+  - type: input
+    id: staking_project_name
+    attributes:
+      label: Project name
+      description: Provide the official name of product or service
+    validations:
+      required: true
+  - type: dropdown
+    id: staking_product_type
+    attributes:
+      label: Product type
+      description: Which category best fits the product or service?
+      options:
+        - "Node/client tooling"
+        - "Key management"
+        - "Staking as a service"
+        - "Staking pool"
+        - "Other: (describe)"
+    validations:
+      required: true
+  - type: input
+    id: staking_product_type_other
+    attributes:
+      label: If other product type, please describe
+  - type: textarea
+    id: staking_product_logo
+    attributes:
+      label: Logo
+      description: |
+        Please provide an SVG or hi-res transparent PNG
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in
+    validations:
+      required: true
+  - type: textarea
+    id: staking_product_description
+    attributes:
+      label: Description
+      description: Provide a 1-2 sentence (240 character max) of the products or service
+    validations:
+      required: true
+  - type: input
+    id: staking_product_url
+    attributes:
+      label: Website
+      description: Provide a URL to the website for the product or service
+    validations:
+      required: true
+  - type: dropdown
+    id: staking_product_open_source
+    attributes:
+      label: If software is involved, is everything open source?
+      description: Select one option, providing any available links to repositories
+      options:
+        - "Yes, everything is open source: provide link(s) to project repo(s)"
+        - "Portions of code are open source: provide link(s) to project repo(s)"
+        - "No, code is closed source"
+        - "N/A, no custom software is involved"
+    validations:
+      required: true
+  - type: dropdown
+    id: staking_product_fork
+    attributes:
+      label: Is the project a fork? If yes, which project was forked?
+      description: Provide information about if the project is a fork
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: staking_product_development
+    attributes:
+      label: Is the product out of beta development?
+      description: Provide information as to where the product is in the development lifecycle
+    validations:
+      required: true
+  - type: input
+    id: staking_product_wallet_support
+    attributes:
+      label: What wallets support the product or service?
+      description: List wallets that directly support the product or service
+  - type: textarea
+    id: staking_product_eth_requirements
+    attributes:
+      label: If the product or service enables staking with <32 ETH, what is the minimum ETH required to stake?
+      description: Provide any details related to ETH requirements, any other staking requirements, and any fees related to the service
+  - type: textarea
+    id: staking_product_fees
+    attributes:
+      label: If a service, what are the fees associated with using the service?
+      description: Is there a monthly fee for the service? Or a percentage of earnings? Any additional staking requirements?
+  - type: textarea
+    id: staking_product_liquidity_token
+    attributes:
+      label: If the product or service involved a liquidity token, what are the tokens involved?
+      description: Include token abbreviation and contract address for any tokens involved
+  - type: input
+    id: staking_product_live_date
+    attributes:
+      label: What date did the project or service go live?
+      description: Provide proof to substantiate the date of when the product or service became available to the public
+    validations:
+      required: true
+  - type: textarea
+    id: staking_product_external_audit
+    attributes:
+      label: Has the project undergone an external security audit?
+      description: Provide a link to a report or repo. If none, are there plans to have an external security audit?
+    validations:
+      required: true
+  - type: textarea
+    id: staking_product_bug_bounties
+    attributes:
+      label: Has the project undergone any security bug bounties?
+      description: Provide a link to a report or repo. If none, are there plans to hold a bug bounty?
+    validations:
+      required: true
+  - type: dropdown
+    id: staking_product_active_development_team
+    attributes:
+      label: Is the project being actively maintained?
+      description: Is there an active team developing the project?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: textarea
+    id: staking_product_third_parties
+    attributes:
+      label: Is the product or service free of trusted/human intermediaries?
+      description: Disclose any steps in a stakers journey that depend on trusting humans with the keys to their funds or distribution of rewards
+    validations:
+      required: true
+  - type: textarea
+    id: staking_product_permission_nodes
+    attributes:
+      label: If a pooled staking service, can users participate as a node operator without permission?
+      description: Is permission to run a node controlled by an individual, company, or DAO?
+  - type: textarea
+    id: staking_product_sign_up
+    attributes:
+      label: If listing a staking-as-a-service, are users required to sign-up for an account?
+      description: List any permissions needed for a user to access the service
+  - type: textarea
+    id: staking_product_signing_keys
+    attributes:
+      label: If listing as staking-as-a-service, who has access to the signing keys?
+      description: What keys does the user maintain access to? What keys does the service gain access to?
+  - type: textarea
+    id: staking_product_withdrawal_credentials
+    attributes:
+      label: If a pooled staking service or SaaS provider, what type of withdrawal credentials are being utilized / who holds the withdrawal keys?
+      description: Are withdrawal credentials utilizing `0x01` type credentials that point to an execution layer address? If so, is this an account chosen by the user, or a pre-determined smart contract?
+  - type: textarea
+    id: staking_product_supermajority
+    attributes:
+      label: If a pooled staking service or SaaS provider, what percent of node operators are running a super-majority client?
+      description: As of last edit, Prysm and Lighthouse are the consensus clients being run by >75% of the node operators, and Geth is the execution client being run by >60% of node operators. This presents risks to the network. If there is currently a super-majority and this data is known, please list it here with a link to evidence.
+  - type: textarea
+    id: staking_product_consensus_layer_client_support
+    attributes:
+      label: If listing node or client tooling, which consensus layer clients (Lighthouse, Teku, Nimbus, or Prysm) are supported?
+      description: Which clients are supported Does the software provide an easy way to switch between clients?
+  - type: input
+    id: staking_product_platform_support
+    attributes:
+      label: What platforms are supported?
+      description: ie. Linux, macOS, Windows, iOS, Android, etc
+  - type: input
+    id: staking_product_interface
+    attributes:
+      label: What user interfaces are supported?
+      description: ie. browser app, desktop app, mobile app, CLI app, etc
+  - type: textarea
+    id: staking_product_socials
+    attributes:
+      label: Social media links
+      description: List available social media links. ie. Discord, Twitter, Telegram, Reddit
+  - type: checkboxes
+    id: staking_product_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

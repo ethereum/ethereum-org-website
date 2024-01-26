@@ -10,8 +10,6 @@
   "page-learning-tools-coding-subtitle": "Тези пособия ще ви помогнат да експериментирате с Етереум, ако предпочитате по-интерактивно обучение.",
   "page-learning-tools-consensys-academy-description": "Онлайн лагер за изграждане на Етереум.",
   "page-learning-tools-consensys-academy-logo-alt": "Лого на ConsenSys Academy",
-  "page-learning-tools-lambdaschool-description": "Научете за разработките на веригата от блокове на Етереум.",
-  "page-learning-tools-lambdaschool-logo-alt": "Лого на Lambda School",
   "page-learning-tools-buildspace-description": "Научете за крипто като разработвате добри проекти.",
   "page-learning-tools-buildspace-logo-alt": "Лого на _buildspace",
   "page-learning-tools-cryptozombies-description": "Учете Solidity, докато изграждате вашата собствена Zombie игра.",
@@ -37,5 +35,6 @@
   "page-learning-tools-vyperfun-description": "Учете Vyper, като изграждате вашата собствена Pokémon игра.",
   "page-learning-tools-vyperfun-logo-alt": "Лого на Vyper.fun",
   "page-learning-tools-nftschool-description": "Научете какво се случва с незаменяемите токени, или NFTs, от техническата им страна.",
-  "page-learning-tools-nftschool-logo-alt": "Лого на NFT school"
+  "page-learning-tools-nftschool-logo-alt": "Лого на NFT school",
+  "alt-eth-blocks": "Илюстрация на блокове, организирани като символ на ETH"
 }

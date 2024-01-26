@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Stop met lezen",
   "page-staking-deposit-contract-subtitle": "Dit is het adres voor uw Ethereum-staking-contact. Gebruik deze pagina om te bevestigen dat u fondsen naar het juist adres zendt wanneer u staket.",
   "page-staking-deposit-contract-warning": "Controleer elk teken zorgvuldig.",
-  "page-staking-deposit-contract-warning-2": "Het versturen van fondsen naar dit adres zal niet werken en zal van u geen staker maken. U moet de instructies in de launchpad volgen."
+  "page-staking-deposit-contract-warning-2": "Het versturen van fondsen naar dit adres zal niet werken en zal van u geen staker maken. U moet de instructies in de launchpad volgen.",
+  "page-staking-deposit-contract-title": "Controleer het contractadres voor stortingen"
 }

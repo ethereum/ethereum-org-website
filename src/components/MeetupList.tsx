@@ -1,84 +1,29 @@
-// Libraries
-import React, { useState } from "react"
-import styled from "@emotion/styled"
+import { useState } from "react"
 import { sortBy } from "lodash"
+import {
+  Box,
+  Flex,
+  LinkBox,
+  LinkOverlay,
+  List,
+  ListItem,
+  useColorModeValue,
+  useToken,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 
-// Components
-import Emoji from "./OldEmoji"
-import InfoBanner from "./InfoBanner"
-import Link from "./Link"
-import Translation from "./Translation"
+import Emoji from "@/components/Emoji"
+import InfoBanner from "@/components/InfoBanner"
+import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-// Data
-import meetups from "../data/community-meetups.json"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-const Table = styled.div`
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-`
+import meetups from "@/data/community-meetups.json"
 
-const Item = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-
-  &:hover {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
-
-const ItemNumber = styled.div`
-  margin-right: 1rem;
-  opacity: 0.4;
-`
-const ItemTitle = styled.div``
-const ItemDesc = styled.p`
-  margin-bottom: 0;
-  opacity: 0.6;
-`
-
-const RightContainer = styled.div`
-  display: flex;
-  align-items: right;
-  align-content: flex-start;
-  flex: 1 1 25%;
-  margin-right: 1rem;
-  flex-wrap: wrap;
-`
-const LeftContainer = styled.div`
-  display: flex;
-  flex: 1 1 75%;
-  margin-right: 1rem;
-`
-
-const StyledInput = styled.input`
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-bottom: 1.5rem;
-
-  border: 1px solid ${(props) => props.theme.colors.searchBorder};
-  color: ${(props) => props.theme.colors.text};
-  background: ${(props) => props.theme.colors.searchBackground};
-  padding: 0.5rem;
-  border-radius: 0.25em;
-  width: 100%;
-
-  &:focus {
-    outline: ${(props) => props.theme.colors.primary} auto 1px;
-  }
-  &:placeholder {
-    color: ${(props) => props.theme.colors.text200};
-  }
-`
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface Meetup {
   title: string
@@ -109,41 +54,109 @@ export interface IProps {}
 // TODO prop if ordered list or unordered
 const MeetupList: React.FC<IProps> = () => {
   const [searchField, setSearchField] = useState<string>("")
+  const { flipForRtl } = useRtlFlip()
   const filteredMeetups = filterMeetups(searchField)
+  const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const listItemBoxShadow = useColorModeValue(
+    "tableItemBox.light",
+    "tableItemBox.dark"
+  )
 
-  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void =>
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setSearchField(event.target.value)
+    trackCustomEvent({
+      eventCategory: "events search",
+      eventAction: "click",
+      eventName: event.target.value,
+    })
+  }
+
+  const primaryBaseColor = useToken("colors", "primary.base")
 
   return (
-    <div>
-      <StyledInput
+    <Box>
+      <Input
+        mb={6}
         onChange={handleSearch}
         placeholder={"Search by meetup title or location"}
+        aria-describedby="input-instruction"
       />
-      <Table>
-        {filteredMeetups.length ? (
-          filteredMeetups.map((meetup, idx) => (
-            <Item key={idx} to={meetup.link}>
-              <LeftContainer>
-                <ItemNumber>{idx + 1}</ItemNumber>
-                <ItemTitle>{meetup.title}</ItemTitle>
-              </LeftContainer>
-              <RightContainer>
-                <Emoji text={meetup.emoji} size={1} mr={`0.5em`} />
-                <ItemDesc>{meetup.location}</ItemDesc>
-              </RightContainer>
-            </Item>
-          ))
-        ) : (
+      {/* hidden for attachment to input only */}
+      <VisuallyHidden hidden id="input-instruction">
+        results update as you type
+      </VisuallyHidden>
+
+      <List m={0} boxShadow={listBoxShadow} aria-label="Event meetup results">
+        {filteredMeetups.map((meetup, idx) => (
+          <LinkBox
+            as={ListItem}
+            key={idx}
+            display="flex"
+            justifyContent="space-between"
+            boxShadow={listItemBoxShadow}
+            mb={0.25}
+            p={4}
+            w="100%"
+            _hover={{
+              textDecoration: "none",
+              borderRadius: "base",
+              boxShadow: `0 0 1px ${primaryBaseColor}`,
+              bg: "tableBackgroundHover",
+            }}
+          >
+            <Flex flex="1 1 75%" me={4}>
+              <Box me={4} opacity="0.4">
+                {idx + 1}
+              </Box>
+              <Box>
+                <LinkOverlay
+                  as={BaseLink}
+                  href={meetup.link}
+                  textDecor="none"
+                  color="text"
+                  hideArrow
+                  isExternal
+                >
+                  {meetup.title}
+                </LinkOverlay>
+              </Box>
+            </Flex>
+            <Flex
+              textAlign="end"
+              alignContent="flex-start"
+              flex="1 1 25%"
+              me={4}
+              flexWrap="wrap"
+            >
+              <Emoji text={meetup.emoji} boxSize={4} me={2} lineHeight="unset" />
+              <Text mb={0} opacity={"0.6"}>
+                {meetup.location}
+              </Text>
+            </Flex>
+            <Box
+              as="span"
+              _after={{
+                content: '"↗"',
+                ms: 0.5,
+                me: 1.5,
+                transform: flipForRtl,
+                display: "inline-block",
+              }}
+            ></Box>
+          </LinkBox>
+        ))}
+      </List>
+      <Box aria-live="assertive" aria-atomic>
+        {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community-meetuplist-no-meetups" />{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               <Translation id="page-community-please-add-to-page" />
-            </Link>
+            </InlineLink>
           </InfoBanner>
         )}
-      </Table>
-    </div>
+      </Box>
+    </Box>
   )
 }
 

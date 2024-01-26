@@ -1,8 +1,8 @@
 {
   "page-local-environment-brownie-desc": "イーサリアム仮想マシンをターゲットとしたスマートコントラクトのためのPythonベースの開発とテストフレームワーク。",
   "page-local-environment-brownie-logo-alt": "Brownie ロゴ",
-  "page-local-environment-embark-desc": "分散型アプリケーションの構築と展開のためのオールインワン開発プラットフォーム。",
-  "page-local-environment-embark-logo-alt": "Embarkロゴ",
+  "page-local-environment-kurtosis-desc": "ローカルdAppの開発、プロトタイピング、テストを迅速に行うための、マルチクライアント型イーサリアムテストネットの構成とスピンアップを簡素化するコンテナベースのツールキット。",
+  "page-local-environment-kurtosis-logo-alt": "Kurtosisロゴ",
   "page-local-environment-epirus-desc": "Java仮想マシン上でブロックチェーンアプリケーションを開発、デプロイ、監視するためのプラットフォーム。",
   "page-local-environment-epirus-logo-alt": "Epirus ロゴ",
   "page-local-environment-eth-app-desc": "1つのコマンドでEthereumを搭載したアプリを作成します。UIフレームワークとDeFiテンプレートから選択できます。",
@@ -30,7 +30,7 @@
   "page-local-environment-setup-title": "ローカル開発環境をセットアップする",
   "page-local-environment-solidity-template-desc": "Solidityスマートコントラクト用のビルド済みセットアップ用のGitHubテンプレート。 Hardhatローカルネットワーク、テストのためのワッフル、財布の実装のためのEtherなどが含まれています。",
   "page-local-environment-solidity-template-logo-alt": "Solidityテンプレートのロゴ",
-  "page-local-environment-truffle-desc": "Truffle Suiteは、開発者がアイデアからdappにできるだけ快適にアクセスできるようにします。",
+  "page-local-environment-truffle-desc": "Truffle Suiteは、デベロッパーがアイデアからdappにできるだけ快適にアクセスできるようにします。",
   "page-local-environment-truffle-logo-alt": "Truffle ロゴ",
   "page-local-environment-waffle-desc": "スマートコントラクトのための最も高度なテストリブ。単独またはScaffoldethまたはHardhatで使用してください。",
   "page-local-environment-waffle-logo-alt": "Waffleロゴ"

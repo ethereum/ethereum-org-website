@@ -1,177 +1,192 @@
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
-import axios from "axios"
+import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { MdInfoOutline } from "react-icons/md"
+import {
+  Box,
+  Flex,
+  type FlexProps,
+  Heading,
+  Icon,
+  Text,
+} from "@chakra-ui/react"
 
-import Translation from "./Translation"
-import Icon from "./Icon"
-import Link from "./Link"
-import Tooltip from "./Tooltip"
+import type { LoadingState } from "@/lib/types"
 
-const InfoIcon = styled(Icon)`
-  margin-left: 0.5rem;
-  fill: ${(props) => props.theme.colors.text200};
-`
+import InlineLink from "@/components/Link"
+import Tooltip from "@/components/Tooltip"
 
-const Card = styled.div<{
-  isLeftAlign: boolean
-  isNegativeChange: boolean
-}>`
-  display: flex;
-  flex-direction: column;
-  align-items: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
-  justify-content: space-between;
-  width: 100%;
-  max-width: 420px;
-  max-height: 192px;
-  background: ${(props) =>
-    props.isNegativeChange
-      ? props.theme.colors.priceCardBackgroundNegative
-      : props.theme.colors.priceCardBackgroundPositive};
-  border-radius: 4px;
-  border: 1px solid
-    ${(props) =>
-      props.isNegativeChange
-        ? props.theme.colors.priceCardBorderNegative
-        : props.theme.colors.priceCardBorder};
-  padding: 1.5rem;
-`
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const Title = styled.h4`
-  margin: 0;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.text200};
-`
+type EthPriceResponse = {
+  ethereum: {
+    usd: string
+    usd_24h_change: number
+  }
+}
 
-const Price = styled.div<{
-  hasError: boolean
-}>`
-  line-height: 1.4;
-  font-weight: 400;
-  margin: ${(props) => (props.hasError ? `1rem 0` : 0)};
-  font-size: ${(props) => (props.hasError ? props.theme.fontSizes.m : `3rem`)};
-  color: ${(props) =>
-    props.hasError ? props.theme.colors.fail : props.theme.colors.text};
-`
+type EthPriceState = {
+  currentPriceUSD: string
+  percentChangeUSD: number
+}
 
-const ChangeContainer = styled.div<{
-  isLeftAlign: boolean
-}>`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: ${(props) => (props.isLeftAlign ? `flex-start` : `center`)};
-  min-height: 33px; /* prevents jump when price loads*/
-`
-
-const Change = styled.div<{
-  isNegativeChange: boolean
-}>`
-  font-size: 1.5rem;
-  line-height: 140%;
-  margin-right: 1rem;
-  color: ${(props) =>
-    props.isNegativeChange
-      ? props.theme.colors.fail300
-      : props.theme.colors.success};
-`
-
-const ChangeTime = styled.div`
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: ${(props) => props.theme.colors.text300};
-`
-
-export interface IProps {
-  className?: string
+export type EthPriceCardProps = FlexProps & {
   isLeftAlign?: boolean
 }
 
-// TODO add prop to left vs. center align
-const EthPriceCard: React.FC<IProps> = ({ className, isLeftAlign = false }) => {
-  const [state, setState] = useState({
-    currentPriceUSD: "",
-    percentChangeUSD: 0,
-    hasError: false,
+const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
+  const { locale } = useRouter()
+  const { t } = useTranslation()
+  const [state, setState] = useState<LoadingState<EthPriceState>>({
+    loading: true,
   })
+  const { flipForRtl } = useRtlFlip()
 
   useEffect(() => {
-    axios
-      .get(
-        "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
-      )
-      .then((response) => {
-        if (response.data && response.data.ethereum) {
-          const currentPriceUSD = response.data.ethereum.usd
-          const percentChangeUSD =
-            +response.data.ethereum.usd_24h_change.toFixed(2)
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd&include_24hr_change=true"
+        )
+        if (!response.ok) throw new Error(response.statusText)
+        const data: EthPriceResponse = await response.json()
+        if (data && data.ethereum) {
+          const currentPriceUSD = data.ethereum.usd
+          const percentChangeUSD = +data.ethereum.usd_24h_change / 100
           setState({
-            currentPriceUSD,
-            percentChangeUSD,
-            hasError: false,
+            loading: false,
+            data: { currentPriceUSD, percentChangeUSD },
           })
         }
-      })
-      .catch((error) => {
-        console.error(error)
+      } catch (error: unknown) {
+        error instanceof Error && console.error(error.message)
         setState({
-          ...state,
-          hasError: true,
+          loading: false,
+          error,
         })
-      })
+      }
+    }
+    fetchData()
   }, [])
 
-  const isLoading = !state.currentPriceUSD
+  const hasError = "error" in state
+  const hasData = "data" in state
 
-  let price = isLoading ? (
-    <Translation id="loading" />
-  ) : (
-    `$${state.currentPriceUSD}`
-  )
+  const formatPrice = (price: string) =>
+    new Intl.NumberFormat(locale, {
+      style: "currency",
+      currency: "USD",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(+price)
 
-  if (state.hasError) {
-    price = <Translation id="loading-error-refresh" />
+  const formatPercentage = (amount: number): string =>
+    new Intl.NumberFormat(locale, {
+      style: "percent",
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(amount)
+
+  const getPriceString = (): string => {
+    if (state.loading) return t("loading")
+    if (hasError) return t("loading-error-refresh")
+    return formatPrice(state.data.currentPriceUSD)
   }
 
-  const isNegativeChange = state?.percentChangeUSD < 0
+  const price = getPriceString()
 
-  const change = state.percentChangeUSD
-    ? isNegativeChange
-      ? `${state.percentChangeUSD}% ↘`
-      : `${state.percentChangeUSD}% ↗`
-    : ``
+  const isNegativeChange = hasData && state.data.percentChangeUSD < 0
+
+  const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ""
 
   const tooltipContent = (
-    <div>
-      <Translation id="data-provided-by" />{" "}
-      <Link to="https://www.coingecko.com/en/api">coingecko.com</Link>
-    </div>
+    <Box>
+      {t("data-provided-by")}{" "}
+      <InlineLink to="https://www.coingecko.com/en/api">
+        coingecko.com
+      </InlineLink>
+    </Box>
   )
 
   return (
-    <Card
-      className={className}
-      isLeftAlign={isLeftAlign}
-      isNegativeChange={isNegativeChange}
+    <Flex
+      direction="column"
+      align={isLeftAlign ? "flex-start" : "center"}
+      justify="space-between"
+      background={
+        isNegativeChange
+          ? "priceCardBackgroundNegative"
+          : "priceCardBackgroundPositive"
+      }
+      border="1px solid"
+      borderColor={
+        isNegativeChange ? "priceCardBorderNegative" : "priceCardBorder"
+      }
+      p={6}
+      w="full"
+      maxW="420px"
+      maxH="192px"
+      borderRadius="base"
+      {...props}
     >
-      <Title>
-        <Translation id="eth-current-price" />
+      <Heading
+        as="h4"
+        color="text200"
+        m={0}
+        fontSize="sm"
+        fontWeight="medium"
+        lineHeight="140%"
+        letterSpacing="0.04em"
+        textTransform="uppercase"
+      >
+        {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
-          <InfoIcon name="info" size="14" />
+          <Icon as={MdInfoOutline} boxSize="14px" ms={2} />
         </Tooltip>
-      </Title>
-      <Price hasError={state.hasError}>{price}</Price>
-      <ChangeContainer isLeftAlign={isLeftAlign}>
-        <Change isNegativeChange={isNegativeChange}>{change}</Change>
-        <ChangeTime>
-          (<Translation id="last-24-hrs" />)
-        </ChangeTime>
-      </ChangeContainer>
-    </Card>
+      </Heading>
+
+      <Box
+        m={hasError ? "1rem 0" : 0}
+        lineHeight="1.4"
+        fontSize={hasError ? "md" : "5xl"}
+        color={hasError ? "fail" : "text"}
+      >
+        {price}
+      </Box>
+      <Flex
+        w="full"
+        align="center"
+        justify={isLeftAlign ? "flex-start" : "center"}
+        minH="33px" /* prevents jump when price loads*/
+      >
+        <Box
+          fontSize="2xl"
+          lineHeight="140%"
+          me={4}
+          color={isNegativeChange ? "fail300" : "success.base"}
+        >
+          <Text
+            as="span"
+            _after={{
+              content: isNegativeChange ? '"↘"' : '"↗"',
+              transform: flipForRtl,
+              display: "inline-block",
+            }}
+          >
+            {change}
+          </Text>
+        </Box>
+        <Box
+          fontSize="sm"
+          lineHeight="140%"
+          letterSpacing="0.04em"
+          textTransform="uppercase"
+          color="text300"
+        >
+          ({t("last-24-hrs")})
+        </Box>
+      </Flex>
+    </Flex>
   )
 }
 

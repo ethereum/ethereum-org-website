@@ -1,36 +1,19 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
+import { Center, Text } from "@chakra-ui/react"
 
 // Components
 import BannerNotification from "../BannerNotification"
-import Link from "../Link"
-
-const StyledBannerNotification = styled(BannerNotification)`
-  display: flex;
-  z-index: 1;
-  justify-content: center;
-  p {
-    max-width: 100ch;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: underline;
-  }
-  text-align: center;
-`
 
 const BugBountyBanner: React.FC = () => (
-  <StyledBannerNotification>
-    <p>
-      All Merge-related bounties currently receive a 4x bonus multiplier (up to
-      1 million USD).{" "}
-      <Link to="https://blog.ethereum.org/2022/08/24/mainnet-merge-announcement/">
-        Learn more about the bonus
-      </Link>
-    </p>
-  </StyledBannerNotification>
+  <BannerNotification shouldShow>
+    <Center>
+      <Text m={0} p={0}>
+        All Dencun-related bounties currently receive a 2x bonus multiplier (up
+        to 500,000 USD) up to two weeks before the scheduled mainnet hardfork.
+      </Text>
+    </Center>
+  </BannerNotification>
 )
 
 export default BugBountyBanner

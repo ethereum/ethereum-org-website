@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Dejar de leer",
   "page-staking-deposit-contract-subtitle": "Esta es la dirección para el contrato de participación de Ethereum. Utilice esta página para confirmar que está enviando fondos a la dirección correcta cuando apueste.",
   "page-staking-deposit-contract-warning": "Revise cada carácter cuidadosamente.",
-  "page-staking-deposit-contract-warning-2": "Enviar fondos a esta dirección no funcionará y no le convertirá en participante: debe seguir las instrucciones de la plataforma de lanzamiento."
+  "page-staking-deposit-contract-warning-2": "Enviar fondos a esta dirección no funcionará y no le convertirá en participante: debe seguir las instrucciones de la plataforma de lanzamiento.",
+  "page-staking-deposit-contract-title": "Comprobar la dirección del contrato de depósito"
 }

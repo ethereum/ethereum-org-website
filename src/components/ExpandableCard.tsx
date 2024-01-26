@@ -1,217 +1,144 @@
-// Libraries
-import React, { ComponentType, ReactNode, SVGProps, useState } from "react"
-import styled from "@emotion/styled"
-import { motion } from "framer-motion"
+import { type ReactNode, useState } from "react"
+import { useTranslation } from "next-i18next"
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+  Heading,
+  type Icon as ChakraIcon,
+} from "@chakra-ui/react"
 
-// Components
-import Translation from "./Translation"
+import Text from "@/components/OldText"
 
-// Utils
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-const Card = styled.div`
-  border: 1px solid ${(props) => props.theme.colors.border};
-  border-radius: 2px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  cursor: pointer;
-  &:hover {
-    background-color: ${(props) => props.theme.colors.ednBackground};
-  }
-`
-
-const Content = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    flex-direction: column;
-  }
-`
-
-const Title = styled.h3`
-  margin-top: 0rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-`
-
-const TextPreview = styled.p`
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.text200};
-  margin-bottom: 0rem;
-`
-
-const Text = styled(motion.div)`
-  font-size: 1rem;
-  font-weight: 400;
-  color: ${(props) => props.theme.colors.text};
-  margin-top: 2rem;
-  border-top: 1px solid ${(props) => props.theme.colors.border};
-  padding-top: 1.5rem;
-`
-
-const Question = styled.div`
-  margin-right: 1rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-right: 0;
-    margin-bottom: 0.5rem;
-  }
-`
-
-const Header = styled.div`
-  display: flex;
-  width: 100%;
-  margin: 1rem 0;
-  align-items: center;
-  svg {
-    margin-right: 1.5rem;
-  }
-`
-
-const ButtonContainer = styled.div`
-  margin-left: 1rem;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    margin-left: 0;
-  }
-`
-
-const ButtonLink = styled.button`
-  border: 0;
-  cursor: pointer;
-  background-color: transparent;
-  color: ${(props) => props.theme.colors.primary};
-`
-
-export interface IProps {
-  children?: React.ReactNode
+export type ExpandableCardProps = {
+  children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: ComponentType<SVGProps<SVGElement>>
+  svg?: typeof ChakraIcon
+  eventAction?: string
   eventCategory?: string
   eventName?: string
 }
 
-const ExpandableCard: React.FC<IProps> = ({
+const ExpandableCard = ({
   children,
   contentPreview,
   title,
   svg: Svg,
+  eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
-}) => {
+}: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(false)
-
-  const expandCollapse = {
-    collapsed: {
-      height: 0,
-      transition: {
-        when: "afterChildren",
-      },
-    },
-    expanded: {
-      height: "100%",
-      transition: {
-        when: "beforeChildren",
-      },
-    },
-  }
-
-  const showHide = {
-    collapsed: {
-      display: "none",
-    },
-    expanded: {
-      display: "inline-block",
-    },
-  }
-
-  const fadeInOut = {
-    collapsed: {
-      opacity: 0,
-      transition: {
-        duration: 0.1,
-      },
-    },
-    expanded: {
-      opacity: 1,
-      transition: {
-        duration: 0.4,
-      },
-    },
-  }
+  const { t } = useTranslation("common")
   const matomo = {
-    eventAction: `Clicked`,
+    eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
     eventName,
   }
+  const onClick = () => {
+    // Card will not collapse if clicking on a link or selecting text
+    if (
+      window.getSelection()?.toString().length === 0 &&
+      !(window.event?.target as HTMLDivElement)?.className.includes(
+        "ExternalLink"
+      )
+    ) {
+      !isVisible && trackCustomEvent(matomo)
+      setIsVisible(!isVisible)
+    }
+  }
+
   return (
-    <Card
-      onClick={() => {
-        // Card will not collapse if clicking on a link or selecting text
-        if (
-          window.getSelection()?.toString().length === 0 &&
-          !(window.event?.target as HTMLDivElement)?.className.includes(
-            "ExternalLink"
-          )
-        ) {
-          !isVisible && trackCustomEvent(matomo)
-          setIsVisible(!isVisible)
-        }
+    <Accordion
+      border="1px"
+      borderColor="border"
+      borderRadius="sm"
+      display="flex"
+      flex-direction="column"
+      marginBottom="4"
+      cursor="pointer"
+      _hover={{
+        backgroundColor: "ednBackground",
       }}
+      borderBottomWidth="0"
+      index={isVisible ? [0] : []}
     >
-      <Content>
-        <Question>
-          <Header>
-            {!!Svg && <Svg />}
-            <Title>{title}</Title>
-          </Header>
-          <TextPreview>{contentPreview}</TextPreview>
-        </Question>
-        <ButtonContainer
-          onClick={() => {
-            trackCustomEvent(matomo)
-            setIsVisible(!isVisible)
-          }}
+      <AccordionItem borderTopWidth="0" flex="1">
+        <Heading as="h3" m={0}>
+          <AccordionButton
+            width="100%"
+            p={6}
+            flex="1"
+            onClick={onClick}
+            _hover={{
+              backgroundColor: "ednBackground",
+            }}
+          >
+            <Box
+              display="flex"
+              width="100%"
+              alignItems="center"
+              flexDir={{ base: "column", sm: "row" }}
+              textAlign="start"
+            >
+              <Box marginBottom={{ base: 2, sm: 0 }} me={{ base: 0, sm: 4 }}>
+                <Box
+                  display="flex"
+                  alignItems="center"
+                  sx={{
+                    svg: { me: "1.5rem" },
+                  }}
+                  my="4"
+                >
+                  {!!Svg && <Svg />}
+                  <Text fontSize="xl" fontWeight="semibold" flex="1" m="0">
+                    {title}
+                  </Text>
+                </Box>
+                <Text
+                  fontSize="sm"
+                  color="text200"
+                  marginBottom="0"
+                  width="fit-content"
+                >
+                  {contentPreview}
+                </Text>
+              </Box>
+              <Text
+                fontSize="md"
+                color="primary.base"
+                ms={{ base: undefined, sm: "auto" }}
+                mt="auto"
+                mb="auto"
+              >
+                {t(isVisible ? "less" : "more")}
+              </Text>
+            </Box>
+          </AccordionButton>
+        </Heading>
+        <AccordionPanel
+          paddingX="6"
+          paddingBottom="6"
+          paddingTop="0"
+          onClick={onClick}
         >
-          {!isVisible && (
-            <ButtonLink onClick={() => setIsVisible(true)}>
-              <Translation id="more" />
-            </ButtonLink>
-          )}
-          {isVisible && (
-            <ButtonLink onClick={() => setIsVisible(false)}>
-              <Translation id="less" />
-            </ButtonLink>
-          )}
-        </ButtonContainer>
-      </Content>
-      <motion.div
-        variants={expandCollapse}
-        animate={isVisible ? "expanded" : "collapsed"}
-        initial={false}
-      >
-        <motion.div
-          variants={showHide}
-          animate={isVisible ? "expanded" : "collapsed"}
-          initial={false}
-        >
-          <Text
-            variants={fadeInOut}
-            animate={isVisible ? "expanded" : "collapsed"}
-            initial={false}
+          <Box
+            fontSize="md"
+            color="text"
+            paddingTop="6"
+            borderTop="1px solid"
+            borderColor="border"
           >
             {children}
-          </Text>
-        </motion.div>
-      </motion.div>
-    </Card>
+          </Box>
+        </AccordionPanel>
+      </AccordionItem>
+    </Accordion>
   )
 }
 

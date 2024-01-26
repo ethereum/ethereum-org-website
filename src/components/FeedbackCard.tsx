@@ -1,71 +1,44 @@
-// Library imports
-import React, { ReactNode, useState } from "react"
-import styled from "@emotion/styled"
-// Component imports
+import { type ReactNode, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
+
+import type { Lang } from "@/lib/types"
+
+import { Button } from "@/components/Buttons"
+import { FeedbackThumbsUpIcon } from "@/components/icons"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
 import Translation from "./Translation"
-// SVG imports
-import ThumbsUp from "../assets/feedback-thumbs-up.svg"
-// Utility imports
-import { trackCustomEvent } from "../utils/matomo"
-// import { getFeedbackSurveyUrl } from "../utils/getFeedbackSurveyUrl"
-import { useSurvey } from "../hooks/useSurvey"
-import Button from "./Button"
 
-const Card = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  background: ${({ theme }) => theme.colors.feedbackGradient};
-  border-radius: 4px;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 1rem;
-  margin-top: 2rem;
-  width: 100%;
-`
+import { useSurvey } from "@/hooks/useSurvey"
 
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-`
-
-const Title = styled.h3`
-  margin: 0 0 0.5rem;
-  font-size: 1.375rem;
-  font-weight: 700;
-`
-
-const ButtonContainer = styled.div`
-  display: flex;
-  gap: 1rem;
-`
-
-export interface IProps {
+type FeedbackCardProps = FlexProps & {
   prompt?: string
   isArticle?: boolean
-  className?: string
 }
 
-const FeedbackCard: React.FC<IProps> = ({
-  prompt,
-  isArticle = false,
-  className,
-}) => {
+const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
+  const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
-  const [isHelpful, setIsHelpful] = useState(false)
-  const surveyUrl = useSurvey(feedbackSubmitted, isHelpful)
+  const surveyUrl = useSurvey(feedbackSubmitted)
+  const { locale, asPath } = useRouter()
+  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
-  const location = typeof window !== "undefined" ? window.location.href : ""
-  const isTutorial = location.includes("tutorials")
+  const isTutorial = asPath?.includes("tutorials")
 
   const getTitle = (feedbackSubmitted: boolean): ReactNode => {
     if (!feedbackSubmitted) {
       if (prompt) return prompt
-      if (isTutorial) return <Translation id="feedback-card-prompt-tutorial" />
-      if (isArticle) return <Translation id="feedback-card-prompt-article" />
-      return <Translation id="feedback-card-prompt-page" />
+      if (isTutorial) return t("feedback-card-prompt-tutorial")
+      if (isArticle) return t("feedback-card-prompt-article")
+
+      return t("feedback-card-prompt-page")
     }
-    return <Translation id="feedback-widget-thank-you-title" />
+
+    return t("feedback-widget-thank-you-title")
   }
 
   const handleSubmit = (choice: boolean): void => {
@@ -74,9 +47,9 @@ const FeedbackCard: React.FC<IProps> = ({
       eventAction: `Clicked`,
       eventName: String(choice),
     })
-    setIsHelpful(choice)
     setFeedbackSubmitted(true)
   }
+
   const handleSurveyOpen = (): void => {
     trackCustomEvent({
       eventCategory: `Feedback survey opened`,
@@ -85,42 +58,57 @@ const FeedbackCard: React.FC<IProps> = ({
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
   }
+
   return (
-    <Card className={className}>
-      <Content>
-        <Title>{getTitle(feedbackSubmitted)}</Title>
+    <Flex
+      border="1px"
+      borderColor="border"
+      bg="feedbackGradient"
+      borderRadius="base"
+      p="6"
+      direction="column"
+      mb="4"
+      mt="8"
+      w="full"
+      {...props}
+      dir={dir}
+    >
+      <Flex direction="column" gap="4">
+        <Heading as="h3" m="0" mb="2" fontSize="1.375rem" fontWeight="bold">
+          {getTitle(feedbackSubmitted)}
+        </Heading>
         {feedbackSubmitted && (
           <p>
             <Translation id="feedback-widget-thank-you-subtitle" />{" "}
             <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}
-        <ButtonContainer>
+        <Flex gap="4">
           {!feedbackSubmitted ? (
             <>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp />}
+                leftIcon={<FeedbackThumbsUpIcon />}
                 onClick={() => handleSubmit(true)}
               >
-                <Translation id="yes" />
+                {t("yes")}
               </Button>
               <Button
                 variant="outline-color"
-                leftIcon={<ThumbsUp className="flip" />}
+                leftIcon={<FeedbackThumbsUpIcon transform="scaleY(-1)" />}
                 onClick={() => handleSubmit(false)}
               >
-                <Translation id="no" />
+                {t("no")}
               </Button>
             </>
           ) : (
             <Button variant="outline-color" onClick={handleSurveyOpen}>
-              <Translation id="feedback-widget-thank-you-cta" />
+              {t("feedback-widget-thank-you-cta")}
             </Button>
           )}
-        </ButtonContainer>
-      </Content>
-    </Card>
+        </Flex>
+      </Flex>
+    </Flex>
   )
 }
 

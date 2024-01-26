@@ -8,7 +8,6 @@
   "page-developers-advanced": "Pažengusiems",
   "page-developers-api-desc": "Bibliotekų naudojimas sąsajai su išmaniosiomis sutartimis",
   "page-developers-api-link": "Backend programų sąsajos",
-  "page-developers-aria-label": "Kūrėjų meniu",
   "page-developers-block-desc": "Į blokų grandinę įtraukti sandorių paketai",
   "page-developers-block-explorers-desc": "Jūsų portalas į Ethereum duomenis",
   "page-developers-block-explorers-link": "Blokų naršyklės",
@@ -80,5 +79,6 @@
   "page-developers-transactions-desc": "Kaip keičiasi Ethereum būsena",
   "page-developers-transactions-link": "Sandoriai",
   "page-developers-web3-desc": "Kuo skiriasi web3 kūrimo pasaulis",
-  "page-developers-web3-link": "Web2 ir Web3 palyginimas"
+  "page-developers-web3-link": "Web2 ir Web3 palyginimas",
+  "alt-eth-blocks": "Iliustracija, kurioje blokai išdėstyti kaip ETH simbolis"
 }

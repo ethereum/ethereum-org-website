@@ -1,0 +1,34 @@
+name: Suggest quiz
+description: Add, update, delete questions for a quiz on ethereum.osg
+title: Add/Update/Delete quiz question
+labels: ["feature :sparkles", "quiz :books:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting additions, updates, or deletions of quiz content, make sure you've read our [contributing guidelines for quizzes](https://ethereum.org/en/contributing/quizzes/).
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      description: URL for the page the quiz can be found on, or should be added to
+    validations:
+      required: true
+  - type: textarea
+    id: question_content
+    attributes:
+      label: Question content
+      description: Suggest questions to add, update, or delete based on contribution guideline
+    validations:
+      required: true
+  - type: checkboxes
+    id: work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

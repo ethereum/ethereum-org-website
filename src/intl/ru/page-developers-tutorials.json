@@ -18,5 +18,7 @@
   "page-tutorial-tags-error": "Ни одно руководство не содержит всех этих тегов еще",
   "page-tutorial-title": "Руководства по разработке на Ethereum",
   "page-tutorials-meta-description": "Просматривайте и фильтруйте проверенные руководства сообщества Ethereum по темам.",
-  "page-tutorials-meta-title": "Руководства по разработке на Ethereum"
+  "page-tutorials-meta-title": "Руководства по разработке на Ethereum",
+  "page-find-wallet-try-removing": "Попробуйте удалить одну или две функции",
+  "page-find-wallet-clear": "Очистить фильтры"
 }

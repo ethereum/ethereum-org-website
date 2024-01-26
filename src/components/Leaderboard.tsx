@@ -1,114 +1,143 @@
-import React from "react"
-import styled from "@emotion/styled"
-import Emoji from "./OldEmoji"
-import Link from "./Link"
+import { useTranslation } from "next-i18next"
+import {
+  Avatar,
+  Box,
+  Flex,
+  LinkBox,
+  LinkOverlay,
+  List,
+  ListItem,
+  useColorModeValue,
+  VisuallyHidden,
+} from "@chakra-ui/react"
 
-import Translation from "./Translation"
+import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
 
-const Table = styled.div`
-  background-color: ${(props) => props.theme.colors.background};
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  width: 100%;
-  margin-bottom: 2rem;
-`
+import { GITHUB_URL } from "@/lib/constants"
 
-const Item = styled(Link)`
-  text-decoration: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: ${(props) => props.theme.colors.text} !important;
-  box-shadow: 0 1px 1px ${(props) => props.theme.colors.tableItemBoxShadow};
-  margin-bottom: 1px;
-  padding: 1rem;
-  width: 100%;
-  color: #000000;
-  &:hover {
-    text-decoration: none;
-    border-radius: 4px;
-    box-shadow: 0 0 1px ${(props) => props.theme.colors.primary};
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-  }
-`
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const ItemTitle = styled.div``
-
-const ItemDesc = styled.div`
-  font-size: ${(props) => props.theme.fontSizes.s};
-  margin-bottom: 0;
-  opacity: 0.6;
-`
-
-const TextContainer = styled.div`
-  flex: 1 1 75%;
-  display: flex;
-  flex-direction: column;
-  margin-right: 2rem;
-`
-
-const Avatar = styled.img`
-  margin-right: 1rem;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
-    display: none;
-  }
-`
-
-const ItemNumber = styled.div`
-  margin-right: 1rem;
-  opacity: 0.4;
-`
-
-const githubUrl = `https://github.com/`
-
-export interface Person {
+type Person = {
   name: string
-  username?: string | null
+  username: string
   score: number
 }
 
-export interface IProps {
-  content: Array<Person>
+type LeaderboardProps = {
+  content: Person[]
   limit?: number
 }
 
-const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => (
-  <Table>
-    {content
-      .filter((_, idx) => idx < limit)
-      .map((item, idx) => {
-        const { name, username, score } = item
-        const hasGitHub = username !== ""
-        const avatarImg = hasGitHub
-          ? `${githubUrl}${username}.png?size=40`
-          : "https://github.com/random.png?size=40"
-        const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
-        let emoji: string | null = null
-        if (idx === 0) {
-          emoji = ":trophy:"
-        } else if (idx === 1) {
-          emoji = ":2nd_place_medal:"
-        } else if (idx === 2) {
-          emoji = ":3rd_place_medal:"
-        }
-        return (
-          <Item key={idx} to={hasGitHub ? `${githubUrl}${username}` : "#"}>
-            <ItemNumber>{idx + 1}</ItemNumber>
-            <Avatar src={avatarImg} alt={avatarAlt} />
-            <TextContainer>
-              <ItemTitle>{name}</ItemTitle>
-              <ItemDesc>
-                {score}{" "}
-                <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
-              </ItemDesc>
-            </TextContainer>
-            {emoji && <Emoji mr={`2rem`} text={emoji} />}
-          </Item>
-        )
-      })}
-  </Table>
-)
+const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
+  const { flipForRtl } = useRtlFlip()
+  const colorModeStyles = useColorModeValue(
+    {
+      listBoxShadow: "tableBox.light",
+      linkBoxShadow: "tableItemBox.light",
+      scoreColor: "blackAlpha.700",
+    },
+    {
+      listBoxShadow: "tableBox.dark",
+      linkBoxShadow: "tableItemBox.dark",
+      scoreColor: "whiteAlpha.600",
+    }
+  )
+
+  const { t } = useTranslation("page-bug-bounty")
+
+  return (
+    <List
+      bgColor="background.base"
+      boxShadow={colorModeStyles.listBoxShadow}
+      w="100%"
+      mb={8}
+      ms={0}
+      aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
+    >
+      {content
+        .filter((_, idx) => idx < limit)
+        .map(({ name, username, score }, idx) => {
+          const hasGitHub = !!username
+          const avatarImg = GITHUB_URL + (username || "random") + ".png?size=40"
+          const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
+
+          let emoji: string | null = null
+          if (idx === 0) {
+            emoji = ":trophy:"
+          } else if (idx === 1) {
+            emoji = ":2nd_place_medal:"
+          } else if (idx === 2) {
+            emoji = ":3rd_place_medal:"
+          }
+
+          return (
+            <ListItem key={username} mb={0}>
+              <LinkBox
+                key={idx}
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center"
+                boxShadow={colorModeStyles.linkBoxShadow}
+                mb={0.25}
+                p={4}
+                w="100%"
+                _hover={{
+                  textDecor: "none",
+                  borderRadius: 0.5,
+                  boxShadow: "0 0 1px var(--eth-colors-primary-base)",
+                  background: "tableBackgroundHover",
+                }}
+              >
+                <Box me={4} opacity="0.4">
+                  {idx + 1}
+                </Box>
+                <Avatar
+                  src={avatarImg}
+                  name={avatarAlt}
+                  me={4}
+                  h={10}
+                  w={10}
+                  display={{ base: "none", xs: "block" }}
+                />
+                <Flex flex="1 1 75%" direction="column" me={8}>
+                  <LinkOverlay
+                    as={BaseLink}
+                    href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
+                    textDecor="none"
+                    color="text"
+                    hideArrow
+                  >
+                    <VisuallyHidden>{`In place number ${
+                      idx + 1
+                    } with ${score} points`}</VisuallyHidden>
+                    {name}{" "}
+                    {hasGitHub && (
+                      <VisuallyHidden>(See Github Profile)</VisuallyHidden>
+                    )}
+                  </LinkOverlay>
+
+                  <Box fontSize="sm" color={colorModeStyles.scoreColor}>
+                    {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
+                  </Box>
+                </Flex>
+                {emoji && <Emoji me={8} fontSize="2xl" text={emoji} />}
+                <Box
+                  as="span"
+                  _after={{
+                    content: '"↗"',
+                    ms: 0.5,
+                    me: 1.5,
+                    transform: flipForRtl,
+                    display: "inline-block",
+                  }}
+                />
+              </LinkBox>
+            </ListItem>
+          )
+        })}
+    </List>
+  )
+}
 
 export default Leaderboard

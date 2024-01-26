@@ -1,54 +1,13 @@
-// Libraries
 import React from "react"
-import styled from "@emotion/styled"
+import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
-// Components
-import Link from "./Link"
+import { layer2Data, Rollups, RollupType } from "@/data/layer-2/layer-2"
+
+import InlineLink from "./Link"
+import Text from "./OldText"
 import Translation from "./Translation"
 
-// Data
-import _rollups from "../data/layer-2/layer-2.json"
-
-import { TranslationKey } from "../utils/translations"
-
-type RollupType = "optimistic" | "zk"
-
-interface Rollup {
-  name: string
-  website: string
-  developerDocs: string
-  l2beat: string
-  bridge: string
-  bridgeWallets: Array<string>
-  blockExplorer: string
-  ecosystemPortal: string
-  tokenLists: string
-  noteKey: TranslationKey
-  purpose: Array<string>
-  descriptionKey: string
-  imageKey: string
-  background: string
-}
-
-type Rollups = { [type in RollupType]: Array<Rollup> }
-
-const rollups = _rollups as Rollups
-
-// Styles
-const H4 = styled.h4`
-  margin: 1rem 0;
-`
-
-const ProductCard = styled.div`
-  margin: 1rem 0;
-  background: ${(props) => props.theme.colors.rollupDevDocList};
-  display: flex;
-  flex-direction: row;
-`
-
-const Content = styled.div`
-  padding: 1rem 1rem 0 1rem;
-`
+const rollups = layer2Data as Rollups
 
 export interface IProps {
   rollupType: RollupType
@@ -56,43 +15,51 @@ export interface IProps {
 
 const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
   return (
-    <div>
+    <Box>
       {rollups[rollupType].map(
-        ({ name, noteKey, website, developerDocs, l2beat }) => {
+        ({ name, noteKey, website, developerDocs, l2beat }, idx) => {
           return (
-            <ProductCard>
-              <Content>
-                <div>
-                  <H4>{name}</H4>
+            <Flex key={idx} my={4} background="rollupDevDocList">
+              <Box p={4} pb={0}>
+                <Box>
+                  <Heading
+                    as="h4"
+                    fontSize={{ base: "md", md: "xl" }}
+                    fontWeight="500"
+                    lineHeight="1.4"
+                    my={4}
+                  >
+                    {name}
+                  </Heading>
                   {noteKey.length > 0 && (
-                    <p>
-                      * <Translation id={noteKey} />
-                    </p>
+                    <Text>
+                      * <Translation id={`page-layer-2:${noteKey}`} />
+                    </Text>
                   )}
-                  <ul>
-                    <li>
-                      <Link to={website}>
+                  <UnorderedList>
+                    <ListItem>
+                      <InlineLink to={website}>
                         <Translation id="rollup-component-website" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={developerDocs}>
+                      </InlineLink>
+                    </ListItem>
+                    <ListItem>
+                      <InlineLink to={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to={l2beat}>
+                      </InlineLink>
+                    </ListItem>
+                    <ListItem>
+                      <InlineLink to={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </Content>
-            </ProductCard>
+                      </InlineLink>
+                    </ListItem>
+                  </UnorderedList>
+                </Box>
+              </Box>
+            </Flex>
           )
         }
       )}
-    </div>
+    </Box>
   )
 }
 

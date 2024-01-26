@@ -9,7 +9,7 @@
   "page-contributing-translation-program-acknowledgements-cert-title": "Certificato",
   "page-contributing-translation-program-acknowledgements-cert-1": "Vogliamo riconoscere i nostri traduttori e sostenerli nei loro percorsi di carriera. Con questo obiettivo, abbiamo progettato il certificato di traduttore di ethereum.org.",
   "page-contributing-translation-program-acknowledgements-cert-2": "Il certificato è destinato a traduttori professionali e futuri che vogliono utilizzarlo come riferimento, dimostrare la loro competenza nella traduzione di contenuti tecnici o semplicemente mostrare la loro dedizione a Ethereum.",
-  "page-contributing-translation-program-acknowledgements-cert-3": "Se hai contribuito al Programma di traduzione e almeno 5.000 delle tue parole tradotte sono state approvate, puoi richiedere un certificato di traduttore scrivendoci a translations@ethereum.org. Il tuo messaggio dovrebbe includere il link al tuo account Crowdin e il tuo nome completo (o alias, se preferisci), che aggiungeremo al certificato.",
+  "page-contributing-translation-program-acknowledgements-cert-3": "Se hai contribuito al Programma di Traduzione e almeno 5.000 delle tue parole tradotte sono state approvate, puoi richiedere il tuo certificato da traduttore, contattandoci a translations@ethereum.org. Il tuo messaggio dovrebbe includere il link al tuo profilo di Crowdin e il tuo nome e cognome (o alias, se preferisci), che aggiungeremo al certificato.",
   "page-contributing-translation-program-acknowledgements-hero-image-alt": "Immagine hero shiba del Programma di Traduzione",
   "page-contributing-translation-program-acknowledgements-meta-description": "Riconoscimento di tutto il grande lavoro che fanno i nostri traduttori",
   "page-contributing-translation-program-acknowledgements-meta-title": "Riconoscimento dei Traduttori",
@@ -38,5 +38,5 @@
   "page-contributing-translation-program-acknowledgements-how-to-claim-2": "Incolla un link al tuo profilo di Crowdin nel canale # | poaps.",
   "page-contributing-translation-program-acknowledgements-how-to-claim-3": "Attendi che un membro del nostro team ti invii un link al tuo POAP.",
   "page-contributing-translation-program-acknowledgements-how-to-claim-4": "Richiedi il tuo POAP!",
-  "page-contributing-translation-program-acknowledgements-4": "Dovresti utilizzare solo i portafogli di auto-custodia per rivendicare i POAP. Non utilizzare account della piattaforma di scambio o altri account di cui non detieni le chiavi private, poiché questi non ti consentiranno di accedere e gestire i tuoi POAP."
+  "page-contributing-translation-program-acknowledgements-4": "Dovresti utilizzaare solo portafogli di auto-custodia per rivendicare i POAP. Non utilizzare conti di borse o altri conti di cui non detieni le chiavi private, poiché non ti consentiranno di accedere a e gestire i tuoi POAP."
 }

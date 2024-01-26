@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Prestanite čitati",
   "page-staking-deposit-contract-subtitle": " Ovo je adresa za ugovor o ulozima Eth2. Pomoću ove stranice potvrdite da šaljete sredstva na ispravnu adresu kada ulažete.",
   "page-staking-deposit-contract-warning": "Pažljivo provjerite svaki znak.",
-  "page-staking-deposit-contract-warning-2": "Slanje sredstava na ovu adresu neće uspjeti i nećete postati ulagač. Morate slijediti upute za lansiranje."
+  "page-staking-deposit-contract-warning-2": "Slanje sredstava na ovu adresu neće uspjeti i nećete postati ulagač. Morate slijediti upute za lansiranje.",
+  "page-staking-deposit-contract-title": "Provjerite adresu ugovora o pologu"
 }

@@ -1,109 +1,80 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { useTranslation } from "next-i18next"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
-import Translation from "./Translation"
-import { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
-const StyledCard = styled.div`
-  display: flex;
-  flex-direction: row-reverse;
-  background: ${({ theme }) => theme.colors.layer2Gradient};
-  padding: 3rem;
-  margin: 1rem;
-  margin-top: 6rem;
-  margin-bottom: 10rem;
-  border-radius: 4px;
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    flex-direction: column;
-    margin-bottom: 1rem;
-    margin: 4rem 2rem;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding: 2rem;
-  }
-`
-
-const Content = styled.div`
-  padding-left: 2rem;
-  flex: 1 0 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-top: 2rem;
-    padding-left: 1rem;
-    flex-direction: column;
-    width: 100%;
-  }
-  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-    padding-left: 0;
-  }
-`
-
-const Description = styled.p`
-  font-size: 1.25rem;
-  width: 90%;
-  line-height: 140%;
-  margin-bottom: 2rem;
-  color: ${(props) => props.theme.colors.text200};
-`
-
-const Image = styled(GatsbyImage)<{ maximagewidth?: number }>`
-  align-self: center; /* prevents crop */
-  width: 100%;
-  max-width: ${(props) => `${props.maximagewidth}px`};
-  margin-top: -6rem;
-  margin-bottom: -6rem;
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
-    margin-bottom: 0rem;
-    margin-top: -6rem;
-  }
-`
-
-const H2 = styled.h2`
-  margin-top: 0rem;
-`
-
-export interface IProps {
+export type CalloutBannerProps = FlexProps & {
   children?: React.ReactNode
-  image: string
-  maxImageWidth?: number
+  image: ImageProps["src"]
+  imageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
   alt: string
-  className?: string
-  id?: string
 }
 
-const CalloutBanner: React.FC<IProps> = ({
+const CalloutBanner = ({
   image,
-  maxImageWidth,
+  imageWidth,
   titleKey,
   descriptionKey,
   alt,
   children,
-  className,
-  id,
-}) => (
-  <StyledCard className={className} id={id}>
-    <Image
-      image={image}
-      alt={alt}
-      maximagewidth={maxImageWidth}
-      objectFit="contain"
-    />
-    <Content>
-      <H2>
-        <Translation id={titleKey} />
-      </H2>
-      <Description>
-        <Translation id={descriptionKey} />
-      </Description>
-      {children}
-    </Content>
-  </StyledCard>
-)
+  ...props
+}: CalloutBannerProps) => {
+  const { t } = useTranslation("page-staking")
+
+  return (
+    <Flex
+      as="aside"
+      direction={{ base: "column", lg: "row-reverse" }}
+      bg="layer2Gradient"
+      p={{ base: 8, sm: 12 }}
+      borderRadius="base"
+      {...props}
+    >
+      {image && (
+        <Flex>
+          <Image
+            src={image}
+            alt={alt}
+            width={imageWidth}
+            style={{
+              objectFit: "contain",
+            }}
+            mx="auto"
+            mt={-24}
+            mb={{ base: 0, lg: -24 }}
+          />
+        </Flex>
+      )}
+      <Flex
+        flexGrow={1}
+        flexShrink={0}
+        flexBasis="50%"
+        direction="column"
+        justifyContent="center"
+        ps={{ base: 0, sm: 4, lg: 8 }}
+        w={{ base: "full", lg: "inherit" }}
+      >
+        <OldHeading
+          as="h2"
+          mt={0}
+          fontSize={{ base: "2xl", sm: "2rem" }}
+          lineHeight="1.4"
+        >
+          {t(titleKey)}
+        </OldHeading>
+        <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
+          {t(descriptionKey)}
+        </Text>
+        {children}
+      </Flex>
+    </Flex>
+  )
+}
 
 export default CalloutBanner

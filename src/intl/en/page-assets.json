@@ -33,6 +33,9 @@
   "page-assets-future": "Future",
   "page-assets-h1": "ethereum.org assets",
   "page-assets-hero": "ethereum.org hero",
+  "page-assets-hero-panda": "ethereum.org hero with merge panda",
+  "page-assets-merge-panda": "Merge panda",
+  "page-assets-merge-panda-svg": "Merge panda SVG",
   "page-assets-hero-particles": "ETH particles image",
   "page-assets-historical-artwork": "Historical artwork",
   "page-assets-illustrations": "Illustrations",
@@ -46,5 +49,13 @@
   "page-assets-page-assets-transparent-background": "Transparent background",
   "page-assets-robot": "Robot wallet",
   "page-assets-sharding": "Sharding",
-  "page-assets-hackathon": "Hackathon"
+  "page-assets-hackathon": "Hackathon",
+  "page-assets-learn-hero-name": "Futuristic university",
+  "page-assets-community-hero-name": "Community gathering",
+  "page-assets-quizzes-hero-name": "Infinite playground",
+  "page-assets-developers-hero-name": "Building the future",
+  "page-assets-garden-name": "Garden of Ethereum",
+  "page-assets-roadmap-hero-name": "Road(s) to the future",
+  "page-assets-layer-2-hero-name": "Constructing Ethereum",
+  "page-assets-guides-hero-name": "Ethereum lab"
 }

@@ -1,105 +1,16 @@
 import React from "react"
-import styled from "@emotion/styled"
-import Emoji from "./OldEmoji"
-import ButtonLink from "./ButtonLink"
+import { Box, Heading } from "@chakra-ui/react"
 
-const StyledCard = styled.div`
-  position: relative;
+import { ButtonLink } from "./Buttons"
+import Emoji from "./Emoji"
+import Text from "./OldText"
 
-  &:after,
-  &:before {
-    content: "";
-    display: block;
-    width: 100%;
-    clear: both;
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-top: 30px;
-  }
-`
-
-const StyledCardReference = styled.div`
-  background-color: ${(props) => props.theme.colors.primary};
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  overflow: hidden;
-  margin-left: -12px;
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    display: none;
-  }
-`
-
-const StyledCardContent = styled.div`
-  width: 45%;
-  padding: 1.5rem;
-  background-color: ${(props) => props.theme.colors.ednBackground};
-  border-radius: 2px;
-  border: 1px solid ${(props) => props.theme.colors.lightBorder};
-
-  &:before {
-    content: "";
-    position: absolute;
-    left: 45%;
-    top: 10px;
-    width: 0;
-    height: 3px;
-    border-left: 25px solid ${(props) => props.theme.colors.primary};
-  }
-
-  &.style-card-content-right {
-    float: right;
-    margin-top: -25%;
-
-    &:before {
-      content: "";
-      right: 45%;
-      left: inherit;
-      border-left: 0;
-      border-right: 25px solid ${(props) => props.theme.colors.primary};
-    }
-  }
-
-  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    width: 100%;
-    float: right;
-
-    &.style-card-content-right {
-      margin-top: 0;
-    }
-
-    &:before {
-      display: none;
-    }
-  }
-`
-
-const Description = styled.p`
-  opacity: 0.8;
-`
-
-const Date = styled.p`
-  color: ${(props) => props.theme.colors.primary};
-  margin-bottom: 0;
-  text-align: right;
-`
-
-const Location = styled.p`
-  margin-bottom: 0;
-  text-align: right;
-`
-
-const LocationText = styled.span`
-  opacity: 0.6;
-`
-
-const Title = styled.h3`
-  margin-top: 0;
-`
+const clearStyles = {
+  content: '""',
+  display: "block",
+  width: "100%",
+  clear: "both",
+}
 
 export interface IProps {
   title: string
@@ -120,24 +31,72 @@ const EventCard: React.FC<IProps> = ({
   location,
   isEven,
 }) => (
-  <StyledCard className={className}>
-    <StyledCardReference />
-    <StyledCardContent
-      className={isEven ? "style-card-content-right" : undefined}
+  <Box
+    className={className}
+    position="relative"
+    marginTop={{ base: "30px", md: 0 }}
+    _before={clearStyles}
+    _after={clearStyles}
+  >
+    <Box
+      w="24px"
+      h="24px"
+      position="absolute"
+      top="0"
+      insetInlineStart="50%"
+      overflow="hidden"
+      ms="-12px"
+      backgroundColor="primary.base"
+      display={{ base: "none", md: "block" }}
+    />
+    <Box
+      width={{ base: "100%", md: "45%" }}
+      padding={6}
+      backgroundColor="ednBackground"
+      borderRadius="sm"
+      border="1px solid"
+      borderColor="lightBorder"
+      float={isEven ? "inline-end" : { base: "inline-end", md: "none" }}
+      marginTop={isEven ? { base: 0, md: "-25%" } : 0}
+      _before={{
+        content: '""',
+        position: "absolute",
+        top: "10px",
+        width: 0,
+        height: "3px",
+        display: { base: "none", md: "inline" },
+        ...(isEven
+          ? {
+              insetInlineStart: "inherit",
+              insetInlineEnd: "45%",
+              borderInlineStart: 0,
+              borderInlineEnd: "25px solid",
+            }
+          : {
+              insetInlineStart: "45%",
+              borderInlineStart: "25px solid",
+              borderInlineEnd: 0,
+            }),
+        borderColor: "primary.base",
+      }}
     >
-      <Date>
+      <Text color="primary.base" marginBottom={0} textAlign="end">
         {date}
-        <Emoji text=":spiral_calendar:" size={1} ml={`0.5em`} />
-      </Date>
-      <Location>
-        <LocationText>{location}</LocationText>
-        <Emoji text=":round_pushpin:" size={1} ml={`0.5em`} />
-      </Location>
-      <Title>{title}</Title>
-      <Description>{description}</Description>
+        <Emoji text=":spiral_calendar:" fontSize="md" ms={2} />
+      </Text>
+      <Text marginBottom={0} textAlign="end">
+        <Text as="span" opacity={0.6}>
+          {location}
+        </Text>
+        <Emoji text=":round_pushpin:" fontSize="md" ms={2} />
+      </Text>
+      <Heading as="h3" marginTop={0} fontWeight="semibold" lineHeight={1.4}>
+        {title}
+      </Heading>
+      <Text opacity={0.8}>{description}</Text>
       <ButtonLink to={to}>View Event</ButtonLink>
-    </StyledCardContent>
-  </StyledCard>
+    </Box>
+  </Box>
 )
 
 export default EventCard

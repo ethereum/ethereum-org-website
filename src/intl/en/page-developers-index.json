@@ -8,7 +8,6 @@
   "page-developers-advanced": "Advanced",
   "page-developers-api-desc": "Using libraries to interact with smart contracts",
   "page-developers-api-link": "Backend APIs",
-  "page-developers-aria-label": "Developers' Menu",
   "page-developers-block-desc": "Batches of transactions added to the blockchain",
   "page-developers-block-explorers-desc": "Your portal to Ethereum data",
   "page-developers-block-explorers-link": "Block explorers",
@@ -52,7 +51,7 @@
   "page-developers-meta-desc": "Documentation, tutorials, and tools for developers building on Ethereum.",
   "page-developers-mev-desc": "An introduction to maximal extractable value (MEV)",
   "page-developers-mev-link": "Maximal extractable value (MEV)",
-  "page-developers-mining-desc": "How new blocks are created and consensus is reached",
+  "page-developers-mining-desc": "How new blocks are created and consensus was reached using proof-of-work",
   "page-developers-mining-link": "Mining",
   "page-developers-mining-algorithms-desc": "Information on Ethereum's mining algorithms",
   "page-developers-mining-algorithms-link": "Mining algorithms",
@@ -92,5 +91,7 @@
   "page-developers-networking-layer-desc": "Introduction to the Ethereum networking layer",
   "page-developers-data-structures-and-encoding": "Data structures and encoding",
   "page-developers-data-structures-and-encoding-link": "Data structures and encoding",
-  "page-developers-data-structures-and-encoding-desc": "Introduction to the data structures and encoding schema used in the Ethereum stack"
+  "page-developers-data-structures-and-encoding-desc": "Introduction to the data structures and encoding schema used in the Ethereum stack",
+  "alt-eth-blocks": "Illustration of blocks being organized like an ETH symbol",
+  "page-assets-doge": "Doge using dapps"
 }

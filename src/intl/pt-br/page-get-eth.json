@@ -2,6 +2,9 @@
   "page-get-eth-article-keeping-crypto-safe": "As chaves para manter seus cripto seguros",
   "page-get-eth-article-protecting-yourself": "Protegendo a si mesmo e seus fundos",
   "page-get-eth-article-store-digital-assets": "Como armazenar ativos digitais no Ethereum",
+  "page-get-eth-article-protecting-yourself-desc": "MyCrypto",
+  "page-get-eth-article-keeping-crypto-safe-desc": "Coinbase",
+  "page-get-eth-article-store-digital-assets-desc": "ConsenSys",
   "page-get-eth-cex": "Corretoras centralizadas",
   "page-get-eth-cex-desc": "Corretoras são negócios que permitem que você compre criptomoedas usando moedas tradicionais. Elas têm custódia sobre qualquer ETH que você comprar até que você a envie para uma carteira que você controla.",
   "page-get-eth-checkout-dapps-btn": "Confira os dapps",
@@ -43,8 +46,6 @@
   "page-get-eth-security": "Mas isso também significa que você precisa levar a sério a segurança dos seus fundos. Com ETH, você não confia em um banco para cuidar do seu dinheiro, você está confiando em você mesmo.",
   "page-get-eth-smart-contract-link": "Mais sobre contratos inteligentes",
   "page-get-eth-swapping": "Troque seus tokens por ETH de outras pessoas. E vice-versa.",
-  "page-get-eth-traditional-currencies": "Compre com moedas tradicionais",
-  "page-get-eth-traditional-payments": "Compre ETH com tipos de pagamento tradicionais diretamente de vendedores.",
   "page-get-eth-try-dex": "Veja como funciona um DEX",
   "page-get-eth-use-your-eth": "Use seu ETH",
   "page-get-eth-use-your-eth-dapps": "Agora que você possui alguns ETH, confira alguns aplicativos Ethereum (dapps). Existem dapps para finanças, mídias sociais, jogos e muitas outras categorias.",
@@ -62,5 +63,7 @@
   "page-get-eth-your-address": "Seu endereço de ETH",
   "page-get-eth-your-address-desc": "Quando você baixar uma carteira, ela criará um endereço ETH público para você. Ele se verá assim:",
   "page-get-eth-your-address-desc-3": "Pense nele como seu endereço de e-mail, mas em vez de mensagem, ele pode receber ETH. Se você quiser transferir ETH de uma exchange para sua carteira, use seu endereço como o destino. Não deixe de verificar o endereço antes de enviar!",
-  "page-get-eth-your-address-wallet-link": "Confira as carteiras"
+  "page-get-eth-your-address-wallet-link": "Confira as carteiras",
+  "listing-policy-raise-issue-link": "Levante um problema",
+  "page-find-wallet-last-updated": "Última atualização"
 }

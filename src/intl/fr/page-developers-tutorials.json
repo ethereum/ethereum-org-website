@@ -1,6 +1,4 @@
 {
-  "page-tutorial-beginner": "Débutant",
-  "page-tutorial-intermediate": "Intermédiaire",
   "comp-tutorial-metadata-minute-read": "minutes de lecture",
   "page-tutorial-listing-policy-intro": "Avant de soumettre un tutoriel, prenez le temps de lire notre politique d'inscription.",
   "comp-tutorial-metadata-tip-author": "Astuce de l'auteur",
@@ -21,5 +19,11 @@
   "page-tutorial-title": "Tutoriels de développement Ethereum",
   "page-tutorials-meta-description": "Naviguez et filtrez les tutoriels de la communauté Ethereum par sujet.",
   "page-tutorial-external-link": "Externe",
-  "page-tutorials-meta-title": "Tutoriels de développement Ethereum"
+  "page-tutorials-meta-title": "Tutoriels de développement Ethereum",
+  "page-tutorial-beginner": "Débutant",
+  "page-tutorial-intermediate": "Intermédiaire",
+  "page-tutorial-advanced": "Avancé",
+  "page-find-wallet-try-removing": "Essayez de supprimer une ou deux fonctionnalités",
+  "page-find-wallet-clear": "Réinitialiser les filtres",
+  "page-tutorials-env-banner": "Ne pas exécuter l'<code>.env</code>! Il est vivement déconseillé d'exposer ses données personnelles figurant dans ce fichier<code>.env</code> ou de les partager avec d'autres personnes, car cela pourrait compromette la confidentialité de vos données personnelles. Si vous utilisez déjà un modèle de sécurité rigide, ajoutez votre<code>.env</code> au fichier <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
 }

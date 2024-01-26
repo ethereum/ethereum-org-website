@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Nu mai citi",
   "page-staking-deposit-contract-subtitle": " Aceasta este adresa contractului de mizare Eth2. Folosește această pagină pentru a confirma că trimiți fonduri la adresa corectă atunci când mizezi.",
   "page-staking-deposit-contract-warning": "Verifică foarte atent fiecare caracter.",
-  "page-staking-deposit-contract-warning-2": "Trimiterea de fonduri la această adresă nu va funcționa și nu te va face un staker. Trebuie să urmezi instrucțiunile launchpad-ului."
+  "page-staking-deposit-contract-warning-2": "Trimiterea de fonduri la această adresă nu va funcționa și nu te va face un staker. Trebuie să urmezi instrucțiunile launchpad-ului.",
+  "page-staking-deposit-contract-title": "Verifică adresa contractului de depunere"
 }

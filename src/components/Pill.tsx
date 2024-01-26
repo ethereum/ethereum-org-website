@@ -1,33 +1,7 @@
 import React from "react"
-import styled from "@emotion/styled"
+import { Flex, FlexProps } from "@chakra-ui/react"
 
-const Primary = styled.div<{ color?: string }>`
-  display: flex;
-  background: ${(props) =>
-    props.color
-      ? props.theme.colors[props.color]
-      : props.theme.colors.primary100};
-  color: ${(props) => props.theme.colors.black300};
-  text-transform: uppercase;
-  text-align: center;
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  margin-right: 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 0.25rem;
-`
-const Secondary = styled.div`
-  display: flex;
-  border: 1px solid ${(props) => props.theme.colors.primary100};
-  color: ${(props) => props.theme.colors.text};
-  text-transform: uppercase;
-  text-align: center;
-  display: inline-block;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 0.25rem;
-`
-export interface IProps {
+export interface IProps extends FlexProps {
   children?: React.ReactNode
   className?: string
   isSecondary?: boolean
@@ -38,14 +12,46 @@ const Pill: React.FC<IProps> = ({
   children,
   className,
   isSecondary,
-  color,
+  background,
+  ...rest
 }) => {
   return isSecondary ? (
-    <Secondary className={className}>{children}</Secondary>
-  ) : (
-    <Primary color={color} className={className}>
+    <Flex
+      border="1px"
+      borderStyle="solid"
+      borderColor="primary100"
+      color="text"
+      textTransform="uppercase"
+      textAlign="center"
+      display="inline-block"
+      py={1}
+      px={2}
+      borderRadius="base"
+      fontSize="xs"
+      lineHeight="1.6rem"
+      className={className}
+      {...rest}
+    >
       {children}
-    </Primary>
+    </Flex>
+  ) : (
+    <Flex
+      background={background ?? "primary100"}
+      display="inline-block"
+      color="black300"
+      textTransform="uppercase"
+      textAlign="center"
+      py={1}
+      px={2}
+      me={2}
+      fontSize="xs"
+      borderRadius="base"
+      lineHeight="1.6rem"
+      className={className}
+      {...rest}
+    >
+      {children}
+    </Flex>
   )
 }
 

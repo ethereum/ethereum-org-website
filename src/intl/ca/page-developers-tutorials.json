@@ -18,5 +18,7 @@
   "page-tutorial-tags-error": "Cap tutorial té totes aquestes etiquetes encara",
   "page-tutorial-title": "Tutorials de desenvolupament Ethereum",
   "page-tutorials-meta-description": "Cerca i explora en els tutorials de la comunitat Ethereum per tema.",
-  "page-tutorials-meta-title": "Tutorials de desenvolupament d'Ethereum"
+  "page-tutorials-meta-title": "Tutorials de desenvolupament d'Ethereum",
+  "page-find-wallet-try-removing": "Proveu de suprimir una o dues funcions",
+  "page-find-wallet-clear": "Esborrar els filtres"
 }

@@ -1,19 +1,6 @@
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
-import Link from "./Link"
+import { useEffect, useState } from "react"
 
-const NavLink = styled(Link)`
-  text-decoration: none;
-  font-size: 1rem;
-  color: ${(props) => props.theme.colors.text};
-  &:hover {
-    text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
-  }
-  &.active {
-    font-weight: bold;
-  }
-`
+import { BaseLink } from "@/components/Link"
 
 const Morpher = () => {
   const [state, setState] = useState({
@@ -42,29 +29,7 @@ const Morpher = () => {
   // loops over chars to morph a text to another
   const morpher = (start: string, end: string): void => {
     // array of chars to randomly morph the text between start and end
-    const chars = [
-      "a",
-      "b",
-      "c",
-      "d",
-      "x",
-      "y",
-      "z",
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "{",
-      "}",
-      "%",
-      "$",
-      "?",
-      "!",
-    ]
+    const chars = "abcdxyz01234567{}%$?!".split("")
     // duration of the global morph
     const duration = 3
     // speed of the morph for each letter
@@ -154,9 +119,15 @@ const Morpher = () => {
   }, [])
 
   return (
-    <NavLink to="/languages/">
+    <BaseLink
+      textDecor="none"
+      fontSize="md"
+      color="body.medium"
+      _hover={{ color: "primary.base" }}
+      to="/languages/"
+    >
       <span>{state.text}</span>
-    </NavLink>
+    </BaseLink>
   )
 }
 

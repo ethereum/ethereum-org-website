@@ -8,7 +8,6 @@
   "page-developers-advanced": "Avançat",
   "page-developers-api-desc": "Ús de biblioteques per interaccionar amb contractes intel·ligents",
   "page-developers-api-link": "APIs de Backend",
-  "page-developers-aria-label": "Menú per a desenvolupadors",
   "page-developers-block-desc": "Lots de transaccions afegits a la cadena de blocs",
   "page-developers-block-explorers-desc": "El vostre portal a les dades d’Ethereum",
   "page-developers-block-explorers-link": "Exploradors de blocs",
@@ -84,5 +83,7 @@
   "page-developers-transactions-desc": "Com canvia l’estat d’Ethereum",
   "page-developers-transactions-link": "Transaccions",
   "page-developers-web3-desc": "En què és diferent el món del desenvolupament web3",
-  "page-developers-web3-link": "Web2 vs Web3"
+  "page-developers-web3-link": "Web2 vs Web3",
+  "alt-eth-blocks": "Il·lustració d'uns blocs que s’organitzen com un símbol ETH",
+  "page-assets-doge": "Doge utilitzant dapps"
 }

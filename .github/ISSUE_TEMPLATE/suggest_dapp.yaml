@@ -1,0 +1,109 @@
+name: Suggest a dapp
+description: Suggest a new dapp to list on ethereum.org
+title: Suggest a dapp
+labels: ["feature :sparkles:", "content :fountain_pen:"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before suggesting a dapp, make sure you've read [our listing policy](https://www.ethereum.org/en/contributing/adding-products/).
+  - type: markdown
+    attributes:
+      value: Only continue with the issue if your dapp meets the criteria listed there.
+  - type: markdown
+    attributes:
+      value: If it does, complete the following information which we need to accurately list the dapp.
+  - type: markdown
+    id: dapp_info
+    attributes:
+      value: "## Dapp info"
+  - type: input
+    id: dapp_name
+    attributes:
+      label: Name
+      description: Please provide the official name of the dapp
+    validations:
+      required: true
+  - type: textarea
+    id: dapp_description
+    attributes:
+      label: Description
+      description: Please provide a short 1-2 sentence description of the dapp
+    validations:
+      required: true
+  - type: textarea
+    id: dapp_logo
+    attributes:
+      label: Logo
+      description: |
+        Please provide an SVG or hi-res transparent PNG
+        Tip: You can attach images by clicking this area to highlight it and then dragging files in.
+    validations:
+      required: true
+  - type: input
+    id: dapp_brand_color
+    attributes:
+      label: Brand color
+      description: Please provide the hex code for the brand color
+    validations:
+      required: true
+  - type: dropdown
+    id: dapp_open_source
+    attributes:
+      label: Is your dapp open source?
+      description: Can community developers open PRs against the repo? Is your smart contract available for other developers to use?
+      options:
+        - "Yes"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: dapp_source_code
+    attributes:
+      label: If open source, what is the repo for the dapp?
+  - type: textarea
+    id: dapp_security
+    attributes:
+      label: Please describe the measures taken to ensure the dapp's security and provide documentation wherever possible
+      description: Please provide a link to a report or repo. If you haven't been audited but think your dapp should be listed anyway, explain here
+    validations:
+      required: true
+  - type: textarea
+    id: dapp_account
+    attributes:
+      label: Can a user access the dapp without creating an account?
+      description: Can a user simply connect their Ethereum address? If not, explain the process
+    validations:
+      required: true
+  - type: textarea
+    id: dapp_custodial
+    attributes:
+      label: Are dapp funds non-custodial?
+      description: If your product frontend disappears, can users still access and move their funds?
+    validations:
+      required: true
+  - type: textarea
+    id: dapp_support
+    attributes:
+      label: Do you offer community support?
+      description: Please let us know about any Discord servers or other means of providing support to users
+    validations:
+      required: true
+  - type: textarea
+    id: dapp_restrictions
+    attributes:
+      label: Describe any geographical restrictions on usage of your dapp
+      description: Is usage globally accessible, or do you have restrictions?
+    validations:
+      required: true
+  - type: checkboxes
+    id: dapp_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
+        - label: "No"
+          required: false
+    validations:
+      required: true

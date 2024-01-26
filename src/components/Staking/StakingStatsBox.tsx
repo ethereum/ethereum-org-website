@@ -1,132 +1,131 @@
-import React, { useState, useEffect } from "react"
-import styled from "@emotion/styled"
-import { useIntl } from "react-intl"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { MdInfoOutline } from "react-icons/md"
+import { Code, Flex, Icon, VStack } from "@chakra-ui/react"
 
-import Translation from "../Translation"
-import StatErrorMessage from "../StatErrorMessage"
-import { getLocaleForNumberFormat } from "../../utils/translations"
-import { getData } from "../../utils/cache"
-import calculateStakingRewards from "../../utils/calculateStakingRewards"
-import { Lang } from "../../utils/languages"
+import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
-const Container = styled.div`
-  display: flex;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
+import Tooltip from "@/components/Tooltip"
 
-const Cell = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem 2rem;
-  border-left: 1px solid ${({ theme }) => theme.colors.preBorder};
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    border-left: none;
-    border-top: 1px solid #33333355;
-  }
-  &:first-child {
-    border-left: none;
-    border-top: none;
-  }
-`
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
-const Value = styled.code`
-  font-weight: 700;
-  font-size: 2rem;
-  background: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.primary};
-`
+const Cell = ({ children }: ChildOnlyProp) => (
+  <VStack
+    spacing={2}
+    py={4}
+    px={8}
+    borderInlineStart={{ md: "1px" }}
+    borderTop={{ base: "1px", md: "none" }}
+    // `!important` needed to force an override of the user-agent
+    borderColor="preBorder !important"
+    _first={{
+      borderInlineStart: "none",
+      borderTop: "none",
+    }}
+  >
+    {children}
+  </VStack>
+)
 
-const Label = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-top: 0.5rem;
-`
+const Value = ({ children }: ChildOnlyProp) => (
+  <Code
+    fontWeight="bold"
+    fontSize="2rem"
+    background="none"
+    color="primary.base"
+    p={0}
+  >
+    {children}
+  </Code>
+)
 
-export interface IProps {}
+const Label = ({ children }: ChildOnlyProp) => (
+  <Flex alignItems="center" textTransform="uppercase" fontSize="sm">
+    {children}
+  </Flex>
+)
 
-const StatsBoxGrid: React.FC<IProps> = () => {
-  const intl = useIntl()
-  const [totalEth, setTotalEth] = useState<string>("0")
-  const [totalValidators, setTotalValidators] = useState<string>("0")
-  const [currentApr, setCurrentApr] = useState<string>("0")
-  const [error, setError] = useState(false)
+// BeaconchainTooltip component
+const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
+  <Tooltip content={children}>
+    <Icon
+      as={MdInfoOutline}
+      color="text"
+      marginInlineStart={2}
+      _hover={{ color: "primary.base" }}
+      _active={{ color: "primary.base" }}
+      _focus={{ color: "primary.base" }}
+      boxSize={4}
+    />
+  </Tooltip>
+)
 
-  useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(
-      intl.locale as Lang
-    )
+// StatsBox component
+type StakingStatsBoxProps = {
+  data: StakingStatsData
+}
+const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
+  const { locale } = useRouter()
+  const { t } = useTranslation("page-staking")
 
-    const formatInteger = (amount: number): string =>
-      new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
+  const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale! as Lang)
 
-    const formatPercentage = (amount: number): string =>
-      new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        style: "percent",
-        minimumSignificantDigits: 2,
-        maximumSignificantDigits: 2,
-      }).format(amount)
+  // Helper functions
+  const formatInteger = (amount: number): string =>
+    new Intl.NumberFormat(localeForStatsBoxNumbers).format(amount)
 
-    ;(async () => {
-      try {
-        const {
-          data: { totalvalidatorbalance, validatorscount },
-        } = await getData<{
-          data: { totalvalidatorbalance: number; validatorscount: number }
-        }>("https://mainnet.beaconcha.in/api/v1/epoch/latest")
+  const formatPercentage = (amount: number): string =>
+    new Intl.NumberFormat(localeForStatsBoxNumbers, {
+      style: "percent",
+      minimumSignificantDigits: 2,
+      maximumSignificantDigits: 2,
+    }).format(amount)
 
-        const valueTotalEth = formatInteger(
-          Number((totalvalidatorbalance * 1e-9).toFixed(0))
-        )
-        const valueTotalValidators = formatInteger(validatorscount)
-        const currentAprDecimal = calculateStakingRewards(
-          totalvalidatorbalance * 1e-9
-        )
-        const valueCurrentApr = formatPercentage(currentAprDecimal)
-        setTotalEth(valueTotalEth)
-        setTotalValidators(valueTotalValidators)
-        setCurrentApr(`~${valueCurrentApr}`)
-        setError(false)
-      } catch (error) {
-        setTotalEth("n/a")
-        setTotalValidators("n/a")
-        setCurrentApr("n/a")
-        setError(true)
-      }
-    })()
-  }, [intl.locale])
-
-  // TODO: Improve error handling
-  if (error) return <StatErrorMessage />
+  const totalEth = formatInteger(data.totalEthStaked)
+  const totalValidators = formatInteger(data.validatorscount)
+  const currentApr = formatPercentage(data.apr)
 
   return (
-    <Container>
+    <Flex direction={{ base: "column", md: "row" }}>
       <Cell>
         <Value>{totalEth}</Value>
         <Label>
-          <Translation id="page-staking-stats-box-metric-1" />
+          {t("page-staking-stats-box-metric-1")}
+          <BeaconchainTooltip>
+            <Text>{t("page-staking-stats-box-metric-1-tooltip")}</Text>
+            {t("common:data-provided-by")}{" "}
+            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+          </BeaconchainTooltip>
         </Label>
       </Cell>
       <Cell>
         <Value>{totalValidators}</Value>
         <Label>
-          <Translation id="page-staking-stats-box-metric-2" />
+          {t("page-staking-stats-box-metric-2")}
+          <BeaconchainTooltip>
+            <Text>{t("page-staking-stats-box-metric-2-tooltip")}</Text>
+            {t("common:data-provided-by")}{" "}
+            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+          </BeaconchainTooltip>
         </Label>
       </Cell>
       <Cell>
         <Value>{currentApr}</Value>
         <Label>
-          <Translation id="page-staking-stats-box-metric-3" />
+          {t("page-staking-stats-box-metric-3")}
+          <BeaconchainTooltip>
+            <Text>{t("page-staking-stats-box-metric-3-tooltip")}</Text>
+            {t("common:data-provided-by")}{" "}
+            <InlineLink to="https://beaconcha.in/ethstore">
+              Beaconcha.in
+            </InlineLink>
+          </BeaconchainTooltip>
         </Label>
       </Cell>
-    </Container>
+    </Flex>
   )
 }
 
-export default StatsBoxGrid
+export default StakingStatsBox

@@ -18,5 +18,7 @@
   "page-tutorial-tags-error": "Egyik útmutató sem tartalmazza ezeket a tageket még",
   "page-tutorial-title": "Ethereum Fejlesztői Útmutatók",
   "page-tutorials-meta-description": "Böngéssz és szűrj rá ellenőrzött Ethereum közösségi útmutatókra témakör szerint.",
-  "page-tutorials-meta-title": "Ethereum Fejlesztői Útmutatók"
+  "page-tutorials-meta-title": "Ethereum Fejlesztői Útmutatók",
+  "page-find-wallet-try-removing": "Próbálj elvenni egy vagy két tulajdonságot",
+  "page-find-wallet-clear": "Szűrők törlése"
 }

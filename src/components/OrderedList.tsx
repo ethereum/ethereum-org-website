@@ -1,54 +1,65 @@
 // Libraries
 import React from "react"
-import styled from "@emotion/styled"
+import {
+  Box,
+  ListItem,
+  OrderedList as ChakraOrderedList,
+  SystemStyleObject,
+} from "@chakra-ui/react"
 
 export interface IProps {
   listData: Array<React.ReactNode>
   className?: string
 }
 
-// Styles
-const Content = styled.div`
-  margin-bottom: 1.45rem;
-
-  ol {
-    list-style: none;
-    counter-reset: li-counter;
-    padding-left: 2rem;
-    margin-bottom: 0;
-  }
-  ol li {
-    margin: 0 0 1rem 0;
-    counter-increment: li-counter;
-    position: relative;
-  }
-  ol li::before {
-    content: counter(li-counter);
-    position: absolute;
-    top: -2px; /* adjusts circle + number up and down */
-    left: -3rem;
-    width: 35px;
-    aspect-ratio: 1;
-    height: 2rem;
-    padding-top: 7px; /* adjusts number up and down */
-    line-height: 100%;
-    border-radius: 50%;
-    background: ${({ theme }) => theme.colors.grayBackground};
-    text-align: center;
-  }
-`
+/**
+ * The custom ordered list numbers in a solid circular background
+ */
+const liCustomType: SystemStyleObject = {
+  content: `counter(li-counter)`,
+  position: "absolute",
+  top: "-3px", // adjusts circle + number up and down
+  insetInlineStart: "-3rem",
+  width: "34px",
+  height: "1.6rem",
+  pt: "9px", // adjusts number up and down,
+  lineHeight: "100%",
+  borderRadius: "50%",
+  background: "grayBackground",
+  textAlign: "center",
+}
 
 // `listData` should be a list of strings, or HTML components
 // ex: [<p>string<p>] or ['string']
 const OrderedList: React.FC<IProps> = ({ listData, className }) => {
   return (
-    <Content className={className}>
-      <ol>
+    <Box mb="1.45rem" className={className}>
+      <ChakraOrderedList
+        styleType="none"
+        ps={8}
+        mb="0"
+        ms="1.45rem"
+        sx={{
+          counterReset: "li-counter",
+        }}
+      >
         {listData.map((data, idx) => {
-          return <li key={idx}>{data}</li>
+          return (
+            <ListItem
+              key={idx}
+              m="0 0 1rem 0"
+              position="relative" // For the custom list types
+              sx={{
+                counterIncrement: "li-counter",
+              }}
+              _before={liCustomType}
+            >
+              {data}
+            </ListItem>
+          )
         })}
-      </ol>
-    </Content>
+      </ChakraOrderedList>
+    </Box>
   )
 }
 

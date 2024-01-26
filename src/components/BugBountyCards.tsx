@@ -1,113 +1,155 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { TranslationKey } from "../utils/translations"
-import ButtonLink from "./ButtonLink"
+import { useTranslation } from "next-i18next"
+import {
+  Box,
+  type BoxProps,
+  Center,
+  type CenterProps,
+  Divider,
+  Flex,
+  type FlexProps,
+  Heading,
+  type HeadingProps,
+  type TextProps,
+  useToken,
+} from "@chakra-ui/react"
 
-import Translation from "./Translation"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
-const CardRow = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 4rem 1rem;
-  flex-wrap: wrap;
-`
+import { ButtonLink, type ButtonLinkProps } from "@/components/Buttons"
+import Text from "@/components/OldText"
 
-const StyledButton = styled(ButtonLink)`
-  margin: 1rem;
-`
+const CardRow = ({ children }: ChildOnlyProp) => (
+  <Flex justifyContent="space-between" my="16" mx="4" flexWrap="wrap">
+    {children}
+  </Flex>
+)
 
-const Card = styled.div`
-  flex: 1 1 260px;
-  @media (max-width: 1228px) {
-    flex: 1 1 360px;
-  }
-  display: flex;
-  flex-direction: column;
-  background: ${(props) => props.theme.colors.Background};
-  border-radius: 2px;
-  box-shadow: ${(props) => props.theme.colors.tableBoxShadow};
-  border: 1px solid ${(props) => props.theme.colors.border};
-  margin: 1rem;
-  justify-content: space-between;
-  &:hover {
-    border-radius: 4px;
-    box-shadow: 0px 8px 17px rgba(0, 0, 0, 0.15);
-    background: ${(props) => props.theme.colors.tableBackgroundHover};
-    transition: transform 0.1s;
-    transform: scale(1.02);
-  }
-`
+const SubmitBugBountyButton = ({ children, ...props }: ButtonLinkProps) => (
+  <ButtonLink m="4" to="https://forms.gle/Gnh4gzGh66Yc3V7G8" {...props}>
+    {children}
+  </ButtonLink>
+)
 
-const Label = styled.div`
-  display: flex;
-  justify-content: center;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-  padding: 0.25rem 0rem;
-`
+const Card = ({ children, ...props }: FlexProps) => {
+  const tableBoxShadow = useToken("colors", "tableBoxShadow")
 
-const LowLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.lowBug};
-  color: ${(props) => props.theme.colors.black300};
-`
+  return (
+    <Flex
+      flexDir="column"
+      flex={{ base: "1 1 412px", xl: "1 1 260px" }}
+      justifyContent="space-between"
+      bg="background.base"
+      borderRadius="2px"
+      borderRad
+      boxShadow={tableBoxShadow}
+      border="1px solid"
+      borderColor="border"
+      m="4"
+      _hover={{
+        borderRadius: "base",
+        boxShadow: "tableBoxHover",
+        background: "tableBackgroundHover",
+        transition: "transform 0.1s",
+        transform: "scale(1.02)",
+      }}
+      {...props}
+    >
+      {children}
+    </Flex>
+  )
+}
 
-const MediumLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.mediumBug};
-  color: ${(props) => props.theme.colors.black300};
-`
+type LabelVariant = "low" | "medium" | "high" | "critical"
 
-const HighLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.fail400};
-  color: ${(props) => props.theme.colors.white};
-`
+type LabelProps = CenterProps & {
+  variant: LabelVariant
+}
 
-const CriticalLabel = styled(Label)`
-  background: ${(props) => props.theme.colors.fail600};
-  color: ${(props) => props.theme.colors.white};
-`
+const stylePropsByVariant = {
+  low: {
+    bg: "lowBug",
+    color: "black300",
+  },
+  medium: {
+    bg: "mediumBug",
+    color: "black300",
+  },
+  high: {
+    bg: "fail400",
+    color: "white",
+  },
+  critical: {
+    bg: "fail600",
+    color: "white",
+  },
+}
 
-const H2 = styled.h2`
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  letter-spacing: 0px;
-  padding: 1rem;
-  text-align: left;
-  margin-bottom: -0.5rem;
-  margin-top: 0.5rem;
-`
+const Label = ({ children, variant = "medium", ...props }: LabelProps) => {
+  const variantStyleProps = stylePropsByVariant[variant]
 
-const Description = styled.p`
-  font-size: 1.25rem;
-  padding: 1rem;
-  padding-top: 0rem;
-  padding-bottom: 0rem;
-  opacity: 0.6;
-`
+  return (
+    <Center
+      borderTopEndRadius="1px"
+      borderTopStartRadius="1px"
+      borderBottomEndRadius={0}
+      borderBottomStartRadius={0}
+      borderBottom="1px solid"
+      borderColor="border"
+      fontSize="sm"
+      px="0"
+      py="1"
+      textTransform="uppercase"
+      {...variantStyleProps}
+      {...props}
+    >
+      {children}
+    </Center>
+  )
+}
 
-const Divider = styled.div`
-  border-bottom: 1px solid ${(props) => props.theme.colors.border};
-`
+const H2 = ({ children, ...props }: HeadingProps) => (
+  <Heading
+    fontSize="2xl"
+    fontStyle="normal"
+    fontWeight="bold"
+    lineHeight="22px"
+    letterSpacing="normal"
+    p="4"
+    textAlign="start"
+    mb="-2"
+    mt="2"
+    {...props}
+  >
+    {children}
+  </Heading>
+)
 
-const SubHeader = styled.p`
-  text-transform: uppercase;
-  font-size: 0.875rem;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-  opacity: 0.6;
-`
+const Description = ({ children, ...props }: TextProps) => (
+  <Text as="p" fontSize="xl" px="4" py="0" opacity="0.6" {...props}>
+    {children}
+  </Text>
+)
 
-const Text = styled.div`
-  margin: 1rem;
-  margin-top: 0.5rem;
-`
+const SubHeader = ({ children, ...props }: TextProps) => (
+  <Text
+    as="p"
+    textTransform="uppercase"
+    fontSize="sm"
+    ms="4"
+    mt="4"
+    mb="2"
+    opacity="0.6"
+    {...props}
+  >
+    {children}
+  </Text>
+)
+
+const TextBox = ({ children, ...props }: BoxProps) => (
+  <Box m="4" mt="2" {...props}>
+    {children}
+  </Box>
+)
 
 export interface BugBountyCardInfo {
   lowLabelTranslationId?: TranslationKey
@@ -118,13 +160,13 @@ export interface BugBountyCardInfo {
   descriptionTranslationId: TranslationKey
   subDescriptionTranslationId: TranslationKey
   subHeader1TranslationId: TranslationKey
-  severityList: Array<TranslationKey>
+  severityList: TranslationKey[]
   subHeader2TranslationId: TranslationKey
   textTranslationId: TranslationKey
   styledButtonTranslationId: TranslationKey
 }
 
-const bugBountyCardsInfo: Array<BugBountyCardInfo> = [
+const bugBountyCardsInfo: BugBountyCardInfo[] = [
   {
     lowLabelTranslationId: "page-upgrades-bug-bounty-card-label-2",
     h2TranslationId: "page-upgrades-bug-bounty-card-low",
@@ -181,67 +223,51 @@ const bugBountyCardsInfo: Array<BugBountyCardInfo> = [
   },
 ]
 
-export interface IProps {}
-
-const BugBountyCards: React.FC<IProps> = () => (
-  <CardRow>
-    {bugBountyCardsInfo.map((card, idx) => (
-      <Card key={`bug-bounty-card-${idx}`}>
-        {card.lowLabelTranslationId && (
-          <LowLabel>
-            <Translation id={card.lowLabelTranslationId} />
-          </LowLabel>
-        )}
-        {card.mediumLabelTranslationId && (
-          <MediumLabel>
-            <Translation id={card.mediumLabelTranslationId} />
-          </MediumLabel>
-        )}
-        {card.highLabelTranslationId && (
-          <HighLabel>
-            <Translation id={card.highLabelTranslationId} />
-          </HighLabel>
-        )}
-        {card.criticalLabelTranslationId && (
-          <CriticalLabel>
-            <Translation id={card.criticalLabelTranslationId} />
-          </CriticalLabel>
-        )}
-        <H2>
-          <Translation id={card.h2TranslationId} />
-        </H2>
-        <Description>
-          <Translation id={card.descriptionTranslationId} />
-        </Description>
-        <SubHeader>
-          <Translation id={card.subDescriptionTranslationId} />
-        </SubHeader>
-        <Divider />
-        <SubHeader>
-          <Translation id={card.subHeader1TranslationId} />
-        </SubHeader>
-        <Text>
-          <ul>
-            {card.severityList.map((listItemId) => (
-              <li key={`${listItemId}`}>
-                <Translation id={listItemId} />
-              </li>
-            ))}
-          </ul>
-        </Text>
-        <Divider />
-        <SubHeader>
-          <Translation id={card.subHeader2TranslationId} />
-        </SubHeader>
-        <Text>
-          <Translation id={card.textTranslationId} />
-        </Text>
-        <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
-          <Translation id={card.styledButtonTranslationId} />
-        </StyledButton>
-      </Card>
-    ))}
-  </CardRow>
-)
+const BugBountyCards = () => {
+  const { t } = useTranslation("page-bug-bounty")
+  return (
+    <CardRow>
+      {bugBountyCardsInfo.map((card, idx) => (
+        <Card key={`bug-bounty-card-${idx}`}>
+          {card.lowLabelTranslationId && (
+            <Label variant="low">{t(card.lowLabelTranslationId)}</Label>
+          )}
+          {card.mediumLabelTranslationId && (
+            <Label variant="medium">{t(card.mediumLabelTranslationId)}</Label>
+          )}
+          {card.highLabelTranslationId && (
+            <Label variant="high">{t(card.highLabelTranslationId)}</Label>
+          )}
+          {card.criticalLabelTranslationId && (
+            <Label variant="critical">
+              {t(card.criticalLabelTranslationId)}
+            </Label>
+          )}
+          <H2>{t(card.h2TranslationId)}</H2>
+          <Description>{t(card.descriptionTranslationId)}</Description>
+          <SubHeader>{t(card.subDescriptionTranslationId)}</SubHeader>
+          <Divider opacity="1" />
+          <SubHeader>{t(card.subHeader1TranslationId)}</SubHeader>
+          <TextBox>
+            <ul>
+              {card.severityList.map((listItemId) => (
+                <li key={listItemId}>
+                  {t(listItemId)}
+                  {/* <Translation id={listItemId} /> */}
+                </li>
+              ))}
+            </ul>
+          </TextBox>
+          <Divider opacity="1" />
+          <SubHeader>{t(card.subHeader2TranslationId)}</SubHeader>
+          <TextBox>{t(card.textTranslationId)}</TextBox>
+          <SubmitBugBountyButton>
+            {t(card.styledButtonTranslationId)}
+          </SubmitBugBountyButton>
+        </Card>
+      ))}
+    </CardRow>
+  )
+}
 
 export default BugBountyCards

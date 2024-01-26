@@ -1,63 +1,40 @@
-import React from "react"
-import styled from "@emotion/styled"
-import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+/* eslint-disable react/jsx-key */
+import { Link } from "@chakra-ui/next-js"
+import { Center } from "@chakra-ui/react"
 
-import OrderedList from "../OrderedList"
-import Translation from "../Translation"
+import { Image } from "@/components/Image"
+import OrderedList from "@/components/OrderedList"
+import Translation from "@/components/Translation"
 
-const Flex = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  @media (max-width: ${({ theme }) => theme.breakpoints.m}) {
-    flex-direction: column;
-  }
-`
+import image from "@/public/hackathon_transparent.png"
 
-const Image = styled(GatsbyImage)``
-
-export interface IProps {}
-
-const StakingHowSoloWorks: React.FC<IProps> = () => {
-  const { image } = useStaticQuery(graphql`
-    {
-      image: file(relativePath: { eq: "hackathon_transparent.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 400
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
-
+const StakingHowSoloWorks: React.FC = () => {
   const items = [
     <p>
-      <Translation id="page-staking-how-solo-works-item-1" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-1" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-2" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-2" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-3" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-3" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-4" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-4" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-5" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-5" />
     </p>,
   ]
 
   return (
-    <Flex>
+    <Center
+      flexDirection={{ base: "column", md: "row" }}
+      justifyContent="space-between"
+    >
       <OrderedList listData={items} />
-      <Image image={getImage(image)} />
-    </Flex>
+      <Image src={image} alt="" width={400} />
+    </Center>
   )
 }
 

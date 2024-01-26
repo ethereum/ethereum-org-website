@@ -23,5 +23,6 @@
   "page-staking-deposit-contract-stop-reading": "Okumayı durdur",
   "page-staking-deposit-contract-subtitle": "Bu, Ethereum stake sözleşmesinin adresidir. Stake ettiğinizde doğru adrese para gönderdiğinizden emin olmak için bu sayfayı kullanın.",
   "page-staking-deposit-contract-warning": "Her bir karakteri dikkatlice kontrol edin.",
-  "page-staking-deposit-contract-warning-2": "Bu adrese para göndermek işe yaramayacak ve sizi stake eden bir kişi yapmayacaktır. Başlama noktası talimatlarını izlemelisiniz."
+  "page-staking-deposit-contract-warning-2": "Bu adrese para göndermek işe yaramayacak ve sizi stake eden bir kişi yapmayacaktır. Başlama noktası talimatlarını izlemelisiniz.",
+  "page-staking-deposit-contract-title": "Para yatırma sözleşmesi adresini kontrol edin"
 }

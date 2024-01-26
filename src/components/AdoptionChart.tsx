@@ -1,86 +1,106 @@
-import React from "react"
-import { useTheme } from "@emotion/react"
-import styled from "@emotion/styled"
+import { useTranslation } from "next-i18next"
+import { Box, type BoxProps, Flex, useColorMode } from "@chakra-ui/react"
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-`
+import type { ChildOnlyProp } from "@/lib/types"
 
-const Column = styled.div`
-  display: flex;
-  flex-direction: column-reverse;
-  margin-left: 0.5rem;
+const Column = ({ children }: ChildOnlyProp) => (
+  <Flex
+    flexDirection="column-reverse"
+    ms={{ base: 2, md: 4 }}
+    _first={{ ms: 0 }}
+  >
+    {children}
+  </Flex>
+)
 
-  &:first-child {
-    margin-left: 0;
-  }
+const Cell = ({ children, color, ...props }: BoxProps) => (
+  <Box
+    border="1px solid"
+    borderColor={color || "text"}
+    color={color || "text"}
+    py="0.8rem"
+    px={{ base: 2, md: "1.2rem" }}
+    fontSize="0.9rem"
+    fontWeight="bold"
+    lineHeight="none"
+    textAlign="center"
+    _last={{
+      borderTopStartRadius: "2xl",
+      borderTopEndRadius: "2xl",
+    }}
+    sx={{
+      "&:nth-child(-n + 2)": {
+        borderBottomStartRadius: "2xl",
+        borderBottomEndRadius: "2xl",
+      },
+    }}
+    {...props}
+  >
+    {children}
+  </Box>
+)
 
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    margin-left: 1rem;
-  }
-`
+const ColumnName = ({ children }: ChildOnlyProp) => (
+  <Cell border="none" pt={6}>
+    {children}
+  </Cell>
+)
 
-const Cell = styled.div<{ color?: string }>`
-  border: 1px solid ${({ theme, color }) => (color ? color : theme.colors.text)};
-  color: ${({ theme, color }) => (color ? color : theme.colors.text)};
-  padding: 0.8rem 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  line-height: 1;
-  text-align: center;
-
-  &:last-child {
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-  }
-
-  &:nth-child(-n + 2) {
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-
-  @media (min-width: ${(props) => props.theme.breakpoints.m}) {
-    padding: 0.8rem 1.2rem;
-  }
-`
-
-const ColumnName = styled(Cell)`
-  border: 0;
-  padding-top: 1.5rem;
-`
-
-interface IProps {}
-
-const AdoptionChart: React.FC<IProps> = () => {
-  const { isDark } = useTheme()
+const AdoptionChart = () => {
+  const { t } = useTranslation("page-what-is-ethereum")
+  const { colorMode } = useColorMode()
+  const isDark = colorMode === "dark"
 
   return (
-    <Container>
+    <Flex>
       <Column>
         <ColumnName>2010</ColumnName>
-        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
+        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
+          {t("adoption-chart-investors-label")}
+        </Cell>
       </Column>
 
       <Column>
         <ColumnName>2014</ColumnName>
-        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
-        <Cell color={isDark ? "#9EC885" : "#67954C"}>Developers</Cell>
-        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>Companies</Cell>
+        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
+          {t("adoption-chart-investors-label")}
+        </Cell>
+        <Cell color={isDark ? "#9EC885" : "#67954C"}>
+          {t("adoption-chart-developers-label")}
+        </Cell>
+        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>
+          {t("adoption-chart-companies-label")}
+        </Cell>
       </Column>
 
       <Column>
-        <ColumnName>Now</ColumnName>
-        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>Investors</Cell>
-        <Cell color={isDark ? "#9EC885" : "#67954C"}>Developers</Cell>
-        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>Companies</Cell>
-        <Cell color={isDark ? "#8EA8CA" : "#5E7492"}>Artists</Cell>
-        <Cell color={isDark ? "#AC85C2" : "#88669B"}>Musicians</Cell>
-        <Cell color={isDark ? "#CA928E" : "#985955"}>Writers</Cell>
-        <Cell color={isDark ? "#B9B9B9" : "#9E9E9E"}>Gamers</Cell>
-        <Cell color={isDark ? "#E2B79E" : "#E78A54"}>Refugees</Cell>
+        <ColumnName>{t("adoption-chart-column-now-label")}</ColumnName>
+        <Cell color={isDark ? "#FBF9A5" : "#95935B"}>
+          {t("adoption-chart-investors-label")}
+        </Cell>
+        <Cell color={isDark ? "#9EC885" : "#67954C"}>
+          {t("adoption-chart-developers-label")}
+        </Cell>
+        <Cell color={isDark ? "#E78F6E" : "#CB7C5E"}>
+          {t("adoption-chart-companies-label")}
+        </Cell>
+        <Cell color={isDark ? "#8EA8CA" : "#5E7492"}>
+          {t("adoption-chart-artists-label")}
+        </Cell>
+        <Cell color={isDark ? "#AC85C2" : "#88669B"}>
+          {t("adoption-chart-musicians-label")}
+        </Cell>
+        <Cell color={isDark ? "#CA928E" : "#985955"}>
+          {t("adoption-chart-writers-label")}
+        </Cell>
+        <Cell color={isDark ? "#B9B9B9" : "#9E9E9E"}>
+          {t("adoption-chart-gamers-label")}
+        </Cell>
+        <Cell color={isDark ? "#E2B79E" : "#E78A54"}>
+          {t("adoption-chart-refugees-label")}
+        </Cell>
       </Column>
-    </Container>
+    </Flex>
   )
 }
 
