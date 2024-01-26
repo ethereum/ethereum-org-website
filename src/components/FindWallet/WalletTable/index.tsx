@@ -334,7 +334,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
   return (
     <Container>
       <WalletContentHeader>
-        <Th>
+        <Th sx={{ textAlign: "start !important" }}>
           {filteredWallets.length === walletCardData.length ? (
             <Text as="span">
               {t("page-find-wallet-showing-all-wallets")} (

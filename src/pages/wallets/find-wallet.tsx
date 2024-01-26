@@ -183,7 +183,7 @@ const FindWalletPage = () => {
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
             src={FindWalletHeroImage}
-            width={600}
+            width={500}
             alt=""
             priority
             style={{
