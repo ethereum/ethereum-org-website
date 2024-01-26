@@ -1,6 +1,7 @@
 {
   "page-find-wallet-clear": "Clear filters",
-  "page-find-wallet-desc-2": "Don’t know what a wallet is? Learn about wallets.",
+  "page-find-wallet-desc-2": "Don’t know what a wallet is?",
+  "page-find-wallet-desc-2-wallets-link": "Learn about wallets.",
   "page-find-wallet-description": "Wallets store and transact your ETH. You can choose from a variety of products that tailor to your needs.",
   "page-find-wallet-last-updated": "Last updated",
   "page-find-wallet-meta-description": "Find and compare Ethereum wallets based on the features you want.",
