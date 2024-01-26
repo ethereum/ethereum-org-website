@@ -156,7 +156,7 @@ _Zwykle używane do zdecentralizowanego rozwoju protokołów i aplikacji oraz za
 - [Jak założyć społeczność cyfrową w oparciu o DAO?](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Co to jest DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Co to jest konsensus holograficzny?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO nie są przedsiębiorstwami, w których decentralizacja w organizacjach autonomicznych ma znaczenie dla Vitalik.](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO nie są przedsiębiorstwami, w których decentralizacja w organizacjach autonomicznych ma znaczenie dla Vitalik.](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA i więcej: Niekompletny przewodnik po terminologii](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Materiały wideo {#videos}

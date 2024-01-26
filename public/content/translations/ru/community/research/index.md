@@ -71,7 +71,7 @@ lang: ru
 - [Пути к экспирации состояния](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Предложения по древам Веркла и экспирации состояния](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Управление историей](https://eips.ethereum.org/EIPS/eip-4444)
-- [Древа Веркла](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Древа Веркла](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Выборка доступности данных](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Разработка клиентов {#client-development}

@@ -208,5 +208,5 @@ A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésál
 - [Zero-Knowledge bizonyíték: az adatbiztonság javítása a blokkláncon](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK-ok — Egy valós zero-knowledge példa és mélyebb elemzése](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK-ok — Igazolható bizalom létrehozása, még a kvantumszámítógépekkel szemben is](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Egy hozzávetőleges áttekintés, hogyan lehetségesek a zk-SNARK-ok](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Egy hozzávetőleges áttekintés, hogyan lehetségesek a zk-SNARK-ok](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Mi az a zero-knowledge bizonyíték és mi a szerepe a blokkláncon?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

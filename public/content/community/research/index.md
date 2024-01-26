@@ -71,7 +71,7 @@ The execution layer is concerned with executing transactions, running the [Ether
 - [Paths to state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkle and state expiry proposal](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [History management](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Client Development {#client-development}

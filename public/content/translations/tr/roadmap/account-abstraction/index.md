@@ -48,7 +48,7 @@ Mesela bir cüzdana yedek anahtarlar eklenebilir. Böylece hesabın ana anahtarl
 - **Hesap dondurma**: Bir cihaz kaybolursa veya güvenliği ihlal edilirse, hesap başka bir yetkili cihazdan kilitlenerek kullanıcının varlıkları korunabilir.
 - **Hesap kurtarma**: Bir cihazınızı kaybettiniz ya da bir şifrenizi mi unuttunuz? Mevcut şartlar altında bu, varlıklarınıza olan erişiminizin sonsuza kadar kaybolması anlamına gelir. Bir akıllı sözleşme cüzdanıyla, yeni cihazlara yetki verebilen ve erişimi sıfırlayabilecek önceden onaylanmış bazı hesaplar ayarlayabilirsiniz.
 - **İşlem sınırı belirleme**: Hesap içerisinden bir gün, hafta veya ay içinde ne kadar varlık transfer edilebileceğine ilişkin günlük sınırlar belirleyebilirsiniz. Bu, bir saldırgan hesabınıza erişim elde ederse tüm varlıkları tek seferde çalamayacağı ve hırsızın erişimini engelleme ve sıfırlama fırsatınız olduğu anlamına gelir.
-- **Güvenilir listeler oluşturmak**: Yalnızca güvenli olduğunu bildiğiniz belirli adreslere yapılan işlemlere izin verin. Bu, özel anahtarınız _çalınsa bile_ saldırganın listede olmayan hesaplara para gönderemeyeceği anlamına gelir. Bu güvenilir listeleri değiştirmek için birden fazla imza gerektirir, böylece bir saldırgan, birkaç yedek anahtarınıza erişimi olmadığı sürece kendi adresini listeye ekleyemez.
+- **Güvenilir listeler oluşturma**: Yalnızca güvenli olduğunu bildiğiniz belirli adreslere yapılan işlemlere izin verin. Bu, özel anahtarınız _çalınsa bile_ saldırganın listede olmayan hesaplara para gönderemeyeceği anlamına gelir. Bu güvenilir listeleri değiştirmek için birden fazla imza gerektirir, böylece bir saldırgan, birkaç yedek anahtarınıza erişimi olmadığı sürece kendi adresini listeye ekleyemez.
 
 ## Daha iyi kullanıcı deneyimi {#better-user-experience}
 
@@ -92,7 +92,7 @@ EIP-4337'nin giriş noktası sözleşmesinin Ethereum Ana Ağı'nda ilk kez 1 Ma
 
 <ExpandableCard title="EIP-2938: Ethereum Protokolünü hesap soyutlamayı desteklemek için değiştirmek" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
-<a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a>, Ehereum protokolünü 3 farklı alana sahip yeni bir işlem tipiyle<code>AA_TX_TYPE</code>, güncellemeyi düşünüyor: <code>nonce</code>, <code>target</code> ve <code>data</code>, sıralamasında <code>nonce</code> bir işlem sayıcı,<code>target</code> sözleşme adresinin giriş bölgesi ve <code>data</code> ise Ethereum Sanal Makinesi'nin bayt kodudur. Bu işlemleri uygulamak için, Ethereum Sanal Makinesi'ne iki yeni talimat (işlem kodu olarak da bilinir) eklenmelidir: <code>NONCE</code> ve <code>PAYGAS</code>. <code>NONCE</code> işlem kodu islem sekansını takip eder ve <code>PAYGAS</code> ise çekimleri ve işlemin sözleşme dengesi&#39; ile uygulanabilmesi için gerekli gaz ücretlerini hesaplar. Bu yeni özellikler Ethereum'un akıllı sözleşme cüzdanlarını yerel olarak, altyapı zaten Ethereum&#39;'un protokolünde oluşturuldu, desteklemesine izin verir.
+<a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a>, Ehereum protokolünü 3 farklı alana sahip yeni bir işlem tipiyle<code>AA_TX_TYPE</code>, güncellemeyi düşünüyor: <code>nonce</code>, <code>target</code> ve <code>data</code>, sıralamasında <code>nonce</code> bir işlem sayıcı,<code>target</code> sözleşme adresinin giriş bölgesi ve <code>data</code> ise Ethereum Sanal Makinesi'nin bayt kodudur. Bu işlemleri uygulamak için, Ethereum Sanal Makinesi'ne iki yeni talimat (işlem kodu olarak da bilinir) eklenmelidir: <code>NONCE</code> ve <code>PAYGAS</code>. <code>NONCE</code> işlem kodu islem sekansını takip eder ve <code>PAYGAS</code> ise para çekme işlemlerini ve işlemin sözleşme dengesi&#39; ile uygulanabilmesi için gerekli gaz ücretlerini hesaplar. Bu yeni özellikler Ethereum'un akıllı sözleşme cüzdanlarını yerel olarak, altyapı zaten Ethereum&#39;'un protokolünde oluşturuldu, desteklemesine izin verir.
 
 EIP-2938'in güncel olarak aktif olmadığını göz önünde bulundurun. Topluluk şu anda herhangi bir protokol değişikliğine gerek duymadığı için EIP-4337'ye sıcak bakıyor.
 
@@ -117,7 +117,7 @@ Akıllı sözleşme cüzdanları çoktan beri mevcut, ancak bu cüzdanları olab
 - ["Hesap soyutlama neden merkeziyetsiz uygulamalar için ezber bozan bir şey?", Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Hesap soyutlama ELI5", Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Vitalik'in "Hesap Soyutlamaya Doğru" notları](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitalik'in sosyal toparlanma cüzdanları hakkındaki blog gönderisi](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Vitalik'in sosyal toparlanma cüzdanları hakkındaki blog gönderisi](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [EIP-2938 notları](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [EIP-2938 belgeleri](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 notları](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

@@ -117,7 +117,7 @@ Des portefeuilles de contrats intelligents sont déjà disponibles, mais d'autre
 - ["Pourquoi l'abstraction de compte est une innovation majeure pour les dapps" - Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - [« L'abstraction de compte, ELI5 » - Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Les notes de Vitalik sur la « Route vers l'abstraction de comptes »](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Article de blog de Vitalik sur les portefeuilles à récupération sociale](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Article de blog de Vitalik sur les portefeuilles à récupération sociale](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Notes EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Documentation EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Notes EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

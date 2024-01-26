@@ -62,6 +62,6 @@ Les réseaux de test des arbres Verkle sont déjà opérationnels, mais il reste
 - [« Comment les arbres de Verkle rendent Ethereum léger et agressif » par Guillaume Ballet à Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam sur les clients sans état depuis l'ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Fiest nous parle des arbres de Verkle et du « Statelessness » dans le podcast Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Vitalik Buterin sur les arbres de Verkle](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Vitalik Buterin sur les arbres de Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist sur les arbres de Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Documentation EIP sur l'Arbre de Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

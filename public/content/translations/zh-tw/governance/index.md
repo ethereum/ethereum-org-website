@@ -175,9 +175,9 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 以太坊管理體系的定義並不嚴謹。 不同社群參與者對其看法不一。 其中包括：
 
-- [區塊鏈管理體系筆記](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [區塊鏈管理體系筆記](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊管理體系如何運作？](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [以太坊管理體系如何運作](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [以太坊核心開發者為何？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [管理體系，第二部分：金權政治仍舊令人搖頭](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [跳脫貨幣投票管理體系](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [管理體系，第二部分：金權政治仍舊令人搖頭](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [跳脫貨幣投票管理體系](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

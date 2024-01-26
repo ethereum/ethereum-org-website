@@ -8,7 +8,7 @@ tags:
   - "websocket'ler"
   - "sorgulama"
   - "javascript"
-skill: intermediate
+skill: beginner
 source: Alchemy belgeleri
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01

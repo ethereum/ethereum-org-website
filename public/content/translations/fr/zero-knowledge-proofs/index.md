@@ -208,5 +208,5 @@ Le ZK-STARK est considéré comme immunisé contre la menace de l'informatique q
 - [Une preuve à divulgation nulle : Améliorer la confidentialité sur une Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — Un exemple de preuve à divulgation nulle réaliste et une plongée en profondeur](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs – Créez une confiance vérifiable, même contre Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Une introduction approximative à la possibilité des zk-SNARKs](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Une introduction approximative à la possibilité des zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Qu'est-ce que la preuve à divulgation nulle de connaissance et quel est son rôle dans la Blockchain ?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

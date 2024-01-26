@@ -79,10 +79,10 @@ Az Ethereum korábban nem proof-of-stake alapú hálózat volt. Kezdetben proof-
 
 ## További olvasnivaló {#further-reading}
 
-- [Proof-of-Stake GYIK](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Proof-of-Stake GYIK](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Mi az a Proof-of-Stake?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [Mi az a Proof-of-Stake és miért fontos?](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [Miért a Proof-of-Stake? (2020. november)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Miért a Proof-of-Stake? (2020. november)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Proof-of-Stake: Hogyan tanultam meg szeretni a gyenge szubjektivitást](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Proof-of-stake Ethereum – támadás és védekezés](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [A proof-of-stake tervezési filozófiája](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

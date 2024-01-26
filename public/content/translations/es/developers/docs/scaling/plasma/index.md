@@ -168,7 +168,7 @@ Múltiples proyectos proveen implementaciones de Plasma que puede integrar en su
 
 - [Información sobre Plasma](https://www.learnplasma.org/en/)
 - [Un recordatorio rápido de lo que significa "seguridad compartida" y por qué es tan importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Cadenas laterales vs. Plasma vs. sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [Cadenas laterales vs. Plasma vs. sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Explicación de Plasma, parte 1: aspectos básicos](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [La vida y la muerte de Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 

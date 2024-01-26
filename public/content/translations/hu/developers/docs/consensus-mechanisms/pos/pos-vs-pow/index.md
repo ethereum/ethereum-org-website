@@ -65,5 +65,5 @@ Tekintse meg Justin Drake magyarázatát a proof-of-stake előnyeiről a proof-o
 ## További olvasnivaló {#further-reading}
 
 - [Vitalik proof-of-stake tervezési filozófiája](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [Vitalik proof-of-stake GYIK](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik proof-of-stake GYIK](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 - [„Simply Explained” (egyszerű magyarázat) videó a proof-of-stake és a proof-of-woork mechanizmusokról](https://www.youtube.com/watch?v=M3EFi_POhps)
