@@ -3,7 +3,7 @@
   "version": "8.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npx concurrently \"yarn next dev\" \"yarn theme:watch\"",
     "postinstall": "yarn theme",
     "build": "next build",
     "postbuild": "next-sitemap",
