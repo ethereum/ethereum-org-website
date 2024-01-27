@@ -672,7 +672,7 @@ const StakingPage = ({
               <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>
               <ul>
                 <li>
-                  <InlineLink href="https://vitalik.ca/general/2020/11/06/pos2020.html">
+                  <InlineLink href="https://vitalik.eth.limo/general/2020/11/06/pos2020.html">
                     {t("page-staking-further-reading-1-link")}
                   </InlineLink>{" "}
                   -{" "}
@@ -690,7 +690,7 @@ const StakingPage = ({
                   </i>
                 </li>
                 <li>
-                  <InlineLink href="https://vitalik.ca/general/2017/12/31/pos_faq.html">
+                  <InlineLink href="https://vitalik.eth.limo/general/2017/12/31/pos_faq.html">
                     {t("page-staking-further-reading-3-link")}
                   </InlineLink>{" "}
                   -{" "}

@@ -92,6 +92,6 @@ Esta es otra prueba que nos muestra que `wARB` no es probable que sea un token l
 Mientras haya valor en el mundo, va a haber estafadores que intenten robarlo para su beneficio, y en un mundo descentralizado no hay nadie que le proteja excepto usted mismo. Esperamos que recuerde estos puntos para ayudar a distinguir los tókenes legítimos de las estafas:
 
 - Los tókenes estafa se hacen pasar por tókenes legítimos, pueden usar el mismo nombre, símbolo, etc.
-- Los tókenes estafa \_no pueden_usar la misma dirección del contrato.
+- Los tókenes estafa _no pueden_usar la misma dirección del contrato.
 - La mejor fuente para la dirección del token legítimo es la organización propietaria del token.
 - De lo contrario, puede usar aplicaciones populares y de confianza como [Uniswap](https://app.uniswap.org/#/swap) y [Etherscan](https://etherscan.io/).

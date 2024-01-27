@@ -355,3 +355,11 @@ export type SimulatorNavProps = {
 export type PhoneScreenProps = SimulatorNavProps & {
   ctaLabel: string
 }
+export type CommunityConference = {
+  title: string
+  to: string
+  location: string
+  description: string
+  startDate: string
+  endDate: string
+}

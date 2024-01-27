@@ -117,7 +117,7 @@ EIP-4337 也會改變錢包的運作方式。 這些功能將外包給稱為「�
 - [來自 Devcon Bogota 的《為何帳戶抽象對去中心化應用程式來說是革命性的改變》](https://www.youtube.com/watch?v=OwppworJGzs)
 - [來自 Devcon Bogota 的「帳戶抽象 ELI5」（譯註：ELI5 是「把我當五歲小孩和我解釋」的英文縮寫，指用簡單易懂的方式解釋）](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Vitalik 的《帳戶抽象之路》筆記](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitalik 關於社交恢復錢包的部落格文章](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Vitalik 關於社交恢復錢包的部落格文章](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [EIP-2938 筆記](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [EIP-2938 文檔](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337 筆記](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

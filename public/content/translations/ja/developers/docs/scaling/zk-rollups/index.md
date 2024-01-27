@@ -248,5 +248,5 @@ Finematics による ZK ロールアップの説明動画をご覧ください�
 - [zkEVM とは何か？](https://www.alchemy.com/overviews/zkevm)
 - [zkEVM のイントロダクション](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [有益な zkEVM 関連リソース](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARK の仕組み](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [SNARK はどのように実現されているのか？](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [ZK-SNARK の仕組み](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [SNARK はどのように実現されているのか？](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

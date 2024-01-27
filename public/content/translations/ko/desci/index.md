@@ -76,7 +76,7 @@ Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실�
 
 NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할 수 있는 것과 같은 방식으로 연구자, 관리 기관(예: DAO) 또는 데이터를 수집한 주체에게 보상하기 위해 투명한 가치 귀속 체인을 설정할 수 있습니다.
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)는 또한 수행 중인 연구 실험의 분산된 데이터 저장소의 열쇠 역할을 할 수 있으며 NFT 및 [DeFi](/defi/) 금융화(금융에서 대출 풀 및 가치 평가까지)에 연결할 수 있습니다. 또한 [VitaDAO](https://www.vitadao.com/)와 같은 DAO와 같은 본질적으로 온체인 단체가 온 체인에서 직접 연구를 수행할 수 있습니다. 양도할 수 없는 ["soulbound" 토큰](https://vitalik.ca/general/2022/01/26/soulbound.html)의 출현은 또한 개인이 이더리움 주소와 연결된 경험과 자격 증명을 증명할 수 있도록 함으로써 DeFi 에서 중요한 역할을 할 수 있습니다.
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)는 또한 수행 중인 연구 실험의 분산된 데이터 저장소의 열쇠 역할을 할 수 있으며 NFT 및 [DeFi](/defi/) 금융화(금융에서 대출 풀 및 가치 평가까지)에 연결할 수 있습니다. 또한 [VitaDAO](https://www.vitadao.com/)와 같은 DAO와 같은 본질적으로 온체인 단체가 온 체인에서 직접 연구를 수행할 수 있습니다. 양도할 수 없는 ["soulbound" 토큰](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)의 출현은 또한 개인이 이더리움 주소와 연결된 경험과 자격 증명을 증명할 수 있도록 함으로써 DeFi 에서 중요한 역할을 할 수 있습니다.
 
 ### 데이터 저장, 액세스 및 아키텍처 {#data-storage}
 

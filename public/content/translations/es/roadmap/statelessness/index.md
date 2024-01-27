@@ -66,7 +66,7 @@ El sin estado débil implica cambios en la forma en que los nodos de Ethereum ve
 
 **En un sin estado débil, proponer bloques requiere acceso a datos de estado completos, sin embargo verificar los bloques no requiere datos de estado.**
 
-Para que esto suceda, debe haberse implementado en los clientes de Ethereum los [árboles de Verkle](/roadmap/verkle-trees). Los árboles de Verkle son una estructura de datos de sustitución para almacenar datos de estado de Ethereum que permiten que los «testigos» pequeños y de tamaño fijo de los datos se pasen entre pares y se utilicen para verificar bloques, en lugar de verificar bloques contra bases de datos locales. [La separación entre proponentes y constructores](/roadmap/pbs/) también es necesaria, porque esto permite que los constructores de bloques sean nodos especializados con hardware más potente, y esos son los que requieren acceso a los datos de estado completo.
+Para que esto suceda, deben haberse implementado en los clientes de Ethereum los [árboles de Verkle](/roadmap/verkle-trees/). Los árboles de Verkle son una estructura de datos de sustitución para almacenar datos de estado de Ethereum que permiten que los «testigos» pequeños y de tamaño fijo de los datos se pasen entre pares y se utilicen para verificar bloques, en lugar de verificar bloques contra bases de datos locales. [La separación entre proponentes y constructores](/roadmap/pbs/) también es necesaria, porque esto permite que los constructores de bloques sean nodos especializados con hardware más potente, y esos son los que requieren acceso a los datos de estado completo.
 
 <ExpandableCard title="¿Por qué está bien confiar en menos proponentes de bloques?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
@@ -81,7 +81,7 @@ El sin estado débil se encuentra en un estado avanzado de investigación, pero 
 
 ### Sin estado fuerte {#strong-statelessness}
 
-El sin estado fuerte elimina por completo la necesidad de que cualquier bloque almacene los datos completos del estado. En su lugar, las transacciones se envían con testigos que pueden añadir los productores de bloques. Los productores de bloques son entonces responsables de almacenar solo ese estado que se necesita para generar testigos para las cuentas pertinentes. La responsabilidad del estado se traslada casi en su totalidad a los usuarios, ya que envían testigos y «listas de acceso» para declarar con qué cuentas y claves de almacenamiento están interactuando.
+El sin estado fuerte elimina por completo la necesidad de que cualquier bloque almacene los datos completos del estado. En su lugar, las transacciones se envían con testigos que pueden añadir los productores de bloques. Los productores de bloques son entonces responsables de almacenar solo ese estado que se necesita para generar testigos para las cuentas pertinentes. La responsabilidad del estado se traslada casi en su totalidad a los usuarios, ya que envían testigos y «listas de acceso» para declarar con qué cuentas y claves de almacenamiento están interactuando. Esto permitiría nodos extremadamente ligeros, no obstante acarrea contrapartidas que pueden dificultar las transacciones con contratos inteligentes.
 
 Los investigadores han estudiado el sin estado fuerte, aunque actualmente no se espera que forme parte de la hoja de ruta de Ethereum; es más probable que con el sin estado débil sea suficiente para las necesidades de escalabilidad de Ethereum.
 

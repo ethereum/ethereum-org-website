@@ -47,7 +47,7 @@ Néhány elérhető SaaS-szolgáltatót soroltunk fel alább. A fenti jellemzők
 
 <StakingProductsCardGrid category="saas" />
 
-Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>sokrétű végrehajtás</em> és <em style={{ textTransform: "uppercase" }}>sokrétű konszenzus</em>
+Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>végrehajtási kliens sokrétűsége</em> és <em style={{ textTransform: "uppercase" }}>konszenzusos kliens sokrétűgése</em>
 
 ### Kulcsgenerátorok
 
@@ -91,4 +91,5 @@ Kérdezze meg az SaaS-szolgáltatóját a lehetséges garanciákról vagy biztos
 
 ## További olvasnivaló {#further-reading}
 
+- [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [A letétbe helyezési szolgáltatások értékelése](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020._

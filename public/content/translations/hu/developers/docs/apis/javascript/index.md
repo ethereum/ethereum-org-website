@@ -6,38 +6,40 @@ lang: hu
 
 Ahhoz, hogy egy web alkalmazás interakcióba lépjen az Ethereum blokklánccal (vagyis képes legyen blokklánc adatok olvasására és/vagy tranzakció küldésre a hálózatra), rá kell csatlakoznia egy Ethereum csomópontra.
 
-Erre a célra minden Ethereum kliens implementálja a JSON-RPC specifikációt, így egy egységes végpontkészlet áll rendelkezésre, amelyekre az alkalmazások támaszkodhatnak.
+Erre a célra minden Ethereum-kliens implementálja a [JSON-RPC](/developers/docs/apis/json-rpc/) specifikációt, így egységes [módszerek](/developers/docs/apis/json-rpc/#json-rpc-methods) állnak rendelkezésre, amelyekre az alkalmazások támaszkodhatnak.
 
 Ha JavaScript programnyelvet szeretnél használni, hogy csatlakozz egy Ethereum csomóponttal, lehetőséged van vanilla JavaScriptet használni, de ugyanakkor számos kényelmes könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
 
+Az [egyesítés (Merge)](/roadmap/merge/) után, az Ethereum szoftver két kapcsolódó darabja – egy végrehajtó kliens és egy konszenzus kliens – kell a csomópont futtatásához. Gondoskodjon arról, hogy a csomópont mindkét kliens benne legyen. Ha a csomópont nem a helyi gépen van (pl. egy AWS-en fut), akkor az IP-címet frissíteni kell az útmutatóban. Bővebb információért érdemes felkeresni a [csomópont futtatása](/developers/docs/nodes-and-clients/run-a-node/) oldalt.
+
 ## Előfeltételek {#prerequisites}
 
-A JavaScript megértése mellett lehet, hogy érdemes megérteni az [Ethereum stacket](/developers/docs/ethereum-stack/) és az [Ethereum klienseket](/developers/docs/nodes-and-clients/).
+A JavaScript megértése mellett lehet érdemes lehet előbb alaposan megismerni az [Ethereum stacket](/developers/docs/ethereum-stack/) és az [Ethereum-klienseket](/developers/docs/nodes-and-clients/).
 
 ## Miért használj könyvtárat? {#why-use-a-library}
 
-Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóponthoz történő közvetlen csatlakozással jár. Ezenkívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
+Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóponthoz történő közvetlen csatlakozással jár. Ezen kívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
 
 ## Könyvtár tulajdonságok {#library-features}
 
 ### Csatlakozás Ethereum csomóponthoz {#connect-to-ethereum-nodes}
 
-Szolgáltatók használatakor ezen könyvtárak használatával rácsatlakozhatsz az Ethereumra és olvashatod az adatait, legyen az JSON-RPC-n, INFURA-n, Etherscan-en, Alchemy-n vagy MetaMaskon keresztül.
+Szolgáltatók használatakor ezen könyvtárak használatával rácsatlakozhat az Ethereumra és kiolvashatja az adatait, függetlenül attól, hogy JSON-RPC, INFURA, Etherscan, Alchemy vagy MetaMask rendszeren keresztül történik.
 
-**Ethers példa**
+**Példa az Ethers-re**
 
 ```js
-// Egy Web3Provider bewrappol egy standard Web3 szolgáltatót, ez az
-// amit a MetaMask beinjektál minden oldalra úgy mint, window.ethereum
+// A Web3Provider wraps a standard Web3 provider, which is
+// what MetaMask injects as window.ethereum into each page
 const provider = new ethers.providers.Web3Provider(window.ethereum)
 
-// A MetaMask plugin továbbá lehetővé teszi tranzakciók aláírását
-// ether küldésekor és hogy kifizessük az állapotváltást a blokkláncon.
+// The MetaMask plugin also allows signing transactions to
+// send ether and pay to change state within the blockchain.
 // Ehhez kell egy számla aláíró (account signer)...
 const signer = provider.getSigner()
 ```
 
-**Web3js példa**
+**Példa a Web3js-re**
 
 ```js
 var web3 = new Web3("http://localhost:8545")
@@ -60,7 +62,7 @@ var web3 = new Web3(
 // linux rendszerben az elérési út: "/users/myuser/.ethereum/geth.ipc"
 ```
 
-Amint be van állítva, lekérdezéseket indíthatsz a blokkláncon a következőkre:
+Amint be van állítva, lekérdezéseket indíthat a blokkláncon a következőkre:
 
 - blokkszámok
 - gas becslések
@@ -70,9 +72,9 @@ Amint be van állítva, lekérdezéseket indíthatsz a blokkláncon a következ�
 
 ### Tárca funkcionalitás {#wallet-functionality}
 
-Ezek a könyvtárak funkcionalitást adnak, hogy tárcákat hozz létre, kulcsokat kezelj és tranzakciókat írj alá.
+Ezek a könyvtárak funkcionalitást adnak, hogy tárcákat hozzon létre, kulcsokat kezeljen és tranzakciókat írjon alá.
 
-Itt egy Ethers példa
+Íme egy példa az Ethers-re
 
 ```js
 //Tárca instance létrehozása emlékeztető erősítőből...
@@ -140,9 +142,9 @@ wallet.getTransactionCount()
 wallet.sendTransaction(tx)
 ```
 
-[Olvasd el a teljes dokumentációt](https://docs.ethers.io/v5/api/signer/#Wallet)
+[Olvassa el a teljes dokumentációt](https://docs.ethers.io/v5/api/signer/#Wallet)
 
-Ha be van állítva, akkor már tudsz:
+Amint be van állítva, a következőket teheti:
 
 - számlákat létrehozni
 - tranzakciókat küldeni
@@ -151,9 +153,9 @@ Ha be van állítva, akkor már tudsz:
 
 ### Interakció okosszerződés függvényekkel {#interact-with-smart-contract-functions}
 
-A JavaScript kliens könyvtárak lehetővé teszik az alkalmazásod számára, hogy okosszerződés függvényeket hívjanak meg egy befordított szerződés Application Binary Interface-ének (ABI) olvasásával.
+A Javascript-kliens könyvtárai lehetővé teszik az alkalmazás számára, hogy okosszerződés-függvényeket hívjanak meg egy befordított szerződés Application Binary Interface-ének (ABI) olvasásával.
 
-Az ABI lényegében elmagyarázza a szerződés függvényeit egy JSON formátumban és lehetővé teszi, hogy normáls JavaScript objectként használd.
+Az ABI lényegében elmagyarázza a szerződés függvényeit egy JSON formátumban és lehetővé teszi, hogy normális Javascript-objektumként használja.
 
 A következő Solidity szerződés tehát:
 
@@ -215,7 +217,7 @@ Ez azt jelenti, hogy:
 
 A használati függvények praktikus könnyítéseke adnak, hogy egyszerűbb legyen az Ethereumon való építés.
 
-Az ETH értékei alapvetően Wei-ben vannak megadva. 1 ETH = 1,000,000,000,000,000,000 WEI – ez azt jelenti, hogy sok számmal kell foglalkoznod! `web3.utils.toWei` átkonvertálja az ethert Wei-re neked.
+Az ETH értékei alapvetően Wei-ben vannak megadva. 1 ETH = 1,000,000,000,000,000,000 WEI – ez azt jelenti, hogy sok számmal kell foglalkoznia! `web3.utils.toWei` átkonvertálja az ethert Wei-re.
 
 Az ethers-ben így néz ki:
 
@@ -240,12 +242,12 @@ ethers.utils.formatEther(balance)
 - [Dokumentáció](https://docs.web3js.org/)
 - [GitHub](https://github.com/ethereum/web3.js/)
 
-**Ethers.js -** **_Teljes Ethereum tárca implementáció és segédprogramok JavaScript-ben és TypeScript-ben._**
+**Ethers.js -** **_Teljes Ethereum-tárcaimplementáció és segédprogramok JavaScript-ben és TypeScript-ben._**
 
-- [Dokumentáció](https://docs.ethers.io/ethers.js/html/)
+- [Dokumentáció](https://docs.ethers.io/)
 - [GitHub](https://github.com/ethers-io/ethers.js/)
 
-**The Graph -** **_Egy Ethereum és IPFS adat indexelés és lekérdezés protokoll a GraphQL használatával.._**
+**The Graph -** **_Egy Ethereum- és IPFS-adatindexelési és -lekérdezési protokoll a GraphQL használatával._**
 
 - [The Graph](https://thegraph.com/)
 - [Graph Explorer](https://thegraph.com/explorer/)
@@ -253,31 +255,41 @@ ethers.utils.formatEther(balance)
 - [GitHub](https://github.com/graphprotocol/)
 - [Discord](https://thegraph.com/discord)
 
-**light.js -** **_Egy magas szintű, reaktív JS könyvtár light client-ekre optimalizálva._**
+**light.js -** **_Egy magas szintű, reaktív JS könyvtár könnyű kliensekre optimalizálva._**
 
 - [GitHub](https://github.com/openethereum/js-libs/tree/master/packages/light.js)
 
-**Web3-wrapper -** **_Typescript Web3.js alternatíva._**
+**Web3-wrapper -** **_A Typescript Web3.js alternatíva._**
 
 - [Dokumentáció](https://0x.org/docs/web3-wrapper#introduction)
 - [GitHub](https://github.com/0xProject/0x-monorepo/tree/development/packages/web3-wrapper)
 
-**Alchemyweb3 -** **_Egy Web3.js wrapper automatikus újrapróbálkozásokkal és fejlesztett API-okkal._**
+**Alchemyweb3 -** **_Egy Web3.js wrapper automatikus újrapróbálkozásokkal és továbbfejlesztett API-kkal._**
 
 - [Dokumentáció](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
+**Alchemy NFT API -** **_API az NFT adat megszerzésére, beleértve a tulajdonjogot, metaadatok attribútumait stb._**
+
+- [Dokumentáció](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
+- [GitHub](https://github.com/alchemyplatform/alchemy-web3)
+
+**viem -** **_TypeScript-interfész az Ethereumra._**
+
+- [Dokumentáció](https://viem.sh)
+- [GitHub](https://github.com/wagmi-dev/viem)
+
 ## További olvasnivaló {#further-reading}
 
-_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
+- [ Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
 - [Fejlesztői keretrendszerek](/developers/docs/frameworks/)
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Állítsd be a Web3js, hogy JavaScriptben használd az Ethereum blokkláncot](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukciók arról, hogyan állítsd be a web3.js-t a projektedben._
-- [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használata, hogy lásd hogyan lehet szerződés függvényeket meghívni JavaScript használatával._
-- [Tranzakció küldés web3-mal és Alchemy-vel](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Egy step-by-step útmutató arról, hogyan lehet tranzakciókat küldeni a backendből._
+- [Web3js beállítása az Ethereum-blokklánc használatához JavaScriptben](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Útmutató a web3.js projektben való beállításához.._
+- [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használatával tekintse meg, hogyan hívhat be szerződéseket a JavaScript segítségével._
+- [Tranzakció küldése web3-mal és Alchemy-vel](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) _– Egy részletes útmutató arról, hogyan lehet tranzakciókat küldeni a backendből._
