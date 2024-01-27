@@ -18,8 +18,8 @@
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
-    "theme": "chakra-cli tokens ./src/@chakra-ui/theme.ts --strict-token-types --strict-component-types",
-    "theme:watch": "chakra-cli tokens ./src/@chakra-ui/theme.ts --strict-token-types --strict-component-types --watch"
+    "theme": "chakra-cli tokens ./src/@chakra-ui/theme.ts",
+    "theme:watch": "chakra-cli tokens ./src/@chakra-ui/theme.ts --watch"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
