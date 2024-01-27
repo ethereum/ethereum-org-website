@@ -192,19 +192,48 @@ const LanguagePicker = ({
         .includes(filterValue.toLowerCase())
   )
 
-  // Get the preferred language for the users browser
-  const [navLang, setNavLang] = useState("")
+  // Get the preferred languages for the users browser
+  const [navLangs, setNavLangs] = useState<string[]>([])
   useEffect(() => {
-    setNavLang(navigator.language.toLowerCase())
+    setNavLangs(Array.from(navigator.languages))
   }, [])
-  const browserLocale = locales?.reduce((acc, cur) => {
-    if (cur.toLowerCase() === navLang) return cur
-    if (navLang.includes(cur.toLowerCase()) && acc !== navLang) return cur
-    return acc
-  }, "")
-  const browserLocaleInfo = displayNames.find(
-    ({ localeOption }) => localeOption === browserLocale
+
+  // For each browser preference, reduce to the most specific match found in `locales` array
+  const allBrowserLocales: Lang[] = navLangs
+    .map(
+      (navLang) =>
+        locales?.reduce((acc, cur) => {
+          if (cur.toLowerCase() === navLang) return cur
+          if (navLang.includes(cur.toLowerCase()) && acc !== navLang) return cur
+          return acc
+        }, "") as Lang
+    )
+    .filter((i) => !!i) // Remove those without matches
+
+  // Remove duplicate matches
+  const browserLocales: Lang[] = Array.from(new Set(allBrowserLocales))
+
+  // Get display info for each browser locale
+  const browserLocalesInfo: LocaleDisplayInfo[] = browserLocales.map(
+    (browserLocale) => {
+      const item = displayNames.find(
+        ({ localeOption }) => localeOption === browserLocale
+      )
+      if (!item)
+        throw new Error("Missing browser locale info for " + browserLocale)
+      return item
+    }
   )
+
+  const getProgressInfo = (approvalProgress: number, wordsApproved: number) => {
+    const percentage = new Intl.NumberFormat(locale!, {
+      style: "percent",
+    }).format(approvalProgress / 100)
+    const progress =
+      approvalProgress === 0 ? "<" + percentage.replace("0", "1") : percentage
+    const words = new Intl.NumberFormat(locale!).format(wordsApproved)
+    return { progress, words }
+  }
 
   return (
     <Menu
@@ -258,29 +287,56 @@ const LanguagePicker = ({
                 bg="background.highlight"
                 sx={{ "[role=menuitem]": { py: "3", px: "2" } }}
               >
-                {browserLocaleInfo && (
+                {browserLocalesInfo.length > 0 && (
                   <>
                     <Text fontSize="xs" color="body.medium">
-                      Browser language
+                      Browser{" "}
+                      {browserLocalesInfo.length === 1
+                        ? "language"
+                        : "languages"}
                     </Text>
-                    <Item
-                      key={`item-${browserLocale}`}
-                      href={asPath}
-                      locale={browserLocale as Lang}
-                      onClick={onMenuClose}
-                    >
-                      <Text fontSize="lg" color="primary.base">
-                        {browserLocaleInfo.targetName}
-                      </Text>
-                      <Text
-                        textTransform="uppercase"
-                        fontSize="xs"
-                        color="body.medium"
-                      >
-                        {browserLocaleInfo.sourceName}
-                      </Text>
-                      <Progress value={browserLocaleInfo.approvalProgress} />
-                    </Item>
+                    {browserLocalesInfo.map(
+                      ({
+                        localeOption,
+                        targetName,
+                        sourceName,
+                        approvalProgress,
+                        wordsApproved,
+                      }) => {
+                        const { progress, words } = getProgressInfo(
+                          approvalProgress,
+                          wordsApproved
+                        )
+                        return (
+                          <Item
+                            key={`item-${localeOption}`}
+                            href={asPath}
+                            locale={localeOption as Lang}
+                            onClick={onMenuClose}
+                          >
+                            <Text fontSize="lg" color="primary.base">
+                              {targetName}
+                            </Text>
+                            <Text
+                              textTransform="uppercase"
+                              fontSize="xs"
+                              color="body.medium"
+                            >
+                              {sourceName}
+                            </Text>
+                            <Text
+                              textTransform="lowercase"
+                              fontSize="xs"
+                              color="body.medium"
+                              maxW="full"
+                            >
+                              {progress} translated • {words} words
+                            </Text>
+                            <Progress value={approvalProgress} />
+                          </Item>
+                        )
+                      }
+                    )}
                     <MenuDivider borderColor="body.medium" my="4" mx="-2" />
                   </>
                 )}
@@ -327,14 +383,8 @@ const LanguagePicker = ({
                     index
                   ) => {
                     const firstResult = index === 0
-                    const percentage = new Intl.NumberFormat(locale!, {
-                      style: "percent",
-                    }).format(approvalProgress / 100)
-                    const progress =
-                      approvalProgress === 0
-                        ? "<" + percentage.replace("0", "1")
-                        : percentage
-                    const words = new Intl.NumberFormat(locale!).format(
+                    const { progress, words } = getProgressInfo(
+                      approvalProgress,
                       wordsApproved
                     )
                     return (
