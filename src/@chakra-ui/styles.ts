@@ -13,6 +13,7 @@ const styles = {
       bg: "background.base",
       lineHeight: "base",
       fontSize: "md",
+      overflowX: "hidden",
     },
     a: {
       color: "primary.base",
