@@ -39,7 +39,7 @@ Ethereum cüzdanı mı arıyorsunuz? [Ethereum cüzdanlarının tam listesini ke
 Geliştirme zor olabilir. İşte size yardımcı olmaktan mutluluk duyan deneyimli Ethereum geliştiricileri bulunan geliştirme odaklı bazı alanlar.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs Discord'u](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs Discord'u](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede 
 
 İşte bazı popüler örnekler:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Sorunuz belirli bir araç, proje veya kütüphane ile mi ilgili? Çoğu projede 
 
 Bir düğüm veya doğrulayıcı çalıştırıyorsanız, başlamanıza yardımcı olmaya adanmış bazı toplulukları burada bulabilirsiniz.
 
-- [EthStaker Discord'u](https://discord.io/ethstaker)
+- [EthStaker Discord'u](https://discord.gg/ethstaker)
 - [EthStaker Reddit'i](https://www.reddit.com/r/ethstaker)
 
 Ethereum istemcileri geliştiren ekiplerin çoğu, destek alabileceğiniz ve soru sorabileceğiniz özel, herkese açık alanlara da sahiptir.

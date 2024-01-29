@@ -633,7 +633,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             "page-stablecoins-stablecoins-dapp-callout-description"
           )}
           image={dogeComputerImg}
-          maxImageWidth={600}
+          imageWidth={600}
           alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
           <Flex flexFlow="wrap" gap="1em">

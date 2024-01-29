@@ -6,7 +6,7 @@ lang: hu
 
 # Blokkláncösszekötők {#prerequisites}
 
-_A Web3 egy olyan ökoszisztémává fejlődött, ahol L1 blokkláncok és L2 skálázási megoldások találhatók, mind egyedi képességekkel és kompromisszumokkal. Ahogy növekszik a blokkláncprotokollok száma, úgy nő [a kereslet is, hogy az eszközöket láncok között lehessen mozgatni](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Az igény kielégítéséhez összekötőkre vagy hidakra van szükségünk._
+_A Web3 egy olyan ökoszisztémává fejlődött, ahol L1 blokkláncok és L2 skálázási megoldások találhatók, mind egyedi képességekkel és kompromisszumokkal. Ahogy növekszik a blokkláncprotokollok száma, úgy nő [a kereslet is, hogy az eszközöket láncok között lehessen mozgatni](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Az igény kielégítéséhez összekötőkre vagy hidakra van szükségünk._
 
 <Divider />
 
@@ -30,7 +30,7 @@ A hidak kötik össze a blokkláncokat, lehetővé téve az információ és a t
 
 A hidak lehetőséget adnak arra, hogy:
 
-- az eszközök és az információk a láncok között mozogjanak
+- az eszközök és az információk a láncok között mozogjanak.
 - a decentralizált alkalmazások hozzáférjenek a különféle blokkláncok erősségeihez – így azok képességeit fejleszteni tudják (mivel a protokollok esetében manapság több tér van az innovációra).
 - a felhasználók új platformokat érjenek el és hasznosítsák a különböző láncok előnyeit.
 - a fejlesztők a különböző blokklánc-ökoszisztémákon együttműködjenek és új platformokat építsenek a felhasználók számára.

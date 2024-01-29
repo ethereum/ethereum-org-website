@@ -238,7 +238,7 @@ I progetti che stanno lavorando alle zkEVM includono:
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll è un'azienda orientata alla tecnologia che sta lavorando alla creazione di una Soluzione di Livello 2 dello zkEVM nativa per Ethereum._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
 - **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 è un rollup ZK compatibile con l'EVM creato da Matter Labs, basato sulla propria zkEVM._
 
@@ -250,5 +250,5 @@ I progetti che stanno lavorando alle zkEVM includono:
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Awesome-zkEVM resources](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKS under the hood](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [How are SNARKs possible?](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [ZK-SNARKS under the hood](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [How are SNARKs possible?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

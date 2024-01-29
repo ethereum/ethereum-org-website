@@ -123,6 +123,7 @@
   "zksync-description": "A zkSync egy felhasználó-központú zero-knowledge rollup platform, amelyet a Matter Labs dolgozott ki. Egy Ethereum-skálázási megoldás, amely már elérhető az Ethereum főhálózatán. Támogatja a kifizetéseket, a tokenátváltást és az NFT-k létrehozását.",
   "zkspace-description": "A ZKSpace platform három fő részből áll: az L2 AMM DEX (automatikus piackészítőként működő decentralizált tőzsde), mely ZK-rollup technológát használ, és ZKSwapnak nevezik; a kifizetési rendszer, melynek ZKSquare a neve; és az NFT-piactér, amely ZKSea néven fut.",
   "aztec-description": "Az Aztec Network az első privát ZK-rollup az Ethereumon, mely lehetővé teszi, hogy a decentralizált alkalmazások élvezhessék az adatvédelmet és a skálázást.",
+  "starknet-description": "A Starknet egy validitáson alapuló összevont tranzakció (L2). Gyors tranzakcióátvitel, alacsony gázdíj jellemzi, miközben megtartja az Ethereum (L1) biztonsági szintjét.",
   "layer-2-note": "Megjegyzés:",
   "layer-2-ecosystem-portal": "Ökoszisztéma portál",
   "layer-2-token-lists": "Tokenlisták",

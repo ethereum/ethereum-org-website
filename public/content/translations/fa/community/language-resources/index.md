@@ -72,7 +72,7 @@ Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که
 - [Gwei.cz](https://gwei.cz) - جامعه‌ی محلی با محوریت Web3 که محتوای آموزشی تولید می‌کند و رویدادهای آنلاین و حضوری را سامان‌دهی می‌کند
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - راهنمای اتریوم برای مبتدیان
 - [DAO Příručka](https://dao.gwei.cz/) - راهنمای DAOها برای مبتدیان
-- [تبحر در اتریوم](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - یادگیری زیروبم اتریوم به زبان چک
+- [تبحر در اتریوم](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - یادگیری زیروبم اتریوم به زبان چک
 
 ### فرانسوی {#fr}
 

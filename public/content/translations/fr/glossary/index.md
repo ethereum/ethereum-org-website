@@ -470,7 +470,7 @@ Carburant virtuel utilisé dans Ethereum pour exécuter les contrats intelligent
 
 ### Limite de gaz {#gas-limit}
 
-Montant maximum de [gaz](#gas) qu'une transaction [](#transaction) ou qu'un [bloc](#block) peut consommer.
+Montant maximum de [gaz](#gas) qu'une [transaction](#transaction) ou qu'un [bloc](#block) peut consommer.
 
 ### Prix du gaz {#gas-price}
 

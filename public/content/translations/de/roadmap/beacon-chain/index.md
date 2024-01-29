@@ -5,7 +5,7 @@ lang: de
 template: upgrade
 image: /upgrades/core.png
 alt: 
-summaryPoint1: Mit der Bacon Chain wurde Proof-of-Stake in das Ethereum Ökosystem eingeführt.
+summaryPoint1: Mit der Beacon Chain wurde Proof-of-Stake in das Ethereum Ökosystem eingeführt.
 summaryPoint2: Sie wurde 2022 mit der ursprünglichen Ethereum Proof-of-Work Blockchain vereinigt.
 summaryPoint3: Die Beacon Chain führte die Konsenslogik und das Block-Gossip-Protokoll ein, das nun Ethereum sichert.
 ---

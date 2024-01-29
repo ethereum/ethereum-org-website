@@ -28,7 +28,7 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 - Írjon vagy véleményezzen egy Ethereum fejlesztési javaslatot (EIP)
   - Írjon EIP-t
     1. Adja be ötletét az [Ethereum Magicians csoportnak](https://ethereum-magicians.org)
-    2. Olvassa el az [EIP-1-et](https://eip.ethereum.org/EIPS/eip-1) – **Igen, ez a _teljes_ dokumentum.**
+    2. Olvassa el az [EIP-1-et](https://eips.ethereum.org/EIPS/eip-1) – **Igen, ez a _teljes_ dokumentum.**
     3. Kövesse az EIP-1 iránymutatásait. Hivatkozzon rá, ahogy a vázlatot készíti.
   - Tudja meg, hogyan lehet [EIP-szerkesztő](https://eips.ethereum.org/EIPS/eip-5069)
     - Ön is véleményezheti az EIP-ket már most! Nézze meg a [nyitott PR-okat az `e-review` címkét](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review) használva. Adjon technikai visszajelzést a `discussion-to` hivatkozáson.
