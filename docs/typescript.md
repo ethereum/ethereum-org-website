@@ -2,13 +2,6 @@
 
 Our codebase is rapidly increasing in size and in contributors. This brings challenges to reliably keep the code organized, avoid code duplication, and review code. To help alleviate these challenges, we’re in the process of migrating to TypeScript across our codebase. We believe having a strongly typed language will reduce bugs, improve code quality, increase productivity and allow us to scale (both our codebase and our developer community) better in the long term.
 
-## General considerations
-
-As we are progressively migrating the entire codebase to TS, we will have a mix of `.js` and `.ts` files in the process. For this reason and to make the migration easier for beginners, we have disabled the [`noImplicitAny`](https://www.typescriptlang.org/tsconfig#noImplicitAny) option from our `tsconfig.json` which means that you can use the `any` type and you will not get an error from that.
-When we reach the moment where the entire codebase is in TS, we will enable `noImplicitAny` and increase the checker’s strictness.
-
-This is just starting, any suggestion is always welcomed and appreciated.
-
 ## Declaring types for variables
 
 When declaring types for variables, you should only declare a type when it isn't obvious and the type can't be inferred.
