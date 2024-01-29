@@ -56,7 +56,7 @@ Egy másik népszerű példa a [SafeMath](https://docs.openzeppelin.com/contract
 
 Hogy elősegítsük az [összeilleszthetőséget és az interoperabilitást](/developers/docs/smart-contracts/composability/), az Ethereum közösség számos szabványt vezetett be **ERC-k** formájában. Többet olvashatsz róluk a [szabványok](/developers/docs/standards/) részben.
 
-Amikor egy ERC-t szeretnél betenni a szerződésedbe, célszerű a standard megvalósításokat keresni, ahelyett, hogy megpróbálnád a sajátodat bevezetni. Számos okosszerződés könyvtár tartalmazza a legnépszerűbb ERC-k megvalósításait. Például a mindenütt jelen levő [ERC20 felcserélhető token szabvány](/developers/tutorials/understand-the-erc-20-token-smart-contract/) megtalálható a [HQ20-ben](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys-ben](https://github.com/dapphub/ds-token/) és az [OpenZeppelinen](https://docs.openzeppelin.com/contracts/3.x/erc20). Ezenkívül, egyes ERC-k kanonikus megvalósításokat is biztosítanak az ERC részeként.
+Amikor egy ERC-t szeretnél betenni a szerződésedbe, célszerű a standard megvalósításokat keresni, ahelyett, hogy megpróbálnád a sajátodat bevezetni. Számos okosszerződés könyvtár tartalmazza a legnépszerűbb ERC-k megvalósításait. Például a mindenütt jelen levő [ERC20 felcserélhető tokenszabvány](/developers/tutorials/understand-the-erc-20-token-smart-contract/) megtalálható a [HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md), [DappSys](https://github.com/dapphub/ds-token/) és [OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20) platformon. Ezenkívül, egyes ERC-k kanonikus megvalósításokat is biztosítanak az ERC részeként.
 
 Érdemes megemlíteni, hogy egyes ERC-k nem önállóak, hanem kiegészítenek más ERC-ket. Például az [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) kiterjeszti az ERC20-as szabványt a használhatóság javítása érdekében.
 
@@ -102,11 +102,16 @@ Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe a
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK –** **_Olyan eszközöket biztosít, melyekkel hatékonyan lehet személyre szabott okosszerződéseket létrehozni_**
+
+- [Dokumentáció](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Biztonsági megfontolások Ethereum fejlesztőknek](/developers/docs/smart-contracts/security/) _– Egy biztonsági megfontolásokról szóló útmutató okosszerződés fejlesztéshez könyvtár használattal._
-- [Az ERC-20 token okosszerződés megértése](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Útmutató az ERC20 szabványról több könyvtáron keresztül._
+- [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– Egy biztonsági megfontolásokról szóló útmutató okosszerződés-fejlesztéshez könyvtárhasználattal._
+- [Az ERC-20 tokenes okosszerződés megértése](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Útmutató az ERC20 szabványról több könyvtáron keresztül._
 
 ## További olvasnivaló {#further-reading}
 
-_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

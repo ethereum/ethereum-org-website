@@ -156,7 +156,7 @@ _通常用於協定和去中心化應用程式的去中心化開發及治理，�
 - [如何創立由去中心化自治組織支援的數位社群](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [什麼是去中心化自治組織？](https://coinmarketcap.com/alexandria/article/what-is-a-dao)– [Coinmarketcap](https://coinmarketcap.com)
 - [什麼是全局共識？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c)- [DAOstack](https://daostack.io/)
-- [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.ca/general/2022/09/20/daos.html)
+- [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [去中心化自治組織、去中心化自治公司、去中心化應用程式等：不完整術語指引](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [以太坊部落格](https://blog.ethereum.org)
 
 ### 影片 {#videos}

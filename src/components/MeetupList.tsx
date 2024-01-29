@@ -128,7 +128,7 @@ const MeetupList: React.FC<IProps> = () => {
               me={4}
               flexWrap="wrap"
             >
-              <Emoji text={meetup.emoji} boxSize={4} me={2} />
+              <Emoji text={meetup.emoji} boxSize={4} me={2} lineHeight="unset" />
               <Text mb={0} opacity={"0.6"}>
                 {meetup.location}
               </Text>

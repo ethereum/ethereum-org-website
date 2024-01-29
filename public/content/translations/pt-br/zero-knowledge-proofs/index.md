@@ -208,5 +208,5 @@ ZK-STARK é considerado imune à ameaça de computação quântica, pois usa has
 - [Uma prova de conhecimento zero: melhorando a privacidade em uma blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — Um exemplo realista de conhecimento zero e aprofundamento](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs — Crie confiança verificável, mesmo contra computadores quânticos](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adão Luciano_
-- [Uma introdução aproximada de como os zk-SNARKs são possíveis](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Uma introdução aproximada de como os zk-SNARKs são possíveis](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [O que é prova de conhecimento zero e seu papel na blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

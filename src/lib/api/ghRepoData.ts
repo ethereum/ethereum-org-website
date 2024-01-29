@@ -89,13 +89,12 @@ const frameworksList: Array<Framework> = [
   },
   {
     id: "scaffoldeth",
-    url: "https://github.com/austintgriffith/scaffold-eth",
-    githubUrl: "https://github.com/austintgriffith/scaffold-eth",
+    url: "https://scaffoldeth.io/",
+    githubUrl: "https://github.com/scaffold-eth/scaffold-eth-2",
     background: "#ffffff",
-    name: "scaffold-eth",
-    description:
-      "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
-    alt: "page-developers-local-environment:page-local-environment-scaffold-eth-logo-alt",
+    name: "Scaffold-ETH-2",
+    description: "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
+    alt: "page-local-environment-scaffold-eth-logo-alt",
     image: ScaffoldEthImage,
   },
   {
