@@ -103,11 +103,11 @@ _请注意，视频中的解释使用“二层网络”这一术语指代所有�
 - [以卷叠为中心的以太坊路线图](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [有关以太坊第二层扩容解决方案的最新分析](https://www.l2beat.com/)
 - [评估以太坊第二层扩容解决方案：一个比较框架](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [卷叠不完全指南](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [卷叠不完全指南](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [以太坊赋能的零知识卷叠：强者](https://hackmd.io/@canti/rkUT0BD8K)
 - [“乐观卷叠”对比“零知识卷叠”](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [零知识区块链的可扩展性](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [为什么卷叠 + 数据分片是高可扩展性的唯一可持续的解决办法](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [什么类型的三层网络有意义？](https://vitalik.ca/general/2022/09/17/layer_3.html)
+- [什么类型的三层网络有意义？](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

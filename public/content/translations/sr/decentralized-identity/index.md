@@ -109,7 +109,7 @@ Evo jednog primera da pokažemo kako potvrde na lancu funkcionišu u praksi:
 
 ### Soulbound tokeni i identitet {#soulbound}
 
-[Soulbound tokeni](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFT-ijevi koji se ne mogu prebacivati) se mogu koristiti kako bi se prikupile informacije koje su jedinstvene za određeni novčanik. Ovo efektivno stvara jedinstvenu identifikaciju na lancu blokova vezanu za određenu Ethereum adresu koja može uključivati tokene koji predstavljaju dostignuća (na primer, završavanje određenog onlajn kursa ili dostizanje određenog rezultata u igri) ili učešće u zajednici.
+[Soulbound tokeni](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT-ijevi koji se ne mogu prebacivati) se mogu koristiti kako bi se prikupile informacije koje su jedinstvene za određeni novčanik. Ovo efektivno stvara jedinstvenu identifikaciju na lancu blokova vezanu za određenu Ethereum adresu koja može uključivati tokene koji predstavljaju dostignuća (na primer, završavanje određenog onlajn kursa ili dostizanje određenog rezultata u igri) ili učešće u zajednici.
 
 ## Benefiti decentralizovanog identiteta {#benefits-of-decentralized-identity}
 

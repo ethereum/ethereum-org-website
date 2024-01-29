@@ -3,10 +3,13 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
 
+import type { Lang } from "@/lib/types"
+
 import { Button } from "@/components/Buttons"
 import { FeedbackThumbsUpIcon } from "@/components/icons"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import Translation from "./Translation"
 
@@ -21,7 +24,8 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
   const { t } = useTranslation("common")
   const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
   const surveyUrl = useSurvey(feedbackSubmitted)
-  const { asPath } = useRouter()
+  const { locale, asPath } = useRouter()
+  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   const isTutorial = asPath?.includes("tutorials")
 
@@ -67,6 +71,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
       mt="8"
       w="full"
       {...props}
+      dir={dir}
     >
       <Flex direction="column" gap="4">
         <Heading as="h3" m="0" mb="2" fontSize="1.375rem" fontWeight="bold">

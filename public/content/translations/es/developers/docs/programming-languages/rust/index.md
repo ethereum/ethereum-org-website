@@ -5,7 +5,7 @@ lang: es
 incomplete: true
 ---
 
-<FeaturedText>Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust</FeaturedText>
+<div class="featured">Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust</div>
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser fiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, es decir, ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
@@ -25,7 +25,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Seleccionar a un cliente de Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [El cliente Ethereum de Rust](https://openethereum.github.io/)\***Note que OpenEthereum [ha quedado obsoleto](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) y no se mantiene.** Úselo con precaución y preferiblemente cambie a otro cliente.
 - [Enviar una transacción a Ethereum mediante Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Una introducción a los contratos inteligentes con el cliente de Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Tutorial paso a paso sobre cómo escribir contratos en Rust Wasm para Kovan](https://github.com/paritytech/pwasm-tutorial)
 
 ## Artículos intermedios {#intermediate-articles}
@@ -36,7 +35,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Construir un chat descentralizado mediante JavaScript y Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Crear una aplicación descentralizada de tareas con Vue.js & Rust](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [Una introducción a los contratos secretos](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Cree una cadena de bloques en Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Proyectos y herramientas de Rust {#rust-projects-and-tools}

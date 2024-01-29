@@ -15,31 +15,27 @@ lang: fa
 این برنامه‌ها از اکوسیستم گسترده‌ی اتریوم با اعطای کمک‌های مالی به دامنه‌ی وسیعی از پروژه‌ها حمایت می‌کنند. راه‌حل‌هایی جهت مقیاس‌پذیری، جامعه‌سازی، ایمنی، حریم شخصی و غیره از این جمله هستند. این کمک‌های مالی مختص به یک پلتفرم اتریوم خاص نیستند و اگر مردد هستید نقطه‌ی خوبی برای شروع است.
 
 - [برنامه پشتیبانی اکوسیستم بنیاد اتریوم](https://esp.ethereum.foundation) - _تامین مالی پروژه‌های منبع بازی که به اتریوم سودرسانی می‌کنند، با تمرکز بر ابزار های جهانی، زیرساخت، پژوهش و منافع عمومی_
-- [درخواست‌های ارائه‌ی پیشنهاد اتریوم](https://github.com/ethereum/requests-for-proposals) - _درخواست‌های پیشنهاد توسط بنیاد اتریوم برای کار و پروژه‌های اکوسیستم اتریوم_
-- [MetaCartel](https://www.metacartel.org/grants/) - _توسعه‌ی Dapp، ساخت Dapp_
-- [Moloch DAO](https://www.molochdao.com/) - _حریم خصوصی، مقیاس‌پذیری لایه‌ی 2، امنیت کلاینت و غیره_
-- [Open Grants](https://opengrants.com/explore)
-- [ کمک‌های مالی DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _صفحه‌گسترده Google از سازمان‌های ارائه‌دهنده‌ی کمک‌هزینه_
-- [Crunchbase برای حمایت های مالی Web3](https://www.cryptoneur.xyz/web3-grants)-_فیلتر و جست و جوی کمک های مالی بر اساس دسته،کاربرد، مقدار، و غیره. مشارکت کنید تا دیگران کمک مالی مورد نیاز خود را بهتر بیابند._
-- [کمک های مالی تحصیلی](https://esp.ethereum.foundation/academic-grants)-_کمک های مالی برای تحقیقات آکادمیک مربوط به اتریوم_
+- [MetaCartel‏](https://www.metacartel.org/grants/) - _توسعه‌ی Dapp، ساخت DAO‏_
+- [Moloch DAO](https://www.molochdao.com/) - _حریم خصوصی، مقیاس‌پذیری لایه‌ی 2، امنیت کاربر و غیره_
+- [ کمک‌های مالی DAO‏](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _صفحه‌گسترده Google از سازمان‌های ارائه‌دهنده‌ی کمک‌های مالی_
+- [‏Crunchbase برای کمک‌های مالی Web3‏](https://www.cryptoneur.xyz/web3-grants)-_کمک‌های مالی را بر اساس دسته، کاربرد، مبلغ، و غیره فیلتر و جستجو کنید. کمک کنید که دیگران کمک مالی مناسب خود را بهتر بیابند._
+- [کمک‌های مالی تحصیلی](https://esp.ethereum.foundation/academic-grants)-_کمک‌های مالی برای تحقیقات آکادمیک مربوط به اتریوم_
+- [‏Blockworks Grantfarm‏](https://blockworks.co/grants/programs) - _‏Blockworks یک مجموعه جامع از تمامی کمک‌های مالی، RFPها، و پاداش‌های گزارش اشکالات._
 
 ## خاص هر پروژه {#project-specific}
 
 این پروژه‌ها برای پروژه‌هایی که در راستای توسعه و آزمایش فناوری خود هستند کمک‌های مالی خود را ساخته‌اند.
 
 - [برنامه‌ی کمک‌های مالی Aave](https://aavegrants.org/) - _[Aave](https://aave.com/) DAO_ را اعطا می‌کند
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _صندوق اکوسیستم [Balancer](https://balancer.fi/)_
-- [Chainlink Grants Program](https://chain.link/community/grants) - _ کمک‌های مالی اجتماعی [Chainlink](https://chain.link/)_
-- [برنامه‌ی کمک‌های مالی Compound](https://compoundgrants.org/) - اکوسیستم مالی \_[Compound](https://compound.finance/)
-- [برنامه کمک‌های مالی Decentraland](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
-- [سازمان کمک‌های مالی اکوسیستم لیدو (LEGO)](https://lego.lido.fi/) - اکوسیستم مالی[Lido](https://lido.fi/)
-- [برنامه MetaMask](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) سازمان مستقل غیرمتمرکز کمک‌های مالی کارمندمحور_
-- [برنامه‌ کمک هزینه mStable](https://docs.mstable.org/advanced/grants-program) - انجمن _[mStable](https://mstable.org/)_
-- [برنامه حمایت مالی شبکه (SKALE)](https://skale.space/developers#grants)-_اکوسیستم[شبکه SKALE](https://skale.space/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [The Graph](https://thegraph.com/)_
-- [برنامه‌ کمک‌های مالی UMA](https://grants.umaproject.org/) - _[ حمایت مالی از برنامه‌نویسان UMA](https://umaproject.org/)_
-- [برنامه‌ کمک مالی Uniswap](https://www.unigrants.org/) - _جامعه‌ [Uniswap](https://uniswap.org/)_
-- [کمک‌های مالی Web3](https://web3grants.net) - _یک فهرست گسترده از برنامه‌های کمک‌های مالی مرتبط با web3/رمزارز_
+- [Balancer‏](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _صندوق اکوسیستم [Balancer‏](https://balancer.fi/)_
+- [‏Chainlink Grants Program](https://chain.link/community/grants) - _ کمک‌های مالی جامعه [Chainlink‏](https://chain.link/)_
+- [برنامه کمک‌های مالی Decentraland‏](https://governance.decentraland.org/grants/) – _[‏Decentraland](https://decentraland.org/) DAO Metaverse‏_
+- [سازمان کمک‌های مالی اکوسیستم Lido‏ (LEGO)](https://lido.fi/lego) – _[اکوسیستم تأمین مالی Lido‏](https://lido.fi/)_
+- [برنامه‌ی Metamask‏](https://metamaskgrants.org/) - _[سازمان خودمختار غیرمتمرکز کمک‌های مالی کارمندمحور MetaMask‏](https://metamask.io/)_
+- [برنامه کمک‌های مالی شبکه SKALE‏](https://skale.space/developers#grants) - _[اکوسیستم شبکه](https://skale.space/)‏SKALE‏_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [‏The Graph‏](https://thegraph.com/)_
+- [برنامه کمک‌های مالی Uniswap‏](https://www.uniswapfoundation.org/apply-for-a-grant) - _[جامعه](https://uniswap.org/)‏Uniswap‏_
+- [کمک‌های مالی Web3‏](https://web3grants.net) - _یک فهرست گسترده از برنامه‌های کمک‌های مالی مرتبط با web3/رمزارز_
 
 ## کمک مالی درجه‌ی دوم {#quadratic-funding}
 

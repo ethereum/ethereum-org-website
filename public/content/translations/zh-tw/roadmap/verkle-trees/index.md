@@ -60,6 +60,6 @@ Verkle 樹測試網已經啟動並運行，但用戶端仍需要進行大量更�
 - [「Verkle 樹如何讓以太坊變得更加精幹而簡約」Guillaume Ballet 在 Devcon 6 發表的演講](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam 談 ETHDenver 2020 的無狀態用戶端](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Feist 在「零知識」播客上談 Verkle 樹和無狀態用戶端](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Vitalik Buterin 談 Verkle 樹](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Vitalik Buterin 談 Verkle 樹](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist 談 Verkle 樹](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [EIP 文件：Verkle 樹](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

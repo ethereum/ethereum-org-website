@@ -160,7 +160,7 @@ const getRequiredNamespacesForPath = (path: string) => {
     primaryNamespace = "page-bug-bounty"
   }
 
-  if (path === "run-a-node") {
+  if (path.startsWith("/run-a-node")) {
     primaryNamespace = "page-run-a-node"
   }
 
@@ -188,7 +188,10 @@ const getRequiredNamespacesForPath = (path: string) => {
     path.startsWith("/layer-2") ||
     path.startsWith("/nft") ||
     path.startsWith("/roadmap/merge") ||
+    path.startsWith("/roadmap/scaling") ||
+    path.startsWith("/run-a-node") ||
     path.startsWith("/security") ||
+    path.startsWith("/staking/solo") ||
     path.startsWith("/wallets") ||
     path.startsWith("/web3") ||
     path.startsWith("/what-is-ethereum") ||

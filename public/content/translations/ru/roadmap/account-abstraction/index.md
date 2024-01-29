@@ -117,7 +117,7 @@ EIP-4337 — это первый шаг к поддержке нативных �
 - [«Почему абстрагирование аккаунтов несет радикальные перемены для децентрализованных приложений» от Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - [«Абстрагирование аккаунтов — ELI5» от Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Заметки Виталика «Дорога к абстрагированию аккаунтов»](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Блог Виталика о кошельках для социального восстановления](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Блог Виталика о кошельках для социального восстановления](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Примечания к EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Документация EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Примечания к EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

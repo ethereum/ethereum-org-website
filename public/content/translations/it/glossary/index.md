@@ -526,7 +526,7 @@ La seconda fase di sviluppo di Ethereum, lanciata nel marzo 2016 sul blocco 1.15
 
 ### indice {#index}
 
-Una struttura di rete pensata per ottimizzare l'interrogazione di informazioni da tutta la blockchain [](#blockchain) fornendo un percorso efficiente alla sua sorgente di archiviazione.
+Una struttura di rete pensata per ottimizzare l'interrogazione di informazioni da tutta la [blockchain](#blockchain) fornendo un percorso efficiente alla sua sorgente di archiviazione.
 
 ### Inter-exchange Client Address Protocol (ICAP) {#icap}
 
@@ -781,7 +781,7 @@ Numero derivato tramite una funzione unidirezionale da una [chiave privata](#pri
 
 ### ricevuta {#receipt}
 
-Dati restituiti da un client Ethereum per rappresentare il risultato di una particolare [transazione](#transaction), che includono un [hash](#hash) della transazione, il relativo numero di [blocco](#block), il quantitativo di [carburante](#gas) utilizzato e, in caso di distribuzione di uno [contratto intelligente](#smart-contract), l'indirizzo [](#address) del contratto.
+Dati restituiti da un client Ethereum per rappresentare il risultato di una particolare [transazione](#transaction), che includono un [hash](#hash) della transazione, il relativo numero di [blocco](#block), il quantitativo di [carburante](#gas) utilizzato e, in caso di distribuzione di uno [contratto intelligente](#smart-contract), [l'indirizzo](#address) del contratto.
 
 ### attacco con codice rientrante {#re-entrancy-attack}
 
