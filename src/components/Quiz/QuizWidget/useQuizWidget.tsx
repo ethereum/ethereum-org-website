@@ -108,7 +108,9 @@ export const useQuizWidget = ({
     if (!showResults) return
 
     updateUserStats((prevStats) => {
-      const lastScore = prevStats.completed[quizKey][1]
+      const { completed } = prevStats
+      const hasResultsSaved = !!completed[quizKey]
+      const lastScore = hasResultsSaved ? prevStats.completed[quizKey][1] : 0
 
       if (numberOfCorrectAnswers < lastScore) return prevStats
 
