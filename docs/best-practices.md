@@ -149,7 +149,7 @@ Use [the Chakra default breakpoints](https://chakra-ui.com/docs/styled-system/th
 <Text color="primary.base" bg="background.base" />
 ```
 
-> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/@chakra-ui//semanticTokens.ts)
+> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/@chakra-ui/semanticTokens.ts)
 
 > Note 2: all the previous colors defined in the old theme `src/theme.ts` were
 > ported into the new theme for compatibility reasons. Those colors will
