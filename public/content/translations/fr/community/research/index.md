@@ -71,7 +71,7 @@ La couche d'exécution s'occupe de l'exécution des transactions, de l'exécutio
 - [Vers l'expédition de l'état](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Proposition pour l'expiration Verkel et d'état](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Gestion de l'historique](https://eips.ethereum.org/EIPS/eip-4444)
-- [Arbres Verkle](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Arbres Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Échantillonnage de la disponibilité des données](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Développement de clients {#client-development}

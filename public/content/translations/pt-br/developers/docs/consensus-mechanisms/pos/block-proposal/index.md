@@ -8,7 +8,7 @@ Os blocos são as unidades fundamentais da blockchain. Blocos são unidades disc
 
 ## Pré-requisitos {#prerequisites}
 
-A proposta de bloco faz parte do protocolo de prova de participação. Para ajudar a entender esta página, recomendamos que você leia sobre a [prova de participação](public/content/developers/docs/consensus-mechanisms/pos/) e a [arquitetura de bloco](public/content/developers/docs/blocks/).
+A proposta de bloco faz parte do protocolo de prova de participação. Para ajudar a entender esta página, recomendamos que você leia sobre a [prova de participação](/developers/docs/consensus-mechanisms/pos/) e a [arquitetura de bloco](/developers/docs/blocks/).
 
 ## Quem produz os blocos? {#who-produces-blocks}
 

@@ -2,13 +2,14 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
+  type BoxProps,
   chakra,
   Divider,
   Flex,
-  HeadingProps,
+  type HeadingProps,
   Kbd,
   Text,
-  TextProps,
+  type TextProps,
   useToken,
 } from "@chakra-ui/react"
 
@@ -40,13 +41,16 @@ import TableOfContents from "@/components/TableOfContents"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import { getEditPath } from "@/lib/utils/editPath"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
-const ContentContainer = (props: ChildOnlyProp) => {
+type ContentContainerProps = Pick<BoxProps, "children" | "dir">
+
+const ContentContainer = (props: ContentContainerProps) => {
   const boxShadow = useToken("colors", "tableBoxShadow")
-  const borderColor = useToken("colors", "primary.base")
 
   return (
     <Box
@@ -60,11 +64,6 @@ const ContentContainer = (props: ChildOnlyProp) => {
       borderRadius="4px"
       {...props}
       sx={{
-        ".featured": {
-          ps: "1rem",
-          ms: "-1rem",
-          borderInlineStart: `1px dotted ${borderColor}`,
-        },
         ".citation": {
           p: { color: "text200" },
         },
@@ -170,7 +169,10 @@ interface TutorialLayoutProps
   extends ChildOnlyProp,
     Pick<
       MdPageContent,
-      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+      | "tocItems"
+      | "lastUpdatedDate"
+      | "crowdinContributors"
+      | "contentNotTranslated"
     > {
   frontmatter: TutorialFrontmatter
   timeToRead: number
@@ -183,9 +185,11 @@ export const TutorialLayout = ({
   timeToRead,
   lastUpdatedDate,
   crowdinContributors,
+  contentNotTranslated,
 }: TutorialLayoutProps) => {
   const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
+
   const borderColor = useToken("colors", "border")
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null
@@ -208,7 +212,7 @@ export const TutorialLayout = ({
         p={{ base: "0", lg: "0 2rem 0 0" }}
         background={{ base: "background.base", lg: "ednBackground" }}
       >
-        <ContentContainer>
+        <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
           <Heading1>{frontmatter.title}</Heading1>
           <TutorialMetadata frontmatter={frontmatter} timeToRead={timeToRead} />
           <TableOfContents

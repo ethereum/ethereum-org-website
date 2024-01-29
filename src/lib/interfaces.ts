@@ -183,7 +183,6 @@ export interface CommunityEvent {
   date: string
   title: string
   calendarLink: string
-  pastEventLink?: string
 }
 
 export interface ReqCommunityEvent {

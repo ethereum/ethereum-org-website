@@ -208,5 +208,5 @@ Ang ZK-STARK ay itinuturing na hindi apektado ng banta ng quantum computing, dah
 - [Isang Zero-Knowledge Proof: Pagpapahusay ng Privacy sa Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — Isang Makatotohanang Halimbawa at Malalimang Pagsusuri ng Zero-Knowledge](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs — Gumawa ng Nave-verify na Trust, kahit laban sa mga Quantum Computer](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Isang panimula sa pagiging posible ng zk-SNARKs](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Isang panimula sa pagiging posible ng zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Ano ang Zero-Knowledge Proof at ang Papel Nito sa Blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

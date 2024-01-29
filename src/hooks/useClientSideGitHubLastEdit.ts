@@ -6,9 +6,9 @@ import { useRouter } from "next/router"
 import type { Lang, LastUpdatedState } from "@/lib/types"
 
 import {
+  CONTENT_DIR,
   DEFAULT_LOCALE,
   GITHUB_COMMITS_URL,
-  OLD_CONTENT_DIR,
 } from "@/lib/constants"
 
 import { gitHubAuthHeaders } from "@/hooks/useClientSideGitHubContributors"
@@ -18,12 +18,11 @@ const fetchGitHubLastEdit = async (
   locale?: Lang
 ): Promise<LastUpdatedState> => {
   const url = new URL(GITHUB_COMMITS_URL)
-  // TODO: OLD_CONTENT_DIR -> CONTENT_DIR for production
   const localePath =
     locale && locale !== DEFAULT_LOCALE
       ? join("translations", locale, relativePath)
       : relativePath
-  const filePath = join(OLD_CONTENT_DIR, localePath, "index.md")
+  const filePath = join(CONTENT_DIR, localePath, "index.md")
   url.searchParams.set("path", filePath)
 
   try {

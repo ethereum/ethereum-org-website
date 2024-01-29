@@ -60,6 +60,6 @@ summaryPoints:
 - [«Как древа Меркла делают Ethereum эффективным и готовым к работе» — Гийом Балле, Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Пайпер Мерриам о клиентах без состояния на ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Данкрад Фейст объясняет деревья Веркла и клиенты без состояния в подкасте Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Виталик Бутерин о деревьях Веркла](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Виталик Бутерин о деревьях Веркла](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Данкрад Фейст о деревьях Веркла](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Документация EIP деревьев Веркла](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

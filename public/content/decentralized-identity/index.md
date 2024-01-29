@@ -109,7 +109,7 @@ Here's an example to show how on-chain attestations might work in practice:
 
 ### Soulbound tokens and identity {#soulbound}
 
-[Soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) (non-transferable NFTs) could be used to collect information unique to a specific wallet. This effectively creates a unique on-chain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
+[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (non-transferable NFTs) could be used to collect information unique to a specific wallet. This effectively creates a unique on-chain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
 
 ## Benefits of decentralized identity {#benefits-of-decentralized-identity}
 

@@ -173,7 +173,7 @@ contract Oracle {
       uint currentQuorum = 0;
 
       //iterate through oracle list and check if enough oracles(minimum quorum)
-      //have voted the same answer has the current one
+      //have voted the same answer as the current one
       for(uint i = 0; i < totalOracleCount; i++){
         bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
@@ -236,7 +236,7 @@ Centralized oracles aren't guaranteed to always make off-chain data available to
 
 #### Poor incentive compatibility {#poor-incentive-compatibility}
 
-Centralized oracles often have poorly designed or non-existent incentives for the data provider to send accurate/unaltered information. Paying an oracle for for correctness does not guarantee honesty. This problem gets bigger as the amount of value controlled by smart contracts increases.
+Centralized oracles often have poorly designed or non-existent incentives for the data provider to send accurate/unaltered information. Paying an oracle for correctness does not guarantee honesty. This problem gets bigger as the amount of value controlled by smart contracts increases.
 
 ### Decentralized oracles {#decentralized-oracles}
 

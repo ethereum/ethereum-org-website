@@ -12,7 +12,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { AllTimeData, BasePageProps, Unpacked } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -27,6 +27,13 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
+
+type TranslatorDataType = {
+  user: {
+    username: Unpacked<AllTimeData["data"]>["user"]["username"]
+    fullName: Unpacked<AllTimeData["data"]>["user"]["fullName"]
+  }
+}
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -61,40 +68,38 @@ const Contributors = () => {
   const router = useRouter()
 
   // TODO: Remove specific user checks once Acolad has updated their usernames
-  const translatorData =
-    // @ts-expect-error Not able to manually type `allTimeData` (too big). Need to generate a type signature.
-    allTimeData.data.flatMap(
-      // use flatMap to get cleaner object types withouts nulls
-      (item) => {
-        const user = item?.user
-        if (!user) return []
+  const translatorData = (
+    allTimeData as AllTimeData
+  ).data.flatMap<TranslatorDataType>(
+    // use flatMap to get cleaner object types withouts nulls
+    (item) => {
+      const user = item.user
 
-        const userName = user.username
-        if (!userName) return []
+      const userName = user.username
 
-        const fullName = user.fullName ?? ""
+      const fullName = user.fullName
 
-        return userName !== "ethdotorg" &&
-          !userName.includes("LQS_") &&
-          !userName.includes("REMOVED_USER") &&
-          !userName.includes("Aco_") &&
-          !fullName.includes("Aco_") &&
-          !userName.includes("Acc_") &&
-          !fullName.includes("Acc_") &&
-          userName !== "Finnish_Sandberg" &&
-          userName !== "Norwegian_Sandberg" &&
-          userName !== "Swedish_Sandberg"
-          ? [
-              {
-                user: {
-                  username: userName,
-                  fullName: fullName,
-                },
+      return userName !== "ethdotorg" &&
+        !userName.includes("LQS_") &&
+        !userName.includes("REMOVED_USER") &&
+        !userName.includes("Aco_") &&
+        !fullName.includes("Aco_") &&
+        !userName.includes("Acc_") &&
+        !fullName.includes("Acc_") &&
+        userName !== "Finnish_Sandberg" &&
+        userName !== "Norwegian_Sandberg" &&
+        userName !== "Swedish_Sandberg"
+        ? [
+            {
+              user: {
+                username: userName,
+                fullName: fullName,
               },
-            ]
-          : []
-      }
-    ) ?? []
+            },
+          ]
+        : []
+    }
+  )
 
   return (
     <Flex direction="column" align="center" w="full">

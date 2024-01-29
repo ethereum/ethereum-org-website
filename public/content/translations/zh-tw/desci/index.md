@@ -76,7 +76,7 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 
 就像非同質化代幣可以將未來交易的收入返還給原創作者一樣，你可以建立透明的價值歸屬鏈來獎勵研究人員、管理機構（如去中心化自治組織），甚至是資料被收集的研究對象。
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 還是將正在進行的實驗之資料庫去中心化的關鍵，還可以插入非同質化代幣與 [DeFi](/defi/) 金融化（從資產分割到借貸池與價值評估）。 它還允許如 [VitaDAO](https://www.vitadao.com/) 這樣的去中心化自治組織等鏈上原生實體直接在鏈上進行研究。 不可轉移的[「靈魂綁定」代幣](https://vitalik.ca/general/2022/01/26/soulbound.html)的出現，允許個人證明他們的經驗和證書與他們的以太坊地址相關聯，因而也可能在去中心化科研中發揮重要作用。
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 還是將正在進行的實驗之資料庫去中心化的關鍵，還可以插入非同質化代幣與 [DeFi](/defi/) 金融化（從資產分割到借貸池與價值評估）。 它還允許如 [VitaDAO](https://www.vitadao.com/) 這樣的去中心化自治組織等鏈上原生實體直接在鏈上進行研究。 不可轉移的[「靈魂綁定」代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出現，允許個人證明他們的經驗和證書與他們的以太坊地址相關聯，因而也可能在去中心化科研中發揮重要作用。
 
 ### 資料存儲、存取和架構 {#data-storage}
 

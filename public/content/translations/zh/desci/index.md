@@ -76,7 +76,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 就像非同质化代币可以将未来交易的受益转回给原创作者一样，你可以建立透明的价值归属链，以此奖励研究人员、管理机构（比如去中心化自治组织），甚至是数据收集对象。
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 就像一把钥匙，可以打开进行中的研究实验的去中心化数据存储库，还可以插入了同质化代币和[去中心化金融](/defi/)这些金融领域（从分片化到借贷池和价值评估）。 它也允许一些原生链上实体直接在链上进行研究，比如[VitaDAO](https://www.vitadao.com/) 等去中心化自治组织。 不可转移的[“灵魂绑定”代币](https://vitalik.ca/general/2022/01/26/soulbound.html)的出现，也能在去中心化科学中发挥重要作用，它允许个人证明与以太坊地址关联的经验和凭证。
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 就像一把钥匙，可以打开进行中的研究实验的去中心化数据存储库，还可以插入了同质化代币和[去中心化金融](/defi/)这些金融领域（从分片化到借贷池和价值评估）。 它也允许一些原生链上实体直接在链上进行研究，比如[VitaDAO](https://www.vitadao.com/) 等去中心化自治组织。 不可转移的[“灵魂绑定”代币](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出现，也能在去中心化科学中发挥重要作用，它允许个人证明与以太坊地址关联的经验和凭证。
 
 ### 数据存储、访问和架构 {#data-storage}
 

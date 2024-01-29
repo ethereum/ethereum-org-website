@@ -2,13 +2,14 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
+  type BoxProps,
   Divider as ChakraDivider,
   Flex,
-  FlexProps,
-  HeadingProps,
+  type FlexProps,
+  type HeadingProps,
   ListItem as ChakraListItem,
-  ListItemProps,
-  ListProps,
+  type ListItemProps,
+  type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
   useToken,
@@ -47,8 +48,10 @@ import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
 import YouTube from "@/components/YouTube"
 
+import { getEditPath } from "@/lib/utils/editPath"
+
 // Utils
-import { DEFAULT_LOCALE, EDIT_CONTENT_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
 
@@ -71,7 +74,9 @@ const Divider = () => (
   />
 )
 
-const ContentContainer = (props: ChildOnlyProp) => (
+type ContentContainerProps = Pick<BoxProps, "children" | "dir">
+
+const ContentContainer = (props: ContentContainerProps) => (
   <Flex
     justify={"space-between"}
     w="full"
@@ -151,12 +156,6 @@ const Content = (props: ChildOnlyProp) => {
       px={{ base: 8, md: 16 }}
       m="0 auto"
       sx={{
-        ".featured": {
-          ps: 4,
-          ms: -4,
-          borderInlineStart: "1px dotted",
-          borderColor: "primary",
-        },
         ".citation": {
           p: {
             color: "text200",
@@ -210,7 +209,11 @@ export const docsComponents = {
 interface DocsLayoutProps
   extends Pick<
       MdPageContent,
-      "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+      | "slug"
+      | "tocItems"
+      | "lastUpdatedDate"
+      | "crowdinContributors"
+      | "contentNotTranslated"
     >,
     ChildOnlyProp {
   frontmatter: DocsFrontmatter
@@ -222,10 +225,11 @@ export const DocsLayout = ({
   tocItems,
   lastUpdatedDate,
   crowdinContributors,
+  contentNotTranslated,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
 
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
   const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
@@ -240,7 +244,7 @@ export const DocsLayout = ({
           <Translation id="page-developers-docs:banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer>
+      <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
@@ -267,7 +271,7 @@ export const DocsLayout = ({
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop />
           <FeedbackCard isArticle />
-          <DocsNav relativePath={relativePath} />
+          <DocsNav contentNotTranslated={contentNotTranslated} />
         </Content>
         {tocItems && (
           <TableOfContents
