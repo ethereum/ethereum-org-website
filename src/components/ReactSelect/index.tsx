@@ -38,8 +38,7 @@ export type ReactSelectOnChange<Option> = (
  *
  * @see {@link https://react-select.com/props#select-props} for the list of valid props
  *
- * `WARNING`: the `isSearchable`, `unstyled`, and `menuPlacement` props are locked.
- * `isSearchable` is set to `false` until the design system implements a combobox.
+ * `WARNING`: the  `unstyled`, and `menuPlacement` props are locked and should not be altered, per Design System.
  */
 const ReactSelect = <
   Option,
@@ -48,10 +47,7 @@ const ReactSelect = <
 >({
   variant,
   ...rest
-}: Omit<
-  Props<Option, IsMulti, Group>,
-  "isSearchable" | "unstyled" | "menuPlacement"
-> & {
+}: Omit<Props<Option, IsMulti, Group>, "unstyled" | "menuPlacement"> & {
   variant?: ThemingProps<"ReactSelect">["variant"]
 }) => {
   const styles = useMultiStyleConfig("ReactSelect", { variant })
@@ -71,8 +67,8 @@ const ReactSelect = <
             position: "absolute",
           }),
         }}
-        {...rest}
         isSearchable={false}
+        {...rest}
         unstyled
         menuPlacement="bottom"
       />

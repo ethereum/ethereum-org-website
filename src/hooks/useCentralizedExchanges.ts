@@ -12,6 +12,7 @@ import { useTranslation } from "next-i18next"
 // import squarelink from "@/public/wallets/squarelink.png"
 // import trust from "@/public/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
+import { ReactSelectOnChange } from "@/components/ReactSelect"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -294,9 +295,10 @@ export const useCentralizedExchanges = () => {
     }))
     .sort((a, b) => a.value.localeCompare(b.value))
 
-  const handleSelectChange = (
-    selectedOption: ExchangeByCountryOption
-  ): void => {
+  const handleSelectChange: ReactSelectOnChange<ExchangeByCountryOption> = (
+    selectedOption
+  ) => {
+    if (!selectedOption) return
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
