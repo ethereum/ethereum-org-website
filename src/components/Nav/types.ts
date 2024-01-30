@@ -1,4 +1,5 @@
-import { IconType } from "react-icons"
+import type { RefObject } from "react"
+import type { IconType } from "react-icons"
 
 type LinkOnly = { href: string, items?: never }
 type ItemsOnly = { items: NavItem[], href?: never }
@@ -26,4 +27,5 @@ export type NavSectionDetail = {
 export type NavSections = Record<NavSectionKey, NavSectionDetail>
 
 export type Level = 1 | 2 | 3 | 4
-export type LvlRefs = Record<"lvl1" | "lvl2" | "lvl3", React.RefObject<HTMLDivElement>>
+
+export type LvlRefs = Record<"lvl1" | "lvl2" | "lvl3", RefObject<HTMLDivElement>>

@@ -101,6 +101,7 @@ const semanticTokens = {
     menu: {
       stroke: { _light: "gray.200", _dark: "gray.600" },
       highlight: "primary.base",
+      active: "primary.highContrast",
       lvl1: {
         main: "body.base",
         subtext: { _light: "gray.400", _dark: "gray.400" },
