@@ -1,6 +1,6 @@
 const i18nConfig = require("./i18n.config.json")
 
-const BUILD_LOCALES = process.env.BUILD_LOCALES
+const BUILD_LOCALES = process.env.BUILD_LOCALES ?? false
 // Supported locales defined in `i18n.config.json`
 const locales = BUILD_LOCALES
   ? BUILD_LOCALES.split(",")
