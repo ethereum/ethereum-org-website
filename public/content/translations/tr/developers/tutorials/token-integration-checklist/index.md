@@ -8,7 +8,7 @@ tags:
   - "akıllı kontratlar"
   - "güvenlik"
   - "jetonlar"
-skill: beginner
+skill: intermediate
 published: 2020-08-13
 source: Güvenli sözleşmeler oluşturmak
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md

@@ -156,7 +156,7 @@ _主にプロトコルや分散型アプリ(Dapp)の分散型開発や分散型�
 - [分散型自律組織(DAO)のデジタルコミュニティの作成方法](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [分散型自律組織(DAO)とは](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [ホログラフィック・コンセンサスとは](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [分散型自律組織(DAO)とは企業ではなく、分散型の自律組織 – Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [分散型自律組織(DAO)とは企業ではなく、分散型の自律組織 – Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [分散型自律組織(DAO)、分散型自律企業(DAC)、分散型アプリケーション(DA)など: 不完全な用語集](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [イーサリアムブログ](https://blog.ethereum.org)
 
 ### 動画 {#videos}

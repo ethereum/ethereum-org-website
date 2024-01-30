@@ -9,265 +9,241 @@ A blokkfelfedezők a portálod az Ethereum adataihoz. Használatukkal valós ide
 
 ## Előfeltételek {#prerequisites}
 
-Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdj itt: [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/).
+Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdjen itt: [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/).
 
 ## Szolgáltatások {#services}
 
-- [Etherscan](https://etherscan.io/) –_Elérhető kínaiul, koreaiul, oroszul és japánul_
-- [Etherchain](https://www.etherchain.org/)
-- [Ethplorer](https://ethplorer.io/)
-- [Blockchair](https://blockchair.com/ethereum) –_Elérhető spanyolul, franciául, olaszul, hollandul, portugálul, oroszul, kínaiul és újperzsa nyelven_
+- [Etherscan](https://etherscan.io/) –_ elérhető kínai, koreai, orosz és japán nyelven is_
+- [Beaconcha.in](https://beaconcha.in/)
+- [Blockchair](https://blockchair.com/ethereum) –_ Spanyol, francia, olasz, holland, portugál, orosz, kínai és fárszi nyelven is elérhető_
 - [Blockscout](https://blockscout.com/)
+- [Etherchain](https://www.etherchain.org/)
+- [Ethplorer](https://ethplorer.io/) –_Kínai, spanyol, francia, török, orosz, koreai és vietnámi nyelven is elérhető_
 - [OKLink](https://www.oklink.com/eth)
+- [Otterscan](https://otterscan.io/)
+- [Rantom](https://rantom.app/)
+- [Sirato](https://www.web3labs.com/sirato)
+- [EthVM](https://www.ethvm.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
 ## Adat {#data}
 
-Az Ethereum tervezése folytán transzparens, így minden ellenőrizhető. A blokkfelfedezők egy felületet biztosítanak, hogy ez az információ elérhető legyen. És ez igaz az Ethereum főhálózatára és a teszt hálózatokra, ha szükséged van az adatokra.
+Az Ethereum tervezése folytán transzparens, így minden ellenőrizhető. A blokkfelfedezők egy felületet biztosítanak, hogy ez az információ elérhető legyen. És ez igaz az Ethereum főhálózatára és a teszt hálózatokra, ha szükséged van az adatokra. Az adatok végrehajtási adatokra és konszenzusadatokra oszthatók. A „végrehajtási adatok” megnevezés egy konkrét blokkban végrehajtott tranzakciókra vonatkoznak. A „konszenzusadatok” megnevezés magukra a blokkokra és a blokkokat előterjesztő validátorokra vonatkozik.
 
 Itt egy összefoglaló azokról az adatokról, melyet egy blokkfelfedezőről megszerezhetsz.
 
-### Blokkok {#blocks}
+### Végrehajtási adatok {#execution-data}
 
-Új blokkok adódnak hozzá az Ethereumhoz minden ~12 másodpercben (ez változhat) így van egy közel állandó adatfolyam, mely hozzáadódik a blokkfelfedezőkhöz. A blokkok sok fontos adatot tartalmaznak, melyeket hasznosnak találhatsz:
+Az Ethereum hálózata minden 12 másodpercben új blokkal bővül (kivéve, ha a blokkelőterjesztő elszalasztja a lehetőségét), így van egy közel állandó adatfolyam, amely hozzáadódik a blokkfelfedezőkhöz. A blokkok sok fontos adatot tartalmaznak, melyeket hasznosnak találhatsz:
 
 **Standard adat**
 
-- Blokk magasság - A blokk szám és a blokklánc hossza (blokkokban) a jelenlegi blokk létrehozásánál.
-- Időbélyeg – Az időpont, amikor egy bányász kibányászta a blokkot.
-- Tranzakciók – a blokkban lévő tranzakciók száma.
-- Bányász – A bányász címe, aki kibányászta a blokkot.
-- Jutalom – Az ETH mennyiség, melyet a bányász kap jutalmul, hogy hozzáadta a blokkot (alap 2ETH díj + minden tranzakció díja, mely a blokkban szerepelt).
-- Nehézség – A blokk kibányászásához rendelt nehézség.
-- Méret – A blokkban lévő adat mérete (bájtban mérve).
-- Felhasznált gáz – A teljes gáz egység, melyet a tranzakciók felhasználtak a blokkban.
-- Gáz limit – A teljes gáz limit, melyet a tranzakciók beállítottak a blokkban.
-- Extra adat – Bármely extra adat, melyet a bányász belefoglalt a blokkba.
+- Blokkmagasság – a blokklánc hossza és a benne foglalt blokkok száma (blokkokban kifejezve) az aktuális blokk létrehozásakor.
+- Időbélyegző – a blokkjavaslat megjelenésének időpontja.
+- Tranzakciók – a blokkban foglalt tranzakciók száma.
+- Díj címzettje – az a cím, amely a tranzakciókból származó gasdíjtételeket megkapta.
+- Blokkjutalom – a blokkot előterjesztő validátornak megítélt ETH-összeg.
+- Méret – a blokkban foglalt adat mérete (bájtban kifejezve).
+- Felhasznált gas – a teljes gasmennyiség, amelyet a blokkban foglalt tranzakciók felhasználtak.
+- Gaskorlátozás – a blokkban foglalt tranzakciók által beállított teljes gaskorlátozás.
+- Alapdíj/gas – az a minimumszorzó, amely egy tranzakció felvételéhez szükséges az adott blokkba.
+- Elégetett díjak – a blokkban elégetett ETH mennyisége.
+- Extra adat – Bármely extra adat, amelyet a bányász belefoglalt a blokkba.
 
 **Haladó adat**
 
-- Hash – A kriptográfiai hash, mely a blokk fejlécét reprezentálja (a blokk egyedi azonosítója).
-- Szülő hash – Annak a blokknak a hash-e, mely a jelenlegi blokk előtt jött.
-- Sha3Uncles – Az adott szülőhöz tartozó összes uncle kombinált hash-e.
-- StateRoot – A Merkle fa gyökér hash-e, mely a rendszer teljes állapotát tárolja.
-- Nonce – Egy érték, mely demonstrálja a proof-of-work-öt egy blokkra a bányász által.
-
-**Uncle blokkok**
-
-Az uncle blokkok akkor jönnek létre, amikor két bányász közel azonos időben hoz létre két blokkot - csak egy blokkot lehet érvényesíteni a csomópontokon keresztül. Nem tartoznak a lánchoz, de így is jutalom jár értük a munkáért.
-
-A blokkfelfedezők információkat szolgáltatnak az uncle blokkokról úgy, mint:
-
-- Az uncle blokk száma.
-- Az előfordulás időpontja.
-- A blokk magasság, ahol létrejött.
-- Ki bányászta ki.
-- Az ETH jutalom.
+- Hash – a kriptográfiai hash, amely a blokkfejlécét adja (a blokk egyedi azonosítója).
+- Anyahash – az aktuális blokk előtt kiadott blokk hashértéke.
+- StateRoot – A Merkle-fa gyökérhash-értéke, amely a rendszer teljes állapotát tárolja.
 
 ### Üzemanyag {#gas}
 
-A blokkfelfedezők nem csak a tranzakciók és blokkok gáz felhasználásáról adnak információt, hanem némelyik a hálózat aktuális gázárairól is tájékoztat. Ez segít megérteni a hálózati kihasználtságot, biztonságos tranzakciókat indítani, és nem túlköltekezni az gázból. Keress olyan API-okat, melyek segítenek megadni ezt az információt a terméket felületére. A gáz-specifikus adat a következőket fedi le:
+A blokkfelfedezők nemcsak a tranzakciók és blokkok gasfelhasználásáról adnak információt, hanem némelyik a hálózat aktuális gasárairól is tájékoztat. Ez segít megérteni a hálózathasználatot, biztonságos tranzakciókat indítani, és nem túlkölteni a gast. Keressen olyan API-kat, amelyek segítenek felvinni ezt az információt a terméke felületére. A gasspecifikus adat a következőket fedi le:
 
-- A biztonságos, de lassú tranzakcióhoz szükséges gázegység becslése (+ becsült ár és idő).
-- Az átlagos idejű tranzakcióhoz szükséges gázegység becslése (+ becsült ár és idő).
-- Az gyors tranzakcióhoz szükséges gázegység becslése (+ becsült ár és idő).
-- Az átlagos megerősítési idő a gáz ár alapján.
-- Gázt fogyasztó szerződések – máshogy megfogalmazva, olyan népszerű termékek, melyeknek használata számottevő a hálózaton.
-- Gázt költő számlák – vagyis, gyakori hálózati felhasználók.
+- A biztonságos, de lassú tranzakcióhoz szükséges gasmennyiség becslése (+ becsült ár és idő)
+- Az átlagos tranzakcióhoz szükséges gasmennyiség becslése (+ becsült ár és idő)
+- A gyors tranzakcióhoz szükséges gasmennyiség becslése (+ becsült ár és idő)
+- Átlagos megerősítési idő a gasár alapján
+- gasfogyasztó szerződések – más szóval olyan népszerű termékek, amelyeket sokat használnak a hálózaton.
+- gasköltő számlák – más szóval a rendszeres hálózathasználók.
 
 ### Tranzakciók {#transactions}
 
-A blokkfelfedezők lettek a leggyakoribb hely az emberek számára, hogy nyomon kövessék a tranzakcióik folyamatát. Ennek az az oka, hogy a részletesség, amiben részesülhetsz, extra bizonyossággal bír. A tranzakció adat a következőket tartalmazza:
+A blokkfelfedezők bevett eszközzé váltak az emberek kezében, hogy nyomon kövessék a tranzakcióik alakulását. Ennek az az oka, hogy az elérhető részletesség extra bizonyosságot nyújt. A tranzakcióadatok a következőket tartalmazzák:
 
-**Standard adat**
+**Standard adatok**
 
-- Tranzakció hash – A tranzakció elküldésekor egy hash generálódik.
-- Státusz – Egy jelzés arról, hogy a tranzakció függőben van-e, meghiúsult vagy sikeres volt-e.
-- Blokk – A blokk, mely a tranzakciót tartalmazza.
-- Időbélyeg – Az időpont, amikor egy bányász kibányászta a tranzakciót.
-- Kitől (from) – A számla címe, amelyik elküldte a tranzakciót.
-- Kinek (To)– A címzett vagy az okosszerződés címe, amivel a tranzakció interakcióba lép.
-- Átutalt tokenek – Egy tokenekből álló lista, melyek át lettek utalva a tranzakcióban.
+- Tranzakcióhash – a tranzakció elküldésekor a rendszer által generált hashérték.
+- Állapot – jelzés arról, hogy a tranzakció függőben van, meghiúsult vagy sikeres volt.
+- Blokk – a blokk, amely a tranzakciót tartalmazza.
+- Időbélyegző – az időpont, amikor egy bányász kibányászta a tranzakciót.
+- Feladó (From) – a tranzakciót elküldő számla címe.
+- Címzett (To) – a fogadó fél vagy az okosszerződés címe, amellyel a tranzakció interakcióba lép.
+- Átutalt tokenek – olyan tokenekből álló lista, amelyek át lettek utalva a tranzakcióban.
 - Érték – Az átutalt ETH összértéke.
-- Tranzakciós díj – A bányásznak fizetett összeg, hogy feldolgozza a tranzakciót (a gáz ár\* felhasznált gázból számolva).
+- Tranzakciós illeték – A bányásznak fizetett összeg, hogy feldolgozza a tranzakciót (számítása: gasár × felhasznált gas).
 
-**Haladó adat**
+**Részletes adatok**
 
-- Gáz limit – A maximális gáz egység, melyet ez a tranzakció elfogyaszthat.
-- Felhasznált gáz – A tényleges mennyiség, melyet ez a tranzakció elfogyasztott.
-- Gáz ár – Egy gáz egységre beállított ár.
-- Nonce – A `from` cím tranzakciós száma (ne feledd, hogy nullával kezdődik, így `100`-as nonce valójában a 101.-edik tranzakciót jelenteni, melyet a erről a számláról küldtek.)
-- Input adat– Bármely extra információ a tranzakcióban.
+- Gaskorlátozás – a gasegységek maximális száma, amelyet ez a tranzakció elfogyaszthat.
+- Felhasznált gas – a tényleges gasmennyiség, amelyet ez a tranzakció elfogyasztott.
+- Gasár – egy gasegységre beállított ár.
+- Nonce – a `from` cím tranzakciószáma (ne feledje, hogy a számozás nullánál kezdődik, így a `100`-as nonce valójában az adott számláról küldött 101. tranzakciót jelenteni).
+- Bemeneti adat – a tranzakció által megkövetelt bármely extra adat.
 
 ### Számlák {#accounts}
 
-Rengeteg adatot tudsz egy számláról elérni. Ezért ajánlott, hogy több számlát használj, így a vagyonod és az értéke nehezebben lekövethető. Vannak azonban fejlesztés alatt álló megoldások, melyek a tranzakciókat és a számlákat privátabbá teszik. De itt van az adat, melyet elérhetsz a számlákról:
+Egy adott számláról rengeteg adat elérhető. Ezért gyakran javasoljuk több számla használatát, hogy az eszközök és az érték ne legyen könnyen követhető. Vannak azonban fejlesztés alatt álló megoldások, amelyek nagyobb védelmet nyújtanak a tranzakció- és számlaadatoknak. De most nézzük meg a számlákról elérhető adatokat:
 
 **Felhasználói számlák**
 
-- Számla cím – A nyilvános cím, melyre pénzt küldhetsz.
-- ETH egyenleg – A számlához tartozó ETH mennyisége.
-- Teljes ETH érték – Az ETH értéke.
-- Tokenek – A számlához tartozó tokenek és az értékeik.
-- Tranzakció történet – Az összes tranzakciót tartalmazó lista, ahol a számla vagy a küldő volt vagy a címzett.
+- Számlacím – a nyilvános cím, amelyre pénzt küldhet.
+- ETH egyenleg – a számlához tartozó ETH mennyisége.
+- Teljes ETH érték – az ETH értéke.
+- Tokenek – a számlához tartozó tokenek és értékeik.
+- Tranzakciótörténet – az összes tranzakciót tartalmazó lista, ahol a számla volt a küldő vagy a címzett.
 
 **Okosszerződések**
 
-Az okosszerződés számlák rendelkeznek az összes adattal, amivel a felhasználói számlák is, de némelyik blokkfelfedező valamennyi kód információt is szolgáltat. Úgy, mint:
+Az okosszerződés-számlák rendelkeznek az összes adattal, amivel a felhasználói számlák is, de némelyik blokkfelfedező némi kódinformációt is szolgáltat. Többek között például:
 
-- Szerződés létrehozó – A cím, amelyik feltöltötte a szerződést a főhálózatra.
-- Létrehozó tranzakció – A tranzakció, mely tartalmazta a telepítést a főhálózatra.
-- Forráskód – Az okosszerződés solidity vagy vyper kódja.
-- Szerződés ABI – A szerződés Application Binary Interface – a szerződés általi hívásokat tartalmazza és a kapott adatokat.
-- Szerződés létrehozás kód – Az okosszerződés lefordított bájtkódja – akkor jön létre, amikor Solidity-ben vagy Vyper-ben írt okosszerződést fordítasz.
-- Szerződés események – Az okosszerződés által meghívott metódusok története. Lényegében egy mód arra, hogy lássuk hogyan használják a szerződést és milyen gyakran.
+- Szerződés létrehozója – a cím, amelyik feltöltötte a szerződést a fő hálózatra.
+- Létrehozó tranzakció – a tranzakció, amely tartalmazta a telepítést a fő hálózatra.
+- Forráskód – az okosszerződés solidity vagy vyper kódja.
+- Szerződés ABI – a szerződés Application Binary Interface-e (alkalmazásprogramozói interfésze) – a szerződés általi hívásokat és a kapott adatokat tartalmazza.
+- Szerződés létrehozási kódja – az okosszerződés lefordított bájtkódja – akkor jön létre, amikor Ön Solidityben vagy Vyperben stb. írt okosszerződést fordít.
+- Szerződésesemények – az okosszerződésben lehívott módszerek előzményei. Alapvetően azt mutatja meg, hogyan és milyen gyakran használják a szerződést.
 
 ### Tokenek {#tokens}
 
-A token egy szerződés típus, így az okosszerződésekhez hasonló adatokkal rendelkezik. De mivel van értéke és lehet vele kereskedni, ezért további adatpontjai is vannak:
+A token egy szerződéstípus, így az okosszerződésekhez hasonló adatokkal rendelkezik. De mivel van értéke és lehet vele kereskedni, ezért további adatpontjai is vannak:
 
-- Típus – Lehet ERC-20, ERC-721 vagy más tokenszabvány.
-- Árfolyam – Ha egy ERC-20, akkor van jelenlegi piaci értéke.
-- Piaci kapitalizáció – Ha ERC-20, akkor van egy piaci kapitalizációja (az árfolyam \* teljes készletből számolva).
-- Teljes készlet– A forgalomban lévő tokenek száma.
-- Tartók – A tokent tartó címek száma.
-- Átutalások – A számlák közötti átutalások száma.
-- Tranzakciós történet – Az összes tokent tartalmazó tranzakció előzménye.
-- Szerződés cím – A token címe, melyet feltelepítettek a főhálózatra.
-- Tizedesjegyek – Az ERC-20 tokenek oszthatóak és vannak tizedes helyeik.
+- Típus – lehet ERC-20, ERC-721 vagy más tokenszabvány.
+- Árfolyam – ha egy ERC-20, akkor van aktuális piaci értéke.
+- Piaci kapitalizáció – ha ERC-20, akkor van piaci kapitalizációja (számítása: árfolyam × teljes kínálat).
+- Teljes kínálat – a forgalomban lévő tokenek száma.
+- Tulajdonosok – a tokent birtokló címek száma.
+- Átutalások – a számlák közötti tokenátutalások esetszáma.
+- Tranzakciótörténet – az adott tokent tartalmazó összes korábbi tranzakció.
+- Szerződéscím – a fő hálózatra feltelepített token címe.
+- Tizedesjegyek – az ERC-20 tokenek oszthatók és vannak tizedes helyeik.
 
 ### Hálózat {#network}
 
-Természetesen olyan adat is rendelkezésünkre áll, mely a hálózat egészségéről árulkodik. Ezek elég specifikusak az Ethereum proof-of-work konszenzus mechanizmusára nézve. Amikor az Ethereum áttér az Eth2-re néhány adat redundánssá válik majd
+Egyes blokkadatok holisztikusabb módon foglalkoznak az Ethereum-hálózat egészségével.
 
-- Nehézség – A jelenlegi bányászati nehézség.
-- Hash ráta – Egy becslés arról, hogy mennyi hash-t generálnak az Ethereum bányászok, akik a jelenlegi Ethereum blokkot vagy bármely adott blokkot próbálják megoldani.
-- Összes tranzakció – Az Ethereum létrehozása óta történt összes tranzakciók száma.
-- Tranzakció per másodperc – Egy másodperc alatt feldolgozható tranzakciók száma.
-- ETH árfolyam – 1 ETH jelenlegi értéke.
-- Teljes ETH készlet – Forgalomban lévő ETH mennyiség – ne feledd, hogy új ETH jön létre minden egyes blokk létrejötte után blokkjutalom formájában.
-- Piaci kapitalizáció – Az árfolyam \* készletből számolva.
+- Összes tranzakció – az Ethereum létrehozása óta végbement összes tranzakció száma.
+- Tranzakció/másodperc – az egy másodperc alatt feldolgozható tranzakciók száma.
+- ETH-árfolyam – 1 ETH aktuális értéke.
+- Teljes ETH-kínálat – a forgalomban lévő ETH-mennyiség – ne feledje, hogy minden egyes blokk létrejöttével új ETH jön létre blokkjutalom formájában.
+- Piaci kapitalizáció – számítása: árfolyam × kínálat.
 
-## Eth2 adat {#consensus-layer-data}
-
-Az Eth2 frissítések még fejlesztés alatt állnak, de érdemes megemlíteni az adatokat, melyet a felfedezők biztosítanak majd számodra. Valójában az összes adat elérhető a tesztneteken jelenleg.
-
-Ha nem ismered az Eth2-t, akkor tekintsd meg az [összefoglalónkat az Eth2 fejlesztésekről](/roadmap/).
+## Konszenzusréteg-adatok {#consensus-layer-data}
 
 ### Korszak {#epoch}
 
-Az első Eth2 fejlesztés, a beacon chain, fogja létrehozni a validátorokból álló bizottságokat, melyek biztonsági okokból véletlenszerűen állnak össze minden korszak (epoch) végén (minden 6.4 percben). A korszak adat a következőket tartalmazza:
+Biztonsági okokból minden korszak végén (vagyis 6,4 percenként) véletlenszerűen összeállított validátorbizottságok jönnek létre. A korszakadatok a következőket tartalmazzák:
 
-- Korszak szám.
-- Véglegesített státusz – Véglegesült-e egy korszak (Igen/Nem).
-- Idő – Az idő, amikor véget ért egy korszak.
-- Tanúsítások – A korszakon belüli tanúsítások száma (blokkokra történő szavazás a slotokon belül).
-- Letétek – A korszakban lévő ETH letétek száma (a validátoroknak ETH-et kell letenniük, hogy validátorok legyenek).
-- Megvágás – A blokk javaslattevők és tanúsítók számára kirótt büntetések száma.
-- Szavazati részvétel – A letétbe helyezett ETH mennyisége, melyet blokk tanúsításra használtak.
-- Validátorok – A korszakban lévő aktív validátorok száma.
-- Átlagos validátor egyenleg – Aktív validátorok átlagos egyenlege.
-- Slotok – A korszakban lévő szlotok száma (egy slot egy érvényes blokkot tartalmaz).
+- Korszak száma
+- Véglegesített állapot – véglegessé vált-e a korszak (Igen/Nem).
+- Idő – az idő, amikor véget ért a korszak.
+- Tanúsítások – a korszakon belüli tanúsítások száma (szavazás blokkokra a slotokon belül).
+- Letétek – a korszakban foglalt ETH-letétek száma (a validátoroknak ETH-t kell letenniük, hogy validátorok lehessenek).
+- Megvágások – a blokkelőterjesztőknek és tanúsítóknak kirótt büntetések száma.
+- Szavazási részvétel – a letétbe helyezett ETH-mennyiség, amelyet blokktanúsításra használtak.
+- Validátorok – a korszakban aktív validátorok száma.
+- Átlagos validátoregyenleg – az aktív validátorok átlagos egyenlege.
+- Slotok – a korszakban lévő slotok száma (a slotok egy érvényes blokkot tartalmaznak).
 
 ### Slot {#slot}
 
-A slotok blokk létrehozási lehetőségek, az egyes slotokra elérhető adat a következőket tartalmazza:
+A slotok blokklétrehozási lehetőségek. Az egyes slotokra elérhető adat a következőket tartalmazza:
 
-- Korszak – A korszak, amiben érvényes a slot.
-- Slot szám.
-- Státusz – A slot státusza (Javasolt/Kihagyott).
-- Idő – A slot időbélyege.
-- Javaslattevő– A validátor, aki javasolta a blokkot a slotba.
-- Blokk gyökér – A BeaconBlock hash-fa-gyökere.
-- Szülő gyökér – Az előző blokk hash-e.
-- Állapot gyökér – A BeaconState hash-fa-gyökere.
-- Aláírás.
-- Randao megjelenítés.
-- Graffiti – A blokk javaslattevő bele tehet egy 32 bájt hosszú üzenetet a blokk javaslatába.
-- ETH1 adat.
-  - Blokk hash.
-  - Letét méret.
-  - Letét gyökér.
-- Tanúsítások – A tanúsítások száma ebben a slotban erre a blokkra.
-- Letétek – A letétek száma a slot alatt.
-- Önkéntes kilépők – A kilépő validátorok száma slot alatt.
-- Megvágás – A blokk javaslattevők és tanúsítók számára kirótt büntetések száma.
-- Szavazatok – A validátorok, akik a blokkra szavaztak ebben a slotban.
+- Korszak – a korszak, amelyben érvényes a slot.
+- Slot száma
+- Állapot – a slot állapota (javasolt/kihagyott).
+- Idő – a slot időbélyegzője.
+- Előterjesztő – a validátor, aki javasolta a blokkot a slotba.
+- Blokkgyökér – a BeaconBlock hash-fa-gyökere.
+- Anyagyökér – a megelőző blokk hashértéke.
+- Állapotgyökér – a BeaconState hash-fa-gyökere.
+- Aláírás
+- Randao megjelenítés
+- Graffiti – a blokkelőterjesztő belefoglalhat egy 32 bájt hosszú üzenetet a blokkjavaslatába.
+- Végrehajtási adatok
+  - Blokkhash
+  - Letétszám
+  - Letétgyökér
+- Tanúsítások – a tanúsítások száma a slotban erre a blokkra.
+- Letétek – a letétek száma a slot alatt.
+- Önkéntes kilépők – a kilépő validátorok száma a slot alatt.
+- Megvágások – a blokkelőterjesztőknek és tanúsítóknak kirótt büntetések száma.
+- Szavazatok – a validátorok, akik a blokkra szavaztak ebben a slotban.
 
 ### Blokkok {#blocks-1}
 
-Az Eth2-ben a blokkok máshogy működnek, mivel a bányászokat felváltják a validátorok, valamint a beacon chain bevezeti a slotokat és a korszakokat az Ethereumba. Ez több adatot jelent!
+A proof-of-stake mechanizmus az időt slotokra és korszakokra osztja. Tehát ez új adatokat jelent!
 
-- Javaslattevő – A validátor, akit véletlenszerűen választottak ki, hogy javasoljon egy új blokkot.
-- Korszak– A korszak, amiben a blokkot javasolták.
-- Slot– A slot, amiben a blokkot javasolták.
-- Tanúsítások – A slotban lévő tanúsítások száma. A tanúsítások olyanok, mint a szavazatok, melyek azt jelzik, hogy a blokk készen áll, hogy beacon chainhez adódjon.
+- Előterjesztő – az a validátor, akit algoritmussal választott ki a rendszer, hogy új blokkra tegyen javaslatot.
+- Korszak – a korszak, amelyben a blokkot előterjesztették.
+- Slot – a slot, amelyben a blokkot előterjesztették.
+- Tanúsítások – a slotban foglalt tanúsítások száma. A tanúsítások olyanok, mint a szavazatok, amelyek azt jelzik, hogy a blokk már továbbítható a Beacon láncra.
 
 ### Validátorok {#validators}
 
-A validátorok felelősek új blokkok felterjesztéséért és tanúsításáért a slotokon belül.
+A validátorok felelnek a blokkok előterjesztéséért és tanúsításáért a slotokon belül.
 
-- Validátor szám– Egyedi szám, mely a validátort reprezentálja.
-- Jelenlegi egyenleg – A validátor egyenlege a jutalmakkal együtt.
-- Effektív egyenleg – A validátor egyenlege, mely letétbe helyezéshez van felhasználva.
-- Bevétel – A jutalmak vagy büntetések, melyet a validátor kapott.
-- Státusz – Aktív-e a validátor jelenleg vagy nem.
-- Tanúsítási hatékonyság – Az átlagos idő, mely a validátor tanúsításának a lánchoz történő hozzáadásához szükséges.
-- Aktiválási jogosultság – Dátum (és korszak), amikor a validátor elérhetővé vált a validálásra.
-- Aktív ettől – Dátum (és korszak), amikor a validátor aktívvá vált.
-- Javasolt blokkok – A blokk, melyet a validátor javasolt.
-- Tanúsítások – A validátor által biztosított tanúsítások.
-- Letétek – A küldő címe, tranzakció hash-e, blokk száma, időbélyege, mennyisége és a státusza a validátor által elhelyezett letétnek.
+- Validátorszám – egyedi szám, amely a validátort jelöli.
+- Aktuális egyenleg – a validátor egyenlege a jutalmakkal együtt.
+- Tényleges egyenleg – a validátor letéthez használt egyenlege.
+- Bevétel – a validátor által kapott jutalmak vagy büntetések.
+- Állapot – éppen online és aktív a validátor, vagy sem.
+- Tanúsítási hatékonyság – az átlagos idő, amely a validátor tanúsításának lánchoz adásához szükséges.
+- Aktiválási jogosultság – dátum (és korszak), amikor a validátor számára elérhetővé vált a validálás.
+- Aktív ettől – dátum (és korszak), amikor a validátor aktívvá vált.
+- Javasolt blokkok – a validátor által előterjesztett blokkok.
+- Tanúsítások – a validátor által biztosított tanúsítások.
+- Letétek – a küldő címe, a tranzakció hashértéke, a blokk száma, időbélyegzője, a validátori letét összege és állapota.
 
 ### Tanúsítások {#attestations}
 
-A tanúsítások "igen" szavazatok arra, hogy a blokkot a lánchoz adják. Az adataik kapcsolódnak a tanúsítások bejegyzéseihez és a tanúsító validátorokhoz
+A tanúsítások „igen” szavazatok arra, hogy a blokkot a lánchoz adják. Az adataik kapcsolódnak a tanúsítások nyilvántartásához és a tanúsító validátorokhoz.
 
-- Slot – A slot, ahol a tanúsítás megtörtént.
-- Bizottság index – A bizottság indexe az adott slotban.
-- Összesítő bitek – Az aggregált tanúsítást reprezentálja minden résztvevő validátorra a tanúsításban.
-- Validátorok– A validátorok, akik tanúsításokat szolgáltattak.
-- Beacon blokk gyökér – Arra a blokkra mutat, amelyet a validátorok tanúsítanak.
-- Forrás – A legutolsó igazolt korszakra mutat.
-- Cél – A legutolsó korszak határra mutat.
-- Aláírás.
+- Slot – a slot, amelyben a tanúsítás történt.
+- Bizottságindex – a bizottság indexe az adott slotban.
+- Összesítő bitek – az aggregált tanúsítást mutatja a tanúsításban részt vevő minden validátorra.
+- Validátorok – a tanúsításokat szolgáltató validátorok.
+- Beacon-blokkgyökér – arra a blokkra mutat, amelyet a validátorok tanúsítanak.
+- Forrás – a legutolsó igazolt korszakra mutat.
+- Cél – a legutolsó korszakhatárra mutat.
+- Aláírás
 
 ### Hálózat {#network-1}
 
-Az Eth2 felső szintű adat a következőket tartalmazza:
+A konszenzusréteg felső szintű adatai a következők:
 
-- Jelenlegi korszak.
-- Jelenlegi slot.
-- Aktív validátorok – Aktív validátorok száma.
-- Függőben lévő validátorok – A validátorok száma, akik az aktiválásra várnak.
-- Letett ETH – A hálózatba letétbe helyezett ETH mennyisége.
-- Átlag egyenleg – A validátorok átlagos ETH egyenlege.
+- Aktuális korszak
+- Aktuális slot
+- Aktív validátorok – aktív validátorok száma.
+- Függőben lévő validátorok – az aktiválásra váró validátorok száma.
+- Letétbe helyezett ETH – a hálózaton letétbe helyezett ETH-mennyiség.
+- Átlagos egyenleg – a validátorok átlagos ETH-egyenlege.
 
 ## Blokk felfedezők {#block-explorers}
 
-- [Etherscan](https://etherscan.io/) – egy blokkfelfedező, ahol adatokat kérhetsz le az Ethereum főhálózatról, Ropsten tesztnetről, Kovan tesztnetről, Rinkeby tesztnetről, és a Goerli tesztnetről.
-- [Blockscout](https://blockscout.com/) – a következő hálózatokra fókuszál:
-  - xDai – a MakerDAO DAI stablecoinja és a POA mellékláncánal okos kombinációja, valamint tokenbridge technológia.
-  - POA – Egy melléklánc és autonóm hálózat, melyet egy megbízható validátorokból álló csoport tart biztonságban. A hálózat összes validátora az Egyesült Államokban van bejegyezve és a információik nyilvánosan elérhetőek.
-  - POA Sokol Tesztnet.
-  - ARTIS – egy Ethereum kompatibilis blokklánc.
-  - [LUKSO L14](https://blockscout.com/lukso/l14) – az L14 az első teszt hálózatként működik, hogy a LUKSO közösség egy közös infrastruktúrán építhessen és tesztelhessen.
-  - qDai.
-- [Etherchain](https://www.etherchain.org/) – egy Ethereum főhálózati blokkfelfedező.
-- [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, mely az Ethereumon és a Kovan tesztneten található tokenekre fókuszál.
-- [Blockchair](https://blockchair.com/ethereum) - a legprivátabb Ethereum felfedező. Alkalmas (mempool) adatok szűrésére és válogatására is.
-
-## Eth2 blokk felfedezők {#beacon-chain-block-explorers}
-
-- [https://beaconcha.in/](https://beaconcha.in/)
-- [https://beaconscan.com/](https://beaconscan.com/)
+- [Etherscan](https://etherscan.io/) – egy blokkfelfedező, amelyben adatokat kérhet le az Ethereum-főhálózatról és a Goerli tesztelőhálózatról.
+- [Beaconcha.in](https://beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Goerli teszthálózatra
+- [Blockchair](https://blockchair.com/ethereum) – a legdiszkrétebb Ethereum-felfedező. Alkalmas (memóriakészlet) adatok szűrésére és válogatására is
+- [Etherchain](https://www.etherchain.org/) – egy Ethereum-főhálózati blokkfelfedező
+- [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, amely az Ethereum-főhálózaton és a Kovan tesztelőhálózaton található tokenekre fókuszál
+- [Rantom](https://rantom.app/) – egy felhasználóbarát, nyílt forráskódú DeFi- és NFT-tranzakciómegtekintő a részletesebb betekintéshez
 
 ## További olvasnivaló {#further-reading}
 
-_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
+_Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Bányászat](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Tranzakciók](/developers/docs/transactions/)
-- [Számlák](/developers/docs/accounts/)
+- [Fiókok](/developers/docs/accounts/)
 - [Hálózatok](/developers/docs/networks/)

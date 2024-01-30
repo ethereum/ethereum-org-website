@@ -24,7 +24,7 @@ Gyenge jelszó például: AranyosBolyhosCicák!
 Erős jelszó például: ymv\*azu.EAC8eyp8umf
 ```
 
-A másik általános hiba az, amikor a [közösségi médiából visszafejthető](<https://wikipedia.org/wiki/Social_engineering_(security)>) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
+A másik általános hiba az, amikor a [közösségi médiából visszafejthető](https://wikipedia.org/wiki/Social_engineering_(security)) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
 
 #### A jó jelszóhoz: {#good-password-practices}
 
@@ -66,7 +66,7 @@ Különböző egyedi bizonyítékok bemutatásával igazolhatja, hogy Ön valób
 - Valami, ami Öntől származik (mint egy ujjlenyomat vagy írisz-/arcszkenner)
 - Valami, ami az Ön birtokában van (biztonsági kulcs vagy azonosítási alkalmazás a telefonján)
 
-A **kéttényezős azonosítás (2FA)** egy plusz _biztonsági tényezőt_ ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
+A **kéttényezős azonosítás (2FA)** egy plusz *biztonsági tényezőt* ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -270,15 +270,14 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, to
 
 ### Webbiztonság {#reading-web-security}
 
-- [Ezért ne SMS-t használjon a kéttényezős azonosításhoz](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) – _The Verge_
 - [3 millió eszközt érintenek a rosszindulatú Chrome- és Edge-bővítmények](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) – _Dan Goodin_
-- [Hogyan hozzon létre erős jelszót — amit nem felejt el](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) – _AVG_
+- [Hogyan hozzon létre erős jelszót – amit nem felejt el](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) – _AVG_
 - [Mi az a biztonsági kulcs?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) – _Coinbase_
 
 ### Kriptobiztonság {#reading-crypto-security}
 
 - [Védje magát és a pénzeszközeit](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) – _MyCrypto_
-- [4 mód, hogy biztonságban maradjon a kripto világában](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) – _CoinDesk_
+- [Biztonsági problémák az általános kriptokommunikációs szoftverben](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) – _Salus_
 - [Biztonsági útmutató kezdőknek és haladóknak](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) – _MyCrypto_
 - [Kriptobiztonság: jelszavak és azonosítás](https://www.youtube.com/watch?v=m8jlnZuV1i4) – _Andreas M. Antonopoulos_
 

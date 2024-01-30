@@ -48,21 +48,13 @@ Les clients Ethereum peuvent fonctionner sur des ordinateurs grand public et ne 
   - Une option pour acheter des machines préconfigurées
   - Vous devez paramétrer la machine physique, la maintenir et potentiellement résoudre les problèmes
 
-Les deux options ont différents avantages résumés plus haut. Si vous cherchez une solution cloud, outre les nombreux fournisseurs traditionnels de cloud computing, il existe également des services axés sur le déploiement de nœuds. Par exemple :
-
-- [QuikNode](https://www.quiknode.io/)
-- [Blockdaemon](https://blockdaemon.com)
-- [alchemy](https://www.alchemy.com/)
-- [Blast](https://blastapi.io/)
-- [Getblock](https://getblock.io/)
-
-Consultez également [nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service/) pour plus d'options sur les nœuds hébergés.
+Les deux options ont différents avantages résumés plus haut. Si vous cherchez une solution cloud, outre les nombreux fournisseurs traditionnels de cloud computing, il existe également des services axés sur le déploiement de nœuds. Consultez les [nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service/) pour plus d'options sur les nœuds hébergés.
 
 #### Matériel {#hardware}
 
-Cependant, un réseau décentralisé et résistant à la censure ne devrait pas reposer sur des fournisseurs de cloud. À l'inverse, faire tourner votre nœud avec votre propre matériel est plus sain pour l'écosystème. [Les estimations](https://www.ethernodes.org/networkType/Hosting) montrent qu'une grande proportion de nœuds tournent dans le cloud, susceptibles de constituer un point de défaillance unique.
+Cependant, un réseau décentralisé et résistant à la censure ne devrait pas reposer sur des fournisseurs de cloud. À l'inverse, faire tourner votre nœud avec votre propre matériel local est plus sain pour l'écosystème. [Les estimations](https://www.ethernodes.org/networkType/Hosting) montrent qu'une grande proportion de nœuds tournent dans le cloud, susceptibles de constituer un point de défaillance unique.
 
-Les clients Ethereum peuvent être exécutés sur votre ordinateur, votre ordinateur portable, votre serveur ou même un ordinateur mono-carte. Bien que vous puissiez faire tourner des clients Ethereum sur votre ordinateur personnel, utiliser une machine dédiée uniquement à votre nœud permet de grandement améliorer les performances et la sécurité tout en minimisant l'impact sur votre ordinateur principal.
+Les clients Ethereum peuvent être exécutés sur votre ordinateur, votre ordinateur portable, votre serveur ou même un ordinateur mono-carte. Bien que vous puissiez faire tourner des clients sur votre ordinateur personnel, utiliser une machine dédiée uniquement à votre nœud permet de grandement améliorer les performances et la sécurité tout en minimisant l'impact sur votre ordinateur principal.
 
 Utiliser votre propre matériel peut être très facile. Il existe de nombreuses options simples ainsi que des configurations avancées pour les personnes plus techniques. Examinons donc les exigences et les moyens pour exécuter des clients Ethereum sur votre machine.
 
@@ -80,23 +72,23 @@ Assurez-vous également que votre [bande passante](https://wikipedia.org/wiki/Da
 
 ##### Système d'exploitation
 
-Tous les clients prennent en charge les principaux systèmes d'exploitation - Linux, MacOS, Windows. Cela signifie que vous pouvez exécuter des nœuds sur des ordinateurs de bureau ou des serveurs avec le système d'exploitation (OS) qui vous convient le mieux. Assurez-vous que votre système d'exploitation est à jour pour éviter les problèmes potentiels et les failles de sécurité.
+Tous les clients prennent en charge les principaux systèmes d'exploitation - Linux, MacOS, Windows. Cela signifie que vous pouvez exécuter des nœuds sur des ordinateurs de bureau ou des serveurs classiques avec le système d'exploitation (OS) qui vous convient le mieux. Assurez-vous que votre système d'exploitation est à jour pour éviter les problèmes potentiels et les failles de sécurité.
 
 ##### Configuration minimale requise
 
 - CPU avec 2 cœurs et +
 - 8 GB de RAM
-- 700 Go d'espace libre sur le disque
+- SSD de 2 To
 - Bande passante de 10 Mbps
 
 ##### Spécifications recommandées
 
 - CPU rapide avec 4 cœurs et +
 - 16 Go+ de RAM
-- SSD rapide avec 1 To+
+- SSD rapide avec 2 To+
 - Bande passante de 25 Mbps
 
-Le mode de synchronisation et le logiciel que vous choisissez aura une incidence sur l'espace nécessaire, mais nous avons estimé ci-dessous l'espace disque dont vous aurez besoin pour chaque client.
+Le mode de synchronisation et le client que vous choisissez aura une incidence sur l'espace nécessaire, mais nous avons estimé ci-dessous l'espace disque dont vous aurez besoin pour chaque client.
 
 | Client     | Taille du disque (synchro. snap) | Taille du disque (archive complète) |
 | ---------- | -------------------------------- | ----------------------------------- |
@@ -118,9 +110,9 @@ L'option la plus simple pour exécuter un nœud avec votre propre matériel est 
 
 #### Ethereum sur un ordinateur monocarte {#ethereum-on-a-single-board-computer}
 
-Un moyen facile et bon marché de faire fonctionner un nœud Ethereum est d'utiliser un seul ordinateur de bord, même avec une architecture ARM comme le Raspberry Pi. [Ethereum sur ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) fournit des images faciles à exécuter, de multiples exécutions et du client de consensus pour Raspberry Pi et d'autres cartes ARM.
+Un moyen facile et bon marché de faire fonctionner un nœud Ethereum est d'utiliser un seul ordinateur de bord, même avec une architecture ARM comme le Raspberry Pi. [Ethereum sur ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) fournit des images faciles à exécuter de multiples exécutions et du client de consensus pour Raspberry Pi et d'autres cartes ARM.
 
-Les petits appareils, abordables et efficaces comme ceux-ci, sont parfaits pour faire tourner un nœud à la maison. Néamoins, gardez à l'esprit leur performance limitée.
+Les petits appareils, abordables et efficaces comme ceux-ci, sont parfaits pour faire tourner un nœud à la maison. Néanmoins, gardez à l'esprit leur performance limitée.
 
 ## Faire tourner le nœud {#spinning-up-node}
 
@@ -134,9 +126,9 @@ Plusieurs projets conviviaux visent à améliorer l'expérience de la mise en pl
 
 Voici quelques projets qui peuvent vous aider à installer et à contrôler vos clients en quelques clics :
 
-- [DappNode](https://docs.dappnode.io/get-started/installation/custom-hardware/installation/overview/) - DappNode n'est pas simplement fournit avec la machine d'un vendeur. Le logiciel, le véritable lanceur de nœuds et le centre de contrôle offrant de nombreuses fonctionnalités peuvent être utilisés sur du matériel divers.
-- [eth-docker](https://eth-docker.net/) - Configuration automatisée à l'aide de Docker et axée sur une mise en jeu facile et sécurisée. Requiert des connaissances de base sur le terminal et Docker. Rcommandée pour des utilisateurs plus aguerris.
-- [Stereum](https://stereum.net/ethereum-node-setup/) - Lanceur automatisé pour installer des clients sur un serveur distant via une connexion SSH comprenant un guide de configuration GUI, centre de contrôle et bien d'autres fonctionnalités.
+- [DappNode](https://docs.dappnode.io/user/quick-start/first-steps/) - DappNode n'est pas simplement fourni avec la machine d'un vendeur. Le logiciel, le véritable lanceur de nœuds et le centre de contrôle offrant de nombreuses fonctionnalités peuvent être utilisés sur du matériel divers.
+- [eth-docker](https://eth-docker.net/) - Configuration automatisée à l'aide de Docker et axée sur une mise en jeu facile et sécurisée. Requiert des connaissances de base sur le terminal et Docker. Recommandée pour des utilisateurs plus aguerris.
+- [Stereum](https://stereum.net/ethereum-node-setup/) - Lanceur automatisé pour installer des clients sur un serveur à distance via une connexion SSH comprenant un guide de configuration GUI, un centre de contrôle et bien d'autres fonctionnalités.
 - [NiceNode](https://www.nicenode.xyz/) - Lanceur offrant une expérience utilisateur simple pour exécuter un nœud sur votre ordinateur. Il vous suffit de choisir vos clients et de les démarrer en quelques clics. Toujours en développement.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Outil de configuration de nœud qui génère automatiquement une configuration Docker à l'aide de l'assistant CLI. Écrit en Go par Nethermind.
 
@@ -159,7 +151,7 @@ Voici les pages de publication des clients sur lesquelles vous pouvez trouver le
 ##### Clients d'exécution
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (Ne fournit pas de binaire pré-compilé, doit être compilé)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 
@@ -181,7 +173,7 @@ Il convient également de noter que la diversité de clients est un problème [p
 
 Lorsque vous téléchargez des logiciels depuis Internet, il est recommandé de vérifier leur intégrité. Cette étape est facultative, mais avec une infrastructure cruciale comme le client Ethereum, Il est important d'être conscient des vecteurs d'attaque potentiels et de les éviter. Si vous avez téléchargé un binaire pré-compilé, vous devez avoir confiance en la source et courir le risque qu'un attaquant puisse avoir échangé l'exécutable contre un exécutable malveillant.
 
-Les développeurs signent les binaires publiés avec leurs clés PGP afin de pouvoir vérifier cryptographiquement que vous exécutez exactement le logiciel qu'ils ont créé. Il vous suffit d'obtenir les clés publiques utilisées par les développeurs : celles-ci peuvent être trouvées sur les pages de publication du client ou dans la documentation. Après avoir téléchargé la version client et sa signature, vous pouvez utiliser une implémentation PGP, par exemple [GnuPG](https://gnupg.org/download/index.html) pour les vérifier facilement. Consultez un tutoriel sur la vérification de logiciels open-source avec `gpg` sur [Linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) ou [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
+Les développeurs signent les binaires publiés avec leurs clés PGP afin de pouvoir vérifier cryptographiquement que vous exécutez exactement le logiciel qu'ils ont créé. Il vous suffit d'obtenir les clés publiques utilisées par les développeurs : celles-ci peuvent être trouvées sur les pages de publication du client ou dans la documentation. Après avoir téléchargé la version client et sa signature, vous pouvez utiliser une implémentation PGP, par exemple [GnuPG](https://gnupg.org/download/index.html) pour les vérifier facilement. Consultez un tutoriel sur la vérification de logiciels open-source avec `gpg` sur [linux](https://www.tecmint.com/verify-pgp-signature-downloaded-software/) ou [Windows/MacOS](https://freedom.press/training/verifying-open-source-software/).
 
 Une autre forme de vérification est de s'assurer que le hachage, une empreinte cryptographique unique du logiciel que vous avez téléchargé, correspond à celle fournie par les développeurs. C'est encore plus simple que d'utiliser PGP, et certains clients n'offrent que cette option. Il vous suffit d'exécuter la fonction de hachage sur le logiciel téléchargé et de la comparer à celle de la page de publication. Par exemple :
 
@@ -205,9 +197,9 @@ Des exemples de clients d'exécution dotés d'une configuration de base peuvent 
 
 #### Démarrer le client d'exécution {#starting-the-execution-client}
 
-Avant de démarrer le client Ethereum, vérifier une dernière fois que votre environnement est prêt. Par exemple, assurez-vous que :
+Avant de démarrer le logiciel client Ethereum, vérifiez une dernière fois que votre environnement est prêt. Par exemple, assurez-vous que :
 
-- Le stockage est suffisant pour le réseau et le mode de synchronisation choisis.
+- Il y a suffisamment d'espace disque compte tenu du réseau et du mode de synchronisation choisis.
 - La mémoire et le processeur ne sont pas déjà utilisés par d'autres programmes.
 - Votre système d'exploitation est à jour.
 - La date et l'heure de votre système sont corrects.
@@ -227,7 +219,7 @@ openssl rand -hex 32 > jwtsecret
 
 #### Démarrer le client d'exécution {#running-an-execution-client}
 
-Cette section vous guidera dans le démarrage des clients d'éxécution. Elle sert uniquement d'exemple de configuration de base, qui démarrera le client avec ces paramètres:
+Cette section vous guidera dans le démarrage des clients d'exécution. Elle sert uniquement d'exemple de configuration de base, qui démarrera le client avec ces paramètres :
 
 - Spécifie le réseau auquel se connecter, le réseau principal dans nos exemples
   - Vous pouvez à la place choisir [l'un des réseaux de test](/developers/docs/networks/) pour faire un premier test de votre configuration
@@ -238,13 +230,13 @@ Cette section vous guidera dans le démarrage des clients d'éxécution. Elle se
 - Définit le chemin vers `jwtsecret` pour l'API authentifiée
   - Assurez-vous de remplacer le chemin exemple par un chemin réel accessible par les clients, par exemple `/tmp/jwtsecret`
 
-Gardez à l'esprit que ce n'est qu'un exemple de base, tous les autres paramètres seront définis par défaut. Référez-vous à la documentation de chaque client pour en savoir plus sur les valeurs par défaut, les paramètres et les fonctionnalités. Pour plus de fonctionnalités, par exemple concernant l'exécution des validateurs, la surveillance, etc., veuillez vous référer à la documentation du client.
+Gardez à l'esprit que ce n'est qu'un exemple de base, tous les autres paramètres seront définis par défaut. Référez-vous à la documentation de chaque client pour en savoir plus sur les valeurs par défaut, les paramètres et les fonctionnalités. Pour plus de fonctionnalités, par exemple concernant l'exécution des validateurs, la surveillance, etc., veuillez vous référer à la documentation du client spécifique.
 
 > Veuillez noter que les antislashes `\` visibles dans les exemples ne sont présents qu'à des fins de formatage ; les options de configuration peuvent être définies en une seule ligne.
 
 ##### Exécuter Besu
 
-Cet exemple fait démarrer Besu sur le réseau principal, stocke les données blockchain au format par défaut dans `/data/ethereum`, active JSON RPC et Engine RPC pour connecter le client de consensus. Engine API est authentifié avec le jeton `jwtsecret` et seuls les appels de `localhost` sont autorisés.
+Cet exemple fait démarrer Besu sur le réseau principal, stocke les données blockchain au format par défaut dans `/data/ethereum`, actifs JSON RPC et Engine RPC pour connecter le client de consensus. Engine API est authentifié avec le jeton `jwtsecret` et seuls les appels de `localhost` sont autorisés.
 
 ```
 besu --network=mainnet \
@@ -290,11 +282,11 @@ geth --mainnet \
     --authrpc.jwtsecret=/path/to/jwtsecret
 ```
 
-Vérifiez la documentation [pour toutes les options de configuration](https://geth.ethereum.org/docs/interface/command-line-options) et apprenez-en plus sur [l'exécution de Geth avec un client de consensus](https://geth.ethereum.org/docs/interface/consensus-clients).
+Vérifiez la documentation [pour toutes les options de configuration](https://geth.ethereum.org/docs/fundamentals/command-line-options) et apprenez-en plus sur [l'exécution de Geth avec un client de consensus](https://geth.ethereum.org/docs/getting-started/consensus-clients).
 
 ##### Exécuter Nethermind
 
-Nethermind offre diverses [options d'installation](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Le paquet est fourni avec divers binaires, y compris un lanceur dotée d'une installation guidée, qui vous aidera à créer votre configuration de manière interactive. Autrement, vous trouverez Runner, qui est l'exécutable lui-même, et pouvez simplement l'exécuter en utilisant des options de configuration. JSON RPC est activé par défaut.
+Nethermind offre diverses [options d'installation](https://docs.nethermind.io/nethermind/first-steps-with-nethermind/getting-started). Le paquet est fourni avec divers binaires, y compris un lanceur doté d'une installation guidée, qui vous aidera à créer votre configuration de manière interactive. Autrement, vous trouverez Runner, qui est l'exécutable lui-même, et pouvez simplement l'exécuter en utilisant des options de configuration. JSON RPC est activé par défaut.
 
 ```
 Nethermind.Runner --config mainnet \
@@ -310,7 +302,7 @@ Un client d'exécution initiera ses fonctions principales, ses points de termina
 
 Le client de consensus doit être démarré avec la bonne configuration de port pour établir une connexion RPC locale avec le client d'exécution. Le client de consensus doit être exécuté avec le port du client d'exécution exposé en tant qu'argument de configuration.
 
-Le client de consensus a également besoin du chemin vers le `jwt-secret` du client d'exécution afin d'authentifier la connexion RPC entre eux. Comme pour les exemples d'exécution ci-dessus, chaque client de consensus possède un drapeau de configuration qui prend le chemin du fichier jwt comme argument. Celui-ci doit être compatible avec le chemin `jwtsecret` fourni au client d'exécution.
+Le client de consensus a également besoin du chemin vers le `jwt-secret` du client d'exécution afin d'authentifier la connexion RPC entre eux. Comme pour les exemples d'exécution ci-dessus, chaque client de consensus possède une option de configuration qui prend le chemin du fichier jwt token comme argument. Celui-ci doit être compatible avec le chemin `jwtsecret` fourni au client d'exécution.
 
 Si vous prévoyez d'exécuter un validateur, assurez-vous d'ajouter une option de configuration spécifiant l'adresse Ethereum du destinataire des frais. C'est là que s'accumulent les récompenses en ether de votre validateur. Chaque client de consensus a une option, par exemple `--suggested-fee-recipient=0xabcd1`, qui prend une adresse Ethereum comme argument.
 
@@ -328,7 +320,7 @@ lighthouse beacon_node \
     --datadir /data/ethereum \
     --http \
     --execution-endpoint http://127.0.0.1:8551 \
-    --execution-jwt /path/to/jwtsecret \
+    --execution-jwt /path/to/jwtsecret
 ```
 
 ##### Exécuter Lodestar
@@ -362,7 +354,7 @@ Prysm est livré avec un script qui permet une installation automatique facile. 
 
 ```
 ./prysm.sh beacon-chain \
-    --mainnet
+    --mainnet \
     --datadir /data/ethereum  \
     --execution-endpoint=http://localhost:8551  \
     --jwt-secret=/path/to/jwtsecret
@@ -374,7 +366,7 @@ Prysm est livré avec un script qui permet une installation automatique facile. 
 teku --network mainnet \
     --data-path "/data/ethereum" \
     --ee-endpoint http://localhost:8551 \
-    --ee-jwt-secret-file "/path/to/jwtsecret" \
+    --ee-jwt-secret-file "/path/to/jwtsecret"
 ```
 
 Lorsqu'un client de consensus se connecte au client d'exécution pour lire le contrat de dépôt et identifier les validateurs, il se connecte également à d'autres nœuds phares et commence à synchroniser les créneaux de consensus à partir de la genèse. Une fois la période actuelle atteinte par le nœud phare, l'API phare devient utilisable pour vos validateurs. En savoir plus sur [l'API des nœuds phares](https://eth2docs.vercel.app/).
@@ -397,7 +389,7 @@ Les clients d'exécution offrent des [terminaux RPC API](/developers/docs/apis/j
 - Attacher une console fournie (par exemple `geth attach`)
 - Les implémenter dans des applications utilisant des bibliothèques web3, par exemple [web3.py](https://web3py.readthedocs.io/en/stable/overview.html#overview), [ethers](https://github.com/ethers-io/ethers.js/)
 
-Chaque client dispose d'une implémentation différente des points de terminaison RPC. Mais il existe un standard JSON-RPC que vous pouvez utiliser avec chaque client. Pour une vue d'ensemble [lisez la documentation JSON-RPC](/developers/docs/apis/json-rpc/). Les applications ayant besoin d'informations du réseau Ethereum peuvent utiliser ce RPC. Par exemple, le portefeuille populaire MetaMask vous permet [de vous connecter à votre propre terminal RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node), celui-co offrant de solides avantages en termes de confidentialité et de sécurité.
+Chaque client dispose d'une implémentation différente des points de terminaison RPC. Mais il existe un standard JSON-RPC que vous pouvez utiliser avec chaque client. Pour une vue d'ensemble [lisez la documentation JSON-RPC](/developers/docs/apis/json-rpc/). Les applications ayant besoin d'informations du réseau Ethereum peuvent utiliser ce RPC. Par exemple, le portefeuille populaire MetaMask vous permet [de vous connecter à votre propre terminal RPC](https://metamask.zendesk.com/hc/en-us/articles/360015290012-Using-a-Local-Node), celui-ci offrant de solides avantages en termes de confidentialité et de sécurité.
 
 Les clients de consensus exposent tous une [API phare](https://ethereum.github.io/beacon-APIs) qui peut être utilisée pour vérifier l'état du client de consensus ou télécharger des blocs et des données de consensus en envoyant des requêtes à l'aide d'outils tels que [Curl](https://curl.se). Vous trouverez plus d'informations à ce sujet dans la documentation de chaque client de consensus.
 
@@ -409,7 +401,7 @@ Soyez vigilant lorsque vous rendez les ports accessibles à distance, car cela p
 
 Un moyen de contourner ce problème est d'éviter que des méthodes RPC potentiellement dangereuses ne soient modifiables. Par exemple, avec Geth, vous pouvez indiquer des méthodes modifiables via une option : `--http.api web3,eth,txpool`.
 
-L'accès à l'interface RPC peut être étendu via le développement d'API ou d'applications de serveur web, comme Nginx, et en les connectant à l'adresse locale et au port de votre client. L'utilisation d'une couche intermédiaire peut également permettre aux développeurs de configurer un certificat pour les connexions `https` sécurisées sur l'interface RPC.
+L'accès à l'interface RPC peut être étendu via le développement d'API de couche périphérique ou d'applications de serveur web, comme Nginx, et en les connectant à l'adresse locale et au port de votre client. L'utilisation d'une couche intermédiaire peut également permettre aux développeurs de configurer un certificat pour les connexions `https` sécurisées sur l'interface RPC.
 
 Configurer un serveur web, un proxy, ou l'API Rest externe n'est pas le seul moyen de fournir un accès au point de terminaison RPC de votre nœud. Une façon respectueuse de la vie privée de créer un point de terminaison accessible au public est de l'héberger sur votre propre service d'oignon [Tor](https://www.torproject.org/). Cela vous permettra d'atteindre le RPC en dehors de votre réseau local sans adresse IP publique statique ni ports ouverts. Cependant, utiliser cette configuration peut ne permettre l'accès au point de terminaison RPC que via le réseau Tor, qui n'est pas supporté par toutes les applications et peut entraîner des problèmes de connexion.
 
@@ -433,11 +425,11 @@ _Ceci ne s'applique pas pour les nœuds de validateur de couche de consensus._ M
 
 #### Créer des services client {#creating-client-services}
 
-Envisagez de créer un service pour exécuter automatiquement votre client au démarrage. Par exemple, sur les serveurs Linux, la bonne pratique consisterait à créer un service, par exemple avec `systemd`, qui exécute le client avec une configuration appropriée, sous un utilisateur aux privilèges limités, et redémarre automatiquement.
+Envisagez de créer un service pour exécuter automatiquement vos clients au démarrage. Par exemple, sur les serveurs Linux, la bonne pratique consisterait à créer un service, par exemple avec `systemd`, qui exécute le client avec une configuration appropriée, sous un utilisateur aux privilèges limités, et redémarre automatiquement.
 
 #### Mettre à jour les clients {#updating-clients}
 
-Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIPs](/eips/). Tout particulièrement avant [les fourches majeures](/history/), assurez-vous d'utiliser la bonne version client.
+Vous devez conserver votre logiciel client à jour avec les derniers patchs de sécurité, les dernières fonctionnalités et les [EIP](/eips/). Tout particulièrement avant [les fourches majeures](/history/), assurez-vous d'utiliser les bonnes versions client.
 
 > Avant les mises à jour importantes du réseau, EF publie un message sur son [blog](https://blog.ethereum.org). Vous pouvez [vous abonner à ces annonces](https://groups.google.com/a/ethereum.org/g/announcements) pour recevoir une notification par email lorsque votre nœud a besoin d'une mise à jour.
 
@@ -451,7 +443,7 @@ Exécuter votre propre nœud vous permet d'utiliser des services qui nécessiten
 
 #### Surveiller le nœud {#monitoring-the-node}
 
-Pour bien surveiller votre nœud, envisagez de collecter des métriques. Les clients fournissent des points de terminaison métriques pour que vous puissiez obtenir des données complètes sur votre nœud. Utilisez des outils comme [InfluxDB](https://www.influxdata.com/get-influxdb/) ou [Prometheus](https://prometheus.io/) pour créer des bases de données susceptibles d'être transformées en visualisations et graphiques dans des logiciels tels que [Grafana](https://grafana.com/). Il existe de nombreuses configurations pour utiliser ce logiciel et différents tableaux de bord Grafana pour visualiser votre nœud et le réseau dans son ensemble. Par exemple, consultez le tutoriel [sur la surveillance de Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
+Pour bien surveiller votre nœud, envisagez de collecter des mesures. Les clients fournissent des points de terminaison métriques pour que vous puissiez obtenir des données complètes sur votre nœud. Utilisez des outils comme [InfluxDB](https://www.influxdata.com/get-influxdb/) ou [Prometheus](https://prometheus.io/) pour créer des bases de données susceptibles d'être transformées en visualisations et graphiques dans des logiciels tels que [Grafana](https://grafana.com/). Il existe de nombreuses configurations pour utiliser ce logiciel et différents tableaux de bord Grafana pour visualiser votre nœud et le réseau dans son ensemble. Par exemple, consultez le tutoriel [sur la surveillance de Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 Dans le cadre de votre surveillance, assurez-vous de garder un œil sur les performances de votre machine. Lors de la synchronisation initiale de votre nœud, le logiciel client peut être très lourd en CPU et en RAM. Pour ce faire, outre Grafana, vous pouvez utiliser les outils proposés par votre système d'exploitation comme `htop` ou `uptime`.
 
@@ -460,15 +452,14 @@ Dans le cadre de votre surveillance, assurez-vous de garder un œil sur les perf
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, régulièrement mis à jour_
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, régulièrement mis à jour_
 - [ETHStaker guides on running validators on testnets](https://github.com/remyroy/ethstaker#guides) – _ETHStaker, régulièrement mis à jour_
-- [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) _– Somer Esat, régulièrement mis à jour_
 - [The Merge FAQ for node operators](https://notes.ethereum.org/@launchpad/node-faq-merge) - _Juillet 2022_
 - [Analyzing the hardware requirements to be an Ethereum full validated node](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 Septembre 2018_
 - [Running Ethereum Full Nodes: A Guide for the Barely Motivated](https://medium.com/@JustinMLeroux/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _– Justin Leroux, 7 novembre 2019_
-- [Exécuter un nœud Hyperledger Besu sur le réseau principal Ethereum : avantages, conditions requises et configuration](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _- Felipe Faraggi, 7 mai 2020_
+- [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _- Felipe Faraggi, 7 mai 2020_
 - [Déploiement du client Nethermind Ethereum avec la pile de surveillance](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 juillet 2020_
 
 ## Sujets connexes {#related-topics}
 
-- [Nœuds et clients](/developers/docs/nodes-and-clients/)
-- [Les blocs](/developers/docs/blocks/)
+- [ Nœuds et clients](/developers/docs/nodes-and-clients/)
+- [Blocs](/developers/docs/blocks/)
 - [Réseaux](/developers/docs/networks/)

@@ -211,6 +211,7 @@ ContentPage.getLayout = (page) => {
     timeToRead,
     tocItems,
     crowdinContributors,
+    contentNotTranslated,
   } = page.props
 
   const layoutProps = {
@@ -220,6 +221,7 @@ ContentPage.getLayout = (page) => {
     timeToRead,
     tocItems,
     crowdinContributors,
+    contentNotTranslated,
   }
   const Layout = layoutMapping[layout]
 

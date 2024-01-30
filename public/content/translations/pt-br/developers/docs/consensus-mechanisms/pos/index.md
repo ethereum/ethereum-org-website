@@ -79,10 +79,10 @@ Ethereum nem sempre tem sido uma rede de prova de participação. Quando o Ether
 
 ## Leitura adicional {#further-reading}
 
-- [Perguntas frequentes sobre prova de participação](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Perguntas frequentes sobre prova de participação](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [O que é prova de participação](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [O que prova de participação é por que é importante](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [Por que a prova de participação (nov. de 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Por que a prova de participação (nov. de 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Prova da participação: como aprendi a amar a pouca subjetividade](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Ataque e defesa da prova de participação do Ethereum](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [A filosofia por trás do design da prova de participação](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

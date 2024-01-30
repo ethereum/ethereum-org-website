@@ -91,10 +91,10 @@ git checkout -b new_branch_name
 2. Start developing!
 
 ```sh
-yarn start
+yarn dev
 ```
 
-- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
+- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
   - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
@@ -1710,6 +1710,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://benedikt-wagner.dev"><img src="https://avatars.githubusercontent.com/u/113296072?v=4?s=100" width="100px;" alt="Benedikt Wagner"/><br /><sub><b>Benedikt Wagner</b></sub></a><br /><a href="#content-b-wagn" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tdahar"><img src="https://avatars.githubusercontent.com/u/18716811?v=4?s=100" width="100px;" alt="Tarun Mohandas Daryanani"/><br /><sub><b>Tarun Mohandas Daryanani</b></sub></a><br /><a href="#content-tdahar" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Crosstons"><img src="https://avatars.githubusercontent.com/u/110349596?v=4?s=100" width="100px;" alt="Shubh"/><br /><sub><b>Shubh</b></sub></a><br /><a href="#content-Crosstons" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/duckdegen"><img src="https://avatars.githubusercontent.com/u/98649644?v=4?s=100" width="100px;" alt="duckdegen"/><br /><sub><b>duckdegen</b></sub></a><br /><a href="#content-duckdegen" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

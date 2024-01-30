@@ -61,7 +61,7 @@ export const QuizRadioGroup = () => {
     <Box as="fieldset" w="full" {...getRootProps()}>
       <Text
         as="legend"
-        textAlign={{ base: "center", md: "left" }}
+        textAlign={{ base: "center", md: "start" }}
         fontWeight="700"
         size="2xl"
         w="full"

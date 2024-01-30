@@ -72,7 +72,7 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [Gwei.cz](https://gwei.cz) - Web3 etrafında yerel topluluk, eğitim içeriği oluşturur, çevrimiçi ve yüz yüze etkinlikler düzenler
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - yeni başlayanlar için Ethereum rehberi
 - [DAO Příručka](https://dao.gwei.cz/) - DAO'lara yeni başlayanlar için rehber
-- [Ethereum'da Uzmanlaşma](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Çekçe Ethereum'da Uzmanlaşmak
+- [Ethereum'da Uzmanlaşma](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Çekçe Ethereum'da Uzmanlaşmak
 
 ### Fransızca {#fr}
 
