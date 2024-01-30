@@ -135,7 +135,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
             position: "absolute",
             inset: 0,
             insetInlineEnd: isLink ? 0 : -1,
-            background: `var(--eth-colors-menu-lvl${lvl + 1}-background)`,
+            background: `var(--eth-colors-menu-lvl${lvl as number + 1}-background)`,
             borderStartStartRadius: "var(--eth-radii-base)",
             borderEndStartRadius: "var(--eth-radii-base)",
             borderStartEndRadius: isLink
@@ -147,7 +147,7 @@ const MenuButton = ({ item, lvl, index, getHoverActions }: MenuButtonProps) => {
             zIndex: 0,
           }}
           transition={{ duration: 0.2 }}
-          layoutId={`menu-lvl${lvl + 1}-highlight`}
+          layoutId={`menu-lvl${lvl as number + 1}-highlight`}
         />
       )}
       <Box me="auto" textAlign="start" position="relative" zIndex="1">
@@ -261,7 +261,7 @@ const Menu = ({ sections, ...props }: MenuProps) => {
     p: 4,
     me: 0,
     direction: "column",
-    zIndex: 1 - lvl,
+    zIndex: 1 - (lvl as number),
   })
 
   const lvlAnimationProps = {

@@ -7,7 +7,6 @@ import {
   Flex,
   HStack,
   Icon,
-  Text,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react"
@@ -17,7 +16,7 @@ import { EthHomeIcon } from "../icons"
 import { BaseLink } from "../Link"
 import Search from "../Search"
 
-import Menu from "./Menu"
+import ArkMenu from "./ArkMenu"
 import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
 
@@ -72,7 +71,7 @@ const Nav = () => {
             justifyContent={{ base: "flex-end", md: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="md" sections={linkSections} />
+            <ArkMenu hideBelow="md" sections={linkSections} />
             <Flex alignItems="center" justifyContent="space-between">
               <Search {...searchModalDisclosure} />
               {/* Desktop */}
