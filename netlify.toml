@@ -22,4 +22,9 @@
     "./src/intl/**/*",
     "!./public/**/*",
     "!./node_modules/@swc/core-linux-x64-musl/**/*",
+    "!./node_modules/@ark-ui/**/*",
+    "!./node_modules/@zag-js/**/*",
+    "./node_modules/@ark-ui/react/menu/**/*",
+    "./node_modules/@ark-ui/react/portal.*",
+    "./node_modules/@zag-js/menu/**/*",
   ]
