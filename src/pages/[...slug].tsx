@@ -195,6 +195,7 @@ const ContentPage: NextPageWithLayout<
   }
   return (
     <>
+      {/* @ts-expect-error Components prop type mismatch related to TODO for the object */}
       <MDXRemote {...mdxSource} components={components} />
     </>
   )
