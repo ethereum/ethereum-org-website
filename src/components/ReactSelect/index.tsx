@@ -1,10 +1,11 @@
 import * as React from "react"
+import Select, { ActionMeta, GroupBase, Props } from "react-select"
 import {
   createStylesContext,
   ThemingProps,
   useMultiStyleConfig,
 } from "@chakra-ui/react"
-import Select, { ActionMeta, GroupBase, Props } from "react-select"
+
 import { components } from "./innerComponents"
 
 export const [ReactSelectStylesProvider, useReactSelectStyles] =

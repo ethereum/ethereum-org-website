@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Box, Center, Heading, HStack, Icon, Text } from "@chakra-ui/react"
 import { FaChevronDown } from "react-icons/fa"
 import {
   ContainerProps,
@@ -10,6 +9,8 @@ import {
   MenuListProps,
   OptionProps,
 } from "react-select"
+import { Box, Center, HStack, Icon } from "@chakra-ui/react"
+
 import { useReactSelectStyles } from "."
 
 export const reactSelectAnatomyKeys = [
