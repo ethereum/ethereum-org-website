@@ -28,6 +28,7 @@ import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
+import ReactSelect, { ReactSelectOnChange } from "../ReactSelect"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 const Flex50 = (props: ChildOnlyProp) => (
@@ -161,40 +162,6 @@ const Layer2Onboard: React.FC<IProps> = ({
     }
   )
 
-  const formatGroupLabel = (data) => {
-    return data.label ? (
-      <Stack borderTop="2px solid" m={0}>
-        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
-          {data.label}
-        </Text>
-      </Stack>
-    ) : (
-      <></>
-    )
-  }
-
-  const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
-    if (Object.hasOwn(option, "cex")) {
-      trackCustomEvent({
-        eventCategory: `Selected cex to onboard`,
-        eventAction: `Clicked`,
-        eventName: `${option.cex.name} selected`,
-        eventValue: `${option.cex.name}`,
-      })
-      setSelectedExchange(option.cex)
-      setSelectedCexOnboard(undefined)
-    } else {
-      trackCustomEvent({
-        eventCategory: `Selected cexOnboard to onboard`,
-        eventAction: `Clicked`,
-        eventName: `${option.cexOnboard.name} selected`,
-        eventValue: `${option.cexOnboard.name}`,
-      })
-      setSelectedCexOnboard(option.cexOnboard)
-      setSelectedExchange(undefined)
-    }
-  }
-
   const gridContentPlacementStyles = {
     gridContainer: {
       columns: { base: 1, md: 2 },
@@ -219,6 +186,50 @@ const Layer2Onboard: React.FC<IProps> = ({
       placeSelf: "center",
     },
   } as const
+
+  const handleLayer2SelectChange: ReactSelectOnChange<Layer2Option> = (
+    selectedOption
+  ) => {
+    if (!selectedOption) return
+
+    trackCustomEvent({
+      eventCategory: `Selected layer 2 to bridge to`,
+      eventAction: `Clicked`,
+      eventName: `${selectedOption.l2.name} bridge selected`,
+      eventValue: `${selectedOption.l2.name}`,
+    })
+    setSelectedL2(selectedOption.l2)
+  }
+
+  // TODO: Fix type errors with object union. (Probably not the best approach here)
+  const handleExchangeOnboard: ReactSelectOnChange<
+    ExchangeOption | CexOnboardOption
+  > = (selectedOption) => {
+    if (selectedOption == undefined) return
+
+    if (Object.hasOwn(selectedOption, "cex")) {
+      trackCustomEvent({
+        eventCategory: `Selected cex to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${selectedOption.label} selected`,
+        eventValue: `${selectedOption.label}`,
+      })
+
+      // @ts-expect-error `cex` prop not existing on object
+      setSelectedExchange(selectedOption.cex)
+      setSelectedCexOnboard(undefined)
+    } else {
+      trackCustomEvent({
+        eventCategory: `Selected cexOnboard to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${selectedOption.label} selected`,
+        eventValue: `${selectedOption.label}`,
+      })
+      // @ts-expect-error `cexOnboard` prop not existing on object
+      setSelectedCexOnboard(selectedOption.cexOnboard)
+      setSelectedExchange(undefined)
+    }
+  }
 
   return (
     <Box bg="layer2Gradient" borderRadius="sm" p={10}>
@@ -246,20 +257,12 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* LeftSelected */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={layer2Options}
-            onChange={(selectedOption: Layer2Option) => {
-              trackCustomEvent({
-                eventCategory: `Selected layer 2 to bridge to`,
-                eventAction: `Clicked`,
-                eventName: `${selectedOption.l2.name} bridge selected`,
-                eventValue: `${selectedOption.l2.name}`,
-              })
-              setSelectedL2(selectedOption.l2)
-            }}
+          <ReactSelect
+            instanceId="layer2-left-selected"
             placeholder={t("layer-2-onboard-wallet-input-placeholder")}
+            options={layer2Options}
+            onChange={handleLayer2SelectChange}
+            variant="outline"
           />
         </Flex>
         <Flex flexDir="column">
@@ -275,9 +278,8 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* RightSelect */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <ReactSelect<ExchangeOption | CexOnboardOption>
+            instanceId="exchange-onboard-select"
             options={[
               {
                 options: [...cexSupportOptions],
@@ -288,11 +290,8 @@ const Layer2Onboard: React.FC<IProps> = ({
                 options: [...cexOnboardOptions],
               },
             ]}
-            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
-              selectExchangeOnboard(selectedOption)
-            }}
-            placeholder={t("layer-2-onboard-exchange-input-placeholder")}
-            formatGroupLabel={formatGroupLabel}
+            onChange={handleExchangeOnboard}
+            variant="outline"
           />
         </Flex>
         {/* LeftSelected extra */}
