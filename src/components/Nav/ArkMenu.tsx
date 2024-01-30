@@ -3,19 +3,16 @@ import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 import { BsCircle } from "react-icons/bs"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
-import { Menu, Portal } from "@ark-ui/react"
+import { Menu, type MenuOpenChangeDetails, Portal } from "@ark-ui/react"
 import {
   Box,
-  calc,
   Flex,
   type FlexProps,
   Grid,
   Icon,
   type IconProps,
-  ListItem,
   Text,
-  UnorderedList,
-  useToken,
+  useDisclosure,
 } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
@@ -28,24 +25,18 @@ import { cleanPath } from "@/lib/utils/url"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { Level, LvlRefs, NavItem, NavSections } from "./types"
+import type {
+  Level,
+  LvlRefs,
+  NavItem,
+  NavSectionKey,
+  NavSections,
+} from "./types"
 
-type NextChevronProps = IconProps & {
-  lvl: Level
-  isLink: boolean
-}
-
-const NextChevron = ({ lvl, isLink, ...props }: NextChevronProps) => {
+const NextChevron = (props: IconProps) => {
   const { locale } = useRouter()
-  if (isLink) return undefined
   const isRtl = isLangRightToLeft(locale! as Lang)
-  return (
-    <Icon
-      as={isRtl ? MdChevronLeft : MdChevronRight}
-      fill={`menu.lvl${lvl}.main`}
-      {...props}
-    />
-  )
+  return <Icon as={isRtl ? MdChevronLeft : MdChevronRight} {...props} />
 }
 
 type ItemProps = {
@@ -58,43 +49,30 @@ const Item = ({ item, lvl }: ItemProps) => {
   const { asPath } = useRouter()
   const isLink = "href" in action
   const isActivePage = isLink && cleanPath(asPath) === action.href
-  const [highlighted, setHighlighted] = useState(false)
-
-  const minW = calc.subtract(
-    calc.multiply(useToken("sizes.container", "md"), 0.5),
-    useToken("space", 8)
-  ) // Half of `md` container (smallest desktop width) minus padding
 
   return (
     <Button
       as={isLink ? Link : undefined}
       href={action.href}
-      onMouseEnter={() => setHighlighted(true)}
-      onMouseLeave={() => setHighlighted(false)}
+      color={`menu.lvl${lvl}.main`}
       rightIcon={
-        <NextChevron
-          lvl={lvl}
-          isLink={isLink}
-          _groupHover={{ fill: "menu.highlight" }}
-          position="relative"
-          zIndex="1"
-        />
+        isLink ? undefined : (
+          <NextChevron fill="currentColor" position="relative" zIndex="1" />
+        )
       }
       leftIcon={
         lvl === 1 ? (
           <Icon
             as={CustomIcon || BsCircle}
             color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
-            _groupHover={{ color: "menu.highlight" }}
             position="relative"
             zIndex="1"
           />
         ) : undefined
       }
       position="relative"
-      minW={minW}
+      w="full"
       sx={{ "span:first-of-type": { m: 0, me: 4 } }}
-      me={isLink ? undefined : -4}
       py="4"
       bg="none"
       data-group
@@ -105,43 +83,17 @@ const Item = ({ item, lvl }: ItemProps) => {
         outlineOffset: "2px",
         boxShadow: "none",
       }}
-      // TODO: _focus/_hover styles
     >
-      {highlighted && (
-        <motion.div
-          style={{
-            position: "absolute",
-            inset: 0,
-            insetInlineEnd: isLink ? 0 : -1,
-            background: `var(--eth-colors-menu-lvl${
-              (lvl) + 1
-            }-background)`,
-            borderStartStartRadius: "var(--eth-radii-base)",
-            borderEndStartRadius: "var(--eth-radii-base)",
-            borderStartEndRadius: isLink
-              ? "var(--eth-radii-base)"
-              : "var(--eth-radii-none)",
-            borderEndEndRadius: isLink
-              ? "var(--eth-radii-base)"
-              : "var(--eth-radii-none)",
-            zIndex: 0,
-          }}
-          transition={{ duration: 0.2 }}
-          layoutId={`menu-lvl${(lvl) + 1}-highlight`}
-        />
-      )}
       <Box me="auto" textAlign="start" position="relative" zIndex="1">
         <Text
           fontWeight="bold"
-          color={isActivePage ? "highContrast" : `menu.lvl${lvl}.main`}
-          _groupHover={{ color: "menu.highlight" }}
+          color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
         >
           {label}
         </Text>
         <Text
           fontSize="sm"
           color={isActivePage ? "menu.active" : `menu.lvl${lvl}.subtext`}
-          _groupHover={{ color: "menu.highlight" }}
         >
           {description}
         </Text>
@@ -156,6 +108,7 @@ type LvlPortalProps = {
   items: NavItem[]
 }
 const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
+  const pad = 4
   if (lvl > 3) return null
   return (
     <Portal container={refs[`lvl${lvl}`]}>
@@ -163,9 +116,23 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
         <Flex
           flexDir="column"
           bg={`menu.lvl${lvl}.background`}
+          h="full"
+          p={pad}
+          _focus={{ outline: "none" }}
           sx={{
+            // Styling for highlighted items
             "[data-highlighted]": {
-              outline: "2px solid var(--eth-colors-menu-highlight)",
+              rounded: "md",
+              "p, svg": { color: "primary.base" },
+              bg: `menu.lvl${lvl}.activeBackground`,
+            },
+            // Adjust spacing when sub-items available
+            '[data-state="closed"],[data-state="open"]': {
+              me: -pad,
+            },
+            // End-edge is flat if items are open
+            '[data-state="open"]': {
+              roundedEnd: "none",
             },
           }}
         >
@@ -180,10 +147,10 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
                 ) : (
                   <Menu.Root loop>
                     <Menu.TriggerItem>
-                      <Item lvl={1} item={item} />
+                      <Item lvl={lvl} item={item} />
                     </Menu.TriggerItem>
                     <LvlPortal
-                      lvl={lvl + 1 as Level}
+                      lvl={(lvl + 1) as Level}
                       refs={refs}
                       items={action.items}
                     />
@@ -202,33 +169,67 @@ type ArkMenuProps = FlexProps & {
   sections: NavSections
 }
 const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
+
+  const handleOpenChange = (
+    { open }: MenuOpenChangeDetails,
+    sectionKey: NavSectionKey
+  ): void => {
+    setActiveSection(open ? sectionKey : null)
+    open ? onOpen() : onClose()
+  }
+
   const refs: LvlRefs = {
     lvl1: useRef(null),
     lvl2: useRef(null),
     lvl3: useRef(null),
   }
 
+  const handleSectionHover = (sectionKey: NavSectionKey) => {
+    if (!isOpen) return
+    if (sectionKey === activeSection) return
+    setActiveSection(sectionKey)
+    // TODO: Open the section being hovered
+  }
+
   return (
     <>
-      <Flex
-        as={UnorderedList}
-        alignItems="center"
-        listStyleType="none"
-        m="0"
-        {...props}
-      >
+      <Flex alignItems="center" listStyleType="none" m="0" {...props}>
         {SECTION_LABELS.map((sectionKey) => {
           const { label } = sections[sectionKey]
+          const isActive = activeSection === sectionKey
           return (
-            <Menu.Root key={label} unmountOnExit loop>
-              <Menu.Trigger>
+            <Menu.Root
+              key={label}
+              unmountOnExit
+              loop
+              onOpenChange={(details) => handleOpenChange(details, sectionKey)}
+            >
+              <Menu.Trigger asChild>
                 <Button
-                  as={ListItem}
                   variant="ghost"
-                  color="menu.lvl1.body"
                   m="0"
+                  color={isActive ? "primary.base" : "menu.lvl1.body"}
+                  // onMouseEnter={() => handleSectionHover(sectionKey)}
                 >
-                  {label}
+                  {isActive && (
+                    <motion.div
+                      style={{
+                        position: "absolute",
+                        inset: "0",
+                        borderRadius: "var(--eth-radii-base)",
+                        background: "var(--eth-colors-primary-lowContrast)",
+                        zIndex: 0,
+                      }}
+                      layoutId="menu-section-bg-highlight"
+                      transition={{ duration: 0.2 }}
+                    />
+                  )}
+                  <Text as="span" zIndex="1">
+                    {label}
+                  </Text>
                 </Button>
               </Menu.Trigger>
               <LvlPortal
@@ -242,15 +243,30 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
       </Flex>
       <Grid
         position="absolute"
-        top="4.75rem"
+        visibility={isOpen ? "visible" : "hidden"}
+        top="navHeight"
         insetInline="0"
-        bg={`menu.lvl${1}.background`} // TODO
         templateColumns="repeat(3, 1fr)"
-        transition="grid-template-rows 0.5s ease-in-out"
+        transition="grid-template-columns 0.5s ease-in-out"
+        shadow="md"
+        border="1px"
+        borderColor="menu.stroke"
+        scrollBehavior="smooth"
+        bg={`menu.lvl${1}.background`}
+        sx={{
+          // Styling if Lvl2 is open
+          '&:has(#menu-box-lvl-2 [data-state="open"])': {
+            bg: "menu.lvl2.background",
+          },
+          // Styling if Lvl3 is open
+          '&:has(#menu-box-lvl-3 [data-state="open"])': {
+            bg: "menu.lvl3.background",
+          },
+        }}
       >
-        <Box ref={refs.lvl1} />
-        <Box ref={refs.lvl2} />
-        <Box ref={refs.lvl3} />
+        <Box ref={refs.lvl1} id="menu-box-lvl-1" />
+        <Box ref={refs.lvl2} id="menu-box-lvl-2" />
+        <Box ref={refs.lvl3} id="menu-box-lvl-3" />
       </Grid>
     </>
   )
