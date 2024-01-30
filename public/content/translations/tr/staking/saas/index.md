@@ -13,11 +13,11 @@ summaryPoints:
   - Güveni azaltın ve para çekme anahtarlarınızın velayetini koruyun
 ---
 
-## Hizmet olarak staking nedir? {#what-is-staking-as-a-service}
+## Hizmet olarak staking nedir? \{#what-is-staking-as-a-service}
 
 Hizmet olarak staking ("SaaS"), bir doğrulayıcı için kendi 32 ETH'nizi yatırdığınız, ancak düğüm işlemlerini üçüncü taraf bir operatöre devrettiğiniz bir staking hizmetleri kategorisini temsil eder. Bu süreç genellikle, anahtar oluşturma ve yatırma dahil olmak üzere ilk kurulum boyunca yönlendirilmeyi ve ardından imzalama anahtarlarınızı operatöre yüklemeyi içerir. Bu, hizmetin genellikle aylık bir ücret karşılığında doğrulayıcınızı sizin adınıza çalıştırmasını sağlar.
 
-## Neden bir hizmet ile hisseleme? {#why-stake-with-a-service}
+## Neden bir hizmet ile hisseleme? \{#why-stake-with-a-service}
 
 Ethereum protokolü doğal olarak pay devrini desteklemez, bu nedenle bu hizmetler bu talebi karşılamak için oluşturulmuştur. Stake edilecek 32 ETH'niz varsa, ancak donanımla uğraşmaktan rahatsızlık duyuyorsanız, SaaS hizmetleri, yerel blok ödülleri kazanırken zor kısmı devretmenize izin verir.
 
@@ -29,7 +29,7 @@ Ethereum protokolü doğal olarak pay devrini desteklemez, bu nedenle bu hizmetl
 
 <StakingComparison page="saas" />
 
-## Ne dikkate alınmalı {#what-to-consider}
+## Ne dikkate alınmalı \{#what-to-consider}
 
 ETH'nizi kilitlemenize yardımcı olacak SaaS sağlayıcılarının sayısı artmaktadır, anca her birinin kendine ait fayda ve riskleri bulunur. Tüm SaaS seçenekleri evde hisseleme ile karşılaştırıldığında ek güven varsayımları gerektirir. Saas seçenekleri açık veya denetlenebilir olmayan Ethereum istemcilerini saran ek kodlara sahip olabilir. SaaS ayrıca ağ merkeziyetsizliği üzerinde zararlı bir etkiye de sahiptir. Kuruluma göre, doğrulayıcınızı kontrol edemeyebilirsiniz - operatör sizin ETH'nizi kullanarak aldatıcı biçimde davranabilir.
 
@@ -37,7 +37,7 @@ Nitelik göstergeleri, listelenen bir SaaS sağlayıcısının sahip olabileceğ
 
 <StakingConsiderations page="saas" />
 
-## Staking servis sağlayıcılarını keşfedin {#saas-providers}
+## Staking servis sağlayıcılarını keşfedin \{#saas-providers}
 
 Aşağıda bazı mevcut SaaS sağlayıcıları bulunmaktadır. Bu hizmetlerde size rehberlik etmesi için yukarıdaki göstergeleri kullanın
 
@@ -55,7 +55,7 @@ Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemc
 
 Kaçırdığımız bir hizmet sağlayıcı olarak hisseleme için bir öneriniz mi var? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
 
-## Sıkça sorulan sorular {#faq}
+## Sıkça sorulan sorular \{#faq}
 
 <ExpandableCard title="Anahtarlarımı kim tutuyor?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Düzenlemeler sağlayıcıdan sağlayıcıya farklılık gösterecektir, ancak genellikle ihtiyacınız olan tüm imzalama anahtarlarını (32 ETH başına bir tane olmak üzere) ayarlamanız ve bunları sizin adınıza doğrulamalarına izin vermek için sağlayıcınıza yüklemeniz konusunda size rehberlik edilecektir. İmza anahtarları tek başına paranızı çekme, transfer etme veya harcama imkanı vermez. Ancak, uygun şekilde yapılmadığı takdirde çevrimdışı cezalara veya kesintilere neden olabilecek konsensusa doğru oy kullanma yeteneği sağlarlar.
@@ -89,6 +89,6 @@ Kesinti/çıkış sürecinin tamamlanmasından sonra, bu fonlar doğrulayıcıya
 Herhangi bir garanti veya sigorta seçeneği hakkında daha fazla detay için ya da nasıl çekim adresi sağlanacağıyla ilgili yönergeler için bireysel SaaS sağlayıcınızla iletişime geçin. Doğrulayıcı kurulumunuzun tam kontrolünün sizde olmasını tercih ediyorsanız, <a href="/staking/solo/">ETH'nizi tek başına nasıl stake edeceğiniz hakkında daha fazla bilgi edinin</a>.
 </ExpandableCard>
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Staking hizmetlerini değerlendirmek](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

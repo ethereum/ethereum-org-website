@@ -9,7 +9,7 @@ template: roadmap
 
 Yol haritasının bazı bölümleri Ethereum'u yakın vadede ölçeklendirmek veya güvence altına almak için gerekli değildir, ancak Ethereum'u geleceğe yönelik istikrar ve güvenilirlik için ayarlar.
 
-## Kuantum direnci {#quantum-resistance}
+## Kuantum direnci \{#quantum-resistance}
 
 Günümüz Ethereum'unu koruyan bazı kriptografiler, kuantum hesaplama gerçeklik haline geldiğinde tehlikeye girecek. Kuantum bilgisayarlarının modern kriptografiye gerçek anlamda bir tehdit oluşturması muhtemelen onlarca yıl uzakta olsa da, Ethereum gelecek yüz yıllar boyunca güvende olacak şekilde inşa ediliyor. Bunun anlamı; mümkün olan en kısa sürede [ Ethereum'u kuantum dirençli](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) hale getirmektir.
 
@@ -19,7 +19,7 @@ Ethereum'da kriptografik sırlar oluşturmak için çeşitli yerlerde kullanıla
 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> KZG ve güvenilir kurulumlar hakkındakileri okuyun</ButtonLink>
 
-## Daha basit ve daha verimli Ethereum {#simpler-more-efficient-ethereum}
+## Daha basit ve daha verimli Ethereum \{#simpler-more-efficient-ethereum}
 
 Karmaşıklık, "hatalar" ve saldırganlar tarafından kötüye kullanılabilecek kırılganlıkların önünü açar. Bu yüzden, yol haritası Ethereum'u basitleştirir ve birçok yükseltmeden orada kalmış olan, ancak artık ihtiyaç duyulmayan kodu siler. Daha sade ve daha basit bir kod tabanı geliştiricilerin işlerini sürdürebilmesini ve anlayabilmesini kolaylaştırır.
 
@@ -27,7 +27,7 @@ Her şeyi daha tutarlı ve basit hale getirmek için [Ethereum Sanal Makinesi'ne
 
 Benzer olarak, Ethereum istemcilerinin günümüzdeki diğer kısımlarına yapılabilecek güncellemeler de var. Şu anda bunun için farklı bir veri sıkıştırma yöntemi kullanan fikir birliği istemcilerini bir örnek olarak verebiliriz. Sıkıştırma şeması bütün ağ ile birleştirildiğinde istemciler arası veri paylaşmak çok daha kolay ve içgüdüsel bir hal alacak.
 
-## Güncel ilerleme {#current-progress}
+## Güncel ilerleme \{#current-progress}
 
 Ethereum gelecek ispatı için gereken bir çok yükseltme hâlâ araştırma aşamasında ve uygulanmasına birkaç yıl daha var. SELFDESTRUCT komutunu silme ve fikir birliği istemcilerinde kullanılan sıkıştırma şemasını harmanlama gibi yükseltmeler muhtemelen kuantuma dayanıklı kriptografiden çok daha önce gelecek.
 

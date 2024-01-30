@@ -14,7 +14,7 @@ summaryPoint3: Nakabatay sa open-source na teknolohiyang magagamit ng kahit sino
 
 Ang DeFi ay isang bukas at pandaigdigang sistemang pinansyal na binuo para sa panahon ng internet - isang alternatibo sa isang sistema na mahirap unawain, mahigpit na kontrolado, at pinagbubuklod ng infrastructure at mga prosesong ilang dekada nang ginagamit. Sa tulong nito makokontrol at makikita mo ang iyong pera. Binibigyan ka nito ng pagkakataong makita ang mga pandaigdigang market at mga alternatibo sa iyong lokal na currency o mga opsyon sa pagbabangko. Binubuksan ng mga produkto ng DeFi ang mga serbisyong pinansyal sa sinumang may koneksyon sa internet at ang karamihan sa mga ito ay pagmamay-ari at pinapanatili ng mga user ng mga ito. Sa ngayon, daan-daang bilyong dolyar ng crypto na ang dumaan sa mga DeFi application at patuloy itong dumarami araw-araw.
 
-## Ano ang DeFi? {#what-is-defi}
+## Ano ang DeFi? \{#what-is-defi}
 
 DeFi ang tawag sa mga produkto at serbisyong pinansyal na maaring gamitin ng sinumang makakagamit ng Ethereum - kahit sinong may koneksyon sa internet. Sa DeFi, laging bukas ang mga market at walang centralized na awtoridad na makakapigil ng mga pagbabayad o hindi magbibigay sa iyo ng access sa kahit ano. Ang mga serbisyong dating mabagal at nanganganib dahil sa human error ay awtomatiko at mas ligtas na ngayon dahil pinapangasiwaan na ang mga ito ng code na masusuri at mabubusisi ng kahit sino.
 
@@ -22,7 +22,7 @@ Lumalaki ang ekonomiya ng crypto, kung saan puwede kang magpautang, manghiram, m
 
 <YouTube id="H-O3r2YMWJ4" />
 
-## DeFi vs tradisyonal na pinansya {#defi-vs-tradfi}
+## DeFi vs tradisyonal na pinansya \{#defi-vs-tradfi}
 
 Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unawain ang mga problemang umiiral ngayon.
 
@@ -35,7 +35,7 @@ Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unaw
 - Maaaring abutin nang ilang araw ang mga pag-transfer ng pera dahil sa mga internal na prosesong ginagawa ng tao.
 - May premium ang mga serbisyong pinansyal dahil kailangan ng mga intermediary institution ang kanilang parte.
 
-### Pag-kumpara {#defi-comparison}
+### Pag-kumpara \{#defi-comparison}
 
 | DeFi                                                                                                                            | Tradisyonal na pinansya                                                                                                                                                         |
 | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Ang isa sa mga pinakamagandang paraan upang makita ang potensyal ng DeFi ay unaw
   I-explore ang mga DeFi app
 </ButtonLink>
 
-## Nagsimula ito sa Bitcoin... {#bitcoin}
+## Nagsimula ito sa Bitcoin... \{#bitcoin}
 
 Sa maraming paraan, ang Bitcoin ang unang DeFi application. Talagang pinapayagan ka ng Bitcoin na magmay-ari at kontrolin ang halaga nito at ipadala ito kahit saan sa mundo. Ginagawa nito ito sa pamamagitan ng pagbibigay ng paraan para sa maraming tao, na hindi umaasa sa isa't isa, na sumang-ayon sa isang ledger ng mga account na hindi nangangailangan ng isang pinagkakatiwalaang intermediary. Ang Bitcoin ay bukas sa lahat at walang sinuman ang may awtoridad na baguhin ang mga panuntunan nito. Ang mga panuntunan ng Bitcoin, tulad ng kanyang kakapusan at pagiging bukas, ay nakalagay na sa teknolohiya. Hindi ito katulad ng tradisyonal na pinansya kung saan maaaring mag-print ang mga pamahalaan ng pera na nagpapababa sa halaga ng iyong ipon at mga kumpanyang maaaring magpasara ng mga market.
 
@@ -59,7 +59,7 @@ Mas pinapahusay pa ito ng Ethereum. Tulad ng Bitcoin, hindi maaaring magbago ang
 
 <YouTube id="qFBYB4W2tqU" />
 
-## Programmable na pera {#programmable-money}
+## Programmable na pera \{#programmable-money}
 
 Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? Ngunit, isa itong default na feature ng mga token sa Ethereum. Kahit sino ay maaaring mag-program ng logic sa mga pagbabayad. Kaya makukuha mo ang kontrol at seguridad ng Bitcoin pati ang mga serbisyong ibinibigay ng mga pinansyal na institusyon. Dahil dito, magagawa mo sa mga cryptocurrency ang mga bagay na hindi mo magagawa sa Bitcoin, tulad ng pagpapautang at panghihiram, pag-iiskedyul ng mga pagbabayad, pag-invest sa mga index fund at iba pa.
 
@@ -70,7 +70,7 @@ Medyo kakaiba itong pakinggan... "bakit ko gugustuhing i-program ang pera ko"? N
   </ButtonLink>
 </InfoBanner>
 
-## Ano ang magagawa mo sa DeFi? {#defi-use-cases}
+## Ano ang magagawa mo sa DeFi? \{#defi-use-cases}
 
 May decentralized na alternatibo sa karamihan sa mga serbisyong pinansyal. Ngunit nagbibigay din ang Ethereum ng pagkakataon para gumawa ng mga bagong-bagong pinansyal na produkto. Palaging nadaragdagan ang listahang ito.
 
@@ -88,7 +88,7 @@ May decentralized na alternatibo sa karamihan sa mga serbisyong pinansyal. Nguni
 
 <Divider />
 
-### Magpadala ng pera sa iba't ibang bahagi ng mundo nang mabilis {#send-money}
+### Magpadala ng pera sa iba't ibang bahagi ng mundo nang mabilis \{#send-money}
 
 Bilang isang blockchain, ang Ethereum ay idinisenyo para magpadala ng mga transaksyon sa ligtas at pandaigdigang paraan. Tulad ng Bitcoin, pinapadali ng Ethereum ang pagpapadala ng pera sa iba't ibang bahagi ng mundo, na parang nagpapadala lang ng email. Ilagay lang ang [ENS name](/nft/#nft-domains) (tulad ng bob.eth) ng recipient mo o ang kanyang account address mula sa iyong wallet at sa loob ng ilang minuto (karaniwan), direkta na niyang matatanggap ang bayad mo. Upang magpadala o tumanggap ng mga pagbabayad, kakailanganin mo ng [wallet](/wallets/).
 
@@ -96,7 +96,7 @@ Bilang isang blockchain, ang Ethereum ay idinisenyo para magpadala ng mga transa
   Tingnan ang mga decentralized application (dapps) para sa pagbabayad
 </ButtonLink>
 
-#### Mag-stream ng pera sa iba't ibang bahagi ng mundo... {#stream-money}
+#### Mag-stream ng pera sa iba't ibang bahagi ng mundo... \{#stream-money}
 
 Maaari ka ring mag-stream ng pera sa Ethereum. Binibigyang-daan ka nitong bayaran ang suweldo ng isang tao sa kada segundo, kaya agad niyang makukuha ang pera niya kapag kailangan niya ito. O magrenta ng isang bagay kada segundi, tulad ng storage locker o electric scooter.
 
@@ -104,7 +104,7 @@ At kung ayaw mong magpadala o mag-stream ng [ETH](/eth/) dahil nagbabago-bago an
 
 <Divider />
 
-### Ma-access ang mga stable na currency {#stablecoins}
+### Ma-access ang mga stable na currency \{#stablecoins}
 
 Ang volatility ng cryptocurrency ay problema para sa maraming pinansyal na produkto at pangkalahatang paggastos. Inayos ito ng komunidad ng DeFi gamit ang mga stablecoin. Ipinapareho ang halaga ng mga ito sa isa pang asset, na karaniwang mas ginagamit na currency tulad ng dolyar.
 
@@ -116,7 +116,7 @@ Ang mga coin tulad ng Dai o USDC ay may halagang nananatiling malapit sa isang d
 
 <Divider />
 
-### Paghiram {#lending}
+### Paghiram \{#lending}
 
 Ang paghiram ng pera mula sa mga decentralized provider ay may dalawang pangunahing uri.
 
@@ -129,7 +129,7 @@ Ang paghiram ng pera mula sa mga decentralized provider ay may dalawang pangunah
 
 Maraming benepisyo sa paggamit ng decentralized lender...
 
-#### Paghiram nang may privacy {#borrowing-privacy}
+#### Paghiram nang may privacy \{#borrowing-privacy}
 
 Sa kasalukuyan, ang pagpapautang at panghihiram ng pera ay nauugnay sa mga indibidwal na may kinalaman dito. Kailangang malaman ng mga bangko kung malaman na mababayaran mo ang loan bago ito magpautang.
 
@@ -137,15 +137,15 @@ Ang decentralized na pagpapautang ay nangyayari nang hindi kinakailangang magpak
 
 Binibigyang-daan ka nitong humiram ng pera nang walang pagsusuri ng iyong credit o pagbibigay ng pribadong impormasyon.
 
-#### Access sa pandaigdigang pondo {#access-global-funds}
+#### Access sa pandaigdigang pondo \{#access-global-funds}
 
 Kapag gumamit ka ng decentralized lender, may access ka sa pondong idineposito sa iba't ibang bahagi ng mundo, hindi lang sa pondong hawak ng pinili mong bangko o institusyon. Pinapadali nito ang pagkuha ng mga loan at pinapababa nito ang interes.
 
-#### Tax-efficiencies {#tax-efficiencies}
+#### Tax-efficiencies \{#tax-efficiencies}
 
 Kapag nanghiram, maa-access mo ang pondong kailangan mo nang hindi ibinebenta ang iyong ETH (isang taxable event). Sa halip, maaari mong gamitin ang ETH bilang collateral para sa stablecoin loan. Dahil dito, makukuha mo ang cash-flow na kailangan mo at hindi mawawala sa iyo ang ETH mo. Ang mga stablecoin ay mga token na mas mainam kapag kailangan mo ng cash dahil hindi nagbabago-bago ang halaga ng mga ito gaya ng ETH. [Iba pang detalye tungkol sa mga stablecoin.](#stablecoins)
 
-#### Mga flash loan {#flash-loans}
+#### Mga flash loan \{#flash-loans}
 
 Ang mga flash loan ay mas eksperimental na uri ng decentralized na pagpapautang kung saan puwede kang humiram kahit walang collateral o nang hindi nagbibigay ng anumang personal na impormasyon.
 
@@ -172,9 +172,9 @@ Para magawa ang halimbawa sa itaas sa tradisyonal na mundo ng pinansya, kakailan
 
 <Divider />
 
-### Magsimulang mag-ipon gamit ang crypto {#saving}
+### Magsimulang mag-ipon gamit ang crypto \{#saving}
 
-#### Pagpapautang {#lending}
+#### Pagpapautang \{#lending}
 
 Maaari kang kumita ng interes sa iyong crypto sa pamamagitan ng pagpapautang nito at subaybayan ang paglago ng iyong pondo nang real time. Sa ngayon, mas mataas ang interes kaysa sa karaniwang makukuha mo sa iyong lokal na bangko (kung susuwertihin kang magkaroon ng access sa isang bangko). Narito ang isang halimbawa:
 
@@ -187,7 +187,7 @@ Maaari kang kumita ng interes sa iyong crypto sa pamamagitan ng pagpapautang nit
   Tingnan ang mga decentralized application (dapps) para sa pagpapautang
 </ButtonLink>
 
-#### Mga no-loss lottery {#no-loss-lotteries}
+#### Mga no-loss lottery \{#no-loss-lotteries}
 
 Ang mga no-loss lottery tulad ng PoolTogether ay masaya at bagong paraan upang mag-ipon ng pera.
 
@@ -205,7 +205,7 @@ Ang prize pool ay mula sa lahat ng interes na kinikita mula sa pagpapautang ng m
 
 <Divider />
 
-### Mag-exchange ng mga token {#swaps}
+### Mag-exchange ng mga token \{#swaps}
 
 May libo-libong token sa Ethereum. Sa tulong ng mga decentralized exchange (DEXs), mate-trade mo ang iba't ibang token kahit kailan mo gusto. Hinding-hindi mo bibitawan ang pagkontrol sa mga asset mo. Dito, para kang gumagamit ng currency exchange kapag pumunta sa ibang bansa. Ngunit hinding-hindi nagsasara ang bersyong DeFi. Ang mga market ay bukas 24/7, 365 araw kada taon at iginagarantiya ng teknolohiya na palaging may tatanggap ng trade.
 
@@ -217,7 +217,7 @@ Halimbawa, kung nais mong gamitin ang no-loss lottery na PoolTogether (na inilal
 
 <Divider />
 
-### Advanced trading {#trading}
+### Advanced trading \{#trading}
 
 Mayroong mga mas advanced na opsyon para sa mga trader na gusto ng kaunti pang kontrol. Ang mga limit order, perpetual, margin trading, at iba pa ay posibleng gawin. Sa pamamagitan ng Decentralized trading, magkakaroon ka ng access sa global na liquidity, hinding-hindi nagsasara ang market, palagi mong makokontrol ang mga asset mo.
 
@@ -229,7 +229,7 @@ Kapag gumagamit ka ng centralized exchange, dapat mong ideposito ang mga asset m
 
 <Divider />
 
-### Palaguin ang iyong portfolio {#investing}
+### Palaguin ang iyong portfolio \{#investing}
 
 May mga produkto para sa pamamahala ng pondo sa Ethereum na susubukang palaguin ang iyong portfolio batay sa estratehiyang iyong pipiliin. Ito ay awtomatiko, bukas sa lahat, at hindi nangangailangan ng manager na makikihati sa iyong kita.
 
@@ -241,7 +241,7 @@ Isang magandang halimbawa ang [ DeFi Pulse Index fund (DPI)](https://defipulse.c
 
 <Divider />
 
-### Pondohan ang iyong mga ideya {#crowdfunding}
+### Pondohan ang iyong mga ideya \{#crowdfunding}
 
 Magandang platform ang Ethereum para sa crowdfunding:
 
@@ -253,7 +253,7 @@ Magandang platform ang Ethereum para sa crowdfunding:
   Tingnan ang mga decentralized application (dapps) para sa crowdfunding
 </ButtonLink>
 
-#### Kwadratik na pondo {#quadratic-funding}
+#### Kwadratik na pondo \{#quadratic-funding}
 
 Ang Ethereum ay open source na software at marami sa mga naunang gawain nito ay pinondohan ng komunidad. Dahil dito, nagkaroon ng interesante at bagong fundraising model: ang quadratic funding. This has the potential to improve the way we fund all types of public goods in the future.
 
@@ -270,7 +270,7 @@ Ibig sabihin nito, ang Proyekto A na may 100 na donasyon na nagkakahalaga ng 1 d
 
 <Divider />
 
-### Insurance {#insurance}
+### Insurance \{#insurance}
 
 Ang decentralized insurance ay may layuning gawing mas abot-kaya, mas pabilisin ang payout, at mas transparent ang insurance. Sa pamamagitan ng higit pang automation, mas abot-kaya ang coverage at mas mabibilis ang pay-out. Ang data na ginagamit upang magpasya sa iyong claim ay ganap na transparent.
 
@@ -282,7 +282,7 @@ Ang mga produkto ng Ethereum, gaya ng anumang software, ay puwedeng magkaroon ng
 
 <Divider />
 
-### Mga aggregator at manager ng portfolio {#aggregators}
+### Mga aggregator at manager ng portfolio \{#aggregators}
 
 Sa dami ng mga nangyayari, kakailanganin mo ng paraan upang subaybayan ang lahat ng iyong mga investment, loan, at trade. May iba't ibang produkto na nagbibigay-daan sa iyong i-coordinate ang lahat ng iyong aktibidad sa DeFi mula sa isang lugar. Ito ang kagandahan ng open architecture ng DeFi. Ang mga team ay maaaring bumuo ng mga interface kung saan hindi mo lang makikita ang iyong mga balanse sa iba't ibang produkto, maaari mo ring gamitin ang kanilang mga feature. Maaaring maging kapaki-pakinabang ito para sa iyo habang tinitingnan mo ang iba pang bahagi ng DeFi.
 
@@ -292,7 +292,7 @@ Sa dami ng mga nangyayari, kakailanganin mo ng paraan upang subaybayan ang lahat
 
 <Divider />
 
-## Paano gumagana ang DeFi? {#how-defi-works}
+## Paano gumagana ang DeFi? \{#how-defi-works}
 
 Ang DeFi ay gumagamit ng mga cryptocurrency at smart contract upang magbigay ng mga serbisyong hindi nangangailangan ng mga intermediary. Sa kasalukuyang mundo ng pinansya, ang mga institusyong pinansyal ay nagsisilbing guarantor ng mga transaksyon. Binibigyan nito ang mga institusyong ito ng labis na kapangyarihan dahil dumadaan sa kanila ang pera mo. Dagdag pa rito, bilyon-bilyong tao sa buong mundo ang walang access sa bank account.
 
@@ -304,7 +304,7 @@ Ang mga kontrata ay bukas din para tingnan at i-audit ng kahit sino. Ibig sabihi
 
 Ito ay nangangahulugan na kailangan nating magtiwala sa mga mas teknikal na miyembro ng komunidad ng Ethereum na nakakapag-read ng code. Ang open-source based na komunidad ay tumutulong sa pagbabantay sa mga developer, pero hindi na ito masyadong kakailanganin sa paglipas ng panahon habang nagiging mas madaling i-read ang mga smart contract at gumagawa ng iba pang paraan para patunayan ang pagiging mapagkakatiwalaan ng code.
 
-## Ethereum at DeFi {#ethereum-and-defi}
+## Ethereum at DeFi \{#ethereum-and-defi}
 
 Ang Ethereum ang perpektong pundasyon para sa DeFi dahil sa mga sumusunod:
 
@@ -320,7 +320,7 @@ Maaaring isipin na may mga layer ang DeFi:
 3. Ang mga protocol – [mga smart contract](/glossary/#smart-contract) na nagbibigay ng kakayahan, halimbawa, sa isang serbisyong nagpapahintulot ng decentralized na pagpapautang ng mga asset.
 4. [Ang mga application](/dapps/) – ang mga produkto na ginagamit natin para pamahalaan at i-access ang mga protocol.
 
-## Gumawa ng DeFi {#build-defi}
+## Gumawa ng DeFi \{#build-defi}
 
 Ang DeFi ay isang open-source movement. Ang mga protocol at application ng DeFi ay bukas para i-inspect, i-fork, at pagandahin mo. Dahil sa layered stack na ito (gumagamit ang lahat ng ito ng parehong base blockchain at mga asset), ang mga protocol ay maaaring pagsama-samahin upang gumawa ng mga natatanging oportunidad.
 
@@ -328,25 +328,25 @@ Ang DeFi ay isang open-source movement. Ang mga protocol at application ng DeFi 
   Iba pang detalye tungkol sa mga decentralized application (dapps) para sa paggawa
 </ButtonLink>
 
-## Karagdagang pagbabasa {#futher-reading}
+## Karagdagang pagbabasa \{#futher-reading}
 
-### DeFi data {#defi-data}
+### DeFi data \{#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [Defi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)
 
-### Mga artikulo tungkol sa DeFi {#defi-articles}
+### Mga artikulo tungkol sa DeFi \{#defi-articles}
 
 - [Gabay para sa mga baguhan sa DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, Enero 6, 2020_
 
-### Videos {#videos}
+### Videos \{#videos}
 
 - [Finematics - edukasyon tungkol sa decentralized finance](https://finematics.com/) – _Mga video tungkol sa DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Mga pangunahing kaalaman sa DeFi: Lahat ng kailangan mong malaman para makapagsimula sa nakakalitong lugar na ito._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA)_Ano ang DeFi?_
 
-### Mga Komunidad {#communities}
+### Mga Komunidad \{#communities}
 
 - [Discord server ng DeFi Llama](https://discord.gg/buPFYXzDDd)
 - [Discord server ng DeFi Pulse](https://discord.gg/Gx4TCTk)

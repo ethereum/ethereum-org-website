@@ -12,11 +12,11 @@ A Gasper a Casper, a baráti véglegességi eszköz (Casper-FFG), és az LMD-GHO
 
 A jelen téma könnyebb megértéséhez tekintse meg a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) alapjairól szóló oldalt.
 
-## Gasper szerepe {#role-of-gasper}
+## Gasper szerepe \{#role-of-gasper}
 
 A Gasper egy proof-of-stake blokklánc tetején helyezkedik el, ahol a csomópontok biztonsági letétként ethert biztosítanak, amely megsemmisíthető, ha lusták vagy rosszhiszeműek a blokkok javaslata vagy validálása során. A Gasper az a mechanizmus, amely meghatározza, hogyan jutalmazzák és büntetik a validálókat, hogyan döntenek arról, hogy mely blokkokat fogadják el és melyeket utasítják el, és hogy a blokklánc melyik elágazására építsenek.
 
-## Mi az a véglegesség? {#what-is-finality}
+## Mi az a véglegesség? \{#what-is-finality}
 
 A véglegesség bizonyos blokkok tulajdonsága, ami azt jelenti, hogy nem lehet visszafordítani azokat, kivéve, ha kritikus konszenzushiba történt, és a támadó a teljes letétbe helyezett ether legalább 1/3-át megsemmisítette. A véglegesített blokkok olyan információt jelentenek, amelyekkel kapcsolatban a blokklánc biztos. Egy blokknak kétlépcsős frissítési eljáráson kell átesnie ahhoz, hogy véglegesítésre kerüljön:
 
@@ -32,21 +32,21 @@ Mivel a véglegesítéshez kétharmados egyetértés kell a blokk kanonikus volt
 
 Az első feltétel azért merül fel, mert egy lánc véglegesítéséhez a letétbe helyezett ether kétharmadára van szükség. A második feltétel azért van, mert ha a teljes letét kétharmada mindkét elágazás mellett szavazott, akkor egyharmadának mindkettőre szavaznia kellett. A kettős szavazás súlyos büntetést és kizárást von maga után, amelyet maximálisan büntetnének, és a teljes letét egyharmada megsemmisülne. 2022 májusától ezért egy támadónek körülbelül 10 milliárd dollár értékű ethert kellene elégetnie. A Gasperben a blokkokat érvényesítő és véglegesítő algoritmus a [Casper-FFG](https://arxiv.org/pdf/1710.09437.pdf) kissé módosított formája.
 
-### Ösztönzők és súlyos büntetés (slashing) {#incentives-and-slashing}
+### Ösztönzők és súlyos büntetés (slashing) \{#incentives-and-slashing}
 
 A validátorok jutalmat kapnak a blokkok jóhiszemű előterjesztéséért és validálásáért. Ethert kapnak jutalomként, mely hozzáadódik a letétjükhöz. Másrészt, azok a validátorok, akik nem cselekszenek, amikor felszólítják őket, lemaradnak ezekről a jutalmakról, és bizonyos esetekben elveszítik meglévő letétjük egy kis részét. A távolmaradásért járó büntetések csekélyek, és a legtöbb esetben csak a jutalmak elmaradását jelentik. Ugyanakkor vannak olyan validátori műveletek, amelyeket nehéz lenne véletlenül megtenni, ezért valamilyen rosszindulatú szándékot jeleznek, például több blokkot javasolni vagy tanúsítani ugyanarra a slotra, vagy ellentmondani a korábbi ellenőrzési pontra vonatkozó szavazásnak. Ezek a viselkedésmódok súlyos büntetést vonnak maguk után komoly következményekkel: a slashing eredményeként a validátor letétjének egy része megsemmisül, a validátort pedig eltávolítják a hálózatból. Ez a folyamat 36 napig tart. Az 1. napon legfeljebb 1 ETH összegű kezdeti büntetés jár. A súlyos büntetést kapott validátor ether egyenlege lassan fogy a kilépési időszak alatt, de a 18. napon „korrelációs büntetést” kap, amely nagyobb, ha több validátor egy időben kerül kizárásra. A maximális büntetés a teljes letét. Ezek a jutalmak és büntetések arra szolgálnak, hogy ösztönözzék a becsületes validátorokat, és visszatartsák a hálózat elleni támadásokat.
 
-### Inaktivitási elszivárgás {#inactivity-leak}
+### Inaktivitási elszivárgás \{#inactivity-leak}
 
 A biztonság mellett a Gasper „elfogadható elérhetőséget” is biztosít. Ez az a feltétel, hogy amíg az összes letétbe helyezett ether kétharmada becsületesen és a protokollt követve szavaz, a lánc képes lesz a véglegesítésre, függetlenül bármilyen más tevékenységtől (például támadások, késleltetés vagy súlyos büntetések). Másképp fogalmazva, a teljes letétbe helyezett ether egyharmadának veszélyeztetettnek kell lennie ahhoz, hogy a lánc ne tudjon véglegesedni. A Gasperben van egy további védelmi vonal az elérhetőség sérülése ellen, amelyet „inaktivitási elszivárgásként” ismerünk. Ez a mechanizmus akkor aktiválódik, amikor a blokklánc véglegesítése több mint négy korszakon keresztül meghiúsul. Azoknak a validátoroknak, akik nem tanúsítják aktívan a többségi láncot, a letétjük fokozatosan elszivárog, amíg a többség vissza nem nyeri a teljes letét kétharmadát, így az elérhetőség sérülése csak átmeneti.
 
-### Elágazásválasztás {#fork-choice}
+### Elágazásválasztás \{#fork-choice}
 
 A Casper-FFG eredeti definíciója tartalmazott egy elágazásválasztó algoritmust a szabállyal: `kövesse azt a láncot, amely a legnagyobb magasságú érvényesített ellenőrzőpontot tartalmazza`, ahol a magasságot a genezisblokktól való távolságként határozzuk meg. A Gasperben az eredeti elágazásválasztási szabályt lecserélték egy kifinomultabb, LMD-GHOST nevű algoritmusra. Fontos megérteni, hogy normális körülmények között az elágazásválasztási szabály szükségtelen, mert minden slothoz egyetlen blokkajánló tartozik, és ezt a jóhiszemű validátorok tanúsítják. Csak nagy hálózati aszinkronitás esetén, vagy ha egy rosszhiszemű blokkajánló kétértelműen nyilatkozott, van szükség elágazásválasztó algoritmusra. Ha azonban ezek az esetek mégis bekövetkeznek, ez az algoritmus kritikus védelmet jelent, s biztosítja a helyes láncot.
 
 Az LMD-GHOST a következő kifejezés rövidítése: latest message-driven greedy greedy heaviest observed sub-tree (a legutolsó üzenet által vezérelt, mohó, legsúlyosabb részfa). Ez egy nehézkes meghatározása annak, hogy a tanúsítások legnagyobb összesített súlyával rendelkező elágazást választja ki kanonikusnak (mohó legsúlyosabb részfa), és ha több üzenet érkezik egy validátortól, csak a legutolsót veszi figyelembe (legutolsó üzenet által vezérelt). Mielőtt a legnehezebb blokkot hozzáadná a kanonikus láncához, minden validátor minden blokkot e szabály alapján értékel.
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Gasper: A GHOST és a Casper kombinációja](https://arxiv.org/pdf/2003.03052.pdf)
 - [Casper, a baráti véglegességi eszköz (Friendly Finality Gadget)](https://arxiv.org/pdf/1710.09437.pdf)

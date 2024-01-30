@@ -4,7 +4,7 @@ description: Teknologi validator terdistribusi memungkinkan operasi terdistribus
 lang: id
 ---
 
-# Teknologi validator terdistribusi {#distributed-validator-technology}
+# Teknologi validator terdistribusi \{#distributed-validator-technology}
 
 Teknologi validator terdistribusi (DVT) adalah pendekatan terhadap keamanan validator yang menyebarkan manajemen kunci dan tanggung jawab penandatanganan ke berbagai pihak, untuk mengurangi titik kegagalan tunggal, dan meningkatkan ketangguhan validator.
 
@@ -12,21 +12,21 @@ Hal ini dilakukan dengan **memisahkan kunci pribadi** yang digunakan untuk menga
 
 ![Diagram yang menunjukkan bagaimana satu kunci validator dibagi menjadi beberapa bagian kunci dan didistribusikan ke beberapa simpul dengan komponen yang berbeda-beda.](./dvt-cluster.png)
 
-## Mengapa kita membutuhkan DVT? {#why-do-we-need-dvt}
+## Mengapa kita membutuhkan DVT? \{#why-do-we-need-dvt}
 
-### Keamanan {#security}
+### Keamanan \{#security}
 
 Validator menghasilkan dua pasangan Kunci Publik-Pribadi: kunci Validator untuk berpartisipasi dalam Konsensus dan kunci penarikan untuk mengakses dana. Sementara validator dapat mengamankan kunci penarikan di penyimpanan dingin, kunci pribadi validator harus daring 24/7. Jika kunci pribadi validator disusupi, penyerang dapat mengontrol validator, yang berpotensi menyebabkan pemotongan atau hilangnya ETH penaruh. DVT dapat membantu mengurangi risiko ini. Begini caranya:
 
 Dengan menggunakan DVT, penaruh dapat berpartisipasi dalam penaruhan sambil menyimpan kunci pribadi validator di penaruhan dingin. Ini dicapai dengan mengenkripsi kunci validator lengkap asli dan kemudian membaginya menjadi pembagian kunci. Pembagian kunci langsung daring dan didistribusikan ke beberapa simpul yang memungkinkan operasi validator terdistribusi. Ini dimungkinkan karena validator Ethereum menggunakan tanda tangan BLS yang bersifat aditif, artinya kunci lengkap dapat direkonstruksi dengan menjumlahkan bagian-bagian komponennya. Hal ini memungkinkan penaruh untuk menyimpan kunci validator 'master' asli lengkap dengan aman secara offline.
 
-### Tidak ada titik kegagalan tunggal {#no-single-point-of-failure}
+### Tidak ada titik kegagalan tunggal \{#no-single-point-of-failure}
 
 Ketika sebuah validator dibagi di antara beberapa operator dan mesin, validator tersebut dapat menahan kegagalan perangkat keras dan perangkat lunak individu tanpa menjadi offline. Risiko kegagalan juga dapat dikurangi dengan menggunakan beragam konfigurasi perangkat keras dan perangkat lunak di seluruh simpul dalam sebuah kelompok. Ketahanan ini tidak tersedia untuk konfigurasi validator simpul tunggal - ini berasal dari lapisan DVT.
 
 Jika salah satu komponen mesin dalam kelompok turun (misalnya, jika ada empat operator dalam kelompok validator dan satu menggunakan klien tertentu yang memiliki bug), yang lain memastikan bahwa validator terus berjalan.
 
-### Desentralisasi {#decentralization}
+### Desentralisasi \{#decentralization}
 
 Skenario ideal untuk Ethereum adalah memiliki validator yang dioperasikan secara independen sebanyak mungkin. Namun, beberapa penyedia penaruhan telah menjadi sangat populer dan menyumbang sebagian besar dari total ETH yang dipertaruhkan di jaringan. DVT dapat memungkinkan operator ini ada sambil mempertahankan desentralisasi taruhan. Ini karena kunci untuk setiap validator didistribusikan di banyak mesin dan akan membutuhkan kolusi yang jauh lebih besar bagi validator untuk berubah menjadi berbahaya.
 
@@ -42,7 +42,7 @@ Tanpa DVT, lebih mudah bagi penyedia penaruhan untuk hanya mendukung satu atau d
 6. **Meningkatkan keragaman** (klien, pusat data, lokasi, regulasi, dll.)
 7. **Keamanan yang ditingkatkan** manajemen kunci validator
 
-## Bagaimana cara kerja DVT? {#how-does-dvt-work}
+## Bagaimana cara kerja DVT? \{#how-does-dvt-work}
 
 Solusi DVT berisi komponen-komponen berikut:
 
@@ -54,21 +54,21 @@ Solusi DVT berisi komponen-komponen berikut:
 
 Validator terdistribusi memiliki toleransi kesalahan bawaan dan dapat terus berjalan bahkan jika beberapa simpul individu offline. Ini berarti bahwa kelompok tangguh meskipun beberapa simpul di dalamnya ternyata jahat atau malas.
 
-## Kasus penggunaan DVT {#dvt-use-cases}
+## Kasus penggunaan DVT \{#dvt-use-cases}
 
 DVT memiliki implikasi signifikan bagi industri penaruhan yang lebih luas:
 
-### Penaruh solo {#solo-stakers}
+### Penaruh solo \{#solo-stakers}
 
 DVT juga memungkinkan penaruhan non-kustodial dengan memungkinkan Anda mendistribusikan kunci validator ke seluruh simpul jarak jauh sambil tetap menjaga kunci sepenuhnya offline. Ini berarti penaruh di beranda tidak selalu perlu mengeluarkan biaya untuk perangkat keras, sementara mendistribusikan pembagian kunci dapat membantu memperkuat mereka dari potensi peretasan.
 
-### Staking as a service (SaaS) Pengaturan taruhan {#saas}
+### Staking as a service (SaaS) Pengaturan taruhan \{#saas}
 
 Operator (seperti pool penaruhanl dan penaruh institusional) yang mengelola banyak validator dapat menggunakan DVT untuk mengurangi risiko mereka. Dengan mendistribusikan infrastruktur, mereka bisa menambahkan redudansi pada operasional mereka dan mendiversifikasi jenis perangkat keras yang digunakan.
 
 DVT berbagi tanggung jawab untuk manajemen kunci di berbagai simpul, yang berarti beberapa biaya operasional juga dapat dibagi. DVT juga dapat mengurangi risiko operasional dan biaya asuransi bagi penyedia penaruhan.
 
-### Staking pools {#staking-pools}
+### Staking pools \{#staking-pools}
 
 Karena pengaturan validator standar, pool penaruhan dan penyedia penaruhan likuid dipaksa untuk memiliki tingkat kepercayaan operator tunggal yang berbeda-beda karena keuntungan dan kerugian disosialisasikan di seluruh pool. Mereka juga bergantung pada operator untuk melindungi kunci penandatanganan, karena hingga saat ini, tidak ada pilihan lain bagi mereka.
 
@@ -78,13 +78,13 @@ Dengan memanfaatkan DVT, kepercayaan yang dibutuhkan dari operator berkurang sec
 
 Manfaat lain dari meminimalkan kepercayaan pada satu operator adalah bahwa pool penaruhan dapat memungkinkan partisipasi operator yang lebih terbuka dan tanpa izin. Dengan melakukannya, layanan dapat mengurangi risiko mereka dan mendukung desentralisasi Ethereum dengan menggunakan kumpulan operator yang disusun dan tanpa izin, misalnya, dengan menggabungkan penaruh di beranda atau yang lebih kecil dengan yang lebih besar.
 
-## Kekurangan potensial penggunaan DVT {#potential-drawbacks-of-using-dvt}
+## Kekurangan potensial penggunaan DVT \{#potential-drawbacks-of-using-dvt}
 
 - **Komponen tambahan** - memperkenalkan sebuah simpul DVT menambahkan bagian lain yang mungkin bisa mengalami kerusakan atau rentan. Salah satu cara untuk mengurangi dampak ini adalah dengan berupaya memiliki beberapa implementasi dari simpul DVT, yang berarti memiliki beberapa klien DVT (mirip dengan adanya beberapa klien untuk lapisan konsensus dan eksekusi).
 - **Biaya operasional** - karena DVT mendistribusikan validator di antara beberapa pihak, diperlukan lebih banyak simpul untuk operasi daripada hanya satu simpul, yang mengakibatkan peningkatan biaya operasional.
 - **Potensi peningkatan keterlambatan** - karena DVT menggunakan protokol konsensus untuk mencapai kesepakatan antara beberapa simpul yang mengoperasikan validator, ini berpotensi memperkenalkan peningkatan keterlambatan.
 
-## Bacaan Lebih Lanjut {#further-reading}
+## Bacaan Lebih Lanjut \{#further-reading}
 
 - [Spesifikasi validator terdistribusi Ethereum (tingkat tinggi)](https://github.com/ethereum/distributed-validator-specs)
 - [Spesifikasi teknis validator terdistribusi Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

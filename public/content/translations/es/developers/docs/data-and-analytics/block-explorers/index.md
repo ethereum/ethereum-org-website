@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Los exploradores de bloques son tu portal de acceso a los datos de Ethereum. Puedes usarlos para ver datos de los bloques, las transacciones, loa mineros, las cuentas y otras actividades de la cadena en tiempo real.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Es necesario que comprendas los conceptos básicos de Ethereum para poder entender los datos que te ofrece un explorador de bloques. Empiece con [una introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Servicios {#services}
+## Servicios \{#services}
 
 - [Etherscan:](https://etherscan.io/) _También disponible en chino, coreano, ruso y japonés_
 - [Beaconcha.in](https://beaconcha.in/)
@@ -26,13 +26,13 @@ Es necesario que comprendas los conceptos básicos de Ethereum para poder entend
 - [EthVM](https://www.ethvm.com/)
 - [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
 
-## Datos {#data}
+## Datos \{#data}
 
 El diseño de Ethereum es transparente para que todo su contenido sea verificable. Los exploradores de bloques proporcionan una interfaz para obtener esta información. Y, en caso de que necesites información, esto es así tanto para la red principal de Ethereum como para las redes de pruebas. Los datos se dividen en datos de ejecución y datos de consenso. Los datos de ejecución se refieren a las transacciones que fueron ejecutadas en un bloque específico. Los datos de consenso se refieren a los propios bloques y a los validadores que los propusieron.
 
 A continuación se incluye un resumen de los tipos de datos que puedes obtener en el explorador de bloques.
 
-### Datos de ejecución {#execution-data}
+### Datos de ejecución \{#execution-data}
 
 Nuevos bloques se agregan cada 12 segundos a Ethereum (a menos que quien propone el bloque pierda su turno), por ende de forma constante se va agregando un flojo de datos a los exploradores de bloques. Los bloques contienen mucha información importante que puede resultarte útil:
 
@@ -56,7 +56,7 @@ Nuevos bloques se agregan cada 12 segundos a Ethereum (a menos que quien propone
 - Hash principal: El hash del bloque anterior al bloque actual
 - StateRoot: El hash raíz del Merkle trie que guarda el estado entero del sistema
 
-### Gas {#gas}
+### Gas \{#gas}
 
 Los exploradores de bloques no solo le ofrecerán datos sobre el uso de gas en las transacciones y los bloques, sino que también le proporcionarán información sobre los precios del gas actuales de la red. Esto le servirá de ayuda para comprender el uso de la red, enviar transacciones seguras y no realizar un gasto demasiado alto de gas. Busque API que lo ayuden a obtener esta información en la interfaz de sus productos. Los datos específicos del gas incluyen:
 
@@ -67,7 +67,7 @@ Los exploradores de bloques no solo le ofrecerán datos sobre el uso de gas en l
 - Contratos que consumen gas: en otras palabras, productos populares muy utilizados en la red
 - Cuentas que usan gas: en otras palabras, usuarios frecuentes de la red
 
-### Transacciones {#transactions}
+### Transacciones \{#transactions}
 
 Los exploradores de bloques se han convertido en un lugar común para que las personas puedan seguir el progreso de sus transacciones. Esto se debe a que el nivel de detalle que puede obtener proporciona certezas adicionales. Los datos de las transacciones incluyen:
 
@@ -91,7 +91,7 @@ Los exploradores de bloques se han convertido en un lugar común para que las pe
 - Nonce: El número de transacción de la dirección `from` (tenga en cuenta que empieza en 0, por ende, un nonce de `100` actualmente sería la transacción número 101 enviada por esta cuenta
 - Datos de entrada: Cualquier información extra requerida por la transacción
 
-### Cuentas {#accounts}
+### Cuentas \{#accounts}
 
 Se puede acceder a una gran cantidad de datos sobre las cuentas. Por eso, se suele recomendar utilizar varias cuentas para que sus activos y valores no se puedan rastrear con facilidad. Además, se están desarrollando varias soluciones para que las transacciones y la actividad de la cuenta tengan mayor privacidad. De todos modos, estos son los datos disponibles sobre las cuentas:
 
@@ -114,7 +114,7 @@ Las cuentas de contratos inteligentes tienen todos los datos que tendrá una cue
 - Código de creación de contrato: El bytecode compilado del contrato inteligente (creado cuando compila un contrato inteligente escrito en Solidity o Viper, etc.)
 - Eventos del contrato: Historial de los métodos invocados en el contrato inteligente; básicamente una forma de ver cómo el contrato está siendo usado y con qué frecuencia
 
-### Tokens {#tokens}
+### Tokens \{#tokens}
 
 Los tokens son un tipo de contrato, por lo que van a tener datos similares a un contrato inteligente. Sin embargo, como tienen valor y se pueden comercializar, tienen puntos de datos adicionales:
 
@@ -128,7 +128,7 @@ Los tokens son un tipo de contrato, por lo que van a tener datos similares a un 
 - Dirección del contrato: La dirección del token que fue implementado en la red principal
 - Decimales: Los tokens ERC-20 son divisibles y tienen decimales
 
-### Red {#network}
+### Red \{#network}
 
 Algunos datos de bloque refieren a la salud de Ethereum de manera más integral.
 
@@ -138,9 +138,9 @@ Algunos datos de bloque refieren a la salud de Ethereum de manera más integral.
 - Suministro total de ETH: Número de ETH en circulación; recordemos que se crean nuevos ETH con la creación de cada bloque en forma de recompensa de bloques
 - Capitalización de mercado: Precio\*Suministro
 
-## Datos de la capa de consenso {#consensus-layer-data}
+## Datos de la capa de consenso \{#consensus-layer-data}
 
-### Epoch {#epoch}
+### Epoch \{#epoch}
 
 Por razones de seguridad, se crean comités de validadores aleatorizados al final de cada época (epoch) (cada 6,4 minutos). Los datos de época incluyen:
 
@@ -155,7 +155,7 @@ Por razones de seguridad, se crean comités de validadores aleatorizados al fina
 - Saldo promedio de validadores: El saldo promedio de los validadores activos
 - Ranuras (slots): Número de slots includos en la época (las ranuras incluyen un bloque válido)
 
-### Ranura {#slot}
+### Ranura \{#slot}
 
 Las ranuras son oportunidades para crear bloques; los datos disponibles para cada ranura incluyen:
 
@@ -180,7 +180,7 @@ Las ranuras son oportunidades para crear bloques; los datos disponibles para cad
 - Slashings: El número de penalizaciones a quienes proponen bloques o atestadores
 - Votos: Los validadores que votaron por el bloque en esta ranura
 
-### Bloques {#blocks-1}
+### Bloques \{#blocks-1}
 
 La prueba de participación divide el tiempo entre ranuras y épocas. Esto significa datos nuevos.
 
@@ -189,7 +189,7 @@ La prueba de participación divide el tiempo entre ranuras y épocas. Esto signi
 - Ranura: La ranura en la cual el bloque fue propuesto
 - Atestaciones: El número de atestaciones incluidas en la ranura; las atestaciones son como votos que indican que el bloque está listo para ir hacia la Cadena de Baliza
 
-### Validadores {#validators}
+### Validadores \{#validators}
 
 Los validadores son los responsables de proponer bloques y certificarlos dentro de las ranuras.
 
@@ -205,7 +205,7 @@ Los validadores son los responsables de proponer bloques y certificarlos dentro 
 - Atestaciones: El número de atestaciones que el validador ha proporcionado
 - Depósitos: Dirección desde, hash de transacción, número de bloque, marca de tiempo, cantidad y estado del depósito de staking hecho por el validador
 
-### Atestaciones {#attestations}
+### Atestaciones \{#attestations}
 
 Las atestaciones (o certificaciones) son votos positivos ("sí") para incluir bloques en la cadena. Sus datos están relacionados con un registro de la certificación y con los validadores que la realizaron.
 
@@ -218,7 +218,7 @@ Las atestaciones (o certificaciones) son votos positivos ("sí") para incluir bl
 - Target: Apunta al límite de época más reciente
 - Firma
 
-### Red {#network-1}
+### Red \{#network-1}
 
 Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 
@@ -229,7 +229,7 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 - ETH apostado: Cantidad de ETH en staking en la red
 - Saldo promedio: Saldo promedio de ETH de los validadores
 
-## Exploradores de bloques {#block-explorers}
+## Exploradores de bloques \{#block-explorers}
 
 - [Etherscan](https://etherscan.io/): Un explorador de bloques que puede usar para buscar datos de la red principal de Ethereum y la red de pruebas Goerli
 - [Beaconcha.in](https://beaconcha.in/): Un explorador de bloques de código abierto para la red principal de Ethereum y la red de pruebas Goerli
@@ -238,11 +238,11 @@ Los datos de nivel superior de la capa de consenso incluyen lo siguiente:
 - [Ethplore](https://ethplorer.io/): Un explorador de bloques con enfoque en tokens para la red principal de Ethereum y la red de pruebas Kovan
 - [Rantom](https://rantom.app/): Un visor de código abierto y fácil de usar de información detallada de transaccinoes DeFI y NFT
 
-## Para seguir leyendo {#further-reading}
+## Para seguir leyendo \{#further-reading}
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [Transacciones](/developers/docs/transactions/)
 - [Cuentas](/developers/docs/accounts/)

@@ -15,7 +15,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Așadar, ați auzit despre acest Ethereum și sunteți gata să vă aventuraţi? Această postare va aborda succint câteva noțiuni elementare despre blockchain, apoi vă va îndruma să interacționați cu un nod Ethereum simulat – prin citirea datelor blocului, verificarea soldurilor conturilor și trimiterea de tranzacții. Pe parcurs vom evidenția diferențele dintre metodele tradiționale de construire a aplicațiilor și această nouă paradigmă descentralizată.
 
-## Condiții prealabile (soft) {#soft-prerequisites}
+## Condiții prealabile (soft) \{#soft-prerequisites}
 
 Această postare îşi propune să fie accesibilă unei game largi de dezvoltatori. Vor fi implicate [instrumente Python](/developers/docs/programming-languages/python/), dar acestea constituie doar un vehicul pentru idei – nu este nicio problemă dacă nu sunteți dezvoltator Python. Voi face totuşi doar câteva presupuneri despre ceea ce cunoașteți deja, astfel încât să putem trece rapid la aspectele specifice pentru Ethereum.
 
@@ -26,7 +26,7 @@ Ipoteze:
 - aveți instalat Python în versiunea 3.6 sau ulterioară pe computer (utilizarea unui [mediu virtual](https://realpython.com/effective-python-environment/#virtual-environments) este foarte recomandată) și
 - ați folosit `pip`, programul de instalare a pachetelor Python. Reamintim că, în cazul când oricare dintre acestea nu este adevărată sau dacă nu intenționați să reproduceți codul din acest articol, sunt şanse să puteţi ţine pasul fără probleme.
 
-## Blockchain-urile, pe scurt {#blockchains-briefly}
+## Blockchain-urile, pe scurt \{#blockchains-briefly}
 
 Ethereum poate fi descris în mai multe feluri, dar în esență este un blockchain. Blockchain-urile sunt alcătuite dintr-o serie de blocuri, deci haideți să începem de aici. La modul cel mai simplu, fiecare bloc de pe blockchain-ul Ethereum reprezintă pur și simplu niște metadate și o listă de tranzacții. În format JSON, aceasta arată cam așa:
 
@@ -53,7 +53,7 @@ Această structură de date nu reprezintă o noutate în sine, însă regulile (
 
 Singura modalitate ca blockchain-ul să verifice dacă banii au fost cu adevărat trimiși de la un utilizator la altul este să folosească o monedă nativă a acelui blockchain (adică creată și guvernată de acesta). În Ethereum această monedă se numește ether, iar blockchain-ul Ethereum conține singura înregistrare oficială a soldurilor conturilor.
 
-## O nouă paradigmă {#a-new-paradigm}
+## O nouă paradigmă \{#a-new-paradigm}
 
 Această nouă stivă tehnologică descentralizată a generat noi instrumente pentru dezvoltatori. Astfel de instrumente există în multe limbaje de programare, însă noi le vom analiza prin prisma Python. Menţionăm din nou: chiar dacă Python nu este limbajul dvs. preferat, nu va fi dificil să ţineţi pasul.
 
@@ -77,7 +77,7 @@ w3.eth.getBlock('latest')
 w3.eth.sendTransaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## Instalare {#installation}
+## Instalare \{#installation}
 
 În această prezentare vom lucra doar în cadrul unui interpretator Python. Nu vom crea niciun dosar, fișier, nici clase sau funcții.
 
@@ -103,7 +103,7 @@ $ pip install 'web3[tester]'
 
 Sunteți gata să începeţi!
 
-## Deschideți un sandbox {#spin-up-a-sandbox}
+## Deschideți un sandbox \{#spin-up-a-sandbox}
 
 Deschideți un mediu Python nou rulând `ipython` în terminalul dvs. Este similar cu a rula `python`, dar oferă funcţionalităţi mai speciale.
 
@@ -123,7 +123,7 @@ Acum vedeți un shell Python interactiv. Practic, este un sandbox în care pute�
 In [1]: from web3 import Web3
 ```
 
-## Prezentarea modulului Web3 {#introducing-the-web3-module}
+## Prezentarea modulului Web3 \{#introducing-the-web3-module}
 
 Pe lângă faptul că este un portal de acces la Ethereum, modulul [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) oferă câteva funcții practice. Să explorăm câteva dintre acestea.
 
@@ -152,7 +152,7 @@ Out[3]: Decimal('0.5')
 
 Alte metode utilitare din modulul Web3 cuprind convertoare de formate de date (de exemplu, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), ajutoare de adrese (de exemplu, [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) și funcții hash (de exemplu, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Multe dintre acestea vor fi abordate mai târziu în această serie. Pentru a vizualiza toate metodele și proprietățile disponibile, utilizați autocompletarea IPython, tastând `Web3`. și apăsând tasta „Tab” de două ori după punct.
 
-## Comunicaţi cu lanțul {#talk-to-the-chain}
+## Comunicaţi cu lanțul \{#talk-to-the-chain}
 
 Metodele practice sunt excelente, dar haideți să trecem la blockchain. Pasul următor este configurarea Web3.py pentru a comunica cu un nod Ethereum. Aici avem opțiunea de a folosi furnizorii IPC, HTTP sau Websocket.
 
@@ -177,7 +177,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 Acum sunteți gata pentru a naviga în lanț! Unii oameni spun că acest lucru nu există. Este invenţia mea. Haideți să facem un tur rapid.
 
-## Turul rapid {#the-quick-tour}
+## Turul rapid \{#the-quick-tour}
 
 Să începem cu începutul, o verificare a sănătății:
 
@@ -188,7 +188,7 @@ Out[5]: True
 
 Din moment ce folosim furnizorul de testare, acesta nu este un test foarte valoros, dar dacă eșuează, este posibil să fi tastat ceva greșit la instanțierea variabilei `w3`. Verificați încă o dată dacă ați inclus parantezele interioare, adică `Web3.EthereumTesterProvider()`.
 
-## Oprirea nr. 1: [conturi](/developers/docs/accounts/) {#tour-stop-1-accounts}
+## Oprirea nr. 1: [conturi](/developers/docs/accounts/) \{#tour-stop-1-accounts}
 
 Pentru comoditate, furnizorul de testare a creat câteva conturi și le-a preîncărcat cu ether de testare.
 
@@ -219,7 +219,7 @@ Out[8]: Decimal('1000000')
 
 Un milion de ether de test – totuși nu este chiar atât de rău.
 
-## Oprirea nr. 2: datele blocului {#tour-stop-2-block-data}
+## Oprirea nr. 2: datele blocului \{#tour-stop-2-block-data}
 
 Haideți să aruncăm o privire la starea acestui blockchain simulat:
 
@@ -240,7 +240,7 @@ Răspunsul cuprinde o mulţime de informaţii despre bloc, dar sunt numai câtev
 - `tranzactii` este o listă goală, din același motiv: nu am făcut încă nimic. Acest prim bloc este un **bloc gol**, doar pentru a demara lanțul.
 - Observați că `parentHash` este doar un grup de octeți goi. Acest lucru înseamnă că este primul bloc din lanț, cunoscut și sub numele de **blocul de geneză**.
 
-## Oprirea nr. 3: [tranzacții](/developers/docs/transactions/) {#tour-stop-3-transactions}
+## Oprirea nr. 3: [tranzacții](/developers/docs/transactions/) \{#tour-stop-3-transactions}
 
 Suntem blocați la blocul zero până când va exista o tranzacție de minat, așa că haideţi să-i dăm una. Trimiteți câțiva ether de test de la un cont la altul:
 
@@ -289,6 +289,6 @@ Acesta din urmă arată bine! Soldul a trecut de la 1.000.000 la 1.000.003 ether
 
 <FeaturedText>Observaţie: În rețeaua publică, taxele de tranzacție sunt variabile în funcție de cererea rețelei și de rapiditatea cu care doriți ca o tranzacție să fie procesată. Dacă vă interesează o defalcare a modului în care sunt calculate taxele, consultați postarea mea anterioară despre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cum sunt incluse tranzacțiile într-un bloc</a>.</FeaturedText>
 
-## Și respirați {#and-breathe}
+## Și respirați \{#and-breathe}
 
 Ne-am ocupat de aceste lucruri de ceva vreme, așa că acum este un moment la fel de bun ca oricare altul pentru a lua o pauză. Aventura continuă şi ne vom continua explorarea în partea a doua a acestei serii. Câteva concepte care vor urma: conectarea la un nod real, contracte inteligente și tokenuri. Aveți întrebări în continuare? Anunțați-mă! Feedback-ul dvs. va influența direcția în care vom merge de aici încolo. Primim cu plăcere solicitări prin [Twitter](https://twitter.com/wolovim).

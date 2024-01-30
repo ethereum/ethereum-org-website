@@ -4,11 +4,11 @@ description: Ethereum.org alanlarında ulaşmaya çalıştığımız basit stand
 lang: tr
 ---
 
-## Misyon {#mission}
+## Misyon \{#mission}
 
 Ethereum için en kapsayıcı ve erişilebilir bilgi merkezini kurmak ve sürdürmek.
 
-## Değerler {#values}
+## Değerler \{#values}
 
 Ethereum.org topluluğu şunlar için çabalar:
 
@@ -19,7 +19,7 @@ Ethereum.org topluluğu şunlar için çabalar:
 - ethereum'un temelindeki teknolojiye ve kullanım durumuna odaklanır
 - ethereum konseptlerine ve tasarım ilkelerine odaklanır
 
-## Biz ne değiliz {#what-we-are-not}
+## Biz ne değiliz \{#what-we-are-not}
 
 - Ethereum Foundation web sitesi
 - Herhangi bir yatırımı veya vurguncuyu teşvik eden bir platform
@@ -27,17 +27,17 @@ Ethereum.org topluluğu şunlar için çabalar:
 - Bir merkeziyetsiz borsa, merkezi borsa ya da herhangi bir finansal platform
 - Her türlü finansal ya da hukuki tavsiyeler veren bir platform
 
-## Davranış kuralları {#code-of-conduct}
+## Davranış kuralları \{#code-of-conduct}
 
-### Taahhüt {#pledge}
+### Taahhüt \{#pledge}
 
 Açık katılım, ethereum.org etiğinin temelidir. Binlerce katkıda bulunan sayesinde yürütülen bir web sitesi ve topluluğuz ve bunu mümkün kılan tek şey misafirperver ve katılıma dayalı bir ortamı sürdürmektir. Bu amaçla katkı sağlayanlar, tüm katılımcılar için ve tüm ethereum.org platformları ve topluluk alanları için tacizden uzak bir ortam sağlamayı tahhüt eder. Ethereum.org topluluğu, yapıcı ve arkadaşça bir şekilde katılmak isteyen herkesi yaşı, engellilik durumu, etnik kökeni, cinsiyet özellikleri, cinsiyet kimliği, deneyim seviyesi, uzmanlık alanı, eğitim düzeyi, sosyo-ekonomik durumu, milliyeti, dış görünüşü, ırkı, dini inancı veya çeşitliliğin herhangi bir boyutundan bağımsız olarak sıcak bir şekilde karşılar ve değerli bulur.
 
-### Kapsam {#scope}
+### Kapsam \{#scope}
 
 Bu davranış kuralları, tüm ethereum.org alanlarında geçerlidir (GitHub, Discord, Figma Crowdin, Twitter ve diğer online platformlar gibi) ve bunun yanında ethereum.org'un temsil edildiği buluşmalar, konferanslar ve etkinlikler gibi gerçek dünyada, kamuya açık alanlarda da geçerlidir.
 
-### Standartlarımız {#our-standards}
+### Standartlarımız \{#our-standards}
 
 Pozitif bir atmosfer oluşturmak adına örnek davranışlar:
 
@@ -62,7 +62,7 @@ Katılımcılar tarafından gerçekleştirilen kabul edilemez davranışlar:
 - Topluluk moderatörlerinin uyarılarını ve isteklerini dikkate almamak
 - Profesyonel alanda uygunsuz olarak değerlendirilenilecek olan davranışlarda bulunmak
 
-### Raporlama {#reporting}
+### Raporlama \{#reporting}
 
 Davranış kurallarının ihlalleri, her şey açık yapılmaya çalışıldığı için, halka açık kanallarda, topluluk üyelerinin kendilerini denetlemelerine olanak sağlayacak biçimdedir.
 
@@ -70,6 +70,6 @@ Ancak, eğer dikkat çekmesi gereken bir konu olduğunu hissederseniz, moderasyo
 
 Raporlama sırasında, lütfen olabildiğinde fazla detaya yer verin, spesifik örnekler ve zaman damgası dahil. Bu, adil bir sonuç almak için yardımcı olacak.
 
-### Uygulama {#enforcement}
+### Uygulama \{#enforcement}
 
 Cezanın büyüklüğüne bağlı olarak, davranış kurallarını ihlal eden bireylere, ethereum.org tarafından uyarılar, geçici yasaklar ya da kalıcı yasaklar verilebilir.

@@ -4,7 +4,7 @@ description: Alapvető információk az Ethereum energiafogyasztásának megért
 lang: hu
 ---
 
-# Az Ethereum energiafogyasztása {#proof-of-stake-energy}
+# Az Ethereum energiafogyasztása \{#proof-of-stake-energy}
 
 Az Ethereum egy környezetbarát blokklánc. Az Ethereum [proof-of-stake](/developers/docs/consensus-mechanisms/pos) konszenzus mechanizmusa ETH-t használ [az energia helyett, hogy biztosítsa a hálózatot](/developers/docs/consensus-mechanisms/pow). Az Ethereum energiafogyasztása [~0,0026 TWh/év](https://carbon-ratings.com/eth-report-2022) a teljes globális hálózaton.
 
@@ -39,13 +39,13 @@ Az összehasonlítás a Bitcoint és a proof-of-work Ethereumot feltünteti. Fon
 
 Számtalan iparág energiafogyasztását és szén-dioxid-kibocsátását megtekintheti a [Cambridge-blokklánchálózat fenntarthatósági index oldalán](https://ccaf.io/cbnsi/ethereum).
 
-## Tranzakciónkénti becslés {#per-transaction-estimates}
+## Tranzakciónkénti becslés \{#per-transaction-estimates}
 
 Számos cikk tranzakciónkénti becslésről beszél a blokkláncok esetén. Ez félrevezető, mert a blokkjavaslat és validálás független a benne található tranzakciók számától. A tranzakciónkénti felhasználás azt jelentené, hogy kevesebb tranzakció kevesebb energiát fogyaszt és fordítva, de ez nem igaz. Emellett a tranzakciónkénti becslés érzékeny arra, hogy a blokklánc tranzakcióátvitelét hogyan definiálják, amelynek megcsavarásával látszólag nagyobb vagy kisebb érték jön ki.
 
 Az Ethereumon például a tranzakcióátvitel nemcsak az alapréteget tartalmazza, hanem a [második blokkláncréteg (L2)](/layer-2/) összevont tranzakcióit is. Az L2 általában nincs benne a kalkulációkban, de ha hozzávennénk a szekvenszer általi fogyasztást (kevés) és a kezelt tranzakciókat (sok), akkor jelentősen lecsökkenne a tranzakciónkénti becslés. Ez az egyik oka annak, hogy a platformok tranzakciónkénti energiafogyasztásának összehasonlítása félrevezető lehet.
 
-## Az Ethereum karbonadóssága {#carbon-debt}
+## Az Ethereum karbonadóssága \{#carbon-debt}
 
 Az Ethereum energiafelhasználása igen alacsony, de nem mindig volt így. Az Ethereum eredetileg a proof-of-work mechanizmust használta, ami nagyobb környezeti költségekkel járt, mint a jelenlegi proof-of-stake.
 
@@ -55,7 +55,7 @@ Az Ethereum eleve a proof-of-stake-alapú konszenzusmechanizmust tervezte, anél
 
 A CCRI becslése szerint a Beolvadás több mint **99,988%-kal** lecsökkentette az Ethereum éves áramfogyasztását. Ugyanígy az Ethereum karbonlábnyoma is csökkent **99,992%-kal** (11 016 000 tonna helyett 870 tonna CO2e lett). Ez a változás olyan, mint az Eiffel torony magaságáról egy kis bábu méretére csökkent fogyasztás, ahogy az ábra illusztrálja. Ennek következtében a hálózat biztosításának környezeti költsége drasztikusan lecsökkent. A hálózat biztonsága pedig növekedett.
 
-## Környezetbarát alkalmazási réteg {#green-applications}
+## Környezetbarát alkalmazási réteg \{#green-applications}
 
 Miközben az Ethereum energiafogyasztása nagyon alacsony, egy jelentős, fejlődő és igen aktív [**regeneratív pénzügyi (ReFi)**](/refi/) közösség épült a hálózaton. A ReFi alkalmazások a decentralizált pénzügyek (DeFi) komponenseit használják, hogy olyan pénzügyi alkalmazásokat építsenek, amelyek pozitív externáliákat teremtenek. A ReFi része egy kiterjedtebb[„solarpunk”](https://en.wikipedia.org/wiki/Solarpunk) mozgalomnak, ami szorosan kötődik az Ethereumhoz, és a technológiai fejlődést a környezetről való gondoskodással párosítja. Az Ethereum decentralizált, engedélymentes és egymásra építhető jellege miatt ideális alap a ReFi és a solarpunk közösségeknek.
 
@@ -65,7 +65,7 @@ A web3 közjó-finanszírozási platformjai, mint a [Gitcoin](https://gitcoin.co
   Ha szeretne az oldallal kapcsolatban fejlesztést javasolni, akkor naplózzon egy kérést (issue) vagy PR-t. A statisztikák nyilvánosan elérhető adatokból készült becslések, nem hivatalos állítások vagy ígéretek az ethereum.org csapat vagy az Ethereum Alapítvány részéről.
 </InfoBanner>
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Cambridge-blokklánchálózat fenntarthatósági indexe](https://ccaf.io/cbnsi/ethereum)
 - [Fehérházi jelentése a proof-of-work alapú blokkláncokról](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -75,7 +75,7 @@ A web3 közjó-finanszírozási platformjai, mint a [Gitcoin](https://gitcoin.co
 - [Az egyesítés (The Merge) – az Ethereum-hálózat áramfogyasztására és karbonlábnyomára gyakorolt hatása](https://carbon-ratings.com/eth-report-2022) – _CCRI_
 - [Az Ethereum energiafogyasztása](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [Az Ethereum jövőképe](/roadmap/vision/)
 - [A Beacon Chain](/roadmap/beacon-chain)

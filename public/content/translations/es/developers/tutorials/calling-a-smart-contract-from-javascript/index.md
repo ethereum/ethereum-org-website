@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 A continuación, recurriremos a la función `balanceOf` para recuperar la cantidad actual de tókenes que tienen ambas direcciones.
 
-## Consulta: Obtener el valor de una variable de un contrato inteligente {#call-reading-value-from-a-smart-contract}
+## Consulta: Obtener el valor de una variable de un contrato inteligente \{#call-reading-value-from-a-smart-contract}
 
 El primer ejemplo recurrirá a un método «constante» y lo ejecutará en la EVM sin realizar ninguna transacción. Para ello, leeremos el balance ERC20 de una dirección. [Lea nuestro artículo sobre los tókenes ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 Recuerde que DAI ERC20 tiene 18 decimales, lo que significa que necesita eliminar 18 ceros para obtener la cantidad correcta. uint256 aparecen como cadenas, ya que JavaScript no gestiona grandes valores numéricos. Si no está seguro de [cómo tratar con números grandes en JS, revise nuestro tutorial bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Enviar: Enviar una transacción a una función de un contrato inteligente {#send-sending-a-transaction-to-a-smart-contract-function}
+## Enviar: Enviar una transacción a una función de un contrato inteligente \{#send-sending-a-transaction-to-a-smart-contract-function}
 
 Para el segundo ejemplo, recurriremos a la función de transferencia del contrato inteligente DAI para enviar 10 DAI a nuestra segunda dirección. La función de transferencia acepta dos parámetros: la dirección del destinatario y la cantidad de token por transferir:
 

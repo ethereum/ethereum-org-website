@@ -8,7 +8,7 @@ Ein häufiges Missverständnis ist, dass Entwickler [Smart Contracts](/developer
 
 Die Community von Ethereum und Ethereum selbst ist offen für Open Source, also Quelloffenheit. Zu finden sind Community Projekte – Kundenumsetzungen, APIs (Programmierschnittstellen), Entwickleroberflächen, Tools zu Testzwecken – in einer großen Auswahl an Sprachen.
 
-## Ihre Sprache wählen {#data}
+## Ihre Sprache wählen \{#data}
 
 Wählen Sie eine Programmiersprache, um Projekte, Ressourcen und virtuelle Communitys zu finden:
 
@@ -22,7 +22,7 @@ Wählen Sie eine Programmiersprache, um Projekte, Ressourcen und virtuelle Commu
 - [Ethereum für Ruby-Entwickler](/developers/docs/programming-languages/ruby/)
 - [Ethereum für Rust-Entwickler](/developers/docs/programming-languages/rust/)
 
-### Was, wenn meine Sprache nicht unterstützt wird {#other-lang}
+### Was, wenn meine Sprache nicht unterstützt wird \{#other-lang}
 
 Wenn Sie auf Ressourcen verlinken oder auf eine virtuelle Gemeinschaft für eine weitere Programmiersprache hinweisen möchten, können Sie eine neue Seite beantragen, indem Sie [ein Thema eröffnen](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

@@ -22,7 +22,7 @@ sourceUrl: https://hackernoon.com/how-to-implement-an-erc721-market-1e1a32j9
 
 区块链技术可以再一次重塑这种商业市场的形态，接下来让我来向您展示这一点是如何发生的。
 
-## 货币化 {#monetization}
+## 货币化 \{#monetization}
 
 基于公共区块链技术的分类信息板的商业模式和 Ebay 及普通的公司有显著的不同。
 
@@ -38,7 +38,7 @@ _比我更有远见的商业领袖知道如何将其货币化。 我所看到的
 
 我很高兴来建造它。 接下来，让我们来看看代码。
 
-## 实现 {#implementation}
+## 实现 \{#implementation}
 
 前段时间我们启动了一个[开源项目](https://github.com/HQ20/contracts?ref=hackernoon.com)，其中包含了一些商业案例的示例实现和其他相关的资源，推荐您看一看。
 
@@ -140,7 +140,7 @@ function cancelTrade(uint256 _trade)
 
 就是这样。 您已经浏览到了该代码实现的末尾。 令人惊讶的是，一些业务概念在用代码表达时是多么紧凑，这就是其中一个例子。 请在[我们的代码库中](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol)查看完整的合约代码。
 
-## 总结 {#conclusion}
+## 总结 \{#conclusion}
 
 分类信息板是一种易于在互联网技术的帮助下大规模扩张的常见市场结构，也是一种容易形成少数垄断赢家的非常流行的商业模式。
 

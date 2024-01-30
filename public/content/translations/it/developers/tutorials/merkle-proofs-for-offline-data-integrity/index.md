@@ -9,7 +9,7 @@ lang: it
 published: 2021-12-30
 ---
 
-## Introduzione {#introduction}
+## Introduzione \{#introduction}
 
 Idealmente, vorremmo archiviare tutto nell'archiviazione di Ethereum, memorizzata tra migliaia di computer e avente una disponibilità estremamente elevata (i dati non sono censurabili) e integrità (i dati non sono modificabili in un modo non autorizzato), ma archiviare una parola di 32 byte costa tipicamente 20.000 gas. Mentre scriviamo il presente articolo, tale costo equivale a 6,60 dollari. Ne consegue che 21 centesimi per byte sia un costo impraticabile per molti utilizzi.
 
@@ -17,7 +17,7 @@ Per risolvere questo problema l'ecosistema di Ethereum ha sviluppato [molti meto
 
 In questo articolo imparerai **come** garantire l'integrità dei dati senza memorizzare i dati sulla blockchain, usando le [prove di Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
-## Come funziona? {#how-does-it-work}
+## Come funziona? \{#how-does-it-work}
 
 In teoria, potremmo semplicemente memorizzare l'hash dei dati sulla catena e inviare tutti i dati nelle transazioni che lo richiedono. Anche questo però sarebbe troppo costoso. Un byte di dati per una transazione costa circa 16 gas, correntemente circa mezzo centesimo, o circa 5 dollari per kilobyte. 5.000 dollari per megabyte è un prezzo comunque proibitivo per molti utilizzi, anche senza il costo supplementare connesso all'hashing dei dati.
 
@@ -29,15 +29,15 @@ L'hash principale è l'unica parte che deve essere memorizzata sulla catena. Per
 
 ![Prova del valore di C](proof-c.png)
 
-## Implementazione {#implementation}
+## Implementazione \{#implementation}
 
 [Il campione di codice è disponibile qui](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Codice esterno alla catena {#off-chain-code}
+### Codice esterno alla catena \{#off-chain-code}
 
 In questo articolo usiamo JavaScript per i calcoli al di fuori della catena. Gran parte delle app decentralizzate hanno i propri componenti esterni alla catena su JavaScript.
 
-#### Creare il root di Merkle {#creating-the-merkle-root}
+#### Creare il root di Merkle \{#creating-the-merkle-root}
 
 Prima dobbiamo fornire il root di Merkle alla catena.
 
@@ -126,7 +126,7 @@ const getMerkleRoot = (inputArray) => {
 
 Per ottenere la radice, scala finché non resta un solo valore.
 
-#### Creare una prova di Merkle {#creating-a-merkle-proof}
+#### Creare una prova di Merkle \{#creating-a-merkle-proof}
 
 Una prova di Merkle è data dai valori da sottoporre all'hashing insieme al valore dimostrato in modo da ottenere nuovamente il root di Merkle. Il valore da provare spesso è ricavabile da altri dati, quindi preferisco fornirlo separatamente anziché come parte del codice.
 
@@ -163,7 +163,7 @@ Eseguiamo l'hashing di `(v[0],v[1])`, `(v[2],v[3])`, ecc. Quindi per i valori pa
 }   // getMerkleProof
 ```
 
-### Codice on-chain {#on-chain-code}
+### Codice on-chain \{#on-chain-code}
 
 Finalmente abbiamo il codice che verifica la prova. Il codice on-chain è scritto in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). L'ottimizzazione è molto più importante qui, perché il gas è relativamente costoso.
 
@@ -228,13 +228,13 @@ Questa funzione genera l'hash di una coppia. È semplicemente la traduzione di S
 
 Nella notazione matematica, la verifica della prova di Merkle somiglia a questa: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Questo codice la implementa.
 
-## Prove di Merkle e rollup non si mescolano {#merkle-proofs-and-rollups}
+## Prove di Merkle e rollup non si mescolano \{#merkle-proofs-and-rollups}
 
 Le prove di Merkle non funzionano bene con i [rollup](/developers/docs/scaling/#rollups). Il motivo è che i rollup scrivono tutti i dati della transazione su L1, ma elaborano su L2. Il costo medio per inviare una prova di Merkle con una transazione è di 638 gas per livello (correntemente, un byte nei dati della chiamata costa 16 gas se non è zero, e 4 se è zero). Se abbiamo 1024 parole di dati, una prova di Merkle richiede dieci livelli, o un totale di 6380 gas.
 
 Ad esempio, guardando a [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), la scrittura del gas del L1 costa circa 100 gwei e del L2 circa 0,001 gwei (questo è il prezzo normale, può aumentare con la congestione). Quindi, per il costo di un gas del L1, possiamo consumare centomila gas sull'elaborazione del L2. Supponendo di non sovrascrivere l'archiviazione, ciò significa che possiamo scrivere circa cinque parole all'archiviazione sul L2, per il prezzo di un gas del L1. Per una singola prova di Merkle, possiamo scrivere tutte le 1024 parole all'archiviazione (supponendo innanzitutto che siano calcolabili sulla catena, piuttosto che fornite in una transazione) e comunque avere una rimanenza di gran parte del gas.
 
-## Conclusione {#conclusion}
+## Conclusione \{#conclusion}
 
 Nella vita reale potresti non trovarti mai a implementare alberi di Merkle per conto tuo. Esistono librerie ben note e controllate che puoi usare e, in generale, è meglio non implementare primitivi crittografici autonomamente. Ma spero che ora tu abbia compreso meglio le prove di Merkle e possa decidere quando vale la pena usarle.
 

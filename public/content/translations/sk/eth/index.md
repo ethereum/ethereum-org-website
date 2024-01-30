@@ -4,7 +4,7 @@ description: Základné informácie, ktoré vám pomôžu pochopiť ETH.
 lang: sk
 ---
 
-# Čo je ether (ETH)? {#what-is-ether-eth}
+# Čo je ether (ETH)? \{#what-is-ether-eth}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: sk
 
 </FeaturedText>
 
-## Čo je ETH a ako ho viem získať? {#what-is-eth-and-how-do-i-get-it}
+## Čo je ETH a ako ho viem získať? \{#what-is-eth-and-how-do-i-get-it}
 
 Ether (alebo aj ETH) je vlastná mena Etherea. Je to „digitálna mena“, ktorú je možné posielať prostredníctvom internetu, a to okamžite a lacno, a ktorú je tiež možné použiť v mnohých [aplikáciách vytvorených na blockchaine Etherea](/sk/dapps/).
 

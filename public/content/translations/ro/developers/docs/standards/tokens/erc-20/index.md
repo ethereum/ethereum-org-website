@@ -4,7 +4,7 @@ description:
 lang: ro
 ---
 
-## Introducere {#introduction}
+## Introducere \{#introduction}
 
 **Ce este un token?**
 
@@ -24,13 +24,13 @@ O funcţionalitate atât de puternică a lui Ethereum trebuie gestionată printr
 
 ERC-20 introduce un standard pentru Tokenurile Fungibile, cu alte cuvinte, acestea au o proprietate care face ca fiecare Token să fie exact la fel (ca tip și valoare) cu alt Token. De exemplu, un token ERC-20 acționează exact ca ETH-ul, însemnând că 1 token este și va fi întotdeauna egal cu toate celelalte tokenuri.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 - [Conturi](/developers/docs/accounts)
 - [Contracte inteligente](/developers/docs/smart-contracts/)
 - [Standarde de tokenuri](/developers/docs/standards/tokens/)
 
-## Conținut {#body}
+## Conținut \{#body}
 
 ERC-20 (Cerere de comentarii Ethereum 20), propus de Fabian Vogelsteller în noiembrie 2015, este un standard de tokenuri care implementează un API pentru tokenuri în cadrul contractelor inteligente.
 
@@ -45,7 +45,7 @@ Dacă un contract inteligent implementează următoarele metode și evenimente, 
 
 De la [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Metode {#methods}
+### Metode \{#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Evenimente {#events}
+### Evenimente \{#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Exemple {#web3py-example}
+### Exemple \{#web3py-example}
 
 Să vedem cât de important este un standard pentru a ne simplifica lucrurile când inspectăm orice contract de tokenuri ERC-20 pe Ethereum. Avem nevoie doar de Interfața binară cu aplicaţia (ABI) a contractului pentru a crea o interfață pentru orice token ERC-20. După cum puteţi vedea mai jos, vom folosi un ABI simplificat, pentru a facilita înţelegerea exemplului.
 
-#### Exemplu Web3.py {#web3py-example}
+#### Exemplu Web3.py \{#web3py-example}
 
 În primul rând aveţi grijă să instalaţi librăria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 - [EIP-20: Standard de tokenuri ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokenuri](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

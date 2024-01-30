@@ -4,13 +4,13 @@ description: Seznam programov za finančne spodbude skozi Ethereum ekosistem.
 lang: sl
 ---
 
-# Ethereum finančne spodbude {#ethereum-grants}
+# Ethereum finančne spodbude \{#ethereum-grants}
 
 Spodaj navedeni programi ponujajo različne finančne spodbude za projekte, ki delajo na spodbujanju uspeha in rasti Ethereum ekosistema. To lahko uporabljajte kot vodnik pri iskanju in prijavi za pridobitev sredstev za pomoč, ki vam bo pomagala do uspešnega Ethereum projekta.
 
 Ta seznam je pripravila naša skupnost. Če na njem kaj manjka ali ni pravilno navedeno prosimo, da ga uredite!
 
-## Širok Ethereum ekosistem {#broad-ethereum-ecosystem}
+## Širok Ethereum ekosistem \{#broad-ethereum-ecosystem}
 
 Te programi podpirajo širok Ethereum ekosistem s tem, da ponujajo finančne spodbude širšemu naboru projektov. Mednje sodijo rešitve za nadgradljivost, grajenje skupnosti, varnost, zasebnost in še več. Te finančne spodbude niso specifične vezane na nobeno Ethereum platformo in so dobro mesto za začetek, če niste povsem prepričani.
 
@@ -20,7 +20,7 @@ Te programi podpirajo širok Ethereum ekosistem s tem, da ponujajo finančne spo
 - [Moloch DAO](https://www.molochdao.com/) - _Zasebnost, nadgradljivost z 2. plastmi, varnost in še več_
 - [Odprte spodbude](https://opengrants.com/explore)
 
-## Specifikacije projekta {#project-specific}
+## Specifikacije projekta \{#project-specific}
 
 Te projekti so ustvarili svoje finančne spodbude za projekte, ki merijo proti razvoju in eksperimentiranju z lastnimi tehnologijami.
 
@@ -29,7 +29,7 @@ Te projekti so ustvarili svoje finančne spodbude za projekte, ki merijo proti r
 - [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) sklad ekosistema_
 - [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) skupnost_
 
-## Kvadratično financiranje {#quadratic-funding}
+## Kvadratično financiranje \{#quadratic-funding}
 
 Odprtokodne korenine Ethereuma so pripeljale do rasti novega zanimivega modela financiranja: kvadratično financiranje. To predstavlja potencial za izboljšanje načina po katerem bomo v prihodnosti financirali vse vrste javnih dobrin. Kvadratično financiranje poskrbi, da so projekti, ki prejmejo največ sredstev tisti, ki imajo najbolj edinstveno povpraševanje. Z drugimi besedami projekti, ki se zavzemajo za izboljšanje življenj največjega števila ljudi. [Več o kvadratičnem financiranju.](/defi/#quadratic-funding)
 

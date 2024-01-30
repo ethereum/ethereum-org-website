@@ -4,11 +4,11 @@ description: Jinsi ya kushiriki kwenye jamii ya Ethereum.
 lang: sw
 ---
 
-# Ninaweza kushiriki vipi? {#get-involved}
+# Ninaweza kushiriki vipi? \{#get-involved}
 
 Jumuiya ya Ethereum inahusisha watu wa asili tofauti na wenye ujuzi wa kila aina. Endapo wewe ni msanii, msimbuaji au mhasibu, kuna njia za kujihusisha. Hii ni orodha ya mapendekezo yanayoweza kukusaidia.
 
-## Wasimbuaji <Emoji text=":computer:" size={1} /> {#developers}
+## Wasimbuaji <Emoji text=":computer:" size={1} /> \{#developers}
 
 - Jifunze kuhusu Ethereum na ijaribishe kwenye [etehereum.org/developers/](/developers/)
 - [Tafuta fadhila kwenye Gitcoin](https://gitcoin.co/), fanyia kazi itilafu ndogo ama kubwa na ujipatie kripto!
@@ -18,7 +18,7 @@ Jumuiya ya Ethereum inahusisha watu wa asili tofauti na wenye ujuzi wa kila aina
 - [Orodha pendekezwa ya kuunga mkono Ikolojia ya Ethereum](https://esp.ethereum.foundation/wishlist/) - maeneo amabayo Ikolojia ya Ethereum inatafuta maombi ya fedha kwa ajili ya vifaa, nyaraka, na miundombinu
 - [Daraja la Web3](https://www.web3bridge.com/) - jiunge na wapenzi wa web3 kwenye mpango wa kutambua, kujifunza, na kuunga mkono mamia ya wasanidi programu na wanachama Afrika
 
-## Watafiti & Taaluma <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
+## Watafiti & Taaluma <Emoji text=":mag:" size={1} /> \{#researchers-and-academics}
 
 Una taaluma ya hisabati, kriptografia ama uchumi? Unaweza kupenda kazi za viwango vya juu, zilizofanywa na ikolojia ya Ethereum
 
@@ -26,61 +26,61 @@ Una taaluma ya hisabati, kriptografia ama uchumi? Unaweza kupenda kazi za viwang
 - [Ethersear.ch](https://ethresear.ch) - Jukwaa la msingi la Ethereum la watafiti, na jukwaa lenye ushawishi mkubwa zaidi duniani kwenye sdarafu za kripto
 - [Orodha pendekezwa ya kuunga mkono Ikolojia ya Ethereum](https://esp.ethereum.foundation/wishlist/) - maeneo amabayo Ikolojia ya Ethereum inatafuta maombi ya fedha kwa ajili ya vifaa, nyaraka, na miundombinu
 
-## Seti zisizo za kiufundi <Emoji text=":briefcase:" size={1} /> {#non-technical}
+## Seti zisizo za kiufundi <Emoji text=":briefcase:" size={1} /> \{#non-technical}
 
 Kama wewe sio msanidi programu, inaweza kua vigumu kujua ni wapi unapaswa kuanzia kwenye Ethereum. Kuna mapendekezo kadhaa, pamoja nayo ni vyanzo maalumu kwa kila asili ya taaluma.
 
-### Panga kikao kwenye mji wako {#meetups}
+### Panga kikao kwenye mji wako \{#meetups}
 
 - Huna uhakika jinsi ya kuanza? [Mtandao wa BUIDL](https://consensys.net/developers/buidlnetwork/) unaweza kukusaidia.
 
-### Andika maudhui kuhusu Ethereum {#write-content}
+### Andika maudhui kuhusu Ethereum \{#write-content}
 
 - Ethereum inahitaji waandishi wazuri wanaoweza kuelezea thamani yake kwa kutumia lugha rahisi
 - Hauko tayari kuchapisha makala yako pekee? Zingattia kuchangia kwenye maudhui yaliopo kwenye vyanzo vya jumuiya kama, ama pendekeza maudhui mapya kwa ajili ya ethereum.org!
 
-### Toa msaada wa kuandika muhtasari kwenye mikutano ya jumuiya {#take-notes}
+### Toa msaada wa kuandika muhtasari kwenye mikutano ya jumuiya \{#take-notes}
 
 - Kuna mikutano mingi ya jumuiya, na kua na waandishi wa mihutsari itasaidia sana. Kama ungependa, jiunge na discord ya [ Wafugaji wa Paka wa Ethereum (Ethereum Cat Herders)](https://discord.com/invite/Nz6rtfJ8Cu), na ujitambulishe!
 
-### Tafsiri maudhui ya Etjereum kwenda kwenye lugha mama, ama lugha uliozaliwa ukizungumza {#translate-ethereum}
+### Tafsiri maudhui ya Etjereum kwenda kwenye lugha mama, ama lugha uliozaliwa ukizungumza \{#translate-ethereum}
 
 - ethereum.org husimamia programu ya ufasiri inayo fasiri tovuti, na vyanzo vingine, kwenda kwenye lugha zingine tofauti
 - Jifunze jinsi ya kuchangia[hapa](/contributing/translation-program)
 
-### Endesha nodi {#run-a-node}
+### Endesha nodi \{#run-a-node}
 
 Jiunge na maelefu ya waendesha nodi kwa ugatuzi mkubwa zaidi wa Ethereum.
 
 - [Zaidi juu ya kuendesha nodi](/developers/docs/nodes-and-clients/run-a-node/)
 
-### Weka hisa za ETH {#staking}
+### Weka hisa za ETH \{#staking}
 
 Kwa kusimamisha hisa zako za ETH unaweza kupata zawadi huku ukisaidia kulinda mtandao wa Ethereum.
 
 - [Zaidi juu ya kusimamisha hisa](/staking/)
 
-### Unga mkono miradi {#suport-projects}
+### Unga mkono miradi \{#suport-projects}
 
 Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayoleta tofauti katika Ethereum. Kwa mchango mdigo tu unaweza kuunga mkono na kuruhsu kazi muhimu kutekelezwa.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fedha](https://clr.fund/#/about)
 
-## Wataalamu wa Kifedha & Akaunti <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Wataalamu wa Kifedha & Akaunti <Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
 
 - Ethereum ni mji wa ikolojia ya "feddha zilizogatuliwa" - mtandao wa itifaki na programu zinatoa huduma mbadala za kifedha. Kama wewe ni unataaluma ya uchumi, tazama app za DeFi kwenye [DeFi Llama](https://defillama.com/) ama [DeFiprime](https://defiprime.com)
 - Mhasibu? Mali za Ethereum - ETH, tokeni, DeFi, nk - tambulisha masuala mengi ya riwaya. Unaweza kuanza kwa kutazama baadhi ya miradi inayolenga kusaidia watumiaji wa sarafu ya kripto na kupanga vitabu vyao & changamoto za uhasibu, kama [Rotki](https://rotki.com/)
 
-## Wasimamizi wa bidhaa <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
+## Wasimamizi wa bidhaa <Emoji text=":fountain_pen:" size={1} /> \{#product-managers}
 
 - Ikolijia ya Ethereum inahitaji talanta zako! Makampuni mengi yanatoa ajira kwa wasimsmizi wa bidhaa. Kama unataka kuanza kwa kuchangia kwenye mradi wa vyanzo huria, wasiliana na [Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [MetaCartel](https://www.metacartel.org/)
 
-## Masoko <Emoji text=":megaphone:" size={1} /> {#marketing}
+## Masoko <Emoji text=":megaphone:" size={1} /> \{#marketing}
 
 - Kuna nafasi nyingi za masoko na mawasiliano kwenye ikolojia ya Ethereum!
 
-## Ajira za Ethereum {#ethereum-jobs}
+## Ajira za Ethereum \{#ethereum-jobs}
 
 **Unataka kupata ajira kwenye Ethereum?**
 
@@ -96,7 +96,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [Kazi za Web3](https://web3.career)
 - [Jeshi la Web3](https://web3army.xyz/)
 
-## Jiunge na DAO {#decentralized-autonomous-organizations-daos}
+## Jiunge na DAO \{#decentralized-autonomous-organizations-daos}
 
 "DAOs" ni mashirika huru yaliogatuliwa. Haya makundi yanainua teknolojia ya Ethereum ili kuwezesha ushirikiano. Kwa mfano, kudhibiti uanachama, upigaji kura wa mapendekezo, ama kusimamia mali zilizokusanywa. Huku DAO bado ziko kwenye majaribio, zinatoa fursa ya kupata makundi unayofanana nayo, utapata washiriki na kukuza mchango wako kwenye jumuiya ya Ethereum. [Zaidi juu ya DAOs](/dao/)
 

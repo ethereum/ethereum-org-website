@@ -6,11 +6,11 @@ lang: fr
 
 Un compte Ethereum est une entité avec un solde en ether (ETH) qui peut réaliser des transactions sur Ethereum. Les comptes peuvent être contrôlés par l'utilisateur ou déployés en tant que contrats intelligents.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire notre [introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Types de comptes {#types-of-account}
+## Types de comptes \{#types-of-account}
 
 Ethereum comprend deux types de comptes :
 
@@ -22,7 +22,7 @@ Les deux types de comptes peuvent :
 - Recevoir, détenir et envoyer des ETH et des jetons
 - Interagir avec les contrats intelligents déployés
 
-### Différences principales {#key-differences}
+### Différences principales \{#key-differences}
 
 **Propriété externe**
 
@@ -38,7 +38,7 @@ Les deux types de comptes peuvent :
 - Les transactions depuis un compte externe vers un compte de contrat peuvent déclencher un code pouvant exécuter plein d'actions différentes, comme transférer des tokens ou même créer un nouveau contrat
 - Les comptes de contrat n'ont pas de clés privées. Au lieu de cela, ils sont contrôlés par la logique du code du contrat intelligent
 
-## Description d'un compte {#an-account-examined}
+## Description d'un compte \{#an-account-examined}
 
 Les comptes Ethereum comportent quatre champs :
 
@@ -49,7 +49,7 @@ Les comptes Ethereum comportent quatre champs :
 
 ![Schéma montrant la composition d'un compte](./accounts.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Comptes externes et paires de clés {#externally-owned-accounts-and-key-pairs}
+## Comptes externes et paires de clés \{#externally-owned-accounts-and-key-pairs}
 
 Un compte est composé d'une paire de clés cryptographiques : la clé publique et la clé privée. Celles-ci servent à prouver qu'une transaction a été signée par l'expéditeur et empêchent les contrefaçons. Votre clé privée vous sert à signer les transactions. Elle vous permet donc de gérer les fonds associés à votre compte. Vous ne détenez jamais vraiment de la cryptomonnaie, vous détenez des clés privées. Les fonds sont toujours dans le registre d'Ethereum.
 
@@ -57,7 +57,7 @@ Cela empêche les acteurs malveillants de diffuser de fausses transactions puisq
 
 Si Alice veut envoyer de l'ether de son propre compte à celui de Marc, elle doit initier une transaction et l'envoyer sur le réseau pour vérification. L'utilisation de la cryptographie asymétrique par Ethereum permet à Alice de prouver qu'elle est l'initiatrice de la demande de transaction. Sans les mécanismes cryptographiques, une Eve malveillante pourrait simplement diffuser publiquement une demande comme "envoyer 5 ETH du compte d'Alice sur le compte d'Eve" et personne ne serait en mesure de vérifier que cela ne venait pas d'Alice.
 
-## Création de compte {#account-creation}
+## Création de compte \{#account-creation}
 
 Lorsque vous voulez créer un compte, la plupart des bibliothèques vous génèrent une clé privée aléatoire.
 
@@ -90,7 +90,7 @@ Il est possible de dériver de nouvelles clés publiques à partir de votre clé
 
 Vous avez besoin d'une clé privée pour signer les messages et les transactions produisant une signature. Les autres peuvent alors prendre la signature pour dériver votre clé publique, prouvant l'auteur du message. Dans votre application, vous pouvez utiliser une bibliothèque javascript pour envoyer des transactions sur le réseau.
 
-## Les comptes de contrats {#contract-accounts}
+## Les comptes de contrats \{#contract-accounts}
 
 Les comptes de contrats possèdent également une adresse hexadécimale de 42 caractères :
 
@@ -100,17 +100,17 @@ Exemple :
 
 Cette adresse est généralement donnée lorsqu'un contrat est déployé dans la blockchain Ethereum. Elle provient de l'adresse du créateur et du nombre de transactions envoyées à partir de cette adresse (« nonce »).
 
-## Clés de validateur {#validators-keys}
+## Clés de validateur \{#validators-keys}
 
 Il existe également un autre type de clé dans Ethereum, qui a été mis en place lorsque Ethereum est passé de la preuve de travail à un consensus basé sur la preuve d'enjeu. Il s'agit des clés « BLS », qui sont utilisées pour identifier les validateurs. Ces clés peuvent être agrégées efficacement pour réduire la bande passante nécessaire au consensus du réseau. Sans cette clé d'agrégation, la mise en jeu minimale pour un validateur serait beaucoup plus élevée.
 
 [En savoir plus sur les clés de validateur](/developers/docs/consensus-mechanisms/pos/keys/).
 
-## Remarque sur les portefeuilles {#a-note-on-wallets}
+## Remarque sur les portefeuilles \{#a-note-on-wallets}
 
 Un compte n'est pas un portefeuille. Un compte est une paire de clés d'un compte Ethereum appartenant à un utilisateur. Un portefeuille est une interface ou une application qui vous permet d'interagir avec votre compte Ethereum.
 
-## Démonstration visuelle {#a-visual-demo}
+## Démonstration visuelle \{#a-visual-demo}
 
 Regardez Austin vous guider à travers les fonctions de hachage et les paires de clés.
 
@@ -118,13 +118,13 @@ Regardez Austin vous guider à travers les fonctions de hachage et les paires de
 
 <YouTube id="9LtBDy67Tho" />
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Comprendre les Comptes Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Sujets connexes {#related-topics}
+## Sujets connexes \{#related-topics}
 
 - [Contrats intelligents](/developers/docs/smart-contracts/)
 - [Transactions](/developers/docs/transactions/)

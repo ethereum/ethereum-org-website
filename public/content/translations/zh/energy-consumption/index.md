@@ -4,7 +4,7 @@ description: 了解以太坊能源消耗所需的基本信息。
 lang: zh
 ---
 
-# 以太坊的能源消耗 {#proof-of-stake-energy}
+# 以太坊的能源消耗 \{#proof-of-stake-energy}
 
 以太坊是一个绿色区块链。 以太坊的[权益证明](/developers/docs/consensus-mechanisms/pos)共识机制，使用以太币而不是[能源](/developers/docs/consensus-mechanisms/pow)来保护网络安全。 整个以太坊全球网络的能源消耗约为 [0.0026 亿千瓦时/年](https://carbon-ratings.com/eth-report-2022)。
 
@@ -39,13 +39,13 @@ lang: zh
 
 可以在[剑桥区块链网络可持续性指数网站](https://ccaf.io/cbnsi/ethereum)上查看多个不同行业的能源消耗和一氧化碳排放估算值。
 
-## 每笔交易的能耗估算值 {#per-transaction-estimates}
+## 每笔交易的能耗估算值 \{#per-transaction-estimates}
 
 许多文章估算的是区块链上“每笔交易”的能源消耗。 然而，这种估算可能会产生误导，因为提出和验证区块所需的能源与区块中的交易数量无关。 如果以每笔交易为单位计算能源消耗，意味着交易越少能源消耗越少，反之亦然，但事实并非如此。 而且，每笔交易的能源消耗估算值高度依赖于区块链的交易吞吐量是如何定义的，并且可以通过调整这个定义来使估算值看起来更大或更小。
 
 例如，在以太坊上，交易吞吐量不仅是基础层的交易吞吐量，还包括所有“[二层网络](/layer-2/)”卷叠的交易吞吐量总和。 二层网络的交易吞吐量总和通常未包含在计算中，但可以解释排序者使用的额外能源（少量）以及他们处理的交易数量（大量）可能会大幅降低每笔交易的能源消耗估算值。 这就是为什么跨平台比较每笔交易的能源消耗可能造成误导的原因之一。
 
-## 以太坊的碳债务 {#carbon-debt}
+## 以太坊的碳债务 \{#carbon-debt}
 
 以太坊目前的能源消耗非常低，但并非总是如此。 以太坊最初采用工作量证明机制，其环境成本远远高于目前的权益证明机制。
 
@@ -55,7 +55,7 @@ lang: zh
 
 CCRI 估计，以太坊的年化耗电量会因合并减少 **99.988%** 以上。 同样，以太坊的碳足迹减少了大约 **99.992%**（二氧化碳当量从 11,016,000 吨减少到 870 吨）。 比较而言，排放减少量就如同从埃菲尔铁塔的高度下降到小塑料玩偶一般巨大，如上图所示。 因此，保护网络的环境成本大大降低。 同时，据信网络安全也得到改善。
 
-## 绿色应用程序层 {#green-applications}
+## 绿色应用程序层 \{#green-applications}
 
 尽管以太坊的能源消耗非常低，但以太坊上也出现了大量不断增长且高度活跃的[**再生金融 (ReFi)**](/refi/) 社区。 再生金融应用程序使用去中心化金融组件来构建具有积极外部影响，从而使环境受益的金融应用程序。 再生金融是更广泛的[“太阳朋克”](https://en.wikipedia.org/wiki/Solarpunk)运动的一部分，这项运动与以太坊高度契合，旨在将技术进步和环境管理结合起来。 以太坊具有去中心化、无需许可和可组合的特性，这使其成为再生金融和太阳朋克社区的理想基础层。
 
@@ -65,7 +65,7 @@ Web3 原生公共物品融资平台，如 [Gitcoin](https://gitcoin.co) 举行�
   如果你认为本页尚有可改进之处，请提出问题或拉取请求。 本页面上的统计数据是基于公开数据的估算值 - 它们不代表 ethereum.org 团队或以太坊基金会的官方声明或承诺。
 </InfoBanner>
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [剑桥区块链网络可持续性指数](https://ccaf.io/cbnsi/ethereum)
 - [白宫关于工作量证明区块链的报告](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -75,7 +75,7 @@ Web3 原生公共物品融资平台，如 [Gitcoin](https://gitcoin.co) 举行�
 - [合并 - 对以太坊网络电力消耗和碳足迹的影响](https://carbon-ratings.com/eth-report-2022) - _CCRI_。
 - [以太坊的能源消耗](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [以太坊愿景](/roadmap/vision/)
 - [信标链](/roadmap/beacon-chain)

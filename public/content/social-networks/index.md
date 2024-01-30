@@ -13,13 +13,13 @@ summaryPoint3: Tokens and NFTs create new ways to monetize content.
 
 Social networks play a massive role in our daily communications and interactions. However, centralized control of these platforms has created many problems: data breaches, server outages, de-platforming, censorship, and privacy violations are some of the trade-offs social media often make. To combat these issues, developers are building social networks on Ethereum. Decentralized social networks can fix many of the problems of traditional social networking platforms and improve users' overall experience.
 
-## What are decentralized social networks? {#what-are-decentralized-social-networks}
+## What are decentralized social networks? \{#what-are-decentralized-social-networks}
 
 Decentralized social networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control.
 
 Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms.
 
-### How do decentralized social networks work? {#decentralized-social-networks-overview}
+### How do decentralized social networks work? \{##decentralized-social-networks-overview}
 
 Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/developers/docs/smart-contracts/) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
@@ -31,7 +31,7 @@ Using decentralized storage systems like [the InterPlanetary File System (IPFS)]
 
 Many blockchain-based social platforms have native tokens that power monetization in absence of advertising revenue. Users can buy these tokens to access certain features, complete in-app purchases, or tip their favorite content creators.
 
-## Benefits of decentralized social networks {#benefits}
+## Benefits of decentralized social networks \{##benefits}
 
 1. Decentralized social networks are censorship-resistant and open to everyone. This means users cannot be banned, deplatformed, or restricted arbitrarily.
 
@@ -47,33 +47,33 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 7. Decentralized social networks rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
 
-## Decentralized social networks on Ethereum {#ethereum-social-networks}
+## Decentralized social networks on Ethereum \{##ethereum-social-networks}
 
 The Ethereum network has become the preferred tool for developers creating decentralized social media owing to the popularity of its tokens (ERC-20/ERC-721) and its massive user base. Here are some examples of Ethereum-based social networks:
 
-### Peepeth {#peepeth}
+### Peepeth \{##peepeth}
 
 [Peepeth](https://peepeth.com/) is a microblogging platform similar to Twitter. It runs on the Ethereum blockchain and uses IPFS to store user data.
 
 Users can send short messages called "Peeps", which cannot be deleted or modified. You can collect tips or tip anyone on the platform in ether (ETH) without leaving the app.
 
-### Mirror {#mirror}
+### Mirror \{##mirror}
 
 [Mirror](https://mirror.xyz/) is a web3-enabled writing platform that aims to be decentralized and user-owned. Users can read and write for free on Mirror by simply connecting their wallets. Users can also collect writing and subscribe to their favorite writers.
 
 Posts published on Mirror are permanently stored on Arweave, a decentralized storage platform, and can be minted as collectable [non-fungible tokens (NFTs)](/nft/) known as Writing NFTs. Writing NFTs are completely free for writers to create, and collection happens on an Ethereum L2 — making transactions inexpensive, fast, and environmentally friendly.
 
-### MINDS {#minds}
+### MINDS \{##minds}
 
 [MINDS](https://www.minds.com/) is one of the most used decentralized social networks. It works like Facebook and has racked up millions of users already.
 
 Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
-## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
+## Web2 social networks on Ethereum \{##web2-social-networks-and-ethereum}
 
 [Web3](/web3/) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
 
-### Reddit {#reddit}
+### Reddit \{##reddit}
 
 Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are [ERC-20 tokens](/developers/docs/standards/tokens/erc-20/) that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to [get exclusive privileges and perks](https://www.reddit.com/community-points/). For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
 
@@ -81,24 +81,24 @@ The program is already live, with the r/CryptoCurrency subreddit [running its ve
 
 After concluding a beta phase on the Rinkeby testnet, Reddit Community Points are now on [Arbitrum Nova](https://nova.arbitrum.io/), a blockchain that combines properties of a [sidechain](/developers/docs/scaling/sidechains/) and an [optimistic rollup](/developers/docs/scaling/optimistic-rollups/). Besides using Community Points to unlock special features, users can also trade them for fiat on exchanges. Also, the amount of Community Points a user owns determines their influence on the decision-making process within the community.
 
-### Twitter {#twitter}
+### Twitter \{##twitter}
 
 In January 2021, Twitter Blue [rolled out support for NFTs](https://mashable.com/article/twitter-blue-nft-profile-picture), allowing users to connect their wallets and display NFTs as profile pictures. At time of writing, the social media company has also [announced plans](https://www.theverge.com/2021/8/16/22627435/twitter-bluesky-lead-jay-graber-decentralized-social-web) to create a decentralized social network in the future.
 
-### Instagram {#instagram}
+### Instagram \{##instagram}
 
 In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/blog/announcements/instagram-digital-collectibles) on Ethereum and Polygon. Users can post NFTs directly to Instagram by connecting their Ethereum wallet.
 
-## Use decentralized social networks {#use-decentralized-social-networks}
+## Use decentralized social networks \{##use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status is a secure messaging app that uses an open-source, peer-to-peer protocol, and end-to-end encryption to protect your messages from third parties._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror is a decentralized, user-owned publishing platform built on Ethereum for users to crowdfund ideas, monetize content, and build high-value communities._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol is a composable and decentralized social graph helping creators take ownership of their content wherever they go in the digital garden of the decentralized internet._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster is a sufficiently decentralized social network. It is an open protocol that can support many clients, just like email._
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
-### Articles {#articles}
+### Articles \{##articles}
 
 - [Decentralizing social media: a guide to the web3 social stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Social Networks Are the Next Big Decentralization Opportunity](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
@@ -108,13 +108,13 @@ In May 2022, [Instagram announced support for NFTs](https://about.instagram.com/
 - [Social Media Networks Are Coming To The Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 - [Sufficient Decentralization for Social Networks](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
-### Videos {#videos}
+### Videos \{##videos}
 
 - [Decentralized Social Media Explained](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
 - [DeSo Blockchain Wants to Decentralize Social Media](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
 - [The Future of Decentralized Social Media w/ Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
-### Communities {#communities}
+### Communities \{##communities}
 
 - [Status Discord Server](https://discord.com/invite/3Exux7Y)
 - [Mirror Discord Server](https://discord.com/invite/txuCHcE8wV)

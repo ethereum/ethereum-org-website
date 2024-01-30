@@ -4,11 +4,11 @@ description: A támogatói programok listája az egész Ethereum-ökoszisztémá
 lang: hu
 ---
 
-# Online közösségek {#online-communities}
+# Online közösségek \{#online-communities}
 
 Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy megosszák a híreket, megbeszéljék az új fejlesztéseket, megvitassák a technikai problémákat és elképzeljék a jövőt.
 
-## Fórumok {#forums}
+## Fórumok \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> – minden az Ethereumról</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> – az Ethereum pénzügyi része, beleértve a decentralizált pénzügyeket (DeFi)</SocialListItem>
@@ -19,7 +19,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> – az Ethereum-fejlesztők támogatása</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> – a legbefolyásosabb üzenőfal a kriptogazdasági kutatáshoz</SocialListItem>
 
-## Csevegőszobák {#chat-rooms}
+## Csevegőszobák \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> – projektmanagement-támogatás az Ethereum-fejlesztésekhez</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> – az ETHGlobal által üzemeltetett Discord chat: online közösség az Ethereum hackereknek világszinten</SocialListItem>
@@ -32,7 +32,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *–kérdések és válaszok fóruma*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *– decentralizált kérdések és válaszok fóruma*</SocialListItem>
 
-## YouTube és Twitter {#youtube-and-twitter}
+## YouTube és Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Alapítvány</Link> – legyen napra kész az Ethereum Alapítvány újdonságaival kapcsolatban</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> – az Ethereum Alapítvány hivatalos profilja</SocialListItem>

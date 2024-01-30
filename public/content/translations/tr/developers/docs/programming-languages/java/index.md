@@ -9,7 +9,7 @@ incomplete: true
 
 Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
-## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç \{#getting-started-with-smart-contracts-and-solidity}
 
 **Java ve Ethereum'u entegre etmek için ilk adımlarınızı atın**
 
@@ -20,7 +20,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'yi Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Ethereum müşterileri ile çalışma {#working-with-ethereum-clients}
+## Ethereum müşterileri ile çalışma \{#working-with-ethereum-clients}
 
 İki öncü Java Ethereum istemcisi olan [Web3J](https://github.com/web3j/web3j) ve Hyperledger Besu'nun kullanımını öğrenin
 
@@ -33,17 +33,17 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Java Entegrasyon Testlerinde Hyperledger Besu (Pantheon) Düğümü Çalıştırma](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Web3j Kopya Kağıdı](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
-## Orta seviye makaleler {#intermediate-articles}
+## Orta seviye makaleler \{#intermediate-articles}
 
 - [IPFS ile bir Java uygulamasında depolama yönetimi](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
 - [ERC20 token'larını Java'da Web3j ile yönetin](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
 - [Web3j İşlem Yöneticileri](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
-## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
+## İleri Düzey Kullanım Şekilleri \{#advanced-use-patterns}
 
 - [Java akıllı sözleşmesi veri önbelleği oluşturmak için Eventeum'u kullanma](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
-## Java projeleri ve araçları {#java-projects-and-tools}
+## Java projeleri ve araçları \{#java-projects-and-tools}
 
 - [Hyperledger Besu (Panteon) (Ethereum İstemcisi)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Ethereum İstemcileriyle Etkileşim Kütüphanesi)](https://github.com/web3j/web3j)
@@ -52,7 +52,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/developers/).
 
-## Java topluluğuna katkıda bulunanlar {#java-community-contributors}
+## Java topluluğuna katkıda bulunanlar \{#java-community-contributors}
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)

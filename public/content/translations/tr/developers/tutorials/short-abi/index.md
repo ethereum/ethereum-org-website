@@ -9,23 +9,23 @@ skill: intermediate
 published: 2022-04-01
 ---
 
-## Giriş {#introduction}
+## Giriş \{#introduction}
 
 Bu makalede [iyimser toplamalar](/developers/docs/scaling/optimistic-rollups), onların işlem ücretleri ve bu farklı maliyet yapısının Ethereum Ana Ağı'ndakilere göre farklı şeyler için optimizasyon yapmamızı nasıl şart koştuğu hakkında bilgi edineceksiniz. Aynı zamanda bu optimizasyon işlemini nasıl uygulayacağınızı da göreceksiniz.
 
-### Bilgilendirme {#full-disclosure}
+### Bilgilendirme \{#full-disclosure}
 
 Ben tam zamanlı bir [ "Optimism"](https://www.optimism.io/) çalışanıyım, bu yüzden bu makaledeki örnekler Optimism üzerinde çalışabilecek örnekler olacaktır. Ancak, burada anlatacağım teknik diğer toplamalarda da işe yarayacaktır.
 
-### Terminoloji {#terminology}
+### Terminoloji \{#terminology}
 
 Toplamalar üzerinde konuşurken üretim Ethereum Ağı olan Ana Ağ için "katman 1 (L1)" terimi kullanılacaktır. "Katman 2 (L2)" terimi ise toplama veya güvenliği L1'e dayanan fakat işlemlerinin çoğunu zincir dışında yapan her türlü sistem için kullanılacaktır.
 
-## L2 işlemlerinin maliyetlerini nasıl daha da azaltabiliriz? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## L2 işlemlerinin maliyetlerini nasıl daha da azaltabiliriz? \{#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
 [İyimser toplamalar](/developers/docs/scaling/optimistic-rollups), insanların sonradan gözden geçirip durumun doğru olup olmadığını kontrol edebilmesi için tüm geçmiş işlemlerin kayıtlarını tutmalıdır. Verileri Ethereum Ana Ağı'na sokabilmenin en uygun yolu, onları çağrı verisi olarak yazmaktır. Bu çözüm, hem [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) hem de [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups) tarafından tercih edilmiştir.
 
-### L2 işlemlerinin maliyeti {#cost-of-l2-transactions}
+### L2 işlemlerinin maliyeti \{#cost-of-l2-transactions}
 
 L2 işlemlerinin maliyetleri iki bileşenden oluşur:
 
@@ -36,7 +36,7 @@ Bunu yazarken, Optimism'de L2 gazının maliyeti 0,001 [Gwei](/developers/docs/g
 
 Çağrı verisinin bir baytı 4 gaz (eğer sıfırsa) veya 16 gazdır (eğer farklı bir değerse). EVM'deki en pahalı işlemlerden biri, depolamaya yazmaktır. 32 baytlık bir kelimeyi L2'deki bir depoya yazmanın maksimum maliyeti 22100 gazdır. Şu anda bu 22,1 Gwei'ye tekabül ediyor. Yani eğer sıfır baytlık bir çağrı verisi tasarruf etmemiz, depolamaya 200 bayt bile yazsak hala kârda olabileceğimizi gösteriyor.
 
-### ABI {#the-abi}
+### ABI \{#the-abi}
 
 İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding) ile uyumlu olacak şekilde yorumlar.
 
@@ -58,11 +58,11 @@ Açıklama:
 
 L1 üzerinde harcanan 160 gaz normalde göz ardı edilebilir bir değerdir. Bir işlemin maliyeti en az [21.000 gazdır](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), yani ekstra %0,8'in bir önemi yoktur. Fakat L2'de işler biraz daha farklıdır. Buradaki işlem maliyetinin neredeyse tamamı işlemi L1'e yazmaktır. İşlem çağrı verisine ek olarak, 109 baytlık bir işlem başlığı vardır (varış adresi, imza vs.). Toplam maliyet `109*16+576+160=2480` kadardır ve bunun %65'ini boşa harcıyoruz.
 
-## Hedefi kontrol etmediğimiz durumlarda maliyetleri azaltma {#reducing-costs-when-you-dont-control-the-destination}
+## Hedefi kontrol etmediğimiz durumlarda maliyetleri azaltma \{#reducing-costs-when-you-dont-control-the-destination}
 
 Hedef sözleşme üzerinde kontrolünüz olmadığını varsayarsak, yine de [buna](https://github.com/qbzzt/ethereum.org-20220330-shortABI) benzer bir çözüm yolu kullanabilirsiniz. Hadi ilgili dosyalara bir göz atalım.
 
-### Token.sol {#token-sol}
+### Token.sol \{#token-sol}
 
 [Bu, hedef sözleşmedir](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol). Bu, bir ek özellikle gelen standart bir ERC-20 sözleşmesidir. Bu `faucet`, her kullanıcının kullanabilmek için biraz jeton almasını sağlar. Bu, üretim ERC-20 sözleşmesini gereksiz kılabilecek olsa da, ERC-20 sadece test yapmayı kolaylaştırmak amaçlı var olduğunda işleri gerçekten kolaylaştırıyor.
 
@@ -77,7 +77,7 @@ Hedef sözleşme üzerinde kontrolünüz olmadığını varsayarsak, yine de [bu
 
 [Burada bu sözleşmenin dağıtılmış olduğu bir örneği görebilirsiniz](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol {#calldatainterpreter-sol}
+### CalldataInterpreter.sol \{#calldatainterpreter-sol}
 
 [Bu, işlemlerin daha küçük çağrı verileriyle çağırması gereken sözleşmedir](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol). Hadi satır satır inceleyelim.
 
@@ -239,7 +239,7 @@ Ortalama olarak bir transfer 35 bayt kadar çağrı verisi kaplar:
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test-js}
+### test.js \{#test-js}
 
 [Bu Javascript birim testi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) bize bu mekanizmayı nasıl kullanacağımızı (ve nasıl doğru çalışacağını onaylayacağımızı) gösteriyor. [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) kısımlarını anladığınızı varsayıp sadece sözleşme için geçerli olan kısımları anlatacağım.
 
@@ -327,7 +327,7 @@ Bir transfer işlemi oluşturun. İlk bayt "0x02"dir ve ardından hedef adres ge
 })      // describe
 ```
 
-### Örnek {#example}
+### Örnek \{#example}
 
 Bu dosyaları kendiniz çalıştırmadan çalışırken görmek istiyorsanız, şu bağlantıları izleyin:
 
@@ -337,13 +337,13 @@ Bu dosyaları kendiniz çalıştırmadan çalışırken görmek istiyorsanız, �
 4. [`OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747) çağrısı. Bu çağrı doğrudan jeton sözleşmesine gider, çünkü işleme `msg.sender`'a dayanır.
 5. [`transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748) çağrısı.
 
-## Hedef sözleşmeyi kontrol ederken maliyeti azaltma {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Hedef sözleşmeyi kontrol ederken maliyeti azaltma \{#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 Eğer hedef sözleşme üzerinde gerçekten kontrolünüz varsa `msg.sender`'i atlatabilen fonksiyonlar oluşturabilirsiniz. Çünkü bunlar çağrı verisi yorumlayıcısına güvenir. [Burada bunun, `control-contract` bölümü](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract) içerisinde nasıl çalıştığına dair bir örnek görebilirsiniz.
 
 Eğer sözleşme sadece harici sözleşmelere cevap veriyorsa, bunu sadece tek bir sözleşmeye sahip olarak halledebiliriz. Fakat bu [birleştirilebilirliiği](/developers/docs/smart-contracts/composability/) bozardı. Normal ERC-20 çağrılarına yanıt veren bir sözleşmeye ve küçük çağrı verilerine cevap verebilen başka bir sözleşmeye sahip olmak çok daha iyidir.
 
-### Token.sol {#token-sol-2}
+### Token.sol \{#token-sol-2}
 
 Bu örnekte, `Token.sol`'u modifiye ediyoruz. Bu, bizim sadece vekilin çağırabileceği bir çok fonksiyona sahip olmamızı sağlıyor. İşte yeni bölümler:
 
@@ -441,7 +441,7 @@ Bunlar normalde mesajın doğrudan jeton aktaran veya bir ödeneği onaylayan ku
 1. Başka hiç kimse kontrol sahibi olamasın diye `onlyProxy()` tarafından değiştirilmiş.
 2. Normalde `msg.sender` olan adresi ekstra parametre olarak alan.
 
-### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
+### CalldataInterpreter.sol \{#calldatainterpreter-sol-2}
 
 Çağrı verisi yorumlayıcısı neredeyse yukardakiyle aynı olmasına rağmen şu noktada ayrışır: vekil fonksiyonlar `msg.sender` parametresi alır ve `transfer` için herhangi bir ödeneğe ihtiyaç yoktur.
 
@@ -475,7 +475,7 @@ Bunlar normalde mesajın doğrudan jeton aktaran veya bir ödeneği onaylayan ku
         }
 ```
 
-### Test.js {#test-js-2}
+### Test.js \{#test-js-2}
 
 Az önceki test kodları ve aşağıdakinin arasında birkaç değişiklik vardır.
 
@@ -533,7 +533,7 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 
 İki yeni fonksiyonu test edin. `transferFromTx` öğesinin iki adres parametresi gerektirdiğini unutmayın: ödeneği veren ve alıcı.
 
-### Örnek {#example-2}
+### Örnek \{#example-2}
 
 Bu dosyaları kendiniz çalıştırmadan çalışırken görmek istiyorsanız, şu bağlantıları izleyin:
 
@@ -545,6 +545,6 @@ Bu dosyaları kendiniz çalıştırmadan çalışırken görmek istiyorsanız, �
 6. [`approveProxy()`](https://kovan-optimistic.etherscan.io/tx/1475419) çağrısı.
 7. [`transferFromProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421) çağrısı. Bu çağrının diğerlerinden farklı bir adresten geldiğini de unutmayın; `poorSigner` yerine `signer`.
 
-## Sonuç {#conclusion}
+## Sonuç \{#conclusion}
 
 Hem [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) hem de [Arbitrum](https://developer.offchainlabs.com/docs/special_features), L1'e yazılan çağrı verilerinin boyutunu ve dolayısıyla işlem maliyetlerini azaltmanın yollarını aramaktadır. Fakat altyapı sağlayıcıları genel çözümler arıyorken, bizim yapabileceklerimiz sınırlıdır. Merkeziyetsiz uygulama geliştiricisi olarak uygulamaya özel bilgilere sahipsiniz. Bu da sizin çağrı verilerinizi bizim genel bir çözümle yapabileceğimize göre çok daha iyi optimize edebilmenizi mümkün kılar. Umarım bu makale, ihtiyaçlarınız için ideal çözümler bulmanıza yardımcı olur.

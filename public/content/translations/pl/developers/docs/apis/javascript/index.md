@@ -10,17 +10,17 @@ W tym celu każdy klient Ethereum implementuje specyfikację JSON-RPC, dzięki c
 
 Jeśli chcesz użyć określonego języka programowania do połączenia z węzłem Ethereum, rozpisz własne rozwiązanie, ale w ekosystemie istnieje kilka wygodnych bibliotek, które znacznie to ułatwiają. Dzięki tym bibliotekom programiści mogą pisać intuicyjne, jednowierszowe metody inicjowania żądań JSON RPC (pod maską), które współdziałają z Ethereum.
 
-## Wymagania wstępne {#prerequisites}
+## Wymagania wstępne \{#prerequisites}
 
 Oprócz zrozumienia JavaScript, pomocne może być zrozumienie [Ethereum stack](/developers/docs/ethereum-stack/) i [klientów Ethereum](/developers/docs/nodes-and-clients/).
 
-## Dlaczego warto użyć biblioteki? {#why-use-a-library}
+## Dlaczego warto użyć biblioteki? \{#why-use-a-library}
 
 Biblioteki te eliminują znaczną złożoność interakcji bezpośrednio z węzłem Ethereum. Zapewniają one także użyteczne funkcje (np. konwersję ETH na Gwei), dzięki czemu jako programiści możemy spędzić mniej czasu na zajmowaniu się zawiłościami klientów, a skupić się w głównej mierze na unikalnej funkcji naszej aplikacji.
 
-## Funkcje biblioteki {#library-features}
+## Funkcje biblioteki \{#library-features}
 
-### Połącz z węzłami Ethereum {#connect-to-ethereum-nodes}
+### Połącz z węzłami Ethereum \{#connect-to-ethereum-nodes}
 
 Korzystając z dostawców, biblioteki te pozwalają Ci połączyć się z Ethereum i przeczytać jego dane, niezależnie od tego, czy chodzi o JSON-RPC, INFURA, Etherscan, Alchemy czy MetaMask.
 
@@ -46,7 +46,7 @@ Po skonfigurowaniu łańcucha bloków będziesz mógł zapytać o:
 - id sieci
 - i więcej...
 
-### Funkcjonalność portfela {#wallet-functionality}
+### Funkcjonalność portfela \{#wallet-functionality}
 
 Te biblioteki zapewniają Ci funkcjonalność tworzenia portfeli, zarządzania kluczami i podpisywania transakcji.
 
@@ -127,7 +127,7 @@ Po skonfigurowaniu będziesz w stanie:
 - podpisać transakcje
 - i więcej...
 
-### Interakcja z funkcjami inteligentnego kontraktu {#interact-with-smart-contract-functions}
+### Interakcja z funkcjami inteligentnego kontraktu \{#interact-with-smart-contract-functions}
 
 Biblioteki klienta JavaScript pozwalają aplikacji na wywołanie funkcji inteligentnych kontraktów poprzez odczyt interfejsu binarnego aplikacji (ABI) skompilowanego kontraktu.
 
@@ -189,7 +189,7 @@ Oznacza to, że możesz:
 - Wdrożyć kontrakt
 - I więcej...
 
-### Funkcje użytkowe {#utility-functions}
+### Funkcje użytkowe \{#utility-functions}
 
 Funkcje użytkowe dają Ci praktyczne skróty, które sprawiają, że budowanie z Ethereum jest nieco łatwiejsze.
 
@@ -211,7 +211,7 @@ eterach. tils.formatEther(balance)
 - [Funkcje użytkowe Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funkcje użytkowe Ethers](https://docs.ethers.io/v5/api/utils/)
 
-## Dostępne biblioteki {#available-libraries}
+## Dostępne biblioteki \{#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
@@ -245,16 +245,16 @@ eterach. tils.formatEther(balance)
 - [Dokumentacja](https://docs.alchemy.com/reference/api-overview)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
-## Dodatkowo przeczytaj {#further-reading}
+## Dodatkowo przeczytaj \{#further-reading}
 
 _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [Węzły i klienci](/developers/docs/nodes-and-clients/)
 - [Ramy rozwojowe](/developers/docs/frameworks/)
 
-## Powiązane samouczki {#related-tutorials}
+## Powiązane samouczki \{#related-tutorials}
 
 - [Skonfiguruj Web3js, aby używać blockchain Ethereum w JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji web3.js w Twoim projekcie._
 - [Wywołanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– za pomocą tokena DAI zobacz jak wywołać funkcję kontraktów przy użyciu JavaScript._

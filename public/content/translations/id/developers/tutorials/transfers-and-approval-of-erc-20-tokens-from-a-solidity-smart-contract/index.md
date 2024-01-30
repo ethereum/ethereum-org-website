@@ -135,7 +135,7 @@ Jadi sekarang kita memiliki DEX dan memiliki semua cadangan token yang tersedia.
 - `buy`: Penggunan bisa mengirim ether dan mendapat token sebagai gantinya
 - `sell`: Pengguna bisa memutuskan mengirim token untuk mendapatkan ether kembali
 
-## Fungsi pembelian {#the-buy-function}
+## Fungsi pembelian \{#the-buy-function}
 
 Mari kodekan fungsi pembelian. Terlebih dahulu kita akan memeriksa jumlah ether yang dimiliki message dan memverifikasi apakah kontrak memiliki cukup token dan apakah messagenya memliki beberapa ether di dalamnya. Jika kontrak memiliki cukup token, kontrak akan mengirim sejumlah token ke pengguna dan memancarkan aksi `Bought`.
 
@@ -158,7 +158,7 @@ Jika pembelian berhasil, kita akan melihat dua aksi dalam transaksi: `Transfer` 
 
 ![Dua aksi dalam transaksi: Transfer dan Bought](./transfer-and-bought-events.png)
 
-## Fungsi penjualan {#the-sell-function}
+## Fungsi penjualan \{#the-sell-function}
 
 Fungsi yang bertanggungjawab untuk penjualan ini pertama-tama akan mengharuskan pengguna menyetujui jumlahnya dengan memanggil fungsi yang disetujui sebelumnya. Approving the transfer requires the ERC20Basic token instantiated by the DEX to be called by the user. This can be achieved by first calling the DEX contract's `token()` function to retrieve the address where DEX deployed the ERC20Basic contract called `token`. Then we create an instance of that contract in our session and call its `approve` function. Then we are able to call the DEX's `sell` function and swap our tokens back for ether. For example, this is how this looks in an interactive brownie session:
 

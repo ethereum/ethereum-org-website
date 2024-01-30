@@ -13,7 +13,7 @@ summaryPoints:
   - Desconfíe y no deje nunca de controlar las claves de sus fondos
 ---
 
-## ¿Qué es staking individual? {#what-is-solo-staking}
+## ¿Qué es staking individual? \{#what-is-solo-staking}
 
 Participación individual es el acto de [ ejecutar un nodo Ethereum](/run-a-node/) conectado a Internet y depositar 32 ETH para activar un [validador](#faq), abriendo la posibilidad de participar directamente en el consenso de la red.
 
@@ -25,7 +25,7 @@ Los participantes individuales conlleva la responsabilidad de operar el hardware
 
 El participante individual recibe las recompensas directamente desde el protocolo por mantener su validador funcionando correctamente y en línea.
 
-## ¿Por qué debería participar de forma individual? {#why-stake-solo}
+## ¿Por qué debería participar de forma individual? \{#why-stake-solo}
 
 La participación en solitario conlleva más responsabilidad, pero proporciona el máximo control posible sobre los fondos y la configuración para realizarla.
 
@@ -35,7 +35,7 @@ La participación en solitario conlleva más responsabilidad, pero proporciona e
   <Card title="Seguridad de la red" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Consideraciones antes de hacer una participación individual {#considerations-before-staking-solo}
+## Consideraciones antes de hacer una participación individual \{#considerations-before-staking-solo}
 
 Por mucho que deseemos que la participación individual fuera accesible y libre de riesgos para todos, esta no es la realidad. Hay algunas consideraciones prácticas y serias que debemos tener en cuenta antes de elegir la participación individual de su ETH.
 
@@ -75,7 +75,7 @@ Distinta a las penalizaciones por inactividad por estar fuera de línea, <em>el 
 
 <StakingComparison page="solo" />
 
-## Cómo funciona {#how-it-works}
+## Cómo funciona \{#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -85,13 +85,13 @@ Si lo desea, puede salir como validador, lo que elimina el requisito de estar en
 
 [Más sobre los retiros de Staking](/staking/withdrawals/)
 
-## Familiarícese con el Lanzador de participaciones {#get-started-on-the-staking-launchpad}
+## Familiarícese con el Lanzador de participaciones \{#get-started-on-the-staking-launchpad}
 
 El Lanzador de participaciones es una aplicación de código abierto que le ayudará a convertirse en un participante. Le guiará a través de la elección de sus clientes de software, a generar sus llaves y depositar su ETH en el contrato de depósito de participación. Se proporciona una lista de verificación para asegurarse de que ha cubierto todo para configurar su validador de forma segura.
 
 <StakingLaunchpadWidget />
 
-## Qué considerar respecto a las herramientas de configuración de nodos y clientes {#node-tool-considerations}
+## Qué considerar respecto a las herramientas de configuración de nodos y clientes \{#node-tool-considerations}
 
 Cada vez hay más herramientas y servicios para ayudarle a que usted haga una participación individual de su ETH, pero cada uno de ellos conlleva diferentes riesgos y beneficios.
 
@@ -99,7 +99,7 @@ Los indicadores de atributos a continuación indican las fortalezas o debilidade
 
 <StakingConsiderations page="solo" />
 
-## Explora las herramientas de configuración de nodos y clientes {#node-and-client-tools}
+## Explora las herramientas de configuración de nodos y clientes \{#node-and-client-tools}
 
 Hay una variedad de opciones disponibles para ayudarle con su configuración. Utilice los indicadores de arriba para guiarle a través de las herramientas que se muestran a continuación.
 
@@ -119,11 +119,11 @@ Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de 
 
 ¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
-## Explorar guías de participación individual {#staking-guides}
+## Explorar guías de participación individual \{#staking-guides}
 
 <StakingGuides />
 
-## Preguntas más frecuentes {#faq}
+## Preguntas más frecuentes \{#faq}
 
 Estas son algunas de las preguntas más comunes sobre la participación que vale la pena conocer.
 
@@ -193,7 +193,7 @@ Para desbloquear y recibir el saldo completo, también debe completar el proceso
 <ButtonLink to="/staking/withdrawals/">Más sobre los retiros de Staking</ButtonLink>
 </ExpandableCard>
 
-## Para profundizar sobre el tema {#further-reading}
+## Para profundizar sobre el tema \{#further-reading}
 
 - [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [ El problema de la diversidad de clientes de Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

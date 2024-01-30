@@ -8,11 +8,11 @@ The EVM’s physical instantiation can’t be described in the same way that one
 
 The Ethereum protocol itself exists solely for the purpose of keeping the continuous, uninterrupted, and immutable operation of this special state machine. It's the environment in which all Ethereum accounts and smart contracts live. At any given block in the chain, Ethereum has one and only one 'canonical' state, and the EVM is what defines the rules for computing a new valid state from block to block.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 Some basic familiarity with common terminology in computer science such as [bytes](https://wikipedia.org/wiki/Byte), [memory](https://wikipedia.org/wiki/Computer_memory), and a [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) are necessary to understand the EVM. It would also be helpful to be comfortable with cryptography/blockchain concepts like [hash functions](https://wikipedia.org/wiki/Cryptographic_hash_function) and the [Merkle tree](https://wikipedia.org/wiki/Merkle_tree).
 
-## From ledger to state machine {#from-ledger-to-state-machine}
+## From ledger to state machine \{##from-ledger-to-state-machine}
 
 The analogy of a 'distributed ledger' is often used to describe blockchains like Bitcoin, which enable a decentralized currency using fundamental tools of cryptography. The ledger maintains a record of activity which must adhere to a set of rules that govern what someone can and cannot do to modify the ledger. For example, a Bitcoin address cannot spend more Bitcoin than it has previously received. These rules underpin all transactions on Bitcoin and many other blockchains.
 
@@ -21,7 +21,7 @@ While Ethereum has its own native cryptocurrency (Ether) that follows almost exa
 ![A diagram showing the make up of the EVM](./evm.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## The Ethereum state transition function {#the-ethereum-state-transition-function}
+## The Ethereum state transition function \{##the-ethereum-state-transition-function}
 
 The EVM behaves as a mathematical function would: Given an input, it produces a deterministic output. It therefore is quite helpful to more formally describe Ethereum as having a **state transition function**:
 
@@ -31,17 +31,17 @@ Y(S, T)= S'
 
 Given an old valid state `(S)` and a new set of valid transactions `(T)`, the Ethereum state transition function `Y(S, T)` produces a new valid output state `S'`
 
-### State {#state}
+### State \{##state}
 
 In the context of Ethereum, the state is an enormous data structure called a [modified Merkle Patricia Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), which keeps all [accounts](/developers/docs/accounts/) linked by hashes and reducible to a single root hash stored on the blockchain.
 
-### Transactions {#transactions}
+### Transactions \{##transactions}
 
 Transactions are cryptographically signed instructions from accounts. There are two types of transactions: those which result in message calls and those which result in contract creation.
 
 Contract creation results in the creation of a new contract account containing compiled [smart contract](/developers/docs/smart-contracts/anatomy/) bytecode. Whenever another account makes a message call to that contract, it executes its bytecode.
 
-## EVM instructions {#evm-instructions}
+## EVM instructions \{##evm-instructions}
 
 The EVM executes as a [stack machine](https://wikipedia.org/wiki/Stack_machine) with a depth of 1024 items. Each item is a 256-bit word, which was chosen for the ease of use with 256-bit cryptography (such as Keccak-256 hashes or secp256k1 signatures).
 
@@ -54,7 +54,7 @@ Compiled smart contract bytecode executes as a number of EVM [opcodes](/develope
 ![A diagram showing where gas is needed for EVM operations](../gas/gas.png)
 _Diagrams adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## EVM implementations {#evm-implementations}
+## EVM implementations \{##evm-implementations}
 
 All implementations of the EVM must adhere to the specification described in the Ethereum Yellowpaper.
 
@@ -68,7 +68,7 @@ Over Ethereum's nine year history, the EVM has undergone several revisions, and 
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
-## Further Reading {#further-reading}
+## Further Reading \{##further-reading}
 
 - [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Jellopaper aka KEVM: Semantics of EVM in K](https://jellopaper.org/)
@@ -77,6 +77,6 @@ Over Ethereum's nine year history, the EVM has undergone several revisions, and 
 - [Ethereum Virtual Machine Opcodes Interactive Reference](https://www.evm.codes/)
 - [A short introduction in Solidity's documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
-## Related Topics {#related-topics}
+## Related Topics \{##related-topics}
 
 - [Gas](/developers/docs/gas/)

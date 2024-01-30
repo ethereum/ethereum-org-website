@@ -8,7 +8,7 @@ Are you new to designing with Ethereum? This is the right place for you. The Eth
 
 Need a more basic understanding of web3 first? Check out [**Learn hub**](/learn/).
 
-## Start with user research {#start-with-user-research}
+## Start with user research \{#start-with-user-research}
 
 Effective design goes beyond creating visually appealing user interfaces. It involves gaining a deep understanding of the user's needs, objectives, and driving factors. Therefore, we highly recommend that all designers adopt a design process, such as the [**double diamond process**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), to ensure that their work is deliberate and intentional.
 
@@ -17,7 +17,7 @@ Effective design goes beyond creating visually appealing user interfaces. It inv
 - [How to Approach UX Decisions in Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - A brief overview of quantitative and qualitative research and the differences between the two (video, 6 min)
 - [Being a ux researcher in web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - A personal view on what it is like being a UX researcher in web3
 
-## Research studies in web3 {#research-in-web3}
+## Research studies in web3 \{##research-in-web3}
 
 This is a curated list of user research done in web3 that may help with design and product decisions or work as an inspiration to conduct own study.
 
@@ -39,7 +39,7 @@ This is a curated list of user research done in web3 that may help with design a
 | <Badge colorScheme="gray">Metaverse</Badge>             | [Going on Safari: Researching Users in the Metaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)  |
 | <Badge colorScheme="blue">Ethereum.org UX stats</Badge> | [Usability and user satisfaction survey dashboard - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                  |
 
-## Design for web3 {#design-for-web3}
+## Design for web3 \{##design-for-web3}
 
 - [Web3 Design Principles](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - A framework of UX rules for blockchain based dapps
 - [Blockchain Design Principles](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lessons learned by the blockchain design team at IBM
@@ -49,7 +49,7 @@ This is a curated list of user research done in web3 that may help with design a
 - [Neueux.com](https://neueux.com/apps) - UI library of user flows with diverse filtering options
 - [Web3's Usability Crisis: What You NEED to Know!](https://www.youtube.com/watch?v=oBSXT_6YDzg) - A panel discussion on pitfalls of developer focused project building (video, 34 min)
 
-## Web3 Design Case Studies {#design-case-studies}
+## Web3 Design Case Studies \{##design-case-studies}
 
 - [How to write better web3 error messages](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
 - [Defi design tips](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
@@ -58,14 +58,14 @@ This is a curated list of user research done in web3 that may help with design a
 - [Selling an NFT on OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
 
-## Design Bounties {#bounties}
+## Design Bounties \{##bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://bounties.gitcoin.co/explorer)
 - [Buildbox hackathons](https://gitcoin.co/hackathons)
 - [ETHGlobal](https://ethglobal.com/)
 
-## Design DAOs and communities {#design-daos-and-communities}
+## Design DAOs and communities \{##design-daos-and-communities}
 
 Get involved in professional community-driven organizations or join design groups to discuss design and research related topics and trends with other members.
 
@@ -77,7 +77,7 @@ Get involved in professional community-driven organizations or join design group
 - [web3trends.org](https://web3trends.org/)
 - [Open Source Web3Design](https://www.web3designers.org/)
 
-## Design Systems {#design-systems}
+## Design Systems \{##design-systems}
 
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)

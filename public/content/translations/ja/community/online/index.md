@@ -4,11 +4,11 @@ description: イーサリアムエコシステムの助成プログラムリス�
 lang: ja
 ---
 
-# オンラインコミュニティ {#online-communities}
+# オンラインコミュニティ \{#online-communities}
 
 何十万人ものイーサリアム愛好家がこれらのオンラインフォーラムに集まり、ニュースを共有し、最近の開発や技術的な問題を議論し、未来を想像しています。
 
-## フォーラム {#forums}
+## フォーラム \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - イーサリアム全般</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 分散型金融(DeFi)などイーサリアムの金融面</SocialListItem>
@@ -19,7 +19,7 @@ lang: ja
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - イーサリアムデベロッパー向けの議論とサポート</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - 暗号経済研究の最も影響力のある掲示板</SocialListItem>
 
-## チャットルーム {#chat-rooms}
+## チャットルーム \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - イーサリアム開発プロジェクトの管理支援に関するコミュニティ</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - ETHGlobal が運営する Discord チャット: 世界中のイーサリアムハッカーのオンラインコミュニティ</SocialListItem>
@@ -32,7 +32,7 @@ lang: ja
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- 質疑応答フォーラム_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 分散型の質疑応答フォーラム_</SocialListItem>
 
-## YouTube と Twitter {#youtube-and-twitter}
+## YouTube と Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">イーサリアム・ファウンデーション</Link> - イーサリアム・ファウンデーションの最新情報</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem>

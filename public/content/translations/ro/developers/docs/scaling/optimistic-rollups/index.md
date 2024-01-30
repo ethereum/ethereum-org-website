@@ -4,11 +4,11 @@ description: Introduction to optimistic rollups
 lang: ro
 ---
 
-## Cerințe prealabile {#prerequisites}
+## Cerințe prealabile \{#prerequisites}
 
 Ar trebui să înţelegeţi bine toate subiectele fundamentale și să aveţi un nivel înalt de înţelegere a [scalării în Ethereum](/developers/docs/scaling/). Implementarea soluțiilor de scalare, cum ar fi rollup-urile, este un subiect avansat, deoarece tehnologia este mai puțin testată în luptă și se află în continuare în faza de cercetare şi dezvoltare.
 
-## Rollup-uri Optimistic {#optimistic-rollups}
+## Rollup-uri Optimistic \{#optimistic-rollups}
 
 Rollup-urile Optimistic stau în paralel cu lanțul Ethereum principal pe nivelul 2. Ele pot ameliora scalabilitatea, deoarece nu fac niciun calcul în mod implicit. În schimb, după o tranzacție, acestea propun noua stare către Mainnet sau „legalizează” tranzacția.
 
@@ -16,7 +16,7 @@ Cu rollup-urile Optimistic, tranzacțiile sunt scrise în lanțul Ethereum princ
 
 Deoarece calculul este partea lentă și costisitoare a utilizării lui Ethereum, rollup-urile Optimistic pot oferi ameliorarea de până la 10-100 de ori a scalabilității, în funcție de tranzacție. Acest număr va crește și mai mult odată cu introducerea [lanţurilor de fragmente](/roadmap/danksharding), deoarece vor fi disponibile mai multe date dacă o tranzacție este contestată.
 
-### Contestarea tranzacțiilor {#disputing-transactions}
+### Contestarea tranzacțiilor \{#disputing-transactions}
 
 Rollup-urile Optimistic nu calculează tranzacția, deci trebuie să existe un mecanism care să garanteze că tranzacțiile sunt legitime, și nu frauduloase. Aici intervin dovezile de fraudă. Dacă cineva observă o tranzacție frauduloasă, rollup-ul va executa o dovadă de fraudă și va rula calculul tranzacției, utilizând datele de stare disponibile. Aceasta înseamnă că s-ar putea să aveți durate de așteptare mai lungi pentru confirmarea tranzacției decât un rollup-ZK, deoarece tranzacția ar putea fi contestată.
 
@@ -28,20 +28,20 @@ _„toți cei care ar fi în măsură să efectueze o acţiune pe care dvs. ar t
 
 Prin urmare, puteți vedea stimulentele: participanții sunt penalizați pentru fraudă și sunt rambursați pentru dovedirea fraudei.
 
-### Avantaje și dezavantaje {#optimistic-pros-and-cons}
+### Avantaje și dezavantaje \{#optimistic-pros-and-cons}
 
 | Avantaje                                                                                                                     | Dezavantaje                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
 | Orice puteţi face pe nivelul 1 Ethereum puteţi face cu rollup-urile Optimistic, deoarece este compatibil cu EVM și Solidity. | Duratele lungi de așteptare pentru tranzacțiile on-chain, datorită potențialelor provocări legate de fraudă. |
 | Toate datele tranzacțiilor sunt stocate pe nivelul 1 al lanțului, ceea ce înseamnă că este securizat și descentralizat.      | Un operator poate influența ordonarea tranzacțiilor.                                                         |
 
-### O explicație vizuală a rollup-urilor optimistic {#optimistic-video}
+### O explicație vizuală a rollup-urilor optimistic \{#optimistic-video}
 
 Urmăriți cum explică Finematics rollup-urile optimistic:
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utilizarea rollup-urilor Optimistic {#use-optimistic-rollups}
+### Utilizarea rollup-urilor Optimistic \{#use-optimistic-rollups}
 
 Există mai multe implementări ale rollup-urilor Optimistic pe care le puteți integra în aplicațiile dvs. descentralizate:
 

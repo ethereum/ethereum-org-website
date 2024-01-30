@@ -8,11 +8,11 @@ lang: tr
 İş ispatı artık Ethereum'un mutabakat mekanizmasının bir parçası değil, yani madencilik kapatıldı. Bunun yerine Ethereum, ETH hisseleyen doğrulayıcılar tarafından güvence altına alınır. ETH'nizi hisselemeye bugün başlayabilirsiniz. <a href='/roadmap/merge/'>Birleşim</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>hisse ispatı </a> ve <a href='/staking/'>hisseleme</a> hakkında daha fazla bilgi edinin. Bu sayfa sadece tarihsel ilgi içindir.
 </InfoBanner>
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 Bu sayfayı daha iyi anlamak için, önce [işlemleri](/developers/docs/transactions/), [blokları](/developers/docs/blocks/) ve [iş ispatını](/developers/docs/consensus-mechanisms/pow/) okumanızı öneririz.
 
-## Ethereum madenciliği nedir? {#what-is-ethereum-mining}
+## Ethereum madenciliği nedir? \{#what-is-ethereum-mining}
 
 Madencilik, Ethereum'un artık kullanımdan kaldırdığı iş ispatı mimarisinde Ethereum blok zincirine eklenecek bir işlem blokunu oluşturma sürecidir.
 
@@ -22,7 +22,7 @@ Ether madenciliği = Ağ Güvenliği
 
 Madencilik herhangi bir iş ispatına dayalı blok zincir modelinin can damarıdır. Ethereum madencileri - yazılımı çalıştıran bilgisayarlar - hisse ispatına geçmeden önce işlemleri işlemek ve bloklar üretmek için zamanlarını ve hesaplama güçlerini kullandılar.
 
-## Madenciler neden var? {#why-do-miners-exist}
+## Madenciler neden var? \{#why-do-miners-exist}
 
 Ethereum gibi merkeziyetsiz sistemlerde, herkesin işlemlerin sırası konusunda anlaşmasını sağlamalıyız. Madenciler, ağı saldırılardan korumanın bir yolu olarak hizmet veren bloklar üretmek için hesaplama açısından zor bulmacaları çözerek bunun gerçekleşmesine yardımcı oldular.
 
@@ -30,7 +30,7 @@ Ethereum gibi merkeziyetsiz sistemlerde, herkesin işlemlerin sırası konusunda
 
 Daha önceleri herhangi bir kişi bilgisayarını kullanarak Ethereum ağında madencilik yapabiliyordu. Ancak herkes kârlı şekilde Ether (ETH) madenciliği yapamazdı. Birçok durumda madencilerin bu konuya özelleşmiş bilgisayar donanımları almaları ve ucuz enerji kaynaklarına erişimlerinin olması gerekiyordu. Ortalama bir bilgisayarın madencilikle ilgili maliyetleri karşılamaya yetecek kadar blok ödülü kazanması pek olası değildi.
 
-### Madenciliğin maliyeti {#cost-of-mining}
+### Madenciliğin maliyeti \{#cost-of-mining}
 
 - Bir madencilik teçhizatı inşa etmek ve yürütmek için gerekli donanımların potansiyel maliyeti
 - Madencilik teçhizatına güç vermenin elektriksel maliyeti
@@ -39,7 +39,7 @@ Daha önceleri herhangi bir kişi bilgisayarını kullanarak Ethereum ağında m
 
 Madencilik kârlılığını daha yakından incelemek için [Etherscan](https://etherscan.io/ether-mining-calculator) tarafından sağlanan gibi bir madencilik hesaplayıcısı kullanın.
 
-## Ethereum işlemleri için nasıl madencilik yapıldı? {#how-ethereum-transactions-were-mined}
+## Ethereum işlemleri için nasıl madencilik yapıldı? \{#how-ethereum-transactions-were-mined}
 
 Aşağıda Ethereum iş ispatında işlemler için nasıl madencilik yapıldığına dair bir genel bakış verilmektedir. Ethereum hisse ispatı için bu sürecin benzer bir açıklamasına [buradan](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos) ulaşılabilir.
 
@@ -56,25 +56,25 @@ Aşağıda Ethereum iş ispatında işlemler için nasıl madencilik yapıldığ
 
 Her işlem bir kez madencilik sürecinden geçer (yeni bir bloka dahil edilir ve ilk kez yayılır) ancak kurallı Ethereum Sanal Makinesi durumunu geliştirme sürecinde her katılımcı tarafından yürütülür ve doğrulanır. Bu, blok zincirin temel deyimlerinden birini vurgular: **Güvenme, doğrula**.
 
-## Ommer (amca) blokları {#ommer-blocks}
+## Ommer (amca) blokları \{#ommer-blocks}
 
 İş ispatında blok madenciliği olasılıksaldır, bu da bazen ağ gecikmesi nedeniyle aynı anda iki geçerli blokun ağda yayımlandığı anlamına gelir. Bu durumda protokol, önerilen dahil edilmemiş geçerli bloku kısmen ödüllendirerek madencilere karşı adaleti sağlarken en uzun (yani en "geçerli") zinciri belirlemek zorundaydı. Bu, daha fazla gecikmeyle karşı karşıya kalabilecek daha küçük madencilerin yine de [ommer](/glossary/#ommer) blok ödülleri aracılığıyla getiri sağlayabildikleri için ağın daha fazla merkezsizleştirilmesini teşvik etti.
 
 "Ommer" terimi, bir ebeveyn bloğunun kardeşi için tercih edilen cinsiyetten bağımsız bir terimdir, ancak buna bazen "amca" da denir. Her yuva için bir teklif verici seçildiği için **Ethereum'un hisse ispatına geçişinden beri ommer bloklarına madencilik yapılmamaktadır**. Bu değişimi kazılmış ommer bloklarının [tarihsel tablosunda](https://ycharts.com/indicators/ethereum_uncle_rate) görebilirsiniz.
 
-## Görsel bir demo {#a-visual-demo}
+## Görsel bir demo \{#a-visual-demo}
 
 Austin'in madenciliği ve iş ispatı blok zincirini, size açıklamasını izleyin.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## Madencilik algoritması {#mining-algorithm}
+## Madencilik algoritması \{#mining-algorithm}
 
 Ethereum Ana Ağı şimdiye kadar yalnızca bir madencilik algoritması kullandı - ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Ethhash, ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/) olarak bilinen orijinal bir ArGe algoritmasının varisiydi.
 
 [Madencilik algoritması ile ilgili daha fazlası](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
-## İlgili Konular {#related-topics}
+## İlgili Konular \{#related-topics}
 
 - [Gaz](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

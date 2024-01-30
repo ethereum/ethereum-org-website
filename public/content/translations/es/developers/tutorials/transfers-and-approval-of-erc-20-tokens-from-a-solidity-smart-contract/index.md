@@ -135,7 +135,7 @@ Entonces, ahora tenemos nuestro (intercambio descentralizado) y tiene toda la re
 - `buy` (comprar): el usuario puede enviar ether y obtener tókenes a cambio.
 - `sell` (vender): el usuario puede optar por enviar tókenes para recuperar el ether.
 
-## La función comprar {#the-buy-function}
+## La función comprar \{#the-buy-function}
 
 Codifiquemos la función comprar. Primero se tiene que comprobar la cantidad de ether que contiene el mensaje y verificar que los contratos poseen suficientes tókenes y que el mensaje contiene algún ether. Si el contrato posee suficientes tókenes, enviará el número de tókenes al usuario y emitirá el evento `Bought` (comprado).
 
@@ -158,7 +158,7 @@ En el caso de que la compra sea exitosa, se deberían ver dos eventos en la tran
 
 ![Dos eventos en la transacción: transferencia y comprado](./transfer-and-bought-events.png)
 
-## La función vender {#the-sell-function}
+## La función vender \{#the-sell-function}
 
 La función responsable de la venta requerirá, primero, que el usuario haya aprobado la cantidad llamando a la función de aprobación de antemano. La aprobación de la transferencia requiere que el usuario ejecute el token básico ERC20 instanciado por el DEX. Esto se puede lograr ejecutando primero la función `token()` del contrato DEX para recuperar la dirección donde DEX desplegó el contrato ERC20Basic llamado `token`. Luego creamos una instancia de este contrato en nuestra sesión y ejecutamos su función de `approve`. Una vez realizado esto, podemos lanzar la función `sell` de DEX e intercambiar nuestros tókenes por ether. Por ejemplo, este es el aspecto que tiene una sesión de brownie interactiva:
 

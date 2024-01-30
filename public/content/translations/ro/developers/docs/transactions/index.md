@@ -6,11 +6,11 @@ lang: ro
 
 Tranzacțiile sunt instrucțiuni semnate criptografic din conturi. Un cont inițiază o tranzacție pentru a actualiza starea rețelei Ethereum. Cea mai simplă tranzacție este transferarea de ETH dintr-un cont în altul.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Pentru a vă ajuta să înțelegeți mai bine această pagină, vă recomandăm să citiți mai întâi [Conturi](/developers/docs/accounts/) și [introducere despre Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Ce este o tranzacție? {#whats-a-transaction}
+## Ce este o tranzacție? \{#whats-a-transaction}
 
 O tranzacție Ethereum se referă la o acțiune inițiată de un cont deținut din exterior, cu alte cuvinte un cont gestionat de o persoană, nu de un contract. De exemplu, dacă Bob trimite lui Alice 1 ETH, contul lui Bob trebuie debitat, iar cel al lui Alice trebuie creditat. Această acțiune care schimbă starea are loc în cadrul unei tranzacții.
 
@@ -102,7 +102,7 @@ Exemplu de răspuns:
 
 Cu hash-ul semnăturii, se poate dovedi criptografic că tranzacția a venit de la expeditor și a fost trimisă rețelei.
 
-### The data field {#the-data-field}
+### The data field \{#the-data-field}
 
 The vast majority of transactions access a contract from an externally-owned account. Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
 
@@ -123,7 +123,7 @@ The rest of the data is:
 
 According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front. So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). The `value` is 0x3b0559f4 = 990206452.
 
-## Tipuri de tranzacții {#types-of-transactions}
+## Tipuri de tranzacții \{#types-of-transactions}
 
 Pe Ethereum există câteva tipuri diferite de tranzacții:
 
@@ -131,7 +131,7 @@ Pe Ethereum există câteva tipuri diferite de tranzacții:
 - Tranzacții de implementare a contractelor: o tranzacție fără o adresă „la”, în cazul în care câmpul de date este utilizat pentru codul contractului.
 - Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
 
-### On gas {#on-gas}
+### On gas \{#on-gas}
 
 După cum s-a menționat, tranzacțiile costă [gaz](/developers/docs/gas/) pentru a fi executate. Tranzacțiile de transfer simple necesită 21.000 de unități de Gaz.
 
@@ -157,7 +157,7 @@ Gazul este necesar și pentru orice interacțiune cu contractul inteligent.
 
 Orice gaz neutilizat într-o tranzacție este rambursat în contul utilizatorului.
 
-## Ciclul de viață al tranzacției {#transaction-lifecycle}
+## Ciclul de viață al tranzacției \{#transaction-lifecycle}
 
 Odată ce tranzacția a fost trimisă, se întâmplă următoarele:
 
@@ -169,13 +169,13 @@ Odată ce tranzacția a fost trimisă, se întâmplă următoarele:
    - Blocurile recente pot fi reorganizate, lăsând impresia că tranzacția nu a avut succes; cu toate acestea, tranzacția poate fi încă validă, dar inclusă într-un alt bloc.
    - Probabilitatea unei reorganizări scade cu fiecare bloc minat ulterior, în sensul că, pe măsură ce numărul de confirmări este mai mare, tranzacția este cu atât mai imuabilă.
 
-## O demonstrație vizuală {#a-visual-demo}
+## O demonstrație vizuală \{#a-visual-demo}
 
 Urmăriți-l pe Austin cum vă prezintă tranzacțiile, gazele și mineritul.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Tranzacția plic tipizată {#typed-transaction-envelope}
+## Tranzacția plic tipizată \{#typed-transaction-envelope}
 
 Ethereum avea inițial un singur format pentru tranzacții. Fiecare tranzacție conținea un nonce, gas price, gas limit, to address, value, data, v, r, și s. Aceste câmpuri sunt codificate RLP, ca să arate cam așa:
 
@@ -194,13 +194,13 @@ Unde câmpurile sunt definite astfel:
 - `TransactionType` - un număr între 0 și 0x7f, pentru un total de 128 de tipuri de tranzacții posibile.
 - `TransactionPayload` - o matrice arbitrară de octeți definită de tipul de tranzacție.
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 - [EIP-2718: Tranzacție plic tipizată](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Conturi](/developers/docs/accounts/)
 - [Mașină virtuală Ethereum (EVM)](/developers/docs/evm/)

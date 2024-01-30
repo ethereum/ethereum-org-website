@@ -9,7 +9,7 @@ incomplete: true
 
 Użyj Ethereum do tworzenia aplikacji zdecentralizowanych (lub „dapp”), które wykorzystują zalety kryptowaluty i technologii blockchain. Te aplikacje zdecentralizowane mogą być godne zaufania, co oznacza, że ​​po wdrożeniu w Ethereum zawsze będą działać tak, jak zaprogramowano. Mogą kontrolować zasoby cyfrowe w celu tworzenia nowych rodzajów aplikacji finansowych. Mogą być zdecentralizowane, co oznacza, że ​​nie kontroluje ich żadna pojedyncza jednostka ani osoba i są prawie niemożliwe do cenzurowania.
 
-## Rozpoczęcie pracy z kontraktami inteligentnymi i językiem Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Rozpoczęcie pracy z kontraktami inteligentnymi i językiem Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Rozpocznij integrowanie Javy z Ethereum**
 
@@ -33,17 +33,17 @@ Dowiedz się, jak korzystać z [Web3J](https://github.com/web3j/web3j) i Hyperle
 - [Uruchamianie węzła Hyperledger Besu (Pantheon) w testach integracji Java](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Ściągawka dotycząca Web3j](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
-## Artykuły dla średniozaawansowanych {#intermediate-articles}
+## Artykuły dla średniozaawansowanych \{#intermediate-articles}
 
 - [Zarządzanie pamięcią w aplikacji Java z IPFS](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
 - [Zarządzaj tokenami ERC20 w Java za pomocą Web3j](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
 - [Menedżerowie transakcji Web3j](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
-## Przykłady zaawansowane {#advanced-use-patterns}
+## Przykłady zaawansowane \{#advanced-use-patterns}
 
 - [Wykorzystanie Eventeum do zbudowania pamięci podręcznej inteligentnych kontraktów za pomocą Java](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
-## Projekty i narzędzia Java {#java-projects-and-tools}
+## Projekty i narzędzia Java \{#java-projects-and-tools}
 
 - [Hyperledger Besu (Pantheon) (klient Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Biblioteka do interakcji z klientami Ethereum)](https://github.com/web3j/web3j)
@@ -52,7 +52,7 @@ Dowiedz się, jak korzystać z [Web3J](https://github.com/web3j/web3j) i Hyperle
 
 Szukasz więcej materiałów? Sprawdź na stronie [ethereum.org/developers.](/developers/)
 
-## Współtwórcy społeczności Java {#java-community-contributors}
+## Współtwórcy społeczności Java \{#java-community-contributors}
 
 - [Budowniczowie IO](https://io.builders)
 - [Kauri](https://kauri.io)

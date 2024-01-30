@@ -5,7 +5,7 @@ hideEditButton: true
 lang: tr
 ---
 
-# Ethereum Vakfı Hakkında {#about-the-ethereum-foundation}
+# Ethereum Vakfı Hakkında \{#about-the-ethereum-foundation}
 
 <Logo/>
 
@@ -13,15 +13,15 @@ lang: tr
 
 Ethereum Vakfı, bir şirket veya kâr amacı gütmeyen geleneksel bir kuruluş değildir. Rolü, Ethereum'u kontrol etmek veya Ethereum'a liderlik etmek olmadığı gibi, Ethereum ile ilgili teknolojilerin kritik gelişimini finanse eden tek organizasyon da değildir. Ethereum Vakfı, çok daha büyük bir [ekosistemin](/community/) parçasıdır.
 
-## Ethereum Vakfı Girişimleri {#ethereum-foundation-initiatives}
+## Ethereum Vakfı Girişimleri \{#ethereum-foundation-initiatives}
 
-### Ekosistem Destek Programı {#ecosystem-support-program}
+### Ekosistem Destek Programı \{#ecosystem-support-program}
 
 [Ekosistem Destek Programı](https://esp.ethereum.foundation/), ekosisteminin büyümesini hızlandırmak için Ethereum topluluğu genelinde proje ve kuruluşlara hem finansal hemde finansal olmayan destekler sağlamak için vardır. Ekosistem Destek Programı, esas olarak finansal desteğe odaklanan orijinal Ethereum Hibe Programının genişletilmiş hâlidir.
 
 [esp.ethereum.foundation](https://esp.ethereum.foundation/) adresinden Ekosistem Destek Programı, geçmişte hibe alanlar ve hibe başvuru süreci hakkında daha fazla bilgi alabilirsiniz. Ayrıca [Ekosistem Destek Programı Blog](https://blog.ethereum.org/category/ecosystem-support-program/)'unu görüntüleyebilir, en son haberler ve duyurular için [@EF_ESP](https://twitter.com/EF_ESP)'yi takip edebilirsiniz.
 
-### Devcon {#devcon}
+### Devcon \{#devcon}
 
 2014'ten beri Ethereum Vakfı, tüm Ethereum geliştiricileri, araştırmacıları, düşünürleri ve yapımcıları için yıllık konferans olan Devcon'u düzenledi.
 
@@ -29,7 +29,7 @@ Başlangıcından bu yana her yılın konferans sunumlarının video içeriğine
 
 [Devcon.org](https://devcon.org/)'dan daha fazla bilgi edinin, [Devcon Blog](https://devcon.org/en/blogs/)'a göz atın veya en son duyurular için [@efdevcon](https://twitter.com/EFDevcon)'u takip edin.
 
-### Burs Programı {#fellowship-program}
+### Burs Programı \{#fellowship-program}
 
 [Ethereum Vakfı Burs Programı](https://fellowship.ethereum.foundation/); kültürler, uyruklar ve ekonomik sınıflar arasındaki uçurumun giderilmesi için olan bir girişimdir. Fellowship Programı, Ethereum'un alaka düzeyini sağlamaya yardımcı olan benzersiz ve yetenekli bireyleri belirleyerek ve destekleyerek ve Web3'ün geleceği olacak, yeterince temsil edilmeyen insanlar ve topluluklar için giriş engellerini ortadan kaldırarak bu boşlukları kapatmakla ilgilidir.
 

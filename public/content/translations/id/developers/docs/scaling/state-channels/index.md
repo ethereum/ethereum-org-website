@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Kanal state memungkinkan peserta untuk bertransaksi `x` beberapa kali secara off-chain sementara hanya mengirimkan dua transaksi on-chain ke jaringan Ethereum. Ini memungkinkan throughput yang sangat tinggi.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Anda harus memiliki pemahaman yang baik tentang semua topik dasar dan pemahaman tingkat tinggi tentang [penskalaan Ethereum](/developers/docs/scaling/). Menerapkan solusi penskalaan seperti kanal adalah topik lanjutan karena teknologinya kurang teruji, dan masih terus diteliti dan dikembangkan.
 
-## Kanal {#channels}
+## Kanal \{#channels}
 
 Peserta harus mengunci sebagian dari state Ethereum, seperti deposito ETH, ke dalam kontrak multisig. Kontrak multisig adalah jenis kontrak yang memerlukan tanda tangan (dan dengan demikian persetujuan) dari beberapa kunci privat agar bisa dieksekusi.
 
@@ -26,7 +26,7 @@ Mengunci state dengan cara ini adalah transaksi pertama dan membuka kanal. Para 
 
 Ada dua jenis kanal saat ini: kanal state dan kanal pembayaran.
 
-## Kanal state {#state-channels}
+## Kanal state \{#state-channels}
 
 Kanal state mungkin paling baik dijelaskan melalui sebuah contoh, seperti permainan tic tac toe:
 
@@ -36,11 +36,11 @@ Kanal state mungkin paling baik dijelaskan melalui sebuah contoh, seperti permai
 
 3. Ketika ada pemenang, mereka menutup kanal dengan mengirimkan state akhir (misalnya daftar transaksi) ke kontrak Hakim, hanya membayar satu biaya transaksi. Hakim memastikan bahwa “state akhir” ini ditandatangani oleh kedua belah pihak, dan menunggu selama satu periode waktu untuk memastikan bahwa tidak ada yang dapat secara sah menentang hasilnya, dan kemudian membayarkan hadiah 1ETH kepada Alice.
 
-## Kanal pembayaran {#payment-channels}
+## Kanal pembayaran \{#payment-channels}
 
 Kanal state yang disederhanakan yang hanya menangani pembayaran (misalnya transfer ETH). Mereka mengizinkan transfer off-chain antara dua peserta, selama jumlah bersih transfer mereka tidak melebihi token yang didepositokan.
 
-## Pro dan kontra {#channels-pros-and-cons}
+## Pro dan kontra \{#channels-pros-and-cons}
 
 | Pro                                                                                             | Kontra                                                                                                                                                       |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -49,7 +49,7 @@ Kanal state yang disederhanakan yang hanya menangani pembayaran (misalnya transf
 | Biaya per transaksi terendah - bagus untuk streaming pembayaran mikro                           | Harus mengunci dana di kanal pembayaran terbuka                                                                                                              |
 |                                                                                                 | Tidak mendukung partisipasi terbuka                                                                                                                          |
 
-## Gunakan kanal state {#use-state-channels}
+## Gunakan kanal state \{#use-state-channels}
 
 Beberapa proyek menyediakan implementasi kanal state yang dapat Anda integrasikan ke dalam dapp Anda:
 
@@ -59,7 +59,7 @@ Beberapa proyek menyediakan implementasi kanal state yang dapat Anda integrasika
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 **Kanal state**
 

@@ -10,13 +10,13 @@ published: 2021-01-13
 
 This tutorial will help you set up monitoring for your Geth node so you can better understand its performance and identify potential problems.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 - You should already be running an instance of Geth.
 - Most of the steps and examples are for linux environment, basic terminal knowledge will be helpful.
 - Check out this video overview of Geth's suite of metrics: [Monitoring an Ethereum infrastructure by Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
-## Monitoring stack {#monitoring-stack}
+## Monitoring stack \{##monitoring-stack}
 
 An Ethereum client collects lots of data which can be read in the form of a chronological database. To make monitoring easier, you can feed this into data visualisation software. There are multiple options available:
 
@@ -31,7 +31,7 @@ There's also [Geth Prometheus Exporter](https://github.com/hunterlong/gethexport
 
 In this tutorial, we'll set up your Geth client to push data to InfluxDB to create a database and Grafana to create a graph visualisation of the data. Doing it manually will help you understand the process better, alter it, and deploy in different environments.
 
-## Setting up InfluxDB {#setting-up-influxdb}
+## Setting up InfluxDB \{##setting-up-influxdb}
 
 First, let's download and install InfluxDB. Various download options can be found at [Influxdata release page](https://portal.influxdata.com/downloads/). Pick the one that suits your environment.
 You can also install it from a [repository](https://repos.influxdata.com/). For example in Debian based distribution:
@@ -82,7 +82,7 @@ exit
 
 InfluxDB is running and configured to store metrics from Geth.
 
-## Preparing Geth {#preparing-geth}
+## Preparing Geth \{##preparing-geth}
 
 After setting up database, we need to enable metrics collection in Geth. Pay attention to `METRICS AND STATS OPTIONS` in `geth --help`. Multiple options can be found there, in this case we want Geth to push data into InfluxDB.
 Basic setup specifies endpoint where InfluxDB is reachable and authentication for the database.
@@ -100,7 +100,7 @@ use geth
 show measurements
 ```
 
-## Setting up Grafana {#setting-up-grafana}
+## Setting up Grafana \{##setting-up-grafana}
 
 Next step is installing Grafana which will interpret data graphically. Follow installation process for your environment in Grafana documentation. Make sure to install OSS version if you don't want otherwise.
 Example installation steps for Debian distributions using repository:

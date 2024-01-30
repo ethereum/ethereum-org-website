@@ -4,11 +4,11 @@ description: Orodha ya mipango ya ruzuku katika mazingira yote ya Ethereum.
 lang: sw
 ---
 
-# Jamii za mtandaoni {#online-communities}
+# Jamii za mtandaoni \{#online-communities}
 
 Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtandaoni kushiriki taarifa, kuongelea mabaoresho ya hivi karibuni, kujadili masuala ya kiufundi, na kufikiria masuala ya baadaye.
 
-## Mikutano {#forums}
+## Mikutano \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - mambo yote kuhusu </SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - upande wa fedha kuhusu Ethereum, ikiwemo DeFi</SocialListItem>
@@ -19,7 +19,7 @@ Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtand
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - majadiliano na usaidizi wa wasanidi programu wa </SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Utafiti wa Ethereum</Link> - bodi ya ujumbe yenye ushawishi mkubwa kuhusu utafiti wa uchumi wa kripto</SocialListItem>
 
-## Vyumba vya gumzo {#chat-rooms}
+## Vyumba vya gumzo \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - jamii iliyozama kutoa usaidizi wa usimamizi wa miradi kwa maboresho ya </SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Wadukuzi wa Ethereum</Link> - gumzo la Discord linaloendeshwa na ETHGlobal: jamii ya mtandaoni ya wadukuzi wa Ethereum kote duniani</SocialListItem>
@@ -29,7 +29,7 @@ Mamia ya maelfu ya wapenzi wa Ethereum hukusanyika kwenye majukwaa haya ya mtand
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - gumzo la maboresho ya solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereumsolidity:gitter.im">Solidity Matrix</Link> - gumzo la maboresho ya solidity (Matrix)</SocialListItem>
 
-## YouTube na Twitter {#youtube-and-twitter}
+## YouTube na Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Msingi wa Ethereum</Link> - Fahamu yanayojiri kutoka Msingi wa </SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Akaunti rasmi ya Msingi wa </SocialListItem>

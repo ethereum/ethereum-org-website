@@ -4,11 +4,11 @@ description: Részletes bemutatása annak, hogy a Beolvadás hogyan hatott az ET
 lang: hu
 ---
 
-# Hogyan hatott az ETH kínálatra a Beolvadás {#how-the-merge-impacts-ETH-supply}
+# Hogyan hatott az ETH kínálatra a Beolvadás \{#how-the-merge-impacts-ETH-supply}
 
 A Beolvadás jelenti az Ethereum hálózatok azon változását, amikor 2022. szeptemberében áttértek a proof-of-work mechanizmusról a proof-of-stake mechanizmusra. Akkor az is megváltozott, ahogy az ETH-t kibocsátják. Korábban az új ETH két forrásból származott: a végrehajtási rétegből. (főhálózat) és a konszenzusrétegből (Beacon lánc). A Beolvadás óta a végrehajtási réteg kibocsátása nulla. Nézzük meg ennek részleteit.
 
-## Az ETH-kibocsátás komponensei {#components-of-eth-issuance}
+## Az ETH-kibocsátás komponensei \{#components-of-eth-issuance}
 
 A ETH-kínálatot két elsődleges erő irányítja: a kibocsátás és az elégetés.
 
@@ -26,19 +26,19 @@ title="Az ETH-kibocsátásról röviden">
 
 </Card>
 
-## A Beolvadás előtt (régi szisztéma) {#pre-merge}
+## A Beolvadás előtt (régi szisztéma) \{#pre-merge}
 
-### A végrehajtási réteg kibocsátása {#el-issuance-pre-merge}
+### A végrehajtási réteg kibocsátása \{#el-issuance-pre-merge}
 
 A proof-of-work mechanizmusban a bányászok csak a végrehajtási réteggel kapcsolódtak, és blokkjutalmat kaptak, ha elsőként oldották meg a következő blokkot. A [Constantinople-frissítés](/history/#constantinople) után, 2019-től ez a jutalom 2 ETH volt blokkonként. A bányászok jutalmat szereztek akkor is, ha nem egy valid blokkot hoztak létre, amely nem került be a leghosszabb/hiteles láncba, hanem annak csak [ommer](/glossary/#ommer) vagy testvérblokkja volt. Ezek a jutalmak maximum 1,75 ETH-t értek ommerenként, és az érvényes blokk nyereségén _felül_ kerültek kibocsátásra. A bányászat egy gazdaságilag intenzív tevékenység volt, amelynek fenntartásához magas szintű ETH kibocsátásra volt szükség.
 
-### A konszenzusréteg kibocsátása {#cl-issuance-pre-merge}
+### A konszenzusréteg kibocsátása \{#cl-issuance-pre-merge}
 
 A [Beacon lánc](/history/#beacon-chain-genesis) 2020-től működik élesben. A bányászok helyett validátorok biztosították a rendszert a proof-of-stake mechanizmussal. Ezt a láncot úgy állították fel, hogy az Ethereum-felhasználók ETH-t helyeztek letétbe egy okosszerződésbe a főhálózaton (a végrehajtási rétegen), amelyet a Beacon lánc felismert és az új láncon ugyanannyit ETH-t adott a felhasználónak. A Beolvadás bevezetéséig a Beacon lánc validátorai nem kezelték a tranzakciókat és lényegében a validátor gyűjtőjének státuszáról hozták meg a konszenzust.
 
 A Beacon láncon a validátorok ETH jutalmat kaptak azért, hogy tanúsítják a lánc státuszát és blokkokat javasolnak. A validátor teljesítménye alapján jutalmak és büntetések kerülnek kiszabásra minden korszakban (epoch, minden 6,4 percben). A validátorok jutalma **jelentősen** kevesebb, mint a bányászoké volt a proof-of-work mechanizmusban (2 ETH kb. 13,5 másodpercenként), mivel a validáló csomópont üzemeltetése nem annyira intenzív feladat, és így nem jár olyan magas jutalom érte.
 
-### A Beolvadás előtti kibocsátás részletei {#pre-merge-issuance-breakdown}
+### A Beolvadás előtti kibocsátás részletei \{#pre-merge-issuance-breakdown}
 
 Teljes ETH-kínálat: **~120 520 000 ETH** (a Beolvadás idején, 2022. szeptemberben)
 
@@ -60,13 +60,13 @@ a kibocsátás <strong>kb. 88,7%-a</strong> ment a bányászoknak a végrehajtá
 <strong>kb. 11,3%-a</strong> a letétesekhez került a konszenzusrétegen (0,52 / 4,61 * 100)
 </InfoBanner>
 
-## A Beolvadás után (jelenlegi szisztéma) {#post-merge}
+## A Beolvadás után (jelenlegi szisztéma) \{#post-merge}
 
-### A végrehajtási réteg kibocsátása {#el-issuance-post-merge}
+### A végrehajtási réteg kibocsátása \{#el-issuance-post-merge}
 
 A Beolvadás óta a végrehajtási réteg kibocsátása nulla. A blokkokat többé nem a proof-of-work mechanizmus alapján hozzák létre a konszenzus megújított szabályai szerint. A végrehajtási réteg tevékenységeit „beacon blokkokba” csomagolják, amelyeket a proof-of-stake validátorok publikálnak és tanúsítanak. A beacon blokk tanúsításért és publikálásért járó jutalmakat a konszenzusrétegen külön kezelik.
 
-### A konszenzusréteg kibocsátása {#cl-issuance-post-merge}
+### A konszenzusréteg kibocsátása \{#cl-issuance-post-merge}
 
 A konszenzusréteg kibocsátása ma is ugyanúgy folytatódik, mint a Beolvadás előtt, kis összegű jutalmakat ad a validátoroknak a blokkok tanúsításáért és javaslattevésért. A validátori jutalmak továbbra is _validátoregyenlegként_ gyűlnek, amelyet a konszenzusrétegen kezelnek. Ezek nem általános, a főhálózaton használható („végrehajtási”) számlák, hanem elkülönített Ethereum számlák, amelyek nem léphetnek tranzakcióba más számlákkal. Az itt tárolt pénzeszközöket csak ki lehet vonni egy meghatározott végrehajtási címre.
 
@@ -78,7 +78,7 @@ Egy adott napon kb. a teljes validátoroknak a 0,33%-a távozhat. Alapból 4 val
 
 Ahogy több validátor vonul ki, a meglévő validátorok száma fokozatosan lecsökken a minimum négy validátorra, így megvédi a rendszert attól, hogy az ETH-letétek egyidejű kivonása miatt labilissá váljon.
 
-### A Beolvadás utáni infláció részletezése {#post-merge-inflation-breakdown}
+### A Beolvadás utáni infláció részletezése \{#post-merge-inflation-breakdown}
 
 - Teljes ETH-kínálat: **~120 520 000 ETH** (a Beolvadás idején, 2022. szeptemberben)
 - A végrehajtási réteg kibocsátása: **0**
@@ -89,7 +89,7 @@ Teljes éves kibocsátási ráta: <strong>kb. 0,52%</strong><br/><br/>
 Az éves ETH kibocsátás nettó csökkenése: <strong>kb. 88,7%</strong> ((4,61% – 0,52%) / 4,61% * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" /> Az elégetés {#the-burn}
+## <Emoji text=":fire:" size="1" /> Az elégetés \{#the-burn}
 
 Az ETH kibocsátással ellenkező erő az a ráta, ahogy az ETH-t elégetik. Az Ethereumon végrehajtandó tranzakcióért fizetni kell egy minimális díjat (alapdíj), amely állandóan változik, blokkról blokkra, a hálózati működés függvényében. Ezt a díjat ETH-ben fizetik, és _elengedhetetlen_ ahhoz, hogy egy tranzakció érvényes legyen. Ezt a díjat _elégetik_ a tranzakció végrehajtása során, így kikerül a körforgásból.
 
@@ -99,7 +99,7 @@ A díj elégetése a <a href="/history/#london">London-frissítés</a> óta (202
 
 A bevezetett díj elégetése mellett a validátorok büntetéseket is kaphatnak azért, ha nincsenek online, vagy ami még rosszabb, ha olyan szabályokat hágnak át, amely a hálózat biztonságát veszélyeztetik, akkor az súlyos büntetéssel és kizárással jár. Ezek a büntetések lecsökkentik az ETH-t a validátor számláján, ami utána nem kerül máshova, tehát lényegében kivonják a forgalomból vagy elégetik.
 
-### A deflációhoz szükséges átlagos gázdíj kiszámítása {#calculating-average-gas-price-for-deflation}
+### A deflációhoz szükséges átlagos gázdíj kiszámítása \{#calculating-average-gas-price-for-deflation}
 
 Az ETH kibocsátása egy adott napon a teljese letétbe helyezett ETH-től függ. A jelen leírás idején ez kb. 1700 ETH/nap.
 
@@ -127,7 +127,7 @@ Leegyszerűsíthetjük úgy, hogy az `X` függvényét írjuk fel:
 
 Tehát ha az `X` (napi ETH kibocsátás) megnövekszik 1800-ra a teljes letétbe helyezett ETH alapján, `f(X)` (gwei, amivel kiegyensúlyozható a kibocsátás) ekkor `17 gwei` lesz (2 számjegyre kerekítve)
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [A beolvadás](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) – _Dashboardok az ETH-kibocsátás és -elégetés valós idejű vizualizációjára_

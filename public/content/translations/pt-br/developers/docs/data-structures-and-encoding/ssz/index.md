@@ -7,9 +7,9 @@ sidebarDepth: 2
 
 A **serialização simples (SSZ ou simple serialize)** é o método de serialização usado na Beacon Chain. Ela substitui a serialização RLP usada na camada de execução em toda a camada de consenso, exceto no protocolo de descoberta de pares. SSZ foi projetado para ser determinístico e também para Merkleize (transformações em árvores de Merkle) de forma eficiente. SSZ pode ser pensado como tendo dois componentes: um esquema de serialização e um esquema de Merkleization que é projetado para trabalhar eficientemente com a estrutura de dados serializada.
 
-## Como funciona o SSZ? {#how-does-ssz-work}
+## Como funciona o SSZ? \{#how-does-ssz-work}
 
-### Serialização {#serialization}
+### Serialização \{#serialization}
 
 SSZ é um esquema de serialização que não é autodescritivo. Em vez disso, ele se baseia em um esquema que deve ser conhecido antecipadamente. O objetivo da serialização SSZ é representar objetos de complexidade arbitrária como strings de bytes. Este é um processo muito simples para "tipos básicos". O elemento é simplesmente convertido em bytes hexadecimais. Os tipos básicos incluem:
 
@@ -83,13 +83,13 @@ Assim, os valores reais para tipos de comprimento variável são armazenados em 
 
 Existem também alguns casos especiais que requerem tratamento específico, como o tipo `BitList` que requer que seja adicionado um limite de comprimento durante a serialização e removido durante a desserialização. Os detalhes completos estão disponíveis na [especificação SSZ](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
 
-### Desserialização {#deserialization}
+### Desserialização \{#deserialization}
 
 Para desserializar este objeto é necessário o <b>esquema</b> (diagrama, desenho). O esquema define o layout preciso dos dados serializados, para que cada elemento específico possa ser desserializado, de um blob de bytes em algum objeto significativo, com os elementos tendo o tipo, valor, tamanho e posição corretos. É o esquema que diz ao desserializador quais valores são valores reais e quais são deslocamentos. Todos os nomes de campo desaparecem quando um objeto é serializado, mas reinstanciados na desserialização de acordo com o esquema.
 
 Veja [ssz.dev](https://www.ssz.dev/overview) para uma explicação interativa sobre isso.
 
-## "Merkleização" {#merkleization}
+## "Merkleização" \{#merkleization}
 
 Esse objeto serializado SSZ pode então ser merkleizado, o seja, transformado em uma representação de árvore Merkle dos mesmos dados. Primeiro, o número de partes de 32 bytes no objeto serializado é determinado. Estas são as "folhas" da árvore. O número total de folhas deve ser uma potência de 2 para que a combinação das folhas eventualmente produza uma única raiz de árvore hash. Se este não for o caso natural, são adicionadas folhas extras que contêm 32 bytes de zeros. Diagramaticamente:
 
@@ -111,7 +111,7 @@ Há também casos em que as folhas da árvore não se distribuem naturalmente, d
 
 Em vez de nos referirmos a esses elementos da árvore como folha X, nó X etc., podemos dar a eles índices generalizados, começando com raiz = 1 e contando da esquerda para a direita ao longo de cada nível. Este é o índice generalizado explicado acima. Cada elemento na lista serializada tem um índice generalizado igual a `2**depth + idx` onde idx é sua posição indexada em zero no objeto serializado e a profundidade é o número de níveis na árvore Merkle, que pode ser determinado como a raiz quadrada do número de elementos (folhas).
 
-## Índices generalizados {#generalized-indices}
+## Índices generalizados \{#generalized-indices}
 
 Um índice generalizado é um número inteiro que representa um nó em uma árvore Merkle binária em que cada nó tem um índice generalizado `2 ** profundidade + índice da linha`.
 
@@ -124,7 +124,7 @@ Um índice generalizado é um número inteiro que representa um nó em uma árvo
 
 Essa representação produz um índice de nó para cada parte dos dados na árvore Merkle.
 
-## Multiprovas {#multiproofs}
+## Multiprovas \{#multiproofs}
 
 Fornecer a lista de índices generalizados, que representam um elemento específico, nos permite verificá-lo em relação à raiz da árvore hash. Esta raiz é nossa versão aceita da realidade. Qualquer dado que nos for fornecido pode ser verificado em relação a essa realidade, inserindo-o no lugar certo na árvore Merkle (determinado pelo seu índice generalizado) e observando que a raiz permanece constante. Há funções na especificação [aqui](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) que mostram como calcular o conjunto mínimo de nós necessários, para verificar o conteúdo de um conjunto particular de índices generalizados.
 
@@ -140,7 +140,7 @@ Por exemplo, para verificar o dado no índice 9 na árvore abaixo, precisamos do
 
 ```
 
-## Leia mais {#further-reading}
+## Leia mais \{#further-reading}
 
 - [Atualização do Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Atualização do Ethereum: "Merkleização"](https://eth2book.info/altair/part2/building_blocks/merkleization)

@@ -17,13 +17,13 @@ Parabéns! Você chegou à parte mais curta e simples da nossa série de tutoria
 
 Como pré-requisito, você já deve ter MetaMask instalado no celular e deve incluir a conta para a qual você cunhou seu NFT. Você pode obter o aplicativo gratuitamente no [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) ou [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Passo 1: Definir a sua rede como Goerli {#set-network-to-goerli}
+## Passo 1: Definir a sua rede como Goerli \{#set-network-to-goerli}
 
 No topo do aplicativo, pressione o botão "Wallet". Em seguida, você será solicitado a selecionar uma rede. Como o nosso NFT foi cunhado na rede Goerli, selecione Goerli como a sua rede.
 
 ![Como definir a Goerli como sua rede na MetaMask Mobile](./goerliMetamask.gif)
 
-## Passo 2: Adicionar o seu colecionável ao MetaMask {#add-nft-to-metamask}
+## Passo 2: Adicionar o seu colecionável ao MetaMask \{#add-nft-to-metamask}
 
 Assim que você estiver na rede Goerli, selecione a guia "Colecionáveis" na direita e adicione o endereço do contrato inteligente do NFT e o ID do token ERC-721 correspondente, que você deve encontrar no Etherscan com base no hash de transação do seu NFT, como visto na Parte II do nosso tutorial.
 

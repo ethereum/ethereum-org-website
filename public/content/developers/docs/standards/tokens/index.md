@@ -5,16 +5,16 @@ lang: en
 incomplete: true
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 Many Ethereum development standards focus on token interfaces. These standards help ensure smart contracts remain composable, so for instance when a new project issues a token, that it remains compatible with existing decentralized exchanges.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{##prerequisites}
 
 - [Ethereum development standards](/developers/docs/standards/)
 - [Smart contracts](/developers/docs/smart-contracts/)
 
-## Token standards {#token-standards}
+## Token standards \{##token-standards}
 
 Here are some of the most popular token standards on Ethereum:
 
@@ -26,11 +26,11 @@ Here are some of the most popular token standards on Ethereum:
 
 The full list of [ERC](https://eips.ethereum.org/erc) proposals.
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related tutorials {#related-tutorials}
+## Related tutorials \{##related-tutorials}
 
 - [Token integration checklist](/developers/tutorials/token-integration-checklist/) _– A checklist of things to consider when interacting with tokens._
 - [Understand the ERC20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– An introduction to deploying your first smart contract on an Ethereum test network._

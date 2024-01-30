@@ -4,7 +4,7 @@ description:
 lang: sl
 ---
 
-## Uvod {#introduction}
+## Uvod \{#introduction}
 
 Standardni vmesnik za pogodbe, ki upravljajo več tipov žetonov. Samostojna uveljavljena pogodba lahko vključuje katerokoli kombinacijo zamenljivih žetonov, nezamenljivih žetonov ali drugih konfiguracij (recimo delno zamenljivih žetonov).
 
@@ -14,11 +14,11 @@ Ideja je preprosta in želi ustvariti vmesnik za pametne pogodbe, ki lahko preds
 
 Žeton ERC-1155 je v celoti opisan v [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
-## Predpogoji {#prerequisites}
+## Predpogoji \{#prerequisites}
 
 Za boljše razumevanje vam priporočamo, da si najprej preberete o [standardih za žetone](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/) in [ERC-721](/developers/docs/standards/tokens/erc-721/).
 
-## Funkcije in značilnosti ERC-1155: {#body}
+## Funkcije in značilnosti ERC-1155: \{#body}
 
 - [Skupinski prenos](#batch_transfers): prenos več sredstev v enem klicu.
 - [Skupinsko stanje](#batch_balance): pridobite stanje več sredstev z enim klicem.
@@ -27,7 +27,7 @@ Za boljše razumevanje vam priporočamo, da si najprej preberete o [standardih z
 - [Podpora NFT](#nft_support): če je ponudba le 1, to smatrajte kot NFT.
 - [Pravila varnih prenosov](#safe_transfer_rule): set pravil za varen prenos.
 
-### Skupinski prenosi {#batch-transfers}
+### Skupinski prenosi \{#batch-transfers}
 
 Skupinski prenos deluje zelo podobno kot običajni prenos ERC-20. Oglejmo si običajno funkcijo ERC-20 transferFrom:
 
@@ -53,7 +53,7 @@ Edina razlika pri ERC-1155 je, da posredujemo vrednosti kot niz in prav tako pos
 
 Pri ERC-1155 imamo le `transferFrom` in ne `transfer`. Da ga uporabite kot navaden `transfer`, le naslov od nastavite na naslov, ki kliče funkcijo.
 
-### Skupinsko stanje {#batch-balance}
+### Skupinsko stanje \{#batch-balance}
 
 Ustrezni klic ERC-20 `balanceOf` ima prav tako svojo partnersko funkcijo s paketno podporo. Za opomnik, to je različica ERC-20:
 
@@ -80,7 +80,7 @@ Za konkreten primer `_ids=[3, 6, 13]` in `_owners=[0xbeef..., 0x1337..., 0x1111.
 ]
 ```
 
-### Skupinska odobritev {#batch-approval}
+### Skupinska odobritev \{#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ Branje trenutnega stanja se lahko izvede prek `isApprovedForAll`. Kot lahko vidi
 
 To je namenoma zasnovano zaradi enostavnosti. Odobrite lahko le vse za en naslov.
 
-### Prejem kavlja {#receive-hook}
+### Prejem kavlja \{#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 Ko prejemna pogodba vrne to vrednost, se predpostavlja, da pogodba sprejema prenos in ve, kako ravnati z žetoni ERC-1155. Super, nič več obtičanih žetonov v pogodbi!
 
-### Podpora NFT {#nft-support}
+### Podpora NFT \{#nft-support}
 
 Ko je zaloga le 1, je žeton v bistvu nezamenljiv žeton (NFT). In kot je standardno za ERC-721, lahko določite URL metapodatkov. URL lahko preberejo in spremenijo stranke, več preberite [tukaj](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### Pravila za varen prenos {#safe-transfer-rule}
+### Pravila za varen prenos \{#safe-transfer-rule}
 
 V prejšnjih razlagah smo se že dotaknili nekaterih pravil za varen prenos. Toda oglejmo si najpomembnejša pravila:
 
@@ -138,7 +138,7 @@ V prejšnjih razlagah smo se že dotaknili nekaterih pravil za varen prenos. Tod
 
 _Opomba_: Vse paketne funkcije vključno s kavlji prav tako obstajajo kot verzije brez paketov. To je narejeno za učinkovitost goriva, saj bo prenos enega sredstva še vedno po vsej verjetnosti najbolj pogosto uporabljen način. V razlagah smo jih izpustili zaradi preprostosti, vključno s pravili za varen prenos. Imena so identična, le odstranite 'paket'.
 
-## Nadaljnje branje {#further-reading}
+## Nadaljnje branje \{#further-reading}
 
 - [EIP-1155: standard za multižetone](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: dokumenti Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)

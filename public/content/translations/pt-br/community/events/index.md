@@ -5,7 +5,7 @@ lang: pt-br
 hideEditButton: true
 ---
 
-## Próximos eventos {#events}
+## Próximos eventos \{#events}
 
 **Todos os meses há grandes eventos da Ethereum ao redor do mundo.** Considere participar de um perto de você para conhecer pessoas que fazem parte da comunidade, aprender sobre oportunidades de emprego e desenvolver novas habilidades.
 
@@ -13,7 +13,7 @@ hideEditButton: true
 
 Essa é uma lista não exaustiva mantida pela nossa comunidade. Conhece um evento por vir da Ethereum? [Vá em frente e o adicione a lista](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
-## Encontros da Ethereum {#meetups}
+## Encontros da Ethereum \{#meetups}
 
 Nenhum dos eventos serve para você? Tente ir a um encontro. Os encontros são eventos menores realizados por grupos de entusiastas da Ethereum. e uma oportunidade para pessoas com um interesse em comum em Ethereum se reunirem, conversarem sobre o projeto e conhecer mais sobre os desenvolvimentos recentes.
 

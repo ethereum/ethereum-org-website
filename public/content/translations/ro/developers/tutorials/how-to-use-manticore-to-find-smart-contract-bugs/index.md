@@ -17,11 +17,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 Scopul acestui tutorial este de a arăta cum să utilizezi Manticore pentru a găsi automat erori în contractele inteligente.
 
-## Instalare {#installation}
+## Instalare \{#installation}
 
 Manticore necesită >= python 3.6. Poate fi instalat prin pip sau folosind docker.
 
-### Manticore prin docker {#manticore-through-docker}
+### Manticore prin docker \{#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -37,7 +37,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Manticore prin pip {#manticore-through-pip}
+### Manticore prin pip \{#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -45,7 +45,7 @@ pip3 install --user manticore
 
 solc 0.5.11 este recomandat.
 
-### Rularea unui script {#running-a-script}
+### Rularea unui script \{#running-a-script}
 
 Pentru a rula un script python cu python 3:
 
@@ -53,9 +53,9 @@ Pentru a rula un script python cu python 3:
 python3 script.py
 ```
 
-## Introducere în execuția simbolică dinamică {#introduction-to-dynamic-symbolic-execution}
+## Introducere în execuția simbolică dinamică \{#introduction-to-dynamic-symbolic-execution}
 
-### Execuția simbolică dinamică pe scurt {#dynamic-symbolic-execution-in-a-nutshell}
+### Execuția simbolică dinamică pe scurt \{#dynamic-symbolic-execution-in-a-nutshell}
 
 Execuția simbolică dinamică (DSE) este o tehnică de analiză a programului care explorează un spațiu de stare cu un grad ridicat de conștientizare semantică. Această tehnică se bazează pe descoperirea „căii programului”, reprezentată ca o formulă matematică numită `path predicate` (operator de cale). Conceptual, această tehnică funcționează pe operatori de cale în doi pași:
 
@@ -64,7 +64,7 @@ Execuția simbolică dinamică (DSE) este o tehnică de analiză a programului c
 
 Această abordare nu produce falsuri pozitive în sensul că toate stările identificate ale programului pot fi declanșate în timpul execuției concrete. De exemplu, dacă analiza găsește o depășire de întreg, este garantat se poate reproduce.
 
-### Exemplu de operatori de cale {#path-predicate-example}
+### Exemplu de operatori de cale \{#path-predicate-example}
 
 Pentru a avea o perspectivă despre cum funcționează DSE, ia în considerare următorul exemplu:
 
@@ -85,7 +85,7 @@ Deoarece `f()` conține două căi, un DSE va construi doi operatori de cale dif
 
 Each path predicate is a mathematical formula that can be given to a so-called [SMT solver](https://wikipedia.org/wiki/Satisfiability_modulo_theories), which will try to solve the equation. Pentru `Path 1`, rezolvatorul va spune că această cale poate fi explorată cu `a = 65`. Pentru `Path 2`, rezolvatorul îi poate da lui `a` orice altă valoare diferită de 65, de exemplu `a = 0`.
 
-### Verificarea proprietăților {#verifying-properties}
+### Verificarea proprietăților \{#verifying-properties}
 
 Manticore permite un control complet asupra întregii execuții a fiecărei căi. Ca rezultat, permite adăugarea de restricții arbitrare la aproape orice. Acest control permite crearea de proprietăți în contract.
 
@@ -127,7 +127,7 @@ Această formulă nu poate fi rezolvată; într-o lume imaginară, aceasta ar fi
 
 DSE este, prin urmare, un instrument puternic, care poate să verifice constrângeri arbitrare în codul tău.
 
-## Rularea sub Manticore {#running-under-manticore}
+## Rularea sub Manticore \{#running-under-manticore}
 
 Vom vedea cum să explorăm un contract inteligent cu API-ul Manticore. Obiectivul este următorul contract inteligent [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -143,7 +143,7 @@ contract Simple {
 }
 ```
 
-### Rulează o explorare independentă {#run-a-standalone-exploration}
+### Rulează o explorare independentă \{#run-a-standalone-exploration}
 
 Poți rula Manticore direct pe contractul inteligent prin următoarea comandă (`project` poate fi un fișier Solidity sau un director de proiect):
 
@@ -192,11 +192,11 @@ După cum poți observa, Manticore generează un caz de test unic pentru fiecare
 
 Utilizați flagul `--quick-mode` dacă doriți o explorare rapidă a codului (dezactivează detectoarele de bug-uri, calculul gazului, ...)
 
-### Manipulează un contract inteligent prin API {#manipulate-a-smart-contract-through-the-api}
+### Manipulează un contract inteligent prin API \{#manipulate-a-smart-contract-through-the-api}
 
 Această secțiune descrie în detaliu modul de manipulare a unui contract inteligent cu API-ului Manticore Python. Poți crea un fișier nou cu extensia python `*.py` și scrie codul necesar adăugând comenzile API (ale căror elemente de bază vor fi descrise mai jos) în acest fișier și apoi îl poți rula cu comanda `$ python3 *.py `. De asemenea, poți executa comenzile de mai jos direct în consola python; pentru a rula consola utilizează comanda `$ python3`.
 
-### Crearea conturilor {#creating-accounts}
+### Crearea conturilor \{#creating-accounts}
 
 Primul lucru care trebuie făcut este să inițiezi un nou blockchain cu următoarele comenzi:
 
@@ -229,18 +229,18 @@ contract Simple {
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
-#### Rezumat {#summary}
+#### Rezumat \{#summary}
 
 - You can create user and contract accounts with [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) and [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
-### Executarea tranzacțiilor {#executing-transactions}
+### Executarea tranzacțiilor \{#executing-transactions}
 
 Manticore acceptă două tipuri de tranzacții:
 
 - Tranzacția brută: explorează toate funcțiile
 - Tranzacția denumită: explorează o singură funcție
 
-#### Tranzacția brută {#raw-transaction}
+#### Tranzacția brută \{#raw-transaction}
 
 A raw transaction is executed using [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
@@ -269,7 +269,7 @@ m.transaction(caller=user_account,
 
 Dacă datele sunt simbolice, Manticore va explora toate funcțiile contractului în timpul executării tranzacției. Va fi util să vezi explicația funcției Fallback în articolul [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) pentru a înțelege cum funcționează selecția funcțiilor.
 
-#### Tranzacția denumită {#named-transaction}
+#### Tranzacția denumită \{#named-transaction}
 
 Funcțiile pot fi executate prin numele lor. Pentru a executa `f(uint var)` cu o valoare simbolică, din contul utilizatorului și cu 0 eter, utilizează:
 
@@ -280,13 +280,13 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 
 Dacă argumentul `valoare` al tranzacției nu este specificată, este 0 în mod implicit.
 
-#### Rezumat {#summary-1}
+#### Rezumat \{#summary-1}
 
 - Argumentele unei tranzacții pot fi concrete sau simbolice
 - O tranzacție brută va explora toate funcțiile
 - Funcția poate fi apelată după numele ei
 
-### Spațiu de lucru {#workspace}
+### Spațiu de lucru \{#workspace}
 
 `m.workspace` este directorul folosit ca director de ieșire pentru toate fișierele generate:
 
@@ -294,11 +294,11 @@ Dacă argumentul `valoare` al tranzacției nu este specificată, este 0 în mod 
 print("Results are in {}".format(m.workspace))
 ```
 
-### Terminarea explorării {#terminate-the-exploration}
+### Terminarea explorării \{#terminate-the-exploration}
 
 To stop the exploration use [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nu trebuie trimise alte tranzacții odată ce această metodă este apelată și Manticore generează cazuri de testare pentru fiecare cale explorată.
 
-### Rezumat: Rularea sub Manticore {#summary-running-under-manticore}
+### Rezumat: Rularea sub Manticore \{#summary-running-under-manticore}
 
 Punând împreună toți pașii anteriori, obținem:
 
@@ -322,7 +322,7 @@ m.finalize() # oprește explorarea
 
 Tot codul de mai sus îl poți găsi în [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
 
-## Obținerea căilor de aruncare {#getting-throwing-paths}
+## Obținerea căilor de aruncare \{#getting-throwing-paths}
 
 Acum vom genera intrări specifice pentru căile care ridică o excepție în `f()`. Obiectivul este în continuare următorul contract inteligent [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -337,7 +337,7 @@ contract Simple {
 }
 ```
 
-### Utilizarea informațiilor de stare {#using-state-information}
+### Utilizarea informațiilor de stare \{#using-state-information}
 
 Fiecare cale executată are starea sa de blockchain. O stare este fie pregătită, fie ucisă, ceea ce înseamnă că ajunge la instrucțiunea THROW sau REVERT:
 
@@ -363,7 +363,7 @@ data = state.platform.transactions[0].return_data
 data = ABI.deserialize("uint", data)
 ```
 
-### Cum să generezi un caz de test {#how-to-generate-testcase}
+### Cum să generezi un caz de test \{#how-to-generate-testcase}
 
 Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) to generate testcase:
 
@@ -371,7 +371,7 @@ Use [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/lates
 m.generate_testcase(state, 'BugFound')
 ```
 
-### Rezumat {#summary-2}
+### Rezumat \{#summary-2}
 
 - Poți itera starea cu m.all_states
 - `state.platform.get_balance(account.address)` returnează soldul contului
@@ -379,7 +379,7 @@ m.generate_testcase(state, 'BugFound')
 - `transaction.return_data` sunt datele returnate
 - `m.generate_testcase(state, name)` generează intrări pentru stare
 
-### Rezumat: Obținerea căilor de aruncare {#summary-getting-throwing-path}
+### Rezumat: Obținerea căilor de aruncare \{#summary-getting-throwing-path}
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -407,7 +407,7 @@ Tot codul de mai sus îl poți găsi în [`example_run.py`](https://github.com/c
 
 _Notează că am fi putut genera un script mult mai simplu, ca toate stările returnate de terminat_state având REVERT sau INVALID în rezultatul lor: Acest exemplu a fost menit doar să demonstreze modul de manipulare API._
 
-## Adăugarea de restricții {#adding-constraints}
+## Adăugarea de restricții \{#adding-constraints}
 
 Vom vedea cum să constrângem explorarea. Vom face presupunerea că documentația din `f()` afirmă că funcția nu este apelată niciodată cu `a == 65`, deci orice eroare cu `a == 65` nu este o eroarea adevărată. Obiectivul este în continuare următorul contract inteligent [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -422,7 +422,7 @@ contract Simple {
 }
 ```
 
-### Operatori {#operators}
+### Operatori \{#operators}
 
 Modulul [Operatori](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) facilitează manipularea restricțiilor, printre altele oferind:
 
@@ -445,11 +445,11 @@ from manticore.core.smtlib import Operators
 last_return = Operators.CONCAT(256, *last_return)
 ```
 
-### Restricții {#state-constraint}
+### Restricții \{#state-constraint}
 
 Poți utiliza constrângeri la nivel global sau pentru o anumită stare.
 
-#### Restricție globală {#state-constraint}
+#### Restricție globală \{#state-constraint}
 
 Use `m.constrain(constraint)` to add a global constraint. De exemplu, poți apela un contract de la o adresă simbolică și împiedica această adresă să aibă o valoare specifică:
 
@@ -462,11 +462,11 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### Restricție de stare {#state-constraint}
+#### Restricție de stare \{#state-constraint}
 
 Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) to add a constraint to a specific state It can be used to constrain the state after its exploration to check some property on it.
 
-### Verificarea restricțiilor {#checking-constraint}
+### Verificarea restricțiilor \{#checking-constraint}
 
 Utilizează `solver.check(state.constraints)` pentru a afla dacă o restricție este încă fezabilă. De exemplu, următoarele vor restrânge „symbolic_value” să fie diferite de 65 și să verifice dacă starea este încă fezabilă:
 
@@ -476,7 +476,7 @@ if solver.check(state.constraints):
     # starea este fezabilă
 ```
 
-### Sumar: Adăugarea restricțiilor {#summary-adding-constraints}
+### Sumar: Adăugarea restricțiilor \{#summary-adding-constraints}
 
 Adăugând restricții codului anterior, obținem:
 

@@ -15,7 +15,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ¡Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contratos inteligentes usando el lenguaje de programación Delphi!
 
-## Empezando con contratos inteligentes y el lenguaje Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Empezando con contratos inteligentes y el lenguaje Solidity \{#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **De los primeros pasos para integrar Delphi con Ethereum**
 
@@ -26,7 +26,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Escribir el primer contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprender a compilar e implementar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referencias y enlaces para principiantes {#beginner-references-and-links}
+## Referencias y enlaces para principiantes \{#beginner-references-and-links}
 
 **Introducción a la biblioteca Delphereum**
 
@@ -40,13 +40,13 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Un contrato inteligente de 3 minutos y Delphi: Parte 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [Un contrato inteligente de 3 minutos y Delphi: Parte 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Artículos intermedios {#intermediate-articles}
+## Artículos intermedios \{#intermediate-articles}
 
 - [Generando una firma de mensaje firmado por Ethereum en Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Transferir ether con Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Transferir tokens ERC-20 con Delphi](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## Patrones de uso avanzado {#advanced-use-patterns}
+## Patrones de uso avanzado \{#advanced-use-patterns}
 
 - [Delphi y Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum y Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

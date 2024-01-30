@@ -8,11 +8,11 @@ Instansiasi fisik EVM tidak dapat dideskripsikan dengan cara yang sama seperti s
 
 Protokol Ethereum itu sendiri ada semata-mata untuk tujuan menjaga operasi yang berkelanjutan, tidak terputus, dan tidak dapat diubah dari mesin state khusus ini; Ini adalah lingkungan di mana semua akun Ethereum dan kontrak pintar tinggal. Pada blok mana pun dalam rantai, Ethereum memiliki satu dan hanya satu state 'kanonis', dan EVM adalah yang mendefinisikan aturan untuk menghitung state valid baru dari blok ke blok.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Beberapa pemahaman dasar tentang terminologi umum dalam ilmu komputer seperti [bita](https://wikipedia.org/wiki/Byte), [memori](https://wikipedia.org/wiki/Computer_memory), dan [tumpukan](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) diperlukan untuk memahami EVM. Akan sangat membantu jika Anda merasa nyaman dengan konsep kriptografi/blockchain seperti [fungsi hash](https://wikipedia.org/wiki/Cryptographic_hash_function), [bukti kerja](https://wikipedia.org/wiki/Proof_of_work) dan [Pohon Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
-## Dari buku besar ke mesin state {#from-ledger-to-state-machine}
+## Dari buku besar ke mesin state \{#from-ledger-to-state-machine}
 
 Analogi dari 'buku besar terdistribusi' sering digunakan untuk menggambarkan blockchain seperti Bitcoin, yang memungkinkan mata uang terdesentralisasi menggunakan peralatan dasar kriptografi. Mata uang kripto berperilaku seperti mata uang 'biasa' karena aturan yang mengatur apa yang bisa dan tidak bisa dilakukan untuk memodifikasi buku besar. Misalnya, alamat Bitcoin tidak dapat membelanjakan lebih banyak Bitcoin daripada yang diterima sebelumnya. Aturan ini mendukung semua transaksi di Bitcoin dan banyak blockchain lainnya.
 
@@ -20,7 +20,7 @@ Meskipun Ethereum memiliki mata uang kripto (Ether) asli sendiri yang mengikuti 
 
 ![Sebuah diagram menunjukkan susunan EVM](./evm.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Fungsi transisi state Ethereum {#the-ethereum-state-transition-function}
+## Fungsi transisi state Ethereum \{#the-ethereum-state-transition-function}
 
 EVM bertindak seperti fungsi matematika: Jika menerima input, akan menghasilkan output deterministik. Oleh karena itu cukup membantu mendeskripsikan Ethereum dengan lebih formal sebagai memiliki **fungsi transaksi state**:
 
@@ -30,17 +30,17 @@ Y(S, T)= S'
 
 Dengan state valid versi lama `(S)` dan kumpulan baru dari transaksi valid `(T)`, fungsi transisi Ethereum `Y(S, T)` menghasilkan state output valid yang baru `S'`
 
-### State {#state}
+### State \{#state}
 
 Dalam konteks Ethereum, state adalah struktur data yang sangat besar yang disebut [Pohon Merkle Patricia yang dimodifikasi](https://eth.wiki/en/fundamentals/patricia-tree), yang menyimpan semua [akun](/developers/docs/accounts/) yang ditautkan oleh hash dan dapat direduksi menjadi satu hash root yang disimpan pada blockchain.
 
-### Transaksi {#transactions}
+### Transaksi \{#transactions}
 
 Transaksi adalah instruksi yang ditandatangani secara kriptografis dari akun. Ada dua jenis transaksi: transaksi yang menghasilkan pemanggilan pesan dan transaksi yang menghasilkan pembuatan kontrak.
 
 Pembuatan kontrak menghasilkan pembuatan akun kontrak baru yang berisi kode bita [kontrak pintar](/developers/docs/smart-contracts/anatomy/) yang dikompilasi. Setiap kali akun lain melakukan pemanggilan pesan ke kontrak itu, akun itu akan mengeksekusi kode bitanya.
 
-## Instruksi EVM {#evm-instructions}
+## Instruksi EVM \{#evm-instructions}
 
 EVM beroperasi sebagai [mesin tumpukan](https://wikipedia.org/wiki/Stack_machine) dengan kedalaman 1024 item. Setiap item adalah kata berukuran 256 bit, yang dipilih untuk kemudahan penggunaan dengan kriptografi 256 bit (seperti hash Keccak-256 atau tanda tangan secp256k1).
 
@@ -52,7 +52,7 @@ Kode bita kontrak pintar yang dikompilasi dieksekusi sebagai nomor EVM [opcode](
 
 ![Sebuah diagram menampilkan gas yang diperlukan untuk operasi EVM](../gas/gas.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Implementasi EVM {#evm-implementations}
+## Implementasi EVM \{#evm-implementations}
 
 Semua implementasi EVM harus sesuai dengan spesifikasi yang dideskripsikan dalam Yellowpaper Ethereum.
 
@@ -65,7 +65,7 @@ Semua [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) me
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 
-## Bacaan Lebih Lanjut {#further-reading}
+## Bacaan Lebih Lanjut \{#further-reading}
 
 - [Yellowpaper Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Jellopaper aka KEVM: Semantik EVM dalam K](https://jellopaper.org/)
@@ -73,6 +73,6 @@ Semua [klien Ethereum](/developers/docs/nodes-and-clients/#execution-clients) me
 - [Opcode Mesin Virtual Ethereum](https://www.ethervm.io/)
 - [Pengantar singkat dalam dokumentasi Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
-## Topik Terkait {#related-topics}
+## Topik Terkait \{#related-topics}
 
 - [Gas](/developers/docs/gas/)

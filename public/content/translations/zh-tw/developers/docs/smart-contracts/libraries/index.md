@@ -6,15 +6,15 @@ lang: zh-tw
 
 你無需從頭開始編寫專案中的每一個智慧型合約。 因為我們有許多開放原始碼智慧型合約庫可為你的專案提供可重複利用的組件，因此你不必從零開始。
 
-## 基本資訊 {#prerequisites}
+## 基本資訊 \{#prerequisites}
 
 在使用智慧型合約庫之前，最好先清楚瞭解智慧型合約的結構。 如果尚未完成，請前往[智慧型合約結構](/developers/docs/smart-contracts/anatomy/)。
 
-## 庫的內容 {#whats-in-a-library}
+## 庫的內容 \{#whats-in-a-library}
 
 你通常可以在智慧型合約庫中找到兩種組件：可以添加到合約的可重複使用行為，與採納的各種標準。
 
-### 行為 {#behaviors}
+### 行為 \{#behaviors}
 
 編寫智慧型合約時，你很可能會發現自己在重複編寫類似代碼。比如說在合約中指派一個_管理員_地址執行受保護的操作；或添加一個緊急_暫停_按鈕以應對預料之外的問題。
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 另一個比較受歡迎的例子是 [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) 或 [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 這些庫（與基礎合約不同）提供了語言本身不具備的溢出檢查算術函數。 使用這些庫而非原生算術運算可以防止合約出現溢出，這類錯誤可能導致災難性後果！
 
-### 標準 {#standards}
+### 標準 \{#standards}
 
 為了促進[可組合性和互通性](/developers/docs/smart-contracts/composability/)，以太坊社群已使用**以太坊意見徵求**的形式定義了幾個標準。 你可以在[標準](/developers/docs/standards/)部分閱讀更多相關資訊。
 
@@ -60,7 +60,7 @@ contract MyContract is Ownable {
 
 值得一提的是，一些以太坊意見徵求並非獨立的，而是對其他以太坊意見徵求的補充。 例如，[ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 拓展了 ERC20，提高其可用性。
 
-## 如何新增庫 {#how-to}
+## 如何新增庫 \{#how-to}
 
 務必參考你要納入的庫文件，以掌握如何將其納入專案的具體說明。 有些 Solidity 合約庫使用 `npm` 來封裝，所以你可以直接透過 `npm install`。 大多數[編譯](/developers/docs/smart-contracts/compiling/)合約的工具會在你的 `node_modules` 中尋找智慧型合約庫，所以你可以執行：
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 無論使用哪種方法，納入庫時，務必留意[程式語言](/developers/docs/smart-contracts/languages/)的版本。 例如，如果你使用 Solidity 0.5 編寫合約，就不能使用 Solidity 0.6 庫。
 
-## 使用時機 {#when-to-use}
+## 使用時機 \{#when-to-use}
 
 在你的專案使用智慧型合約庫有幾個好處。 首先，這提供了現成的組件，可以納入你的系統，而不必自己編寫程式碼，從而節省時間。
 
@@ -85,7 +85,7 @@ contract MyNFT is ERC721 {
 
 最後，在決定是否納入庫時，要考慮其總體使用情況。 獲得廣泛採用的資料庫，好處在於有取得更廣大的社群和關注來審視問題。 在建立智慧型合約時，安全性應為首要考量！
 
-## 相關工具 {#related-tools}
+## 相關工具 \{#related-tools}
 
 **OpenZeppelin Contracts：** **_最熱門的智慧型合約開發資料庫。 _**
 
@@ -107,11 +107,11 @@ contract MyNFT is ERC721 {
 - [文件](https://portal.thirdweb.com/solidity/)
 - [Github](https://github.com/thirdweb-dev/contracts)
 
-## 相關教程 {#related-tutorials}
+## 相關教程 \{#related-tutorials}
 
 - [以太坊開發者的安全考量](/developers/docs/smart-contracts/security/) _– 構建智慧型合約時的安全考量使用教學，包括庫的使用。_
 - [瞭解 ERC-20 代幣智慧型合約](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _：關於 ERC20 標準的教學，由多個資料庫提供。_
 
-## 衍生閱讀 {#further-reading}
+## 衍生閱讀 \{#further-reading}
 
 _認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或添加於本頁!!_

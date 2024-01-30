@@ -8,11 +8,11 @@ published: 2021-05-01
 lang: en
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) can create an exchange market between any two ERC-20 tokens. In this article we will go over the source code for the contracts that implement this protocol and see why they are written this way.
 
-### What Does Uniswap Do? {#what-does-uniswap-do}
+### What Does Uniswap Do? \{##what-does-uniswap-do}
 
 Basically, there are two types of users: liquidity providers and traders.
 
@@ -24,15 +24,15 @@ When liquidity providers want their assets back they can burn the pool tokens an
 
 [Click here for a fuller description](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
-### Why v2? Why not v3? {#why-v2}
+### Why v2? Why not v3? \{##why-v2}
 
 [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) is an upgrade that is much more complicated than the v2. It is easier to first learn v2 and then go to v3.
 
-### Core Contracts vs Periphery Contracts {#contract-types}
+### Core Contracts vs Periphery Contracts \{##contract-types}
 
 Uniswap v2 is divided into two components, a core and a periphery. This division allows the core contracts, which hold the assets and therefore _have_ to be secure, to be simpler and easier to audit. All the extra functionality required by traders can then be provided by periphery contracts.
 
-## Data and Control Flows {#flows}
+## Data and Control Flows \{##flows}
 
 This is the flow of data and control that happens when you perform the three main actions of Uniswap:
 
@@ -40,74 +40,74 @@ This is the flow of data and control that happens when you perform the three mai
 2. Add liquidity to the market and get rewarded with pair exchange ERC-20 liquidity tokens
 3. Burn ERC-20 liquidity tokens and get back the ERC-20 tokens that the pair exchange allows traders to exchange
 
-### Swap {#swap-flow}
+### Swap \{##swap-flow}
 
 This is most common flow, used by traders:
 
-#### Caller {#caller}
+#### Caller \{##caller}
 
 1. Provide the periphery account with an allowance in the amount to be swapped.
 2. Call one of the periphery contract's many swap functions (which one depends on whether ETH is involved or not, whether the trader specifies the amount of tokens to deposit or the amount of tokens to get back, etc).
    Every swap function accepts a `path`, an array of exchanges to go through.
 
-#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
+#### In the periphery contract (UniswapV2Router02.sol) \{##in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Identify the amounts that need to be traded on each exchange along the path.
 4. Iterates over the path. For every exchange along the way it sends the input token and then calls the exchange's `swap` function.
    In most cases the destination address for the tokens is the next pair exchange in the path. In the final exchange it is the address provided by the trader.
 
-#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the core contract (UniswapV2Pair.sol) \{##in-the-core-contract-uniswapv2pairsol-2}
 
 5. Verify that the core contract is not being cheated and can maintain sufficient liquidity after the swap.
 6. See how many extra tokens we have in addition to the known reserves. That amount is the number of input tokens we received to exchange.
 7. Send the output tokens to the destination.
 8. Call `_update` to update the reserve amounts
 
-#### Back in the periphery contract (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### Back in the periphery contract (UniswapV2Router02.sol) \{##back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Perform any necessary cleanup (for example, burn WETH tokens to get back ETH to send the trader)
 
-### Add Liquidity {#add-liquidity-flow}
+### Add Liquidity \{##add-liquidity-flow}
 
-#### Caller {#caller-2}
+#### Caller \{##caller-2}
 
 1. Provide the periphery account with an allowance in the amounts to be added to the liquidity pool.
 2. Call one of the periphery contract's `addLiquidity` functions.
 
-#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
+#### In the periphery contract (UniswapV2Router02.sol) \{##in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Create a new pair exchange if necessary
 4. If there is an existing pair exchange, calculate the amount of tokens to add. This is supposed to be identical value for both tokens, so the same ratio of new tokens to existing tokens.
 5. Check if the amounts are acceptable (callers can specify a minimum amount below which they'd rather not add liquidity)
 6. Call the core contract.
 
-#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### In the core contract (UniswapV2Pair.sol) \{##in-the-core-contract-uniswapv2pairsol-2}
 
 7. Mint liquidity tokens and send them to the caller
 8. Call `_update` to update the reserve amounts
 
-### Remove Liquidity {#remove-liquidity-flow}
+### Remove Liquidity \{##remove-liquidity-flow}
 
-#### Caller {#caller-3}
+#### Caller \{##caller-3}
 
 1. Provide the periphery account with an allowance of liquidity tokens to be burned in exchange for the underlying tokens.
 2. Call one of the periphery contract's `removeLiquidity` functions.
 
-#### In the periphery contract (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
+#### In the periphery contract (UniswapV2Router02.sol) \{##in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Send the liquidity tokens to the pair exchange
 
-#### In the core contract (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
+#### In the core contract (UniswapV2Pair.sol) \{##in-the-core-contract-uniswapv2pairsol-3}
 
 4. Send the destination address the underlying tokens in proportion to the burned tokens. For example if there are 1000 A tokens in the pool, 500 B tokens, and 90 liquidity tokens, and we receive 9 tokens to burn, we're burning 10% of the liquidity tokens so we send back the user 100 A tokens and 50 B tokens.
 5. Burn the liquidity tokens
 6. Call `_update` to update the reserve amounts
 
-## The Core Contracts {#core-contracts}
+## The Core Contracts \{##core-contracts}
 
 These are the secure contracts which hold the liquidity.
 
-### UniswapV2Pair.sol {#UniswapV2Pair}
+### UniswapV2Pair.sol \{##UniswapV2Pair}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implements the actual pool that exchanges tokens. It is the core Uniswap functionality.
 
@@ -146,7 +146,7 @@ The solution that Uniswap found is to use 224 bit values, with 112 bits for the 
 
 More details about this library are available [later in the document](#FixedPoint).
 
-#### Variables {#pair-vars}
+#### Variables \{##pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -214,7 +214,7 @@ Here is a simple example. Note that for the sake of simplicity the table only ha
 
 As traders provide more of token0, the relative value of token1 increases, and vice versa, based on supply and demand.
 
-#### Lock {#pair-lock}
+#### Lock \{##pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -249,7 +249,7 @@ In a modifier `_;` is the original function call (with all the parameters). Here
 
 After the main function returns, release the lock.
 
-#### Misc. functions {#pair-misc}
+#### Misc. functions \{##pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -282,7 +282,7 @@ There are two ways in which an ERC-20 transfer call can report failure:
 
 If either of these conditions happen, revert.
 
-#### Events {#pair-events}
+#### Events \{##pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -311,7 +311,7 @@ Each token may be either sent to the exchange, or received from it.
 
 Finally, `Sync` is emitted every time tokens are added or withdrawn, regardless of the reason, to provide the latest reserve information (and therefore the exchange rate).
 
-#### Setup Functions {#pair-setup}
+#### Setup Functions \{##pair-setup}
 
 These functions are supposed to be called once when the new pair exchange is set up.
 
@@ -334,7 +334,7 @@ The constructor makes sure we'll keep track of the address of the factory that c
 
 This function allows the factory (and only the factory) to specify the two ERC-20 tokens that this pair will exchange.
 
-#### Internal Update Functions {#pair-update-internal}
+#### Internal Update Functions \{##pair-update-internal}
 
 ##### \_update
 
@@ -457,7 +457,7 @@ Use the `UniswapV2ERC20._mint` function to actually create the additional liquid
 If there is no fee set `kLast` to zero (if it isn't that already). When this contract was written there was a [gas refund feature](https://eips.ethereum.org/EIPS/eip-3298) that encouraged contracts to reduce the overall size of the Ethereum state by zeroing out storage they did not need.
 This code gets that refund when possible.
 
-#### Externally Accessible Functions {#pair-external}
+#### Externally Accessible Functions \{##pair-external}
 
 Note that while any transaction or contract _can_ call these functions, they are designed to be called from the periphery contract. If you call them directly you won't be able to cheat the pair exchange, but you might lose value through a mistake.
 
@@ -690,7 +690,7 @@ In that case there are two solutions:
 }
 ```
 
-### UniswapV2Factory.sol {#UniswapV2Factory}
+### UniswapV2Factory.sol \{##UniswapV2Factory}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) creates the pair exchanges.
 
@@ -812,7 +812,7 @@ Save the new pair information in the state variables and emit an event to inform
 
 These two functions allow `feeSetter` to control the fee recipient (if any), and to change `feeSetter` to a new address.
 
-### UniswapV2ERC20.sol {#UniswapV2ERC20}
+### UniswapV2ERC20.sol \{##UniswapV2ERC20}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implements the ERC-20 liquidity token. It is similar to the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code), so I will only explain the part that is different, the `permit` functionality.
 
@@ -899,15 +899,15 @@ From the digest and the signature we can get the address that signed it using [e
 
 If everything is OK, treat this as [an ERC-20 approve](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## The Periphery Contracts {#periphery-contracts}
+## The Periphery Contracts \{##periphery-contracts}
 
 The periphery contracts are the API (application program interface) for Uniswap. They are available for external calls, either from other contracts or decentralized applications. You could call the core contracts directly, but that's more complicated and you might lose value if you make a mistake. The core contracts only contain tests to make sure they aren't cheated, not sanity checks for anybody else. Those are in the periphery so they can be updated as needed.
 
-### UniswapV2Router01.sol {#UniswapV2Router01}
+### UniswapV2Router01.sol \{##UniswapV2Router01}
 
 [This contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) has problems, and [should no longer be used](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Luckily, the periphery contracts are stateless and don't hold any assets, so it is easy to deprecate it and suggest people use the replacement, `UniswapV2Router02`, instead.
 
-### UniswapV2Router02.sol {#UniswapV2Router02}
+### UniswapV2Router02.sol \{##UniswapV2Router02}
 
 In most cases you would use Uniswap through [this contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol).
 You can see how to use it [here](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
@@ -963,7 +963,7 @@ The constructor just sets the immutable state variables.
 
 This function is called when we redeem tokens from the WETH contract back into ETH. Only the WETH contract we use is authorized to do that.
 
-#### Add Liquidity {#add-liquidity}
+#### Add Liquidity \{##add-liquidity}
 
 These functions add tokens to the pair exchange, which increases the liquidity pool.
 
@@ -1148,7 +1148,7 @@ To deposit the ETH the contract first wraps it into WETH and then transfers the 
 
 The user has already sent us the ETH, so if there is any extra left over (because the other token is less valuable than the user thought), we need to issue a refund.
 
-#### Remove Liquidity {#remove-liquidity}
+#### Remove Liquidity \{##remove-liquidity}
 
 These functions will remove liquidity and pay back the liquidity provider.
 
@@ -1309,7 +1309,7 @@ This function can be used for tokens that have transfer or storage fees. When a 
 
 The final function combines storage fees with meta-transactions.
 
-#### Trade {#trade}
+#### Trade \{##trade}
 
 ```solidity
     // **** SWAP ****
@@ -1667,15 +1667,15 @@ These are the same variants used for normal tokens, but they call `_swapSupporti
 
 These functions are just proxies that call the [UniswapV2Library functions](#uniswapV2library).
 
-### UniswapV2Migrator.sol {#UniswapV2Migrator}
+### UniswapV2Migrator.sol \{##UniswapV2Migrator}
 
 This contract was used to migrate exchanges from the old v1 to v2. Now that they have been migrated, it is no longer relevant.
 
-## The Libraries {#libraries}
+## The Libraries \{##libraries}
 
 The [SafeMath library](https://docs.openzeppelin.com/contracts/2.x/api/math) is well documented, so there's no need to document it here.
 
-### Math {#Math}
+### Math \{##Math}
 
 This library contains some math functions that are not normally needed in Solidity code, so they aren't part of the language.
 
@@ -1720,7 +1720,7 @@ We should never need the square root of zero. The square roots of one, two, and 
 }
 ```
 
-### Fixed Point Fractions (UQ112x112) {#FixedPoint}
+### Fixed Point Fractions (UQ112x112) \{##FixedPoint}
 
 This library handles fractions, which are normally not part of Ethereum arithmetic. It does this by encoding the number _x_ as _x\*2^112_. This lets us use the original addition and subtraction opcodes without a change.
 
@@ -1757,7 +1757,7 @@ Because y is `uint112`, the most it can be is 2^112-1. That number can still be 
 
 If we divide two `UQ112x112` values, the result is no longer multiplied by 2^112. So instead we take an integer for the denominator. We would have needed to use a similar trick to do multiplication, but we don't need to do multiplication of `UQ112x112` values.
 
-### UniswapV2Library {#uniswapV2library}
+### UniswapV2Library \{##uniswapV2library}
 
 This library is used only by the periphery contracts
 
@@ -1879,7 +1879,7 @@ This function does roughly the same thing, but it gets the output amount and pro
 
 These two functions handle identifying the values when it is necessary to go through several pair exchanges.
 
-### Transfer Helper {#transfer-helper}
+### Transfer Helper \{##transfer-helper}
 
 [This library](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) adds success checks around ERC-20 and Ethereum transfers to treat a revert and a `false` value return the same way.
 
@@ -1964,7 +1964,7 @@ This function implements [ERC-20's transferFrom functionality](https://eips.ethe
 
 This function transfers ether to an account. Any call to a different contract can attempt to send ether. Because we don't need to actually call any function, we don't send any data with the call.
 
-## Conclusion {#conclusion}
+## Conclusion \{##conclusion}
 
 This is a long article of about 50 pages. If you made it here, congratulations! Hopefully by now you've understood the considerations in writing a real-life application (as opposed to short sample programs) and are better to be able to write contracts for your own use cases.
 

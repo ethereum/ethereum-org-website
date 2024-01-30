@@ -6,21 +6,21 @@ lang: hu
 
 Az Ethereum [konszenzusmechanizmusa](/developers/docs/consensus-mechanisms/) a proof-of-stake (PoS) koncepción alapul. Az Ethereum 2022-ben váltott a proof-of-stake mechanizmusra, mivel biztonságosabb, kevésbé energiaintenzív és jobban megfelel az új méretezési megoldások bevezetéséhez, mint a korábbi [proof-of-work](/developers/docs/consensus-mechanisms/pow) architektúra.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Az oldal könnyebben megértéséhez javasoljuk, hogy tekintse meg a [konszenzusmechanizmusok](/developers/docs/consensus-mechanisms/) cikket.
 
-## Mi az a proof-of-stake (PoS)? {#what-is-pos}
+## Mi az a proof-of-stake (PoS)? \{#what-is-pos}
 
 A proof-of-stake (letéti igazolás) egy módja annak bizonyítására, hogy a validátorok valamilyen értéket helyeztek a hálózatba, amely tisztességtelen cselekedet esetén megsemmisíthető. Az Ethereum proof-of-stake mechanizmusánál a validátorok ETH formájában zárolják tőkéjüket az Ethereumon található okosszerződésben. A validátor feladata annak ellenőrzése, hogy a hálózaton keresztül terjesztett új blokkok érvényesek, és adott esetben ő maga is új blokkokat hoz létre és terjeszt elő. Ha megpróbálják meghamisítani a hálózatot (például egy helyett több blokkot javasolnak, vagy egymásnak ellentmondó tanúsításokat küldenek), a letétbe helyezett ETH egy része vagy egésze megsemmisülhet.
 
-## Validátorok {#validators}
+## Validátorok \{#validators}
 
 A validátorként való részvételhez a felhasználónak 32 ETH-t kell egy letéti szerződésben zárolnia, és három különböző szoftvert kell futtatnia: egy végrehajtási klienst, egy konszenzusklienst és egy validátorklienst. Az ETH letétbe helyezésével a felhasználó beáll egy aktiválási sorba, amely korlátozza az új validátorok hálózathoz való csatlakozásának ütemét. Az aktiválást követően a validátorok új blokkokat kapnak a társaiktól az Ethereum-hálózaton. A blokkban szállított tranzakciókat újra végrehajtják, hogy ellenőrizzék, hogy az Ethereum státuszában javasolt változások érvényesek-e, és ellenőrzik a blokk aláírását. A validátor ezután szavazatot (ún. tanúsítást) ad le az adott blokkra a hálózaton keresztül.
 
 Amíg a proof-of-work esetében a blokkidőt a bányászati nehézség határozza meg, addig a proof-of-stake esetén a tempó rögzített. A proof-of-stake Ethereum esetén az idő (12 másodperces) slotokra és korszakokra (1 korszak = 32 slot) oszlik. A rendszer minden slotban véletlenszerűen kiválaszt egy validátort a blokk előterjesztésére. Ez a validátor felel az új blokk létrehozásáért és elküldéséért a hálózat többi csomópontja felé. Emellett a rendszer minden slotban véletlenszerűen megválaszt egy validátorbizottságot, amelynek a szavazatai döntenek az előterjesztett blokk érvényességéről. A validátorok bizottságokra való felosztása fontos a hálózati terhelés kezelhetősége szempontjából. A bizottságok úgy osztják fel a validátorhalmazt, hogy minden aktív validátor minden korszakban tanúsít, de nem minden slotban.
 
-## Hogyan kerülnek végrehajtásra a tranzakciók az Ethereum proof-of-stake mechanizmusban {#transaction-execution-ethereum-pos}
+## Hogyan kerülnek végrehajtásra a tranzakciók az Ethereum proof-of-stake mechanizmusban \{#transaction-execution-ethereum-pos}
 
 Az alábbiakban egy teljes magyarázatot adunk arról, hogyan hajtanak végre egy tranzakciót az Ethereum proof-of-stake-ben.
 
@@ -33,23 +33,23 @@ Az alábbiakban egy teljes magyarázatot adunk arról, hogyan hajtanak végre eg
 
 A véglegesedésről a következő szekcióban bővebb információkat találhat.
 
-## Véglegesség {#finality}
+## Véglegesség \{#finality}
 
 Az elosztott hálózatokban egy tranzakció „véglegessé” válik, amikor egy olyan blokk része lesz, amelyet csak jelentős mennyiségű ETH elégetésével lehet megváltoztatni. A proof-of-stake Ethereum-hálózata ezt az úgynevezett „ellenőrző pont” blokkokkal éri el. Minden korszak első blokkja egy ellenőrzőpont. A validátorok szavaznak az általuk érvényesek tartott ellenőrzőpontpárokra. Ha egy ellenőrzőpontpár megkapja legalább az összes letétbe helyezett ETH kétharmadát képviselő szavazatmennyiséget, akkor a ellenőrzőpontok frissülnek. A kettő közül a későbbi (célblokk) „igazolt” állapotba kerül. A kettő közül a korábbi már igazolt állapotú, mivel az előző korszak „célblokkja” volt. Ez a blokk „véglegesített” állapotba kerül.
 
 Egy véglegesített blokk visszaalakításához egy támadónak legalább a letétbe helyezett összes ETH egyharmadát fel kellene áldoznia. Ennek pontos okát az [Ethereum Alapítvány blogposztja](https://blog.ethereum.org/2016/05/09/on-settlement-finality/) részletesen ismerteti. Mivel a véglegességhez kétharmados többség szükséges, egy támadó a teljes ETH-letét egyharmadával szavazva akadályozhatja meg, hogy a hálózat véglegesítse a blokkot. Létezik egy mechanizmus, amellyel védekezni lehet ez ellen: ez az [inaktivitási elszivárgás](https://eth2book.info/bellatrix/part2/incentives/inactivity). Akkor aktiválódik, amikor a blokklánc véglegesítése több mint négy korszakon keresztül meghiúsul. Az inaktivitási elszivárgás elfolyatja a többség ellen szavazó validátorok ETH-letétjét, ezzel lehetővé teszi, hogy a többség visszaszerezze a kétharmados többséget és véglegesítse a láncot.
 
-## Kriptogazdasági védelem {#crypto-economic-security}
+## Kriptogazdasági védelem \{#crypto-economic-security}
 
 Egy validátor futtatása elkötelezettséget jelent. A validátortól elvárják, hogy megfelelő hardvert és internetkapcsolatot tartson fenn a blokkvalidálásban és előterjesztésben való részvételhez. Cserébe a validátor ETH-kifizetést kap (növekszik a letéti egyenlege). Ugyanakkor a validátorként való részvétel új lehetőségeket kínál a felhasználóknak, hogy megtámadják a hálózatot személyes haszon vagy szabotázs céljából. Ez ellen hat, hogy a validátorok elveszítik az ETH-jutalmakat, ha nem vesznek részt a folyamatban, és a meglévő letétjük is megsemmisülhet, ha rosszhiszeműen viselkednek. Két fő rosszhiszemű viselkedési mód van: egy sloton belül több blokk előterjesztése (kétértelműsítés), valamint az ellentmondásos tanúsítások elküldése.
 
 A megvágott ETH-mennyiség azon múlik, hogy ugyanabban az időben hány másik validátor ETH-letétjét vágja még meg a rendszer. Ez az úgynevezett [„korrelációs bírság”](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), amelynek mértéke lehet csekély (a letét ~1%-a az egyedülálló validátornál), de eredményezheti akár a validátori letét 100%-ának elvesztését (tömeges megvágási esemény). Egy kényszerített kilépési periódus felénél szabja ki a rendszer, amely egy azonnali bírsággal (legfeljebb 1 ETH) kezdődik az 1. napon, majd korrelációs bírsággal folytatódik a 18. napon, végül a hálózatból való kivetéssel fejeződik be a 36. napon. Kis összegű tanúsítási bírságot kapnak minden nap, mert jelen vannak a hálózaton, de nem adnak le szavazatot. Ez mind azt jelenti, hogy egy koordinált támadás nagyon költséges lenne a támadó számára.
 
-## Elágazásválasztás {#fork-choice}
+## Elágazásválasztás \{#fork-choice}
 
 Amikor a hálózat optimálisan és becsületesen működik, akkor mindig csak egy blokk van a lánc elején, és minden validátor tanúsítja azt. Mindazonáltal lehetséges, hogy hálózati látencia vagy a blokkelőterjesztő kétértelmű javaslata miatt a validátorok eltérően látják a lánc elejét. Ezért a konszenzusklienseknek egy algoritmusra van szükségük, hogy eldöntsék, melyiket részesítsék előnyben. A proof-of-stake Ethereum által használt algoritmus az [LMD-GHOST](https://arxiv.org/pdf/2003.03052.pdf), és úgy működik, hogy azonosítja az előzmények szerint a tanúsítások legnagyobb többségét magáénak tudó elágazást (fork).
 
-## Proof-of-stake és biztonság {#pos-and-security}
+## Proof-of-stake és biztonság \{#pos-and-security}
 
 Egy [51%-os támadás](https://www.investopedia.com/terms/1/51-attack.asp) veszélye a proof-of-work architektúrához hasonlóan a proof-of-stake konszenzusnál is fennáll, ám itt még kockázatosabb a támadók számára. A támadónak a letétbe helyezett ETH-mennyiség 51%-ára volna szüksége. Így a saját tanúsításai segítségével biztosíthatná, hogy az általa előnyben részesített elágazás (fork) szerezze meg a legtöbb tanúsítást. A felhalmozott tanúsítások „súlya” az, amit a konszenzuskliensek a helyes lánc meghatározásához használnak, tehát ez a támadó képes volna általánosan elfogadottá tenni a saját elágazását. Ugyanakkor a proof-of-work konszenzussal szemben a proof-of-stake erőssége az ellentámadás rugalmas bevezetésében rejlik. Például a becsületes validátorok dönthetnek úgy, hogy tovább építik a kisebbségi láncot, és figyelmen kívül hagyják a támadó elágazását, és ugyanerre biztatják az alkalmazásokat, a tőzsdéket és az alapokat is. Úgy is határozhatnak, hogy erőszakkal eltávolítják a támadót a hálózatról, és megsemmisítik az ETH-letétjét. Ezek erős gazdaságvédelmet jelentenek az 51%-os támadások ellen.
 
@@ -57,7 +57,7 @@ Az 51%-os támadás csak egyetlen típusa a rosszindulatú tevékenységeknek. A
 
 Összességében a proof-of-stake – ahogy azt az Ethereum megvalósította – gazdasági szempontból bizonyítottan védettebb, mint proof-of-work.
 
-## Előnyök és hátrányok {#pros-and-cons}
+## Előnyök és hátrányok \{#pros-and-cons}
 
 | Előnyök                                                                                                                                                                                                                                                                                 | Hátrányok                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ Az 51%-os támadás csak egyetlen típusa a rosszindulatú tevékenységeknek. A
 | A proof-of-stake erősebb kriptogazdasági védelmet kínál, mint a proof-of-work.                                                                                                                                                                                                          | A felhasználóknak három szoftvert kell futtatniuk, hogy részt vehessenek az Ethereum proof-of-stake konszenzusában. |
 | Kevesebb új ETH-t kell kibocsátani a hálózati résztvevők ösztönzéséhez.                                                                                                                                                                                                                 |                                                                                                                     |
 
-### Összehasonlítása a proof-of-work mechanizmussal {#comparison-to-proof-of-work}
+### Összehasonlítása a proof-of-work mechanizmussal \{#comparison-to-proof-of-work}
 
 Az Ethereum korábban nem proof-of-stake alapú hálózat volt. Kezdetben proof-of-work mechanizmust használt. A váltás 2022 szeptemberében történt. A proof-of-stake a következő előnyöket hozta a korábbihoz képest:
 
@@ -77,7 +77,7 @@ Az Ethereum korábban nem proof-of-stake alapú hálózat volt. Kezdetben proof-
 - a szabálytalan viselkedés gazdasági büntetése miatt a proof-of-work architektúrához képest magasabb költséggel jár az 51%-os típusú támadás a támadó számára;
 - ha egy 51%-os támadás legyűri a kriptogazdasági védelmi rendszert, a közösség dönthet egy becsületes blokklánc közösségi visszaállítása mellett.
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Proof-of-Stake GYIK](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Mi az a Proof-of-Stake?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
@@ -88,6 +88,6 @@ Az Ethereum korábban nem proof-of-stake alapú hálózat volt. Kezdetben proof-
 - [A proof-of-stake tervezési filozófiája](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [Videó: Vitalik Buterin elmagyarázza a proof-of-stake mechanizmust Lex Fridmannak](https://www.youtube.com/watch?v=3yrqBG-7EVE)
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)

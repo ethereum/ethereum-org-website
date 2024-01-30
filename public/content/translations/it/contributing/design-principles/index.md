@@ -4,7 +4,7 @@ lang: it
 description: I principi dietro alla progettazione e alle decisioni sui contenuti di ethereum.org
 ---
 
-# I nostri principi di progettazione {#contributing-to-ethereumorg-}
+# I nostri principi di progettazione \{#contributing-to-ethereumorg-}
 
 <Emoji text=":wave:" size={1} /> Ciao e benvenuto ai principi di design per ethereum.org. Questo fa parte di un processo in corso per fare evolvere e migliorare ethereum.org.
 
@@ -12,13 +12,13 @@ I nostri principi definiscono l'aspetto del sito e dei contenuti su di esso.
 
 Dovresti leggerli prima di [contribuire a ethereum.org](/contributing/).
 
-## Quali sono i principi di progettazione? {#ways-to-contribute}
+## Quali sono i principi di progettazione? \{#ways-to-contribute}
 
 Non preoccuparti, sono piuttosto semplici! I **principi di progettazione** sono una serie di linee guida a cui facciamo riferimento quando progettiamo (ovvero creiamo, manteniamo o aggiorniamo) qualcosa.
 
 Nel contesto di ethereum.org, questi principi di design sono le fondamenta per ciò che vogliamo che il sito web rappresenti e proietti al mondo. Sono sia ambiziosi **che** funzionali. Non si tratta solo dell'_aspetto_ del sito web, ma anche del suo _funzionamento_ e persino di come fa _sentire_ gli utenti. Tutto, dai colori ai layout della pagina, fino a come parliamo di Ethereum sul sito web, dovrebbe tenere conto di questi principi.
 
-## I principi nella pratica {#how-decisions-about-the-site-are-made}
+## I principi nella pratica \{#how-decisions-about-the-site-are-made}
 
 Vediamo un esempio. Uno dei principi riguarda la "Credibilità", il che significa che vogliamo che i visitatori del sito _sentano_ e _sappiano_ che il sito è affidabile, proprio come l'ecosistema Ethereum più ampio. Secondo tale principio, abbiamo 3 "principi secondari" funzionali, che crediamo siano passaggi praticabili che possiamo intraprendere per rendere il sito credibile:
 
@@ -32,9 +32,9 @@ Quindi, quando prendiamo decisioni di progettazione o copywriting, possiamo fare
 - _"Come e dove stiamo mostrando la dimensione e l'attività dell'ecosistema?"_
 - _"I nuovi contributi proposti da un membro della community che sto revisionando sono in linea con la progettazione e la scrittura attuali sul sito?"_
 
-## I principi di progettazione di ethereum.org {#contributors}
+## I principi di progettazione di ethereum.org \{#contributors}
 
-### 1. Fonte d'ispirazione {#1-inspirational}
+### 1. Fonte d'ispirazione \{#1-inspirational}
 
 Il sito dovrebbe ispirare gli utenti a immginare in che modo Ethereum può cambiare il mondo. Dovrebbe motivare le persone a esplorare, giocare e sperimentare con gli strumenti e le app dell'ecosistema di Ethereum.
 
@@ -43,7 +43,7 @@ Il sito dovrebbe ispirare gli utenti a immginare in che modo Ethereum può cambi
 
 Direzione visiva • Contenuti
 
-### 2. Universale {#2-universal}
+### 2. Universale \{#2-universal}
 
 Ethereum è un progetto globale e decentralizzato e il nostro pubblico riflette queste caratteristiche. Il sito dovrebbe aspirare a essere accessibile per tutti e sensibile alle molteplici culture del mondo.
 
@@ -53,7 +53,7 @@ Ethereum è un progetto globale e decentralizzato e il nostro pubblico riflette 
 
 Sistemi di scrittura • Uso del colore • Direzione visiva • Contenuti
 
-### 3. Una storia positiva {#3-a-good-story}
+### 3. Una storia positiva \{#3-a-good-story}
 
 Il sito web dovrebbe funzionare come una storia positiva. I visitatori sono in viaggio e i contenuti cui contribuisci ne fanno parte. I contributi degli utenti dovrebbero iscriversi in una narrazione chiara, che abbia un inizio (introduzione/punto d'accesso), un corpo (serie di apprendimenti e dettagli) e una fine (uno o più link alle risorse rilevanti o ai passaggi successivi).
 
@@ -62,7 +62,7 @@ Il sito web dovrebbe funzionare come una storia positiva. I visitatori sono in v
 
 Viaggi dell'utente • Contenuti
 
-### 4. Credibilità {#4-credible}
+### 4. Credibilità \{#4-credible}
 
 Gli utenti potrebbero cercare di addentrarsi nell'ecosistema di Ethereum o anche essere scettici. Riconosci tale responsabilità nel modo in cui comunichi. Assicurati che in entrambi i casi l'utente acquisisca maggiore fiducia nell'ecosistema di Ethereum.
 
@@ -72,7 +72,7 @@ Gli utenti potrebbero cercare di addentrarsi nell'ecosistema di Ethereum o anche
 
 Direzione visiva • Contenuti
 
-### 5. Miglioramento collaborativo {#5-collaborative-improvement}
+### 5. Miglioramento collaborativo \{#5-collaborative-improvement}
 
 Il sito web è il prodotto dei contributi di molte persone, proprio come l'ecosistema nel suo complesso.
 
@@ -84,7 +84,7 @@ Il sito web è il prodotto dei contributi di molte persone, proprio come l'ecosi
 
 Puoi vedere i nostri principi di progettazione in azione [sul nostro sito](/).
 
-## Fornisci un feedback {#give-feedback}
+## Fornisci un feedback \{#give-feedback}
 
 **Condividi il tuo feedback su questo documento!** Uno dei nostri principi proposti è il “**Miglioramento Collaborativo**”, il che significa che vogliamo che il sito web sia il prodotto di molti collaboratori. Quindi, nello spirito di tale principio, vogliamo condividere tali principi di progettazione con la community di Ethereum.
 

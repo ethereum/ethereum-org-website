@@ -4,7 +4,7 @@ description: Perustiedot, joita tarvitset aloittaaksesi Ethereumin käytön.
 lang: fi
 ---
 
-# Ethereumin käyttö {#using-ethereum}
+# Ethereumin käyttö \{#using-ethereum}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: fi
 
 </FeaturedText>
 
-## Ethereumilla luodun sovelluksen käyttäminen {#how-to-use-an-application-built-on-ethereum}
+## Ethereumilla luodun sovelluksen käyttäminen \{#how-to-use-an-application-built-on-ethereum}
 
 Paras tapa aloittaa Ethereumin käyttö on hypätä suoraan mukaan!
 

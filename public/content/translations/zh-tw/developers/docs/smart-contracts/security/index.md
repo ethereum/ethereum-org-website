@@ -12,23 +12,23 @@ lang: zh-tw
 
 前面提到的問題，促使開發者將努力打造安全、健全且有韌性的智慧型合約視為當務之急。 我們必須嚴肅看待智慧型合約的安全性，每個開發者都需要好好加以瞭解。 此指南將涵蓋以太坊開發者應有的資安考量，並探索提升智慧型合約安全性的資源。
 
-## 基本資訊 {#prerequisites}
+## 基本資訊 \{#prerequisites}
 
 請務必熟悉[開發智慧型合約的基本知識](/developers/docs/smart-contracts/)，再來瞭解安全性。
 
-## 建立安全的以太坊智慧型合約指南 {#smart-contract-security-guidelines}
+## 建立安全的以太坊智慧型合約指南 \{#smart-contract-security-guidelines}
 
-### 1.  設計正確的存取控制 {#design-proper-access-controls}
+### 1.  設計正確的存取控制 \{#design-proper-access-controls}
 
 在智慧型合約中，任何外部帳戶 (EOA) 或合約帳戶都可以調用標記為 `public` 或 `external` 的函數。 如果你想要其他人與你的智慧型合約互動，務必指定函數的公共可見性。 標記為 `private` 的函數只能被智慧型合約內部的函數調用，外部帳戶無法調用這種函數。 讓每個網路參與者存取智慧型合約函數可能造成一些問題，尤其是這表示人人都能執行須謹慎以對的操作（例如鑄造新代幣）。
 
 為了防止未授權者使用智慧型合約函數，務必落實安全存取控制。 存取控制機制將使用智慧型合約中特定函數的功能限縮給某些核准實體，例如負責管理合約的帳戶。 在智慧型合約中，**可擁有模式**和**以角色為基礎的控制**是兩個有效落實存取控制的方法。
 
-#### 可擁有模式 {#ownable-pattern}
+#### 可擁有模式 \{#ownable-pattern}
 
 在可擁有模式下，會在建立合約的過程中，將一個地址設為合約的「擁有者」。 受保護的函數會配置一個 `OnlyOwner` 修飾符，確保執行函數前，先驗證調用地址的身分。 為防止不受歡迎的存取，合約擁有者以外的地址對受保護函數的調用都會遭到撤銷。
 
-#### 以角色為基礎的控制 {#role-based-access-control}
+#### 以角色為基礎的控制 \{#role-based-access-control}
 
 在一個智慧型合約中，將一個地址註冊為 `Owner` 會導致集中風險及單點失效。 假如合約擁有者的帳戶金鑰遭竊，攻擊者就可以攻擊合約擁有者的智慧型合約。 這就是為什麼使用以角色為基礎的控制模式和多重管理帳戶可能是更好的方法。
 
@@ -40,7 +40,7 @@ lang: zh-tw
 
 使用多簽存取控制，可多添一層安全性，因為對合約採取執行任何操作都需要多位合約持有人的同意。 這在使用可擁有模式的情況下尤其必要，因為它讓攻擊者或不肖內部人士更難操縱敏感的合約函數以達成其惡意目的。
 
-### 2. 使用 require()、assert() 和 revert() 陳述式保護合約運作 {#use-require-assert-revert}
+### 2. 使用 require()、assert() 和 revert() 陳述式保護合約運作 \{#use-require-assert-revert}
 
 如前面所說的，一旦將智慧型合約部署到區塊鏈上，任何人都可以調用智慧型合約內的公共函數。 因為無法事先預期外部帳戶將如何與你的合約互動，理想做法是在部署前落實內部保障措施，防止會造成問題的操作。 你可以強制使用者對智慧型合約執行正確行為，如果執行操作未能通過某些條件，可以使用 `require()`、`assert()` 和 `revert()` 陳述式，來啟動例外狀況並撤銷狀態變更。
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. 測試智慧型合約和驗證程式碼的正確性 {#test-smart-contracts-and-verify-code-correctness}
+### 3. 測試智慧型合約和驗證程式碼的正確性 \{#test-smart-contracts-and-verify-code-correctness}
 
 在[以太坊虛擬機](/developers/docs/evm/)上執行的程式碼具備不可變性，代表智慧型合約在開發階段需要接受更高階的品質評估。 全面測試你的合約並注意任何超出預期的結果，將大大提升合約的安全性，且長期來看可保護使用者。
 
@@ -82,17 +82,17 @@ contract VendingMachine {
 
 [形式驗證](/developers/docs/smart-contracts/)是另一項驗證智慧型合約安全屬性的技術。 不同於一般測試，形式驗證可以确凿地證明智慧型合約不存在任何錯誤。 這種做法會建立描述預期安全屬性的形式規范，並證明合約的形式模型遵守此規范。
 
-### 4 邀請獨立審查程式碼 {#get-independent-code-reviews}
+### 4 邀請獨立審查程式碼 \{#get-independent-code-reviews}
 
 測試完合約後，最好請其他人來確認原始程式碼是否有任何安全性問題。 測試沒辦法涵蓋智慧型合約內的每一處瑕疵，但進行獨立審查可增加發現漏洞的可能性。
 
-#### 審核 {#audits}
+#### 審核 \{#audits}
 
 委託智慧型合約審核服務是進行獨立程式碼審查的方法之一。 審核者在確保智慧型合約安全性，且沒有品質瑕疵和設計錯誤上扮演重要角色。
 
 但是，你應該避免把審核當成一勞永逸地的解決方案。 智慧型合約審核不可能發現每一個錯誤，其主要目的是再次進行審查，幫助開發者偵測在開發初期和測試階段沒有發現的問題。 你應該遵循[和審核者合作的最佳案例](https://twitter.com/tinchoabbate/status/1400170232904400897)，製作完整的程式碼記錄，以及新增內嵌備註，才能從智慧型合約審核中獲得最大效益。
 
-#### 漏洞懸賞 {#bug-bounties}
+#### 漏洞懸賞 \{#bug-bounties}
 
 設立漏洞懸賞賞計畫是另一個實現外部程式碼審查的方法。 漏洞懸賞會發放經濟性獎勵給發現應用程式漏洞的個人（通常是白帽駭客）。
 
@@ -100,7 +100,7 @@ contract VendingMachine {
 
 有效的漏洞懸賞獎金機制，應與面臨風險的資金成比例。 就像「[Scaling Bug Bounty（擴大漏洞懸賞）](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)」一文所說，這種方法讓人在財務上有動機盡責揭露，而非利用漏洞。
 
-### 5 開發智慧型合約時遵循最佳案例 {#follow-smart-contract-development-best-practices}
+### 5 開發智慧型合約時遵循最佳案例 \{#follow-smart-contract-development-best-practices}
 
 不能因為有審核和漏洞懸賞就不盡責編寫高品質程式碼。 優良的智慧型合約安全性始於遵循正確的設計和開發流程：
 
@@ -118,11 +118,11 @@ contract VendingMachine {
 
 - 正確記錄程式碼（使用 [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)），並運用簡單易懂的語言詳細描述合約架構。 這樣才容易讓其他人審核和審查你的程式碼。
 
-### 6. 採行健全的災害復原計畫 {#implement-disaster-recovery-plans}
+### 6. 採行健全的災害復原計畫 \{#implement-disaster-recovery-plans}
 
 設計安全的存取控制、採用函數修飾符和其他上述提議，可改善智慧型合約安全，但不能排除惡意入侵的可能性。 建立安全的智慧型合約需要做好「防範錯誤的準備」，以及對攻擊作出有效反應的備援計畫。 正確的災害復原計畫包含下列部分或全部要素：
 
-#### 合約升級 {#contract-upgrades}
+#### 合約升級 \{#contract-upgrades}
 
 雖然以太坊智慧型合約是預設不得變更，但可以透過升級模式來達成某程度的變更。 當重大缺陷迫使舊合約無法使用，而部署新邏輯是最可行的選擇時，就必須升級合約。
 
@@ -134,7 +134,7 @@ contract VendingMachine {
 
 [更多升級合約相關資訊](/developers/docs/smart-contracts/upgrading/)。
 
-#### 緊急停止 {#emergency-stops}
+#### 緊急停止 \{#emergency-stops}
 
 如前所述，即便進行大量審核和測試，仍不可能發現智慧型合約的所有漏洞。 如果已經部署的程式出現漏洞，就不可能修補，因為你無法改變在合約地址執行的程式碼。 而且，升級機制（例如，代理人模式）可能需要時間完成（通常需要不同相關方的同意），因此會給攻擊者更多時間造成更大傷害。
 
@@ -198,7 +198,7 @@ contract EmergencyStop {
 
 緊急停止功能提供處理智慧型合約嚴重漏洞的有效權宜之計。 然而，這種方法需要使用者相信開發者不會基於自身利益啟動緊急停止功能。 面對這種疑慮，可能的解決方法是透過鏈上投票機制、時間鎖定、或多簽錢包核准等分散式方法管理緊急停止功能。
 
-#### 事件監控 {#event-monitoring}
+#### 事件監控 \{#event-monitoring}
 
 [事件](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events)可以追蹤智慧型合約函數調用狀況和監控狀態變數的變化。 理想做法是當某一方執行攸關安全的行動（例如，提領資金）時，讓智慧型合約釋出事件。
 
@@ -206,7 +206,7 @@ contract EmergencyStop {
 
 你也可以選擇現成的監控工具，在有人和你的合約互動時，這些工具會自動傳送警告通知。 這些工具可讓你基於不同的觸發器，例如：交易量、函數調用頻率或涉及特定函數時，建立自訂警告通知。 例如：你可以編寫在單筆交易提款金額超過特定閾值時傳送警告。
 
-### 7. 設計安全治理體系 {#design-secure-governance-systems}
+### 7. 設計安全治理體系 \{#design-secure-governance-systems}
 
 你可能想要藉由移交重要智慧型合約的控制權給社群成員，來分散管理（去中心化）應用程式。 這種情況下，智慧型合約系統將包含一個治理模組，也就是允許社群成員透過鏈上治理體系核准管理行動的機制。 例如，採納升級代理人合約的提案，可由代幣持有人投票決定。
 
@@ -216,7 +216,7 @@ contract EmergencyStop {
 
 深入瞭解[設計安全治理體系](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)和 [去中心化自治組織的不同投票機制](https://hackernoon.com/governance-is-the-holy-grail-for-daos)。
 
-### 8. 將程式碼的複雜性降到最低 {#reduce-code-complexity}
+### 8. 將程式碼的複雜性降到最低 \{#reduce-code-complexity}
 
 傳統的軟體開發者都熟悉 KISS (「保持簡約」)，也就是不要在軟體中引進不必要複雜設計的原則。 這是因為長期以來，人們都認為「複雜系統會發生複雜的故障」，且更容易造成代價高昂的錯誤。
 
@@ -224,9 +224,9 @@ contract EmergencyStop {
 
 另一個建議是編寫小型函數，並將商業邏輯拆分成多個合約，確立模組化合約。 編寫較簡單的程式碼不只能縮小智慧型合約中的受攻擊面，也使判斷整個系統的正確性更簡單，亦能提早偵測可能的設計錯誤。
 
-### 9. 防範一般的智慧型合約漏洞 {#mitigate-common-smart-contract-vulnerabilities}
+### 9. 防範一般的智慧型合約漏洞 \{#mitigate-common-smart-contract-vulnerabilities}
 
-#### 重入攻擊 {#reentrancy}
+#### 重入攻擊 \{#reentrancy}
 
 以太坊虛擬機不允許並行執行，也就是無法同時執行牽涉同一訊息調用的兩個合約。 一個外部調用會終止調用合約的執行和記憶體，直到這個調用返回結果，這時才會繼續正常執行。 這個過程可被正式稱為將[控制流程](https://www.computerhope.com/jargon/c/contflow.htm)轉移到另一個合約。
 
@@ -353,7 +353,7 @@ contract MutexPattern {
 
 你還可以使用[提取款項](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment)系統，要求使用者從智慧型合約提款，而不是使用「推送付款」系統傳送資金至帳戶。 如此一來，就可免除在未知地址上意外啟動程式碼的可能性（也能防止特定阻斷服務攻擊）。
 
-#### 整數下溢與上溢 {#integer-underflows-and-overflows}
+#### 整數下溢與上溢 \{#integer-underflows-and-overflows}
 
 算術運算結果超出可接受數值範圍，必須「退位」至最低代表值時，就是整數上溢。 例如：`uint8` 最多只能儲存相當於 2^8-1=255 的值。 若算術運算結果導致大於 `255` 的值，就屬於上溢，並會將 `uint` 重置為 `0`，類似汽車里程表達到里程數上限 (999999) 時，將重置為 0。
 
@@ -434,7 +434,7 @@ contract Attack {
 
 自 0.8.0 版本起，Solidity 編譯器拒絕使用會導致整數下溢和上溢的程式碼。 然而，使用較低版本編譯器編譯的合約應該檢查涉及算術運算的函數，或使用庫（例如 [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)）來檢查下溢/上溢。
 
-#### 操縱預言機 {#oracle-manipulation}
+#### 操縱預言機 \{#oracle-manipulation}
 
 [預言機](/developers/docs/oracles/)會取得鏈外資訊，並把這些資訊傳到鏈上供智慧型合約使用。 使用預言機，可以設計與鏈外系統（例如資本市場）互通的智慧型合約，大幅拓展應用範圍。
 
@@ -452,9 +452,9 @@ contract Attack {
 
 若你打算在鏈上預言機查詢資產價格，可考慮使用採用時間加權平均價格 (TWAP) 機制的預言機。 [時間加權平均價格預言機](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles)會查詢兩個不同時間點（你可以更改時間點）的資產價格，再根據得到數據的平均值計算現貨價值。 選擇時間較長的價格可保護協定免於價格操縱，因為近期大量的交易下單不會對資產價格造成影響。
 
-## 開發者的智慧型合約安全性資源 {#smart-contract-security-resources-for-developers}
+## 開發者的智慧型合約安全性資源 \{#smart-contract-security-resources-for-developers}
 
-### 分析智慧型合約和驗證程式碼正確性的工具 {#code-analysis-tools}
+### 分析智慧型合約和驗證程式碼正確性的工具 \{#code-analysis-tools}
 
 - **[測試工具和庫](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _一系列執行智慧型合約單元測試、靜態分析和動態分析的產業標準工具和庫。_
 
@@ -468,13 +468,13 @@ contract Attack {
 
 - **[應用程式二進制介面編碼器](https://abi.hashex.org/)** - _對 Solidity 合約的函數和建構函數引數進行編碼的線上免費服務。_
 
-### 監視智慧型合約的工具 {#smart-contract-monitoring-tools}
+### 監視智慧型合約的工具 \{#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一個自動監控和回應智慧型合約事件、函數和交易參數的工具。_
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)**：_當智慧型合約或錢包出現不尋常的和意外事件時，可以獲得即時通知的工具。_
 
-### 智慧型合約的安全管理工具 {#smart-contract-administration-tools}
+### 智慧型合約的安全管理工具 \{#smart-contract-administration-tools}
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _管理智慧型合約運作，包括存取控制、升級、和暫停的介面。_
 
@@ -482,7 +482,7 @@ contract Attack {
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _執行合約所有權、升級、存取控制、治理、暫停等管理功能的合約庫。_
 
-### 智慧型合約審核服務 {#smart-contract-auditing-services}
+### 智慧型合約審核服務 \{#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://consensys.net/diligence/)** - _協助區塊鏈生態系系統中的專案，確保其協定處於可發布狀態，且用於保護使用者的智慧型合約審核服務。_
 
@@ -506,7 +506,7 @@ contract Attack {
 
 - **[Code4rena](https://code4rena.com/)** - _鼓勵智慧型合約安全性專家找出漏洞，並協助提升 Web3 安全性，富競爭力的審核平台。_
 
-### 漏洞懸賞平台 {#bug-bounty-platforms}
+### 漏洞懸賞平台 \{#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _這是智慧型合約和去中心化金融專案漏洞懸賞平台。安全研究員在此審核程式碼、找出漏洞、獲得報酬、使加密貨幣更安全。_
 
@@ -514,7 +514,7 @@ contract Attack {
 
 - **[HackenProof](https://hackenproof.com/)** - _專業的加密貨幣專案（去中心化金融、智慧型合約、錢包、中心化交易所等）漏洞懸賞平台。安全專業人士在此提供分類服務，而研究者可以在提出重要、經過驗證的錯誤報告時獲得報酬。_
 
-### 已知的智慧型合約漏洞和弱點出版品 {#common-smart-contract-vulnerabilities-and-exploits}
+### 已知的智慧型合約漏洞和弱點出版品 \{#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys：已知的智慧型合約攻擊](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _以適合初學者的方式解說最重大的合約漏洞，大部分案例會附上範例程式碼。_
 
@@ -522,7 +522,7 @@ contract Attack {
 
 - **[Rekt](https://rekt.news/)** - _知名加密貨幣駭客和侵入事件的定期更新的出版品，並附上詳細的事後剖析報告。_
 
-### 學習智慧型合約安全性的挑戰 {#challenges-for-learning-smart-contract-security}
+### 學習智慧型合約安全性的挑戰 \{#challenges-for-learning-smart-contract-security}
 
 - **[優質的 BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _區塊鏈安全性的實戰演習、挑戰、和[奪旗](https://www.webopedia.com/definitions/ctf-event/amp/)競賽和解決方案評論精選清單。_
 
@@ -530,7 +530,7 @@ contract Attack {
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _以 Web3/Solidity 為中心的實戰演習，每一個等級都是一個必須被「駭客破解」的智慧型合約。_
 
-### 保護智慧型合約的最佳案例 {#smart-contract-security-best-practices}
+### 保護智慧型合約的最佳案例 \{#smart-contract-security-best-practices}
 
 - **[ConsesSys：以太坊智慧型合約安全性最佳案例](https://consensys.github.io/smart-contract-best-practices/)** - _保護以太坊智慧型合約安全性之準則的完整清單。_
 
@@ -542,7 +542,7 @@ contract Attack {
 
 - **[智慧型合約安全性驗證標準](https://github.com/securing/SCSVS)** - _適用於開發者、架構師、安全性審查者和廠商的標準化智慧型合約安全性 14 點檢查清單。_
 
-### 關於智慧型合約安全性的使用教學 {#tutorials-on-smart-contract-security}
+### 關於智慧型合約安全性的使用教學 \{#tutorials-on-smart-contract-security}
 
 - [如何編寫安全的智慧型合約](/developers/tutorials/secure-development-workflow/)
 

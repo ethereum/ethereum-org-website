@@ -8,7 +8,7 @@ Web2 bezieht sich auf die Version des Internets, die die meisten von uns heute k
 
 Suchen Sie nach einer Einführung für Einsteiger? Schauen Sie sich unsere [Einführung in web3](/web3/) an.
 
-## Web3 – Vorteile {#web3-benefits}
+## Web3 – Vorteile \{#web3-benefits}
 
 Viele Web3-Entwickler haben aufgrund der inhärenten Dezentralisierung von Ethereum beschlossen, dApps zu erstellen:
 
@@ -17,7 +17,7 @@ Viele Web3-Entwickler haben aufgrund der inhärenten Dezentralisierung von Ether
 - Zahlungen sind über den nativen Token, Ether (ETH), eingebaut.
 - Ethereum ist Turing-vollständig. Das bedeutet, dass Sie fast alles programmieren können.
 
-## Praktische Vergleiche {#practical-comparisons}
+## Praktische Vergleiche \{#practical-comparisons}
 
 | Web2                                                                                             | Web3                                                                                                                            |
 | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Viele Web3-Entwickler haben aufgrund der inhärenten Dezentralisierung von Ether
 
 Das bedeutet nicht, dass alle Dienste in eine dApp umgewandelt werden müssen. Diese Beispiele zeigen die wichtigsten Unterschiede zwischen Web2- und Web3-Diensten.
 
-## Web3 – Einschränkungen {#web3-limitations}
+## Web3 – Einschränkungen \{#web3-limitations}
 
 Web3 hat momentan einige Einschränkungen:
 
@@ -36,7 +36,7 @@ Web3 hat momentan einige Einschränkungen:
 - Barrierefreiheit – Die fehlende Integration in moderne Webbrowser macht Web3 für die meisten Benutzer weniger zugänglich.
 - Kosten – Die erfolgreichsten dApps legen sehr kleine Teile ihres Codes auf die Blockchain, da dies teuer ist.
 
-## Zentralisierung vs. Dezentralisierung {#centralization-vs-decentralization}
+## Zentralisierung vs. Dezentralisierung \{#centralization-vs-decentralization}
 
 In der unten stehenden Tabelle finden Sie einige Vor- und Nachteile zentralisierter und dezentralisierter digitaler Netzwerke.
 
@@ -52,7 +52,7 @@ In der unten stehenden Tabelle finden Sie einige Vor- und Nachteile zentralisier
 
 Beachten Sie, dass das allgemeine Muster sind, die nicht auf jedes Netzwerk zutreffen. In der Realität liegt der Grad der Zentralisierung bzw. Dezentralisierung eines Netzwerks in einem Spektrum. Kein Netzwerk ist vollständig zentralisiert oder vollständig dezentralisiert.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Was ist Web3?](/web3/) – _ethereum.org_
 - [Die Architektur einer Web 3.0 Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_

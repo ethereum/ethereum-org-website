@@ -22,11 +22,11 @@ In [part 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) of 
 
 If you have questions at any point feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
-## Step 1: Connect to the Ethereum network {#step-1}
+## Step 1: Connect to the Ethereum network \{#step-1}
 
 There are many ways to make requests to the Ethereum chain. For simplicity, we’ll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without having to run our own nodes. The platform also has developer tools for monitoring and analytics that we’ll take advantage of in this tutorial to understand what’s going on under the hood in our smart contract deployment. If you don’t already have an Alchemy account, [you can sign up for free here](https://dashboard.alchemyapi.io/signup).
 
-## Step 2: Create your app (and API key) {#step-2}
+## Step 2: Create your app (and API key) \{##step-2}
 
 Once you’ve created an Alchemy account, you can generate an API key by creating an app. This will allow us to make requests to the Goerli test network. If you’re not familiar with testnets, check out [this page](/developers/docs/networks/).
 
@@ -40,7 +40,7 @@ Once you’ve created an Alchemy account, you can generate an API key by creatin
 
 3. Click “Create app” and that’s it! Your app should appear in the table below.
 
-## Step 3: Create an Ethereum account (address) {#step-3}
+## Step 3: Create an Ethereum account (address) \{##step-3}
 
 We need an Ethereum account to send and receive transactions. For this tutorial, we’ll use MetaMask, a virtual wallet in the browser used to manage your Ethereum account address. More on [transactions](/developers/docs/transactions/).
 
@@ -48,11 +48,11 @@ You can download and create a MetaMask account for free [here](https://metamask.
 
 ![metamask ropsten example](./metamask-ropsten-example.png)
 
-## Step 4: Add ether from a Faucet {#step-4}
+## Step 4: Add ether from a Faucet \{##step-4}
 
 In order to deploy our smart contract to the test network, we’ll need some fake Eth. To get Eth you can go to the [Goerli faucet](https://goerlifaucet.com/) and log into your Alchemy account and enter your wallet address, then click “Send Me Eth.” It may take some time to receive your fake Eth due to network traffic. (At the time of writing this, it took around 30 minutes.) You should see Eth in your Metamask account soon after!
 
-## Step 5: Check your Balance {#step-5}
+## Step 5: Check your Balance \{##step-5}
 
 To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
@@ -64,7 +64,7 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 >
 > Phew! Our fake money is all there <Emoji text=":money_mouth_face:" size={1} />.
 
-## Step 6: Initialize our project {#step-6}
+## Step 6: Initialize our project \{##step-6}
 
 First, we’ll need to create a folder for our project. Navigate to your command line and type:
 
@@ -108,7 +108,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 Approve the package.json and we’re good to go!
 
-## Step 7: Download [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
+## Step 7: Download [Hardhat](https://hardhat.org/getting-started/#overview) \{##step-7}
 
 Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
 
@@ -120,7 +120,7 @@ npm install --save-dev hardhat
 
 Check out this page for more details on [installation instructions](https://hardhat.org/getting-started/#overview).
 
-## Step 8: Create Hardhat project {#step-8}
+## Step 8: Create Hardhat project \{##step-8}
 
 Inside our project folder run:
 
@@ -150,7 +150,7 @@ Quit
 
 This will generate a `hardhat.config.js` file for us which is where we’ll specify all of the set up for our project (on step 13).
 
-## Step 9: Add project folders {#step-9}
+## Step 9: Add project folders \{##step-9}
 
 To keep our project organized we’ll create two new folders. Navigate to the root directory of your project in your command line and type:
 
@@ -162,7 +162,7 @@ mkdir scripts
 - `contracts/` is where we’ll keep our hello world smart contract code file
 - `scripts/` is where we’ll keep scripts to deploy and interact with our contract
 
-## Step 10: Write our contract {#step-10}
+## Step 10: Write our contract \{##step-10}
 
 You might be asking yourself, when the heck are we going to write code?? Well, here we are, on step 10.
 
@@ -201,7 +201,7 @@ contract HelloWorld {
 
 This is a super simple smart contract that stores a message upon creation and can be updated by calling the `update` function.
 
-## Step 11: Connect MetaMask & Alchemy to your project {#step-11}
+## Step 11: Connect MetaMask & Alchemy to your project \{##step-11}
 
 We’ve created a MetaMask wallet, Alchemy account, and written our smart contract, now it’s time to connect the three.
 
@@ -237,7 +237,7 @@ To actually connect these to our code, we’ll reference these variables in our 
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 
-## Step 12: Install Ethers.js {#step-12-install-ethersjs}
+## Step 12: Install Ethers.js \{##step-12-install-ethersjs}
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](/developers/docs/apis/json-rpc/) with more user friendly methods.
 
@@ -251,7 +251,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 We’ll also require ethers in our `hardhat.config.js` in the next step.
 
-## Step 13: Update hardhat.config.js {#step-13-update-hardhatconfigjs}
+## Step 13: Update hardhat.config.js \{##step-13-update-hardhatconfigjs}
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -279,7 +279,7 @@ module.exports = {
 }
 ```
 
-## Step 14: Compile our contract {#step-14-compile-our-contracts}
+## Step 14: Compile our contract \{##step-14-compile-our-contracts}
 
 To make sure everything is working so far, let’s compile our contract. The `compile` task is one of the built-in hardhat tasks.
 
@@ -291,7 +291,7 @@ npx hardhat compile
 
 You might get a warning about `SPDX license identifier not provided in source file` , but no need to worry about that — hopefully everything else looks good! If not, you can always message in the [Alchemy discord](https://discord.gg/u72VCg3).
 
-## Step 15: Write our deploy script {#step-15-write-our-deploy-scripts}
+## Step 15: Write our deploy script \{##step-15-write-our-deploy-scripts}
 
 Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
 
@@ -327,7 +327,7 @@ const hello_world = await HelloWorld.deploy();
 
 Calling `deploy()` on a `ContractFactory` will start the deployment, and return a `Promise` that resolves to a `Contract`. This is the object that has a method for each of our smart contract functions.
 
-## Step 16: Deploy our contract {#step-16-deploy-our-contract}
+## Step 16: Deploy our contract \{##step-16-deploy-our-contract}
 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 

@@ -12,7 +12,7 @@ summaryPoint2: Technologia, która umożliwia naukowcom pozyskiwanie funduszy, p
 summaryPoint3: Opiera się na otwartych inicjatywach naukowych.
 ---
 
-## Czym jest zdecentralizowana nauka (DeSci)? {#what-is-desci}
+## Czym jest zdecentralizowana nauka (DeSci)? \{#what-is-desci}
 
 Zdecentralizowana nauka (DeSci) jest ruchem, który ma na celu zbudowanie publicznej infrastruktury do finansowania, tworzenia, recenzowania, kredytowania, przechowywania i rozpowszechniania wiedzy naukowej w sposób uczciwy i sprawiedliwy przy użyciu stosu Web3.
 
@@ -24,7 +24,7 @@ Zdecentralizowana nauka umożliwia bardziej zróżnicowane źródła finansowani
 
 <YouTube id="5ORvbCIW39o" />
 
-## Jak DeSci poprawia jakość nauki {#desci-improves-science}
+## Jak DeSci poprawia jakość nauki \{#desci-improves-science}
 
 Lista wybranych kluczowych problemów naukowych oraz sposób, w jaki zdecentralizowana nauka może pomóc w ich rozwiązaniu
 
@@ -39,21 +39,21 @@ Lista wybranych kluczowych problemów naukowych oraz sposób, w jaki zdecentrali
 | Użytkownik jest właścicielem wygenerowanej przez siebie własności intelektualnej (IP) i rozpowszechnia ją na przejrzystych zasadach.                 | Właścicielem IP wygenerowanej przez użytkownika jest jego macierzysta instytucja. Dostęp do IP nie jest przejrzysty. |
 | Dzielenie się wszystkimi badaniami, w tym danymi z nieudanych prób, poprzez udostępnianie wszystkich etapów w łańcuchu.                              | Tendencyjność publikacji oznacza, że badacze chętniej dzielą się eksperymentami, które przyniosły dobre wyniki.      |
 
-## Ethereum i DeSci {#ethereum-and-desci}
+## Ethereum i DeSci \{#ethereum-and-desci}
 
 Zdecentralizowany system naukowy będzie wymagał solidnego bezpieczeństwa, minimalnych kosztów pieniężnych i transakcyjnych oraz bogatego ekosystemu do tworzenia zastosowań. Ethereum zapewnia wszystko, co jest potrzebne do stworzenia zdecentralizowanego systemu naukowego.
 
-## Przykłady zastosowań DeSci {#use-cases}
+## Przykłady zastosowań DeSci \{#use-cases}
 
 DeSci buduje zestaw narzędzi naukowych, aby wprowadzić środowisko akademickie Web2 do świata cyfrowego. Poniżej przedstawiono przykłady zastosowań, jakie Web3 może zaoferować społeczności naukowej.
 
-### Publikowanie {#publishing}
+### Publikowanie \{#publishing}
 
 Publikacje naukowe są szczególnie problematyczne, ponieważ są zarządzane przez wydawnictwa, które polegają na darmowej pracy naukowców, recenzentów i redaktorów, aby stworzyć prace, ale następnie pobierają za nie wygórowane opłaty. Obywatele, którzy zwykle pośrednio zapłacili za dzieło i koszty publikacji poprzez podatki, często nie mogą uzyskać dostępu do tego samego dzieła bez ponownego zapłacenia wydawcy. Łączne opłaty za publikację poszczególnych prac naukowych są często pięciocyfrowe ($USD), podważając całą koncepcję wiedzy naukowej jako [dobra publicznego](https://www.econlib.org/library/Enc/PublicGoods.html), jednocześnie generując ogromne zyski dla małej grupy wydawców.
 
 Istnieją platformy wolnego i otwartego dostępu w postaci serwerów preprintów, [takich jak ArXiv](https://arxiv.org/). Jednak na takich platformach brakuje kontroli jakości, [mechanizmów antysybilistycznych](https://csrc.nist.gov/glossary/term/sybil_attack), a także nie śledzi się na ogół metryk poziomu artykułu. Oznacza to, że są one zwykle używane tylko do upublicznienia pracy przed jej złożeniem u tradycyjnego wydawcy. SciHub również udostępnia opublikowane prace za darmo, ale nie legalnie, i dopiero po tym, jak wydawcy pobiorą już zapłatę i obwarują pracę ścisłymi prawami autorskimi. Jest to istotna luka w przypadku dostępnych dokumentów i danych naukowych z wbudowanym mechanizmem legitymizacji i modelem zachęt. Narzędzia do budowy takiego systemu istnieją w Web3.
 
-### Odtwarzalność i powtarzalność {#reproducibility-and-replicability}
+### Odtwarzalność i powtarzalność \{#reproducibility-and-replicability}
 
 Powtarzalność i odtwarzalność są podstawą odkryć naukowych wysokiej jakości.
 
@@ -62,7 +62,7 @@ Powtarzalność i odtwarzalność są podstawą odkryć naukowych wysokiej jako�
 
 Nowe narzędzia Web3 mogą zagwarantować, że powtarzalność i odtwarzalność są podstawą odkrycia. Można wpleść wysokiej jakości naukę w technologiczną tkankę środowiska akademickiego. Web3 oferuje możliwość tworzenia poświadczeń dla każdego składnika analizy: danych nieprzetworzonych, silnika przetwarzania i wyników aplikacji. Piękno systemów konsensualnych polega na tym, że w przypadku utworzenia zaufanej sieci w celu utrzymania tych komponentów, każdy uczestnik sieci może być odpowiedzialny za odtwarzanie obliczeń i walidację każdego wyniku.
 
-### Finansowanie {#funding}
+### Finansowanie \{#funding}
 
 Obecny standardowy model finansowania nauki polega na tym, że osoby fizyczne lub grupy naukowców składają pisemne wnioski do agencji finansującej. Niewielki panel zaufanych osób ocenia wnioski, a następnie przeprowadza rozmowy z kandydatami przed przyznaniem środków finansowych niewielkiej części wnioskodawców. Oprócz tworzenia wąskich gardeł, które czasem prowadzą do wieloletniego oczekiwania między ubieganiem się o dotację a jej otrzymaniem, model ten jest znany jako wysoce podatny na stronniczość, interesy własne i politykę panelu weryfikacyjnego.
 
@@ -70,7 +70,7 @@ Badania wykazały, że zespoły ds. przeglądu dotacji nie wykonują dobrej prac
 
 Web3 ma potencjał, aby zakłócić ten wadliwy model finansowania poprzez eksperymentowanie z różnymi modelami motywacyjnymi opracowanymi przez DAO i Web3 w szerokim zakresie. [Finansowanie ze środków publicznych obowiązujące wstecz](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [finansowanie kwadratowe](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [zarządzanie DAO](https://www.antler.co/blog/daos-and-web3-governance) i [struktury motywacyjne oparte na tokenach](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) to przykłady narzędzi Web3, które mogą zrewolucjonizować finansowanie nauki.
 
-### Własność i rozwój własności intelektualnej (IP) {#ip-ownership}
+### Własność i rozwój własności intelektualnej (IP) \{#ip-ownership}
 
 Własność intelektualna (IP) stanowi duży problem w tradycyjnej nauce: od utknięcia na uniwersytetach lub niewykorzystania w biotechnologii, po notoryczne trudności w wycenie. Jednak obsługa własności aktywów cyfrowych (takich jak dane naukowe lub artykuły) jest czymś, co Web3 robi wyjątkowo dobrze, używając [niezbywalnych tokenów (NFT)](/nft/).
 
@@ -78,7 +78,7 @@ W ten sam sposób, w jaki NFT mogą przekazywać przychody z przyszłych transak
 
 [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mogą również funkcjonować jako klucz do zdecentralizowanego repozytorium danych o podejmowanych eksperymentach badawczych, a także podłączać się do NFT i [DeFi](/defi/) finansjeryzacji (od frakcjonalizacji po pule pożyczkowe i wycenę wartości). Umożliwia również podmiotom działającym natywnie w łańcuchu, takim jak DAO [VitaDAO](https://www.vitadao.com/), prowadzenie badań bezpośrednio w łańcuchu. Pojawienie się niezbywalnych [tokenów „soulbound”](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) może również odgrywać ważną rolę w DeSci, umożliwiając jednostkom udowodnienie swojego doświadczenia i poświadczeń powiązanych z ich adresem Ethereum.
 
-### Przechowywanie danych, dostęp do nich i ich architektura {#data-storage}
+### Przechowywanie danych, dostęp do nich i ich architektura \{#data-storage}
 
 Dane naukowe mogą być znacznie bardziej dostępne dzięki wzorcom Web3, a rozproszona pamięć masowa umożliwia badaniom przetrwanie kataklizmów.
 
@@ -86,7 +86,7 @@ Punktem wyjścia musi być system dostępny dla każdej zdecentralizowanej tożs
 
 Elastyczne rozwiązania danych Web3 wspierają powyższe scenariusze i stanowią podstawę dla prawdziwie otwartej nauki, gdzie naukowcy mogą tworzyć dobra publiczne bez uprawnień dostępu lub opłat. Publiczne rozwiązania danych Web3, takie jak IPFS, Arweave i Filecoin, są zoptymalizowane do celów decentralizacji. Na przykład dClimate zapewnia powszechny dostęp do danych dotyczących klimatu i pogody, w tym danych pochodzących ze stacji meteorologicznych i modeli prognozowania klimatu.
 
-## Włącz się {#get-involved}
+## Włącz się \{#get-involved}
 
 Przeglądaj projekty i dołącz do społeczności DeSci.
 
@@ -114,7 +114,7 @@ Przeglądaj projekty i dołącz do społeczności DeSci.
 
 Mile widziane są propozycje nowych projektów do umieszczenia na liście — zapoznaj się z naszymi [zasadami umieszczania na liście](/contributing/adding-desci-projects/) i zaczynaj!
 
-## Przeczytaj także {#further-reading}
+## Przeczytaj także \{#further-reading}
 
 - [Wiki DeSci opracowana przez Jocelynn Pearl i Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [Przewodnik po zdecentralizowanej biotechnologii autorstwa Jocelynn Pearl dla 16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
@@ -130,7 +130,7 @@ Mile widziane są propozycje nowych projektów do umieszczenia na liście — za
 - [Finansowanie nauki (Epilog: DeSci i nowe pierwotne kryptowaluty) autorstwa Nadii](https://nadia.xyz/science-funding)
 - [Decentralizacja zakłóca rozwój leków](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-### Materiały wideo {#videos}
+### Materiały wideo \{#videos}
 
 - [Co to jest zdecentralizowana nauka?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Rozmowa Vitalika Buterina z naukowcem Aubreyem de Greyem o przenikaniu się długotrwałych badań i kryptowalut](https://www.youtube.com/watch?v=x9TSJK1widA)

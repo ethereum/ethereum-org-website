@@ -8,21 +8,21 @@ Redes Ethereum são grupos de computadores conectados que se comunicam usando o 
 
 Sua conta Ethereum funcionará nas diferentes redes, mas o saldo da sua conta e o histórico de transações não serão transferidos da rede Ethereum principal. Para fins de teste, é útil saber quais redes estão disponíveis e como obter a rede de testes ETH para brincar. Em geral, por razões de segurança, não é recomendado reutilizar contas da rede principal em redes de testes ou vice-versa.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Você deveria entender as [noções básicas do Ethereum](/developers/docs/intro-to-ethereum/) antes de ler sobre as diferentes redes, pois as redes de teste lhe darão uma versão barata e segura do Ethereum para brincar.
 
-## Redes públicas {#public-networks}
+## Redes públicas \{#public-networks}
 
 As redes públicas são acessíveis a qualquer pessoa no mundo com uma conexão à Internet. Qualquer um pode ler ou criar transações em uma blockchain pública e validar as transações que estão sendo executadas. O consenso entre os pares decide sobre a inclusão de transações e o estado da rede.
 
-### Rede Principal Ethereum {#ethereum-mainnet}
+### Rede Principal Ethereum \{#ethereum-mainnet}
 
 A rede principal é a blockchain de produção Ethereum pública primária, onde as transações de valor real ocorrem no livro-razão distribuído.
 
 Quando as pessoas e as exchanges discutem os preços do ETH, eles estão falando sobre a rede principal ETH.
 
-### Redes de Testes Ethereum {#ethereum-testnets}
+### Redes de Testes Ethereum \{#ethereum-testnets}
 
 Além da rede principal, existem redes de teste públicas. Essas são redes usadas por desenvolvedores de protocolo ou desenvolvedores de contrato inteligente para testar as atualizações de protocolo e também os contratos inteligentes em potencial em um ambiente de produção antes da implantação na rede principal. Pense nisso como um análogo a servidores de produção versus servidores de teste.
 
@@ -36,7 +36,7 @@ ETH em redes de teste (testnets) supostamente não tem valor real; entretanto, t
 
 As duas redes de testes públicas que os desenvolvedores dos clientes estão atualmente mantendo são Sepolia e Goerli. Sepolia é uma rede para desenvolvedores de contrato e aplicativos para testar seus aplicativos. A rede Goerli permite que os desenvolvedores de protocolo testem atualizações de rede e permite que os participantes façam testes usando validadores.
 
-#### Sepolia {#sepolia}
+#### Sepolia \{#sepolia}
 
 \*\*\*\*Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
 
@@ -61,7 +61,7 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 
-#### Goerli _(suporte a longo prazo)_ {#goerli}
+#### Goerli _(suporte a longo prazo)_ \{#goerli}
 
 _Nota: [a rede de testes Goerli está obsoleta](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) e será substituída por [Holesovice](https://github.com/eth-clients/holesovice) em 2023. Considere migrar seus aplicativos para a Sepolia._
 
@@ -90,11 +90,11 @@ Goerli é a rede de testes usada para testar a validação e staking. A rede Goe
 
 Para iniciar um Validador na rede de testes Goerli, use a barra de inicialização ["validador goerli barato"](https://goerli.launchpad.ethstaker.cc/en/) do ethstaker.
 
-### Redes de testes de camada 2 {#layer-2-testnets}
+### Redes de testes de camada 2 \{#layer-2-testnets}
 
 [Camada 2 (L2)](/layer-2/) é um termo coletivo para descrever um conjunto específico de soluções de escalabilidade do Ethereum. Uma camada 2 é uma cadeia de blocos separada que estende o Ethereum e herda as garantias de segurança do Ethereum. Normalmente, as redes de teste de camada 2 estão fortemente associadas às redes de testes públicas do Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Goerli \{#arbitrum-goerli}
 
 Uma rede de testes para [Arbitrum](https://arbitrum.io/).
 
@@ -102,7 +102,7 @@ Uma rede de testes para [Arbitrum](https://arbitrum.io/).
 
 - [Faucet do Chainlink](https://faucets.chain.link/)
 
-#### Goerli otimista {#optimistic-goerli}
+#### Goerli otimista \{#optimistic-goerli}
 
 Uma rede de testes para [Optimism](https://www.optimism.io/).
 
@@ -111,28 +111,28 @@ Uma rede de testes para [Optimism](https://www.optimism.io/).
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-## Redes privadas {#private-networks}
+## Redes privadas \{#private-networks}
 
 Uma rede Ethereum é uma rede privada se seus nós não estiverem conectados a uma rede pública (ex: Rede principal e rede de testes). Neste contexto, privado significa apenas reservado ou isolado, em vez de protegido ou seguro.
 
-### Redes de desenvolvimento {#development-networks}
+### Redes de desenvolvimento \{#development-networks}
 
 Para desenvolver um aplicativo Ethereum, você deve executá-lo em uma rede privada para ver como funciona antes de implantá-lo. Tal como você pode criar um servidor local em seu computador para desenvolvimento Web, você pode criar uma instância local de cadeia de blocos para testar seu dapp. Isso permite uma iteração muito mais rápida do que uma rede de testes pública.
 
 Existem projetos e ferramentas dedicadas a ajudá-lo com isso. Saiba mais sobre [redes de desenvolvimento](/developers/docs/development-networks/).
 
-### Redes de consórcio {#consortium-networks}
+### Redes de consórcio \{#consortium-networks}
 
 O processo de consenso é controlado por um conjunto predefinido de nós confiáveis. Por exemplo, uma rede privada de instituições acadêmicas conhecidas, cada uma administrando um único nó, e os blocos são validados por um limite de signatários dentro da rede.
 
 Se uma rede pública Ethereum é como a internet pública, uma rede de consórcio é como uma intranet privada.
 
-## Ferramentas relacionadas {#related-tools}
+## Ferramentas relacionadas \{#related-tools}
 
 - [Chainlist](https://chainlist.org/) _Lista de redes EVM para conectar carteiras e fornecedores aos identificadores de cadeia e rede apropriados_
 - [/Cadeias baseadas na EVM](https://github.com/ethereum-lists/chains) _repositório do GitHub com metadados de cadeias que alimenta a Chainlist_
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [Proposta: Ciclo de vida previsível da rede de testes do Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [A evolução das redes de testes do Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

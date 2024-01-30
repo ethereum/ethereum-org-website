@@ -21,11 +21,11 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 我们将带您注册 Alchemy 来编写您的第一个 web3 脚本！ 无需区块链的开发经验！
 
-## 1. 注册免费 Alchemy 帐户 {#sign-up-for-a-free-alchemy-account}
+## 1. 注册免费 Alchemy 帐户 \{#sign-up-for-a-free-alchemy-account}
 
 创建 Alchemy 帐户很容易，[点击此处免费注册](https://auth.alchemyapi.io/signup)。
 
-## 2. 创建一个 Alchemy 应用程序 {#create-an-alchemy-app}
+## 2. 创建一个 Alchemy 应用程序 \{#create-an-alchemy-app}
 
 为了与以太坊通信，以及为了使用 Alchemy 的产品，您需要一个 API 密钥来验证您的请求。
 
@@ -43,7 +43,7 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 ![显示用户如何获取API密钥的GIF图](./pull-api-keys.gif)
 
-## 3. 在命令行中发送请求 {#make-a-request-from-the-command-line}
+## 3. 在命令行中发送请求 \{#make-a-request-from-the-command-line}
 
 使用 JSON-RPC 和 curl 通过 Alchemy 与以太坊区块链交互。
 
@@ -71,7 +71,7 @@ _**注意：**将 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainne
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. 设置 Web3 客户端 {#set-up-your-web3-client}
+## 4. 设置 Web3 客户端 \{#set-up-your-web3-client}
 
 **如果您已有客户端，** 将您当前的节点提供商的 URL 更改为您的 API 密钥的 Alchemy URL： `“https://eth-mainnet.alchemyapi.io/v2/your-api-key”`
 
@@ -102,7 +102,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. 编写您的第一个 Web3 脚本！ {#write-your-first-web3-script}
+## 5. 编写您的第一个 Web3 脚本！ \{#write-your-first-web3-script}
 
 现在用一个小的 web3 编程来练习，我们将编写一个简单的脚本，用于打印出以太坊主网中最新的区块高度。
 

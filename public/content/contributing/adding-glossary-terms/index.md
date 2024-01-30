@@ -4,11 +4,11 @@ lang: en
 description: Our criteria for adding new terms to the ethereum.org glossary
 ---
 
-# Adding glossary terms {#contributing-to-ethereumorg-}
+# Adding glossary terms \{#contributing-to-ethereumorg-}
 
 This space is changing every day. New terms are constantly entering the lexicon of Ethereum users, and we need your help providing an accurate, up to date reference for all things Ethereum. Check out the current [glossary](/glossary/) and see below if you want to help!
 
-## Criteria {#criteria}
+## Criteria \{#criteria}
 
 New glossary terms will be assessed by the following criteria:
 
@@ -21,6 +21,6 @@ New glossary terms will be assessed by the following criteria:
 
 ---
 
-## Add your term {#how-decisions-about-the-site-are-made}
+## Add your term \{#how-decisions-about-the-site-are-made}
 
 If you want to add a glossary term to ethereum.org and it meets the criteria, [create an issue on GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

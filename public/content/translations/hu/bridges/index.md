@@ -4,13 +4,13 @@ description: A hidak segítségével a felhasználók különböző blokkláncok
 lang: hu
 ---
 
-# Blokkláncösszekötők {#prerequisites}
+# Blokkláncösszekötők \{#prerequisites}
 
 _A Web3 egy olyan ökoszisztémává fejlődött, ahol L1 blokkláncok és L2 skálázási megoldások találhatók, mind egyedi képességekkel és kompromisszumokkal. Ahogy növekszik a blokkláncprotokollok száma, úgy nő [a kereslet is, hogy az eszközöket láncok között lehessen mozgatni](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Az igény kielégítéséhez összekötőkre vagy hidakra van szükségünk._
 
 <Divider />
 
-## Mik azok az összekötők vagy hidak? {#what-are-bridges}
+## Mik azok az összekötők vagy hidak? \{#what-are-bridges}
 
 A blokklánchidak épp olyanok, mint a fizikai világban. A fizikai híd két helyet köt össze, a blokklánchíd két blokklánc-ökoszisztémát. A hidak kommunikációs lehetőséget teremtenek a blokkláncok között az információk és eszközök transzferálásával.
 
@@ -20,7 +20,7 @@ Vegyünk egy példát:
 
 De mit csináljunk, ha egy ilyen átváltást két különböző blokkláncon akarunk véghezvinni? Tegyük fel, hogy Ön az Ethereum-főhálózatán lévő ETH-t akarja váltani az [Arbitrumon](https://arbitrum.io/) lévő ETH-ra. Ahogy a fenti példában EUR-t váltottunk, szükség van egy olyan mechanizmusra, mely az ETH összegünket átviszi az Ethereumról az Arbitrumra. A hidak teszik lehetővé az ilyen tranzakciókat. Ebben az esetben az [Arbitrum rendelkezik egy saját híddal](https://bridge.arbitrum.io/), ami átviszi az ETH-t a főhálózatról az Arbitrumra.
 
-## Miért van szükség hidakra? {#why-do-we-need-bridges}
+## Miért van szükség hidakra? \{#why-do-we-need-bridges}
 
 Minden blokkláncnak megvannak a maga korlátai. Az Ethereum skálázásához és hogy ki bírja szolgálni a keresletet, rollupokra van szüksége. Más L1 blokkláncok, mint a Solana és az Avalanche, másképpen vannak összerakva, így magasabb tranzakcióátvitelt bírnak, de a decentralizációt áldozzák fel cserébe.
 
@@ -39,23 +39,23 @@ A hidak lehetőséget adnak arra, hogy:
 
 <Divider />
 
-## A hidak alkalmazási területei {#bridge-use-cases}
+## A hidak alkalmazási területei \{#bridge-use-cases}
 
 A következő szcenáriók esetében lehet hidat használni:
 
-### Alacsonyabb tranzakciós költségek {#transaction-fees}
+### Alacsonyabb tranzakciós költségek \{#transaction-fees}
 
 Tegyük fel, hogy Ön rendelkezik ETH-szel az Ethereum főhálózatán, de olcsóbb tranzakciós díjat szeretne, hogy különféle alkalmazásokat tudjon használni. Ha a főhálózatról az ETH-t áthelyezi egy L2 rollupmegoldásra, akkor alacsonyabb díjakat élvezhet.
 
-### Decentralizált alkalmazások (dapp) más blokkláncokon {#dapps-other-chains}
+### Decentralizált alkalmazások (dapp) más blokkláncokon \{#dapps-other-chains}
 
 Tegyük fel, hogy Ön az Aave alkalmazást használja az Ethereum főhálózatán arra, hogy USDT-t kölcsönözzön, de a Polygonon ugyanez az alkalmazás magasabb kamatot ad.
 
-### A blokklánc-ökoszisztémák felfedezése {#explore-ecosystems}
+### A blokklánc-ökoszisztémák felfedezése \{#explore-ecosystems}
 
 Ha Ön ETH összeggel rendelkezik az Ethereum-főhálózaton, de fel szeretne fedezni egy alternatív L1 hálózatot, hogy kipróbálja annak alkalmazásait. A hídon keresztül átviheti az ETH-t a kiválasztott L1-re.
 
-### Saját kriptoeszközök {#own-native}
+### Saját kriptoeszközök \{#own-native}
 
 Amennyiben Ön szeretne bitcoint (BTC) birtokolni, de a pénzeszközei az Ethereum főhálózatán vannak. Az Ethereumon becsomagolt formában szerezhet bitcoint (WBTC). Ugyanakkor a WBTC egy ERC-20 token az Ethereum hálózatán, tehát egy Ethereum verziójú bitcoin, és nem az eredeti eszköz a Bitcoin-blokkláncon. Az eredeti BTC megszerzéséhez egy hídon keresztül át kell vinnie a pénzeszközeit a Bitcoin hálózatára. Ezzel áthelyezi a WBTC-t és átváltja BTC-re. Másik irányból, ha Ön rendelkezik BTC-vel, de azt az Ethereum decentralizált pénzügyi (DeFi) protokolljában akarja használni. Ekkor a hídon a másik irányba mozgatja az eszközeit, BTC-ről WBTC-re váltja, majd azt áthelyezi az Ethereumra.
 
@@ -65,7 +65,7 @@ Amennyiben Ön szeretne bitcoint (BTC) birtokolni, de a pénzeszközei az Ethere
 
 <Divider />
 
-## A hidak típusai {#types-of-bridge}
+## A hidak típusai \{#types-of-bridge}
 
 A hidak többféle kialakításúak és összetettségűek. Általánosságban kétféle lehet: bizalmat igénylő és bizalomigénytől mentes.
 
@@ -95,7 +95,7 @@ Számos hidat biztosító megoldás e két modell közötti módszert alakít ki
 
 <Divider />
 
-## A hidak használatának kockázata {#bridge-risk}
+## A hidak használatának kockázata \{#bridge-risk}
 
 A hidak fejlesztése még a korai stádiumban van. Nagy valószínűséggel az optimális kialakítás még nem született meg. A hidakkal való interakció a következő kockázatokkal jár:
 
@@ -121,7 +121,7 @@ A hidak elengedhetetlenek az Ethereum L2 használatához, illetve ha a felhaszn�
 
 <Divider />
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [EIP-5164: Láncok közötti műveletek végrehajtása](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _2022. június 18. – Brendan Asselstine_
 - [L2 hidak kockázati keretrendszere](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022. július 5. – Bartek Kiepuszewski_

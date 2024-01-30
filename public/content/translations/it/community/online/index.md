@@ -4,11 +4,11 @@ description: Un elenco dei programmi di sovvenzione di tutto l'ecosistema Ethere
 lang: it
 ---
 
-# Community online {#online-communities}
+# Community online \{#online-communities}
 
 Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum online per condividere notizie, parlare degli sviluppi recenti, dibattere problemi tecnici ed immaginare il futuro.
 
-## Forum {#forums}
+## Forum \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - tutto su Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - il lato finanziario di Ethereum, inclusa la DeFi</SocialListItem>
@@ -19,7 +19,7 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - discussioni e aiuto per gli sviluppatori di Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - la bacheca di messaggi più influente per la ricerca criptoeconomica</SocialListItem>
 
-## Stanze di chat {#chat-rooms}
+## Stanze di chat \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - community orientata all'offerta di assistenza per la gestione dei progetti per lo sviluppo di Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - Chat Discord gestita da ETHGlobal: una community online per gli hacker di Ethereum in tutto il mondo</SocialListItem>
@@ -32,7 +32,7 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> - _forum di domande e risposte_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _-forum decentralizzato di domande e risposte_</SocialListItem>
 
-## YouTube e Twitter {#youtube-and-twitter}
+## YouTube e Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Mantieniti aggiornato con le ultime notizie dalla Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link>: Profilo ufficiale della Ethereum Foundation</SocialListItem>

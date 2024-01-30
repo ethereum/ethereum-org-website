@@ -14,7 +14,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Şu Ethereum denen şeyi duydunuz ve konuya daha derinlemesine inmeye hazır mı hissediyorsunuz? Bu gönderi, bazı blok zinciri temellerini hızlı bir şekilde ele alacak, ardından sizi simüle edilmiş bir Ethereum düğümü ile etkileşime sokarak blok verilerini okuyacak, hesap bakiyelerini kontrol edecek ve işlemleri gönderecektir. Bu arada, uygulama oluşturmanın geleneksel yolları ile bu yeni merkeziyetsiz paradigma arasındaki farkları vurgulayacağız.
 
-## (Hafif) ön koşullar {#soft-prerequisites}
+## (Hafif) ön koşullar \{#soft-prerequisites}
 
 Bu gönderi, birçok türden geliştiricileri için ulaşılabilir olmayı arzulamaktadır. [Python araçları](/developers/docs/programming-languages/python/) kullanılacaktır, ama sadece fikirler için bir araç olacaklardır: Bir Python geliştiricisi değilseniz de sorun olmaz. Gelgelelim, Ethereum ile ilgili kısımlara hızlıca geçebilmemiz için bazı şeyleri bildiğinizi varsayacağım.
 
@@ -25,7 +25,7 @@ Varsayımlar:
 - Python'un 3.6 ya da daha yüksek bir sürümü cihazınızda yüklüdür (bir [sanal ortam](https://realpython.com/effective-python-environment/#virtual-environments) kullanılması teşvik edilmektedir), ve
 - Python’un paket indiricisi `pip`'i kullandığınız varsayılır. Buna karşın, eğer varsayımlardan herhangi biri doğru değilse, veya bu makaledeki kodu yeniden uygulamayı düşünmüyorsanız, büyük ihtimalle yine de gayet iyi şekilde takip edebilirsiniz.
 
-## Kısaca blok zincirleri {#blockchains-briefly}
+## Kısaca blok zincirleri \{#blockchains-briefly}
 
 Ethereum'u tanımlamanın birçok yolu bulunsa da Ethereum, özünde bir blok zinciridir. Blok zincirleri bir dizi bloktan oluşur, bu yüzden oradan başlayalım. En basit şekilde, Ethereum blok zincirindeki her bir blok sadece birtakım meta veri ve bir dizi işlemdir. JSON formatında, şöyle bir şeye benzer:
 
@@ -51,7 +51,7 @@ Bu veri yapısı yeni bir şey değildir ama ağı yöneten kurallar (yani eşle
 
 Blok zincirinin, paranın bir kullanıcıdan diğerine gerçekten gönderildiğini doğrulamasının tek yolu, o blok zincirine özgü (yani, blok zinciri tarafından oluşturulan ve yönetilen) bir para birimi kullanmaktır. Ethereum'da bu para birimine ether denir ve Ethereum blok zinciri, hesap bakiyelerinin tek resmi kaydını içerir.
 
-## Yeni bir paradigma {#a-new-paradigm}
+## Yeni bir paradigma \{#a-new-paradigm}
 
 Bu merkeziyetsiz yeni teknoloji yığını, yeni geliştirici araçları ortaya çıkardı. Bu tür araçlar birçok programlama dilinde mevcuttur, ancak biz Python merceğinden bakacağız. Tekrarlamak gerekirse: Python tercih ettiğiniz dil olmasa bile, takip etmek çok zor olmayacaktır.
 
@@ -75,7 +75,7 @@ w3.eth.get_block('latest')
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## Kurulum {#installation}
+## Kurulum \{#installation}
 
 Bu örnekte, sadece bir Python yorumlayıcısı içinde çalışacağız. Herhangi bir dizin, dosya, sınıf veya fonksiyon oluşturmayacağız.
 
@@ -103,7 +103,7 @@ Başlamaya hazırsınız!
 
 Not: `web3[tester]` paketi Python 3.10.xx sürümüne kadar çalışır
 
-## Bir sanal alan (sandbox) başlatın {#spin-up-a-sandbox}
+## Bir sanal alan (sandbox) başlatın \{#spin-up-a-sandbox}
 
 Terminalinizde `ipython` çalıştırarak yeni bir Python ortamı açın. Bu, `python` çalıştırmakla benzerdir ancak başka kullanışlı özellikleri de beraberinde getirir.
 
@@ -123,7 +123,7 @@ In [1]:
 In [1]: from web3 import Web3
 ```
 
-## Web3 modülü ile tanışın {#introducing-the-web3-module}
+## Web3 modülü ile tanışın \{#introducing-the-web3-module}
 
 [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) modülü, Ethereum'a bir geçit olmanın yanı sıra birkaç kolaylık fonksiyonu sunar. Birkaçını keşfedelim.
 
@@ -152,7 +152,7 @@ Out[3]: Decimal('0.5')
 
 Web3 modülündeki diğer yardımcı program yöntemleri arasında veri formatı dönüştürücüleri (örneğin, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), adres yardımcıları (örneğin, [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) ve karma fonksiyonları (örneğin, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)) bulunur. Bunların çoğu serinin devamında ele alınacaktır. Kullanılabilir tüm yöntemleri ve özellikleri görüntülemek için `Web3`. yazıp noktadan sonra iki kez tab tuşuna basarak IPython'un otomatik tamamlama özelliğinden faydalanın.
 
-## Zincirle konuşun {#talk-to-the-chain}
+## Zincirle konuşun \{#talk-to-the-chain}
 
 Kolaylık sağlayan bu yöntemler güzel olsa da artık blokzincire geçelim. Sonraki adım, Web3.py'yi bir Ethereum düğümü ile iletişim kuracak şekilde yapılandırmaktır. Burada IPC, HTTP veya Websocket sağlayıcılarını kullanma seçeneğimiz bulunuyor.
 
@@ -177,7 +177,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 Artık zincirde sörf yapmaya hazırsınız! İnsanlar buna sörf yapmak demezler. Bunu az önce kafamdan uydurdum. Hadi hızlı bir tur atalım.
 
-## Hızlı tur {#the-quick-tour}
+## Hızlı tur \{#the-quick-tour}
 
 İlk önce önemli bir şeyi aradan çıkaralım, bir akıl sağlığı kontrolü:
 
@@ -188,7 +188,7 @@ Out[5]: True
 
 Test sağlayıcısını kullandığımız için bu çok değerli bir test değildir ancak başarısız olursa, muhtemelen `w3` değişkenini başlatırken yanlış bir şeyler yazmışsınızdır. İç parantezleri dahil ettiğinizi iki kez kontrol edin, yani `Web3.EthereumTesterProvider()` şeklinde olsun.
 
-## 1. tur durağı: [hesaplar](/developers/docs/accounts/) {#tour-stop-1-accounts}
+## 1. tur durağı: [hesaplar](/developers/docs/accounts/) \{#tour-stop-1-accounts}
 
 Kolaylık sağlamak için test sağlayıcısı bazı hesaplar oluşturdu ve bunları test ether'i ile önceden yükledi.
 
@@ -219,7 +219,7 @@ Out[8]: Decimal('1000000')
 
 Bir milyon test ether'ı, yine de az buz para değil.
 
-## 2. tur durağı: blok verisi {#tour-stop-2-block-data}
+## 2. tur durağı: blok verisi \{#tour-stop-2-block-data}
 
 Simüle edilmiş blok zincirinin durumuna bir göz atalım:
 
@@ -240,7 +240,7 @@ Bir blok hakkında birçok bilgi döndürülür, ancak burada dikkat edeceğimiz
 - Henüz hiçbir şey yapmadığımız için `transactions` da aynı nedenden dolayı boş bir listedir. Bu ilk blok, sadece zinciri başlatmak için kullanılan bir **boş bloktur**.
 - `parentHash`'in sadece birkaç tane boş bayt olduğuna dikkat edin. Bu, **başlangıç bloğu** (genesis block) olarak da bilinen, zincirdeki ilk blok olduğu anlamına gelir.
 
-## 3. tur durağı: [işlemler](/developers/docs/transactions/) {#tour-stop-3-transactions}
+## 3. tur durağı: [işlemler](/developers/docs/transactions/) \{#tour-stop-3-transactions}
 
 Bekleyen bir işlem olana kadar sıfır blokta kalacağımız için ona bir işlem verelim. Bir hesaptan diğerine birkaç test ether'ı gönderin:
 
@@ -292,6 +292,6 @@ Out[13]: 1000003000000000000000000
 
 <FeaturedText>Not: Genel ağda işlem ücretleri, ağ talebine ve bir işlemin ne kadar hızlı işlenmesini istediğinize göre değişir. Ücretlerin nasıl hesaplandığına dair bir belge görmek istiyorasanız, işlemlerin bir bloğa <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">nasıl dahil edildiğine ilişkin önceki gönderime göz atabilirsiniz</a>.</FeaturedText>
 
-## Ve derin bir nefes alın {#and-breathe}
+## Ve derin bir nefes alın \{#and-breathe}
 
 Bir süredir bu işle uğraştığımız için şu anda biraz mola vermek iyi gelebilir. Derine dalmaya devam ediyoruz ve bu serinin ikinci bölümünde keşfe devam edeceğiz. Yakında ele alacağımız bazı kavramlar: gerçek bir düğüme bağlanma, akıllı sözleşmeler ve jetonlar. Yukarıdakilerle ilgili sorularınız mı var? Bana sorabilirsiniz! Geribildiriminiz konunun ilerleyişini etkileyecektir. [Twitter](https://twitter.com/wolovim) aracılığıyla isteklerinizi iletebilirsiniz.

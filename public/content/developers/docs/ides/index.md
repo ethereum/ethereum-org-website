@@ -6,7 +6,7 @@ lang: en
 
 When it comes to setting up an [integrated development environment (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programming applications on Ethereum is similar to programming any other software project. There are many options to choose from, so at the end of the day, pick the IDE or code editor that best suits your preferences. Most likely the best IDE choice for your Ethereum development is the IDE you already use for traditional software development.
 
-## Web-based IDEs {#web-based-ides}
+## Web-based IDEs \{#web-based-ides}
 
 If you're looking to fiddle with code before you [set up a local development environment](/developers/local-environment/), these web apps are custom-built for Ethereum smart contract development.
 
@@ -30,7 +30,7 @@ If you're looking to fiddle with code before you [set up a local development env
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## Desktop IDEs {#desktop-ides}
+## Desktop IDEs \{##desktop-ides}
 
 Most established IDEs have built plugins to enhance the Ethereum development experience. At a minimum, they provide syntax highlighting for [smart contract languages](/developers/docs/smart-contracts/languages/).
 
@@ -58,13 +58,13 @@ Most established IDEs have built plugins to enhance the Ethereum development exp
 - [Download](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Plugins and extensions {#plugins-extensions}
+## Plugins and extensions \{##plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Ethereum Solidity Language for Visual Studio Code
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Solidity and Hardhat support by the Hardhat team
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Code formatter using prettier
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy's list of Ethereum IDEs_
 

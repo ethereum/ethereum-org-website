@@ -4,7 +4,7 @@ description: Style guide for ethereum.org
 lang: en
 ---
 
-# Ethereum.org style guide {#style-guide}
+# Ethereum.org style guide \{#style-guide}
 
 Content on [ethereum.org](/) is crowdsourced and primarily written by our incredible contributors.
 
@@ -12,11 +12,11 @@ Our primary objective is to educate and inform visitors about Ethereum in a mann
 
 You should read this style guide before you [contribute to ethereum.org](/contributing/).
 
-## Who can submit content to ethereum.org {#who-can-help}
+## Who can submit content to ethereum.org \{#who-can-help}
 
 Anyone! Ethereum.org is entirely open source, and many of its best pages are submitted by curious learners who expanded their notes into documentation pages now living on the site.
 
-## Audience {#audience}
+## Audience \{#audience}
 
 - 60% of our website visitors do not own any ether according to our survey responses
 - 50% of visitors identify themselves as newcomers to the crypto space
@@ -77,7 +77,7 @@ contentPreview="People, businesses, and other organizations who want to understa
 
 </ExpandableCard>
 
-## Best practices {#best-practices}
+## Best practices \{#best-practices}
 
 **Style**
 
@@ -102,7 +102,7 @@ contentPreview="People, businesses, and other organizations who want to understa
 - Limit the length of the article up to 1000 words (1500 max)
 - Reduce the number of hyperlinks to approximately 5 per 1000 words (excluding further reading section at the bottom of the page or product listings)
 
-### Objectivity {#objectivity}
+### Objectivity \{#objectivity}
 
 Ethereum.org documentation (and content at large) aims to maintain a credibly neutral source of truth to inform readers about Ethereum and its ecosystem. Some examples of things that we don't want in the content on ethereum.org:
 
@@ -118,7 +118,7 @@ Ethereum.org documentation (and content at large) aims to maintain a credibly ne
 
 > e.g. _"This political party is better for decentralization because..."_
 
-### Acronyms {#acronyms}
+### Acronyms \{#acronyms}
 
 When introducing an unfamiliar acronym, spell out the full term, and put the acronym in parentheses. Put both the full term and acronym in bold.
 
@@ -126,12 +126,12 @@ When introducing an unfamiliar acronym, spell out the full term, and put the acr
 
 "Ethereum, like Bitcoin, currently uses a consensus protocol called **proof-of-work (PoW)**."
 
-### Consistency {#consistency}
+### Consistency \{#consistency}
 
 Many of the topics covered on ethereum.org are technically complex. To reduce confusion to the reader, terms should be used consistently. For example, don't cycle back-and-forth between proof-of-work and PoW at random.
 
 [Content standardization](/contributing/style-guide/content-standardization/) - Read more about proper usage of terminology and other aspects such as how to properly add an image, attribute etc.
 
-## Anything else? {#anything-else}
+## Anything else? \{#anything-else}
 
 Like all content on ethereum.org, this style guide is an open-source work-in-progress with room for improvement. If there is anything you think should be added to improve this document please [suggest an edit on GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/contributing/style-guide/index.md).

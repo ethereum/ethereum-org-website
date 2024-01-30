@@ -5,7 +5,7 @@ hideEditButton: true
 lang: pl
 ---
 
-# O Fundacji Ethereum {#about-the-ethereum-foundation}
+# O Fundacji Ethereum \{#about-the-ethereum-foundation}
 
 <Logo/>
 
@@ -13,15 +13,15 @@ lang: pl
 
 EF nie jest firmą, ani nawet tradycyjną organizacją non-profit. Ich rolą nie jest kontrolowanie ani kierowanie Ethereum, ani też nie są jedyną organizacją, która finansuje krytyczny rozwój technologii związanych z Ethereum. EF jest częścią znacznie większego [ekosystemu](/community/).
 
-## Inicjatywy Fundacji Ethereum {#ethereum-foundation-initiatives}
+## Inicjatywy Fundacji Ethereum \{#ethereum-foundation-initiatives}
 
-### Program wsparcia ekosystemów {#ecosystem-support-program}
+### Program wsparcia ekosystemów \{#ecosystem-support-program}
 
 [Program wsparcia ekosystemów](https://esp.ethereum.foundation/) istnieje w celu zapewnienia finansowego i niefinansowego wsparcia projektom i podmiotom w ramach większej społeczności Ethereum, w celu przyspieszenia wzrostu ekosystemu. Program wspierania ekosystemów stanowi rozszerzenie pierwotnego programu Ethereum Grants skupiającego się głównie na wsparciu finansowym.
 
 Dowiedz się więcej o programie wsparcia ekosystemów, beneficjentach dotacji z przeszłości oraz o procesie składania wniosków o przyznanie dotacji pod adresem [esp.ethereum.foundation](https://esp.ethereum.foundation/). Możesz również zobaczyć [Ecosystem Support Program Blog](https://blog.ethereum.org/category/ecosystem-support-program/) lub obserwować [@EF_ESP](https://twitter.com/EF_ESP) aby uzyskać ich najnowsze wiadomości i ogłoszenia.
 
-### Devcon {#devcon}
+### Devcon \{#devcon}
 
 Od 2014 r. Fundacja Ethereum organizuje Devcon, coroczną konferencję dla wszystkich deweloperów, badaczy, myślicieli i twórców.
 

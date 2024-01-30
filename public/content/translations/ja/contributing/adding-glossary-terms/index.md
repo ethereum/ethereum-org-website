@@ -4,11 +4,11 @@ lang: ja
 description: ethereum.org用語集に新しい用語を追加する基準
 ---
 
-# 用語集への用語の追加 {#contributing-to-ethereumorg-}
+# 用語集への用語の追加 \{#contributing-to-ethereumorg-}
 
 この世界は日々変化しています。 イーサリアムでは常に新しい用語が生まれ続けるため、イーサリアムに関する正確で最新のリファレンスを提供できるよう、皆様のご協力が必要です。 最新の[用語集](/glossary/)をチェックし、ご貢献いただける場合は、以下を参照してください。
 
-## 基準 {#criteria}
+## 基準 \{#criteria}
 
 新しい用語は以下の基準に基づいて審査されます。
 
@@ -21,6 +21,6 @@ description: ethereum.org用語集に新しい用語を追加する基準
 
 ---
 
-## 用語の追加 {#how-decisions-about-the-site-are-made}
+## 用語の追加 \{#how-decisions-about-the-site-are-made}
 
 上記の基準を満たす用語の追加をご希望の場合は、 [GitHub で問題を作成](https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_glossary_term.md)してください

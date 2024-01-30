@@ -6,7 +6,7 @@ lang: fr
 
 Lorsqu'un nouveau nœud rejoint le réseau Ethereum, il doit se connecter aux nœuds déjà présents sur ledit réseau dans le but de découvrir de nouveaux pairs. Ces points d'entrée dans le réseau Ethereum sont appelés bootnodes ou nœuds de démarrage. Les clients disposent généralement d'une liste de nœuds de démarrage codée en dur. Ces « bootnodes » sont généralement gérés par l'équipe de développement de l'Ethereum Foundation ou via les équipes clients elles-mêmes. À noter que ces nœuds de démarrage sont bien distincts des nœuds statiques. Les nœuds statiques sont appelés maintes et maintes fois, tandis que les nœuds de démarrage ne sont sollicités que dans le cas où il n'y a pas assez de pairs auxquels se connecter, et qu'un nœud se trouve dans le besoin d'amorcer de nouvelles connexions.
 
-## Se connecter à un nœud de démarrage {#connect-to-a-bootnode}
+## Se connecter à un nœud de démarrage \{#connect-to-a-bootnode}
 
 La plupart des clients ont une liste de nœuds de démarrage intégrée, mais il se peut que vous souhaitiez exécuter votre propre nœud de démarrage, ou encore, prendre un nœud qui ne soit pas issu de la liste codée en dur du client. Dans ce cas, vous pouvez les mentionner comme suit au démarrage de votre client (exemple pour Geth, veuillez vérifier la documentation de votre client) :
 
@@ -14,7 +14,7 @@ La plupart des clients ont une liste de nœuds de démarrage intégrée, mais il
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 ```
 
-## Exécuter un nœud de démarrage {#run-a-bootnode}
+## Exécuter un nœud de démarrage \{#run-a-bootnode}
 
 Les nœuds de démarrage sont des nœuds complets qui ne se trouvent pas derrière une NAT ([Traduction des adresses réseau](https://www.geeksforgeeks.org/network-address-translation-nat/)). Tout nœud complet peut servir de nœud de démarrage tant qu'il reste accessible au public.
 
@@ -24,7 +24,7 @@ L'enode est généralement régénéré lors de chaque redémarrage, alors assur
 
 Afin d'être un nœud de démarrage performant, il est de bon augure d'augmenter le nombre maximum d'homologues qui peuvent se connecter à ce nœud. L'exécution d'un nœud de démarrage accompagné par de nombreux pairs, augmentera considérablement les besoins en bande passante.
 
-## Nœuds de démarrage disponibles {#available-bootnodes}
+## Nœuds de démarrage disponibles \{#available-bootnodes}
 
 Une liste des nœuds de démarrage intégrés à go-ethereum peut être consultée [ici.](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23) Ces nœuds de démarrage sont gérés par l'Ethereum Foundation et l'équipe go-ethereum.
 

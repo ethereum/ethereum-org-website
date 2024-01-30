@@ -42,7 +42,7 @@ interface IERC20 {
 
 Burada her bir fonksiyonun ne işe yaradığının satır satır açıklaması mevcuttur. Bundan sonra bir ERC-20 token'ının basit bir uygulamasını göstereceğiz.
 
-## Getters {#getters}
+## Getters \{#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -62,7 +62,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 ERC-20 standartı, bir adresin başka bir adresten token alabilmesi için ödenek vermesine izin verir. Bu alıcı, `spender` adresinin `owner` adresinin adına harcayabileceği kalan token'ların sayısını döndürür. Bu fonksiyon bir alıcıdır, sözleşmenin durumunu değiştirmez ve varsayılan olarak 0 döndürür.
 
-## İşlevler {#functions}
+## İşlevler \{#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -82,7 +82,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 Ödenek mekanizmasını kullanarak `amount` miktarında tokeni `sender` adresinden `recipient` adresine aktarır. miktar bunun sonrasında çağıranın ödeneğinden azaltılır. Bu fonksiyon `Transfer` olayını tetikler.
 
-## Olaylar {#events}
+## Olaylar \{#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -98,7 +98,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 Bu olay, token miktarının (`value`) `spender` tarafından kullanılması için `owner` tarafından izin verildiğinde tetiklenir.
 
-## Basit bir ERC-20 token uygulaması {#a-basic-implementation-of-erc-20-tokens}
+## Basit bir ERC-20 token uygulaması \{#a-basic-implementation-of-erc-20-tokens}
 
 Bu, ERC-20 token'ınızı temellendirmek için en basit koddur:
 

@@ -8,7 +8,7 @@ lang: en
 
 It is important to make the distinction between "source code verification" and "[formal verification](/developers/docs/smart-contracts/formal-verification/)". Source code verification, which will be explained in detail below, refers to verifying that the given source code of a smart contract in a high-level language (e.g. Solidity) compiles to the same bytecode to be executed at the contract address. However, formal verification describes verifying the correctness of a smart contract, meaning the contract behaves as expected. Although context-dependent, contract verification usually refers to source code verification.
 
-## What is source code verification? {#what-is-source-code-verification}
+## What is source code verification? \{#what-is-source-code-verification}
 
 Before deploying a smart contract in the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/), developers [compile](/developers/docs/smart-contracts/compiling/) the contract’s source code—instructions [written in Solidity](/developers/docs/smart-contracts/languages/) or another high-level programming language—to bytecode. As the EVM cannot interpret high-level instructions, compiling source code to bytecode (i.e., low-level, machine instructions) is necessary for executing contract logic in the EVM.
 
@@ -16,7 +16,7 @@ Source code verification is comparing a smart contract’s source code and the c
 
 Smart contract verification enables investigating what a contract does through the higher-level language it is written in, without having to read machine code. Functions, values, and usually the variable names and comments remain the same with the original source code that is compiled and deployed. This makes reading code much easier. Source verification also makes provision for code documentation, so that end-users know what a smart contract is designed to do.
 
-### What is full verification? {#full-verification}
+### What is full verification? \{##full-verification}
 
 There are some parts of the source code that do not affect the compiled bytecode such as comments or variable names. That means two source codes with different variable names and different comments would both be able to verify the same contract. With that, a malicious actor can add deceiving comments or give misleading variable names inside the source code and get the contract verified with a source code different than the original source code.
 
@@ -26,9 +26,9 @@ The metadata file contains information about the compilation of the contract inc
 
 This type of verification that leverages the metadata hash is referred to as **"[full verification](https://docs.sourcify.dev/docs/full-vs-partial-match/)"** (also "perfect verification"). If the metadata hashes do not match or are not considered in verification it would be a "partial match", which currently is the more common way to verify contracts. It is possible to [insert malicious code](https://samczsun.com/hiding-in-plain-sight/) that wouldn't be reflected in the verified source code without full verification. Most developers are not aware of the full verification and don't keep the metadata file of their compilation, hence partial verification has been the de facto method to verify contracts so far.
 
-## Why is source code verification important? {#importance-of-source-code-verification}
+## Why is source code verification important? \{##importance-of-source-code-verification}
 
-### Trustlessness {#trustlessness}
+### Trustlessness \{##trustlessness}
 
 Trustlessness is arguably the biggest premise for smart contracts and [decentralized applications (dapps)](/developers/docs/dapps/). Smart contracts are “immutable” and cannot be altered; a contract will only execute the business logic defined in the code at the time of deployment. This means developers and enterprises cannot tamper with a contract's code after deploying on Ethereum.
 
@@ -38,13 +38,13 @@ Projects reduce trust assumptions by publishing the source code of their contrac
 
 Source code verification tools provide guarantees that a smart contract’s source code files matches the assembly code. The result is a trustless ecosystem, where users don’t blindly trust third parties and instead verify code before depositing funds into a contract.
 
-### User Safety {#user-safety}
+### User Safety \{##user-safety}
 
 With smart contracts, there’s usually a lot of money at stake. This calls for higher security guarantees and verification of a smart contract’s logic before using it. The problem is that unscrupulous developers can deceive users by inserting malicious code in a smart contract. Without verification, malicious smart contracts can have [backdoors](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), controversial access control mechanisms, exploitable vulnerabilities, and other things that jeopardize user safety that would go undetected.
 
 Publishing a smart contract's source code files makes it easier for those interested, such as auditors, to assess the contract for potential attack vectors. With multiple parties independently verifying a smart contract, users have stronger guarantees of its security.
 
-## How to verify source code for Ethereum smart contracts {#source-code-verification-for-ethereum-smart-contracts}
+## How to verify source code for Ethereum smart contracts \{##source-code-verification-for-ethereum-smart-contracts}
 
 [Deploying a smart contract on Ethereum](/developers/docs/smart-contracts/deploying/) requires sending a transaction with a data payload (compiled bytecode) to a special address. The data payload is generated by compiling the source code, plus the [constructor arguments](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) of the contract instance appended to the data payload in the transaction. Compilation is deterministic, meaning it always produces the same output (i.e., contract bytecode) if the same source files, and compilation settings (e.g. compiler version, optimizer) are used.
 
@@ -64,11 +64,11 @@ Verifying a smart contract basically involves the following steps:
 
 Note that this is a simplistic description of verification and there are many exceptions that would not work with this such as having [immutable variables](https://docs.sourcify.dev/docs/immutables/).
 
-## Source code verification tools {#source-code-verification-tools}
+## Source code verification tools \{##source-code-verification-tools}
 
 The traditional process of verifying contracts can be complex. This is why we have tools for verifying source code for smart contracts deployed on Ethereum. These tools automate large parts of the source code verification and also curate verified contracts for the benefits of users.
 
-### Etherscan {#etherscan}
+### Etherscan \{##etherscan}
 
 Although mostly known as an [Ethereum blockchain explorer](/developers/docs/data-and-analytics/block-explorers/), Etherscan also offers a [source code verification service](https://etherscan.io/verifyContract) for smart contract developers and users.
 
@@ -80,7 +80,7 @@ Etherscan is the most used tool for verifying contracts. However, Etherscan's co
 
 [More on verifying contracts on Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
-### Sourcify {#sourcify}
+### Sourcify \{##sourcify}
 
 [Sourcify](https://sourcify.dev/#/verifier) is another tool for verifying contracts that is open-sourced and decentralized. It is not a block explorer and only verifies contracts on [different EVM based networks](https://docs.sourcify.dev/docs/chains). It acts as a public infrastructure for other tools to build on top of it, and aims to enable more human-friendly contract interactions using the [ABI](/developers/docs/smart-contracts/compiling/#web-applications) and [NatSpec](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) comments found in the metadata file.
 
@@ -90,7 +90,7 @@ Additionally, one can also retrieve the source code files over IPFS, as IPFS has
 
 [More on verifying contracts on Sourcify](https://blog.soliditylang.org/2020/06/25/sourcify-faq/).
 
-### Tenderly {#tenderly}
+### Tenderly \{##tenderly}
 
 The [Tenderly platform](https://tenderly.co/) enables Web3 developers to build, test, monitor, and operate smart contracts. Combining debugging tools with observability and infrastructure building blocks, Tenderly helps developers accelerate smart contract development. To fully enable Tenderly features, developers need to [perform source code verification](https://docs.tenderly.co/monitoring/contract-verification) using several methods.
 
@@ -102,6 +102,6 @@ When verifying contracts through the Dashboard, you need to import the source fi
 
 Using the Tenderly Hardhat plugin allows for more control over the verification process with less effort, enabling you to choose between automatic (no-code) and manual (code-based) verification.
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Verifying contract source code](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

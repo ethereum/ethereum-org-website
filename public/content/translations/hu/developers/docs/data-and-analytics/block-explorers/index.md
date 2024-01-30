@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 A blokkfelfedezők a portálod az Ethereum adataihoz. Használatukkal valós idejű adatokat kaphatsz blokkokról, tranzakciókról, bányászokról, számlákról és más on-chain tevékenységről.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy értelmezni tudd az adatokat, melyet egy blokkfelfedező biztosít neked. Kezdjen itt: [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/).
 
-## Szolgáltatások {#services}
+## Szolgáltatások \{#services}
 
 - [Etherscan](https://etherscan.io/) –_ elérhető kínai, koreai, orosz és japán nyelven is_
 - [Beaconcha.in](https://beaconcha.in/)
@@ -26,13 +26,13 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 - [EthVM](https://www.ethvm.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
-## Adat {#data}
+## Adat \{#data}
 
 Az Ethereum tervezése folytán transzparens, így minden ellenőrizhető. A blokkfelfedezők egy felületet biztosítanak, hogy ez az információ elérhető legyen. És ez igaz az Ethereum főhálózatára és a teszt hálózatokra, ha szükséged van az adatokra. Az adatok végrehajtási adatokra és konszenzusadatokra oszthatók. A „végrehajtási adatok” megnevezés egy konkrét blokkban végrehajtott tranzakciókra vonatkoznak. A „konszenzusadatok” megnevezés magukra a blokkokra és a blokkokat előterjesztő validátorokra vonatkozik.
 
 Itt egy összefoglaló azokról az adatokról, melyet egy blokkfelfedezőről megszerezhetsz.
 
-### Végrehajtási adatok {#execution-data}
+### Végrehajtási adatok \{#execution-data}
 
 Az Ethereum hálózata minden 12 másodpercben új blokkal bővül (kivéve, ha a blokkelőterjesztő elszalasztja a lehetőségét), így van egy közel állandó adatfolyam, amely hozzáadódik a blokkfelfedezőkhöz. A blokkok sok fontos adatot tartalmaznak, melyeket hasznosnak találhatsz:
 
@@ -56,7 +56,7 @@ Az Ethereum hálózata minden 12 másodpercben új blokkal bővül (kivéve, ha 
 - Anyahash – az aktuális blokk előtt kiadott blokk hashértéke.
 - StateRoot – A Merkle-fa gyökérhash-értéke, amely a rendszer teljes állapotát tárolja.
 
-### Üzemanyag {#gas}
+### Üzemanyag \{#gas}
 
 A blokkfelfedezők nemcsak a tranzakciók és blokkok gasfelhasználásáról adnak információt, hanem némelyik a hálózat aktuális gasárairól is tájékoztat. Ez segít megérteni a hálózathasználatot, biztonságos tranzakciókat indítani, és nem túlkölteni a gast. Keressen olyan API-kat, amelyek segítenek felvinni ezt az információt a terméke felületére. A gasspecifikus adat a következőket fedi le:
 
@@ -67,7 +67,7 @@ A blokkfelfedezők nemcsak a tranzakciók és blokkok gasfelhasználásáról ad
 - gasfogyasztó szerződések – más szóval olyan népszerű termékek, amelyeket sokat használnak a hálózaton.
 - gasköltő számlák – más szóval a rendszeres hálózathasználók.
 
-### Tranzakciók {#transactions}
+### Tranzakciók \{#transactions}
 
 A blokkfelfedezők bevett eszközzé váltak az emberek kezében, hogy nyomon kövessék a tranzakcióik alakulását. Ennek az az oka, hogy az elérhető részletesség extra bizonyosságot nyújt. A tranzakcióadatok a következőket tartalmazzák:
 
@@ -91,7 +91,7 @@ A blokkfelfedezők bevett eszközzé váltak az emberek kezében, hogy nyomon k�
 - Nonce – a `from` cím tranzakciószáma (ne feledje, hogy a számozás nullánál kezdődik, így a `100`-as nonce valójában az adott számláról küldött 101. tranzakciót jelenteni).
 - Bemeneti adat – a tranzakció által megkövetelt bármely extra adat.
 
-### Számlák {#accounts}
+### Számlák \{#accounts}
 
 Egy adott számláról rengeteg adat elérhető. Ezért gyakran javasoljuk több számla használatát, hogy az eszközök és az érték ne legyen könnyen követhető. Vannak azonban fejlesztés alatt álló megoldások, amelyek nagyobb védelmet nyújtanak a tranzakció- és számlaadatoknak. De most nézzük meg a számlákról elérhető adatokat:
 
@@ -114,7 +114,7 @@ Az okosszerződés-számlák rendelkeznek az összes adattal, amivel a felhaszn�
 - Szerződés létrehozási kódja – az okosszerződés lefordított bájtkódja – akkor jön létre, amikor Ön Solidityben vagy Vyperben stb. írt okosszerződést fordít.
 - Szerződésesemények – az okosszerződésben lehívott módszerek előzményei. Alapvetően azt mutatja meg, hogyan és milyen gyakran használják a szerződést.
 
-### Tokenek {#tokens}
+### Tokenek \{#tokens}
 
 A token egy szerződéstípus, így az okosszerződésekhez hasonló adatokkal rendelkezik. De mivel van értéke és lehet vele kereskedni, ezért további adatpontjai is vannak:
 
@@ -128,7 +128,7 @@ A token egy szerződéstípus, így az okosszerződésekhez hasonló adatokkal r
 - Szerződéscím – a fő hálózatra feltelepített token címe.
 - Tizedesjegyek – az ERC-20 tokenek oszthatók és vannak tizedes helyeik.
 
-### Hálózat {#network}
+### Hálózat \{#network}
 
 Egyes blokkadatok holisztikusabb módon foglalkoznak az Ethereum-hálózat egészségével.
 
@@ -138,9 +138,9 @@ Egyes blokkadatok holisztikusabb módon foglalkoznak az Ethereum-hálózat egés
 - Teljes ETH-kínálat – a forgalomban lévő ETH-mennyiség – ne feledje, hogy minden egyes blokk létrejöttével új ETH jön létre blokkjutalom formájában.
 - Piaci kapitalizáció – számítása: árfolyam × kínálat.
 
-## Konszenzusréteg-adatok {#consensus-layer-data}
+## Konszenzusréteg-adatok \{#consensus-layer-data}
 
-### Korszak {#epoch}
+### Korszak \{#epoch}
 
 Biztonsági okokból minden korszak végén (vagyis 6,4 percenként) véletlenszerűen összeállított validátorbizottságok jönnek létre. A korszakadatok a következőket tartalmazzák:
 
@@ -155,7 +155,7 @@ Biztonsági okokból minden korszak végén (vagyis 6,4 percenként) véletlensz
 - Átlagos validátoregyenleg – az aktív validátorok átlagos egyenlege.
 - Slotok – a korszakban lévő slotok száma (a slotok egy érvényes blokkot tartalmaznak).
 
-### Slot {#slot}
+### Slot \{#slot}
 
 A slotok blokklétrehozási lehetőségek. Az egyes slotokra elérhető adat a következőket tartalmazza:
 
@@ -180,7 +180,7 @@ A slotok blokklétrehozási lehetőségek. Az egyes slotokra elérhető adat a k
 - Megvágások – a blokkelőterjesztőknek és tanúsítóknak kirótt büntetések száma.
 - Szavazatok – a validátorok, akik a blokkra szavaztak ebben a slotban.
 
-### Blokkok {#blocks-1}
+### Blokkok \{#blocks-1}
 
 A proof-of-stake mechanizmus az időt slotokra és korszakokra osztja. Tehát ez új adatokat jelent!
 
@@ -189,7 +189,7 @@ A proof-of-stake mechanizmus az időt slotokra és korszakokra osztja. Tehát ez
 - Slot – a slot, amelyben a blokkot előterjesztették.
 - Tanúsítások – a slotban foglalt tanúsítások száma. A tanúsítások olyanok, mint a szavazatok, amelyek azt jelzik, hogy a blokk már továbbítható a Beacon láncra.
 
-### Validátorok {#validators}
+### Validátorok \{#validators}
 
 A validátorok felelnek a blokkok előterjesztéséért és tanúsításáért a slotokon belül.
 
@@ -205,7 +205,7 @@ A validátorok felelnek a blokkok előterjesztéséért és tanúsításáért a
 - Tanúsítások – a validátor által biztosított tanúsítások.
 - Letétek – a küldő címe, a tranzakció hashértéke, a blokk száma, időbélyegzője, a validátori letét összege és állapota.
 
-### Tanúsítások {#attestations}
+### Tanúsítások \{#attestations}
 
 A tanúsítások „igen” szavazatok arra, hogy a blokkot a lánchoz adják. Az adataik kapcsolódnak a tanúsítások nyilvántartásához és a tanúsító validátorokhoz.
 
@@ -218,7 +218,7 @@ A tanúsítások „igen” szavazatok arra, hogy a blokkot a lánchoz adják. A
 - Cél – a legutolsó korszakhatárra mutat.
 - Aláírás
 
-### Hálózat {#network-1}
+### Hálózat \{#network-1}
 
 A konszenzusréteg felső szintű adatai a következők:
 
@@ -229,7 +229,7 @@ A konszenzusréteg felső szintű adatai a következők:
 - Letétbe helyezett ETH – a hálózaton letétbe helyezett ETH-mennyiség.
 - Átlagos egyenleg – a validátorok átlagos ETH-egyenlege.
 
-## Blokk felfedezők {#block-explorers}
+## Blokk felfedezők \{#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – egy blokkfelfedező, amelyben adatokat kérhet le az Ethereum-főhálózatról és a Goerli tesztelőhálózatról.
 - [Beaconcha.in](https://beaconcha.in/) – egy nyílt forráskódú blokkfelfedező az Ethereum főhálózatra és a Goerli teszthálózatra
@@ -238,11 +238,11 @@ A konszenzusréteg felső szintű adatai a következők:
 - [Ethplorer](https://ethplorer.io/) – egy blokkfelfedező, amely az Ethereum-főhálózaton és a Kovan tesztelőhálózaton található tokenekre fókuszál
 - [Rantom](https://rantom.app/) – egy felhasználóbarát, nyílt forráskódú DeFi- és NFT-tranzakciómegtekintő a részletesebb betekintéshez
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 _Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [Tranzakciók](/developers/docs/transactions/)
 - [Fiókok](/developers/docs/accounts/)

@@ -6,15 +6,15 @@ lang: zh
 
 最大可提取价值 (MEV) 是指通过在区块中添加和排除交易并更改区块中的交易顺序，可以从区块生产中提取的超过标准区块奖励和燃料费用的最大值。
 
-## 矿工可提取价值 {#miner-extractable-value}
+## 矿工可提取价值 \{#miner-extractable-value}
 
 最大可提取价值首先应用于[工作量证明](/developers/docs/consensus-mechanisms/pow/)背景下，最初称为“矿工可提取价值”。 这是因为在工作量证明中，矿工掌握了交易的包含、排除和顺序。 然而，自从通过[合并](/roadmap/merge/)过渡到权益证明以来，验证者一直负责这些角色，并且挖矿不再是以太坊协议的一部分。 但是，价值提取方法仍然存在，因此现在使用的是术语“最大可提取价值”。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 确保你已熟悉[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)、[权益证明](/developers/docs/consensus-mechanisms/pos)和[燃料](/developers/docs/gas/)。 熟悉 [dapps](/dapps/) 和 [DeFi](/defi/) 也很有帮助。
 
-## MEV 提取 {#mev-extraction}
+## MEV 提取 \{#mev-extraction}
 
 从理论上讲，最大可提取价值完全属于验证者，因为他们是唯一可以保证执行有利可图的最大可提取价值机会的一方。 但实际上，大部分 MEV 是由称为“搜索人”的独立网络参与者提取的。 搜索人在区块链数据上运行复杂的算法来检测盈利的 MEV 机会，并且有机器人自动将这些盈利交易提交到网络。
 
@@ -22,25 +22,25 @@ lang: zh
 
 这样一来，对于一些竞争激烈的最大可提取价值机会，例如[去中心化交易所套利](#mev-examples-dex-arbitrage)，搜索者可能不得不将其最大可提取价值总收入的 90% 甚至更多作为燃料费用支付向验证者，因为很多人都想进行同样有利可图的套利交易。 这是因为，确保套利交易运行的唯一方法是提交最高 gas 费用的交易。
 
-### 燃料高尔夫 {#mev-extraction-gas-golfing}
+### 燃料高尔夫 \{#mev-extraction-gas-golfing}
 
 这种动态使得“燃料高尔夫”——编程交易——能够使用最少数量的燃料——这成为一种竞争优势。因为它允许搜索人设置较高的燃料价格，同时保持总燃料费不变(因为使用燃料费 = 燃料价格\* 燃料用量)。
 
 一些著名的燃料高尔夫技术包括：使用用长串零开头的地址(如：[0x0000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306))，因为他们的需要的存储空间较少（因而燃料也减少）；并留下很小 [ERC-20](/developers/docs/standards/tokens/erc-20/) 令牌余额在合约中，因为相比于更新储存插槽，初始化存储插槽需要更多的燃料（余额为 0 时）。 寻找如何更多的减少 gas 使用是搜索人在积极研究的一个领域。
 
-### 通用领跑者 {#mev-extraction-generalized-frontrunners}
+### 通用领跑者 \{#mev-extraction-generalized-frontrunners}
 
 一些搜索人并没有编写复杂的算法来检测盈利的 MEV 机会，而是运行通用的领跑者。 通用的领跑者是监控内存池以检测盈利交易的机器人。 领跑者将复制潜在的盈利交易代码，用领跑者的地址替换其地址。然后在本地执行交易，重复检查修改后的交易是否给领跑者地址带来利润。 如果交易确实有利可图，领跑者将以更替地址和更高的燃料价格提交修改后的交易。“领跑”原始交易并获取原始搜索人的 MEV。
 
-### Flashbots {#mev-extraction-flashbots}
+### Flashbots \{#mev-extraction-flashbots}
 
 Flashbots 是一个独立项目，它通过一项服务扩展执行客户端，该服务允许搜索者将最大可提取价值交易提交给验证者，而无需将它们透露给公共内存池。 这就防止了交易被通用领跑者领跑。
 
-## MEV 相关案例 {#mev-examples}
+## MEV 相关案例 \{#mev-examples}
 
 最大可提取价值以几种方式出现在区块链上。
 
-### 去中心化交易所 (DEX) 套利 {#mev-examples-dex-arbitrage}
+### 去中心化交易所 (DEX) 套利 \{#mev-examples-dex-arbitrage}
 
 [去中心化交易所](/glossary/#dex) (DEX) 套利是最简单和最著名的最大可提取价值机会。 因此，它也是竞争最激烈的。
 
@@ -48,7 +48,7 @@ Flashbots 是一个独立项目，它通过一项服务扩展执行客户端，�
 
 [这是一个有利可图的套利交易示例](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4)，在此交易中，一名搜索者利用以太币/DAI 对在 Uniswap 和 Sushiswap 的不同价格，将 1, 000 个以太币变成了 1,045 个以太币。
 
-### 清算 {#mev-examples-liquidations}
+### 清算 \{#mev-examples-liquidations}
 
 借贷协议清算提供了另一个众所周知的最大可提取价值机会。
 
@@ -60,7 +60,7 @@ Maker 和 Aave 等借贷协议要求用户存入一些抵押品（例如以太�
 
 搜索人竞相以最快的速度解析区块链数据，以确定哪些借款人可以被清算，并成为第一个提交清算交易并自行收取清算费的人。
 
-### 夹心交易 {#mev-examples-sandwich-trading}
+### 夹心交易 \{#mev-examples-sandwich-trading}
 
 夹心交易是另外一种 MEV 提取的常用方法。
 
@@ -70,7 +70,7 @@ Maker 和 Aave 等借贷协议要求用户存入一些抵押品（例如以太�
 
 然而，夹心交易风险很高，因为它不是原子交易（不像上文所述的 DEX 套利），而且容易受到 [salmonella 攻击](https://github.com/Defi-Cartel/salmonella)。
 
-### NFT MEV {#mev-examples-nfts}
+### NFT MEV \{#mev-examples-nfts}
 
 NFT 领域的 MEV 是一种新兴现象，而且不一定能赚钱。
 
@@ -80,23 +80,23 @@ NFT 领域的 MEV 是一种新兴现象，而且不一定能赚钱。
 
 NFT MEV 的一个显著例子发生在一个搜寻者花费 700 万美元来[购买](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5)价格底线的每一个 Cryptopunk。 一位区块链研究员[在 Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538)上解释了买家是如何与 MEV 供应商合作以保持其购买的秘密。
 
-### 长尾 {#mev-examples-long-tail}
+### 长尾 \{#mev-examples-long-tail}
 
 DEX 套利、清算和三明治交易都是非常知名的 MEV 机会，对于新的搜寻者来说不太可能获利。 然而，还有一长串鲜为人知的 MEV 机会（NFT MEV 可以说是这样一个机会）。
 
 刚刚起步的搜索者可能会通过在这个长尾搜索 MEV 而找到更多的成功。 Flashbots 的[MEV 招聘板](https://github.com/flashbots/mev-job-board)列出了一些新兴的机会。
 
-## MEV 的影响 {#effects-of-mev}
+## MEV 的影响 \{#effects-of-mev}
 
 MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极的影响。
 
-### 优点 {#effects-of-mev-the-good}
+### 优点 \{#effects-of-mev-the-good}
 
 许多 DeFi 项目依靠经济上的理性行为者，来确保其协议的有用性和稳定性。 例如，DEX 套利确保用户为他们的代币获得最好、最正确的价格，而借贷协议在借款人低于抵押率时依靠快速清算来确保贷款人得到回报。
 
 如果没有理性的搜索者寻求和修复经济上的低效率，并利用协议的经济激励，DeFi 协议和一般的 dapps 可能不会像今天这样强大。
 
-### 缺点 {#effects-of-mev-the-bad}
+### 缺点 \{#effects-of-mev-the-bad}
 
 在应用层，某些形式的 MEV，如夹心交易，会导致用户的体验明显变差。 被夹在中间的用户面临更高的滑点和更差的交易执行。
 
@@ -106,7 +106,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 这种区块链重新组织的可能性已经[在以前的比特币区块链上探索过](https://dl.acm.org/doi/10.1145/2976749.2978408)。 随着比特币的区块奖励减半，交易费用占区块奖励的比例越来越大，于是出现了这样的情况：矿工放弃下一个区块的奖励，而用更高的费用重新开采过去的区块，这在经济上变得很合理。 随着 MEV 的发展，以太坊也可能出现同样的情况，威胁到区块链的完整性。
 
-## MEV 的状况 {#state-of-mev}
+## MEV 的状况 \{#state-of-mev}
 
 2021 年初，MEV 开采量剧增，导致今年前几个月的矿工费价格极高。 Flashbots 的 MEV 中继的出现，降低了普通抢跑者的效力，并将矿工费价格拍卖带出链外，降低了普通用户的矿工费。
 
@@ -114,11 +114,11 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 另一方面，从工作量证明到权益证明的过渡以及当前利用卷叠和分片持续进行以太坊扩容的努力，都在给最大可提取价值的竞争格局带来目前尚不明朗的改变。 与工作量证明中的概率模型相比，预先知道有保证的区块提议者会如何改变最大可提取价值提取的发展变化，以及当[单一秘密领导人选举](https://ethresear.ch/t/secret-non-single-leader-election/11789)和[分布式验证者技术](https://github.com/ethereum/distributed-validator-specs)得到实现后会如何颠覆当前格局，目前尚未可知。 同样，当大多数用户活动迁离以太坊并转移至其二层网络卷叠和分片时，存在哪些最大可提取价值机会还有待观察。
 
-## 以太坊权益证明 (PoS) 机制下的最大可提取价值 {#mev-in-ethereum-proof-of-stake}
+## 以太坊权益证明 (PoS) 机制下的最大可提取价值 \{#mev-in-ethereum-proof-of-stake}
 
 如上所述，最大可提取价值对用户综合体验和共识层安全性产生了不利影响。 但以太坊向权益证明共识的过渡（称为“合并”）还可能带来与最大可提取价值有关的新风险：
 
-### 验证者中心化 {#validator-centralization}
+### 验证者中心化 \{#validator-centralization}
 
 在合并后的以太坊中，验证者（已经存入 32 个以太币作为保证金）就添加到信标链的区块的有效性达成共识。 由于 32 个以太币可能超出了许多人的能力范围，[加入质押池](/staking/pools/)也许是一种更可行的选择。 然而，[单独质押人](/staking/solo/)合理分布才是一种理想状态，因为它削弱了验证者的中心化并且提升了以太坊的安全性。
 
@@ -128,7 +128,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 由于可支配的资源较少，单独质押人可能无法从最大可提取价值机会中获利。 这种情况可能会增加独立验证者加入强大的质押池以提高收益的压力，从而削弱以太坊的去中心化。
 
-### 许可内存池 {#permissioned-mempools}
+### 许可内存池 \{#permissioned-mempools}
 
 为了应对三明治攻击和抢先交易攻击，交易者可能会开始与验证者进行链下交易以确保交易隐私。 交易者将潜在的最大可提取价值交易直接发送给验证者而非公共内存池，验证者将交易添加到区块中并与交易者分配利润。
 
@@ -138,7 +138,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 在合并后的以太坊中解决这些与最大可提取价值相关的问题是一个核心研究领域。 迄今为止，为了减少最大可提取价值对合并后以太坊去中心化和安全性的负面影响，提出了两种解决方案：**提议者-构建者分离 (PBS)** 和**构建者应用程序接口**。
 
-### 提议者-构建者分离 {#proposer-builder-separation}
+### 提议者-构建者分离 \{#proposer-builder-separation}
 
 在工作量证明和权益证明机制中，构建区块的节点面向参与共识的其他节点提出区块以将其添加到链中。 新区块在另一位矿工在其上构建区块（在工作量证明中）或从大多数验证者那里获得认证（在权益证明中）后，成为规范链的一部分。
 
@@ -150,7 +150,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 当前，提议者-构建者分离设计采用一种[提交-披露方案](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/)，即构建者仅发布对区块内容（区块头）的加密承诺及他们的出价。 在接受成交出价后，提议者创建一个包括区块头的签名区块提案。 区块构建者在看到签名区块提案后可能会发布整个区块体，并且它必须还要从验证者那里获得足够多的[认证](/glossary/#attestation)后才能最终确定区块。
 
-#### 提议者-构建者分离如何减弱最大可提取价值的影响？ {#how-does-pbs-curb-mev-impact}
+#### 提议者-构建者分离如何减弱最大可提取价值的影响？ \{#how-does-pbs-curb-mev-impact}
 
 协议内的提议者-构建者分离将最大可提取价值提取从验证者权限范围内移除，降低了最大可提取价值对共识的影响。 相反，运行专用硬件的区块构建者将抓住出现的最大可提取价值机会。
 
@@ -160,7 +160,7 @@ MEV 并不都是坏事 - 以太坊的 MEV 既有积极的作用，也有消极�
 
 同样，验证者不必信任构建者不会隐藏区块体或者发布无效区块，因为付款是无条件的。 即使提出的区块不可用或被其他验证者宣称无效，验证者的费用依然会支付。 在后一种情况下，区块被直接丢弃，迫使区块构建者失去所有交易费和最大可提取价值收入。
 
-### 构建者应用程序接口 {#builder-api}
+### 构建者应用程序接口 \{#builder-api}
 
 虽然提议者-构建者分离有望减弱最大可提取价值提取的影响，但实现它需要对共识协议进行更改。 具体而言，需要更新信标链的[分叉选择](/developers/docs/consensus-mechanisms/pos/#fork-choice)规则。 [构建者应用程序接口](https://github.com/ethereum/builder-specs)是一种临时解决方案，旨在有效实现提议者-构建者分离，然而信任假设更高。
 
@@ -188,7 +188,7 @@ MEV Boost 运行机制与原来的 Flashbots 拍卖相同，但增加了一些�
 
 中继者仍然负责验证交易包并将它们传送给提议者。 然而，MEV Boost 通过存储构建者发送的区块体和验证者发送的区块头，引入了负责提供[数据可用性](/developers/docs/data-availability/)的**托管**。 对于托管，连接到中继的验证者请求可用的执行有效负载，并使用 MEV Boost 的排序算法选择出价 + 最大可提取价值小费最高的有效负载标头。
 
-#### 构建者应用程序接口如何减弱最大可提取价值的影响？ {#how-does-builder-api-curb-mev-impact}
+#### 构建者应用程序接口如何减弱最大可提取价值的影响？ \{#how-does-builder-api-curb-mev-impact}
 
 构建者应用程序接口的核心优势在于，它有可能让参与者平等获得最大可提取价值机会。 使用提交-披露方案消除了信任假设，降低了寻求从最大可提取价值中获益的验证者的进入门槛。 这应该可以减轻单独质押人加入大型质押池以提高最大可提取价值利润的压力。
 
@@ -200,14 +200,14 @@ MEV Boost 运行机制与原来的 Flashbots 拍卖相同，但增加了一些�
 
 2. 构建者应用程序接口软件是开源的，允许任何人提供区块构建者服务。 这意味着用户不会被迫使用任何特定的区块构建者，并提高了以太坊的中立和无许可特性。 此外，寻求最大可提取价值的交易者不会由于使用私密交易渠道而无意中促进中心化。
 
-## 相关资源 {#related-resources}
+## 相关资源 \{#related-resources}
 
 - [Flashbots 文档](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
 - [MEV-Explore](https://explore.flashbots.net/) - _用于最大可提取价值交易的仪表板和实时交易浏览器_
 - [mevnot.org](https://www.mevboost.org/) - _可提供 MEV-Boost 中继和区块构建者实时统计数据的追踪器_
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [什么是 MEV？](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV 和我](https://research.paradigm.xyz/MEV)

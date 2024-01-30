@@ -15,7 +15,7 @@ source: Construirea de contracte sigure
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## Cum se utilizează Slither {#how-to-use-slither}
+## Cum se utilizează Slither \{#how-to-use-slither}
 
 Intenția acestui tutorial este de a arăta cum se utilizează Slither pentru a găsi automat erori în contracte inteligente.
 
@@ -24,7 +24,7 @@ Intenția acestui tutorial este de a arăta cum se utilizează Slither pentru a 
 - [Introducere în analiza statică](#static-Analysis): Scurtă introducere în analiza statică
 - [API](#api-basics): Descriere API Python
 
-## Instalare {#installation}
+## Instalare \{#installation}
 
 Slitter necesită Python >= 3.6. Acesta poate fi instalat prin pip sau folosind docker.
 
@@ -50,7 +50,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Rularea unui script {#running-a-script}
+### Rularea unui script \{#running-a-script}
 
 Pentru a rula un script python cu python 3:
 
@@ -58,7 +58,7 @@ Pentru a rula un script python cu python 3:
 python3 script.py
 ```
 
-### Linie de comandă {#command-line}
+### Linie de comandă \{#command-line}
 
 **Linia de comandă în comparație cu scripturile definite de utilizator.** Slither vine cu un set de detectoare predefinite care găsesc multe erori obișnuite. Apelarea Slither din linia de comandă va rula toate detectoarele, fără cunoștințe detaliate de analiză statică necesare:
 
@@ -70,7 +70,7 @@ Pe lângă detectoare, Slither are capacități de revizuire a codului prin [imp
 
 Use [crytic.io](https://github.com/crytic) to get access to private detectors and GitHub integration.
 
-## Analiză statică {#static-analysis}
+## Analiză statică \{#static-analysis}
 
 Capacitățile și designul cadrului de analiză statică Slither au fost descrise în postările de pe blog ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) și [academic paper](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
@@ -82,11 +82,11 @@ Nu vom analiza exhaustiv tehnicile de analiză statică și cercetătorii aici. 
 - [Analiza codului](#analysis)
 - [Reprezentare intermediară](#intermediate-representation)
 
-### Reprezentarea codului {#code-representation}
+### Reprezentarea codului \{#code-representation}
 
 Spre deosebire de o analiză dinamică, care analizează o singură cale de execuție, analiza statică raționează toate căile simultan. Pentru a face acest lucru, se bazează pe o reprezentare de cod diferită. Două din cele mai frecvente sunt arborele de sintaxă abstractă (AST) și graficul fluxului de control (CFG).
 
-### Arborele de sintaxă abstractă (AST) {#abstract-syntax-trees-ast}
+### Arborele de sintaxă abstractă (AST) \{#abstract-syntax-trees-ast}
 
 AST este utilizat de fiecare dată când compilatorul analizează codul. Este probabil cea mai de bază structură pe care poate fi efectuată analiza statică.
 
@@ -128,7 +128,7 @@ visitor = HasAddition(expression) # expression is the expression to be tested
 print(f'The expression {expression} has a addition: {visitor.result()}')
 ```
 
-### Graficul fluxului de control (CFG) {#control-flow-graph-cfg}
+### Graficul fluxului de control (CFG) \{#control-flow-graph-cfg}
 
 Cea de-a doua reprezentare a codurilor este graficul fluxului de control (CFG). După cum sugerează și numele, este o reprezentare pe bază de grafic care expune toate căile de execuție. Fiecare nod conține una sau mai multe instrucțiuni. Marginile din grafic reprezintă operațiunile fluxului de control (dacă/atunci/altfel, buclă etc.). CFG-ul exemplului nostru anterior este:
 
@@ -138,11 +138,11 @@ CFG este reprezentarea pe baza căreia sunt construite cele mai multe analize.
 
 Există multe alte reprezentări de cod. Fiecare reprezentare are avantaje și dezavantaje în funcție de analiza pe care dorești să o efectuezi.
 
-### Analiză {#analysis}
+### Analiză \{#analysis}
 
 Cel mai simplu tip de analize pe care le poți efectua cu Slither sunt analizele sintactice.
 
-### Analiza sintaxei {#syntax-analysis}
+### Analiza sintaxei \{#syntax-analysis}
 
 Slither poate naviga prin diferite componente ale codului și reprezentarea lor pentru a găsi incoerențe și defecte folosind o abordare asemănătoare modelului.
 
@@ -152,13 +152,13 @@ De exemplu, următoarele detectoare caută probleme legate de sintaxă:
 
 - [Interfață incorectă ERC20](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): Caută semnături incorecte pentru funcția ERC20 ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
 
-### Analiza semantică {#semantic-analysis}
+### Analiza semantică \{#semantic-analysis}
 
 Spre deosebire de analiza sintaxei, o analiză semantică va merge mai adânc și va analiza „sensul" codului. Această familie include câteva tipuri largi de analize. Ele duc la rezultate mai puternice și utile, dar sunt, de asemenea, mai complex de scris.
 
 Analizele semantice sunt utilizate pentru cele mai avansate detectări de vulnerabilitate.
 
-#### Analiza dependenței de date {#fixed-point-computation}
+#### Analiza dependenței de date \{#fixed-point-computation}
 
 Se spune despre o variabilă cum ar fi `variable_a` că este data dependentă de `variable_b` dacă există o modalitate prin care valoarea `variable_a` să fie influențată de `variable_b`.
 
@@ -173,7 +173,7 @@ Slither vine cu capabilități [dependențe de date](https://github.com/crytic/s
 
 Un exemplu de utilizare a dependenței de date poate fi găsit în [detectorul de egalitate strictă periculoasă](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Aici Slither va căuta o comparație strictă a egalității cu o valoare periculoasă ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)) și va informa utilizatorul că ar trebui să utilizeze `>=` sau `<=` în loc de `==`, pentru a împiedica un atacator să blocheze contractul. Printre altele, detectorul va considera ca fiind periculoasă valoarea returnată a unui apel către `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)) și va utiliza motorul dependent de date pentru a urmări utilizarea acestuia.
 
-#### Calcul de punct fix {#fixed-point-computation}
+#### Calcul de punct fix \{#fixed-point-computation}
 
 Dacă analiza ta navighează prin CFG și urmează marginile, este posibil să vezi noduri deja vizitate. De exemplu, dacă o buclă este prezentată precum cea de mai jos:
 
@@ -189,13 +189,13 @@ Un exemplu de „fixpoint” utilizat poate fi găsit în detectoare de reintrar
 
 Scrierea analizelor folosind calculul eficient de punct fix necesită o bună înțelegere a modului în care analiza își propagă informațiile.
 
-### Reprezentarea intermediară {#intermediate-representation}
+### Reprezentarea intermediară \{#intermediate-representation}
 
 O reprezentare intermediară (IR) este un limbaj care se dorește a fi mai adecvat la analiza statică decât cea inițială. Slither traduce Solidity în propria sa IR: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
 Înțelegerea SlithIR nu este necesară dacă dorești numai să scrii verificări de bază. Cu toate acestea, va fi utilă dacă intenționezi să scrii analize semantice avansate. Imprimantele [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) și [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) te vor ajuta să înțelegi modul în care este tradus codul.
 
-## Principii API {#api-basics}
+## Principii API \{#api-basics}
 
 Slither are un API care îți permite să explorezi atributele de bază ale contractului și funcțiile sale.
 
@@ -207,7 +207,7 @@ slither = Slither('/path/to/project')
 
 ```
 
-### Explorarea contractelor și a funcțiilor {#exploring-contracts-and-functions}
+### Explorarea contractelor și a funcțiilor \{#exploring-contracts-and-functions}
 
 Un obiect `Slitter` are:
 

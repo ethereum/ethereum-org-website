@@ -33,13 +33,13 @@ slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 - slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
 ```
 
-## 一般考虑因素 {#general-considerations}
+## 一般考虑因素 \{#general-considerations}
 
 - **合约包含安全审查。** 避免与缺少安全审查的合约发生互动。 检查评估的时间长度（也称为“努力程度”）、安全公司的声誉以及评估结果的数量和严重程度。
 - **您已经联系了开发者。**您可能需要提醒他们的团队发生意外。 在[blockchain-security](https://github.com/crytic/blockchain-security-contacts)上寻找适当的联系人。
 - **他们有一个用于重要公告的安全邮件列表。** 当发现关键问题或升级发生时，他们的团队应该向（像您一样的）用户提供建议。
 
-## 符合 ERC 标准 {#erc-conformity}
+## 符合 ERC 标准 \{#erc-conformity}
 
 Slither 包含一个实用程序[slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance)，用于检查通证是否符合许多相关的 ERC 标准。 使用 slither-check-erc 来检查：
 
@@ -58,14 +58,14 @@ Slither 包括一个实用程序[slither-prop](https://github.com/crytic/slither
 - **Transfer 和 transferFrom 不收取费用。**通缩通证可能会导致意想不到的行为。
 - **从通证中获得的潜在利息也被考虑在内。** 一些通证将利息分配给通证持有者。 如果不加以考虑，这种利息可能会被困于合约中。
 
-## 合约构成 {#contract-composition}
+## 合约构成 \{#contract-composition}
 
 - **合约避免了不必要的复杂性。**通证应该是一个简单的合约；一个具有复杂代码的通证需要更高的审查标准。 使用 Slither 的[human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)来识别复杂的代码。
 - **合约使用了 SafeMath。**不使用 SafeMath 的合约需要更高的审查标准。 手动检查合约是否使用了 SafeMath。
 - **合约中只有几个与通证无关的函数。**与通证无关的函数增加了合约中出现问题的可能性。 使用 Slither 的[contract-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)来广泛审查合约中使用的代码。
 - **该通证只有一个地址。**具有多个余额更新入口点的通证可能会破坏基于地址的内部记账（例如，`balances[token_address][msg.sender]`可能不反映实际余额）。
 
-## 用户特权 {#owner-privileges}
+## 用户特权 \{#owner-privileges}
 
 - **通证无法升级。**可升级的合约可能会随着时间的推移改变其规则。 使用 Slither 的 [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)来确定合约是否可以升级。
 - **所有者的铸币能力有限。**恶意的或受到影响的所有者可能会滥用铸币能力。 使用 Slither 的 [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)来审查铸币能力，并考虑手动审查代码。
@@ -73,7 +73,7 @@ Slither 包括一个实用程序[slither-prop](https://github.com/crytic/slither
 - **所有者不能将合约列入黑名单。**恶意的或受到影响的所有者可以使用黑名单捕获依赖通证的合约。 手动识别黑名单特征。
 - **大家都知道通证背后的团队，他们对滥用负责。**匿名开发团队，或居住在法律管辖范围外的开发团队，他们开发的合约应该需要更高的审查标准。
 
-## 通证稀缺性 {#token-scarcity}
+## 通证稀缺性 \{#token-scarcity}
 
 对通证稀缺问题的审查需要人工审查。 检查这些情况：
 

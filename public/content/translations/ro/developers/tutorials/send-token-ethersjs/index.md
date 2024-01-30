@@ -11,19 +11,19 @@ lang: ro
 published: 2021-04-06
 ---
 
-## Trimiterea tokenului folosind ethers.js(5.0) {#send-token}
+## Trimiterea tokenului folosind ethers.js(5.0) \{#send-token}
 
-### În acest tutorial veți învăța cum să {#you-learn-about}
+### În acest tutorial veți învăța cum să \{#you-learn-about}
 
 - Importați ethers.js
 - Transferați tokenul
 - Setați prețul gazului în funcție de situația traficului din rețea
 
-### Pentru-a-începe {#to-get-started}
+### Pentru-a-începe \{#to-get-started}
 
 Pentru a începe, trebuie mai întâi să importăm biblioteca ethers.js în javascript-ul nostru Include ethers.js(5.0)
 
-### Instalarea {#install-ethersjs}
+### Instalarea \{#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -47,7 +47,7 @@ ES3(UMD) în browser
 ></script>
 ```
 
-### Parametri {#param}
+### Parametri \{#param}
 
 1. **`contract_address`**: Adresa contractului tokenului (adresa contractului este necesară atunci când tokenul pe care doriți să-l transferați nu este ether)
 2. **`send_token_amount`**: Suma pe care doriți să o trimiteți destinatarului
@@ -55,15 +55,15 @@ ES3(UMD) în browser
 4. **`send_account`**: Adresa expeditorului
 5. **`private_key`**: Cheia privată a expeditorului pentru semnarea tranzacției și transferul efectiv al jetoanelor.
 
-## Notificare {#notice}
+## Notificare \{#notice}
 
 S-a eliminat `signTransaction(tx)` deoarece `sendTransaction()` face aceasta în mod intern.
 
-## Proceduri de trimitere {#procedure}
+## Proceduri de trimitere \{#procedure}
 
-### 1. Conectați-vă la rețea (testnet) {#connect-to-network}
+### 1. Conectați-vă la rețea (testnet) \{#connect-to-network}
 
-#### Setați furnizorul (Infura) {#set-provider}
+#### Setați furnizorul (Infura) \{#set-provider}
 
 Conectați-vă la testnet-ul Ropsten
 
@@ -71,29 +71,29 @@ Conectați-vă la testnet-ul Ropsten
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Creați portofelul {#create-wallet}
+### 2. Creați portofelul \{#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Conectați „Wallet” la rețea {#connect-wallet-to-net}
+### 3. Conectați „Wallet” la rețea \{#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Obțineți prețul curent al gazului {#get-gas}
+### 4. Obțineți prețul curent al gazului \{#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Definiți tranzacția {#define-transaction}
+### 5. Definiți tranzacția \{#define-transaction}
 
 Aceste variabile definite mai jos sunt dependente de `send_token()`
 
-### Parametrii tranzacției {#transaction-params}
+### Parametrii tranzacției \{#transaction-params}
 
 1. **`send_account`**: adresa expeditorului tokenului
 2. **`to_address`**: adresa destinatarului tokenului
@@ -114,7 +114,7 @@ const tx = {
 }
 ```
 
-### 6. Transfer {#transfer}
+### 6. Transfer \{#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -123,7 +123,7 @@ walletSigner.sendTransaction(tx).then((transaction) => {
 })
 ```
 
-## Cum se utilizează {#how-to-use}
+## Cum se utilizează \{#how-to-use}
 
 ```javascript
 let private_key =
@@ -146,11 +146,11 @@ send_token(
 )
 ```
 
-### Succes! {#success}
+### Succes! \{#success}
 
 ![imaginea unei tranzacții efectuate cu succes](./successful-transaction.png)
 
-## send_token() {#send-token-method}
+## send_token() \{#send-token-method}
 
 ```javascript
 function send_token(

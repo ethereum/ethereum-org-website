@@ -20,11 +20,11 @@ published: 2021-03-31
 
 如果您有任何问题，请随时在 [Alchemy Discord](https://discord.gg/gWuC7zB) 中提出！
 
-## 步骤 1：连接到以太坊网络 {#step-1}
+## 步骤 1：连接到以太坊网络 \{#step-1}
 
 有多种方法可以向以太坊链发起连接请求。 为了简单起见，我们将使用一个 Alchemy 上的免费帐户。 Alchemy 是一个区块链开发者平台和 API，允许我们与以太坊进行通信，而无需运行我们自己的节点。 平台还有用于监测和分析的开发者工具，我们将在本教程中利用这些工具来了解我们智能合约部署中的情况。 如果您还没有 Alchemy 账户，[您可以在这里免费注册](https://dashboard.alchemyapi.io/signup)。
 
-## 步骤 2：创建应用程序（和应用程序接口密钥） {#step-2}
+## 步骤 2：创建应用程序（和应用程序接口密钥） \{#step-2}
 
 创建 Alchemy 帐户后，您可以通过创建应用程序来生成应用程序接口密钥。 我们可以用它向 Ropsten 测试网发出请求。 如果您不熟悉测试网络，请查看[此页面](/developers/docs/networks/)。
 
@@ -38,7 +38,7 @@ published: 2021-03-31
 
 3. 点击“Create app”，完成！ 您的应用程序应该就会出现在下面的表格中。
 
-## 步骤 3：创建一个以太坊账户（地址） {#step-3}
+## 步骤 3：创建一个以太坊账户（地址） \{#step-3}
 
 我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask，它是浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 关于[交易](/developers/docs/transactions/)的详细信息。
 
@@ -46,11 +46,11 @@ published: 2021-03-31
 
 ![metask ropsten 示例](./metamask-ropsten-example.png)
 
-## 步骤 4：从水龙头添加以太币 {#step-4}
+## 步骤 4：从水龙头添加以太币 \{#step-4}
 
 为了将我们的智能合约部署到测试网络，我们需要一些虚拟以太币。 要获取以太币，您可以转到 [Ropsten 水龙头](https://faucet.dimensions.network/)并输入您的 Ropsten 帐户地址，然后点击“Send Ropsten Eth”。 由于网络原因，您接收虚拟以太币可能需要一些时间。 您应该会很快在您的 MetaMask 帐户中看到以太币！
 
-## 步骤 5：查看账户余额 {#step-5}
+## 步骤 5：查看账户余额 \{#step-5}
 
 为了核查我们账户中有余额，我们使用 [Alchemy composer 工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币数量。 输入您的 MetaMask 帐户地址并点击“Send Request”后，您应该会看到这样的响应：
 
@@ -62,7 +62,7 @@ published: 2021-03-31
 >
 > 哦！ 我们的虚拟货币到账了<Emoji text=":money_mouth_face:" size={1} />。
 
-## 步骤 6：初始化我们的项目 {#step-6}
+## 步骤 6：初始化我们的项目 \{#step-6}
 
 首先，需要为我们的项目创建一个文件夹。 导航到您的命令行，然后输入：
 
@@ -118,7 +118,7 @@ npm install --save-dev hardhat
 
 查看此页面，了解更多有关[安装说明](https://hardhat.org/getting-started/#overview)的详细信息。
 
-## 步骤 8：创建安全帽项目 {#step-8}
+## 步骤 8：创建安全帽项目 \{#step-8}
 
 在我们的项目文件夹中运行：
 
@@ -148,7 +148,7 @@ Quit
 
 这将生成一个 `hardhat.config.js` 文件，我们将用以配置项目的所有设置（步骤 13）。
 
-## 步骤 9：添加项目文件夹 {#step-9}
+## 步骤 9：添加项目文件夹 \{#step-9}
 
 为了使我们的项目有条理，我们将创建两个新的文件夹。 在您的命令行中导航到项目的根目录，然后输入：
 
@@ -160,7 +160,7 @@ mkdir scripts
 - `contracts/` 是保存我们的 hello world 智能合约代码文件的位置
 - `scripts/` 是我们存放脚本的位置，用于部署我们的合约和与之交互。
 
-## 步骤 10：编写合约 {#step-10}
+## 步骤 10：编写合约 \{#step-10}
 
 您可能要问自己，天啊，到底什么时候才能写代码？？ 答案是，就是现在，步骤 10。
 
@@ -199,7 +199,7 @@ contract HelloWorld {
 
 这是一个非常简单的智能合约，创建时存储了一条消息，而且可以通过调用 `update` 功能来更新消息。
 
-## 步骤 11：将 MetaMask 和 Alchemy 连接至您的项目 {#step-11}
+## 步骤 11：将 MetaMask 和 Alchemy 连接至您的项目 \{#step-11}
 
 我们创建了 MetaMask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连起来的时候了。
 
@@ -235,7 +235,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的私钥。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
 </InfoBanner>
 
-## 步骤 12：安装 Ethers.js {#step-12-install-ethersjs}
+## 步骤 12：安装 Ethers.js \{#step-12-install-ethersjs}
 
 Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准 JSON RPC 方法](/developers/docs/apis/json-rpc/)，从而更容易与以太坊互动，并向以太坊提出请求。
 
@@ -249,7 +249,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 下一步中，我们还将在 `hardhat.config.js` 中使用 ethers。
 
-## 步骤 13：更新 hardhat.config.js {#step-13-update-hardhatconfigjs}
+## 步骤 13：更新 hardhat.config.js \{#step-13-update-hardhatconfigjs}
 
 到目前为止，我们已经添加了几个依赖库和插件，现在我们需要更新 `hardhat.config.js`，以便项目使用所有这些新的组件。
 
@@ -277,7 +277,7 @@ module.exports = {
 }
 ```
 
-## 步骤 14：编写合约 {#step-14-compile-our-contracts}
+## 步骤 14：编写合约 \{#step-14-compile-our-contracts}
 
 为了确保一切正常，我们来编译一下合约。 `compile` 任务是安全帽的内部任务之一。
 
@@ -289,7 +289,7 @@ npx hardhat compile
 
 您可能会看到关于 `SPDX license identifier not provided in source file` 的警告，但不用担心，希望其它的均看起来正常！ 如果遇到问题，您可以随时在 [Alchemy cord](https://discord.gg/u72VCg3) 社区中发消息询问。
 
-## 步骤 15：编写部署脚本 {#step-15-write-our-deploy-scripts}
+## 步骤 15：编写部署脚本 \{#step-15-write-our-deploy-scripts}
 
 合约已经写完，配置文件也准备妥当，现在是写合约部署脚本的时候了。
 
@@ -325,7 +325,7 @@ const hello_world = await HelloWorld.deploy();
 
 调用 `ContractFactory` 代码中的 `deploy()` 函数会启动合约部署，然后返回解析为 `Contract` 的 `Promise`。 这个对象包括我们智能合约中每个函数的对应调用方法。
 
-## 步骤 16：部署合约 {#step-16-deploy-our-contract}
+## 步骤 16：部署合约 \{#step-16-deploy-our-contract}
 
 我们终于准备好部署我们的智能合约啦！ 导航到命令行后运行：
 

@@ -4,7 +4,7 @@ description: Regeln zum Hinzufügen einer Ebene 2 zu ethereum.org
 lang: de
 ---
 
-# Ebene 2s hinzufügen {#adding-layer-2}
+# Ebene 2s hinzufügen \{#adding-layer-2}
 
 Wir möchten sicherstellen, dass die bestmöglichen Ressourcen vorhanden sind, damit Benutzer sich sicher und informiert in der Ebene 2 bewegen können.
 
@@ -18,9 +18,9 @@ Wir listen derzeit L2s auf den folgenden Seiten auf:
 
 Ebene 2 ist ein relativ neues Thema für Ethereum und bietet eine spannende Entwicklung. Wir haben versucht, ein gerechtes Framework für Überlegungen auf ethereum.org zu schaffen. Allerdings werden sich die Kriterien für die Auflistung im Laufe der Zeit verändern und weiterentwickeln.
 
-## Der Entscheidungsrahmen {#decision-framework}
+## Der Entscheidungsrahmen \{#decision-framework}
 
-### Aufnahmekriterien: die Must-haves {#criteria-for-inclusion-the-must-haves}
+### Aufnahmekriterien: die Must-haves \{#criteria-for-inclusion-the-must-haves}
 
 **Auflistung auf L2BEAT**
 
@@ -70,7 +70,7 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 - Für aufgelistete Projekte ist ein funktionierender Block Explorer erforderlich, um Benutzern die Navigation in der Chain zu erleichtern.
 
-### Weitere Kriterien: optionale Aspekte {#nice-to-haves}
+### Weitere Kriterien: optionale Aspekte \{#nice-to-haves}
 
 **Unterstützung des Projekts durch einen Handelsplatz**
 
@@ -88,7 +88,7 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 - Gibt es Wallets, die eine native Unterstützung für L2 bieten?
 
-## Eigene Ebene 2 hinzufügen {#add-exchange}
+## Eigene Ebene 2 hinzufügen \{#add-exchange}
 
 Wenn Sie eine Ebene 2 zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 

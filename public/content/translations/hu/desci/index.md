@@ -12,7 +12,7 @@ summaryPoint2: Olyan technológia, mely lehetővé teszi a tudósok számára, h
 summaryPoint3: A nyitott tudomány mozgalomra épül.
 ---
 
-## Mi az a decentralizált tudomány (DeSci)? {#what-is-desci}
+## Mi az a decentralizált tudomány (DeSci)? \{#what-is-desci}
 
 A decentralizált tudomány (DeSci) egy olyan mozgalom, melynek célja a nyilvános infrastruktúra létrehozása a tudományos eredmények korrekt és egyenlő finanszírozása, létrehozása, véleményezése, hitelesítése, tárolása és terjesztése érdekében a web3-technológiára alapozva.
 
@@ -24,7 +24,7 @@ A decentralizált tudomány sokrétűbb finanszírozási forrásokat (a [DAO-okt
 
 <YouTube id="5ORvbCIW39o" />
 
-## Hogyan fejleszti a DeSci a tudományt {#desci-improves-science}
+## Hogyan fejleszti a DeSci a tudományt \{#desci-improves-science}
 
 Következzen egy hozzávetőleges felsorolás a tudomány területén tapasztalt fő problémákról, és arról, hogy a decentralizált tudomány hogyan segíthet ezeken
 
@@ -39,21 +39,21 @@ Következzen egy hozzávetőleges felsorolás a tudomány területén tapasztalt
 | A tudós birtokolja a szellemi tulajdont (IP), melyet ő hoz létre és transzparens feltételek szerint osztja meg azt.                           | Az intézmény birtokolja a szellemi tulajdont, amit a tudós létrehoz. Az ahhoz való hozzáférés nem egyértelmű.                                        |
 | A kutatás teljes egészét megosztják, beleértve a sikertelen erőfeszítések adatait is, mivel minden lépés a blokkláncon található.             | A publikációk részrehajlók, mivel a kutatók nagyobb valószínűséggel osztják meg a sikeres eredményeket hozó kísérleteket.                            |
 
-## Az Ethereum és a DeSci {#ethereum-and-desci}
+## Az Ethereum és a DeSci \{#ethereum-and-desci}
 
 A decentralizált tudományt kiszolgáló rendszer robosztus biztonságot, minimális pénzügyi és tranzakciós költséget, és az alkalmazásfejlesztést támogató gazdag ökoszisztémát igényel. Az Ethereum mindent megad ahhoz, hogy kialakuljon egy rendszer a decentralizált tudomány számára.
 
-## A DeSci alkalmazási területei {#use-cases}
+## A DeSci alkalmazási területei \{#use-cases}
 
 A DeSci egy olyan tudományos eszköztárat épít, amely be tudja vezetni a web2 akadémikus világát a digitális világba. Következzen néhány alkalmazási terület, amit a web3 ajánl a tudományos közösségnek.
 
-### Publikálás {#publishing}
+### Publikálás \{#publishing}
 
 A tudományos publikálás közismerten problémás, mivel olyan kiadókon alapszik, amelyek a tudósok, szakértők és szerkesztők nem megfizetett munkájára építenek, hogy megszülessen a kézirat, utána pedig elképesztő kiadási díjakat számolnak fel érte. A nyilvánosság, aki általában közvetett módon fizet ezért a munkáért és a kiadási költségeiért az adózáson keresztül, sokszor nem éri el ugyanezt a munkát, csak ha a kiadónak újra fizet érte. Az egyéni tudományos munkák megjelentetésének teljes költsége sokszor öt számjegyű összeg (USD-ben kifejezve), amely aláássa a tudományos ismeret alapvető eszméjét, mint [közjó](https://www.econlib.org/library/Enc/PublicGoods.html), miközben hatalmas profitot generál a kiadók kis csoportjának.
 
 Ingyenes és nyílt hozzáférésű platformok állnak rendelkezésre pre-print szerverek (online könyvtárak) formájában, [mint amilyen az ArXiv is](https://arxiv.org/). Ugyanakkor ezek a platformok nem üzemeltetnek minőségi ellenőrzést, [anti-sybil mechanizmust](https://csrc.nist.gov/glossary/term/sybil_attack), és nem trekkelik a cikkszintű mérőszámokat, tehát csak valamilyen formában nyilvánosságra hozzák azt, amit utána átadnak a hagyományos kiadóknak. A SciHub a kiadott munkákat ingyen elérhetővé teszi, ugyanakkor nem legális módon, és csak azután, hogy a kiadók megkapták érte a fizetségüket és az adott munkát szigorú szerzői jogi szabályozásba csomagolják. Ez egy kritikus hiányosság az elérhető tudományos munkák és adatok terén, melyet egy beágyazott törvényességi mechanizmus és ösztönzési modell támaszt alá. Az ilyen rendszer megépítéséhez szükséges eszközök elérhetők a web3-ban.
 
-### Megismételhetőség és újbóli előállíthatóság {#reproducibility-and-replicability}
+### Megismételhetőség és újbóli előállíthatóság \{#reproducibility-and-replicability}
 
 A megismételhetőség és újbóli előállíthatóság a minőségi tudományos felfedezések alapkövei.
 
@@ -62,7 +62,7 @@ A megismételhetőség és újbóli előállíthatóság a minőségi tudományo
 
 Az új web3 saját eszközei biztosítani tudják, hogy a megismételhetőség és újbóli előállíthatóság a felfedezés alapjaiként szolgálnak. Beleszőhetjük a minőségi tudományt az akadémikus világ technológiai szövetébe. A web3 képes minden egyes elemzési komponens esetében tanúsítást kreálni: a nyers adat, a számítási motor és az alkalmazás eredményei esetében. A konszenzuson alapuló rendszerek szépsége az, hogy amikor egy megbízható hálózat (trusted network) tartalmazza ezeket az összetevőket, akkor a hálózat minden egyes tagja felelős lehet azért, hogy újból előállítsa a számítást és validálja az eredményeket.
 
-### Finanszírozás {#funding}
+### Finanszírozás \{#funding}
 
 A jelenlegi elterjedt modell a tudományos tevékenységek finanszírozására az, hogy a tudósok egyénileg vagy csoportban írásos jelentkezést adnak be egy finanszírozással foglalkozó ügynökségnek. A megbízottak egy kis bizottsága pontozza a jelentkezéseket és interjút folytat a jelentkezőkkel, mielőtt finanszírozást biztosítana a jelentkezők egy kis részének. Amellett, hogy ez az eljárás szűk keresztmetszetet hoz létre, hiszen néha évekig is várni kell a jelentkezés és a támogatás elnyerése között, a módszer nagy mértékben sebezhető a részrehajlás, az önérdek és a bizottság politikai beállítottsága miatt.
 
@@ -70,7 +70,7 @@ Az elemzések kimutatták, hogy ezek a bizottságok kvázi alkalmatlanok arra, h
 
 A web3 képes arra, hogy megbontsa ezt a megtört, torz finanszírozási modellt azáltal, hogy különféle ösztönzési módszereket tud alkalmazni, melyeket a DAO-k és a web3 résztvevők már széles körben alkalmaznak. [A retroaktív közjó-finanszírozás](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [a kvadratikus finanszírozás](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [a DAO-k általi irányítás](https://www.antler.co/blog/daos-and-web3-governance) és [a tokenizált ösztönzési struktúrák](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) csak néhány web3-eszköz, melyek forradalmasítani tudnák a tudományos finanszírozás világát.
 
-### A szellemi tulajdon (IP) birtoklása és fejlesztése {#ip-ownership}
+### A szellemi tulajdon (IP) birtoklása és fejlesztése \{#ip-ownership}
 
 A szellemi tulajdon (IP) nagy probléma a hagyományos tudomány területén: onnantól kezdve, hogy az beragad az egyetemekre vagy nem használják a biotechnológiai tevékenységben, odáig, hogy hírhedten nehéz meghatározni annak értékét. Ugyanakkor a digitális eszközök tulajdonlására (mint amilyenek a tudományos adatok vagy cikkek) a web3 rendkívül jól használja a [nem helyettesíthető tokeneket (NFT)](/nft/).
 
@@ -78,7 +78,7 @@ Ugyanazon a módon, ahogy az NFT-k képesek a jövőbeli tranzakciók után is f
 
 [Az IP-NFT-k](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) arra is használhatók, hogy a kutatási kísérletek decentralizált adattárháza jöjjön létre, és bekerüljön az NFT- és [DeFi](/defi/)-alapú finanszírozásba (a töredékes forrásoktól a kölcsönalapok és az értékfelmérés felé mozdulva). Az eredetileg is láncon belül létező entitások, mint a DAO-k, például a [VitaDAO](https://www.vitadao.com/), végezhet kutatást közvetlenül a láncon. A nem átadható, [egyénhez kötött (soulbound) tokenek](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) kifejlődése szintén fontos lehet a DeSci számára, hogy a tudósok az Ethereum-címükhöz kapcsoltan bizonyítani tudják tapasztalataikat és hitelesítő adataikat.
 
-### Adattárolás, adatelérés és architektúra {#data-storage}
+### Adattárolás, adatelérés és architektúra \{#data-storage}
 
 A tudományos adatok sokkal hozzáférhetőbbek a web3-sémák használatával, a megosztott tárolás révén pedig a kutatások nem tudnak megsemmisülni a különféle kataklizmaesemények esetén.
 
@@ -86,7 +86,7 @@ A kiindulópont egy olyan rendszer, melyet bármelyik decentralizált identitás
 
 A rugalmas web3-adatkezelési megoldások támogatják ezeket a szcenáriókat, és egy valóban nyitott és nyilvános tudomány alapjait biztosítják, ahol a kutatók közjót hoznak létre, és nem kell hozzáférési engedélyeket vagy díjakat fizetniük. A web3 nyilvános adatmegoldásai, mint a IPFS, Arweave és Filecoin a decentralizációra vannak optimalizálva. A dClimate például univerzális hozzáférést biztosít a klíma- és időjárási adatokhoz, beleértve az időjárási állomásokat és a klíma-előrejelző modelleket.
 
-## Kapcsolódjon be {#get-involved}
+## Kapcsolódjon be \{#get-involved}
 
 Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 
@@ -114,7 +114,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 
 Örömmel vesszük, ha bárki új projektet javasol – kérjük, tekintsék meg a [listázási szabályzatot](/contributing/adding-desci-projects/)!
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [DeSci Wiki Jocelynn Pearl és UltraRare által](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [Útmutató a decentralizált biotechnológiához – Jocelynn Pearl (a16z future)](https://future.a16z.com/a-guide-to-decentralized-biotech/)
@@ -130,7 +130,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [A tudomány finanszírozása (Epilógus: a DeSci és az új kriptoalapok) – Nadia](https://nadia.xyz/science-funding)
 - [A decentralizáció megbontja a gyógyszerfejlesztést](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-### Videók {#videos}
+### Videók \{#videos}
 
 - [Mi az a decentralizált tudomány?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Beszélgetés Vitalik Buterin és a tudós Aubrey de Grey között a hosszútávú kutatás és a kripto találkozási pontjáról](https://www.youtube.com/watch?v=x9TSJK1widA)

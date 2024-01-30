@@ -6,7 +6,7 @@ lang: it
 
 Con la rapida crescita di soluzioni di [ridimensionamento](/developers/docs/scaling/) delle blockchain di L1 e L2, affiancata da un numero sempre maggiore di applicazioni decentralizzate che operano cross-chain, il bisogno di comunicazione e di movimentazione di risorse tra catene sono diventati una parte essenziale nell'infrastruttura della rete. Esistono diverse tipologie di ponti per renderlo possibile.
 
-## Necessità di ponti {#need-for-bridges}
+## Necessità di ponti \{#need-for-bridges}
 
 I ponti esistono per connettere diverse reti blockchain. Essi abilitano la connettività ed interoperabilità tra le diverse blockchain.
 
@@ -14,7 +14,7 @@ Le blockchain esistono in compartimenti stagni, nel senso che non c'è modo per 
 
 I ponti offrono una via per connettere tra loro delle blockchain isolate. Stabiliscono un percorso di trasporto tra blockchain dove token, messaggi, dati arbitrari e persino le chiamate a [contratti intelligenti](/developers/docs/smart-contracts/) possono essere trasferite da una catena all'altra.
 
-## Benefici dei ponti {#benefits-of-bridges}
+## Benefici dei ponti \{#benefits-of-bridges}
 
 In parole povere, i ponti permettono di sbloccare numerosi casi d'uso consentendo alle reti di blockchain di scambiare dati e risorse tra loro.
 
@@ -28,7 +28,7 @@ Per gli sviluppatori, i ponti consentono quanto segue:
 - collaborazione tra gli sviluppatori provenienti da diversi ecosistemi di blockchain per costruire nuovi prodotti.
 - attrarre utenti e community da vari ecosistemi verso le proprie dapp.
 
-## Come funzionano i ponti? {#how-do-bridges-work}
+## Come funzionano i ponti? \{#how-do-bridges-work}
 
 Sebbene esistano molti [tipi di progetti di ponti](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), spiccano tre modi per facilitare il trasferimento di risorse tra catene:
 
@@ -36,7 +36,7 @@ Sebbene esistano molti [tipi di progetti di ponti](https://blog.li.fi/what-are-b
 - **Brucia e Conia –** Brucia le risorse sulla catena di origine e conia le risorse nella catena di destinazione.
 - **Scambi atomici –** Scambia le risorse sulla catena di origine con risorse sulla catena di destinazione con un'altra parte.
 
-## Tipologie di ponte {#bridge-types}
+## Tipologie di ponte \{#bridge-types}
 
 I ponti possono essere solitamente classificati in uno dei seguenti:
 
@@ -45,7 +45,7 @@ I ponti possono essere solitamente classificati in uno dei seguenti:
 - ** Ponti generalizzati di passaggio di messaggi –** Questi ponti possono trasferire risorse, insieme a messaggi e dati arbitrari attraverso le catene. Esempi: Nomad e LayerZero.
 - **Reti di liquidità –** Questi ponti si concentrano principalmente sul trasferimento di risorse da una catena all'altra tramite scambi atomici. Generalmente non supportano il passaggio di messaggi tra catene. Esempi: Connext e Hop.
 
-## Compromessi da considerare {#trade-offs}
+## Compromessi da considerare \{#trade-offs}
 
 Con i ponti, non esistono soluzioni perfette. Piuttosto, ci sono solo compromessi accettati per realizzare uno scopo. Gli sviluppatori e gli utenti possono valutare i diversi ponti in base ai seguenti fattori:
 
@@ -65,7 +65,7 @@ Per valutare i ponti senza fiducia sulla base di altri fattori, dobbiamo suddivi
 - **Ponti generalizzati di passaggio di messaggio –** Questi ponti eccellono in termini di sicurezza e capacità di trasferire dati più complessi attraverso le catene. In genere, hanno anche buoni rapporti costi-efficacia. Tuttavia, questi punti di forza sono generalmente a scapito della connettività per i ponti client leggeri (es: IBC) e hanno svantaggi di velocità per i ponti ottimistici (es: Nomad) che utilizzano prove di frode.
 - **Reti di liquidità –** Questi ponti utilizzano gli scambi atomici per trasferire le risorse e sono sistemi localmente verificati (ossia, utilizzano i validatori delle blockchain sottostanti per verificare le transazioni). Di conseguenza, eccellono in sicurezza e velocità. Inoltre, sono considerati relativamente convenienti e offrono una buona connettività. Tuttavia, il principale compromesso è la loro incapacità di trasmettere dati più complessi, poiché non supportano il passaggio di messaggi tra catene.
 
-## Rischi nell'uso dei ponti {#risk-with-bridges}
+## Rischi nell'uso dei ponti \{#risk-with-bridges}
 
 I ponti rappresentano i primi tre [attacchi principali nella DeFi](https://rekt.news/leaderboard/) e sono ancora nelle prime fasi di sviluppo. L'utilizzo di un ponte comporta i seguenti rischi:
 
@@ -74,11 +74,11 @@ I ponti rappresentano i primi tre [attacchi principali nella DeFi](https://rekt.
 - **Rischio di controparte –** Alcuni ponti utilizzano un design fidato che richiede agli utenti di fare affidamento sul presupposto che i validatori non collaboreranno per rubare i fondi degli utenti. La necessità per gli utenti di fidarsi di questi attori di terze parti li espone a rischi come rug pull, censura e altre attività malevole.
 - **Questioni aperte –** Dato che i ponti sono nelle fasi iniziali del loro sviluppo, ci sono molte domande senza risposta relative a come funzioneranno in diverse condizioni di mercato, come in periodi di congestione della rete e durante eventi imprevisti come attacchi a livello di rete o rollback dello stato. Questa incertezza presenta alcuni rischi, il cui grado è ancora sconosciuto.
 
-## In che modo le dapp possono utilizzare i ponti? {#how-can-dapps-use-bridges}
+## In che modo le dapp possono utilizzare i ponti? \{#how-can-dapps-use-bridges}
 
 Ecco alcune applicazioni pratiche che gli sviluppatori possono prendere in considerazione sui ponti e sul portare la loro dapp cross-chain:
 
-### Integrare i ponti {#integrating-bridges}
+### Integrare i ponti \{#integrating-bridges}
 
 Per gli sviluppatori, vi sono diversi modi per aggiungere il supporto per i ponti:
 
@@ -101,7 +101,7 @@ Detto questo, anche gli aggregatori di ponti hanno i loro limiti. Per esempio, b
 
 Se una dapp prosegue lungo il percorso di integrazione di un ponte o di un aggregatore, esistono diverse opzioni in base al grado di profondità dell'integrazione stessa. Per esempio, se si tratta solo di un'integrazione front-end per migliorare l'esperienza d'ingresso dell'utente, una dapp integrerebbe il widget. Tuttavia, se l'integrazione è volta a esplorare strategie cross-chain più profonde come staking, yield farming, ecc., la dAapp integra l'SDK o l'API.
 
-### Distribuire una dapp su diverse catene {#deploying-a-dapp-on-multiple-chains}
+### Distribuire una dapp su diverse catene \{#deploying-a-dapp-on-multiple-chains}
 
 Per distribuire una dapp su più catene, gli sviluppatori possono utilizzare piattaforme di sviluppo come [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), ecc. In genere, queste piattaforme sono dotate di plugin componibili che possono consentire alle dapp di essere distribuite su diverse catene. Per esempio, gli sviluppatori possono utilizzare un proxy di distribuzione deterministico offerto dal [plugin hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
@@ -111,7 +111,7 @@ Per distribuire una dapp su più catene, gli sviluppatori possono utilizzare pia
 - [Costruire un marketplace NFT cross-chain](https://youtu.be/WZWCzsB1xUE)
 - [Moralis: costruire una dapp NFT cross-chain](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
-### Monitoraggio dell'attività del contratto tra le catene {#monitoring-contract-activity-across-chains}
+### Monitoraggio dell'attività del contratto tra le catene \{#monitoring-contract-activity-across-chains}
 
 Per monitorare l'attività del contratto tra le catene, gli sviluppatori possono utilizzare sotto-grafici e piattaforme di sviluppo come Tenderly per osservare i contratti intelligenti in tempo reale. Tali piattaforme dispongono anche di strumenti che offrono maggiori funzionalità di monitoraggio dei dati per le attività cross-chain, ad esempio il controllo di [eventi emessi dai contratti](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events), ecc.
 
@@ -120,7 +120,7 @@ Per monitorare l'attività del contratto tra le catene, gli sviluppatori possono
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## Ulteriori letture {#further-reading}
+## Ulteriori letture \{#further-reading}
 
 - [Ponti della blockchain](/bridges/) – ethereum.org
 - [Ponti della blockchain: creare reti di criptoreti](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 Set 2021 - Dmitriy Berenzon

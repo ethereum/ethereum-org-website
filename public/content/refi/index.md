@@ -12,7 +12,7 @@ summaryPoint2: An attempt to harness Ethereum to solve global-level coordination
 summaryPoint3: A tool to drastically scale ecological benefit assets like verified carbon credits
 ---
 
-## What is ReFi? {#what-is-refi}
+## What is ReFi? \{#what-is-refi}
 
 **Regenerative finance (ReFi)** is a set of tools and ideas built on top of blockchains, that aim to create economies which are regenerative, rather than extractive or exploitative. Eventually, extractive systems deplete the resources available and collapse; without regenerative mechanisms, they lack resilience. ReFi operates on the assumption that the creation of monetary value must be decoupled from the unsustainable extraction of resources from our planet and communities.
 
@@ -26,7 +26,7 @@ ReFi projects realize these principles using [smart contracts](/developers/docs/
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
-## Tokenization of carbon credits {#tokenization-of-carbon-credits}
+## Tokenization of carbon credits \{##tokenization-of-carbon-credits}
 
 The **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is a mechanism for funding projects that make a verified positive impact on carbon emissions, either reducing ongoing emissions, or removing greenhouse gases already emitted from the atmosphere. These projects receive an asset called "carbon credits" after they are verified, which they can sell to individuals and organizations who want to support climate action.
 
@@ -50,7 +50,7 @@ ReFi projects employ blockchain technology to alleviate many of the problems of 
 - **Trading activity occurs without intermediaries**, which charge high fees. Digital carbon credits represent a [62% cost improvement compared to equivalent traditional credits](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), according to data from one analytics firm.
 - **The DCM is scalable** and can meet the demands of individuals and multinational corporations alike.
 
-### Key components of the DCM {#key-components-dcm}
+### Key components of the DCM \{##key-components-dcm}
 
 Four major components make up the current landscape of the DCM:
 
@@ -65,7 +65,7 @@ Some such as [Klima Infinity](https://www.klimadao.finance/infinity) and [Senken
 
 4. The underlying rails and infrastructure that facilitate the scaling up of the impact and efficiency of the carbon market’s entire supply chain. [KlimaDAO](http://klimadao.finance/) supplies liquidity as a public good (allowing anyone to buy or sell carbon credits at a transparent price), incentivizes increased throughput of carbon markets and retirements with rewards, and provides user-friendly interoperable tooling to access data about, as well as acquire and retire, a wide variety of tokenized carbon credits.
 
-## ReFi beyond carbon markets {#refi-beyond}
+## ReFi beyond carbon markets \{##refi-beyond}
 
 Although there is currently a strong emphasis on carbon markets in general and transitioning the VCM to the DCM in particular within the space, the term “ReFi” is not strictly limited to carbon. Other environmental assets beyond carbon credits can be developed and tokenized, which will mean other negative externalities can also be priced within the base layers of future economic systems. Moreover, the regenerative aspect of this economic model can be applied to other areas, such as the funding of public goods via quadratic funding platforms like [Gitcoin](https://gitcoin.co/). Organizations that are built on the idea of open participation and equitable distribution of resources empower everyone to funnel money to open-source software projects, as well as educational, environmental, and community-driven projects.
 

@@ -5,7 +5,7 @@ lang: id
 sidebarDepth: 1
 ---
 
-# Riwayat Ethereum {#the-history-of-ethereum}
+# Riwayat Ethereum \{#the-history-of-ethereum}
 
 Linimasa semua tonggak sejarah, fork, dan pembaruan utama dalam blockchain Ethereum.
 
@@ -25,13 +25,13 @@ Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang upgrade
 
 <Divider />
 
-## 2023 {#2023}
+## 2023 \{#2023}
 
-### Shanghai {#shanghai}
+### Shanghai \{#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
-#### Ringkasan {#shanghai-summary}
+#### Ringkasan \{#shanghai-summary}
 
 Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan dengan peningkatan Capella, ini memungkinkan blok menerima operasi penarikan, yang memungkinkan para staker menarik ETH mereka dari Rantai Suar ke lapisan eksekusi.
 
@@ -51,11 +51,11 @@ Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan 
 
 ---
 
-### Capella {#capella}
+### Capella \{#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
-#### Ringkasan {#capella-summary}
+#### Ringkasan \{#capella-summary}
 
 Peningkatan Capella adalah peningkatan utama ketiga pada lapisan konsensus (Rantai Suar) dan memungkinkan penarikan penaruhan. Capella terjadi secara bersamaan dengan upgrade lapisan eksekusi, Shanghai, dan mengaktifkan fungsionalitas penarikan penaruhan.
 
@@ -68,13 +68,13 @@ Peningkatan ini juga menyediakan fungsionalitas pemindaian akun otomatis, yang t
 
 <Divider />
 
-## 2022 {#2022}
+## 2022 \{#2022}
 
-### Paris (Penggabungan) {#paris}
+### Paris (Penggabungan) \{#paris}
 
 <NetworkUpgradeSummary name="paris" />
 
-#### Ringkasan {#paris-summary}
+#### Ringkasan \{#paris-summary}
 
 Peningkatan Paris dipicu oleh rantai blok bukti kerja mencapai [total tingkat kesulitan terminal](/glossary/#terminal-total-difficulty) sebesar 58750000000000000000000. Hal ini terjadi pada blok 15537393 pada tanggal 15 September 2022, memicu peningkatan Paris pada blok berikutnya. Paris merupakan transisi [Penggabungan](/roadmap/merge/) fitur utamanya adalah mematikan algoritma penambangan [bukti kerja](/developers/docs/consensus-mechanisms/pow) dan logika konsensus terkait, serta sebagai gantinya mengaktifkan [bukti taruhan](/developers/docs/consensus-mechanisms/pos). Paris sendiri merupakan peningkatan untuk [klien eksekusi](/developers/docs/nodes-and-clients/#execution-clients) (setara dengan Bellatrix pada lapisan konsensus) yang memungkinkan mereka menerima instruksi dari [klien konsensus](/developers/docs/nodes-and-clients/#consensus-clients) yang terhubung. Untuk ini, diperlukan seperangkat metode API internal baru, yang secara kolektif dikenal sebagai [API Mesin](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), untuk diaktifkan. Ini dapat dikatakan sebagai peningkatan paling signifikan dalam sejarah Ethereum sejak [Homestead](#homestead)!
 
@@ -91,11 +91,11 @@ Peningkatan Paris dipicu oleh rantai blok bukti kerja mencapai [total tingkat ke
 
 ---
 
-### Bellatrix {#bellatrix}
+### Bellatrix \{#bellatrix}
 
 <NetworkUpgradeSummary name="bellatrix" />
 
-#### Ringkasan {#bellatrix-summary}
+#### Ringkasan \{#bellatrix-summary}
 
 Peningkatan Bellatrix adalah peningkatan terjadwal kedua untuk [Rantai Suar](/roadmap/beacon-chain), mempersiapkan jaringan untuk [Penggabungan](/roadmap/merge/). Peningkatan ini membawa denda validator ke nilai penuh untuk ketidakaktifan dan pelanggaran yang dapat dipotong. Bellatrix juga mencakup pembaruan pada aturan pemilihan garpu untuk mempersiapkan jaringan untuk Penggabungan dan transisi dari blok bukti kerja terakhir ke blok bukti taruhan pertama. Hal ini mencakup membuat klien konsensus menyadari [total kesulitan terminal](/glossary/#terminal-total-difficulty) sebesar 58750000000000000000000.
 
@@ -103,11 +103,11 @@ Peningkatan Bellatrix adalah peningkatan terjadwal kedua untuk [Rantai Suar](/ro
 
 ---
 
-### Gray Glacier {#gray-glacier}
+### Gray Glacier \{#gray-glacier}
 
 <NetworkUpgradeSummary name="grayGlacier" />
 
-#### Ringkasan {#gray-glacier-summary}
+#### Ringkasan \{#gray-glacier-summary}
 
 Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty-bomb) selama tiga bulan. Ini adalah satu-satunya perubahan yang dibolehkan dalam pembaruan ini, dan sifatnya serupa dengan pembaruan [Arrow Glacier](#arrow-glacier) dan [Muir Glacier](#muir-glacier). Perubahan serupa telah diterapkan pada peningkatan jaringan [Byzantium](#byzantium), [Konstatinopel](#constantinople) dan [London](#london).
 
@@ -123,13 +123,13 @@ Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty
 
 <Divider />
 
-## 2021 {#2021}
+## 2021 \{#2021}
 
-### Arrow Glacier {#arrow-glacier}
+### Arrow Glacier \{#arrow-glacier}
 
 <NetworkUpgradeSummary name="arrowGlacier" />
 
-#### Ringkasan {#arrow-glacier-summary}
+#### Ringkasan \{#arrow-glacier-summary}
 
 Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty-bomb) sebanyak beberapa bulan. Ini adalah satu-satunya perubahan yang diperkenalkan dalam peningkatan ini, dan sifatnya sama dengan peningkatan [Muir Glacier](#muir-glacier). Perubahan serupa telah diterapkan pada peningkatan jaringan [Byzantium](#byzantium), [Konstatinopel](#constantinople) dan [London](#london).
 
@@ -146,17 +146,17 @@ Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty
 
 ---
 
-### Altair {#altair}
+### Altair \{#altair}
 
 <NetworkUpgradeSummary name="altair" />
 
-#### Ringkasan {#altair-summary}
+#### Ringkasan \{#altair-summary}
 
 Peningkatan Altair adalah peningkatan pertama yang terjadwal untuk [Rantai Suar](/roadmap/beacon-chain). Ini memberi tambahan dukungan untuk "komite sinkronisasi" — memungkinkan klien ringan, dan meningkatkan ketidakaktifan validator dan memotong hukuman saat pengembangan berkembang menuju Penggabungan.
 
 - [Baca spesifikasi peningkatan Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Fakta menyenangkan! {#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} me="0.5rem" />Fakta menyenangkan! \{#altair-fun-fact}
 
 Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu rollout yang pasti. Setiap peningkatan sebelumnya telah berdasarkan pada suatu nomor blok yang dideklarasikan pada rantai bukti kerja, dengan waktu blok yang bervariasi. Rantai Suar tidak mengharuskan penyelesaian bukti kerja, dan sebagai gantinya berfungsi pada sistem jangka waktu berbasis waktu yang terdiri dari 32 "slot" waktu dua belas detik di mana para validator dapat mengusulkan blok. Inilah alasan kami mengetahui secara pasti kapan kami akan mencapai jangka waktu 74.240 dan Altair mulai beroperasi!
 
@@ -164,11 +164,11 @@ Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu r
 
 ---
 
-### London {#london}
+### London \{#london}
 
 <NetworkUpgradeSummary name="london" />
 
-#### Ringkasan {#london-summary}
+#### Ringkasan \{#london-summary}
 
 Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), yang memperbarui pasar biaya transaksi, bersamaan dengan perubahan bagaimana pembayaran kembali gas ditangani dan jadwal untuk [Zaman Es](/glossary/#ice-age).
 
@@ -190,11 +190,11 @@ Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 
 ---
 
-### Berlin {#berlin}
+### Berlin \{#berlin}
 
 <NetworkUpgradeSummary name="berlin" />
 
-#### Ringkasan {#berlin-summary}
+#### Ringkasan \{#berlin-summary}
 
 Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningkatkan dukungan pada beragam jenis transaksi.
 
@@ -214,13 +214,13 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 <Divider />
 
-## 2020 {#2020}
+## 2020 \{#2020}
 
-### Genesis Rantai Suar {#beacon-chain-genesis}
+### Genesis Rantai Suar \{#beacon-chain-genesis}
 
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### Ringkasan {#beacon-chain-genesis-summary}
+#### Ringkasan \{#beacon-chain-genesis-summary}
 
 [Rantai Suar](/roadmap/beacon-chain/) memerlukan deposito 16384 dari 32 ETH yang ditaruhkan untuk diluncurkan secara aman. Ini terjadi pada 27 November yang berarti Rantai Suar mulai memproduksi blok pada 1 Desember 2020. Ini adalah langkah pertama yang penting untuk meraih [visi Ethereum](/roadmap/vision/).
 
@@ -232,11 +232,11 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 ---
 
-### Kontrak setoran penaruhan dibuat {#staking-deposit-contract}
+### Kontrak setoran penaruhan dibuat \{#staking-deposit-contract}
 
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### Ringkasan {#deposit-contract-summary}
+#### Ringkasan \{#deposit-contract-summary}
 
 Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekosistem Ethereum. Bahkan kontrak [Jaringan Utama](/glossary/#mainnet) memiliki dampak langsung pada linimasa peluncuran [Rantai Suar](/roadmap/beacon-chain/), yaitu [peningkatan Ethereum](/roadmap/) yang penting.
 
@@ -248,11 +248,11 @@ Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekos
 
 ---
 
-### Muir Glacier {#muir-glacier}
+### Muir Glacier \{#muir-glacier}
 
 <NetworkUpgradeSummary name="muirGlacier" />
 
-#### Ringkasan {#muir-glacier-summary}
+#### Ringkasan \{#muir-glacier-summary}
 
 Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#difficulty-bomb). Peningkatan kesulitan blok mekanisme konsensus [bukti kerja](/developers/docs/consensus-mechanisms/pow/) mengancam akan menurunkan kegunaan Ethereum dengan meningkatkan waktu tunggu untuk mengirim transaksi dan menggunakan dapps.
 
@@ -269,13 +269,13 @@ Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 
 <Divider />
 
-## 2019 {#2019}
+## 2019 \{#2019}
 
-### Istanbul {#istanbul}
+### Istanbul \{#istanbul}
 
 <NetworkUpgradeSummary name="istanbul" />
 
-#### Ringkasan {#istanbul-summary}
+#### Ringkasan \{#istanbul-summary}
 
 Garpu Istanbul:
 
@@ -302,11 +302,11 @@ Garpu Istanbul:
 
 ---
 
-### Constantinople {#constantinople}
+### Constantinople \{#constantinople}
 
 <NetworkUpgradeSummary name="constantinople" />
 
-#### Ringkasan {#constantinople-summary}
+#### Ringkasan \{#constantinople-summary}
 
 Fork Konstantinopel:
 
@@ -329,13 +329,13 @@ Fork Konstantinopel:
 
 <Divider />
 
-## 2017 {#2017}
+## 2017 \{#2017}
 
-### Byzantium {#byzantium}
+### Byzantium \{#byzantium}
 
 <NetworkUpgradeSummary name="byzantium" />
 
-#### Ringkasan {#byzantium-summary}
+#### Ringkasan \{#byzantium-summary}
 
 Fork Byzantium:
 
@@ -364,13 +364,13 @@ Fork Byzantium:
 
 <Divider />
 
-## 2016 {#2016}
+## 2016 \{#2016}
 
-### Spurious Dragon {#spurious-dragon}
+### Spurious Dragon \{#spurious-dragon}
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### Ringkasan {#spurious-dragon-summary}
+#### Ringkasan \{#spurious-dragon-summary}
 
 Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (DoS) di jaringan (September/Oktober 2016) termasuk:
 
@@ -393,11 +393,11 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
 
 ---
 
-### Tangerine whistle {#tangerine-whistle}
+### Tangerine whistle \{#tangerine-whistle}
 
 <NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### Ringkasan {#tangerine-whistle-summary}
+#### Ringkasan \{#tangerine-whistle-summary}
 
 Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of service (DoS) di jaringan (September/Oktober 2016) yang mencakup:
 
@@ -416,11 +416,11 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
 
 ---
 
-### Garpu DAO {#dao-fork}
+### Garpu DAO \{#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
-#### Ringkasan {#dao-fork-summary}
+#### Ringkasan \{#dao-fork-summary}
 
 Garpu DAO merupakan respons terhadap [serangan DAO 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) di mana kontrak [DAO](/glossary/#dao) yang tidak aman dikuras dananya sebanyak lebih dari 3,6 juta ETH dalam peretasan saat itu. Garpu tersebut memindahkan dana dari kontrak bermasalah ke [kontrak baru](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) dengan satu fungsi tunggal: tarik. Siapa pun yang kehilangan dana dapat menarik 1 ETH untuk setiap 100 token DAO di dompet mereka.
 
@@ -432,11 +432,11 @@ Beberapa penambang menolak melakukan garpu karena insiden DAO bukan merupakan ke
 
 ---
 
-### Homestead {#homestead}
+### Homestead \{#homestead}
 
 <NetworkUpgradeSummary name="homestead" />
 
-#### Ringkasan {#homestead-summary}
+#### Ringkasan \{#homestead-summary}
 
 Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan protokol dan perubahan jaringan yang memberi Ethereum kemampuan untuk melakukan peningkatan jaringan lebih lanjut.
 
@@ -454,13 +454,13 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 
 <Divider />
 
-## 2015 {#2015}
+## 2015 \{#2015}
 
-### Thawing frontier {#frontier-thawing}
+### Thawing frontier \{#frontier-thawing}
 
 <NetworkUpgradeSummary name="frontierThawing" />
 
-#### Ringkasan {#frontier-thawing-summary}
+#### Ringkasan \{#frontier-thawing-summary}
 
 Garpu thawing frontier mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/glossary/#block) blok dan menetapkan harga gas default menjadi 51 [gwei](/glossary/#gwei). Ini memungkinkan transaksi–transaksi membutuhkan 21.000 gas. [bom tingkat kesulitan](/glossary/#difficulty-bomb) diperkenalkan untuk memastikan garpu-tangan di masa depan untuk [bukti taruhan](/glossary/#pos).
 
@@ -469,11 +469,11 @@ Garpu thawing frontier mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/
 
 ---
 
-### Garis depan {#frontier}
+### Garis depan \{#frontier}
 
 <NetworkUpgradeSummary name="frontier" />
 
-#### Ringkasan {#frontier-summary}
+#### Ringkasan \{#frontier-summary}
 
 Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini mengikuti fase pengujian Olimpiade yang sukses. Ditujukan untuk pengguna teknis, khususnya pengembang. [Blok](/glossary/#block) memiliki batas [gas](/glossary/#gas) sebesar 5.000. Periode 'pencairan' ini memungkinkan penambang untuk memulai operasi mereka dan bagi pengguna awal untuk menginstal klien mereka tanpa harus 'terburu-buru'.
 
@@ -481,9 +481,9 @@ Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini
 
 <Divider />
 
-## 2014 {#2014}
+## 2014 \{#2014}
 
-### Penjualan Ether {#ether-sale}
+### Penjualan Ether \{#ether-sale}
 
 <NetworkUpgradeSummary name="etherSale" />
 
@@ -493,7 +493,7 @@ Ether secara resmi mulai dijual selama 42 hari. Anda dapat membelinya dengan BTC
 
 ---
 
-### Yellowpaper dirilis {#yellowpaper}
+### Yellowpaper dirilis \{#yellowpaper}
 
 <NetworkUpgradeSummary name="yellowpaperRelease" />
 
@@ -503,9 +503,9 @@ Yellow Paper, yang ditulis oleh Dr. Gavin Wood, adalah definisi teknis dari prot
 
 <Divider />
 
-## 2013 {#2013}
+## 2013 \{#2013}
 
-### Kertas putih dirilis {#whitepaper}
+### Kertas putih dirilis \{#whitepaper}
 
 <NetworkUpgradeSummary name="whitepaperRelease" />
 

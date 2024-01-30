@@ -4,7 +4,7 @@ description: Exploraţi avantajele framework-urilor și comparaţi opțiunile di
 lang: ro
 ---
 
-## Introducere despre framework-uri {#introduction-to-frameworks}
+## Introducere despre framework-uri \{#introduction-to-frameworks}
 
 Construirea unei aplicații dapp complet dezvoltată necesită diferite elemente de tehnologie. Framework-urile software includ multe dintre funcţionalităţile necesare sau oferă sisteme ușoare de plugin-uri care să aleagă instrumentele pe care le doriţi.
 
@@ -16,11 +16,11 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 - Configurare pentru conectarea la rețelele Ethereum și implementarea contractelor, fie la o instanță care rulează local, fie la una dintre rețelele publice Ethereum.
 - Distribuție descentralizată a aplicațiilor - integrări cu opțiuni de stocare precum IPFS.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Înainte de explora framework-urile, vă recomandăm să citiţi mai întâi introducerea noastră despre [aplicațiile dapp](/developers/docs/dapps/) și [stiva Ethereum](/developers/docs/ethereum-stack/).
 
-## Framework-uri disponibile {#available-frameworks}
+## Framework-uri disponibile \{#available-frameworks}
 
 **Truffle - ** **_un mediu de dezvoltare, un framework de testare, de construire de pipeline și alte instrumente._**
 
@@ -85,10 +85,10 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 - [GitHub](https://github.com/gakonst/foundry/)
 - [Tools for Foundry](https://github.com/crisgarner/awesome-foundry)
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 _Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Configurarea unui mediu de dezvoltare local](/developers/local-environment/)

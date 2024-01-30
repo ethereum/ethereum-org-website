@@ -9,7 +9,7 @@ incomplete: false
 
 Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
-## Erste Schritte mit Smart Contracts und der Solidity-Sprache {#getting-started-with-smart-contracts-and-solidity}
+## Erste Schritte mit Smart Contracts und der Solidity-Sprache \{#getting-started-with-smart-contracts-and-solidity}
 
 **Starten Sie mit der Integration von Ruby mit Ethereum durch**
 
@@ -20,7 +20,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [Den ersten Smart Contract schreiben](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Kompilieren und Bereitstellen von Solidity Code lernen](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Informationen für Einsteiger {#beginner-articles}
+## Informationen für Einsteiger \{#beginner-articles}
 
 - [Endlich Ethereum-Konten verstehen](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Endlich Rails-Benutzer mit MetaMask authentifizieren](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
@@ -28,14 +28,14 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [So verbinden Sie sich über Ruby mit dem Ethereum-Netzwerk](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [So erzeugen Sie eine neue Ethereum-Adresse in Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
-## Artikel für Fortgeschrittene {#intermediate-articles}
+## Artikel für Fortgeschrittene \{#intermediate-articles}
 
 - [Blockchain - mit Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
 - [Verwenden Sie Ruby, das mit Ethereum verbunden ist, um den Smart Contract auszuführen](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
-## Ruby-Projekte und Tools {#ruby-projects-and-tools}
+## Ruby-Projekte und Tools \{#ruby-projects-and-tools}
 
-### Aktiv {#active}
+### Aktiv \{#active}
 
 - [eth.rb](https://github.com/q9f/eth.rb) – _Ruby-Bibliothek und RPC-Client zur Verwaltung von Ethereum-Konten, Nachrichten und Transaktionen_
 - [keccak.rb](https://github.com/q9f/keccak.rb) – _Der von Ethereum verwendete Keccak (SHA3) Hash_
@@ -46,7 +46,7 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) – _OmniAuth-Strategie für die Authentifizierung über NFT-Besitz_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) – _Ethereum on Rails-Vorlage, um MetaMask mit Ruby on Rails zu verbinden_
 
-### Archiviert/Nicht mehr verwaltet {#archived--no-longer-maintained}
+### Archiviert/Nicht mehr verwaltet \{#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) – _RPC-Methoden des Ethereum-Nodes mit Ruby aufrufen_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) – _Ruby-Bibliothek zur Generierung von ETH-Adressen aus einer Hierarchical Deterministic Wallet nach dem BIP32-Standard_
@@ -56,6 +56,6 @@ Sind Sie an einigen grundlegenden Informationen interessiert? Dann sehen Sie sic
 
 Sind Sie an weiteren Informationen interessiert? Besuchen Sie [unsere Entwickler-Homepage](/developers/).
 
-## Mitwirkende der Ruby-Community {#ruby-community-contributors}
+## Mitwirkende der Ruby-Community \{#ruby-community-contributors}
 
 Die [Ethereum-Ruby-Telegram-Gruppe](https://t.me/ruby_eth) ist eine schnell wachsende Community und genau die richtige Anlaufstelle für Diskussionen über die oben genannten Projekte und verwandte Themen.

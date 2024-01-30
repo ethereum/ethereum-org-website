@@ -5,9 +5,9 @@ lang: zh
 incomplete: true
 ---
 
-## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
+## 智能合约和 Solidity 语言入门 \{#getting-started-with-smart-contracts-and-solidity}
 
-## 教程 {#tutorials}
+## 教程 \{#tutorials}
 
 - [Flutter 和区块链 – Hello World 去中心化应用程序](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/)带您了解所有步骤，内容包括：
   1.  安装 [Truffle 开发套件](https://www.trufflesuite.com/)
@@ -18,7 +18,7 @@ incomplete: true
 - 如果您不想花这么多时间，您可能喜欢[在以太坊上使用 Flutter 和 Dart 创建去中心化的区块链应用](https://www.youtube.com/watch?v=jaMFEOCq_1s)，时长仅约 20 分钟
 - [将 MetaMask 集成到 Flutter 应用程序中](https://youtu.be/8qzVDje3IWk) — 这个短片会带你了解如何一步步将 MetaMask 集成到你的 Flutter 应用程序中。
 
-## 使用以太坊客户端 {#working-with-ethereum-clients}
+## 使用以太坊客户端 \{#working-with-ethereum-clients}
 
 您可以使用以太坊来创建去中心化应用程序（或称“dapp”），这种应用可以利用加密货币和区块链技术。 Dart 当前至少维护了两个调用以太坊 [JSON RPC 应用程序接口](/developers/docs/apis/json-rpc/)的库。
 

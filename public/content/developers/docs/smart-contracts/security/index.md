@@ -12,23 +12,23 @@ Although figures vary, it is estimated that the total amount of value stolen or 
 
 The aforementioned issues make it imperative for developers to invest effort in building secure, robust, and resilient smart contracts. Smart contract security is serious business, and one that every developer will do well to learn. This guide will cover security considerations for Ethereum developers and explore resources for improving smart contract security.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 Make sure you’re familiar with the [fundamentals of smart contract development](/developers/docs/smart-contracts/) before tackling security.
 
-## Guidelines for building secure Ethereum smart contracts {#smart-contract-security-guidelines}
+## Guidelines for building secure Ethereum smart contracts \{##smart-contract-security-guidelines}
 
-### 1. Design proper access controls {#design-proper-access-controls}
+### 1. Design proper access controls \{##design-proper-access-controls}
 
 In smart contracts, functions marked `public` or `external` can be called by any externally owned accounts (EOAs) or contract accounts. Specifying public visibility for functions is necessary if you want others to interact with your contract. Functions marked `private` however can only be called by functions within the smart contract, and not external accounts. Giving every network participant access to contract functions can cause problems, especially if it means anyone can perform sensitive operations (e.g., minting new tokens).
 
 To prevent unauthorized use of smart contract functions, it is necessary to implement secure access controls. Access control mechanisms restrict the ability to use certain functions in a smart contract to approved entities, such as accounts responsible for managing the contract. The **Ownable pattern** and **role-based control** are two patterns useful for implementing access control in smart contracts:
 
-#### Ownable pattern {#ownable-pattern}
+#### Ownable pattern \{##ownable-pattern}
 
 In the Ownable pattern, an address is set as the “owner” of the contract during the contract-creation process. Protected functions are assigned an `OnlyOwner` modifier, which ensures the contract authenticates the identity of the calling address before executing the function. Calls to protected functions from other addresses aside from the contract owner always revert, preventing unwanted access.
 
-#### Role-based access control {#role-based-access-control}
+#### Role-based access control \{##role-based-access-control}
 
 Registering a single address as `Owner` in a smart contract introduces the risk of centralization and represents a single point-of-failure. If the owner’s account keys are compromised, attackers can attack the owned contract. This is why using a role-based access control pattern with multiple administrative accounts may be a better option.
 
@@ -40,7 +40,7 @@ Another approach for implementing secure access control is using a [multi-signat
 
 Using a multisig for access control introduces an extra layer of security since actions on the target contract require consent from multiple parties. This is particularly useful if using the Ownable pattern is necessary, as it makes it more difficult for an attacker or rogue insider to manipulate sensitive contract functions for malicious purposes.
 
-### 2. Use require(), assert(), and revert() statements to guard contract operations {#use-require-assert-revert}
+### 2. Use require(), assert(), and revert() statements to guard contract operations \{##use-require-assert-revert}
 
 As mentioned, anyone can call public functions in your smart contract once it is deployed on the blockchain. Since you cannot know in advance how external accounts will interact with a contract, it is ideal to implement internal safeguards against problematic operations before deploying. You can enforce correct behavior in smart contracts by using the `require()`, `assert()`, and `revert()` statements to trigger exceptions and revert state changes if execution fails to satisfy certain requirements.
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. Test smart contracts and verify code correctness {#test-smart-contracts-and-verify-code-correctness}
+### 3. Test smart contracts and verify code correctness \{##test-smart-contracts-and-verify-code-correctness}
 
 The immutability of code running in the [Ethereum Virtual Machine](/developers/docs/evm/) means smart contracts demand a higher level of quality assessment during the development phase. Testing your contract extensively and observing it for any unexpected results will improve security a great deal and protect your users in the long run.
 
@@ -82,17 +82,17 @@ A better approach is to combine unit testing with property-based testing perform
 
 [Formal verification](/developers/docs/smart-contracts/formal-verification) is another technique for verifying security properties in smart contracts. Unlike regular testing, formal verification can conclusively prove the absence of errors in a smart contract. This is achieved by creating a formal specification that captures desired security properties and proving that a formal model of the contracts adheres to this specification.
 
-### 4. Ask for an independent review of your code {#get-independent-code-reviews}
+### 4. Ask for an independent review of your code \{##get-independent-code-reviews}
 
 After testing your contract, it is good to ask others to check the source code for any security issues. Testing will not uncover every flaw in a smart contract, but getting an independent review increases the possibility of spotting vulnerabilities.
 
-#### Audits {#audits}
+#### Audits \{##audits}
 
 Commissioning a smart contract audit is one way of conducting an independent code review. Auditors play an important role in ensuring that smart contracts are secure and free from quality defects and design errors.
 
 That said, you should avoid treating audits as a silver bullet. Smart contract audits won't catch every bug and are mostly designed to provide an additional round of reviews, which can help detect issues missed by developers during initial development and testing. You should also follow [best practices for working with auditors](https://twitter.com/tinchoabbate/status/1400170232904400897), such as documenting code properly and adding inline comments, to maximize the benefit of a smart contract audit.
 
-#### Bug bounties {#bug-bounties}
+#### Bug bounties \{##bug-bounties}
 
 Setting up a bug bounty program is another approach for implementing external code reviews. A bug bounty is a financial reward given to individuals (usually whitehat hackers) that discover vulnerabilities in an application.
 
@@ -100,7 +100,7 @@ When used properly, bug bounties give members of the hacker community incentive 
 
 A useful strategy is to set the payout of a bug bounty program in proportion to the amount of funds at stake. Described as the “[scaling bug bounty](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”, this approach provides financial incentives for individuals to responsibly disclose vulnerabilities instead of exploiting them.
 
-### 5. Follow best practices during smart contract development {#follow-smart-contract-development-best-practices}
+### 5. Follow best practices during smart contract development \{##follow-smart-contract-development-best-practices}
 
 The existence of audits and bug bounties doesn’t excuse your responsibility to write high-quality code. Good smart contract security starts with following proper design and development processes:
 
@@ -118,11 +118,11 @@ The existence of audits and bug bounties doesn’t excuse your responsibility to
 
 - Properly document your code (using [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)) and describe details about the contract architecture in easy-to-understand language. This will make it easier for others to audit and review your code.
 
-### 6. Implement robust disaster recovery plans {#implement-disaster-recovery-plans}
+### 6. Implement robust disaster recovery plans \{##implement-disaster-recovery-plans}
 
 Designing secure access controls, implementing function modifiers, and other suggestions can improve smart contract security, but they cannot rule out the possibility of malicious exploits. Building secure smart contracts requires “preparing for failure” and having a fallback plan for responding effectively to attacks. A proper disaster recovery plan will incorporate some or all of the following components:
 
-#### Contract upgrades {#contract-upgrades}
+#### Contract upgrades \{##contract-upgrades}
 
 While Ethereum smart contracts are immutable by default, it is possible to achieve some degree of mutability by using upgrade patterns. Upgrading contracts is necessary in cases where a critical flaw renders your old contract unusable and deploying new logic is the most feasible option.
 
@@ -134,7 +134,7 @@ Delegating calls to the logic contract requires storing its address in the proxy
 
 [More on upgrading contracts](/developers/docs/smart-contracts/upgrading/).
 
-#### Emergency stops {#emergency-stops}
+#### Emergency stops \{##emergency-stops}
 
 As mentioned, extensive auditing and testing cannot possibly discover all bugs in a smart contract. If a vulnerability appears in your code after deployment, patching it is impossible since you cannot change the code running at the contract address. Also, upgrade mechanisms (e.g., proxy patterns) may take time to implement (they often require approval from different parties), which only gives attackers more time to cause more damage.
 
@@ -198,7 +198,7 @@ This example shows the basic features of emergency stops:
 
 Using an emergency stop functionality provides an effective stopgap for dealing with serious vulnerabilities in your smart contract. However, it increases the need for users to trust developers not to activate it for self-serving reasons. To this end, decentralizing control of the emergency stop either by subjecting it to an on-chain voting mechanism, timelock, or approval from a multisig wallet are possible solutions.
 
-#### Event monitoring {#event-monitoring}
+#### Event monitoring \{##event-monitoring}
 
 [Events](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) allow you to track calls to smart contract functions and monitor changes to state variables. It is ideal to program your smart contract to emit an event whenever some party takes a safety-critical action (e.g., withdrawing funds).
 
@@ -206,7 +206,7 @@ Logging events and monitoring them off-chain provides insights on contract opera
 
 You can also opt for an off-the-shelf monitoring tool that automatically forwards alerts whenever someone interacts with your contracts. These tools will allow you to create custom alerts based on different triggers, such as transaction volume, frequency of function calls, or the specific functions involved. For example, you could program an alert that comes in when the amount withdrawn in a single transaction crosses a particular threshold.
 
-### 7. Design secure governance systems {#design-secure-governance-systems}
+### 7. Design secure governance systems \{##design-secure-governance-systems}
 
 You may want to decentralize your application by turning over control of core smart contracts to community members. In this case, the smart contract system will include a governance module—a mechanism that allows community members to approve administrative actions via an on-chain governance system. For example, a proposal to upgrade a proxy contract to a new implementation may be voted upon by token-holders.
 
@@ -216,7 +216,7 @@ One way of preventing problems related to on-chain governance is to [use a timel
 
 More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) and [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
 
-### 8. Reduce complexity in code to a minimum {#reduce-code-complexity}
+### 8. Reduce complexity in code to a minimum \{##reduce-code-complexity}
 
 Traditional software developers are familiar with the KISS (“keep it simple, stupid”) principle, which advises against introducing unnecessary complexity into software design. This follows the long-held thinking that “complex systems fail in complex ways” and are more susceptible to costly errors.
 
@@ -224,9 +224,9 @@ Keeping things simple is of particular importance when writing smart contracts, 
 
 Another common advice is to write small functions and keep contracts modular by splitting business logic across multiple contracts. Not only does writing simpler code reduce the attack surface in a smart contract, it also makes it easier to reason about the correctness of the overall system and detect possible design errors early.
 
-### 9. Defend against common smart contract vulnerabilities {#mitigate-common-smart-contract-vulnerabilities}
+### 9. Defend against common smart contract vulnerabilities \{##mitigate-common-smart-contract-vulnerabilities}
 
-#### Reentrancy {#reentrancy}
+#### Reentrancy \{##reentrancy}
 
 The EVM doesn’t permit concurrency, meaning two contracts involved in a message call cannot run simultaneously. An external call pauses the calling contract's execution and memory until the call returns, at which point execution proceeds normally. This process can be formally described as transferring [control flow](https://www.computerhope.com/jargon/c/contflow.htm) to another contract.
 
@@ -353,7 +353,7 @@ contract MutexPattern {
 
 You can also use a [pull payments](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) system that requires users to withdraw funds from the smart contracts, instead of a "push payments" system that sends funds to accounts. This removes the possibility of inadvertently triggering code at unknown addresses (and can also prevent certain denial-of-service attacks).
 
-#### Integer underflows and overflows {#integer-underflows-and-overflows}
+#### Integer underflows and overflows \{##integer-underflows-and-overflows}
 
 An integer overflow occurs when the results of an arithmetic operation falls outside the acceptable range of values, causing it to "roll over" to the lowest representable value. For example, a `uint8` can only store values up to 2^8-1=255. Arithmetic operations that result in values higher than `255` will overflow and reset `uint` to `0`, similar to how the odometer on a car resets to 0 once it reaches the maximum mileage (999999).
 
@@ -434,7 +434,7 @@ contract Attack {
 
 As of version 0.8.0, the Solidity compiler rejects code that results in integer underflows and overflows. However, contracts compiled with a lower compiler version should either perform checks on functions involving arithmetic operations or use a library (e.g., [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)) that checks for underflow/overflow.
 
-#### Oracle manipulation {#oracle-manipulation}
+#### Oracle manipulation \{##oracle-manipulation}
 
 [Oracles](/developers/docs/oracles/) source off-chain information and send it on-chain for smart contracts to use. With oracles, you can design smart contracts that interoperate with off-chain systems, such as capital markets, greatly expanding their application.
 
@@ -452,9 +452,9 @@ The minimum requirement to avoid oracle manipulation is to use a decentralized o
 
 If you plan on querying an on-chain oracle for asset prices, consider using one that implements a time-weighted average price (TWAP) mechanism. A [TWAP oracle](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) queries the price of an asset at two different points in time (which you can modify) and calculates the spot price based on the average obtained. Choosing longer time periods protects your protocol against price manipulation since large orders executed recently cannot impact asset prices.
 
-## Smart contract security resources for developers {#smart-contract-security-resources-for-developers}
+## Smart contract security resources for developers \{##smart-contract-security-resources-for-developers}
 
-### Tools for analyzing smart contracts and verifying code correctness {#code-analysis-tools}
+### Tools for analyzing smart contracts and verifying code correctness \{##code-analysis-tools}
 
 - **[Testing tools and libraries](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _Collection of industry-standard tools and libraries for performing unit tests, static analysis, and dynamic analysis on smart contracts._
 
@@ -468,13 +468,13 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _A free online service for encoding your Solidity contract functions and constructor arguments._
 
-### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
+### Tools for monitoring smart contracts \{##smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _A tool for getting real-time notifications when unusual or unexpected events happen on your smart contracts or wallets._
 
-### Tools for secure administration of smart contracts {#smart-contract-administration-tools}
+### Tools for secure administration of smart contracts \{##smart-contract-administration-tools}
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface for managing smart contract administration, including access controls, upgrades, and pausing._
 
@@ -482,7 +482,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _Contract libraries for implementing administrative features, including contract ownership, upgrades, access controls, governance, pauseability, and more._
 
-### Smart contract auditing services {#smart-contract-auditing-services}
+### Smart contract auditing services \{##smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://consensys.net/diligence/)** - _Smart contract auditing service helping projects across the blockchain ecosystem ensure their protocols are ready for launch and built to protect users._
 
@@ -506,7 +506,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Code4rena](https://code4rena.com/)** - _Competitive audit platform that incentivizes smart contract security experts to find vulnerabilities and help make web3 more secure._
 
-### Bug bounty platforms {#bug-bounty-platforms}
+### Bug bounty platforms \{##bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
 
@@ -514,7 +514,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[HackenProof](https://hackenproof.com/)** - _Expert bug bounty platform for crypto projects (DeFi, Smart Contracts, Wallets, CEX and more), where security professionals provide triage services and researchers get paid for relevant, verified bug reports._
 
-### Publications of known smart contract vulnerabilities and exploits {#common-smart-contract-vulnerabilities-and-exploits}
+### Publications of known smart contract vulnerabilities and exploits \{##common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys: Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _Beginner-friendly explanation of the most significant contract vulnerabilities, with sample code for most cases._
 
@@ -522,7 +522,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Rekt](https://rekt.news/)** - _Regularly updated publication of high-profile crypto hacks and exploits, along with detailed post-mortem reports._
 
-### Challenges for learning smart contract security {#challenges-for-learning-smart-contract-security}
+### Challenges for learning smart contract security \{##challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Curated list of blockchain security wargames, challenges, and [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) competitions and solution writeups._
 
@@ -530,7 +530,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _Web3/Solidity-based wargame where each level is a smart contract that needs to be 'hacked'._
 
-### Best practices for securing smart contracts {#smart-contract-security-best-practices}
+### Best practices for securing smart contracts \{##smart-contract-security-best-practices}
 
 - **[ConsenSys: Ethereum Smart Contract Security Best Practices](https://consensys.github.io/smart-contract-best-practices/)** - _Comprehensive list of guidelines for securing Ethereum smart contracts._
 
@@ -542,7 +542,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Fourteen-part checklist created to standardize the security of smart contracts for developers, architects, security reviewers and vendors._
 
-### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
+### Tutorials on smart contract security \{##tutorials-on-smart-contract-security}
 
 - [How to write secure smart contracts](/developers/tutorials/secure-development-workflow/)
 

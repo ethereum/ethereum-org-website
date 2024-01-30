@@ -9,7 +9,7 @@ incomplete: true
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 
-## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Ambillah langkah awal untuk mengintegrasikan Rust dengan Ethereum**
 
@@ -20,7 +20,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Tulis Kontrak Pintar Pertama Anda](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Pelajari Cara Mengompilasi dan Menggunakan Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Artikel Untuk Pemula {#beginner-articles}
+## Artikel Untuk Pemula \{#beginner-articles}
 
 - [Memilih Klien Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Klien Ethereum Rust](https://openethereum.github.io/) \* **Perhatikan bahwa OpenEthereum [telah menjadi usang](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) dan tidak lagi dipertahankan.** Gunakan dengan hati-hati dan lebih baik beralih ke implementasi klien lainnya.
@@ -28,9 +28,9 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Pengantar Kontrak Pintar dengan Klien Ethereum Parity](https://wiki.parity.io/Smart-Contracts)
 - [Tutorial langkah demi langkah tentang cara menulis kontrak dalam rust Wasm untuk Kovan](https://github.com/paritytech/pwasm-tutorial)
 
-## Artikel tingkat menengah {#intermediate-articles}
+## Artikel tingkat menengah \{#intermediate-articles}
 
-## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
+## Pola penggunaan tingkat lanjut \{#advanced-use-patterns}
 
 - [Pustaka eksternal pwasm_ethereum untuk berinteraksi dengan jaringan seperti Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Bangun Obrolan yang Terdesentralisi Menggunakan JavaScript dan Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
@@ -38,7 +38,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Mulai Menggunakan Enigma - Dalam Bahasa Pemrograman Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Pengantar Kontrak Rahasia](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 
-## Proyek dan peralatan Rust {#rust-projects-and-tools}
+## Proyek dan peralatan Rust \{#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Koleksi eksternal untuk berinteraksi dengan jaringan seperti Ethereum._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
@@ -50,7 +50,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)
 
-## Kontributor komunitas Rust {#rust-community-contributors}
+## Kontributor komunitas Rust \{#rust-community-contributors}
 
 - [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Gitter Oasis](https://gitter.im/Oasis-official/Lobby)

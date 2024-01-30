@@ -27,11 +27,11 @@ Pour utiliser Ethereum sur Arm pour transformer un Raspberry Pi en un nœud Ethe
 - Un boîtier avec dissipateur de chaleur et ventilateur
 - Clavier USB, moniteur et câble HDMI (micro-HDMI) (facultatif)
 
-## Pourquoi utiliser Ethereum avec ARM ? {#why-run-ethereum-on-arm}
+## Pourquoi utiliser Ethereum avec ARM ? \{#why-run-ethereum-on-arm}
 
 Les cartes ARM sont très abordables, flexibles et équivalentes à de petits ordinateurs. Elles sont de bons choix pour faire fonctionner des nœuds Ethereum car elles sont bon marché, configurées de sorte que toutes leurs ressources se concentrent uniquement sur le nœud, les rendant ainsi efficaces, elles consomment peu de puissance et sont physiquement peu nombreuses pour qu'elles puissent s'adapter discrètement à n'importe quel environnement. Il est également très facile de faire tourner des nœuds puisque la MicroSD du Raspberry Pi peut simplement être flashée avec une image reconstruite, sans téléchargement ou logiciel de construction requis.
 
-## Comment ça marche ? {#how-does-it-work}
+## Comment ça marche ? \{#how-does-it-work}
 
 La carte mémoire du Raspberry Pi est flashée avec une image préconstruite. Cette image contient tout ce qui est nécessaire pour exécuter un nœud Ethereum. Avec une carte flash, tout ce que l'utilisateur a besoin de faire est d'allumer son Raspberry Pi. Tous les processus requis pour exécuter le nœud sont démarrés automatiquement. Cela fonctionne parce que la carte mémoire contient un système d'exploitation (OS) basé sur Linux sur lequel sont exécutés automatiquement les processus au niveau du système qui transforment l'unité en un nœud Ethereum.
 
@@ -39,7 +39,7 @@ Ethereum ne peut pas être exécuté en utilisant le populaire Raspberry Pi Linu
 
 **Les images s'occupent de réaliser toutes les étapes nécessaires**, allant de la configuration de l'environnement et du formatage du disque SSD, à l'installation et à l'exécution du logiciel Ethereum, ainsi qu'au lancement de la synchronisation avec la blockchain.
 
-## Note sur les clients d'exécution et de consensus {#note-on-execution-and-consensus-clients}
+## Note sur les clients d'exécution et de consensus \{#note-on-execution-and-consensus-clients}
 
 L'image Ethereum sur Arm inclut les clients d'exécution et de consensuel préconstruits en tant que services. Un nœud Ethereum nécessite que les deux clients soient synchronisés et exécutés. Vous devez seulement télécharger et flasher l'image et ensuite démarrer les services. L'image est préchargée avec les clients d'exécution suivants :
 
@@ -56,7 +56,7 @@ et les clients de consensus suivants :
 
 Vous devez choisir un de chaque à exécuter - tous les clients d'exécution sont compatibles avec tous les clients de consensus. Si vous ne sélectionnez pas explicitement un client, le noeud va revenir à ses valeurs par défaut - Geth et Lighthouse - et les exécuter automatiquement lorsque la carte sera mise en marche. Vous devez ouvrir le port 30303 sur votre routeur pour que Geth puisse trouver et se connecter aux pairs.
 
-## Téléchargement de l'image {#downloading-the-image}
+## Téléchargement de l'image \{#downloading-the-image}
 
 L'image Ethereum Raspberry Pi 4 est une image « plug and play » qui installe et configure automatiquement à la fois les clients d'exécution et de consensus pour communiquer mutuellement et se connecter au réseau Ethereum. Tout ce que l'utilisateur doit faire est de démarrer ses processus en utilisant une commande simple.
 
@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 
 Notez que les images des cartes Rock 5B et Odroid M1 sont disponibles sur la page de téléchargement [Ethereum sur Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html).
 
-## Flasher la carte MicroSD {#flashing-the-microsd}
+## Flasher la carte MicroSD \{#flashing-the-microsd}
 
 La carte MicroSD qui sera utilisée pour le Raspberry Pi doit d'abord être insérée dans un ordinateur de bureau ou portable pour qu'elle puisse être flashée. Ensuite, les commandes de terminal suivantes installeront l'image téléchargée sur la carte SD :
 
@@ -91,7 +91,7 @@ sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=prog
 
 La carte est maintenant flashée et peut être insérée dans le Raspberry Pi.
 
-## Démarrer le nœud {#start-the-node}
+## Démarrer le nœud \{#start-the-node}
 
 Avec la carte SD insérée dans le Raspberry Pi, connectez le câble ethernet et le SSD puis allumez l'alimentation. L'OS démarrera et commencera automatiquement à exécuter les tâches préconfigurées qui transforment le Raspberry Pi en un nœud Ethereum, y compris l'installation et la construction du logiciel client. Cela prendra probablement 10 à 15 minutes.
 
@@ -127,7 +127,7 @@ Avec les services Geth et Lighthouse exécutant et synchronisés, votre Raspberr
 
 Geth est préconfiguré pour rapporter des mesures sur un tableau de bord Grafana qui peut être consulté dans le navigateur. Les utilisateurs plus avancés pourraient vouloir utiliser cette fonctionnalité pour surveiller la santé de leur nœud en naviguant vers `ipaddress:3000`, utilisant `utilisateur : admin` et `passe: ethereum`.
 
-## Validateurs {#validators}
+## Validateurs \{#validators}
 
 Un validateur peut également être ajouté au client de consensus. Le logiciel du validateur permet à votre nœud de participer activement au consensus et fournit au réseau une sécurité cryptoéconomique. Vous avez été récompensé pour ce travail en ETH. Pour faire fonctionner un validateur, vous devez d'abord avoir 32 ETH, qui doivent être déposés dans le contrat de dépôt. **Ceci est un engagement à long terme - il n'est pas encore possible de retirer cet ETH !**. Le dépôt peut être fait en suivant le guide étape par étape sur la [plateforme de lancement](https://launchpad.ethereum.org/). Faites ceci sur un ordinateur de bureau ou portable, mais ne générez pas de clés — cela peut être fait directement sur le Raspberry Pi.
 
@@ -158,15 +158,15 @@ sudo systemctl start lighthouse-validator
 
 Félicitations, vous disposez maintenant d'un nœud Ethereum complet et d'un validateur fonctionnant sur un Raspberry Pi !
 
-## Plus de détails {#more-details}
+## Plus de détails \{#more-details}
 
 Cette page a donné un aperçu de la façon de mettre en place un nœud et un validateur Geth-Lighthouse utilisant Raspberry Pi. Des instructions plus détaillées sont disponibles sur[ le site Ethereum-on-Arm](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
 
-## Commentaires appréciés {#feedback-appreciated}
+## Commentaires appréciés \{#feedback-appreciated}
 
 Nous savons que le Raspberry Pi dispose d'une importante base d'utilisateurs qui pourrait avoir un impact très positif sur la santé du réseau Ethereum. Veuillez parcourir les détails de ce tutoriel, essayez d'exécuter sur les réseaux de test, regardez sur le GitHub Ethereum-on-Arm, émettez vos commentaires, soulevez des problématiques et des pull requests et aidez ainsi à faire avancer la technologie et la documentation !
 
-## Références {#references}
+## Références \{#references}
 
 1. https://ubuntu.com/download/raspberry-pi
 2. https://wikipedia.org/wiki/Port_forwarding

@@ -5,7 +5,7 @@ lang: tr
 incomplete: true
 ---
 
-## Standartlara genel bakış {#standards-overview}
+## Standartlara genel bakış \{#standards-overview}
 
 Ethereum topluluğu, projelerin ([Ethereum istemcileri](/developers/docs/nodes-and-clients/) ve cüzdanlar gibi) uygulamalar arasında birlikte çalışabilir durumda kalmasına yardımcı olan ve akıllı sözleşmeler ve dapp'lerin birleştirilebilir kalmasını sağlayan birçok standardı benimsemiştir.
 
@@ -20,7 +20,7 @@ Genellikle standartlar, bir [standart süreci](https://eips.ethereum.org/EIPS/ei
 - [Ethereum Protokol Geliştirme Yönetişimi ve Ağ Yükseltme Koordinasyonu](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Mart 2020 - Hudson Jameson_
 - [Ethereum Çekirdek Geliştiricilerinin Bütün Toplantılarını İçeren Oynatma Listesi](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Oynatma Listesi)_
 
-## Standart türleri {#types-of-standards}
+## Standart türleri \{#types-of-standards}
 
 3 tür EIP vardır:
 
@@ -37,7 +37,7 @@ Ayrıca, Standart İzleme 4 kategoriye ayrılmıştır:
 
 Bu farklı türler ve kategoriler daha fazla bilgi [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types) içinde bulunabilir
 
-### Token standartları {#token-standards}
+### Token standartları \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Oylama token'ları, stake etme token'ları veya sanal para birimleri gibi değiştirilebilir (birbirinin yerine geçebilir) token'lar için standart bir arayüz.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - ERC-20 jetonları için transfer veya transferFrom sonrası alıcı kodunun veya onaylandıktan sonra harcama kodunun yürütülmesini destekleyen bir jeton arayüzünü tanımlar.
@@ -51,7 +51,7 @@ Bu farklı türler ve kategoriler daha fazla bilgi [EIP-1](https://eips.ethereum
 
 [Jeton standartları](/developers/docs/standards/tokens/) hakkında daha fazla bilgi edinin.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Ethereum İyileştirme Önerileri (EIP'ler)](/eips/)
 

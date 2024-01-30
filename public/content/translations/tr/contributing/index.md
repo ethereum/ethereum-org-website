@@ -4,7 +4,7 @@ description: Ethereum.org'a katkıda bulunmanın farklı yolları hakkında bilg
 lang: tr
 ---
 
-# Ethereum.org'a katkıda bulunma 🦄 {#contributing-to-ethereumorg}
+# Ethereum.org'a katkıda bulunma 🦄 \{#contributing-to-ethereumorg}
 
 Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir projedir. Bu nedenle, [Ethereum portalımızı](/about/) geliştirmeye yardımcı olmak istiyorsanız, bunu nasıl yapabileceğinizi gösterelim.
 
@@ -12,7 +12,7 @@ Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir 
   POAP token'ınızı talep edin! 2022'de ethereum.org'a katkıda bulunduysanız, sizi bekleyen benzersiz bir POAP bulunuyor.{" "} <a href="#poap">POAP'ler hakkında daha fazla bilgi</a>
 </InfoBanner>
 
-## Katkıda bulunma yolları {#ways-to-contribute}
+## Katkıda bulunma yolları \{#ways-to-contribute}
 
 - [Açık bir konu üzerinde çalışın](https://github.com/ethereum/ethereum-org-website/issues) _– Yapılması gerektiğini belirlediğimiz işler_
 - [Çeviri programına katılın](/contributing/translation-program/) _– ethereum.org'u yeni dillere taşımamıza yardımcı olun_
@@ -34,7 +34,7 @@ Ethereum.org web sitesi, daha geniş anlamda Ethereum gibi açık kaynaklı bir 
 
 _Herhangi bir sorunuz mu var?_ 🤔 [Discord sunucumuzdan](https://discord.gg/ethereum-org) bize ulaşın
 
-## Nasıl ethereum.org üzerinde çalışılır {#how-to-update-content}
+## Nasıl ethereum.org üzerinde çalışılır \{#how-to-update-content}
 
 İster siteye ekleme yapıyor, ister içerik oluşturuyor veya açık sorunlar üzerinde çalışıyor olun, bir [GitHub](https://github.com) hesabına ihtiyacınız olacak.
 
@@ -52,7 +52,7 @@ Katkıda bulunmadan önce şunlara aşina olduğunuzdan emin olun:
 - [stil rehberimiz](/contributing/style-guide/)
 - [davranış kurallarımız](/community/code-of-conduct)
 
-## Siteyle ilgili kararlar nasıl alınır {#how-decisions-about-the-site-are-made}
+## Siteyle ilgili kararlar nasıl alınır \{#how-decisions-about-the-site-are-made}
 
 Bireysel PR'ler, tasarım evrimi ve büyük yükseltmeler hakkındaki kararlar, Ethereum ekosisteminden bir ekip tarafından verilir. Bu ekip; proje yöneticilerini, geliştiricileri, tasarımcıları, pazarlama ve iletişimleri ve konu uzmanlarını kapsar. Topluluk girdisi her kararı etkiler: Bu nedenle lütfen sorunlarla ilgili sorular sorun, PR gönderin veya ekiple iletişime geçin:
 
@@ -60,21 +60,21 @@ Bireysel PR'ler, tasarım evrimi ve büyük yükseltmeler hakkındaki kararlar, 
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord sunucusu](https://discord.gg/ethereum-org)
 
-### İntihal üzerine bir not {#plagiarism}
+### İntihal üzerine bir not \{#plagiarism}
 
 Yalnızca orijinal çalışmanızı veya kullanma izniniz olan içeriği, ethereum.org'a herhangi bir içerik veya yapı katkıda bulunurken kullanın. Ethereum ekosistemindeki birçok proje, bilginin ücretsiz paylaşımına izin veren açık kaynaklı lisanslama kullanır. Ancak bu bilgiyi bulamazsanız ethereum.org'a eklemeye çalışmayın. İntihal olarak kabul edilen herhangi bir çekme isteği reddedilecektir.
 
-## Açık kaynak konusunda acemi misiniz? {#new-to-open-source}
+## Açık kaynak konusunda acemi misiniz? \{#new-to-open-source}
 
 GitHub depomuzda, özellikle açık kaynak konusunda acemi olan geliştiriciler için tasarlanmış [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22) etiketli, düşük giriş engellerine sahip sorunlarımız bulunuyor.
 
-## Katkıda bulunan bir kişi olarak POAP'nizi talep edin {#poap}
+## Katkıda bulunan bir kişi olarak POAP'nizi talep edin \{#poap}
 
 Katkınız ethereum.org ile birleştirilirse, sizin için benzersiz bir katkıda bulunan POAP'si basacağız. Proof of Attendance Protocol (POAP) tokeni, yani Katılım İspatı Protokolü, ekosistemi biraz daha harika hâle getirmeye yardımcı olduğunuzun zincir üstü kanıtıdır.
 
 [POAP'ler hakkında daha fazla bilgi](https://www.poap.xyz/)
 
-### Nasıl talep edilir? {#how-to-claim}
+### Nasıl talep edilir? \{#how-to-claim}
 
 1. [Discord sunucumuza](https://discord.gg/ethereum-org) katılın.
 2. Katkınızın bağlantısını `#🥇 | poaps` [kanalına](https://discord.com/channels/714888181740339261/804005643211898911) yapıştırın.
@@ -83,6 +83,6 @@ Katkınız ethereum.org ile birleştirilirse, sizin için benzersiz bir katkıda
 
 POAP'leri yalnızca, özel anahtarlarının sadece sizde bulunduğu cüzdanlar ile talep etmelisiniz. Özel anahtarlara sahip olmadığınız borsa hesapları veya diğer hesapları kullanmayın, çünkü bunlar POAP'lerinize erişmenize ve bunları yönetmenize izin vermez.
 
-## Katkıda Bulunanlar {#contributors}
+## Katkıda Bulunanlar \{#contributors}
 
 <Contributors />

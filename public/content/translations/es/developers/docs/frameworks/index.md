@@ -4,7 +4,7 @@ description: Explora las ventajas de los frameworks y compara las opciones dispo
 lang: es
 ---
 
-## Introducción a los frameworks {#introduction-to-frameworks}
+## Introducción a los frameworks \{#introduction-to-frameworks}
 
 Construir una dapp completamente desarrollada o implementada requiere diferentes elementos tecnológicos. Los frameworks de software incluyen muchas de las características necesarias o proporcionan sencillos sistemas de plugins para elegir las herramientas que deseas.
 
@@ -16,11 +16,11 @@ Los frameworks incluyen muchas funcionalidades listas para usar:
 - Configuración para conectarse a redes de Ethereum e implementar contratos, ya sea una instancia que se ejecuta localmente o una de las redes públicas de Ethereum.
 - Distribución descentralizada de dapps: integraciones con opciones de almacenamiento como IPFS.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra introducción a las [dapps](/developers/docs/dapps/) y a la [pila de Ethereum](/developers/docs/ethereum-stack/).
 
-## Frameworks disponibles {#available-frameworks}
+## Frameworks disponibles \{#available-frameworks}
 
 **Foundry** - **_Foundry es un kit de herramientas rápido, portátil y modular para el desarrollo de aplicaciones para Ethereum. _**
 
@@ -106,10 +106,10 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/support/17)
 - **El desarollo de OpenZeppelin SDK ha finalizado**
 
-## Leer más {#further-reading}
+## Leer más \{#further-reading}
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [Configurar un entorno de desarrollo local](/developers/local-environment/)

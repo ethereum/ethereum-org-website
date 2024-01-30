@@ -15,7 +15,7 @@ summaryPoint4: Spojitev je Ethereumovo porabo energijo zmanjšala za približno 
   Spojitev je bila izvedena 15. septembra 2022. Zaključila je Ethereumov prehod na mehanizem za doseganje soglasja z dokazom o deležu. Ta je uradno zamenjal mehanizem dokaza o delu in porabo energije zmanjšal za približno 99,95 %.
 </UpgradeStatus>
 
-## Kaj je bila spojitev? {#what-is-the-merge}
+## Kaj je bila spojitev? \{#what-is-the-merge}
 
 Spojitev je bila združitev izvirne izvajalne plasti Ethereuma (glavno omrežje, ki je obstajalo od [izvora](/history/#frontier)) z novo plastjo z mehanizmom za doseganje soglasja z dokazom o deležu, oddajniško verigo. Odpravila je potrebo po energijsko potratnem rudarjenju in namesto tega omogočila zaščito omrežja z zastavljanjem ETH. Predstavljala je zares vznemirljiv korak k realizaciji Ethereumove vizije – več možnosti širitve, varnosti in trajnosti.
 
@@ -25,7 +25,7 @@ Najprej je [oddajniška veriga](/roadmap/beacon-chain/) stopila v uporabo ločen
 
 Predstavljajte si, da je Ethereum vesoljska ladja, ki je bila izstreljena, še preden je bila povsem pripravljena na medzvezdno potovanje. Z oddajniško verigo je skupnost pripravila nov motor in močnejši trup. Po celovitem testiranju je bil čas, da nov motor kar med poletom zamenja starega. Tako se je nov učinkovitejši motor združil z obstoječo vesoljsko ladjo, ki bo tako lahko prepotovala velike razdalje in raziskala vesolje.
 
-## Spojitev z glavnim omrežjem {#merging-with-mainnet}
+## Spojitev z glavnim omrežjem \{#merging-with-mainnet}
 
 Z mehanizmom dokaza o delu je bilo Ethereumovo glavno omrežje zaščiteno od izvora do spojitve. Tako je lahko Ethereumova veriga blokov, ki jo vsi poznamo, julija 2015 začela delovati z vsemi znanimi funkcijami – transakcijami, pametnimi pogodbami, računi itd.
 
@@ -41,7 +41,7 @@ V spojitvi ni bil izgubljen noben del zgodovine. Ko se je glavno omrežje spojil
 Ta prehod na mehanizem dokaza o deležu je spremenil način izdajanja etra. Preberite več o <a href="/roadmap/merge/issuance/">izdajanju etra pred spojitvijo in po njej</a>.
 </InfoBanner>
 
-### Uporabniki in imetniki {#users-holders}
+### Uporabniki in imetniki \{#users-holders}
 
 **Spojitev ni za imetnike in uporabnike spremenila ničesar.**
 
@@ -51,7 +51,7 @@ Tudi po zamenjavi mehanizma dokaza o delu je celotna Ethereumova zgodovina ostal
 
 [Več o varnosti Ethereuma](/security/#eth2-token-scam)
 
-### Upravljavci vozlišč in razvijalci decentraliziranih aplikacij {#node-operators-dapp-developers}
+### Upravljavci vozlišč in razvijalci decentraliziranih aplikacij \{#node-operators-dapp-developers}
 
 <ExpandableCard
 title="Upravljavci in ponudniki vozlišč za zastavljanje"
@@ -103,15 +103,15 @@ Spojitev je spremenila način doseganja soglasja, kar vključuje tudi spremembe,
 Za več informacij preberite blog [Kako spojitev vpliva na Ethereumovo aplikacijsko plast](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/) Tima Beika.
 </ExpandableCard>
 
-## Spojitev in poraba energije {#merge-and-energy}
+## Spojitev in poraba energije \{#merge-and-energy}
 
 Spojitev predstavlja konec mehanizma dokaza o delu za Ethereum in začetek bolj trajnostno usmerjenega in okolju prijaznega Ethereuma. Ethereumova poraba energije se je znižala za približno 99,95 %, zaradi česar je Ethereum zelena veriga blokov. Pridobite več informacij o [Ethereumovi porabi energije](/energy-consumption/).
 
-## Spojitev in širjenje omrežja {#merge-and-scaling}
+## Spojitev in širjenje omrežja \{#merge-and-scaling}
 
 Spojitev je tudi postavila temelje za nadaljnje širitve omrežja, ki z dokazom o delu niso bile mogoče. Tako se je Ethereum še za korak približal velikosti, varnosti in trajnosti, opisani v [viziji za Ethereum](/roadmap/vision/).
 
-## Zmote o spojitvi {#misconceptions}
+## Zmote o spojitvi \{#misconceptions}
 
 <ExpandableCard
 title="Zmota: &quot;Če želite upravljati vozlišče, morate zastaviti 32 ETH.&quot;"
@@ -175,7 +175,7 @@ Pomembna opomba: protokol omejuje popolne izhode validatorjev iz omrežja. Tako 
 Letna mera donosa je namenoma dinamična, saj tako celotnemu trgu zastavljavcev omogoča, da pretehtajo, koliko so pripravljeni zaslužiti za pomoč pri ščitenju omrežja. Ko bodo dvigi omogočeni in bo omejitev prenizka, bodo validatorji izstopali pri omejitvi, ki jo določa protokol. S tem bo letna mera donosa postopoma naraščala, kar bo privabilo nove ali stare zastavljavce.
 </ExpandableCard>
 
-## Kaj se je zgodilo z "Eth2"? {#eth2}
+## Kaj se je zgodilo z "Eth2"? \{#eth2}
 
 Pojem "Eth2" smo opustili. Po spojitvi omrežij "Eth1" in "Eth2" v eno verigo ni več mogoče razlikovati med obema Ethereumovima omrežjema. Obstaja samo še Ethereum.
 
@@ -188,11 +188,11 @@ Te posodobitve terminologije spreminjajo samo konvencije o poimenovanju; ne spre
 
 [Pridobite več informacij o preimenovanju omrežja "Eth2"](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Razmerje med nadgradnjami {#relationship-between-upgrades}
+## Razmerje med nadgradnjami \{#relationship-between-upgrades}
 
 Vse nadgradnje Ethereuma so med seboj delno povezane. Povzemimo torej, kako spojitev vpliva na druge nadgradnje.
 
-### Spojitev in oddajniška veriga {#merge-and-beacon-chain}
+### Spojitev in oddajniška veriga \{#merge-and-beacon-chain}
 
 Spojitev predstavlja uradno dodajanje oddajniške verige kot nove plasti za doseganje soglasja izvirni izvajalni plasti glavnega omrežja. Od spojitve validatorji ščitijo Ethereumovo glavno omrežje, rudarjenje z mehanizmom [dokaza o delu](/developers/docs/consensus-mechanisms/pow/) pa ni več veljaven način ustvarjanja blokov.
 
@@ -202,13 +202,13 @@ Namesto tega bloke predlagajo validacijska vozlišča, ki so zastavila ETH v zam
   Oddajniška veriga
 </ButtonLink>
 
-### Spojitev in nadgradnja Shanghai {#merge-and-shanghai}
+### Spojitev in nadgradnja Shanghai \{#merge-and-shanghai}
 
 Da bi poenostavila in se osredotočila na uspešen prehod na mehanizem dokaza o deležu, spojitev ni vključevala nekaterih pričakovanih funkcij, na primer možnosti dviga zastavljenega ETH. Spojitvi bo sledila nadgradnja Shanghai, ki bo zastavljavcem omogočila dvig teh sredstev.
 
 Na tekočem lahko ostanete tako, da preberete članek [Težava z načrtovanjem nadgradnje Shanghai na GitHubu](https://github.com/ethereum/pm/issues/450) ali [Spletni dnevnik Ethereumove fundacije o raziskavah in razvoju](https://blog.ethereum.org/category/research-and-development/). Vsi bolj radovedni si lahko več pogledate v predstavitvi [Kaj se bo zgodilo po spojitvi](https://youtu.be/7ggwLccuN5s?t=101), ki jo je imel Vitalik na dogodku ETHGlobal aprila 2021.
 
-### Spojitev in razdrobitev {#merge-and-data-sharding}
+### Spojitev in razdrobitev \{#merge-and-data-sharding}
 
 Začetni načrt je predvideval delo na razdrobitvi, s katero bi nadgradljivost naslovili pred spojitvijo. Z razcvetom [rešitev za nadgradljivost na podlagi tehnologije 2. plasti](/layer-2/) se je prioriteta preusmerila na menjavo mehanizma dokaza o delu z mehanizmom dokaza o deležu.
 
@@ -218,7 +218,7 @@ Načrti za razdrobitev se hitro spreminjajo, vendar so se s pojavom in uspehom t
   Razdrobitev
 </ButtonLink>
 
-## Nadaljnje branje {#further-reading}
+## Nadaljnje branje \{#further-reading}
 
 <MergeArticleList />
 

@@ -4,7 +4,7 @@ description: Ethereum.org'a test eklerken kullandığımız politika
 lang: tr
 ---
 
-# Testler {#quizzes}
+# Testler \{#quizzes}
 
 Testler, kullanıcıların az önce okudukları sayfanın içeriğini anlayıp anlamadıklarını görmek için kendilerini sınama fırsatlarıdır. Sorular, yalnızca ilgili sayfadaki içeriğe bağlı olmalı ve sayfada yer almayan bilgiler hakkında olmamalıdır.
 

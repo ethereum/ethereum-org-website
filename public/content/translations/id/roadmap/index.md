@@ -18,7 +18,7 @@ Ethereum sudah menjadi platform koordinasi global yang kuat, tetapi masih terus 
 
 **Untuk mempelajari tentang peningkatan Ethereum sebelumnya, harap buka halaman [Sejarah](/history/) kami**
 
-## Perubahan apa yang akan terjadi pada Ethereum? {#what-changes-are-coming}
+## Perubahan apa yang akan terjadi pada Ethereum? \{#what-changes-are-coming}
 
 Peta jalan Ethereum menguraikan peningkatan spesifik yang akan dilakukan pada protokol di masa depan. Secara keseluruhan, peta jalan ini akan memberikan manfaat berikut kepada pengguna Ethereum:
 
@@ -53,7 +53,7 @@ Peta jalan Ethereum menguraikan peningkatan spesifik yang akan dilakukan pada pr
   />
 </CardGrid>
 
-## Mengapa Ethereum membutuhkan peta jalan? {#why-does-ethereum-need-a-roadmap}
+## Mengapa Ethereum membutuhkan peta jalan? \{#why-does-ethereum-need-a-roadmap}
 
 Ethereum ditingkatkan secara rutin untuk meningkatkan skalabilitas, keamanan, atau keberlanjutannya. Salah satu kekuatan inti Ethereum adalah menyesuaikan dengan ide-ide baru yang muncul dari penelitian dan pengembangan. Kemampuan beradaptasi memberikan fleksibilitas kepada Ethereum untuk mengatasi tantangan yang muncul dan mengikuti terobosan teknologi yang paling canggih.
 
@@ -72,23 +72,23 @@ Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneli
 
 </InfoBanner>
 
-## Apakah peta jalan Ethereum akan berubah seiring dengan waktu? {#will-ethereums-roadmap-change-over-time}
+## Apakah peta jalan Ethereum akan berubah seiring dengan waktu? \{#will-ethereums-roadmap-change-over-time}
 
 Ya-hampir pasti. Peta jalan adalah rencana saat ini untuk meningkatkan Ethereum, yang mencakup rencana jangka pendek dan jangka panjang. Kami memperkirakan peta jalan ini akan berubah seiring dengan tersedianya informasi dan teknologi baru.
 
 Bayangkan peta jalan Ethereum sebagai sekelompok maksud untuk meningkatkan Ethereum; ini adalah hipotesis terbaik dari para peneliti dan pengembang inti tentang masa depan Ethereum yang paling optimal.
 
-## Kapan peta jalan ini akan berakhir? {#when-will-the-roadmap-be-finished}
+## Kapan peta jalan ini akan berakhir? \{#when-will-the-roadmap-be-finished}
 
 Ethereum akan mengimplementasikan beberapa peningkatan dalam enam bulan ke depan (misalnya, penarikan staking); peningkatan lainnya berprioritas lebih rendah dan kemungkinan besar tidak akan diimplementasikan dalam 5-10 tahun ke depan (misalnya, resistensi kuantum). Waktu yang tepat untuk setiap peningkatan sulit diprediksi karena banyak bagian dari peta jalan yang dikerjakan secara paralel dan dikembangkan dengan kecepatan yang berbeda. Urgensi peningkatan juga dapat berubah seiring waktu tergantung faktor eksternal (misalnya, lompatan mendadak kinerja dan ketersediaan komputer kuantum dapat menyebabkan lebih mendesaknya kebutuhan kriptografi quantum-resistant atau tahan terhadap serangan dari komputer kuantum).
 
 Salah satu cara berpikir untuk pengembangan Ethereum adalah dengan analogi evolusi biologis. Jaringan yang mampu beradaptasi dengan tantangan baru dan mempertahankan kondisinya lebih mungkin berhasil daripada jaringan yang menentang perubahan, meskipun seiring meningkatnya kinerja, skalabilitas, dan keamanan jaringan, makin sedikit perubahan protokol yang diperlukan.
 
-## Apakah ada yang harus saya lakukan ketika ada peningkatan? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## Apakah ada yang harus saya lakukan ketika ada peningkatan? \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Peningkatan cenderung tidak berdampak pada pengguna akhir, kecuali meningkatkan pengalaman pengguna dan meningkatkan keamanan protokol serta mungkin lebih banyak <i>opsi</i> untuk cara berinteraksi dengan Ethereum. Pengguna akhir tidak diwajibkan untuk berpartisipasi aktif dalam peningkatan, dan juga tidak perlu melakukan apa pun untuk mengamankan aset mereka. Para operator simpul harus memperbarui klien mereka sebagai persiapan peningkatan. Beberapa peningkatan dapat menyebabkan perubahan bagi pengembang aplikasi. Misalnya, peningkatan pada masa kedaluwarsa riwayat dapat menyebabkan pengembang aplikasi mengambil data riwayat dari sumber referensi baru.
 
-## Bagaimana dengan The Verge, The Splurge, dll? {#what-about-the-verge-splurge-etc}
+## Bagaimana dengan The Verge, The Splurge, dll? \{#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin mengajukan visi untuk peta jalan Ethereum](https://twitter.com/VitalikButerin/status/1588669782471368704) yang diorganisasikan dalam beberapa kategori yang dihubungkan dengan pengaruhnya terhadap arsitektur Ethereum. Termasuk di dalamnya:
 
@@ -101,11 +101,11 @@ Peningkatan cenderung tidak berdampak pada pengguna akhir, kecuali meningkatkan 
 
 Kami memutuskan untuk tidak menggunakan terminologi ini karena kami ingin menggunakan model yang lebih sederhana dan lebih berpusat pada pengguna. Meskipun kami menggunakan istilah yang berpusat pada pengguna, visinya tetap sama dengan yang diajukan oleh Vitalik.
 
-## Bagaimana dengan sharding? {#what-about-sharding}
+## Bagaimana dengan sharding? \{#what-about-sharding}
 
 Sharding adalah pemecahan rantai blok Ethereum agar subset validator hanya bertanggung jawab atas sebagian kecil dari total data. Metode ini awalnya dimaksudkan sebagai cara penskalaan Ethereum. Namun, rollup lapisan ke-2 telah berkembang jauh lebih cepat dari yang diperkirakan dan telah memberikan banyak penskalaan, serta akan memberikan lebih banyak lagi setelah penerapan Proto-Danksharding. Hal ini berarti "rantai pecahan" tidak diperlukan lagi dan telah dihapus dari peta jalan.
 
-## Mencari peningkatan teknis yang spesifik? {#looking-for-specific-technical-upgrades}
+## Mencari peningkatan teknis yang spesifik? \{#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Danksharding menyebabkan rollup lapisan ke-2 menjadi lebih murah bagi pengguna dengan menambahkan "blob" data ke blok Ethereum.
 - [Penarikan staking](/staking/withdrawals) - Peningkatan Shanghai/Capella memungkinkan penarikan staking di Ethereum sehingga pengguna dapat membuka penguncian ETH yang ditaruh sebagai stake oleh mereka.

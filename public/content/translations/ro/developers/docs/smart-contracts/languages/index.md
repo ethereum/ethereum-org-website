@@ -15,11 +15,11 @@ Dezvoltatorii mai experimentați ar putea dori să utilizeze şi Yul, un limbaj 
 
 Dacă sunteţi curios și vă place să ajutaţi la testarea unor limbaje noi pentru care procesul de dezvoltare este departe de a fi finalizat, puteţi experimenta utilizarea Fe, un limbaj emergent al contractelor inteligente, care se află încă la începuturi.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Dacă aveţi deja cunoştinţe de limbaje de programare, în special JavaScript sau Python, aceasta vă poate ajuta să înțelegeţi diferențele între limbajele contractelor inteligente. De asemenea, vă recomandăm să înțelegeţi conceptul de bază al contractelor inteligente înainte de a avansa în procesul de comparaţie a limbajelor între ele. [Introducere despre contractele inteligente](/developers/docs/smart-contracts/).
 
-## Solidity {#solidity}
+## Solidity \{#solidity}
 
 - Un limbaj de nivel înalt, orientat pe obiecte, pentru implementarea contractelor inteligente.
 - Limbajul cu acolade care a fost influențat cel mai profund de C++.
@@ -29,7 +29,7 @@ Dacă aveţi deja cunoştinţe de limbaje de programare, în special JavaScript 
   - Biblioteci (puteţi crea cod reutilizabil, pe care îl puteţi apela din diferite contracte – cum ar fi funcțiile statice dintr-o clasă statică în alte limbaje de programare orientate pe obiecte).
   - Tipuri complexe definite de utilizator.
 
-### Linkuri importante {#important-links}
+### Linkuri importante \{#important-links}
 
 - [Documentație](https://docs.soliditylang.org/en/latest/)
 - [Portalul limbajului Solidity](https://soliditylang.org/)
@@ -40,7 +40,7 @@ Dacă aveţi deja cunoştinţe de limbaje de programare, în special JavaScript 
 - [Blogul Solidity](https://blog.soliditylang.org/)
 - [Contul de Twitter Solidity](https://twitter.com/solidity_lang)
 
-### Exemplu de contract {#example-contract}
+### Exemplu de contract \{#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 Acest exemplu ar trebui să vă dea o idee despre sintaxa contractului Solidity. Pentru o descriere mai detaliată a funcțiilor și variabilelor, [consultaţi documentația](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## Vyper {#vyper}
+## Vyper \{#vyper}
 
 - Limbajul de programare Pythonic
 - Tipizare puternică
@@ -100,7 +100,7 @@ Acest exemplu ar trebui să vă dea o idee despre sintaxa contractului Solidity.
 
 Pentru mai multe informații, [citiţi raționamentul pentru Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
-### Linkuri importante {#important-links-1}
+### Linkuri importante \{#important-links-1}
 
 - [Documentație](https://vyper.readthedocs.io)
 - [Vyper prin exemple](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -109,7 +109,7 @@ Pentru mai multe informații, [citiţi raționamentul pentru Vyper](https://vype
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Actualizare pe 8 ianuarie 2020](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 
-### Exemplu {#example}
+### Exemplu \{#example}
 
 ```python
 # Deschide licitația
@@ -198,7 +198,7 @@ def endAuction():
 
 Acest exemplu ar trebui să vă dea o idee despre sintaxa contractului Vyper. Pentru o descriere mai detaliată a funcțiilor și variabilelor, [vedeţi documentația](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## Yul și Yul+ {#yul}
+## Yul și Yul+ \{#yul}
 
 Dacă nu aţi mai folosit Ethereum și încă nu ați scris coduri cu limbaje de contracte inteligente, vă recomandăm să începeți cu Solidity sau Vyper. Treceţi la Yul sau Yul+ numai după ce v-aţi familiarizat cu cele mai bune practici pentru securitatea contractelor inteligente și cu specificul de lucru cu EVM.
 
@@ -214,14 +214,14 @@ Dacă nu aţi mai folosit Ethereum și încă nu ați scris coduri cu limbaje de
 - Conceput inițial pentru un contract [rolllup optimistic](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ poate fi considerat o propunere experimentală de actualizare a Yul, ce îi adaugă noi funcţionalităţi.
 
-### Linkuri importante {#important-links-2}
+### Linkuri importante \{#important-links-2}
 
 - [Documentație Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Documentație Yul+](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
 - [Postarea de introducere despre Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Exemplu de contract {#example-contract-2}
+### Exemplu de contract \{#example-contract-2}
 
 Următorul exemplu simplu implementează o funcție de ridicare la putere. Poate fi compilat folosind `solc --strict-assembly --bin input.yul`. Exemplul ar trebui să fie stocat în fișierul input.yul.
 
@@ -246,14 +246,14 @@ Următorul exemplu simplu implementează o funcție de ridicare la putere. Poate
 
 Dacă aveţi deja suficientă experienţă privind contractele inteligente, puteţi găsi o implementare completă ERC20 în Yul [aici](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
-## Fe {#fe}
+## Fe \{#fe}
 
 - Limbaj static tipizat pentru Mașina Virtuală Ethereum (EVM).
 - Inspirat de Python și Rust.
 - Scopul este de a fi ușor de învățat -- chiar și pentru dezvoltatorii care nu au mai folosit ecosistemul Ethereum.
 - Dezvoltarea Fe se află încă în faza incipientă, limbajul având o versiune alfa lansată în ianuarie 2021.
 
-### Linkuri importante {#important-links-3}
+### Linkuri importante \{#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Anunțul despre Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -261,7 +261,7 @@ Dacă aveţi deja suficientă experienţă privind contractele inteligente, pute
 - [Chat-ul Discord Fe](https://discord.com/invite/ywpkAXFjZH)
 - [Contul de Twitter Fe](https://twitter.com/official_fe)
 
-### Exemplu de contract {#example-contract-3}
+### Exemplu de contract \{#example-contract-3}
 
 Iată un contract simplu implementat în Fe.
 
@@ -284,34 +284,34 @@ contract GuestBook:
 
 ```
 
-## Cum să alegeţi {#how-to-choose}
+## Cum să alegeţi \{#how-to-choose}
 
 La fel ca în orice alt limbaj de programare, este vorba atât de alegerea unui instrument potrivit pentru proiect, cât în funcţie de preferințele personale.
 
 Iată câteva lucruri de luat în considerare, dacă nu aţi mai folosit niciunul dintre limbaje:
 
-### Ce este excelent la Solidity? {#solidity-advantages}
+### Ce este excelent la Solidity? \{#solidity-advantages}
 
 - Dacă sunteţi începător, există multe tutoriale și instrumente de învățare. Aflaţi mai multe informații despre aceasta în secțiunea [Învațaţi scriind cod](/developers/learning-tools/).
 - Sunt disponibile instrumente bune pentru dezvoltatori.
 - Solidity are o comunitate mare de dezvoltatori, ceea ce înseamnă că veţi găsi răspunsuri la întrebările dvs. cel mai probabil destul de repede.
 
-### Ce este excelent la Vyper? {#vyper-advatages}
+### Ce este excelent la Vyper? \{#vyper-advatages}
 
 - O modalitate excelentă de a începe pentru dezvoltatorii Python care doresc să scrie contracte inteligente.
 - Vyper are un număr mai mic de funcţionalităţi, ceea ce îl face excelent pentru crearea unor idei de prototip.
 - Vyper își propune să fie ușor de auditat și extrem de ușor de citit de către oameni.
 
-### Ce este excelent la Yul și Yul+? {#yul-advantages}
+### Ce este excelent la Yul și Yul+? \{#yul-advantages}
 
 - Limbaj simplist și funcțional la nivel inferior.
 - Permite o apropiere mai bună de EVM-ul brut, ceea ce poate ajuta la optimizarea consumului de gaz din contractele dvs.
 
-## Comparații între limbaje {#language-comparisons}
+## Comparații între limbaje \{#language-comparisons}
 
 Pentru a vedea comparații ale sintaxei de bază, ciclul de viață al contractului, interfețele, operatorii, structurile de date, funcțiile, fluxul de control și multe altele, consultaţi acest [Cheat Sheet creat de Auditless](https://reference.auditless.com/cheatsheet/)
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 - [Biblioteca de contracte Solidity creată de OpenZeppelin](https://docs.openzeppelin.com/contracts)
 - [Solidity prin exemple](https://solidity-by-example.org)

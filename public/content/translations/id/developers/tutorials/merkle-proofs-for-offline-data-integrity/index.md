@@ -11,7 +11,7 @@ lang: id
 published: 2021-12-30
 ---
 
-## Pendahuluan {#introduction}
+## Pendahuluan \{#introduction}
 
 Idealnya, kita ingin menyimpan segala sesuatu di penyimpanan Ethereum, yang tersimpan di seluruh ribuan komputer dan memiliki ketersediaan (data tidak dapat disensor) dan integritas (data tidak dapat dimodifikasi dalam cara yang tidak diotorisasi) sangat tinggi, tetapi menyimpan satu kata berukuran 32 bita biasanya memerlukan 20.000 gas. Ketika saya menulis ini, biaya tersebut setara dengan $6,60. Dengan harga 21 sen per bita, penggunaan rutin ini terlalu mahal.
 
@@ -19,7 +19,7 @@ To solve this problem the Ethereum ecosystem developed [many alternative ways to
 
 Dalam artikel ini, Anda belajar **cara** memastikan integritas data tanpa menyimpan data di rantai blok, menggunakan [bukti Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
-## Bagaimana cara kerjanya? {#how-does-it-work}
+## Bagaimana cara kerjanya? \{#how-does-it-work}
 
 Dalam teori, kita hanya dapat menyimpan hash data di rantai, dan mengirimkan semua data dalam transaksi yang memerlukannya. Namun, masih terlalu mahal. Satu bita data dari transaksi memerlukan sekitar 16 gas, saat ini kira-kira setengah sen, atau $5 per kilobita. Dengan harga $5000 per megabita, masih terlalu mahal untuk penggunaan rutin, bahkan tanpa biaya tambahan pembuatan hash data.
 
@@ -31,15 +31,15 @@ Hash akar adalah satu-satunya bagian yang perlu disimpan di rantai. Untuk membuk
 
 ![Bukti nilai C](proof-c.png)
 
-## Penerapan {#implementation}
+## Penerapan \{#implementation}
 
 [Kode sampel disediakan di sini](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Kode di luar rantai {#off-chain-code}
+### Kode di luar rantai \{#off-chain-code}
 
 Dalam artikel ini, kita menggunakan JavaScript untuk komputasi di luar rantai. Sebagian besar aplikasi terdesentralisasi memiliki komponen di luar rantai mereka dalam JavaScript.
 
-#### Membuat akar Merkle {#creating-the-merkle-root}
+#### Membuat akar Merkle \{#creating-the-merkle-root}
 
 Pertama, kita perlu menyediakan akar Merkle untuk rantai.
 
@@ -128,7 +128,7 @@ const getMerkleRoot = (inputArray) => {
 
 Untuk sampai pada akar, panjat hingga tersisa hanya satu nilai.
 
-#### Membuat bukti Merkle {#creating-a-merkle-proof}
+#### Membuat bukti Merkle \{#creating-a-merkle-proof}
 
 Bukti Merkle merupakan nilai untuk melakukan hash secara bersamaan dengan nilai yang dibuktikan untuk mengembalikan akar Merkle. Nilai yang dibuktikan sering kali tersedia dari data lainnya, sehingga saya memilih untuk menyediakannya secara terpisah dibandingkan sebagai bagian dari kode.
 
@@ -165,7 +165,7 @@ Kita melakukan hash `(v[0],v[1])`, `(v[2],v[3])`, dll. Jadi, untuk nilai genap, 
 }   // getMerkleProof
 ```
 
-### Kode di dalam rantai {#off-chain-code}
+### Kode di dalam rantai \{#off-chain-code}
 
 Akhirnya, kita memiliki kode yang memeriksa bukti tersebut. Kode di dalam rantai ditulis dalam [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimisasi jauh lebih penting di sini karena gas cukup mahal.
 
@@ -226,13 +226,13 @@ Fungsi ini menghasilkan hash pasangan. Ini hanya terjemahan Solidity dari kode J
 
 Dalam notasi matematis, verifikasi bukti Merkle terlihat seperti ini: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Kode ini menerapkan hal tersebut.
 
-## Bukti Merkle dan rollups tidak bercampur {#merkle-proofs-and-rollups}
+## Bukti Merkle dan rollups tidak bercampur \{#merkle-proofs-and-rollups}
 
 Bukti Merkle tidak bekerja baik dengan [rollups](/developers/docs/scaling/#rollups). Alasannya, karena rollups menulis seluruh data transaksi di L1, tetapi memprosesnya di L2. Biaya untuk mengirimkan bukti Merkle dengan transaksi rata-rata hingga 638 gas per lapisan (saat ini, satu bita dalam data panggilan seharga 16 gas jika bukan nol, dan 4 gas jika nol). Jika kita memiliki 1024 kata pada data, bukti Merkle memerlukan 10 lapisan, atau totalnya 6380 gas.
 
 Seperti dilihat pada contoh di [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), menulis gas L1 berbiaya sekitar 100 gwei dan gas L2 berbiaya 0.001 gwei (itu adalah harga normal, dapat naik saat arus padat). Jadi, dengan biaya satu gas L1, kita dapat membelanjakan ratusan ribu gas pada pemrosesan L2. Asumsikan kita tidak menimpa penyimpanan, artinya kita dapat menulis sekitar lima kata ke penyimpanan pada L2 dengan harga satu gas L1. Untuk satu bukti Merkle, kita dapat menulis seluruh 1024 kata ke penyimpanan (dengan anggapan kata-kata tersebut sejak awal dapat dihitung pada rantai, daripada disediakan dalam transaksi) dan masih memiliki banyak gas yang tersisa.
 
-## Kesimpulan {#conclusion}
+## Kesimpulan \{#conclusion}
 
 Dalam kehidupan nyata, Anda mungkin tidak pernah menerapkan pohon Merkle sendiri. Ada pustaka-pustaka terkenal dan teraudit yang dapat Anda gunakan dan secara umum, paling baik untuk tidak menerapkan primitif kriptografik sendiri. Namun, saya harap bahwa sekarang Anda memahami bukti Merkle lebih baik dan dapat memutuskan waktu bukti tersebut dapat digunakan.
 

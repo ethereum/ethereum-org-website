@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 Ethereum est couramment utilisé par des groupes pour créer des jetons échangeables ou, dans un certain sens, leur propre monnaie. Ces jetons suivent généralement une norme, [ERC-20](/developers/docs/standards/tokens/erc-20/). Cette norme permet d'écrire des outils, tels que des groupes de liquidité et des portefeuilles, qui fonctionnent avec tous les jetons ERC-20. . Dans cet article nous allons analyser [l'implémentation d'OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), ainsi que la [définition d'interface](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Ceci est le code source annoté. Si vous voulez implémenter ERC-20, [lisez ce tutoriel](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
-## L'interface {#the-interface}
+## L'interface \{#the-interface}
 
 L'objectif d'un standard comme ERC-20 est de permettre de nombreuses implémentations de jetons interopérables entre applications, comme les portefeuilles et les échanges décentralisés. À cette fin, nous créons une [interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Tout code qui a besoin d'utiliser le contrat de jeton peut employer les mêmes définitions dans l'interface et ainsi être compatible avec tous les contrats de jetons qui l'utilisent, qu'il s'agisse d'un portefeuille tel que MetaMask, une DApp comme etherscan.io, ou un contrat différent tel qu'un pool de liquidités.
 
@@ -184,7 +184,7 @@ Enfin, `transferFrom` est utilisé par le client pour dépenser réellement l'al
 
 Ces événements sont émis lorsque l'état du contrat ERC-20 change.
 
-## Le contrat réel {#the-actual-contract}
+## Le contrat réel \{#the-actual-contract}
 
 Ceci est le contrat réel qui implémente la norme ERC-20, [tirée d'ici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Il n'est pas destiné à être utilisé tel quel, mais vous pouvez en [hériter](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) pour l'étendre à quelque chose d'utilisable.
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### Importer les relevés {#import-statements}
+### Importer les relevés \{#import-statements}
 
 En complément des définitions d'interface ci-dessus, la définition de contrat importe deux autres fichiers :
 
@@ -241,7 +241,7 @@ Ce commentaire explique la finalité du contrat.
 
 ```
 
-### Définition du contrat {#contract-definition}
+### Définition du contrat \{#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ Cette ligne spécifie l'héritage : dans ce cas du `IERC20` ci-dessus et `Contex
 
 Cette ligne associe la bibliothèque `SafeMath` au type `uint256`. Vous pouvez trouver cette bibliothèque [ici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
-### Définitions des variables {#variable-definitions}
+### Définitions des variables \{#variable-definitions}
 
 Ces définitions précisent les variables d'état du contrat. Il y a des variables déclarées `private`, mais cela signifie uniquement que d'autres contrats sur la blockchain ne peuvent pas les lire. _Il n'ey a rien de secret sur la blockchain_, le logiciel sur chaque nœud dispose de l'état de chaque contrat pour chaque bloc. Par convention, les variables d'état sont nommées `_<something>`.
 
@@ -303,7 +303,7 @@ La solution est de garder la trace des entiers, mais de compter à la place du j
 
 Les applications ont besoin de savoir comment afficher le solde de jetons. Si un utilisateur dispose de 3.141.000.000.000.000.000 wei, est-ce que cela correspond à 3,14 ETH ? 31,41 ETH ? 3,141 ETH ? Dans le cas de l'éther, il est défini comme 10^18 wei pour un ETH, mais pour votre jeton, vous pouvez sélectionner une valeur différente. Si diviser le jeton n'a pas de sens, vous pouvez définir une valeur `_decimals` de zéro. Si vous souhaitez definir le même standard que pour ETH, utilisez la valeur **18**.
 
-### Le Constructeur {#the-constructor}
+### Le Constructeur \{#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ Les applications ont besoin de savoir comment afficher le solde de jetons. Si un
 
 Le constructeur est appelé lorsque le contrat est créé pour la première fois. Par convention, les paramètres de fonction sont nommés `<something>_`.
 
-### Fonctions de l'interface utilisateur {#user-interface-functions}
+### Fonctions de l'interface utilisateur \{#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ Le type de retour est `string memory`, ce qui signifie retourner une chaîne de 
 
 Dans ce cas, `memory` est le meilleur choix.
 
-### Lire les informations du jeton {#read-token-information}
+### Lire les informations du jeton \{#read-token-information}
 
 Ce sont des fonctions qui fournissent des informations sur le jeton, soit l'offre totale, soit le solde d'un compte.
 
@@ -400,7 +400,7 @@ La fonction `totalSupply` fournit la quantité totale de jetons.
 
 Lit le solde d'un compte. Notez que n'importe qui est autorisé à obtenir le solde du compte de n'importe qui d'autre. Il est inutile d'essayer de masquer cette information car de toute façon, elle est disponible sur tous les nœuds. _Il n'existe aucun secret sur la blockchain._
 
-### Transférer des jetons {#transfer-tokens}
+### Transférer des jetons \{#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ La fonction `_transfer` fait le travail réel. C'est une fonction privée qui ne
 
 Habituellement avec Solidity nous utilisons `msg.sender` pour l'expéditeur du message. Cependant, cela casse [OpenGSN](http://opengsn.org/). Si nous voulons autoriser les transactions avec notre jeton, nous devons utiliser `_msgSender()`. Elle retournera `msg.sender` pour les transactions normales, en revanche pour les transactions sans ether elle indiquera le signataire original et non le contrat qui a relayé le message.
 
-### Fonctions de provision {#allowance-functions}
+### Fonctions de provision \{#allowance-functions}
 
 Ce sont les fonctions qui implémentent la fonctionnalité de provision : `allowance`, `approve`, `transferFrom`, et `_approve`. De plus, l'implémentation d'OpenZeppelin va au-delà du standard de base pour inclure certaines fonctionnalités qui améliorent la sécurité : `increaseAllowance`, et `decreaseAllowance`.
 
-#### La fonction d'allocation {#allowance}
+#### La fonction d'allocation \{#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ Ce sont les fonctions qui implémentent la fonctionnalité de provision : `allow
 
 La fonction `allowance` permet à quiconque de vérifier n'importe quelle allocation.
 
-#### La fonction d'approbation {#approve}
+#### La fonction d'approbation \{#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ Cette fonction est appelée pour créer une provision. Elle est similaire à la 
 
 Nous utilisons des fonctions internes pour minimiser le nombre d'endroits où des changements d'état se produisent. _Toute_ fonction qui change l'état présente un risque potentiel de sécurité qui doit être audité pour déceler d'éventuelles failles de sécurité. De cette manière, nous avons moins de risques de nous tromper.
 
-#### Fonction transferFrom {#transferFrom}
+#### Fonction transferFrom \{#transferFrom}
 
 C'est la fonction que le client appelle pour dépenser une provision. Cela nécessite deux opérations : transférer le montant dépensé et réduire d'autant le montant de la provision.
 
@@ -507,7 +507,7 @@ L'appel à la fonction `a.sub(b, "message")` fait deux choses. Tout d'abord, ell
     }
 ```
 
-#### Ajouts de sécurité OpenZeppelin {#openzeppelin-safety-additions}
+#### Ajouts de sécurité OpenZeppelin \{#openzeppelin-safety-additions}
 
 Il est dangereux d'attribuer à une provision non nulle une autre valeur non nulle parce que vous ne contrôlez que l'ordre de vos propres transactions, pas celles de quelqu'un d'autre. Imaginez que vous ayez deux utilisateurs, Alice qui est naïve et Bill qui est malhonnête. Alice souhaite solliciter un service de la part de Bill qui, selon elle, coûte cinq jetons - donc elle donne à Bill une provision de cinq jetons.
 
@@ -583,11 +583,11 @@ La fonction `a.add(b)` est un ajout sûr. Dans le cas peu probable où `a`+`b`>=
     }
 ```
 
-### Fonctions qui modifient les informations du jeton {#functions-that-modify-token-information}
+### Fonctions qui modifient les informations du jeton \{#functions-that-modify-token-information}
 
 Voici les quatre fonctions qui font le travail réel : `_transfer`, `_mint`, `_burn`, et `_approve`.
 
-#### La fonction \_transfer {#\_transfer}
+#### La fonction \_transfer \{#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Ce sont les lignes qui exécutent réellement le transfert. Notez qu'il n'y a **
 
 Enfin, émettre un événement `Transfert`. Les événements ne sont pas accessibles par les contrats intelligents, mais le code exécuté en dehors de la blockchain peut lire les événements et réagir. Par exemple, un portefeuille peut garder une trace du moment où le propriétaire obtient plus de jetons.
 
-#### La fonction \_mint and \_burn {#\_mint-and-\_burn}
+#### La fonction \_mint and \_burn \{#\_mint-and-\_burn}
 
 Ces deux fonctions (`_mint` et `_burn`) modifient la quantité totale de jetons. Elles sont internes et il n'y a pas de fonction qui les appelle dans ce contrat, ainsi elles ne sont utiles que si vous héritez du contrat et ajoutez votre propre logique pour décider dans quelles conditions générer de nouveaux jetons ou utiliser les jetons existants.
 
@@ -706,7 +706,7 @@ Veillez à mettre à jour `_totalSupply` lorsque le nombre total de jetons chang
 
 La fonction `_burn` est presque identique à `_mint` sauf qu'elle fonctionne en sens inverse.
 
-#### Fonction \_approve {#\_approve}
+#### Fonction \_approve \{#\_approve}
 
 C'est la fonction qui spécifie les provisions. Notez qu'elle permet à un propriétaire de spécifier une provision supérieure au solde actuel du propriétaire. Cela ne pose pas de problème car le solde est vérifié au moment du transfert dans la mesure où il pourrait être différent du solde existant au moment de la création de la provision.
 
@@ -741,7 +741,7 @@ C'est la fonction qui spécifie les provisions. Notez qu'elle permet à un propr
 
 ```
 
-### Modifier la variable des décimales {#modify-the-decimals-variable}
+### Modifier la variable des décimales \{#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ C'est la fonction qui spécifie les provisions. Notez qu'elle permet à un propr
 
 Cette fonction modifie la variable `_decimals` qui est utilisée pour dicter aux interfaces utilisateur comment interpréter le montant. Vous devez l'appeler depuis le constructeur. Il serait malhonnête de l'appeler à n'importe quel moment ultérieur et les applications ne sont pas conçues pour le gérer.
 
-### Hooks {#hooks}
+### Hooks \{#hooks}
 
 ```solidity
 
@@ -783,7 +783,7 @@ Cette fonction modifie la variable `_decimals` qui est utilisée pour dicter aux
 
 Il s'agit de la fonction hook à appeler pendant les transferts. Elle est ici vide, mais si vous en avez besoin pour accomplir quelque chose, vous avez juste à la remplacer.
 
-# Conclusion {#conclusion}
+# Conclusion \{#conclusion}
 
 Pour résumer, voici quelques-unes des idées les plus importantes de ce contrat (selon moi et les vôtres pourraient ne pas être les mêmes) :
 

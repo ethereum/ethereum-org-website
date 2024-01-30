@@ -4,7 +4,7 @@ description:
 lang: sl
 ---
 
-## Uvod {#introduction}
+## Uvod \{#introduction}
 
 **Kaj je žeton?**
 
@@ -24,13 +24,13 @@ Tako mogočna funkcionalnost Ethereuma mora biti upravljana z robustnim standard
 
 ERC-20 predstavlja standard za zamenljive žetone. Z drugimi besedami: žetoni imajo značilnost, ki vsak žeton naredi popolnoma identičen (po vrsti in vrednosti) drugemu žetonu. Na primer, žeton ERC-20 deluje enako kot ETH, kar pomeni, da je in vedno bo 1 žeton enak vsem drugim žetonom.
 
-## Predpogoji {#prerequisites}
+## Predpogoji \{#prerequisites}
 
 - [Računi](/developers/docs/accounts)
 - [Pametne pogodbe](/developers/docs/smart-contracts/)
 - [Standardi za žetone](/developers/docs/standards/tokens/)
 
-## Jedro {#body}
+## Jedro \{#body}
 
 ERC-20 (Zahteva Ethereum za komentarje 20), ki ga je novembra 2015 predlagal Fabian Vogelsteller, je standard za žetone, ki implementira API za žetone znotraj pametnih pogodb.
 
@@ -45,7 +45,7 @@ Primeri funkcionalnosti, ki jih zagotavlja ERC-20:
 
 Od [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Metode {#methods}
+### Metode \{#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Dogodki {#events}
+### Dogodki \{#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Primeri {#web3py-example}
+### Primeri \{#web3py-example}
 
 Oglejmo si, zakaj je standard tako pomemben za to, da poenostavi pregled katerekoli pogodbe žetona ERC-20 na Ethereumu. Za ustvarjanje vmesnika za katerikoli žeton ERC-20 potrebujemo le binarni vmesnik pogodbene aplikacije (ABI). Kot lahko vidite spodaj, bomo uporabili poenostavljen ABI, da bi ustvarili primer z nizkim trenjem.
 
-#### Primer Web3.py {#web3py-example}
+#### Primer Web3.py \{#web3py-example}
 
 Najprej se prepričajte, da ste namestili knjižnico [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python:
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Nadaljnje branje {#further-reading}
+## Nadaljnje branje \{#further-reading}
 
 - [EIP-20: ERC-20 standard za žetone](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin – žetoni](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

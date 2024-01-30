@@ -5,7 +5,7 @@ lang: it
 sidebarDepth: 1
 ---
 
-# La storia di Ethereum {#the-history-of-ethereum}
+# La storia di Ethereum \{#the-history-of-ethereum}
 
 Un viaggio nel tempo per illustrare tutte le principali pietre miliari, diramazioni e gli aggiornamenti della blockchain di Ethereum.
 
@@ -25,13 +25,13 @@ Stai cercando i prossimi aggiornamenti di protocollo? [Scopri di più sui prossi
 
 <Divider />
 
-## 2023 {#2023}
+## 2023 \{#2023}
 
-### Shanghai {#shanghai}
+### Shanghai \{#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
-#### Riepilogo {#shanghai-summary}
+#### Riepilogo \{#shanghai-summary}
 
 L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuzione. Insieme all'aggiornamento Capella, questo abiliterà i blocchi ad accettare le operazioni di prelievo, che consentono agli staker di prelevare i propri ETH dalla Beacon Chain al livello d'esecuzione.
 
@@ -51,11 +51,11 @@ L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuz
 
 ---
 
-### Capella {#capella}
+### Capella \{#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
-#### Riepilogo {#capella-summary}
+#### Riepilogo \{#capella-summary}
 
 L'aggiornamento di Capella è il terzo aggiornamento principale al livello del consenso (Beacon Chain) e ha abilitato i prelievi di staking. Capella è avvenuto contemporaneamente all'aggiornamento del livello di esecuzione di Shanghai, e ha reso disponibili le funzioni di prelievo da staking.
 
@@ -68,13 +68,13 @@ L'aggiornamento, inoltre, ha fornito la funzionalità di pulizia automatica dei 
 
 <Divider />
 
-## 2022 {#2022}
+## 2022 \{#2022}
 
-### Paris (la Fusione) {#paris}
+### Paris (la Fusione) \{#paris}
 
 <NetworkUpgradeSummary name="paris" />
 
-#### Riepilogo {#paris-summary}
+#### Riepilogo \{#paris-summary}
 
 L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of-work di una [difficoltà totale terminale](/glossary/#terminal-total-difficulty) di 58750000000000000000000. Questo è avvenuto al blocco 15537393 il 15 settembre 2022, innescando l'aggiornamento Paris dal blocco successivo. Paris è stata la transizione [alla Fusione](/roadmap/merge/): la sua caratteristica principale è lo spegnimento dell'algoritmo di mining [proof-of-work](/developers/docs/consensus-mechanisms/pow) e della relativa logica di consenso, e l'attivazione della [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Paris è stata un aggiornamento ai [client di esecuzione](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix a livello di consenso) che ha permesso loro di ricevere istruzioni dai loro [client di consenso](/developers/docs/nodes-and-clients/#consensus-clients) collegati. Questo ha richiesto l'attivazione di una nuova serie di metodi API interni, collettivamente noti come l'[API Engine](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Questo è stato probabilmente l'aggiornamento più significativo nella storia di Ethereum dopo [Homestead](#homestead)!
 
@@ -91,11 +91,11 @@ L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of
 
 ---
 
-### Bellatrix {#bellatrix}
+### Bellatrix \{#bellatrix}
 
 <NetworkUpgradeSummary name="bellatrix" />
 
-#### Riepilogo {#bellatrix-summary}
+#### Riepilogo \{#bellatrix-summary}
 
 L'aggiornamento Bellatrix è stato il secondo aggiornamento programmato per la [Beacon Chain](/roadmap/beacon-chain), preparando la catena per [la Fusione](/roadmap/merge/). Porta le penalità dei validatori al valore pieno per inattività e azioni sanzionabili (slashing). Bellatrix include anche un aggiornamento alle regole di scelta della diramazione per preparare la catena per la Fusione e la transizione dall'ultimo blocco di proof-of-work al primo blocco proof-of-stake. A tale scopo occorre far sì che i client di consenso siano consapevoli della [difficoltà terminale totale](/glossary/#terminal-total-difficulty) di 58750000000000000000000.
 
@@ -103,11 +103,11 @@ L'aggiornamento Bellatrix è stato il secondo aggiornamento programmato per la [
 
 ---
 
-### Gray Glacier {#gray-glacier}
+### Gray Glacier \{#gray-glacier}
 
 <NetworkUpgradeSummary name="grayGlacier" />
 
-#### Riepilogo {#gray-glacier-summary}
+#### Riepilogo \{#gray-glacier-summary}
 
 L'aggiornamento della rete di Gray Glacier ha rimandato di tre mesi la [bomba di difficoltà](/glossary/#difficulty-bomb). Questa è l'unica modifica introdotta in questo aggiornamento ed è simile per natura agli aggiornamenti di [Arrow Glacier](#arrow-glacier) e [Muir Glacier](#muir-glacier). Modifiche simili sono state effettuate sugli aggiornamenti di rete [Byzantium](#byzantium), [Constantinople](#constantinople) e [London](#london).
 
@@ -123,13 +123,13 @@ L'aggiornamento della rete di Gray Glacier ha rimandato di tre mesi la [bomba di
 
 <Divider />
 
-## 2021 {#2021}
+## 2021 \{#2021}
 
-### Arrow Glacier {#arrow-glacier}
+### Arrow Glacier \{#arrow-glacier}
 
 <NetworkUpgradeSummary name="arrowGlacier" />
 
-#### Riepilogo {#arrow-glacier-summary}
+#### Riepilogo \{#arrow-glacier-summary}
 
 L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/glossary/#difficulty-bomb) di diversi mesi. Questo è l'unico cambiamento introdotto in questo aggiornamento, ed è simile nella sostanza all'aggiornamento [Muir Glacier](#muir-glacier). Modifiche simili sono state effettuate sugli aggiornamenti di rete [Byzantium](#byzantium), [Constantinople](#constantinople) e [London](#london).
 
@@ -146,17 +146,17 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 
 ---
 
-### Altair {#altair}
+### Altair \{#altair}
 
 <NetworkUpgradeSummary name="altair" />
 
-#### Riepilogo {#altair-summary}
+#### Riepilogo \{#altair-summary}
 
 L'aggiornamento Altair è stato il primo aggiornamento pianificato per la [Beacon Chain](/roadmap/beacon-chain). Ha aggiunto il supporto per le "commissioni di sincronizzazione", abilitando i "client leggeri", aumentando le penalità per inattività e slashing per i validatori man mano che lo sviluppo procedeva verso la Fusione.
 
 - [Leggi le specifiche dell'aggiornamento di Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />Curiosità! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} me="0.5rem" />Curiosità! \{#altair-fun-fact}
 
 Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo di rollout esatto. Tutti gli aggiornamenti precedenti erano basati su un numero di blocco dichiarato su una catena proof-of-work, dove i tempi del blocco variavano. La Beacon Chain non richiede la risoluzione del proof-of-work e funziona invece su un sistema di epoche basato sul tempo che consiste in 32 "slot" di dodici secondi in cui i validatori possono proporre dei blocchi. Questo è il motivo per cui sapevamo esattamente quando avremmo raggiunto l'epoca 74.240 e Altair sarebbe diventato operativo!
 
@@ -164,11 +164,11 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 
 ---
 
-### London {#london}
+### London \{#london}
 
 <NetworkUpgradeSummary name="london" />
 
-#### Riepilogo {#london-summary}
+#### Riepilogo \{#london-summary}
 
 L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), che ha riformato il mercato delle commissioni sulle transazioni, oltre a modificare come sono gestiti i rimborsi di carburante e la pianificazione di [Ice Age](/glossary/#ice-age).
 
@@ -190,11 +190,11 @@ L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS
 
 ---
 
-### Berlin {#berlin}
+### Berlin \{#berlin}
 
 <NetworkUpgradeSummary name="berlin" />
 
-#### Riepilogo {#berlin-summary}
+#### Riepilogo \{#berlin-summary}
 
 L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni dell'EVM e ha aumentato il supporto per vari tipi di transazioni.
 
@@ -214,13 +214,13 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
 
 <Divider />
 
-## 2020 {#2020}
+## 2020 \{#2020}
 
-### Genesi della Beacon Chain {#beacon-chain-genesis}
+### Genesi della Beacon Chain \{#beacon-chain-genesis}
 
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### Riepilogo {#beacon-chain-genesis-summary}
+#### Riepilogo \{#beacon-chain-genesis-summary}
 
 La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16384 depositi da 32 ETH di staking per poter funzionare in sicurezza. Questo è successo il 27 novembre, quindi la Beacon Chain ha iniziato a produrre blocchi il 1° dicembre 2020. Questa è una prima fase importante nel percorso per raggiungere la [visione di Ethereum](/roadmap/vision/).
 
@@ -232,11 +232,11 @@ La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16384 depositi da 32 ETH 
 
 ---
 
-### Distribuzione del contratto di deposito in staking {#staking-deposit-contract}
+### Distribuzione del contratto di deposito in staking \{#staking-deposit-contract}
 
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### Riepilogo {#deposit-contract-summary}
+#### Riepilogo \{#deposit-contract-summary}
 
 Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#staking) all'ecosistema di Ethereum. Nonostante fosse un contratto della [Rete principale](/glossary/#mainnet), ha avuto un impatto diretto sulla linea temporale per il lancio della [Beacon Chain](/roadmap/beacon-chain/), un importante [aggiornamento di Ethereum](/roadmap/).
 
@@ -248,11 +248,11 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 ---
 
-### Muir Glacier {#muir-glacier}
+### Muir Glacier \{#muir-glacier}
 
 <NetworkUpgradeSummary name="muirGlacier" />
 
-#### Riepilogo {#muir-glacier-summary}
+#### Riepilogo \{#muir-glacier-summary}
 
 La diramazione Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà](/glossary/#difficulty-bomb). Aumenta la difficoltà del blocco del meccanismo di consenso [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/), che rischiava di peggiorare l'utilizzabilità di Ethereum, aumentando i tempi d'attesa per l'invio delle transazioni e l'uso delle dapp.
 
@@ -269,13 +269,13 @@ La diramazione Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà
 
 <Divider />
 
-## 2019 {#2019}
+## 2019 \{#2019}
 
-### Istanbul {#istanbul}
+### Istanbul \{#istanbul}
 
 <NetworkUpgradeSummary name="istanbul" />
 
-#### Riepilogo {#istanbul-summary}
+#### Riepilogo \{#istanbul-summary}
 
 La diramazione Instanbul:
 
@@ -302,11 +302,11 @@ La diramazione Instanbul:
 
 ---
 
-### Constantinople {#constantinople}
+### Constantinople \{#constantinople}
 
 <NetworkUpgradeSummary name="constantinople" />
 
-#### Riepilogo {#constantinople-summary}
+#### Riepilogo \{#constantinople-summary}
 
 La diramazione Constantinople:
 
@@ -329,13 +329,13 @@ La diramazione Constantinople:
 
 <Divider />
 
-## 2017 {#2017}
+## 2017 \{#2017}
 
-### Byzantium {#byzantium}
+### Byzantium \{#byzantium}
 
 <NetworkUpgradeSummary name="byzantium" />
 
-#### Riepilogo {#byzantium-summary}
+#### Riepilogo \{#byzantium-summary}
 
 La diramazione Byzantium:
 
@@ -364,13 +364,13 @@ La diramazione Byzantium:
 
 <Divider />
 
-## 2016 {#2016}
+## 2016 \{#2016}
 
-### Spurious Dragon {#spurious-dragon}
+### Spurious Dragon \{#spurious-dragon}
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### Riepilogo {#spurious-dragon-summary}
+#### Riepilogo \{#spurious-dragon-summary}
 
 La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial of service (DoS) sulla rete (settembre/ottobre 2016) e ha reso possibile, tra l'altro:
 
@@ -393,11 +393,11 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 ---
 
-### Tangerine Whistle {#tangerine-whistle}
+### Tangerine Whistle \{#tangerine-whistle}
 
 <NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### Riepilogo {#tangerine-whistle-summary}
+#### Riepilogo \{#tangerine-whistle-summary}
 
 La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di denial of service (DoS) alla rete (settembre/ottobre 2016) e ha incluso:
 
@@ -416,11 +416,11 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
 
 ---
 
-### Diramazione OAD {#dao-fork}
+### Diramazione OAD \{#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
-#### Riepilogo {#dao-fork-summary}
+#### Riepilogo \{#dao-fork-summary}
 
 La diramazione OAD è stata pensata come risposta all'[attacco OAD del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), durante il quale un contratto [OAD](/glossary/#dao) non sicuro fu svuotato di oltre 3,6 milioni di ETH in un solo attacco. La diramazione ha spostato i fondi dal contratto difettoso a un [nuovo contratto](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una sola funzione: il prelievo. Chi aveva perso fondi ha potuto prelevare 1 ETH per ogni 100 token OAD nel proprio portafoglio.
 
@@ -432,11 +432,11 @@ Alcuni miner rifiutarono di creare la diramazione perché l'incidente DAO non er
 
 ---
 
-### Homestead {#homestead}
+### Homestead \{#homestead}
 
 <NetworkUpgradeSummary name="homestead" />
 
-#### Riepilogo {#homestead-summary}
+#### Riepilogo \{#homestead-summary}
 
 La diramazione Homestead guardava al futuro. Includeva diverse modifiche al protocollo e un cambiamento che ha dato a Ethereum la possibilità di eseguire ulteriori aggiornamenti della rete.
 
@@ -454,13 +454,13 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
 
 <Divider />
 
-## 2015 {#2015}
+## 2015 \{#2015}
 
-### Frontier thawing {#frontier-thawing}
+### Frontier thawing \{#frontier-thawing}
 
 <NetworkUpgradeSummary name="frontierThawing" />
 
-#### Riepilogo {#frontier-thawing-summary}
+#### Riepilogo \{#frontier-thawing-summary}
 
 La diramazione Frontier Thawing ha innalzato il limite di 5.000 [gas](/glossary/#gas) per [blocco](/glossary/#block) e ha impostato il prezzo predefinito del gas a 51 [gwei](/glossary/#gwei). Ciò ha reso possibili le transazioni, che richiedono 21.000 gas. La [bomba di difficoltà](/glossary/#difficulty-bomb) è stata introdotta per assicurare una hard-fork futura verso il [proof-of-stake](/glossary/#pos).
 
@@ -469,11 +469,11 @@ La diramazione Frontier Thawing ha innalzato il limite di 5.000 [gas](/glossary/
 
 ---
 
-### Frontier {#frontier}
+### Frontier \{#frontier}
 
 <NetworkUpgradeSummary name="frontier" />
 
-#### Riepilogo {#frontier-summary}
+#### Riepilogo \{#frontier-summary}
 
 Frontier è stata un'implementazione operativa ma rudimentale del progetto Ethereum. È seguita alla positiva fase di test Olympic. Era destinata agli utenti tecnici, in particolare gli sviluppatori. I [blocchi](/glossary/#block) avevano un limite di 5.000 [gas](/glossary/#gas). Questo periodo di "disgelo" (dall'inglese thawing) ha consentito ai miner di iniziare la propria operatività e ai primi utilizzatori di installare i client senza fretta.
 
@@ -481,9 +481,9 @@ Frontier è stata un'implementazione operativa ma rudimentale del progetto Ether
 
 <Divider />
 
-## 2014 {#2014}
+## 2014 \{#2014}
 
-### Vendita di Ether {#ether-sale}
+### Vendita di Ether \{#ether-sale}
 
 <NetworkUpgradeSummary name="etherSale" />
 
@@ -493,7 +493,7 @@ Ether fu ufficialmente messo in vendita per 42 giorni. Lo potresti acquistare in
 
 ---
 
-### Pubblicazione dello yellowpaper {#yellowpaper}
+### Pubblicazione dello yellowpaper \{#yellowpaper}
 
 <NetworkUpgradeSummary name="yellowpaperRelease" />
 
@@ -503,9 +503,9 @@ Lo Yellow Paper, redatto dal dott. Gavin Wood, è una definizione tecnica del pr
 
 <Divider />
 
-## 2013 {#2013}
+## 2013 \{#2013}
 
-### Pubblicazione del whitepaper {#whitepaper}
+### Pubblicazione del whitepaper \{#whitepaper}
 
 <NetworkUpgradeSummary name="whitepaperRelease" />
 

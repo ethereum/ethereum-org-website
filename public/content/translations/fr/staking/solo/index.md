@@ -13,7 +13,7 @@ summaryPoints:
   - Supprimez le tiers de confiance et gardez en permanence le contrôle sur vos fonds
 ---
 
-## Qu'est-ce que la mise en jeu individuelle ? {#what-is-solo-staking}
+## Qu'est-ce que la mise en jeu individuelle ? \{#what-is-solo-staking}
 
 La mise en jeu individuelle consiste à [faire fonctionner un noeud Ethereum](/run-a-node/) connecté à Internet et à déposer 32 ETH pour activer un [validateur](#faq), vous donnant la possibilité de participer directement au consensus du réseau.
 
@@ -25,7 +25,7 @@ Les validateurs individuels sont responsables du fonctionnement du matériel né
 
 Un validateur individuel reçoit des récompenses directement du protocole pour le maintien de son validateur en bon état de fonctionnement et en ligne.
 
-## Pourquoi miser de manière individuelle ? {#why-stake-solo}
+## Pourquoi miser de manière individuelle ? \{#why-stake-solo}
 
 La mise en jeu individuelle demande plus de responsabilités, mais vous donne un contrôle maximal sur vos fonds et votre configuration de mise en jeu.
 
@@ -35,7 +35,7 @@ La mise en jeu individuelle demande plus de responsabilités, mais vous donne un
   <Card title="Sécurité du réseau" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Considérations avant de miser de manière individuelle {#considerations-before-staking-solo}
+## Considérations avant de miser de manière individuelle \{#considerations-before-staking-solo}
 
 Bien que nous souhaitions que la mise en jeu individuelle soit accessible et sans risque pour tout le monde, la réalité est différente. Diverses considérations pratiques et sérieuses sont à garder à l'esprit avant de choisir de miser vos ETH de manière individuelle.
 
@@ -75,7 +75,7 @@ Les <em>sanctions de délestage (slashing)</em> diffèrent des pénalités d'ina
 
 <StakingComparison page="solo" />
 
-## Fonctionnement {#how-it-works}
+## Fonctionnement \{#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -85,13 +85,13 @@ Si vous le désirez, vous pouvez vous retirer en tant que validateur, ce qui él
 
 [En savoir plus sur les retraits de mise en jeu](/staking/withdrawals/)
 
-## Commencer avec la plateforme de lancement de la mise en jeu {#get-started-on-the-staking-launchpad}
+## Commencer avec la plateforme de lancement de la mise en jeu \{#get-started-on-the-staking-launchpad}
 
 La plateforme de lancement de la mise en jeu est une application open source qui vous aidera à devenir un validateur. Elle vous guidera dans le choix de vos clients, génèrera vos clés et déposera vos ETH dans le contrat de dépôt des mises en jeu. Une liste de vérification est fournie pour vous assurer que vous avez fait le tour de la question pour installer votre validateur en toute sécurité.
 
 <StakingLaunchpadWidget />
 
-## Éléments à prendre en compte avec les outils de configuration de nœud et de client {#node-tool-considerations}
+## Éléments à prendre en compte avec les outils de configuration de nœud et de client \{#node-tool-considerations}
 
 Un nombre croissant d'outils et de services vous aident à miser vos ETH, mais chacun comporte des risques et des avantages différents.
 
@@ -99,7 +99,7 @@ Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces o
 
 <StakingConsiderations page="solo" />
 
-## Explorer les outils de configuration de noeud et de client {#node-and-client-tools}
+## Explorer les outils de configuration de noeud et de client \{#node-and-client-tools}
 
 Il existe une variété d'options disponibles pour vous aider dans votre configuration. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous.
 
@@ -119,11 +119,11 @@ Ces outils peuvent être utilisés en alternative à [l'interface de dépôt de 
 
 Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.
 
-## Explorer les guides de mise en jeu individuelle {#staking-guides}
+## Explorer les guides de mise en jeu individuelle \{#staking-guides}
 
 <StakingGuides />
 
-## Questions fréquemment posées {#faq}
+## Questions fréquemment posées \{#faq}
 
 Voici quelques-unes des questions les plus fréquentes relatives à la mise en jeu qui valent la peine d'être connues.
 
@@ -193,7 +193,7 @@ Pour déverrouiller et recevoir la totalité de votre solde, vous devez égaleme
 <ButtonLink to="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</ButtonLink>
 </ExpandableCard>
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [L'Annuaire de la mise en jeu sur Ethereum.](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

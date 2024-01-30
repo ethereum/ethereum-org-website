@@ -5,7 +5,7 @@ lang: es
 sidebarDepth: 3
 ---
 
-## Resumen del escalado {#scaling-overview}
+## Resumen del escalado \{#scaling-overview}
 
 A medida que la cantidad de usuarios de Ethereum ha ido creciendo, la cadena de bloques alcanzó ciertos límites en su capacidad. Esto ha hecho que se incrementen los costos para utilizar la red, haciendo necesarias "soluciones de escalado". Actualmente se están investigando, testeando e implementando múltiples soluciones desde distintos enfoques para lograr objetivos similares.
 
@@ -15,23 +15,23 @@ A pesar de que la velocidad y la capacidad de procesamiento son importantes, es 
 
 Conceptualmente, la primera categorización que hacemos en cuanto a escalado es entre escalado en cadena ("on-chain") y escalado fuera de cadena ("off-chain").
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Es necesario que comprenda todos los temas fundamentales. La implementación de soluciones de escalado es compleja, ya que la tecnología no está demasiado probada y aún continúa en investigación y desarrollo.
 
-## Escalado en cadena {#on-chain-scaling}
+## Escalado en cadena \{#on-chain-scaling}
 
 El método de escalado en cadena ("on-chain") requiere cambios en el protocolo de Ethereum ([red principal](/glossary/#mainnet) de capa 1). Durante mucho tiempo, se esperaba que la fragmentación de la cadena de bloques escale Ethereum. Esto iba a implicar dividir la cadena de bloques en piezas discretas (fragmentos o shards) para ser verificadas por subconjuntos de validadores. Sin embargo, el escalamiento con rollups de capa 2 ha tomado la delantera como técnica primaria de escalado. Esto se apoya con la adición de una nueva forma más barata de datos adjuntos a bloques de Ethereum que está especialmente diseñada para hacer que los rollups sean más baratos para los usuarios.
 
-### Fragmentación {#sharding}
+### Fragmentación \{#sharding}
 
 La fragmentación, o sharding, es el proceso de división de una base de datos. Subconjuntos de validadores serían responsables de fragmentos individuales en lugar de llevar un seguimiento de todo Ethereum. El fragmentado estuvo en la [hoja de ruta](/roadmap/) de Ethereum durante mucho tiempo, y alguna vez se pensó en hacerlo realidad antes de la Fusión a prueba de participación. Sin embargo, el rápido desarrollo de los [rollups de capa 2](#layer-2-scaling) y la invención de [Danksharding](/roadmap/danksharding) (agregado de blobs de datos de rollups a bloques de Ethereum que pueden ser verificados de forma muy eficiente por los validadores) ha llevado a la comunidad de Ethereum a favorecer el escalamiento centrado en rollups en lugar de escalar por fragmentación. Esto también ayudará a simplificar la lógica de consenso de Ethereum.
 
-## Escalado fuera de cadena {#off-chain-scaling}
+## Escalado fuera de cadena \{#off-chain-scaling}
 
 Las soluciones fuera de cadena ("off-chain") se implementan de manera separada a la red principal de capa 1 y no requieren cambios en el protocolo existente de Ethereum. Algunas soluciones, llamadas soluciones de "capa 2", adquieren su seguridad directamente del consenso de Ethereum de capa 1, por ejemplo, los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/), los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/) o los [canales de estado](/developers/docs/scaling/state-channels/). Otras soluciones involucran la creación de nuevas cadenas en varias formas que derivan su seguridad por separado de la red principal, como las [cadenas laterales](#sidechains), los [validiums](#validium) o las [cadenas de plasma](#plasma). Estas soluciones se comunican con la red principal, pero obtienen su seguridad de manera diferente para perseguir una variedad de objetivos.
 
-### Escalado de capa 2 {#layer-2-scaling}
+### Escalado de capa 2 \{#layer-2-scaling}
 
 Esta categoría de soluciones fuera de cadena obtiene su seguridad de la red principal de Ethereum.
 
@@ -41,7 +41,7 @@ La mayoría de las soluciones de capa 2 se centran en un servidor o un clúster 
 
 Una instancia específica de capa 2 puede ser abierta y compartida por muchas aplicaciones o puede ser implementada por un proyecto y dedicada a brindar soporte exclusivamente a dicha aplicación.
 
-#### ¿Por qué es necesaria la capa 2? {#why-is-layer-2-needed}
+#### ¿Por qué es necesaria la capa 2? \{#why-is-layer-2-needed}
 
 - La mayor cantidad de transacciones por segundo mejora ampliamente la experiencia del usuario y reduce la congestión de la red principal de Ethereum.
 - Las transacciones se agrupan en una sola transacción hacia la red principal de Ethereum, lo que reduce el gasto de gas para los usuarios y hace que Ethereum sea más inclusivo y más accesible para personas de todo el mundo.
@@ -50,7 +50,7 @@ Una instancia específica de capa 2 puede ser abierta y compartida por muchas ap
 
 [Más información sobre la capa 2](/layer-2/).
 
-#### Rollups {#rollups}
+#### Rollups \{#rollups}
 
 Los rollups ejecutan transacciones fuera de la capa 1 y luego los datos se publican en la capa 1, donde se alcanza el consenso. Como los datos de las transacciones se incluyen en los bloques de capa 1, esto permite que los rollups estén protegidos por la seguridad nativa de Ethereum.
 
@@ -59,38 +59,38 @@ Hay dos tipos de rollups con diferentes modelos de seguridad:
 - **Rollups optimistas**: asumen que las transacciones son válidas de forma predeterminada y solo ejecutan cómputo a través de una [**prueba de fraude**](/glossary/#fraud-proof) en caso de que haya un reclamo. [Obtenga más información sobre los rollups optimistas](/developers/docs/scaling/optimistic-rollups/).
 - **Rollups de conocimiento cero**: realizan la ejecución de las transacciones fuera de la cadena y envían una [**prueba de validez**](/glossary/#validity-proof) a la cadena. [Obtenga más información sobre los rollups de conocimiento cero](/developers/docs/scaling/zk-rollups/).
 
-#### Canales de estado {#channels}
+#### Canales de estado \{#channels}
 
 Los canales de estado utilizan contratos multifirma para permitir a los participantes realizar transacciones de forma rápida y libre fuera de la cadena y luego establecer la finalidad con la red principal. Esto minimiza la congestión de la red, las tasas y los retrasos. Actualmente, hay dos tipos de canales: de estado y de pago.
 
 Obtenga más información acerca de los [canales de estado](/developers/docs/scaling/state-channels/).
 
-### Cadenas laterales {#sidechains}
+### Cadenas laterales \{#sidechains}
 
 Una cadena lateral es una cadena de bloques independiente compatible con EVM que funciona en paralelo a la red principal. Son compatibles con Ethereum a través de puentes bidireccionales y funcionan bajo sus propias reglas de consenso y parámetros de bloque.
 
 Obtenga más información acerca de las [cadenas laterales](/developers/docs/scaling/sidechains/).
 
-### Plasma {#plasma}
+### Plasma \{#plasma}
 
 Una cadena de plasma es una cadena de bloques separada que está anclada a la cadena principal de Ethereum, y usa pruebas de fraude (como los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/)) para arbitrar disputas.
 
 Obtenga más información acerca de [Plasma](/developers/docs/scaling/plasma/).
 
-### Validium {#validium}
+### Validium \{#validium}
 
 Una cadena Validium utiliza pruebas de validez como rollups de conocimiento cero, pero los datos no se almacenan en la cadena de capa 1 de Ethereum. Esto puede conducir a 10.000 transacciones por segundo por cadena Validium, y pueden ejecutarse múltiples cadenas en paralelo.
 
 Obtenga más información sobre [Validium](/developers/docs/scaling/validium/).
 
-## ¿Por qué se necesitan tantas soluciones de escalado? {#why-do-we-need-these}
+## ¿Por qué se necesitan tantas soluciones de escalado? \{#why-do-we-need-these}
 
 - Las soluciones múltiples pueden ayudar a reducir la congestión general en cualquier parte de la red y también evitan los puntos únicos de fallo.
 - El conjunto es mayor que la suma de sus partes. Pueden existir diferentes soluciones y funcionar en armonía, permitiendo un efecto exponencial en la velocidad y la capacidad de procesamiento de transacciones futuras.
 - No todas las soluciones requieren utilizar el algoritmo de consenso de Ethereum directamente, y las alternativas pueden ofrecer beneficios que de otro modo serían difíciles de obtener.
 - Ninguna solución de escalado es suficiente para llevar a cabo la [visión de Ethereum](/roadmap/vision/).
 
-## ¿Es más bien de los que aprende viendo? {#visual-learner}
+## ¿Es más bien de los que aprende viendo? \{#visual-learner}
 
 <YouTube id="BgCgauWVTs0" />
 
@@ -98,7 +98,7 @@ _Obsérvese que la explicación del video utiliza el término "Capa 2" para refe
 
 <YouTube id="7pWxCklcNsU" />
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Una hoja de ruta de Ethereum centrada en los rollups](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Análisis actualizados sobre soluciones de escalado de capa 2 para Ethereum](https://www.l2beat.com/)

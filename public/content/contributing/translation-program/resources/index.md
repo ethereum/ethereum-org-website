@@ -4,18 +4,18 @@ lang: en
 description: Useful resources for ethereum.org translators
 ---
 
-# Resources {#resources}
+# Resources \{#resources}
 
 You can find some useful guides and tools for ethereum.org translators, as well as translation communities and updates below.
 
-## Guides {#guides}
+## Guides \{#guides}
 
 - [Translation style guide](/contributing/translation-program/translators-guide/) _– instructions and tips for ethereum.org translators_
 - [Translation FAQs](/contributing/translation-program/faq/) _– frequently asked questions and answers about the ethereum.org Translation Program_
 - [Crowdin online editor guide](https://support.crowdin.com/online-editor/) _– an in-depth guide to using the Crowdin online editor and some of Crowdin's advanced features_
 - [Content buckets](/contributing/translation-program/content-buckets/) _– which pages are included in each content bucket of ethereum.org_
 
-## Tools {#tools}
+## Tools \{#tools}
 
 - [Microsoft Language Portal](https://www.microsoft.com/en-us/language)
   _– useful for finding and checking the standard translations of technical terms_
@@ -26,14 +26,14 @@ You can find some useful guides and tools for ethereum.org translators, as well 
 - [Eurotermbank](https://www.eurotermbank.com/)
   _– collections of European terminology in 42 languages_
 
-## Communities {#communities}
+## Communities \{#communities}
 
 - [Language-specific Discord translation groups](/discord/)
   _– an initiative to connect ethereum.org translators to Translation Groups_
 - [Chinese translators group](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171)
   _– Notion page for easier coordination between Chinese translators_
 
-## Latest updates {#latest-updates}
+## Latest updates \{#latest-updates}
 
 To keep up-to-date with the latest Translation Program progress, you can follow the [Ethereum Foundation blog](https://blog.ethereum.org/):
 
@@ -42,7 +42,7 @@ To keep up-to-date with the latest Translation Program progress, you can follow 
 - [July 2020 milestones update](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [August 2019 Translation Program launch](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Office hours for translators {#office-hours}
+## Office hours for translators \{#office-hours}
 
 We have office hours for translators on the second Wednesday of every month. These are held in the #office-hours voice channel on the [ethereum.org Discord](/discord/), where you can also find the exact times and additional details.
 

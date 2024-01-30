@@ -19,7 +19,7 @@ Je suppose que vous êtes aussi enthousiaste que nous à l'idée de [déployer](
 
 Pas d'inquiétude, comme il s'agit de notre premier contrat, nous le déploierons sur un [réseau de test local](/developers/docs/networks/) afin qu'il ne vous coûte rien de le déployer et de vous amuser autant que vous le souhaitez avec.
 
-## Rédiger notre contrat {#writing-our-contract}
+## Rédiger notre contrat \{#writing-our-contract}
 
 La première étape est de [visiter Remix](https://remix.ethereum.org/) et de créer un nouveau fichier. Dans la partie supérieure gauche de l'interface Remix ajoutez un nouveau fichier et entrez le nom de fichier que vous voulez.
 
@@ -58,7 +58,7 @@ Si vous êtes un habitué de la programmation, vous pouvez facilement deviner ce
 
 Tout cela pour notre premier contrat intelligent simple. Comme vous le savez peut-être, il ressemble à une classe des langages OOP (Object-Oriented Programming) comme Java ou C++. Il est maintenant temps de jouer avec notre contrat.
 
-## Déployer notre contract {#deploying-our-contract}
+## Déployer notre contract \{#deploying-our-contract}
 
 Notre tout premier contrat intelligent ayant été rédigé, nous allons maintenant le déployer sur la blockchain pour pouvoir jouer avec lui.
 

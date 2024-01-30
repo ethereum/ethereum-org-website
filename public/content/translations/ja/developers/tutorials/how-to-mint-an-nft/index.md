@@ -20,7 +20,7 @@ published: 2021-04-22
 
 さあ、始めましょう。
 
-## ステップ 1: Web3 をインストールする {#install-web3}
+## ステップ 1: Web3 をインストールする \{#install-web3}
 
 NFT スマートコントラクトの作成に関する最初のチュートリアルに沿って進めている場合、すでに Ethers.js を使用していることと思います。 Web3 は Ethers と同様、イーサリアムブロックチェーンへのリクエストを簡単に作成するために使用されるライブラリです。 このチュートリアルでは、自動再試行と堅牢な WebSocket サポートを提供する拡張 Web3 ライブラリ、[Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)を使用します。
 
@@ -30,7 +30,7 @@ NFT スマートコントラクトの作成に関する最初のチュートリ�
 npm install @alch/alchemy-web3
 ```
 
-## ステップ 2: `mint-nft.js`ファイルを作成する {#create-mintnftjs}
+## ステップ 2: `mint-nft.js`ファイルを作成する \{#create-mintnftjs}
 
 scripts ディレクトリ内に`mint-nft.js`ファイルを作成し、以下のコード行を追加します。
 
@@ -41,7 +41,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## ステップ 3: コントラクト ABI を取得する {#contract-abi}
+## ステップ 3: コントラクト ABI を取得する \{#contract-abi}
 
 コントラクト ABI(アプリケーションバイナリインターフェイス)は、スマートコントラクトと対話するためのインターフェイスです。 コントラクト ABI の詳細については、[こちら](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is)をご覧ください。 Hardhat は自動的に ABI を生成して、`MyNFT.json`ファイルに保存します。 この ABI を使用するには、`mint-nft.js`に次のコードを追加して、ABI をパースする必要があります。
 
@@ -61,7 +61,7 @@ console.log(JSON.stringify(contract.abi))
 node scripts/mint-nft.js
 ```
 
-## ステップ 4: IPFS を使用して NFT のメタデータを設定する {#config-meta}
+## ステップ 4: IPFS を使用して NFT のメタデータを設定する \{#config-meta}
 
 パート 1 のチュートリアルを思い出してください。スマートコントラクトの`mintNFT`関数は、NFT のメタデータを記述した JSON ドキュメントで解決すべき tokenURI パラメータを取り込みます。その結果、NFT が生成され、名前、記述、画像、その他の属性などの設定可能なプロパティを実装することができます。
 
@@ -109,7 +109,7 @@ JSON ファイルの編集が終わったら、保存して、画像のアップ
 
 ![nft-metadata.jsonを Pinataにアップロードする方法](./uploadPinata.gif)
 
-## ステップ 5: コントラクトのインスタンスを作成する {#instance-contract}
+## ステップ 5: コントラクトのインスタンスを作成する \{#instance-contract}
 
 ここで、私たちのコントラクトと対話するには、コード内でインスタンスを作成する必要があります インスタンスの作成には、コントラクトアドレスが必要になります。コントラクトをデプロイする際に使用したアドレスを検索することで、デプロイメントまたは[Etherscan](https://goerli.etherscan.io/)から取得できます。
 
@@ -125,7 +125,7 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## ステップ 6: `.env`ファイルをアップデートする {#update-env}
+## ステップ 6: `.env`ファイルをアップデートする \{#update-env}
 
 それでは、イーサリアムチェーンにトランザクションを作成して送信するために、公開されているイーサリアムのアカウントアドレスを使用してアカウントのノンスを取得します(以下で説明します)。
 
@@ -137,7 +137,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## ステップ 7: トランザクションを作成する {#create-txn}
+## ステップ 7: トランザクションを作成する \{#create-txn}
 
 まず、`mintNFT(tokenData)`という名前の関数を定義し、次のようにトランザクションを作成してみましょう。
 
@@ -186,7 +186,7 @@ PUBLIC_KEY = "your-public-account-address"
    }​
 ```
 
-## ステップ 8: トランザクションに署名する {#sign-txn}
+## ステップ 8: トランザクションに署名する \{#sign-txn}
 
 さて、トランザクションを作成したら、それを送信するために署名する必要があります。 ここで秘密鍵を使用します。
 
@@ -244,7 +244,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## ステップ 9: `mintNFT`を呼び出し、ノード`mint-nft.js`を実行する {#call-mintnft-fn}
+## ステップ 9: `mintNFT`を呼び出し、ノード`mint-nft.js`を実行する \{#call-mintnft-fn}
 
 Pinata にアップロードした`metadata.json`を覚えているでしょうか。 Pinata からそのハッシュコードを取得し、`https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`をパラメータとして、関数`mintNFT`に渡します。
 

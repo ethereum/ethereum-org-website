@@ -10,7 +10,7 @@ Il est important de noter que l'objectif de cette page est de fournir une aide a
 
 Afin de garantir le maintien d'une qualité élevée d'informations et de promouvoir des idées précieuses, nous avons établi la politique suivante :
 
-## Études et tableaux de bord {#Research-studies}
+## Études et tableaux de bord \{#Research-studies}
 
 1. Méthodologie solide
 
@@ -28,7 +28,7 @@ a. Le sujet de la recherche devrait être pertinent pour les concepteurs web3 et
 
 a. Le but premier du texte devrait être de partager des informations plutôt que de promouvoir un projet ou une entreprise spécifique.
 
-## Articles {#Articles}
+## Articles \{#Articles}
 
 1. Pertinence pour les Concepteurs/Chercheurs Web3 et Cas d'Utilisation Courants en Conception Web3
 
@@ -46,7 +46,7 @@ c. Le texte devrait être concis et aller droit au but.
 
 a. L'objectif principal de l'article devrait être de partager des informations plutôt que de promouvoir un projet ou une entreprise particulière.
 
-## Communautés / DAO {#Communities-and-DAOs}
+## Communautés / DAO \{#Communities-and-DAOs}
 
 1. Le site web doit clairement indiquer comment rejoindre la DAO / Communauté
 

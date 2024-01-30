@@ -134,7 +134,7 @@ Nous avons à présent notre DEX et il possède toute la réserve de jetons disp
 - `Acheter` : L'utilisateur peut envoyer des ethers et obtenir des jetons en échange
 - `sell` : L'utilisateur peut décider d'envoyer des jetons pour récupérer des ethers
 
-## La fonction d'achat {#the-buy-function}
+## La fonction d'achat \{#the-buy-function}
 
 Codons la fonction achat. Nous devrons d'abord vérifier la quantité d'ethers que le message contient et vérifier que les contrats possèdent suffisamment de jetons et que le message contient un peu d'ethers dedans. Si le contrat possède suffisamment de jetons, il enverra le nombre de jetons à l'utilisateur et émettra l'événement `Acheté`.
 
@@ -157,7 +157,7 @@ Dans le cas où l'achat est réussi, nous devrions voir deux événements dans l
 
 ![Deux événements dans la transaction : Transfert et Achat](./transfer-and-bought-events.png)
 
-## La fonction de vente {#the-sell-function}
+## La fonction de vente \{#the-sell-function}
 
 La fonction responsable de la vente demandera d'abord à l'utilisateur d'avoir approuvé le montant en appelant la fonction d'approbation au préalable. L'approbation du transfert nécessite que le jeton ERC20Basic, instancié par le DEX, soit appelé par l'utilisateur. Ceci peut être réalisé en appelant d'abord la fonction `token()` du contrat DEX pour récupérer l'adresse où DEX a déployé le contrat ERC20Basic appelé `token`. Ensuite, nous créons une instance de ce contrat dans notre session et appelons sa fonction `approve`. Ensuite, nous pouvons appeler la fonction DEX `sell` et échanger nos jetons contre des ethers. Par exemple, voici à quoi cela ressemble dans une session de navigation interactive :
 

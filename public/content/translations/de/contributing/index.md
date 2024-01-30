@@ -4,7 +4,7 @@ description: Mehr erfahren über die verschiedenen Wege, um einen Beitrag zu eth
 lang: de
 ---
 
-# Mitwirken bei ethereum.org 🦄 {#contributing-to-ethereumorg}
+# Mitwirken bei ethereum.org 🦄 \{#contributing-to-ethereumorg}
 
 Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Source-Projekt. Möchten Sie helfen, [den Zugang zu Ethereum zu verbessern](/about/), dann finden Sie hier Informationen, was Sie tun können.
 
@@ -12,7 +12,7 @@ Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Sourc
   Beanspruchen Sie Ihren POAP-Token an. Haben Sie 2022 einen Beitrag zu ethereum.org geleistet, dann wartet ein einzigartiger POAP auf Sie.{" "}<a href="#poap">Mehr zu POAPs</a>.
 </InfoBanner>
 
-## Möglichkeiten zum Mitwirken {#ways-to-contribute}
+## Möglichkeiten zum Mitwirken \{#ways-to-contribute}
 
 - [Arbeiten an offenen Themen](https://github.com/ethereum/ethereum-org-website/issues) _ – Arbeit, die wir als notwendig erachten_
 - [Beitrag zum Überstzungsprogramm](/contributing/translation-program/)_ – Helfen Sie uns, ethereum.org in neuen Sprachen verfügbar zu machen_
@@ -34,7 +34,7 @@ Die ethereum.org-Website, wie Ethereum im Großen und Ganzen, ist ein Open-Sourc
 
 _Haben Sie Fragen?_ 🤔 Sie erreichen uns auf unserem [Discord-Server](https://discord.gg/ethereum-org).
 
-## So funktioniert die Arbeit an ethereum.org {#how-to-update-content}
+## So funktioniert die Arbeit an ethereum.org \{#how-to-update-content}
 
 Ganz gleich, ob Sie Inhalte zur Site hinzufügen, Inhalte erstellen oder an offenen Themen arbeiten, Sie benötigen ein[GitHub](https://github.com)-Konto.
 
@@ -52,7 +52,7 @@ Bevor Sie einen Beitrag leisten, sollten Sie sich mit folgenden Themen vertraut 
 - unser [Styleguide](/contributing/style-guide/)
 - unser [Verhaltenskodex](/community/code-of-conduct)
 
-## So werden Entscheidungen für die Site getroffen {#how-decisions-about-the-site-are-made}
+## So werden Entscheidungen für die Site getroffen \{#how-decisions-about-the-site-are-made}
 
 Entscheidungen zu individuellen PRs, zur Designentwicklung und zu großen Upgrades werden von einem Team aus dem Ethereum-Ökösystem getroffen. In diesem Team finden sich Projektmanager, Entwickler, Designer, Marketing-, Kommunikations- und Fachexperten. Der Input der Community fließt in jede Entscheidung ein: Stellen Sie also Fragen zu Problmen, reichen Sie PRs ein oder kontaktieren Sie das Team:
 
@@ -60,21 +60,21 @@ Entscheidungen zu individuellen PRs, zur Designentwicklung und zu großen Upgrad
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Discord-Server](https://discord.gg/ethereum-org)
 
-### Ein Hinweis zu Plagiaten {#plagiarism}
+### Ein Hinweis zu Plagiaten \{#plagiarism}
 
 Verwenden Sie nur Ihre eigene(n) Arbeit oder Inhalte, zu deren Verwendung Sie berechtigt sind, wenn Sie Inhalte oder Artefakte zu ethereum.org beitragen. Viele Projekte innerhalb des Ethereum-Ökosystems nutzen Open-Source-Linzenzen, die den freien Austausch von Informationen ermöglichen. Wenn Sie diese Informationen jedoch nicht finden können, versuchen Sie nicht, Sie zu ethereum.org hinzuzufügen. Jede Pull-Anfrage, die als Plagiat angesehen wird, wird zurückgewiesen.
 
-## Neu bei Open-Source? {#new-to-open-source}
+## Neu bei Open-Source? \{#new-to-open-source}
 
 Ein Einstieg in unser GitHub-Repository sollte kein großes Hindernis darstellen und wurde speziell für Entwickler entworfen, die mit Open Source noch nicht vertraut sind. Es nennt sich [Gutes erstes Thema](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## POAP als Mitwirkender beanspruchen {#poap}
+## POAP als Mitwirkender beanspruchen \{#poap}
 
 Wenn Ihr Beitrag in ethereum.org eingebunden wird, prägen wir Ihnen einen einzigartigen POAP für Mitwirkende. Ein Proof of Attendance Protokoll- Token (POAP) ist ein On-Chain-Nachweis, dass Sie geholfen haben, das Ökosystem noch besser zu machen.
 
 [Mehr zu POAPs](https://www.poap.xyz/)
 
-### So werden sie beansprucht {#how-to-claim}
+### So werden sie beansprucht \{#how-to-claim}
 
 1. Treten Sie unserem [Discord-Server](https://discord.gg/ethereum-org) bei.
 2. Fügen Sie einen Link zu Ihrem Beitrag in den `#🥇 | poaps` [Kanal](https://discord.com/channels/714888181740339261/804005643211898911) ein.
@@ -83,6 +83,6 @@ Wenn Ihr Beitrag in ethereum.org eingebunden wird, prägen wir Ihnen einen einzi
 
 Sie sollten nur Wallets zur Selbstaufbewahrung verwenden, um Ihre POAPs zu beanspruchen. Verwenden Sie keine Konten von Handelspläten oder andere Konten, für die Sie nicht als einziger den Private Key besitzen, da Sie darüber keinen Zugang und keine Möglichkeit zur Verwaltung der POAPs erhalten.
 
-## Mitwirkende {#contributors}
+## Mitwirkende \{#contributors}
 
 <Contributors />

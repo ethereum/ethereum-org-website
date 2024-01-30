@@ -7,11 +7,11 @@ summaryPoints:
   - Tekintse meg, hogy a Verkle-fák hogyan járulnak hozzá az Ethereum fejlődéséhez
 ---
 
-# Verkle-fák {#verkle-trees}
+# Verkle-fák \{#verkle-trees}
 
 A Verkle-fák (a vektor elköteleződés és a „Merkel-fák” összevonásából) olyan adatstruktúrát alkotnak, amely az Ethereum-csomópontokat fejleszti, hogy ne kelljen nagy mennyiségű státuszadat tárolniuk, de mégis validálni tudják a blokkokat.
 
-## Hontalanság {#statelessness}
+## Hontalanság \{#statelessness}
 
 A Verkle-fák kritikus lépést jelentenek a státusztalan Ethereum-kliensekhez vezető úton. A státusztalan kliensek úgy tudják validálni a bejövő blokkokat, hogy ahhoz nem kell tárolniuk a teljes státuszadatbázist. Ahelyett, hogy az Ethereum státuszának saját lokális másolatát használnák, a státusztalan kliensek egy „tanút” használnak a státuszadatokhoz, amely a blokkal együtt érkezik. A tanú a státuszadat egyéni darabjainak halmaza, amely ahhoz szükséges, hogy a tranzakciók egy adott kötegét le lehessen futtatni, illetve egy kriptográfiai bizonyíték arra, hogy a tanú valóban a teljes adat része. Ezt a tanút használják a státuszadatbázis _helyett_. Ehhez arra van szükség, hogy a tanúk nagyon kis méretűek legyenek, így biztosan időben el lehet juttatni őket a hálózaton keresztül a validátorokhoz, hogy azt egy 12 másodperces slotban feldolgozzák. A jelenlegi státuszadatstruktúra nem megfelelő, mert a tanúk túl nagy méretűek. A Verkle-fák megoldják ezt a problémát, mert kis méretű tanúkat tudnak készíteni, így a státusztalan kliensek egyik fő akadályát ki tudják küszöbölni.
 
@@ -21,11 +21,11 @@ Az Ethereum-kliensek jelenleg a Patricia Merkle Trie-adatstruktúrát használj�
 
 </ExpandableCard>
 
-## Mi az a tanú és miért van rá szükség? {#what-is-a-witness}
+## Mi az a tanú és miért van rá szükség? \{#what-is-a-witness}
 
 A blokk ellenőrzése azt jelenti, hogy a benne lévő tranzakciókat újra végrehajtják, megváltoztatják az Ethereum státuszfát, és kiszámolják az új gyökérhasht. Az érvényes blokk az lesz, amelynek a kiszámolt státuszgyökér-hashe ugyanazt, mint amit a blokkal együtt adtak (mert ekkor a blokkot javasló valóban végrehajtotta a számításokat úgy, ahogy mondja). A jelenlegi Ethereum-kliensekben a státusz frissítéséhez hozzá kell férni a teljes státuszfához, ami egy nagyméretű adatstruktúra, és lokálisan kell azt tárolni. A tanú a státuszadatnak csak töredékeit tartalmazza, ami a blokkban lévő tranzakciók lefuttatásához szükségesek. A validátornak tehát csak ezeket a töredékeket kell használnia arra, hogy leellenőrizze, a javaslattevő végrehajtotta-e a blokk tranzakcióit és megfelelő módon frissítette-e a státuszt. Ugyanakkor ez azt is jelenti, hogy a tanút az Ethereum hálózatán olyan gyorsan kell eljuttatni a peereknek, hogy azt biztosan megkapja és feldolgozza minden egyes csomópont a 12 másodperces slotban. Ha a tanú túl nagy méretű, akkor néhány csomópont számára sokáig tart a letöltése, így nehéz lépést tartani a lánccal. Ez egy centralizáló erő, mert csak gyors internetkapcsolattal bíró csomópontok vehetnek részt a blokkvalidálásban. A Verkle-fák révén nem kell a státuszt a merevlemezen tárolni; a blokk validálásához _mindent_ maga a blokk tartalmaz. Sajnos a Merkle-fákból előállítható tanúk túl nagy méretűek ahhoz, hogy lehetővé tegyék a státusztalan klienseket.
 
-## Hogyan állítható elő a Verkle-fákkal kisebb méretű tanúk? {#why-do-verkle-trees-enable-smaller-witnesses}
+## Hogyan állítható elő a Verkle-fákkal kisebb méretű tanúk? \{#why-do-verkle-trees-enable-smaller-witnesses}
 
 A Merkle-fa struktúrája nagy méretű tanúkat ad – ezeket nem lehet biztonsággal szétküldeni a peerek között a 12 másodperces slotban. Ennek az az oka, hogy a tanú egy olyan útvonal, amely összeköti az adatokat (amelyeket a levelek tartalmaznak) a gyökérhash-sel. Az adatok ellenőrzéséhez nem elég az összes köztes hash, ami összeköti a leveleket és a gyökeret, hanem szükség van testvérpontokra is. A bizonyítékban minden csomópontnak van egy testvére, amivel hashelődik, hogy létrehozza a fa következő hashét. Ez rengeteg adat. A Verkle-fák úgy csökkentik a tanú méretét, hogy megrövidítik a falevelek és a gyökér közötti távolságot, és nem kell a testvérpontokat is megadni ahhoz, hogy a gyökér-hash validálható legyen. Még ennél is több hely nyerhető azzal, hogy egy erőteljes polinomiális elköteleződési sémát használnak a hash-stílusú vektorelköteleződés helyett. A polinomiális elköteleződés lehetővé teszi, hogy a tanú adott méretű legyen, függetlenül az általa bizonyított levelek számától.
 
@@ -37,7 +37,7 @@ A tanú mérete a benne lévő levelek száma alapján változik. Feltéve, hogy
 
 </ExpandableCard>
 
-## Mi a Verkle-fák struktúrája? {#what-is-the-structure-of-a-verkle-tree}
+## Mi a Verkle-fák struktúrája? \{#what-is-the-structure-of-a-verkle-tree}
 
 A Verkle-fák `key, value` (kulcs, érték) párokból állnak, ahol a kulcsok 32 bájtos elemek, amelyek egy 31 bájtos _tőből_ és egy egyetlen bájtos _toldalékból_ tevődnek össze. Ezek a kulcsok _kiterjesztő_ pontokba és _belső_ pontokba rendeződnek. A kiterjesztőpontok egyetlen tövet képviselnek 256 gyermek számára különböző toldalékokkal. A belső pontoknak is 256 gyermekük van, de ezek lehetnek más kiterjesztőpontok is. A Verkle- és a Merkle-fastruktúra közötti fő különbség az, hogy a Verkle-fa sokkal laposabb, kevesebb köztes pont kapcsolja a levelet a gyökérhez, ezért kevesebb adat kell a bizonyíték legyártásához.
 
@@ -45,7 +45,7 @@ A Verkle-fák `key, value` (kulcs, érték) párokból állnak, ahol a kulcsok 3
 
 [Tudjon meg többet a Verkle-fák struktúrájáról](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
-## Jelenlegi helyzet {#current-progress}
+## Jelenlegi helyzet \{#current-progress}
 
 A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfrissítésre van még szükség ahhoz, hogy támogatni tudják ezt az adatstruktúrát. Ön is segíthet a fejlesztés meggyorsításában, ha szerződéseket hoz létre a teszthálózaton és klienseket működtet a teszthez.
 
@@ -53,7 +53,7 @@ A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfris
 
 [Tekintse meg, ahogy Guillaume Ballet bemutatja a Condrieu Verkle-teszthálózatot](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (a Condrieu teszthálózat még a proof-of-work mechanizmus szerint működött, és mára már a [Kaustinen teszthálózat](https://kaustinen.ethdevops.io) váltotta fel).
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Dankrad Feist magyarázata a Verkle-fákról a PEEPanEIP csatornán](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet magyarázata a Verkle-fákról az ETHGlobal rendezvényen](https://www.youtube.com/watch?v=f7bEtX3Z57o)

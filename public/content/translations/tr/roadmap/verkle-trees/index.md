@@ -7,11 +7,11 @@ summaryPoints:
   - Verkle ağaçlarının Ethereum'un geliştirilmesinde neden kullanışlı olduğunu hakkındakileri okuyun
 ---
 
-# Verkle ağaçları {#verkle-trees}
+# Verkle ağaçları \{#verkle-trees}
 
 Verkle ağaçları ("Vektör taahhüdü" ve "Merkle Ağaçları"nın bir birleşimi), blokları doğrulama yeteneğini kaybetmeden büyük miktarda durum verisini depolamayı durdurabilmeleri için Ethereum düğümlerini yükseltmek adına kullanılabilecek bir veri yapısıdır.
 
-## Durumsuzluk {#statelessness}
+## Durumsuzluk \{#statelessness}
 
 Verkle ağaçları, durumsuz Ethereum istemcilerine giden yolda kritik bir adım oluşturur. Durumsuz istemciler, gelen blokları doğrulamak için tüm durum veritabanını depolamak zorunda olmayan istemcilerdir. Daha ziyade, blokları doğrulamak için Ethereum durumunun kendi yerel kopyalarını kullanmak yerine, durumsuz istemciler, blokla birlikte gelen durum verilerine bir "tanık" kullanır. Tanık, belirli bir dizi işlemi gerçekleştirmek için gerekli olan durum verilerinin ayrı parçalarının bir koleksiyonudur ve tanığın gerçekten tüm verilerin bir parçası olduğunun kriptografik bir kanıtıdır. Tanık, durum veritabanının _yerine_ kullanılır. Bunun işe yaraması için, tanıkların çok küçük olması gerekir, böylece doğrulayıcıların bunları 12 saniyelik bir aralık içinde işlemesi için ağ üzerinden güvenli bir şekilde zamanında yayınlanabilirler. Tanıklar çok büyük olduğu için mevcut durum veri yapısı uygun değildir. Verkle ağaçları, durumsuz istemcilerin önündeki ana engellerden birini kaldırarak küçük tanıklar sağlayarak bu sorunu çözer.
 
@@ -21,11 +21,11 @@ Ethereum istemcileri şu anda durum verilerini depolamak için Patricia Merkle A
 
 </ExpandableCard>
 
-## Tanık nedir ve neden onlara ihtiyaç duyuyoruz? {#what-is-a-witness}
+## Tanık nedir ve neden onlara ihtiyaç duyuyoruz? \{#what-is-a-witness}
 
 Bir bloku doğrulamak, blokta yer alan işlemleri yeniden yürütmek, değişiklikleri Ethereum'un durum trie'sine uygulamak ve yeni kök karmasını hesaplamak anlamına gelir. Doğrulanmış bir blok, hesaplanan durum kök karması, blokla birlikte sağlananla aynı olan bloktur (çünkü bu, blok önericinin gerçekten yaptığını söylediği hesaplamayı yaptığı anlamına gelir). Günümüzün Ethereum istemcilerinde, durumu güncellemek, yerel olarak depolanması gereken büyük bir veri yapısı olan tüm durum trie'sine erişim gerektirir. Tanık, yalnızca bloktaki işlemleri yürütmek için gerekli olan durum verilerinin parçalarını içerir. Bir doğrulayıcı, blok öneren kişinin blok işlemlerini yürüttüğünü ve durumu doğru bir şekilde güncellediğini doğrulamak için yalnızca bu parçaları kullanabilir. Bununla birlikte bu, tanığın Ethereum ağındaki eşler arasında, 12 saniyelik bir yuva içinde her bir düğüm tarafından güvenli bir şekilde alınması ve işlenmesi için yeterince hızlı aktarılması gerektiği anlamına gelir. Tanık çok büyükse, bazı düğümlerin onu indirmesi ve zincire ayak uydurması çok uzun sürebilir. Bu, merkezileştirici bir güçtür çünkü yalnızca hızlı internet bağlantılarına sahip düğümlerin doğrulama bloklarına katılabileceği anlamına gelir. Verkle ağaçları ile durumun sabit sürücünüzde saklanmasına gerek yoktur; bir bloku doğrulamak için ihtiyacınız olan _her şey_, blokun içinde yer alır. Ne yazık ki, Merkle ağaçlarında üretilebilen tanıklar, vatansız müvekkilleri desteklemek için çok fazla.
 
-## Verkle ağaçları neden daha küçük tanıklara olanak sağlıyor? {#why-do-verkle-trees-enable-smaller-witnesses}
+## Verkle ağaçları neden daha küçük tanıklara olanak sağlıyor? \{#why-do-verkle-trees-enable-smaller-witnesses}
 
 Bir Merkle Ağacı'nın yapısı tanık boyutlarını çok büyük yapar - 12 saniyelik bir aralık içinde eşler arasında güvenli bir şekilde yayın yapmak için çok büyük. Bunun nedeni, tanığın yapraklarda tutulan verileri kök karmaya bağlayan bir yol olmasıdır. Verileri doğrulamak için, yalnızca her yaprağı köke bağlayan tüm ara karmalara değil, aynı zamanda tüm "kardeş" düğümlere de sahip olmak gerekir. Kanıttaki her düğüm, trie'deki bir sonraki karmayı oluşturmak için karma hale getirilen bir kardeşe sahiptir. Bu çok fazla veri demektir. Verkle ağaçları, ağacın yaprakları ile kökü arasındaki mesafeyi kısaltarak ve ayrıca kök karmasını doğrulamak için kardeş düğümler sağlama ihtiyacını ortadan kaldırarak tanık boyutunu azaltır. Karma tarzı vektör taahhüdü yerine güçlü bir polinomik taahhüt şeması kullanılarak daha da fazla alan verimliliği elde edilecektir. Polinomik taahhüt, kanıtladığı yaprak sayısından bağımsız olarak tanığın sabit bir boyuta sahip olmasını sağlar.
 
@@ -37,7 +37,7 @@ Tanık boyutu, içerdiği yaprak sayısına göre değişir. Tanığın 1000 yap
 
 </ExpandableCard>
 
-## Verkle ağacının yapısı nedir? {#what-is-the-structure-of-a-verkle-tree}
+## Verkle ağacının yapısı nedir? \{#what-is-the-structure-of-a-verkle-tree}
 
 Verkle ağaçları `(anahtar,değer)` çiftleridir; burada anahtarlar, 31 baytlık bir _gövde_ ve tek baytlık bir _son ek_ içeren 32 baytlık öğelerdir. Bu anahtarlar, _uzantı_ düğümleri ve _iç_ düğümler halinde düzenlenmiştir. Uzatma düğümleri, farklı eklere sahip 256 tohum için tek bir kökü temsil eder. İç düğümlerin de 256 tohumu vardır, ancak bunlar diğer uzantı düğümleri olabilir. Verkle ağacı ile Merkle ağacı yapısı arasındaki temel fark, Verkle ağacının çok daha düz olmasıdır, yani bir yaprağı köke bağlayan daha az ara düğüm vardır ve bu nedenle kanıt oluşturmak için daha az veri gerekir.
 
@@ -45,7 +45,7 @@ Verkle ağaçları `(anahtar,değer)` çiftleridir; burada anahtarlar, 31 baytl�
 
 [Verkle ağaçlarının yapısı hakkında daha fazlasını okuyun](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
-## Güncel ilerleme {#current-progress}
+## Güncel ilerleme \{#current-progress}
 
 Verkle ağacı test ağları zaten aktif ve çalışıyor, ancak Verkle ağaçlarını desteklemek için gerekli olan istemciler için önemli güncellemeler hâlâ var. Test ağlarında sözleşme dağıtarak veya test ağı istemcilerini yürüterek gelişimin hızlanmasına yardımcı olabilirsiniz.
 
@@ -53,7 +53,7 @@ Verkle ağacı test ağları zaten aktif ve çalışıyor, ancak Verkle ağaçla
 
 [Guillaume Ballet'in Condrieu Verkle test ağı açıklamasını izlemeyi unutmayın! ](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Condrieu test ağının iş ispatı olduğunu ve [artık Kaustinen test ağının yerini aldığını unutmayın](https://kaustinen.ethdevops.io)).
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Dankrad Feist PEEPanEIP'de Verkle ağaçlarını açıklıyor](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet ETHGlobal'de Verkle ağaçlarını açıklıyor](https://www.youtube.com/watch?v=f7bEtX3Z57o)

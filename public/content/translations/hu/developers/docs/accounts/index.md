@@ -6,11 +6,11 @@ lang: hu
 
 Egy Ethereum számla egy olyan entitás, mely ether (ETH) egyenleggel rendelkezik és tranzakciókat tud indítani az Ethereumon. A számlák lehetnek felhasználók által irányítottak, vagy okos szerződésként telepítettek.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvassa el a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) oldalunkat.
 
-## Számlatípusok {#types-of-account}
+## Számlatípusok \{#types-of-account}
 
 Az Ethereum két számlatípust kínál:
 
@@ -22,7 +22,7 @@ Mindkét számlatípus képes:
 - ETH-et és más tokeneket fogadni, tartani és küldeni
 - Interakcióba lépni a telepített okosszerződésekkel
 
-### Legfontosabb különbségek {#key-differences}
+### Legfontosabb különbségek \{#key-differences}
 
 **Külső tulajdonú**
 
@@ -38,7 +38,7 @@ Mindkét számlatípus képes:
 - A külső tulajdonú számláról szerződéses számlára küldött tranzakciók egy programkódot indítanak, amely sokféle parancsot tud végrehajtani, mint például token átutalása vagy akár új szerződés létrehozása
 - A szerződéses számláknak nincs privát kulcsuk. Ehelyett az okosszerződés logikája kontrollálja azokat
 
-## Egy számla közelebbről {#an-account-examined}
+## Egy számla közelebbről \{#an-account-examined}
 
 Az Ethereum számláknak négy mezőjük van:
 
@@ -49,7 +49,7 @@ Az Ethereum számláknak négy mezőjük van:
 
 ![Egy diagram mely egy számla felépítését mutatja be](./accounts.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
-## Külső tulajdonú számlák és kulcspárok {#externally-owned-accounts-and-key-pairs}
+## Külső tulajdonú számlák és kulcspárok \{#externally-owned-accounts-and-key-pairs}
 
 Egy számla egy kriptográfiai kulcspárból áll: egy publikusból és egy privátból. Segítenek bizonyítani, hogy a tranzakciót valóban a küldő írta alá és megelőzik a hamisítást. A privát kulcsod az, amivel aláírod a tranzakciókat, így felügyeletet biztosít számodra a számládhoz tartozó pénz felett. Valójában sosem birtokolsz kriptovalutát, privát kulcsokat birtokolsz - a tőke mindvégig az Ethereum főkönyvében van.
 
@@ -57,7 +57,7 @@ Ez biztosítja azt, hogy rosszindulatú szereplők ne indíthassanak hamis tranz
 
 Ha Alice ethert szeretne küldeni a számlájáról Bob számlájára, akkor Alice-nek egy tranzakció kérelmet kell készítenie és elküldeni a hálózatra hitelesítésre. Az Ethereum publikus kulcs kriptográfiája biztosítja, hogy Alice be tudja bizonyítani, hogy ő volt aki elindította a tranzakciós kérelmet. Kriptográfiai mechanizmusok nélkül egy kártékony ellenség, Eve, egyszerűen elküldhetne egy kérelmet, mely úgy néz ki, mint "küldj 5 ETH-et Alice számlájáról Eve számlájára" és senki sem tudná bebizonyítani, hogy nem Alice-től származik.
 
-## Számla létrehozása {#account-creation}
+## Számla létrehozása \{#account-creation}
 
 Amikor szeretnél létrehozni egy számlát, akkor a legtöbb könyvtár generál neked egy random privát kulcsot.
 
@@ -90,7 +90,7 @@ Lehetséges új publikus kulcsokat származtatni a privát kulcsodból, de nem t
 
 Egy privát kulcsra van szükséged, hogy üzeneteket és tranzakciókat tudj aláírni, mely egy aláírást hoz létre. Ezáltal mások az aláírásodból leszármaztathatják a publikus kulcsodat, amely az üzenet feladójának kilétét bizonyítja. Az alkalmazásodban használhatsz egy javascript könyvtárat, hogy tranzakciókat küldj a hálózatra.
 
-## Szerződéses számlák {#contract-accounts}
+## Szerződéses számlák \{#contract-accounts}
 
 A szerződéses számláknak szintén egy 42 karakterből álló hexadecimális címük van:
 
@@ -100,17 +100,17 @@ Példa:
 
 Ez a szerződés cím általában akkor jön létre, amikor egy szerződést feltelepítenek az Ethereum blokkláncra. A cím a készítő címéből és az erről a címről küldött tranzakciók számából („nonce”) származik.
 
-## Validátorkulcsok {#validators-keys}
+## Validátorkulcsok \{#validators-keys}
 
 Az Ethereumon létezik egy másik típusú kulcs is, amelyet a proof-of-work-alapú konszenzusról a proof-of-stake-alapúra való átálláskor vezettek be. Ezek a BLS kulcsok, amelyek a validátorokat azonosítják. Hatékonyan aggregálhatók, hogy a hálózatnak kevesebb sávszélességre legyen szüksége a konszenzus elérésekor. Ezen kulcsaggregáció nélkül a validátor minimális letétének sokkal nagyobbnak kellene lennie.
 
 [Bővebben a validátorkulcsokról](/developers/docs/consensus-mechanisms/pos/keys/).
 
-## Megjegyzés a tárcákkal kapcsolatban {#a-note-on-wallets}
+## Megjegyzés a tárcákkal kapcsolatban \{#a-note-on-wallets}
 
 A számla nem egyenlő a tárcával. A számla az a kulcspár, amely a felhasználó Ethereum számlájához tartozik. A tárca egy olyan interfész vagy alkalmazás, amely lehetővé teszi az Ethereum számlával való interakciót.
 
-## Egy vizuális bemutató {#a-visual-demo}
+## Egy vizuális bemutató \{#a-visual-demo}
 
 Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
@@ -118,13 +118,13 @@ Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
 <YouTube id="9LtBDy67Tho" />
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Az Ethereum-számlák megértése](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [Okosszerződések](/developers/docs/smart-contracts/)
 - [Tranzakciók](/developers/docs/transactions/)

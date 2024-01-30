@@ -10,15 +10,15 @@ Bu amaçla, her Ethereum istemcisi [JSON-RPC](/developers/docs/apis/json-rpc/) s
 
 Bir Ethereum düğümüne bağlanmak için belirli bir programlama dili kullanmak istiyorsanız, ekosistem içinde bunu çok daha kolay hâle getiren birkaç kolaylık kütüphanesi vardır. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için sezgisel ve tek satırlı yöntemler yazabilirler.
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 [Ethereum yığınını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) anlamak yardımcı olabilir.
 
-## Neden bir kütüphane kullanılır? {#why-use-a-library}
+## Neden bir kütüphane kullanılır? \{#why-use-a-library}
 
 Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın karmaşıklığının çoğunu ortadan kaldırır. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayarak ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
 
-## Mevcut kütüphaneler {#available-libraries}
+## Mevcut kütüphaneler \{#available-libraries}
 
 **Alchemy -** **_Ethereum Geliştirme Platformu._**
 
@@ -167,16 +167,16 @@ Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın ka
 - [Dokümanlar](https://services.tokeniew/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
 - [Geliştirici çerçeveleri](/developers/docs/frameworks/)
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili öğreticiler \{#related-tutorials}
 
 - [JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._
 - [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI belirtecini kullanarak, JavaScript kullanan sözleşme işlevini nasıl çağıracağınızı görün._

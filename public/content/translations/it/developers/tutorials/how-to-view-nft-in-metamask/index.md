@@ -17,13 +17,13 @@ Congratulazioni! Sei arrivato alla parte più breve e semplice della nostra seri
 
 Come prerequisito, dovresti già aver installato MetaMask sullo smartphone e dovrebbe includere il conto in cui hai coniato il tuo NFT, puoi ottenere l'app gratuitamente su [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) o su [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Fase 1: imposta la tua rete su Sepolia {#set-network-to-sepolia}
+## Fase 1: imposta la tua rete su Sepolia \{#set-network-to-sepolia}
 
 Nella parte superiore dell'app, premi il pulsante “Portafoglio”, dopodiché ti sarà richiesto di selezionare una rete. Dato che il nostro NFT è stato coniato sulla rete di Sepolia, ti consigliamo di selezionare Sepolia come tua rete.
 
 ![Come impostare Sepolia come tua rete su MetaMask Mobile](./goerliMetamask.gif)
 
-## Fase 2: aggiungi il tuo oggetto collezionabile a MetaMask {#add-nft-to-metamask}
+## Fase 2: aggiungi il tuo oggetto collezionabile a MetaMask \{#add-nft-to-metamask}
 
 Una volta sulla rete di Sepolia, seleziona la scheda "Collezionabili" sulla destra e aggiungi l'indirizzo del contratto intelligente NFT e l'ID del token ERC-721 del tuo NFT (dovrebbe essere reperibile su Etherscan a seconda dell'hash della transazione del tuo NFT, distribuito nella parte II del nostro tutorial).
 

@@ -42,7 +42,7 @@ interface IERC20 {
 
 Voici une explication ligne par ligne de ce à quoi sert chaque fonction. Après cela, nous présenterons une implémentation simple du jeton ERC-20.
 
-## Getters {#getters}
+## Getters \{#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -62,7 +62,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 La norme ERC-20 permet à une adresse de donner une allocation (« allowance ») à une autre adresse pour pouvoir récupérer des jetons à partir de celle-ci. Ce getter retourne le nombre restant de jetons que le `dépenseur` sera autorisé à dépenser au nom du `propriétaire`. Cette fonction est un getter et ne modifie pas l'état du contrat et doit retourner 0 par défaut.
 
-## Fonctions {#functions}
+## Fonctions \{#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -82,7 +82,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 Déplace le montant `amount` de jetons de `l'expéditeur` vers `le destinataire` en utilisant le mécanisme de provision « allowance ». le montant est ensuite déduit de la provision « allowance » de l'appelant. Cette fonction émet l'événement `Transfert` .
 
-## Événements {#events}
+## Événements \{#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -98,7 +98,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 Cet événement est émis lorsque le nombre de jetons (`value`) est approuvé par le propriétaire `owner` pour etre utilisé par le dépenseur `spender`.
 
-## Une implémentation basique des jetons ERC-20 {#a-basic-implementation-of-erc-20-tokens}
+## Une implémentation basique des jetons ERC-20 \{#a-basic-implementation-of-erc-20-tokens}
 
 Voici le code le plus simple possible à prendre comme base pour votre jeton ERC-20 :
 

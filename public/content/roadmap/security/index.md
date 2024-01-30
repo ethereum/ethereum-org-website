@@ -11,13 +11,13 @@ Ethereum is already a very secure, decentralized smart-contract platform. Howeve
 
 There are also improvements that make censoring transactions much more difficult by making block proposers blind to the actual contents of their blocks, and new ways to identify when a client is censoring. Together these improvements will upgrade the proof-of-stake protocol so that users - from individuals to corporations - have instant confidence in their apps, data and assets on Ethereum.
 
-## Staking withdrawals {#staking-withdrawals}
+## Staking withdrawals \{#staking-withdrawals}
 
 The upgrade from proof-of-work to proof-of-stake began with Ethereum pioneers “staking” their ETH in a deposit contract. That ETH is used to protect the network. However, that ETH cannot yet be unlocked and returned to the users. Allowing ETH to be withdrawn is a critical part of the proof-of-stake upgrade. In addition to withdrawals being a critical component of a fully-functional proof-of-stake protocol, allowing withdrawals is also good for Ethereum security as it allows stakers to use their ETH rewards for other non-staking purposes. This means users that want liquidity do not have to rely upon liquid staking derivatives (LSDs) that can be a centralizing force on Ethereum. This upgrade is scheduled to be completed on April 12, 2023.
 
 <ButtonLink variant="outline-color" to="/staking/withdrawals/">Read about withdrawals</ButtonLink>
 
-## Defending against attacks {#defending-against-attacks}
+## Defending against attacks \{##defending-against-attacks}
 
 Even after withdrawals there are improvements that can be made to Ethereum's [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) protocol. One is known as [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739) - a more secure fork-choice algorithm that makes certain sophisticated types of attack more difficult.
 
@@ -25,7 +25,7 @@ Reducing the time Ethereum takes to finalize blocks would provide a better user 
 
 <ButtonLink variant="outline-color" to="/roadmap/single-slot-finality/">Read about single slot finality</ButtonLink>
 
-## Defending against censorship {#defending-against-censorship}
+## Defending against censorship \{##defending-against-censorship}
 
 Decentralization prevents individuals or small groups of validators from becoming too influential. New staking technologies can help to ensure Ethereum's validators stay as decentralized as possible while also defending them against hardware, software and network failures. This includes software that shares validator responsibilities across multiple nodes. This is known as **distributed validator technology (DVT)**. Staking pools are incentivized to use DVT because it allows multiple computers to collectively participate in validation, adding redundancy and fault-tolerance. It also splits validator keys across several systems, rather than having single operators running multiple validators. This makes it harder for dishonest operators to coordinate attacks on Ethereum. Overall, the idea is to derive security benefits by running validators as _communities_ rather than as individuals.
 
@@ -37,12 +37,12 @@ There are potential add-ons to PBS, such as encrypted transactions and inclusion
 
 <ButtonLink variant="outline-color" to="/roadmap/pbs/">Read about proposer-builder separation</ButtonLink>
 
-## Protecting validators {#protecting-validators}
+## Protecting validators \{##protecting-validators}
 
 It is possible that a sophisticated attacker could identify upcoming validators and spam them to prevent them from proposing blocks; this is known as a **denial of service (DoS)** attack. Implementing [**secret leader election (SLE)**](/roadmap/secret-leader-election) will protect against this type of attack by preventing block proposers from being knowable in advance. This works by continually shuffling a set of cryptographic commitments representing candidate block proposers and using their order to determine which validator is selected in such a way that only the validators themselves know their ordering in advance.
 
 <ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">Read about secret leader election</ButtonLink>
 
-## Current progress {#current-progress}
+## Current progress \{##current-progress}
 
 Security upgrades on the roadmap are in advanced stages of research, but they are not expected to be implemented for some time. The next steps for view-merge, PBS, SSF and SLE is to finalize a specification and start building prototypes.

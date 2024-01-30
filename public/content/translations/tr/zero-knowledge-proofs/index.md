@@ -4,7 +4,7 @@ description: Yeni başlayanlar için sıfır bilgili ispatlara teknik olmayan bi
 lang: tr
 ---
 
-## Sıfır bilgili ispatlar nelerdir? {#what-are-zk-proofs}
+## Sıfır bilgili ispatlar nelerdir? \{#what-are-zk-proofs}
 
 Sıfır bilgili ispat, ifadenin kendisini açığa çıkarmadan bir ifadenin geçerliliğini kanıtlamanın bir yoludur. "Kanıtlayıcı", bir iddiayı kanıtlamaya çalışan taraftır, "doğrulayıcı" ise iddiayı doğrulamaktan sorumludur.
 
@@ -14,7 +14,7 @@ Sıfır bilgili ispatlardan, yaygın güncel tanımıyla birlikte ilk kez 1985 y
 
 Yıllar geçtikçe gelişen sıfır bilgili ispat günümüzde birçok gerçek dünya uygulamasında kullanılmaktadır.
 
-## Neden sıfır bilgili ispatlara ihtiyacımız var? {#why-zero-knowledge-proofs-are-important}
+## Neden sıfır bilgili ispatlara ihtiyacımız var? \{#why-zero-knowledge-proofs-are-important}
 
 Sıfır bilgili ispatlar, bireyler özelinde bilgi güvenliğini taahhüt ettikleri için uygulamalı kriptografideki bir atılımı temsil etmektedir. Bir iddiayı (ör. "Şu ülkenin vatandaşıyım") karşı tarafa (ör. hizmet sağlayıcı) kanıtlamanın yollarını düşünün. İddianızı destekleyecek pasaport ya da sürücü belgesi gibi bir "delil" sunmak durumundasınız.
 
@@ -24,7 +24,7 @@ Sıfır bilgi kanıtları bu problemi iddiaların doğruluğunu kanıtlamak içi
 
 Daha önceki örneğimize dönecek olursak, vatandaşlık iddianızı kanıtlamak için ihtiyacınız olan tek kanıt bir sıfır bilgi kanıtıdır. Doğrulayıcı, esas ifadenin de doğru olduğuna ikna olmak için yalnızca kanıtın belirli özelliklerinin doğru olup olmadığını kontrol etmelidir.
 
-## Sıfır bilgi kanıtları nasıl çalışır? {#how-do-zero-knowledge-proofs-work}
+## Sıfır bilgi kanıtları nasıl çalışır? \{#how-do-zero-knowledge-proofs-work}
 
 Bir sıfır bilgili ispat, bir ifadenin doğruluğunu, ifadenin içeriğini veya doğruluğa nasıl ulaştığınızı açıklamadan kanıtlamanızı sağlar. Bunu mümkün kılmak için sıfır bilgi protokolleri, girdi olarak bazı verileri alan ve çıktı olarak "doğru" veya "yanlış" olarak döndüren algoritmalara dayanır.
 
@@ -48,7 +48,7 @@ Yukarıdaki bilgiler "etkileşimli sıfır bilgi kanıtlarının" yapısını a�
 
 Etkileşimli kanıtların çalışma mantığını anlamak için Jacques Quisquater’ın ünlü [Ali Baba mağara hikâyesi](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) iyi bir örnektir. Bu hikâyede Peggy (kanıtlayıcı), Victor'a (doğrulayıcı) sihirli kapıyı açmak için gerekli gizli ifadeyi bildiğini bu kelimeyi söylemeden anlatmak ister.
 
-### Etkileşimsiz sıfır bilgili ispatlar {#non-interactive-zero-knowledge-proofs}
+### Etkileşimsiz sıfır bilgili ispatlar \{#non-interactive-zero-knowledge-proofs}
 
 Devrim niteliğinde olsa da etkileşimli kanıtlama, iki tarafın da müsait olmasını ve tekrar tekrar etkileşime girmesini gerektirdiğinden sınırlı bir kullanışlılığa sahipti. Doğrulayıcı kanıtlayıcının dürüstlüğünden emin olsa bile kanıt, bağımsız doğrulama için erişilebilir değildi (yeni bir kanıtın üretilmesi kanıtlayıcı ve doğrulayıcı arasında yeni bir dizi mesaj gerektiriyordu).
 
@@ -60,9 +60,9 @@ Etkileşimsiz kanıtlama kanıtlayıcı ve doğrulayıcı arasındaki haberleşm
 
 Etkileşimsiz kanıtlar sıfır bilgi teknolojisi için bir devrim niteliğindedir ve günümüzde kullanılan kanıt sistemlerinin gelişimini teşvik etmiştir. Bu kanıt türleri aşağıda tartışılmaktadır:
 
-### Sıfır bilgili ispat türleri {#types-of-zero-knowledge-proofs}
+### Sıfır bilgili ispat türleri \{#types-of-zero-knowledge-proofs}
 
-#### SB-SNARK'ları {#zk-snarks}
+#### SB-SNARK'ları \{#zk-snarks}
 
 ZK-SNARK, **Sıfır Bilgi Kısa ve Etkileşimsiz Bilgi Argümanları** için bir kısaltmadır. ZK-SNARK protokolü aşağıdaki özelliklere sahiptir:
 
@@ -82,7 +82,7 @@ Daha önce de bahsedilen "paylaşımlı anahtar" kanıtlayıcının ve doğrulay
 
 Güvenilir kurulumlar, kullanıcıların parametre oluştumada katılımcılara güvenmesini gerektirir. Ancak, ZK-STARK'ların gelişmesi, güvenilir olmayan kurulum ile çalışan kanıtlama protokollerine olanak sağladı.
 
-#### SB-STARK'ları {#zk-starks}
+#### SB-STARK'ları \{#zk-starks}
 
 ZK-SNARK, **Sıfır Bilgi Ölçeklenebilir Şeffaf Bilgi Argümanları** için bir kısaltmadır. ZK-STARK'lar ZK-SNARK'lara benzerler, farkları ise şunlardır:
 
@@ -92,9 +92,9 @@ ZK-SNARK, **Sıfır Bilgi Ölçeklenebilir Şeffaf Bilgi Argümanları** için b
 
 ZK-STARK'lar daha büyük kanıtlar ürettikleri için ZK-SNARK'lardan daha yüksek doğrulama ek yüklerine sahiptir. Ancak, ZK-STARK'lar bazı durumlarda (büyük veri kümelerinin kanıtlanması gibi) ZK-SNARK'lardan daha uygun maliyetli olabilir.
 
-## Sıfır bilgili ispatlar için kullanım örnekleri {#use-cases-for-zero-knowledge-proofs}
+## Sıfır bilgili ispatlar için kullanım örnekleri \{#use-cases-for-zero-knowledge-proofs}
 
-### Anonim ödemeler {#anonymous-payments}
+### Anonim ödemeler \{#anonymous-payments}
 
 Kredi kartı ödemeleri, genellikle ödeme sağlayıcıları, bankalar ve ilgilenen diğer taraflar (ör. devlet yetkilileri) de dahil olmak üzere pek çok tarafça görüntülenebilir. Finansal gözlem, yasa dışı aktivite tespiti için fayda sağlasa da sıradan vatandaşların mahremiyetine zarar vermektedir.
 
@@ -106,19 +106,19 @@ Gizlilik odaklı blok zincir ağları, sıfır bilgi teknolojisini protokole dah
 
 Ayrıca sıfır bilgili ispatlar, herkese açık blok zincirlerdeki işlemlerin anonimleştirilmesi için de kullanılmaktadır. Merkeziyetsiz ve gözetimsiz bir servis olan ve kullanıcıların Ethereum üzerinde gizli bir şekilde işlem yapmasına olanak sağlayan Tornado Cash buna bir örnektir. Tornado Cash sıfır bilgili ispatları kullanarak işlem detaylarını gizler ve kullanıcılara finansal gizlilik garantisi verir. Maalesef bunlar "kayıtlı" gizlilik araçları olduğundan yasa dışı aktiviteler ile bağdaştırılmaktadır. Bunun üstesinden gelmek için gizlilik, herkese açık blok zincirlerde olağan bir özellik olmalıdır.
 
-### Kimlik koruması {#identity-protection}
+### Kimlik koruması \{#identity-protection}
 
 Günümüzdeki kimlik yönetimi sistemleri kişisel bilgileri riske atmaktadır. Sıfır bilgili ispatlar, kişilere ait hassas detayları koruyarak kişilerin kimliklerini kanıtlamasına olanak sağlar.
 
 Sıfır bilgili ispatlar özellikle [merkeziyetsiz kimlik](/decentralized-identity/) bağlamında çok kullanışlıdır. Merkeziyetsiz kimlik (ya da kendine egemen kimlik), bireylerin kendi kimlik bilgilerine erişimleri kontrol edebilme yeteneği sağlar. Vergi numaranızı ya da pasaport detaylarınızı açıkça söylemeden vatandaşlığınızı kanıtlamak, sıfır bilgi teknolojisinin merkeziyetsiz kimliği nasıl mümkün kıldığına bir örnektir.
 
-### Kimlik doğrulama {#authentication}
+### Kimlik doğrulama \{#authentication}
 
 Çevrimiçi hizmetleri kullanmak için, kimliğinizi ve bu platformlara erişiminizi kanıtlamanız gerekir. Genellikle isminiz, e-posta adresiniz, doğum tarihiniz gibi kişisel bilgilerinizi paylaşmanız gerekir. Hatta uzun parolaları ezberlemeniz ve erişimi kaybetme riskini almanız gerekir.
 
 Ancak sıfır bilgili ispatlar, kimlik doğrulama sürecini hem platformlar hem de kullanıcılar için kolaylaştırabilir. Sıfır bilgili ispatlar, herkese açık girdiler (kullanıcının platforma üyeliğini kanıtlayan veriler) ve gizli girdiler (kullanıcı bilgileri) kullanılarak oluşturulduktan sonra, kullanıcılar bu kanıtları kullanarak kimliklerini doğrulayabilir ve hizmetlere ulaşabilirler. Böylece kullanıcı deneyimi iyileşir ve kuruluşlar, yüksek miktarda kişisel bilgi depoloma ihtiyacından kurtulabilir.
 
-### Doğrulanabilir hesaplama {#verifiable-computation}
+### Doğrulanabilir hesaplama \{#verifiable-computation}
 
 Doğrulanabilir hesaplama, blok zincir tasarımlarını geliştirmek için sıfır bilgi teknolojisi kullanan başka bir uygulamadır. Doğrulanabilir hesaplama, doğrulanabilir sonuçları kendinde tutarken hesaplamaların başka bir varlık tarafından yapılmasına olanak verir. Hesaplamayı yapan varlık, programın doğru gerçekleştirildiğine dair bir kanıtla birlikte sonucu sunar.
 
@@ -142,7 +142,7 @@ Tam bu noktada doğrulanabilir hesaplamalar devreye girer. Bir düğüm, Ethereu
 
 [Sıfır bilgi toplamaları](/developers/docs/scaling/zk-rollups) ve [Validium'lar](/developers/docs/scaling/validium/), doğruluk kanıtı kullanarak güvenli ölçeklendirme sağlayan iki zincir dışı ölçeklendirme çözümüdür. Bu protokoller zincir dışında binlerce işlem gerçekleştirir ve Ethereum üzerinde doğrulama için kanıtlar sunar. Bu sonuçlar kanıt doğrulanır doğrulanmaz Ethereum üzerine uygulanır. Böylece temel katmanındaki hesaplamaları arttırmadan Ethereum'un daha fazla işlem gerçekleştirmesine olanak sağlar.
 
-### Zincir üstündeki oylamalarda rüşvet ve gizli anlaşmaları azaltma {#secure-blockchain-voting}
+### Zincir üstündeki oylamalarda rüşvet ve gizli anlaşmaları azaltma \{#secure-blockchain-voting}
 
 Blok zincir oylama şemalarının pek çok olumlu özelliği vardır: tamamen denetlenebilirlik, saldırılara karşı güvenlik, sansüre dayanıklılık ve coğrafi koşullardan bağımsızlık. Fakat zincir üstündeki çözümler bile **gizli anlaşma** sorununa karşı dirençli değildir.
 
@@ -156,7 +156,7 @@ Zincir üstü oylama kullanmak, kuadratik fonlamayı gizli anlaşmalara açık h
 
 Neyse ki MACI (Minimum Gizli Anlaşma Önleme Altyapısı) gibi yeni çözümler, sıfır bilgili ispatları kullanarak rüşvet ve gizli anlaşmalara dirençli zincir üstü oylama sağlayabilirler (ör. kuadratik fonlama mekanizması). MACI, (koordinatör adı verilen) merkezi bir yöneticinin oyları toplamasına ve kişilerin nasıl oyladığından _bağımsız_ bir şekilde sonuçları saymasına olanak sağlayan akıllı sözleşmeler ve kodlar bütünüdür. Buna rağmen oyların doğru sayıldığını doğrulamak veya bireylerin oylama turuna katıldığını onaylamak mümkündür.
 
-#### MACI, sıfır bilgili ispat nasıl çalışır? {#how-maci-works-with-zk-proofs}
+#### MACI, sıfır bilgili ispat nasıl çalışır? \{#how-maci-works-with-zk-proofs}
 
 İlk olarak koordinatör MACI sözleşmesini Ethereum'a dağıtır, sonrasında kullanıcılar (açık anahtarlarıyla akıllı sözleşmeye kayıt olarak) oylama için üye olabilir. Kullanıcılar akıllı sözleşmeye herkese açık anahtarlarıyla şifrelenen (diğer kriterlere ek, geçerli bir oy kullanıcının kimliği ile ilişkili olan en güncel herkese açık anahtarla imzalanmış olmalıdır) mesajlar göndererek oy verirler. Sonrasında, koordinatör oylama süreci bittiğinde tüm mesajları işler, oyların çetelesini tutar ve sonuçları zincir üzerinde doğrular.
 
@@ -178,29 +178,29 @@ Ancak koordinatörün dürüst olduğu durumlarda, MACI zincir üzerinde oylamal
 
 [MACI hakkında daha fazla bilgi edinin](https://privacy-scaling-explorations.github.io/maci/).
 
-## Sıfır bilgili ispatları kullanmanın dezavantajları {#drawbacks-of-using-zero-knowledge-proofs}
+## Sıfır bilgili ispatları kullanmanın dezavantajları \{#drawbacks-of-using-zero-knowledge-proofs}
 
-### Donanım maliyetleri {#hardware-costs}
+### Donanım maliyetleri \{#hardware-costs}
 
 Sıfır bilgili ispatlar üretmek, özel makinelerde en iyi şekilde gerçekleştirilen çok karmaşık hesaplamaları içerir. Bu makineler pahalı olduklarından dolayı, genellikle normal bireylerin erişimine uzak kalır. Ek olarak, sıfır bilgi teknolojisini kullanmak isteyen uygulamalar, donanım maliyetlerini de hesaba katmalıdır, ki bu da son kullanıcılar için maliyetleri artırabilir.
 
-### Kanıt doğrulama maliyetleri {#proof-verification-costs}
+### Kanıt doğrulama maliyetleri \{#proof-verification-costs}
 
 Kanıtları doğrulamak ayrıca karışık hesaplama gerektirir ve uygulamalarda sıfır bilgi teknolojisinin uygulama maliyetlerini artırır. Bu maliyet, hesaplamanın kanıtlanması konusunda özellikle önemlidir. Örneğin, ZK-toplamalar, Ethereum üzerinde yalnız bir ZK-SNARK kanıtını doğrulamak için ~ 500.000 gaz öder, ZK-STARK'lar daha da yüksek ücretler gerektirir.
 
-### Güven varsayımları {#trust-assumptions}
+### Güven varsayımları \{#trust-assumptions}
 
 ZK-SNARK'ta, Ortak Referans Dizisi (genel parametreler) bir kere oluşturulur ve sıfır bilgi protokolünde katılmak isteyen taraflarca yeniden kullanılabilir. Genel parametreler, katılımcıların dürüst olduğunun varsayıldığı güvenilir bir kurulum töreni ile oluşturulurlar.
 
 Ancak kullanıcıların, katılımcıların dürüstlüğünü değerlendirmesinin hiçbir yolu yoktur ve kullanıcılar, geliştiricilerin sözlerine güvenmek mecburiyetindedirler. Rastgelelik, dizinin oluşturulmasında herkes tarafından doğrulanabilir olduğu için ZK-STARK'lar güven varsayımsızdır. Bu arada, araştırmacılar kanıtlama mekanizmalarının güvenliğini artırmak amacıyla ZK-SNARK'lar için güvenilir olmayan kurulumlar üzerine çalışıyorlar.
 
-### Kuantum bilişim tehditleri {#quantum-computing-threats}
+### Kuantum bilişim tehditleri \{#quantum-computing-threats}
 
 ZK-SNARK şifreleme için eliptik eğri kriptografisi ([ECDSA](/glossary/#ecdsa)) kullanır. ECDSA algoritması şu an güvenli olsa da, gelecekte kuantum bilgisayarların gelişmesi ile güvenlik modeli bozulabilir.
 
 ZK-STARK şifreleme için çarpışmaya direçli karmalar kullandığı için kuantum bilişim tehditine karşı bağışık olduğu düşünülür. Eliptik eğri kriptografisinde kullanılan genel-özel anahtar çiftlerinin aksine, kuantum hesaplama algoritmaların kırılması için çarğışmaya dirençli karma oluşturmak daha zordur.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Bilgisayar Bilimci Bir Konsepti 5 Zorluk Seviyesinde Açıklıyor | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube Kanalı_
 - [Sıfır bilgili ispatların kullanım alanlarına genel bakış](https://appliedzkp.org/#Projects) — _Gizlilik ve Ölçeklendirme Keşif Ekibi_

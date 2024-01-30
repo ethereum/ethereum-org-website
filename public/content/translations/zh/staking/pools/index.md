@@ -13,13 +13,13 @@ summaryPoints:
   - 在自己的钱包中保存质押代币
 ---
 
-## 什么是质押池？ {#what-are-staking-pools}
+## 什么是质押池？ \{#what-are-staking-pools}
 
 激活一组验证者密钥需要 32 个以太币，而质押池这种协作方式使拥有少量以太币的人能够满足这一条件。 协议本身并不支持联合功能，因此需要单独创建解决方案来满足这一需求。
 
 一些资金池使用智能合约运行，资金会存入一个合约中，该合约以去信任的方式管理和跟踪你的质押，并向你发放代表该价值的代币。 其他资金池不涉及智能合约，而是在链下促成。
 
-## 为什么要联合质押？ {#why-stake-with-a-pool}
+## 为什么要联合质押？ \{#why-stake-with-a-pool}
 
 除了我们在[质押简介](/staking/)中概述的好处之外，联合质押还有许多独有益处。
 
@@ -31,7 +31,7 @@ summaryPoints:
 
 <StakingComparison page="pools" />
 
-## 需考虑事项 {#what-to-consider}
+## 需考虑事项 \{#what-to-consider}
 
 联合质押和委托质押并未得到以太坊的原生支持，但是为满足用户质押少于 32 个以太币的需求，越来越多的方案已经开始建立。
 
@@ -45,7 +45,7 @@ summaryPoints:
 
 <StakingConsiderations page="pools" />
 
-## 探索质押池 {#explore-staking-pools}
+## 探索质押池 \{#explore-staking-pools}
 
 有多种方案可帮助你进行设置。 上述指标可引导你了解如何使用下方的工具。
 
@@ -57,7 +57,7 @@ summaryPoints:
 
 想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 
-## 常见问题 {#faq}
+## 常见问题 \{#faq}
 
 <ExpandableCard title="我如何赚取奖励？">
 通常，ERC-20 质押代币会发行给质押人，代表其质押以太币的价值以及奖励。 请记住，不同资金池向用户发放质押奖励的方法也略有不同，但主题却是相同的。
@@ -79,7 +79,7 @@ summaryPoints:
 涉及到支持它们的节点时，一些联合质押方案比其他方案更加分散。 为了加强网络的健康和去中心化程度，我们始终鼓励质押人选择一种无需许可即可实现节点运营商去中心化的联合服务。
 </ExpandableCard>
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian 和 Spacesider_
 - [火箭池质押 - 质押概述](https://docs.rocketpool.net/guides/staking/overview.html) - _火箭池文档_

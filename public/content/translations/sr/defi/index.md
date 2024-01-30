@@ -14,7 +14,7 @@ summaryPoint3: Zasnovano na tehnologiji otvorenog koda kojom svako može da prog
 
 DeFi (decentralizovane finansije) prestavljaju otvoren i globalan finansijski sistem napravljen za Internet doba – kao alternativa sistemu koji je nejasan, čvrsto kontrolisan i koji održavaju zastarela infrastruktura i procesi. Pruža vidljivost i kontrolu nad vašim novcem. Daje pristup globalnim tržištima i alternative u odnosu na lokalne valute i bankarski sistem. Proizvodi decentralizovanih finansija otvaraju finansijske usluge svakome ko ima internet vezu i uglavnom su u vlasništvu njihovih korisnika koji ih održavaju. Do sada su kriptovalute u vrednosti na desetine milijardi dolara putovale kroz aplikacije decentralizovanih finansija i taj iznos raste svakog dana.
 
-## Šta su decentralizovane finansije? {#what-is-defi}
+## Šta su decentralizovane finansije? \{#what-is-defi}
 
 Decentralizovane finansije predstavljaju zbirni termin za finansijske proizvode i usluge koji su dostupni svakome ko koristi Ethereum – dakle, svakome ko ima internet vezu. Pomoću decentralizovanih finansija, tržišta su uvek otvorena i nema centralnih organa koji mogu da blokiraju plaćanja ili da uskrate pristup bilo čemu. Usluge koje su ranije bile spore i u opasnosti od ljudske greške automatske su i sigurnije sada kada njima upravlja kod koji svako može da pregleda i prouči.
 
@@ -22,7 +22,7 @@ Došlo je do procvata kripto-ekonomije, u kojoj možete davati na zajam, pozajml
 
 <YouTube id="H-O3r2YMWJ4" />
 
-## Decentralizovane finansije nasuprot tradicionalnim finansijama {#defi-vs-tradfi}
+## Decentralizovane finansije nasuprot tradicionalnim finansijama \{#defi-vs-tradfi}
 
 Jedan od najboljih načina da se vidi potencijal decentralizovanih finansija jeste razumevanje problema koji postoje danas.
 
@@ -35,7 +35,7 @@ Jedan od najboljih načina da se vidi potencijal decentralizovanih finansija jes
 - Transfer novca može da potraje danima u zavisnosti od internih ljudskih procesa.
 - Postoje premije za finansijske usluge jer posredničke institucije moraju uzeti svoj deo.
 
-### Poređenje {#defi-comparison}
+### Poređenje \{#defi-comparison}
 
 | Decentralizovane finansije                                                                                       | Tradicionalne finansije                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Jedan od najboljih načina da se vidi potencijal decentralizovanih finansija jes
   Istražite aplikacije decentralizovanih finansija
 </ButtonLink>
 
-## Sve je počelo od valute Bitcoin… {#bitcoin}
+## Sve je počelo od valute Bitcoin… \{#bitcoin}
 
 Bitcoin je na mnoge načine bio prva aplikacija decentralizovanih finansija. Bitcoin omogućava da zaista imate vlasništvo i kontrolu nad sredstvima i da ih šaljete bilo gde u svetu. To radi tako što omogućava velikom broju ljudi, koji ne veruju jedni drugima, da se dogovore o bazi naloga bez potrebe za pouzdanim posrednikom. Bitcoin je otvoren za svakoga i niko nema ovlašćenje da menja njegova pravila. Pravila valute Bitcoin, kao što su njegova retkost i otvorenost, zapisana su u tehnologiji. Nije kao tradicionalne finansije u kojima vlade mogu da štampaju novac koji devalvira vrednost ušteđevine i kompanije mogu da zatvore tržišta.
 
@@ -59,7 +59,7 @@ Ethereum počiva na tome. Kao i Bitcoin, pravila se ne mogu promeniti za vas i s
 
 <YouTube id="qFBYB4W2tqU" />
 
-## Novac koji se može programirati {#programmable-money}
+## Novac koji se može programirati \{#programmable-money}
 
 Ovo zvuči čudno… „Zašto bih želeo/la da programiram svoj novac?” Međutim, to je samo osnovna karakteristika tokena u mreži Ethereum. Svako može da programira logiku u plaćanja. Tako da vi možete dobijete kontrolu i sigurnost koju ima Bitcoin, zajedno sa uslugama koje pružaju finansijske institucije. To omogućava da radite stvari sa kriptovalutama koje ne možete da radite sa valutom Bitcoin, npr. da dajete pozajmice ili pozajmljujete, zakazujete plaćanja, investirate u indeksne fondove i još mnogo toga.
 
@@ -70,7 +70,7 @@ Ovo zvuči čudno… „Zašto bih želeo/la da programiram svoj novac?” Među
   </ButtonLink>
 </InfoBanner>
 
-## Šta možete da uradite sa decentralizovanim finansijama? {#defi-use-cases}
+## Šta možete da uradite sa decentralizovanim finansijama? \{#defi-use-cases}
 
 Postoji decentralizovana alternativa većini finansijskih usluga. Ali Ethereum takođe stvara prilike za kreiranje finansijskih proizvoda koji su potpuno novi. To je lista koja stalno raste.
 
@@ -88,7 +88,7 @@ Postoji decentralizovana alternativa većini finansijskih usluga. Ali Ethereum t
 
 <Divider />
 
-### Brzo pošaljite novac bilo gde na svetu {#send-money}
+### Brzo pošaljite novac bilo gde na svetu \{#send-money}
 
 Kao lanac blokova, Ethereum je projektovan za izvršavanje transakcija na bezbedan način širom sveta. Kao i Bitcoin, i Ethereum čini slanje novca širom sveta jednostavnim kao da šaljete imejl. Samo unesite [ENS ime](/nft/#nft-domains) primaoca (npr. bob.eth) ili njegovu adresu naloga u svoj novčanik i vaša uplata će se izvršiti u roku od nekoliko minuta (uglavnom). Da biste slali ili primali uplate, potreban vam je [novčanik](/wallets/).
 
@@ -96,7 +96,7 @@ Kao lanac blokova, Ethereum je projektovan za izvršavanje transakcija na bezbed
   Pogledajte decentralizovane aplikacije za plaćanje
 </ButtonLink>
 
-#### Šaljite novac širom sveta… {#stream-money}
+#### Šaljite novac širom sveta… \{#stream-money}
 
 Možete slati novac i putem mreže Ethereum. To omogućava da isplatite nekome njegovu platu u sekundi, omogućavajući pristup novcu kada god mu je potreban. Ili da iznajmite nešto u sekundi kao što su skladište ili električni skuter.
 
@@ -104,7 +104,7 @@ I ako ne želite da šaljete ili pošaljete [ETH](/eth/) zato što njegova vredn
 
 <Divider />
 
-### Pristup stabilnim valutama {#stablecoins}
+### Pristup stabilnim valutama \{#stablecoins}
 
 Nestalnost kriptovaluta je problem za mnoge finansijske proizvode i uopštenu potrošnju. Zajednica decentralizovanih finansija to je rešila uvođenjem stabilnih novčića. Njihova vrednost ostaje vezana za drugu vrednost, obično popularnu valutu kao što je dolar.
 
@@ -116,7 +116,7 @@ Novčići kao što su Dai ili USDC imaju vrednost koja ostaje blizu jednog dolar
 
 <Divider />
 
-### Pozajmljivanje {#lending}
+### Pozajmljivanje \{#lending}
 
 Pozajmljivanje novca direktno od decentralizovanih pružalaca usluga može se vršiti na dva načina.
 
@@ -129,7 +129,7 @@ Pozajmljivanje novca direktno od decentralizovanih pružalaca usluga može se vr
 
 Korišćenje decentralizovanih zajmodavaca ima brojne prednosti…
 
-#### Pozajmljivanje uz privatnost {#borrowing-privacy}
+#### Pozajmljivanje uz privatnost \{#borrowing-privacy}
 
 Danas se davanje i primanje zajmova vrti oko pojedinaca koji su u to uključeni. Banke moraju da znaju kolike su šanse da vratite zajam pre nego što ga uzmete.
 
@@ -137,15 +137,15 @@ Decentralizovano davanje zajmova funkcioniše tako da nijedan učesnik ne mora d
 
 To omogućava da pozajmite novac bez provera kreditne sposobnosti ili predaje privatnih informacija.
 
-#### Pristup globalnim sredstvima {#access-global-funds}
+#### Pristup globalnim sredstvima \{#access-global-funds}
 
 Kada koristite decentralizovanog zajmodavca, imate pristup sredstvima deponovanim širom planete, ne samo sredstvima koja se nalaze u vlasništvu vaše izabrane banke ili institucije. To pozajmice čini dostupnijim i poboljšava kamatne stope.
 
-#### Poreska efikasnost {#tax-efficiencies}
+#### Poreska efikasnost \{#tax-efficiencies}
 
 Pozajmice mogu pružiti potrebna sredstva bez potrebe za prodajom ETH-a (što je podložno porezu). Umesto toga možete iskoristiti ETH kao sredstvo obezbeđenja za pozajmicu stabilnih novčića. Tako ćete dobiti protok novca koji vam je potreban i zadržaćete ETH. Stabilni novčići su tokeni koji su mnogo bolji kada vam je potrebna gotovina jer njihova vrednost ne fluktuira kao kod valuete ETH. [Više informacija o stabilnim novčićima](#stablecoins)
 
-#### Brze pozajmice {#flash-loans}
+#### Brze pozajmice \{#flash-loans}
 
 Brze pozajmice su eksperimentalni oblik decentralizovanih pozajmica u kojima možete da pozajmljujete bez sredstava obezbeđenja ili pružanja bilo kakvih informacija o ličnosti.
 
@@ -172,9 +172,9 @@ Da biste mogli da izvedete gornji primer u tradicionalnom finansijskom svetu, bi
 
 <Divider />
 
-### Počnite da štedite u kriptovalutama {#saving}
+### Počnite da štedite u kriptovalutama \{#saving}
 
-#### Davanje zajmova {#lending}
+#### Davanje zajmova \{#lending}
 
 Možete da zaradite kamatu na svojoj kripto-imovini tako što je pozajmljujete i da gledate kako vaša sredstva rastu u realnom vremenu. Trenutno su kamatne stope znatno veće nego što biste verovatno dobili u lokalnoj banci (ako imate sreće da možete da pristupite banci). Sledi primer:
 
@@ -187,7 +187,7 @@ Možete da zaradite kamatu na svojoj kripto-imovini tako što je pozajmljujete i
   Pogledajte decentralizovane aplikacije za davanje pozajmica
 </ButtonLink>
 
-#### Lutrije bez gubitaka {#no-loss-lotteries}
+#### Lutrije bez gubitaka \{#no-loss-lotteries}
 
 Lutrije bez gubitaka kao što je PoolTogether predstavljaju zabavan i inovativan način da štedite novac.
 
@@ -205,7 +205,7 @@ Nagradni fond se generiše od svih kamata nastalih iz pozajmica depozita karata,
 
 <Divider />
 
-### Tokeni menjačnice {#swaps}
+### Tokeni menjačnice \{#swaps}
 
 Postoje na hiljade tokena na mreži Ethereum. Decentralizovane menjačnice (DEX) omogućuju da trgujete različitim tokenima kad god poželite. Nikada ne predajete kontrolu nad svojim sredstvima. To je kao kada koristite menjačnicu kada ste u poseti stranoj državi. Ali se verzija menjačnice za decentralizovane finansije nikad ne zatvara. Tržišta su otvorena 24/7, 365 dana godišnje i tehnologija garantuje da će tu uvek biti neko ko će prihvatiti razmenu.
 
@@ -217,7 +217,7 @@ Npr. ako želite da koristite lutriju bez gubitka PoolTogether (opisanu iznad), 
 
 <Divider />
 
-### Napredna trgovina {#trading}
+### Napredna trgovina \{#trading}
 
 Postoje napredne opcije za trgovce koji žele malo više kontrole. Ograničene narudžbine, perpeticionni ugovori, trgovanje na margini i još mnogo toga su sve moguće opcije. Sa decentralizovanom trgovinom dobijate pristup globalnoj likvidnosti, tržište se nikada ne zatvara i uvek imate kontrolu nad svojim sredstvima.
 
@@ -229,7 +229,7 @@ Kada koristite centralizovane menjačnice morate da dostavite sredstva pre trgov
 
 <Divider />
 
-### Razvijajte portfolio {#investing}
+### Razvijajte portfolio \{#investing}
 
 Na Ethereumu postoje proizvodi za upravljanje fondovima koji vam mogu pomoći da povećate vaš portfolio na osnovu strategije koju odaberete. Ovo su automatski proizvodi, otvoreni za sve i ne zahtevaju ljudskog menadžera koji uzima deo vaših profita.
 
@@ -241,7 +241,7 @@ Dobar primer je [DeFi Pulse Index fond (DPI)](https://defipulse.com/blog/defi-pu
 
 <Divider />
 
-### Finansirajte svoje ideje {#crowdfunding}
+### Finansirajte svoje ideje \{#crowdfunding}
 
 Ethereum je idealna platforma za masovno finansiranje (crowdfunding):
 
@@ -253,7 +253,7 @@ Ethereum je idealna platforma za masovno finansiranje (crowdfunding):
   Pogledajte aplikacije za masovno finansiranje
 </ButtonLink>
 
-#### Kvadratno finansiranje {#quadratic-funding}
+#### Kvadratno finansiranje \{#quadratic-funding}
 
 Ethereum je softver otvorenog koda i dosta uloženog rada do sada je finansirano od strane zajednice. Ovo je dovelo do novog načina prikupljanja sredstava: kvadratnog finansiranja. This has the potential to improve the way we fund all types of public goods in the future.
 
@@ -270,7 +270,7 @@ To znači da projekat A sa svojih 100 donacija u iznosu od 1 dolara može biti f
 
 <Divider />
 
-### Osiguranje {#insurance}
+### Osiguranje \{#insurance}
 
 Decentralizovano osiguranje pokušava da učini osiguranje jeftinijim, bržim za isplatu i transparentnijim. Sa više automatizacije, pokrivanje osiguranja je pristupačnije, a isplate se obavljaju brže. Podaci koji se koriste za odlučivanje o vašem zahtevu su potpuno transparentni.
 
@@ -282,7 +282,7 @@ Ethereum proizvodi, kao i bilo koji drugi softver, može imati greške i slabe t
 
 <Divider />
 
-### Agregatori i menadžeri portfolija {#aggregators}
+### Agregatori i menadžeri portfolija \{#aggregators}
 
 S obzirom na toliko dešavanja trenutno, treba vam način da pratite sve svoje investicije, pozajmice i trgovanja. Postoji niz proizvoda koji vam omogućavaju da koordinišete sve svoje DeFi aktivnosti sa jednog mesta. U ovome je lepota otvorene arhitekture decentralizovanih finansija. Timovi mogu da izgrade interfejse gde, ne samo da možete videti svoj saldo na različitim proizvodima, već možete koristiti i njihove funkcije. Ovo vam možete biti korisno kako budete više istraživali decentralizovane finansije.
 
@@ -292,7 +292,7 @@ S obzirom na toliko dešavanja trenutno, treba vam način da pratite sve svoje i
 
 <Divider />
 
-## Kako DeFi funkcioniše? {#how-defi-works}
+## Kako DeFi funkcioniše? \{#how-defi-works}
 
 DeFi koristi kriptovalute i pametne ugovore kako bi pružio usluge bez posrednika. U današnjem finansijskom svetu, finansijske institucije se ponašaju kao garancije za transakcije. Ovo daje tim institucijama ogromnu moć zato što vaš novac teče kroz njih. Plu, milijarde ljudi širom sveta ni nema pristup bankovnom računu.
 
@@ -304,7 +304,7 @@ Ugovori su takođe javni za bilo koga da ih pregleda i proveri. Ovo znači da ć
 
 Ovo znači da trenutno postoji potreba da se veruje više tehničkim članovima Ethereum zajednica koja ume da čita kod. Zajednica bazirana na otvorenom kodu pomaže da se programeri drže pod kontrolom, ali ova potreba će se vremenom smanjivati kako pametni ugovori postanu lakši za čitanje i kako se razvijaju druge metode za dokazivanje pouzdanosti koda.
 
-## Ethereum i DeFi {#ethereum-and-defi}
+## Ethereum i DeFi \{#ethereum-and-defi}
 
 Ethereum je savršena osnova za DeFi zbog mnogobrojnih razloga:
 
@@ -320,7 +320,7 @@ Možete misliti o decentralizovanim finansijama u nivoima:
 3. Protokoli — [pametni ugovori](/glossary/#smart-contract)koji pružaju funkcionalnost, na primer uslugu koja omogućava decentralizovano pozajmljivanje sredstava.
 4. [Aplikacije](/dapps/) — proizvodi koje koristimo da upravljamo i pristupamo protokolima.
 
-## Izgradite DeFi {#build-defi}
+## Izgradite DeFi \{#build-defi}
 
 Decentralizovane finansije predstavljaju pokret otvorenog koda. Protokoli decentralizovanih finansija i aplikacija su otvoreni da ih istražite, forkujete i inovirate na njima. Zbog ovog slojevitog sistema (sve dele isti osnovni lanac blokova i resurse), protokoli se mogu kombinovati kako bi se otključale jedinstvene kombinacione mogućnosti.
 
@@ -328,25 +328,25 @@ Decentralizovane finansije predstavljaju pokret otvorenog koda. Protokoli decent
   Više o građenju decentralizovanih aplikacija
 </ButtonLink>
 
-## Dodatna literatura {#futher-reading}
+## Dodatna literatura \{#futher-reading}
 
-### DeFi podaci {#defi-data}
+### DeFi podaci \{#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)
 
-### DeFi članci {#defi-articles}
+### DeFi članci \{#defi-articles}
 
 - [Vodič za početnike kroz DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) — _Sid Koeljo-Prabu, 6. januar 2020._
 
-### Videos {#videos}
+### Videos \{#videos}
 
 - [Finematics — edukacija o decentralizovanim finansijama](https://finematics.com/) — _Video o DeFi-ju_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) — _DeFi osnove: Sve što treba da znate da biste započeli u ovom ponekad zbunjujućem prostoru._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA)_Šta je DeFi?_
 
-### Zajednice {#communities}
+### Zajednice \{#communities}
 
 - [DeFi Llama Discord server](https://discord.gg/buPFYXzDDd)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)

@@ -4,15 +4,15 @@ description: An incomplete glossary of technical and non-technical terms related
 lang: en
 ---
 
-# Glossary {#ethereum-glossary}
+# Glossary \{#ethereum-glossary}
 
-## \# {#section-numbers}
+## \# \{##section-numbers}
 
 <GlossaryDefinition term="51%-attack" />
 
 <Divider />
 
-## A {#section-a}
+## A \{##section-a}
 
 <GlossaryDefinition term="account" />
 
@@ -30,7 +30,7 @@ lang: en
 
 <Divider />
 
-## B {#section-b}
+## B \{##section-b}
 
 <GlossaryDefinition term="base-fee" />
 
@@ -66,7 +66,7 @@ lang: en
 
 <Divider />
 
-## C {#section-c}
+## C \{##section-c}
 
 <GlossaryDefinition term="casper-ffg" />
 
@@ -96,7 +96,7 @@ lang: en
 
 <Divider />
 
-## D {#section-d}
+## D \{##section-d}
 
 <GlossaryDefinition term="doge-d" />
 
@@ -130,7 +130,7 @@ lang: en
 
 <Divider />
 
-## E {#section-e}
+## E \{##section-e}
 
 <GlossaryDefinition term="ecdsa" />
 
@@ -170,7 +170,7 @@ lang: en
 
 <Divider />
 
-## F {#section-f}
+## F \{##section-f}
 
 <GlossaryDefinition term="fallback-function" />
 
@@ -190,7 +190,7 @@ lang: en
 
 <Divider />
 
-## G {#section-g}
+## G \{##section-g}
 
 <GlossaryDefinition term="gas" />
 
@@ -206,7 +206,7 @@ lang: en
 
 <Divider />
 
-## H {#section-h}
+## H \{##section-h}
 
 <GlossaryDefinition term="hard-fork" />
 
@@ -218,7 +218,7 @@ lang: en
 
 <Divider />
 
-## I {#section-i}
+## I \{##section-i}
 
 <GlossaryDefinition term="index" />
 
@@ -232,7 +232,7 @@ lang: en
 
 <Divider />
 
-## K {#section-k}
+## K \{##section-k}
 
 <GlossaryDefinition term="kdf" />
 
@@ -242,7 +242,7 @@ lang: en
 
 <Divider />
 
-## L {#section-l}
+## L \{##section-l}
 
 <GlossaryDefinition term="layer-2" />
 
@@ -254,7 +254,7 @@ lang: en
 
 <Divider />
 
-## M {#section-m}
+## M \{##section-m}
 
 <GlossaryDefinition term="mainnet" />
 
@@ -272,7 +272,7 @@ lang: en
 
 <Divider />
 
-## N {#section-n}
+## N \{##section-n}
 
 <GlossaryDefinition term="network" />
 
@@ -286,7 +286,7 @@ lang: en
 
 <Divider />
 
-## O {#section-o}
+## O \{##section-o}
 
 <GlossaryDefinition term="ommer" />
 
@@ -296,7 +296,7 @@ lang: en
 
 <Divider />
 
-## P {#section-p}
+## P \{##section-p}
 
 <GlossaryDefinition term="peer" />
 
@@ -316,7 +316,7 @@ lang: en
 
 <Divider />
 
-## R {#section-r}
+## R \{##section-r}
 
 <GlossaryDefinition term="receipt" />
 
@@ -332,7 +332,7 @@ lang: en
 
 <Divider />
 
-## S {#section-s}
+## S \{##section-s}
 
 <GlossaryDefinition term="sha" />
 
@@ -382,7 +382,7 @@ lang: en
 
 <Divider />
 
-## T {#section-t}
+## T \{##section-t}
 
 <GlossaryDefinition term="terminal-total-difficulty" />
 
@@ -400,7 +400,7 @@ lang: en
 
 <Divider />
 
-## V {#section-v}
+## V \{##section-v}
 
 <GlossaryDefinition term="validator" />
 
@@ -414,7 +414,7 @@ lang: en
 
 <Divider />
 
-## W {#section-w}
+## W \{##section-w}
 
 <GlossaryDefinition term="wallet" />
 
@@ -424,7 +424,7 @@ lang: en
 
 <Divider />
 
-## Z {#section-z}
+## Z \{##section-z}
 
 <GlossaryDefinition term="zero-address" />
 
@@ -434,13 +434,13 @@ lang: en
 
 <Divider />
 
-## Sources {#sources}
+## Sources \{##sources}
 
 _Provided in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA_
 
 <Divider />
 
-## Contribute to this page {#contribute-to-this-page}
+## Contribute to this page \{##contribute-to-this-page}
 
 Did we miss something? Is something incorrect? Help us improve by contributing to this glossary on GitHub!
 

@@ -6,15 +6,15 @@ lang: id
 
 Kontrak pintar adalah program yang dijalankan pada sebuah alamat di Ethereum. Kontrak pintar terbuat dari data dan fungsi yang bisa dieksekusi saat menerima sebuah transaksi. Berikut adalah gambaran umum dari komponen yang menyusun sebuah kontrak pintar.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Pastikan Anda telah membaca tentang [kontrak pintar](/developers/docs/smart-contracts/) terlebih dahulu. Dokumen ini menganggap Anda telah terbiasa dengan bahasa pemrograman seperti JavaScript atau Python.
 
-## Data {#data}
+## Data \{#data}
 
 Setiap data kontrak harus ditetapkan ke suatu lokasi: baik ke `storage` atau `memory`. Untuk memodifikasi penyimpanan di sebuah kontrak pintar biayanya mahal, jadi Anda perlu mempertimbangkan tempat untuk menyimpan data Anda.
 
-### Penyimpanan {#storage}
+### Penyimpanan \{#storage}
 
 Data yang persisten dirujuk sebagai penyimpanan dan diwakilkan oleh variabel state. Nilai-nilai ini disimpan secara permanen di blockchain. Anda perlu mendeklarasikan jenisnya sehingga kontrak bisa tetap melacak kapasitas penyimpanan pada blockchain yang diperlukan kontrak ketika dikompilasi.
 
@@ -52,13 +52,13 @@ Untuk penjelasan lebih lanjut, lihat dokumen:
 - [Lihat jenis Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Lihat jenis Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memori {#memory}
+### Memori \{#memory}
 
 Nilai yang hanya disimpan selama masa eksekusi fungsi kontrak disebut variabel memori. Karena nilai ini tidak disimpan secara permanen di blockchain, lebih murah untuk digunakan.
 
 Pelajari selengkapnya tentang cara EVM menyimpan data (Penyimpanan, Memori, dan Tumpukan) di [dokumen Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Variabel lingkungan {#environment-variables}
+### Variabel lingkungan \{#environment-variables}
 
 Selain variabel yang Anda tetapkan pada kontrak, ada beberapa variabel global khusus. Variabel ini terutama digunakan untuk memberikan informasi tentang blockchain atau transaksi saat ini.
 
@@ -69,7 +69,7 @@ Contoh:
 | `block.timestamp` | uint256            | Stempel waktu epoch blok saat ini     |
 | `msg.sender`      | alamat             | Pengirim pesan (pemanggilan saat ini) |
 
-## Fungsi {#functions}
+## Fungsi \{#functions}
 
 Dalam istilah yang paling sederhana, fungsi bisa mendapatkan informasi atau mengatur informasi dalam menanggapi transaksi yang masuk.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - Fungsi dideklarasikan sebagai `public`, berarti siapa pun bisa mengaksesnya
 - Fungsi tidak dideklarasikan sebagai `view`, sehingga bisa memodifikasi state kontrak
 
-### Fungsi view {#view-functions}
+### Fungsi view \{#view-functions}
 
 Fungsi ini berjanji untuk tidak memodifikasi state dari data kontrak. Contoh umumnya adalah fungsi "pengambil" – Anda mungkin menggunakan ini untuk mendapatkan saldo pengguna sebagai contohnya.
 
@@ -131,7 +131,7 @@ Apa yang dianggap sebagai memodifikasi state:
 7. Menggunakan pemanggilan level rendah.
 8. Menggunakan perakitan sebaris yang berisi opcode tertentu.
 
-### Fungsi pembangun {#constructor-functions}
+### Fungsi pembangun \{#constructor-functions}
 
 Fungsi `constructor` hanya dijalankan sekali saat kontrak digunakan untuk pertama kalinya. Seperti `constructor` di banyak bahasa pemrograman berbasis kelas, fungsi ini sering menjalankan variabel state sesuai dengan nilai yang telah ditentukan.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Fungsi bawaan {#built-in-functions}
+### Fungsi bawaan \{#built-in-functions}
 
 Selain dari variabel dan fungsi yang Anda tetapkan pada kontrak Anda, ada beberapa fungsi bawaan spesial. Contoh paling jelas adalah:
 
@@ -167,7 +167,7 @@ Selain dari variabel dan fungsi yang Anda tetapkan pada kontrak Anda, ada bebera
 
 Ini memungkinkan kontrak untuk mengirim ETH ke akun lain.
 
-## Menulis fungsi {#writing-functions}
+## Menulis fungsi \{#writing-functions}
 
 Fungsi Anda memerlukan:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Sebuah kontrak lengkap mungkin tampak seperti ini. Di sini, fungsi `constructor` menyediakan nilai awal untuk variabel `dapp_name`.
 
-## Aksi dan log {#events-and-logs}
+## Aksi dan log \{#events-and-logs}
 
 Aksi memungkinkan Anda berkomunikasi dengan kontrak pintar dari frontend Anda atau aplikasi berbayar lainnya. Ketika sebuah transaksi ditambang, kontrak pintar bisa menerbitkan aksi dan menulis log pada blockchain yang kemudian dapat diproses frontend.
 
-## Contoh dengan anotasi {#annotated-examples}
+## Contoh dengan anotasi \{#annotated-examples}
 
 Ini adalah beberapa contoh yang ditulis dalam Solidity. Jika Anda ingin bermain dengan kode tersebut, Anda dapat berinteraksi dengannya di [Remix](http://remix.ethereum.org).
 
-### Hello world {#hello-world}
+### Hello world \{#hello-world}
 
 ```solidity
 // Tentukan versi Solidity, gunakan pembuatan versi semantik.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token {#token}
+### Token \{#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Aset digital unik {#unique-digital-asset}
+### Aset digital unik \{#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 Lihat dokumentasi Solidity dan Vyper untuk gambaran umum yang lebih lengkap tentang kontrak pintar:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Topik terkait {#related-topics}
+## Topik terkait \{#related-topics}
 
 - [Kontrak pintar](/developers/docs/smart-contracts/)
 - [Mesin Virtual Ethereum](/developers/docs/evm/)
 
-## Tutorial terkait {#related-tutorials}
+## Tutorial terkait \{#related-tutorials}
 
 - [Memperkecil kontrak untuk mengatasi batas ukuran kontrak](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Beberapa tips praktis untuk mengurangi ukuran kontrak pintar Anda._
 - [Pembuatan log data dari kontrak pintar dengan aksi](/developers/tutorials/logging-events-smart-contracts/) _– Pengantar aksi kontrak pintar dan cara menggunakannya untuk log data._

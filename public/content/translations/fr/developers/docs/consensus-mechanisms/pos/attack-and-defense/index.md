@@ -6,11 +6,11 @@ lang: fr
 
 Les voleurs et les saboteurs sont constamment à la recherche d'opportunités pour attaquer le logiciel client d'Ethereum. Cette page met en lumière les vecteurs d'attaques connus sur la couche de consensus d'Ethereum. Elle montre aussi comment ces attaques peuvent être défendues. Les informations de cette page sont une adaptation d'une [version de longue forme](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
-## Les prérequis {#prerequisites}
+## Les prérequis \{#prerequisites}
 
 Quelques notions de bases de la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) sont requises. Aussi, cela serait utile d'avoir les notions de compréhension de base des la couche d'incitation [d'Ethereum](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) et de l'algorithme de choix de fourche [, LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
-## Que veulent les attaquants ? {#what-do-attackers-want}
+## Que veulent les attaquants ? \{#what-do-attackers-want}
 
 Une idée erronée courante est qu'un attaquant couronné de succès peut générer de nouveaux éthers ou absorber des éthers depuis des comptes arbitraires. Ni l'une, ni l'autre situation n'est possible car toutes les transactions sont exécutées par tous les clients d'exécution sur le réseau. Elles doivent satisfaire à des conditions élémentaires de validité (par exemple, les transactions sont signées par la clé privée de l'expéditeur, l'expéditeur dispose d'un solde suffisant, etc.) sinon elles sont simplement annulées. Il y a trois types de résultats qu'un attaquant pourrait viser : les reorgs, la double finalité ou le délai de finalité.
 
@@ -24,9 +24,9 @@ Une attaque sur la couche sociale pourrait chercher à saper la confiance du pub
 
 Après avoir établi les raisons pour lesquelles un adversaire pourrait attaquer Ethereum, les sections suivantes examinent _comment_ il pourrait s'y prendre.
 
-## Méthodes d'attaque {#methods-of-attack}
+## Méthodes d'attaque \{#methods-of-attack}
 
-### Attaques de couche 0 {#layer-0}
+### Attaques de couche 0 \{#layer-0}
 
 Premièrement, les individus qui ne participent pas activement à Ethereum (en exécutant le logiciel client) peuvent attaquer en ciblant la couche sociale (Couche 0). La couche 0 est la fondation sur laquelle repose l'Ethereum, et, en tant que telle, représente une potentielle surface pour les attaques avec des conséquences se répercutant sur le reste de la pile. Voici quelques exemples :
 
@@ -45,15 +45,15 @@ Une autre fortification importante contre les attaques de la couche sociale est 
 
 Enfin, il est essentiel que la communauté Ethereum reste ouverte et accueillante pour tous les participants. Une communauté où règnent des gardiens et l'exclusivité est particulièrement vulnérable aux attaques sociales, car il est facile de créer des récits de type « nous et eux ». Le tribalisme et le maximalisme toxique blessent la communauté et érodent la sécurité de la Couche 1. Les Ethéréens ayant un intérêt direct dans la sécurité du réseau devraient considérer leur comportement en ligne et dans le monde réel comme une contribution directe à la sécurité de la couche 0 d'Ethereum.
 
-### Attaquer le protocole {#attacking-the-protocol}
+### Attaquer le protocole \{#attacking-the-protocol}
 
 Tout le monde peut utiliser le logiciel client d'Ethereum. Pour ajouter un validateur à un client, l'utilisateur doit mettre en jeu 32 ether dans le contrat de dépôt. Un validateur permet à un utilisateur de participer activement à la sécurité du réseau Ethereum en proposant et en attestant de nouveaux blocs. Le validateur dispose désormais d'une voix qu'il peut utiliser pour influencer le contenu futur de la blockchain - il peut le faire honnêtement et augmenter sa réserve d'ether via des récompenses ou il peut essayer de manipuler le processus à son propre avantage, en risquant sa mise. L'une des façons de monter une attaque consiste à accumuler une plus grande proportion de l'enjeu total et à l'utiliser pour mettre en minorité les validateurs honnêtes. Plus la part de la participation contrôlée par l'attaquant est importante, plus son pouvoir de vote est élevé, en particulier à certaines étapes économiques que nous examinerons plus tard. Cependant, la plupart des attaquants ne seront pas en mesure d'accumuler suffisamment d'ether pour attaquer de cette manière, et devront donc utiliser des techniques subtiles pour manipuler la majorité honnête afin qu'elle agisse d'une certaine manière.
 
 Fondamentalement, toutes les attaques à faible enjeu sont des variations subtiles de deux types de comportement erroné du validateur : la sous-activité (ne pas proposer ou le faire en retard) ou la suractivité (proposer/attester trop de fois dans un créneau). Dans leurs formes les plus basiques, ces actions sont facilement gérées par l'algorithme de choix de fourche et la couche d'incitation, mais il existe des moyens astucieux de tromper le système à l'avantage de l'attaquant.
 
-### Attaques utilisant de faibles quantités d'ETH {#attacks-by-small-stakeholders}
+### Attaques utilisant de faibles quantités d'ETH \{#attacks-by-small-stakeholders}
 
-#### reorgs {#reorgs}
+#### reorgs \{#reorgs}
 
 Plusieurs documents ont expliqué des attaques sur Ethereum qui réalisent des reorgs ou des retards de finalité avec seulement une petite proportion de l'ether total mis en jeu. Ces attaques reposent généralement sur le fait que l'attaquant dissimule certaines informations aux autres validateurs, puis les divulgue d'une manière subtile et/ou à un moment opportun. Ils visent généralement à déplacer un ou plusieurs blocs honnêtes de la chaîne canonique. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) ont montré comment un validateur attaquant peut créer et attester d'un bloc (`B`) pour un créneau particulier `n+1` mais s'abstenir de le propager à d'autres nœuds du réseau. Au lieu de cela, ils conservent ce bloc attesté jusqu'au créneau suivant `n+2`. Un validateur honnête propose un bloc (`C`) pour le créneau `n+2`. Presque simultanément, l'attaquant peut envoyer leur bloc retenu (`B`) et leurs attestations retenues pour lui, et dans le même attester que `B` est la tête de la chaîne avec leurs votes pour le créneau `n+2`, niant effectivement l'existence du bloc honnête `C`. Lorsque le bloc honnête `D` est créé, l'algorithme de choix de fourche voit `D` se construire sur `B` étant plus lourd que `D` se construisant sur `C`. L'attaquant a donc réussi à retirer le bloc honnête `C` du créneau `n+2` de la chaîne canonique en utilisant un reorg ex ante d'1 bloc. [Un attaquant avec 34 %](https://www.youtube.com/watch?v=6vzXwwk12ZE) des enjeux a de très bonnes chances de réussir cette attaque, comme expliqué dans [cette note](https://notes.ethereum.org/plgVdz-ORe-fGjK06BZ_3A#Fork-choice-by-block-slot-pair). En théorie, cependant, cette attaque pourrait être tentée avec des enjeux plus petits. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) décrit cette attaque fonctionnant avec une participation de 30 %, mais il a été démontré plus tard qu'elle était viable avec [2% de la mise totale](https://arxiv.org/pdf/2009.04987.pdf) et puis à nouveau pour un [seul validateur](https://arxiv.org/abs/2110.10086#) en utilisant des techniques d'équilibrage que nous examinerons dans la section suivante.
 
@@ -83,21 +83,21 @@ L'attaque en avalanche est atténuée par la partie LMD de l'algorithme de choix
 
 Il existe plusieurs autres mises à niveau potentielles de la règle de choix de fourche qui pourraient ajouter à la sécurité fournie par le renforcement du proposeur. L'une est [la fusion des vues](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739), où les attestateurs gèlent leur vue du choix de fourche `n` secondes avant le début d'un créneau et le proposeur aide ensuite à synchroniser la vue de la chaîne à travers le réseau. Une autre mise à niveau potentielle est la [finalité en un seul créneau](https://notes.ethereum.org/@vbuterin/single_slot_finality), qui protège contre les attaques basées sur la synchronisation des messages en finalisant la chaîne après un seul créneau.
 
-#### Retard de Finalité {#finality-delay}
+#### Retard de Finalité \{#finality-delay}
 
 [Le même document](https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_paper_8.pdf) qui a d'abord décrit l'attaque de réorganisation d'un bloc à faible coût a également décrit une attaque de retard de finalité (également connue sous le nom de « défaillance de disponibilité ») qui repose sur le fait que l'attaquant soit le proposeur de bloc pour un bloc à la limite d'une période. C'est crucial car ces blocs à la limite d'une période deviennent les points de contrôle que Casper FFG utilise pour finaliser des portions de la chaîne. L'attaquant retient simplement son bloc jusqu'à ce que suffisamment de validateurs honnêtes utilisent leurs votes FFG en faveur du bloc précédent à la limite d'une période comme cible de finalisation actuelle. Ensuite, ils publient leur bloc retenu. Ils attestent de leur bloc et les autres validateurs honnêtes en font autant, créant des fourches avec différents points de contrôle cibles. S'ils l'ont chronométré parfaitement, ils empêcheront la finalité car il n'y aura pas de super-majorité de deux tiers attestant de l'une ou l'autre fourche. Plus la mise est petite, plus le chronométrage doit être précis car l'attaquant contrôle directement moins d'attestations, et plus les chances que l'attaquant contrôle le validateur proposant un bloc à la limite d'une période donnée sont faibles.
 
-#### Attaques à longue portée {#long-range-attacks}
+#### Attaques à longue portée \{#long-range-attacks}
 
 Il existe également une classe d'attaques spécifique aux blockchains preuve d'enjeu qui implique un validateur ayant participé au bloc d'origine en maintenant une fourche séparée de la blockchain à côté de la fourche honnête, convaincant éventuellement l'ensemble des validateurs honnêtes de basculer dessus à un moment opportun bien plus tard. Ce type d'attaque n'est pas possible sur Ethereum en raison du gadget de finalité qui garantit que tous les validateurs sont d'accord sur l'état de la chaîne honnête à intervalles réguliers (les « points de contrôle »). Ce mécanisme simple neutralise les attaquants à longue portée car les clients Ethereum ne réorganiseront tout simplement pas les blocs finalisés. Les nouveaux nœuds rejoignant le réseau le font en trouvant un hachage d'état récent de confiance (un « point de contrôle de [la faible subjectivité »](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/)") et en l'utilisant comme un pseudo bloc d'origine pour construire par-dessus. Cela crée une « passerelle de confiance » pour un nouveau nœud entrant dans le réseau avant qu'il puisse commencer à vérifier l'information par lui-même.
 
-#### Déni de service {#denial-of-service}
+#### Déni de service \{#denial-of-service}
 
 Le mécanisme PoS d'Ethereum sélectionne à chaque créneau un unique validateur parmi l'ensemble des validateurs pour proposer un bloc. Cela peut être calculé en utilisant une fonction publiquement connue et il est possible pour un adversaire d'identifier le prochain proposeur de bloc légèrement à l'avance. L'attaquant peut alors inonder de requêtes le proposeur de bloc pour l'empêcher d'échanger des informations avec ses pairs. Pour le reste du réseau, il semblerait que le proposeur de bloc était hors ligne et le créneau resterait simplement vide. Cela pourrait être une forme de censure contre des validateurs spécifiques, les empêchant d'ajouter des informations à la blockchain. La mise en œuvre des élections secrètes de leader unique (SSLE) ou des élections non secrètes de leader unique atténuera les risques de DoS car seul le proposeur de bloc saura qu'il a été sélectionné et la sélection n'est pas connue à l'avance. Ceci n'est pas encore implémenté, mais est un domaine actif de [recherche et développement](https://ethresear.ch/t/secret-non-single-leader-election/11789).
 
 Tout cela montre à quel point il est très difficile d'attaquer avec succès Ethereum avec une petite mise. Les attaques viables décrites ici nécessitent un algorithme de choix de fourche idéalisé, des conditions réseau improbables, ou les vecteurs d'attaque ont déjà été corrigés avec des mises à jour mineures du logiciel client. Cela n'exclut pas la possibilité d'attaques zero-day existantes, mais cela montre le niveau très élevé d'aptitude technique, de connaissance de la couche de consensus et de chance nécessaire pour qu'un attaquant avec une mise minoritaire soit efficace. Du point de vue d'un attaquant, le mieux serait d'accumuler autant d'ether que possible et de revenir armé d'une plus grande proportion de la mise totale.
 
-### Attaquants utilisant >= 33 % de la mise totale {#attackers-with-33-stake}
+### Attaquants utilisant >= 33 % de la mise totale \{#attackers-with-33-stake}
 
 Toutes les attaques mentionnées précédemment dans cet article deviennent plus susceptibles de réussir lorsque l'attaquant dispose de plus d'ether misé pour voter, et de plus de validateurs qui pourraient être choisis pour proposer des blocs à chaque créneau. Un validateur malveillant pourrait donc viser à contrôler autant d'ether misé que possible.
 
@@ -107,7 +107,7 @@ Le but de la fuite d'inactivité est de faire finaliser à nouveau la chaîne. C
 
 En supposant que le réseau Ethereum soit asynchrone (c'est-à-dire qu'il y ait des retards entre l'envoi et la réception des messages), un attaquant contrôlant 34 % de la mise totale pourrait provoquer une double finalité. C'est parce que l'attaquant peut équivoquer lorsqu'il est choisi comme producteur de bloc, puis voter deux fois avec tous ses validateurs. Cela crée une situation où une fourche de la blockchain existe, chacune avec 34 % de l'ether misé votant pour elle. Chaque fourche nécessite seulement 50 % des validateurs restants pour voter en sa faveur pour que les deux fourches soient soutenues par une super-majorité, auquel cas les deux chaînes peuvent finaliser (car 34 % des validateurs attaquants + la moitié des 66 % restants = 67 % sur chaque fourche). Les blocs concurrents devraient chacun être reçus par environ 50 % des validateurs honnêtes, donc cette attaque est viable seulement lorsque l'attaquant a un certain degré de contrôle sur la synchronisation des messages se propageant sur le réseau afin qu'ils puissent pousser la moitié des validateurs honnêtes sur chaque chaîne. L'attaquant détruirait nécessairement toute sa mise (34 % des ~10 millions d'ethers avec l'ensemble des validateurs actuels) pour réaliser cette double finalité car 34 % de leurs validateurs voteraient deux fois simultanément - une offense sanctionnable avec la pénalité de corrélation maximale. La défense contre cette attaque est le coût très élevé de destruction de 34 % de l'ether misé total. Se remettre de cette attaque nécessiterait que la communauté Ethereum se coordonne « hors chaine » et accepte de suivre l'une ou l'autre des fourches et d'ignorer l'autre.
 
-### Attaquants utilisant ~50% de la mise totale {#attackers-with-50-stake}
+### Attaquants utilisant ~50% de la mise totale \{#attackers-with-50-stake}
 
 Avec 50 % de l'ether misé, un groupe de validateurs malicieux pourrait théoriquement diviser la chaîne en deux fourches de taille égale, puis simplement utiliser leur mise complète de 50 % pour voter contrairement à l'ensemble des validateurs honnêtes, maintenant ainsi les deux fourches et empêchant la finalité. La fuite d'inactivité sur les deux fourches conduirait finalement les deux chaînes à finaliser. À ce stade, la seule option est de se replier sur une récupération sociale.
 
@@ -115,11 +115,11 @@ Il est très improbable qu'un groupe de validateurs malveillants puisse contrôl
 
 Avec >50 % de la mise totale, l'attaquant pourrait dominer l'algorithme de choix de fourche. Dans ce cas, l'attaquant serait en mesure d'attester avec le vote majoritaire, lui donnant suffisamment de contrôle pour effectuer de courts réarrangements sans avoir besoin de tromper les clients honnêtes. Les validateurs honnêtes suivraient car leur algorithme de choix de fourche verrait également la chaîne préférée de l'attaquant comme la plus lourde, donc la chaîne pourrait finaliser. Cela permet à l'attaquant de censurer certaines transactions, d'effectuer de courts réarrangements et d'extraire la valeur MEV maximale en réorganisant les blocs à leur avantage. La défense contre cela est l'énorme coût d'une mise majoritaire (actuellement un peu moins de 19 milliards de dollars USD) qui est mis en danger par un attaquant car la couche sociale est susceptible d'intervenir et d'adopter une fourche minoritaire honnête, dévalorisant considérablement la mise de l'attaquant.
 
-### Attaquants utilisant >=66 % de la mise totale {#attackers-with-66-stake}
+### Attaquants utilisant >=66 % de la mise totale \{#attackers-with-66-stake}
 
 Un attaquant disposant de 66 % ou plus de l'ether total misé peut finaliser sa chaîne préférée sans avoir à contraindre aucun validateur honnête. L'attaquant peut simplement voter pour sa fourche préférée puis la finaliser, simplement parce qu'il peut voter avec une super-majorité malhonnête. En tant que détenteur de la super-majorité des enjeux, l'attaquant contrôlerait toujours le contenu des blocs finalisés, avec le pouvoir de dépenser, rembobiner et dépenser à nouveau, censurer certaines transactions et réorganiser la chaîne à volonté. En achetant de l'ether supplémentaire pour contrôler 66 % plutôt que 51 %, l'attaquant achète effectivement la capacité d'effectuer des réarrangements ex post et des réversions de finalité (c'est-à-dire de changer le passé ainsi que de contrôler l'avenir). Les seules véritables défenses ici sont l'énorme coût de 66 % de l'ether total misé, et la possibilité de se replier sur la couche sociale pour coordonner l'adoption d'une fourche alternative. Nous pouvons explorer cela plus en détail dans la section suivante.
 
-## Les Gens : la dernière ligne de défense {#people-the-last-line-of-defense}
+## Les Gens : la dernière ligne de défense \{#people-the-last-line-of-defense}
 
 Si les validateurs malhonnêtes parviennent à finaliser leur version préférée de la chaîne, la communauté Ethereum se retrouve dans une situation difficile. La chaîne canonique intègre une section malhonnête gravée dans son histoire, tandis que les validateurs honnêtes peuvent finir par être sanctionnés pour avoir attesté d'une chaîne alternative (honnête). Notez qu'une chaîne finalisée mais incorrecte pourrait également résulter d'un bug dans un client majoritaire. En fin de compte, le recours ultime est de s'appuyer sur la couche sociale - la Couche 0 - pour résoudre la situation.
 
@@ -133,7 +133,7 @@ La gouvernance est déjà un sujet complexe. Gérer une réponse d'urgence de la
 
 Néanmoins, il y a quelque chose d'assez satisfaisant à ce que le dernier recours se situe dans le monde réel. En fin de compte, même avec cette pile technologique immense au-dessus de nous, si le pire devait arriver, de vraies personnes devraient se coordonner pour s'en sortir.
 
-## Résumé {#summary}
+## Résumé \{#summary}
 
 Cette page explore certaines des façons dont les attaquants pourraient tenter d'exploiter le protocole de consensus de la preuve d'enjeu d'Ethereum. Les réorganisations et les retards de finalité ont été examinés pour des attaquants possédant des proportions croissantes de l'ether total misé. En général, un attaquant plus riche a plus de chances de réussir car sa mise se traduit par un pouvoir de vote qu'il peut utiliser pour influencer le contenu des futurs blocs. À certains seuils de mise en ether, le pouvoir de l'attaquant s'accroît :
 
@@ -151,7 +151,7 @@ Dans l'ensemble, malgré ces potentiels vecteurs d'attaque, le risque d'une atta
 
 Les attaques à 34%, 51% ou 66% nécessiteraient probablement une coordination sociale externe pour être résolues. Bien que cela soit probablement douloureux pour la communauté, la capacité d'une communauté à répondre de manière externe est un puissant moyen de dissuasion pour un attaquant. La couche sociale d'Ethereum est le dernier rempart - une attaque techniquement réussie pourrait toujours être neutralisée par la communauté acceptant d'adopter une fourchette honnête. Il y aurait une course entre l'attaquant et la communauté Ethereum - les milliards de dollars dépensés pour une attaque à 66 % seraient probablement anéantis par une attaque de coordination sociale réussie si elle était livrée assez rapidement, laissant l'attaquant avec de lourds sacs d'ether misé et illiquide sur une chaîne malhonnête connue et ignorée par la communauté Ethereum. La probabilité que cela finisse par être rentable pour l'attaquant est suffisamment faible pour être un moyen de dissuasion efficace. C'est pourquoi investir dans le maintien d'une couche sociale cohérente avec des valeurs étroitement alignées est si important.
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Version plus détaillée de cette page](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Vitalik à propos de la finalité du règlement](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

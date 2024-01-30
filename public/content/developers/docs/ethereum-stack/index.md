@@ -8,7 +8,7 @@ Like any software stack, the complete "Ethereum stack" will vary from project to
 
 There are, however, core components of Ethereum that help provide a mental model for how software applications interact with the Ethereum blockchain. Understanding the layers of the stack will help you understand the different ways that Ethereum can be integrated into software projects.
 
-## Level 1: Ethereum Virtual Machine {#ethereum-virtual-machine}
+## Level 1: Ethereum Virtual Machine \{#ethereum-virtual-machine}
 
 The [Ethereum Virtual Machine (EVM)](/developers/docs/evm/) is the runtime environment for smart contracts on Ethereum. All smart contracts and state changes on the Ethereum blockchain are executed by [transactions](/developers/docs/transactions/). The EVM handles all of the transaction processing on the Ethereum network.
 
@@ -18,7 +18,7 @@ Under the hood, the EVM uses a set of opcode instructions to execute specific ta
 
 As a dapp developer, you don't need to know much about the EVM other than it exists and that it reliably powers all applications on Ethereum without downtime.
 
-## Level 2: Smart contracts {#smart-contracts}
+## Level 2: Smart contracts \{##smart-contracts}
 
 [Smart contracts](/developers/docs/smart-contracts/) are the executable programs that run on the Ethereum blockchain.
 
@@ -28,7 +28,7 @@ Not only do smart contracts serve as open source libraries, they are essentially
 
 As a dapp developer, you'll need to write smart contracts only if you want to add custom functionality on the Ethereum blockchain. You may find you can achieve most or all of your project's needs by merely integrating with existing smart contracts, for instance if you want to support payments in stablecoins or enable decentralized exchange of tokens.
 
-## Level 3: Ethereum nodes {#ethereum-nodes}
+## Level 3: Ethereum nodes \{##ethereum-nodes}
 
 In order for an application to interact with the Ethereum blockchain, it must connect to an [Ethereum node](/developers/docs/nodes-and-clients/). Connecting to a node allows you to read blockchain data and/or send transactions to the network.
 
@@ -36,7 +36,7 @@ Ethereum nodes are computers running software - an Ethereum client. A client is 
 
 By connecting your application to an Ethereum node (via the [JSON-RPC API](/developers/docs/apis/json-rpc/)), your application is able to read data from the blockchain (such as user account balances) as well as broadcast new transactions to the network (such as transferring ETH between user accounts or executing functions of smart contracts).
 
-## Level 4: Ethereum client APIs {#ethereum-client-apis}
+## Level 4: Ethereum client APIs \{##ethereum-client-apis}
 
 Many convenience libraries (built and maintained by Ethereum's open source community) allow your applications to connect to and communicate with the Ethereum blockchain.
 
@@ -44,17 +44,17 @@ If your user-facing application is a web app, you may choose to `npm install` a 
 
 While these APIs are not a necessary piece of the stack, they abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the functionality specific to your application.
 
-## Level 5: End-user applications {#end-user-applications}
+## Level 5: End-user applications \{##end-user-applications}
 
 At the top level of the stack are user-facing applications. These are the standard applications you regularly use and build today: primarily web and mobile apps.
 
 The way you develop these user interfaces remains essentially unchanged. Often users will not need to know the application they're using is built using a blockchain.
 
-## Ready to choose your stack? {#ready-to-choose-your-stack}
+## Ready to choose your stack? \{##ready-to-choose-your-stack}
 
 Check out our guide to [set up a local development environment](/developers/local-environment/) for your Ethereum application.
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 

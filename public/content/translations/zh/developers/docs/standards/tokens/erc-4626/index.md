@@ -4,7 +4,7 @@ description: 收益资金库的标准
 lang: zh
 ---
 
-## 介绍 {#introduction}
+## 介绍 \{#introduction}
 
 ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示单个底层 ERC-20 代币的份额的代币化收益资金库提供标准应用程序接口。 ERC-4626 还概述了使用 ERC-20 的代币化资金库的可选扩展，提供存款、提取代币和读取余额的基本功能。
 
@@ -16,15 +16,15 @@ ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示�
 
 [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626) 中对 ERC-4626 代币进行了全面的描述。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 为了更好地理解这个页面，我们建议您首先阅读[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/)。
 
-## ERC-4626 的函数和功能： {#body}
+## ERC-4626 的函数和功能： \{#body}
 
-### 方法 {#methods}
+### 方法 \{#methods}
 
-#### asset {#asset}
+#### asset \{#asset}
 
 ```solidity
 function asset() public view returns (address)
@@ -32,7 +32,7 @@ function asset() public view returns (address)
 
 此函数返回用于资金库记帐、存款和取款的标的代币的地址。
 
-#### totalAssets {#totalassets}
+#### totalAssets \{#totalassets}
 
 ```solidity
 function totalAssets() public view returns (uint256)
@@ -40,7 +40,7 @@ function totalAssets() public view returns (uint256)
 
 此函数返回资金库持有的标的资产总量。
 
-#### convertToShares {#convertoshares}
+#### convertToShares \{#convertoshares}
 
 ```solidity
 function convertToShares(uint256 assets) public view returns (uint256 shares)
@@ -48,7 +48,7 @@ function convertToShares(uint256 assets) public view returns (uint256 shares)
 
 此函数返回 `shares` 的数量，该数量将由资金库兑换为提供的 `assets` 数量。
 
-#### convertToAssets {#convertoassets}
+#### convertToAssets \{#convertoassets}
 
 ```solidity
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
@@ -56,7 +56,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 
 此函数返回 `assets` 的数量，该数量将由资金库兑换为提供的 `shares` 数量。
 
-#### maxDeposit {#maxdeposit}
+#### maxDeposit \{#maxdeposit}
 
 ```solidity
 function maxDeposit(address receiver) public view returns (uint256)
@@ -64,7 +64,7 @@ function maxDeposit(address receiver) public view returns (uint256)
 
 此函数返回 `receiver` 的一次 [`deposit`](#deposit) 调用中可以存入的最大标的资产数量。
 
-#### previewDeposit {#previewdeposit}
+#### previewDeposit \{#previewdeposit}
 
 ```solidity
 function previewDeposit(uint256 assets) public view returns (uint256)
@@ -72,7 +72,7 @@ function previewDeposit(uint256 assets) public view returns (uint256)
 
 此函数允许用户模拟他们在当前区块的存款效果。
 
-#### deposit {#deposit}
+#### deposit \{#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -80,7 +80,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 
 此函数将标的代币的 `assets` 存入资金库，并将 `shares` 的所有权授予 `receiver`。
 
-#### maxMint {#maxmint}
+#### maxMint \{#maxmint}
 
 ```solidity
 function maxMint(address receiver) public view returns (uint256)
@@ -88,7 +88,7 @@ function maxMint(address receiver) public view returns (uint256)
 
 此函数返回 `receiver` 在单次 [`mint`](#mint) 调用中可以铸造的最大份额。
 
-#### previewMint {#previewmint}
+#### previewMint \{#previewmint}
 
 ```solidity
 function previewMint(uint256 shares) public view returns (uint256)
@@ -96,7 +96,7 @@ function previewMint(uint256 shares) public view returns (uint256)
 
 此函数允许用户在当前区块模拟他们的铸币效果。
 
-#### mint {#mint}
+#### mint \{#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -104,7 +104,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 
 此函数通过存入标的代币的 `assets`，将 `shares` 资金库份额准确铸造到 `receiver`。
 
-#### maxWithdraw {#maxwithdraw}
+#### maxWithdraw \{#maxwithdraw}
 
 ```solidity
 function maxWithdraw(address owner) public view returns (uint256)
@@ -112,7 +112,7 @@ function maxWithdraw(address owner) public view returns (uint256)
 
 此函数返回可以通过单次 [`withdraw`](#withdraw) 调用从 `owner` 余额中提取的最大标的资产数量。
 
-#### previewWithdraw {#previewwithdraw}
+#### previewWithdraw \{#previewwithdraw}
 
 ```solidity
 function previewWithdraw(uint256 assets) public view returns (uint256)
@@ -120,7 +120,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256)
 
 此函数允许用户模拟他们在当前区块取款的效果。
 
-#### withdraw {#withdraw}
+#### withdraw \{#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
@@ -128,7 +128,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 
 此函数从 `owner` 烧录 `shares`，并将 `assets` 代币从资金库准确发送到 `receiver`。
 
-#### maxRedeem {#maxredeem}
+#### maxRedeem \{#maxredeem}
 
 ```solidity
 function maxRedeem(address owner) public view returns (uint256)
@@ -136,7 +136,7 @@ function maxRedeem(address owner) public view returns (uint256)
 
 此函数返回可以通过 [`redeem`](#redeem) 调用从 `owner` 余额中赎回的最大份额数量。
 
-#### previewRedeem {#previewredeem}
+#### previewRedeem \{#previewredeem}
 
 ```solidity
 function previewRedeem(uint256 shares) public view returns (uint256)
@@ -144,7 +144,7 @@ function previewRedeem(uint256 shares) public view returns (uint256)
 
 此函数允许用户在当前区块模拟他们的赎回效果。
 
-#### redeem {#redeem}
+#### redeem \{#redeem}
 
 ```solidity
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
@@ -152,7 +152,7 @@ function redeem(uint256 shares, address receiver, address owner) public returns 
 
 此函数从 `owner` 赎回特定数量的 `shares` 并将标的代币的 `assets` 从资金库发送到 `receiver`。
 
-#### totalSupply {#totalsupply}
+#### totalSupply \{#totalsupply}
 
 ```solidity
 function totalSupply() public view returns (uint256)
@@ -160,7 +160,7 @@ function totalSupply() public view returns (uint256)
 
 返回流通中未赎回的资金库份额总数。
 
-#### balanceOf {#balanceof}
+#### balanceOf \{#balanceof}
 
 ```solidity
 function balanceOf(address owner) public view returns (uint256)
@@ -168,7 +168,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 返回 `owner` 当前拥有的资金库份额总量。
 
-### 事件 {#events}
+### 事件 \{#events}
 
 #### Deposit 事件
 
@@ -201,7 +201,7 @@ event Withdraw(
 
 其中 `sender` 是触发取款并将 `owner` 拥有的 `shares` 兑换为 `assets` 的用户。 `receiver` 是收到提取的 `assets` 的用户。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [EIP-4626：代币化资金库标准](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: GitHub Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

@@ -16,13 +16,13 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 [Taklit nesneler](https://wikipedia.org/wiki/Mock_object) nesne yönelimli programlamada yaygın kullanılan bir tasarım modelidir. Fransızca'dan gelen "mocquer" kelimesi "dalga geçmek" anlamındadır. Bu kelime "gerçek olan bir şeyi taklit etmek" anlamına evrilmiştir ki bu, tam olarak programlamada yaptığımız şeydir. Akıllı sözleşmelerinizle lütfen sadece istediğiniz zaman dalga geçin ama her boş vaktinizde onları taklit edin. Bu, hayatınızı kolaylaştıracak.
 
-## Sözleşmelere taklit yoluyla birim testi uygulama {#unit-testing-contracts-with-mocks}
+## Sözleşmelere taklit yoluyla birim testi uygulama \{#unit-testing-contracts-with-mocks}
 
 Bir sözleşmeyi taklit etmek, sözleşmenin gerçek hali gibi davranan ve geliştirici tarafından kolayca kontrol edilebilen ikinci bir versiyonunu oluşturmak anlamına gelir. Genelde [sözleşmenin ufak bir bölümüne birim testi](/developers/docs/smart-contracts/testing/) yapmak istediğiniz karmaşık sözleşmelerle karşılaşırsınız. Buradaki sorun, ya bu ufak parçanın test edilmesi çok detaylı bir sözleşme durumu gerektiriyorsa ve buna ulaşmak zorsa?
 
 Her seferinde sözleşmeyi istenen duruma getiren karmaşık bir test yazabilir veya "taklitlerle" işinizi kolayca halledebilirsiniz. Bir sözleşme, kalıtım yöntemiyle kolayca taklit edilebilir. Orijinal sözleşmeyi içeren ikinci bir taklit sözleşme yazın. Şimdi fonksiyonları taklit sözleşmeniz için geçersiz kılabilirsiniz. Bir örnekle görelim.
 
-## Örnek: Özel ERC20 {#example-private-erc20}
+## Örnek: Özel ERC20 \{#example-private-erc20}
 
 Başlangıç özel zamanı olan örnek bir ERC-20 sözleşmesi kullanıyoruz. Sözleşmenin sahibi özel kullanıcıları yönetebilir ve başlangıçta yalnızca bu kullanıcıların jeton almasına izin verir. Belirli bir zaman geçtikten sonra herkes jetonları kullanabilecektir. Eğer merak ediyorsanız, OpenZeppelin sözleşmeleri v3 dahilindeki [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks)'i kullanıyoruz.
 
@@ -94,11 +94,11 @@ Yeni 0.6 Solidity sürümünü kullandığımızdan geçersiz kılınabilecek fo
 
 Artık birim testlerinizde bunun yerine `PrivateERC20Mock` kullanabilirsiniz. Özel kullanım zamanlarında nasıl tepki vereceğini test etmek isterseniz, `setIsPublic(false)` komutunu ve `setIsPublic(true)` komutunu da genel kullanım zamanını test etmek için kullanabilirsiniz. Elbette bizim örneğimizde, zamanları buna göre değiştirmek için [zaman yardımcılarını](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) da kullanabiliriz. Ancak taklit amacı artık açık olmalıdır ve bunun sadece zamanı ilerletmek kadar kolay olmadığı durumları hayal edebilirsiniz.
 
-## Çok sayıda sözleşmeyi taklit etme {#mocking-many-contracts}
+## Çok sayıda sözleşmeyi taklit etme \{#mocking-many-contracts}
 
 Her taklit için ayrı bir sözleşme oluşturmak karışıklık oluşturabilir. Eğer bu sizi rahatsız ediyorsa, [MockContract](https://github.com/gnosis/mock-contract) kütüphanesine bakabilirsiniz. Size anlık olarak sözleşmelerin davranışlarını değiştirme ve geçersiz kılma olanağı sağlar. Ancak, yalnızca diğer bir sözleşmeye yapılan taklitler için çalışır; bu nedenle, örneğimizde işe yaramaz.
 
-## Taklit etme, daha da güçlü olabilir {#mocking-can-be-even-more-powerful}
+## Taklit etme, daha da güçlü olabilir \{#mocking-can-be-even-more-powerful}
 
 Taklit etmenin gücü burada bitmiyor.
 

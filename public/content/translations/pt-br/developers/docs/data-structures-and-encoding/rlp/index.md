@@ -14,7 +14,7 @@ Para usar o RLP para codificar um dicionário, as duas formas canônicas são:
 - usar `[[k1,v1],[k2,v2]...]` com chaves em ordem lexicográfica
 - usar a codificação da Árvore Patricia de nível superior como Ethereum faz
 
-## Definição {#definition}
+## Definição \{#definition}
 
 A função de codificação RLP recebe um item. Um item é definido como abaixo：
 
@@ -66,7 +66,7 @@ def to_binary(x):
     return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Exemplos {#examples}
+## Exemplos \{#examples}
 
 - a string "dog" = [ 0x83, 'd', 'o', 'g' ]
 - a lista [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - [define a representação teórica](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) para três, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc0, 0xc1, 0xc0 ]`
 - a string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-## Decodificação RLP {#rlp-decoding}
+## Decodificação RLP \{#rlp-decoding}
 
 De acordo com as regras e o processo de codificação RLP, a entrada da decodificação RLP é considerada uma matriz de dados binários. O processo de decodificação do RLP é o seguinte:
 
@@ -148,12 +148,12 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [RLP em Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Ethereum nos bastidores: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). Prefixo de comprimento recursivo do Ethereum em ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## Tópicos relacionados {#related-topics}
+## Tópicos relacionados \{#related-topics}
 
 - [Árvore Patricia Merkle](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

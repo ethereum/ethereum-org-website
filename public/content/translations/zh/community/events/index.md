@@ -5,7 +5,7 @@ lang: zh
 hideEditButton: true
 ---
 
-## 活动预告 {#events}
+## 活动预告 \{#events}
 
 **每个月，世界各地都会举办大型以太坊活动。**你可以考虑参加附近的一个活动，认识更多的社区成员，了解就业机会，并培养新的技能。
 
@@ -13,7 +13,7 @@ hideEditButton: true
 
 这是一个由我们社区维护的不完整列表。 想要将了解到的即将举行的以太坊活动添加到此列表？ [请添加](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)！
 
-## 以太坊聚会 {#meetups}
+## 以太坊聚会 \{#meetups}
 
 找不到适合你的活动？ 尝试加入一个聚会。 聚会是指由各个以太坊爱好者团体举办的小型活动——这是对以太坊感兴趣的人们聚集在一起的机会，他们可以一起谈论并了解以太坊的最新发展。
 

@@ -13,13 +13,13 @@ summaryPoints:
   - Tartsa a letétbe helyezett összegnek megfelelő tokeneket a saját tárcájában
 ---
 
-## Mik azok a letéti alapok (staking pool)? {#what-are-staking-pools}
+## Mik azok a letéti alapok (staking pool)? \{#what-are-staking-pools}
 
 A letéti alap egy olyan kollaboratív megközelítés, mely lehetővé teszi, hogy sok kis összegű ETH révén elérjék a 32 ETH küszöbértéket, ahol már fel tudnak állítani validátort. A letéti alap nem a protokoll része, más megoldások épültek ki, hogy ezt az igényt kielégítsék.
 
 Néhány letéti alap okosszerződéseket használ, ahol a pénzeszközöket a szerződésbe helyezik letétbe, így bizalomigény nélkül kezeli és követi a letét alakulását, és egy tokent ad, mely a letét értékét képviseli. Más alapok nem használnak okosszerződést, hanem a láncon kívül közvetítenek.
 
-## Miért jó a letéti alap használata? {#why-stake-with-a-pool}
+## Miért jó a letéti alap használata? \{#why-stake-with-a-pool}
 
 A [bevezetés a letétbe helyezésbe](/staking/) során elhangzott előnyök mellett a letéti alapok számos haszonnal járnak.
 
@@ -31,7 +31,7 @@ A [bevezetés a letétbe helyezésbe](/staking/) során elhangzott előnyök mel
 
 <StakingComparison page="pools" />
 
-## Mit kell figyelembe venni {#what-to-consider}
+## Mit kell figyelembe venni \{#what-to-consider}
 
 A letéti alap vagy a delegáción alapuló letétbe helyezés nem része az Ethereum-protokollnak. Ugyanakkor a felhasználók igénye mentén, hogy 32 ETH-nál kisebb összeget adjanak letétbe, egyre több megoldás épül ki.
 
@@ -45,7 +45,7 @@ Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket va
 
 <StakingConsiderations page="pools" />
 
-## Fedezze fel a letéti alapokat {#explore-staking-pools}
+## Fedezze fel a letéti alapokat \{#explore-staking-pools}
 
 Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A fenti jellemzőket használva megértheti az alábbi eszközökben rejlő lehetőségeket.
 
@@ -57,7 +57,7 @@ Olyan szolgáltatást válasszon, amely komolyan veszi a [kliensek diverzitásá
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 
-## Gyakran ismételt kérdések {#faq}
+## Gyakran ismételt kérdések \{#faq}
 
 <ExpandableCard title="Hogyan kapok jutalmakat?">
 A letétbe helyezők ERC-20 letéti tokeneket kapnak, és ezeket a letétbe adott ETH-t képviselik, megnövelve azt a jutalmakkal. A különféle alapok a letéti jutalmakat különböző módon adják át a felhasználóknak, a folyamat lényege ugyanakkor közös.
@@ -79,7 +79,7 @@ A centralizált tőzsdékhez képes számos letéti alap használ okosszerződé
 Néhány letéti alap sokkal decentralizáltabb, amikor az általuk használt csomópontokról van szó. A hálózat egészséges állapota és decentralizációja érdekében a letétbe helyezők olyan letéti alapokat válasszanak, amelyek engedélymentes, decentralizált csomópont-operátorokkal működnek.
 </ExpandableCard>
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [Letétbe helyezés a Rocket Poollal – Áttekintés](https://docs.rocketpool.net/guides/staking/overview.html) – _RocketPool docs_

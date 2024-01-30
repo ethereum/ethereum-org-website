@@ -12,7 +12,7 @@ summaryPoint2: NFTs geben Inhaltserstellern mehr Einfluss denn je.
 summaryPoint3: Auf Grundlage von intelligenten Verträgen auf der Ethereum-Blockchain.
 ---
 
-## Was sind NFTs? {#what-are-nfts}
+## Was sind NFTs? \{#what-are-nfts}
 
 NFTs, also Non Fungible Token, sind Token, die individuell einzigartig sind. Jeder NFT hat unterschiedliche Eigenschaften (nicht-fungibel) und ist nachweislich nur begrenzt verfügbar. Das ist ein Unterschied zu Token wie beispielsweise ERC-20s, bei denen alle Token desselben Typs identisch sind und die gleichen Eigenschaften aufweisen ('fungibel'). Vermutlich ist es Ihnen egal, welche Dollarnote Sie in Ihrer Brieftasche haben, denn sie sind alle identisch und gleich viel wert. Im Gegensatz dazu _ist_ es nicht egal, welchen spezifischen NFT Sie besitzen, da alle individuelle Eigenschaften haben, die sie von anderen unterscheiden ('nicht-fungibel').
 
@@ -20,13 +20,13 @@ Die Einzigartigkeit eines jeden NFT ermöglicht die Tokenisierung von Dingen wie
 
 <YouTube id="Xdkkux6OxfM" />
 
-## Das Internet der Vermögenswerte {#internet-of-assets}
+## Das Internet der Vermögenswerte \{#internet-of-assets}
 
 NFTs und Ethereum lösen einige der Probleme, die heute mit dem Internet bestehen. Da alles digital wird, braucht es Möglichkeiten, die Eigenschaften physischer Objekte wie Knappheit, Einzigartigkeit und den Eigentumsnachweis digital nachzubilden. Dieser Eigentumsnachweis sollte dabei nicht von einer zentralen Organisation kontrolliert werden. Mit NFTs können Sie z. B. eine Musikdatei im MP3-Format besitzen, die nicht an eine bestimmte Musik-App eines Unternehmens gebunden ist, oder Sie können einen Social-Media-Handle besitzen, den Sie verkaufen oder tauschen können, welcher Ihnen aber nicht willkürlich von einem Plattformanbieter entzogen werden kann.
 
 Doch wie könnte ein Internet der NFTs im Vergleich zum Internet von heute aussehen?
 
-### Ein Vergleich {#nft-comparison}
+### Ein Vergleich \{#nft-comparison}
 
 | Internet der NFTs                                                                                                                                          | Das Internet heute                                                                                                                                                                    |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,13 +37,13 @@ Doch wie könnte ein Internet der NFTs im Vergleich zum Internet von heute ausse
 | Inhaltsersteller können ihre Arbeit überall verkaufen und auf einen globalen Markt zugreifen.                                                              | Dabei sind die Ersteller von der Infrastruktur und Distribution der Plattform abhängig, die sie nutzen. Für diese gelten häufig Nutzungsbedingungen und geografische Einschränkungen. |
 | Schöpfer von NFTs können die Eigentumsrechte an ihren eigenen Werken behalten und die Tantiemen direkt in dem NFT-Vertrag einarbeiten.                     | Plattformen, wie z. B. Musik-Streaming-Dienste, behalten einen Großteil der Verkaufserlöse ein.                                                                                       |
 
-## Wie funktionieren NFTs? {#how-nfts-work}
+## Wie funktionieren NFTs? \{#how-nfts-work}
 
 Wie alle Token auf Ethereum werden auch NFTs von einem Smart Contract herausgegeben. Der Smart Contract entspricht einem von mehreren NFT-Standards (für gewöhnlich ERC-721 oder ERC-1155), die festlegen, welche Funktionen der Contract hat. Der Contract kann NFTs erzeugen ('mint') und weist sie einem spezifischen Besitzer zu. Die Eigentümerschaft wird im Contract definiert, indem bestimmte NFTs bestimmten Adressen zugeordnet werden. Der NFT hat eine eigene ID und in der Regel auch Metadaten, die den jeweiligen Token eindeutig machen.
 
 Wenn jemand einen NFT erstellt oder prägt, führt er in Wirklichkeit eine Funktion im Smart Contract aus, die seiner Adresse einen bestimmten NFT zuweist. Diese Informationen werden im Speicher des Contracts verwahrt, der Teil der Blockchain ist. Der Ersteller des Contracts kann zusätzliche Funktionen in den Vertrag einbauen, z. B. eine Begrenzung des Gesamtangebots oder die Festlegung von Tantiemen, die bei jeder Übertragung eines Tokens an den Ersteller zu zahlen sind.
 
-## Wofür werden NFTs verwendet? {#nft-use-cases}
+## Wofür werden NFTs verwendet? \{#nft-use-cases}
 
 NFTs werden unter anderem für folgende Zwecke eingesetzt:
 
@@ -72,7 +72,7 @@ Diese Website hat einen alternativen Domainnamen ermöglicht durch NFTs, **ether
 
 <Divider />
 
-### NFT-Sicherheit {#nft-security}
+### NFT-Sicherheit \{#nft-security}
 
 Die Sicherheit von Ethereum basiert auf Proof-of-Stake. Das System ist darauf ausgelegt, böswillige Handlungen mithilfe finanziell negativer Anreize zu verhindern und Ethereum dadurch Manipulationen gegenüber sicherer zu machen. Das macht NFTs überhaupt erst möglich. Sobald der Block, der Ihre NFT-Transaktion beinhaltet, endgültig festgelegt wird, würde es einen Angreifer Millionen von ETH kosten, um dies wieder zu ändern. Jeder, der Ethereum-Software ausführt, würde die unehrliche Manipulation mit einem NFT sofort erkennen können und der Angreifer würde eine finanzielle Strafe erhalten und ausgeschlossen werden.
 
@@ -82,7 +82,7 @@ Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügerei
   Weiteres zur Sicherheit
 </ButtonLink>
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [NFT-Leitfaden für Einsteiger](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januar 2020_
 - [EtherscanNFT Tracker](https://etherscan.io/nft-top-contracts)

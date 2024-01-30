@@ -9,7 +9,7 @@ incomplete: true
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 
-## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Ambillah langkah awal untuk mengintegrasikan Java dengan Ethereum**
 
@@ -20,7 +20,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Tulis Kontrak Pintar Pertama Anda](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Pelajari Cara Mengompilasi dan Menggunakan Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Bekerja dengan klien Ethereum {#working-with-ethereum-clients}
+## Bekerja dengan klien Ethereum \{#working-with-ethereum-clients}
 
 Pelajari cara menggunakan [Web3J](https://github.com/web3j/web3j) dan Hyperledger Besu, dua Klien Ethereum Java terkemuka
 
@@ -33,17 +33,17 @@ Pelajari cara menggunakan [Web3J](https://github.com/web3j/web3j) dan Hyperledge
 - [Menjalankan Node Hyperledger Besu (Pantheon) dalam Uji Integrasi Java](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Lembar Kecurangan Web3j](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
-## Artikel tingkat menengah {#intermediate-articles}
+## Artikel tingkat menengah \{#intermediate-articles}
 
 - [Mengelola penyimpanan di aplikasi Java dengan IPFS](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
 - [Mengelola token ERC20 di Java dengan Web3j](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
 - [Manajer Transaksi Web3j](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
-## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
+## Pola penggunaan tingkat lanjut \{#advanced-use-patterns}
 
 - [Menggunakan Eventeum untuk membuat sebuah cache data kontrak pintar Java](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
-## Proyek dan peralatan untuk Java {#java-projects-and-tools}
+## Proyek dan peralatan untuk Java \{#java-projects-and-tools}
 
 - [Hyperledger Besu (Pantheon) (Klien Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Pustaka untuk berinteraksi dengan Klien Ethereum)](https://github.com/web3j/web3j)
@@ -52,7 +52,7 @@ Pelajari cara menggunakan [Web3J](https://github.com/web3j/web3j) dan Hyperledge
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers.](/developers/)
 
-## Kontributor komunitas Java {#java-community-contributors}
+## Kontributor komunitas Java \{#java-community-contributors}
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)

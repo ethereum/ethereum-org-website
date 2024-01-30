@@ -14,7 +14,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Vous avez donc entendu parler d'Ethereum et êtes prêts à passer de l'autre côté du miroir ? Cet article couvrira rapidement certaines fonctionnalités de base propres aux blockchains, puis vous permettra d'interagir avec une simulation de nœud Ethereum - lecture des données de blocs, vérification des soldes de comptes et envoi de transactions. En cours de route, nous soulignerons les différences entre les méthodes classiques de création d'application et ce nouveau paradigme décentralisé.
 
-## Prérequis (simple) {#soft-prerequisites}
+## Prérequis (simple) \{#soft-prerequisites}
 
 Ce post se veut accessible à une large catégorie de développeurs. L'emploi d'[outils Python](/developers/docs/programming-languages/python/) sera réalisé, mais ils ne serviront qu'à véhiculer les idées – Ne vous inquiétez pas si vous n'êtes pas développeur Python. Toutefois, je vais faire quelques hypothèses sur ce que vous savez déjà, afin que nous puissions rapidement passer aux sujets spécifiques à Ethereum.
 
@@ -25,7 +25,7 @@ Hypothèses:
 - La version 3.6 ou supérieure de Python est installée sur votre machine (l'utilisation d'un [environnement virtuel](https://realpython.com/effective-python-environment/#virtual-environments) est fortement recommandée), et
 - vous avez déjà utilisé `pip`, l'installateur de paquets de Python. Encore une fois, si l'un de ces éléments n'est pas vrai, ou si vous ne prévoyez pas de reproduire le code de cet article, vous resterez capable de comprendre son contenu sans grande difficulté.
 
-## Blockchains, en bref {#blockchains-briefly}
+## Blockchains, en bref \{#blockchains-briefly}
 
 Il y a de nombreuses façons de décrire Ethereum, mais son cœur repose sur la Blockchain. Les Blockchains sont constituées d'une série de blocs, alors commençons par là. En termes simples, chaque bloc de la blockchain Ethereum n'est qu'un ensemble de métadonnées et de transactions. Dans le format JSON, cela ressemble à ceci :
 
@@ -51,7 +51,7 @@ Cette structure de données n'est pas nouvelle, mais les règles (c'est-à-dire 
 
 La seule façon pour la chaîne de blocs de vérifier que l'argent a vraiment été envoyé d'un utilisateur à un autre est d'utiliser une devise native à (à savoir créée et régie par) la blockchain. Sur le réseau Ethereum, cette devise est appelée « ether », et la blockchain Ethereum contient le seul enregistrement officiel des soldes de compte.
 
-## Un nouveau paradigme {#a-new-paradigm}
+## Un nouveau paradigme \{#a-new-paradigm}
 
 Cette nouvelle pile de technologies décentralisées a créé de nouveaux outils de développement. De tels outils existent dans de nombreux langages de programmation, mais nous allons les explorer via le language Python. Encore une fois : même si Python n’est pas votre langage de choix, il ne devrait pas être difficile de le comprendre.
 
@@ -75,7 +75,7 @@ w3.eth.get_block('latest')
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## Installation {#installation}
+## Installation \{#installation}
 
 Dans ce qui suit, nous allons juste travailler au sein de l'interpréteur Python. Nous n'allons pas créer de répertoires, fichiers, classes ou fonctions.
 
@@ -103,7 +103,7 @@ C'est tout !
 
 Note : Le package `web3[tester]` marche jusqu'a Python 3.10.xx
 
-## Lancer un sandbox {#spin-up-a-sandbox}
+## Lancer un sandbox \{#spin-up-a-sandbox}
 
 Ouvrez un nouvel environnement Python en exécutant `ipython` dans votre terminal. Ceci est comparable à l'exécution de `python`=, mais apporte plus d'avantages.
 
@@ -123,7 +123,7 @@ Vous regardez un shell Python interactif. Essentiellement, il s'agit d'un bac à
 In [1]: from web3 import Web3
 ```
 
-## Introduction du module Web3 {#introducing-the-web3-module}
+## Introduction du module Web3 \{#introducing-the-web3-module}
 
 En plus d'être une passerelle vers Ethereum, le module [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) offre quelques fonctions pratiques. Examinons-en quelques-unes.
 
@@ -152,7 +152,7 @@ Out[3]: Decimal('0.5')
 
 Les autres méthodes utilitaires du module Web3 incluent les convertisseurs de format de données (par exemple, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), les méthodes pour gérer les adresses (e. ., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), et les fonctions de hachage (par exemple, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Beaucoup d'entre elles seront étudiées plus tard dans la série. Pour afficher toutes les méthodes et propriétés disponibles, utilisez l'auto-complétion de IPython en tapant `Web3`. et en appuyant sur la touche tabulation deux fois après le point.
 
-## Parler à la chaîne {#talk-to-the-chain}
+## Parler à la chaîne \{#talk-to-the-chain}
 
 Ces méthodes sont très intéressantes, mais passons à la blockchain. L'étape suivante est de configurer Web3.py à des fins de communication avec un noeud Ethereum. Ici, nous avons la possibilité d'utiliser les fournisseurs IPC, HTTP, ou Websocket.
 
@@ -177,7 +177,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 Maintenant vous êtes prêt à surfer sur la chaîne ! Ce n'est pas une chose que les gens disent. Je viens juste de l'inventer. Faisons un tour rapide.
 
-## Le tour rapide {#the-quick-tour}
+## Le tour rapide \{#the-quick-tour}
 
 Tout d'abord, une vérification :
 
@@ -188,7 +188,7 @@ Out[5]: True
 
 Étant donné que nous utilisons le fournisseur de testeur, ce test n'est pas très important. Toutefois, s'il échoue, il y a des chances que vous ayez mal tapé quelque chose lors de l'instanciation de la variable `w3`. Vérifiez bien que vous avez inclus les parenthèses intérieures, à savoir `Web3.EthereumTesterProvider()`.
 
-## Arrêt #1 : Les [comptes](/developers/docs/accounts/) {#tour-stop-1-accounts}
+## Arrêt #1 : Les [comptes](/developers/docs/accounts/) \{#tour-stop-1-accounts}
 
 Afin de faciliter les tests, le fournisseur de testeur a créé des comptes et les a préchargés avec un ether de test.
 
@@ -219,7 +219,7 @@ Out[8]: Decimal('1000000')
 
 Un million d'ethers de test — ça reste toujours intéressant.
 
-## Arrêt #2 : Les données de bloc {#tour-stop-2-block-data}
+## Arrêt #2 : Les données de bloc \{#tour-stop-2-block-data}
 
 Jetons un coup d’œil à l’état de cette blockchain simulée :
 
@@ -240,7 +240,7 @@ Beaucoup d'informations sont retournées à propos d'un bloc, mais juste quelque
 - `transactions` est une liste vide pour la même raison : nous n’avons rien fait pour le moment. Ce premier bloc est un bloc **vide**, juste conçu pour démarrer la chaîne.
 - Notez que le `parentHash` n'est qu'un amas d'octets vides. Cela signifie qu'il s'agit du premier bloc de la chaîne, également connu sous le nom de **bloc de genèse**.
 
-## Arrêt #3 : Les [transactions](/developers/docs/transactions/) {#tour-stop-3-transactions}
+## Arrêt #3 : Les [transactions](/developers/docs/transactions/) \{#tour-stop-3-transactions}
 
 Nous sommes coincés au bloc zéro jusqu'à ce qu'il y ait une transaction en attente, alors en voilà une. Envoyez quelques ethers de test d'un compte à un autre :
 
@@ -292,6 +292,6 @@ En savoir plus sur les[gaz](/developers/docs/gas/#post-london)
 
 <FeaturedText>Remarque : sur le réseau public, les commissions de transaction sont variables en fonction de la demande du réseau et de la rapidité avec laquelle vous souhaitez que soit traitée une transaction. Si vous êtes intéressé par la façon dont les frais sont calculés, vous pouvez consulter mon précédent article sur <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">la manière dont les transactions sont incluses dans un bloc</a>.</FeaturedText>
 
-## Et respirez... {#and-breathe}
+## Et respirez... \{#and-breathe}
 
 Nous y sommes depuis un bon moment et il semble donc intéressant de faire une pause. Le terrier du lapin est toujours ouvert et nous continuerons à l'explorer dans la deuxième partie de cette série. Quelques concepts à venir : la connexion à un vrai nœud, les contrats intelligents et les jetons. Vous avez des questions complémentaires ? Faites-le moi savoir ! Vos commentaires influenceront notre chemin à partir d’ici. Vos demandes sont les bienvenues sur [Twitter](https://twitter.com/wolovim).

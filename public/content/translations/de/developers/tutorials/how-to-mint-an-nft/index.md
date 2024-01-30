@@ -21,7 +21,7 @@ Sie alle haben ihre NFTs mit der leistungsstarken API von Alchemy geprägt. In d
 
 Los gehts!
 
-## Schritt 1: Web3 installieren {#install-web3}
+## Schritt 1: Web3 installieren \{#install-web3}
 
 Wenn Sie das erste Tutorial zur Erstellung Ihres NFT-Smart Contracts verfolgt haben, haben Sie bereits Erfahrung mit Ethers.js gesammelt. Web3 ist ähnlich wie Ethers eine Bibliothek, die das Erstellen von Anfragen an die Ethereum-Blockchain erleichtert. In diesem Tutorial verwenden wir [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), eine erweiterte Web3-Bibliothek, die automatische Wiederholungen und ausgereifte WebSocket-Unterstützung bietet.
 
@@ -31,7 +31,7 @@ Führen Sie folgenden Befehl im Startverzeichnis Ihres Projekts aus:
 npm install @alch/alchemy-web3
 ```
 
-## Schritt 2: `mint-nft.js`-Datei erstellen {#create-mintnftjs}
+## Schritt 2: `mint-nft.js`-Datei erstellen \{#create-mintnftjs}
 
 Erstellen Sie die Datei `mint-nft.js` in Ihrem Skriptverzeichnis und fügen Sie die folgenden Codezeilen hinzu:
 
@@ -42,7 +42,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Schritt 3: Vertrags-ABI öffnen {#contract-abi}
+## Schritt 3: Vertrags-ABI öffnen \{#contract-abi}
 
 Unsere Vertrags-ABI (Application Binary Interface) ist die Schnittstelle, über die die Interaktion mit unserem Smart Contract erfolgt. [Hier](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) erfahren Sie mehr über Vertrags-ABIs. Hardhat generiert automatisch eine ABI für uns und speichert sie in der Datei `MyNFT.json`. Um das zu nutzen, müssen wir den Inhalt auslesen. Dafür fügen wir die folgenden Codezeilen in unsere `mint-nft.js`-Datei ein:
 
@@ -62,7 +62,7 @@ Um `mint-nft.js` auszuführen und die ABI auf der Konsole anzuzeigen, navigieren
 node scripts/mint-nft.js
 ```
 
-## Schritt 4: Metadaten für den NFT mit IPFS konfigurieren {#config-meta}
+## Schritt 4: Metadaten für den NFT mit IPFS konfigurieren \{#config-meta}
 
 Wenn Sie sich an den ersten Teil unseres Tutorials erinnern, nimmt unsere `mintNFT`-Smart-Contract-Funktion einen tokenURI-Parameter entgegen, der in ein JSON-Dokument aufgelöst werden sollte, das die Metadaten des NFT beschreibt. Das ist es, was einen NFT wirklich zum Leben erweckt und ermöglicht, konfigurierbare Eigenschaften wie einen Namen, eine Beschreibung, ein Bild und andere Attribute zu haben.
 
@@ -110,7 +110,7 @@ Wenn Sie mit der Bearbeitung der JSON-Datei fertig sind, speichern Sie sie und l
 
 ![So laden Sie die Datei "nft-metadata.json" bei Pinata hoch](./uploadPinata.gif)
 
-## Schritt 5: Vertragsinstanz erstellen {#instance-contract}
+## Schritt 5: Vertragsinstanz erstellen \{#instance-contract}
 
 Um nun mit unserem Vertrag zu interagieren, müssen wir eine Instanz davon in unserem Code erstellen. Dazu benötigen wir unsere Vertragsadresse, die wir über die Bereitstellung oder [Etherscan](https://ropsten.etherscan.io/) erhalten können. Dafür fragen wir die Adresse ab, die Sie für die Bereitstellung des Vertrags verwendet haben.
 
@@ -126,7 +126,7 @@ const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Schritt 6: `.env`-Datei aktualisieren {#update-env}
+## Schritt 6: `.env`-Datei aktualisieren \{#update-env}
 
 Um nun Transaktionen zu erstellen und an die Ethereum-Chain zu senden, verwenden wir Ihre öffentliche Ethereum-Kontoadresse, um die Konto-Nonce zu erhalten (wird unten erklärt).
 
@@ -138,7 +138,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Schritt 7: Transaktion erstellen {#create-txn}
+## Schritt 7: Transaktion erstellen \{#create-txn}
 
 Als Erstes definieren wir eine Funktion mit dem Namen `mintNFT(tokenData)` und erstellen dann wie folgt unsere Transaktion:
 
@@ -187,7 +187,7 @@ Unser <code>mint-nft.js</code> Datei sollte dann so aussehen:
    }​
 ```
 
-## Schritt 8: Transaktion signieren {#sign-txn}
+## Schritt 8: Transaktion signieren \{#sign-txn}
 
 Jetzt, da wir unsere Transaktion erstellt haben, müssen wir sie signieren, um sie abzusenden. Dafür verwenden wir den privaten Schlüssel.
 
@@ -245,7 +245,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Schritt 9: `mintNFT` aufrufen und Node-`mint-nft.js` ausführen {#call-mintnft-fn}
+## Schritt 9: `mintNFT` aufrufen und Node-`mint-nft.js` ausführen \{#call-mintnft-fn}
 
 Erinnern Sie sich noch an die Datei `metadata.json`, die Sie in Pinata hochgeladen haben? Holen Sie sich den Hashcode von Pinata und übermitteln Sie die Parameter an die `mintNFT`-Funktion: `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

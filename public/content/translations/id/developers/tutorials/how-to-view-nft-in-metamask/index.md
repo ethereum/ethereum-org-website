@@ -19,13 +19,13 @@ Selamat! Anda telah sampai pada bagian terpendek dan termudah dari seri tutorial
 
 Sebagai prasyarat, Anda seharusnya telah menginstal MetaMask di ponsel, dan program/aps itu seharusnya memasukkan akun ke mana Anda mencetak NFT Anda — Anda dapat mendapatkan aplikasinya secara gratis di [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) atau [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Langkah 1: Tetapkan jaringan Anda ke Ropsten {#set-network-to-ropsten}
+## Langkah 1: Tetapkan jaringan Anda ke Ropsten \{#set-network-to-ropsten}
 
 Pada bagian atas aplikasi, tekan tombol "Dompet", yang setelahnya Anda akan diminta untuk memilih jaringan. Karena NFT kita dicetak di jaringan Ropsten, Anda akan ingin memilih Ropsten sebagai jaringan Anda.
 
 ![Cara menetapkan Ropsten sebagai jaringan Anda di MetaMask Seluler](./goerliMetamask.gif)
 
-## Langkah 2: Tambahkan koleksi Anda ke MetaMask {#add-nft-to-metamask}
+## Langkah 2: Tambahkan koleksi Anda ke MetaMask \{#add-nft-to-metamask}
 
 Setelah Anda ada di jaringan Ropsten, pilih tab "Koleksi" di sebelah kanan dan tambahkan akun kontrak pintar NFT dan ID token ERC-721 NFT Anda — yang seharusnya Anda temukan di Etherscan berdasarkan hash transaksi dari NFT Anda yang disebar di Bagian II dari tutorial kami.
 

@@ -13,11 +13,11 @@ summaryPoints:
   - 降低信任依賴，並保持你對提款金鑰的控制權
 ---
 
-## 什麼是質押即服務？ {#what-is-staking-as-a-service}
+## 什麼是質押即服務？ \{#what-is-staking-as-a-service}
 
 質押即服務（「SaaS」）代表一種質押服務，你將自己的 32 個以太幣存入驗證者，但將節點運作委託給第三方營運商。 此流程通常需要你按指引完成初始化設定，包括產生金鑰和存入資金，然後將你的簽名金鑰上傳給營運商。 這將允許該服務代表你運作你的驗證者，通常是按月收費。
 
-## 為什麼需要質押服務？ {#why-stake-with-a-service}
+## 為什麼需要質押服務？ \{#why-stake-with-a-service}
 
 以太坊協定本身並不支援質押委託，因此為了滿足此項需求，這類服務應運而生。 如果你有 32 個以太幣要質押，但懶得處理硬體設備，質押即服務可以讓你在賺取原生區塊酬勞的同時將困難的部分外包。
 
@@ -30,7 +30,7 @@ summaryPoints:
 
 <StakingComparison page="saas" />
 
-## 需要考慮的事項 {#what-to-consider}
+## 需要考慮的事項 \{#what-to-consider}
 
 有越來越多的質押即服務供應商提供以太幣質押服務，但有各自的好處及風險。 相較於居家質押，所有質押即服務方案都需要額外的信任假設。 質押即服務可能有整合以太坊用戶端的額外程式碼，這些程式碼並不開放或無法審核。 質押即服務對於網絡的去中心化也有不利影響。 根據設定，你可能無法控制你的驗證者 - 營運商可以使用你的以太幣做出不正當行為。
 
@@ -38,7 +38,7 @@ summaryPoints:
 
 <StakingConsiderations page="saas" />
 
-## 探索質押服務供應商 {#saas-providers}
+## 探索質押服務供應商 \{#saas-providers}
 
 以下是幾個市面上的質押即服務供應商。 請運用上述指標來了解這些服務。
 
@@ -56,7 +56,7 @@ summaryPoints:
 
 關於我們遺漏的質押即服務供應商，你有任何推薦嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
 
-## 常見問題 {#faq}
+## 常見問題 \{#faq}
 
 <ExpandableCard title="誰持有我的金鑰？" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 不同供應商的做法有所不同，但一般而言，他們都會引導你設定所需的簽名金鑰（每 32 個以太幣一個金鑰），並將這些金鑰上傳給你的供應商，以便他們代表你進行驗證。 單憑簽名金鑰無法提取、移轉或使用你的資金， 不過簽名金鑰可以用來投票形成共識，如果操作不當，可能會受到離線處罰或罰沒。
@@ -90,6 +90,6 @@ BLS 提款金鑰用於簽署一次性訊息，說明應將質押酬勞和退出�
 請聯繫各質押即服務提供商，了解關於任何擔保或保險方案的詳細訊息，以及如何提供提款地址的說明。 如果你希望完全掌控你的驗證者設定，請<a href="/staking/solo/">詳細了解如何單獨質押以太幣</a>。
 </ExpandableCard>
 
-## 延伸閱讀 {#further-reading}
+## 延伸閱讀 \{#further-reading}
 
 - [評估質押服務](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

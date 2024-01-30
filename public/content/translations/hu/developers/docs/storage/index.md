@@ -17,9 +17,9 @@ Amikor decentralizált tárhely (dStorage) opcióról beszélünk, akkor a felha
 - Decentralitás
 - Konszenzus
 
-## Megtartási mechanizmus / ösztönzési struktúra {#persistence-mechanism}
+## Megtartási mechanizmus / ösztönzési struktúra \{#persistence-mechanism}
 
-### Blokkláncalapú {#blockchain-based}
+### Blokkláncalapú \{#blockchain-based}
 
 Ahhoz, hogy egy adat örökké létezzen, valamilyen megtartási mechanizmusra van szükség. Például az Ethereumon az a megtartási mechanizmus, hogy a csomópont futtatásánál az egész láncra szükség van. Az új adat a lánchoz kerül, és így az folyamatosan növekszik – az összes csomópontnak replikálnia kell az összes beágyazott adatot.
 
@@ -34,7 +34,7 @@ Blokkláncalapú megtartással működő platformok:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Szerződésalapú {#contract-based}
+### Szerződésalapú \{#contract-based}
 
 A **szerződésalapú** megtartás úgy véli, hogy az adatot nem replikálhatja és tárolhatja örökké minden csomópont, ehelyett inkább szerződéses megállapodással kell azt fenntartani. Ezeket a megállapodásokat számos csomóponttal kötik, amelyek megígérik, hogy egy adott időszakra megtartják az adatot. Ezt vissza kell fizetni vagy meg kell újítani, amikor már nem tartják meg az adatot.
 
@@ -50,7 +50,7 @@ Szerződésalapú megtartással működő platformok:
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### További megfontolások {#additional-consideration}
+### További megfontolások \{#additional-consideration}
 
 Az IPFS (InterPlanetary File System) egy elosztott rendszer fájlok, honlapok, alkalmazások és adatok tárolására és elérésére. Nincs beépített ösztönzési sémája, de használható bármelyik szerződésalapú ösztönzési megoldással a hosszú távú megtartásért. Egy másik módja annak, hogy az IPFS-en megmaradjon az adat, az az odatűzési (pinning) szolgáltatás, mely rögzíti az Önnek fontos adatokat, hogy Ön elérje azokat. Ön is futtathat saját IPFS csomópontot és hozzájárulhat a hálózathoz, hogy fenntartja a saját és más adatait ingyen!
 
@@ -64,11 +64,11 @@ Az IPFS (InterPlanetary File System) egy elosztott rendszer fájlok, honlapok, a
 
 A SWARM egy decentralizáld adattárhely és elosztási technológia, mely tárolási ösztönzőrendszerrel és egy tárhelybérleti-költséges orákulummal működik.
 
-## Adatmegőrzés {#data-retention}
+## Adatmegőrzés \{#data-retention}
 
 Az adat megtartásához a rendszereknek valamilyen mechanizmusra van szükségük, hogy ezt biztosítsák.
 
-### Kihívásalapú mechanizmus {#challenge-mechanism}
+### Kihívásalapú mechanizmus \{#challenge-mechanism}
 
 Az egyik legnépszerűbb módszer az adatmegtartásra, hogy valamilyen kriptográfiai kihívást használnak, amelyet a csomópontokhoz küldenek annak ellenőrzésére, hogy azok tényleg rendelkeznek-e az adattal. Egy egyszerű példa az Arweave hozzáférés-bizonyítása. Egy kihívást küldenek a csomópontoknak, hogy azoknál megvan-e a legutóbbi blokk és egy tetszőleges korábbi blokk. Ha a csomópont nem tud válaszolni, akkor megbüntetik.
 
@@ -81,7 +81,7 @@ A kihívásmechanizmussal rendelkező decentralizált tárhelyek típusai:
 - Crust Network
 - 4EVERLAND
 
-### Decentralitás {#decentrality}
+### Decentralitás \{#decentrality}
 
 A platformok decentralitását nem lehet könnyen mérni, de általában olyan eszközt válasszon, amelyik nem valamilyen KYC-féle (ismerje meg ügyfelét) dolgot használ arra, hogy bizonyítékot adjon a decentralitásáról.
 
@@ -96,7 +96,7 @@ Decentralizált eszközök KYC nélkül:
 - Crust Network
 - 4EVERLAND
 
-### Konszenzus {#consensus}
+### Konszenzus \{#consensus}
 
 A legtöbb eszköz rendelkezik valamilyen [konszenzusmechanizmussal](/developers/docs/consensus-mechanisms/), általában [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) vagy [**proof-of-stake (PoS)** mechanizmust használnak](/developers/docs/consensus-mechanisms/pos/).
 
@@ -112,7 +112,7 @@ Proof-of-stake-alapú:
 - 0Chain
 - Crust Network
 
-## Kapcsolódó eszközök {#related-tools}
+## Kapcsolódó eszközök \{#related-tools}
 
 **IPFS – _InterPlanetary File System egy decentralizált tárhely és fájlreferencia-rendszer Ethereumra._**
 
@@ -198,13 +198,13 @@ Proof-of-stake-alapú:
 - [Dokumentáció](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Mi az a decentralizált tárhely?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
 - [Öt gyakori mítosz lerombolása a decentralizált tárhelyről](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
 _Ismer olyan közösségi információforrást, amely a hasznára vált? Módosítsa az oldalt, és adja hozzá!_
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [Fejlesztői keretrendszerek](/developers/docs/frameworks/)

@@ -15,11 +15,11 @@ Pengembang yang lebih berpengalaman mungkin juga mau menggunakan Yul, bahasa tin
 
 Jika Anda merasa ingin tahu dan senang membantu menguji bahasa baru yang sedang dalam pengembangan intensif, Anda dapat bereksperimen dengan Fe, sebuah bahasa kontrak pintar yang sedang populer yang saat ini masih dalam tahapan awal.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Pengetahuan dasar bahasa pemrograman, khususnya JavaScript atau Pyhton, bisa menolong Anda mengerti perbedaan dalam bahasa kontrak pintar. Kami juga menyarankan Anda memahami konsep kontrak pintar sebelum menjelajah terlalu dalam ke perbandingan bahasa. [Pengantar kontrak pintar](/developers/docs/smart-contracts/).
 
-## Solidity {#solidity}
+## Solidity \{#solidity}
 
 - Bahasa tingkat tinggi yang berorientasi pada objek untuk mengimplementasikan kontrak pintar.
 - Bahasa kurung kurawal yang paling dipengaruhi oleh C++.
@@ -29,7 +29,7 @@ Pengetahuan dasar bahasa pemrograman, khususnya JavaScript atau Pyhton, bisa men
   - Pustaka (Anda bisa membuat kode yang dapat digunakan kembali yang bisa Anda panggil dari kontrak berbeda – seperti fungsi statis dalam kelas statis di bahasa pemrograman berorientasi objek lainnya).
   - Tipe kompleks yang ditentukan pengguna.
 
-### Tautan penting {#important-links}
+### Tautan penting \{#important-links}
 
 - [Dokumentasi](https://docs.soliditylang.org/en/latest/)
 - [Portal Bahasa Solidity](https://soliditylang.org/)
@@ -40,7 +40,7 @@ Pengetahuan dasar bahasa pemrograman, khususnya JavaScript atau Pyhton, bisa men
 - [Blog Solidity](https://blog.soliditylang.org/)
 - [Twitter Solidity](https://twitter.com/solidity_lang)
 
-### Contoh kontrak {#example-contract}
+### Contoh kontrak \{#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 Contoh ini seharusnya memberi Anda pemahaman seperti apa sintaksis kontrak Solidity. Untuk deskripsi lebih detail tentang fungsi dan variabelnya, [lihat dokumen](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## Vyper {#vyper}
+## Vyper \{#vyper}
 
 - Bahasa pemrograman Python
 - Strong typing
@@ -101,7 +101,7 @@ Contoh ini seharusnya memberi Anda pemahaman seperti apa sintaksis kontrak Solid
 
 Untuk informasi selengkapnya, [baca prinsip Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
-### Tautan penting {#important-links-1}
+### Tautan penting \{#important-links-1}
 
 - [Dokumentasi](https://vyper.readthedocs.io)
 - [Contoh Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -116,7 +116,7 @@ Untuk informasi selengkapnya, [baca prinsip Vyper](https://vyper.readthedocs.io/
 - [Contoh kontrak pintar terbaik Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Sumber daya pilihan Awesome Vyper](https://github.com/spadebuilders/awesome-vyper)
 
-### Contoh {#example}
+### Contoh \{#example}
 
 ```python
 # Pelelangan Terbuka
@@ -205,7 +205,7 @@ def endAuction():
 
 Contoh ini seharusnya memberi Anda pemahaman seperti apa sintaksis kontrak Vyper. Untuk deskripsi lebih detail tentang fungsi dan variabelnya, [lihat dokumen](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## Yul dan Yul+ {#yul}
+## Yul dan Yul+ \{#yul}
 
 Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean apa pun dengan bahasa kontrak pintar, kami menyarankan mulai menggunakan Solidity atau Vyper. Hanya lihat Yul atau Yul+ setelah Anda terbiasa dengan praktik terbaik keamanan kontrak pintar dan proses kerja spesifik EVM.
 
@@ -221,14 +221,14 @@ Jika Anda baru mengenal Ethereum dan belum pernah melakukan pengodean apa pun de
 - Awalnya dirancang untuk kontrak [optimistic rollup (penggabungan yang optimis)](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ bisa dianggap sebagai proposal peningkatan eksperimental untuk Yul, yang menambahkan fitur baru ke dalamnya.
 
-### Tautan penting {#important-links-2}
+### Tautan penting \{#important-links-2}
 
 - [Dokumentasi Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Dokumentasi Yul+](https://github.com/fuellabs/yulp)
 - [Playground Yul+](https://yulp.fuel.sh/)
 - [Postingan Pengantar Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Contoh kontrak {#example-contract-2}
+### Contoh kontrak \{#example-contract-2}
 
 Contoh sederhana berikut ini menerapkan fungsi daya. Bisa dikompilasikan menggunakan `solc --strict-assembly --bin input.yul`. Contoh ini harus disimpan dalam file input.yul.
 
@@ -253,14 +253,14 @@ Contoh sederhana berikut ini menerapkan fungsi daya. Bisa dikompilasikan menggun
 
 Jika Anda telah sangat berpengalaman dalam kontrak pintar, implementasi ERC20 penuh dalam Yul bisa ditemukan [di sini](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
-## Fe {#fe}
+## Fe \{#fe}
 
 - Bahasa static typing untuk Mesin Virtual Ethereum (EVM).
 - Terinspirasi oleh Python dan Rust.
 - Bertujuan agar mudah dipelajari -- bahkan bagi pengembang yang baru mengenal ekosistem Ethereum.
 - Pengembangan Fe masih dalam tahap awal, bahasa ini memiliki rilis alfa pada Januari 2021.
 
-### Tautan penting {#important-links-3}
+### Tautan penting \{#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Pengumuman Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -268,7 +268,7 @@ Jika Anda telah sangat berpengalaman dalam kontrak pintar, implementasi ERC20 pe
 - [Obrolan Discord Fe](https://discord.com/invite/ywpkAXFjZH)
 - [Twitter Fe](https://twitter.com/official_fe)
 
-### Contoh kontrak {#example-contract-3}
+### Contoh kontrak \{#example-contract-3}
 
 Berikut ini adalah kontrak sederhana yang diimplementasikan dalam Fe.
 
@@ -291,34 +291,34 @@ contract GuestBook:
 
 ```
 
-## Bagaimana memilihnya {#how-to-choose}
+## Bagaimana memilihnya \{#how-to-choose}
 
 Seperti bahasa pemrograman lainnya, pemilihannya kebanyakan tentang memilih peralatan yang tepat untuk pekerjaan yang sesuai maupun preferensi pribadi.
 
 Berikut adalah beberapa hal yang perlu dipertimbangkan jika Anda belum mencoba bahasa mana pun:
 
-### Apa yang hebat dari Solidity? {#solidity-advantages}
+### Apa yang hebat dari Solidity? \{#solidity-advantages}
 
 - Jika Anda seorang pemula, ada banyak tutorial dan peralatan belajar di luar sana. Lihat selengkapnya tentang hal itu dalam bab [Belajar melalui Pengodean](/developers/learning-tools/).
 - Peralatan pengembang yang baik disediakan.
 - Solidity memiliki satu komunitas pengembang besar, yang berarti Anda sangat mungkin menemukan jawaban dari pertanyaan Anda dengan cukup cepat.
 
-### Apa yang hebat dari Vyper? {#vyper-advatages}
+### Apa yang hebat dari Vyper? \{#vyper-advatages}
 
 - Cara yang sangat bagus untuk memulai bagi pengembang Python yang ingin menulis kontrak pintar.
 - Vyper punya sejumlah fitur lebih kecil yang membuatnya sangat cocok untuk pembuatan prototipe ide dengan cepat.
 - Vyper bertujuan untuk memudahkan pengauditan dan sangat ramah pengguna.
 
-### Apa yang hebat dari Yul dan Yul+? {#yul-advantages}
+### Apa yang hebat dari Yul dan Yul+? \{#yul-advantages}
 
 - Bahasa tingkat rendah yang sederhana dan fungsional.
 - Memungkinkan agar lebih dekat dengan EVM mentah, yang bisa membantu mengoptimalkan penggunaan gas dari kontrak Anda.
 
-## Perbandingan bahasa {#language-comparisons}
+## Perbandingan bahasa \{#language-comparisons}
 
 Untuk perbandingan sintaksis dasar, siklus hidup kontrak, antarmuka, operator, struktur data, fungsi, alur kontrol, dan banyak lagi lihat [lembar kecurangan oleh Auditless](https://reference.auditless.com/cheatsheet/) ini
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [Pustaka Kontrak Solidity oleh OpenZeppelin](https://docs.openzeppelin.com/contracts)
 - [Contoh Solidity](https://solidity-by-example.org)

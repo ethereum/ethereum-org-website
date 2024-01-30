@@ -4,17 +4,17 @@ lang: de
 description: Anweisungen für die Verwendung von Crowdin zur Übersetzung von ethereum.org
 ---
 
-# Übersetzen – so geht's {#how-to-translate}
+# Übersetzen – so geht's \{#how-to-translate}
 
-## Ein visueller Leitfaden {#visual-guide}
+## Ein visueller Leitfaden \{#visual-guide}
 
 Für visuell Lernende: Luka führt Sie durch die Einrichtung von Crowdin. Alternativ können Sie die gleichen Schritte auch im nächsten Abschnitt nachlesen.
 
 <YouTube id="Ii7bYhanLs4" />
 
-## Schriftlicher Leitfaden {#written-guide}
+## Schriftlicher Leitfaden \{#written-guide}
 
-### Beteiligen Sie sich an unserem Projekt auf Crowdin {#join-project}
+### Beteiligen Sie sich an unserem Projekt auf Crowdin \{#join-project}
 
 Sie müssen sich bei Ihrem Crowdin-Konto anmelden oder sich registrieren, wenn Sie noch kein Konto haben. Für die Anmeldung benötigen Sie lediglich ein E-Mail-Konto und ein Passwort.
 
@@ -22,7 +22,7 @@ Sie müssen sich bei Ihrem Crowdin-Konto anmelden oder sich registrieren, wenn S
   Am Projekt teilnehmen
 </ButtonLink>
 
-### Wählen Sie Ihre Sprache {#open-language}
+### Wählen Sie Ihre Sprache \{#open-language}
 
 Nachdem Sie sich bei Crowdin angemeldet haben, sehen Sie eine Projektbeschreibung und eine Liste aller verfügbaren Sprachen. Jede Sprache enthält außerdem Informationen über die Gesamtzahl der übersetzbaren Wörter und einen Überblick darüber, wie viele Inhalte in einer bestimmten Sprache bereits übersetzt und genehmigt wurden.
 
@@ -30,7 +30,7 @@ Wählen Sie die Sprache, in die Sie übersetzen möchten, um die Liste der Datei
 
 ![Liste von Sprachen auf Crowdin](./list-of-languages.png)
 
-### Suchen Sie ein Dokument, an dem Sie arbeiten möchten {#find-document}
+### Suchen Sie ein Dokument, an dem Sie arbeiten möchten \{#find-document}
 
 Der Inhalt der Website ist in eine Reihe von Dokumenten und Inhaltsbereichen unterteilt. Sie können den Fortschritt jedes Dokuments auf der rechten Seite überprüfen. Wenn der Übersetzungsfortschritt unter 100 % liegt, können Sie daran mitarbeiten.
 
@@ -44,7 +44,7 @@ Wir empfehlen Ihnen, in dieser numerischen Reihenfolge zu übersetzen (1 → 2 �
 
 [Mehr zu ethereum.org-Inhaltsbereichen](/contributing/translation-program/content-buckets/)
 
-### Übersetzen {#translate}
+### Übersetzen \{#translate}
 
 Nachdem Sie die zu übersetzende Datei ausgewählt haben, wird sie im Online-Editor geöffnet. Wenn Sie noch nicht mit Crowdin gearbeitet haben, finden Sie in dieser Kurzanleitung eine Erläuterung der Grundlagen.
 
@@ -72,7 +72,7 @@ Hier können Sie Kommentare finden, Einträge aus dem Übersetzungsspeicher (Tra
 
 Möchten Sie mehr erfahren? Sehen Sie sich die [Dokumentation zur Verwendung des Online-Crowdin-Editors](https://support.crowdin.com/online-editor/) an.
 
-### Überprüfungsprozess {#review-process}
+### Überprüfungsprozess \{#review-process}
 
 Sobald Sie die Übersetzung abgeschlossen haben (d.h. alle Dateien für einen Inhaltsbereich 100% anzeigen), wird unser professioneller Übersetzungsdienst den Inhalt überprüfen (und möglicherweise bearbeiten). Sobald die Überprüfung abgeschlossen ist (d. h. der Überprüfungsfortschritt beträgt 100%), werden wir sie zur Website hinzufügen.
 
@@ -80,7 +80,7 @@ Sobald Sie die Übersetzung abgeschlossen haben (d.h. alle Dateien für einen In
   Verwenden Sie keine maschinell erstellten Übersetzungen für das Projekt. Alle Übersetzungen werden vor der Veröffentlichung auf der Website überprüft. Wenn sich herausstellt, dass die von Ihnen vorgeschlagenen Übersetzungen maschinell erstellt wurden, werden sie abgelehnt und Übersetzerinnen und Übersetzer, die häufig maschinelle Übersetzungen verwenden, werden aus dem Projekt entfernt.
 </InfoBanner>
 
-### Kontakt {#get-in-touch}
+### Kontakt \{#get-in-touch}
 
 Haben Sie noch Fragen? Oder möchten Sie mit unserem Team und anderen Übersetzern zusammenarbeiten? Verfassen Sie Ihre Beiträge im Kanal #translations unseres[Discord-Servers von ethereum.org](/discord/)
 

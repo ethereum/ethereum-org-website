@@ -11,13 +11,13 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 [ERC-721](/developers/docs/standards/tokens/erc-721/) est une norme utilisée pour garantir la propriété des jetons non fongibles (NFT). Les jetons [ERC-20](/developers/docs/standards/tokens/erc-20/) se comportent comme une monnaie, car il n'y a aucune différence entre chacun d'eux. À l'inverse, les jetons ERC-721 ont été conçus pour des actifs qui sont similaires mais pas identiques, comme par exemple différents [dessins de chats](https://www.cryptokitties.co/) ou différents titres de propriété de biens immobiliers.
 
 Dans cet article, nous allons décortiquer le [contrat ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Ce contrat a été écrit en [Vyper](https://vyper.readthedocs.io/en/latest/index.html), un langage de contrat similaire à Python, conçu pour rendre plus difficile l'écriture de code non sécurisé que ce n'est le cas dans Solidity.
 
-## Le contrat {#contract}
+## Le contrat \{#contract}
 
 ```python
 # @dev Implémentation de la norme de jeton non fongible ERC-721.
@@ -37,7 +37,7 @@ L'interface ERC-721 est intégrée au langage Vyper. [Vous pouvez lire sa défin
 
 La première ligne importe l'interface, et la deuxième spécifie que nous l'implémentons ici.
 
-### L'interface ERC721Receiver {#receiver-interface}
+### L'interface ERC721Receiver \{#receiver-interface}
 
 ```python
 # Interface pour le contrat appelé par safeTransferFrom()
@@ -79,7 +79,7 @@ Pour éviter les cas où un contrat accepte accidentellement un transfert, la va
 
 Cette fonction est de type `view`, ce qui signifie qu'elle peut consulter l'état de la blockchain, mais pas le modifier.
 
-### Évènements {#events}
+### Évènements \{#events}
 
 Les [évènements](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) sont émis pour informer les utilisateurs et les serveurs extérieurs à la blockchain des évènements. Notez que le contenu des évènements n'est pas accessible aux contrats sur la blockchain.
 
@@ -133,7 +133,7 @@ Il est parfois utile de disposer d'un _opérateur_ qui peut gérer tous les jeto
 
 La valeur `approved` nous indique si l'évènement concerne une approbation ou bien le retrait d'une approbation.
 
-### Variables d'état {#state-vars}
+### Variables d'état \{#state-vars}
 
 Ces variables contiennent l'état actuel des jetons : lesquels sont disponibles et qui les possède. La plupart d'entre elles sont des objets de type `HashMap`, [une mise en correspondance (mapping) unidirectionnelle entre deux types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -183,11 +183,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) définit un mécanisme permettant à un contrat de préciser comment les applications peuvent communiquer avec ce dernier, auquel les normes ERC se conforment. Dans cet exemple, le contrat se conforme aux normes ERC-165 et ERC-721.
 
-### Fonctions {#functions}
+### Fonctions \{#functions}
 
 Ce sont les fonctions qui mettent véritablement ERC-721 en œuvre.
 
-#### Constructeur {#constructor}
+#### Constructeur \{#constructor}
 
 ```python
 @external
@@ -212,7 +212,7 @@ En Python, et en Vyper, vous pouvez aussi écrire des commentaires en spécifian
 
 Pour accéder aux variables d'état, on utilise `self.<variable name>` (encore une fois, comme en Python).
 
-#### Fonctions « view » {#views}
+#### Fonctions « view » \{#views}
 
 Ce sont des fonctions qui ne modifient pas l'état de la blockchain, et qui peuvent donc être exécutées gratuitement lorsqu'elles sont appelées en externe. Si ces fonctions sont appelées par un contrat, elles doivent quand-même être exécutées sur chaque nœud, et coûtent ainsi du gaz.
 
@@ -311,7 +311,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 La fonction vérifie qu'`_operator` est autorisé à gérer tous les jetons d'`_owner` dans ce contrat. Comme il peut y avoir plusieurs opérateurs, il s'agit d'une HashMap à deux dimensions.
 
-#### Fonctions relatives au transfert {#transfer-helpers}
+#### Fonctions relatives au transfert \{#transfer-helpers}
 
 Ces fonctions effectuent des opérations qui concernent le transfert ou la gestion des jetons.
 
@@ -428,7 +428,7 @@ Nous avons cette fonction interne à disposition parce qu'il existe deux façons
 
 Pour émettre un évènement dans Vyper, on utilise le mot-clé `log` ([cliquer ici pour plus de détails](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Fonctions de transfert {#transfer-funs}
+#### Fonctions de transfert \{#transfer-funs}
 
 ```python
 
@@ -551,7 +551,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Frapper de nouveaux jetons et détruire ceux existants {#mint-burn}
+#### Frapper de nouveaux jetons et détruire ceux existants \{#mint-burn}
 
 Le compte qui a créé le contrat est le `minter`, un super-utilisateur autorisé à frapper de nouveaux NFT. Cependant, même lui n'est pas autorisé à détruire des jetons existants. Seul le propriétaire, ou une entité autorisée par le propriétaire, peut faire cela.
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Toute personne autorisée à transférer un jeton est autorisée à le détruire. Bien que détruire un jeton semble équivalent à le transférer à l'adresse zéro, celle-ci ne reçoit pas réellement le jeton. Cela nous permet de libérer tout l'espace de stockage qui était utilisé pour le jeton, ce qui peut réduire les frais de gaz de la transaction.
 
-# Utiliser ce contrat {#using-contract}
+# Utiliser ce contrat \{#using-contract}
 
 Contrairement à Solidity, Vyper n'a pas de système d'héritage. Il s'agit d'un choix de conception délibéré visant à rendre le code plus clair et donc plus facile à sécuriser. Donc pour créer votre propre contrat Vyper ERC-721, vous prenez [ce contrat](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) puis vous le modifiez en fonction de la stratégie commerciale que vous souhaitez mettre en œuvre.
 
-# Conclusion {#conclusion}
+# Conclusion \{#conclusion}
 
 Voici les principaux points à retenir sur ce contrat :
 

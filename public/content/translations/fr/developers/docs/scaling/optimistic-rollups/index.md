@@ -8,11 +8,11 @@ Les rollups optimistes sont des protocoles de couche 2 (L2) conçus pour augment
 
 Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimistes offrent 10 à 100 fois plus d'améliorations en terme d'évolutivité. Les rollups optimistes écrivent également des transactions sur Ethereum comme des `données d'appel`, réduisant les coûts de gaz pour les utilisateurs.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Vous devez avoir lu et compris nos pages sur la [mise à l'échelle d'Ethereum](/developers/docs/scaling/) et la [couche 2](/layer-2/).
 
-## Qu'est-ce qu'un rollup optimiste ? {#what-is-an-optimistic-rollup}
+## Qu'est-ce qu'un rollup optimiste ? \{#what-is-an-optimistic-rollup}
 
 Un rollup optimiste est une approche de mise à l'échelle d'Ethereum qui implique de déplacer le calcul et le stockage d'état hors chaîne. Les rollups optimistes exécutent des transactions en dehors d'Ethereum, mais publient les données de transaction sur le réseau principal en tant que `calldata`.
 
@@ -26,7 +26,7 @@ Si la preuve de fraude réussit, le protocole du rollup exécute à nouveau la/l
 
 Si le lot de rollup reste non contesté (c’est-à-dire que toutes les transactions sont correctement exécutées) après la période de contestation, il est considéré valide et est accepté sur Ethereum. Les autres peuvent continuer à construire sur un bloc de rollup non confirmé, mais avec une mise en garde : les résultats de la transaction seront inversés si elle est basée sur une transaction mal exécutée publiée précédemment.
 
-## Comment les rollups optimistes interagissent-ils avec Ethereum ? {#optimistic-rollups-and-Ethereum}
+## Comment les rollups optimistes interagissent-ils avec Ethereum ? \{#optimistic-rollups-and-Ethereum}
 
 Les rollups optimistes sont des [solutions d'évolutivité hors chaîne](/developers/docs/scaling/#off-chain-scaling) conçues pour fonctionner sur Ethereum. Chaque rollup optimiste est géré par un ensemble de contrats intelligents déployés sur le réseau Ethereum. Les rollups optimistes traitent les transactions en dehors de la chaîne principale d'Ethereum, mais publient les transactions hors chaîne (en lots) dans un contrat de rollup sur la chaîne. Comme la blockchain Ethereum, cet enregistrement de transaction est immuable et forme la « chaîne de rollup optimiste. »
 
@@ -42,13 +42,13 @@ Les rollups optimistes sont décrits comme des « solutions hybrides de mise à 
 
 Les rollups optimistes s'appuient sur le protocole Ethereum principal pour les raisons suivantes :
 
-### Disponibilité des données {#data-availability}
+### Disponibilité des données \{#data-availability}
 
 Comme mentionné plus tôt, les rollups optimistes envoient des données de transaction sur Ethereum en tant que `calldata`. Étant donné que l'exécution de la chaîne rollup est basée sur les transactions soumises, n'importe qui peut utiliser ces informations – ancrées sur la couche de base d'Ethereum – pour exécuter l'état du rollup et vérifier la justesse des transitions d'état.
 
 La [disponibilité des données](/developers/docs/data-availability/) est essentielle car, sans accès aux données d'état, les challengers ne peuvent pas construire de preuves de fraude pour contester les opérations de rollup invalides. Avec Ethereum fournissant la disponibilité des données, le risque que les opérateurs de rollup pratiquent des actes malveillants (par exemple, soumettre des blocs non valides) est réduit.
 
-### Résistance à la censure {#censorship-resistance}
+### Résistance à la censure \{#censorship-resistance}
 
 Les rollups optimistes s'appuient également sur Ethereum pour la résistance à la censure. Dans un rollup optimiste, une entité centralisée (l'opérateur) est responsable du traitement des transactions et de la soumission des blocs de rollup à Ethereum. Cela a certaines implications :
 
@@ -64,15 +64,15 @@ Les rollups optimistes résolvent ce problème en forçant les opérateurs à pu
 
 - Les utilisateurs peuvent également soumettre leurs transactions sur la L1 au lieu du séquenceur, auquel cas le séquenceur doit inclure la transaction dans un certain délai pour continuer à produire des blocs valides.
 
-### Règlement {#settlement}
+### Règlement \{#settlement}
 
 Un autre rôle qu'Ethereum joue dans le contexte des rollups optimistes est celui d'une couche de règlement. Une couche de règlement permet d'ancrer l'ensemble de l'écosystème blockchain, d'établir la sécurité et de fournir une finalité objective si un litige survient sur une autre chaîne (les rollups optimistes dans ce cas) qui nécessite un arbitrage.
 
 Le réseau principal d'Ethereum fournit un hub pour les rollups optimistes afin de vérifier les preuves de fraude et de résoudre les litiges. En outre, les transactions effectuées sur le rollup ne sont définitives qu'_après_ l'acceptation du bloc rollup sur Ethereum. Une fois qu'une transaction rollup est engagée sur la couche de base d'Ethereum, elle ne peut pas être annulée (sauf dans le cas très improbable d'une réorganisation de la chaîne).
 
-## Comment fonctionnent les rollups optimistes ? {#how-optimistic-rollups-work}
+## Comment fonctionnent les rollups optimistes ? \{#how-optimistic-rollups-work}
 
-### Exécution et agrégation des transactions {#transaction-execution-and-aggregation}
+### Exécution et agrégation des transactions \{#transaction-execution-and-aggregation}
 
 Les utilisateurs soumettent des transactions aux « opérateurs », qui sont des nœuds responsables du traitement des transactions sur le rollup optimiste. Également appelé « validateur » ou « agrégateur », l'opérateur regroupe les transactions, compresse les données sous-jacentes et publie le bloc sur Ethereum.
 
@@ -84,7 +84,7 @@ Certains rollups optimistes peuvent renoncer à un système de validateurs sans 
 
 Le séquenceur est différent d'un opérateur de rollup ordinaire car il a un plus grand contrôle sur l'ordre des transactions. De plus, le séquenceur a un accès prioritaire à la chaîne de rollup et est la seule entité autorisée à soumettre des transactions au contrat sur la chaîne. Les transactions provenant de nœuds non séquenceurs ou d'utilisateurs réguliers sont simplement mises en file d'attente dans une boîte de réception distincte jusqu'à ce que le séquenceur les englobe dans un nouveau lot.
 
-#### Soumettre des blocs de rollup à Ethereum {#submitting-blocks-to-ethereum}
+#### Soumettre des blocs de rollup à Ethereum \{#submitting-blocks-to-ethereum}
 
 Comme mentionné, l'opérateur d'un rollup optimiste regroupe les transactions hors chaîne dans un lot et l'envoie à Ethereum pour la notarisation. Ce processus consiste à compresser les données liées aux transactions et à les publier sur Ethereum en tant que `calldata`.
 
@@ -96,7 +96,7 @@ Dans le contexte des rollups optimistes, `calldata` est utilisé pour envoyer de
 
 Voici [un exemple](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) de soumission d'un batch de rollup pour montrer comment ce concept fonctionne. Le séquenceur a invoqué la méthode `appendSequencerBatch()` et a transmis les données de transaction compressées comme entrées en utilisant `calldata`.
 
-### Engagements d'état {#state-commitments}
+### Engagements d'état \{#state-commitments}
 
 À tout moment, l'état du rollup optimiste (comptes, soldes, code de contrat, etc.) est organisé sous la forme d'un [arbre de Merkle](/whitepaper/#merkle-trees) appelé « arbre d'état ». La racine de cet arbre de Merkle (racine d'état), qui fait référence au dernier état du rollup, est hachée et stockée dans le contrat du rollup. Chaque transition d'état sur la chaîne produit un nouvel état de rollup, auquel un opérateur s'engage en calculant une nouvelle racine d'état.
 
@@ -106,7 +106,7 @@ L'opérateur de rollup est également tenu de livrer une racine Merkle pour le l
 
 Les engagements d'état, en particulier les racines d'état, sont nécessaires pour prouver l'exactitude des changements d'état dans un rollup optimiste. Le contrat de rollup accepte les nouvelles racines d'état des opérateurs immédiatement après leur publication, mais peut supprimer ultérieurement les racines d'état invalides pour rétablir l'état correct du rollup.
 
-### La preuve de la fraude {#fraud-proving}
+### La preuve de la fraude \{#fraud-proving}
 
 Comme expliqué, les rollups optimistes permettent à quiconque de publier des blocs sans fournir de preuves de validité. Cependant, pour garantir la sécurité de la chaîne, les rollups optimistes spécifient une fenêtre de temps pendant laquelle n'importe qui peut contester une transition d'état. C'est pourquoi les blocs de rollup sont appelés « assertions », car tout le monde peut contester leur validité.
 
@@ -116,7 +116,7 @@ Les schémas de preuve interactifs à un tour rejouent les transactions contest�
 
 Cependant, la réexécution des transactions sur L1 pour détecter les fraudes nécessite la publication des engagements d'état pour les transactions individuelles et augmente les données que les rollups doivent publier sur la chaîne. La relecture des transactions entraîne également d'importants coûts en gaz. Pour ces raisons, les rollups optimistes passent à la preuve interactive à tours multiples, qui atteint le même objectif (c'est-à-dire la détection des opérations de rollup invalides) avec plus d'efficacité.
 
-#### Épreuve interactive à plusieurs tours {#multi-round-interactive-proving}
+#### Épreuve interactive à plusieurs tours \{#multi-round-interactive-proving}
 
 La preuve interactive à tours multiples implique un protocole de va-et-vient entre l'assertif et le challenger, supervisé par un contrat de vérificateur L1, qui décide finalement de la partie qui a menti. Après qu'un nœud L2 ait contesté une assertion, l'assertif est tenu de diviser l'assertion contestée en deux moitiés égales. Dans ce cas, chaque assertion individuelle contiendra autant d'étapes de calcul que l'autre.
 
@@ -134,7 +134,7 @@ Quelques remarques sur ce type de preuve de fraude :
 
 4. La preuve interactive à tours multiples exige que les deux parties (le vérificateur et le challenger) effectuent des mouvements dans la fenêtre de temps spécifiée. L'absence d'action avant l'expiration du délai entraîne la perte du défi pour la partie défaillante.
 
-#### Pourquoi les preuves de fraude sont importantes pour les rollups optimistes {#fraud-proof-benefits}
+#### Pourquoi les preuves de fraude sont importantes pour les rollups optimistes \{#fraud-proof-benefits}
 
 Les preuves de fraude sont importantes parce qu'elles facilitent la _finalité de confiance_ dans les rollups optimistes. La finalité sans confiance est une qualité des rollups optimistes qui garantit qu'une transaction - tant qu'elle est valide - sera finalement confirmée.
 
@@ -142,11 +142,11 @@ Les nœuds malveillants peuvent essayer de retarder la confirmation d'un bloc de
 
 Ceci est également lié à une autre propriété de sécurité des rollups optimistes : la validité de la chaîne repose sur l'existence _d'un_ nœud honnête. Le nœud honnête peut faire progresser la chaîne correctement en postant des assertions valides ou en contestant les assertions invalides. Quoi qu'il en soit, les nœuds malveillants qui entrent en conflit avec le nœud honnête perdront leurs mises pendant le processus de preuve de la fraude.
 
-### Interopérabilité L1/L2 {#l1-l2-interoperability}
+### Interopérabilité L1/L2 \{#l1-l2-interoperability}
 
 Les rollups optimistes sont conçus pour l'interopérabilité avec le réseau principal Ethereum et permettent aux utilisateurs de transmettre des messages et des données arbitraires entre L1 et L2. Ils sont également compatibles avec l'EVM, de sorte que vous pouvez porter des [dApps](/developers/docs/dapps/) existantes vers des rollups optimistes ou créer de nouveaux dApps à l'aide d'outils de développement Ethereum.
 
-#### 1. Mouvement des actifs {#asset-movement}
+#### 1. Mouvement des actifs \{#asset-movement}
 
 ##### Saisir le rollup
 
@@ -166,7 +166,7 @@ Pour éviter d'attendre une semaine avant de retirer des fonds sur Ethereum, les
 
 Les fournisseurs de liquidités peuvent vérifier la validité de la demande de retrait de l'utilisateur (en exécutant eux-mêmes la chaîne) avant de libérer les fonds. De cette façon, ils ont l'assurance que la transaction sera finalement confirmée (c'est-à-dire une finalité sans confiance).
 
-#### 2. Compatibilité EVM {#evm-compatibility}
+#### 2. Compatibilité EVM \{#evm-compatibility}
 
 Pour les développeurs, l'avantage des rollups optimistes est leur compatibilité - ou, mieux encore, leur équivalence - avec la [machine virtuelle Ethereum](/developers/docs/evm/) (EVM). Les rollups compatibles EVM sont conformes aux spécifications du [Yellow Paper d'Ethereum](https://ethereum.github.io/yellowpaper/paper.pdf) et prennent en charge l'EVM au niveau du bytecode.
 
@@ -178,7 +178,7 @@ ii. Les développeurs et les équipes de projet qui utilisent des rollups optimi
 
 L'utilisation d'outils existants est importante car ces outils ont été largement vérifiés, débogués et améliorés au fil des années. De plus, les développeurs d'Ethereum n'ont plus besoin d'apprendre à construire avec une pile de développement entièrement nouvelle.
 
-#### 3. Appels de contrats inter-chaînes {#cross-chain-contract-calls}
+#### 3. Appels de contrats inter-chaînes \{#cross-chain-contract-calls}
 
 Les utilisateurs (comptes détenus en externe) interagissent avec les contrats L2 en soumettant une transaction au contrat de rollup ou en demandant à un séquenceur ou à un validateur de le faire pour eux. Les rollups optimistes permettent également aux comptes de contrats sur Ethereum d'interagir avec les contrats L2 en utilisant des contrats relais pour relayer les messages et transmettre les données entre L1 et L2. Cela signifie que vous pouvez programmer un contrat L1 sur le réseau principal Ethereum pour invoquer des fonctions appartenant à des contrats sur un rollup optimiste L2.
 
@@ -190,7 +190,7 @@ Un exemple d'appel de contrat inter-chaîne est le dépôt de jetons décrit pr�
 
 Enfin, il convient de noter que les appels de messages L2 > L1 entre les contrats doivent tenir compte des délais (les appels L1 > L2 sont généralement exécutés après quelques minutes). En effet, les messages envoyés au réseau principal depuis le rollup optimiste ne peuvent être exécutés avant l'expiration de la fenêtre de défi.
 
-## Comment fonctionnent les frais de reconduction optimistes ? {#how-do-optimistic-rollup-fees-work}
+## Comment fonctionnent les frais de reconduction optimistes ? \{#how-do-optimistic-rollup-fees-work}
 
 Les rollups optimistes utilisent un système de frais de gaz, un peu comme Ethereum, pour indiquer combien les utilisateurs paient par transaction. Les frais facturés sur les rollups optimistes dépendent des éléments suivants :
 
@@ -202,7 +202,7 @@ Les rollups optimistes utilisent un système de frais de gaz, un peu comme Ether
 
 Les rollups optimistes appliquent plusieurs mécanismes pour réduire les frais pour les utilisateurs, notamment le regroupement des transactions et la compression des `calldata` pour réduire les coûts de publication des données. Vous pouvez consulter le [L2 fee tracker](https://l2fees.info/) pour avoir un aperçu en temps réel de ce que coûte l'utilisation des rollups optimistes basés sur Ethereum.
 
-## Comment les rollups optimistes font-ils évoluer Ethereum ? {#scaling-ethereum-with-optimistic-rollups}
+## Comment les rollups optimistes font-ils évoluer Ethereum ? \{#scaling-ethereum-with-optimistic-rollups}
 
 Comme expliqué, les rollups optimistes publient des données de transaction compressées sur Ethereum pour garantir la disponibilité des données. La possibilité de compresser les données publiées sur la chaîne est cruciale pour mettre à l'échelle le débit sur Ethereum avec des rollups optimistes.
 
@@ -231,7 +231,7 @@ Il s'agit d'une estimation assez optimiste, étant donné que les transactions d
 
 L'introduction de [la fragmentation des données](/roadmap/danksharding/) sur Ethereum devrait améliorer l'évolutivité dans les rollups optimistes. Comme les transactions rollup doivent partager l'espace de blocs avec d'autres transactions non rollup, leur capacité de traitement est limitée par le débit de données sur la chaîne principale d'Ethereum. Danksharding augmentera l'espace disponible pour les chaînes L2 pour publier des données par bloc, en utilisant un stockage « blob » moins cher, non permanent au lieu de `DONNÉES D'APPEL` coûteuses et permanentes.
 
-### Avantages et inconvénients des rollups optimistes {#optimistic-rollups-pros-and-cons}
+### Avantages et inconvénients des rollups optimistes \{#optimistic-rollups-pros-and-cons}
 
 | Avantages                                                                                                                                                                                              | Inconvénients                                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -243,13 +243,13 @@ L'introduction de [la fragmentation des données](/roadmap/danksharding/) sur Et
 | Les rollups optimistes s'appuient sur des incitations cryptoéconomiques bien conçues pour accroître la sécurité sur la chaîne.                                                                         | Les rollups doivent enregistrer toutes les données de transaction sur la chaîne, ce qui peut augmenter les coûts.                                                                   |
 | La compatibilité avec EVM et Solidity permet aux développeurs de porter les contrats intelligents natifs d'Ethereum vers les rollups ou d'utiliser les outils existants pour créer de nouvelles dApps. |                                                                                                                                                                                     |
 
-### Une explication visuelle des rollups optimistes {#optimistic-video}
+### Une explication visuelle des rollups optimistes \{#optimistic-video}
 
 Davantage qu'un apprenant visuel ? Regardez Finematics expliquer les rollups optimistes :
 
 <YouTube id="7pWxCklcNsU" start="263" />
 
-### Utiliser des rollups optimistes {#use-optimistic-rollups}
+### Utiliser des rollups optimistes \{#use-optimistic-rollups}
 
 Plusieurs implémentations de rollups optimistes existent, que vous pouvez intégrer dans vos dApps :
 

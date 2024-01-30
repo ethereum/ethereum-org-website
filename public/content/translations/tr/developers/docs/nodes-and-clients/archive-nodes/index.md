@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Bir arşiv düğümü, tüm geçmiş durumların arşivini oluşturacak şekilde inşa edilmiş bir ethereum istemcisi örneğidir. Berlirli kullanım durumlarında kullanışlı bir araçtır, ancak çalıştırmak tam bir düğümü çalıştırmaktan daha zor olabilir.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 [Ethereum düğümünü](/developers/docs/nodes-and-clients/), [mimarisini](/developers/docs/nodes-and-clients/node-architecture/), [senkronizasyon stratejilerini](/developers/docs/nodes-and-clients/#sync-modes), [çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) uygulamalarını ve [kullanımını](/developers/docs/apis/json-rpc/) anlamalısınız.
 
@@ -68,13 +68,13 @@ Kazara gerçekleşebilecek veritabanı bozulmalarını daha kararlı ve güvenli
 
 İlk senronizasyon sırasında arşiv modundaki istemciler başlangıç blokundan itibaren tüm işlemleri yeniden gerçekleştirir. Yürütme hızı çoğunlukla CPU tarafından sınırlanır, bu nedenle daha hızlı bir CPU, ilk senkronizasyon süresine yardımcı olabilir. Ortalama bir tüketici bilgisayarında, ilk senkronizasyon bir aya yakın sürebilir.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Ethereum Tam Düğümü - Arşiv Düğümü](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, Eylül 2022_
 - [Kendi Ethereum Arşiv Düğümünü İnşa Et](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, Ağustos 2021_
 - [Erigon, Erigon'un RPC (Uzaktan Prosedür Çağrısı) ve TrueBlocks (scrape ve API) hizmet olarak nasıl kurulur](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, Eylül 2022'de güncellendi_
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
 - [Bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/)

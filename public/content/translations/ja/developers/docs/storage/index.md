@@ -17,9 +17,9 @@ lang: ja
 - 分散性
 - コンセンサスの方法
 
-## 永続化メカニズム/インセンティブ構造 {#persistence-mechanism}
+## 永続化メカニズム/インセンティブ構造 \{#persistence-mechanism}
 
-### ブロックチェーンベース {#blockchain-based}
+### ブロックチェーンベース \{#blockchain-based}
 
 データの一部を永続的に保存するためには、なんらかの永続化メカニズムを利用する必要があります。 たとえば、イーサリアムでは 1 つのノードを実行する際にチェーン全体で処理を行う必要があるという永続化メカニズムがあります。 新しいデータがチェーンの終わりに追加され、そのデータは増大を続けます。これに伴い、すべてのノードは埋め込まれたすべてのデータを複製する必要があります。
 
@@ -34,7 +34,7 @@ lang: ja
 - イーサリアム
 - [Arweave](https://www.arweave.org/)
 
-### コントラクトベース {#contract-based}
+### コントラクトベース \{#contract-based}
 
 **コントラクトベース**の永続性では、すべてのノードでデータを複製し永遠に保存することはできないということが分かります。そのため、代わりにコントラクトによる合意で維持しなければなりません。 これらの合意は、複数台のノード間で結ばれる、一定期間データを保持することを約束するものです。 データを保持するためには、コントラクトの期間が切れるたびに払い戻しまたは更新が行われなければなりません。
 
@@ -50,7 +50,7 @@ lang: ja
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### その他の考慮事項 {#additional-consideration}
+### その他の考慮事項 \{#additional-consideration}
 
 IPFS は、ファイル、ウェブサイト、アプリケーション、データの保存とアクセスのための分散型システムです。 インセンティブスキームは組み込まれていませんが、上記のいずれかのコントラクトベースのインセンティブソリューションとともに、データの長期保持に使用できます。 IPFS でデータを保持するもう一つの方法は、ピンニングサービスというデータを「固定化」してくれるサービスと連携することです。 独自の IPFS ノードを実行して自分のデータや他のユーザーのデータを無料で保持し、ネットワークに貢献することもできます。
 
@@ -64,11 +64,11 @@ IPFS は、ファイル、ウェブサイト、アプリケーション、デー
 
 SWARM は、ストレージインセンティブシステムとストレージレンタル価格オラクルを備えた分散型データストレージおよび分配テクノロジーです。
 
-## データの保持 {#data-retention}
+## データの保持 \{#data-retention}
 
 データを保持するには、データが保持されていることを確認するためのメカニズムをシステムに搭載する必要があります。
 
-### チャレンジメカニズム {#challenge-mechanism}
+### チャレンジメカニズム \{#challenge-mechanism}
 
 データが保持されていることを確認する最も一般的な方法の 1 つに、ノードに発行されるある種の暗号論的チャレンジを使用して、ノードにまだデータがあることを確認するという方法があります。 シンプルな方法として、Arweave のプルーフ・オブ・アクセス(PoA)があります。 これは、ノードに対してチャレンジを行い、最新のブロックとランダムな過去ブロックの両方にデータがあるかどうかを確認するものです。 ノードがチャレンジに解答できない場合、ペナルティが課されます。
 
@@ -81,7 +81,7 @@ SWARM は、ストレージインセンティブシステムとストレージ�
 - Crust Network
 - 4EVERLAND
 
-### 分散性 {#decentrality}
+### 分散性 \{#decentrality}
 
 プラットフォームの分散化レベルを測る優れたツールはありませんが、一般的に、プラットフォームが中央集権型ではないという証拠を示すために、KYC という形態を持たないツールを使用したいと考えるでしょう。
 
@@ -96,7 +96,7 @@ KYC なしの分散型ツール
 - Crust Network
 - 4EVERLAND
 
-### コンセンサスの方法 {#consensus}
+### コンセンサスの方法 \{#consensus}
 
 これらのツールのほとんどは、独自のバージョンの[合意メカニズム](/developers/docs/consensus-mechanisms/)を持っていますが、通常は、[**プルーフ・オブ・ワーク(PoW)**](/developers/docs/consensus-mechanisms/pow/)または[**プルーフ・オブ・ステーク(PoS)**](/developers/docs/consensus-mechanisms/pos/)に基づいています。
 
@@ -112,7 +112,7 @@ KYC なしの分散型ツール
 - 0Chain
 - Crust Network
 
-## 関連ツール {#related-tools}
+## 関連ツール \{#related-tools}
 
 **IPFS - _IPFS (InterPlanetary File System)は、イーサリアムのための分散ストレージとファイル参照システムです。_**
 
@@ -198,13 +198,13 @@ KYC なしの分散型ツール
 - [ドキュメント](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## 参考文献 {#further-reading}
+## 参考文献 \{#further-reading}
 
 - [分散型ストレージとは](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [分散型ストレージに関する 5 つの一般的な通念を覆す](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _役に立つコミュニティリソースをご存知の場合は、 ページを編集して追加してください。_
 
-## 関連トピック {#related-topics}
+## 関連トピック \{#related-topics}
 
 - [開発フレームワーク](/developers/docs/frameworks/)

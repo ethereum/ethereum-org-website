@@ -14,7 +14,7 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/max-contract-size
 ---
 
-## Perché c'è un limite? {#why-is-there-a-limit}
+## Perché c'è un limite? \{#why-is-there-a-limit}
 
 Il [22 Novembre 2016](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/), la diramazione permanente Spurious Dragon ha introdotto [EIP-170](https://eips.ethereum.org/EIPS/eip-170), che ha aggiunto un limite di dimensioni per gli smart contract di 24.576 kb. Per gli sviluppatori in Solidity, significa che quando si aggiungono più funzionalità al contratto, a un certo punto si raggiunge il limite e, in fase di implementazione, si vedrà l'errore:
 
@@ -24,7 +24,7 @@ Questo limite è stato introdotto per prevenire gli attacchi DOS (denial-of-serv
 
 In origine, questo era un problema minore, dato che il limite naturale di dimensioni del contratto è il limite di gas del blocco. Ovviamente, un contratto dev'esser distribuito entro una transazione che detenga tutto il codice del byte del contratto. Se includi solo quella transazione in un blocco, puoi usare anche tutto il gas, ma non è infinito. Dall'[Aggiornamento di Londra](/history/#london), il limite di gas del blocco è stato capace di variare tra le 15M e le 30M unità, a seconda della domanda di rete.
 
-## Affrontare la lotta {#taking-on-the-fight}
+## Affrontare la lotta \{#taking-on-the-fight}
 
 Sfortunatamente, non esiste un modo facile per ottenere la dimensione del bytecode dei tuoi contratti. Un ottimo strumento per aiutarti è il plugin [truffle-contract-size](https://github.com/IoBuilders/truffle-contract-size), se utilizzi Truffle.
 
@@ -36,9 +36,9 @@ Questo ti aiuterà a capire come le tue modifiche influiscono sulle dimensioni t
 
 Di seguito, passeremo in rassegna alcuni metodi, ordinati in base al loro impatto potenziale. Pensiamo ad esempio alla perdita di peso: la strategia migliore per raggiungere il proprio peso target (nel nostro caso 24kb) consiste nel concentrarsi prima sui metodi a maggiore impatto. In gran parte dei casi è sufficiente adattare la propria dieta, mentre in altri serve qualcosa di più. Si può aggiungere un po' di esercizio fisico (impatto medio) o persino degli integratori (impatto ridotto).
 
-## Impatto elevato {#big-impact}
+## Impatto elevato \{#big-impact}
 
-### Separa i tuoi contratti {#separate-your-contracts}
+### Separa i tuoi contratti \{#separate-your-contracts}
 
 Questo dovrebbe sempre essere l'approccio preferenziale. Come fare per separare un unico contratto in diversi contratti più piccoli? Generalmente è necessario trovare un'architettura efficace per i propri contratti. I contratti più piccoli sono sempre preferibili a livello di leggibilità del codice. Per dividere i contratti, chiediti:
 
@@ -46,24 +46,24 @@ Questo dovrebbe sempre essere l'approccio preferenziale. Come fare per separare 
 - Quali funzioni non richiedono la lettura dello stato del contratto o solo un sottoinsieme specifico dello stato?
 - Puoi dividere archiviazione e funzionalità?
 
-### Librerie {#libraries}
+### Librerie \{#libraries}
 
 Un modo semplice per togliere il codice di funzionalità dall'archiviazione consiste nell'utilizzare una [libreria](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#libraries). Evita di dichiarare le funzioni della libreria come interne, poiché verranno [aggiunte al contratto](https://ethereum.stackexchange.com/questions/12975/are-internal-functions-in-libraries-not-covered-by-linking) direttamente durante la compilazione. Se invece usi funzioni pubbliche, queste si troveranno nel contratto di una libreria separata. Considera [using for](https://solidity.readthedocs.io/en/v0.6.10/contracts.html#using-for) per rendere l'utilizzo delle librerie più pratico.
 
-### Proxy {#proxies}
+### Proxy \{#proxies}
 
 Una strategia più avanzata è il sistema proxy. Le librerie usano `DELEGATECALL` in background, che esegue semplicemente la funzione di un altro contratto con lo stato del contratto chiamante. Dai un'occhiata a [questo post del blog](https://hackernoon.com/how-to-make-smart-contracts-upgradable-2612e771d5a2) per scoprire di più sui sistemi proxy. Offono maggiore funzionalità, ad es. consentono l'aggiornabilità ma aggiungono anche una notevole complessità. Non li aggiungerei solo per ridurre le dimensioni del contratto, a meno che non sia la sola opzione per qualche motivo.
 
-## Impatto medio {#medium-impact}
+## Impatto medio \{#medium-impact}
 
-### Rimuovi le funzioni {#remove-functions}
+### Rimuovi le funzioni \{#remove-functions}
 
 Questo punto dovrebbe essere ovvio. Le funzioni aumentano di un bel po' le dimensioni di un contratto.
 
 - **Esterne**: talvolta aggiungiamo molte funzioni di visualizzazione per motivi di comodità, il che va perfettamente bene finché non si supera il limite di dimensioni. A quel punto si potrebbe seriamente pensare di rimuovere tutte le funzioni tranne quelle essenziali.
 - **Interne**: puoi rimuovere anche le funzioni interne/private e limitarti a mettere il codice in linea, a condizione che la funzione venga chiamata solo una volta.
 
-### Evita le variabili aggiuntive {#avoid-additional-variables}
+### Evita le variabili aggiuntive \{#avoid-additional-variables}
 
 Una semplice modifica come questa:
 
@@ -82,7 +82,7 @@ function get(uint id) returns (address,address) {
 
 crea una differenza di **0,28kb**. È facile incontrare numerose situazioni simili nei propri contratti, con il rischio che si sommino fino a raggiungere volumi significativi.
 
-### Abbrevia i messaggi d'errore {#shorten-error-message}
+### Abbrevia i messaggi d'errore \{#shorten-error-message}
 
 I messaggi di ripristino lunghi e, in particolare, la presenza di numerosi messaggi diversi possono fare espandere il contratto. Invece, è meglio usare brevi codici d'errore e decodificali nel contratto. In questo modo è possibile rendere brevi i messaggi più lunghi:
 
@@ -107,13 +107,13 @@ if (msg.sender != owner) {
 }
 ```
 
-### Considera un valore d'esecuzione basso nell'ottimizzatore {#consider-a-low-run-value-in-the-optimizer}
+### Considera un valore d'esecuzione basso nell'ottimizzatore \{#consider-a-low-run-value-in-the-optimizer}
 
 Puoi anche cambiare le impostazioni dell'ottimizzatore. Il valore predefinito di 200 significa che sta provando a ottimizzare il bytecode come se una funzione fosse chiamata 200 volte. Se lo modifichi a 1, fondamentalmente dici all'ottimizzatore di ottimizzare nel caso dell'esecuzione di ogni funzione una sola volta. Una funzione ottimizzata per essere eseguita solo una volta è ottimizzata per la distribuzione stessa. Sappi che **ciò aumenta i [costi del gas](/developers/docs/gas/) per l'esecuzione delle funzioni**, quindi meglio non farlo.
 
-## Piccolo impatto {#small-impact}
+## Piccolo impatto \{#small-impact}
 
-### Evita il passaggio di struct alle funzioni {#avoid-passing-structs-to-functions}
+### Evita il passaggio di struct alle funzioni \{#avoid-passing-structs-to-functions}
 
 Se utilizzi l'[ABIEncoderV2](https://solidity.readthedocs.io/en/v0.6.10/layout-of-source-files.html#abiencoderv2), può essere utile evitare il passaggio di struct a una funzione. Anziché passare il parametro come struct...
 
@@ -139,12 +139,12 @@ function _get(address addr1, address addr2) private view returns(address,address
 
 ... passa direttamente i parametri richiesti. In questo esempio abbiamo risparmiato altri **0,1kb**.
 
-### Dichiara la visibilità corretta per funzioni e variabili {#declare-correct-visibility-for-functions-and-variables}
+### Dichiara la visibilità corretta per funzioni e variabili \{#declare-correct-visibility-for-functions-and-variables}
 
 - Funzioni o variabili chiamate solo dall'esterno? Dichiarale come `external` anziché `public`.
 - Funzioni o variabili chiamate dall'interno del contratto? Dichiarale come `private` o `internal` anziché `public`.
 
-### Rimuovi i modificatori {#remove-modifiers}
+### Rimuovi i modificatori \{#remove-modifiers}
 
 I modificatori, specialmente se usati intensamente, potrebbero avere un impatto significativo sulle dimensioni del contratto. Considera di rimuoverli e di usare invece le funzioni.
 

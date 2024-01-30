@@ -15,7 +15,7 @@ Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang men
 
 Bangun aplikasi terdesentralisasi di atas Ethereum dan berinteraksi dengan kontrak pintar menggunakan bahasa pemrograman Delphi!
 
-## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity \{#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Ambil langkah pertama Anda untuk mengintegrasikan Delphi dengan Ethereum**
 
@@ -26,7 +26,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Tulis Kontrak Pintar Pertama Anda](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Pelajari Cara Mengompilasi dan Menggunakan Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referensi dan tautan untuk pemula {#beginner-references-and-links}
+## Referensi dan tautan untuk pemula \{#beginner-references-and-links}
 
 **Memperkenalkan pustaka Delphereum**
 
@@ -40,13 +40,13 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Kontrak Pintar dan Delphi selama 3 menit - Bagian 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [Kontrak Pintar dan Delphi selama 3 menit - Bagian 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Artikel tingkat menengah {#intermediate-articles}
+## Artikel tingkat menengah \{#intermediate-articles}
 
 - [Membuat tanda tangan pesan yang ditandatangani Ethereum di Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Mentransfer eter dengan Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Mentransfer token ERC-20 dengan Delphi](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
+## Pola penggunaan tingkat lanjut \{#advanced-use-patterns}
 
 - [Delphi dan Layanan Nama Ethereum (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum dan Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

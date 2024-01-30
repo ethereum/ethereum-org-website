@@ -13,13 +13,13 @@ summaryPoints:
   - Hold staking tokens in your own wallet
 ---
 
-## What are staking pools? {#what-are-staking-pools}
+## What are staking pools? \{#what-are-staking-pools}
 
 Staking pools are a collaborative approach to allow many with smaller amounts of ETH to obtain the 32 ETH required to activate a set of validator keys. Pooling functionality is not natively supported within the protocol, so solutions were built out separately to address this need.
 
 Some pools operate using smart contracts, where funds can be deposited to a contract, which trustlessly manages and tracks your stake, and issues you a token that represents this value. Other pools may not involve smart contracts and are instead mediated off-chain.
 
-## Why stake with a pool? {#why-stake-with-a-pool}
+## Why stake with a pool? \{#why-stake-with-a-pool}
 
 In addition to the benefits we outlined in our [intro to staking](/staking/), staking with a pool comes with a number of distinct benefits.
 
@@ -31,7 +31,7 @@ In addition to the benefits we outlined in our [intro to staking](/staking/), st
 
 <StakingComparison page="pools" />
 
-## What to consider {#what-to-consider}
+## What to consider \{#what-to-consider}
 
 Pooled or delegated staking is not natively supported by the Ethereum protocol, but given the demand for users to stake less than 32 ETH a growing number of solutions have been built out to serve this demand.
 
@@ -45,7 +45,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 <StakingConsiderations page="pools" />
 
-## Explore staking pools {#explore-staking-pools}
+## Explore staking pools \{#explore-staking-pools}
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
@@ -57,7 +57,7 @@ Please note the importance of choosing a service that takes [client diversity](/
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
-## Frequently asked questions {#faq}
+## Frequently asked questions \{#faq}
 
 <ExpandableCard title="How do I earn rewards?">
 Typically ERC-20 staking tokens are issued to stakers and represent the value of their staked ETH plus rewards. Keep in mind that different pools will distribute staking rewards to their users via slightly different methods, but this is the common theme.
@@ -79,7 +79,7 @@ Unlike centralized exchanges, many other pooled staking options utilize smart co
 Some pooling options are more decentralized than others when it comes to the nodes that back them. To promote the health and decentralization of the network, stakers are always encouraged to select a pooling service that enables a permissionless decentralized set of node operators.
 </ExpandableCard>
 
-## Further reading {#further-reading}
+## Further reading \{#further-reading}
 
 - [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Staking with Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_

@@ -4,13 +4,13 @@ description: Scopri come e perché i validatori di Ethereum divideranno le propr
 lang: it
 ---
 
-# Separazione proponente-sviluppatore {#proposer-builder-separation}
+# Separazione proponente-sviluppatore \{#proposer-builder-separation}
 
 I validatori odierni di Ethereum creano _e_ trasmettono i blocchi. Raggruppano le transazioni che hanno sentito nella rete di gossip e le impacchettano in un blocco, inviato ai pari sulla rete di Ethereum. La **separazione tra propositore e costruttore (PBS)** divide queste mansioni tra più validatori. I costruttori di blocchi diventano responsabili della creazione dei blocchi e li offrono al propositore di blocchi, in ogni spazio. Il propositore di blocchi non può visualizzare i contenuti del blocco, semplicemente, sceglie il più profittevole, pagando una commissione al suo costruttore, prima di inviarlo i suoi pari.
 
 Questo è un aggiornamento importante per svariati motivi. Primo, crea opportunità per prevenire la censura delle transazioni al livello del protocollo. Secondo, impedisce ai validatori hobbisti di essere "battuti" dalla concorrenza di utenti istituzionali, che possono meglio ottimizzare la redditività della costruzione del proprio blocco. Terzo, aiuta a ridimensionare Ethereum, consentendo gli aggiornamenti di Danksharding.
 
-## PBS e resistenza alla censura {#pbs-and-censorship-resistance}
+## PBS e resistenza alla censura \{#pbs-and-censorship-resistance}
 
 La separazione dei costruttori e propositori di blocchi complica per i costruttori di blocchi la censura delle transazioni. Questo perché, dei criteri di inclusione relativamente complessi possono essere aggiunti, assicurando che non avvenga alcuna censura, prima della proposta del blocco. Poiché il propositore di blocchi è un'entità separata dal costruttore di blocchi, può assumere il ruolo di protettore, contro la censura dei costruttori di blocchi.
 
@@ -24,7 +24,7 @@ Potenti organizzazioni possono spingere i validatori a censurare le transazioni 
 
 </ExpandableCard>
 
-## PBS e MEV {#pbs-and-mev}
+## PBS e MEV \{#pbs-and-mev}
 
 Il **Valore Massimo Estraibile (MEV)** fa riferimento ai validatori che massimizzano la propria redditività, ordinando favorevolmente le transazioni. Esempi comuni includono gli scambi di arbitraggio sulle piattaforme di scambio decentralizzate (es. frontrunning di una grande vendita o un grande acquisto) o identificazione di opportunità per liquidare posizioni della DeFi. La massimizzazione del MEV richiede conoscenze tecniche sofisticate e software personalizzati aggiunti ai normali validatori, rendendo più probabile che gli operatori istituzionali surclassino i validatori individuali e hobbisti all'estrazione del MEV. Ciò significa che i rendimenti da staking potrebbero essere maggiori con operatori centralizzati, creando una forza centralizzante che disincentiva lo staking domestico.
 
@@ -35,15 +35,15 @@ La PBS risolve questo problema, riconfigurando l'economia del MEV. Invece del pr
 Gli individui potrebbero essere incentivati a mettere in staking in gruppo, piuttosto che per conto proprio, grazie alle ricompense migliorate, offerte dalle sofisticate strategie di MEV. La separazione della costruzione e proposta dei blocchi significa che il MEV estratto sarà distribuito su più validatori, piuttosto che centralizzato con il ricercatore di MEV più efficiente. Al contempo, consentire ai costruttori di blocchi specializzati di esistere prende l'onere di costruzione dei blocchi dai singoli individui, impedendo ai singoli di rubare il MEV per sé stessi, pur massimizzando il numero di validatori individuali e indipendenti, che possono verificare che i blocchi siano onesti. Il concetto importante è la "asimmetria tra dimostratore e verificatore", che fa riferimento all'idea che la produzione centralizzata dei blocchi vada bene, finché è una rete di validatori robusta e massimamente decentralizzata, capace di provare che i blocchi sono onesti. La decentralizzazione è un mezzo, non un obiettivo finale; ciò che vogliamo sono blocchi onesti.
 </ExpandableCard>
 
-## PBS e Danksharding {#pbs-and-danksharding}
+## PBS e Danksharding \{#pbs-and-danksharding}
 
 Il danksharding è come Ethereum si ridimensionerà a circa 100.000 transazioni al secondo e minimizzerà le commissioni per gli utenti dei rollup. Si affida alla PBS poiché si somma al carico di lavoro per i costruttori di blocchi, che dovranno calcolare prove fino a 64MB dei dati di rollup, in meno di 1 secondo. Ciò probabilmente richiederà costruttori specializzati, che possano dedicare hardware importanti a questa attività. Tuttavia, nella situazione corrente, la costruzione dei blocchi potrebbe divenire sempre più centralizzata, con operatori più sofisticati e potenti, grazie all'estrazione del MEV. La separazione tra propositori e costruttori è un modo per abbracciare tale realtà, impedendogli di esercitare una forza centrale sulla validazione dei blocchi (la parte importante) o sulla distribuzione delle ricompense di staking. Un ottimo beneficio collaterale è che i costruttori di blocchi specializzati sono anche disposti e capaci di calcolare le prove di dati necessarie per il Danksharding.
 
-## Stato attuale {#current-progress}
+## Stato attuale \{#current-progress}
 
 La PBS è in una fase di ricerca avanzata, ma esistono ancora delle importanti domande di design che devono essere risolte prima che possa essere prototipata nei client di Ethereum. Non esistono ancora delle specifiche finalizzate. Ciò significa che la PBS potrebbe ancora richiedere qualche anno. Consulta lo [stato della ricerca](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance) più recente.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Stato della ricerca: resistenza alla censura sotto PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [Design di mercato delle commissioni pratici per PBS](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)

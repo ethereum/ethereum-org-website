@@ -8,28 +8,28 @@ skill: intermediate
 published: 2022-04-01
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 In this article, you learn about [optimistic rollups](/developers/docs/scaling/optimistic-rollups), the cost of transactions on them, and how that different cost structure requires us to optimize for different things than on the Ethereum Mainnet.
 You also learn how to implement this optimization.
 
-### Full disclosure {#full-disclosure}
+### Full disclosure \{##full-disclosure}
 
 I'm a full time [Optimism](https://www.optimism.io/) employee, so examples in this article will run on Optimism.
 However, the technique explained here should work just as well for other rollups.
 
-### Terminology {#terminology}
+### Terminology \{##terminology}
 
 When discussing rollups, the term 'layer 1' (L1) is used for Mainnet, the production Ethereum network.
 The term 'layer 2' (L2) is used for the rollup or any other system that relies on L1 for security but does most of its processing off-chain.
 
-## How can we further reduce the cost of L2 transactions? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## How can we further reduce the cost of L2 transactions? \{##how-can-we-further-reduce-the-cost-of-L2-transactions}
 
 [Optimistic rollups](/developers/docs/scaling/optimistic-rollups) have to preserve a record of every historical transaction so that anybody will be able to go through them and verify that the current state is correct.
 The cheapest way to get data into the Ethereum Mainnet is to write it as calldata.
 This solution was chosen by both [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) and [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
-### Cost of L2 transactions {#cost-of-l2-transactions}
+### Cost of L2 transactions \{##cost-of-l2-transactions}
 
 The cost of L2 transactions is composed of two components:
 
@@ -45,7 +45,7 @@ One of the most expensive operations on the EVM is writing to storage.
 The maximum cost of writing a 32-byte word to storage on L2 is 22100 gas. Currently, this is 22.1 gwei.
 So if we can save a single zero byte of calldata, we'll be able to write about 200 bytes to storage and still come out ahead.
 
-### The ABI {#the-abi}
+### The ABI \{##the-abi}
 
 The vast majority of transactions access a contract from an externally-owned account.
 Most contracts are written in Solidity and interpret their data field per [the application binary interface (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
@@ -77,12 +77,12 @@ However, on L2, things are different. Almost the entire cost of the transaction 
 In addition to the transaction calldata, there are 109 bytes of transaction header (destination address, signature, etc.).
 The total cost is therefore `109*16+576+160=2480`, and we are wasting about 6.5% of that.
 
-## Reducing costs when you don't control the destination {#reducing-costs-when-you-dont-control-the-destination}
+## Reducing costs when you don't control the destination \{##reducing-costs-when-you-dont-control-the-destination}
 
 Assuming that you do not have control over the destination contract, you can still use a solution similar to [this one](https://github.com/qbzzt/ethereum.org-20220330-shortABI).
 Let's go over the relevant files.
 
-### Token.sol {#token-sol}
+### Token.sol \{##token-sol}
 
 [This is the destination contract](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol).
 It is a standard ERC-20 contract, with one additional feature.
@@ -100,7 +100,7 @@ It would make a production ERC-20 contract useless, but it makes life easier whe
 
 [You can see an example of this contract being deployed here](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol {#calldatainterpreter-sol}
+### CalldataInterpreter.sol \{##calldatainterpreter-sol}
 
 [This is the contract that transactions are supposed to call with shorter calldata](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol).
 Let's go over it line by line.
@@ -275,7 +275,7 @@ Overall, a transfer takes 35 bytes of calldata:
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test-js}
+### test.js \{##test-js}
 
 [This JavaScript unit test](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) shows us how to use this mechanism (and how to verify it works correctly).
 I am going to assume you understand [chai](https://www.chaijs.com/) and [ethers](https://docs.ethers.io/v5/) and only explain the parts that specifically apply to the contract.
@@ -368,7 +368,7 @@ Create a transfer transaction. The first byte is "0x02", followed by the destina
 })      // describe
 ```
 
-### Example {#example}
+### Example \{##example}
 
 If you want to see these files in action without running them yourself, follow these links:
 
@@ -379,7 +379,7 @@ If you want to see these files in action without running them yourself, follow t
    This call has to go directly to the token contract because the processing relies on `msg.sender`.
 5. [Call to `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748).
 
-## Reducing the cost when you do control the destination contract {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Reducing the cost when you do control the destination contract \{##reducing-the-cost-when-you-do-control-the-destination-contract}
 
 If you do have control over the destination contract you can create functions that bypass the `msg.sender` checks because they trust the calldata interpreter.
 [You can see an example of how this works here, in the `control-contract` branch](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
@@ -388,7 +388,7 @@ If the contract were responding only to external transactions, we could get by w
 However, that would break [composability](/developers/docs/smart-contracts/composability/).
 It is much better to have a contract that responds to normal ERC-20 calls, and another contract that responds to transactions with short call data.
 
-### Token.sol {#token-sol-2}
+### Token.sol \{##token-sol-2}
 
 In this example we can modify `Token.sol`.
 This lets us have a number of functions that only the proxy may call.
@@ -494,7 +494,7 @@ Here we have a proxy version these operations which:
 1. Is modified by `onlyProxy()` so nobody else is allowed to control them.
 2. Gets the address that would normally be `msg.sender` as an extra parameter.
 
-### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
+### CalldataInterpreter.sol \{##calldatainterpreter-sol-2}
 
 The calldata interpreter is nearly identical to the one above, except that the proxied functions receive a `msg.sender` parameter and there is no need for an allowance for `transfer`.
 
@@ -528,7 +528,7 @@ The calldata interpreter is nearly identical to the one above, except that the p
         }
 ```
 
-### Test.js {#test-js-2}
+### Test.js \{##test-js-2}
 
 There are a few changes between the previous testing code and this one.
 
@@ -588,7 +588,7 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 Test the two new functions.
 Note that `transferFromTx` requires two address parameters: the giver of the allowance and the receiver.
 
-### Example {#example-2}
+### Example \{##example-2}
 
 If you want to see these files in action without running them yourself, follow these links:
 
@@ -601,7 +601,7 @@ If you want to see these files in action without running them yourself, follow t
 7. [Call to `transferFromProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421).
    Note that this call comes from a different address than the other ones, `poorSigner` instead of `signer`.
 
-## Conclusion {#conclusion}
+## Conclusion \{##conclusion}
 
 Both [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) and [Arbitrum](https://developer.offchainlabs.com/docs/special_features) are looking for ways to reduce the size of the calldata written to L1 and therefore the cost of transactions.
 However, as infrastructure providers looking for generic solutions, our abilities are limited.

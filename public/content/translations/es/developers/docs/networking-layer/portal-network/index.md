@@ -12,7 +12,7 @@ Portal Network es un nuevo diseño de red para Ethereum que tiene como objetivo 
 
 Más sobre [nodos y clientes](/developers/docs/nodes-and-clients/)
 
-## ¿Por qué necesitamos Portal Network? {#why-do-we-need-portal-network}
+## ¿Por qué necesitamos Portal Network? \{#why-do-we-need-portal-network}
 
 Los nodos de Ethereum almacenan su propia copia total o parcial de la cadena de bloques de Ethereum. Esta copia local se utiliza para validar las transacciones y garantizar que el nodo siga la cadena correcta. Estos datos almacenados localmente permiten a los nodos verificar de forma independiente que los datos entrantes son válidos y correctos sin necesidad de confiar en ninguna otra entidad.
 
@@ -22,7 +22,7 @@ Esto significa que ejecutar nodos puede ser caro, ya que se tiene que dedicar un
 
 Portal Network tiene como objetivo proporcionar una forma alternativa para que los nodos ligeros obtengan sus datos que no requieren confiar o agregar significativamente al trabajo que tienen que hacer los nodos completos. Esto se hace introduciendo una nueva forma para que los nodos de Ethereum compartan datos a través de la red.
 
-## ¿Cómo funciona Portal Network? {#how-does-portal-network-work}
+## ¿Cómo funciona Portal Network? \{#how-does-portal-network-work}
 
 Los nodos de Ethereum tienen protocolos estrictos que definen cómo se comunican entre sí. Los clientes de ejecución se comunican utilizando un conjunto de subprotocolos conocidos como [DevP2P](/developers/docs/networking-layer/#devp2p), mientras que los clientes de consenso utilizan una pila diferente de subprotocolos llamada [libP2P](/developers/docs/networking-layer/#libp2p). Estos definen los tipos de datos que se pueden pasar entre nodos.
 
@@ -61,7 +61,7 @@ El siguiente diagrama muestra las funciones de los clientes existentes que Porta
 
 ![tabla de portal network](portal-network-table2.png)
 
-## Diversidad de clientes por defecto {#client-diversity-as-default}
+## Diversidad de clientes por defecto \{#client-diversity-as-default}
 
 Los desarrolladores de Portal Network también eligieron el diseño para construir tres clientes de la red portal separados desde el primer día.
 
@@ -75,7 +75,7 @@ Tener múltiples implementaciones de clientes independientes mejora la resilienc
 
 Si un cliente experimenta problemas o vulnerabilidades, otros clientes pueden seguir funcionando sin problemas, evitando un solo punto de fallo. Además, diversas implementaciones de clientes fomentan la innovación y la competencia, impulsando mejoras y reduciendo el riesgo de monocultivo dentro del ecosistema.
 
-## Más información {#futher-reading}
+## Más información \{#futher-reading}
 
 - [El Portal Network(Piper Merriam en Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Discord de Portal Network](https://discord.gg/CFFnmE7Hbs)

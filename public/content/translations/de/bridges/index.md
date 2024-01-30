@@ -4,13 +4,13 @@ description: Brücken erlauben es Benutzern, ihr Guthaben über verschiedene Blo
 lang: de
 ---
 
-# Blockchain-Brücken {#prerequisites}
+# Blockchain-Brücken \{#prerequisites}
 
 _Web3 hat sich zu einem Ökosystem von L1 Blockchains und L2 Skalierungslösungen entwickelt, die jeweils mit einzigartigen Fähigkeiten und Gegenleistungen entwickelt wurden. Mit dem Anstieg der Anzahl der Blockchain-Protokolle erhöht sich auch [das Bedürfnis, Vermögenswerte über Blockchains hinweg verschieben zu können](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Um diesem Bedürfnis gerecht zu werden, brauchen wir Brücken._
 
 <Divider />
 
-## Was sind Brücken? {#what-are-bridges}
+## Was sind Brücken? \{#what-are-bridges}
 
 Blockchain-Brücken funktionieren genau wie Brücken in der realen Welt. Genau wie eine Brücke zwei Orte in der realen Welt verbindet, verbindet eine Blockchain-Brücke zwei Blockchain-Ökosysteme. Blockchain-Brücken erleichtern die Kommunikation zwischen Blockchains. Dies wird durch den Austausch von Informationen und Vermögenswerten erreicht.
 
@@ -20,7 +20,7 @@ Sie kommen aus den USA und planen eine Reise nach Europa. Sie haben USD aber ben
 
 Aber was machen Sie, wenn Sie einen ähnlichen Umtausch durchführen möchten, um eine andere Blockchain zu benutzen? Angenommen, Sie möchten ETH auf dem Ethereum-Hauptnetzwerk in ETH auf [Arbitrum](https://arbitrum.io/) umtauschen. Genau wie der Währungstausch, den wir bei EUR durchgeführt haben, brauchen wir einen Mechanismus, um ETH von Ethereum zu Arbitrum umzutauschen. Brücken machen so eine Transaktion möglich. In diesem Fall hat [Arbitrum eine lokale Brücke](https://bridge.arbitrum.io/), welche ETH vom Hauptnetzwerk zu Arbitrum transferieren kann.
 
-## Warum brauchen wir Brücken? {#why-do-we-need-bridges}
+## Warum brauchen wir Brücken? \{#why-do-we-need-bridges}
 
 Alle Blockchains haben ihre Grenzen. Damit Ethereum skalieren und mit der Nachfrage Schritt halten kann, benötigt es Rollups. Alternativ sind L1s wie Solana und Avalanche anders konzipiert worden, um einen höheren Durchsatz zu ermöglichen. Dies geschieht aber auf Kosten der Dezentralität.
 
@@ -39,23 +39,23 @@ Brücken ermöglichen Folgendes:
 
 <Divider />
 
-## Anwendungsfälle für Brücken {#bridge-use-cases}
+## Anwendungsfälle für Brücken \{#bridge-use-cases}
 
 Für die folgenden Szenarien können Brücken verwendet werden:
 
-### Niedrigere Transaktionsgebühren {#transaction-fees}
+### Niedrigere Transaktionsgebühren \{#transaction-fees}
 
 Nehmen wir an, Sie haben ETH auf dem Ethereum-Hauptnetzwerk, wollen aber günstigere Transaktionsgebühren, um verschiedene dApps auszuprobieren. Wenn Sie Ihr ETH vom Hauptnetzwerk zu einem Ethereum L2 Rollup überbrücken, können Sie günstigere Transaktionsgebühren nutzen.
 
-### dApps auf anderen Blockchains {#dapps-other-chains}
+### dApps auf anderen Blockchains \{#dapps-other-chains}
 
 Wenn Sie Aave auf dem Ethereum-Hauptnetzwerk verwenden, um USDT zu leihen, aber der Zinssatz für USDT mit Aave auf Polygon höher ist.
 
-### Entdecken Sie Blockchain-Ökosysteme {#explore-ecosystems}
+### Entdecken Sie Blockchain-Ökosysteme \{#explore-ecosystems}
 
 Wenn Sie ETH auf dem Ethereum-Hauptnetzwerk haben und ein alternatives L1 erkunden möchten, um dessen native dApps auszuprobieren. Sie können eine Brücke benutzen, um Ihr ETH vom Ethereum-Hauptnetzwerk auf die alternative L1 zu übertragen.
 
-### Erhalten Sie native Krypto-Vermögenswerte {#own-native}
+### Erhalten Sie native Krypto-Vermögenswerte \{#own-native}
 
 Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Geld auf dem Ethereum-Hauptnetzwerk. Um Bitcoin auf Ethereum zu besitzen, können Sie Wrapped Bitcoin (WBTC) kaufen. WBTC ist ein ERC-20 Token, der auf dem Netzwerk von Ethereum zu Hause ist, damit sozusagen eine Ethereum-Version von Bitcoin. WBTC ist aber nicht der ursprüngliche Bitcoin auf der Bitcoin-Blockchain. Um ursprüngliche BTC zu besitzen, muss eine Brücke zwischen Ethereum und Bitcoin genutzt werden. Mit dieser Brücke lässt sich WBTC in ursprüngliche BTC umwandeln. Nehmen wir an, Sie besitzen BTC und möchten Defi-Protokolle in Ethereum nutzen. Dann müssten Sie Ihre BTC in WBTC umwandeln, welche Sie dann als Vermögenswert in Ethereum nutzen können.
 
@@ -65,7 +65,7 @@ Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Ge
 
 <Divider />
 
-## Arten von Brücken {#types-of-bridge}
+## Arten von Brücken \{#types-of-bridge}
 
 Brücken haben viele Arten von Entwürfen und Verkomplizierungen. Im Allgemeinen fallen Brücken in zwei Kategorien: vertrauenswürdige und vertrauenslose Brücken.
 
@@ -95,7 +95,7 @@ Viele Brückenlösungen übernehmen Modelle zwischen diesen beiden Extremen mit 
 
 <Divider />
 
-## Risiken von Brücken {#bridge-risk}
+## Risiken von Brücken \{#bridge-risk}
 
 Brücken befinden sich in der Anfangsphase der Entwicklung. Es ist wahrscheinlich, dass das optimale Brückenkonzept noch nicht entdeckt wurde. Die Interaktion mit jeder Art von Brücke birgt eine gewisse Gefahr:
 
@@ -121,7 +121,7 @@ Brücken sind von entscheidender Bedeutung für Benutzer, die Ethereum L2s und s
 
 <Divider />
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [EIP-5164: Cross-Chain-Ausführung](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18. Juni 2022 - Brendan Asselstine_
 - [L2Bridge Risiko-Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5. Juli 2022 - Bartek Kiepuszewski_

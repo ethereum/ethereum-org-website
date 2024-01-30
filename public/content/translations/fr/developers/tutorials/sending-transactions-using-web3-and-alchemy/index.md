@@ -17,30 +17,30 @@ Voici un guide à l'attention des débutants qui explique comment envoyer des tr
 
 **NOTE :** Ce guide est destiné à signer vos transactions sur le _backend_ de votre application. Si vous voulez intégrer la signature de vos transactions en frontend, consultez l'intégration de [Web3 avec un fournisseur de navigateur](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
-## Les bases {#the-basics}
+## Les bases \{#the-basics}
 
 Comme la plupart des développeurs blockchain débutants, vous avez peut-être fait des recherches sur la façon d'envoyer une transaction (ce qui devrait être assez simple ) et vous êtes tombé sur une pléthore de guides, chacun décrivant des choses différentes, vous laissant quelque peu dépassé et désorienté. Si vous êtes dans ce cas, ne vous inquiétez pas, nous l'avons tous été à un moment ou à un autre ! Donc, avant de commencer, mettons certaines choses au clair :
 
-### 1\. Alchemy ne stocke pas vos clés privées {#alchemy-does-not-store-your-private-keys}
+### 1\. Alchemy ne stocke pas vos clés privées \{#alchemy-does-not-store-your-private-keys}
 
 - Cela signifie qu'Alchemy ne peut pas signer et envoyer des transactions en votre nom. Ceci pour  des raisons de sécurité. Alchemy ne vous demandera jamais de partager votre clé privée, et vous ne devriez jamais partager votre clé privée avec un nœud hébergé (ni avec quiconque d'ailleurs).
 - Vous pouvez lire sur la blockchain en utilisant l'API Alchemy, mais pour y écrire vous devrez utiliser quelque chose d'autre afin de signer vos transactions par le biais d'Alchemy (c'est le cas pour tous les [services d'accès à la blockchain](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. Qu'est-ce qu'un « signataire » ? {#what-is-a-signer}
+### 2\. Qu'est-ce qu'un « signataire » ? \{#what-is-a-signer}
 
 - Les signataires signeront pour vous les transactions en utilisant votre clé privée. Dans ce tutoriel, nous utiliserons [Alchemy web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) pour signer notre transaction, mais vous pouvez également utiliser n'importe quelle autre bibliothèque web3.
 - En frontend, un bon exemple de signataire serait [MetaMask](https://metamask.io/), qui signera et enverra des transactions en votre nom.
 
-### 3\. Pourquoi dois-je signer mes transactions? {#why-do-i-need-to-sign-my-transactions}
+### 3\. Pourquoi dois-je signer mes transactions? \{#why-do-i-need-to-sign-my-transactions}
 
 - Chaque utilisateur souhaitant envoyer une transaction sur le réseau Ethereum doit signer la transaction (à l'aide de sa clé privée), afin de valider que l'origine de la transaction est bien celle qu'elle prétend être.
 - Il est très important de protéger cette clé privée, car le fait d'y avoir accès vous donne le contrôle total de votre compte Ethereum, ce qui vous permet (ou à quiconque y ayant accès) d'effectuer des transactions en votre nom.
 
-### 4\. Comment protéger ma clé privée ? {#how-do-i-protect-my-private-key}
+### 4\. Comment protéger ma clé privée ? \{#how-do-i-protect-my-private-key}
 
 - Il existe de nombreuses façons de protéger votre clé privée et de l'utiliser pour envoyer des transactions. Dans ce tutoriel, nous allons utiliser un fichier `.env`. Cependant, vous pouvez également faire appel à un autre fournisseur qui stocke les clés privées, utiliser un fichier keystore, ou d'autres options.
 
-### 5\. Quelle est la différence entre `eth_sendTransaction` et `eth_sendRawTransaction` ? {#difference-between-send-and-send-raw}
+### 5\. Quelle est la différence entre `eth_sendTransaction` et `eth_sendRawTransaction` ? \{#difference-between-send-and-send-raw}
 
 `eth_sendTransaction` et `eth_sendRawTransaction` sont des fonctions API Ethereum qui diffusent une transaction sur le réseau Ethereum afin qu'elle soit ajoutée à un bloc futur. Elles diffèrent dans la façon dont elles gèrent la signature des transactions.
 
@@ -51,7 +51,7 @@ Lorsque vous utilisez web3, `eth_sendRawTransaction` est accessible en appelant 
 
 C'est ce que nous utiliserons dans notre tutoriel.
 
-### 6\. Qu'est-ce que la bibliothèque web3 ? {#what-is-the-web3-library}
+### 6\. Qu'est-ce que la bibliothèque web3 ? \{#what-is-the-web3-library}
 
 - Web3.js est une bibliothèque de wrapper autour des appels standard JSON-RPC qui est couramment utilisée dans le développement Ethereum.
 - Il existe de nombreuses bibliothèques web3 pour différents langages de programmation. Dans ce tutoriel, nous utiliserons [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), écrit en JavaScript. Vous pouvez explorer d'autres options [ici](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries), telles que [ethers.js](https://docs.ethers.org/v5/).
@@ -69,17 +69,17 @@ Bon, maintenant que nous avons clarifié ces points, passons au tutoriel. N'hés
 2.  [Créez un compte Metamask](https://metamask.io/) (ou obtenez une adresse Ethereum)
 3.  [Suivez ces étapes pour installer NodeJs et NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
-## Étapes pour envoyer votre transaction {#steps-to-sending-your-transaction}
+## Étapes pour envoyer votre transaction \{#steps-to-sending-your-transaction}
 
-### 1\. Créer une application Alchemy sur le réseau de test Sepolia {#create-an-alchemy-app-on-the-sepolia-testnet}
+### 1\. Créer une application Alchemy sur le réseau de test Sepolia \{#create-an-alchemy-app-on-the-sepolia-testnet}
 
 Naviguez vers votre [tableau de bord d'Alchemy](https://dashboard.alchemyapi.io/) et créez une nouvelle application, en choisissant Sepolia (ou tout autre réseau de test) comme réseau.
 
-### 2\. Demander de l'ETH via le robinet Sepolia {#request-eth-from-sepolia-faucet}
+### 2\. Demander de l'ETH via le robinet Sepolia \{#request-eth-from-sepolia-faucet}
 
 Suivez les instructions sur le robinet [Alchemy Sepolia](https://www.sepoliafaucet.com/) pour recevoir de l'ETH. Assurez-vous d'inclure votre adresse Ethereum **Sepolia** (depuis MetaMask) et non celle d'un autre réseau. Après avoir suivi les instructions, vérifiez que vous avez reçu l'ETH dans votre portefeuille.
 
-### 3\. Créez un nouveau répertoire de projet et placez-y un `cd` {#create-a-new-project-direction}
+### 3\. Créez un nouveau répertoire de projet et placez-y un `cd` \{#create-a-new-project-direction}
 
 Créez un nouveau répertoire de projet à partir de la ligne de commande (terminal pour macs) et naviguez dans celui-ci :
 
@@ -88,7 +88,7 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4\. Installer Alchemy Web3 (ou n'importe quelle autre bibliothèque web3) {#install-alchemy-web3}
+### 4\. Installer Alchemy Web3 (ou n'importe quelle autre bibliothèque web3) \{#install-alchemy-web3}
 
 Exécutez la commande suivante dans votre dossier projet pour installer [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) :
 
@@ -98,7 +98,7 @@ Notez que si vous souhaitez utiliser la bibliothèque ethers.js, [suivez les ins
 npm install @alch/alchemy-web3
 ```
 
-### 5\. Installer dotenv {#install-dotenv}
+### 5\. Installer dotenv \{#install-dotenv}
 
 Nous utiliserons un fichier `.env` pour stocker en toute sécurité notre clé API et notre clé privée.
 
@@ -106,7 +106,7 @@ Nous utiliserons un fichier `.env` pour stocker en toute sécurité notre clé A
 npm install dotenv --save
 ```
 
-### 6\. Créer le fichier `.env` {#create-the-dotenv-file}
+### 6\. Créer le fichier `.env` \{#create-the-dotenv-file}
 
 Créez un fichier `.env` dans votre répertoire de projet et ajoutez les éléments suivants (en remplaçant «` your-api-URL `» et « `your-private-key` »)
 
@@ -122,7 +122,7 @@ PRIVATE_KEY = "your-private-key"
 Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
-### 7\. Créer le fichier `sendTx.js` {#create-sendtx-js}
+### 7\. Créer le fichier `sendTx.js` \{#create-sendtx-js}
 
 Super, maintenant que nous avons protégé nos données sensibles dans un fichier `.env`, commençons à coder. Pour notre exemple d'envoi de transaction, nous renverrons l'ETH via le robinet Sepolia.
 
@@ -181,7 +181,7 @@ Avant de nous lancer dans l’exécution de ce code, parlons ici de certains de 
 - Transaction de contrat intelligent : Exécuter le code d'un contrat intelligent sur la chaîne. Dans ce cas, le champ de données doit contenir la fonction intelligente que vous souhaitez exécuter, ainsi que tout paramètre.
   - Pour un exemple pratique, consultez l'Étape 8 de ce [Tutoriel Hello World](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction).
 
-### 8\. Exécuter le code en utilisant `node sendTx.js` {#run-the-code-using-node-sendtx-js}
+### 8\. Exécuter le code en utilisant `node sendTx.js` \{#run-the-code-using-node-sendtx-js}
 
 Retournez à votre terminal ou votre invite de ligne de commande et exécutez :
 
@@ -189,7 +189,7 @@ Retournez à votre terminal ou votre invite de ligne de commande et exécutez :
 node sendTx.js
 ```
 
-### 9\. Consulter votre transaction dans le Mempool {#see-your-transaction-in-the-mempool}
+### 9\. Consulter votre transaction dans le Mempool \{#see-your-transaction-in-the-mempool}
 
 Ouvrez la page [Mempool](https://dashboard.alchemyapi.io/mempool) dans votre tableau de bord Alchemy et filtrez avec l'application que vous avez créée pour trouver votre transaction. C'est là que nous pouvons observer le passage de l'état de notre transaction de l'état en attente à l'état miné (si la transaction a abouti) ou à l'état abandonné en cas d'échec. Veillez à opter pour « All » (Tous) afin de visualiser les transactions « mined » (minées), « pending » (en attente) et « dropped » (abandonnées). Vous pouvez également trouver votre transaction en recherchant les transactions envoyées à l'adresse `0x31b98d14007bdee637298086988a0bbd31184523`.
 

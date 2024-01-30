@@ -8,7 +8,7 @@ summaryPoints:
   - Chaves perdidas e expostas podem ser recuperadas usando vários backups
 ---
 
-# Abstração de conta {#account-abstraction}
+# Abstração de conta \{#account-abstraction}
 
 Os usuários interagem com o Ethereum por meio de **[contas de propriedade externa (EOAs)](/glossary/#eoa)**. Essa é a única maneira de iniciar uma transação ou executar um contrato inteligente. Isso limita a maneira como os usuários podem interagir com o Ethereum. Por exemplo, dificulta a realização de lotes de transações e exige que os usuários sempre mantenham um saldo de ETH para cobertura do gás.
 
@@ -34,7 +34,7 @@ As carteiras de contratos inteligentes são a solução para esses problemas, ma
 
 Em última análise, a abstração de contas melhora o suporte a carteiras de contratos inteligentes, tornando-as mais fáceis de criar e mais seguras de usar. No final, com a abstração de conta, os usuários podem aproveitar todos os benefícios do Ethereum sem precisar conhecer ou se preocupar com a tecnologia subjacente.
 
-## Além das frases sementes {#beyond-seed-phrases}
+## Além das frases sementes \{#beyond-seed-phrases}
 
 As contas de hoje são protegidas por meio de chaves privadas que são calculadas a partir de frases sementes. Qualquer pessoa que tenha acesso a uma frase semente pode descobrir facilmente a chave privada que protege uma conta e obter acesso a todos os ativos que ela protege. Se uma chave privada e uma frase semente forem perdidas, elas nunca poderão ser recuperadas e os ativos que elas controlam ficarão congelados para sempre. Proteger essas frases semente é difícil, mesmo para usuários experientes, e o phishing de frases semente é uma das maneiras mais comuns de enganar os usuários.
 
@@ -50,7 +50,7 @@ Por exemplo, as chaves de backup podem ser adicionadas a uma carteira para que, 
 - **Definir limites de transação**: especifique limites diários de quanto valor pode ser transferido da conta em um dia/semana/mês. Isso significa que, se um invasor obtiver acesso à sua conta, ele não poderá ficar com tudo de uma vez e você terá oportunidades de congelar e redefinir o acesso.
 - **Criar listas de permissões**: permita transações apenas para endereços específicos, que você sabe que são seguros. Isso significa que, _mesmo_ em caso de roubo da sua chave privada, o invasor não poderia enviar fundos para contas de destino não autorizadas. Essas listas de permissão exigiriam várias assinaturas para alterá-las, de modo que um invasor não poderia adicionar o endereço dele à lista, a menos que tivesse acesso a diversas das suas chaves de backup.
 
-## Melhor experiência do usuário {#better-user-experience}
+## Melhor experiência do usuário \{#better-user-experience}
 
 A abstração de conta permite uma **melhor experiência geral do usuário**, bem como uma **segurança reforçada**, porque adiciona suporte para carteiras de contratos inteligentes no nível do protocolo. O motivo mais importante para isso é que isso proporcionará aos desenvolvedores de contratos inteligentes, carteiras e aplicativos muito mais liberdade para inovar a experiência do usuário de maneiras que talvez ainda não possamos prever. Alguns aprimoramentos óbvios que ocorrerão com a abstração de contas incluem o agrupamento de transações para aumentar a velocidade e a eficiência. Por exemplo, uma simples troca deveria ser uma operação de um clique, mas atualmente é necessário assinar várias transações para aprovar o gasto de tokens individuais antes da realização da troca. A abstração da conta remove esse atrito ao permitir o agrupamento de transações. Além disso, a transação agrupada poderia aprovar exatamente o valor correto dos tokens exigidos para cada transação e, em seguida, revogar as aprovações após a conclusão da transação, o que oferece uma segurança adicional.
 
@@ -70,7 +70,7 @@ Também é interessante considerar como as compras poderiam mudar com a abstraç
 
 Esses são apenas alguns exemplos de como as experiências do usuário podem ser aprimoradas pela abstração de contas, mas haverá muitos outros que ainda nem imaginamos. A abstração de contas libera os desenvolvedores das restrições dos EOAs atuais, permite que tragam os aspectos positivos da web2 para a web3 sem sacrificar a autocustódia e criar novas experiências de usuário inovadoras.
 
-## Como a abstração da conta será implementada? {#how-will-aa-be-implemented}
+## Como a abstração da conta será implementada? \{#how-will-aa-be-implemented}
 
 Atualmente, existem carteiras de contratos inteligentes, mas a implementação é difícil porque a EVM não tem compatibilidade com as carteiras. Em vez disso, elas dependem do agrupamento ("enrolamento") de códigos relativamente complexos em torno de transações padrão da Ethereum. O Ethereum pode mudar isso ao permitir que contratos inteligentes iniciem transações, processando a lógica necessária em contratos inteligentes Ethereum em vez de fora da cadeia. Colocar lógica em contratos inteligentes também aumenta a descentralização do Ethereum, pois elimina a necessidade de "retransmissores" executados por desenvolvedores de carteiras para traduzir mensagens assinadas pelo usuário em transações regulares do Ethereum.
 
@@ -106,11 +106,11 @@ Observe que o protocolo EIP-3074 não está ativo no momento. A comunidade atual
 
 </ExpandableCard>
 
-## Progresso atual {#current-progress}
+## Progresso atual \{#current-progress}
 
 As carteiras de contratos inteligentes já estão disponíveis, mas são necessárias mais melhorias para torná-las o mais descentralizadas e sem permissão possível. O EIP-4337 é uma proposta desenvolvida que não exige nenhuma alteração no protocolo Ethereum, portanto, é possível que isso seja implementado rapidamente. Entretanto, as melhorias que alteram o protocolo Ethereum não estão em desenvolvimento ativo no momento. Portanto, ainda pode demorar muito para a implementação dessas alterações. Também é possível que EIP-4337 alcance a abstração da conta de uma maneira suficientemente adequada, e nenhuma alteração de protocolo será necessária.
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Discussão do painel sobre abstração de conta da Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

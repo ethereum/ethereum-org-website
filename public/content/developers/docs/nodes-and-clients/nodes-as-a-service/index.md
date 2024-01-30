@@ -5,15 +5,15 @@ lang: en
 sidebarDepth: 2
 ---
 
-## Introduction {#Introduction}
+## Introduction \{#Introduction}
 
 Running your own [Ethereum node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) can be challenging, especially when getting started or while scaling fast. There are a [number of services](#popular-node-services) that run optimized node infrastructures for you, so you can focus on developing your application or product instead. We'll explain how node services work, the pros and cons for using them and list providers if you are interested in getting started.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{##prerequisites}
 
 If you don't already have an understanding of what nodes and clients are, check out [Nodes and clients](/developers/docs/nodes-and-clients/).
 
-## Stakers {#stakoooooooooooooors}
+## Stakers \{##stakoooooooooooooors}
 
 Solo stakers must run their own infrastructure rather than relying on third-party providers. This means running an execution client coupled with a consensus client. Before [The Merge](/roadmap/merge), it was possible to run a consensus client only and use a centralized provider for execution data; this is no longer possible - a solo staker must run both clients. However, there are services available to ease this process.
 
@@ -21,7 +21,7 @@ Solo stakers must run their own infrastructure rather than relying on third-part
 
 The services described on this page are for non-staking nodes.
 
-## How do node services work? {#how-do-node-services-work}
+## How do node services work? \{##how-do-node-services-work}
 
 Node service providers run distributed node clients behind the scenes for you, so you don't have to.
 
@@ -35,19 +35,19 @@ Often times node services will run a variety of [node clients](/developers/docs/
 
 It's important to note that node services do not and should not store your private keys or information.
 
-## What are the benefits of using a node service? {#benefits-of-using-a-node-service}
+## What are the benefits of using a node service? \{##benefits-of-using-a-node-service}
 
 The main benefit for using a node service is not having to spend engineering time maintaining and managing nodes yourself. This allows you to focus on building your product rather than having to worry about infrastructure maintenance.
 
 Running your own nodes can be very expensive from storage to bandwidth to valuable engineering time. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can distract from building and spending resources on your desired web3 product.
 
-## What are the cons of using a Node Service? {#cons-of-using-a-node-service}
+## What are the cons of using a Node Service? \{##cons-of-using-a-node-service}
 
 By using a node service you are centralizing the infrastructure aspect of your product. For this reason, projects that hold decentralization to the upmost importance might prefer self-hosting nodes rather than outsourcing to a 3rd party.
 
 Read more about the [benefits of running your own node](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Popular node services {#popular-node-services}
+## Popular node services \{##popular-node-services}
 
 Here is a list of some of the most popular Ethereum node providers, feel free to add any that are missing! Each node service offers different benefits and features in addition to free or paid tiers, you should investigate which ones best suit your needs prior to making a decision.
 
@@ -372,15 +372,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Pay in Crypto
   - External support for extra behavior requirements
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [List of Ethereum node services](https://ethereumnodes.com/)
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 
-## Related tutorials {#related-tutorials}
+## Related tutorials \{##related-tutorials}
 
 - [Getting started with Ethereum development using Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guide to sending transactions using web3 and Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

@@ -12,17 +12,17 @@ Eğer bir Ethereum düğümüne bağlanmak için JavaScript kullanmak istiyorsan
 
 Lütfen "[Birleşim](/roadmap/merge/) olayından bu yana, bir düğümü çalıştırmak için iki bağlantılı Ethereum yazılımının parçası olan bir yürütüm istemcisi ve bir fikir birliği istemcisi gerektiğini unutmayın. Lütfen düğümünüzün hem bir yürütüm hem de fikir birliği istemcisini içerdiğinden emin olun. Eğer düğümünüz yerel makinanızda değilse (ör. düğümünüz bir AWS örneğinde çalışıyorsa) bu eğitimdeki IP adreslerini buna göre güncelleyin. Daha fazla bilgi için lütfen [bir düğüm çalıştırma](/developers/docs/nodes-and-clients/run-a-node/) sayfamıza bakın.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 JavaScript'i anlamanın yanı sıra, [Ethereum Yığınını](/developers/docs/ethereum-stack/) ve [Ethereum istemcilerini](/developers/docs/nodes-and-clients/) de anlamak faydalı olabilir.
 
-## Neden bir kitaplık kullanılır? {#why-use-a-library}
+## Neden bir kitaplık kullanılır? \{#why-use-a-library}
 
 Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın karmaşıklığının çoğunu ortadan kaldırır. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayarak ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
 
-## Kütüphane özellikleri {#library-features}
+## Kütüphane özellikleri \{#library-features}
 
-### Ethereum düğümlerine bağlanın {#connect-to-ethereum-nodes}
+### Ethereum düğümlerine bağlanın \{#connect-to-ethereum-nodes}
 
 Bu kütüphaneler, sağlayıcıları kullanarak JSON-RPC, INFURA, Etherscan, Alchemy veya MetaMask üzerinden Ethereum'a bağlanmanıza ve Ethereum verilerini okumanıza olanak tanır.
 
@@ -70,7 +70,7 @@ Kurulduktan sonra blok zinciri aşağıdakiler için sorgulayabileceksiniz:
 - ağ kimliği
 - ve daha fazlası...
 
-### Cüzdan işlevselliği {#wallet-functionality}
+### Cüzdan işlevselliği \{#wallet-functionality}
 
 Bu kitaplıklar size cüzdan oluşturma, anahtarları yönetme ve işlemleri imzalama işlevleri sunar.
 
@@ -151,7 +151,7 @@ Kurulduktan sonra şunları yapabileceksiniz:
 - işlemleri imzalayabilirsiniz
 - ve daha fazlası...
 
-### Akıllı sözleşme fonksiyonlarıyla etkileşim kurmak {#interact-with-smart-contract-functions}
+### Akıllı sözleşme fonksiyonlarıyla etkileşim kurmak \{#interact-with-smart-contract-functions}
 
 Javascript istemci kütüphaneleri, derlenmiş bir sözleşmenin Uygulama İkili Arayüzünü (ABI) okuyarak uygulamanızın akıllı sözleşme fonksiyonlarını çağırmasına olanak tanır.
 
@@ -213,7 +213,7 @@ Bu, şunları yapabileceğiniz anlamına gelir:
 - Sözleşme dağıtmak
 - Ve daha fazlası...
 
-### Yardımcı fonksiyonlar {#utility-functions}
+### Yardımcı fonksiyonlar \{#utility-functions}
 
 Yardımcı fonksiyonlar, Ethereum ile oluşturmayı biraz daha kolaylaştıran kullanışlı kısayollar sunar.
 
@@ -235,7 +235,7 @@ ethers.utils.formatEther(balance)
 - [Web3js yardımcı fonksiyonları](https://docs.web3js.org/api/web3-utils)
 - [Ethers yardımcı fonksiyonları](https://docs.ethers.io/v5/api/utils/)
 
-## Mevcut kütüphaneler {#available-libraries}
+## Mevcut kütüphaneler \{#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
@@ -279,16 +279,16 @@ ethers.utils.formatEther(balance)
 - [Dokümanlar](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
 - [Geliştirici çerçeveleri](/developers/docs/frameworks/)
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili öğreticiler \{#related-tutorials}
 
 - [JavaScript'te Ethereum blok zincirini kullanmak için Web3js'yi kurun](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Projenizde web3.js kurulumu için talimatlar._
 - [JavaScript'ten akıllı sözleşme çağırma](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI belirtecini kullanarak, JavaScript kullanan sözleşme işlevini nasıl çağıracağınızı görün._

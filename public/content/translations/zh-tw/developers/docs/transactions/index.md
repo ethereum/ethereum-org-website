@@ -6,11 +6,11 @@ lang: zh-tw
 
 交易是帳戶發出的帶密碼學簽章的指令。 帳戶將發起交易以更新以太坊網路的狀態。 最簡單的交易是將以太幣從一個帳戶轉帳到另一個帳戶。
 
-## 前置要求 {#prerequisites}
+## 前置要求 \{#prerequisites}
 
 為了讓你更容易理解本頁，建議你先閱讀[帳戶](/developers/docs/accounts/)及我們的[以太坊介紹](/developers/docs/intro-to-ethereum/)。
 
-## 什麼是交易？ {#whats-a-transaction}
+## 什麼是交易？ \{#whats-a-transaction}
 
 以太坊交易是指由外部帳戶發起的操作，換句話說，此帳戶是由人而不是智慧型合約管理的帳戶。 例如，如果 Bob 發送給 Alice 1 以太幣，Bob 的帳戶必須扣除，Alice 的帳戶必須存入。 此更改狀態的操作發生在交易中。
 
@@ -104,7 +104,7 @@ Geth 之類的以太坊用戶端將處理此簽署過程。
 
 交易具備簽章雜湊值，因此可通過加密技術證明交易來自發送者並提交至網路。
 
-### 資料欄位 {#the-data-field}
+### 資料欄位 \{#the-data-field}
 
 大多數交易從外部帳戶存取合約。 大部分合約都用 Solidity 寫成，並根據[應用程式介面 (ABI)](/glossary/#abi) 解譯其資料欄位。
 
@@ -125,7 +125,7 @@ calldata 的剩餘部分是參數，[依據 ABI 規範中的說明編碼](https:
 
 根據 ABI 規範，應用程式介面中的整數值（例如地址，20 字節位元組的整數）顯示為 32 字節位元組的字，並且前面用 0 來填補。 所以我們知道 `to` 地址為 [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279)。 `value` 為 0x3b0559f4 = 990206452。
 
-## 交易類型 {#types-of-transactions}
+## 交易類型 \{#types-of-transactions}
 
 以太坊上有幾種不同類型的交易：
 
@@ -133,7 +133,7 @@ calldata 的剩餘部分是參數，[依據 ABI 規範中的說明編碼](https:
 - 合約部署交易：沒有「to」地址的交易，其資料欄供合約程式碼所用。
 - 合約執行：與部署的智慧型合約互動的交易。 在本例中，「to」地址為智慧型合約的地址。
 
-### 關於燃料 {#on-gas}
+### 關於燃料 \{#on-gas}
 
 如上所述，執行交易需要花費[燃料](/developers/docs/gas/)。 簡單的轉帳交易需要 21000 單位燃料。
 
@@ -159,7 +159,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 任何交易中未使用的燃料都會退還給使用者帳戶。
 
-## 交易的生命週期 {#transaction-lifecycle}
+## 交易的生命週期 \{#transaction-lifecycle}
 
 一旦交易被提交，就會發生以下情況：
 
@@ -168,13 +168,13 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 3. 為了要驗證交易並使交易「成功」，驗證者必須選擇你的交易並將它打包進區塊中。
 4. 隨著時間推移，含有你交易的區塊會被升級為「已證明」，然後是「最終化」。 這些升級進一步確定 你的交易已經成功且永遠不會被更改。 當區塊「最終化」後，就僅可能被網路層級的攻擊變更， 此類攻擊需要花費數十億美元。
 
-## 視訊示範 {#a-visual-demo}
+## 視訊示範 \{#a-visual-demo}
 
 觀看 Austin 為你講解交易、燃料和挖礦。
 
 <YouTube id="er-0ihqFQB0" />
 
-## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
+## Typed Transaction Envelope 交易 \{#typed-transaction-envelope}
 
 以太坊最初有一種形式的交易。 每筆交易都包含 nonce、gas price、gas limit、to address、value、data、v、r 與 s。 這些欄位均為 [RLP 編碼](/developers/docs/data-structures-and-encoding/rlp/)，看上去像是以下內容：
 
@@ -191,13 +191,13 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 - `TransactionType` - 介於 0 和 0x7f 之間的數字，代表總計 128 種可能的交易類型。
 - `TransactionPayload` - 由交易類型定義的任意字節位元組陣列。
 
-## 衍生閱讀 {#further-reading}
+## 衍生閱讀 \{#further-reading}
 
 - [EIP-2718：Typed Transaction Envelope 交易](https://eips.ethereum.org/EIPS/eip-2718)
 
 _認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或添加於本頁!!_
 
-## 相關主題 {#related-topics}
+## 相關主題 \{#related-topics}
 
 - [帳戶](/developers/docs/accounts/)
 - [以太坊虛擬機](/developers/docs/evm/)

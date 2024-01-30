@@ -14,7 +14,7 @@ Para usar RLP para codificar un diccionario, las dos formas canónicas sugeridas
 - usar `[[k1,v1],[k2,v2]...]` con claves en orden lexicográfico
 - usar la codificación de Patricia Tree de nivel superior como lo hace Ethereum
 
-## Definición {#definition}
+## Definición \{#definition}
 
 La función de codificación RLP toma un elemento. Un elemento se define de la siguiente manera：
 
@@ -66,7 +66,7 @@ def to_binary(x):
     return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Ejemplos {#examples}
+## Ejemplos \{#examples}
 
 - la cadena "dog" = [ 0x83, 'd', 'o', 'g' ]
 - la lista [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - la [representación teórica de conjunto](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) de tres, `[ [], [[]], [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - la cadena "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-## Decodificación RLP {#rlp-decoding}
+## Decodificación RLP \{#rlp-decoding}
 
 De acuerdo con las reglas y el proceso de codificación RLP, la entrada de la decodificación RLP se considera una matriz de datos binarios. El proceso de decodificación RLP es el siguiente:
 
@@ -148,12 +148,12 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [RLP en Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Ethereum bajo el capó: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). Prefijo de longitud recursiva de Ethereum en ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [Patricia merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

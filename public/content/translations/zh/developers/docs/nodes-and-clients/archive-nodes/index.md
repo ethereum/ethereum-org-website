@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 归档节点是以太坊客户端实例，配置用于构建所有历史状态的归档。 它是一种对某些用例有用的工具，但可能比全节点更难运行。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 你应该理解[以太坊节点](/developers/docs/nodes-and-clients/)的概念、[它们的架构](/developers/docs/nodes-and-clients/node-architecture/)、[同步策略](/developers/docs/nodes-and-clients/#sync-modes)，以及它们的[运行](/developers/docs/nodes-and-clients/run-a-node/)和[使用](/developers/docs/apis/json-rpc/)的实践。
 
@@ -68,13 +68,13 @@ sidebarDepth: 2
 
 在初始同步期间，归档模式下的客户端将执行自创世块以来的每笔交易。 执行速度主要受 CPU 限制，所以更快的 CPU 可以帮助缩短初始同步时间。 在一台普通的消费者计算机上，初始同步所需的时间可能长达一个月。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊全节点 vs 归档节点](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode，2022 年 9 月_
 - [构建你自己的以太坊归档节点](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush，2021 年 8 月_
 - [如何设置 Erigon、Erigon 的远程过程调用和 TrueBlocks（抓取和应用程序接口）即服务](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson，2022 年 9 月更新_
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [运行节点](/developers/docs/nodes-and-clients/run-a-node/)

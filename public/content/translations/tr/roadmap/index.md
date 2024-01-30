@@ -18,7 +18,7 @@ Ethereum halihazırda küresel koordinasyon için güçlü bir platform, ancak y
 
 **Ethereum'daki daha önceki yükseltmeler hakkında öğrenmek için lütfen [Geçmiş](/history/) sayfamızı ziyaret edin**
 
-## Ethereum'a hangi değişiklikler geliyor? {#what-changes-are-coming}
+## Ethereum'a hangi değişiklikler geliyor? \{#what-changes-are-coming}
 
 Ethereum yol haritası, gelecekte protokole yapılacak özgün geliştirmelerin ana hatlarını oluşturur. Genel anlamda yol haritası, Ethereum kullanıcılarına aşağıdaki faydaları sağlayacaktır:
 
@@ -53,7 +53,7 @@ Ethereum yol haritası, gelecekte protokole yapılacak özgün geliştirmelerin 
   />
 </CardGrid>
 
-## Neden Ethereum bir yol haritasına ihtiyaç duyar? {#why-does-ethereum-need-a-roadmap}
+## Neden Ethereum bir yol haritasına ihtiyaç duyar? \{#why-does-ethereum-need-a-roadmap}
 
 Ethereum; ölçeklenebilirliğini, güvenliğini ya da sürdürülebilirliğini kuvvetlendirecek düzenli yükseltmeler alır. Ethereum'un temel güçlerinden biri, araştırma ve geliştirmeden ortaya çıkan yeni fikirlere uyumlu olmasıdır. Uyumluluk, Ethereum'a ortaya çıkan engelleri aşma ve en gelişmiş teknolojik atılımlara yetişme esnekliğini verir.
 
@@ -72,23 +72,23 @@ Yol haritası çoğunlukla, araştırmacı ve geliştirmecilerin yıllar süren 
 
 </InfoBanner>
 
-## Ethereum'un yol haritası zaman içinde değişecek mi? {#will-ethereums-roadmap-change-over-time}
+## Ethereum'un yol haritası zaman içinde değişecek mi? \{#will-ethereums-roadmap-change-over-time}
 
 Evet, neredeyse kesinlikle. Yol haritası, hem yakın dönemi hem gelecek planlarını kapsayan, Ethereum'u yükseltmenin şu anlık planıdır. Yeni bilgi ve teknolojiler kullanılabilir oldukça yol haritasının değişmesini umuyoruz.
 
 Ethereum'un yol haritasını Ethereum'un gelişmesi için bir niyet takımı olarak düşünün; bu, temel araştırma ve geliştiricilerin Ethereum'un ileriye dönük en uygun yolu için en iyi varsayımlarıdır.
 
-## Yol haritası ne zaman sonlanacak? {#when-will-the-roadmap-be-finished}
+## Yol haritası ne zaman sonlanacak? \{#when-will-the-roadmap-be-finished}
 
 Ethereum, gelecek 6 ay içinde kimi yükseltmeleri uygulamaya koyacak (ör. hisseleme çekimleri); diğerleri ise daha az önceliğe sahip ve önümüzdeki 5-10 yıl içerisinde uygulamaya konması mümkün görünmüyor (ör. kuantum direnci). Birçok yol haritası elemanı birbirine paralel olarak çalıştığı ve farklı hızlarla geliştirildiği için her bir yükseltmenin kesin zamanlamasını vermek karmaşıktır. Bir yükseltmenin ivediliği zaman içinde dış etmenlere (ör. kuantum bilgisayarlarının performansı ve kullanılabilirliğindeki ani sıçrama, kuantum dirençli kriptografiyi daha ivedi hale getirir) bağlı olarak değişebilir.
 
 Ethereum gelişmesini düşünmenin bir yolu da onu biyolojik evrimle kıyaslamaktır. Her ne kadar ağ giderek daha etkin, ölçeklenebilir ve güvenli hale gelip protokol daha az değişime ihtiyaç duysa dahi yeni zorluklara uyum sağlama ve uyumunu sürdürme becerisine sahip bir ağın değişime direnen bir ağa kıyasla başarılı olması daha olasıdır.
 
-## Bir yükseltme varken herhangi bir şey yapmak zorunda mıyım? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## Bir yükseltme varken herhangi bir şey yapmak zorunda mıyım? \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Yükseltmeler; Ethereum ile nasıl etkileşileceği konusunda daha iyi kullanıcı deneyimi sağlayarak ve belki daha fazla <i>seçenek</i> sunarak son kullanıcıları etkilememe eğilimindedir. Son kullanıcılar ne aktif olarak yükseltmelerde yer alma ne de varlıklarını güvenli tutmak için herhangi bir şey yapma zorunluluğunda değiller. Düğüm operatörleri, müşterilerini bir yükseltmeye hazırlanmaları için bilgilendirmeliler. Bazı yükseltmeler, uygulama geliştiricileri için değişikliklere yol açabilir. Örneğin, tarih sonlanma yükseltmesi, uygulamala geliştiriclerinin geçmiş veriyi farklı kaynaklardan elde etmelerine yol açabilir.
 
-## Peki ya Verge, Splurge ve diğerleri? {#what-about-the-verge-splurge-etc}
+## Peki ya Verge, Splurge ve diğerleri? \{#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin Ethereum yol haritası için](https://twitter.com/VitalikButerin/status/1588669782471368704), Ethereum mimarisine olan etkileriyle bağlantılı olarak çeşitli kategorilere ayrılmış [bir vizyon önerdi](https://twitter.com/VitalikButerin/status/1588669782471368704). Şunları içeriyordu:
 
@@ -101,11 +101,11 @@ Yükseltmeler; Ethereum ile nasıl etkileşileceği konusunda daha iyi kullanıc
 
 Bu terminolojiyi kullanmamaya karar verdik çünkü daha temel ve kullanıcı odaklı model kullanmak istiyoruz. Kullanıcı odaklı dil kullansak dahi vizyon, Vitalik'in önerdiği gibi aynı kalıyor.
 
-## Peki ya parçalama? {#what-about-sharding}
+## Peki ya parçalama? \{#what-about-sharding}
 
 Parçalama; doğrulayıcı alt kümeleri tüm verinin yalnızca bir kısmından sorumlu olsunlar diye Ethereum blok zincirinin ayrılmasıdır. Bu aslen, Ethereum'un ölçeklendirilmesi için bir yol olarak tasarlanmıştı. Ancak katman 2 toplamalar beklenenden çok daha hızlı gelişti ve halihazırda oldukça fazla ölçeklendirme sağladılar ve Proto-Danksharding yürürlüğe konmasından sonra da çokça ölçeklendirme sağlayacaklar. Bunun anlamı artık ''parça zincirlerine'' gerek kalmayacak ve yol haritasından düşülecekler.
 
-## Özgün teknik yükseltmeler mi arıyorsunuz? {#looking-for-specific-technical-upgrades}
+## Özgün teknik yükseltmeler mi arıyorsunuz? \{#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding)-Dankharding katman 2 toplamalarını Ethereum Bloklarına veri "damlaları" ekleyerek çok daha ucuz hale getirir.
 - [Hisseleme çekimleri](/staking/withdrawals) - Shanghai/Capella yükseltmesi; insanların hisselenmiş ETH'lerini açmalarına olanak tanıyarak hisseleme çekimlerini mümkün kıldı.

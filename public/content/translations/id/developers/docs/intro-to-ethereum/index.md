@@ -4,7 +4,7 @@ description: Pengantar pengembang dapp tentang konsep inti Ethereum.
 lang: id
 ---
 
-## Apa itu blockchain? {#what-is-a-blockchain}
+## Apa itu blockchain? \{#what-is-a-blockchain}
 
 Blockchain adalah basis data publik yang diperbarui dan dibagikan di banyak komputer dalam jaringan.
 
@@ -30,7 +30,7 @@ Tonton Anders menjelaskan hash dalam blockchain:
 
 <YouTube id="_160oMzblY8" />
 
-## Apa itu Ethereum? {#what-is-ethereum}
+## Apa itu Ethereum? \{#what-is-ethereum}
 
 Dalam semesta Ethereum, ada satu komputer kanonis, tunggal (disebut Mesin Virtual Ethereum, atau EVM) yang statenya disetujui semua orang dalam jaringan Ethereum. Setiap orang yang berpartisipasi dalam jaringan Ethereum (setiap node Ethereum) menyimpan salinan status komputer ini. Sebagai tambahan, peserta mana pun bisa menyiarkan permintaan agar komputer ini melakukan komputasi arbitrari. Setiap kali permintaan ini disiarkan, peserta lain dalam jaringan memverfikasi, memvalidasi, dan melakukan ("mengeksekusi") proses komputasinya. Eksekusi ini menyebabkan perubahan state pada EVM, yang dikomitmenkan dan disebar ke seluruh jaringan.
 
@@ -38,7 +38,7 @@ Permintaan untuk komputasi disebut permintaan transaksi; catatan semua transaksi
 
 Mekanisme kriptografi memastikan bahwa setelah transaksi diverifikasi sebagai transaksi valid dan ditambahkan ke blockchain, transaksi ini tidak dapat diubah lagi nanti. Mekanisme yang sama ini juga memastikan bahwa semua transaksi ditandatangani dan dieksekusi dengan "izin" yang sesuai (tidak ada seorang pun yang dapat mengirim aset digital dari akun Alice, kecuali Alice sendiri).
 
-## Apa itu ether? {#what-is-ether}
+## Apa itu ether? \{#what-is-ether}
 
 **Ether (ETH)** adalah mata uang kripto asli Ethereum. Tujuan dari ether adalah memungkinkan keberadaan pasar untuk komputasi. Pasar seperti ini menyediakan insentif ekonomi bagi para peserta untuk memverifikasi dan menjalankan permintaan transaksi dan menyediakan sumber daya komputasional ke jaringan.
 
@@ -46,7 +46,7 @@ Peserta mana pun yang menyiarkan permintaan transaksi juga harus menawarkan seju
 
 Jumlah ether yang dibayarkan sesuai dengan waktu yang diperlukan untuk melakukan komputasi. Bounty/hadiah ini juga mencegah para peserta jahat secara sengaja menghambat jaringan dengan meminta eksekusi komputasi tak terbatas atau skrip lain yang memerlukan sumber daya besar, karena para peserta ini harus membayar untuk waktu komputasi.
 
-## Apa itu kontrak pintar? {#what-are-smart-contracts}
+## Apa itu kontrak pintar? \{#what-are-smart-contracts}
 
 Dalam praktiknya, peserta tidak menulis kode baru setiap kali mereka ingin meminta komputasi pada EVM. Sebaliknya, developer aplikasi mengunggah program (cuplikan kode yang dapat digunakan kembali) ke state EVM, dan pengguna membuat permintaan untuk mengeksekusi cuplikan kode ini dengan berbagai parameter. Kami menyebut program yang diunggah dan dijalankan oleh kontrak pintar jaringan.
 
@@ -56,37 +56,37 @@ Pengembang mana pun bisa membuat kontrak pintar dan membuatnya terbuka untuk pub
 
 Oleh karena itu, dengan kontrak pintar, pengembang dapat menyusun dan menyebarkan aplikasi dan layanan sisi pengguna kompleks secara arbitrari, seperti pasar, instrumen keuangan, game, dll.
 
-## Terminologi {#terminology}
+## Terminologi \{#terminology}
 
-### Blockchain {#blockchain}
+### Blockchain \{#blockchain}
 
 Urutan dari semua blok yang telah diselesaikan pada jaringan Ethereum dalam riwayat jaringan. Dinamakan demikian karena tiap blok berisi satu referensi ke blok sebelumnya, yang membantu kami mempertahankan pengurutan semua blok (dan oleh karena itu riwayat yang tepat).
 
-### ETH {#eth}
+### ETH \{#eth}
 
 Mata uang kripto asli Ethereum. Pengguna membayar ether ke pengguna lain untuk membuat permintaan eksekusi kode mereka dilaksanakan.
 
 [Selengkapnya tentang ETH](/developers/docs/intro-to-ether/)
 
-### EVM {#evm}
+### EVM \{#evm}
 
 Mesin Virtual Ethereum adalah komputer virtual global yang statenya oleh setiap peserta di jaringan Ethereum dijadikan tempat penyimpanan dan acuan kesesuaian. Setiap peserta dapat meminta eksekusi kode arbitrer pada EVM; eksekusi kode mengubah status EVM.
 
 [Lebih lanjut tentang EVM](/developers/docs/evm/)
 
-### Node {#nodes}
+### Node \{#nodes}
 
 Mesin nyata yang menyimpan state EVM. Node berkomunikasi dengan satu sama lain untuk menyebarkan informasi tentang state EVM dan perubahan state baru. Setiap pengguna juga dapat meminta eksekusi kode dengan menyiarkan permintaan eksekusi kode dari sebuah node. Jaringan Ethereum sendiri adalah kumpulan semua node Ethereum dan komunikasi mereka.
 
 [Lebih lanjut tentang node](/developers/docs/nodes-and-clients/)
 
-### Akun {#accounts}
+### Akun \{#accounts}
 
 Di mana ether disimpan. Pengguna bisa membuka akun, mendepositokan ether ke dalam akun, dan mentransfer ether dari akun mereka ke pengguna lain. Akun dan saldo akun tersimpan dalam tabel besar di dalam EVM; itu adalah bagian dari state EVM secara umum.
 
 [Lebih lanjut tentang akun](/developers/docs/accounts/)
 
-### Transaksi {#transactions}
+### Transaksi \{#transactions}
 
 "Permintaan transaksi" adalah istilah formal untuk permintaan eksekusi kode pada EVM, dan "transaksi" adalah permintaan transaksi yang dipenuhi dan perubahan terkait dalam state EVM. Setiap pengguna dapat menyiarkan permintaan transaksi ke jaringan dari sebuah node. Agar permintaan transaksi benar-benar berdampak pada state EVM yang telah disetujui, transaksi harus divalidasi, dieksekusi, dan "dikomitmenkan pada jaringan" oleh node lain. Eksekusi kode apa pun menyebabkan perubahan state di EVM; atas komitmen, perubahan state ini disiarkan ke semua node dalam jaringan. Beberapa contoh transaksi:
 
@@ -96,25 +96,25 @@ Di mana ether disimpan. Pengguna bisa membuka akun, mendepositokan ether ke dala
 
 [Lebih lanjut tentang transaksi](/developers/docs/transactions/)
 
-### Blok {#blocks}
+### Blok \{#blocks}
 
 Volume transaksi sangat tinggi, sehingga transaksi "dikomitkan" dalam batch, atau blok. Blok secara umum berisi lusinan sampai ratusan transaksi.
 
 [Selengkapnya tentang blok](/developers/docs/blocks/)
 
-### Kontrak pintar {#smart-contracts}
+### Kontrak pintar \{#smart-contracts}
 
 Cuplikan kode yang dapat digunakan kembali (program) yang diterbitkan pengembang ke state EVM. Siapa pun bisa meminta kode kontrak pintar dijalankan dengan membuat permintaan transaksi. Karena pengembang bisa menulis aplikasi yang dapat dieksekusi secara arbitrari ke dalam EVM (game, pasar, instrumen keuangan, dll.) dengan menerbitkan kontrak pintar, ini sering juga disebut [dapps, atau Aplikasi Terdesentralisasi](/developers/docs/dapps/).
 
 [Lebih lanjut tentang kontrak pintar](/developers/docs/smart-contracts/)
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [Laporan Resmi Ethereum](/whitepaper/)
 - [Omog-omong, bagaimana cara kerja Ethereum?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Tutorial terkait {#related-tutorials}
+## Tutorial terkait \{#related-tutorials}
 
 - [Panduan developer untuk Ethereum, bagian 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Eksplorasi Ethereum yang sangat ramah bagi pengguna menggunakan Python dan web3.py_

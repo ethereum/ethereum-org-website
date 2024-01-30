@@ -9,7 +9,7 @@ incomplete: false
 
 Kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için Ethereum'u kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani tek bir varlık veya kişi onları kontrol etmez ve sansürlemenin neredeyse imkansız olduğu anlamına gelir.
 
-## Akıllı sözleşmeleri ve Solidity dilini kullanmaya başlama {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı sözleşmeleri ve Solidity dilini kullanmaya başlama \{#getting-started-with-smart-contracts-and-solidity}
 
 **Ruby'yi Ethereum ile entegre etmek için ilk adımlarınızı atın**
 
@@ -20,7 +20,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'i Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Başlangıç ​​seviyesi makaleler {#beginner-articles}
+## Başlangıç ​​seviyesi makaleler \{#beginner-articles}
 
 - [Sonunda Ethereum hesaplarını anlamak](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Sonunda MetaMask ile Rails Kullanıcılarının Doğrulanması](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
@@ -28,14 +28,14 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [Ruby kullanarak Ethereum ağına nasıl bağlanılır](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Ruby'de yeni bir Ethereum adresi nasıl oluşturulur](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
-## Orta seviye makaleler {#intermediate-articles}
+## Orta seviye makaleler \{#intermediate-articles}
 
 - [Ruby ile Blok Zinciri Uygulaması](https://www.nopio.com/blog/blockchain-app-ruby/)
 - [Akıllı Sözleşmeyi yürütmek için Ethereum'a bağlı Ruby'yi kullanın](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
-## Ruby projeleri ve araçları {#ruby-projects-and-tools}
+## Ruby projeleri ve araçları \{#ruby-projects-and-tools}
 
-### Aktif {#active}
+### Aktif \{#active}
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ethereum hesaplarını, mesajlarını ve işlemlerini işlemek için Ruby kitaplığı ve RPC istemcisi_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _Ethereum tarafından kullanılan Keccak (SHA3) hash değeri_
@@ -46,7 +46,7 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _NFT sahipliği aracılığıyla kimlik doğrulama için OmniAuth stratejisi_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _MetaMask'i Ruby on Rails'e bağlamayı sağlayan Ethereum on Rails şablonu_
 
-### Arşivlenmiş / Artık sürdürülmeyen {#archived--no-longer-maintained}
+### Arşivlenmiş / Artık sürdürülmeyen \{#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Ruby ile Ethereum düğümünün RPC yöntemlerini çağırma_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _BIP32 standardına göre Hiyerarşik Deterministik cüzdandan ETH adresleri oluşturmak için Ruby kitaplığı _
@@ -56,6 +56,6 @@ Başlamadan önce daha temel bir bilgiye mi ihtiyacınız var? [ethereum.org/lea
 
 Daha fazla kaynak mı arıyorsunuz? [Geliştiricilerimizin ana sayfasına](/developers/) göz atın.
 
-## Ruby topluluğuna katkıda bulunanlar {#ruby-community-contributors}
+## Ruby topluluğuna katkıda bulunanlar \{#ruby-community-contributors}
 
 [Ethereum Ruby Telegram grubu](https://t.me/ruby_eth), hızla büyüyen bir topluluğa ev sahipliği yapar ve yukarıdaki projelerden ve ilgili konulardan herhangi biri hakkında tartışmalar için özel bir kaynaktır.

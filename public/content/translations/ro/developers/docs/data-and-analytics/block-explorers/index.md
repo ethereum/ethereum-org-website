@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Exploratorii de blocuri sunt portalul dvs. către datele din Ethereum. Le puteţi utiliza pentru a vedea în timp real date despre blocuri, tranzacții, miner-i, conturi și alte activități din lanț.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Ar trebui să înțelegeți conceptele de bază ale lui Ethereum ca să vă daţi seama de logica datelor pe care vi le oferă un explorator de blocuri. Începeți cu [o introducere despre Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Servicii {#services}
+## Servicii \{#services}
 
 - [Etherscan](https://etherscan.io/) – _Disponibil de asemenea în chineză, coreeană, rusă și japoneză_
 - [Etherchain](https://www.etherchain.org/)
@@ -20,13 +20,13 @@ Ar trebui să înțelegeți conceptele de bază ale lui Ethereum ca să vă daţ
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
-## Date {#data}
+## Date \{#data}
 
 Ethereum este transparent prin concepţie, astfel încât totul este verificabil. Exploratorii de blocuri oferă o interfață pentru a obține aceste informații. Iar aceasta este atât pentru rețeaua principală Ethereum, cât și pentru testnet-uri, dacă aveţi nevoie de aceste date.
 
 Iată un rezumat al tipurilor de date pe care le puteți obține de la un explorator de blocuri.
 
-### Blocuri {#blocks}
+### Blocuri \{#blocks}
 
 Sunt adăugate blocuri noi la Ethereum la fiecare ~12 secunde (acest interval poate fluctua), deci există un flux aproape constant de date care se adaugă la exploratorii de blocuri. Blocurile conțin o mulțime de date importante care vă pot fi utile:
 
@@ -63,7 +63,7 @@ Exploratorii de blocuri oferă informații despre blocurile unchi, cum ar fi:
 - Cine l-a minat.
 - Recompensa în ETH.
 
-### Gaz {#gas}
+### Gaz \{#gas}
 
 Nu numai că exploratorii de blocuri vă vor oferi date despre utilizarea de Gaz în tranzacții și blocuri, dar unii vă vor oferi informații cu privire la prețurile actuale ale gazului din rețea. Acest lucru vă va ajuta să înțelegeţi gradul de utilizare a rețelei, să trimiteți tranzacții securizate și să nu cheltuiţi excesiv pe gaz. Căutați API-uri care vă pot ajuta să obțineți aceste informații în interfața produsului dumneavoastră. Datele specifice despre gaz cuprind:
 
@@ -74,7 +74,7 @@ Nu numai că exploratorii de blocuri vă vor oferi date despre utilizarea de Gaz
 - Contractele care consumă gaz – cu alte cuvinte, produsele populare care sunt foarte utilizate în rețea.
 - Conturile care consumă gaz – cu alte cuvinte, utilizatorii frecvenți ai rețelei.
 
-### Tranzacții {#transactions}
+### Tranzacții \{#transactions}
 
 Exploratorii de blocuri au devenit un loc comun în care oamenii pot urmări cumm progresează tranzacţiile lor. Aceasta deoarece nivelul de detaliu pe care îl puteți obține oferă o certitudine suplimentară. Datele tranzacției cuprind:
 
@@ -98,7 +98,7 @@ Exploratorii de blocuri au devenit un loc comun în care oamenii pot urmări cum
 - Nonce – Numărul tranzacției pentru adresa `de la` (reține ţică acesta începe de la 0, astfel încât un nonce de `100` ar fi de fapt a 101-a tranzacție prezentată de acest cont.
 - Date de introdus – Orice informații suplimentare solicitate de tranzacție.
 
-### Conturi {#accounts}
+### Conturi \{#accounts}
 
 Există o mulțime de date pe care le puteţi accesa despre un cont. De aceea, este adesea recomandat să folosiţi mai multe conturi, pentru ca activele și valorile dvs. să nu poată fi urmărite cu ușurință. Există şi unele soluții în curs de elaborare pentru a creşte gradul de confidenţialitate a tranzacţiilor şi a activităţii contului. Dar iată datele disponibile pentru conturi:
 
@@ -121,7 +121,7 @@ Conturile de contracte inteligente au toate datele pe care le va avea un cont de
 - Codul de creare a contractului – Bytecode-ul compilat al contractului inteligent – creat la compilarea unui contract inteligent scris în Solidity sau Vyper etc.
 - Evenimentele contractuale – O istorie a metodelor apelate în contractul inteligent. Practic o modalitate de a vedea cum este utilizat contractul și cât de des.
 
-### Tokenuri {#tokens}
+### Tokenuri \{#tokens}
 
 Tokenurile sunt un tip de contracte, de aceea ele vor avea date similare cu ale unui contract inteligent. Dar, pentru că au valoare și pot fi tranzacționate, ele au puncte de date suplimentare:
 
@@ -135,7 +135,7 @@ Tokenurile sunt un tip de contracte, de aceea ele vor avea date similare cu ale 
 - Adresa contractului – Adresa tokenului care a fost implementat pe Mainnet.
 - Zecimale – Tokenurile ERC-20 sunt divizibile și au zecimale.
 
-### Rețea {#network}
+### Rețea \{#network}
 
 Desigur, există unele date care vorbesc despre sănătatea rețelei. Acestea sunt destul de specifice mecanismului de consens bazat pe dovada-muncii. Când Ethereum va trece la dovada-mizei, unele dintre aceste date vor fi redundante
 
@@ -147,13 +147,13 @@ Desigur, există unele date care vorbesc despre sănătatea rețelei. Acestea su
 - ETH-ul total furnizat – Numărul de ETH în circulație – amintiţi-vă că se creează ETH nou odată cu crearea fiecărui bloc, sub formă de recompense de bloc.
 - Capitalul de piață – Calcularea prețului\*ofertei.
 
-## Date despre nivelul de consens {#consensus-layer-data}
+## Date despre nivelul de consens \{#consensus-layer-data}
 
 Actualizările de scalabilitate sunt încă în curs de dezvoltare, dar merită să vorbim despre unele dintre punctele de date pe care exploratorii vor putea să vi le furnizeze. De fapt, toate aceste date sunt disponibile chiar acum pentru testnet-uri.
 
 Dacă nu cunoașteți foaia de parcurs, consultați [prezentarea noastră generală a actualizărilor Ethereum](/roadmap/).
 
-### Epocă {#epoch}
+### Epocă \{#epoch}
 
 Lanțul Beacon va crea comitete de validatori randomizate la sfârșitul fiecărei epoci (la fiecare 6,4 minute), din motive de securitate. Datele unei epoci includ:
 
@@ -168,7 +168,7 @@ Lanțul Beacon va crea comitete de validatori randomizate la sfârșitul fiecăr
 - Soldul mediu de validare – Soldul mediu pentru validatorii activi.
 - Sloturi – Numărul de sloturi incluse în epocă (sloturile includ un bloc valid).
 
-### Slot {#slot}
+### Slot \{#slot}
 
 Sloturile sunt oportunități pentru crearea blocurilor și detaliile disponibile pentru fiecare slot includ:
 
@@ -193,7 +193,7 @@ Sloturile sunt oportunități pentru crearea blocurilor și detaliile disponibil
 - Penalităţi – Numărul de penalități date celor care propun blocurile sau le atestă.
 - Voturi – Validatorii care au votat pentru bloc în acest slot.
 
-### Blocuri {#blocks-1}
+### Blocuri \{#blocks-1}
 
 Blocurile nivelului de consens funcționează diferit, deoarece miner-ii sunt înlocuiți de validatori, iar Lanțul Beacon introduce sloturi și epoci în Ethereum. Deci aceasta înseamnă date noi!
 
@@ -202,7 +202,7 @@ Blocurile nivelului de consens funcționează diferit, deoarece miner-ii sunt î
 - Slotul– Slotul în care a fost propus blocul.
 - Atestări – Numărul de atestări incluse în slot. Atestările sunt ca niște voturi care indică faptul că blocul este gata să intre în Lanțul Beacon.
 
-### Validatori {#validators}
+### Validatori \{#validators}
 
 Validatorii sunt responsabili cu propunerea blocurilor și cu atestarea acestora în cadrul sloturilor.
 
@@ -218,7 +218,7 @@ Validatorii sunt responsabili cu propunerea blocurilor și cu atestarea acestora
 - Atestări – Atestările furnizate de validator.
 - Depozite – Adresa „de la”, hash-ul tranzacției, numărul blocului, marca temporală, valoarea și starea depozitului de mizare efectuat de validator.
 
-### Atestări {#attestations}
+### Atestări \{#attestations}
 
 Atestările sunt voturi cu „da” pentru a include blocurile în lanț. Datele lor se referă la o înregistrare a atestării și a validatorilor care au atestat
 
@@ -231,7 +231,7 @@ Atestările sunt voturi cu „da” pentru a include blocurile în lanț. Datele
 - Ținta – Indică ultima limită a epocii.
 - Semnătura.
 
-### Rețea {#network-1}
+### Rețea \{#network-1}
 
 Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 
@@ -242,7 +242,7 @@ Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 - ETH-ul mizat – Suma de ETH mizată în rețea.
 - Sold mediu – Soldul mediu în ETH al validatorului.
 
-## Exploratori de blocuri {#block-explorers}
+## Exploratori de blocuri \{#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – un explorator de blocuri pe care îl puteți utiliza pentru Mainnet-ul Ethereum, Testnet-ul Ropsten, Testnet-ul Kovan, Testnet-ul Rinkeby și Testnet-ul Goerli.
 - [Blockscout](https://blockscout.com/) – focuses on the following networks:
@@ -256,17 +256,17 @@ Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 - [Ethplorer](https://ethplorer.io/) – un explorator de bloc ce se axează pe tokenuri pentru Mainnet-ul Ethereum și testnet-ul Kovan.
 - [Blockchair](https://blockchair.com/ethereum) - cel mai privat explorator Ethereum. De asemenea, pentru sortarea și filtrarea datelor (mempool).
 
-## Exploratorii de blocuri ale Lanțului Beacon (nivelului de consens) {#beacon-chain-block-explorers}
+## Exploratorii de blocuri ale Lanțului Beacon (nivelului de consens) \{#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://ethscan.org/](https://ethscan.org/) (fork al beaconcha.in)
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 _Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Minarea](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Tranzacții](/developers/docs/transactions/)

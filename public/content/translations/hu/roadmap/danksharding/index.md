@@ -9,11 +9,11 @@ summaryPoints:
   - Ezután a Danksharding elosztja a felelősséget az adatblobok igazolásához a csomópontok csoportjai mentén, ezzel tovább skálázva az Ethereumot másodpercenként több mint 100 000 tranzakcióra.
 ---
 
-# Dank-féle párhuzamos futtatás (Danksharding) {#danksharding}
+# Dank-féle párhuzamos futtatás (Danksharding) \{#danksharding}
 
 A **Danksharding** az a módszer, amivel az Ethereum egy valóban skálázható blokklánc lesz, ehhez azonban számos protokollfejlesztést kell végrehajtani. A **Proto-Danksharding** egy köztes lépés a megvalósításban. Mindkettő célja az, hogy a második blokkláncrétegen (L2) a tranzakciók a lehető legolcsóbbak legyenek a felhasználók számára, az Ethereum pedig több mint 100 000 tranzakciót tudjon feldolgozni másodpercenként.
 
-## Mi az a Proto-Danksharding? {#what-is-protodanksharding}
+## Mi az a Proto-Danksharding? \{#what-is-protodanksharding}
 
 A Proto-Danksharding, vagy más néven [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), egy olyan módszer a [összevont tranzakciók](/layer2/#rollups) számára, amellyel olcsón tudnak adatokat hozzáadni a blokkokhoz. A név attól a két kutatótól származik, akik ezt a módszert javasolták: Protolambda és Dankrad Feist. Jelenleg az összevont tranzakciókat a tranzakciók költségének csökkentésében behatárolja az a tény, hogy a tranzakciókat a `CALLDATA` mezőbe posztolják. Ez egy drága megoldás, mert az Ethereum-csomópontok dolgozzák fel és a láncon örökre élő adat marad, miközben az összevont tranzakcióknak csak egy rövid időre lenne szükségük ezekre. A Proto-Danksharding az adatblobokat vezeti be, amelyeket el lehet küldeni és hozzá lehet csatolni a blokkokhoz. Az ezekben a blobokban lévő adatok nem elérhetők az EVM számára, és automatikusan törlődnek egy meghatározott idő (1–3 hónap) után. Így az összevont tranzakciók sokkal olcsóbban be tudják küldeni az adatokat, és ez a felhasználóknak olcsóbb tranzakciókat eredményez.
 
@@ -29,15 +29,15 @@ A összevont tranzakciók elköteleződést posztolnak a tranzakciók adatai ala
 
 </ExpandableCard>
 
-### Hogyan ellenőrzik a blobadatokat? {#how-are-blobs-verified}
+### Hogyan ellenőrzik a blobadatokat? \{#how-are-blobs-verified}
 
 A összevont tranzakciók az általuk feldolgozott tranzakciókat adatblobokban posztolják. Emellett posztolnak egy „elköteleződést” is. Tehát az adathoz hozzáillesztenek egy polinomiális funkciót. Ezt a funkciót számos ponton meg lehet vizsgálni. Például, ha egy rendkívül egyszerű függvényt definiálunk, `f(x) = 2x-1`, akkor ezt a funkciót megvizsgálhatjuk arra, hogy `x = 1`, `x = 2`, `x = 3`, amelyből az `1, 3, 5` eredmények származnak. A bizonyító ugyanezt a funkciót alkalmazza az adatra, és megvizsgálja azt ugyanazokon a pontokon. Ha az eredeti adat megváltozott, akkor a függvény sem lesz azonos, és az értékek is különbözni fognak minden ponton. Valójában az elköteleződés és a bizonyíték is elég bonyolult, mert kriptográfiai függvényekbe van csomagolva.
 
-### Mi az a KZG? {#what-is-kzg}
+### Mi az a KZG? \{#what-is-kzg}
 
 A KZG a Kate-Zaverucha-Goldberg rövidítése, akik az [eredeti szerzői](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) egy olyan sémának, amely képes az adatblobot egy kis méretű [kriptográfiai „elköteleződéssé”](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html) redukálni. A összevont tranzakció által beküldött adatblobot ellenőrizni kell, hogy az összevont tranzakció megfelelően működik-e. Ennek lényege, hogy a bizonyító újrafuttatja a blobban lévő tranzakciókat, hogy megvizsgálja az elköteleződés érvényességét. Ez koncepcionálisan ugyanolyan, mint ahogy a végrehajtási kliensek ellenőrizik az Ethereum-tranzakciók érvényességét az első blokkláncrétegen (L1) a Merkle-bizonyítékok alapján. A KZG egy alternatív bizonyíték, ami egy polinomiális egyenletet illeszt az adathoz. Az elköteleződés megvizsgálja a polinomiálist néhány titkos adatponton. A bizonyító ugyanezt a polinomiálist illeszti rá az adatra, megvizsgálja ugyanazon értékeken, és ellenőrzi, hogy az eredmény ugyanaz-e. Ilyen módon lehetséges ellenőrizni az adatot a zero-knowledge technikákkal kompatibilis módon, amelyet néhány összevont tranzakció és az Ethereum-protokoll használ.
 
-### Mit jelent a KZG-ceremónia? {#what-is-a-kzg-ceremony}
+### Mit jelent a KZG-ceremónia? \{#what-is-a-kzg-ceremony}
 
 A KZG-ceremónia egy olyan módszer, mellyel az Ethereum-közösség több tagja együtt létrehozhat egy számokból álló titkos, véletlenszerű sorozatot, amelyet adatvalidálásra tudnak használni. Nagyon fontos, hogy ezt a számsort nem tudja senki és nem is lehessen újraalkotni azt. Ennek biztosításához minden egyes résztvevő az előző tagtól kap egy részletet. Ekkor létrehozhatnak néhány új, véletlenszerű értéket (pl. azzal, hogy a böngésző leköveti az egérmozgást), és ezt összekeverhetik az előző részlettel. Ezután elküldik ezt az értéket a következő tagnak, és megsemmisítik a saját gépükön. Amíg van legalább egy személy, aki jóhiszeműen végzi ezt a folyamatot, addig a támadó számára nem derül ki a végső érték. Az EIP-4844 KZG-ceremónia nyilvános volt és emberek tízezrei vettek benne részt, hogy hozzátegyék a saját entrópiájukat. Ahhoz, hogy a ceremóniát megtámadhassák, ezeknek a résztvevőknek 100%-ban rosszhiszeműnek kell lenniük. A résztvevők szempontjából lényeges, hogy ha ő maguk jóhiszeműen jártak el, akkor nincs szükség arra, hogy megbízzanak másban, mert már maguk is biztosították a ceremóniát (egyénként kielégítették az N-ből 1 résztvevő kritériumot).
 
@@ -57,7 +57,7 @@ Ha valaki ismeri az elköteleződéshez használt véletlenszerű helyet, akkor 
   Se a Danksharding, se a Proto-Danksharding nem követi a hagyományos „sharding” (szilánkosítási) modellt, amelynek célja a blokklánc több részre való felosztása lenne. A shard láncok többé nem szerepelnek az Ethereum útitervében. Ehelyett a Danksharding elosztott adatmintavételt használ a blobokon keresztül, hogy az Ethereumot skálázza. Ezt sokkal egyszerűbb bevezetni. Ezt a modellt néha „adat-shardingnak” is nevezik.
 </InfoBanner>
 
-## Mi az a Danksharding? {#what-is-danksharding}
+## Mi az a Danksharding? \{#what-is-danksharding}
 
 A Danksharding az összevont tranzakciós skálázási megoldás teljes megvalósítása, amely a Proto-Dankshardinggal kezdődik. A Danksharding az Ethereumon hatalmas helyet teremt az összevont tranzakcióknak, hogy az összecsomagolt tranzakciós adataikat beküldjék. Ezzel az Ethereum képes lesz könnyedén támogatni az egyéni összevont tranzakciók százait, és tranzakciók millióit végrehajtani minden másodpercben.
 
@@ -75,11 +75,11 @@ Adatelérhetőség-mintázásra is szükség van, hogy a validátorok gyorsan é
 
 </ExpandableCard>
 
-### Jelenlegi helyzet {#current-progress}
+### Jelenlegi helyzet \{#current-progress}
 
 A teljes Danksharding bevezetéséhez még számos év szükséges. Ugyanakkor a Proto-Danksharding a közeljövőben elérhetővé válhat. A jelen szöveg írásának időpontjában (2023. február) a KZG ceremónia még nyitva volt, és több mint 50 000 résztvevőt számlált. A Proto-Dankshardinghoz tartozó [EIP](https://eips.ethereum.org/EIPS/eip-4844) kellően kidolgozott, a specifikációban megegyeztek, a kliensek továbbfejlesztett prototípusait jelenleg tesztelik és felkészítik az éles működésre. A következő lépésben a változásokat egy nyilvános teszthálózaton teszik elérhetővé. A jelenlegi státuszról az [EIP-4844 készültségének ellenőrzőlistája](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status) nyújt tájékoztatást.
 
-### További olvasnivaló {#further-reading}
+### További olvasnivaló \{#further-reading}
 
 - [Proto-Danksharding jegyzetek](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) – _Vitalik Buterin_
 - [Dankrad jegyzetei a Dankshardingról](https://notes.ethereum.org/@dankrad/new_sharding)

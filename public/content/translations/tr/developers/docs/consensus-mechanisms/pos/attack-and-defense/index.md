@@ -6,11 +6,11 @@ lang: tr
 
 Hırsızlar ve sabotajcılar sürekli Ethereum müşteri yazılımına saldırı fırsatı kollamaktadır. Bu sayfa, Ethereum fikir birliği katmanındaki bilinen saldırıları ve bu saldırıların nasıl savunulduğunu açıklar. Bu sayfadaki bilgiler [daha uzun versiyonundan](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs) uyumlu hale getirilmiştir.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 [Hisse ispatı](/developers/docs/consensus-mechanisms/pos/) hakkında bazı temel bilgiler gereklidir. Ayrıca, Ethereum'un [teşvik katmanı](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) ve çatal seçim algoritması ile [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper) hakkında temel anlayışa sahip olmak size yardımcı olacaktır.
 
-## Salgırganlar ne ister? {#what-do-attackers-want}
+## Salgırganlar ne ister? \{#what-do-attackers-want}
 
 Yaygın bir yanlış anlaşılma, başarılı bir saldırganın yeni ether yaratabileceği veya keyfi hesaplardan ether çekebileceğidir. Bunların hiçbiri mümkün değildir çünkü tüm yürütmeler, ağdaki bütün yürütüm işlemcileri tarafından yürütülür. Geçerliliğin temel şartlarını karşılamak zorundadırlar (ör. yürütmelerin göndericinin özel anahtarıyla imzalanması, göndericinin yeterli bakiyeye sahip olması gibi) ya da bu işlemler geri döndürülür. Bir saldırganın gerçek anlamda hedefleyebileceği üç sonuç sınıfı mevcuttur: yeniden düzenlemeler, çift kesinlik veya kesinlik gecikmesi.
 
@@ -24,9 +24,9 @@ Sosyal katmandaki saldırı, Ethereum'daki açık güveni zedelemek, etheri değ
 
 Kötü niyetli birinin Ethereum'a neden saldırabileceği üzerine konuştuğumuza göre, bir sonraki bölümler bu işi _nasıl_ yapabileceği üzerinedir.
 
-## Saldırı Yöntemleri {#methods-of-attack}
+## Saldırı Yöntemleri \{#methods-of-attack}
 
-### Katman 0 Saldırıları {#layer-0}
+### Katman 0 Saldırıları \{#layer-0}
 
 Her şeyden önce, Ethereum'da aktif olarak rol almayan bireyler (istemci yazılımları yürüterek) sosyal katmanı (Katman 0) hedefleyerek saldırabilir. 0. Katman Ethereum'un üzerine inşa edildiği bir temel gibidir ve tüm katmanlara yayılıp sıçrayabilecek saldırılar için ciddi potansiyel bir hedeftir. Bazı örnekleri şöyle sıralanabilir:
 
@@ -45,15 +45,15 @@ Sosyal ağ saldırılarına karşı bir diğer önemli güçlendirme de açık g
 
 Son olarak, Ethererum topluluğunun açık kalması ve tüm katılımcıları hoş karşılaması kritiktir. Dışlayıcı ve kapı bekçileri olan bir topluluk sosyal saldırılara karşı daha savunmasızdır çünkü "biz ve onlar" anlatılarını kurmak çok daha kolaydır. Kabilecilik ve toksik maksimalizm topluluğu yaralar ve 0. Katmanın sağladığı güvenliği yıpratır. Ağın güvenliği menfaatine olan Etherliler, görüşlerini hem sanal hem de fiziksel dünyada belirtmeli ve Ethereum'un 0. Katman güvenliğine doğrudan katkı sağlamalıdır.
 
-### Protokole saldırma {#attacking-the-protocol}
+### Protokole saldırma \{#attacking-the-protocol}
 
 Herkes Ethereum'un istemci yazılımını yürütebilir. Bir müşteriye bir doğrulayıcı eklemek için kullanıcının mevduat sözleşmesine 32 ether hisselemesi gerekir. Bir doğrulayıcı, kullanıcıya yeni bloklar önerip onları onaylayarak Ethereum ağ güvenliğinde aktif olarak yer alma imkânı tanır. Artık doğrulayıcı, blok zincirin gelecekteki içeriğini etkileyebilecek bir sese sahiptir - dürüstçe çalışıp ödüller aracılığıyla ether zulalarını büyütebilirler ya da kendi çıkarları için süreci manipüle ederek kendi hisselerini riske atabilirler. Bir saldırıyı bağlamanın bir yolu toplam hisselemenin daha büyük kısmını biriktirmek ve sonradan bunları, dürüst doğrulayıcıları saf dışı bırakmak için kullanmaktır. Saldırganın kontrol ettiği hisse yüzdesi arttıkça özellikle gelecekte keşfedeceğimiz iktisadi kilometre taşlarında oy verme kuvveti de artacaktır. Ancak çoğu saldırgan bu yolla saldırmak için yeterince ether biriktirmeyi başaramaz, bu sebeple bu yol yerine dürüst çoğunluğu belirli bir yol içine çekmek için kurnazca teknikler kullanırlar.
 
 Temelde, tüm düşük bahisli saldırılar, doğrulayıcıların iki tür yanlış davranışının ince varyasyonlarıdır: yetersiz aktivite (onaylama/öneride bulunmama veya geç bulunma) ya da aşırı aktivite (bir yuvada çok fazla kez öneride/onaylamada buluma). En basit haliyle bu eylemler, çatal seçim algoritması ve teşvik katmanı tarafından kolayca ele alınabilir, ancak sistemi bir saldırganın avantajına çevirmenin zekice yolları elbette bulunur.
 
-### Düşük miktar ETH kullanılan saldırılar {#attacks-by-small-stakeholders}
+### Düşük miktar ETH kullanılan saldırılar \{#attacks-by-small-stakeholders}
 
-#### yeniden düzenlemeler {#reorgs}
+#### yeniden düzenlemeler \{#reorgs}
 
 Birçok sayfa, toplam hisselenmiş etherin yalnızca küçük bir kısmı kullanılarak yeniden düzenleme ya da kesinlik gecikmesini başarmış Ethereum karşı saldırılarını açıkladı. Bu saldırılar genellikle saldırganın diğer doğrulayıcılara dayandırdığı bazı bilgilere ve daha sonra onları bazı ayrıntılar ve/veya elverişli zamanda ortaya bırakmasına dayanır. Genellikle bazı dürüst blokları, kurallı zincirden ayırmayı amaçlarlar. [Neuder ile arkadaşları 2020'de](https://arxiv.org/pdf/2102.02247.pdf) bir saldırgan doğrulayıcının bir bloka (`B`) belirli bir yuva `n+1` için nasıl ispat yarattığını, ancak ağdaki diğer düğümlerden nasıl alıkoyduğunu bize gösterdi. Bunun yerine bir sonraki yuvaya `n+2` dek ispatlı blok ile kalırlar. Dürüst bir doğrulayıcı yuva `n+2` için bir blok (`C`) önerir. Neredeyse eş zamanlı olarak saldırgan, geri tuttuğu blok olan (`B`)'yi ve onun için tutulan beyanlarını yayınlayabilir. Ayrıca yuva `n+2`'nin oylarıyla `B`'nin zincirin başı olduğunu beyan ederek dürüst blok `C`'nin varlığını etkili bir şekilde inkar etme gücünü sağlayabilir. Dürüst blok `D` salındığı zaman çatal seçim algoritması `D`'nin `B` üzerine inşa edilmesinin `D`'nin `C` üzerine inşa edilmesinden daha ağır olduğunu görür. Saldırgan, sonrasında eski ön yeniden düzenleme 1. blokunu kullanarak kurallı zincirin `n+2` yuvasındaki `C` dürüst blokunu ortadan kaldırmayı başardı. Hisselerin [%34'üne sahip bir saldırganın](https://www.youtube.com/watch?v=6vzXwwk12ZE) bu saldırıda başarıya ulaşma ihtimali, [bu notta](https://notes.ethereum.org/plgVdz-ORe-fGjK06BZ_3A#Fork-choice-by-block-slot-pair) açıklandığı üzere çok fazladır. Teorik olarak da olsa bu saldırı daha küçük hisselemelerle denenebilir. [Neuder ve diğeri 2020 yılında](https://arxiv.org/pdf/2102.02247.pdf), bu saldırının %30 hisse ile yapıldığını[ söylese de daha sonrasında saldırının %2'lik hisse ile ve](https://arxiv.org/pdf/2009.04987.pdf)diğer bölümde inceleyeceğimiz [dengeleme yöntemlerini kullanan tek bir doğrulayıcı tarafından](https://arxiv.org/abs/2110.10086#)yapılmış olduğu ortaya çıkmıştır.
 
@@ -83,21 +83,21 @@ Bu LMD saldırı vektörü [çatal seçim algoritmasının güncellenmesi](https
 
 Çatal seçim kuralına önerici güçlendirmesi tarafından sağlanan güvenliğe katkı sağlayabilecek birkaç potansiyel gelecek güncellemesi bulunmaktadır. Biri [gözlem-birleşim](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739)'dir, tasdikçiler bir yuvanın başlangıcından `n` saniye önce çatal seçimi görüşlerini dondururlar ve önerici sonrasında ağ üzerinde zincirin görünümünün senkronize edilmesine yardımcı olur. Diğer bir yükseltme ise, zinciri sadece tek bir yuvadan sonra kesinleştirerek mesaj zamanlamasına dayalı saldırılara karşı koruma sağlayan [tek yuva kesinliğidir](https://notes.ethereum.org/@vbuterin/single_slot_finality).
 
-#### Kesinlik Gecikmesi {#finality-delay}
+#### Kesinlik Gecikmesi \{#finality-delay}
 
 [Düşük maliyetli tek blok yeniden düzenleme saldırısından ilk bahseden yazı](https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_paper_8.pdf), dönem-sınırı blokunu teklif edenin salgırgan olması durumuna dayanan, Kesinlik Gecikmesinden ("canlılık hatası" olarak da bilinir) de bahseder. Bu durum kritiktir çünkü dönem sınırı bloklarını, Casper FFG zincirin belirli parçalarını kesinleştirmek için bir kontrol noktası olarak kullanır. Saldırgan basitçe, yeterli sayıda dürüst doğrulayıcı FFG oylarını, kesinleştirme hedefi olarak bir önceki dönem sınırı bloku lehine kullanana kadar blokunu bekletir. Bunun ardından beklettiği bloku teklif eder. Bloklarını doğrularlar, diğer dürüst doğrulayıcılar da kendi bloklarını doğrular ve bu durum hedefi farklı kontrol noktaları olan bir çatallanma oluşturur. Eğer zamanlama doğruysa, bu durum kesinleştirmeyi geciktirir çünkü çatallanmanın iki tarafında da, zinciri doğrulayacak 2/3 mutlak çoğunluk sağlanamaz. Kilitlediği miktar azaldıkça, saldırganın zamanlamasının daha nokta atışı olması gerekir. Çünkü saldırgan doğrudan daha az onaylamada bulur ve bu da dönem sınırı blokunu teklif eden onaylayıcı olma olasılığını düşürür.
 
-#### Uzun mesafe saldırıları {#long-range-attacks}
+#### Uzun mesafe saldırıları \{#long-range-attacks}
 
 Hisse ispatı blok zincirlerine özel olan bir saldırı sınıfı vardır, bu saldırı sınıfı başlangıç blokunun doğrulamasına katılan doğrulayıcılardan birinin, orijinal zincir yanında ayrı bir çatal zinciri yürütmesine, ileri ve fırsat görülen bir noktada dürüst onaylayıcıları da bu çatal zinciri onaylamaya geçmelerine ikna etmesine dayanır. Bu tür bir saldırı Ethereum üzerinde mümkün değildir çünkü kesinlik aygıtı, belirli aralıklarla (kontrol noktaları) tüm onaylayıcıların orijinal ağın durumu üzerinde anlaşmalarını mecbur kılar. Bu basit mekanizma, uzun menzilli saldırıları bertaraf eder çünkü Ethereum asla kesinleştirilmiş blokları yeniden düzenletmez. Ağa katılan yeni düğümler, yakın zamanlı ve güvenilir bir durum karması ("[zayıf öznellik](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) kontrol noktası") bularak ve bunu bir Başlangıç bloku gibi kullanarak üzerine inşa eder. Bu ağa katılan yeni düğümlerin, kendi başlarına bilgi onaylamaya başlamadan onlara bir "güven kapısı" oluşturur.
 
-#### Hizmet Reddi {#denial-of-service}
+#### Hizmet Reddi \{#denial-of-service}
 
 Ethereum'un PoS mekanizması, her bir yuvada blok önericisi olması adına toplam doğrulayıcı ekibinden tek bir doğrulayıcıyı seçer. Bu, açıkça bilinen bir fonksiyon kullanılarak işlenebilir ve bir rakibin, kendi blok önerilerinin önceliği adına bir sonraki blok önericisini bilmesi mümkündür. Daha sonra saldırgan, kendi eşleriyle bilgi takasını önlemek için blok önericisini spamlayabilir. Ağın geri kalanı için bu durum, blok önericisinin çevrimdışı olduğu ve yuvanın boş gideceği şeklinde ortaya çıkar. Bu, belli başlı doğrulayıcılara karşı onların blok zincire bilgi eklemelerini engelleyen, bir çeşit sansür formu olabilir. Tekil gizli lider seçimleri (SSLE) veya tekil olmayan gizli lider seçimleri uygulamak DoS risklerini azaltır çünkü sadece blok önericisi seçildiğini bilir ve seçim önceden bilinemez. Bu henüz uygulanmadı, ancak [araştırma ve geliştirmenin](https://ethresear.ch/t/secret-non-single-leader-election/11789) aktif bir alanıdır.
 
 Tüm bunlar, küçük bir hisse ile Ethereum'a başarıyla saldırmanın çok zor olduğu gerçeğini gösterir. Burada açıklanan uygun saldırılar; idealleştirilmiş çatal seçim algoritması, olanaksız ağ şartları veya saldırgan aracıların halihazırda istemci yazılımına küçük yamalar ile yakın bağ kurmalarını gerektirir. Bu, tabii ki sıfırıncı gün açıklarının mevcut olması ihtimalini sıfırlamaz, ancak azınlık hisse bir saldırganın etkili olması için gereken teknik yeteneğin, fikir birliği katmanı bilgisinin ve şansın ekstrem şekilde yüksek sınırını gösterir. Bir saldırganın bakış açısından en iyi iddiaları, mümkün olduğu kadar fazla ether biriktirmek ve toplam hisselerin daha büyük bir oranıyla, güçlenerek geri dönmektir.
 
-### Toplam hissenin >= %33'ünü kullanan saldırganlar {#attackers-with-33-stake}
+### Toplam hissenin >= %33'ünü kullanan saldırganlar \{#attackers-with-33-stake}
 
 Bu makalede daha önce açıklanan tüm saldırıların başarılı olması, saldırganın oy vermek için daha fazla hisselenmiş ethere sahip olduğu ve her bir yuvada, blok önermesi için daha fazla doğrulayıcının seçildiği zamanda daha olası hale gelir. Böylece kötü niyetli bir doğrulayıcı mümkün olan en fazla miktarda hisselenmiş etheri kontrol etmeyi hedefleyebilir.
 
@@ -107,7 +107,7 @@ Hareketsizlik sızıntısının amacı zincirin tekrardan kesinleşebilmesidir. 
 
 Ethereum ağının senkronize olmadığını varsaydığımızda (ör. gönderilen ve alınan mesajlar arasında gecikme olması) toplam hisselerin %34'üne sahip saldırgan çift kesinliğe yol açabilir. Bu; saldırganlar blok üreticileri olarak seçildiği zaman birden fazla bloku denkleştirip daha sonra da tüm doğrulayıcılarıyla oylamalarından dolayıdır. Bu, blok zincirin çatalının var olduğu ve her birinin %34 hisselenmiş ether ile oylandığı bir durum yaratır. Her bir çatal, böyle bir durumda her iki zincirin de kesinleşebileceği (çünkü saldırgan doğrulayıcıların %34'ü + kalan %66'nın yarısı = %67), süper çoğunluk tarafından desteklenmek için kalan doğrulayıcıların yalnızca %50'sinin kendi lehine oy vermelerini gerektirir. Yarışan blokların her biri dürüst doğrulayıcıların yaklaşık %50'si tarafından alınmalıdır, bu nedenle bu saldırı, saldırganın ağ üzerindeki mesajların zamanlaması üzerinde belli bir derecede kontrol sahibi olduğu durumlarda mümkündür. Böylece dürüst doğrulayıcıların yarısını her bir zincire yönlendirebilirler. Saldırganın bu çifte kesinliği elde etmek için kendi tüm kilidini (bugünkü doğrulayıcı kümesiyle yaklaşık 10 milyon ether'in %34'ü) mutlaka yok etmesi gerekecektir. Çünkü saldırganın %34'ü kadar olan doğrulayıcıları aynı anda çifte oy kullanmış olacaktır - en yüksek oranda ceza gerektiren ihlal türüdür. Bu saldırıya karşı savunma, hisselenen toplam etherin %34'ünü yok etmenin çok büyük bir maliyeti olmasıdır. Bu saldırıdan kurtulmak için Ethereum topluluğunun "bant dışında" olarak koordine olması ve çatalın birini takip etmeye ve diğerini görmezden gelmeye karar vermesi gerekecektir.
 
-### Toplam hissenin ~%50'sini kullanan saldırganlar {#attackers-with-50-stake}
+### Toplam hissenin ~%50'sini kullanan saldırganlar \{#attackers-with-50-stake}
 
 Hisselenen etherin %50'sinde, zararlı bir doğrulayıcı grubu teorik olarak zinciri eşit boyutlu iki çatala bölebilir ve ardından %50 hissenin tamamını dürüst doğrulayıcı kümesinin aksine oy vermek için kullanabilir, böylece iki çatalı koruyabilir ve kesinliği önleyebilir. Her iki çataldaki hareketsizlik sızıntısı, sonunda her iki zincirin de kesinleşmesine yol açacaktır. Bu noktada, tek seçenek sosyal iyileşmeye geri dönmektir.
 
@@ -115,11 +115,11 @@ Dürüst doğrulayıcı sayısındaki değişim, ağ gecikmesi vb. faktörler ne
 
 Toplam hissenin >%50'sinde, saldırgan çatal seçim algoritmasına hükmedebilir. Bu durumda, saldırgan, dürüst istemcileri kandırmaya gerek kalmadan kısa yeniden yapılandırmalar için yeterli kontrolü sağlayarak çoğunluk oyu ile onaylayabilecektir. Dürüst doğrulayıcılar aynı şeyi yapacaktır çünkü çatal seçim algoritmaları da saldırganın tercih ettiği zinciri en ağır olarak görecek ve böylece zincir kesinliğe ulaşabilecektir. Bu, saldırganın belirli işlemleri sansürlemesini, kısa vadeli yeniden düzenlemeleri gerçekleştirmesini ve blokları kendi lehlerine yeniden düzenleyerek maksimum MEV'yi çıkarmasını sağlar. Bu tür bir saldırıya karşı savunma, çoğunluk hissesinin (şu anda yaklaşık 19 milyar ABD doları) risk altına alınmasına neden olan büyük maliyettir çünkü sosyal katmanın muhtemelen dürüst bir azınlık çatalını benimseyip, saldırganın hissesinin değerini dramatik bir şekilde düşürme eğiliminde olmasıdır.
 
-### Toplam hissenin >=%66'sını kullanan saldırganlar {#attackers-with-66-stake}
+### Toplam hissenin >=%66'sını kullanan saldırganlar \{#attackers-with-66-stake}
 
 Hisselenmiş toplam eterin %66'sı veya daha fazlasına sahip olan bir saldırgan, herhangi bir dürüst doğrulayıcıyı zorlamak zorunda kalmadan tercih ettiği zinciri kesinleştirebilir. Saldırgan, tercih ettiği çatal için oy kullanabilir ve ardından kesinleştirebilir çünkü basitçe dürüst olmayan bir üstün çoğunluk ile oy kullanabilirler. Saldırgan, üstün çoğunluk hissedarı olarak harcama, geri sarma ve yeniden harcama, belirli işlemleri sansürleme ve istediği zaman zinciri yeniden düzenleme gücüyle sonuçlandırılmış blokların içeriğini her zaman kontrol edecektir. %51 yerine, %66'yı kontrol etmek için ek ether satın alarak, saldırgan etkin bir şekilde sonradan yapılan yeniden düzenleme ve yeniden bozma yeteneğini satın alıyor (yani hem geçmişi değiştirme hem de geleceği kontrol etme yeteneği). Buradaki tek gerçek savunma, hisselnmiş toplam etherin %66'sının yüksek maliyeti ve alternatif bir çatalın benimsenmesini koordine etmek için sosyal katmana geri dönme seçeneğidir. Bunu bir sonraki bölümde daha detaylı inceleyebiliriz.
 
-## İnsanlar: Savunmanın son hattı {#people-the-last-line-of-defense}
+## İnsanlar: Savunmanın son hattı \{#people-the-last-line-of-defense}
 
 Dürüst olmayan doğrulayıcılar zincirin kendi tercih ettikleri sürümünü tamamlamayı başarırlarsa, Ethereum topluluğu zor duruma düşer. Kanonik zincir, geçmişine kazınmış dürüst olmayan bir bölüm içerirken, dürüst doğrulayıcılar alternatif (dürüst) bir zinciri onayladıkları için cezalandırılabilirler. Kesinleşmiş ancak yanlış bir zincirin, bir hatadan da kaynaklanabileceğini unutmayın. Sonuç olarak, son yedek seçenek, olayı çözmesi için sosyal katmana (Katman 0) güvenmektir.
 
@@ -133,7 +133,7 @@ Yönetişim, halihazırda karmaşık bir konu. Dürüst olmayan kesinleştirme z
 
 Yine de, son çare olarak gerçek dünyada bir çözüm bulunmasının oldukça tatmin edici bir yönü vardır. Sonuç olarak, üzerimizde bulunan bu olağanüstü teknoloji yığınına rağmen, en kötü durum gerçekleşirse, gerçek insanlar çözüm bulmak için bir araya gelmek zorunda kalacaklardır.
 
-## Özet {#summary}
+## Özet \{#summary}
 
 Bu sayfa, saldırganların Ethereum'un hisse ispatı mutabakat protokolünü istismar etmeye çalışabilecekleri yolları inceledi. Hisselenen toplam etherin artan oranlarına sahip saldırganlar için yeniden düzenlemeler ve kesinlik gecikmeleri incelendi. Genel olarak, daha zengin bir saldırgan daha yüksek bir başarı şansına sahiptir çünkü hisseleri, gelecekteki blok içeriklerini etkileyebilecekleri oy gücüne dönüşür. Belli eşik miktarlarda hisselenen ether ile saldırganın gücü yükselir:
 
@@ -151,7 +151,7 @@ Genelde, bu potansiyel saldırı vektörlerine rağmen, başarılı bir saldır�
 
 %34, %51 veya %66 saldırıları çözülmek için büyük ihtimalle bant dışı sosyal koordinasyon gerektirecektir. Bu, topluluk için zahmetli olsa da, topluluğun bant dışı karşılık verebilmesi, saldırgan için güçlü bir caydırıcıdır. Ethereum sosyal katmanı temel dayanaktır - teknik olarak başarılı bir saldırı, topluluğun dürüst bir çatal benimsemesiyle etkisiz hale getirilebilir. Saldırgan ile Ethereum topluluğu arasında bir yarış olabilir - %66 saldırısı için harcanan milyarlarca dolar, saldırganı Ethereum topluluğu tarafından yok sayılan hileli zincirde likit olmayan hisselenmiş ether ile bırakan başarılı bir sosyal koordinasyon saldırısı tarafından yok edilebilir. Bunun, saldırgan için kârlı olma ihtimali, etkin bir caydırıcı olacak kadar düşüktür. İşte bu yüzden, birbirine sıkıca bağlı değerlere sahip sosyal bir katmanı sürdürmeye yönelik yatırımlar çok önemlidir.
 
-## Daha Fazla Okuma {#further-reading}
+## Daha Fazla Okuma \{#further-reading}
 
 - [Bu sayfanın daha detaylı bir versiyonu](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Uzlaşma kesinliği üzerine, Vitalik](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

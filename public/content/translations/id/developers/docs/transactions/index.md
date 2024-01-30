@@ -6,11 +6,11 @@ lang: id
 
 Transaksi adalah instruksi yang ditandatangani secara kriptografis dari akun. Akun akan menginisiasi transaksi untuk memperbarui state jaringan Ethereum. Bentuk transaksi paling sederhana adalah mentransfer ETH dari satu akun ke akun yang lain.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Untukmembantu Anda memahami halaman ini dengan lebih baik, kami menyarankan Anda membaca terlebih dahulu [Akun](/developers/docs/accounts/) dan [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami.
 
-## Apa itu transaksi? {#whats-a-transaction}
+## Apa itu transaksi? \{#whats-a-transaction}
 
 Transaksi Ethereum mengacu pada aksi yang dimulai oleh akun dengan kepemilikan eksternal, dengan kata lain, akun yang dikelola oleh manusia, bukan kontrak. Sebagai contoh, jika Bob mengirimkan 1 ETH ke Alice, akun Bob harus didebit dan akun Alice harus dikredit. Aksi yang mengubah state ini terjadi dalam sebuah transaksi.
 
@@ -102,7 +102,7 @@ Contoh tanggapan:
 
 Dengan hash tanda tangan, transaksi bisa dibuktikan secara kriptografi berasal dari pengirim dan dikirim ke jaringan.
 
-### The data field {#the-data-field}
+### The data field \{#the-data-field}
 
 The vast majority of transactions access a contract from an externally-owned account. Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
 
@@ -123,7 +123,7 @@ The rest of the data is:
 
 According to the ABI specifications, integer values (such as addresses, which are 20-byte integers) appear in the ABI as 32-byte words, padded with zeros in the front. So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). The `value` is 0x3b0559f4 = 990206452.
 
-## Jenis transaksi {#types-of-transactions}
+## Jenis transaksi \{#types-of-transactions}
 
 Di Ethereum ada beberapa jenis transaksi yang berbeda:
 
@@ -131,7 +131,7 @@ Di Ethereum ada beberapa jenis transaksi yang berbeda:
 - Transaksi penerapan kontrak: transaksi tanpa alamat 'kepada', di mana bidang data digunakan untuk kode kontrak.
 - Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
 
-### Tentang gas {#on-gas}
+### Tentang gas \{#on-gas}
 
 Seperti yang disebutkan, transaksi memerlukan [gas](/developers/docs/gas/) untuk dijalankan. Transaksi transfer sederhana membutuhkan 21.000 unit Gas.
 
@@ -157,7 +157,7 @@ Gas juga dibutuhkan untuk interaksi kontrak pintar mana pun.
 
 Gas yang tidak digunakan dalam transaksi dikembalikan dananya ke akun pengguna.
 
-## Siklus hidup transaksi {#transaction-lifecycle}
+## Siklus hidup transaksi \{#transaction-lifecycle}
 
 Setelah transaksi dikirimkan, proses berikut terjadi:
 
@@ -169,13 +169,13 @@ Setelah transaksi dikirimkan, proses berikut terjadi:
    - Blok baru mungkin diatur ulang, yang memberi kesan bahwa transaksi tidak berhasil; namun, transaksi masih mungkin valid tapi dimasukkan dalam blok yang berbeda.
    - Kemungkinan pengaturan ulang berkurang seiring ditambangnya blok berikutnya, yaitu semakin besar jumlah konfirmasinya, semakin tidak dapat diubah transaksinya.
 
-## Demo visual {#a-visual-demo}
+## Demo visual \{#a-visual-demo}
 
 Tonton Austin memandu Anda dalam transaksi, gas, dan penambangan.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Transaksi Bertipe Amplop {#typed-transaction-envelope}
+## Transaksi Bertipe Amplop \{#typed-transaction-envelope}
 
 Ethereum pada awalnya memiliki satu format transaksi. Setiap transaksi berisi nonce, harga gas, batas gas, alamat kepada, nilai, data, v, r, dan s. Bidang ini dikodekan RLP, agar terlihat seperti ini:
 
@@ -194,13 +194,13 @@ Di mana bidang ini didefinisikan sebagai:
 - `TransactionType` - angka antara 0 dan 0x7f, untuk total 128 jenis transaksi yang dimungkinkan.
 - `TransactionPayload` - array bita arbitrari yang ditentukan oleh jenis transaksi.
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [EIP-2718: Transaksi Bertipe Amplop](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait {#related-topics}
+## Topik terkait \{#related-topics}
 
 - [Akun](/developers/docs/accounts/)
 - [Mesin virtual Ethereum (EVM)](/developers/docs/evm/)

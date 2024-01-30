@@ -4,7 +4,7 @@ description: Μη αγγλικοί πόροι σχετικά με το Ethereum
 lang: el
 ---
 
-# Γλωσσικοί πόροι {#language-resources}
+# Γλωσσικοί πόροι \{#language-resources}
 
 Η κοινότητα του Ethereum είναι παγκόσμια και αποτελείται από εκατομμύρια μη αγγλόφωνους χρήστες.
 
@@ -14,15 +14,15 @@ lang: el
 
 Γνωρίστε κάποιο εκπαιδευτικό πόρο στη γλώσσα σας; [Ανοίξτε ένα ζήτημα](https://github.com/ethereum/ethereum-org-website/issues/new/choose) για να τον προσθέσετε στη λίστα!
 
-## Πόροι του Ethereum.org {#ethereum-org}
+## Πόροι του Ethereum.org \{#ethereum-org}
 
 Το Ethereum.org είναι μεταφρασμένο σε περισσότερες από 40 γλώσσες όπου μπορείτε να βρείτε στη [σελίδα γλωσσών](/languages).
 
 Εάν γνωρίζετε μια επιπλέον γλώσσα και θέλετε να βοηθήσετε περισσότερους ανθρώπους, μπορείτε να συμμετέχετε στο [πρόγραμμα μετάφρασης του ethereum.org](/contributing/translation-program/#translation-program) και να βοηθήσετε στη μετάφραση του ιστοτόπου.
 
-## Πόροι κοινότητας {#community}
+## Πόροι κοινότητας \{#community}
 
-### Πορτογαλικά Βραζιλίας {#br-pt}
+### Πορτογαλικά Βραζιλίας \{#br-pt}
 
 **Νέα**
 
@@ -40,7 +40,7 @@ lang: el
 - [Cointimes](http://www.cointimes.com.br/) - ειδήσεις και εκπαιδευτικό υλικό για κρυπτονομίσματα
 - [Πακέτο έναρξης Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - ένας οδηγός που απαντά στις πιο συχνές και θεμελιώδεις ερωτήσεις για κρυπτονομίσματα
 
-### Κινέζικα {#zh}
+### Κινέζικα \{#zh}
 
 **Γενικοί πόροι**
 
@@ -67,28 +67,28 @@ lang: el
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - ένας λογαριασμός WeChat, εξηγώντας την κρυπτογραφία, την ασφάλεια, κλπ.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - ένας λογαριασμός WeChat, εξηγώντας την τεχνολογία zk.
 
-### Τσεχικά {#cs}
+### Τσεχικά \{#cs}
 
 - [Gwei.cz](https://gwei.cz) - τοπική κοινότητα γύρω από το Web3, δημιουργεί εκπαιδευτικό περιεχόμενο, διοργανώνει διαδικτυακές και διαπροσωπικές εκδηλώσεις.
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Οδηγός Ethereum για αρχάριους.
 - [DAO Příručka](https://dao.gwei.cz/) - οδηγός για αρχάριους για τους DAO.
 - [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Μαθαίνοντας το Ethereum στα Τσεχικά.
 
-### Γαλλικά {#fr}
+### Γαλλικά \{#fr}
 
 - [Ethereum Γαλλίας](https://www.ethereum-france.com/) - το Ethereum Γαλλίας διοργανώνει εκδηλώσεις, δημιουργεί περιεχόμενο και ενθαρρύνει συζητήσεις γύρω από το Ethereum
 - [Ethereum.fr](https://ethereum.fr/) - Ειδήσεις και εκπαίδευση Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) - Bankless ενημέρωση στα γαλλικά
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - κοινότητα κρυπτονομισμάτων με μια υποσελίδα του Ethereum
 
-### Γερμανικά {#de}
+### Γερμανικά \{#de}
 
 - [Εκπαίδευση Microsoft (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - χρησιμοποιώντας την Solidity
 - [Εκπαίδευση Microsoft (έξυπνα συμβόλαια)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - συντάσσοντας έξυπνα συμβόλαια Ethereum με Solidity
 - [Εκπαίδευση Microsoft (δίκτυα Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - σύνδεση και ανάπτυξη δικτύων Ethereum
 - [Εκπαίδευση Microsoft (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - εισαγωγή στην ανάπτυξη blockchain
 
-### Ιταλικά {#it}
+### Ιταλικά \{#it}
 
 - [Ethereum Ιταλία](https://www.ethereum-italia.it/) - Εκπαίδευση του Ethereum, εκδηλώσεις και ειδήσεις, με επίκεντρο τα έξυπνα συμβόλαια και την τεχνολογία blockchain.
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - Ethereum podcast στα Ιταλικά
@@ -96,11 +96,11 @@ lang: el
 - [Microsoft Learn (Έξυπνα συμβόλαια)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - μάθετε πώς να συντάσσετε έξυπνα συμβόλαια που χρησιμοποιούν Solidity.
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - δημιουργήστε μια διεπαφή χρήστη με αποκεντρωμένες εφαρμογές.
 
-### Ρωσικά {#ru}
+### Ρωσικά \{#ru}
 
 - [Ακαδημία Cyber](https://cyberacademy.dev) - εκπαιδευτικός χώρος για δημιουργούς web3
 
-### Ισπανικά {#es}
+### Ισπανικά \{#es}
 
 - [Ethereum Μαδρίτης](https://ethereummadrid.com/) - εκδηλώσεις, ιστολόγιο, blockchain, DeFi και μαθήματα διακυβέρνησης.
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - οδηγός Ethereum για αρχάριους στα Ισπανικά.
@@ -110,18 +110,18 @@ lang: el
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - μάθετε πώς λειτουργούν τα έξυπνα συμβόλαια DeFi στη Solidity και δημιουργήστε το δικό σας «Automated Market Maker».
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - μη τεχνική εκπαίδευση blockchain από αρχάριους έως προχωρημένους. Μάθετε τα πάντα για τα κρυπτονομίσματα και το Ethereum.
 
-### Τουρκικά {#tr}
+### Τουρκικά \{#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - μαθήματα που εστιάζουν στο blockchain και τα κρυπτονομίσματα.
 - [Η μεγάλη μετονομασία: τι έγινε με το Eth2;](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Τουρκική μετάφραση της ανάρτησης ιστολογίου σχετικά με τη μεγάλη μετονομασία, εξηγώντας την αφαίρεση του όρου «Eth2».
 
-### Βιετναμικά {#vi}
+### Βιετναμικά \{#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - επισκόπηση του Ethereum, των dapps, των πορτοφολιών και των συχνών ερωτήσεων.
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - πλατφόρμα ιστού με υποσελίδες για ειδήσεις και εκπαίδευση για το Ethereum.
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - ιστότοπος κρυπτονομισμάτων με ειδήσεις και εκπαιδευτικό περιεχόμενο Ethereum.
 
-### Ιαπωνικά {#ja}
+### Ιαπωνικά \{#ja}
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Επιχειρηματική Ένωση Κρυπτονομισμάτων Ιαπωνίας](https://cryptocurrency-association.org/)

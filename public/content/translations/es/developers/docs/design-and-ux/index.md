@@ -8,7 +8,7 @@ lang: es
 
 ¿Necesita primero una comprensión más básica de la Web3? Eche un vistazo a [**Learn hub**](/learn/).
 
-## Comience con la investigación de los usuarios {#start-with-user-research}
+## Comience con la investigación de los usuarios \{#start-with-user-research}
 
 El diseño efectivo va más allá de la creación de interfaces de usuario visualmente atractivas. Implica obtener una comprensión profunda de las necesidades, los objetivos y los factores impulsores del usuario. Por lo tanto, recomendamos encarecidamente que todos los diseñadores adopten un proceso de diseño, como el [**proceso de doble diamante**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)), para garantizar que su trabajo sea deliberado e intencional.
 
@@ -17,7 +17,7 @@ El diseño efectivo va más allá de la creación de interfaces de usuario visua
 - [Cómo abordar las decisiones de experiencia de usuario en Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/): breve descripción de la investigación cuantitativa y cualitativa y las diferencias entre los dos (video, 6 min)
 - [Ser investigador de UX en Web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849): visión personal de lo que es ser un investigador de experiencia de usuario en Web3
 
-## Estudios de investigación en Web3 {#research-in-web3}
+## Estudios de investigación en Web3 \{#research-in-web3}
 
 Esta es una lista curada de investigaciones de usuarios realizadas en Web3 que pueden ayudar con las decisiones de diseño y productos, o servir de inspiración para llevar a cabo su propio estudio.
 
@@ -38,7 +38,7 @@ Esta es una lista curada de investigaciones de usuarios realizadas en Web3 que p
 | <Badge colorScheme="gray">Metaverso</Badge>                                               | [Going on Safari: investigación de usuarios en el metaverso](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 min)                |
 | <Badge colorScheme="blue">Estadísticas de experiencia del usuario en Ethereum.org</Badge> | [Panel de encuestas de usabilidad y satisfacción del usuario, Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                             |
 
-## Diseño para Web3 {#design-for-web3}
+## Diseño para Web3 \{#design-for-web3}
 
 - [Principios de diseño de Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1): marco de reglas de experiencia de usuario para dapps basadas en cadenas de bloques
 - [Principios de diseño de cadena de bloques](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e): lecciones aprendidas por el equipo de diseño de cadena de bloques de IBM
@@ -47,7 +47,7 @@ Esta es una lista curada de investigaciones de usuarios realizadas en Web3 que p
 - [W3design.io](https://w3design.io/): biblioteca curada de flujos de interfaz de usuario de diferentes proyectos en el ecosistema
 - [Neueux.com](https://neueux.com/apps): biblioteca de interfaz de usuario de flujos de usuario con diversas opciones de filtrado
 
-## Estudios de casos de diseño de Web3 {#design-case-studies}
+## Estudios de casos de diseño de Web3 \{#design-case-studies}
 
 - [Cómo escribir mejores mensajes de error de Web3](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
 - [Consejos de diseño de Defi](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
@@ -56,14 +56,14 @@ Esta es una lista curada de investigaciones de usuarios realizadas en Web3 que p
 - [Vender un NFT en OpenSea](https://builtformars.com/case-studies/opensea)
 - [Wallet UX teardown how wallets need to change](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 minutos)
 
-## Bounties de diseño {#bounties}
+## Bounties de diseño \{#bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://bounties.gitcoin.co/explorer)
 - [Hackatons de Buildbox](https://gitcoin.co/hackathons)
 - [ETHGlobal](https://ethglobal.com/)
 
-## DAO y comunidades de diseño {#design-daos-and-communities}
+## DAO y comunidades de diseño \{#design-daos-and-communities}
 
 Involúcrese en organizaciones profesionales impulsadas por la comunidad o únase a grupos de diseño para discutir temas y tendencias relacionados con el diseño y la investigación con otros miembros.
 
@@ -75,7 +75,7 @@ Involúcrese en organizaciones profesionales impulsadas por la comunidad o únas
 - [web3trends.org](https://web3trends.org/)
 - [Web3Design de código abierto](https://www.web3designers.org/)
 
-## Sistemas de diseño {#design-systems}
+## Sistemas de diseño \{#design-systems}
 
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
 - [Sistema de diseño de Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)

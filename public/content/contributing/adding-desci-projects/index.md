@@ -4,15 +4,15 @@ description: The policy we use when adding a links to projects on the DeSci page
 lang: en
 ---
 
-# Adding projects {#adding-projects}
+# Adding projects \{#adding-projects}
 
 We want to make sure we show a variety of projects and give a good snapshot of the DeSci landscape.
 
 Anyone is free to suggest a project to list on the DeSci page on ethereum.org. Equally, anyone who notices a project that is no longer relevant or no longer meets our eligibility criteria, they are free to suggest we remove it.
 
-## The decision framework {#the-decision-framework}
+## The decision framework \{#the-decision-framework}
 
-### Criteria for inclusion: the must-haves {#the-must-haves}
+### Criteria for inclusion: the must-haves \{#the-must-haves}
 
 - **Open source code/data** - Openness of code and data is a core DeSci principle, so DeSci projects must not be closed source. The codebase should be accessible and ideally open to PRs.
 - **DeSci projects should be demonstrably decentralized** - This could include being governed by a DAO, or by building with a decentralized tech stack including non-custodial wallets. It probably involves auditable smart contracts on Ethereum.
@@ -30,7 +30,7 @@ Anyone is free to suggest a project to list on the DeSci page on ethereum.org. E
 - **Third party audits** - your product has been professionally audited for vulnerabilities by a trusted third party.
 - **Point of contact** - A point of contact for the project (this might be by a representative from a DAO or community) will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
 
-## Maintenance {#maintenance}
+## Maintenance \{#maintenance}
 
 As is the fluid nature of Ethereum, teams and products come and go and innovation happens daily, so we'll undertake routine checks of our content to:
 
@@ -39,6 +39,6 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 
 Ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed projects that needs to be updated, please open an issue or a pull request on our GitHub repository.
 
-## Terms of use {#terms-of-use}
+## Terms of use \{#terms-of-use}
 
 Please also refer to our [terms of use](/terms-of-use/). Information on ethereum.org is provided solely for general information purposes.

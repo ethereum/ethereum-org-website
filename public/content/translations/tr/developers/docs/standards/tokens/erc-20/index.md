@@ -4,7 +4,7 @@ description:
 lang: tr
 ---
 
-## Giriş {#introduction}
+## Giriş \{#introduction}
 
 **Token nedir?**
 
@@ -24,13 +24,13 @@ Ethereum'un bu kadar güçlü bir özelliği güçlü bir standart tarafından i
 
 ERC-20, Değiştirilebilir Jetonlar için bir standart getirmiştir: Başka bir deyişle bunlar, her bir Jetonun (tür ve değer olarak) başka bir Jeton ile tamamen aynı olmasını sağlayan bir özelliğe sahiptir. Örnek olarak, bir ERC-20 Token'ı tıpkı ETH gibi davranır, yani 1 Token her zaman tüm diğer Token'lara eşit olur.
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 - [Hesaplar](/developers/docs/accounts)
 - [Akıllı Sözleşmeler](/developers/docs/smart-contracts/)
 - [Token standartları](/developers/docs/standards/tokens/)
 
-## Şablon {#body}
+## Şablon \{#body}
 
 Fabian Vogelsteller tarafından Kasım 2015'te önerilen ERC-20 (Ethereum Yorum Talebi 20), Akıllı Sözleşmeler içindeki token'lar için bir API sağlayan bir Token Standardıdır.
 
@@ -45,7 +45,7 @@ Eğer bir Akıllı Sözleşme aşağıdaki metodları ve olayları uygularsa bir
 
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)'den:
 
-### Yöntemler {#methods}
+### Yöntemler \{#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Olaylar {#events}
+### Olaylar \{#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Örnekler {#web3py-example}
+### Örnekler \{#web3py-example}
 
 Ethereum'daki herhangi bir ERC-20 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-20 token'a arayüz oluşturmak için sadece Sözleşme Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
-#### Web3.py Örneği {#web3py-example}
+#### Web3.py Örneği \{#web3py-example}
 
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## daha fazla okuma {#further-reading}
+## daha fazla okuma \{#further-reading}
 
 - [EIP-20: ERC-20 Token Standardı](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token'lar](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

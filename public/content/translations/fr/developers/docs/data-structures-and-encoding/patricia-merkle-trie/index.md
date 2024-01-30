@@ -9,11 +9,11 @@ Un arbre de Merkle Patricia produit une structure des données cryptographiqueme
 
 Les arbres de Merkle Patricia sont entièrement déterministes, ce qui signifie que deux arbres possédant la même paire `(clé, valeur)` sont garantis identiques -- jusqu'au dernier octet. Cela signifie également qu'ils ont le même hachage racine, ce qui permet d'atteindre le "Graal" de l'efficacité `O(log(n))` pour les insertions, les consultations et les suppressions. Enfin, ils sont plus simples à appréhender ainsi qu'à coder que les alternatives basées sur les comparaisons, comme les arbres rouge-noir.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Pour mieux comprendre cette page, il serait utile d'avoir des connaissances de base sur les [hachages](https://en.wikipedia.org/wiki/Hash_function), les [arbres de Merkle](https://en.wikipedia.org/wiki/Merkle_tree), les [arbres](https://en.wikipedia.org/wiki/Trie) et la [sérialisation](https://en.wikipedia.org/wiki/Serialization).
 
-## Arbres radix de base {#basic-radix-tries}
+## Arbres radix de base \{#basic-radix-tries}
 
 Dans un arbre radix de base, chaque nœud se présente comme suit :
 
@@ -68,11 +68,11 @@ Il est impossible pour un attaquant de fournir une preuve d'une paire de `(path,
 
 Nous allons faire référence à une unité atomique d'un arbre radix (par exemple un seul caractère hexadécimal, ou un nombre binaire de 4 bits) en tant que "nibble". Lorsque l'on parcourt un chemin un nibble à la fois, comme décrit ci-dessus, les nœuds peuvent faire référence à 16 enfants au maximum, mais peuvent également inclure un élément `value`. Nous les représentons donc comme un tableau de longueur 17. Nous appelons ces tableaux à 17 éléments des "nœuds de branches".
 
-## Arbre de Merkle de Patricia {#merkle-patricia-trees}
+## Arbre de Merkle de Patricia \{#merkle-patricia-trees}
 
 Cependant, les arbres radix ont une limitation majeure : ils sont inefficaces. Si vous voulez stocker une seule liaison `(path, value)` où le chemin est, comme dans Ethereum, long de 64 caractères (nombre de nibbles dans `bytes32`), vous aurez besoin de plus d'un kilooctet d'espace supplémentaire pour stocker un niveau par caractère, et chaque consultation ou suppression prendra les 64 étapes complètes. L'arbre de Patricia présenté dans ce qui suit résout ce problème.
 
-### Optimisation {#optimization}
+### Optimisation \{#optimization}
 
 Un nœud dans un arbre de Merkle Patricia correspond à l'un des éléments suivants :
 
@@ -89,7 +89,7 @@ Cette optimisation introduit toutefois une ambiguïté.
 
 Lors de la traversée de chemins en nibbles, nous pourrions nous retrouver avec un nombre impair de nibbles à traverser, mais comme toutes les données sont stockées au format `bytes`, il est possible que le nombre de nibbles à parcourir soit impair. Il n'est pas possible de différencier entre, par exemple, le nibble `1`, et les nibbles `01` (les deux doivent être stockés sous la forme `<01>`). Pour spécifier une longueur impaire, le chemin partiel est précédé d'un drapeau.
 
-### Spécification : Codage compact d'une séquence hexagonale avec terminateur optionnel {#specification}
+### Spécification : Codage compact d'une séquence hexagonale avec terminateur optionnel \{#specification}
 
 Le marquage de la _longueur du chemin partiel restante impaire ou paire_ et de la _feuille ou nœud d'extension_, tel que décrit ci-dessus, se trouve dans le premier élément du chemin partiel de tout nœud à deux éléments. Cela se traduit comme suit :
 
@@ -158,7 +158,7 @@ Voici le code étendu pour obtenir un nœud dans l'arbre de Merkle Patricia :
         return get_helper(node,path2)
 ```
 
-### Exemple d'arbre {#example-trie}
+### Exemple d'arbre \{#example-trie}
 
 Supposons que nous voulions un tableau contenant quatre couples chemin/valeur `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
@@ -185,7 +185,7 @@ Lorsqu'un nœud est référencé à l'intérieur d'un autre nœud, ce qui est in
 
 Notez que lors de la mise à jour d'un arbre, on doit stocker la paire clé/valeur `(keccak256(x), x)`dans une table de consultation persistante _si_ le nœud nouvellement créé a une longueur >= 32. Toutefois, si le nœud est plus court que cela, il n'est pas nécessaire de stocker quoi que ce soit, puisque la fonction f(x) = x est réversible.
 
-## Les arbres sur Ethereum {#tries-in-ethereum}
+## Les arbres sur Ethereum \{#tries-in-ethereum}
 
 Tous les arbres Merkle dans la couche d'exécution d'Ethereum font appel à un arbre de Merkle Patricia.
 
@@ -195,11 +195,11 @@ L'en-tête d'un bloc comporte trois racines issues de trois de ces arbres.
 2.  transactionsRoot
 3.  receiptsRoot
 
-### Arbre d'état {#state-trie}
+### Arbre d'état \{#state-trie}
 
 Il n'existe qu'un seul arbre d'état global, qui est mis à jour à chaque fois qu'un client traite un bloc. Dans celui-ci, un `path` est toujours : `keccak256(ethereumAddress)` et une `value` est toujours : `rlp(ethereumAccount)`. Plus précisément, un `account` ethereum est un tableau de 4 éléments de `[nonce,balance,storageRoot,codeHash]`. À ce stade, il convient de noter que ce `storageRoot` est la racine d'un autre arbre Patricia :
 
-### Arbre de stockage {#storage-trie}
+### Arbre de stockage \{#storage-trie}
 
 C'est dans l'arbre de stockage que se situent _toutes_ les données du contrat. Chaque compte dispose d'un arbre de stockage distinct. Pour récupérer des valeurs à des positions de stockage spécifiques et à une adresse donnée, l'adresse de stockage, la position entière des données stockées dans le stockage et l'ID du bloc sont nécessaires. Ceux-ci peuvent ensuite être transmis comme arguments à la fonction `eth_getStorageAt` définie dans l'API JSON-RPC, par exemple pour récupérer les données dans le créneau de stockage 0 pour l'adresse `0x295a70b2de5e3953354a6a8344e616ed314d7251` :
 
@@ -235,7 +235,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Note : le `storageRoot` pour un compte Ethereum est vide par défaut s'il ne s'agit pas d'un compte de contrat.
 
-### Arbre de transactions {#transaction-trie}
+### Arbre de transactions \{#transaction-trie}
 
 Il existe un arbre de transactions distinct pour chaque bloc, qui stocke à nouveau les paires `(key, value)` . Un chemin ici est : `rlp(transactionIndex)` qui représente la clé qui correspond à une valeur déterminée par :
 
@@ -248,13 +248,13 @@ else:
 
 Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-### Arbre de reçus {#receipts-trie}
+### Arbre de reçus \{#receipts-trie}
 
 Chaque bloc a son propre arbre de reçus. Un `path` ici est : `rlp(transactionIndex)`. `transactionIndex` est son indice dans le bloc qu'il a miné. Les arbres de reçus ne sont jamais mis à jour. De la même manière que pour les arbres de transactions, il existe des reçus actuels et des reçus hérités. Pour interroger un reçu spécifique dans la liste des reçus, l'indice de la transaction dans son bloc, les charges du reçu et le type de transaction sont nécessaires. Le reçu retourné peut être de type `Reçu` qui est défini comme la concaténation de `TransactionType` et `ReceiptPayload` ou il peut être de type `LegacyReceipt` qui est défini comme `rlp([statut, cumulativeGasUsed, logsBloom, logs])`.
 
 Plus d'informations à ce sujet peuvent être trouvées dans la documentation [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Modification de l'arbre de Merkle Patricia — Comment Ethereum sauvegarde un état](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [Le Merkling sur Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

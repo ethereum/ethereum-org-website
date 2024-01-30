@@ -4,7 +4,7 @@ description: Explication de l'expiration d'historique et d'Ethereum sans état
 lang: fr
 ---
 
-# Absence d'état, expiration d'état et expiration de l'historique {#statelessness}
+# Absence d'état, expiration d'état et expiration de l'historique \{#statelessness}
 
 La possibilité d'exécuter des nœuds Ethereum sur du matériel modeste est critique pour une véritable décentralisation. En effet, l'exécution d'un nœud donne aux utilisateurs la possibilité de vérifier les informations en effectuant des vérifications cryptographiques de manière indépendante plutôt que de faire confiance à un tiers pour leur fournir les données. Le fait d'exécuter un nœud permet aux utilisateurs de soumettre des transactions directement au réseau pair-à-pair Ethereum plutôt que de devoir faire confiance à un intermédiaire. La décentralisation n'est pas possible si ces avantages ne sont disponibles qu'aux utilisateurs possesseurs de matériel coûteux. Au contraire, les nœuds devraient pouvoir s'exécuter avec des exigences de calcul et de mémoire très modestes, afin qu'ils puissent fonctionner sur des téléphones portables, de petits ordinateurs, ou sans effet notable sur un ordinateur personnel.
 
@@ -12,7 +12,7 @@ Aujourd'hui, la grande demande d'espace disque est la principale barrière à l'
 
 Des disques durs moins coûteux peuvent être utilisés pour stocker les données plus anciennes, mais ils sont trop lents pour suivre le rythme des nouveaux blocs qui arrivent. Conserver les modèles de stockage actuels pour les clients tout en rendant les données moins chères et plus faciles à stocker n'est qu'une solution temporaire et partielle au problème car la croissance de l'état d'Ethereum est 'sans bornes', ce qui signifie que les besoins de stockage ne peuvent qu'augmenter, et les améliorations technologiques devront toujours suivre le rythme de la croissance continue de l'état. Les clients doivent plutôt trouver de nouveaux moyens de vérifier les blocks et les transactions qui ne reposent pas sur la recherche des données dans des bases de données locales.
 
-## Réduction du stockage pour les nœuds {#reducing-storage-for-nodes}
+## Réduction du stockage pour les nœuds \{#reducing-storage-for-nodes}
 
 Il y a plusieurs façons de réduire la quantité de données que chaque nœud doit stocker, chacune nécessitant que le protocole au cœur d'Ethereum soit mis à jour à des degrés différents :
 
@@ -21,9 +21,9 @@ Il y a plusieurs façons de réduire la quantité de données que chaque nœud d
 - **Absence d'état faible** : seuls les producteurs de blocs ont besoin d'accéder aux données d'état complètes, les autres noeuds peuvent vérifier les blocs sans base de données locale.
 - **Absence d'état forte** : aucun noeud n'a besoin d'accéder aux données d'état complètes.
 
-## Expiration des données {#data-expiry}
+## Expiration des données \{#data-expiry}
 
-### Expiration de l'historique {#history-expiry}
+### Expiration de l'historique \{#history-expiry}
 
 L'expiration de l'historique fait référence aux clients qui élaguent les données plus anciennes dont ils n'auront probablement pas besoin, de sorte qu'ils ne stockent qu'une petite quantité de données historiques, laissant tomber les données plus anciennes lorsque de nouvelles données arrivent. Il y a deux raisons pour lesquelles les clients ont besoin des données historiques : la synchronisation et la réponse aux requêtes de données. Autrefois, les clients devaient synchroniser depuis le bloc d'origine, en vérifiant que chaque bloc successif est correct tout du long jusqu'à la tête de la chaine. Aujourd'hui, les clients utilisent des « points de contrôle de la faible subjectivité » pour amorcer leur parcours vers la tête de la chaîne. Ces points de contrôle sont des points de départ approuvés, comme un bloc d'origine proche du présent plutôt qu'au tout début d'Ethereum. Cela veut dire que les clients peuvent écarter toutes les informations antérieures au point de contrôle le plus récent de la faible subjectivité sans perdre la possibilité de se synchroniser avec la tête de la chaîne. Les clients traitent actuellement les demandes (arrivant via JSON-RPC) pour les données historiques en les récupérant depuis leurs bases de données locales. Cependant, avec l'expiration de l'historique, cela ne sera plus possible si les données requises ont été écartées. Des solutions innovantes sont nécessaires pour traiter ces données historiques.
 
@@ -35,7 +35,7 @@ EIP-4444 n'est pas encore prêt à être lancé, mais fait l'objet de discussion
 
 Cette mise à niveau ne modifie pas fondamentalement comment les noeuds Ethereum traitent les données d'état, elle change juste la façon dont les données historiques sont disponibles.
 
-### Expiration de l'état {#state-expiry}
+### Expiration de l'état \{#state-expiry}
 
 L'expiration de l'état fait référence à la suppression de l'état sur les nœuds individuels si cet état n'a pas été accédé récemment. Ceci pourrait être implémenté de plusieurs manières, notamment :
 
@@ -50,7 +50,7 @@ De même que pour l'expiration de l'historique, sous l'expiration de l'état, la
 
 L'expiration de l'état est encore en phase de recherche et n'est pas encore prête à être expédiée. L'expiration de l'état pourrait bien se produire après les clients sans état et l'expiration de l'historique, car ces mises à niveau rendent les grandes tailles d'état facilement gérables pour la majorité des validateurs.
 
-## Le principe de non-vérification de l'état de la blockchain {#statelessness}
+## Le principe de non-vérification de l'état de la blockchain \{#statelessness}
 
 L'absence d'état est un peu un abus de langage car cela ne signifie pas que le concept d'« état » est éliminé, mais cela implique des changements dans la façon dont les nœuds Ethereum traitent les données d'état. L'absence d'état elle-même se présente sous deux formes : l'absence d'état faible et l'absence d'état forte. L'absence d'état faible permet à la plupart des nœuds de devenir sans état en plaçant la responsabilité du stockage de l'état sur quelques-uns. L'absence d'état forte retire entièrement le besoin pour tous les nœuds de stocker les données d'état complètes. Les absences d'état faibles et fortes offrent toutes les deux les avantages suivants aux validateurs normaux :
 
@@ -60,7 +60,7 @@ L'absence d'état est un peu un abus de langage car cela ne signifie pas que le 
 - les nœuds peuvent s'exécuter sur des disques durs bon marché parce qu'aucune lecture/écriture sur le disque n'est nécessaire
 - compatibles avec les mises à niveau futures de la cryptographie d'Ethereum
 
-### Absence d'état faible {#weak-statelessness}
+### Absence d'état faible \{#weak-statelessness}
 
 L'absence d'était faible implique des changements dans la façon dont les nœuds Ethereum vérifient les changements d'état, mais elle n'élimine pas complètement le besoin de stockage d'état dans tous les nœuds du réseau. Au lieu de cela, l'absence d'était faible met la responsabilité du stockage de l'état sur les proposants de blocs, alors que tous les autres nœuds du réseau vérifient les blocs sans stocker les données d'état complètes.
 
@@ -79,17 +79,17 @@ Les proposants de bloc utilisent les données d'état pour créer des « témoin
 
 L'absence d'état faible est à un stade de recherche avancé, mais elle repose sur l'implémentation de la séparation proposant-constructeur et les Arbres de Verkle, afin que de petits témoins puissent être transférés entre les pairs. Cela veut dire que l'absence d'était faible prendra probablement quelques années avant d'être introduite dans le réseau principal d'Ethereum.
 
-### Absence d'état forte {#strong-statelessness}
+### Absence d'état forte \{#strong-statelessness}
 
 L'absence d'état forte élimine le besoin pour tout bloc de stocker des données d'état. Au lieu de cela, les transactions sont envoyées avec des témoins qui peuvent être agrégés par les producteurs de blocs. Les producteurs de blocs sont alors chargés de stocker uniquement l'état nécessaire à la génération de témoins pour les comptes concernés. La responsabilité de l'état est presque entièrement transférée aux utilisateurs, car ils envoient des témoins et des « listes d'accès » pour déclarer avec quels comptes et clés de stockage ils interagissent. Cela permettrait de disposer de nœuds extrêmement légers, mais il y a des compromis, notamment la difficulté accrue de réaliser des transactions avec des contrats intelligents.
 
 L'absence d'état forte a été étudiée par les chercheurs mais on ne s'attend actuellement pas à ce qu'elle fasse partie de la feuille de route d'Ethereum - il est plus probable que l'absence d'état faible soit suffisante pour les besoins de mise à l'échelle d'Ethereum.
 
-## Progrès actuels {#current-progress}
+## Progrès actuels \{#current-progress}
 
 Absence d'état faible, l'expiration de l'historique et l'expiration de l'état sont tous en phase de recherche et devraient être prêts dans plusieurs années. Il n'y a aucune garantie que toutes ces propositions seront mises en œuvre, par exemple, si l'expiration de l'état est mise en œuvre en premier, il se peut qu'il ne soit pas nécessaire de mettre en œuvre également l'expiration de l'historique. Il existe également d'autres éléments de la feuille de route, tels que les [Arbres de Verkle](/roadmap/verkle-trees) et la [Séparation proposeur-constructeur](/roadmap/pbs) qui doivent être achevés en premier.
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [AMA de Vitalik sur l'absence d'état](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Une théorie de la gestion de la taille de l'état](https://hackmd.io/@vbuterin/state_size_management)

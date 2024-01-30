@@ -10,15 +10,15 @@ lang: zh
 
 如果您想使用特定的编程语言去连接以太坊的节点，您可自行选择，但是在社区中已有几个方便的库，可以更方便地实现应用程序与以太坊的连接。 通过这些库，开发者可以方便地写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
 
-## 前置要求 {#prerequisites}
+## 前置要求 \{#prerequisites}
 
 了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/developers/docs/nodes-and-clients/)可能会对您有所帮助。
 
-## 为什么要使用库？ {#why-use-a-library}
+## 为什么要使用库？ \{#why-use-a-library}
 
 这些库降低了与一个以太坊节点交互的复杂性。 它们还提供实用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，您可以花费更少的时间来处理以太坊客户端的复杂问题，从而将更多的时间集中于处理您的应用程序的独特功能。
 
-## 可用的库 {#available-libraries}
+## 可用的库 \{#available-libraries}
 
 **Alchemy -** **_以太坊开发平台_**
 
@@ -167,16 +167,16 @@ lang: zh
 - [相关文档](https://services.tokeniew/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [开发框架](/developers/docs/frameworks/)
 
-## 相关教程 {#related-tutorials}
+## 相关教程 \{#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
 - [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI 代币，从而借助 JavaScript 调用合约函数。_

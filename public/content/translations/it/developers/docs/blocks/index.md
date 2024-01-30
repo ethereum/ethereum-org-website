@@ -6,11 +6,11 @@ lang: it
 
 I blocchi sono un insieme di transazioni che contengono un hash del blocco precedente nella catena. Per questo motivo, sono collegati l'uno all'altro nella catena, perché gli hash vengono calcolati crittograficamente dai dati del blocco. Questi impedisce anche le frodi, perché un cambiamento in qualsiasi blocco nella cronologia invaliderebbe tutti i blocchi successivi, dato che gli hash successivi cambierebbero e tutti coloro che eseguono la blockchain se ne accorgerebbero.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Quello dei blocchi è un argomento piuttosto basico. Ma, per aiutarti a comprendere meglio questa pagina, ti consigliamo innanzitutto di leggere sui [Conti](/developers/docs/accounts/), sulle [Transazioni](/developers/docs/transactions/) e la nostra [introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Perché i blocchi? {#why-blocks}
+## Perché i blocchi? \{#why-blocks}
 
 Per far sì che tutti i partecipanti della rete Ethereum siano sincronizzati e concordino sulla cronologia esatta delle transazioni, le transazioni vengono raggruppate in blocchi. Significa che decine (o centinaia) di transazioni vengono inviate, approvate e sincronizzate in una volta sola.
 
@@ -18,13 +18,13 @@ Per far sì che tutti i partecipanti della rete Ethereum siano sincronizzati e c
 
 Scaglionando gli invii, diamo a tutti i partecipanti della rete abbastanza tempo per giungere al consenso: anche se arrivano decine di richieste di transazione al secondo, i blocchi su Ethereum vengono creati e inviati a Ethereum solo più o meno ogni quindici secondi.
 
-## Come funzionano i blocchi {#how-blocks-work}
+## Come funzionano i blocchi \{#how-blocks-work}
 
 Per preservare la cronologia delle transazioni, i blocchi sono ordinati in modo rigoroso (ogni nuovo blocco che viene creato contiene un riferimento al blocco padre) e anche le transazioni all'interno del blocco sono ordinate altrettanto rigorosamente. A parte in rari casi, in ogni momento, tutti i partecipanti della rete concordano sul numero e sulla cronologia esatta dei blocchi e lavorano per raggruppare le richieste di transazione live nel blocco successivo.
 
 Dopo essere stato realizzato da un validatore della rete selezionato casualmente, un blocco viene propagato al resto della rete; tutti i nodi vengono aggiunti al blocco alla fine della relativa blockchain e un nuovo validatore viene selezionato per creare il successivo. Il processo esatto di costruzione dei blocchi e il processo di invio/consenso è attualmente specificato nel protocollo "Proof of Stake" di Ethereum.
 
-## Protocollo Proof of Stake {#proof-of-work-protocol}
+## Protocollo Proof of Stake \{#proof-of-work-protocol}
 
 Proof of Stake significa quanto segue:
 
@@ -35,7 +35,7 @@ Proof of Stake significa quanto segue:
 
 [Maggiori informazioni sul Proof of Stake](/developers/docs/consensus-mechanisms/pos)
 
-## Cosa c'è in un blocco? {#block-anatomy}
+## Cosa c'è in un blocco? \{#block-anatomy}
 
 In un blocco sono contenute molte informazioni. Al livello più alto, un blocco contiene i seguenti campi:
 
@@ -131,21 +131,21 @@ L'elenco dei `withdrawals` contiene oggetti `withdrawal` strutturati nel modo se
 | `indice`         | valore dell'indice di prelievo       |
 | `validatorIndex` | valore dell'indice del validatore    |
 
-## Tempo di blocco {#block-time}
+## Tempo di blocco \{#block-time}
 
 Il tempo di blocco si riferisce al tempo che separa i blocchi. In Ethereum, il tempo è diviso in unità da dodici secondi, dette 'slot'. In ogni slot viene selezionato un singolo validatore per proporre un blocco. Supponendo che tutti i validatori siano online e totalmente operativi, ci sarà un blocco in ogni slot, a significare che il tempo del blocco è 12 secondi. Tuttavia, occasionalmente, i validatori potrebbero essere offline quando chiamati a proporre un blocco, a significare che talvolta gli slot possono rimanere vuoti.
 
 Questa implementazione differisce dai sistemi basati sul proof-of-work, in cui i tempi di blocco sono probabilistici e regolati dalla difficoltà di mining target del protocollo. Il [tempo medio di blocco](https://etherscan.io/chart/blocktime) di Ethereum è un esempio perfetto da cui è possibile desumere il passaggio da proof-of-work a proof-of-stake in base alla coerenza del nuovo tempo di blocco da 12 secondi.
 
-## Dimensioni del blocco {#block-size}
+## Dimensioni del blocco \{#block-size}
 
 Un'ultima nota importante: i blocchi stessi sono limitati in termini di dimensioni. Ogni blocco ha una dimensione prevista di 15 milioni di gas, ma la dimensione dei blocchi aumenterà o diminuirà in base alle esigenze della rete, fino al limite di 30 milioni di gas (2x dimensioni del blocco previste). La quantità totale di carburante usato da tutte le transazioni nel blocco deve essere inferiore al limite di carburante del blocco. Ciò è importante perché evita che i blocchi siano arbitrariamente grandi. Se i blocchi potessero essere arbitrariamente grandi, i nodi completi meno performanti, gradualmente, non riuscirebbero più stare al passo con la rete per via dei requisiti di spazio e velocità. Più grande è il blocco, maggiore sarà la potenza di calcolo richiesta per elaborarlo in tempo per il prossimo slot. Questa è una forza centralizzante, a cui si resiste limitando le dimensioni dei blocchi.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati {#related-topics}
+## Argomenti correlati \{#related-topics}
 
 - [Transazioni](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)

@@ -4,7 +4,7 @@ description: An non-technical introduction to zero-knowledge proofs for beginner
 lang: en
 ---
 
-## What are zero-knowledge proofs? {#what-are-zk-proofs}
+## What are zero-knowledge proofs? \{#what-are-zk-proofs}
 
 A zero-knowledge proof is a way of proving the validity of a statement without revealing the statement itself. The ‘prover’ is the party trying to prove a claim, while the ‘verifier’ is responsible for validating the claim.
 
@@ -14,7 +14,7 @@ Zero-knowledge proofs first appeared in a 1985 paper, “[The knowledge complexi
 
 Zero-knowledge proofs have improved over the years and they are now being used in several real-world applications.
 
-## Why do we need zero-knowledge proofs? {#why-zero-knowledge-proofs-are-important}
+## Why do we need zero-knowledge proofs? \{#why-zero-knowledge-proofs-are-important}
 
 Zero-knowledge proofs represented a breakthrough in applied cryptography, as they promised to improve security of information for individuals. Consider how you might prove a claim (e.g., “I am a citizen of X country”) to another party (e.g., a service provider). You’d need to provide “evidence” to back up your claim, such as a national passport or driver’s license.
 
@@ -24,7 +24,7 @@ Zero-knowledge proofs solve this problem by eliminating the need to reveal infor
 
 Going back to our earlier example, the only evidence you need to prove your citizenship claim is a zero-knowledge proof. The verifier only has to check if certain properties of the proof hold true to be convinced that the underlying statement holds true as well.
 
-## How do zero-knowledge proofs work? {#how-do-zero-knowledge-proofs-work}
+## How do zero-knowledge proofs work? \{#how-do-zero-knowledge-proofs-work}
 
 A zero-knowledge proof allows you to prove the truth of a statement without sharing the statement’s contents or revealing how you discovered the truth. To make this possible, zero-knowledge protocols rely on algorithms that take some data as input and return ‘true’ or ‘false’ as output.
 
@@ -48,7 +48,7 @@ The above describes the structure of an ‘interactive zero-knowledge proof’. 
 
 A good example that illustrates how interactive proofs work is Jean-Jacques Quisquater’s famous [Ali Baba cave story](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). In the story, Peggy (the prover) wants to prove to Victor (the verifier) that she knows the secret phrase to open a magic door without revealing the phrase.
 
-### Non-interactive zero-knowledge proofs {#non-interactive-zero-knowledge-proofs}
+### Non-interactive zero-knowledge proofs \{#non-interactive-zero-knowledge-proofs}
 
 While revolutionary, interactive proving had limited usefulness since it required the two parties to be available and interact repeatedly. Even if a verifier was convinced of a prover’s honesty, the proof would be unavailable for independent verification (computing a new proof required a new set of messages between the prover and verifier).
 
@@ -60,9 +60,9 @@ Non-interactive proving reduces communication between prover and verifier, makin
 
 Non-interactive proofs represented a breakthrough for zero-knowledge technology and spurred the development of proving systems used today. We discuss these proof types below:
 
-### Types of zero-knowledge proofs {#types-of-zero-knowledge-proofs}
+### Types of zero-knowledge proofs \{#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs {#zk-snarks}
+#### ZK-SNARKs \{#zk-snarks}
 
 ZK-SNARK is an acronym for **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**. The ZK-SNARK protocol has the following qualities:
 
@@ -82,7 +82,7 @@ The ‘shared key’ mentioned earlier refers to public parameters that the prov
 
 Trusted setups require users to trust the participants in parameter-generation. However, the development of ZK-STARKs has enabled proving protocols that work with a non-trusted setup.
 
-#### ZK-STARKs {#zk-starks}
+#### ZK-STARKs \{#zk-starks}
 
 ZK-STARK is an acronym for **Zero-Knowledge Scalable Transparent Argument of Knowledge**. ZK-STARKs are similar to ZK-SNARKs, except that they are:
 
@@ -92,9 +92,9 @@ ZK-STARK is an acronym for **Zero-Knowledge Scalable Transparent Argument of Kno
 
 ZK-STARKs produce larger proofs than ZK-SNARKs meaning they generally have higher verification overheads. However, there are cases (such as proving large datasets) where ZK-STARKs may be more cost-effective than ZK-SNARKs.
 
-## Use-cases for zero-knowledge proofs {#use-cases-for-zero-knowledge-proofs}
+## Use-cases for zero-knowledge proofs \{#use-cases-for-zero-knowledge-proofs}
 
-### Anonymous payments {#anonymous-payments}
+### Anonymous payments \{#anonymous-payments}
 
 Credit card payments are often visible to multiple parties, including the payments provider, banks, and other interested parties (e.g., government authorities). While financial surveillance has benefits for identifying illegal activity, it also undermines the privacy of ordinary citizens.
 
@@ -106,19 +106,19 @@ By baking in zero-knowledge technology into the protocol, privacy-focused blockc
 
 Zero-knowledge proofs are also being applied to anonymizing transactions on public blockchains. An example is Tornado Cash, a decentralized, non-custodial service that allows users to conduct private transactions on Ethereum. Tornado Cash uses zero-knowledge proofs to obfuscate transaction details and guarantee financial privacy. Unfortunately, because these are "opt-in" privacy tools they are associated with illicit activity. To overcome this, privacy has to eventually become the default on public blockchains.
 
-### Identity protection {#identity-protection}
+### Identity protection \{#identity-protection}
 
 Current identity management systems put personal information at risk. Zero-knowledge proofs can help individuals validate identity whilst protecting sensitive details.
 
 Zero-knowledge proofs are particularly useful in the context of [decentralized identity](/decentralized-identity/). Decentralized identity (also described as ‘self-sovereign identity’) gives the individual the ability to control access to personal identifiers. Proving your citizenship without revealing your tax ID or passport details is a good example of how zero-knowledge technology enables decentralized identity.
 
-### Authentication {#authentication}
+### Authentication \{#authentication}
 
 Using online services requires proving your identity and right to access those platforms. This often requires providing personal information, like names, email addresses, birth dates, and so on. You may also need to memorize long passwords or risk losing access.
 
 Zero-knowledge proofs, however, can simplify authentication for both platforms and users. Once a ZK-proof has been generated using public inputs (e.g., data attesting to the user's membership of the platform) and private inputs (e.g., the user's details), the user can simply present it to authenticate their identity when they need to access the service. This improves the experience for users and frees organizations from the need to store huge amounts of user information.
 
-### Verifiable computation {#verifiable-computation}
+### Verifiable computation \{#verifiable-computation}
 
 Verifiable computation is another application of zero-knowledge technology for improving blockchain designs. Verifiable computing allows us to outsource computation to another entity while maintaining verifiable results. The entity submits the result along with a proof verifying that the program was executed correctly.
 
@@ -142,7 +142,7 @@ This is where verifiable computation comes into play. When a node executes a tra
 
 [Zero-knowledge rollups](/developers/docs/scaling/zk-rollups) and [validiums](/developers/docs/scaling/validium/) are two off-chain scaling solutions that use validity proofs to provide secure scalability. These protocols execute thousands of transactions off-chain and submit proofs for verification on Ethereum. Those results can be applied immediately once the proof is verified, allowing Ethereum to process more transactions without increasing computation on the base layer.
 
-### Reducing bribery and collusion in on-chain voting {#secure-blockchain-voting}
+### Reducing bribery and collusion in on-chain voting \{#secure-blockchain-voting}
 
 Blockchain voting schemes have many favorable characteristics: they are fully auditable, secure against attacks, resistant to censorship, and free of geographical constraints. But even on-chain voting schemes aren't immune to the problem of **collusion**.
 
@@ -156,7 +156,7 @@ Using on-chain voting makes quadratic funding susceptible to collusion: blockcha
 
 Fortunately, newer solutions such as MACI (Minimum Anti-Collusion Infrastructure) are using zero-knowledge proofs to make on-chain voting (eg., quadratic funding mechanisms) resistant to bribery and collusion. MACI is a set of smart contracts and scripts that allow a central administrator (called a "coordinator") to aggregate votes and tally results _without_ revealing specifics on how each individual voted. Even so, it is still possible to verify that the votes were counted properly, or confirm that a particular individual participated in the voting round.
 
-#### How does MACI work with zero-knowledge proofs? {#how-maci-works-with-zk-proofs}
+#### How does MACI work with zero-knowledge proofs? \{#how-maci-works-with-zk-proofs}
 
 At the start, the coordinator deploys the MACI contract on Ethereum, after which users can sign up for voting (by registering their public key in the smart contract). Users cast votes by sending messages encrypted with their public key to the smart contract (a valid vote must be signed with the most recent public key associated with the user's identity, among other criteria). Afterward, the coordinator processes all messages once the voting period ends, tallies the votes, and verifies the results on-chain.
 
@@ -178,29 +178,29 @@ But in cases where the coordinator remains honest, MACI represents a powerful to
 
 [Learn more about MACI](https://privacy-scaling-explorations.github.io/maci/).
 
-## Drawbacks of using zero-knowledge proofs {#drawbacks-of-using-zero-knowledge-proofs}
+## Drawbacks of using zero-knowledge proofs \{#drawbacks-of-using-zero-knowledge-proofs}
 
-### Hardware costs {#hardware-costs}
+### Hardware costs \{#hardware-costs}
 
 Generating zero-knowledge proofs involves very complex calculations best performed on specialized machines. As these machines are expensive, they are often out of the reach of regular individuals. Additionally, applications that want to use zero-knowledge technology must factor in hardware costs—which may increase costs for end-users.
 
-### Proof verification costs {#proof-verification-costs}
+### Proof verification costs \{#proof-verification-costs}
 
 Verifying proofs also requires complex computation and increases the costs of implementing zero-knowledge technology in applications. This cost is particularly relevant in the context of proving computation. For example, ZK-rollups pay ~ 500,000 gas to verify a single ZK-SNARK proof on Ethereum, with ZK-STARKs requiring even higher fees.
 
-### Trust assumptions {#trust-assumptions}
+### Trust assumptions \{#trust-assumptions}
 
 In ZK-SNARK, the Common Reference String (public parameters) is generated once and available for re-use to parties who wish to participate in the zero-knowledge protocol. Public parameters are created via a trusted setup ceremony, where participants are assumed to be honest.
 
 But there’s really no way for users to assess the honesty of participants and users have to take developers at their word. ZK-STARKs are free from trust assumptions since the randomness used in generating the string is publicly verifiable. In the meantime, researchers are working on non-trusted setups for ZK-SNARKs to increase the security of proving mechanisms.
 
-### Quantum computing threats {#quantum-computing-threats}
+### Quantum computing threats \{#quantum-computing-threats}
 
 ZK-SNARK uses elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) for encryption. While the ECDSA algorithm is secure for now, the development of quantum computers could break its security model in the future.
 
 ZK-STARK is considered immune to the threat of quantum computing, as it uses collision-resistant hashes for encryption. Unlike public-private key pairings used in elliptic curve cryptography, collision-resistant hashing is more difficult for quantum computing algorithms to break.
 
-## Further reading {#further-reading}
+## Further reading \{#further-reading}
 
 - [Computer Scientist Explains One Concept in 5 Levels of Difficulty | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube channel_
 - [Overview of use cases for zero-knowledge proofs](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_

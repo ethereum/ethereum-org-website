@@ -4,11 +4,11 @@ description: Aufschlüsselung darüber, wie The Merge das ETH-Angebot beeinfluss
 lang: de
 ---
 
-# Wie hat The Merge das ETH-Angebot beeinflusst {#how-the-merge-impacts-ETH-supply}
+# Wie hat The Merge das ETH-Angebot beeinflusst \{#how-the-merge-impacts-ETH-supply}
 
 The Merge repräsentierte den Übergang des Ethereum-Netzwerks von Proof-of-Work zu Proof-of-Stake, welcher im September 2022 stattfand. Die Art und Weise, wie ETH ausgegeben wurde, hat sich zum Zeitpunkt dieser Übergangsphase verändert. Früher wurde neues ETH aus zwei Quellen ausgegeben: der Ausführungsebene (d.h. Mainnet) und der Konsensschicht (d.h. Beacon Chain). Seit The Merge findet auf der Ausführungsebene keine Eth-Ausgabe mehr statt. Lassen Sie uns das genauer betrachten.
 
-## Bestandteile der ETH-Ausgabe {#components-of-eth-issuance}
+## Bestandteile der ETH-Ausgabe \{#components-of-eth-issuance}
 
 Das Angebot an ETH kann hauptsächlich in zwei Faktoren unterteilt werden: Die Ausgabe und das Verbrennen.
 
@@ -26,19 +26,19 @@ title="ETH-Ausgabe tldr">
 
 </Card>
 
-## Vor dem Merge (historisch) {#pre-merge}
+## Vor dem Merge (historisch) \{#pre-merge}
 
-### Ausgabe auf der Ausführungsschicht {#el-issuance-pre-merge}
+### Ausgabe auf der Ausführungsschicht \{#el-issuance-pre-merge}
 
 Unter dem Proof-of-Work-System interagierten die Miner nur mit der Ausführungsschicht und wurden mit Blockbelohnungen belohnt, wenn sie die ersten Miner waren, die den nächsten Block gelöst haben. Seit dem [Constantinople-Upgrade](/history/#constantinople) im Jahr 2019 betrug diese Belohnung 2 ETH pro Block. Miner wurden auch für die Veröffentlichung von [Ommer-Blöcken](/glossary/#ommer) belohnt, das waren gültige Blöcke, die nicht in der längsten/kanonischen Kette landeten. Diese Belohnungen erreichten maximal 1,75 ETH pro Ommer und wurden zusätzlich zu der Belohnung aus dem kanonischen Block ausgegeben. Das Mining war eine wirtschaftlich intensive Tätigkeit, die historisch gesehen ein hohes Niveau an ETH-Ausgabe erforderte, um sie aufrechtzuerhalten.
 
-### Ausgabe der Konsensschicht {#cl-issuance-pre-merge}
+### Ausgabe der Konsensschicht \{#cl-issuance-pre-merge}
 
 Die [Beacon Chain](/history/#beacon-chain-genesis) wurde 2020 gestartet. Anstelle von Minern wird sie durch Validatoren mittels Proof-of-Stake gesichert. Diese Kette wurde initiiert, indem Ethereum-Nutzer ETH in einen Smart Contract auf dem Mainnet (der Ausführungsschicht) einzahlten. Die Beacon Chain reagiert darauf und schreibt den Nutzern eine entsprechende Menge ETH auf der neuen Kette gut. Bis zur Durchführung von The Merge verarbeiteten die Validatoren der Beacon Chain keine Transaktionen und kamen im Wesentlichen zu einem Konsens über den Zustand des Validator-Pools selbst.
 
 Validatoren auf der Beacon Chain werden mit ETH belohnt, wenn sie den Zustand der Kette bestätigen und Blöcke vorschlagen. Belohnungen (oder Strafen) werden bei jedem Zeitalter (alle 6,4 Minuten) basierend auf der Leistung der Validatoren berechnet und verteilt. Die Belohnungen für Validatoren sind erheblich geringer als die zuvor unter dem Proof-of-Work-Verfahren ausgeschütteten Mining-Belohnungen (2 ETH alle etwa 13,5 Sekunden), da der Betrieb eines Validierungsknotens nicht so wirtschaftlich intensiv ist und daher keine so hohe Belohnung erfordert oder rechtfertigt.
 
-### Die Verteilung der Ausgabe vor dem Merge lässt sich wie folgt darstellen: {#pre-merge-issuance-breakdown}
+### Die Verteilung der Ausgabe vor dem Merge lässt sich wie folgt darstellen: \{#pre-merge-issuance-breakdown}
 
 Gesamt ETH Angebot: **~120,520,000 ETH** (zum Zeitpunkt von The Merge im September 2022)
 
@@ -60,13 +60,13 @@ Gesamt ETH Angebot: **~120,520,000 ETH** (zum Zeitpunkt von The Merge im Septemb
 <strong>~11.3%</strong> wurde an Staker auf der Konsensus-Ebene ausgegeben (0.52 / 4.61 * 100)
 </InfoBanner>
 
-## Post-Merge (Gegenwart) {#post-merge}
+## Post-Merge (Gegenwart) \{#post-merge}
 
-### Ausgabe auf der Ausführungsschicht {#el-issuance-post-merge}
+### Ausgabe auf der Ausführungsschicht \{#el-issuance-post-merge}
 
 Ausgabe auf der Ausführungs-Ebene seit dem Merge ist Null. Proof-of-Work ist nach den verbesserten KonsensusRegeln kein gültiges Mittel zur Blockproduktion mehr. Alle Aktivitäten der Ausführungsebene werden in "Beacon-Blöcke" verpackt, die veröffentlicht und von Proof-of-Stake-Validatoren bestätigt werden. Belohnungen für die Bescheinigung und Veröffentlichung von Beacon-Blöcken werden auf der Konsensus-Ebene separat berücksichtigt.
 
-### Ausgabe der Konsensschicht {#cl-issuance-post-merge}
+### Ausgabe der Konsensschicht \{#cl-issuance-post-merge}
 
 Die Ausgabe der Konsensus-Ebene wird heute wie vor dem Merge fortgesetzt, mit kleinen Belohnungen für Validatoren, die Blöcke bestätigen und vorschlagen. Validatoren-Belohnungen fließen weiterhin in _Validatoren-Guthaben_ ein, die innerhalb der Konsensus-Ebene verwaltet werden. Im Gegensatz zu den laufenden Konten ("Ausführungskonten"), die im Mainnet Transaktionen durchführen können, sind diese separaten Ethereum-Konten nicht in der Lage, frei mit anderen Ethereum-Konten zu handeln. Die Gelder auf diesen Konten können nur an eine einzige angegebene Ausführungsadresse abgehoben werden.
 
@@ -78,7 +78,7 @@ Etwa 0,33 % der Gesamtzahl der Validatoren können an einem bestimmten Tag aussc
 
 Wenn mehr Validatoren aussteigen, wird die maximale Anzahl der ausscheidenden Validatoren schrittweise auf ein Minimum von vier reduziert, um absichtlich zu verhindern, dass große, destabilisierende Mengen an eingesetztem ETH gleichzeitig abgezogen werden.
 
-### Post-Merge Aufschlüsselung der Inflation {#post-merge-inflation-breakdown}
+### Post-Merge Aufschlüsselung der Inflation \{#post-merge-inflation-breakdown}
 
 - Gesamt ETH Angebot: **~120,520,000 ETH** (zum Zeitpunkt von The Merge im September 2022)
 - Ausgabe der Ausführungs-Ebene: **0**
@@ -89,7 +89,7 @@ Jährlicher Gesamtausgabesatz: <strong>~0.52%</strong><br/><br/>
 Netto-Reduktion der jährlichen ETH-Emissionen: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" />Der Burn {#the-burn}
+## <Emoji text=":fire:" size="1" />Der Burn \{#the-burn}
 
 Die Gegenkraft zur ETH-Ausgabe ist die Geschwindigkeit, mit der die ETH verbrannt wird. Damit eine Transaktion auf Ethereum ausgeführt werden kann, muss eine Mindestgebühr (die so genannte "Grundgebühr") entrichtet werden, die je nach Netzwerkaktivität kontinuierlich (von Block zu Block) schwankt. Die Gebühr wird in ETH bezahlt und ist _erforderlich_, damit die Transaktion als gültig betrachtet wird. Diese Gebühr wird während des Transaktionsprozesses _verbrannt_, wodurch sie aus dem Verkehr gezogen wird.
 
@@ -99,7 +99,7 @@ Die Verbrennung von Gebühren wurde mit dem <a href="/history/#london">the Londo
 
 Zusätzlich zu den Gebühren, die durch das London Upgrade verbrannt werden, können Validatoren auch mit Strafen belegt werden, wenn sie offline sind, oder schlimmer noch, ihr Stake kann gekürzt werden, wenn sie gegen bestimmte Regeln verstoßen, die die Netzsicherheit gefährden. Diese Strafen führen zu einer Verringerung des ETH-Guthabens dieses Validators, das nicht auf ein anderes Konto überwiesen wird, sondern effektiv verbrannt/aus dem Verkehr gezogen wird.
 
-### Berechnung des durchschnittlichen Gaspreises bei Deflation {#calculating-average-gas-price-for-deflation}
+### Berechnung des durchschnittlichen Gaspreises bei Deflation \{#calculating-average-gas-price-for-deflation}
 
 Wie bereits erwähnt, hängt die Menge der an einem bestimmten Tag ausgegebenen ETH von den insgesamt für Staking eingesetzten ETH ab. Zum Zeitpunkt der Erstellung dieses Artikels sind dies etwa 1700 ETH/Tag.
 
@@ -127,7 +127,7 @@ Wir können dies vereinfachen als eine Funktion von `X`:
 
 Wenn also zum Beispiel `X` (tägliche ETH-Ausgabe) auf 1800 basierend auf der Summe der eingesetzten ETH ansteigt, `f(X)` (gwei, die erforderlich sind, um die gesamte Emission auszugleichen) wäre dann `17 gwei` (mit 2 signifikanten Ziffern)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Der Zusammenschluss](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Dashboards zur Visualisierung von ETH-Ausgabe und -Verbrauch in Echtzeit verfügbar_

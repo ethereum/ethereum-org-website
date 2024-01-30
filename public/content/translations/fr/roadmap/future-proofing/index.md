@@ -9,7 +9,7 @@ template: roadmap
 
 Certaines parties de la feuille de route ne sont pas nécessairement requises pour faire évoluer ou sécuriser Ethereum à court terme, mais permettent à Ethereum d’assurer sa stabilité et sa fiabilité à long terme.
 
-## Résistance quantique {#quantum-resistance}
+## Résistance quantique \{#quantum-resistance}
 
 Une partie de la sécurisation de la cryptographie actuelle d'Ethereum sera compromise lorsque le calcul quantique deviendra une réalité. Bien que les ordinateurs quantiques soient probablement à des décennies de constituer une véritable menace pour la cryptographie moderne, Ethereum est construit pour être sécurisé pour les siècles à venir. Cela signifie rendre [Ethereum quantique résistant](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) dès que possible.
 
@@ -19,7 +19,7 @@ Les [schémas d'engagement « KZG»](/roadmap/danksharding/#what-is-kzg) utilis�
 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> En savoir plus sur KZG et les configurations fiables</ButtonLink>
 
-## Ethereum plus simple et plus efficace {#simpler-more-efficient-ethereum}
+## Ethereum plus simple et plus efficace \{#simpler-more-efficient-ethereum}
 
 La complexité crée des opportunités pour les bogues ou les vulnérabilités que des assaillants peuvent exploiter. Par conséquent, une partie de la feuille de route simplifie Ethereum et supprime le code qui a été mis à jour par diverses mises à jour, mais qui n'est plus nécessaire ou peut maintenant être amélioré. Une base de code plus souple et plus simple est plus facile à maintenir et à raisonner pour les développeurs.
 
@@ -27,7 +27,7 @@ Il y a plusieurs mises à jour qui seront faites sur la [machine virtuelle Ether
 
 De même, il y a des mises à jour qui peuvent être faites à d'autres parties des clients actuels d'Ethereum. Un exemple est que l'exécution courante et les clients de consensus utilisent un autre type de compression de données. Il sera beaucoup plus facile et plus intuitif de partager des données entre les clients lorsque le système de compression sera unifié sur l'ensemble du réseau.
 
-## Progrès actuels {#current-progress}
+## Progrès actuels \{#current-progress}
 
 La plupart des mises à niveau nécessaires à la pérennité d’Ethereum sont encore en phase de recherche et il faudra peut-être plusieurs années avant qu’elles soient mises en œuvre. Les mises à jour telles que la suppression de SELF-DESTRUCT et l'harmonisation du système de compression utilisé dans l'exécution et les clients de consensus sont susceptibles d'advenir plus tôt que la cryptographie résistante quantique.
 

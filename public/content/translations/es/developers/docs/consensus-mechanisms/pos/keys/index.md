@@ -12,11 +12,11 @@ No obstante, cuando Ethereum cambió de [prueba de trabajo](/developers/docs/con
 
 Este nuevo tipo de clave utiliza el esquema de firma [**Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS permite una agregación muy eficiente de firmas, pero también permite la ingeniería inversa de claves de validadores individuales añadidas y es perfecto para administrar acciones entre validadores.
 
-## Los dos tipos de claves de validación {#two-types-of-keys}
+## Los dos tipos de claves de validación \{#two-types-of-keys}
 
 Antes de cambiar a la prueba de participación, los usuarios de Ethereum sólo tenían una única clave privada basada en la curva elíptica para acceder a sus fondos. Con la introducción de la prueba de participación, los usuarios que deseaban ser participantes en solitario también requerían una **clave de validación** y una **clave de retirada**.
 
-### La clave de validador {#validator-key}
+### La clave de validador \{#validator-key}
 
 La clave de firma del validador consta de dos elementos:
 
@@ -35,13 +35,13 @@ Esta flexibilidad tiene la ventaja de mover las claves de firma del validador mu
 
 La **clave pública del validador** se incluye en los datos de la transacción cuando un usuario deposita ETH en el contrato de depósito de participación. Esto se conoce como los _datos de depósito_ y permite a Ethereum identificar el validador.
 
-### Credenciales de retirada {#withdrawal-credentials}
+### Credenciales de retirada \{#withdrawal-credentials}
 
 Cada validador tiene una propiedad conocida como _credenciales de retirada_. Este campo de 32 bytes comienza con un `0x00`, que representa las credenciales de retirada de BLS, o un `0x01`, que representa las credenciales que apuntan a una dirección de ejecución.
 
 Los validadores con `0x00` claves BLS deben actualizar estas credenciales para apuntar a una dirección de ejecución con el fin de activar el exceso de pagos de saldo o la retirada completa de la participación. Esto se puede hacer proporcionando una dirección de ejecución en los datos de depósito durante la generación inicial de la clave, _O_ utilizando la clave de retirada en un momento posterior para firmar y transmitir un mensaje `BLSToExecutionChange`.
 
-### La clave de retirada {#withdrawal-key}
+### La clave de retirada \{#withdrawal-key}
 
 Se necesitará la clave de retirada para actualizar las credenciales de retirada y asñi decidir una dirección de ejecución, si no se establece durante el depósito inicial. Esto permitirá que los pagos de saldo en exceso comiencen a procesarse, y también permitirá a los usuarios retirar completamente su ETH en participación.
 
@@ -56,7 +56,7 @@ La separación de las claves del validador de las claves de la cuenta de Ethereu
 
 ![esquema de la clave del validador](validator-key-schematic.png)
 
-## Derivar claves de una frase semilla {#deriving-keys-from-seed}
+## Derivar claves de una frase semilla \{#deriving-keys-from-seed}
 
 Si cada 32 ETH en participación requiriera un nuevo conjunto de 2 claves completamente independientes, la gestión de claves se volvería rápidamente difícil de manejar, especialmente para los usuarios que ejecutan múltiples validadores. En su lugar, se pueden derivar múltiples claves de validación de un solo secreto común y el almacenamiento de ese único secreto permite el acceso a múltiples claves de validación.
 
@@ -90,7 +90,7 @@ Cada rama está separada por un `/`, por lo que `m/2` significa comenzar con la 
 
 ![lógica de la clave del validador](multiple-keys.png)
 
-## Más lecturas {#further-reading}
+## Más lecturas \{#further-reading}
 
 - [Publicación en el blog de Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Generación de claves EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)

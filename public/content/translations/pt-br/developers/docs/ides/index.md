@@ -6,7 +6,7 @@ lang: pt-br
 
 Quando se trata de desenvolver um [ambiente de trabalho integrado (IDE)](https://pt.wikipedia.org/wiki/Ambiente_de_desenvolvimento_integrado) programar em Ethereum é similar a programar qualquer outro projeto de software. Há muitas opções para escolher, então simplesmente escolha o IDE ou editor de código que melhor se adapta a suas preferências. A melhor escolha para o seu desenvolvimento em Ethereum provavelmente vai ser o IDE que você já usa para o desenvolvimento tradicional de softwares.
 
-## IDEs baseados na Web {#web-based-ides}
+## IDEs baseados na Web \{#web-based-ides}
 
 Se você quer brincar com o código antes de [configurar um ambiente de desenvolvimento local](/developers/local-environment/), esses aplicativos na web são personalizados para o desenvolvimento de contratos inteligentes em Ethereum.
 
@@ -30,7 +30,7 @@ Se você quer brincar com o código antes de [configurar um ambiente de desenvol
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## Aplicativos IDEs {#desktop-ides}
+## Aplicativos IDEs \{#desktop-ides}
 
 A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a experiência de desenvolvimento em Ethereum. No mínimo, eles fornecem destaque de sintaxe para [linguagens de contrato inteligentes](/developers/docs/smart-contracts/languages/).
 
@@ -58,12 +58,12 @@ A maioria dos IDEs estabelecidos possuem plugins integrados para melhorar a expe
 - [Baixar](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Plugins e extensões {#plugins-extensions}
+## Plugins e extensões \{#plugins-extensions}
 
 - [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Linguagem Ethereum Solidity para Visual Studio Code
 - [Solidity + Hardhat para VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Suporte Solidity e Hardhat oferecido pela equipe Hardhat
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formatador de código que faz uso do Prettier
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_

@@ -4,7 +4,7 @@ description: 了解关于以太坊的非英文资源
 lang: zh
 ---
 
-# 语言资源 {#language-resources}
+# 语言资源 \{#language-resources}
 
 以太坊社区是全球性的，包括数以百万计的非英语人士。
 
@@ -14,15 +14,15 @@ lang: zh
 
 知道一个你语言的教育资源？ [创建问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)，以将其添加到列表！
 
-## Ethereum.org 资源 {#ethereum-org}
+## Ethereum.org 资源 \{#ethereum-org}
 
 Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言页面](/languages)。
 
 如果你会使用两种语言，而且想帮助我们宣传到更多的人，你也可以参与 [ethereum.org 翻译计划](/contributing/translation-program/#translation-program)，帮助我们翻译该网站。
 
-## 社区资源 {#community}
+## 社区资源 \{#community}
 
-### 巴西葡萄牙语 {#br-pt}
+### 巴西葡萄牙语 \{#br-pt}
 
 **新闻**
 
@@ -40,7 +40,7 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 - [Cointimes](http://www.cointimes.com.br/) - 提供有关加密货币的新闻和教育
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - 提供有关加密货币最常见和最基础问题解答的指南
 
-### 中文 {#zh}
+### 中文 \{#zh}
 
 **通用资源**
 
@@ -67,28 +67,28 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 - [安比实验室](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - 一个解释加密和安全等内容的微信公众号
 - [星想法](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - 一个解释零知识证明技术的微信公众号
 
-### 捷克语 {#cs}
+### 捷克语 \{#cs}
 
 - [Gwei.cz](https://gwei.cz) - 当地 Web3 社区，制作教育内容，组织在线和现场活动
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - 以太坊初学者指南
 - [DAO Příručka](https://dao.gwei.cz/) - 去中心化自治组织初学者指南
 - [精通以太坊](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - 精通以太坊（捷克语）
 
-### 法语 {#fr}
+### 法语 \{#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France 组织各种活动、制作内容并鼓励围绕以太坊展开讨论
 - [Ethereum.fr](https://ethereum.fr/) - 提供有关以太坊的新闻和教育
 - [BanklessFR](https://banklessfr.substack.com/) - Bankless 新闻通讯（法语）
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - 以太坊子页面上的加密货币论坛
 
-### 德语 {#de}
+### 德语 \{#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - 使用 Solidity
 - [Microsoft Learn（智能合约）](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - 用 Solidity 编写以太坊智能合约
 - [Microsoft Learn（以太坊网络）](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - 连接并部署以太坊网络
 - [Microsoft Learn（区块链）](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - 区块链开发入门
 
-### 意大利语 {#it}
+### 意大利语 \{#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - 提供有关以太坊的教育、活动和新闻，专注于智能合约和区块链技术
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - 以太坊播客（意大利语）
@@ -96,11 +96,11 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 - [Microsoft Learning（智能合约）](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - 学习用 Solidity 编写智能合约
 - [Microsoft Learn（用去中心化应用程序）](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - 使用去中心化应用程序创建用户界面
 
-### 俄语 {#ru}
+### 俄语 \{#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - 面向 web3 构建者的教育空间
 
-### 西班牙语 {#es}
+### 西班牙语 \{#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - 区块链、去中心化金融与治理课程、活动和博客
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - 以太坊初学者指南（西班牙语）
@@ -110,18 +110,18 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 - [去中心化金融开发课程介绍](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - 了解去中心化金融智能合约如何在 Solidity 中运作，并创建自己的自动化做市商应用
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - 非技术类区块链教育（面向初学者到高阶学习者）。 全面学习加密货币和以太坊。
 
-### 土耳其语 {#tr}
+### 土耳其语 \{#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - 专注于区块链和加密货币的课程
 - [重要的重命名：以太坊 2 有何变化？](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - 《重要的重命名》博文的土耳其语译作，解释了“以太坊 2”术语的变化
 
-### 越南语 {#vi}
+### 越南语 \{#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - 以太坊、去中心化应用程序、钱包和常见问题概览
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - 包含以太坊新闻和教育子页面的网站平台
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - 提供以太坊新闻和教育内容的加密货币门户网站
 
-### 日语 {#ja}
+### 日语 \{#ja}
 
 - [日本数字资产交易业协会](https://jvcea.or.jp/)
 - [日本加密货币商业协会](https://cryptocurrency-association.org/)

@@ -151,7 +151,7 @@ Więc wiemy, że mamy nasz DEX i ma całą dostępną rezerwę tokenów. Kontrak
 - `buy`: użytkownik może wysyłać ether i otrzymywać tokeny w zamian
 - `sell`: użytkownik może zdecydować się na wysłanie tokenów, aby odzyskać ether
 
-## Funkcja kupna {#the-buy-function}
+## Funkcja kupna \{#the-buy-function}
 
 Zakodujmy funkcję kup. Najpierw będziemy musieli sprawdzić ilość etheru w wiadomości i sprawdzić, czy kontrakty posiadają wystarczającą ilość tokenów i czy wiadomość ma w niej jakiś eter. cJeśli kontrakt posiada wystarczającą ilość tokenów, wyśle liczbę tokenów do użytkownika i wyemituje zdarzenie `Bought`.
 
@@ -174,7 +174,7 @@ Jeśli zakup zakończył się sukcesem, powinniśmy zobaczyć dwa zdarzenia w tr
 
 ![Dwa zdarzenia w transakcji: Transfer i Bought](./transfer-and-bought-events.png)
 
-## Funkcja kupna {#the-sell-function}
+## Funkcja kupna \{#the-sell-function}
 
 Funkcja odpowiedzialna za sprzedaż będzie najpierw wymagała od użytkownika zatwierdzenia kwoty poprzez uprzednie wywołanie zatwierdzonej funkcji. Następnie, gdy funkcja sprzedaży jest uruchomiona, sprawdzimy, czy przelew z adresu dzwoniącego na adres umowy zakończył się sukcesem, a następnie wyślemy Ethers z powrotem na adres dzwoniącego.
 

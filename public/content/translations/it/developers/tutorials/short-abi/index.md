@@ -9,23 +9,23 @@ skill: intermediate
 published: 2022-04-01
 ---
 
-## Introduzione {#introduction}
+## Introduzione \{#introduction}
 
 In questo articolo conoscerai i [rollup ottimistici](/developers/docs/scaling/optimistic-rollups), il costo delle transazioni su di essi e come tale diversa struttura di costo ci imponga di ottimizzare diversi aspetti rispetto alla Rete principale di Ethereum. Imparerai anche come implementare quest'ottimizzazione.
 
-### Divulgazione completa {#full-disclosure}
+### Divulgazione completa \{#full-disclosure}
 
 Sono un dipendente a tempo pieno di [Optimism](https://www.optimism.io/), quindi gli esempi in questo articolo saranno eseguiti su Optimism. Tuttavia la tecnica qui spiegata dovrebbe funzionare altrettanto bene per altri rollup.
 
-### Terminologia {#terminology}
+### Terminologia \{#terminology}
 
 Parlando di rollup, il termine "livello 1" (L1) è usato per la Rete principale, la rete di produzione di Ethereum. Il termine "livello 2" (L2) è usato per il rollup o qualsiasi altro sistema che si basa sul L1 per la sicurezza ma svolge gran parte della sua elaborazione al di fuori della catena.
 
-## Come possiamo ridurre ulteriormente il costo delle transazioni su L2? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## Come possiamo ridurre ulteriormente il costo delle transazioni su L2? \{#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
 I [Rollup ottimistici](/developers/docs/scaling/optimistic-rollups) devono conservare un registro di ogni transazione storica, così che chiunque possa consultarlo e verificare che lo stato corrente sia corretto. Il metodo più economico per inserire dati nella Rete principale di Ethereum è scriverli come calldata. Questa soluzione è stata scelta sia da [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) che da [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
-### Costo delle transazioni su L2 {#cost-of-l2-transactions}
+### Costo delle transazioni su L2 \{#cost-of-l2-transactions}
 
 Il costo delle transazioni su L2 ha due componenti:
 
@@ -36,7 +36,7 @@ Al momento della redazione, su Optimism il costo del gas del L2 è 0,001 [Gwei](
 
 Un byte di dati di chiamata costa 4 gas (se è zero) o 16 gas (se ha qualsiasi altro valore). Una delle operazioni più costose sull'EVM è scrivere in memoria. Il costo massimo della scrittura di una parola di 32 byte all'archiviazione sul L2, è di 22.100 gas. Attualmente, ciò equivale a 22,1 gwei. Quindi, se possiamo risparmiare un singolo byte zero di calldata, potremo scrivere circa 200 byte in memoria e ne usciremo comunque bene.
 
-### L'ABI {#the-abi}
+### L'ABI \{#the-abi}
 
 La stragrande maggioranza delle transazioni, accede a un contratto da un conto posseduto esternamente. Gran parte dei contratti è scritta in Solidity e interpreta il proprio campo dei dati secondo [l'interfaccia binaria dell'applicazione (Application Binary Interface – ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
@@ -58,11 +58,11 @@ Spiegazione:
 
 Uno spreco di 160 gas sul L1 è di norma trascurabile. Una transazione costa almeno [21.000 gas](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), quindi un ulteriore 0,8% non conta. Tuttavia, sul L2 le cose sono diverse. Quasi l'intero costo della transazione deriva dalla scrittura sul L1. Oltre ai calldata della transazione, ci sono 109 byte di intestazione della transazione (indirizzo di destinazione, firma, ecc.). Il costo totale è dunque `109*16+576+160=2480`, e ne stiamo sprecando circa il 6,5%.
 
-## Ridurre i costi quando non controlli la destinazione {#reducing-costs-when-you-dont-control-the-destination}
+## Ridurre i costi quando non controlli la destinazione \{#reducing-costs-when-you-dont-control-the-destination}
 
 Supponendo di non avere il controllo sul contratto di destinazione, puoi comunque usare una soluzione simile a [questa](https://github.com/qbzzt/ethereum.org-20220330-shortABI). Vediamo i file pertinenti.
 
-### Token.sol {#token-sol}
+### Token.sol \{#token-sol}
 
 [Questo è il contratto di destinazione](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol). È un contratto ERC-20 standard, con una funzionalità aggiuntiva. Questa funzione `faucet` consente a qualsiasi utente di ottenere dei token da usare. Renderebbe inutile una produzione del contratto ERC-20, ma semplifica la vita quando l'ERC-20 esiste solo per facilitare i test.
 
@@ -77,7 +77,7 @@ Supponendo di non avere il controllo sul contratto di destinazione, puoi comunqu
 
 [Puoi vedere un esempio di questo contratto distribuito qui](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol {#calldatainterpreter-sol}
+### CalldataInterpreter.sol \{#calldatainterpreter-sol}
 
 [Questo è il contratto che le transazioni dovrebbero chiamare con calldata più brevi](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol). Analizziamolo riga per riga.
 
@@ -239,7 +239,7 @@ In generale, un trasferimento richiede 35 byte di calldata:
 }       // contract CalldataInterpreter
 ```
 
-### test.js {#test-js}
+### test.js \{#test-js}
 
 [Questo test unitario di JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) ci mostra come usare questo meccanismo (e come verificare che funzioni correttamente). Partirò dal presupposto che tu comprenda [chai](https://www.chaijs.com/) ed [ether](https://docs.ethers.io/v5/) e spiegherò solo le parti che si applicano nello specifico al contratto.
 
@@ -327,7 +327,7 @@ Crea una transazione di trasferimento. Il primo byte è "0x02", seguito dall'ind
 })      // describe
 ```
 
-### Esempio {#example}
+### Esempio \{#example}
 
 Se desideri vedere questi file in azione senza eseguirli tu stesso, segui questi link:
 
@@ -337,13 +337,13 @@ Se desideri vedere questi file in azione senza eseguirli tu stesso, segui questi
 4. [Chiamata a `OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747). Questa chiamata deve andare direttamente al contratto del token, poiché l'elaborazione si affida al `msg.sender`.
 5. [Chiamata a `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748).
 
-## Ridurre il costo quando hai il controllo del contratto di destinazione {#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Ridurre il costo quando hai il controllo del contratto di destinazione \{#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 Se hai il controllo sul contratto di destinazione, puoi creare funzioni che bypassano i controlli `msg.sender` poiché si fidano dell'interprete dei calldata. [Puoi vedere un esempio di come funziona qui, nel ramo `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
 Se il contratto rispondesse solo alle transazioni esterne, potremmo riuscirsi con un solo contratto. Tuttavia, questo spezzerebbe la [componibilità](/developers/docs/smart-contracts/composability/). È molto meglio avere un contratto che risponda alle normali chiamate ERC-20 e un altro che risponda alle transazioni con dati della chiamata brevi.
 
-### Token.sol {#token-sol-2}
+### Token.sol \{#token-sol-2}
 
 In questo esempio, possiamo modificare `Token.sol`. Questo ci permette di avere un numero di funzioni che solo il proxy può chiamare. Ecco le nuove parti:
 
@@ -441,7 +441,7 @@ Queste sono tre operazioni che normalmente richiedono che il messaggio provenga 
 1. È modificata da `onlyProxy()`, così che nessun altro possa controllarla.
 2. Ottiene l'indirizzo che sarebbe normalmente `msg.sender` come un parametro aggiuntivo.
 
-### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
+### CalldataInterpreter.sol \{#calldatainterpreter-sol-2}
 
 L'interprete dei dati della chiamata è praticamente identico a quello precedente, tranne che le funzioni in proxy ricevono un parametro `msg.sender` e non è necessaria un'indennità per `transfer`.
 
@@ -475,7 +475,7 @@ L'interprete dei dati della chiamata è praticamente identico a quello precedent
         }
 ```
 
-### Test.js {#test-js-2}
+### Test.js \{#test-js-2}
 
 Ci sono alcune modifiche tra il codice di test precedente e questo.
 
@@ -533,7 +533,7 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 
 Testa le due nuove funzioni. Nota che `transferFromTx` richiede due parametri dell'indirizzo: l'autore dell'indennità e il destinatario.
 
-### Esempio {#example-2}
+### Esempio \{#example-2}
 
 Se desideri vedere questi file in azione senza eseguirli tu stesso, segui questi link:
 
@@ -545,6 +545,6 @@ Se desideri vedere questi file in azione senza eseguirli tu stesso, segui questi
 6. [Chiamata a `approveProxy()`](https://kovan-optimistic.etherscan.io/tx/1475419).
 7. [Chiamata a `transferFromProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421). Nota che questa chiamata proviene da un indirizzo diverso dagli altri, `poorSigner` invece di `signer`.
 
-## Conclusione {#conclusion}
+## Conclusione \{#conclusion}
 
 Sia [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) che [Arbitrum](https://developer.offchainlabs.com/docs/special_features) stanno cercando modi per ridurre le dimensioni dei calldata scritti al L1 e dunque per ridurre il costo delle transazioni. Tuttavia, come fornitori di infrastruttura alla ricerca di soluzioni generiche, le nostre capacità sono limitate. Come sviluppatore di dapp, hai conoscenze specifiche per l'applicazione che ti consentono di ottimizzare i tuoi calldata molto meglio di quanto potremmo fare noi in una soluzione generica. Speriamo che questo articolo ti aiuti a trovare la soluzione ideale per le tue esigenze.

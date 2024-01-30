@@ -4,11 +4,11 @@ description: فهرستی از برنامه‌های کمک هزینه از سر
 lang: fa
 ---
 
-# جوامع آنلاین {#online-communities}
+# جوامع آنلاین \{#online-communities}
 
 صدها هزار نفر از مشتاقان اتریوم در این انجمن‌های آنلاین گرد هم می‌آیند تا خبرها را به اشتراک بگذارند، درباره پیشرفت‌های اخیر صحبت کنند، درباره مسائل فنی بحث کنند و آینده را تصور کنند.
 
-## انجمن‌ها {#forums}
+## انجمن‌ها \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - همه‌چیز اتریوم</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - جنبه‌ی مالی اتریوم، از جمله دیفای</SocialListItem>
@@ -19,7 +19,7 @@ lang: fa
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - بحث و کمک برای توسعه‌دهندگان اتریوم</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - تأثیرگذارترین تالار گفتگ برای تحقیقات اقتصادی رمزارزها</SocialListItem>
 
-## اتاق‌های گفتگو {#chat-rooms}
+## اتاق‌های گفتگو \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Cat Herderهای اتریوم</Link> - جامعه‌ای با محوریت ارائه‌ی کمک در بحث مدیریت پروژه برای توسعه‌ی اتریوم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">هکرهای اتریوم</Link> - فضای گفتگوی Discord تحت مدیریت ETHGlobal: یک انجمن آنلاین برای هکرهای اتریوم در سراسر جهان</SocialListItem>
@@ -32,7 +32,7 @@ lang: fa
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">بورس سهام اتریوم</Link> <i>- انجمن پرسش و پاسخ</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- انجمن پرسش و پاسخ غیرمتمرکز</i></SocialListItem>
 
-## یوتیوب و توییتر {#youtube-and-twitter}
+## یوتیوب و توییتر \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">بنیاد اتریوم</Link> - از تازه‌ترین اخبار «بنیاد اتریوم» مطلع شوید</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - حساب رسمی بنیاد اتریوم</SocialListItem>

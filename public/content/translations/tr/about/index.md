@@ -4,15 +4,15 @@ description: Ethereum.org ekibi, topluluğu ve misyonu hakkında
 lang: tr
 ---
 
-# Ethereum.org hakkında {#about-ethereumorg}
+# Ethereum.org hakkında \{#about-ethereumorg}
 
 ethereum.org, Ethereum topluluğu için herkesin katkıda bulunabileceği bir açık kaynaktır. Kendilerini, dünyanın dört bir yanındaki binlerce topluluk üyesinin katkılarıyla siteyi sürdürmeye ve geliştirmeye adamış küçük bir çekirdek ekibimiz var.
 
-## İsimler hakkında bir not {#a-note-on-names}
+## İsimler hakkında bir not \{#a-note-on-names}
 
 Ethereum ortamı içerisinde Ethereum'un nasıl çalıştığına dair zayıf mental modellere yol açabilecek isimlerin karıştırılması, insanlar arasında yaygın olarak görülür. Bazı şeyleri netleştirmek için işte kısa bir açıklama:
 
-### Ethereum {#ethereum}
+### Ethereum \{#ethereum}
 
 Ethereum, on binlerce geliştirici, düğüm operatörü, ETH sahibi ve kullanıcıdan oluşan küresel bir topluluk tarafından işletilen, yönetilen ve sahip olunan bir herkese açık ağ, blokzincir ve açık kaynaklı protokoldür.
 
@@ -20,7 +20,7 @@ Ethereum, on binlerce geliştirici, düğüm operatörü, ETH sahibi ve kullanı
 
 [Ethereum yönetişimi hakkında daha fazla bilgi](/governance/)
 
-### Ether (ETH) {#ether-or-eth}
+### Ether (ETH) \{#ether-or-eth}
 
 Ether (değer sembolü olan ETH olarak da bilinir), Ethereum üzerinde işlem gören yerel para birimidir. ETH, Ethereum ağının kullanımına ilişkin ödemeleri yapmak (işlem ücreti halinde) için gereklidir. ETH, hisseleme ile ağı güvence altına almak için de kullanılır. İnsanlar Ethereum'un fiyatı hakkında konuşurken varlık olan ETH'den bahsetmektedir.
 
@@ -28,19 +28,19 @@ Ether (değer sembolü olan ETH olarak da bilinir), Ethereum üzerinde işlem g�
 
 [ETH hisseleme hakkında daha fazla bilgi](/staking/)
 
-### Ethereum Foundation {#ethereum-foundation}
+### Ethereum Foundation \{#ethereum-foundation}
 
 Ethereum ağı ve ekosistemi için destek sunmayı amaçlayan, başlangıçta ETH'nin toplu satışı ile fonlanmış, kâr amacı gütmeyen bir organizasyondur.
 
 [Ethereum Foundation hakkında daha fazla bilgi](/foundation/)
 
-### ethereum.org {#ethereum-org}
+### ethereum.org \{#ethereum-org}
 
 Ethereum topluluğu için herkese açık, açık kaynaklı bir web sitesi ve eğitim kaynağıdır. ethereum.org, dünya çapında binlerce topluluk üyesinin katkılarıyla Ethereum Foundation tarafından fonlanan küçük bir ana ekip tarafından yönetilmektedir.
 
 Bu sayfa, ethereum.org hakkında daha fazla bilgi içerir.
 
-## Misyonumuz {#our-mission}
+## Misyonumuz \{#our-mission}
 
 **ethereum.org'un misyonu, Ethereum'un büyüyen topluluğu için en iyi portal olmaktır**
 
@@ -55,14 +55,14 @@ Yeni kullanıcıların gerek Ethereum gerekse ana konseptleri ile daha aşina ol
 
 Bu misyona ulaşmak için ekibimiz, ethererum.org'da iki ana hedefe odaklanmıştır:
 
-### 1. ethereum.org ziyaretçileri için kullanıcı deneyimini geliştirme {#visitors}
+### 1. ethereum.org ziyaretçileri için kullanıcı deneyimini geliştirme \{#visitors}
 
 - İçeriği geliştirme, genişletme ve güncel tutma
 - Kullanılabilirlik ve erişilebilirliği, yerelleştirme ve web geliştirme konusundaki en iyi uygulamalarla artırma
 - Anket, test ve web3 entegrasyonları gibi özellikler aracılığıyla kullanıcı katılımını artırma
 - Web sitesini hafif ve yüksek performanslı tutma
 
-### 2. Katkıda bulunanlar topluluğunu büyütme, güçlendirme ve yetkilendirme {#community}
+### 2. Katkıda bulunanlar topluluğunu büyütme, güçlendirme ve yetkilendirme \{#community}
 
 - Web sitesine katkıda bulunanların toplam sayısını büyütme
 - Katılım, onay ve ödüller aracılığıyla katkıda bulunanların elde tutulmasını artırma
@@ -70,23 +70,23 @@ Bu misyona ulaşmak için ekibimiz, ethererum.org'da iki ana hedefe odaklanmış
 - Katkıların daha da çeşitlendirilmesini kolaylaştırma: kod, içerik, tasarım, çeviri, moderasyon
 - Kod tabanını modern, temiz ve iyi belgelenmiş halde tutma
 
-## Temel ilkeler {#core-principles}
+## Temel ilkeler \{#core-principles}
 
 Misyonumuzu gerçekleştirmemiz yolunda bize rehberlik eden bazı temel ilkelere sahibiz.
 
-### 1. ethereum.org, bir Ethereum portalıdır 🌏 {#core-principles-1}
+### 1. ethereum.org, bir Ethereum portalıdır 🌏 \{#core-principles-1}
 
 Kullanıcılarımızın ilgisini zirveye taşımak ve sorularının cevaplanmasını sağlamak istiyoruz. Bu yüzden portalımızın bilgileri, "sihirli anları" ve dünyada var olan harika topluluk kaynaklarına yönlendiren bağlantıları birleştirmesi gerekiyor. İçeriğimizin amacı, hâlihazırda var olan geniş kaynakların yerini almak değil, bir "alıştırma portalı" işlevi görmektir. Topluluk tarafından inşa edilmiş kaynakları desteklemeye ve bunlarla entegre olmaya, bunlara daha fazla görünürlük kazandırmaya ve bunları daha keşfedilebilir hâle getirmeye istekliyiz. [Ethereum topluluğu](/community/) bunun merkezinde yer alır: Sadece topluluğa hizmet etmemiz değil, onlarla birlikte çalışmamız ve onların geribildirimlerini dahil etmemiz de gerekiyor. İnternet sitemiz sadece şu anda sahip olduğumuz topluluk için değil, daha da büyümesini umduğumuz gelecekteki topluluğumuz içindir. Birçok dilden, bölgeden ve kültürden insan barındıran küresel bir topluluk olduğumuzu unutmamalıyız.
 
-### 2. ethereum.org sürekli gelişmektedir 🛠 {#core-principles-2}
+### 2. ethereum.org sürekli gelişmektedir 🛠 \{#core-principles-2}
 
 Ethereum ve topluluk, sürekli gelişmekte, olduğundan ethereum.org da gelişmeyi sürdürecektir. Bu yüzden de sitemiz basit bir tasarım sistemine ve modüler bir yapıya sahiptir. İnsanların siteyi nasıl kullandığı ve toplumun siteden beklentileri hakkında daha fazla bilgi sahibi oldukça yinelemeli değişiklikler yapıyoruz. Katkıda bulunanlardan oluşan bir topluluğa sahip açık kaynaklı bir oluşum olduğumuz için değişiklikler önerebilir veya bize yardımcı olabilirsiniz. [Katkıda bulunma hakkında bilgi edinin](/contributing/)
 
-### 3. ethereum.org sıradan bir ürün web sitesi değildir 🦄 {#core-principles-3}
+### 3. ethereum.org sıradan bir ürün web sitesi değildir 🦄 \{#core-principles-3}
 
 Ethereum büyük bir olaydır: toplum, teknoloji, fikir ve ideoloji toplulukları ve daha da fazlasını içerir. Bu, web sitesinin ''belirli bir aracı isteyen bir geliştiriciden'' ''henüz ETH satın almış ve cüzdanın ne olduğunu bilmeyen bir acemiye'' kadar çok sayıda farklı kullanıcı macerasını kaldırmak zorunda olduğu anlamına gelir. ''Bir blokzincir platformu için en iyi web sitesi hangisidir?'' ise açık bir soru olarak kalmaya devam etmektedir; biz öncüleriz. Bunu inşa etmek, deney yapmayı gerektirir.
 
-## Ürün yol haritası {#roadmap}
+## Ürün yol haritası \{#roadmap}
 
 İşimizi daha erişilebilir kılmak ve daha fazla topluluk iş birliğini teşvik etmek için ethereum.org ana ekibi, üç aylık yol haritası hedeflerimize bir genel bakış yayımlar.
 
@@ -96,17 +96,17 @@ Ethereum büyük bir olaydır: toplum, teknoloji, fikir ve ideoloji topluluklar�
 
 **Sürecin parçası olmak mı istiyorsunuz?** [Katkıda bulunma hakkında daha fazla bilgi edinin](/contributing/), [bize Twitter'dan ulaşın](https://twitter.com/ethdotorg) veya [Discord sunucumuzdaki](https://discord.gg/ethereum-org) topluluk tartışmalarına katılın.
 
-## Tasarım ilkeleri {#design-principles}
+## Tasarım ilkeleri \{#design-principles}
 
 Sitedeki içeriğimize ve tasarım kararlarımıza rehberlik etmesi için bir dizi [tasarım ilkesi](/contributing/design-principles/) kullanıyoruz.
 
-## Tasarım sistemi {#design-system}
+## Tasarım sistemi \{#design-system}
 
 Özellikleri daha hızlı hayata geçirmek ve topluluk üyelerinin ethereum.org açık tasarımında yer almasına olanak tanımak için bir [tasarım sistemi](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) geliştirip yayımladık.
 
 Sürecin parçası olmak mı istiyorsunuz? [Figma'da bizi takip edin](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [GitHub konusunu izleyin](https://github.com/ethereum/ethereum-org-website/issues/6284) ve [Discord sunucumuzun #design kanalında](https://discord.gg/ethereum-org) tartışmaya katılın.
 
-## Stil rehberi {#style-guide}
+## Stil rehberi \{#style-guide}
 
 Katkı sürecini daha sorunsuz hâle getirmek amacıyla içerik yazmanın belirli yönlerini standart hâle getirmek için bir [stil rehberimiz](/contributing/style-guide/) var.
 
@@ -114,7 +114,7 @@ Katkı sürecini daha sorunsuz hâle getirmek amacıyla içerik yazmanın belirl
 
 Tasarım ilkelerimiz, tasarım sistemimiz ve stil rehberimiz ile ilgili geribildirimleri memnuniyetle karşılarız. Unutmayın, ethereum.org topluluk için, topluluk tarafından yönetilir.
 
-## İş imkanları {#open-jobs}
+## İş imkanları \{#open-jobs}
 
 Bu web sitesinin açık kaynaklı olmasına ve herkesin site üzerinde çalışabilmesine rağmen, ethereum.org ve diğer Ethereum Foundation web projelerine adanmış bir ekibimiz mevcuttur.
 

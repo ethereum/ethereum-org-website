@@ -13,13 +13,13 @@ summaryPoints:
   - Pegang penaruhan token di dompet Anda sendiri
 ---
 
-## Apa itu pool penaruhan? {#what-are-staking-pools}
+## Apa itu pool penaruhan? \{#what-are-staking-pools}
 
 Pool penaruhan adalah pendekatan kolaboratif yang memungkinkan banyak orang dengan jumlah ETH yang lebih kecil untuk mendapatkan 32 ETH yang diperlukan untuk mengaktifkan satu set kunci validator. Fungsionalitas pooling tidak didukung secara asli dalam protokol, sehingga solusi-solusi dibangun secara terpisah untuk mengatasi kebutuhan ini.
 
 Beberapa pool beroperasi menggunakan kontrak pintar, di mana dana dapat disimpan ke dalam kontrak, yang mengelola dan melacak taruhan Anda dengan aman, dan mengeluarkan token yang mewakili nilai tersebut. Pool lain mungkin tidak melibatkan kontrak pintar dan justru diatasi di luar rantai.
 
-## Mengapa melakukan taruhan dengan pool? {#why-stake-with-a-pool}
+## Mengapa melakukan taruhan dengan pool? \{#why-stake-with-a-pool}
 
 Selain manfaat yang kami sebutkan dalam [pengantar tentang penaruhan](/staking/), melakukan penaruhan dengan pool memiliki sejumlah manfaat yang berbeda.
 
@@ -31,7 +31,7 @@ Selain manfaat yang kami sebutkan dalam [pengantar tentang penaruhan](/staking/)
 
 <StakingComparison page="pools" />
 
-## Apa yang perlu ditentukan {#what-to-consider}
+## Apa yang perlu ditentukan \{#what-to-consider}
 
 Pooled atau penaruhan yang didelegasikan tidak didukung oleh protokol Ethereum, tetapi mengingat permintaan pengguna untuk mempertaruhkan kurang dari 32 ETH, semakin banyak solusi yang dibuat untuk melayani permintaan ini.
 
@@ -45,7 +45,7 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 
 <StakingConsiderations page="pools" />
 
-## Eksplorasi pool penaruhan {#explore-staking-pools}
+## Eksplorasi pool penaruhan \{#explore-staking-pools}
 
 Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan petunjuk di atas untuk membantu Anda memandu melalui perangkat di bawah ini.
 
@@ -57,7 +57,7 @@ Harap perhatikan pentingnya memilih layanan yang serius mengenai [diversitas kli
 
 Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
 
-## Pertanyaan yang sering diajukan {#faq}
+## Pertanyaan yang sering diajukan \{#faq}
 
 <ExpandableCard title="Bagaimana cara saya mendapatkan imbalan?">
 Biasanya token penaruhan ERC-20 dikeluarkan untuk para penaruh yang mewakili nilai ETH yang mereka pertaruhkan ditambah hadiah. Perlu diingat bahwa berbagai pool akan mendistribusikan imbalan penaruhan kepada pengguna mereka melalui metode yang sedikit berbeda, tetapi tema umum ini tetap sama.
@@ -79,7 +79,7 @@ Tidak seperti bursa terpusat, banyak opsi penaruhan gabungan lainnya menggunakan
 Beberapa pilihan pooling lebih terdesentralisasi daripada yang lain dalam hal simpul yang mendukungnya. Untuk mendorong kesehatan dan desentralisasi jaringan, para penaruh selalu didorong untuk memilih layanan pooling yang memungkinkan set kelompok simpul operator yang terdesentralisasi dan tanpa izin.
 </ExpandableCard>
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [Penruhan dengan Rocket Pool - Ikhtisar Penaruhan](https://docs.rocketpool.net/guides/staking/overview.html) - _Dokumentasi RocketPool_
 - [Penaruhan Ethereum dengan Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Dokumentasi bantuan Lido_

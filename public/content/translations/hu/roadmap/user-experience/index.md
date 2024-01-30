@@ -9,7 +9,7 @@ template: roadmap
 
 Az Ethereum használatát egyszerűsíteni kell – a kulcsok és tárcák kezelésével kezdve a tranzakciók elindításáig. A tömeges használathoz az Ethereumnak könnyebbé kell tennie a használatot, hogy a felhasználók megtapasztalhassák az engedélymentes és cenzúrának ellenálló hozzáférést az Ethereumhoz, a web2 alkalmazások könnyű használatához hasonlóan.
 
-## A kulcsmondatokon túl {#no-more-seed-phrases}
+## A kulcsmondatokon túl \{#no-more-seed-phrases}
 
 Az Ethereum-számlákat egy kulcspár védi, amelyek a számla azonosítását (nyilvános kulcs) és az üzenetek aláírását (privát kulcs) szolgálják. A privát kulcs olyan, akár egy mesterjelszó; teljes hozzáférést biztosít az Ethereum-számlához. Ez egy más megközelítés, mint amelyet a legtöbb felhasználó ismer, akik a bankokra és web2-alkalmazásokra bízzák a számlák kezelését. Az Ethereum tömeges használatának eléréséhez egyértelmű és könnyed utat kell mutatni a felhasználóknak, hogyan anélkül felügyelhessék eszközeiket és adataikat, hogy érteniük kellene a nyilvános-privát kulcsok kriptográfiájához és a kulcskezeléshez.
 
@@ -27,7 +27,7 @@ Számos fejlesztés meg fogja könnyíteni a csomópontok működtetését és c
 
 Ezekkel az fejlesztésekkel gyakorlatilag nullára csökken a csomópontfuttatás akadálya. A felhasználók biztonságos, engedélymentes hozzáférést nyernek az Ethereumhoz, anélkül hogy komoly lemezterületet vagy CPU-t áldoznának erre, és nem kell harmadik félhez fordulniuk adatért vagy a hálózat eléréséhez, amikor alkalmazásokat használnak.
 
-## Jelenlegi helyzet {#current-progress}
+## Jelenlegi helyzet \{#current-progress}
 
 Az okosszerződéses tárcák már elérhetők, de több fejlesztésre van szükség, hogy még decentralizáltabbak és engedélymentesek legyenek. Az EIP-4337 egy olyan javaslat, ami már nem igényli az Ethereum-protokoll komoly módosítását. A fő okosszerződés, ami a EIP-4337-hez kellett, 2023. márciusában jelent meg.
 

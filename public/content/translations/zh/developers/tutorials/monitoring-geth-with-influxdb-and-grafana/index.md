@@ -12,13 +12,13 @@ published: 2021-01-13
 
 本教程将帮助您设置 Geth 节点的监测方法，以便更好地了解其性能并发现潜在问题。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 - 您应该已经运行一个 Geth 实例。
 - 大部分步骤和示例都针对 linux 环境，基础的终端知识会有所帮助。
 - 请观看这段关于 Geth 指标集的概览视频：[监测以太坊基础设施（作者 Péter Szilágyi）](https://www.youtube.com/watch?v=cOBab8IJMYI)
 
-## 监测堆栈 {#monitoring-stack}
+## 监测堆栈 \{#monitoring-stack}
 
 以太坊客户端收集大量数据，可以通过时序数据库读取这些数据。 为了便于监测，您可以将数据输入数据可视化软件。 下面提供了多种选项供您选择：
 
@@ -33,7 +33,7 @@ published: 2021-01-13
 
 在本教程中，我们将设置您的 Geth 客户端，将数据推送到 InfluxDB 以创建数据库，并设置 Grafana 来对数据进行图形可视化。 手动操作将帮助您更好地理解这一过程，您可以加以改动，并在不同的环境中部署。
 
-## 设置 InfluxDB {#setting-up-influxdb}
+## 设置 InfluxDB \{#setting-up-influxdb}
 
 首先，下载并安装 InfluxDB。 [Influxdata 下载页面](https://portal.influxdata.com/downloads/)提供了多种下载选项。 选择适合您安装环境的下载选项。 您还可以通过[资源库](https://repos.influxdata.com/)安装它。 例如，在基于 Debian 的发行版中：
 
@@ -82,7 +82,7 @@ exit
 
 InfluxDB 正在运作，将其配置为存储来自 Geth 的指标。
 
-## 准备 Geth {#preparing-geth}
+## 准备 Geth \{#preparing-geth}
 
 设置好数据库后，我们需要在 Geth 中启用指标收集。 留意 `geth - help` 中的 `METRICS AND STATS OPTIONS`。 此处可以找到多个选项，在此例中，我们希望 Geth 将数据推送到 InfluxDB。 基本设置指定了端点，可以通过它访问 InfluxDB 并进行数据库身份验证。
 
@@ -99,7 +99,7 @@ use geth
 show measurements
 ```
 
-## 设置 Grafana {#setting-up-grafana}
+## 设置 Grafana \{#setting-up-grafana}
 
 下一步是安装 Grafana，后者通过图形解释数据。 按照 Grafana 文档中针对您安装环境的安装过程操作。 如果不想安装其他版本，确保安装 OSS 版本。 下面是通过资源库安装 发行版本的示例安装步骤：
 

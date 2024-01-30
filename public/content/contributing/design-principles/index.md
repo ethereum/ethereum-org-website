@@ -4,7 +4,7 @@ lang: en
 description: The principles behind ethereum.org's design and content decisions
 ---
 
-# Our design principles {#contributing-to-ethereumorg-}
+# Our design principles \{#contributing-to-ethereumorg-}
 
 <Emoji text=":wave:" size={1} /> Hello, and welcome to the design principles for ethereum.org. This is part of an ongoing process to evolve and improve ethereum.org.
 
@@ -12,13 +12,13 @@ Our principles inform the look and feel of the site and the content that's on it
 
 You should read these before you [contribute to ethereum.org](/contributing/).
 
-## What are design principles? {#ways-to-contribute}
+## What are design principles? \{#ways-to-contribute}
 
 Don't worry, they're pretty simple! **Design principles** are a set of guidelines we refer to when designing (i.e. creating, maintaining or updating) something.
 
 In the context of ethereum.org these design principles are the foundation for what we want the website to represent and project to the world. They're both aspirational **and** functional. It's not just how the website _looks_, but also how it _works_ and even how it makes someone _feel._ Everything, from the colors to the page layouts to how we talk about Ethereum on the website should be informed by these principles.
 
-## The principles in practice {#how-decisions-about-the-site-are-made}
+## The principles in practice \{#how-decisions-about-the-site-are-made}
 
 Let's look at an example. One of the principles is “Credible”, which means that we want visitors to the site to _feel_ and _know_ that the site is trustworthy - just like the wider Ethereum ecosystem. Within that principle, we have 3 functional “sub-principles” that we believe are actionable steps we can take to make the site credible:
 
@@ -32,9 +32,9 @@ So when we're making design decisions, or copywriting decisions, we can then ref
 - _“How and where are we showing the ecosystem's size and activity?”_
 - _“Are the new proposed contributions by a community member that I'm reviewing consistent with the current design and writing on the site?”_
 
-## The ethereum.org design principles {#contributors}
+## The ethereum.org design principles \{#contributors}
 
-### 1. Inspirational {#1-inspirational}
+### 1. Inspirational \{#1-inspirational}
 
 The site should inspire users to dream of how Ethereum can change the world. It should motivate people to explore, play and tinker with the tools and apps of the Ethereum ecosystem.
 
@@ -43,7 +43,7 @@ The site should inspire users to dream of how Ethereum can change the world. It 
 
 Visual Direction • Content
 
-### 2. Universal {#2-universal}
+### 2. Universal \{#2-universal}
 
 Ethereum is a global, decentralized project and our audience reflects this. The site should aspire to be accessible to everyone, and sensitive to the world's many cultures.
 
@@ -53,7 +53,7 @@ Ethereum is a global, decentralized project and our audience reflects this. The 
 
 Writing systems • Use of color • Visual Direction • Content
 
-### 3. A Good Story {#3-a-good-story}
+### 3. A Good Story \{#3-a-good-story}
 
 The website should function like a good story. Visitors are on a journey, and the content you contribute is a part of that. Your contributions should fit within a clear narrative: one with a beginning (introduction/entry point), middle (set of learnings and insights), and end (a link(s) to relevant resources, or next steps).
 
@@ -62,7 +62,7 @@ The website should function like a good story. Visitors are on a journey, and th
 
 User Journeys • Content
 
-### 4. Credible {#4-credible}
+### 4. Credible \{#4-credible}
 
 People may be seeking their introduction to the Ethereum ecosystem or they may be skeptics. Acknowledge that responsibility in how you communicate. Ensure that they both leave with greater confidence in the Ethereum ecosystem.
 
@@ -72,7 +72,7 @@ People may be seeking their introduction to the Ethereum ecosystem or they may b
 
 Visual Direction • Content
 
-### 5. Collaborative Improvement {#5-collaborative-improvement}
+### 5. Collaborative Improvement \{#5-collaborative-improvement}
 
 The website is the product of many contributors, just like the ecosystem as a whole.
 
@@ -84,7 +84,7 @@ The website is the product of many contributors, just like the ecosystem as a wh
 
 You can see our design principles in action [across our site](/).
 
-## Give feedback {#give-feedback}
+## Give feedback \{#give-feedback}
 
 **Share your feedback on this document!** One of our proposed principles is “**Collaborative Improvement**” which means that we want the website to be the product of many contributors. So in the spirit of that principle, we want to share these design principles with the Ethereum community.
 

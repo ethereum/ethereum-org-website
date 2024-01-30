@@ -16,7 +16,7 @@ Digitaalinen taide ja keräilykokoelmat saavat aivan uutta voimaa ja näkyvyytt�
 
 Jos Andy Warhol olisi syntynyt 90-luvun lopulla, hän todennäköisesti olisi julkaissut rahakkeen Campbell's Soup -teoksesta NFT:nä. On vain ajan kysymys milloin Kanye vie Yeezys'n Ethereumiin. Jonakin päivänä saatat todentaa autosi omistajuuden NFTllä.
 
-## Mikä on NFT (non fungible token)? {#what-are-nfts}
+## Mikä on NFT (non fungible token)? \{#what-are-nfts}
 
 NFTt ova rahakkeita, joilla voidaan todentaa omistajuus ainulaatuiselle asialle, kohteelle tai kappaleelle. Rahakkeilla voidaan todentaa taiteen, keräilyesineiden, -kokoelmien ja jopa kiinteistöjen omistajuutta. Niillä voi olla vain yksi Ethereum-lohkoketjussa vahvistettu omistaja kerrallaan - kukaan ei voi muokata omistajuusrekisteriä tai tehdä kopiota olemassa olevasta NFTsta.
 
@@ -26,13 +26,13 @@ Vaihdettavat asiat tai kappaleet, toisin sanoen, voidaan vaihtaa vastaaviin, kos
 
 <YouTube id="Xdkkux6OxfM" />
 
-## Omaisuuserien internet {#internet-of-assets}
+## Omaisuuserien internet \{#internet-of-assets}
 
 NFTt ja Ethereum ratkaisevat joitakin interentin luomia ongelmia. Kaiken digitalisoituessa syntyy tarve erilaisten abstraktien ominaisuuksien omistajuuden todentamiseen. Muistettava on, että digitaaliset kappaleet usein toimivat yhdessä niihin liittyvän tuotteen kanssa. Et voi jälleenmyydä esim. iTunes mp3sta, jonka olet ostanut, tai et voi vaihtaa yrityksen bonuksia toisen vastaavan bonuksiin, vaikka markkinaa löytyisikin.
 
 Kuinka NFT muuttaa tiedon tallentamista, käsittelyä ja hyödyntämistä netissä. Vertailua nykywebiin.
 
-### Vertailu {#nft-comparison}
+### Vertailu \{#nft-comparison}
 
 | NFT internet                                                                                                                                                                                                                               | Internet tänään                                                                                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ Kuinka NFT muuttaa tiedon tallentamista, käsittelyä ja hyödyntämistä netiss
 | Sisällöntuottajat/taiteilijat voivat todistaa oikeutensa teokseen ja saada jälleenmyynnistä rojalteja suoraan.                                                                                                                             | Alustat, kuten musiikin suoratoistopalvelut, pitävät itsellään suurimman osan myynnin tuotoista.                                                                                                                      |
 | Esineitä voidaan hyödyntää yllättävillä tavoilla. Voit esimerkiksi käyttää digitaalista taideteosta kryptolainan vakuutena.                                                                                                                |                                                                                                                                                                                                                       |
 
-### NFT esimerkkejä {#nft-examples}
+### NFT esimerkkejä \{#nft-examples}
 
 NFT-järjestelmä on suhteellisen uusi. Teoriassa, mikä tahansa uniikki asia, jonka omistajuus tulee todentaa, voidaan liittää NFTiin. Esimerkkejä NFTien soveltamisesta, helpottamaan ymmärtämistä:
 
@@ -61,23 +61,23 @@ NFT-järjestelmä on suhteellisen uusi. Teoriassa, mikä tahansa uniikki asia, j
 - [Siirry ansaintaan](https://yeticoineth.com/about.html)
 - [Digitaalinen identiteetti](https://photochromic.io/)
 
-### ethereum.org sovelluksia {#ethereum-org-examples}
+### ethereum.org sovelluksia \{#ethereum-org-examples}
 
 Käytämme NFTeita tunnustuksena osallistujille ja meillä on jopa oma NFT-verkkotunnus.
 
-#### POAP (proof of attendance protocol) {#poaps}
+#### POAP (proof of attendance protocol) \{#poaps}
 
 Osallistumalla ethereum.org kehitystyöhön, voit lunastaa POAP NFTn. Näin todistat osallistuneesi "tapahtumaan" tai täsmällisemmin kehitystyöhön, tavalla tai toisella. Joissakin krypto-tapaamisissa POAPia on käytetty pääsylippuna tapahtumaan. [Lisää osallistumisesta](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
-#### ethereum.eth {#ethereum-dot-eth}
+#### ethereum.eth \{#ethereum-dot-eth}
 
 Sivustolla on vaihtoehtoinen verkkotunnus, jota NFT tukee, **ethereum.eth**. Verkkotunnusjärjestelmän (DNS=domain name system) tarjoaja hallinnoi keskitetysti osoitetta `.org` , kun taas ethereum`.eth` on rekisteröity Ethereumille, Ethereumin palvelun kautta (ENS = Ethereum name system). Omistamme ja hallinnoimme sen. [Tarkista ENS-tietueemme](https://app.ens.domains/name/ethereum.eth)
 
 [Lisätietoa ENSsta](https://app.ens.domains)
 
-## Kuinka NFTt tomivat? {#how-nfts-work}
+## Kuinka NFTt tomivat? \{#how-nfts-work}
 
 NFTt eroavat ERC-20-rahakkeista, kuten DAI tai LINK, sillä jokainen yksittäinen rahake on täysin ainutlaatuinen. NFTt mahdollistavat omistajuuden määrittämisen tai omistajuuden vaatimisen mihin tahansa ainutlaatuiseen digitaaliseen dataan, ja Ethereumin lohkoketjussa hallitaan lokikirjaa omistajuudesta. NFT lyödään mistä tahansa digitaalisista esineistä tai edustamaan digitaalisesti reaalimaailman hyödykkeitä. NFT voisi edustaa seuraavasti:
 
@@ -130,7 +130,7 @@ Jos _luot_ NFTn:
 - Voit ansaita rojalteja, joka kerta kun teos jälleenmyydään.
 - Voit myydä sen millä tahansa NFT-markkinalla tai kahdenvälisessä verkossa (peer-to-peer). Myynti ei ole sidottu mihinkään yhteen alustaan ja et tarvitse kolmatta osapuolta välittäjäksi.
 
-### Liikkeelle laskettava painos- tai lukumäärä {#scarcity}
+### Liikkeelle laskettava painos- tai lukumäärä \{#scarcity}
 
 NFTn luoja päättää kuinka runsaasti teoksesta tai asiasta luodaan kappaleita.
 
@@ -138,13 +138,13 @@ Kuvittele esimerkkinä urheilutapahtuman pääsylippua. Kuten tapahtuman järjes
 
 Kaikissa näissä tapauksissa NFTlla on yksilöllinen tunniste (kuten viivakoodi perinteisessä "lipussa"), ja vain yksi omistaja. Painosmäärän määrittely NFTlle on siis teoksen luojan arvioitava ja päätettävä asia. Teoksen tai sisällön luojalla voi olla tarve luoda vain yksi NFT teoksestaan tai syitä luoda tuhansia versioita siitä. Muista, että nämä tiedot ovat kaikki julkisia.
 
-### Rojaltit {#royalties}
+### Rojaltit \{#royalties}
 
 Jotkut NFTt tilittävät automaattisesti rojalteja luojalle, kun NFT myydään. Konsepti on edelleen kehittyvä, mutta se on jo yksi tehokkaimmista. [EulerBeats Originals](https://eulerbeats.com/) -omistajat ansaitsevat 8% rojaltin joka kerta, kun NFT myydään edelleen. Jotkut alustat kuten [Foundation](https://foundation.app) and [Zora](https://zora.co/), tuottavat myynnistä rojalteja taiteilijoille.
 
 Kaikki tämä toimii automaattisesti, joten teoksen tai sisällön luoja ansaitsee rojalteja omasta työstään, vaikkapa taiteesta ilman suurempia oheisponnistuksia. Teokset siirtyvät omistajalta toiselle sujuvasti. Tällä hetkellä rojaltien maksu on manuaalista ja epätarkkaa monessakin tapauksessa - monet teoksien tai sisältöjen luojat eivät ansaitse työstään sitä, mikä heidän kuuluisi ansaita. Mikäli NFTin on ohjelmoitu rojalti, sen tilitys toteutuu väistämättä kaupankäynnin yhteydessä.
 
-## Mihin NFTia voidaan käyttää? {#nft-use-cases}
+## Mihin NFTia voidaan käyttää? \{#nft-use-cases}
 
 Lisätietoja pidemmälle viedyistä käyttötapauksista ja visioista, joihin Ethereum-pohjaisia NFTeita voidaan hyödyntää.
 
@@ -157,7 +157,7 @@ Lisätietoja pidemmälle viedyistä käyttötapauksista ja visioista, joihin Eth
 
 <Divider />
 
-### Ansainnan oikeudenmukaisuuden varmistaminen luoville aloille ja sen työntekijöille {#nfts-for-creators}
+### Ansainnan oikeudenmukaisuuden varmistaminen luoville aloille ja sen työntekijöille \{#nfts-for-creators}
 
 Kattavinta NFTien käyttö on digitaalisten sisältöjen toimialalla. Tämä johtuu perinteisen tulonjaon koetusta epäoikeudenmukaisuudesta ko. toimialalla. Sisällön ja teosten tuottajien ansainnan potentiaali häviää nyt käytettävissä oleviin alustoihin.
 
@@ -174,7 +174,7 @@ Kun sisältöä myydään, ansainta ohjautuu suoraan luojalle. Jos uusi sisäll�
   </ButtonLink>
 </InfoBanner>
 
-#### Copy-paste-ongelma {#nfts-copy-paste}
+#### Copy-paste-ongelma \{#nfts-copy-paste}
 
 Vastustajat tuovat usein esiin argumentin siitä, että NFTit "ovat tyhmiä", koska näyttökaappauksella voit hankkia itsellesi NFT-taidetta. "Katsokaa, nyt minulla on tuo kuva ilmaiseksi!" he naureskelevat.
 
@@ -186,7 +186,7 @@ Todellisen ja alkuperäisen asian tai teoksen omistamisella tulee olemaan aina e
 
 <Divider />
 
-### Edistetään pelaamisen mahdollisuuksia {#nft-gaming}
+### Edistetään pelaamisen mahdollisuuksia \{#nft-gaming}
 
 NFTt kiinnostavat pelien kehittäjiä. NFTt voivat välittää tietoa pelin kohteista (item), ruokkia peli-alaa ja luoda uudenlaisia etuja pelaajille.
 
@@ -209,7 +209,7 @@ Decentraland, virtuaalinen reality-peli, jossa NFTt edustavat tontteja tai kiint
 
 <Divider />
 
-### Kuinka teet Ethereum-osoitteesta mieleenpainuvamman {#nft-domains}
+### Kuinka teet Ethereum-osoitteesta mieleenpainuvamman \{#nft-domains}
 
 Ethereum Name Service (ENS) käyttää NFTa tuottaakseen sinulle Ethereum-osoitteen, joka on helpompi muistaa: `mywallet.eth`. Tämä tarkoittaa, että voit pyytää jotakuta lähettämään sinut ETH `mywallet.eth` pikemminkin kuin `0x123456789.....`.
 
@@ -223,7 +223,7 @@ ENS-nimesi voi:
 
 <Divider />
 
-### Fyysiset, reaalimaailman tuotteet {#nft-physical-items}
+### Fyysiset, reaalimaailman tuotteet \{#nft-physical-items}
 
 Fyysisten esineiden muuttaminen virtuaalisiksi rahakkeiksi ei ole vielä kehittynyt samoin kuin niiden digitaaliset vastineet. On olemassa runsaasti hankkeita, jotka tutkivat esimerkiksi kiinteistöjen, one-of-a-kind -muotiesineiden ja vastaavien uniikkien tuotteiden virtualisoimista rahakkeiksi.
 
@@ -233,11 +233,11 @@ Koska NFTn takana voi olla arvokkaita omaisuuseriä, kuten asuntoja tai autoja, 
 
 <Divider />
 
-### NFT ja DeFi {#nfts-and-defi}
+### NFT ja DeFi \{#nfts-and-defi}
 
 NFT-maailma ja [hajautettu rahoitus (DeFi)](/defi/) hakevat synergiaa mielenkiintoisilla tavoilla.
 
-#### NFT-vakuudelliset lainat {#nft-backed-loans}
+#### NFT-vakuudelliset lainat \{#nft-backed-loans}
 
 On olemassa DeFi-sovelluksia, joiden avulla voit lainata rahaa vakuuden avulla. Esimerkiksi 10 ETH vakuudeksi voit lainata 5000 DAI ([vakaata kryptovaluuttaa](/stablecoins/)). Tämä takaa, että lainanantaja saa kryptonsa takaisin – jos lainanottaja ei maksa takaisin DAIta, vakuus lähetetään lainanantajalle. Kaikilla ei kuitenkaan ole tarpeeksi kryptoja käyttääkseen niitä vakuutena.
 
@@ -245,7 +245,7 @@ Hankkeet alkavat tutkia NFTn käyttöä vakuutena. Kuvittele ostavasi harvinaine
 
 Tämä ei ole ollenkaan vaikeaa Ethereumissa, koska molemmissa (NFT ja DeFi) on taustalla sama järjestelmäinfrasturktuuri.
 
-#### Osittainen omistajuus {#fractional-ownership}
+#### Osittainen omistajuus \{#fractional-ownership}
 
 NFT-luojat voivat myös luoda osakkeita NFTlle. Sijoittajat ja fanit voivat hankkia osuuksia yhdestä NFTstä ilman, että heidän tarvitsee ostaa koko kohdetta. Tämä lisää mahdollisuuksia NFT-luojille ja keräilijöille.
 
@@ -266,7 +266,7 @@ Kuten mainittua, nämä ominaisuudet ovat kehittyviä. NFTt, DAOt ja muut rahakk
 
 [Lisää DAOsta](/dao/)
 
-### Aitoustodistukset {#certificates}
+### Aitoustodistukset \{#certificates}
 
 Yritykset, jotka tarjoavat väärennettyjä yliopistotodistuksia kuuluvat miljardibisnekseen, jota NFTt voivat auttaa torjumaan. NFTt voivat olla turvallinen ja nopea tapa varmentaa henkilön tutkintotiedot.
 
@@ -274,7 +274,7 @@ Yritykset, jotka tarjoavat väärennettyjä yliopistotodistuksia kuuluvat miljar
 
 <Divider />
 
-### Tokenporttaus {#tokengating}
+### Tokenporttaus \{#tokengating}
 
 Tokenporttaus on tapa rajoittaa pääsyä johonkin ja NFTt ovat keinona avata pääsy. Käytön laajuus ja käyttötapa voivat vaihdella huomattavasti alustakohtaisesti, mutta suosittuja käyttötapauksia ovat yksityischatit ja e-commerce-tuotteet.
 
@@ -292,7 +292,7 @@ Jos NFTn luomisessa ja jakamisessa on kyse yhteisö-sukupolvesta tai yhteisö-di
 
 <Divider />
 
-## Ethereum ja NFTt (non-fungible-token) {#ethereum-and-nfts}
+## Ethereum ja NFTt (non-fungible-token) \{#ethereum-and-nfts}
 
 Ethereum mahdollistaa NFTien toiminnan useista hyvistä syistä:
 
@@ -302,13 +302,13 @@ Ethereum mahdollistaa NFTien toiminnan useista hyvistä syistä:
 - Kaikki Ethereum tuotteet hyödyntävät samaa "backendiä". Toisin sanoen Ethereum-tuotteet ymmärtävät helposti toisiaan - NFTt ovat käytettävissä läpi tuotevalikoiman. Voit sujuvasti ostaa NFTn tuotteesta ja myydä sen toista NFTia vastaan. Sisällöntuottajana voit listata NFTt useista tuotteista samaan aikaan – jokaisella tuotteella on näin ajantasainen omistajuustieto.
 - Ethereum ei koskaan "totaalisesti kaadu", joten rahakkeesi ovat myytävissä kaiken aikaan.
 
-## NFTien ympäristövaikutukset {#environmental-impact-nfts}
+## NFTien ympäristövaikutukset \{#environmental-impact-nfts}
 
 NFTiden luonti ja siirtäminen ovat vain Ethereumin liiketoimia – NFTn lyöminen (minttaus), ostaminen, vaihtaminen tai kanssakäyminen NFTn kanssa ei suoraan kuluta energiaa. [The Mergen](/roadmap/merge) jälkeen Ethereumista on tullut matalaenerginen lohkoketju, mikä tarkoittaa, että sen ympäristövaikutukset ovat vähäisiä.
 
 [Lisätietoa Ethereumin energiankulutuksesta](/energy-consumption/).
 
-### Älä syytä NFT:itä {#nft-qualities}
+### Älä syytä NFT:itä \{#nft-qualities}
 
 Koko NFT-ekosysteemi toimii, koska Ethereum on hajautettu ja turvallinen.
 
@@ -318,7 +318,7 @@ Kukaan ei voi "copy-pastettaa" NFTsi tai varastaa sitä.
 
 Nämä Ethereumin ominaisuudet tekevät uniikkien asioiden tai kohteiden digitaalisen omistamisen mahdolliseksi ja saat oikeudenmukaisen hinnan tuottamallesi sisällölle. Ethereum suojaa digitaalisia varantoja käyttämällä konseuskseen ['proof-of-stake -mekanismia'](/developers/docs/consensus-mechanisms/pos). Edellinen on vähähiilinen menetelmä sen määrittämiseksi, kuka voi lisätä lohkon tapahtumia ketjuun. Sitä pidetään varmempana kuin energiaintensiivistä vaihtoehtoa, ['proof-of-work -mekanismia'](/developers/docs/consensus-mechanisms/pow). NFTt liitettiin usein korkeaan energiankulutukseen, koska aiemmin Ethereum käytti varmistamiseen proof-of-work -mekanismia. Tämä ei enää pidä paikkaansa.
 
-#### NFTn lyöminen {#minting-nfts}
+#### NFTn lyöminen \{#minting-nfts}
 
 Kun lyöt (mint) NFTn, tapahtuu muutamia asioita:
 
@@ -329,7 +329,7 @@ Kun lyöt (mint) NFTn, tapahtuu muutamia asioita:
 
 Lohkojen tuottajat ja varmentajat hoitavat kaikki nämä tehtävät. Ehdottajat lisäävät NFT-tapahtumasi lohkoketjuun ja lähettävät sen verkostolle. Varmentajat tarkastavat, että tapahtuma on validi ja lisäävät sen tietokantoihinsa. Kryptomaailma käyttää runsaasti kannustimia varmistamaan sen, että varmentajat toimivat eettisesti. Muuten kuka tahansa voisi väittää omistavansa NFTn, jonka juuri löit ja petollisesti siirtää sen omiin nimiinsä.
 
-#### NFTn turvallisuus {#nft-security}
+#### NFTn turvallisuus \{#nft-security}
 
 Ethereumin turvallisuus syntyy hajautetusta sijoittamisesta siihen. Järjestelmään on sisäänrakennettuna taloudellinen puolustus pahansuopia toimintoja vastaan, joten Ethereumia ei voi peukaloida. Tämä tekee NFTt mahdolliseksi. Kun NFT-tapahtumasi sisältävä lohko on valmis, hyökkääjälle maksaisi miljoonia ethereitä kyetä muuttamaan sitä. Ethereum-softat tunnistaisivat välittömästi epärehellisen NFTn muokkaus tai kaappausyrityksen ja vihamielistä toimijaa rangaistaisiin taloudellisesti sekä poistamalla hänet yhteisöstä.
 
@@ -339,11 +339,11 @@ Turvallisuushaasteet, jotka liittyvät NFTeihin, ovat monesti kalasteluyrityksi�
   Lisää tietoturvasta ja suojauksesta
 </ButtonLink>
 
-## Rakennettu NFTien kanssa {#build-with-nfts}
+## Rakennettu NFTien kanssa \{#build-with-nfts}
 
 Useimmat NFTt on rakennettu johdonmukaisesti [ERC-721](/developers/docs/standards/tokens/erc-721/)-standardilla. On kuitenkin myös muita standardeja, joihin saatat haluta tutustua. [ERC-1155](/developers/docs/standards/tokens/erc-1155/)-standardi mahdollistaa osittain korvattavissa olevat rahakkeet, jotka ovat hyödyllisiä esimerkiksi pelaamisessa. Viimeaikoina [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309)-standardia on ehdotettu louhinnan huomattavaan tehostamiseen. Tämä standardi mahdollistaa niin monien rahakkeiden lyömistä (mint) kuin haluat yhdessä transaktiossa!
 
-## Lisää luettavaa {#further-reading}
+## Lisää luettavaa \{#further-reading}
 
 - [Crypto art data](https://cryptoart.io/data) – Richard Chen, päivitetään automaattisesti
 - [OpenSea: The NFT Bible – OpenSea: NFT-Raamattu](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 tammikuu 2020_

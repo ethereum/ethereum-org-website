@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 Dans ce tutoriel, nous allons créer une application DeFi avec Solidity dans laquelle les utilisateurs peuvent déposer un jeton ERC20 dans le contrat intelligent et ce jeton va générer et leur transférer des jetons Farm. Par la suite, les utilisateurs pourront retirer leurs jetons ERC20 en brûlant leur jeton Farm sur un contrat intelligent et les jetons ERC20 leur seront transférés en retour.
 
-## Installer Truffle et Ganache {#install-truffle-and-ganache}
+## Installer Truffle et Ganache \{#install-truffle-and-ganache}
 
 Si c'est votre première création de contrat intelligent, il vous faudra configurer votre environnement. Nous allons utiliser deux outils : [Truffle](https://www.trufflesuite.com/) et [Ganache](https://www.trufflesuite.com/ganache).
 
@@ -44,7 +44,7 @@ Cela créera un projet vide pour l'établissement et le déploiement de nos cont
 
 - `truffle-config.js` : Fichier de configuration Truffle
 
-## Créer un jeton ERC20 {#create-the-erc20-token}
+## Créer un jeton ERC20 \{#create-the-erc20-token}
 
 Nous devons premièrement créer notre jeton ERC20 que nous miserons dans le contrat intelligent. Pour créer notre jeton fongible, nous devrons commencer par installer la bibliothèque OpenZeppelin. Cette bibliothèque contient les implémentations de normes telles qu'ERC20 et ERC721. Pour l'installer, exécutez la commande :
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## Compiler le jeton ERC20 {#compile-the-erc20-token}
+## Compiler le jeton ERC20 \{#compile-the-erc20-token}
 
 Pour compiler notre contrat intelligent, nous devons d'abord vérifier notre version du compilateur de Solidity. Vous pouvez la vérifier en exécutant la commande :
 
@@ -123,7 +123,7 @@ Maintenant, nous pouvons compiler notre contrat intelligent en exécutant la com
 truffle compile
 ```
 
-## Déployer le jeton ERC20 {#deploy-erc20-token}
+## Déployer le jeton ERC20 \{#deploy-erc20-token}
 
 Après la compilation, nous pouvons maintenant déployer notre jeton.
 
@@ -175,7 +175,7 @@ En exécutant les commandes ci-dessus, nous constatons que la première adresse 
 
 _La première adresse dispose de 1 000 000 de MyTokens_
 
-## Créer un Contrat Intelligent FarmToken {#create-farmtoken-smart-contract}
+## Créer un Contrat Intelligent FarmToken \{#create-farmtoken-smart-contract}
 
 Le contrat intelligent FarmToken aura 3 fonctions :
 
@@ -468,7 +468,7 @@ Pour exécuter ce script : `truffle exec .\scripts\transferMyTokenToFarmToken.js
 
 _sortie de withdrawMyTokenFromTokenFarm.js_
 
-## Références {#references}
+## Références \{#references}
 
 [Contrats - Documentation OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/)
 

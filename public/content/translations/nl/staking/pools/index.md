@@ -13,13 +13,13 @@ summaryPoints:
   - Bewaar liquiditeitstokens in uw eigen portemonnee
 ---
 
-## Wat zijn staking-pools? {#what-are-staking-pools}
+## Wat zijn staking-pools? \{#what-are-staking-pools}
 
 Staking-pools zijn een gezamenlijke aanpak om veel gebruikers met kleinere hoeveelheden ETH de mogelijkheid te bieden de 32 ETH te verkrijgen die nodig zijn om een set validatorsleutels te activeren. De pooling-functionaliteit wordt oorspronkelijk niet ondersteund binnen het protocol, dus er zijn oplossingen ontwikkeld om aan deze behoefte te voldoen.
 
 Sommige pools werken met smart contracts, waar fondsen kunnen worden gestort op een contract dat uw stake beheert en volgt zonder vertrouwenskwestie en u een token geeft die deze waarde vertegenwoordigt. Andere pools hebben mogelijk geen smart contracts en worden in plaats daarvan via de off-chain beheerd.
 
-## Waarom staken met een pool? {#why-stake-with-a-pool}
+## Waarom staken met een pool? \{#why-stake-with-a-pool}
 
 Naast de voordelen die we hebben behandeld in onze [inleiding tot staking](/staking/), komt staking met een pool met nog een aantal andere duidelijke voordelen.
 
@@ -37,7 +37,7 @@ Naast de voordelen die we hebben behandeld in onze [inleiding tot staking](/stak
 
 <StakingComparison page="pools" />
 
-## Wat te overwegen {#what-to-consider}
+## Wat te overwegen \{#what-to-consider}
 
 Gepoolde of gedelegeerde staking wordt oorspronkelijk niet door het Ethereum-protocol ondersteund, maar gezien de vraag die er bestaat van gebruikers die minder dan 32 ETH willen staken, is er een groeiend aantal oplossingen gebouwd om aan deze vraag te voldoen.
 
@@ -47,7 +47,7 @@ Hieronder zijn attribuutindicatoren gebruikt om opmerkelijke sterke of zwakke pu
 
 <StakingConsiderations page="pools" />
 
-## Onderzoek staking-pools {#explore-staking-pools}
+## Onderzoek staking-pools \{#explore-staking-pools}
 
 Er zijn verschillende opties beschikbaar om u te helpen met uw installatie. Gebruik de bovenstaande indicatoren om u te helpen de onderstaande tools door te nemen.
 
@@ -59,7 +59,7 @@ Houd rekening met het belang van het kiezen van een service die de <a href="/dev
 
 Heeft u een suggestie voor een staking-tool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit is en om het ter beoordeling in te dienen.
 
-## Veelgestelde vragen {#faq}
+## Veelgestelde vragen \{#faq}
 
 <ExpandableCard title="Hoe verdien ik beloningen?">
 Meestal worden ERC-20-liquiditeitstokens uitgegeven aan stakers die de waarde van hun gestakete ETH plus beloningen vertegenwoordigen. Houd in uw achterhoofd dat verschillende pools hun staking-beloningen verdelen onder hun gebruikers via ietwat verschillende methoden, maar dit is wat gebruikelijk is.
@@ -80,7 +80,7 @@ In tegenstelling tot gecentraliseerde exchanges gebruiken veel andere gepoolde s
 Sommige pooling-opties zijn meer gedecentraliseerd dan andere als het gaat om de nodes waarmee ze ondersteund worden. Om de gezondheid en decentralisatie van het netwerk te bevorderen, worden stakers altijd aangemoedigd om een poolingservice te selecteren die een gedecentraliseerde set node-operators zonder toestemming mogelijk maakt.
 </ExpandableCard>
 
-## Verder lezen {#further-reading}
+## Verder lezen \{#further-reading}
 
 - [Staking met Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_
 - [Staking Ethereum With Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido help docs_

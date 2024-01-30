@@ -8,7 +8,7 @@ skill: beginner
 published: 2022-08-15
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 One of the great things about Ethereum is that there is no central authority that can modify or undo your transactions. One of the great problems with Ethereum is that there is no central authority with the power to undo user mistakes or illicit transactions. In this article you learn about some of the common mistakes that users commit with [ERC-20](/developers/docs/standards/tokens/erc-20/) tokens, as well as how to create ERC-20 contracts that help users to avoid those mistakes, or that give a central authority some power (for example to freeze accounts).
 
@@ -21,7 +21,7 @@ If you want to see the complete source code:
 3. Clone the github repository `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. Open **contracts > erc20-safety-rails.sol**.
 
-## Creating an ERC-20 contract {#creating-an-erc-20-contract}
+## Creating an ERC-20 contract \{##creating-an-erc-20-contract}
 
 Before we can add the safety rail functionality we need an ERC-20 contract. In this article we'll use [the OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/4.x/wizard). Open it in another browser and follow these instructions:
 
@@ -41,9 +41,9 @@ Before we can add the safety rail functionality we need an ERC-20 contract. In t
 4. We now have a fully functional ERC-20 contract. You can expand `.deps` > `npm` to see the imported code.
 5. Compile, deploy, and play with the contract to see that it functions as an ERC-20 contract. If you need to learn how to use Remix, [use this tutorial](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
-## Common mistakes {#common-mistakes}
+## Common mistakes \{##common-mistakes}
 
-### The mistakes {#the-mistakes}
+### The mistakes \{##the-mistakes}
 
 Users sometimes send tokens to the wrong address. While we cannot read their minds to know what they meant to do, there are two error types that happen a lot and are easy to detect:
 
@@ -51,7 +51,7 @@ Users sometimes send tokens to the wrong address. While we cannot read their min
 
 2. Sending the tokens to an empty address, one that doesn't correspond to an [externally owned account](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) or a [smart contract](/developers/docs/smart-contracts). While I don't have statistics on how often this happens, [one incident could have cost 20,000,000 tokens](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
-### Preventing transfers {#preventing-transfers}
+### Preventing transfers \{##preventing-transfers}
 
 The OpenZeppelin ERC-20 contract includes [a hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), that is called before a token is transferred. By default this hook does not do anything, but we can hang our own functionality on it, such as checks that revert if there's a problem.
 
@@ -86,7 +86,7 @@ We have to specify explicitly that we're [overriding](https://docs.soliditylang.
 
 This line calls the `_beforeTokenTransfer` function of the contract or contracts from which we inherited which have it. In this case, that is only `ERC20`, `Ownable` does not have this hook. Even though currently `ERC20._beforeTokenTransfer` doesn't do anything, we call it in case functionality is added in the future (and we then decide to redeploy the contract, because contracts don't change after deployment).
 
-### Coding the requirements {#coding-the-requirements}
+### Coding the requirements \{##coding-the-requirements}
 
 We want to add these requirements to the function:
 
@@ -118,7 +118,7 @@ This is how we check if an address is a contract. We cannot receive output direc
 
 And finally, we have the actual check for empty addresses.
 
-## Administrative access {#admin-access}
+## Administrative access \{##admin-access}
 
 Sometimes it is useful to have an administrator that can undo mistakes. To reduce the potential for abuse, this administrator can be a [multisig](https://blog.logrocket.com/security-choices-multi-signature-wallets/) so multiple people have to agree on an action. In this article we'll have two administrative features:
 
@@ -136,7 +136,7 @@ OpenZeppelin provides two mechanisms to enable administrative access:
 
 For the sake of simplicity, in this article we use `Ownable`.
 
-### Freezing and thawing contracts {#freezing-and-thawing-contracts}
+### Freezing and thawing contracts \{##freezing-and-thawing-contracts}
 
 Freezing and thawing contracts requires several changes:
 
@@ -182,7 +182,7 @@ Freezing and thawing contracts requires several changes:
        require(!frozenAccounts[from], "The account is frozen");
   ```
 
-### Asset cleanup {#asset-cleanup}
+### Asset cleanup \{##asset-cleanup}
 
 To release ERC-20 tokens held by this contract we need to call a function on the token contract to which they belong, either [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) or [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). There's no point wasting gas in this case on allowances, we might as well transfer directly.
 
@@ -207,6 +207,6 @@ This is the syntax to create an object for a contract when we receive the addres
 
 This is a cleanup function, so presumably we don't want to leave any tokens. Instead of getting the balance from the user manually, we might as well automate the process.
 
-## Conclusion {#conclusion}
+## Conclusion \{##conclusion}
 
 This is not a perfect solution - there is no perfect solution for the "user made a mistake" problem. However, using these kind of checks can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.

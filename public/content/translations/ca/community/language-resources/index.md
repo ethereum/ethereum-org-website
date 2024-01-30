@@ -4,7 +4,7 @@ description: Recursos de parla no anglesa per aprendre sobre Ethereum
 lang: ca
 ---
 
-# Recursos d'idiomes {#language-resources}
+# Recursos d'idiomes \{#language-resources}
 
 La comunitat Ethereum és global i està formada per milions de persones de parla no anglesa.
 
@@ -14,15 +14,15 @@ Si preferiu llegir en la vostra pròpia llengua o coneixeu algú que no parla an
 
 Coneixeu cap recurs educatiu en la vostra llengua? [Obriu un tema](https://github.com/ethereum/ethereum-org-website/issues/new/choose) per afegir-lo a la llista!
 
-## Recursos d'ethereum.org {#ethereum-org}
+## Recursos d'ethereum.org \{#ethereum-org}
 
 Ethereum.org està traduït per persones nadives en més de 40 llengües, les quals podeu trobar en la nostra [pàgina d'idiomes](/languages).
 
 Si sou bilingües i voleu ajudar-nos a arribar a més gent, també us podeu involucrar amb el [Programa de Traducció ethereum.org](/contributing/translation-program/#translation-program) i ajudar-nos a traduir el lloc web.
 
-## Recursos de la comunitat {#community}
+## Recursos de la comunitat \{#community}
 
-### Portuguès (Brasil) {#br-pt}
+### Portuguès (Brasil) \{#br-pt}
 
 **Notícies**
 
@@ -40,7 +40,7 @@ Si sou bilingües i voleu ajudar-nos a arribar a més gent, també us podeu invo
 - [Cointimes](http://www.cointimes.com.br/) - notícies i educació sobre criptomonedes
 - [Paquet d'iniciació a Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - una guia que respon a les preguntes freqüents i més fonamentals de les criptomonedes
 
-### Xinès {#zh}
+### Xinès \{#zh}
 
 **Recursos genèrics**
 
@@ -67,21 +67,21 @@ Si sou bilingües i voleu ajudar-nos a arribar a més gent, també us podeu invo
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - un compte de WeChat que explica la criptografia, la seguretat, etc.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - un compte de WeChat que explica la tecnologia zk
 
-### Francès {#fr}
+### Francès \{#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organitza esdeveniments, crea contingut i encoratja discussions sobre Ethereum
 - [Ethereum.fr](https://ethereum.fr/) - notícies i educació d'Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) - revista de Bankless en francès
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - fòrum de criptomonedes amb una subpàgina d'Ethereum
 
-### Alemany {#de}
+### Alemany \{#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - com utilitzar Solidity
 - [Microsoft Learn (contractes intel·lilgents)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - com escriure contractes intel·lgents d'Ethereum amb Solidity
 - [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - conectar i implementar les xarxes Ethereum
 - [Microsoft Learn (cadenes de blocs)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - entrada al desenvolupament de la cadena de blocs
 
-### Italià {#it}
+### Italià \{#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - notícies, esdeveniments i educació sobre Ethereum, enfocats a contractes intel·ligents i tecnologia de cadena de blocs
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - pòdcast d'Ethereum en italià
@@ -89,7 +89,7 @@ Si sou bilingües i voleu ajudar-nos a arribar a més gent, també us podeu invo
 - [Microsoft Learn (contractes intel·ligents)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - apreneu a escriure contractes utilitzant Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - creeu una interfície d'usuari amb aplicacions descentralitzades
 
-### Espanyol {#es}
+### Espanyol \{#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - blog, esdeveniments i cursos sobre governança, DeFi i cadenes de blocs
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - guia en espanyol per a principiants d'Ethereum
@@ -98,18 +98,18 @@ Si sou bilingües i voleu ajudar-nos a arribar a més gent, també us podeu invo
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - explicacions sobre els problemes de seguretat i les vulnerabilitats més comunesen contractes intel·ligents reals
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - apreneu com funcionen els contractes intel·ligents DeFi a Solidity i creeu el vostre propi Creador de Mercats Automatitzats
 
-### Turc {#tr}
+### Turc \{#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - curs sobre criptomonedes i cadenes de blocs
 - [El gran canvi de nom: què ha passat amb Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traducció al turc de l'article del blog sobre el gran canvi, on s'explica l'allunyament respecte a la terminologia «Eth2»
 
-### Vietnamita {#vi}
+### Vietnamita \{#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - resum d'Ethereum, aplicacions descentralitzades, carteres i preguntes més freqüents
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - plataforma web amb subpàgines per a notícies i educació d'Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - portal de criptomonedes amb notícies d'Ethereum i contingut educatiu
 
-### Japonès {#ja}
+### Japonès \{#ja}
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)

@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Sonraki bölümde, her iki adresin de tuttuğu mevcut token miktarını almak için `balanceOf` fonksiyonunu çağıracağız.
 
-## Call: Bir akıllı sözleşmeden değer okuma {#call-reading-value-from-a-smart-contract}
+## Call: Bir akıllı sözleşmeden değer okuma \{#call-reading-value-from-a-smart-contract}
 
 İlk satır bir "sabit" yöntemi getirecek ve akıllı sözleşme yöntemini herhangi bir işlem göndermeden EVM'de çalıştıracaktır. Bunun için bir adresin ERC20 bakiyesini okuyacağız. [ERC20 token'ları hakkındaki makalemizi okuyun](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 DAI ERC20'nin 18 ondalık basamağa sahip olduğunu unutmayın; bu, doğru miktarı elde etmek için 18 sıfırı kaldırmanız gerektiği anlamına gelir. uint256, JavaScript büyük sayısal değerleri işlemediğinden dizgi olarak döndürülür. [JS'de büyük sayılarla nasıl başa çıkacağınızdan emin değilseniz, bignumber.js hakkındaki öğreticimize bakın](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Send: Akıllı sözleşme fonksiyonuna bir işlem gönderme {#send-sending-a-transaction-to-a-smart-contract-function}
+## Send: Akıllı sözleşme fonksiyonuna bir işlem gönderme \{#send-sending-a-transaction-to-a-smart-contract-function}
 
 İkinci örnek için, ikinci adresimize 10 DAI göndermek için DAI akıllı sözleşmesinin transfer fonksiyonunu çağıracağız. Transfer fonksiyonu 2 parametreyi kabul eder: alıcı adres ve transfer edilcek token miktarı:
 

@@ -17,7 +17,7 @@ Dans cet article, vous apprendrez comment créer et utiliser un contrat de mise 
 
 Si vous souhaitez ignorer l'article et simplement voir le code source, vous le trouverez [ici](https://github.com/qbzzt/20220915-all-you-can-cache). Le logiciel de développement utilisé est [Foundry](https://book.getfoundry.sh/getting-started/installation).
 
-## Conception générale {#overall-design}
+## Conception générale \{#overall-design}
 
 Pour simplifier, nous supposerons que tous les paramètres de transaction sont de type `uint256`, d'une longueur de 32 octets. Lorsque nous recevons une transaction, nous analyserons chaque paramètre de la manière suivante :
 
@@ -34,7 +34,7 @@ Pour simplifier, nous supposerons que tous les paramètres de transaction sont d
    | 0x12,0xAC                       |                  0x02AC |
    | 0x2D,0xEA, 0xD6                 |                0x0DEAD6 |
 
-## Manipulation du cache {#cache-manipulation}
+## Manipulation du cache \{#cache-manipulation}
 
 La mise en cache est implémentée dans [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Revenons dessus ligne par ligne.
 
@@ -306,7 +306,7 @@ Si nous en arrivons là, cela signifie que nous avons obtenu une valeur qui n'es
 }  // Cache
 ```
 
-### Tester le cache {#testing-the-cache}
+### Tester le cache \{#testing-the-cache}
 
 L'un des avantages de Foundry est qu'[il vous permet d'écrire des tests en Solidity](https://book.getfoundry.sh/forge/tests), ce qui facilite l'écriture de tests de type. Les tests pour la classe `Cache` se trouvent [ici](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Comme le code de test est répétitif, comme c'est souvent le cas avec les tests, cet article n'explique que les parties utiles.
 
@@ -665,11 +665,11 @@ Cette fonction envoie cinq valeurs. Nous savons que la cinquième valeur est ign
 
 ```
 
-## Exemple d'application {#a-sample-app}
+## Exemple d'application \{#a-sample-app}
 
 Écrire des tests en Solidity c'est très bien, mais en fin de compte, une DApp doit être capable de traiter les demandes venant de la chaîne pour être utile. Cet article montre comment utiliser la mise en cache dans une DApp avec `WORM`, qui signifie « Écrire Une Fois, Lire Plusieurs fois » (en anglais "Write Once, Read Many"). Si une clé n'a pas encore été assignée, vous pouvez y écrire une valeur. Si la clé a déjà été assignée, cela annule l'écriture.
 
-### Le contrat {#the-contract}
+### Le contrat \{#the-contract}
 
 [Voici le contrat](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Cela répète en grande partie ce que nous avons déjà fait avec `Cache` et `CacheTest`, nous nous concentrons donc uniquement sur les parties intéressantes.
 
@@ -708,7 +708,7 @@ Notez que même si nous définissons `WRITE_ENTRY_CACHED` comme une variable d'�
 
 La fonction de lecture est en `lecture`, elle ne nécessite donc pas de transaction et ne coûte pas de gaz. En conséquence, il n'y a aucun avantage à utiliser le cache pour le paramètre. Avec les fonctions de type en lecture, il est préférable d'utiliser le mécanisme standard qui est plus simple.
 
-### Code de test {#the-testing-code}
+### Code de test \{#the-testing-code}
 
 [Voici le code de test pour le contrat](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Encore une fois, regardons uniquement ce qui est intéressant.
 
@@ -758,7 +758,7 @@ Puisque nous utilisons la fonction de bas niveau `<address>.call()`, nous ne pou
 
 C'est ainsi que nous vérifions que le code [émet correctement un événement](https://book.getfoundry.sh/cheatcodes/expect-emit) dans Foundry.
 
-### Le client {#the-client}
+### Le client \{#the-client}
 
 Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScript que vous pouvez couper et coller dans votre propre application. Pour écrire ce code, j'ai déployé WORM sur [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), le nouveau réseau de test d'[Optimism](https://www.optimism.io/). Il se trouve à l'adresse [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
@@ -845,7 +845,7 @@ Comme pour le code de test Solidity, nous ne pouvons normalement pas appeler une
 
 Pour lire les entrées, nous pouvons utiliser le mécanisme normal. Il n'est pas nécessaire d'utiliser la mise en cache des paramètres avec les fonctions `view`.
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 Le code dans cet article est une preuve de concept, le but étant de rendre l'idée facile à comprendre. Pour un système exploitable, vous devriez peut-être mettre en œuvre certaines fonctionnalités supplémentaires :
 

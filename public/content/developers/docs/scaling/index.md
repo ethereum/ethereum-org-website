@@ -5,7 +5,7 @@ lang: en
 sidebarDepth: 3
 ---
 
-## Scaling overview {#scaling-overview}
+## Scaling overview \{#scaling-overview}
 
 As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
@@ -15,23 +15,23 @@ While speed and throughput are important, it is essential that scaling solutions
 
 Conceptually we first categorize scaling as either on-chain scaling or off-chain scaling.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{##prerequisites}
 
 You should have a good understanding of all the foundational topics. Implementing scaling solutions is advanced as the technology is less battle-tested, and continues to be researched and developed.
 
-## On-Chain scaling {#on-chain-scaling}
+## On-Chain scaling \{##on-chain-scaling}
 
 On-chain scaling requires changes to the Ethereum protocol (layer 1 [Mainnet](/glossary/#mainnet)). For a long time, sharding the blockchain was expected to scale Ethereum. This was going to involve splitting the blockchain into discrete pieces (shards) to be verified by subsets of validators. However, scaling by layer-2 rollups has taken over as the primary scaling technique. This is supported by the addition of a new cheaper form of data attached to Ethereum blocks that is specially designed to make rollups cheap for users.
 
-### Sharding {#sharding}
+### Sharding \{##sharding}
 
 Sharding is the process of splitting a database. Subsets of validators would be responsible for individual shards rather than keeping track of all of Ethereum. Sharding was on the Ethereum [roadmap](/roadmap/) for a long time, and was once intended to be shipped before The Merge to proof-of-stake. However, the rapid development of [layer 2 rollups](#layer-2-scaling) and the invention of [Danksharding](/roadmap/danksharding) (adding blobs of rollup data to Ethereum blocks that can be very efficiently verified by validators) has led the Ethereum community to favour rollup-centric scaling instead of scaling by sharding. This will also help to keep Ethereum's consensus logic simpler.
 
-## Off-chain scaling {#off-chain-scaling}
+## Off-chain scaling \{##off-chain-scaling}
 
 Off-chain solutions are implemented separately from layer 1 Mainnet - they require no changes to the existing Ethereum protocol. Some solutions, known as "layer 2" solutions, derive their security directly from layer 1 Ethereum consensus, such as [optimistic rollups](/developers/docs/scaling/optimistic-rollups/), [zero-knowledge rollups](/developers/docs/scaling/zk-rollups/) or [state channels](/developers/docs/scaling/state-channels/). Other solutions involve the creation of new chains in various forms that derive their security separately from Mainnet, such as [sidechains](#sidechains), [validiums](#validium), or [plasma chains](#plasma). These solutions communicate with Mainnet, but derive their security differently to obtain a variety of goals.
 
-### Layer 2 scaling {#layer-2-scaling}
+### Layer 2 scaling \{##layer-2-scaling}
 
 This category of off-chain solutions derives its security from Mainnet Ethereum.
 
@@ -41,7 +41,7 @@ Most layer 2 solutions are centered around a server or cluster of servers, each 
 
 A specific layer 2 instance may be open and shared by many applications, or may be deployed by one project and dedicated to supporting only their application.
 
-#### Why is layer 2 needed? {#why-is-layer-2-needed}
+#### Why is layer 2 needed? \{##why-is-layer-2-needed}
 
 - Increased transactions per second greatly improves user experience, and reduces network congestion on Mainnet Ethereum.
 - Transactions are rolled up into a single transaction to Mainnet Ethereum, reducing gas fees for users making Ethereum more inclusive and accessible for people everywhere.
@@ -50,7 +50,7 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 
 [More on layer 2](/layer-2/).
 
-#### Rollups {#rollups}
+#### Rollups \{##rollups}
 
 Rollups perform transaction execution outside layer 1 and then the data is posted to layer 1 where consensus is reached. As transaction data is included in layer 1 blocks, this allows rollups to be secured by native Ethereum security.
 
@@ -59,38 +59,38 @@ There are two types of rollups with different security models:
 - **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
 - **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 
-#### State channels {#channels}
+#### State channels \{##channels}
 
 State channels utilize multisig contracts to enable participants to transact quickly and freely off-chain, then settle finality with Mainnet. This minimizes network congestion, fees, and delays. The two types of channels are currently state channels and payment channels.
 
 Learn more about [state channels](/developers/docs/scaling/state-channels/).
 
-### Sidechains {#sidechains}
+### Sidechains \{##sidechains}
 
 A sidechain is an independent EVM-compatible blockchain which runs in parallel to Mainnet. These are compatible with Ethereum via two-way bridges, and run under their own chosen rules of consensus, and block parameters.
 
 Learn more about [Sidechains](/developers/docs/scaling/sidechains/).
 
-### Plasma {#plasma}
+### Plasma \{##plasma}
 
 A plasma chain is a separate blockchain that is anchored to the main Ethereum chain, and uses fraud proofs (like [optimistic rollups](/developers/docs/scaling/optimistic-rollups/)) to arbitrate disputes.
 
 Learn more about [Plasma](/developers/docs/scaling/plasma/).
 
-### Validium {#validium}
+### Validium \{##validium}
 
 A Validium chain uses validity proofs like zero-knowledge rollups but data is not stored on the main layer 1 Ethereum chain. This can lead to 10k transactions per second per Validium chain and multiple chains can be run in parallel.
 
 Learn more about [Validium](/developers/docs/scaling/validium/).
 
-## Why are so many scaling solutions needed? {#why-do-we-need-these}
+## Why are so many scaling solutions needed? \{##why-do-we-need-these}
 
 - Multiple solutions can help reduce the overall congestion on any one part of the network, and also prevents single points of failure.
 - The whole is greater than the sum of its parts. Different solutions can exist and work in harmony, allowing for an exponential effect on future transaction speed and throughput.
 - Not all solutions require utilizing the Ethereum consensus algorithm directly, and alternatives can offer benefits that would otherwise be difficult to obtain.
 - No one scaling solution is enough to fulfill the [Ethereum vision](/roadmap/vision/).
 
-## More of a visual learner? {#visual-learner}
+## More of a visual learner? \{##visual-learner}
 
 <YouTube id="BgCgauWVTs0" />
 
@@ -98,7 +98,7 @@ _Note the explanation in the video uses the term "Layer 2" to refer to all off-c
 
 <YouTube id="7pWxCklcNsU" />
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Up-to-date analytics on Layer 2 scaling solutions for Ethereum](https://www.l2beat.com/)

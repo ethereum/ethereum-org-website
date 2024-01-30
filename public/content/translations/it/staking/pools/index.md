@@ -13,13 +13,13 @@ summaryPoints:
   - Possiedi token di staking nel tuo portafoglio
 ---
 
-## Cosa sono i pool di staking? {#what-are-staking-pools}
+## Cosa sono i pool di staking? \{#what-are-staking-pools}
 
 I pool di staking sono un approccio collaborativo per consentire a molti, con quantità minori di ETH, di ottenere i 32 ETH necessari per attivare un insieme di chiavi di validazione. La funzionalità di pooling non è supportata nativamente all'interno del protocollo, quindi le soluzioni sono state sviluppate separatamente per rispondere a questa esigenza.
 
 Alcuni pool operano utilizzando i contratti intelligenti, dove i fondi possono essere depositati in un contratto, che gestisce e traccia senza fiducia il tuo stake, e ti emette un token che rappresenta questo valore. Altri pool potrebbero non coinvolgere i contratti intelligenti ed essere invece mediati al di fuori dalla catena.
 
-## Perché mettere in stake con un pool? {#why-stake-with-a-pool}
+## Perché mettere in stake con un pool? \{#why-stake-with-a-pool}
 
 Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking](/staking/), lo staking mediante un pool viene fornito con una serie di vantaggi distinti.
 
@@ -31,7 +31,7 @@ Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking]
 
 <StakingComparison page="pools" />
 
-## Cosa considerare {#what-to-consider}
+## Cosa considerare \{#what-to-consider}
 
 Lo staking in pool o delegato non è supportato nativamente dal protocollo di Ethereum, ma data la domanda degli utenti di mettere meno di 32 ETH in staking, sono state costruite sempre più soluzioni per soddisfare tale richiesta.
 
@@ -45,7 +45,7 @@ Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di
 
 <StakingConsiderations page="pools" />
 
-## Esplora i pool di staking {#explore-staking-pools}
+## Esplora i pool di staking \{#explore-staking-pools}
 
 Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazione. Gli indicatori di cui sopra ti guideranno per gli strumenti seguenti.
 
@@ -57,7 +57,7 @@ Sei pregato di notare l'importanza di scegliere un servizio che prenda sul serio
 
 Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.
 
-## Domande frequenti {#faq}
+## Domande frequenti \{#faq}
 
 <ExpandableCard title="Come ottengo ricompense?">
 Tipicamente, i token di staking ERC-20 sono emessi agli staker che rappresentano il valore dei loro ETH in staking più le ricompense. Tieni a mente che diversi pool distribuiranno ricompense di staking ai loro utenti tramite metodi lievemente differenti, ma questo è il tema comune.
@@ -79,7 +79,7 @@ A differenza delle borse centralizzate, molte altre opzioni di staking in pool u
 Alcune opzioni di pooling sono più decentralizzate di altre quando si tratta di nodi che le sostengono. Per promuovere la salute e la decentralizzazione della rete, gli staker sono sempre incoraggiati a selezionare un servizio di pooling che consenta una serie di operatori del nodo decentralizzati e privi di permessi.
 </ExpandableCard>
 
-## Approfondimenti {#further-reading}
+## Approfondimenti \{#further-reading}
 
 - [Staking con Rocket Pool - Panoramica sullo Staking](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_
 - [Staking di Ethereum con Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Documentazione di supporto di Lido_

@@ -13,7 +13,7 @@ summaryPoints:
   - Hapus kepercayaan, dan jangan pernah menyerahkan kendali atas kunci dana Anda
 ---
 
-## Apa yang dimaksud solo penaruhan? {#what-is-solo-staking}
+## Apa yang dimaksud solo penaruhan? \{#what-is-solo-staking}
 
 Solo penaruhan adalah tindakan [menjalankan simpul Ethereum](/run-a-node/) yang terhubung ke internet dan mendepositkan 32 ETH untuk mengaktifkan [validator](#faq), memberi Anda kemampuan untuk berpartisipasi secara langsung dalam konsensus jaringan.
 
@@ -25,7 +25,7 @@ Para penaruh solo bertanggung jawab atas mengoperasikan perangkat keras yang dip
 
 Seorang penaruh solo menerima imbalan langsung dari protokol karena menjaga validator mereka berfungsi dengan baik dan tetap daring.
 
-## Mengapa taruhan solo? {#why-stake-solo}
+## Mengapa taruhan solo? \{#why-stake-solo}
 
 Penaruhan solo membawa tanggung jawab lebih besar tetapi memberikan Anda kendali maksimal atas dana dan pengaturan penaruhan Anda.
 
@@ -36,7 +36,7 @@ Pengaturan penuh" emoji="🎛️" description="Keep your own keys. Choose the co
   <Card title="Keamanan Jaringan" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Pertimbangan sebelum melakukan penaruhan solo {#considerations-before-staking-solo}
+## Pertimbangan sebelum melakukan penaruhan solo \{#considerations-before-staking-solo}
 
 Seberapa pun kita berharap bahwa penaruhan solo dapat diakses dan bebas risiko bagi semua orang, kenyataannya tidak demikian. Ada beberapa pertimbangan praktis dan serius yang perlu diingat sebelum memutuskan untuk melakukan taruhan solo pada ETH Anda.
 
@@ -76,7 +76,7 @@ Berbeda dari hukuman ketidakaktifan karena offline, <em>pemotongan</em> merupaka
 
 <StakingComparison page="solo" />
 
-## Cara kerjanya {#how-it-works}
+## Cara kerjanya \{#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -86,13 +86,13 @@ Jika diinginkan, Anda dapat keluar sebagai validator yang menghilangkan keharusa
 
 [Lebih lanjut tentang penarikan penaruhan](/staking/withdrawals/)
 
-## Mulai di Landasan Peluncuran Penaruhan {#get-started-on-the-staking-launchpad}
+## Mulai di Landasan Peluncuran Penaruhan \{#get-started-on-the-staking-launchpad}
 
 Landasan Peluncuran Penaruhan adalah aplikasi sumber terbuka yang akan membantu Anda menjadi seorang penaruh. Aplikasi ini akan membimbing Anda dalam memilih klien, menghasilkan kunci Anda, dan mendepositkan ETH Anda ke kontrak deposit penaruhan. Daftar periksa disediakan untuk memastikan Anda telah mencakup semua yang diperlukan untuk mengatur validator dengan aman.
 
 <StakingLaunchpadWidget />
 
-## Apa yang perlu dipertimbangkan dalam perangkat pengaturan simpul dan klien {#node-tool-considerations}
+## Apa yang perlu dipertimbangkan dalam perangkat pengaturan simpul dan klien \{#node-tool-considerations}
 
 Ada sejumlah perangkat dan layanan yang semakin banyak membantu Anda untuk melakukan taruhan solo ETH, tetapi masing-masing memiliki risiko dan manfaat yang berbeda.
 
@@ -100,7 +100,7 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 
 <StakingConsiderations page="solo" />
 
-## Jelajahi perangkat pengaturan simpul dan klien {#node-and-client-tools}
+## Jelajahi perangkat pengaturan simpul dan klien \{#node-and-client-tools}
 
 Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan petunjuk di atas untuk membantu Anda memandu melalui perangkat di bawah ini.
 
@@ -120,11 +120,11 @@ Perangkat ini dapat digunakan sebagai alternatif untuk [CLI Deposit Penaruhan](h
 
 Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
 
-## Jelajahi panduan penaruhan solo {#staking-guides}
+## Jelajahi panduan penaruhan solo \{#staking-guides}
 
 <StakingGuides />
 
-## Pertanyaan yang sering diajukan {#faq}
+## Pertanyaan yang sering diajukan \{#faq}
 
 Berikut adalah beberapa pertanyaan umum tentang penaruhan yang layak diketahui.
 
@@ -194,7 +194,7 @@ Untuk membuka dan menerima seluruh saldo Anda kembali, Anda juga harus menyelesa
 <ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [Masalah Keragaman Klien Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Membantu Keragaman Klien](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

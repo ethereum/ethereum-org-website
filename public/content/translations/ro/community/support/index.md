@@ -4,9 +4,9 @@ description: Obțineți asistență în ecosistemul Ethereum.
 lang: ro
 ---
 
-# Asistență pentru Ethereum {#support}
+# Asistență pentru Ethereum \{#support}
 
-## Asistența oficială pentru Ethereum {#official-support}
+## Asistența oficială pentru Ethereum \{#official-support}
 
 Căutați asistența oficială pentru Ethereum? Primul lucru pe care trebuie să îl știți este că Ethereum este descentralizat. Acest lucru înseamnă că nicio organizație, entitate sau persoană nu deține Ethereum și din acest motiv nu există canale oficiale de asistență.
 
@@ -22,7 +22,7 @@ Căutați asistența oficială pentru Ethereum? Primul lucru pe care trebuie să
 
 În ciuda lipsei de asistență oficială, multe grupuri, comunități și proiecte din ecosistemul Ethereum vă ajută bucuros.
 
-## Asistență pentru portofele {#wallet-support}
+## Asistență pentru portofele \{#wallet-support}
 
 Aveți probleme cu portofelul dvs.? Majoritatea portofelelor au echipe de asistență dedicate, care vă pot ajuta:
 
@@ -34,7 +34,7 @@ _Aceasta nu este o listă exhaustivă. Aveți nevoie de ajutor ca să găsiți a
 
 Căutați un portofel Ethereum? [Explorați lista noastră completă de portofele Ethereum](/wallets/find-wallet/).
 
-## Construirea aplicațiilor dapp {#building-support}
+## Construirea aplicațiilor dapp \{#building-support}
 
 Poate fi dificil de construit. Iată câteva spații de dezvoltare cu dezvoltatori Ethereum experimentați care sunt bucuroși să vă ajute.
 
@@ -45,7 +45,7 @@ Poate fi dificil de construit. Iată câteva spații de dezvoltare cu dezvoltato
 
 Puteți să găsiți documentație și ghiduri de dezvoltare și în secțiunea noastră [Resurse pentru dezvoltatorii Ethereum](/developers/).
 
-### Instrumente {#dapp-tooling}
+### Instrumente \{#dapp-tooling}
 
 Întrebarea dvs. se referă la un anumit instrument, proiect sau bibliotecă? Cele mai multe proiecte au servere de chat sau forumuri consacrate pentru a vă sprijini.
 
@@ -58,7 +58,7 @@ Iată doar câteva exemple populare:
 - [Truffle](https://discord.gg/8uKcsccEYE)
 - [Alchemy](http://alchemy.com/discord)
 
-## Rularea unui nod {#node-support}
+## Rularea unui nod \{#node-support}
 
 Dacă rulați un nod sau un validator, iată câteva comunități dedicate să vă ofere ajutor să începeți.
 
@@ -67,14 +67,14 @@ Dacă rulați un nod sau un validator, iată câteva comunități dedicate să v
 
 Cele mai multe dintre echipele care construiesc clienți Ethereum au de asemenea spații dedicate, cu caracter public, unde puteți obține asistență și pune întrebări.
 
-### Clienți de execuție {#execution-clients}
+### Clienți de execuție \{#execution-clients}
 
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
 
-### Clienți de consens {#consensus-clients}
+### Clienți de consens \{#consensus-clients}
 
 - [Prysm](https://discord.gg/prysmaticlabs)
 - [Nimbus](https://discord.gg/nSmEH3qgFv)
@@ -84,19 +84,19 @@ Cele mai multe dintre echipele care construiesc clienți Ethereum au de asemenea
 
 De asemenea, puteți [învăța cum să executați un nod aici](/developers/docs/nodes-and-clients/run-a-node/).
 
-## Întrebări frecvente {#faq}
+## Întrebări frecvente \{#faq}
 
-### Am trimis ETH către un portofel greșit {#wrong-wallet}
+### Am trimis ETH către un portofel greșit \{#wrong-wallet}
 
 O tranzacție trimisă pe Ethereum este ireversibilă. Din nefericire, dacă ați trimis ETH către un portofel greșit, nu există nicio posibilitate de a recupera aceste fonduri. Nicio organizație centrală, entitate sau persoană nu deține Ethereum, ceea ce înseamnă că nimeni nu poate anula tranzacțiile. De aceea, este vital să vă verificați întotdeauna de două ori tranzacțiile înainte de a le trimite.
 
-### Cum pot să îmi revendic giveaway-ul (cadoul) Ethereum? {#giveaway-scam}
+### Cum pot să îmi revendic giveaway-ul (cadoul) Ethereum? \{#giveaway-scam}
 
 Cadourile Ethereum sunt escrocherii concepute pentru a vă fura ETH-ul. Nu vă lăsați tentat de oferte care par prea bune pentru a fi adevărate — dacă trimiteți ETH la o adresă de giveaway, nu veți primi un cadou și nu veți putea să vă recuperați fondurile.
 
 [Mai multe despre prevenirea fraudelor](/security/#common-scams)
 
-### Tranzacția mea este blocată {#stuck-transaction}
+### Tranzacția mea este blocată \{#stuck-transaction}
 
 Tranzacțiile pe Ethereum pot rămâne uneori blocate dacă ați trimis un comision de tranzacție mai mic decât cel cerut din cauza cererii din rețea. Multe portofele oferă opțiunea de a retrimite aceeași tranzacție cu un comision de tranzacție mai mare, pentru a permite ca tranzacția să fie procesată. În mod alternativ, puteți anula o tranzacție în așteptare, trimițând o tranzacție la propria dvs. adresă și utilizând același nonce ca și tranzacția în așteptare.
 
@@ -104,6 +104,6 @@ Tranzacțiile pe Ethereum pot rămâne uneori blocate dacă ați trimis un comis
 
 [Cum să anulați tranzacțiile în așteptare pe Ethereum](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### Cum pot să minez pe Ethereum? {#mining-ethereum}
+### Cum pot să minez pe Ethereum? \{#mining-ethereum}
 
 Nu vă recomandăm să cumpărați echipament de minare dacă nu ați minat deja pe Ethereum. În -T2 2022 va avea loc [fuziunea](/roadmap/merge/), prin care Ethereum va trece de la dovada-muncii la dovada-mizei. Această schimbare înseamnă că minarea pe Ethereum nu va mai fi posibilă.

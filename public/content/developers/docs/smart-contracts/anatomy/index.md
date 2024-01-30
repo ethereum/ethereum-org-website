@@ -6,15 +6,15 @@ lang: en
 
 A smart contract is a program that runs at an address on Ethereum. They're made up of data and functions that can execute upon receiving a transaction. Here's an overview of what makes up a smart contract.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 Make sure you've read about [smart contracts](/developers/docs/smart-contracts/) first. This document assumes you're already familiar with programming languages such as JavaScript or Python.
 
-## Data {#data}
+## Data \{##data}
 
 Any contract data must be assigned to a location: either to `storage` or `memory`. It's costly to modify storage in a smart contract so you need to consider where your data should live.
 
-### Storage {#storage}
+### Storage \{##storage}
 
 Persistent data is referred to as storage and is represented by state variables. These values get stored permanently on the blockchain. You need to declare the type so that the contract can keep track of how much storage on the blockchain it needs when it compiles.
 
@@ -52,13 +52,13 @@ For more explanation, take a look at the docs:
 - [See Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [See Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memory {#memory}
+### Memory \{##memory}
 
 Values that are only stored for the lifetime of a contract function's execution are called memory variables. Since these are not stored permanently on the blockchain, they are much cheaper to use.
 
 Learn more about how the EVM stores data (Storage, Memory, and the Stack) in the [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Environment variables {#environment-variables}
+### Environment variables \{##environment-variables}
 
 In addition to the variables you define on your contract, there are some special global variables. They are primarily used to provide information about the blockchain or current transaction.
 
@@ -69,7 +69,7 @@ Examples:
 | `block.timestamp` | uint256            | Current block epoch timestamp        |
 | `msg.sender`      | address            | Sender of the message (current call) |
 
-## Functions {#functions}
+## Functions \{##functions}
 
 In the most simplistic terms, functions can get information or set information in response to incoming transactions.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - It's declared `public`, meaning anyone can access it
 - It's not declared `view`, so it can modify the contract state
 
-### View functions {#view-functions}
+### View functions \{##view-functions}
 
 These functions promise not to modify the state of the contract's data. Common examples are "getter" functions – you might use this to receive a user's balance for example.
 
@@ -131,7 +131,7 @@ What is considered modifying state:
 7. Using low-level calls.
 8. Using inline assembly that contains certain opcodes.
 
-### Constructor functions {#constructor-functions}
+### Constructor functions \{##constructor-functions}
 
 `constructor` functions are only executed once when the contract is first deployed. Like `constructor` in many class-based programming languages, these functions often initialize state variables to their specified values.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Built-in functions {#built-in-functions}
+### Built-in functions \{##built-in-functions}
 
 In addition to the variables and functions you define on your contract, there are some special built-in functions. The most obvious example is:
 
@@ -167,7 +167,7 @@ In addition to the variables and functions you define on your contract, there ar
 
 These allow contracts to send ETH to other accounts.
 
-## Writing functions {#writing-functions}
+## Writing functions \{##writing-functions}
 
 Your function needs:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 A complete contract might look something like this. Here the `constructor` function provides an initial value for the `dapp_name` variable.
 
-## Events and logs {#events-and-logs}
+## Events and logs \{##events-and-logs}
 
 Events let you communicate with your smart contract from your frontend or other subscribing applications. When a transaction is mined, smart contracts can emit events and write logs to the blockchain that the frontend can then process.
 
-## Annotated examples {#annotated-examples}
+## Annotated examples \{##annotated-examples}
 
 These are some examples written in Solidity. If you'd like to play with the code, you can interact with them in [Remix](http://remix.ethereum.org).
 
-### Hello world {#hello-world}
+### Hello world \{##hello-world}
 
 ```solidity
 // Specifies the version of Solidity, using semantic versioning.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token {#token}
+### Token \{##token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Unique digital asset {#unique-digital-asset}
+### Unique digital asset \{##unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 Check out Solidity and Vyper's documentation for a more complete overview of smart contracts:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Smart contracts](/developers/docs/smart-contracts/)
 - [Ethereum Virtual Machine](/developers/docs/evm/)
 
-## Related tutorials {#related-tutorials}
+## Related tutorials \{##related-tutorials}
 
 - [Downsizing contracts to fight the contract size limit](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Some practical tips for reducing the size of your smart contract._
 - [Logging data from smart contracts with events](/developers/tutorials/logging-events-smart-contracts/) _– An introduction to smart contract events and how you can use them to log data._

@@ -7,13 +7,13 @@ sidebarDepth: 2
 
 Ethereum este o rețea distribuită de computere pe care rulează un software (cunoscute sub numele de noduri) care poate verifica blocurile și datele tranzacțiilor. Pentru a „rula” un nod aveți nevoie pe computer de o aplicație cunoscută sub numele de client.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Ar trebui să înțelegeți conceptul de rețea peer-to-peer și [principiile de bază ale EVM](/developers/docs/evm/) înainte de a vă implica mai îndeaproape și de a rula propria instanță a unui client Ethereum. Aruncați o privire la [introducerea despre Ethereum](/developers/docs/intro-to-ethereum/).
 
 If you're new to the topic of nodes, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
 
-## Ce sunt nodurile și clienții? {#what-are-nodes-and-clients}
+## Ce sunt nodurile și clienții? \{#what-are-nodes-and-clients}
 
 „Nodul” se referă la un software cunoscut sub numele de client. Un client este o implementare a lui Ethereum care verifică toate tranzacțiile din fiecare bloc, păstrând rețeaua securizată şi datele corecte.
 
@@ -23,35 +23,35 @@ Există numeroși [clienți Ethereum](/developers/docs/nodes-and-clients/#execut
 
 ![Execution client](./client-diagram.png) Diagramă simplificată a funcţionalităţilor clientului Ethereum.
 
-## Tipuri de noduri {#node-types}
+## Tipuri de noduri \{#node-types}
 
 If you want to [run your own node](/developers/docs/nodes-and-clients/run-a-node/), you should understand that there are different types of node that consume data differently. In fact, clients can run 3 different types of node - light, full and archive. Există de asemenea opţiunea de a aplica diverse strategii de sincronizare, care scurtează timpul de sincronizare. Sincronizarea se referă la viteza cu care poate obține cele mai actualizate informații despre starea lui Ethereum.
 
-### Nod complet {#full-node}
+### Nod complet \{#full-node}
 
 - Stochează date complete despre blockchain.
 - Participă la validarea blocurilor, verifică toate blocurile și stările.
 - Se pot obţine toate stările dintr-un nod complet.
 - Deservește rețeaua și oferă date la cerere.
 
-### Nod ușor {#light-node}
+### Nod ușor \{#light-node}
 
 - Stochează lanțul de anteturi și solicită tot restul.
 - Poate verifica validitatea datelor în raport cu rădăcinile de stare din anteturile blocului.
 - Este util pentru dispozitivele de capacitate redusă, cum ar fi dispozitivele încorporate sau telefoanele mobile, care nu își permit să stocheze gigaocteţi de date blockchain.
 
-### Nod de arhivă {#archive-node}
+### Nod de arhivă \{#archive-node}
 
 - Stochează tot ce este păstrat în nodul complet și construiește o arhivă de stări istorice. Este necesar atunci când doriți să interogați ceva precum soldul unui cont la blocul #4.000.000 sau [să vă testați propriul set de tranzacții fără a le mina folosind OpenEthereum](https://openethereum.github.io/JSONRPC-trace-module#trace_callmany), în mod simplu şi fiabil.
 - Aceste date reprezintă unități de teraocteţi, ceea ce face ca nodurile de arhivă să fie mai puțin atractive pentru utilizatorii obișnuiți, dar pot fi utile pentru servicii precum exploratorii de blocuri, furnizorii de portofele și analiza lanțului.
 
 Sincronizarea clienților în orice alt mod decât arhiva va duce la pierderea de date din blockchain. This means, there is no archive of all historical states but the full node is able to build them on demand.
 
-## De ce trebuie să rulez un nod Ethereum? {#why-should-i-run-an-ethereum-node}
+## De ce trebuie să rulez un nod Ethereum? \{#why-should-i-run-an-ethereum-node}
 
 Rularea unui nod vă permite să utilizați Ethereum fără necesitatea acordării încrederii și în mod privat, susţinând în acelaşi timp ecosistemul.
 
-### Avantajele pentru dvs. {#benefits-to-you}
+### Avantajele pentru dvs. \{#benefits-to-you}
 
 Dacă rulaţi propriul nod, aceasta vă permite să utilizaţi Ethereum într-un mod cu adevărat privat, auto-suficient și fără a fi necesară acordarea încrederii. Nu aveţi nevoie să vă încredeţi e în rețea, deoarece puteţi verifica singur datele cu clientul. „Nu acordaţi încredere, verificaţi” este o mantra populară pe blockchain.
 
@@ -63,7 +63,7 @@ Dacă rulaţi propriul nod, aceasta vă permite să utilizaţi Ethereum într-un
 
 ![Cum puteți accesa Ethereum prin intermediul aplicației și al nodurilor](./nodes.png)
 
-### Avantajele rețelei {#network-benefits}
+### Avantajele rețelei \{#network-benefits}
 
 Este important să existe o diversitate a seturilor de noduri pentru sănătatea, securitatea și rezilienţa operațională a lui Ethereum.
 
@@ -72,7 +72,7 @@ Este important să existe o diversitate a seturilor de noduri pentru sănătatea
 
 Dacă rulați un nod complet, întreaga rețea Ethereum beneficiază de acesta.
 
-## Rularea propriului dvs. nod {#running-your-own-node}
+## Rularea propriului dvs. nod \{#running-your-own-node}
 
 Sunteți interesat să vă rulați propriul client Ethereum?
 
@@ -80,7 +80,7 @@ For a beginner-friendly introduction visit our [run a node](/run-a-node) page to
 
 If you're more of a technical user, learn how to [spin up your own node](/developers/docs/nodes-and-clients/run-a-node/) with the command line!
 
-### Proiecte {#projects}
+### Proiecte \{#projects}
 
 [**Selectează un client și urmează instrucțiunile acestuia**](#clients)
 
@@ -92,14 +92,14 @@ If you're more of a technical user, learn how to [spin up your own node](/develo
 
 - [dappnode.io](https://dappnode.io)
 
-### Resurse {#resources}
+### Resurse \{#resources}
 
 - [Executarea nodurilor complete Ethereum: Ghid integral](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _7 noiembrie 2019 - Justin Leroux_
 - [Listă de ponturi pentru configurarea nodurilor](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 ianuarie 2019 - Afri Schoeden_
 - [Cum se instalează & Rularea unui nod Geth](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _4 octombrie 2020 - Sahil Sen_
 - [Cum se instalează & Rularea unui nod OpenEthereum (fka. Parity) Node](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _22 septembrie 2020 - Sahil Sen_
 
-## Alternative {#alternatives}
+## Alternative \{#alternatives}
 
 Rularea propriului nod poate fi dificilă și nu este nevoie să rulezi întotdeauna propria instanță. În acest caz, puteți utiliza un furnizor de API de la un terţ, cum ar fi [Infura](https://infura.io), [Alchemy](https://alchemyapi.io) sau [QuikNode](https://www.quiknode.io). Alternativ, [ArchiveNode](https://archivenode.io/) este un nod de tip „Archive” finanțat de comunitate, care se speră că va aduce date de arhivă pe blockchain-ul Ethereum pentru dezvoltatorii independenți, care altfel nu și-ar putea permite acest lucru. For an overview of using these services, check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/).
 
@@ -107,7 +107,7 @@ Dacă cineva rulează un nod Ethereum cu un API public în comunitatea dvs., vă
 
 Pe de altă parte, dacă rulezi un client, îl poți partaja cu prietenii tăi care ar putea avea nevoie de el.
 
-## Clienți de execuție (anterior „clienți Eth1”) {#execution-clients}
+## Clienți de execuție (anterior „clienți Eth1”) \{#execution-clients}
 
 The Ethereum community maintains multiple open-source execution clients (previously known as 'Eth1 clients', or just 'Ethereum clients'), developed by different teams using different programming languages. Acest lucru face ca rețeaua să fie mai puternică și de mai mare diversitate. Obiectivul optim este de a realiza diversitatea fără ca vreun client să domine, pentru a reduce orice punct unic de eșec.
 
@@ -125,15 +125,15 @@ Acest tabel prezintă o sinteză a diferiților clienți. Toţi aceştia trec ni
 
 Pentru a afla mai multe informații despre rețelele acceptate, citiți [rețelele Ethereum](/developers/docs/networks/).
 
-### Avantajele diferitelor implementări {#advantages-of-different-implementations}
+### Avantajele diferitelor implementări \{#advantages-of-different-implementations}
 
 Fiecare client are cazuri de utilizare și avantaje unice, deci ar trebui să alegi unul pe baza propriilor preferințe. Diversitatea permite implementărilor să se concentreze pe diferite funcţionalităţi și categorii de utilizatori. Poate că doriți să alegeți un client în funcție de funcţionalităţi, acceptări, limbajul de programare sau licențe.
 
-#### Go Ethereum {#geth}
+#### Go Ethereum \{#geth}
 
 Go Ethereum (pe scurt, Geth) este una dintre implementările originale ale protocolului Ethereum. Este actualmente cel mai răspândit client, cu cea mai mare bază de utilizatori și o varietate de instrumente pentru utilizatori și dezvoltatori. Este scris în Go, complet open source și licențiat sub GNU LGPL v3.
 
-#### OpenEthereum {#openethereum}
+#### OpenEthereum \{#openethereum}
 
 OpenEthereum este un client Ethereum rapid, bogat în funcții şi avansat, bazat pe CLI. Este construit pentru a oferi infrastructura esențială pentru servicii rapide și fiabile, care necesită sincronizare rapidă și timp maxim de funcționare. Obiectivul OpenEthereum este de a fi cel mai rapid, mai ușor și mai securizat client Ethereum. Oferă o bază de cod modulară curată pentru:
 
@@ -145,7 +145,7 @@ OpenEthereum este dezvoltat folosind limbajul de programare Rust de ultimă oră
 
 **Rețineți că OpenEthereum [a fost dezaprobat](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) și nu mai este întreținut.** Folosiți-l cu precauție și este preferabil să treceți la o altă implementare de client.
 
-#### Nethermind {#nethermind}
+#### Nethermind \{#nethermind}
 
 Nethermind este o implementare Ethereum creată cu stiva de tehnologie C# .NET, care rulează pe toate platformele majore, inclusiv ARM. Acesta oferă o mare performanță cu:
 
@@ -155,21 +155,21 @@ Nethermind este o implementare Ethereum creată cu stiva de tehnologie C# .NET, 
 
 Nethermind are o [documentație detaliată](https://docs.nethermind.io), asistenţă foarte bună pentru dezvoltatori, o comunitate online și asistenţă non-stop pentru utilizatorii premium.
 
-#### Besu {#besu}
+#### Besu \{#besu}
 
 Hyperledger Besu este un client Ethereum de nivel de întreprindere pentru rețele publice și autorizate. Rulează toate funcţionalităţile Mainnet-ului Ethereum, de la urmărire la GraphQL, are o monitorizare extinsă și este sprijinită de ConsenSys, atât în canalele deschise ale comunității, cât și prin acordurile de servicii comerciale pentru întreprinderi. Este scris în Java și are licență Apache 2.0.
 
-#### Erigon {#erigon}
+#### Erigon \{#erigon}
 
 Erigon, cunoscut anterior sub denumirea de Erigon, este un fork Go Ethereum ce vizează creşterea vitezei şi a eficienţei spaţiului pe disc. Erigon este o implementare complet reproiectată a lui Ethereum, actualmente scrisă în Go, dar care urmează să fie implementată și în alte limbaje. Scopul Erigon este de a oferi o implementare mai rapidă, mai modulară și mai optimizată a lui Ethereum. It can perform a full archive node sync using less than 2TB of disk space, in under 3 days
 
-### Moduri de sincronizare {#sync-modes}
+### Moduri de sincronizare \{#sync-modes}
 
 To follow and verify current data in the network, the Ethereum client needs to sync with the latest network state. Aceasta se realizează prin descărcarea datelor de la omologi și verificarea integrității lor prin criptografie, precum și prin construirea unei baze de date blockchain locale.
 
 Synchronization modes represent different approaches to this process with various trade-offs. Clienții diferă şi prin implementarea algoritmilor de sincronizare. Consultați întotdeauna documentația oficială a clientului pe care l-ați ales pentru a afla detalii privind implementarea.
 
-#### Prezentare generală a strategiilor {#overview-of-strategies}
+#### Prezentare generală a strategiilor \{#overview-of-strategies}
 
 Prezentare generală a metodelor de sincronizare utilizate în cazul clienților pregătiți pentru Mainnet:
 
@@ -223,7 +223,7 @@ Implementată de Nethermind și Trinity. Works like fast sync but also downloads
 
 [More on Beam](https://medium.com/@jason.carver/intro-to-beam-sync-a0fd168be14a)
 
-#### Configurare în client {#client-setup}
+#### Configurare în client \{#client-setup}
 
 Clienții vă oferă opțiuni de configurare variate care să se conformeze necesităţilor dvs. Alegeți-o pe cea care vă convine cel mai mult, în funcție de nivelul de securitate, de datele disponibile și de costuri. În afară de algoritmul de sincronizare, puteți configura şi eliminarea diverselor tipuri de date vechi. Pruning-ul (curățarea) permite ștergerea datelor ieşite din uz, de exemplu, eliminarea nodurilor trie de stare care sunt inaccesibile din blocurile recente.
 
@@ -241,7 +241,7 @@ For further details, check out the tutorial on [running Geth light node](/develo
 
 Ca orice altă configurație, aceasta poate fi definită cu ajutorul steguleţului de pornire sau în fișierul de configurare. Un alt exemplu este [Nethermind](https://docs.nethermind.io/nethermind/), care vă solicită să alegeți o configurație la prima inițializare și creează un fișier de configurare.
 
-## Clienți de consens (anterior clienți „Eth2”) {#consensus-clients}
+## Clienți de consens (anterior clienți „Eth2”) \{#consensus-clients}
 
 There are multiple consensus clients (previously known as 'Eth2' clients) to support the [consensus upgrades](/roadmap/beacon-chain/). They are running the Beacon Chain and will provide proof-of-stake consensus mechanism to execution clients after [The Merge](/roadmap/merge/).
 
@@ -253,23 +253,23 @@ There are multiple consensus clients (previously known as 'Eth2' clients) to sup
 | [Lodestar](https://lodestar.chainsafe.io/)                  | TypeScript | Linux, Windows, macOS | Lanţul Beacon, Goerli                  |
 | [Prysm](https://docs.prylabs.network/docs/getting-started/) | Go         | Linux, Windows, macOS | Lanţul Beacon, Gnosis, Goerli, Pyrmont |
 
-## Hardware {#hardware}
+## Hardware \{#hardware}
 
 Cerințele hardware diferă în funcție de client, dar în general nu sunt atât de mari, deoarece nodul trebuie doar să rămână sincronizat. Nu-l confunda cu mineritul care necesită mult mai multă putere de calcul. Cu toate acestea, timpul de sincronizare și performanța se îmbunătățesc cu un hardware mai puternic. În funcție de nevoile și dorințele dvs., Ethereum poate fi rulat pe computerul dvs., pe serverul de acasă, pe computere cu o singură placă (SBC) sau pe servere virtuale private în cloud.
 
 O modalitate ușoară de a rula propriul nod este utilizarea casetelor „plug and play”, cum ar fi [DAppNode](https://dappnode.io/). Oferă hardware pentru rularea clienților și a aplicațiilor care depind de aceștia, cu o interfață de utilizator simplă.
 
-### Cerințe {#requirements}
+### Cerințe \{#requirements}
 
 Înainte de a instala orice client, asigurați-vă că aveți suficiente resurse pe computerul dvs. pentru a-l rula. Cerințele minime și recomandate pot fi găsite mai jos, totuși partea cheie este spațiul pe disc. Sincronizarea blockchain-ului Ethereum presupune o utilizare intensivă a intrărilor/ieșirilor. Cel mai bine este să aveți un solid-state drive (SSD). Pentru a rula un client Ethereum pe HDD, veți avea nevoie de cel puțin 8GB de memorie RAM pentru a o folosi ca memorie cache.
 
-#### Cerințe minime {#recommended-specifications}
+#### Cerințe minime \{#recommended-specifications}
 
 - Procesor cu cel puțin 2 nuclee
 - 4 GB RAM minimum cu un SSD, 8 GB minimum, dacă aveți un HDD
 - Lățime de bandă de 8 MBit/s
 
-#### Specificații recomandate {#recommended-specifications}
+#### Specificații recomandate \{#recommended-specifications}
 
 - Procesor rapid cu cel puțin 4 nuclee
 - Minimum 16 GB RAM
@@ -290,13 +290,13 @@ Modul de sincronizare pe care îl alegeți va afecta spațiul necesar, dar am es
 
 Aceste diagrame arată cum cerințele de stocare sunt mereu în schimbare. Pentru cele mai recente date referitoare la Geth și OpenEthereum, consultați [date complete de sincronizare](https://etherscan.io/chartsync/chaindefault) și [date arhivate de sincronizare](https://etherscan.io/chartsync/chainarchive).
 
-### Ethereum pe un computer cu o singură placă (SBC) {#ethereum-on-a-single-board-computer}
+### Ethereum pe un computer cu o singură placă (SBC) \{#ethereum-on-a-single-board-computer}
 
 Cel mai convenabil și mai ieftin mod de a rula nodul Ethereum este de a utiliza un computer cu o singură placă bazată pe arhitectură ARM precum Raspberry Pi. [Ethereum pe ARM](https://twitter.com/EthereumOnARM) oferă imagini ale clienților Geth, OpenEthereum, Nethermind și Besu. Iată un tutorial simplu despre modul [cum se construiește și se configurează un client ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Astfel de dispozitive mici, accesibile și eficiente sunt ideale pentru rularea unui nod la domiciliu.
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 There is a lot of information about Ethereum clients on the internet. Here are few resources that might be helpful.
 
@@ -305,12 +305,12 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 - [Analiza cerințelor de hardware pentru a fi un nod Ethereum validat complet](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 septembrie 2018_
 - [Rularea unui nod Hyperledger Besu pe Mainnet-ul Ethereum: avantaje, cerințe și configurare](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 mai 2020_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Blocuri](/developers/docs/blocks/)
 - [Rețele](/developers/docs/networks/)
 
-## Tutoriale corelate {#related-tutorials}
+## Tutoriale corelate \{#related-tutorials}
 
 - [Rularea unui nod cu Geth](/developers/tutorials/run-light-node-geth/) _ – Cum se descarcă, se instalează şi se rulează Geth. Covering syncmodes, the JavaScript console, and more._
 - [Transformați Raspberry Pi 4 într-un nod validator doar prin flash-area cardului MicroSD – Ghidul de instalare](/developers/tutorials/run-node-raspberry-pi/) _– Flash-ați Raspberry Pi 4, conectați un cablu ethernet, conectați discul SSD și porniți dispozitivul pentru a transforma Raspberry Pi 4 într-un nod Ethereum complet care rulează nivelul de execuție (Mainnet) și / sau nivelul de consens (Lanțul Beacon / validatorul)._

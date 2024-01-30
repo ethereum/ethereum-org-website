@@ -10,15 +10,15 @@ W tym celu każdy klient Ethereum implementuje specyfikację JSON-RPC, dzięki c
 
 Jeśli chcesz użyć określonego języka programowania do połączenia z węzłem Ethereum, rozpisz własne rozwiązanie, ale w ekosystemie istnieje kilka wygodnych bibliotek, które znacznie to ułatwiają. Dzięki tym bibliotekom programiści mogą pisać intuicyjne, jednowierszowe metody inicjowania żądań JSON RPC (pod maską), które współdziałają z Ethereum.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Pomocne może być zrozumienie [stosu Ethereum](/developers/docs/ethereum-stack/) i [klientów Ethereum](/docs/nodes-and-clients/).
 
-## Dlaczego warto użyć biblioteki? {#why-use-a-library}
+## Dlaczego warto użyć biblioteki? \{#why-use-a-library}
 
 Biblioteki te eliminują znaczną złożoność interakcji bezpośrednio z węzłem Ethereum. Zapewniają one także użyteczne funkcje (np. konwersję ETH na Gwei), dzięki czemu jako programiści możemy spędzić mniej czasu na zajmowaniu się zawiłościami klientów, a skupić się w głównej mierze na unikalnej funkcji naszej aplikacji.
 
-## Dostępne biblioteki {#available-libraries}
+## Dostępne biblioteki \{#available-libraries}
 
 **Alchemia -** **_Platforma Rozwoju Ethereum._**
 
@@ -84,16 +84,16 @@ Biblioteki te eliminują znaczną złożoność interakcji bezpośrednio z węz�
 - [Dokumentacja](http://docs.nethereum.com/en/latest/)
 - [Discord](https://discord.com/invite/jQPrR58FxX)
 
-## Dodatkowo przeczytaj {#further-reading}
+## Dodatkowo przeczytaj \{#further-reading}
 
 _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [Węzły i klienci](/developers/docs/nodes-and-clients/)
 - [Ramy rozwojowe](/developers/docs/frameworks/)
 
-## Powiązane samouczki {#related-tutorials}
+## Powiązane samouczki \{#related-tutorials}
 
 - [Skonfiguruj Web3js, aby używać blockchain Ethereum w JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instrukcje dotyczące konfiguracji web3.js w Twoim projekcie._
 - [Wywołanie inteligentnego kontraktu z JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– za pomocą tokena DAI zobacz jak wywołać funkcję kontraktów przy użyciu JavaScript._

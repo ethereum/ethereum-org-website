@@ -9,7 +9,7 @@ incomplete: true
 
 Użyj Ethereum do tworzenia aplikacji zdecentralizowanych (lub „dapp”). Te aplikacje zdecentralizowane mogą być godne zaufania, co oznacza, że ​​po wdrożeniu w Ethereum zawsze będą działać tak, jak zaprogramowano. Są one zdecentralizowane, czyli działają w sieci peer-to-peer, przez co nie ma pojedynczego punktu awarii. Żaden podmiot ani osoba nie sprawuje nad nimi kontroli, a cenzurowanie jest prawie niemożliwe. Mogą kontrolować zasoby cyfrowe w celu tworzenia nowych rodzajów aplikacji.
 
-## Rozpoczęcie pracy z kontraktami inteligentnymi i językiem Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Rozpoczęcie pracy z kontraktami inteligentnymi i językiem Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Rozpocznij integrowanie Go z Ethereum**
 
@@ -21,7 +21,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Naucz się, jak skompilować i wdrażać Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Samouczek dotyczący kontraktów](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Artykuły i książki dla początkujących {#beginner-articles-and-books}
+## Artykuły i książki dla początkujących \{#beginner-articles-and-books}
 
 - [Wybór klienta Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Pierwsze kroki z Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -30,7 +30,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Szczegółowa instrukcja testowania i wdrażania kontraktów inteligentnych Ethereum z użyciem języka Go](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Ethereum Development with Go](https://goethereumbook.org/) — <em x-id="4">tworzenie aplikacji w Ethereum z użyciem języka Go</em>
 
-## Artykuły dla średniozaawansowanych {#intermediate-articles-and-docs}
+## Artykuły dla średniozaawansowanych \{#intermediate-articles-and-docs}
 
 - [Go Ethereum Documentation](https://geth.ethereum.org/docs/) — <em x-id="4">dokumentacja oficjalnego Golang Ethereum</em>
 - [Erigon Programmer's Guide](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) — <em x-id="4">ilustrowany przewodnik uwzględniający drzewo stanowe, wiele dowodów i przetwarzanie transakcji</em>
@@ -42,7 +42,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Testy jednostkowe kontraktów Solidity w Ethereum przy użyciu Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Używanie Geth jako biblioteki](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## Przykłady zaawansowane {#advanced-use-patterns}
+## Przykłady zaawansowane \{#advanced-use-patterns}
 
 - [Symulowany backend GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplikacje „blockchain jako usługa” wykorzystujące Ethereum i Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -50,7 +50,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 - [Klienci mobilni: biblioteki i węzły Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Natywne aplikacje zdecentralizowane: połączenia Go z kontraktami Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Projekty i narzędzia Go {#go-projects-and-tools}
+## Projekty i narzędzia Go \{#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) — <em x-id="4">oficjalna implementacja protokołu Ethereum</em>
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) — <em x-id="4">przegląd i analiza kodu źródłowego Go Ethereum</em>
@@ -67,7 +67,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na stronach [ethereum.or
 
 Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/developers/)
 
-## Współtwórcy społeczności Go {#go-community-contributors}
+## Współtwórcy społeczności Go \{#go-community-contributors}
 
 - [Discord Geth](https://discordapp.com/invite/nthXNEv)
 - [Gist Geth](https://gitter.im/ethereum/go-ethereum)
@@ -77,7 +77,7 @@ Szukasz więcej materiałów? Sprawdź [ethereum.org/developers](/developers/)
 - [Gitter Ethereum](https://gitter.im/ethereum/home)
 - [Gitter — lekki klient Geth](https://gitter.im/ethereum/light-client)
 
-## Pozostałe strony {#other-aggregated-lists}
+## Pozostałe strony \{#other-aggregated-lists}
 
 - [Wspaniałe Ethereum](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: A Definitive List of Ethereum Developer Tools](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub repo](https://github.com/ConsenSys/ethereum-developer-tools-list)

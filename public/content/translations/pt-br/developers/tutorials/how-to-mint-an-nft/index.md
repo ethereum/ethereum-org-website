@@ -19,7 +19,7 @@ Estes NFTs foram criados usando a poderosa API da Alchemy. Neste tutorial, vamos
 
 Vamos começar!
 
-## Etapa 1: Instalar a Web3 {#install-web3}
+## Etapa 1: Instalar a Web3 \{#install-web3}
 
 Se você seguiu o primeiro tutorial sobre a criação do seu contrato inteligente NFT, você já tem experiência usando a Ethers.js. Web3 é semelhante a Ethers, uma vez que é uma biblioteca usada para facilitar a criação de solicitações para a blockchain Ethereum. Neste tutorial, usaremos a [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), que é uma biblioteca Web3 aprimorada que oferece novas tentativas automáticas e um suporte WebSocket sólido.
 
@@ -29,7 +29,7 @@ No diretório inicial do seu projeto execute:
 yarn add @alch/alchemy-web3
 ```
 
-## Etapa 2: Criar um arquivo `mint-nft.js` {#create-mintnftjs}
+## Etapa 2: Criar um arquivo `mint-nft.js` \{#create-mintnftjs}
 
 Dentro do seu diretório de scripts, crie um arquivo `mint-nft.js` e adicione as seguintes linhas de código:
 
@@ -40,7 +40,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Etapa 3: Conseguir sua ABI de contrato {#contract-abi}
+## Etapa 3: Conseguir sua ABI de contrato \{#contract-abi}
 
 Nossa ABI (Interface binária de aplicativo) de contrato é a interface para interagir com nosso contrato inteligente. Você pode aprender mais sobre ABIs de contratos [aqui](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). O Hardhat automaticamente gera uma ABI para nós e a salva no arquivo `MyNFT.json`. Para usar isso, precisaremos distribuir o conteúdo adicionando as seguintes linhas de código ao nosso arquivo `mint-nft.js`:
 
@@ -60,7 +60,7 @@ Para executar o `mint-nft.js` e ver seu ABI impresso no console, navegue até se
 node scripts/mint-nft.js
 ```
 
-## Etapa 4: Configurar os metadados para seu NFT usando IPFS {#config-meta}
+## Etapa 4: Configurar os metadados para seu NFT usando IPFS \{#config-meta}
 
 Se você se lembra do nosso tutorial na Parte 1, nossa função do contrato inteligente `mintNFT` assume um parâmetro tokenURI que deve resolver em um documento JSON, descrevendo os metadados do NFT, o que realmente dá vida ao NFT, permitindo que ele tenha propriedades configuráveis, tais como: nome, descrição, imagem e outros atributos.
 
@@ -108,7 +108,7 @@ Uma vez terminada a edição do arquivo JSON, salve-o e faça o upload para o Pi
 
 ![Como fazer o upload de seu nft-metadata.json para Pinata](./uploadPinata.gif)
 
-## Etapa 5: Criar uma instância de seu contrato {#instance-contract}
+## Etapa 5: Criar uma instância de seu contrato \{#instance-contract}
 
 Agora, para interagir com o nosso contrato, precisamos criar uma instância dele em nosso código. Para fazer isso, precisaremos do nosso endereço de contrato, obtido na implantação ou no [Etherscan](https://goerli.etherscan.io/), procurando o endereço que você usou para implantar o contrato.
 
@@ -124,7 +124,7 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Etapa 6: Atualize o arquivo `.env` {#update-env}
+## Etapa 6: Atualize o arquivo `.env` \{#update-env}
 
 Agora, para criar e enviar transações para a cadeia Ethereum, usaremos seu endereço de conta Ethereum para obter o nonce da conta (explicaremos abaixo).
 
@@ -136,7 +136,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Etapa 7: Criar sua transação {#create-txn}
+## Etapa 7: Criar sua transação \{#create-txn}
 
 Primeiro, vamos definir a função nomeada `mintNFT(tokenData)` e criar nossa transação através do seguinte:
 
@@ -185,7 +185,7 @@ Seu arquivo `mint-nft.js` deverá ficar assim:
    }​
 ```
 
-## Etapa 8: Assinar a transação {#sign-txn}
+## Etapa 8: Assinar a transação \{#sign-txn}
 
 Agora que criamos a nossa transação, precisamos assiná-la para poder enviá-la. É aqui que usaremos nossa chave privada.
 
@@ -243,7 +243,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Etapa 9: Chame `mintNFT` e execute o nó `mint-nft.js` {#call-mintnft-fn}
+## Etapa 9: Chame `mintNFT` e execute o nó `mint-nft.js` \{#call-mintnft-fn}
 
 Lembra do `metadata.json` que você carregou no Pinata? Obtenha o seu hashcode no Pinata e transmita o seguinte como parâmetro para a função `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

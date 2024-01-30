@@ -12,11 +12,11 @@ No entanto, quando o Ethereum mudou de [prova de trabalho](/developers/docs/cons
 
 Este novo tipo de chave usa o [esquema de assinatura **Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). O BLS permite uma agregação de assinaturas muito eficiente, mas também permite a engenharia reversa de chaves agregadas de validadores individuais e é ideal para gerenciar ações entre validadores.
 
-## Os dois tipos de chaves de validação {#two-types-of-keys}
+## Os dois tipos de chaves de validação \{#two-types-of-keys}
 
 Antes da mudança para prova de participação, os usuários do Ethereum tinham uma única chave privada baseada em curva elíptica para acessar seus fundos. Com a introdução da prova de participação, os usuários que quisessem ser participantes individuais também precisavam de uma **chave de validação** e uma **chave de saque**.
 
-### A chave de validação {#validator-key}
+### A chave de validação \{#validator-key}
 
 A chave de assinatura de validação consiste em dois elementos:
 
@@ -35,13 +35,13 @@ Essa flexibilidade tem a vantagem de mover rapidamente as chaves de assinatura d
 
 A **chave pública do validador** é incluída nos dados de transação quando um usuário deposita ETH no contrato de depósito de stake. Isso é conhecido como _dados de depósito_ e permite que o Ethereum identifique o validador.
 
-### Credenciais de saque {#withdrawal-credentials}
+### Credenciais de saque \{#withdrawal-credentials}
 
 Todo validador tem uma propriedade conhecida como _credenciais de saque_. Esse campo de 32 bytes começa com um `0x00`, representando credenciais de saque do BLS, ou um `0x01`, representando credenciais que apontam para um endereço de execução.
 
 Os validadores com chaves BLS `0x00` devem atualizar estas credenciais para apontar para um endereço de execução e ativar pagamentos de saldo em excesso ou saque total de participação (stake). Isso pode ser feito fornecendo um endereço de execução nos dados de depósito durante a geração inicial da chave, _OU_ usando a chave de saque posteriormente para assinar e transmitir uma mensagem `BLSToExecutionChange`.
 
-### Chave de saque {#withdrawal-key}
+### Chave de saque \{#withdrawal-key}
 
 A chave de saque será necessária para atualizar as credenciais de saque para apontar para um endereço de execução, se não for definido durante o depósito inicial. Isso permitirá que os pagamentos do saldo em excesso comecem a ser processados e também permitirá que os usuários saquem totalmente seus ETH em participação (stake).
 
@@ -56,7 +56,7 @@ Separar as chaves de validação das chaves da conta Ethereum permite que vário
 
 ![esquema da chave de validação](validator-key-schematic.png)
 
-## Obtendo chaves de uma frase semente {#deriving-keys-from-seed}
+## Obtendo chaves de uma frase semente \{#deriving-keys-from-seed}
 
 Se cada 32 ETH em stake precisavam de um novo conjunto de 2 chaves completamente independentes, o gerenciamento de chaves se tornaria rapidamente complicado, especialmente para usuários que executam vários validadores. Em vez disso, várias chaves de validação podem ser obtidas de um único segredo comum e armazenar esse segredo único permite acesso a várias chaves de validação.
 
@@ -90,7 +90,7 @@ Cada galho é separado por uma `/`, então `m/2` significa iniciar com a chave m
 
 ![lógica da chave de validação](multiple-keys.png)
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [Postagem no blog da Ethereum Foundation por Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Geração de chave EIP-2333 BLS12-381](https://eips.ethereum.org/EIPS/eip-2333)

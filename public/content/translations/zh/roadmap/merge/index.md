@@ -14,7 +14,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
   合并于 2022 年 9 月 15 日执行， 它完成了以太坊向权益证明共识的过渡，以太坊正式弃用了工作量证明并将能源消耗减少了约 99.95%。
 </UpgradeStatus>
 
-## 什么是合并？ {#what-is-the-merge}
+## 什么是合并？ \{#what-is-the-merge}
 
 合并是指以太坊的原有执行层（从[创世块](/history/#frontier)开始就一直存在的主网）加入其新的权益证明共识层，即信标链。 合并摒弃了消耗大量能源的挖矿，而是通过质押以太币来保护网络的安全。 这是实现以太坊愿景 — 可扩展性、安全性和可持续性更强 — 这一过程中真正激动人心的一步。
 
@@ -24,7 +24,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 
 想象一下，以太坊是一艘还没有完全准备好进行星际航行的就已经起飞的宇宙飞船。 借助信标链，社区构建了新的引擎和坚固的外壳。 经过大量测试，是时候在飞行途中通过“热插拔”用新引擎更换旧引擎了。 将新的、更高效引擎装入现有飞船后，飞船就能够开始许多光年的航行并占领整个宇宙。
 
-## 与主网合并 {#merging-with-mainnet}
+## 与主网合并 \{#merging-with-mainnet}
 
 直到合并之前，工作量证明一直保护着以太坊主网的安全。 这使得我们都习惯的以太坊区块链在 2015 年 7 月诞生，并且具有我们熟悉的所有功能 — 交易、智能合约、帐户等等。
 
@@ -40,7 +40,7 @@ summaryPoint4: 合并将使以太坊的能源消耗减少大约 99.95%。
 这种向权益证明的过渡改变了以太币的发行方式。 了解有关<a href="/roadmap/merge/issuance/">合并前后以太币发行的更多信息</a>。
 </InfoBanner>
 
-### 用户与持有者 {#users-holders}
+### 用户与持有者 \{#users-holders}
 
 **对于持有者/用户而言，合并不会带来任何变化。**
 
@@ -50,7 +50,7 @@ _再次提醒：_作为以太币或以太坊上任何其他数字资产的用户
 
 [有关以太坊安全的更多内容](/security/#eth2-token-scam)
 
-### 节点运营商与去中心化应用程序开发者 {#node-operators-dapp-developers}
+### 节点运营商与去中心化应用程序开发者 \{#node-operators-dapp-developers}
 
 <ExpandableCard
 title="质押节点运营商与提供商"
@@ -105,15 +105,15 @@ id="developers">
 
 </ExpandableCard>
 
-## 合并和能源消耗 {#merge-and-energy}
+## 合并和能源消耗 \{#merge-and-energy}
 
 合并标志着以太坊工作量证明的终结，从此以太坊将进入一个可持续性更强、更加环保的时代。 以太坊的能耗预计会下降 99.95%，这使得以太坊成为一个绿色环保的区块链。 了解有关[以太坊能源消耗](/energy-consumption/)的更多信息。
 
-## 合并与扩容 {#merge-and-scaling}
+## 合并与扩容 \{#merge-and-scaling}
 
 合并还为工作量证明下无法实现的进一步可扩展性升级奠定了基础，使以太坊距离实现[以太坊愿景](/roadmap/vision/)中概述的全面可扩展、安全性和可持续性更近一步。
 
-## 合并的误区 {#misconceptions}
+## 合并的误区 \{#misconceptions}
 
 <ExpandableCard
 title="误区：&quot;运行一个节点需要质押 32 个以太币。&quot;"
@@ -178,7 +178,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 以太坊故意将年化利率设置为动态，以便市场上的质押人权衡他们愿意为保护网络付出多少资金。 如果利率过低，验证者将按照协议限制的速度退出。 这样会逐渐提高所有留下来的验证者的年化利率，从而吸引新的质押人加入或者退出的质押人回归。
 </ExpandableCard>
 
-## “以太坊 2”发生了什么？ {#eth2}
+## “以太坊 2”发生了什么？ \{#eth2}
 
 “以太坊 2”一词已弃用。 在将“以太坊 1”和“以太坊 2”合并为一条链之后，将不再需要区分两个不同 的以太坊网络；只有以太坊。
 
@@ -191,11 +191,11 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 [了解有关“以太坊 2”重命名的更多信息](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## 升级间的关系 {#relationship-between-upgrades}
+## 升级间的关系 \{#relationship-between-upgrades}
 
 以太坊所有升级都存在一些关联。 因此，让我们回顾一下合并与其他升级的关系。
 
-### 合并与信标链 {#merge-and-beacon-chain}
+### 合并与信标链 \{#merge-and-beacon-chain}
 
 合并表示正式采用信标链作为原有主网执行层的新共识层。 合并之后，将分配验证者以保护以太坊主网的安全，[工作量证明](/developers/docs/consensus-mechanisms/pow/)机制下的挖矿将不再是有效的区块生产方式。
 
@@ -205,13 +205,13 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
   信标链
 </ButtonLink>
 
-### 合并与上海升级 {#merge-and-shanghai}
+### 合并与上海升级 \{#merge-and-shanghai}
 
 为了简化并确保顺利过渡到权益证明，合并升级没有包括某些预期的功能，如提取质押以太币的功能。 该功能是通过上海/卡佩拉升级单独启用的。
 
 如果感兴趣，请参阅 Vitalik 在 2021 年 4 月的 ETHGlobal 活动中发表的演讲“[合并后会发生什么](https://youtu.be/7ggwLccuN5s?t=101)”，了解更多信息。
 
-### 合并与分片 {#merge-and-data-sharding}
+### 合并与分片 \{#merge-and-data-sharding}
 
 最初的计划是在合并之前进行分片，以解决可扩展性问题。 然而，随着[二层网络扩容解决方案](/layer-2/)方兴未艾，工作重点已经变成首先从工作量证明过渡到权益证明。
 
@@ -221,7 +221,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
   分片
 </ButtonLink>
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 <MergeArticleList />
 

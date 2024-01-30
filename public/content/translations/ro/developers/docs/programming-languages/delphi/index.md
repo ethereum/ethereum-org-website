@@ -15,7 +15,7 @@ Folosiţi Ethereum pentru a crea aplicații descentralizate („dapp-uri”) car
 
 Construiţi aplicații descentralizate pe platforma Ethereum și interacționaţi cu contracte inteligente folosind limbajul de programare Delphi!
 
-## Primii pași în contractele inteligente și limbajul Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Primii pași în contractele inteligente și limbajul Solidity \{#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Faceţi primii pași spre integrarea Delphi cu Ethereum**
 
@@ -26,7 +26,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Scrieţi primul dvs. contract inteligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Învăţaţi cum să compilaţi și să implementaţi Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Resurse și linkuri pentru începători {#beginner-references-and-links}
+## Resurse și linkuri pentru începători \{#beginner-references-and-links}
 
 **Prezentarea bibliotecii Delphereum**
 
@@ -40,13 +40,13 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Un Contract inteligent de 3 minute și Delphi - Partea 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [Un Contract inteligent de 3 minute și Delphi - Partea 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Articole de nivel intermediar {#intermediate-articles}
+## Articole de nivel intermediar \{#intermediate-articles}
 
 - [Generarea unei semnături de mesaje semnată de Ethereum în Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Transferarea de ether cu Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Transferarea de tokenuri ERC-20 cu Delphi](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## Modele avansate de utilizare {#advanced-use-patterns}
+## Modele avansate de utilizare \{#advanced-use-patterns}
 
 - [Delphi și Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum și Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

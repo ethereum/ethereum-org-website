@@ -79,7 +79,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### Biraz da bu dosyalardan bahsedelim: {#now-lets-talk}
+### Biraz da bu dosyalardan bahsedelim: \{#now-lets-talk}
 
 - Greeter.sol - solidity ile yazılmış akıllı sözleşmemiz;
 
@@ -126,7 +126,7 @@ describe("Greeter", function () {
 })
 ```
 
-### Sonraki adım, sözleşmemizi derlemek ve testleri çalıştırmaktan oluşur: {#compiling-and-testing}
+### Sonraki adım, sözleşmemizi derlemek ve testleri çalıştırmaktan oluşur: \{#compiling-and-testing}
 
 Waffle testleri, Mocha'yı (bir test çerçevesi) ve Chai'yi (bir teyit kütüphanesi) kullanır. Tek yapmanız gereken `npx hardhat test` çalıştırmak ve aşağıdaki mesajın görünmesini beklemek.
 
@@ -134,7 +134,7 @@ Waffle testleri, Mocha'yı (bir test çerçevesi) ve Chai'yi (bir teyit kütüph
 ✓ Should return the new greeting once it's changed
 ```
 
-### Buraya kadar her şey harika görünüyor, hadi projemize biraz daha karmaşık hâle getirelim <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Buraya kadar her şey harika görünüyor, hadi projemize biraz daha karmaşık hâle getirelim <Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
 
 Birinin selamlama olarak boş bir dize eklediği bir durum hayal edin. Pek sıcakkanlı bir selamlama olmaz, değil mi?  
 Bunun önüne geçelim:
@@ -195,7 +195,7 @@ Tekrar testleri çalıştıralım:
 
 Tebrikler! Başardınız :)
 
-### Sonuç {#conclusion}
+### Sonuç \{#conclusion}
 
 Waffle, Hardhat ve ethers.js ile basit bir proje yaptık. Bir projenin nasıl kurulacağını, bir testin nasıl ekleneceğini ve yeni fonksiyonların nasıl uygulanacağını öğrendik.
 

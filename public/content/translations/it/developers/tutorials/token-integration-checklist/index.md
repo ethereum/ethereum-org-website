@@ -33,13 +33,13 @@ Per seguire questo elenco di controllo, è utile questo output da Slither per il
 - slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
 ```
 
-## Considerazioni generali {#general-considerations}
+## Considerazioni generali \{#general-considerations}
 
 - **Il contratto ha una revisione di sicurezza.** Evita di interagire con i contratti che non hanno una revisione di sicurezza. Controlla la lunghezza della valutazione (cioè il "livello di sforzo"), la reputazione dell'organizzazione di sicurezza e il numero e la gravità dei risultati.
 - **Hai contattato gli sviluppatori.** Potresti dover avvisare il loro team di un incidente. Cerca contatti appropriati su [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
 - **Hanno una mailing list di sicurezza per gli annunci critici.** Il loro team dovrebbe avvisare gli utenti (come te!) quando vengono trovati problemi critici o quando viene eseguito un aggiornamento.
 
-## Conformità ERC {#erc-conformity}
+## Conformità ERC \{#erc-conformity}
 
 Slither include un'utilità, [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), che revisiona la conformità di un token rispetto a molti standard ERC correlati. Usa slither-check-erc per controllare che siano soddisfatte le seguenti condizioni:
 
@@ -58,14 +58,14 @@ Infine, ci sono alcune caratteristiche che sono difficili da identificare automa
 - **Transfer e transferFrom non devono richiedere commissioni.** I token deflazionistici possono condurre a comportamenti imprevisti.
 - **I potenziali interessi guadagnati dal token sono considerati.** Alcuni token distribuiscono interessi ai possessori di token. Questo interesse potrebbe rimanere intrappolato nel contratto se non preso in considerazione.
 
-## Composizione del contratto {#contract-composition}
+## Composizione del contratto \{#contract-composition}
 
 - **Il contratto evita complessità inutili.** Il token deve essere un contratto semplice; un token con codice complesso richiede uno standard superiore per il controllo. Usa la [stampante human-summary](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) di Slither per identificare il codice complesso.
 - **Il contratto usa SafeMath.** I contratti che non usano SafeMath richiedono uno standard di controllo superiore. Ispeziona manualmente il contratto per verificare l'uso di SafeMath.
 - **Il contratto ha solo poche funzioni non correlate ai token.** Le funzioni non correlate ai token aumentano la probabilità di un problema nel contratto. Usa la [stampante contract-summary](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) di Slither per controllare ampiamente il codice usato nel contratto.
 - **Il token ha solo un indirizzo.** I token con punti di ingresso multipli per gli aggiornamenti del saldo possono impedire il funzionamento della contabilità interna basata sull'indirizzo (es. `balances[token_address][msg.sender]` potrebbe non riflettere il saldo reale).
 
-## Privilegi del proprietario {#owner-privileges}
+## Privilegi del proprietario \{#owner-privileges}
 
 - **Il token non è aggiornabile.** Le regole dei contratti aggiornabili potrebbero variare nel tempo. Usa la [stampante human-summary](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) di Slither per stabilire se il contratto è aggiornabile.
 - **Il proprietario ha capacità di conio limitate.** I proprietari malevoli o compromessi possono abusare delle capacità di conio. Usa la [stampante human-summary](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) di Slither per verificare le capacità di conio e, se possibile, controlla manualmente il codice.
@@ -73,7 +73,7 @@ Infine, ci sono alcune caratteristiche che sono difficili da identificare automa
 - **Il proprietario non può inserire il contratto nella lista nera.** I proprietari malevoli o compromessi possono intrappolare i contratti che si basano su token con una lista nera. Identifica le funzionalità di blacklist a mano.
 - **Il team legato al token è noto e vi si può attribuire la responsabilità di eventuali abusi.** I contratti con team di sviluppo anonimi o che risiedono in rifugi legali devono richiedere uno standard di controllo superiore.
 
-## Scarsezza di token {#token-scarcity}
+## Scarsezza di token \{#token-scarcity}
 
 Le verifiche dei problemi di scarsità dei token richiedono un controllo manuale. Verifica queste condizioni:
 

@@ -27,7 +27,7 @@ fs.readFile("keyfile.json", (err, data) => {
 
 This documents **version 3** of the Web3 Secret Storage Definition.
 
-## Definition {#definition}
+## Definition \{#definition}
 
 The actual encoding and decoding of the file remains largely unchanged from version 1, except that the crypto algorithm is no longer fixed to AES-128-CBC (AES-128-CTR is now the minimal requirement). Most of the meanings/algorithm are similar to version 1, except `mac`, which is given as the SHA3 (keccak-256) of the concatenations of the second-leftmost 16 bytes of the derived key together with the full `ciphertext`.
 
@@ -72,7 +72,7 @@ The creation/encryption of a secret key should be essentially the reverse of the
 
 In addition to the `version` field, which should act as a "hard" identifier of version, implementations may also use `minorversion` to track smaller, non-breaking changes to the format.
 
-## Test Vectors {#test-vectors}
+## Test Vectors \{##test-vectors}
 
 Details:
 
@@ -82,7 +82,7 @@ Details:
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 \{##PBKDF2-SHA-256}
 
 Test vector using `AES-128-CTR` and `PBKDF2-SHA-256`:
 
@@ -117,7 +117,7 @@ File contents of `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json`:
 `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2`
 `Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
-### Scrypt {#scrypt}
+### Scrypt \{##scrypt}
 
 Test vector using AES-128-CTR and Scrypt:
 
@@ -151,7 +151,7 @@ Test vector using AES-128-CTR and Scrypt:
 `MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c`
 `Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
-## Alterations from Version 1 {#alterations-from-v2}
+## Alterations from Version 1 \{##alterations-from-v2}
 
 This version fixes several inconsistencies with the version 1 published [here](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst). In brief these are:
 
@@ -190,6 +190,6 @@ Changes have been made to the format to give the following file, functionally eq
 }
 ```
 
-## Alterations from Version 2 {#alterations-from-v2}
+## Alterations from Version 2 \{##alterations-from-v2}
 
 Version 2 was an early C++ implementation with a number of bugs. All essentials remain unchanged from it.

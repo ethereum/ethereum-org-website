@@ -12,7 +12,7 @@ summaryPoint2: NFT-ji dajejo ustvarjalcem vsebin več moči, kot so jo imeli kad
 summaryPoint3: Podprto s pametnimi pogodbami na Ethereumovi verigi blokov.
 ---
 
-## Kaj je NFT? {#what-are-nfts}
+## Kaj je NFT? \{#what-are-nfts}
 
 NFT-ji so žetoni, ki so individualno unikatni. Vsak NFT ima drugačne lastnosti (nezamenljive) in je dokazljivo redek. To je drugače od žetonov, kot so ERC-20, kjer je vsak žeton v setu identičen in ima enake lastnosti (je zamenljiv). Vseeno vam je, kateri specifični bankovec imate v denarnici, zato ker so vsi identični in imajo enako vrednost. Vendar, vam _je_ pomembno, kateri specifični NFT imate, saj imajo vsi svoje individualne lastnosti, s katerimi jih lahko ločite od drugih (so nezamenljivi).
 
@@ -20,13 +20,13 @@ Unikatnost vsakega NFT-ja omogoča spremembo stvari, kot so umetnost, zbirateljs
 
 <YouTube id="Xdkkux6OxfM" />
 
-## Internet sredstev {#internet-of-assets}
+## Internet sredstev \{#internet-of-assets}
 
 NFT-ji in Ethereum rešujejo nekatere težave, ki danes obstajajo na spletu. Medtem ko vse postaja bolj digitalno, se pojavlja potreba za repliciranje značilnosti fizičnih predmetov, kot so omejenost količine, edinstvenost in dokaz o lastništvu, brez potrebe po centralni avtoriteti. Z NFT-ji ste lahko na primer lastnik glasbene datoteke mp3, ki ni specifična aplikaciji ponudnika glasbe, ali pa si lastite uporabniško ime na socialnem omrežju, ki ga lahko prodate ali zamenjate, vendar vam ga ponudnik spletne platforme sam ne more odvzeti.
 
 Poglejte si, kako je videti primerjava interneta NFT-jev z internetom, ki ga večinoma uporabljamo danes ...
 
-### Primerjava {#nft-comparison}
+### Primerjava \{#nft-comparison}
 
 | Internet NFT-jev                                                                                                                         | Današnji internet                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,13 +37,13 @@ Poglejte si, kako je videti primerjava interneta NFT-jev z internetom, ki ga ve�
 | Ustvarjalci vsebin lahko prodajo svoja dela kjerkoli in tako dostopajo do globalnega trga.                                               | Ustvarjalci se zanašajo na infrastrukturo platform, ki jih uporabljajo. Te so pogosto podvržene pogojem uporabe in se poslužujejo geografskih omejitev. |
 | Izdelovalci NFT-jev lahko ohranijo lastniške pravice svojega dela in vprogramirajo licenčnine neposredno v pogodbe NFT.                  | Platforme, kot so storitve za predvajanje glasbe, obdržijo večino dobička od prodaje.                                                                   |
 
-## Kako NFT-ji delujejo? {#how-nfts-work}
+## Kako NFT-ji delujejo? \{#how-nfts-work}
 
 Kot vsak žeton, izdan na Ethereumu, so NFT-ji izdani s pametno pogodbo. Pametna pogodba je skladna z enim od različnih standardov NFT (običajno ERC-721 ali ERC-1155), ki določajo funkcije pogodbe. Pogodba lahko naredi NFT-je in jih dodeli specifičnemu lastniku. Lastništvo je definirano v pogodbi s povezavo določenega NFT-ja z določenim naslovom. NFT ima identifikator in po navadi tudi metapodatke, ki naredijo ta specifični žeton unikaten.
 
 Ko nekdo izdela NFT, v resnici izvaja funkcijo pametne pogodbe, ki dodeli specifičen NFT njihovemu naslovu. Te informacije so shranjene v podatkovni shrambi pametne pogodbe, ki pa je del blokovne verige. Izdelovalec pametne pogodbe lahko v pogodbo zapiše dodatno logiko, kot je recimo omejitev ponudbe žetona ali definiranje licenčnine, ki bo plačana ustvarjalcu vsakič, ko bo žeton prenesen.
 
-## Za kaj se uporabljajo NFT-ji? {#nft-use-cases}
+## Za kaj se uporabljajo NFT-ji? \{#nft-use-cases}
 
 NFT-ji so uporabni za veliko stvari, kot so:
 
@@ -72,7 +72,7 @@ To spletišče ima tudi alternativno ime domene, ki ga poganjajo NFT-ji, **ether
 
 <Divider />
 
-### Varnost NFT-jev {#nft-security}
+### Varnost NFT-jev \{#nft-security}
 
 Ethereumovo varnost zagotavlja mehanizem dokaza o deležu. Sistem je zasnovan tako, da odvrača ekonomsko zlonamerna dejanja, zato je Ethereum odporen na posege. Vse to omogoča obstoj in uporabo NFT-jev. Ko blok z vašo transakcijo z NFT-ji postane zaključen, bi napadalca stalo več milijonov ETH, da bi ga spremenil. Kdorkoli, ki uporablja Ethereumovo programsko opremo, bi lahko takoj zaznal nepoštene posege v NFT, krivec pa bi bil ekonomsko kaznovan in izločen iz omrežja.
 
@@ -82,7 +82,7 @@ Varnostne težave, povezane z NFT-ji, so najpogosteje posledica prevar z lažnim
   Več o varnosti
 </ButtonLink>
 
-## Dodatno branje {#further-reading}
+## Dodatno branje \{#further-reading}
 
 - [Navodila za NFT-je za začetnike](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, januar 2020_
 - [Sledilnik EtherscanNFT](https://etherscan.io/nft-top-contracts)

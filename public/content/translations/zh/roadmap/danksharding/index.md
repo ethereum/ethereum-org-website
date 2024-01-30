@@ -9,11 +9,11 @@ summaryPoints:
   - 随后，完整的 Danksharding 将验证数据二进制大对象的责任分散到节点子集，使以太坊进一步扩展到每秒处理超过 100,000 笔交易。
 ---
 
-# Danksharding {#danksharding}
+# Danksharding \{#danksharding}
 
 **Danksharding** 是让以太坊成为真正的可扩展区块链的方案，但要实现这个方案，需要进行一系列协议升级。 **Proto-Danksharding** 是这个过程中的一个中间步骤。 两者都是为了让用户在二层网络上的交易尽可能便宜，并将以太坊扩展到每秒处理 >100,000 次交易。
 
-## 什么是 Proto-Danksharding？ {#what-is-protodanksharding}
+## 什么是 Proto-Danksharding？ \{#what-is-protodanksharding}
 
 Proto-Danksharding，也称为 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是一种让[卷叠](/layer2/#rollups)以更经济的方式向区块添加数据的方法。 这一名称来自提出这个想法的两位研究人员：Protolambda 和 Dankrad Feist。 目前，卷叠在降低用户交易的成本方面受到了限制，因为它们是将交易发布在 `CALLDATA` 中。 这是一种昂贵的方法，因为数据需要经所有以太坊节点处理，并且永远存在于链上，即使卷叠只在很短的时间需要这些数据。 Proto-Danksharding 引入了可以发送并附加到区块上的数据二进制大对象。 这些二进制大对象中的数据不可通过以太坊虚拟机访问，并且在固定的时间（1-3 个月）后会自动删除。 这意味着卷叠可以更经济的方式发送其数据，节省的费用会让最终用户的交易更加便宜。
 
@@ -29,15 +29,15 @@ Proto-Danksharding，也称为 [EIP-4844](https://eips.ethereum.org/EIPS/eip-484
 
 </ExpandableCard>
 
-### 如何验证二进制大对象中的数据？ {#how-are-blobs-verified}
+### 如何验证二进制大对象中的数据？ \{#how-are-blobs-verified}
 
 卷叠将其执行的交易发布在数据二进制大对象中。 它们也发布一个对数据的“承诺”。 为此，他们会对数据拟合一个多项式函数。 然后，这个函数可以在各个点计算。 例如，如果我们定义一个非常简单的函数 `f(x) = 2x-1`，那么可以就 `x = 1`、`x = 2`、`x = 3` 计算这个函数，得到结果 `1, 3, 5`。 证明者对数据应用相同的函数，并在相同的点计算。 如果原始数据被更改，函数就不会相同，因此每个点计算出来的值也不会相同。 在实际操作中，承诺和证明会更加复杂，因为它们会被包裹在密码学函数中。
 
-### 什么是 KZG？ {#what-is-kzg}
+### 什么是 KZG？ \{#what-is-kzg}
 
 KZG 代表 Kate-Zaverucha-Goldberg - 是三位[原创作者](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11)名字的缩写，他们提出了一项将数据二进制大对象缩减为小型[密码学“承诺”](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html)的方案。 卷叠提交的数据二进制大对象必须经过验证，以确保卷叠没有错误行为。 这需要证明者重新执行二进制大对象中的交易，以检查承诺是否有效。 从概念上讲，这与执行客户端使用默克尔证明检验一层网络上的以太坊交易的有效性的方式相同。 KZG 是一种将多项式方程拟合到数据上的替代式证明。 "承诺"在某些保密数据点处计算多项式。 证明者将在数据上拟合相同的多项式，并在相同（保密数据点）取值处进行计算，以校验（多项式）结果是否相同。 这种验证数据的方式与一些卷叠使用并且最终也会用于以太坊协议的其他部分的零知识技术兼容。
 
-### 什么是 KZG 仪式？ {#what-is-a-kzg-ceremony}
+### 什么是 KZG 仪式？ \{#what-is-a-kzg-ceremony}
 
 KZG 仪式是指以太坊社区的许多人共同生成一个随机的私密数字字符串，用于验证一些数据的一种方式。 这个数字字符串必须是未知的，不能由任何人重新创建。 为了确保做到这一点，每个参加仪式的人都会收到前一位参与者发送的一个字符串。 然后，他们会创建一些新的随机值（例如：通过允许他们的浏览器测量鼠标的移动）并将这些值与前面的值混合在一起。 之后，他们将这个值发送给下一位参与者并将其在本地计算机中销毁。 在这个仪式中，只要有一个人诚实地执行了这一过程，攻击者就无法知道最终值是什么。 EIP-4844 KZG 仪式是对外公开的，成千上万的人参与其中，并添加了自己的熵（随机值）。 如果想破坏这个仪式，那么必须 100% 的参与者都不诚实。 从参与者的角度来看，如果他们知道自己是诚实的，就不需要相信其他任何人，因为他们知道自己确保了仪式的安全性（他们个人满足了，N 个参与者至少有一个诚实的要求）。
 
@@ -57,7 +57,7 @@ KZG 仪式是指以太坊社区的许多人共同生成一个随机的私密数�
   Danksharding 和 Proto-Danksharding 都没有采用传统的将区块链分成多个部分的“分片”模式。 分片链不再是路线图的一部分。 相反，Danksharding 使用跨数据块的分布式数据采样来扩展以太坊。 这实施起来要简单得多。 这种模式有时被称为“数据分片”。
 </InfoBanner>
 
-## 什么是 Danksharding？ {#what-is-danksharding}
+## 什么是 Danksharding？ \{#what-is-danksharding}
 
 Danksharding 全面实现了从 Proto-Danksharding 开始的卷叠扩展。 Danksharding 将为以太坊带来大量空间，以便卷叠堆放他们的压缩交易数据。 这意味着以太坊能够轻松支持数百个单独卷叠，并实现每秒处理数百万次交易。
 
@@ -75,11 +75,11 @@ Danksharding 全面实现了从 Proto-Danksharding 开始的卷叠扩展。 Dank
 
 </ExpandableCard>
 
-### 当前进展 {#current-progress}
+### 当前进展 \{#current-progress}
 
 完全实现 Danksharding 还需要几年时间。 但是，Proto-Danksharding 的实现应该比较快。 在本文章撰写时（2023 年 2 月），KZG 仪式仍然在开放并且至今已经吸引了超过 50,000 名贡献者。 Proto-Danksharding 的[以太坊改进提案](https://eips.ethereum.org/EIPS/eip-4844)已经成熟，规范已商定，客户端已经创建了原型，目前正在测试中并准备投入生产。 下一步将在公共测试网上实施一些更改。 你可以使用[EIP 4844 准备情况检查表](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status)跟踪最新信息。
 
-### 延伸阅读 {#further-reading}
+### 延伸阅读 \{#further-reading}
 
 - [Proto-Danksharding 说明](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
 - [Dankrad 关于 Danksharding 的说明](https://notes.ethereum.org/@dankrad/new_sharding)

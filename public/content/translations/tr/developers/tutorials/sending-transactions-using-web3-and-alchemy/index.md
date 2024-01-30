@@ -17,30 +17,30 @@ Bu, web3 kullanarak Ethereum işlemlerini göndermek için yeni başlayanlara uy
 
 **NOT:** Bu kılavuz, uygulamanızın _arka yüzündeki_ işlemlerinizi imzalamak içindir. İşlemlerinizi imzalamayı ön yüze entegre etmek istiyorsanız [Web3'ü bir tarayıcı sağlayıcısı](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider) ile entegre etmeye göz atın.
 
-## Temel Bilgiler {#the-basics}
+## Temel Bilgiler \{#the-basics}
 
 Çoğu blok zinciri geliştiricisi ilk başladıklarında olduğu gibi, bir işlemin nasıl gönderileceği konusunda (oldukça basit olması gereken bir şey) biraz araştırma yapmış ve her biri farklı şeyler söyleyen ve sizi biraz bunaltıp kafanızı karıştıran çok sayıda kılavuza rastlamış olabilirsiniz. Bu durumdaysanız merak etmeyin, hepimiz o yollardan geçtik! O zaman başlamadan önce birkaç şeyi açıklığa kavuşturalım:
 
-### 1\. Alchemy özel anahtarlarınızı saklamaz {#alchemy-does-not-store-your-private-keys}
+### 1\. Alchemy özel anahtarlarınızı saklamaz \{#alchemy-does-not-store-your-private-keys}
 
 - Bu, Alchemy'nin sizin adınıza işlemleri imzalayamayacağı ve gönderemeyeceği anlamına gelir. Bunun nedeni güvenlik amaçlıdır. Simya asla özel anahtarınızı paylaşmanızı istemez ve özel anahtarınızı asla barındırılan bir düğümle (veya bu konuda herhangi biri ile) paylaşmamalısınız.
 - Alchemy'nin çekirdek API'sini kullanarak blok zincirinden okuma yapabilirsiniz, ancak blok zincirine yazmak için işlemlerinizi Alchemy aracılığıyla göndermeden önce onları imzalamak için başka bir şey kullanmanız gerekir (bu, diğer tüm [düğüm hizmetleri](/developers/docs/nodes-and-clients/nodes-as-a-service/) için aynıdır).
 
-### 2\. Bir "imzalayıcı" nedir? {#what-is-a-signer}
+### 2\. Bir "imzalayıcı" nedir? \{#what-is-a-signer}
 
 - İmzalayıcılar, özel anahtarınızı kullanarak işlemleri sizin için imzalar. Bu öğreticide, işlemimizi imzalamak için [Alchemy web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)'ü kullanacağız, ancak başka herhangi bir web3 kitaplığını da kullanabilirsiniz.
 - Ön yüzde, işlemleri sizin adınıza imzalayıp gönderen [MetaMask](https://metamask.io/) imzalayıcının iyi bir örneğidir.
 
-### 3\. İşlemlerimi neden imzalamam gerekiyor? {#why-do-i-need-to-sign-my-transactions}
+### 3\. İşlemlerimi neden imzalamam gerekiyor? \{#why-do-i-need-to-sign-my-transactions}
 
 - Ethereum ağında bir işlem göndermek isteyen her kullanıcı, işlemin kaynağının iddia ettiği kişi olduğunu doğrulamak için işlemi (özel anahtarını kullanarak) imzalamalıdır.
 - Bu özel anahtarı korumak çok önemlidir, çünkü erişime sahip olmak Ethereum hesabınız üzerinde tam kontrol sağlayarak sizin (veya erişimi olan herhangi birinin) sizin adınıza işlem gerçekleştirmesine izin verir.
 
-### 4\. Özel anahtarımı nasıl korurum? {#how-do-i-protect-my-private-key}
+### 4\. Özel anahtarımı nasıl korurum? \{#how-do-i-protect-my-private-key}
 
 - Özel anahtarınızı korumanın ve işlemleri göndermek için kullanmanın birçok yolu vardır. Bu öğreticide bir `.env` dosyası kullanacağız. Ancak, özel anahtarları depolayan, bir anahtar deposu dosyası kullanan veya diğer seçenekleri kullanan ayrı bir sağlayıcı da kullanabilirsiniz.
 
-### 5\. `eth_sendTransaction` ve `eth_sendRawTransaction` arasındaki fark nedir? {#difference-between-send-and-send-raw}
+### 5\. `eth_sendTransaction` ve `eth_sendRawTransaction` arasındaki fark nedir? \{#difference-between-send-and-send-raw}
 
 `eth_sendTransaction` ve `eth_sendRawTransaction`, gelecekteki bir bloğa eklenmesi için Ethereum ağına bir işlem yayınlayan Ethereum API fonksiyonlarıdır. İşlemlerin imzalanmasını nasıl ele aldıkları konusunda farklılık gösterirler.
 
@@ -51,7 +51,7 @@ Web3 kullanırken `eth_sendRawTransaction` erişimi, [web3.eth.sendSignedTransac
 
 Bu öğreticide kullanacağımız şey budur.
 
-### 6\. Web3 kütüphanesi nedir? {#what-is-the-web3-library}
+### 6\. Web3 kütüphanesi nedir? \{#what-is-the-web3-library}
 
 - Web3.js, Ethereum geliştirmede kullanımı oldukça yaygın olan standart JSON-RPC çağrıları etrafında bir paketleyici kütüphanedir.
 - Farklı diller için birçok web3 kütüphanesi bulunur vardır. Bu öğreticide JavaScript ile yazılmış olan [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)'ü kullanacağız. [ethers.js](https://docs.ethers.org/v5/) gibi diğer seçeneklere [buradan](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries) göz atabilirsiniz.
@@ -69,17 +69,17 @@ Pekala, şimdi bu sorulardan birkaçını aradan çıkardığımıza göre, öğ
 2.  [MetaMask hesabı oluşturun](https://metamask.io/) (veya bir Ethereum adresi alın)
 3.  [NodeJ'leri ve NPM'yi yüklemek için bu adımları izleyin](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
-## İşleminizi Gönderme Adımları {#steps-to-sending-your-transaction}
+## İşleminizi Gönderme Adımları \{#steps-to-sending-your-transaction}
 
-### 1\. Sepolia test ağında Alchemy uygulaması oluşturma {#create-an-alchemy-app-on-the-sepolia-testnet}
+### 1\. Sepolia test ağında Alchemy uygulaması oluşturma \{#create-an-alchemy-app-on-the-sepolia-testnet}
 
 [Alchemy Dashboard'a](https://dashboard.alchemyapi.io/) gidin ve ağınızı Sepolia seçerek (ya da başka bir test ağı) yeni bir uygulama yaratın.
 
-### 2\. Sepolia musluğundan ETH isteme {#request-eth-from-sepolia-faucet}
+### 2\. Sepolia musluğundan ETH isteme \{#request-eth-from-sepolia-faucet}
 
 ETH almak için [Alchemy Sepolia musluğundaki](https://www.sepoliafaucet.com/) talimatları izleyin. **Sepolia** Ethereum adresinizi (MetaMask'ten) eklediğinizden ve başka bir ağda olmadığınızdan emin olun. Talimatları uyguladıktan sonra, cüzdanınıza ETH'yi alıp almadığınızı iki kez kontrol edin.
 
-### 3\. Yeni bir proje dizini oluşturun ve içine `cd` ekleyin {#create-a-new-project-direction}
+### 3\. Yeni bir proje dizini oluşturun ve içine `cd` ekleyin \{#create-a-new-project-direction}
 
 Komut satırından (mac'ler için terminal) yeni bir proje dizini oluşturun ve içine gidin:
 
@@ -88,7 +88,7 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4\. Alchemy Web3'ü kurun (veya herhangi bir web3 kütüphanesi) {#install-alchemy-web3}
+### 4\. Alchemy Web3'ü kurun (veya herhangi bir web3 kütüphanesi) \{#install-alchemy-web3}
 
 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) indirmek için proje klasörünüzde şu komutu çalıştırın:
 
@@ -98,7 +98,7 @@ Ether.js kitaplığını kullanmak istiyorsanız [buradaki talimatları izleyin]
 npm install @alch/alchemy-web3
 ```
 
-### 5\. Dotenv kurun {#install-dotenv}
+### 5\. Dotenv kurun \{#install-dotenv}
 
 API anahtarımızı ve özel anahtarımızı güvenli bir şekilde saklamak için bir `.env` dosyası kullanacağız.
 
@@ -106,7 +106,7 @@ API anahtarımızı ve özel anahtarımızı güvenli bir şekilde saklamak içi
 npm install dotenv --save
 ```
 
-### 6\. `.env` dosyasını oluşturun {#create-the-dotenv-file}
+### 6\. `.env` dosyasını oluşturun \{#create-the-dotenv-file}
 
 Proje dizininizde bir `.env` dosyası oluşturun ve şunu ekleyin ("`api-url`" ve "`your-private-key` yerine" ")
 
@@ -122,7 +122,7 @@ PRIVATE_KEY = "your-private-key"
 <code>.env</code> taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
 </InfoBanner>
 
-### 7\. `sendTx.js` dosyası oluşturun {#create-sendtx-js}
+### 7\. `sendTx.js` dosyası oluşturun \{#create-sendtx-js}
 
 Harika, artık hassas verilerimizi bir `.env` dosyasında koruduğumuza göre kodlamaya başlayalım. Gönderme işlemi örneğimiz içi ETH'yi Sepolia musluğuna geri göndereceğiz.
 
@@ -181,7 +181,7 @@ main();
 - Akıllı sözleşme işlemi: Zincirde bazı akıllı sözleşme kodlarını yürütün. Bu durumda veri alanı, herhangi bir parametrenin yanında yürütmek istediğiniz akıllı fonksiyonu içermelidir.
   - Pratik bir örnek için, şu [Merhaba Dünya Öğreticindeki](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction) 8. Adıma bakın.
 
-### 8\. `node sendTx.js` kullanarak kodu çalıştırın {#run-the-code-using-node-sendtx-js}
+### 8\. `node sendTx.js` kullanarak kodu çalıştırın \{#run-the-code-using-node-sendtx-js}
 
 Terminalinize veya komut satırınıza geri dönün ve şunu çalıştırın:
 
@@ -189,7 +189,7 @@ Terminalinize veya komut satırınıza geri dönün ve şunu çalıştırın:
 node sendTx.js
 ```
 
-### 9\. İşleminizi Bellek Havuzunda görün {#see-your-transaction-in-the-mempool}
+### 9\. İşleminizi Bellek Havuzunda görün \{#see-your-transaction-in-the-mempool}
 
 Alchemy panelinizde [Mempool sayfasını](https://dashboard.alchemyapi.io/mempool) (Bellek Havuzu) açın ve işleminizi bulmak için oluşturduğunuz uygulama ile filtreleyin. Bekleme durumundan kazılmış (başarılıysa) veya başarısız olursa düşmüş duruma geçişimizi buradan izleyebiliriz. "mined" (kazılmış), "beklemede" (pending) ve "düşmüş" işlemleri yakalamak için "All" (Tümü) üzerinde tuttuğunuzdan emin olun. `0x31b98d14007bdee637298086988a0bbd31184523` adresine gönderilen işlemlere bakarak da işleminizi arayabilirsiniz.
 

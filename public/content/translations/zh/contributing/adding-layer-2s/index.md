@@ -4,7 +4,7 @@ description: 将二层网络添加到 ethereum.org 时适用的政策
 lang: zh
 ---
 
-# 添加二层网络 {#adding-layer-2}
+# 添加二层网络 \{#adding-layer-2}
 
 我们想要确保上架的资源是最好的，让用户能够安全放心地浏览二层网络空间。
 
@@ -18,9 +18,9 @@ lang: zh
 
 对以太坊来说，二层网络是一个相对较新的、令人振奋的范式。 我们已尝试在 ethereum.org 上创建一个公平的考量框架，但纳入标准会随时间推移而变化和发展。
 
-## 决策框架 {#decision-framework}
+## 决策框架 \{#decision-framework}
 
-### 纳入标准：必备条件 {#criteria-for-inclusion-the-must-haves}
+### 纳入标准：必备条件 \{#criteria-for-inclusion-the-must-haves}
 
 **在 L2BEAT 上架**
 
@@ -68,7 +68,7 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 - 上架的项目需要能正常工作的区块浏览器，让用户轻松浏览区块链。
 
-### 其他标准：最好具备 {#nice-to-haves}
+### 其他标准：最好具备 \{#nice-to-haves}
 
 **交易所对项目的支持**
 
@@ -86,7 +86,7 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 - 是否有任何钱包原生支持二层网络？
 
-## 添加你的二层网络 {#add-exchange}
+## 添加你的二层网络 \{#add-exchange}
 
 如果你想将二层网络添加到 ethereum.org，请在 GitHub 上创建一个提议。
 

@@ -9,7 +9,7 @@ incomplete: true
 
 イーサリアムを使用して分散型アプリケーション (「dapp」) を作成します。 dapp は、信頼性の高いアプリケーションです。つまり、イーサリアムにデプロイした後は、常にプログラムしたとおりに動作します。 分散型であるため、ピアツーピアのネットワーク上で動作します。単一障害点はありません。 単一のエンティティや個人によって制御されず、検閲はほぼ不可能です。 デジタル資産を制御して、新たなタイプのアプリケーションを作成できます。
 
-## スマートコントラクトと Solidity を使い始める {#getting-started-with-smart-contracts-and-solidity}
+## スマートコントラクトと Solidity を使い始める \{#getting-started-with-smart-contracts-and-solidity}
 
 **Go をイーサリアムに統合するための最初のステップを踏み出してみましょう。**
 
@@ -21,7 +21,7 @@ incomplete: true
 - [Solidity のコンパイルとデプロイの方法を学ぶ](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [コントラクトのチュートリアル](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## 初心者向けの記事と書籍 {#beginner-articles-and-books}
+## 初心者向けの記事と書籍 \{#beginner-articles-and-books}
 
 - [イーサリアムクライアントの選択](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Geth 入門](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -30,7 +30,7 @@ incomplete: true
 - [Go でのイーサリアムスマートコントラクトのテストとデプロイのための段階的ガイド](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Go を使用したイーサリアム開発](https://goethereumbook.org/) - _Go を使用してイーサリアムアプリケーションを開発する_
 
-## 中級者向けの記事とドキュメント {#intermediate-articles-and-docs}
+## 中級者向けの記事とドキュメント \{#intermediate-articles-and-docs}
 
 - [Go イーサリアムのドキュメント](https://geth.ethereum.org/docs/) - _公式のイーサリアムの Golang についてのドキュメント_
 - [Erigon のプログラマーガイド](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _状態ツリー、マルチプルーフ、トランザクション処理などについて図示したガイド_
@@ -42,7 +42,7 @@ incomplete: true
 - [Go を使用してイーサリアム上で Solidity コントラクトの単体テストを行う](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Geth をライブラリとして使用するためのクイックリファレンス](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## 発展的なユースケース {#advanced-use-patterns}
+## 発展的なユースケース \{#advanced-use-patterns}
 
 - [Geth のシミュレートされたバックエンド](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [イーサリアムと Quorum を使用したアズ・ア・サービス型のブロックチェーンアプリケーション](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -50,7 +50,7 @@ incomplete: true
 - [モバイルクライアント: ライブラリと InProc のイーサリアムノード](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [ネイティブ dapp: イーサリアムコントラクトへの Go バインディング](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Go のプロジェクトとツール {#go-projects-and-tools}
+## Go のプロジェクトとツール \{#go-projects-and-tools}
 
 - [Geth / Go イーサリアム](https://github.com/ethereum/go-ethereum) - _イーサリアムプロトコルの公式 Go 実装_
 - [Go イーサリアム コード分析](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum のソースコードのレビューと分析_
@@ -68,7 +68,7 @@ incomplete: true
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 
-## Go コミュニティコントリビューター {#go-community-contributors}
+## Go コミュニティコントリビューター \{#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
@@ -78,7 +78,7 @@ incomplete: true
 - [イーサリアム Gitter](https://gitter.im/ethereum/home)
 - [Geth ライトクライアント Gitter](https://gitter.im/ethereum/light-client)
 
-## その他のリスト {#other-aggregated-lists}
+## その他のリスト \{#other-aggregated-lists}
 
 - [素晴らしいイーサリアム](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: イーサリアムデベロッパーツールの決定版リスト](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub ソース](https://github.com/ConsenSys/ethereum-developer-tools-list)

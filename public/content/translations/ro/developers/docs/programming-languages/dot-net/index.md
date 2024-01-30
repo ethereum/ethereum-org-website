@@ -11,7 +11,7 @@ Folosiţi Ethereum pentru a crea aplicații descentralizate („dapp-uri”) car
 
 Dezvoltaţi aplicații descentralizate pe Ethereum și interacționaţi cu contractele inteligente folosind instrumente și limbaje de programare din stiva de tehnologie Microsoft - acceptă C#, # Visual Basic .NET, F#, pe instrumente ca VSCode și Visual Studio, în .NET Framework/.NET Core/.NET Standard. Implementaţi în câteva minute un blockchain Ethereum pe Azure folosind Microsoft Azure Blockchain. Aduceţi pasiunea pentru .NET pe Ethereum!
 
-## Primii pași în contractele inteligente și limbajul Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Primii pași în contractele inteligente și limbajul Solidity \{#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Faceţi primii pași în integrarea .NET cu Ethereum**
 
@@ -22,7 +22,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Scrieţi primul dvs. contract inteligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Învăţaţi cum să compilaţi și să implementaţi Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Resurse și linkuri pentru începători {#beginner-references-and-links}
+## Resurse și linkuri pentru începători \{#beginner-references-and-links}
 
 **Introducere despre biblioteca Nethereum și VS Code Solidity**
 
@@ -43,7 +43,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
   - Transferă ether către un cont [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Și altele!
 
-## Articole de nivel intermediar {#intermediate-articles}
+## Articole de nivel intermediar \{#intermediate-articles}
 
 - [Registru de lucru Nethereum/listă de exemple](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Implementaţi-vă propriile testchain-uri de dezvoltare](https://github.com/Nethereum/Testchains)
@@ -56,13 +56,13 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [Kaleido și Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum și Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Modele avansate de utilizare {#advanced-use-patterns}
+## Modele avansate de utilizare \{#advanced-use-patterns}
 
 - [Azure Key Vault și Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Arhitectura backend de referință pentru Ujo Nethereum](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## Proiecte .NET, instrumente și alte lucruri distractive {#dot-net-projects-tools-and-other-fun-stuff}
+## Proiecte .NET, instrumente și alte lucruri distractive \{#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Compilează, creează și rulează secvențe de cod Nethereum în browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Generator de cod Nethereum cu UI în Blazor_
@@ -74,13 +74,13 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 
 Căutaţi şi alte resurse? Accesează [ethereum.org/developers](/developers/).
 
-## Colaboratori ai comunității .NET {#dot-net-community-contributors}
+## Colaboratori ai comunității .NET \{#dot-net-community-contributors}
 
 Pe noi, cei de la Nethereum, ne puteţi găsi pe [Gitter](https://gitter.im/Nethereum/Nethereum), unde toată lumea poate să pună întrebări și să dea răspunsuri, să primească ajutor sau pur și simplu să se relaxeze. Puteţi crea un PR sau ridica o problemă în [Repo-ul GitHub Nethereum](https://github.com/Nethereum) sau puteţi descoperi numeroasele noastre proiecte secundare/de exemplificare. Ne puteţi găsi și pe [Discord](https://discord.gg/jQPrR58FxX)!
 
 La Nethermind, vă invităm să ne contactaţi prin [Gitter](https://gitter.im/nethermindeth/nethermind). Pentru PR sau probleme, accesaţi [Repo-ul GitHub Nethermind](https://github.com/NethermindEth/nethermind).
 
-## Alte liste agregate {#other-aggregated-lists}
+## Alte liste agregate \{#other-aggregated-lists}
 
 [Site-ul oficial Nethereum](https://nethereum.com/)  
 [Site-ul oficial Nethermind](https://nethermind.io/)

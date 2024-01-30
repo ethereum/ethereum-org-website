@@ -10,11 +10,11 @@ Il proof-of-work non è più alla base del meccanismo di consenso di Ethereum, a
 
 Il mining di Ethereum usava un algoritmo noto come Ethash. L'idea fondamentale dell'algoritmo è che un miner prova a trovare l'input di un nonce usando il calcolo di forza bruta, così che l'hash risultante sia inferiore a una soglia determinata dalla difficoltà calcolata. Questo livello di difficoltà può esser regolato dinamicamente, consentendo alla produzione dei blocchi di verificarsi a un intervallo regolare.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Per comprendere meglio questa pagina, ti consigliamo prima di leggere sul [consenso proof-of-work](/developers/docs/consensus-mechanisms/pow) e sul [mining](/developers/docs/consensus-mechanisms/pow/mining).
 
-## Dagger Hashimoto {#dagger-hashimoto}
+## Dagger Hashimoto \{#dagger-hashimoto}
 
 Dagger Hashimoto era un algoritmo di ricerca precursore del mining di Ethereum, sostituito da Ethash. Era un amalgama di due algoritmi differenti: Dagger e Hashimoto. È sempre e solo stato un'implementazione di ricerca e fu superato da Ethash prima del lancio della Rete Principale di Ethereum.
 
@@ -26,12 +26,12 @@ Dagger-Hashimoto usava delle versioni modificate degli algoritmi di Dagger e Has
 
 Maggiori informazioni su [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
 
-## Ethash {#ethash}
+## Ethash \{#ethash}
 
 Ethash era l'algoritmo di mining che era effettiamente usato sulla vera Rete Principale di Ethereum sotto l'ora deprecata architettura del proof-of-work. Ethash in realtà è un nuovo nome assegnato a una versione specifica di Dagger-Hashimoto dopo un aggiornamento significativo dell'algoritmo, che comunque eredita i principi fondamentali del suo predecessore. La Rete Principale di Ethereum ha sempre e solo usato Ethash; Dagger Hashimoto era una versione R&D dell'algoritmo di mining che fu superata prima che il mining fosse avviato sulla rete principale di Ethereum.
 
 [Maggiori informazioni su Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_

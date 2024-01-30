@@ -8,18 +8,18 @@ This documentation is designed to help you build with Ethereum. It covers Ethere
 
 This is an open-source community effort, so feel free to suggest new topics, add new content, and provide examples wherever you think it might be helpful. All documentation can be edited via GitHub – if you're unsure how, [follow these instructions](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
-## Development modules {#development-modules}
+## Development modules \{#development-modules}
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working your way through like a book.
 
-### Foundational topics {#foundational-topics}
+### Foundational topics \{##foundational-topics}
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### Ethereum stack {#ethereum-stack}
+### Ethereum stack \{##ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### Advanced {#advanced}
+### Advanced \{##advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

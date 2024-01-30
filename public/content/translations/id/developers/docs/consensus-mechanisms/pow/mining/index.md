@@ -5,11 +5,11 @@ lang: id
 incomplete: true
 ---
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Untuk lebih memahami halaman ini, sebaiknya Anda membaca terlebih dahulu tentang [transaksi](/developers/docs/transactions/), [blok](/developers/docs/blocks/) dan [Bukti Kerja](/developers/docs/consensus-mechanisms/pow/).
 
-## Apa itu penambangan Ethereum? {#what-is-ethereum-mining}
+## Apa itu penambangan Ethereum? \{#what-is-ethereum-mining}
 
 Penambangan adalah proses membuat blok transaksi untuk ditambahkan ke blockchain Ethereum.
 
@@ -19,17 +19,17 @@ Ethereum, seperti Bitcoin, saat ini menggunakan mekanisme konsensus [proof-of-wo
    Bukti taruhan akan menggantikan penambangan dan bukti kerja dalam satu tahun ke depan. Anda dapat mulai menaruhkan ETH Anda hari ini. <a href="/staking/">Selengkapnya tentang penaruhan</a>    
 </InfoBanner>
 
-## Mengapa penambang ada? {#why-do-miners-exist}
+## Mengapa penambang ada? \{#why-do-miners-exist}
 
 Dalam sistem terdesentralisasi seperti Ethereum, kita perlu memastikan bahwa semua orang menyetujui urutan transaksi. Penambang membantu ini terjadi dengan memecahkan teka-teki yang sulit secara komputasi untuk menghasilkan blok, yang berfungsi sebagai cara untuk mengamankan jaringan dari serangan.
 
 [Selengkapnya tentang bukti kerja](/developers/docs/consensus-mechanisms/pow/)
 
-## Siapa yang bisa menjadi penambang di Ethereum? {#who-can-become-a-miner}
+## Siapa yang bisa menjadi penambang di Ethereum? \{#who-can-become-a-miner}
 
 Secara teknis, siapa pun dapat menambang di jaringan Ethereum menggunakan komputer mereka. Namun, tidak semua orang dapat menambang ether (ETH) dan menghasilkan keuntungan. Dalam kebanyakan kasus, para penambang harus membeli perangkat keras komputer yang didedikasikan untuk menambang dan menghasilkan keuntungan. Meskipun benar bahwa siapa pun dapat menjalankan perangkat lunak penambangan di komputer mereka, tampaknya tidak mungkin untuk komputer dengan spesifikasi biasa mendapatkan imbalan blok yang cukup untuk menutupi semua biaya penambangan.
 
-### Biaya penambangan {#cost-of-mining}
+### Biaya penambangan \{#cost-of-mining}
 
 - Potensi biaya untuk perangkat keras yang diperlukan untuk membangun dan mempertahankan rig penambangan
 - Biaya pemakaian listrik untuk menjalankan rig penambangannya
@@ -38,7 +38,7 @@ Secara teknis, siapa pun dapat menambang di jaringan Ethereum menggunakan komput
 
 Untuk lebih jauh menjelajahi keuntungan penambangan, gunakan kalkulator penambangan, seperti yang disediakan [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## Bagaimana transaksi Ethereum ditambang {#how-ethereum-transactions-are-mined}
+## Bagaimana transaksi Ethereum ditambang \{#how-ethereum-transactions-are-mined}
 
 1. Seorang pengguna menulis dan menandatangani permintaan [transaksi](/developers/docs/transactions/) dengan kunci privat dari beberapa [akun](/developers/docs/accounts/).
 2. Pengguna menyiarkan permintaan transaksi ke seluruh jaringan Ethereum dari beberapa [node](/developers/docs/nodes-and-clients/).
@@ -53,21 +53,21 @@ Untuk lebih jauh menjelajahi keuntungan penambangan, gunakan kalkulator penamban
 
 Setiap transaksi ditambang (disertakan dalam blok baru dan disebarkan untuk pertama kalinya) satu kali, tetapi dieksekusi dan diverifikasi oleh setiap peserta dalam proses memajukan state EVM kanonis. Ini menyoroti salah satu mantra utama blockchain: **Jangan percaya, verifikasi**.
 
-## Demo visual {#a-visual-demo}
+## Demo visual \{#a-visual-demo}
 
 Amati Austin memandu Anda melalui penambangan dan blockchain bukti kerja.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
-## Peralatan terkait {#related-tools}
+## Peralatan terkait \{#related-tools}
 
 - [Penambang Ethereum terbaik](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Kalkulator penambangan Etherscan](https://etherscan.io/ether-mining-calculator)
 - [Minerstat mining calculator](https://minerstat.com/coin/ETH)
 
-## Topik terkait {#related-topics}
+## Topik terkait \{#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

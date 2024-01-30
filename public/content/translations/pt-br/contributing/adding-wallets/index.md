@@ -4,7 +4,7 @@ description: A política que usamos ao adicionar uma carteira ao ethereum.org
 lang: pt-br
 ---
 
-# Adicionando carteiras {#adding-wallets}
+# Adicionando carteiras \{#adding-wallets}
 
 Queremos ter certeza de que mostramos uma variedade de carteiras abrangendo a ampla gama de recursos disponíveis para que os usuários possam navegar no Ethereum com confiança.
 
@@ -17,9 +17,9 @@ Qualquer pessoa pode sugerir uma nova carteira. As carteiras atualmente listadas
 
 As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutura justa a ser considerada no ethereum.org, mas os critérios listados mudarão e evoluirão com o tempo.
 
-## A estrutura de decisão {#the-decision-framework}
+## A estrutura de decisão \{#the-decision-framework}
 
-### Critérios para inclusão: os obrigatórios {#the-must-haves}
+### Critérios para inclusão: os obrigatórios \{#the-must-haves}
 
 - **Um produto com segurança testada** — seja por meio de auditoria, equipe interna de segurança, codificação de código aberto ou algum outro método — a segurança de sua carteira deve ser confiável. Isso reduz o risco para nossos usuários e demonstra que você leva a segurança a sério.
 - **Uma carteira que esteja em "atividade" há mais de seis meses OU que tenha sido lançada por um grupo com um histórico de reputação** representa mais uma indicação de segurança. Seis meses é um bom período de tempo para que bugs críticos e explorações tenham sido encontrados. Pedimos seis meses para ajudar a filtrar bifurcações (forks) que são rapidamente abandonados como projetos.
@@ -27,7 +27,7 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 - **Informações de listagem corretas e precisas** — espera-se que todas as listagens sugeridas de projetos venham com informações precisas e íntegras. Produtos que falsificam informações de listagem, como declarar que seu produto é de "código aberto" quando não é, serão removidos.
 - **Ponto de contato** — Um ponto de contato para a carteira nos ajudará muito a obter informações precisas quando houver mudanças. Isso manterá a atualização do ethereum.org gerenciável ao reunir informações futuras.
 
-### Outros critérios: o que é importante ter {#the-nice-to-haves}
+### Outros critérios: o que é importante ter \{#the-nice-to-haves}
 
 - **Globalmente acessível** — sua carteira não possui limitações geográficas ou requisitos de KYC que excluam certas pessoas de acessar seu serviço.
 - **Disponível em vários idiomas** — sua carteira é traduzida em vários idiomas, permitindo que usuários ao redor do mundo a acessem.
@@ -53,7 +53,7 @@ As carteiras estão mudando rapidamente no Ethereum. Tentamos criar uma estrutur
 - **Equipe de suporte dedicada** — sua carteira possui uma equipe de suporte dedicada à qual os usuários podem recorrer em caso de problemas.
 - **Recursos de educação/documentação** — seu produto deve ter uma experiência de incorporação bem projetada para ajudar e educar os usuários. Ou então, oferecer conteúdo prático como artigos e vídeos.
 
-## Adicionando uma carteira {#adding-a-wallet}
+## Adicionando uma carteira \{#adding-a-wallet}
 
 Se você deseja adicionar uma carteira ao ethereum.org, crie um tíquete no GitHub.
 
@@ -61,7 +61,7 @@ Se você deseja adicionar uma carteira ao ethereum.org, crie um tíquete no GitH
   Criar tíquete
 </ButtonLink>
 
-## Manutenção {#maintenance}
+## Manutenção \{#maintenance}
 
 O Ethereum é fluido por natureza, por isso, suas equipes e produtos vêm e vão, com inovações ocorrendo diariamente. Por isso, realizaremos verificações de rotina de nosso conteúdo para:
 
@@ -70,6 +70,6 @@ O Ethereum é fluido por natureza, por isso, suas equipes e produtos vêm e vão
 
 O ethereum.org é mantido pela comunidade de código aberto e dependemos da comunidade para ajudar a mantê-lo atualizado. Se você notar que alguma informação sobre as carteiras listadas precisa ser atualizada, [abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) ou uma [solicitação de pull](https://github.com/ethereum/ethereum-org-website/pulls)!
 
-## Termos de uso {#terms-of-use}
+## Termos de uso \{#terms-of-use}
 
 Consulte também nossos [termos de uso](/terms-of-use/). Informações sobre o ethereum.org são fornecidas exclusivamente para fins de informação geral.

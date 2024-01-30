@@ -13,7 +13,7 @@ lang: tr
 published: 2020-11-14
 ---
 
-## Bu öğretici ne ile ilgili? {#what-is-this-tutorial-about}
+## Bu öğretici ne ile ilgili? \{#what-is-this-tutorial-about}
 
 Bu eğitimde şunları nasıl yapacağınızı öğreneceksiniz:
 
@@ -26,11 +26,11 @@ Varsayımlar:
 - `JavaScript` ve `TypeScript`'e aşinasınız
 - başka `Waffle` öğreticilerini tamamladınız veya bu konuda bir iki şey biliyorsunuz
 
-## Dinamik taklit {#dynamic-mocking}
+## Dinamik taklit \{#dynamic-mocking}
 
 Dinamik taklit neden yararlıdır? Şey, entegrasyon testleri yerine birim testleri yazmamıza izin veriyor. Bu ne demek? Bu, akıllı sözleşmelerin bağımlılıkları hakkında endişelenmemize gerek olmadığı anlamına gelir, böylece hepsini tamamen ayrı ayrı test edebiliriz. Size tam olarak nasıl yapabileceğinizi göstermeme izin verin.
 
-### **1. Proje** {#1-project}
+### **1. Proje** \{#1-project}
 
 Başlamadan önce basit bir node.js projesi hazırlamamız gerekiyor:
 
@@ -69,7 +69,7 @@ Proje yapınız şimdi şöyle görünmeli:
 └── test
 ```
 
-### **2. Akıllı sözleşme** {#2-smart-contract}
+### **2. Akıllı sözleşme** \{#2-smart-contract}
 
 Dinamik taklit etmeye başlamak için bağımlılıkları olan akıllı bir sözleşmeye ihtiyacımız var. Kaygılanmayın, bunu size anlatacağım!
 
@@ -118,7 +118,7 @@ npx waffle
 
 Kolay, değil mi? `build/` klasöründe sözleşmeye ve arayüze karşılık gelen iki dosya belirdi. Onları daha sonra test için kullanacağız.
 
-### **3. Test** {#3-testing}
+### **3. Test** \{#3-testing}
 
 Gerçek test için `AmIRichAlready.test.ts` adında bir dosya oluşturalım. Her şeyden önce, ithalatı halletmemiz gerekiyor. Onlara daha sonra ihtiyaç duyacağız:
 
@@ -253,7 +253,7 @@ Testleri çalıştırırsınız...
 
 ...ve buradasınız! Sözleşmemiz istendiği gibi çalışıyor gibi görünüyor :)
 
-## Sözleşme çağrılarını test etme {#testing-contract-calls}
+## Sözleşme çağrılarını test etme \{#testing-contract-calls}
 
 Şimdiye kadar yaptıklarımı özetleyelim. `AmIRichAlready` sözleşmemizin işlevselliğini test ettik ve düzgün çalışıyor gibi görünüyor. Bu işimizin bittiği anlamına gelir, değil mi? Tam olarak değil! Waffle, sözleşmemizi daha da test etmemizi sağlıyor. Ama nasıl? Waffle'ın zulasıda `calledOnContract()` ve `calledOnContractWith()` eşleyicileri bulunmaktadır. Sözleşmemizin ERC20 taklit sözleşme olarak adlandırılıp adlandırılmadığını kontrol etmemizi sağlayacaklar. İşte bu eşleyicilerden biriyle yapılan temel bir test:
 
@@ -285,7 +285,7 @@ Müthiş, tüm testler yeşil ışık yakıyor.
 
 Waffle ile sözleşme çağrılarını test etmek aşırı kolaydır. En güzel tarafı ise şu: Bu eşleyiciler hem normal hem de taklit sözleşmelerle çalışır! Bunun nedeni, Waffle'ın diğer teknolojiler için popüler test kütüphanelerinde olduğu gibi, kod enjekte etmek yerine EVM çağrılarını kaydetmesi ve filtrelemesidir.
 
-## Bitiş Çizgisi {#the-finish-line}
+## Bitiş Çizgisi \{#the-finish-line}
 
 Tebrikler! Artık sözleşme çağrılarını test etmek ve sözleşmeleri dinamik olarak taklit etmek için Waffle'ı nasıl kullanacağınızı biliyorsunuz. Keşfedilecek çok daha ilginç özellikler var. Waffle'ın belgelerine dalmanızı öneririm.
 

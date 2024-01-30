@@ -4,11 +4,11 @@ description: 以太坊生态系统的资助方案清单。
 lang: zh
 ---
 
-# 在线社区 {#online-communities}
+# 在线社区 \{#online-communities}
 
 数十万以太坊爱好者齐聚这些在线论坛，分享消息、谈论近来的发展、热烈讨论技术问题并畅想未来。
 
-## 论坛 {#forums}
+## 论坛 \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - 所有内容皆关乎以太坊</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 以太坊金融领域，包括去中心化金融</SocialListItem>
@@ -19,7 +19,7 @@ lang: zh
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - 让以太坊开发者相互讨论和并向他们提供帮助</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - 最具影响力的加密经济研究留言板</SocialListItem>
 
-## 聊天室 {#chat-rooms}
+## 聊天室 \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - 专注于为以太坊开发提供项目管理支持的社区。</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - 由 ETHGlobal 管理的 Discord 聊天室：全世界以太坊黑客的线上社区。</SocialListItem>
@@ -32,7 +32,7 @@ lang: zh
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊堆栈交易所</Link> *- 问答论坛*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- 去中心化问答论坛*</SocialListItem>
 
-## YouTube 和 Twitter {#youtube-and-twitter}
+## YouTube 和 Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">以太坊基金会</Link> - 及时了解以太坊基金会的最新动态</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> -以太坊基金会官方账号</SocialListItem>

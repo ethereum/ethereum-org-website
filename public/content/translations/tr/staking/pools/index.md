@@ -13,13 +13,13 @@ summaryPoints:
   - Hisseleme token'larınızı kendi cüzdanınızda tutun
 ---
 
-## Paydaşlık havuzları nedir? {#what-are-staking-pools}
+## Paydaşlık havuzları nedir? \{#what-are-staking-pools}
 
 Paydaşlık havuzları, daha az miktarda ETH'ye sahip birçok kişinin bir dizi doğrulayıcı anahtarını etkinleştirmek için gereken 32 ETH'yi elde etmesine olanak tanıyan ortaklık temelli bir yaklaşımdır. Havuzlama işlevi protokol içinde yerel olarak desteklenmez, bu nedenle çözümler bu ihtiyacı karşılamak için ayrı olarak oluşturulmuştur.
 
 Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarınızı güvenilir bir şekilde yöneten ve izleyen ve size bu değeri temsil eden bir token veren akıllı sözleşmeler kullanarak çalışır. Başka havuzlar ise akıllı sözleşmelere dahil olmayabilirler, onun yerine zincir dışı çalışırlar.
 
-## Neden bir havuz ile hisseleme? {#why-stake-with-a-pool}
+## Neden bir havuz ile hisseleme? \{#why-stake-with-a-pool}
 
 [Staking'e giriş](/staking/) kısmında altını çizdiğimiz faydalara ek olarak havuz ile birlikte getiri elde etmek çok sayıda farklı yarar sağlar.
 
@@ -31,7 +31,7 @@ Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarını
 
 <StakingComparison page="pools" />
 
-## Ne dikkate alınmalı {#what-to-consider}
+## Ne dikkate alınmalı \{#what-to-consider}
 
 Havuzlanmış veya devredilmiş stake etme, Ethereum protokolü tarafından doğal olarak desteklenmez, ancak kullanıcıların 32 ETH'den daha az stake etme talebi göz önüne alındığında, bu talebi karşılamak için artan sayıda çözüm oluşturulmuştur.
 
@@ -45,7 +45,7 @@ Nitelik göstergeleri, listelenen bir stake havuzunun sahip olabileceği dikkate
 
 <StakingConsiderations page="pools" />
 
-## Paydaşlık havuzlarını keşfet {#explore-staking-pools}
+## Paydaşlık havuzlarını keşfet \{#explore-staking-pools}
 
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 
@@ -57,7 +57,7 @@ Ağ güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci �
 
 Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
 
-## Sıkça sorulan sorular {#faq}
+## Sıkça sorulan sorular \{#faq}
 
 <ExpandableCard title="Nasıl ödül kazanabilirim?">
 Tipik olarak ERC-20 hisseleme token'ları, hisselenen ETH artı ödüllerinin değerini temsil eden paydaşlara verilir. Farklı havuzların, kullanıcılarına biraz farklı yöntemlerle hisseleme ödüllerini dağıtacağını aklınızda tutun, ancak bu ortak temadır.
@@ -79,7 +79,7 @@ Merkezi borsalardan farklı olarak, diğer birçok havuzlanmış hisseleme seçe
 Arkalarındaki düğümler söz konusu olduğunda bazı havuzlar diğerlerinden daha merkeziyetsizdir. Ağın sağlığını ve merkeziyetsizliğini teşvik etmek için, pay sahipleri her zaman izinsiz merkeziyetsiz bir dizi düğüm operatörü sağlayan bir havuz hizmeti seçmeye teşvik edilir.
 </ExpandableCard>
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Roket Havuzuyla Staking - Staking'e Genel Bakış](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool belgeleri_
 - [Lido ile Ethereum stake et](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido yardımcı dökümanları_

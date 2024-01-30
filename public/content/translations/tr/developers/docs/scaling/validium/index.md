@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Validium, [ZK toplamalar](/developers/docs/scaling/zk-rollups/) gibi geçerlilik kanıtlarını kullanarak işlemlerin bütünlüğünü sağlamaya çalışan ancak işlem verilerini Ethereum ana ağında saklamayan bir [ölçeklendirme çözümü](/developers/docs/scaling/)dür. Zincir dışı veri kullanılabilirliği birtakım artı ve eksileri içinde barındırırken ölçeklenebilirlik tarafında büyük gelişmelere yol açabilir (validium'lar saniyede [~9000 veya daha fazla işlem yapabilir](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 Bu konuyu anlamak için [Ethereum ölçeklendirme](/developers/docs/scaling/) ve [katman 2](/layer-2) sayfalarını daha önce okumuş olmalısınız.
 
-## Validium nedir? {#what-is-validium}
+## Validium nedir? \{#what-is-validium}
 
 Validium'lar, Ethereum Ana Ağı'ndaki işlemleri zincir dışı veri kullanılabilirliği ve hesaplama yoluyla işleyerek çıktı hacmini artırmak için tasarlanmış ölçeklendirme çözümleridir. Sıfır bilgi toplamaları (ZK toplamaları) gibi validium'lar da Ethereum'daki zincir dışı işlemleri doğrulamak için [sıfır bilgi kanıtları](/glossary/#zk-proof) yayımlar. Bu da geçersiz durum geçişlerini önler ve validium zincirinin güvenlik garantisini artırır.
 
@@ -23,7 +23,7 @@ Ancak validium kullanıcıları fonlarını dondurabilir ve çekme işlemlerini 
 
 Validium'lar ve ZK toplamaları arasındaki en büyük fark, veri kullanılabilirliği spektrumundaki konumlarıdır. Her iki çözüm de veri depolamaya farklı açılardan yaklaşırken bunun güvenlik ve güven gerektirmezlik üzerinde farklı etkileri vardır.
 
-## Validium'lar Ethereum ile nasıl etkileşime girer? {#how-do-validiums-interact-with-ethereum}
+## Validium'lar Ethereum ile nasıl etkileşime girer? \{#how-do-validiums-interact-with-ethereum}
 
 Validium'lar, mevcut Ethereum zinciri üzerine inşa edilmiş ölçeklendirme protokolleridir. İşlemleri zincir dışında yürütmesine rağmen bir validium zinciri, aşağıdakiler de dahil olmak üzere Ana Ağ'da dağıtılan bir dizi akıllı sözleşme tarafından yönetilir:
 
@@ -33,31 +33,31 @@ Validium'lar, mevcut Ethereum zinciri üzerine inşa edilmiş ölçeklendirme pr
 
 Validium'lar, aşağıdaki konularda Ethereum ana zincirine bağımlıdır:
 
-### Uzlaşma {#settlement}
+### Uzlaşma \{#settlement}
 
 Validium üzerinde gerçekleştirilen işlemler, bir üst incir geçerliliklerini doğrulayana kadar tam olarak doğrulanamaz. Bir validium üzerinde yürütülen tüm işler sonunda Ana Ağ'da uzlaştırılmalıdır. Ethereum blokzinciri ayrıca validium kullanıcıları için "uzlaşma garantileri" sağlar; bu, zincir dışı işlemlerin zincir üzerinde gerçekleştirildikten sonra geri alınamayacağı veya değiştirilemeyeceği anlamına gelir.
 
-### Güvenlik {#security}
+### Güvenlik \{#security}
 
 Uzlaşma katmanı görevi gören Ethereum, validium üzerindeki durum geçişlerinin geçerliliğini de garanti eder. Validium zincirinde yürütülen zincir dışı işlemler, Ethereum üzerinde bir akıllı sözleşme aracılığıyla doğrulanır.
 
 Zincir üstü doğrulayıcı sözleşmesi kanıtı geçersiz bulursa işlemler reddedilir. Bu da, operatörlerin validium'un durumunu güncellemeden önce Ethereum protokolü tarafından uygulanan geçerlilik koşullarının karşılanması gerektiği anlamına gelir.
 
-## Validium nasıl çalışır? {#how-does-validium-work}
+## Validium nasıl çalışır? \{#how-does-validium-work}
 
-### İşlemler {#transactions}
+### İşlemler \{#transactions}
 
 Kullanıcılar, validium zincirinde işlemleri yürütmekten sorumlu bir düğüm olan operatöre işlemleri gönderir. Validium'ların bazıları, zinciri yürütmek için tek bir operatör kullanabilir veya dönüşümlü operatörler için bir [hisse ispatı (PoS)](/developers/docs/consensus-mechanisms/pos/) mekanizmasına güvenebilir.
 
 Operatör, işlemleri bir yığın halinde toplar ve kanıtlanmak üzere bir kanıtlama devresine gönderir. Kanıtlama devresi, işlem yığınını (ve diğer ilgili verileri) girdi olarak kabul eder ve işlemlerin doğru şekilde gerçekleştirildiğini doğrulayan bir doğruluk kanıtı sunar.
 
-### Durum taahhütleri {#state-commitments}
+### Durum taahhütleri \{#state-commitments}
 
 Validium'un durumu, kökü Ethereum'daki ana sözleşmede saklanacak şekilde bir Merkle ağacı olarak karma hale getirilir. Durum kökü olarak da bilinen Merkle kökü, validium üzerindeki hesapların ve bakiyelerin mevcut durumu hakkında kriptografik bir taahhüt görevi görür.
 
 Bir durum güncellemesi gerçekleştirmek için operatörün (işlemleri yürüttükten sonra) yeni bir durum kökü hesaplaması ve bunu zincir üstü sözleşmeye göndermesi gerekir. Doğruluk kanıtı doğrulanırsa önerilen durum kabul edilir ve validium yeni durum köküne geçer.
 
-### Yatırma ve çekme işlemleri {#deposits-and-withdrawals}
+### Yatırma ve çekme işlemleri \{#deposits-and-withdrawals}
 
 Kullanıcılar, zincir üstü sözleşmeye ETH (veya herhangi bir ERC uyumlu jeton) yatırarak fonları Ethereum'dan validium'a taşırlar. Sözleşme, kullanıcının yatırdığı miktar ile eşit miktarda varlığı kullanıcının zincir dışı validium'daki adresine aktarır. Operatör ayrıca bu yatırma işlemini yeni bir partiye dahil eder.
 
@@ -65,13 +65,13 @@ Bir validium kullanıcısı, fonları Ana Ağ'a geri çekmek için bir çekme i�
 
 Validium protokolü, sansür karşıtı bir mekanizma olarak kullanıcıların operatöre başvurmadan doğrudan validium sözleşmesinden çekilmelerine olanak tanır. Bu durumda, kullanıcıların doğrulayıcı sözleşmesine hesabın durum köküne dahil edildiğini gösteren bir Merkle kanıtı sunması gerekir. Kanıt kabul edilirse, kullanıcı fonlarını validium'dan çıkarmak için ana sözleşmenin çekme işlevini çağırabilir.
 
-### Toplu gönderme {#batch-submission}
+### Toplu gönderme \{#batch-submission}
 
 Operatör, toplu işlemler gerçekleştirdikten sonra ilişkili doğruluk kanıtını doğrulayıcı sözleşmesine gönderir ve ana sözleşmeye yeni bir durum kökü önerir. Kanıt geçerliyse, ana sözleşme validium'un durumunu günceller ve partideki işlemlerin sonucunu nihai hale getirir.
 
 Bir ZK toplamasının aksine, validium'daki blok üreticilerinin işlem partileri (yalnızca blok başlıkları) için işlem verilerini yayımlamaları gerekmez. Bu da validium'u, ana Ethereum zincirindeki durum verilerini `calldata` olarak yayımlayan "hibrit" ölçeklendirme protokollerinin (yani [katman 2](/layer-2/)) aksine tamamen zincir dışı bir ölçekleme protokolü yapar.
 
-### Veri uygunluğu {#data-availability}
+### Veri uygunluğu \{#data-availability}
 
 Validium operatörleri, belirtildiği gibi Ethereum Ana Ağı'nın tüm işlem verilerinin depoladığı bir zincir dışı veri kullanılabilirliği modeli ile çalışır. Validium'un zincir üstündeki verilerinin kapladığı düşük alan, ölçeklenebilirliği artırır (verim, Ethereum'un veri işleme kapasitesiyle sınırlı değildir) ve kullanıcı ücretlerini azaltır (`calldata` yayımlama maliyeti daha düşüktür).
 
@@ -83,7 +83,7 @@ Validium'daki veri kullanılabilirliği yöneticileri, her validium partisini im
 
 Validium'lar, veri kullanılabilirliği yönetimine yaklaşımları açısından farklılıklar gösterirler. Bazıları durum verilerini depolamak için güvenilir tarafları kullanırken bazıları da görev için rastgele atanmış doğrulayıcıları kullanır.
 
-#### Veri kullanılabilirliği kurulu (DAC) {#data-availability-committee}
+#### Veri kullanılabilirliği kurulu (DAC) \{#data-availability-committee}
 
 Bazı validium çözümleri, zincir dışı verilerin kullanılabilirliğini garanti altına almak için durumun kopyalarını depolamak ve veri kullanılabilirliği kanıtı sağlamak üzere toplu olarak veri kullanılabilirliği kurulu (DAC) olarak da bilinen bir grup güvenilir kuruluşu kullanır. DAC'lerin uygulanması daha kolaydır ve üyelik düşük olduğu için daha az koordinasyon gerektirir.
 
@@ -91,7 +91,7 @@ Bununla birlikte kullanıcılar, gerektiğinde (örneğin, Merkle kanıtları ol
 
 [Validium'lardaki veri kullanılabilirliği kurulları hakkında daha fazla bilgi](https://medium.com/starkware/data-availability-e5564c416424).
 
-#### Teminatlı veri kullanılabilirliği {#bonded-data-availability}
+#### Teminatlı veri kullanılabilirliği \{#bonded-data-availability}
 
 Diğer validium'lar, katılımcıların rollerini üstlenmeden önce jetonları akıllı bir sözleşmede kilitlemek için çevrimdışı veri depolamakla yükümlü olmalarını gerektirir. Bu kilit, veri kullanılabilirliği yöneticileri arasında dürüst davranışı garanti altına almak için bir "teminat" görevi görür ve güven varsayımlarını azaltır. Bu katılımcılar veri kullanılabilirliğini kanıtlayamazlarsa, teminat kesilir.
 
@@ -99,7 +99,7 @@ Teminatlı bir veri kullanılabilirliği şemasında, gerekli kilidi sağlayan h
 
 [Validium'larda teminatlı veri kullanılabilirliği konusunda daha fazla bilgi](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## İstemler ve validium {#volitions-and-validium}
+## İstemler ve validium \{#volitions-and-validium}
 
 Validium birçok avantaj sunsa da bunları elde ederken başka şeylerden vazgeçmeniz gerekir (en önemlisi, veri kullanılabilirliğidir). Birçok ölçeklendirme çözümünde olduğu gibi validiumlar da belirli kullanım durumlarına uygundur ve istemler işte bu nedenle oluşturulmuştur.
 
@@ -107,7 +107,7 @@ Validium birçok avantaj sunsa da bunları elde ederken başka şeylerden vazge�
 
 Merkeziyetsiz bir borsa (DEX), yüksek miktarlı işlemler için validium'un ölçeklenebilir ve özel altyapısını kullanmayı tercih edebilir. Ayrıca ZK toplamalarının daha yüksek güvenlik garantilerini ve güven gerektirmezliğini isteyen kullanıcılar için ZK toplamaları da kullanabilir.
 
-## Validium'lar ve EVM uyumluluğu {#validiums-and-evm-compatibility}
+## Validium'lar ve EVM uyumluluğu \{#validiums-and-evm-compatibility}
 
 ZK toplamaları gibi validium'lar da en çok jeton takasları ve ödemeler gibi basit uygulamalar için uygundur. Sıfır bilgili ispat kullanan bir devrede [EVM](/developers/docs/evm/) talimatlarını kanıtlamanın önemli yükü göz önüne alındığında, validium'lar arasında genel hesaplamayı ve akıllı sözleşme yürütmeyi desteklemek zordur.
 
@@ -117,21 +117,21 @@ Ancak bazı ekipler, ZK ispatlı devreler için mevcut EVM işlem kodlarını op
 
 [zkEVM'ler hakkında daha fazla bilgi](https://www.alchemy.com/overviews/zkevm).
 
-## Validium'lar Ethereum'u nasıl ölçeklendirir? {#scaling-ethereum-with-validiums}
+## Validium'lar Ethereum'u nasıl ölçeklendirir? \{#scaling-ethereum-with-validiums}
 
-### 1. Zincir dışında veri depolama {#off-chain-data-storage}
+### 1. Zincir dışında veri depolama \{#off-chain-data-storage}
 
 İyimser toplamalar ve ZK toplamaları gibi katman 2 ölçeklendirme projeleri, bazı işlem verilerini L1'de yayımlayarak saf zincir dışında ölçeklendirme protokollerinin (örneğin [Plazma](/developers/docs/scaling/plasma/)) sonsuz ölçeklenebilirliğini güvenlik için takas ederler. Bu da toplamaların ölçeklenebilirlik özelliklerinin Ethereum Ana Ağı üzerindeki veri bant genişliği ile sınırlı olduğu anlamına gelir ([veri parçalama](/roadmap/danksharding/) tam da bu nedenle Ethereum'un veri depolama kapasitesini geliştirmeyi önerir).
 
 Validium'lar, tüm işlem verilerini zincir dışında tutarak ve sadece durum güncellemelerini ana Ethereum zincirine aktarmak için durum taahhütlerini (ve doğruluk kanıtlarını) göndererek ölçeklenebilirliğe ulaşır. Bununla birlikte doğruluk kanıtlarının varlığı, validium'lara Plazma ve [yan zincirler](/developers/docs/scaling/sidechains/) dahil olmak üzere diğer saf zincir dışı ölçeklendirme çözümlerinden daha yüksek güvenlik garantileri sağlar. Validium tasarımları, Ethereum'un zincir dışı işlemleri doğrulamadan önce işlemesi gereken veri miktarını azaltarak Ana Ağ'da verimi büyük ölçüde artırır.
 
-### 2. Özyinelemeli kanıtlar {#recursive-proofs}
+### 2. Özyinelemeli kanıtlar \{#recursive-proofs}
 
 Özyinelemeli kanıt, diğer kanıtların geçerliliğini doğrulayan bir doğruluk kanıtıdır. Bu "kanıt kanıtları", önceki tüm kanıtları doğrulayan son bir kanıt oluşturulana kadar birden çok kanıtın özyinelemeli olarak toplanmasıyla oluşturulur. Özyinelemeli kanıtlar, doğruluk kanıtı başına doğrulanabilecek işlem sayısını artırarak blokzincirlerin işleme hızlarını ölçeklendirir.
 
 Genellikle, validium operatörünün doğrulama için Ethereum'a sunduğu her doğruluk kanıtı tek bir bloğun bütünlüğünü doğrular. Tek bir özyinelemeli kanıt, aynı anda birkaç validium bloğunun geçerliliğini doğrulamak için kullanılabilir; bu mekanizma, kanıtlama devresi birkaç blok kanıtını tekrarlı bir şekilde tek bir son kanıtta toplayabildiği için mümkündür. Zincir üstü doğrulayıcı sözleşmesi özyinelemeli kanıtı kabul ederse, altındaki tüm bloklar hemen sonuçlandırılır.
 
-## Validium'un artıları ve eksileri {#pros-and-cons-of-validium}
+## Validium'un artıları ve eksileri \{#pros-and-cons-of-validium}
 
 | Artıları                                                                                                                                         | Eksileri                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Genellikle, validium operatörünün doğrulama için Ethereum'a sunduğu her do
 | İşlem gizliliğini ve ölçeklenebilirliği ön planda tutan alım satım ya da blokzincir oyunları gibi belirli kullanım durumları için uygundur.      | Merkle sahiplik kanıtlarının oluşturulması, zincir dışı verilerin her zaman kullanılabilir olmasını gerektirdiğinden kullanıcıların fon çekmeleri engellenebilir. |
 | Zincir dışında veri kullanılabilirliği, daha yüksek düzeyde verim sağlar ve ölçeklenebilirliği artırır.                                          | Güvenlik modeli, tamamen kriptografik güvenlik mekanizmalarına dayanan ZK toplamalarının aksine, güven varsayımlarına ve kriptoekonomik teşviklere dayanır.       |
 
-### Validium/İstemler kullanın {#use-validium-and-volitions}
+### Validium/İstemler kullanın \{#use-validium-and-volitions}
 
 Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Validium ve istemlere ilişkin uygulamalar sağlayan birden çok proje mevcuttur:
 
@@ -156,7 +156,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz Validium ve istemlere i
 - [Belgeler](https://docs.zksync.io/zkevm/#what-is-zkporter)
 - [Web sitesi](https://zksync.io/)
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla okuma \{#further-reading}
 
 - [Validium ve Katman 2 Yan Yana - Sayı No: 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [ZK toplamaları ve Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)

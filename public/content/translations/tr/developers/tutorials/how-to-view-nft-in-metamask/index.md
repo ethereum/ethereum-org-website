@@ -17,13 +17,13 @@ Tebrikler! NFT öğretici serimizin en kısa ve en basit kısmına geldiniz: Yen
 
 Bir ön koşul olarak, MetaMask'in mobil cihazınızda zaten kurulu olması ve NFT'nizi bastığınız hesabı içermesi gerekir: Uygulamayı [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) veya [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US) üzerinden ücretsiz edinebilirsiniz.
 
-## Adım 1: Ağınızı Sepolia'ya ayarlayın {#set-network-to-sepolia}
+## Adım 1: Ağınızı Sepolia'ya ayarlayın \{#set-network-to-sepolia}
 
 Uygulamanın üst kısmındaki "Wallet" (Cüzdan) düğmesine basın, ardından bir ağ seçmeniz istenecektir. NFT'miz Sepolia ağında basıldığından, ağınız olarak Sepolia'yı seçmeniz makuldür.
 
 ![MetaMask Mobile üzerinde ağınızı Sepolia olarak ayarlama](./goerliMetamask.gif)
 
-## Adım 2: Koleksiyon öğenizi MetaMask'e ekleyin {#add-nft-to-metamask}
+## Adım 2: Koleksiyon öğenizi MetaMask'e ekleyin \{#add-nft-to-metamask}
 
 Sepolia ağına girdikten sonra, sağdaki "Collectibles" (Koleksiyon Öğeleri) sekmesini seçip NFT akıllı sözleşme adresini ve NFT'nizin ERC-721 jeton kimliğini ekleyin: Bunu, öğreticimizin 2. Bölümünde dağıtılan NFT'nizin işlem karması temelinde Etherscan'de bulabilirsiniz.
 

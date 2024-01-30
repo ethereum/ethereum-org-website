@@ -18,7 +18,7 @@ Ethereum ya es una plataforma poderosa para la coordinación global, pero aún s
 
 **Para obtener más información sobre las actualizaciones anteriores de Ethereum, visite nuestra página [Historia](/history/)**
 
-## ¿Qué cambios le esperan a Ethereum? {#what-changes-are-coming}
+## ¿Qué cambios le esperan a Ethereum? \{#what-changes-are-coming}
 
 La hoja de ruta de Ethereum describe las mejoras específicas que se harán en el protocolo en el futuro. En general, la hoja de ruta traerá los siguientes beneficios a los usuarios de Ethereum:
 
@@ -53,7 +53,7 @@ La hoja de ruta de Ethereum describe las mejoras específicas que se harán en e
   />
 </CardGrid>
 
-## ¿Por qué Ethereum necesita una hoja de ruta? {#why-does-ethereum-need-a-roadmap}
+## ¿Por qué Ethereum necesita una hoja de ruta? \{#why-does-ethereum-need-a-roadmap}
 
 Ethereum se actualiza periódciamente para mejorar su escalabilidad, seguridad o sostenibilidad. Uno de los principales puntos fuertes de Ethereum es la adaptación a medida que surgen nuevas ideas de la investigación y el desarrollo. La adaptabilidad le da a Ethereum la flexibilidad para hacer frente a los desafíos emergentes y mantenerse al día con los avances tecnológicos más avanzados.
 
@@ -72,23 +72,23 @@ La hoja de ruta es principalmente el resultado de años de trabajo de investigad
 
 </InfoBanner>
 
-## ¿Cambiará la hoja de ruta de Ethereum con el tiempo? {#will-ethereums-roadmap-change-over-time}
+## ¿Cambiará la hoja de ruta de Ethereum con el tiempo? \{#will-ethereums-roadmap-change-over-time}
 
 Sí, casi seguro que sí. La hoja de ruta es el plan actual para actualizar Ethereum, que cubre los planes a corto plazo y futuros. Esperamos que la hoja de ruta cambie a medida que se disponga de nueva información y tecnología.
 
 Piense en la hoja de ruta de Ethereum como un conjunto de intenciones para mejorar Ethereum; es la mejor hipótesis de los principales investigadores y desarrolladores sobre el camino más óptimo de Ethereum.
 
-## ¿Cuándo terminará la hoja de ruta? {#when-will-the-roadmap-be-finished}
+## ¿Cuándo terminará la hoja de ruta? \{#when-will-the-roadmap-be-finished}
 
 Ethereum implementará algunas actualizaciones en los próximos seis meses (por ejemplo, retiradas de participación); otras tienen una prioridad más baja y es probable que no se implementen durante los próximos 5-10 años (por ejemplo, la resistencia cuántica). Dar un tiempo preciso de cada actualización es complicado de predecir, ya que muchos elementos de la hoja de ruta se trabajan en paralelo y se desarrollan a diferentes velocidades. La urgencia de una actualización también puede cambiar con el tiempo dependiendo de factores externos (por ejemplo, un salto repentino en el rendimiento y la disponibilidad de los ordenadores cuánticos puede hacer que la criptografía resistente a los cuánticos sea más urgente).
 
 Una forma de pensar en el desarrollo de Ethereum es por analogía con la evolución biológica. Es más probable que una red que sea capaz de adaptarse a los nuevos desafíos y mantener la aptitud tenga más éxito que la resistente al cambio, aunque a medida que la red se vuelve cada vez más eficiente, escalable y segura, se requerirán menos cambios en el protocolo.
 
-## ¿Tengo que hacer algo cuando haya una actualización? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## ¿Tengo que hacer algo cuando haya una actualización? \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Las actualizaciones tienden a no afectar a los usuarios finales, excepto al proporcionar mejores experiencias de usuario y un protocolo más seguro y tal vez más <i>opciones</i> sobre cómo interactuar con Ethereum. Los usos finales no están obligados a participar activamente en una actualización, ni están obligados a hacer nada para asegurar sus activos. Los operadores de nodos tendrán que actualizar sus clientes de cara a una actualización. Algunas actualizaciones pueden provocar cambios para los desarrolladores de aplicaciones. Por ejemplo, las actualizaciones de caducidad del historial pueden llevar a los desarrolladores de aplicaciones a obtener datos históricos de nuevas fuentes.
 
-## ¿Y qué pasa con The Verge, The Splurge, etc? {#what-about-the-verge-splurge-etc}
+## ¿Y qué pasa con The Verge, The Splurge, etc? \{#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin propusó una visión para la hoja de ruta de Ethereum](https://twitter.com/VitalikButerin/status/1588669782471368704) que estaba organizada en varias categorías vinculadas por sus efectos a la arquitectura de Ethereum. Incluía:
 
@@ -101,11 +101,11 @@ Las actualizaciones tienden a no afectar a los usuarios finales, excepto al prop
 
 Decidimos no usar esta terminología porque queríamos usar un modelo más simple y centrado en el usuario. Aunque utilizamos un lenguaje centrado en el usuario, la visión sigue siendo la misma que la propuesta por Vitalik.
 
-## ¿Qué pasa con la fragmentación? {#what-about-sharding}
+## ¿Qué pasa con la fragmentación? \{#what-about-sharding}
 
 La fragmentación está dividiendo la cadena de bloques de Ethereum para que los subconjuntos de validadores solo sean responsables de una fracción del total de datos. Originalmente, esta iba a ser la forma de escalar Ethereum. Sin embargo, las acumulaciones de la capa 2 se han desarrollado mucho más rápido de lo esperado y ya han proporcionado mucha escalabilidad, y proporcionarán mucha más después de que se implemente ProtoDanksharding. Esto significa que ya no se necesitan «cadenas fragmentadas» y se han eliminado de la hoja de ruta.
 
-## ¿Busca actualizaciones técnicas específicas? {#looking-for-specific-technical-upgrades}
+## ¿Busca actualizaciones técnicas específicas? \{#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding): Danksharding hace que las acumulaciones de capa 2 sean mucho más baratas para los usuarios al añadir «masas» de datos a los bloques de Ethereum.
 - [Retiradas de participación](/staking/withdrawals): la actualización de Shanghai/Capella posibilitó las retiradas de participación en Ethereum, lo que permitió a las personas desbloquear su ETH en participación.

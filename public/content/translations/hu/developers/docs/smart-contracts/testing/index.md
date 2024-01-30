@@ -5,7 +5,7 @@ lang: hu
 incomplete: true
 ---
 
-## Tesztelő eszközök és könyvtárak {#testing-tools-and-libraries}
+## Tesztelő eszközök és könyvtárak \{#testing-tools-and-libraries}
 
 **Waffle -** **_Egy keretrendszer haladó okos szerződés fejlesztéshez és teszteléshez (ethers.js alapján)._**
 
@@ -32,7 +32,7 @@ incomplete: true
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Dokumentáció](https://docs.openzeppelin.com/test-helpers)
 
-## Kapcsolódó útmutatók {#related-tutorials}
+## Kapcsolódó útmutatók \{#related-tutorials}
 
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– A Travis vagy a Circle CI telepítése a Truffle-höz, valamint hasznos tesztelési pluginok._
 - [Testing products overview](/developers/tutorials/guide-to-smart-contract-security-tools/) _– A külöböző tesztelési termékek bemutatása és összehasonlítása._
@@ -42,6 +42,6 @@ incomplete: true
 - [Solidity szerződés mockup-ok teszteléshez](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Truffle Test migráció az OpenZeppelin Teszt környezetbe](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_

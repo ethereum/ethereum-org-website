@@ -4,13 +4,13 @@ description: Pontes permitem que os usuários movam seus fundos entre blockchain
 lang: pt-br
 ---
 
-# Pontes de blockchains {#prerequisites}
+# Pontes de blockchains \{#prerequisites}
 
 _Web3 evoluiu para um ecossistema de soluções de escala L1 e L2, cada uma projetada com capacidades e escolhas únicas. À medida que o número de protocolos blockchain aumenta, também aumenta [a demanda para mover ativos entre as cadeias](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Para atender a essa demanda, precisamos de pontes._
 
 <Divider />
 
-## O que são pontes? {#what-are-bridges}
+## O que são pontes? \{#what-are-bridges}
 
 As pontes de blockchain funcionam como as pontes que conhecemos no mundo físico. Assim como uma ponte física conecta dois locais físicos, uma ponte blockchain conecta dois ecossistemas do blockchain. As pontes facilitam a comunicação entre blockchains por meio da transferência de informações e ativos.
 
@@ -20,7 +20,7 @@ Você é dos EUA e está planejando uma viagem à Europa. Você tem Dólar, mas 
 
 Mas, o que você faz se quiser fazer uma troca parecida para usar um blockchain diferente? Digamos que você queira trocar ETH na rede principal Ethereum por ETH no [Arbitrum](https://arbitrum.io/). Como o câmbio de moedas que fizemos por Euro, precisamos de um mecanismo para mover nosso ETH do Ethereum para o Arbitrum. As pontes tornam essa transação possível. Neste caso, a [Arbitrum tem uma ponte nativa](https://bridge.arbitrum.io/) que pode transferir o ETH da rede principal para o Arbitrum.
 
-## Por que precisamos de pontes? {#why-do-we-need-bridges}
+## Por que precisamos de pontes? \{#why-do-we-need-bridges}
 
 Todos os blockchains têm suas limitações. Para o Ethereum crescer e acompanhar a demanda, ela precisou de rollups. Em alternativa, L1s como Javier Solana e Avalanche são concebidos de forma diferente para permitir uma taxa de transferência mais elevada, mas à custa de descentralização.
 
@@ -39,23 +39,23 @@ Pontes possibilitam:
 
 <Divider />
 
-## Casos de utilização de pontes {#bridge-use-cases}
+## Casos de utilização de pontes \{#bridge-use-cases}
 
 Seguem alguns cenários onde você pode usar uma ponte:
 
-### Diminuir as taxas de transação {#transaction-fees}
+### Diminuir as taxas de transação \{#transaction-fees}
 
 Digamos que você tenha ETH na mainet (rede principal) Ethereum, mas queira taxas de transação mais baratas para explorar diferentes dapps. Ao fazer uma ponte do seu ETH da Mainnet para uma rollup Ethereum L2, você poderá usufruir de taxas de transação mais baixas.
 
-### Dapps em outros blockchains {#dapps-other-chains}
+### Dapps em outros blockchains \{#dapps-other-chains}
 
 Se você usa o Aave na rede principal Ethereum para emprestar Dólar Herete, mas a taxa de juros para empréstimos Dólar Herete usando Aave no Polygon é maior.
 
-### Explorar os ecossistemas de blockchain {#explore-ecosystems}
+### Explorar os ecossistemas de blockchain \{#explore-ecosystems}
 
 Se você tiver o ETH na Ethereum Mainnet e quiser explorar um alt L1 para experimentar seus dapps nativos. Você pode usar uma ponte para transferir o seu ETH da rede principal Ethereum para o alt L1.
 
-### Possuir ativos nativos de cripto {#own-native}
+### Possuir ativos nativos de cripto \{#own-native}
 
 Digamos que você queira possuir Bitcoin nativo (BTC), mas você só tem fundos na rede principal Ethereum. Para ganhar exposição à BTC na Ethereum, você pode comprar Bitcoin Envolvido (WBTC). Entretanto, o WBTC é um token ERC-20 nativo da rede Ethereum, o que significa que é uma versão Ethereum do Bitcoin e não o ativo original do blockchain do Bitcoin. Para possuir BTC nativa, você teria que ligar os seus ativos do Ethereum para Bitcoin usando uma ponte. Isso converter suas WBTC em BTC nativa, por meio da ponte. Como alternativa, você pode possuir BTC e querer usá-la em protocolos de DeFi no Ethereum. Isso exigiria fazer uma ponte no caminho inverso, de BTC para WBTC, que podem ser usados como ativos no Ethereum.
 
@@ -65,7 +65,7 @@ Digamos que você queira possuir Bitcoin nativo (BTC), mas você só tem fundos 
 
 <Divider />
 
-## Tipos de pontes {#types-of-bridge}
+## Tipos de pontes \{#types-of-bridge}
 
 As pontes têm muitos tipos de desenhos e complexidades. Em geral, as pontes caem em duas categorias: pontes confiáveis e não confiáveis.
 
@@ -95,7 +95,7 @@ Muitas soluções de ponte adotam modelos entre esses dois extremos, com graus v
 
 <Divider />
 
-## Riscos ao usar pontes {#bridge-risk}
+## Riscos ao usar pontes \{#bridge-risk}
 
 As pontes estão nos estágios iniciais de desenvolvimento. É provável que o projeto ideal de ponte ainda não tenha sido descoberto. Interagir com qualquer tipo de ponte traz riscos:
 
@@ -121,7 +121,7 @@ As pontes são cruciais para integrar usuários às camadas 2 do Ethereum e até
 
 <Divider />
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [EIP-5164: Execução entre cadeias](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junho de 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julho de 2022 - Bartek Kiepuszewski_

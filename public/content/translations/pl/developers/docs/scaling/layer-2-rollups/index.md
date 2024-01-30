@@ -8,17 +8,17 @@ sidebarDepth: 3
 
 Warstwa 2 to zbiorczy termin dla rozwiązań zaprojektowanych, aby pomóc w skalowaniu aplikacji poprzez obsługę transakcji poza siecią główną Ethereum (warstwa 1), jednocześnie korzystając z solidnego zdecentralizowanego modelu bezpieczeństwa sieci głównej. Szybkość transakcji pogarsza się, gdy sieć jest zajęta, co może pogorszyć wrażenia użytkownika w przypadku niektórych rodzajów aplikacji zdecentralizowanych. A gdy sieć staje się coraz bardziej zajęta, ceny gazu rosną, ponieważ nadawcy transakcji starają się przelicytować się nawzajem. To może sprawić, że korzystanie z Ethereum będzie bardzo kosztowne.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawansowaną wiedzę na temat [skalowania Ethereum](/developers/docs/scaling/). Wdrażanie rozwiązań skalujących takich jak pakiety zbiorcze jest trudnym tematem, ponieważ technologia nie jest jeszcze sprawdzona w boju i nadal jest badana i rozwijana.
 
-## Dlaczego warstwa 2 jest potrzebna? {#why-is-layer-2-needed}
+## Dlaczego warstwa 2 jest potrzebna? \{#why-is-layer-2-needed}
 
 - Niektóre przypadki użytkowania, takie jak gry blockchain, nie mają sensu z bieżącymi czasami transakcji
 - Korzystanie z aplikacji blockchain może być niepotrzebnie kosztowne
 - Żadne aktualizacje skalowalności nie powinny odbywać się kosztem decentralizacji ani bezpieczeństwa — warstwa 2 wykorzystuje Ethereum.
 
-## Pakiety zbiorcze {#rollups}
+## Pakiety zbiorcze \{#rollups}
 
 Pakiety zbiorcze to rozwiązania, które <em x-id="4">wykonują</em> transakcje poza głównym łańcuchem Ethereum (warstwa 1), ale publikują <em x-id="4">dane</em> transakcji w warstwie 1. Ponieważ <em x-id="4">dane</em> transakcji znajdują się w warstwie 1, możliwe jest zabezpieczenie pakietów zbiorczych przez warstwę 1. Dziedziczenie właściwości bezpieczeństwa warstwy 1, przy jednoczesnym wykonywaniu operacji poza warstwą 1, jest cechą definiującą pakiety zbiorcze.
 
@@ -41,7 +41,7 @@ Istnieją dwa typy pakietów zbiorczych z różnymi modelami zabezpieczeń:
 - **Pakiety zbiorcze o wiedzy zerowej**: uruchamiają obliczenia off-chain i przesyłają do łańcucha [**dowód ważności**](/glossary/#validity-proof)
 - **Optymistyczne pakiety zbiorcze**: zakładają, że transakcje są domyślnie ważne i w razie problemów uruchamiają jedynie obliczenia za pośrednictwem [**dowodu oszustwa**](/glossary/#fraud-proof)
 
-### Pakiety zbiorcze o wiedzy zerowej {#zk-rollups}
+### Pakiety zbiorcze o wiedzy zerowej \{#zk-rollups}
 
 Pakiety zbiorcze o wiedzy zerowej, znane również jako pakiety zbiorcze, łączą setki transferów off-chain i generują dowód kryptograficzny, znany jako SNARK (succinct non-interactive argument of knowledge). Określa się to jako dowód ważności, który jest publikowany w warstwie 1.
 
@@ -51,7 +51,7 @@ W przypadku pakietu zbiorczego ZK nie ma opóźnień przy przenoszeniu środków
 
 Ponieważ pakiety zbiorcze ZK znajdują się w warstwie 2, mogą być zoptymalizowane w celu dalszego zmniejszenia rozmiaru transakcji. Na przykład konto jest reprezentowane przez indeks zamiast adres, co zmniejsza transakcję z 32 bajtów do zaledwie 4 bajtów. Transakcje są także zapisywane w Ethereum jako `calldata`, co ogranicza gaz.
 
-#### Zalety i wady {#zk-pros-and-cons}
+#### Zalety i wady \{#zk-pros-and-cons}
 
 | Zalety                                                                                                                            | Wady                                                                                                                              |
 | --------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -59,7 +59,7 @@ Ponieważ pakiety zbiorcze ZK znajdują się w warstwie 2, mogą być zoptymaliz
 | Niepodatne na ataki ekonomiczne, na które mogą być podatne [optymistyczne pakiety zbiorcze](#optimistic-pros-and-cons).           | Obliczenia dowodu ważności są intensywne – nie warto ich przeprowadzać w przypadku aplikacji o niewielkiej aktywności w łańcuchu. |
 | Są bezpieczne i zdecentralizowane, ponieważ dane, które są potrzebne do odzyskania stanu, są przechowywane w łańcuchu warstwy 1.  | Operator może wpływać na zamawianie transakcji                                                                                    |
 
-#### Użycie pakietów zbiorczych ZK {#use-zk-rollups}
+#### Użycie pakietów zbiorczych ZK \{#use-zk-rollups}
 
 Istnieje wiele implementacji pakietów zbiorczych ZK, które można zintegrować z własnymi aplikacjami zdecentralizowanymi:
 
@@ -70,7 +70,7 @@ Istnieje wiele implementacji pakietów zbiorczych ZK, które można zintegrować
 - [Sieć Hermez](https://hermez.io/)
 - [zkTube](https://zktube.io/)
 
-### Optymistyczne pakiety zbiorcze {#optimistic-rollups}
+### Optymistyczne pakiety zbiorcze \{#optimistic-rollups}
 
 Optymistyczne pakiety zbiorcze są umieszczone równolegle do głównego łańcucha Ethereum w warstwie 2. Mogą one oferować ulepszenia skalowalności, ponieważ domyślnie nie dokonują żadnych obliczeń. Zamiast tego, po dokonaniu transakcji proponują nowy stan do sieci głównej, czyli „notarialnie” potwierdzają transakcję.
 
@@ -78,7 +78,7 @@ W przypadku optymistycznych pakietów zbiorczych transakcje są zapisywane w ła
 
 Ponieważ obliczanie to powolna, droga część korzystania z Ethereum, optymistyczne pakiety zbiorcze mogą przynieść nawet 10-100-krotną poprawę skalowalności zależną od transakcji. Ta liczba zwiększy się jeszcze bardziej wraz z wprowadzeniem [łańcuchów odłamkowych](/roadmap/danksharding). Wynika to z faktu, że w przypadku zakwestionowania transakcji dostępnych będzie więcej danych.
 
-#### Transakcje sporne {#disputing-transactions}
+#### Transakcje sporne \{#disputing-transactions}
 
 Optymistyczne pakiety zbiorcze nie obliczają transakcji, więc potrzebny jest mechanizm zapewniający, że transakcje są legalne, a nie oszukańcze. W tym miejscu pojawiają się dowody oszustwa. Jeśli ktoś powiadomi o oszukańczej transakcji, pakiet zbiorczy wykryje oszustwo i uruchomi obliczenie transakcji przy użyciu dostępnych danych o stanie. Oznacza to, że możesz mieć dłuższy czas oczekiwania na potwierdzenie transakcji niż w przypadku pakietu zbiorczego ZK, ponieważ może być zakwestionowana.
 
@@ -90,14 +90,14 @@ Gaz potrzebny do obliczenia dowodu oszustwa jest nawet refundowany. Ben Jones z 
 
 Widać więc zachęty: uczestnicy są karani za prowadzenie oszustw i otrzymują zwrot kosztów za ich udowodnienie.
 
-#### Zalety i wady {#optimistic-pros-and-cons}
+#### Zalety i wady \{#optimistic-pros-and-cons}
 
 | Zalety                                                                                                                                                        | Wady                                                                                             |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | Wszystko, co możesz zrobić na warstwie 1 Ethereum, możesz zrobić za pomocą optymistycznych pakietów zbiorczych ze względu na kompatybilność z EVM i Solidity. | Długi czas oczekiwania na transakcję on-chain ze względu na potencjalne kwestionowanie oszustwa. |
 | Wszystkie dane transakcji są przechowywane w łańcuchu warstwy 1, co oznacza, że są bezpieczne i zdecentralizowane.                                            | Operator może wpływać na zamawianie transakcji                                                   |
 
-#### Stosowanie optymistycznych pakietów zbiorczych {#use-optimistic-rollups}
+#### Stosowanie optymistycznych pakietów zbiorczych \{#use-optimistic-rollups}
 
 Istnieje wiele implementacji optymistycznych pakietów zbiorczych, które można zintegrować z własnymi aplikacjami zdecentralizowanymi:
 
@@ -107,15 +107,15 @@ Istnieje wiele implementacji optymistycznych pakietów zbiorczych, które można
 - [Cartesi](https://cartesi.io)
 - [Boba](https://boba.network/)
 
-## Rozwiązania hybrydowe {#hybrid-solutions}
+## Rozwiązania hybrydowe \{#hybrid-solutions}
 
 Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wielu technologii warstwy 2 i mogą oferować konfigurowalne kompromisy.
 
-### Używanie rozwiązań hybrydowych {#use-hybrid-solutions}
+### Używanie rozwiązań hybrydowych \{#use-hybrid-solutions}
 
 - [Celer](https://www.celer.network/)
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [Niekompletny przewodnik po pakietach zbiorczych](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)

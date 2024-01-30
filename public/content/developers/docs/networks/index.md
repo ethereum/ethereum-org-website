@@ -8,21 +8,21 @@ Ethereum networks are groups of connected computers that communicate using the E
 
 Your Ethereum account will work across the different networks, but your account balance and transaction history won't carry over from the main Ethereum network. For testing purposes, it's useful to know which networks are available and how to get testnet ETH to play around with. In general, for security considerations, it's not recommended to reuse mainnet accounts on testnets or vice versa.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 You should understand the [basics of Ethereum](/developers/docs/intro-to-ethereum/) before reading up on the different networks, as the test networks will give you a cheap, safe version of Ethereum to play around with.
 
-## Public networks {#public-networks}
+## Public networks \{##public-networks}
 
 Public networks are accessible to anyone in the world with an internet connection. Anyone can read or create transactions on a public blockchain and validate the transactions being executed. The consensus among peers decides on the inclusion of transactions and the state of the network.
 
-### Ethereum Mainnet {#ethereum-mainnet}
+### Ethereum Mainnet \{##ethereum-mainnet}
 
 Mainnet is the primary public Ethereum production blockchain, where actual-value transactions occur on the distributed ledger.
 
 When people and exchanges discuss ETH prices, they're talking about Mainnet ETH.
 
-### Ethereum Testnets {#ethereum-testnets}
+### Ethereum Testnets \{##ethereum-testnets}
 
 In addition to Mainnet, there are public testnets. These are networks used by protocol developers or smart contract developers to test both protocol upgrades as well as potential smart contracts in a production-like environment before deployment to Mainnet. Think of this as an analog to production versus staging servers.
 
@@ -36,7 +36,7 @@ ETH on testnets is supposed to have no real value; however, there have been mark
 
 The two public testnets that client developers are currently maintaining are Sepolia and Goerli. Sepolia is a network for contract and application developers to test their applications. The Goerli network lets protocol developers test network upgrades, and lets stakers test running validators.
 
-#### Sepolia {#sepolia}
+#### Sepolia \{##sepolia}
 
 **Sepolia is the recommended default testnet for application development**.
 The Sepolia network uses a permissioned validator set. It's fairly new, meaning its state and history are both quite small. This means the network is quick to sync to and that running a node on it requires less storage. This is useful for users who want to quickly spin up a node and interact with the network directly.
@@ -63,7 +63,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
 - [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
-#### Goerli _(long-term support)_ {#goerli}
+#### Goerli _(long-term support)_ \{##goerli}
 
 _Note: [the Goerli testnet is deprecated](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) and will be replaced by [Holesovice](https://github.com/eth-clients/holesovice) in 2023. Please consider migrating your applications to Sepolia._
 
@@ -92,11 +92,11 @@ Goerli is a testnet for testing validating and staking. The Goerli network is op
 
 To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 
-### Layer 2 testnets {#layer-2-testnets}
+### Layer 2 testnets \{##layer-2-testnets}
 
 [Layer 2 (L2)](/layer-2/) is a collective term to describe a specific set of Ethereum scaling solutions. A layer 2 is a separate blockchain that extends Ethereum and inherits the security guarantees of Ethereum. Layer 2 testnets are usually tightly coupled to public Ethereum testnets.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Goerli \{##arbitrum-goerli}
 
 A testnet for [Arbitrum](https://arbitrum.io/).
 
@@ -104,7 +104,7 @@ A testnet for [Arbitrum](https://arbitrum.io/).
 
 - [Chainlink faucet](https://faucets.chain.link/)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Goerli \{##optimistic-goerli}
 
 A testnet for [Optimism](https://www.optimism.io/).
 
@@ -113,7 +113,7 @@ A testnet for [Optimism](https://www.optimism.io/).
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Goerli \{##starknet-goerli}
 
 A testnet for [Starknet](https://www.starknet.io).
 
@@ -121,28 +121,28 @@ A testnet for [Starknet](https://www.starknet.io).
 
 - [Starknet faucet](https://faucet.goerli.starknet.io)
 
-## Private networks {#private-networks}
+## Private networks \{##private-networks}
 
 An Ethereum network is a private network if its nodes are not connected to a public network (i.e. Mainnet or a testnet). In this context, private only means reserved or isolated, rather than protected or secure.
 
-### Development networks {#development-networks}
+### Development networks \{##development-networks}
 
 To develop an Ethereum application, you'll want to run it on a private network to see how it works before deploying it. Similar to how you create a local server on your computer for web development, you can create a local blockchain instance to test your dapp. This allows for much faster iteration than a public testnet.
 
 There are projects and tools dedicated to assist with this. Learn more about [development networks](/developers/docs/development-networks/).
 
-### Consortium networks {#consortium-networks}
+### Consortium networks \{##consortium-networks}
 
 The consensus process is controlled by a pre-defined set of nodes that are trusted. For example, a private network of known academic institutions that each govern a single node, and blocks are validated by a threshold of signatories within the network.
 
 If a public Ethereum network is like the public internet, a consortium network is like a private intranet.
 
-## Related tools {#related-tools}
+## Related tools \{##related-tools}
 
 - [Chainlist](https://chainlist.org/) _list of EVM networks to connect wallets and providers to the appropriate Chain ID and Network ID_
 - [EVM-based Chains](https://github.com/ethereum-lists/chains) _GitHub repo of chain metadata that powers Chainlist_
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Proposal: Predictable Ethereum Testnet Lifecycle](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [The Evolution of Ethereum Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

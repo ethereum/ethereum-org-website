@@ -5,25 +5,25 @@ lang: pl
 postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
-# Wprowadzenie do zarządzania Ethereum {#introduction}
+# Wprowadzenie do zarządzania Ethereum \{#introduction}
 
 _Jeżeli nikt nie jest właścicielem Ethereum, w jaki sposób podejmowane są decyzje dotyczące przeszłych i przyszłych zmian w Ethereum? Zarządzanie Ethereum odnosi się do procesu, który umożliwia podejmowanie takich decyzji._
 
 <Divider />
 
-## Czym jest zarządzanie? {#what-is-governance}
+## Czym jest zarządzanie? \{#what-is-governance}
 
 Zarządzanie to istniejące systemy, które umożliwiają podejmowanie decyzji. W typowej strukturze organizacyjnej ostateczny głos w procesie decyzyjnym może mieć zespół wykonawczy lub zarząd dyrektorów. Albo być może to akcjonariusze głosują nad propozycjami uchwalenia zmian. W systemie politycznym wybrani urzędnicy mogą uchwalać przepisy, które próbują reprezentować pragnienia swoich wyborców.
 
-## Zdecentralizowane zarządzanie {#decentralized-governance}
+## Zdecentralizowane zarządzanie \{#decentralized-governance}
 
 Nikt nie jest właścicielem ani nie kontroluje protokołu Ethereum, jednak decyzje wciąż muszą być podejmowane o wprowadzaniu zmian aby zapewnić długowieczność i dobrobyt sieci. Ten brak własności sprawia, że tradycyjne zarządzanie organizacyjne jest niekompatybilnym rozwiązaniem.
 
-## Zarządzanie Ethereum {#ethereum-governance}
+## Zarządzanie Ethereum \{#ethereum-governance}
 
 Zarządzanie Ethereum to proces, za pomocą którego wprowadzane są zmiany protokołu. Ważne jest, aby zaznaczyć, że ten proces nie jest związany z tym, jak ludzie i aplikacje używają protokołu — Ethereum jest udostępniane każdemu (permissionless). Każdy z jakiegokolwiek miejsca na świecie może uczestniczyć w działaniach na łancuchu (on-chain). Nie ma ustanowionych reguł kto może lub nie może zbudować aplikacji lub wysłać transakcji. Istnieje jednak proces, aby zaproponować zmiany w protokole podstawowym, na bazie których działają zdecentralizowane aplikacje. Ponieważ tak wiele osób liczy na stabilność Ethereum, istnieje bardzo wysoki próg kordynacyjny dla wprowadzenia zasadniczych zmian, zawierających procesy społeczne i techniczne, aby zapewnić bezpieczeństwo i szerokie poparcie społeczności dla wszelkich zmian w Ethereum.
 
-### Zarządzanie na łańcuchu kontra poza łańcuchem (on-chain vs off-chain) {#on-chain-vs-off-chain}
+### Zarządzanie na łańcuchu kontra poza łańcuchem (on-chain vs off-chain) \{#on-chain-vs-off-chain}
 
 Technologia blockchain umożliwia nowe możliwości w zakresie zarządzania, znane jako zarządzanie on-chain. Zarządzanie on-chain polega na podejmowaniu decyzji o proponowanych zmianach na protokole w drodze głosowania interesariuszy, zazwyczaj przez posiadaczy tokena uprawniającego do zarządzania, a głosowanie odbywa się na blockchainie. W przypadku niektórych form zarządzania na łańcuchu, proponowane zmiany protokołu są już zapisane w kodzie i wdrażane automatycznie, jeżeli udziałowcy zatwierdzą zmiany poprzez podpisanie transakcji.
 
@@ -39,7 +39,7 @@ _Podczas gdy na poziomie protokołu zarządzanie Ethereum odbywa się poza łań
 
 <Divider />
 
-## Kto jest zaangażowany? {#who-is-involved}
+## Kto jest zaangażowany? \{#who-is-involved}
 
 W [społeczności Ethereum](/community/) znajdują się różni udziałowcy, a każdy odgrywa rolę w procesie zarządzania. Zaczynając od udziałowców najbardziej oddalonych od protokołu i zbliżając się, mamy:
 
@@ -55,7 +55,7 @@ _Uwaga: każda osoba może być częścią wielu z tych grup (np. deweloper prot
 
 <Divider />
 
-## Czym jest EIP? {#what-is-an-eip}
+## Czym jest EIP? \{#what-is-an-eip}
 
 Jednym z ważniejszych procesów zarządzania Ethereum jest tzw. **Propozycja Ulepszenia Ethereum (EIP)**. EIP są standardami określającymi nowe funkcje lub procesy dla Ethereum. Każdy członek społeczności Ethereum może stworzyć EIP. Jeżeli jesteś zainteresowany stworzeniem EIP lub uczestnictwem w weryfikacji i/lub zarządzaniem zobacz:
 
@@ -65,7 +65,7 @@ Jednym z ważniejszych procesów zarządzania Ethereum jest tzw. **Propozycja Ul
 
 <Divider />
 
-## Proces formalny {#formal-process}
+## Proces formalny \{#formal-process}
 
 Proces formalny wprowadzania zmian do protokołu Ethereum jest następujący:
 
@@ -87,17 +87,17 @@ Proces formalny wprowadzania zmian do protokołu Ethereum jest następujący:
 
 Ten przebieg, choć bardzo uproszczony, daje obraz istotnych etapów aktywacji zmiany protokołu na Ethereum. Przyjrzyjmy się teraz nieformalnym czynnikom odgrywającym rolę w tym procesie.
 
-## Proces nieformalny {#informal-process}
+## Proces nieformalny \{#informal-process}
 
-### Rozumienie wcześniejszych prac {#prior-work}
+### Rozumienie wcześniejszych prac \{#prior-work}
 
 Mistrzowie EIP powinni zapoznać się z wcześniejszymi pracami i propozycjami przed stworzeniem EIP, które można poważnie rozważyć do wdrożenia w sieci głównej Ethereum. W ten sposób EIP może wnieść coś nowego, co nie zostało wcześniej odrzucone. Trzy główne miejsca, w których można to sprawdzić to [repozytorium EIP](https://github.com/ethereum/EIPs), [forum Ethereum Magicians](https://ethereum-magicians.org/) i [ethresear.ch](https://ethresear.ch/).
 
-### Grupy robocze {#working-groups}
+### Grupy robocze \{#working-groups}
 
 Mało prawdopodobne jest, aby wstępny projekt EIP został wdrożony do sieci głównej Ethereum bez edycji lub zmian. Zasadniczo mistrzowie EIP będą pracować z podzbiorem deweloperów protokołów w celu określenia, implementacji, przetestowania, iteracji i sfinalizowania ich propozycji. Dawniej takie grupy robocze wymagały kilku miesięcy (a czasem lat!) pracy. Podobnie, mistrzowie EIP dla takich zmian powinni angażować odpowiednich deweloperów aplikacji/narzędzi na wczesnym etapie ich wysiłków w celu zebrania opinii użytkowników końcowych i złagodzenia wszelkich zagrożeń związanych z wdrożeniem.
 
-### Konsensus społeczności {#community-consensus}
+### Konsensus społeczności \{#community-consensus}
 
 Podczas gdy niektóre EIP są nieskomplikowanymi ulepszeniami technicznymi z minimalnymi poprawkami, niektóre są bardziej złożone i wiążą się z kompromisami, które będą miały różny wpływ na różnych udziałowców. Oznacza to, że niektóre EIP są bardziej kontrowersyjne w społeczności niż inne.
 
@@ -109,13 +109,13 @@ Poza bezpieczeństwem sieci Ethereum, deweloperzy protokołów dawniej przywiąz
 
 <Divider />
 
-## Radzenie sobie z nieporozumieniami {#disagreements}
+## Radzenie sobie z nieporozumieniami \{#disagreements}
 
 Posiadanie wielu udziałowców z różnymi motywacjami i przekonaniami oznacza, że nieporozumienia nie są rzadkością.
 
 Zasadniczo, nieporozumienia są rozwiązywane za pomocą długich dyskusji na forach publicznych, aby zrozumieć źródło problemu i umożliwić każdemu wypowiedzenie się. Zazwyczaj jedna z grup ustępuje lub osiągane jest szczęśliwe kompromisowe rozwiązanie. Jeśli jedna grupa czuje się wystarczająco silna, wymuszenie konkretnej zmiany może doprowadzić do podziału łańcucha. Podział łańcucha ma miejsce, gdy niektórzy udziałowcy protestują przeciwko wdrożeniu zmiany protokołu, w wyniku czego działają różne, niekompatybilne wersje protokołu, z których wyłaniają się dwa osobne blockchainy.
 
-### Fork DAO {#dao-fork}
+### Fork DAO \{#dao-fork}
 
 Forki następują, wtedy kiedy należy dokonać ważnych aktualizacji technicznych lub zmian w sieci i zmienić „zasady” protokołu. [Klienci Ethereum](/developers/docs/nodes-and-clients/) muszą zaktualizować swoje oprogramowanie, aby wdrożyć nowe zasady forków.
 
@@ -139,7 +139,7 @@ Obejrzyj po więcej informacji o włamaniu do DAO:
 
 <Divider />
 
-### Użyteczność forkowania {#forking-utility}
+### Użyteczność forkowania \{#forking-utility}
 
 Fork Ethereum/Ethereum Classic jest doskonałym przykładem prawidłowego forka. Mieliśmy dwie grupy, które tak mocno nie zgadzały się ze sobą w kwestii pewnych podstawowych wartości, że uznały, że warto było podjąć ryzyko związane z realizacją ich konkretnych kierunków działania.
 
@@ -147,7 +147,7 @@ Zdolność do zforkowania w obliczu znaczących różnic politycznych, filozofic
 
 <Divider />
 
-## Zarządzanie łańcuchem śledzącym {#beacon-chain}
+## Zarządzanie łańcuchem śledzącym \{#beacon-chain}
 
 Proces zarządzania Ethereum często zamienia szybkość i wydajność na otwartość i integracyjność. Aby przyspieszyć rozwój łańcucha śledzącego, został on uruchomiony niezależnie od sieci proof-of-work Ethereum i podlegał własnym praktykom zarządzania.
 
@@ -161,7 +161,7 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 
 <Divider />
 
-## Jak mogę się zaangażować? {#get-involved}
+## Jak mogę się zaangażować? \{#get-involved}
 
 - [Zaproponuj EIP](/eips/#participate)
 - [Dyskutuj na temat aktualnych propozycji](https://ethereum-magicians.org/)
@@ -171,7 +171,7 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 - [Przyczyń się do rozwoju klientów](/developers/docs/nodes-and-clients/#execution-clients)
 - [Program stażowy dla głównych deweloperów](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 Zarządzanie w Ethereum nie jest jednoznacznie zdefiniowane. Perspektywy na ten temat różnią się wśród różnych uczestników społeczności. Oto kilka z nich:
 

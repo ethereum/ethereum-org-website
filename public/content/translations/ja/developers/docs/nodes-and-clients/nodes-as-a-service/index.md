@@ -5,15 +5,15 @@ lang: ja
 sidebarDepth: 2
 ---
 
-## はじめに {#Introduction}
+## はじめに \{#Introduction}
 
 自分自身で[イーサリアムノード](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)を実行するのは、特に始めての場合や、急速にスケーリングするときには難しい場合があります。 既に最適化されたノードインフラストラクチャを実行する[サービス](#popular-node-services)がいくつかあり、利用するとアプリケーションや製品開発に集中できるようになります。 ノード運用サービスがどのように機能するか、それらを使用するメリットとデメリット、またご興味がある方向けにプロバイダーを記載します。
 
-## 前提知識 {#prerequisites}
+## 前提知識 \{#prerequisites}
 
 ノードやクライアントが何かについてご存知ではない場合、[ノードとクライアント](/developers/docs/nodes-and-clients/)を参照してください。
 
-## ステーカー {#stakoooooooooooooors}
+## ステーカー \{#stakoooooooooooooors}
 
 ソロステーカーは、サードパーティプロバイダーを使用せず、自分のインフラストラクチャを運用する必要があります。 これは、実行クライアントとコンセンサスクライアントの両方を実行することを意味します。 [マージ](/roadmap/merge)前は、コンセンサスクライアントのみを実行し、実行データに関しては中央集中型のプロバイダーを使用できましたが、これはもうできなくなり、ソロステーカーは、両方のクライアントを実行する必要があります。 しかし、このプロセスを容易にするために利用できるサービスがあります。
 
@@ -21,7 +21,7 @@ sidebarDepth: 2
 
 このページに記載されているサービスは、ステーキング以外のノードについてです。
 
-## ノード運用サービスの仕組み {#how-do-node-services-work}
+## ノード運用サービスの仕組み \{#how-do-node-services-work}
 
 ノード運用サービスプロバイダーは、分散ノードクライアントの実行を代行し、利用者の負担を軽減してくれます。
 
@@ -35,19 +35,19 @@ sidebarDepth: 2
 
 ノード運用サービスには秘密鍵やあなたの情報を保管してはいけないことにご留意ください。
 
-## ノード運用サービスを利用するメリット {#benefits-of-using-a-node-service}
+## ノード運用サービスを利用するメリット \{#benefits-of-using-a-node-service}
 
 ノード運用サービスの利用の主なメリットは、自分でノードの保守と管理に時間を費やす必要がないことです。 これにより、インフラストラクチャのメンテナンスを心配する必要がなくなり、製品の構築に集中することができます。
 
 独自のノードの運用は、ストレージから処理能力、貴重なエンジニアリング時間など、非常に高価になります。 スケーリング時にノードを多数立ち上げたり、最新バージョンにアップグレードしたり、状態の一貫性を確実にするなどの作業は、望んでいる Web3 製品の作成に必要なリソースや時間を削いでしまいます。
 
-## ノード運用サービス利用のデメリット {#cons-of-using-a-node-service}
+## ノード運用サービス利用のデメリット \{#cons-of-using-a-node-service}
 
 ノード運用サービスを利用すると、製品のインフラストラクチャの中央集権化を行うことになります。 この理由から、分散性を重視するプロジェクトでは、サードパーティーにアウトソーシングするのではなく、独自ホスティングのノードが好まれることがあります。
 
 [自分のノードを実行するメリット](/developers/docs/nodes-and-clients/#benefits-to-you)に関する詳細
 
-## 一般的なノード運用サービス {#popular-node-services}
+## 一般的なノード運用サービス \{#popular-node-services}
 
 最も一般的なイーサリアムノードプロバイダーのリストです。不足しているものがあれば追加してください。 無料または有料ティアに加えて、各ノードサービスにより提供されるメリットと機能は異なります。ご自身の必要性に応じて、よくリサーチを行ってから最適なものを選択してください。
 
@@ -256,15 +256,15 @@ sidebarDepth: 2
     - 新規ブロックの最速の取得とブロックチェーンの読み取り
     - API 呼び出しあたりのベストプライス保証
 
-## 参考文献 {#further-reading}
+## 参考文献 \{#further-reading}
 
 - [イーサリアムノードサービスの一覧](https://ethereumnodes.com/)
 
-## 関連トピック {#related-topics}
+## 関連トピック \{#related-topics}
 
 - [ノードとクライアント](/developers/docs/nodes-and-clients/)
 
-## 関連チュートリアル {#related-tutorials}
+## 関連チュートリアル \{#related-tutorials}
 
 - [Alchemy を使用したイーサリアム開発入門](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Web3 と Alchemy を使用したトランザクションの送信ガイド](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

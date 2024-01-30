@@ -9,11 +9,11 @@ summaryPoints:
   - Posteriormente, con la Danksharding completa, difundirá la responsabilidad de verificar los bloques de datos entre subconjuntos de nodos, escalando aún más Ethereum, a más de 100.000 transacciones por segundo.
 ---
 
-# Danksharding {#danksharding}
+# Danksharding \{#danksharding}
 
 Gracias a **Danksharding** (es decir, a la fragmentación), Ethereum se convierte en una cadena de bloques realmente escalable, aunque para llegar aquí, hay varias actualizaciones de protocolo necesarias. **ProtoDanksharding** es un paso intermedio en el camino. Ambas tienen como objetivo hacer que las transacciones a la capa 2 sean tan baratas como sea posible para los usuarios y deben escalar Ethereum a >100.000 transacciones por segundo.
 
-## ¿Qué es ProtoDanksharding? {#what-is-protodanksharding}
+## ¿Qué es ProtoDanksharding? \{#what-is-protodanksharding}
 
 ProtoDanksharding, también conocido como [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), es una manera para que las [acumulaciones](/layer2/#rollups) añadan datos más baratos a bloques. El nombre proviene de los investigadores que propusieron la idea: Protolambda y Dankrad Feist. En la actualidad, las acumulaciones no abaratan precisamente el coste de las transacciones para los usuarios, ya que tienen que enviarlas en `CALLDATA`. Su coste es elevado, ya que requiere del procesamiento de todos los nodos de Ethereum y viven siempre en la cadena, aunque las acumulaciones solo necesitan datos por un tiempo limitado. ProtoDanksharding introduce los blobs de datos que se pueden enviar y adjuntar a los bloques. Los datos en estos blobs no son accesibles a la EVM y se eliminan automáticamente después de un periodo de tiempo fijo (1-3 meses). Esto significa que las acumulaciones pueden enviar datos de forma más barata y repercutir el ahorro al usuario final en la forma de transacciones baratas.
 
@@ -29,15 +29,15 @@ Las acumulaciones envían compromisos a sus datos de transacción en cadena y ta
 
 </ExpandableCard>
 
-### ¿Cómo se verifican los datos de una masa? {#how-are-blobs-verified}
+### ¿Cómo se verifican los datos de una masa? \{#how-are-blobs-verified}
 
 Las acumulaciones publican las transacciones que ejecutan en las masas de datos. También publican un «compromiso» con los datos. Para ello, ajustan una función polinómica a los datos. Esta función puede evaluarse en varios puntos. Por ejemplo, si definimos una función extremadamente simple `f(x) = 2x-1` entonces podemos evaluarla por `x = 1`, `x = 2`, `x = 3` dando el resultado `1, 3, 5`. Un proveedor aplica la misma función a los datos y la evalúa en los mismos puntos. Si cambian los datos originales, la función no será idéntica y, por lo tanto, tampoco se evaluarán los mismos valores en cada punto. En realidad, el compromiso y prueba son más complicados, porque ellos están involucrados en funciones criptográficas.
 
-### ¿Qué es KZG? {#what-is-kzg}
+### ¿Qué es KZG? \{#what-is-kzg}
 
 KZG significa Kate-Zaverucha-Goldberg: el nombre de los tres [autores originales](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) de un esquema que reduce una masa de datos hasta un pequeño [«compromiso» criptográfico](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). Tiene que verificarse la masa de datos enviada por una acumulación para garantizar que la misma no se esté comportando indebidamente. Esto incluye un proveedor que reejecuta las transacciones en la masa para verificar la fiabilidad del compromiso. Es igual que la forma en que los clientes de ejecución comprueban la validez de las transacciones de Ethereum en la capa 1 usando pruebas de Merkle. KZG es una prueba alternativa que ajusta una ecuación polinómica a la información. El compromiso evalúa el polinomio en algún punto secreto de datos. Un proveedor encajaría el mismo polinómico de los datos y lo evaluaría en los mismos valores, asegurándose de que el resultado fuera el mismo. Es una forma de comprobar que los datos son compatibles con las técnicas de conocimiento cero usadas por algunas acumulaciones y eventualmente otras partes del protocolo de Ethereum.
 
-### ¿Qué es la ceremonia KZG? {#what-is-a-kzg-ceremony}
+### ¿Qué es la ceremonia KZG? \{#what-is-a-kzg-ceremony}
 
 Una ceremonia KZG es una forma en la que muchas personas de la comunidad de Ethereum pueden generar en conjunto una cadena aleatoria de números secretos que pueden utilizarse para verificar alguna información. Es muy importante que esta cadena de números no sea conocida y no pueda ser recreada por nadie. Para asegurarnos de ello, cada persona que participa en la ceremonia recibe una cadena del participante previo. Entonces crean nuevos valores aleatorios (por ejemplo, permitiendo que su navegador registre el movimiento de su ratón) y los mezclan con el valor anterior. Luego envían el valor al siguiente participante y lo destruyen de su máquina local. Mientras una persona en la ceremonia haga esto con honestidad, el valor final será desconocido para un atacante. La ceremonia EIP-4844 KZG fue abierta al público y decenas de miles de personas participaron para agregar su propia entropía. Para frustrar la ceremonia, el 100 % de los participantes tendría que actuar de mala fe. Desde la perspectiva de los participantes, si saben que se han comportado mal, no necesitan confiar en nadie más, porque saben que aseguraron la ceremonia (cumplieron individualmente con el requisito de 1-de-N participantes honestos).
 
@@ -57,7 +57,7 @@ Si alguien conoce las ubicaciones aleatorias utilizadas para el compromiso, le r
   Ni el Danksharding ni el ProtoDanksharding siguen el modelo de fragmentación («sharding», en inglés) tradicional que buscaba dividir la cadena de bloques en varias partes. Las cadenas de fragmentación ya no forman parte de la hoja de ruta. En su lugar, Danksharding utiliza el muestreo distribuido de datos en varias masas para escalar Ethereum. Su implementación es mucho más sencilla. A este modelo a veces se le denomina «fragmentación de datos».
 </InfoBanner>
 
-## ¿Qué es Danksharding? {#what-is-danksharding}
+## ¿Qué es Danksharding? \{#what-is-danksharding}
 
 Danksharding es la máxima expresión de la escalabilidad de las acumulaciones, que comenzó con ProtoDanksharding. Danksharding aportará una gran cantidad de espacio en Ethereum para que las acumulaciones depositen sus datos comprimidos de transacciones. Esto significa que Ethereum será compatible con cientos de acumulaciones individuales con facilidad y hará realidad la posibilidad de realizar millones de transacciones por segundo.
 
@@ -75,11 +75,11 @@ El muestreo de disponibilidad de datos es necesario para que los validadores ver
 
 </ExpandableCard>
 
-### Progreso actual {#current-progress}
+### Progreso actual \{#current-progress}
 
 La implementación completa del Danksharding está aún fuera de escena. Sin embargo, ProtoDanksharding debería llegar relativamente pronto. Al cierre de la edición de este documento (febrero de 2023), la ceremonia KZG sigue abierta y hasta el momento ha atraído a más de 50.000 contribuyentes. El [EIP](https://eips.ethereum.org/EIPS/eip-4844) para el ProtoDanksharding está maduro, la especificación se ha acordado y los clientes implementaron prototipos que actualmente se están probando y preparando para producción. El siguiente paso es implementar los cambios en una red de prueba pública. Puede estar al tanto con la [lista de verificación de preparación del EIP 4844](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
 
-### Más información {#further-reading}
+### Más información \{#further-reading}
 
 - [Notas sobre el ProtoDanksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq), _Vitalik Buterin_
 - [Notas de Dankrad sobre Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)

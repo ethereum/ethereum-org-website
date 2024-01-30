@@ -7,11 +7,11 @@ isOutdated: true
 
 Transakcje to podpisane kryptograficznie instrukcje od kont. Konto inicjuje transakcję, aby zaktualizować stan sieci Ethereum. Najprostszą transakcją jest przeniesienie ETH z jednego konta na drugie.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Aby lepiej zrozumieć tę stronę, zalecamy najpierw przeczytanie rozdziału <a href="/developers/docs/accounts/">Konta</a> i naszego [Wprowadzenia do Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Czym jest transakcja? {#whats-a-transaction}
+## Czym jest transakcja? \{#whats-a-transaction}
 
 Transakcja Ethereum odnosi się do działania zainicjowanego przez konto będące własnością zewnętrzną, innymi słowy konto zarządzane przez człowieka, a nie przez kontrakt. Na przykład, jeśli Bob wysyła Alice 1 ETH, na koncie Boba musi się pojawić obciążenie, a na koncie Alice uznanie. Ta zmiana stanu ma miejsce w ramach transakcji.
 
@@ -99,7 +99,7 @@ Przykład odpowiedzi:
 
 Dzięki skrótowi podpisu można udowodnić kryptograficznie, że transakcja pochodzi od nadawcy i została przesłana do sieci.
 
-### Gaz {#on-gas}
+### Gaz \{#on-gas}
 
 Jak już wspomniano, wykonanie transakcji kosztuje [gaz](/developers/docs/gas/). Proste transakcje transferu wymagają 21 000 jednostek gazu.
 
@@ -123,7 +123,7 @@ Gaz jest również potrzebny do każdej interakcji kontraktów inteligentnych.
 
 Gaz niewykorzystany w transakcji jest zwracany na konto użytkownika.
 
-## Cykl życiowy transakcji {#transaction-lifecycle}
+## Cykl życiowy transakcji \{#transaction-lifecycle}
 
 Po przesłaniu transakcji nastąpią następujące wydarzenia:
 
@@ -134,17 +134,17 @@ Po przesłaniu transakcji nastąpią następujące wydarzenia:
 4. Twoja transakcja otrzyma również numer potwierdzenia bloku. Jest to liczba bloków utworzonych od bloku, w którym Twoja transakcja została uwzględniona. Im większa liczba, tym większa pewność, że transakcja została przetworzona i rozpoznana przez sieć. Dzieje się tak dlatego, że czasami blok, w którym zawarta była Twoja transakcja, mógł nie trafić do łańcucha.
    - Im większy numer potwierdzenia bloku, tym bardziej niezmienna jest transakcja. Tak więc w przypadku transakcji o wyższej wartości pożądane może być więcej potwierdzeń bloków.
 
-## Demo wizualne {#a-visual-demo}
+## Demo wizualne \{#a-visual-demo}
 
 Zobacz, jak Austin przeprowadzi Cię przez transakcje, gaz i wydobycie.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [Konta](/developers/docs/accounts/)
 - [Maszyna wirtualna Ethereum (EVM)](/developers/docs/evm/)

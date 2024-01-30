@@ -6,7 +6,7 @@ lang: tr
 
 Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) kurmak söz konusu olduğunda Ethereum'da uygulama programlamak, başka herhangi bir yazılım projesini programlamaya benzer. Birçok seçenek bulunduğu için tercihlerinize en iyi uyan IDE veya kod editörünü seçin. Büyük ihtimalle Ethereum geliştirme için en iyi IDE seçimi, hâlihazırda geleneksel yazılım geliştirme için kullandığınız IDE olacaktır.
 
-## Web tabanlı IDE'ler {#web-based-ides}
+## Web tabanlı IDE'ler \{#web-based-ides}
 
 [Yerel bir geliştirme ortamı](/developers/local-environment/) kurmadan önce kodla uğraşmak istiyorsanız, bu web uygulamaları Ethereum akıllı sözleşme geliştirme için özel olarak inşa edilmiştir.
 
@@ -30,7 +30,7 @@ Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## Masaüstü IDE'leri {#desktop-ides}
+## Masaüstü IDE'leri \{#desktop-ides}
 
 Çoğu bilinen IDE, Ethereum geliştirme deneyimini iyileştirmek için inşa edilmiş eklentiler bulundurur. En azından [akıllı sözleşme dilleri](/developers/docs/smart-contracts/languages/) için söz dizimi vurgulaması sağlarlar.
 
@@ -58,13 +58,13 @@ Bir [tümleşik geliştirme ortamı (IDE)](https://wikipedia.org/wiki/Integrated
 - [İndir](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Eklentiler ve uzantılar {#plugins-extensions}
+## Eklentiler ve uzantılar \{#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code için Ethereum Solidity Dili
 - [VS Code için Solidity + Hardhat](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Hardhat ekibinden Solidity ve Hardhat desteği
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - prettier kullanan kod formatlayıcısı
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Ethereum IDE'leri](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy'nin Ethereum IDE'leri listesi_
 

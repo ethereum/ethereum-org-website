@@ -4,11 +4,11 @@ description: Ethereum ekosistemindeki hibe programlarının bir listesi.
 lang: tr
 ---
 
-# Çevrimiçi topluluklar {#online-communities}
+# Çevrimiçi topluluklar \{#online-communities}
 
 Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkında konuşmak, teknik sorunları tartışmak ve geleceği hayal etmek için bu çevrimiçi forumlarda bir araya geliyor.
 
-## Forumlar {#forums}
+## Forumlar \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - Ethereum'a dair her şey</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - DeFi dahil olmak üzere Ethereum'un finansal yönü</SocialListItem>
@@ -19,7 +19,7 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - Ethereum geliştiricileri için tartışma ve yardım</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Araştırma</Link> - kriptoekonomik araştırmalar için en etkili mesaj panosu</SocialListItem>
 
-## Sohbet odaları {#chat-rooms}
+## Sohbet odaları \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Kedi Güdücüler</Link> - Ethereum geliştirmeye proje yönetimi desteği sunmaya odaklı topluluk</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Bilgisayar Korsanları</Link> - ETHGlobal tarafından yürütülen Discord sohbeti: tüm dünyadaki Ethereum bilgisayar korsanları için çevrimiçi bir topluluk</SocialListItem>
@@ -32,7 +32,7 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum StackExchange</Link> *- soru cevap forumu*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- merkeziyetsiz soru cevap forumu*</SocialListItem>
 
-## YouTube ve Twitter {#youtube-and-twitter}
+## YouTube ve Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Vakfı</Link> - Ethereum Vakfı'ndan en son haberleri takip edin</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Ethereum Foundation'ın resmi hesabı</SocialListItem>

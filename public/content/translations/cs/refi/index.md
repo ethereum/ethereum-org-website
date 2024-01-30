@@ -12,7 +12,7 @@ summaryPoint2: Snaha využít Ethereum k řešení koordinačních krizí na glo
 summaryPoint3: Nástroj k významnému zvýšení škálování ekologických výhod, jako jsou ověřené emisní povolenky
 ---
 
-## Co je to ReFi? {#what-is-refi}
+## Co je to ReFi? \{#what-is-refi}
 
 Pod pojmem **Regenerativní finance (ReFi)** rozumíme sadu nástrojů a nápadů na blockchainech, jejichž cílem je vytvářet ekonomiky, které jsou regenerativní, spíše než vykořisťovatelské nebo zaměřené na vytěžení surovin. Systémy zaměřené na vytěžení surovin časem spotřebují dostupné zdroje a zhroutí se; bez regenerativních mechanismů jim chybí odolnost. ReFi předpokládá, že vytváření monetární hodnoty je třeba oddělit od neudržitelného vytěžování zdrojů z naší planety a komunit.
 
@@ -26,7 +26,7 @@ ReFi projekty realizují tyto principy pomocí [smart kontraktů](/developers/do
 
 ReFi se také částěčně překrývá s hnutím [decentralizované vědy (DeSci)](/desci/), které využívá platformu Ethereum k financování, vytváření, recenzování, oceňování, ukládání a šíření vědeckých znalostí. Nástroje DeSci by mohly být užitečné pro vývoj ověřitelných standardů a postupů pro implementaci a monitorování regenerativních aktivit, jako je výsadba stromů, odstraňování plastů z oceánu nebo obnova degradovaného ekosystému.
 
-## Tokenizace emisních povolenek {#tokenization-of-carbon-credits}
+## Tokenizace emisních povolenek \{#tokenization-of-carbon-credits}
 
 **[Dobrovolný trh s emisními povolenkami (voluntary carbon market, VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** je mechanismus pro financování projektů, které mají ověřitelný pozitivní vliv na emise uhlíku, ať už jde o snižování probíhajících emisí nebo odstraňování skleníkových plynů již vypuštěných do atmosféry. Tyto projekty po ověření obdrží aktivum nazvané "uhlíkové kredity". Tyto kredity mohou prodávat jednotlivcům a organizacím, které chtějí podpořit opatření na ochranu klimatu.
 
@@ -50,7 +50,7 @@ Projekty ReFi využívají technologii blockchainu k řešení množství probl�
 - **Obchodování probíhá bez zprostředkovatelů**, kteří si účtují vysoké poplatky. Podle dat jisté analytické společnosti představují digitální emisní povolenky [62% zlepšení nákladů ve srovnání se srovnatelnými tradičními povolenkami](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne).
 - **DCM je škálovatelný** a může uspokojit potřeby jednotlivců i nadnárodních společností.
 
-### Klíčové složky DCM {#key-components-dcm}
+### Klíčové složky DCM \{#key-components-dcm}
 
 Současný ekosystém DCM se skládá ze čtyř hlavních složek:
 
@@ -65,7 +65,7 @@ Některé organizace, jako jsou [Klima Infinity](https://www.klimadao.finance/in
 
 4. Základní infrastruktura, která usnadňuje zvýšení dopadu a účinnosti celého dodavatelského řetězce na trhu s emisními povolenkami. [KlimaDAO](http://klimadao.finance/) dodává likviditu jako veřejný statek (umožňuje komukoli nakupovat nebo prodávat emisní povolenky za transparentní cenu), pobízí ke zvýšení přístupnosti trhů s povolenkami a odměnám za jejich vyřazení. Také poskytuje uživatelsky přívětivé interoperabilní nástroje pro přístup k údajům o široké škále tokenizovaných emisních povolenek, o jejich získávání a vyřazení.
 
-## ReFi mimo trhy s emisními povolenkami {#refi-beyond}
+## ReFi mimo trhy s emisními povolenkami \{#refi-beyond}
 
 Ačkoliv je v současnosti kladen silný důraz na trhy s emisními povolenkami obecně a zejména na přechod z VCM na DCM, termín „ReFi“ není striktně omezen na tento problém. Další environmentální aktiva mimo emisní povolenky mohou být vyvinuta a tokenizována, což znamená, že další negativní externality mohou být také zahrnuty do základních vrstev budoucích ekonomických systémů. Navíc lze regenerativní aspekt tohoto ekonomického modelu aplikovat i na jiné oblasti, jako je financování veřejných statků prostřednictvím platforem pro kvadratické financování, například [Gitcoin](https://gitcoin.co/). Organizace postavené na myšlence otevřené účasti a spravedlivé distribuce zdrojů umožňují komukoliv směrovat peníze do open-source software projektů, stejně jako do projektů zaměřených na vzdělávání, životní prostředí a komunity.
 

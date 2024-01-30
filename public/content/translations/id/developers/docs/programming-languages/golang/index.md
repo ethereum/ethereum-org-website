@@ -9,7 +9,7 @@ incomplete: true
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp"). Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp terdesentralisasi, yang berarti berjalan di jaringan peer-to-peer dan tidak memiliki satu titik kegagalan. Tak satu pun entitas atau orang yang mengendalikannya dan hampir musthil untuk disensor. Mereka dapat mengontrol aset digital untuk membuat jenis aplikasi baru.
 
-## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Ambillah langkah awal untuk mengintegrasikan Go dengan Ethereum**
 
@@ -21,7 +21,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Pelajari Cara Mengompilasi dan Menggunakan Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Tutorial Kontrak](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Artikel dan buku untuk pemula {#beginner-articles-and-books}
+## Artikel dan buku untuk pemula \{#beginner-articles-and-books}
 
 - [Memilih Klien Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Mulai Menggunakan Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -30,7 +30,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Panduan Langkah Demi Langkah untuk Pengujian dan Penggunaan Kontrak Pintar Ethereum di Go](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Pengembangan Ethereum dengan Go](https://goethereumbook.org/) - _Kembangkan aplikasi Ethereum dengan Go_
 
-## Artikel dan dokumen tingkat menengah {#intermediate-articles-and-docs}
+## Artikel dan dokumen tingkat menengah \{#intermediate-articles-and-docs}
 
 - [Dokumentasi Go Ethereum](https://geth.ethereum.org/docs/) - _Dokumentasi untuk Golang Ethereum resmi_
 - [Panduan Programmer Erigon](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Panduan bergambar yang mencakup pohon state, multibukti, dan pemrosesan transaksi_
@@ -42,7 +42,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Pengujian unit kontrak Solidity pada Ethereum dengan Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Referensi cepat untuk menggunakan Geth sebagai pustaka](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
+## Pola penggunaan tingkat lanjut \{#advanced-use-patterns}
 
 - [Backend Tersimulasi GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplikasi Blockchain sebagai Layanan Menggunakan Ethereum dan Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -50,7 +50,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Klien Seluler: Pustaka and Node Ethereum Inproc](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [DApp Asli: Mengikat Go ke kontrak Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Proyek dan peralatan untuk Go {#go-projects-and-tools}
+## Proyek dan peralatan untuk Go \{#go-projects-and-tools}
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum) - _Implementasi Go resmi untuk protokol Ethereum_
 - [Analisis Kode Go Ethereum](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Ulasan dan analisa kode sumber Go Ethereum_
@@ -67,7 +67,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers/)
 
-## Kontributor komunitas Go {#go-community-contributors}
+## Kontributor komunitas Go \{#go-community-contributors}
 
 - [Discord Geth](https://discordapp.com/invite/nthXNEv)
 - [Gist Geth](https://gitter.im/ethereum/go-ethereum)
@@ -77,7 +77,7 @@ Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers
 - [Gitter Ethereum](https://gitter.im/ethereum/home)
 - [Gitter Klien ringan Geth](https://gitter.im/ethereum/light-client)
 
-## Daftar artikel lainnya {#other-aggregated-lists}
+## Daftar artikel lainnya \{#other-aggregated-lists}
 
 - [Ethereum yang Menakjubkan](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: Sebuah Daftar Definitif untuk Peralatan Pengembang Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [sumber GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)

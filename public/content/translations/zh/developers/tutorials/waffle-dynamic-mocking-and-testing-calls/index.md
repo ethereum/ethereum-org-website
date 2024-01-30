@@ -13,7 +13,7 @@ lang: zh
 published: 2020-11-14
 ---
 
-## 本教程是关于什么的？ {#what-is-this-tutorial-about}
+## 本教程是关于什么的？ \{#what-is-this-tutorial-about}
 
 在本教程中，您将学习如何：
 
@@ -26,11 +26,11 @@ published: 2020-11-14
 - 您熟悉`JavaScript`和`TypeScript`
 - 您已经完成其他`Waffle`教程或对其略知一二。
 
-## 动态模拟 {#dynamic-mocking}
+## 动态模拟 \{#dynamic-mocking}
 
 为什么动态模拟有用？ 它允许我们编写单元测试，而不是集成测试。 这是什么意思呢？ 这意味着我们不必担心智能合约的依赖性，因此我们可以完全孤立地测试所有合约。 让我演示一下如何才能实现。
 
-### **1. 项目** {#1-project}
+### **1. 项目** \{#1-project}
 
 在开始之前，我们需要准备一个简单的 node.js 项目：
 
@@ -69,7 +69,7 @@ npm install ethereum-waffle ethers --save-dev
 └── test
 ```
 
-### **2. 智能合约** {#2-smart-contract}
+### **2. 智能合约** \{#2-smart-contract}
 
 要开始动态模拟，我们需要一个包含依赖项的智能合约。 别担心，我会掩护您的！
 
@@ -118,7 +118,7 @@ npx waffle
 
 很简单，对吗？ 在`build/`文件夹中，出现了与合约和接口相对应的两个文件。 我们稍后将使用它们进行测试。
 
-### **3. 测试** {#3-testing}
+### **3. 测试** \{#3-testing}
 
 让我们创建一个名为`AmIRichAlready.test.ts`的文件来进行实际测试。 首先，我们必须处理导入。 我们稍后将需要它们：
 
@@ -253,7 +253,7 @@ it("returns true if the wallet has at least 1000001 tokens", async () => {
 
 ...您已经到这儿啦！ 我们的合约似乎按计划进行 :)
 
-## 测试合约调用 {#testing-contract-calls}
+## 测试合约调用 \{#testing-contract-calls}
 
 让我们总结一下到目前为止所做的事情。 我们已经测试了我们的`AmIRichAlready`合约的功能，它似乎正常工作。 这意味着我们已经完成了，对吧？ 并非如此！ Waffle 允许我们进一步测试合约。 但是具体怎么做呢？ 那么，在 Waffle 的武器库中，有一个`calledOnContract()`和`calledOnContractWith()`匹配器。 他们允许我们检查，我们的合约是否调用了 ERC20 模拟合约。 下面是对其中一个匹配器的基本测试：
 
@@ -285,7 +285,7 @@ it("checks if contract called balanceOf with certain wallet on the ERC20 token",
 
 用 Waffle 测试智能合约调用非常容易。 而这是最精彩的部分。 这些匹配器对正常合约和模拟合约都有效！ 这是因为 Waffle 记录和过滤 EVM 调用，而不是像其他技术的流行测试库那样注入代码。
 
-## 最后 {#the-finish-line}
+## 最后 \{#the-finish-line}
 
 恭喜！ 现在您知道如何使用 Waffle 来测试合约调用和动态模拟智能合约了。 还有更多有趣的功能等着我们去发现。 我建议您深入研究 Waffle 文档。
 

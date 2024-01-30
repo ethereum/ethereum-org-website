@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Un nœud d'archive est une instance d'un client Ethereum configurée pour créer une archive de tous les états historiques. C'est un outil utile pour certains cas d'utilisation, mais il peut être plus difficile à exécuter qu'un nœud complet.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Vous devriez comprendre le concept d'un [nœud Ethereum](/developers/docs/nodes-and-clients/), [son architecture](/developers/docs/nodes-and-clients/node-architecture/), les [stratégies de synchronisation](/developers/docs/nodes-and-clients/#sync-modes), les pratiques de [mise en fonctionnement](/developers/docs/nodes-and-clients/run-a-node/) et [leur utilisation](/developers/docs/apis/json-rpc/).
 
@@ -68,13 +68,13 @@ Pour plus de stabilité et de sécurité dans la prévention de la corruption ac
 
 Lors de la synchronisation initiale, les clients en mode archive exécuteront chaque transaction depuis la genèse. La vitesse d'exécution est principalement limitée par le CPU, donc un CPU plus rapide peut apporter une aide avec le temps de synchronisation initial. Sur un ordinateur grand public moyen, la synchronisation initiale peut prendre jusqu'à un mois.
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Nœud complet Ethereum vs Nœud d'archive Ethereum](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, septembre 2022_
 - [Construire votre propre nœud d'archive Ethereum.](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _par Thomas Jay Rush, août 2021_
 - [Comment configurer Erigon, le RPC d'Erigon et TrueBlocks (scraping et API) en tant que services](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, mis à jour en septembre 2022_
 
-## Sujets connexes {#related-topics}
+## Sujets connexes \{#related-topics}
 
 - [ Nœuds et clients](/developers/docs/nodes-and-clients/)
 - [Exécuter un nœud](/developers/docs/nodes-and-clients/run-a-node/)

@@ -8,18 +8,18 @@ lang: zh
 
 基于开源社区的努力，你可以随时提出新的主题，添加新内容，并在认为可能有用的地方提供示例。 所有文档都可以通过 GitHub 编辑 — 如果不确定如何操作，[请遵循这些说明](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md)。
 
-## 开发单元 {#development-modules}
+## 开发单元 \{#development-modules}
 
 如果这是你首次尝试以太坊开发，我们建议从头开始，有始有终，从头到尾。
 
-### 基础主题 {#foundational-topics}
+### 基础主题 \{#foundational-topics}
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### 以太坊堆栈 {#ethereum-stack}
+### 以太坊堆栈 \{#ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### 高级 {#advanced}
+### 高级 \{#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

@@ -13,11 +13,11 @@ summaryPoints:
   - Iwasang umasa sa iba, at panatilihing hawak mo ang iyong mga withdrawal key
 ---
 
-## Ano ang staking bilang serbisyo? {#what-is-staking-as-a-service}
+## Ano ang staking bilang serbisyo? \{#what-is-staking-as-a-service}
 
 Ang Staking as a Service (“SaaS") ay kumakatawan sa kategorya ng mga serbisyo sa staking kung saan mo idineposito ang sarili mong 32 ETH para sa isang validator, ngunit itinatalaga mo ang operasyon ng node sa isang third-party operator. Kadalasan, sa prosesong ito, ginagabayan ka sa buong inisyal na pag-set up, na kinabibilangan ng paggawa at pag-deposit ng key, at pagkatapos ay ia-upload ng mga signing key mo sa operator. Sa tulong nito, papatakbuhin ng serbisyo ang iyong validator para sa iyo, na kadalasang may bayad kada buwan.
 
-## Bakit dapat mag-stake sa gamit ang isang serbisyo? {#why-stake-with-a-service}
+## Bakit dapat mag-stake sa gamit ang isang serbisyo? \{#why-stake-with-a-service}
 
 Hindi native na sinusuportahan ng Ethereum protocol ang pagtatalaga ng stake, kaya ginawa ang mga serbisyong ito para punan ang demand na ito. Kung mayroon kang 32 ETH na ise-stake, pero hindi ka kumportableng mangasiwa ng hardware, binibigyang-daan ka ng mga serbisyong SaaS na italaga ang mahirap na trabaho habang nakakakuha ka ng mga native na block reward.
 
@@ -29,7 +29,7 @@ Hindi native na sinusuportahan ng Ethereum protocol ang pagtatalaga ng stake, ka
 
 <StakingComparison page="saas" />
 
-## Ano ang dapat isaalang-alang {#what-to-consider}
+## Ano ang dapat isaalang-alang \{#what-to-consider}
 
 Dumarami ang mga SaaS provider na tutulong sa iyong i-stake ang ETH mo, pero may kanya-kanyang benepisyo at panganib ang mga ito. Ang lahat ng opsyon sa SaaS ay nangangailangan ng mga karagdagang trust assumption kumpara sa home-staking. Ang mga opsyon sa Saas ay maaaring naglalagay ng karagdagang code sa mga Ethereum clients na hindi bukas o mao-audit. Mayroon ding hindi magandang epekto ang SaaS sa decentralization ng network. Depende sa setup, maaaring hindi mo kontrolado ang iyong validator - maaaring gamitin ng operator ang iyong ETH sa maling paraan.
 
@@ -37,7 +37,7 @@ Ang mga attribute indicator ay ginagamit sa ibaba para ipakita ang mga kapansin-
 
 <StakingConsiderations page="saas" />
 
-## Tingnan ang mga staking service provider {#saas-providers}
+## Tingnan ang mga staking service provider \{#saas-providers}
 
 Nasa ibaba ang ilang available na SaaS provider. Gamitin ang mga indicator sa itaas upang tulungan kang gamitin ang mga serbisyong ito
 
@@ -55,7 +55,7 @@ Tandaan ang kahalagahan ng pagsuporta sa [client diversity](/developers/docs/nod
 
 Mayroong mungkahi para sa staking-as-a-service provider na hindi namin napansin? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
 
-## Mga karaniwang itanong {#faq}
+## Mga karaniwang itanong \{#faq}
 
 <ExpandableCard title="Sino ang nangangasiwa ng aking mga key?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Mag-iiba ang mga usapan depende sa provider, pero karaniwan kang gagabayan sa pag-set up ng anumang signing key na kailangan mo (isa kada 32 ETH), at ia-upload ang mga ito sa iyong provider para payagan ang mga itong mag-validate para sa iyo. Hindi nagbibigay ang mga signing key ng anumang kakayahang mag-withdraw, mag-transfer, o gastusin ang iyong pondo. Gayunpaman, nagbibigay ang mga ito ng kakayahang bumoto para sa consensus, na kung hindi maayos na gagawin ay maaaring magdulot ng mga parusa offline o slashing.
@@ -89,6 +89,6 @@ Kapag natapos na ang proseso ng slashing/pag-alis, ita-transfer ang pondong ito 
 Makipag-ugnayan sa indibidwal na SaaS provider para sa iba pang detalye tungkol sa anumang guarantee o opsyon sa insurance, at para sa mga tagubilin sa kung paano magbigay ng withdrawal address. Kung gusto mong ikaw lang ang nagkokontrol ng iyong validator setup, <a href="/staking/solo/">magbasa pa tungkol sa kung paano i-solo stake ang iyong ETH</a>.
 </ExpandableCard>
 
-## Karagdagang pagbabasa {#further-reading}
+## Karagdagang pagbabasa \{#further-reading}
 
 - [Pagsusuri sa Mga Serbisyo sa Staking](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

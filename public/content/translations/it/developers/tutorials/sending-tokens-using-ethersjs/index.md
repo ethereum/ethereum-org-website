@@ -11,19 +11,19 @@ lang: it
 published: 2021-04-06
 ---
 
-## Invio di token utilizzando ethers.js(5.0) {#send-token}
+## Invio di token utilizzando ethers.js(5.0) \{#send-token}
 
-### In questo tutorial imparerai come {#you-learn-about}
+### In questo tutorial imparerai come \{#you-learn-about}
 
 - Importare ethers.js
 - Trasferire token
 - Impostare il prezzo del gas in base alla situazione del traffico di rete
 
-### Per iniziare {#to-get-started}
+### Per iniziare \{#to-get-started}
 
 Per iniziare, dobbiamo prima importare la libreria di ethers.js nel nostro javascript. `Include ethers.js(5.0)`
 
-### Installazione {#install-ethersjs}
+### Installazione \{#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -47,7 +47,7 @@ ES3(UMD) nel browser
 ></script>
 ```
 
-### Parametri {#param}
+### Parametri \{#param}
 
 1. **`contract_address`**: Indirizzo del contratto del token (l'indirizzo del contratto è necessario quando il token che vuoi trasferire non è ether)
 2. **`send_token_amount`**: L'importo che vuoi inviare al destinatario
@@ -55,15 +55,15 @@ ES3(UMD) nel browser
 4. **`send_account`**: L'indirizzo del mittente
 5. **`private_key`**: La chiave privata del mittente per firmare la transazione e trasferire realmente i token
 
-## Avviso {#notice}
+## Avviso \{#notice}
 
 `signTransaction(tx)` è rimossa perché `sendTransaction()` lo fa internamente.
 
-## Invio delle procedure {#procedure}
+## Invio delle procedure \{#procedure}
 
-### 1. Connettiti alla rete (rete di prova) {#connect-to-network}
+### 1. Connettiti alla rete (rete di prova) \{#connect-to-network}
 
-#### Imposta il provider (Infura) {#set-provider}
+#### Imposta il provider (Infura) \{#set-provider}
 
 Connettiti alla rete di prova di Ropsten
 
@@ -71,29 +71,29 @@ Connettiti alla rete di prova di Ropsten
 window.provider = new InfuraProvider("ropsten")
 ```
 
-### 2. Crea il portafoglio {#create-wallet}
+### 2. Crea il portafoglio \{#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Connetti il portafoglio alla rete {#connect-wallet-to-net}
+### 3. Connetti il portafoglio alla rete \{#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Ottieni il prezzo corrente del gas {#get-gas}
+### 4. Ottieni il prezzo corrente del gas \{#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Definisci la transazione {#define-transaction}
+### 5. Definisci la transazione \{#define-transaction}
 
 Queste variabili definite di seguito dipendono da `send_token()`
 
-### Parametri della transazione {#transaction-params}
+### Parametri della transazione \{#transaction-params}
 
 1. **`send_account`**: indirizzo del mittente del token
 2. **`to_address`**: indirizzo del destinatario del token
@@ -114,7 +114,7 @@ const tx = {
 }
 ```
 
-### 6. Trasferimento {#transfer}
+### 6. Trasferimento \{#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -123,7 +123,7 @@ walletSigner.sendTransaction(tx).then((transaction) => {
 })
 ```
 
-## Come usarlo {#how-to-use}
+## Come usarlo \{#how-to-use}
 
 ```javascript
 let private_key =
@@ -146,11 +146,11 @@ send_token(
 )
 ```
 
-### Fatto! {#success}
+### Fatto! \{#success}
 
 ![immagine della transazione eseguita correttamente](./successful-transaction.png)
 
-## send_token() {#send-token-method}
+## send_token() \{#send-token-method}
 
 ```javascript
 function send_token(

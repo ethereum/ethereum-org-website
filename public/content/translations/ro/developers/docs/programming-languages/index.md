@@ -8,7 +8,7 @@ A common misconception is that developers must write [smart contracts](/develope
 
 Ethereum și comunitatea sa adoptă open source. Puteți găsi proiecte comunitare - implementări ale clienților, API-uri, cadre de dezvoltare, instrumente de testare - într-o gamă largă de limbi.
 
-## Alegeţi-vă limbajul {#data}
+## Alegeţi-vă limbajul \{#data}
 
 Select your programming language of choice to find projects, resources, and virtual communities:
 
@@ -22,7 +22,7 @@ Select your programming language of choice to find projects, resources, and virt
 - [Ethereum for Ruby developers](/developers/docs/programming-languages/ruby/)
 - [Ethereum pentru programatori Rust](/developers/docs/programming-languages/rust/)
 
-### Ce se întâmplă dacă limbajul meu nu este acceptat {#other-lang}
+### Ce se întâmplă dacă limbajul meu nu este acceptat \{#other-lang}
 
 Dacă vreţi să vă conectaţi la mai multe resurse sau la o comunitate virtuală pentru un alt limbaj de programare, puteţi solicita o nouă pagină [deschizând o problemă](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

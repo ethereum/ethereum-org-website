@@ -19,7 +19,7 @@ Ethereum blok zincirinde ilk [akıllı sözleşmenizi](/developers/docs/smart-co
 
 Endişelenmeyin; bu sözleşmeyi [yerel test ağında](/developers/docs/networks/) yayınlayacağımız için size herhangi bir bedele mal olmayacak. Üzerinde dilediğiniz şekilde oynayabilirsiniz.
 
-## Sözleşmemizi yazmaya başlayalım {#writing-our-contract}
+## Sözleşmemizi yazmaya başlayalım \{#writing-our-contract}
 
 İlk adım olarak [Remix'e](https://remix.ethereum.org/) gidin ve yeni bir dosya oluşturun. Remix arayüzünün sol üst köşesinde yer alan yeni dosya simgesini kullanarak yeni bir dosya oluşturun ve dosyanıza isim verin.
 
@@ -58,7 +58,7 @@ Programlama konusunda bilgisi olanlar, bu programın ne yaptığını tahmin ede
 
 İlk akıllı sözleşmemiz için hepsi bu kadar. Bildiğiniz gibi, Java veya C++ gibi OOP (Nesne Odaklı Programlama) dillerinden bir sınıfa benziyor. Şimdi sözleşmemizle oynamaya başlayalım.
 
-## Sözleşmemizi dağıtma {#deploying-our-contract}
+## Sözleşmemizi dağıtma \{#deploying-our-contract}
 
 Sözleşmemizle etkileşimde bulunabilmek için öncelikle onu blok zincirinde dağıtacağız.
 

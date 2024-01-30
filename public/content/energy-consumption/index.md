@@ -4,7 +4,7 @@ description: The basic information you need to understand Ethereum's energy cons
 lang: en
 ---
 
-# Ethereum's energy expenditure {#proof-of-stake-energy}
+# Ethereum's energy expenditure \{#proof-of-stake-energy}
 
 Ethereum is a green blockchain. Ethereum's [proof-of-stake](/developers/docs/consensus-mechanisms/pos) consensus mechanism uses ETH instead of [energy to secure the network](/developers/docs/consensus-mechanisms/pow). Ethereum's energy consumption is approximately [~0.0026 TWh/yr](https://carbon-ratings.com/eth-report-2022) across the entire global network.
 
@@ -39,13 +39,13 @@ The table and chart above also include comparisons to Bitcoin and proof-of-work 
 
 You can browse energy consumption and carbon emission estimates for many industries on the [Cambridge Blockchain Network Sustainability Index site](https://ccaf.io/cbnsi/ethereum).
 
-## Per-transaction estimates {#per-transaction-estimates}
+## Per-transaction estimates \{##per-transaction-estimates}
 
 Many articles estimate "per-transaction" energy expenditure for blockchains. This can be misleading because the energy required to propose and validate a block is independent of the number of transactions within it. A per-transaction unit of energy expenditure implies that fewer transactions would lead to smaller energy expenditure and vice-versa, which is not the case. Also, per-transaction estimates are very sensitive to how a blockchain's transaction throughput is defined, and tweaking this definition can be gamed to make the value seem larger or smaller.
 
 On Ethereum, for example, the transaction throughput is not only that of the base layer - it is also the sum of the transaction throughput of all of its "[layer 2](/layer-2/)" rollups. Layer 2's are not generally included in calculations, but accounting for the additional energy consumed by sequencers (small) and the number of transactions they process (large) would likely drastically reduce per-transaction estimates. This is one reason why comparisons of per-transaction energy consumption across platforms can be misleading.
 
-## Ethereum's carbon debt {#carbon-debt}
+## Ethereum's carbon debt \{##carbon-debt}
 
 Ethereum's energy expenditure is very low, but this has not always been the case. Ethereum originally used proof-of-work which had a much greater environmental cost than the current proof-of-stake mechanism.
 
@@ -55,7 +55,7 @@ From the very beginning, Ethereum planned to implement a proof-of-stake based co
 
 CCRI estimates that The Merge reduced Ethereum's annualized electricity consumption by more than **99.988%**. Likewise, Ethereum’s carbon footprint was decreased by approximately **99.992%** (from 11,016,000 to 870 tonnes CO2e). To put this in perspective, the reduction in emissions is like going from the height of the Eiffel Tower to a small plastic toy figure, as illustrated in the figure above. As a result, the environmental cost of securing the network is drastically reduced. At the same time, the network's security is believed to have improved.
 
-## A green application layer {#green-applications}
+## A green application layer \{##green-applications}
 
 While Ethereum's energy consumption is very low, there is also a substantial, growing, and highly active [**regenerative finance (ReFi)**](/refi/) community building on Ethereum. ReFi applications use DeFi components to build financial applications that have positive externalities benefiting the environment. ReFi is part of a wider ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) movement that is closely aligned with Ethereum and aims to couple technological advancement and environmental stewardship. The decentralized, permissionless, and composable nature of Ethereum makes it the ideal base layer for the ReFi and solarpunk communities.
 
@@ -65,7 +65,7 @@ Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co)
   If you think this page can be made more accurate, please raise an issue or PR. The stats on this page are estimates based on publicly available data - they do not represent an official statement or promise from the ethereum.org team, or the Ethereum Foundation.
 </InfoBanner>
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
 - [White House report on proof-of-work blockchains](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -75,7 +75,7 @@ Web3 native public goods funding platforms such as [Gitcoin](https://gitcoin.co)
 - [The Merge - Implications on the Electricity Consumption and Carbon Footprint of the Ethereum Network](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Ethereum's energy consumption](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Ethereum's vision](/roadmap/vision/)
 - [The Beacon Chain](/roadmap/beacon-chain)

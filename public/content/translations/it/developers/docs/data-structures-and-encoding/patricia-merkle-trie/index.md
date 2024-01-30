@@ -9,11 +9,11 @@ Un Trie di Patricia Merkle fornisce una struttura di dati autenticata crittograf
 
 I Trie di Patricia Merkle sono interamente deterministici, a significare che è garantito che degli alberi con le stesse associazioni `(key, value)` siano identici, fino all'ultimo byte. Ciò significa che hanno lo stesso hash di root, fornendo il Sacro Graal dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni. Inoltre, sono più semplici da comprendere e programmare rispetto alle più complesse alternative basate sul confronto, come gli alberi rosso-nero.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Per meglio comprendere questa pagina, sarebbe utile avere una conoscenza di base di [hash](https://en.wikipedia.org/wiki/Hash_function), [alberi di Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [trie](https://en.wikipedia.org/wiki/Trie) e [serializzazione](https://en.wikipedia.org/wiki/Serialization).
 
-## Trie della radice di base {#basic-radix-tries}
+## Trie della radice di base \{#basic-radix-tries}
 
 In un trie della radice di base, ogni nodo si presenta così:
 
@@ -68,11 +68,11 @@ Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinoss
 
 Chiameremo "nibble" l'unità atomica di un albero radicato (es., un singolo carattere esadecimale o un numero binario a 4 bit). Attraversando un percorso un "nibble" per volta, come descritto sopra, i nodi possono fare riferimento massimale a 16 figli, ma includono un elemento `value`. Dunque, li rappresentiamo come un insieme di lunghezza 17. Chiamiamo questi insiemi da 17 elementi "nodi ramo".
 
-## Trie di Patricia Merkle {#merkle-patricia-trees}
+## Trie di Patricia Merkle \{#merkle-patricia-trees}
 
 Gli alberi radicati hanno una grande limitazione: non sono efficienti. Se si desidera memorizzare una coppia `(percorso, valore)` dove il percorso, come in Ethereum, è lungo 64 caratteri (il numero di "nibble" in `bytes32`), servirà oltre un kilobyte di spazio aggiuntivo per memorizzare un livello per carattere e, ogni ricerca o eliminazione, richiederebbe tutti e 64 i passaggi. L'albero di Patricia introdotto di seguito risolve tale problema.
 
-### Ottimizzazione {#optimization}
+### Ottimizzazione \{#optimization}
 
 Un nodo in un trie di Patricia Merkle è uno dei seguenti:
 
@@ -89,7 +89,7 @@ Tale suddetta ottimizzazione, tuttavia, introduce delle ambiguità.
 
 Attraversando i percorsi in "nibble", potremmo finire con un numero dispari di nibble da attraversare; questo perché tutti i dati sono memorizzati nel fromato `bytes`. Non è possibile differenziare tra, ad esempio, il nibble `1` e i nibble `01` (entrambi devono essere memorizzati come `<01>`). Per specificare una lunghezza dispari, il percorso parziale è prefissato con un flag.
 
-### Specifica: codifica compatta della sequenza esadecimale con terminatore facoltativo {#specification}
+### Specifica: codifica compatta della sequenza esadecimale con terminatore facoltativo \{#specification}
 
 Il flagging sia _della lunghezza del percorso parziale rimanente, dispari o pari,_ sia del _nodo leaf o estensione_, come descritto sopra, risiede nel primo nibble del percorso parziale di qualsiasi nodo di 2 elementi. Il risultato è il seguente:
 
@@ -158,7 +158,7 @@ Ecco il codice esteso per ottenere un nodo nel trie di Patricia Merkle:
         return get_helper(node,path2)
 ```
 
-### Esempio di Trie {#example-trie}
+### Esempio di Trie \{#example-trie}
 
 Supponiamo di volere un trie contenente quattro coppie percorso/valore `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
@@ -185,7 +185,7 @@ Quando in un nodo si fa riferimento a un altro nodo, viene inserito `H(rlp.encod
 
 Nota che, aggiornando un trie, si deve memorizzare la coppia chiave/valore `(keccak256(x), x)` in una tabella di ricerca persistente _se_ il nodo appena creato ha una lunghezza >= 32. Se invece il nodo è inferiore a questo valore, non è necessario memorizzare nulla, poiché la funzione f(x) = x è reversibile.
 
-## Trie in Ethereum {#tries-in-ethereum}
+## Trie in Ethereum \{#tries-in-ethereum}
 
 Tutti i trie di Merkle nel livello d'esecuzione di Ethereum usano un Trie di Patricia Merkle.
 
@@ -195,11 +195,11 @@ Dall'intestazione di un blocco ci sono 3 radici provenienti da 3 di questi trie.
 2.  transactionsRoot
 3.  receiptsRoot
 
-### Trie di Stato {#state-trie}
+### Trie di Stato \{#state-trie}
 
 Esiste un albero di stato globale ed è aggiornato ogni volta che un client elabora un blocco. In esso, un `path` è sempre: `keccak256(ethereumAddress)` e un `value` è sempre: `rlp(ethereumAccount)`. Più nello specifico, un `account` di Ethereum è un insieme di 4 elementi di `[nonce,balance,storageRoot,codeHash]`. A questo punto, vale la pena di notare che tale `storageRoot` è la radice di un altro albero di Patricia:
 
-### Trie d'archiviazione {#storage-trie}
+### Trie d'archiviazione \{#storage-trie}
 
 Il trie d'archiviazione è dove risiedono _tutti_ i dati del contratto. Esiste un albero d'archiviazione separato per ogni conto. Per recuperare i valori a posizioni d'archiviazione specifiche a un dato indirizzo, servono l'indirizzo d'archiviazione, la posizione intera dei dati memorizzati in archiviazione e l'ID del blocco. Questi possono essere passati come argomenti al `eth_getStorageAt`, definito nell'APi di JSON-RPC, es., per recuperare i dati nello slot 0 d'archiviazione per l'indirizzo `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
@@ -235,7 +235,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Nota: la `storageRoot` per un account di Ethereum è vuota per impostazione predefinita se non è l'account di un contratto.
 
-### Trie delle transazioni {#transaction-trie}
+### Trie delle transazioni \{#transaction-trie}
 
 Esiste un albero di transazioni separato per ogni blocco, anch'esso che memorizza coppie `(key, value)`. Qui, un percorso è: `rlp(transactionIndex)`, rappresentante la chiave corrispondente a un valore determinato da:
 
@@ -248,13 +248,13 @@ else:
 
 Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-### Trie delle ricevute {#receipts-trie}
+### Trie delle ricevute \{#receipts-trie}
 
 Ogni blocco ha il proprio trie delle ricevute. Qui, un `path` è: `rlp(transactionIndex)`. `transactionIndex` è il suo indice nel blocco estratto. L'albero delle ricevute non è mai aggiornato. Analogamento all'albero delle Transazioni, esistono ricevute correnti e legacy. Per interrogare una ricevuta specifica nell'albero delle Ricevute, l'indice della transazione nel suo blocco, il carico utile di ricevute e il tipo di transazione sono necessari. La ricevuta Restituita può essere di tipo `Receipt`, definita come la concatenazione di `TransactionType` e `ReceiptPayload` o di tipo `LegacyReceipt`, definibile come `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 Maggiori informazioni a riguardo si possono trovare nella documentazione [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Albero di Patricia Merkle Modificato - Come Ethereum risparmia uno stato](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - ["Merkling" su Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

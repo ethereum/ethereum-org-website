@@ -8,7 +8,7 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. These tokens typically follow a standard,
 [ERC-20](/developers/docs/standards/tokens/erc-20/). This standard makes it possible to write tools, such as liquidity pools and wallets, that work with all ERC-20
@@ -19,7 +19,7 @@ tokens. In this article we will analyze the
 This is annotated source code. If you want to implement ERC-20,
 [read this tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
-## The Interface {#the-interface}
+## The Interface \{##the-interface}
 
 The purpose of a standard like ERC-20 is to allow many tokens implementations that are interoperable across applications, like wallets and decentralized exchanges. To achieve that, we create an
 [interface](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Any code that needs to use the token contract
@@ -223,7 +223,7 @@ Finally, `transferFrom` is used by the spender to actually spend the allowance.
 
 These events are emitted when the state of the ERC-20 contract changes.
 
-## The Actual Contract {#the-actual-contract}
+## The Actual Contract \{##the-actual-contract}
 
 This is the actual contract that implements the ERC-20 standard,
 [taken from here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol).
@@ -237,7 +237,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### Import Statements {#import-statements}
+### Import Statements \{##import-statements}
 
 In addition to the interface definitions above, the contract definition imports two other files:
 
@@ -287,7 +287,7 @@ This comment explains the purpose of the contract.
 
 ```
 
-### Contract Definition {#contract-definition}
+### Contract Definition \{##contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -306,7 +306,7 @@ This line specifies the inheritance, in this case from `IERC20` from above and `
 This line attaches the `SafeMath` library to the `uint256` type. You can find this library
 [here](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
-### Variable Definitions {#variable-definitions}
+### Variable Definitions \{##variable-definitions}
 
 These definitions specify the contract's state variables. There variables are declared `private`, but
 that only means that other contracts on the blockchain can't read them. _There are no
@@ -367,7 +367,7 @@ Applications need to know how to display the token balance. If a user has 3,141,
 token you can select a different value. If dividing the token doesn't make sense, you can use a
 `_decimals` value of zero. If you want to use the same standard as ETH, use the value **18**.
 
-### The Constructor {#the-constructor}
+### The Constructor \{##the-constructor}
 
 ```solidity
     /**
@@ -388,7 +388,7 @@ token you can select a different value. If dividing the token doesn't make sense
 
 The constructor is called when the contract is first created. By convention, function parameters are named `<something>_`.
 
-### User Interface Functions {#user-interface-functions}
+### User Interface Functions \{##user-interface-functions}
 
 ```solidity
     /**
@@ -437,7 +437,7 @@ strings, can be stored in three locations:
 
 In this case, `memory` is the best choice.
 
-### Read Token Information {#read-token-information}
+### Read Token Information \{##read-token-information}
 
 These are functions that provide information about the token, either the total supply or an
 account's balance.
@@ -468,7 +468,7 @@ Read an account's balance. Note that anybody is allowed to get anybody else's ac
 balance. There is no point in trying to hide this information, because it is available on every
 node anyway. _There are no secrets on the blockchain._
 
-### Transfer Tokens {#transfer-tokens}
+### Transfer Tokens \{##transfer-tokens}
 
 ```solidity
     /**
@@ -503,13 +503,13 @@ Normally in Solidity we use `msg.sender` for the message sender. However, that b
 need to use `_msgSender()`. It returns `msg.sender` for normal transactions, but for etherless ones
 return the original signer and not the contract that relayed the message.
 
-### Allowance Functions {#allowance-functions}
+### Allowance Functions \{##allowance-functions}
 
 These are the functions that implement the allowance functionality: `allowance`, `approve`, `transferFrom`,
 and `_approve`. Additionally, the OpenZeppelin implementation goes beyond the basic standard to include some features that improve
 security: `increaseAllowance`, and `decreaseAllowance`.
 
-#### The allowance function {#allowance}
+#### The allowance function \{##allowance}
 
 ```solidity
     /**
@@ -522,7 +522,7 @@ security: `increaseAllowance`, and `decreaseAllowance`.
 
 The `allowance` function allows everybody to check any allowance.
 
-#### The approve function {#approve}
+#### The approve function \{##approve}
 
 ```solidity
     /**
@@ -551,7 +551,7 @@ This function is called to create an allowance. It is similar to the `transfer` 
 We use internal functions to minimize the number of places where state changes happen. _Any_ function that changes the
 state is a potential security risk that needs to be audited for security. This way we have less chances to get it wrong.
 
-#### The transferFrom function {#transferFrom}
+#### The transferFrom function \{##transferFrom}
 
 This is the function that a spender calls to spend an allowance. This requires two operations: transfer the amount
 being spent and reduce the allowance by that amount.
@@ -588,7 +588,7 @@ undo the `_transfer`.
     }
 ```
 
-#### OpenZeppelin safety additions {#openzeppelin-safety-additions}
+#### OpenZeppelin safety additions \{##openzeppelin-safety-additions}
 
 It is dangerous to set a non-zero allowance to another non-zero value,
 because you only control the order of your own transactions, not anybody else's. Imagine you
@@ -677,11 +677,11 @@ the way normal addition does.
     }
 ```
 
-### Functions that Modify Token Information {#functions-that-modify-token-information}
+### Functions that Modify Token Information \{##functions-that-modify-token-information}
 
 These are the four functions that do the actual work: `_transfer`, `_mint`, `_burn`, and `_approve`.
 
-#### The \_transfer function {#\_transfer}
+#### The \_transfer function \{##\_transfer}
 
 ```solidity
     /**
@@ -757,7 +757,7 @@ is atomic, nothing can happen in the middle of it.
 Finally, emit a `Transfer` event. Events are not accessible to smart contracts, but code running outside the blockchain
 can listen for events and react to them. For example, a wallet can keep track of when the owner gets more tokens.
 
-#### The \_mint and \_burn functions {#\_mint-and-\_burn}
+#### The \_mint and \_burn functions \{##\_mint-and-\_burn}
 
 These two functions (`_mint` and `_burn`) modify the total supply of tokens.
 They are internal and there is no function that calls them in this contract,
@@ -819,7 +819,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
 
 The `_burn` function is almost identical to `_mint`, except it goes in the other direction.
 
-#### The \_approve function {#\_approve}
+#### The \_approve function \{##\_approve}
 
 This is the function that actually specifies allowances. Note that it allows an owner to specify
 an allowance that is higher than the owner's current balance. This is OK because the balance is
@@ -858,7 +858,7 @@ approval either by the owner or by a server that listens to these events.
 
 ```
 
-### Modify The Decimals Variable {#modify-the-decimals-variable}
+### Modify The Decimals Variable \{##modify-the-decimals-variable}
 
 ```solidity
 
@@ -879,7 +879,7 @@ This function modifies the `_decimals` variable which is used to tell user inter
 You should call it from the constructor. It would be dishonest to call it at any subsequent point, and applications
 are not designed to handle it.
 
-### Hooks {#hooks}
+### Hooks \{##hooks}
 
 ```solidity
 
@@ -904,7 +904,7 @@ are not designed to handle it.
 This is the hook function to be called during transfers. It is empty here, but if you need
 it to do something you just override it.
 
-# Conclusion {#conclusion}
+# Conclusion \{##conclusion}
 
 For review, here are some of the most important ideas in this contract (in my opinion, yours is likely to vary):
 

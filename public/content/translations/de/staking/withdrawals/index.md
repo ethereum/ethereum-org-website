@@ -21,13 +21,13 @@ Staking-Auszahlungen wurden mit dem Shanghai/Capella-Upgrade aktiviert, welches 
 
 **Belohnungszahlungen für überschüssige Guthaben** über 32 ETH werden automatisch und regelmäßig an eine mit jedem Validator verknüpfte Auszahlungsadresse gesendet, sobald sie vom Benutzer angegeben wurde. Benutzer können auch das **Staking vollständig beenden** und damit ihr gesamtes Validator-Guthaben freigeben.
 
-## Staking-Belohnungen {#staking-rewards}
+## Staking-Belohnungen \{#staking-rewards}
 
 Belohnungszahlungen werden automatisch für aktive Validator-Konten mit einem ausgeschöpften effektiven Guthaben von 32 ETH verarbeitet.
 
 Ein Guthaben über 32 ETH, das durch Belohnungen verdient wurde, trägt tatsächlich nicht zum Grundkapital bei oder erhöht das Gewicht dieses Validators im Netzwerk. Daher wird es automatisch alle paar Tage als Prämienzahlung abgehoben. Abgesehen von der einmaligen Angabe einer Auszahlungsadresse sind für diese Belohnungen keine weiteren Aktionen vom Validator erforderlich. Dies wird alles auf der Konsensschicht initiiert, daher ist in keinem Schritt Gas (Transaktionsgebühr) erforderlich.
 
-### Wie sind wir an diesem Punkt angelangt? {#how-did-we-get-here}
+### Wie sind wir an diesem Punkt angelangt? \{#how-did-we-get-here}
 
 In den letzten Jahren hat Ethereum mehrere Netzwerk-Upgrades durchlaufen und ist zu einem Netzwerk übergegangen, das durch ETH selbst gesichert ist, anstatt durch energieintensives Mining, wie es früher der Fall war. Die Teilnahme am Konsens auf Ethereum wird nun als „Staking" bezeichnet, da die Teilnehmer freiwillig ETH gesperrt haben und es „aufs Spiel setzen", um am Netzwerk teilnehmen zu können. Benutzer, die sich an die Regeln halten, werden belohnt, während Versuche, das System zu betrügen, bestraft werden können.
 
@@ -35,11 +35,11 @@ Seit der Einführung des Staking-Einzahlungsvertrags im November 2020 haben eini
 
 Vor dem Shanghai/Capella-Upgrade konnten Sie Ihr gestaktes ETH nicht verwenden oder darauf zugreifen. Aber jetzt können Sie sich dafür entscheiden, Ihre Belohnungen automatisch auf ein ausgewähltes Konto zu erhalten, und Sie können auch jederzeit Ihr gestaktes ETH abheben.
 
-### Wie bereite ich mich vor? {#how-do-i-prepare}
+### Wie bereite ich mich vor? \{#how-do-i-prepare}
 
 <WithdrawalsTabComparison />
 
-### Wichtige Hinweise {#important-notices}
+### Wichtige Hinweise \{#important-notices}
 
 Die Angabe einer Auszahlungsadresse ist ein erforderlicher Schritt für jedes Validator-Konto, bevor es für die Abhebung von ETH aus seinem Guthaben infrage kommt.
 
@@ -49,7 +49,7 @@ Die Angabe einer Auszahlungsadresse ist ein erforderlicher Schritt für jedes Va
 
 In der Zwischenzeit besteht <strong>keine Bedrohung für Ihre Gelder</strong>, wenn Sie dies nicht tun, vorausgesetzt, Ihre Mnemonic-/Seed-Phrase ist offline sicher aufbewahrt und wurde in keiner Weise kompromittiert. Wenn keine Auszahlungsinformationen hinzugefügt werden, bleibt das ETH einfach im Validator-Konto gesperrt, wie es bislang der Fall war, bis eine Auszahlungsadresse angegeben wird.
 
-## Das vollständige Beenden des Staking {#exiting-staking-entirely}
+## Das vollständige Beenden des Staking \{#exiting-staking-entirely}
 
 Die Angabe einer Auszahlungsadresse ist erforderlich, bevor _irgendwelche_ Gelder aus dem Guthaben eines Validator-Kontos übertragen werden können.
 
@@ -59,7 +59,7 @@ Der Prozess, bei dem ein Validator aus dem Staking aussteigt, dauert je nachdem,
 
 Sobald ein Konto als „abhebbar" markiert wurde und Auszahlungsinformationen bereitgestellt wurden, gibt es nichts mehr, was ein Benutzer tun muss, außer zu warten. Konten werden automatisch und kontinuierlich von Block-Proposern auf berechtigte freigegebene Gelder durchsucht, und Ihr Kontoguthaben wird in voller Höhe (auch als „vollständiger Abzug" bekannt) während des nächsten <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>Sweeps</a> übertragen.
 
-## Wann sind Staking-Abhebungen aktiviert? {#when}
+## Wann sind Staking-Abhebungen aktiviert? \{#when}
 
 Staking-Abhebungen sind live! Die Funktionalität für das Abheben wurden als Teil des Shanghai/Capella Upgrades vom 12. April 2023 aktiviert.
 
@@ -68,17 +68,17 @@ Das Shanghai/Capella Upgrade ermöglicht ETH, das gestaked wurde, mit regulären
 - [Mehr zur Geschichte von Ethereum](/history/)
 - [Mehr zur Ethereum-Roadmap](/roadmap/)
 
-## Wie funktionieren Auszahlungen? {#how-do-withdrawals-work}
+## Wie funktionieren Auszahlungen? \{#how-do-withdrawals-work}
 
 Ob ein bestimmter Validator zur Auszahlung berechtigt ist oder nicht, wird durch den Zustand des Validator-Kontos selbst bestimmt. Es ist zu keinem Zeitpunkt eine Benutzereingabe erforderlich, um zu bestimmen, ob eine Auszahlung für ein Konto eingeleitet werden sollte oder nicht - der gesamte Prozess wird automatisch von der Konsensschicht in einer kontinuierlichen Schleife durchgeführt.
 
-### Eher der visuelle Lernende? {#visual-learner}
+### Eher der visuelle Lernende? \{#visual-learner}
 
 Sehen Sie sich diese Erklärung für die Abhebungen von Ethereum von Finematics an:
 
 <YouTube id="RwwU3P9n3uo" />
 
-### Validator „Sweeping" {#validator-sweeping}
+### Validator „Sweeping" \{#validator-sweeping}
 
 Es ist notwendig, dass ein Validator, der den nächsten Block vorschlagen soll, eine Warteschlange mit bis zu 16 zugelassenen Auszahlungen erstellt. Ursprünglich beginnt man mit dem Validator-Index 0 und prüft, ob es gemäß den Protokollregeln eine berechtigte Auszahlung für dieses Konto gibt. Ist dies der Fall, wird sie zur Warteschlange hinzugefügt. Der für den nächsten Block vorgesehene Validator knüpft ununterbrochen dort an, wo der vorherige aufgehört hat, und verfährt dabei in stetiger Reihenfolge.
 
@@ -88,7 +88,7 @@ Stellen Sie sich nun vor, dass die Uhr statt 1 bis 12 die Zahlen 0 bis N hat <em
 Der Zeiger auf der Uhr zeigt auf den nächstenValidator, der auf zulässige Abhebungen geprüft werden muss. Es beginnt bei 0 und schreitet rundherum fort, ohne irgendwelche Konten zu überspringen. Wenn der letzte Validator erreicht ist, beginnt der Zyklus von vorne.
 </InfoBanner>
 
-#### Überprüfung eines Kontos auf Auszahlungen {#checking-an-account-for-withdrawals}
+#### Überprüfung eines Kontos auf Auszahlungen \{#checking-an-account-for-withdrawals}
 
 Bei der Durchsicht der Validatoren auf mögliche Auszahlungen bewertet der Vorschlagende jeden überprüften Validator mit einer kurzen Fragenreihe. Auf diese Weise wird entschieden, ob eine Auszahlung ausgelöst werden sollte und falls ja, wie viel ETH abgehoben werden soll.
 
@@ -101,11 +101,11 @@ Es gibt nur zwei Aktionen, die von Validatoren während des Lebenszyklus eines V
 - Bereitstellung von Auszahlungsberechtigungen, um eine Form von Auszahlung zu ermöglichen
 - Verlassen des Netzwerks, was eine vollständige Auszahlung anstößt
 
-### Kostenfreies Gas {#gas-free}
+### Kostenfreies Gas \{#gas-free}
 
 Dieser Ansatz für Staking-Auszahlungen vermeidet, dass Staker manuell eine Transaktion einreichen müssen, die eine bestimmte Menge an ETH zur Auszahlung anfordert. Das bedeutet, dass **kein Gas (Transaktionsgebühr) erforderlich** ist und Auszahlungen auch nicht um den bestehenden Blockplatz der Ausführungsschicht konkurrieren.
 
-### Wie oft erhalte ich meine Staking-Belohnungen? {#how-soon}
+### Wie oft erhalte ich meine Staking-Belohnungen? \{#how-soon}
 
 In einem einzigen Block können maximal 16 Auszahlungen verarbeitet werden. Mit dieser Rate können pro Tag 115.200 Validator-Auszahlungen verarbeitet werden (vorausgesetzt, es werden keine Slots verpasst). Wie oben erwähnt, werden Validatoren ohne berechtigte Auszahlungen übersprungen, was die Zeit bis zum Abschluss des Durchlaufs verkürzt.
 
@@ -125,7 +125,7 @@ Indem wir diese Berechnung erweitern, können wir die Zeit abschätzen, die ben�
 
 Wie Sie sehen, verlangsamt sich dieser Prozess, wenn mehr Validatoren im Netzwerk sind. Eine Zunahme von verpassten Slots könnte dies proportional verlangsamen, aber dies wird im Allgemeinen die langsamere Seite der möglichen Ergebnisse darstellen.
 
-## Häufig gestellte Fragen {#faq}
+## Häufig gestellte Fragen \{#faq}
 
 <ExpandableCard
 title="Sobald ich eine Auszahlungsadresse angegeben habe, kann ich diese dann auf eine alternative Auszahlungsadresse ändern?"
@@ -208,7 +208,7 @@ eventName="read more">
 Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben wurde, werden alle zusätzlichen Einzahlungen auf diesen Validator automatisch während des nächsten Validator-Durchlaufs an die Auszahlungsadresse übertragen. Um ETH erneut zu staken, muss ein neuer Validator aktiviert werden.
 </ExpandableCard>
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Startplattform für Staking-Auszahlungen](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-Kette implementiert Abhebungen als Operationen](https://eips.ethereum.org/EIPS/eip-4895)

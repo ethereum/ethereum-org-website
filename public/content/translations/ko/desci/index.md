@@ -12,7 +12,7 @@ summaryPoint2: 과학자들이 자금을 모으고, 실험을 실행하고, 데�
 summaryPoint3: 열린 과학 운동을 기반으로 합니다.
 ---
 
-## 탈중앙화 과학(DeFi)이란 무엇인가요? {#what-is-desci}
+## 탈중앙화 과학(DeFi)이란 무엇인가요? \{#what-is-desci}
 
 탈중앙화 과학(DeSci)은 Web3 스택을 사용하여 과학 지식을 공정하고 공평하게 자금 조달, 생성, 검토, 신용, 저장 및 보급하기 위한 공공 인프라를 구축하는 것을 목표로 하는 운동입니다.
 
@@ -24,7 +24,7 @@ DeSci는 과학자들이 그들의 연구를 공개적으로 공유하고 그들
 
 <YouTube id="5ORvbCIW39o" />
 
-## DeSci가 과학을 개선시키는 방법 {#desci-improves-science}
+## DeSci가 과학을 개선시키는 방법 \{#desci-improves-science}
 
 과학의 주요 문제에 대한 불완전한 목록과 탈중앙화 과학이 이러한 문제를 해결하는 데 어떻게 도움이 될 수 있는지
 
@@ -39,21 +39,21 @@ DeSci는 과학자들이 그들의 연구를 공개적으로 공유하고 그들
 | 여러분은 투명한 조건에 따라 생성하고 배포하는 지적 재산권(IP) 을 소유합니다.                        | 여러분의 홈 기관은 여러분이 생성한 IP를 소유합니다. IP에 대한 접근은 투명하지 않습니다.                      |
 | 모든 단계를 체인에 연결함으로써 실패한 노력의 데이터를 포함한 모든 연구를 공유합니다.               | 출판 편향은 연구자들이 성공적인 결과를 얻은 실험을 공유할 가능성이 더 높다는 것을 의미합니다.                |
 
-## 이더리움과 DeSci {#ethereum-and-desci}
+## 이더리움과 DeSci \{#ethereum-and-desci}
 
 탈중앙화 과학 시스템은 강력한 보안, 최소한의 통화 및 거래 비용, 그리고 애플리케이션 개발을 위한 풍부한 생태계를 요구할 것입니다. 이더리움은 탈중앙화 과학 스택을 구축하는 데 필요한 모든 것을 제공합니다.
 
-## DeSci 사용 사례 {#use-cases}
+## DeSci 사용 사례 \{#use-cases}
 
 DeSci는 Web2 학계를 디지털 세계로 전환하기 위한 과학적 도구 세트를 구축하고 있습니다. 아래는 Web3가 과학계에 제공할 수 있는 사용 사례 샘플입니다.
 
-### 출판 사업 {#publishing}
+### 출판 사업 \{#publishing}
 
 과학 출판은 논문을 생성하기 위해 과학자, 평론가 및 편집자의 무료 노동에 의존하지만 엄청난 출판 비용을 부과하는 출판사에 의해 관리되기 때문에 문제가 있는 것으로 유명합니다. 보통 세금을 통해 작품과 출판 비용을 간접적으로 지불한 대중은 종종 출판사에 다시 지불하지 않고는 같은 작품에 접근할 수 없습니다. 개별 과학 논문 출판에 드는 총 비용은 종종 5자리 숫자($USD)이며, 이는 과학 지식의 전체 개념을 [ 공익](https://www.econlib.org/library/Enc/PublicGoods.html)과 동시에 소수의 출판사에게 막대한 이익을 창출합니다.
 
 무료 및 오픈 액세스 플랫폼은 [ArXiv와 같은](https://arxiv.org/) 사전 인쇄 서버의 형태로 존재합니다. 그러나 이러한 플랫폼은 품질 관리, [반시빌(anti-sybil) 메커니즘 mechanisms](https://csrc.nist.gov/glossary/term/sybil_attack)이 부족하며 일반적으로 기사 수준의 글을 추적하지 않습니다. 즉, 일반적으로 전통적인 출판사에 제출하기 전에 작업을 홍보하는 데만 사용됩니다. 탈중앙화 허브 는 또한 출판된 논문에 무료로 접근할 수 있도록 하지만, 법적으로는 접근하지 않으며, 출판사가 이미 지불을 받고 엄격한 저작권법으로 작품을 포장한 후에만 가능합니다. 이것은 내장된 합법 메커니즘과 보상 모델로 접근 가능한 과학 논문과 데이터에 중요한 격차를 남깁니다. 그러한 시스템을 구축하기 위한 도구는 Web3에 존재합니다.
 
-### 재생 가능성과 복제 가능성 {#reproducibility-and-replicability}
+### 재생 가능성과 복제 가능성 \{#reproducibility-and-replicability}
 
 재생 가능성과 복제 가능성은 양질의 과학적 발견의 기초입니다.
 
@@ -62,7 +62,7 @@ DeSci는 Web2 학계를 디지털 세계로 전환하기 위한 과학적 도구
 
 새로운 Web3 네이티브 도구는 재생 가능성과 복제 가능성이 검색의 기반이 되도록 보장할 수 있습니다. 우리는 학계의 기술 구조에 양질의 과학을 엮을 수 있습니다. Web3는 원시 데이터, 계산 엔진 및 응용 프로그램 결과와 같은 각 분석 구성 요소에 대한 증명을 만들 수 있는 기능을 제공합니다. 합의 시스템의 장점은 이러한 구성 요소를 유지하기 위해 신뢰할 수 있는 네트워크가 생성될 때, 각 네트워크 참가자는 계산을 재현하고 각 결과를 검증할 책임이 있다는 것입니다.
 
-### 펀딩 {#funding}
+### 펀딩 \{#funding}
 
 과학 자금 조달을 위한 현재 표준 모델은 개인이나 과학자 그룹이 자금 조달 기관에 서면 신청서를 작성하는 것입니다. 신뢰할 수 있는 개인으로 구성된 소규모 패널이 응용 프로그램을 평가한 다음 지원자 중 일부에게 기금을 수여하기 전에 지원자를 인터뷰합니다. 보조금 신청과 수령 사이에 때때로 수년의 대기 시간으로 이어지는 병목 현상을 제외하고 이 모델은 검토 패널의 편견, 이기심 및 정치에 매우 취약한 것으로 알려져 있습니다.
 
@@ -70,7 +70,7 @@ DeSci는 Web2 학계를 디지털 세계로 전환하기 위한 과학적 도구
 
 Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실험함으로써 이 깨진 자금 조달 모델을 혼란에 빠뜨릴 가능성이 있습니다. [소급 공공재 자금 조달](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [이차 자금 조달](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [다오 운영 방식](https://www.antler.co/blog/daos-and-web3-governance) 그리고 [토큰화된 보상구조](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)는 과학 자금에 혁명을 일으킬 수 있는 Web3 도구 중 일부입니다.
 
-### IP 소유권 및 개발 {#ip-ownership}
+### IP 소유권 및 개발 \{#ip-ownership}
 
 지적 재산권(IP)은 대학에 갇히거나 생명공학에 사용되지 않는 것부터 평가하기 어려운 악명 높은 것까지 전통적인 과학에서 큰 문제입니다. 그러나 디지털 자산(과학 데이터 또는 기사와 같은) 의 소유권은 Web3가 [대체 불가능한 토큰(NFT)](/nft/)을 사용하여 예외적으로 잘 하는 것입니다.
 
@@ -78,7 +78,7 @@ NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할
 
 [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)는 또한 수행 중인 연구 실험의 분산된 데이터 저장소의 열쇠 역할을 할 수 있으며 NFT 및 [DeFi](/defi/) 금융화(금융에서 대출 풀 및 가치 평가까지)에 연결할 수 있습니다. 또한 [VitaDAO](https://www.vitadao.com/)와 같은 DAO와 같은 본질적으로 온체인 단체가 온 체인에서 직접 연구를 수행할 수 있습니다. 양도할 수 없는 ["soulbound" 토큰](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)의 출현은 또한 개인이 이더리움 주소와 연결된 경험과 자격 증명을 증명할 수 있도록 함으로써 DeFi 에서 중요한 역할을 할 수 있습니다.
 
-### 데이터 저장, 액세스 및 아키텍처 {#data-storage}
+### 데이터 저장, 액세스 및 아키텍처 \{#data-storage}
 
 과학적 데이터는 Web3 패턴을 사용하여 훨씬 더 쉽게 접근할 수 있으며, 분산 저장은 연구가 무시무시한 사건에서 살아남을 수 있게 해줍니다.
 
@@ -86,7 +86,7 @@ NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할
 
 유연한 Web3 데이터 해결책은 위의 시나리오를 지원하고 연구자가 액세스 권한이나 수수료 없이 공공재 만들 수 있는 진정한 개방형 과학의 기반을 제공합니다. IPFS, Arweave 및 Filecoin과 같은 Web3 공용 데이터 해결책은 탈중앙화에 최적화되어 있습니다. 예를 들어, 기후변화는 기상 관측소와 예측 기후 모델을 포함한 기후 및 날씨 데이터에 대한 보편적인 접근을 제공합니다.
 
-## 참여하기 {#get-involved}
+## 참여하기 \{#get-involved}
 
 프로젝트를 탐색하고 DeSci 커뮤니티에 가입하세요.
 
@@ -114,7 +114,7 @@ NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할
 
 우리는 새로운 프로젝트에 대한 제안을 환영합니다 - 시작하려면 [목록 정책](/contributing/adding-desci-projects/)을 보세요!
 
-## 더 읽을거리 {#further-reading}
+## 더 읽을거리 \{#further-reading}
 
 - [Jocelynn Pearl과 Ultrarare의 DeSci Wiki](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [A16z 미래를 위한 Jocelynn Pearl의 분산형 생명공학 가이드](https://future.a16z.com/a-guide-to-decentralized-biotech/)
@@ -130,7 +130,7 @@ NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할
 - [나디아의 과학 자금 조달 (끝맺음말: DeSci 및 새로운 암호화 기초 요소)](https://nadia.xyz/science-funding)
 - [탈중앙화는 약물 개발을 방해하고 있습니다.](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-### 영상 {#videos}
+### 영상 \{#videos}
 
 - [탈중앙화 과학이란 무엇인가요?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [장수 연구와 암호화폐의 교차점에 대한 비탈릭 부테린과 과학자 오브리 드 그레이의 대화](https://www.youtube.com/watch?v=x9TSJK1widA)

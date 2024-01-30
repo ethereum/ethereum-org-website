@@ -4,7 +4,7 @@ description: Ethereum.org'a borsa eklerken kullandığımız politika
 lang: tr
 ---
 
-# Ethereum borsaları ekleme {#adding-ethereum-exchanges}
+# Ethereum borsaları ekleme \{#adding-ethereum-exchanges}
 
 Herkes ethereum.org'da yeni borsalar önermekte özgürdür.
 
@@ -18,7 +18,7 @@ Bu bağlamdan dolayı, bir borsa önerdiğinizde bazı özel bilgilere ihtiyacı
 
 **NOT:** Merkeziyetsiz bir borsayı listelemek istiyorsanız, [cüzdanları ve dapp'leri listeleme politikamıza](/contributing/adding-products/) göz atın.
 
-## İhtiyacımız olanlar {#what-we-need}
+## İhtiyacımız olanlar \{#what-we-need}
 
 - Borsa için geçerli olan coğrafi kısıtlamalar
 - Kullanıcıların ETH satın almak için kullanabileceği para birimleri
@@ -31,7 +31,7 @@ Ve böylece ethereum.org, değişimin meşru ve güvenli bir hizmet olduğundan 
 
 ---
 
-## Borsanızı ekleyin {#add-exchange}
+## Borsanızı ekleyin \{#add-exchange}
 
 Ethereum.org'a bir borsa eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 

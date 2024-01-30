@@ -5,9 +5,9 @@ lang: id
 incomplete: true
 ---
 
-## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
-## Tutorial {#tutorials}
+## Tutorial \{#tutorials}
 
 - [Flutter dan Blockchain – Dapp Hello World](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) memandu Anda melalui semua langkah untuk memulai:
   1.  Menginstal [Suite pengembangan Truffle](https://www.trufflesuite.com/)
@@ -18,7 +18,7 @@ incomplete: true
 - Jika tidak sabar, Anda mungkin lebih suka [Membangun Aplikasi Terdesentralisasi Blockchain dengan Flutter dan Dart di Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), yang diperkirakan hanya berdurasi dua puluh menit
 - [Mengintegrasikan MetaMask di aplikasi Flutter](https://youtu.be/8qzVDje3IWk) - video pendek ini memandu Anda melalui langkah-langkah dalam mengintegrasikan MetaMask ke dalam aplikasi Flutter Anda.
 
-## Bekerja dengan klien Ethereum {#working-with-ethereum-clients}
+## Bekerja dengan klien Ethereum \{#working-with-ethereum-clients}
 
 Anda dapat menggunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapps") yang menggunakan manfaat dari teknologi blockchain dan mata uang kripto. Ada setidaknya dua pustaka yang masih dipelihara sampai saat ini untuk Dart untuk menggunakan [API RPC JSON](/developers/docs/apis/json-rpc/) untuk Ethereum.
 

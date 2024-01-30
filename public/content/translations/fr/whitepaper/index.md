@@ -6,7 +6,7 @@ sidebarDepth: 2
 hideEditButton: true
 ---
 
-# Livre blanc Ethereum {#ethereum-whitepaper}
+# Livre blanc Ethereum \{#ethereum-whitepaper}
 
 _Ce document d'introduction a été publié pour la première fois en 2014 par Vitalik Buterin, le fondateur d'[Ethereum](/what-is-ethereum/), avant le lancement du projet en 2015. Il convient de noter qu'Ethereum, comme nombre de projets open source gérés de façon communautaire, a évolué depuis sa création._
 
@@ -14,19 +14,19 @@ _Même s'il date déjà de plusieurs années, nous conservons ce document car il
 
 [Les chercheurs et universitaires à la recherche d'une version historique ou canonique du livre blanc [à partir de décembre 2014] peuvent utiliser ce PDF.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
-## Une plateforme d'applications décentralisées et de contrats intelligents de nouvelle génération {#a-next-generation-smart-contract-and-decentralized-application-platform}
+## Une plateforme d'applications décentralisées et de contrats intelligents de nouvelle génération \{#a-next-generation-smart-contract-and-decentralized-application-platform}
 
 Le développement du Bitcoin par Satoshi Nakamoto en 2009 a souvent été salué comme une évolution radicale de la monnaie et des devises. Il s'agissait en effet du premier exemple d'actif numérique n'ayant simultanément aucune garantie ni "[valeur intrinsèque](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)", et aucun contrôleur ni émetteur centralisé. L'attention est cependant en train de se porter sur un autre aspect (sans doute plus important) du Bitcoin : la technologie blockchain sous-jacente comme outil de consensus distribué. Parmi les autres applications de la technologie blockchain fréquemment citées, on trouve l'utilisation d'actifs numériques pour représenter des monnaies personnalisées et des instruments financiers ("[Colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), la propriété d'appareils physiques sous-jacents ("[Smart property](https://en.bitcoin.it/wiki/Smart_Property)"), des actifs non fongibles comme les noms de domaine ("[Namecoin](http://namecoin.org)"), ainsi que des applications plus complexes dans lesquelles des actifs numériques sont directement contrôlés par une portion de code exécutant des règles diverses ("[Contrats intelligents](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)"), ou encore des "[organisations autonomes décentralisées" (ou DAO)](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/) basées sur la blockchain. Ce qu'Ethereum souhaite proposer, c'est une blockchain avec un véritable langage de programmation intégré, Turing-complet, pouvant être utilisé pour créer des « contrats » susceptibles d'encoder des fonctions de transition d'état arbitraires. Cela permettra aux utilisateurs de créer n'importe lequel des systèmes cités ci-dessus, ainsi que beaucoup d'autres que nous n'avons pas encore imaginés, le tout en quelques lignes de code.
 
-## Introduction au Bitcoin et aux concepts existants {#introduction-to-bitcoin-and-existing-concepts}
+## Introduction au Bitcoin et aux concepts existants \{#introduction-to-bitcoin-and-existing-concepts}
 
-### Historique {#history}
+### Historique \{#history}
 
 Le concept de monnaie numérique décentralisée, ainsi que des applications alternatives comme les registres de propriété, font l'objet d'études depuis des décennies. Les protocoles anonymes de monnaie électronique des années 1980 et 1990, principalement fondés sur une primitive cryptographique appelée Chaumian Blinding (signature aveugle), ont fourni une monnaie à un niveau de confidentialité élevé, mais leurs protocoles sous-jacents ont largement échoué à se populariser en raison de leur dépendance à un intermédiaire centralisé. En 1998, la [b-money](http://www.weidai.com/bmoney.txt) de Wei Dai fut la première proposition d'une idée de créer une monnaie via la résolution d'un calcul cryptographique ainsi que l'idée d'un consensus décentralisé, mais la proposition n'était pas assez étayée quant à la manière d'implémenter un consens décentralisé. En 2005, Hal Finney présenta le concept de "[preuves de travail réutilisables](https://nakamotoinstitute.org/finney/rpow/)", qui reprenait les idées de b-money et des puzzles cryptographiques Hashcash d'Adam Back, gourmands en ressources informatiques, pour créer un concept de cryptomonnaie, mais sans parvenir à une solution idéale puisqu'il nécessitait un système informatique de confiance comme backend. En 2009, une monnaie décentralisée fut implémentée pour la première fois par Satoshi Nakamoto, qui combinait des primitives reconnues utilisant la cryptographie asymétrique pour gérer la propriété, à un algorithme de consensus, le « proof-of-work », pour garder une trace des détenteurs de monnaie.
 
 Le mécanisme de la preuve de travail a été une réelle avancée dans ce domaine, car il a permis de résoudre simultanément deux problèmes. Premièrement, cela a fourni un algorithme de consensus simple et efficace, permettant aux noeuds du réseau de s'accorder collectivement sur un ensemble de mises à jour canonique sur l'état du registre de Bitcoin. Deuxièmement, cela a fourni un mécanisme permettant de participer librement au consensus, résolvant le problème politique de décider qui peut influer sur le consensus, tout en empêchant simultanément les attaques Sybil. Il y parvient en substituant un obstacle formel à la participation, comme l'obligation d'être enregistré en tant qu'entité unique sur une liste donnée, par une barrière économique : le poids d'un seul nœud dans le processus de vote par consensus est directement proportionnel à la puissance de calcul que celui-ci apporte. Depuis, une autre approche a été proposée, la _preuve d'enjeu_ (Proof of stake), qui calcule le poids d'un nœud proportionnellement à ses avoirs en monnaie et non pas à ses ressources de calcul. La discussion sur les mérites relatifs des deux approches dépasse la portée de ce document, mais il convient de noter que les deux peuvent être utilisées pour servir de colonne vertébrale à une cryptomonnaie.
 
-### Bitcoin en tant que système de transition d'état {#bitcoin-as-a-state-transition-system}
+### Bitcoin en tant que système de transition d'état \{#bitcoin-as-a-state-transition-system}
 
 ![Transition d'état Ethereum](./ethereum-state-transition.png)
 
@@ -74,7 +74,7 @@ La fonction de transition d'état `APPLY(S,TX) -> S'` peut grossièrement être 
 
 La première moitié de la première étape empêche les émetteurs de transaction de dépenser des unités de compte qui n'existent pas, la seconde moitié les empêche de dépenser les unités de compte d'autres personnes, et la deuxième étape assure que la valeur est préservée. Le protocole pour utiliser cela comme moyen de paiement est le suivant. Imaginons qu'Alice veuille envoyer 11,7 BTC à Marc. Alice va commencer par chercher un ensemble disponible d'UTXO qui lui appartiennent, pour un total d'au moins 11,7 BTC. En réalité, Alice ne pourra pas obtenir exactement 11,7 BTC. La plus petite somme qu'elle peut obtenir est 6+4+2=12. Elle crée alors une transaction avec ces trois entrées et deux sorties. La première sortie sera 11,7 BTC avec l'adresse de Marc comme propriétaire, et la seconde sortie représentera les 0,3 BTC de monnaie restante, dont elle est propriétaire.
 
-### Minage {#mining}
+### Minage \{#mining}
 
 ![Blocs Ethereum](./ethereum-blocks.png)
 
@@ -104,7 +104,7 @@ Afin de mieux comprendre le but du minage, nous allons examiner ce qui se passe 
 
 Une fois l'étape (1) réalisée, un mineur inclura la transaction dans un bloc après quelques minutes. Par exemple, le bloc numéro 270000. Au bout d'environ une heure, cinq autres blocs auront été ajoutés à la chaîne après ce bloc, chacun d'entre eux pointant indirectement vers la transaction et ainsi, la "confirmant". À ce stade, le commerçant acceptera le paiement comme finalisé et livrera le produit. Partant du postulat qu'il s'agit d'un bien numérique, la livraison est instantanée. L'attaquant crée maintenant une autre transaction en s'envoyant 100 BTC à lui-même. S'il l'envoie simplement dans la nature, la transaction ne sera pas traitée : les mineurs vont tenter d'exécuter `APPLY(S,TX)` et remarqueront que `TX` consomme un UTXO qui n'est plus dans l'état. Au lieu de cela, l'attaquant crée donc une « fourche » (une scission) dans la blockchain en commençant par miner une autre version du bloc 270000 pointant vers le même bloc parent 269999, mais contenant la nouvelle transaction à la place de l'ancienne. Les données du bloc étant différentes, cela nécessite de refaire la preuve de travail. De plus, le hash de la nouvelle version du bloc 270000 de l'attaquant est différente, donc les blocs d'origine de 270001 à 270005 ne « pointent » pas vers lui. La chaîne d'origine et la nouvelle chaîne de l'attaquant sont donc bien complètement séparées. La règle étant que, dans le cas d'une fourche, c'est la plus longue blockchain qui est considérée comme la vraie, les mineurs légitimes travaillent donc sur la chaîne 270005 tandis que l'attaquant travaille seul sur la chaîne 270000. Pour que la blockchain de l'attaquant soit la plus longue, il aurait besoin d'avoir plus de puissance de calcul que le reste du réseau combiné afin de rattraper son retard (d'où l'attaque dite "de 51 %").
 
-### Arbres de Merkle {#merkle-trees}
+### Arbres de Merkle \{#merkle-trees}
 
 ![SPV chez Bitcoin](./spv-bitcoin.png)
 
@@ -116,7 +116,7 @@ Une importante fonctionnalité d'évolutivité de Bitcoin est que le bloc est st
 
 On peut dire que le protocole de l'arbre de Merkle est essentiel à la viabilité du système à long terme. Un nœud complet ("full node") du réseau Bitcoin, qui stocke et traite l'intégralité de chaque bloc, nécessitait environ 15 Go d'espace disque sur le réseau Bitcoin en avril 2014, avec une croissance d'un gigaoctet par mois. La situation actuelle est viable pour certains ordinateurs de bureau, mais pas pour les téléphones, et à l'avenir, seuls les entreprises et les passionnés seront en mesure de participer. Un protocole connu sous le nom de vérification de paiement simplifiée (ou SPV) permet l'existence d'une autre catégorie de nœuds, appelés Nœuds légers ("light nodes"). Ce protocole permet aux nœuds légers de déterminer avec une vraie garantie de sécurité le statut de n'importe quelle transaction Bitcoin, ainsi que son solde actuel, en ne téléchargeant qu'une très petite partie de la blockchain.
 
-### Autres applications de la blockchain {#alternative-blockchain-applications}
+### Autres applications de la blockchain \{#alternative-blockchain-applications}
 
 L'application de l'idée sous-jacente de la blockchain à d'autres concepts a également une longue histoire. En 2005, Nick Szabo invente le concept de « [secure property titles with ownerauthority](https://nakamotoinstitute.org/secure-property-titles/) » (titres de propriété sécurisés avec preuve de possession), un document décrivant comment de « nouvelles avancées dans la technologie des bases de données répliquées » permettent à un système fondé sur la blockchain de stocker une sorte de cadastre des propriétaires de terrains, créant ainsi un cadre élaboré qui inclut des concepts comme l'occupation d'un terrain, la prescription acquisitive et la taxe foncière en Géorgie. Il n'existait toutefois malheureusement aucun système de base de données répliquées efficace à cette époque. Le protocole n'a donc jamais été implémenté en pratique. Après 2009, une fois développé le consensus décentralisé de Bitcoin, un certain nombre d'autres applications ont néanmoins rapidement commencé à émerger.
 
@@ -128,7 +128,7 @@ Il existe donc généralement deux approches pour construire un protocole de con
 
 L'approche fondée sur Bitcoin, en revanche, a l'inconvénient de ne pas hériter des fonctionnalités de vérification de paiement simplifiée (SPV) de Bitcoin. La SPV fonctionne pour Bitcoin car elle utilise la profondeur de la blockchain comme proxy de validation. À un certain point, quand on est remonté assez loin dans les ancêtres d'une transaction, on peut légitimement affirmer qu'ils font partie de l'état. D'un autre côté, les méta-protocoles fondés sur la blockchain ne peuvent pas forcer celle-ci à ne pas inclure les transactions qui ne sont pas valides dans le contexte de leurs propres protocoles. C'est pourquoi une implémentation entièrement sécurisée du méta-protocole de SPV devrait examiner l'intégralité de la blockchain Bitcoin jusqu'au début pour déterminer si certaines transactions sont valides ou non. Actuellement, toutes les implémentations "légères" des méta-protocoles fondés sur Bitcoin se fient à un serveur de confiance pour fournir les données. Un résultat à l'évidence insatisfaisant surtout lorsque le but premier d'une cryptomonnaie est d'éliminer le besoin de confiance.
 
-### Langage de script {#scripting}
+### Langage de script \{#scripting}
 
 Même sans extension, le protocole Bitcoin permet d'obtenir une version "faible" du concept de contrats intelligents ("smart contracts"). Les UTXO Bitcoin peuvent non seulement être détenus par une clé publique, mais aussi par un script plus complexe exprimé dans un langage de programmation simple basé sur une pile. Dans ce paradigme, une transaction dépensant ces UTXO doit fournir les données qui satisfont le script. En effet, même le simple mécanisme de propriété d'une clé publique est implémenté via un script : celui-ci prend une signature à courbe elliptique en entrée, vérifie qu'il correspond à la transaction et à l'adresse propriétaire de l'UTXO, et renvoie 1 quand la vérification réussi ou 0 dans le cas contraire. D'autres scripts plus compliqués existent pour d'autres cas d'utilisation. Par exemple, on peut concevoir un script qui requiert les signatures de deux clés privées sur trois pour être validé ("multisig"), une configuration utile pour les comptes d'entreprise, les comptes d'épargne sécurisés ou certains cas de dépôts fiduciaires. Les scripts peuvent également être utilisés afin d'offrir des récompenses pour résoudre des problèmes de calculs mathématiques, et vous pouvez même en concevoir un qui déclarerait "cet UTXO Bitcoin est le vôtre si vous pouvez fournir une preuve de SPV que vous m'avez envoyé une transaction Dogecoin de telle valeur", ce qui permet la création d'une bourse d'échange entre différentes cryptomonnaies.
 
@@ -141,11 +141,11 @@ Le langage de script, tel qu'il est implémenté dans Bitcoin, a toutefois d'imp
 
 Nous discernons donc trois approches pour développer des applications avancées sur la base d'une cryptomonnaie : la construction d'une nouvelle blockchain, l'utilisation de scripts reposant sur Bitcoin et la construction d'un méta-protocole reposant sur Bitcoin. La création d'une nouvelle blockchain offre une liberté illimitée pour construire un éventail de fonctionnalités, mais nécessite d'importants efforts en termes de temps de développement, de mise en service et de sécurité. L'utilisation de scripts est simple à implémenter et à normaliser, mais est très limitée en terme de fonctionnalités, et les méta-protocoles, bien que simples, souffrent de défauts en matière d'évolutivité. Avec Ethereum, nous avons l'intention de construire un autre framework, qui offre des perspectives bien plus importantes tant au niveau de la simplicité de développement que de la puissance des clients légers, tout en permettant aux applications de partager un environnement économique bénéficiant de la sécurité de la blockchain.
 
-## Ethereum {#ethereum}
+## Ethereum \{#ethereum}
 
 L'objectif d'Ethereum est de créer un autre protocole pour développer des applications décentralisées, en offrant un ensemble différent de compromis qui sera, nous le pensons, très utile pour une large classe d'applications décentralisées. Il sera principalement axé sur les situations dans lesquelles le développement rapide, la sécurité des petites applications rarement utilisées et la possibilité pour les différentes applications d'interagir ensemble de façon très efficace sont importants. Ethereum parvient à cela en construisant ce qui constitue la couche fondamentale abstraite essentielle : une blockchain intégrant un langage de programmation Turing-complet, permettant à tous de rédiger des contrats intelligents et des applications décentralisées où l'on peut créer ses propres règles arbitraires de propriété, formats de transaction et fonctions de transition d'état. Une version dépouillée de Namecoin peut être rédigée en deux lignes de code, et d'autres protocoles comme les systèmes de réputation et de monnaies peuvent être développés en moins de vingt lignes. Les contrats intelligents, ces "boîtes" cryptographiques qui contiennent une valeur et ne se déverrouillent que si certaines conditions sont remplies, peuvent également être construits au-dessus de la plateforme, avec bien plus de puissance que celle du langage de script Bitcoin en raison des capacités supplémentaires offerte par la Turing-complétude, la visibilité des valeurs, de la blockchain, et l'état.
 
-### Comptes Ethereum {#ethereum-accounts}
+### Comptes Ethereum \{#ethereum-accounts}
 
 Dans Ethereum, l'état est composé d'objets appelés « comptes », chaque compte ayant une adresse de 20 octets et les transitions d'état étant des transferts directs de valeur et d'informations entre les comptes. Un compte Ethereum comporte quatre champs :
 
@@ -158,7 +158,7 @@ L'« ether » est le principal cryptocarburant interne d'Ethereum. Il est utilis
 
 Notez que dans Ethereum, les « contrats » ne doivent pas être considérés comme quelque chose qui doit être « rempli » ni « respecté ». Il s'agit plutôt d'« agents autonomes », qui vivent à l'intérieur de l'environnement d'exécution Ethereum, exécutant toujours un morceau de code spécifique lorsqu'ils sont appelés par un message ou une transaction, et ayant un contrôle direct sur leur propre solde d'ether et leur propre magasin de clés/valeurs afin de garder une trace des variables persistantes.
 
-### Messages et transactions {#messages-and-transactions}
+### Messages et transactions \{#messages-and-transactions}
 
 Dans Ethereum, le terme « transaction » désigne le paquet de données signées qui stocke un message à envoyer depuis un compte externe. Les transactions contiennent :
 
@@ -173,7 +173,7 @@ Les trois premiers champs sont des champs standards attendus dans toute cryptomo
 
 Les champs `STARTGAS` et `GASPRICE` sont essentiels au mécanisme anti-déni de service d'Ethereum. Afin d'éviter les boucles infinies accidentelles ou hostiles, ou d'autres gaspillages de calcul dans le code, il est nécessaire que chaque transaction limite le nombre d'étapes de calcul dans l'exécution du code. L'unité fondamentale de calcul est le « gaz ». En général, une étape de calcul coûte 1 unité de gaz, mais certaines opérations coûtent plus cher, car elles sont plus gourmandes en calcul ou augmentent la quantité de données à stocker comme partie intégrante de l'état. Il existe aussi des frais de 5 unités de gaz pour chaque octet de données de transaction. Le but de ce système de frais est d'exiger d'un attaquant qu'il paie proportionnellement chaque ressource qu'il consomme, y compris le calcul, la bande passante et le stockage. Ainsi, toute transaction conduisant le réseau à consommer une plus grande quantité de l'une de ces ressources doit payer des frais de gaz à peu près proportionnels à cette augmentation.
 
-### Messages {#messages}
+### Messages \{#messages}
 
 Les contrats ont la capacité d'envoyer des "messages" à d'autres contrats. Les messages sont des objets virtuels qui ne sont jamais sérialisés et n'existent qu'au sein de l'environnement d'exécution d'Ethereum. Un message contient :
 
@@ -187,7 +187,7 @@ En substance, un message est comme une transaction, sauf qu'il est émis par un 
 
 Notez que l'allocation de gaz assignée par une transaction ou un contrat concerne la totalité du gaz consommé par cette transaction et toutes les sous-exécutions. Par exemple, si un acteur externe A envoie une transaction à B avec 1 000 unités de gaz, que B consomme 600 unités de gaz avant d'envoyer un message à C, et que l’exécution interne de C consomme 300 unités de gaz avant le retour, B pourra encore consommer 100 unités de gaz avant d'être en panne sèche.
 
-### Fonction de transition d'état Ethereum {#ethereum-state-transition-function}
+### Fonction de transition d'état Ethereum \{#ethereum-state-transition-function}
 
 ![Transition d'état ETH](./ether-state-transition.png)
 
@@ -220,7 +220,7 @@ S'il n'existait aucun contrat à l'autre bout de la transaction, le total des fr
 
 Notez que les messages fonctionnent de la même façon que les transactions en terme d'invalidation : si l'exécution d'un message ne dispose pas d'assez de gaz, alors celle-ci, ainsi que toutes les autres exécutions qu'elle a déclenchées, reviennent à leur état initial, mais les exécutions parentes n'ont pas à être invalidées. Cela signifie qu'il est "sans danger" pour un contrat d'appeler un autre contrat, car si A appelle B avec le gaz G, alors l'exécution de A ne consommera jamais plus que le gaz G. Notez qu'il existe un code d'opération `CREATE`, qui crée un contrat. Son principe d'exécution est globalement similaire à `CALL`, excepté que le résultat de l'exécution détermine le code d'un contrat nouvellement créé.
 
-### Exécution de code {#code-execution}
+### Exécution de code \{#code-execution}
 
 Dans les contrats Ethereum, le code est écrit dans un langage bytecode de bas niveau orienté pile, appelé « code de la machine virtuelle Ethereum » ou « code EVM ». Il se compose d'une série d'octets, où chaque octet représente une opération. En général, l'exécution de code est une boucle infinie qui consiste à répéter l'opération au compteur de programme actuel (qui commence à zéro), puis à incrémenter le compteur de un jusqu'à atteindre la fin du code ou une erreur, ou jusqu'à ce qu'une instruction `STOP` ou `RETURN` soit détectée. Les opérations ont accès à trois types d'espace pour stocker des données :
 
@@ -232,7 +232,7 @@ Le code peut aussi accéder à la valeur, à l'expéditeur et aux données du me
 
 Le modèle d'exécution officiel du code EVM est étonnamment simple. Lorsque la machine virtuelle Ethereum est en cours d'exécution, son état de calcul complet peut être défini par le tuple `(block_state, transaction, message, code, memory, stack, pc, gaz)`, où `block_state` est l'état global contenant tous les comptes, et comprend les soldes et le stockage. Au début de chaque cycle d'exécution, l'instruction courante est trouvée en prenant le `pc`ième octet du `code` (ou 0 si `pc >= len(code)`), et chaque instruction a sa propre définition quant à son impact sur le tuple. Par exemple, `ADD` extrait deux éléments de la pile et insère leur somme, réduit `gaz` de 1 et augmente `pc` de 1, tandis que `SSTORE` extrait les deux éléments supérieurs de la pile et insère le deuxième élément dans l'espace de stockage du contrat à l'index spécifié par le premier élément. Bien qu'il existe de nombreuses façons d'optimiser l'exécution de la machine virtuelle Ethereum via la compilation à la volée, une implémentation de base d'Ethereum peut être réalisée en quelques centaines de lignes de code.
 
-### Blockchain et minage {#blockchain-and-mining}
+### Blockchain et minage \{#blockchain-and-mining}
 
 ![Diagramme des blocs APPLY Ethereum](./ethereum-apply-block-diagram.png)
 
@@ -251,11 +251,11 @@ L'approche peut sembler très inefficace à première vue, car elle nécessite d
 
 La question de savoir où le code d'un contrat est exécuté, en termes de matériel physique, est souvent posée. La réponse est simple : le processus d'exécution du code d'un contrat fait partie de la définition de la fonction de transition d'état, qui fait partie de l'algorithme de validation des blocs. Donc quand une transaction est ajoutée au bloc `B`, l'exécution de code engendrée par cette transaction est exécutée par tous les nœuds, actuels et futurs, qui téléchargent et valident le bloc `B`.
 
-## Applications {#applications}
+## Applications \{#applications}
 
 En général, il existe trois types d'applications sur Ethereum. La première catégorie est celle des applications financières, qui fournissent aux utilisateurs des moyens plus puissants de gérer et conclure des contrats en utilisant leur argent. Elle inclut les sous-monnaies, les produits financiers dérivés, les contrats de couverture, les portefeuilles d'épargne, les testaments, et même certaines catégories de contrats de travail. La deuxième catégorie est celle des applications semi-financières, où de l'argent entre en jeu, mais où il existe aussi un important aspect non monétaire. Un exemple parfait est celui des primes auto-appliquées pour des solutions à des problèmes de calcul. Enfin, il existe des applications comme le vote en ligne et la gouvernance décentralisée, qui n'ont aucun aspect financier.
 
-### Systèmes de jetons {#token-systems}
+### Systèmes de jetons \{#token-systems}
 
 Les systèmes de jetons (tokens) sur une blockchain ont de nombreuses applications allant des sous-monnaies représentant des actifs (comme les dollars US ou l'or) aux actions d'entreprise, en passant par les jetons individuels représentant des titres de propriété ou des coupons sécurisés infalsifiables, ou encore les jetons sans aucune valeur conventionnelle, utilisés comme mesures d'incitation sous la forme de points. Les systèmes de jetons sont étonnamment faciles à implémenter dans Ethereum. Le point essentiel à bien comprendre est que toute monnaie ou tout système de jetons est essentiellement une base de données proposant une seule opération : prendre X unités de A pour les donner à B, à condition que (1) A dispose d'au moins X unités avant la transaction et (2) que la transaction soit approuvée par A. Il suffit donc d'implémenter cette logique dans un contrat pour implémenter un système de jetons.
 
@@ -270,7 +270,7 @@ def send(to, value):
 
 Il s'agit fondamentalement d'une implémentation littérale de la fonction de transition d'état de « système bancaire » décrite précédemment dans ce document. Quelques lignes de code supplémentaires sont nécessaires pour spécifier l'étape initiale de distribution des unités monétaires et quelques autres cas particuliers, et idéalement une fonction sera ajoutée pour permettre à d'autres contrats d'obtenir le solde d'une adresse. C'est tout ce qu'il y a à faire ! En théorie, les systèmes de jetons basés sur Ethereum fonctionnant comme des sous-monnaies peuvent potentiellement présenter une autre caractéristique importante qui manque aux méta-monnaies implémentées sur la blockchain Bitcoin : la capacité de payer les frais de transaction directement dans cette monnaie. Pour mettre cela en œuvre, le contrat gère un solde en ETH grâce auquel il rembourse l'expéditeur du montant en ETH utilisé pour payer les frais, et rééquilibre son solde en collectant les unités monétaires internes qu'il prend en frais pour les revendre dans une vente aux enchères permanente. Les utilisateurs ont donc besoin « d'activer » leurs comptes avec de l'ether (ETH), mais une fois cela fait, ils peuvent réutiliser cette somme puisqu'elle est à chaque fois remboursée par le contrat.
 
-### Produits financiers dérivés et monnaies à valeur stable {#financial-derivatives-and-stable-value-currencies}
+### Produits financiers dérivés et monnaies à valeur stable \{#financial-derivatives-and-stable-value-currencies}
 
 Les produits financiers dérivés sont l'application la plus courante d'un « contrat intelligent » et l'une des plus simples à implémenter en programmation. La principale difficulté dans l'implémentation de contrats financiers est qu'ils nécessitent pour la plupart une référence à une cotation externe. Un contrat intelligent de couverture contre la volatilité de l'ETH (ou de toute autre cryptomonnaie) par rapport au dollar US serait, par exemple, une application très intéressante, mais cela impliquerait que le contrat connaisse le taux de change ETH/USD. Pour ce faire, la méthode la plus simple serait d'utiliser un contrat de « flux de données » géré par une entité définie (par ex., le NASDAQ) et conçu pour que cette entité puisse le mettre à jour quand cela est nécessaire, et qui fournirait une interface permettant à d'autres contrats de lui envoyer un message afin d'obtenir une réponse donnant le taux de change.
 
@@ -285,7 +285,7 @@ Ce type de contrat représenterait un beau potentiel dans le monde du cryptocomm
 
 Dans la pratique, néanmoins, les émetteurs ne sont pas toujours fiables, et dans certains cas l'infrastructure bancaire est trop fragile, ou trop hostile, pour permettre l'existence de tels services. Les produits financiers dérivés constituent une alternative. Ici, au lieu d'un unique émetteur fournissant les fonds pour adosser un actif, c'est un marché décentralisé de spéculateurs pariant sur la hausse du prix d'un crypto-actif de référence (par exemple l'ETH), qui remplit ce rôle. Contrairement aux émetteurs, les spéculateurs ne peuvent pas faire défaut, car le contrat de couverture conserve leurs fonds sous forme de dépôt fiduciaire. Notez que cette approche n'est pas totalement décentralisée, car une source de confiance est toujours nécessaire pour fournir le téléscripteur bien que l'amélioration soit massive en termes de réduction des besoins d'infrastructure (contrairement à un émetteur, la publication d'un taux de change ne nécessite aucun permis et peut être considérée comme de la liberté de parole) et des possibilités de fraude.
 
-### Systèmes d'identité et de réputation {#identity-and-reputation-systems}
+### Systèmes d'identité et de réputation \{#identity-and-reputation-systems}
 
 La toute première cryptomonnaie alternative, [Namecoin](http://namecoin.org/), a tenté d'utiliser une blockchain similaire à celle de Bitcoin pour fournir un système d'enregistrement de noms, dans lequel les utilisateurs pouvaient enregistrer leurs noms dans une base de données publique avec d'autres données. C'est dans le cadre d'un système [DNS](https://wikipedia.org/wiki/Domain_Name_System), qui associe des noms de domaine comme "bitcoin.org" (ou pour Namecoin, "bitcoin.bit") à une adresse IP, qu'elle est principalement utilisée. D'autres utilisations incluent l’authentification d'e-mails, et potentiellement des systèmes de réputation plus perfectionnés. Voilà un contrat élémentaire permettant de fournir un système d'enregistrement de noms similaire à celui de Namecoin sur Ethereum :
 
@@ -297,7 +297,7 @@ def register(name, value):
 
 Le contrat est très simple : il ne s'agit que d'une base données au sein du réseau Ethereum, à laquelle on peut ajouter des données, mais dans laquelle on ne peut ni en modifier ni en supprimer. N'importe qui peut enregistrer un nom et une valeur, et cet enregistrement est inscrit pour toujours. Un contrat d’enregistrement de nom plus sophistiqué aura une « clause fonction » permettant à d'autres contrats de l'interroger, ainsi qu'un mécanisme autorisant le « propriétaire » (le premier déposant) d'un nom à en changer les données ou à en transférer la propriété. On peut même ajouter à cela une fonctionnalité de réputation et de réseau de confiance.
 
-### Stockage décentralisé de fichiers {#decentralized-file-storage}
+### Stockage décentralisé de fichiers \{#decentralized-file-storage}
 
 Ces dernières années, plusieurs startups ont été créées dans le secteur du stockage de fichiers en ligne (la plus importante étant Dropbox). Dans le cadre d'un abonnement mensuel payant, elles proposent aux utilisateurs de stocker une copie de sauvegarde de leur disque dur, à laquelle ils peuvent accéder à leur convenance. Toutefois, le marché du stockage de fichiers en ligne reste à ce jour relativement inefficace. Un rapide survol des solutions existantes montre que dans la fourchette de 20 à 200 Go, où il n'existe ni offre gratuite ni offre professionnelle avec remises, le prix mensuel du stockage est supérieur à celui du disque dur lui-même. Les contrats Ethereum permettent le développement d'un écosystème de stockage de fichiers décentralisé, où chaque utilisateur peut recevoir de petites sommes d'argent en louant ses propres disques durs, l'espace inutilisé contribuant à réduire davantage le coût du stockage des fichiers.
 
@@ -305,7 +305,7 @@ La clé de voûte d'un tel système est ce que nous avons appelé le « contrat 
 
 Une fonctionnalité importante du protocole est que, bien qu'on ait l'impression de faire confiance à plusieurs nœuds aléatoires pour ne pas perdre le fichier, on peut quasiment supprimer ce risque en divisant le fichier en plusieurs parties par partage secret et en surveillant les contrats pour vérifier que chaque partie est toujours présente sur un nœud. Si un contrat émet toujours des paiements, cela apporte la preuve cryptographique que quelqu'un stocke toujours le fichier.
 
-### Organisations autonomes décentralisées {#decentralized-autonomous-organizations}
+### Organisations autonomes décentralisées \{#decentralized-autonomous-organizations}
 
 Le concept général d'une « organisation autonome décentralisée » (DAO) est celui d'une entité virtuelle avec un certain nombre de membres ou d'actionnaires qui, peut-être à une majorité de 67 %, ont le droit de dépenser ses fonds et de modifier son code. Les membres vont collectivement décider de la façon dont les fonds doivent être alloués par l'organisation. Les méthodes pour allouer les fonds d'une DAO peuvent aller des primes aux salaires en passant par un mécanisme plus original, comme une monnaie interne, pour récompenser le travail. Ceci reproduit essentiellement les attributs juridiques d'une entreprise traditionnelle ou d'une association à but non lucratif, mais en utilisant uniquement la technologie cryptographique de la blockchain. Jusqu'à présent, une grande partie des discussions concernant les DAO tournait autour du modèle « capitaliste » d'une « société autonome décentralisée » (DAC), avec des actionnaires bénéficiaires de dividendes et des actions négociables. Une alternative, décrite comme une « communauté autonome décentralisée », attribuerait à tous les membres une part égale dans la prise de décision et exigerait un consensus de 67 % des membres pour ajouter ou supprimer un membre. L'exigence selon laquelle une personne ne peut avoir qu'une seule adhésion doit alors être appliquée collectivement par le groupe.
 
@@ -319,7 +319,7 @@ Le contrat aurait alors des clauses pour chacun de ces types. Il conserverait un
 
 L'entreprise décentralisée constitue un autre modèle, où n'importe quel compte peut avoir zéro ou plus d'actions, et où deux tiers des actions sont requises pour prendre une décision. Un modèle complet impliquerait une fonctionnalité de gestion d'actifs, la possibilité de faire une offre pour acheter ou vendre des actions, et la possibilité d'accepter les offres (de préférence avec un mécanisme de correspondance d'ordres à l'intérieur du contrat). Une délégation existerait également, à la manière d'une démocratie délégative, généralisant le concept de « conseil d'administration ».
 
-### Autres applications {#further-applications}
+### Autres applications \{#further-applications}
 
 **1. Portefeuilles d'épargne**. Imaginons qu'Alice souhaite conserver ses fonds en sécurité, mais craigne de perdre ou de se faire pirater sa clé privée. Elle place des ETH dans un contrat avec Marc, une banque, comme suit :
 
@@ -343,9 +343,9 @@ En principe, 1 % par jour suffit à Alice, mais si elle souhaite retirer davant
 
 **8. Places de marché décentralisées sur la blockchain**, utilisant un système d'identité et de réputation comme base.
 
-## Généralités et préoccupations {#miscellanea-and-concerns}
+## Généralités et préoccupations \{#miscellanea-and-concerns}
 
-### Implémentation modifiée de GHOST {#modified-ghost-implementation}
+### Implémentation modifiée de GHOST \{#modified-ghost-implementation}
 
 Le protocole « Greedy Heaviest Observed Subtree » (GHOST) est une innovation introduite par Yonatan Sompolinsky et Aviv Zohar en [décembre 2013](https://eprint.iacr.org/2013/881.pdf). La naissance de GHOST résulte du fait que les blockchains avec des temps de confirmation rapides souffrent d'une faible sécurité en raison d'un taux élevé de blocs caducs. Un certain temps étant nécessaire pour que les blocs se propagent à travers le réseau, si un mineur A mine un bloc et qu'un mineur B parvient à miner un autre bloc avant que le bloc du mineur A ne soit propagé à B, le bloc du mineur B est perdu et ne contribue pas à la sécurité du réseau. Par ailleurs, il existe un problème de centralisation : si le mineur A est un groupe de minage disposant de 30 % de la puissance de hachage du réseau (hashpower) et que B n'en a que 10 %, A risque de produire un bloc caduc 70 % du temps (puisque les autres 30 % du temps, A produit le dernier bloc et obtient donc immédiatement les données de minage). B risque de son côté de produire un bloc caduc 90 % du temps. Ainsi, si l'intervalle entre les blocs est assez court pour que le taux de blocs caducs soit élevé, A sera nettement plus efficace simplement en raison de sa taille. Ces deux effets combinés font que les blockchains produisant rapidement des blocs sont particulièrement susceptibles de générer un groupe de minage bénéficiant d'un pourcentage assez large de la puissance de hachage du réseau. Celui-ci aura alors, de fait, le contrôle du processus de minage.
 
@@ -363,7 +363,7 @@ Ethereum implémente une version simplifiée de GHOST qui ne descend que sur sep
 
 Cette version limitée de GHOST, dont les oncles ne peuvent être inclus que jusqu'à 7 générations, a été utilisée pour deux raisons. Tout d'abord, une version illimitée de GHOST entraînerait trop de complications dans le calcul des oncles valides pour un bloc donné. Deuxièmement, une version illimitée de GHOST avec compensation tel qu'utilisée dans Ethereum supprime l'intérêt pour un mineur de miner sur la chaîne principale et non la chaîne d'un attaquant public.
 
-### Frais {#fees}
+### Frais \{#fees}
 
 Étant donné que chaque transaction publiée dans la blockchain impose au réseau son téléchargement à des fins de vérification, un mécanisme de régulation est nécessaire afin de prévenir tout abus, ce qui implique généralement des frais de transaction. Sur Bitcoin, l'approche par défaut consiste à avoir des frais de transactions volontaires, en s'appuyant sur les mineurs pour jouer le rôle de gardiens et implémenter des minimums variables. Cette approche a été reçue très favorablement par la communauté Bitcoin, car elle est basée sur le marché, et permet de déterminer le juste prix par rapport à l'offre et à la demande entre mineurs et expéditeurs de transactions. Ce raisonnement comporte néanmoins un problème : le traitement d'une transaction n'est pas un marché. Bien qu'il soit tentant de considérer la transaction comme un service rendu à l'expéditeur par le mineur, en réalité chaque transaction incluse par un mineur doit être traitée par tous les nœuds du réseau. La majorité du coût de traitement d'une transaction est donc prise en charge par des tiers et pas par le mineur qui décide ou non d'inclure la transaction. C'est pourquoi des problèmes de type « tragédie des biens communs » sont susceptibles de se produire.
 
@@ -394,7 +394,7 @@ floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
 
 Il existe un autre facteur qui dissuade les mineurs d'ajouter des blocs de grande taille dans Bitcoin : cela prend plus de temps de les propager et le risque qu'ils deviennent caducs est plus élevé. Dans Ethereum, les blocs consommant beaucoup de gaz peuvent également prendre plus de temps à se propager, à la fois car ils sont physiquement plus grands, mais aussi car ils requièrent plus de temps pour traiter les transitions d'état des transactions à valider. L'effet dissuasif associé aux délais est un facteur important chez Bitcoin, mais moindre chez Ethereum en raison du protocole GHOST, le recours à des limites de blocs réglementées offrant une base de référence plus stable.
 
-### Calcul et Turing-complétude {#computation-and-turing-completeness}
+### Calcul et Turing-complétude \{#computation-and-turing-completeness}
 
 Il est important de noter que la machine virtuelle Ethereum est Turing-complète, ce qui signifie que le code de l'EVM peut coder tout calcul pouvant être effectué, y compris les boucles infinies. Le code EVM permet la création de boucles de deux façons. Il y a d'abord l'instruction `JUMP` qui permet au programme de revenir à un endroit précédent du code, puis l'instruction `JUMPI` qui permet de faire des sauts conditionnels, ce qui permet des déclarations comme `while x < 27: x = x * 2`. Ensuite, les contrats peuvent appeler d'autres contrats, ce qui permet potentiellement de créer des boucles par récursion. Cela conduit naturellement à la question suivante : les utilisateurs malveillants peuvent-ils arrêter les mineurs et les nœuds complets en les forçant à entrer dans une boucle infinie ? Cette question se pose en raison d'un problème informatique connu sous le nom de « problème de l'arrêt » : il n'existe généralement aucun moyen de savoir si un programme donné s'arrêtera un jour ou non.
 
@@ -418,7 +418,7 @@ C50: (run one step of a program and record the change in storage)
 
 Envoyez maintenant une transaction à A. Ainsi, en 51 transactions, nous avons un contrat qui effectue jusqu'à 2<sup>50</sup> étapes de calcul. Les mineurs pourraient essayer de détecter ces bombes logiques à l'avance en maintenant pour chaque contrat une valeur spécifiant le nombre maximum d'étapes de calcul autorisé, et en calculant cette valeur pour les contrats appelant d'autres contrats de manière récursive, mais cela nécessiterait que les mineurs interdisent les contrats qui créent d'autres contrats (puisque la création et l'exécution des 26 contrats ci-dessus pourraient facilement être regroupées en un seul contrat). Un autre point problématique est que le champ d'adresse d'un message est une variable, de sorte qu'en général, il n'est même pas possible de savoir à l'avance quels autres contrats un contrat donné va appeler. Au final, nous arrivons donc à une conclusion surprenante : la Turing-complétude est étonnamment facile à gérer, tout comme son absence est tout aussi étonnamment difficile à gérer, à moins que les mêmes contrôles soient en place. Mais dans ce cas, pourquoi ne pas laisser le protocole être Turing-complet ?
 
-### Monnaie et émission {#currency-and-issuance}
+### Monnaie et émission \{#currency-and-issuance}
 
 Le réseau Ethereum comprend sa propre monnaie intégrée, l'ether (ETH), qui a pour double objectif de fournir une couche de liquidités primaire pour permettre un échange efficace entre différents types d'actifs numériques et, plus important encore, de fournir un mécanisme de paiement des frais de transaction. Pour des raisons pratiques et pour éviter toute polémique (voir le débat actuel sur les mBTC/uBTC/satoshi de Bitcoin), les dénominations seront pré-libellées :
 
@@ -456,7 +456,7 @@ Le modèle de croissance linéaire permanente de l'offre réduit le risque de ce
 
 Notez qu'à l'avenir, il est probable qu'Ethereum passe à un modèle de preuve d'enjeu pour la sécurité, réduisant l'exigence d'émission à quelque chose entre zéro et 0,05 X par an. Dans le cas où l'organisation Ethereum perdrait son financement ou disparaîtrait pour toute autre raison, nous laissons ouvert un « contrat social » : n'importe qui a le droit de créer une future version candidate d'Ethereum, à la seule condition que la quantité d'ETH soit au plus égale à `60102216 * (1.198 + 0.26 * n)` où `n` est le nombre d'années après le bloc d'origine. Les créateurs sont libres de vendre au public ou de céder d'une autre manière une partie ou la totalité de la différence entre l'expansion de l'offre induite par la preuve d'enjeu (PoS) et l'expansion maximale autorisée de l'offre pour payer le développement. Les mises à niveau candidates non conformes au contrat social peuvent, à juste titre, faire l'objet d'une fourche vers des versions conformes.
 
-### Centralisation du minage {#mining-centralization}
+### Centralisation du minage \{#mining-centralization}
 
 L'algorithme de minage du Bitcoin fonctionne en demandant aux mineurs de calculer SHA256 des millions de fois sur des versions légèrement modifiées de l'en-tête du bloc, jusqu'à ce qu'un nœud finisse par proposer une version dont le hachage est inférieur à la cible (actuellement autour de 2<sup>192</sup>). Cependant, cet algorithme de minage est vulnérable à deux formes de centralisation. Pour commencer, l'écosystème de minage est désormais dominé par les circuits intégrés spécifiques aux applications (ASIC), des puces informatiques conçues pour la tâche spécifique du minage de Bitcoins, et donc des milliers de fois plus efficaces. Cela signifie que l'extraction de Bitcoins n'est plus une activité hautement décentralisée et égalitaire, puisqu'elle nécessite des millions de dollars de capital pour y participer efficacement. Deuxièmement, la plupart des mineurs de Bitcoins n'effectuent pas réellement la validation des blocs au niveau local. Ils s'appuient plutôt sur un groupe de minage centralisé pour fournir les en-têtes de bloc. Ce problème est sans doute le plus grave : à la rédaction de cet article, les trois principaux groupes de minage contrôlent indirectement environ 50 % de la puissance de traitement du réseau Bitcoin, même si cette situation est atténuée par le fait que les mineurs peuvent intégrer d'autres groupes de minage si l'un d'eux ou une coalition tentent une attaque de 51 %.
 
@@ -464,7 +464,7 @@ L'intention actuelle d'Ethereum est d'utiliser un algorithme de minage dans lequ
 
 Ce modèle n'est pas testé, et des difficultés peuvent survenir en cours de route si l'on évite certaines optimisations astucieuses quand l'exécution du contrat est utilisée comme algorithme de minage. Toutefois, cet algorithme possède une fonctionnalité particulièrement intéressante qui permet à n'importe qui d'« empoisonner le puits » en introduisant dans la blockchain un grand nombre de contrats spécialement conçus pour contrecarrer certains ASIC. Des incitations économiques existent pour que les fabricants d'ASIC utilisent cette astuce pour s'attaquer mutuellement. La solution que nous développons est donc, en définitive, une solution humaine économique adaptative plutôt qu'une solution purement technique.
 
-### Évolutivité {#scalability}
+### Évolutivité \{#scalability}
 
 La question de l'évolutivité est l'une des préoccupations les plus courantes concernant Ethereum. Comme Bitcoin, Ethereum présente le défaut que chaque transaction doit être traitée par chaque nœud du réseau. Pour Bitcoin, la taille actuelle de la blockchain est d'environ 15 Go et elle augmente d'environ 1 Mo par heure. Si le réseau Bitcoin devait traiter les 2 000 transactions par seconde de Visa, il croîtrait de 1 Mo toutes les trois secondes (1 Go par heure, 8 To par an). Ethereum est susceptible de subir un modèle de croissance similaire, aggravé par le fait qu'il y aura de nombreuses applications sur sa blockchain, et pas seulement une monnaie comme c'est le cas avec Bitcoin, mais amélioré par le fait que les nœuds complets Ethereum n'ont besoin de stocker que l'état de la blockchain et non son historique complet.
 
@@ -474,21 +474,21 @@ Avec une blockchain d'une telle taille, le risque de centralisation constitue un
 
 Une autre attaque, plus sophistiquée, impliquerait que des mineurs malveillants publient des blocs incomplets, de sorte que l'information complète n'existe même pas pour déterminer si les blocs sont valides ou non. La solution à ce problème est un protocole de défi-réponse : les nœuds vérificateurs émettent des « défis » sous la forme d'indices de transaction cible, et à la réception d'un nœud, un nœud léger traite le bloc comme non fiable jusqu'à ce qu'un autre nœud, que ce soit le mineur ou un autre vérificateur, fournisse un sous-ensemble de nœuds Patricia comme preuve de validité.
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 Le protocole Ethereum a été initialement conçu comme une version améliorée d'une cryptomonnaie, offrant des fonctionnalités avancées sur la blockchain telles que les dépôts fiduciaires, les limites de retrait, les contrats financiers, les marchés de jeux d'argent et de hasard, etc., via un langage de programmation très généraliste. Le protocole Ethereum ne « prend en charge » aucune de ces applications directement, mais l'existence d'un langage de programmation Turing-complet signifie que théoriquement, des contrats arbitraires peuvent être créés pour n'importe quel type de transaction ou d'application. Le plus intéressant dans Ethereum, c'est que son protocole va bien au-delà de la simple monnaie. Les protocoles autour du stockage de fichier décentralisé, des calculs décentralisés et des marchés prédictifs décentralisés, parmi des dizaines d'autres concepts du même ordre, ont le potentiel d'augmenter considérablement la productivité de l'industrie informatique, et de stimuler énormément d'autres protocoles P2P en y ajoutant pour la première fois une couche économique. Enfin, il existe aussi une gamme considérable d'applications n'ayant aucun rapport avec l'argent.
 
 Le concept d'une fonction de transition d'état arbitraire telle qu'implémentée par le protocole Ethereum offre une plateforme au potentiel unique. Au lieu d'être un protocole fermé, à usage unique et destiné à une gamme spécifique d'applications dans les domaines du stockage de données, des jeux d'argent ou de la finance, Ethereum est ouvert par conception. Nous pensons qu'il est parfaitement adapté pour servir de couche de base à un très grand nombre de protocoles financiers et non financiers dans les années à venir.
 
-## Notes et complément d'information {#notes-and-further-reading}
+## Notes et complément d'information \{#notes-and-further-reading}
 
-### Notes {#notes}
+### Notes \{#notes}
 
 1. Un lecteur averti peut remarquer qu'en réalité, une adresse Bitcoin est le hachage de la clé publique à courbe elliptique, et non la clé publique elle-même. Cependant, il est parfaitement légitime, dans la terminologie cryptographique, de faire référence au hachage de la clé publique comme à la clé publique elle-même. En effet, la cryptographie du Bitcoin peut être considérée comme un algorithme de signature numérique personnalisée, où la clé publique est constituée du hachage de la clé publique ECC, la signature est constituée de la clé publique ECC concaténée avec la signature ECC, et l'algorithme de vérification consiste à vérifier la clé publique ECC dans la signature par rapport au hachage de la clé publique ECC fourni comme clé publique, puis à vérifier la signature ECC par rapport à la clé publique ECC.
 2. Techniquement, la médiane des 11 blocs précédents.
 3. En interne, 2 et « CHARLIE » sont des nombres<sup>[fn3](#notes)</sup>, le dernier étant en représentation gros-boutiste une base 256. Les nombres peuvent être au minimum de 0 et au maximum de 2<sup>256</sup>-1.
 
-### Complément d'information {#further-reading}
+### Complément d'information \{#further-reading}
 
 1. [Valeur intrinsèque](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 2. [Propriété intelligente](https://en.bitcoin.it/wiki/Smart_Property)

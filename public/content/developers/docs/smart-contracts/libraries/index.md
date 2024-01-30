@@ -6,15 +6,15 @@ lang: en
 
 You don't need to write every smart contract in your project from scratch. There are many open source smart contract libraries available that provide reusable building blocks for your project that can save you from having to reinvent the wheel.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 Before jumping into smart contract libraries, it's a good idea to have a nice understanding of the structure of a smart contract. Head over to [smart contract anatomy](/developers/docs/smart-contracts/anatomy/) if you haven't done so yet.
 
-## What's in a library {#whats-in-a-library}
+## What's in a library \{##whats-in-a-library}
 
 You can usually find two kinds of building blocks in smart contract libraries: reusable behaviors you can add to your contracts, and implementations of various standards.
 
-### Behaviors {#behaviors}
+### Behaviors \{##behaviors}
 
 When writing smart contracts, there is a good chance you'll find yourself writing similar patterns over and over, like assigning an _admin_ address to carry out protected operations in a contract, or adding an emergency _pause_ button in the event of an unexpected issue.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Another popular example is [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) or [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). These are libraries (as opposed to base contracts) that provide arithmetic functions with overflow checks, which are not provided by the language. It's a good practice to use either of these libraries instead of native arithmetic operations to guard your contract against overflows, which can have disastrous consequences!
 
-### Standards {#standards}
+### Standards \{##standards}
 
 To facilitate [composability and interoperability](/developers/docs/smart-contracts/composability/), the Ethereum community has defined several standards in the form of **ERCs**. You can read more about them in the [standards](/developers/docs/standards/) section.
 
@@ -60,7 +60,7 @@ When including an ERC as part of your contracts, it's a good idea to look for st
 
 It's worth mentioning that some ERCs are not standalone, but are additions to other ERCs. For example, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) adds an extension to ERC20 for improving its usability.
 
-## How to add a library {#how-to}
+## How to add a library \{##how-to}
 
 Always refer to the documentation of the library you are including for specific instructions on how to include it in your project. Several Solidity contract libraries are packaged using `npm`, so you can just `npm install` them. Most tools for [compiling](/developers/docs/smart-contracts/compiling/) contracts will look into your `node_modules` for smart contract libraries, so you can do the following:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Regardless of the method you use, when including a library, always keep an eye on the [language](/developers/docs/smart-contracts/languages/) version. For instance, you cannot use a library for Solidity 0.6 if you are writing your contracts in Solidity 0.5.
 
-## When to use {#when-to-use}
+## When to use \{##when-to-use}
 
 Using a smart contract library for your project has several benefits. First and foremost, it saves you time by providing you with ready-to-use building blocks you can include in your system, rather than having to code them yourself.
 
@@ -85,7 +85,7 @@ However, using smart contract libraries carry the risk of including code you are
 
 Last, when deciding on whether to include a library, consider its overall usage. A widely-adopted one has the benefits of having a larger community and more eyes looking into it for issues. Security should be your primary focus when building with smart contracts!
 
-## Related tools {#related-tools}
+## Related tools \{##related-tools}
 
 **OpenZeppelin Contracts -** **_Most popular library for secure smart contract development._**
 
@@ -107,11 +107,11 @@ Last, when deciding on whether to include a library, consider its overall usage.
 - [Documentation](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## Related tutorials {#related-tutorials}
+## Related tutorials \{##related-tutorials}
 
 - [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– A tutorial on security considerations when building smart contracts, including library usage._
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Tutorial on the ERC20 standard, provided by multiple libraries._
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

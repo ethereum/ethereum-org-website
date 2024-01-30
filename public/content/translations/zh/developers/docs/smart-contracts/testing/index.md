@@ -8,33 +8,33 @@ lang: zh
 
 因此，在将智能合约[部署](/developers/docs/smart-contracts/deploying/)到主网之前进行测试是确保[安全性](/developers/docs/smart-contracts/security/)的最低要求。 有许多用于测试合约和评估代码正确性的技术，你可以根据需求进行选择。 然而，由不同工具和方法组成的测试套件对于捕捉合约代码中的细微或重大安全缺陷比较理想。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 本页面将解释如何在部署到以太坊网络之前进行智能合约测试。 我们假设你熟悉[智能合约](/developers/docs/smart-contracts/)。
 
-## 什么是智能合约测试？ {#what-is-smart-contract-testing}
+## 什么是智能合约测试？ \{#what-is-smart-contract-testing}
 
 智能合约测试是验证智能合约代码是否按预期工作的过程。 测试对于检查特定智能合约是否满足可靠性、可用性和安全性的要求非常有用。
 
 虽然具体的方法可能各不相同，但大多数测试方法都要求执行智能合约的一个小样本数据。 如果合约样本数据能产生正确的结果，就可以认为它能正常运行。 大多数测试工具提供了编写和执行[测试用例](https://en.m.wikipedia.org/wiki/Test_case)的资料，用于检查合约的执行是否与预期结果相符。
 
-### 为什么测试智能合约很重要？ {#importance-of-testing-smart-contracts}
+### 为什么测试智能合约很重要？ \{#importance-of-testing-smart-contracts}
 
 由于智能合约通常管理高价值的金融资产，因此即使是很小的编程错误也往往会导致[用户遭受巨大的损失](https://rekt.news/leaderboard/)。 但是严格的测试可以帮助您在部署到主网之前发现智能合约代码中的缺陷问题，并对其进行修复。
 
 尽管发现错误后可以对合约进行升级，但升级很复杂，而且如果处理不当可能会[导致错误](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/)。 进一步升级合约会削弱不可变性原则，并给用户增加额外的信任假设。 相反，对合约进行全面测试的计划可以减轻智能合约的安全风险，并减少在部署后执行复杂逻辑升级的需求。
 
-## 测试智能合约的方法 {#methods-for-testing-smart-contracts}
+## 测试智能合约的方法 \{#methods-for-testing-smart-contracts}
 
 测试以太坊智能合约的策略可以分为两大类：**自动化测试**和**手动测试**。 自动化测试和手动测试各有独特的优点和权衡，但你可以将二者结合起来，创建强大的测试计划来分析你的合约。
 
-### 自动化测试 {#automated-testing}
+### 自动化测试 \{#automated-testing}
 
 自动化测试使用工具来自动检查智能合约代码的执行错误。 自动化测试的好处在于使用[脚本](https://www.techtarget.com/whatis/definition/script?amp=1)来指导对合约功能的评估。 脚本测试可以按计划重复运行，人工干预极少，因此自动化测试比手动测试更高效。
 
 自动化测试特别适用于以下情况：测试重复且耗时；手动执行困难时；容易出现人为错误时；或涉及评估关键合约功能时。 但是自动化测试工具可能存在缺陷 — 它们可能会忽略某些错误并产生一些[误报](https://www.contrastsecurity.com/glossary/false-positive)。 因此，理想的方法是结合自动化测试与手动测试。
 
-### 手动测试 {#manual-testing}
+### 手动测试 \{#manual-testing}
 
 手动测试需要人工辅助，在分析智能合约的正确性时，涉及逐个执行测试套件中的每个测试用例。 这与自动化测试不同，在自动化测试中，你可以同时在合约上运行多个独立的测试，并获得显示所有失败和通过的测试的报告。
 
@@ -42,15 +42,15 @@ lang: zh
 
 高效的手动测试需要大量的资源（技能、时间、金钱和精力），由于人为错误的存在，在执行测试时可能会错过某些错误。 但手动测试也有其好处，例如，人工测试人员（例如审计员）可以凭直觉来检测自动化测试工具可能忽略的边缘情况。
 
-## 智能合约的自动化测试 {#automated-testing-for-smart-contracts}
+## 智能合约的自动化测试 \{#automated-testing-for-smart-contracts}
 
-### 单元测试 {#unit-testing-for-smart-contracts}
+### 单元测试 \{#unit-testing-for-smart-contracts}
 
 单元测试对合约功能分别进行评估，并检查每个组件是否正常工作。 良好的单元测试应该简单、运行快速，并且在测试失败时清晰地说明出了什么问题。
 
 单元测试对于检查函数返回预期值以及在函数执行后正确更新合约存储非常有用。 此外，在更改了合约代码库后运行单元测试，可以确保添加新逻辑不会引入错误。 以下是运行有效单元测试的一些准则：
 
-#### 智能合约单元测试的准则 {#unit-testing-guidelines}
+#### 智能合约单元测试的准则 \{#unit-testing-guidelines}
 
 ##### 1. 理解你的合约业务逻辑和工作流程。
 
@@ -146,7 +146,7 @@ function auctionEnd() external {
 - **[使用 Ape 运行单元测试](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[使用安全帽运行单元测试](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 
-### 集成测试 {#integration-testing-for-smart-contracts}
+### 集成测试 \{#integration-testing-for-smart-contracts}
 
 虽然单元测试可以独立调试合约函数，但集成测试会将智能合约的各个组件作为一个整体进行评估。 集成测试可以检测到跨合约调用或同一智能合约中不同函数之间的交互引起的问题。 例如，集成测试可以帮助检查诸如[继承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)和依赖注入等功能是否正常工作。
 
@@ -154,13 +154,13 @@ function auctionEnd() external {
 
 分叉的区块链将与主网类似，具有包含关联状态和余额的账户。 但是它只是一个沙盒式的本地开发环境，举例来说这意味着你不需要真正的以太币进行交易，同时你的更改也不会影响真实的以太坊协议。
 
-### 基于属性的测试 {#property-based-testing-for-smart-contracts}
+### 基于属性的测试 \{#property-based-testing-for-smart-contracts}
 
 基于属性的测试是一种检查智能合约是否满足一些定义的属性的过程。 属性是关于合约行为的断言，预期在不同的场景中始终保持为真。智能合约属性的一个例子可以是“合约中的算术运算永不溢出或下溢”。
 
 **静态分析**和**动态分析**是执行基于属性的测试的两种常见技术，它们都可以验证程序代码（此例中的智能合约）是否满足一些预定义的属性。 有些基于属性的测试工具提供预定义的合约属性规则，并根据这些规则检查代码，而其他工具则允许你为智能合约创建自定义属性。
 
-#### 静态分析 {#static-analysis}
+#### 静态分析 \{#static-analysis}
 
 静态分析器接受智能合约的源代码作为输入，并输出结果，声明合约是否满足某个属性 与动态分析不同，静态分析不涉及执行合约来分析其正确性。 静态分析则可以推断智能合约在执行过程中可能采取的所有路径（即通过检查源代码的结构来确定合约在运行时的操作意义）。
 
@@ -168,7 +168,7 @@ function auctionEnd() external {
 
 在大多数情况下，静态分析对于检测合约代码中的安全问题非常有用，例如使用不安全的结构、语法错误或违反编码标准。 然而，静态分析器通常被认为在检测更深层次的漏洞方面不够准确，并且可能会产生过多的误报。
 
-#### 动态分析 {#dynamic-analysis}
+#### 动态分析 \{#dynamic-analysis}
 
 动态分析生成智能合约函数的符号输入（例如，在[symbolic execution](https://en.m.wikipedia.org/wiki/Symbolic_execution)中）或具体输入（例如，在[fuzzing](https://owasp.org/www-community/Fuzzing)中），以查看是否存在任何执行跟踪违反特定属性。 这种基于属性的测试形式与单元测试不同，因为测试用例涵盖多种场景，并且由程序处理测试用例的生成。
 
@@ -182,7 +182,7 @@ function auctionEnd() external {
 
 3. **单元测试证明合约对于样本数据的执行是正确的，但是对于样本之外的输入能否正确执行仍然未知。**属性测试使用多个变化的给定输入值针对目标合约执行，以找到导致断言失败的执行轨迹。 因此，属性测试为合约在广泛的输入数据类别下正确执行提供了更多的保证。
 
-### 对智能合约运行基于属性的测试的准则 {#running-property-based-tests}
+### 对智能合约运行基于属性的测试的准则 \{#running-property-based-tests}
 
 运行基于属性的测试通常始于定义你希望在智能合约中进行验证的一个属性（例如，[整数溢出](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)的缺失）或一组属性。 在编写属性测试时，你可能需要定义一个数值范围，以便于程序生成用于交易输入的数据。
 
@@ -195,11 +195,11 @@ function auctionEnd() external {
 - **[使用 Manticore 完成智能合约符号执行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[使用 Mythril 完成智能合约符号执行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## 智能合约的手动测试 {#manual-testing-for-smart-contracts}
+## 智能合约的手动测试 \{#manual-testing-for-smart-contracts}
 
 在开发后期，经常会进行智能合约手动测试，而这通常在运行自动化测试之后进行。 这种测试形式将智能合约作为一个完全集成的产品进行评估，以验证其是否按照技术要求的规定顺利运行。
 
-### 在本地区块链上测试合约 {#testing-on-local-blockchain}
+### 在本地区块链上测试合约 \{#testing-on-local-blockchain}
 
 虽然在本地开发环境中进行的自动化测试可以提供有用的调试信息，但你需要了解你的智能合约在生产环境中的行为。 然而，部署到主要的以太坊链上会产生燃料费用，更不用说如果你的智能合约仍然存在错误，你或你的用户可能会损失真实的资金。
 
@@ -209,7 +209,7 @@ function auctionEnd() external {
 
 [更多关于开发网络的信息。](/developers/docs/development-networks/)
 
-### 在测试网上测试合约 {#testing-contracts-on-testnets}
+### 在测试网上测试合约 \{#testing-contracts-on-testnets}
 
 测试网络或测试网的运行方式与以太坊主网完全相同，唯一的区别在于它使用没有现实价值的以太币 (ETH)。 在[测试网](/developers/docs/networks/#ethereum-testnets)上部署你的合约意味着任何人都可以与之交互（例如，通过 dapp 的前端界面），而无需承担资金风险。
 
@@ -219,7 +219,7 @@ function auctionEnd() external {
 
 [更多关于以太坊测试网的信息。](/developers/docs/development-networks/#public-beacon-testchains)
 
-## 测试与形式化验证 {#testing-vs-formal-verification}
+## 测试与形式化验证 \{#testing-vs-formal-verification}
 
 虽然测试有助于确认合约返回某些数据输入的预期结果，但它不能最终证明测试期间未使用的输入也是如此。 因此，测试智能合约无法保证“功能正确性”（即无法证明程序在*所有*输入值集合上都按照要求运行）。
 
@@ -231,7 +231,7 @@ function auctionEnd() external {
 
 [更多关于智能合约的形式化验证的信息。](/developers/docs/smart-contracts/formal-verification)
 
-## 测试与审计以及漏洞奖金计划 {#testing-vs-audits-bug-bounties}
+## 测试与审计以及漏洞奖金计划 \{#testing-vs-audits-bug-bounties}
 
 正如前面提到的，严格的测试很少能够保证合约中没有错误；形式化验证方法可以提供更强的正确性保证，但目前使用起来困难且成本相当高昂。
 
@@ -243,9 +243,9 @@ function auctionEnd() external {
 
 主要的区别在于漏洞奖金计划对更广泛的开发者/黑客社区开放，并吸引了一批具有独特技能和经验的道德黑客和独立安全专业人员。 与主要依赖可能拥有有限或狭窄专业知识的团队的智能合约审计相比，这可能是一个优势。
 
-## 测试工具和库 {#testing-tools-and-libraries}
+## 测试工具和库 \{#testing-tools-and-libraries}
 
-### 单元测试工具 {#unit-testing-tools}
+### 单元测试工具 \{#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _用 Solidity 编写的智能合约的代码覆盖率工具。_
 
@@ -265,15 +265,15 @@ function auctionEnd() external {
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _基于 Python 的智能合约开发和测试框架，以以太坊虚拟机为目标。_
 
-### 基于属性测试的工具 {#property-based-testing-tools}
+### 基于属性测试的工具 \{#property-based-testing-tools}
 
-#### 静态分析工具 {#static-analysis-tools}
+#### 静态分析工具 \{#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _基于 Python 的 Solidity 静态分析框架，用于查找漏洞、增强代码理解以及为智能合约编写自定义分析。_
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _用于执行 Solidity 智能合约编程语言的风格和安全最佳实践的 Linter。_
 
-#### 动态分析工具 {#dynamic-analysis-tools}
+#### 动态分析工具 \{#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _通过基于属性的测试来检测智能合约漏洞的快速合约模糊测试工具。_
 
@@ -285,7 +285,7 @@ function auctionEnd() external {
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble 是一种规约语言和运行时验证工具，可让你为智能合约批注属性，从而使用 Diligence Fuzzing 或 MythX 等工具自动测试合约。_
 
-## 相关教程 {#related-tutorials}
+## 相关教程 \{#related-tutorials}
 
 - [如何为 Truffle 测试设置 Travis 或 Circle 持续集成 (CI)](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [不同测试产品的概述和比较](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
@@ -296,7 +296,7 @@ function auctionEnd() external {
 - [如何将 Truffle 测试迁移至 OpenZeppelin 测试环境](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [如何在部署到网络后测试智能合约](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊智能合约测试深度指南](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [如何测试以太坊智能合约](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)

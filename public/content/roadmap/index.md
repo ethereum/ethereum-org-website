@@ -18,7 +18,7 @@ Ethereum is already a powerful platform for global coordination, but it is still
 
 **To learn about previous upgrades to Ethereum, please visit our [History](/history/) page**
 
-## What changes are coming to Ethereum? {#what-changes-are-coming}
+## What changes are coming to Ethereum? \{#what-changes-are-coming}
 
 The Ethereum roadmap outlines the specific improvements that will be made to protocol in the future. Overall, the roadmap will bring the following benefits to Ethereum users:
 
@@ -53,7 +53,7 @@ The Ethereum roadmap outlines the specific improvements that will be made to pro
   />
 </CardGrid>
 
-## Why does Ethereum need a roadmap? {#why-does-ethereum-need-a-roadmap}
+## Why does Ethereum need a roadmap? \{##why-does-ethereum-need-a-roadmap}
 
 Ethereum gets regular upgrades that enhance its scalability, security, or sustainability. One of Ethereum's core strengths is adapting as new ideas emerge from research and development. Adaptability gives Ethereum the flexibility to tackle emerging challenges and keep up with the most advanced technological breakthroughs.
 
@@ -72,23 +72,23 @@ The roadmap is mostly the result of years of work by researchers and developers 
 
 </InfoBanner>
 
-## Will Ethereum's roadmap change over time? {#will-ethereums-roadmap-change-over-time}
+## Will Ethereum's roadmap change over time? \{##will-ethereums-roadmap-change-over-time}
 
 Yes—almost definitely. The roadmap is the current plan for upgrading Ethereum, covering both near-term and future plans. We expect the roadmap to change as new information and technology become available.
 
 Think of Ethereum's roadmap as a set of intentions for improving Ethereum; it is the core researchers' and developers' best hypothesize of Ethereum's most optimal path forward.
 
-## When will the roadmap be finished? {#when-will-the-roadmap-be-finished}
+## When will the roadmap be finished? \{##when-will-the-roadmap-be-finished}
 
 Ethereum will implement some upgrades in the next six months (e.g. staking withdrawals); others are lower priority and likely not to be implemented for the next 5-10 years (e.g. quantum resistance). Giving precise timing of each upgrade is complicated to predict as many roadmap items are worked on in parallel and developed at different speeds. The urgency of an upgrade can also change over time depending on external factors (e.g. a sudden leap in the performance and availability of quantum computers may make quantum-resistant cryptography more urgent).
 
 One way to think about Ethereum development is by analogy to biological evolution. A network that is able to adapt to new challenges and maintain fitness is more likely to succeed that one that is resistant to change, although as the network becomes more and more performant, scalable and secure fewer changes to the protocol will be required.
 
-## Do I have to do anything when there is an upgrade? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## Do I have to do anything when there is an upgrade? \{##do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Upgrades tend not to impact end-users except by providing better user-experiences and a more secure protocol and perhaps more <i>options</i> for how to interact with Ethereum. End uses are not required to actively participate in an upgrade, nor are they required to do anything to secure their assets. Node operators will need to update their clients to prepare for an upgrade. Some upgrades may lead to changes for application developers. For example, history expiry upgrades may lead application developers to grab historical data from new sources.
 
-## What about The Verge, The Splurge, etc? {#what-about-the-verge-splurge-etc}
+## What about The Verge, The Splurge, etc? \{##what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin proposed a vision for the Ethereum roadmap](https://twitter.com/VitalikButerin/status/1588669782471368704) that was organized into several categories linked by their effects on Ethereum's architecture. It included:
 
@@ -101,11 +101,11 @@ Upgrades tend not to impact end-users except by providing better user-experience
 
 We decided not to use this terminology because we wanted to use a simpler and more user-centric model. Although we use user-centric language, the vision remains the same as the one proposed by Vitalik.
 
-## What about sharding? {#what-about-sharding}
+## What about sharding? \{##what-about-sharding}
 
 Sharding is splitting up the Ethereum blockchain so that subsets of validators are only responsible for a fraction of the total data. This was originally intended to be the way for Ethereum to scale. However, layer 2 rollups have developed much faster than expected and have provided a lot of scaling already, and will provide much more after Proto-Danksharding is implemented. This means "shard chains" are no longer needed and have been dropped from the roadmap.
 
-## Looking for specific technical upgrades? {#looking-for-specific-technical-upgrades}
+## Looking for specific technical upgrades? \{##looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Danksharding makes layer 2 rollups much cheaper for users by adding “blobs” of data to Ethereum blocks.
 - [Staking withdrawals](/staking/withdrawals) - The Shanghai/Capella upgrade enabled staking withdrawals on Ethereum, allowing people to unlock their staked ETH.

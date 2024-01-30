@@ -4,7 +4,7 @@ description: ethereum.orgへの取引所の掲載ポリシー
 lang: ja
 ---
 
-# イーサリアム取引所の追加 {#adding-ethereum-exchanges}
+# イーサリアム取引所の追加 \{#adding-ethereum-exchanges}
 
 誰でも新たな取引所の ethereum.org への掲載を提案することができます。
 
@@ -18,7 +18,7 @@ lang: ja
 
 **注:** 分散型取引所をリストする際は、事前に [ウォレットと分散型アプリ(Dapp)の掲載ポリシー](/contributing/adding-products/)を参照してください。
 
-## 必要な情報: {#what-we-need}
+## 必要な情報: \{#what-we-need}
 
 - 取引所に適用される地理的な制限
 - ETH の購入に使用できる通貨
@@ -31,7 +31,7 @@ lang: ja
 
 ---
 
-## 取引所の追加 {#add-exchange}
+## 取引所の追加 \{#add-exchange}
 
 ethereum.org に取引所を追加掲載するには、GitHub で問題を作成してください。
 

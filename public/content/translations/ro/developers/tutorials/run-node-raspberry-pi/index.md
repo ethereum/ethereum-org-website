@@ -28,7 +28,7 @@ Practic, ambele sunt aceeași imagine și includ aceleași funcţionalităţi al
 
 **Imaginile au grijă de toți pașii necesari**, de la configurarea mediului și formatarea discului SSD la instalarea și rularea software-ului Ethereum, precum și pornirea sincronizării blockchain-ului.
 
-## Funcţionalităţi principale {#main-features}
+## Funcţionalităţi principale \{#main-features}
 
 - Bazat pe Ubuntu 20.04 pe 64 biți
 - Partiționează și formatează automat discul USB
@@ -38,23 +38,23 @@ Practic, ambele sunt aceeași imagine și includ aceleași funcţionalităţi al
 - Include un depozitar APT pentru instalarea și actualizarea software-ului Ethereum
 - Include un tablou de bord pentru monitorizare bazat pe Grafana / Prometheus
 
-## Software inclus {#software-included}
+## Software inclus \{#software-included}
 
 Ambele imagini cuprind aceleași pachete, singura diferenţă dintre ele fiind că versiunea de execuție rulează în mod implicit „Geth”, iar versiunea de consens rulează implicit „lanțul Beacon Prysm”.
 
-### Clienți de execuție {#execution-clients}
+### Clienți de execuție \{#execution-clients}
 
 - Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (binar oficial)
 - Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (compilat încrucișat)
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (compilat încrucișat)
 - Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (compilat)
 
-### Clienți de consens {#consensus-clients}
+### Clienți de consens \{#consensus-clients}
 
 - Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (oficial compilat binar)
 - Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (compilat)
 
-### Framework Ethereum {#ethereum-framework}
+### Framework Ethereum \{#ethereum-framework}
 
 - Swarm [[14]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (oficial compilat binar)
 - Raiden Network [[15]](/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (oficial compilat binar)
@@ -62,9 +62,9 @@ Ambele imagini cuprind aceleași pachete, singura diferenţă dintre ele fiind c
 - Statusd [[17]](/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (compilat)
 - Vipnode [[18]](/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (oficial compilat binar)
 
-## Ghid de instalare și utilizare {#installation-guide-and-usage}
+## Ghid de instalare și utilizare \{#installation-guide-and-usage}
 
-### Hardware și configurare recomandate {#recommended-hardware-and-setup}
+### Hardware și configurare recomandate \{#recommended-hardware-and-setup}
 
 - Raspberry 4 (model B) - 4 GB
 - Card MicroSD (minimum 16 GB clasa 10)
@@ -75,7 +75,7 @@ Ambele imagini cuprind aceleași pachete, singura diferenţă dintre ele fiind c
 - O cutie cu disipator termic și ventilator (opțional, dar foarte recomandat)
 - Tastatură USB, monitor și cablu HDMI (micro-HDMI) (opțional)
 
-## Stocare {#storage}
+## Stocare \{#storage}
 
 Veți avea nevoie de un SSD pentru a rula clienții Ethereum (fără hard disk SSD nu aveți absolut nicio șansă de a sincroniza blockchain-ul Ethereum). Există 2 opțiuni:
 
@@ -86,9 +86,9 @@ Veți avea nevoie de un SSD pentru a rula clienții Ethereum (fără hard disk S
 
 Rețineţi că trebuie să conectezi discul la un port USB 3.0 (albastru)
 
-## Descărcarea și instalarea imaginii {#image-download-and-installation}
+## Descărcarea și instalarea imaginii \{#image-download-and-installation}
 
-### 1. Descărcați imaginile nivelurilor de execuție și de consens {#1-download-execution-or-consensus-images}
+### 1. Descărcați imaginile nivelurilor de execuție și de consens \{#1-download-execution-or-consensus-images}
 
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">
   Descărcați imaginea nivelului de execuție
@@ -102,7 +102,7 @@ sha256 7fa9370d13857dd6abc8fde637c7a9a7a66b307d5c28b0d29a09c73c55c
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
-### 2. Flashaţi imaginea {#2-flash-the-image}
+### 2. Flashaţi imaginea \{#2-flash-the-image}
 
 Introduceți microSD-ul în desktopul sau laptopul dvs. și descărcați fișierul (de exemplu, nivelul de execuție):
 
@@ -125,9 +125,9 @@ unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
 sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
 ```
 
-### 3. Introduceţi MicroSD -ul în Raspberry Pi 4. Conectaţi un cablu Ethernet și atașaţi discul SSD USB (aveţi grijă să utilizaţi portul albastru). {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
+### 3. Introduceţi MicroSD -ul în Raspberry Pi 4. Conectaţi un cablu Ethernet și atașaţi discul SSD USB (aveţi grijă să utilizaţi portul albastru). \{#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
 
-### 4. Porniţi dispozitivul {#4-power-on-the-device}
+### 4. Porniţi dispozitivul \{#4-power-on-the-device}
 
 Sistemul de operare Ubuntu va porni în mai puțin de un minut, dar **va trebui să așteptați aproximativ 10 minute** pentru a permite scriptului să îndeplinească sarcinile necesare pentru a transforma dispozitivul într-un nod Ethereum și a reporni Raspberry.
 
@@ -136,7 +136,7 @@ Sistemul de operare Ubuntu va porni în mai puțin de un minut, dar **va trebui 
 - Clientul de execuție: Geth ca şi client implicit de sincronizare a blockchain-ului
 - Clientul de consens: Prysm ca şi client implicit de sincronizare a lanțului Beacon (testnetul Goerli)
 
-### 5. Logare {#5-log-in}
+### 5. Logare \{#5-log-in}
 
 Vă puteţi conecta prin SSH sau folosind consola (dacă aveţi monitor și tastatură atașate)
 
@@ -147,9 +147,9 @@ Password: ethereum
 
 Când vă logaţi pentru prima dată, vi se va solicita să schimbaţi parola, deci va trebui să vă conectaţi de două ori.
 
-### 6. Deschide ţiportul 30303 pentru Geth și 13000 dacă rulaţi lanțul Beacon Prysm. Dacă nu știţi cum să faceţi acest lucru, căutaţi pe google „redirecționare port”, urmat de modelul routerului. {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
+### 6. Deschide ţiportul 30303 pentru Geth și 13000 dacă rulaţi lanțul Beacon Prysm. Dacă nu știţi cum să faceţi acest lucru, căutaţi pe google „redirecționare port”, urmat de modelul routerului. \{#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
 
-### 7. Obțineţi ieșirea consolei {#7-get-console-output}
+### 7. Obțineţi ieșirea consolei \{#7-get-console-output}
 
 Puteţi vedea ce se întâmplă în fundal tastând:
 
@@ -159,13 +159,13 @@ sudo tail -f /var/log/syslog
 
 **Felicitări. Acum rulaţi un nod Ethereum complet pe Raspberry Pi 4.**
 
-## Sincronizarea blockchain-ului {#syncing-the-blockchain}
+## Sincronizarea blockchain-ului \{#syncing-the-blockchain}
 
 Acum trebuie să așteptaţi sincronizarea blockchain-ului. În cazul nivelului de execuție, aceasta va dura câteva zile, în funcție de diferiți factori, dar puteţi anticipa până la circa 5-7 zile.
 
 Dacă rulați nivelul de consens testnet Goerli, puteţi anticipa o durată de 1-2 zile de sincronizare a lanțului Beacon. Amintiţi-vă că mai târziu va trebui să configuraţi validatorul pentru a începe procesul de mizare. [Cum se rulează validatorul nivelului de consens](/developers/tutorials/run-node-raspberry-pi/#validator)
 
-## Monitorizarea tablourilor de bord {#monitoring-dashboards}
+## Monitorizarea tablourilor de bord \{#monitoring-dashboards}
 
 Pentru această primă versiune, am inclus 3 tablouri de bord de monitorizare bazate pe Prometheus [[5]](/developers/tutorials/run-node-raspberry-pi/#references) / Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) pentru a monitoriza nodul și datele clientului (Geth și Besu). Le puteţi accesa prin browserul web:
 
@@ -175,7 +175,7 @@ User: admin
 Password: ethereum
 ```
 
-## Schimbarea clienților {#switching-clients}
+## Schimbarea clienților \{#switching-clients}
 
 Toți clienții rulează ca serviciu systemd. Acest lucru este important deoarece, dacă apare o problemă, sistemul va relua automat procesul.
 
@@ -200,7 +200,7 @@ sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
 sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 ```
 
-## Modificarea parametrilor {#changing-parameters}
+## Modificarea parametrilor \{#changing-parameters}
 
 Fișierele de configurare a clienţilor se află în directorul /etc/ethereum/. Puteţi edita aceste fișiere și reporni serviciul systemd pentru ca modificările să se aplice. Singura excepție este Nethermind, care, în plus, are un fișier de configurare Mainnet situat aici:
 
@@ -210,7 +210,7 @@ Fișierele de configurare a clienţilor se află în directorul /etc/ethereum/. 
 
 Datele clientului Blockchain sunt stocate în contul de domiciliu Ethereum după cum urmează (rețineţi punctul dinaintea numelui directorului):
 
-### Nivel de execuție {#execution-layer}
+### Nivel de execuție \{#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -219,7 +219,7 @@ Datele clientului Blockchain sunt stocate în contul de domiciliu Ethereum după
 /home/ethereum/.nethermind
 ```
 
-### Nivel de consens {#consensus-layer}
+### Nivel de consens \{#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -227,25 +227,25 @@ Datele clientului Blockchain sunt stocate în contul de domiciliu Ethereum după
 /home/ethereum/.lighthouse
 ```
 
-## Nethermind și Hyperledger Besu {#nethermind-and-hyperledger-besu}
+## Nethermind și Hyperledger Besu \{#nethermind-and-hyperledger-besu}
 
 Acești 2 excelenți clienți de execuție au devenit o alternativă foarte bună pentru Geth și Parity. Cu cât există mai multă diversitate în rețea, cu atât mai bine, așa că le puteți încerca și contribui la sănătatea rețelei.
 
 Ambele au nevoie să mai fie testate, așa că nu ezitaţi să vă jucaţi cu ele și să vă trimiteţi feedback-ul.
 
-## Cum se execută validatorul de consens (mizarea) {#validator}
+## Cum se execută validatorul de consens (mizarea) \{#validator}
 
 Odată ce lanțul Beacon testnet Goerli este sincronizat, puteți să rulați un validator pe același dispozitiv. Va trebui să urmaţi [acești pași de participare](https://prylabs.net/participate).
 
 Prima dată trebuie să creaţi manual un cont rulând „validatorul” binar și să setaţi o parolă. După ce aţi finalizat acest pas, puteți adăuga parola în fișierul `/etc/ehereum/prysm-validator.conf` și poți porni validatorul ca serviciu systemd.
 
-## Apreciem feedbackul dvs. {#feedback-appreciated}
+## Apreciem feedbackul dvs. \{#feedback-appreciated}
 
 Am muncit mult încercând să instalăm Raspberry Pi 4 ca nod complet Ethereum, deoarece știm că imensa bază de utilizatori ai acestui dispozitiv ar putea avea un impact foarte benefic pentru rețea.
 
 Vă rugăm să luaţi în considerare faptul că aceasta este prima imagine bazată pe Ubuntu 20.04, astfel încât ar putea exista unele bug-uri. În acest caz, deschideți o problemă pe [GitHub](https://github.com/diglos/ethereumonarm) sau contactați-ne pe [Twitter](https://twitter.com/EthereumOnARM).
 
-## Referințe {#references}
+## Referințe \{#references}
 
 1. [geth se blochează în mod repetat cu SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
 2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)

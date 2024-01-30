@@ -5,7 +5,7 @@ lang: es
 incomplete: true
 ---
 
-## Resumen de estándares {#standards-overview}
+## Resumen de estándares \{#standards-overview}
 
 La comunidad Ethereum ha adoptado muchos estándares que ayudan a mantener interoperables proyectos (como [clientes Ethereum](/developers/docs/nodes-and-clients/) y carteras) a través de implementaciones, y asegurar que los contratos inteligentes y dapps sigan siendo compuestos.
 
@@ -20,7 +20,7 @@ Normalmente se introducen estándares como [Propuestas de mejora de Ethereum](/e
 - [Gobernanza de desarrollo del protocolo de Ethereum y coordinación de actualización de la red](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de marzo de 2020, Hudson Jameson_
 - [Lista de reproducción de todas las reuniones de desarrolladores principales de Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(lista de reproducción de YouTube)_
 
-## Tipos de estándares {#types-of-standards}
+## Tipos de estándares \{#types-of-standards}
 
 Hay tres tipos de EIP:
 
@@ -37,7 +37,7 @@ Además, el Standard Track se subdivide en 4 categorías:
 
 Puede encontrar información más detallada sobre estos diferentes tipos y categorías en [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
-### Estándares de tokens {#token-standards}
+### Estándares de tokens \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/): Una interfaz para tokens fungibles (intercambiables), como tokens de votación, tokens de staking o monedas virtuales.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363): Define una interfaz de token para los tokens ERC que soporta la ejecución del código del destinatario después de la transferencia o transferFrom, o código spender después de la aprobación.
@@ -51,7 +51,7 @@ Puede encontrar información más detallada sobre estos diferentes tipos y categ
 
 Obtenga más información sobre los [estándar de tokens](/developers/docs/standards/tokens/).
 
-## Más lectura {#further-reading}
+## Más lectura \{#further-reading}
 
 - [Propuestas de mejora de Ethereum (EIP)](/eips/)
 

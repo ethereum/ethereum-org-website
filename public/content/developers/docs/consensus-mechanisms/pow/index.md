@@ -10,21 +10,21 @@ The Ethereum network began by using a consensus mechanism that involved **[Proof
     Proof-of-work has now been deprecated. Ethereum no longer uses proof-of-work as part of its consensus mechanism. Instead, it uses proof-of-stake. Read more on <a href="/developers/docs/consensus-mechanisms/pos/">proof-of-stake</a> and <a href="/staking/">staking</a>.
 </InfoBanner>
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/), and [consensus mechanisms](/developers/docs/consensus-mechanisms/).
 
-## What is Proof-of-work (PoW)? {#what-is-pow}
+## What is Proof-of-work (PoW)? \{##what-is-pow}
 
 Nakamoto consensus, which utilizes proof-of-work, is the mechanism that once allowed the decentralized Ethereum network to come to consensus (i.e. all nodes agree) on things like account balances and the order of transactions. This prevented users from "double spending" their coins and ensured that the Ethereum chain was tremendously difficult to attack or manipulate. These security properties now come from proof-of-stake instead using the consensus mechanism known as [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/).
 
-## Proof-of-work and mining {#pow-and-mining}
+## Proof-of-work and mining \{##pow-and-mining}
 
 Proof-of-work is the underlying algorithm that sets the difficulty and rules for the work miners do on proof-of-work blockchains. Mining is the "work" itself. It's the act of adding valid blocks to the chain. This is important because the chain's length helps the network follow the correct fork of the blockchain. The more "work" done, the longer the chain, and the higher the block number, the more certain the network can be of the current state of things.
 
 [More on mining](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## How did Ethereum's proof-of-work work? {#how-it-works}
+## How did Ethereum's proof-of-work work? \{##how-it-works}
 
 Ethereum transactions are processed into blocks. In the now-deprecated proof-of-work Ethereum, each block contained:
 
@@ -34,7 +34,7 @@ Ethereum transactions are processed into blocks. In the now-deprecated proof-of-
 
 This block data was directly related to proof-of-work.
 
-### The work in proof-of-work {#the-work}
+### The work in proof-of-work \{##the-work}
 
 The proof-of-work protocol, Ethash, required miners to go through an intense race of trial and error to find the nonce for a block. Only blocks with a valid nonce could be added to the chain.
 
@@ -44,7 +44,7 @@ The difficulty determined the target for the hash. The lower the target, the sma
 
 Hashing makes fraud easy to spot. But proof-of-work as a process was also a big deterrent to attacking the chain.
 
-### Proof-of-work and security {#security}
+### Proof-of-work and security \{##security}
 
 Miners were incentivized to do this work on the main Ethereum chain. There was little incentive for a subset of miners to start their own chain—it undermines the system. Blockchains rely on having a single state as a source of truth.
 
@@ -52,13 +52,13 @@ The objective of proof-of-work was to extend the chain. The longest chain was mo
 
 To consistently create malicious yet valid blocks, a malicious miner would have needed over 51% of the network mining power to beat everyone else. That amount of "work" requires a lot of expensive computing power and the energy spent might even have outweighed the gains made in an attack.
 
-### Proof-of-work economics {#economics}
+### Proof-of-work economics \{##economics}
 
 Proof-of-work was also responsible for issuing new currency into the system and incentivizing miners to do the work.
 
 Since the [Constantinople upgrade](/history/#constantinople), miners who successfully create a block were rewarded with two freshly minted ETH and part of the transaction fees. Ommer blocks also compensated 1.75 ETH. Ommer blocks were valid blocks created by a miner practically at the same time as another miner created the canonical block, which was ultimately determined by which chain was built on top of first. Ommer blocks usually happened due to network latency.
 
-## Finality {#finality}
+## Finality \{##finality}
 
 A transaction has "finality" on Ethereum when it's part of a block that can't change.
 
@@ -66,11 +66,11 @@ Because miners worked in a decentralized way, two valid blocks could be mined at
 
 To complicate things further, transactions rejected on the temporary fork may not have been included in the accepted chain. This means it could get reversed. So finality refers to the time you should wait before considering a transaction irreversible. Under the previous proof-of-work Ethereum, the more blocks were mined on top of a specific block `N`, the higher confidence that the transactions in `N` were successful and would not be reverted. Now, with proof-of-stake, finalization is an explicit, rather than probabilistic, property of a block.
 
-## Proof-of-work energy-usage {#energy}
+## Proof-of-work energy-usage \{##energy}
 
 A major criticism of proof-of-work is the amount of energy output required to keep the network safe. To maintain security and decentralization, Ethereum on proof-of-work consumed large amounts of energy. Shortly before switching to proof-of-stake, Ethereum miners were collectively consuming about 70 TWh/yr (about the same as the Czech Republic - according to [digiconomist](https://digiconomist.net/) on 18-July-2022).
 
-## Pros and cons {#pros-and-cons}
+## Pros and cons \{##pros-and-cons}
 
 | Pros                                                                                                                                                                                                                         | Cons                                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -78,7 +78,7 @@ A major criticism of proof-of-work is the amount of energy output required to ke
 | Proof-of-work is a tried and tested consensus mechanism that has kept Bitcoin and Ethereum secure and decentralized for many years.                                                                                          | If you want to mine, you need such specialized equipment that it's a big investment to start.                                                |
 | Compared to proof-of-stake it's relatively easy to implement.                                                                                                                                                                | Due to increasing computation needed, mining pools could potentially dominate the mining game, leading to centralization and security risks. |
 
-## Compared to proof-of-stake {#compared-to-pos}
+## Compared to proof-of-stake \{##compared-to-pos}
 
 At a high level, proof-of-stake has the same end goal as proof-of-work: to help the decentralized network reach consensus securely. But it has some differences in process and personnel:
 
@@ -89,20 +89,20 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 
 [More on proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
-## More of a visual learner? {#visual-learner}
+## More of a visual learner? \{##visual-learner}
 
 <YouTube id="3EUAcxhuoU4" />
 
-## Further Reading {#further-reading}
+## Further Reading \{##further-reading}
 
 - [Majority attack](https://en.bitcoin.it/wiki/Majority_attack)
 - [On settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
-### Videos {#videos}
+### Videos \{##videos}
 
 - [A technical explanation of proof-of-work protocols](https://youtu.be/9V1bipPkCTU)
 
-## Related Topics {#related-topics}
+## Related Topics \{##related-topics}
 
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

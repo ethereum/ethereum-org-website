@@ -4,7 +4,7 @@ description: La politique que nous appliquons pour ajouter une couche de niveau 
 lang: fr
 ---
 
-# Ajouter une Couche de niveau 2 {#adding-layer-2}
+# Ajouter une Couche de niveau 2 \{#adding-layer-2}
 
 Nous voulons nous assurer que nous listons les meilleures ressources possibles afin que les utilisateurs puissent naviguer en toute confiance et sécurité dans l'espace des Couches de niveau 2.
 
@@ -18,9 +18,9 @@ Nous listons actuellement les L2s sur les pages suivantes :
 
 La Couche de niveau 2 est un paradigme relativement nouveau et excitant pour Ethereum. Nous avons tenté de créer un cadre équitable pour pouvoir s'afficher sur ethereum.org, mais les critères de sélection dans la liste changeront et évolueront au fil du temps.
 
-## Le cadre décisionnel {#decision-framework}
+## Le cadre décisionnel \{#decision-framework}
 
-### Critères d'inclusion : les incontournables {#criteria-for-inclusion-the-must-haves}
+### Critères d'inclusion : les incontournables \{#criteria-for-inclusion-the-must-haves}
 
 **Liste sur L2BEAT**
 
@@ -70,7 +70,7 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 - Les projets listés nécessitent un explorateur de blocs pour permettre aux utilisateurs de naviguer facilement dans la chaîne.
 
-### Autres critères : c'est toujours un plus de les avoir {#nice-to-haves}
+### Autres critères : c'est toujours un plus de les avoir \{#nice-to-haves}
 
 **Support d'échange pour le projet**
 
@@ -88,7 +88,7 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 - Est-ce que des portefeuilles prennent en charge nativement la Couche de niveau 2 ?
 
-## Ajoutez votre Couche de niveau 2 {#add-exchange}
+## Ajoutez votre Couche de niveau 2 \{#add-exchange}
 
 Si vous souhaitez ajouter une Couche 2 sur ethereum.org, créez un ticket sur GitHub.
 

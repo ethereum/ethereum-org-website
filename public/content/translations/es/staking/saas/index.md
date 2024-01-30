@@ -13,11 +13,11 @@ summaryPoints:
   - Desconfíe y mantenga la custodia de sus claves de retirada
 ---
 
-## ¿Qué es participación como servicio (SaaS)? {#what-is-staking-as-a-service}
+## ¿Qué es participación como servicio (SaaS)? \{#what-is-staking-as-a-service}
 
 La participación como servicio (SaaS), representa una categoría de servicios de participación donde deposita 32 ETH para la validación, pero se delegan las operaciones del nodo a un tercero. A cambio se le suele guiar por la configuración inicial, incluida la generación de claves y el depósito, para luego cargar las claves de firma al operador. Esto permite que el servicio maneje su validador en su nombre, generalmente, a cambio de una cuota mensual.
 
-## ¿Por qué debería participar con un servicio? {#why-stake-with-a-service}
+## ¿Por qué debería participar con un servicio? \{#why-stake-with-a-service}
 
 El protocolo de Ethereum no respalda originariamente la delegación de participaciones y, por tanto, estos servicios se han creado con el fin de cubrir esta demanda. Si tiene 32 ETH para participar, pero no domina con confianza el hardware, los servicios de participación (SaaS) le permiten delegar la parte técnica mientras gana recompensas de bloques nativos.
 
@@ -29,7 +29,7 @@ El protocolo de Ethereum no respalda originariamente la delegación de participa
 
 <StakingComparison page="saas" />
 
-## Qué hay que tener en cuenta {#what-to-consider}
+## Qué hay que tener en cuenta \{#what-to-consider}
 
 Hay un número creciente de proveedores de SAAS para ayudarle a apostar sus ETH, pero todos tienen sus propias ventajas y riesgos. Todas las opciones SaaS requieren suposiciones adicionales de confianza en comparación con la participación desde casa. Las opciones SaaS pueden suponer el uso de un codigo adicional para los clientes de Ethereum que no es abierto ni auditable. SaaS tambien causa un efecto perjudicial en la descentralizacion de la red. Dependiendo de la configuracion, se puede controlar o no la validacion: el operador puede actuar deshonestamente usando sus ETH.
 
@@ -37,7 +37,7 @@ Los indicadores de atributos se utilizan para señalar las fortalezas o debilida
 
 <StakingConsiderations page="saas" />
 
-## Explorar proveedores de servicios de participación {#saas-providers}
+## Explorar proveedores de servicios de participación \{#saas-providers}
 
 A continuación encontrará algunos proveedores SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
 
@@ -55,7 +55,7 @@ Por favor, tenga en cuenta la importancia de elegir [clientes diversos](/develop
 
 ¿Tiene alguna sugerencia para un proveedor de participación como servicio que no hayamos mencionado? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
-## Preguntas más frecuentes {#faq}
+## Preguntas más frecuentes \{#faq}
 
 <ExpandableCard title="¿Quién tiene mis claves?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Los acuerdos difieren de proveedor a proveedor, pero comúnmente se le guiará a través de la configuración de las claves de firma que necesite (una por 32 ETH), y subirlos a su proveedor para permitirles validar en su nombre. Las llaves de firma por sí solas no dan ninguna capacidad para retirar, transferir o gastar sus fondos. Sin embargo, sí proporcionan la capacidad de emitir votos a favor del consenso. Si no se hace correctamente, puede dar lugar a sanciones fuera de línea o a un recorte.
@@ -89,7 +89,7 @@ Al finalizar el proceso de recorte y salida, estos fondos se transferirán a la 
 Póngase en contacto con un proveedor individual de SaaS para obtener más detalles sobre cualquier garantía u opciones de seguridad, así como para obtener instrucciones de configuración de una dirección de retirada. Si prefiere tener control total de la configuración de su validador, <a href="/staking/solo/">infórmese sobre cómo apostar sus ETH en solitario</a>.
 </ExpandableCard>
 
-## Para profundizar sobre el tema {#further-reading}
+## Para profundizar sobre el tema \{#further-reading}
 
 - [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [Examen de los servicios de participación](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

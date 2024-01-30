@@ -22,11 +22,11 @@ Acesta este un ghid pentru începători ca să se familiarizeze cu dezvoltarea �
 
 Începem de la înregistrarea la Alchemy și te îndrumăm până la scrierea primul script web3! Nu este necesară o experiență de programator blockchain!
 
-## 1. Înregistrează-te pentru un cont Alchemy gratuit {#sign-up-for-a-free-alchemy-account}
+## 1. Înregistrează-te pentru un cont Alchemy gratuit \{#sign-up-for-a-free-alchemy-account}
 
 Crearea unui cont cu Alchemy este ușoară, [înregistrează-te gratuit aici](https://auth.alchemyapi.io/signup).
 
-## 2. Crearea unei aplicații Alchemy {#create-an-alchemy-app}
+## 2. Crearea unei aplicații Alchemy \{#create-an-alchemy-app}
 
 Pentru a comunica cu lanțul Ethereum și pentru a utiliza produsele Alchemy, aveți nevoie de o cheie API pentru a vă autentifica cererile.
 
@@ -44,7 +44,7 @@ Poți trage, de asemenea, cheile API existente prin trecerea peste „Apps” ș
 
 ![Gif care arată unui utilizator să tragă cheile API](./pull-api-keys.gif)
 
-## 3. Efectuarea unei solicitări din linia de comandă {#make-a-request-from-the-command-line}
+## 3. Efectuarea unei solicitări din linia de comandă \{#make-a-request-from-the-command-line}
 
 Interacționează cu blockchain-ul Ethereum prin Alchemy folosind JSON-RPC și curl.
 
@@ -72,7 +72,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Configurează clientul Web3 {#set-up-your-web3-client}
+## 4. Configurează clientul Web3 \{#set-up-your-web3-client}
 
 **Dacă aveți un client existent,** modificați adresa URL a furnizorului actual al nodului printr-un URL Alchemy cu cheia dvs. API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -103,7 +103,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. Scrie primul Web3 Script! {#write-your-first-web3-script}
+## 5. Scrie primul Web3 Script! \{#write-your-first-web3-script}
 
 Acum, pentru a ne murdări pe mâini cu puțină programare web3, vom scrie un script simplu, care imprimă cel mai recent număr de bloc de pe rețeaua principală Ethereum.
 

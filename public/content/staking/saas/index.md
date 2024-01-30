@@ -13,11 +13,11 @@ summaryPoints:
   - Reduce trust, and maintain custody of your withdrawal keys
 ---
 
-## What is staking as a service? {#what-is-staking-as-a-service}
+## What is staking as a service? \{#what-is-staking-as-a-service}
 
 Staking as a service (“SaaS") represents a category of staking services where you deposit your own 32 ETH for a validator, but delegate node operations to a third-party operator. This process usually involves being guided through the initial setup, including key generation and deposit, then uploading your signing keys to the operator. This allows the service to operate your validator on your behalf, usually for a monthly fee.
 
-## Why stake with a service? {#why-stake-with-a-service}
+## Why stake with a service? \{#why-stake-with-a-service}
 
 The Ethereum protocol does not natively support delegation of stake, so these services have been built out to fill this demand. If you have 32 ETH to stake, but don't feel comfortable dealing with hardware, SaaS services allow you to delegate the hard part while you earn native block rewards.
 
@@ -29,7 +29,7 @@ The Ethereum protocol does not natively support delegation of stake, so these se
 
 <StakingComparison page="saas" />
 
-## What to consider {#what-to-consider}
+## What to consider \{#what-to-consider}
 
 There are a growing number of SaaS providers to help you stake your ETH, but they all have their own benefits and risks. All SaaS options require additional trust assumptions compared to home-staking. Saas options may have additional code wrapping the Ethereum clients that is not open or auditable. SaaS also has a detrimental effect on network decentralization. Depending on the setup, you may not control your validator - the operator could act dishonestly using your ETH.
 
@@ -37,7 +37,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 
 <StakingConsiderations page="saas" />
 
-## Explore staking service providers {#saas-providers}
+## Explore staking service providers \{#saas-providers}
 
 Below are some available SaaS provider. Use the above indicators to help guide you through these services
 
@@ -55,7 +55,7 @@ Please note the importance of supporting [client diversity](/developers/docs/nod
 
 Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
-## Frequently asked questions {#faq}
+## Frequently asked questions \{#faq}
 
 <ExpandableCard title="Who holds my keys?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Arrangements will differ from provider-to-provider, but commonly you will be guided through setting up any signing keys you need (one per 32 ETH), and uploading these to your provider to allow them to validate on your behalf. The signing keys alone do not give any ability to withdraw, transfer, or spend your funds. However, they do provide the ability to cast votes towards consensus, which if not done properly can result in offline penalties or slashing.
@@ -89,7 +89,7 @@ Upon completion of the slashing/exiting process, these funds will be transferred
 Contact individual SaaS provider for more details on any guarantees or insurance options, and for instructions on how to provide a withdrawal address. If you'd prefer to be in full control of your validator setup, <a href="/staking/solo/">learn more about how to solo stake your ETH</a>.
 </ExpandableCard>
 
-## Further reading {#further-reading}
+## Further reading \{#further-reading}
 
 - [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

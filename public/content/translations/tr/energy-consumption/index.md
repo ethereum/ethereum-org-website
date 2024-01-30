@@ -4,7 +4,7 @@ description: Ethereum'un enerji tüketimini anlamak için ihtiyacınız olan tem
 lang: tr
 ---
 
-# Ethereum'un enerji tüketimi {#proof-of-stake-energy}
+# Ethereum'un enerji tüketimi \{#proof-of-stake-energy}
 
 Ethereum çevre dostu bir blok zincirdir. Ethereum'un [hisse ispatı mekanizması](/developers/docs/consensus-mechanisms/pos), [ağın güvenliğini sağlamak için](/developers/docs/consensus-mechanisms/pow) enerji yerine ETH kullanır. Tüm Ethereum ağının, yılda tükettiği enerji yaklaşık olarak [~0.0026 TWh](https://carbon-ratings.com/eth-report-2022)'dir.
 
@@ -39,13 +39,13 @@ Yukarıdaki tablo ve grafik ayrıca Bitcoin ve iş kanıtlı Ethereum ile ilgili
 
 Birçok endüstri için enerji tüketimi ve karbon emisyonu tahminlerine [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi sitesinden](https://ccaf.io/cbnsi/ethereum) göz atabilirsiniz.
 
-## İşlem başına tahminler {#per-transaction-estimates}
+## İşlem başına tahminler \{#per-transaction-estimates}
 
 Birçok makale, blok zincirler için "işlem başına" enerji harcamasını öngörüyor. Ancak bu yanıltabilir çünkü bir bloku öne sürmek ve doğrulamak için gereken enerji blokun içindeki işlemlerin sayısından bağımsızdır. İşlem başına enerji harcaması biriminden yola çıkarak, daha az işlemin daha küçük bir enerji harcamasına ve tam tersine daha fazla işlemin daha büyük bir enerji harcamasına neden olacağı düşünülebilir, ancak bu her zaman geçerli değildir. Ayrıca, işlem başına tahminler bir blok zincirin işlem girdisinin nasıl tanımlandığına karşı çok hassasstır ve bu tanımlamanın değişimi ile oynanarak değer olduğundan daha büyük veya küçük gösterilebilir.
 
 Örneğin Ethereum'da işlem geçirgenliği, yalnızca temel katmanın değil, aynı zamanda tüm "[katman 2](/layer-2/)" rollup'ların işlem geçirgenliğinin toplamıdır. Katman 2'ler genelde hesaplamalara katılmazlar, ancak sıralayıcılar tarafından harcanan ek enerji (az) ve onların tamamladığı işlem sayısının (çok) göz önüne alınması işlem başına tahminleri büyük oranda düşürürdü. Bu, platformlar arasında işlem başına enerji tüketimi karşılaştırmalarının yanıltıcı olabileceği nedenlerden biridir.
 
-## Ethereum'un karbon borcu {#carbon-debt}
+## Ethereum'un karbon borcu \{#carbon-debt}
 
 Ethereum'un enerji tüketimi gayet düşüktür, ancak bu durum hep böyle olmamıştır. Ethereum aslen mevcut hisse ispatı mekanizmasından çok daha büyük bir çevresel maliyeti olan iş ispatını kullanıyordu.
 
@@ -55,7 +55,7 @@ En başından beri, Ethereum hisse ispatı temelli bir fikir birliği mekanizmas
 
 CCRI'nin tahminine göre, The Merge, Ethereum'un yıllık elektrik tüketimini **%99.988'den** fazla azalttı. Aynı şekilde, Ethereum'un karbon ayak izi de yaklaşık **%99.992** (11.016.000 ila 870 ton arası CO2e) düştü. Bunu daha iyi anlatabilmek için, yukarıdaki figürde gösterildiği gibi, emisyonlardaki düşüş tıpkı Eyfel Kulesi'nin yüksekliğinden bir küçük plastik oyuncak figürün boyuna inmek gibiydi. Sonuç olarak, ağın korunmasının çevresel maliyeti büyük oranda düştü. Aynı zamanda, ağın güvenliğinin geliştiği düşünülüyor.
 
-## Çevre dostu uygulama katmanı {#green-applications}
+## Çevre dostu uygulama katmanı \{#green-applications}
 
 Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda önemli, büyüyen ve yüksek oranda aktif bir [**rejeneratif finans (ReFi)**](/refi/) topluluğu Ethereum üzerinde inşa etmekte. ReFi uygulamaları, çevreye fayda sağlayan pozitif dışsallıklara sahip finansal uygulamalar oluşturmak için DeFi bileşenlerini kullanır. ReFi daha geniş bir ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) hareketinin Ethereum ile yakın çalışan bir parçasıdır ve teknolojik gelişme ile çevresel koruyuculuğu eşleştirmeyi hedefler. Ethereum'un merkezi olmayan, izinsiz ve şekillendirilebilir doğası, onu ReFi ve solarpunk toplulukları için ideal temel katman yapar.
 
@@ -65,7 +65,7 @@ Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda 
   Eğer bu sayfanın daha isabetli olabileceğini düşünüyorsanız, lütfen bir konu veya PR açın. Bu sayfadaki istatistikler herkese açık veriye dayalı tahminlerdir - ethereum.org takımından veya Ethereum Foundation'dan resmi bir açıklama veya sözü temsil etmezler.
 </InfoBanner>
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Cambridge Blok Zincir Ağ Sürdürülebilirlik Endeksi](https://ccaf.io/cbnsi/ethereum)
 - [İş ispatı blok zincirleri hakkında Beyaz Saray raporu](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -75,7 +75,7 @@ Ethereum'un enerji tüketiminin aşırı düşük olduğu esnada, aynı zamanda 
 - [Birleşim - Ethereum Ağının Elektrik Tüketimi ve Karbon Ayak İzi Üzerindeki Sonuçları](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Ethereum'un enerji tüketimi](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [Ethereum'un vizyonu](/roadmap/vision/)
 - [İşaret Zinciri](/roadmap/beacon-chain)

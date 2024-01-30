@@ -10,19 +10,19 @@ Az Ethereum okosszerződések rendkívül flexibilisek, képesek nagy mennyiség
 - [Parity multi-sig hiba#2 - 300 millió USD lekötve](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [A TheDAO hack, 3.6M ETH! Több mint 1 Mrd. USD a mai ETH árfolyamon](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Ez a cikk az okosszerződés biztonságról szól, így érdemes tisztában lenned az [okosszerződésekkel](/developers/docs/smart-contracts/), mielőtt belekezdenél a biztonságba.
 
-## Hogyan lehet biztonságosabb okosszerződés kódot írni {#how-to-write-more-secure-smart-contract-code}
+## Hogyan lehet biztonságosabb okosszerződés kódot írni \{#how-to-write-more-secure-smart-contract-code}
 
 Mielőtt bármilyen kódot indítanánk a főhálózatra, fontos, hogy megfelelő elővigyázatossággal védjük meg az okosszerződésre rábízott értékeket. Ebben a cikkben néhány konkrét támadást megvitatunk, forrásokat biztosítunk további támadástípusok megismeréséhez, és hagyunk néhány alapvető eszközt és bevált gyakorlatot a szerződések megfelelő és biztonságos működéséhez.
 
-## Az audit nem gyógyír mindenre {#audits-are-not-a-silver-bullet}
+## Az audit nem gyógyír mindenre \{#audits-are-not-a-silver-bullet}
 
 Évekkel ezelőtt az okosszerződések írásának, fordításának, tesztelésének és telepítésének eszközei nagyon kiforratlanok voltak, ami sok projektet arra késztettet, hogy rendszertelenül írják a Solidity kódot, majd átadják egy auditornak, aki megvizsgálta a kódot annak biztosítása érdekében, hogy biztonságosan működik-e az elvárásoknak megfelelően. 2020-ban a Solidity írást támogató fejlesztési folyamatok és eszközök lényegesen jobbak; a bevált gyakorlatok felhasználása nemcsak a projekt könnyebb kezelhetőségét biztosítja, hanem a projekt biztonságának létfontosságú része is. Az okosszerződés megírásának végén végzett audit már nem elegendő, mint a projekted egyetlen biztonsági szempontja. A biztonság már az okosszerződés kód első sorának megírása előtt elkezdődik, **a biztonság megfelelő tervezéssel és fejlesztési folyamatokkal kezdődik**.
 
-## Okosszerződés fejlesztési folyamat {#smart-contract-development-process}
+## Okosszerződés fejlesztési folyamat \{#smart-contract-development-process}
 
 Minimum:
 
@@ -42,11 +42,11 @@ Sokkal többet el lehetne mondani még a fejlesztési folyamatról, de ezek a t�
 - A fejlesztők gyorsabban tudnak iterálni, tesztelni és visszajelzést kapni a módosításokról
 - Kisebb a valószínűsége, hogy projekted visszafejlődést szenved el
 
-## Támadások és sérülékenységek {#attacks-and-vulnerabilities}
+## Támadások és sérülékenységek \{#attacks-and-vulnerabilities}
 
 Most, hogy a Solidity kódot már egy hatékony fejlesztési folyamat segítségével írod, nézzünk meg néhány általános Solidity biztonsági rést, hogy lássuk, mit ronthatunk el.
 
-### Újbóli belépés (re-entrancy) {#re-entrancy}
+### Újbóli belépés (re-entrancy) \{#re-entrancy}
 
 Az újbóli belépés az egyik legnagyobb és legjelentősebb biztonsági probléma, melyet figyelembe kell venni okosszerződések fejlesztésekor. Míg az EVM nem tud egyszerre több szerződést futtatni, egy másik szerződést meghívó szerződés szünetelteti a hívó szerződés végrehajtását és memóriaállapotát, amíg a hívás vissza nem tér, ekkor a végrehajtás normálisan halad tovább. Ez a szüneteltetés és újraindítás egy "újbóli belépésnek" nevezett sérülékenységet eredményezhet.
 
@@ -116,7 +116,7 @@ Az Attacker.beginAttack() meghívása egy ciklust fog beindítani, mely valahogy
 
 Az Attacker.beginAttack meghívása 1 ETH-tel egy újbóli belépés támadást fog indítani Victim ellen, ezzel több ETH-et kiutalva, mint amennyit beletesz (melyet más felhasználók egyenlegéből vont le, így a Victim szerződés alulfedezetté válik)
 
-### Hogyan kezeljük az újbóli belépést (a rosszabb mód) {#how-to-deal-with-re-entrancy-the-wrong-way}
+### Hogyan kezeljük az újbóli belépést (a rosszabb mód) \{#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Fontolóra lehet venni az újbóli belépés kezelését azzal, hogy egyszerűen megakadályozzuk az okosszerződések interakcióját a kóddal. A stackoverflow-n az alábbi kód részletet lehet megtalálni rengeteg pozitív szavazattal:
 
@@ -185,7 +185,7 @@ require(tx.origin == msg.sender)
 
 Azonban ez még mindig nem egy jó megoldás. Az Ethereum egyik legizgalmasabb aspektusa az összeállíthatóság, amikor az okosszerződések integrálódnak és egymásra épülnek. A fenti sor használatával korlátozod a projekted hasznosságát.
 
-### Hogyan kezeljük az újbóli belépést (a jobb mód) {#how-to-deal-with-re-entrancy-the-right-way}
+### Hogyan kezeljük az újbóli belépést (a jobb mód) \{#how-to-deal-with-re-entrancy-the-right-way}
 
 Egyszerűen a tárhely frissítés és a külső hívás sorrendjének felcserélésével meg tudjuk akadályozni az újbóli belépés feltételét, mely lehetővé tette a támadást. A withdraw visszahívása, amíg lehetséges, nem lesz jövedelmező a támadó számára, mivel a `balances` tárhely már 0 értékre lesz állítva.
 
@@ -202,11 +202,11 @@ contract NoLongerAVictim {
 
 A fenti kód a "Checks-Effects-Interactions" tervezési mintát követi, amely segít megvédeni az újbóli belépéstől. Többet [olvashatsz itt a Checks-Effects-Interactions-ról itt](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### Hogyan kezeljük az újbóli belépést (ágyúval verébre) {#how-to-deal-with-re-entrancy-the-nuclear-option}
+### Hogyan kezeljük az újbóli belépést (ágyúval verébre) \{#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 Bármikor amikor ETH-et küldesz egy nem megbízható címre vagy interakcióba lépsz egy ismeretlen szerződéssel (vagyis meghívod a `transfer()` függvényét egy felhasználó által biztosított token címnek), kitetté válsz egy lehetséges újbóli belépéses támadásnak. **Olyan szerződések tervezésével, melyek sem az ETH küldést, sem a nem megbízható szerződések hívását sem támogatják, megelőzhető egy lehetséges újbóli belépés!**
 
-## Több támadás típus {#more-attack-types}
+## Több támadás típus \{#more-attack-types}
 
 A fenti támadástípusok az okosszerződések kódjához (újbóli belépés) és az Ethereum furcsaságaihoz kapcsolódnak (kód futtatása a szerződés konstruktoron belül, mielőtt a kód elérhető lenne a szerződés címén). Sok, sok más fajta támadás típus létezik, melyekre figyelni kell, mint a:
 
@@ -219,11 +219,11 @@ További olvasnivaló:
 - [Consensys Okosszerződés Ismet Támadások](https://consensys.github.io/smart-contract-best-practices/attacks/) - Egy nagyon olvasmányos magyarázat a legkomolyabb sérülékenységekről, a legtöbbhöz minta kóddal is.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - A CWE válogatott listája, mely az Ethereumra és az okosszerződésekre is érvényes
 
-## Biztonsági eszközök {#security-tools}
+## Biztonsági eszközök \{#security-tools}
 
 Bár nem helyettesítheti az Ethereum biztonsági alapismereteinek megértését és a szakmai auditáló cég bevonását a kód felülvizsgálatába, számos eszköz áll rendelkezésre a kódban felmerülő lehetséges problémák kiemelésére.
 
-### Okosszerződés Biztonság {#smart-contract-security}
+### Okosszerződés Biztonság \{#smart-contract-security}
 
 **Slither -** **_Solidity statikus analízis keretrendszer Python 3-ban írva._**
 
@@ -254,14 +254,14 @@ Bár nem helyettesítheti az Ethereum biztonsági alapismereteinek megértését
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [Fórum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### Formális Ellenőrzés {#formal-verification}
+### Formális Ellenőrzés \{#formal-verification}
 
 **Formális Ellenőrzés információ**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _Jan 29, 2018 - Bernard Mueller_
 
-### Eszközök használata {#using-tools}
+### Eszközök használata \{#using-tools}
 
 A két legnépszerűbb okosszerződés biztonsági analitikai eszköz:
 
@@ -304,7 +304,7 @@ A Slither itt azonosította az újbóli belépés lehetőségét, meghatározta 
 
 mely lehetővé teszi, hogy gyorsan megismerd a potenciális problémákat a kódoddal. Mint minden automatizált tesztelő eszköz, a Slither sem tökéletes, és a jelentések esetében hibázik túl sokat. Akkor is figyelmeztet potenciális újbóli belépésről, ha nincs is kihasználható sérülékenység. Gyakran a DIFFERENCE megtekintése a kód változtatások között a Slitherben rendkívüli felvilágosítással bírhat, mely segít felderíteni olyan sérülékenységeket, melyek sokkal korábban jöttek elő, minthogy a projekt kódja készen állt volna.
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 **Okosszerződés Biztonság Bevált Gyakorlatok Útmutató**
 
@@ -318,7 +318,7 @@ mely lehetővé teszi, hogy gyorsan megismerd a potenciális problémákat a kó
 
 _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
 
-## Kapcsolódó útmutatók {#related-tutorials}
+## Kapcsolódó útmutatók \{#related-tutorials}
 
 - [Biztonságos fejlesztési workflow](/developers/tutorials/secure-development-workflow/)
 - [A Slither használata okosszerződés bugok felderítésére](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

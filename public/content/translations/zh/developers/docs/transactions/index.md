@@ -6,11 +6,11 @@ lang: zh
 
 交易是由帐户发出，带密码学签名的指令。 帐户将发起交易以更新以太坊网络的状态。 最简单的交易是将 ETH 从一个帐户转到另一个帐户。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 为了帮助你更好地理解这个页面，我们建议先阅读[帐户](/developers/docs/accounts/)和我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
-## 什么是交易？ {#whats-a-transaction}
+## 什么是交易？ \{#whats-a-transaction}
 
 以太坊交易是指由外部持有帐户发起的行动，换句话说，是指由人管理而不是智能合约管理的帐户。 例如，如果 Bob 发送 Alice 1 ETH，则 Bob 的帐户必须减少 1 ETH，而 Alice 的帐户必须增加 1 ETH。 交易会造成状态的改变。
 
@@ -104,7 +104,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 如有签名哈希，可通过加密技术证明交易来自发送者并提交网络。
 
-### `data`字段 {#the-data-field}
+### `data`字段 \{#the-data-field}
 
 绝大多数交易都是从外部所有的帐户访问合约。 大多数合约用 Solidity 语言编写，并根据[应用程序二进制接口 (ABI)](/glossary/#abi) 解释其`data`字段。
 
@@ -125,7 +125,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 
 根据应用程序二进制接口规范，整型值（例如地址，它是 20 字节整型）在应用程序二进制接口中显示为 32 字节的字，前面用零填充。 所以我们知道 `to` 地址是 [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279)。 `value` 是 0x3b0559f4 = 990206452。
 
-## 交易类型 {#types-of-transactions}
+## 交易类型 \{#types-of-transactions}
 
 以太坊有几种不同类型的交易：
 
@@ -133,7 +133,7 @@ Geth 这样的以太坊客户端将处理此签名过程。
 - 合约部署交易：没有“to”地址的交易，数据字段用于合约代码。
 - 执行合约：与已部署的智能合约进行交互的交易。 在这种情况下，“to”地址是智能合约地址。
 
-### 关于燃料 {#on-gas}
+### 关于燃料 \{#on-gas}
 
 如上所述，执行交易需要耗费[燃料](/developers/docs/gas/)。 简单的转账交易需要 21000 单位燃料。
 
@@ -159,7 +159,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 任何未用于交易的燃料都会退还给用户帐户。
 
-## 交易生命周期 {#transaction-lifecycle}
+## 交易生命周期 \{#transaction-lifecycle}
 
 交易提交后，就会发生以下情况：
 
@@ -168,13 +168,13 @@ Alice 的帐户将会增加 **+1.0 ETH**
 3. 验证者必须选择你的交易并将它包含在一个区块中，以便验证交易并认为它“成功”。
 4. 随着时间的流逝，包含你的交易的区块将升级成“合理”状态，然后变成“最后确定”状态。 通过这些升级，可以进一步确定 你的交易已经成功并将无法更改。 区块一旦“最终确定”，只能通过耗费数十亿美元 的网络级攻击来更改。
 
-## 视频演示 {#a-visual-demo}
+## 视频演示 \{#a-visual-demo}
 
 跟随 Austin 了解交易、燃料和挖矿。
 
 <YouTube id="er-0ihqFQB0" />
 
-## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
+## Typed Transaction Envelope 交易 \{#typed-transaction-envelope}
 
 以太坊最初有一种交易形式。 每笔交易都包含 Nonce、燃料价格、燃料限制、目的地地址、价值、数据、v、r 和 s。 这些字段为 [RLP 编码](/developers/docs/data-structures-and-encoding/rlp/)，看起来像这样：
 
@@ -191,13 +191,13 @@ Alice 的帐户将会增加 **+1.0 ETH**
 - `TransactionType` - 一个在 0 到 0x7f 之间的数字，总共为 128 种可能的交易类型。
 - `TransactionPayload` - 由交易类型定义的任意字节数组。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [EIP-2718：Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
 _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [帐户](/developers/docs/accounts/)
 - [以太坊虚拟机 (EVM)](/developers/docs/evm/)

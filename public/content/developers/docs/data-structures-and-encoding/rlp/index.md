@@ -14,7 +14,7 @@ To use RLP to encode a dictionary, the two suggested canonical forms are:
 - use `[[k1,v1],[k2,v2]...]` with keys in lexicographic order
 - use the higher-level Patricia Tree encoding as Ethereum does
 
-## Definition {#definition}
+## Definition \{#definition}
 
 The RLP encoding function takes in an item. An item is defined as follows：
 
@@ -66,7 +66,7 @@ def to_binary(x):
     return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Examples {#examples}
+## Examples \{##examples}
 
 - the string "dog" = [ 0x83, 'd', 'o', 'g' ]
 - the list [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - the [set theoretical representation](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) of three, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - the string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-## RLP decoding {#rlp-decoding}
+## RLP decoding \{##rlp-decoding}
 
 According to the rules and process of RLP encoding, the input of RLP decode is regarded as an array of binary data. The RLP decoding process is as follows:
 
@@ -148,12 +148,12 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [RLP in Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Ethereum under the hood: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). Ethereum's Recursive Length Prefix in ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Patricia merkle trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

@@ -21,13 +21,13 @@ Os saques de stake foram ativados com a atualização Shanghai/Capella, que ocor
 
 **Pagamentos de recompensas de saldo excedente** acima de 32 ETH serão enviados de forma automática e regular para um endereço de saque vinculado a cada validador, uma vez fornecido pelo usuário. Usuários também podem **sair totalmente do staking**, desbloqueando seu saldo total do validador.
 
-## Recompensas de staking {#staking-rewards}
+## Recompensas de staking \{#staking-rewards}
 
 Os pagamentos de recompensa são processados automaticamente para contas validadoras ativas, com um saldo efetivo máximo de 32 ETH.
 
 Qualquer saldo acima de 32 ETH ganho por meio de recompensas, não contribui realmente para o principal, ou aumenta o peso desse validador na rede e, portanto, é retirado automaticamente como pagamento de recompensa a cada dois ou três dias. Além de fornecer um endereço de saque uma vez, essas recompensas não exigem nenhuma ação do operador validador. Tudo isso é iniciado na camada de consenso, portanto, nenhum gás (taxa de transação) é necessário em nenhuma etapa.
 
-### Como chegamos aqui? {#how-did-we-get-here}
+### Como chegamos aqui? \{#how-did-we-get-here}
 
 Nos últimos anos, o Ethereum passou por várias atualizações de rede, fazendo a transição para uma rede protegida pelo próprio ETH, em vez da mineração intensiva de energia, como era antes. A participação em consenso no Ethereum agora é conhecida como "staking", pois os participantes têm bloqueado voluntariamente o ETH, colocando-o "em stake" para poder participar da rede. Os usuários que seguem as regras serão recompensados, enquanto as tentativas de trapaça podem ser penalizadas.
 
@@ -35,11 +35,11 @@ Desde o lançamento do contrato de depósito de staking em novembro de 2020, alg
 
 Antes da atualização Shanghai/Capella, não era possível usar ou acessar seu ETH em stake. Mas agora, você pode optar por receber automaticamente suas recompensas em uma conta escolhida, e também pode sacar seu ETH em stake sempre que quiser.
 
-### Como me preparo? {#how-do-i-prepare}
+### Como me preparo? \{#how-do-i-prepare}
 
 <WithdrawalsTabComparison />
 
-### Avisos importantes {#important-notices}
+### Avisos importantes \{#important-notices}
 
 Fornecer um endereço de saque é uma etapa necessária para qualquer conta de validador, antes que ele seja elegível para sacar ETH de seu saldo.
 
@@ -49,7 +49,7 @@ Fornecer um endereço de saque é uma etapa necessária para qualquer conta de v
 
 Não há <strong>nenhuma ameaça aos seus fundos</strong> enquanto não fornecer essa conta, contanto que sua frase mnemônica/de recuperação tenha permanecido segura offline e não tenha sido comprometida de nenhuma forma. A falha em adicionar credenciais de saque simplesmente deixará o ETH bloqueado na conta do validador como tem estado até que um endereço de saque seja fornecido.
 
-## Saindo do staking por completo {#exiting-staking-entirely}
+## Saindo do staking por completo \{#exiting-staking-entirely}
 
 Fornecer um endereço de saque é necessário antes que _quaisquer_ fundos possam ser transferidos de um saldo de uma conta do validador.
 
@@ -59,7 +59,7 @@ O processo de saída de um validador do staking leva uma quantidade variável de
 
 Uma vez que uma conta é marcada como "sacável" e as credenciais de saque são fornecidas, não há mais nada que o usuário precise fazer além de esperar. As contas são automática e continuamente varridas por proponentes de bloco para fundos elegíveis de saída, e o saldo da sua conta será transferido integralmente (também conhecido como "saque total") durante a próxima <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>varredura</a>.
 
-## Quando os saques de staking são ativados? {#when}
+## Quando os saques de staking são ativados? \{#when}
 
 Os saques de stake já estão disponíveis! A funcionalidade de saque foi habilitada como parte da atualização Shanghai/Capella que ocorreu em 12 de abril de 2023.
 
@@ -68,17 +68,17 @@ A atualização Shanghai/Capella permitiu que o ETH previamente em stake fosse r
 - [Mais sobre a história do Ethereum](/history/)
 - [Mais sobre o roteiro do Ethereum](/roadmap/)
 
-## Como funcionam os pagamentos de saque? {#how-do-withdrawals-work}
+## Como funcionam os pagamentos de saque? \{#how-do-withdrawals-work}
 
 Se um determinado validador é elegível para um saque ou não é determinado pelo estado da própria conta do validador. Nenhuma entrada de usuário é necessária a um dado momento para determinar se uma conta deveria ter um saque iniciado ou não — todo o processo é realizado automaticamente pela camada de consenso em um loop contínuo.
 
-### Você é o tipo de pessoa que aprende mais com recursos visuais? {#visual-learner}
+### Você é o tipo de pessoa que aprende mais com recursos visuais? \{#visual-learner}
 
 Confira esta explicação sobre saques de staking do Ethereum pela Finematics:
 
 <YouTube id="RwwU3P9n3uo" />
 
-### Validador de "varredura" {#validator-sweeping}
+### Validador de "varredura" \{#validator-sweeping}
 
 Quando um validador está agendado para propor o próximo bloco, ele é necessário para construir uma fila de saque de até 16 saques elegíveis. Isso é feito originalmente começando com o validador de índice 0, determinando se há um saque elegível para essa conta, conforme as regras do protocolo, e adicionando-o à fila, se houver. O validador definido para propor o bloco seguinte continuará de onde o último parou, progredindo em ordem indefinidamente.
 
@@ -88,7 +88,7 @@ Agora, em vez de 1 a 12, imagine que o relógio é de 0 a N <em>(o total de núm
 O ponteiro do relógio aponta para o próximo validador que precisa ser verificado quanto a saques elegíveis. Começa em 0 e avança ao longo de todo o caminho sem pular nenhuma conta. Quando o último validador é alcançado, o ciclo continua de volta ao início.
 </InfoBanner>
 
-#### Verificando os saques de uma conta {#checking-an-account-for-withdrawals}
+#### Verificando os saques de uma conta \{#checking-an-account-for-withdrawals}
 
 Enquanto um proponente está verificando os validadores para possíveis saques, cada validador que está sendo verificado é avaliado em relação a uma pequena série de perguntas para determinar se um saque deve ser acionado e, em caso afirmativo, o quanto de ETH deve ser sacado.
 
@@ -101,11 +101,11 @@ Existem apenas duas ações tomadas pelos operadores do validador ao longo do se
 - Fornecer credenciais de saque para habilitar qualquer forma de saque
 - Sair da rede, o que desencadeará um saque total
 
-### Gás gratuito {#gas-free}
+### Gás gratuito \{#gas-free}
 
 Essa abordagem para saques de staking evita exigir que os stakers (participantes) enviem manualmente uma transação solicitando que uma quantia específica de ETH seja sacada. Isso significa que **nenhum gás (taxa de transação) é necessário** e os saques também não competem pelo espaço do bloco da camada de execução existente.
 
-### Com que frequência receberei minhas recompensas de staking? {#how-soon}
+### Com que frequência receberei minhas recompensas de staking? \{#how-soon}
 
 Um máximo de 16 saques pode ser processado em um único bloco. A esse ritmo, 115.200 saques de validadores podem ser processados por dia (supondo que não haja slots perdidos). Conforme observado acima, os validadores sem saques elegíveis serão ignorados, diminuindo o tempo para concluir a varredura.
 
@@ -125,7 +125,7 @@ Expandindo esse cálculo, podemos estimar o tempo que levará para processar um 
 
 Como você poder ver, isso fica lento à medida que mais validadores estão na rede. Um aumento nos slots perdidos poderia diminuir proporcionalmente, mas isso geralmente representará o lado mais lento dos resultados possíveis.
 
-## Perguntas frequentes {#faq}
+## Perguntas frequentes \{#faq}
 
 <ExpandableCard
 title="Após ter fornecido um endereço de saque, posso alterá-lo para um endereço de saque alternativo?"
@@ -208,7 +208,7 @@ eventName="read more">
 Não. Uma vez que um validador tenha saído e seu saldo completo tenha sido sacado, quaisquer fundos adicionais depositados nesse validador serão automaticamente transferidos para o endereço de saque durante a próxima varredura do validador. Para recolocar o ETH em stake, um novo validador deve ser ativado.
 </ExpandableCard>
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [Saques da plataforma de staking](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Saques por push da Beacon chain como operações](https://eips.ethereum.org/EIPS/eip-4895)

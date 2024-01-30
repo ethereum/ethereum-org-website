@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## Introducere {#introduction}
+## Introducere \{#introduction}
 
 Ca mod de utilizare a lui Ethereum dintre cele mai frecvente, un grup creează un token de tranzacționare, care este într-un fel propria lui monedă. Aceste tokenuri respectă de obicei un standard, [ERC-20](/developers/docs/standards/tokens/erc-20/). Acest standard face posibilă scrierea de instrumente, cum ar fi grupurile de lichidități și portofelele, care funcționează cu toate tokenurile ERC-20. Acest articol va analiza [implementarea OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), cât și [definirea interfeței](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Este vorba de un cod sursă adnotat. Dacă doriți să implementați ERC-20, [citiți acest tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
-## Interfața {#the-interface}
+## Interfața \{#the-interface}
 
 Obiectivul unui standard cum este ERC-20 este să permită implementarea mai multor tokenuri interoperabile între aplicații, precum portofelele și schimburile descentralizate. Pentru a realiza aceasta, am creat o [interfață](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Orice cod care trebuie să utilizeze contractul de token poate folosi aceleași definiții din interfață și poate fi compatibil cu toate contractele de token care îl folosesc, fie că este vorba de un portofel precum MetaMask, o aplicaţie dapp cum ar fi etherscan.io sau un contract diferit, cum ar fi un fond de lichidități.
 
@@ -184,7 +184,7 @@ Funcția `approve` creează o alocație. Nu uitați să citiți mesajul despre c
 
 Aceste evenimente sunt emise în momentul în care se schimbă starea contractului ERC-20.
 
-## Contractul propriu-zis {#the-actual-contract}
+## Contractul propriu-zis \{#the-actual-contract}
 
 Acesta este contractul efectiv care implementează standardul ERC-20, [preluat de aici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Nu este destinat a fi utilizat ca atare, dar puteți [moșteni](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) din el pentru a-l transforma în ceva utilizabil.
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### Declarații de import {#import-statements}
+### Declarații de import \{#import-statements}
 
 Pe lângă definițiile interfețelor de mai sus, definiția contractului importă alte două fișiere:
 
@@ -241,7 +241,7 @@ Acest comentariu explică scopul contractului.
 
 ```
 
-### Definiția contractului {#contract-definition}
+### Definiția contractului \{#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ This line specifies the inheritance, in this case from `IERC20` from above and `
 
 Această linie atașează biblioteca `SafeMath` la tipul `uint256`. Puteți găsi această bibliotecă [aici](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
-### Definițiile variabilelor {#variable-definitions}
+### Definițiile variabilelor \{#variable-definitions}
 
 Aceste definiții specifică variabilele de stare ale contractului. Aceste variabile sunt declarate `private`, dar aceasta înseamnă doar că alte contracte de pe blockchain nu le pot citi. _Nu există secrete pe blockchain_, software-ul fiecărui nod are starea fiecărui contract la fiecare bloc. În mod convențional, variabilele de stare se numesc `_<something>`.
 
@@ -303,7 +303,7 @@ Soluția este de a ține evidența valorilor întregi, dar la numărătoare, în
 
 Este necesar ca aplicațiile să știe cum să afișeze soldul tokenurilor. Dacă un utilizator are 3,141,000,000,000,000,000,000,000,000 wei, aceasta înseamnă 3,14 ETH? 31,41 ETH? 3.141 ETH? În cazul ether-ului, un ETH se definește ca 10^18 wei, dar pentru tokenul dvs. puteți selecta o valoare diferită. Dacă nu are sens să împărţim tokenul, puteți folosi o valoare cu `_decimals` de zero. Dacă doriți să utilizați același standard ca ETH, utilizați valoarea **18**.
 
-### Constructorul {#the-constructor}
+### Constructorul \{#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ Este necesar ca aplicațiile să știe cum să afișeze soldul tokenurilor. Dac�
 
 Constructorul este apelat la crearea pentru prima dată a contractului. În mod convențional, variabilele de stare se numesc `_<something>_`.
 
-### Funcțiile interfeţei cu utilizatorul {#user-interface-functions}
+### Funcțiile interfeţei cu utilizatorul \{#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ Tipul de răspuns este `string memory`, ceea ce înseamnă că răspunde printr-
 
 În acest caz, `memoria` este cea mai bună alegere.
 
-### Citirea informațiilor tokenului {#read-token-information}
+### Citirea informațiilor tokenului \{#read-token-information}
 
 Acestea sunt funcții care furnizează informații despre token, fie că este vorba de cantitatea totală, fie de soldul unui cont.
 
@@ -400,7 +400,7 @@ Funcția `totalSupply` răspunde prin cantitatea totală de tokenuri.
 
 Citirea soldului unui cont. Rețineți că oricine are permisiunea de a obține soldul contului altcuiva. Nu are nici un sens să ascundeți această informație, pentru că ea este oricum disponibilă pe fiecare nod. _Nu există secrete pe blockchain._
 
-### Transferul de tokenuri {#transfer-tokens}
+### Transferul de tokenuri \{#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ Funcția `_transfer` este cea care efectuează cu adevărat munca. Este o funcț
 
 În mod normal, în Solidity folosim `msg.sender` pentru expeditorul mesajului. Totuși, acest lucru întrerupe [OpenGSN](http://opengsn.org/). Dacă vrem să permitem tranzacții fără ether cu tokenul nostru, trebuie să folosim `_msgSender(`). Acesta răspunde cu `msg.sender` pentru tranzacțiile normale, însă pentru cele fără ether răspunde cu semnatarul original, și nu cu contractul care a transmis mesajul.
 
-### Funcțiile de alocație {#allowance-functions}
+### Funcțiile de alocație \{#allowance-functions}
 
 Acestea sunt funcțiile care implementează funcționalitatea alocației: `allowance`, `approve`, `transferFrom` și `_approve`. În plus, implementarea OpenZeppelin depășește standardul de bază prin includerea unor functionalităţi care îmbunătățesc securitatea: `increaseAllowance` și `decreaseAllowance`.
 
-#### Funcția „allowance” {#allowance}
+#### Funcția „allowance” \{#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ Acestea sunt funcțiile care implementează funcționalitatea alocației: `allow
 
 Funcția `allowance` permite tuturor să verifice orice alocație.
 
-#### Funcția „approve” {#approve}
+#### Funcția „approve” \{#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ Această funcție este apelată pentru a crea o alocație. Este similară cu fun
 
 Folosim funcții interne pentru a minimiza numărul de locuri unde au loc schimbări de stare. _Orice_ funcție care schimbă starea reprezintă un risc potențial și trebuie auditată pe motive de securitate. În acest fel minimizăm șansele de a greşi.
 
-#### Funcția „transferFrom” {#transferFrom}
+#### Funcția „transferFrom” \{#transferFrom}
 
 Aceasta este funcția pe care spenderul o apelează pentru a cheltui o alocație. Aceasta necesită două operațiuni: transferul sumei care se cheltuiește și reducerea alocației cu aceeași sumă.
 
@@ -507,7 +507,7 @@ Funcția de apel `a.sub(b, "message")` face două lucruri. În primul rând, cal
     }
 ```
 
-#### Suplimente de siguranță OpenZeppelin {#openzeppelin-safety-additions}
+#### Suplimente de siguranță OpenZeppelin \{#openzeppelin-safety-additions}
 
 Este periculos să setați o valoare diferită de zero la o altă valoare diferită de zero, deoarece nu controlați decât ordinea propriilor tranzacții, și nu pe cea a celorlalți. Să ne imaginăm că avem doi utilizatori, Alice, care este naivă, și Bill, care este necinstit. Alice vrea ca Bill să-i facă un serviciu despre care crede că valorează cinci tokenuri - de aceea îi dă lui Bill o alocație de cinci tokenuri.
 
@@ -583,11 +583,11 @@ Funcția `a.add(b)` este o adunare sigură („safe add”). În cazul improbabi
     }
 ```
 
-### Funcții care modifică informațiile despre tokenuri {#functions-that-modify-token-information}
+### Funcții care modifică informațiile despre tokenuri \{#functions-that-modify-token-information}
 
 Există patru funcții care efeectuează cu adevărat munca: `_transfer`, `_mint`, `_burn`, și `_approve`.
 
-#### Funcția \_transfer {#\_transfer}
+#### Funcția \_transfer \{#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Acestea sunt liniile care execută practic transferul. Observați că nu există
 
 În cele din urmă, va emite evenimentul `Transfer`. Evenimentele nu sunt accesibile contractelor inteligente, dar codul care rulează în afara blockchain-ului poate să detecteze prin ascultare evenimente și să reacționeze la ele. De exemplu, un portofel poate monitoriza când proprietarul obține mai multe tokenuri.
 
-#### Funcțiile \_mint și \_burn {#\_mint-and-\_burn}
+#### Funcțiile \_mint și \_burn \{#\_mint-and-\_burn}
 
 Cele două funcții (`_mint` și `_burn`) modifică numărul total de tokenuri furnizate. Deoarece acestea sunt interne, nu există nicio funcție care să le apeleze în acest contract, iar ele sunt utile numai dacă moșteniți din contract și adăugați propria logică prin care să decideți în ce condiții să emiteţi noi tokenuri sau să le ardeți pe cele existente.
 
@@ -706,7 +706,7 @@ Aveţi grijă să actualizați `_totalSupply` atunci când se modifică numărul
 
 Funcția `_burn` este identică aproape cu `_mint`, cu excepția faptului că funcționează în sens invers.
 
-#### Funcția \_approve {#\_approve}
+#### Funcția \_approve \{#\_approve}
 
 Aceasta este funcția care specifică de fapt alocațiile. Rețineți că permite unui proprietar să specifice o alocație mai mare decât soldul curent al proprietarului. Acest lucru este în regulă, deoarece soldul este verificat în momentul transferului, când ar putea fi diferit de cel de la momentul în care a fost creată alocația.
 
@@ -741,7 +741,7 @@ Emite un eveniment `Approval`. În funcție de felul cum este scrisă aplicația
 
 ```
 
-### Modificarea variabilei „decimals” {#modify-the-decimals-variable}
+### Modificarea variabilei „decimals” \{#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ Emite un eveniment `Approval`. În funcție de felul cum este scrisă aplicația
 
 Această funcție modifică variabila `_decimals`, care este utilizată pentru a indica interfeței cu utilizatorul cum să interpreteze valorile. Ar trebui să o apelați din constructor. Ar fi necinstit să fie apelată în orice moment ulterior, iar aplicațiile nu sunt concepute să o gestioneze.
 
-### Hook-uri {#hooks}
+### Hook-uri \{#hooks}
 
 ```solidity
 
@@ -784,7 +784,7 @@ Această funcție modifică variabila `_decimals`, care este utilizată pentru a
 
 Aceasta este funcția „hook” care va fi apelată în timpul transferurilor. It is empty here, but if you need it to do something you just override it.
 
-# Concluzie {#conclusion}
+# Concluzie \{#conclusion}
 
 În recapitulare, iată câteva dintre cele mai importante idei din acest contract (după părerea mea - părerea dvs. ar putea să fie diferită):
 

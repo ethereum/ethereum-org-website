@@ -4,9 +4,9 @@ description: 在以太坊生態系統內獲取支援。
 lang: zh-tw
 ---
 
-# 以太坊支援 {#support}
+# 以太坊支援 \{#support}
 
-## 官方提供的以太坊支援 {#official-support}
+## 官方提供的以太坊支援 \{#official-support}
 
 你正在尋找官方的以太坊支援嗎？ 第一件你應該知道的事情是以太坊為去中心化。 這代表沒有中心組織、實體或個體會持有以太坊，也因此沒有官方支援頻道。
 
@@ -22,7 +22,7 @@ lang: zh-tw
 
 儘管欠缺官方支援，很多以太坊生態系統上的團體、社群和專案都很樂意提供協助。你也能夠在此頁面找到很多有用的資訊及資源。 仍有疑問？ 加入 [ethereum.org discord](/discord/)，我們會嘗試提供幫助。
 
-## 錢包支援 {#wallet-support}
+## 錢包支援 \{#wallet-support}
 
 錢包出現問題了嗎？ 大多數錢包都備有可提供幫助的專用支援團隊：
 
@@ -34,7 +34,7 @@ _此清單並未列出所有受支援錢包。 是否需要幫你尋找特定錢
 
 尋找以太坊錢包？ [請查看我們完整的以太坊錢包清單](/wallets/find-wallet/)。
 
-## 開發去中心化應用程式 {#building-support}
+## 開發去中心化應用程式 \{#building-support}
 
 開發可能很難， 但一些專注於開發的空間上有樂意提供幫助，且經驗豐富的以太坊開發者。
 
@@ -47,7 +47,7 @@ _此清單並未列出所有受支援錢包。 是否需要幫你尋找特定錢
 
 你也可以在我們的[以太坊開發者資源](/developers/)部分找到文件和開發指南。
 
-### 模組化 {#dapp-tooling}
+### 模組化 \{#dapp-tooling}
 
 你的問題跟某個特定的質押池、專案或庫相關嗎？ 多數專案都有專門為你提供支援的聊天伺服器或論壇。
 
@@ -61,7 +61,7 @@ _此清單並未列出所有受支援錢包。 是否需要幫你尋找特定錢
 - [Alchemy](http://alchemy.com/discord)
 - [Tenderly](https://discord.gg/fBvDJYR)
 
-## 運行節點 {#node-support}
+## 運行節點 \{#node-support}
 
 如果你要運行一個節點或者驗證程式，有一些專門的社群可幫助你開始。
 
@@ -70,14 +70,14 @@ _此清單並未列出所有受支援錢包。 是否需要幫你尋找特定錢
 
 大部份開發以太坊用戶端的團隊也都有面向大眾的專有空間，你可在其中獲得支援及提出疑問。
 
-### 執行用戶端 {#execution-clients}
+### 執行用戶端 \{#execution-clients}
 
 - [Geth](https://discord.gg/FqDzupGyYf)
 - [Nethermind](https://discord.gg/YJx3pm8z5C)
 - [Besu](https://discord.gg/p8djYngzKN)
 - [Erigon](https://github.com/ledgerwatch/erigon/issues)
 
-### 共識用戶端 {#consensus-clients}
+### 共識用戶端 \{#consensus-clients}
 
 - [Prysm](https://discord.gg/prysmaticlabs)
 - [Nimbus](https://discord.gg/nSmEH3qgFv)
@@ -87,19 +87,19 @@ _此清單並未列出所有受支援錢包。 是否需要幫你尋找特定錢
 
 你也可以[在此學習如何運行節點](/developers/docs/nodes-and-clients/run-a-node/)。
 
-## 常見問題 {#faq}
+## 常見問題 \{#faq}
 
-### 我一直往錯的錢包傳送以太幣 {#wrong-wallet}
+### 我一直往錯的錢包傳送以太幣 \{#wrong-wallet}
 
 在以太坊進行的傳送不可還原。 不幸的是，如你已經將以太幣傳送至錯的錢包，便無法追回這些資金。 沒有中心組織、實體或個體持有以太坊，這代表沒有人能夠逆轉交易。 因此，在傳送交易前請務必進行雙重核查。
 
-### 如何索要以太坊贈品？ {#giveaway-scam}
+### 如何索要以太坊贈品？ \{#giveaway-scam}
 
 以太坊贈品是為了偷取你持有的以太幣而設計的騙局。 不要被一些高得不真實的回報率給欺騙 - 如果你將以太幣傳送至一個贈品地址，你將不會收到申領的贈品，而且你也不能索要賠償。
 
 [有關防止詐騙的詳細資訊](/security/#common-scams)
 
-### 我的交易卡住了 {#stuck-transaction}
+### 我的交易卡住了 \{#stuck-transaction}
 
 如果你提交了一個低於所需的交易費，由於網路需求，你在以太坊上的交易有時可能會卡住。 很多錢包都會提供一個選項，重新用較高的手續費去提交同一筆交易，讓交易能夠順利進行。 另外，你還可以取消正在等待處理的交易。該動作能將一筆交易傳送到你持有的地址，然後使用與待處理交易相同的隨機數繼續。
 
@@ -107,10 +107,10 @@ _此清單並未列出所有受支援錢包。 是否需要幫你尋找特定錢
 
 [怎樣取消待完成的以太坊交易](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### 如何在以太坊挖礦？ {#mining-ethereum}
+### 如何在以太坊挖礦？ \{#mining-ethereum}
 
 以太坊挖礦已不再可能。 當以太坊由工作量證明更換為權益證明時，挖礦就被關閉了。 現在以太坊沒有礦工了，取而代之的是驗證者。 驗證者質押以太幣並收到因協助維持網路安全而獲得的質押酬勞。
 
-### 如何成為質押者/驗證者？ {#become-validator}
+### 如何成為質押者/驗證者？ \{#become-validator}
 
 要成為驗證者，你必須在以太坊存款合約質押至少 32 個以太幣並設定驗證者節點。 更多資訊可以參考我們的[質押頁面](/staking)和[質押啟動面板](https://launchpad.ethereum.org/)。

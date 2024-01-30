@@ -4,7 +4,7 @@ lang: it
 description: Istruzioni e suggerimenti per i traduttori di ethereum.org
 ---
 
-# Guida di stile per la traduzione di ethereum.org {#style-guide}
+# Guida di stile per la traduzione di ethereum.org \{#style-guide}
 
 La guida di stile per la traduzione di ethereum.org contiene alcune linee guida, istruzioni e consigli più importanti per i traduttori che ci aiutano a localizzare il sito web.
 
@@ -12,13 +12,13 @@ Questo documento funge da guida generale e non è specifico per nessuna lingua.
 
 In caso di domande, suggerimenti o feedback, non esitare a contattarci all'indirizzo translations@ethereum.org, inviare un messaggio a @ethdotorg su Crowdin oppure [unisciti al nostro Discord](https://discord.gg/ethereum-org), dove puoi inviarci un messaggio nel canale #traduzioni o contattare un membro del team.
 
-## Usare Crowdin {#using-crowdin}
+## Usare Crowdin \{#using-crowdin}
 
 Puoi trovare le istruzioni di base su come partecipare al progetto in Crowdin e su come utilizzare l'editor online di Crowdin nella pagina del [Programma di traduzione](/contributing/translation-program/#how-to-translate).
 
 Se vuoi saperne di più su Crowdin e utilizzare alcune delle sue funzionalità avanzate, la [knowledge base di Crowdin](https://support.crowdin.com/online-editor/) contiene molte guide approfondite e panoramiche su tutte le funzionalità di Crowdin.
 
-## Cogliere l'essenza del messaggio {#capturing-the-essence}
+## Cogliere l'essenza del messaggio \{#capturing-the-essence}
 
 Quando traduci contenuti per ethereum.org, evita traduzioni letterali.
 
@@ -28,7 +28,7 @@ Le varie lingue hanno diverse regole grammaticali, convenzioni stilistiche o sin
 
 Invece di tradurre il testo di partenza parola per parola, consigliamo di leggere l'intera frase e di adattarla alle convenzioni della lingua di destinazione.
 
-## Formale vs. informale {#formal-vs-informal}
+## Formale vs. informale \{#formal-vs-informal}
 
 Usiamo la forma di cortesia, sempre educata e appropriata per tutti i visitatori.
 
@@ -36,13 +36,13 @@ L'uso della forma di cortesia ci consente di evitare di sembrare non ufficiali o
 
 La maggior parte delle lingue indoeuropee e afroasiatiche utilizzan pronomi personali di seconda persona specifici in base al sesso, che distinguono tra maschio e femmina. Quando ci rivolgiamo all'utente o utilizziamo pronomi possessivi, possiamo di evitare di indovinare il sesso del visitatore, poiché la forma di cortesia è generalmente applicabile e coerente, indipendentemente dal genere dell'interlocutore.
 
-## Vocabolario e significato semplici e chiari {#simple-vocabulary}
+## Vocabolario e significato semplici e chiari \{#simple-vocabulary}
 
 Il nostro obiettivo è quello di rendere i contenuti sul sito comprensibili a quante più persone possibile.
 
 Nella maggior parte dei casi, ciò può essere ottenuto efficacemente utilizzando parole semplici e brevi, di facile comprensione. Se esistono più traduzioni possibili per una certa parola nella tua lingua con lo stesso significato, l'opzione migliore è molto spesso la parola più breve che riflette chiaramente il significato.
 
-## Sistema di scrittura {#writing-system}
+## Sistema di scrittura \{#writing-system}
 
 Ethereum.org è disponibile in diverse lingue, che utilizzano sistemi di scrittura (o script di scrittura) alternativi a quello latino.
 
@@ -54,7 +54,7 @@ Un equivoco comune è che "Ethereum" debba essere scritto sempre in caratteri la
 
 **Quanto sopra non si applica alle lingue in cui i nomi propri non vanno generalmente tradotti.**
 
-## Tradurre i metadati della pagina {#translating-metadata}
+## Tradurre i metadati della pagina \{#translating-metadata}
 
 Alcune pagine contengono metadati sulla pagina, come 'title', 'lang', 'description', 'sidebar', ecc.
 
@@ -72,7 +72,7 @@ Alcuni esempi di codici linguistici per le lingue più diffuse:
 - Hindi - hi
 - Spagnolo - es
 
-## Titoli di articoli esterni {#external-articles}
+## Titoli di articoli esterni \{#external-articles}
 
 Alcune stringhe contengono titoli di articoli esterni. Gran parte delle nostre pagine di documentazione per sviluppatori contiene link ad articoli esterni, per ulteriori letture. Le stringhe contenenti titoli di articoli devono esser tradotte, indipendentemente dalla lingua dell'articolo, per assicurare un'esperienza dell'utente più coerente per i visitatori della pagina nella propria lingua.
 
@@ -80,7 +80,7 @@ Di seguito puoi trovare alcuni esempi di come queste stringhe appaiono ai tradut
 
 ![Titoli di articoli in sidebar.png](./article-titles-in-sidebar.png) ![Titoli di articoli in editor.png](./article-titles-in-editor.png)
 
-## Avvisi di Crowdin {#crowdin-warnings}
+## Avvisi di Crowdin \{#crowdin-warnings}
 
 Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno per commettere un errore. Crowdin ti avviserà automaticamente di questo prima di salvare la tua traduzione se dimentichi di includere un tag dal testo sorgente, se traduci elementi che non dovrebbero essere tradotti, se inserisci più spazi consecutivi, dimentichi la punteggiatura finale, ecc. Se visualizzi un avviso simile a questo, ti invitiamo a tornare indietro e ricontrollare la traduzione inserita.
 
@@ -88,7 +88,7 @@ Crowdin offre una funzionalità integrata che avvisa i traduttori quando stanno 
 
 Un esempio di avviso di Crowdin quando dimentichi di aggiungere un tag nella tua traduzione: ![Esempio di avviso di Crowdin](./crowdin-warning-example.png)
 
-## Gestire tag e frammenti di codice {#dealing-with-tags}
+## Gestire tag e frammenti di codice \{#dealing-with-tags}
 
 Molti dei contenuti di origine contengono tag e variabili, evidenziati in giallo nell'editor di Crowdin. Questi svolgono diverse funzioni e dovrebbero essere trattati correttamente.
 
@@ -158,7 +158,7 @@ Nell'esempio seguente, passando con il mouse sul <0> tag puoi vedere che rappres
 
 ![Esempio di tag ambigui.png](./example-of-ambiguous-tags.png)
 
-## Formule/abbreviazioni brevi vs. complete {#short-vs-full-forms}
+## Formule/abbreviazioni brevi vs. complete \{#short-vs-full-forms}
 
 Nel sito web sono usate molte abbreviazioni, es. dapp, NFT, DAO, DeFi, ecc. Queste abbreviazioni sono comunemente usate in inglese e gran parte dei visitatori del sito web ne è a conoscenza.
 
@@ -170,7 +170,7 @@ Esempio di come tradurre le dapp:
 
 - Applicazioni decentralizzate (dApp) → _Tradotto integralmente (abbreviazione tra parentesi)_
 
-## Termini senza traduzioni attestate {#terms-without-established-translations}
+## Termini senza traduzioni attestate \{#terms-without-established-translations}
 
 Alcuni termini potrebbero non avere traduzioni attestate in altre lingue e sono ampiamente noti con il termine originale in inglese. Tali termini includono principalmente concetti recenti, come Proof of Work, Proof of Stake, Beacon Chain, staking, ecc.
 
@@ -180,7 +180,7 @@ Traducendoli, sentiti libero di essere creativo, usa traduzioni descrittive o se
 
 **Il motivo per cui la maggior parte dei termini dovrebbe essere tradotta, invece di lasciarne alcuni in inglese, è il fatto che questa nuova terminologia diventerà più diffusa in futuro, man mano che più persone inizieranno a utilizzare Ethereum e le relative tecnologie. Se vogliamo coinvolgere più persone da tutto il mondo in questo spazio, dobbiamo fornire una terminologia comprensibile in quante più lingue possibili, anche se dobbiamo crearla noi stessi.**
 
-## Pulsanti e CTA {#buttons-and-ctas}
+## Pulsanti e CTA \{#buttons-and-ctas}
 
 Il sito web contiene numerosi pulsanti, che dovrebbero essere tradotti in modo diverso dagli altri contenuti.
 
@@ -190,7 +190,7 @@ Le traduzioni dei pulsanti dovrebbero essere il più possibile brevi, onde evita
 
 ![Come trovare un pulsante.png](./how-to-find-a-button.png)
 
-## Tradurre per l'inclusività {#translating-for-inclusivity}
+## Tradurre per l'inclusività \{#translating-for-inclusivity}
 
 I visitatori di ethereum.org provengono da tutto il mondo e da contesti sociali diversi. La lingua sul sito web deve quindi essere neutrale, accogliente per tutti e non esclusiva.
 
@@ -200,7 +200,7 @@ Un'altra forma di inclusività consiste nel tentare di tradurre per un pubblico 
 
 Infine, la lingua dovrebbe essere adatta a qualsiasi pubblico e fascia di età.
 
-## Traduzioni specifiche in base alla lingua {#language-specific-translations}
+## Traduzioni specifiche in base alla lingua \{#language-specific-translations}
 
 Quando si traduce è importante seguire le regole grammaticali, le convenzioni e la formattazione utilizzate nella propria lingua, anziché copiare quelle del testo originale. Il testo d'origine segue le regole e convenzioni della grammatica inglese, non applicabili a molte altre lingue.
 
@@ -208,7 +208,7 @@ Dovresti essere a conoscenza delle regole per la tua lingua e tradurre di conseg
 
 Alcuni esempi di aspetti a cui prestare particolare attenzione:
 
-### Punteggiatura, formattazione {#punctuation-and-formatting}
+### Punteggiatura, formattazione \{#punctuation-and-formatting}
 
 **Maiuscole/minuscole**
 
@@ -247,7 +247,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 - In inglese si utilizza un trattino corto (-) per unire parole o parti diverse di una parola e un trattino lungo (–) per indicare un intervallo o una pausa.
 - Molte lingue hanno regole diverse per l'uso di trattini corti e lunghi, che dovrebbero essere osservate.
 
-### Formati {#formats}
+### Formati \{#formats}
 
 **Numeri**
 
@@ -284,7 +284,7 @@ Alcuni esempi di aspetti a cui prestare particolare attenzione:
 - Come regola generale, consigliamo di lasciare le unità di misura come appaiono nel testo originale. Se il tuo paese usa un sistema differente, puoi includere la conversione tra parentesi.
 - Oltre alla localizzazione delle unità di misura, è importante notare anche il diverso trattamento di tali unità nelle varie lingue. La differenza principale riguarda la spaziatura tra numero e unità, che può variare in base alla lingua. Esempi di ciò includono: 100kB o 100 kB, 50°F o 50 °F.
 
-## Conclusioni {#conclusion}
+## Conclusioni \{#conclusion}
 
 Tradurre ethereum.org è una grande opportunità per conoscere i diversi aspetti di Ethereum.
 

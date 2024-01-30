@@ -4,11 +4,11 @@ description: 이더리움의 에너지 소비를 이해하는 데 필요한 기�
 lang: ko
 ---
 
-# 이더리움 에너지 소비 {#introduction}
+# 이더리움 에너지 소비 \{#introduction}
 
 이더리움은 친환경 블록체인입니다. 저전력 장치에서 실행 가능하고 참여하기 위해 많은 계산이 필요 없는 [지분 증명](/developers/docs/consensus-mechanisms/pos) 합의 메커니즘을 사용합니다. 이더리움의 지분 증명 메커니즘은 [작업 증명](/developers/docs/consensus-mechanisms/pos)처럼 소모된 에너지를 사용하지 않고 스테이킹된 ETH를 사용하여 네트워크를 보호합니다. 지분 증명 전환은 이더리움 네트워크로 소모되는 에너지가 연간 약 0.01TWh로, 비교적 적습니다.
 
-## 지분 증명 에너지 소비 {#proof-of-stake-energy}
+## 지분 증명 에너지 소비 \{#proof-of-stake-energy}
 
 이더리움의 에너지 소비량은 네트워크의 각 노드가 일반 노트북을 가동하는 데 드는 에너지 소비량과 거의 동일합니다.
 
@@ -26,11 +26,11 @@ lang: ko
 
 이더리움 에너지 소비에 대해 설명하려면 다른 산업의 연간 추정치를 비교할 수 있습니다. 이더리움이 투자금인 디지털 자산을 안전하게 지킬 수 있는 플랫폼이라고 가정하면 [연간 240TWh](https://www.kitco.com/news/2021-05-17/Gold-s-energy-consumption-doubles-that-of-bitcoin-Galaxy-Digital.html)를 소모하는 것으로 추정되는 금 채굴에 비교할 수 있습니다. 디지털 결제 플랫폼으로는 페이팔과 비교해 볼 수 있습니다([연간 약 0.26TWh](https://app.impaakt.com/analyses/paypal-consumed-264100-mwh-of-energy-in-2020-24-from-non-renewable-sources-27261)를 소비할 것으로 추정됨). 오락 플랫폼으로는 [연간 약 34TW](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)를 소비하는 것으로 추정되는 게임 산업과 비교할 수 있습니다. 넷플릭스의 에너지 소비량의 추정치는 크게 [연간 약 0.45TWh](https://s22.q4cdn.com/959853165/files/doc_downloads/2020/02/0220_Netflix_EnvironmentalSocialGovernanceReport_FINAL.pdf)(넷플릭스의 2019년에 보고된 추정치)에서 최대 연간 약 94TWh([시프트 프로젝트](https://theshiftproject.org/en/article/unsustainable-use-online-video/)에서 추정함) 사이입니다. [카본 브리프](https://www.carbonbrief.org/factcheck-what-is-the-carbon-footprint-of-streaming-video-on-netflix)에서 이 추정치의 기반이 되는 가설에 대한 논의를 볼 수 있습니다. 또는 이더리움을 [연간 약 244TWh](https://thefactsource.com/how-much-electricity-does-youtube-use/)를 소비할 것으로 추정되는 유튜브와 비교할 수 있지만, 이 값은 영상이 스트리밍되는 장치 종류와 데이터 센터와 같이 기반이 되는 인프라의 에너지 효율성에 크게 좌우됩니다. 유튜브 에너지 소비량 추정치는 채널과 각 영상별로 세분화되었습니다. [그 추정치](https://thefactsource.com/how-much-electricity-does-youtube-use/)는 2019년 강남 스타일을 시청한 사람들이 이더리움이 1년간 사용하는 지분 증명보다 45배 더 많은 에너지를 소비했다는 것을 의미합니다.
 
-## 친환경 애플리케이션 레이어 {#green-applications}
+## 친환경 애플리케이션 레이어 \{#green-applications}
 
 이더리움의 에너지 소비량은 매우 낮지만 이더리움에는 크고 성장하며 매우 활발한 **재생 금융(ReFi)** 커뮤니티가 있습니다. 리파이 애플리케이션은 디파이 구성요소를 사용해 환경에 도움이 되는 긍정적인 외부 효과가 있는 금융 애플리케이션을 구축합니다. 리파이는 이더리움과 긴밀하게 연계되어 있고 더 광범위한 ["솔라펑크"](https://en.wikipedia.org/wiki/Solarpunk) 운동의 일부이며 기술 발전과 환경 관리 결합을 목표로 합니다. 탈중앙화된, 허가가 필요없는, 구성 가능한 이더리움의 특성은 이더리움을 리파이와 솔라펑크 커뮤니티를 위한 이상적인 베이스 레이어로 만듭니다. 이런 것의 개발(및 기타, 예: [디사이](/desci/))을 통해, 이더리움은 환경과 사회적으로 긍정적인 기술이 되고 있습니다.
 
-## 이더리움의 탄소 부채 {#carbon-debt}
+## 이더리움의 탄소 부채 \{#carbon-debt}
 
 이더리움의 현재 에너지 소비량은 매우 낮지만, 항상 그렇지는 않았습니다. 이더리움은 2022년 3분기에 지분 증명 합의 메커니즘을 실행했습니다. 하지만 이더리움은 2014~2022년 작업 증명 메커니즘을 사용했으며, 이는 환경 비용이 훨씬 더 컸습니다.
 
@@ -38,7 +38,7 @@ lang: ko
 
 작업 증명과 지분 증명 모두 다음 블록을 추가할 사람을 정하는 메커니즘일 뿐입니다. 작업 증명에서 투자된 현실 세계의 가치가 스마트 계약에 직접 투자된 ETH에서 나오는 지분 증명으로 교체하면 채굴자가 블록체인에 추가하기 위해 에너지를 태울 필요가 없어집니다. 따라서 네트워크를 보호하는 환경 비용이 대폭 감소합니다.
 
-## 지분 증명이 작업 증명보다 더 친환경적인 이유 {#why-pos-is-greener-than-pow}
+## 지분 증명이 작업 증명보다 더 친환경적인 이유 \{#why-pos-is-greener-than-pow}
 
 작업 증명은 네트워크를 보호하는 강력한 방법입니다. 이전의 작업 증명 시스템에서 이더리움 블록체인의 트랜잭션은 [채굴자](/developers/docs/consensus-mechanisms/pow/mining)에 의해 검증되었습니다. 채굴자는 트랜잭션을 정렬된 블록으로 묶어 이더리움 블록체인에 추가했습니다. 새 블록은 트랜잭션을 독자적으로 운영하는 모든 노드 운영자에게 전파되며 트랜잭션이 유효한지 확인했습니다. 모든 부정 행위는 다른 노드 간 불일치로 드러났습니다. 정직한 블록은 블록체인에 추가되어 변하지 않는 기록의 일부가 되었습니다. 채굴자의 새 블록을 넣는 기능은 채굴에 관련된 비용이 있고 다음 블록을 제출하는 특정 노드에 대해 예측 불가능한 경우에만 작동합니다. 이런 조건은 작업 증명을 도입하여 충족됩니다. 트랜잭션 한 블록을 제출할 자격을 얻으려면 채굴자가 계산 비용이 많이 드는 퍼즐의 해답을 제출해서 1등이 되어야 합니다. 블록체인을 성공적으로 통제하려면 부정직한 채굴자가 다른 채굴자 대부분을 능가할 수 있는 충분한 하드웨어와 에너지를 투자하여 작업 증명 경쟁에서 꾸준히 이겨야 합니다.
 
@@ -52,7 +52,7 @@ lang: ko
   이러한 통계가 잘못되었거나 더 정확하게 만들 수 있다고 생각하는 경우 문제 제기 또는 풀 리퀘스트(Pull Request)를 하십시오. 이 추정치는 공개적으로 액세스할 수 있는 정보와 현재 이더리움 로드맵을 사용하여 나온 것입니다. 이 발언들은 이더리움 재단의 공식적 약속으로 한 것이 아닙니다. 
 </InfoBanner>
 
-## 더 읽을 거리 {#further-reading}
+## 더 읽을 거리 \{#further-reading}
 
 - [한 국가만큼의 전력, 더는 안 된다](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _카를 베쿠이첸, 2021년 5월 18일_
 - [이더리움 에너지 소비](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
@@ -60,7 +60,7 @@ lang: ko
 - [이더리움 에너지 소비 인덱스](https://digiconomist.net/ethereum-energy-consumption/) – _디지코노미스트_
 - [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
 
-## 관련 주제 {#related-topics}
+## 관련 주제 \{#related-topics}
 
 - [이더리움의 비전](/roadmap/vision/)
 - [비콘 체인](/roadmap/beacon-chain)

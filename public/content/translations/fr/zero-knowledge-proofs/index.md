@@ -4,7 +4,7 @@ description: Une introduction non technique aux preuves à divulgation nulle de 
 lang: fr
 ---
 
-## Que sont les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
+## Que sont les preuves à divulgation nulle de connaissance ? \{#what-are-zk-proofs}
 
 Une preuve à divulgation nulle est un moyen de prouver la validité d'une information sans révéler l'information elle-même. Le « prouveur » est la partie qui tente de prouver une affirmation, tandis que le « vérificateur » est responsable de la validation de l'affirmation.
 
@@ -14,7 +14,7 @@ Les preuves à divulgation nulle sont apparues pour la première fois dans un ar
 
 Au fil des années, les preuves à divulgation nulle se sont améliorées et sont maintenant utilisées dans plusieurs applications concrètes.
 
-## Pourquoi avons-nous besoin des preuves à divulgation nulle de connaissance ? {#why-zero-knowledge-proofs-are-important}
+## Pourquoi avons-nous besoin des preuves à divulgation nulle de connaissance ? \{#why-zero-knowledge-proofs-are-important}
 
 Les preuves à divulgation nulle furent une avancée importante dans l'histoire de la cryptographie appliquée, promettant d'améliorer la sécurité des informations pour les individus. Imaginez la façon dont vous pourriez prouver une affirmation (par ex. « Je suis citoyen de Tel pays ») à une autre partie (par ex. un fournisseur de services). Vous devrez fournir une « preuve » pour étayer votre déclaration, comme un passeport national ou un permis de conduire.
 
@@ -24,7 +24,7 @@ Les preuves à divulgation nulle résolvent ce problème en éliminant la néces
 
 Pour en revenir à l'exemple précédent, la seule chose dont vous avez besoin pour prouver votre citoyenneté est une preuve à divulgation nulle. Le vérificateur doit seulement vérifier si certaines propriétés de la preuve sont vraies pour être convaincu que la déclaration sous-jacente est également vraie.
 
-## Comment fonctionnent les preuves à divulgation nulle de connaissance ? {#how-do-zero-knowledge-proofs-work}
+## Comment fonctionnent les preuves à divulgation nulle de connaissance ? \{#how-do-zero-knowledge-proofs-work}
 
 Une preuve à divulgation nulle vous permet de prouver la véracité d'une affirmation sans devoir en partager le contenu ni révéler la manière dont vous avez découvert la vérité. Pour ce faire, les protocoles à divulgation nulle reposent sur des algorithmes qui reçoivent certaines données en entrée et renvoient « vrai » ou « faux » en sortie.
 
@@ -48,7 +48,7 @@ La partie ci-dessus décrit la structure d’une ‘preuve à divulgation nulle 
 
 Un bon exemple qui illustre le fonctionnement des preuves interactives est la célèbre histoire de la caverne d'Ali Baba de Jean-Jacques Quisquater, disponible sur la page Wikipédia suivante : [lien](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). Dans l'histoire, Peggy (la prouveuse) veut prouver à Victor (le vérificateur) qu'elle connaît la phrase secrète pour ouvrir une porte magique sans révéler la phrase.
 
-### Preuves à divulgation nulle non interactives {#non-interactive-zero-knowledge-proofs}
+### Preuves à divulgation nulle non interactives \{#non-interactive-zero-knowledge-proofs}
 
 Bien que révolutionnaire, les preuves interactives n'avaient qu'une utilité limitée car les deux parties devaient nécessairement être disponibles et interagir de manière répétée. Même si le vérificateur était convaincu de l'honnêteté du prouveur, la preuve était indisponible pour une vérification indépendante (le calcul d'une nouvelle preuve nécessitait un nouvel ensemble de messages entre le prouveur et le vérificateur).
 
@@ -60,9 +60,9 @@ Les preuves non interactives réduisent les communications entre le prouveur et 
 
 Les preuves non interactives ont constitué une véritable percée dans la technologie de la connaissance nulle et ont encouragé le développement des systèmes de preuve utilisés aujourd'hui. Nous abordons ce type de preuves ci-dessous:
 
-### Types de preuves à divulgation nulle {#types-of-zero-knowledge-proofs}
+### Types de preuves à divulgation nulle \{#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs {#zk-snarks}
+#### ZK-SNARKs \{#zk-snarks}
 
 ZK-SNARK est l'acronyme de ** "Zero-Knowledge Succinct Non-Interactive Argument of Knowledge"**. En français, on utilise souvent l'acronyme "ZK-SNARK" tel quel, mais on peut également le traduire en "preuve succincte non interactive à divulgation nulle" ou "argument de divulgation nulle succinct non interactif". Le protocole ZK-SNARK possède les qualités suivantes :
 
@@ -82,7 +82,7 @@ La « clé partagée » mentionnée précédemment fait référence à des param
 
 Les configurations de confiance nécessitent des utilisateurs qui se fient aux participants dans la génération des paramètres. Cependant, le développement de ZK-STARKs a permis la création de protocoles de preuve qui fonctionnent sans configuration de confiance (ou « setup ») préalable.
 
-#### ZK-STARKs {#zk-starks}
+#### ZK-STARKs \{#zk-starks}
 
 ZK-STARK est un acronyme pour **Zero-Knowledge Scalable Transparent Argument of Knowledge**. ("preuve évolutive transparente à divulgation nulle"). Les ZK-STARKs sont similaires aux ZK-SNARKs, sauf qu'ils sont:
 
@@ -92,9 +92,9 @@ ZK-STARK est un acronyme pour **Zero-Knowledge Scalable Transparent Argument of 
 
 Les ZK-STARKs produisent des preuves plus volumineuses que les ZK-SNARKs, engendrant des frais de vérification généralement plus élevés. Cependant, il y a des cas (comme la preuve de grands ensembles de données) où les ZK-STARKs peuvent être plus intéressants que les ZK-SNARKs.
 
-## Cas d'utilisation des preuves à divulgation nulle de connaissance {#use-cases-for-zero-knowledge-proofs}
+## Cas d'utilisation des preuves à divulgation nulle de connaissance \{#use-cases-for-zero-knowledge-proofs}
 
-### Paiements anonymes {#anonymous-payments}
+### Paiements anonymes \{#anonymous-payments}
 
 Les paiements par carte de crédit sont souvent visibles pour plusieurs parties, y compris le fournisseur de paiements, les banques et les autres parties intéressées (par exemple, les autorités gouvernementales). Bien que la surveillance financière ait des avantages à identifier les activités illégales, elle sape également la vie privée des citoyens ordinaires.
 
@@ -106,19 +106,19 @@ En injectant dans le protocole une technologie à divulgation nulle, les réseau
 
 Les preuves à divulgation nulle de connaissance sont également utilisées pour anonymiser les transactions sur les blockchains publiques. C'est le cas de Tornado Cash, un service décentralisé et non-custodial (qui n'a pas le contrôle direct sur les fonds ou les actifs de l'utilisateur) qui permet aux utilisateurs d'effectuer des transactions privées sur Ethereum. Tornado Cash utilise des preuves à divulgation nulle pour masquer les détails de la transaction et garantir la confidentialité financière. Malheureusement, étant donné qu'il s'agit d'outils de protection de la vie privée, ils sont associés à des activités illicites. Pour surmonter cela, la confidentialité doit devenir la valeur par défaut sur les blockchains publiques.
 
-### Protection de l'identité {#identity-protection}
+### Protection de l'identité \{#identity-protection}
 
 Les systèmes actuels de gestion de l'identité mettent en péril les renseignements personnels. Les preuves à divulgation nulle peuvent aider les individus à valider leur identité tout en protégeant leurs données personnelles.
 
 Les preuves à divulgation nulle sont particulièrement utiles dans un contexte de [décentralisation de l'identité](/decentralized-identity). La décentralisation de l'identité (également appelée "'identité auto-souveraine") donne à l'individu la possibilité de contrôler l'accès à ses données personnelles. Prouver votre citoyenneté sans révéler les détails de vos documents d'identité est un bon exemple de la manière dont la technologie de la preuve à divulgation nulle de connaissance permet une décentralisation de l'identité.
 
-### Authentification {#authentication}
+### Authentification \{#authentication}
 
 L'utilisation de services en ligne exige de prouver votre identité et votre droit d'accéder à ces plateformes. Pour cela, il faut souvent fournir quelques informations personnelles, telles que le nom, l'adresse électronique, la date de naissance, etc. Vous pourriez également avoir besoin de retenir de long mot de passe, sous peine de perdre votre accès à la plateforme.
 
 Toutefois, les preuves à divulgation nulle permettent de simplifier l'authentification, aussi bien pour les plateformes que pour les utilisateurs. Ainsi, une fois qu'une preuve à divulgation nulle a été générée en utilisant, d'une part des entrées publiques (par exemple des données attestant de l'adhésion de l'usager de la plateforme), et d'autre part des entrées privées (par exemple les renseignements sur le client de la plateforme), l'usager peut alors simplement se servir de cette preuve pour confirmer son identité lorsqu'il a besoin d'accéder au service. Cela permet d'améliorer l'expérience des utilisateurs et de libérer les organisations de la nécessité de stocker d'énormes quantités d'informations sur les utilisateurs.
 
-### Calcul vérifiable {#verifiable-computation}
+### Calcul vérifiable \{#verifiable-computation}
 
 Le calcul vérifiable est une autre application de la technologie à divulgation nulle destinée à améliorer les conceptions de la blockchain. Le calcul vérifiable nous permet de sous-traiter le calcul à une autre entité tout en maintenant des résultats vérifiables. L'entité soumet le résultat ainsi qu'une preuve attestant que le programme a été exécuté correctement.
 
@@ -142,7 +142,7 @@ C'est ici que le calcul vérifiable entre en jeu. En effet, lorsqu'un nœud exé
 
 [Les ZK-Rollups](/developers/docs/scaling/zk-rollups) et [ les validiums](/developers/docs/scaling/validium/) sont deux solutions d'évolutivité hors chaîne qui utilisent des preuves de validité pour fournir une évolutivité sécurisée. Ces protocoles exécutent des milliers de transactions hors chaîne et soumettent des preuves pour vérification sur Ethereum. Ces résultats peuvent être appliqués immédiatement une fois la preuve vérifiée, permettant ainsi à Ethereum de traiter plus de transactions, sans augmenter le calcul sur la couche de base.
 
-### Réduire la corruption et la collusion lors du vote en chaîne {#secure-blockchain-voting}
+### Réduire la corruption et la collusion lors du vote en chaîne \{#secure-blockchain-voting}
 
 Les systèmes de vote de la blockchain ont de nombreuses caractéristiques favorables : ils sont entièrement auditables, blindés contre les attaques, résistants à la censure et exempts de contraintes géographiques. Mais même les systèmes de vote en chaîne ne sont pas immunisés contre le problème de la **collusion**.
 
@@ -156,7 +156,7 @@ L'utilisation du vote en chaîne rend le financement quadratique vulnérable à 
 
 Heureusement, de nouvelles solutions telles que MACI (Minimum Anti-Collusion Infrastructure) utilisent des preuves à divulgation nulle pour rendre le vote en chaîne (par ex. Mécanismes de financement quadratiques) résistant à la corruption et à la collusion. MACI est un ensemble de contrats intelligents et de scripts qui permettent à un administrateur central (appelé un "coordinateur") d'agréger les votes et de comptabiliser les résultats _sans_ révéler des détails sur la façon dont chaque personne a voté. Malgré cela, il est toujours possible de vérifier que les votes ont été comptés correctement, ou de confirmer qu'une personne particulière a participé au vote.
 
-#### Comment MACI fonctionne-t-il avec la preuve à divulgation nulle ? {#how-maci-works-with-zk-proofs}
+#### Comment MACI fonctionne-t-il avec la preuve à divulgation nulle ? \{#how-maci-works-with-zk-proofs}
 
 Au départ, le coordinateur déploie le contrat MACI sur Ethereum, après quoi les utilisateurs peuvent s'inscrire au vote (en inscrivant leur clé publique dans le contrat intelligent). Les utilisateurs votent en envoyant des messages chiffrés avec leur clé publique au contrat intelligent (un vote valide doit être signé avec la clé publique la plus récente associée à l'identité de l'utilisateur, entre autres). Le coordinateur traite ensuite tous les messages une fois la période de vote terminée, calcule les votes et vérifie les résultats en chaîne.
 
@@ -178,29 +178,29 @@ Mais dans les cas où le coordinateur reste honnête, MACI représente un outil 
 
 [En savoir plus sur MACI](https://privacy-scaling-explorations.github.io/maci/).
 
-## Inconvénients à utiliser des preuves à divulgation nulle {#drawbacks-of-using-zero-knowledge-proofs}
+## Inconvénients à utiliser des preuves à divulgation nulle \{#drawbacks-of-using-zero-knowledge-proofs}
 
-### Coûts en matériels {#hardware-costs}
+### Coûts en matériels \{#hardware-costs}
 
 La génération de preuves à divulgation nulle de connaissance implique des calculs très complexes qu'il est préférable d'effectuer sur des machines spécialisées. Comme ces machines coûtent cher, elles sont souvent hors de portée des personnes ordinaires. En outre, les applications qui veulent utiliser une technologie à divulgation nulle doivent prendre en compte les coûts matériels, et cela peut augmenter les coûts pour les utilisateurs finaux.
 
-### Coûts de la vérification de la preuve {#proof-verification-costs}
+### Coûts de la vérification de la preuve \{#proof-verification-costs}
 
 La vérification des preuves nécessite également un calcul complexe et augmente les coûts de mise en œuvre de la technologie à divulgation nulle dans les applications. Ce coût est particulièrement pertinent dans le contexte de la preuve du calcul. Par exemple, ZK-rollups paye ~ 500 000 gaz pour vérifier une seule preuve ZK-SNARK sur Ethereum, avec des ZK-STARKs nécessitant des frais encore plus élevés.
 
-### Hypothèses de confiance {#trust-assumptions}
+### Hypothèses de confiance \{#trust-assumptions}
 
 Dans ZK-SNARK, la chaîne de référence commune (paramètres publics) est générée une fois et disponible pour être réutilisée par les parties qui souhaitent participer au protocole à divulgation nulle. Les paramètres publics sont créés par une cérémonie de mise en place de confiance, où les participants sont supposés être honnêtes.
 
 Mais il n’y a vraiment aucun moyen pour les utilisateurs d’évaluer l’honnêteté des participants et les utilisateurs doivent croire les développeurs sur parole. Les ZK-STARKs sont libres d'hypothèses de confiance, puisque le caractère aléatoire utilisé dans la génération de la chaîne est publiquement vérifiable. En attendant, les chercheurs travaillent sur des installations non fiables pour ZK-SNARKs afin d'accroître la sécurité des mécanismes de preuve.
 
-### Menaces liées à l'informatique quantique {#quantum-computing-threats}
+### Menaces liées à l'informatique quantique \{#quantum-computing-threats}
 
 ZK-SNARK utilise la cryptographie sur les courbes elliptiques ([ECDSA](/glossary/#ecdsa)) pour le chiffrement. Bien que l'algorithme ECDSA soit actuellement sûr, le développement d'ordinateurs quantiques pourrait briser son modèle de sécurité à l'avenir.
 
 Le ZK-STARK est considéré comme immunisé contre la menace de l'informatique quantique, car il utilise des hachages résistants à la collision pour le chiffrement. Contrairement aux appairages de clés public-privé utilisés dans la cryptographie sur les courbes elliptiques, le hachage résistant aux collisions est plus difficile à briser pour les algorithmes de calcul quantique.
 
-## En savoir plus {#further-reading}
+## En savoir plus \{#further-reading}
 
 - [L'informaticien explique un concept en 5 niveaux de difficulté | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Chaîne YouTube de Wired_
 - [Vue d'ensemble des cas d'utilisation des preuves à divulgation nulle](https://appliedzkp.org/#Projects) — _L'équipe de confidentialité et de mise à l'échelle des explorations_

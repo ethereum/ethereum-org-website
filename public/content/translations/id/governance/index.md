@@ -4,25 +4,25 @@ description: Pengantar cara mengambil keputusan tentang Ethereum.
 lang: id
 ---
 
-# Pengantar tentang tata kelola Ethereum {#introduction}
+# Pengantar tentang tata kelola Ethereum \{#introduction}
 
 _Jika tidak ada seorang pun yang memiliki Ethereum, bagaimana keputusan tentang perubahan di masa lalu dan masa depan untuk Ethereum dibuat? Tata kelola Ethereum merujuk pada proses yang memungkinkan keputusan seperti ini dibuat_
 
 <Divider />
 
-## Apa itu tata kelola? {#what-is-governance}
+## Apa itu tata kelola? \{#what-is-governance}
 
 Tata kelola adalah sistem yang terbentuk yang memungkinkan keputusan untuk dibuat. Dalam struktur organisasi pada umumnya, tim eksekutif atau dewan direksi merupakan penentu terakhir dalam pengambilan keputusan. Atau mungkin para pemegang saham mengambil suara terhadap proposal untuk menetapkan perubahan. Dalam sistem politik, para pejabat terpilih dapat menetapkan legislasi yang berupaya untuk mewakili keinginan konstituen mereka.
 
-## Tata kelola terdesentralisasi {#decentralized-governance}
+## Tata kelola terdesentralisasi \{#decentralized-governance}
 
 Tidak seorang pun yang memiliki atau mengontrol protokol Ethereum, tetapi keputusan yang berkaitan dengan pengimplementasian perubahan guna memastikan keberlangsungan dan kesejahteraan jaringan masih harus dibuat. Kurangnya aspek kepemilikan ini membuat tata kelola organisasi tradisional menjadi solusi yang tidak kompatibel dengan sistem ini.
 
-## Tata Kelola Ethereum {#ethereum-governance}
+## Tata Kelola Ethereum \{#ethereum-governance}
 
 Tata kelola Ethereum adalah proses di mana perubahan protokol dibuat. Ini penting untuk disebutkan karena proses ini tidak terkait dengan bagaimana orang-orang dan aplikasi menggunakan protokol - Ethereum tidak memerlukan izin. Siapa pun dari mana saja di dunia ini dapat berpartisipasi dalam aktivitas on-chain. Tidak ada aturan yang dibuat tentang siapa yang bisa atau tidak bisa membuat aplikasi atau mengirim transaksi. Namun, ada proses untuk mengajukan perubahan terhadap protokol inti, tempat aplikasi-aplikasi ini beroperasi. Karena sangat banyak orang bergantung pada kestabilan Ethereum, ada ambang batas koordinasi yang sangat tinggi untuk melakukan perubahan inti, yang mencakup proses teknis dan sosial, guna memastikan perubahan apa pun terhadap Ethereum aman dan didukung oleh komunitas secara luas.
 
-### Tata kelola on-chain vs off-chain {#on-chain-vs-off-chain}
+### Tata kelola on-chain vs off-chain \{#on-chain-vs-off-chain}
 
 Teknologi blockchain memungkinkan untuk kemampuan tata kelola yang baru, yang dikenal sebagai tata kelola on-chain. Tata kelola on-chain adalah ketika perubahan protokol yang diusulkan diputuskan oleh pengambilan suara pemangku kepentingan, biasanya oleh para pemegang token tata kelola, dan pengambilan suara terjadi di blockchain. Dengan beberapa bentuk tata kelola on-chain, perubahan protokol yang diusulkan telah ditulis dalam kode dan diimplementasikan secara otomatis jika para pemangku kepentingan setuju dengan perubahannya.
 
@@ -38,7 +38,7 @@ _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak
 
 <Divider />
 
-## Siapa yang terlibat? {#who-is-involved}
+## Siapa yang terlibat? \{#who-is-involved}
 
 Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang masing-masing memainkan peran dalam proses tata kelola. Mulai dari para pemangku kepentingan yang paling jauh dari urusan protokol dan jika melihat lebih dekat, kita memiliki:
 
@@ -54,7 +54,7 @@ _Catatan: setiap individu bisa memiliki beberapa peran pada grup ini (misalnya s
 
 <Divider />
 
-## Apa itu EIP? {#what-is-an-eip}
+## Apa itu EIP? \{#what-is-an-eip}
 
 Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah proposal **Proposal Peningkatan Ethereum (EIP)**. EIP adalah standar yang menentukan fitur atau proses baru yang berpotensi untuk Ethereum. Siapa pun yang terlibat dalam komunitas Ethereum dapat membuat EIP. Misalnya, tak satu pun dari penulis EIP-721, EIP yang menjadi standar untuk NFT, yang telah bekerja secara langsung dalam pengembangan protokol Ethereum.
 
@@ -64,7 +64,7 @@ Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah propo
 
 <Divider />
 
-## Proses formal {#formal-process}
+## Proses formal \{#formal-process}
 
 Proses formal untuk memasukkan perubahan ke dalam protokol Ethereum adalah sebagai berikut:
 
@@ -86,17 +86,17 @@ Proses formal untuk memasukkan perubahan ke dalam protokol Ethereum adalah sebag
 
 Alur ini, sekalipun sangat sederhana, memberi gambaran umum tentang tahap-tahap penting sampai perubahan protokol diaktifkan di Ethereum. Sekarang, mari kita membahas faktor informal yang berperan dalam proses ini.
 
-## Proses informal {#informal-process}
+## Proses informal \{#informal-process}
 
-### Memahami hasil pekerjaan sebelumnya {#prior-work}
+### Memahami hasil pekerjaan sebelumnya \{#prior-work}
 
 Pejuang EIP harus membiasakan diri dengan hasil pekerjaan dan proposal di masa lalu sebelum membuat EIP yang dapat dianggap penting untuk digunakan di Jaringan Utama Ethereum. Dengan cara ini, EIP diharapkan membawa sesuatu yang baru yang belum ditolak sebelumnya. Tiga tempat utama untuk melakukan riset tentang hal ini adalah [repositori EIP](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) dan [ethresear.ch](https://ethresear.ch/).
 
-### Grup kerja {#working-groups}
+### Grup kerja \{#working-groups}
 
 Draf awal EIP tidak mungkin diimpelementasikan di Jaringan Utama Ethereum tanpa pengeditan atau perubahan. Umumnya, Pejuang EIP akan bekerja sama dengan subset Pengembang Protokol untuk menentukan, mengimplementasi, menguji, mengulangi, dan memfinalisasi proposal mereka. Secara historis, grup kerja ini memerlukan waktu kerja beberapa bulan (dan terkadang bertahun-tahun!). Demikian juga dengan Pejuang EIP, untuk perubahan seperti ini harus melibatkan Pengembang Aplikasi/Peralatan yang relevan di awal upaya mereka untuk mengumpulkan umpan balik dari pengguna akhir dan mengurangi risiko penggunaan apa pun.
 
-### Konsensus komunitas {#community-consensus}
+### Konsensus komunitas \{#community-consensus}
 
 Meskipun beberapa EIP merupakan peningkatan teknis langsung dengan perbedaan kecil, yang lain lebih kompleks dan pada dasarnya merupakan pertukaran yang akan berdampak terhadap berbagai pemangku kepentingan dalam berbagai cara. Ini berarti beberapa EIP akhirnya akan memicu lebih banyak perdebatan di dalam komunitas daripada yang lainnya.
 
@@ -108,13 +108,13 @@ Di luar keamanan jaringan Ethereum, bobot yang signifikan secara historis telah 
 
 <Divider />
 
-## Menangani perselisihan pendapat {#disagreements}
+## Menangani perselisihan pendapat \{#disagreements}
 
 Memiliki banyak pemangku kepentingan dengan beragam motivasi dan kepercayaan berarti bahwa perselisihan pendapat merupakan hal yang biasa.
 
 Umumnya, perselisihan pendapat ditangani melalui bentuk diskusi panjang di forum publik untuk memahami akar permasalahan dan memungkinkan siapa pun untuk mempertimbangkannya. Biasanya, penyelesaiannya berbentuk satu grup mengalah, atau solusi yang memuaskan ditemukan. Jika satu grup merasa cukup kuat, memaksakan perubahan tertentu dapat menyebabkan pemisahan rantai. Pemisahan rantai adalah ketika beberapa pemangku kepentingan memprotes implementasi perubahan protokol yang menyebabkan versi protokol yang beroperasi berbeda dan tidak kompatibel, dari sana muncul dua blockchain berbeda.
 
-### Fork DAO {#dao-fork}
+### Fork DAO \{#dao-fork}
 
 Fork adalah ketika peningkatan atau perubahan teknis utama harus dibuat dalam jaringan dan mengubah "aturan" protokol. [Klien Ethereum](/developers/docs/nodes-and-clients/) harus memperbarui perangkat lunak mereka untuk mengimplementasikan aturan fork yang baru.
 
@@ -138,7 +138,7 @@ Tonton lebih banyak tentang peretasan DAO:
 
 <Divider />
 
-### Kegunaan melakukan fork {#forking-utility}
+### Kegunaan melakukan fork \{#forking-utility}
 
 Fork Ethereum/Ethereum Classic merupakan contoh yang sangat baik untuk fork yang sehat. Kami memiliki dua grup yang berselisih pendapat cukup kuat satu sama lain tentang beberapa nilai inti yang rasanya sepadan dengan risiko yang dilibatkan untuk mengikuti tindakan mereka masing-masing.
 
@@ -146,7 +146,7 @@ Kemampuan untuk melakukan fork dalam menghadapi perbedaan politik, filosofi, ata
 
 <Divider />
 
-## Pengembangan Rantai Suar {#beacon-chain}
+## Pengembangan Rantai Suar \{#beacon-chain}
 
 Proses tata kelola Ethereum sering menukarkan kecepatan dan efisiensi untuk keterbukaan dan inklusivitas. Untuk mempercepat pengembangan Rantai Suar, pengembangan ini diluncukan secara terpisah dari bukti kerja jaringan Ethereum dan mengikuti pratik tata kelolanya sendiri.
 
@@ -160,7 +160,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 
 <Divider />
 
-## Bagaimana saya dapat terlibat? {#get-involved}
+## Bagaimana saya dapat terlibat? \{#get-involved}
 
 - [Usulkan EIP](/eips/#participate)
 - [Diskusikan proposal saat ini](https://ethereum-magicians.org/)
@@ -170,7 +170,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 - [Berkontribusilah terhadap pengembangan klien](/developers/docs/nodes-and-clients/#execution-clients)
 - [Program Magang Pengembang Inti](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 Tata kelola di Ethereum tidaklah didefinisikan dengan kaku. Berbagai peserta komunitas memiliki sudut pandang berbeda mengenai ini. Berikut adalah beberapa di antaranya:
 

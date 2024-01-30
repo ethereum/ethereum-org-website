@@ -6,17 +6,17 @@ lang: tr
 
 Tam düğüm çalıştırmak Ethereum ile etkileşime girmenin en güven gerektirmeyen, gizli, merkeziyetsiz ve sansüre dirençli yoludur. Tam bir düğüm ile blok zincirin kendinize ait bir kopyasını tutarsınız ve bu şekilde anında sorgu yapabilir ve Ethereum'un eşler arası ağına direkt erişim alabilirsiniz. Ancak, tam düğüm çalıştırmak yüksek miktarda bellek, saklama alanı ve CPU gerektirir. Bu da demektir ki kendi düğümlerini çalıştırmak herkes için uygulanabilir değildir. Ethereum yol haritasında, durumsuzluk da dahil olmak üzere bazı çözümler vardır fakat bu çözümlerin uygulanması birkaç yıl alacaktır. Kısa vadede çözüm, düğümlerin düşük donanım gereksinimleriyle çalışmasına izin veren büyük performans iyileştirmeleri için tam bir düğüm çalıştırmanın bazı faydalarından ödün vermektir. Bu seçimi mümkün kılan düğümler hafif düğümlerdir.
 
-## Hafif istemci nedir? {#what-is-a-light-client}
+## Hafif istemci nedir? \{#what-is-a-light-client}
 
 Hafif düğüm, açık istemci yazılımını çalıştıran bir düğümdür. Blok zincirdeki tüm yerel verilerin kopyasını tutmak ve bağımsız bir şekilde hepsini doğrulamak yerine sadece gerekli verileri bazı sağlayıcılardan isterler. Sağlayıcı, tam bir düğümden veya merkezi bir RPC sunucusundan direkt bir bağlantı olabilir. Veriler daha sonra hafif düğüm tarafından doğrulanarak zincirin başına ayak uydurmasına izin verilir. Hafif düğümler yalnızca blok başlıklarını işler, sadece ara sıra gerçek blok içeriğini de indirir. Düğümlerin hafif ve tam istemci yazılımı kombinasyonlarından hangisini çalıştırdıklarına bağlı olarak hafifliklerinde farklılıklar olabilir. Örneğin, hem hafif yürütüm istemcisi hem de hafif fikir birliği istemcisi çalıştıran bir düğüm en açık yapılandırmaya sahip olabilir. Ayrıca birçok düğümün, tam yürütüm istemcileriyle birlikte hafif fikir birliği istemcilerini çalıştırmayı seçmesi veya bunun tam tersi de olasıdır.
 
-## Hafif istemciler nasıl çalışır? {#how-do-light-clients-work}
+## Hafif istemciler nasıl çalışır? \{#how-do-light-clients-work}
 
 Ethereum'un hisse ispatı temelli mutabakat mekanizması kullanmaya başlamasıyla beraber özellikle hafif istemcileri desteklemek için yeni bir altyapı tanıtıldı. Çalışma şekli ise; **sekronizasyon kurulu** olarak hareket etmeleri için her 1,1 günde bir 512 doğrulayıcıdan oluşan bir alt kümeyi rastgele seçmektir. Sekronizasyon kurulu son blokların başlıklarını imzalar. Her blok başlığı, senkronizasyon kurulundaki doğrulayıcıların toplu imzasını ve hangi doğrulayıcıların imzalayıp imzalamadığını gösteren bir "bit alanı" içerir. Her başlık ayrıca bir sonraki blokun imzalanmasına katılması beklenen doğrulayıcıların bir listesini de içerir. Yani hafif bir istemcinin, senkronizasyon kurulunun aldıkları verileri imzaladığını hızlı bir şekilde görebileceği ve ayrıca senkronizasyon kurulunun doğru olup olmadığını; kendilerine beklemeleri söylenenden önceki aldıkları blok ile karşılaştırarak kontrol edebileceği anlamına gelir. Bu şekilde hafif istemci, blokun kendisini indirmeden sadece özet bilgilerini içeren blok başlıklarını indirerek Ethereum bloku hakkındaki bilgilerini güncellemeye devam edebilir.
 
 Yürütüm katmanında ise hafif düğümler için bir tane bile özellik yoktur. Hafif bir yürütüm istemcisinin kapsamı, tüm EVM ve ağ kurma fonsiyonuna sahip tam bir düğümün "hafif modu"nu kapsayacak kadar değişkenlik gösterebilir, ancak alakalı veriyi yüklemeden ve sadece blok başlarını onaylayabilecek şekilde. Yahut, Ethereum ile etkileşime girmek için bir RPC sağlayıcısına gelen taleplere fazlasıyla bağlı olan sadeleştirilmiş bir istemci olabilir.
 
-## Hafif istemciler neden önemlidir? {#why-are-light-clients-important}
+## Hafif istemciler neden önemlidir? \{#why-are-light-clients-important}
 
 Kullanıcıların kör bir şekilde veri sağlayıcılarına güvenmesindense tüm düğüme kıyasla sadece küçük bir hesaplama kaynağı kullanarak gelen veriyi doğrulamalarını sağladığı için hafif istemciler önemlidir. Hafif istemcilerin aldığı veri, rastgele seçilmiş bir küme olan 512 Ethereum doğrulayıcısının en az 2/3'ü tarafından imzalandığı bilindiği için blok başlıklarına göre kontrol edilebilir. Bu, verilerin doğru olduğuna dair çok sağlam bir kanıttır.
 
@@ -26,7 +26,7 @@ Basit bir örnek ele alalım. Hesap bakiyenizi kontrol etmek istediğinizi hayal
 
 Hafif istemci işte bu sorunu giderir. Hâlâ bazı harici sağlayıcılardan veri talep edebilirsiniz, ancak verileri aldığınızda; hafif düğümünüzün blok başlığından aldığı bilgilerle kontrol edebileceğine dair bir kanıtla birlikte gelir. Yani Ethereum'un güvenilir bir operatör yerine verilerinizin doğruluğunu doğruladığı anlamına gelir.
 
-## Hafif istemciler hangi yenilikleri mümkün kılar? {#what-innovations-do-light-clients-enable}
+## Hafif istemciler hangi yenilikleri mümkün kılar? \{#what-innovations-do-light-clients-enable}
 
 Hafif istemcinin birincil faydası; önemsiz bir donanım gereksinimi ile Ethereum'a daha fazla insanın bağımsız olarak erişimini sağlaması ve üçüncü taraflara daha az bel bağlaması. Bu kullanıcılar için iyidir çünkü kendi verilerini onayalayabilir. Aynı zamanda bu, düğüm sayısını arttırdığı ve ağı onaylayan düğüm çeşitliliğini arttırması nedenleriyle ağ için de iyidir.
 
@@ -38,7 +38,7 @@ Ethereum toplamaları da hafif istemcilerden yararlanacaktır. Toplamaların en 
 
 Hafif istemciler ayrıca Ethereum cüzdanlarına yapılacak yükseltmelerde de kullanılabilir. RPC sağlayıcısı tarafından temin edilen veri yerine, cüzdanınız size sunulan veriyi direkt olarak gömülü bir hafif istemci kullanarak onaylayabilir. Bu cüzdanınızı daha güvenli hale getirir. Eğer RPC sağlayıcınız bir sahtekardıysa ve size yanlış veri sağladıysa, gömülü hafif istemci bunu size söyleyebilir!
 
-## Hafif istemci geliştirilmesinde mevcut durum nedir? {#current-state-of-development}
+## Hafif istemci geliştirilmesinde mevcut durum nedir? \{#current-state-of-development}
 
 Bu geliştirme süreci içinde birkaç hafif istemci vardır, bunlar yürütme, mutabakat ve ikisinin birleşiminden oluşan yürütüm/fikir birliği istemcilerini kapsar. Bunlar, bu sayfayı yazarken güncel olarak bildiğimiz hafif istemci uygulamalarıdır:
 
@@ -53,7 +53,7 @@ Ayrıca hafif istemcilerin Ethereum verisine erişebilme yollarını geliştirme
 
 [Yol haritasında bulunan](/roadmap/) [Verkle Ağaçları](/roadmap/verkle-trees/) ve [durumsuzluk](/roadmap/statelessness/) gibi bazı öğeler ise eninde sonunda hafif istemcilerin güvenlik garantisini tam düğümlere verilen güvenlik garantisiyle eşitleyecek.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Geth hafif istemcileri üzerine, Zsolt Felfodhi](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Hafif istemci ağları kurma üzerine, Etan Kissling](https://www.youtube.com/watch?v=85MeiMA4dD8)

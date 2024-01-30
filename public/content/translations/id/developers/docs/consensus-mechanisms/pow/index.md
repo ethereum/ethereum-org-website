@@ -9,21 +9,21 @@ Ethereum, seperti Bitcoin, saat ini menggunakan protokol konsensus yang disebut 
 
 Pada tahun depan, bukti kerja akan dihentikan untuk digantikan dengan **[Bukti taruhan (PoS)](/developers/docs/consensus-mechanisms/pos)**. Transisi ke bukti taruhan juga akan menghapuskan penambangan dari Ethereum. [Selengkapnya tentang penggabungan.](/roadmap/merge/)
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Untuk lebih memahami halaman ini, kami menyarankan Anda membaca terlebih dahulu tentang [transaksi](/developers/docs/transactions/), [blok](/developers/docs/blocks/), dan [mekanisme konsensus](/developers/docs/consensus-mechanisms/).
 
-## Apa itu Bukti kerja (PoW)? {#what-is-pow}
+## Apa itu Bukti kerja (PoW)? \{#what-is-pow}
 
 Bukti kerja adalah mekanisme yang memungkinkan jaringan Ethereum terdesentralisasi ditambahkan ke konsensus, atau berkesesuaian dengan berbagai hal seperti saldo akun dan urutan transaksi. Ini mencegah para pengguna "menggandakan pemakaian" koin mereka dan memastikan rantai Ethereum sangat sulit untuk diserang atau dimanipulasi.
 
-## Bukti kerja dan penambangan {#pow-and-mining}
+## Bukti kerja dan penambangan \{#pow-and-mining}
 
 Bukti kerja adalah algoritma dasar yang mengatur tingkat kesulitan dan aturan bagi pekerjan penambang. Penambangan adalah "pekerjaan" itu sendiri. Ini adalah aksi menambahkan blok valid pada rantai. Ini penting karena panjang rantai menolong jaringan mengikuti rantai Ethereum yang benar dan mengerti state Ethereum saat ini. Makin banyak "pekerjaan" yang diselesaikan, makin panjang rantai, dan makin tinggi nomor blok, semakin pasti jaringan dapat menjadi seperti state Ethereum saat ini.
 
 [Selengkapnya tentang penambangan](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Bagaimana cara kerja bukti kerja Ethereum? {#how-it-works}
+## Bagaimana cara kerja bukti kerja Ethereum? \{#how-it-works}
 
 Transaksi Ethereum diproses ke dalam blok. Setiap blok mempunyai:
 
@@ -33,7 +33,7 @@ Transaksi Ethereum diproses ke dalam blok. Setiap blok mempunyai:
 
 Data blok ini terhubung langsung dengan bukti kerja.
 
-### Tugas dalam bukti kerja {#the-work}
+### Tugas dalam bukti kerja \{#the-work}
 
 Protokol bukti kerja, Ethash, mengharuskan para penambang melalui kompetisi percobaan yang ketat untuk menemukan nonce dari satu blok. Hanya blok dengan nonce valid dapat ditambahkan ke dalam rantai.
 
@@ -43,7 +43,7 @@ Tingka kesulitannya menentukan target dari hash. Semakin rendah targetnya, semak
 
 Hashing membuat penipuan mudah untuk dideteksi. Tapi bukti kerja sebagai sebuah proses juga merupakan penghalang besar untuk menyerang rantai.
 
-### Bukti kerja dan keamanan {#security}
+### Bukti kerja dan keamanan \{#security}
 
 Penambang diberi insentif untuk melakukan pekerjaan ini pada rantai utama Ethereum. Ada sedikit insentif untuk sekelompok kecil penambang agar memulai rantai mereka - ini akan melemahkan sistem. Blockchain bertumpu pada kepememilikan satu state tunggal sebagai sumber kebenarannya. Dan pengguna akan selalu memilih rantai terpanjang atau "terberat".
 
@@ -51,13 +51,13 @@ Tujuan dari bukti kerja adalah untuk memperpanjang rantai. Rantai terpanjang ada
 
 Agar konsisten menghasilkan blok jahat tapi valid, Anda akan memerlukan lebih dari 51% daya penambangan jaringan untuk mengalahkan semua orang lainnya. Anda akan memerlukan banyak daya komputasi untuk bisa melakukan jumlah "pekerjaan" sebanyak ini. Dan energi yang digunakan bahkan mungkin akan lebih besar dari hasil yang Anda peroleh dalam satu serangan.
 
-### Ekonomi bukti kerja {#economics}
+### Ekonomi bukti kerja \{#economics}
 
 Bukti kerja juga bertanggung jawab untuk menerbitkan mata uang baru ke dalam sistem dan memberi insentif kepada para penambang untuk bekerja.
 
 Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receive all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. Seorang penambang mungkin juga mendapatkan 1,75 ETH untuk satu blok paman. Blok paman adalah blok valid yang dibuat oleh seorang penambang bersamaan dengan saat penambang lain berhasil menambang blok. Blok paman biasanya terjadi karena latensi jaringan.
 
-## Finality {#finality}
+## Finality \{#finality}
 
 Sebuah transaksi memiliki "finality" di Ethereum jika menjadi bagian dari blok yang tidak dapat diubah.
 
@@ -69,11 +69,11 @@ Finality adalah sesuatu yang harus diingat ketika mendesain dapp. Ini akan menja
 
 Ingat, penentuan waktu ini tidak termasuk waktu tunggu untuk memerintahkan transaksi diterima oleh seorang penambang.
 
-## Pemakaian energi bukti kerja {#energy}
+## Pemakaian energi bukti kerja \{#energy}
 
 Satu kritik besar terhadap bukti kerja adalah jumlah output energinya yang diperlukan untuk menjaga jaringan tetap aman. Untuk mempertahankan keamanan dan desentralisasi, Ethereum dalam sistem bukti kerja mengonsumsi 73,2 TWh setiap tahunnya, jumlah energi yang setara dengan negara berukuran sedang seperti Austria.
 
-## Pro dan Kontra {#pros-and-cons}
+## Pro dan Kontra \{#pros-and-cons}
 
 | Pro                                                                                                                                                                                                                                                  | Kontra                                                                                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +81,7 @@ Satu kritik besar terhadap bukti kerja adalah jumlah output energinya yang diper
 | Bukti kerja adalah mekanisme konsensus yang telah dicoba dan teruji yang telah mengamankan dan mendesentralisasi Bitcoin dan Ethereum selama bertahun-tahun.                                                                                         | Jika Anda ingin menambang, Anda perlu peralatan spesialis yang adalah investasi besar untuk memulai.                                                                    |
 | Dibandingkan dengan bukti taruhan, ini relatif mudah dijalankan.                                                                                                                                                                                     | Karena meningkatnya komputasi yang diperlukan, pool penambangan bisa berpotensi mendominasi permainan penambangan, yang mengarah pada sentralisasi dan risiko keamanan. |
 
-## Dibandingkan dengan bukti taruhan {#compared-to-pos}
+## Dibandingkan dengan bukti taruhan \{#compared-to-pos}
 
 Pada tingkat tinggi, bukti taruhan punya tujuan akhir yang sama seperti bukti kerja: untuk menolong jaringan terdesentralisasi mencapai konsensus dengan aman. Tapi, bukti taruhan punya perbedaan dalam proses dan personil:
 
@@ -92,20 +92,20 @@ Pada tingkat tinggi, bukti taruhan punya tujuan akhir yang sama seperti bukti ke
 
 [Selengkapnya tentang bukti taruhan](/developers/docs/consensus-mechanisms/pos/)
 
-## Selengkapnya tentang pelajar visual? {#visual-learner}
+## Selengkapnya tentang pelajar visual? \{#visual-learner}
 
 <YouTube id="3EUAcxhuoU4" />
 
-## Bacaan Lebih Lanjut {#further-reading}
+## Bacaan Lebih Lanjut \{#further-reading}
 
 - [Serangan mayoritas](https://en.bitcoin.it/wiki/Majority_attack)
 - [Tentang finalitas penyelesaian](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
-### Video {#videos}
+### Video \{#videos}
 
 - [Sebuah penjelasan teknis tentang protokol bukti kerja](https://youtu.be/9V1bipPkCTU)
 
-## Topik Terkait {#related-topics}
+## Topik Terkait \{#related-topics}
 
 - [Penambangan](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Bukti taruhan](/developers/docs/consensus-mechanisms/pos/)

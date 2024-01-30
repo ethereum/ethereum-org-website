@@ -8,7 +8,7 @@ Web2 指的是目前我們大多人熟知的網際網路。 網際網路由各�
 
 正在找尋找更適合初學者的資源？ 請參閱我們的 [web3 簡介](/web3/)。
 
-## Web3 優點 {#web3-benefits}
+## Web3 優點 \{#web3-benefits}
 
 很多 Web3 開發者選擇建立去中心化應用程式，是因為以太坊固有的去中心化優點：
 
@@ -17,7 +17,7 @@ Web2 指的是目前我們大多人熟知的網際網路。 網際網路由各�
 - 支付是透過原生代幣以太幣建立的。
 - 以太坊是圖靈完備的，這表示你可以在上面寫許多程式。
 
-## 實務對比 {#practical-comparisons}
+## 實務對比 \{#practical-comparisons}
 
 | Web2                      | Web3                                    |
 | ------------------------- | --------------------------------------- |
@@ -27,7 +27,7 @@ Web2 指的是目前我們大多人熟知的網際網路。 網際網路由各�
 
 這不代表所有服務都需要變成去中心化應用程式。 以下範例將說明 web2 和 web3 服務的主要差異。
 
-## Web3 的限制 {#web3-limitations}
+## Web3 的限制 \{#web3-limitations}
 
 Web3 目前的一些限制：
 
@@ -36,7 +36,7 @@ Web3 目前的一些限制：
 - 可存取性 – 由於未整合到現代網路瀏覽器中，大多數使用者難以使用 Web3。
 - 成本 -- 因高成本，多數成功的去中心化應用程式僅將極少數程式碼放於區塊鏈。
 
-## 中心化與去中心化 {#centralization-vs-decentralization}
+## 中心化與去中心化 \{#centralization-vs-decentralization}
 
 下表大致列出了中心化與去中心化數位網路的優點與缺點。
 
@@ -52,7 +52,7 @@ Web3 目前的一些限制：
 
 注意，這些概況可能並不適用於每個網路。 此外實際當中，網路的中心化與去中心化程度是一個範圍；沒有任何一個網路是完全中心化或完全去中心化的。
 
-## 衍生閱讀 {#further-reading}
+## 衍生閱讀 \{#further-reading}
 
 - [什麼是 Web3？](/web3/) - _ethereum.org_
 - [Web 3.0 應用程式的架構](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

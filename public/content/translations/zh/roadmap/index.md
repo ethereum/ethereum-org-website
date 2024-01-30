@@ -18,7 +18,7 @@ buttons:
 
 **若要了解以太坊之前的升级，请访问我们的[历史记录](/history/)页面**
 
-## 以太坊将发生什么变化？ {#what-changes-are-coming}
+## 以太坊将发生什么变化？ \{#what-changes-are-coming}
 
 以太坊路线图概述了以太坊未来将对协议作出的具体改进。 总的来说，该路线图将给以太坊用户带来以下好处：
 
@@ -53,7 +53,7 @@ buttons:
   />
 </CardGrid>
 
-## 为什么以太坊需要一份路线图？ {#why-does-ethereum-need-a-roadmap}
+## 为什么以太坊需要一份路线图？ \{#why-does-ethereum-need-a-roadmap}
 
 以太坊定期升级，以提高可扩展性、安全性或可持续性。 以太坊的核心优势之一是随着研发产生的新颖想法不断进化。 这种适应性使以太坊得以灵活应对新出现的挑战，紧跟最先进的技术突破。
 
@@ -72,23 +72,23 @@ buttons:
 
 </InfoBanner>
 
-## 以太坊路线图是否会随着时间的推移而改变？ {#will-ethereums-roadmap-change-over-time}
+## 以太坊路线图是否会随着时间的推移而改变？ \{#will-ethereums-roadmap-change-over-time}
 
 是的，几乎肯定会。 路线图是目前的以太坊升级计划，涵盖近期计划和未来计划。 我们预计路线图会随着新的信息和技术的出现而改变。
 
 我们将以太坊路线图视为改进以太坊的一整套计划；这是研究人员和开发人员对以太坊最佳发展道路的最佳假设。
 
-## 路线图将何时完成？ {#when-will-the-roadmap-be-finished}
+## 路线图将何时完成？ \{#when-will-the-roadmap-be-finished}
 
 以太坊将在今后 6 个月内实施一些升级（例如质押提款） - 其他升级的优先性较低，可能在今后 5-10 年内不会实施（例如量子计算抗性）。 我们很难预测每次升级的确切完成时间，因为许多路线图项目是以不同速度并行进行和开发的。 随着时间的推移，升级的紧迫性也可能由于外部因素而发生变化（例如，量子计算机的性能和可用性突飞猛进可能会使抗量子计算加密技术的紧迫性提高）。
 
 思考以太坊发展的一种方法是类比生物进化。 虽然随着网络的性能、可扩展性和安全性越来越强，需要对协议进行的更改越来越少，但一个能够适应新挑战和保持健康的网络仍然比抗拒变化的网络更有可能成功。
 
-## 升级时我要做什么吗？ {#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## 升级时我要做什么吗？ \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 升级往往不会对最终用户产生影响，除非提供更好的用户体验、更安全的协议以及更多与以太坊互动的<i>选项</i>。 最终用户既不需要积极参与升级，也不需要采取任何行动来保护资产。 节点运营商需要更新其客户端以准备升级。 某些升级可能导致应用程序开发者作出更改。 例如，历史数据到期升级可能需要应用开发者从新的来源获取历史数据。
 
-## Verge、Splurge 等升级是什么？ {#what-about-the-verge-splurge-etc}
+## Verge、Splurge 等升级是什么？ \{#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin 提出了以太坊线路图](https://twitter.com/VitalikButerin/status/1588669782471368704)的愿景，根据对以太坊架构的影响，该路线图分为几个类别。 其中包括：
 
@@ -101,11 +101,11 @@ buttons:
 
 我们决定不使用这些术语，因为我们希望使用更简单、更以用户为中心的模型。 虽然我们使用是以用户为中心的语言，但我们的愿景仍与 Vitalik 提出的愿景相同。
 
-## 什么是分片？ {#what-about-sharding}
+## 什么是分片？ \{#what-about-sharding}
 
 分片是指将以太坊区块链分割开来，让一部分验证者只负责全部数据的一小部分。 这最初是用于扩展以太坊的一种方式。 然而，二层网络卷叠的发展速度远远快于预期，已经实现了大量扩容，并且在 Proto-Danksharding 实施后还将实现更多扩容。 这意味着不再需要"分片链"，因此已将其从路线图中删除。
 
-## 正在寻求特定技术升级？ {#looking-for-specific-technical-upgrades}
+## 正在寻求特定技术升级？ \{#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Danksharding 通过向以太坊区块添加二进制大对象数据，为用户大大降低二层网络卷叠成本。
 - [质押提款](/staking/withdrawals) - 上海/卡佩拉升级启用了以太坊质押提款，允许用户解锁质押的以太币。

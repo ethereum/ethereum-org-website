@@ -5,7 +5,7 @@ lang: tr
 sidebarDepth: 1
 ---
 
-# Ethereum'un tarihi {#the-history-of-ethereum}
+# Ethereum'un tarihi \{#the-history-of-ethereum}
 
 Ethereum blok zincirindeki tüm önemli dönüm noktalarının, çatalların ve güncellemelerin bir zaman çizelgesi.
 
@@ -25,13 +25,13 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 <Divider />
 
-## 2023 {#2023}
+## 2023 \{#2023}
 
-### Şanghay {#shanghai}
+### Şanghay \{#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
-#### Özet {#shanghai-summary}
+#### Özet \{#shanghai-summary}
 
 Şanghay yükseltmesi, hisselemede çekimlerini yürütüm katmanına getirdi. Bu, Capella yükseltmesiyle birlikte blokların çekim işlemlerini kabul etmesi sağladı; bu da, paydaşların ETH'lerini İşaret Zincirinden yürütüm katmanına çekmelerine olanak tanıyor.
 
@@ -51,11 +51,11 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 ---
 
-### Capella {#capella}
+### Capella \{#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
-#### Özet {#capella-summary}
+#### Özet \{#capella-summary}
 
 Capella yükseltmesi, fikir birliği katmanındaki (İşaret Zinciri) en büyük 3. büyük yükseltmeydi ve hisseleme çekimlerini mümkün kıldı. Capella, Şanghay yürütüm katmanı yükseltmesi ile eş zamanlı gerçekleşti ve hisseleme çekim işlevselliğini aktif hale getirdi.
 
@@ -68,13 +68,13 @@ Yükseltme ayrıca, mevcut tüm ödül ödemeleri veya tam çekimler için doğr
 
 <Divider />
 
-## 2022 {#2022}
+## 2022 \{#2022}
 
-### Paris (Birleşim) {#paris}
+### Paris (Birleşim) \{#paris}
 
 <NetworkUpgradeSummary name="paris" />
 
-#### Özet {#paris-summary}
+#### Özet \{#paris-summary}
 
 Paris yükseltmesi, iş ispatı blokzinciri tarafından 58750000000000000000000 [son toplam zorluk](/glossary/#terminal-total-difficulty) aşıldığında tetiklendi. Bu, 15 Eylül 2022'de bir sonraki blokta Paris yükseltmesini tetikleyen blok 15537393'te oldu. Paris, ana özelliği [iş ispatı](/developers/docs/consensus-mechanisms/pow) madencilik algoritması ve ilişkili mutabakat mantığını kapatıp onun yerine [hisse ispatını](/developers/docs/consensus-mechanisms/pos) açmak olan [Birleşim](/roadmap/merge/) geçişiydi. Paris, (fikir birliği katmanında bulunan Bellatrix'e eşdeğer) [yürütme istemcilerine](/developers/docs/nodes-and-clients/#execution-clients) yönelik ve bu istemcilerin bağlı [mutabakat istemcilerinden](/developers/docs/nodes-and-clients/#consensus-clients) talimat almasına olanak tanıyan bir yükseltmeydi. Bu, topluca [Motor API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) olarak bilinen, yeni bir dahili API yöntem setinin etkinleştirilmesini gerektirdi. Bu, Ethereum tarihinde [Homestead](#homestead)'den bu yana muhtemelen en önemli yükseltmeydi!
 
@@ -91,11 +91,11 @@ Paris yükseltmesi, iş ispatı blokzinciri tarafından 58750000000000000000000 
 
 ---
 
-### Bellatrix {#bellatrix}
+### Bellatrix \{#bellatrix}
 
 <NetworkUpgradeSummary name="bellatrix" />
 
-#### Özet {#bellatrix-summary}
+#### Özet \{#bellatrix-summary}
 
 Bellatrix yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için ve zinciri [Birleşim](/roadmap/merge/)'e hazırlayan ikinci planlı yükseltmeydi. Eylemsizlik ve kesinti yapılabilir saldırıların tam değerlerine yönelik doğrulayıcı cezaları getiriyor. Bellatrix ayrıca, çatallanma seçim kurallarına yönelik, zinciri Birleşim'e ve son iş ispatı bloğundan ilk hisse ispatı bloğuna geçişe hazırlamayı amaçlayan bir yükseltme içeriyor. Fikir birliği istemcilerinin 58750000000000000000000 olan [son toplam zorluk](/glossary/#terminal-total-difficulty) değerinin farkında olmaları da kapsamında yer alıyor.
 
@@ -103,11 +103,11 @@ Bellatrix yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için ve zinci
 
 ---
 
-### Gray Glacier {#gray-glacier}
+### Gray Glacier \{#gray-glacier}
 
 <NetworkUpgradeSummary name="grayGlacier" />
 
-#### Özet {#gray-glacier-summary}
+#### Özet \{#gray-glacier-summary}
 
 Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) üç ay geriye itti. Bu yükseltmede sunulan tek değişiklik budur ve yapısı, [Arrow Glacier](#arrow-glacier) ile [Muir Glacier](#muir-glacier) yükseltmelerine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
 
@@ -123,13 +123,13 @@ Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) ü�
 
 <Divider />
 
-## 2021 {#2021}
+## 2021 \{#2021}
 
-### Arrow Glacier {#arrow-glacier}
+### Arrow Glacier \{#arrow-glacier}
 
 <NetworkUpgradeSummary name="arrowGlacier" />
 
-#### Özet {#arrow-glacier-summary}
+#### Özet \{#arrow-glacier-summary}
 
 Arrow Glacier ağ yükseltmesi [bomba değerini](/glossary/#difficulty-bomb) bir kaç ay geriye itti. Bu yükseltmede sunulan tek değişiklik budur ve yapısı, [Muir Glacier](#muir-glacier) yükseltmesine benzer. [Bizans](#byzantium), [Konstantinopolis](#constantinople) ve [Londra](#london) ağ yükseltmelerinde de benzer değişiklikler yapıldı.
 
@@ -146,17 +146,17 @@ Arrow Glacier ağ yükseltmesi [bomba değerini](/glossary/#difficulty-bomb) bir
 
 ---
 
-### Altair {#altair}
+### Altair \{#altair}
 
 <NetworkUpgradeSummary name="altair" />
 
-#### Özet {#altair-summary}
+#### Özet \{#altair-summary}
 
 Altair yükseltmesi, [İşaret Zinciri](/roadmap/beacon-chain) için planlanmış ilk yükseltmedir. ''Senkronizasyon komiteleri'' için destek ekleyerek Birleşim'e doğru ilerlerken hafif istemcileri, daha yüksek doğrulayıcı durgunluğunu ve kesme cezalarını mümkün kıldı.
 
 - [Altair güncelleme spesifikasyonunu okuyun](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />İlginç bir bilgi! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} me="0.5rem" />İlginç bir bilgi! \{#altair-fun-fact}
 
 Altair, kesin bir kullanıma sunma süresi olan ilk büyük ağ yükseltmesiydi. Önceden her yükseltme, blok sürelerinin değiştiği iş ispatı zincirinde beyan edilen bir blok numarasına dayanıyordu. İşaret Zinciri, iş ispatı için çözüm gerektirmez ve bunun yerine, doğrulayıcıların blok önerebileceği 32 tane on iki saniyelik "yuva"dan oluşan zamana dayalı bir dönem sistemi üzerinde çalışır. Bu yüzden 74.240 numaralı döneme ne zaman ulaşacağımızı tam olarak biliyorduk ve Altair hayat buldu!
 
@@ -164,11 +164,11 @@ Altair, kesin bir kullanıma sunma süresi olan ilk büyük ağ yükseltmesiydi.
 
 ---
 
-### Londra {#london}
+### Londra \{#london}
 
 <NetworkUpgradeSummary name="london" />
 
-#### Özet {#london-summary}
+#### Özet \{#london-summary}
 
 Londra yükseltmesi, işlem ücreti marketini yeniden şekillendiren [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) ile birlikte gaz geri ödemelerinin nasıl ele alındığını ve [Buz Devri](/glossary/#ice-age) takvimindeki değişiklikleri tanıttı.
 
@@ -190,11 +190,11 @@ Londra yükseltmesi, işlem ücreti marketini yeniden şekillendiren [EIP-1559](
 
 ---
 
-### Berlin {#berlin}
+### Berlin \{#berlin}
 
 <NetworkUpgradeSummary name="berlin" />
 
-#### Özet {#berlin-summary}
+#### Özet \{#berlin-summary}
 
 Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize edilmiş gaz maliyetini yükseltiyor ve çoklu işlem türleri için desteği artırıyor.
 
@@ -214,13 +214,13 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 
 <Divider />
 
-## 2020 {#2020}
+## 2020 \{#2020}
 
-### İşaret Zinciri başlangıcı {#beacon-chain-genesis}
+### İşaret Zinciri başlangıcı \{#beacon-chain-genesis}
 
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### Özet {#beacon-chain-genesis-summary}
+#### Özet \{#beacon-chain-genesis-summary}
 
 [İşaret Zinciri](/roadmap/beacon-chain/)'nin güvenli bir şekilde gönderilmesi için 16.384 adet 32 hisselenmiş ETH yatırılması gerekiyordu. Bu, 27 Kasım'da meydana geldi, yani İşaret Zinciri blok üretmeye 1 Aralık 2020'de başladı. Bu, [Ethereum vizyonuna](/roadmap/vision/) ulaşmak için önemli bir ilk adımdır.
 
@@ -232,11 +232,11 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 
 ---
 
-### Hisseleme yatırma sözleşmesi dağıtıldı {#staking-deposit-contract}
+### Hisseleme yatırma sözleşmesi dağıtıldı \{#staking-deposit-contract}
 
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### Özet {#deposit-contract-summary}
+#### Özet \{#deposit-contract-summary}
 
 Hisseleme yatırma sözleşmesi, Ethereum ekosistemine [hisselemeyi](/glossary/#staking) tanıttı. Bir [Ana Ağ](/glossary/#mainnet) sözleşmesi olmasına rağmen önemli bir [Ethereum yükseltmesi](/roadmap/) olan [İşaret Zinciri](/roadmap/beacon-chain/)'nin çıkış zamanı üzerinde doğrudan bir etkisi oldu.
 
@@ -248,11 +248,11 @@ Hisseleme yatırma sözleşmesi, Ethereum ekosistemine [hisselemeyi](/glossary/#
 
 ---
 
-### Muir Glacier {#muir-glacier}
+### Muir Glacier \{#muir-glacier}
 
 <NetworkUpgradeSummary name="muirGlacier" />
 
-#### Özet {#muir-glacier-summary}
+#### Özet \{#muir-glacier-summary}
 
 Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir gecikme getirdi. [İş ispatı](/developers/docs/consensus-mechanisms/pow/) mutabakat mekanizmasının blok zorluğundaki artışlar, işlem gönderme ve merkeziyetsiz uygulama kullanma sırasındaki bekleme sürelerini artırarak Ethereum'un kullanılabilirliğinin azalması riski yarattı.
 
@@ -269,13 +269,13 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 
 <Divider />
 
-## 2019 {#2019}
+## 2019 \{#2019}
 
-### İstanbul {#istanbul}
+### İstanbul \{#istanbul}
 
 <NetworkUpgradeSummary name="istanbul" />
 
-#### Özet {#istanbul-summary}
+#### Özet \{#istanbul-summary}
 
 İstanbul çatallanması:
 
@@ -303,11 +303,11 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 
 ---
 
-### Konstantinopolis {#constantinople}
+### Konstantinopolis \{#constantinople}
 
 <NetworkUpgradeSummary name="constantinople" />
 
-#### Özet {#constantinople-summary}
+#### Özet \{#constantinople-summary}
 
 Konstantinopolis çatalı:
 
@@ -330,13 +330,13 @@ Konstantinopolis çatalı:
 
 <Divider />
 
-## 2017 {#2017}
+## 2017 \{#2017}
 
-### Bizans {#byzantium}
+### Bizans \{#byzantium}
 
 <NetworkUpgradeSummary name="byzantium" />
 
-#### Özet {#byzantium-summary}
+#### Özet \{#byzantium-summary}
 
 Bizans çatalı:
 
@@ -365,13 +365,13 @@ Bizans çatalı:
 
 <Divider />
 
-## 2016 {#2016}
+## 2016 \{#2016}
 
-### Spurious Dragon {#spurious-dragon}
+### Spurious Dragon \{#spurious-dragon}
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### Özet {#spurious-dragon-summary}
+#### Özet \{#spurious-dragon-summary}
 
 Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylül/Ekim 2016) verilen ve şunları da içeren ikinci yanıttı:
 
@@ -394,11 +394,11 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
 
 ---
 
-### Mandalina düdüğü {#tangerine-whistle}
+### Mandalina düdüğü \{#tangerine-whistle}
 
 <NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### Özet {#tangerine-whistle-summary}
+#### Özet \{#tangerine-whistle-summary}
 
 Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (DoS) saldırılarına karşı şunları içeren ilk yanıttı:
 
@@ -417,11 +417,11 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
 
 ---
 
-### DAO çatallanması {#dao-fork}
+### DAO çatallanması \{#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
-#### Özet {#dao-fork-summary}
+#### Özet \{#dao-fork-summary}
 
 DAO çatallanması, güvenli olmayan bir [DAO](/glossary/#dao) sözleşmesinin bir saldırıda 3,6 milyon ETH'nin boşaltıldığı [2016 DAO saldırısına](https://www.coindesk.com/learn/understanding-the-dao-attack/) yanıt olarak geliştirildi. Çatallanma, hatalı sözleşmedeki fonları tek bir işlevle [yeni sözleşmeye](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) taşıdı: geri çekme. Para kaybeden herkes, cüzdanlarındaki her 100 DAO jetonu için 1 ETH çekebiliyordu.
 
@@ -433,11 +433,11 @@ Bazı madenciler, DAO olayı protokoldeki bir kusur olmadığı için çatallanm
 
 ---
 
-### Homestead {#homestead}
+### Homestead \{#homestead}
 
 <NetworkUpgradeSummary name="homestead" />
 
-#### Özet {#homestead-summary}
+#### Özet \{#homestead-summary}
 
 Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve Ethereum'a başka ağ yükseltmeleri yapma olanağı tanıyan bir ağ değişikliği içeriyordu.
 
@@ -455,13 +455,13 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 
 <Divider />
 
-## 2015 {#2015}
+## 2015 \{#2015}
 
-### Sınır eritme {#frontier-thawing}
+### Sınır eritme \{#frontier-thawing}
 
 <NetworkUpgradeSummary name="frontierThawing" />
 
-#### Özet {#frontier-thawing-summary}
+#### Özet \{#frontier-thawing-summary}
 
 Sınır eritme çatallanması, [blok](/glossary/#block) başına 5.000 [gaz](/glossary/#gas) sınırını kaldırdı ve varsayılan gaz fiyatını 51 [gwei](/glossary/#gwei) olarak ayarladı. Bu, 21.000 gaz gerektiren işlemleri mümkün kıldı. [Bomba değeri](/glossary/#difficulty-bomb), [hisse ispatına](/glossary/#pos) yönelik gelecekteki bir sert çatallanma sağlamak üzere getirildi.
 
@@ -470,11 +470,11 @@ Sınır eritme çatallanması, [blok](/glossary/#block) başına 5.000 [gaz](/gl
 
 ---
 
-### Sınır {#frontier}
+### Sınır \{#frontier}
 
 <NetworkUpgradeSummary name="frontier" />
 
-#### Özet {#frontier-summary}
+#### Özet \{#frontier-summary}
 
 Sınır, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarılı Olimpik test aşamasını takip etti. Teknik kullanıcılar, özellikle geliştiriciler için tasarlanmıştı. [Blokların](/glossary/#block) 5.000'lik bir [gaz](/glossary/#gas) sınırı vardı. Bu "eritme" dönemi, madencilerin faaliyetlerine başlamasını ve ilk kullanıcıların istemcilerini "acele etmeden" kurmalarını sağladı.
 
@@ -482,9 +482,9 @@ Sınır, Ethereum projesinin canlı ancak yalın bir uygulamasıydı. Başarıl�
 
 <Divider />
 
-## 2014 {#2014}
+## 2014 \{#2014}
 
-### Ether satışı {#ether-sale}
+### Ether satışı \{#ether-sale}
 
 <NetworkUpgradeSummary name="etherSale" />
 
@@ -494,7 +494,7 @@ Ethereum resmi olarak 42 günlüğüne satışa çıktı. BTC ile satın alınab
 
 ---
 
-### Sarı kağıt yayımlandı {#yellowpaper}
+### Sarı kağıt yayımlandı \{#yellowpaper}
 
 <NetworkUpgradeSummary name="yellowpaperRelease" />
 
@@ -504,9 +504,9 @@ Dr. Gavin Wood tarafından yazılan Sarı Kağıt, Ethereum protokolünün tekni
 
 <Divider />
 
-## 2013 {#2013}
+## 2013 \{#2013}
 
-### Tanıtım belgesi yayımlandı {#whitepaper}
+### Tanıtım belgesi yayımlandı \{#whitepaper}
 
 <NetworkUpgradeSummary name="whitepaperRelease" />
 

@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## 简介 {#introduction}
+## 简介 \{#introduction}
 
 以太坊最常见的用途之一是由一个团队来打造一种可以交易的代币，在某种意义上是他们自己的货币。 这些代币通常遵循一个标准， [ERC-20](/developers/docs/standards/tokens/erc-20/)。 此标准使得人们能够以此来开发可以用于所有 ERC-20 代币的工具，如流动资金池和钱包。 在这篇文章中，我们将带领大家分析 [OpenZeppelin Solidity ERC20 实现](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)以及 [ ERC20 接口定义](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)。
 
 这里使用的是附加说明的源代码。 如果想要实现 ERC-20， [请阅读此教程](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)。
 
-## 接口 {#the-interface}
+## 接口 \{#the-interface}
 
 像 ERC-20 这样的标准，其目的是允许符合标准的多种代币，都可以在应用程序之间进行互操作，例如钱包和分布式交易所。 为实现这个目的，我们要创建一个 [接口](https://www.geeksforgeeks.org/solidity-basics-of-interface/)。 任何需要使用代币合约的代码 可以在接口中使用相同的定义，并且与使用它的所有代币合约兼容。无论是像 MetaMask 这样的钱包、 诸如 etherscan.io 之类的去中心化应用程序，或一种不同的合约，例如流动资金池。
 
@@ -184,7 +184,7 @@ interface IERC20 {
 
 在 ERC-20 合约状态发生变化时就会激发这些事件。
 
-## 实际合约 {#the-actual-contract}
+## 实际合约 \{#the-actual-contract}
 
 这是实现 ERC-20 标准的实际合约， [摘自此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)。 不能照原样使用，但可以 通过[继承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)将其扩展，使之可用。
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### 导入声明 {#import-statements}
+### 导入声明 \{#import-statements}
 
 除了上述接口定义外，合约定义还要导入两个其他文件：
 
@@ -241,7 +241,7 @@ import "../../math/SafeMath.sol";
 
 ```
 
-### 合约定义 {#contract-definition}
+### 合约定义 \{#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ contract ERC20 is Context, IERC20 {
 
 此行将 `SafeMath` 库附加到 `uint256` 类型。 您可以在 [此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到此程序库。
 
-### 变量的定义 {#variable-definitions}
+### 变量的定义 \{#variable-definitions}
 
 这些定义具体指定了合约的状态变量。 虽然声明这些变量为 `private`，但 这只意味着区块链上的其他合约无法读取它们。 _区块链上 没有秘密_，所有节点上的软件在每个区块上 都有每个合约的状态。 根据惯例，状态变量名称为 `_<something>`。
 
@@ -303,7 +303,7 @@ contract ERC20 is Context, IERC20 {
 
 应用程序需要知道如何显示代币余额。 如果某位用户有 3,141,000,000,000,000,000 wei，那是否是 3.14 个以太币？ 31.41 个以太币？ 还是 3,141 个以太币？ 对于以太币，10^18 个 wei 等于 1 个以太币，但对于您的 代币，您可以选择一个不同的值。 如果无法合理拆分代币，您可以将 `_decimals` 值设为零。 如果想要使用与以太币相同的标准，请使用 **18**。
 
-### 构造函数 {#the-constructor}
+### 构造函数 \{#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ contract ERC20 is Context, IERC20 {
 
 构造函数在首次创建合约时调用。 根据惯例，函数参数名为 `<something>_`。
 
-### 用户接口函数 {#user-interface-functions}
+### 用户接口函数 \{#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ contract ERC20 is Context, IERC20 {
 
 在这种情况下，`memory` 是最好的选择。
 
-### 读取代币信息 {#read-token-information}
+### 读取代币信息 \{#read-token-information}
 
 这些是提供代币信息的函数，不管是总量还是 账户余额。
 
@@ -400,7 +400,7 @@ contract ERC20 is Context, IERC20 {
 
 读取一个帐户的余额。 请注意，任何人都可以查看他人账户的余额。 试图隐藏此信息没有意义，因为它在每个节点上 都是可见的。 _区块链上没有秘密_
 
-### 代币转账 {#transfer-tokens}
+### 代币转账 \{#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ contract ERC20 is Context, IERC20 {
 
 在 Solidity 中，我们通常使用 `msg.sender` 代表信息发送人。 然而，这会破坏 [OpenGSN](http://opengsn.org/) 的规则。 如果我们想使用代币进行交易而不用以太币，我们 需要使用 `_msgSender()`。 对于正常交易，它返回 `msg.sender`，但是对于没有以太币的交易， 则返回原始签名而不是传递信息的合约。
 
-### 许可额度函数 {#allowance-functions}
+### 许可额度函数 \{#allowance-functions}
 
 这些是实现许可额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。 此外，除基本标准外，OpenZeppelin 实现还包含了一些能够提高 安全性的功能：`increaseAllowance` 和 `decreaseAllowance`。
 
-#### 许可额度函数 {#allowance}
+#### 许可额度函数 \{#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ contract ERC20 is Context, IERC20 {
 
 `allowance` 函数使每个人都能检查任何许可额度。
 
-#### 审批函数 {#approve}
+#### 审批函数 \{#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ contract ERC20 is Context, IERC20 {
 
 我们使用内部函数尽量减少发生状态变化之处。 *任何*可以改变状态的 函数都是一种潜在的安全风险，需要对其安全性进行审核。 这样我们就能减少出错的机会。
 
-#### TransferFrom 函数 {#transferFrom}
+#### TransferFrom 函数 \{#transferFrom}
 
 这个函数被消费者用于使用许可额度。 这里需要两步操作：将消费的金额转账， 并在许可额度中减去这笔金额。
 
@@ -507,7 +507,7 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-#### OpenZeppelin 安全加法 {#openzeppelin-safety-additions}
+#### OpenZeppelin 安全加法 \{#openzeppelin-safety-additions}
 
 将许可额度从一个非零值设定为另一个非零值是有危险的， 因为您只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
 
@@ -583,11 +583,11 @@ B：
     }
 ```
 
-### 修改代币信息的函数 {#functions-that-modify-token-information}
+### 修改代币信息的函数 \{#functions-that-modify-token-information}
 
 这些是完成实际工作的四个函数：`_transfer`、`_mint`、`_burn` 和 `_approve`。
 
-#### \_transfer 函数 {#\_transfer}
+#### \_transfer 函数 \{#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ B：
 
 最后，激发一个 `Transfer` 事件。 智能合约无法访问事件，但区块链外运行的代码 可以监听事件并对其作出反应。 例如，钱包可以跟踪所有者获得更多代币事件。
 
-#### \_mint 和 \_burn 函数 {#\_mint-and-\_burn}
+#### \_mint 和 \_burn 函数 \{#\_mint-and-\_burn}
 
 这两个函数（`_mint` 和 `_burn`）修改代币的总供应量。 它们都是内部函数，在原有合约中没有任何调用它们的函数。 因此，仅通过继承合约并添加您自己的逻辑， 来决定在什么条件下可以铸造新代币或消耗现有代币时， 它们才是有用的。
 
@@ -706,7 +706,7 @@ B：
 
 `_burn` 函数与 `_mint` 函数几乎完全相同，但它们的方向相反。
 
-#### \_approve 函数 {#\_approve}
+#### \_approve 函数 \{#\_approve}
 
 这是实际设定许可额度的函数。 请注意，它允许所有者指定 一个高于所有者当前余额的许可额度。 这是允许的，因为在转账时 会核查余额，届时可能不同于 创建许可额度时的金额。
 
@@ -741,7 +741,7 @@ B：
 
 ```
 
-### 修改小数点设置变量 {#modify-the-decimals-variable}
+### 修改小数点设置变量 \{#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ B：
 
 此函数修改了 `>_decimals` 变量，此变量用于设置用户接口如何计算金额。 您应该从构造函数里面调用。 在之后的任何时候调用都是不正当的， 应用程序一般不会处理。
 
-### 钩子 {#hooks}
+### 钩子 \{#hooks}
 
 ```solidity
 
@@ -784,7 +784,7 @@ B：
 
 这是转账过程中要调用的挂钩函数。 该函数是空的，但如果你需要 它做一些事情，只需覆盖它即可。
 
-# 总结 {#conclusion}
+# 总结 \{#conclusion}
 
 复习一下，这些是我认为此合约中最重要的概念（你们的看法可能与我不同）
 

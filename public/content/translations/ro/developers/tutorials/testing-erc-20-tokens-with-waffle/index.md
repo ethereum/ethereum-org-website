@@ -28,7 +28,7 @@ Ipoteze:
 
 Și în acest caz, dacă nu este valabilă vreuna din ipoteze sau dacă nu intenționați să reproduceți codul din acest articol, tot veți putea ține pasul fără probleme.
 
-## Câteva cuvinte despre Waffle {#a-few-words-about-waffle}
+## Câteva cuvinte despre Waffle \{#a-few-words-about-waffle}
 
 [Waffle](https://getwaffle.io) este cea mai avansată bibliotecă pentru scrierea și testarea contractelor inteligente.
 
@@ -36,7 +36,7 @@ Funcționează cu [API-ul JavaScript](/developers/docs/apis/javascript/) „ethe
 
 Puteți obține mai multe detalii din [documentația Waffle](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation)!
 
-## Tutorialul rapid {#the-quick-tutorial}
+## Tutorialul rapid \{#the-quick-tutorial}
 
 Să o luăm de la bun început: creați un nou proiect `JavaScript` sau `TypeScript` (eu aș folosi `TS`, dar nu este nicio problemă dacă folosiți `JS`):
 
@@ -641,7 +641,7 @@ Ceva de genul acesta:
 
 </details>
 
-## Etapa 1: Instalați-vă waffle în proiect [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) {#step-1-install-waffle-in-your-project}
+## Etapa 1: Instalați-vă waffle în proiect [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) \{#step-1-install-waffle-in-your-project}
 
 Ca să începeți, instalați `ethereum-waffle`. În acest tutorial voi folosi `yarn`, așa că pentru a instala `ethereum-waffle` executați:
 
@@ -649,7 +649,7 @@ Ca să începeți, instalați `ethereum-waffle`. În acest tutorial voi folosi `
  yarn add --dev ethereum-waffle
 ```
 
-## Etapa 2: Scrieți un contract inteligent [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
+## Etapa 2: Scrieți un contract inteligent [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) \{#step-2-write-a-smart-contract}
 
 În acest tutorial voi folosi [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) tokenul de la [OpenZeppelin](https://openzeppelin.com).
 
@@ -675,7 +675,7 @@ contract BasicToken is ERC20 {
 
 ```
 
-## Etapa #3: Compilați-vă contractul inteligent [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) {#step-3-compile-your-smart-contract}
+## Etapa #3: Compilați-vă contractul inteligent [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) \{#step-3-compile-your-smart-contract}
 
 Pentru a vă compila contractul inteligent, introduceți datele următoare în fișierul `package.json` al proiectului dvs.:
 
@@ -1007,9 +1007,9 @@ Veți vedea că Waffle v-a compilat contractul și a plasat rezultatul din JSON 
 
 </details>
 
-## Etapa 4: Testați-vă contractul inteligent [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
+## Etapa 4: Testați-vă contractul inteligent [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-test-your-smart-contract}
 
-### Etapa 4.1 Instalați dependențele necesare [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
+### Etapa 4.1 Instalați dependențele necesare [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-1}
 
 După ce am reușit să creăm un contract inteligent, îl putem testa. Pentru aceasta vom folosi `Waffle`.
 
@@ -1021,7 +1021,7 @@ Deci trebuie să adăugăm `Chai` la dependențele noastre:
  yarn add --dev mocha chai
 ```
 
-### Etapa 4.2 Creați fișierul de test [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
+### Etapa 4.2 Creați fișierul de test [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-2}
 
 Pentru a ne scrie testul, trebuie să creăm fișierul `BasicToken.test.ts` în directorul nostru de testare.
 
@@ -1059,7 +1059,7 @@ it("Assigns initial balance", async () => {
 
 Pentru a executa testul, utilizați `yarn test`
 
-### Etapa 4.3 Emiterea de evenimente [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
+### Etapa 4.3 Emiterea de evenimente [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) \{#step-4-3}
 
 În acest tutorial vreau să vă prezint cei mai utili validatori-matcher din `Waffle`, așa că haideți să începem cu primul.
 
@@ -1081,7 +1081,7 @@ Totodată, un mare avantaj al acestui validator-matcher este că putem verifica 
 
 Aceasta ne va permite să fim siguri că funcția noastră este apelată corect!
 
-### Etapa 4.4 Inversare cu mesaj [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
+### Etapa 4.4 Inversare cu mesaj [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) \{#step-4-4}
 
 `Waffle` ne permite să testăm cu ce mesaj s-a inversat tranzacția.
 
@@ -1097,7 +1097,7 @@ it("Can not transfer above the amount", async () => {
 })
 ```
 
-### Etapa 4.5 Modificarea soldului de tokenuri [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) {#step-4-5}
+### Etapa 4.5 Modificarea soldului de tokenuri [Link către document](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) \{#step-4-5}
 
 `Waffle` ne permite să verificăm dacă s-au modificat soldurile portofelelor!
 
@@ -1129,7 +1129,7 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 Se preconizează ca tranzacția să fie transmisă ca un callback (trebuie verificat soldul înainte de apel) sau ca răspuns la tranzacție.
 
-## Felicitări {#congratulations}
+## Felicitări \{#congratulations}
 
 **Felicitări! Ați reușit să-mi parcurgeți tutorialul. Ați făcut primul mare pas pentru testarea contractelor inteligente cu Waffle.**
 

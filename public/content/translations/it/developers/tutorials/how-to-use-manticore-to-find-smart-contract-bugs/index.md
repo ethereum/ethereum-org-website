@@ -17,11 +17,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 L'obiettivo di questo tutorial è mostrare come usare Manticore per trovare automaticamente bug negli Smart Contract.
 
-## Installazione {#installation}
+## Installazione \{#installation}
 
 Manticore richiede >= Python 3.6. Può essere installato tramite pip o usando docker.
 
-### Manticore con docker {#manticore-through-docker}
+### Manticore con docker \{#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -37,7 +37,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Manticore con pip {#manticore-through-pip}
+### Manticore con pip \{#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -45,7 +45,7 @@ pip3 install --user manticore
 
 È consigliato solc 0.5.11.
 
-### Esecuzione di uno script {#running-a-script}
+### Esecuzione di uno script \{#running-a-script}
 
 Per eseguire uno script Python con Python 3:
 
@@ -53,9 +53,9 @@ Per eseguire uno script Python con Python 3:
 python3 script.py
 ```
 
-## Introduzione all'esecuzione simbolica dinamica {#introduction-to-dynamic-symbolic-execution}
+## Introduzione all'esecuzione simbolica dinamica \{#introduction-to-dynamic-symbolic-execution}
 
-### Esecuzione simbolica dinamica in pillole {#dynamic-symbolic-execution-in-a-nutshell}
+### Esecuzione simbolica dinamica in pillole \{#dynamic-symbolic-execution-in-a-nutshell}
 
 L'esecuzione simbolica dinamica (DSE) è una tecnica di analisi di un programma che esplora uno spazio di stati con un alto grado di consapevolezza semantica. Questa tecnica si basa sulla scoperta dei "percorsi del programma", rappresentati da formule matematiche dette `predicati di percorso`. Concettualmente, opera su predicati di percorso in due passaggi:
 
@@ -64,7 +64,7 @@ L'esecuzione simbolica dinamica (DSE) è una tecnica di analisi di un programma 
 
 Questo approccio non produce falsi positivi nel senso che tutti gli stati del programma identificati possono essere attivati durante l'esecuzione concreta. Per esempio, se le analisi trova un overflow di valori interi, è garantito che sia riproducibile.
 
-### Esempio di predicato di percorso {#path-predicate-example}
+### Esempio di predicato di percorso \{#path-predicate-example}
 
 Per avere un'idea di funziona la DSE, considera il seguente esempio:
 
@@ -85,7 +85,7 @@ Poiché `f()` contiene due percorsi, una DSE costruirà due diversi predicati di
 
 Ogni predicato di percorso è una formula matematica che può essere passata a un cosiddetto [risolutore SMT](https://wikipedia.org/wiki/Satisfiability_modulo_theories), che proverà a risolvere l'equazione. Per il `Percorso 1`, il risolutore dirà che il percorso può essere esplorato con `a = 65`. Per il `Percorso 2`, il risolutore può assegnare ad `a` tutti i valori diversi da 65, per esempio `a = 0`.
 
-### Verifica delle proprietà {#verifying-properties}
+### Verifica delle proprietà \{#verifying-properties}
 
 Manticore permette un controllo completo su tutta l'esecuzione di ogni percorso. Di conseguenza, consente di aggiungere vincoli arbitrari quasi a tutto. Questo controllo permette di creare proprietà sul contratto.
 
@@ -127,7 +127,7 @@ Questa formula non è risolvibile; in altri mondi questa è una **prova** che in
 
 La DSE è quindi uno strumento potente, che può verificare i vincoli arbitrari nel codice.
 
-## Esecuzione in Manticore {#running-under-manticore}
+## Esecuzione in Manticore \{#running-under-manticore}
 
 Vedremo come esplorare uno Smart Contract con l'API Manticore. La destinazione è il seguente Smart Contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -143,7 +143,7 @@ contract Simple {
 }
 ```
 
-### Esplorazione indipendente {#run-a-standalone-exploration}
+### Esplorazione indipendente \{#run-a-standalone-exploration}
 
 Manticore può essere eseguito direttamente sullo Smart Contract con il comando seguente (`project` può essere un file Solidity o una directory del progetto):
 
@@ -192,11 +192,11 @@ Come puoi notare, Manticore genera un test case univoco per ogni transazione riu
 
 Usa il flag `--quick-mode` se desideri un'esplorazione veloce del codice (disabilita rilevatori di bug, calcolo del carburante, etc.)
 
-### Manipolazione di uno Smart Contract tramite l'API {#manipulate-a-smart-contract-through-the-api}
+### Manipolazione di uno Smart Contract tramite l'API \{#manipulate-a-smart-contract-through-the-api}
 
 Questa sezione contiene informazioni su come manipolare uno Smart Contract tramite l'API Python di Manticore. Puoi creare un nuovo file con l'estensione di Python `*.py` e scrivere il codice necessario aggiungendo i comandi dell'API (le basi saranno descritte di seguito) in questo file e poi eseguirlo con il comando `$ python3 *.py`. Puoi anche eseguire i comandi qui sotto direttamente nella console Python. Per eseguirla usa il comando `$ python3`.
 
-### Creare i Conti {#creating-accounts}
+### Creare i Conti \{#creating-accounts}
 
 La prima da fare è inizializzare una nuova blockchain con i comandi seguenti:
 
@@ -229,18 +229,18 @@ contract Simple {
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
-#### Riepilogo {#summary}
+#### Riepilogo \{#summary}
 
 - Puoi creare conti dell'utente e del contratto con [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) e [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract).
 
-### Esecuzione di transazioni {#executing-transactions}
+### Esecuzione di transazioni \{#executing-transactions}
 
 Manticore supporta due tipi di transazione:
 
 - Transazione grezza: vengono esplorate tutte le funzioni
 - Transazione con nome: viene esplorata solo una funzione
 
-#### Transazione grezza {#raw-transaction}
+#### Transazione grezza \{#raw-transaction}
 
 Una transazione grezza viene eseguita usando [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction):
 
@@ -269,7 +269,7 @@ m.transaction(caller=user_account,
 
 Se i dati sono simbolici, Manticore esplorerà tutte le funzioni del contratto durante l'esecuzione della transazione. È utile consultare la spiegazione della funzione di fallback nell'articolo [Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) per comprendere come funziona la selezione delle funzioni.
 
-#### Transazione con nome {#named-transaction}
+#### Transazione con nome \{#named-transaction}
 
 Le funzioni sono eseguibili tramite il loro nome. Per eseguire `f(uint var)` con un valore simbolico, da user_account e con 0 ether, usa:
 
@@ -280,13 +280,13 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 
 Se `value` della transazione non è specificato, è 0 di default.
 
-#### Riepilogo {#summary-1}
+#### Riepilogo \{#summary-1}
 
 - Gli argomenti di una transazione possono essere concreti o simbolici
 - Una transazione grezza esplorerà tutte le funzioni
 - La funzione può essere chiamata con il suo nome
 
-### Area di lavoro {#workspace}
+### Area di lavoro \{#workspace}
 
 `m.workspace` è la directory usata come output per tutti i file generati:
 
@@ -294,11 +294,11 @@ Se `value` della transazione non è specificato, è 0 di default.
 print("Results are in {}".format(m.workspace))
 ```
 
-### Chiusura dell'esplorazione {#terminate-the-exploration}
+### Chiusura dell'esplorazione \{#terminate-the-exploration}
 
 Per interrompere l'esplorazione usa [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize). Nessun'altra transazione dovrebbe essere inviata una volta chiamato questo metodo e dopo che Manticore ha generato test case per ognuno dei percorsi esplorati.
 
-### Riepilogo: esecuzione in Manticore {#summary-running-under-manticore}
+### Riepilogo: esecuzione in Manticore \{#summary-running-under-manticore}
 
 Mettendo insieme tutti i passaggi precedenti, otteniamo:
 
@@ -322,7 +322,7 @@ m.finalize() # stop the exploration
 
 Tutto il codice sopra lo puoi trovare in [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)
 
-## Ottenere i percorsi che generano eccezioni {#getting-throwing-paths}
+## Ottenere i percorsi che generano eccezioni \{#getting-throwing-paths}
 
 Ora creeremo input specifici per i percorsi che generano un'eccezione in `f()`. La destinazione è ancora il seguente Smart Contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -337,7 +337,7 @@ contract Simple {
 }
 ```
 
-### Uso delle informazioni di stato {#using-state-information}
+### Uso delle informazioni di stato \{#using-state-information}
 
 Ogni percorso eseguito ha il proprio stato della blockchain. Uno stato è pronto o terminato, a significare che ha raggiunto un'istruzione THROW o REVERT:
 
@@ -363,7 +363,7 @@ data = state.platform.transactions[0].return_data
 data = ABI.deserialize("uint", data)
 ```
 
-### Come generare test case {#how-to-generate-testcase}
+### Come generare test case \{#how-to-generate-testcase}
 
 Usa [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) per generare test case:
 
@@ -371,7 +371,7 @@ Usa [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/lates
 m.generate_testcase(state, 'BugFound')
 ```
 
-### Riepilogo {#summary-2}
+### Riepilogo \{#summary-2}
 
 - Puoi eseguire iterazioni sullo stato con m.all_states
 - `state.platform.get_balance(account.address)` restituisce il saldo del conto
@@ -379,7 +379,7 @@ m.generate_testcase(state, 'BugFound')
 - `transaction.return_data` sono i dati restituiti
 - `m.generate_testcase(state, name)` genera input per lo stato
 
-### Riepilogo: ottenere il percorso che genera eccezioni {#summary-getting-throwing-path}
+### Riepilogo: ottenere il percorso che genera eccezioni \{#summary-getting-throwing-path}
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -407,7 +407,7 @@ Tutto il codice qui sopra si trova in [`example_run.py`](https://github.com/cryt
 
 _Nota: avremmo potuto generare uno script molto più semplice poiché tutti gli stati restituiti da terminated_state hanno REVERT o INVALID nel risultato. Questo esempio era inteso solo per dimostrare come manipolare l'API._
 
-## Aggiunta di vincoli {#adding-constraints}
+## Aggiunta di vincoli \{#adding-constraints}
 
 Vediamo ora come vincolare l'esplorazione. Presumiamo che la documentazione di `f()` indichi che la funzione non viene mai chiamata con `a == 65`, quindi ogni bug con `a == 65` non è un vero bug. La destinazione è ancora il seguente Smart Contract [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -422,7 +422,7 @@ contract Simple {
 }
 ```
 
-### Operatori {#operators}
+### Operatori \{#operators}
 
 Il modulo [Operators](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) facilita la manipolazione dei vincoli, fornendo tra l'altro:
 
@@ -445,11 +445,11 @@ from manticore.core.smtlib import Operators
 last_return = Operators.CONCAT(256, *last_return)
 ```
 
-### Vincoli {#state-constraint}
+### Vincoli \{#state-constraint}
 
 Puoi usare vincoli globalmente o per uno stato specifico.
 
-#### Vincolo globale {#state-constraint}
+#### Vincolo globale \{#state-constraint}
 
 Usa `m.constrain(constraint)` per aggiungere un vincolo globale. Per esempio, puoi chiamare un contratto da un indirizzo simbolico e limitare quest'indirizzo a valori specifici:
 
@@ -462,11 +462,11 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### Vincolo di stato {#state-constraint}
+#### Vincolo di stato \{#state-constraint}
 
 Usa [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) per aggiungere un vincolo a uno stato specifico Può essere usato per vincolare lo stato dopo la sua esplorazione per verificarvi della proprietà.
 
-### Controllo di un vincolo {#checking-constraint}
+### Controllo di un vincolo \{#checking-constraint}
 
 Usa `solver.check(state.constraints)` per sapere se un vincolo è ancora fattibile. Per esempio, il codice seguente vincola symbolic_value ad essere diverso da 65 e controlla se lo stato è ancora fattibile:
 
@@ -476,7 +476,7 @@ if solver.check(state.constraints):
     # lo stato è fattibile
 ```
 
-### Riepilogo: aggiunta di vincoli {#summary-adding-constraints}
+### Riepilogo: aggiunta di vincoli \{#summary-adding-constraints}
 
 Aggiungendo il vincolo al codice precedente, otteniamo:
 

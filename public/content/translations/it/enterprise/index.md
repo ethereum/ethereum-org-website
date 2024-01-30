@@ -4,7 +4,7 @@ description: Guide, articoli e strumenti sulle applicazioni aziendali per la blo
 lang: it
 ---
 
-# Rete principale Ethereum per le aziende {#ethereum-for-enterprise}
+# Rete principale Ethereum per le aziende \{#ethereum-for-enterprise}
 
 La applicazioni della blockchain aiutano le imprese nei seguenti ambiti:
 
@@ -15,13 +15,13 @@ La applicazioni della blockchain aiutano le imprese nei seguenti ambiti:
 
 Le applicazioni blockchain aziendali possono essere create sulla [rete principale](/glossary/#mainnet) pubblica Ethereum senza permessi o su blockchain private basate sulla tecnologia Ethereum. Consulta maggiori informazioni sulle [catene Ethereum aziendali private](/enterprise/private-ethereum/).
 
-## Ethereum pubblica e privata {#private-vs-public}
+## Ethereum pubblica e privata \{#private-vs-public}
 
 Esiste una sola rete principale Ethereum pubblica. Le applicazioni create sulla rete principale sono in grado di interagire, esattamente come le applicazioni create sulla rete Internet possono connettersi tra di loro, sfruttando tutto il potenziale della blockchain decentralizzata.
 
 Molte aziende e consorzi hanno distribuito blockchain private e con permessi per applicazioni specifiche basate sulla tecnologia Ethereum.
 
-### Differenze fondamentali {#key-differences}
+### Differenze fondamentali \{#key-differences}
 
 - Sicurezza/immutabilità della blockchain - La resistenza della blockchain a manomissioni è determinata dall'algoritmo di consenso. La rete principale Ethereum è resa sicura dall'interazione tra migliaia di nodi indipendenti eseguiti da individui e miner in tutto il mondo. Le catene private solitamente hanno un numero ridotto di nodi, controllati da una o da poche organizzazioni; questi nodi possono essere controllati in modo rigido, ma basta che pochi vengano compromessi perché la catena venga riscritta o vengano commesse transazioni fraudolente.
 - Prestazioni - Siccome le catene aziendali Ethereum possono usare nodi ad alte prestazioni, con requisiti hardware speciali e algoritmi di consenso diversi come la Proof of Authority, possono raggiungere volumi maggiori per le transazioni sul livello base (livello 1). Sulla Rete principale di Ethereum si possono ottenere volumi elevati usando le [soluzioni di ridimensionamento del Livello 2](/developers/docs/scaling/#layer-2-scaling).
@@ -29,15 +29,15 @@ Molte aziende e consorzi hanno distribuito blockchain private e con permessi per
 - Gestione dei permessi per i nodi - Solo i nodi autorizzati possono unirsi a catene private. Chiunque può configurare un nodo sulla rete principale Ethereum.
 - Privacy - L'accesso ai dati scritti sulle catene private può essere controllato limitando l'accesso alla rete e, su base più granulare, tramite controllo degli accessi e transazioni private. Tutti i dati scritti sul livello 1 della rete principale sono visibili a chiunque, quindi le informazioni sensibili devono essere conservate e trasmesse esternamente alla catena oppure criptate. Stanno emergendo modelli di progettazione a questo scopo (ad esempio Baseline, Aztec) e soluzioni di livello 2 che possono mantenere i dati isolati e separati dal livello 1.
 
-### Perché sviluppare sulla rete principale Ethereum {#why-build-on-ethereum-mainnet}
+### Perché sviluppare sulla rete principale Ethereum \{#why-build-on-ethereum-mainnet}
 
 Le aziende sperimentano la tecnologia blockchain dal 2016 circa, quando furono lanciati i progetti Hyperledger, Quorum e Corda. Si puntava soprattutto a blockchain aziendali private con permessi, ma a partire dal 2019 c'è stato un cambio di marcia sul concetto di blockchain pubbliche o private per le applicazioni aziendali. Un [sondaggio](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) condotto da Forrester ha rivelato che "gli intervistati... riconoscono il potenziale; il 75% pensa che faranno probabilmente uso di blockchain pubbliche in futuro, mentre circa un terzo risponde che l'uso è molto probabile". Paul Brody di EY [ha parlato](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) dei benefici legati allo sviluppo su blockchain pubbliche, che (in base all'applicazione) possono includere maggior sicurezza/immutabilità, trasparenza, costi totali di gestione più bassi e la capacità di interagire con tutte le altre applicazioni presenti sulla rete principale (effetti rete). Condividere un quadro comune di riferimento tra le aziende evita di dover creare inutilmente numerosi silos isolati che non possono comunicare e condividere o sincronizzare informazioni tra di loro.
 
 Un altro sviluppo che sta spostando l'attenzione verso le blockchain pubbliche è il [Livello 2](/developers/docs/scaling/#layer-2-scaling). Con livello 2 si intende una categoria di tecnologie per la scalabilità che permettono volumi elevati sulle catene pubbliche. Ma le soluzioni di livello 2 possono anche [permettere di vincere alcune sfide che hanno portato gli sviluppatori aziendali a scegliere in passato le catene private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-## Risorse per sviluppatori aziendali {#enterprise-developer-resources}
+## Risorse per sviluppatori aziendali \{#enterprise-developer-resources}
 
-### Organizzazioni {#organizations}
+### Organizzazioni \{#organizations}
 
 Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiva sono stati fatti da diverse organizzazioni:
 
@@ -45,7 +45,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Ethereum OASIS Open Project](https://github.com/ethereum-oasis/oasis-open-project) Il progetto Ethereum OASIS Open Project esiste per fornire un forum neutrale per stakeholter eterogenei, per creare specifiche di alta qualità che possano promuovere longevità, interoperabilità e facilità di integrazione di Ethereum. Il progetto intende sviluppare documentazione chiara, standard, aperta e di alta qualità e suite di test condivise che permettano nuove funzionalità e miglioramenti al protocollo Ethereum.
 - [Baseline Project](https://www.baseline-protocol.org/) Il Protocollo Baseline è un'iniziativa open source che combina i progressi in materia di crittografia, messaggistica e blockchain per fornire processi aziendali sicuri e privati a basso costo tramite la rete principale pubblica di Ethereum. Il protocollo consente collaborazioni complesse e confidenziali tra aziende senza lasciare dati sensibili sulla catena. Il progetto Baseline è un progetto secondario dell'Ethereum OASIS Open Project ed è coordinato dalla Baseline Technical Steering Committee.
 
-### Prodotti e servizi {#products-and-services}
+### Prodotti e servizi \{#products-and-services}
 
 - [Alchemy](https://www.alchemy.com/) _ fornisce servizi API e strumenti per creare e monitorare applicazioni su Ethereum_
 - [Blast](https://blastapi.io/): _una piattaforma API che fornisce API RPC/WSS per la Rete Principale e le Reti di Prova dell'Archivio di Ethereum._
@@ -65,7 +65,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Zero Services GmbH](https://www.zeroservices.eu/), _un fornitore di servizi gestiti con diverse sedi in Europa e Asia. Fa funzionare e monitora i tuoi nodi in modo sicuro e affidabile_
 - [Zeeve](https://www.zeeve.io/) _fornisce una gamma di prodotti e strumenti per creare su Ethereum, nonché infrastruttura e API per le applicazioni Enterprise Web3._
 
-### Strumenti e librerie {#tooling-and-libraries}
+### Strumenti e librerie \{#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Piattaforma di analisi dei dati di Ethereum_
 - [Sirato](https://www.web3labs.com/sirato) _una piattaforma specializzata nell'analisi dei dati per reti pubbliche e private abilitate a Ethereum realizzata da Labs nel Web3_
@@ -74,23 +74,23 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Tenderly](https://tenderly.co/) _una Piattaforma di dati che fornisce analitiche in tempo reale, avvisando e monitorando con supporto alle reti private_
 - [Truffle Suite](https://trufflesuite.com) _suite di sviluppo per la blockchain (Truffle, Ganache, Drizzle)_
 
-### Soluzioni di scalabilità {#scalability-solutions}
+### Soluzioni di scalabilità \{#scalability-solutions}
 
 [Il Livello 2](/layer-2) è una serie di tecnologie o sistemi eseguiti su Ethereum (livello 1) che ereditano le proprietà di sicurezza dal livello 1 e forniscono maggiori capacità di elaborazione delle transazioni (volumi), commissioni sulle transazioni inferiori (costi operativi) e conferme delle transazioni più veloci rispetto al livello 1. Le soluzioni di scalabilità di livello 2 sono protette dal livello 1, ma consentono alle applicazioni della blockchain di gestire molti più utenti o azioni o dati rispetto al livello 1. Molte sfruttano gli ultimi progetti in fatto di crittografia e prove zero-knowledge (ZK) per massimizzare prestazioni e sicurezza.
 
 Sviluppare un'applicazione su una soluzione di scalabilità livello 2 può aiutare a [gestire molte problematiche che precedentemente hanno spinto le aziende a sviluppare su blockchain private](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), mantenendo comunque i vantaggi legati allo sviluppo sulla rete principale.
 
-## Applicazioni aziendali attive sulla rete principale {#enterprise-live-on-mainnet}
+## Applicazioni aziendali attive sulla rete principale \{#enterprise-live-on-mainnet}
 
 Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pubblica principale (Mainnet) di Ethereum
 
-### Pagamenti {#payments}
+### Pagamenti \{#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) _paga gli utenti per l'attenzione prestata agli annunci pubblicitari e gli utenti possono pagare gli editori per supportarli, tramite il token di attenzione di base_
 - [hCaptcha](https://www.hcaptcha.com/) _Sistema CAPTCHA di prevenzione da bot che paga gli operatori dei siti web per l'operazione di etichettatura dei dati da parte degli utenti per il machine learning. Attualmente distribuito da Cloudflare_
 - [EthereumAds](https://ethereumads.com/) _consente agli operatori dei siti web di vendere spazi pubblicitari e di essere pagati tramite Ethereum_
 
-### Finanza {#finance}
+### Finanza \{#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _emissione e liquidazione di obbligazioni_
 - [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _emissione di obbligazioni_
@@ -98,14 +98,14 @@ Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pub
 - [Sila](https://silamoney.com/) _infrastruttura di servizi bancari e pagamenti ACH sotto forma di servizio, che usa stablecoin_
 - [Taurus](https://www.taurushq.com/) _emette titoli tokenizzati_
 
-### Tokenizzazione di asset {#tokenization}
+### Tokenizzazione di asset \{#tokenization}
 
 - [Tinlake](https://tinlake.centrifuge.io/) _sconti commerciali tramite risorse tokenizzate del mondo reale quali fatture, mutui o royalty in streaming_
 - [RealT](https://realt.co/) _investitori in tutto il mondo possono acquistare nel mercato immobiliare statunitense attraverso una proprietà completamente conforme, frazionale, tokenizzata_
 - [AgroToken](https://agrotoken.io/en/) _tokenizzazione e trading di materie prime agricole_
 - [Fasset](https://www.fasset.com/) _piattaforma per supportare le infrastrutture sostenibili_
 
-### Autenticazione dei dati {#notarization-of-data}
+### Autenticazione dei dati \{#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _i dettagli dei prestiti finalizzati sono associati ad hash e registrati sulla rete principale_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _l'integrità dei dati può essere assicurata scrivendo periodicamente hash di dati indicizzati nella rete principale_
@@ -114,7 +114,7 @@ Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pub
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la provenienza e lo storico delle riparazioni degli orologi su Ethereum_
 - [EthSign](https://ethsign.xyz/) _registra i documenti elettronici firmati sulla blockchain di Ethereum_
 
-### Catena d'approvvigionamento {#supply-chain}
+### Catena d'approvvigionamento \{#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _fornitore di polizze di carico e trasferimento di documenti_
 - [Morpheus.network](https://morpheus.network/): _Piattaforma di automazione della filiera che implementa un ibrido di catene private con dati autenticati sulla Rete Principale di Ethereum ed è in uso da aziende come il distributore di alimenti, olio e carburanti canadese Federated Co-op Ltd. e il fornitore argentino di alimenti per animali domestici Vitalcan_
@@ -124,12 +124,12 @@ Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pub
 - [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per le spedizioni internazionali_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _conia NFT per ogni nuovo lotto di birra, consentendo una maggiore visibilità ed efficienza lungo l'intera catena di approvvigionamento_
 
-### Assicurazioni {#insurance}
+### Assicurazioni \{#insurance}
 
 - [Arbol](https://www.arbolmarket.com/) _assicurazione parametrica per coprire i rischi legati alle intemperie_
 - [Etherisc](https://etherisc.com/) _assicurazione decentrata per vari rischi_
 
-### Credenziali e certificazioni {#credentials}
+### Credenziali e certificazioni \{#credentials}
 
 - [Due scuole superiori italiane](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _emettono diplomi sulla rete principale Ethereum_
 - L'[Università di St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _ha avviato un progetto pilota per verificare le lauree conferite da un'università svizzera_
@@ -137,7 +137,7 @@ Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pub
 - [OpenCerts](https://opencerts.io/faq) _emette credenziali d'istruzione nella blockchain a Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _ha sviluppato uno standard aperto per le credenziali della blockchain_
 
-### Utilità {#utilities}
+### Utilità \{#utilities}
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _pagamenti elettronici_
 

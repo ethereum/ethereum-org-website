@@ -14,7 +14,7 @@ In this article you learn how to create and use a caching contract in such a way
 
 If you want to skip the article and just see the source code, [it is here](https://github.com/qbzzt/20220915-all-you-can-cache). The development stack is [Foundry](https://book.getfoundry.sh/getting-started/installation).
 
-## Overall design {#overall-design}
+## Overall design \{#overall-design}
 
 For the sake of simplicity we'll assume all transaction parameters are `uint256`, 32 bytes long. When we receive a transaction, we'll parse each parameter like this:
 
@@ -31,7 +31,7 @@ For the sake of simplicity we'll assume all transaction parameters are `uint256`
    | 0x12,0xAC         |    0x02AC |
    | 0x2D,0xEA, 0xD6   |  0x0DEAD6 |
 
-## Cache manipulation {#cache-manipulation}
+## Cache manipulation \{##cache-manipulation}
 
 The cache is implemented in [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Let's go over it line by line.
 
@@ -303,7 +303,7 @@ If we get here it means we got a key that's not less than 16\*256<sup>15</sup>. 
 }  // Cache
 ```
 
-### Testing the cache {#testing-the-cache}
+### Testing the cache \{##testing-the-cache}
 
 One of the advantages of Foundry is that [it lets you write tests in Solidity](https://book.getfoundry.sh/forge/tests), which makes it easier to write unit tests. The tests for the `Cache` class are [here](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Because the testing code is repetitive, as tests tend to be, this article only explains the interesting parts.
 
@@ -662,11 +662,11 @@ This function sends five values. We know that the fifth value is ignored because
 
 ```
 
-## A sample application {#a-sample-app}
+## A sample application \{##a-sample-app}
 
 Writing tests in Solidity is all very well, but at the end of the day a dapp needs to be able to process requests from outside the chain to be useful. This article demonstrates how to use caching in a dapp with `WORM`, which stands for "Write Once, Read Many". If a key is not yet written, you can write a value to it. If the key is written already, you get a revert.
 
-### The contract {#the-contract}
+### The contract \{##the-contract}
 
 [This is the contract](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). It mostly repeats what we have already done with `Cache` and `CacheTest`, so we only cover the parts that are interesting.
 
@@ -705,7 +705,7 @@ Note that even though we define `WRITE_ENTRY_CACHED` as a state variable, to rea
 
 The read function is a `view`, so it does not require a transaction and does not cost gas. As a result, there is no benefit to using the cache for the parameter. With view functions it is best to use the standard mechanism that is simpler.
 
-### The testing code {#the-testing-code}
+### The testing code \{##the-testing-code}
 
 [This is the testing code for the contract](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Again, let us look only at what is interesting.
 
@@ -755,7 +755,7 @@ Since we use the low level `<address>.call()` function, we can't use `vm.expectR
 
 This is the way we verify that code [emits an event correctly](https://book.getfoundry.sh/cheatcodes/expect-emit) in Foundry.
 
-### The client {#the-client}
+### The client \{##the-client}
 
 One thing you don't get with Solidity tests is JavaScript code you can cut and paste into your own application. To write that code I deployed WORM to [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), [Optimism's](https://www.optimism.io/) new testnet. It is at address [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
@@ -842,7 +842,7 @@ As with the Solidity testing code, we cannot call a cached function normally. In
 
 For reading entries we can use the normal mechanism. There's no need to use parameter caching with `view` functions.
 
-## Conclusion {#conclusion}
+## Conclusion \{##conclusion}
 
 The code in this article is a proof of concept, the purpose is to make the idea easy to understand. For a production-ready system you might want to implement some additional functionality:
 

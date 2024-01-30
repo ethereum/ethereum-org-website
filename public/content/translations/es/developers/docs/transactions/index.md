@@ -6,11 +6,11 @@ lang: es
 
 Las transacciones son instrucciones firmadas criptográficamente que se emiten desde cuentas. Una cuenta iniciará una transacción para actualizar el estado de la red Ethereum. La transacción más sencilla es transferir ETH de una cuenta a otra.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Para ayudarle a comprender mejor esta página, le recomendamos leer primero la sección sobre [Cuentas](/developers/docs/accounts/), así como nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## ¿Qué es una transacción? {#whats-a-transaction}
+## ¿Qué es una transacción? \{#whats-a-transaction}
 
 Una transacción de Ethereum hace referencia a una acción iniciada por una cuenta de titularidad externa, en otras palabras, una cuenta administrada por una persona, no un contrato. Por ejemplo, si Bob le envía 1 ETH a Alice, este debe adeudarse de la cuenta de Bob y acreditarse en la cuenta de Alice. Esta acción según la que se modifica el estado de la red tiene lugar en una transacción.
 
@@ -104,7 +104,7 @@ Ejemplo de respuesta:
 
 Mediante el hash de la firma, se puede demostrar criptográficamente que la transacción proviene del emisor y que se envió a la red.
 
-### El campo de datos {#the-data-field}
+### El campo de datos \{#the-data-field}
 
 La gran mayoría de las transacciones acceden a un contrato desde una cuenta de titularidad externa. La mayoría de los contratos están escritos en Solidity e interpretan su campo de datos por [la interfaz binaria de la aplicación (ABI)](/glossary/#abi).
 
@@ -125,7 +125,7 @@ El resto de los datos es:
 
 De acuerdo con las especificaciones ABI, valores enteros (como direcciones, que son enteros de 20 bytes) aparecen en el ABI como palabras de 32 bytes, agregadas con ceros en el frente. Así que sabemos que la dirección `a` es [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). El `valor` es 0x3b0559f4 = 990206452.
 
-## Tipos de transacciones {#types-of-transactions}
+## Tipos de transacciones \{#types-of-transactions}
 
 En Ethereum hay algunos tipos diferentes de transacciones:
 
@@ -133,7 +133,7 @@ En Ethereum hay algunos tipos diferentes de transacciones:
 - Transacciones de despliegue de contratos: una transacción sin la dirección «a», donde el campo de datos se usa para el código de contrato.
 - Ejecución de un contrato: una transacción que interactúa con un contrato inteligente desplegado. En este caso, la dirección «a» es la dirección de contrato inteligente.
 
-### Sobre el gas {#on-gas}
+### Sobre el gas \{#on-gas}
 
 Tal y como se ha mencionado, las transacciones necesitan [gas](/developers/docs/gas/) para ejecutarse. Las transacciones de transferencia simple requieren 21.000 unidades de gas.
 
@@ -159,7 +159,7 @@ También se necesita gas para cualquier interacción del contrato inteligente.
 
 Cualquier gas no utilizado en una transacción se reembolsa a la cuenta de usuario.
 
-## Ciclo de vida de la transacción {#transaction-lifecycle}
+## Ciclo de vida de la transacción \{#transaction-lifecycle}
 
 Una vez enviada la transacción ocurre lo siguiente:
 
@@ -168,13 +168,13 @@ Una vez enviada la transacción ocurre lo siguiente:
 3. Un validador debe elegir su transacción e incluirla en un bloque para verificarla antes de considerarla «satisfactoria».
 4. A medida que pasa el tiempo, el bloque que contiene su transacción se actualizará a «justificado» y luego a «finalizado». Estas actualizaciones agudizan la certeza de que su transacción se complete satisfactoriamente y nunca se altere. Una vez que el bloque está «finalizado», este sólo podrá cambiarse mediante un ataque a escala de red que costaría miles de millones de dólares.
 
-## Una demostración visual {#a-visual-demo}
+## Una demostración visual \{#a-visual-demo}
 
 Observe a Austin mientras le guía por las transacciones, el gas y la minería.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Typed Transaction Envelope {#typed-transaction-envelope}
+## Typed Transaction Envelope \{#typed-transaction-envelope}
 
 Inicialmente, Ethereum tenía un formato único para las transacciones. Cada transacción contenía un nonce, un precio de gas, un límite de gas, una dirección, un importe, datos, v, r y s. Estos campos se [codifican en RLP](/developers/docs/data-structures-and-encoding/rlp/), para tener un aspecto similar a este:
 
@@ -191,13 +191,13 @@ Donde los campos indican:
 - `TransactionType` - un número entre 0 y 0x7f, para un total de 128 posibles tipos de transacción.
 - `TransactionPayload`: una matriz de bytes arbitraria definida según el tipo de transacción.
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [Cuentas](/developers/docs/accounts/)
 - [Máquina Virtual de Ethereum (EVM)](/developers/docs/evm/)

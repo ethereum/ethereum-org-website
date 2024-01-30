@@ -16,7 +16,7 @@ This tutorial helps readers understand fundamental Ethereum concepts including t
 
 On-chain data can help us understand Ethereum, the network, and as an economy for computing power and should serve as a base for understanding challenges facing Ethereum today (i.e., rising gas prices) and, more importantly, discussions around scaling solutions.
 
-### Transactions {#transactions}
+### Transactions \{#transactions}
 
 A user’s journey on Ethereum starts with initializing a user-controlled account or an entity with an ETH balance. There are two account types - user-controlled or a smart contract (see [ethereum.org](/developers/docs/accounts/)).
 
@@ -60,19 +60,19 @@ FROM temp_table
 
 This will yield the same information as provided on Etherscan's transaction page. For comparison, here are the two sources:
 
-#### Etherscan {#etherscan}
+#### Etherscan \{##etherscan}
 
 ![](./etherscan_view.png)
 
 [EF's contract page on Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics {#dune-analytics}
+#### Dune Analytics \{##dune-analytics}
 
 ![](./dune_view.png)
 
 You can find dashboard [here](https://duneanalytics.com/paulapivat/Learn-Ethereum). Click on the table to see the query (also see above).
 
-### Breaking Down Transactions {#breaking_down_transactions}
+### Breaking Down Transactions \{##breaking_down_transactions}
 
 A submitted transaction includes several pieces of information including ([source](/developers/docs/transactions/)):
 
@@ -101,7 +101,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Blocks {#blocks}
+### Blocks \{##blocks}
 
 Each transaction will change the state of the Ethereum virtual machine ([EVM](/developers/docs/evm/)) ([source](/developers/docs/transactions/)). Transactions are broadcasted to the network to be verified and included in a block. Each transaction is associated with a block number. To see the data, we could query a specific block number: 12396854 (the most recent block among Ethereum Foundation transactions as of this writing, 11/5/21).
 
@@ -208,7 +208,7 @@ FROM temp_table
 
 The average number of blocks produced per day since 2016 is slightly above that number at 5,874. Alternatively, dividing 86400 seconds by 5874 average blocks comes out to 14.7 seconds or approximately one block every 15 seconds.
 
-### Gas {#gas}
+### Gas \{##gas}
 
 Blocks are bounded in size. The maximum block size is dynamic and varies according to network demand between 12,500,000 and 25,000,000 units. Limits are required to prevent arbitrarily large block sizes putting strain on full nodes in terms of disk space and speed requirements ([source](/developers/docs/blocks/)).
 
@@ -260,7 +260,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Summary {#summary}
+### Summary \{##summary}
 
 With this tutorial, we understand foundational Ethereum concepts and how the Ethereum blockchain works by querying and getting a feel for on-chain data.
 

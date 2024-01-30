@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Penjelajah blok adalah portal Anda ke data Ethereum. Anda bisa menggunakannya untuk melihat data waktu nyata tentang blok, transaksi, penambang, akun, dan aktivitas on-chain lainnya.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Anda harus memahami konsep dasar Ethereum agar Anda dapat memahami data yang diberikan oleh penjelajah blok kepada Anda. Mulai dengan [pengantar Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Layanan {#services}
+## Layanan \{#services}
 
 - [Etherscan](https://etherscan.io/) –_Juga tersedia dalam bahasa Mandarin, Korea, Rusia, dan Jepang_
 - [Etherchain](https://www.etherchain.org/)
@@ -20,13 +20,13 @@ Anda harus memahami konsep dasar Ethereum agar Anda dapat memahami data yang dib
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
-## Data {#data}
+## Data \{#data}
 
 Ethereum bersifat transparan secara desainnya sehingga semua hal dapat diverifikasi. Penjelajah blok menyediakan antarmuka untuk mendapatkan informasi ini. Dan ini juga berlaku baik untuk jaringan utama Ethereum maupun testnet, jika Anda membutuhkan data itu.
 
 Berikut ini ringkasan jenis data yang bisa Anda dapatkan dari penjelajah blok.
 
-### Blok {#blocks}
+### Blok \{#blocks}
 
 Blok baru ditambahkan ke Ethereum setiap ~12 detik (ini bisa berfluktuasi) sehingga ada aliran data hampir konstan yang ditambahkan ke penjelajah data. Blok berisi banyak data penting yang mungkin Anda anggap berguna:
 
@@ -63,7 +63,7 @@ Penjelajah blok menyediakan informasi tentang blok paman seperti:
 - Siapa yang menambang blok.
 - Imbalan ETH.
 
-### Gas {#gas}
+### Gas \{#gas}
 
 Penjelajah blok tidak hanya memberi Anda data tentang penggunaan Gas dalam transaksi dan blok, tapi beberapa juga akan memberi Anda informasi tentang harga gas saat ini di jaringan. Ini akan membantu Anda memahami penggunaan jaringan, mengirimkan transaksi aman, dan tidak memboroskan penggunaan gas. Carilah API yang bisa menolong Anda mendapat informasi ini ke dalam antarmuka produk Anda. Data khusus gas mencakup:
 
@@ -74,7 +74,7 @@ Penjelajah blok tidak hanya memberi Anda data tentang penggunaan Gas dalam trans
 - Kontrak yang menggunakan gas - dengan kata lain, produk populer yang sering membutuhkan banyak penggunaan pada jaringan.
 - Akun yang menggunakan gas - dengan kata lain, pengguna jaringan yang aktif.
 
-### Transaksi {#transactions}
+### Transaksi \{#transactions}
 
 Penjelajah blok telah menjadi tempat umum bagi orang-orang untuk mengikuti perkembangan transaksi mereka. Ini karena level detail yang bisa Anda dapatkan memberikan kepastian ekstra. Data transaksi mencakup:
 
@@ -98,7 +98,7 @@ Penjelajah blok telah menjadi tempat umum bagi orang-orang untuk mengikuti perke
 - Nonce – Nomor transaksi untuk alamat `dari` (ingat ini dimulai dari angka 0 jadi nonce bernilai `100` sebenarnya akan menjadi transaksi ke-101 yang dikirimkan oleh akun ini.
 - Data input – Informasi ekstra yang diperlukan oleh transaksi.
 
-### Akun {#accounts}
+### Akun \{#accounts}
 
 Ada banyak data yang bisa Anda akses tentang sebuah akun. Inilah alasan mengapa sering direkomendasikan untuk menggunakan beberapa akun agar aset dan nilai Anda tidak bisa dilacak dengan mudah. Ada juga beberapa solusi yang sedang dikembangkan untuk membuat transaksi dan aktivitas akun lebih bersifat privat. Tapi berikut ini data yang tersedia untuk akun:
 
@@ -121,7 +121,7 @@ Akun kontrak pintar memiliki semua data dari akun pengguna, tapi beberapa penjel
 - Kode pembuatan kontrak – Kode bita yang dikompilasi dari kontrak pintar – dibuat ketika Anda mengompilasi kontrak pintar yang ditulis dengan Solidity atau Vyper, dll.
 - Aksi kontrak – Riwayat dari metode yang dipanggil dalam kontrak pintar. Pada dasarnya, ini adalah cara untuk melihat bagaimana cara menggunakan kontrak dan seberapa sering.
 
-### Token {#tokens}
+### Token \{#tokens}
 
 Token adalah suatu jenis kontrak sehingga akan memiliki data yang sama dengan kontrak pintar. Tapi karena token memiliki nilai dan bisa diperdagangkan, token memiliki poin data tambahan:
 
@@ -135,7 +135,7 @@ Token adalah suatu jenis kontrak sehingga akan memiliki data yang sama dengan ko
 - Alamat kontrak – Alamat token yang diterapkan ke Jaringan Utama.
 - Desimal – Token ERC-20 bisa dibagi dan memiliki tempat desimal.
 
-### Jaringan {#network}
+### Jaringan \{#network}
 
 Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spesifik dalam mekanisme konsensus bukti kerja Ethereum. Ketika Ethereum beralih ke bukti taruhan, beberapa data ini akan menjadi mubazir
 
@@ -147,13 +147,13 @@ Tentu ada beberapa data yang berbicara tentang kesehatan jaringan. Ini cukup spe
 - Persediaan ETH total – Jumlah ETH dalam perederan – ingat ETH baru dihasilkan bersamaan dengan pembuatan tiap blok dalam bentuk imbalan blok.
 - Kapitalisasi pasar – Penghitungan harga\*persediaan.
 
-## Data lapisan konsensus {#consensus-layer-data}
+## Data lapisan konsensus \{#consensus-layer-data}
 
 Peningkatan skalabilitas masih dalam pengembangan, tetapi rasanya layak membicarakan tentang beberapa poin data yang dapat disediakan oleh penjelajah. Sebenarnya, semua data ini tersedia saat ini dalam testnet.
 
 Jika Anda belum terbiasa dengan road map, lihat [gambaran umum kami tentang peningkatan Ethereum](/roadmap/).
 
-### Epoch {#epoch}
+### Epoch \{#epoch}
 
 Rantai Suar akan membuat komite validator yang dipilih secara acak pada akhir dari setiap epoch (setiap 6,4 menit) untuk alasan keamanan. Data epoch meliputi:
 
@@ -168,7 +168,7 @@ Rantai Suar akan membuat komite validator yang dipilih secara acak pada akhir da
 - Saldo Validator rata-rata – Saldo rata-rata untuk validator aktif.
 - Slot – Jumlah slot yang termasuk dalam epoch (slot mencakup satu blok valid).
 
-### Slot {#slot}
+### Slot \{#slot}
 
 Slot adalah kesempatan untuk pembuatan blok, data yang tersedia untuk tiap slot meliputi:
 
@@ -193,7 +193,7 @@ Slot adalah kesempatan untuk pembuatan blok, data yang tersedia untuk tiap slot 
 - Pemotongan – Jumlah penalti yang diberikan kepada pengusul blok atau pemberi atestasi.
 - Pengambilan suara – Validator yang mengambil suara untuk blok dalam slot ini.
 
-### Blok {#blocks-1}
+### Blok \{#blocks-1}
 
 Blok lapisan konsensus bekerja secara berbeda karena penambang digantikan oleh validator dan Rantai Suar memperkenalkan slot dan epoch ke Ethereum. Jadi ini berarti data yang baru!
 
@@ -202,7 +202,7 @@ Blok lapisan konsensus bekerja secara berbeda karena penambang digantikan oleh v
 - Slot – Slot di mana blok diusulkan.
 - Atestasi – Jumlah pengesahan yang tercakup dalam slot. Atestasi adalah seperti pengambilan suara yang menunjukkan blok siap untuk beralih ke Rantai Suar.
 
-### Validator {#validators}
+### Validator \{#validators}
 
 Validator bertanggung jawab dalam mengusulkan blok dan mengesahkannya dalam slot.
 
@@ -218,7 +218,7 @@ Validator bertanggung jawab dalam mengusulkan blok dan mengesahkannya dalam slot
 - Atestasi – Pengesahan yang telah diberikan oleh validator.
 - Deposito – Alamat dari, hash transaksi, nomor blok, stempel waktu, jumlah dan status deposito penaruhan yang dibuat oleh validator.
 
-### Atestasi {#attestations}
+### Atestasi \{#attestations}
 
 Atestasi adalah pengambilan suara "ya" untuk memasukkan blok ke dalam rantai. Data ini terkait dengan catatan dari pengesahan dan validator yang mengesahkan
 
@@ -231,7 +231,7 @@ Atestasi adalah pengambilan suara "ya" untuk memasukkan blok ke dalam rantai. Da
 - Target – Menunjukkan batas epoch terkini.
 - Tanda tangan.
 
-### Jaringan {#network-1}
+### Jaringan \{#network-1}
 
 Data tingkat atas lapisan konsensus mencakup berikut ini:
 
@@ -242,7 +242,7 @@ Data tingkat atas lapisan konsensus mencakup berikut ini:
 - ETH yang ditaruhkan – Jumlah ETH yang ditaruhkan dalam jaringan.
 - Saldo rata-rata – Saldo ETH rata-rata validator.
 
-## Penjelajah blok {#block-explorers}
+## Penjelajah blok \{#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – penjelajah blok yang bisa Anda gunakan mengambil data untuk Jaringan Utama Ethereum, Testnet Ropsten, Testnet Kovan, Testnet Rinkeby, dan Testnet Goerli.
 - [Blockscout](https://blockscout.com/) – berfokus pada jaringan berikut:
@@ -256,17 +256,17 @@ Data tingkat atas lapisan konsensus mencakup berikut ini:
 - [Ethplorer](https://ethplorer.io/) – penjelajah blok dengan fokus pada token untuk Jaringan Utama Ethereum dan testnet Kovan.
 - [Blockchair](https://blockchair.com/ethereum) - penjelajah Ethereum yang paling privat. Juga digunakan untuk pemilihan dan penyaringan (mempool) data.
 
-## Penjelajah blok (lapisan konsensus) rantai suar {#beacon-chain-block-explorers}
+## Penjelajah blok (lapisan konsensus) rantai suar \{#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 - [https://ethscan.org/](https://ethscan.org/) (fork beaconcha.in)
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait {#related-topics}
+## Topik terkait \{#related-topics}
 
 - [Penambangan](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transaksi](/developers/docs/transactions/)

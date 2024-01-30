@@ -6,11 +6,11 @@ lang: es
 
 Los ladrones y saboteadores buscan constantemente oportunidades para atacar el software cliente de Ethereum. Esta página describe los vectores de ataque conocidos en la capa de consenso de Ethereum y describe cómo se pueden defender esos ataques. La información de esta página está resumida de una [versión más larga](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
-## Prerrequisitos {#prerequisites}
+## Prerrequisitos \{#prerequisites}
 
 Se requieren algunos conocimientos básicos de la[prueba de participación](/developers/docs/consensus-mechanisms/pos/). Además, será útil tener una comprensión básica de la [capa de incentivos](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) y del algoritmo de elección de bifurcación de Ethereum, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
-## ¿Qué quieren los atacantes? {#what-do-attackers-want}
+## ¿Qué quieren los atacantes? \{#what-do-attackers-want}
 
 Un error común es pensar que un atacante exitoso puede generar nuevo ether o drenar ether de cuentas arbitrarias. Nada de esto es posible, porque todas las transacciones las ejecutan todos los clientes de ejecución de la red. Deben cumplir con las condiciones básicas de validez (por ejemplo, las transacciones están firmadas con la clave privada del remitente, el remitente tiene suficiente saldo, etc.) o de lo contrario simplemente se revierten. Hay tres clases de resultados a las que un atacante podría apuntar de manera realista: reorganización, doble finalidad o retraso de finalización.
 
@@ -24,9 +24,9 @@ Un ataque a la capa social podría tener como objetivo socavar la confianza del 
 
 Ahora que ya sabemos por qué un adversario podría atacar Ethereum, en las siguientes secciones examinaremos _cómo_ podrían hacerlo.
 
-## Métodos de ataque {#methods-of-attack}
+## Métodos de ataque \{#methods-of-attack}
 
-### Ataques de capa 0 {#layer-0}
+### Ataques de capa 0 \{#layer-0}
 
 En primer lugar, las personas que no participan activamente en Ethereum (ejecutando el software del cliente) pueden atacar apuntando a la capa social (Capa 0). La capa 0 es la base sobre la que se construye Ethereum y, como tal, representa una superficie potencial para los ataques con consecuencias que crean una reacción en cadena por el resto del bloque. Algunos ejemplos podrían incluir:
 
@@ -45,15 +45,15 @@ Otro escudo importante contra los ataques de la capa social es una clara declara
 
 Por último, es fundamental que la comunidad de Ethereum permanezca abierta y receptiva para todos los participantes. Una comunidad con guardianes y exclusividad es especialmente vulnerable al ataque social porque es fácil construir narrativas de «nosotros y ellos». El tribalismo y el maximalismo tóxico dañan a la comunidad y erosionan la seguridad de la capa 0. Los ethereans con un interés personal en la seguridad de la red deben ver su conducta en línea y en el mundo real como una contribución directa a la seguridad de la capa 0 de Ethereum.
 
-### Cómo atacar el protocolo {#attacking-the-protocol}
+### Cómo atacar el protocolo \{#attacking-the-protocol}
 
 Cualquiera puede ejecutar el software cliente de Ethereum. Para añadir un validador a un cliente, un usuario debe participar con 32 ether en el contrato de depósito. Un validador permite a un usuario participar activamente en la seguridad de la red de Ethereum proponiendo y certificando nuevos bloques. El validador ahora tiene una voz que puede usar para influir en el contenido futuro de la cadena de bloques y puede hacerlo honestamente y hacer crecer su bloque de ether a través de recompensas, o puede tratar de manipular el proceso para su propio beneficio, arriesgando su participación. Una forma de montar un ataque es acumular una mayor proporción de la participación total y luego usarla para superar a los validadores honestos. Cuanto mayor sea la proporción de la participación controlada por el atacante, mayor será su poder de voto, especialmente en ciertos hitos económicos que exploraremos más adelante. Sin embargo, la mayoría de los atacantes no podrán acumular suficiente ether para atacar de esta manera, por lo que en su lugar tienen que usar técnicas sutiles para manipular a la mayoría honesta para que actúe de cierta manera.
 
 Fundamentalmente, todos los ataques de participación pequeña son variaciones sutiles en dos tipos de mal comportamiento del validador: subactividad (no certificar/proponer o hacerlo tarde) o sobreactividad (proponer/acreditar demasiadas veces en una ranura). En sus formas más suave, estas acciones son manejadas fácilmente por el algoritmo de elección de bifurcación y la capa de incentivos, pero hay formas inteligentes de jugar el sistema en beneficio de un atacante.
 
-### Ataques que utilizan pequeñas cantidades de ETH {#attacks-by-small-stakeholders}
+### Ataques que utilizan pequeñas cantidades de ETH \{#attacks-by-small-stakeholders}
 
-#### reorgs {#reorgs}
+#### reorgs \{#reorgs}
 
 Varios documentos han explicado los ataques a Ethereum que logran reorgs o retrasos en la finalidad con solo una pequeña proporción del total de ether en participación. Estos ataques generalmente se basan en que el atacante retiene cierta información de otros validadores y luego la libera de alguna manera matizada y/o en algún momento oportuno. Su objetivo es desplazar a algún bloque honesto de la cadena predilecta. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) mostró cómo un validador atacante puede crear y certificar un bloque (`B`) para una ranura en particular `n+1`, pero abstenerse de propagarlo a otros nodos de la red. En su lugar, se aferran a ese bloque certificado hasta la siguiente ranura `n+2`. Un validador honesto propone un bloque (`C`) para la ranura `n+2`. Casi simultáneamente, el atacante puede liberar su bloque retenido (`B`) y sus certificados retenidos para ello, y también certificar que `B` es la cabeza de la cadena con sus votos para la ranura `n+2`, negar la existencia de un bloque honesto `C`. Cuando se libera el bloque honesto `D`, el algoritmo de elección de bifurcación ve `D` construido sobre `B` es más pesado que `D` construido sobre `C`. Por lo tanto, el atacante ha logrado eliminar el bloque honesto `C` en la ranura `n+2` de la cadena predilecta utilizando una reorg ex antes de 1 bloque. [Un atacante con el 34 %](https://www.youtube.com/watch?v=6vzXwwk12ZE) de la apuesta tiene muy buenas posibilidades de tener éxito en este ataque, como se explica [en esta nota](https://notes.ethereum.org/plgVdz-ORe-fGjK06BZ_3A#Fork-choice-by-block-slot-pair). En teoría, sin embargo, este ataque podría intentarse con participaciones más pequeñas. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) describieron este ataque trabajando con una participación del 30 %, pero más tarde se demostró que era viable con [2 % de la participación total](https://arxiv.org/pdf/2009.04987.pdf) y luego de nuevo [validador único](https://arxiv.org/abs/2110.10086#) Utilizando técnicas de equilibrio que examinaremos en la siguiente sección.
 
@@ -83,21 +83,21 @@ El ataque avalancha se ve mitigado por la parte LMD del algoritmo de elección d
 
 Hay varias otras posibles actualizaciones futuras de la regla de elección de bifurcación que podrían aumentar la seguridad proporcionada por el impulsor-proponente. Una es [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739), donde los certificadores congelan su vista de la opción de bifurcación `n` segundos antes del inicio de una ranura y el proponente luego ayuda a sincronizar la vista de la cadena a través de la red. Otra actualización potencial es [finalidad de una sola ranura](https://notes.ethereum.org/@vbuterin/single_slot_finality), que protege contra los ataques basados en el tiempo del mensaje al finalizar la cadena después de una sola ranura.
 
-#### Retraso de finalidad {#finality-delay}
+#### Retraso de finalidad \{#finality-delay}
 
 [El mismo documento](https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_paper_8.pdf) que describió por primera vez el ataque de reorganización de un solo bloque de bajo coste también describió un ataque de retraso de finalidad (también conocido como «fracaso de vivacidad») que se basa en que el atacante sea el proponente de bloques para un bloque de límite de época. Esto es fundamental porque estos bloques de límites de época se convierten en los puntos de control que Casper FFG utiliza para finalizar partes de la cadena. El atacante simplemente retiene su bloqueo hasta que suficientes validadores honestos utilicen sus votos de FFG a favor del bloqueo límite de la época anterior como el objetivo de finalización actual. Luego liberan su bloqueo retenido. Certifican su bloqueo y los validadores honestos restantes también crean bifurcaciones con diferentes puntos de control de destino. Si lo cronometran bien, evitarán la finalidad, porque no habrá una supermayoría de 2/3 que acredite ninguna de las dos bifurcaciones. Cuanto menor sea la participación, más preciso debe ser el momento, porque el atacante controla menos certificaciones directamente, y menor es la probabilidad de que el atacante controle al validador que propone un determinado bloque de límite de época.
 
-#### Ataques de largo alcance {#long-range-attacks}
+#### Ataques de largo alcance \{#long-range-attacks}
 
 También hay una clase de ataque específico para las cadenas de bloques de prueba de participación que involucra a un validador que participó en el bloque inicial manteniendo una bifurcación separada de la cadena de bloques junto con la honesta, convenciendo finalmente al validador honesto de cambiar a ella en algún momento oportuno mucho más tarde. Este tipo de ataque no es posible en Ethereum debido al dispositivo de finalidad que garantiza que todos los validadores estén de acuerdo en el estado de la cadena honesta a intervalos regulares («puntos de control»). Este simple mecanismo neutraliza a los atacantes de largo alcance, porque los clientes de Ethereum simplemente no reorganizan los bloques finalizados. Los nuevos nodos que se unen a la red lo hacen encontrando un hash de estado reciente fiable (un «[punto de control](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) de sujetividad débil») y usándolo como un bloque de pseudoinicial para construir sobre él. Esto crea una «pasarela de confianza» para que un nuevo nodo entre en la red antes de que pueda comenzar a verificar la información por sí mismo.
 
-#### Denegación de servicio {#denial-of-service}
+#### Denegación de servicio \{#denial-of-service}
 
 El mecanismo PoS de Ethereum selecciona un solo validador del grupo de validadores totales establecido para ser un proponente de bloques en cada ranura. Esto se puede calcular utilizando una función conocida públicamente y es posible que un adversario identifique al siguiente proponente de bloques un poco antes de su propuesta de bloques. Luego, el atacante puede enviar correo basura al proponente del bloque para evitar que intercambie información con sus compañeros. Para el resto de la red, parecería que el proponente de bloques estuviera fuera de línea y la ranura simplemente se quedaría vacía. Esto podría ser una forma de censura contra validadores específicos, impidiéndoles agregar información a la cadena de bloques. La implementación de elecciones de un solo líder secreto (SSLE) o elecciones de no solo un líder secreto mitigará los riesgos de DoS, porque solo el proponente del bloque sabe que han sido seleccionados y la selección no se puede conocer de antemano. Esto aún no se ha implementado, pero es un área activa de [investigación y desarrollo](https://ethresear.ch/t/secret-non-single-leader-election/11789).
 
 Todo esto apunta al hecho de que es muy difícil atacar con éxito a Ethereum con una pequeña participación. Los ataques viables que se han descrito aquí requieren un algoritmo de elección de bifurcación idealizado, condiciones de red improbables o los vectores de ataque ya se han cerrado con parches relativamente menores para el software del cliente. No se descarta, por descontado, la posibilidad de que existan días cero en la naturaleza, pero demuestra el nivel extremadamente alto de aptitud técnica, el conocimiento de la capa de consenso y la suerte que se requiere para que un atacante de participación minoritaria sea efectivo. Desde la perspectiva de un atacante, su mejor apuesta podría ser acumular la mayor cantidad de ether posible y regresar armado con una mayor proporción de la participación total.
 
-### Atacantes que usan >= 33 % de la participación total {#attackers-with-33-stake}
+### Atacantes que usan >= 33 % de la participación total \{#attackers-with-33-stake}
 
 Todos los ataques mencionados anteriormente en este artículo tienen más probabilidades de tener éxito cuando el atacante tiene más ether en juego para votar, y más validadores que podrían ser elegidos para proponer bloques en cada ranura. Por lo tanto, un validador malicioso podría tener como objetivo controlar la mayor cantidad de ether en participación posible.
 
@@ -107,7 +107,7 @@ El propósito de la pérdida de inactividad es hacer que la cadena finalice de n
 
 Suponiendo que la red Ethereum sea asíncrona (es decir, que haya retrasos entre los mensajes que se envían y se reciben), un atacante que controla el 34 % de la participación total podría causar una doble finalidad. Esto se debe a que el atacante puede equivocarse cuando se le elige para ser un productor de bloques, y luego votar dos veces con todos sus validadores. Esto crea una situación en la que existe una bifurcación de la cadena de bloques, cada una con el 34 % del ether en participación votando por ella. Cada bifurcación solo requiere que el 50 % de los validadores restantes voten a su favor para que ambas bifurcaciones sean apoyadas por una supermayoría, en cuyo caso ambas cadenas pueden finalizar (porque el 34 % de los validadores atacantes + la mitad del 66 % restante = al 67 % en cada bifurcación). Los bloques en competencia tendrían que ser recibidos por alrededor del 50% de los validadores honestos, por lo que este ataque es viable solo cuando el atacante tiene cierto grado de control sobre el momento en que los mensajes se propagan a través de la red para que puedan empujar a la mitad de los validadores honestos en cada cadena. El atacante destruiría necesariamente toda su participación (34% de ~10 millones de ether con el conjunto de validadores de hoy) para lograr esta doble finalidad porque el 34% de sus validadores tendrían doble voto simultáneamente, una ofensa que se puede cortar con la máxima penalización de correlación. La defensa contra este ataque es el gran coste de destruir el 34 % del total de ether apostado. Recuperarse de este ataque requeriría que la comunidad de Ethereum coordinara «fuera de banda» y acordara seguir una u otra de las bifurcaciones e ignorar la otra.
 
-### Atacantes que usan ~50% de la participación total {#attackers-with-50-stake}
+### Atacantes que usan ~50% de la participación total \{#attackers-with-50-stake}
 
 Al 50 % del ether en participación, un grupo malicioso de validadores podría teóricamente dividir la cadena en dos bifurcaciones de igual tamaño y luego simplemente usar todo su 50 % de participación para votar en contra del conjunto de validadores honestos, manteniendo así las dos bifurcaciones y evitando la finalidad. La fuga de inactividad en ambas bifurcaciones eventualmente llevaría a ambas cadenas a finalizar. Llegados a este punto, la única opción es recurrir a una recuperación social.
 
@@ -115,11 +115,11 @@ Es muy poco probable que un grupo adversario de validadores pudiera controlar co
 
 Con el >50 % de la participación total, el atacante podría dominar el algoritmo de elección de bifurcación. En este caso, el atacante podría dar fe con el voto mayoritario, dándoles el control suficiente para hacer reorgs cortas sin necesidad de engañar a los clientes honestos. Los validadores honestos seguirían su ejemplo porque su algoritmo de elección de bifurcación también consideraría a la cadena favorita del atacante como la más pesada, por lo que la cadena podría finalizar. Esto permite al atacante censurar ciertas transacciones, hacer reorganizaciones de corto alcance y extraer el MEV máximo reordenando los bloques a su favor. La defensa contra esto es el enorme coste de una participación mayoritaria (actualmente poco menos de 19.000 millones de dólares) que ponen en riesgo un atacante, porque es probable que la capa social intervenga y adopte una bifurcación de minoría honesta, devaluando dramáticamente la participación del atacante.
 
-### Atacantes que usan >=66 % de la participación total {#attackers-with-66-stake}
+### Atacantes que usan >=66 % de la participación total \{#attackers-with-66-stake}
 
 Un atacante con el 66 % o más del total de ether apostado puede finalizar su cadena preferida sin tener que coaccionar a ningún validador honesto. El atacante puede votar por su bifurcación preferida y luego finalizarla, simplemente porque puede votar con una supermayoría deshonesta. Como parte interesada de la supermayoría, el atacante siempre controlaría el contenido de los bloques finalizados, con el poder de gastar, rebobinar y gastar de nuevo, censurar ciertas transacciones y reorganizar la cadena a voluntad. Al comprar ether adicional para controlar el 66 % en lugar del 51 %, el atacante está comprando efectivamente la capacidad de hacer antiguas reorgs pasadas y reversiones de finalidad (es decir, cambiar el pasado, así como controlar el futuro). Las únicas defensas reales aquí son el enorme coste del 66 % del total de ether en participación, y la opción de recurrir a la capa social para coordinar la adopción de una bifurcación alternativa. Podemos ahondar en esto con más detalle en la siguiente sección.
 
-## Las personas: la última línea de defensa {#people-the-last-line-of-defense}
+## Las personas: la última línea de defensa \{#people-the-last-line-of-defense}
 
 Si los validadores deshonestos logran finalizar su versión preferida de la cadena, la comunidad de Ethereum se encuentra en una situación difícil. La cadena predilecta incluye una sección deshonesta incorporada en su historia, mientras que los validadores honestos pueden terminar siendo castigados por certificar una cadena alternativa (honesta). Tenga en cuenta que una cadena finalizada pero incorrecta también podría surgir de un error en un cliente mayoritario. Al fin y al cabo, la última alternativa es confiar en la capa social, la capa 0, para resolver la situación.
 
@@ -133,7 +133,7 @@ La gobernanza es un tema de por sí complicado. Gestionar una respuesta de emerg
 
 No obstante, hay algo bastante satisfactorio en una contingencia en la vida real. Al fin y al cabo, incluso con este excelente bloque de tecnología que tenemos, si alguna vez sucediera lo peor, la gente real tendría que coordinar su salida.
 
-## Resumen {#summary}
+## Resumen \{#summary}
 
 Esta página explora algunas de las formas que los atacantes podrían intentar explotar el protocolo de prueba de participación de Ethereum. Se exploraron los reorgs y los retrasos en la finalidad de los atacantes con proporciones cada vez mayores del total de ether en participación. En general, un atacante más rico tiene más posibilidades de éxito porque su participación se traduce en el poder de voto que puede usar para influir en el contenido de futuros bloques. En ciertas cantidades de umbral de etherapostado, los niveles de potencia del atacante suben:
 
@@ -151,7 +151,7 @@ En general, a pesar de estos posibles vectores de ataque, el riesgo de un ataque
 
 Los ataques del 34%, el 51% o el 66% probablemente requerirían coordinación social fuera de banda para resolverse. Si bien esto probablemente resultara doloroso para la comunidad, la capacidad de una comunidad para responder fuera de banda es un potente freno para un atacante. La capa social de Ethereum es el último respaldo: un ataque técnicamente exitoso todavía podría ser neutralizado por la comunidad que acepte adoptar una bifurcación honesta. Se produciría una carrera entre el atacante y la comunidad de Ethereum: los miles de millones de dólares gastados en un ataque del 66 % probablemente serían borrados por un ataque de coordinación social exitoso si se consigue lo suficientemente rápido, dejando al atacante con bolsas pesadas de ether ilíquido en una cadena deshonesta conocida e ignorada por la comunidad de Ethereum. La probabilidad de que esto termine siendo rentable para el atacante es lo suficientemente baja como para ser un elemento disuasorio efectivo. De ahí la importancia de la inversión para mantener una capa social cohesiva con valores estrechamente alineados.
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Versión más detallada de esta página](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Vitalik acerca de la finalidad del acuerdo](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

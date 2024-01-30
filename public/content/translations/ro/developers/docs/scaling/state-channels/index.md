@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Canalele de stare permit participanților să tranzacționeze off-chain `de` un număr de ori, în timp ce trimit doar două tranzacții on-chain către rețeaua Ethereum. Aceasta permite efectuarea unui număr extrem de mare de tranzacții.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Ar trebui să înţelegeţi bine toate subiectele fundamentale și să aveţi un nivel înalt de înţelegere a [scalării în Ethereum](/developers/docs/scaling/). Implementarea soluțiilor de scalare, cum ar fi canalele, este un subiect avansat, deoarece tehnologia este mai puțin testată în luptă și se află în continuare în faza de cercetare şi dezvoltare.
 
-## Canale {#channels}
+## Canale \{#channels}
 
 Participanții trebuie să blocheze o parte din starea Ethereum, ca un depozit ETH, într-un contract multisig. Un contract multisig este un tip de contract care necesită semnarea (și prin urmare, acordul) mai multor chei private pentru a fi executat.
 
@@ -26,7 +26,7 @@ Blocarea stării în acest mod este prima tranzacție și deschide canalul. Part
 
 Există două tipuri de canale în acest moment: canale de stare și canale de plată.
 
-## Canalele de stare {#state-channels}
+## Canalele de stare \{#state-channels}
 
 Canalele de stare sunt poate cel mai bine explicate printr-un exemplu, cum ar fi un joc de tic tac toe:
 
@@ -36,11 +36,11 @@ Canalele de stare sunt poate cel mai bine explicate printr-un exemplu, cum ar fi
 
 3. Când există un câștigător, acesta închide canalul trimiţând starea finală (de exemplu, o listă de tranzacții) la contractul Judecător, plătind doar o singură taxă de tranzacție. Judecătorul se asigură că această „stare finală” este semnată de ambele părți și așteaptă un timp pentru a se asigura că nimeni nu poate contesta în mod legitim rezultatul, iar apoi plătește premiul de 1 ETH lui Alice.
 
-## Canalele de plată {#payment-channels}
+## Canalele de plată \{#payment-channels}
 
 Canale de stare simplificate care se ocupă doar de plăți (de exemplu, transferurile de ETH). Acestea permit transferuri off-chain între doi participanți, atâta timp cât suma netă a transferurilor lor nu depășește tokenurile depuse.
 
-## Avantaje și dezavantaje {#channels-pros-and-cons}
+## Avantaje și dezavantaje \{#channels-pros-and-cons}
 
 | Avantaje                                                                             | Dezavantaje                                                                                                                                                |
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ Canale de stare simplificate care se ocupă doar de plăți (de exemplu, transfe
 | Cel mai mic cost pe tranzacție - utile pentru microplăți în streaming                | Trebuie să blocaţi fonduri în canalele de plată deschise                                                                                                   |
 |                                                                                      | Nu acceptă participarea deschisă                                                                                                                           |
 
-## Utilizarea canalelor de stare {#use-state-channels}
+## Utilizarea canalelor de stare \{#use-state-channels}
 
 Numeroase proiecte oferă implementări ale canalelor de stare pe care le puteți integra în aplicațiile dvs. dapp:
 
@@ -59,7 +59,7 @@ Numeroase proiecte oferă implementări ale canalelor de stare pe care le puteț
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 **Canale de stare**
 

@@ -5,7 +5,7 @@ lang: fr
 incomplete: true
 ---
 
-## Vue d'ensemble des normes {#standards-overview}
+## Vue d'ensemble des normes \{#standards-overview}
 
 La communauté Ethereum a adopté de nombreuses normes qui aident à maintenir l'interopérabilité des projets (comme les [clients Ethereum](/developers/docs/nodes-and-clients/) et les portefeuilles) entre les implémentations, et garantir que les contrats intelligents et les DApps restent composables.
 
@@ -20,7 +20,7 @@ Ces normes sont généralement présentées via les [propositions d'amélioratio
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _- Hudson Jameson, 23 mars 2020_
 - [Playlist de toutes les rencontres de l'équipe de développement clé Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
-## Types de normes {#types-of-standards}
+## Types de normes \{#types-of-standards}
 
 Il existe trois types d'EIP :
 
@@ -37,7 +37,7 @@ De plus, le Standard Track est subdivisé en 4 catégories :
 
 Des informations plus détaillées sur ces différents types et catégories peuvent être trouvées dans [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
-### Normes de jetons {#token-standards}
+### Normes de jetons \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Une interface type pour les jetons fongibles (interchangeables) comme les jetons de vote, les jetons d'enjeu ou les monnaies virtuelles.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Définit une interface de jeton pour les jetons ERC-20 qui prend en charge l'exécution du code du destinataire après transfert ou transferFrom, ou du code de l'expéditeur après approbation.
@@ -51,7 +51,7 @@ Des informations plus détaillées sur ces différents types et catégories peuv
 
 En savoir plus sur les [normes de jetons](/developers/docs/standards/tokens/)
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Propositions d'amélioration d'Ethereum (EIP)](/eips/)
 

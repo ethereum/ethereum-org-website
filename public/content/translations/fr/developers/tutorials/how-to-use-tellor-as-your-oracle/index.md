@@ -15,7 +15,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 Quiz Pop : Votre protocole est à peine terminé, mais il a besoin d'un oracle pour avoir accès aux données hors chaîne... Que faites-vous ?
 
-## Prérequis (simple) {#soft-prerequisites}
+## Prérequis (simple) \{#soft-prerequisites}
 
 Cet article a pour objectif de permettre l'accès à un flux oracle aussi simplement et efficacement que possible. Cela étant dit, nous supposons que votre niveau de compétence en codage est le suivant pour nous concentrer sur l'aspect oracle.
 
@@ -27,7 +27,7 @@ Hypothèses :
 
 Tellor est un oracle direct et open source prêt à l'emploi. Ce guide pour débutants a pour objectif de montrer la facilité d'utilisation de Tellor, et de doter votre projet d'un oracle entièrement décentralisé et résistant à la censure.
 
-## Aperçu {#overview}
+## Aperçu \{#overview}
 
 Tellor est un système Oracle où les parties peuvent demander la valeur d'un point de données hors chaîne (par ex. BTC/USD). Les rapporteurs sont en concurrence pour ajouter cette valeur à une banque de données en chaîne accessible par tous les contrats intelligents Ethereum. Les entrées de cette banque de données sont sécurisées par un réseau de mises en jeu par des rapporteurs. Tellor utilise des mécanismes d'incitation crypto-économique, récompensant les déclarations honnêtes de données effectuées par des rapporteurs et punissant les mauvais acteurs grâce à la délivrance d'un jeton Tellor (les Tributes, ou TRB), et d'un mécanisme de conflit.
 
@@ -37,7 +37,7 @@ Dans ce tutoriel, nous allons passer en revue :
 - Un exemple simple.
 - La liste des adresses testnet des réseaux sur lesquels vous pourrez tester Tellor.
 
-## Utiliser Tellor {#usingtellor}
+## Utiliser Tellor \{#usingtellor}
 
 La première chose à faire est d'installer les outils de base nécessaires pour utiliser Tellor comme oracle. Utilisez [ce paquet](https://github.com/tellor-io/usingtellor) pour installer les contrats utilisateur de Tellor :
 
@@ -47,7 +47,7 @@ Une fois ces derniers installés, cela permettra à vos contrats d'hériter des 
 
 Génial ! Maintenant que vos outils sont prêts, intéressons-nous à un exercice simple où nous récupérons le prix de bitcoin :
 
-### Exemple BTC/USD {#btcusd-example}
+### Exemple BTC/USD \{#btcusd-example}
 
 Hériter du contrat UsingTellor, en transmettant l'adresse Tellor en tant qu'argument de constructeur :
 

@@ -8,11 +8,11 @@ Gli oracoli sono feed di dati che prendono dati raccolti da fonti di dati estern
 
 Dare ai contratti intelligenti la capacità di eseguirsi sfruttando input di dati off-chain estende il valore delle applicazioni decentralizzate. Ad esempio, i mercati predittivi decentralizzati si basano sugli oracoli per fornire informazioni sui risultati con le quali possono convalidare le previsioni degli utenti. Supponiamo che Alice scommetta 20 ETH su chi diventerà il prossimo presidente degli Stati Uniti . In tal caso, la dapp del mercato predittivo ha bisogno di un oracolo per confermare i risultati delle elezioni e determinare se Alice abbia diritto o meno alla "vincita".
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Questa pagina presuppone che il lettore abbia familiarità con i fondamentali di Ethereum, inclusi [nodi](/developers/docs/nodes-and-clients/), [meccanismi di consenso](/developers/docs/consensus-mechanisms/)e la tecnologia [EVM](/developers/docs/evm/). Dovresti anche avere una buona comprensione dei [contratti intelligenti](/developers/docs/smart-contracts/) e dell'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/), in particolare gli [eventi](/glossary/#events).
 
-## Cos'è un oracolo della blockchain? {#what-is-a-blockchain-oracle}
+## Cos'è un oracolo della blockchain? \{#what-is-a-blockchain-oracle}
 
 Gli oracoli sono applicazioni che agiscono da fonti, verificatori e trasmettitori di informazioni esterne (ossia informazioni archiviate off-chain) ai contratti intelligenti in esecuzione sulla blockchain. Oltre a “estrarre” i dati off-chain e trasmetterli su Ethereum, gli oracoli possono anche “immettere” le informazioni prese dalla blockchain in sistemi esterni. Un esempio di quest'ultima caratteristica potrebbe essere un oracolo che sblocca uno "smart lock" (serratura intelligente) una volta che l'utente invia la commissione tramite una transazione Ethereum.
 
@@ -20,7 +20,7 @@ L'oracolo in questo caso funge da "ponte" che collega i contratti intelligenti s
 
 Gli oracoli differiscono in base alla fonte di dati (una o più fonti), ai modelli di fiducia (centralizzati o decentralizzati) e all'architettura di sistema (immediate-read, publish-subscribe e request-response). Possiamo anche distinguere gli oracoli in base al fatto che recuperino dati esterni per l'uso da parte di contratti on-chain (oracoli di input), inviino informazioni dalla blockchain alle applicazioni off-chain (oracoli di output), o svolgano attività di calcolo off-chain (oracoli di calcolo).
 
-## Perché i contratti intelligenti hanno bisogno degli oracoli? {#why-do-smart-contracts-need-oracles}
+## Perché i contratti intelligenti hanno bisogno degli oracoli? \{#why-do-smart-contracts-need-oracles}
 
 La maggior parte degli sviluppatori vede i contratti intelligenti come semplici pezzi di codice in esecuzione in determinati indirizzi sulla blockchain. Tuttavia, una [visione più generale dei contratti intelligenti](/smart-contracts/) è che siano programmi software autoeseguibili in grado di far rispettare gli accordi tra le parti una volta soddisfatte determinate condizioni, il che spiega il termine “contratti intelligenti”.
 
@@ -42,7 +42,7 @@ Per fare questo, un oracolo è tipicamente costituito da un contratto intelligen
 
 Essenzialmente, un oracolo della blockchain colma il divario informativo tra la blockchain ed il mondo esterno, creando “contratti intelligenti ibridi”. Un contratto intelligente ibrido funziona sulla base di una combinazione di codice on-chain e infrastruttura off-chain. I mercati predittivi decentralizzati, descritti nell'introduzione, sono un ottimo esempio di contratto intelligente ibrido. Altri esempi potrebbero essere i contratti intelligenti di assicurazione agricole che pagano quando una serie di oracoli determina che hanno avuto luogo alcuni fenomeni meteorologici.
 
-## Qual è il problema dell'oracolo? {#the-oracle-problem}
+## Qual è il problema dell'oracolo? \{#the-oracle-problem}
 
 È facile dare ai contratti intelligenti l'accesso ai dati off-chain facendo affidamento su un'entità (o più entità) per introdurre informazioni estrinseche nella blockchain memorizzandole nel payload di dati di una transazione. Ma questo solleva nuovi problemi:
 
@@ -60,9 +60,9 @@ Diversi oracoli differiscono nel loro approccio per risolvere il problema dell'o
 
 3. **Compatibilità con gli incentivi**: un oracolo dovrebbe incentivare i fornitori di dati off-chain ad inviare informazioni corrette ai contratti intelligenti. Incentivare la compatibilità comporta _attribuibilità_ e _responsabilità_. L'attribuibilità consente di correlare un'informazione esterna al suo fornitore, mentre la responsabilità lega i fornitori di dati alle informazioni che forniscono, in modo che possano essere premiati o penalizzati in base alla qualità delle informazioni fornite.
 
-## Come funziona un servizio oracolo della blockchain? {#how-does-a-blockchain-oracle-service-work}
+## Come funziona un servizio oracolo della blockchain? \{#how-does-a-blockchain-oracle-service-work}
 
-### Utenti {#users}
+### Utenti \{#users}
 
 Gli utenti sono entità (ossia contratti intelligenti) che hanno bisogno di informazioni esterne alla blockchain per completare azioni specifiche. Il flusso di lavoro di base di un servizio oracolo inizia con l'invio da parte dell'utente di una richiesta di dati al contratto oracolo. Le richieste di dati solitamente rispondono ad alcune o a tutte le seguenti domande:
 
@@ -76,7 +76,7 @@ Gli utenti sono entità (ossia contratti intelligenti) che hanno bisogno di info
 
 5. Quale metodo dovrebbe essere implementato per filtrare gli invii e aggregare i report in un unico valore?
 
-### Contratto oracolo {#oracle-contract}
+### Contratto oracolo \{#oracle-contract}
 
 Il contratto oracolo è il componente on-chain per il servizio oracolo: ascolta le richieste di dati da parte di altri contratti, inoltra le richieste di dati ai nodi oracolo e trasmette i dati restituiti ai contratti client. Questo contratto può anche eseguire alcuni calcoli sui punti di dati restituiti per produrre un valore aggregato che invia al contratto richiedente.
 
@@ -196,7 +196,7 @@ contract Oracle {
 }
 ```
 
-### Nodi oracolo {#oracle-nodes}
+### Nodi oracolo \{#oracle-nodes}
 
 Il nodo oracolo è il componente off-chain del servizio oracolo: estrae informazioni da fonti esterne, come API ospitate su server di terze parti, e le inserisce nella catena per essere utilizzate dai contratti intelligenti. I nodi oracolo ascoltano gli eventi dal contratto oracolo on-chain e procedono a completare l'attività descritta nel log.
 
@@ -204,15 +204,15 @@ Un'attività comune per i nodi oracolo è inviare una richiesta [HTTP GET](https
 
 Gli oracoli di calcolo si affidano anche a nodi off-chain per eseguire compiti di calcolo intensivi, che non sarebbe pratico eseguire on-chain dati i costi del carburante e i limiti di dimensione dei blocchi. Ad esempio, il nodo oracolo può essere incaricato di generare una cifra casuale verificabile (ad esempio, per i giochi basati sulla blockchain).
 
-## Modelli di progettazione degli oracoli {#oracle-design-patterns}
+## Modelli di progettazione degli oracoli \{#oracle-design-patterns}
 
 Esistono diversi tipi di oracolo, tra cui: _immediate-read_, _publish-subscribe_ e _request-response_; gli ultimi due sono i più popolari tra i contratti intelligenti di Ethereum. Di seguito viene fornita una breve descrizione dei due tipi di servizi oracolo:
 
-### Oracoli publish-subscribe {#publish-subscribe-oracles}
+### Oracoli publish-subscribe \{#publish-subscribe-oracles}
 
 Un servizio oracolo basato su un meccanismo publish-subscribe espone un "feed di dati" che altri contratti possono leggere regolarmente per ottenere informazioni. In questo caso si prevede che i dati cambino frequentemente, quindi i contratti client devono ascoltare gli aggiornamenti dei dati nell'archivio dell'oracolo. Un esempio eccellente è rappresentato da un oracolo che fornisce informazioni sull'ultimo prezzo ETH-USD agli utenti.
 
-### Oracoli request-response {#request-response-oracles}
+### Oracoli request-response \{#request-response-oracles}
 
 Una configurazione request-response consente al contratto client di richiedere dati arbitrari diversi da quelli forniti da un oracolo publish-subscribe. Gli oracoli request-response sono ideali nelle seguenti condizioni:
 
@@ -224,25 +224,25 @@ Sebbene siano più complessi dei modelli publish-subscribe, gli oracoli request-
 
 Gli utenti che avviano le richieste di dati devono pagare il costo del recupero delle informazioni dalla fonte off-chain. Il contratto client deve anche fornire fondi per coprire i costi del carburante sostenuti dal contratto oracolo per restituire la risposta tramite la funzione di callback specificata nella richiesta.
 
-## Tipi di oracolo {#types-of-oracles}
+## Tipi di oracolo \{#types-of-oracles}
 
-### Oracoli centralizzati {#centralized-oracles}
+### Oracoli centralizzati \{#centralized-oracles}
 
 Un oracolo centralizzato è controllato da un'unica entità responsabile dell'aggregazione delle informazioni off-chain, nonché dell'aggiornamento dei dati del contratto oracolo come richiesto. Gli oracoli centralizzati sono efficienti perché si basano su un'unica fonte di verità. Potrebbero persino essere preferibili nei casi in cui i set di dati proprietari siano pubblicati direttamente dal proprietario con una firma ampiamente accettata. Tuttavia, l'utilizzo di un oracolo centralizzato comporta vari problemi.
 
-#### Basse garanzie di correttezza {#low-correctness-guarantees}
+#### Basse garanzie di correttezza \{#low-correctness-guarantees}
 
 Con gli oracoli centralizzati, non c'è modo di confermare se le informazioni siano sono corrette o meno. Il fornitore di oracoli potrebbe anche avere una "buona reputazione", ma questo non elimina la possibilità che qualcuno si comporti in modo sleale o che un hacker manometta il sistema. Se l'oracolo è corrotto, i contratti intelligenti verranno eseguiti sulla base di dati errati.
 
-#### Scarsa disponibilità {#poor-availability}
+#### Scarsa disponibilità \{#poor-availability}
 
 Gli oracoli centralizzati non garantiscono che i dati off-chain siano sempre disponibili per gli altri contratti intelligenti. Se il fornitore decide di disattivare il servizio o un hacker sabota il componente off-chain dell'oracolo, il vostro contratto intelligente è a rischio di un attacco denial of service (DoS).
 
-#### Scarsa compatibilità con gli incentivi {#poor-incentive-compatibility}
+#### Scarsa compatibilità con gli incentivi \{#poor-incentive-compatibility}
 
 Gli oracoli centralizzati hanno spesso incentivi mal concepiti o inesistenti per indurre il fornitore di dati a inviare informazioni precise/inalterate. Pagare l'oracolo per i suoi servizi potrebbe incoraggiare un comportamento onesto, ma questo potrebbe non bastare. Con i contratti intelligenti che controllano enormi quantità di valore, il guadagno derivante dalla manipolazione dei dati dell'oracolo è più grande che mai.
 
-### Oracoli decentralizzati {#decentralized-oracles}
+### Oracoli decentralizzati \{#decentralized-oracles}
 
 Gli oracoli decentralizzati sono progettati per superare le limitazioni degli oracoli centralizzati eliminando punti di errori unici. Un servizio di oracolo decentralizzato comprende più partecipanti in una rete peer-to-peer che formano un consenso sui dati off-chain prima di inviarli ad un contratto intelligente.
 
@@ -250,11 +250,11 @@ Un oracolo decentralizzato dovrebbe (idealmente) essere senza permessi, senza fi
 
 L'utilizzo di oracoli decentralizzati ha i seguenti vantaggi:
 
-### Alte garanzie di correttezza {#high-correctness-guarantees}
+### Alte garanzie di correttezza \{#high-correctness-guarantees}
 
 Gli oracoli decentralizzati tentano di ottenere la correttezza dei dati utilizzando approcci diversi. Ciò include l'uso di prove che attestino l'autenticità e l'integrità delle informazioni restituite e che impongano a più entità di concordare collettivamente la validità dei dati off-chain.
 
-#### Prove di autenticità {#authenticity-proofs}
+#### Prove di autenticità \{#authenticity-proofs}
 
 Le prove di autenticità sono meccanismi crittografici che consentono la verifica indipendente delle informazioni recuperate da fonti esterne. Queste prove possono convalidare la fonte delle informazioni e rilevare eventuali modifiche ai dati dopo il recupero.
 
@@ -266,7 +266,7 @@ Esempi di prove di autenticità includono:
 
 Alcune classi di oracoli decentralizzati richiedono agli operatori dei nodi oracolo di fornire attestazioni TEE. Questo conferma ad un utente che l'operatore del nodo sta eseguendo un'istanza del client oracolo in un ambiente di esecuzione affidabile. I TEE impediscono ai processi esterni di modificare o leggere il codice e i dati di un’applicazione, pertanto, le attestazioni dimostrano che il nodo oracolo ha mantenuto intatte e riservate le informazioni.
 
-#### Convalida delle informazioni basata sul consenso {#consensus-based-validation-of-information}
+#### Convalida delle informazioni basata sul consenso \{#consensus-based-validation-of-information}
 
 Gli oracoli centralizzati si affidano a un'unica fonte di verità quando forniscono dati ai contratti intelligenti, il che introduce la possibilità di pubblicare informazioni imprecise. Gli oracoli decentralizzati risolvono questo problema affidandosi a più nodi oracolo per interrogare le informazioni off-chain. Confrontando i dati provenienti da più fonti, gli oracoli decentralizzati riducono il rischio di trasmettere informazioni non valide ai contratti on-chain.
 
@@ -292,7 +292,7 @@ Altri esempi di oracoli che utilizzano meccanismi del punto di Schelling sono [C
 
 I meccanismi del punto di Schelling sono interessanti perché riducono al minimo lo spazio occupato on-chain (è necessario inviare una sola transazione) garantendo al contempo la decentralizzazione. Questa è possibile perché i nodi devono approvare l'elenco delle risposte inviate prima che questo venga inserito nell'algoritmo che produce il valore medio/mediano.
 
-### Disponibilità {#availability}
+### Disponibilità \{#availability}
 
 I servizi oracolo decentralizzati garantiscono un'elevata disponibilità di dati off-chain per i contratti intelligenti. Ciò si ottiene decentralizzando sia la fonte delle informazioni off-chain sia i nodi responsabili del trasferimento delle informazioni on-chain.
 
@@ -300,7 +300,7 @@ Questo garantisce la tolleranza ai guasti, perché il contratto oracolo può aff
 
 È anche possibile che gli oracoli basati sullo staking possano tagliare gli operatori dei nodi che non rispondono rapidamente alle richieste di dati. Questo incentiva in modo significativo i nodi oracolo a investire nell'infrastruttura tollerante ai guasti e a fornire i dati in modo tempestivo.
 
-### Buona compatibilità con gli incentivi {#good-incentive-compatibility}
+### Buona compatibilità con gli incentivi \{#good-incentive-compatibility}
 
 Gli oracoli decentralizzati implementano svariati modelli di incentivi per prevenire il comportamento [bizantino](https://en.wikipedia.org/wiki/Byzantine_fault) tra i nodi dell'oracolo. In particolare, ottengono _attribuibilità_ e _responsabilità_:
 
@@ -308,11 +308,11 @@ Gli oracoli decentralizzati implementano svariati modelli di incentivi per preve
 
 2. Gli oracoli decentralizzati, come spiegato in precedenza, possono richiedere ai nodi di mettere token in staking per garantire la veridicità dei dati inviati. Se i dati vengono confermati, lo stake può essere restituito insieme ai premi per il servizio onesto. Ma può anche essere tagliato nel caso in cui le informazioni non siano corrette, il che fornisce un certo grado di responsabilità.
 
-## Applicazioni degli oracoli nei contratti intelligenti {#applications-of-oracles-in-smart-contracts}
+## Applicazioni degli oracoli nei contratti intelligenti \{#applications-of-oracles-in-smart-contracts}
 
 I seguenti sono casi d'uso comuni per gli oracoli in Ethereum:
 
-### Recupero dei dati finanziari {#retrieving-financial-data}
+### Recupero dei dati finanziari \{#retrieving-financial-data}
 
 Le applicazioni di [finanza decentralizzata](/defi/) (DeFi) consentono di concedere e ricevere prestiti e scambiare risorse peer-to-peer. Questo spesso impone di ottenere diverse informazioni finanziarie, tra cui i dati sui tassi di cambio (per calcolare il valore in moneta legale delle criptovalute o per confrontare i prezzi di due token) e i dati sui mercati dei capitali (per calcolare il valore delle risorse tokenizzate, come l'oro o il dollaro USA).
 
@@ -356,7 +356,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Generare casualità verificabile {#generating-verifiable-randomness}
+### Generare casualità verificabile \{#generating-verifiable-randomness}
 
 Alcune applicazioni blockchain, come i giochi o le lotterie basate su blockchain, richiedono un alto livello di imprevedibilità e casualità per funzionare efficacemente. Tuttavia, l'esecuzione deterministica delle blockchain elimina qualsiasi fonte di casualità.
 
@@ -366,13 +366,13 @@ L'approccio abituale è quello di utilizzare funzioni crittografiche pseudocasua
 
 Gli oracoli progettati per il calcolo off-chain risolvono questo problema generando in modo sicuro risultati casuali fuori catena che trasmettono sulla catena insieme a prove crittografiche che attestano l'imprevedibilità del processo. Un esempio è [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (Verifiable Random Function), che è un generatore di numeri casuali (RNG) dimostrabilmente equo e a prova di manomissione, utile per costruire contratti intelligenti affidabili per applicazioni che si basano su risultati imprevedibili. Un altro esempio è [API3 QRNG](https://docs.api3.org/explore/qrng/) che serve alla generazione di numeri quantici casuali (QRNG); si tratta di un metodo pubblico per la generazione di numeri casuali del Web3 basato sul fenomeno quantistico e fornito gentilmente dall'Università Nazionale Australiana (ANU).
 
-### Ottenere risultati per gli eventi {#getting-outcomes-for-events}
+### Ottenere risultati per gli eventi \{#getting-outcomes-for-events}
 
 Con gli oracoli, la creazione di contratti intelligenti che rispondono a eventi del mondo reale è facile. I servizi oracolo lo rendono possibile consentendo ai contratti di connettersi ad API esterne attraverso componenti off-chain e di consumare informazioni da tali fonti di dati. Ad esempio, la dapp predittiva menzionata in precedenza può richiedere a un oracolo di restituire i risultati delle elezioni da una fonte fidata off-chain (ad esempio l'Associated Press).
 
 L'uso di oracoli per recuperare dati basati su risultati reali consente altri casi d'uso innovativi, tra cui le applicazioni assicurative decentralizzate. Un contratto intelligente assicurativo che paga gli utenti avrà bisogno di informazioni accurate (ad esempio, dati meteo, verbali sulle catastrofi, ecc.) per funzionare efficacemente.
 
-### Automatizzare i contratti intelligenti {#automating-smart-contracts}
+### Automatizzare i contratti intelligenti \{#automating-smart-contracts}
 
 Contrariamente alle descrizioni popolari, i contratti intelligenti non si eseguono automaticamente: un conto posseduto esternamente (EOA), o un altro contro di contratto, deve attivare le funzioni giuste per eseguire il codice del contratto. Nella maggior parte dei casi, la maggior parte delle funzioni del contratto sono pubbliche e possono essere invocate da EOA e altri contratti.
 
@@ -384,7 +384,7 @@ Alcune reti di oracoli decentralizzati offrono servizi di automazione, che conse
 
 Un esempio è il [Keeper Network](https://chain.link/keepers) di Chainlink, che fornisce opzioni per i contratti intelligenti per esternalizzare le attività di manutenzione ordinaria in modo decentralizzato e con il minimo di fiducia. Leggi la [documentazione ufficiale di Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) per le informazioni su come rendere il tuo contratto compatibile con Keeper e utilizzare il servizio Upkeep.
 
-## Utilizzare oracoli sulla blockchain {#use-blockchain-oracles}
+## Utilizzare oracoli sulla blockchain \{#use-blockchain-oracles}
 
 Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethereum:
 
@@ -404,7 +404,7 @@ Ci sono più applicazioni di oracoli che puoi integrare nella tua dapp su Ethere
 
 **[DAO di API3](https://www.api3.org/)**: _la DAO di API3 distribuisce soluzioni di prima parte di Oracle che offrono una maggiore trasparenza della fonte, sicurezza e scalabilità in una soluzione decentralizzata per i contratti intelligenti_
 
-## Ulteriori letture {#further-reading}
+## Ulteriori letture \{#further-reading}
 
 **Articoli**
 

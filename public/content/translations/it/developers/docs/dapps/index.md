@@ -6,11 +6,11 @@ lang: it
 
 Un'applicazione decentralizzata (dapp) è un'applicazione costruita su una rete decentralizzata che combina un [contratto intelligente](/developers/docs/smart-contracts/) e l'interfaccia utente di un frontend. Su Ethereum, i contratti intelligenti sono accessibili e trasparenti (come le API aperte), quindi la tua dapp può persino includere un contratto intelligente, già scritto da qualcun altro.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Prima di approfondire le dapp, è consigliabile conoscere le [basi della blockchain](/developers/docs/intro-to-ethereum/) e informarsi sulla rete Ethereum e sul perché è decentralizzata.
 
-## Definizione di dapp {#definition-of-a-dapp}
+## Definizione di dapp \{#definition-of-a-dapp}
 
 Il codice backend di una dapp viene eseguito su una rete decentralizzata peer-to-peer. L'opposto di quello che succede con una app il cui codice backend gira su server centralizzati.
 
@@ -21,13 +21,13 @@ Una dapp può avere codice frontend e interfacce utente scritti in qualsiasi lin
 - **Turing complete** - Le dApp possono eseguire qualsiasi azione una volta fornite le risorse necessarie
 - **Isolate** - Le dApp sono eseguite in un ambiente virtuale, noto come la Macchina Virtuale di Ethereum, così che se il contratto intelligente contiene un bug, non ostacolerà il normale funzionamento della rete della blockchain
 
-### Sui contratti intelligenti {#on-smart-contracts}
+### Sui contratti intelligenti \{#on-smart-contracts}
 
 Per introdurre le dapp, dobbiamo introdurre i contratti intelligenti: la backend di una dapp, in mancanza di un termine migliore. Per una panoramica dettagliata, consulta la nostra sezione sui [contratti intelligenti](/developers/docs/smart-contracts/).
 
 Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e opera esattamente come programmato. Una volta distribuiti i contratti intelligenti sulla rete, non puoi modificarli. Le dapp possono essere decentralizzate perché sono controllate della logica scritta nel contratto, non da un individuo o da un'azienda. Questo significa anche che devi progettare i tuoi contratti molto attenteamente e testarli accuratamente.
 
-## Vantaggi dello sviluppo delle dapp {#benefits-of-dapp-development}
+## Vantaggi dello sviluppo delle dapp \{#benefits-of-dapp-development}
 
 - **Nessun tempo di inattività** – Una volta distribuito il contratto intelligente sulla blockchain, l'intera rete potrà sempre servire i clienti che cercano di interagire con il contratto. Gli attori malevoli quindi non possono lanciare attacchi denial-of-service verso dapp singole.
 - **Privacy**: non è necessario fornire un'identità reale per distribuire una dapp o interagirvi.
@@ -35,7 +35,7 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 - **Completa integrità dei dati**: i dati conservati sulla blockchain sono immutabili e indiscutibili, grazie alle primitive crittografiche. Attori malevoli non possono falsificare transazioni o altri dati che sono già stati resi pubblici.
 - **Calcolo senza fiducia/comportamento verificabile** – I contratti intelligenti sono analizzabili e, l'esecuzione in modi prevedibili è garantita, senza il bisogno di affidarsi a un'autorità centrale. Questo non accade nei modelli tradizionali. Per esempio, quando usiamo l'online banking dobbiamo fidarci del fatto che gli istituti finanziari non abusino dei nostri dati finanziari, non manomettano record e non vengano attaccati da hacker.
 
-## Svantaggi dello sviluppo di dApp {#drawbacks-of-dapp-development}
+## Svantaggi dello sviluppo di dApp \{#drawbacks-of-dapp-development}
 
 - **Manutenzione**: le dapp possono essere impegnative da mantenere perché il codice e i dati pubblicati sulla blockchain sono più difficili da modificare. Per gli sviluppatori, è difficile apportare degli aggiornamenti alle loro dApp (o ai dati sottostanti, memorizzati da una dApp) una volta distribuite, anche se vengono individuati dei bug o rischi di sicurezza in una versione precedente.
 - **Overhead delle prestazioni**: l'overhead delle prestazioni è enorme e scalare è davvero difficile. Per raggiungere il livello di sicurezza, integrità, trasparenza e affidabilità al quale aspira Ethereum, ogni nodo esegue e memorizza ogni transazione. Oltre a ciò, anche il consenso di proof-of-stake richiede tempo.
@@ -43,11 +43,11 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 - **Esperienza utente**: potrebbe essere difficile creare esperienze intuitive. L'utente medio potrebbe trovare troppo difficile configurare la serie di strumenti necessaria a interagire con la blockchain in modo veramente sicuro.
 - **Centralizzazione**: soluzioni facili da utilizzare e compatibili con gli sviluppatori costruite sullo strato base di Ethereum potrebbero finire per assomigliare comunque a servizi centralizzati. Ad esempio, tali servizi potrebbero memorizzare le chiavi o altre informazioni sensibili sul lato del server, servire un frontend utilizzando un server centralizzato oppure utilizzare un'importante logica commerciale su un server centralizzato prima di scrivere sulla blockchain. La centralizzazione annulla molti (se non tutti) i vantaggi della blockchain rispetto al modello tradizionale.
 
-## Preferisci un approccio visivo all'apprendimento? {#visual-learner}
+## Preferisci un approccio visivo all'apprendimento? \{#visual-learner}
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Strumenti per creare le dApp {#dapp-tools}
+## Strumenti per creare le dApp \{#dapp-tools}
 
 **Scaffold-ETH _ Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo contratto intelligente._**
 
@@ -74,7 +74,7 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 - [Documentazione](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Esplora le dapp](/dapps)
 - [L'Architettura di un'applicazione Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
@@ -84,7 +84,7 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati {#related-topics}
+## Argomenti correlati \{#related-topics}
 
 - [Introduzione allo stack di Ethereum](/developers/docs/ethereum-stack/)
 - [Quadri di sviluppo](/developers/docs/frameworks/)

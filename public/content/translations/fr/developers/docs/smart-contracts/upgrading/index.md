@@ -10,11 +10,11 @@ Si l'immutabilité est nécessaire pour assurer la confiance, la décentralisati
 
 Cependant, l'intensification des recherches visant à améliorer les contrats intelligents a conduit à l'introduction de plusieurs modèles de mise à niveau. Ces modèles de mise à niveau permettent aux développeurs de mettre à jour les contrats intelligents (tout en préservant l'immutabilité) en plaçant la logique dans différents contrats.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Vous devriez avoir une bonne connaissance des [contrats intelligents](/developers/docs/smart-contracts/), de l'[anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/) et de la [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/). Ce guide suppose également que les lecteurs maîtrisent la programmation de contrats intelligents.
 
-## Qu'est-ce qu'une mise à jour de contrat intelligent ? {#what-is-a-smart-contract-upgrade}
+## Qu'est-ce qu'une mise à jour de contrat intelligent ? \{#what-is-a-smart-contract-upgrade}
 
 La mise à jour d'un contrat intelligent consiste à modifier la logique d'un contrat intelligent tout en préservant l'état du contrat. Il est important de préciser que l'évolutivité et la mutabilité sont deux notions différentes, en particulier dans le contexte des contrats intelligents.
 
@@ -32,7 +32,7 @@ Cela peut se faire par les méthodes suivantes :
 
 5. Utiliser le modèle de diamant pour déléguer des appels de fonction d'un contrat proxy à des contrats logiques.
 
-### Mécanisme de mise à jour n° 1 : migration des contrats {#contract-migration}
+### Mécanisme de mise à jour n° 1 : migration des contrats \{#contract-migration}
 
 La migration des contrats repose sur le principe du versionnage, c'est-à-dire la création et la gestion d'états uniques d'un même logiciel. La migration de contrat implique le déploiement d'une nouvelle instance d'un contrat intelligent existant et le transfert du stockage et des soldes vers le nouveau contrat.
 
@@ -44,7 +44,7 @@ La migration des contrats est une mesure relativement simple et sûre pour mettr
 
 [En savoir plus sur la migration de contrats.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### Mécanisme de mise à jour n°2 : séparation des données {#data-separation}
+### Mécanisme de mise à jour n°2 : séparation des données \{#data-separation}
 
 Une autre méthode pour améliorer les contrats intelligents consiste à séparer la logique et le stockage des données dans des contrats distincts. Cela signifie que les utilisateurs interagissent avec le contrat de logique, tandis que les données sont stockées dans le contrat de stockage.
 
@@ -58,7 +58,7 @@ L'utilisation de cette méthode de mise à niveau nécessite la mise à jour de 
 
 La méthode de séparation des données est sans doute plus facile à mettre en œuvre par rapport à la migration de contrat. Cependant, vous devrez gérer plusieurs contrats et mettre en œuvre des systèmes d'autorisation complexes pour protéger les contrats intelligents contre les mises à jour malveillantes.
 
-### Mécanisme de mise à jour n°3 : méthodes Proxy {#proxy-patterns}
+### Mécanisme de mise à jour n°3 : méthodes Proxy \{#proxy-patterns}
 
 La méthode proxy utilise également la séparation des données pour conserver la logique de travail et les données dans des contrats distincts. Cependant, avec la méthode proxy, le contrat de stockage (appelé proxy) appelle le contrat logique pendant l'exécution du code. C'est l'inverse de la méthode de séparation des données, où le contrat de logique appelle le contrat de stockage.
 
@@ -88,7 +88,7 @@ Les méthodes de proxy sont une méthode populaire pour mettre à jour les contr
 
 [En savoir plus sur la méthode Proxy](https://blog.openzeppelin.com/proxy-patterns/).
 
-### Mécanisme de mise à jour n°4 : méthode Stratégique {#strategy-pattern}
+### Mécanisme de mise à jour n°4 : méthode Stratégique \{#strategy-pattern}
 
 Cette technique est influencée par la [stratégie](https://en.wikipedia.org/wiki/Strategy_pattern), qui encourage à créer des programmes logiciels qui interagissent avec d'autres programmes pour implémenter des fonctionnalités spécifiques. Appliquer le modèle de stratégie au développement d'Ethereum signifierait construire un contrat intelligent qui appelle des fonctions d'autres contrats.
 
@@ -100,7 +100,7 @@ Bien qu'il soit similaire au modèle de proxy évoqué précédemment, le modèl
 
 Le principal inconvénient de ce modèle est qu'il n'est utile que pour le déploiement de mises à jour mineures. De plus, si le contrat principal est compromis (par exemple, par un piratage), vous ne pouvez pas utiliser cette méthode de mise à jour.
 
-### Mécanisme de mise à jour n°5 : méthode diamant {#diamond-pattern}
+### Mécanisme de mise à jour n°5 : méthode diamant \{#diamond-pattern}
 
 Le modèle de diamant peut être considéré comme une amélioration du modèle de proxy. Le modèle de diamant diffère des modèles de proxy car le contrat proxy de diamant peut déléguer des appels de fonction à plus d'un contrat logique.
 
@@ -118,7 +118,7 @@ Le modèle de mise à jour en diamant présente plusieurs avantages par rapport 
 
 [En savoir plus sur la méthode diamant](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
-## Avantages et inconvénients de la mise à jour des contrats intelligents {#pros-and-cons-of-upgrading-smart-contracts}
+## Avantages et inconvénients de la mise à jour des contrats intelligents \{#pros-and-cons-of-upgrading-smart-contracts}
 
 | Avantages                                                                                                                                                                      | Inconvénients                                                                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ Le modèle de mise à jour en diamant présente plusieurs avantages par rapport 
 | Les mises à jour des contrats donnent aux développeurs une plus grande marge de manœuvre pour expérimenter différentes fonctionnalités et améliorer les DApps au fil du temps. | La possibilité d'améliorer les contrats intelligents peut encourager les développeurs à lancer des projets plus rapidement sans faire preuve de diligence durant la phase de développement.     |
 |                                                                                                                                                                                | Un contrôle d'accès non sécurisé ou une centralisation dans les contrats intelligents peuvent permettre à des acteurs malveillants d'effectuer plus facilement des mises à jour non autorisées. |
 
-## Considérations pour la mise à jour des contrats intelligents {#considerations-for-upgrading-smart-contracts}
+## Considérations pour la mise à jour des contrats intelligents \{#considerations-for-upgrading-smart-contracts}
 
 1. Utilisez des mécanismes de contrôle d'accès/autorisation sécurisés pour empêcher les mises à niveau non autorisées de contrats intelligents, en particulier si vous utilisez des modèles proxy, des modèles stratégiques ou une séparation des données. Un exemple est de restreindre l'accès à la fonction de mise à niveau, de sorte que seul le propriétaire du contrat puisse l'appeler.
 
@@ -142,21 +142,21 @@ Le modèle de mise à jour en diamant présente plusieurs avantages par rapport 
 
 Les timelocks donnent aux utilisateurs un certain temps pour quitter le système s'ils sont en désaccord avec un changement proposé (par exemple, une mise à jour de la logique ou de nouveaux barèmes tarifaires). Sans timelocks, les utilisateurs doivent faire confiance aux développeurs pour ne pas mettre en œuvre des changements arbitraires dans un contrat intelligent sans préavis. L'inconvénient est que les timelocks limitent la capacité à corriger rapidement les vulnérabilités.
 
-## Ressources {#resources}
+## Ressources \{#resources}
 
 **OpenZeppelin Upgrades Plugins - _Une suite d'outils pour déployer et sécuriser des contrats intelligents évolutifs._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Documentation](https://docs.openzeppelin.com/upgrades)
 
-## Tutoriels {#tutorials}
+## Tutoriels \{#tutorials}
 
 - [Mettre à jour vos contrats intelligents | Tutoriel YouTube Tutorial](https://www.youtube.com/watch?v=bdXJmWajZRY) Par Patrick Collins
 - [Tutoriel de migration des contrats intelligents Ethereum](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) par Austin Griffith
 - [Utilisation du modèle proxy UUPS pour mettre à jour les contrats intelligents](https://blog.logrocket.com/author/praneshas/) par Pranesh A.S
 - [Tutoriel Web3 : Écrire un contrat intelligent évolutif (proxy) en utilisant OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) par fangjun.eth
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [L'état des mises à jour des contrats intelligents](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) par Santiago Palladino
 - [Plusieurs façons de mettre à jour un contrat intelligent Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Blog Crypto Market Pool

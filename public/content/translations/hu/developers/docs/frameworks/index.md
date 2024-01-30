@@ -4,7 +4,7 @@ description: Fedezd fel a keretrendszerek tulajdonságait és hasonlítsd össze
 lang: hu
 ---
 
-## Bevezetés a keretrendszerekbe {#introduction-to-frameworks}
+## Bevezetés a keretrendszerekbe \{#introduction-to-frameworks}
 
 Egy teljes értékű dapp fejlesztése több technológiát is igényel. A szoftver keretrendszerek sok szükséges funkciót tartalmaznak, vagy egyszerű plugin rendszereket biztosítanak, melyek segítenek kiválasztani a kívánt eszközt.
 
@@ -16,11 +16,11 @@ A keretrendszerek olyan dobozon-kívüli funkciókat kínálnak, melyekkel:
 - Ethereum hálózatokhoz és szerződések telepítésére való konfiguráció, legyen az helyileg futó instance vagy valamelyik publikus Ethereum hálózat.
 - Decentralizált app elosztás - IPFS-hez hasonló tárhely integrációk.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezetés a [dappokba](/developers/docs/dapps/) és a [Ethereum stack](/developers/docs/ethereum-stack/) cikkeket.
 
-## Elérhető keretrendszerek {#available-frameworks}
+## Elérhető keretrendszerek \{#available-frameworks}
 
 **Foundry** – **_A Foundry egy gyors, hordozható és moduláris eszközrendszer az Ethereum alkalmazásfejlesztésre._**
 
@@ -106,10 +106,10 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Közösségi Fórum](https://forum.openzeppelin.com/c/support/17)
 - **Az OpenZeppelin SDK fejlesztése befejeződött**
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [Helyi fejlesztői környezet felállítása](/developers/local-environment/)

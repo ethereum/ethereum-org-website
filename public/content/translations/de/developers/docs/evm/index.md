@@ -8,11 +8,11 @@ Die physische Überschreibung der EVM kann nicht auf dieselbe Weise beschrieben 
 
 Das Ethereum-Protokoll selbst dient ausschließlich dem Zweck, den kontinuierlichen, ununterbrochenen und unveränderlichen Betrieb dieser speziellen Zustandsmaschine aufrechtzuerhalten. Es ist die Umgebung, in der alle Ethereum-Konten und Smart Contracts leben. Bei jedem Block in der Kette hat Ethereum genau einen "kanonischen" Zustand und die EVM definiert die Regeln für die Berechnung eines neuen gültigen Zustands von Block zu Block.
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Um den EVM zu verstehen, sind ein paar grundlegende Kenntnisse der gängigen Informatikterminologie wie [Bytes](https://wikipedia.org/wiki/Byte), [Speicher](https://wikipedia.org/wiki/Computer_memory) und [Stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) notwendig. Es wäre auch hilfreich, wenn Sie sich mit Kryptografie-/Blockchain-Konzepten wie [Hash-Funktionen](https://wikipedia.org/wiki/Cryptographic_hash_function) und dem [Merkle-Baum](https://wikipedia.org/wiki/Merkle_tree) auskennen.
 
-## Vom Ledger zur Zustandsmaschine {#from-ledger-to-state-machine}
+## Vom Ledger zur Zustandsmaschine \{#from-ledger-to-state-machine}
 
 Die Analogie eines 'verteilten Schalters' wird oft verwendet, um Blockchains wie Bitcoin zu beschreiben, die eine dezentrale Währung mit grundlegenden Tools der Kryptographie ermöglichen. Der Ledger führt eine Aufzeichnung von Aktivitäten, die sich an eine Reihe von Regeln halten müssen, die wiederum bestimmen, welche Aktionen erfolgen bzw. nicht erfolgen können, um den Ledger zu verändern. Zum Beispiel kann eine Bitcoin-Adresse nicht mehr Bitcoin ausgeben, als sie zuvor erhalten hat. Diese Regeln untermauern alle Transaktionen auf Bitcoin und vielen anderen Blockchains.
 
@@ -20,7 +20,7 @@ Während Ethereum seine eigene native Kryptowährung (Ether) hat, die fast genau
 
 ![Ein Diagramm, das die Funktionsweise eines Kontos zeigt](./evm.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Ethereum-Zustandsübergangsfunktion {#the-ethereum-state-transition-function}
+## Ethereum-Zustandsübergangsfunktion \{#the-ethereum-state-transition-function}
 
 Die EVM verhält sich wie eine mathematische Funktion: Mit einer Eingabe, erzeugt sie eine deterministische Ausgabe. Folglich ist es sehr hilfreich, Ethereum formaler als eine **Zustandsübergangsfunktion** enthaltend zu beschreiben:
 
@@ -30,17 +30,17 @@ Y(S, T)= S'
 
 Bei einem alten gültigen Zustand `(S)` und einem neuen Satz gültiger Transaktionen `(T)` erzeugt die Ethereum-Statusübergangsfunktion `Y(S, T)` einen neuen gültigen Ausgabezustand `S'`.
 
-### Zustand {#state}
+### Zustand \{#state}
 
 Im Rahmen von Ethereum ist der Zustand eine enorme Datenstruktur, die [ modifizierte Merkle-Patricia-Trie](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/) genannt wird, die alle [Konten](/developers/docs/accounts/) durch Hashes verbunden hält und mit einem einzigen Stamm-Hash in der Blockchain abrufbar ist.
 
-### Transaktionen {#transactions}
+### Transaktionen \{#transactions}
 
 Transaktionen sind kryptographisch signierte Anweisungen von Konten. Es gibt zwei Arten von Transaktionen: solche, die zu Nachrichtenanrufen führen, und solche, die zur Erstellung von Verträgen führen.
 
 Die Erstellung von Verträgen führt zur Erstellung eines neuen Vertragskontos mit zusammengestelltem [Smart-Contract](/developers/docs/smart-contracts/anatomy/)-Bytecode. Immer wenn ein anderes Konto einen Nachrichtenaufruf an diesen Vertrag stellt, führt es seinen Bytecode aus.
 
-## EVM-Anweisungen {#evm-instructions}
+## EVM-Anweisungen \{#evm-instructions}
 
 Die EVM wird als [Stackmaschine](https://wikipedia.org/wiki/Stack_machine) mit einer Tiefe von 1024 Artikeln ausgeführt. Jedes Element ist ein 256-Bit-Wort, das für die einfache Verwendung mit 256-Bit-Kryptographie (wie Keccak-256-Hashes oder secp256k1-Signaturen) gewählt wurde.
 
@@ -52,7 +52,7 @@ Kompilierter Smart-Contract-Bytecode wird als eine Anzahl von EVM-[Opcodes ausge
 
 ![Ein Diagramm, das zeigt, wo Gas im EVM-Betrieb benötigt wird](../gas/gas.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## EVM-Implementierungen {#evm-implementations}
+## EVM-Implementierungen \{#evm-implementations}
 
 Alle Implementierungen der EVM müssen sich nach der im Yellowpaper von Ethereum beschriebenen Spezifikation richten.
 
@@ -65,7 +65,7 @@ Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisio
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Jellopaper aka KEVM: Semantics of EVM in K](https://jellopaper.org/)
@@ -74,6 +74,6 @@ Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisio
 - [Betriebscodes für die Referenzdokumente für die virtuelle Ethereum-Maschine](https://www.evm.codes/)
 - [Eine kurze Einführung in die Dokumentation von Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
-## Verwandte Themen {#related-topics}
+## Verwandte Themen \{#related-topics}
 
 - [Gas](/developers/docs/gas/)

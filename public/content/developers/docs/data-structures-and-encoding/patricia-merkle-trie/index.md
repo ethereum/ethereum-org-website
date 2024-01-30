@@ -13,11 +13,11 @@ A Merkle-Patricia trie is deterministic and cryptographically verifiable: The on
 
 In the near future, Ethereum plans to migrate to a [Verkle Tree](https://ethereum.org/en/roadmap/verkle-trees) structure, which will open up many new possibilities for future protocol improvements. 
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 To better understand this page, it would be helpful to have basic knowledge of [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) and [serialization](https://en.wikipedia.org/wiki/Serialization). This article begins with a description of a basic [radix tree](https://en.wikipedia.org/wiki/Radix_tree), then gradually introduces the modifications necessary for Ethereum's more optimized data structure. 
 
-## Basic radix tries {#basic-radix-tries}
+## Basic radix tries \{##basic-radix-tries}
 
 In a basic radix trie, every node looks as follows:
 
@@ -72,11 +72,11 @@ It is impossible for an attacker to provide a proof of a `(path, value)` pair th
 
 We'll refer to an atomic unit of a radix tree (e.g. a single hex character, or 4 bit binary number) as a "nibble". While traversing a path one nibble at a time, as described above, nodes can maximally refer to 16 children but include a `value` element. We, hence, represent them as an array of length 17. We call these 17-element arrays "branch nodes".
 
-## Merkle Patricia Trie {#merkle-patricia-trees}
+## Merkle Patricia Trie \{##merkle-patricia-trees}
 
 Radix tries have one major limitation: they are inefficient. If you want to store one `(path, value)` binding where the path, like in Ethereum, is 64 characters long (the number of nibbles in `bytes32`), we will need over a kilobyte of extra space to store one level per character, and each lookup or delete will take the full 64 steps. The Patricia trie introduced in the following solves this issue.
 
-### Optimization {#optimization}
+### Optimization \{##optimization}
 
 A node in a Merkle Patricia trie is one of the following:
 
@@ -93,7 +93,7 @@ This above optimization, however, introduces ambiguity.
 
 When traversing paths in nibbles, we may end up with an odd number of nibbles to traverse, but because all data is stored in `bytes` format. It is not possible to differentiate between, for instance, the nibble `1`, and the nibbles `01` (both must be stored as `<01>`). To specify odd length, the partial path is prefixed with a flag.
 
-### Specification: Compact encoding of hex sequence with optional terminator {#specification}
+### Specification: Compact encoding of hex sequence with optional terminator \{##specification}
 
 The flagging of both _odd vs. even remaining partial path length_ and _leaf vs. extension node_ as described above reside in the first nibble of the partial path of any 2-item node. They result in the following:
 
@@ -162,7 +162,7 @@ Here is the extended code for getting a node in the Merkle Patricia trie:
         return get_helper(node,path2)
 ```
 
-### Example Trie {#example-trie}
+### Example Trie \{##example-trie}
 
 Suppose we want a trie containing four path/value pairs `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
@@ -189,7 +189,7 @@ When one node is referenced inside another node, what is included is `H(rlp.enco
 
 Note that when updating a trie, one needs to store the key/value pair `(keccak256(x), x)` in a persistent lookup table _if_ the newly-created node has length >= 32. However, if the node is shorter than that, one does not need to store anything, since the function f(x) = x is reversible.
 
-## Tries in Ethereum {#tries-in-ethereum}
+## Tries in Ethereum \{##tries-in-ethereum}
 
 All of the merkle tries in Ethereum's execution layer use a Merkle Patricia Trie.
 
@@ -199,11 +199,11 @@ From a block header there are 3 roots from 3 of these tries.
 2.  transactionsRoot
 3.  receiptsRoot
 
-### State Trie {#state-trie}
+### State Trie \{##state-trie}
 
 There is one global state trie, and it is updated every time a client processes a block. In it, a `path` is always: `keccak256(ethereumAddress)` and a `value` is always: `rlp(ethereumAccount)`. More specifically an ethereum `account` is a 4 item array of `[nonce,balance,storageRoot,codeHash]`. At this point, it's worth noting that this `storageRoot` is the root of another patricia trie:
 
-### Storage Trie {#storage-trie}
+### Storage Trie \{##storage-trie}
 
 Storage trie is where _all_ contract data lives. There is a separate storage trie for each account. To retrieve values at specific storage positions at a given address the storage address, integer position of the stored data in the storage, and the block ID are required. These can then be passed as arguments to the `eth_getStorageAt` defined in the JSON-RPC API, e.g. to retrieve the data in storage slot 0 for address `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
@@ -239,7 +239,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Note: The `storageRoot` for an Ethereum account is empty by default if it's not a contract account.
 
-### Transactions Trie {#transaction-trie}
+### Transactions Trie \{##transaction-trie}
 
 There is a separate transactions trie for every block, again storing `(key, value)` pairs. A path here is: `rlp(transactionIndex)` which represents the key that corresponds to a value determined by:
 
@@ -252,13 +252,13 @@ else:
 
 More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
-### Receipts Trie {#receipts-trie}
+### Receipts Trie \{##receipts-trie}
 
 Every block has its own Receipts trie. A `path` here is: `rlp(transactionIndex)`. `transactionIndex` is its index within the block it's mined. The receipts trie is never updated. Similar to the Transactions trie, there are current and legacy receipts. To query a specific receipt in the Receipts trie, the index of the transaction in its block, the receipt payload and the transaction type are required. The Returned receipt can be of type `Receipt` which is defined as the concatenation of `TransactionType` and `ReceiptPayload` or it can be of type `LegacyReceipt` which is defined as `rlp([status, cumulativeGasUsed, logsBloom, logs])`.
 
 More information on this can be found in the [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) documentation.
 
-## Further Reading {#further-reading}
+## Further Reading \{##further-reading}
 
 - [Modified Merkle Patricia Trie — How Ethereum saves a state](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [Merkling in Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

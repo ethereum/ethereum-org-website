@@ -8,11 +8,11 @@ Oráculos são feeds de dados que trazem dados de fontes de dados fora da blockc
 
 Dar aos contratos inteligentes a capacidade de executar usando entradas de dados fora da cadeia aumenta o valor dos aplicativos descentralizados. Por exemplo, os mercados de previsão descentralizados dependem de oráculos para fornecer informações sobre os resultados com os quais podem validar as previsões do usuário. Suponha que Alice aposte 20 ETH em quem se tornará o próximo presidente americano. Nesse caso, o dapp do mercado de previsão precisa de um oráculo para confirmar os resultados das eleições e determinar se Alice é elegível para um pagamento.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Esta página assume que o leitor está familiarizado com os fundamentos do Ethereum, incluindo [nós](/developers/docs/nodes-and-clients/), [mecanismos de consenso](/developers/docs/consensus-mechanisms/) e a [EVM](/developers/docs/evm/). Você também deve ter uma boa compreensão de [contratos inteligentes](/developers/docs/smart-contracts/) e [anatomia de contratos inteligentes](/developers/docs/smart-contracts/anatomy/), especialmente de [eventos](/glossary/#events).
 
-## O que é um oráculo blockchain? {#what-is-a-blockchain-oracle}
+## O que é um oráculo blockchain? \{#what-is-a-blockchain-oracle}
 
 Oráculos são aplicativos que fornecem, verificam e transmitem informações externas (ou seja, informações armazenadas fora da cadeia) para contratos inteligentes em execução na blockchain. Além de “puxar” dados off-chain e transmiti-los no Ethereum, os oráculos também podem “enviar” informações da blockchain para sistemas externos. Um exemplo deste último poderia ser um oráculo que desbloqueia um bloqueio de contrato inteligente assim que o usuário envia a taxa por meio de uma transação Ethereum.
 
@@ -20,7 +20,7 @@ Oráculos atuam como uma "ponte" conectando contratos inteligentes em blockchain
 
 Oráculos diferem com base na fonte de dados (uma ou várias fontes), modelos de confiança (centralizados ou descentralizados) e arquitetura do sistema (leitura imediata, publicação-assinatura e solicitação-resposta). Também podemos distinguir entre oráculos baseados em se eles recuperam dados externos para uso por contratos em cadeia (oráculos de entrada), enviam informações da blockchain para os aplicativos fora de cadeia (oráculos de saída) ou executam tarefas computacionais fora de cadeia (oráculos computacionais).
 
-## Por que os contratos inteligentes precisam de oráculos? {#why-do-smart-contracts-need-oracles}
+## Por que os contratos inteligentes precisam de oráculos? \{#why-do-smart-contracts-need-oracles}
 
 A maioria dos desenvolvedores vê os contratos inteligentes como simples pedaços de código rodando em endereços específicos na blockchain. No entanto uma visão mais geral [dos contratos inteligentes](/smart-contracts/) é que eles são programas de software autoexecutáveis capazes de forçar acordos entre as partes uma vez que as condições específicas sejam cumpridas, o que explica o termo "contratos inteligentes".
 
@@ -42,7 +42,7 @@ Para fazer isso, um oráculo é normalmente composto de um contrato inteligente 
 
 Essencialmente, um oráculo da blockchain preenche a lacuna de informações entre a blockchain e o ambiente externo, criando “contratos inteligentes híbridos”. Um contrato inteligente híbrido é aquele que funciona baseado em uma combinação de código de contrato on-chain e infraestrutura off-chain. Os mercados de previsão descentralizados, descritos na introdução, são um excelente exemplo de contratos inteligentes híbridos. Outros exemplos podem incluir contratos inteligentes de seguro de colheitas que pagam quando um conjunto de oráculos determina que certos fenômenos climáticos ocorreram.
 
-## Qual é o problema do oráculo? {#the-oracle-problem}
+## Qual é o problema do oráculo? \{#the-oracle-problem}
 
 É fácil fornecer aos contratos inteligentes acesso a dados off-chain, contando com uma entidade (ou várias entidades) para introduzir informações extrínsecas à blockchain, armazenando os dados no corpo de uma transação. Mas isso traz novos problemas:
 
@@ -60,9 +60,9 @@ Diferentes oráculos diferem na sua abordagem para resolver o problema do orácu
 
 3. **Compatibilidade de incentivos**: um oráculo deve incentivar provedores de dados off-chain a enviar informações corretas para contratos inteligentes. A compatibilidade de incentivo envolve _atribuição_ e _responsabilidade_. A atribuição permite correlacionar um pedaço da informação externa ao seu provedor, enquanto a responsabilidade vincula os provedores de dados às informações que eles fornecem, de modo que podem ser recompensados ou penalizados com base na qualidade das informações fornecidas.
 
-## Como funciona um serviço de oráculo na blockchain? {#how-does-a-blockchain-oracle-service-work}
+## Como funciona um serviço de oráculo na blockchain? \{#how-does-a-blockchain-oracle-service-work}
 
-### Usuários {#users}
+### Usuários \{#users}
 
 Usuários são entidades (ou seja, contratos inteligentes) que precisam de informação externa à blockchain para completar ações específicas. O fluxo de trabalho básico de um serviço oráculo começa com o usuário enviando uma requisição de dados para o contrato oracle. Os pedidos de dados geralmente respondem a algumas ou todas as seguintes perguntas:
 
@@ -76,7 +76,7 @@ Usuários são entidades (ou seja, contratos inteligentes) que precisam de infor
 
 5. Qual método deve ser implementado na filtragem de submissões e agregações dos relatórios em um único valor?
 
-### Contrato de oráculo {#oracle-contract}
+### Contrato de oráculo \{#oracle-contract}
 
 O contrato de um oráculo é o componente on-chain para o serviço do oráculo: ele escuta solicitações de dados de outros contratos, retransmite consultas de dados para nós oráculos e transmite dados retornados para contratos de clientes. Este contrato também pode executar alguma computação sobre os pontos de dados retornados para produzir um valor agregado que envia ao contrato solicitante.
 
@@ -196,7 +196,7 @@ contract Oracle {
 }
 ```
 
-### Nós oráculos {#oracle-nodes}
+### Nós oráculos \{#oracle-nodes}
 
 O nó oráculo é o componente off-chain de serviço do oráculo: ele extrai as informações de fontes externas, como APIs hospedadas em servidores de terceiros, e as coloca on-chain para consumo por contratos inteligentes. Os nós oráculos escutam eventos do contrato oráculo on-chain e prosseguem para completar a tarefa descrita no log.
 
@@ -204,15 +204,15 @@ Uma tarefa comum para nós oráculos é enviar uma solicitação [HTTP GET](http
 
 Os oráculos computacionais também dependem de nós off-chain para executar tarefas computacionais intensivas, o qual seria impraticável de executar on-chain, devido aos custos de gás e aos limites de tamanho do bloco. Por exemplo, o nó oráculo pode ser encarregado de gerar uma figura verificável aleatória (por exemplo, para jogos baseados em blockchain).
 
-## Padrões de projeto em oráculos {#oracle-design-patterns}
+## Padrões de projeto em oráculos \{#oracle-design-patterns}
 
 Oráculos vêm em diferentes tipos, incluindo _leitura imediata_, _publicação-assinatura_ e _solicitação-resposta_, com os dois últimos sendo os mais populares entre os contratos inteligentes do Ethereum. Abaixo está uma breve descrição dos dois tipos de serviços de oráculos:
 
-### Publicação-assinatura de oráculos {#publish-subscribe-oracles}
+### Publicação-assinatura de oráculos \{#publish-subscribe-oracles}
 
 Um serviço de oráculo baseado em um mecanismo de publicação-assinatura expõe um “feed de dados” que outros contratos podem ler regularmente para obter informações. Neste caso, espera-se que os dados mudem com frequência, portanto, os contratos do cliente devem ouvir as atualizações dos dados no armazenamento do oráculo. Um excelente exemplo é um oráculo que fornece informações sobre o último preço ETH-USD para os usuários.
 
-### Solicitação-resposta de oráculos {#request-response-oracles}
+### Solicitação-resposta de oráculos \{#request-response-oracles}
 
 Uma configuração de solicitação-resposta permite que o contrato do cliente solicite dados arbitrários diferentes daqueles fornecidos por um oráculo de publicação-assinatura. Oráculos de solicitação-resposta são ideais nas seguintes condições:
 
@@ -224,25 +224,25 @@ Embora mais complexos do que os modelos de publicação-assinatura, os oráculos
 
 Os usuários que iniciam consultas de dados devem cobrir o custo de obter informações da fonte off-chain. O contrato do cliente também deve fornecer fundos para cobrir os custos de gás incorridos pelo contrato do oráculo ao retornar a resposta por meio de uma função de callback (função de retorno da chamada) na solicitação.
 
-## Tipos de oráculos {#types-of-oracles}
+## Tipos de oráculos \{#types-of-oracles}
 
-### Oráculos centralizados {#centralized-oracles}
+### Oráculos centralizados \{#centralized-oracles}
 
 Um oráculo centralizado é controlado por uma única entidade responsável por agregar informações off-chain e atualizar os dados do contrato do oráculo conforme solicitado. Os oráculos centralizados são eficientes uma vez que dependem de uma única fonte de verdade. Eles podem até ser preferíveis nos casos em que os conjuntos de dados proprietários são publicados diretamente pelo proprietário com uma assinatura amplamente aceita. No entanto, usar um oráculo centralizado traz vários problemas.
 
-#### Garantias de baixa exatidão {#low-correctness-guarantees}
+#### Garantias de baixa exatidão \{#low-correctness-guarantees}
 
 Com oráculos centralizados, não há como confirmar se as informações prestadas estão corretas ou não. O provedor oracle pode ser "conceituado", mas isso não elimina a possibilidade de alguém se tornar desonesto ou um hacker adulterar o sistema. Se o oráculo se tornar corrompido, os contratos inteligentes serão executados com base em dados ruins.
 
-#### Baixa disponibilidade {#poor-availability}
+#### Baixa disponibilidade \{#poor-availability}
 
 Os oráculos centralizados não garantem sempre disponibilizar dados off-chain para outros contratos inteligentes. Se o provedor decidir desligar o serviço ou um hacker sequestrar o componente off-chain do oráculo, seu contrato inteligente correrá o risco de um ataque de negação de serviço (DoS).
 
-#### Incentivo insuficiente de compatibilidade {#poor-incentive-compatibility}
+#### Incentivo insuficiente de compatibilidade \{#poor-incentive-compatibility}
 
 Oráculos centralizados muitas vezes têm incentivos mal projetados ou inexistentes para que o provedor de dados envie informações precisas/inalteradas. Pagar o oráculo por seus serviços pode encorajar um comportamento honesto, mas isso pode não ser suficiente. Com contratos inteligentes controlando enormes quantidades de valor, a recompensa pela manipulação de dados do oráculo é maior do que nunca.
 
-### Oráculos descentralizados {#decentralized-oracles}
+### Oráculos descentralizados \{#decentralized-oracles}
 
 Os oráculos descentralizados são concebidos para superar as limitações dos oráculos centralizados, eliminando pontos únicos de fracasso. Um serviço oráculo descentralizado inclui vários participantes em uma rede peer-to-peer que formam consenso sobre dados off-chain antes de enviá-los para um contrato inteligente.
 
@@ -250,11 +250,11 @@ Um oráculo descentralizado deveria (idealmente) ser sem permissão, sem confian
 
 O uso de oráculos descentralizados vem com os seguintes benefícios:
 
-### Garantias de alta exatidão {#high-correctness-guarantees}
+### Garantias de alta exatidão \{#high-correctness-guarantees}
 
 Oráculos descentralizados tentam alcançar a exatidão dos dados utilizando diferentes abordagens. Isso inclui o uso de provas de autenticidade e integridade das informações retornadas e a exigência de que várias entidades concordem coletivamente com a validade dos dados off-chain.
 
-#### Provas de autenticidade {#authenticity-proofs}
+#### Provas de autenticidade \{#authenticity-proofs}
 
 As provas de autenticidade são mecanismos de criptografia que permitem a verificação independente da informação recuperada de fontes externas. Estas provas podem validar a fonte da informação e detectar possíveis alterações nos dados após a recuperação.
 
@@ -266,7 +266,7 @@ Exemplos de provas de autenticidade incluem:
 
 Certas classes de oráculos descentralizados exigem que os operadores de nós oráculos forneçam atestados TEE. Isto confirma para um usuário que o operador do nó está executando uma instância de cliente oráculo em um ambiente de execução confiável. TEEs impedem que processos externos alterem ou leiam o código e os dados de um aplicativo, portanto, estes atestados provam que o nó oráculo manteve as informações intactas e confidenciais.
 
-#### Validação de informações baseadas em consenso {#consensus-based-validation-of-information}
+#### Validação de informações baseadas em consenso \{#consensus-based-validation-of-information}
 
 Os oráculos centralizados dependem de uma única fonte de verdade ao fornecer dados para contratos inteligentes, que introduz a possibilidade de publicar informações imprecisas. Oráculos descentralizados resolvem este problema confiando em vários nós oráculos para consultar informações off-chain. Ao comparar dados de múltiplas fontes, os oráculos descentralizados reduzem o risco de passar informações inválidas para contratos on-chain.
 
@@ -292,7 +292,7 @@ Outros exemplos de oráculos que usam mecanismos de ponto de Schelling incluem [
 
 Os mecanismos de ponto de Schelling são atrativos porque minimizam a pegada on-chain (apenas uma transação precisa ser enviada) enquanto garantem a descentralização. O último é possível porque os nós devem aprovar a lista de respostas submetidas antes que ela seja introduzida no algoritmo que produz o valor médio/mediano.
 
-### Disponibilidade {#availability}
+### Disponibilidade \{#availability}
 
 Serviços de oráculo descentralizados garantem uma elevada disponibilidade de dados off-chain para contratos inteligentes. Isso é conseguido através da descentralização tanto da fonte de informação off-chain como dos nós responsáveis pela transferência da informação on-chain.
 
@@ -300,7 +300,7 @@ Isto garante tolerância a falhas, uma vez que o contrato do oráculo pode depen
 
 Também é possível que os oráculos baseados em stake consigam cortar operadores de nó que não respondam rapidamente a solicitações de dados. Isto incentiva significativamente os nós oráculos a investirem em infraestruturas tolerantes a falhas e fornecerem dados em tempo hábil.
 
-### Boa compatibilidade com incentivos {#good-incentive-compatibility}
+### Boa compatibilidade com incentivos \{#good-incentive-compatibility}
 
 Oráculos descentralizados implementam vários designs de incentivo para evitar o comportamento [bizantino](https://en.wikipedia.org/wiki/Byzantine_fault) entre os nós oráculos. Especificamente, eles alcançam a _atribuibilidade_ e _responsabilidade_:
 
@@ -308,11 +308,11 @@ Oráculos descentralizados implementam vários designs de incentivo para evitar 
 
 2. Os oráculos descentralizados, conforme explicado anteriormente, podem exigir que os nós façam stake confiando somente na verdade dos dados que eles submetem. Se a reivindicação é confirmada, esse staking pode ser restituído juntamente com recompensas por um serviço honesto. Mas também pode ser reduzido no caso de a informação ser incorreta, o que impões certa responsabilização.
 
-## Aplicações de oráculos em contratos inteligentes {#applications-of-oracles-in-smart-contracts}
+## Aplicações de oráculos em contratos inteligentes \{#applications-of-oracles-in-smart-contracts}
 
 Os seguintes são casos de uso comuns para oráculos no Ethereum:
 
-### Como recuperar dados financeiros {#retrieving-financial-data}
+### Como recuperar dados financeiros \{#retrieving-financial-data}
 
 As aplicações de [finanças descentralizadas](/defi/) (DeFi) permitem conceder empréstimos, pedir empréstimos e fazer trading de ativos. Tudo isso peer-to-peer. Isto muitas vezes requer obter diferentes informações relacionadas a finanças, incluindo dados de taxa de exchanges (para calcular o valor fiat de criptomoedas ou comparar preços de dois tokens) e dados de mercados de capital (para calcular o valor de ativos tokenizados, tais como ouro ou dólar americano).
 
@@ -357,7 +357,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Geração aleatória verificável {#generating-verifiable-randomness}
+### Geração aleatória verificável \{#generating-verifiable-randomness}
 
 Certas aplicações da blockchain, como jogos baseados em blockchain ou esquemas de loteria, requerem um alto nível de imprevisibilidade e aleatoriedade para funcionar efetivamente. No entanto, a execução determinística de blockchains elimina qualquer fonte de aleatoriedade.
 
@@ -367,13 +367,13 @@ A abordagem habitual é usar funções criptográficas pseudoaleatórias, como o
 
 Oráculos projetados para computação off-chain resolvem esse problema gerando com segurança resultados aleatórios off-chain que eles emitem on-chain juntamente com provas criptográficas que atestam a imprevisibilidade do processo. Um exemplo é [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/) (função aleatória verificável), que é um gerador de números aleatórios (RNG, pela sigla em inglês) com prova verificável e inviolável útil para a construção de contratos inteligentes confiáveis para aplicações que dependem de resultados imprevisíveis.
 
-### Como obter resultados para eventos {#getting-outcomes-for-events}
+### Como obter resultados para eventos \{#getting-outcomes-for-events}
 
 Com oráculos, é fácil criar contratos inteligentes que respondam a eventos do mundo real. Os serviços de oráculo tornam isso possível, permitindo que os contratos se conectem a APIs externas através de componentes off-chain e consumam informações dessas fontes de dados. Por exemplo, o dapp de previsão mencionado anteriormente pode solicitar um oráculo para retornar resultados eleitorais de uma fonte confiável off-chain (por exemplo, a Associated Press).
 
 O uso de oráculos para recuperar dados baseados em resultados do mundo real permite outros novos casos de uso, incluindo aplicações de seguro descentralizadas. Um contrato inteligente de seguro que será pago aos usuários precisará de informações precisas (por exemplo, dados meteorológicos, relatórios de desastres, etc.) para funcionar eficazmente.
 
-### Como automatizar contratos inteligentes {#automating-smart-contracts}
+### Como automatizar contratos inteligentes \{#automating-smart-contracts}
 
 Contrariamente às descrições populares, os contratos inteligentes não funcionam automaticamente. Uma conta de propriedade externa (EOA, pela sigla em inglês), ou outra conta de contrato, deve acionar as funções certas para executar o código do contrato. Na maioria dos casos, a maior parte das funções do contrato são públicas e podem ser invocadas pelas EOAs e por outros contratos.
 
@@ -385,7 +385,7 @@ Algumas redes descentralizadas de oráculos oferecem serviços de automação, q
 
 Um exemplo é a [Keeper Network](https://chain.link/keepers) da rede Chainlink, que fornece opções para que os contratos inteligentes terceirizem tarefas de manutenção regulares de maneira minimizada e descentralizada. Leia a [documentação oficial do Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) para obter informações sobre como tornar seu contrato compatível com o Keeper e usar o serviço Upkeep.
 
-## Usar oráculos da blockchain {#use-blockchain-oracles}
+## Usar oráculos da blockchain \{#use-blockchain-oracles}
 
 Existem vários aplicativos de oráculos que você pode integrar no seu dapp Ethereum:
 
@@ -403,7 +403,7 @@ Existem vários aplicativos de oráculos que você pode integrar no seu dapp Eth
 
 **[Rede Pyth](https://pyth.network/)** — _A rede Pyth é uma rede de oráculos financeiros internos projetada para publicar dados contínuos do mundo real em cadeia em um ambiente autossustentável, descentralizado e inviolável._
 
-## Leitura Adicional {#further-reading}
+## Leitura Adicional \{#further-reading}
 
 **Artigos**
 

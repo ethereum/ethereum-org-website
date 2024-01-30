@@ -23,13 +23,13 @@ In Teil 2 dieses Tutorials erläutern wir, wie Sie mit diesem Smart Contract ein
 
 Wenn Sie zu irgendeinem Zeitpunkt Fragen haben, melden Sie sich gerne im [Alchemy Discord](https://discord.gg/gWuC7zB) oder rufen Sie die [NFT-API-Dokumentation von Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api).
 
-## Schritt 1: Verbindung mit dem Ethereum-Netzwerk {#connect-to-ethereum}
+## Schritt 1: Verbindung mit dem Ethereum-Netzwerk \{#connect-to-ethereum}
 
 Es gibt eine Reihe von Möglichkeiten, Anfragen an die Ethereum Blockchain zu stellen, der Einfachheit halber verwenden wir ein kostenloses Konto bei [Alchemy](https://alchemy.com/signup/eth), einer Blockchain-Entwicklerplattform und API, die es uns ermöglicht, mit der Ethereum-Chain zu kommunizieren, ohne dass wir unsere eigenen Nodes betreiben müssen.
 
 In diesem Tutorial werden wir auch die Alchemy-Entwicklertools für die Überwachung und Analyse nutzen, um zu verstehen, was sich hinter unserer Smart-Contract-Bereitstellung verbirgt. Wenn Sie noch kein Alchemy-Konto haben, können Sie sich [hier](https://alchemy.com/signup/eth) kostenlos registrieren.
 
-## Schritt 2: App (und den API-Schlüssel) erstellen {#make-api-key}
+## Schritt 2: App (und den API-Schlüssel) erstellen \{#make-api-key}
 
 Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel generieren, indem Sie eine App erstellen. Dadurch können wir Anfragen an das Ropsten-Testnet stellen. In [diesem Leitfaden](https://docs.alchemyapi.io/guides/choosing-a-network) erfahren Sie mehr über Testnetzwerke.
 
@@ -43,7 +43,7 @@ Sobald Sie ein Alchemy-Konto erstellt haben, können Sie einen API-Schlüssel ge
 
 3. Klicken Sie auf “Create app” (App erstellen) und schon sind Sie fertig. Die App sollte in der untenstehenden Tabelle erscheinen.
 
-## Schritt 3: Ethereum-Konto (Adresse) erstellen {#create-eth-address}
+## Schritt 3: Ethereum-Konto (Adresse) erstellen \{#create-eth-address}
 
 Zum Versenden und Empfangen von Transaktionen benötigen Sie ein Ethereum-Konto. In diesem Tutorial verwenden wir MetaMask, eine virtuelle Wallet im Browser, mit der Sie Ihre Ethereum-Kontoadresse verwalten können. Wenn Sie mehr über Transaktionen auf Ethereum erfahren möchten, besuchen Sie [diese Seite](/developers/docs/transactions/) von der Ethereum Foundation.
 
@@ -51,11 +51,11 @@ Sie können [hier](https://metamask.io/download.html) MetaMask kostenlos herunte
 
 ![Ropsten als Netzwerk festlegen](./metamask-goerli.png)
 
-## Schritt 4: Ether von einem Faucet hinzufügen {#step-4-add-ether-from-a-faucet}
+## Schritt 4: Ether von einem Faucet hinzufügen \{#step-4-add-ether-from-a-faucet}
 
 Um unseren Smart Contract in das Testnetzwerk integrieren zu können, benötigen wir ein paar Fake-ETH. Um ETH zu erhalten, können Sie zu [FaucETH](https://fauceth.komputing.org) navigieren und Ihre Ropsten-Kontoadresse eingeben. Klicken Sie dort auf "Request funds" (Geld anfordern), wählen Sie im Dropdown-Menü "Ethereum Testnet Ropsten" (Ethereum-Testnet Ropsten) und klicken Sie dann nochmals auf die Schaltfläche "Request funds" (Geld anfordern). Sie sollten kurz darauf ETH in Ihrem MetaMask-Konto sehen.
 
-## Schritt 5: Kontostand überprüfen {#check-balance}
+## Schritt 5: Kontostand überprüfen \{#check-balance}
 
 Um zu überprüfen, ob Sie das Guthaben erhalten haben, stellen wir eine [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)-Anfrage über das [Composer-Tool von Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Das gibt den ETH-Betrag in unserem Wallet wieder. Nachdem Sie die Adresse Ihres MetaMask-Kontos eingegeben und auf “Send Request” (Anforderung senden) geklickt haben, sollten Sie eine Antwort ähnlich der Folgenden erhalten:
 
@@ -65,7 +65,7 @@ Um zu überprüfen, ob Sie das Guthaben erhalten haben, stellen wir eine [eth_ge
 
 Puh! Unser Falschgeld ist da.
 
-## Schritt 6: Projekt initialisieren {#initialize-project}
+## Schritt 6: Projekt initialisieren \{#initialize-project}
 
 Zunächst müssen wir einen Ordner für unser Projekt erstellen. Navigieren Sie zur Befehlszeile und geben Sie Folgendes ein:
 
@@ -103,7 +103,7 @@ Es spielt keine Rolle, wie Sie die Fragen zur Installation beantworten, aber wir
 
 Genehmigen Sie die Datei "package.json" und schon kann es losgehen.
 
-## Schritt 7: [Hardhat](https://hardhat.org/getting-started/#overview) installieren {#install-hardhat}
+## Schritt 7: [Hardhat](https://hardhat.org/getting-started/#overview) installieren \{#install-hardhat}
 
 Hardhat ist eine Entwicklungsumgebung zum Kompilieren, Bereitstellen, Testen und Debuggen Ihrer Ethereum-Software. Es hilft Entwicklern bei der lokalen Erstellung von Smart Contracts und dApps, bevor diese auf der Live-Chain bereitgestellt werden.
 
@@ -113,7 +113,7 @@ Innerhalb unseres my-nft-Projektlaufs:
 
 Auf dieser Seite finden Sie weitere Informationen zur [Installationsanleitung](https://hardhat.org/getting-started/#overview).
 
-## Schritt 8: Hardhat-Projekt erstellen {#create-hardhat-project}
+## Schritt 8: Hardhat-Projekt erstellen \{#create-hardhat-project}
 
 Führen Sie folgeden Befehl in unserem Projektordner aus:
 
@@ -137,7 +137,7 @@ Sie sollten dann eine Willkommensnachricht sehen und die Möglichkeit haben, aus
 
 Darüber wird eine hardhat.config.js-Datei für uns generiert, in der alle Einstellungen für unser Projekt angeben werden (in Schritt 13).
 
-## Schritt 9: Projektordner hinzufügen {#add-project-folders}
+## Schritt 9: Projektordner hinzufügen \{#add-project-folders}
 
 Um unser Projekt zu organisieren, erstellen wir zwei neue Ordner. Navigieren Sie in der Befehlszeile zum Stammverzeichnis Ihres Projekts und geben Sie Folgendes ein:
 
@@ -148,7 +148,7 @@ Um unser Projekt zu organisieren, erstellen wir zwei neue Ordner. Navigieren Sie
 
 - scripts/ ist der Ort, an dem wir Skripte veröffentlichen und mit unseren Smart Contract interagieren.
 
-## Schritt 10: Vertrag schreiben {#write-contract}
+## Schritt 10: Vertrag schreiben \{#write-contract}
 
 Nachdem unsere Umgebung nun eingerichtet ist, kommen wir zu spannenderen Dingen: _Wir schreiben unseren Smart-Contract-Code._
 
@@ -213,7 +213,7 @@ Schließlich haben wir unsere Funktion `mintNFT(address recipient, string memory
 
 `mintNFT` ruft bestimmte Methoden der vererbten ERC-721-Bibliothek auf und gibt eine Zahl zurück, die für die ID des frisch geprägten NFT steht.
 
-## Schritt 11: MetaMask und Alchemy mit ihrem Projekt mit Ihrem Projekt verbinden {#connect-metamask-and-alchemy}
+## Schritt 11: MetaMask und Alchemy mit ihrem Projekt mit Ihrem Projekt verbinden \{#connect-metamask-and-alchemy}
 
 Nachdem wir nun eine MetaMask-Wallet und ein Alchemy-Konto erstellt uns unseren Smart Contract geschrieben haben, ist es an der Zeit, die drei Elemente miteinander zu verbinden.
 
@@ -244,7 +244,7 @@ Um nun die Verbindung mit unserem Code zu erstellen, werden wir diese Variablen 
 Führen Sie keinen Commit für <code>.env</code> aus. Stellen Sie sicher, dass Sie Ihre <code>.env</code>-Datei niemals an andere weitergeben, denn damit würden Sie Ihre geheimen Daten weitergeben. Wenn Sie die Versionskontrolle verwenden, fügen Sie Ihre <code>Env-Datei</code> zu einer Datei <a href="https://git-scm.com/docs/gitignore">gitignore</a> hinzu.
 </InfoBanner>
 
-## Schritt 12: Ethers.js installieren {#install-ethers}
+## Schritt 12: Ethers.js installieren \{#install-ethers}
 
 Ethers.js ist eine Bibliothek, die es einfacher macht, mit Ethereum zu interagieren und Anfragen zu stellen. Dafür schließt sie [Standard-JSON-RPC-Methoden](/developers/docs/apis/json-rpc/) in benutzerfreundlichere Methoden ein.
 
@@ -256,7 +256,7 @@ Geben Sie Folgendes in Ihrem Projektverzeichnis ein:
 
 Im nächsten Schritt benötigen wir auch Ether in unserer hardhat.config.js.
 
-## Schritt 13: hardhat.config.js aktualisieren {#update-hardhat-config}
+## Schritt 13: hardhat.config.js aktualisieren \{#update-hardhat-config}
 
 Wir haben bisher mehrere Abhängigkeiten und Plug-ins hinzugefügt. Jetzt müssen wir hardhat.config.js aktualisieren, damit unser Projekt über alle diese Abhängigkeiten informiert wird.
 
@@ -280,7 +280,7 @@ Aktualisieren Sie Ihre hardhat.config.js so, dass sie wie folgt aussieht:
        },
     }
 
-## Schritt 14: Vertrag kompilieren {#compile-contract}
+## Schritt 14: Vertrag kompilieren \{#compile-contract}
 
 Um sicherzugehen, dass so weit alles funktioniert, sollten wir unseren Vertrag erstellen. Die Aufgabe compile ist eine der integrierten Hardhat-Aufgaben.
 
@@ -290,7 +290,7 @@ Führen Sie folgenden Befehl in der Befehlszeile aus:
 
 Möglicherweise erhalten Sie eine Warnung, dass die SPDX-Lizenzkennung nicht in Quelldatei angegeben sei. Doch darüber brauchen Sie sich keine Sorgen zu machen. Alles andere sieht hoffentlich gut aus. Falls nicht, können Sie jederzeit eine Nachricht im [Alchemy Discord](https://discord.gg/u72VCg3) hinterlassen.
 
-## Schritt 15: Bereitstellungsskript schreiben {#write-deploy}
+## Schritt 15: Bereitstellungsskript schreiben \{#write-deploy}
 
 Nun, da unser Vertrag geschrieben und unsere Konfigurationsdatei einsatzbereit ist, ist es an der Zeit, das Skript zur Bereitstellung des Vertrags zu schreiben.
 
@@ -324,7 +324,7 @@ Eine ContractFactory in ethers.js ist eine Abstraktion, die dazu dient, neue Sma
 
 Mit dem Aufruf von deploy() über eine ContractFactory wird die Bereitstellung gestartet. Zurückgegeben wird eine Referenz, die auf einen Vertrag zeigt. Das ist das Objekt, das eine Methode für jede unserer Smart-Contract-Funktionen enthält.
 
-## Schritt 16: Vertragsbereitstellung {#deploy-contract}
+## Schritt 16: Vertragsbereitstellung \{#deploy-contract}
 
 Nun sind wir endlich bereit, unseren Smart Contract bereitzustellen. Navigieren Sie zurück zu Ihrem Stammverzeichnis und führen Sie Folgendes über die Befehlszeile aus:
 

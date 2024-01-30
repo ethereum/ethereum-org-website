@@ -23,13 +23,13 @@ Alchemy se mândreşte mult că susține cele mai mari nume din spațiul NFT, pr
 
 Desigur, dacă aveți oricând întrebări, nu ezitați să ne contactați pe [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
-## Etapa 1: Conectarea la rețeaua Ethereum {#connect-to-ethereum}
+## Etapa 1: Conectarea la rețeaua Ethereum \{#connect-to-ethereum}
 
 Sunt o mulțime de modalități de a face cereri către blockchain-ul Ethereum, dar pentru a simplifica lucrurile vom folosi un cont gratuit pe [Alchemy](https://dashboard.alchemyapi.io/signup), o platformă de dezvoltare blockchain și un API care ne permite să comunicăm cu lanțul Ethereum fără a fi necesar să ne rulăm propriile noduri.
 
 În acest tutorial vom profita şi de instrumentele de dezvoltare Alchemy pentru monitorizare și analiză și pentru a înțelege ce se întâmplă în culise în timpul implementării contractului nostru inteligent. Dacă nu aveți deja un cont Alchemy, vă puteți înregistra gratuit [aici](https://dashboard.alchemyapi.io/signup).
 
-## Etapa 2: Crearea aplicației (și a cheii API) {#make-api-key}
+## Etapa 2: Crearea aplicației (și a cheii API) \{#make-api-key}
 
 Odată ce v-ați creat un cont Alchemy, puteți să generați o cheie API creând o aplicație. Aceasta ne va permite să facem solicitări către rețeaua de testare Ropsten. Consultați [acest ghid](https://docs.alchemyapi.io/guides/choosing-a-network) dacă sunteți curios să aflați mai multe despre rețelele de testare.
 
@@ -43,7 +43,7 @@ Odată ce v-ați creat un cont Alchemy, puteți să generați o cheie API creân
 
 3. Dați clic pe „Create app” (Creați aplicația) și asta e tot! Aplicația dvs. ar trebui să apară în tabelul de mai jos.
 
-## Etapa 3: Crearea unui cont Ethereum (adresă) {#create-eth-address}
+## Etapa 3: Crearea unui cont Ethereum (adresă) \{#create-eth-address}
 
 Avem nevoie de un cont Ethereum pentru a trimite și primi tranzacții. În acest tutorial vom folosi un portofel virtual în browser, MetaMask, pentru a gestiona adresa contului Ethereum. Dacă doriți să înțelegeți mai multe despre cum funcționează tranzacțiile pe Ethereum, consultaţi [această pagină](/developers/docs/transactions/) de la fundația Ethereum.
 
@@ -51,11 +51,11 @@ Puteți descărca și crea un cont MetaMask pe gratis [aici](https://metamask.io
 
 ![Setați Ropsten ca rețeaua dvs.](./metamask-goerli.png)
 
-## Etapa 4: Adăugarea de ether de la un faucet {#step-4-add-ether-from-a-faucet}
+## Etapa 4: Adăugarea de ether de la un faucet \{#step-4-add-ether-from-a-faucet}
 
 Pentru implementarea contractului nostru inteligent în rețeaua de testare, vom avea nevoie de niște ETH fals. Pentru a-l obține, mergeți la [faucetul Ropsten](https://faucet.ropsten.be/), introduceți-vă adresa contului, apoi dați click pe „Trimiteți ETH Ropsten.” În scurt timp ar trebui să vă vedeți ETH-ul în contul dvs. MetaMask!
 
-## Etapa 5: Verificarea soldului {#check-balance}
+## Etapa 5: Verificarea soldului \{#check-balance}
 
 Pentru a ne verifica soldul de două ori, să facem o solicitare [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) folosind [instrumentul compozitor al Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Aceasta va returna suma de ETH în portofelul nostru. După introducerea adresei contului MetaMask și după ce ați dat click pe „Send Request” („Trimiteți solicitarea”), ar trebui să vedeți un răspuns ca acesta:
 
@@ -65,7 +65,7 @@ Pentru a ne verifica soldul de două ori, să facem o solicitare [eth_getBalance
 
 Pfiu! Banii noștri falși sunt toți acolo.
 
-## Etapa 6: Inițializarea proiectului {#initialize-project}
+## Etapa 6: Inițializarea proiectului \{#initialize-project}
 
 Mai întâi va trebui să creem un dosar pentru proiectul nostru. Navigați la linia de comandă și tastați:
 
@@ -103,7 +103,7 @@ Nu este prea important cum răspundeți la întrebările de instalare; iată cum
 
 Aprobați package.json și suntem gata să începem!
 
-## Etapa 7: Instalarea [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
+## Etapa 7: Instalarea [Hardhat](https://hardhat.org/getting-started/#overview) \{#install-hardhat}
 
 Hardhat este un mediu de dezvoltare pentru compilarea, implementarea, testarea și depanarea de software Ethereum. Acesta ajută dezvoltatorii la construirea de contracte inteligente și aplicații dapp la nivel local, înainte de a le implementa în lanțul real.
 
@@ -113,7 +113,7 @@ Hardhat este un mediu de dezvoltare pentru compilarea, implementarea, testarea �
 
 Consultați această pagină pentru mai multe [informații de instalare](https://hardhat.org/getting-started/#overview).
 
-## Etapa 8: Crearea proiectului Hardhat {#create-hardhat-project}
+## Etapa 8: Crearea proiectului Hardhat \{#create-hardhat-project}
 
 În dosarul proiectului nostru, executați:
 
@@ -137,7 +137,7 @@ Consultați această pagină pentru mai multe [informații de instalare](https:/
 
 Aceasta ne va genera un fișier hardhat.config.js, în care vom specifica toate setările proiectului nostru (în etapa 13).
 
-## Etapa 9: Adăugarea dosarelor proiectului {#add-project-folders}
+## Etapa 9: Adăugarea dosarelor proiectului \{#add-project-folders}
 
 Pentru ne menţine proiectul organizat, vom crea două dosare noi. Mergeți în directorul rădăcină al proiectului dvs. și tastaţi în linia de comandă:
 
@@ -148,7 +148,7 @@ Pentru ne menţine proiectul organizat, vom crea două dosare noi. Mergeți în 
 
 - scripts/ este locul unde vom păstra scripturile pentru implementarea și interacțiunea cu contractul nostru inteligent
 
-## Etapa 10: Scrierea contractului nostru {#write-contract}
+## Etapa 10: Scrierea contractului nostru \{#write-contract}
 
 Acum, că mediul nostru este configurat, să trecem la lucruri mai entuziasmante: _scrierea codului contractului nostru inteligent!_
 
@@ -213,7 +213,7 @@ După declarațiile de import, avem contractul nostru inteligent NFT personaliza
 
 `mintNFT` apelează câteva metode din biblioteca ERC-721 moștenită și, în cele din urmă, răspunde printr-un număr care reprezintă ID-ul NFT-ului proaspăt emis.
 
-## Etapa 11: Conectarea MetaMask & Alchemy la proiect {#connect-metamask-and-alchemy}
+## Etapa 11: Conectarea MetaMask & Alchemy la proiect \{#connect-metamask-and-alchemy}
 
 Acum, că am creat un portofel MetaMask, un cont Alchemy și am scris contractul nostru inteligent, este timpul să le conectăm pe cele trei.
 
@@ -240,7 +240,7 @@ Fișierul dvs. „.env” ar trebui să arate acum așa:
 
 Pentru a le conecta cu adevărat la codul nostru, vom face referire la aceste variabile în fișierul nostru hardhat.config.js în etapa 13.
 
-## Etapa 12: Instalarea Ethers.js {#install-ethers}
+## Etapa 12: Instalarea Ethers.js \{#install-ethers}
 
 „Ethers.js” este o bibliotecă ce facilitează interacțiunea cu Ethereum și solicitările către acesta, învelind („wrapping”) [metodele JSON-RPC standard](/developers/docs/apis/json-rpc/) cu metode mai ușor de utilizat.
 
@@ -252,7 +252,7 @@ Hardhat simplifică foarte mult integrarea de [Plugin-uri](https://hardhat.org/p
 
 De asemenea, vom solicita ether în fișierul nostru hardhat.config.js în etapa următoare.
 
-## Etapa 13: Actualizarea hardhat.config.js {#update-hardhat-config}
+## Etapa 13: Actualizarea hardhat.config.js \{#update-hardhat-config}
 
 Până acum am adăugat mai multe dependențe și plugin-uri, acum trebuie să actualizăm hardhat.config.js pentru ca proiectul nostru să știe despre toate acestea.
 
@@ -276,7 +276,7 @@ Actualizați hardhat.config.js pentru a arăta astfel:
        },
     }
 
-## Etapa 14: Compilarea contractului nostru {#compile-contract}
+## Etapa 14: Compilarea contractului nostru \{#compile-contract}
 
 Pentru a fi siguri că totul funcționează până acum, să compilăm contractul nostru. Funcția „compile” este una dintre sarcinile încorporate în „hardhat”.
 
@@ -286,7 +286,7 @@ Din linia de comandă, rulați:
 
 Dacă primiți un mesaj cu privire la indicatorul de licență SPDX care nu este furnizat în fișierul sursă, nu trebuie să vă îngrijorați — sperăm că tot restul arată bine! Dacă nu, puteți oricând să trimiteți un mesaj pe canalul [Discord Alchemy](https://discord.gg/u72VCg3).
 
-## Etapa 15: Scrierea scriptului nostru de implementare {#write-deploy}
+## Etapa 15: Scrierea scriptului nostru de implementare \{#write-deploy}
 
 Odată ce avem contractul nostru scris și fișierul de configurare gata, putem să scriem scriptul de implementare al contractului.
 
@@ -320,7 +320,7 @@ Un ContractFactory este o abstracție utilizată în „ethers.js” pentru a im
 
 Apelarea „deploy()” pe un „ContractFactory” va începe implementarea și va răspunde printr-un „Promise” care va rezolva pe un „Contract”. Acesta este obiectul care are o metodă pentru fiecare dintre funcțiile noastre de contract inteligent.
 
-## Etapa 16: Implementarea contractului nostru {#deploy-contract}
+## Etapa 16: Implementarea contractului nostru \{#deploy-contract}
 
 În sfârșit, suntem gata să implementăm contractul nostru inteligent! Navigați înapoi la rădăcina directorului proiectului dvs. și rulaţi în linia de comandă:
 

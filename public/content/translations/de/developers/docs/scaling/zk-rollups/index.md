@@ -4,13 +4,13 @@ description: Einführung in Zero-Knowledge Rollups
 lang: de
 ---
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Rollups ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
 
 Suchen Sie nach einer anfängerfreundlicheren Einführung? Siehe unsere [Einführung in Layer 2](/layer-2/).
 
-## Zero-Knowledge Rollups {#zk-rollups}
+## Zero-Knowledge Rollups \{#zk-rollups}
 
 **Zero-Knowledge-Rollups (ZK-Rollups)** bündeln (oder „rollen") Hunderte von Überweisungen außerhalb der Kette und erzeugen einen kryptographischen Beweis. Diese Beweise können in Form von SNARKs (succinct non-interactive argument of knowledge) oder STARKs (scalable transparent argument of knowledge) vorliegen. SNARKs und STARKs sind als Gültigkeitsnachweise bekannt und werden auf Layer 1 veröffentlicht.
 
@@ -20,7 +20,7 @@ Bei einem ZK-Rollup gibt es keine Verzögerungen bei der Übertragung von Mittel
 
 Da sie sich auf Layer 2 befinden, können ZK-Rollups optimiert werden, um die Transaktionsgröße weiter zu verringern. Zum Beispiel wird ein Konto durch einen Index und nicht durch eine Adresse repräsentiert, wodurch eine Transaktion von 32 Bytes auf nur 4 Bytes reduziert wird. Transaktionen werden auch als `Calldata` in Ethereum geschrieben, um Gas zu sparen.
 
-### Vor- und Nachteile {#zk-pros-and-cons}
+### Vor- und Nachteile \{#zk-pros-and-cons}
 
 | Vorteile                                                                                                                                  | Kontra                                                                                                                  |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
@@ -28,13 +28,13 @@ Da sie sich auf Layer 2 befinden, können ZK-Rollups optimiert werden, um die Tr
 | Nicht anfällig für wirtschaftliche Angriffe, für die [Optimistische Rollups](#optimistic-pros-and-cons) anfällig sein können.             | Die Validitätsnachweise sind rechenintensiv – für Anwendungen mit geringer Aktivität auf der Blockchain nicht sinnvoll. |
 | Sicher und dezentralisiert, da die Daten, die zur Wiederherstellung des Zustands benötigt werden, auf der Layer-1-Kette gespeichert sind. | Ein Betreiber kann die Reihenfolge der Transaktionen beeinflussen                                                       |
 
-### Eine visuelle Erklärung der ZK-Rollups {#zk-video}
+### Eine visuelle Erklärung der ZK-Rollups \{#zk-video}
 
 Sehen Sie, wie Finematics ZK-Rollups erklärt:
 
 <YouTube id="7pWxCklcNsU" start="406" />
 
-### ZK-Rollups verwenden {#use-zk-rollups}
+### ZK-Rollups verwenden \{#use-zk-rollups}
 
 Es gibt mehrere Implementierungen von ZK-Rollups, die Sie in Ihre dApps integrieren können:
 

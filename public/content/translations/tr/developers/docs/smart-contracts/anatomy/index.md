@@ -6,15 +6,15 @@ lang: tr
 
 Bir akıllı sözleşme Ethereum üzerindeki bir adreste çalışan bir programdır. Bir işlem alındığında yürütülebilen fonksiyonlar ve verilerden oluşurlar. Burada bir akıllı sözleşmenin nelerden oluştuğu hakkında genel bir bakış bulunmaktadır.
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 İlk olarak [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında okuduğunuzdan emin olun. Bu belge, hâlihazırda JavaScript veya Python gibi programlama dillerine aşina olduğunuzu varsayar.
 
-## Veri {#data}
+## Veri \{#data}
 
 Her sözleşme verisi bir lokasyona atanmalıdır: ya `storage` ya da `memory`. Bir akıllı sözleşmede depolamayı değiştirmek pahalıdır, bundan dolayı verinizin nerede yaşayacağını düşünmelisiniz.
 
-### Depolama {#storage}
+### Depolama \{#storage}
 
 Kalıcı veriden depolama olarak bahsedilir ve durum değişkenleri tarafından temsil edilir. Bu değerler kalıcı olarak blok zincirinde depolanır. Sözleşmenin derlendiğinde blok zincirinde ne kadar depolama ihtiyacı duyacağını takip edebilmesi için türünü deklare etmelisiniz.
 
@@ -52,13 +52,13 @@ Daha fazla açıklama için belgelere göz atın:
 - [Vyper türlerini gör](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Solidity türlerini gör](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Bellek {#memory}
+### Bellek \{#memory}
 
 Sadece bir sözleşme fonksiyonunun yürütümü esnasında depolanan değerlere bellek değişkenleri denir. Bunlar blok zincirinde kalıcı şekilde depolanmadıkları için kullanımları çok daha ucuzdur.
 
 [Solidity belgelerinden](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack) EVM'nin nasıl veri depoladığıyla (Depolama, Bellek ve Yığın) ilgili daha fazla bilgi edinin.
 
-### Ortam değişkenleri {#environment-variables}
+### Ortam değişkenleri \{#environment-variables}
 
 Sözleşmenizde tanımladığınız değişkenlere ek olarak, bazı özel global değişkenler bulunmaktadır. Başlıca blok zinciri veya mevcut işlem hakkında bilgi sağlamak için kullanılırlar.
 
@@ -69,7 +69,7 @@ Sözleşmenizde tanımladığınız değişkenlere ek olarak, bazı özel global
 | `block.timestamp` | uint256             | Mevcut blok dönemi zaman damgası   |
 | `msg.sender`      | adres               | Mesajın göndericisi (mevcut çağrı) |
 
-## Fonksiyonlar {#functions}
+## Fonksiyonlar \{#functions}
 
 En basit şekilde, fonksiyonlar gelen işlemlere yanıt olarak bilgi alabilir veya düzenleyebilir.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - `public` olarak deklare edilir, bu da herkesin ona erişebileceği anlamına gelir
 - `view` olarak deklare edilmez, yani sözleşme durumunu değiştirebilir
 
-### Fonksiyonları gör {#view-functions}
+### Fonksiyonları gör \{#view-functions}
 
 Bu fonksiyonlar sözleşmenin verisinin durumunu değiştirmemeye söz verirler. Yaygın örnekler "alıcı" fonksiyonlardır – örnek olarak bunu bir kullanıcının bakiyesini almak için kullanabilirsiniz.
 
@@ -131,7 +131,7 @@ Durumu değiştirme olarak sayılan şeyler:
 7. Alt düzey çağrıları kullanma.
 8. Belirli işlem kodları içeren satır içi tümleşkeler kullanma.
 
-### Yapıcı fonksiyonlar {#constructor-functions}
+### Yapıcı fonksiyonlar \{#constructor-functions}
 
 `constructor` fonksiyonları sadece sözleşme ilk dağıtılığında tek sefer yürütülür. Birçok sınıf odaklı programlama dilinde olan `constructor` gibi, bu fonksiyonlar genellikle durum değişkenlerini belirtilmiş değerlere ilkler.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Yerleşik fonksiyonlar {#built-in-functions}
+### Yerleşik fonksiyonlar \{#built-in-functions}
 
 Sözleşmenizde tanımladığınız değişkenler ve fonksiyonlara ek olarak, bazı özel yerleşik fonksiyonlar bulunmaktadır. En bariz örnek şudur:
 
@@ -167,7 +167,7 @@ Sözleşmenizde tanımladığınız değişkenler ve fonksiyonlara ek olarak, ba
 
 Bunlar sözleşmelerin başka hesaplara ETH göndermesini sağlar.
 
-## Fonksiyon yazmak {#writing-functions}
+## Fonksiyon yazmak \{#writing-functions}
 
 Fonksiyonunuz şunlara ihtiyaç duyar:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Tam bir sözleşme bu şekilde gözükebilir. Burada `constructor` fonksiyonu `dapp_name` değişkeni için bir başlangıç değeri sağlıyor.
 
-## Olaylar ve kayıtlar {#events-and-logs}
+## Olaylar ve kayıtlar \{#events-and-logs}
 
 Olaylar, akıllı sözleşmenizle ön uç tarafından veya başka katılımcı uygulamalarla iletişim kurmanızı sağlar. Bir işlem kazıldığında, akıllı sözleşmeler olay yayınlayabilirler ve blok zincirine ön ucun daha sonra işleyebileceği kayıtlar yazabilirler.
 
-## Açıklamalı örnekler {#annotated-examples}
+## Açıklamalı örnekler \{#annotated-examples}
 
 Bunlar Solidity ile yazılmış bazı örneklerdir. Eğer kodlarla oynamak isterseniz, onlarla [Remix](http://remix.ethereum.org) içinde etkileşime geçebilirsiniz.
 
-### Merhaba dünya {#hello-world}
+### Merhaba dünya \{#hello-world}
 
 ```solidity
 // Specifies the version of Solidity, using semantic versioning.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token {#token}
+### Token \{#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Benzersiz dijital varlık {#unique-digital-asset}
+### Benzersiz dijital varlık \{#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 Akıllı sözleşmelere daha detaylı bir genel bakış için Solidity ve Vyper'ın belgelerine bakın:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [Akıllı sözleşmeler](/developers/docs/smart-contracts/)
 - [Ethereum Sanal Makinesi](/developers/docs/evm/)
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili öğreticiler \{#related-tutorials}
 
 - [Sözleşme boyut limitiyle savaşmak için sözleşmelerin boyutunu azaltma](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Akıllı sözleşmenizin boyutunu küçültmek için bazı pratik ipuçları._
 - [Olaylar ile akıllı sözleşmelerden veri kaydetme](/developers/tutorials/logging-events-smart-contracts/) _– Akıllı sözleşme olaylarına ve onları veri kaydetmek için nasıl kullanabileceğinize bir giriş._

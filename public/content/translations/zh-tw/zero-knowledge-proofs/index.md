@@ -4,7 +4,7 @@ description: 零知識證明的非技術性介紹，適合新手閱讀。
 lang: zh-tw
 ---
 
-## 什麼是零知識證明？ {#what-are-zk-proofs}
+## 什麼是零知識證明？ \{#what-are-zk-proofs}
 
 零知識證明能證明某陳述有效、卻又無需揭示陳述本身。 「證明者」是試圖證明主張的一方，「驗證者」則負責驗證該主張。
 
@@ -14,7 +14,7 @@ lang: zh-tw
 
 經過多年，零知識證明已經有所進展，目前用於幾項真實的應用中。
 
-## 為什麼我們需要零知識證明？ {#why-zero-knowledge-proofs-are-important}
+## 為什麼我們需要零知識證明？ \{#why-zero-knowledge-proofs-are-important}
 
 零知識證明代表應用密碼學的一大突破，因為有望提高個人的資訊安全性。 想想你如何向另一方（例如服務提供商）證明某個主張（例如「我是某某國的公民」）。 你需要提供「證據」支持你的陳述，例如國家護照或駕照。
 
@@ -24,7 +24,7 @@ lang: zh-tw
 
 回到之前的例子，只要有零知識證明，就能證明你所主張的公民身份。 驗證者只需查驗證明當中的某些屬性是否為真，就能夠確信背後的陳述也是真的。
 
-## 零知識證明如何運作？ {#how-do-zero-knowledge-proofs-work}
+## 零知識證明如何運作？ \{#how-do-zero-knowledge-proofs-work}
 
 零知識證明能讓你證明陳述的真實性，而無需分享陳述的內容，或透露你是如何發現真相的。 為了實現這一點，零知識協定仰賴於演算法，該演算法將某些資料作為輸入，並將「真」或「假」作為輸出。
 
@@ -48,7 +48,7 @@ lang: zh-tw
 
 互動式證明的運作方式，有個很好的說明範例，就是 Jean-Jacques Quisquater 的著名故事，名為[阿里巴巴的山洞故事](https://zh.wikipedia.org/zh-hant/%E9%9B%B6%E7%9F%A5%E8%Af%86%E8%Af%81%E6%98%8E#%E7%94%9F%E6%B4%Bb%E7%Af%84%E4%Be%8B)。 在這個故事中，Peggy（證明者）想要向 Victor（驗證者）證明她知道開啟一扇魔法門的密語，但不透露該密語。
 
-### 非互動式零知識證明 {#non-interactive-zero-knowledge-proofs}
+### 非互動式零知識證明 \{#non-interactive-zero-knowledge-proofs}
 
 互動式證明雖具有革命性，但實用性有限，因為雙方必須同時存在並反覆互動。 即使驗證者相信證明者的誠實，該證明也不能用於獨立驗證（要計算出新的證明，證明者和驗證者之間必須有新的訊息集）。
 
@@ -60,9 +60,9 @@ lang: zh-tw
 
 非互動式證明是零知識技術的一項突破，並使現今使用的證明系統急速發展。 下面將討論這些證明類型：
 
-### 零知識證明的類型 {#types-of-zero-knowledge-proofs}
+### 零知識證明的類型 \{#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs {#zk-snarks}
+#### ZK-SNARKs \{#zk-snarks}
 
 ZK-SNARK 是 **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**（零知識簡潔非交互知識論證）的縮寫。 ZK-SNARK 協定有以下特性：
 
@@ -82,7 +82,7 @@ ZK-SNARK 是 **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**�
 
 受信任設定要求使用者必須在產生參數上信任參與者。 然而，ZK-STARK 的發展使得證明協定能和非信任設定搭配運作。
 
-#### ZK-STARKs {#zk-starks}
+#### ZK-STARKs \{#zk-starks}
 
 ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零知識可擴容透明知識論證）**的縮寫。 零知識可擴容透明知識論證與零知識簡潔非交互式知識論證相似，但差別是前者：
 
@@ -92,9 +92,9 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 零知識可擴容透明知識論證產生的證明比零知識簡潔非交互式知識論證更大，這意味著通常具有較高的驗證開銷。 但有些情況下（例如證明大型資料集），零知識可擴容透明知識論證可能比零知識簡潔非交互式知識論證更具成本效益。
 
-## 零知識證明的使用案例 {#use-cases-for-zero-knowledge-proofs}
+## 零知識證明的使用案例 \{#use-cases-for-zero-knowledge-proofs}
 
-### 匿名支付 {#anonymous-payments}
+### 匿名支付 \{#anonymous-payments}
 
 往往許多方都能看見信用卡付款，包括支付提供者、銀行和其他利益相關方，例如政府機構。 雖然金融監管對於識別非法活動有其好處，但也會損害一般公民的隱私。
 
@@ -106,19 +106,19 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 零知識證明目前也應用在公開區塊鏈的交易匿名化上。 例如 Tornado Cash，它是一個去中心化的非託管服務，允許使用者在以太坊上進行私人交易。 Tornado Cash（混幣隱私協定）使用零知識證明來混淆交易細節並保證財務隱私。 遺憾的是，這些是「自願選擇加入」的隱私工具，因此本身和非法活動有關。 為了克服這個問題，隱私終究必須成為公開區塊鏈上的預設選項。
 
-### 保護你的身份 {#identity-protection}
+### 保護你的身份 \{#identity-protection}
 
 目前的身份管理系統，使得個人資訊面臨風險。 零知識證明既能幫助個人進行身份驗證，又能保護敏感的細節。
 
 零知識證明在[去中心化身份](/decentralized-identity/)之下特別有用。 去中心化身份又稱為「身份自主權」，使個人能控制自身身份識別碼的存取權。 既能證明國籍，又不需揭露納稅識別號碼或護照詳情，是零知識技術實現去中心化身份的一個好例子。
 
-### 驗證 {#authentication}
+### 驗證 \{#authentication}
 
 要使用線上服務，必須證明身份以及對此類平台的存取權利。 這通常需要提供個人資訊，例如姓名、電子郵件地址、生日等。 你可能還得記住很長的密碼，或面對遺失存取權限的風險。
 
 但零知識證明化繁為簡，平台和使用者都能更輕鬆驗證。 一旦利用公開的輸入（例如那些證明使用者是平台成員的資料）和私密輸入（例如使用者詳細資訊），來產生零知識證明，使用者需要存取服務時就能輕鬆提供，以驗證身份。 這能改善使用體驗，組織也無需儲存大量使用者資訊。
 
-### 可驗證計算 {#verifiable-computation}
+### 可驗證計算 \{#verifiable-computation}
 
 可驗證計算是零知識證明用於改進區塊鏈設計的又一應用。 可驗證計算使我們既能將計算外包給另一實體，又能維持可驗證的結果。 該實體會同時提交結果和確認程式已正確執行的證明。
 
@@ -142,7 +142,7 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 [零知識卷軸](/developers/docs/scaling/zk-rollups)和 [Validium](/developers/docs/scaling/validium/) 是兩個鏈下擴容解決方案，使用有效性證明來提供安全的可擴容性。 這些協定執行上千次鏈下交易，並提交證明以在以太坊上進行驗證。 一旦證明經過驗證，那些結果就能立刻應用，讓以太坊在不增加基礎層計算負擔的情況下處理更多交易。
 
-### 減少鏈上投票中的賄賂與串謀 {#secure-blockchain-voting}
+### 減少鏈上投票中的賄賂與串謀 \{#secure-blockchain-voting}
 
 區塊鏈投票體制具有許多有利特點：完全可稽核、抗攻擊、抗審查，以及不受地理限制。 但即使是鏈上投票體制，也無法避免**串謀**問題。
 
@@ -156,7 +156,7 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 所幸，MACI（最小反串謀基礎設施）等新式解決方案使用零知識證明，使鏈上投票（例如平方募資機制）能抵禦行賄與串謀。 最小反串謀基礎設施是一組智慧型合約與指令碼，它使中央管理員（稱為「協調員」）能匯集得票數與結果，*而且不會*暴露每個人具體的投票方式。 即使如此，仍然能驗證投票是否正確，或確認某參與者是否參與該輪投票。
 
-#### 最小反串謀基礎設施如何與零知識證明搭配運作？ {#how-maci-works-with-zk-proofs}
+#### 最小反串謀基礎設施如何與零知識證明搭配運作？ \{#how-maci-works-with-zk-proofs}
 
 開始時，協調員會在以太坊上部署最小反串謀基礎設施智慧型合約，之後使用者能註冊他們在智慧型合約裡的公鑰，以進行投票註冊。 使用者將使用公開金鑰加密後的訊息，傳送到智慧型合約，便完成投票（必須以使用者身份相關之最新公開金鑰進行簽署，投票才有效，還有其他的標準）。 之後，協調員在投票截止後處理所有訊息、統計得票數，並在區塊鏈上驗證結果。
 
@@ -178,29 +178,29 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 [深入了解最小反串謀基礎設施](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md)。
 
-## 使用零知識證明的缺點 {#drawbacks-of-using-zero-knowledge-proofs}
+## 使用零知識證明的缺點 \{#drawbacks-of-using-zero-knowledge-proofs}
 
-### 硬體成本 {#hardware-costs}
+### 硬體成本 \{#hardware-costs}
 
 要產生零知識證明涉及非常複雜的計算，這些計算最好是在專業的機器上運行。 這些機器非常昂貴，普通人通常沒有機會擁有。 此外，想要使用零知識證明的應用程式，必須將硬體成本考慮進去，而這可能會增加終端使用者的費用。
 
-### 證明驗證費用 {#proof-verification-costs}
+### 證明驗證費用 \{#proof-verification-costs}
 
 要對證明進行驗證，也需要經過複雜的計算，還會增加將零知識技術實作於應用中的成本。 這種成本在證明計算時更加明顯。 例如，零知識卷軸在以太坊上需要支付約 500,000 單位燃料，才能驗證一個零知識簡潔非交互式知識論證明，驗證零知識可擴容透明知識論證則需要更高的費用。
 
-### 信任假設 {#trust-assumptions}
+### 信任假設 \{#trust-assumptions}
 
 在零知識簡潔非交互式知識論證裡，公共參考串（公共參數）會產生一次，然後可在想要參加零知識協定的團隊中重複使用。 在參與者皆誠實的前提下，公共參數是經由受信任設定儀式建立而成。
 
 但使用者真的沒有任何方法能評估參與者的誠實度，使用者必須信任開發者。 零知識可擴容透明知識論證沒有信任假設，因為產生字串所採用的隨機性，是能公開驗證的。 同時，研究人員正在研究 ZK-SNARK 的非信任設定，以增加驗證機制的安全性。
 
-### 量子計算的威脅 {#quantum-computing-threats}
+### 量子計算的威脅 \{#quantum-computing-threats}
 
 零知識簡潔非交互式知識論證利用橢圓曲線密碼學 ([ECDSA](/glossary/#ecdsa)) 來進行加密。 儘管橢圓曲線密碼學演算法目前是安全的，但量子電腦的發展，未來可能會破解其安全性模型。
 
 零知識可擴容透明知識論證使用抗碰撞的雜湊值進行加密，因此被視為能防禦量子運算的威脅。 比起橢圓曲線密碼學中使用的公私金鑰配對，抗碰撞雜湊值更難被量子計算演算法破解。
 
-## 延伸閱讀 {#further-reading}
+## 延伸閱讀 \{#further-reading}
 
 - [電腦科學家以 5 個難度等級來解釋一個概念 | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube 頻道_
 - [零知識證明使用案例的概觀](https://appliedzkp.org/#Projects) — _隱私和擴容探索團隊_

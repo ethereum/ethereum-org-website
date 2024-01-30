@@ -9,7 +9,7 @@ template: roadmap
 
 Algumas partes do planejamento não são necessariamente obrigatórias para dimensionar ou proteger o Ethereum no curto prazo, mas preparam o Ethereum para a estabilidade e a confiabilidade no futuro.
 
-## Resistência quântica {#quantum-resistance}
+## Resistência quântica \{#quantum-resistance}
 
 Parte da criptografia que protege o Ethereum atual será comprometida quando a computação quântica se tornar uma realidade. Embora os computadores quânticos estejam provavelmente a décadas de se tornarem uma ameaça genuína à criptografia moderna, o Ethereum tem sido desenvolvido para ser seguro nos próximos séculos. Isso significa tornar o [Ethereum resistente ao quântico](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) o mais rápido possível.
 
@@ -19,7 +19,7 @@ Os [esquemas de compromisso "KZG"](/roadmap/danksharding/#what-is-kzg) utilizado
 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Leia sobre o KZG e as configurações confiáveis</ButtonLink>
 
-## Ethereum mais simples e mais eficiente {#simpler-more-efficient-ethereum}
+## Ethereum mais simples e mais eficiente \{#simpler-more-efficient-ethereum}
 
 A complexidade cria oportunidades para bugs ou vulnerabilidades que podem ser explorados por invasores. Portanto, parte do planejamento é simplificar o Ethereum e remover códigos que permaneceram ao longo de diversas melhorias, mas que não são mais necessários ou podem ser aprimorados. Os desenvolvedores conseguem manter e aplicar lógica de uma maneira mais fácil com uma base de código mais enxuta e simples.
 
@@ -27,7 +27,7 @@ Diversas atualizações serão feitas na [Máquina Virtual do Ethereum (EVM)](/d
 
 Da mesma forma, há atualizações que podem ser feitas em outras partes dos clientes atuais do Ethereum. Um exemplo é que os clientes atuais de execução e consenso utilizam um tipo diferente de compactação de dados. Quando o esquema de compactação for unificado em toda a rede, será muito mais fácil e intuitivo compartilhar dados entre clientes.
 
-## Progresso atual {#current-progress}
+## Progresso atual \{#current-progress}
 
 A maioria das melhorias necessárias para preparar o Ethereum para o futuro ainda está em fase de pesquisa e poderá demorar diversos anos para implementação. Melhorias como a remoção do SELF-DESTRUCT e a harmonização do esquema de compactação utilizado na execução e nos clientes de consenso provavelmente ocorrerão antes da criptografia quântica resistente.
 

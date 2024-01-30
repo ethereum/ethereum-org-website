@@ -4,13 +4,13 @@ lang: zh
 description: 在 ethereum.org 上上架内容资源的标准
 ---
 
-# 添加内容资源 {#adding-content-resources}
+# 添加内容资源 \{#adding-content-resources}
 
 我们不能涵盖关于以太坊的所有内容，所以我们试着展示一些由社群创造的精彩文章、教程、简报、工作展示板和其他内容资源。 这些资源常为用户可能感兴趣的问题提供更深入的信息。
 
 如果您覺得某個頁麵中需要添加一個內容資源，請隨時在適當的地方提出建議。
 
-## 我们如何做出决定 {#how-we-decide}
+## 我们如何做出决定 \{#how-we-decide}
 
 将按照以下标准评估学习资源：
 
@@ -23,7 +23,7 @@ description: 在 ethereum.org 上上架内容资源的标准
 
 ---
 
-## 添加您的内容资源 {#add-your-content-resource}
+## 添加您的内容资源 \{#add-your-content-resource}
 
 如果您想要将内容资源添加到 ethereum.org，并且该内容资源符合标准，请在 GitHub 上创建一个提议。
 

@@ -17,11 +17,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 Bu öğreticinin amacı, akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Manticore'un nasıl kullanılacağını göstermektir.
 
-## Kurulum {#installation}
+## Kurulum \{#installation}
 
 Manticore >= python 3.6 gerektirir. Pip veya docker kullanılarak kurulabilir.
 
-### Docker aracılığıyla Manticore {#manticore-through-docker}
+### Docker aracılığıyla Manticore \{#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -37,7 +37,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Pip aracılığıyla Manticore {#manticore-through-pip}
+### Pip aracılığıyla Manticore \{#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -45,7 +45,7 @@ pip3 install --user manticore
 
 solc 0.5.11 tavsiye edilir.
 
-### Bir komut dosyası çalıştırma {#running-a-script}
+### Bir komut dosyası çalıştırma \{#running-a-script}
 
 Python 3 ile bir python komut dosyası çalıştırmak için:
 
@@ -53,9 +53,9 @@ Python 3 ile bir python komut dosyası çalıştırmak için:
 python3 script.py
 ```
 
-## Dinamik sembolik yürütmeye giriş {#introduction-to-dynamic-symbolic-execution}
+## Dinamik sembolik yürütmeye giriş \{#introduction-to-dynamic-symbolic-execution}
 
-### Özetle Dinamik Sembolik Yürütme {#dynamic-symbolic-execution-in-a-nutshell}
+### Özetle Dinamik Sembolik Yürütme \{#dynamic-symbolic-execution-in-a-nutshell}
 
 Dinamik sembolik yürütme (DSE), yüksek derecede semantik farkındalık ile bir durum uzayını araştıran bir program analiz tekniğidir. Bu teknik, `path predicates` (yol belirteçleri) olarak adlandırılan matematiksel formüller olarak temsil edilen "program yollarının" keşfine dayanır. Kavramsal olarak, bu teknik iki adımda yol belirteçleri üzerinde çalışır:
 
@@ -64,7 +64,7 @@ Dinamik sembolik yürütme (DSE), yüksek derecede semantik farkındalık ile bi
 
 Bu yaklaşım, tanımlanmış tüm program durumlarının somut yürütme sırasında tetiklenmesi şeklinde yanlış pozitifler üretmez. Örneğin, analiz bir tamsayı taşması bulursa, bunun tekrarlanabilir olması garanti edilir.
 
-### Yol Belirteci Örneği {#path-predicate-example}
+### Yol Belirteci Örneği \{#path-predicate-example}
 
 DSE'nin nasıl çalıştığına dair bir fikir edinmek için aşağıdaki örneği göz önünde bulundurun:
 
@@ -85,7 +85,7 @@ function f(uint a){
 
 Her yol belirteci, denklemi çözmeye çalışacak sözde [SMT çözücüsüne](https://wikipedia.org/wiki/Satisfiability_modulo_theories) verilebilecek matematiksel bir formüldür. `Path 1` için, çözücü yolun `a = 65` ile keşfedileceğini söyleyecektir. `Path 2` için, çözücü `a`'ya 65'ten farklı herhangi bir değer verebilir, örneğin `a = 0`.
 
-### Özellikleri doğrulama {#verifying-properties}
+### Özellikleri doğrulama \{#verifying-properties}
 
 Manticore, her yolun tüm yürütülmesi üzerinde tam kontrole izin verir. Sonuç olarak, hemen hemen her şeye keyfi kısıtlamalar eklemenize izin verir. Bu kontrol, sözleşmedeki özelliklerin oluşturulmasına izin verir.
 
@@ -127,7 +127,7 @@ Bu formül çözülemez; başka bir deyişle bu, `safe_add`'da `c`'nin her zaman
 
 Bu nedenle DSE, kodunuzdaki keyfi kısıtlamaları doğrulayabilen güçlü bir araçtır.
 
-## Manticore altında çalışma {#running-under-manticore}
+## Manticore altında çalışma \{#running-under-manticore}
 
 Manticore API ile akıllı bir sözleşmeyi nasıl keşfedeceğimizi göreceğiz. Hedef, aşağıdaki akıllı sözleşme [`example.sol`'dür](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -143,7 +143,7 @@ contract Simple {
 }
 ```
 
-### Bağımsız bir keşif çalıştırın {#run-a-standalone-exploration}
+### Bağımsız bir keşif çalıştırın \{#run-a-standalone-exploration}
 
 Aşağıdaki komutla Manticore'u doğrudan akıllı sözleşme üzerinde çalıştırabilirsiniz (`project` bir Solidity Dosyası veya bir proje dizini olabilir):
 
@@ -192,11 +192,11 @@ Gördüğünüz üzere, Manticore her başarılı veya geri alınan işlem için
 
 Eğer hızlı kod keşfi istiyorsanız `--quick-mode` bayrağını kullanın (hata algılayıcıları, gaz hesaplamalarını vb. devre dışarı bırakır)
 
-### API aracılığıyla bir akıllı sözleşmeyi değiştirin {#manipulate-a-smart-contract-through-the-api}
+### API aracılığıyla bir akıllı sözleşmeyi değiştirin \{#manipulate-a-smart-contract-through-the-api}
 
 Bu bölüm, Manticore Python API aracılığıyla bir akıllı sözleşmenin nasıl değiştirileceğini açıklar. `*.py` python uzantılı yeni bir dosya oluşturabilir ve bu dosyaya API komutlarını (temelleri aşağıda anlatılacaktır) ekleyerek gerekli kodu yazabilir ve ardından `$ python3 *.py` komutu ile çalıştırabilirsiniz. Ayrıca aşağıdaki komutları doğrudan python konsolunda çalıştırabilirsiniz, konsolu çalıştırmak için `$ python3` komutunu kullanın.
 
-### Hesap oluşturma {#creating-accounts}
+### Hesap oluşturma \{#creating-accounts}
 
 Yapmanız gereken ilk şey, aşağıdaki komutlarla yeni bir blok zinciri başlatmaktır:
 
@@ -229,18 +229,18 @@ contract Simple {
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
-#### Özet {#summary}
+#### Özet \{#summary}
 
 - [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) ve [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) ile kullanıcı ve sözleşme hesapları oluşturabilirsiniz.
 
-### İşlemleri yürütme {#executing-transactions}
+### İşlemleri yürütme \{#executing-transactions}
 
 Manticore iki tür işlemi destekler:
 
 - Ham işlem: tüm fonksiyonlar keşfedilir
 - Adlandırılmış işlem: yalnızca bir fonksiyon keşfedilir
 
-#### Ham işlem {#raw-transaction}
+#### Ham işlem \{#raw-transaction}
 
 Bir ham işlem [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction) ile yürütülür:
 
@@ -269,7 +269,7 @@ m.transaction(caller=user_account,
 
 Veriler sembolik ise, Manticore işlemin yürütülmesi sırasında sözleşmenin tüm fonksiyonlarını keşfedecektir. Fonksiyon seçiminin nasıl çalıştığını anlamak için [Ethernaut CTF Kullanımı](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/) makalesindeki Fallback Function açıklamasına göz atmak faydalı olacaktır.
 
-#### Adlandırılmış işlem {#named-transaction}
+#### Adlandırılmış işlem \{#named-transaction}
 
 İşlevler, adları aracılığıyla yürütülebilir. `f(uint var)` komutunu user_account'tan sembolik bir değerle ve 0 ether ile yürütmek için şunu kullanın:
 
@@ -280,13 +280,13 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 
 İşlemin `value` değeri belirtilmemişse, varsayılan olarak 0'dır.
 
-#### Özet {#summary-1}
+#### Özet \{#summary-1}
 
 - Bir işlemin argümanları somut veya sembolik olabilir
 - Ham işlem tüm fonksiyonları keşfedecek
 - Fonksiyonlar, isimleriyle çağrılabilir
 
-### Çalışma Alanı {#workspace}
+### Çalışma Alanı \{#workspace}
 
 `m.workspace`, oluşturulan tüm dosyalar için çıktı dizini olarak kullanılan dizindir:
 
@@ -294,11 +294,11 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 print("Results are in {}".format(m.workspace))
 ```
 
-### Keşfi Durdurma {#terminate-the-exploration}
+### Keşfi Durdurma \{#terminate-the-exploration}
 
 Keşfi durdurmak için [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize) kullanın. Bu yöntem çağrıldığında ve Manticore keşfedilen yolların her biri için test senaryoları oluşturduğunda başka işlem gönderilmeyecektir.
 
-### Özet: Manticore altında çalışma {#summary-running-under-manticore}
+### Özet: Manticore altında çalışma \{#summary-running-under-manticore}
 
 Önceki tüm adımları bir araya getirerek şunu elde ederiz:
 
@@ -322,7 +322,7 @@ m.finalize() # stop the exploration
 
 Yukarıdaki kodların tamamını [`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py) içinde bulabilirsiniz
 
-## Atış yollarını alma {#getting-throwing-paths}
+## Atış yollarını alma \{#getting-throwing-paths}
 
 Şimdi `f()` içinde bir istisna belirten yollar için spesifik girdiler oluşturacağız. Hedef hâlâ şu akıllı sözleşmedir [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -337,7 +337,7 @@ contract Simple {
 }
 ```
 
-### Durum bilgisini kullanmak {#using-state-information}
+### Durum bilgisini kullanmak \{#using-state-information}
 
 Yürütülen her yolun kendi blok zinciri durumu vardır. Bir durum ya hazırdır ya da öldürülmüştür, yani bir THROW veya REVERT komutuna ulaştığı anlamına gelir:
 
@@ -363,7 +363,7 @@ data = state.platform.transactions[0].return_data
 data = ABI.deserialize("uint", data)
 ```
 
-### Test durumu nasıl oluşturulur {#how-to-generate-testcase}
+### Test durumu nasıl oluşturulur \{#how-to-generate-testcase}
 
 Test durumu oluşturmak için [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) kullanın:
 
@@ -371,7 +371,7 @@ Test durumu oluşturmak için [m.generate_testcase(state, name)](https://mantico
 m.generate_testcase(state, 'BugFound')
 ```
 
-### Özet {#summary-2}
+### Özet \{#summary-2}
 
 - m.all_states ile durumu yineleyebilirsiniz
 - `state.platform.get_balance(account.address)` hesabın bakiyesini döndürür
@@ -379,7 +379,7 @@ m.generate_testcase(state, 'BugFound')
 - `transaction.return_data` döndürülen veridir
 - `m.generate_testcase(state, name)` durum için girdiler oluşturur
 
-### Özet: Atış Yolunu Almak {#summary-getting-throwing-path}
+### Özet: Atış Yolunu Almak \{#summary-getting-throwing-path}
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -407,7 +407,7 @@ Yukarıdaki kodların tamamını [`example_run.py`](https://github.com/crytic/bu
 
 _terminated_state tarafından döndürülen tüm durumların sonuçlarında REVERT veya INVALID olduğundan çok daha basit bir komut dosyası oluşturabileceğimizi unutmayın: Bu örnek yalnızca API'nin nasıl değiştirileceğini göstermek içindir._
 
-## Kısıtlamalar ekleme {#adding-constraints}
+## Kısıtlamalar ekleme \{#adding-constraints}
 
 Keşfi nasıl kısıtlayabileceğimizi göreceğiz. `f()` belgesinin, fonksiyonun hiçbir zaman `a == 65` ile çağrılmadığını belirttiği varsayımını yapacağız, bu nedenle `a == 65` ile herhangi bir hata gerçek bir hata değildir. Hedef hâlâ aşağıdaki akıllı sözleşmedir [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol):
 
@@ -422,7 +422,7 @@ contract Simple {
 }
 ```
 
-### Operatörler {#operators}
+### Operatörler \{#operators}
 
 [Operatörler](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py) modülü, sağladığı diğer şeylerin yanı sıra kısıtlamaların değiştirilmesini kolaylaştırır:
 
@@ -445,11 +445,11 @@ from manticore.core.smtlib import Operators
 last_return = Operators.CONCAT(256, *last_return)
 ```
 
-### Kısıtlamalar {#state-constraint}
+### Kısıtlamalar \{#state-constraint}
 
 Kısıtlamaları global olarak veya belirli bir durum için kullanabilirsiniz.
 
-#### Global kısıtlama {#state-constraint}
+#### Global kısıtlama \{#state-constraint}
 
 Global bir kısıtlama eklemek için `m.constrain(constraint)` kullanın. Örneğin, sembolik bir adresten bir sözleşmeyi arayabilir ve bu adresi belirli değerlerle sınırlandırabilirsiniz:
 
@@ -462,11 +462,11 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### Durum kısıtlaması {#state-constraint}
+#### Durum kısıtlaması \{#state-constraint}
 
 Belirli bir duruma kısıtlama eklemek için [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) kullanın. Üzerindeki bazı özellikleri kontrol etmek için keşfinden sonra durumu kısıtlamak için kullanılabilir.
 
-### Kısıtlamaları kontrol etmek {#checking-constraint}
+### Kısıtlamaları kontrol etmek \{#checking-constraint}
 
 Eğer bir kısıtlamanın hâlâ mümkün olup olmadığını görmek istiyorsanız `solver.check(state.constraints)` kullanın. Örneğin, aşağıdakiler symbolic_value'yu 65'ten farklı olacak şekilde kısıtlar ve durumun hâlâ uygulanabilir olup olmadığını kontrol eder:
 
@@ -476,7 +476,7 @@ if solver.check(state.constraints):
     # state is feasible
 ```
 
-### Özet: Kısıtlamalar Ekleme {#summary-adding-constraints}
+### Özet: Kısıtlamalar Ekleme \{#summary-adding-constraints}
 
 Önceki koda kısıtlama ekleyerek şunu elde ederiz:
 

@@ -8,18 +8,18 @@ lang: fa
 
 مستندات به کوشش جامعه‌ متن‌ باز تهیه می‌شود، پس برای پیشنهاد دادن موضوعات جدید، افزودن محتوای جدید، ساخت مثال و هرچیزی که فکر می‌کنید مفید است راحت باشید. تمام مستندات می‌توانند در گیت‌هاب ویرایش شوند - اگر مطمئن نیستید چگونه می‌توان این کار را انجام دارد، [ این دستورالعمل‌ها را دنبال کنید](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
-## ماژول‌های توسعه {#development-modules}
+## ماژول‌های توسعه \{#development-modules}
 
 اگر این اولین تلاش شما برای توسعه‌ اتریوم است، به شما پیشنهاد می‌کنیم یادگیری و کار را از طریق یک کتاب شروع کنید.
 
-### موضوعات بنیادی {#foundational-topics}
+### موضوعات بنیادی \{#foundational-topics}
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### پشته‌ی اتریوم {#ethereum-stack}
+### پشته‌ی اتریوم \{#ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### پیشرفته {#advanced}
+### پیشرفته \{#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

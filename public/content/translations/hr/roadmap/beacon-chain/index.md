@@ -14,11 +14,11 @@ summaryPoint3: Nadogradnja Beacon Chain uvela je logiku koncenzusa i protokol bl
   Nadogradnja Beacon Chain krenula je u implementaciju 1. prosinca 2020., dok je formalizacija dokaza uloga kao Ethereumovog mehanizma konsenzusa izvršena nadogradnjom The Merge 15. rujna 2022.
 </UpgradeStatus>
 
-## Što je Beacon Chain? {#what-is-the-beacon-chain}
+## Što je Beacon Chain? \{#what-is-the-beacon-chain}
 
 Beacon Chain bio je naziv izvornog lanca blokova dokaza uloga koji je pokrenut u 2020. Nadogradnja je izrađena prije implementacije glavne mreže Ethereuma kako bi osigurao da je logika konsenzusa dokaza uloga točna i održiva. Ova nadogradnja aktivna je zajedno s izvornim dokazom rada Ethereuma. Isključivanje i uključivanje dokaza rada na Ethereumu zahtijevalo je upućivanje nadogradnje Beacon Chain da prihvati transakcije iz izvornog Ethereumovog lanca, da ih objedini u blokove i organizira u lance blokova koristeći se mehanizmom konsenzusa dokaza uloga. Istodobno, izvorni korisnici Ethereuma isključili su rudarenje, propagiranje bloka i logiku konsenzusa i predali to nadogradnji Beacon Chain. Taj je događaj poznat pod nazivom [The Merge (Spajanje)](/roadmap/merge/). Nako što se spajanje dogodilo, više nisu postojala dva lanca blokova – postojao je samo jedan lanac dokaza uloga Ethereuma.
 
-## Što radi Beacon Chain? {#what-does-the-beacon-chain-do}
+## Što radi Beacon Chain? \{#what-does-the-beacon-chain-do}
 
 Beacon Chain predstavlja glavnu knjigu računa koji su proveli i koordinirali mrežu Ethereumovih [dionika](/staking/) prije nogo što su ti dionici započeli provoditi prave Ethereumove transakcije. Nadogradnja nije obrađivala transakcije ili interakcije pametnog ugovora.
 
@@ -26,9 +26,9 @@ Nadogradnja uvodi procesor konsenzusa (ili „sloj konsenzusa”) koji je preuze
 
 Beacon Chain bila je temeljna komponenta [sadašnjeg sigurnog, ekološkog i prilagodljivog Ethereuma](/roadmap/vision/).
 
-## Utjecaj nadogradnje Beacon Chain {#beacon-chain-features}
+## Utjecaj nadogradnje Beacon Chain \{#beacon-chain-features}
 
-### Osnove ulaganja {#introducing-staking}
+### Osnove ulaganja \{#introducing-staking}
 
 Beacon Chain uveo je u Ethereum [dokaz uloga](/developers/docs/consensus-mechanisms/pos/). Tako je zaštićen Ethereum, a validatori imaju mogućnost veće zarade ETH-a. U praksi, ulaganje znači ulaganje ETH-a kako bi se aktivirao softver validatora. Kao ulagač pokrećete softver koji izrađuje i potvrđuje nove blokove u lancu.
 
@@ -40,7 +40,7 @@ Prijelazom na dokaz uloga Ethereum je postao sigurniji i manje centraliziran u o
   Ako želite postati validator i pomoći u zaštiti Ethereuma, <a href="/staking/">ovdje saznajte više o ulaganju</a>.
 </InfoBanner>
 
-### Postavljanje razdjeljivanja {#setting-up-for-sharding}
+### Postavljanje razdjeljivanja \{#setting-up-for-sharding}
 
 Od trenutka kada se Beacon Chain objedinio s izvornom glavnom mrežom Ethereuma, Ethereumova zajednica počela je tražiti mogućnost prilagođavanja mreže.
 
@@ -50,11 +50,11 @@ Razlika je i u odgovornost u odnosu na dokaz rada gdje rudari nisu imali obvezu 
 
 [Više o dijeljenju](/roadmap/danksharding/)
 
-## Odnos između nadogradnji {#relationship-between-upgrades}
+## Odnos između nadogradnji \{#relationship-between-upgrades}
 
 Sve nadogradnje Ethereuma donekle su međusobno povezane. Dakle, ponovimo ukratko kako Beacon Chain utječe na ostale nadogradnje.
 
-### Beacon Chain i spajanje {#merge-and-beacon-chain}
+### Beacon Chain i spajanje \{#merge-and-beacon-chain}
 
 U početku je Beacon Chain postojao odvojeno od glavne mreže Ethereuma. Godine 2022. konačno su objedinjeni.
 
@@ -62,7 +62,7 @@ U početku je Beacon Chain postojao odvojeno od glavne mreže Ethereuma. Godine 
   Spajanje
 </ButtonLink>
 
-### Djelići i Beacon Chain {#shards-and-beacon-chain}
+### Djelići i Beacon Chain \{#shards-and-beacon-chain}
 
 Razdjeljivanje se sigurno može uvesti u Ethereumov ekosustav samo ako je uspostavljen mehanizam konsenzusa dokaza uloga. Beacon Chain uveo je ulaganje objedinjeno s glavnom mrežom i tako pripremio teren za razdjeljivanje koje će pomoći u daljnjem prilagođavanju Ethereuma.
 

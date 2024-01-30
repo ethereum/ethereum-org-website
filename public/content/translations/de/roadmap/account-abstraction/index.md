@@ -8,7 +8,7 @@ summaryPoints:
   - Verlorene oder gefährdete Wallet-Schlüssel können mit Hilfe mehrerer Backups wiederhergestellt werden
 ---
 
-# Kontoabstraktion {#account-abstraction}
+# Kontoabstraktion \{#account-abstraction}
 
 Benutzer interagieren mit Ethereum durch **["externe Konten" ("externally owned accounts" = EOAs)](/glossary/#eoa)**. Dies ist die einzige Möglichkeit, eine Transaktion zu senden oder einen Smart Contract auszuführen. Das schränkt jedoch die Möglichkeiten der Nutzer ein, mit Ethereum zu interagieren. So ist es zum Beispiel schwierig, Transaktionen zu bündeln. Außerdem müssen Nutzer immer etwas ETH bereithalten, um Gas-Kosten zu decken.
 
@@ -34,7 +34,7 @@ Smart Contract Wallets sind die Lösung für diese Probleme, aber heute sind sie
 
 Letztendlich verbessert die Kontenabstraktion die Unterstützung für Smart Contract Wallets, macht sie einfacher zu bauen und sicherer in der Anwendung. Schließlich ermöglicht die Kontenabstraktion den Nutzern, alle Vorteile von Ethereum zu genießen, ohne die zugrundeliegende Technologie kennen oder beachten zu müssen.
 
-## Jenseits von Seed-Phrasen {#beyond-seed-phrases}
+## Jenseits von Seed-Phrasen \{#beyond-seed-phrases}
 
 Die heutigen Konten sind durch private Schlüssel gesichert, die aus Seed-Phrasen berechnet werden. Jede Person, die Zugang zu einer Seed-Phrase hat, kann leicht den privaten Schlüssel entdecken, der ein Konto schützt, und Zugang zu allen von ihm geschützten Vermögenswerten erhalten. Wenn ein privater Schlüssel und eine Seed-Phrase verloren gehen, können sie nie wiederhergestellt werden und die von ihnen kontrollierten Vermögenswerte sind für immer eingefroren. Die Sicherung dieser Seed-Phrasen ist selbst für Experten umständlich und das Phishing von Seed-Phrasen ist eine der häufigsten Betrugsmethoden bei Nutzern.
 
@@ -50,7 +50,7 @@ Zum Beispiel können Backup-Schlüssel zu einer Wallet hinzugefügt werden, soda
 - **Transaktionslimits festlegen**: Legen Sie tägliche Grenzwerte fest, wie viel Wert innerhalb eines Tages/einer Woche/eines Monats vom Konto übertragen werden kann. Das bedeutet, wenn ein Angreifer Zugang zu Ihrem Konto erlangt, kann er nicht alles auf einmal abziehen und Sie haben die Möglichkeit, den Zugang zu sperren und zurückzusetzen.
 - **Erstellen Sie Whitelists**: Erlauben Sie Transaktionen nur zu bestimmten Adressen, die Sie als sicher einstufen. Das bedeutet, dass _selbst wenn_ Ihr privater Schlüssel gestohlen wurde, der Angreifer keine Mittel an nicht-whitelistete Zielkonten senden könnte. Diese Whitelists würden mehrere Unterschriften zur Änderung erfordern, sodass ein Angreifer seine eigene Adresse nicht zur Liste hinzufügen könnte, es sei denn, er hätte Zugang zu mehreren Ihrer Backup-Schlüssel.
 
-## Bessere Nutzererfahrung {#better-user-experience}
+## Bessere Nutzererfahrung \{#better-user-experience}
 
 Die Account-Abstraktion ermöglicht eine **bessere Gesamtbenutzererfahrung** sowie eine **verbesserte Sicherheit**, da sie auf Protokollebene Unterstützung für Smart-Contract-Wallets hinzufügt. Der wichtigste Grund dafür ist, dass es den Entwicklern von Smart Contracts, Wallets und Anwendungen viel mehr Freiheit geben wird, auf die Benutzererfahrung in Weisen zu innovieren, die wir möglicherweise noch nicht vorhersehen können. Einige offensichtliche Verbesserungen, die mit der Account-Abstraktion einhergehen werden, beinhalten das Bündeln von Transaktionen für Geschwindigkeit und Effizienz. Zum Beispiel sollte ein einfacher Tausch eine Ein-Klick-Operation sein, aber heute erfordert es das Signieren mehrerer Transaktionen zur Genehmigung des Ausgebens einzelner Tokens, bevor der Tausch ausgeführt wird. Die Account-Abstraktion beseitigt diese Reibung, indem sie das Bündeln von Transaktionen ermöglicht. Darüber hinaus könnte die gebündelte Transaktion genau den richtigen Wert an Tokens genehmigen, der für jede Transaktion erforderlich ist, und dann die Genehmigungen nach Abschluss der Transaktion widerrufen, was zusätzliche Sicherheit bietet.
 
@@ -70,7 +70,7 @@ Es ist auch interessant zu überlegen, wie sich Käufe mit der Account-Abstrakti
 
 Das sind nur einige Beispiele dafür, wie Benutzererfahrungen durch die Account-Abstraktion verbessert werden könnten, aber es gibt noch viele weitere, die wir uns noch nicht vorstellen können. Die Account-Abstraktion befreit Entwickler von den Beschränkungen der heutigen EOAs, ermöglicht es ihnen, die guten Aspekte von Web2 in Web3 zu bringen, ohne die Selbstverwahrung zu opfern, und kreativ an innovativen neuen Benutzererfahrungen zu arbeiten.
 
-## Wie wird die Account-Abstraktion umgesetzt? {#how-will-aa-be-implemented}
+## Wie wird die Account-Abstraktion umgesetzt? \{#how-will-aa-be-implemented}
 
 Smart-Contract-Wallets existieren heute bereits, sind aber schwer zu implementieren, weil die EVM sie nicht unterstützt. Stattdessen verlassen sie sich darauf, relativ komplexe Code um Standard-Ethereum-Transaktionen zu wickeln. Ethereum kann dies ändern, indem es Smart Contracts erlaubt, Transaktionen zu initiieren und die notwendige Logik in Ethereum Smart Contracts statt off-chain zu behandeln. Das Einbringen von Logik in Smart Contracts erhöht auch die Dezentralisierung von Ethereum, da es die Notwendigkeit von "Relayern", die von Wallet-Entwicklern betrieben werden, um Nachrichten, die vom Benutzer signiert wurden, in reguläre Ethereum-Transaktionen zu übersetzen, beseitigt.
 
@@ -106,11 +106,11 @@ Beachte, dass EIP-3074 derzeit nicht aktiv ist. Die Community bevorzugt momentan
 
 </ExpandableCard>
 
-## Aktueller Fortschritt {#current-progress}
+## Aktueller Fortschritt \{#current-progress}
 
 Smart-Contract-Wallets sind bereits verfügbar, aber es sind noch weitere Verbesserungen erforderlich, um sie so dezentralisiert und erlaubnislos wie möglich zu gestalten. EIP-4337 ist ein ausgereifter Vorschlag, der keine Änderungen am Ethereum-Protokoll erfordert, daher könnte dieser möglicherweise schnell umgesetzt werden. Upgrades, die das Ethereum-Protokoll verändern, sind jedoch derzeit nicht in aktiver Entwicklung, daher könnte die Umsetzung dieser Änderungen deutlich länger dauern. Es ist auch möglich, dass die Kontenabstraktion durch EIP-4337 so gut gelingt, dass keine Protokolländerungen jemals erforderlich sind.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Diskussionsrunde zur Kontenabstraktion von der Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

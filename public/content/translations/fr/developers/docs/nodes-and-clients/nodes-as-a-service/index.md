@@ -5,15 +5,15 @@ lang: fr
 sidebarDepth: 2
 ---
 
-## Introduction {#Introduction}
+## Introduction \{#Introduction}
 
 Exécuter votre propre [nœud Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) peut être difficile, en particulier lorsque vous démarrez ou lors d'une croissance rapide. Il existe un certain [nombre de services](#popular-node-services) qui exécutent des infrastructures de nœuds optimisées pour vous, afin que vous puissiez vous concentrer sur le développement de votre application ou de votre produit. Nous vous expliquerons le fonctionnement des services de nœuds, les avantages et les inconvénients de leur utilisation et vous fournirons une liste de fournisseurs si vous souhaitez vous lancer.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Si vous ne savez pas encore ce que sont les nœuds et les clients, consultez la page [Nœuds et clients](/developers/docs/nodes-and-clients/).
 
-## Validateurs {#stakoooooooooooooors}
+## Validateurs \{#stakoooooooooooooors}
 
 Les validateurs individuels doivent gérer leur propre infrastructure plutôt que compter sur des fournisseurs tiers. Cela signifie qu'il est nécessaire d'utiliser un client d'exécution couplé à un client de consensus. Avant [La Fusion](/roadmap/merge), il était uniquement possible d'exécuter un client de consensus et d'utiliser un fournisseur centralisé pour les données d'exécution ; ce n'est plus possible - un validateur individuel doit exécuter les deux clients. Toutefois, des services sont disponibles pour faciliter ce processus.
 
@@ -21,7 +21,7 @@ Les validateurs individuels doivent gérer leur propre infrastructure plutôt qu
 
 Les services décrits sur cette page concernent les nœuds non mis en jeu.
 
-## Comment fonctionnent les services de nœuds? {#how-do-node-services-work}
+## Comment fonctionnent les services de nœuds? \{#how-do-node-services-work}
 
 Les fournisseurs de services de nœuds exécutent les clients de nœuds distribués en arrière-plan pour vous, afin que vous n'ayez pas à le faire.
 
@@ -35,19 +35,19 @@ Souvent, les services de nœuds exécuteront une variété de [nœuds clients](/
 
 Il est important de noter que les services de nœud ne stockent pas et ne doivent pas stocker vos clés ou informations privées.
 
-## Quels avantages à utiliser un service de nœuds ? {#benefits-of-using-a-node-service}
+## Quels avantages à utiliser un service de nœuds ? \{#benefits-of-using-a-node-service}
 
 Le principal avantage est de ne pas avoir à consacrer du temps à la maintenance et à la gestion des nœuds. Cela vous permet donc de vous concentrer sur la construction de votre produit plutôt que d'avoir à vous soucier de la maintenance des infrastructures.
 
 L'exécution de vos propres nœuds peut s'avérer très coûteuse, qu'il s'agisse de stockage, de bande passante ou de temps d'ingénierie. Des opérations telles que l'augmentation du nombre de nœuds lors de la montée en charge, de la mise à niveau des nœuds vers les dernières versions ou la garantie de la cohérence de l'état peuvent vous détourner de votre projet web3 et consommer de précieuses ressources.
 
-## Quels inconvénients à utiliser un service de nœuds ? {#cons-of-using-a-node-service}
+## Quels inconvénients à utiliser un service de nœuds ? \{#cons-of-using-a-node-service}
 
 En utilisant un service de nœuds, vous centralisez l'aspect infrastructure de votre produit. C'est pourquoi les projets qui accordent la plus haute importance à la décentralisation pourraient préférer des nœuds auto-hébergés plutôt que des nœuds d'origine externe.
 
 En savoir plus sur les [avantages à exécuter votre propre nœud](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Services de nœuds populaires {#popular-node-services}
+## Services de nœuds populaires \{#popular-node-services}
 
 Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hésitez pas à ajouter ceux qui manquent ! Chaque service de nœuds offre différents avantages et fonctionnalités en plus des niveaux gratuits ou payants : vous devez déterminer ceux qui correspondent le mieux à vos besoins avant de prendre une décision.
 
@@ -372,15 +372,15 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
   - Paiements en crypto
   - Assistance externe pour les besoins comportementaux additionnels
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Liste des services de nœuds Ethereum](https://ethereumnodes.com/)
 
-## Sujets connexes {#related-topics}
+## Sujets connexes \{#related-topics}
 
 - [ Nœuds et clients](/developers/docs/nodes-and-clients/)
 
-## Tutoriels connexes {#related-tutorials}
+## Tutoriels connexes \{#related-tutorials}
 
 - [Commencer le développement Ethereum avec Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guide pour envoyer des transactions avec Web3 et Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

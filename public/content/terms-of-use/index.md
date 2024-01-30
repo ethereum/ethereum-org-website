@@ -4,7 +4,7 @@ lang: en
 hideEditButton: true
 ---
 
-# Terms of Use {#terms-of-use}
+# Terms of Use \{#terms-of-use}
 
 **PLEASE READ THESE TERMS OF USE BEFORE USING THE WEBSITES.**
 

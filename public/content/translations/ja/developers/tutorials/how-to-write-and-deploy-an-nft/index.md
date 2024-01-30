@@ -22,13 +22,13 @@ Alchemy は、Makersplace(直近では、Christie's でレコードデジタル�
 
 ご質問があれば[Alchemy Discord](https://discord.gg/gWuC7zB)にお問い合わせいただくか、 [Alchemy の NFT API docs](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)をご覧ください。
 
-## ステップ 1: イーサリアムネットワークに接続する {#connect-to-ethereum}
+## ステップ 1: イーサリアムネットワークに接続する \{#connect-to-ethereum}
 
 イーサリアムのブロックチェーンにリクエストを行う方法はたくさんありますが、ここでは分かりやすくするため、[Alchemy](https://alchemy.com/signup/eth)の無料アカウントを使用します。このアカウントはブロックチェーンの開発者プラットフォームと API で、独自のノードを実行せずにイーサリアムチェーンと通信できるものです。
 
 このチュートリアルでは、スマートコントラクトのデプロイメントの仕組みを理解するために、Alchemy の開発者用ツールも活用します。 Alchemy アカウントをお持ちでない場合は、 [こちら](https://alchemy.com/signup/eth)から無料で登録できます。
 
-## ステップ 2: アプリ(および API キー)を作成する {#make-api-key}
+## ステップ 2: アプリ(および API キー)を作成する \{#make-api-key}
 
 Alchemy のアカウントを作成すると、アプリを作成することで API キーを生成できます。 これにより、Goerli テストネットワークへのリクエストが可能になります。 テストネットワークの詳細については、[こちらのガイド](https://docs.alchemyapi.io/guides/choosing-a-network)をご覧ください。
 
@@ -42,7 +42,7 @@ Alchemy のアカウントを作成すると、アプリを作成することで
 
 3. 「Create app」をクリックして完了です。 下記のテーブルにアプリが表示されます。
 
-## ステップ 3: イーサリアムアカウント(アドレス)を作成する {#create-eth-address}
+## ステップ 3: イーサリアムアカウント(アドレス)を作成する \{#create-eth-address}
 
 トランザクションの送受信には、イーサリアムアカウントが必要です。 このチュートリアルでは、イーサリアムアカウントアドレスを管理するためにブラウザの仮想ウォレットである Metamask を使用します。 イーサリアムのトランザクションの仕組みの詳細については、イーサリアム・ファウンデーションの[こちらのページ](/developers/docs/transactions/)をご覧ください。
 
@@ -50,11 +50,11 @@ Metamask のアカウントは[こちら](https://metamask.io/download.html)か�
 
 ![Goerliをネットワークとして設定する](./metamask-goerli.png)
 
-## ステップ 4: フォーセットからイーサリアムを追加する {#step-4-add-ether-from-a-faucet}
+## ステップ 4: フォーセットからイーサリアムを追加する \{#step-4-add-ether-from-a-faucet}
 
 テストネットワークにスマートコントラクトをデプロイするには、偽の ETH が複数必要になります。 ETH を取得するには、Alchemy がホストする[Goerli フォーセット](https://goerlifaucet.com/)へ行き、ログインしてアカウントアドレスを入力し、「Send Me ETH」をクリックしてください。 Metamask アカウントに ETH が表示されるはずです。
 
-## ステップ 5: 残高を確認する {#check-balance}
+## ステップ 5: 残高を確認する \{#check-balance}
 
 残高を再度確認するには、 [Alchemy CHAINS APIS](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)を使用して [eth_getBalance](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)をリクエストしてみましょう。 リクエストすると、ウォレット内の ETH の量が返却されます。 Metamask アカウントアドレスを入力して「Send Request」をクリックすると、次のようなレスポンスが表示されます。
 
@@ -64,7 +64,7 @@ Metamask のアカウントは[こちら](https://metamask.io/download.html)か�
 
 ご安心ください。 私たちの偽物のお金はすべてそこにあります。
 
-## ステップ 6: プロジェクトを初期化する {#initialize-project}
+## ステップ 6: プロジェクトを初期化する \{#initialize-project}
 
 まず、プロジェクトのフォルダを作成する必要があります。 コマンドラインに移動し、次のように入力します。
 
@@ -102,7 +102,7 @@ Metamask のアカウントは[こちら](https://metamask.io/download.html)か�
 
 「package.json」を承認してください。これで準備が完了しました。
 
-## ステップ 7: [Hardhat](https://hardhat.org/getting-started/#overview)をインストールする {#install-hardhat}
+## ステップ 7: [Hardhat](https://hardhat.org/getting-started/#overview)をインストールする \{#install-hardhat}
 
 Hardhat は、イーサリアムのソフトウェアをコンパイル、デプロイ、テスト、デバッグするための開発環境です。 開発者がライブチェーンにデプロイする前に、スマートコントラクトや Dapps をローカルに構築する際に役立ちます。
 
@@ -112,7 +112,7 @@ Hardhat は、イーサリアムのソフトウェアをコンパイル、デプ
 
 [インストール手順](https://hardhat.org/getting-started/#overview)の詳細については、こちらのページをご覧ください。
 
-## ステップ 8: Hardhat プロジェクトを作成する {#create-hardhat-project}
+## ステップ 8: Hardhat プロジェクトを作成する \{#create-hardhat-project}
 
 プロジェクトフォルダ内で実行してください。
 
@@ -136,7 +136,7 @@ Hardhat は、イーサリアムのソフトウェアをコンパイル、デプ
 
 「hardhat.config.js」というファイルが生成され、ここでプロジェクトのセットアップの全てを指定します (ステップ 13)。
 
-## ステップ 9: プロジェクトフォルダを追加する {#add-project-folders}
+## ステップ 9: プロジェクトフォルダを追加する \{#add-project-folders}
 
 プロジェクトを整理するために、2 つの新しいフォルダを作成します。 コマンドラインでプロジェクトのルートディレクトリに移動し、次のように入力します。
 
@@ -147,7 +147,7 @@ Hardhat は、イーサリアムのソフトウェアをコンパイル、デプ
 
 - 「scripts/」 は、スマートコントラクトをデプロイして対話するスクリプトを保持する場所です。
 
-## ステップ 10: コントラクトを作成する {#write-contract}
+## ステップ 10: コントラクトを作成する \{#write-contract}
 
 さて、環境が整ったところで、もっと面白いことをやりましょう。_スマートコントラクトのコードの作成です。_
 
@@ -212,7 +212,7 @@ ERC-721 コンストラクタでは、「MyNFT」と「NFT」の 2 つの文字�
 
 `mintNFT`は継承された ERC-721 ライブラリから複数のメソッドを呼び出し、最終的にミントされたばかりの NFT の ID を示す数値を返します。
 
-## ステップ 11: MetaMask と Alchemy をプロジェクトに接続する {#connect-metamask-and-alchemy}
+## ステップ 11: MetaMask と Alchemy をプロジェクトに接続する \{#connect-metamask-and-alchemy}
 
 ここまでで MetaMask ウォレットと Alchemy アカウントを作成し、スマートコントラクトを書きました。次はこの 3 つのアカウントを繋げていきましょう。
 
@@ -243,7 +243,7 @@ ERC-721 コンストラクタでは、「MyNFT」と「NFT」の 2 つの文字�
 <code>.env</code>をコミットしないでください。 <code>.env</code> は決して他人と共有したり、公開したりしないように注意してください。共有することで、あなたのアカウント情報が漏洩する可能性があります。 バージョン管理をする場合は、<code>.env</code>を<a href="https://git-scm.com/docs/gitignore">gitignore</a>ファイルに追加してください。
 </InfoBanner>
 
-## ステップ 12: Ethers.js をインストールする {#install-ethers}
+## ステップ 12: Ethers.js をインストールする \{#install-ethers}
 
 Ethers.js は、よりユーザーフレンドリーなメソッドで[標準の JSON-RPC メソッド](/developers/docs/apis/json-rpc/)をラップすることにより、イーサリアムとの対話やリクエストを簡単に行うためのライブラリです。
 
@@ -255,7 +255,7 @@ Hardhat を使用すると、追加のツールと拡張機能のための[プ�
 
 次のステップの hardhat.config.js でも Ethers(.js)が必要になります。
 
-## ステップ 13: hardhat.config.js をアップデートする {#update-hardhat-config}
+## ステップ 13: hardhat.config.js をアップデートする \{#update-hardhat-config}
 
 ここまでで、いくつかの依存関係とプラグインを追加しました。次に、プロジェクトがそれらすべてを認識できるように、hardhat.config.js をアップデートする必要があります。
 
@@ -279,7 +279,7 @@ hardhat.config.js を以下のようにアップデートします。
        },
     }
 
-## ステップ 14: コントラクトをコンパイルする {#compile-contract}
+## ステップ 14: コントラクトをコンパイルする \{#compile-contract}
 
 ここまでの作業がうまくいっていることを確認するために、コントラクトをコンパイルしてみましょう。 コンパイルは、組み込みの Hardhat タスクの 1 つです。
 
@@ -289,7 +289,7 @@ hardhat.config.js を以下のようにアップデートします。
 
 SPDX ライセンス識別子がソースファイルで提供されていないという警告が表示される場合がありますが、心配する必要はありません。警告が表示されないのがベストですが、 表示された場合は、いつでも[Alchemy discord](https://discord.gg/u72VCg3)でメッセージを送信できます。
 
-## ステップ 15: デプロイスクリプトを書く {#write-deploy}
+## ステップ 15: デプロイスクリプトを書く \{#write-deploy}
 
 コントラクトの作成と設定ファイルの作成が完了したら、いよいよコントラクトのデプロイのためのスクリプトを作成します。
 
@@ -323,7 +323,7 @@ ethers.js の ContractFactory は新しいスマートコントラクトをデ�
 
 ContractFactory の deploy()を呼び出すとデプロイメントが開始し、 Contract を解決するための Promise が返されます。 これは、スマートコントラクトの各関数に対するメソッドを持つオブジェクトです。
 
-## ステップ 16: コントラクトをデプロイする {#deploy-contract}
+## ステップ 16: コントラクトをデプロイする \{#deploy-contract}
 
 ようやく、スマートコントラクトをデプロイする準備が整いました。 プロジェクトディレクトリのルートに戻り、コマンドラインで以下を実行します。
 

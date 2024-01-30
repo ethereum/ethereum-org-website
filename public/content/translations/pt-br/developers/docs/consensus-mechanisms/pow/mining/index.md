@@ -8,11 +8,11 @@ lang: pt-br
 A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ethereum, o que significa que a mineração foi desativada. Em vez disso, o Ethereum é garantido por validadores que apostam em ETH. Você pode começar a participar com o seu ETH hoje. Leia mais sobre <a href='/roadmap/merge/'>A Fusão</a> (The MErge), <a href='/developers/docs/consensus-mechanisms/pos/'>prova de participação</a> e <a href='/staking/'>participação (stake)</a>. Esta página é apenas para interesse histórico.
 </InfoBanner>
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Para melhor entender esta página, recomendamos que você leia primeiro [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/) e [prova de trabalho](/developers/docs/consensus-mechanisms/pow/).
 
-## O que é mineração de Ethereum? {#what-is-ethereum-mining}
+## O que é mineração de Ethereum? \{#what-is-ethereum-mining}
 
 A mineração é o processo de criação de um bloco de transações a ser adicionado à cadeia de blocos do Ethereum na arquitetura de prova de trabalho agora obsoleta do Ethereum.
 
@@ -22,7 +22,7 @@ Ether de mineração = Protegendo a rede
 
 A mineração é a força vital de qualquer cadeia de blocos de prova de trabalho. Os mineradores do Ethereum — computadores executando software — usaram seu tempo e poder de computação para processar transações e produzir blocos antes da transição para a prova de participação.
 
-## Por que existem mineradores? {#why-do-miners-exist}
+## Por que existem mineradores? \{#why-do-miners-exist}
 
 Em sistemas descentralizados como o Ethereum, precisamos garantir que todos concordem com a ordem das transações. Os mineradores ajudaram isso a acontecer resolvendo quebra-cabeças computacionalmente difíceis para produzir blocos, protegendo a rede contra-ataques.
 
@@ -30,7 +30,7 @@ Em sistemas descentralizados como o Ethereum, precisamos garantir que todos conc
 
 Anteriormente, qualquer era capaz de minerar na rede Ethereum usando seu computador. No entanto, nem todos podem minerar ether (ETH) de forma lucrativa. Na maioria dos casos, os mineradores tiveram que comprar hardware de computador dedicado e ter acesso a fontes de energia barata. Um computador médio provavelmente não ganhava recompensas de bloco suficientes para cobrir os custos associados à mineração.
 
-### Custo da mineração {#cost-of-mining}
+### Custo da mineração \{#cost-of-mining}
 
 - Custos potenciais do hardware necessário para construir e manter uma plataforma de mineração
 - Custo elétrico para alimentar a plataforma de mineração
@@ -39,7 +39,7 @@ Anteriormente, qualquer era capaz de minerar na rede Ethereum usando seu computa
 
 Para conhecer ainda mais a rentabilidade da mineração, use uma calculadora de mineração, como a fornecida pela [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## Como as transações do Ethereum eram mineradas {#how-ethereum-transactions-were-mined}
+## Como as transações do Ethereum eram mineradas \{#how-ethereum-transactions-were-mined}
 
 O seguinte fornece uma visão geral de como as transações foram mineradas na prova de trabalho Ethereum. Uma descrição análoga deste processo para a prova de participação Ethereum pode ser encontrada [aqui](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
 
@@ -56,25 +56,25 @@ O seguinte fornece uma visão geral de como as transações foram mineradas na p
 
 Cada transação é extraída (incluída em um novo bloco e propagada pela primeira vez) uma vez, mas executada e verificada por cada participante no processo de avanço do estado EVM padrão. Isso destaca um dos mantras centrais da cadeia de blocos: ** Não confie, verifique **.
 
-## Blocos Ommer (tio) {#ommer-blocks}
+## Blocos Ommer (tio) \{#ommer-blocks}
 
 Mineração de blocos na prova de trabalho era probabilística, o que significa que às vezes dois blocos válidos eram publicados simultaneamente devido à latência da rede. Nesse caso, o protocolo tinha que determinar a cadeia mais longa (e, portanto, mais “válida”), enquanto garante justiça para os mineradores, recompensando parcialmente o bloco válido proposto não incluído. Isso encorajou uma maior descentralização da rede, pois mineradores menores, que podem enfrentar maior latência, ainda poderiam gerar retornos por meio de recompensas de bloco [ommer](/glossary/#ommer).
 
 O termo "ommer" é o termo neutro de gênero preferido para o irmão de um bloco pai, mas às vezes também é chamado de "tio". **Desde a mudança do Ethereum para prova de participação, os blocos ommer não são mais minerados**, pois apenas um proponente é eleito em cada espaço. Você pode ver essa mudança visualizando o [gráfico histórico](https://ycharts.com/indicators/ethereum_uncle_rate) dos blocos ommer minerados.
 
-## Uma demonstração visual {#a-visual-demo}
+## Uma demonstração visual \{#a-visual-demo}
 
 Acompanhe o Austin enquanto ele explica como funciona o processo de mineração e o conceito de prova de trabalho da cadeia de blocos.
 
 <YouTube id="zcX7OJ-L8XQ" />
 
-## O algoritmo de mineração {#mining-algorithm}
+## O algoritmo de mineração \{#mining-algorithm}
 
 A Rede principal do Ethereum usou apenas um algoritmo de mineração, o ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). O Ethhash foi o sucessor de um algoritmo de P&D original conhecido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/).
 
 [Mais sobre algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
-## Tópicos relacionados {#related-topics}
+## Tópicos relacionados \{#related-topics}
 
 - [Gás](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

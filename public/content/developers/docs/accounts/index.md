@@ -6,11 +6,11 @@ lang: en
 
 An Ethereum account is an entity with an ether (ETH) balance that can send transactions on Ethereum. Accounts can be user-controlled or deployed as smart contracts.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 To help you better understand this page, we recommend you first read through our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Account types {#types-of-account}
+## Account types \{##types-of-account}
 
 Ethereum has two account types:
 
@@ -22,7 +22,7 @@ Both account types have the ability to:
 - Receive, hold and send ETH and tokens
 - Interact with deployed smart contracts
 
-### Key differences {#key-differences}
+### Key differences \{##key-differences}
 
 **Externally-owned**
 
@@ -38,7 +38,7 @@ Both account types have the ability to:
 - Transactions from an external account to a contract account can trigger code which can execute many different actions, such as transferring tokens or even creating a new contract
 - Contract accounts don't have private keys. Instead, they are controlled by the logic of the smart contract code
 
-## An account examined {#an-account-examined}
+## An account examined \{##an-account-examined}
 
 Ethereum accounts have four fields:
 
@@ -50,7 +50,7 @@ Ethereum accounts have four fields:
 ![A diagram showing the make up of an account](./accounts.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Externally-owned accounts and key pairs {#externally-owned-accounts-and-key-pairs}
+## Externally-owned accounts and key pairs \{##externally-owned-accounts-and-key-pairs}
 
 An account is made up of a cryptographic pair of keys: public and private. They help prove that a transaction was actually signed by the sender and prevent forgeries. Your private key is what you use to sign transactions, so it grants you custody over the funds associated with your account. You never really hold cryptocurrency, you hold private keys – the funds are always on Ethereum's ledger.
 
@@ -58,7 +58,7 @@ This prevents malicious actors from broadcasting fake transactions because you c
 
 If Alice wants to send ether from her own account to Bob’s account, Alice needs to create a transaction request and send it out to the network for verification. Ethereum’s usage of public-key cryptography ensures that Alice can prove that she originally initiated the transaction request. Without cryptographic mechanisms, a malicious adversary Eve could simply publicly broadcast a request that looks something like “send 5 ETH from Alice’s account to Eve’s account,” and no one would be able to verify that it didn’t come from Alice.
 
-## Account creation {#account-creation}
+## Account creation \{##account-creation}
 
 When you want to create an account most libraries will generate you a random private key.
 
@@ -91,7 +91,7 @@ It is possible to derive new public keys from your private key but you cannot de
 
 You need a private key to sign messages and transactions which output a signature. Others can then take the signature to derive your public key, proving the author of the message. In your application, you can use a javascript library to send transactions to the network.
 
-## Contract accounts {#contract-accounts}
+## Contract accounts \{##contract-accounts}
 
 Contract accounts also have a 42 character hexadecimal address:
 
@@ -101,17 +101,17 @@ Example:
 
 The contract address is usually given when a contract is deployed to the Ethereum Blockchain. The address comes from the creator's address and the number of transactions sent from that address (the “nonce”).
 
-## Validator keys {#validators-keys}
+## Validator keys \{##validators-keys}
 
 There is also another type of key in Ethereum, introduced when Ethereum switched from proof-of-work to proof-of-stake based consensus. These are 'BLS' keys and they are used to identify validators. These keys can be efficiently aggregated to reduce the bandwidth required for the network to come to consensus. Without this key aggregation the minimum stake for a validator would be much higher.
 
 [More on validator keys](/developers/docs/consensus-mechanisms/pos/keys/).
 
-## A note on wallets {#a-note-on-wallets}
+## A note on wallets \{##a-note-on-wallets}
 
 An account is not a wallet. An account is the keypair for a user-owned Ethereum account. A wallet is an interface or application that lets you interact with your Ethereum account.
 
-## A visual demo {#a-visual-demo}
+## A visual demo \{##a-visual-demo}
 
 Watch Austin walk you through hash functions, and key pairs.
 
@@ -119,13 +119,13 @@ Watch Austin walk you through hash functions, and key pairs.
 
 <YouTube id="9LtBDy67Tho" />
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Understanding Ethereum Accounts](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Smart contracts](/developers/docs/smart-contracts/)
 - [Transactions](/developers/docs/transactions/)

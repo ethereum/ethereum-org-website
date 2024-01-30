@@ -5,16 +5,16 @@ lang: tr
 incomplete: true
 ---
 
-## Giriş {#introduction}
+## Giriş \{#introduction}
 
 Birçok Ethereum geliştirme standardı, jeton arayüzlerine odaklanır. Bu standartlar akıllı sözleşmelerin birleştirilebilir kalmasını sağlamaya yardımcı olur: Örneğin yeni bir proje bir token çıkardığı zaman token'ın mevcut merkeziyetsiz borsalarla uyumlu kalması gibi.
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 - [Ethereum geliştirme standartları](/developers/docs/standards/)
 - [Akıllı sözleşmeler](/developers/docs/smart-contracts/)
 
-## Token standartları {#token-standards}
+## Token standartları \{#token-standards}
 
 Bunlar Ethereum'daki en popüler token standartlarından bazılarıdır:
 
@@ -26,11 +26,11 @@ Bunlar Ethereum'daki en popüler token standartlarından bazılarıdır:
 
 [ERC](https://eips.ethereum.org/erc) önerilerinin tam listesi.
 
-## daha fazla okuma {#further-reading}
+## daha fazla okuma \{#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili öğreticiler {#related-tutorials}
+## İlgili öğreticiler \{#related-tutorials}
 
 - [Token entegrasyonu kontrol listesi](/developers/tutorials/token-integration-checklist/) _– Token'larla etkileşim kurarken göz önünde bulundurulması gerekenleri içeren bir kontrol listesi._
 - [ERC20 token akıllı sözleşmesini anlayın](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– İlk akıllı sözleşmenizi bir Ethereum test ağında dağıtmaya giriş._

@@ -4,7 +4,7 @@ description:
 lang: sl
 ---
 
-## Uvod {#introduction}
+## Uvod \{#introduction}
 
 **Kaj je nezamenljiv žeton?**
 
@@ -16,13 +16,13 @@ ERC-721 predstavlja standard za NFT-je. Z drugimi besedami: ta tip žetona je ed
 
 Da! Vsi NFT-ji imajo spremenljivko `uint256`, ki se imenuje `tokenId`, tako da morata biti za katerokoli pogodbo ERC-721 `naslov pogodbe, uint256 tokenId` globalno edinstvena. Glede na to ima lahko dapp "pretvornik", ki uporablja `tokenId` kot vnos in tako izda sliko nečesa zanimivega, kot so zombiji, orožje, vrline ali izjemni mucki!
 
-## Predpogoji {#prerequisites}
+## Predpogoji \{#prerequisites}
 
 - [Računi](/developers/docs/accounts/)
 - [Pametne pogodbe](/developers/docs/smart-contracts/)
 - [Standardi za žetone](/developers/docs/standards/tokens/)
 
-## Jedro {#body}
+## Jedro \{#body}
 
 ERC-721 (Zahteva Ethereum za komentarje 721), ki so ga januarja 2018 predlagali William Entriken, Dieter Shirley, Jacob Evans in Nastassia Sachs, je standard za nezamenljive žetone, ki implementira API za žetone znotraj pametnih pogodb.
 
@@ -32,7 +32,7 @@ Zagotavlja funkcionalnosti, kot so prenos žetonov z enega računa na drugega, p
 
 Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-### Metode {#methods}
+### Metode \{#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Dogodki {#events}
+### Dogodki \{#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Primeri {#web3py-example}
+### Primeri \{#web3py-example}
 
 Oglejmo si, zakaj je standard tako pomemben za to, da poenostavi pregled katerekoli pogodbe žetona ERC-721 na Ethereumu. Za ustvarjanje vmesnika za katerikoli žeton ERC-721 potrebujemo le binarni vmesnik pogodbene aplikacije (ABI). Kot lahko vidite spodaj, bomo uporabili poenostavljen ABI, da bi ustvarili primer z nizkim trenjem.
 
-#### Primer Web3.py {#web3py-example}
+#### Primer Web3.py \{#web3py-example}
 
 Najprej se prepričajte, da ste namestili knjižnico [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python:
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## Priljubljeni NFT-ji {#popular-nfts}
+## Priljubljeni NFT-ji \{#popular-nfts}
 
 - [Sledilnik Etherscan NFT](https://etherscan.io/tokens-nft) navaja NFT-je na Ethereumu z najvišjo količino trgovanja.
 - [CryptoKitties](https://www.cryptokitties.co/) je igra, osredotočena okoli vzreje, zbiranja in prisrčnih bitij, ki jih imenujemo CryptoKitties.
@@ -235,7 +235,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/) je igra izmenjave kart na blokovni verigi Ethereum, ki za prenos dejanskega lastništva predmetov v igrah uporablja NFT-je.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) je zbirka 10 000 edinstvenih NFT-jev, ki poleg tega, da so dokazljivo redki umetniški kosi, delujejo tudi kot članski žeton kluba, ki članom zagotavlja prednosti in ugodnosti, ki se kot rezultat prizadevanja skupnosti s časom povečujejo.
 
-## Nadaljnje branje {#further-reading}
+## Nadaljnje branje \{#further-reading}
 
 - [EIP-721: standard za nezamenljive žetone ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin – dokumentacija ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)

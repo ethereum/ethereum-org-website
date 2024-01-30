@@ -11,13 +11,13 @@ template: roadmap
 
 此外，还可以进行一些改进，使审查交易变得更加困难，比如对区块提议者隐藏区块的实际内容，或者采用新的方法来识别客户端何时在审查。 这些改进将共同升级权益证明协议，使从个人到企业的所有用户都对他们在以太坊上的应用程序、数据和资产随即产生信心。
 
-## 质押提款 {#staking-withdrawals}
+## 质押提款 \{#staking-withdrawals}
 
 从工作量证明升级到权益证明的过程始于以太坊的先驱们在存款合约中质押以太币。 这些以太币用于保护网络。 然而，这些以太币尚不能解锁并退还给用户。 允许提取以太币是权益证明升级的关键部分。 提款是功能完善的权益证明协议的关键组成部分，而且允许提款也有利于以太坊的安全性，因为这可以让质押人将以太币奖励用于其他非质押目的。 这意味着需要流动性的用户不必依赖于可能推动以太坊的中心化的流动性质押衍生品 (LSD)。 这项升级预定在 2023 年 4 月 12 日完成。
 
 <ButtonLink variant="outline-color" to="/staking/withdrawals/">阅读关于提款的信息</ButtonLink>
 
-## 防御攻击 {#defending-against-attacks}
+## 防御攻击 \{#defending-against-attacks}
 
 即使在提款后，仍然可以对以太坊的[权益证明](/developers/docs/consensus-mechanisms/pos/)协议进行改进。 其中一项被称为“[视图合并](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739)”- 这是一个更安全的分叉选择算法，可以让某些复杂攻击更加困难。
 
@@ -25,7 +25,7 @@ template: roadmap
 
 <ButtonLink variant="outline-color" to="/roadmap/single-slot-finality/">了解单时隙确定性</ButtonLink>
 
-## 防范审查 {#defending-against-censorship}
+## 防范审查 \{#defending-against-censorship}
 
 去中心化可以防止个人或一小部分验证者的影响力过大。 新型质押技术有助于确保以太坊的验证者尽可能保持去中心化，同时还能防范硬件、软件和网络故障。 包括将验证者责任分散到多个节点的软件。 这被称为**分布式验证者技术 (DVT)**。 由于分布式验证者技术允许多台计算机共同参与验证，从而增加了冗余和容错性，因此我们鼓励质押池使用分布式验证者技术。 它还能将验证者密钥分散到多个系统中，而不是由一个运营商运行多个验证者。 这增加了不诚实运营商协调对以太坊的攻击的难度。 总之，它的想法是由_社区_而非个人运行验证者，从而提高安全性。
 
@@ -37,12 +37,12 @@ template: roadmap
 
 <ButtonLink variant="outline-color" to="/roadmap/pbs/">了解提议者-构建者分离</ButtonLink>
 
-## 保护验证者 {#protecting-validators}
+## 保护验证者 \{#protecting-validators}
 
 老练的攻击者有可能识别出即将到来的验证者，并向它们发送垃圾邮件，以阻止它们提议区块。这被称为**拒绝服务 (DoS)**攻击。 实施[**秘密领袖选举 (SLE)**](/roadmap/secret-leader-election)可防止预先知道区块提议者，从而防范此类攻击。 其工作原理是对代表候选区块提议者的加密承诺进行不断混洗，并利用它们的顺序来决定选择哪个验证者，从而使验证者自己才能事先知道它们的顺序。
 
 <ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">了解秘密领袖选举</ButtonLink>
 
-## 当前进展 {#current-progress}
+## 当前进展 \{#current-progress}
 
 路线图上的安全升级已进入高级研究阶段，但预计在一段时间内不会实施。 视图合并、提议者-构建者器分离、单时隙确定性和秘密领袖选举的下一步工作是最终确定规范并开始构建原型。

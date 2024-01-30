@@ -12,11 +12,11 @@ Gasper è una combinazione di Casper the Friendly Finality Gadget (Casper-FFG) e
 
 Per comprendere questo materiale, è necessario leggere la pagina introduttiva sul [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-## Il ruolo di Gasper {#role-of-gasper}
+## Il ruolo di Gasper \{#role-of-gasper}
 
 Gasper si trova in cima a una blockchain di proof-of-stake in cui i nodi forniscono ether come un deposito di sicurezza, che può esser distrutto se sono pigri o disonesti nel proporre o convalidare i blocchi. Gasper è il meccanismo che definisce come i validatori sono ricompensati e puniti, decide quali blocchi accettare e rifiutare e su quale biforcazione della blockchain costruire.
 
-## Cos'è la finalità? {#what-is-finality}
+## Cos'è la finalità? \{#what-is-finality}
 
 La finalità è una proprietà di certi blocchi tale per cui non possono essere ripristinati, a meno che non si sia verificato un fallimento del consenso critico e che un utente malevolo non abbia distrutto almeno 1/3 dell'ether totale in staking. I blocchi finalizzati possono essere pensati come informazioni su cui la blockchain è certa. Affinché un blocco sia finalizzato, deve passare per una procedura d'aggiornamento in due passaggi:
 
@@ -32,21 +32,21 @@ Poiché la finalità richiede un accordo di due terzi per rendere un blocco cano
 
 La prima condizione sorge perché per finalizzare una catena servono due terzi dell'ether in staking. La seconda sorge perché se due terzi dello stake totale ha votato in favore di entrambe le biforcazioni, allora un terzo deve aver votato su entrambe. Il doppio voto è una condizione di slashing che subirebbe la punizione massima, con la distruzione di un terzo dello stake totale. A maggio 2022, questo richiederebbe a un utente malevolo di bruciare ether per un valore di circa $10 miliardi. L'algoritmo che giustifica e finalizza i blocchi in Gasper è una forma lievemente modificata di [Casper the Friendly Finality Gadget (Casper-FFG)](https://arxiv.org/pdf/1710.09437.pdf).
 
-### Incentivi e slashing {#incentives-and-slashing}
+### Incentivi e slashing \{#incentives-and-slashing}
 
 I validatori sono ricompensati se propongono e convalidano onestamente dei blocchi. La ricompensa avviene sotto forma di Ether aggiunto al loro stake. Per contro, i validatori che sono assenti e non agiscono quando vengono invitati a farlo, perdono queste ricompense, e talvolta perdono una piccola porzione del loro stake esistente. Le sanzioni per essere offline sono comunque modeste e, nella maggior parte dei casi, ammontano al costo opportunità della mancata ricompensa. Tuttavia, è molto improbabile che alcune azioni dei validatori siano compiute accidentalmente e sono quindi indicative di qualche intento dannoso, come proporre più blocchi per lo stesso slot, attestare più blocchi per lo stesso slot o contraddire i voti del punto di controllo precedente. Si tratta di comportamenti sanzionati più duramente: lo slashing comporta la distruzione di una data parte dello stake del validatore e la sua esclusione dalla rete di validatori. Questo processo richiede 36 giorni. Al giorno 1, è prevista una sanzione iniziale di un massimo di 1 ETH. Successivamente, l'ether del validatore sanzionato "diminuisce" lentamente lungo il periodo d'uscita, ma al Giorno 18 riceve una "sanzione di correlazione", tanto maggiore quanti più validatori subiscono contemporaneamente lo slashing. La sanzione massima è rappresentata dall'intero stake. Queste ricompense e sanzioni sono pensate per incentivare i validatori onesti e disincentivare gli attacchi alla rete.
 
-### Perdita per inattività {#inactivity-leak}
+### Perdita per inattività \{#inactivity-leak}
 
 Oltre alla sicurezza, Gasper fornisce anche una "vitalità plausibile". Questa condizione prevede che finché due terzi dell'ether in staking totale vota onestamente e segue il protocollo, la catena potrà finalizzare, indipendentemente da qualsiasi altra attività (come attacchi, problemi di latenza o slashing). In altre parole, un terzo dell'ether in staking totale deve essere in qualche modo compromesso per impedire alla catena di finalizzare. In Gasper, esiste una linea di difesa aggiuntiva contro la perdita di vitalità, nota come "perdita per inattività". Questo meccanismo si attiva quando la catena non è riuscita a finalizzare per più di quattro epoche. I validatori che non stanno attestando attivamente alla catena di maggioranza subiscono una perdita graduale del loro stake finché la maggioranza non ottiene nuovamente i due terzi dello stake totale, garantendo così che la perdita di vitalità sia solo temporanea.
 
-### Scelta della biforcazione {#fork-choice}
+### Scelta della biforcazione \{#fork-choice}
 
 La definizione originale di Casper-FFG prevedeva un algoritmo di scelta della biforcazione che imponeva la regola: `segui la catena contenente il punto di controllo giustificato avente l'altezza maggiore`, dove l'altezza è definita come la massima distanza dal blocco di genesi. In Gasper, la regola di scelta della biforcazione originale è deprecata in favore di un algoritmo più sofisticato, denominato LMD-GHOST. È importante rendersi conto che in condizioni normali non è necessaria una regola di scelta della biforcazione: esiste un propositore del singolo blocco per ogni slot e i validatori onesti lo attestano. Serve un algoritmo di scelta della biforcazione solo quando vi è una grande asincronia della rete o quando un propositore del blocco disonesto ha generato confusione. Tuttavia, quando si presentano questi casi, l'algoritmo di scelta della biforcazione è un’importante difesa che protegge la catena corretta.
 
 LMD-GHOST sta per "latest message-driven greedy heaviest observed sub-tree". Si tratta di un termine molto gergale per definire un algoritmo che seleziona la biforcazione che presenta il peso di attestazioni accumulate più elevato rispetto a quello canonico (greedy heaviest subtree) e che se vengono ricevuti più messaggi da un validatore, viene considerato solo l’ultimo (latest-message driveno). Prima di aggiungere il blocco più pesante alla sua catena canonica, ogni validatore valuta ogni blocco usando questa regola.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Gasper: combinazione di GHOST e Casper](https://arxiv.org/pdf/2003.03052.pdf)
 - [Casper the Friendly Finality Gadget](https://arxiv.org/pdf/1710.09437.pdf)

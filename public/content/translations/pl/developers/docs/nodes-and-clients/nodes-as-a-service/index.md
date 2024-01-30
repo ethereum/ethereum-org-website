@@ -6,15 +6,15 @@ sidebarDepth: 2
 isOutdated: true
 ---
 
-## Wprowadzenie {#Introduction}
+## Wprowadzenie \{#Introduction}
 
 Uruchamianie własnego [węzła Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) może być trudne, szczególnie podczas rozpoczynania lub szybkiego skalowania. Istnieje [wiele usług](#popular-node-services) uruchamiających zoptymalizowaną infrastrukturę węzłów dla Ciebie, więc możesz skupić się na rozwijaniu swojej aplikacji lub produktu. Wyjaśnimy, jak działają usługi węzłów, jakie są zalety i wady korzystania z nich oraz przedstawimy listę dostawców, jeśli jesteś zainteresowany rozpoczęciem działalności.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Jeśli nie wiesz jeszcze, czym są węzły i klienci, sprawdź [Węzły i klienci](/developers/docs/nodes-and-clients/).
 
-## Jak działają usługi węzła? {#how-do-node-services-work}
+## Jak działają usługi węzła? \{#how-do-node-services-work}
 
 Dostawcy usług węzłów obsługują dla Ciebie klientów węzłów rozproszonych, więc nie musisz tego robić.
 
@@ -28,19 +28,19 @@ Często usługi węzłów uruchamiają różnych [klientów](/developers/docs/no
 
 Należy pamiętać, że usługi węzłów nie przechowują i nie powinny przechowywać kluczy prywatnych ani informacji.
 
-## Jakie są zalety korzystania z usługi węzła? {#benefits-of-using-a-node-service}
+## Jakie są zalety korzystania z usługi węzła? \{#benefits-of-using-a-node-service}
 
 Główną zaletą korzystania z usługi węzła jest brak konieczności poświęcania czasu na konserwację węzłów i samodzielne zarządzanie nimi. Pozwala to skoncentrować się na budowie swojego produktu, bez martwienia się o konserwację infrastruktury.
 
 Uruchamianie własnych węzłów może być bardzo kosztowne od pamięci przez przepustowości do cennego czasu inżynierów. Takie czynności jak uruchamianie większej liczby węzłów podczas skalowania, aktualizowanie węzłów do najnowszych wersji i zapewnianie spójności stanu mogą odciągnąć uwagę od budowania i wydawania zasobów na pożądany produkt web3.
 
-## Jakie są wady korzystania z usługi węzła? {#cons-of-using-a-node-service}
+## Jakie są wady korzystania z usługi węzła? \{#cons-of-using-a-node-service}
 
 Korzystając z usługi węzła, centralizujesz aspekt infrastrukturalny Twojego produktu. Z tego powodu projekty, dla których decentralizacja jest najważniejsza, mogą preferować samodzielne utrzymywanie węzłów zamiast zlecania tego stronie trzeciej.
 
 Dowiedz się więcej o [zaletach uruchomienia własnego węzła](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Popularne usługi węzłów {#popular-node-services}
+## Popularne usługi węzłów \{#popular-node-services}
 
 Oto lista najbardziej popularnych dostawców węzłów Ethereum, możesz dodać dowolne, których brakuje! Każda usługa węzła oferuje inne korzyści i funkcje oprócz bezpłatnych lub płatnych warstw. Przed podjęciem decyzji powinieneś zbadać, które z nich najlepiej pasują do Twoich potrzeb.
 
@@ -82,15 +82,15 @@ Oto lista najbardziej popularnych dostawców węzłów Ethereum, możesz dodać 
     - Subskrypcja na węzeł
     - Analityka
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [Lista usług węzła Ethereum](https://ethereumnodes.com/)
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [Węzły i klienci](/developers/docs/nodes-and-clients/)
 
-## Powiązane samouczki {#related-tutorials}
+## Powiązane samouczki \{#related-tutorials}
 
 - [Rozpoczęcie rozwoju Ethereum za pomocą Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 - [Przewodnik po wysyłaniu transakcji za pomocą web3 i Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)

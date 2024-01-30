@@ -8,7 +8,7 @@ summaryPoints:
   - Kaybolmuş ve ifşa olmuş anahtarlar, birden çok yedekleme yolu kullanılarak kurtarılabilir
 ---
 
-# Hesap soyutlama {#account-abstraction}
+# Hesap soyutlama \{#account-abstraction}
 
 Kullanıcılar, **[harici olarak sahiplenilmiş cüzdanlar (EOA'lar)](/glossary/#eoa)** kullanarak Ethereum ile etkileşime geçebilirler. Bir işlem başlatmanın veya bir akıllı sözleşme yürütmenin tek yolu budur. Bu durum, kullanıcıların Ethereum ile etkileşime girmesini sınırlamaktadır. Toplu halde işlem yapmanın zorlaşması ve kullanıcıların gaz ücretini karşılamak için her zaman bir miktar ETH bulundurmak zorunda olması, bu zorluklara örnek olarak gösterilebilir.
 
@@ -34,7 +34,7 @@ Akıllı sözleşme cüzdanları bu sorunların çözümüdür, ancak bugün pro
 
 Sonuç olarak hesap soyutlama, akıllı sözleşme cüzdanlarına yönelik desteği geliştirerek, bunların oluşturulmasını kolaylaştırır ve kullanımını daha güvenli hale getirir. Hesap soyutlama ile birlikte kullanıcılar, altta yatan teknolojinin ne olduğunu bilmeden veya hiç umursamadan Ethereum'un tüm avantajlarından yararlanabilirler.
 
-## Güvenlik kelimelerinin ötesinde {#beyond-seed-phrases}
+## Güvenlik kelimelerinin ötesinde \{#beyond-seed-phrases}
 
 Bugün mevcut olan hesaplar, güvenlik kelimelerinden hesaplanan özel anahtarlar kullanılarak güvence altına alınmıştır. Güvenlik kelimelerine erişimi olan herhangi bir kişi, bir hesabı koruyan özel anahtarı kolayca keşfedebilir ve koruduğu tüm varlıklara erişim sağlayabilir. Bir özel anahtar ve güvenlik kelimeleri kaybolursa, asla kurtarılamazlar ve kontrol ettikleri varlıklar sonsuza kadar Ethereum'un derinliklerinde kalır. Güvenlik kelimelerinin güvenliğini sağlamak, deneyimli kullanıcılar için bile gariptir. kimlik avı saldırıları, kullanıcıların dolandırıldığı en yaygın yolların başında gelir.
 
@@ -50,7 +50,7 @@ Mesela bir cüzdana yedek anahtarlar eklenebilir. Böylece hesabın ana anahtarl
 - **İşlem sınırı belirleme**: Hesap içerisinden bir gün, hafta veya ay içinde ne kadar varlık transfer edilebileceğine ilişkin günlük sınırlar belirleyebilirsiniz. Bu, bir saldırgan hesabınıza erişim elde ederse tüm varlıkları tek seferde çalamayacağı ve hırsızın erişimini engelleme ve sıfırlama fırsatınız olduğu anlamına gelir.
 - **Güvenilir listeler oluşturma**: Yalnızca güvenli olduğunu bildiğiniz belirli adreslere yapılan işlemlere izin verin. Bu, özel anahtarınız _çalınsa bile_ saldırganın listede olmayan hesaplara para gönderemeyeceği anlamına gelir. Bu güvenilir listeleri değiştirmek için birden fazla imza gerektirir, böylece bir saldırgan, birkaç yedek anahtarınıza erişimi olmadığı sürece kendi adresini listeye ekleyemez.
 
-## Daha iyi kullanıcı deneyimi {#better-user-experience}
+## Daha iyi kullanıcı deneyimi \{#better-user-experience}
 
 Hesap soyutlama, protokol düzeyinde akıllı sözleşme cüzdanları için destekte bulunduğundan, **daha iyi bir kullanıcı deneyiminin** yanı sıra **gelişmiş güvenlik** de sağlamaktadır. Bunun en önemli nedeni, akıllı sözleşmeler, cüzdanlar ve uygulama geliştiricilerine, kullanıcı deneyimi üzerinde henüz tahmin bile edemeyeceğimiz şekillerde yenilik yapmak için çok daha fazla özgürlük sağlayacak olmasıdır. Hesap soyutlamayla birlikte ortaya çıkacak bazı belirgin iyileştirmeler, işlemlerin hız ve verimlilik için bir araya getirilmesini içermektedir. Örnek olarak, basit bir takasın mantıken tek tıklamayla gerçekleştirilebilecek bir işlem olması gerekir. Ancak bugün, takas yürütülmeden önce token'ların harcamasını onaylamak için birden fazla işlemin imzalanması gerekmektedir. Hesap soyutlama, işlemlerin gruplanmasına izin vererek bu sorunu ortadan kaldırmaktadır. Ayrıca gruplandırılmış işlemler, her işlem için gereken tokenlerin doğru değerini tam olarak onaylayabilir ve işlem tamamlandıktan sonra onayları iptal ederek ek güvenlik sağlayabilir.
 
@@ -70,7 +70,7 @@ Hesap soyutlama ile satın alma sistemlerinin nasıl değişebileceğini düşü
 
 Bunlar, hesap soyutlama sayesinde kullanıcı deneyimlerinin nasıl ölçeklendirilebileceğine dair yalnızca birkaç örnektir. Ancak henüz hayal edemediğimiz çok daha fazla özellik de olacaktır. Hesap soyutlama, geliştiricileri günümüzün EOA'larının kısıtlamalarından kurtarır. Web2'nin iyi yönlerini kişisel gözetimden ödün vermeden web3'e getirmelerine ve yaratıcı yeni kullanıcı deneyimlerinde yaratıcı bir şekilde uygulamalarına olanak tanır.
 
-## Hesap soyutlama uygulamaya nasıl geçecek? {#how-will-aa-be-implemented}
+## Hesap soyutlama uygulamaya nasıl geçecek? \{#how-will-aa-be-implemented}
 
 Akıllı sözleşme cüzdanları bugün mevcut durumdadır. Ancak EVM onları desteklemediği için uygulanması bir hayli zordur. Bunun yerine, standart Ethereum işlemlerinin etrafına nispeten daha karmaşık kodlar eklemeye güvenmektedirler. Ethereum, akıllı sözleşmelerin işlem başlatmasına izin vererek, zincir dışı yerine Ethereum akıllı sözleşmelerinde gerekli mantığı ele alarak bunu değiştirebilir. Akıllı sözleşmelere bir "mantık" eklemek, cüzdan geliştiricileri tarafından yönetilen "aktarıcıların" kullanıcı tarafından imzalanan mesajları normal Ethereum işlemlerine çevirme ihtiyacını ortadan kaldırdığı için Ethereum'un merkeziyetsizliğini de arttırmaktadır.
 
@@ -106,11 +106,11 @@ EIP-3074'in güncel olarak aktif olmadığını göz önünde bulundurun. Toplul
 
 </ExpandableCard>
 
-## Güncel ilerleme {#current-progress}
+## Güncel ilerleme \{#current-progress}
 
 Akıllı sözleşme cüzdanları çoktan beri mevcut, ancak bu cüzdanları olabildiğinde merkeziyetsiz ve izinsiz hale getirmek için daha fazla yükseltme gerekiyor. EIP-4337, Ethereum protokolünde hiçbir değişikliğe gerek duymayan olgun bir tekliftir, yani hızlıca uygulanması olasıdır. Ancak, Ethereum protokolünde değişen bazı yükseltmeler artık aktif geliştirme sürecinde değil, yani bu değişimlerin gelmesi uzun zaman alabilir. Hesap soyutlamaya da EIP-4337 gibi protokolde bir değişikliğe gerek duymayan bir madde tarafından ulaşılması olası.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Hesap soyutlama paneli tartışması, Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

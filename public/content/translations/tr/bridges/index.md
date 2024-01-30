@@ -4,13 +4,13 @@ description: Köprüler, kullanıcıların varlıklarını farklı blok zincirle
 lang: tr
 ---
 
-# Blokzincir köprüleri {#prerequisites}
+# Blokzincir köprüleri \{#prerequisites}
 
 _Web3 L1 blok zincirler ve L2 ölçeklendirme çözümlerinin her birinin benzersiz yetenek ve ödünlestirmelerle tasarlandığı bir ekosisteme evrilmiştir. Blok zincir protokol sayısı arttıkça, [varlıkları zincirler arasında aktarma talebi](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)) de artmıştır. Bu talebi karşılamak için köprülere ihtiyacımız var._
 
 <Divider />
 
-## Köprüler nedir? {#what-are-bridges}
+## Köprüler nedir? \{#what-are-bridges}
 
 Blok zincir köprüleri bildiğimiz fiziksel dünyadaki köprüler gibi çalışır. Fiziksel bir köprü nasıl iki ayrı fiziksel konumu bağlıyorsa, bir blok zincir köprüsü de iki blok zincir ekosistemini birbirine bağlar. Köprüler blok zincirler arası iletişimi bilgi ve varlıkların iletimi ile sağlarlar.
 
@@ -20,7 +20,7 @@ Siz Amerika'dasınız ve Avrupa'ya bir yolculuk planlıyorsunuz. Amerikan dolar�
 
 Ancak başka bir blok zincir kullanmak için benzer bir değişim yapmak isteseniz ne yaparsınız? Diyelim ki [Arbitrium'da](https://arbitrum.io/) ETH kullanmak için Ethereum Ana Ağı'ndaki ETH'yi değiştirmek istiyorsunuz. EUR için yaptığımız döviz değişimi gibi, ETH'mizi Ethereum'dan Arbitrum'a taşımak için bir mekanizmaya ihtiyacımız var. Köprüler bunun gibi bir işlemi mümkün kılar. Bu durumda Arbitrum, ETH'yi Ana Ağdan Arbitrum'a aktarabilecek [yerel bir köprüye](https://bridge.arbitrum.io/) sahiptir.
 
-## Neden köprülere ihtiyacımız var? {#why-do-we-need-bridges}
+## Neden köprülere ihtiyacımız var? \{#why-do-we-need-bridges}
 
 Bütün blok zincirlerin kendi sınırları vardır. Ethereumun ölçeklenmesi ve talebe ayak uydurması için toplamalara ihtiyacı olmuştur. Alternatif olarak, Solana ve Avalanche gibi L1'ler daha yüksek iş hacmi için merkeziyetsizleşme maliyeti karşılığında farklı şekilde tasarlanmışlardır.
 
@@ -39,23 +39,23 @@ Köprüler şunu etkinleştirir:
 
 <Divider />
 
-## Köprülerin kullanım alanları {#bridge-use-cases}
+## Köprülerin kullanım alanları \{#bridge-use-cases}
 
 Aşağıda bir köprüyü nerede kullanabileceğinizle ilgili bazı senaryolar verilmiştir:
 
-### İşlem ücretlerini azaltma {#transaction-fees}
+### İşlem ücretlerini azaltma \{#transaction-fees}
 
 Diyelim ki Ethereum Ana Ağı'nda ETH'niz var ama farklı merkeziyetsiz uygulamalar için daha ucuz işlem ücreti istiyorsunuz. Ana Ağdaki ETH'nizi Ethereum L2 toplamasına köprüleyerek daha düşük işlem ücretinin tadını çıkarabilirsiniz.
 
-### Diğer blok zincirlerdeki merkeziyetsiz uygulamalar {#dapps-other-chains}
+### Diğer blok zincirlerdeki merkeziyetsiz uygulamalar \{#dapps-other-chains}
 
 Ethereum Ana Ağı'nda Aave'yi kullanarak USDT borç veriyorsanız ama Polygon'da Aave'yi kullanarak USDT borç vermenin faiz oranı daha yüksekse.
 
-### Diğer blok zincir ekosistemlerini keşfetme {#explore-ecosystems}
+### Diğer blok zincir ekosistemlerini keşfetme \{#explore-ecosystems}
 
 Ethereum Ana Ağı'nda ETH'niz varsa ve diğer bir L1'i keşfedip yerel merkeziyetsiz uygulamalarını denemek istiyorsanız. Ethereum Ana Ağı'ndaki ETH'inizi diğer L1'e iletmek için bir köprü kullanabilirsiniz.
 
-### Yerel kripto varlıklarına sahip olma {#own-native}
+### Yerel kripto varlıklarına sahip olma \{#own-native}
 
 Diyelim ki yerel zincirde Bitcoin'e (BTC) sahip olmak istiyorsunuz ama sadece Ethereum Ana Ağı'nda varlıklarınız var. Ethereum'da BTC sahibi olmak için Wrapped Bitcoin (WBTC) satın alabilirsiniz. Ancak WBTC, bir Ethereum ağına özgü bir ERC-20 token'ıdır. Bu da Bitcoin blok zincirindeki orijinal varlık değil, Bitcoin'in Ethereum versiyonu olduğu anlamına gelir. Yerel BTC'ye sahip olmak için varlıklarınızı Ethereum'dan Bitcoin'e bir köprü aracılığı ile aktarmanız gerekir. Bu WBTC'nizi köprüleyecek ve yerel BTC'ye dönüştürecektir. Alternatif olarak, BTC sahibi olabilir ve Ethereum DeFi protokolleinde kullanmak istiyor olabilirsiniz. Bu da tersi yönünde, BTC'yi WBTC'ye köprülemeyi gerektirir. Bu şekide Ethereum'da bir varlık olarak kullanılabilir.
 
@@ -65,7 +65,7 @@ Diyelim ki yerel zincirde Bitcoin'e (BTC) sahip olmak istiyorsunuz ama sadece Et
 
 <Divider />
 
-## Köprü Türleri {#types-of-bridge}
+## Köprü Türleri \{#types-of-bridge}
 
 Köprülerin çeşitli tasarım türü ve karmaşıklıkları vardır. Genel olarak köprüler iki kategoriye ayrılır: güvenilir ve güvenilir olmayan köprüler.
 
@@ -95,7 +95,7 @@ Pek çok köprüleme çözümü, bu iki uç arasında değişen derecelerde güv
 
 <Divider />
 
-## Köprüleri kullanmanın riskleri {#bridge-risk}
+## Köprüleri kullanmanın riskleri \{#bridge-risk}
 
 Köprüler geliştirmenin ilk aşamalarındalar. Büyük olasılıkla hâlâ optimal bir köprü tasarımı keşfedilmedi. Her türlü köprü ile etkileşim risk taşır:
 
@@ -121,7 +121,7 @@ Köprüler, Ethereum L2'lere kullanıcıları alımda ve hatta diğer ekosisteml
 
 <Divider />
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla okuma \{#further-reading}
 
 - [EIP-5164: Zincirler Arası Yürütme](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 Haziran 2022 - Brendan Asselstine_
 - [L2Bridge Risk Çerçevesi](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 Temmuz 2022 - Bartek Kiepuszewski_

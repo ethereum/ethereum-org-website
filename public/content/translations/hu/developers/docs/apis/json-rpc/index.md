@@ -10,31 +10,31 @@ Ebből a célból minden [Ethereum-kliens](/developers/docs/nodes-and-clients/#e
 
 A [JSON-RPC](https://www.jsonrpc.org/specification) egy státuszmentes, könnyű remote procedure call (RPC) protokoll. Számos adatstruktúrát, valamint ezek feldolgozásának szabályait is meghatározza. Ez a megoldás nem függ az átadási módoktól, mivel a koncepciókat használni lehet ugyanabban a folyamatban, socketeknél, HTTP-vel és számos más üzenetküldő környezetben. Az adatformátum JSON (RFC 4627).
 
-## Kliensimplementációk {#client-implementations}
+## Kliensimplementációk \{#client-implementations}
 
 Az Ethereum-kliensek mindegyike használhat különböző programozási nyelveket, amikor a JSON-RPC specifikációt implementálja. Tekintse meg az egyéni [kliensdokumentációt](/developers/docs/nodes-and-clients/#execution-clients) további részletekért a specifikus programozási nyelvekről. Érdemes megnézni a kliensdokumentációt a legutóbbi API-támogatási információ miatt is.
 
-## Kényelmi könyvtárak {#convenience-libraries}
+## Kényelmi könyvtárak \{#convenience-libraries}
 
 Választhatja, hogy az Ethereum-kliensekkel közvetlenül kapcsolódik a JSON-RPC API révén, de az alkalmazásfejlesztők rendelkezésére állnak egyszerűbb opciók is. Számos [JavaScript](/developers/docs/apis/javascript/#available-libraries) és [backend API](/developers/docs/apis/backend/#available-libraries) könyvtár létezik, hogy a JSON-RPC API tetejére egy wrappert (burkoló réteget) adjon. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy JSON-RPC-kérést kezdeményezzenek (a háttérben), amely interakcióba lép az Ethereummal.
 
-## Konszenzusos kliens API-k {#consensus-clients}
+## Konszenzusos kliens API-k \{#consensus-clients}
 
 Ez az írás főleg a JSON-RPC API-val foglalkozik, melyet az Ethereum végrehajtási kliensei használnak. Ugyanakkor a konszenzusos klienseknek is van egy RPC API-ja, amellyel a felhasználók lekérhetnek információkat a csomópontról, Beacon-blokkokról, Beacon-státuszokról és más konszenzussal kapcsolatos adatokról közvetlenül a csomópontról. Ez az API a [Beacon API honlapon](https://ethereum.github.io/beacon-APIs/#/) van dokumentálva.
 
 Egy belső API-t használnak a kliensek közötti kommunikációra a csomóponton belül, így a konszenzusos kliens és a végrehajtási kliens képes adatot cserélni. Ezt nevezik Motor API-nak, amelynek specifikációja a [GitHubon](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md) érhető el.
 
-## Végrehajtási kliens specifikációi {#spec}
+## Végrehajtási kliens specifikációi \{#spec}
 
 [Tekintse meg a teljes JSON-RPC API specifikációt a GitHubon](https://github.com/ethereum/execution-apis).
 
-## Egyezmények {#conventions}
+## Egyezmények \{#conventions}
 
-### Hexadecimális értékű kódolás {#hex-encoding}
+### Hexadecimális értékű kódolás \{#hex-encoding}
 
 Két fontos adattípus megy át a JSON-ön: formázatlan bájttömbök és mennyiségek. Mindkettő hexadecimális kódolásban van elküldve, de más a formázási követelmény.
 
-#### Mennyiségek {#quantities-encoding}
+#### Mennyiségek \{#quantities-encoding}
 
 A mennyiségek (egész számok, számok) kódolásánál: hexadecimálisban, „0x” előtaggal, a legtömörebb kifejeződésben kell kódolni (kivéve a nullát, mert az „0x0” lesz).
 
@@ -46,7 +46,7 @@ Néhány példa:
 - HELYTELEN: 0x0400 (nem kezdődhet nullával a szám)
 - HELYTELEN: ff (a 0x előtagot ki kell tenni)
 
-### Formázatlan adat {#unformatted-data-encoding}
+### Formázatlan adat \{#unformatted-data-encoding}
 
 Amikor formázatlan adatot (bájtsorok, számlacímek, hashek, bájtkódtömbök) kell kódolni: hexadecimálisban, „0x” előtaggal, két hex számjegy bájtonként.
 
@@ -58,7 +58,7 @@ Néhány példa:
 - HELYTELEN: 0xf0f0f (páros számú kell legyen)
 - HELYTELEN: 004200 (a 0x előtagot ki kell tenni)
 
-### Az alapértelmezett blokkparaméter {#default-block}
+### Az alapértelmezett blokkparaméter \{#default-block}
 
 A következő metódusok egy extra alapértelmezett blokkparaméterrel rendelkeznek:
 
@@ -83,7 +83,7 @@ A defaultBlock paraméter a következők lehetnek:
 
 Ebben a leírásban példákat mutatunk be, hogyan lehet használni az egyéni JSON_RPC API végpontokat a parancssoreszközzel, ami a [curl](https://curl.se). Ezek az egyéni végpontpéldák a [Curl példák](#curl-examples) szekciókban találhatók alább. Ezek után bemutatunk egy [példát az elejétől a végéig](#usage-example) egy okosszerződés átfordítására és telepítésére egy Geth csomópont, a JSON_RPC API és a curl használatával.
 
-## Példák a curlre {#curl-examples}
+## Példák a curlre \{#curl-examples}
 
 Alább láthatók azok a példák, amikor a JSON_RPC API-t használjuk egy [curl](https://curl.se) kérést létrehozva egy Ethereum-csomópontnak. Minden példa tartalmazza az adott végpont specifikációit, paramétereit, visszatérési típusát és egy működő példát arról, hogyan kell használni.
 
@@ -93,18 +93,18 @@ A curl-kérések hibát adhatnak vissza a tartalom típusa miatt. Ennek az az ok
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Pletyka, státusz, előzményadatok {#gossip-state-history}
+## Pletyka, státusz, előzményadatok \{#gossip-state-history}
 
 Néhány központi JSON-RPC metódushoz szükség van az Ethereum hálózati adataira, amelyek általában háromfélék lehetnek: _Pletyka, státusz és előzményadatok_. Az ebben a részben található hivatkozások segítségével az adott metódusra tud lépni, de a tartalomjegyzéket is használhatja a metódusok teljes listájának megtekintéséhez.
 
-### Pletyka metódusok {#gossip-methods}
+### Pletyka metódusok \{#gossip-methods}
 
 > Ezek a metódusok a lánc fejét követik nyomon. Így kerülnek be tranzakciók a hálózatra, találják meg az útjukat a blokkokba, és az, a kliensek így szereznek tudomást az új blokkokról.
 
 - [eth_blockNumber](#eth_blocknumber)
 - [eth_sendRawTransaction](#eth_sendrawtransaction)
 
-### Státusz metódusok {#state_methods}
+### Státusz metódusok \{#state_methods}
 
 > Olyan metódusok, melyek az összes tárolt adat jelenlegi státuszát riportálják. A „státusz” olyan, akár egy nagy, megosztott RAM rész, ami számlaegyenlegeket, szerződésadatokat és gázbecsléseket tartalmaz.
 
@@ -115,7 +115,7 @@ Néhány központi JSON-RPC metódushoz szükség van az Ethereum hálózati ada
 - [eth_call](#eth_call)
 - [eth_estimateGas](#eth_estimategas)
 
-### Előzményadatok metódusok {#history_methods}
+### Előzményadatok metódusok \{#history_methods}
 
 > Minden egyes blokkból képes előzményadatokat lekérni egészen a genezisig. Olyan mint egy hatalmas, egyre bővülő fájl, amely tartalmazza az összes blokkfejlécet, blokkadatot, a szülőblokk testvérblokkjait (ommer/uncle) és a tranzakció-visszaigazolásokat.
 
@@ -132,9 +132,9 @@ Néhány központi JSON-RPC metódushoz szükség van az Ethereum hálózati ada
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
-## JSON-RPC API metódusok {#json-rpc-methods}
+## JSON-RPC API metódusok \{#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion \{#web3_clientversion}
 
 Visszaadja a jelenlegi kliensverziót.
 
@@ -159,7 +159,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 \{#web3_sha3}
 
 Visszaadja az adott adat keccak-256 szerinti értékét (_nem_ a szabványosított SHA3-256 szerintit).
 
@@ -188,7 +188,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version \{#net_version}
 
 Visszaadja a jelenlegi hálózati azonosítót.
 
@@ -219,7 +219,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening \{#net_listening}
 
 A `true` értéket adja vissza, ha a kliens aktívan hallgatja a hálózati kapcsolatokat.
 
@@ -244,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount \{#net_peercount}
 
 Visszaadja a társak számát, amelyek jelenleg a klienshez kapcsolódnak.
 
@@ -269,7 +269,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion \{#eth_protocolversion}
 
 A jelenlegi Ethereum-protokollverziót adja vissza. Vegye figyelembe, hogy ez a metódus [a Geth-ben nem érhető el](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924).
 
@@ -294,7 +294,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing \{#eth_syncing}
 
 Egy objektumot ad vissza a szinkronizálási státuszról szóló adattal vagy `false`.
 
@@ -378,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase \{#eth_coinbase}
 
 A kliens coinbase-címét adja vissza.
 
@@ -403,7 +403,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId \{#eth_chainId}
 
 Visszaadja a láncazonosítót, amellyel az újrajátszástól védett tranzakciókat írják alá.
 
@@ -428,7 +428,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining \{#eth_mining}
 
 A visszaadott érték `true`, ha a kliens aktívan bányászik új blokkokat. Ez csak proof-of-work hálózatok esetén küld vissza `true` értéket, és talán a [egyesítés (Merge)](/roadmap/merge/) óta nincs is benne minden kliensben.
 
@@ -453,7 +453,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate \{#eth_hashrate}
 
 Visszaadja a hashek számát másodpercenként, amellyel a csomópont a bányászatot végzi. Ez csak proof-of-work hálózatok esetén küld vissza `true` értéket, és talán a [egyesítés (Merge)](/roadmap/merge/) óta nincs is benne minden kliensben.
 
@@ -478,7 +478,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice \{#eth_gasprice}
 
 Visszaadja a jelenlegi becsült gázárat wei-ben. Például a Besu kliens megvizsgálja az utolsó 100 blokkot, és a gáz egységárának mediánját küldi vissza alapból.
 
@@ -503,7 +503,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts \{#eth_accounts}
 
 A kliens által birtokolt címek listáját adja vissza.
 
@@ -528,7 +528,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber \{#eth_blocknumber}
 
 A legutóbbi blokk számát adja vissza.
 
@@ -553,7 +553,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance \{#eth_getbalance}
 
 Az adott cím számlaegyenlegét adja vissza.
 
@@ -583,7 +583,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt \{#eth_getstorageat}
 
 Egy adott címen lévő tárhely pozícióját adja vissza.
 
@@ -650,7 +650,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount \{#eth_gettransactioncount}
 
 Visszaadja a tranzakciók számát, amelyeket egy adott címről _küldtek_.
 
@@ -683,7 +683,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash \{#eth_getblocktransactioncountbyhash}
 
 Visszaadja a tranzakciók számát egy blokkban, egy olyan blokkból, mely egyezik a megadott blokkhashsel.
 
@@ -712,7 +712,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber \{#eth_getblocktransactioncountbynumber}
 
 Visszaadja a tranzakciók számát egy blokkban, amely az adott blokkszámnak felel meg.
 
@@ -743,7 +743,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash \{#eth_getunclecountbyblockhash}
 
 Visszaadja az uncle-blokkok számát egy olyan blokkból, ami a blokkhashnek megfelel.
 
@@ -772,7 +772,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber \{#eth_getunclecountbyblocknumber}
 
 Visszaadja az uncle-blokkok számát egy olyan blokkból, ami egy adott blokkszámnak megfelel.
 
@@ -803,7 +803,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode \{#eth_getcode}
 
 Visszaadja az adott címen lévő kódot.
 
@@ -836,7 +836,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f53
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign \{#eth_sign}
 
 Az aláírás metódus kikalkulál egy Ethereum-specifikus aláírást a következővel: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
@@ -866,7 +866,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction \{#eth_signtransaction}
 
 Aláír egy olyan tranzakciót, amelyet egy későbbi időpontban be lehet küldeni a hálózatra az [eth_sendRawTransaction](#eth_sendrawtransaction) segítségével.
 
@@ -900,7 +900,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction \{#eth_sendtransaction}
 
 Készít egy új üzenetküldési tranzakciót vagy szerződéslétrehozást, ha az adatmezőben kód van, és aláírja a `from` mezőben definiált számlával.
 
@@ -949,7 +949,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction \{#eth_sendrawtransaction}
 
 Egy új üzenetküldési tranzakciót vagy szerződéslétrehozást hoz létre az aláírt tranzakciókhoz.
 
@@ -982,7 +982,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call \{#eth_call}
 
 Azonnal végrehajt egy új üzenethívást anélkül, hogy létrehozna egy tranzakciót a blokkláncon. Gyakran használják arra, hogy csak olvasási (read-only) okosszerződés-függvényeket hajtsanak végre, például a `balanceOf` kód egy ERC-20-as szerződésnél.
 
@@ -1016,7 +1016,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas \{#eth_estimategas}
 
 Megbecsüli, hogy egy tranzakció végrehajtásához mennyi gázra lesz szükség. A tranzakció nem kerül hozzáadásra a blokklánchoz. Vegye figyelembe, hogy a becslés szignifikánsan több is lehet, mint amennyit elhasznál a tranzakció, melynek számos oka van, beleértve az EVM működési módját és a csomópontok teljesítményét.
 
@@ -1041,7 +1041,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash \{#eth_getblockbyhash}
 
 Egy blokkról ad információt hash alapján.
 
@@ -1118,7 +1118,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber \{#eth_getblockbynumber}
 
 Egy blokkról ad információt a blokkszám alapján.
 
@@ -1145,7 +1145,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 
 Az eredményeket nézze meg az [eth_getBlockByHash](#eth_getblockbyhash) résznél
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash \{#eth_gettransactionbyhash}
 
 Információt ad egy tranzakcióról a tranzakció hashe alapján.
 
@@ -1204,7 +1204,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex \{#eth_gettransactionbyblockhashandindex}
 
 Egy tranzakcióról ad információt a blokk-hash és a tranzakcióindex pozíciója alapján.
 
@@ -1231,7 +1231,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 Az eredményeket nézze meg az [eth_getTransactionByHash](#eth_gettransactionbyhash) résznél
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex \{#eth_gettransactionbyblocknumberandindex}
 
 Egy tranzakcióról ad információt a blokkszám és a tranzakcióindex pozíciója alapján.
 
@@ -1258,7 +1258,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 
 Az eredményeket nézze meg az [eth_getTransactionByHash](#eth_gettransactionbyhash) résznél
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt \{#eth_gettransactionreceipt}
 
 Egy tranzakció visszaigazolását adja meg a tranzakció-hash alapján.
 
@@ -1325,7 +1325,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex \{#eth_getunclebyblockhashandindex}
 
 Egy blokk uncle-blokkjáról ad információt a hash és az uncle-index pozíciója alapján.
 
@@ -1354,7 +1354,7 @@ Az eredményeket nézze meg az [eth_getBlockByHash](#eth_getblockbyhash) részn�
 
 **Megjegyzés**: A nagybácsi nem tartalmaz egyedi tranzakciókat.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex \{#eth_getunclebyblocknumberandindex}
 
 Egy blokk uncle-blokkjáról ad információt a blokkszám és az uncle-index pozíciója alapján.
 
@@ -1383,7 +1383,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 
 Az eredményeket nézze meg az [eth_getBlockByHash](#eth_getblockbyhash) résznél
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter \{#eth_newfilter}
 
 Egy szűrőobjektumot hoz létre a szűrőopciók alapján, hogy értesítsen, amikor a státusz változik (a naplóban). A státusz megváltozásának ellenőrzéséhez az [eth_getFilterChanges](#eth_getfilterchanges) metódust kell meghívni.
 
@@ -1436,7 +1436,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter \{#eth_newblockfilter}
 
 Létrehoz egy szűrőt a csomópontban, hogy értesítsen az új blokk érkezéséről. A státusz megváltozásának ellenőrzéséhez az [eth_getFilterChanges](#eth_getfilterchanges) metódust kell meghívni.
 
@@ -1457,7 +1457,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter \{#eth_newpendingtransactionfilter}
 
 Létrehoz egy szűrőt a csomópontban, hogy értesítsen új függőben lévő tranzakciók érkezéséről. A státusz megváltozásának ellenőrzéséhez az [eth_getFilterChanges](#eth_getfilterchanges) metódust kell meghívni.
 
@@ -1478,7 +1478,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter \{#eth_uninstallfilter}
 
 Egy adott azonosító alatti szűrő eltávolítása. Mindig érdemes meghívni, ha már nincs szükség az adott ellenőrzésre. Emellett a szűrőket ideiglenesen leállíthatja, amikor egy időszakban nincs azokra szükség az [eth_getFilterChanges](#eth_getfilterchanges) metódussal.
 
@@ -1507,7 +1507,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges \{#eth_getfilterchanges}
 
 Egy szűrőre vonatkozó szelektív hívás, ami a naplótömböt adja vissza, amely az utolsó szelektív hívás óta történteket foglalja magában.
 
@@ -1559,7 +1559,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs \{#eth_getfilterlogs}
 
 Visszaadja a megadott azonosítóval rendelkező szűrőnek megfelelő összes napló tömbjét.
 
@@ -1584,7 +1584,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 Az eredményeket nézze meg az [eth_getFilterChanges](#eth_getfilterchanges) résznél
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs \{#eth_getlogs}
 
 Visszaadja az adott szűrőobjektumnak megfelelő összes naplótömböt.
 
@@ -1619,9 +1619,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 
 Az eredményeket nézze meg az [eth_getFilterChanges](#eth_getfilterchanges) résznél
 
-## Használati példa {#usage-example}
+## Használati példa \{#usage-example}
 
-### Egy szerződés telepítése JSON_RPC-vel {#deploying-contract}
+### Egy szerződés telepítése JSON_RPC-vel \{#deploying-contract}
 
 Ez a rész azt mutatja be, hogyan lehet egy szerződést telepíteni kizárólag az RPC-interfésszel. Alternatív utak állnak rendelkezésre a szerződéstelepítéshez, ahol ez a komplexitás csökken, például az RPC-interfészre épített könyvtárak segítségével, mint amilyen a [web3.js](https://web3js.readthedocs.io/) és a [web3.py](https://github.com/ethereum/web3.py). Ezek az absztrakciók általában könnyebben érthetők és nem annyira hajlamosak a hibára, de akkor is érdemes megérteni, hogy mi is zajlik a háttérben.
 
@@ -1697,7 +1697,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 
 A szerződést a `0x4d03d617d700cf81935d7f797f4e2ae719648262` címen hozta létre. Ha nullát kapunk eredményül, akkor a tranzakció még nem került be a blokkba. Várjon egy kicsit, ellenőrizze, hogy a bányász fut-e, és próbálja meg újra.
 
-#### Interakció okosszerződésekkel {#interacting-with-smart-contract}
+#### Interakció okosszerződésekkel \{#interacting-with-smart-contract}
 
 Ebben a példában elküldünk egy tranzakciót az `eth_sendTransaction` metódussal a szerződés `multiply` metódusának.
 
@@ -1758,7 +1758,7 @@ web3.sha3("Print(uint256)")
 
 Ez csak egy rövid bevezető volt a leggyakoribb feladatokba, a JSON-RPC közvetlen használatát demonstrálandó.
 
-## Kapcsolódó témák {#related-topics}
+## Kapcsolódó témák \{#related-topics}
 
 - [JSON-RPC specifikáció](http://www.jsonrpc.org/specification)
 - [ Csomópontok és kliensek](/developers/docs/nodes-and-clients/)

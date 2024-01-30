@@ -4,15 +4,15 @@ description: Anar amb compte a Ethereum
 lang: ca
 ---
 
-# Seguretat i prevenció d'estafes a Ethereum {#introduction}
+# Seguretat i prevenció d'estafes a Ethereum \{#introduction}
 
 A mesura que creix l'interès en les criptomonedes, és essencial aprendre les millors pràctiques que cal seguir a l'utilitzar-les. Les criptomonedes poden ser divertides i emocionants, però també comporten riscs seriosos. Si feu aquesta mica de treball per endavant, podeu mitigar els riscs.
 
 <Divider />
 
-## Seguretat web 101 {#web-security}
+## Seguretat web 101 \{#web-security}
 
-### Utilitzeu contrasenyes segures {#use-strong-passwords}
+### Utilitzeu contrasenyes segures \{#use-strong-passwords}
 
 [Més del 80% dels atacs de pirateig de comptes són resultat de contrasenyes poc segures o robades](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Una combinació llarga de caràcters, nombres i símbols és el millor per mantenir protegit el vostre compte.
 
@@ -26,7 +26,7 @@ Exemple de contrasenya forta: ymv\*azu.EAC8eyp8umf
 
 Un altre error comú és utilitzar contrasenyes que puguin ser endevinades fàcilment o esbrinades mitjançant [enginyeria social](<https://wikipedia.org/wiki/Social_engineering_(security)>). El nom de soltera de la mare, els noms dels fills o d'animals de companyia o les dates de naixement en la contrasenya no són segurs i incrementaran el risc que la vostra contrasenya sigui piratejada.
 
-#### Pràctiques per a crear una bona contrasenya: {#good-password-practices}
+#### Pràctiques per a crear una bona contrasenya: \{#good-password-practices}
 
 - Feu contrasenys tan llargues com us ho permeti el vostre generador de contrasenyes o el formulari que estigueu emplenant
 - Mescleu majúscules, minúscules, nombres i símbols
@@ -35,11 +35,11 @@ Un altre error comú és utilitzar contrasenyes que puguin ser endevinades fàci
 
 [Més informació sobre com crear contrasenyes fortes](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
-### Utilitzeu contrasenyes úniques per tot {#use-unique-passwords}
+### Utilitzeu contrasenyes úniques per tot \{#use-unique-passwords}
 
 Una contrasenya forta no aporta molta més protecció si la contrasenya es revela en una violació de dades. El lloc web [Have I Been Pwned](https://haveibeenpwned.com) us permet comprovar si els vostres comptes han estat involucrats en cap violació de dades emmagatzemades en les seves bases de dades. Si ho han estat, **hauríeu de canviar les contrasenyes afectades immediatament**. Utilitzar contrasenyes úniques per a cada compte disminueix el risc que els pirates obtinguin accés a tots els vostres comptes quan una de les vostres contrasenyes s'hagi vist compromesa.
 
-### Utilitzeu un gestor de contrasenyes {#use-password-manager}
+### Utilitzeu un gestor de contrasenyes \{#use-password-manager}
 
 <InfoBanner emoji=":bulb:">
   <div>
@@ -51,14 +51,14 @@ Recordar contrasenyes úniques i fortes per a cada compte que tingueu no és ide
 
 ![Exemples de la utilització d'un gestor de contrasenyes](./passwordManager.png)
 
-#### Proveu un gestor de contrasenyes: {#try-password-manager}
+#### Proveu un gestor de contrasenyes: \{#try-password-manager}
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
 - [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
 
-### Utilitzeu l'autentificació en dos factors {#two-factor-authentication}
+### Utilitzeu l'autentificació en dos factors \{#two-factor-authentication}
 
 Per provar que sou vosaltres, hi ha proves úniques que poden utilitzar-se per a l'autenticació. Es coneixen com a **factors** i els tres factors principals són:
 
@@ -82,7 +82,7 @@ i no és segur. Per una millor seguretat, utilitzeu un servei com ara{" "}
   </div>
 </InfoBanner>
 
-#### Claus de seguretat {#security-keys}
+#### Claus de seguretat \{#security-keys}
 
 Per aquells que vulgueu continuar amb la 2FA, considereu utilitzar una clau de seguretat. Les claus de seguretat són dispositius físics d'autenticació que funcionen de la mateixa manera que les aplicacions d'autenticació. Utilitzar una clau de seguretat és la forma més segura per a una 2FA. Moltes d'aquestes claus utilitzen l'estàndard FIDO Universal 2nd Factor (U2F). [Més informació sobre l'estàndard FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
 
@@ -90,11 +90,11 @@ Mireu aquest vídeo amb més informació sobre la 2FA:
 
 <YouTube id="m8jlnZuV1i4" start="3479" />
 
-### Desinstal·leu les extensions del navegador {#uninstall-browser-extensions}
+### Desinstal·leu les extensions del navegador \{#uninstall-browser-extensions}
 
 Les extensions del navegador com les extensions de Chrome o els complements de Firefox poden augmentar la funcionalitat útil del navegador i millorar l'experiència de l'usuari, però venen amb riscs. Per defecte, moltes de les extensions del navegador demanen permisos de «lectura i canvi en les dades del lloc web», la qual cosa els permet fer gairebé de tot amb les vostres dades. Les extensions de Chrome s'actualitzen sempre automàticament; per tant, una extensió que anteriorment era segura podria actualitzar-se més tard per incloure codi maliciós. Moltes extensions del navegador no intenten robar les vostres dades, però hauríeu d'estar al corrent que ho poden fer.
 
-#### Aneu amb compte seguint els següents passos: {#browser-extension-safety}
+#### Aneu amb compte seguint els següents passos: \{#browser-extension-safety}
 
 - Instal·leu només extensions de navegador de fonts de confiança
 - Desfeu-vos d'extensions de navegador que no utilitzeu
@@ -104,9 +104,9 @@ Les extensions del navegador com les extensions de Chrome o els complements de F
 
 <Divider />
 
-## Criptoseguretat 101 {#crypto-security}
+## Criptoseguretat 101 \{#crypto-security}
 
-### Amplieu els vostres coneixements {#level-up-your-knowledge}
+### Amplieu els vostres coneixements \{#level-up-your-knowledge}
 
 Una de les majors causes perquè la gent sigui estafada en criptomonedes és generalment per una manca de comprensió. Per exemple, si no enteneu que la xarxa d'Ethereum és descentralitzada i que no pertany a ningú, llavors és fàcil caure en les urpes d'algú que pretén ser un agent de servei al client que us promet retornar-vos les vostres pèrdues en ETH a canvi de les vostres claus privades. Educar-vos sobre el funcionament d'Ethereum és una inversió que paga la pena.
 
@@ -119,9 +119,9 @@ Una de les majors causes perquè la gent sigui estafada en criptomonedes és gen
 </DocLink>
 <Divider />
 
-## Protecció de la cartera {#wallet-security}
+## Protecció de la cartera \{#wallet-security}
 
-### No doneu les vostres claus privades {#protect-private-keys}
+### No doneu les vostres claus privades \{#protect-private-keys}
 
 **Mai, de cap manera, compartiu les vostres claus privades!**
 
@@ -131,28 +131,28 @@ La clau privada de la vostra cartera actua com a contrasenya per a la vostra car
   Què és una cartera d'Ethereum?
 </DocLink>
 
-#### No feu captures de pantalla de les vostres frases llavor/claus privades {#screenshot-private-keys}
+#### No feu captures de pantalla de les vostres frases llavor/claus privades \{#screenshot-private-keys}
 
 Si feu una captura de pantalla de les vostres frases llavor o claus privades, us arrisqueu a sincronitzar-les amb el núvol i fer-les potencialment accessibles als pirates. Obtenir les claus privades del núvol és un vector comú d'atac dels pirates.
 
-### Utilitzeu una cartera de maquinari {#use-hardware-wallet}
+### Utilitzeu una cartera de maquinari \{#use-hardware-wallet}
 
 Una cartera de maquinari disposa d'emmagatzematge fora de línia per a claus privades. Es consideren l'opció de cartera més segura per emmagatzemar les vostres claus privades.
 
 Mantenir les claus privades fora de línia redueix massivament el risc de ser piratejat, fins i tot si el pirata pren control del vostre ordinador.
 
-#### Proveu una cartera de maquinari: {#try-hardware-wallet}
+#### Proveu una cartera de maquinari: \{#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
 
-### Comproveu dues vegades les transaccions abans d'enviar-les {#double-check-transactions}
+### Comproveu dues vegades les transaccions abans d'enviar-les \{#double-check-transactions}
 
 És un error comú enviar criptomonedes accidentalment a una adreça de cartera incorrecta. **En Ethereum les transaccions enviades són irreversibles.** Tret que coneixeu el propietari de l'adreça i el pugueu convèncer de retornar-vos els fons, no hi ha cap altra manera de recuperar-los.
 
 Assegureu-vos sempre que l'adreça a la qual esteu enviant concorda exactament amb l'adreça exacta del destinatari abans d'enviar una transacció. També és recomanable, quan interactueu amb un contracte intel·ligent, llegir el missatge de la transacció abans de signar.
 
-### Poseu límits de despesa als contractes intel·ligents {#spend-limits}
+### Poseu límits de despesa als contractes intel·ligents \{#spend-limits}
 
 Quan interactueu amb contractes intel·ligents, no permeteu límits de despesa il·limitats. Una despesa il·limitada podria capacitar un contracte intel·ligent per buidar la vostra cartera. En lloc d'això, poseu límits de despesa només a la quantitat necessària per a la transacció.
 
@@ -160,7 +160,7 @@ Algunes carteres d'Ethereum ofereixen protecció de límits per a salvaguardar e
 
 <Divider />
 
-## Estafes habituals {#common-scams}
+## Estafes habituals \{#common-scams}
 
 Els estafadors sempre estan buscant una via o una altra per treure-vos els fons. És impossible aturar els estafadors completament, però podem fer que siguin menys efectius estant al corrent de la majoria de les tècniques utilitzades. Hi ha moltes variacions d'aquestes estafes, però en general segueixen els mateixos patrons d'alt nivell. Si més no, recordeu:
 
@@ -168,19 +168,19 @@ Els estafadors sempre estan buscant una via o una altra per treure-vos els fons.
 - ningú us donarà ETH de franc o amb descomptes!
 - ningú necessita accés a les vostres claus privades o a la vostra informació personal
 
-### Estafa del regal {#giveaway}
+### Estafa del regal \{#giveaway}
 
 Una de les estafes més comunes en criptomoneda és l'estafa del regal. L'estafa del regal pot prendre diverses formes, però la premissa general és que si envieu ETH a l'adreça de cartera que us han donat, rebreu el doble dels ETH que heu enviat. *Per aquesta raó, també és coneguda com l'estafa 2 per 1.*
 
 Aquestes estafes sovint estipulen un temps limitat d'oportunitat de reclamar el regal per encoratjar la presa de decisions a la lleugera i crear una sensació de falsa urgència.
 
-#### Pirateig de les xarxes socials {#social-media-hacks}
+#### Pirateig de les xarxes socials \{#social-media-hacks}
 
 Una versió de gran impacte d'aquest pirateig va ocórrer el juliol de 2020, quan els comptes de Twitter de personatges famosos molt coneguts i d'organitzacions van ser piratejades. El pirata va publicar simultàniament un sorteig de Bitcoins en els comptes piratejats. Encara que les piulades enganyoses van ser ràpidament notificades i esborrades, els pirates encara s'ho van manegar per endur-se 11 bitcoins (o 500.000 dòlars el setembre de 2021)
 
 ![Una estafa al Twitter](./appleTwitterScam.png)
 
-#### Sorteig d'una celebritat {#celebrity-giveaway}
+#### Sorteig d'una celebritat \{#celebrity-giveaway}
 
 El sorteig d'una celebritat és una altra de les formes habituals que adopta l'estafa del regal. Els estafadors agafaran una entrevista gravada en vídeo o una xerrada d'una celebritat i l'emetran en directe a YouTube, fent com si aquesta celebritat estigués fent una entrevista en directe avalant un sorteig de criptomonedes.
 
@@ -190,7 +190,7 @@ Vitalik Buterin és molt utilitzat en aquest tipus d'estafa, però també hi só
 
 ![Una estafa al YouTube](./youtubeScam.png)
 
-### Estafes de suport {#support-scams}
+### Estafes de suport \{#support-scams}
 
 La criptomoneda és una tecnologia relativament jove i malentesa. Una estafa comuna que s'aprofita d'això és l'estafa de suport, on els estafadors suplantaran suport personal per a carteres, cases d'intercanvi o cadenes de blocs populars.
 
@@ -210,7 +210,7 @@ Com a norma general, el personal no es comunicarà mai a través de canals priva
   </div>
 </InfoBanner>
 
-### Estafes de pesca de credencials {#phishing-scams}
+### Estafes de pesca de credencials \{#phishing-scams}
 
 Les estafes de pesca de credencials són un altre angle cada cop més comú que els estafadors utilitzaran per provar de robar els fons de la vostra cartera.
 
@@ -224,7 +224,7 @@ Si rebeu un correu electrònic d'un emissor desconegut, recordeu:
 
 [Més informació sobre com evitar estafes de pesca de credencials](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
-### Estafes de corredor comercial de criptomonedes {#broker-scams}
+### Estafes de corredor comercial de criptomonedes \{#broker-scams}
 
 En les estafes de corredor comercial de criptomonedes, els pirates afirmen ser corredors especialistes en criptomonedes que us oferiran agafar els vostres diners i investir-los en nom vostre. Aquestes ofertes generalment venen acompanyades de promeses de devolucions poc realistes. Després que l'estafador rep els vostres fons, pot persuadir-vos, demanant que li envieu més fons perquè no us perdis els guanys de futures inversions, o poden desaparèixer per complet.
 
@@ -234,7 +234,7 @@ Aquests corredors fraudulents troben els seus objectius utilitzant comptes falso
 
 ![Una estafa de corredor comercial a YouTube](./brokerScam.png)
 
-### Estafes de grups de mineria de criptoactius {#mining-pool-scams}
+### Estafes de grups de mineria de criptoactius \{#mining-pool-scams}
 
 Les estafes de grups de mineria involucren a gent que us contacta sense que ho demaneu i asseguren que podeu obtenir grans beneficis unint-vos a un grup de mineria d'Ethereum. Els estafadors faran aquest tipus d'asseveracions i es mantindran en contacte durant el temps que trigui. En essència, l'estafador intentarà convèncer-vos que quan us doneu d'alta en un grup de mineria d'Ethereum les vosters criptomonedes s'utilitzaran per crear ETH i se us abonaran els dividends en forma d'ETH. El que acabarà succeint és que us adonareu que les vostres criptomonedes donen pocs beneficis. Això és simplement perquè mossegueu l'esquer per invertir més. Al cap i a la fi, tots els vostres fons s'enviaran a una adreça desconeguda i l'estafador desapareixerà o en alguns casos continuarà en contacte com ha succeït en un cas recent.
 
@@ -248,7 +248,7 @@ Algunes coses a recordar:
 
 [Un home perd 200.000 dòlars en una estafa de grup de mineria](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### Estafa del token «Eth2» {#eth2-token-scam}
+### Estafa del token «Eth2» \{#eth2-token-scam}
 
 Amb [la fusió](/roadmap/merge/) que arriba el 2022, els estafadors han aprofitat la confusió al voltant del terme «Eth2» per provar de captar usuaris per bescanviar els seus ETH per tokens «ETH2». No hi ha cap token «ETH2» ni cap altre de nou introduït amb la fusió. Els ETH que teniu avui en dia continuaran sent els mateixos que tindreu després de la fusió i no hi ha cap necessitat de canviar-los a causa de la fusió.
 
@@ -256,7 +256,7 @@ Els estafadors poden aparèixer sota la forma de «suport» dient que si diposit
 
 _Nota: hi ha tókens/tickers derivats que poden representar ETH apilats (p. ex. rETH del grup Rocket, stETH de Lido, ETH2 de Coinbase), però aquests no són quelcom que necessiteu «migrar»_
 
-### Estafes d'enviament {#airdrop-scams}
+### Estafes d'enviament \{#airdrop-scams}
 
 Les estafes d'enviament involucren que un projecte d'estafa enviï un actiu (NFT, token) a la vostra cartera i us remeti a un lloc web fraudulent per reclamar els actius enviats. Se us demanarà que ingresseu en una casella amb la vostra cartera d'Ethereum i «aproveu» la transacció quan intenteu reclamar-ho. Aquesta transacció compromet el vostre compte enviant les vostres claus públiques i privades a l'estafador. Una altra alternativa a aquest tipus d'estafa podria fer-vos confirmar una transacció que envia fons al compte de l'estafador.
 
@@ -264,23 +264,23 @@ Les estafes d'enviament involucren que un projecte d'estafa enviï un actiu (NFT
 
 <Divider />
 
-## Llegir-ne més {#further-reading}
+## Llegir-ne més \{#further-reading}
 
-### Seguretat web {#reading-web-security}
+### Seguretat web \{#reading-web-security}
 
 - [Per aquesta raó no hauríeu d'utilitzar textos per a l'autenticació de doble factor](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Fins a 3 milions de dispositius infectats per complements de Chrome i Edge enllaçats a malware"](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Com crear una contrasenya forta, que no pugueu oblidar](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [Què és una clau de seguretat?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
-### Criptoseguretat {#reading-crypto-security}
+### Criptoseguretat \{#reading-crypto-security}
 
 - [Protegint-vos a vosaltres i als vostres fons](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
 - [Quatre formes d'anar amb compte en el món de les criptomonedes](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Guia de seguretat per a principiants i també per a gent intel·ligent](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Criptoseguretat: contrasenyes i autenticacions](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
-### Educació contra estafes {#reading-scam-education}
+### Educació contra estafes \{#reading-scam-education}
 
 - [Anar amb compte: estafes habituals](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [Com evitar estafes](https://bitcoin.org/en/scams) _Bitcoin.org_

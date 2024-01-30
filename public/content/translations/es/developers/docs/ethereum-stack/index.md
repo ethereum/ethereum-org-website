@@ -8,7 +8,7 @@ Como sucede con cualquier pila de software, la "pila de Ethereum" variará de un
 
 Sin embargo, existen tecnologías base de Ethereum que te ayudarán a hacerte una idea de cómo interactúan las apps de software con la blockchain de Ethereum. Comprender cómo funcionan las capas de la pila te ayudará a entender las diferentes maneras de integrar Ethereum en los proyectos de software.
 
-## Nivel 1: Máquina virtual de Ethereum {#ethereum-virtual-machine}
+## Nivel 1: Máquina virtual de Ethereum \{#ethereum-virtual-machine}
 
 La [máquina virtual de Ethereum (EVM)](/developers/docs/evm/) es el entorno de ejecución de los contratos inteligentes en Ethereum. Todos los contratos inteligentes y los cambios de estado de la blockchain de Ethereum se ejecutan mediante las [transacciones](/developers/docs/transactions/). La EVM gestiona todo el procesamiento de las transacciones en la red de Ethereum.
 
@@ -18,7 +18,7 @@ De manera invisible, la EVM utiliza un conjunto de instrucciones de códigos de 
 
 Como desarrollador de dapps, no necesitas saber mucho de la EVM aparte de la que existe y de que potencia de forma fiable todas las aplicaciones en Ethereum sin tiempos de inactividad.
 
-## Nivel 2: Contratos Inteligentes {#smart-contracts}
+## Nivel 2: Contratos Inteligentes \{#smart-contracts}
 
 Los [contratos inteligentes](/developers/docs/smart-contracts/) son programas ejecutables que se ejecutan en la blockchain de Ethereum.
 
@@ -28,7 +28,7 @@ Los contratos inteligentes no solo sirven como bibliotecas de código abierto, e
 
 Como desarrollador de dapps, deberás escribir contratos inteligentes solo si deseas agregar una funcionalidad personalizada a la blockchain de Ethereum. Quizá pienses que puedes satisfacer la mayoría de las necesidades de tu proyecto integrándolo con contratos inteligentes existentes, por ejemplo, si deseas ofrecer compatibilidad para los pagos con stablecoins o activar el intercambio descentralizado de tokens.
 
-## Nivel 3: Nodos de Ethereum {#ethereum-nodes}
+## Nivel 3: Nodos de Ethereum \{#ethereum-nodes}
 
 Para que una apliación interactúe con la cadena de bloques de Ethereum, debe estar conectada a un [nodo de Ethereum](/developers/docs/nodes-and-clients/). Conectarse a un nodo le permite leer datos de la cadena de bloques y/o enviar transacciones a la red.
 
@@ -36,7 +36,7 @@ Los nodos de Ethereum son ordenadores que ejecutan un software: un cliente de Et
 
 Al conectar su aplicación a un nodo de Ethereum (a través de la [JSON-RPC API](/developers/docs/apis/json-rpc/)), su aplicación puede leer datos de la cadena de bloques (como los saldos de las cuentas de usuario), así como transmitir nuevas transacciones a la red (como transferir ETH entre cuentas de usuario o ejecutar funciones de contratos inteligentes).
 
-## Nivel 4: API de clientes de Ethereum {#ethereum-client-apis}
+## Nivel 4: API de clientes de Ethereum \{#ethereum-client-apis}
 
 Muchas bibliotecas de conveniencia (construidas y mantenidas por la comunidad de código abierto de Ethereum) permiten a tus aplicaciones de usuario final conectarse y comunicarse con la blockchain de Ethereum.
 
@@ -44,17 +44,17 @@ Si tu aplicación orientada al usuario es una aplicación web, puedes elegir `np
 
 Si bien son una pieza necesaria de la pila, estas API abstraen gran parte de la complejidad de interactuar directamente con el nodo de Ethereum. Estas también proporcionan funciones útiles (p. ej., convertir ETH a Gwei) para que así un desarrollador gaste menos tiempo tratando con las complejidades de los clientes de Ethereum y pase más tiempo enfocado en la funcionalidad única de tu aplicación.
 
-## Nivel 5: Aplicaciones de usuario final {#end-user-applications}
+## Nivel 5: Aplicaciones de usuario final \{#end-user-applications}
 
 En el nivel superior de la pila están las aplicaciones orientadas al usuario. Se trata de aplicaciones estándar que normalmente se usan y se diseñan hoy en día: principalmente aplicaciones móviles y web.
 
 La forma en la que desarrollas estas interfaces de usuario permanece esencialmente sin cambios. Los usuarios no suelen necesitar saber si la aplicación que están utilizando se ha diseñado mediante una blockchain.
 
-## ¿Estás preparado para elegir tu pila? {#ready-to-choose-your-stack}
+## ¿Estás preparado para elegir tu pila? \{#ready-to-choose-your-stack}
 
 Revisa nuestra guía para [configurar un entorno de desarrollo local](/developers/local-environment/) para tu aplicación de Ethereum.
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [La arquitectura de una aplicación Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 

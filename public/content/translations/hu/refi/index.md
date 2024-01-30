@@ -12,7 +12,7 @@ summaryPoint2: Az Ethereum kiaknázása a globális koordinációs krízisek meg
 summaryPoint3: Az ökológiailag hasznos eszközök drasztikus skálázási lehetősége, mint amilyen az igazolt karbonkredit is
 ---
 
-## Mik azok a regeneratív pénzügyek (ReFi)? {#what-is-refi}
+## Mik azok a regeneratív pénzügyek (ReFi)? \{#what-is-refi}
 
 **A regeneratív pénzügyek (ReFi)** olyan blokkláncra épülő eszközök és eszmék összessége, melyek célja a regeneratív gazdaságok kialakítása a kitermelési vagy kizsákmányolási helyett. A kizsákmányoláson alapuló rendszerek végül felélik a rendelkezésre álló erőforrásokat és összeomlanak; a regeneratív mechanizmusok nélkül nem bírnak kellő rugalmassággal. A ReFi azon a feltételezésen alapszik, hogy a pénzügyi érték létrehozását el kell választani a bolygó és a közösségek erőforrásainak nem fenntartható kizsákmányolásától.
 
@@ -26,7 +26,7 @@ A ReFi projektek ezeket az elveket valósítják meg az [okosszerződések](/dev
 
 A ReFi egyúttal átfedésben van a [decentralizált tudomány (DeSci)](/desci/) mozgalommal, mely az Ethereumot használja platformként a tudományos ismeretek finanszírozása, létrehozása, értékelése, hitelesítése, tárolása és terjesztése céljából. A DeSci eszközök hasznosak lehetnek ahhoz, hogy a regeneratív tevékenységek (faültetés, a műanyagok összegyűjtése az óceánból, lepusztult ökoszisztémák visszaállítása) bevezetését és monitorozását igazolható szabványokkal és gyakorlatokkal támasszák alá.
 
-## A karbonkreditek tokenizálása {#tokenization-of-carbon-credits}
+## A karbonkreditek tokenizálása \{#tokenization-of-carbon-credits}
 
 Az **[önkéntes karbonpiac (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** olyan projektek finanszírozási mechanizmusa, melyek igazolhatóan pozitív hatást gyakorolnak a szén-dioxid kibocsátásra, akár az aktuális kibocsátás csökkentésével vagy a más kibocsátott üvegházhatású gázok lekötésével. Ezek a projektek egy karbonkreditnek nevezett eszközt kapnak az igazolási eljárás után, melyet olyan egyéneknek és szervezeteknek adhatnak el, akik támogatni szeretnék a klímára ható intézkedéseket.
 
@@ -50,7 +50,7 @@ A ReFi-projektek blokklánc technológiát használnak arra, hogy a hagyományos
 - **A kereskedés közvetítők nélkül zajlik**, akik nagy díjakat számolnának fel ezért. A digitális karbonkreditek [62%-os költséghatékonyságot jelentenek a hagyományos kreditekhez képest](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), derül ki egy elemzőcég adataiból.
 - **A DCM skálázható** és képes egyaránt kielégíteni az egyének és a multinacionális vállalatok igényeit.
 
-### A digitális karbonpiac (DCM) fő komponensei {#key-components-dcm}
+### A digitális karbonpiac (DCM) fő komponensei \{#key-components-dcm}
 
 A DCM jelenlegi struktúrája négy fő elemből áll:
 
@@ -65,7 +65,7 @@ Néhányan, mint amilyen a [Klima Infinity](https://www.klimadao.finance/infinit
 
 4. Infrastruktúra, amely lehetővé teszi a karbonpiac teljes ellátási láncának skálázhatóságát hatás és hatékonyság szempontjából. A [KlimaDAO](http://klimadao.finance/) likviditást biztosít közjó gyanánt (bárki vehet vagy adhat karbonkreditet transzparens áron), ösztönzi a karbonpiacok tranzakcióátvitelének növekedését és a karbonkreditek felhasználását, továbbá felhasználóbarát és interoperábilis eszközrendszert biztosít, hogy a tokenizált karbonkreditek széles választékáról elérhetők legyenek az adatok, illetve beszerzi és felhasználja azokat.
 
-## ReFi a karbonpiacokon túl {#refi-beyond}
+## ReFi a karbonpiacokon túl \{#refi-beyond}
 
 Bár jelenleg nagy hangsúlyt a karbonpiacokra általánosságban, valamint a VCM transzferálásáról a DCM-re, ugyanakkor a regeneratív pénzügyek (ReFi) nem korlátozódnak erre a területre. Más környezeti eszközöket is létre lehet hozni és tokenizálni, hogy újabb negatív externáliákat is be lehessen árazni a jövő gazdasági rendszerének részeként. Emellett e gazdasági modell regeneratív aspektusát fel lehet használni más területeken is, mint a közjavak finanszírozása kvadratikus finanszírozási platformokon, amilyen a [Gitcoin](https://gitcoin.co/) is. Azok a szervezetek, melyek a nyitott részvétel és az erőforrások egyenlő elosztásának eszméjére épültek, lehetővé teszik, hogy az emberek nyílt forráskódú szoftverprojekteknek, valamint oktatási, környezeti és közösség által irányított projekteknek juttassanak pénzt.
 

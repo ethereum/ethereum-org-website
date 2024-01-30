@@ -4,11 +4,11 @@ description: Список программ грантов в рамках эко
 lang: ru
 ---
 
-# Онлайн-сообщества {#online-communities}
+# Онлайн-сообщества \{#online-communities}
 
 Сотни тысяч энтузиастов Ethereum собираются на этих онлайн-форумах, чтобы делиться новостями, обсуждать последние разработки, технические вопросы и представления о будущем.
 
-## Форумы {#forums}
+## Форумы \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> — все об Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> — финансовая сторона Ethereum, включая децентрализованные финансы (DeFi)</SocialListItem>
@@ -19,7 +19,7 @@ lang: ru
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> — обсуждения и помощь разработчикам Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> — самая влиятельная доска сообщений, посвященная исследованиям в криптоэкономике</SocialListItem>
 
-## Комнаты чата {#chat-rooms}
+## Комнаты чата \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — сообщество, нацеленное на помощь с управлением проектами при разработке Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> — чат Discord, управляемый ETHGlobal: онлайн-сообщество для хакеров Ethereum со всего мира</SocialListItem>
@@ -32,7 +32,7 @@ lang: ru
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *— форум вопросов и ответов*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *— децентрализованный форум вопросов и ответов*</SocialListItem>
 
-## YouTube и Twitter {#youtube-and-twitter}
+## YouTube и Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> — будьте в курсе последних новостей Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> — официальная учетная запись фонда Ethereum</SocialListItem>

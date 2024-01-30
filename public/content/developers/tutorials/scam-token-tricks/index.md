@@ -10,19 +10,19 @@ lang: en
 
 In this tutorial we dissect [a scam token](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code) to see some of the tricks that scammers play and how they implement them. By the end of the tutorial you will have a more comprehensive view of ERC-20 token contracts, their capabilities, and why skepticism is necessary. Then we look at the events emitted by that scam token and see how we can identify that it is not legitimate automatically.
 
-## Scam tokens - what are they, why do people do them, and how to avoid them {#scam-tokens}
+## Scam tokens - what are they, why do people do them, and how to avoid them \{#scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. However, anywhere there are legitimate use cases that bring value, there are also criminals who try to steal that value for themselves.
 
 You can read more about this subject [elsewhere on ethereum.org](/guides/how-to-id-scam-tokens/) from a user perspective. This tutorial focuses on dissecting a scam token to see how it's done and how it can be detected.
 
-### How do I know wARB is a scam? {#warb-scam}
+### How do I know wARB is a scam? \{##warb-scam}
 
 The token we dissect is [wARB](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82#code), which pretends to be equivalent to the legitimate [ARB token](https://etherscan.io/token/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
 The easiest way to know which is the legitimate token is looking at the originating organization, [Arbitrum](https://arbitrum.foundation/). The legitimate addresses are specified [in their documentation](https://docs.arbitrum.foundation/deployment-addresses#token).
 
-### Why is the source code available? {#why-source}
+### Why is the source code available? \{##why-source}
 
 Normally we'd expect people who try to scam others to be secretive, and indeed many scam tokens do not have their code available (for example, [this one](https://optimistic.etherscan.io/token/0x15992f382d8c46d667b10dc8456dc36651af1452#code) and [this one](https://optimistic.etherscan.io/token/0x026b623eb4aada7de37ef25256854f9235207178#code)).
 
@@ -30,11 +30,11 @@ However, legitimate tokens usually publish their source code, so to appear legit
 
 While contract deployers can choose whether or not to publish the source code, they _can't_ publish the wrong source code. The block explorer compiles the provided source code independently, and if doesn't get the exact same bytecode, it rejects that source code. [You can read more about this on the Etherscan site](https://etherscan.io/verifyContract).
 
-## Comparison to legitimate ERC-20 tokens {#compare-legit-erc20}
+## Comparison to legitimate ERC-20 tokens \{##compare-legit-erc20}
 
 We are going to compare this token to legitimate ERC-20 tokens. If you are not familiar with how legitimate ERC-20 tokens are typically written, [see this tutorial](/developers/tutorials/erc20-annotated-code/).
 
-### Constants for privileged addresses {#constants-for-privileged-addresses}
+### Constants for privileged addresses \{##constants-for-privileged-addresses}
 
 Contracts sometimes need privileged addresses. Contracts that are designed for long term use allow some privileged address to change those addresses, for example to enable the use of a new multisig contract. There are several ways to do this.
 
@@ -80,7 +80,7 @@ contract WrappedArbitrum is Context, IERC20 {
 
 And indeed, if we look in Etherscan we see that the scammer only used this contract for only 12 hours ([first transaction](https://etherscan.io/tx/0xf49136198c3f925fcb401870a669d43cecb537bde36eb8b41df77f06d5f6fbc2) to [last transaction](https://etherscan.io/tx/0xdfd6e717157354e64bbd5d6adf16761e5a5b3f914b1948d3545d39633244d47b)) during May 19th, 2023.
 
-### The fake `_transfer` function {#the-fake-transfer-function}
+### The fake `_transfer` function \{##the-fake-transfer-function}
 
 It is standard to have actual transfers happen using [an internal `_transfer` function](/developers/tutorials/erc20-annotated-code/#the-_transfer-function-_transfer).
 
@@ -130,7 +130,7 @@ However, there is a more important issue. Who calls this `_transfer` function? I
 
 When we look at the functions that are called to transfer tokens, `transfer` and `transferFrom`, we see that they call a completely different function, `_f_`.
 
-### The real `_f_` function {#the-real-f-function}
+### The real `_f_` function \{##the-real-f-function}
 
 ```solidity
     function _f_(address sender, address recipient, uint256 amount) internal _mod_(sender,recipient,amount) virtual {
@@ -161,7 +161,7 @@ There are two potential red flags in this function.
 
 - The same issue we saw in `_transfer`, which is when `contract_owner` sends tokens they appear to come from `deployer`.
 
-### The fake events function `dropNewTokens` {#the-fake-events-function-dropNewTokens}
+### The fake events function `dropNewTokens` \{##the-fake-events-function-dropNewTokens}
 
 Now we come to something that looks like an actual scam. I edited the function a bit for readability, but it's functionally equivalent.
 
@@ -194,7 +194,7 @@ A function to transfer from a pool account to an array of receivers an array of 
 
 However, `dropNewTokens` doesn't do that. It emits [`Transfer` events](https://eips.ethereum.org/EIPS/eip-20#transfer-1), but does not actually transfer any tokens. There is no legitimate reason to confuse offchain applications by telling them of a transfer that did not really happen.
 
-### The burning `Approve` function {#the-burning-approve-function}
+### The burning `Approve` function \{##the-burning-approve-function}
 
 ERC-20 contracts are supposed to have [an `approve` function](/developers/tutorials/erc20-annotated-code/#approve) for allowances, and indeed our scam token has such a function, and it is even correct. However, because Solidity is descended from C it is case significant. "Approve" and "approve" are different strings.
 
@@ -228,11 +228,11 @@ The `approver()` modifying makes sure only `contract_owner` is allowed to call t
 
 For every holder address the function moves the holder's entire balance to the address `0x00...01`, effectively burning it (the actual `burn` in the standard also changes the total supply, and transfers the tokens to `0x00...00`). This means that `contract_owner` can remove the assets of any user. That doesn't seem like a feature you'd want in a governance token.
 
-### Code quality issues {#code-quality-issues}
+### Code quality issues \{##code-quality-issues}
 
 These code quality issues don't _prove_ that this code is a scam, but they make it appear suspicious. Organized companies such as Arbitrum don't usually release code this bad.
 
-#### The `mount` function {#the-mount-function}
+#### The `mount` function \{##the-mount-function}
 
 While it is not specified in [the standard](https://eips.ethereum.org/EIPS/eip-20), generally speaking the function that creates new tokens is called [`mint`](https://ethereum.org/el/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 
@@ -276,7 +276,7 @@ There are two more suspicious facts, directly related to minting:
 
 - While the balance increased belongs to `contract_owner`, the event emitted shows a transfer to `account`.
 
-### Why both `auth` and `approver`? Why the `mod` that does nothing? {#why-both-autho-and-approver-why-the-mod-that-does-nothing}
+### Why both `auth` and `approver`? Why the `mod` that does nothing? \{##why-both-autho-and-approver-why-the-mod-that-does-nothing}
 
 This contract contains three modifiers: `_mod_`, `auth`, and `approver`.
 
@@ -302,13 +302,13 @@ This contract contains three modifiers: `_mod_`, `auth`, and `approver`.
 
 `auth` and `approver` make more sense, because they check that the contract was called by `contract_owner`. We'd expect certain privileged actions, such as minting, to be limited to that account. However, what is the point of having two separate functions that do _precisely the same thing_?
 
-## What can we detect automatically? {#what-can-we-detect-automatically}
+## What can we detect automatically? \{##what-can-we-detect-automatically}
 
 We can see that `wARB` is a scam token by looking at Etherscan. However, that is a centralized solution. In theory, Etherscan could be subverted or hacked. It is better to be able to figure out independently if a token is legitimate or not.
 
 There are some tricks we can use to identify that an ERC-20 token is suspicious (either a scam or very badly written), by looking at the events they emit.
 
-## Suspicious `Approval` events {#suspicious-approval-events}
+## Suspicious `Approval` events \{##suspicious-approval-events}
 
 [`Approval` events](https://eips.ethereum.org/EIPS/eip-20#approval) should only happen with a direct request (in contrast to [`Transfer` events](https://eips.ethereum.org/EIPS/eip-20#transfer-1) which can happen as a result of an allowance). [See the Solidity docs](https://docs.soliditylang.org/en/v0.8.20/security-considerations.html#tx-origin) for a detailed explanation of this issue and why the requests need to be direct, rather than mediated by a contract.
 
@@ -450,11 +450,11 @@ console.log(testResults)
 
 Here we use [`map`](https://www.w3schools.com/jsref/jsref_map.asp) to create an array of `Promise` objects. Then we use [`Promise.all`](https://www.javascripttutorial.net/es6/javascript-promise-all/) to wait for all of those promises to the resolved. We then [`filter`](https://www.w3schools.com/jsref/jsref_filter.asp) those results to remove the non-suspicious events.
 
-### Suspicious `Transfer` events {#suspicious-transfer-events}
+### Suspicious `Transfer` events \{##suspicious-transfer-events}
 
 Another possible way to identify scam tokens is to see if they have any suspicious transfers. For example, transfers from accounts that don't have that many tokens. You can see [how to implement this test](https://github.com/qbzzt/20230915-scam-token-detection/blob/main/susTransfer.ts), but `wARB` doesn't have this issue.
 
-## Conclusion {#conclusion}
+## Conclusion \{##conclusion}
 
 Automated detection of ERC-20 scams suffers from [false negatives](https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error), because a scam can use a perfectly normal ERC-20 token contract that just doesn't represent anything real. So you should always attempt to _get the token address from a trusted source_.
 

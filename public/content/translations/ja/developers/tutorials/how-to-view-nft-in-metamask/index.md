@@ -18,13 +18,13 @@ published: 2021-04-22
 
 前提条件として、モバイルに MetaMask をインストールしておく必要があり、NFT を割り当てたアカウントも必要となります。[iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202)または[Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US)から無料でアプリを入手できます。
 
-## ステップ 1: ネットワークを Goerli に設定する {#set-network-to-goerli}
+## ステップ 1: ネットワークを Goerli に設定する \{#set-network-to-goerli}
 
 アプリの上部にある「Wallet」ボタンを押すと、ネットワークを選択するよう指示されます。 Goerli ネットワーク上で NFT をミントしたので、ネットワークとして Goerli を選択します。
 
 ![MetaMaskモバイルでGoerliをネットワークとして設定する方法](./goerliMetamask.gif)
 
-## ステップ 2: 収集品を MetaMask に追加する {#add-nft-to-metamask}
+## ステップ 2: 収集品を MetaMask に追加する \{#add-nft-to-metamask}
 
 Goerli ネットワークに接続後、右側の「Collectibles」タブを選択し、NFT スマートコントラクトアドレスと NFT の ERC-721 トークン ID を追加します。そうすることで、チュートリアルのパート II でデプロイした NFT からのトランザクションハッシュに基づいて Etherscan で見つけることができます。
 

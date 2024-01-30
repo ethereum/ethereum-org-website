@@ -4,30 +4,30 @@ lang: pt-br
 description: Recursos úteis para tradutores do ethereum.org
 ---
 
-# Recursos {#resources}
+# Recursos \{#resources}
 
 Você pode encontrar alguns guias e ferramentas úteis para tradutores do ethereum.org, bem como comunidades de tradução e atualizações abaixo.
 
-## Guias {#guides}
+## Guias \{#guides}
 
 - [Guia de estilo de tradução](/contributing/translation-program/translators-guide/) _: instruções e dicas para tradutores do ethereum.org_
 - [Perguntas frequentes sobre tradução](/contributing/translation-program/faq/) _ — perguntas frequentes e respostas sobre o Programa de Tradução do ethereum.org_
 - [Guia do editor online do Crowdin](https://support.crowdin.com/online-editor/) _ — um guia detalhado sobre como usar o editor online do Crowdin e algumas funcionalidades avançadas do Crowdin_
 - [Pacotes de conteúdo](/contributing/translation-program/content-buckets/) _ — quais páginas estão incluídas em cada pacote de conteúdo do ethereum.org_
 
-## Ferramentas {#tools}
+## Ferramentas \{#tools}
 
 - [Portal de idiomas da Microsoft](https://www.microsoft.com/en-us/language) _: útil para encontrar e verificar traduções padrão de termos técnicos_
 - [Linguee](https://www.linguee.com/) _: mecanismo de busca para traduções e dicionário que permite a pesquisa por palavra ou frase_
 - [Proz](https://www.proz.com/search/) _: banco de dados de traduções, dicionários e glossários para termos especializados_
 - [Eurotermbank](https://www.eurotermbank.com/) _: coleções de terminologia europeia em 42 idiomas_
 
-## Comunidades {#communities}
+## Comunidades \{#communities}
 
 - [Grupos de tradução do Discord para idiomas específicos](/discord/) _: iniciativa que conecta tradutores do ethereum.org a Grupos de Tradução_
 - [Grupo de tradutores de chinês](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _: página de noções para facilitar a coordenação entre tradutores de chinês_
 
-## Últimas atualizações {#latest-updates}
+## Últimas atualizações \{#latest-updates}
 
 Para se manter atualizado sobre os avanços mais recentes do Programa de Tradução, você pode seguir o [blog da Fundação Ethereum](https://blog.ethereum.org/):
 
@@ -36,7 +36,7 @@ Para se manter atualizado sobre os avanços mais recentes do Programa de Traduç
 - [Atualização de julho de 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [Lançamento do Programa de Tradução de agosto de 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Horários de trabalho para tradutores {#office-hours}
+## Horários de trabalho para tradutores \{#office-hours}
 
 Temos horários de plantão para tradutores na segunda quarta-feira de cada mês. Eles são mantidos no canal de voz #horários de plantão no [Discord do ethereum.org](https://discord.gg/geKhWjtF), no qual você também pode encontrar os horários exatos e detalhes adicionais.
 

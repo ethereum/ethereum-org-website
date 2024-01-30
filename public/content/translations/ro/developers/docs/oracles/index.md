@@ -7,11 +7,11 @@ incomplete: true
 
 Oracolele sunt fluxuri de date care conectează Ethereum la informații din lumea reală, în afara lanțului, astfel încât să puteţi interoga datele în contractele dvs. inteligente. De exemplu, aplicațiile dapp de predicție de piață utilizează oracole pentru a efectua plăți pe baza evenimentelor. O piață de predicție vă poate cere săpariaţi ETH pe următorul președinte al Statelor Unite. Va folosi un oracol pentru a confirma rezultatul și pentru a plăti câștigătorilor.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Aveţi grijă să vă familiarizaţi cu [nodurile](/developers/docs/nodes-and-clients/), [mecanismele de consens](/developers/docs/consensus-mechanisms/) și [anatomia contractelor inteligente](/developers/docs/smart-contracts/anatomy/), în special cu evenimentele.
 
-## Ce este un oracol {#what-is-an-oracle}
+## Ce este un oracol \{#what-is-an-oracle}
 
 Un oracol este o punte între blockchain și lumea reală. Acestea acționează ca API-uri pe lanț pe care le puteţi interoga pentru a obține informații în contractele inteligente. Acest lucru ar putea fi orice, de la informații de preț la rapoarte meteorologice. Oracolele pot fi şi bidirecționale, adică folosite pentru a „trimite” date în lumea reală.
 
@@ -19,23 +19,23 @@ Urmăriți-l pe Patrick explicând Oracolele:
 
 <YouTube id="ZJfkNzyO7-U" start="10" />
 
-## De ce este nevoie de oracole? {#why-are-they-needed}
+## De ce este nevoie de oracole? \{#why-are-they-needed}
 
 Cu un blockchain precum Ethereum, aveți nevoie de fiecare nod din rețea ca să repete fiecare tranzacție și să ajungă la același rezultat, garantat. API-urile introduc date potențial variabile. Dacă ați trimite ETH pe baza unei valori $USD convenite folosind un API de prețuri, interogarea ar răspunde printr-un rezultat diferit de la o zi la alta. Ca să nu mai spunem că API-ul ar putea fi piratat sau perimat. Dacă se întâmplă acest lucru, nodurile din rețea nu ar fi în măsură să se pună de acord asupra stării actuale a lui Ethereum, încălcând în mod efectiv [consensul](/developers/docs/consensus-mechanisms/).
 
 Oracolele rezolvă această problemă postând datele pe blockchain. De aceea, orice nod care redă tranzacția va utiliza aceleași date imuabile care sunt postate pentru ca toți să le vadă. Pentru a face acest lucru, un oracol este format de obicei dintr-un contract inteligent și unele componente din lanț care pot interoga API-urile, iar apoi trimit periodic tranzacții pentru a actualiza datele contractului inteligent.
 
-### Problema oracolului {#oracle-problem}
+### Problema oracolului \{#oracle-problem}
 
 După cum am menționat, tranzacțiile Ethereum nu pot accesa direct datele din afara lanțului. Totodată, dacă ne bizuim pe o singură sursă a adevărului pentru a furniza date, acest lucru este nesigur și invalidează descentralizarea unui contract inteligent. Aceasta este cunoscută sub numele de problema oracolului.
 
 Putem evita problema oracolului prin utilizarea unui oracol descentralizat care preia date din mai multe surse; dacă una dintre sursele de date este piratată sau eșuează, contractul inteligent va funcționa în continuare așa cum a fost stabilit.
 
-### Securitate {#security}
+### Securitate \{#security}
 
 Un oracol este la fel de securizat ca sursele sale de date. Dacă o aplicație dapp utilizează Uniswap ca oracol pentru alimentarea cu prețul ETH/DAI, un atacator poate muta prețul pe Uniswap pentru a manipula înțelegerea prețului curent de către aplicația dapp. Un exemplu de modalitate de combatere a acestui lucru este [un sistem de alimentare](https://developer.makerdao.com/feeds/) precum cel utilizat de MakerDAO, care colaționează datele despre prețuri din mai multe surse externe în loc să se bazeze doar pe una singură.
 
-### Arhitectură {#architecture}
+### Arhitectură \{#architecture}
 
 Acesta este un exemplu de arhitectură Oracle simplă, însă există mai multe moduri de a declanșa calculul off-chain.
 
@@ -50,7 +50,7 @@ Următoarea etapă ar putea fi aceea de a avea o rețea a acestor noduri care s�
 
 [Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) a îmbunătățit această metodologie prin faptul că rețelele de oracole off-chain comunică între ele, își semnează criptografic răspunsurile, agregă răspunsurile off-chain și trimit doar o singură tranzacție on-chain cu rezultatul. În acest mod se cheltuiește mai puțin gaz, dar se menține garanția datelor descentralizate, întrucât fiecare nod a semnat partea sa de tranzacție, prin aceasta nemaiputând fi modificată de către nodul care trimite tranzacția. Politica de escaladare intră în vigoare dacă nodul nu efectuează tranzacția, ci următorul nod trimite tranzacția.
 
-## Utilizare {#usage}
+## Utilizare \{#usage}
 
 Utilizând servicii precum Chainlink, puteți face referire la datele descentralizate on-chain care au fost deja extrase din lumea reală și agregate. Un fel de bunuri comune publice, dar pentru date descentralizate. De asemenea, vă puteți construi propriile rețele de oracole modulare pentru a obține datele personalizate pe care le căutați. În plus, puteți efectua calcule off-chain și de asemenea trimite informații în lumea reală. Chainlink dispune de infrastructura necesară pentru:
 
@@ -60,7 +60,7 @@ Utilizând servicii precum Chainlink, puteți face referire la datele descentral
 
 Iată un exemplu al modului de a obţine cel mai recent preț ETH în contractul dvs. inteligent folosind un flux de prețuri Chainlink:
 
-### Fluxuri de date Chainlink {#chainlink-data-feeds}
+### Fluxuri de date Chainlink \{#chainlink-data-feeds}
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -100,7 +100,7 @@ contract PriceConsumerV3 {
 
 [Vedeţi documentația](https://docs.chain.link/docs/get-the-latest-price)
 
-### Chainlink VRF {#chainlink-vrf}
+### Chainlink VRF \{#chainlink-vrf}
 
 Chainlink VRF (Funcția aleatorie verificabilă) este o sursă de randomizare verificabilă și verificabilă, cu o corectitudine dovedită, concepută pentru contractele inteligente. Dezvoltatorii de contracte inteligente pot folosi Chainlink VRF ca generator de numere aleatorii (RNG) inviolabil ca să construiască contracte inteligente fiabile pentru orice aplicații care se bazează pe rezultate imprevizibile:
 
@@ -160,7 +160,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
 }
 ```
 
-### Chainlink Keepers {#chainlink-keepers}
+### Chainlink Keepers \{#chainlink-keepers}
 
 Contractele inteligente nu își pot declanșa sau iniția propriile funcții în momente sau în condiții arbitrare. Starea contractelor se va modifica doar când un alt cont inițiază o tranzacție (cum ar fi un utilizator, un oracol sau un contract). [Rețeaua Chainlink Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) oferă contractelor inteligente opțiuni de externalizare a sarcinilor regulate de întreținere, în mod descentralizat și necesitând încredere minimă.
 
@@ -213,12 +213,12 @@ contract Counter is KeeperCompatibleInterface {
 
 După implementarea unui contract compatibil Keeper, trebuie să înregistrați contractul pentru [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) (întreținere) și să îl finanțați cu LINK, pentru a anunţa rețeaua Keeper despre contract, astfel încât munca dvs. să fie efectuată în mod continuu.
 
-### Proiecte Keepers {#keepers}
+### Proiecte Keepers \{#keepers}
 
 - [Chainlink Keepers](https://keepers.chain.link/)
 - [Rețeaua Keep3r](https://docs.keep3r.network/)
 
-### Apelul API Chainlink {#chainlink-api-call}
+### Apelul API Chainlink \{#chainlink-api-call}
 
 [Apelurile API Chainlink](https://docs.chain.link/docs/make-a-http-get-request) sunt cea mai simplă modalitate de a obține date off-chain în modul tradițional în care funcționează web-ul: apelurile API. Realizarea unei singure astfel de instanțe și existența unui singur oracol îl face să devină centralizat prin natura sa. Pentru a-l menține cu adevărat descentralizat, o platformă de contracte inteligente ar trebui să utilizeze numeroase noduri găsite pe o [piață de date externă](https://market.link/).
 
@@ -295,7 +295,7 @@ contract APIConsumer is ChainlinkClient {
 
 Puteți afla mai multe despre aplicațiile Chainlink consultând [blogul dezvoltatorilor Chainlink](https://blog.chain.link/tag/developers/).
 
-## Servicii Oracle {#other-services}
+## Servicii Oracle \{#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
@@ -303,7 +303,7 @@ Puteți afla mai multe despre aplicațiile Chainlink consultând [blogul dezvolt
 - [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
-### Construiește un contract inteligent oracol {#build-an-oracle-smart-contract}
+### Construiește un contract inteligent oracol \{#build-an-oracle-smart-contract}
 
 Iată un exemplu de contract oracol al lui Pedro Costa. Puteţi găsi şi alte adnotări în articolul său: [Implementarea unui blockchain oracol pe Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -420,7 +420,7 @@ contract Oracle {
 
 _Ne-ar plăcea să mai avem documentație privind crearea unui contract inteligent oracol. Dacă puteți ajuta, creați un PR!_
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 **Articole**
 

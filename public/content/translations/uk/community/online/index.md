@@ -4,11 +4,11 @@ description: Список дозволених програм у всій еко
 lang: uk
 ---
 
-# Віртуальна спільнота {#online-communities}
+# Віртуальна спільнота \{#online-communities}
 
 Сотні тисяч ентузіастів Ethereum збираються на цих онлайн-форумах, щоб обмінюватися новинами, обговорювати останні події, розв’язувати технічні проблеми й уявляти своє майбутнє.
 
-## Форуми {#forums}
+## Форуми \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> — усе про Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> — фінансовий бік Ethereum, зокрема децентралізовані фінанси (DeFi)</SocialListItem>
@@ -19,7 +19,7 @@ lang: uk
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> — дискусії та допомога розробникам Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> — найвпливовіша дошка повідомлень, присвячена дослідженням у галузі криптоекономіки</SocialListItem>
 
-## Чати {#chat-rooms}
+## Чати \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — спільнота, орієнтована на допомогу з управлінням проєктами під час розробки Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> — чат Discord, який керується ETHGlobal: онлайн-спільнота для хакерів Ethereum з усього світу</SocialListItem>
@@ -33,7 +33,7 @@ lang: uk
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- форум із запитаннями й відповідями_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- децентралізований форум із запитаннями й відповідями_</SocialListItem>
 
-## YouTube і Twitter {#youtube-and-twitter}
+## YouTube і Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> — будьте в курсі останніх подій від Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Офіційний акаунт Ethereum Foundation</SocialListItem>

@@ -8,7 +8,7 @@ Powszechnym błędnym pomysłem jest to, że deweloperzy muszą pisać inteligen
 
 Ethereum i jego społeczność korzysta z open source. Możesz znaleźć projekty społeczności — implementacje klientów, API, frameworki programistyczne, narzędzia testowe — w wielu językach.
 
-## Wybierz swój język {#data}
+## Wybierz swój język \{#data}
 
 Wybierz swój język aby znaleźć projekty, zasoby i wirtualne społeczności:
 

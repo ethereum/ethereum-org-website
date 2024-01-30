@@ -8,21 +8,21 @@ Les réseaux Ethereum sont des groupes d'ordinateurs connectés qui communiquent
 
 Votre compte Ethereum fonctionnera sur les différents réseaux, mais le solde de votre compte et votre historique de transactions ne seront pas transférés du réseau Ethereum principal. Pour les tests, il est utile de connaître les réseaux disponibles et la façon d'obtenir de l'ETH de test pour pouvoir vous amuser avec. En général, pour des raisons de sécurité, il n'est pas recommandé de réutiliser les comptes principaux sur les réseaux de test ou vice versa.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Vous devez comprendre les [bases d'Ethereum](/developers/docs/intro-to-ethereum/) avant de lire des informations sur les différents réseaux, car les réseaux de test vous donneront une version bon marché et sûre d'Ethereum avec laquelle vous pourrez vous amuser.
 
-## Réseaux public {#public-networks}
+## Réseaux public \{#public-networks}
 
 Les réseaux publics sont accessibles à toute personne disposant d'une connexion Internet, partout dans le monde. N'importe qui peut lire ou créer des transactions sur une blockchain publique, et valider les transactions exécutées. Le consensus établi entre les pairs décide de l'inclusion des transactions et de l'état du réseau.
 
-### Réseau principal Ethereum {#ethereum-mainnet}
+### Réseau principal Ethereum \{#ethereum-mainnet}
 
 Le réseau principal Ethereum est la blockchain publique primaire de production, où des transactions de valeur réelle se produisent sur le registre distribué.
 
 Quand on discute des prix de l'ETH dans les échanges, on fait référence à l'ETH du réseau principal.
 
-### Réseaux de test Ethereum {#ethereum-testnets}
+### Réseaux de test Ethereum \{#ethereum-testnets}
 
 En plus du réseau principal, il existe des réseaux de test publics. Il s'agit de réseaux utilisés par les développeurs de protocoles ou de contrats intelligents pour tester, dans un environnement de production, à la fois les mises à niveau de protocoles et les contrats intelligents avant leur déploiement sur le réseau principal. Considérez cela comme une analogie entre les serveurs de production et les serveurs d'essai.
 
@@ -36,7 +36,7 @@ L'ETH sur les réseaux de test est censé n'avoir aucune valeur réelle ; cepend
 
 Les deux réseaux de test publics que les développeurs de clients conservent actuellement sont Sepolia et Goerli. Sepolia est un réseau dédié aux développeurs de contrats et d'applications qui vise à tester leurs applications. Le réseau Goerli permet aux développeurs de protocoles de tester les mises à jour du réseau, et aux stalkers de tester les validateurs en cours d'exécution.
 
-#### Sepolia {#sepolia}
+#### Sepolia \{#sepolia}
 
 **Sepolia est le réseau de test recommandé par défaut pour le développement d'applications.**. Le réseau Sepolia utilise un ensemble de validateurs autorisés. Il est assez nouveau, de sorte que son état et son historique sont tous deux assez restreints. Cela signifie que le réseau est rapide à synchroniser et que l'exécution d'un nœud en son sein nécessite moins de stockage. Ceci est utile pour les utilisateurs désireux de faire tourner un nœud rapidement et d'interagir directement avec le réseau.
 
@@ -62,7 +62,7 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
 - [Robinet pour le réseau de test Sepolia](https://testnet-faucet.com/sepolia/)
 
-#### Goerli _(support à long terme)_ {#goerli}
+#### Goerli _(support à long terme)_ \{#goerli}
 
 _Remarque : [le réseau de test Goerli est obsolète](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) et sera remplacé par [Holesovice](https://github.com/eth-clients/holesovice) en 2023. Veuillez envisager de migrer vos applications vers Sepolia._
 
@@ -91,11 +91,11 @@ Goerli est un réseau de test qui permet de tester, de valider et de mettre en j
 
 Pour lancer un validateur sur le réseau de test Goerli, utilisez la [plateforme de lancement "validateur goerli bon marché"](https://goerli.launchpad.ethstaker.cc/en/) d'ethstaker.
 
-### Réseaux de test de Couche 2 {#layer-2-testnets}
+### Réseaux de test de Couche 2 \{#layer-2-testnets}
 
 [La couche 2 (Layer 2 - L2)](/layer-2/) est un terme collectif pour désigner un ensemble spécifique de solutions aptes à faire évoluer Ethereum. Une couche 2 est une blockchaià part entière qui prolonge Ethereum et hérite des garanties de sécurité d'Ethereum. Les réseaux de test de couche 2 sont généralement étroitement couplés aux réseaux publics de test Ethereum.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Goerli \{#arbitrum-goerli}
 
 Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
@@ -103,7 +103,7 @@ Un réseau de test pour [Arbitrum](https://arbitrum.io/).
 
 - [Robinet Chainlink](https://faucets.chain.link/)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Goerli \{#optimistic-goerli}
 
 Réseau de test pour [Optimism](https://www.optimism.io/).
 
@@ -112,7 +112,7 @@ Réseau de test pour [Optimism](https://www.optimism.io/).
 - [Robinet Paradigm](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-#### Starknet Goerli {#starknet-goerli}
+#### Starknet Goerli \{#starknet-goerli}
 
 Un réseau de test pour [Starknet](https://www.starknet.io).
 
@@ -120,28 +120,28 @@ Un réseau de test pour [Starknet](https://www.starknet.io).
 
 - [Robinet Starknet](https://faucet.goerli.starknet.io)
 
-## Réseaux privés {#private-networks}
+## Réseaux privés \{#private-networks}
 
 Un réseau Ethereum est un réseau privé si ses nœuds ne sont pas connectés à un réseau public (à savoir réseau principal ou réseau de test). Dans ce contexte, « privé » signifie « réservé » ou « isolé », plutôt que « protégé » ou « sécurisé ».
 
-### Réseaux de développement {#development-networks}
+### Réseaux de développement \{#development-networks}
 
 Pour développer une application Ethereum, exécutez-la sur un réseau privé pour vérifier son bon fonctionnement avant de la déployer. De la même façon que vous exécuteriez un serveur local sur votre ordinateur pour du développement Web, vous pouvez créer une occurrence de blockchain locale pour tester votre application décentralisée (dApp). Cela permet une itération beaucoup plus rapide que sur un réseau de test public.
 
 Il existe des projets et des outils dédiés pour vous aider dans cette tâche. En savoir plus sur les [réseaux de développement](/developers/docs/development-networks/).
 
-### Réseaux de consortium {#consortium-networks}
+### Réseaux de consortium \{#consortium-networks}
 
 Le processus de consensus est contrôlé par un ensemble prédéfini de nœuds de confiance. Ce peut être un réseau privé d'institutions universitaires connues régissant chacune un seul nœud, où les blocs sont validés par un seuil de signataires au sein du réseau.
 
 Si le réseau public Ethereum peut être assimilé à l'Internet public, vous pouvez considérer un réseau de consortium comme un intranet privé.
 
-## Outils connexes {#related-tools}
+## Outils connexes \{#related-tools}
 
 - [Chainlist](https://chainlist.org/) _liste de réseaux EVM pour connecter les portefeuilles et les fournisseurs aux ID de chaîne et de réseau appropriés_
 - [Chaînes basées sur l'EVM](https://github.com/ethereum-lists/chains) _répertoire GitHub des chaînes de métadonnées qui alimentent la Chainlist_
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Proposition : Cycle de vie prévisible du réseau de test Ethereum](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [L'évolution des réseaux de test Ethereum](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

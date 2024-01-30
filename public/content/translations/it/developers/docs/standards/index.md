@@ -5,7 +5,7 @@ lang: it
 incomplete: true
 ---
 
-## Panoramica degli standard {#standards-overview}
+## Panoramica degli standard \{#standards-overview}
 
 La community di Ethereum ha adottato molti standard che aiutano a mantenere interoperabili i progetti (come i [client di Ethereum](/developers/docs/nodes-and-clients/) e i portafogli) tra le implementazioni e ad assicurarsi che i contratti intelligenti e le dapp restino componibili.
 
@@ -20,7 +20,7 @@ Normalmente, gli standard vengono introdotti come [proposte di miglioramento di 
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
-## Tipi di standard {#types-of-standards}
+## Tipi di standard \{#types-of-standards}
 
 Esistono 3 tipi di EIP:
 
@@ -37,7 +37,7 @@ Inoltre, la Traccia Standard è suddivisa in 4 categorie:
 
 Informazioni più dettagliate su questi diversi tipi e categorie sono disponibili in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
-### Standard per i token {#token-standards}
+### Standard per i token \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Un'interfaccia standard per token fungibili (intercambiabili), come i token di voto, i token di staking o le valute virtuali.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Definisce un'interfaccia token per i token ERC-20 che supporta l'esecuzione del codice del destinatario dopo il codice transfer o transferFrom o spender dopo l'approvazione.
@@ -51,7 +51,7 @@ Informazioni più dettagliate su questi diversi tipi e categorie sono disponibil
 
 Maggiori informazioni sugli [standard peri token](/developers/docs/standards/tokens/).
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Proposte di miglioramento di Ethereum (EIP)](/eips/)
 

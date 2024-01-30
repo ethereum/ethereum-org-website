@@ -10,17 +10,17 @@ Pentru ca o aplicație web să interacționeze cu blockchain-ul Ethereum (adică
 
 Dacă doriţi să utilizaţi JavaScript pentru a vă conecta la un nod Ethereum, puteţi să utilizaţi vanilla JavaScript, dar există mai multe biblioteci utile în ecosistem care facilitează mult acest lucru. Cu aceste biblioteci, programatorii pot scrie metode intuitive şi scurte pentru a inițializa cereri JSON RPC (în culise) care interacționează cu Ethereum.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Pe lângă înțelegerea JavaScript, ar putea fi util să înțelegeţi [stiva Ethereum](/developers/docs/ethereum-stack/) și [clienții Ethereum](/developers/docs/nodes-and-clients/).
 
-## De ce să folosiţi o bibliotecă? {#why-use-a-library}
+## De ce să folosiţi o bibliotecă? \{#why-use-a-library}
 
 Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe cu un nod Ethereum. Ele oferă şi funcții utilitare (cum ar fi conversia din ETH în Gwei), astfel încât, ca programator, să petreceţi mai mult timp axându-vă pe funcționalitatea unică a aplicației dvs. decât încercând să vă descurcaţi cu complexitatea clienților Ethereum.
 
-## Funcţionalităţile bibliotecilor {#library-features}
+## Funcţionalităţile bibliotecilor \{#library-features}
 
-### Conectaţi-vă la nodurile Ethereum {#connect-to-ethereum-nodes}
+### Conectaţi-vă la nodurile Ethereum \{#connect-to-ethereum-nodes}
 
 Folosind furnizorii, aceste biblioteci vă permit să vă conectaţi la Ethereum și să-i citiţi datele, indiferent dacă este vorba de JSON-RPC, INFURA, Etherscan, Alchemy sau MetaMask.
 
@@ -68,7 +68,7 @@ După configurare, veţi putea interoga blockchain-ul pentru:
 - id-ul rețelei
 - și altele...
 
-### Funcționalitatea de portofel {#wallet-functionality}
+### Funcționalitatea de portofel \{#wallet-functionality}
 
 Aceste biblioteci vă oferă funcționalități pentru crearea portofelelor, gestionarea cheilor și semnarea tranzacțiilor.
 
@@ -149,7 +149,7 @@ Odată configurat veţi putea să:
 - semnaţi tranzacții
 - și altele...
 
-### Interacționează cu funcțiile contractelor inteligente {#interact-with-smart-contract-functions}
+### Interacționează cu funcțiile contractelor inteligente \{#interact-with-smart-contract-functions}
 
 JavaScript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
@@ -211,7 +211,7 @@ Aceasta înseamnă că puteţi:
 - implementa un contract
 - Și altele...
 
-### Funcții utilitare {#utility-functions}
+### Funcții utilitare \{#utility-functions}
 
 Funcțiile utilitare vă oferă comenzi rapide pe care să le aveţi la îndemână, ce facilitează construirea cu Ethereum.
 
@@ -233,7 +233,7 @@ ethers.utils.formatEther(balance)
 - [Funcții utilitare Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funcții utilitare Ethers](https://docs.ethers.io/v5/api/utils/)
 
-## Biblioteci disponibile {#available-libraries}
+## Biblioteci disponibile \{#available-libraries}
 
 **Web3.js -** **_API JavaScript Ethereum._**
 
@@ -272,16 +272,16 @@ ethers.utils.formatEther(balance)
 - [Documentație](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)
 - [GitHub](https://github.com/alchemyplatform/alchemy-web3)
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 _Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Noduri și clienți](/developers/docs/nodes-and-clients/)
 - [Framework-uri de dezvoltare](/developers/docs/frameworks/)
 
-## Tutoriale corelate {#related-tutorials}
+## Tutoriale corelate \{#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _- Folosind token-ul DAI, vedeți cum să apelați funcția contractelor folosind JavaScript._

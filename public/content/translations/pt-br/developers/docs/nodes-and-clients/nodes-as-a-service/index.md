@@ -5,15 +5,15 @@ lang: pt-br
 sidebarDepth: 2
 ---
 
-## Introdução {#Introduction}
+## Introdução \{#Introduction}
 
 Executar o seu próprio [nó Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) pode ser desafiador, especialmente quando for iniciado ou escalando rápido. Há [vários serviços](#popular-node-services) que executam a infraestrutura do nó otimizada para você, para que você possa se concentrar no desenvolvimento da sua aplicação ou produto. Vamos explicar como os serviços de nó funcionam, os prós e os contras para usá-los e listar provedores se você estiver interessado em começar.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Se você ainda não sabe o que são os nós e os clientes e como eles funcionam, confira [Nós e clientes](/developers/docs/nodes-and-clients/).
 
-## Participantes {#stakoooooooooooooors}
+## Participantes \{#stakoooooooooooooors}
 
 Os participantes individuais devem executar sua própria infraestrutura, em vez de depender de provedores de terceiros. Isso significa executar um cliente de execução acoplado a um cliente de consenso. Antes da [Fusão](/roadmap/merge) (The Merge), era possível executar apenas um cliente de consenso e usar um provedor centralizado para dados de execução. Porém, isso não é mais possível: um participante individual deve executar ambos os clientes. No entanto, há serviços disponíveis para facilitar este processo.
 
@@ -21,7 +21,7 @@ Os participantes individuais devem executar sua própria infraestrutura, em vez 
 
 Os serviços descritos nesta página são para nós não participantes.
 
-## Como funcionam os serviços de nós? {#how-do-node-services-work}
+## Como funcionam os serviços de nós? \{#how-do-node-services-work}
 
 Os provedores de nós disponibilizam sua infraestrutura para você não precisar de uma.
 
@@ -35,19 +35,19 @@ Muitas vezes os serviços de nó executam uma variedade de [clientes de nó](/de
 
 É importante notar que os serviços de nós não armazenam nem devem armazenar suas chaves ou informações privadas.
 
-## Quais são os benefícios do uso do serviço de nós? {#benefits-of-using-a-node-service}
+## Quais são os benefícios do uso do serviço de nós? \{#benefits-of-using-a-node-service}
 
 O principal benefício para usar um serviço de nós é não ter de gastar tempo de engenharia mantendo e gerenciando nós você mesmo. Isso permite que você se concentre na construção do seu produto em vez de se preocupar com a manutenção da infraestrutura.
 
 Executar seus próprios nós pode ser muito caro, quer seja de armazenamento, largura de banda, quer de tempo de engenharia. Dispor de mais nós ao dimensionar, atualizar nós para as versões mais recentes e garantir a consistência dos estados pode roubar tempo para criar e usar recursos no seu produto web3 desejado.
 
-## Quais são os benefícios do uso do serviço de nós? {#cons-of-using-a-node-service}
+## Quais são os benefícios do uso do serviço de nós? \{#cons-of-using-a-node-service}
 
 Usando um serviço nó você está centralizando o aspecto da infraestrutura do seu produto. Por esse motivo, os projetos que dão à descentralização a maior importância podem preferir nós de auto-hospedagem a terceirizar o serviço a terceiros.
 
 Leia mais sobre os [benefícios de executar o seu próprio nó](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Serviços de nós populares {#popular-node-services}
+## Serviços de nós populares \{#popular-node-services}
 
 Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares. Sinta-se à vontade para adicionar qualquer um que estiver faltando! Cada nó de serviço oferece diferentes benefícios e recursos, além de níveis gratuitos ou pagos. Você deve analisar quais deles melhor se adaptam às suas necessidades antes de tomar uma decisão.
 
@@ -372,15 +372,15 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
   - Pagamento em Cripto
   - Suporte externo para requisitos extras de comportamento
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [Lista dos serviços de nós Ethereum](https://ethereumnodes.com/)
 
-## Tópicos relacionados {#related-topics}
+## Tópicos relacionados \{#related-topics}
 
 - [ Nós e clientes](/developers/docs/nodes-and-clients/)
 
-## Tutoriais relacionados {#related-tutorials}
+## Tutoriais relacionados \{#related-tutorials}
 
 - [Introdução ao desenvolvimento do Ethereum usando o Alquimia](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guia para enviar transações usando web3 e Alquimia](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

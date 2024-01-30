@@ -9,7 +9,7 @@ template: roadmap
 
 Anahtar ve cüzdan kullanımından işlemlerin başlatılmasına kadar Ethereum'un kullanımı basitleştirilmeli. Ethereum, kitlesel kullanımı hafifletmek için, kullanıcılara izinsizliği deneyimlemesini ve Ethereuma Web2 uygulamaları kullanarak sansürsüz ve sıkıntısız bir şekilde erişmesini sağlayarak kullanımı ciddi olanda kolaylaştırmalıdır.
 
-## Güvenlik kelimelerinin ötesinde {#no-more-seed-phrases}
+## Güvenlik kelimelerinin ötesinde \{#no-more-seed-phrases}
 
 Ethereum hesapları, hesapların tanınması (açık anahtar) ve mesajların imzalanması (özel anahtar) için bir çift anahtar ile korunmaktadır. Bir özel anahtar üst düzey parola gibidir, Ethereum hesabına tam erişim imkânı sunar. Bu; hesapların kullanıcılar adına bankalar ve Web2 uygulamaları tarafından yönetilen insanlar için farklı bir işlem metodudur. Merkezi üçüncü şahıslara muhtaç olmadan Ethereum'un kitlesel kullanımı amacıyla, kullanıcı için varlıklarının sorumluluğunu üstlenecek ve kendi verilerinin kontrolünü açık-özel anahtar kriptografisi ile anahtar yönetimini anlamasını zorunlu kılmayacak, açık ve düz bir yol olmak zorundadır.
 
@@ -27,7 +27,7 @@ Düğümleri yürütmeyi çok daha kolay ve daha az kaynak bağımlı hale getir
 
 Bu yükseltmelerle bir düğüm yürütmenin önündeki engeller işlevsel olarak sıfıra indirilir. Kullanıcılar, bilgisayar veya cep telefonlarından, fark edilebilir disk hacmi veya CPU feda etmek zorunda kalmadan ve uygulama kullanırken veri ya da ağ erişimi için üçüncü şahıslara bel bağlamak zorunda olmadan Ethereum'a güvenli ve izne ihtiyaç duymayan erişimden faydalanacak.
 
-## Güncel ilerleme {#current-progress}
+## Güncel ilerleme \{#current-progress}
 
 Akıllı sözleşme cüzdanları çoktan beri mevcut, ancak bu cüzdanları olabildiğinde merkeziyetsiz ve izinsiz hale getirmek için daha fazla yükseltme gerekiyor. EIP-4337, Ethereum'un protokülende hiçbir değişiklik gerektirmeyen, olgun bir öneridir. EIP-4337 için gerekli temel akıllı sözleşme Mart 2023'te dağıtıldı.
 

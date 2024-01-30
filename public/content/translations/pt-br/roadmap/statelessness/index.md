@@ -4,7 +4,7 @@ description: Explicação sobre a expiração do histórico e o Ethereum sem est
 lang: pt-br
 ---
 
-# Sem estado, expiração do estado e expiração do histórico {#statelessness}
+# Sem estado, expiração do estado e expiração do histórico \{#statelessness}
 
 A capacidade de executar nós Ethereum em hardware modesto é fundamental para uma verdadeira descentralização. Isso porque a execução de um nó permite que os usuários verifiquem as informações por meio da execução de verificações criptográficas de forma independente, em vez de confiar em terceiros para fornecer os dados. A execução de um nó permite que os usuários enviem transações diretamente para a rede ponto a ponto do Ethereum, em vez de precisarem confiar em um intermediário. A descentralização não será possível se esses benefícios estiverem disponíveis apenas para usuários com hardware caro. Em vez disso, os nós devem ser capazes de funcionar com requisitos de processamento e memória extremamente modestos, para que possam ser executados em celulares, microcomputadores ou de forma imperceptível em um computador doméstico.
 
@@ -12,7 +12,7 @@ Atualmente, os altos requisitos de espaço em disco são a principal barreira qu
 
 Discos rígidos mais baratos podem ser utilizados para armazenar dados mais antigos, mas eles são muito lentos para acompanhar os blocos recebidos. Manter os modelos de armazenamento atuais para os clientes e, ao mesmo tempo, tornar os dados mais baratos e mais fáceis de armazenar é apenas uma solução temporária e parcial para o problema, porque o crescimento do estado do Ethereum é "ilimitado", o que significa que os requisitos de armazenamento só podem aumentar, e as melhorias tecnológicas sempre precisarão acompanhar o ritmo do crescimento contínuo do estado. Em vez disso, os clientes precisam encontrar novas maneiras de verificar blocos e transações que não dependam da busca de dados em bancos de dados locais.
 
-## Redução do armazenamento para os nós {#reducing-storage-for-nodes}
+## Redução do armazenamento para os nós \{#reducing-storage-for-nodes}
 
 Há várias maneiras de reduzir a quantidade de dados que cada nó precisa armazenar, e cada uma exige que o protocolo principal do Ethereum seja atualizado em uma extensão diferente:
 
@@ -21,9 +21,9 @@ Há várias maneiras de reduzir a quantidade de dados que cada nó precisa armaz
 - **Sem estado fraco**: apenas os produtores de blocos precisam acessar os dados de estado completos, outros nós podem verificar blocos sem um banco de dados de estado local.
 - **Sem estado forte**: nenhum nó precisa de acesso aos dados de estado completos.
 
-## Expiração de dados {#data-expiry}
+## Expiração de dados \{#data-expiry}
 
-### Expiração do histórico {#history-expiry}
+### Expiração do histórico \{#history-expiry}
 
 A expiração do histórico se refere à eliminação, pelos clientes, de dados mais antigos que provavelmente não serão necessários, de forma a armazenarem apenas uma pequena quantidade de dados históricos, descartando os dados mais antigos quando chegam dados novos. Há dois motivos pelos quais os clientes precisam de dados históricos: sincronização e atendimento de solicitações de dados. Originalmente, os clientes tinham que sincronizar a partir do bloco de início, verificando se cada bloco sucessivo estava correto até o início da cadeia. Atualmente, os clientes usam "pontos de verificação de subjetividade fraca" para chegar ao início da cadeia. Esses pontos de verificação são pontos de partida confiáveis, como ter um bloco de início perto do momento presente em vez de no início do Ethereum. Isso significa que os clientes podem "descartar" todas as informações anteriores ao ponto de verificação de subjetividade fraca mais recente sem perder a capacidade de sincronizar com o início da cadeia. Atualmente, os clientes atendem a solicitações (que chegam por meio de JSON-RPC) de dados históricos, obtendo-os junto aos respectivos bancos de dados locais. Entretanto, com a expiração do histórico, isso não será possível se os dados solicitados tiverem sido eliminados. Para atender a esses dados históricos, são necessárias algumas soluções inovadoras.
 
@@ -35,7 +35,7 @@ O EIP-4444 ainda não está pronto para implementação, mas está sendo discuti
 
 Essa melhoria não altera fundamentalmente como os nós Ethereum processam os dados de estado, apenas muda como os dados históricos são acessados.
 
-### Expiração do estado {#state-expiry}
+### Expiração do estado \{#state-expiry}
 
 A expiração do estado se refere à remoção do estado dos nós individuais, se o nó não tiver sido acessado recentemente. Há várias maneiras de implementar isso, incluindo:
 
@@ -50,7 +50,7 @@ Da mesma forma que a expiração do histórico, na expiração do estado a respo
 
 A expiração de estado ainda está em fase de pesquisa e ainda não está pronta para implementação. A expiração do estado pode ocorrer mais tarde do que a dos clientes sem estado e a expiração do histórico, porque essas melhorias fazem com que a maioria dos validadores possam gerenciar facilmente grandes tamanhos de estado.
 
-## Sem estado {#statelessness}
+## Sem estado \{#statelessness}
 
 O termo "sem estado" é um tanto equivocado, pois não significa que o conceito de "estado" seja eliminado, mas envolve alterações na maneira como os nós Ethereum processam os dados de estado. O conceito de "sem estado" ocorre em duas formas: sem estado fraco e sem estado forte. Sem estado fraco permite que a maioria dos nós se torne sem estado e coloca a responsabilidade pelo armazenamento do estado em alguns poucos nós. Sem estado forte remove completamente a necessidade de qualquer nó armazenar os dados de estado completos. Ambos os conceitos, sem estado fraco e forte, oferecem os seguintes benefícios aos validadores normais:
 
@@ -60,7 +60,7 @@ O termo "sem estado" é um tanto equivocado, pois não significa que o conceito 
 - os nós podem ser executados em discos rígidos baratos, porque não há necessidade de leitura/escrita de disco
 - compatível com melhorias futuras da criptografia do Ethereum
 
-### Sem estado fraco {#weak-statelessness}
+### Sem estado fraco \{#weak-statelessness}
 
 Sem estado fraco envolve alterações na maneira como os nós Ethereum verificam as alterações do estado, mas não elimina completamente a necessidade de armazenamento do estado em todos os nós da rede. Em vez disso, sem estado fraco coloca a responsabilidade pelo armazenamento do estado nos proponentes de bloco, enquanto todos os outros nós da rede verificam os blocos sem armazenar os dados do estado completos.
 
@@ -79,17 +79,17 @@ Os proponentes de blocos usam os dados de estado para criar "testemunhas", o con
 
 O conceito "sem estado fraco" está em um estado avançado de pesquisa, mas depende da implementação da separação entre proponente e construtor e das Verkle Trees para que as pequenas testemunhas possam ser transferidas entre os pares. Isso significa que provavelmente ainda vai demorar alguns anos para a implementação do conceito "sem estado fraco" na rede principal do Ethereum.
 
-### Sem estado forte {#strong-statelessness}
+### Sem estado forte \{#strong-statelessness}
 
 O conceito "sem estado forte" remove a necessidade de armazenamento de dados do estado por qualquer bloco. Em vez disso, as transações são enviadas com testemunhas que podem ser agregadas pelos produtores de blocos. Portanto, os produtores de blocos serão responsáveis por armazenar apenas o estado necessário para gerar testemunhas para as contas relevantes. A responsabilidade pelo estado é quase totalmente transferida para os usuários, pois eles enviam testemunhas e "listas de acesso" para declarar com quais contas e chaves de armazenamento estão interagindo.
 
 O conceito "sem estado forte" foi investigado por pesquisadores, mas atualmente não se espera que faça parte do planejamento do Ethereum. É mais provável que o sem estado fraco seja suficiente para as necessidades de escalabilidade do Ethereum.
 
-## Progresso atual {#current-progress}
+## Progresso atual \{#current-progress}
 
 Sem estado fraco, expiração do histórico e expiração do estado estão em fase de pesquisa e devem ser implementados daqui a vários anos. Não há garantia de que todas essas propostas serão implementadas. Por exemplo, se a expiração do estado for implementada primeiro, talvez não seja necessário implementar também a expiração do histórico. Há também outros itens do planejamento, como [Verkle Trees](/roadmap/verkle-trees) e [separação entre proponente e construtor](/roadmap/pbs), que precisam ser concluídos primeiro.
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [AMA sem estado, Vitalik](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Uma teoria de gerenciamento do tamanho do estado](https://hackmd.io/@vbuterin/state_size_management)

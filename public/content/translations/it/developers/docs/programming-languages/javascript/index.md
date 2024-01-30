@@ -8,9 +8,9 @@ JavaScript è tra i linguaggi più popolari nell'ecosistema Ethereum. C'è persi
 
 Esistono opportunità per scrivere in JavaScript (o simile) a [tutti i livelli dello stack](/developers/docs/ethereum-stack/).
 
-## Interagire con Ethereum {#interact-with-ethereum}
+## Interagire con Ethereum \{#interact-with-ethereum}
 
-### Librerie API JavaScript {#javascript-api-libraries}
+### Librerie API JavaScript \{#javascript-api-libraries}
 
 Se vuoi scrivere in JavaScript per interrogare la blockchain, inviare transazioni e altro ancora, il modo più comodo per farlo è utilizzare una [libreria API JavaScript](/developers/docs/apis/javascript/). Queste API consentono agli sviluppatori di interagire facilmente con i [nodi della rete Ethereum](/developers/docs/nodes-and-clients/).
 
@@ -22,15 +22,15 @@ Puoi utilizzare queste librerie per interagire con i contratti intelligenti su E
 - [Ethers.js](https://docs.ethers.io/) _– Contiene l'implementazione del portafoglio di Ethereum e le utility in JavaScript e TypeScript._
 - [viem](https://viem.sh): un'interfaccia TypeScript per Ethereum che fornisce primitivi con assenza di stato di basso livello per interagire con Ethereum.
 
-### Contratti intelligenti {#smart-contracts}
+### Contratti intelligenti \{#smart-contracts}
 
 Se sei uno sviluppatore JavaScript e vorresti scrivere il tuo contratto intelligente, consigliamo di familiarizzare con [Solidity](https://solidity.readthedocs.io). Questo è il linguaggio di contratti intelligenti più popolare ed è sintatticamente simile a JavaScript, che lo rende più facile da imparare.
 
 Di più sui [contratti intelligenti](/developers/docs/smart-contracts/).
 
-## Comprendere il protocollo {#understand-the-protocol}
+## Comprendere il protocollo \{#understand-the-protocol}
 
-### La macchina virtuale Ethereum {#the-ethereum-virtual-machine}
+### La macchina virtuale Ethereum \{#the-ethereum-virtual-machine}
 
 Esiste un'implementazione JavaScript della [macchina virtuale di Ethereum](/en/developers/docs/evm/), che supporta le regole più recenti relative alle diramazioni della rete. Le regole relative alle diramazioni si riferiscono alle modifiche apportate alla macchina virtuale di Ethereum (EVM) a seguito di upgrade pianificati.
 
@@ -49,7 +49,7 @@ Se preferisci invece leggere codice, questo codice JavaScript può essere un'alt
 **Guarda il monorepo**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-### Nodi e client {#nodes-and-clients}
+### Nodi e client \{#nodes-and-clients}
 
 Un client di Ethereumjs è in sviluppo attivo e ti consentirà di approfondire il funzionamento dei client di Ethereum in un linguaggio che comprendi: JavaScript!
 
@@ -58,7 +58,7 @@ Era ospitato in una [`repository`](https://github.com/ethereumjs/ethereumjs-clie
 **Guarda il client**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
-## Altri progetti {#other-projects}
+## Altri progetti \{#other-projects}
 
 Ci sono molte altre novità nel mondo di JavaScript per Ethereum, tra cui:
 
@@ -68,6 +68,6 @@ Ci sono molte altre novità nel mondo di JavaScript per Ethereum, tra cui:
 
 Approfondisci ciò che ti interessa maggiormente sulla [repository EthereumJS](https://github.com/ethereumjs)
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

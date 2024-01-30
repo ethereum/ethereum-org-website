@@ -9,11 +9,11 @@ published: 2021-05-01
 lang: ro
 ---
 
-## Introducere {#introduction}
+## Introducere \{#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) poate crea o piață de schimb între oricare două tokenuri ERC-20. În acest articol vom trece în revistă codul sursă al contractelor care implementează acest protocol și vom vedea de ce sunt scrise în acest fel.
 
-### Ce anume face Uniswap? {#what-does-uniswap-do}
+### Ce anume face Uniswap? \{#what-does-uniswap-do}
 
 În principiu, există două tipuri de utilizatori: furnizorii de lichidităţi și comercianții.
 
@@ -25,15 +25,15 @@ Când furnizorii de lichidităţi își vor înapoi activele, aceștia pot arde 
 
 [Faceți clic aici pentru a vedea o descriere completă](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
-### De ce v2? De ce nu v3? {#why-v2}
+### De ce v2? De ce nu v3? \{#why-v2}
 
 În momentul în care scriu această prezentare, [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) este aproape gata. Pe de altă parte, este o actualizare mult mai complicată decât originalul. Este mult mai ușor să învățați v2 și apoi să treceți la v3.
 
-### Contracte centrale faţă de contracte periferice {#contract-types}
+### Contracte centrale faţă de contracte periferice \{#contract-types}
 
 Uniswap v2 este divizat în două componente, una centrală și una periferică. Această diviziune permite contractelor centrale, care dețin activele și ca urmare _trebuie_ să fie sigure, să fie mai simple și mai ușor de auditat. Toate celelalte funcționalități suplimentare cerute de comercianți pot fi atunci furnizate de contractele periferice.
 
-## Fluxurile de date și de control {#flows}
+## Fluxurile de date și de control \{#flows}
 
 Acesta este fluxul de date și de control ce are loc atunci când efectuați cele trei acțiuni principale ale Uniswap:
 
@@ -41,72 +41,72 @@ Acesta este fluxul de date și de control ce are loc atunci când efectuați cel
 2. Adăugarea de lichidităţi pe piață și primirea de recompense prin schimbul perechilor de tokenuri de lichidităţi ERC-20
 3. Arderea de tokenuri de lichidităţi ERC-20 și primirea înapoi a tokenurilor ERC-20 pe care îl permite comercianţilor schimbul în pereche
 
-### Schimburile {#swap-flow}
+### Schimburile \{#swap-flow}
 
 Acesta este cel mai obișnuit flux folosit de comercianți:
 
-#### Apelantul {#caller}
+#### Apelantul \{#caller}
 
 1. Furnizează o alocație contului periferic de valoare egală cu cea care trebuie schimbată.
 2. Apelează una dintre numeroasele funcții de schimb ale contractului periferic (care depinde fie de faptul că implică ETH sau nu, fie de specificarea de către comerciant a numărului de tokenuri de depus sau de luat înapoi etc.). Orice funcție de schimb acceptă o „cale” `path`, o matrice de schimburi prin care să treacă.
 
-#### În contractul periferic (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
+#### În contractul periferic (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Identifică suma care trebuie tranzacționată la fiecare schimb de-a lungul căii.
 4. Se repetă de-a lungul căii. Pentru fiecare schimb de pe parcurs, trimite tokenul introdus și apoi apelează funcția `swap` a schimbului. În cele mai multe cazuri, adresa de destinație pentru tokenuri este următorul schimb în pereche de pe cale. La schimbul final, aceasta este adresa furnizată de comerciant.
 
-#### În contractul central (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### În contractul central (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
 
 5. Verifică să nu se fraudeze contractul central și dacă acesta poate menține suficiente lichidităţi după efectuarea schimbului.
 6. Vede câte tokenuri suplimentare avem în plus față de rezervele cunoscute. Această valoare reprezintă numărul de tokenuri introduse pe care le-am primit pentru schimb.
 7. Trimite tokenurile rezultate la destinație.
 8. Apelează `_update` pentru a actualiza cantitatea de rezervă
 
-#### Înapoi în contractul periferic (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### Înapoi în contractul periferic (UniswapV2Router02.sol) \{#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Efectuează orice activitate de curățire este necesară (de exemplu, arde tokenurile WETH pentru a primi înapoi ETH, pe care să îl trimită comerciantului)
 
-### Adăugarea de lichidități {#add-liquidity-flow}
+### Adăugarea de lichidități \{#add-liquidity-flow}
 
-#### Apelantul {#caller-2}
+#### Apelantul \{#caller-2}
 
 1. Furnizează contului periferic o alocație egală cu sumele care trebuie adăugate la fondul comun de lichidităţi.
 2. Apelează una din funcțiile contractului periferic, și anume „addLiquidity”.
 
-#### În contractul periferic (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
+#### În contractul periferic (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Creează un nou schimb în pereche dacă este necesar
 4. Dacă un astfel de schimb în pereche există deja, calculează suma de tokenuri de adăugat. Deoarece se presupune că valorile ambelor tokenuri sunt identice, se va adăuga aceeaşi proporţie de tokenuri la cele existente.
 5. Verifică dacă sumele sunt rezonabile (apelanții pot specifica suma minimă sub care nu sunt dispuși să adauge lichidități)
 6. Apelează contractul central.
 
-#### În contractul central (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### În contractul central (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
 
 7. Emite tokenurile de lichidităţi și le trimite către apelant
 8. Apelează `_update` pentru a actualiza cantitatea de rezervă
 
-### Eliminarea de lichidități {#remove-liquidity-flow}
+### Eliminarea de lichidități \{#remove-liquidity-flow}
 
-#### Apelantul {#caller-3}
+#### Apelantul \{#caller-3}
 
 1. Furnizează contului periferic o alocație de tokenuri de lichidităţi care trebuie arse în schimbul tokenurilor preexistente.
 2. Apelează una din funcțiile contractului periferic, și anume „removeLiquidity”.
 
-#### În contractul periferic (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
+#### În contractul periferic (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Trimite tokenurile de lichidităţi la schimbul în pereche
 
-#### În contractul central (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
+#### În contractul central (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-3}
 
 4. Trimite la adresa de destinație tokenurile preexistente corespunzătoare, proporțional cu jetoanele arse. De exemplu, dacă în fondul comun există 1000 de tokenuri A, 500 de tokenuri B și 90 de tokenuri de llichidităţi și primim 9 tokenuri de lichidităţi pentru a fi arse, ardem 10% din tokenurile de lichidităţi și trimitem înapoi utilizatorului 100 de tokenuri A și 50 de tokenuri B.
 5. Arde tokenurile de lichidităţi
 6. Apelează `_update` pentru a actualiza cantitatea de rezervă
 
-## Contractele centrale {#core-contracts}
+## Contractele centrale \{#core-contracts}
 
 Acestea sunt contractele securizate care dețin lichidități.
 
-### UniswapV2Pair.sol {#UniswapV2Pair}
+### UniswapV2Pair.sol \{#UniswapV2Pair}
 
 [Acest contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implementează fondul comun propriu-zis care face schimbul de tokenuri. Aceasta este funcționalitatea centrală a Uniswap.
 
@@ -144,7 +144,7 @@ O mulțime de calcule din cadrul contractului fondului de lichidităţi necesit�
 
 Mai multe detalii despre această bibliotecă sunt disponibile [mai departe în acest document](#FixedPoint).
 
-#### Variabile {#pair-vars}
+#### Variabile \{#pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -212,7 +212,7 @@ Aici avem un exemplu simplu. Observați că, din motive de simplitate, tabloul a
 
 Pe măsură ce comercianții furnizează mai multe „token0”, valoarea relativă a „token1” crește și viceversa, în funcție de ofertă și cerere.
 
-#### Blocarea {#pair-lock}
+#### Blocarea \{#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -246,7 +246,7 @@ Dacă variabila `unlocked` este egală cu unu, setați-o la zero. Dacă aceasta 
 
 După revenirea funcției principale, eliberați blocajul.
 
-#### Diverse funcții {#pair-misc}
+#### Diverse funcții \{#pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -279,7 +279,7 @@ Există două modalități prin care un apel de transfer ERC-20 poate raporta un
 
 Dacă apar oricare dintre aceste condiții, reveniți.
 
-#### Evenimente {#pair-events}
+#### Evenimente \{#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -307,7 +307,7 @@ Acest eveniment este emis atunci când un comerciant schimbă un token pe un alt
 
 În final, funcția `Sync` este emisă de fiecare dată când se depun sau se retrag tokenuri, indiferent de motiv, pentru a furniza cea mai recentă informație despre rezervă (și implicit cursul de schimb).
 
-#### Funcțiile de configurare {#pair-setup}
+#### Funcțiile de configurare \{#pair-setup}
 
 Se presupune că aceste funcții vor fi apelate o singură dată, atunci când se creează un nou schimb în pereche.
 
@@ -330,7 +330,7 @@ Constructorul se asigură că vom păstra evidența adresei fabricii care a crea
 
 Această funcție permite fabricii (și numai fabricii) să specifice cele două tokenuri ERC-20 pe care le va schimba acestă pereche.
 
-#### Funcții interne de actualizare {#pair-update-internal}
+#### Funcții interne de actualizare \{#pair-update-internal}
 
 ##### \_update
 
@@ -451,7 +451,7 @@ Folosește funcția `UniswapV2ERC20._mint` pentru a crea efectiv tokenurile de l
 
 În caz că nu există nicio taxă, setează `kLast` la zero (dacă nu este deja setat astfel). Când a fost scris acest contract, exista o [funcție de rambursare a gazului](https://eips.ethereum.org/EIPS/eip-3298) care încuraja contractele să reducă dimensiunea totală a stării Ethereum, prin reducerea la zero a stocării de care nu aveau nevoie. Acest cod obține această rambursare atunci când este posibil.
 
-#### Funcții accesibile din exterior {#pair-external}
+#### Funcții accesibile din exterior \{#pair-external}
 
 Rețineți că, deși orice tranzacție sau contract _poate_ să apeleze aceste funcții, ele au fost proiectate să fie apelate din contractul periferic. Dacă le apelați direct, nu veți putea frauda schimbul în pereche, dar s-ar putea să pierdeți din valoare din cauza unei greșeli.
 
@@ -680,7 +680,7 @@ Este posibil ca soldurile reale să fie desincronizate de rezervele pe care cred
 }
 ```
 
-### UniswapV2Factory.sol {#UniswapV2Factory}
+### UniswapV2Factory.sol \{#UniswapV2Factory}
 
 [Acest contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) creează schimbul în pereche.
 
@@ -798,7 +798,7 @@ Salvează noua pereche de informații în variabilele de stare, și emite un eve
 
 Aceste două funcții permit `feeToSetter` să controleze destinatarul taxei (în caz că există vreunul) și să schimbe `feeToSetter` la o nouă adresă.
 
-### UniswapV2ERC20.sol {#UniswapV2ERC20}
+### UniswapV2ERC20.sol \{#UniswapV2ERC20}
 
 [Acest contract](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementează tokenul de lichidităţi ERC-20. Este similar cu [contractul OpenWhisk ERC-20](/developers/tutorials/erc20-annotated-code), așa că voi explica numai partea care este diferită, funcționalitatea `permit`.
 
@@ -884,15 +884,15 @@ Din „digest” și din semnătură, putem obține adresa care a semnat-o folos
 
 Dacă totul este în regulă, tratați aceasta ca [o aprobare ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Contractele periferice {#periphery-contracts}
+## Contractele periferice \{#periphery-contracts}
 
 Contractele periferice sunt API-uri (interfață de program de aplicație) pentru Uniswap. Acestea sunt disponibile pentru apelurile externe, fie din alte contracte, fie din aplicațiile descentralizate. Ați putea apela contractele centrale direct, dar este mai complicat și s-ar putea să pierdeți valoare dacă faceți vreo greșeală. Contractele centrale conțin numai teste pentru a garanta că nu sunt fraudate, şi nu pentru a verifica starea de sănătate pentru oricine altcineva. Acestea sunt la periferie, de aceea pot fi actualizate după cum este nevoie.
 
-### UniswapV2Router01.sol {#UniswapV2Router01}
+### UniswapV2Router01.sol \{#UniswapV2Router01}
 
 [Acest contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) are probleme și [ar trebui să nu mai fie utilizat](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Din fericire, contractele periferice sunt fără stare și nu dețin niciun activ, de aceea este ușor să fie eliminate; se recomandă în schimb utilizarea înlocuitorului lor, `UniswapV2Router02`.
 
-### UniswapV2Router02.sol {#UniswapV2Router02}
+### UniswapV2Router02.sol \{#UniswapV2Router02}
 
 În cele mai multe cazuri, veți utiliza Uniswap prin intermediul [acestui contract](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puteți vedea cum să îl utilizați [aici](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
@@ -947,7 +947,7 @@ Constructorul stabilește pur și simplu variabilele de stare imuabile.
 
 Această funcție este apelată când răscumpărăm tokenuri din contractul în WETH înapoi în ETH. Contractul în WETH pe care îl folosim este singurul autorizat să facă acest lucru.
 
-#### Adăugarea de lichidități {#add-liquidity}
+#### Adăugarea de lichidități \{#add-liquidity}
 
 Aceste funcții adaugă tokenuri la schimbul în pereche, sporind astfel fondul comun de lichidități.
 
@@ -1137,7 +1137,7 @@ Pentru a depune ETH, contractul îl înfășoară („wrap”) in WETH, apoi tra
 
 Utilizatorul ne-a trimis deja ETH-ul, deci dacă a mai rămas ceva în plus (pentru că celălalt token are valoare mai mică decât a crezut utilizatorul), trebuie să emitem o rambursare.
 
-#### Eliminarea de lichidități {#remove-liquidity}
+#### Eliminarea de lichidități \{#remove-liquidity}
 
 Aceste funcții vor elimina lichidităţile și vor rambursa furnizorul de lichiditate.
 
@@ -1298,7 +1298,7 @@ Această funcție poate fi utilizată pentru tokenuri care au taxe de transfer s
 
 Ultima funcție combină taxele de stocare cu meta-tranzacțiile.
 
-#### Tranzacţionare {#trade}
+#### Tranzacţionare \{#trade}
 
 ```solidity
     // **** SWAP ****
@@ -1656,15 +1656,15 @@ Acestea sunt aceleași variante folosite pentru tokenurile normale, dar ele apel
 
 Aceste funcții sunt numai proxy-uri care apelează [funcțiile UniswapV2Library](#uniswapV2library).
 
-### UniswapV2Migrator.sol {#UniswapV2Migrator}
+### UniswapV2Migrator.sol \{#UniswapV2Migrator}
 
 Acest contract a fost utilizat pentru migrarea schimburilor de la vechiul v1 la v2. Acum, odată ce acestea au fost migrate, nu mai este relevantă.
 
-## Bibliotecile {#libraries}
+## Bibliotecile \{#libraries}
 
 [Biblioteca SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) este bine documentată, așa că nu este necesar să o documentăm aici.
 
-### „Math” {#Math}
+### „Math” \{#Math}
 
 Această bibliotecă include câteva funcții matematice care în mod normal nu sunt necesare în codul Solidity, de aceea nu fac parte din limbaj.
 
@@ -1709,7 +1709,7 @@ Nu ar trebui să avem nevoie niciodată de rădăcina pătrată a lui zero. Răd
 }
 ```
 
-### Fracțiunile cu virgulă fixă (UQ112x112) {#FixedPoint}
+### Fracțiunile cu virgulă fixă (UQ112x112) \{#FixedPoint}
 
 Această bibliotecă gestionează fracțiunile, care în mod normal nu fac parte din aritmetica lui Ethereum. Realizează aceasta prin codificarea numărului _x_ ca _x\*2^112_. Aceasta ne permite să folosim opcodurile originale de adunare și scădere fără nicio modificare.
 
@@ -1746,7 +1746,7 @@ Because y is `uint112`, the most it can be is 2^112-1. Acest număr poate fi cod
 
 Dacă împărțim două valori `UQ112x112`, rezultatul nu mai este înmulțit cu 2^112. Deci în schimb luăm un număr întreg ca numitor. Ar fi trebuit să folosim un artificiu similar pentru a face înmulțiri, dar nu avem nevoie să facem înmulțirea valorilor `UQ112x112`.
 
-### UniswapV2Library {#uniswapV2library}
+### UniswapV2Library \{#uniswapV2library}
 
 Această bibliotecă este folosită numai de contractele periferice
 
@@ -1868,7 +1868,7 @@ Această funcție efectuează aproximativ același lucru, însă obține suma re
 
 Aceste două funcții se ocupă de identificarea valorilor atunci când este nevoie să se treacă prin mai multe schimburi în pereche.
 
-### „TransferHelper” {#transfer-helper}
+### „TransferHelper” \{#transfer-helper}
 
 [Această bibliotecă](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) adaugă verificări ale succesului transferurilor ERC-20 și Ethereum, pentru a trata o revenire și o valoare de răspuns `false` în același fel.
 
@@ -1953,7 +1953,7 @@ Această funcție implementează [funcționalitatea „transferFrom” a ERC-20]
 
 Această funcție transferă ether într-un cont. Orice apel către un contract diferit poate încerca să trimită ether. Deoarece nu avem nevoie să apelăm vreo funcție, nu trimitem niciun fel de date cu apelul.
 
-## Concluzie {#conclusion}
+## Concluzie \{#conclusion}
 
 Acesta este un articol lung de aproape 50 de pagini. Dacă ați ajuns până aici, felicitări! Să sperăm că până acum ați înțeles considerațiile legate de scrierea unei aplicații din viața reală (spre deosebire de scurtele exemple de programe) și că sunteți mai bine pregătit de a scrie contracte pentru propriile cazuri de utilizare.
 

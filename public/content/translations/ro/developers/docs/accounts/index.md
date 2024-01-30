@@ -6,11 +6,11 @@ lang: ro
 
 Un cont Ethereum este o entitate cu un sold de ether (ETH) care poate trimite tranzacții pe Ethereum. Conturile pot fi controlate de utilizator sau implementate sub formă de contracte inteligente.
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Conturile sunt un subiect foarte potrivit pentru începători. Dar pentru a vă ajuta să înțelegeți mai bine această pagină, vă recomandăm să citiți mai întâi [introducerea noastră despre Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Tipuri de conturi {#types-of-account}
+## Tipuri de conturi \{#types-of-account}
 
 Ethereum are două tipuri de conturi:
 
@@ -22,7 +22,7 @@ Ambele tipuri de conturi au capacitatea de a:
 - primi, deţine și trimite ETH și tokenuri
 - interacționa cu contractele inteligente implementate
 
-### Diferențe cheie {#key-differences}
+### Diferențe cheie \{#key-differences}
 
 **Cele deținute extern**
 
@@ -36,7 +36,7 @@ Ambele tipuri de conturi au capacitatea de a:
 - Se pot trimite tranzacții numai ca răspuns la primirea unei tranzacții
 - Tranzacțiile dintr-un cont extern către un cont contractual pot declanșa un cod care poate să execute mai multe acțiuni diferite, cum ar fi transferul de tokenuri sau chiar crearea unui nou contract
 
-## Analiza unui cont {#an-account-examined}
+## Analiza unui cont \{#an-account-examined}
 
 Conturile Ethereum au patru câmpuri:
 
@@ -47,7 +47,7 @@ Conturile Ethereum au patru câmpuri:
 
 ![O diagramă care prezintă structura unui cont](./accounts.png) _Diagramă adaptată din [Ethereum EVM ilustrat](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Conturi deținute extern și perechi de chei {#externally-owned-accounts-and-key-pairs}
+## Conturi deținute extern și perechi de chei \{#externally-owned-accounts-and-key-pairs}
 
 Un cont este format dintr-o pereche de chei criptografice: publică și privată. Acestea ajută la demonstrarea faptului că o tranzacție a fost semnată de expeditor și previn falsurile. Cheia privată este cea pe care o folosiți la semnarea tranzacțiilor, deci vă acordă custodia fondurilor asociate contului dvs. Nu dețineți niciodată criptomonede, ci dețineți chei private – fondurile sunt întotdeauna în registrul Ethereum.
 
@@ -55,7 +55,7 @@ Acest lucru împiedică actorii rău intenționați să transmită tranzacții f
 
 Dacă Alice dorește să trimită ether din propriul cont în contul lui Bob, Alice trebuie să creeze o cerere de tranzacție și să o trimită în rețea pentru verificare. Utilizarea în Ethereum a criptografiei cu cheie publică garantează că Alice poate dovedi că ea este cea care a inițiat cererea de tranzacție. Dacă nu ar exista mecanismele criptografice, Eva, un adversar rău intenționat, ar putea transmite public o cerere care ar arată astfel „trimiteți 5 ETH din contul lui Alice în contul Evei” și nimeni nu ar putea verifica dacă a venit sau nu de la Alice.
 
-## Crearea unui cont {#account-creation}
+## Crearea unui cont \{#account-creation}
 
 Când dorițisă creați un cont, majoritatea bibliotecilor vă vor genera o cheie privată aleatorie.
 
@@ -85,7 +85,7 @@ Puteți obține chei publice noi dintr-o cheie privată, dar nu puteți obține 
 
 Aveți nevoie de o cheie privată pentru a semna mesaje și tranzacții care necesită o semnătură. Ceilalți pot lua atunci semnătura pentru a obține cheia dvs. publică, dovedind că sunteți autorul mesajului. În aplicația dvs. puteți utiliza o bibliotecă JavaScript pentru a trimite tranzacții către rețea.
 
-## Conturi contractuale {#contract-accounts}
+## Conturi contractuale \{#contract-accounts}
 
 Conturile contractuale au de asemenea o adresă hexadecimală de 42 de caractere:
 
@@ -95,11 +95,11 @@ Exemplu:
 
 Adresa contractului este de obicei furnizată când un contract este implementat în Blockchain-ul Ethereum. Adresa provine de la adresa creatorului și de la numărul de tranzacții trimise de la acea adresă („nonce”).
 
-## Observație despre portofele {#a-note-on-wallets}
+## Observație despre portofele \{#a-note-on-wallets}
 
 Un cont nu este un portofel. Un cont este perechea de chei pentru un cont Ethereum deținut de un utilizator. Un portofel este o interfață sau o aplicație care vă permite să interacționați cu contul dvs. Ethereum.
 
-## O demonstrație vizuală {#a-visual-demo}
+## O demonstrație vizuală \{#a-visual-demo}
 
 Urmăriți-l pe Austin cum vă ghidează pas cu pas prin funcțiile hash și perechile de chei.
 
@@ -107,11 +107,11 @@ Urmăriți-l pe Austin cum vă ghidează pas cu pas prin funcțiile hash și per
 
 <YouTube id="9LtBDy67Tho" />
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Contracte inteligente](/developers/docs/smart-contracts/)
 - [Tranzacții](/developers/docs/transactions/)

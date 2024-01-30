@@ -7,9 +7,9 @@ sidebarDepth: 2
 
 **Simple serialize (SSZ)** is the serialization method used on the Beacon Chain. It replaces the RLP serialization used on the execution layer everywhere across the consensus layer except the peer discovery protocol. SSZ is designed to be deterministic and also to Merkleize efficiently. SSZ can be thought of as having two components: a serialization scheme and a Merkleization scheme that is designed to work efficiently with the serialized data structure.
 
-## How does SSZ work? {#how-does-ssz-work}
+## How does SSZ work? \{#how-does-ssz-work}
 
-### Serialization {#serialization}
+### Serialization \{##serialization}
 
 SSZ is a serialization scheme that is not self-describing - rather it relies on a schema that must be known in advance. The goal of SSZ serialization is to represent objects of arbitrary complexity as strings of bytes. This is a very simple process for "basic types". The element is simply converted to hexadecimal bytes. Basic types include:
 
@@ -83,13 +83,13 @@ So the actual values for variable-length types are stored in a heap at the end o
 
 There are also some special cases that require specific treatment, such as the `BitList` type that requires a length cap to be added during serialization and removed during deserialization. Full details are available in the [SSZ spec](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md).
 
-### Deserialization {#deserialization}
+### Deserialization \{##deserialization}
 
 To deserialize this object requires the <b>schema</b>. The schema defines the precise layout of the serialized data so that each specific element can be deserialized from a blob of bytes into some meaningful object with the elements having the right type, value, size and position. It is the schema that tells the deserializer which values are actual values and which ones are offsets. All field names disappear when an object is serialized, but reinstantiated on deserialization according to the schema.
 
 See [ssz.dev](https://www.ssz.dev/overview) for an interactive explainer on this.
 
-## Merkleization {#merkleization}
+## Merkleization \{##merkleization}
 
 This SSZ serialized object can then be merkleized - that is transformed into a Merkle-tree representation of the same data. First, the number of 32-byte chunks in the serialized object is determined. These are the "leaves" of the tree. The total number of leaves must be a power of 2 so that hashing together the leaves eventually produces a single hash-tree-root. If this is not naturally the case, additional leaves containing 32 bytes of zeros are added. Diagrammatically:
 
@@ -111,7 +111,7 @@ There are also cases where the leaves of the tree do not naturally evenly distri
 
 Instead of referring to these tree elements as leaf X, node X etc, we can give them generalized indices, starting with root = 1 and counting from left to right along each level. This is the generalized index explained above. Each element in the serialized list has a generalized index equal to `2**depth + idx` where idx is its zero-indexed position in the serialized object and the depth is the number of levels in the Merkle tree, which can be determined as the base-two logarithm of the number of elements (leaves).
 
-## Generalized indices {#generalized-indices}
+## Generalized indices \{##generalized-indices}
 
 A generalized index is an integer that represents a node in a binary Merkle tree where each node has a generalized index `2 ** depth + index in row`.
 
@@ -124,7 +124,7 @@ A generalized index is an integer that represents a node in a binary Merkle tree
 
 This representation yields a node index for each piece of data in the Merkle tree.
 
-## Multiproofs {#multiproofs}
+## Multiproofs \{##multiproofs}
 
 Providing the list of generalized indices representing a specific element allows us to verify it against the hash-tree-root. This root is our accepted version of reality. Any data we are provided can be verified against that reality by inserting it into the right place in the Merkle tree (determined by its generalized index) and observing that the root remains constant. There are functions in the spec [here](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) that show how to compute the minimal set of nodes required to verify the contents of a particular set of generalized indices.
 
@@ -141,7 +141,7 @@ The hash of (8,9) should equal hash (4), which hashes with 5 to produce 2, which
 
 ```
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Upgrading Ethereum: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Upgrading Ethereum: Merkleization](https://eth2book.info/altair/part2/building_blocks/merkleization)

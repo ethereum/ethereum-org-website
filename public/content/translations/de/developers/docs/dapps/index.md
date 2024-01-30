@@ -6,11 +6,11 @@ lang: de
 
 Eine dezentralisierte Anwendung (dapp) ist eine Anwendung, die auf einem dezentralisierten Netzwerk aufgebaut ist. Dies kombiniert einen [Smart Contract](/developers/docs/smart-contracts/) und eine Frontend-Benutzeroberfläche. Beachte, dass Smart Contracts in Ethereum zugänglich und transparent sind – wie offene APIs –, also kann deine Dapp sogar einen Smart Contract enthalten, den eine andere Person geschrieben hat.
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Bevor du mehr über Dapps lernst, solltest du die [Blockchain-Basics](/developers/docs/intro-to-ethereum/) kennen und dir durchlesen, was das Ethereum-Netzwerk ist und wie es dezentralisiert wird.
 
-## Definition einer Dapp {#definition-of-a-dapp}
+## Definition einer Dapp \{#definition-of-a-dapp}
 
 Eine Dapp hat ihren Backend-Code auf einem dezentralisierten Peer-to-Peer-Netzwerk laufen. Vergleiche das mit einer App, bei der der Backend-Code auf dezentralisierten Servern läuft.
 
@@ -21,13 +21,13 @@ Eine Dapp kann Frontend-Code und eine Benutzeroberfläche in jeder beliebigen Sp
 - **Turing-Vollständigkeit** – Dapps können jede Aktion ausführen, wenn die erforderlichen Ressourcen vorhanden sind.
 - **Isoliert** – Dapps werden in einer virtuellen Umgebung ausgeführt, die als Ethereum Virtual Machine bekannt ist, so dass ein Fehler im Smart Contract die normale Funktion des Blockchain-Netzwerks nicht beeinträchtigt.
 
-### Smart Contracts {#on-smart-contracts}
+### Smart Contracts \{#on-smart-contracts}
 
 Um Dapps einzuführen, müssen wir auch Smart Contracts vorstellen – das Backend einer Dapp. Einen detaillierten Überblick findest du in unserem Abschnitt über [Smart Contracts](/developers/docs/smart-contracts/).
 
 Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und genau wie programmiert abläuft. Sobald Smart Contracts im Netzwerk eingesetzt werden, kannst du sie nicht mehr ändern. Dapps können dezentralisiert sein, weil sie von der Logik kontrolliert werden, die in den Vertrag geschrieben ist, und nicht von einem Individuum oder einem Unternehmen. Das bedeutet auch, dass du deine Verträge sehr sorgfältig gestalten und gründlich testen musst.
 
-## Vorteile der Dapp-Entwicklung {#benefits-of-dapp-development}
+## Vorteile der Dapp-Entwicklung \{#benefits-of-dapp-development}
 
 - **Zero downtime** - Sobald der Smart Contract auf der Blockchain implementiert ist, kann das gesamte Netzwerk jederzeit Kunden bedienen, die mit dem Vertrag interagieren wollen. Böswillige Akteure können daher keine "Denial-of-Service"-Angriffe starten, die auf einzelne Dapps abzielen.
 - **Privatsphäre** – Du musst keine echte Identität zur Verfügung stellen, um eine Dapp bereitzustellen oder mit einer zu interagieren.
@@ -35,7 +35,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 - **Komplette Datenintegrität** – Daten, die auf der Blockchain gespeichert sind, sind unveränderbar und unbestreitbar, dank kryptographischer Primitivität. Böswillige Akteure können keine Transaktionen oder andere Daten, die bereits öffentlich gemacht wurden, fälschen.
 - **Vertrauenslose Berechnung/überprüfbares Verhalten** – Smart Contracts können analysiert werden und garantieren, dass sie auf vorhersehbare Weise ausgeführt werden, ohne dass dafür das Vertrauen in eine zentrale Autorität vorausgesetzt wird. Das ist bei traditionellen Modellen nicht der Fall. Wenn wir zum Beispiel Online-Banking-Systeme nutzen, müssen wir darauf vertrauen, dass die Finanzinstitute unsere Finanzdaten nicht missbrauchen, keine Aufzeichnungen manipulieren und uns nicht hacken.
 
-## Nachteile der Dapp-Entwicklung {#drawbacks-of-dapp-development}
+## Nachteile der Dapp-Entwicklung \{#drawbacks-of-dapp-development}
 
 - **Wartung** – Dapps können schwieriger zu warten sein, weil der Code und die Daten, die auf der Blockchain veröffentlicht werden, schwerer zu ändern sind. Für Entwickler ist es schwierig ihre dApps (oder die zugrunde liegenden Daten, die von einer dApp gespeichert werden) zu aktualisieren, sobald sie bereitgestellt wurden, selbst wenn in einer alten Version Fehler oder Sicherheitsrisiken festgestellt werden.
 - **Performance-Overhead** – Es gibt einen enormen Performance-Overhead und die Skalierung ist sehr schwierig. Um den Grad an Sicherheit, Integrität, Transparenz und Zuverlässigkeit zu erreichen, den Ethereum anstrebt, führt jeder Node jede Transaktion aus und speichert sie. Hinzu kommt, dass der Proof-of-Stake-Konsens ebenfalls Zeit benötigt.
@@ -43,11 +43,11 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 - **Benutzererfahrung** – Es könnte schwieriger sein, eine benutzerfreundliche Erfahrung zu entwickeln, weil es für den durchschnittlichen Endbenutzer zu schwer sein könnte, die notwendigen Tools für eine wirklich sichere Interaktion mit der Blockchain einzurichten.
 - **Zentralisierung** – Benutzer- und entwicklerfreundliche Lösungen, die auf der Basisschicht von Ethereum aufgebaut sind, könnten am Ende ohnehin wie zentralisierte Dienste aussehen. Solche Dienste können zum Beispiel Schlüssel oder andere sensible Informationen serverseitig speichern, ein Frontend über einen zentralen Server bedienen oder wichtige Geschäftslogik auf einem zentralen Server ausführen, bevor sie in die Blockchain geschrieben werden. Durch die Zentralisierung werden viele (wenn nicht alle) Vorteile der Blockchain gegenüber dem traditionellen Modell aufgehoben.
 
-## Eher ein visueller Lerner? {#visual-learner}
+## Eher ein visueller Lerner? \{#visual-learner}
 
 <YouTube id="F50OrwV6Uk8" />
 
-## Tools zum Erstellen von dApps {#dapp-tools}
+## Tools zum Erstellen von dApps \{#dapp-tools}
 
 **Scaffold-ETH _- Experimentiere schnell mit Solidity, indem du ein Frontend verwendest, das sich an deinen Smart Contract anpasst._**
 
@@ -74,7 +74,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 - [Dokumentation](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Entdecken Sie dApps](/dapps)
 - [Die Architektur einer Web 3.0-Anwendung](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
@@ -84,7 +84,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
-## Verwandte Themen {#related-topics}
+## Verwandte Themen \{#related-topics}
 
 - [Einführung in den Ethereum-Stack](/developers/docs/ethereum-stack/)
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)

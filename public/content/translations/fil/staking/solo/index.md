@@ -13,7 +13,7 @@ summaryPoints:
   - Iwasang umasa sa iba, at huwag ibigay sa iba ang kontrol ng mga key sa pondo mo
 ---
 
-## Ano ang solo staking? {#what-is-solo-staking}
+## Ano ang solo staking? \{#what-is-solo-staking}
 
 Ang solo staking ay tumutukoy sa [pagpapatakbo ng Ethereum node](/run-a-node/) na nakakonekta sa internet at pagdedeposito ng 32 ETH para mag-activate ng [validator](#faq), na nagbibigay sa iyo ng kakayahang direktang lumahok sa network consensus.
 
@@ -25,7 +25,7 @@ Ang mga solo staker ay responsable sa pagpapatakbo ng hardware na kinakailangan 
 
 Tinatanggap ng solo staker ang mga reward nang direkta mula sa protocol para sa maayos na pagpapatakbo sa kanyang validator at pagpapanatili ritong online.
 
-## Bakit dapat mag-solo stake? {#why-stake-solo}
+## Bakit dapat mag-solo stake? \{#why-stake-solo}
 
 Sa solo staking, mas malaki ang responsibilidad mo pero makokontrol mo nang husto ang pondo at staking setup mo.
 
@@ -35,7 +35,7 @@ Sa solo staking, mas malaki ang responsibilidad mo pero makokontrol mo nang hust
   <Card title="Seguridad ng network" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Mga dapat isaalang-alang bago mag-solo staking {#considerations-before-staking-solo}
+## Mga dapat isaalang-alang bago mag-solo staking \{#considerations-before-staking-solo}
 
 Kahit na gusto nating maging accessible at walang panganib ang solo staking para sa lahat, hindi ito makatotohanan. May ilang praktikal at seryosong bagay na dapat isaalang-alang bago piliing i-solo stake ang iyong ETH.
 
@@ -75,7 +75,7 @@ Naiiba sa mga penalty sa kawalan ng aktibidad na ipapataw dahil sa pagiging offl
 
 <StakingComparison page="solo" />
 
-## Paano ito gumagana {#how-it-works}
+## Paano ito gumagana \{#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -85,13 +85,13 @@ Kung gusto mo, maaari kang umalis bilang validator, kung kaya, hindi mo na kaila
 
 [Iba pang detalye tungkol sa mga pag-withdraw sa staking](/staking/withdrawals/)
 
-## Magsimula sa Staking Launchpad {#get-started-on-the-staking-launchpad}
+## Magsimula sa Staking Launchpad \{#get-started-on-the-staking-launchpad}
 
 Ang Staking Launchpad ay isang open source na application na tutulong sa iyong maging staker. Gagabayan ka nito sa pagpili ng iyong mga client, paggawa ng mga key mo at pagdedeposito ng ETH mo sa staking deposit contract. May checklist na ibinibigay upang tiyakin na nagawa mo ang lahat para ligtas na ma-set up ang iyong validator.
 
 <StakingLaunchpadWidget />
 
-## Ano ang dapat isaalang-alang sa mga tool para sa node at client setup {#node-tool-considerations}
+## Ano ang dapat isaalang-alang sa mga tool para sa node at client setup \{#node-tool-considerations}
 
 Dumarami ang mga tool at serbisyo na tutulong sa iyong i-solo stake ang ETH mo, pero may iba't ibang panganib at benepisyo ang bawat isa sa mga ito.
 
@@ -99,7 +99,7 @@ Ang mga attribute indicator ay ginagamit sa ibaba upang ipahiwatig ang mga kapan
 
 <StakingConsiderations page="solo" />
 
-## Tingnan ang mga tool para sa pag-set up ng node at client {#node-and-client-tools}
+## Tingnan ang mga tool para sa pag-set up ng node at client \{#node-and-client-tools}
 
 May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin ang mga indicator sa itaas para magabayan ka sa mga tool sa ibaba.
 
@@ -119,11 +119,11 @@ Ang mga tool na ito ay maaaring gamitin bilang alternatibo sa [Staking Deposit C
 
 May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
 
-## Tingnan ang mga gabay sa solo staking {#staking-guides}
+## Tingnan ang mga gabay sa solo staking \{#staking-guides}
 
 <StakingGuides />
 
-## Mga karaniwang itanong {#faq}
+## Mga karaniwang itanong \{#faq}
 
 Ilan ito sa mga pinakakaraniwang tanong tungkol sa staking na mahalagang malaman.
 
@@ -193,7 +193,7 @@ Upang ma-unlock at maibalik ang iyong buong balanse, dapat mo ring tapusin ang p
 <ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
 
-## Karagdagang pagbabasa {#further-reading}
+## Karagdagang pagbabasa \{#further-reading}
 
 - [Ang Problema ng Ethereum sa Client Diversity](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Pagtulong sa Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

@@ -15,7 +15,7 @@ source: Güvenli sözleşmeler oluşturmak
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## Slither nasıl kullanılır {#how-to-use-slither}
+## Slither nasıl kullanılır \{#how-to-use-slither}
 
 Bu öğreticinin amacı, akıllı sözleşmelerdeki hataları otomatik olarak bulmak için Slither'ın nasıl kullanılacağını göstermektir.
 
@@ -24,7 +24,7 @@ Bu öğreticinin amacı, akıllı sözleşmelerdeki hataları otomatik olarak bu
 - [Statik analize giriş](#static-analysis): Statik analize kısa giriş
 - [API](#api-basics): Python API açıklaması
 
-## Kurulum {#installation}
+## Kurulum \{#installation}
 
 Slither, Python >= 3.6 gerektirir. Pip veya docker kullanılarak kurulabilir.
 
@@ -50,7 +50,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Bir komut dosyası çalıştırma {#running-a-script}
+### Bir komut dosyası çalıştırma \{#running-a-script}
 
 Python 3 ile bir python komut dosyası çalıştırmak için:
 
@@ -58,7 +58,7 @@ Python 3 ile bir python komut dosyası çalıştırmak için:
 python3 script.py
 ```
 
-### Komut satırı {#command-line}
+### Komut satırı \{#command-line}
 
 **Komut satırı ve kullanıcı tanımlı komut dosyaları.** Slither, birçok yaygın hatayı bulan bir dizi önceden tanımlanmış algılayıcıyla birlikte gelir. Slither'ı komut satırından çağırmak tüm algılayıcıları çalıştırır, ayrıntılı statik analiz bilgisi gerekmez:
 
@@ -70,7 +70,7 @@ Algılayıcılara ek olarak Slither, [yazıcıları](https://github.com/crytic/s
 
 Özel algılayıcılara ve GitHub entegrasyonuna erişmek için [crytic.io](https://github.com/crytic) kullanın.
 
-## Statik analiz {#static-analysis}
+## Statik analiz \{#static-analysis}
 
 Slither statik analiz çerçevesinin kabiliyetleri ve dizaynı, blog gönderilerinde ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) ve bir [akademik kağıtta](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf) açıklanmıştır.
 
@@ -82,11 +82,11 @@ Burada statik analiz tekniklerini ve araştırmacıyı etraflıca incelemeyeceğ
 - [Kod analizi](#analysis)
 - [Ara temsil](#intermediate-representation)
 
-### Kod temsili {#code-representation}
+### Kod temsili \{#code-representation}
 
 Tek bir yürütme yolu hakkında mantık oluşturan dinamik bir analizin aksine, statik analiz aynı anda tüm yollar hakkında mantık oluşturur. Bunu yapmak için farklı bir kod temsiline dayanır. Soyut söz dizimi ağacı (AST) ve kontrol akış grafiği (CFG) en yaygın iki statik analiz yöntemidir.
 
-### Soyut Söz Dizimi Ağaçları (AST) {#abstract-syntax-trees-ast}
+### Soyut Söz Dizimi Ağaçları (AST) \{#abstract-syntax-trees-ast}
 
 AST, derleyici her kod ayrıştırdığında kullanılır. Muhtemelen statik analizin yapılabileceği en temel yapıdır.
 
@@ -128,7 +128,7 @@ visitor = HasAddition(expression) # expression is the expression to be tested
 print(f'The expression {expression} has a addition: {visitor.result()}')
 ```
 
-### Kontrol Akış Grafiği (CFG) {#control-flow-graph-cfg}
+### Kontrol Akış Grafiği (CFG) \{#control-flow-graph-cfg}
 
 İkinci en yaygın kod temsili, kontrol akış grafiğidir (CFG). Adından da anlaşılacağı gibi, tüm yürütme yollarını ortaya çıkaran grafik tabanlı bir gösterimdir. Her düğüm bir veya birden fazla talimat içerir. Grafikteki kenarlar, kontrol akışı işlemlerini temsil eder (if/then/else, loop vb.). Önceki örneğimizin CFG'si:
 
@@ -138,11 +138,11 @@ CFG, analizlerin çoğunun üzerine inşa edildiği temsildir.
 
 Diğer birçok kod temsili mevcuttur. Her temsilin yapmak istediğiniz analize göre avantajları ve dezavantajları vardır.
 
-### Analiz {#analysis}
+### Analiz \{#analysis}
 
 Slither ile yapabileceğiniz en basit analiz türü söz dizimsel analizdir.
 
-### Söz Dizimi Analizi {#syntax-analysis}
+### Söz Dizimi Analizi \{#syntax-analysis}
 
 Slither, desen eşleştirme benzeri bir yaklaşım kullanarak tutarsızlıkları ve kusurları bulmak için kodun farklı bileşenleri ve temsilleri arasında gezinebilir.
 
@@ -152,13 +152,13 @@ Slither, desen eşleştirme benzeri bir yaklaşım kullanarak tutarsızlıkları
 
 - [Hatalı ERC20 arayüzü](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): hatalı ERC20 fonksiyon imzalarını arayın ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
 
-### Semantik analiz {#semantic-analysis}
+### Semantik analiz \{#semantic-analysis}
 
 Söz dizimi analizinin aksine, semantik bir analiz daha derine inecek ve kodun "anlamını" analiz edecektir. Bu aile, bazı geniş analiz türlerini içerir. Daha güçlü ve kullanışlı sonuçlara yol açarlar, ancak aynı zamanda bunları yazmak daha karmaşıktır.
 
 Semantik analiz, en gelişmiş güvenlik açığı tespitleri için kullanılır.
 
-#### Veri bağımlılığı analizi {#fixed-point-computation}
+#### Veri bağımlılığı analizi \{#fixed-point-computation}
 
 `variable_a` değerinin `variable_b` tarafından etkilendiği bir yol varsa, `variable_a` değişkeninin `variable_b` değişkenine veri bağımlı olduğu söylenir.
 
@@ -173,7 +173,7 @@ Slither, ara temsil özelliği sayesinde (sonraki bir bölümde bahsedilecek) ye
 
 Veri bağımlılığı kullanımının bir örneği [zararlı katı eşitlik algılayıcısında](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities) bulunabilir. Burada Slither, tehlikeli bir değerle ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)) katı bir eşitlik karşılaştırması arayacak ve bir saldırganın sözleşmeyi tuzağa düşürmesini önlemek için kullanıcıya `==` yerine `>=` veya `<=` kullanması gerektiğini bildirecektir. Diğerlerinin yanı sıra algılayıcı, `balanceOf(address)` ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)) çağrısının dönüş değerini tehlikeli olarak değerlendirecektir ve kullanımını izlemek için veri bağımlılığı motorunu kullanır.
 
-#### Sabit-nokta hesaplaması {#fixed-point-computation}
+#### Sabit-nokta hesaplaması \{#fixed-point-computation}
 
 Analiziniz CFG'de geziniyor ve kenarları takip ediyorsa, muhtemelen önceden ziyaret edilmiş düğümleri görmeniz olasıdır. Örneğin, aşağıda gösterildiği gibi bir döngü sunulursa:
 
@@ -189,13 +189,13 @@ Kullanılan bir sabitleme noktası örneği yeniden giriş algılayıcılarında
 
 Etkili sabit nokta hesaplama kullanarak analiz yazmak, analizin bilgilerini nasıl yaydığının iyi anlaşılmasını gerektirir.
 
-### Ara temsil {#intermediate-representation}
+### Ara temsil \{#intermediate-representation}
 
 Bir ara temsil (IR), statik analize orijinalinden daha uygun olması amaçlanan bir dildir. Slither, Solidity'yi kendi IR'ına çevirir: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
 Yalnızca temel kontroller yazmak istiyorsanız SlithIR'ı anlamak gerekli değildir. Ancak, ileri düzey anlamsal analiz yazmayı planlıyorsanız kullanışlı olacaktır. [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) ve [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) yazıcıları, kodun nasıl çevirildiğini anlamanıza yardımcı olacaktır.
 
-## API Temelleri {#api-basics}
+## API Temelleri \{#api-basics}
 
 Slither, sözleşmenin temel özelliklerini ve fonksiyonlarını keşfetmenizi sağlayan bir API'ye sahiptir.
 
@@ -207,7 +207,7 @@ slither = Slither('/path/to/project')
 
 ```
 
-### Sözleşmeleri ve fonksiyonları keşfetme {#exploring-contracts-and-functions}
+### Sözleşmeleri ve fonksiyonları keşfetme \{#exploring-contracts-and-functions}
 
 Bir `Slither` objesi şunlara sahiptir:
 

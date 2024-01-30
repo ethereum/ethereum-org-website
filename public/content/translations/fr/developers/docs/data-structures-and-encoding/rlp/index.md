@@ -14,7 +14,7 @@ Pour utiliser RLP afin d'encoder un dictionnaire, les deux formes canoniques sug
 - utiliser `[[k1,v1],[k2,v2]...]` avec des clés rangées en ordre lexicographique
 - utiliser l'encodage Patricia Tree de haut niveau comme le fait Ethereum
 
-## Définition {#definition}
+## Définition \{#definition}
 
 La fonction d'encodage RLP prend en charge un item. Un item est défini comme suit：
 
@@ -66,7 +66,7 @@ def to_binary(x):
     return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Exemples {#examples}
+## Exemples \{#examples}
 
 - la chaîne de caractères "dog" = [ 0x83, 'd', 'o', 'g' ]
 - la liste [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - la [représentation théorique en théorie des ensembles](https://fr.wikipedia.org/wiki/Construction_des_entiers_naturels) de trois, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc0, 0xc1, 0xc0 ]`
 - la chaîne de caractères "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-## Décodage RLP {#rlp-decoding}
+## Décodage RLP \{#rlp-decoding}
 
 Selon les règles et le processus d'encodage RLP, l'entrée du décodage RLP est considérée comme un tableau de données binaires. Le processus de décodage RLP est le suivant :
 
@@ -148,12 +148,12 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [RLP et Ethereum](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Les dessous d'Ethereum : RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). Préfixe de longueur récursive d'Ethereum dans ACL2. arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## Sujets connexes {#related-topics}
+## Sujets connexes \{#related-topics}
 
 - [Arbre de Merkle Patricia](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

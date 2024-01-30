@@ -7,11 +7,11 @@ incomplete: true
 
 Oraklji so viri podatkov, ki povezujejo Ethereum s podatki izven verige iz resničnega sveta, da lahko poizvedujete o teh podatkih v svoji pametni pogodbi. Na primer, dappi napovednih trgov uporabljajo oraklje za poravnavo plačil, ki temeljijo na dogodkih. Napovedni trg lahko od vas zahteva, da stavite svoj ETH na to, kdo bo postal naslednji predsednik Združenih držav Amerike. Oraklje bodo uporabili za potrditev izida in izplačilo zmagovalcem.
 
-## Predpogoji {#prerequisites}
+## Predpogoji \{#prerequisites}
 
 Prepričajte se, da ste seznanjeni z [vozlišči](/developers/docs/nodes-and-clients/), [mehanizmi za soglasje](/developers/docs/consensus-mechanisms/) in [anatomijo pametnih pogodb](/developers/docs/smart-contracts/anatomy/), specifično za dogodke.
 
-## Kaj je orakelj {#what-is-an-oracle}
+## Kaj je orakelj \{#what-is-an-oracle}
 
 Orakelj je most med blokovno verigo in resničnim svetom. Delujejo kot API-ji na verigi, od katerih lahko poizvedujete, da prejmete informacije v svoje pametne pogodbe. To je lahko karkoli od informacij o ceni do vremenskih poročil. Oraklji so lahko tudi dvosmerni in se uporabljajo za "pošiljanje" podatkov v resnični svet.
 
@@ -19,23 +19,23 @@ Oglejte si Patricka, ki pojasnjuje oraklje:
 
 <YouTube id="ZJfkNzyO7-U" start="10" />
 
-## Zakaj so potrebni? {#why-are-they-needed}
+## Zakaj so potrebni? \{#why-are-they-needed}
 
 Pri blokovni verigi, kot je Ethereum, je potrebno, da vsako vozlišče v omrežju vrne vsako transakcijo in ima na koncu zagotovo enak rezultat. API-ji predstavijo potencialno variabilne podatke. Če bi pošiljali ETH na podlagi dogovorjene vrednosti $USD z uporabo cenovnega API-ja, bi poizvedba vsak dan vrnila različen rezultat. Da ne omenjamo, da je lahko API napaden ali zastarel. V tem primeru se vozlišča v omrežju ne bi mogla strinjati o Ethereumovem trenutnem stanju, kar bi efektivno prelomilo [soglasje](/developers/docs/consensus-mechanisms/).
 
 Oraklji rešijo ta problem z objavo podatkov na blokovni verigi. Tako lahko katerokoli vozlišče uporablja iste nespremenljive podatke, ki so objavljeni na očeh vseh. Za to je orakelj po navadi sestavljen iz pametne pogodbe in nekaj komponent izven verige, ki lahko poizvedujejo prek API-jev ter nato periodično pošiljajo transakcije za posodobitev podatkov pametne pogodbe.
 
-### Problem oraklja {#oracle-problem}
+### Problem oraklja \{#oracle-problem}
 
 Kot smo omenili, transakcije Ethereum ne morejo neposredno dostopati do podatkov izven verige. Obenem je zanašanje na le en vir resnice za zagotavljanje podatkov nevarno in izpodbija decentralizacijo pametne pogodbe. To poznamo kot problem oraklja.
 
 Problemu oraklja se lahko izognemo z decentraliziranim orakljem, ki podatke vleče iz različnih virov; če je en podatkovni vir napaden ali mu spodleti, bo pametna pogodba še vedno delovala tako, kot je bil njen namen.
 
-### Varnost {#security}
+### Varnost \{#security}
 
 Orakelj je varen le toliko, kot so varni njegovi podatkovni viri. Če dapp kot orakelj za svoj vir cene ETH/DAI uporablja Uniswap, lahko napadalec premakne ceno na Uniswapu, da manipulira z dappovim razumevanjem trenutne cene. Primer, kako se boriti proti temu, je [sistem virov](https://developer.makerdao.com/feeds/), kot je tisti, ki ga uporablja MakerDAO, ki podatke o cenah zbira od več zunanjih cenovnih virov, namesto da bi se zanašal le na en vir.
 
-### Arhitektura {#architecture}
+### Arhitektura \{#architecture}
 
 To je primer preproste arhitekture oraklja, ampak obstaja še več drugih načinov za sprožitev računanja izven verige.
 
@@ -50,7 +50,7 @@ Naslednji korak bi lahko bil, da omrežje teh vozlišč izvede te klice na razli
 
 [Poročanje Chainlink izven verige](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) se je na podlagi te metodologije izboljšalo s tem, da oraklji v omrežju izven verige med seboj komunicirajo, kriptografsko podpišejo svoje odzive, združijo svoje odzive izven verige in na verigo pošljejo le eno transakcijo z rezultatom. Na ta način se porabi manj goriva, ampak še vedno lahko dobite zagotovilo decentraliziranih podatkov, saj je vsako vozlišče podpisalo svoj del transakcije, kar jo je za vozlišča, ki jo pošiljajo, naredilo nespremenljivo. Politika stopnjevanja se uveljavi, če vozlišče ne opravi transakcije in transakcijo pošlje naslednje vozlišče.
 
-## Uporaba {#usage}
+## Uporaba \{#usage}
 
 Z uporabo storitev, kot je Chainlink, se lahko sklicujete na decentralizirane podatke na verigi, ki so že bili povlečeni in združeni iz resničnega sveta. Nekako tako kot javna skupna dobrina, vendar za decentralizirane podatke. Prav tako lahko za pridobitev katerihkoli podatkov po meri, ki jih iščete, razvijete svoja lastna modularna omrežja orakljev. Dodatno lahko izvedete računanje izven verige in prav tako pošljete informacije v resnični svet. Chainlink ima vzpostavljeno infrastrukturo za:
 
@@ -60,7 +60,7 @@ Z uporabo storitev, kot je Chainlink, se lahko sklicujete na decentralizirane po
 
 Tukaj je primer pridobivanja aktualne cene ETH v vaši pametni pogodbi z uporabo cenovnega vira Chainlink:
 
-### Viri podatkov Chainlink {#chainlink-data-feeds}
+### Viri podatkov Chainlink \{#chainlink-data-feeds}
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -100,7 +100,7 @@ contract PriceConsumerV3 {
 
 [Oglejte si dokumentacijo](https://docs.chain.link/docs/get-the-latest-price)
 
-### Chainlink VRF {#chainlink-vrf}
+### Chainlink VRF \{#chainlink-vrf}
 
 Chainlink VRF (potrdljiva naključna funkcija) je dokazano pravičen in potrdljiv vir naključnosti, oblikovan za pametne pogodbe. Razvijalci pametnih pogodb lahko uporabijo Chainlink VRF za naključno generiranje številk (RNG), odporno na posege, da razvijejo zanesljive pametne pogodbe za katerekoli aplikacije, ki se zanašajo na nepredvidljive izide:
 
@@ -160,7 +160,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
 }
 ```
 
-### Chainlink Keepers {#chainlink-keepers}
+### Chainlink Keepers \{#chainlink-keepers}
 
 Pametne pogodbe ne morejo sprožiti ali iniciirati svojih lastnih funkcij v arbitrarnem času ali pod arbitrarnimi pogoji. Spremembe stanja se bodo pojavile, ko nek drug račun iniciira transakcijo (recimo uporabnik, orakelj ali pogodba). [Omrežje Chainlink Keeper](https://docs.chain.link/docs/chainlink-keepers/introduction/) zagotavlja možnosti, da pametne pogodbe sprotno vzdrževanje predajo zunanjim izvajalcem na način minimiziranega zaupanja in decentralizacije.
 
@@ -213,12 +213,12 @@ contract Counter is KeeperCompatibleInterface {
 
 Po uveljavitvi pogodbe, kompatibilne s Keeper, morate pogodbo registrirati za [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) in nanjo položiti LINK, da omrežje Keeper obvestite o svoji pogodbi in da je vaše delo izvedeno neprekinjeno.
 
-### Projekti Keepers {#keepers}
+### Projekti Keepers \{#keepers}
 
 - [Chainlink Keepers](https://keepers.chain.link/)
 - [Keep3r Network](https://docs.keep3r.network/)
 
-### Klic Chainlink API {#chainlink-api-call}
+### Klic Chainlink API \{#chainlink-api-call}
 
 [Klici Chainlink API](https://docs.chain.link/docs/make-a-http-get-request) so najenostavnejši način za pridobivanje podatkov iz sveta izven verige na tradicionalen način, po katerem deluje splet: klici API. Enkratna izvedba in razpolaganje le z enim orakljem sta po naravi centralizirana. Da bi jo ohranili resnično decentralizirano, bi morala platforma pametnih pogodb uporabljati številna vozlišča, najdena na [zunanjem podatkovnem trgu](https://market.link/).
 
@@ -295,7 +295,7 @@ contract APIConsumer is ChainlinkClient {
 
 Več o aplikacijah Chainlink lahko izveste z branjem [razvijalskega bloga Chainlink](https://blog.chain.link/tag/developers/).
 
-## Storitve orakljev {#other-services}
+## Storitve orakljev \{#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
@@ -303,7 +303,7 @@ Več o aplikacijah Chainlink lahko izveste z branjem [razvijalskega bloga Chainl
 - [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
-### Razvijte orakeljsko pametno pogodbo {#build-an-oracle-smart-contract}
+### Razvijte orakeljsko pametno pogodbo \{#build-an-oracle-smart-contract}
 
 Tukaj najdete primer orakeljske pogodbe Pedra Coste. Nadaljnje opombe lahko najdete v njegovem članku: [Implementacija oraklja blokovne verige na Ethereumu](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -421,7 +421,7 @@ contract Oracle {
 
 _Želeli bi si več dokumentacije o ustvarjanju orakeljskih pametnih pogodb. Če lahko pomagate, ustvarite PR!_
 
-## Nadaljnje branje {#further-reading}
+## Nadaljnje branje \{#further-reading}
 
 **Članki**
 

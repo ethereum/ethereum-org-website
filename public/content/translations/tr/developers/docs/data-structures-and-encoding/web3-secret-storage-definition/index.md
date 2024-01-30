@@ -27,7 +27,7 @@ fs.readFile("keyfile.json", (err, data) => {
 
 Bu, Web3 Gizli Depolama Tanımının ** 3. versiyonunu** belgeler.
 
-## Tanım {#definition}
+## Tanım \{#definition}
 
 Kripto algoritmasının artık AES-128-CBC'ye sabitlenmemesi dışında (Minimum gereksinim artık AES-128-CTR'dir), dosyanın kodlaması ve kod çözmesi büyük oranda versiyon 1 ile aynıdır. Çoğu anlam/algoritma versiyon 1 ile benzerdir, tek farkı `mac` değeridir, bu da türetilmiş anahtarın en soldan ikinci 16 baytının, tam `ciphertext` ile birleştirilerek SHA-3 (keccak-256) ile hesaplanmış halidir.
 
@@ -72,7 +72,7 @@ Bir gizli anahtarın oluşturulması/şifrelenmesi, bu talimatların tersi uygul
 
 Uygulamalar, versiyonun "kesin" bir tanımlayıcısı olarak hareket etmesi gereken `version` alanına ek olarak, biçim üzerinde yapılan daha küçük, uyumsuzluğa neden olmayan değişiklikleri izlemek için `minorversion`'ı da kullanabilir.
 
-## Test Vektörleri {#test-vectors}
+## Test Vektörleri \{#test-vectors}
 
 Detaylar:
 
@@ -82,7 +82,7 @@ Detaylar:
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 \{#PBKDF2-SHA-256}
 
 `AES-128-CTR` ve `PBKDF2-SHA-256` kullanarak vektörü test edin:
 
@@ -114,7 +114,7 @@ Detaylar:
 
 `Derived key`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551` `MAC Body`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46` `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2` `Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
-### Scrypt {#scrypt}
+### Scrypt \{#scrypt}
 
 AES-128-CTR ve Scrypt'i kullanarak vektörü test edin:
 
@@ -145,7 +145,7 @@ AES-128-CTR ve Scrypt'i kullanarak vektörü test edin:
 
 `Derived key`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d` `MAC Body`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2` `MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c` `Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
-## Versiyon 1'e göre farklılıklar {#alterations-from-v2}
+## Versiyon 1'e göre farklılıklar \{#alterations-from-v2}
 
 Bu versiyon, [burada](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst) yayımlanan versiyon 1'deki çeşitli tutarsızlıkları düzeltiyor. Bu düzeltmeler kısaca:
 
@@ -184,6 +184,6 @@ Biçim üzerinde değişiklikler yapıldı ve aşağıdaki dosya elde edildi, ba
 }
 ```
 
-## Versiyon 2'ye göre farklılıklar {#alterations-from-v2}
+## Versiyon 2'ye göre farklılıklar \{#alterations-from-v2}
 
 Versiyon 2, çok sayıda hata içeren erken bir C++ uygulamasıydı. Bütün önemli kısımları aynı şekilde bırakıldı.

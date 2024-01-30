@@ -12,7 +12,7 @@ summaryPoint2: 一种能帮助科学家做诸多事情的技术，例如筹集�
 summaryPoint3: 它以开放科学运动为基础。
 ---
 
-## 什么是去中心化科学 (DeSci)? {#what-is-desci}
+## 什么是去中心化科学 (DeSci)? \{#what-is-desci}
 
 去中心化科学 (DeSci) 是一项运动，旨在通过公平平等地使用 Web3 栈堆建立公共基础设施，以资助、创建、审查、确认、存储和传播科学知识。
 
@@ -24,7 +24,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 <YouTube id="5ORvbCIW39o" />
 
-## 去中心化科学如何改善科学 {#desci-improves-science}
+## 去中心化科学如何改善科学 \{#desci-improves-science}
 
 一份关于科学关键问题的不完整清单以及去中心化科学如何帮助解决这些问题
 
@@ -39,21 +39,21 @@ summaryPoint3: 它以开放科学运动为基础。
 | 你拥有你产生的知识产权 (IP)，并根据透明的条款进行分发。                  | 你所在的机构拥有你产生的知识产权。 知识产权的获取不是透明的。      |
 | 通过将所有步骤都放在链上，分享所有的研究，包括未成功的尝试所产生的数据。 | 发表偏见意味着研究者更有可能只分享那些有成功结果的实验。           |
 
-## 以太坊与去中心化科学 {#ethereum-and-desci}
+## 以太坊与去中心化科学 \{#ethereum-and-desci}
 
 一个去中心化的科学系统将需要强大的安全性、最小的货币和交易成本，以及一个丰富的应用开发生态系统。 以太坊提供建造去中心化科学堆栈所需的一切。
 
-## 去中心化科学使用案例 {#use-cases}
+## 去中心化科学使用案例 \{#use-cases}
 
 去中心化正在创造一些科学工具，让 Web2 的学术界能够进入数字世界。 以下是一些 Web3 在科学社区的使用案例。
 
-### 出版 {#publishing}
+### 出版 \{#publishing}
 
 科学出版是一个比较出名的问题，它由出版社进行管理，依靠科学家、评审人和编辑者这些免费劳动力来产生论文，然后收取高额的出版费。 普通大众通常已经通过税收间接支付了工作成果和出版费用，但仍需要再次向出版商付费来获取同一个工作成果。 发表个人科学论文的总费用通常是五位数 ($USD)，这违背了科学知识作为[公共利益](https://www.econlib.org/library/Enc/PublicGoods.html)的概念，同时一小部分出版商获取了巨大的利益。
 
 免费和公开的平台以预打印服务器的形式存在，[比如 ArXiv](https://arxiv.org/)。 然而，这些平台缺乏质量控制、[反女巫机制](https://csrc.nist.gov/glossary/term/sybil_attack)，通常没有追踪文章水平的指标，这意味着他们仅仅只是在提交给传统出版商之前宣传一下作品。 在 SciHub 上也可以免费获取公开发表的论文，但这不是合法的，并且通常是在出版商已经拿到付款和作品已被严格的版权法所保护之后。 因此，要使论文和数据可访问且具有内在合法性机制和激励模式，就需要填补巨大的空白。 创造这种系统的工具就在 Web3 中。
 
-### 可复现性与可复制性 {#reproducibility-and-replicability}
+### 可复现性与可复制性 \{#reproducibility-and-replicability}
 
 可复现性和可复制性是高质量科学发现的基础。
 
@@ -62,7 +62,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 新的 Web3 原生工具能确保可复现性和可复制性是发现的基础。 我们可以将高质量的科学纳入学术界的技术结构。 Web3 提供了为每个分析组件创建认证的能力：原始数据、计算引擎和应用结果。 共识系统的美妙之处在于，当创建一个可信网络来维护这些组件时，每一个网络参与者都将负责复现计算和验证结果。
 
-### 资金赞助 {#funding}
+### 资金赞助 \{#funding}
 
 目前资助科学的标准模式是，个人或科学家团队向资助机构提出书面申请。 一个由受信任的个人组成的小组对申请进行评分，然后对候选人进行面试，最后再向一小部分申请提供资金。 除了从申请到领取资金有时候需要几年之外，这种模式还容易受到评审小组的偏见、自身利益和政治影响。
 
@@ -70,7 +70,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 通过对由去中心化自治组织和 Web3 开发的不同激励模型进行广泛试验，Web3 有可能打破这一不合理的资金模式。 [可溯源的公益资助](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[二次方融资](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治组织治理](https://www.antler.co/blog/daos-and-web3-governance)和[代币化的激励结构](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)是一些可以彻底改变科学资助的 Web3 工具。
 
-### 知识产权所有权和发展 {#ip-ownership}
+### 知识产权所有权和发展 \{#ip-ownership}
 
 知识产权 (IP) 是传统科学中的一个大问题：从被卡在大学里或未能在生物技术领域使用，到众所周知的难以估值。 然而，Web3 利用[非同质化代币 (NFT)](/nft/) 将数字资产（例如科学数据或文章）的所有权做得特别好。
 
@@ -78,7 +78,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 [IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 就像一把钥匙，可以打开进行中的研究实验的去中心化数据存储库，还可以插入了同质化代币和[去中心化金融](/defi/)这些金融领域（从分片化到借贷池和价值评估）。 它也允许一些原生链上实体直接在链上进行研究，比如[VitaDAO](https://www.vitadao.com/) 等去中心化自治组织。 不可转移的[“灵魂绑定”代币](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出现，也能在去中心化科学中发挥重要作用，它允许个人证明与以太坊地址关联的经验和凭证。
 
-### 数据存储、访问和架构 {#data-storage}
+### 数据存储、访问和架构 \{#data-storage}
 
 使用 Web3 模式能够更容易地获取科学数据，同时分布式存储也能让研究在灾难性事件中幸存。
 
@@ -86,7 +86,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 灵活的 Web3 数据解决方案支持上述场景，也为真正开放的科学奠定基础。研究者在 Web3 中可以创造公共利益，无需访问权限和费用。 Web3 的公共数据解决方案，比如星际文件系统、Arweave 和菲乐币，也专门为去中心化做了优化。 例如 dClimate，让所有人获取气候和天气数据，包括来自气象站和气候预测模型的数据。
 
-## 参与其中 {#get-involved}
+## 参与其中 \{#get-involved}
 
 探索项目并加入去中心化科学社区。
 
@@ -114,7 +114,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 我们欢迎提出新项目加入到列表中 - 开始前，请查看我们的[上架政策](/contributing/adding-desci-projects/)！
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [DeSci Wiki 由 Jocelynn Pearl 和 Ultrarare 提供](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [由 Jocelynn Pearl 为 a16z 自建媒体网站 Future 写的一份去中心化生物技术指南](https://future.a16z.com/a-guide-to-decentralized-biotech/)
@@ -130,7 +130,7 @@ summaryPoint3: 它以开放科学运动为基础。
 - [Nadia 的《科学基金（结语：去中心化科学和新的加密原语）》](https://nadia.xyz/science-funding)
 - [去中心化正在颠覆药物开发](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-### 相关视频 {#videos}
+### 相关视频 \{#videos}
 
 - [什么是去中心化科学？](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Vitalik Buterin 和科学家 Aubrey de Grey 之间关于长寿研究和加密技术的交集的对话](https://www.youtube.com/watch?v=x9TSJK1widA)

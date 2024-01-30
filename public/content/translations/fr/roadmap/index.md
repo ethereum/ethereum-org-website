@@ -20,7 +20,7 @@ Ethereum est déjà une plateforme puissante pour la coordination mondiale, mais
 
 **Pour en savoir plus sur les précédentes mises à jour d'Ethereum, veuillez consulter notre page [Historique d'Ethereum](/history/)**
 
-## Quels sont les changements à venir pour Ethereum ? {#what-changes-are-coming}
+## Quels sont les changements à venir pour Ethereum ? \{#what-changes-are-coming}
 
 La feuille de route d'Ethereum décrit les améliorations spécifiques qui seront apportées au protocole à l'avenir. Globalement, la feuille de route apportera les avantages suivants aux utilisateurs d'Ethereum :
 
@@ -55,7 +55,7 @@ La feuille de route d'Ethereum décrit les améliorations spécifiques qui seron
   />
 </CardGrid>
 
-## Pourquoi Ethereum a-t-il besoin d'une feuille de route ? {#why-does-ethereum-need-a-roadmap}
+## Pourquoi Ethereum a-t-il besoin d'une feuille de route ? \{#why-does-ethereum-need-a-roadmap}
 
 Ethereum fait régulièrement l'objet de mises à jour qui améliorent son évolutivité, sa sécurité ou sa durabilité. L'une des principales forces d'Ethereum est de s'adapter aux nouvelles idées issues de la recherche et du développement. L'adaptabilité donne à Ethereum la flexibilité nécessaire pour relever les nouveaux défis et suivre les avancées technologiques les plus récentes.
 
@@ -74,23 +74,23 @@ La feuille de route est principalement le résultat d'années de travail des che
 
 </InfoBanner>
 
-## La feuille de route d'Ethereum évoluera-t-elle au fil du temps ? {#will-ethereums-roadmap-change-over-time}
+## La feuille de route d'Ethereum évoluera-t-elle au fil du temps ? \{#will-ethereums-roadmap-change-over-time}
 
 Oui, presque sans aucun doute. La feuille de route est le plan actuel de mise à niveau d'Ethereum, couvrant à la fois les plans à court terme et les plans futurs. Nous nous attendons à ce que la feuille de route soit modifiée au fur et à mesure que de nouvelles informations et technologies seront disponibles.
 
 La feuille de route d'Ethereum est un ensemble d'intentions visant à améliorer Ethereum ; il s'agit de la meilleure hypothèse des chercheurs et des développeurs sur la voie optimale à suivre pour Ethereum.
 
-## Quand la feuille de route sera-t-elle terminée ? {#when-will-the-roadmap-be-finished}
+## Quand la feuille de route sera-t-elle terminée ? \{#when-will-the-roadmap-be-finished}
 
 Ethereum mettra en œuvre certaines améliorations au cours des six prochains mois (par exemple, les retraits de staking) ; d'autres sont moins prioritaires et ne seront probablement pas mises en œuvre avant 5 à 10 ans (par exemple, la résistance quantique). Il est difficile de prévoir le calendrier précis de chaque mise à niveau, car de nombreux éléments de la feuille de route sont travaillés en parallèle et développés à des rythmes différents. L'urgence d'une mise à niveau peut également évoluer dans le temps en fonction de facteurs externes (par exemple, un bond soudain dans les performances et la disponibilité des ordinateurs quantiques peut rendre plus urgente la cryptographie avec résistance quantique).
 
 L'une des façons d'envisager le développement d'Ethereum est de faire une analogie avec l'évolution biologique. Un réseau capable de s'adapter à de nouveaux défis et de rester sain a plus de chances de réussir qu'un réseau réfractaire au changement, même si au fur et à mesure que le réseau devient de plus en plus performant, évolutif et sûr, il sera de moins en moins nécessaire d'apporter des modifications au protocole.
 
-## Dois-je faire quelque chose lors d'une mise à jour ? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## Dois-je faire quelque chose lors d'une mise à jour ? \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Les mises à niveau n'ont généralement pas d'impact sur les utilisateurs finaux, si ce n'est qu'elles offrent une meilleure expérience utilisateur, un protocole plus sûr et peut-être plus <i>d'options</i> pour interagir avec Ethereum. Les utilisateurs finaux ne sont pas tenus de participer activement à une mise à niveau, ni de faire quoi que ce soit pour sécuriser leurs actifs. Les opérateurs de nœuds devront mettre à jour leurs clients pour se préparer à une mise à niveau. Certaines mises à niveau peuvent entraîner des changements pour les développeurs d'applications. Par exemple, les mises à niveau de l'expiration de l'historique peuvent amener les développeurs d'applications à obtenir des données historiques à partir de nouvelles sources.
 
-## Qu'en est-il de The Verge, The Splurge… ? {#what-about-the-verge-splurge-etc}
+## Qu'en est-il de The Verge, The Splurge… ? \{#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin a proposé une vision de la feuille de route d'Ethereum](https://twitter.com/VitalikButerin/status/1588669782471368704) organisée en plusieurs catégories liées par leurs effets sur l'architecture d'Ethereum. Elle comprenait :
 
@@ -103,11 +103,11 @@ Les mises à niveau n'ont généralement pas d'impact sur les utilisateurs finau
 
 Nous avons décidé de ne pas utiliser cette terminologie parce que nous voulions utiliser un modèle plus simple et plus centré sur l'utilisateur. Bien que nous utilisions un langage centré sur l'utilisateur, la vision reste la même que celle proposée par Vitalik.
 
-## Qu'en est-il de la fragmentation ? {#what-about-sharding}
+## Qu'en est-il de la fragmentation ? \{#what-about-sharding}
 
 La fragmentation consiste à découper la blockchain Ethereum afin que des sous-ensembles de validateurs soient seulement responsables d'une fraction des données complètes. C'était originellement de cette manière qu'Ethereum devait passer à l'échelle. Néanmoins, les rollups (couche 2) se sont développés bien plus rapidement que prévu et ont fournit une grande capacité à monter en charge, et en fourniront encore plus après que le Proto-Danksharding sera mis en œuvre. Cela signifie que les « chaînes de fragments » ne sont plus nécessaires et ont été supprimées de la feuille de route.
 
-## Vous recherchez des mises à niveau techniques spécifiques ? {#looking-for-specific-technical-upgrades}
+## Vous recherchez des mises à niveau techniques spécifiques ? \{#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Le Danksharding rend les rollups de couche 2 bien plus abordables pour les utilisateurs en ajoutant des « blob » de données aux blocs d'Ethereum.
 - [Retraits de Staking](/staking/withdrawals) - La mise à niveau Shanghai/Capella a activé les retraits de staking sur Ethereum, permettant aux gens de déverrouiller leurs ETH mis en jeu.

@@ -5,25 +5,25 @@ lang: fil
 postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
-# Panimula sa pamamahala ng Ethereum {#introduction}
+# Panimula sa pamamahala ng Ethereum \{#introduction}
 
 _Kung walang nagmamay-ari sa Ethereum, paano pinagpapasyahan ang mga nakaraan at susunod pang pagbabago sa Ethereum? Ang pamamahala ng Ethereum ay tumutukoy sa prosesong nagbibigay-daan sa mga naturang pagpapasya._
 
 <Divider />
 
-## Ano ang pamamahala? {#what-is-governance}
+## Ano ang pamamahala? \{#what-is-governance}
 
 Ang pamamahala ang mga sistemang ipinapatupad na nagbibigay-daan sa pagpapasya. Sa isang karaniwang organizational structure, ang executive team o board of directors ang nakakapagtakda ng pinal na pasya pagdating sa pagpapasya. O marahil ay pinagbobotohan ng mga shareholder ang mga proposal upang maisakatuparan ang pagbabago. Sa isang sistemang pulitikal, ang mga inihalal na opisyal ay maaaring magpatupad ng batas na nagsusumikap na katawanin ang mga ninanais ng kanilang mga nasasakupan.
 
-## Decentralized na pamamahala {#decentralized-governance}
+## Decentralized na pamamahala \{#decentralized-governance}
 
 Walang sinumang nagmamay-ari o nagkokontrol sa Ethereum protocol, ngunit kailangan pa ring pagpasyahan ang pagpapatupad ng mga pagbabago upang tiyaking magtatagal at magtatagumpay ang network. Dahil walang nagmamay-ari dito, hindi tugmang solusyon ang tradisyonal na pamamahala ng organisasyon.
 
-## Pamamahala ng Ethereum {#ethereum-governance}
+## Pamamahala ng Ethereum \{#ethereum-governance}
 
 Ang pamamahala ng Ethereum ang proseso kung saan ginagawa ang mga pagbabago sa protocol. Mahalagang bigyang-diin na hindi nauugnay ang prosesong ito sa kung paano ginagamit ng mga tao at application ang protocol - permissionless ang Ethereum. Makakasali ang kahit sino mula sa kahit saan sa mundo sa mga aktibidad on-chain. Walang nakatakdang panuntunan pagdating sa kung sino ang puwede o hindi puwedeng gumawa ng application o magpadala ng transaksyon. Gayunpaman, mayroong proseso upang magmungkahi ng mga pagbabago sa core protocol kung saan pinapatakbo ang mga decentralized application. Dahil maraming tao ang umaasa sa stability ng Ethereum, napakataas ng threshold sa koordinasyon para sa mga pagbabago sa core, kasama na ang mga social at teknikal na proseso, upang tiyaking secure at susuportahan ng nakararami sa komunidad ang anumang pagbabago sa Ethereum.
 
-### On-chain vs off-chain na pamamahala {#on-chain-vs-off-chain}
+### On-chain vs off-chain na pamamahala \{#on-chain-vs-off-chain}
 
 Ang blockchain technology ay nagbibigay-daan sa mga bagong kakayahan sa pamamahala, na kilala bilang on-chain governance. Ang on-chain governance ay kapag pinagpapasyahan ang mga iminumungkahing pagbabago sa protocol sa pamamagitan ng boto ng stakeholder, na kadalasang mga nagmamay-ari ng governance token, at sa blockchain isinasagawa ang botohan. Sa ilang uri ng on-chain governance, ang mga iminumungkahing pagbabago sa protocol ay nakalagay na sa code at awtomatikong inilalapat kung inaprubahan ng mga stakeholder ang mga pagbabago sa pamamagitan ng pag-sign ng transaksyon.
 
@@ -39,7 +39,7 @@ _Kahit off-chain ang pamamahala ng Ethereum sa antas ng protocol, maraming use c
 
 <Divider />
 
-## Sino ang bahagi nito? {#who-is-involved}
+## Sino ang bahagi nito? \{#who-is-involved}
 
 May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may papel ang bawat isa sa proseso ng pamamahala. Narito ang mga stakeholder simula sa mga pinakamalayo sa protocol hanggang sa mga pinakamalapit:
 
@@ -55,7 +55,7 @@ _Tandaan: maaaring hindi lang sa isa sa mga grupong ito napapabilang ang sinuman
 
 <Divider />
 
-## Ano ang EIP? {#what-is-an-eip}
+## Ano ang EIP? \{#what-is-an-eip}
 
 Isang mahalagang proseso na ginagamit sa pamamahala ng Ethereum ang pagmumungkahi ng **mga Ethereum Improvement Proposal (EIPs)**. Ang EIPs ay mga pamantayan na nagtatakda ng mga potensyal na bagong feature o proseso para sa Ethereum. Makakagawa ng EIP ang kahit sino sa komunidad ng Ethereum. Kung interesado kang magsulat ng EIP o lumahok sa peer-review at/o pamamahala, tingnan ang:
 
@@ -65,7 +65,7 @@ Isang mahalagang proseso na ginagamit sa pamamahala ng Ethereum ang pagmumungkah
 
 <Divider />
 
-## Ang pormal na proseso {#formal-process}
+## Ang pormal na proseso \{#formal-process}
 
 Ganito ang pormal na proseso para sa paglulunsad ng mga pagbabago sa Ethereum protocol:
 
@@ -87,17 +87,17 @@ Ganito ang pormal na proseso para sa paglulunsad ng mga pagbabago sa Ethereum pr
 
 Ang flow na ito, bagama't lubhang pinasimple, ay nagbibigay ng pangkalahatang-ideya ng mahahalagang yugto para ma-activate ang isang pagbabago sa protocol sa Ethereum. Ngayon, tingnan natin ang mga hindi promal na salik na nakakaapekto sa prosesong ito.
 
-## Ang hindi pormal na proseso {#informal-process}
+## Ang hindi pormal na proseso \{#informal-process}
 
-### Pag-unawa sa mga naunang gawain {#prior-work}
+### Pag-unawa sa mga naunang gawain \{#prior-work}
 
 Dapat pag-aralan ng mga EIP Champion ang mga naunang gawain at proposal bago gumawa ng EIP na maaari talagang i-deploy sa Ethereum Mainnet. Sa ganitong paraan, inaasahang magdadala ang EIP ng bagong bagay na hindi pa tinatanggihan. Ang tatlong pangunahing lugar para i-research ito ay ang [EIP repository](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/), at [ethresear.ch](https://ethresear.ch/).
 
-### Mga working group {#working-groups}
+### Mga working group \{#working-groups}
 
 Maliit ang posibilidad na ipatupad sa Ethereum Mainnet ang unang draft ng EIP nang walang kailangang i-edit o baguhin. Karaniwang makikipagtulungan ang mga EIP Champion sa isang subset ng mga Protocol Developer para tiyakin, ipatupad, i-test, ulitin, at tapusin ang kanilang proposal. Noon pa man, nangangailangan ang mga working group na ito ng ilang buwan (at kung minsan ay ilang taon!) ng pagsisikap. Tulad nito, dapat ding makipagtulungan ang mga EIP Champion para sa mga naturang pagbabago sa mga nauugnay Application/Tooling Developer para makakuha ng feedback mula sa mga end user at maiwasan ang anumang panganib sa deployment.
 
-### Community consensus {#community-consensus}
+### Community consensus \{#community-consensus}
 
 Bagama't mga direktang teknikal na pagpapahusay ang ilang EIPs, mas kumplikado ang iba at may mga tradeoff na makakaapekto sa iba't ibang stakeholder sa iba't ibang paraan. Ibig sabihin nito, may ilang EIPs na mas pinagtatalunan sa komunidad kaysa sa iba.
 
@@ -109,13 +109,13 @@ Bukod pa sa seguridad ng Ethereum network, dati pa man ay lubha nang pinapahalag
 
 <Divider />
 
-## Pag-aayos ng mga hindi pagkakasundo {#disagreements}
+## Pag-aayos ng mga hindi pagkakasundo \{#disagreements}
 
 Dahil maraming stakeholder na may iba't ibang motibasyon at paniniwala, hindi bihirang magkaroon ng mga hindi pagkakaunawaan.
 
 Karaniwang inaayos ang mga hindi pagkakaunawaan sa mahabang usapan sa mga pampublikong forum para maunawaan ang sanhi ng problema at hayaan ang sinuman na magpahayag ng kanyang opinyon. Kadalasang nagpaparaya ang isang grupo, o nagkakasundo sa isang opsyong katanggap-tanggap sa lahat. Kung ayaw magparaya ng isang grupo, maaaring magresulta sa chain split kung ipipilit ipatupad ang isang partikular na pagbabago. Nangyayari ang chain split kapag may ilang stakeholder na tututol sa pagpapatupad ng pagbabago sa protocol na magreresulta sa magkaiba at hindi compatible na bersyon ng pinapatakbong protocol, kung saan magmumula ang dalawang magkaibang blockchain.
 
-### Ang DAO fork {#dao-fork}
+### Ang DAO fork \{#dao-fork}
 
 Nangyayari ang mga fork kapag may mga pangunahing teknikal na pag-upgrade o pagbabago at babaguhin nito ang "mga panuntunan" ng protocol. Dapat i-update ng [mga Ethereum client](/developers/docs/nodes-and-clients/) ang kanilang software upang ipatupad ang mga panuntunan para sa fork.
 
@@ -139,7 +139,7 @@ Manood pa ng mga video tungkol sa DAO hack:
 
 <Divider />
 
-### Ang kahalagahan ng pag-fork {#forking-utility}
+### Ang kahalagahan ng pag-fork \{#forking-utility}
 
 Ang fork ng Ethereum/Ethereum Classic ay isang magandang halimbawa ng isang maayos na fork. Nagkaroon kami ng dalawang grupong talagang hindi magkasundo sa ilang core value. Kalaunan, napagpasyahan ng mga ito na kakayaning harapin ang mga panganib na kaakibat para maisagawa ang kanya-kanyang partikular na pagkilos.
 
@@ -147,7 +147,7 @@ Malaki ang naiaambag ng kakayahang mag-fork sa kabila ng malalaking pagkakaiba s
 
 <Divider />
 
-## Pamamahala ng Beacon Chain {#beacon-chain}
+## Pamamahala ng Beacon Chain \{#beacon-chain}
 
 Sa proseso ng pamamahala ng Ethereum, madalas na ipinagpapalit ang bilis at kahusayan para sa pagiging bukas. Upang mapabilis ang pag-unlad ng Beacon Chain, inilunsad ito nang hiwalay sa patunay ng gawain na Ethereum network at sinunod nito ang mga sarili nitong kagawian sa pamamahala.
 
@@ -161,7 +161,7 @@ Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Set
 
 <Divider />
 
-## Paano ako makakalahok? {#get-involved}
+## Paano ako makakalahok? \{#get-involved}
 
 - [Magmungkahi ng EIP](/eips/#participate)
 - [Pag-usapan ang mga kasalukuyang proposal](https://ethereum-magicians.org/)
@@ -171,7 +171,7 @@ Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Set
 - [Mag-contribute sa pag-develop ng client](/developers/docs/nodes-and-clients/#execution-clients)
 - [Core Developer Apprenticeship Program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Karagdagang pagbabasa {#further-reading}
+## Karagdagang pagbabasa \{#further-reading}
 
 Walang partikular na pagpapakahulugan ang pamamahala sa Ethereum. May iba't ibang pananaw dito ang iba't ibang miyembro ng komunidad. Narito ang ilan sa mga ito:
 

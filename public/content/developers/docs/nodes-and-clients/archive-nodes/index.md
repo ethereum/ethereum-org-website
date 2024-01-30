@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 An archive node is an instance of an Ethereum client configured to build an archive of all historical states. It is a useful tool for certain use cases but might be more tricky to run than a full node.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 You should understand the concept of an [Ethereum node](/developers/docs/nodes-and-clients/), [its architecture](/developers/docs/nodes-and-clients/node-architecture/), [sync strategies](/developers/docs/nodes-and-clients/#sync-modes), practices of [running](/developers/docs/nodes-and-clients/run-a-node/) and [using them](/developers/docs/apis/json-rpc/).
 
@@ -69,13 +69,13 @@ For more stability and security in preventing accidental database corruption, es
 
 During initial sync, clients in archive mode will execute every transaction since genesis. Execution speed is mostly limited by the CPU, so a faster CPU can help with the initial sync time. On an average consumer computer, the initial sync can take up to a month.
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Ethereum Full Node vs Archive Node](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, September 2022_
 - [Building Your Own Ethereum Archive Node](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, August 2021_
 - [How to set up Erigon, Erigon’s RPC and TrueBlocks (scrape and API) as services](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, updated September 2022_
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [Running a node](/developers/docs/nodes-and-clients/run-a-node/)

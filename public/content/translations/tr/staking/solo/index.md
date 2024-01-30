@@ -13,7 +13,7 @@ summaryPoints:
   - Güveni ortadan kaldırın ve fonlarınızın anahtarlarının kontrolünü asla bırakmayın
 ---
 
-## Bireysel hisseleme nedir? {#what-is-solo-staking}
+## Bireysel hisseleme nedir? \{#what-is-solo-staking}
 
 Solo stake etme, internete bağlı [bir Ethereum düğümü çalıştırma](/run-a-node/) ve bir [doğrulayıcıyı](#faq) etkinleştirmek için 32 ETH yatırma işlemidir, size doğrudan ağ konsensüsüne katılma yeteneği verir.
 
@@ -25,7 +25,7 @@ Bu istemcileri çalıştırmak için gereken donanımı çalıştırmaktan tek b
 
 Solo staker, doğrulayıcısının düzgün şekilde çalışmasını ve çevrimiçi olmasını sağladığı için doğrudan protokolden ödüller alır.
 
-## Neden solo stake? {#why-stake-solo}
+## Neden solo stake? \{#why-stake-solo}
 
 Solo hisseleme daha fazla sorumluluk gerektirmesine rağmen fonlarınız ve hisseleme kurulumunuz üzerinde maksimum kontrol sağlar.
 
@@ -35,7 +35,7 @@ Solo hisseleme daha fazla sorumluluk gerektirmesine rağmen fonlarınız ve hiss
   <Card title="Ağ güvenliği" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Solo staking yapmadan önce dikkate alınması gerekenler {#considerations-before-staking-solo}
+## Solo staking yapmadan önce dikkate alınması gerekenler \{#considerations-before-staking-solo}
 
 Solo staking'in herkes için erişilebilir ve risksiz olmasını dilesek de, bu gerçek değil. ETH'nizi solo stake etmeyi seçmeden önce akılda tutulması gereken bazı pratik ve ciddi hususlar vardır.
 
@@ -73,7 +73,7 @@ Donanım bazen başarısız oluyor, ağ bağlantıları hata veriyor ve istemci 
 
 <StakingComparison page="solo" />
 
-## Nasıl Çalışır {#how-it-works}
+## Nasıl Çalışır \{#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -83,13 +83,13 @@ Aktif olduğu durumda ETH ödülleri kazanırsınız. Bu ödüller periyodik ola
 
 [Hisseleme para çekmeleri hakkında daha fazlası](/staking/withdrawals/)
 
-## Hisseleme Başlama Noktası başlangıç rehberi {#get-started-on-the-staking-launchpad}
+## Hisseleme Başlama Noktası başlangıç rehberi \{#get-started-on-the-staking-launchpad}
 
 Staking Launchpad, stake yapmanıza yardımcı olacak açık kaynaklı bir uygulamadır. İstemcilerinizi seçme, anahtarlarınızı oluşturma ve ETH'nizi stake depozito sözleşmesine yatırma konusunda size rehberlik edecektir. Doğrulayıcınızı güvenli bir şekilde kurmak ve her şeyi kapsadığınızdan emin olmak için bir kontrol listesi sağlanmıştır.
 
 <StakingLaunchpadWidget />
 
-## Düğüm ve istemci kurulum araçlarıyla ilgili olarak nelere dikkat edilmelidir {#node-tool-considerations}
+## Düğüm ve istemci kurulum araçlarıyla ilgili olarak nelere dikkat edilmelidir \{#node-tool-considerations}
 
 ETH'nizi tek başınıza stake etmenize yardımcı olacak, giderek artan sayıda araç ve hizmet var, ancak bunların her biri farklı riskler ve faydalar içeriyor.
 
@@ -97,7 +97,7 @@ Nitelik göstergeleri, listelenen bir stake etme aracının sahip olabileceği d
 
 <StakingConsiderations page="solo" />
 
-## Düğüm ve istemci kurulum araçlarını keşfedin {#node-and-client-tools}
+## Düğüm ve istemci kurulum araçlarını keşfedin \{#node-and-client-tools}
 
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 
@@ -117,11 +117,11 @@ Bu araçlar, anahtar oluşturmaya yardımcı olmak için [hisseleme Mevduat CLI'
 
 Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
 
-## Solo staking kılavuzlarını keşfet {#staking-guides}
+## Solo staking kılavuzlarını keşfet \{#staking-guides}
 
 <StakingGuides />
 
-## Sıkça sorulan sorular {#faq}
+## Sıkça sorulan sorular \{#faq}
 
 Bunlar, hisseleme hakkında bilmeye değer en yaygın sorulardan birkaçıdır.
 
@@ -191,7 +191,7 @@ Tüm bakiyenizin kilidini kaldırmak ve tamamını almak için aynı zamanda do�
 <ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Ethereum'un İstemci Çeşitliliği Sorunu](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [İstemci Çeşitliliğine Yardımcı Olmak](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

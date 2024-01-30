@@ -13,7 +13,7 @@ summaryPoints:
   - 消除信任依赖，始终自己掌控资金密钥
 ---
 
-## 什么是单独质押？ {#what-is-solo-staking}
+## 什么是单独质押？ \{#what-is-solo-staking}
 
 单独质押是指运行一个连接到互联网的[以太坊节点](/run-a-node/)，并存入 32 个以太币以激活一个[验证者](#faq)，使你有能力直接参与网络共识。
 
@@ -25,7 +25,7 @@ summaryPoints:
 
 单独质押人可以直接从协议中获得奖励，以保持他们的验证者在线并正常运行。
 
-## 为什么要单独质押？ {#why-stake-solo}
+## 为什么要单独质押？ \{#why-stake-solo}
 
 单独质押让你承担更大的责任，但会让你对资金和质押设置拥有最大的控制权。
 
@@ -35,7 +35,7 @@ summaryPoints:
   <Card title="网络安全" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## 单独质押前的考量 {#considerations-before-staking-solo}
+## 单独质押前的考量 \{#considerations-before-staking-solo}
 
 尽管我们希望每个人都能无风险地进行单独质押，但这并不现实。 在选择单独质押以太币之前，有一些实际和严肃的事项需要记住。
 
@@ -75,7 +75,7 @@ summaryPoints:
 
 <StakingComparison page="solo" />
 
-## 工作原理 {#how-it-works}
+## 工作原理 \{#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -85,13 +85,13 @@ summaryPoints:
 
 [更多关于质押提款的信息](/staking/withdrawals/)
 
-## 开始使用 Staking Launchpad {#get-started-on-the-staking-launchpad}
+## 开始使用 Staking Launchpad \{#get-started-on-the-staking-launchpad}
 
 Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 它将指导你选择客户端、生成密钥并将你的以太币存入质押存款合约。 会提供一份清单，确保已经涵盖安全设置验证者需要的所有内容。
 
 <StakingLaunchpadWidget />
 
-## 使用节点和客户端设置工具时应考虑的事项 {#node-tool-considerations}
+## 使用节点和客户端设置工具时应考虑的事项 \{#node-tool-considerations}
 
 有越来越多的工具和服务可以帮助你单独质押以太币，但每种工具和服务的风险和收益各不相同。
 
@@ -99,7 +99,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <StakingConsiderations page="solo" />
 
-## 探索节点和客户端设置工具 {#node-and-client-tools}
+## 探索节点和客户端设置工具 \{#node-and-client-tools}
 
 有多种方案可帮助你进行设置。 上述指标可引导你了解如何使用下方的工具。
 
@@ -119,11 +119,11 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 想要推荐其他未提到的质押工具吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 
-## 探索单独质押指南 {#staking-guides}
+## 探索单独质押指南 \{#staking-guides}
 
 <StakingGuides />
 
-## 常见问题 {#faq}
+## 常见问题 \{#faq}
 
 下面是一些关于质押的最常见问题，值得了解一下。
 
@@ -193,7 +193,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 <ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian 和 Spacesider_
 - [以太坊客户端多样性问题](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

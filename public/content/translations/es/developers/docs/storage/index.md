@@ -17,9 +17,9 @@ Al analizar opciones de almacenamiento descentralizado (dStorage), hay algunas c
 - Descentralidad
 - Consensos
 
-## Mecanismo de persistencia / estructura de incentivos {#persistence-mechanism}
+## Mecanismo de persistencia / estructura de incentivos \{#persistence-mechanism}
 
-### Basado en Blockchain {#blockchain-based}
+### Basado en Blockchain \{#blockchain-based}
 
 Para que cierta información persista para siempre, necesitamos utilizar un mecanismo de persistencia. Por ejemplo, en Ethereum el mecanismo de persistencia se basa en dar cuenta de toda la cadena al ejecutar un nodo. Se van añadiendo datos al final de la cadena, y esta continúa creciendo, lo que requiere que cada nodo replique todos los datos incorporados.
 
@@ -34,7 +34,7 @@ Plataformas con persistencia basada en la cadena de bloques:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Basado en contratos {#contract-based}
+### Basado en contratos \{#contract-based}
 
 La persistencia **basada en contratos** intuye que los datos no pueden ser replicados por cada nodo y almacenados para siempre, y en su lugar deben ser mantenidos con acuerdos contractuales. Hay acuerdos realizados con múltiples nodos que se comprometen a mantener ciertos datos durante un período de tiempo. Estos deberán ser reembolsados o renovados cuando expiran para seguir manteniendo los datos.
 
@@ -50,7 +50,7 @@ Plataformas con persistencia basada en contratos:
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### Consideraciones adicionales {#additional-consideration}
+### Consideraciones adicionales \{#additional-consideration}
 
 IPFS es un sistema distribuido para almacenar y acceder a archivos, sitios web, aplicaciones y datos. No cuenta con un sistema de incentivos, pero se puede utilizar con cualquiera de las soluciones de incentivos basadas en contrato anteriores para una mayor persistencia. Otra forma de persistir datos en IPFS es trabajar con un servicio de "pinning" de datos, que mantendrá los datos fijados para usted. Incluso puede ejecutar su propio nodo de IPFS y contribuir a la red para persistir gratuitamente sus datos y/o los de los demás.
 
@@ -64,11 +64,11 @@ IPFS es un sistema distribuido para almacenar y acceder a archivos, sitios web, 
 
 SWARM es una tecnología descentralizada de almacenamiento y distribución de datos con un sistema de incentivos de almacenamiento y un oráculo del precios de alquiler de almacenamiento.
 
-## Retención de datos {#data-retention}
+## Retención de datos \{#data-retention}
 
 Para conservar los datos, es necesario que los sistemas cuenten con algún mecanismo que asegure la conservación de los datos.
 
-### Mecanismo de desafíos {#challenge-mechanism}
+### Mecanismo de desafíos \{#challenge-mechanism}
 
 Una de las formas más populares de aseguraese de que se están conservando los datos es usar un tipo de desafío criptográfico que se emita a los nodos para asegurarse de que aún tienen los datos. Un ejemplo simple de esto es la prueba de acceso de Arweave. Emiten un desafío a los nodos para comprobar si tienen los datos en el bloque más reciente y en un bloque pasado aleatorio. Si el nodo no responde, se lo penaliza.
 
@@ -81,7 +81,7 @@ Tipos de dStorage que utilizan un mecanismo de desafíos:
 - Crust Network
 - 4EVERLAND
 
-### Descentralización {#decentrality}
+### Descentralización \{#decentrality}
 
 No existen buenas herramientas para medir el nivel de descentralización de las plataformas, pero en general querrá utilizar herramientas que no requieran de algún tipo de KYC para proporcionar evidencia de que no son centralizadas.
 
@@ -96,7 +96,7 @@ Herramientas descentralizadas sin KYC:
 - Crust Network
 - 4EVERLAND
 
-### Consensos {#consensus}
+### Consensos \{#consensus}
 
 La mayoría de estas herramientas tienen su propia versión de un [mecanismo de consenso](/developers/docs/consensus-mechanisms/) pero generalmente se basan en la [**prueba de trabajo (PoW)**](/developers/docs/consensus-mechanisms/pow/) o la [**prueba de participación (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
@@ -112,7 +112,7 @@ Basado en prueba de participación:
 - 0Chain
 - Crust Network
 
-## Herramientas relacionadas {#related-tools}
+## Herramientas relacionadas \{#related-tools}
 
 **IPFS: _InterPlanetary File System es un sistema descentralizado de almacenamiento y referencia de archivos para Ethereum._**
 
@@ -198,13 +198,13 @@ Basado en prueba de participación:
 - [Documentación](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [¿Qué es el almacenamiento descentralizado?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Cinco mitos comunes que no son ciertos sobre el almacenamiento descentralizado](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _¿Conoce algún recurso en la comunidad que le ayudara? ¡Edite la página y añádala!_
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [Entornos de desarrollo](/developers/docs/frameworks/)

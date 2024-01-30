@@ -8,7 +8,7 @@ Sei nuovo alla progettazione con Ethereum? Questo è il posto giusto per te. La 
 
 Hai prima bisogno di una conoscenza più di base del web3? Dai un'occhiata al [**Learn Hub**](/learn/).
 
-## Inizia con la ricerca utente {#Start-with-user-research}
+## Inizia con la ricerca utente \{#Start-with-user-research}
 
 La progettazione efficace va oltre la creazione di interfacce utente accattivanti a livello visivo. Si tratta di comprendere a fondo i bisogni, gli obiettivi e i fattori trainanti dell'utente. Pertanto, consigliamo fortemente che tutti i progettisti adottino un processo di progettazione come il [**processo del doppio diamante**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), per assicurare che il loro lavoro sia consapevole e intenzionale.
 
@@ -17,7 +17,7 @@ La progettazione efficace va oltre la creazione di interfacce utente accattivant
 - [Come affrontare le decisioni di UX nel Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Una breve panoramica di ricerca quantitativa e qualitativa e le differenze tra queste due (video, 6 minuti)
 - [Essere un ricercatore ux nel web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Un punto di vista personale su cosa significhi essere un ricercatore UX nel web3
 
-## Studi di ricerca nel web3 {#Research-in-web3}
+## Studi di ricerca nel web3 \{#Research-in-web3}
 
 Questo è un elenco curato di ricerche utente fatte nel web3 che potrebbero esserti utili nelle decisioni di progettazione e prodotto o potrebbero inspirarti a condurre nuovi studi.
 
@@ -35,7 +35,7 @@ Questo è un elenco curato di ricerche utente fatte nel web3 che potrebbero esse
 - [Metaverso: report di ricerca sugli utenti](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)
 - [Andare ad un Safari: ricerca sugli utenti nel Metaverso](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 minuti)
 
-## Progettazione per il web3 {#Design-for-web3}
+## Progettazione per il web3 \{#Design-for-web3}
 
 - [Principi di progettazione Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - Un framework di regole di UX per le dapp basate su blockchain
 - [Principi di progettazione blockchain](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Lezioni apprese dal team di progettazione blockchain di IBM
@@ -44,7 +44,7 @@ Questo è un elenco curato di ricerche utente fatte nel web3 che potrebbero esse
 - [W3design.io](https://w3design.io/) - Una libreria curata di flussi di UI di vari progetti nell'ecosistema
 - [Neueux.com](https://neueux.com/apps) - Una libreria UI di flussi di utenti con diversi opzioni di filtro
 
-## Casi di studio di progettazione Web3 {#Design-case-studies}
+## Casi di studio di progettazione Web3 \{#Design-case-studies}
 
 - [Come scrivere messaggi di errore web3 migliori](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
 - [Suggerimenti per la progettazione Defi](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
@@ -53,14 +53,14 @@ Questo è un elenco curato di ricerche utente fatte nel web3 che potrebbero esse
 - [Vendere un NFT su OpenSea](https://builtformars.com/case-studies/opensea)
 - [UX del portafoglio: un'analisi di come i portafogli devono cambiare](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 min)
 
-## Ricompense di progettazione {#Bounties}
+## Ricompense di progettazione \{#Bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://bounties.gitcoin.co/explorer)
 - [Hackathon di Buildbox](https://gitcoin.co/hackathons)
 - [ETHGlobal](https://ethglobal.com/)
 
-## Progettazione di DAO e di community {#Design-DAOs-and-communities}
+## Progettazione di DAO e di community \{#Design-DAOs-and-communities}
 
 Partecipate ad organizzazioni professionali guidate dalla community o unitevi a gruppi di progettazione per discutere argomenti e tendenze legati a progetti e alla ricerca con altri membri.
 
@@ -72,7 +72,7 @@ Partecipate ad organizzazioni professionali guidate dalla community o unitevi a 
 - [web3trends.org](https://web3trends.org/)
 - [Progettazione Web3 open source](https://www.web3designers.org/)
 
-## Sistemi di progettazione {#Design-systems}
+## Sistemi di progettazione \{#Design-systems}
 
 - [Progettazione di Optimism](https://www.figma.com/@oplabs) (Figma)
 - [Sistema di progettazione di Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)

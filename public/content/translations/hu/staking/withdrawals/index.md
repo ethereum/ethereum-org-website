@@ -21,13 +21,13 @@ A letétek visszavonását a 2023. április 12-i Shanghai/Capella frissítés te
 
 **A jutalmak kifizetése** 32 ETH felett automatikusan és rendszeresen megtörténik az egyes validátorokhoz tartozó visszavonási címre, ahogy azt a felhasználó beállította. A felhasználó **teljesen kiszállhat a letétbe helyezésből**, felszabadítva a teljes validátoregyenleget.
 
-## A letétbe helyezésből eredő jutalmak {#staking-rewards}
+## A letétbe helyezésből eredő jutalmak \{#staking-rewards}
 
 Az aktív validátorszámlákra a jutalmak kifizetése automatikusan megtörténik, és maximum 32 ETH egyenleg marad azokon.
 
 A 32 ETH feletti összeg nem adódik hozzá az alaphoz, nem növeli a validátor súlyát a hálózaton, így automatikusan visszavonásra kerül jutalomként néhány naponta. A visszavonási címet rögzíteni kell, de ezen kívül a validátor működtetőjének nincs több teendője. Ez a konszenzusrétegen zajlik, ezért nincs gáz/tranzakciós díj vonzata egyik lépésnél sem.
 
-### Hogyan jutottunk el idáig? {#how-did-we-get-here}
+### Hogyan jutottunk el idáig? \{#how-did-we-get-here}
 
 Az elmúlt években az Ethereum számos hálózati fejlesztésen esett át, hogy a hálózatot az ETH biztosítsa, és ne az erőforrás-igényes bányászás (mining). A konszenzusban való részvétel az Ethereumon a letétbe helyezés (staking), mivel a tagok önként lekötötték az ETH-t, hogy a hálózatban részt tudjanak venni. A szabályokat követő felhasználók jutalmakat nyernek, a visszaélést pedig bünteti a rendszer.
 
@@ -35,11 +35,11 @@ A letétbe helyezési szerződés létrehozásával (2020. november) néhány b�
 
 A Shanghai/Capella frissítés előtt nem lehetett használni vagy elérni ezt a lekötött ETH-t. Most azonban automatikusan áthelyeződnek a jutalmak a kiválasztott számlára, és a lekötést is bármikor fel lehet oldani.
 
-### Hogyan tudok erre felkészülni? {#how-do-i-prepare}
+### Hogyan tudok erre felkészülni? \{#how-do-i-prepare}
 
 <WithdrawalsTabComparison />
 
-### Fontos figyelmeztetések {#important-notices}
+### Fontos figyelmeztetések \{#important-notices}
 
 A visszavonási cím megadása szükséges ahhoz, hogy a validátorszámla egyenlegéből ETH visszavonás történjen.
 
@@ -49,7 +49,7 @@ A visszavonási cím megadása szükséges ahhoz, hogy a validátorszámla egyen
 
 Eközben <strong>a pénzeszközöket nem fenyegeti veszély</strong>, ha nem adja meg a címet, feltéve, hogy a mnemonikus/kulcsmondat biztonságban van offline, és nincs kitéve veszélynek. Amíg nem tudja megadni a visszavonási adatokat, addig az ETH egyszerűen a validátorszámlán marad.
 
-## A letétbe helyezés felbontása {#exiting-staking-entirely}
+## A letétbe helyezés felbontása \{#exiting-staking-entirely}
 
 A visszavonási számlára van szükség ahhoz, _bármilyen_ pénzeszközt ki lehessen utalni a validátorszámla egyenlegéből.
 
@@ -59,7 +59,7 @@ A kilépés változó ideig tart, attól függően, hogy hányan akarnak ugyanak
 
 Ha a visszavonható jelölés megtörtént és a visszavonási adatok meg lettek adva, akkor nincs több teendő. A blokkot javaslók automatikusan és folyamatosan ellenőrzik, mondhatni söprik a számlákat a kilépő pénzeszközöket vizsgálva, így a számla egyenlege teljes mértékben átvezetésre kerül a következő <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>söprésnél</a>.
 
-## Mikortól elérhető a letétek visszavonása? {#when}
+## Mikortól elérhető a letétek visszavonása? \{#when}
 
 A letétek visszavonása elérhető! A funkcionalitást a Shanghai/Capella frissítés tette elérhetővé 2023. április 12-én.
 
@@ -68,17 +68,17 @@ Ennek következtében a korábban letétbe helyezett ETH-t vissza lehet vonni a 
 - [Bővebben az Ethereum történetéről](/history/)
 - [Bővebben az Ethereum fejlesztési terveiről](/roadmap/)
 
-## Hogyan működik a visszavonási kifizetés? {#how-do-withdrawals-work}
+## Hogyan működik a visszavonási kifizetés? \{#how-do-withdrawals-work}
 
 A validátorszámla státusza mondja meg, hogy egy validátor jogosult-e a visszavonásra vagy sem. Nincs szükség a felhasználó közreműködésére, hogy a számla visszavonásra kerül-e vagy sem – a teljes folyamat automatikusan üzemel a konszenzus réteg által, egy állandóan működő ciklusban.
 
-### Ön inkább vizuális típus? {#visual-learner}
+### Ön inkább vizuális típus? \{#visual-learner}
 
 Nézze meg az Ethereum letétvisszavonásról szóló magyarázatát a Finematics-tól:
 
 <YouTube id="RwwU3P9n3uo" />
 
-### Validátor-ellenőrzés vagy söprés {#validator-sweeping}
+### Validátor-ellenőrzés vagy söprés \{#validator-sweeping}
 
 Amikor egy adott validátor be van ütemezve, hogy a következő blokkot ő fogja javasolni, akkor készítenie kell egy 16 tételből álló visszavonási listát. Kezdve a 0 validátorindexel, meghatározza, hogy az adott számla a protokoll szabályai szerint visszavonásra jogosult-e, és ha igen, akkor beteszi a listába. A validátorcsoport ott száll be, ahol az előző abbahagyta és a végtelenségig folytatja.
 
@@ -88,7 +88,7 @@ Tegyük fel 1–12 helyett 0-n található <em>(ahol n a validátor számlák te
 Az óramutató a következő validátorra mutat, hogy leellenőrizze azt visszavonás szempontjából. A 0-nál kezdi és végigmegy az összes számlán. Amikor eléri az utolsó validátort, akkor a ciklus újra elindul.
 </InfoBanner>
 
-#### A számlák ellenőrzése visszavonási szempontból {#checking-an-account-for-withdrawals}
+#### A számlák ellenőrzése visszavonási szempontból \{#checking-an-account-for-withdrawals}
 
 Miközben a blokk javaslója a validátorokat ellenőrzi a lehetséges visszavonások miatt, minden validátornál néhány kérdéssel ellenőrzi, hogy kell-e visszavonást indítani, és mennyi ETH-t érint ez.
 
@@ -101,11 +101,11 @@ Csak két döntés vagy cselekvés van, amit a validátor üzemeltetője meglép
 - A visszavonási adatok biztosítása, hogy bármit át lehessen vezetni
 - A hálózatból való kilépés, ami egy teljes visszavonást indít el
 
-### Gáz/díjmentes {#gas-free}
+### Gáz/díjmentes \{#gas-free}
 
 A letétek visszavonása anélkül zajlik, hogy a letétesnek tranzakciót kellene indítania, amiben adott mennyiségű ETH-t von ki. Ezért **nincs gáz/tranzakciós díj**, a visszavonások pedig nem versenyeznek, hogy bekerüljenek a végrehajtási réteg blokkjába.
 
-### Milyen gyakran kapom meg a letéti jutalmakat? {#how-soon}
+### Milyen gyakran kapom meg a letéti jutalmakat? \{#how-soon}
 
 Egy blokkban maximum 16 visszavonást lehet végrehajtani. Ez alapján 115 200 validátor-visszavonást lehet egy nap alatt teljesíteni (ha minden slot eredményes). A visszavonásra nem jogosult validátárokat átugorják, ezért a teljes ellenőrzés kevesebb ideig tart.
 
@@ -125,7 +125,7 @@ Ezt a kalkulációt kiterjesztve megbecsülhetjük, hogy egy adott számú vissz
 
 Ahogy látható, a feldolgozás lelassul, ahogy egyre több validátor van a hálózaton. A kihagyott slotok száma arányosan le tudja lassítani a folyamatot, de ez a lassabb verzióját mutatja a lehetséges kimenetnek.
 
-## Gyakran ismételt kérdések {#faq}
+## Gyakran ismételt kérdések \{#faq}
 
 <ExpandableCard
 title="Amikor már megadtam egy visszavonási címet, meg lehet az változtatni?"
@@ -208,7 +208,7 @@ eventName="read more">
 Nem. Miután egy validátor kilépett, és a teljes egyenlegét kivette, az adott validátorra letétbe helyezett további összegek automatikusan átutalásra kerülnek a következő validátor-ellenőrzés során a visszavonási címre. Az ETH újbóli letétbe helyezéséhez egy új validátort kell aktiválni.
 </ExpandableCard>
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Staking Launchpad visszavonások](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon-lánc operációs műveletként intézi a visszavonásokat](https://eips.ethereum.org/EIPS/eip-4895)

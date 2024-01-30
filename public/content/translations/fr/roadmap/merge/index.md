@@ -14,7 +14,7 @@ summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,
   La Fusion a été réalisée le 15 septembre 2022. Cette étape a permis à Ethereum de passer à un consensus de preuve d'enjeu, de rendre officiellement obsolète la preuve de travail et de réduire sa consommation d'énergie d'environ 99,95 %.
 </UpgradeStatus>
 
-## Qu'est-ce que La Fusion ? {#what-is-the-merge}
+## Qu'est-ce que La Fusion ? \{#what-is-the-merge}
 
 La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/history/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Elle a également permis d'éliminer la nécessité d'un minage gourmand en énergie et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
 
@@ -24,7 +24,7 @@ Initialement, la [Chaîne phare](/roadmap/beacon-chain/) était envoyée sépar�
 
 Imaginez qu'Ethereum est un vaisseau spatial qui a été lancé avant qu'il ne soit prêt pour un voyage interstellaire. Avec la Chaîne phare, la communauté a construit un nouveau moteur et un fuselage renforcé. Après de nombreux tests, il a été temps de remplacer à chaud le nouveau moteur par l'ancien en plein vol. Cela a permis de fusionner le nouveau moteur, plus efficace, avec le vaisseau existant, prêt à franchir plusieurs années-lumière et à conquérir l'univers.
 
-## La fusion avec le réseau principal {#merging-with-mainnet}
+## La fusion avec le réseau principal \{#merging-with-mainnet}
 
 La preuve de travail a sécurisé le réseau principal Ethereum de la genèse jusqu'à La Fusion. Cela a permis à la blockchain Ethereum que nous utilisons tous de voir le jour en juillet 2015 avec toutes ses fonctionnalités familières — transactions, contrats intelligents, comptes, etc.
 
@@ -40,7 +40,7 @@ Aucun historique n'a été perdu dans la Fusion. Au fur et à mesure que le rés
 Cette transition vers la preuve d'enjeu a modifié la façon dont l'éther est émis. En savoir plus sur l'émission d'<a href="/roadmap/merge/issuance/">éthers avant et après la Fusion</a>.
 </InfoBanner>
 
-### Utilisateurs et détenteurs {#users-holders}
+### Utilisateurs et détenteurs \{#users-holders}
 
 **La Fusion n'a rien changé pour les détenteurs/utilisateurs.**
 
@@ -50,7 +50,7 @@ Malgré le passage de la preuve de travail vers la preuve d'enjeu, tout l'histor
 
 [En savoir plus sur la sécurité et Ethereum](/security/#eth2-token-scam)
 
-### Opérateurs de nœuds et développeurs de dApps {#node-operators-dapp-developers}
+### Opérateurs de nœuds et développeurs de dApps \{#node-operators-dapp-developers}
 
 <ExpandableCard
 title="Opérateurs et fournisseurs de nœuds de mise en jeu"
@@ -105,15 +105,15 @@ Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="
 
 </ExpandableCard>
 
-## La Fusion et la consommation énergétique {#merge-and-energy}
+## La Fusion et la consommation énergétique \{#merge-and-energy}
 
 La Fusion marque la fin de la preuve de travail pour Ethereum, et le début de l'ère d'un Ethereum plus durable et plus écologique. La consommation énergétique d'Ethereum a chuté d'environ 99,95 %, faisant de l'Ethereum une blockchain verte. Apprenez-en plus à propos de [la consommation énergétique d'Ethereum](/energy-consumption/).
 
-## La Fusion et la fragmentation {#merge-and-scaling}
+## La Fusion et la fragmentation \{#merge-and-scaling}
 
 La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans la [vision d'Ethereum](/roadmap/vision/).
 
-## Les idées fausses sur La Fusion {#misconceptions}
+## Les idées fausses sur La Fusion \{#misconceptions}
 
 <ExpandableCard
 title="Idée reçue : &quot;L'exécution d'un nœud nécessite la mise en jeu de 32 ETH.&quot;"
@@ -178,7 +178,7 @@ Cela empêche un exode massif de fonds misés. En outre, cela empêche un attaqu
 L'APR a été rendue dynamique intentionnellement, afin de permettre aux stakers de trouver un équilibre concernant le montant de la rémunération qu'ils souhaitent percevoir pour aider à sécuriser le réseau. Si le taux est trop bas, alors les validateurs pourront se retirer en suivant un taux limité par le protocole. Peu à peu, cela permettra d'élever l'APR pour tous ceux qui restent, attirant encore une fois de nouveaux stakers ou en permettant le retour d'anciens validateurs.
 </ExpandableCard>
 
-## Que devient « Eth2 » ? {#eth2}
+## Que devient « Eth2 » ? \{#eth2}
 
 Le terme « Eth2 » est obsolète. Après avoir fusionné « Eth1 » et « Eth2 » dans une seule chaîne, il n'est plus nécessaire de faire la distinction entre deux réseaux Ethereum ; il n'existe plus qu'Ethereum.
 
@@ -191,11 +191,11 @@ Ces mises à jour d'ordre terminologique ne concernent que les conventions de no
 
 [En savoir plus sur le changement de nom « Eth2 »](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Relation entre les mises à niveau {#relationship-between-upgrades}
+## Relation entre les mises à niveau \{#relationship-between-upgrades}
 
 Les mises à niveau Ethereum sont plus ou moins interdépendantes. Alors résumons comment la fusion est liée aux autres mises à niveau.
 
-### La Fusion et la chaîne phare {#merge-and-beacon-chain}
+### La Fusion et la chaîne phare \{#merge-and-beacon-chain}
 
 La Fusion représente l'adoption formelle de la Chaîne phare comme nouvelle couche de consensus pour la couche d'exécution sur le réseau principal d'origine. Depuis La Fusion, les validateurs sont affectés au réseau principal sécurisé d'Ethereum et le minage par [preuve de travail](/developers/docs/consensus-mechanisms/pow/) n'est plus un moyen valide de production de blocs.
 
@@ -205,13 +205,13 @@ Les blocs sont dès lors proposés par validation des nœuds qui ont misés l'ET
   La Chaîne phare
 </ButtonLink>
 
-### La Fusion et la mise à niveau de Shanghai {#merge-and-shanghai}
+### La Fusion et la mise à niveau de Shanghai \{#merge-and-shanghai}
 
 Afin de simplifier et de permettre une transition aussi rapide et réussie que possible vers le système de preuve d'enjeu, la mise à jour vers La Fusion n'intègre pas certaines fonctionnalités anticipées telles que, par exemple, la possibilité de retirer les ETH bloqués sur la chaîne phare. Cette fonctionnalité a été activée séparément avec la mise à niveau Shanghai/Capella.
 
 Pour ceux qui sont curieux, apprenez-en plus sur [Ce qui se passe après la fusion](https://youtu.be/7ggwLccuN5s?t=101), une présentation par Vitalik lors de l'événement ETHGlobal d'avril 2021.
 
-### La Fusion et la fragmentation {#merge-and-data-sharding}
+### La Fusion et la fragmentation \{#merge-and-data-sharding}
 
 Initialement, l'objectif était de travailler sur la fragmentation avant la Fusion afin d'optimiser l'évolutivité d'Ethereum. Cela dit, avec l'expansion des [solutions d'évolutivité de la couche 2](/layer-2/), la priorité a été de passer de la preuve de travail à la preuve d'enjeu.
 
@@ -221,7 +221,7 @@ Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du d�
   Fragmentation
 </ButtonLink>
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 <MergeArticleList />
 

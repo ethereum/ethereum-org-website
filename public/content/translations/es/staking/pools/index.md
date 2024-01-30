@@ -13,13 +13,13 @@ summaryPoints:
   - Almacene tókenes de participación en su propia cartera
 ---
 
-## ¿Qué son las participaciones agrupadas? {#what-are-staking-pools}
+## ¿Qué son las participaciones agrupadas? \{#what-are-staking-pools}
 
 Las participaciones agrupadas son un enfoque colaborativo que permite a muchas personas con pequeñas cantidades de ETH obtener los 32 ETH necesarios para activar un conjunto de claves de validación. El protocolo no permite por defecto la funcionalidad de agrupación, por lo que se han creado soluciones por separado para satisfacer esta necesidad.
 
 Algunas agrupaciones operan utilizando contratos inteligentes, estos permiten depositar fondos en un contrato, que gestiona y rastrea su participación de forma fiable, y se emite un token que representa este valor. Puede que otras agrupaciones no comprendan contratos inteligentes y en su lugar se medien fuera de la red.
 
-## ¿Por qué debería participar en una agrupación? {#why-stake-with-a-pool}
+## ¿Por qué debería participar en una agrupación? \{#why-stake-with-a-pool}
 
 Además de las ventajas que hemos descrito en nuestra [introducción a las participaciones](/staking/), participar en una agrupación supone una serie de ventajas distintas.
 
@@ -31,7 +31,7 @@ Además de las ventajas que hemos descrito en nuestra [introducción a las parti
 
 <StakingComparison page="pools" />
 
-## Qué hay que tener en cuenta {#what-to-consider}
+## Qué hay que tener en cuenta \{#what-to-consider}
 
 El protocolo de ETH no admite de forma original las participaciones agrupadas o delegadas, pero dada la demanda de los usuarios de apostar menos de 32 ETH, se ha creado un número creciente de soluciones para satisfacer esta demanda.
 
@@ -45,7 +45,7 @@ Los indicadores de atributos se utilizan a continuación para señalar los punto
 
 <StakingConsiderations page="pools" />
 
-## Explore las participaciones agrupadas {#explore-staking-pools}
+## Explore las participaciones agrupadas \{#explore-staking-pools}
 
 Existe una gran variedad de opciones disponibles para ayudarle con su configuración. Utilice los indicadores anteriores para guiarse a través de las herramientas siguientes.
 
@@ -57,7 +57,7 @@ Es importante elegir un servicio que se tome en serio la [diversidad de clientes
 
 ¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
 
-## Preguntas más frecuentes {#faq}
+## Preguntas más frecuentes \{#faq}
 
 <ExpandableCard title="¿Cómo puedo ganar recompensas?">
 Por lo general, los tókenes de participación ERC-20 se emiten a los participantes y representan el valor de sus ETH apostados y las recompensas. Tenga en cuenta que las diferentes agrupaciones repartirán las recompensas de las participaciones entre sus usuarios a través de métodos ligeramente diferentes, pero siempre se reparten.
@@ -79,7 +79,7 @@ A diferencia de los intercambios centralizados, muchas otras opciones de partici
 Algunas opciones de agrupamiento están más descentralizadas que otras cuando se trata de los nodos que las respaldan. Para promover la salud y la descentralización de la red, siempre se anima a los participantes a seleccionar un servicio de agrupación que permita un conjunto descentralizado de operadores de nodos sin permisos.
 </ExpandableCard>
 
-## Para profundizar sobre el tema {#further-reading}
+## Para profundizar sobre el tema \{#further-reading}
 
 - [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [Participaciones con RocketPool: visión general de las participaciones](https://docs.rocketpool.net/guides/staking/overview.html) - _Documentos de RocketPool_

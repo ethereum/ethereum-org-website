@@ -4,7 +4,7 @@ description:
 lang: id
 ---
 
-## Pendahuluan {#introduction}
+## Pendahuluan \{#introduction}
 
 **Apa itu Token Non-Fungible?**
 
@@ -16,13 +16,13 @@ ERC-721 memperkenalkan sebuah standar untuk NFT, dengan kata lain, tipe Token in
 
 Ya! Semua NFT memiliki variabel `uint256` yang disebut `tokenId`, sehingga untuk Kontrak ERC-721 mana pun, pasangan `contract address, uint256 tokenId` harus bersifat unik secara global. Anggap saja, dApp bisa memiliki "konverter" yang menggunakan `tokenId` sebagai input dan output gambar dari sesuatu yang keren, seperti zombi, senjata, kemampuan, atau anak kucing yang menakjubkan!
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 - [Akun](/developers/docs/accounts/)
 - [Kontrak Pintar](/developers/docs/smart-contracts/)
 - [Standar token](/developers/docs/standards/tokens/)
 
-## Tubuh {#body}
+## Tubuh \{#body}
 
 ERC-721 (Ethereum Request for Comments 721), yang diusulkan oleh William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs pada Januari 2018, adalah Standar Token yang Tidak Dapat Dipertukarkan yang menerapkan API untuk token di dalam Kontrak Pintar.
 
@@ -32,7 +32,7 @@ Jika Kontrak Pintar menerapkan metode dan aksi berikut, kontrak itu dapat disebu
 
 Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-### Metode {#methods}
+### Metode \{#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Aksi {#events}
+### Aksi \{#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ Dari [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Contoh {#web3py-example}
+### Contoh \{#web3py-example}
 
 Mari kita lihat bagaimana sebuah Standar begitu penting untuk mempermudah pemeriksaan Kontrak Token ERC-721 di Ethereum. Kita hanya memerlukan Application Binary Interface (ABI) Kontrak untuk membuat antarmuka untuk Token ERC-721 mana pun. Seperti yang dapat Anda lihat di bawah, kita akan menggunakan satu ABI yang disederhanakan, untuk membuatnya menjadi contoh bergesekan rendah.
 
-#### Contoh Web3.py {#web3py-example}
+#### Contoh Web3.py \{#web3py-example}
 
 Pertama-tama, pastikan Anda telah menginstal pustaka Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## NFT Populer {#popular-nfts}
+## NFT Populer \{#popular-nfts}
 
 - [Pelacak NFT Etherscan](https://etherscan.io/tokens-nft) mendaftarkan NFT populer di Ethereum berdasarkan volume transfer.
 - [CryptoKitties](https://www.cryptokitties.co/) adalah sebuah game yang berpusat pada mahluk yang dapat dikembangbiakkan, dikoleksi, dan begitu menggemaskan yang kita sebut CryptoKitties.
@@ -235,7 +235,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/) adalah sebuah TCG pada blockchain Ethereum yang menggunakan NFT untuk membawa kepemilikan asli ke aset dalam game.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) adalah koleksi dari 10.000 NFT unik, yang, selain merupakan karya seni langkah yang terbukti, bertindak sebagai token keanggotaan klub, yang menyediakan fasilitas dan keuntungan yang bertambah seiring dengan waktu sebagai hasil dari usaha komunitas.
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [EIP-721: Standar Token Non-Fungible ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - Dokumen ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)

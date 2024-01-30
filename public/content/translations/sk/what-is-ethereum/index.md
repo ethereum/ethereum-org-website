@@ -4,7 +4,7 @@ description: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte
 lang: sk
 ---
 
-# Čo je to Ethereum? {#what-is-ethereum}
+# Čo je to Ethereum? \{#what-is-ethereum}
 
 Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým prehľadom.
 

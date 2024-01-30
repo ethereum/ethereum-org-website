@@ -9,13 +9,13 @@ Running your own node provides you various benefits, opens new possibilities, an
 
 Note that after [The Merge](/roadmap/merge), two clients are required to run an Ethereum node; an **execution layer (EL)** client and a **consensus layer (CL)** client. This page will show how to install, configure and connect these two clients to run an Ethereum node.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 You should understand what an Ethereum node is and why you might want to run a client. This is covered in [Nodes and clients](/developers/docs/nodes-and-clients/).
 
 If you're new to the topic of running a node, or looking for a less technical path, we recommend first checking out our user-friendly introduction on [running an Ethereum node](/run-a-node).
 
-## Choosing an approach {#choosing-approach}
+## Choosing an approach \{##choosing-approach}
 
 The first step in spinning up your node is choosing your approach. Based on requirements and various possibilities, you must select the client implementation (of both execution and consensus clients), the environment (hardware, system), and the parameters for client settings.
 
@@ -31,9 +31,9 @@ When the node is running and syncing, you are ready to [use it](#using-the-node)
 
 ![Client setup](./diagram.png)
 
-### Environment and hardware {#environment-and-hardware}
+### Environment and hardware \{##environment-and-hardware}
 
-#### Local or cloud {#local-vs-cloud}
+#### Local or cloud \{##local-vs-cloud}
 
 Ethereum clients are able to run on consumer grade computers and don't require any special hardware, like mining machines for example. Therefore, you have various options for deploying the node based on your needs.
 To simplify, let's think about running a node on both a local physical machine and a cloud server:
@@ -51,7 +51,7 @@ To simplify, let's think about running a node on both a local physical machine a
 
 Both options have different advantages summed up above. If you are looking for a cloud solution, in addition to many traditional cloud computing providers, there are also services focused on deploying nodes. Check out [nodes as a service](/developers/docs/nodes-and-clients/nodes-as-a-service/) for more options on hosted nodes.
 
-#### Hardware {#hardware}
+#### Hardware \{##hardware}
 
 However, a censorship-resistant, decentralized network should not rely on cloud providers. Instead, running your node on your own local hardware is healthier for the ecosystem. [Estimations](https://www.ethernodes.org/networkType/Hosting) show a large share of nodes run on the cloud, which could become a single point of failure.
 
@@ -59,7 +59,7 @@ Ethereum clients can run on your computer, laptop, server, or even a single-boar
 
 Using your own hardware can be very easy. There are many simple options as well as advanced setups for more technical people. So let's look into the requirements and means for running Ethereum clients on your machine.
 
-#### Requirements {#requirements}
+#### Requirements \{##requirements}
 
 Hardware requirements differ by client but generally are not that high since the node just needs to stay synced. Don't confuse it with mining, which requires much more computing power. Sync time and performance do improve with more powerful hardware however.
 
@@ -102,26 +102,26 @@ The sync mode and client you choose will affect space requirements, but we've es
 
 For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
 
-#### Plug-and-play solutions {#plug-and-play}
+#### Plug-and-play solutions \{##plug-and-play}
 
 The easiest option for running a node with your own hardware is using plug-and-play boxes. Preconfigured machines from vendors offer the most straightforward experience: order, connect, run. Everything is preconfigured and runs automatically with an intuitive guide and dashboard for monitoring and controlling the software.
 
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum on a single-board computer {#ethereum-on-a-single-board-computer}
+#### Ethereum on a single-board computer \{##ethereum-on-a-single-board-computer}
 
 An easy and cheap way of running an Ethereum node is to use a single board computer, even with an ARM architecture like the Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) provides easy-to-run images of multiple execution and consensus client for Raspberry Pi and other ARM boards.
 
 Small, affordable and efficient devices like these are ideal for running a node at home but keep in mind their limited performance.
 
-## Spinning up the node {#spinning-up-node}
+## Spinning up the node \{##spinning-up-node}
 
 The actual client setup can be done either with automated launchers or manually, setting up client software directly.
 
 For less advanced users, the recommended approach is to use a launcher, software that guides you through the installation and automates the client setup process. However, if you have some experience of using a terminal, the steps for manual setup should be simple to follow.
 
-### Guided setup {#automatized-setup}
+### Guided setup \{##automatized-setup}
 
 Multiple user-friendly projects aim to improve the experience of setting up a client. These launchers provide automatic client installation and configuration, with some even offering a graphical interface for guided setup and monitoring of clients.
 
@@ -133,13 +133,13 @@ Below are a few projects which can help you install and control clients just wit
 - [NiceNode](https://www.nicenode.xyz/) - Launcher with a straightforward user experience to run a node on your computer. Just choose clients and start them with a few clicks. Still in development.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - Node setup tool which automatically generates a Docker configuration using CLI wizard. Written in Go by Nethermind.
 
-### Manual clients setup {#manual-setup}
+### Manual clients setup \{##manual-setup}
 
 The other option is to download, verify, and configure the client software manually. Even if some clients offer a graphical interface, a manual setup still requires basic skills with the terminal but offers much more versatility.
 
 As explained before, setting up your own Ethereum node will require running a pair of consensus and execution clients. Some clients might include a light client of the other kind and sync without any other software needed. However, full trustless verification requires both implementations.
 
-#### Getting the client software {#getting-the-client}
+#### Getting the client software \{##getting-the-client}
 
 First, you need to obtain your preferred [execution client](/developers/docs/nodes-and-clients/#execution-clients) and [consensus client](/developers/docs/nodes-and-clients/#consensus-clients) software.
 
@@ -184,7 +184,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Client setup {#client-setup}
+#### Client setup \{##client-setup}
 
 After installing, downloading, or compiling the client software, you are ready to run it. This only means it has to be executed with the proper configuration. Clients offer rich configuration options, which can enable various features.
 
@@ -196,7 +196,7 @@ For testing purposes, you might prefer to run a client on one of the testnet net
 
 Examples of running execution clients with basic configuration can be found in next section.
 
-#### Starting the execution client {#starting-the-execution-client}
+#### Starting the execution client \{##starting-the-execution-client}
 
 Before starting the Ethereum client software, perform a last check that your environment is ready. For example, make sure:
 
@@ -218,7 +218,7 @@ This token is generated automatically by the client software, but in some cases,
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Running an execution client {#running-an-execution-client}
+#### Running an execution client \{##running-an-execution-client}
 
 This section will guide you through starting execution clients. It only serves as an example of a basic configuration, which will start the client with these settings:
 
@@ -299,7 +299,7 @@ Nethermind docs offer a [complete guide](https://docs.nethermind.io/nethermind/f
 
 An execution client will initiate its core functions, chosen endpoints, and start looking for peers. After successfully discovering peers, the client starts synchronization. The execution client will await a connection from consensus client. Current blockchain data will be available once the client is successfully synced to the current state.
 
-#### Starting the consensus client {#starting-the-consensus-client}
+#### Starting the consensus client \{##starting-the-consensus-client}
 
 The consensus client must be started with the right port configuration to establish a local RPC connection to the execution client. The consensus clients have to be run with the exposed execution client port as configuration argument.
 
@@ -373,7 +373,7 @@ teku --network mainnet \
 
 When a consensus client connects to the execution client to read the deposit contract and identify validators, it also connects to other Beacon Node peers and begins syncing consensus slots from genesis. Once the Beacon Node reaches the current epoch, the Beacon API becomes usable for your validators. Learn more about [Beacon Node APIs](https://eth2docs.vercel.app/).
 
-### Adding Validators {#adding-validators}
+### Adding Validators \{##adding-validators}
 
 A consensus client serves as a Beacon Node for validators to connect. Each consensus client has its own validator software described in detail in its respective documentation.
 
@@ -383,7 +383,7 @@ The easiest way to get started with staking and validator key generation is to u
 
 Look into [staking page](/staking) for an overview about staking options.
 
-### Using the node {#using-the-node}
+### Using the node \{##using-the-node}
 
 Execution clients offer [RPC API endpoints](/developers/docs/apis/json-rpc/) that you can use to submit transactions, interact with or deploy smart contracts on the Ethereum network in various ways:
 
@@ -395,7 +395,7 @@ Different clients have different implementations of the RPC endpoints. But there
 
 The consensus clients all expose a [Beacon API](https://ethereum.github.io/beacon-APIs) that can be used to check the status of the consensus client or download blocks and consensus data by sending requests using tools such as [Curl](https://curl.se). More information on this can be found in the documentation for each consensus client.
 
-#### Reaching RPC {#reaching-rpc}
+#### Reaching RPC \{##reaching-rpc}
 
 The default port for the execution client JSON-RPC is `8545` but you can modify the ports of local endpoints in the configuration. By default, the RPC interface is only reachable on the localhost of your computer. To make it remotely accessible, you might want to expose it to the public by changing the address to `0.0.0.0`. This will make it reachable over local network and public IP addresses. In most cases you'll also need to set up port forwarding on your router.
 
@@ -411,11 +411,11 @@ To do this, you have to create your own [onion service](https://community.torpro
 
 Lastly, and one of the most popular ways to provide access to internal networks is through a VPN connection. Depending on your use case and the quantity of users needing access to your node, a secure VPN connection might be an option. [OpenVPN](https://openvpn.net/) is a full-featured SSL VPN which implements OSI layer 2 or 3 secure network extension using the industry standard SSL/TLS protocol, supports flexible client authentication methods based on certificates, smart cards, and/or username/password credentials, and allows user or group-specific access control policies using firewall rules applied to the VPN virtual interface.
 
-### Operating the node {#operating-the-node}
+### Operating the node \{##operating-the-node}
 
 You should regularly monitor your node to make sure it's running properly. You may need to do occasional maintenance.
 
-#### Keeping a node online {#keeping-node-online}
+#### Keeping a node online \{##keeping-node-online}
 
 Your node doesn't have to be online all the time, but you should keep it online as much as possible to keep it in sync with the network. You can shut it down to restart it, but keep in mind that:
 
@@ -425,11 +425,11 @@ Your node doesn't have to be online all the time, but you should keep it online 
 
 _This doesn't apply on consensus layer validator nodes._ Taking your node offline will affect all services dependent on it. If you are running a node for _staking_ purposes you should try to minimize downtime as much as possible.
 
-#### Creating client services {#creating-client-services}
+#### Creating client services \{##creating-client-services}
 
 Consider creating a service to run your clients automatically on startup. For example, on Linux servers, good practice would be to create a service, e.g. with `systemd`, that executes the client with proper config, under a user with limited privileges and automatically restarts.
 
-#### Updating clients {#updating-clients}
+#### Updating clients \{##updating-clients}
 
 You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client versions.
 
@@ -439,17 +439,17 @@ Updating clients is very simple. Each client has specific instructions in their 
 
 Each client implementation has a human-readable version string used in the peer-to-peer protocol but is also accessible from the command line. This version string lets users check they are running the correct version and allows block explorers and other analytical tools interested in quantifying the distribution of specific clients over the network. Please refer to the individual client documentation for more information about version strings.
 
-#### Running additional services {#running-additional-services}
+#### Running additional services \{##running-additional-services}
 
 Running your own node lets you use services that require direct access to Ethereum client RPC. These are services built on top of Ethereum like [layer 2 solutions](/developers/docs/scaling/#layer-2-scaling), backend for wallets, block explorers, developer tools and other Ethereum infrastructure.
 
-#### Monitoring the node {#monitoring-the-node}
+#### Monitoring the node \{##monitoring-the-node}
 
 To properly monitor your node, consider collecting metrics. Clients provide metrics endpoints so you can get comprehensive data about your node. Use tools like [InfluxDB](https://www.influxdata.com/get-influxdb/) or [Prometheus](https://prometheus.io/) to create databases which you can turn into visualizations and charts in software like [Grafana](https://grafana.com/). There are many setups for using this software and different Grafana dashboards for you to visualise your node and the network as a whole. For example, check out [tutorial on monitoring Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/).
 
 As part of your monitoring, make sure to keep an eye on your machine's performance. During your node's initial sync, the client software may be very heavy on CPU and RAM. In addition to Grafana, you can use the tools your OS offers like `htop` or `uptime` to do this.
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [Ethereum Staking Guides](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, updated often_
 - [Guide | How to setup a validator for Ethereum staking on mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew, updated regularly_
@@ -460,7 +460,7 @@ As part of your monitoring, make sure to keep an eye on your machine's performan
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 May 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8 July 2020_
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [Blocks](/developers/docs/blocks/)

@@ -6,11 +6,11 @@ lang: pt-br
 
 Blocos são lotes de transações com um hash do bloco anterior na cadeia. Isso une os blocos (em uma cadeia) porque os hashes são criptograficamente derivados dos dados do bloco. Isso previne fraudes, porque uma mudança em qualquer bloco no histórico invalidaria todos os blocos subsequentes, alteraria todos os hashes subsequentes e todos que estivessem executando o blockchain notariam.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Os blocos são um tópico muito amigável para iniciantes. Mas para ajudá-lo a entender melhor esta página, recomendamos que você primeiro leia [Contas](/developers/docs/accounts/), [Transações](/developers/docs/transactions/)e nossa [introdução ao Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Por que blocos? {#why-blocks}
+## Por que blocos? \{#why-blocks}
 
 Para garantir que todos os participantes da rede Ethereum mantenham um estado sincronizado e concordem com o histórico preciso de transações, nós processamos lotes de transações em blocos. Isso significa que dezenas (ou centenas) de transações são confirmadas, acordadas e sincronizadas de uma só vez.
 
@@ -18,13 +18,13 @@ Para garantir que todos os participantes da rede Ethereum mantenham um estado si
 
 Ao espaçar as confirmações, damos a todos os participantes da rede tempo suficiente para chegar a um consenso: mesmo que as solicitações de transação ocorram dezenas de vezes por segundo, os blocos só são criados e confirmados na Ethereum uma vez a cada doze segundos.
 
-## Como os blocos funcionam {#how-blocks-work}
+## Como os blocos funcionam \{#how-blocks-work}
 
 Para preservar o histórico de transação, os blocos são estritamente ordenados (cada novo bloco criado contém uma referência ao seu bloco de origem), e as transações dentro dos blocos também são ordenadas estritamente. Exceto em casos raros, a qualquer momento, todos os participantes da rede concordam com o número exato e o histórico de blocos, e estão trabalhando para processar em lote as solicitações atuais de transações para o bloco seguinte.
 
 Uma vez que um bloco é agregado por um validador selecionado aleatoriamente na rede, ele é propagado pelo resto da rede. Em seguida, todos os nós adicionam esse bloco ao final de sua blockchain e um novo validador é selecionado para criar o próximo bloco. O processo exato de montagem de blocos e o processo de compromisso/consenso são atualmente especificados pelo protocolo de “prova de participação” da Ethereum.
 
-## Protocolo de prova de participação {#proof-of-work-protocol}
+## Protocolo de prova de participação \{#proof-of-work-protocol}
 
 Prova de participação significa o seguinte:
 
@@ -35,7 +35,7 @@ Prova de participação significa o seguinte:
 
 [Mais sobre prova de participação](/developers/docs/consensus-mechanisms/pos)
 
-## O que há em um bloco? {#block-anatomy}
+## O que há em um bloco? \{#block-anatomy}
 
 Há muitas informações contidas em um bloco. No nível mais alto, um bloco contém os seguintes campos:
 
@@ -131,21 +131,21 @@ A lista `withdrawals` contém objetos `withdrawal` estruturados da seguinte form
 | `index`          | valor do índice da retirada   |
 | `validatorIndex` | valor do índice do validador  |
 
-## Tempo de bloco {#block-time}
+## Tempo de bloco \{#block-time}
 
 O tempo do bloco refere-se ao tempo de separação dos blocos. No Ethereum, o tempo é dividido em doze unidades de segundos chamadas de "espaços". Em cada espaço, um único validador é selecionado para propor um bloco. Supondo que todos os validadores estejam online e totalmente funcionais, haverá um bloco em cada espaço, o que significa que o tempo de um bloco é de 12s. No entanto, ocasionalmente, os validadores podem estar offline quando chamados para propor um bloco, o que significa que os espaços podem às vezes ficar vazios.
 
 Essa implementação difere dos sistemas baseados em prova de trabalho, na qual os tempos de bloco são probabilísticos e ajustados de acordo com a dificuldade da meta de mineração do protocolo. O [tempo médio do bloco](https://etherscan.io/chart/blocktime) do Ethereum é um exemplo perfeito disso, no qual a transição de prova de trabalho para prova de participação pode ser claramente inferida com base na consistência do novo tempo do bloco de 12s.
 
-## Tamanho do bloco {#block-size}
+## Tamanho do bloco \{#block-size}
 
 Uma observação final importante é que os blocos em si são delimitados por tamanho. Cada bloco tem um tamanho alvo de 15 milhões de gás, mas o tamanho dos blocos aumentar ou diminui de acordo com as demandas da rede, até o limite do bloco de 30 milhões de gás (2 vezes o tamanho do bloco de destino). A quantidade total de gás gasto por todas as transações no bloco deve ser inferior ao limite de gás do bloco. Isso é importante porque garante que os blocos não possam ser arbitrariamente grandes. Se os blocos pudessem ser arbitrariamente grandes, os nós completos com menos desempenho iriam gradualmente deixar de conseguir acompanhar a rede devido aos requisitos de espaço e velocidade. Quanto maior o bloco, maior o poder de computação necessário para processá-los a tempo para o próximo espaço. Essa força centralizadora é impedida com a limitação do tamanho dos blocos.
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 _Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
-## Tópicos relacionados {#related-topics}
+## Tópicos relacionados \{#related-topics}
 
 - [Transações](/developers/docs/transactions/)
 - [Gás](/developers/docs/gas/)

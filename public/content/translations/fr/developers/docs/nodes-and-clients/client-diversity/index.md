@@ -7,27 +7,27 @@ sidebarDepth: 2
 
 Le comportement d'un nœud Ethereum est contrôlé par le logiciel client qu'il exécute. Il existe plusieurs clients Ethereum de niveau production, chacun développé et mis à jour dans différentes langues par des équipes séparées. Les clients sont créés selon une spécification commune qui garantit que les clients communiquent entre eux de manière transparente, ont les mêmes fonctionnalités et offrent une expérience utilisateur équivalente. Cependant, pour le moment, la répartition des clients entre les nœuds n'est pas assez équilibrée pour réaliser cette fortification du réseau à son plein potentiel. Idéalement, les utilisateurs se divisent à peu près équitablement entre les différents clients pour apporter le plus de diversité possible au réseau.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Si vous ne maîtrisez pas déjà ce que sont les nœuds et les clients, consultez la page [nœuds et clients](/developers/docs/nodes-and-clients/). [Exécution](/glossary/#execution-layer) et [couches de consensus](/glossary/#consensus-layer) sont définies dans le glossaire.
 
-## Pourquoi existe-t-il différents clients ? {#why-multiple-clients}
+## Pourquoi existe-t-il différents clients ? \{#why-multiple-clients}
 
 De multiples clients, développés et mis à jour de manière indépendante, existent parce que la diversité des clients rend le réseau plus résistant aux attaques et aux bogues. La multitude de clients est une force propre à Ethereum - d'autres blockchains dépendent de l'infaillibilité d'un seul client. Cependant, il ne suffit pas de disposer de plusieurs clients, ceux-ci doivent être adoptés par la communauté et la totalité des nœuds actifs répartis relativement égale entre eux.
 
-## Pourquoi la diversité des clients est-elle importante ? {#client-diversity-importance}
+## Pourquoi la diversité des clients est-elle importante ? \{#client-diversity-importance}
 
 Disposer de nombreux clients développés et mis à jour de façon indépendante est vital pour la bonne santé d'un réseau décentralisé. Voyons pourquoi.
 
-### Bogues {#bugs}
+### Bogues \{#bugs}
 
 Un bogue dans un client individualisé est moins risqué pour le réseau lorsqu'il représente une minorité de nœuds Ethereum. Lorsque les nœuds sont répartis de façon à peu près égale entre de nombreux clients, la probabilité que la plupart des clients souffrent d'un problème commun est faible et, par conséquent, le réseau est plus robuste.
 
-### Résistance aux attaques {#resilience}
+### Résistance aux attaques \{#resilience}
 
 La diversité des clients offre également une résilience aux attaques. Par exemple, une attaque qui viserait [un client spécifique](https://twitter.com/vdWijden/status/1437712249926393858) sur une branche particulière de la chaîne a peu de chance de réussir parce que les autres clients sont peu susceptibles d'être exploités de la même manière et que la chaîne canonique reste intacte. La faible diversité des clients augmente le risque associé à un piratage sur le client dominant. La diversité des clients s'est déjà avérée être une défense efficace contre les attaques malveillantes sur le réseau, par exemple l'attaque de Shanghai par déni de service en 2016 a pu être menée parce que les attaquants ont réussi à tromper le client dominant (Geth) en exécutant une opération sur disque i/o des dizaines de milliers de fois par bloc. Puisque des clients alternatifs étaient également en ligne et ne partageaient pas la vulnérabilité, Ethereum a pu résister à l'attaque et continuer à fonctionner pendant que la vulnérabilité de Geth était corrigée.
 
-### Finalité de la preuve d'enjeu {#finality}
+### Finalité de la preuve d'enjeu \{#finality}
 
 Un bug dans un client de consensus avec plus de 33 % des nœuds Ethereum pourrait empêcher la finalisation couche de consensus, de sorte que les utilisateurs ne pourraient pas avoir confiance dans le fait que les transactions ne seraient pas annulées ou modifiées à un moment donné. Cela serait problématique pour de nombreuses applications basées sur Ethereum, en particulier pour la DeFi.
 
@@ -35,11 +35,11 @@ Un bug dans un client de consensus avec plus de 33 % des nœuds Ethereum pourrai
 
 Bien que ces scénarios soient peu probables, l’écosystème Ethereum peut atténuer leurs risques en éliminant la distribution des clients sur les nœuds actifs. Idéalement, aucun client de consensus ne devrait pouvoir atteindre 33 % du total des nœuds.
 
-### Partager les responsabilités {#responsibility}
+### Partager les responsabilités \{#responsibility}
 
 Le fait d'avoir des clients majoritaires a aussi un coût humain. Il impose une pression et une responsabilité excessives à une petite équipe de développement. Plus la diversité des clients est limitée, plus la charge de responsabilité est importante pour les développeurs qui maintiennent le client majoritaire. La répartition de cette responsabilité entre plusieurs équipes est bénéfique pour la bonne santé du réseau de nœuds d'Ethereum et de son réseau d'utilisateurs.
 
-## Diversité actuelle de clients {#current-client-diversity}
+## Diversité actuelle de clients \{#current-client-diversity}
 
 ![Graphique Pie montrant la diversité des clients](./client-diversity.png) _Schéma issu des données de [ethernodes.org](https://ethernodes.org) et [clientdiversity.org](https://clientdiversity.org/)_
 
@@ -49,15 +49,15 @@ Les données de la couche d'exécution ont été obtenues à partir de [Ethernod
 
 Des données mises à jour concernant la diversité des clients pour la couche de consensus sont maintenant disponibles sur [clientdiversity.org](https://clientdiversity.org/).
 
-## Couche d'exécution {#execution-layer}
+## Couche d'exécution \{#execution-layer}
 
 Jusqu’à présent, la conversation autour de la diversité des clients s’est principalement concentrée sur la couche de consensus. Cependant, le client d'exécution [Geth](https://geth.ethereum.org) compte actuellement pour environ 85 % de l'ensemble de tous les nœuds. Ce pourcentage est problématique pour les mêmes raisons que pour les clients de consensus. Par exemple, un bogue dans Geth affectant la gestion des transactions ou la construction de blocs d'exécution peut conduire les clients de consensus à finaliser des transactions problématiques ou avec des bogues. Ainsi, Ethereum serait plus sain avec une distribution plus uniforme des clients d'exécution, idéalement sans client représentant plus de 33 % du réseau.
 
-## Utiliser un client minoritaire {#use-minority-client}
+## Utiliser un client minoritaire \{#use-minority-client}
 
 Pour résoudre le problème de la diversité des clients, il ne suffit pas que les utilisateurs individuels choisissent des clients minoritaires : il faut aussi que les pools de mineurs/validateurs et les institutions comme les principales dapps et les plateformes d'échange changent de clients. Cependant, tous les utilisateurs peuvent collaborer pour corriger le déséquilibre actuel et normaliser l'utilisation de tous les logiciels Ethereum disponibles. Après La Fusion, tous les opérateurs de nœuds seront requis pour exécuter un client d'exécution et un client de consensus. Le choix des combinaisons de clients suggérées ci-dessous contribuera à accroître la diversité des clients.
 
-### Clients d'exécution {#execution-clients}
+### Clients d'exécution \{#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
@@ -67,7 +67,7 @@ Pour résoudre le problème de la diversité des clients, il ne suffit pas que l
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
-### Clients de consensus {#consensus-clients}
+### Clients de consensus \{#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
 
@@ -81,7 +81,7 @@ Pour résoudre le problème de la diversité des clients, il ne suffit pas que l
 
 Les utilisateurs techniques peuvent aider à accélérer ce processus en rédigeant plus de tutoriels et de documentation pour les clients minoritaires et ainsi encourager leurs pairs à migrer loin des clients dominants. Des guides pour basculer vers un client de consensus minoritaire sont disponibles sur [clientdiversity.org](https://clientdiversity.org/).
 
-## Tableaux de bord relatif à la diversité des clients {#client-diversity-dashboards}
+## Tableaux de bord relatif à la diversité des clients \{#client-diversity-dashboards}
 
 Plusieurs tableaux de bord donnent des statistiques en temps réel de la diversité des clients pour la couche d'exécution et la couche de consensus.
 
@@ -93,7 +93,7 @@ Plusieurs tableaux de bord donnent des statistiques en temps réel de la diversi
 - [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Diversité des clients sur la couche de consensus d'Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [La Fusion Ethereum : Exécutez le client majoritaire à vos risques et périls !](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24 mars 2022_
@@ -103,7 +103,7 @@ Plusieurs tableaux de bord donnent des statistiques en temps réel de la diversi
 - [Diversité Ethereum et comment la résoudre (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## Sujets connexes {#related-topics}
+## Sujets connexes \{#related-topics}
 
 - [Exécuter un nœud Ethereum](/run-a-node/)
 - [Nœuds et clients](/developers/docs/nodes-and-clients/)

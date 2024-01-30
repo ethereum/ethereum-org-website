@@ -4,11 +4,11 @@ description: Cum să vă implicați în comunitatea Ethereum.
 lang: ro
 ---
 
-# Cum pot să mă implic? {#get-involved}
+# Cum pot să mă implic? \{#get-involved}
 
 Comunitatea Ethereum include persoane din medii și cu competențe diferite. Fie că sunteți un dezvoltator, un artist sau un contabil, există modalități de a vă implica. Iată o listă de sugestii care ar putea să vă ajute să începeți.
 
-## Dezvoltatori <Emoji text=":computer:" size={1} /> {#developers}
+## Dezvoltatori <Emoji text=":computer:" size={1} /> \{#developers}
 
 - Aflați despre Ethereum și testați-l la adresa [ethereum.org/developers/](/developers/)
 - [Găsiți o recompensă pe Gitcoin](https://gitcoin.co/), lucrați la o problemă tehnică mică sau mare, câștigați cripto!
@@ -18,7 +18,7 @@ Comunitatea Ethereum include persoane din medii și cu competențe diferite. Fie
 - [Lista de dorințe a Programului de sprijinire a ecosistemului](https://esp.ethereum.foundation/wishlist/) - instrumente, documentație și domenii de infrastructură pentru care Programul de sprijinire a ecosistemului caută în mod activ granturi
 - [Web3Bridge](https://www.web3bridge.com/) - alăturați-vă comunității aspirante web3, în inițiativa lor de a identifica, instrui și sprijini sute de dezvoltatori și membri ai comunității din întreaga Africă
 
-## Cercetători & Academicieni <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
+## Cercetători & Academicieni <Emoji text=":mag:" size={1} /> \{#researchers-and-academics}
 
 Aveți pregătire în matematică, criptografie sau economie? S-ar putea să vă intereseze unele din activitățile de ultimă oră care se desfășoară în cadrul ecosistemului Ethereum
 
@@ -26,61 +26,61 @@ Aveți pregătire în matematică, criptografie sau economie? S-ar putea să vă
 - [Ethresear.ch](https://ethresear.ch) - principalul forum de cercetare al lui Ethereum și cel mai influent forum din lume pentru criptoeconomie
 - [Lista de dorințe a Programului de sprijinire a ecosistemului](https://esp.ethereum.foundation/wishlist/) - domenii de cercetare pentru care Programul de psijinire a ecosistemului caută în mod activ granturi
 
-## Competențe non-tehnice <Emoji text=":briefcase:" size={1} /> {#non-technical}
+## Competențe non-tehnice <Emoji text=":briefcase:" size={1} /> \{#non-technical}
 
 Dacă nu sunteți un dezvoltator, poate fi dificil să știți de unde să începeți cu Ethereum. Iată câteva sugestii, împreună cu resursele pentru mediile profesionale specifice.
 
-### Organizați o întrunire în orașul dumneavoastră {#meetups}
+### Organizați o întrunire în orașul dumneavoastră \{#meetups}
 
 - Nu știți cum să începeți? [Rețeaua BUIDL](https://consensys.net/developers/buidlnetwork/) vă poate ajuta.
 
-### Scrieți articole despre Ethereum {#write-content}
+### Scrieți articole despre Ethereum \{#write-content}
 
 - Ethereum are nevoie de scriitori buni care îi pot explica valoarea într-un limbaj simplu, ușor de înțeles
 - Nu sunteți pregătit să vă publicați propriile articole? Gândiți-vă să contribuiți la conținutul existent pe resurse comunitare, cum ar fi, sau propuneți conținut nou pentru ethereum.org!
 
-### Oferiți-vă să luați notițe la întrunirile comunității {#take-notes}
+### Oferiți-vă să luați notițe la întrunirile comunității \{#take-notes}
 
 - Există multe întruniri ale comunității open-source, iar faptul că cineva are disponibilitatea să ia notițe este de mare ajutor. Dacă sunteți interesat, alăturați-vă la [Ethereum Cat Herders pe Discord](https://discord.com/invite/Nz6rtfJ8Cu), și prezentați-vă!
 
-### Traduceți conținut Ethereum în limba dvs. maternă {#translate-ethereum}
+### Traduceți conținut Ethereum în limba dvs. maternă \{#translate-ethereum}
 
 - ethereum.org întreține un program de traducere, care traduce site-ul web și alte resurse, în multe limbi diferite
 - Aflați cum să vă implicați [aici](/contributing/translation-program)
 
-### Rulați un nod {#run-a-node}
+### Rulați un nod \{#run-a-node}
 
 Alăturați-vă miilor de operatori de noduri pentru a contribui la creșterea descentralizării în Ethereum.
 
 - [Mai multe despre cum să rulați un nod](/developers/docs/nodes-and-clients/run-a-node/)
 
-### Mizați propriul ETH {#staking}
+### Mizați propriul ETH \{#staking}
 
 Mizându-vă propriul ETH, puteți câștiga recompense, ajutând în același timp la securizarea rețelei Ethereum.
 
 - [Mai multe despre mizare](/staking/)
 
-### Finanțați proiecte {#support-projects}
+### Finanțați proiecte \{#support-projects}
 
 Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiectele cu impact. Cu donații foarte mici, vă puteți arăta sprijinul și permite realizarea unor lucrări foarte importante.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Profesioniști în domeniul financiar & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Profesioniști în domeniul financiar & Contabili <Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
 
 - Ethereum găzduiește ecosistemul de „Finanțe descentralizate” - o rețea de protocoale și aplicații care oferă un sistem financiar alternativ. Dacă sunteți un profesionist în domeniul financiar, consultați câteva aplicații la DeFi la [Defi Llama](https://defillama.com/) sau [DeFiPrime](https://defiprime.com)
 - Sunteți contabil? Activele pe Ethereum - ETH, tokenuri, DeFi etc. - introduc multe aspecte contabile noi. Ați putea începe prin examinarea unor proiecte care urmăresc să ajute utilizatorii de criptomonede să-și rezolve & problemele legate de contabilitate, cum ar fi [Rotki](https://rotki.com/)
 
-## Managerii de produse <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
+## Managerii de produse <Emoji text=":fountain_pen:" size={1} /> \{#product-managers}
 
 - Ecosistemul Ethereum are nevoie de talentele dumneavoastră! Multe companii angajează pe posturi de manager de produs. Dacă doriți să începeți să contribuiți la un proiect open-source, luați legătura cu [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) sau [MetaCartel](https://www.metacartel.org/)
 
-## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
+## Marketing <Emoji text=":megaphone:" size={1} />‍ \{#marketing}
 
 - Există numeroase posturi de marketing și comunicare în ecosistemul Ethereum!
 
-## Locuri de muncă în Ethereum {#ethereum-jobs}
+## Locuri de muncă în Ethereum \{#ethereum-jobs}
 
 **Vreți să găsiți un loc de muncă în Ethereum?**
 
@@ -96,7 +96,7 @@ Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiecte
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 
-## Intrați într-o organizație DAO {#decentralized-autonomous-organizations-daos}
+## Intrați într-o organizație DAO \{#decentralized-autonomous-organizations-daos}
 
 „DAO-urile” sunt organizații autonome descentralizate. Aceste grupuri folosesc tehnologia Ethereum pentru a facilita organizarea și colaborarea. De exemplu, pentru a controla membrii, a vota propuneri sau a gestiona activele puse în comun. Deși organizațiile DAO sunt încă experimentale, ele vă oferă oportunități pentru a găsi grupuri cu care să vă identificați, a găsi colaboratori și a vă mări impactul asupra comunității Ethereum. [Mai multe despre DAO-uri](/dao/)
 

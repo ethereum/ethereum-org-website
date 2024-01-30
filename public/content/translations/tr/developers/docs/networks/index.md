@@ -8,21 +8,21 @@ Ethereum ağları, Ethereum protokolü kullanarak iletişim kuran bağlantılı 
 
 Ethereum hesabınız farklı ağlarda çalışacaktır, ancak hesap bakiyeniz ve işlem geçmişiniz ana Ethereum ağından taşınmayacaktır. Test amacıyla, hangi ağların mevcut olduğunu ve oynamak için test ağı ETH'sinin nasıl elde edileceğini bilmek yararlıdır. Güvenlik sebeplerinden dolayı test ağlarının ana ağlarda kullanılması veya bunun tam tersi genellikle önerilmez.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 Farklı ağları okumadan önce [Ethereum'un temellerini](/developers/docs/intro-to-ethereum/) anlamalısınız çünkü test ağları size Ethereum'un ucuz ve güvenli bir versiyonunu sunacaktır.
 
-## Genel ağlar {#public-networks}
+## Genel ağlar \{#public-networks}
 
 Genel ağlara, internet bağlantısı olan herkes dünyanın her yerinde erişebilir. Herkes halka açık bir blok zincirinde işlemleri okuyabilir veya oluşturabilir ve yürütülen işlemleri doğrulayabilir. Akranlar arasındaki mutabakat, işlemlerin dahil edilmesine ve ağın durumuna karar verir.
 
-### Ethereum Ana Ağı {#ethereum-mainnet}
+### Ethereum Ana Ağı \{#ethereum-mainnet}
 
 Mainnet, dağıtılmış defterde gerçek değer işlemlerinin gerçekleştiği birincil halka açık Ethereum üretim blok zinciridir.
 
 İnsanlar ve borsalar ETH fiyatlarını tartışırken Mainnet ETH'den bahsederler.
 
-### Ethereum Test Ağları {#ethereum-testnets}
+### Ethereum Test Ağları \{#ethereum-testnets}
 
 Mainnet'e ek olarak, genel test ağları vardır. Bunlar, protokol geliştiricileri veya akıllı sözleşme geliştiricileri tarafından, Mainnet'e dağıtımdan önce üretim benzeri bir ortamda hem protokol yükseltmelerini hem de potansiyel akıllı sözleşmeleri test etmek için kullanılan ağlardır. Bunu, üretime karşı hazırlama sunucularına bir analog olarak düşünün.
 
@@ -36,7 +36,7 @@ Test ağlarındaki ETH'nin gerçek değeri olmamalıdır; ancak nadirleşmiş ve
 
 Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sepolia ve Goerli'dir. Sepolia, sözleşme ve uygulama geliştiricilerinin uygulamalarını test etmek için kullandığı bir ağdır. Goerli ağı, protokol geliştiricilerinin ağ yükseltmelerini test etmelerine ve paydaşların doğrulayıcıları çalıştırmayı test etmelerine olanak sağlar.
 
-#### Sepolia {#sepolia}
+#### Sepolia \{#sepolia}
 
 **Sepolia uygulama geliştirme için önerilen test ağıdır**. Sepolia ağı izinli bir doğrulayıcı seti kullanır. Aslında bu oldukça yenidir, yani durum ve işlem geçmişi oldukça küçüktür. Yani bu, ağın senkronizasyon için hızlı olduğu ve ağın üzerinde düğüm çalıştırmanın düşük depolama alanı gerektirdiği anlamına gelir. Hızlıca düğüm çalıştırmak ve ağ ile doğrudan etkileşime geçmek isteyen kullanıcılar için kullanışlıdır.
 
@@ -61,7 +61,7 @@ Mevcut olarak istemci geliştiricilerin sürdürdüğü iki genel test ağı Sep
 - [Infura Sepolia Musluğu](https://www.infura.io/faucet)
 - [Chainstack Sepolia Musluğu](https://faucet.chainstack.com/sepolia-faucet)
 
-#### Goerli _(uzun vadeli destek)_ {#goerli}
+#### Goerli _(uzun vadeli destek)_ \{#goerli}
 
 _Not: [Goerli test ağı kullanımdan kaldırılmış](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) ve 2023 yılında [Holesovice](https://github.com/eth-clients/holesovice) ile değiştirilecektir. Lütfen uygulamalarınızı Sepolia'ya taşımayı düşünün._
 
@@ -90,11 +90,11 @@ Goerli doğrulama ve hisselemeyi test etme amaçlı bir test ağıdır. Goerli a
 
 Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz goerli doğrulayıcısı" başlama noktasını](https://goerli.launchpad.ethstaker.cc/en/) kullanın.
 
-### Katman 2 test ağları {#layer-2-testnets}
+### Katman 2 test ağları \{#layer-2-testnets}
 
 [Katman 2 (L2)](/layer-2/), belirli Ethereum ölçeklendirme çözümlerini tanımlamak için kullanılan toplu bir terimdir. Katman 2, Ethereum'u genişleten ve Ethereum'un güvenlik garantilerini devralan ayrı bir blok zincirdir. Katman 2 test ağları genellikle genel Ethereum test ağlarına sıkı sıkıya bağlıdır.
 
-#### Arbitrum Goerli {#arbitrum-goerli}
+#### Arbitrum Goerli \{#arbitrum-goerli}
 
 [Arbitrum](https://arbitrum.io/) için bir test ağı.
 
@@ -102,7 +102,7 @@ Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz g
 
 - [Chainlink musluğu](https://faucets.chain.link/)
 
-#### Optimistic Goerli {#optimistic-goerli}
+#### Optimistic Goerli \{#optimistic-goerli}
 
 [Optimism](https://www.optimism.io/) için test ağı.
 
@@ -111,28 +111,28 @@ Goerli test ağında bir Doğrulayıcı başlatmak için, ethstaker'ın ["ucuz g
 - [Paradigm musluğu](https://faucet.paradigm.xyz/)
 - [Coinbase Cüzdanı Musluğu | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-## Özel ağlar {#private-networks}
+## Özel ağlar \{#private-networks}
 
 Bir Ethereum ağı, düğümleri genel bir ağa (yani Ana Ağ veya bir test ağı) bağlı değilse özel bir ağ değildir. Bu bağlamda özel, korumalı veya güvenli olmaktan ziyade yalnızca ayrılmış veya izole anlamına gelir.
 
-### Geliştirme ağları {#development-networks}
+### Geliştirme ağları \{#development-networks}
 
 Bir Ethereum uygulaması geliştirmek için, dağıtmadan önce nasıl çalıştığını görmek amacıyla bunu özel bir ağda çalıştırmanız faydalı olur. Web geliştirme için bilgisayarınızda yerel bir sunucu oluşturmanıza benzer şekilde, dapp'nizi test etmek için yerel bir blok zincir örneği oluşturabilirsiniz. Bu, genel bir test ağından çok daha hızlı yinelemeye izin verir.
 
 Buna yardımcı olmak için ayrılmış projeler ve araçlar bulunuyor. [Geliştirme ağları](/developers/docs/development-networks/) hakkında daha fazla bilgi edinin.
 
-### Konsorsiyum ağları {#consortium-networks}
+### Konsorsiyum ağları \{#consortium-networks}
 
 Mutabakat süreci, güvenilen önceden tanımlanmış bir dizi düğüm tarafından kontrol edilir. Örneğin, her biri tek bir düğümü yöneten ünlü akademik kurumlardan oluşan özel bir ağ ve ağ içindeki bir imza sahibi eşiği tarafından doğrulanan bloklar.
 
 Genel bir Ethereum ağı genel internete benziyorsa, bir konsorsiyum ağı özel bir intranet gibidir.
 
-## İlgili araçlar {#related-tools}
+## İlgili araçlar \{#related-tools}
 
 - [Chainlist](https://chainlist.org/) _Cüzdanları ve sağlayıcıları uygun Zincir ve Ağ Kimliklerine bağlamak için bir EVM ağı listesi_
 - [EVM tabanlı Zincirler](https://github.com/ethereum-lists/chains) _Chainlist'i destekleyen zincir üst verisinin GitHub deposu_
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Öneri: Tahmin Edilebilir Ethereum Test Ağı Yaşam Döngüsü](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [Ethereum Test Ağlarının Gelişimi](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

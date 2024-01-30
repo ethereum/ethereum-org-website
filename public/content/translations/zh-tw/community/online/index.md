@@ -4,11 +4,11 @@ description: 一個關於以太坊生態系統的贈款計劃清單
 lang: zh-tw
 ---
 
-# 線上社群 {#online-communities}
+# 線上社群 \{#online-communities}
 
 數十萬的以太坊愛好者聚集在這些線上論壇上，分享消息、談論最近的發展、討論技術問題，並暢想未來。
 
-## 論壇 {#forums}
+## 論壇 \{#forums}
 
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - 所有有關以太坊的話題</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 以太坊中有關金融的主題，其中包含去中心化金融</SocialListItem>
@@ -19,7 +19,7 @@ lang: zh-tw
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">以太坊 Stackexchange</Link> - 以太坊開發者討論及協助</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">以太坊研究</Link> - 最具影響力的加密經濟研究留言板</SocialListItem>
 
-## 聊天室 {#chat-rooms}
+## 聊天室 \{#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">以太牧貓人組織</Link> - 提供專案管理以支援以太坊的社群</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">以太坊駭客</Link> - 由全球以太坊駭客線上社群 ETHGlobal 所管理的 Discord 聊天室</SocialListItem>
@@ -32,7 +32,7 @@ lang: zh-tw
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊技術堆棧交易所</Link> *- 問答論壇*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- 去中心化問答論壇*</SocialListItem>
 
-## YouTube 和 Twitter {#youtube-and-twitter}
+## YouTube 和 Twitter \{#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">以太坊基金會</Link> - 掌握以太坊基金會最新的資訊</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - 以太坊基金會的官方帳戶</SocialListItem>

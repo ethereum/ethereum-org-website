@@ -6,15 +6,15 @@ lang: de
 
 Ein Smart Contract ist ein Programm, das auf einer Adresse auf Ethereum läuft. Ein solcher Vertrag besteht aus Daten und Funktionen, die nach dem Erhalt einer Transaktion ausgeführt werden können. Hier ein Überblick darüber, was einen Smart Contract ausmacht.
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Sie sollten sich bereits mit [Smart Contracts](/developers/docs/smart-contracts/) vertraut gemacht haben. Die Informationen in diesem Dokument sind für Personen gedacht, die bereits mit Programmiersprachen wie JavaScript oder Python vertraut sind.
 
-## Daten {#data}
+## Daten \{#data}
 
 Alle Vertragsdaten müssen einem Ort zugewiesen werden: entweder zu `storage` oder `memory`. Speicher in einem Smart Contract zu ändern ist ein kostenintensiver Prozess. Daher sollten Sie sich überlegen, wo Ihre Daten gespeichert werden sollen.
 
-### Speicher {#storage}
+### Speicher \{#storage}
 
 Gleichbleibende Daten werden als Speicher oder Storage bezeichnet und über Zustandsvariablen dargestellt. Solche Daten werden dauerhaft auf der Blockchain gespeichert. Sie müssen den Typ deklarieren, damit der Contract beim Kompilieren verfolgen kann, wie viel Speicherplatz er auf der Blockchain benötigt.
 
@@ -52,13 +52,13 @@ Weitere Erklärungen finden Sie in folgender Dokumentation:
 - [Vyper-Typen anzeigen](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Solidity-Typen anzeigen](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Speicher {#memory}
+### Speicher \{#memory}
 
 Werte, die nur für die Lebensdauer der Ausführung einer Vertragsfunktion gespeichert werden, werden als Memory Variables (Speichervariablen) bezeichnet. Da diese nicht dauerhaft auf der Blockchain gespeichert werden, sind sie wesentlich preiswerter.
 
 Erfahren Sie mehr darüber, wie die EVM Daten speichert (Aufbewahrung, Speicher und Stack), in den [Solidity-Dokumenten](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Umgebungsvariablen {#environment-variables}
+### Umgebungsvariablen \{#environment-variables}
 
 Zusätzlich zu den Variablen, die Sie in Ihrem Vertrag definieren, gibt es einige spezielle globale Variablen. Sie werden in erster Linie verwendet, um Informationen über die Blockchain oder aktuelle Transaktion bereitzustellen.
 
@@ -69,7 +69,7 @@ Beispiele:
 | `block.timestamp` | uint256            | Aktueller Zeitstempel der Block-Epoche    |
 | `msg.sender`      | address            | Absender der Nachricht (aktueller Aufruf) |
 
-## Funktionen {#functions}
+## Funktionen \{#functions}
 
 Vereinfacht gesagt können Funktionen als Antwort auf eingehende Transaktionen Informationen erhalten oder festlegen.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - Es wird `public` deklariert. Das bedeutet, dass jeder darauf zugreifen kann.
 - `view` wird nicht deklariert, damit eine Änderung des Vertragsstatus möglich ist.
 
-### View-Funktionen {#view-functions}
+### View-Funktionen \{#view-functions}
 
 Diese Funktionen verpflichten sich, den Zustand der Vertragsdaten nicht zu ändern. Gängige Beispiele sind "Getter"-Funktionen, mit denen Sie z. B. den Kontostand eines Benutzers abfragen können.
 
@@ -131,7 +131,7 @@ Folgende Vorgänge werden als Modifikation des Zustands angesehen:
 7. Low-Level-Aufrufe verwenden
 8. Inline-Assembly verwenden, die bestimmte Opcodes enthält
 
-### Konstruktorfunktionen {#constructor-functions}
+### Konstruktorfunktionen \{#constructor-functions}
 
 `constructor`-Funktionen werden nur einmal ausgeführt, wenn der Vertrag in die Blockchain integriert wird. In vielen klassenbasierten Programmiersprachen initialisieren diese Funktionen wie `constructor` oft Zustandsvariablen auf ihre angegebenen Werte.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Integrierte Funktionen {#built-in-functions}
+### Integrierte Funktionen \{#built-in-functions}
 
 Zusätzlich zu den Variablen, die Sie in Ihrem Vertrag definieren, gibt es einige spezielle integrierte Funktionen. Das offensichtlichste Beispiel ist:
 
@@ -167,7 +167,7 @@ Zusätzlich zu den Variablen, die Sie in Ihrem Vertrag definieren, gibt es einig
 
 Diese erlauben es Smart Contracts, ETH an andere Konten zu senden.
 
-## Funktionen entwickeln {#writing-functions}
+## Funktionen entwickeln \{#writing-functions}
 
 Ihre Funktion benötigt folgende Elemente:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Ein vollständiger Smart Contract könnte so aussehen. Hier stellt die `constructor`-Funktion einen Anfangswert für die `dapp_name` -Variable bereit.
 
-## Ereignisse und Protokolle {#events-and-logs}
+## Ereignisse und Protokolle \{#events-and-logs}
 
 Ereignisse ermöglichen Ihnen die Kommunikation mit Ihrem Smart Contract von Ihrem Frontend oder anderen verbundenen Anwendungen aus. Wenn eine Transaktion verifiziert wird, können Smart Contracts Events emittieren und Protokolle in die Blockchain schreiben, die das Frontend dann verarbeiten kann.
 
-## Kommentierte Beispiele {#annotated-examples}
+## Kommentierte Beispiele \{#annotated-examples}
 
 Das sind einige Beispiele in Solidity. Wenn Sie mit dem Code spielen möchten, können Sie mit ihm in [Remix](http://remix.ethereum.org) interagieren.
 
-### Hallo Welt {#hello-world}
+### Hallo Welt \{#hello-world}
 
 ```solidity
 // Bestimmt die Version von Solidity mit semantischer Versionierung.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token {#token}
+### Token \{#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Einzigartiges digitales Asset {#unique-digital-asset}
+### Einzigartiges digitales Asset \{#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 Sehen Sie sich auch die Dokumentationen zu Solidity und Vyper an, um einen umfassenderen Überblick über Smart Contracts zu erhalten:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Verwandte Themen {#related-topics}
+## Verwandte Themen \{#related-topics}
 
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Ethereum-Virtual Machine (EVM)](/developers/docs/evm/)
 
-## Verwandte Tutorials {#related-tutorials}
+## Verwandte Tutorials \{#related-tutorials}
 
 - [Verkleinern von Verträgen, um die Vertragsgröße zu begrenzen](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Einige praktische Tipps zur Reduzierung der Größe Ihres Smart Contracts_
 - [Protokollieren von Daten aus Smart Contracts mit Ereignissen](/developers/tutorials/logging-events-smart-contracts/) _– Eine Einführung in Smart-Contract-Ereigbnisse und wie Sie diese zur Datenprotokollierung verwenden können_

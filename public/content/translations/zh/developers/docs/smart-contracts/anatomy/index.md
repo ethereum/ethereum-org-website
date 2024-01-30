@@ -6,15 +6,15 @@ lang: zh
 
 智能合约是一种在以太坊某个地址上运行的程序。 它们是由数据和函数组成的，可以在收到交易时执行。 以下概述一个智能合约的组成。
 
-## 前置要求 {#prerequisites}
+## 前置要求 \{#prerequisites}
 
 确保您已经先阅读了[智能合约](/developers/docs/smart-contracts/)。 本文档假设您已经熟悉某种编程语言，例如 JavaScript 或 Python。
 
-## 数据 {#data}
+## 数据 \{#data}
 
 任何合约数据必须分配到一个位置：要么是`存储`，要么是`内存`。 在智能合约中修改存储消耗很大，因此您需要考虑数据在哪里存取。
 
-### 存储 {#storage}
+### 存储 \{#storage}
 
 持久性数据被称之为存储，由状态变量表示。 这些值被永久地存储在区块链上。 您需要声明一个类型，以便于合约在编译时可以跟踪它在区块链上需要多少存储。
 
@@ -52,13 +52,13 @@ storedData: int128
 - [查看 Vyper 类型](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [查看 Solidity 类型](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### 内存 {#memory}
+### 内存 \{#memory}
 
 仅在合约函数执行期间存储的值被称为内存变量。 由于这些变量不是永久地存储在区块链上，所以它们的使用成本要低得多。
 
 在 [Solidity 文档](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)中了解更多关于以太坊虚拟机如何存储数据（存储、内存和栈）。
 
-### 环境变量 {#environment-variables}
+### 环境变量 \{#environment-variables}
 
 除了在自己合约上定义的变量之外，还有一些特殊的全局变量。 它们主要用于提供有关区块链或当前交易的信息。
 
@@ -69,7 +69,7 @@ storedData: int128
 | `block.timestamp` | uint256      | 当前区块的时间戳         |
 | `msg.sender`      | 地址         | 消息的发送者（当前调用） |
 
-## 函数 {#functions}
+## 函数 \{#functions}
 
 用最简单的术语来说，函数可以获得信息或设置信息，以响应传入的交易。
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - 函数声明为 `public`，意味着任何人都能访问它
 - 函数没有被声明为 `view`，因此它可以修改合约状态
 
-### View 函数 {#view-functions}
+### View 函数 \{#view-functions}
 
 这些函数保证不会修改合约数据的状态。 常见的示例是 "getter" 函数 - 例如，它可以用于接收用户的余额。
 
@@ -131,7 +131,7 @@ def readName() -> string:
 7. 使用底层调用。
 8. 使用包含某些操作码的内联程序组。
 
-### 构造函数 {#constructor-functions}
+### 构造函数 \{#constructor-functions}
 
 `constructor` 函数只在首次部署合约时执行一次。 与许多基于类的编程语言中的 `constructor` 函数类似，这些函数常将状态变量初始化到指定的值。
 
@@ -157,7 +157,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### 内置函数 {#built-in-functions}
+### 内置函数 \{#built-in-functions}
 
 除了自己在合约中定义的变量和函数外，还有一些特殊的内置函数。 最明显的例子是：
 
@@ -166,7 +166,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 这使合约可以发送以太币给其它帐户。
 
-## 编写函数 {#writing-functions}
+## 编写函数 \{#writing-functions}
 
 您的函数需要：
 
@@ -200,15 +200,15 @@ contract ExampleDapp {
 
 一个完整的合约可能就是这样。 在这里，`constructor` 函数为 `dapp_name` 变量提供了初始化值。
 
-## 事件和日志 {#events-and-logs}
+## 事件和日志 \{#events-and-logs}
 
 事件可以让您通过前端或其它订阅应用与您的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以进行处理。
 
-## 附带说明的例子 {#annotated-examples}
+## 附带说明的例子 \{#annotated-examples}
 
 这是一些用 Solidity 写的例子。 如果希望运行这些代码，您可以在 [Remix](http://remix.ethereum.org) 中调试。
 
-### Hello world {#hello-world}
+### Hello world \{#hello-world}
 
 ```solidity
 // Specifies the version of Solidity, using semantic versioning.
@@ -244,7 +244,7 @@ contract HelloWorld {
 }
 ```
 
-### 代币（Token） {#token}
+### 代币（Token） \{#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -306,7 +306,7 @@ contract Token {
 }
 ```
 
-### 唯一的数字资产 {#unique-digital-asset}
+### 唯一的数字资产 \{#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -636,19 +636,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 查阅 Solidity 和 Vyper 文档，以获得关于智能合约的更完整概述：
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [智能合约](/developers/docs/smart-contracts/)
 - [以太坊虚拟机](/developers/docs/evm/)
 
-## 相关教程 {#related-tutorials}
+## 相关教程 \{#related-tutorials}
 
 - [减少合约大小以应对合约大小的限制](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– 一些减少智能合约大小的实用提示。_
 - [用事件记录智能合约的数据](/developers/tutorials/logging-events-smart-contracts/) _——对智能合约事件的介绍以及如何使用它们来记录数据。_

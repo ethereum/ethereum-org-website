@@ -4,11 +4,11 @@ description: Introduzione di uno sviluppatore alla criptovaluta ether.
 lang: it
 ---
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere l'[Introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Cos'è una criptovaluta? {#what-is-a-cryptocurrency}
+## Cos'è una criptovaluta? \{#what-is-a-cryptocurrency}
 
 Una criptovaluta è un mezzo di scambio protetto da un registro basato su blockchain.
 
@@ -16,7 +16,7 @@ Con mezzo di scambio si intende qualsiasi forma di pagamento ampiamente accettat
 
 La prima criptovaluta è stata Bitcoin, creata da Satoshi Nakamoto. Dal rilascio di Bitcoin nel 2009, sono state create migliaia di criptovalute su molte blockchain diverse.
 
-## Cos'è un ether? {#what-is-ether}
+## Cos'è un ether? \{#what-is-ether}
 
 **Ether (ETH)** è la criptovaluta impiegata per molti scopi sulla rete Ethereum. Fondamentalmente è l'unica forma di pagamento accettabile per le commissioni sulle transazioni, e dopo [La Fusione](/roadmap/merge) serviranno ether per convalidare e proporre blocchi sulla Rete Principale. L'ether è anche usato come una forma principale di garanzia nei mercati di prestito della [DeFi](/defi), come un'unità di conto nei mercati di NFT, come pagamento guadagnato per l'esecuzione di servizi o della vendita di beni del mondo reale e molto altro.
 
@@ -28,13 +28,13 @@ Pertanto, anche se una dApp malevola inviasse un ciclo infinito, a un certo punt
 
 Capita [spesso](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [di](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confondere](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum con ether; quando qualcuno si riferisce al "prezzo di Ethereum", è facile che stia parlando del prezzo dell'ether.
 
-## Coniare ether {#minting-ether}
+## Coniare ether \{#minting-ether}
 
 La coniazione è il processo con vengono creati nuovi ether sul registro di Ethereum. Il protocollo sottostante di Ethereum crea i nuovi ether, cosa impossibile da fare per un utente.
 
 L'ether è coniato come una ricompensa per ogni blocco proposto e al punto di controllo di ogni epoca per altre attività correlate al validatore per raggiungere il consenso. L'importo totale emesso dipende dal numero di validatori e da quanto ether hanno in staking. Quest'emissione totale è divisa equamente tra i validatori nel caso ideale in cui tutti i validatori siano onesti e online ma, in realtà, varia a seconda delle prestazioni del validatore. Circa 1/8 dell'emissione totale va al propositore del blocco; il resto è distribuito tra gli altri validatori. I propositori di blocchi, inoltre, ricevono mance dalle commissioni di transazione e dal reddito correlato alla MEV, ma provengono da ether riciclati, non appena emessi.
 
-## Bruciare ether {#burning-ether}
+## Bruciare ether \{#burning-ether}
 
 Oltre a creare ether tramite le ricompense del blocco, l'ether può essere distrutto tramite un processo detto 'bruciatura'. L'ether bruciato viene rimosso dalla circolazione in via permanente.
 
@@ -42,7 +42,7 @@ La bruciatura di ether ha luogo in ogni transazione su Ethereum. Quando gli uten
 
 Bruciare la commissione di base ostacola la capacità dei produttori di blocchi di manipolare le transazioni. Ad esempio, se i produttori del blocco hanno ricevuto la commissione di base, potrebbero includere le proprie transazioni gratuitamente e aumentare la commissione di base per tutti gli altri. In caso contrario, potrebbero rimborsare la commissione di base ad alcuni utenti al di fuori della catena, creando così un mercato delle commissioni sulle transazioni più opaco e complesso.
 
-## Denominazioni dell'ether {#denominations}
+## Denominazioni dell'ether \{#denominations}
 
 Poiché il valore di molte transazioni su Ethereum è ridotto, l'ether ha svariate denominazioni che possono essere utilizzate per fare riferimento a unità di conto inferiori. Tra queste denominazioni, Wei e gwei sono particolarmente importanti.
 
@@ -55,7 +55,7 @@ Gwei, abbreviazione di giga-wei, è spesso usato per descrivere i costi del gas 
 | Wei           | 10<sup>-18</sup> | Implementazioni tecniche                |
 | Gwei          | 10<sup>-9</sup>  | Commissioni sul gas leggibili dall'uomo |
 
-## Trasferire ether {#transferring-ether}
+## Trasferire ether \{#transferring-ether}
 
 Ogni transazione su Ethereum contiene un campo di `valore`, che specifica l'importo di ether da trasferire, denominato in wei, e da inviare dall'indirizzo del mittente all'indirizzo del destinatario.
 
@@ -63,13 +63,13 @@ Quando l'indirizzo del destinatario è un [contratto intelligente](/developers/d
 
 [Maggiori informazioni sulle transazioni](/developers/docs/transactions/)
 
-## Interrogare l'ether {#querying-ether}
+## Interrogare l'ether \{#querying-ether}
 
 Gli utenti possono interrogare il saldo di ether di qualsiasi [conto](/developers/docs/accounts/), ispezionando il campo `balance` del conto, che mostra le posizioni in ether, denominate in wei.
 
 [Etherscan](https://etherscan.io) è uno strumento popolare per consultare i saldi dell'indirizzo attraverso un'applicazione basata sul web. Per esempio, [questa pagina di Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) mostra il saldo per la Ethereum Foundation. I saldi dei conti possono esser interrogati anche utilizzando i portafogli, o direttamente, effettuando richieste ai nodi.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Definire Ether ed Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): La proposta originale per Ethereum. Questo documento include una descrizione dell'ether e le motivazioni dietro alla sua creazione.

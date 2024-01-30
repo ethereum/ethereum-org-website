@@ -9,21 +9,21 @@ Ethereum, ca și Bitcoin, utilizează actualmente un protocol de consens numit *
 
 În cursul anului viitor, dovada-muncii (proof-of-work) va fi eliminată treptat în favoarea **[Dovezii-mizei (PoS)](/developers/docs/consensus-mechanisms/pos)**. Tranziția la dovada-mizei (proof-of-stake) va duce de asemenea la eliminarea treptată a minării din Ethereum. [Aflați mai multe despre fuziune](/roadmap/merge/)
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Pentru o mai bună înțelegere a acestei pagini, vă recomandăm să citiți mai întâi despre [tranzacții](/developers/docs/transactions/), [blocuri](/developers/docs/blocks/) și [mecanisme de consens](/developers/docs/consensus-mechanisms/).
 
-## Ce este dovada-muncii (PoW)? {#what-is-pow}
+## Ce este dovada-muncii (PoW)? \{#what-is-pow}
 
 Dovada-muncii (proof-of-work) este mecanismul care permite rețelei descentralizate Ethereum să ajungă la un consens sau să cadă de acord asupra unor aspecte precum soldurile conturilor și ordinea tranzacțiilor. Aceasta împiedică utilizatorii să își „cheltuiască de două ori” monedele și garantează că lanțul Ethereum este extrem de dificil de atacat sau de manipulat.
 
-## Dovada-muncii și minarea {#pow-and-mining}
+## Dovada-muncii și minarea \{#pow-and-mining}
 
 Dovada-muncii este algoritmul de bază care stabilește dificultatea și regulile pentru munca pe care o fac miner-ii. Minarea este chiar „munca”. Este actul de a adăuga blocuri valide în lanț. Acest aspect este important deoarece lungimea lanțului ajută rețeaua să urmărească lanțul Ethereum corect și să înțeleagă starea actuală a lui Ethereum. Cu cât se „muncește” mai mult, cu atât lanțul este mai lung și cu cât numărul blocului este mai mare, cu atât rețeaua poate fi mai sigură de starea actuală a lucrurilor.
 
 [Mai multe despre minare](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Cum funcționează dovada-muncii în Ethereum? {#how-it-works}
+## Cum funcționează dovada-muncii în Ethereum? \{#how-it-works}
 
 Tranzacțiile Ethereum sunt procesate în blocuri. Fiecare bloc are:
 
@@ -33,7 +33,7 @@ Tranzacțiile Ethereum sunt procesate în blocuri. Fiecare bloc are:
 
 Aceste informații despre bloc sunt direct legate de dovada-muncii.
 
-### Munca în dovada-muncii {#the-work}
+### Munca în dovada-muncii \{#the-work}
 
 Protocolul dovada-muncii (proof-of-work), Ethash, le cere miner-ilor să participe la o întrecere aprigă de încercări și erori pentru a găsi nonce-ul unui bloc. Numai blocurile cu un nonce valid pot fi adăugate lanțului.
 
@@ -43,7 +43,7 @@ Dificultatea determină ținta hash-ului. Cu cât ținta este mai mică, cu atâ
 
 Hashing-ul facilitează identificarea fraudei. Dar dovada-muncii ca proces constituie și ea un mare factor de descurajare a atacului asupra lanțului.
 
-### Dovada-muncii și securitatea {#security}
+### Dovada-muncii și securitatea \{#security}
 
 Miner-ii sunt stimulați să facă această muncă pe lanțul principal Ethereum. Există puține stimulente pentru ca un subset de mineri să își lanseze propriul lanț – acesta discreditează sistemul. Blockchain-urile se bazează pe existența unei singure stări ca sursă a adevărului. Și utilizatorii vor alege întotdeauna lanțul cel mai lung sau mai „greu”.
 
@@ -51,13 +51,13 @@ Obiectivul dovezii-muncii este de a extinde lanțul. Cel mai lung lanț este cel
 
 Ca să creați în mod constant blocuri rău intenționate, dar valide, ați avea nevoie de peste 51% din puterea de minare a rețelei pentru a-i învinge pe toți ceilalți. Ați avea nevoie de multă putere de calcul pentru a putea face o asemenea „muncă”. Iar energia cheltuită ar putea chiar depăși câștigurile pe care le-ați obține în urma unui atac.
 
-### Aspectul economic al dovezii-muncii {#economics}
+### Aspectul economic al dovezii-muncii \{#economics}
 
 Dovada-muncii este de asemenea responsabilă pentru emiterea de noi monede în sistem și pentru stimularea miner-ilor să lucreze.
 
 Miners who successfully create a block get rewarded with two freshly minted ETH but no longer receive all the transaction fees, as the base fee gets burned, while the tip and block reward goes to the miner. Un miner poate obține de asemenea 1,75 ETH pentru un bloc unchi. Blocurile unchi sunt blocurile valide create de un miner aproape în același timp cu un alt miner care a minat blocul ce a avut succes. Blocurile unchi se creează de obicei din cauza latenței rețelei.
 
-## Finalitate {#finality}
+## Finalitate \{#finality}
 
 O tranzacție are „finalitate” pe Ethereum atunci când face parte dintr-un bloc care nu se poate schimba.
 
@@ -69,11 +69,11 @@ Finalitatea este ceva de care trebuie ținut cont atunci când se concep dapp-ur
 
 Țineți minte că această durată nu include timpii de așteptare pentru ca o tranzacție să fie preluată de un miner.
 
-## Consumul de energie pentru dovada-muncii {#energy}
+## Consumul de energie pentru dovada-muncii \{#energy}
 
 Un dezavantaj major al dovezii-muncii este cantitătea de energie necesară pentru a menține securitatea reţelei. Pentru menținerea securității și a descentralizării, Ethereum-ul ce foloseşte dovada-muncii consumă 73,2 TWh anual, echivalentul de energie al unei țări de dimensiuni medii ca Austria.
 
-## Avantaje și dezavantaje {#pros-and-cons}
+## Avantaje și dezavantaje \{#pros-and-cons}
 
 | Avantaje                                                                                                                                                                                                                                                                                      | Dezavantaje                                                                                                                                           |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -81,7 +81,7 @@ Un dezavantaj major al dovezii-muncii este cantitătea de energie necesară pent
 | Dovada-muncii (proof-of-work) este un mecanism de consens încercat și testat care a menţinut Bitcoin și Ethereum securizate și descentralizate timp de mulți ani.                                                                                                                             | Dacă doriţi să minaţi, aveţi nevoie de echipamente atât de specializate, încât investiţia pentru a începe este mare.                                  |
 | Comparativ cu dovada-mizei (proof-of-stake), este relativ ușor de implementat.                                                                                                                                                                                                                | Datorită creșterii calculelor necesare, este posibil ca grupurile de minare să domine jocul minării, ducând la centralizare și riscuri de securitate. |
 
-## Comparativ cu dovada-mizei {#compared-to-pos}
+## Comparativ cu dovada-mizei \{#compared-to-pos}
 
 În principiu, dovada-mizei (proof-of-stake) are același obiectiv final ca și dovada-muncii (proof-of-work): să ajute rețeaua descentralizată să ajungă la consens în depliină securitate. Dar este întrucâtva diferită în privinţa procesării şi personalului:
 
@@ -92,20 +92,20 @@ Un dezavantaj major al dovezii-muncii este cantitătea de energie necesară pent
 
 [Mai multe despre dovada-mizei](/developers/docs/consensus-mechanisms/pos/)
 
-## Învățați mai ușor prin vizualizare? {#visual-learner}
+## Învățați mai ușor prin vizualizare? \{#visual-learner}
 
 <YouTube id="3EUAcxhuoU4" />
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 - [Atacul prin majoritate](https://en.bitcoin.it/wiki/Majority_attack)
 - [Despre finalitatea de soluţionare](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
-### Videoclipuri {#videos}
+### Videoclipuri \{#videos}
 
 - [O explicație tehnică a protocoalelor dovezii-muncii (proof-of-work)](https://youtu.be/9V1bipPkCTU)
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Minarea](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Dovada-mizei](/developers/docs/consensus-mechanisms/pos/)

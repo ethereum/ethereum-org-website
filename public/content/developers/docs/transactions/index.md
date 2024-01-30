@@ -6,11 +6,11 @@ lang: en
 
 Transactions are cryptographically signed instructions from accounts. An account will initiate a transaction to update the state of the Ethereum network. The simplest transaction is transferring ETH from one account to another.
 
-## Prerequisites {#prerequisites}
+## Prerequisites \{#prerequisites}
 
 To help you better understand this page, we recommend you first read [Accounts](/developers/docs/accounts/) and our [introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
-## What's a transaction? {#whats-a-transaction}
+## What's a transaction? \{##whats-a-transaction}
 
 An Ethereum transaction refers to an action initiated by an externally-owned account, in other words an account managed by a human, not a contract. For example, if Bob sends Alice 1 ETH, Bob's account must be debited and Alice's must be credited. This state-changing action takes place within a transaction.
 
@@ -105,7 +105,7 @@ Example response:
 
 With the signature hash, the transaction can be cryptographically proven that it came from the sender and submitted to the network.
 
-### The data field {#the-data-field}
+### The data field \{##the-data-field}
 
 The vast majority of transactions access a contract from an externally-owned account.
 Most contracts are written in Solidity and interpret their data field in accordance with the [application binary interface (ABI)](/glossary/#abi).
@@ -132,7 +132,7 @@ According to the ABI specifications, integer values (such as addresses, which ar
 So we know that the `to` address is [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279).
 The `value` is 0x3b0559f4 = 990206452.
 
-## Types of transactions {#types-of-transactions}
+## Types of transactions \{##types-of-transactions}
 
 On Ethereum there are a few different types of transactions:
 
@@ -140,7 +140,7 @@ On Ethereum there are a few different types of transactions:
 - Contract deployment transactions: a transaction without a 'to' address, where the data field is used for the contract code.
 - Execution of a contract: a transaction that interacts with a deployed smart contract. In this case, 'to' address is the smart contract address.
 
-### On gas {#on-gas}
+### On gas \{##on-gas}
 
 As mentioned, transactions cost [gas](/developers/docs/gas/) to execute. Simple transfer transactions require 21000 units of Gas.
 
@@ -167,7 +167,7 @@ _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/d
 
 Any gas not used in a transaction is refunded to the user account.
 
-## Transaction lifecycle {#transaction-lifecycle}
+## Transaction lifecycle \{##transaction-lifecycle}
 
 Once the transaction has been submitted the following happens:
 
@@ -179,13 +179,13 @@ Once the transaction has been submitted the following happens:
    more certain that your transaction was successful and will never be altered. Once a block is "finalized" it could only ever be changed
    by a network level attack that would cost many billions of dollars.
 
-## A visual demo {#a-visual-demo}
+## A visual demo \{##a-visual-demo}
 
 Watch Austin walk you through transactions, gas, and mining.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Typed Transaction Envelope {#typed-transaction-envelope}
+## Typed Transaction Envelope \{##typed-transaction-envelope}
 
 Ethereum originally had one format for transactions. Each transaction contained a nonce, gas price, gas limit, to address, value, data, v, r, and s. These fields are [RLP-encoded](/developers/docs/data-structures-and-encoding/rlp/), to look something like this:
 
@@ -202,13 +202,13 @@ Where the fields are defined as:
 - `TransactionType` - a number between 0 and 0x7f, for a total of 128 possible transaction types.
 - `TransactionPayload` - an arbitrary byte array defined by the transaction type.
 
-## Further reading {#further-reading}
+## Further reading \{##further-reading}
 
 - [EIP-2718: Typed Transaction Envelope](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics {#related-topics}
+## Related topics \{##related-topics}
 
 - [Accounts](/developers/docs/accounts/)
 - [Ethereum virtual machine (EVM)](/developers/docs/evm/)

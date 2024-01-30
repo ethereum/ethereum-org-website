@@ -9,7 +9,7 @@ template: roadmap
 
 L'utilizzo di Ethereum dev'essere semplificato; dalla gestione delle chiavi e dei portafogli all'avvio delle transazioni. Per facilitare l'adozione di massa, Ethereum deve aumentare drasticamente la facilità d'uso, consentendo agli utenti di sperimentare un accesso privo di permessi e resistente alla censura a Ethereum, con l'esperienza priva di attrito dell'utilizzo delle app Web2.
 
-## Oltre le frasi di seed {#no-more-seed-phrases}
+## Oltre le frasi di seed \{#no-more-seed-phrases}
 
 I conti di Ethereum sono protetti da una coppia di chiavi, utilizzate per identificare i conti (chiave pubblica) e firmare i messaggi (chiave privata). Una chiave privata è come una password principale; consente di completare l'accesso a un conto di Ethereum. Questo è un metodo di operazione differente per le persone che hanno più dimestichezza con le banche e le app Web2, che gestiscono i conti per conto di un utente. Perché Ethereum raggiunga l'adozione di massa senza affidarsi a terze parti centralizzate, deve esistere un metodo diretto e privo di attrito per un utente, per prendere custodia delle proprie risorse e mantenere il controllo dei propri dati senza dover comprendere la crittografia delle chiavi pubbliche e private e la gestione delle chiavi.
 
@@ -27,7 +27,7 @@ Esistono diversi aggiornamenti che semplificheranno l'esecuzione dei nodi, riduc
 
 Con questi aggiornamenti, le barriere all'esecuzione di un nodo sono ridotte effettivamente a zero. Gli utenti beneficeranno di un accesso sicuro e privo di permessi a Ethereum, senza dover sacrificare notevole spazio su disco o CPU sul proprio computer o il proprio dispositivo mobile e non dovranno affidarsi a terze parti per l'accesso a dati o alla rete, utilizzando le app.
 
-## Stato attuale {#current-progress}
+## Stato attuale \{#current-progress}
 
 I portafogli di contratti intelligenti sono già disponibili, ma sono necessari maggiori aggiornamenti per renderli il più decentralizzati e privi di permessi possibile. L'EIP-4337 è una proposta matura che non richiede alcuna modifica al protocollo di Ethereum. Il contratto intelligente principale necessario per l'EIP-4337 è stato distribuito a marzo 2023.
 

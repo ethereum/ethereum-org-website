@@ -4,7 +4,7 @@ description: Az Ethereumról szóló nem angol nyelvű források
 lang: hu
 ---
 
-# Nyelvi források {#language-resources}
+# Nyelvi források \{#language-resources}
 
 Az Ethereum közösség globális és sok millió nem angolul beszélő taggal bír.
 
@@ -14,15 +14,15 @@ Ha Ön az anyanyelvén olvasna szívesen, vagy ismer olyat, aki nem beszél ango
 
 Ismer valamilyen oktatási anyagot az anyanyelvén? [Adjon be egy kérést](https://github.com/ethereum/ethereum-org-website/issues/new/choose), hogy adják hozzá a listához!
 
-## Ethereum.org források {#ethereum-org}
+## Ethereum.org források \{#ethereum-org}
 
 Az Ethereum.org oldalait 40 nyelven olvashatja a [nyelvek oldalon](/languages).
 
 Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor közreműködhet az [ethereum.org Fordítói programban](/contributing/translation-program/#translation-program) és segíthet lefordítani a weboldalt.
 
-## Közösségi források {#community}
+## Közösségi források \{#community}
 
-### Brazíliai portugál {#br-pt}
+### Brazíliai portugál \{#br-pt}
 
 **Hírek**
 
@@ -40,7 +40,7 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Cointimes](http://www.cointimes.com.br/) – kriptovalutával kapcsolatos hírek és oktatás
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) – útmutató, ami a leggyakoribb és alapvető kriptokérdésekre ad választ
 
-### Kínai {#zh}
+### Kínai \{#zh}
 
 **Általános források**
 
@@ -67,28 +67,28 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) – WeChat-profil, amely a kriptográfiát, biztonságot stb. magyarázza el.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) – WeChat profil, amely a zero-knowledge technológiát ismerteti
 
-### Cseh {#cs}
+### Cseh \{#cs}
 
 - [Gwei.cz](https://gwei.cz) – helyi közösség a web3 körül, amely oktatási anyagokat készít, online és személyes találkozókat szervez
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) – Ethereum útmutató kezdőknek
 - [DAO Příručka](https://dao.gwei.cz/) – útmutató kezdőknek a DAO-okról
 - [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) – Az Ethereum elsajátítása, cseh verzió
 
-### Francia {#fr}
+### Francia \{#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) – az Ethereum mentén események szervezése, tartalomkészítés, beszélgetések
 - [Ethereum.fr](https://ethereum.fr/) – Ethereummal kapcsolatos hírek és oktatás
 - [BanklessFR](https://banklessfr.substack.com/) – Bankless hírlevél franciául
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) – kriptovalutával kapcsolatos fórum egy Ethereum aloldallal
 
-### Német {#de}
+### Német \{#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) – A Solidity használata
 - [Microsoft Learn (smart contracts)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Ethereum okosszerződések írása Solidity-val
 - [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) – az Ethereum-hálózatokhoz való kapcsolódás és azok telepítése
 - [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) – a blokkláncfejlesztés első lépései
 
-### Olasz {#it}
+### Olasz \{#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) – Ethereummal kapcsolatos oktatás, események és hírek, főleg az okosszerződésekről és a blokklánc-technológiáról
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) – Ethereum podcast olaszul
@@ -96,11 +96,11 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) – Okosszerződések írása a Solidity-val
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) – felhasználói felület létrehozása decentralizált alkalmazásokkal
 
-### Orosz {#ru}
+### Orosz \{#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) – Oktatási anyagok web3-fejlesztők számára
 
-### Spanyol {#es}
+### Spanyol \{#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) – blokklánc, DeFi és irányítási tanfolyamok, események és blog
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) – Ethereum útmutató kezdőknek spanyolul
@@ -110,18 +110,18 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) – tanulja meg, hogyan működnek a DeFi okosszerződések a Solidity-ben és készítse el a saját automata Market Maker-ét
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) – Nem technikai blokkláncok oktatása a kezdőtől a haladó szintig. Tudjon meg mindent a kriptóról és az Ethereumról.
 
-### Török {#tr}
+### Török \{#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) – blokklánc- és kriptovaluta-központú tanfolyam
 - [Az nagyszerű átnevezés: mi történt az Eth2-vel?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) – török fordítása a blogpostnak, ami elmagyarázza az eth2-től való elmozdulást
 
-### Vietnámi {#vi}
+### Vietnámi \{#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) – Ethereum, dapp-ok, tárcák áttekintése és gyakran ismételt kérdések
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) – webplatform Ethereummal kapcsolatos hírekkel és oktatással
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) – kriptovaluta-portál Ethereummel kapcsolatos hírekkel és oktatási anyagokkal
 
-### Japán {#ja}
+### Japán \{#ja}
 
 - [Japán virtuális és kriptoeszközök tőzsdei szövetsége](https://jvcea.or.jp/)
 - [Japán kriptoeszközök üzleti szövetsége](https://cryptocurrency-association.org/)
