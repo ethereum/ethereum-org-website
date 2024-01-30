@@ -1,4 +1,5 @@
-import { Fragment, useRef } from "react"
+import { Fragment, useRef, useState } from "react"
+import { motion } from "framer-motion"
 import { useRouter } from "next/router"
 import { BsCircle } from "react-icons/bs"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
@@ -47,40 +48,29 @@ const NextChevron = ({ lvl, isLink, ...props }: NextChevronProps) => {
   )
 }
 
-type GetHoverActionsArgs = {
-  lvl: Level
-  index: number
-  href?: string
-}
-
 type ItemProps = {
   item: NavItem
   lvl: Level
-  // index: number
-  // getHoverActions: (args: GetHoverActionsArgs) => Partial<ButtonProps>
 }
 
-const Item = ({
-  item,
-  lvl,
-}: // index,
-// getHoverActions,
-ItemProps) => {
+const Item = ({ item, lvl }: ItemProps) => {
   const { label, description, icon: CustomIcon, ...action } = item
   const { asPath } = useRouter()
   const isLink = !!action.href
   const isActivePage = isLink && cleanPath(asPath) === action.href
-  // const hoverActions = getHoverActions({ lvl, index, href: action.href })
-  // const { isActive: isHovered } = hoverActions
+  const [highlighted, setHighlighted] = useState(false)
+
   const minW = calc.subtract(
     calc.multiply(useToken("sizes.container", "md"), 0.5),
     useToken("space", 8)
   ) // Half of `md` container (smallest desktop width) minus padding
-  if ((lvl as number) > 3) return null
+
   return (
     <Button
       as={isLink ? Link : undefined}
       href={action.href}
+      onMouseEnter={() => setHighlighted(true)}
+      onMouseLeave={() => setHighlighted(false)}
       rightIcon={
         <NextChevron
           lvl={lvl}
@@ -115,16 +105,17 @@ ItemProps) => {
         outlineOffset: "2px",
         boxShadow: "none",
       }}
-      // TODO: _focus styles
-      // {...hoverActions}
+      // TODO: _focus/_hover styles
     >
-      {/* {isHovered && (
+      {highlighted && (
         <motion.div
           style={{
             position: "absolute",
             inset: 0,
             insetInlineEnd: isLink ? 0 : -1,
-            background: `var(--eth-colors-menu-lvl${lvl + 1}-background)`,
+            background: `var(--eth-colors-menu-lvl${
+              (lvl as number) + 1
+            }-background)`,
             borderStartStartRadius: "var(--eth-radii-base)",
             borderEndStartRadius: "var(--eth-radii-base)",
             borderStartEndRadius: isLink
@@ -136,9 +127,9 @@ ItemProps) => {
             zIndex: 0,
           }}
           transition={{ duration: 0.2 }}
-          layoutId={`menu-lvl${lvl + 1}-highlight`}
+          layoutId={`menu-lvl${(lvl as number) + 1}-highlight`}
         />
-      )} */}
+      )}
       <Box me="auto" textAlign="start" position="relative" zIndex="1">
         <Text
           fontWeight="bold"
@@ -164,44 +155,48 @@ type LvlPortalProps = {
   refs: LvlRefs
   items: NavItem[]
 }
-const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => (
-  <Portal container={refs[`lvl${lvl}`]}>
-    <Menu.Content asChild>
-      <Flex
-        flexDir="column"
-        sx={{
-          "[data-highlighted]": {
-            outline: "2px solid var(--eth-colors-menu-highlight)",
-          },
-        }}
-      >
-        {items.map((item) => {
-          const { label, description, icon: CustomIcon, ...action } = item
-          return (
-            <Fragment key={label}>
-              {action.href ? (
-                <Menu.Item id={label}>
-                  <Item lvl={lvl} item={item} />
-                </Menu.Item>
-              ) : (
-                <Menu.Root loop>
-                  <Menu.TriggerItem>
-                    <Item lvl={1} item={item} />
-                  </Menu.TriggerItem>
-                  <LvlPortal
-                    lvl={((lvl as number) + 1) as Level}
-                    refs={refs}
-                    items={action.items}
-                  />
-                </Menu.Root>
-              )}
-            </Fragment>
-          )
-        })}
-      </Flex>
-    </Menu.Content>
-  </Portal>
-)
+const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
+  if ((lvl as number) > 3) return null
+  return (
+    <Portal container={refs[`lvl${lvl}`]}>
+      <Menu.Content asChild>
+        <Flex
+          flexDir="column"
+          bg={`menu.lvl${lvl}.background`}
+          sx={{
+            "[data-highlighted]": {
+              outline: "2px solid var(--eth-colors-menu-highlight)",
+            },
+          }}
+        >
+          {items.map((item) => {
+            const { label, ...action } = item
+            return (
+              <Fragment key={label}>
+                {action.href ? (
+                  <Menu.Item id={label}>
+                    <Item lvl={lvl} item={item} />
+                  </Menu.Item>
+                ) : (
+                  <Menu.Root loop>
+                    <Menu.TriggerItem>
+                      <Item lvl={1} item={item} />
+                    </Menu.TriggerItem>
+                    <LvlPortal
+                      lvl={((lvl as number) + 1) as Level}
+                      refs={refs}
+                      items={action.items}
+                    />
+                  </Menu.Root>
+                )}
+              </Fragment>
+            )
+          })}
+        </Flex>
+      </Menu.Content>
+    </Portal>
+  )
+}
 
 type ArkMenuProps = FlexProps & {
   sections: NavSections
@@ -249,9 +244,8 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
         position="absolute"
         top="4.75rem"
         insetInline="0"
-        bg="menu.lvl4.background"
+        bg={`menu.lvl${1}.background`} // TODO
         templateColumns="repeat(3, 1fr)"
-        // templateRows={isOpen ? "1fr" : "0fr"}
         transition="grid-template-rows 0.5s ease-in-out"
       >
         <Box ref={refs.lvl1} />
