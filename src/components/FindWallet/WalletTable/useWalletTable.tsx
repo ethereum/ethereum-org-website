@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import { Icon } from "@chakra-ui/react"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
@@ -38,6 +38,8 @@ export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
 }
+
+export type SetFeatureSelectState = Dispatch<SetStateAction<DropdownOption>>
 
 export const useWalletTable = ({
   filters,

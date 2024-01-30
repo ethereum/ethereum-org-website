@@ -2,11 +2,9 @@ import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
-import Select from "react-select"
 import {
   Box,
   calc,
-  chakra,
   Flex,
   FlexProps,
   forwardRef,
@@ -23,7 +21,6 @@ import {
 
 import { ChildOnlyProp } from "@/lib/types"
 
-import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import {
   GreenCheckProductGlyphIcon,
@@ -32,12 +29,20 @@ import {
 import { Image } from "@/components/Image"
 import InlineLink, { LinkProps } from "@/components/Link"
 import Text from "@/components/OldText"
+import ReactSelect, { ReactSelectOnChange } from "@/components/ReactSelect"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+
+import {
+  ColumnClassName,
+  DropdownOption,
+  SetFeatureSelectState,
+  useWalletTable,
+} from "../WalletTable/useWalletTable"
 
 const Container = (props: TableProps) => (
   <Table
@@ -140,91 +145,6 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   />
 ))
 
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props) => (
-  <ChakraSelect
-    w="full"
-    sx={{
-      ".react-select": {
-        "&__control": {
-          bg: "searchBackground",
-          border: "1px",
-          borderColor: "text",
-          cursor: "pointer",
-          pe: "0.3rem",
-          transition: "0.5s all",
-
-          ".react-select__value-container": {
-            ".react-select__single-value": {
-              color: "text",
-            },
-          },
-
-          ".react-select__indicators": {
-            ".react-select__indicator-separator": {
-              bg: "none",
-            },
-            ".react-select__indicator": {
-              color: "text",
-              p: 0,
-            },
-          },
-
-          "&:hover, &--is-focused": {
-            bg: "primary.base",
-            borderColor: "primary.base",
-
-            ".react-select__value-container": {
-              ".react-select__single-value": {
-                color: "background.base",
-              },
-            },
-
-            ".react-select__indicators": {
-              ".react-select__indicator": {
-                color: "background.base",
-              },
-            },
-          },
-        },
-
-        "&__placeholder": {
-          color: "text200",
-        },
-
-        "&__single-value, &__menu, &__input": {
-          color: "text",
-        },
-
-        "&__menu": {
-          bg: "searchBackground",
-        },
-
-        "&__option": {
-          "&:hover, &--is-focused": {
-            bg: "selectHover",
-          },
-          _active: {
-            bg: "selectActive",
-            color: "buttonColor !important",
-          },
-
-          "&--is-selected": {
-            bg: "primary.base",
-            color: "buttonColor",
-            _hover: {
-              bg: "primary.base",
-            },
-          },
-        },
-      },
-    }}
-    {...props}
-  />
-)
-
 const FlexInfo = (props: FlexProps) => (
   <Flex
     alignItems="center"
@@ -295,15 +215,6 @@ const SocialLink = (props: LinkProps) => (
   />
 )
 
-// Types
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-  icon: ReactNode
-}
-
 // Constants
 const firstCol = "firstCol"
 const secondCol = "secondCol"
@@ -331,6 +242,16 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
 
+  const handleFeatureSelectChange =
+    (
+      colName: ColumnClassName,
+      featureDispatch: SetFeatureSelectState
+    ): ReactSelectOnChange<DropdownOption> =>
+    (selectedOption) => {
+      if (!selectedOption) return
+      updateDropdown(selectedOption, featureDispatch, colName)
+      return
+    }
   return (
     <Container>
       <WalletContentHeader>
@@ -354,54 +275,48 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
             {t("page-find-wallet-choose-features")}
           </Text>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <ReactSelect
             options={[
               {
                 label: t("page-find-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-            }}
+            onChange={handleFeatureSelectChange(
+              "firstCol",
+              setFirstFeatureSelect
+            )}
             defaultValue={firstFeatureSelect}
-            isSearchable={false}
           />
         </Th>
         <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <ReactSelect
             options={[
               {
                 label: t("page-find-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
-            }}
+            onChange={handleFeatureSelectChange(
+              "secondCol",
+              setSecondFeatureSelect
+            )}
             defaultValue={secondFeatureSelect}
-            isSearchable={false}
           />
         </Th>
         <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
+          <ReactSelect
             options={[
               {
                 label: t("page-find-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-            }}
+            onChange={handleFeatureSelectChange(
+              "thirdCol",
+              setThirdFeatureSelect
+            )}
             defaultValue={thirdFeatureSelect}
-            isSearchable={false}
           />
         </Th>
       </WalletContentHeader>
