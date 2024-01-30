@@ -1,13 +1,14 @@
 import { IconType } from "react-icons"
 
+type LinkOnly = { href: string, items: never }
+type ItemsOnly = { items: NavItem[], href: never }
+type LinkXorItems = LinkOnly | ItemsOnly
+
 export type NavItem = {
   label: string
   description: string
-  icon?: IconType
-} & (
-    | { items: NavItem[], href?: never }
-    | { href: string, items?: never }
-  )
+  icon: IconType
+} & LinkXorItems
 
 export type NavSectionKey =
   | "learn"
@@ -24,4 +25,6 @@ export type NavSectionDetail = {
 
 export type NavSections = Record<NavSectionKey, NavSectionDetail>
 
-export type Level = 1 | 2 | 3 | 4
+export type Level = 1 | "1" | 2 | "2" | 3 | "3" | 4 | "4"
+
+export type LvlRefs = Record<"lvl1" | "lvl2" | "lvl3", React.RefObject<HTMLDivElement>>
