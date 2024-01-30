@@ -56,7 +56,7 @@ type ItemProps = {
 const Item = ({ item, lvl }: ItemProps) => {
   const { label, description, icon: CustomIcon, ...action } = item
   const { asPath } = useRouter()
-  const isLink = !!action.href
+  const isLink = "href" in action
   const isActivePage = isLink && cleanPath(asPath) === action.href
   const [highlighted, setHighlighted] = useState(false)
 
@@ -114,7 +114,7 @@ const Item = ({ item, lvl }: ItemProps) => {
             inset: 0,
             insetInlineEnd: isLink ? 0 : -1,
             background: `var(--eth-colors-menu-lvl${
-              (lvl as number) + 1
+              (lvl) + 1
             }-background)`,
             borderStartStartRadius: "var(--eth-radii-base)",
             borderEndStartRadius: "var(--eth-radii-base)",
@@ -127,7 +127,7 @@ const Item = ({ item, lvl }: ItemProps) => {
             zIndex: 0,
           }}
           transition={{ duration: 0.2 }}
-          layoutId={`menu-lvl${(lvl as number) + 1}-highlight`}
+          layoutId={`menu-lvl${(lvl) + 1}-highlight`}
         />
       )}
       <Box me="auto" textAlign="start" position="relative" zIndex="1">
@@ -156,7 +156,7 @@ type LvlPortalProps = {
   items: NavItem[]
 }
 const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
-  if ((lvl as number) > 3) return null
+  if (lvl > 3) return null
   return (
     <Portal container={refs[`lvl${lvl}`]}>
       <Menu.Content asChild>
@@ -173,7 +173,7 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
             const { label, ...action } = item
             return (
               <Fragment key={label}>
-                {action.href ? (
+                {"href" in action ? (
                   <Menu.Item id={label}>
                     <Item lvl={lvl} item={item} />
                   </Menu.Item>
@@ -183,7 +183,7 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
                       <Item lvl={1} item={item} />
                     </Menu.TriggerItem>
                     <LvlPortal
-                      lvl={((lvl as number) + 1) as Level}
+                      lvl={lvl + 1 as Level}
                       refs={refs}
                       items={action.items}
                     />
