@@ -61,7 +61,6 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
           return (
             <Menu.Root
               key={label}
-              unmountOnExit
               loop
               onOpenChange={(details) => handleOpenChange(details, sectionKey)}
               dir={direction}
