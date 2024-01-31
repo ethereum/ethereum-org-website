@@ -33,6 +33,8 @@ import type {
   NavSections,
 } from "./types"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 const NextChevron = (props: IconProps) => {
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale! as Lang)
@@ -108,6 +110,7 @@ type LvlPortalProps = {
   items: NavItem[]
 }
 const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
+  const { direction } = useRtlFlip()
   const pad = 4
   if (lvl > 3) return null
   return (
@@ -145,7 +148,7 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
                     <Item lvl={lvl} item={item} />
                   </Menu.Item>
                 ) : (
-                  <Menu.Root loop>
+                  <Menu.Root loop dir={direction}>
                     <Menu.TriggerItem>
                       <Item lvl={lvl} item={item} />
                     </Menu.TriggerItem>
@@ -172,6 +175,8 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
+
+  const { direction } = useRtlFlip()
 
   const handleOpenChange = (
     { open }: MenuOpenChangeDetails,
@@ -206,6 +211,7 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
               unmountOnExit
               loop
               onOpenChange={(details) => handleOpenChange(details, sectionKey)}
+              dir={direction}
             >
               <Menu.Trigger asChild>
                 <Button
