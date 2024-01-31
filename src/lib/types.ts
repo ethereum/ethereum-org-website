@@ -398,3 +398,19 @@ export type CommunityConference = {
   startDate: string
   endDate: string
 }
+
+// Translation progress data
+type TranslationProgressSummary = {
+  total: number
+  translated: number
+  preTranslateAppliedTo: number
+  approved: number
+}
+
+export type TranslationProgressDataItem = {
+  languageId: string
+  words: TranslationProgressSummary
+  phrases: TranslationProgressSummary
+  translationProgress: number
+  approvalProgress: number
+}
