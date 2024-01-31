@@ -91,10 +91,10 @@ git checkout -b new_branch_name
 2. Start developing!
 
 ```sh
-yarn start
+yarn dev
 ```
 
-- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
+- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
   - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
