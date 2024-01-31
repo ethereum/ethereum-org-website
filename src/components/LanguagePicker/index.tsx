@@ -1,4 +1,3 @@
-import { useTranslation } from "next-i18next"
 import {
   Box,
   Flex,
@@ -31,15 +30,19 @@ const LanguagePicker = ({
   handleClose,
   ...props
 }: LanguagePickerProps) => {
-  const { t } = useTranslation("page-languages")
   const {
+    t,
+    disclosure,
     inputRef,
     firstItemRef,
     filterValue,
     setFilterValue,
     browserLocalesInfo,
     filteredNames,
-  } = useLanguagePicker()
+    getLinkEventValue,
+  } = useLanguagePicker(handleClose)
+
+  const { onClose } = disclosure
 
   return (
     <Menu
@@ -47,143 +50,156 @@ const LanguagePicker = ({
       initialFocusRef={inputRef}
       placement={placement}
       closeOnSelect={false}
+      {...disclosure}
     >
-      {({ onClose }) => {
-        const onMenuClose = () => {
-          setFilterValue("")
-          handleClose ? handleClose() : onClose()
-        }
-        return (
-          <>
-            {children}
-            <MenuList
-              position="relative"
-              overflow="auto"
-              borderRadius="base"
-              py="0"
-              {...props}
+      {children}
+      <MenuList
+        position="relative"
+        overflow="auto"
+        borderRadius="base"
+        py="0"
+        {...props}
+      >
+        {/* Mobile Close bar */}
+        <Flex
+          justifyContent="end"
+          hideFrom="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+          position="sticky"
+          zIndex="sticky"
+          top="0"
+          bg="background.base"
+        >
+          <Button
+            p="4"
+            variant="ghost"
+            alignSelf="end"
+            onClick={() => onClose()}
+            textTransform="uppercase"
+            fontSize="xs"
+          >
+            {t("close")}
+          </Button>
+        </Flex>
+
+        {/* Main Language selection menu */}
+        <Box
+          position="relative"
+          w="100%"
+          minH="calc(100% - 53px)" // Fill height with space for close button on mobile
+          p="4"
+          bg="background.highlight"
+          sx={{ "[role=menuitem]": { py: "3", px: "2" } }}
+        >
+          {browserLocalesInfo.length > 0 && (
+            <>
+              <Text fontSize="xs" color="body.medium">
+                {t("page-languages-browser-language")}
+              </Text>
+              {browserLocalesInfo.map((displayInfo) => (
+                <MenuItem
+                  key={`item-${displayInfo.localeOption}`}
+                  displayInfo={displayInfo}
+                  onClick={() =>
+                    onClose({
+                      eventName: "Locale chosen (browser preference)",
+                      eventValue: getLinkEventValue(displayInfo.localeOption),
+                    })
+                  }
+                  isFeatured
+                />
+              ))}
+              <MenuDivider borderColor="body.medium" my="4" mx="-2" />
+            </>
+          )}
+
+          <Text fontSize="xs" color="body.medium">
+            {t("page-languages-filter-label")}{" "}
+            <Text as="span" textTransform="lowercase">
+              ({filteredNames.length} {t("common:languages")})
+            </Text>
+          </Text>
+          <ChakraMenuItem
+            onFocus={() => inputRef.current?.focus()}
+            p="0"
+            bg="transparent"
+            position="relative"
+            closeOnSelect={false}
+          >
+            <Input
+              placeholder={t("page-languages-filter-placeholder")}
+              value={filterValue}
+              onChange={(e) => setFilterValue(e.target.value)}
+              ref={inputRef}
+              h="8"
+              mt="1"
+              mb="2"
+              bg="background.base"
+              color="body.base"
+              onKeyDown={(e) => {
+                // Navigate to first result on enter
+                if (e.key === "Enter") {
+                  e.preventDefault()
+                  firstItemRef.current?.click()
+                }
+              }}
+            />
+          </ChakraMenuItem>
+
+          {filteredNames.map((displayInfo, index) => {
+            const firstResult = index === 0
+            return (
+              <MenuItem
+                key={"item-" + displayInfo.localeOption}
+                displayInfo={displayInfo}
+                ref={firstResult ? firstItemRef : null}
+                onClick={() =>
+                  onClose({
+                    eventName: "Locale chosen",
+                    eventValue: getLinkEventValue(displayInfo.localeOption),
+                  })
+                }
+              />
+            )
+          })}
+
+          {filteredNames.length === 0 && (
+            <NoResultsCallout
+              onClose={() =>
+                onClose({
+                  eventName: "Translation program link (no results)",
+                  eventValue: "/contributing/translation-program",
+                })
+              }
+            />
+          )}
+        </Box>
+
+        {/* Footer callout */}
+        <Flex
+          borderTop="2px"
+          borderColor="primary.base"
+          bg="primary.lowContrast"
+          p="3"
+          position="sticky"
+          bottom="0"
+          justifyContent="center"
+        >
+          <Text fontSize="xs" textAlign="center" color="body.base">
+            Help us translate ethereum.org.{" "}
+            <BaseLink
+              href="/contributing/translation-program"
+              onClick={() =>
+                onClose({
+                  eventName: "Translation program link (menu footer)",
+                  eventValue: "/contributing/translation-program",
+                })
+              }
             >
-              {/* Mobile Close bar */}
-              <Flex
-                justifyContent="end"
-                hideFrom="lg" // TODO: Confirm breakpoint after nav-menu PR merged
-                position="sticky"
-                zIndex="sticky"
-                top="0"
-                bg="background.base"
-              >
-                <Button
-                  p="4"
-                  variant="ghost"
-                  alignSelf="end"
-                  onClick={onMenuClose}
-                  textTransform="uppercase"
-                  fontSize="xs"
-                >
-                  {t("close")}
-                </Button>
-              </Flex>
-
-              {/* Main Language selection menu */}
-              <Box
-                position="relative"
-                w="100%"
-                minH="calc(100% - 53px)" // Fill height with space for close button on mobile
-                p="4"
-                bg="background.highlight"
-                sx={{ "[role=menuitem]": { py: "3", px: "2" } }}
-              >
-                {browserLocalesInfo.length > 0 && (
-                  <>
-                    <Text fontSize="xs" color="body.medium">
-                      {t("page-languages-browser-language")}
-                    </Text>
-                    {browserLocalesInfo.map((displayInfo) => (
-                      <MenuItem
-                        key={`item-${displayInfo.localeOption}`}
-                        displayInfo={displayInfo}
-                        onClick={onMenuClose}
-                        isFeatured
-                      />
-                    ))}
-                    <MenuDivider borderColor="body.medium" my="4" mx="-2" />
-                  </>
-                )}
-
-                <Text fontSize="xs" color="body.medium">
-                  {t("page-languages-filter-label")}{" "}
-                  <Text as="span" textTransform="lowercase">
-                    ({filteredNames.length} {t("common:languages")})
-                  </Text>
-                </Text>
-                <ChakraMenuItem
-                  onFocus={() => inputRef.current?.focus()}
-                  p="0"
-                  bg="transparent"
-                  position="relative"
-                  closeOnSelect={false}
-                >
-                  <Input
-                    placeholder={t("page-languages-filter-placeholder")}
-                    value={filterValue}
-                    onChange={(e) => setFilterValue(e.target.value)}
-                    ref={inputRef}
-                    h="8"
-                    mt="1"
-                    mb="2"
-                    bg="background.base"
-                    color="body.base"
-                    onKeyDown={(e) => {
-                      // Navigate to first result on enter
-                      if (e.key === "Enter") {
-                        e.preventDefault()
-                        firstItemRef.current?.click()
-                      }
-                    }}
-                  />
-                </ChakraMenuItem>
-
-                {filteredNames.map((displayInfo, index) => {
-                  const firstResult = index === 0
-                  return (
-                    <MenuItem
-                      key={"item-" + displayInfo.localeOption}
-                      displayInfo={displayInfo}
-                      ref={firstResult ? firstItemRef : null}
-                      onClick={onMenuClose}
-                    />
-                  )
-                })}
-
-                {filteredNames.length === 0 && (
-                  <NoResultsCallout onClose={onMenuClose} />
-                )}
-              </Box>
-
-              {/* Footer callout */}
-              <Flex
-                borderTop="2px"
-                borderColor="primary.base"
-                bg="primary.lowContrast"
-                p="3"
-                position="sticky"
-                bottom="0"
-                justifyContent="center"
-              >
-                <Text fontSize="xs" textAlign="center" color="body.base">
-                  Help us translate ethereum.org.{" "}
-                  <BaseLink
-                    href="/contributing/translation-program"
-                    onClick={onMenuClose}
-                  >
-                    Learn more
-                  </BaseLink>
-                </Text>
-              </Flex>
-            </MenuList>
-          </>
-        )
-      }}
+              Learn more
+            </BaseLink>
+          </Text>
+        </Flex>
+      </MenuList>
     </Menu>
   )
 }

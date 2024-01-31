@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
+import { useDisclosure } from "@chakra-ui/react"
 
 import type {
   I18nLocale,
@@ -9,6 +10,7 @@ import type {
   TranslationProgressDataItem,
 } from "@/lib/types"
 
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { languages } from "@/lib/utils/translations"
 
 import progressData from "@/data/translationProgress.json"
@@ -17,9 +19,9 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 const data = progressData as TranslationProgressDataItem[]
 
-export const useLanguagePicker = () => {
+export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("page-languages")
-  const { locale, locales } = useRouter()
+  const { asPath, locale, locales } = useRouter()
   const inputRef = useRef<HTMLInputElement>(null)
   const firstItemRef = useRef<HTMLAnchorElement>(null)
   const [filterValue, setFilterValue] = useState("")
@@ -138,12 +140,46 @@ export const useLanguagePicker = () => {
     )
   }, [filterValue, localeToDisplayInfo, locales])
 
+  const { isOpen, ...menu } = useDisclosure()
+
+  const eventBase: MatomoEventOptions = {
+    eventCategory: `Language picker`,
+    eventAction: `Clicked`,
+    eventName: "Open or close language picker",
+  }
+
+  const onOpen = () => {
+    menu.onOpen()
+    trackCustomEvent({ ...eventBase, eventValue: "Opened" })
+  }
+
+  /**
+   * When closing the menu, track whether this is following a link, or simply closing the menu
+   * @param customMatomoEvent Optional custom event property overrides
+   */
+  const onClose = (customMatomoEvent?: Partial<MatomoEventOptions>): void => {
+    setFilterValue("")
+    handleClose && handleClose()
+    menu.onClose()
+    trackCustomEvent(
+      customMatomoEvent
+        ? { ...eventBase, ...customMatomoEvent }
+        : { ...eventBase, eventValue: "Closed" }
+    )
+  }
+
+  const getLinkEventValue = (localeOption: string) =>
+    join(localeOption + asPath)
+
   return {
+    t,
+    disclosure: { isOpen, onOpen, onClose },
     inputRef,
     firstItemRef,
     filterValue,
     setFilterValue,
     browserLocalesInfo,
     filteredNames,
+    getLinkEventValue,
   }
 }
