@@ -1,4 +1,5 @@
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { BsCheck } from "react-icons/bs"
 import {
   Box,
@@ -30,6 +31,7 @@ const MenuItem = forwardRef(
       approvalProgress,
       wordsApproved,
     } = displayInfo
+    const { t } = useTranslation("page-languages")
     const { asPath, locale } = useRouter()
     const isCurrent = localeOption === locale && !isFeatured
 
@@ -99,7 +101,8 @@ const MenuItem = forwardRef(
           color="body.medium"
           maxW="full"
         >
-          {progress} translated • {words} words
+          {progress} {t("page-languages-translated")} • {words}{" "}
+          {t("page-languages-words")}
         </Text>
         <ProgressBar value={approvalProgress} isCurrent={isCurrent} />
       </ChakraMenuItem>

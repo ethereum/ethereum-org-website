@@ -41,8 +41,7 @@ const LanguagePicker = ({
   ...props
 }: LanguagePickerProps) => {
   const { t } = useTranslation("page-languages")
-  const router = useRouter()
-  const { locale, locales } = router
+  const { locale, locales } = useRouter()
   const inputRef = useRef<HTMLInputElement>(null)
   const firstItemRef = useRef<HTMLAnchorElement>(null)
   const [filterValue, setFilterValue] = useState("")
@@ -186,7 +185,7 @@ const LanguagePicker = ({
                   textTransform="uppercase"
                   fontSize="xs"
                 >
-                  Close
+                  {t("close")}
                 </Button>
               </Flex>
 
@@ -202,10 +201,7 @@ const LanguagePicker = ({
                 {browserLocalesInfo.length > 0 && (
                   <>
                     <Text fontSize="xs" color="body.medium">
-                      Browser{" "}
-                      {browserLocalesInfo.length === 1
-                        ? "language"
-                        : "languages"}
+                      {t("page-languages-browser-language")}
                     </Text>
                     {browserLocalesInfo.map((displayInfo) => (
                       <MenuItem
@@ -220,7 +216,8 @@ const LanguagePicker = ({
                 )}
 
                 <Text fontSize="xs" color="body.medium">
-                  Filter list ({filteredNames.length} languages)
+                  {t("page-languages-filter-label")}{" "}
+                  <Text as="span" textTransform="lowercase">({filteredNames.length} {t("common:languages")})</Text>
                 </Text>
                 <ChakraMenuItem
                   onFocus={() => inputRef.current?.focus()}
@@ -230,7 +227,7 @@ const LanguagePicker = ({
                   closeOnSelect={false}
                 >
                   <Input
-                    placeholder="Type to filter"
+                    placeholder={t("page-languages-filter-placeholder")}
                     value={filterValue}
                     onChange={(e) => setFilterValue(e.target.value)}
                     ref={inputRef}
