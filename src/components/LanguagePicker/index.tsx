@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
@@ -47,10 +47,7 @@ const LanguagePicker = ({
   const [filterValue, setFilterValue] = useState("")
 
   // Get the preferred languages for the users browser
-  const [navLangs, setNavLangs] = useState<string[]>([])
-  useEffect(() => {
-    setNavLangs(Array.from(navigator.languages))
-  }, [])
+  const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
 
   if (!(progressData?.length > 0))
     throw new Error("Missing translation progress data; check GitHub action")
