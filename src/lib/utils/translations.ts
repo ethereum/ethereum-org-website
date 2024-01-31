@@ -61,10 +61,6 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path === "/contributing/translation-program/contributors") {
     primaryNamespace = "page-contributing-translation-program-contributors"
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-contributing-translation-program-contributors",
-    ]
   }
 
   if (path.startsWith("/community")) {

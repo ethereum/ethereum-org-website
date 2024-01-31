@@ -51,7 +51,7 @@ const Nav: FC<IProps> = ({ path }) => {
   useEventListener("keydown", (e) => {
     if (e.key !== "\\") return
     e.preventDefault()
-    if (e.metaKey) {
+    if (e.metaKey || e.ctrlKey) {
       toggleColorMode()
     } else {
       languagePickerRef.current?.click()
