@@ -14,10 +14,12 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import type { Lang, LocaleDisplayInfo } from "@/lib/types"
+import type { I18nLocale, Lang, LocaleDisplayInfo } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import { BaseLink } from "@/components/Link"
+
+import { languages } from "@/lib/utils/translations"
 
 import progressData from "@/data/translationProgress.json"
 
@@ -25,8 +27,6 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import MenuItem from "./MenuItem"
 import NoResultsCallout from "./NoResultsCallout"
-
-import i18nConfig from "@/../i18n.config.json"
 
 type LanguagePickerProps = Omit<MenuListProps, "children"> & {
   children: React.ReactNode
@@ -57,9 +57,9 @@ const LanguagePicker = ({
 
   const totalWords = progressData[0].words.total
 
-  const localeToDisplayInfo = (localeOption: string): LocaleDisplayInfo => {
-    const i18nConfigItem = i18nConfig.find(({ code }) => localeOption === code)
-    const englishName = i18nConfigItem!.name
+  const localeToDisplayInfo = (localeOption: Lang): LocaleDisplayInfo => {
+    const i18nItem: I18nLocale = languages[localeOption]
+    const englishName = i18nItem.name
 
     // Get "source" display name (Language choice displayed in language of current locale)
     const intlSource = new Intl.DisplayNames([locale!], {
@@ -76,7 +76,7 @@ const LanguagePicker = ({
     const fallbackTarget = new Intl.DisplayNames([localeOption], {
       type: "language",
     }).of(localeOption)
-    const i18nConfigTarget = i18nConfigItem?.localName
+    const i18nConfigTarget = i18nItem.localName
     const targetName = i18nConfigTarget || fallbackTarget
 
     if (!sourceName || !targetName) {
@@ -86,7 +86,7 @@ const LanguagePicker = ({
     // English will not have a dataItem
     const dataItem = progressData.find(
       ({ languageId }) =>
-        i18nConfigItem!.crowdinCode.toLowerCase() === languageId.toLowerCase()
+        i18nItem.crowdinCode.toLowerCase() === languageId.toLowerCase()
     )
 
     const approvalProgress =
@@ -108,7 +108,7 @@ const LanguagePicker = ({
   }
 
   const displayNames: LocaleDisplayInfo[] =
-    locales
+    (locales as Lang[])
       ?.map(localeToDisplayInfo)
       .sort((a, b) => b.approvalProgress - a.approvalProgress) || []
 
@@ -217,7 +217,9 @@ const LanguagePicker = ({
 
                 <Text fontSize="xs" color="body.medium">
                   {t("page-languages-filter-label")}{" "}
-                  <Text as="span" textTransform="lowercase">({filteredNames.length} {t("common:languages")})</Text>
+                  <Text as="span" textTransform="lowercase">
+                    ({filteredNames.length} {t("common:languages")})
+                  </Text>
                 </Text>
                 <ChakraMenuItem
                   onFocus={() => inputRef.current?.focus()}
