@@ -23,7 +23,7 @@
   "page-upgrades-bug-bounty-hunting-leaderboard-subtitle": "Find consensus layer bugs to get added to this leaderboard",
   "page-upgrades-bug-bounty-hunting-execution-leaderboard-subtitle": "Find execution layer bugs to get added to this leaderboard",
   "page-upgrades-bug-bounty-hunting-li-1": "Issues without a POC or that have already been submitted by another user or are already known to spec and client maintainers are not eligible for bounty rewards.",
-  "page-upgrades-bug-bounty-hunting-li-2": "Public disclosure of a vulnerability makes it ineligible for a bounty.",
+  "page-upgrades-bug-bounty-hunting-li-2": "Public disclosure of a vulnerability or reporting it to other parties without prior agreement makes it ineligible for a bounty.",
   "page-upgrades-bug-bounty-hunting-li-3": "Employees and contractors of the Ethereum Foundation or client teams in scope of the bounty program may participate in the program only in the accrual of points and will not receive monetary rewards.",
   "page-upgrades-bug-bounty-hunting-li-4": "Ethereum bounty program considers a number of variables in determining rewards. Determinations of eligibility, score and all terms related to an award are at the sole and final discretion of the Ethereum Foundation bug bounty panel.",
   "page-upgrades-bug-bounty-leaderboard": "See full leaderboards",
