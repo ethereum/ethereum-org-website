@@ -83,9 +83,9 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
 ```tsx
 // Example
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect} from "react"
 
-const ComponentName: React.FC = (props) => {
+const ComponentName = () => {
   // useState hook for managing state variables
   const [greeting, setGreeting] = useState("")
 
