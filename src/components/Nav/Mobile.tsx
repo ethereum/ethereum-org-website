@@ -342,6 +342,13 @@ const MobileNavMenu: React.FC<IProps> = ({
                 w="calc(100vw - var(--eth-sizes-8))"
                 inset="4"
                 handleClose={onToggle}
+                _before={{
+                  content: '""',
+                  position: "fixed",
+                  inset: 0,
+                  bg: "black",
+                  opacity: 0.4,
+                }} // TODO: Replace with overlay component
               >
                 <MenuButton as={FooterButton} icon={BsTranslate}>
                   <FooterItemText>{t("languages")}</FooterItemText>
