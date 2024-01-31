@@ -13,7 +13,7 @@ type ItemProps = {
   lvl: Level
 }
 
-const Item = forwardRef(({ item, lvl }: ItemProps, ref) => {
+const ItemContent = forwardRef(({ item, lvl }: ItemProps, ref) => {
   const { label, description, icon: CustomIcon, ...action } = item
   const { asPath } = useRouter()
   const isLink = "href" in action
@@ -73,4 +73,4 @@ const Item = forwardRef(({ item, lvl }: ItemProps, ref) => {
   )
 })
 
-export default Item
+export default ItemContent

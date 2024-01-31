@@ -4,7 +4,7 @@ import { Flex } from "@chakra-ui/react"
 
 import type { Level, LvlRefs, NavItem } from "../types"
 
-import Item from "./Item"
+import ItemContent from "./ItemContent"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -50,12 +50,12 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
               <Fragment key={label}>
                 {"href" in action ? (
                   <Menu.Item id={label}>
-                    <Item lvl={lvl} item={item} />
+                    <ItemContent lvl={lvl} item={item} />
                   </Menu.Item>
                 ) : (
                   <Menu.Root loop dir={direction}>
                     <Menu.TriggerItem>
-                      <Item lvl={lvl} item={item} />
+                      <ItemContent lvl={lvl} item={item} />
                     </Menu.TriggerItem>
                     <LvlPortal
                       lvl={(lvl + 1) as Level}
