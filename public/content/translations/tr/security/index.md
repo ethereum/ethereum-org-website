@@ -24,7 +24,7 @@ Zayıf şifre örneği: TatlıTüylüKedicikler!
 Güçlü şifre örneği: ymv\*azu.EAC8eyp8umf
 ```
 
-Bir başka yaygın hata da, [sosyal mühendislik](<https://wikipedia.org/wiki/Social_engineering_(security)>) aracılığıyla kolayca tahmin edilebilen veya bulunabilen şifreler kullanmaktır. Şifrenizde annenizin kızlık soyadı, çocuklarınızın veya evcil hayvanlarınızın adları veya doğum tarihlerinin bulunması güvenli değildir ve şifrenizin ele geçirilme riskini artırır.
+Bir başka yaygın hata da, [sosyal mühendislik](https://wikipedia.org/wiki/Social_engineering_(security)) aracılığıyla kolayca tahmin edilebilen veya bulunabilen şifreler kullanmaktır. Şifrenizde annenizin kızlık soyadı, çocuklarınızın veya evcil hayvanlarınızın adları veya doğum tarihlerinin bulunması güvenli değildir ve şifrenizin ele geçirilme riskini artırır.
 
 #### Şifre belirlemek için iyi yöntemler: {#good-password-practices}
 
@@ -66,7 +66,7 @@ Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanıla
 - Olduğunuz bir şey (parmak izi veya göz/yüz tarayıcısı gibi)
 - Sahip olduğunuz bir şey (telefonunuzda bir güvenlik anahtarı veya kimlik doğrulama uygulaması)
 
-**İki Faktörlü Doğrulama (2FA)** kullanmak çevrimiçi hesaplarınız için ek bir _güvenlik faktörü_ sağlar; böylece sadece şifrenizi bilmek (bildiğiniz bir şey) bir hesaba erişmek için yeterli değildir. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
+**İki Faktörlü Doğrulama (2FA)** kullanmak çevrimiçi hesaplarınız için ek bir *güvenlik faktörü* sağlar; böylece sadece şifrenizi bilmek (bildiğiniz bir şey) bir hesaba erişmek için yeterli değildir. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -270,7 +270,6 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 
 ### Web güvenliği {#reading-web-security}
 
-- [Bu sebepten dolayı iki faktörlü doğrulama için metin kullanmamalısınız](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [3 milyona yakın aygıt kötü amaçlı yazılım işlenmiş Chrome ve Edge eklentileri tarafından enfekte edildi](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Asla Unutmayacağınız Güçlü Bir Şifre Nasıl Oluşturulur](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [Güvenlik anahtarı nedir?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
@@ -278,7 +277,7 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 ### Kripto güvenliği {#reading-crypto-security}
 
 - [Kendinizi ve Fonlarınızı Koruma](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [Kriptoda Güvende Kalmanın 4 Yolu](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Yaygın kripto iletişim yazılımlarındaki güvenlik sorunları](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
 - [Acemiler ve Zeki İnsanlar için Güvenlik Rehberi](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Kripto Güvenliği: Şifreler ve Doğrulama](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

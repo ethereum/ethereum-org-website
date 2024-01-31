@@ -208,7 +208,7 @@ Conforme explicado, os optimistic rollups publicam dados de transações compact
 
 A cadeia principal da Ethereum coloca limites sobre quantos blocos de dados podem conter, denominados em unidades de gás (o [tamanho médio do bloco](/developers/docs/blocks/#block-size) é de 15 milhões de gás). Embora isso restrinja quanto gás cada transação pode usar, também significa que podemos aumentar as transações processadas por bloco reduzindo os dados relacionados à transação, melhorando diretamenteo dimensionamento.
 
-Os optimistic rollups usam várias técnicas para obter a compressão de dados de transação e melhorar as taxas de TPS. Por exemplo, este [artigo](https://vitalik.ca/general/2021/01/05/rollup.html) compara os dados que uma transação básica do usuário (enviando ether) gera na rede principal com a quantidade de dados que a mesma transação gera em um rollup:
+Os optimistic rollups usam várias técnicas para obter a compressão de dados de transação e melhorar as taxas de TPS. Por exemplo, este [artigo](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compara os dados que uma transação básica do usuário (enviando ether) gera na rede principal com a quantidade de dados que a mesma transação gera em um rollup:
 
 | Parâmetro  | Ethereum (L1)                | Rollup (L2)   |
 | ---------- | ---------------------------- | ------------- |

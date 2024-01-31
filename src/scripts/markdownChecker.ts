@@ -42,6 +42,8 @@ const INCORRECT_PATH_IN_TRANSLATED_MARKDOWN = new RegExp(
   "g"
 )
 
+const LINK_TEXT_MISSING_REGEX = new RegExp("(?<![\\S])\\[\\]\\(([^)]+)\\)", "g")
+
 // add <emoji
 // add /developers/docs/scaling/#layer-2-scaling
 // add ../../assets/ethereum-learn.png
@@ -214,6 +216,17 @@ function processMarkdown(path: string) {
   while ((invalidLinkMatch = INVALID_LINK_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, invalidLinkMatch.index)
     console.warn(`Invalid link found: ${path}:${lineNumber}`)
+  }
+
+  let linkTextMissingMatch: RegExpExecArray | null
+
+  // Check for links missing text
+  while ((linkTextMissingMatch = LINK_TEXT_MISSING_REGEX.exec(markdownFile))) {
+    const lineNumber = getLineNumber(
+      markdownFile,
+      linkTextMissingMatch.index
+    )
+    console.warn(`Link text missing: ${path}:${lineNumber}`)
   }
 
   let incorrectImagePathMatch: RegExpExecArray | null

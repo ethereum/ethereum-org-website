@@ -174,9 +174,9 @@ DAO 해킹에 대해 자세히 보기:
 
 이더리움의 운영 방식은 엄격하게 정해진 것이 아닙니다. 여러 커뮤니티 참여자들이 이에 대해 다양한 관점을 가지고 있습니다. 다음은 그 중 몇 가지입니다.
 
-- [블록체인 운영 방식에 대한 설명](https://vitalik.ca/general/2017/12/17/voting.html) - _비탈릭 부테린_
+- [블록체인 운영 방식에 대한 설명](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _비탈릭 부테린_
 - [이더리움 운영 방식은 어떻게 작동합니까?](https://cryptotesters.com/blog/ethereum-governance) – _크립토테스터스_
 - [어떻게 이더리움 운영 방식이 작동하는가](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _미카 졸투_
 - [이더리움 코어 개발자란 무엇인가요?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _허드슨 제임슨_
-- [운영 방식, 2부: 금권정치는 아직도 나쁘다](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _비탈릭 부테린_
-- [코인 투표 운영 방식을 넘어서](https://vitalik.ca/general/2021/08/16/voting3.html) - _비탈릭 부테린_
+- [운영 방식, 2부: 금권정치는 아직도 나쁘다](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _비탈릭 부테린_
+- [코인 투표 운영 방식을 넘어서](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _비탈릭 부테린_

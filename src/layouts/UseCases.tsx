@@ -50,7 +50,6 @@ const HeroContainer = (props: ChildOnlyProp) => (
 
 const TitleCard = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "cardBoxShadow")
-
   return (
     <Flex
       bg={{ base: "ednBackground", lg: "background.base" }}
@@ -65,8 +64,8 @@ const TitleCard = (props: ChildOnlyProp) => {
       p={8}
       position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
-      insetInlineStart={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
+      insetInlineStart={{ base: 0, lg: 24 }}
       insetInlineEnd={{ base: 0, lg: "unset" }}
       {...props}
     />
@@ -80,7 +79,7 @@ export const useCasesComponents = {
 
 interface IProps
   extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems"> {
+    Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> {
   frontmatter: UseCasesFrontmatter
 }
 export const UseCasesLayout: React.FC<IProps> = ({
@@ -88,6 +87,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
   frontmatter,
   slug,
   tocItems,
+  contentNotTranslated,
 }) => {
   const { asPath: relativePath } = useRouter()
   const { t } = useTranslation("template-usecase")
@@ -177,7 +177,11 @@ export const UseCasesLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative" width="full">
+    <Box
+      position="relative"
+      width="full"
+      dir={contentNotTranslated ? "ltr" : "unset"}
+    >
       <BannerNotification shouldShow zIndex="sticky" hideBelow={lgBp}>
         <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
         <Text m={0}>

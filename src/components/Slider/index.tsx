@@ -3,13 +3,16 @@ import useEmblaCarousel from "embla-carousel-react"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import { Box, Center, Flex, IconButton, Stack } from "@chakra-ui/react"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 export interface IProps {
   children?: React.ReactNode
   onSlideChange?: (slideIndex: number) => void
 }
 
 const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
-  const [emblaRef, embla] = useEmblaCarousel()
+  const { flipForRtl, direction } = useRtlFlip()
+  const [emblaRef, embla] = useEmblaCarousel({ direction })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -78,6 +81,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           bg={prevBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
           size="sm"
           color={prevBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
+          transform={flipForRtl}
         />
         <IconButton
           aria-label="MdChevronRight"
@@ -89,6 +93,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           bg={nextBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
           size="sm"
           color={nextBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
+          transform={flipForRtl}
         />
       </Flex>
       <Center

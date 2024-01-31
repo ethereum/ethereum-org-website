@@ -109,7 +109,7 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 ### Soulbound tokeny a identity {#soulbound}
 
-[Soulbound tokeny](https://vitalik.ca/general/2022/01/26/soulbound.html) (nepřenosné NFT) by mohly být použity ke shromažďování informací jedinečných pro konkrétní peněženku. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účasti.
+[Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nepřenosné NFT) by mohly být použity ke shromažďování informací jedinečných pro konkrétní peněženku. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účasti.
 
 ## Výhody decentralizované identity {#benefits-of-decentralized-identity}
 
