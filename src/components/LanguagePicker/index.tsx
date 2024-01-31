@@ -185,7 +185,7 @@ const LanguagePicker = ({
           justifyContent="center"
         >
           <Text fontSize="xs" textAlign="center" color="body.base">
-            Help us translate ethereum.org.{" "}
+            {t("page-languages-recruit-community")}{" "}
             <BaseLink
               href="/contributing/translation-program"
               onClick={() =>
@@ -195,7 +195,7 @@ const LanguagePicker = ({
                 })
               }
             >
-              Learn more
+              {t("common:learn-more")}
             </BaseLink>
           </Text>
         </Flex>
