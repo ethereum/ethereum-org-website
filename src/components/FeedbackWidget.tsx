@@ -1,15 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from "react"
-import FocusTrap from "focus-trap-react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdClose } from "react-icons/md"
 import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogCloseButton,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
   Box,
   Button,
   ButtonProps,
-  Flex,
-  Icon,
   ScaleFade,
+  useDisclosure,
 } from "@chakra-ui/react"
 
 import { FeedbackGlyphIcon } from "@/components/icons"
@@ -19,8 +23,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-import { useKeyPress } from "@/hooks/useKeyPress"
-import { useOnClickOutside } from "@/hooks/useOnClickOutside"
 import { useSurvey } from "@/hooks/useSurvey"
 
 type FixedDotProps = ButtonProps & {
@@ -52,11 +54,10 @@ const FixedDot = ({
       alignItems="center"
       whiteSpace="normal"
       _hover={{
-        cursor: "pointer",
         transform: "scale(1.1)",
         transition: "transform 0.2s ease-in-out",
       }}
-      transition="transform 0.2s ease-in-out, width 0.25s linear,
+      transition="transform 0.2s ease-in-out, width 0.25s ease-in-out,
       border-radius 0.25s linear"
       {...props}
     >
@@ -68,23 +69,21 @@ const FixedDot = ({
 const FeedbackWidget = () => {
   const { t } = useTranslation("common")
   const { asPath, locale } = useRouter()
-
-  const containerRef = useRef<HTMLInputElement>(null)
-  useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [isExpanded, setIsExpanded] = useState<boolean>(false)
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = useRef<HTMLButtonElement>(null)
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
   useEffect(() => {
     // Reset component state when path (asPath) changes
-    setIsOpen(false)
+    onClose()
     setFeedbackSubmitted(false)
     setIsExpanded(false)
 
-    let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
+    let expandTimeout = setTimeout(() => setIsExpanded(true), 30_000)
 
     return () => clearTimeout(expandTimeout)
-  }, [asPath])
+  }, [asPath, onClose])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
@@ -101,15 +100,16 @@ const FeedbackWidget = () => {
   }, [asPath])
 
   const handleClose = (): void => {
-    setIsOpen(false)
+    onClose()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
       eventName: `Closed feedback widget`,
     })
   }
+
   const handleOpen = (): void => {
-    setIsOpen(true)
+    onOpen()
     setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
@@ -117,6 +117,7 @@ const FeedbackWidget = () => {
       eventName: `Opened feedback widget`,
     })
   }
+
   const handleSubmit = (choice: boolean): void => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
@@ -132,14 +133,13 @@ const FeedbackWidget = () => {
       eventName: "Feedback survey opened",
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
-    setIsOpen(false) // Close widget without triggering redundant tracker event
+    onClose() // Close widget without triggering redundant tracker event
     setIsExpanded(false)
   }
 
-  useKeyPress(`Escape`, handleClose)
+  // Dispay on English pages only
+  if (locale !== DEFAULT_LOCALE) return null
 
-  if (locale! !== DEFAULT_LOCALE) return null
-  const closeButtonSize = "24px"
   return (
     <>
       <FixedDot
@@ -175,120 +175,91 @@ const FeedbackWidget = () => {
           )}
         </Box>
       </FixedDot>
-      {isOpen && (
-        <Box
-          display="block"
-          position="fixed"
-          inset={0}
-          bgColor="blackAlpha.400"
-          zIndex={1001} /* Above the nav bar */
-        >
-          <FocusTrap
-            focusTrapOptions={{
-              fallbackFocus: `#dot`,
-            }}
-          >
-            <Flex
-              id="modal"
-              ref={containerRef}
-              boxSizing="border-box"
-              w={{ base: "auto", sm: "300px" }}
-              bgColor="ednBackground"
-              border="1px"
-              borderColor="buttonColor"
-              boxShadow="tableItemBox"
-              borderRadius="base" /* 0.25rem */
-              position="fixed"
-              insetEnd={{ base: 4, sm: 8 }}
-              insetStart={{ base: 4, sm: "auto" }}
-              bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
-              zIndex={1002} /* Above the modal background */
-              _hover={{
-                transform: "scale(1.02)",
-                transition: "transform 0.2s ease-in-out",
-              }}
-              transition="transform 0.2s ease-in-out"
-              direction="column"
-              alignItems="center"
-              textAlign="center"
-              p={8}
-            >
-              <Button
-                variant="ghost"
-                onClick={handleClose}
-                aria-label={t("close")}
-                position="absolute"
-                insetEnd={2}
-                top={2}
-                cursor="pointer"
-                h={closeButtonSize}
-                w={closeButtonSize}
-                minW={closeButtonSize}
-                minH={closeButtonSize}
-                _hover={{
-                  transform: "scale(1.1)",
-                  transition: "transform 0.2s ease-in-out",
-                }}
-                transition="transform 0.2s ease-in-out"
-              >
-                <Icon as={MdClose} h={closeButtonSize} w={closeButtonSize} />
-              </Button>
 
-              <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
-                {feedbackSubmitted
-                  ? t("feedback-widget-thank-you-title")
-                  : t("feedback-widget-prompt")}
-              </Text>
-              {feedbackSubmitted && (
-                <Text fontWeight="normal" fontSize="md" lineHeight={5}>
+      <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={handleClose}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent
+            position="fixed"
+            insetEnd={{ base: 4, sm: 8 }}
+            insetStart={{ base: 4, sm: "auto" }}
+            bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
+            w={{ base: "auto", sm: "300px" }}
+            bgColor="ednBackground"
+            border="1px"
+            borderColor="buttonColor"
+            boxShadow="tableItemBox"
+            borderRadius="base"
+            py="4"
+            px="2"
+          >
+            <AlertDialogCloseButton />
+
+            <AlertDialogHeader
+              fontSize="xl"
+              fontWeight="bold"
+              lineHeight="6"
+              textAlign="center"
+            >
+              {feedbackSubmitted
+                ? t("feedback-widget-thank-you-title")
+                : t("feedback-widget-prompt")}
+            </AlertDialogHeader>
+
+            {/* Body: */}
+            {feedbackSubmitted && (
+              <>
+                <AlertDialogBody
+                  fontWeight="normal"
+                  fontSize="md"
+                  lineHeight="5"
+                  textAlign="center"
+                >
                   {t("feedback-widget-thank-you-subtitle")}
-                </Text>
-              )}
-              {feedbackSubmitted && (
-                <Text
+                </AlertDialogBody>
+                <AlertDialogBody
                   fontWeight="bold"
                   fontSize="xs"
-                  lineHeight={4}
+                  lineHeight="4"
                   letterSpacing="wide"
                   color="searchBorder"
+                  textAlign="center"
                 >
                   {t("feedback-widget-thank-you-timing")}
-                </Text>
-              )}
-              <Flex flexWrap="nowrap" gap={6} width="full">
-                {feedbackSubmitted ? (
+                </AlertDialogBody>
+              </>
+            )}
+
+            <AlertDialogFooter display="flex" gap="6">
+              {feedbackSubmitted ? (
+                <Button onClick={handleSurveyOpen} flex={1}>
+                  {t("feedback-widget-thank-you-cta")}
+                </Button>
+              ) : (
+                <>
                   <Button
-                    onClick={handleSurveyOpen}
-                    aria-label={t("feedback-widget-thank-you-cta")}
+                    variant="solid"
+                    onClick={() => handleSubmit(true)}
                     flex={1}
                   >
-                    {t("feedback-widget-thank-you-cta")}
+                    {t("yes")}
                   </Button>
-                ) : (
-                  <>
-                    <Button
-                      variant="solid"
-                      onClick={() => handleSubmit(true)}
-                      aria-label={t("yes")}
-                      flex={1}
-                    >
-                      {t("yes")}
-                    </Button>
-                    <Button
-                      variant="solid"
-                      onClick={() => handleSubmit(false)}
-                      aria-label={t("no")}
-                      flex={1}
-                    >
-                      {t("no")}
-                    </Button>
-                  </>
-                )}
-              </Flex>
-            </Flex>
-          </FocusTrap>
-        </Box>
-      )}
+                  <Button
+                    variant="solid"
+                    onClick={() => handleSubmit(false)}
+                    flex={1}
+                  >
+                    {t("no")}
+                  </Button>
+                </>
+              )}
+            </AlertDialogFooter>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
     </>
   )
 }
