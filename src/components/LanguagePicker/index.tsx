@@ -212,6 +212,7 @@ const LanguagePicker = ({
                         key={`item-${displayInfo.localeOption}`}
                         displayInfo={displayInfo}
                         onClick={onMenuClose}
+                        isFeatured
                       />
                     ))}
                     <MenuDivider borderColor="body.medium" my="4" mx="-2" />

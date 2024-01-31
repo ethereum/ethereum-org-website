@@ -1,8 +1,10 @@
 import { Progress, ProgressProps } from "@chakra-ui/react"
 
-type ProgressBarProps = Pick<ProgressProps, "value">
+type ProgressBarProps = Pick<ProgressProps, "value"> & {
+  isCurrent?: boolean
+}
 
-const ProgressBar = ({ value }: ProgressBarProps) => (
+const ProgressBar = ({ value, isCurrent }: ProgressBarProps) => (
   <Progress
     value={value}
     h="0.5"
@@ -15,7 +17,7 @@ const ProgressBar = ({ value }: ProgressBarProps) => (
     }}
     sx={{
       "[role=progressbar]": {
-        backgroundColor: "body.medium",
+        backgroundColor: isCurrent ? "primary.highContrast" : "body.medium",
       },
     }}
   />
