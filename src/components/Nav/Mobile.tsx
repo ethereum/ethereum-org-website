@@ -1,8 +1,9 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
+import { IconType } from "react-icons"
 import { BsTranslate } from "react-icons/bs"
-import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
+import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
 import {
   Box,
   ButtonProps,
@@ -13,10 +14,13 @@ import {
   DrawerOverlay,
   Flex,
   forwardRef,
+  Grid,
   Icon,
   List,
   ListItem,
   MenuButton,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react"
 
 import LanguagePicker from "@/components/LanguagePicker"
@@ -74,8 +78,25 @@ const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   />
 ))
 
+type FooterButtonProps = ButtonProps & {
+  icon: IconType
+}
+
+const FooterButton = ({ icon, ...props }: FooterButtonProps) => (
+  <Button
+    leftIcon={<Icon as={icon} />}
+    sx={{ span: { m: 0 } }}
+    variant="ghost"
+    flexDir="column"
+    alignItems="center"
+    color="body.base"
+    px="1"
+    {...props}
+  />
+)
+
 const FooterItemText = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="sm"
     lineHeight={1.6}
     fontWeight={400}
@@ -130,6 +151,9 @@ const MobileNavMenu: React.FC<IProps> = ({
   ...props
 }) => {
   const { t } = useTranslation("common")
+
+  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
 
   const handleClick = (): void => {
     toggleMenu()
@@ -254,47 +278,32 @@ const MobileNavMenu: React.FC<IProps> = ({
             py={0}
             mt="auto"
           >
-            <FooterItem
-              onClick={() => {
-                // Workaround to ensure the input for the search modal can have focus
-                toggleMenu()
-                toggleSearch()
-              }}
-            >
-              <Icon as={MdSearch} />
-              <FooterItemText>{t("search")}</FooterItemText>
-            </FooterItem>
-            <FooterItem onClick={toggleTheme}>
-              <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
-              <FooterItemText>
-                {t(isDarkTheme ? "light-mode" : "dark-mode")}
-              </FooterItemText>
-            </FooterItem>
-            <FooterItem>
+            <Grid templateColumns="repeat(3, 1fr)" w="full">
+              <FooterButton
+                icon={MdSearch}
+                onClick={() => {
+                  // Workaround to ensure the input for the search modal can have focus
+                  toggleMenu()
+                  toggleSearch()
+                }}
+              >
+                <FooterItemText>{t("search")}</FooterItemText>
+              </FooterButton>
+              <FooterButton icon={ThemeIcon} onClick={toggleTheme}>
+                <FooterItemText>{t(themeLabelKey)}</FooterItemText>
+              </FooterButton>
               <LanguagePicker
                 placement="top-end"
                 h="calc(100svh - var(--eth-sizes-8))"
                 w="calc(100vw - var(--eth-sizes-8))"
-                insetInlineStart="4"
-                top="4.75rem"
-                boxShadow="dark-lg" // TODO: Replace with an overlay
+                inset="4"
                 handleClose={toggleMenu}
               >
-                <MenuButton
-                  alignItems="center"
-                  color="text"
-                  flexDir="column"
-                  textDecor="none"
-                  _hover={{
-                    color: "primary.base",
-                    textDecor: "none",
-                  }}
-                >
-                  <Icon as={BsTranslate} />
+                <MenuButton as={FooterButton} icon={BsTranslate}>
                   <FooterItemText>{t("languages")}</FooterItemText>
                 </MenuButton>
               </LanguagePicker>
-            </FooterItem>
+            </Grid>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
