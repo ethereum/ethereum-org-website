@@ -9,6 +9,7 @@ import {
   ButtonProps,
   Drawer,
   DrawerBody,
+  DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
   DrawerOverlay,
@@ -16,6 +17,7 @@ import {
   forwardRef,
   Grid,
   Icon,
+  IconButton,
   List,
   ListItem,
   MenuButton,
@@ -114,18 +116,98 @@ const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
 const glyphSvg =
   "M 2 19 l 10 -14 l 0 0 l 10 14 M 2 19 l 10 7 M 12 26 l 10 -7 M 2 22 l 10 15 l 0 0 l 10 -15"
-const closeSvg =
-  "M 2 13 l 0 -3 l 20 0 l 0 3 M 7 14 l 10 10 M 7 24 l 10 -10 M 2 25 l 0 3 l 20 0 l 0 -3"
 
-const glyphPathVariants = {
-  closed: {
-    d: hamburgerSvg,
-    transition: { duration: 0.4 },
-  },
-  open: {
-    d: [hamburgerSvg, glyphSvg, glyphSvg, glyphSvg, closeSvg],
-    transition: { duration: 1.2 },
-  },
+const hamburgerVariants = {
+  closed: { d: hamburgerSvg, transition: { duration: 0.25 } },
+  open: { d: glyphSvg, transition: { duration: 0.25 } },
+}
+
+type HamburgerProps = ButtonProps & {
+  isMenuOpen: boolean
+  onToggle: () => void
+}
+
+const HamburgerButton = ({
+  isMenuOpen,
+  onToggle,
+  ...props
+}: HamburgerProps) => {
+  const { t } = useTranslation("common")
+  return (
+    <IconButton
+      onClick={onToggle}
+      aria-label={t("aria-toggle-search-button")}
+      variant="ghost"
+      isSecondary
+      px={0}
+      color="body.base"
+      icon={
+        <Icon
+          viewBox="0 0 24 40"
+          pointerEvents={isMenuOpen ? "none" : "auto"}
+          mx={0.5}
+          width={6}
+          height={10}
+          position="relative"
+          strokeWidth="2px"
+          _hover={{
+            color: "primary.base",
+            "& > path": {
+              stroke: "primary.base",
+            },
+          }}
+          sx={{
+            "& > path": {
+              stroke: "text",
+              fill: "none",
+            },
+          }}
+        >
+          <motion.path
+            variants={hamburgerVariants}
+            initial={false}
+            animate={isMenuOpen ? "open" : "closed"}
+          />
+        </Icon>
+      }
+      {...props}
+    />
+  )
+}
+
+type CloseButtonProps = ButtonProps & {
+  onToggle: () => void
+}
+
+const CloseButton = ({ onToggle, ...props }: CloseButtonProps) => {
+  const { t } = useTranslation("common")
+  return (
+    <IconButton
+      onClick={onToggle}
+      aria-label={t("aria-toggle-search-button")}
+      variant="ghost"
+      isSecondary
+      px={0}
+      color="menu.lvl1.main"
+      icon={
+        <Icon
+          viewBox="0 0 24 24"
+          width={6}
+          height={6}
+          position="relative"
+          strokeWidth="2px"
+          display="inline-block"
+          stroke="currentColor"
+        >
+          <path d="M 2 4 l 0 -3 l 20 0 l 0 3" />
+          <path d="M 7 15 l 10 -10 " />
+          <path d="M 7 5 l 10 10" />
+          <path d="M 2 16 l 0 3 l 20 0 l 0 -3" />
+        </Icon>
+      }
+      {...props}
+    />
+  )
 }
 
 export interface IProps extends ButtonProps {
@@ -142,7 +224,7 @@ export interface IProps extends ButtonProps {
 const MobileNavMenu: React.FC<IProps> = ({
   isMenuOpen,
   isDarkTheme,
-  toggleMenu,
+  toggleMenu: onToggle,
   toggleTheme,
   toggleSearch,
   linkSections,
@@ -155,59 +237,21 @@ const MobileNavMenu: React.FC<IProps> = ({
   const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
 
-  const handleClick = (): void => {
-    toggleMenu()
-  }
-
   return (
     <>
-      <Button
-        onClick={toggleMenu}
-        aria-label={t("aria-toggle-search-button")}
-        variant="ghost"
-        isSecondary
-        px={0}
-        zIndex={2000}
-        {...props}
-      >
-        <Icon
-          viewBox="0 0 24 40"
-          pointerEvents={isMenuOpen ? "none" : "auto"}
-          mx={0.5}
-          width={6}
-          height={10}
-          position="relative"
-          strokeWidth="2px"
-          zIndex={100}
-          _hover={{
-            color: "primary.base",
-            "& > path": {
-              stroke: "primary.base",
-            },
-          }}
-          sx={{
-            "& > path": {
-              stroke: "text",
-              fill: "none",
-            },
-          }}
-        >
-          <motion.path
-            variants={glyphPathVariants}
-            initial={false}
-            animate={isMenuOpen ? "open" : "closed"}
-          />
-        </Icon>
-      </Button>
+      <HamburgerButton isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
       <Drawer
         portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
-        onClose={handleClick}
+        onClose={onToggle}
         placement="start"
         size="sm"
       >
         <DrawerOverlay bg="modalBackground" />
         <DrawerContent bg="background.base">
+          <DrawerCloseButton fontSize="md" w="fit-content" px="2" m="2">
+            {t("close")}
+          </DrawerCloseButton>
           <DrawerBody pt={12} pb={24} px={4}>
             <List m={0}>
               {Object.keys(linkSections).map((sectionKey, idx) => {
@@ -232,7 +276,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                               {item.text}
                             </Box>
                             {item.items.map((item, idx) => (
-                              <SectionItem key={idx} onClick={handleClick}>
+                              <SectionItem key={idx} onClick={onToggle}>
                                 <StyledNavLink
                                   to={item.to}
                                   isPartiallyActive={item.isPartiallyActive}
@@ -243,7 +287,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                             ))}
                           </Fragment>
                         ) : (
-                          <SectionItem key={idx} onClick={handleClick}>
+                          <SectionItem key={idx} onClick={onToggle}>
                             <StyledNavLink
                               to={item.to}
                               isPartiallyActive={item.isPartiallyActive}
@@ -256,7 +300,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                     </List>
                   </NavListItem>
                 ) : (
-                  <NavListItem key={idx} onClick={handleClick}>
+                  <NavListItem key={idx} onClick={onToggle}>
                     <StyledNavLink
                       to={section.to}
                       isPartiallyActive={section.isPartiallyActive}
@@ -283,7 +327,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 icon={MdSearch}
                 onClick={() => {
                   // Workaround to ensure the input for the search modal can have focus
-                  toggleMenu()
+                  onToggle()
                   toggleSearch()
                 }}
               >
@@ -297,7 +341,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 h="calc(100svh - var(--eth-sizes-8))"
                 w="calc(100vw - var(--eth-sizes-8))"
                 inset="4"
-                handleClose={toggleMenu}
+                handleClose={onToggle}
               >
                 <MenuButton as={FooterButton} icon={BsTranslate}>
                   <FooterItemText>{t("languages")}</FooterItemText>
