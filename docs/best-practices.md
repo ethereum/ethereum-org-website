@@ -83,21 +83,21 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
 ```tsx
 // Example
-import React, { useState, useEffect} from "react"
+import React, { useState, useEffect } from "react";
 
 const ComponentName = () => {
   // useState hook for managing state variables
-  const [greeting, setGreeting] = useState("")
+  const [greeting, setGreeting] = useState("");
 
   useEffect(() => {
     // useEffect hook for handling component lifecycle
-    setGreeting("Hello world")
-  }, [])
+    setGreeting("Hello world");
+  }, []);
 
-  return <div>{greeting}</div>
-}
+  return <div>{greeting}</div>;
+};
 
-export default ComponentName
+export default ComponentName;
 ```
 
 ## Styling
