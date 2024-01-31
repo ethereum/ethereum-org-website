@@ -18,7 +18,7 @@ import ProgressBar from "./ProgressBar"
 
 type ItemProps = ChakraMenuItemProps & {
   displayInfo: LocaleDisplayInfo
-  isFeatured: boolean
+  isFeatured?: boolean
 }
 
 const MenuItem = forwardRef(
