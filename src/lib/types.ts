@@ -233,6 +233,55 @@ export type LocaleDisplayInfo = {
   wordsApproved: number
 }
 
+type TranslatedStats = {
+  tmMatch: number
+  default: number
+  total: number
+}
+
+export type AllTimeData = {
+  name: string
+  url: string
+  unit: string
+  dateRange: {
+    from: string
+    to: string
+  }
+  currency: string
+  mode: string
+  totalCosts: number
+  totalTMSavings: number
+  totalPreTranslated: number
+  data: Array<{
+    user: {
+      id: number
+      username: string
+      fullName: string
+      userRole: string
+      avatarUrl: string
+      preTranslated: number
+      totalCosts: number
+    }
+    languages: Array<{
+      language: {
+        id: string
+        name: string
+        userRole: string
+        tmSavings: number
+        preTranslate: number
+        totalCosts: number
+      }
+      translated: TranslatedStats
+      targetTranslated: TranslatedStats
+      translatedByMt: TranslatedStats
+      approved: TranslatedStats
+      translationCosts: TranslatedStats
+      approvalCosts: TranslatedStats
+    }>
+  }>
+}
+
+
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -400,68 +449,4 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
-}
-
-// Translation progress data
-type TranslationProgressSummary = {
-  total: number
-  translated: number
-  preTranslateAppliedTo: number
-  approved: number
-}
-
-export type TranslationProgressDataItem = {
-  languageId: string
-  words: TranslationProgressSummary
-  phrases: TranslationProgressSummary
-  translationProgress: number
-  approvalProgress: number
-}
-
-type TranslatedStats = {
-  tmMatch: number
-  default: number
-  total: number
-}
-
-export type AllTimeData = {
-  name: string
-  url: string
-  unit: string
-  dateRange: {
-    from: string
-    to: string
-  }
-  currency: string
-  mode: string
-  totalCosts: number
-  totalTMSavings: number
-  totalPreTranslated: number
-  data: Array<{
-    user: {
-      id: number
-      username: string
-      fullName: string
-      userRole: string
-      avatarUrl: string
-      preTranslated: number
-      totalCosts: number
-    }
-    languages: Array<{
-      language: {
-        id: string
-        name: string
-        userRole: string
-        tmSavings: number
-        preTranslate: number
-        totalCosts: number
-      }
-      translated: TranslatedStats
-      targetTranslated: TranslatedStats
-      translatedByMt: TranslatedStats
-      approved: TranslatedStats
-      translationCosts: TranslatedStats
-      approvalCosts: TranslatedStats
-    }>
-  }>
 }

@@ -7,7 +7,7 @@ import type {
   I18nLocale,
   Lang,
   LocaleDisplayInfo,
-  TranslationProgressDataItem,
+  ProjectProgressData,
 } from "@/lib/types"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
@@ -17,7 +17,7 @@ import progressData from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-const data = progressData as TranslationProgressDataItem[]
+const data = progressData as ProjectProgressData[]
 
 export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("page-languages")
