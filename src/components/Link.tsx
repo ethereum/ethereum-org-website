@@ -1,13 +1,11 @@
+import NextLink, { type LinkProps as NextLinkProps } from "next/link"
 import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
-import {
-  Link as NextLink,
-  type LinkProps as NextLinkProps,
-} from "@chakra-ui/next-js"
 import {
   forwardRef,
   Icon,
   Link as ChakraLink,
+  type LinkProps as ChakraLinkProps,
   type StyleProps,
   VisuallyHidden,
 } from "@chakra-ui/react"
@@ -30,7 +28,9 @@ type BaseProps = {
   customEventOptions?: MatomoEventOptions
 }
 
-export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
+export type LinkProps = BaseProps &
+  ChakraLinkProps &
+  Omit<NextLinkProps, "as" | "legacyBehavior" | "passHref" | "href">
 
 /**
  * Link wrapper which handles:
@@ -57,10 +57,10 @@ export const BaseLink = forwardRef(function Link(
   }: LinkProps,
   ref
 ) {
-  let href = (to ?? hrefProp) as string
-
-  const { asPath, locale } = useRouter()
+  const { asPath } = useRouter()
   const { flipForRtl } = useRtlFlip()
+
+  let href = (to ?? hrefProp) as string
 
   const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -142,8 +142,7 @@ export const BaseLink = forwardRef(function Link(
   }
 
   return (
-    <NextLink
-      locale={locale}
+    <ChakraLink
       onClick={() =>
         trackCustomEvent(
           customEventOptions ?? {
@@ -155,16 +154,15 @@ export const BaseLink = forwardRef(function Link(
         )
       }
       {...commonProps}
+      as={NextLink}
     >
       {children}
-    </NextLink>
+    </ChakraLink>
   )
 })
 
 const InlineLink = forwardRef((props: LinkProps, ref) => {
-  const { locale } = useRouter()
-
-  return <BaseLink data-inline-link ref={ref} locale={locale} {...props} />
+  return <BaseLink data-inline-link ref={ref} {...props} />
 })
 
 export default InlineLink
