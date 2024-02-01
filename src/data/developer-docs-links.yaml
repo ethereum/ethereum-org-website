@@ -1,7 +1,7 @@
 # This is the source file for developer documentation nav links
 # Each `id` value should map to an equivalent key in src/intl/${lang}.json file
 
-# To display item as a collapsable directory vs. a link
+# To display item as a collapsible directory vs. a link
 # use the `path` property (of the directory) vs. the `to` property
 - id: docs-nav-readme
   to: /developers/docs

@@ -12,18 +12,17 @@ import {
   Portal,
 } from "@chakra-ui/react"
 
-interface IProps
-  extends Omit<PopoverContentProps, "children">,
-    Pick<PopoverProps, "placement"> {
-  children: ReactNode
-}
-export const NotificationPopover: React.FC<IProps> = ({
+type NotificationPopoverProps = Omit<PopoverContentProps, "children"> &
+  Pick<PopoverProps, "placement"> & {
+    children: ReactNode
+  }
+export const NotificationPopover = ({
   placement,
   children,
   content,
   title,
   ...restProps
-}) => {
+}: NotificationPopoverProps) => {
   return (
     <Popover placement={placement}>
       <PopoverTrigger>{children}</PopoverTrigger>

@@ -4,12 +4,12 @@ import { Image } from "@/components/Image"
 
 import wallet from "@/public/wallet.png"
 
-export interface IProps {
+export type RoadmapImageContentProps = {
   children: React.ReactNode
   title: String
 }
 
-const RoadmapImageContent: React.FC<IProps> = ({ children, title }) => (
+const RoadmapImageContent = ({ children, title }: RoadmapImageContentProps) => (
   <Stack mb={1} mt={16}>
     <Heading as="h3">{title}</Heading>
     <Flex flexDir={{ base: "column", lg: "row" }}>

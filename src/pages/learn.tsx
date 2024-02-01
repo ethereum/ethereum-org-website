@@ -21,7 +21,7 @@ import type {
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
-  type IProps as OriginalCardProps,
+  type CardProps as OriginalCardProps,
 } from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"

@@ -110,7 +110,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Analytics
 - [**BlockPI**](https://blockpi.io/)
   - [Docs](https://docs.blockpi.io/)
-  - Fetures
+  - Features
     - Robust & distributed node structure
     - Up to 40 HTTPS and WSS endpoints
     - Free signup package and monthly package
