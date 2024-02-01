@@ -31,25 +31,18 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
 
   const { direction } = useRtlFlip()
 
-  const handleOpenChange = (
-    { open }: MenuOpenChangeDetails,
-    sectionKey: NavSectionKey
-  ): void => {
-    setActiveSection(open ? sectionKey : null)
-    open ? onOpen() : onClose()
-  }
-
   const refs: LvlRefs = {
     lvl1: useRef(null),
     lvl2: useRef(null),
     lvl3: useRef(null),
   }
 
-  const handleSectionHover = (sectionKey: NavSectionKey) => {
-    if (!isOpen) return
-    if (sectionKey === activeSection) return
-    setActiveSection(sectionKey)
-    // TODO: Open the section being hovered
+  const handleOpenChange = (
+    { open }: MenuOpenChangeDetails,
+    sectionKey: NavSectionKey
+  ): void => {
+    setActiveSection(open ? sectionKey : null)
+    open ? onOpen() : onClose()
   }
 
   return (
@@ -70,7 +63,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                   variant="ghost"
                   m="0"
                   color={isActive ? "primary.base" : "menu.lvl1.body"}
-                  // onMouseEnter={() => handleSectionHover(sectionKey)}
                 >
                   {isActive && (
                     <motion.div
