@@ -44,13 +44,7 @@ const LanguagePicker = ({
   const { onClose } = disclosure
 
   return (
-    <Menu
-      isLazy
-      initialFocusRef={inputRef}
-      placement={placement}
-      closeOnSelect={false}
-      {...disclosure}
-    >
+    <Menu isLazy placement={placement} closeOnSelect={false} {...disclosure}>
       {children}
       <MenuList
         position="relative"
@@ -73,10 +67,8 @@ const LanguagePicker = ({
             variant="ghost"
             alignSelf="end"
             onClick={() => onClose()}
-            textTransform="uppercase"
-            fontSize="xs"
           >
-            {t("close")}
+            {t("common:close")}
           </Button>
         </Flex>
 
