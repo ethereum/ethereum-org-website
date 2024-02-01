@@ -54,16 +54,16 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
 
   return (
     <>
-      <Flex alignItems="center" listStyleType="none" m="0" {...props}>
+      <Flex alignItems="center" m="0" {...props}>
         {SECTION_LABELS.map((sectionKey) => {
-          const { label } = sections[sectionKey]
+          const { label, items } = sections[sectionKey]
           const isActive = activeSection === sectionKey
           return (
             <ArkMenu.Root
               key={label}
-              loop
-              onOpenChange={(details) => handleOpenChange(details, sectionKey)}
               dir={direction}
+              onOpenChange={(details) => handleOpenChange(details, sectionKey)}
+              loop
             >
               <ArkMenu.Trigger asChild>
                 <Button
@@ -79,22 +79,17 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                         inset: "0",
                         borderRadius: "var(--eth-radii-base)",
                         background: "var(--eth-colors-primary-lowContrast)",
-                        zIndex: 0,
                       }}
                       layoutId="menu-section-bg-highlight"
                       transition={{ duration: 0.2 }}
                     />
                   )}
-                  <Text as="span" zIndex="1">
+                  <Text as="span" position="relative">
                     {label}
                   </Text>
                 </Button>
               </ArkMenu.Trigger>
-              <LvlPortal
-                lvl={1}
-                refs={refs}
-                items={sections[sectionKey].items}
-              />
+              <LvlPortal lvl={1} refs={refs} items={items} />
             </ArkMenu.Root>
           )
         })}
