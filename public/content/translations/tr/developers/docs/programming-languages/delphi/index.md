@@ -5,11 +5,11 @@ lang: tr
 incomplete: true
 ---
 
-<div class="featured">
+<FeaturedText>
 
 Delphi programlama dilini kullanarak nasıl Ethereum için geliştireceğinizi öğrenin
 
-</div>
+</FeaturedText>
 
 Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin avantajlarından faydalanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 

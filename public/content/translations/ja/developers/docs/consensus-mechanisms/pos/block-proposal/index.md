@@ -8,7 +8,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-ブロックの提案は、プルーフ・オブ・ステークのプロトコルの一部です。 このページの内容を理解するためには、[プルーフ・オブ・ステーク](public/content/developers/docs/consensus-mechanisms/pos/)および[ブロックのアーキテクチャ](public/content/developers/docs/blocks/)を読んでおくとよいでしょう。
+ブロックの提案は、プルーフ・オブ・ステークのプロトコルの一部です。 このページの内容を理解するためには、[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)および[ブロックのアーキテクチャ](/developers/docs/blocks/)を読んでおくとよいでしょう。
 
 ## 誰がブロックを生成するのか？ {#who-produces-blocks}
 

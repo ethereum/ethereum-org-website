@@ -2,7 +2,7 @@
 title: Более безопасный Ethereum
 description: Ethereum — самая безопасная и децентрализованная платформа для смарт-контрактов из существующих. Однако потребуется еще ряд улучшений, чтобы в будущем Ethereum оставался устойчивым к любому уровню атак.
 lang: ru
-image: ..//roadmap/roadmap-security.png
+image: /roadmap/roadmap-security.png
 alt: "Дорожная карта Ethereum"
 template: roadmap
 ---

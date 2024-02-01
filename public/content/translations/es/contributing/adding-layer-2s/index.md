@@ -8,7 +8,7 @@ lang: es
 
 Queremos asegurarnos de que estamos incluyendo los mejores recursos posibles para que los usuarios pueden navegar en el espacio de la capa 2 de una manera fiable y segura.
 
-Cualquiera es libre de sugerir añadir una capa 2 a ethereum.org. Si hay alguna capa 2 que hayamos olvidado **[ por favor sugiérela](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)**.
+Cualquiera es libre de sugerir añadir una capa 2 a ethereum.org. Si hay alguna capa 2 que hayamos olvidado **[ por favor sugiérela](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)**.
 
 Actualmente enumeramos las capas 2 en las páginas siguientes:
 
@@ -50,6 +50,8 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 **Fecha en que el proyecto pasó a producción**
 
+- Una capa 2 que ha estado «viva» en la red principar durante más de 6 meses.
+
 - Es menos probable que se incluyan los proyectos más recientes no probados aún por los usuarios.
 
 **Auditoría externa de seguridad**
@@ -90,6 +92,6 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 Si quiere añadir una capa 2 a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   Crear una incidencia
 </ButtonLink>

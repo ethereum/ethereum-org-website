@@ -11,7 +11,7 @@ summaryPoints:
 
 # Danksharding {#danksharding}
 
-**Danksharding** Ethereum'un nasıl tamamen ölçeklendirebilir bir blok zincire dönüşebilir sorusunun cevabı, ancak o noktaya gelebilmek için yapılması gereken birkaç protokol yükseltmesi var. **Proto-Danksharding** de bu yolun ortalarında bulunan bir adım. İkisi de Katman 2'deki işlemleri kullanıcılar için mümkün olduğu kadar ucuz tutmaya ve Ethereumu >saniyede 100.000 işleme kadar ölçeklendirebilmeyi hedefliyor.
+**Danksharding** Ethereum 'un nasıl tamamen ölçeklendirebilir bir blok zincire dönüşebilir sorusunun cevabı, ancak o noktaya gelebilmek için yapılması gereken birkaç protokol yükseltmesi var. **Proto-Danksharding** de bu yolun ortalarında bulunan bir adım. İkisi de Katman 2'deki işlemleri kullanıcılar için mümkün olduğu kadar ucuz tutmaya ve Ethereumu >saniyede 100.000 işleme kadar ölçeklendirebilmeyi hedefliyor.
 
 ## Proto-Danksharding nedir? {#what-is-protodanksharding}
 
@@ -77,7 +77,7 @@ Veri kullanılabilirliği örneklendirmesi, doğrulayıcıların hızlı ve etki
 
 ### Güncel ilerleme {#current-progress}
 
-Full Danksharding için birkaç yıl daha beklememiz gerekiyor. Ancak, Proto-Danksharding nispeten daha yakın bir tarihte gelecektir. Yazım zamanında (Şubat 2023) KZG töreni hâlâ açık ve şu ana kadar toplam 50000 kişiyi katkıda bulunacak kadar etkiledi. Proto-Danksharding için [EIP](https://eips.ethereum.org/EIPS/eip-4844)'nin olgunlaştığını söyleyebiliriz, şartnamede anlaşıldı ve müşteriler şu anda yürütülen bazı testleri uygulayıp üretime hazır hale getirdi. Bundan sonraki adım ise, bu değişimleri halka açık bir Test Ağında denemek. [EIP 4844 hazırlık kontrolünü](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status) takip ederek güncel durumdan haberdar kalabilirsiniz.
+Full Danksharding için birkaç yıl daha beklememiz gerekiyor. Ancak, Proto-Danksharding nispeten daha yakın bir tarihte gelecektir. Yazım zamanında (Şubat 2023) KZG töreni hâlâ açık ve şu ana kadar toplam 50000 kişiyi katkıda bulunacak kadar etkiledi. Proto-Danksharding için [EIP](https://eips.ethereum.org/EIPS/eip-4844)'nin olgunlaştığını söyleyebiliriz, özellikler konusunda anlaşıldı ve müşteriler şu anda yürütülen bazı testleri uygulayıp üretime hazır hale getirdi. Bundan sonraki adım ise, bu değişimleri halka açık bir Test Ağında denemek. [EIP 4844 hazırlık kontrolünü](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status) takip ederek güncel durumdan haberdar kalabilirsiniz.
 
 ### Daha fazla bilgi {#further-reading}
 

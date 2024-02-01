@@ -79,10 +79,10 @@ lang: ja
 
 ## 参考文献 {#further-reading}
 
-- [プルーフ・オブ・ステークに関するよくある質問](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [プルーフ・オブ・ステークに関するよくある質問](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [プルーフ・オブ・ステークとは](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [プルーフ・オブ・ステークとは何か、またその重要性](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [プルーフ・オブ・ステークの重要性(2020 年 11 月)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [プルーフ・オブ・ステークの重要性(2020 年 11 月)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [プルーフ・オブ・ステーク: 弱い主観性の利点](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [プルーフ・オブ・ステークのイーサリアム対する攻撃と防御](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [プルーフ・オブ・ステークの設計思想](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

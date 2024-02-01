@@ -218,4 +218,4 @@ Algunos proyectos, como MEV Boost, utilizan la Builder API como parte de una est
 - [MEV-Boost: Fusionar la arquitectura de Flashbots lista](https://ethresear.ch/t/mev-boost-merge-ready-flashbots-architecture/11177)
 - [¿Qué es el impulso de MEV?](https://www.alchemy.com/overviews/mev-boost)
 - [¿Por qué ejecutar mev-boost?](https://writings.flashbots.net/writings/why-run-mevboost/)
-- [La Guía de Hitchhikers hacia Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)
+- [La guía del autoestopista de Ethereum](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum)

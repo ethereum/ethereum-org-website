@@ -156,7 +156,7 @@ _সাধারণত প্রোটোকল এবং dapps গুলোর 
 - [কীভাবে একটি DAO-চালিত ডিজিটাল কমিউনিটি শুরু করবেন](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [DAO কী?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [হলোগ্রাফিক কনসেনসাস কী?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO গুলি কর্পোরেশন নয়: যেখানে Vitalik দ্বারা স্বায়ত্তশাসিত সংস্থাগুলিতে বিকেন্দ্রীকরণ গুরুত্বপূর্ণ](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO গুলি কর্পোরেশন নয়: যেখানে Vitalik দ্বারা স্বায়ত্তশাসিত সংস্থাগুলিতে বিকেন্দ্রীকরণ গুরুত্বপূর্ণ](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA এবং আরও অনেক কিছু: একটি অসম্পূর্ণ পরিভাষা নির্দেশিকা](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [ইথেরিয়াম ব্লগ](https://blog.ethereum.org)
 
 ### Videos {#videos}

@@ -65,12 +65,7 @@ const TitleCardList: React.FC<IProps> = ({
         borderBottomStyle="solid"
         borderBottomColor="text"
       >
-        <Icon
-          as={IoCodeOutline}
-          _hover={{
-            path: { fill: "tranparent" },
-          }}
-        />
+        <Icon as={IoCodeOutline} />
         <Translation id={headerKey} />
         {isCode && (
           <Hide below="s">
@@ -154,12 +149,7 @@ const TitleCardList: React.FC<IProps> = ({
               </Box>
             </Flex>
             {caption && (
-              <Flex
-                flex="1 0 25%"
-                alignItems="center"
-                flexWrap="wrap"
-                me={4}
-              >
+              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
                 <Box
                   fontSize="sm"
                   marginBottom="0"
@@ -185,7 +175,7 @@ const TitleCardList: React.FC<IProps> = ({
             _hover={{
               boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
-              color: "black",
+              "*": { color: "black" },
             }}
           >
             {image && (
@@ -209,12 +199,7 @@ const TitleCardList: React.FC<IProps> = ({
               </Box>
             </Flex>
             {caption && (
-              <Flex
-                flex="1 0 25%"
-                alignItems="center"
-                flexWrap="wrap"
-                me={4}
-              >
+              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
                 <Box
                   fontSize="sm"
                   marginBottom="0"

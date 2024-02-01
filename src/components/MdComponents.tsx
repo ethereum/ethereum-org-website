@@ -38,6 +38,7 @@ import Card from "./Card"
 import DocLink from "./DocLink"
 import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
+import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
 import MainArticle from "./MainArticle"
 
@@ -193,12 +194,6 @@ export const ContentContainer = (props: Pick<BoxProps, "id" | "children">) => {
       pb={8}
       {...props}
       sx={{
-        ".featured": {
-          ps: 4,
-          ms: -4,
-          borderInlineStart: "1px dotted",
-          borderColor: "primary.base",
-        },
         ".citation p": {
           color: "text200",
         },
@@ -273,6 +268,7 @@ export const reactComponents = {
   DocLink,
   Emoji,
   ExpandableCard,
+  FeaturedText,
   GlossaryTooltip,
   InfoBanner,
   InfoColumn,

@@ -6,11 +6,11 @@ lang: nb
 
 # Hva er ether (ETH)? {#what-is-ether-eth}
 
-<div class="featured">
+<FeaturedText>
 
 **ETH er den innebygde valutaen til Ethereum** Denne siden gir deg den grunnleggende informasjonen du trenger for å komme i gang med å bruke ETH.
 
-</div>
+</FeaturedText>
 
 ## Hva er ETH, og hvordan får jeg tak i det? {#what-is-eth-and-how-do-i-get-it}
 

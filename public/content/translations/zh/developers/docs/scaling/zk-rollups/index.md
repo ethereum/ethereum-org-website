@@ -238,7 +238,7 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll 是 一家致力于为以太坊构建原生零知识以太坊虚拟机二层解决方案的技术驱动型公司。_
 
-- **[Taiko](https://taiko.xyz)** - _Taiko 是去中心化的、等同于以太坊的零知识卷叠（[1 类零知识以太坊虚拟机](https://vitalik.ca/general/2022/08/04/zkevm.html)）。_
+- **[Taiko](https://taiko.xyz)** - _Taiko 是去中心化的、等同于以太坊的零知识卷叠（[1 类零知识以太坊虚拟机](https://vitalik.eth.limo/general/2022/08/04/zkevm.html)）。_
 
 - **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 是与以太坊虚拟机兼容的零知识卷叠，由 Matter Labs 构建并由它自己的零知识以太坊虚拟机提供支持。_
 
@@ -250,5 +250,5 @@ ZK-STARK 对于量子计算机也是安全的，而 ZK-SNARK 中使用的椭圆�
 - [什么是 zkEVM（零知识以太坊虚拟机）？](https://www.alchemy.com/overviews/zkevm)
 - [zkEVM（零知识以太坊虚拟机）简介](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [超赞的 zkEVM（零知识以太坊虚拟机）资源](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARK（零知识简洁非交互式知识论证）底层技术](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [SNARK（简洁非交互式知识论证），怎么可能？](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [ZK-SNARK（零知识简洁非交互式知识论证）底层技术](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [SNARK（简洁非交互式知识论证），怎么可能？](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

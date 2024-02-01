@@ -81,3 +81,4 @@ The core Ethereum protocol is primarily concerned with data availability, not da
 - [Data availability committees.](https://medium.com/starkware/data-availability-e5564c416424)
 - [Proof-of-stake data availability committees.](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 - [Solutions to the data retrievability problem](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)
+- [Data Availability Or: How Rollups Learned To Stop Worrying And Love Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups) 

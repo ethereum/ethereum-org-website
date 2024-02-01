@@ -6,7 +6,7 @@ lang: sk
 
 # Ethereum pre podniky {#ethereum-for-enterprise}
 
-<div class="featured">Návody, články a nástroje na poskytovanie verejných ak súkromných blockchainov Etherea pre podnikanie</div>
+<FeaturedText>Návody, články a nástroje na poskytovanie verejných ak súkromných blockchainov Etherea pre podnikanie</FeaturedText>
 
 ## Prečo si vybrať Enterprise Ethereum? {#why-enterprise-ethereum}
 

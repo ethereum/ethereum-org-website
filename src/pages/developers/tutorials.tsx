@@ -42,6 +42,8 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(
   (props, ref) => {
     const { isActive, name, ...rest } = props
@@ -82,7 +84,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/tutorials"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -126,15 +128,17 @@ const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
   return localeTimestamp !== INVALID_DATETIME ? (
     <span>
-      <Emoji text=":calendar:" fontSize="sm" ml={2} mr={2} /> {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} /> {localeTimestamp}
     </span>
   ) : null
 }
 
 const TutorialPage = ({
   internalTutorials,
+  contentNotTranslated,
 }: InferGetServerSidePropsType<typeof getStaticProps>) => {
   const { locale } = useRouter()
+  const { flipForRtl } = useRtlFlip()
   const tableBoxShadow = useToken("colors", "tableBoxShadow")
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
   const filteredTutorialsByLang = useMemo(
@@ -194,6 +198,7 @@ const TutorialPage = ({
     setSelectedTags([...tempSelectedTags])
   }
 
+  const dir = contentNotTranslated ? "ltr" : "unset"
   return (
     <Flex
       as={MainArticle}
@@ -203,6 +208,7 @@ const TutorialPage = ({
       my={0}
       mx="auto"
       mt={16}
+      dir={dir}
     >
       <PageMetadata
         title={t("page-developers-tutorials:page-tutorials-meta-title")}
@@ -234,7 +240,7 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
+      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} dir={dir}>
         <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         </Heading>
@@ -263,8 +269,8 @@ const TutorialPage = ({
             justifyContent="space-between"
             mt={2}
             mb={{ base: 2, md: 6 }}
-            ml={0}
-            mr={{ base: 0, md: 2 }}
+            ms={0}
+            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-new-github" />
@@ -291,8 +297,8 @@ const TutorialPage = ({
             justifyContent="space-between"
             mt={2}
             mb={{ base: 2, md: 6 }}
-            ml={0}
-            mr={{ base: 0, md: 2 }}
+            ms={0}
+            me={{ base: 0, md: 2 }}
           >
             <Text as="b">
               <Translation id="page-developers-tutorials:page-tutorial-pull-request" />
@@ -445,12 +451,13 @@ const TutorialPage = ({
                   color="text"
                   fontWeight="semibold"
                   fontSize="2xl"
-                  mr={{ base: 0, md: 24 }}
+                  me={{ base: 0, md: 24 }}
                   _after={{
-                    ml: 0.5,
-                    mr: "0.3rem",
-                    display: tutorial.isExternal ? "inline" : "none",
+                    ms: 0.5,
+                    me: "0.3rem",
+                    display: tutorial.isExternal ? "inline-block" : "none",
                     content: `"↗"`,
+                    transform: flipForRtl,
                     transitionProperty: "all",
                     transitionDuration: "0.1s",
                     transitionTimingFunction: "ease-in-out",
@@ -464,14 +471,14 @@ const TutorialPage = ({
                 </Badge>
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
-                <Emoji text=":writing_hand:" fontSize="sm" mr={2} />
+                <Emoji text=":writing_hand:" fontSize="sm" me={2} />
                 {tutorial.author} •
                 {published(locale!, tutorial.published ?? "")}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
                     •
-                    <Emoji text=":stopwatch:" fontSize="sm" ml={2} mr={2} />
+                    <Emoji text=":stopwatch:" fontSize="sm" mx={2} />
                     {tutorial.timeToRead}{" "}
                     <Translation id="page-developers-tutorials:page-tutorial-read-time" />
                   </>
@@ -479,7 +486,7 @@ const TutorialPage = ({
                 {tutorial.isExternal && (
                   <>
                     {" "}
-                    •<Emoji text=":link:" fontSize="sm" ml={2} mr={2} />
+                    •<Emoji text=":link:" fontSize="sm" mx={2} />
                     <Box as="span" color="primary.base" cursor="pointer">
                       <Translation id="page-developers-tutorials:page-tutorial-external-link" />
                     </Box>

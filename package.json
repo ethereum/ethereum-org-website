@@ -9,10 +9,15 @@
     "start": "next start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "format": "prettier --write .",
     "preversion": "bash ./src/scripts/updatePublishDate.sh",
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic --project-token fee8e66c9916",
+    "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
+    "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
+    "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
@@ -66,6 +71,7 @@
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "chromatic": "^10.5.0",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.0.0",
     "eslint-config-prettier": "^9.0.0",
@@ -74,6 +80,7 @@
     "image-size": "^1.0.2",
     "mdast-util-toc": "^7.0.0",
     "minimist": "^1.2.8",
+    "plaiceholder": "^3.0.0",
     "polished": "^4.2.2",
     "raw-loader": "^4.0.2",
     "storybook": "7.6.6",
