@@ -12,20 +12,20 @@ import { QuizStatus } from "@/lib/types"
 
 import Modal from "../Modal"
 
-type props = {
+type QuizzesModalProps = {
   isQuizModalOpen: boolean
   onQuizModalClose: () => void
   children: React.ReactNode
   quizStatus: QuizStatus
 }
 
-const QuizzesModal: React.FC<props> = ({
-  isQuizModalOpen,
-  onQuizModalClose,
+const QuizzesModal = ({
   children,
   quizStatus,
-  ...rest
-}) => {
+  isQuizModalOpen,
+  onQuizModalClose,
+  ...props
+}: QuizzesModalProps) => {
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
       return "neutral"
@@ -41,7 +41,7 @@ const QuizzesModal: React.FC<props> = ({
       isOpen={isQuizModalOpen}
       setIsOpen={onQuizModalClose}
       size={{ base: "full", md: "xl" }}
-      {...rest}
+      {...props}
     >
       <Center m={0} bg={getStatusColor()} py="16">
         {children}

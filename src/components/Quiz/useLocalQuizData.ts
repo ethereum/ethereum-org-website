@@ -1,4 +1,4 @@
-import { UserStats } from "@/lib/types"
+import type { CompletedQuizzes, UserStats } from "@/lib/types"
 
 import { USER_STATS_KEY } from "@/lib/constants"
 
@@ -7,7 +7,7 @@ import { useLocalStorage } from "@/hooks/useLocalStorage"
 export const INITIAL_USER_STATS: UserStats = {
   score: 0,
   average: [],
-  completed: {},
+  completed: {} as CompletedQuizzes,
 }
 
 export const useLocalQuizData = () => {

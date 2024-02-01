@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
 
-import { BasePageProps, QuizStatus } from "@/lib/types"
+import { BasePageProps, QuizKey, QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -60,7 +60,7 @@ const QuizzesHubPage: NextPage<
 
   const [userStats, updateUserStats] = useLocalQuizData()
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
-  const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
+  const [currentQuiz, setCurrentQuiz] = useState<QuizKey>(INITIAL_QUIZ)
   const { onOpen, isOpen, onClose } = useDisclosure()
 
   const commonQuizListProps = useMemo(
