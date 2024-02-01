@@ -23,7 +23,7 @@ import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-interface ITickProps {
+type CustomTickProps = {
   x: number
   y: number
   payload: { value: number | string }
@@ -55,7 +55,7 @@ const RechartText = chakra(Text, {
   },
 })
 
-const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
+const CustomTick = ({ x, y, payload }: CustomTickProps) => {
   return (
     <g transform={`translate(${x},${y})`}>
       <RechartText
@@ -74,7 +74,7 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   )
 }
 
-const EnergyConsumptionChart: React.FC = () => {
+const EnergyConsumptionChart = () => {
   const { t } = useTranslation("page-what-is-ethereum")
   const textColor = useToken("colors", "text")
   const { locale } = useRouter()

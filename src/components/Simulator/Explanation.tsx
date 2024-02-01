@@ -3,19 +3,20 @@ import { motion } from "framer-motion"
 import { MdArrowBack } from "react-icons/md"
 import { Box, Flex, Grid, Heading, Text } from "@chakra-ui/react"
 
+import type { SimulatorNavProps } from "@/lib/types"
+
 import { Button, ButtonLink } from "../Buttons"
 
 import type {
   LabelHref,
   SimulatorExplanation,
-  SimulatorNavProps,
   SimulatorPathSummary,
 } from "./interfaces"
 import { MoreInfoPopover } from "./MoreInfoPopover"
 import { PathButton } from "./PathButton"
 import type { PathId } from "./types"
 
-interface ExplanationProps extends SimulatorNavProps {
+type ExplanationProps = SimulatorNavProps & {
   explanation: SimulatorExplanation
   nextPathSummary: SimulatorPathSummary | null
   nextPathId: PathId | null
@@ -23,7 +24,7 @@ interface ExplanationProps extends SimulatorNavProps {
   openPath?: (pathId: PathId) => void
   logFinalCta?: () => void
 }
-export const Explanation: React.FC<ExplanationProps> = ({
+export const Explanation = ({
   nav,
   explanation,
   nextPathSummary,
@@ -31,7 +32,7 @@ export const Explanation: React.FC<ExplanationProps> = ({
   finalCtaLink,
   openPath,
   logFinalCta,
-}) => {
+}: ExplanationProps) => {
   const { regressStepper, step, totalSteps } = nav
   const { header, description } = explanation
 

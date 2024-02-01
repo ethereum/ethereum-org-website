@@ -50,9 +50,7 @@ const appList: Array<App> = [
   },
 ]
 
-export interface IProps {}
-
-const RandomAppList: React.FC<IProps> = () => {
+const RandomAppList = () => {
   const [randomAppList, setRandomAppList] = useState<Array<App>>([])
 
   useEffect(() => {
