@@ -175,9 +175,9 @@ Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szept
 
 Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség különféle tagjainak eltérő perspektívái vannak ezzel kapcsolatban. Néhány ezek közül:
 
-- [Megjegyzések a blokkláncirányításról](https://vitalik.ca/general/2017/12/17/voting.html) – _Vitalik Buterin_
+- [Megjegyzések a blokkláncirányításról](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Hogyan működik az Ethereum irányítása?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Hogyan működik az Ethereum irányítása](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
-- [Irányítás – 2. rész: a plutokrácia, vagyis a gazdagok általi irányítás még mindig nem az igazi](https://vitalik.ca/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Túllépni az érmealapú szavazáson](https://vitalik.ca/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Irányítás – 2. rész: a plutokrácia, vagyis a gazdagok általi irányítás még mindig nem az igazi](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Túllépni az érmealapú szavazáson](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

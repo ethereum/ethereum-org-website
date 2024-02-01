@@ -248,5 +248,5 @@ Os projetos que trabalham em zkEVMs incluem:
 - [O que é um zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Introdução a zkEVMs](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Recursos incríveis para zkEVM](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKS nos bastidores](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [SNARKs: como são possíveis?](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [ZK-SNARKS nos bastidores](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [SNARKs: como são possíveis?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

@@ -154,7 +154,7 @@ Basado en prueba de participación:
 
 - [Crust.network](https://crust.network)
 - [Documentación](https://wiki.crust.network)
-- [Github](https://github.com/crustio)
+- [GitHub](https://github.com/crustio)
 
 **Swarm: _Plataforma de almacenamiento distribuido y servicio de distribución de contenido para la pila web3 de Ethereum._**
 

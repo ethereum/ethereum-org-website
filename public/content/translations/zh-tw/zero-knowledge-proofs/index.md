@@ -208,5 +208,5 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 - [零知識證明：改善區塊鏈的隱私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [零知識簡潔非交互式知識論證 — 零知識現實範例與深入探討](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [零知識可擴容透明知識論證 — 建立可驗證的信任，哪怕面對量子電腦](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [如何使零知識簡潔非交互式知識論證成真之相關簡介](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [如何使零知識簡潔非交互式知識論證成真之相關簡介](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [零知識證明是什麼？在區塊鏈中的角色為何？](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/)— _LeewayHertz_

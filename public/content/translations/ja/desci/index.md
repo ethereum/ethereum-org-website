@@ -76,7 +76,7 @@ DAO と Web3 によって培われた各種インセンティブモデルを広�
 
 NFT が将来の取引の収益を元の作成者に還元できるように、透明性のある価値の帰属チェーンを確立することができます。これにより、研究者や DAO のような管理団体、そしてデータの収集元となった被験者へも報酬を与えることができます。
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)もまた研究実験の分散データレポジトリにアクセスするための鍵として機能し、NFT や[DeFi](/defi/)の金融化(資産の分散、融資プールと価値評価) へとつながります。 また、[VitaDAO](https://www.vitadao.com/)のようなネイティブにチェーン上に存在する DAO を使用することで、研究活動を直接オンチェーンで行うことができます。 譲渡不可の[「ソウルバウンド」トークン](https://vitalik.ca/general/2022/01/26/soulbound.html)の出現により、イーサリアムアドレスにリンクされた経験や経歴を個人が証明できるようになるため、DeSci で重要な役割を果たす可能性があります。
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)もまた研究実験の分散データレポジトリにアクセスするための鍵として機能し、NFT や[DeFi](/defi/)の金融化(資産の分散、融資プールと価値評価) へとつながります。 また、[VitaDAO](https://www.vitadao.com/)のようなネイティブにチェーン上に存在する DAO を使用することで、研究活動を直接オンチェーンで行うことができます。 譲渡不可の[「ソウルバウンド」トークン](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)の出現により、イーサリアムアドレスにリンクされた経験や経歴を個人が証明できるようになるため、DeSci で重要な役割を果たす可能性があります。
 
 ### データストレージ、アクセス、アーキテクチャ {#data-storage}
 

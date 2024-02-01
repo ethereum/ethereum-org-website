@@ -24,13 +24,13 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> – projektmanagement-támogatás az Ethereum-fejlesztésekhez</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> – az ETHGlobal által üzemeltetett Discord chat: online közösség az Ethereum hackereknek világszinten</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> – Ethereum-fejlesztésre fókuszáló Discord-közösség</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> – közösségi vezetésű útmutatás, oktatás, támogatás és források a meglévő és lehetséges letéteseknek</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org website team</Link> – beszélgessen az ethereum.org web fejlesztésről és dizájnról a közösség tagjaival</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> – közösségi vezetésű útmutatás, oktatás, támogatás és források a meglévő és lehetséges letéteseknek</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org website team</Link> – beszélgessen az ethereum.org web fejlesztésről és dizájnról a közösség tagjaival</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> – web3 alkotói közösség, ahol a fejlesztők, az iparági vezetők és az Ethereum rajongók találkoznak. Szenvedélyünk a web3 fejlesztés, a dizájn és a kultúra. Jöjjön és építsen velünk.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> – solidity fejlesztésről (Gitter) szóló csevegés</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> – solidity fejlesztésről (Gitter) szóló csevegés</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> – solidity fejlesztősről (Matrix) szóló csevegés</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _–kérdések és válaszok fóruma_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _– decentralizált kérdések és válaszok fóruma_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *–kérdések és válaszok fóruma*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *– decentralizált kérdések és válaszok fóruma*</SocialListItem>
 
 ## YouTube és Twitter {#youtube-and-twitter}
 

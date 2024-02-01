@@ -4,7 +4,7 @@ description: 以太坊交易概觀 – 運作原理、資料結構以及如何�
 lang: zh-tw
 ---
 
-交易是帳戶發出的帶密碼學簽章的指令。 帳戶將發起交易以更新以太坊網絡的狀態。 最簡單的交易是將以太幣從一個帳戶轉賬到另一個帳戶。
+交易是帳戶發出的帶密碼學簽章的指令。 帳戶將發起交易以更新以太坊網路的狀態。 最簡單的交易是將以太幣從一個帳戶轉帳到另一個帳戶。
 
 ## 前置要求 {#prerequisites}
 
@@ -14,7 +14,7 @@ lang: zh-tw
 
 以太坊交易是指由外部帳戶發起的操作，換句話說，此帳戶是由人而不是智慧型合約管理的帳戶。 例如，如果 Bob 發送給 Alice 1 以太幣，Bob 的帳戶必須扣除，Alice 的帳戶必須存入。 此更改狀態的操作發生在交易中。
 
-![顯示交易導致狀態變化的圖表](./tx.png) _此圖源於[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![顯示交易導致狀態變化的圖表](./tx.png) _此圖源於[以太坊EVM圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 交易會改變以太坊虛擬機的狀態，須廣播至整個網路。 任何節點都可以廣播要在以太坊虛擬機上執行的交易請求；之後驗證者將執行交易並將引起的狀態變化傳播到網路上的其他節點。
 
@@ -26,7 +26,7 @@ lang: zh-tw
 - `recipient` – 接收地址（如果為外部帳戶，交易將傳輸值。 如果為合約帳戶，交易將執行合約程式碼）
 - `signature` – 發送者的識別碼。 當發送者以私密金鑰簽署交易並確認發送者已授權此交易时，就會產生此簽章。
 - `nonce` - 用來表示帳戶中交易編號的按順序遞增計數器
-- `value` – 發送者轉賬至接收者的以太幣數量（面額為 WEI，1 以太幣等於 10 的 18 次方 wei）
+- `value` – 發送者轉帳至接收者的以太幣數量（面額為 WEI，1 以太幣等於 10 的 18 次方 wei）
 - `input data` –可選欄位，可填入任意資料
 - `gasLimit` – 交易可以使用的最大燃料單位數量。 [以太坊虛擬機](/developers/docs/evm/opcodes)指定了每個計算步驟的所需燃料單位
 - `maxPriorityFeePerGas` - 已使用燃料的最高價格，可作為給驗證者的小費
@@ -135,7 +135,7 @@ calldata 的剩餘部分是參數，[依據 ABI 規範中的說明編碼](https:
 
 ### 關於燃料 {#on-gas}
 
-如上所述，執行交易需要花費[燃料](/developers/docs/gas/)。 簡單的轉賬交易需要 21000 單位燃料。
+如上所述，執行交易需要花費[燃料](/developers/docs/gas/)。 簡單的轉帳交易需要 21000 單位燃料。
 
 所以，若 Bob 要以 190 gwei 的 `baseFeePerGas` 還有 10 gwei 的 `maxPriorityFeePerGas` 給 Alice 發送 1 以太幣，Bob 將需要支付以下費用：
 
@@ -155,7 +155,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 所有智慧型合約互動也需要燃料。
 
-![顯示如何退還未使用燃料的圖表](./gas-tx.png) _此圖源於[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![顯示如何退還未使用燃料的圖表](./gas-tx.png) _此圖源於[以太坊EVM圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 任何交易中未使用的燃料都會退還給使用者帳戶。
 

@@ -5,7 +5,7 @@ lang: es
 incomplete: true
 ---
 
-<FeaturedText>Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en .NET</FeaturedText>
+<div class="featured">Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en .NET</div>
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, lo que significa que ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
@@ -64,7 +64,7 @@ Construye aplicaciones descentralizadas sobre Ethereum e interactúa con contrat
 
 ## Proyectos, herramientas y otras cosas divertidas de .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
-- [Nethereum Playground:](http://playground.nethereum.com/) _Compila, crea y ejecuta fragmentos de código de Nethereum en el navegador_
+- [Nethereum Playground:](http://playground.nethereum.com/)  _Compila, crea y ejecuta fragmentos de código de Nethereum en el navegador_
 - [Nethereum Codegen Blazor:](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) _Generador de código de Nethereum con IU en Blazor_
 - [Nethereum Blazor](https://github.com/Nethereum/NethereumBlazor) : _Un explorador de blockchain ligero de .NET Wasm SPA y una cartera sencilla_
 - [Wonka Business Rules Engine:](https://docs.nethereum.com/en/latest/wonka/)_ Un motor de reglas de negocio (para ambas plataformas .NET y Ethereum) que está inherentemente impulsado por metadatos_
@@ -82,5 +82,5 @@ Si es nuevo en Nethermind y necesita ayuda para comenzar, únase a nuestro [Disc
 
 ## Otras listas adicionales {#other-aggregated-lists}
 
-[Sitio oficial de Nethereum](https://nethereum.com/)  
+[Sitio oficial de Nethereum](https://nethereum.com/)   
 [Sitio oficial de Nethermind ](https://nethermind.io/)

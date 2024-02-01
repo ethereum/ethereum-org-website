@@ -75,7 +75,7 @@ Zbiór wymaganych informacji (nagłówek bloku) o zawartych [transakcjach](#tran
 
 ### blockchain {#blockchain}
 
-W Ethereum, sekwencja [bloków](#block) zwalidowana przez system [proof-of-work,](#pow) każdy jest powiązany ze swoim poprzednikiem w całej drodze do bloku genezy [](#genesis-block). Nie ma limitu rozmiaru bloku; zamiast tego wykorzystuje się zmienne [wartości graniczne paliwa](#gas-limit).
+W Ethereum, sekwencja [bloków](#block) zwalidowana przez system [proof-of-work,](#pow) każdy jest powiązany ze swoim poprzednikiem w całej drodze do [bloku genezy](#genesis-block). Nie ma limitu rozmiaru bloku; zamiast tego wykorzystuje się zmienne [wartości graniczne paliwa](#gas-limit).
 
 <DocLink to="/developers/docs/intro-to-ethereum#what-is-a-blockchain">
   Czym jest blockchain?
@@ -123,7 +123,7 @@ Konto zawierające kod wykonujący każdorazowo, gdy otrzyma [transakcję](#tran
 
 ### transakcja tworząca kontrakt {#contract-creation-transaction}
 
-Specjalna transakcja [](#transaction) z [zerowym adresem](#zero-address) odbiorcy używana do rejestracji [kontraktu](#contract-account) i zapisania go w blockchainie Ethereum.
+Specjalna [transakcja](#transaction) z [zerowym adresem](#zero-address) odbiorcy używana do rejestracji [kontraktu](#contract-account) i zapisania go w blockchainie Ethereum.
 
 ### połączenie krzyżowe {#crosslink}
 
@@ -361,7 +361,7 @@ Odcisk palca o stałej długości, wytwarzany przez funkcję haszową. (Zobacz [
 
 ### ziarno portfela HD {#hd-wallet-seed}
 
-Wartość używana do wygenerowania głównego [klucza prywatnego](#private-key) i kodu łańcucha głównego dla portfela HD [](#wallet). Ziarno (seed) portfela może być reprezentowane za pomocą mnemonicznych słów, ułatwiając ludziom kopiowanie, tworzenie kopii zapasowych i przywracanie kluczy prywatnych.
+Wartość używana do wygenerowania głównego [klucza prywatnego](#private-key) i kodu łańcucha głównego dla [portfela HD](#wallet). Ziarno (seed) portfela może być reprezentowane za pomocą mnemonicznych słów, ułatwiając ludziom kopiowanie, tworzenie kopii zapasowych i przywracanie kluczy prywatnych.
 
 ### homestead {#homestead}
 
@@ -583,7 +583,7 @@ Wygenerowana na podstawie [klucza prywatnego](#private-key) za pomocą funkcji j
 
 ### potwierdzenie {#receipt}
 
-Dane zwracane przez klienta Ethereum, reprezentujące wynik konkretnej [transakcji](#transaction). Potwierdzenie obejmuje [skrót](#hash) transakcji, numer jej [bloku](#block) ilość zużytego [gazu](#gas), a w przypadku wdrożenia inteligentnego kontraktu [](#smart-contract) adres [](#address) kontraktu.
+Dane zwracane przez klienta Ethereum, reprezentujące wynik konkretnej [transakcji](#transaction). Potwierdzenie obejmuje [skrót](#hash) transakcji, numer jej [bloku](#block) ilość zużytego [gazu](#gas), a w przypadku wdrożenia [inteligentnego kontraktu](#smart-contract) [adres](#address) kontraktu.
 
 ### atak z wykorzystaniem wielobieżności {#re-entrancy-attack}
 

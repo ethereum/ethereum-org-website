@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import { Link } from "@chakra-ui/next-js"
 import { Center } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"

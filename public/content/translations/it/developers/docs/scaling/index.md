@@ -103,11 +103,11 @@ _Si noti che la spiegazione nel video usa il termine "Livello 2" per fare riferi
 - [A rollup-centric Ethereum roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Statistiche aggiornate sulle soluzioni di ridimensionamento del Livello 2 per Ethereum](https://www.l2beat.com/)
 - [Valutare le soluzioni di scalabilità del Livello 2 di Ethereum: un quadro di confronto](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Una guida incompleta ai rollup](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Una guida incompleta ai rollup](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Rollup ZK basati su Ethereum: fuoriclasse a livello mondiale](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollup ottimistici vs Rollup ZK](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Scalabilità della blockchain a conoscenza zero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Perché i rollup e i frammenti di dati sono la sola soluzione sostenibile per un'elevata scalabilità](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [Che tipo di Livelli 3 hanno senso?](https://vitalik.ca/general/2022/09/17/layer_3.html)
+- [Che tipo di Livelli 3 hanno senso?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
