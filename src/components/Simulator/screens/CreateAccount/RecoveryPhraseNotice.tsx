@@ -4,7 +4,7 @@ import { Box, Text } from "@chakra-ui/react"
 
 const MotionBox = motion(Box)
 
-export const RecoveryPhraseNotice: React.FC = () => (
+export const RecoveryPhraseNotice = () => (
   <MotionBox
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}

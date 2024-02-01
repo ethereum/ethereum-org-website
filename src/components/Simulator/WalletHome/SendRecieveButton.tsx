@@ -12,7 +12,7 @@ import { Button } from "../../Buttons"
 import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
 
-interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
+type SendReceiveButtonProps = Pick<TextProps, "children"> & {
   icon: As
   isHighlighted: boolean
   isDisabled: boolean
@@ -20,14 +20,14 @@ interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   isAnimated?: boolean
 }
 
-export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
+export const SendReceiveButton = ({
   children,
   icon,
   isHighlighted,
   isDisabled,
   onClick,
   isAnimated,
-}) => (
+}: SendReceiveButtonProps) => (
   <Button
     variant="ghost"
     display="flex"

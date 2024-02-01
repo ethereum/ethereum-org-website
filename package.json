@@ -20,7 +20,6 @@
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
   },
   "dependencies": {
-    "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
     "@crowdin/crowdin-api-client": "^1.25.0",
     "@docsearch/react": "^3.5.2",

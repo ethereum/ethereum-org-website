@@ -50,11 +50,11 @@ export interface LinkSection {
   }>
 }
 
-export interface IProps {
+export type FooterProps = {
   lastDeployDate: string
 }
 
-const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
+const Footer = ({ lastDeployDate }: FooterProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
 

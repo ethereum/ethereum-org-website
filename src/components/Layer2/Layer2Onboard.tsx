@@ -112,17 +112,17 @@ interface CexOnboardOption extends Option {
   cexOnboard: CexOnboard
 }
 
-export interface IProps {
+export type Layer2OnboardProps = {
   layer2DataCombined: Array<Layer2>
   ethIcon: StaticImageData
   ethIconAlt: string
 }
 
-const Layer2Onboard: React.FC<IProps> = ({
+const Layer2Onboard = ({
   layer2DataCombined,
   ethIcon,
   ethIconAlt,
-}) => {
+}: Layer2OnboardProps) => {
   const { t } = useTranslation("page-layer-2")
 
   const [selectedCexOnboard, setSelectedCexOnboard] = useState<
