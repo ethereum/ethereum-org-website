@@ -21,7 +21,7 @@ const data = progressData as ProjectProgressData[]
 
 export const useLanguagePicker = (handleClose?: () => void) => {
   const { t } = useTranslation("page-languages")
-  const { asPath, locale, locales } = useRouter()
+  const { locale, locales } = useRouter()
   const inputRef = useRef<HTMLInputElement>(null)
   const firstItemRef = useRef<HTMLAnchorElement>(null)
   const [filterValue, setFilterValue] = useState("")
@@ -142,34 +142,36 @@ export const useLanguagePicker = (handleClose?: () => void) => {
 
   const { isOpen, ...menu } = useDisclosure()
 
-  const eventBase: MatomoEventOptions = {
+  const eventBase: Pick<MatomoEventOptions, "eventCategory" | "eventAction"> = {
     eventCategory: `Language picker`,
-    eventAction: `Clicked`,
-    eventName: "Open or close language picker",
+    eventAction: "Open or close language picker",
   }
 
   const onOpen = () => {
     menu.onOpen()
-    trackCustomEvent({ ...eventBase, eventValue: "Opened" })
+    trackCustomEvent({
+      ...eventBase,
+      eventName: "Opened",
+    } as MatomoEventOptions)
   }
 
   /**
    * When closing the menu, track whether this is following a link, or simply closing the menu
    * @param customMatomoEvent Optional custom event property overrides
    */
-  const onClose = (customMatomoEvent?: Partial<MatomoEventOptions>): void => {
+  const onClose = (
+    customMatomoEvent?: Required<Pick<MatomoEventOptions, "eventName">> &
+      Partial<MatomoEventOptions>
+  ): void => {
     setFilterValue("")
     handleClose && handleClose()
     menu.onClose()
     trackCustomEvent(
-      customMatomoEvent
+      (customMatomoEvent
         ? { ...eventBase, ...customMatomoEvent }
-        : { ...eventBase, eventValue: "Closed" }
+        : { ...eventBase, eventName: "Closed" }) satisfies MatomoEventOptions
     )
   }
-
-  const getLinkEventValue = (localeOption: string) =>
-    join(localeOption + asPath)
 
   return {
     t,
@@ -180,6 +182,5 @@ export const useLanguagePicker = (handleClose?: () => void) => {
     setFilterValue,
     browserLocalesInfo,
     filteredNames,
-    getLinkEventValue,
   }
 }

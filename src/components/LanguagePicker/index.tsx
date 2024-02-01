@@ -39,7 +39,6 @@ const LanguagePicker = ({
     setFilterValue,
     browserLocalesInfo,
     filteredNames,
-    getLinkEventValue,
   } = useLanguagePicker(handleClose)
 
   const { onClose } = disclosure
@@ -101,8 +100,8 @@ const LanguagePicker = ({
                   displayInfo={displayInfo}
                   onClick={() =>
                     onClose({
-                      eventName: "Locale chosen (browser preference)",
-                      eventValue: getLinkEventValue(displayInfo.localeOption),
+                      eventAction: "Locale chosen (browser preference)",
+                      eventName: displayInfo.localeOption,
                     })
                   }
                   isFeatured
@@ -154,8 +153,8 @@ const LanguagePicker = ({
                 ref={firstResult ? firstItemRef : null}
                 onClick={() =>
                   onClose({
-                    eventName: "Locale chosen",
-                    eventValue: getLinkEventValue(displayInfo.localeOption),
+                    eventAction: "Locale chosen",
+                    eventName: displayInfo.localeOption,
                   })
                 }
               />
@@ -166,8 +165,8 @@ const LanguagePicker = ({
             <NoResultsCallout
               onClose={() =>
                 onClose({
-                  eventName: "Translation program link (no results)",
-                  eventValue: "/contributing/translation-program",
+                  eventAction: "Translation program link (no results)",
+                  eventName: "/contributing/translation-program",
                 })
               }
             />
@@ -190,8 +189,8 @@ const LanguagePicker = ({
               href="/contributing/translation-program"
               onClick={() =>
                 onClose({
-                  eventName: "Translation program link (menu footer)",
-                  eventValue: "/contributing/translation-program",
+                  eventAction: "Translation program link (menu footer)",
+                  eventName: "/contributing/translation-program",
                 })
               }
             >
