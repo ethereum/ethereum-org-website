@@ -95,7 +95,7 @@ This means the website needs to handle many different user journeys, from “a d
 
 To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our quarterly roadmap goals.
 
-[View our 2023 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/9090)
+[View our 2024 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/12005)
 
 **How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 
