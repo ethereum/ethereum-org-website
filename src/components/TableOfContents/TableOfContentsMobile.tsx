@@ -19,12 +19,12 @@ import { outerListProps } from "@/lib/utils/toc"
 
 import ItemsList from "./ItemsList"
 
-export interface IPropsTableOfContentsMobile {
+export type TableOfContentsMobileProps = {
   items?: Array<ToCItem>
   maxDepth?: number
 }
 
-const Mobile: React.FC<IPropsTableOfContentsMobile> = ({ items, maxDepth }) => {
+const Mobile = ({ items, maxDepth }: TableOfContentsMobileProps) => {
   const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")

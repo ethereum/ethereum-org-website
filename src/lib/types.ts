@@ -16,8 +16,12 @@ import type {
 } from "@/lib/interfaces"
 
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import { layoutMapping } from "@/pages/[...slug]"
+
+// Credit: https://stackoverflow.com/a/52331580
+export type Unpacked<T> = T extends (infer U)[] ? U : T
 
 export type ChildOnlyProp = { children?: ReactNode }
 
@@ -347,6 +351,13 @@ export type StatsBoxMetric = {
   apiProvider: string
 }
 
+export type SimulatorNavProps = {
+  nav: SimulatorNav
+}
+
+export type PhoneScreenProps = SimulatorNavProps & {
+  ctaLabel: string
+}
 export type CommunityConference = {
   title: string
   to: string
@@ -354,4 +365,52 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
+}
+
+type TranslatedStats = {
+  tmMatch: number
+  default: number
+  total: number
+}
+
+export type AllTimeData = {
+  name: string
+  url: string
+  unit: string
+  dateRange: {
+    from: string
+    to: string
+  }
+  currency: string
+  mode: string
+  totalCosts: number
+  totalTMSavings: number
+  totalPreTranslated: number
+  data: Array<{
+    user: {
+      id: number
+      username: string
+      fullName: string
+      userRole: string
+      avatarUrl: string
+      preTranslated: number
+      totalCosts: number
+    }
+    languages: Array<{
+      language: {
+        id: string
+        name: string
+        userRole: string
+        tmSavings: number
+        preTranslate: number
+        totalCosts: number
+      }
+      translated: TranslatedStats
+      targetTranslated: TranslatedStats
+      translatedByMt: TranslatedStats
+      approved: TranslatedStats
+      translationCosts: TranslatedStats
+      approvalCosts: TranslatedStats
+    }>
+  }>
 }

@@ -36,6 +36,18 @@ const quizzes: RawQuizzes = {
     title: "learn-quizzes:page-assets-merge",
     questions: ["h001", "h002", "h003", "h004", "h005"],
   },
+  "solo-staking": {
+    title: "solo",
+    questions: ["j001", "j002", "j004", "j005", "j006", "j007", "j008"],
+  },
+  scaling: {
+    title: "scaling",
+    questions: ["k001", "k002", "k003", "k004"],
+  },
+  "run-a-node": {
+    title: "run-a-node",
+    questions: ["l001", "l002", "l003", "l004", "l005", "l006"],
+  },
 }
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
@@ -74,11 +86,26 @@ export const usingEthereumQuizzes: QuizzesSection[] = [
   {
     id: "nfts",
     level: "beginner",
+    next: "scaling",
+  },
+  {
+    id: "scaling",
+    level: "intermediate",
     next: "layer-2",
   },
   {
     id: "layer-2",
     level: "intermediate",
+    next: "run-a-node",
+  },
+  {
+    id: "run-a-node",
+    level: "intermediate",
+    next: "solo-staking",
+  },
+  {
+    id: "solo-staking",
+    level: "advanced",
   },
 ]
 
