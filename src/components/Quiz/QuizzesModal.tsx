@@ -15,7 +15,11 @@ type QuizzesModalProps = Omit<ModalProps, "isCentered" | "scrollBehavior"> & {
   quizStatus: QuizStatus
 }
 
-const QuizzesModal = ({ children, quizStatus, ...rest }: QuizzesModalProps) => {
+const QuizzesModal = ({
+  children,
+  quizStatus,
+  ...props
+}: QuizzesModalProps) => {
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
       return "neutral"
@@ -31,7 +35,7 @@ const QuizzesModal = ({ children, quizStatus, ...rest }: QuizzesModalProps) => {
       isCentered
       size={{ base: "full", md: "xl" }}
       scrollBehavior="inside"
-      {...rest}
+      {...props}
     >
       <ModalOverlay bg="blackAlpha.700" />
 
