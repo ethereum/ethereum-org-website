@@ -137,7 +137,7 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   }
 
   // Extract previous and next doc based on current index +/- 1
-  const previousDoc = currentIndex - 1 > 0 ? docsArray[currentIndex - 1] : null
+  const previousDoc = currentIndex - 1 >= 0 ? docsArray[currentIndex - 1] : null
   const nextDoc =
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
