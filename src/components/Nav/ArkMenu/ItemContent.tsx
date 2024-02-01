@@ -46,7 +46,6 @@ const ItemContent = forwardRef(({ item, lvl }: ItemProps, ref) => {
       sx={{ "span:first-of-type": { m: 0, me: 4 } }}
       py="4"
       bg="none"
-      data-group
       _hover={{
         boxShadow: "none",
       }}
