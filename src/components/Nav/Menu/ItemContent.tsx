@@ -1,5 +1,4 @@
 import { useRouter } from "next/router"
-import { BsCircle } from "react-icons/bs"
 import { Box, Button, forwardRef, Icon, Link, Text } from "@chakra-ui/react"
 
 import { cleanPath } from "@/lib/utils/url"
@@ -14,53 +13,38 @@ type ItemProps = {
 }
 
 const ItemContent = forwardRef(({ item, lvl }: ItemProps, ref) => {
-  const { label, description, icon: CustomIcon, ...action } = item
+  const { label, description, icon, ...action } = item
   const { asPath } = useRouter()
   const isLink = "href" in action
   const isActivePage = isLink && cleanPath(asPath) === action.href
+
+  const itemIcon =
+    lvl !== 1 || !icon ? undefined : (
+      <Icon as={icon} color="currentColor" position="relative" />
+    )
+
+  const expandIcon = isLink ? undefined : (
+    <NextChevron fill="currentColor" position="relative" />
+  )
 
   return (
     <Button
       as={isLink ? Link : undefined}
       ref={ref}
-      onClick={() => console.log({ href: action.href })}
       href={action.href}
-      color={`menu.lvl${lvl}.main`}
-      rightIcon={
-        isLink ? undefined : (
-          <NextChevron fill="currentColor" position="relative" zIndex="1" />
-        )
-      }
-      leftIcon={
-        lvl === 1 ? (
-          <Icon
-            as={CustomIcon || BsCircle}
-            color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
-            position="relative"
-            zIndex="1"
-          />
-        ) : undefined
-      }
+      color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
+      leftIcon={itemIcon}
+      rightIcon={expandIcon}
       position="relative"
       w="full"
-      sx={{ "span:first-of-type": { m: 0, me: 4 } }}
+      sx={{ "span:first-of-type": { m: 0, me: 4 } }} // Spacing for icon
       py="4"
       bg="none"
-      _hover={{
-        boxShadow: "none",
-      }}
-      _active={{
-        outlineOffset: "2px",
-        boxShadow: "none",
-      }}
+      _hover={{ boxShadow: "none" }}
+      _active={{ boxShadow: "none" }}
     >
-      <Box me="auto" textAlign="start" position="relative" zIndex="1">
-        <Text
-          fontWeight="bold"
-          color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
-        >
-          {label}
-        </Text>
+      <Box me="auto" textAlign="start" position="relative">
+        <Text fontWeight="bold">{label}</Text>
         <Text
           fontSize="sm"
           color={isActivePage ? "menu.active" : `menu.lvl${lvl}.subtext`}
