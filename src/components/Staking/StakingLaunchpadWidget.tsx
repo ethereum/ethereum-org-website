@@ -16,7 +16,7 @@ const StyledSelect = chakra(Select, {
   },
 })
 
-const StakingLaunchpadWidget: React.FC = () => {
+const StakingLaunchpadWidget = () => {
   const { t } = useTranslation("page-staking")
   const [selection, setSelection] = useState("testnet")
 

@@ -5,15 +5,11 @@ import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
 
 import { EthGlyphIcon } from "../../icons"
 
-interface IProps extends Pick<TextProps, "children"> {
+type SliderProps = Pick<TextProps, "children"> & {
   isConnected: boolean
   displayUrl: string
 }
-export const Slider: React.FC<IProps> = ({
-  isConnected,
-  displayUrl,
-  children,
-}) => {
+export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
   const ICON_SIZE = "4.5rem" as const
   return (
     <>

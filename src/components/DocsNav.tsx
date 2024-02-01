@@ -22,7 +22,7 @@ import docLinks from "@/data/developer-docs-links.yaml"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
+const TextDiv = ({ children, ...props }: FlexProps) => (
   <Flex
     direction="column"
     justify="space-between"

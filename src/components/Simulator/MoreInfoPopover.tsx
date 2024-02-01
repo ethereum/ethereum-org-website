@@ -18,13 +18,10 @@ import { PulseAnimation } from "./PulseAnimation"
 
 const MotionButton = motion(Button)
 
-interface IProps extends Pick<PopoverBodyProps, "children"> {
+type MoreInfoPopover = Pick<PopoverBodyProps, "children"> & {
   isFirstStep: boolean
 }
-export const MoreInfoPopover: React.FC<IProps> = ({
-  isFirstStep,
-  children,
-}) => {
+export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
   const [clicked, setClicked] = useState(false)
   return (
     <Popover>

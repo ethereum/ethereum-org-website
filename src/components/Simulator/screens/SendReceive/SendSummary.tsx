@@ -4,17 +4,17 @@ import { Box, Flex, Text } from "@chakra-ui/react"
 import { ETH_TRANSFER_FEE } from "../../constants"
 import { getMaxFractionDigitsUsd } from "../../utils"
 
-interface IProps {
+type SendSummaryProps = {
   chosenAmount: number
   ethPrice: number
   recipient: string
   ethAvailable: number
 }
-export const SendSummary: React.FC<IProps> = ({
+export const SendSummary = ({
   chosenAmount,
   ethPrice,
   recipient,
-}) => {
+}: SendSummaryProps) => {
   const formatEth = (amount: number): string =>
     new Intl.NumberFormat("en", { maximumFractionDigits: 5 }).format(amount)
 
