@@ -120,8 +120,12 @@ export const BaseLink = forwardRef(function Link(
 
   if (isInternalPdf) {
     return (
-      <NextLink
+      <ChakraLink
         isExternal
+        // disable locale prefixing for internal PDFs
+        // TODO: add i18n support using a rehype plugin (similar as we do for
+        // images)
+        locale={false}
         onClick={() =>
           trackCustomEvent(
             customEventOptions ?? {
@@ -133,9 +137,10 @@ export const BaseLink = forwardRef(function Link(
           )
         }
         {...commonProps}
+        as={NextLink}
       >
         {children}
-      </NextLink>
+      </ChakraLink>
     )
   }
 
