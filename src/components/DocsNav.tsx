@@ -128,7 +128,10 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
-    if (asPath.indexOf(docsArray[i].to) > -1) {
+    if (
+      asPath.indexOf(docsArray[i].to) > -1 &&
+      asPath.length === docsArray[i].to.length
+    ) {
       currentIndex = i
     }
   }
