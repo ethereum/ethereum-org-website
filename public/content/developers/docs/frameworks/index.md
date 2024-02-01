@@ -114,6 +114,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
 
+**0xweb Node.js SDK -** **_The Package Manager and TypeScript Class Generator: A high-level abstraction designed for those who wish to utilize existing smart contracts, or as an addition to Hardhat, to simplify smart contract development, testing, and deployment._**
+
+- [0xweb.org](https://0xweb.org)
+- [GitHub](https://github.com/0xweb-org/0xweb)
+- [Documentation](https://docs.0xweb.org)
+
 ## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
