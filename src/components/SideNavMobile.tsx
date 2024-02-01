@@ -1,4 +1,4 @@
-import React, { ReactNode, useState } from "react"
+import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
