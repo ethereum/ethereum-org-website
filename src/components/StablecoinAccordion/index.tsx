@@ -11,7 +11,7 @@ import {
   LinkOverlay,
 } from "@chakra-ui/react"
 
-import { TranslationKey } from "@/lib/types"
+import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 
 import { ButtonLink } from "../Buttons"
 import CardList from "../CardList"
@@ -27,11 +27,7 @@ import {
 } from "./AccordionCustomItem"
 import { useStablecoinAccordion } from "./useStablecoinAccordion"
 
-export type ChildOnlyType = {
-  children: ReactNode
-}
-
-const SectionTitle = (props: ChildOnlyType) => (
+const SectionTitle = (props: ChildOnlyProp) => (
   <OldHeading
     as="h4"
     fontSize="1.25rem"
@@ -43,7 +39,7 @@ const SectionTitle = (props: ChildOnlyType) => (
   />
 )
 
-const StepBoxContainer = (props: ChildOnlyType) => (
+const StepBoxContainer = (props: ChildOnlyProp) => (
   <Box mt={4} mb={8} {...props} />
 )
 
@@ -96,11 +92,11 @@ const StepBox = (
   )
 }
 
-const H4 = (props: ChildOnlyType) => (
+const H4 = (props: ChildOnlyProp) => (
   <Heading fontSize="1.25rem" fontWeight={700} mb={4} {...props} />
 )
 
-const StablecoinAccordion: React.FC = () => {
+const StablecoinAccordion = () => {
   const { cardListGroups } = useStablecoinAccordion()
   const { t } = useTranslation("page-stablecoins")
 

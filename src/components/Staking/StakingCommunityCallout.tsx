@@ -8,11 +8,11 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import image from "@/public/enterprise-eth.png"
 
-export interface IProps extends FlexProps {
+export type StakingCommunityCalloutProps = FlexProps & {
   id?: string
 }
 
-const StakingCommunityCallout: React.FC<IProps> = (props) => {
+const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
   const { t } = useTranslation("page-staking")
 
   return (

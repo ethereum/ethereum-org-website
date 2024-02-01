@@ -79,7 +79,7 @@ const FeedbackCard = ({ prompt, isArticle, ...props }: FeedbackCardProps) => {
         </Heading>
         {feedbackSubmitted && (
           <p>
-            <Translation id="feedback-widget-thank-you-subtitle" />{" "}
+            {t("feedback-widget-thank-you-subtitle")}{" "}
             <Translation id="feedback-widget-thank-you-subtitle-ext" />
           </p>
         )}

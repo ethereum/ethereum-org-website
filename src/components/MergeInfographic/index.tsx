@@ -12,9 +12,7 @@ const Text = chakra("text", {
   },
 })
 
-export interface SvgProps {}
-
-const SvgText: React.FC<SvgProps> = () => {
+const SvgText = () => {
   const { t } = useTranslation(["page-upgrades-index"])
   const [sm, lg] = ["7px", "8px"]
 
@@ -49,16 +47,11 @@ const SvgText: React.FC<SvgProps> = () => {
   )
 }
 
-export interface IProps {
-  className?: string
-}
-
-const MergeInfographic: React.FC<IProps> = ({ className }) => {
+const MergeInfographic = () => {
   const { t } = useTranslation()
 
   return (
     <AspectRatio
-      className={className}
       role="img"
       aria-label={t(
         "page-upgrades-index:page-upgrades-merge-infographic-alt-text"
