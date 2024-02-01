@@ -1,6 +1,6 @@
 import { useRef, useState } from "react"
 import { motion } from "framer-motion"
-import { Menu, type MenuOpenChangeDetails } from "@ark-ui/react"
+import { Menu as ArkMenu, type MenuOpenChangeDetails } from "@ark-ui/react"
 import {
   Box,
   Flex,
@@ -20,11 +20,11 @@ import LvlPortal from "./LvlPortal"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-type ArkMenuProps = FlexProps & {
+type NavMenuProps = FlexProps & {
   sections: NavSections
 }
 
-const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
+const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
@@ -59,13 +59,13 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
           const { label } = sections[sectionKey]
           const isActive = activeSection === sectionKey
           return (
-            <Menu.Root
+            <ArkMenu.Root
               key={label}
               loop
               onOpenChange={(details) => handleOpenChange(details, sectionKey)}
               dir={direction}
             >
-              <Menu.Trigger asChild>
+              <ArkMenu.Trigger asChild>
                 <Button
                   variant="ghost"
                   m="0"
@@ -89,13 +89,13 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
                     {label}
                   </Text>
                 </Button>
-              </Menu.Trigger>
+              </ArkMenu.Trigger>
               <LvlPortal
                 lvl={1}
                 refs={refs}
                 items={sections[sectionKey].items}
               />
-            </Menu.Root>
+            </ArkMenu.Root>
           )
         })}
       </Flex>
@@ -130,4 +130,4 @@ const ArkMenu = ({ sections, ...props }: ArkMenuProps) => {
   )
 }
 
-export default ArkMenu
+export default Menu

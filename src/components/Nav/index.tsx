@@ -16,7 +16,7 @@ import { EthHomeIcon } from "../icons"
 import { BaseLink } from "../Link"
 import Search from "../Search"
 
-import ArkMenu from "./ArkMenu"
+import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
 
@@ -71,7 +71,7 @@ const Nav = () => {
             justifyContent={{ base: "flex-end", md: "space-between" }}
             ms={{ base: 3, xl: 8 }}
           >
-            <ArkMenu hideBelow="md" sections={linkSections} />
+            <Menu hideBelow="md" sections={linkSections} />
             <Flex alignItems="center" justifyContent="space-between">
               <Search {...searchModalDisclosure} />
               {/* Desktop */}
