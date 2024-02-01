@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { Menu, Portal } from "@ark-ui/react"
+import { Menu as ArkMenu, Portal as ArkPortal } from "@ark-ui/react"
 import { Flex } from "@chakra-ui/react"
 
 import type { Level, LvlRefs, NavItem } from "../types"
@@ -19,8 +19,8 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
   const pad = 4
   if (lvl > 3) return null
   return (
-    <Portal container={refs[`lvl${lvl}`]}>
-      <Menu.Content asChild>
+    <ArkPortal container={refs[`lvl${lvl}`]}>
+      <ArkMenu.Content asChild>
         <Flex
           flexDir="column"
           bg={`menu.lvl${lvl}.background`}
@@ -49,27 +49,27 @@ const LvlPortal = ({ lvl, refs, items }: LvlPortalProps) => {
             return (
               <Fragment key={label}>
                 {"href" in action ? (
-                  <Menu.Item id={label}>
+                  <ArkMenu.Item id={label}>
                     <ItemContent lvl={lvl} item={item} />
-                  </Menu.Item>
+                  </ArkMenu.Item>
                 ) : (
-                  <Menu.Root loop dir={direction}>
-                    <Menu.TriggerItem>
+                  <ArkMenu.Root loop dir={direction}>
+                    <ArkMenu.TriggerItem>
                       <ItemContent lvl={lvl} item={item} />
-                    </Menu.TriggerItem>
+                    </ArkMenu.TriggerItem>
                     <LvlPortal
                       lvl={(lvl + 1) as Level}
                       refs={refs}
                       items={action.items}
                     />
-                  </Menu.Root>
+                  </ArkMenu.Root>
                 )}
               </Fragment>
             )
           })}
         </Flex>
-      </Menu.Content>
-    </Portal>
+      </ArkMenu.Content>
+    </ArkPortal>
   )
 }
 
