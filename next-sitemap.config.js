@@ -3,7 +3,7 @@ const locales = i18nConfig.map(({ code }) => code)
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL ?? "https://ethereum.org",
+  siteUrl: process.env.SITE_URL || "https://ethereum.org",
   generateRobotsTxt: true,
   transform: async (_, path) => {
     const rootPath = path.split("/")[1]
