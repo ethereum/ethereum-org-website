@@ -45,7 +45,7 @@ However, the conventional models of building and funding public goods run into v
 
 ## Problems of traditional public goods funding {#problems-of-traditional-public-goods-funding}
 
-### 1. Misaligned incentives {#misaligned-incentives}
+### Misaligned incentives {#misaligned-incentives}
 
 Traditional methods of funding public goods suffer from misaligned incentives among different entities coordinating to allocate resources. These incentive problems can be described using several concepts from economic theory:
 
@@ -69,35 +69,17 @@ In the context of public goods, the principal-agent problem concerns differences
 
 The problem is further compounded by lack of transparency and [information asymmetries](https://en.m.wikipedia.org/wiki/Information_asymmetry). Often, those endowed with power to allocate resources to public goods misuse it and prevent accountability by shrouding administrative processes in secrecy.
 
-### 2. Poor resource-allocation mechanisms {#poor-resource-allocation-mechanisms}
+### Poor resource-allocation mechanisms {#poor-resource-allocation-mechanisms}
 
-In funding public goods, it is necessary to have a mechanism for eliciting the preferences of individuals before allocating funds. Traditional public goods funding models are inefficient because they rely on poorly designed mechanisms for measuring public preferences, such as:
+Public goods funding typically requires a mechanism for measuring public preferences for different goods and using that information to guide the allocation of funds. Traditional approaches to funding may be inefficient and suboptimal due to the shortcomings of common methods for eliciting preferences for various public goods. 
 
-#### Democratic voting {#democratic-voting}
+**Plutocratic funding** systems allow individuals to express unequal preferences for the same public good by contributing higher amounts, but risk giving wealthy minorities disproportionate influence over the resource allocation process. Coinholder voting or “one person, one dollar” voting (another term for plutocratic funding) also risks misaligning incentives—if the biggest donors to a project desire a return on their (outsized) contribution/investment, the project builder may be forced to prioritize profit-making over building social goods that are widely accessible and benefit the majority. Traditional crowdfunding initiatives may mitigate this problem, at the cost of requiring more coordination and a higher donation-per-person to match the influence of a single, well-capitalized donor donating to a competing project. 
 
-Funding models that apply democratic voting ("one person, one vote") rules rely on the majority opinion to allocate funding for public goods. In theory, using the collective opinion to guide funding is a great idea. In reality, however, this system has problems:
+**Democratic funding** or “one person, one vote” systems alleviate inequality by assigning the same unit of influence to all individuals participating in the resource-allocation decision-making process. However, a downside to purely democratic forms of funding public goods may appear if individuals most likely to benefit from a good are unable to signal higher preferences due to the limit of one vote per person. This may induce apathy as individuals rationalize non-participation due to having limited influence over the process of deciding which projects receive funding. 
 
-1. **Rational indifference**: In a democratic voting scheme, the ability of each individual to influence the outcome is limited (you can only vote once). As such, those whom a public good benefits the most (for example, public healthcare for aged citizens) are unable to push for its production. This leads to individuals rationalizing nonparticipation ("Why bother voting when my vote matters little?").
+### Improving public goods funding with blockchain technology via regenerative cryptoeconomics and public goods markets {#improving-public-goods-funding-with-blockchain-technology}
 
-2. **Voter ignorance**: Prioritizing the preferences of the majority may not necessarily lead to spending on the right public goods owing to widespread voter ignorance. In this case, informed voters are unable to push for the production of more beneficial public goods.
-
-3. **Negative externalities**: Another downside with democratic funding schemes is the cost borne by the minority. In democratic systems, those who may not necessarily need a public good are forced to pay the same as those who need it the most. Consider the case where Bob (an introvert who prefers staying indoors) is forced to pay taxes to subsidize the creation of public parks for people like Alice (an extrovert who enjoys staying outdoors), even though Bob himself might never get to use the park. This is a trivial example, but there are other real-world situations where the minority in society are (unfairly) required to pay for public goods on behalf of others who need the public good but aren't willing or able to pay for it.  
-
-#### Plutocratic voting {#plutocratic-voting}
-
-Some funding models use a plutocratic mechanism in which an individual's financial power determines their influence on the process of providing public goods. These systems are typically described as "one dollar, one vote". In theory, plutocratic funding is ideal since it allows for expressing unequal preference for public goods—but it also has problems:
-
-1. **Serving the rich**: Plutocratic voting prioritizes the preferences of the wealthy (who are often the minority) to the detriment of average income-earners that comprise the majority. Thus, public goods that matter to the majority (and have bigger societal benefits) may never receive funding.
-
-2. **Cost burdens**: It is possible for middle-class citizens to leverage crowdfunding mechanisms in order to compete against wealthy indivdiduals and collectively express their preferences for a public good. But this is considerably unfair since they still have to bear unfavorably higher costs when expressing preferences.
-
-3. **Negative externalities**: Public goods created via plutocratic mechanisms often produce negative externalities, mostly because of the need to maximize returns on investment. A classic example is the Internet as it exists today: because Internet businesses (e.g., social media platforms) cannot charge consumers directly, they rely on advertising to recoup investment in infrastructure. This is even as reports of the [negative effects of targeted advertising on individuals](https://www.vox.com/platform/amp/the-goods/2020/4/9/21204425/targeted-ads-fertility-eating-disorder-coronavirus) continue to surface.
-
-## Improving public goods funding with blockchain technology {#blockchain-for-public-goods-funding}
-
-The problems explained in the previous section lead to "coordination failures" that stall the development of public goods. However, many believe the existence of decentralized blockchain networks, such as Ethereum, can help solve the problem of efficiently funding and developing public goods.
-
-### Regenerative cryptoeconomics and public goods markets {#regenerative-cryptoeconomics-and-public-goods-markets}
+Inefficiencies confronting traditional forms of public goods funding often produce [coordination failures](https://en.wikipedia.org/wiki/Coordination_failure_(economics)#): communities are unable to coordinate decision-making and efficiently allocate financial resources to the creation and maintenance of public goods that arguably have a net positive impact for the majority of individuals associated with each community. But permissionless, programmable, and globally accessible financial systems built on public blockchain networks like Ethereum may help alleviate some of the problems hindering the funding and development of critical public goods, like free and open-source software (FOSS).
 
 "Regenerative cryptoeconomics" concerns using blockchain technology to design incentives and mechanisms that support regenerative economic systems. A regenerative economy is one that has positive environmental and social externalities that also generate more capital assets.
 
