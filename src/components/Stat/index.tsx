@@ -36,7 +36,7 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
     if (!value) return
 
     return setContent({ ...initialContent, contentValue: value })
-  }, [isError])
+  }, [isError, value])
 
   return (
     <Flex flexDirection="column-reverse">
