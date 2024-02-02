@@ -1,9 +1,9 @@
 import * as React from "react"
-import { Flex, HStack, Icon, Text } from "@chakra-ui/react"
 import type { IconType } from "react-icons/lib"
 import { MdInfoOutline, MdWarning } from "react-icons/md"
+import { Flex, HStack, Icon, Text } from "@chakra-ui/react"
 
-import Tooltip, { IProps as TooltipProps } from "../Tooltip"
+import Tooltip, { TooltipProps } from "../Tooltip"
 
 const nullValue = <>&mdash;</>
 
