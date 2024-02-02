@@ -89,7 +89,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
       <Grid
         position="absolute"
         visibility={isOpen ? "visible" : "hidden"}
-        top="navHeight"
+        top="16.5"
         insetInline="0"
         templateColumns="repeat(3, 1fr)"
         transition="height 1s ease-in-out"
