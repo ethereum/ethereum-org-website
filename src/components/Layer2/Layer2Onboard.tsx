@@ -188,13 +188,12 @@ const Layer2Onboard: React.FC<IProps> = ({
     setSelectedL2(selectedOption.l2)
   }
 
-  // TODO: Fix type errors with object union. (Probably not the best approach here)
   const handleExchangeOnboard: ReactSelectOnChange<
     ExchangeOption | CexOnboardOption
   > = (selectedOption) => {
-    if (selectedOption == undefined) return
+    if (!selectedOption) return
 
-    if (Object.hasOwn(selectedOption, "cex")) {
+    if ("cex" in selectedOption) {
       trackCustomEvent({
         eventCategory: `Selected cex to onboard`,
         eventAction: `Clicked`,
@@ -202,7 +201,6 @@ const Layer2Onboard: React.FC<IProps> = ({
         eventValue: `${selectedOption.label}`,
       })
 
-      // @ts-expect-error `cex` prop not existing on object
       setSelectedExchange(selectedOption.cex)
       setSelectedCexOnboard(undefined)
     } else {
@@ -212,7 +210,6 @@ const Layer2Onboard: React.FC<IProps> = ({
         eventName: `${selectedOption.label} selected`,
         eventValue: `${selectedOption.label}`,
       })
-      // @ts-expect-error `cexOnboard` prop not existing on object
       setSelectedCexOnboard(selectedOption.cexOnboard)
       setSelectedExchange(undefined)
     }
@@ -265,7 +262,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             </Text>
           </Box>
           {/* RightSelect */}
-          <ReactSelect<ExchangeOption | CexOnboardOption>
+          <ReactSelect
             instanceId="exchange-onboard-select"
             options={[
               {
