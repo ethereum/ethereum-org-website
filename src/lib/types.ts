@@ -16,6 +16,10 @@ import type {
 } from "@/lib/interfaces"
 
 import type { CallToActionProps } from "@/components/Hero/CallToAction"
+import { SimulatorNav } from "@/components/Simulator/interfaces"
+
+import allQuizData from "@/data/quizzes"
+import allQuestionData from "@/data/quizzes/questionBank"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -135,17 +139,60 @@ export type LoadingState<T> =
 /**
  * Quiz data types
  */
-type QuizLevel = "beginner" | "intermediate" | "advanced"
-
-export type QuizzesSection = {
+export type Answer = {
   id: string
-  level: QuizLevel
-  next?: string
+  label: TranslationKey
+  explanation: TranslationKey
+  moreInfoLabel?: string
+  moreInfoUrl?: string
+}
+
+export type RawQuestion = {
+  prompt: TranslationKey
+  answers: Answer[]
+  correctAnswerId: string
+}
+
+export type QuestionBank = Record<string, RawQuestion>
+export type QuestionKey = keyof typeof allQuestionData
+export type AnswerKey = typeof allQuestionData[QuestionKey]["answers"][number]["id"]
+
+export type Question = RawQuestion & {
+  id: QuestionKey
+}
+
+export type Quiz = {
+  title: TranslationKey
+  questions: Question[]
+}
+
+export type AnswerChoice = {
+  answerId: AnswerKey
+  isCorrect: boolean
+}
+
+export type RawQuiz = {
+  title: TranslationKey
+  questions: QuestionKey[]
 }
 
 export type QuizStatus = "neutral" | "success" | "error"
 
-export type CompletedQuizzes = { [key: string]: [boolean, number] }
+type QuizLevel = "beginner" | "intermediate" | "advanced"
+
+export type QuizzesSection = {
+  id: QuizKey
+  level: QuizLevel
+  next?: QuizKey
+}
+
+export type RawQuizzes = Record<string, RawQuiz>
+export type QuizKey = keyof typeof allQuizData
+
+type HasScoredPerfect = boolean
+type QuestionsCorrect = number
+
+export type CompletedQuizzes = Record<QuizKey, [HasScoredPerfect, QuestionsCorrect]>
 
 export type UserStats = {
   score: number
@@ -228,8 +275,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-      items: TocNodeType[]
-    }
+    items: TocNodeType[]
+  }
 
 export type ToCItem = {
   title: string
@@ -295,12 +342,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-      error: string
-    }
+    error: string
+  }
   | {
-      data: Data
-      value: Value
-    }
+    data: Data
+    value: Value
+  }
 
 export type EtherscanNodeResponse = {
   result: {
@@ -350,6 +397,13 @@ export type StatsBoxMetric = {
   apiProvider: string
 }
 
+export type SimulatorNavProps = {
+  nav: SimulatorNav
+}
+
+export type PhoneScreenProps = SimulatorNavProps & {
+  ctaLabel: string
+}
 export type CommunityConference = {
   title: string
   to: string

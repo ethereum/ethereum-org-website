@@ -154,7 +154,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
-![POAP Logo](src/assets/poap-logo.svg)
+![POAP Logo](public/poap-logo.svg)
 
 ## Claim your POAP!
 
@@ -1673,7 +1673,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/costgallo"><img src="https://avatars.githubusercontent.com/u/49433698?v=4?s=100" width="100px;" alt="Costanza"/><br /><sub><b>Costanza</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=costgallo" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/joaolago1113"><img src="https://avatars.githubusercontent.com/u/22820692?v=4?s=100" width="100px;" alt="joao"/><br /><sub><b>joao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joaolago1113" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://p2p.org"><img src="https://avatars.githubusercontent.com/u/3310192?v=4?s=100" width="100px;" alt="Eugene"/><br /><sub><b>Eugene</b></sub></a><br /><a href="#content-rgb2hsl" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.danielgorbe.com"><img src="https://avatars.githubusercontent.com/u/36860942?v=4?s=100" width="100px;" alt="Dániel Görbe"/><br /><sub><b>Dániel Görbe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=g0rbe" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.gorbe.io"><img src="https://avatars.githubusercontent.com/u/36860942?v=4?s=100" width="100px;" alt="Dániel Görbe"/><br /><sub><b>Dániel Görbe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=g0rbe" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.insubli.me"><img src="https://avatars.githubusercontent.com/u/41712656?v=4?s=100" width="100px;" alt="s-crypt"/><br /><sub><b>s-crypt</b></sub></a><br /><a href="#content-s-crypt" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tudorpintea999"><img src="https://avatars.githubusercontent.com/u/87604944?v=4?s=100" width="100px;" alt="iwantanode"/><br /><sub><b>iwantanode</b></sub></a><br /><a href="#content-tudorpintea999" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shak58"><img src="https://avatars.githubusercontent.com/u/150069539?v=4?s=100" width="100px;" alt="shak58"/><br /><sub><b>shak58</b></sub></a><br /><a href="#content-shak58" title="Content">🖋</a></td>

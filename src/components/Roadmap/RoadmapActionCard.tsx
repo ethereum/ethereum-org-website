@@ -15,7 +15,7 @@ import security from "@/public/roadmap/roadmap-security.png"
 import scaling from "@/public/roadmap/roadmap-transactions.png"
 import userExperience from "@/public/roadmap/roadmap-ux.png"
 
-interface IProps {
+type RoadmapActionCardProps = {
   to: string
   alt: string
   image: string
@@ -24,14 +24,14 @@ interface IProps {
   buttonText: string
 }
 
-const RoadmapActionCard: React.FC<IProps> = ({
+const RoadmapActionCard = ({
   to,
   alt,
   image,
   title,
   description,
   buttonText,
-}) => {
+}: RoadmapActionCardProps) => {
   const images = {
     futureProofing,
     scaling,
