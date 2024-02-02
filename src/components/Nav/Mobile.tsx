@@ -103,7 +103,7 @@ const glyphPathVariants = {
   },
 }
 
-export interface IProps extends ButtonProps {
+export type MobileNavMenuProps = ButtonProps & {
   isMenuOpen: boolean
   isDarkTheme: boolean
   toggleMenu: () => void
@@ -114,7 +114,7 @@ export interface IProps extends ButtonProps {
   drawerContainerRef: RefObject<HTMLElement | null>
 }
 
-const MobileNavMenu: React.FC<IProps> = ({
+const MobileNavMenu = ({
   isMenuOpen,
   isDarkTheme,
   toggleMenu,
@@ -124,7 +124,7 @@ const MobileNavMenu: React.FC<IProps> = ({
   fromPageParameter,
   drawerContainerRef,
   ...props
-}) => {
+}: MobileNavMenuProps) => {
   const { t } = useTranslation("common")
 
   const handleClick = (): void => {

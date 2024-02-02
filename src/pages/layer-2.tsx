@@ -60,13 +60,10 @@ import ZKRollupImage from "@/public/layer-2/zk_rollup.png"
 import DAOImage from "@/public/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
 
-interface ContentBoxProps extends BoxProps {
+type ContentBoxProps = BoxProps & {
   isLightGrayBg?: boolean
 }
-const ContentBox: React.FC<ContentBoxProps> = ({
-  isLightGrayBg,
-  ...rest
-}: ContentBoxProps) => (
+const ContentBox = ({ isLightGrayBg, ...rest }: ContentBoxProps) => (
   <Box
     px={8}
     py={12}

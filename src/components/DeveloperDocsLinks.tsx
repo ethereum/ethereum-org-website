@@ -6,11 +6,11 @@ import Translation from "@/components/Translation"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
-export interface IProps {
+export type DeveloperDocsLinksProps = {
   headerId: string
 }
 
-const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
+const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
   <React.Fragment>
     {docLinks
       .filter(({ id }) => id.includes(headerId))

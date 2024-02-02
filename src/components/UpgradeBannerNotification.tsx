@@ -5,7 +5,7 @@ import BannerNotification from "./BannerNotification"
 import Emoji from "./Emoji"
 import InlineLink from "./Link"
 
-const UpgradeBannerNotification: React.FC = () => (
+const UpgradeBannerNotification = () => (
   <BannerNotification shouldShow>
     <Emoji text=":megaphone:" me={4} fontSize="2xl" flexShrink="0" />
     <Box>

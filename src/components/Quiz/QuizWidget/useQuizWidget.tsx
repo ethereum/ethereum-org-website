@@ -1,14 +1,15 @@
-import { useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 import { shuffle } from "lodash"
 import { useTranslation } from "next-i18next"
 
-import {
+import type {
   AnswerChoice,
   Question,
   Quiz,
+  QuizKey,
   RawQuestion,
   RawQuiz,
-} from "@/lib/interfaces"
+} from "@/lib/types"
 
 import allQuizzesData from "@/data/quizzes"
 import questionBank from "@/data/quizzes/questionBank"
@@ -28,11 +29,9 @@ export const useQuizWidget = ({
   const { t } = useTranslation()
 
   const [quizData, setQuizData] = useState<Quiz | null>(null)
-  const [nextQuiz, setNextQuiz] = useState<string | undefined>(undefined)
-  const [userQuizProgress, setUserQuizProgress] = useState<Array<AnswerChoice>>(
-    []
-  )
-  const [showAnswer, setShowAnswer] = useState<boolean>(false)
+  const [nextQuiz, setNextQuiz] = useState<QuizKey | undefined>(undefined)
+  const [userQuizProgress, setUserQuizProgress] = useState<AnswerChoice[]>([])
+  const [showAnswer, setShowAnswer] = useState(false)
   const [currentQuestionAnswerChoice, setCurrentQuestionAnswerChoice] =
     useState<AnswerChoice | null>(null)
 
@@ -46,18 +45,9 @@ export const useQuizWidget = ({
     setUserQuizProgress([])
     setShowAnswer(false)
 
-    const currentQuizKey =
-      quizKey ||
-      Object.keys(allQuizzesData).filter((quizUri) =>
-        window?.location.href.includes(quizUri)
-      )[0] ||
-      null
-
-    if (!currentQuizKey) return
-
     // Get quiz data from key, shuffle, then truncate if necessary
-    const rawQuiz: RawQuiz = allQuizzesData[currentQuizKey]
-    const questions: Array<Question> = rawQuiz.questions.map((id) => {
+    const rawQuiz: RawQuiz = allQuizzesData[quizKey]
+    const questions: Question[] = rawQuiz.questions.map((id) => {
       const rawQuestion: RawQuestion = questionBank[id]
       return { id, ...rawQuestion }
     })
@@ -99,10 +89,7 @@ export const useQuizWidget = ({
   const quizScore = Math.floor(ratioCorrect * 100)
   const isPassingScore = quizScore > PASSING_QUIZ_SCORE
 
-  const showConfetti = useMemo<boolean>(
-    () => !!quizData && showResults && isPassingScore,
-    [quizData, showResults, isPassingScore]
-  )
+  const showConfetti = !!quizData && showResults && isPassingScore
 
   useEffect(() => {
     if (!showResults) return
