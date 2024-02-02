@@ -45,19 +45,6 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   />
 )
 
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props: any) => (
-  <Box mt="auto">
-    <ChakraSelect
-      maxW="none"
-      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
-      {...props}
-    />
-  </Box>
-)
-
 const SelectedContainer = (props: ChildOnlyProp) => (
   <Box bg="rgba(255, 255, 255, 0.02)" mt={2} p="21px" {...props} />
 )
