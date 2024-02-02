@@ -247,13 +247,17 @@ Se espera que la introducción de la [fragmentación de datos](/roadmap/dankshar
 
 ¿Retiene usted mejor las cosas cuando las ve? Vea una explicación de Finematics de los rollups optimistas:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
 ### Uso de rollups optimistas \{#use-optimistic-rollups}
 
 Existen múltiples implementaciones de rollups optimistas que puede integrar en sus dApps:
 
-<RollupProductDevDoc rollupType="optimistic" />
+{
+	<RollupProductDevDoc rollupType="optimistic" />
+}
 
 ## Bibliografía para profundizar sobre los rollups optimistas
 

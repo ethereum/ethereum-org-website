@@ -50,7 +50,9 @@ Dieser Vorgang sollte nicht länger als 10 Minuten dauern.
 ## 7. Fügen Sie das ausgewählte Layer-2-Netzwerk Ihrer Wallet hinzu (optional)
 
 Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details des Netzwerks zu finden. Sobald das Netzwerk hinzugefügt wurde und die Transaktion abgeschlossen ist, sollten Sie die Token in Ihrer Wallet sehen.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Möchten Sie mehr erfahren?</div>

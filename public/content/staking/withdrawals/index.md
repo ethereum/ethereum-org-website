@@ -37,7 +37,9 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 
 ### How do I prepare? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Important notices \{#important-notices}
 
@@ -76,7 +78,9 @@ Whether a given validator is eligible for a withdrawal or not is determined by t
 
 Check out this explanation of Ethereum staking withdrawals by Finematics:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Validator "sweeping" \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ As you see this slows down as more validators are on the network. An increase in
 
 ## Frequently asked questions \{#faq}
 
+{
 <ExpandableCard
 title="Once I have provided a withdrawal address, can I change it to an alternative withdrawal address?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 No, the process to provide withdrawal credentials is a one-time process, and cannot be changed once submitted.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Why can a withdrawal address only be set once?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Withdrawal addresses can be either a smart contract (controlled by its code), or
 
 As an alternative to changing the withdrawal address for a particular validator, users may choose to set a smart contract as their withdrawal address which could handle key rotating, such as a Safe. Users who set their funds to their own EOA can perform a full exit to withdraw all of their staked funds, and then re-stake using new credentials.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="What if I participate in staking tokens or pooled staking"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ If you are part of a <a href="/staking/pools/">staking pool</a> or hold staking 
 In general, users should be free to reclaim their underlying staked ETH, or change which staking provider they utilize. If a particular pool is getting too large, funds can be exited, redeemed, and re-staked with a <a href="https://rated.network/">smaller provider</a>. Or, if you’ve accumulated enough ETH you could <a href="/staking/solo/">stake from home</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Do reward payments (partial withdrawals) happen automatically?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Yes, as long as your validator has provided a withdrawal address. This must be provided once to initially enable any withdrawals, then reward payments will be automatically triggered every few days with each validator sweep.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Do full withdrawals happen automatically?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ No, if your validator is still active on the network, a full withdrawal will not
 Once a validator has completed the exiting process, and assuming the account has withdrawal credentials, the remaining balance will <em>then</em> be withdrawn during the next <a href="#validator-sweeping">validator sweep</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Can I withdraw a custom amount?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Withdrawals are designed to be pushed automatically, transferring any ETH that i
 
 It is not possible to manually request specific amounts of ETH to be withdrawn.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Validator operators are recommended to visit the <a href="https://launchpad.ethe
 To try out your setup on a testnet first, visit the <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> to get started.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Can I re-activate my validator after exiting by depositing more ETH?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 No. Once a validator has exited and its full balance has been withdrawn, any additional funds deposited to that validator will automatically be transferred to the withdrawal address during the next validator sweep. To re-stake ETH, a new validator must be activated.
 </ExpandableCard>
+}
 
 ## Further reading \{#further-reading}
 

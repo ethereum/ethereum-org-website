@@ -8,7 +8,9 @@ lang: en
 
 With interest in cryptocurrencies growing, learning best practices when using cryptocurrency is essential. Crypto can be fun and exciting, but there are also serious risks. If you put in this small amount of upfront work, you can mitigate these risks.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Web security 101 \{#web-security}
 
@@ -88,7 +90,9 @@ For those who want to take the next step in 2FA, consider using a security key. 
 
 Watch more on the 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Uninstall browser extensions \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 [More on the risks of browser extensions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Crypto security 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ One of the biggest reasons people get scammed in crypto generally is a lack of u
 <DocLink to="/eth/">
   What is ether?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Wallet security \{#wallet-security}
 
@@ -161,7 +169,9 @@ Many Ethereum wallets offer limits protection to safeguard against accounts bein
 
 [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Common scams \{#common-scams}
 
@@ -265,7 +275,9 @@ Airdrop scams involve a scam project airdropping an asset (NFT, token) into your
 
 [More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Further reading \{#further-reading}
 
@@ -289,4 +301,6 @@ Airdrop scams involve a scam project airdropping an asset (NFT, token) into your
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Twitter thread on common crypto phishing emails and messages](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

@@ -47,8 +47,12 @@ Ngwa komputa a ahazighariri (maobu "dapps") na enweta uru nke crypotcurrency na 
 
 [Ahazighariri Ihe nile na Vitalik Buterin](https://youtu.be/WSN5BaCzsbo)
 
-<YouTube id="WSN5BaCzsbo" />
+{
+	<YouTube id="WSN5BaCzsbo" />
+}
 
 [Ethereum's Blockchain site na TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
-<YouTube id="WfULutvxvzY" />
+{
+	<YouTube id="WfULutvxvzY" />
+}

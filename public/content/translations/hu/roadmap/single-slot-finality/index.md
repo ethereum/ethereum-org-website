@@ -33,6 +33,7 @@ A jelenlegi mechanizmussal a véglegesítés idejét úgy lehet csökkenteni, ha
 
 ## Az egy sloton belüli véglegesítéshez (SSF) vezető út \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Miért nem lehet bevezetni az SSF-et akár ma?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 A jelenlegi konszenzusmechanizmus összekombinálja a több validátortól, vagyis a bizottságtól származó tanúsítást, hogy csökkentse az üzenetek számát, amelyet minden validátornak fel kell dolgoznia a validálás során. Minden validátornak lehetősége van tanúsítani egy adott korszakban (32 slot), de egy adott slotban csak a validátorok egy csoportja, a bizottság végzi a tanúsítást. Ehhez alhálózatokra osztódnak, amelyekben néhány validátor aggregátorként működik. Ezek az aggregátorok a saját alhálózatukban lévő validátortól látott összes aláírást összevonják egy aggregált aláírásba. Az aggregátor, aki a legtöbb egyéni hozzájárulást tudta összevonni, átadja az aggregált aláírást a blokk javaslattevőjének, aki azt beleteszi a blokkba a többi bizottságtól kapott aggregált aláírással együtt.
@@ -41,6 +42,7 @@ Ez a folyamat elegendő kapacitást ad minden validátornak, hogy szavazzon mind
 
 E séma szerint egy teljes korszak kell ahhoz, hogy minden validátor részt vehessen a tanúsításban egy blokkhoz kapcsolódóan. Ugyanakkor lehetséges ezt a mechanizmust úgy is továbbfejleszteni, hogy minden validátor minden slotban végezhessen tanúsítást.
 </ExpandableCard>
+}
 
 Mióta az Ethereum konszenzusmechanizmusát megtervezték, az aláírásaggregálás sémája (BLS) sokkal skálázhatóbbnak bizonyult, mint azt korábban gondolták, és közben a kliensek is fejlődtek az aláírások feldolgozásában és ellenőrzésében. Kiderült, hogy a nagy számú validátor valójában egyetlen slotban is képes végrehajtani a tanúsításokat. Például egymillió validátorral, akik közül mindenki kétszer szavaz egy slotban, a slot ideje pedig 16 másodperc, a csomópontoknak az aláírások ellenőrzését egy minimális másodpercenként 125 000 aggregációs rátán kellene végrehajtaniuk, hogy egymillió tanúsítást végezzenek a slotban. Valójában egy átlagos számítógépnek 500 nanomásodpercig tart egy aláírás ellenőrzése, tehát 125 000 ellenőrzést nagyjából 62,5 ms alatt végezne el – jóval az egy másodperces határ alatt.
 

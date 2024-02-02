@@ -76,7 +76,9 @@ Dowiedz się więcej o [Plasmie](/developers/docs/scaling/plasma/).
 
 ## Jesteś raczej wzrokowcem? \{#a-visual-demo}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Zauważ, że w wyjaśnieniu w filmie termin „Warstwa 2” jest używany w odniesieniu do wszystkich rozwiązań skalowania off-chain, podczas gdy my określamy „warstwę 2” jako rozwiązanie off-chain, które uzyskuje bezpieczeństwo za pośrednictwem konsensusu sieci głównej warstwy 1._
 

@@ -19,7 +19,9 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が�
 
 マージとは、イーサリアムの元の実行レイヤー ([誕生](/history/#frontier)から存在するメインネット) と、新規のプルーフ・オブ・ステークのコンセンサスレイヤーであるビーコンチェーンをマージ(統合)することでした。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステーキングされた ETH を利用して、ネットワークのセキュリティが確保されるようになりました。 イーサリアムのビジョンである、より高性能なスケーラビリティ、より安心なセキュリティ、より高いレベルの持続可能性を実現するための、本当にエキサイティングなステップとなりました。
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 当初、[メインネット](/glossary/#mainnet)とは別に[ビーコンチェーン](/roadmap/beacon-chain/)がリリースされました。 メインネットでは[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)によりすべてのアカウント、残高、スマートコントラクトおよびブロックチェーンの状態の安全性が保たれ、それと同時に[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)を活用したビーコンチェーンが並行して稼働していました。 マージでは、これらの 2 つのシステムが最終的に統合され、プルーフ・オブ・ワークが永久にプルーフ・オブ・ステークに置き換わりました。
 
@@ -53,6 +55,7 @@ _繰り返しになりますが_、ETH やイーサリアム上の他のデジ�
 
 ### マージと分散型アプリ(Dapp)のデベロッパー \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="ステーキングノードのオペレータとプロバイダー"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ id="staking-node-operators">
 
 「フィーの受取人」を設定しなくても、バリデータは通常どおり動作しますが、バリデータが提案したブロックの未焼却のフィーのチップや獲得できたはずの MEV を逃すことになります。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="非検証ノードオペレータとインフラプロバイダー"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ id="node-operators">
 上記の項目が完了していないと、両方のレイヤーの同期と認証が完了するまで、ノードが「オフライン」のように表示されます。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="分散型アプリ(Dapp)とスマートコントラクトのデベロッパー"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -105,6 +112,7 @@ id="developers">
 詳細については、Tim Beiko によるブログ投稿<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">マージがイーサリアムのアプリケーションレイヤーに与える影響</a>をご覧ください。
 
 </ExpandableCard>
+}
 
 ## マージとエネルギー消費 \{#merge-and-energy}
 
@@ -116,6 +124,7 @@ id="developers">
 
 ## マージに関する誤解について \{#misconceptions}
 
+{
 <ExpandableCard
 title="誤解: &quot;ノードの運用には、32 ETHのステーキングが必要&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -133,7 +142,9 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 <a href="/run-a-node/">自分のノードを運用することについての詳細</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解: &quot;マージはガス料金の引き下げに失敗した&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -143,7 +154,9 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">ロールアップを中心としたロードマップ</a>では、<a href="/layer-2/">レイヤー 2</a>でのユーザーアクティビティのスケーリングに集中して取り組み、レイヤー 1 メインネットをロールアップのデータ保存に最適化された安全な分散型決済レイヤーとして稼働させ、ロールアップトランザクションの大幅な低コスト化を目指しています。 プルーフ・オブ・ステークへの移行は、これを実現するための重要な布石となります。 <a href="/developers/docs/gas/">ガスとフィーについての詳細</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解: &quot;マージにより、トランザクションが大幅に加速された&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -154,7 +167,9 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 プルーフ・オブ・ステークにより、以前は存在しなかったトランザクションのファイナリティのコンセプトが導入されました。 プルーフ・オブ・ワークでは、トランザクションが含まれるブロックの改ざんは、新たなブロックがマイニングされるたびに、指数関数的に難しくなっていきますが、可能性が完全にゼロになることはありません。 プルーフ・オブ・ステークでは、ブロックはエポック(6.4 分間、この間に 32 ブロックが生成可能)に束ねられ、バリデータが投票します。 1 つのエポックの終了時に、バリデータはそのエポックを「正当」とみなすかどうか投票します。 バリデータがエポックの正当性に同意した場合、次のエポックで確定されます。 確定したトランザクションを取り消すには、ステーキングされた全 ETH の 3 分の 1 以上を取得し、焼却する必要があるため、経済的に不可能となります。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解: &quot;マージにより、ステーキングの引き出しができるようになった&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -166,7 +181,9 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 <a href="/staking/withdrawals/">ステーキングの引き出しについての詳細</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解: &quot;マージが完了し、出金が可能になったのため、ステーカーは全員同時に退出できる&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -178,6 +195,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 また、年換算利回りは意図的にダイナミックに設定されており、ステーカー市場がバリデータの報酬額をバランスよく調整できるようになっています。 レートが低すぎる場合は、ステーカーはプロトコルが制限するレート範囲内で退出していきます。 その結果、残っているステーカーの年換算利回りが徐々に上昇し、新しいステーカーを引き寄せたり、ステーカーが再度戻ってくることになります。
 </ExpandableCard>
+}
 
 ## Eth2 の名称廃止 \{#eth2}
 
@@ -224,6 +242,10 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 ## 参考文献 \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

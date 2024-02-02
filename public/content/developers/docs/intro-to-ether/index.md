@@ -8,7 +8,7 @@ lang: en
 
 To help you better understand this page, we recommend you first read [Introduction to Ethereum](/developers/docs/intro-to-ethereum/).
 
-## What is a cryptocurrency? \{##what-is-a-cryptocurrency}
+## What is a cryptocurrency? \{#what-is-a-cryptocurrency}
 
 A cryptocurrency is a medium of exchange secured by a blockchain-based ledger.
 
@@ -16,7 +16,7 @@ A medium of exchange is anything widely accepted as payment for goods and servic
 
 The first cryptocurrency was Bitcoin, created by Satoshi Nakamoto. Since Bitcoin's release in 2009, people have made thousands of cryptocurrencies across many different blockchains.
 
-## What is ether? \{##what-is-ether}
+## What is ether? \{#what-is-ether}
 
 **Ether (ETH)** is the cryptocurrency used for many things on the Ethereum network. Fundamentally, it is the only acceptable form of payment for transaction fees, and after [The Merge](/roadmap/merge), ether is required to validate and propose blocks on Mainnet. Ether is also used as a primary form of collateral in the [DeFi](/defi) lending markets, as a unit of account in NFT marketplaces, as payment earned for performing services or selling real-world goods, and more.
 
@@ -28,13 +28,13 @@ Therefore, even if a malicious dapp submitted an infinite loop, the transaction 
 
 It is [common](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [to](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [conflate](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum and ether — when people reference the "price of Ethereum," they are describing the price of ether.
 
-## Minting ether \{##minting-ether}
+## Minting ether \{#minting-ether}
 
 Minting is the process in which new ether gets created on the Ethereum ledger. The underlying Ethereum protocol creates the new ether, and it is not possible for a user to create ether.
 
 Ether is minted as a reward for each block proposed and at every epoch checkpoint for other validator activity related to reaching consensus. The total amount issued depends on the number of validators and how much ether they have staked. This total issuance is divided equally among validators in the ideal case that all validators are honest and online, but in reality, it varies based on validator performance. About 1/8 of the total issuance goes to the block proposer; the remainder is distributed across the other validators. Block proposers also receive tips from transaction fees and MEV-related income, but these come from recycled ether, not new issuance.
 
-## Burning ether \{##burning-ether}
+## Burning ether \{#burning-ether}
 
 As well as creating ether through block rewards, ether can be destroyed through a process called 'burning'. When ether gets burned, it gets removed from circulation permanently.
 
@@ -42,7 +42,7 @@ Ether burn occurs in every transaction on Ethereum. When users pay for their tra
 
 Burning the base fee hinders a block producers ability to manipulate transactions. For example, if block producers received the base fee, they could include their own transactions for free and raise the base fee for everyone else. Alternatively, they could refund the base fee to some users off-chain, leading to a more opaque and complex transaction fee market.
 
-## Denominations of ether \{##denominations}
+## Denominations of ether \{#denominations}
 
 Since the value of many transactions on Ethereum are small, ether has several denominations which may be referenced as smaller units of account. Of these denominations, Wei and gwei are particularly important.
 
@@ -55,7 +55,7 @@ Gwei, short for giga-wei, is often used to describe gas costs on Ethereum.
 | Wei          | 10<sup>-18</sup> | Technical implementations |
 | Gwei         | 10<sup>-9</sup>  | Human-readable gas fees   |
 
-## Transferring ether \{##transferring-ether}
+## Transferring ether \{#transferring-ether}
 
 Each transaction on Ethereum contains a `value` field, which specifies the amount of ether to be transferred, denominated in wei, to send from the sender's address to the recipient address.
 
@@ -63,13 +63,13 @@ When the recipient address is a [smart contract](/developers/docs/smart-contract
 
 [More on transactions](/developers/docs/transactions/)
 
-## Querying ether \{##querying-ether}
+## Querying ether \{#querying-ether}
 
 Users can query the ether balance of any [account](/developers/docs/accounts/) by inspecting the account's `balance` field, which shows ether holdings denominated in wei.
 
 [Etherscan](https://etherscan.io) is a popular tool to inspect address balances via a web-based application. For example, [this Etherscan page](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) shows the balance for the Ethereum Foundation. Account balances can also be queried using wallets or directly by making requests to nodes.
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Defining Ether and Ethereum](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum Whitepaper](/whitepaper/): The original proposal for Ethereum. This document includes a description of ether and the motivations behind its creation.

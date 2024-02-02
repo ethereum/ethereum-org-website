@@ -14,7 +14,7 @@ However, increased research into improving smart contracts has led to the introd
 
 You should have a good understanding of [smart contracts](/developers/docs/smart-contracts/), [smart contract anatomy](/developers/docs/smart-contracts/anatomy/), and the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). This guide also assumes readers have a grasp of programming smart contracts.
 
-## What is a smart contract upgrade? \{##what-is-a-smart-contract-upgrade}
+## What is a smart contract upgrade? \{#what-is-a-smart-contract-upgrade}
 
 A smart contract upgrade involves changing the business logic of a smart contract while preserving the contract's state. It is important to clarify that upgradeability and mutability are not the same, especially in the context of smart contracts.
 
@@ -32,7 +32,7 @@ This can be done via the following methods:
 
 5. Using the diamond pattern to delegate function calls from a proxy contract to logic contracts.
 
-### Upgrade mechanism #1: Contract migration \{##contract-migration}
+### Upgrade mechanism #1: Contract migration \{#contract-migration}
 
 Contract migration is based on versioning—the idea of creating and managing unique states of the same software. Contract migration involves deploying a new instance of an existing smart contract and transferring storage and balances to the new contract.
 
@@ -44,7 +44,7 @@ Contract migration is a relatively straightforward and safe measure for upgradin
 
 [More on contract migration.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### Upgrade mechanism #2: Data separation \{##data-separation}
+### Upgrade mechanism #2: Data separation \{#data-separation}
 
 Another method for upgrading smart contracts is to separate business logic and data storage into separate contracts. This means users interact with the logic contract, while data is stored in the storage contract.
 
@@ -58,7 +58,7 @@ Using this upgrade method requires updating the logic contract's address in the 
 
 The data separation pattern is arguably easier to implement compared to contract migration. However, you'll have to manage multiple contracts and implement complex authorization schemes to protect smart contracts from malicious upgrades.
 
-### Upgrade mechanism #3: Proxy patterns \{##proxy-patterns}
+### Upgrade mechanism #3: Proxy patterns \{#proxy-patterns}
 
 The proxy pattern also uses data separation to keep business logic and data in separate contracts. However, in a proxy pattern, the storage contract (called a proxy) calls the logic contract during code execution. This is a reverse of the data separation method, where the logic contract calls the storage contract.
 
@@ -88,7 +88,7 @@ Proxy patterns are a popular method for upgrading smart contracts because they e
 
 [More on proxy patterns](https://blog.openzeppelin.com/proxy-patterns/).
 
-### Upgrade mechanism #4: Strategy pattern \{##strategy-pattern}
+### Upgrade mechanism #4: Strategy pattern \{#strategy-pattern}
 
 This technique is influenced by the [strategy pattern](https://en.wikipedia.org/wiki/Strategy_pattern), which encourages creating software programs that interface with other programs to implement specific features. Applying the strategy pattern to Ethereum development would mean building a smart contract that calls functions from other contracts.
 
@@ -100,7 +100,7 @@ Although similar to the proxy pattern discussed earlier, the strategy pattern is
 
 The main drawback is that this pattern is mostly useful for rolling out minor upgrades. Also, if the main contract is compromised (e.g., via a hack), you cannot use this upgrade method.
 
-### Upgrade mechanism #5: Diamond pattern \{##diamond-pattern}
+### Upgrade mechanism #5: Diamond pattern \{#diamond-pattern}
 
 The diamond pattern can be considered an improvement on the proxy pattern. Diamond patterns differ from proxy patterns because the diamond proxy contract can delegate function calls to more than one logic contract.
 
@@ -118,7 +118,7 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 
 [More on the diamond pattern](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
-## Pros and cons of upgrading smart contracts \{##pros-and-cons-of-upgrading-smart-contracts}
+## Pros and cons of upgrading smart contracts \{#pros-and-cons-of-upgrading-smart-contracts}
 
 | Pros                                                                                                           | Cons                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 | Contract upgrades give developers more room to experiment with different features and improve dapps over time. | The opportunity to upgrade smart contracts may encourage developers to launch projects faster without doing due diligence during the development phase. |
 |                                                                                                                | Insecure access control or centralization in smart contracts can make it easier for malicious actors to perform unauthorized upgrades.                  |
 
-## Considerations for upgrading smart contracts \{##considerations-for-upgrading-smart-contracts}
+## Considerations for upgrading smart contracts \{#considerations-for-upgrading-smart-contracts}
 
 1. Use secure access control/authorization mechanisms to prevent unauthorized smart contract upgrades, especially if using proxy patterns, strategy patterns, or data separation. An example is restricting access to the upgrade function, such that only the contract's owner can call it.
 
@@ -142,21 +142,21 @@ The diamond upgrade pattern has some advantages over traditional proxy upgrade p
 
 Timelocks give users some time to exit the system if they disagree with a proposed change (e.g., logic upgrade or new fee schemes). Without timelocks, users need to trust developers not to implement arbitrary changes in a smart contract without prior notice. The drawback here is that timelocks restrict the ability to quickly patch vulnerabilities.
 
-## Resources \{##resources}
+## Resources \{#resources}
 
 **OpenZeppelin Upgrades Plugins - _A suite of tools for deploying and securing upgradeable smart contracts._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Documentation](https://docs.openzeppelin.com/upgrades)
 
-## Tutorials \{##tutorials}
+## Tutorials \{#tutorials}
 
 - [Upgrading your Smart Contracts | YouTube Tutorial](https://www.youtube.com/watch?v=bdXJmWajZRY) by Patrick Collins
 - [Ethereum Smart Contract Migration Tutorial](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) by Austin Griffith
 - [Using the UUPS proxy pattern to upgrade smart contracts](https://blog.logrocket.com/author/praneshas/) by Pranesh A.S
 - [Web3 Tutorial: Write upgradeable smart contract (proxy) using OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) by fangjun.eth
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [The State of Smart Contract Upgrades](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) by Santiago Palladino
 - [Multiple ways to upgrade a Solidity smart contract](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool blog

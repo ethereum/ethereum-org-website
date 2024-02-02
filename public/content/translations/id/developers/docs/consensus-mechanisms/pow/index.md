@@ -94,7 +94,9 @@ Pada tingkat tinggi, bukti taruhan punya tujuan akhir yang sama seperti bukti ke
 
 ## Selengkapnya tentang pelajar visual? \{#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+{
+	<YouTube id="3EUAcxhuoU4" />
+}
 
 ## Bacaan Lebih Lanjut \{#further-reading}
 

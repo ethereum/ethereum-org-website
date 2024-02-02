@@ -92,11 +92,15 @@ Learn more about [Validium](/developers/docs/scaling/validium/).
 
 ## Învățați mai ușor prin vizualizare? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Rețineți că explicația din videoclip folosește termenul "Nivelul 2" pentru a se referi la toate soluțiile de scalare în off-chain, în timp ce noi diferențiem "Nivelul 2" ca fiind o soluție off-chain care își derivă securitatea prin consensul Rețelei principale de nivel 1._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Referințe suplimentare \{#further-reading}
 

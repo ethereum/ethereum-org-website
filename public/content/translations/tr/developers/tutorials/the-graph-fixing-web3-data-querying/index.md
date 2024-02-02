@@ -89,7 +89,9 @@ Bunun neden optimal olmadığını görebilirsiniz:
 
 ![GraphQL API ile REST API Karşılaştırması](./graphql.jpg)
 
-<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+{
+	<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+}
 
 İki görüntü, GraphQL'in özünü hemen hemen yakalar. Sağdaki sorgu ile tam olarak hangi verileri istediğimizi tanımlayabiliriz, böylece orada her şeyi tek bir istekte alırız ve tam olarak ihtiyacımız olandan fazlasını elde ederiz. Bir GraphQL sunucusu, gerekli tüm verilerin alınmasını yönetir, bu nedenle ön uç tüketici tarafının kullanımı inanılmaz derecede kolaydır. [Bu, ilgileniyorsanız sunucunun bir sorguyu tam olarak nasıl ele aldığının güzel bir açıklamasıdır](https://www.apollographql.com/blog/graphql-explained-5844742f195e/).
 

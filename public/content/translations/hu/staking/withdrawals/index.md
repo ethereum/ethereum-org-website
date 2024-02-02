@@ -37,7 +37,9 @@ A Shanghai/Capella frissítés előtt nem lehetett használni vagy elérni ezt a
 
 ### Hogyan tudok erre felkészülni? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Fontos figyelmeztetések \{#important-notices}
 
@@ -76,7 +78,9 @@ A validátorszámla státusza mondja meg, hogy egy validátor jogosult-e a vissz
 
 Nézze meg az Ethereum letétvisszavonásról szóló magyarázatát a Finematics-tól:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Validátor-ellenőrzés vagy söprés \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Ahogy látható, a feldolgozás lelassul, ahogy egyre több validátor van a há
 
 ## Gyakran ismételt kérdések \{#faq}
 
+{
 <ExpandableCard
 title="Amikor már megadtam egy visszavonási címet, meg lehet az változtatni?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Nem, a visszavonási adatok megadása egyszeri, nem lehet változtatni azokon.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Miért lehet a visszavonási címet csak egyszer megadni?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ A visszavonási cím lehet okosszerződés (melyet a programkódja irányít) va
 
 Egy másik megoldás az adott validátorhoz tartozó visszavonási cím módosítására, ha a felhasználók okosszerződést választanak visszavonási címként, amely tudja kezelni a kulcsok rotálását, mint amilyen a Safe. Azok a felhasználók, akik a saját EOA számlájukra tették a pénzeszközöket, végezhetnek teljes kilépést, visszavonva az összes lekötött eszközt, majd újra letétbe helyezhetik az új hitelesítő adatokat használatával.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Mi van akkor, ha a letétbe helyezést letéti tokenekkel vagy letéti alapokkal végzem"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Ha Ön <a href="/staking/pools/">letéti alapokat</a> vagy letéti tokeneket has
 Általánosságban a felhasználók szabadon visszavehetik a letétbe helyezett ETH-t vagy lecserélhetik a letéti szolgáltatójukat. Ha egy adott letéti alap túl nagy méretű lesz, akkor a pénzeszközöket ki lehet venni belőle és újra le lehet kötni egy <a href="https://rated.network/">kisebb szolgáltatóval</a>. Ha pedig elég ETH gyűlt össze, akkor Ön<a href="/staking/solo/">otthonról is végezhet letétbe helyezést</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="A jutalmak kifizetése (részleges visszavonás) automatikusan történik?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Igen, ha a validátora megadta a visszavonási címet. Ezt egyszer kell megtenni, hogy a visszavonások teljesíthetők legyenek, utána a jutalmak automatikusan átkerülnek néhány naponta a validátorok ellenőrzésénél.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="A teljes visszavonások automatikusan történnek?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Nem, ha a validátor aktív a hálózaton, akkor a teljes visszavonás nem tört
 Amint a validátor végigvitte a kilépési folyamatot, a számlán pedig ott vannak a visszavonási adatok, <em>akkor</em> a maradék egyenleget átteszi a következő <a href="#validator-sweeping">validátor-ellenőrzés</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Visszavonhatok egy egyedi összeget?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ A visszavonásokat úgy tervezték meg, hogy automatikusan minden olyan összege
 
 Nem lehetséges manuálisan kérvényezni bizonyos mennyiségű ETH kivételét.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Validátort üzemeltetek. Hol találok további információkat a visszavonás beállításáról?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Javasoljuk, hogy a validátorműködtetők látogassanak el a <a href="https://l
 Próbálja ki először a beállításait egy teszthálózaton, látogasson el a <a href="https://goerli.launchpad.ethereum.org">Goerli-teszthálózat Staking Launchpad</a> oldalára.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Újra tudom aktiválni a validátoromat a kilépés után azzal, hogy ETH-t kötök le?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Nem. Miután egy validátor kilépett, és a teljes egyenlegét kivette, az adott validátorra letétbe helyezett további összegek automatikusan átutalásra kerülnek a következő validátor-ellenőrzés során a visszavonási címre. Az ETH újbóli letétbe helyezéséhez egy új validátort kell aktiválni.
 </ExpandableCard>
+}
 
 ## További olvasnivaló \{#further-reading}
 

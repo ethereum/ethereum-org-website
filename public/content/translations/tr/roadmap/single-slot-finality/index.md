@@ -33,6 +33,7 @@ Ethereum'un güncel taahhüt mekanızması bu 3 parametreyi şu şekilde dengele
 
 ## SSF'ye gden yollar \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Neden bugün SSF'ye sahip olamayız?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Güncel taahhüt mekanizması her doğrulayıcının bir bloku doğrulamak için işlemden geçirmesi gereken mesajların sayısını azaltmak için çoklu doğralıyıcıların tasdiklerini birleştiriyor. Her doğrulayıcının her dönem (32 yuva) için tasdik imkânı var, ancak her yuvada, sadece bir doğrulayıcı alt kümesi, komite olarak da bilinir, tasdik yapıyorlar. Bunu, birkaç doğrulayıcıyı toplayıcı olarak seçip alt ağlara bölünerek yapıyorlar. Bu toplayıcıların hepsi kendi alt ağlarının içinde diğer doğrulayıcılardan gördükleri imzaları tek bir toplanmış imza şeklinde birleştiriyorlar. En çok bireysel katkıyı toplayan toplayıcı toplanmış imzasını blok önericine gönderir, o da bu imzayı blokun diğer komitelerden de aldığı toplanmış imzaların yanına katar.
@@ -41,6 +42,7 @@ Bu süreç her doğrulayıcının her dönem içerisinde oy kullanabilmesi için
 
 Bu şemada, her doğrulayıcının oy kullanabilmesi sadece kendi tasdiklerini dönem içine yaymasıyla mümkündür. Ancak, mekanizmayı her doğrulayıcının her yuvada tastik edebilmesi için geliştirmenin potansiyel bazı yolları var.
 </ExpandableCard>
+}
 
 Ethereum Taahhüt mekanizması tasarlandığından beri, imza toplama şemasının (BLS) başta düşünüldüğüne göre çok daha ölçeklenebilir olduğu ortaya çıktı, tabi bu süreçte istemcilerin işlem ve onay imzaları da gelişti. Tasdik işleminin büyük sayıda doğrulayıcı tarafından tek yuva içinde yapılmasının da aslında mümkün olduğu ortaya çıktı. Örnek olarak, 1 milyon doğrulayıcının her yuvada 2 kere oy kullandığını ve yuvanın süresinin 16 saniye olarak kararlaştıldığı varsayılırsa, 1 yuvada 1 milyon tastiğin yapılabilmesi için her düğümün saniyede 125.000 toplanmayı onaylaması gerekir. Gerçekte normal bir bilgisayar, bir imza onayı gerçekleştirebilmek için 500 nanosaniyeye ihtiyaç duyar, bu da 125.000 imza onayının ~62,5 ms'de, yani 1 saniye eşiğinden çok daha kısa sürede yapılabileceği anlamına gelir.
 

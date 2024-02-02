@@ -12,7 +12,7 @@ This page explains the rationale behind Ethereum's switch to proof-of-stake from
 
 Ethereum researchers consider proof-of-stake more secure than proof-of-work. However, it has only recently been implemented for the real Ethereum Mainnet and is less time-proven than proof-of-work. The following sections discuss the pros and cons of proof-of-stake's security model compared to proof-of-work.
 
-### Cost to attack \{##cost-to-attack}
+### Cost to attack \{#cost-to-attack}
 
 In proof-of-stake, validators are required to escrow ("stake") at least 32 ETH in a smart contract. Ethereum can destroy staked ether to punish validators that misbehave. To come to consensus, at least 66% of the total staked ether has to vote in favour of a particular set of blocks. Blocks voted for by >=66% of the stake become "finalized", meaning they can't be removed or reorganized.
 
@@ -26,19 +26,19 @@ Other attacks, such as 51% attacks or finality reversion with 66% of the total s
 
 Compare this to proof-of-work. The cost of launching an attack on proof-of-work Ethereum was the cost of consistently owning >50% of the total network hash rate. This amounted to the hardware and running costs of sufficient computing power to outcompete other miners to compute proof-of-work solutions consistently. Ethereum was mostly mined using GPUs rather than ASICs, which kept the cost down (although had Ethereum stayed on proof-of-work, ASIC mining may have become more popular). An adversary would have to purchase a lot of hardware and pay for the electricity to run it to attack a proof-of-work Ethereum network, but the total cost would be less than the cost required to accumulate enough ETH to launch an attack. A 51% attack is ~[20x less](https://youtu.be/1m12zgJ42dI?t=1562) expensive on proof-of-work than proof-of-stake. If the attack was detected and the chain hard-forked to remove their changes, the attacker could repeatedly use the same hardware to attack the new fork.
 
-### Complexity \{##complexity}
+### Complexity \{#complexity}
 
 Proof-of-stake is much more complex than proof-of-work. This could be a point in favour of proof-of-work as it is harder to introduce bugs or unintended effects into simpler protocols accidentally. However, the complexity has been tamed by years of research and development, simulations, and testnet implementations. The proof-of-stake protocol has been independently implemented by five separate teams (on each of the execution and consensus layers) in five programming languages, providing resilience against client bugs.
 
 To safely develop and test the proof-of-stake consensus logic, the Beacon Chain was launched two years before proof-of-stake was implemented on Ethereum Mainnet. The Beacon Chain acted as a sandbox for proof-of-stake testing, as it was a live blockchain implementing the proof-of-stake consensus logic but without touching real Ethereum transactions - effectively just coming to consensus on itself. Once this had been stable and bug-free for a sufficient time, the Beacon Chain was "merged" with Ethereum Mainnet. This all contributed to taming the complexity of proof-of-stake to the point that the risk of unintended consequences or client bugs was very low.
 
-### Attack surface \{##attack-surface}
+### Attack surface \{#attack-surface}
 
 Proof-of-stake is more complex than proof-of-work, which means there are more potential attack vectors to handle. Instead of one peer-to-peer network connecting clients, there are two, each implementing a separate protocol. Having one specific validator pre-selected to propose a block in each slot creates the potential for denial-of-service where large amounts of network traffic knock that specific validator offline.
 
 There are also ways that attackers can carefully time the release of their blocks or attestations so that they are received by a certain proportion of the honest network, influencing them to vote in certain ways. Finally, an attacker can simply accumulate sufficient ETH to stake and dominate the consensus mechanism. Each of these [attack vectors has associated defenses](/developers/docs/consensus-mechanisms/pos/attack-and-defense), but they do not exist to be defended under proof-of-work.
 
-## Decentralization \{##decentralization}
+## Decentralization \{#decentralization}
 
 Proof-of-stake is more decentralized than proof-of-work because mining hardware arms races tend to price out individuals and small organizations. While anyone can technically start mining with modest hardware, their likelihood of receiving any reward is vanishingly small compared to institutional mining operations. With proof-of-stake, the cost of staking and the percentage return on that stake are the same for everyone. It currently costs 32 ETH to run a validator.
 
@@ -46,23 +46,25 @@ On the other hand, the invention of liquid staking derivatives has led to centra
 
 The best option for Ethereum is for validators to be run locally on home computers, maximizing decentralization. This is why Ethereum resists changes that increase the hardware requirements for running a node/validator.
 
-## Sustainability \{##sustainability}
+## Sustainability \{#sustainability}
 
 Proof-of-stake is a carbon-cheap way to secure the blockchain. Under proof-of-work miners compete for the right to mine a block. Miners are more successful when they can perform calculations faster, incentivizing investment in hardware and energy consumption. This was observed for Ethereum before it switched to proof-of-stake. Shortly before the transition to proof-of-stake, Ethereum was consuming approximately 78 TWh/yr - as much as a small country. However, switching to proof-of-stake reduced this energy expenditure by ~99.98%. Proof-of-stake made Ethereum an energy-efficient, low carbon platform.
 
 [More on Ethereum's energy consumption](/energy-consumption)
 
-## Issuance \{##issuance}
+## Issuance \{#issuance}
 
 Proof-of-stake Ethereum can pay for its security by issuing far fewer coins than proof-of-work Ethereum because validators do not have to pay high electricity costs. As a result, ETH can reduce its inflation or even become deflationary when large amounts of ETH are burned. Lower inflation levels mean Ethereum's security is cheaper than it was under proof-of-work.
 
-## More of a visual learner? \{##visual-learner}
+## More of a visual learner? \{#visual-learner}
 
 Watch Justin Drake explain the benefits of proof-of-stake over proof-of-work:
 
-<YouTube id="1m12zgJ42dI" />
+{
+	<YouTube id="1m12zgJ42dI" />
+}
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Vitalik's proof-of-stake design philosophy](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 - [Vitalik's proof-of-stake FAQs](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)

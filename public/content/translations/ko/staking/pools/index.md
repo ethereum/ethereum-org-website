@@ -34,7 +34,9 @@ summaryPoints:
   </Card>
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## 고려 사항 \{#what-to-consider}
 
@@ -44,7 +46,9 @@ summaryPoints:
 
 아래의 속성 지표는 현재 목록에 있는 스테이킹 풀의 대표적인 강점 및 약점을 나타내기 위해 사용되었습니다. 참여할 풀을 선택할 때 이 섹션을 참고하여 이러한 속성이 정의되는 방법을 알아보세요.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## 스테이킹 풀 살펴보기 \{#explore-staking-pools}
 
@@ -54,23 +58,30 @@ summaryPoints:
 참고로, <a href="/developers/docs/nodes-and-clients/client-diversity/">클라이언트 다양성</a>을 고려한 서비스의 선택은 네트워크의 보안을 강화하고 위험성을 최소화할 수 있으므로 매우 중요합니다. 대부분 클라이언트의 사용을 제한하는 것으로 밝혀진 서비스는 <em style={{ textTransform: "uppercase" }}>"다양한 클라이언트"</em>로 표시됩니다.
 </InfoBanner>
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 저희가 놓친 스테이킹 풀을 제안하고 싶으신가요? 이더리움 [제품 나열 정책](/contributing/adding-staking-products/)을 확인하고 정책에 맞는 제품인 경우 검토를 위해 제출해 주세요.
 
 ## 자주 묻는 질문 \{#faq}
 
+{
 <ExpandableCard title="보상은 어떻게 받을 수 있나요?">
 일반적으로 ERC-20 유동성 토큰은 스테이킹된 ETH와 보상의 가치를 나타내는 스테이커에게 발행됩니다. 각 풀마다 조금씩 다른 방식으로 스테이킹 보상을 사용자에게 분배하지만, 보통 앞서 말한 경우가 일반적입니다.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="나의 스테이킹은 언제 출금할 수 있나요?">
 
 현재 이더리움 검증자로부터 자금을 인출할 수 없으며, 이로 인해 합의 계층에 고정된 ETH 보상에 대한 유동성 토큰을 실제로 상환할 수 있는 기능이 제한됩니다.
 
 그 대안으로, ERC-20 유동성 토큰을 사용하는 풀은 사용자가 오픈 마켓에서 이 토큰을 거래할 수 있게 허용하여 스테이킹 포지션을 판매함으로써 스테이킹 계약에서 ETH를 실제로 제거하지 않고도 실질적인 "출금"이 가능합니다.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="거래소에서 스테이킹을 진행하는 것과는 다른 것인가요?">
 이러한 풀 스테이킹 옵션과 중앙화 거래소 간에는 다양한 유사점이 있으며, 적은 양의 ETH를 스테이킹하고 합쳐 검증자 역할을 활성화할 수 있도록 하는 것이 한 예시입니다.
 
@@ -78,6 +89,7 @@ summaryPoints:
 
 일부 풀링 옵션은 지원하는 노드에 관해 다른 풀보다 더욱 탈중앙화되어 있습니다. 네트워크의 양호한 상태와 탈중앙화를 장려하기 위해 스테이커는 항상 노드 운영자에게 권한이 집중되지 않는 탈중앙화 체계를 마련할 수 있는 풀링 서비스를 선택하는 것이 좋습니다.
 </ExpandableCard>
+}
 
 ## 더 읽을거리 \{#further-reading}
 

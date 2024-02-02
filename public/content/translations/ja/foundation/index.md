@@ -7,7 +7,9 @@ lang: ja
 
 # イーサリアム・ファウンデーションについて \{#about-the-ethereum-foundation}
 
-<Logo/>
+{
+	<Logo/>
+}
 
 [イーサリアム・ファウンデーション](http://ethereum.foundation/)(EF)は、 [イーサリアム](/what-is-ethereum/)および関連技術をサポートする非営利団体です。
 

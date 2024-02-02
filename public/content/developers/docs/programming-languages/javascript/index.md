@@ -10,7 +10,7 @@ There are opportunities to write JavaScript (or something close) at [all levels 
 
 ## Interact with Ethereum \{#interact-with-ethereum}
 
-### JavaScript API libraries \{##javascript-api-libraries}
+### JavaScript API libraries \{#javascript-api-libraries}
 
 If you'd like to write JavaScript to query the blockchain, send transactions and more, the most convenient way to do this is using a [JavaScript API library](/developers/docs/apis/javascript/). These APIs allow developers to easily interact with the [nodes in the Ethereum network](/developers/docs/nodes-and-clients/).
 
@@ -22,15 +22,15 @@ You can use these libraries to interact with smart contracts on Ethereum so it's
 - [Ethers.js](https://docs.ethers.io/) _– includes Ethereum wallet implementation and utilities in JavaScript and TypeScript._
 - [viem](https://viem.sh) – a TypeScript Interface for Ethereum that provides low-level stateless primitives for interacting with Ethereum.
 
-### Smart contracts \{##smart-contracts}
+### Smart contracts \{#smart-contracts}
 
 If you're a JavaScript developer and want to write your own smart contract, you may want to get familiar with [Solidity](https://solidity.readthedocs.io). This is the most popular smart contract language and it's syntactically similar to JavaScript, which may make it easier to learn.
 
 More on [smart contracts](/developers/docs/smart-contracts/).
 
-## Understand the protocol \{##understand-the-protocol}
+## Understand the protocol \{#understand-the-protocol}
 
-### The Ethereum virtual machine \{##the-ethereum-virtual-machine}
+### The Ethereum virtual machine \{#the-ethereum-virtual-machine}
 
 There is a JavaScript implementation of [Ethereum's virtual machine](/developers/docs/evm/). It supports the latest fork rules. Fork rules refer to changes made to the EVM as a result of planned upgrades.
 
@@ -49,7 +49,7 @@ If you prefer to read code, this JavaScript could be a great alternative to read
 **Check out the monorepo**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-### Nodes and clients \{##nodes-and-clients}
+### Nodes and clients \{#nodes-and-clients}
 
 An Ethereumjs client is in active development that lets you dig into how Ethereum clients work in a language you understand; JavaScript!
 
@@ -58,7 +58,7 @@ It used to be housed in a standalone [`repository`](https://github.com/ethereumj
 **Check out the client**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
-## Other projects \{##other-projects}
+## Other projects \{#other-projects}
 
 There are also plenty of other things going on in the land of Ethereum JavaScript, including:
 
@@ -68,6 +68,6 @@ There are also plenty of other things going on in the land of Ethereum JavaScrip
 
 Dig into whatever interests you most over at the [EthereumJS repo](https://github.com/ethereumjs)
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

@@ -59,10 +59,13 @@ Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapozna
 
 ## Często zadawane pytania \{#faq}
 
+{
 <ExpandableCard title="Jak mogę zdobyć nagrody?">
 Zazwyczaj tokeny stakingu ERC-20 są wydawane stakerom, które reprezentują wartość zestakowanego przez nich ETH plus nagrody. Należy pamiętać, że różne pule będą dystrybuować nagrody ze stakowania do swoich użytkowników za pomocą nieco innych metod, ale jest to częste.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kiedy mogę wypłacić swoją stawkę?">
 Już teraz! Aktualizacja sieci Shanghai/Capella miała miejsce w kwietniu 2023 r. i wprowadziła wypłaty ze stakingu. Konta walidatorów, które wspierają stakowanie w puli mają teraz możliwość wyjścia i wypłaty ETH na wyznaczony adres wypłaty. Daje to możliwość zdobycia swojej części swojej stawki za bazowe ETH. Sprawdź u swojego dostawcy, aby sprawdzić, w jaki sposób obsługuje tę funkcję.
 
@@ -70,7 +73,9 @@ Alternatywnie, pule wykorzystujące token stakingowy ERC-20 pozwalają użytkown
 
 <ButtonLink to="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Czy różni się to od stakowania z moją giełdą?">
 Jest wiele podobieństw między tymi opcjami stakowania w puli a scentralizowanymi giełdami, takimi jak możliwość stakowania niewielkich ilości ETH i łączenia ich w celu aktywacji walidatorów.
 
@@ -78,6 +83,7 @@ W przeciwieństwie do scentralizowanych giełd wiele innych opcji stakowania w p
 
 Niektóre opcje puli są bardziej zdecentralizowane niż inne, jeśli chodzi o węzły, które je obsługują. Aby promować zdrowie i decentralizację sieci, stakerzy są zawsze zachęcani do wyboru usługi w puli, która umożliwia zdecentralizowany zestaw operatorów węzłów bez zezwoleń.
 </ExpandableCard>
+}
 
 ## Dodatkowo przeczytaj \{#further-reading}
 

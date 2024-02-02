@@ -18,15 +18,17 @@ NFT jsou tokeny, které jsou individuálně jedinečné. Každé NFT má jiné v
 
 Jedinečnost každého NFT umožňuje tokenizaci věcí, jako je umění, sběratelské předměty nebo dokonce nemovitosti, kde jedno konkrétní unikátní NFT představuje jednu konkrétní unikátní položku existující v reálném nebo digitálnm světě. Vlastnictví aktiva je zajištěno Ethereum blockchainem. Nikdo nemůže měnit záznam vlastnictví nebo zkopírovat a následně vložit toto NFT na blockchain.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
-## Internet aktiv \{##internet-of-assets}
+## Internet aktiv \{#internet-of-assets}
 
 NFT a Ethereum řeší některé problémy, které dnes na internetu existují. S postupující digitalizací je třeba replikovat vlastnosti fyzických předmětů, jako je vzácnost, jedinečnost a důkaz vlastnictví způsobem, který není řízen centrální organizací. Díky NFT můžete například vlastnit hudební mp3, která není spojena s konkrétní hudební aplikací jedné společnosti, nebo můžete vlastnit přezdívku na sociálních sítích, kterou můžete prodat nebo vyměnit, ale nemůže vám být libovolně odebrána poskytovatelem platformy.
 
 Zde je porovnání NFT internetu a internetu, tak jak ho známe dnes...
 
-### Porovnání \{##nft-comparison}
+### Porovnání \{#nft-comparison}
 
 | NFT internet                                                                                                                 | Dnešní internet                                                                                                                         |
 | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -37,13 +39,13 @@ Zde je porovnání NFT internetu a internetu, tak jak ho známe dnes...
 | Tvůrci obsahu mohou prodávat svá díla kdekoliv a mají přístup na globální trh.                                               | Tvůrci spoléhají na infrastrukturu a distribuci platforem, které využívají. Často je limitují podmínky používání a geografická omezení. |
 | Tvůrci NFT si mohou ponechat vlastnická práva ke svému dílu a naprogramovat licenční poplatky přímo do NFT kontraktu.        | Platformy, jako například služby streamování hudby, si nechávají většinu zisků z prodeje.                                               |
 
-## Jak fungují NFT? \{##how-nfts-work}
+## Jak fungují NFT? \{#how-nfts-work}
 
 Stejně jako jakýkoli jiný token na Ethereu, i NFT vznikají pomocí smart kontraktu. Smart kontrakt odpovídá jednomu z několika standardů NFT (nejčastěji se jedná o ERC-721 nebo ERC-1155), které definují, jaké funkce tento konkrétní kontrakt má. Tento kontrakt může vytvořit („vymintovat“) NFT a poslat ho konkrétnímu vlastníkovi. Vlastnictví je definováno v kontraktu pomocí mapování konkrétních NFT na konkrétní adresy. Každé NFT má svoje ID a obvykle i metadata, díky kterým je každý token jedinečný.
 
 Když někdo vytvoří nebo vymintuje NFT, ve skutečnosti spouští funkci ve smart kontraktu, která přiřadí konkrétní NFT k jeho adrese. Tyto informace jsou uloženy přímo v paměti kontraktu, který je součástí blockchainu. Tvůrce kontraktu může přidat další podmínky, například omezit celkový počet tokenů v oběhu nebo nastavit licenční poplatek, který se vyplatí tvůrci pokaždé, když je token převeden.
 
-## K čemu se NFT používají? \{##nft-use-cases}
+## K čemu se NFT používají? \{#nft-use-cases}
 
 NFT se používají pro spoustu věcí, mezi které patří:
 
@@ -70,9 +72,11 @@ Tato webová stránka má také alternativní název domény využívající NFT
 
 [Více o ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
-### Zabezpečení NFT \{##nft-security}
+### Zabezpečení NFT \{#nft-security}
 
 Ethereum je zabezpečeno mechanismem proof-of-stake. Systém je navržen tak, aby ekonomicky bránil zlovolným akcím, takže Ethereum je chráněno proti neoprávněným zásahům. To je to, co umožňuje NFT fungovat. Jakmile bude blok obsahující vaši NFT transakci dokončen, stálo by útočníka miliony etheru to změnit. Každý, kdo používá Ethereum software, by byl okamžitě schopen odhalit nepoctivé a nedovolené zásahy týkající se NFT a záškodník by byl ekonomicky penalizován a vykázán.
 
@@ -82,13 +86,17 @@ Bezpečnostní otázky týkající se NFT se nejčastěji týkají podvodů s ph
   Více o bezpečnosti
 </ButtonLink>
 
-## Další informace \{##further-reading}
+## Další informace \{#further-reading}
 
 - [Průvodce NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, leden 2020_
 - [EtherscanNFT tracker](https://etherscan.io/nft-top-contracts)
 - [Standart tokenu ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standart tokenu ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

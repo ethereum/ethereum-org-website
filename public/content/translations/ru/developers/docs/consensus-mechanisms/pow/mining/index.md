@@ -57,7 +57,9 @@ incomplete: true
 
 Посмотрите, как Остин рассказывает о майнинге и блокчейнах с доказательством работы.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## Дополнительные ресурсы \{#further-reading}
 

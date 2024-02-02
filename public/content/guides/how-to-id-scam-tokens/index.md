@@ -15,6 +15,7 @@ There are two ways in which they are likely to deceive you:
 
 To illustrate what scam tokens are, and how to identify them, we are going to look at an example of one: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). This token attempts to look like the legitimate [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
+{
 <ExpandableCard
 title="What is ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum is an organization that develops and manages <a href="/developers/docs/scaling/optimistic-rollups/">optimistic rollups</a>. Initially, Arbitrum was organized as a for-profit company, but then took steps to decentralize. As part of that process, they issued a tradeable <a href="/dao/#token-based-membership">governance token</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Why is the scam token called wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ There is a convention in Ethereum that when an asset is not ERC-20 compliant we 
 It does not make sense to create a wrapped version of an ERC-20 token that is already on Ethereum, but scammers rely on the appearance of legitimacy rather than the underlying reality.
 
 </ExpandableCard>
+}
 
-## How do scam tokens work? \{##how-do-scam-tokens-work}
+## How do scam tokens work? \{#how-do-scam-tokens-work}
 
 The whole point of Ethereum is decentralization. This means that there is no central authority that can confiscate your assets or prevent you from deploying a smart contract. But it also means that scammers can deploy any smart contract they wish.
 
+{
 <ExpandableCard
 title="What are smart contracts?"
 contentPreview=''>
@@ -44,10 +49,11 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Smart contracts</a> are the programs that run on top of the Ethereum blockchain. Every ERC-20 token, for example, is implemented as a smart contract.
 
 </ExpandableCard>
+}
 
 Specifically, Arbitrum deployed a contract that uses the symbol `ARB`. But that doesn't stop other people from also deploying a contract that uses the exact same symbol, or a similar one. Whoever writes the contract gets to set what the contract will do.
 
-## Appearing legitimate \{##appearing-legitimate}
+## Appearing legitimate \{#appearing-legitimate}
 
 There are several tricks that scam token creators do to appear legitimate.
 
@@ -61,13 +67,13 @@ There are several tricks that scam token creators do to appear legitimate.
 
 - **Legitimate transfers**. _Legitimate owners wouldn't pay to transfer a scam token to others, so if there are transfers it must be legitimate, right?_ **Wrong**. `Transfer` events are produced by the ERC-20 contract. A scammer can easily write the contract in such a way it will produce those actions.
 
-## Scammy websites \{##websites}
+## Scammy websites \{#websites}
 
 Scammers can also produce very convincing websites, sometimes even precise clones of authentic sites with identical UIs, but with subtle tricks. Examples might be external links that seem legitimate actually sending the user to an external scam site, or incorrect instructions that guide the user to exposing their keys or sending funds to an attacker's address.
 
 The best practice for avoiding this is to carefully check the URL for the sites you visit, and save addresses for known authentic sites in your bookmarks. Then, you can access the real site through your bookmarks without accidentally making spelling errors or relying on external links.
 
-## How can you protect yourself? \{##protect-yourself}
+## How can you protect yourself? \{#protect-yourself}
 
 1. **Check the contract address**. Legitimate tokens come from legitimate organizations, and you can see the contract addresses on the organization's website. For example, [for `ARB` you can see the legitimate addresses here](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -87,7 +93,7 @@ This is another piece of evidence that shows us `wARB` is not likely to be a leg
 
    ![Scam token in Etherscan](./etherscan-scam.png)
 
-## Conclusion \{##conclusion}
+## Conclusion \{#conclusion}
 
 As long as there is value in the world, there are going to be scammers who attempt to steal it for themselves, and in a decentralized world there is nobody to protect you except for yourself. Hopefully, you remember these points to help tell the legitimate tokens from the scams:
 

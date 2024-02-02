@@ -56,6 +56,7 @@ summaryPoints:
 
 通过帐户抽象，燃料管理也得到了很大改进。 不仅应用程序可以支付用户的燃料费，而且可以使用以太币以外的代币支付燃料费，从而使用户无需为提供交易资金而保持帐户中有以太币余额。 可以这样做，在合约内使用用户的代币兑换以太币，然后使用以太币支付燃料费。
 
+{
 <ExpandableCard title="帐户抽象在燃料方面有何用处？" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
 
 燃料管理是以太坊用户主要面临的问题之一，主要是因为以太币是唯一可用于支付交易费用的资产。 假设你的钱包内有 USDC 余额但没有以太币余额。 由于你无法支付燃料费用，所以无法转移或交换这些 USDC 代币。 你也无法将 USDC 交换成以太币，因为这个操作本身也需要支付燃料费用。 要解决这个问题，你需要从交易所或其他地址向你的帐户发送更多以太币。 通过智能合约钱包，你可以轻松使用 USDC 支付燃料费用，从而解放你的帐户。 你不再需要在所有帐户中保持以太币余额了。
@@ -63,6 +64,7 @@ summaryPoints:
 帐户抽象还可以让去中心化应用程序的开发者以创造性的方式进行燃料管理。 例如，你可以考虑与你最喜爱的去中心化交易所达成协议，每月支付固定费用以获得无限次交易的权限。 去中心化应用程序可能会作为你使用其平台的奖励或入门优惠，为你支付所有燃料费用。 当智能合约钱包在协议层面得到支持时，开发者在燃料管理方面进行创新将更加容易。
 
 </ExpandableCard>
+}
 
 受信任会话同样也有可能改变用户体验，尤其是对于游戏等可能需要在短时间内批准大量小额交易的应用程序而言。 单独批准每笔交易将破坏游戏体验，但永久批准则存在安全风险。 智能合约钱包可以在固定时间内批准不超过特定金额或仅与特定地址进行的特定交易。
 
@@ -74,12 +76,15 @@ summaryPoints:
 
 智能合约钱包目前已存在，但由于以太坊虚拟机不支持，所以实现起来会有一些挑战。 相反，它们采用的方法是将相对复杂的代码封装在标准的以太坊交易中。 以太坊可以改变这一点，允许智能合约发起交易，在以太坊智能合约中处理必要逻辑，而不是链下处理。 将逻辑放入智能合约还增加了以太坊的去中心化程度，因为不再需要由钱包开发者运行的"中继者"将用户签名的消息转换为常规的以太坊交易。
 
+{
 <ExpandableCard title="EIP-2771：使用元交易进行帐户抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 引入了元交易的概念，允许第三方为用户支付燃料费用，而无需对以太坊协议进行更改。 这个想法是将用户签名的交易发送到一个名为“转发者”的合约中。 转发者是一个受信任的实体，在将交易发送到燃料中继器之前验证交易的有效性。 这是链下完成的，无需支付燃料费用。 燃料中继器将交易传递到“接收者”合约，支付所需的燃料费用，使交易能够在以太坊上执行。 如果“接收者”知道并信任“转发者”，则交易将被执行。 该模型使得开发者能够为用户轻松实现无需支付燃料费用的交易。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-4337：不改变以太坊协议进行帐户抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
 EIP-4337 是以去中心化方式使智能合约钱包获得本地支持的第一步，<em>无需对以太坊协议进行更改</em>。 它并未修改共识层以支持智能合约钱包，而是在正常的交易传播协议中单独添加了一个新系统。 这个更高层次的系统是围绕一个叫做 <code>UserOperation</code> 的新对象构建，它将用户的操作与相关的签名打包在一起。 这些 <code>UserOperation</code> 对象随后被广播到一个专用的内存池中，验证者在那里可以将它们收集到一个"捆绑交易"中。 捆绑交易代表了很多一系列单独的 <code>UserOperations</code>，并且可以像普通交易那样被添加到以太坊区块中。验证者会使用类似的最大化费用选择模型来选择捆绑交易。
@@ -89,7 +94,9 @@ EIP-4337 是以去中心化方式使智能合约钱包获得本地支持的第�
 <strong>注意</strong> EIP 4337 入口点合约于 2023 年 3 月 1 日部署到以太坊主网上。 你可以在 <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a> 上查看该合约。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-2938：改变以太坊协议以支持帐户抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> 旨在通过引入新的交易类型 <code>AA_TX_TYPE</code> 来更新以太坊协议，该交易类型包括三个字段：<code>nonce</code>、<code>target</code> 和 <code>data</code>，其中 <code>nonce</code> 是交易计数器，<code>target</code> 是入口点合约地址，<code>data</code> 是以太坊虚拟机字节码。 为了执行这些交易，需要向以太坊虚拟机添加两条新指令（也称为操作码）：<code>NONCE</code> 和 <code>PAYGAS</code>。 <code>NONCE</code> 操作码用于跟踪交易序列，而 <code>PAYGAS</code> 操作码用于计算并从合约余额中提取执行交易所需的燃料费用。 这些新功能使得以太坊能够为智能合约钱包提供本地支持，因为必要的基础设施已经内置在以太坊的协议中。
@@ -97,7 +104,9 @@ EIP-4337 是以去中心化方式使智能合约钱包获得本地支持的第�
 请注意，EIP-2938 目前尚未激活。 目前社区更倾向于 EIP-4337，因为它不需要对协议进行更改。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-3074：升级外部帐户以实现帐户抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> 旨在更新以太坊的外部帐户，允许其将控制权委托给智能合约。 这意味着智能合约逻辑可以批准源自外部帐户的交易。 这可以实现一些功能，如燃料赞助和批量交易。 要使其生效，需要向以太坊虚拟机添加两个新的操作码：<code>AUTH</code> 和 <code>AUTHCALL</code>。 通过 EIP-3074，<em>不需要合约</em>就可以获得智能合约钱包的好处，取而代之的是一种特定类型的无状态、去信任、不可升级的合约（被称为“调用者”），用于处理交易。
@@ -105,6 +114,7 @@ EIP-4337 是以去中心化方式使智能合约钱包获得本地支持的第�
 请注意，EIP-3074 目前尚未激活。 目前社区更倾向于 EIP-4337，因为它不需要对协议进行更改。
 
 </ExpandableCard>
+}
 
 ## 当前进展 \{#current-progress}
 

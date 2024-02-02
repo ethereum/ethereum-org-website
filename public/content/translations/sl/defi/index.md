@@ -20,7 +20,9 @@ DeFi je skupni izraz za finančne produkte in storitve, ki so dostopne vsem, ki 
 
 Obstaja cvetoče kripto gospodarstvo, kjer lahko posojate, si izposojate, kupite/prodate, služite obresti in še več. Argentinci z kripto znanjem so uporabili DeFi, da so se izognili visoki inflaciji. Podjetja so začela zaposlenim "pretekati" plače v realnem času. Posamezniki so najeli in odplačali posojila v višini več milijonov dolarjev, brez da bi se morali kakorkoli identificirati.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## DeFi v primerjavi s tradicionalnimi financami \{#defi-vs-tradfi}
 
@@ -47,7 +49,9 @@ Eden od najboljših načinov za prepoznanje potenciala DeFi je razumevanje probl
 | Trgi so vedno odprti.                                                                                      | Trgi se zaprejo, saj zaposleni potrebujejo počitek.                                                                                                                 |
 | Zgrajeno je na transparentnosti – kdorkoli lahko pogleda podatke o produktu in preveri kako sistem deluje. | Finančne institucije so zaprte knjige: ne morete zaprositi, da bi si ogledali njihovo zgodovino posojil, evidenco njihovega upravljanega premoženja in tako naprej. |
 
+{
 <ButtonLink to="/dapps/?category=finance">Raziščite DeFi aplikacije</ButtonLink>
+}
 
 ## Začelo se je z Bitcoinom... \{#bitcoin}
 
@@ -55,7 +59,9 @@ Bitcoin je bil na mnogo načinov prva DeFi aplikacija. Bitcoin vam omogoča, da 
 
 Ethereum gradi na tem. Kot pri Bitcoinu se pravila ne morejo spremeniti in prav tako je dostop prost za vse. Prav tako pa naredi ta digitalni denar programljiv z uporabo [pametnih pogodb](/glossary#smart-contract), da greste lahko še naprej od shranjevanja in pošiljanja vrednosti.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Programirljiv denar \{#programmable-money}
 
@@ -82,13 +88,17 @@ Obstaja decentralizirana alternativa za večino finančnih storitev. Toda Ethere
 - [Kupite zavarovanje](#insurance)
 - [Upravljajte svoj portfelj](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Hitro pošiljajte denar po vsem svetu \{#send-money}
 
 Ethereum kot blokovna veriga je zasnovan za pošiljanje transakcij na varen in globalen način. Kot Bitcoin tudi Ethereum naredi pošiljanje denarja po vsem svetu enostavno kot je poslati elektronsko pošto. Le vnesite prejemnikovo [ENS ime](/nft/#nft-domains) (recimo bob.eth) ali naslov njihovega računa iz vaše denarnice in plačilo bodo prejeli neposredno v minutah (običajno). Za pošiljanje ali prejemanje plačil boste potrebovali le [denarnico](/wallets/).
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si plačilne dappe</ButtonLink>
+}
 
 #### Ustvarjajte denarne tokove po vsem svetu... \{#stream-money}
 
@@ -96,7 +106,9 @@ Denarne tokove lahko ustvarjate tudi prek Ethereuma. To vam omogoča, da nekomu 
 
 V primeru, da ne želite pošiljati ali pretakati [ETH](/eth/), zaradi spreminjanje njegove vrednosti, obstajajo alternativne valute na Ethereumu: stabilni kovanci.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Dostopajte do stabilnih kovancev \{#stablecoins}
 
@@ -104,9 +116,13 @@ Volatilnost kriptovalut za veliko finančnih produktov in splošne potrošnje pr
 
 Kovanca kot sta Dai ali USDC imata vrednost, ki ostaja znotraj nekaj centov vrednosti dolarja. To jih dela popolne za zaslužek ali nakupovanje. Mnogi v Latinski Ameriki so uporabili stabilne kovance kot način za zaščito prihrankov v časih visoke negotovosti valut izdanih s strani njihovih držav.
 
+{
 <ButtonLink to="/stablecoins/">Več o stabilnih kovancih</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Izposojanje \{#lending}
 
@@ -115,7 +131,9 @@ Izposoja denarja od decentraliziranih ponudnikov je na voljo v dveh glavnih razl
 - Vrstnik-vrstniku, kar pomeni, da si bo posojilojemalec sredstva sposodil neposredno od določenega posojilodajalca.
 - Skupinsko, kjer posojilodajalci priskrbijo sredstva (likvidnost) v bazen iz katerega si posojilojemalci lahko izposojajo.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si dappe za izposojanje</ButtonLink>
+}
 
 Pri uporabi decentraliziranih posojilodajalcev obstajajo številne prednosti...
 
@@ -160,7 +178,9 @@ Da bi zgoraj opisano transakcijo lahko izvedli v svetu tradicionalnih financ, bi
 
 [Več o flash posojilih](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Začnite varčevati z kripto \{#saving}
 
@@ -173,7 +193,9 @@ S posojanjem lahko služite obresti na vaš kripto in opazujete, kako vaša sred
 - Vašemu aDai bo vrednost naraščala na podlagi obrestne mere in vi lahko opazujete, kako se povečuje stanje v denarnici. Odvisno od letne mere donosa (APR), bo vaše stanje v denarnici že po nekaj dneh ali celo urah prikazovalo nekaj takega 100.1234!
 - Kadarkoli lahko dvignete količino navadnega Dai, ki je enaka količini vašega aDai stanja.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si posojilne dappe</ButtonLink>
+}
 
 #### Loterije brez izgube \{#no-loss-lotteries}
 
@@ -187,9 +209,13 @@ Loterije brez izgube, kot je PoolTogether, so zabaven in inovativen način za va
 
 Nagradni bazen je ustvarjen iz vseh obresti, ki so bile pridobljene s posojanjem pologov za karte, kot je opisano v primeru posojanja zgoraj.
 
+{
 <ButtonLink isSecondary to="https://pooltogether.com">Preizkusite PoolTogether</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Borzni žetoni \{#swaps}
 
@@ -197,9 +223,13 @@ Na Ethereumu obstaja na tisoče žetonov. Decentralizirane borze (DEXs) vam omog
 
 Na primer, če želite uporabljati loterijo brez izgube PoolTogether (opisano zgoraj), boste potrebovali žeton kot je Dai ali USDC. Te DEXi vam omogočajo, da menjate vaš ETH za tiste žetone in nazaj v ETH, ko ste končali.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si borze žetonov</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Napredno trgovanje \{#trading}
 
@@ -207,9 +237,13 @@ Obstajajo bolj napredne možnosti za trgovalce, ki želijo malce več kontrole. 
 
 Ko uporabljate centralizirane borze, morate položiti svoja sredstva preden začnete z trgovanjem in jim zaupati da bodo zanje dobro skrbeli. Med tem, ko so vaša sredstva položena, so izpostavljena tveganju, saj so centralizirane borze privlačna tarča za hekerje.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si trgovalne dappe</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Povečajte svoj portfelj \{#investing}
 
@@ -217,9 +251,13 @@ Na Ethereumu obstajajo produkti za upravljanje sredstev, ki vam bodo poskušali 
 
 Dober primer je [DeFi Pulse indeksni sklad (DPI)](https://defipulse.com/blog/defi-pulse-index/). To je sklad, ki se samodejno rebalansira, da vašemu portfelju zagotovi, da vedno vključuje [najvišje uvrščene DeFi žetone po tržni kapitalizaciji](https://www.coingecko.com/en/defi). Nikoli vam ni potrebno skrbeti za podrobnosti in kadarkoli lahko sredstva dvignete iz sklada.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si naložbene dappe</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Financirajte svoje ideje \{#crowdfunding}
 
@@ -248,7 +286,9 @@ To pomeni, da projekt A s 100 donacijami po 1 dolar, lahko na koncu prejme več 
 
 [Več o kvadratičnem financiranju](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Zavarovanje \{#insurance}
 
@@ -256,17 +296,25 @@ Decentralizirano zavarovanje cilja na pocenitev zavarovanja, hitrejša izplačil
 
 Ethereum produkti kot ostala programska oprema lahko trpi zaradi napak in izkoriščanja teh. Tako da je trenutno veliko zavarovalnih produktov v tem prostoru osredotočenih na zaščito uporabnikov pred izgubo sredstev. Čeprav obstajajo projekti, ki začenjajo z razvojem zavarovanja za karkoli, kar se nam lahko zgodi v življenju. Dober primer tega je Etheriscovo zavarovanje pridelkov, ki cilja na [zaščito malih kmetov v Keniji pred sušo in poplavami](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralizirano zavarovanje lahko zagotovi cenejše kritje za kmete, ki si tradicionalnega zavarovanja pogosto ne morejo privoščiti.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si zavarovalniške dappe</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Agregatorji in upravljalci portfeljev \{#aggregators}
 
 Ob tolikšnem dogajanju boste potrebovali način, da sledite vsem vašim naložbam, posojilom in menjavam. Obstaja množica produktov, ki vam omogoča koordinacijo vse vaše DeFi aktivnosti iz enega mesta. To je lepota odprte arhitekture DeFi. Ekipe lahko razvijejo vmesnike, v katerih ne le vidite vašega stanja v vseh produktih, temveč tudi uporabljate njihove funkcije. To bi lahko bilo uporabno pri vašem raziskovanju DeFi.
 
+{
 <ButtonLink to="/dapps/?category=finance">Oglejte si portfeljne dappe</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kako deluje DeFi? \{#how-defi-works}
 
@@ -300,7 +348,9 @@ DeFi si lahko predstavljate v plasteh:
 
 DeFi je odprtokodno gibanje. DeFi protokoli in aplikacije so vam vse odprte za pregled, oddvojitev in inovacije. Zaradi tega kupa plasti (vse si delijo isto osnovno blokovno verigo in sredstva) se lahko protokoli mešajo in ujemajo z namenom odklepanja edinstvene kombinacije priložnosti.
 
+{
 <ButtonLink to="/developers/docs/dapps/">Več o razvoju dappov</ButtonLink>
+}
 
 ## Dodatno branje \{#futher-reading}
 

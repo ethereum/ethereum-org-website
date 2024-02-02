@@ -9,7 +9,9 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 
 _Wenn Ethereum keinen Eigentümer hat, wie werden dann Entscheidungen über frühere und zukünftige Änderungen an Ethereum getroffen? Mit Ethereum-Governance wird der Prozess bezeichnet, der solche Entscheidungen ermöglicht._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Was ist Governance? \{#what-is-governance}
 
@@ -37,7 +39,9 @@ _Governance auf Protokollebene erfolgt bei Ethereum off-chain, doch bei Anwendun
   Mehr zu DAOs
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Wer sind die Beteiligten? \{#who-is-involved}
 
@@ -53,7 +57,9 @@ Es gibt verschiedene Interessensvertreter in der [Ethereum-Community](/community
 
 _Hinweis: Jede Person kann Teil von mehreren dieser Gruppen sein (z. B. ein Protokollentwickler kann sich für einen EIP einsetzen und einen Validator für die Beacon Chain ausführen und zudem auch DeFi-Anwendungen nutzen). Doch um das Konzept wirklich zu verstehen, sollte zwischen den einzelnen Gruppen unterschieden werden._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Was ist ein EIP? \{#what-is-an-eip}
 
@@ -63,7 +69,9 @@ Ein wichtiger Prozess, der für die Ethereum-Governance zum Tragen kommt, ist di
   Mehr zu EIPs
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Der formale Prozess \{#formal-process}
 
@@ -107,7 +115,9 @@ Von EIP-Champions wird erwartet, dass sie Feedback von allen relevanten Interess
 
 Abgesehen von der Sicherheit des Ethereum-Netzwerks haben die Protokollentwickler in der Vergangenheit großen Wert darauf gelegt, was die Entwickler von Anwendungen/Tools und die Anwendungsnutzer zu schätzen wissen, da ihre Verwendung und Entwicklung auf Grundlage von Ethereum das Ökosystem für andere Interessengruppen attraktiv macht. Zudem müssen EIPs in allen Kundenimplementierungen umgesetzt werden, die von verschiedenen Teams verwaltet werden. Teil des Prozesses ist es meist, mehrere Teams von Protokollentwicklern davon zu überzeugen, dass eine bestimmte Änderung sinnvoll ist und den Endbenutzern hilft oder ein Sicherheitsproblem behebt.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Umgang mit Unstimmigkeiten \{#disagreements}
 
@@ -135,9 +145,13 @@ Heute hat die Ethereum-Community eine Politik der Nichteinmischung in Fällen vo
 
 Mehr zum DAO-Hack:
 
-<YouTube id="rNeLuBOVe8A" />
+{
+	<YouTube id="rNeLuBOVe8A" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Forking einsetzen \{#forking-utility}
 
@@ -145,7 +159,9 @@ Der Ethereum-/Ethereum Classic-Fork ist ein hervorragendes Beispiel für einen g
 
 Die Möglichkeit, sich angesichts erheblicher politischer, philosophischer oder wirtschaftlicher Differenzen zu teilen, spielt eine große Rolle für den Erfolg der Ethereum-Governance. Ohne die Möglichkeit einer Abspaltung wäre die Alternative ein ständiger Streit, eine erzwungene zögerliche Beteiligung derjenigen, die schließlich Ethereum Classic gründeten, und eine zunehmend abweichende Vorstellung davon, wie der Erfolg von Ethereum aussieht.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Beacon Chain governance \{#beacon-chain}
 
@@ -159,7 +175,9 @@ Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausfüh
   Mehr zum Zusammenschluss
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Wie kann ich mich einbringen? \{#get-involved}
 

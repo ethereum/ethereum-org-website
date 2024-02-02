@@ -220,13 +220,17 @@ Güncel olarak, doğruluk kanıtları bloktan bloğa temelinde oluşturur ve do�
 
 Finematics'in ZK-toplaması hakkındaki açıklamasını izleyin:
 
-<YouTube id="7pWxCklcNsU" start="406" />
+{
+	<YouTube id="7pWxCklcNsU" start="406" />
+}
 
 ### ZK toplamalarını kullanın \{#use-zk-rollups}
 
 Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamaları uygulaması mevcuttur:
 
-<RollupProductDevDoc rollupType="zk" />
+{
+	<RollupProductDevDoc rollupType="zk" />
+}
 
 ## zkEVM üzerinde kimler çalışıyor? \{#zkevm-projects}
 

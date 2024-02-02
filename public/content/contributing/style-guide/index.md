@@ -37,6 +37,7 @@ Anyone! Ethereum.org is entirely open source, and many of its best pages are sub
 
 Loosely we can categorize the site audiences as:
 
+{
 <ExpandableCard
 title="Individuals"
 contentPreview='App users, investors, enthusiasts, or anyone who is "new to Ethereum".'>
@@ -50,7 +51,9 @@ contentPreview='App users, investors, enthusiasts, or anyone who is "new to Ethe
 - "I’m excited about Ethereum and want to get involved, but I don’t know what to do next"
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Developers"
 contentPreview="Developers or others who want technical information about Ethereum.">
@@ -63,7 +66,9 @@ contentPreview="Developers or others who want technical information about Ethere
 - "I’ve started work on an Ethereum project, and want to try out a few smart contract testing libraries"
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Enterprises"
 contentPreview="People, businesses, and other organizations who want to understand Ethereum's value in an enterprise setting.">
@@ -76,6 +81,7 @@ contentPreview="People, businesses, and other organizations who want to understa
 - "I want to know the current status of Ethereum - how long has it been in production, how much usage it has, what's the direction of new development - to decide if I am confident to build my project on top of it"
 
 </ExpandableCard>
+}
 
 ## Best practices \{#best-practices}
 

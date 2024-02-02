@@ -40,7 +40,9 @@ Leggi di più sulla [missione e visione](/contributing/translation-program/missi
 - [**54** lingue presenti sul sito](/languages/)
 - [**3 milioni** di parole tradotte nel 2022](/contributing/translation-program/acknowledgements/)
 
-<TranslationChartImage />
+{
+	<TranslationChartImage />
+}
 
 ### Riconoscimenti \{#acknowledgements}
 

@@ -48,7 +48,9 @@ Review the details of the transaction. Check the exchange rate and any other fee
 You can view the progress of the transaction on any blockchain explorer. This process should not take longer than 10 minutes.
 
 You will automatically receive the swapped tokens in your wallet once the transaction is processed.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Want to learn more?</div>

@@ -56,6 +56,7 @@ Hesap soyutlama, protokol düzeyinde akıllı sözleşme cüzdanları için dest
 
 Gaz ücretlerinin yönetimi de hesap soyutlama ile daha çok iyileştirildi. Uygulamalar kullanıcılarının gaz ücretlerini ödemeyi teklif etmekle kalmaz, aynı zamanda gaz ücretleri ETH dışındaki token'larla da ödenebilir. Bu da kullanıcıların yapacağı işlemler için bir ETH bakiyesi tutma zorunluluğunu ortadan kaldırmaktadır. Bu, kullanıcının token'larını sözleşme içerisinde ETH ile değiştirerek çalışır ve ardından ETH'yi gaz için ödemek üzere kullanır.
 
+{
 <ExpandableCard title="Hesap soyutlama gaz konusunda nasıl yardımcı olabilir?" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
 
 Gaz yönetimi, Ethereum kullanıcıları için birincil zorluklardan biridir çünkü ETH, işlemler için ödeme yapmak üzere kullanılabilecek tek varlıktır. USDC bakiyesi olan, ancak ETH'si olmayan bir cüzdanınız olduğunu hayal edin. Gaz ücretini ödeyemediğiniz için bu USDC token'larını hareket ettiremez veya takas edemezsiniz. USDC'yi ETH ile de değiştiremezsiniz çünkü bu kendi içinde bir gaz ücretine mal olacaktır. Sorunu çözmek için hesabınıza bir borsadan veya başka bir adresten daha fazla ETH göndermeniz gerekir. Akıllı sözleşme cüzdanlarıyla birlikte, hesabınızı gaz ücreti konusunda serbest bırakarak bunun yerine USDC ile gaz ücretini ödeyebilirsiniz. Artık tüm hesaplarınızda ETH bakiyesi bulundurmanıza gerek yok.
@@ -63,6 +64,7 @@ Gaz yönetimi, Ethereum kullanıcıları için birincil zorluklardan biridir ç�
 Hesap soyutlama, merkeziyetsiz uygulama geliştiricilerinin gaz yönetimi konusunda yaratıcı olmalarına da olanak tanımaktadır. Örneğin, en sevdiğiniz DEX'e sınırsız işlem için her ay sabit bir ücret ödemeye başlayabilirsiniz. Merkeziyetsiz uygulamalar, platformlarını kullandığınız için bir ödül olarak veya bir katılım teklifi olarak sizin adınıza tüm gaz ücretlerinizi ödemeyi teklif edebilir. Akıllı sözleşme cüzdanları protokol düzeyinde desteklenmeye başlandığı zaman, geliştiricilerin gaz konusunda yenilik yapması çok daha kolay olacaktır.
 
 </ExpandableCard>
+}
 
 Güvenilir oturumlar, özellikle kısa süre içerisinde çok sayıda küçük işlemin onaylanması gerekebilecek oyun gibi uygulamalar için kullanıcı deneyimleri açısından da potansiyel olarak dönüştürücüdür. Her işlemi tek tek onaylamak oyun deneyimini bozar ve sürekli onay vermek güvenli değildir. Bir akıllı sözleşme cüzdanı; belirli bir süre için, belirli bir değere kadar veya sadece belirli adreslere bazı işlemleri onaylayabilir.
 
@@ -74,12 +76,15 @@ Bunlar, hesap soyutlama sayesinde kullanıcı deneyimlerinin nasıl ölçeklendi
 
 Akıllı sözleşme cüzdanları bugün mevcut durumdadır. Ancak EVM onları desteklemediği için uygulanması bir hayli zordur. Bunun yerine, standart Ethereum işlemlerinin etrafına nispeten daha karmaşık kodlar eklemeye güvenmektedirler. Ethereum, akıllı sözleşmelerin işlem başlatmasına izin vererek, zincir dışı yerine Ethereum akıllı sözleşmelerinde gerekli mantığı ele alarak bunu değiştirebilir. Akıllı sözleşmelere bir "mantık" eklemek, cüzdan geliştiricileri tarafından yönetilen "aktarıcıların" kullanıcı tarafından imzalanan mesajları normal Ethereum işlemlerine çevirme ihtiyacını ortadan kaldırdığı için Ethereum'un merkeziyetsizliğini de arttırmaktadır.
 
+{
 <ExpandableCard title="EIP-2771: meta işlemleri kullanarak hesap soyutlama" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771, Ethereum protokolünde değişiklik yapmadan üçüncü tarafların bir kullanıcının gaz ücretini ödemesine izin veren "meta işlemler" kavramını tanıtmaktadır. Fikir, bir kullanıcı tarafından imzalanan işlemlerin bir "Yönlendirici" sözleşmesine gönderilmesi üzerine kuruludur. Yönlendirici, işlemlerin geçerli olduğunu doğrulayan ve bunları bir gaz rölesine göndermeden önce denetleyen güvenilir bir varlıktır. Bu, gaz ödeme ihtiyacını ortadan kaldırarak zincir dışı olarak gerçekleştirilir. Gaz rölesi, işlemi Ethereum'da çalıştırılabilir kılmak için gerekli gazı ödeyerek bir "Alıcı" sözleşmesine iletir. "Yönlendirici", "Alıcı" tarafından biliniyor ve güveniliyorsa işlem gerçekleştirilir. Bu model, geliştiricilere kullanıcılar için gazsız işlemleri uygulamayı kolaylaştırır.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-4337: Ethereum protokolünü değiştirmeden hesap soyutlama" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
 EIP-4337, yerli akıllı sözleşme cüzdanını merkeziyetsiz bir şekilde desteklemenin ilk adımıdır<em> ve Ethereum Protokol'ünde herhangi bir değişikliğe ihtiyaç duymaz</em>. Fikir Birliği katmanını akıllı sözleşmeyi desteklemek için modifiye etmek yerine, normal işlem dedikodu protokolüne ayrıştırılmış yeni bir sistem eklenir. Bu daha yüksek seviyeli sistem <code>UserOperation</code> adındaki yeni bir nesne etrafında kurulur ve aksiyonlar için alakalı imzalara sahip kullanıcıdan komutlar alır. Bu <code>UserOperation</code> nesneleri, sonra paket işleminde toplanabilecek şekilde kararlaştırılmış bir bellek havuzu üzerinden yorumlanır. Bu paket işlemi bir çok <code>UserOperations</code> sekansını temsil eder ve Ethereum bloklarına normal bir işlemmiş gibi dahil edilebilirler ve doğrulayıcılar tarafından benzer ücret maksimize etme modeliyle seçilirler.
@@ -89,7 +94,9 @@ Cüzdanların çalışma şekli de EIP-4337'de değişir. Her cüzdanın yeniden
 EIP-4337'nin giriş noktası sözleşmesinin Ethereum Ana Ağı'nda ilk kez 1 Mart 2023'de dağıtıldığını <strong>aklınızda bulundurun</strong>. Sözleşmeyi <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan'de</a> görüntüleyebilirsiniz.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-2938: Ethereum Protokolünü hesap soyutlamayı desteklemek için değiştirmek" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a>, Ehereum protokolünü 3 farklı alana sahip yeni bir işlem tipiyle<code>AA_TX_TYPE</code>, güncellemeyi düşünüyor: <code>nonce</code>, <code>target</code> ve <code>data</code>, sıralamasında <code>nonce</code> bir işlem sayıcı,<code>target</code> sözleşme adresinin giriş bölgesi ve <code>data</code> ise Ethereum Sanal Makinesi'nin bayt kodudur. Bu işlemleri uygulamak için, Ethereum Sanal Makinesi'ne iki yeni talimat (işlem kodu olarak da bilinir) eklenmelidir: <code>NONCE</code> ve <code>PAYGAS</code>. <code>NONCE</code> işlem kodu islem sekansını takip eder ve <code>PAYGAS</code> ise para çekme işlemlerini ve işlemin sözleşme dengesi&#39; ile uygulanabilmesi için gerekli gaz ücretlerini hesaplar. Bu yeni özellikler Ethereum'un akıllı sözleşme cüzdanlarını yerel olarak, altyapı zaten Ethereum&#39;'un protokolünde oluşturuldu, desteklemesine izin verir.
@@ -97,7 +104,9 @@ EIP-4337'nin giriş noktası sözleşmesinin Ethereum Ana Ağı'nda ilk kez 1 Ma
 EIP-2938'in güncel olarak aktif olmadığını göz önünde bulundurun. Topluluk şu anda herhangi bir protokol değişikliğine gerek duymadığı için EIP-4337'ye sıcak bakıyor.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-3074: Harici olarak sahiplenilmiş hesapları hesap soyutlama için yükseltmek" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> ise Ethereum&#39;'u harici olarak sahiplenilmiş hesapların akıllı sözleşmeleri temsilen kontrol edebilmesine izni vererek güncellemeyi hedefliyor. Bu, anlamı akıllı sözleşme mantığının EOA kökenli işlemleri kabul edebileceği anlamına geliyor. Bu, gaz sponsorluğu ya da toplu işlemler gibi özelliklere olanak verir. Bunun çalışabilmesi için, Ethereum Sanal Makinesi'ne iki yeni işlem eklenmesi gerekiyor:<code>AUTH</code> ve <code>AUTHCALL</code>. EIP-3074 ile birlikte akıllı sözleşme cüzdanlarının bazı avantajları ulaşılabilir hale geliyor,<em> hem de sözleşmeye ihtiyaç duymadan</em>, bunun yerine ifadesiz, güvenilmez ve geliştirilemez bir sözleşme, "çağırıcı (invoker)" olarak da bilinir, işlemleri hallediyor.
@@ -105,6 +114,7 @@ EIP-2938'in güncel olarak aktif olmadığını göz önünde bulundurun. Toplul
 EIP-3074'in güncel olarak aktif olmadığını göz önünde bulundurun. Topluluk şu anda herhangi bir protokol değişikliğine gerek duymadığı için EIP-4337'ye sıcak bakıyor.
 
 </ExpandableCard>
+}
 
 ## Güncel ilerleme \{#current-progress}
 

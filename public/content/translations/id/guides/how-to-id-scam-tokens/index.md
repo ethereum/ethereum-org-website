@@ -15,6 +15,7 @@ Ada dua cara di mana mereka kemungkinan akan menipu Anda:
 
 Untuk mengilustrasikan apa itu token palsu, dan bagaimana mengidentifikasinya, kita akan melihat contoh salah satunya: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Token ini berusaha terlihat seperti token sah [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
+{
 <ExpandableCard
 title="Apa itu ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum adalah organisasi yang mengembangkan dan mengelola <a href="/developers/docs/scaling/optimistic-rollups/">rollup optimistis</a>. Pada awalnya, Arbitrum diorganisir sebagai perusahaan berorientasi keuntungan, namun kemudian mengambil langkah-langkah untuk mendesentralisasikan. Sebagai bagian dari proses tersebut, mereka menerbitkan <a href="/dao/#token-based-membership">token tata kelola</a> yang dapat diperdagangkan.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Mengapa token palsu disebut wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Ada konvensi dalam Ethereum bahwa ketika suatu aset tidak mematuhi standar ERC-2
 Tidak masuk akal untuk membuat versi wrapped dari token ERC-20 yang sudah ada di Ethereum, tetapi penipu mengandalkan tampilan keabsahan daripada realitas yang mendasarinya.
 
 </ExpandableCard>
+}
 
 ## Bagaimana cara kerja token palsu? \{#how-do-scam-tokens-work}
 
 Inti dari Ethereum adalah desentralisasi. Ini berarti tidak ada otoritas pusat yang dapat menyita aset Anda atau mencegah Anda melakukan penyebaran kontrak pintar. Namun, ini juga berarti bahwa penipu dapat menyebarluaskan kontrak pintar apa pun yang mereka inginkan.
 
+{
 <ExpandableCard
 title="Apa itu kontrak pintar?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Kontrak pintar</a> adalah program-program yang berjalan di atas rantai blok Ethereum. Setiap token ERC-20, misalnya, diimplementasikan sebagai kontrak pintar.
 
 </ExpandableCard>
+}
 
 Secara khusus, Arbitrum telah menyebarkan kontrak yang menggunakan simbol `ARB`. Namun, hal itu tidak menghentikan orang lain untuk juga menyebarkan kontrak yang menggunakan simbol yang sama persis, atau serupa. Siapa pun yang menulis kontrak memiliki kuasa untuk menentukan apa yang akan dilakukan oleh kontrak tersebut.
 

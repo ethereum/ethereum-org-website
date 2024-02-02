@@ -18,7 +18,9 @@ summaryPoint4: A beolvadás nagyjából 99,95%-kal csökkentette az Ethereum ene
 
 A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/history/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 A [Beacon lánc](/roadmap/beacon-chain/) és a [fő hálózat](/glossary/#mainnet) eredetileg külön működött. Az Ethereum-főhálózat biztonságát – az összes számlájával, egyenlegével, okosszerződésével és blokkláncállapotával együtt – továbbra is a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) konszenzus szolgáltatta, még akkor is amikor a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) mechanizmust használó Beacon lánc vele párhuzamosan futott. A beolvadás volt az esemény, amikor ez a két rendszer végre egyesült, és a proof-of-work helyét végleg átvette a proof-of-stake.
 
@@ -52,6 +54,7 @@ Annak ellenére, hogy lecserélte a proof-of-work mechanizmust, az Ethereum öss
 
 ### Csomópont-operátorok és dapp-fejlesztők \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Letéticsomópont-operátorok és letétszolgáltatók"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -67,7 +70,9 @@ Ha a fenti felsorolás első két elemét nem teljesíti, akkor a csomópontja �
 
 Ha nem állít be egy „díj címzettje” címet, attól még a validátor a szokásos módon tud működni, de Ön lemarad az el nem égetett díjtételekről/MEV-ről, amelyeket egyébként megkapott volna a validátora által előterjesztett blokkokkal.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Nem validáló csomópont-operátorok és infrastruktúra-szolgáltatók"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -85,7 +90,9 @@ A fő intézkedési elemekhez tartoznak az alábbiak:
 Ha a fenti felsorolás elemeit nem teljesíti, akkor a csomópontja „offline” állapotúnak tűnik majd, amíg mindkét réteg szinkronizálása és hitelesítése be nem fejeződik.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dapp- és okosszerződés-fejlesztők"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -104,6 +111,7 @@ A Beolvadás megváltoztatta a konszenzust, amely a következőkre is hatott:<
 További információért nézze meg Tim Beiko blog postját: <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Hogyan érinti a Beolvadás az Ethereum alkalmazási rétegét</a>.
 
 </ExpandableCard>
+}
 
 ## A beolvadás és az energiafogyasztás \{#merge-and-energy}
 
@@ -115,6 +123,7 @@ A beolvadás a további méretezhetőségi fejlesztések lehetőségét is megte
 
 ## Téveszmék a beolvadásról \{#misconceptions}
 
+{
 <ExpandableCard
 title="Tévhit: „Egy csomópont futtatásához 32 ETH kell.”"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -132,7 +141,9 @@ Az Ethereum-hálózat decentralizációjának fenntartásához <em>rendkívül l
 <a href="/run-a-node/">Bővebben a saját csomópont működtetéséről</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Tévhit: „A beolvadás nem tudta csökkenteni a gasdíjakat.”"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -142,7 +153,9 @@ A gasdíjak a hálózati teljesítmény iránti kereslet és a hálózati kapaci
 A <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">összevonttranzakció-centrikus fejlesztési tervvel</a> az erőfeszítések oda irányultak, hogy a felhasználói aktivitást az <a href="/layer-2/">L2-n</a> tegyék skálázhatóvá, miközben lehetővé teszik, hogy az L1 főhálózat egy biztonságos, decentralizált réteg, ami optimális az összevont tranzakciós adatok tárolására, így azok használata exponenciálisan olcsóbb lehet. Ennek eléréséhez az áttérés a proof-of-stake mechanizmusra létfontosságú előfeltétel volt. <a href="/developers/docs/gas/">Bővebben a gázról és a díjakról.</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Tévhit: „A tranzakciók jelentős mértékben gyorsultak a beolvadással.”"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -153,7 +166,9 @@ Korábban, a proof-of-work konszenzus ideje alatt a cél az volt, hogy körülbe
 A proof-of-stake magával hozta a tranzakció véglegességének koncepcióját, amely korábban nem létezett. A proof-of-work rendszerében egy blokk visszafordításának nehézsége az adott tranzakció után kibányászott minden egyes blokkal exponenciálisan növekszik, de valójában sosem válik lehetetlenné. A proof-of-stake mechanizmusban a blokkok úgynevezett korszakokba (epoch) rendeződnek (6,4 perces időintervallumonként, amelyek 32 blokklehetőséget tartalmaznak), amelyekről a validátorok szavaznak. Amikor egy korszak lezárul, a validátorok szavaznak arról, hogy adott korszakot „igazolt” állapotúnak tekintsék. Ha a validátorok megegyeznek, hogy a korszakot igazolt állapotúnak tekintsék, akkor az a következő korszakban végleges állapotba kerül. A véglegesített tranzakciók visszafordítása gazdaságtalan lenne, mivel ehhez a teljes letétbe helyezett ETH-állomány több mint egyharmadát meg kellene szerezni és el kellene égetni.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Tévhit: „A beolvadással lehetővé vált a letétbe helyezett összegek lehívása.”"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -165,7 +180,9 @@ A Shanghai/Capella hálózatfrissítés óta a letétesek egy <em>visszavonási 
 <a href="/staking/withdrawals/">Bővebben a letétek visszavonásáról</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Tévhit: „A Beolvadás után, amikor a visszavonások lehetővé váltak, a letétesek egyszerre ki tudtak lépni.”"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -177,6 +194,7 @@ Egy fontos kikötés, hogy a validátor kilépése egy rátához van kötve, és
 
 Az APR értéke szándékosan dinamikus, segítségével a letétesek által alkotott piac megállapíthatja azt a kifizetési szintet, amely mellett hajlandók gondoskodni a hálózat biztonságáról. Ha ez a szint túl alacsony, akkor a validátorok a protokoll által korlátozott tempóban kilépnek. Ez fokozatosan megemeli az APR értékét a maradók számára, ami új vagy visszatérő letéteseket eredményez majd.
 </ExpandableCard>
+}
 
 ## Mi történt az „Eth2”-vel? \{#eth2}
 
@@ -223,6 +241,10 @@ A szilánkolással kapcsolatos tervek gyorsan fejlődnek, ám a 2. rétegű tech
 
 ## További olvasnivaló \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

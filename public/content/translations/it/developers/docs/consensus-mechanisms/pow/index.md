@@ -91,7 +91,9 @@ Ad alto livello, il Proof of Stake ha lo stesso obiettivo del Proof of Work: per
 
 ## Preferisci un approccio visivo all'apprendimento? \{#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+{
+	<YouTube id="3EUAcxhuoU4" />
+}
 
 ## Letture consigliate \{#further-reading}
 

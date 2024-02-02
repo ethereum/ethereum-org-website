@@ -24,7 +24,9 @@ NFT significa token no fungible o «non-fungible token», en anglès. No fungibl
 
 Els objectes fungibles, d'altra banda, poden ser intercanviats perquè el seu valor els defineix més que les seves propietats úniques. Per exemple, els ETH o els dòlars són fungibles perquè un ETH o un dòlar es pot canviar per un altre ETH o un altre dòlar.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## L'internet d'actius \{#internet-of-assets}
 
@@ -148,7 +150,9 @@ Aquí teniu més informació sobre alguns del més casos d'ús i visions desenvo
 - [Objectes físics](#nft-physical-items)
 - [Inversions i garanties](#nfts-and-defi)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Com poden maximitzar els creadors els seus beneficis \{#nfts-for-creators}
 
@@ -177,7 +181,9 @@ Darrerament el fet de posseir quelcom real és tan valuós com el mercat fa que 
 
 Tenir la titularitat d'un objecte real verificable sempre tindrà més valor que no tenir-la.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Potenciar el potencial de joc \{#nft-gaming}
 
@@ -200,7 +206,9 @@ Decentraland, un joc de realitat virtual, fins it ot us permet comprar NFT que r
   </ButtonLink>
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Fer que les adreces d'Ethereum siguin més fàcils de recordar \{#nft-domains}
 
@@ -214,7 +222,9 @@ Els vostres noms d'ENS poden:
 - Apuntar cap a un lloc web descentralitzat, com ara [ethereum.eth](https://ethereum.eth.link). [Més informació sobre com descentralitzar el vostre lloc web](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
 - Emmagatzemar qualsevol informació arbitrària, incloent-hi informació de perfil com adreces de correu electrònic i controls de Twitter.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Objectes físics \{#nft-physical-items}
 
@@ -224,7 +234,9 @@ Com que els NFT són essencialment escriptures, algun dia podríeu comprar un co
 
 Amb actius valuosos, com ara cotxes i propietats representables a Ethereum, podeu utilitzar NFT com a garantia en préstecs descentralitzats. És particularment útil si no teniu grans riqueses, siguin diners tradicionals o criptomonedes, però teniu articles físics de valor. [Més informació sobre les DeFi](/defi/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Els NFT i les DeFi \{#nfts-and-defi}
 
@@ -259,7 +271,9 @@ Com ja hem dit abans, és un espai emergent. Els NFT, les DAO o els tókens frac
 
 [Més informació sobre les DAO](/dao/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ethereum i els NFT \{#ethereum-and-nfts}
 
@@ -367,7 +381,9 @@ La majoria dels NFT són construïts utilitzant un estàndard conegut com a [ERC
 - [No, els criptoartistes no estan malmetent el planeta](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Mai més el poder d'un país](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 de maig de 2021_
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Notes a peu de pàgina i fonts \{#footnotes-and-sources}
 

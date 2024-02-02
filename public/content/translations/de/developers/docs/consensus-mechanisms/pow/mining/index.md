@@ -57,7 +57,9 @@ Jede Transaktion wird einmal gemint (einschließen in einen neuen Block und zum 
 
 Schaue zu, wie Austin dich durch Mining und die Proof-of-Work-Blockchain führt.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

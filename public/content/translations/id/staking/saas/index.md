@@ -27,7 +27,9 @@ Protokol Ethereum tidak secara asli mendukung delegasi taruhan, sehingga layanan
   <Card title="Batasi risiko Anda" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
-<StakingComparison page="saas" />
+{
+	<StakingComparison page="saas" />
+}
 
 ## Apa yang perlu ditentukan \{#what-to-consider}
 
@@ -35,32 +37,43 @@ Ada semakin banyak penyedia SaaS yang dapat membantu Anda melakukan taruhan ETH,
 
 Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang mencolok yang mungkin dimiliki oleh penyedia SaaS yang terdaftar. Gunakan bagian ini sebagai referensi untuk bagaimana kami mendefinisikan atribut-atribut ini saat Anda memilih layanan untuk membantu perjalanan penaruhan Anda.
 
-<StakingConsiderations page="saas" />
+{
+	<StakingConsiderations page="saas" />
+}
 
 ## Eksplorasi penyedia layanan penaruhan \{#saas-providers}
 
 Berikut adalah beberapa penyedia layanan SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### Penyedia layanan SaaS
 
-<StakingProductsCardGrid category="saas" />
+{
+	<StakingProductsCardGrid category="saas" />
+}
 
 Harap perhatikan pentingnya mendukung [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan, dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style={{ textTransform: "uppercase" }}>"diversitas klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"diversitas klien konsensus."</em>
 
 ### Pembangkit Kunci
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Punya saran untuk penyedia penaruhan sebagai layanan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
 
 ## Pertanyaan yang sering diajukan \{#faq}
 
+{
 <ExpandableCard title="Siapa yang menyimpan kunci-kunci saya?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Perjanjian akan berbeda dari penyedia ke penyedia, tetapi umumnya Anda akan dipandu melalui pengaturan kunci tanda tangan yang Anda butuhkan (satu per 32 ETH), dan mengunggahnya ke penyedia Anda agar mereka dapat memvalidasi atas nama Anda. Kunci tanda tangan sendiri tidak memberikan kemampuan untuk menarik, mentransfer, atau menghabiskan dana Anda. Namun, kunci tanda tangan juga memberikan kemampuan untuk memberikan suara terhadap konsensus, yang jika tidak dilakukan dengan benar dapat mengakibatkan hukuman offline atau pemotongan.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Jadi ada dua set kunci?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Ya. Setiap akun terdiri dari kunci BLS untuk <em>tanda tangan</em> dan kunci BLS untuk <em>penarikan</em>. Agar seorang validator dapat memberikan tanda tangan atas keadaan jaringan, berpartisipasi dalam komite sinkronisasi, dan mengajukan blok, kunci tanda tangan harus mudah diakses oleh klien validator. Kunci-kunci ini harus terhubung ke internet dalam bentuk tertentu, dan oleh karena itu secara inheren dianggap sebagai kunci "panas" (hot keys). Ini merupakan persyaratan agar validator Anda dapat memberikan tanda tangan, dan oleh karena itu kunci yang digunakan untuk mentransfer atau menarik dana dipisahkan karena alasan keamanan.
 
@@ -72,7 +85,9 @@ Memperbarui kredensial penarikan adalah langkah yang diperlukan untuk mengaktifk
 
 \*Penaruh yang telah menyediakan alamat penarikan pada saat deposit awal tidak perlu mengatur ini. Hubungi penyedia SaaS Anda untuk mendapatkan dukungan mengenai cara menyiapkan validator Anda.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kapan saya bisa menarik dana?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Penarikan penaruhan diimplementasikan dalam peningkatan Shanghai/Capella pada April 2023. Para penaruh perlu menyediakan alamat penarikan (jika tidak disediakan saat deposit awal), dan pembayaran imbalan akan mulai didistribusikan secara otomatis secara berkala setiap beberapa hari.
 
@@ -80,7 +95,9 @@ Para validator juga dapat sepenuhnya keluar sebagai validator, yang akan membuka
 
 <ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Apa yang terjadi jika saya terkena pengurangan hadiah pemotongan?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Dengan menggunakan penyedia SaaS, Anda mempercayakan operasi simpul Anda kepada pihak lain. Ini membawa risiko kinerja simpul yang buruk, yang tidak berada dalam kendali Anda. Jika validator Anda terkena pemotongan, saldo validator Anda akan dikenai hukuman dan secara paksa dihapus dari pool validator.
 
@@ -88,6 +105,7 @@ Setelah selesai proses pemotongan hadiah/keluar, dana tersebut akan ditransfer k
 
 Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut tentang jaminan atau opsi asuransi, dan petunjuk tentang cara menyediakan alamat penarikan. Jika Anda lebih suka memiliki kendali penuh atas pengaturan validator Anda, <a href="/staking/solo/">pelajari lebih lanjut tentang cara melakukan taruhan solo untuk ETH</a>.
 </ExpandableCard>
+}
 
 ## Bacaan lebih lanjut \{#further-reading}
 

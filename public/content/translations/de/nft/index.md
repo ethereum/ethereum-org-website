@@ -18,7 +18,9 @@ NFTs, also Non Fungible Token, sind Token, die individuell einzigartig sind. Jed
 
 Die Einzigartigkeit eines jeden NFT ermöglicht die Tokenisierung von Dingen wie Kunst, Sammlerstücken oder sogar Immobilien. Dabei stellt jeder bestimmte einzigartige NFT einen bestimmten einzigartigen realen oder digitalen Gegenstand dar. Das Eigentum an einem Vermögenswert ist durch die Ethereum-Blockchain gesichert – niemand kann die Aufzeichnung des Eigentums ändern oder einen neuen NFT kopieren/einfügen.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Das Internet der Vermögenswerte \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Diese Website hat einen alternativen Domainnamen ermöglicht durch NFTs, **ether
 
 [Mehr zu ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### NFT-Sicherheit \{#nft-security}
 
@@ -89,6 +93,10 @@ Sicherheitsprobleme mit NFTs stehen oft im Zusammenhang mit Phishing-Betrügerei
 - [ERC-721-Token-Standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155-Token-Standard](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

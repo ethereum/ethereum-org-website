@@ -8,12 +8,13 @@ lang: en
 
 The Merge represented the Ethereum network's transition from proof-of-work to proof-of-stake which occurred in September 2022. The way ETH was issued underwent changes at time of that transition. Previously, new ETH was issued from two sources: the execution layer (i.e. Mainnet) and the consensus layer (i.e. Beacon Chain). Since The Merge, issuance on the execution layer is now zero. Let's break this down.
 
-## Components of ETH issuance \{##components-of-eth-issuance}
+## Components of ETH issuance \{#components-of-eth-issuance}
 
 We can break the supply of ETH into two primary forces: issuance and burn.
 
 The **issuance** of ETH is the process of creating ETH that did not previously exist. The **burning** of ETH is when existing ETH gets destroyed, removing it from circulation. The rate of issuance and burning gets calculated on several parameters, and the balance between them determines the resulting inflation/deflation rate of ether.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="ETH issuance tldr">
@@ -26,19 +27,19 @@ title="ETH issuance tldr">
 
 </Card>
 
-## Pre-merge (historical) \{##pre-merge}
+## Pre-merge (historical) \{#pre-merge}
 
-### Execution layer issuance \{##el-issuance-pre-merge}
+### Execution layer issuance \{#el-issuance-pre-merge}
 
 Under proof-of-work, miners only interacted with the execution layer and were rewarded with block rewards if they were the first miner to solve the next block. Since the [Constantinople upgrade](/history/#constantinople) in 2019 this reward was 2 ETH per block. Miners were also rewarded for publishing [ommer](/glossary/#ommer) blocks, which were valid blocks that didn't end up in the longest/canonical chain. These rewards maxed out at 1.75 ETH per ommer, and were _in addition to_ the reward issued from the canonical block. The process of mining was an economically intensive activity, which historically required high levels of ETH issuance to sustain.
 
-### Consensus layer issuance \{##cl-issuance-pre-merge}
+### Consensus layer issuance \{#cl-issuance-pre-merge}
 
 The [Beacon Chain](/history/#beacon-chain-genesis) went live in 2020. Instead of miners, it is secured by validators using proof-of-stake. This chain was bootstrapped by Ethereum users depositing ETH one-way into a smart contract on Mainnet (the execution layer), which the Beacon Chain listens to, crediting the user with an equal amount of ETH on the new chain. Until The Merge happened, the Beacon Chain's validators were not processing transactions and were essentially coming to consensus on the state of the validator pool itself.
 
 Validators on the Beacon Chain are rewarded with ETH for attesting to the state of the chain and proposing blocks. Rewards (or penalties) are calculated and distributed at each epoch (every 6.4 minutes) based on validator performance. Validator rewards are **significantly** less than the mining rewards that were previously issued under proof-of-work (2 ETH every ~13.5 seconds), as operating a validating node is not as economically intense and thus does not require or warrant as high a reward.
 
-### Pre-merge issuance breakdown \{##pre-merge-issuance-breakdown}
+### Pre-merge issuance breakdown \{#pre-merge-issuance-breakdown}
 
 Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 
@@ -60,13 +61,13 @@ Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 <strong>~11.3%</strong> was being issued to stakers on the consensus layer (0.52 / 4.61 * 100)
 </InfoBanner>
 
-## Post-merge (present day) \{##post-merge}
+## Post-merge (present day) \{#post-merge}
 
-### Execution layer issuance \{##el-issuance-post-merge}
+### Execution layer issuance \{#el-issuance-post-merge}
 
 Execution layer issuance since The Merge is zero. Proof-of-work is no longer a valid means of block production under the upgraded rules of consensus. All execution layer activity is packaged into "beacon blocks", which are published and attested to by proof-of-stake validators. Rewards for attesting-to and publishing beacon blocks are accounted for separately on the consensus layer.
 
-### Consensus layer issuance \{##cl-issuance-post-merge}
+### Consensus layer issuance \{#cl-issuance-post-merge}
 
 Consensus layer issuance continues today as before The Merge, with small rewards for validators who attest to and propose blocks. Validator rewards continue to accrue to _validator balances_ that are managed within the consensus layer. Unlike the current accounts ("execution" accounts), which can transact on Mainnet, these are separate Ethereum accounts cannot transact freely with other Ethereum accounts. Funds in these accounts can only be withdrawn to a single specified execution address.
 
@@ -78,7 +79,7 @@ Approximately 0.33% of the total validator count may exit in a given day. By def
 
 As more validators withdraw, the maximum number of exiting validators will gradually be reduced to a minimum of four to intentionally prevent large destabilizing amounts of staked ETH from being withdrawn concurrently.
 
-### Post-merge inflation breakdown \{##post-merge-inflation-breakdown}
+### Post-merge inflation breakdown \{#post-merge-inflation-breakdown}
 
 - Total ETH supply: **~120,520,000 ETH** (at time of The Merge in September 2022)
 - Execution layer issuance: **0**
@@ -89,7 +90,7 @@ Total annualized issuance rate: <strong>~0.52%</strong><br/><br/>
 Net reduction in annual ETH issuance: <strong>~88.7%</strong> ((4.61% - 0.52%) / 4.61% * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" /> The burn \{##the-burn}
+## <Emoji text=":fire:" size="1" /> The burn \{#the-burn}
 
 The opposite force to ETH issuance is the rate at which ETH is burned. For a transaction to execute on Ethereum, a minimum fee (known as a "base fee") must be paid, which fluctuates continuously (block-to-block) depending on network activity. The fee is paid in ETH and is _required_ for the transaction to be considered valid. This fee gets _burned_ during the transaction process, removing it from circulation.
 
@@ -99,7 +100,7 @@ Fee burning went live with <a href="/history/#london">the London upgrade</a> in 
 
 On top of the fee burn implemented by the London upgrade, validators can also incur penalties for being offline, or worse, they can be slashed for breaking specific rules that threaten network security. These penalties result in a reduction of ETH from that validator's balance, which is not directly rewarded to any other account, effectively burning/removing it from circulation.
 
-### Calculating average gas price for deflation \{##calculating-average-gas-price-for-deflation}
+### Calculating average gas price for deflation \{#calculating-average-gas-price-for-deflation}
 
 As discussed above, the amount of ETH issued in a given day is dependent upon the total ETH staked. At time of writing, this is approximately 1700 ETH/day.
 
@@ -127,7 +128,7 @@ We can simplify and write this as a function of `X`:
 
 So, for example, if `X` (daily ETH issuance) rises to 1800 based on total ETH staked, `f(X)` (gwei required to offset all of the issuance) would then be `17 gwei` (using 2 significant digits)
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [The Merge](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Dashboards available to visualize ETH issuance and burn in real-time_

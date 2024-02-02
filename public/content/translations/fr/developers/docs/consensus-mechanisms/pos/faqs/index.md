@@ -20,7 +20,9 @@ La preuve de travail est beaucoup plus gourmande en énergie car de l'électrici
 
 La comparaison entre la preuve de travail et la preuve d'enjeu est un sujet controversé. Le blog de [Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ainsi que le débat entre Justin Drake et Lyn Alden offrent un bon résumé des arguments.
 
-<YouTube id="1m12zgJ42dI" />
+{
+	<YouTube id="1m12zgJ42dI" />
+}
 
 ## La preuve d'enjeu est-elle éco-énergétique ? \{#is-pos-energy-efficient}
 

@@ -114,9 +114,13 @@ Uma conta não é uma carteira. Uma conta é o par de chaves para uma conta Ethe
 
 Assista a Austin mostrando passo a passo as funções de hash e os pares de chaves.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## Leitura adicional \{#further-reading}
 

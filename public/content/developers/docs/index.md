@@ -12,14 +12,20 @@ This is an open-source community effort, so feel free to suggest new topics, add
 
 If this is your first attempt at Ethereum development, we recommend starting at the beginning and working your way through like a book.
 
-### Foundational topics \{##foundational-topics}
+### Foundational topics \{#foundational-topics}
 
-<DeveloperDocsLinks headerId="foundational-topics" />
+{
+	<DeveloperDocsLinks headerId="foundational-topics" />
+}
 
-### Ethereum stack \{##ethereum-stack}
+### Ethereum stack \{#ethereum-stack}
 
-<DeveloperDocsLinks headerId="ethereum-stack" />
+{
+	<DeveloperDocsLinks headerId="ethereum-stack" />
+}
 
-### Advanced \{##advanced}
+### Advanced \{#advanced}
 
-<DeveloperDocsLinks headerId="advanced" />
+{
+	<DeveloperDocsLinks headerId="advanced" />
+}

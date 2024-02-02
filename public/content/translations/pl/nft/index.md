@@ -18,7 +18,9 @@ NFT to tokeny, które są unikalne. Każdy NFT ma inne właściwości (niezamien
 
 Unikalność każdego NFT umożliwia tokenizację rzeczy takich jak dzieła artystyczne, przedmioty kolekcjonerskie, a nawet nieruchomości, gdzie jeden konkretny unikalny NFT reprezentuje konkretny unikalny prawdziwy lub cyfrowy przedmiot. Własność aktywa zabezpieczona jest przez blockchain Ethereum — nikt nie może zmodyfikować rejestrów własności ani skopiować/wkleić nowego NFT.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Internet rzeczy \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Ta strona ma alternatywną domenę obsługiwaną przez NFT, **ethereum.eth**. Na
 
 [Więcej o ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Bezpieczeństwo NFT \{#nft-security}
 
@@ -89,6 +93,10 @@ Kwestie bezpieczeństwa związane z NFT są najczęściej związane z oszustwami
 - [Standard tokenów ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Standard tokenów ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

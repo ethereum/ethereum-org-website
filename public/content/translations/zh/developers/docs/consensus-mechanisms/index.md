@@ -62,7 +62,9 @@ lang: zh
 
 观看视频，详细了解以太坊采用的不同类型共识机制：
 
-<YouTube id="ojxfbN78WFQ" />
+{
+	<YouTube id="ojxfbN78WFQ" />
+}
 
 ### Sybil 抗性和链选择 \{#sybil-chain}
 

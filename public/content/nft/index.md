@@ -18,15 +18,17 @@ NFTs are tokens that are individually unique. Each NFT has different properties 
 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum blockchain.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
-## The internet of assets \{##internet-of-assets}
+## The internet of assets \{#internet-of-assets}
 
 NFTs and Ethereum solve some of the problems that exist on the internet today. As everything becomes more digital, there's a need to replicate the properties of physical items like scarcity, uniqueness, and proof of ownership in a way that isn't controlled by a central organization. For example, with NFTs, you can own a music mp3 file across all Ethereum based apps and not be bound to one company's specific music app like Spotify or Apple Music. You can own a social media handle that you can sell or swap, but can't be arbitrarily taken away from you by a platform provider.
 
 Here's how an internet of NFTs compared to the internet most of us use today looks...
 
-### A comparison \{##nft-comparison}
+### A comparison \{#nft-comparison}
 
 | An NFT internet                                                                                                         | The internet today                                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -37,7 +39,7 @@ Here's how an internet of NFTs compared to the internet most of us use today loo
 | Content creators can sell their work anywhere and can access a global market.                                           | Creators rely on the infrastructure and distribution of the platforms they use. These are often subject to terms of use and geographical restrictions. |
 | NFT creators can retain ownership rights over their own work, and program royalties directly into the NFT contract.     | Platforms, such as music streaming services, retain the majority of profits from sales.                                                                |
 
-## What are NFTs used for? \{##nft-use-cases}
+## What are NFTs used for? \{#nft-use-cases}
 
 NFTs are used for many things, including:
 
@@ -64,9 +66,11 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 
 [More on ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
-## How do NFTs work? \{##how-nfts-work}
+## How do NFTs work? \{#how-nfts-work}
 
 NFTs, like any digital items on the Ethereum blockchain, are created through a special Ethereum based computer program called a "smart contract." These contracts follow certain rules, like the ERC-721 or ERC-1155 standards, which determine what the contract can do.
 
@@ -80,7 +84,7 @@ When someone "creates" or "mints" an NFT, they're basically telling the smart co
 
 Furthermore, the creator of the contract can add extra rules. They might limit how many of a certain NFT can be made or decide that they should get a small royalty fee whenever the NFT changes hands.
 
-### NFT security \{##nft-security}
+### NFT security \{#nft-security}
 
 Ethereum's security comes from proof-of-stake. The system is designed to economically disincentivize malicious actions, making Ethereum tamper-proof. This is what makes NFTs possible. Once the block containing your NFT transaction becomes finalized it would cost an attacker millions of ETH to change it. Anyone running Ethereum software would immediately be able to detect dishonest tampering with an NFT, and the bad actor would be economically penalized and ejected.
 
@@ -90,13 +94,17 @@ Security issues relating to NFTs are most often related to phishing scams, smart
   More on security
 </ButtonLink>
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [A beginner's guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, January 2020_
 - [EtherscanNFT tracker](https://etherscan.io/nft-top-contracts)
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

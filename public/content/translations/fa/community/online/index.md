@@ -10,6 +10,7 @@ lang: fa
 
 ## انجمن‌ها \{#forums}
 
+{
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - همه‌چیز اتریوم</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - جنبه‌ی مالی اتریوم، از جمله دیفای</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - متمرکز بر توسعه‌ی اتریوم</SocialListItem>
@@ -18,9 +19,11 @@ lang: fa
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> - جامعه‌ای با محوریت استانداردهای فنی در اتریوم</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - بحث و کمک برای توسعه‌دهندگان اتریوم</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - تأثیرگذارترین تالار گفتگ برای تحقیقات اقتصادی رمزارزها</SocialListItem>
+}
 
 ## اتاق‌های گفتگو \{#chat-rooms}
 
+{
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Cat Herderهای اتریوم</Link> - جامعه‌ای با محوریت ارائه‌ی کمک در بحث مدیریت پروژه برای توسعه‌ی اتریوم</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">هکرهای اتریوم</Link> - فضای گفتگوی Discord تحت مدیریت ETHGlobal: یک انجمن آنلاین برای هکرهای اتریوم در سراسر جهان</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - انجمن Discord متمرکز بر توسعه‌ی اتریوم</SocialListItem>
@@ -31,15 +34,20 @@ lang: fa
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - فضای گفتگو برای توسعه‌ solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">بورس سهام اتریوم</Link> <i>- انجمن پرسش و پاسخ</i></SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- انجمن پرسش و پاسخ غیرمتمرکز</i></SocialListItem>
+}
 
 ## یوتیوب و توییتر \{#youtube-and-twitter}
 
+{
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">بنیاد اتریوم</Link> - از تازه‌ترین اخبار «بنیاد اتریوم» مطلع شوید</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - حساب رسمی بنیاد اتریوم</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - پایگاه اینترنتی اتریوم، ساخته‌شده برای جامعه‌ی جهانی در حال رشد ما</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">فهرست حساب‌های تأثیرگذار اتریوم در توییتر</Link></SocialListItem>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 <Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
   <div>

@@ -18,7 +18,9 @@ Paras tapa aloittaa Ethereumin käyttö on hypätä suoraan mukaan!
 
 Tässä on muutama esimerkki Ethereumilla tehdyistä sovelluksista - päivitämme listaa jatkuvasti.
 
-<RandomAppList />
+{
+	<RandomAppList />
+}
 
 Oletko kiinnostunut lukemaan lisää muista Ethereumilla tehdyistä sovelluksista englanniksi?
 

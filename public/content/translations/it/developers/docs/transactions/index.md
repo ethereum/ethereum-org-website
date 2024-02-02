@@ -172,7 +172,9 @@ Una volta inviata una transazione, succede quanto segue:
 
 Guarda Austin mentre ti illustra transazioni, gas e mining.
 
-<YouTube id="er-0ihqFQB0" />
+{
+	<YouTube id="er-0ihqFQB0" />
+}
 
 ## Typed Transaction Envelope \{#typed-transaction-envelope}
 

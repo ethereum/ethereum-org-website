@@ -23,7 +23,7 @@ Select your programming language of choice to find projects, resources, and virt
 - [Ethereum for Ruby developers](/developers/docs/programming-languages/ruby/)
 - [Ethereum for Rust developers](/developers/docs/programming-languages/rust/)
 
-### What if my language is not supported \{##other-lang}
+### What if my language is not supported \{#other-lang}
 
 If you want to link to resources or point to a virtual community for an additional programming language you can request a new page by [opening an issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

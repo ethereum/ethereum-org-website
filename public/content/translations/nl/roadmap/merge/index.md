@@ -65,4 +65,6 @@ Dit zal een voortdurende beoordeling zijn van de gemeenschap over de noodzaak va
 
 ## Meer informatie \{#read-more}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}

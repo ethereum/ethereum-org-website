@@ -65,4 +65,6 @@ Hii itakuwa tathmini inayoendelea kutoka kwa jamii juu ya hitaji la raundi nying
 
 ## Soma zaidi \{#read-more}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}

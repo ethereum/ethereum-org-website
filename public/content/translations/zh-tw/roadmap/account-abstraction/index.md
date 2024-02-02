@@ -56,6 +56,7 @@ summaryPoints:
 
 透過帳戶抽象，Gas 管理也得到很大的改進。 應用程式不僅可以支付使用者的 Gas 費用，還可以用以太幣以外的代幣支付 Gas 費用，讓使用者不必為了支付交易手續費而保留以太幣餘額。 這可以透過在合約內將使用者的代幣換成以太幣，然後使用以太幣支付 Gas 費用來實現。
 
+{
 <ExpandableCard title="帳戶抽象如何幫助解決 Gas 費用支付問題？" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
 
 Gas 管理是以太坊使用者遇到的主要難題之一，主要原因是以太幣是唯一可用於支付交易手續費的資產。 想像一下，如果你的錢包中都是 USDC，沒有以太幣。 你無法移動或兌換這些 USDC 代幣，因為不能支付 Gas 費用。 也不能將 USDC 換成以太幣，因為這本身就需要消耗 Gas。 必須從交易所或其他地址將更多以太幣傳送至你的帳戶，才能解決這個問題。 有了智慧型合約錢包後，你可以輕鬆地用 USDC 支付 Gas 費用，解放帳戶。 你不必再在所有帳戶中保留以太幣餘額。
@@ -63,6 +64,7 @@ Gas 管理是以太坊使用者遇到的主要難題之一，主要原因是以�
 帳戶抽象也允許去中心化應用程式開發者在 Gas 管理方面發揮創意。 舉例來說，你每個月或許可以為最愛的去中心化交易所支付一筆固定費用，以實現無限制的交易。 去中心化應用程式也可能代你支付所有 Gas 費用，作為對你使用其平台的獎勵，或作為嚐鮮優惠。 當協定層面支援智慧型合約錢包時，開發者將更容易在 Gas 方面實現創新。
 
 </ExpandableCard>
+}
 
 可信會話還可能變革使用者體驗，特別是像遊戲這樣的應用程式，大量小額交易可能需要在短時間內獲得批准。 逐一批准交易將破壞遊戲體驗，但永久批准又不安全。 智慧型合約錢包可以在固定時間內核准某些特定交易，比如特定金額或地址的交易。
 
@@ -74,12 +76,15 @@ Gas 管理是以太坊使用者遇到的主要難題之一，主要原因是以�
 
 目前市面上已經有智慧型合約錢包了，但因為以太坊虛擬機還不支援，要實作它們非常有挑戰性。 相對的，它們依賴於在標準以太坊交易上新增多相對複雜的程式碼。 透過允許智慧型合約開啟交易，不在鏈下而是在以太坊智慧型合約中處理必要的邏輯，以太坊可以改變上述情況。 將邏輯放進智慧型合約也提高了以太坊的去中心化程度，因為有了它之後，便不需要錢包開發者運行的「中繼器」將使用者簽署的訊息轉換為常規以太坊交易。
 
+{
 <ExpandableCard title="EIP-2771：使用元交易的帳戶抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 引入了元交易的概念，允許第三方在不更改以太坊協定的情況下支付使用者的 Gas 費用。 這個想法是使用者簽署的交易會送到「轉發者」合約中。 轉發者是可信任的實體，會在將交易傳送到 Gas 中繼器之前驗證交易是否有效。 這在鏈下完成，因此無需支付 Gas 費用。 Gas 中繼器將交易送到「接收者」合約，支付必要的 Gas 費用，以使交易可在以太坊上執行。 如果「接收者」知道和信任「轉發者」，交易即會執行。 這種模式使得開發者可以輕鬆為使用者實現無 Gas 交易。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-4337：無需更動以太坊協定的帳戶抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
 EIP-4337 是以去中心化方式實現本地智慧型合約錢包支援的第一步，<em>無需更動以太坊協定</em>。 不是修改共識層來支援智慧型合約錢包，而是在正常的交易流言協定中單獨新增一個系統。 這個更高級別的系統圍繞一個名為 <code>UserOperation</code> 的新物件建構，該物件將使用者的行為以及相關簽名打包在一起。 接下來，這些 <code>UserOperation</code> 物件會被廣播到專用記憶體池中，驗證者會將他們打包成「捆綁交易」。 捆綁交易代表許多單獨的 <code>UserOperations</code> 序列，可以像普通交易一樣包含在以太坊區塊中，並且可以由驗證者使用類似的費用最大化選取模型來選擇。
@@ -89,7 +94,9 @@ EIP-4337 也會改變錢包的運作方式。 這些功能將外包給稱為「�
 <strong>注意</strong> EIP-4337 進入點合約已於 2023 年 3 月 1 日部署至以太坊主網。 你可以在 <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a> 上查看此合約。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-2938：更動以太坊協定以支援帳戶抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> 的目標是藉由引入一種新的交易類型 <code>AA_TX_TYPE</code> 來更新以太坊協定，包含三個欄位：<code>nonce</code>、<code>target</code> 和 <code>data</code>，其中 <code>nonce</code> 是交易計數器，<code>target</code> 是進入點合約地址，<code>data</code> 是 EVM 位元組碼。 若要執行這些交易，需要新增兩個新的指令（又稱操作碼）到 EVM：<code>NONCE</code> 和 <code>PAYGAS</code>。 <code>NONCE</code> 操作碼會追蹤交易序列，<code>PAYGAS</code> 則會計算並從合約餘額中提取執行交易所需的 Gas 費用。 這些新功能使得以太坊能夠在本地支援智慧型合約錢包，因為以太坊協定已內建必要的基礎設施。
@@ -97,7 +104,9 @@ EIP-4337 也會改變錢包的運作方式。 這些功能將外包給稱為「�
 請注意，EIP-2938 目前尚未啟用。 社群目前偏好 EIP-4337，因其不要求更動協定。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-3074：升級外部帳戶以實現帳戶抽象" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> 的目標是更新以太坊的外部帳戶，方法是允許它們將控制權委託給智慧型合約。 這意味著智慧型合約邏輯可以批准源自外部帳戶的交易。 這可以讓一些功能成為可能，如 Gas 贊助和批次交易。 要使其可用，必須新增兩個新的操作碼到 EVM：<code>AUTH</code> 和 <code>AUTHCALL</code>。 透過 EIP-3074，<em>無需合約</em>即可獲得智慧型合約錢包的優勢；相反，一種稱為「調用者」的特定類型的無狀態、無信任、不可升級的合約會處理交易。
@@ -105,6 +114,7 @@ EIP-4337 也會改變錢包的運作方式。 這些功能將外包給稱為「�
 請注意，EIP-3074 目前尚未啟用。 社群目前偏好 EIP-4337，因其不要求更動協定。
 
 </ExpandableCard>
+}
 
 ## 目前進度 \{#current-progress}
 

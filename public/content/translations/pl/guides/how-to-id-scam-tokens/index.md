@@ -15,6 +15,7 @@ Istnieją dwa sposoby, którymi będą próbowali Cię oszukać:
 
 Aby pokazać, czym są fałszywe tokeny i jak je zidentyfikować, popatrzmy na przykład jednego z nich: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Ten token próbuje wyglądać jak prawdziwy token [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
+{
 <ExpandableCard
 title="Co to jest ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum to organizacja, która tworzy i zarządza <a href="/developers/docs/scaling/optimistic-rollups/">optymistycznymi pakietami zbiorczymi</a>. Początkowo, Arbitrum było zorganizowane jako firma nastawiona na zysk, ale następnie podjęła kroki w celu decentralizacji. W ramach tego procesu wydali oni wymienialny <a href="/dao/#token-based-membership">token zarządzania</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dlaczego fałszywy token jest nazwany wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ W Ethereum istnieje konwencja, że gdy zasób nie jest zgodny z ERC-20, tworzymy
 Nie ma sensu tworzyć opakowanej wersji tokena ERC-20, który jest już na Ethereum, ale oszuści polegają raczej na pozorach wiarygodności niż na podstawowej rzeczywistości.
 
 </ExpandableCard>
+}
 
 ## Jak działają fałszywe tokeny? \{#how-do-scam-tokens-work}
 
 Głównym celem Ethereum jest decentralizacja. Oznacza to, że nie ma centralnego zarządu, który mógłby skonfiskować Twoje aktywa lub ostrzec Cię przed wdrożeniem inteligentnego kontraktu. Jednak oznacza to również, że oszuści mogą wdrażać dowolne inteligentne kontrakty, jakie tylko chcą.
 
+{
 <ExpandableCard
 title="Czym są inteligentne kontrakty?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Inteligentne kontrakty</a> to programy, które działają na blockchainie Ethereum. Dla przykładu każdy token ERC-20 jest implementowany jako inteligentny kontrakt.
 
 </ExpandableCard>
+}
 
 Szczególnie, Arbitrum wdrożyło kontrakt, który używa symbolu `ARB`. Nie powstrzymuje jednak innych ludzi od również wdrażania kontraktu, który używa dokładnie tego samego symbolu lub podobnego. Ktokolwiek pisze kontrakt, decyduje również o tym, co będzie on robił.
 

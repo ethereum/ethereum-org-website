@@ -29,19 +29,19 @@ In summary, the execution client is:
 - a user gateway to Ethereum
 - home to the Ethereum Virtual Machine, Ethereum's state and transaction pool.
 
-## What does the consensus client do? \{##consensus-client}
+## What does the consensus client do? \{#consensus-client}
 
 The consensus client deals with all the logic that enables a node to stay in sync with the Ethereum network. This includes receiving blocks from peers and running a fork choice algorithm to ensure the node always follows the chain with the greatest accumulation of attestations (weighted by validator effective balances). Similar to the execution client, consensus clients have their own P2P network through which they share blocks and attestations.
 
 The consensus client does not participate in attesting to or proposing blocks - this is done by a validator, an optional add-on to a consensus client. A consensus client without a validator only keeps up with the head of the chain, allowing the node to stay synced. This enables a user to transact with Ethereum using their execution client, confident that they are on the correct chain.
 
-## Validators \{##validators}
+## Validators \{#validators}
 
 Node operators can add a validator to their consensus clients by depositing 32 ETH in the deposit contract. The validator client comes bundled with the consensus client and can be added to a node at any time. The validator handles attestations and block proposals. They enable a node to accrue rewards or lose ETH via penalties or slashing. Running the validator software also makes a node eligible to be selected to propose a new block.
 
 [More on staking](/staking/).
 
-## Components of a node comparison \{##node-comparison}
+## Components of a node comparison \{#node-comparison}
 
 | Execution Client                                   | Consensus Client                                                 | Validator                    |
 | -------------------------------------------------- | ---------------------------------------------------------------- | ---------------------------- |
@@ -52,7 +52,7 @@ Node operators can add a validator to their consensus clients by depositing 32 E
 | Creates execution payload                          | Keeps track of accumulated randomness in RANDAO                  | Can be slashed               |
 | Exposes JSON-RPC API for interacting with Ethereum | Keeps track of justification and finalization                    |                              |
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Proof-of-stake](/developers/docs/consensus-mechanisms/pos)
 - [Block proposal](/developers/docs/consensus-mechanisms/pos/block-proposal)

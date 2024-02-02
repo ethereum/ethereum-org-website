@@ -18,11 +18,13 @@ Por ejemplo, pueden introducirse unas listas de inclusión para que cuando los v
 
 [Las zonas de espera encriptadas](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) también imposibilitarán a constructores y proponentes saber qué transacciones se están incluyendo en un bloque hasta después de que el bloque se haya transmitido.
 
+{
 <ExpandableCard title="¿Qué tipo de censura soluciona PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Las organizaciones poderosas pueden presionar a los validadores para censurar transacciones para o de ciertas direcciones. Los validadores ceden a esta presión al detectar direcciones de la lista negra en sus grupos de transacciones y omitirlas de los bloques que proponen. Después de PBS, esto ya no será posible, porque los proponentes de bloques no sabrán qué transacciones están transmitiendo en sus bloques. Cumplir las reglas de censura ―por ejemplo, con la elaboración de un proyecto de ley en esa región― puede que sea importante para ciertos individuos o aplicaciones. En estos casos, se cumple a nivel de la solicitud, mientras que el protocolo se mantiene sin permisos ni censura.
 
 </ExpandableCard>
+}
 
 ## PBS y MEV \{#pbs-and-mev}
 
@@ -30,10 +32,12 @@ Las organizaciones poderosas pueden presionar a los validadores para censurar tr
 
 PBS soluciona este problema, ya que reconfigura la economía de MEV. En lugar de que el proponente de bloques haga su propia búsqueda de MEV, simplemente tomará un bloque de todos los que ofrecen los constructores de bloques. Puede que los constructores de bloques hayan realizado una extracción sofisticada de MEV, pero la recompensa va al proponente del bloque. Esto significa que incluso cuando un grupo pequeño de constructores de bloques especializados domina la extracción de MEV, la recompensa irá a cualquier validador en la red, incluyendo participaciones individuales domésticas.
 
+{
 <ExpandableCard title="¿Por qué está bien centralizar la construcción de bloques?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Los individuos pueden recibir incentivos a participar en agrupaciones en vez de hacerlo en solitario, debido a las sugerentes recompensas ofrecidas por las estrategias sofisticadas de MEV. Separar la construcción y la propuesta de bloques, significa que los MEV extraídos serán distribuidos a más validadores en lugar de que sean centralizados con los buscadores más efectivos de MEV. Al mismo tiempo, permitir la existencia de constructores de bloques especializados alivia el peso de la construcción de bloques de los individuos y evita que estos roben MEV, al tiempo que maximiza el número de validadores independientes e individuales que pueden verificar la fiabilidad de los bloques. El concepto importante es «asimetría de probador-verificador» que se refiere a la idea de que la producción centralizada de bloques está bien, siempre y cuando haya una red descentralizada, masiva y robusta de validadores que puedan verificar que los bloques son honestos. La descentralización es un medio, no un objetivo final; lo que queremos son bloques honestos.
 </ExpandableCard>
+}
 
 ## PBS y Danksarding \{#pbs-and-danksharding}
 

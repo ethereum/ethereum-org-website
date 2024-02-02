@@ -22,7 +22,9 @@ Nagbibigay-daan ang decentralized science sa mas diverse na pinagmumulan ng pond
 
 ### Juan Benet - Ang DeSci Movement
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## Paano pinapaunlad ng DeSci ang agham \{#desci-improves-science}
 

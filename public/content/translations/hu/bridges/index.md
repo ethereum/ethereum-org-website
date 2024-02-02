@@ -8,7 +8,9 @@ lang: hu
 
 _A Web3 egy olyan ökoszisztémává fejlődött, ahol L1 blokkláncok és L2 skálázási megoldások találhatók, mind egyedi képességekkel és kompromisszumokkal. Ahogy növekszik a blokkláncprotokollok száma, úgy nő [a kereslet is, hogy az eszközöket láncok között lehessen mozgatni](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Az igény kielégítéséhez összekötőkre vagy hidakra van szükségünk._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Mik azok az összekötők vagy hidak? \{#what-are-bridges}
 
@@ -37,7 +39,9 @@ A hidak lehetőséget adnak arra, hogy:
 
 [Hogyan lehet áthelyezni a tokeneket a második blokkláncrétegbe (L2)](/guides/how-to-use-a-bridge/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## A hidak alkalmazási területei \{#bridge-use-cases}
 
@@ -63,7 +67,9 @@ Amennyiben Ön szeretne bitcoint (BTC) birtokolni, de a pénzeszközei az Ethere
   Mindezt megteheti egy <a href="/get-eth/">centralizált tőzsde</a> segítségével is. Ha azonban az eszközei már a tőzsdén vannak, akkor több lépést kell végrehajtani, és akkor már egyszerűbb a hidat használni.
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## A hidak típusai \{#types-of-bridge}
 
@@ -93,7 +99,9 @@ A self check-in hasonlít a bizalomigénytől mentes modellhez, mivel kiveszi az
 
 Számos hidat biztosító megoldás e két modell közötti módszert alakít ki változó bizalmi fokozattal.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## A hidak használatának kockázata \{#bridge-risk}
 
@@ -119,7 +127,9 @@ Az egyik korábbi, Solana Wormhole híd elleni támadásnál [ 120k wETH-t (325 
 
 A hidak elengedhetetlenek az Ethereum L2 használatához, illetve ha a felhasználók más ökoszisztémákat is fel szeretnének fedezni. Ugyanakkor az ebben rejlő kockázatok miatt meg kell érteni a hidak által hozott kompromisszumokat. Íme néhány [stratégia a láncok közötti biztonság](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946) témájában.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## További olvasnivaló \{#further-reading}
 

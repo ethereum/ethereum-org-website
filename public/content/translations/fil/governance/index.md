@@ -9,7 +9,9 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 
 _Kung walang nagmamay-ari sa Ethereum, paano pinagpapasyahan ang mga nakaraan at susunod pang pagbabago sa Ethereum? Ang pamamahala ng Ethereum ay tumutukoy sa prosesong nagbibigay-daan sa mga naturang pagpapasya._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ano ang pamamahala? \{#what-is-governance}
 
@@ -37,7 +39,9 @@ _Kahit off-chain ang pamamahala ng Ethereum sa antas ng protocol, maraming use c
   Iba pang detalye tungkol sa DAOs
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Sino ang bahagi nito? \{#who-is-involved}
 
@@ -53,7 +57,9 @@ May iba't ibang stakeholder sa [komunidad ng Ethereum](/community/), at may pape
 
 _Tandaan: maaaring hindi lang sa isa sa mga grupong ito napapabilang ang sinumang indibidwal (hal. maaaring magtaguyod ng EIP, at magpatakbo ng beacon chain validator, at gumamit ng mga DeFi application ang isang protocol developer). Para malinaw itong maunawaan, pinakamadali kung pag-iiba-ibahin ang mga ito._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ano ang EIP? \{#what-is-an-eip}
 
@@ -63,7 +69,9 @@ Isang mahalagang proseso na ginagamit sa pamamahala ng Ethereum ang pagmumungkah
   Iba pang detalye tungkol sa EIPs
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ang pormal na proseso \{#formal-process}
 
@@ -107,7 +115,9 @@ Inaasahang hihingi ang mga EIP Champion ng feedback mula sa lahat ng nauugnay na
 
 Bukod pa sa seguridad ng Ethereum network, dati pa man ay lubha nang pinapahalagahan ng mga Protocol Developer sa pinapahalagahan ng mga Application/Tooling Developer at mga Application user, lalo na't ang paggamit at pag-develop nila sa Ethereum ang dahilan kung bakit naeengganyo sa ecosystem ang iba pang stakeholder. Bukod pa rito, kailangang ipatupad ang EIPs sa lahat ng client implementation, na pinapamahalaan ng iba't ibang team. Bilang bahagi ng prosesong ito, karaniwang kailangang hikayatin ang maraming team ng mga Protocol Developer na mahalaga ang isang partikular na pagbabago at tinutulungan nito ang mga end user o may nilulutas itong problema sa seguridad.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Pag-aayos ng mga hindi pagkakasundo \{#disagreements}
 
@@ -135,9 +145,13 @@ Kasalukuyang gumagamit ang komunidad ng Ethereum ng patakaran sa hindi panghihim
 
 Manood pa ng mga video tungkol sa DAO hack:
 
-<YouTube id="rNeLuBOVe8A" />
+{
+	<YouTube id="rNeLuBOVe8A" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Ang kahalagahan ng pag-fork \{#forking-utility}
 
@@ -145,7 +159,9 @@ Ang fork ng Ethereum/Ethereum Classic ay isang magandang halimbawa ng isang maay
 
 Malaki ang naiaambag ng kakayahang mag-fork sa kabila ng malalaking pagkakaiba sa pulitika, pilosopiya, o ekonomiya sa pagtatagumpay ng pamamahala ng Ethereum. Kung walang kakayahang mag-fork, ang alternatibo ay tuloy-tuloy na pag-aaway, puwersahan at sapilitang pakikilahok para sa mga gumawa ng Ethereum Classic, at pagkakaroon ng magkakaibang pananaw sa tagumpay para sa Ethereum.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Pamamahala ng Beacon Chain \{#beacon-chain}
 
@@ -159,7 +175,9 @@ Noong mag-merge ang Beacon Chain at Ethereum execution layer noong ika-15 ng Set
   Iba pang detalye tungkol sa The Merge
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Paano ako makakalahok? \{#get-involved}
 

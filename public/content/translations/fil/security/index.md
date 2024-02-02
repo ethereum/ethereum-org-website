@@ -8,7 +8,9 @@ lang: fil
 
 Sa pag-usbong ng interes sa mga cryptocurrency, mahalagang matutunan ang pinakamagagandang kagawian sa paggamit ng cryptocurrency. Maaaring nakakatuwa at nakakasabik ang crypto, pero mayroon ding mga seryosong panganib. Kung isasagawa mo ang maliliit na gawain na ito sa simula, maiiwasan mo ang mga panganib na ito.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Pangunahing kaalaman sa seguridad sa web \{#web-security}
 
@@ -88,7 +90,9 @@ Para sa mga gusto pang paigtingin ang 2FA, gumamit ng security key. Ang mga secu
 
 Manood pa tungkol sa 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### I-uninstall ang mga browser extension \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Ang mga browser extension tulad ng mga Chrome extension o Add-on para sa Firefox
 
 [Iba pang detalye tungkol sa mga panganib ng mga browser extension](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Pangunahing kaalaman sa seguridad ng crypto \{#crypto-security}
 
@@ -117,7 +123,9 @@ Ang isa sa mga pangunahing dahilan kung bakit nasa-scam ang mga tao sa crypto ay
 <DocLink to="/eth/">
   Ano ang ether?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Seguridad ng wallet \{#wallet-security}
 
@@ -160,7 +168,9 @@ Maraming Ethereum wallet ang nag-aalok ng mga proteksyon ng limitasyon para hind
 
 [Paano bawiin ang smart contract access sa iyong crypto funds](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Mga karaniwang scam \{#common-scams}
 
@@ -264,7 +274,9 @@ Sa mga airdrop scam, may scam project na mag-e-airdrop ng asset (NFT, token) sa 
 
 [Iba pang detalye tungkol sa mga airdrop scam](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Karagdagang pagbabasa \{#further-reading}
 
@@ -289,4 +301,6 @@ Sa mga airdrop scam, may scam project na mag-e-airdrop ng asset (NFT, token) sa 
 - [Pag-iwas sa Mga Scam](https://bitcoin.org/en/scams)- _Bitcoin.org_
 - [Twitter thread tungkol sa mga karaniwang crypto phishing email at message](https://twitter.com/tayvano_/status/1516225457640787969)- _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

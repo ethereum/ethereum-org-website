@@ -47,7 +47,9 @@ Semak semula butiran transaksi. Semak kadar pertukaran dan sebarang yuran lain u
 Anda boleh melihat perkembangan transaksi tersebut pada mana-mana peneroka blok rantai. Proses ini sepatutnya tidak mengambil masa lebih daripada 10 minit.
 
 Anda akan secara automatik menerima token yang ditukar dalam dompet anda sebaik sahaja transaksi diproses.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Mahu belajar lebih lanjut?</div>

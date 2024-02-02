@@ -8,7 +8,9 @@ lang: nl
 
 Met de groeiende belangstelling voor cryptocurrencies is het leren van beste praktijken bij het gebruik van cryptocurrency essentieel. Crypto kan leuk en opwindend zijn, maar er zijn ook serieuze risico's. Als u deze kleine hoeveelheid werk vooraf verricht, kunt u deze risico's beperken.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Webbeveiliging 101 \{#web-security}
 
@@ -88,7 +90,9 @@ Voor degenen die de volgende stap in 2FA willen zetten, overweeg een beveiliging
 
 Bekijk meer over 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Maak de installatie van browserextensies ongedaan \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Browserextensies zoals Chrome-extensies of add-ons voor Firefox kunnen de functi
 
 [Meer over de risico's van browserextensies](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Crypto beveiliging 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ Een van de grootste redenen waarom mensen zich in het algemeen laten misleiden i
 <DocLink to="/eth/">
   Wat is ether?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Portemonneebeveiliging \{#wallet-security}
 
@@ -158,7 +166,9 @@ Sta bij interactie met slimme contracten geen onbeperkte bestedingslimieten toe.
 
 Veel Ethereum-portemonnees bieden limieten aan bescherming tegen het leeglopen van rekeningen.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Veelvoorkomende scams \{#common-scams}
 
@@ -262,7 +272,9 @@ Airdrop scams hebben betrekking op een scamproject waarmee een activum (NFT, tok
 
 [Meer over airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Lees verder \{#further-reading}
 

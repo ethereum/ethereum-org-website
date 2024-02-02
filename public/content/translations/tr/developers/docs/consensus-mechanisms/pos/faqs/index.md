@@ -20,7 +20,9 @@ Hisse ispatı, doğrulayıcılar olarak bilinen düğümlerin, açıkça bir kri
 
 İş ispatı ile hisse ispatı arasındaki farklılıklar tartışmalı bir konudur. [Vitalik Buterin'in blogu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ve Justin Drake ile Lyn Alden arasındaki tartışma, argümanların iyi bir özetini sunmaktadır.
 
-<YouTube id="1m12zgJ42dI" />
+{
+	<YouTube id="1m12zgJ42dI" />
+}
 
 ## Hisse ispatı enerji açısından verimli mi? \{#is-pos-energy-efficient}
 

@@ -10,6 +10,7 @@ isOutdated: true
 
 Az Ethereum blokklánc összes fontos mérföldkövének, forkjának és frissítésének idővonala.
 
+{
 <ExpandableCard title="Mik azok a forkok?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 A forkok a hálózat nagyobb technikai frissítései vagy változtatásai esetében jönnek létre – általában az [Ethereum Fejlesztési Javaslatokból (EIP-k)](/eips/) származnak és megváltoztatják a protokoll "szabályait".
@@ -19,14 +20,19 @@ Amikor a hagyományos, központi irányítású szoftverek esetében szükséges
 Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új blokkok jöhetnek létre az új szabályok vagy a régiek szerint. A forkokról általában előzetes egyezség születik, így a kliensek együttesen vezetik be a változtatásokat és a változásokkal rendelkező fork válik a fő lánccá. Azonban néha előfordul nézeteltérés a forkokat illetően, mely a lánc megmaradó kettészakadását eredményezi - a legismertebb ilyen eset az Ethereum Classic létrejötte volt a [DAO forkkal](#dao-fork).
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2020 \{#2020}
 
 ### Beacon Chain genesis \{#beacon-chain-genesis}
 
-<NetworkUpgradeSummary name="beaconChainGenesis" />
+{
+	<NetworkUpgradeSummary name="beaconChainGenesis" />
+}
 
 #### Összefoglaló \{#beacon-chain-genesis-summary}
 
@@ -42,7 +48,9 @@ A [Beacon Chain](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 
 ### A letétbe helyezési szerződés aktiválása \{#staking-deposit-contract}
 
-<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+{
+	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+}
 
 #### Összefoglaló \{#deposit-contract-summary}
 
@@ -58,7 +66,9 @@ A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#st
 
 ### Muir Glacier \{#muir-glacier}
 
-<NetworkUpgradeSummary name="muirGlacier" />
+{
+	<NetworkUpgradeSummary name="muirGlacier" />
+}
 
 #### Összefoglaló \{#muir-glacier-summary}
 
@@ -67,19 +77,25 @@ A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/
 - [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Olvasd el az Ethereum Cat Herder magyarázatát](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="Muir Glacier EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) – _újabb 4,000,000 blokkal, vagy ~611 nappal késlelteti a nehézségi bomba bekövetkezését._
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2019 \{#2019}
 
 ### Istanbul \{#istanbul}
 
-<NetworkUpgradeSummary name="istanbul" />
+{
+	<NetworkUpgradeSummary name="istanbul" />
+}
 
 #### Összefoglaló \{#istanbul-summary}
 
@@ -93,6 +109,7 @@ Az Istanbul fork:
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="Istanbul EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _adatvédelmet biztosító valuták használata az Ethereumon, mint a Zcash._
@@ -103,12 +120,15 @@ Az Istanbul fork:
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _egyéb opkód gáz változtatások._
 
 </ExpandableCard>
+}
 
 ---
 
 ### Constantinople \{#constantinople}
 
-<NetworkUpgradeSummary name="constantinople" />
+{
+	<NetworkUpgradeSummary name="constantinople" />
+}
 
 #### Összefoglaló \{#constantinople-summary}
 
@@ -120,6 +140,7 @@ A Constantinople fork:
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="Constantinople EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – _bizonyos on-chain műveletek díjának optimalizálása._
@@ -128,14 +149,19 @@ A Constantinople fork:
 - [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _A blokklánc lefagyásának megakadályozása, mielőtt a proof-of-stake bevezetésre kerülne._
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2017 \{#2017}
 
 ### Byzantium \{#byzantium}
 
-<NetworkUpgradeSummary name="byzantium" />
+{
+	<NetworkUpgradeSummary name="byzantium" />
+}
 
 #### Összefoglaló \{#byzantium-summary}
 
@@ -148,6 +174,7 @@ A Byzantium fork:
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="Byzantium EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _`REVERT` opkód hozzáadása._
@@ -161,14 +188,19 @@ A Byzantium fork:
 - [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _a [nehézségi bomba](/glossary/#difficulty-bomb) késleltetése 1 évvel és a blokk jutalom 5-ről 3-ra csökkentése._
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2016 \{#2016}
 
 ### Spurious Dragon \{#spurious-dragon}
 
-<NetworkUpgradeSummary name="spuriousDragon" />
+{
+	<NetworkUpgradeSummary name="spuriousDragon" />
+}
 
 #### Összefoglaló \{#spurious-dragon-summary}
 
@@ -180,6 +212,7 @@ A Spurious Dragon fork volt a második válasz a szolgáltatás megtagadásos (D
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="Spurious Dragon EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _megakadályozza, hogy az Ethereum láncról származó tranzakciókat újra lehessen küldeni egy másik láncon, például egy tesztnet tranzakciót újra küldeni a fő Ethereum hálózatra._
@@ -188,12 +221,15 @@ A Spurious Dragon fork volt a második válasz a szolgáltatás megtagadásos (D
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _megváltoztatja a maximális kód méretet, mellyel egy blokkláncon lévő szerződés rendelkezhet – 24576 bájtra._
 
 </ExpandableCard>
+}
 
 ---
 
 ### Tangerine whistle \{#tangerine-whistle}
 
-<NetworkUpgradeSummary name="tangerineWhistle" />
+{
+	<NetworkUpgradeSummary name="tangerineWhistle" />
+}
 
 #### Összefoglaló \{#tangerine-whistle-summary}
 
@@ -203,18 +239,22 @@ A Tangerine Whistle fork volt a első válasz a szolgáltatás megtagadásos (Do
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="Tangerine Whistle EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _a gázár növelése olyan opkódoknál, melyet lehet használni a spam támadásoknál._
 - [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _csökkenti az állapot méretet nagy számú üres számlák törlésével, melyek hozzá lettek adva az állapothoz nagyon alacsony költséggel az Ethereum korábbi verziói hibái miatt._
 
 </ExpandableCard>
+}
 
 ---
 
 ### DAO fork \{#dao-fork}
 
-<NetworkUpgradeSummary name="daoFork" />
+{
+	<NetworkUpgradeSummary name="daoFork" />
+}
 
 #### Összefoglaló \{#dao-fork-summary}
 
@@ -230,7 +270,9 @@ Némely bányász nem volt hajlandó forkolni, mivel a DAO incidens nem a protok
 
 ### Homestead \{#homestead}
 
-<NetworkUpgradeSummary name="homestead" />
+{
+	<NetworkUpgradeSummary name="homestead" />
+}
 
 #### Összefoglaló \{#homestead-summary}
 
@@ -238,6 +280,7 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="Homestead EIP-k" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _módosítja a szerződés létrehozás folyamatát._
@@ -245,14 +288,19 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _bevezeti a devp2p előrefelé történő kompatibilitási elvárásokat_
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2015 \{#2015}
 
 ### Frontier thawing \{#frontier-thawing}
 
-<NetworkUpgradeSummary name="frontierThawing" />
+{
+	<NetworkUpgradeSummary name="frontierThawing" />
+}
 
 #### Összefoglaló \{#frontier-thawing-summary}
 
@@ -264,7 +312,9 @@ A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet
 
 ### Frontier \{#frontier}
 
-<NetworkUpgradeSummary name="frontier" />
+{
+	<NetworkUpgradeSummary name="frontier" />
+}
 
 #### Összefoglaló \{#frontier-summary}
 
@@ -272,13 +322,17 @@ A Frontier egy működő, de teljesen leegyszerűsített implementációja volt 
 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2014 \{#2014}
 
 ### Ether eladás \{#ether-sale}
 
-<NetworkUpgradeSummary name="etherSale" />
+{
+	<NetworkUpgradeSummary name="etherSale" />
+}
 
 A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
 
@@ -288,19 +342,25 @@ A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
 
 ### Sárga könyv kiadása \{#yellowpaper}
 
-<NetworkUpgradeSummary name="yellowpaperRelease" />
+{
+	<NetworkUpgradeSummary name="yellowpaperRelease" />
+}
 
 A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műszaki meghatározása.
 
 [A Sárga Könyv megtekintése](https://github.com/ethereum/yellowpaper)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2013 \{#2013}
 
 ### A fehérkönyv kiadása \{#whitepaper}
 
-<NetworkUpgradeSummary name="yellowpaperRelease" />
+{
+	<NetworkUpgradeSummary name="yellowpaperRelease" />
+}
 
 A bemutatkozó kiadvány, melyet Vitalik Buterin az Ethereum alapítója adott ki 2013-ban, a projekt 2015-ös indulása előtt.
 

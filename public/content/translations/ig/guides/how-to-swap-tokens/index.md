@@ -47,7 +47,9 @@ Nyochaa nkọwa nke azụmahịa ahụ. Lelee ọnụego mgbanwe na ụgwọ ọ
 I nwere ike ịlele ọganihu nke azụmahịa ahụ n'ihe nchọgharị blọkchen ọbụla. Usoro a ekwesịghị iwe ihe karịrị nkeji 10.
 
 Ị ga-enweta tokin nke a gbanwere n'akpa ego ịntanetị gị ozugbo e mechara azụmahịa ahụ.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chọrọ ịmụtakwu?</div>

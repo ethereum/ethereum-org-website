@@ -43,7 +43,9 @@ Há muitas maneiras de descrever o Ethereum, mas no fundo é uma blockchain. As 
 
 Cada [bloco](/developers/docs/blocks/) tem uma referência ao bloco que veio antes dele; o `parentHash` é simplesmente o hash do bloco anterior.
 
+{
 <FeaturedText>Observação: o Ethereum faz uso regular de <a href="https://wikipedia.org/wiki/Hash_function">funções hash</a> para produzir valores de tamanho fixo ("hashes"). Os hashes desempenham um papel importante no Ethereum, mas você pode pensar neles como IDs exclusivos por enquanto.</FeaturedText>
+}
 
 ![Um diagrama que retrata uma blockchain incluindo os dados dentro de cada bloco](./blockchain-diagram.png)
 
@@ -59,7 +61,9 @@ Esta nova pilha de tecnologia descentralizada gerou novas ferramentas de desenvo
 
 Os desenvolvedores do Python que querem interagir com o Ethereum provavelmente usem a [Web3.py](https://web3py.readthedocs.io/). Web3.py é uma biblioteca que simplifica muito a forma como você se conecta a um nó Ethereum, e depois envia e recebe dados dele.
 
+{
 <FeaturedText>Nota: "Nó Ethereum" e "Cliente Ethereum" são usados de forma intercambiável. Em ambos os casos, refere-se ao software que um participante da rede Ethereum executa. Este software pode ler dados de blocos, receber atualizações quando novos blocos são adicionados à cadeia ("minerado"), transmitir novas transações e muito mais.</FeaturedText>
+}
 
 [Clientes Ethereum](/developers/docs/nodes-and-clients/) podem ser configurados para serem acessíveis por [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTPS ou Websockets, então Web3. y precisará espelhar esta configuração. Web3.py refere-se a estas opções de conexão como **provedores**. Você vai querer escolher um dos três provedores para vincular a instância da Web3.py ao seu nó.
 
@@ -81,7 +85,9 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 Neste guia, vamos trabalhar apenas com um interpretador de Python. Não criaremos nenhum diretório, arquivos, classes ou funções.
 
+{
 <FeaturedText>Observação: nos exemplos abaixo, os comandos que começam com `$` devem ser executados no terminal. (Não digite o `$`, ele apenas significa o início da linha.)</FeaturedText>
+}
 
 Primeiro, instale [IPython](https://ipython.org/) para explorar em um ambiente amigável. IPython propõe, entre outros, um recurso de autopreenchimento com tab, o que facilita a navegação no Web3.py.
 
@@ -288,7 +294,9 @@ Out[13]: 1000003000000000000000000
 
 O último parece bem! O saldo foi de 1.000.000 a 1.000.003 ether. Mas o que aconteceu com a primeira conta? Parece ter perdido um pouco mais de três ether. Infelizmente, nada na vida é gratuito, e o uso da rede pública Ethereum requer que você compense os seus pares pelo papel de apoio deles. A small transaction fee was deducted from the account making the transaction to the tune of 31000 wei.
 
+{
 <FeaturedText>Observação: na rede pública, as taxas de transação são variáveis baseadas na demanda da rede e na rapidez com que você gostaria que uma transação fosse processada. Se você estiver interessado em ver como as taxas são calculadas, veja minha publicação anterior sobre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">como transações são incluídas em um bloco</a>.</FeaturedText>
+}
 
 ## Agora uma pausa \{#and-breathe}
 

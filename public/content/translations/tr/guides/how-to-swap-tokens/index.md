@@ -47,7 +47,9 @@ Borsa otomatik olarak alacağınız token miktarını hesaplayacaktır.
 Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz. Süreç 10 dakikadan fazla sürmemelidir.
 
 İşlem yapıldığında otomatik olarak takas edilmiş token'ları cüzdanınıza alacaksınız.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>

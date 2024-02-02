@@ -14,6 +14,7 @@ Podemos dividir o fornecimento de ETH em duas forças principais: emissão e que
 
 A **emissão** de ETH é o processo de criação de ETH que não existia anteriormente. A **queima** de ETH é quando o ETH existente é destruído, removendo-o de circulação. A taxa de emissão e de queima é calculada com base em vários parâmetros, e o saldo entre eles determina a taxa de inflação / deflação resultante de ether.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="Emissão de ETH tldr">

@@ -45,27 +45,37 @@ Kapag pinapatakbo mo ang sarili mong node, dapat kang maglaan ng oras para alami
 
 Kung mas nauunawaan mo ang software na iyong pinapatakbo at kung paano gumagana ang patunay ng stake, mas maliit ang panganib bilang staker, at mas madaling ayusin ang anumang problema na maaari mong kaharapin kalaunan bilang operator ng node.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kumportable sa mga computer" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 Kapag nagse-set up ng node, kailangang kumportableng gumamit ng mga computer, bagama't pinapadali ito ng mga bagong tool sa paglipas ng panahon. Makakatulong kung nauunawaan ang command-line interface, pero hindi na ito lubos na kinakailangan.
 
 Ito rin ay nangangailangan ng napaka-basic na hardware setup, at pag-unawa sa minimum na inirerekomendang specs.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Secure na pamamahala ng key" eventCategory="SoloStaking" eventName="clicked secure key management">
 Tulad kung paano sine-secure ng mga pribadong key ang iyong Ethereum address, kakailanganin mong gumawa ng mga key na para mismo sa iyong validator. Dapat mong maunawaan kung paano panatilihing ligtas at secure ang anumang seed phrase o pribadong key.{' '}
 
 <a href="/security/">Seguridad at pag-iwas sa scam ng Ethereum</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
 May mga pagkakataon na papalya ang hardware, magkakaroon ng error sa mga koneksyon sa network, at may mga pagkakataong kakailanganing i-upgrade ang software ng client. Ang pangangalaga sa node ay hindi maiiwasan at kakailanganin mo itong bigyan ng pansin paminsan-minsan. Kakailanganin mong tiyaking magiging updated ka sa anumang inaasahang upgrade sa network, o iba pang mahahalagang pag-upgrade sa client.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Maaasahang uptime" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 Ang iyong mga reward ay nakabatay sa oras na online ang iyong validator at maayos ang pag-attest. Magpapataw ng penalty para sa downtime na nakabatay sa bilang ng iba pang validator na offline sa parehong panahon, ngunit <a href="#faq">hindi ito magreresulta sa slashing</a>. Ang bandwidth ay mahalaga rin, dahil nababawasan ang mga reward para sa mga attestation na hindi natatanggap sa tamang oras. Mag-iiba-iba ang mga kahingian, pero inirerekomenda ang hindi bababa sa 10 Mb/s na up at down.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Panganib ng slashing" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Naiiba sa mga penalty sa kawalan ng aktibidad na ipapataw dahil sa pagiging offline, ang <em>slashing</em> ay isang mas matinding penalty na ipinapataw para sa mga mapaminsalang pagkilos. Sa pamamagitan ng pagpapatakbo ng isang minority client nang naka-load ang iyong mga key sa iisang machine lang sa bawat pagkakataon, lumiliit ang panganib na makaranas ka ng slashing. Sa kabila nito, dapat alam ng lahat ng staker ang mga panganib ng slashing.
 
@@ -73,11 +83,15 @@ Naiiba sa mga penalty sa kawalan ng aktibidad na ipapataw dahil sa pagiging offl
 </ExpandableCard>
 </InfoGrid>
 
-<StakingComparison page="solo" />
+{
+	<StakingComparison page="solo" />
+}
 
 ## Paano ito gumagana \{#how-it-works}
 
-<StakingHowSoloWorks />
+{
+	<StakingHowSoloWorks />
+}
 
 Habang aktibo ka, magkakaroon ka ng mga ETH reward, na ide-deposito paminsan-minsan sa iyong withdrawal address.
 
@@ -89,7 +103,9 @@ Kung gusto mo, maaari kang umalis bilang validator, kung kaya, hindi mo na kaila
 
 Ang Staking Launchpad ay isang open source na application na tutulong sa iyong maging staker. Gagabayan ka nito sa pagpili ng iyong mga client, paggawa ng mga key mo at pagdedeposito ng ETH mo sa staking deposit contract. May checklist na ibinibigay upang tiyakin na nagawa mo ang lahat para ligtas na ma-set up ang iyong validator.
 
-<StakingLaunchpadWidget />
+{
+	<StakingLaunchpadWidget />
+}
 
 ## Ano ang dapat isaalang-alang sa mga tool para sa node at client setup \{#node-tool-considerations}
 
@@ -97,17 +113,23 @@ Dumarami ang mga tool at serbisyo na tutulong sa iyong i-solo stake ang ETH mo, 
 
 Ang mga attribute indicator ay ginagamit sa ibaba upang ipahiwatig ang mga kapansin-pansing kalakasan o kahinaan ng isang nakalistang staking tool. Gamitin ang seksyong ito bilang sanggunian sa kung paano namin tinutukoy ang mga attribute na ito habang pumipili ka ng mga tool na tutulong sa iyong staking journey.
 
-<StakingConsiderations page="solo" />
+{
+	<StakingConsiderations page="solo" />
+}
 
 ## Tingnan ang mga tool para sa pag-set up ng node at client \{#node-and-client-tools}
 
 May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin ang mga indicator sa itaas para magabayan ka sa mga tool sa ibaba.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### Mga tool para sa node
 
-<StakingProductsCardGrid category="nodeTools" />
+{
+	<StakingProductsCardGrid category="nodeTools" />
+}
 
 Tandaan ang kahalagahan ng pagpili ng [minority client](/developers/docs/nodes-and-clients/client-diversity/) dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Ang mga tool na nagbibigay-daan sa iyong mag-set up ng minority client ay tinutukoy bilang <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
 
@@ -115,24 +137,31 @@ Tandaan ang kahalagahan ng pagpili ng [minority client](/developers/docs/nodes-a
 
 Ang mga tool na ito ay maaaring gamitin bilang alternatibo sa [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) upang tumulong sa paggawa ng key.
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
 
 ## Tingnan ang mga gabay sa solo staking \{#staking-guides}
 
-<StakingGuides />
+{
+	<StakingGuides />
+}
 
 ## Mga karaniwang itanong \{#faq}
 
 Ilan ito sa mga pinakakaraniwang tanong tungkol sa staking na mahalagang malaman.
 
+{
 <ExpandableCard title="Ano ang validator?">
 
 Ang <em>validator</em> ay isang virtual entity sa Ethereum at nakikilahok sa consensus ng Ethereum protocol. Ang mga validator ay kinakatawan ng isang balanse, pampublikong key, at iba pang property. Ang <em>validator client</em> ang software na kumikilos para sa validator sa pamamagitan ng pangangasiwa at paggamit sa pribadong key nito. Maaaring mangasiwa ang isang validator client ng maraming pares ng key, na nagkokontrol ng maraming validator.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Puwede ba akong magdeposito ng mahigit 32 ETH?">
 Ang bawat key-pair na nauugnay sa isang validator ay nangangailangan ng eksaktong 32 ETH para ma-activate. Ang pagdedeposito ng mas maraming ETH sa isang set ng mga key ay hindi nagpapalaki sa posibildad na makakuha ng mga reward, dahil limitado ang bawat validator sa <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">epektibong balanse</a> na 32 ETH. Ibig sabihin nito, isinasagawa ang staking nang kada 32 ETH, kung saan may sariling set ng mga key at balanse ang bawat isa.
 
@@ -140,7 +169,9 @@ Huwag magdeposito ng mahigit 32 ETH para sa isang validator. Hindi nito mapapar
 
 Kung masyadong matrabaho para sa iyo ang solo staking, pag-isipang gumamit ng <a href="/staking/saas/">staking-as-a-service</a> provider, o kung wala ka pang 32 ETH, tingnan ang <a href="/staking/pools/">mga staking pool</a>.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Masa-slash ba ako kung mag-o-offline ako? (tldr: Hindi.)">
 Ang pagiging offline kapag maayos na nagfa-finalize ang network ay HINDI magreresulta sa slashing. Magkakaroon ng maliliit na <em>penalty para sa kawalan ng aktibidad</em> kung ang iyong validator ay hindi available na magpatunay para sa isang partikular na epoch (tumatagal nang 6.4 minuto ang bawat isa), ngunit labis itong naiiba sa <em>slashing</em>. Ang mga penalty na ito ay bahagyang mas kaunti kaysa sa reward na maaari mo sanang makuha kung available para magpatunay ang validator, at mababawi ang mga pagkalugi sa pamamagitan ng halos katumbas na panahon ng pagiging online ulit.
 
@@ -148,7 +179,9 @@ Tandaan na ang mga penalty para sa kawalan ng aktibidad ay nakabatay sa bilang n
 
 Sa mga sukdulang sitwasyon, kung hihinto sa pag-finalize ang network dahil offline ang mahigit sa isang-katlo ng mga validator, mapeperhuwisyo ang mga user ng <em>quadratic inactivity leak</em>, na labis na pagkaubos ng ETH mula sa mga offline na validator account. Binibigyang-daan nito ang network na ayusin ang sarili nito sa pamamagitan ng paggamit ng ETH ng mga hindi aktibong validator hanggang sa maging 16 ETH ang kanilang balanse, at sa puntong iyon, awtomatiko silang aalisin sa validator pool. Kalaunan, mapupunan ulit ng mga natitirang online na validator ang 2/3 ng network, na siyang sasapat sa supermajority na kinakailangan para maisapinal ulit ang chain.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Paano ko masisigurong hindi ako masa-slash?">
 Sa madaling salita, hindi ito ganap na masisigurado, ngunit kung kikilos ka nang walang masamang hangarin, magpapatakbo ka ng minority client at papanatilihin mo lang ang mga signing key mo sa isang machine sa bawat pagkakataon, halos zero ang tsansang masa-slash ka.
 
@@ -163,7 +196,9 @@ Ang mga katumbas na bug sa isang <em>minority client ay hindi kailanman maisasap
   <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Magbasa pa tungkol sa pag-iwas sa slashing</a></li>
 </ul>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Aling client ang pinakamahusay?">
 Maaaring medyo magkakaiba ang performance at user interface ng mga indibidwal na client, dahil ginawa ang bawat isa sa mga ito ng iba't ibang team gamit ang iba't ibang programming language. Gayunpaman, wala sa mga ito ang "pinakamahusay." Ang lahat ng production client ay magagandang uri ng software na nagsasagawa ng mga pangunahing function na mag-sync at mag-interact sa blockchain.
 
@@ -171,7 +206,9 @@ Dahil ibinibigay ng lahat ng production client ang parehong basic functionality,
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Magbasa pa tungkol sa kung bakit mahalaga ang client diversity</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Puwede bang VPS (virtual private server) na lang ang gamitin ko?">
 Bagama't maaaring gumamit ng virtual private server (VPS) bilang pamalit sa home hardware, ang pisikal na access at lokasyon ng iyong validator client <em>ay mahalaga</em>. Sa tulong ng mga centralized cloud solution tulad ng Amazon Web Services o Digital Ocean, hindi na kailangang kumuha at magpatakbo ng hardware, ngunit ang kapalit nito ay pag-centralize sa network.
 
@@ -179,7 +216,9 @@ Kapag mas maraming validator client ang tumatakbo sa isang centralized cloud sto
 
 Ang mga penalty sa pagiging offline ay nakabatay sa bilang ng iba pang provider na offline sa parehong panahon. Kapag gumamit ng VPS, mas mapapalaki ang panganib na mas magiging matindi ang ipapataw na penalty sa pagiging offline, at mapapalaki nito ang posibilidad na makaranas ka ng quadratic leaking o slashing kung sakaling maging masyadong malaki ang outage. Upang mapaliit ang panganib para sa iyo at sa network, lubos na hinihikayat ang mga user na kumuha at magpatakbo ng sarili nilang hardware.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Paano ko maa-unlock ang aking mga reward o paano maibabalik sa akin ang ETH ko?">
 
 Ang anumang uri ng withdrawal mula sa Beacon Chain ay nangangailangan ng pagtatakda ng mga kredensyal sa pag-withdraw.
@@ -192,6 +231,7 @@ Upang ma-unlock at maibalik ang iyong buong balanse, dapat mo ring tapusin ang p
 
 <ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
+}
 
 ## Karagdagang pagbabasa \{#further-reading}
 

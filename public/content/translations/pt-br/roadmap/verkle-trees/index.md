@@ -15,11 +15,13 @@ As Verkle Trees (um composto de "Vector commitment" e "Merkle Trees") são uma e
 
 As Verkle Trees são uma etapa essencial no caminho para clientes Ethereum sem estado. Os clientes sem estado são aqueles que não precisam armazenar todo o banco de dados de estado para validar os blocos recebidos. Em vez de usar a própria cópia local do estado do Ethereum para verificar os blocos, os clientes sem estado usam uma "testemunha" dos dados de estado que chegam com o bloco. Uma testemunha é uma coleção de partes individuais dos dados de estado necessários para executar um conjunto específico de transações e uma prova criptográfica de que a testemunha é realmente parte dos dados completos. A testemunha é usada _em vez_ do banco de dados do estado. Para que isso funcione, as testemunhas precisam ser muito pequenas, de modo que possam ser transmitidas com segurança pela rede a tempo de serem processadas pelos validadores em um espaço de 12 segundos. A estrutura de dados de estado atual não é adequada, porque as testemunhas são muito grandes. As Verkle Trees resolvem esse problema ao permitir testemunhas pequenas, removendo uma das principais barreiras aos clientes sem estado.
 
+{
 <ExpandableCard title="Por que queremos clientes sem estado?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Atualmente, os clientes Ethereum usam uma estrutura de dados conhecida como Patricia Merkle Trie para armazenar os dados de estado. As informações sobre contas individuais são armazenadas como folhas na "trie", e os pares de folhas são transformados em hash repetidamente até que fique apenas um único hash. Esse hash final é conhecido como "root" (raiz). Para verificar os blocos, os clientes Ethereum executam todas as transações em um bloco e atualizam a "trie" de estado local. O bloco é considerado válido se a raiz da árvore local for idêntica à fornecida pelo proponente do bloco, pois qualquer diferença no cálculo feito pelo proponente do bloco e pelo nó de validação faria com que o hash da raiz fosse completamente diferente. O problema com isso é que a verificação da cadeia de blocos exige que cada cliente armazene toda a "trie" de estado do bloco principal e em diversos blocos históricos (o padrão no Geth é manter os dados de estado de 128 blocos atrás do principal). Isso exige que os clientes tenham acesso a uma grande quantidade de espaço em disco, o que é uma barreira para a execução de nós completos em hardware barato e de baixo consumo de energia. Uma solução para isso é atualizar a "trie" de estado para uma estrutura mais eficiente (Verkle Tree) que pode ser resumida usando uma pequena "testemunha" dos dados que podem ser compartilhados, em vez dos dados de estado completos. A reformatação dos dados de estado em uma Verkle Tree é uma porta de entrada para a mudança para clientes sem estado.
 
 </ExpandableCard>
+}
 
 ## O que é uma testemunha e por que precisamos dela? \{#what-is-a-witness}
 
@@ -31,11 +33,13 @@ A estrutura de uma Merkle Trie faz com que as testemunhas sejam muito grandes, g
 
 No esquema de compromisso polinomial, as testemunhas têm tamanhos gerenciáveis que podem ser facilmente transferidos na rede ponto a ponto. Isso permite que os clientes verifiquem as alterações de estado em cada bloco com uma quantidade mínima de dados.
 
+{
 <ExpandableCard title="Em que nível as Verkle Trees podem reduzir o tamanho da testemunha?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 O tamanho da testemunha varia de acordo com o respectivo número de folhas. Se a testemunha tiver mil folhas, uma testemunha de uma Merkle Trie terá aproximadamente 3,5 MB (supondo 7 níveis para a trie). Uma testemunha dos mesmos dados em uma Verkle Tree (supondo 4 níveis para a árvore) teria cerca de 150 kB, **aproximadamente 23 vezes menor**. Essa redução no tamanho da testemunha permitirá que as testemunhas de clientes sem estado sejam aceitavelmente pequenas. As testemunhas polinomiais são de 0,128 a 1 kB, dependendo do compromisso polinomial específico usado.
 
 </ExpandableCard>
+}
 
 ## Qual é a estrutura de uma Verkle Tree? \{#what-is-the-structure-of-a-verkle-tree}
 

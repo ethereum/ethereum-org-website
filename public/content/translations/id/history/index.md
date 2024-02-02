@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 Linimasa semua tonggak sejarah, fork, dan pembaruan utama dalam blockchain Ethereum.
 
+{
 <ExpandableCard title="Apa itu fork?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Garpu terjadi ketika ada perubahan atau peningkatan teknis yang signifikan yang perlu dilakukan pada jaringan - biasanya berasal dari <a href="/eips/">Proposal Peningkatan Ethereum (EIP)</a> dan mengubah "aturan" protokol.
@@ -18,23 +19,29 @@ Ketika peningkatan diperlukan dalam perangkat lunak tradisonal yang dikontrol se
 Aturan-aturan ini dapat mengubah pemisahan sementara di jarinagn ini. Blok baru dapat dibuat berdasarkan peraturan baru atau lama. Fork biasanya disepakati sebelumnya sehingga klien mengadopsi perubahan secara bersamaan dan fork dengan peningkatan menjadi rantai utama. Namun, dalam kasus yang jarang terjadi, perselisihan mengenai garpu dapat menyebabkan jaringan terbagi secara permanen - yang paling terkenal adalah terciptanya Ethereum Classic dengan <a href="#dao-fork">fork DAO</a>.
 
 </ExpandableCard>
+}
 
 Langsung menuju informasi tentang beberapa peningkatan penting di masa lalu: [Rantai Suar](/roadmap/beacon-chain/); [Penggabungan](/roadmap/merge/); dan [EIP-1559](#london)
 
 Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang upgrade mendatang pada peta perjalanan Ethereum](/roadmap/).
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2023 \{#2023}
 
 ### Shanghai \{#shanghai}
 
-<NetworkUpgradeSummary name="shanghai" />
+{
+	<NetworkUpgradeSummary name="shanghai" />
+}
 
 #### Ringkasan \{#shanghai-summary}
 
 Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan dengan peningkatan Capella, ini memungkinkan blok menerima operasi penarikan, yang memungkinkan para staker menarik ETH mereka dari Rantai Suar ke lapisan eksekusi.
 
+{
 <ExpandableCard title="EIP Shanghai" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,6 +53,7 @@ Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan 
 </ul>
 
 </ExpandableCard>
+}
 
 - [Baca spesifikasi meningkatkan Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -53,7 +61,9 @@ Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan 
 
 ### Capella \{#capella}
 
-<NetworkUpgradeSummary name="capella" />
+{
+	<NetworkUpgradeSummary name="capella" />
+}
 
 #### Ringkasan \{#capella-summary}
 
@@ -66,13 +76,17 @@ Peningkatan ini juga menyediakan fungsionalitas pemindaian akun otomatis, yang t
 - [Lebih lanjut tentang penarikan penaruhan](/staking/withdrawals/).
 - [Baca spesifikasi peningkatan Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2022 \{#2022}
 
 ### Paris (Penggabungan) \{#paris}
 
-<NetworkUpgradeSummary name="paris" />
+{
+	<NetworkUpgradeSummary name="paris" />
+}
 
 #### Ringkasan \{#paris-summary}
 
@@ -80,6 +94,7 @@ Peningkatan Paris dipicu oleh rantai blok bukti kerja mencapai [total tingkat ke
 
 - [Baca spesifikasi peningkatan Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="EIP Paris" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,12 +103,15 @@ Peningkatan Paris dipicu oleh rantai blok bukti kerja mencapai [total tingkat ke
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Bellatrix \{#bellatrix}
 
-<NetworkUpgradeSummary name="bellatrix" />
+{
+	<NetworkUpgradeSummary name="bellatrix" />
+}
 
 #### Ringkasan \{#bellatrix-summary}
 
@@ -105,7 +123,9 @@ Peningkatan Bellatrix adalah peningkatan terjadwal kedua untuk [Rantai Suar](/ro
 
 ### Gray Glacier \{#gray-glacier}
 
-<NetworkUpgradeSummary name="grayGlacier" />
+{
+	<NetworkUpgradeSummary name="grayGlacier" />
+}
 
 #### Ringkasan \{#gray-glacier-summary}
 
@@ -113,6 +133,7 @@ Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty
 
 - [EF Blog - Pengumuman Pembaruan Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="EIP Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,14 +141,19 @@ Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2021 \{#2021}
 
 ### Arrow Glacier \{#arrow-glacier}
 
-<NetworkUpgradeSummary name="arrowGlacier" />
+{
+	<NetworkUpgradeSummary name="arrowGlacier" />
+}
 
 #### Ringkasan \{#arrow-glacier-summary}
 
@@ -136,6 +162,7 @@ Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty
 - [Blog EF - Pengumuman Peningkatan Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Peningkatan Arrow Glacier Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="EIP Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,12 +170,15 @@ Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Altair \{#altair}
 
-<NetworkUpgradeSummary name="altair" />
+{
+	<NetworkUpgradeSummary name="altair" />
+}
 
 #### Ringkasan \{#altair-summary}
 
@@ -166,7 +196,9 @@ Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu r
 
 ### London \{#london}
 
-<NetworkUpgradeSummary name="london" />
+{
+	<NetworkUpgradeSummary name="london" />
+}
 
 #### Ringkasan \{#london-summary}
 
@@ -176,6 +208,7 @@ Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 - [Baca pengumuman Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIP London" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,12 +220,15 @@ Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Berlin \{#berlin}
 
-<NetworkUpgradeSummary name="berlin" />
+{
+	<NetworkUpgradeSummary name="berlin" />
+}
 
 #### Ringkasan \{#berlin-summary}
 
@@ -201,6 +237,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 - [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIP Berlin" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,14 +248,19 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2020 \{#2020}
 
 ### Genesis Rantai Suar \{#beacon-chain-genesis}
 
-<NetworkUpgradeSummary name="beaconChainGenesis" />
+{
+	<NetworkUpgradeSummary name="beaconChainGenesis" />
+}
 
 #### Ringkasan \{#beacon-chain-genesis-summary}
 
@@ -234,7 +276,9 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 
 ### Kontrak setoran penaruhan dibuat \{#staking-deposit-contract}
 
-<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+{
+	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+}
 
 #### Ringkasan \{#deposit-contract-summary}
 
@@ -250,7 +294,9 @@ Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekos
 
 ### Muir Glacier \{#muir-glacier}
 
-<NetworkUpgradeSummary name="muirGlacier" />
+{
+	<NetworkUpgradeSummary name="muirGlacier" />
+}
 
 #### Ringkasan \{#muir-glacier-summary}
 
@@ -259,6 +305,7 @@ Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 - [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Baca penjelasan Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="EIP Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,14 +313,19 @@ Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2019 \{#2019}
 
 ### Istanbul \{#istanbul}
 
-<NetworkUpgradeSummary name="istanbul" />
+{
+	<NetworkUpgradeSummary name="istanbul" />
+}
 
 #### Ringkasan \{#istanbul-summary}
 
@@ -287,6 +339,7 @@ Garpu Istanbul:
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -299,12 +352,15 @@ Garpu Istanbul:
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Constantinople \{#constantinople}
 
-<NetworkUpgradeSummary name="constantinople" />
+{
+	<NetworkUpgradeSummary name="constantinople" />
+}
 
 #### Ringkasan \{#constantinople-summary}
 
@@ -316,6 +372,7 @@ Fork Konstantinopel:
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP Konstantinopel" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -326,14 +383,19 @@ Fork Konstantinopel:
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2017 \{#2017}
 
 ### Byzantium \{#byzantium}
 
-<NetworkUpgradeSummary name="byzantium" />
+{
+	<NetworkUpgradeSummary name="byzantium" />
+}
 
 #### Ringkasan \{#byzantium-summary}
 
@@ -346,6 +408,7 @@ Fork Byzantium:
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -361,14 +424,19 @@ Fork Byzantium:
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2016 \{#2016}
 
 ### Spurious Dragon \{#spurious-dragon}
 
-<NetworkUpgradeSummary name="spuriousDragon" />
+{
+	<NetworkUpgradeSummary name="spuriousDragon" />
+}
 
 #### Ringkasan \{#spurious-dragon-summary}
 
@@ -380,6 +448,7 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -390,12 +459,15 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Tangerine whistle \{#tangerine-whistle}
 
-<NetworkUpgradeSummary name="tangerineWhistle" />
+{
+	<NetworkUpgradeSummary name="tangerineWhistle" />
+}
 
 #### Ringkasan \{#tangerine-whistle-summary}
 
@@ -405,6 +477,7 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EIP Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -413,12 +486,15 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Garpu DAO \{#dao-fork}
 
-<NetworkUpgradeSummary name="daoFork" />
+{
+	<NetworkUpgradeSummary name="daoFork" />
+}
 
 #### Ringkasan \{#dao-fork-summary}
 
@@ -434,7 +510,9 @@ Beberapa penambang menolak melakukan garpu karena insiden DAO bukan merupakan ke
 
 ### Homestead \{#homestead}
 
-<NetworkUpgradeSummary name="homestead" />
+{
+	<NetworkUpgradeSummary name="homestead" />
+}
 
 #### Ringkasan \{#homestead-summary}
 
@@ -442,6 +520,7 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIP Homestead" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -451,14 +530,19 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2015 \{#2015}
 
 ### Thawing frontier \{#frontier-thawing}
 
-<NetworkUpgradeSummary name="frontierThawing" />
+{
+	<NetworkUpgradeSummary name="frontierThawing" />
+}
 
 #### Ringkasan \{#frontier-thawing-summary}
 
@@ -471,7 +555,9 @@ Garpu thawing frontier mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/
 
 ### Garis depan \{#frontier}
 
-<NetworkUpgradeSummary name="frontier" />
+{
+	<NetworkUpgradeSummary name="frontier" />
+}
 
 #### Ringkasan \{#frontier-summary}
 
@@ -479,13 +565,17 @@ Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini
 
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2014 \{#2014}
 
 ### Penjualan Ether \{#ether-sale}
 
-<NetworkUpgradeSummary name="etherSale" />
+{
+	<NetworkUpgradeSummary name="etherSale" />
+}
 
 Ether secara resmi mulai dijual selama 42 hari. Anda dapat membelinya dengan BTC.
 
@@ -495,19 +585,25 @@ Ether secara resmi mulai dijual selama 42 hari. Anda dapat membelinya dengan BTC
 
 ### Yellowpaper dirilis \{#yellowpaper}
 
-<NetworkUpgradeSummary name="yellowpaperRelease" />
+{
+	<NetworkUpgradeSummary name="yellowpaperRelease" />
+}
 
 Yellow Paper, yang ditulis oleh Dr. Gavin Wood, adalah definisi teknis dari protokol Ethereum.
 
 [Lihat Yellow Paper](https://github.com/ethereum/yellowpaper)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2013 \{#2013}
 
 ### Kertas putih dirilis \{#whitepaper}
 
-<NetworkUpgradeSummary name="whitepaperRelease" />
+{
+	<NetworkUpgradeSummary name="whitepaperRelease" />
+}
 
 Makalah pengantar, diterbitkan pada tahun 2013 oleh Vitalik Buterin, pendiri Ethereum, sebelum peluncuran proyek pada tahun 2015.
 

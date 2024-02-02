@@ -5,7 +5,9 @@ lang: tr
 incomplete: true
 ---
 
+{
 <FeaturedText>Python tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin</FeaturedText>
+}
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 

@@ -10,7 +10,7 @@ Gas is essential to the Ethereum network. It is the fuel that allows it to opera
 
 To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/) and the [EVM](/developers/docs/evm/).
 
-## What is gas? \{##what-is-gas}
+## What is gas? \{#what-is-gas}
 
 Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.
 
@@ -27,7 +27,7 @@ For example, instead of saying that your gas costs 0.000000001 ether, you can sa
 
 The word 'gwei' is a contraction of 'giga-wei', meaning 'billion wei'. One gwei is equal to one billion wei. Wei itself (named after [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), creator of [b-money](https://www.investopedia.com/terms/b/bmoney.asp)) is the smallest unit of ETH.
 
-## How are gas fees calculated? \{##how-are-gas-fees-calculated}
+## How are gas fees calculated? \{#how-are-gas-fees-calculated}
 
 You can set the amount of gas you are willing to pay when you submit a transaction. By offering a certain amount of gas, you are bidding for your transaction to be included in the next block. If you offer too little, validators are less likely to choose your transaction for inclusion, meaning your transaction may execute late or not at all. If you offer too much, you might waste some ETH. So, how can you tell how much to pay?
 
@@ -49,7 +49,7 @@ i.e. `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
 When Jordan sends the money, 1.000252 ETH will be deducted from Jordan's account. Taylor will be credited 1.0000 ETH. The validator receives the tip of 0.000042 ETH. The `base fee` of 0.00021 ETH is burned.
 
-### Base fee \{##base-fee}
+### Base fee \{#base-fee}
 
 Every block has a base fee which acts as a reserve price. To be eligible for inclusion in a block the offered price per gas must at least equal the base fee. The base fee is calculated independently of the current block and is instead determined by the blocks before it - making transaction fees more predictable for users. When the block is created this **base fee is "burned"**, removing it from circulation.
 
@@ -78,23 +78,23 @@ It's also important to note it is unlikely we will see extended spikes of full b
 | ...          |          ... |        12.5% |              ... |
 | 100          |          30M |        12.5% |  10302608.6 gwei |
 
-### Priority fee (tips) \{##priority-fee}
+### Priority fee (tips) \{#priority-fee}
 
 The priority fee (tip) incentivizes validators to include a transaction in the block. Without tips, validators would find it economically viable to mine empty blocks, as they would receive the same block reward. Small tips give validators a minimal incentive to include a transaction. For transactions to be preferentially executed ahead of other transactions in the same block, a higher tip can be added to try to outbid competing transactions.
 
-### Max fee \{##maxfee}
+### Max fee \{#maxfee}
 
 To execute a transaction on the network, users can specify a maximum limit they are willing to pay for their transaction to be executed. This optional parameter is known as the `maxFeePerGas`. For a transaction to be executed, the max fee must exceed the sum of the base fee and the tip. The transaction sender is refunded the difference between the max fee and the sum of the base fee and tip.
 
-### Block size \{##block-size}
+### Block size \{#block-size}
 
 Each block has a target size of 15 million gas, but the size of blocks will increase or decrease in accordance with network demand, up until the block limit of 30 million gas (2x the target block size). The protocol achieves an equilibrium block size of 15 million on average through the process of _tâtonnement_. This means if the block size is greater than the target block size, the protocol will increase the base fee for the following block. Similarly, the protocol will decrease the base fee if the block size is less than the target block size. The amount by which the base fee is adjusted is proportional to how far the current block size is from the target. [More on blocks](/developers/docs/blocks/).
 
-### Calculating gas fees in practice \{##calculating-fees-in-practice}
+### Calculating gas fees in practice \{#calculating-fees-in-practice}
 
 You can explicitly state how much you are willing to pay to get your transaction executed. However, most wallet providers will automatically set a recommended transaction fee (base fee + recommended priority fee) to reduce the amount of complexity burdened onto their users.
 
-## Why do gas fees exist? \{##why-do-gas-fees-exist}
+## Why do gas fees exist? \{#why-do-gas-fees-exist}
 
 In short, gas fees help keep the Ethereum network secure. By requiring a fee for every computation executed on the network, we prevent bad actors from spamming the network. In order to avoid accidental or hostile infinite loops or other computational wastage in code, each transaction is required to set a limit to how many computational steps of code execution it can use. The fundamental unit of computation is "gas".
 
@@ -103,23 +103,23 @@ Although a transaction includes a limit, any gas not used in a transaction is re
 ![Diagram showing how unused gas is refunded](../transactions/gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## What is the gas limit? \{##what-is-gas-limit}
+## What is the gas limit? \{#what-is-gas-limit}
 
 The gas limit refers to the maximum amount of gas you are willing to consume on a transaction. More complicated transactions involving [smart contracts](/developers/docs/smart-contracts/) require more computational work, so they require a higher gas limit than a simple payment. A standard ETH transfer requires a gas limit of 21,000 units of gas.
 
 For example, if you put a gas limit of 50,000 for a simple ETH transfer, the EVM would consume 21,000, and you would get back the remaining 29,000. However, if you specify too little gas, for example, a gas limit of 20,000 for a simple ETH transfer, the EVM will consume your 20,000 gas units attempting to fulfill the transaction, but it will not complete. The EVM then reverts any changes, but since the validator has already done 20k gas units worth of work, that gas is consumed.
 
-## Why can gas fees get so high? \{##why-can-gas-fees-get-so-high}
+## Why can gas fees get so high? \{#why-can-gas-fees-get-so-high}
 
 High gas fees are due to the popularity of Ethereum. If there's too much demand, users must offer higher tip amounts to try and outbid other users' transactions. A higher tip can make it more likely that your transaction will get into the next block. Also, more complex smart contract apps might be doing lots of operations to support their functions, making them consume a lot of gas.
 
-## Initiatives to reduce gas costs \{##initiatives-to-reduce-gas-costs}
+## Initiatives to reduce gas costs \{#initiatives-to-reduce-gas-costs}
 
 The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of the gas fee issues, which will, in turn, enable the platform to process thousands of transactions per second and scale globally.
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
-## What was the London Upgrade / EIP-1559? \{##what-was-the-london-upgrade-eip-1559}
+## What was the London Upgrade / EIP-1559? \{#what-was-the-london-upgrade-eip-1559}
 
 Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to Ethereum.
 
@@ -133,9 +133,11 @@ The implementation of [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) in the
 
 This video explains EIP-1559 and the benefits it brings:
 
-<YouTube id="MGemhK9t44Q" />
+{
+	<YouTube id="MGemhK9t44Q" />
+}
 
-## Monitoring gas fees \{##moitoring-gas-fees}
+## Monitoring gas fees \{#moitoring-gas-fees}
 
 If you want to monitor gas prices, so you can send your ETH for less, you can use many different tools such as:
 
@@ -143,11 +145,11 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Gas estimating Chrome extension supporting both Type 0 legacy transactions and Type 2 EIP-1559 transactions._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculate gas fees in your local currency for different transaction types on Mainnet, Arbitrum, and Polygon._
 
-## Related tools \{##related-tools}
+## Related tools \{#related-tools}
 
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _Gas estimation API powered by Blocknative's global mempool data platform_
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Ethereum Gas Explained](https://defiprime.com/gas)
 - [Reducing the gas consumption of your Smart Contracts](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)

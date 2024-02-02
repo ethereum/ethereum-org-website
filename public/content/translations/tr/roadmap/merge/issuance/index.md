@@ -14,6 +14,7 @@ ETH arzını iki parçaya ayırabiliriz: dağıtma ve yakma.
 
 ETH **dağıtımı**, daha önce var olmayan ETH'in oluşturulma sürecidir. ETH **yakımı**, var olan ETH'in yok edilmesi ve kullanımdan kaldırılmasıdır. Dağıtım ve yakım oranları belirli parametreler kullanılarak hesaplanır ve aralarındaki denge, ortaya çıkan Ether enflasyon/deflasyon oranını belirler.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="ETH dağıtımı &quot;çok uzun, okumadım&quot;">

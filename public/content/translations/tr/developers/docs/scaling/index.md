@@ -92,11 +92,15 @@ Bir Validium zinciri, sıfır bilgi toplamaları gibi doğruluk ispatlarını ku
 
 ## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirme çözümlerini ifade etmek için kullandığına dikkat edin: Biz "Katman 2"yi, güvenliğini katman 1 Ana ağ mutabakatından alan zincir dışı bir çözüm olarak ayırıyoruz._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Daha fazla bilgi \{#further-reading}
 

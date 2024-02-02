@@ -22,7 +22,9 @@ La science décentralisée permet d'accéder à des sources de financement plus 
 
 ### Juan Benet - Le Mouvement DeSci
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## En quoi la DeSci fait avancer la science \{#desci-improves-science}
 

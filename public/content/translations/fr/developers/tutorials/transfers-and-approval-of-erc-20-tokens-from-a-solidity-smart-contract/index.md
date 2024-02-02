@@ -200,7 +200,9 @@ Si tout fonctionne correctement, vous devriez voir 2 événements (un `Transfer`
 
 ![Deux événements dans la transaction : le transfert et la vente](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 À partir de ce tutoriel, nous avons vu comment vérifier le solde et la provision d'un jeton ERC-20 et comment appeler `Transfer` et `TransferFrom` d'un contrat intelligent ERC20 à l'aide de l'interface.
 

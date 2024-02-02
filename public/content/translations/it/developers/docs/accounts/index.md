@@ -114,9 +114,13 @@ Un conto non è un portafoglio. Un conto è la coppia di chiavi per un conto di 
 
 Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiavi.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## Ulteriori letture \{#further-reading}
 

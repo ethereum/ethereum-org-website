@@ -50,7 +50,9 @@ Süreç 10 dakikadan fazla sürmemelidir.
 ## 7. Seçili katman 2 ağını cüzdanınıza ekleyin (opsiyonel)
 
 Ağın RPC detaylarını bulmak için [chainlist.org](http://chainlist.org) sitesini kullanabilirsiniz. Ağ eklendiğinde ve işlem sonlandığında, token'ları cüzdanınızda görmelisiniz.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Daha fazlasını mı öğrenmek istiyorsunuz?</div>

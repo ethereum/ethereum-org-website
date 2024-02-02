@@ -8,7 +8,9 @@ lang: tr
 
 Kripto paralara olan ilgi arttıkça, kripto para kullanmanın en iyi yöntemlerini öğrenmek çok önemlidir. Kripto eğlenceli ve heyecan verici olabilir, ancak ciddi riskleri de vardır. Eğer bu küçük ön çalışmayı uygulamaya koyarsanız, bu riskleri azaltabilirsiniz.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Web güvenliği 101 \{#web-security}
 
@@ -88,7 +90,9 @@ Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanıla
 
 2FA hakkında daha fazlasını izleyin:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Tarayıcı uzantılarını kaldırın \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 
 [Tarayıcı uzantılarının riskleri hakkında daha fazla bilgi](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kripto güvenliği 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 <DocLink to="/eth/">
   Ether nedir?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Cüzdan güvenliği \{#wallet-security}
 
@@ -160,7 +168,9 @@ Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak içi
 
 [Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Yaygın dolandırıcılıklar \{#common-scams}
 
@@ -264,7 +274,9 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 
 [Airdrop dolandırıcılığı hakkında daha fazla bilgi](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Daha fazla bilgi \{#further-reading}
 
@@ -288,4 +300,6 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 - [Dolandırıcılıklardan Kaçınmak](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Yaygın kripto kimlik avı e-postaları ve mesajları hakkında Twitter ileti dizisi](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

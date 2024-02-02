@@ -19,7 +19,9 @@ summaryPoint4: मर्ज ने एथेरियम की ऊर्जा 
 
 मर्ज, एथेरियम की ओरिजिनल निष्पादन परत (मेननेट जो कि [उत्पत्ति](/history/#frontier) के बाद से मौजूद है) के साथ अपनी नई हिस्सेदारी के सबूत सहमति परत, बीकन चेन से जुड़ने की प्रक्रिया थी। इसने ऊर्जा-गहन माईनिंग की ज़रूरत को ख़त्म कर दिया और इसके बजाय नेटवर्क को स्टेक्ड ETH का उपयोग करके सुरक्षित करने में सक्षम बनाया। एथेरियम विज़न—अधिक स्केलेबिलिटी, सुरक्षा और स्थिरता को साकार करने में यह वास्तव में एक रोमांचक कदम था।
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 प्रारंभ में, [बीकन चेन](/roadmap/beacon-chain/) को [मेननेट](/glossary/#mainnet) से अलग से भेजा जाता था। एथेरियम मेननेट को - उसके सभी खातों, बैलेंस, स्मार्ट अनुबंधों और ब्लॉकचेन स्थिति के साथ - [काम के सबूत](/developers/docs/consensus-mechanisms/pow/) के द्वारा सुरक्षित किया जाता रहेगा, भले ही [हिस्सेदारी के सबूत](/developers/docs/consensus-mechanisms/pos/) का उपयोग करके बीकन चेन समानांतर में चलती रहे। मर्ज तब हुआ जब ये दोनों सिस्टम अंत में एक साथ आए, और काम के सबूत को स्थायी रूप से हिस्सेदारी के सबूत से बदल दिया गया।
 
@@ -53,6 +55,7 @@ _यह दोहराया जा सकता है_: एथेरियम
 
 ### नोड ऑपरेटर्स और डिसेंट्रलाइज़ एप्लिकेशन (dapp) डेवलपर \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="स्टेकिंग नोड ऑपरेटर्स और प्रदाता"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ id="staking-node-operators">
 
 `शुल्क प्राप्तकर्ता` सेट नहीं करने पर भी आपके सत्यापनकर्ता को हमेशा की तरह व्यवहार करने की अनुमति मिलेगी, लेकिन आप असंतुलित शुल्क सुझाव और सभी MEV का लाभ नहीं ले पाएँगे जो आपने अन्यथा अपने सत्यापनकर्ता के प्रस्तावों में अर्जित किया होगा।
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="गैर-सत्यापन नोड ऑपरेटर्स और इंफ़्रास्ट्रक्चर प्रदाता"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ id="node-operators">
 ऊपर दिए गए आइटम्स पूरा न करने पर आपका नोड तब तक "ऑफ़लाइन" दिखाई देगा जब तक कि दोनों परतें सिंक और प्रमाणित नहीं हो जाती हैं।
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="डिसेंट्रलाइज़ एप्लिकेशन (dapp) और स्मार्ट अनुबंध डेवलपर"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -102,6 +109,7 @@ id="developers">
 
 अधिक जानकारी के लिए, टिम बीको के इस ब्लॉग पोस्ट को देखें [एथेरियम के एप्लिकेशन को मर्ज कैसे प्रभावित करता है] (https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/)।
 </ExpandableCard>
+}
 
 ## मर्ज और ऊर्जा की खपत \{#merge-and-energy}
 
@@ -113,6 +121,7 @@ id="developers">
 
 ## मर्ज के बारे में ग़लत धारणाएँ \{#misconceptions}
 
+{
 <ExpandableCard
 title="गलत धारणा: &quot;एक नोड को चलाने के लिए स्टेकिंग 32 ETH की आवश्यकता होती है।&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -129,7 +138,9 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 [अपना खुद का नोड चलाने के बारे में और जानें](/run-a-node/)
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="ग़लत धारणा: &quot;मर्ज गैस शुल्क कम करने में विफल रहा।&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -137,7 +148,9 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 
 [रोलअप-केंद्रित रोडमैप](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) के साथ, [परत 2](/परत-2/) पर उपयोगकर्ता गतिविधि को बढ़ाने पर ध्यान केंद्रित किया जा रहा है, परत 1 मेननेट को एक सुरक्षित विकेंद्रीत सेटमलमेंट परत के रूप में सक्षम करते हुए रोलअप डेटा स्टोरेज के लिए अनुकूलित किया गया है, ताकि रोलअप लेनदेन को तेज़ी से किफ़ायती बनाया जा सके। इसे समझने के लिए हिस्सेदारी के सबूत में ट्रांज़िशन की महत्वपूर्ण भूमिका होती है। [गैस और फीस के बारे में और जानकारी।](/डेवलपर/दस्तावेज़/गैस/)
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="ग़लत धारणा: &quot;मर्ज के ज़रिए लेनदेन में काफी तेज़ी आई थी।&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -148,13 +161,17 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 हिस्सेदारी के सबूत ने लेनदेन की अंतिम अवधारणा पेश की जो पहले मौजूद नहीं थी। काम का सबूत में, किसी लेनदेन के शीर्ष पर माइन किए गए प्रत्येक पास होने वाले ब्लॉक के साथ ब्लॉक को वापस लाने की क्षमता तेज़ी से ज़्यादा मुश्किल होती जाती है, लेकिन यह कभी भी शून्य तक नहीं पहुँचती है। हिस्सेदारी का सबूत के तहत, ब्लॉक युग में बंडल किए जाते हैं (6.4 मिनट के समय में ब्लॉक के लिए 32 मौके होते हैं) जिस पर सत्यापनकर्ता वोट करते हैं। जब एक युग समाप्त होता है, तो सत्यापनकर्ता इस बात पर वोट करते हैं कि युग को 'सही' माना जाए या नहीं। अगर सत्यापनकर्ता युग को सही ठहराने के लिए सहमत होते हैं, तो इसे अगले युग में अंतिम रूप दिया जाता है। अंतिम लेनदेन को पूर्ववत करना आर्थिक रूप से ठीक नहीं है क्योंकि इसके लिए कुल स्टेक्ड ETH के एक तिहाई से ज़्यादा प्राप्त करने और हटाने की आवश्यकता होगी।
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="ग़लत धारणा: &quot;मर्ज ने स्टेकिंग निकासी को सक्षम किया।&quot;"
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
 स्टेक्ड ETH और स्टेकिंग पुरस्कार वापस लेने की क्षमता के बिना लॉक किया जाना जारी है। आगामी शंघाई अपग्रेड के लिए निकासी का प्लान है।
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="ग़लत धारणा: &quot;निकासी सक्षम होने पर शंघाई अपग्रेड होने तक सत्यापनकर्ताओं को कोई लिक्विड ETH पुरस्कार नहीं मिलेगा।&quot;"
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
@@ -164,7 +181,9 @@ contentPreview="False. Fee tips/MEV are credited to a non-staking account contro
 
 निष्पादन परत पर ETH को सहमति परत से अलग रखा जाता है। जब उपयोगकर्ता एथेरियम मेननेट पर लेनदेन निष्पादित करते हैं, तो सत्यापनकर्ता को टिप सहित गैस को कवर करने के लिए ETH का भुगतान किया जाना चाहिए। यह ETH पहले से ही निष्पादन स्तर पर है, प्रोटोकॉल द्वारा नया जारी नहीं किया जा रहा है, और सत्यापनकर्ता के लिए तुरंत उपलब्ध है (क्लाइंट सॉफ़्टवेयर को एक उचित `शुल्क प्राप्तकर्ता` पता प्रदान किया गया है)।
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="ग़लत धारणा: &quot;जब हटाना सक्षम होते हैं, तो सभी स्टेकर्स एक साथ बाहर निकल जाएँगे।&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -174,6 +193,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 APR को जानबूझकर डायनेमिक बनाया गया है, जिससे स्टेकर्स के मार्केट को बैलेंस करने की अनुमति मिलती है कि वे नेटवर्क को सुरक्षित करने में मदद के लिए कितना भुगतान करने को तैयार हैं। हटाना सक्षम होने पर, यदि दर बहुत कम है, तो सत्यापनकर्ता प्रोटोकॉल द्वारा सीमित दर पर बाहर निकल जाएँगे। धीरे-धीरे यह उन सभी के लिए APR बढ़ाएगा जो फिर से नए या लौटने वाले स्टेकर्स को आकर्षित कर रहे हैं।
 </ExpandableCard>
+}
 
 ## 'Eth2' का क्या हुआ? \{#eth2}
 
@@ -220,6 +240,10 @@ APR को जानबूझकर डायनेमिक बनाया ग
 
 ## अतिरिक्त पाठ्यसामग्री \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

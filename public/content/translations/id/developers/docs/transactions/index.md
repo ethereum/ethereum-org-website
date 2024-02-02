@@ -173,7 +173,9 @@ Setelah transaksi dikirimkan, proses berikut terjadi:
 
 Tonton Austin memandu Anda dalam transaksi, gas, dan penambangan.
 
-<YouTube id="er-0ihqFQB0" />
+{
+	<YouTube id="er-0ihqFQB0" />
+}
 
 ## Transaksi Bertipe Amplop \{#typed-transaction-envelope}
 

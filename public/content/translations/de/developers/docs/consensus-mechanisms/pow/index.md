@@ -94,7 +94,9 @@ Im Großen und Ganzen hat der Proof-of-Stake dasselbe Ziel wie der Proof-of-Work
 
 ## Eher ein visueller Lerner? \{#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+{
+	<YouTube id="3EUAcxhuoU4" />
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

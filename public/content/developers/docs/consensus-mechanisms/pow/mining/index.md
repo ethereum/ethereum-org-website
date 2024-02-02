@@ -12,7 +12,7 @@ Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mi
 
 To better understand this page, we recommend you first read up on [transactions](/developers/docs/transactions/), [blocks](/developers/docs/blocks/) and [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
 
-## What is Ethereum mining? \{##what-is-ethereum-mining}
+## What is Ethereum mining? \{#what-is-ethereum-mining}
 
 Mining is the process of creating a block of transactions to be added to the Ethereum blockchain in Ethereum's now-deprecated proof-of-work architecture.
 
@@ -22,7 +22,7 @@ Mining ether = Securing the Network
 
 Mining is the lifeblood of any proof-of-work blockchain. Ethereum miners - computers running software - used their time and computation power to process transactions and produce blocks prior to the transition to proof-of-stake.
 
-## Why do miners exist? \{##why-do-miners-exist}
+## Why do miners exist? \{#why-do-miners-exist}
 
 In decentralized systems like Ethereum, we need to ensure that everyone agrees on the order of transactions. Miners helped this happen by solving computationally difficult puzzles to produce blocks, securing the network from attacks.
 
@@ -30,7 +30,7 @@ In decentralized systems like Ethereum, we need to ensure that everyone agrees o
 
 Anyone was previously able to mine on the Ethereum network using their computer. However, not everyone could mine ether (ETH) profitably. In most cases, miners had to purchase dedicated computer hardware, and have access to inexpensive energy sources. The average computer was unlikely to earn enough block rewards to cover the associated costs of mining.
 
-### Cost of mining \{##cost-of-mining}
+### Cost of mining \{#cost-of-mining}
 
 - Potential costs of the hardware necessary to build and maintain a mining rig
 - Electrical cost of powering the mining rig
@@ -39,7 +39,7 @@ Anyone was previously able to mine on the Ethereum network using their computer.
 
 To further explore mining profitability, use a mining calculator, such as the one [Etherscan](https://etherscan.io/ether-mining-calculator) provides.
 
-## How Ethereum transactions were mined \{##how-ethereum-transactions-were-mined}
+## How Ethereum transactions were mined \{#how-ethereum-transactions-were-mined}
 
 The following provides an overview of how transactions were mined in Ethereum proof-of-work. An analogous description of this process for Ethereum proof-of-stake can be found [here](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
 
@@ -56,25 +56,27 @@ The following provides an overview of how transactions were mined in Ethereum pr
 
 Every transaction is mined (included in a new block and propagated for the first time) once, but executed and verified by every participant in the process of advancing the canonical EVM state. This highlights one of the central mantras of blockchain: **Don’t trust, verify**.
 
-## Ommer (uncle) blocks \{##ommer-blocks}
+## Ommer (uncle) blocks \{#ommer-blocks}
 
 Block mining on proof-of-work was probabilistic, meaning sometimes two valid blocks were published simultaneously due to network latency. In this case, the protocol had to determine the longest (and therefore most "valid") chain while ensuring fairness towards miners by partially rewarding the unincluded valid block proposed. This encouraged further decentralization of the network as smaller miners, who might face greater latency, could still generate returns via [ommer](/glossary/#ommer) block rewards.
 
 The term "ommer" is the preferred gender-neutral term for the sibling of a parent block, but this is also sometimes referred to as an "uncle". **Since Ethereum's move to proof-of-stake, ommer blocks are no longer mined** as only one proposer is elected in each slot. You can see this change by viewing the [historical chart](https://ycharts.com/indicators/ethereum_uncle_rate) of the ommer blocks mined.
 
-## A visual demo \{##a-visual-demo}
+## A visual demo \{#a-visual-demo}
 
 Watch Austin walk you through mining and the proof-of-work blockchain.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
-## The mining algorithm \{##mining-algorithm}
+## The mining algorithm \{#mining-algorithm}
 
 Ethereum Mainnet only ever used one mining algorithm - ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Ethhash was the successor to an original R&D algorithm known as ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/).
 
 [More on mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
-## Related topics \{##related-topics}
+## Related topics \{#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

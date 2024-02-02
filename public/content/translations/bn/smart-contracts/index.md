@@ -73,7 +73,9 @@ Szabo একটি ডিজিটাল মার্কেটপ্লেসে
 
 Finematics কে স্মার্ট চুক্তি ব্যাখ্যা করতে দেখুন:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## Further reading \{#further-reading}
 

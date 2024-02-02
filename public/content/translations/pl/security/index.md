@@ -8,7 +8,9 @@ lang: pl
 
 Wraz z rosnącym zainteresowaniem kryptowalutami, poznanie najlepszych praktyk podczas korzystania z kryptowalut jest niezbędne. Kryptowaluty mogą być zabawne i ekscytujące, ale wiążą się też z poważnymi zagrożeniami. Jeśli włożysz tę niewielką ilość wysiłku z góry, możesz zminimalizować to ryzyko.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Bezpieczeństwo sieci 101 \{#web-security}
 
@@ -88,7 +90,9 @@ Dla tych, którzy chcą zrobić kolejny krok w 2FA, warto rozważyć użycie klu
 
 Obejrzyj po więcej informacji o 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Odinstaluj rozszerzenia przeglądarki \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Rozszerzenia przeglądarki, takie jak rozszerzenia Chrome lub dodatki do Firefok
 
 [Więcej o zagrożeniach związanych z rozszerzeniami przeglądarki](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Bezpieczeństwo kryptograficzne 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ Jednym z najczęstszych powodów, dla których ludzie są oszukiwani w kryptowal
 <DocLink to="/eth/">
   Czym jest eter?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Bezpieczeństwo portfela \{#wallet-security}
 
@@ -160,7 +168,9 @@ Wiele portfeli Ethereum oferuje ochronę limitów, aby zabezpieczyć się przed 
 
 [Jak unieważnić dostęp inteligentnych kontraktów do środków kryptowaluty](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Powszechne oszustwa \{#common-scams}
 
@@ -264,7 +274,9 @@ Oszustwa airdrop polegają na tym, że oszust rozdaje aktywa (NFT, token) do por
 
 [Więcej o oszustwach airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Dalsza lektura \{#further-reading}
 
@@ -289,4 +301,6 @@ Oszustwa airdrop polegają na tym, że oszust rozdaje aktywa (NFT, token) do por
 - [Unikanie oszustw](https://bitcoin.org/en/scams) — _Bitcoin.org_
 - [Wątek na Twitterze o powszechnych wiadomościach phishingowych dotyczących kryptowalut](https://twitter.com/tayvano_/status/1516225457640787969) — _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

@@ -43,7 +43,9 @@ Ada banyak cara untuk mendeskripsikan Ethereum, tetapi pada intinya ini adalah s
 
 Setiap [blok](/developers/docs/blocks/) memiliki rujukan ke blok yang ada sebelumnya; `parentHash` merupakan hash dari blok sebelumnya.
 
+{
 <FeaturedText>Catatan: Ethereum selalu memakai <a href="https://wikipedia.org/wiki/Hash_function">fungsi hash</a> untuk menghasilkan nilai ukuran tetap ("hash"). Hash memainkan peran penting di Ethereum, tetapi untuk saat ini Anda bisa menganggapnya sebagai ID unik.</FeaturedText>
+}
 
 ![Diagram yang menggambarkan sebuah blockchain termasuk data di dalam setiap blok](./blockchain-diagram.png)
 
@@ -59,7 +61,9 @@ Tumpukan teknologi terdesentralisasi yang baru ini telah memunculkan peralatan p
 
 Para pengembang Python yang ingin berinteraksi dengan Ethereum lebih mungkin untuk menggunakan [Web3.py](https://web3py.readthedocs.io/). Web3.py adalah sebuah pustaka yang sangat menyederhanakan cara Anda terhubung dengan sebuah node Ethereum, lalu mengirim dan menerima data darinya.
 
+{
 <FeaturedText>Catatan: "node Ethereum" dan "klien Ethereum" digunakan secara bergantian. Dalam kedua kasus tersebut, ini merujuk pada perangkat lunak yang dijalankan oleh seorang peserta di jaringan Ethereum. Perangkat lunak ini dapat membaca data blok, menerima pembaruan ketika blok baru ditambahkan ke rantai ("ditambang"), menyiarkan transaksi baru, dan banyak lagi.</FeaturedText>
+}
 
 [Klien Ethereum](/developers/docs/nodes-and-clients/) dapat dikonfigurasi agar dapat dicapai oleh [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, atau Websocket, sehingga Web3.py perlu menyerupai konfigurasi ini. Web3.py merujuk pada opsi koneksi ini sebagai **penyedia**. Anda akan memilih salah satu dari tiga penyedia untuk menghubungkan instance Web3.py dengan node Anda.
 
@@ -81,7 +85,9 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 Dalam panduan ini, kita hanya akan berkerja di dalam penerjemah Python. Kita tidak akan membuat direktori, file, kelas, atau fungsi apa pun.
 
+{
 <FeaturedText>Catatan: Dalam contoh di bawah, perintah yang dimulai dengan `$` dimaksudkan untuk dijalankan dalam terminalnya. (Jangan mengetik `$`, ini hanya menandakan permulaan baris.)</FeaturedText>
+}
 
 Pertama, instal [IPython](https://ipython.org/) untuk lingkungan ramah pengguna yang dapat dijelajahi. IPython menawarkan penyelesaian tab, di antara fitur lainnya, yang memudahkan untuk melihat apa yang dimungkinkan di Web3.py.
 
@@ -288,7 +294,9 @@ Out[13]: 1000003000000000000000000
 
 Yang terakhir ini tampak baik! Saldonya bertambah dari 1.000.000 ke 1.000.003 ether. Tapi apa yang terjadi pada akun pertama? Tampaknya telah kehilangan lebih dari tiga ether. Sayangnya, tidak ada yang gratis dalam hidup ini, dan menggunakan jaringan publik Ethereum mengharuskan Anda membayar kompensasi kepada para rekan sejawat Anda untuk peran pendukung mereka. Sejumlah kecil biaya transaksi diambil dari akun yang membuat transaksi sebesar 31000 wei.
 
+{
 <FeaturedText>Catatan: Pada jaringan publik, biaya transaksi bervariasi sesuai dengan permintaan jaringan dan seberapa cepat Anda menginginkan sebuah transaksi diproses. Jika Anda tertarik dengan analisa bagaimana biaya dihitung, lihat posting saya sebelumnya tentang <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">bagaimana transaksi dimasukkan ke dalam sebuah blok</a>.</FeaturedText>
+}
 
 ## Dan bernafaslah \{#and-breathe}
 

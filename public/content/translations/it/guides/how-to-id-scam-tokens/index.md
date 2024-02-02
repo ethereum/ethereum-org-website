@@ -15,6 +15,7 @@ Ci sono due modi in cui è probabile che ti ingannino:
 
 Per illustrare cosa sono i token truffa e come identificarli, analizzeremo un esempio di uno di essi: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Questo token cerca di assomigliare al token legittimo [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
+{
 <ExpandableCard
 title="Cosa è ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum è un'organizzazione che sviluppa e gestisce <a href="/developers/docs/scaling/optimistic-rollups/">rollup ottimistici</a>. Inizialmente Arbitrum era organizzata come società a scopo di lucro, ma poi ha preso provvedimenti per decentralizzarsi. Nell'ambito di questo processo, hanno emesso un <a href="/dao/#token-based-membership">token di governance</a> negoziabile.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Perchè il token truffa è chiamato wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ In Ethereum esiste una convenzione per cui, quando una risorsa non è conforme a
 Non ha senso creare una versione wrapped di un token ERC-20 già presente su Ethereum, ma i truffatori si basano sull'apparenza di legittimità piuttosto che sulla realtà sottostante.
 
 </ExpandableCard>
+}
 
 ## Come funzionano i token truffa? \{#how-do-scam-tokens-work}
 
 Lo scopo di Ethereum è la decentralizzazione. Ciò significa che non esiste un'autorità centrale che possa confiscare le tue risorse o impedirti di distribuire un contratto intelligente. Ma ciò significa anche che i truffatori possono distribuire tutti i contratti intelligenti che desiderano.
 
+{
 <ExpandableCard
 title="Cosa sono i contratti intelligenti?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">I contratti intelligenti</a> sono i programmi che vengono eseguiti sulla blockchain di Ethereum. Ogni token ERC-20, ad esempio, è implementato come un contratto intelligente.
 
 </ExpandableCard>
+}
 
 In particolare, Arbitrum ha distribuito un contratto che utilizza il simbolo `ARB`. Ma questo non impedisce ad altre persone di distribuire un contratto che utilizza lo stesso simbolo o uno simile. Chiunque scriva il contratto può stabilire ciò che il contratto farà.
 

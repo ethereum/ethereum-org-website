@@ -16,7 +16,7 @@ This new type of key uses the [**Boneh-Lyn-Shacham (BLS)** signature scheme](htt
 
 Before the switch to proof-of-stake, Ethereum users only had a single elliptic-curve-based private key to access their funds. With the introduction of proof-of-stake, users that wished to be solo stakers also required a **validator key** and a **withdrawal key**.
 
-### The validator key \{##validator-key}
+### The validator key \{#validator-key}
 
 The validator signing key consists of two elements:
 
@@ -35,13 +35,13 @@ This flexibility has the advantage of moving validator signing keys very quickly
 
 The **validator public key** is included in the transaction data when a user deposits ETH to the staking deposit contract. This is known as the _deposit data_ and it allows Ethereum to identify the validator.
 
-### Withdrawal credentials \{##withdrawal-credentials}
+### Withdrawal credentials \{#withdrawal-credentials}
 
 Every validator has a property known as _withdrawal credentials_. This 32-byte field begins with either a `0x00`, representing BLS withdrawal credentials, or a `0x01`, representing credentials that point to an execution address.
 
 Validators with `0x00` BLS keys must update these credentials to point to an execution address in order to activate excess balance payments or full withdrawal from staking. This can be done by providing an execution address in the deposit data during initial key generation, _OR_ by using the withdrawal key at a later time to sign and broadcast a `BLSToExecutionChange` message.
 
-### The withdrawal key \{##withdrawal-key}
+### The withdrawal key \{#withdrawal-key}
 
 The withdrawal key will be required to update withdrawal credentials to point to an execution address, if not set during initial deposit. This will enable excess balance payments to begin being processed, and will also allow users to fully withdraw their staked ETH.
 
@@ -56,7 +56,7 @@ Separating the validator keys from the Ethereum account keys enables multiple va
 
 ![validator key schematic](validator-key-schematic.png)
 
-## Deriving keys from a seed phrase \{##deriving-keys-from-seed}
+## Deriving keys from a seed phrase \{#deriving-keys-from-seed}
 
 If every 32 ETH staked required a new set of 2 completely independent keys, key management would quickly become unwieldy, especially for users running multiple validators. Instead, multiple validator keys can be derived from a single common secret and storing that single secret allows access to multiple validator keys.
 
@@ -90,7 +90,7 @@ Each branch is separated by a `/` so `m/2` means start with the master key and f
 
 ![validator key logic](multiple-keys.png)
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Ethereum Foundation blog post by Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 key generation](https://eips.ethereum.org/EIPS/eip-2333)

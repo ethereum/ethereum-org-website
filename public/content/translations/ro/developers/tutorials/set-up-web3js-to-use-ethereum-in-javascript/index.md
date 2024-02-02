@@ -72,7 +72,9 @@ You can see all the functions available on the Web3 instance in [the official we
 
 Majoritatea bibliotecilor Web3 sunt asincrone, deoarece în fundal biblioteca face apeluri JSON RPC către nodul care trimite înapoi rezultatul.
 
-<Divider />
+{
+	<Divider />
+}
 
 If you are working in the browser, some wallets directly inject a Web3 instance and you should try to use it whenever possible especially if you plan to interact with the user’s Ethereum address to make transactions.
 

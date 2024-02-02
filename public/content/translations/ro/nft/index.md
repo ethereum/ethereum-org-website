@@ -24,7 +24,9 @@ NFT reprezintă un token nefungibil. Nefungibil este un termen economic pe care 
 
 Elementele fungibile, pe de altă parte, pot fi schimbate, pentru că ceea ce le definește este valoarea lor, și nu proprietățile lor unice. De exemplu, ETH-ul sau dolarii sunt fungibili, deoarece 1 ETH / 1 USD poate fi schimbat pentru un alt 1 ETH / 1 USD.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Internetul activelor \{#internet-of-assets}
 
@@ -148,7 +150,9 @@ Uitaţi câteva informații suplimentare despre unele cazuri de utilizare și vi
 - [Articole fizice](#nft-physical-items)
 - [Investiții și garanții](#nfts-and-defi)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Maximizarea veniturilor creatorilor \{#nfts-for-creators}
 
@@ -177,7 +181,9 @@ La urma urmei, valoarea unui lucru pe care îl posedați în mod real este deter
 
 Proprietatea asupra lucrului real verificabil are o valoare mai mare decât dacă nu o dețineți.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Stimularea potențialului de joc \{#nft-gaming}
 
@@ -200,7 +206,9 @@ Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cum
   </ButtonLink>
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Cum se realizează adrese Ethereum mai ușor de reținut \{#nft-domains}
 
@@ -214,7 +222,9 @@ Numele dvs. ENS poate:
 - Să indice un site web descentralizat, cum ar fi [ethereum.eth](https://ethereum.eth.link). [Mai multe despre descentralizarea site-ului dvs. web](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
 - Să stocheze orice informații arbitrare, inclusiv informații de profil, cum ar fi adrese de e-mail și numele de utilizator Twitter.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Elemente fizice \{#nft-physical-items}
 
@@ -224,7 +234,9 @@ Deoarece NFT-urile sunt în esență acte de proprietate, într-o zi ați putea 
 
 Cu active valoroase ca mașinile și proprietățile care pot fi reprezentate pe Ethereum, puteți folosi NFT-urile ca garanție în cadrul unor împrumuturi descentralizate. Acest lucru este de mare ajutor în special dacă nu posedaţi bani sau criptomonede, dar dețineți obiecte fizice de valoare. [Mai multe despre DeFi](/defi/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### NFT-uri și DeFi \{#nfts-and-defi}
 
@@ -259,7 +271,9 @@ Așa cum am menționat, acesta este un domeniu în creștere. NFT-urile, organiz
 
 [Mai multe despre organizațiile DAO](/dao/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ethereum și NFT-urile \{#ethereum-and-nfts}
 
@@ -367,7 +381,9 @@ Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscu
 - [Nu, cripto-artiștii nu fac rău planetei](https://medium.com/superrare/no-cryptoartists-arent-harming-the-planet-43182f72fc61)
 - [Consum de energie cât o țară, niciodată](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Cart Beekhuizen, 18 mai 2021_
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Note de subsol și surse \{#footnotes-and-sources}
 

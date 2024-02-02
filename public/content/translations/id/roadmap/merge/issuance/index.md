@@ -14,6 +14,7 @@ Kita dapat memecah pasokan ETH menjadi dua kekuatan utama: penerbitan dan pembak
 
 **Penerbitan** ETH adalah proses pembuatan ETH yang sebelumnya tidak ada. **Pembakaran** ETH adalah ketika ETH yang ada dihancurkan, menghapusnya dari peredaran. Laju penerbitan dan pembakaran dihitung berdasarkan beberapa parameter, dan keseimbangan di antara keduanya menentukan tingkat inflasi/deflasi ether yang dihasilkan.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="Ringkasan penerbitan ETH">

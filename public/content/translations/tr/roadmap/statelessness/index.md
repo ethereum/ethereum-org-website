@@ -68,12 +68,14 @@ Zayıf durumsuzluk Ethereum düğümlerinin durum değişikliklerini onaylaması
 
 Bunun olabilmesi için [Verkle ağaçları](/roadmap/verkle-trees/) Ethereum istemcilerinde çoktan uygulanmış olmalıdır. Verkle ağaçları, veri yapıları yerine kullanılan, Ethereum depolamada veriye eşler arasında küçük, ayarlanmış tanıklar gönderilmesini sağlayan ve yerel veritabanlarına karşı blok onaylamak yerine direkt olarak blok onaylamak için kullanılan bir yedektir. [Önerici-inşa edici ayrımı](/roadmap/pbs/) ayrıca gereklidir çünkü bu blok oluşturucularının daha güçlü donanımlarla uzmanlaşmış düğümler olmasının önünü açar ve bu uzmanlaşmış düğümler tüm durum verilerine ihtiyaç duyarlar.
 
+{
 <ExpandableCard title="Daha az blok önericisine güvenmek neden sorun değil?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Durumsuzluk blok oluşturucularının tüm durum verilerinin bir kopyasını yönetmesine dayanır, bu sayede bloku onaylaması için tanıklar oluşturabilirler. Diğer düğümlerin ise tüm durum verilerine erişmeye ihtiyaçları yoktur, blokun onayı için gereken tüm bilgiler zaten tanık için ulaşılabilirdir. Bu durum blok önermenin masraflı, ancak blok onaylamanın pahalı olduğu bir olay yaratır, bu da daha az operatörün önerici düğüm için bir blok çalıştırmasıyla sonuçlanır. Ancak, blok önericilerinin merkeziyetsizleştirilmesi olabildiğince çok katılımcının bağımsız olarak önerilen blokların geçerli olduğunu onayladığı sürece çok da kritik bir konu değildir.
 
 <ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Dankrad'ın notlarında daha fazlasını bulabilirsiniz</ButtonLink>
 </ExpandableCard>
+}
 
 Blok önericileri durum verisini "tanıklar" oluşturmak için kullanırlar, bu da durumdaki değerlerin bloktaki işlemler tarafından değiştirdiğini kanıtlayan minimal bir veri kümesidir. Diğer doğrulayıcılar durumu değil, durum kökünü depolarlar (durumun tamamından oluşan bir düğüm). Bir blok ve tanık alırlar ve bu blok ve tanığı durum köklerini güncellemek için kullanırlar. Bu, doğrulama düğümünü oldukça hafifleştirir.
 

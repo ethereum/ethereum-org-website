@@ -73,7 +73,9 @@ Mereka dapat melakukan komputasi, membuat mata uang, menyimpan data, mencetak NF
 
 Tonton Finematics menjelaskan kontrak pintar:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## Bacaan lebih lanjut \{#further-reading}
 

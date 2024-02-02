@@ -15,11 +15,13 @@ Verkle Trees (ein Schachtelwort aus "Vektor-Verpflichtung" und "Merkle Bäumen")
 
 Verkle Bäume sind ein kritischer Schritt hin zu Zustandsfreien Ethereum Clients. Zustandsfreie Clients müssen nicht den ganzen Zustand der Datenbank speichern, um hereinkommende Blöcke prüfen zu können. Anstatt ihre eigene Lokale Kopie von Ethereums' Zustand zur Verifizierung zu verwenden, nutzen zustandsfreie Clients einen "Zeugen" der Zustandsdaten, die mit dem Block ankommen. Ein Zeuge ist eine Ansammlung von Einzelteilen an Zustandsdaten, die benötigt werden, um bestimmte Transaktionen auszuführen und gleichzeitig ein kryptographischer Beweis das der Zeuge wirklich Teil der ganzen Daten ist. Der Zeuge wird _anstatt_ der Zustandsdatenbank verwendet. Damit dies funktioniert, müssen Zeugen sehr klein sein, so dass sie sicher und rechtzeitig über das Netzwerk verteilt werden können, damit Validatoren sie innerhalb des 12 Sekunden Zeitfensters bearbeiten können. Die momentane Zustandsdatenstruktur ist dafür nicht geeignet, weil Zeugen zu groß sind. Verkle Trees lösen dieses Problem, indem sie kleine Zeugen ermöglichen und damit eines der Hauptprobleme der zustandsfreien Clienten entfernen.
 
+{
 <ExpandableCard title="Warum wollen wir zustandsfreie Clients?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Ethereum Clients nutzen momentan eine Datenstruktur, die als Patricia Merkle Trie bekannt ist, um ihre Zustandsdaten zu speichern. Informationen über einzelne Accounts sind als Blätter auf der Baumstruktur gespeichert und Paare von Blättern werden wiederholt gehashed, bis nur ein einzelner Hash bleibt. Der endgültige Hash ist bekannt als die "Wurzel". Um Blöcke zu überprüfen, führen Ethereum Clients alle Transaktionen in einem Block aus und aktualisieren ihren lokalen Zustandsbaum. Der Block wird als gültig angesehen, wenn die Wurzel des lokalen Baumes identisch zu der vom Block-Vorschlagenden ist, weil jeder Unterschied in der Berechnung des Block-Vorschlagenden und der überprüfenden Node einen komplett anderen Wurzelhash ergeben würde. Das Problem hierbei ist, dass die Überprüfung der Blockchain erfordert, dass jeder Client den gesamten Zustandsbaum des Kopf-Blocks und mehrere historische Blöcke (der Standard in Geth ist, die Zustandsdaten für 128 Blöcke hinter dem Kopf zu behalten) erfordert. Dies setzt voraus, dass Clients über große Mengen an Speicherplatz verfügen, was wiederum eine Barriere für günstige ressourcenschonende Hardware ist. Eine Lösung hierfür ist ein Update des Zutandsbaumes auf eine effizientere Struktur (Verkle Tree), die Daten effizient über kleine "Zeugen" teilen kann, anstatt den vollständigen Zustand von Ethereum zu übertragen. Den Datenzustand in Verkle Trees umzuschreiben, ist ein großer Schritt hin zu Zustandsfreien Clients.
 
 </ExpandableCard>
+}
 
 ## Was ist ein Zeuge und warum brauchen wir sie? \{#what-is-a-witness}
 
@@ -31,11 +33,13 @@ Die Struktur eines Merkle Trie erzeugt sehr große Zeugen - zu groß, um sicher 
 
 In einem Polynombindungs-Schema haben die Zeugen überschaubare Größen, die leicht unter Netzwerkteilnehmern versendet werden können. Dies erlaubt Clients, Zustandsveränderungen in jedem Block mit minimaler Menge an Daten zu verifizieren.
 
+{
 <ExpandableCard title="Exakt wieviel können Verkle Bäume die Zeugengröße reduzieren?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Die Größe des Zeugen variiert abhängig von der Anzahl der Blätter, die er enthält. Davon ausgehend, dass ein Zeuge 1000 Blätter abdeckt, wäre ein Zeuge für einen Merkle Baum ungefähr 3,5 MB (von 7 Ebenen im Trie ausgehend). Ein Zeuge für die selben Daten in einem Verkle Baum (von 4 Ebenen zum Baum ausgehend) würde ungefähr 150 kB an Daten ergeben -**etwa 23x kleiner**. Diese Reduktion der Zeugengröße wird Zeugen in zustandsfreien Clients ermöglichen, akzeptabel klein zu sein. Polynomzeugen sind 0,128-1 kB klein (abhängig, welche Polynombindung verwendet wird).
 
 </ExpandableCard>
+}
 
 ## Wie sieht die Struktur von Verkle Bäumen aus? \{#what-is-the-structure-of-a-verkle-tree}
 

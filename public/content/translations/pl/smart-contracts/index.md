@@ -77,7 +77,9 @@ Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać NFT,
 
 Zobacz, jak Finematics tłumaczy inteligentne kontrakty:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## Dalsza lektura \{#further-reading}
 

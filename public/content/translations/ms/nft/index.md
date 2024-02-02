@@ -18,7 +18,9 @@ NFT ialah token yang unik dari segi tersendiri. Setiap NFT mempunyai sifat berbe
 
 Keunikan setiap NFT membolehkan benda seperti karya seni, item koleksi ataupun hartanah ditukar menjadi token, iaitu satu NFT unik yang khusus mewakili item dunia nyata atau item digital yang unik. Pemilikan sesuatu aset dijamin oleh blok rantai Ethereum – tiada siapa dapat mengubah rekod pemilikan atau menyalin/menampal sesuatu NFT baharu sehingga wujud.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Aset Internet \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Laman web ini juga mempunyai nama domain alternatif yang didayakan oleh NFT, **e
 
 [Lebih lanjut mengenai ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Keselamatan NFT \{#nft-security}
 
@@ -89,6 +93,10 @@ Isu keselamatan berhubung dengan NFT paling kerap berkaitan dengan penipuan panc
 - [Piawai token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Piawai token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

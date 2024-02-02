@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 Un viaggio nel tempo per illustrare tutte le principali pietre miliari, diramazioni e gli aggiornamenti della blockchain di Ethereum.
 
+{
 <ExpandableCard title="Cosa sono le diramazioni?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Le diramazioni si verificano quando è necessario apportare importanti aggiornamenti tecnici o modifiche alla rete; in genere derivano da <a href="/eips/">proposte di miglioramento di Ethereum (EIP)</a> e cambiano le "regole" del protocollo.
@@ -18,23 +19,29 @@ Quando sono necessari aggiornamenti in software tradizionali controllati central
 Queste modifiche alle regole potrebbero creare una divisione temporanea nella rete. I nuovi blocchi potrebbero essere creati in base alle nuove regole o a quelle vecchie. Le diramazioni di solito sono concordate in anticipo in modo che i client adottino le modifiche all'unisono e la diramazione legata agli upgrade diventi la catena principale. Tuttavia, in rari casi, disaccordi sulle diramazioni possono causare una divisione permanente della rete, come è successo con la creazione di Ethereum Classic con la <a href="#dao-fork">diramazione DAO</a>.
 
 </ExpandableCard>
+}
 
 Salta direttamente alle informazioni su alcuni degli ultimi aggiornamenti particolarmente importanti: [La Beacon Chain](/roadmap/beacon-chain/); [La Fusione](/roadmap/merge/) ed [EIP-1559](#london)
 
 Stai cercando i prossimi aggiornamenti di protocollo? [Scopri di più sui prossimi aggiornamenti, nella roadmap di Ethereum](/roadmap/).
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2023 \{#2023}
 
 ### Shanghai \{#shanghai}
 
-<NetworkUpgradeSummary name="shanghai" />
+{
+	<NetworkUpgradeSummary name="shanghai" />
+}
 
 #### Riepilogo \{#shanghai-summary}
 
 L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuzione. Insieme all'aggiornamento Capella, questo abiliterà i blocchi ad accettare le operazioni di prelievo, che consentono agli staker di prelevare i propri ETH dalla Beacon Chain al livello d'esecuzione.
 
+{
 <ExpandableCard title="EIP di Shanghai" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,6 +53,7 @@ L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuz
 </ul>
 
 </ExpandableCard>
+}
 
 - [Leggi le specifiche dell'aggiornamento Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -53,7 +61,9 @@ L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuz
 
 ### Capella \{#capella}
 
-<NetworkUpgradeSummary name="capella" />
+{
+	<NetworkUpgradeSummary name="capella" />
+}
 
 #### Riepilogo \{#capella-summary}
 
@@ -66,13 +76,17 @@ L'aggiornamento, inoltre, ha fornito la funzionalità di pulizia automatica dei 
 - [Maggiori informazioni sui prelievi in staking](/staking/withdrawals/).
 - [Leggi le specifiche dell'aggiornamento Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2022 \{#2022}
 
 ### Paris (la Fusione) \{#paris}
 
-<NetworkUpgradeSummary name="paris" />
+{
+	<NetworkUpgradeSummary name="paris" />
+}
 
 #### Riepilogo \{#paris-summary}
 
@@ -80,6 +94,7 @@ L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of
 
 - [Leggi le specifiche dell'aggiornamento Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="EIP Paris" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,12 +103,15 @@ L'aggiornamento Paris è stato attivato dal passaggio da una blockchain proof-of
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Bellatrix \{#bellatrix}
 
-<NetworkUpgradeSummary name="bellatrix" />
+{
+	<NetworkUpgradeSummary name="bellatrix" />
+}
 
 #### Riepilogo \{#bellatrix-summary}
 
@@ -105,7 +123,9 @@ L'aggiornamento Bellatrix è stato il secondo aggiornamento programmato per la [
 
 ### Gray Glacier \{#gray-glacier}
 
-<NetworkUpgradeSummary name="grayGlacier" />
+{
+	<NetworkUpgradeSummary name="grayGlacier" />
+}
 
 #### Riepilogo \{#gray-glacier-summary}
 
@@ -113,6 +133,7 @@ L'aggiornamento della rete di Gray Glacier ha rimandato di tre mesi la [bomba di
 
 - [Blog dell'EF - Annuncio dell'aggiornamento Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="EIP di Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,14 +141,19 @@ L'aggiornamento della rete di Gray Glacier ha rimandato di tre mesi la [bomba di
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2021 \{#2021}
 
 ### Arrow Glacier \{#arrow-glacier}
 
-<NetworkUpgradeSummary name="arrowGlacier" />
+{
+	<NetworkUpgradeSummary name="arrowGlacier" />
+}
 
 #### Riepilogo \{#arrow-glacier-summary}
 
@@ -136,6 +162,7 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 - [Blog dell'EF - Annuncio dell'aggiornamento Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Aggiornamento Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="EIP di Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,12 +170,15 @@ L'aggiornamento di rete Arrow Glacier ha rimandato la [bomba di difficoltà](/gl
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Altair \{#altair}
 
-<NetworkUpgradeSummary name="altair" />
+{
+	<NetworkUpgradeSummary name="altair" />
+}
 
 #### Riepilogo \{#altair-summary}
 
@@ -166,7 +196,9 @@ Altair è stato il primo importante aggiornamento di rete che ha avuto un tempo 
 
 ### London \{#london}
 
-<NetworkUpgradeSummary name="london" />
+{
+	<NetworkUpgradeSummary name="london" />
+}
 
 #### Riepilogo \{#london-summary}
 
@@ -176,6 +208,7 @@ L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIP di London" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,12 +220,15 @@ L'aggiornamento London ha introdotto l'[EIP-1559](https://eips.ethereum.org/EIPS
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Berlin \{#berlin}
 
-<NetworkUpgradeSummary name="berlin" />
+{
+	<NetworkUpgradeSummary name="berlin" />
+}
 
 #### Riepilogo \{#berlin-summary}
 
@@ -201,6 +237,7 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIP di Berlin" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,14 +248,19 @@ L'aggiornamento Berlin ha ottimizzato i costi del carburante per certe azioni de
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2020 \{#2020}
 
 ### Genesi della Beacon Chain \{#beacon-chain-genesis}
 
-<NetworkUpgradeSummary name="beaconChainGenesis" />
+{
+	<NetworkUpgradeSummary name="beaconChainGenesis" />
+}
 
 #### Riepilogo \{#beacon-chain-genesis-summary}
 
@@ -234,7 +276,9 @@ La [Beacon Chain](/roadmap/beacon-chain/) necessita di 16384 depositi da 32 ETH 
 
 ### Distribuzione del contratto di deposito in staking \{#staking-deposit-contract}
 
-<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+{
+	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+}
 
 #### Riepilogo \{#deposit-contract-summary}
 
@@ -250,7 +294,9 @@ Il contratto di deposito in staking ha introdotto lo [staking](/glossary/#stakin
 
 ### Muir Glacier \{#muir-glacier}
 
-<NetworkUpgradeSummary name="muirGlacier" />
+{
+	<NetworkUpgradeSummary name="muirGlacier" />
+}
 
 #### Riepilogo \{#muir-glacier-summary}
 
@@ -259,6 +305,7 @@ La diramazione Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà
 - [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leggi la spiegazione del Cat Herder di Ethereum](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="EIP di Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,14 +313,19 @@ La diramazione Muir Glacier ha introdotto un ritardo nella [bomba di difficoltà
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2019 \{#2019}
 
 ### Istanbul \{#istanbul}
 
-<NetworkUpgradeSummary name="istanbul" />
+{
+	<NetworkUpgradeSummary name="istanbul" />
+}
 
 #### Riepilogo \{#istanbul-summary}
 
@@ -287,6 +339,7 @@ La diramazione Instanbul:
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP di Istanbul" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -299,12 +352,15 @@ La diramazione Instanbul:
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Constantinople \{#constantinople}
 
-<NetworkUpgradeSummary name="constantinople" />
+{
+	<NetworkUpgradeSummary name="constantinople" />
+}
 
 #### Riepilogo \{#constantinople-summary}
 
@@ -316,6 +372,7 @@ La diramazione Constantinople:
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP di Constantinople" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -326,14 +383,19 @@ La diramazione Constantinople:
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2017 \{#2017}
 
 ### Byzantium \{#byzantium}
 
-<NetworkUpgradeSummary name="byzantium" />
+{
+	<NetworkUpgradeSummary name="byzantium" />
+}
 
 #### Riepilogo \{#byzantium-summary}
 
@@ -346,6 +408,7 @@ La diramazione Byzantium:
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIP di Byzantium" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -361,14 +424,19 @@ La diramazione Byzantium:
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2016 \{#2016}
 
 ### Spurious Dragon \{#spurious-dragon}
 
-<NetworkUpgradeSummary name="spuriousDragon" />
+{
+	<NetworkUpgradeSummary name="spuriousDragon" />
+}
 
 #### Riepilogo \{#spurious-dragon-summary}
 
@@ -380,6 +448,7 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIP di Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -390,12 +459,15 @@ La diramazione Spurious Dragon è stata la seconda risposta agli attacchi denial
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Tangerine Whistle \{#tangerine-whistle}
 
-<NetworkUpgradeSummary name="tangerineWhistle" />
+{
+	<NetworkUpgradeSummary name="tangerineWhistle" />
+}
 
 #### Riepilogo \{#tangerine-whistle-summary}
 
@@ -405,6 +477,7 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EIP di Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -413,12 +486,15 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
 ### Diramazione OAD \{#dao-fork}
 
-<NetworkUpgradeSummary name="daoFork" />
+{
+	<NetworkUpgradeSummary name="daoFork" />
+}
 
 #### Riepilogo \{#dao-fork-summary}
 
@@ -434,7 +510,9 @@ Alcuni miner rifiutarono di creare la diramazione perché l'incidente DAO non er
 
 ### Homestead \{#homestead}
 
-<NetworkUpgradeSummary name="homestead" />
+{
+	<NetworkUpgradeSummary name="homestead" />
+}
 
 #### Riepilogo \{#homestead-summary}
 
@@ -442,6 +520,7 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIP di Homestead" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -451,14 +530,19 @@ La diramazione Homestead guardava al futuro. Includeva diverse modifiche al prot
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2015 \{#2015}
 
 ### Frontier thawing \{#frontier-thawing}
 
-<NetworkUpgradeSummary name="frontierThawing" />
+{
+	<NetworkUpgradeSummary name="frontierThawing" />
+}
 
 #### Riepilogo \{#frontier-thawing-summary}
 
@@ -471,7 +555,9 @@ La diramazione Frontier Thawing ha innalzato il limite di 5.000 [gas](/glossary/
 
 ### Frontier \{#frontier}
 
-<NetworkUpgradeSummary name="frontier" />
+{
+	<NetworkUpgradeSummary name="frontier" />
+}
 
 #### Riepilogo \{#frontier-summary}
 
@@ -479,13 +565,17 @@ Frontier è stata un'implementazione operativa ma rudimentale del progetto Ether
 
 [Leggi l'annuncio della Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2014 \{#2014}
 
 ### Vendita di Ether \{#ether-sale}
 
-<NetworkUpgradeSummary name="etherSale" />
+{
+	<NetworkUpgradeSummary name="etherSale" />
+}
 
 Ether fu ufficialmente messo in vendita per 42 giorni. Lo potresti acquistare in Bitcoin.
 
@@ -495,19 +585,25 @@ Ether fu ufficialmente messo in vendita per 42 giorni. Lo potresti acquistare in
 
 ### Pubblicazione dello yellowpaper \{#yellowpaper}
 
-<NetworkUpgradeSummary name="yellowpaperRelease" />
+{
+	<NetworkUpgradeSummary name="yellowpaperRelease" />
+}
 
 Lo Yellow Paper, redatto dal dott. Gavin Wood, è una definizione tecnica del protocollo Ethereum.
 
 [Consulta lo Yellow Paper](https://github.com/ethereum/yellowpaper)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2013 \{#2013}
 
 ### Pubblicazione del whitepaper \{#whitepaper}
 
-<NetworkUpgradeSummary name="whitepaperRelease" />
+{
+	<NetworkUpgradeSummary name="whitepaperRelease" />
+}
 
 Il documento introduttivo, pubblicato nel 2013 da Vitalik Buterin, fondatore di Ethereum, prima del lancio del progetto nel 2015.
 

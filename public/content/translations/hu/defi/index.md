@@ -20,7 +20,9 @@ A DeFi egy gyűjtőfogalom azokra a pénzügyi termékekre és szolgáltatásokr
 
 Egy gyorsan fejlődő kriptogazdaság található itt, ahol Ön is adhat és vehet fel kölcsönt, kereskedhet long/short pozíciókkal, kamatoztathat stb. A kriptóhoz értő argentinok arra használták a DeFi-t, hogy kilépjenek a bénító inflációs helyzetből. Bizonyos vállalatok elkezdték a munkavállalóik fizetést valós időben átutalni (streaming). Néhány személy több millió dollárt érő hitelt vett fel és fizetett vissza anélkül, hogy bármilyen módon igazolnia kellett volna a személyazonosságát.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## A DeFi és a hagyományos pénzügyek összehasonlítása \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ A Bitcoin több szempontból is az első DeFi alkalmazás volt. A Bitcoin lehet�
 
 Az Ethereum is erre épít. A Bitcoinhoz hasonlóan a szabályokat nem változtathatja meg senki, és mindenkinek van hozzáférése. Ezen felül a digitális pénzt programozhatóvá teszi az [okosszerződések](/glossary#smart-contract) által, így az értékek tárolásán és küldésén kívül sok másra is alkalmas.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Programozható pénz \{#programmable-money}
 
@@ -86,7 +90,9 @@ A legtöbb pénzügyi szolgáltatásnak létezik decentralizált alternatívája
 - [Biztosítás vásárlása](#insurance)
 - [Portfóliókezelés](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Azonnali pénzküldés a világ bármelyik pontjára \{#send-money}
 
@@ -102,7 +108,9 @@ Az Ethereumon pénzáramoltatásra is lehetőség van. Ez lehetővé teszi, hogy
 
 Ha pedig nem akar [ETH-t](/eth/) küldeni vagy áramoltatni, mert annak változhat az értéke, akkor alternatív valuták is rendelkezésre állnak az Ethereumon: ezek a stabil érmék.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Stabil pénznemek használata \{#stablecoins}
 
@@ -114,7 +122,9 @@ Az olyan érmék értéke, mint a Dai vagy a USDC, csak néhány centtel változ
   Bővebben a stabil érmékről
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Kölcsönfelvétel \{#lending}
 
@@ -170,7 +180,9 @@ Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajta
 
 [Bővebben a villámkölcsönökről](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Kezdjen el pénzt megtakarítani a kriptóval \{#saving}
 
@@ -203,7 +215,9 @@ A rendelkezésre álló nyeremény abból a kamatból keletkezik, amit a jegyvá
   Próbálja ki a PoolTogether lehetőséget
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Kereskedés a tokenekkel \{#swaps}
 
@@ -215,7 +229,9 @@ Például, ha Ön szeretné használni a veszteség nélküli lottózást, a Poo
   Tovább a tokenes tőzsdékre
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Haladó szintű kereskedés \{#trading}
 
@@ -227,7 +243,9 @@ A centralizált tőzsdéken ehhez képest letétbe kell helyezni az eszközöket
   Tovább a kereskedő dappokhoz
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Portfóliófejlesztés \{#investing}
 
@@ -239,7 +257,9 @@ Egy jó példa erre a [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/d
   Tovább a befektetési dappokhoz
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Közösségi elképzelések finanszírozása \{#crowdfunding}
 
@@ -268,7 +288,9 @@ Eszerint az A projekt, mely 100 adományt kapott, egyenként 1 $ értékben, tö
 
 [Bővebben a kvadratikus finanszírozásról](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Biztosítások \{#insurance}
 
@@ -280,7 +302,9 @@ Az Ethereum termékei, mint bármelyik szoftver, tartalmazhatnak hibákat és se
   Tovább a biztosítási dappokhoz
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Gyűjtőhelyek és portfóliókezelők \{#aggregators}
 
@@ -290,7 +314,9 @@ Amikor ennyi minden zajlik, Önnek is szüksége lehet egy olyan megoldásra, me
   Tovább a portfóliós dappokhoz
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Hogyan működik a DeFi? \{#how-defi-works}
 

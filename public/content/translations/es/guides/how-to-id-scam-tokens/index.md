@@ -15,6 +15,7 @@ Hay dos maneras en las que puede que intenten engañarle:
 
 Para ilustrar lo que son los tókenes estafa y cómo identificarlos, vamos a ver un ejemplo de uno: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Este token intenta parecerse al token legítimo [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
+{
 <ExpandableCard
 title="¿Qué es ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum es una organización que desarrolla y gestiona <a href="/developers/docs/scaling/optimistic-rollups/">rollups (o acumulaciones) optimistas</a>. Inicialmente, Arbitrum se fundó como una empresa con fines lucrativos, pero luego tomó medidas para descentralizarse. Como parte de ese proceso, emitió un <a href="/dao/#token-based-based-membership">token de gobernanza negociable</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="¿Por qué el token estafa se llama wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Hay una convención en Ethereum que dice que cuando un activo no cumple con ERC-
 No tiene sentido crear una versión encubierta de un token ERC-20 que ya está en Ethereum, pero los estafadores confían en la apariencia de legitimidad en lugar de la realidad subyacente.
 
 </ExpandableCard>
+}
 
 ## ¿Cómo funcionan los tókenes estafa? \{#how-do-scam-tokens-work}
 
 La finalidad última de Ethereum es la descentralización. Esto significa que no hay una autoridad central que pueda confiscar sus activos ni impedirle implementar un contrato inteligente. Aunque también significa que los estafadores pueden desplegar cualquier contrato inteligente que deseen.
 
+{
 <ExpandableCard
 title="¿Qué son los contratos inteligentes?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Los contratos inteligentes</a> son los programas que se ejecutan en la parte superior de la cadena de bloques Ethereum. Cada token ERC-20, por ejemplo, se implementa como un contrato inteligente.
 
 </ExpandableCard>
+}
 
 Específicamente, Arbitrum desplegó un contrato que utiliza el símbolo `ARB`. Pero eso no impide que otras personas también desplieguen un contrato que utiliza exactamente el mismo símbolo, o uno similar. Quienquiera que escriba el contrato puede establecer lo que hará el contrato.
 

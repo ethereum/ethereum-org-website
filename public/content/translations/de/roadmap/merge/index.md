@@ -19,7 +19,9 @@ summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca.
 
 Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/history/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 Ursprünglich wurde die [Beacon Chain](/roadmap/beacon-chain/) getrennt vom [Mainnet](/glossary/#mainnet) betrieben. Das Ethereum-Mainnet, mit allen Konten, Kontoständen, Smart Contracts, und des Blockchain-Zustandes, wurde weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) betrieben wurde. Die Zusammenführung fand statt, als diese beiden Systeme schließlich vereint wurden und Proof-of-Work permanent durch Proof-of-Stake ersetzt wurde.
 
@@ -53,6 +55,7 @@ Trotz des Austauschs von Proof-of-Work blieb die gesamte Geschichte von Ethereum
 
 ### Node Operatoren und dApp Entwickler \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Staking Node Operatoren und Anbieter"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node al
 
 Wenn kein "Gebührenempfänger" gesetzt wird, kann sich dein Validator wie üblich verhalten, aber Sie werden auf unverbrannte Gebührentipps verzichten und alle MEV, die Sie sonst in Blöcken verdient hätten, die Ihr Validator vorschlägt.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Nicht-validierende Node-Operatoren und Infrastruktur-Anbieter"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ Schlüssel-Aktionen beinhalten:
 Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node als "offline" betrachtet, bis beide Ebenen synchronisiert und authentifiziert sind.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="dApp und Smart Contract Entwickler"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -105,6 +112,7 @@ The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte
 Weitere Informationen findest Du in diesem Blogartikel von Tim Heiko zum <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Thema The Merge Update: Welche Auswirkungen hat das Ereignis auf die Ethereum-Execution Layer?</a>.
 
 </ExpandableCard>
+}
 
 ## Die Zusammenführung und der Energieverbrauch \{#merge-and-energy}
 
@@ -116,6 +124,7 @@ Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche
 
 ## Misverständnisse über die Zusammenführung \{#misconceptions}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot; Das Betreiben einer Node benötigt 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -133,7 +142,9 @@ Die Möglichkeit für jeden, einen eigenen Node zu betreiben, ist <em>absolut es
 <a href="/run-a-node/">Mehr zum Betrieb eines eigenen Nodes</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot;Der Merge schlug fehl Gasgebühren zu senken.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -143,7 +154,9 @@ Die Gasgebühren sind ein Produkt der Netznachfrage im Verhältnis zur Netzkapaz
 Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a>, die Bemühungen konzentrieren sich auf die Ausweitung der Nutzeraktivitäten auf <a href="/layer-2/">Ebene 2</a>, und gleichzeitig das Ebene 1 Mainnet als sichere dezentrale Abwicklungsschicht zu etablieren, die für die Speicherung von Rollup-Daten optimiert ist und dazu beiträgt, Rollup-Transaktionen exponentiell billiger zu machen. Der Übergang zu Proof-of-Stake ist ein entscheidender Vorläufer für die Umsetzung. <a href="/developers/docs/gas/">Mehr zum Thema Gas-Kosten.</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot;Transaktionen wurden durch den Merge dramatisch beschleunigt.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -154,7 +167,9 @@ Historisch war es nach Proof-of-Work das Ziel, alle ~13.3 Sekunden einen neuen B
 Proof-of-Stake führte das bisher nicht existierende Konzept der Transaktionsfinalität ein. Bei Proof-of-Work wird die Rückgängigmachung eines Blocks exponentiell schwieriger, wenn neue Blöcke auf vorherigen aufgebaut werden, aber es erreicht nie ganz Null. Unter Proof-of-Stake werden Blöcke in Epochen (6,4 Minuten Zeitspanne mit 32 Chancen für Blöcke) gebündelt, über die Validatoren abstimmen. Wenn eine Epoche endet, stimmen die Validatoren darüber ab, ob sie die Epoche als "gerechtfertigt" betrachten sollen. Wenn die Validatoren einverstanden sind, die Epoche zu rechtfertigen, wird sie in der nächsten Epoche fertiggestellt. Abgeschlossene Transaktionen rückgängig zu machen ist wirtschaftlich unrentabel, da sie mehr als ein Drittel der insgesamt eingesetzten ETH einsetzen und verbrennen müssten.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot;Der Merge aktivierte Staking-Auszahlungen.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -166,7 +181,9 @@ Seit des Netzwerk-Upgrades namens Shanghai/Capella können die Staker nun einen 
 <a href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Irrtum: &quot;Jetzt, da der Zusammenschluss abgeschlossen ist und die Abhebungen möglich sind, können alle Staker auf einmal aussteigen.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -178,6 +195,7 @@ Dadurch wird ein Massenexodus der für Staking eingesetzten Mittel verhindert. D
 
 Der effektive Jahreszins ist auch bewusst dynamisch, damit ein Markt von Stakern abwägen kann, wie viel sie bereit sind, für die Sicherung des Netzwerks zu zahlen. Wenn die Rate zu niedrig ist, werden die Validatoren mit einer durch das Protokoll begrenzten Rate aussteigen. Nach und nach wird dadurch die APR für alle erhöht, die bleiben und wieder neue oder wiederkehrende Staker anziehen.
 </ExpandableCard>
+}
 
 ## Was ist mit "Eth2" passiert? \{#eth2}
 
@@ -224,6 +242,10 @@ Pläne für die gemeinsame Nutzung entwickeln sich rasch, aber angesichts des An
 
 ## Weiterführende Informationen \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

@@ -47,7 +47,9 @@ Vérifiez les détails de la transaction. Vérifiez le taux de change et tous le
 Vous pouvez vérifier la progression de la transaction sur n'importe quel explorateur de blockchain. Cette procédure ne devrait pas prendre plus de 10 minutes.
 
 Vous recevez automatiquement les jetons échangés dans votre portefeuille lorsque la transaction est finalisée.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vous voulez en savoir plus ?</div>

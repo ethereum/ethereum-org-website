@@ -66,7 +66,9 @@ O termo "ommer" é o termo neutro de gênero preferido para o irmão de um bloco
 
 Acompanhe o Austin enquanto ele explica como funciona o processo de mineração e o conceito de prova de trabalho da cadeia de blocos.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## O algoritmo de mineração \{#mining-algorithm}
 

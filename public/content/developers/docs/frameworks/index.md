@@ -24,11 +24,11 @@ like:
 - Decentralized app distribution - integrations with storage
   options like IPFS.
 
-## Prerequisites \{##prerequisites}
+## Prerequisites \{#prerequisites}
 
 Before diving into frameworks, we recommend you first read through our introduction to [dapps](/developers/docs/dapps/) and the [Ethereum stack](/developers/docs/ethereum-stack/).
 
-## Available frameworks \{##available-frameworks}
+## Available frameworks \{#available-frameworks}
 
 **Foundry** - **_Foundry is a blazing fast, portable and modular toolkit for Ethereum application development_**
 
@@ -114,10 +114,10 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics \{##related-topics}
+## Related topics \{#related-topics}
 
 - [Set up a local development environment](/developers/local-environment/)

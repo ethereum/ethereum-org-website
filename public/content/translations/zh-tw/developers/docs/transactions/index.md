@@ -172,7 +172,9 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 觀看 Austin 為你講解交易、燃料和挖礦。
 
-<YouTube id="er-0ihqFQB0" />
+{
+	<YouTube id="er-0ihqFQB0" />
+}
 
 ## Typed Transaction Envelope 交易 \{#typed-transaction-envelope}
 

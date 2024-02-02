@@ -37,7 +37,9 @@ Przed aktualizacją Shanghai/Capella nie można było używać ani uzyskiwać do
 
 ### Jak się przygotować? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Ważne informacje \{#important-notices}
 
@@ -76,7 +78,9 @@ To, czy dany walidator kwalifikuje się do wypłaty, czy nie, zależy od stanu s
 
 Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematics:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Walidator „przesunięcia” \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Jak widać, spowalnia to wraz ze wzrostem liczby walidatorów w sieci. Wzrost li
 
 ## Najczęściej zadawane pytania (FAQ) \{#faq}
 
+{
 <ExpandableCard
 title="Czy po podaniu adresu wypłaty mogę go zmienić na inny adres?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Nie, proces dostarczania danych uwierzytelniających do wypłaty jest jednorazowy i nie można go zmienić po przesłaniu.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dlaczego adres wypłaty można ustawić tylko raz?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Adresy wypłat mogą być albo inteligentnym kontraktem (kontrolowanym przez jeg
 
 Jako alternatywę dla zmiany adresu wypłaty dla konkretnego walidatora, użytkownicy mogą zdecydować się na ustawienie inteligentnego kontraktu jako adresu wypłaty, który może obsługiwać obroty klucza, tak jak sejf. Użytkownicy, którzy ustawili swoje środki na własne EOA, mogą wykonać pełne wyjście, aby wypłacić wszystkie zestakowane środki, a następnie ponownie zestakować je przy użyciu nowych danych uwierzytelniających.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Co, jeśli biorę udział w stakingu tokenów lub stakowaniu w puli"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Jeśli jesteś częścią <a href="/staking/pools/">puli stakingowej</a> lub pos
 Ogólnie rzecz biorąc, użytkownicy powinni mieć możliwość odzyskania swoich bazowych stakowanych ETH lub zmiany dostawcy stakingu, z którego korzystają. Jeśli dana pula staje się zbyt duża, środki mogą zostać wycofane, wypłacone i ponownie zestakowane u <a href="https://rated.network/">mniejszego dostawcy</a>. Lub, jeśli zgromadziłeś wystarczającą ilość ETH, możesz <a href="/staking/solo/">stakować z domu</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Czy wypłaty nagród (wypłaty częściowe) odbywają się automatycznie?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Tak, o ile weryfikator podał adres do wypłaty. Należy to podać raz, aby początkowo umożliwić jakiekolwiek wypłaty, a następnie wypłaty nagród będą automatycznie wykonywane co kilka dni przy każdym przesunięciu walidatora.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Czy pełne wypłaty odbywają się automatycznie?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Nie, jeśli Twój walidator jest nadal aktywny w sieci, pełna wypłata nie nast
 Gdy walidator zakończy proces wychodzenia i zakładając, że konto ma dane uwierzytelniające do wypłaty, <em>wtedy</em> pozostanie wypłacone pozostałe saldo podczas następnego <a href="#validator-sweeping">przesunięcia walidatora</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Czy mogę wypłacić niestandardową kwotę?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Wypłaty są zaprojektowane tak, aby były realizowane automatycznie, przenoszą
 
 Nie jest możliwe ręczne żądanie wypłaty określonych kwot ETH.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Obsługuję walidator. Gdzie mogę znaleźć więcej informacji na temat włączania wypłat?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Operatorom walidatorów zaleca się odwiedzenie strony <a href="https://launchpa
 Aby najpierw wypróbować swoją konfigurację w sieci testowej, odwiedź <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a>, aby rozpocząć.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Czy mogę ponownie aktywować mój walidator po wyjściu, wpłacając więcej ETH?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Nie. Po wyjściu walidatora i wypłaceniu jego pełnego salda wszelkie dodatkowe środki wpłacone na jego rzecz zostaną automatycznie przesłane na adres wypłat środków podczas następnego przesunięcia walidatorów. Aby ponownie zestakować ETH, należy aktywować nowy walidator.
 </ExpandableCard>
+}
 
 ## Dalsza lektura \{#further-reading}
 

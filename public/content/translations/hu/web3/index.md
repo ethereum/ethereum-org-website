@@ -10,7 +10,9 @@ A centralizáció segített abban, hogy emberek milliárdjai használják az int
 
 A Web3 a válasz erre a dilemmára. Ahelyett, hogy a web nagy technológiai cégek monopóliuma lenne, a web3 lényege a decentralizáció, így a felhasználók építik, működtetik és birtokolják. A Web3 az egyének kezébe helyezi a hatalmat a cégek helyett. Mielőtt mélyebben elmerülünk a Web3 világában, nézzük meg, hogyan jutottunk el idáig.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## A web korai változatai \{#early-internet}
 
@@ -30,7 +32,9 @@ A web 2.0 periódus 2004-ben indult, amikor megjelentek a közösségimédia-old
 
 ![A web 2.0-t képviselő kliensszerver-architektúra](./web2.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Web 3.0: olvasás-írás-tulajdonlás \{#web3}
 
@@ -158,4 +162,6 @@ A Web3 nincs szigorúan definiálva. A közösségek különböző résztvevői 
 - [A Web3 világa](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [A Web3 vita](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
-<QuizWidget quizKey="web3" />
+{
+	<QuizWidget quizKey="web3" />
+}

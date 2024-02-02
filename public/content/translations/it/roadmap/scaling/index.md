@@ -34,13 +34,17 @@ La seconda fase dell'espansione dei dati di blob è complicata poiché richiede 
 
 Questa seconda fase è nota come [“Danksharding”](/roadmap/danksharding/). Probabilmente, trascorreranno diversi anni prima della sua completa implementazione. Il danksharding si affida ad altri sviluppi come la [separazione della costruzione e della proposta dei blocchi](/roadmap/pbs) e nuovi design della rete che consentano a essa di confermare efficientemente che i dati siano disponibili, campionando casualmente pochi kilobyte per volta, procedimento noto come [campionamento della disponibilità dei dati (o DAS)](/developers/docs/data-availability).
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">Di più sul Danksharding</ButtonLink>
+}
 
 ## Decentralizzare i rollup \{#decentralizing-rollups}
 
 I [rollup](/layer-2) stanno già ridimensionando Ethereum. Un [ecosistema ricco di progetti di rollup](https://l2beat.com/scaling/tvl) sta consentendo agli utenti di eseguire le transazioni rapidamente ed economicamente, con numerose garanzie di sicurezza. Tuttavia, i rollup sono stati avviati utilizzando sequenziatori centralizzati (computer che eseguono tutta l'elaborazione e aggregazione delle transazioni, prima di inviarle a Ethereum). Ciò è vulnerabile alla censura, poiché gli operatori del sequenziatore sono sanzionabili, corrompibili o, compromessi in altri modi. Al contempo, i [rollup variano](https://l2beat.com) nel modo in cui convalidano i dati in entrata. Il metodo migliore è che i "dimostratori" inviino prove di frode o prove di validità, ma non tutti i rollup sono ancora a quel punto. Persino quei rollup che utilizzano le prove di validità/frode, utilizzano un piccolo gruppo di dimostratori noti. Dunque, il prossimo passaggio critico nel ridimensionare Ethereum è distribuire la responsabilità di operare i sequenziatori e i dimostratori, tra più persone.
 
+{
 <ButtonLink variant="outline-color" to="/developers/docs/scaling/">Maggiori informazioni sui rollup</ButtonLink>
+}
 
 ## Stato attuale \{#current-progress}
 

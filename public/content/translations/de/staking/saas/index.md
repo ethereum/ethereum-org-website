@@ -27,7 +27,9 @@ Das Ethereum-Protokoll unterstützt keine Delegation von Staking, daher wurden d
   <Card title="Schränken Sie Ihr Risiko ein" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
-<StakingComparison page="saas" />
+{
+	<StakingComparison page="saas" />
+}
 
 ## Bitte beachten \{#what-to-consider}
 
@@ -35,32 +37,43 @@ Es kommen immer mehr SaaS-Anbieter auf den Markt, die Ihnen beim Staking Ihrer E
 
 Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwächen eines gelisteten SaaS-Anbieters zu signalisieren. Nutzen Sie bei Ihrer Auswahl eines Diensts, dem Sie Ihr Staking anvertrauen möchten, diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren.
 
-<StakingConsiderations page="saas" />
+{
+	<StakingConsiderations page="saas" />
+}
 
 ## Erkunden Sie die Staking-Dienstleister \{#saas-providers}
 
 Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### SaaS-Anbieter
 
-<StakingProductsCardGrid category="saas" />
+{
+	<StakingProductsCardGrid category="saas" />
+}
 
 Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungskunden"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsenskunden"</em>.
 
 ### Schlüssel-Generatoren
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Sie haben einen Vorschlag zu einem SaaS-Anbieter, den wir noch nicht haben? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.
 
 ## Häufig gestellte Fragen \{#faq}
 
+{
 <ExpandableCard title="Wer hält meine Schlüssel?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Die Vereinbarungen unterscheiden sich von Anbieter zu Anbieter. In der Regel werden Sie durch die Einrichtung aller benötigten Signaturschlüssel (einer pro 32 ETH) und das Hochladen dieser Schlüssel zu Ihrem Anbieter geleitet, damit dieser in Ihrem Namen validieren kann. Die Signaturschlüssel allein bieten nicht die Möglichkeit, Ihr Geld abzuheben, zu überweisen oder auszugeben. Sie bieten jedoch die Möglichkeit, Stimmen für einen Konsens abzugeben, was, wenn es nicht richtig gemacht wird, zu Offline-Strafen oder Slashing führen kann.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Also gibt es zwei Gruppen von Schlüsseln?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Ja. Jedes Konto besteht aus BLS-<em>Signaturschlüsseln</em> und BLS-<em>Abhebungsschlüsseln</em>. Damit ein Validator den Zustand der Blockchain attestieren, an Synchronisierungsausschüssen teilnehmen und Blöcke vorschlagen kann, müssen die Signaturschlüssel für einen Validator-Kunden leicht zugänglich sein. Diese müssen in irgendeiner Form mit dem Internet verbunden sein und werden daher naturgemäß als "Hot Keys" betrachtet. Dies ist eine Voraussetzung für Ihren Validator, um attestieren zu können. Daher werden die Schlüssel, die zum Überweisen oder Abheben von Geldern verwendet werden, aus Sicherheitsgründen getrennt.
 
@@ -72,7 +85,9 @@ Das Aktualisieren der Auszahlungsberechtigungen ist ein erforderlicher Schritt, 
 
 \*Staker, die eine Auszahlungsadresse bei der ersten Einzahlung angegeben haben, müssen dies nicht einstellen. Bitte wenden Sie sich an Ihren SaaS-Anbieter, um Unterstützung bei der Vorbereitung Ihres Validators zu erhalten.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Wann kann ich ETH abheben?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Staking Auszahlungen wurden mit der Shanghai/Capella Aktualisierung im April 2023 eingeführt. Staker müssen (sofern nicht bereits bei der Ersteinzahlung geschehen) eine Auszahlungsadresse bereitstellen. Belohnungen werden daraufhin automatisch alle paar Tage in regelmäßigen Abständen ausgezahlt.
 
@@ -80,7 +95,9 @@ Validatoren haben auch die Möglichkeit, ihre Tätigkeit als Validator zu beende
 
 <ButtonLink to="/staking/withdrawals/">Mehr zu Staking-Abhebungen</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Was passiert, wenn ich geslashed werde?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Durch die Nutzung eines SaaS-Anbieters vertrauen Sie den Betrieb Ihrer Nodes jemand anderem an. Dies birgt das Risiko einer schlechten Node-Leistung, auf die Sie keinen Einfluss haben. Falls Ihr Validator geslashed wird, wird Ihr Validator-Guthaben bestraft und zwangsweise aus dem Validator-Pool entfernt.
 
@@ -88,6 +105,7 @@ Nach Abschluss des Slashing-/Austrittsprozesses werden diese Mittel an die dem V
 
 Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anleitung zur Bereitstellung einer Abhebungsadresse wenden Sie sich bitte an Ihren individuellen SaaS-Anbieter. Wenn Sie es vorziehen, die volle Kontrolle über Ihre Validator-Konfiguration zu haben, <a href="/staking/solo/">erfahren Sie mehr darüber, wie Sie Ihre ETH alleine einsetzen können</a>.
 </ExpandableCard>
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

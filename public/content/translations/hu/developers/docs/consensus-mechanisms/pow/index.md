@@ -91,7 +91,9 @@ Nagy vonalakban a proof-of-stake-nek ugyanaz a végcélja, mint a proof-of-work-
 
 ## Ön inkább vizuális típus? \{#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+{
+	<YouTube id="3EUAcxhuoU4" />
+}
 
 ## További olvasnivaló \{#further-reading}
 

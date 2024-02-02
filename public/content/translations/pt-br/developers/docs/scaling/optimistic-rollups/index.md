@@ -247,13 +247,17 @@ Espera-se que a introdução de [particionamento de dados (sharding)](/roadmap/d
 
 Você é o tipo de pessoa que aprende mais com recursos visuais? Assista aos Finematics explicando os optimistic rollups:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
 ### Usar optimistic rollups \{#use-optimistic-rollups}
 
 Há múltiplas implementações de optimistic rollups que você pode integrar aos seus dapps:
 
-<RollupProductDevDoc rollupType="optimistic" />
+{
+	<RollupProductDevDoc rollupType="optimistic" />
+}
 
 ## Leitura adicional sobre optimistic rollups
 

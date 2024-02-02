@@ -13,7 +13,9 @@ Our Websites may use cookies to distinguish you from other users of our Websites
 - **Functionality cookies.** These cookies are used to recognise you when you return to our websites. They may enable us to personalise our content for you, greet you by name, or remember your preferences (for example, your choice of language or region).
 - **Targeting cookies.** These cookies record your visit to our websites, the pages you have visited and the links you have followed.
 
-<MatomoOptOut />
+{
+	<MatomoOptOut />
+}
 
 You can find more information about the individual cookies we may use and the purposes for which we may use them in the table below:
 

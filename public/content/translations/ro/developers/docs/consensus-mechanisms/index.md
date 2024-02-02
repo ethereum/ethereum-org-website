@@ -27,7 +27,9 @@ Aceste mecanisme au fost utilizate timp de decenii pentru a stabili consensul î
 
 Un mecanism de consens într-un sistem cripto-economic ajută şi la prevenirea anumitor tipuri de atacuri economice. În teorie, un atacator poate compromite consensul controlând 51% din rețea. Mecanismele de consens sunt concepute pentru a face imposibil de realizat acest „atac de 51%”. Sunt elaborate diverse mecanisme pentru a rezolva această problemă de securitate în diferite moduri.
 
-<YouTube id="dylgwcPH4EA" />
+{
+	<YouTube id="dylgwcPH4EA" />
+}
 
 ## Tipuri de mecanisme de consens \{#types-of-consensus-mechanisms}
 
@@ -63,7 +65,9 @@ Mai multe despre [dovada-mizei](/developers/docs/consensus-mechanisms/pos/)
 
 Vizionați un videoclip despre diferitele tipuri de mecanisme de consens utilizate pe Ethereum:
 
-<YouTube id="ojxfbN78WFQ" />
+{
+	<YouTube id="ojxfbN78WFQ" />
+}
 
 ### Rezistența Sybil & alegerea lanțului \{#sybil-chain}
 

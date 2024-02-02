@@ -47,7 +47,9 @@ Revise os detalhes da transação. Confira a taxa da corretora e quaisquer outra
 Você pode ver o progresso da transação em qualquer explorador de blockchain. Esse processo não deve demorar mais do que 10 minutos.
 
 Você receberá automaticamente os tokens trocados em sua carteira assim que a transação for processada.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Quer saber mais?</div>

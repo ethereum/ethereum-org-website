@@ -66,7 +66,9 @@ Her işlem bir kez madencilik sürecinden geçer (yeni bir bloka dahil edilir ve
 
 Austin'in madenciliği ve iş ispatı blok zincirini, size açıklamasını izleyin.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## Madencilik algoritması \{#mining-algorithm}
 

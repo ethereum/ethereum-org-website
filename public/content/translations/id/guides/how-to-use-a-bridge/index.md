@@ -50,7 +50,9 @@ Proses ini seharusnya tidak memakan waktu lebih dari 10 menit.
 ## 7. Tambahkan jaringan lapisan ke-2 yang dipilih ke dompet Anda (opsional)
 
 Anda dapat menggunakan [chainlist.org](http://chainlist.org) untuk menemukan detail RPC jaringan. Setelah jaringan ditambahkan dan transaksi selesai, Anda akan melihat token di dompet Anda.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ingin mempelajari selengkapnya?</div>

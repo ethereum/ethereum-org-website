@@ -47,7 +47,9 @@ Tekintse át a tranzakció részleteit. Vessen egy pillantást az átváltási r
 Bármelyik blokkláncböngészővel megtekintheti a tranzakció állapotát. Ez legfeljebb 10 percen belül megtörténik.
 
 A tranzakció végrehajtása után automatikusan megkapja a tárcájába a beszerzett tokent.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Szeretne többet megtudni?</div>

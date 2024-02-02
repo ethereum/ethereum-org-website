@@ -47,7 +47,9 @@ lang: zh-tw
 你可以在任何區塊鏈瀏覽器上查看交易進度。 此過程不會超過 10 分鐘。
 
 交易處理完成後，你的錢包中將自動收到所兌換的代幣。
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>想要學習更多功能嗎？</div>

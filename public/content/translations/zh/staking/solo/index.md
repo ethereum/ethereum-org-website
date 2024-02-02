@@ -45,27 +45,37 @@ summaryPoints:
 
 你对所运行的软件和权益证明的原理了解得越多，作为一名质押人的风险就越小，也越容易解决在节点运行过程中可能出现的任何问题。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="熟悉计算机" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 节点设置要求用户能够熟练使用计算机，尽管随着时间的推移，新的工具正在使其变得更容易。 了解命令行界面会有帮助，但并非必需。
 
 节点设置还需要用户对基本的硬件设置，以及最低推荐规格有一些了解。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="安全的密钥管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像私钥保护以太坊地址的方式一样，你也需要为验证者单独生成密钥。 你必须了解如何保护好助记词或私钥的安全。{' '}
 
 <a href="/security/">以太坊的安全性和防范欺诈</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="维护" eventCategory="SoloStaking" eventName="clicked maintenance">
 硬件设施会发生故障，网络连接会出错，客户端软件也需要升级。 因此节点维护不可避免，需要你偶尔关注。 你要确保知道任何预期的网络升级，或其他关键的客户端升级。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="可靠的正常运行时间" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 你的回报与你的验证者在线并正确验证的时间成正比。 宕机会导致一定比例的处罚，具体与有多少其他验证者同时离线有关，但<a href="#faq">不会导致罚没</a>。 同时网络带宽也很重要，因为如果没有及时收到认证，奖励就会减少。 建议至少要有 10 Mb/s 的上行和下行带宽。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="罚没风险" eventCategory="SoloStaking" eventName="clicked slashing risk">
 与离线导致的怠工处罚不同，<em>罚没</em>是一种更严重的处罚，专门针对恶意违规。 同一时间只在一台机器上运行加载你密钥的客户端，你被罚没的风险可以降到最低。 总得来说，所有质押人都必须意识到被罚没的风险。
 
@@ -127,12 +137,15 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 下面是一些关于质押的最常见问题，值得了解一下。
 
+{
 <ExpandableCard title="什么是验证者？">
 
 <em>验证者</em>是一个虚拟实体，存在于以太坊上并参与以太坊协议的共识。 验证者由余额、公钥和其他属性信息表示。 <em>验证者客户端</em>是通过持有并使用验证者的私钥代表验证者行动的软件。 一个验证者客户端可以持有多个密钥对，从而控制多个验证者。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我能存入超过 32 个以太币吗？">
 每个与验证者相关的密钥对都需要正好 32 个以太币才能激活。 将更多以太币存入一对密钥并不能增加可能获得的奖励，因为每个验证者的<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有效余额</a>被限制为 32 个以太币。 这意味着质押时需要以 32 个以太币为单位递增，每个验证者都有自己的一套密钥和余额。
 
@@ -140,7 +153,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 如果单独质押对你来说要求太高，可以考虑使用<a href="/staking/saas/">质押即服务</a>提供商，或者如果你的资金少于 32 个以太币，则可以考虑<a href="/staking/pools/">联合质押</a>。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="如果我离线了会被罚没吗？ （简单地说：不会）">
 在网络最终确认时下线，不会导致罚没。 如果你的验证者在某个周期（每个周期 6.4 分钟）内无法进行验证，就会导致少量的<em>怠工处罚</em>，但这与<em>罚没</em>有很大不同。 这些处罚比你在验证者可用的情况下获得的奖励要少一些，而且损失可以通过将验证者上线大约相等的时间赚回来。
 
@@ -148,7 +163,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 在极端情况下，如果网络因超过三分之一的验证者离线而停止最终确认，这些验证者将受到所谓的<em>二次怠惰惩罚</em>，离线验证者帐户中的以太币将遭受指数级损失。 这时以太坊网络将通过消耗怠工验证者的以太币进行自我修复，直到他们的余额达到 16 个以太币，此时他们将自动从验证者池中退出。 剩余在线的验证者最终将再次超过 2/3，从而满足再次最终确认链的绝对多数要求。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="如何保证我不会被罚没？">
 简而言之，虽然永远不能完全保证，但如果你真诚行事，运行非主流客户端，并且每次只在一台机器上保留你的签名密钥，你被罚没的风险几乎为零。
 
@@ -163,7 +180,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
   <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">详细了解预防罚没</a></li>
 </ul>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="哪个客户端最好？">
 各个客户端在性能和用户界面方面可能略有不同，因为每个客户端都是由不同的团队使用不同编程语言开发的。 这意味着，它们之中没有“最好的”。 所有生产用客户端都是优秀的软件，它们都执行相同的核心功能，即与区块链进行同步和交互。
 
@@ -171,7 +190,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">详细了解为什么客户端多样性至关重要</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我可以仅使用 VPS（虚拟专用服务器）吗？">
 虽然虚拟专用服务器 (VPS) 可用于替代家庭硬件设施，但你的验证者客户端的物理访问和位置<em>确实很重要</em>。 使用中心化云计算解决方案（如亚马逊网络服务或 Digital Ocean）的便捷之处在于，你不必拥有和操作硬件设施，但代价是网络需要中心化。
 
@@ -179,7 +200,9 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 离线处罚与有多少其他验证者同时离线成正比。 使用虚拟专用服务器会大大增加离线处罚的风险，并在大范围宕机的情况下增加你的二次惩罚或罚没的风险。 为了尽量降低你自己的风险，以及以太坊网络的风险，我们强烈建议用户获取并操作自己的硬件。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我如何解锁我的奖励或收回我的以太币？">
 
 从信标链上进行任何类型的提款都需要设置提款凭据。
@@ -192,6 +215,7 @@ Staking Launchpad 是一个开源应用程序，可帮助你成为质押人。 �
 
 <ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
+}
 
 ## 延伸阅读 \{#further-reading}
 

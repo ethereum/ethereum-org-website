@@ -131,7 +131,9 @@ La implementación de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) en la 
 
 Este vídeo explica el EIP-1559 y los beneficios que conlleva:
 
-<YouTube id="MGemhK9t44Q" />
+{
+	<YouTube id="MGemhK9t44Q" />
+}
 
 ## Vigilar las tarifas de gas \{#moitoring-gas-fees}
 

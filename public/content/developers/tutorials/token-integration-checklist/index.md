@@ -35,7 +35,7 @@ To follow this checklist, you'll want to have this output from Slither for the t
 - **You have contacted the developers.** You may need to alert their team to an incident. Look for appropriate contacts on [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
 - **They have a security mailing list for critical announcements.** Their team should advise users (like you!) when critical issues are found or when upgrades occur.
 
-## ERC conformity \{##erc-conformity}
+## ERC conformity \{#erc-conformity}
 
 Slither includes a utility, [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), that reviews the conformance of a token to many related ERC standards. Use slither-check-erc to review that:
 
@@ -54,14 +54,14 @@ Finally, there are certain characteristics that are difficult to identify automa
 - **Transfer and transferFrom should not take a fee.** Deflationary tokens can lead to unexpected behavior.
 - **Potential interest earned from the token is taken into account.** Some tokens distribute interest to token holders. This interest might be trapped in the contract if not taken into account.
 
-## Contract composition \{##contract-composition}
+## Contract composition \{#contract-composition}
 
 - **The contract avoids unneeded complexity.** The token should be a simple contract; a token with complex code requires a higher standard of review. Use Slither’s [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) to identify complex code.
 - **The contract uses SafeMath.** Contracts that do not use SafeMath require a higher standard of review. Inspect the contract by hand for SafeMath usage.
 - **The contract has only a few non–token-related functions.** Non–token-related functions increase the likelihood of an issue in the contract. Use Slither’s [contract-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) to broadly review the code used in the contract.
 - **The token only has one address.** Tokens with multiple entry points for balance updates can break internal bookkeeping based on the address (e.g. `balances[token_address][msg.sender]` might not reflect the actual balance).
 
-## Owner privileges \{##owner-privileges}
+## Owner privileges \{#owner-privileges}
 
 - **The token is not upgradeable.** Upgradeable contracts might change their rules over time. Use Slither’s [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) to determine if the contract is upgradeable.
 - **The owner has limited minting capabilities.** Malicious or compromised owners can abuse minting capabilities. Use Slither’s [human-summary printer](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) to review minting capabilities, and consider manually reviewing the code.
@@ -69,7 +69,7 @@ Finally, there are certain characteristics that are difficult to identify automa
 - **The owner cannot blacklist the contract.** Malicious or compromised owners can trap contracts relying on tokens with a blacklist. Identify blacklisting features by hand.
 - **The team behind the token is known and can be held responsible for abuse.** Contracts with anonymous development teams, or that reside in legal shelters should require a higher standard of review.
 
-## Token scarcity \{##token-scarcity}
+## Token scarcity \{#token-scarcity}
 
 Reviews for issues of token scarcity requires manual review. Check for these conditions:
 

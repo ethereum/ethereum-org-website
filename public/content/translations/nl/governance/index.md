@@ -8,7 +8,9 @@ lang: nl
 
 _Als niemand de baas is van Ethereum, hoe worden dan besluiten over eerdere en toekomstige wijzigingen in het netwerk gemaakt? Ethereum governance verwijst naar het proces dat het mogelijk maakt om dergelijke beslissingen te nemen._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Wat is governance? \{#what-is-governance}
 
@@ -36,7 +38,9 @@ _Terwijl governance bij Ethereum op protocolniveau off-chain is, gebruiken veel 
   Meer over DAO's
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Wie is er betrokken? \{#who-is-involved}
 
@@ -52,7 +56,9 @@ Er zijn verschillende belanghebbenden in de [Ethereum-gemeenschap](/community/),
 
 _Opmerking: elk individu kan deel uitmaken van meerdere van deze groepen (bijv. een protocolontwikkelaar kan een EIP steunen en een Beacon Chain-validator uitvoeren en DeFi-applicaties gebruiken). Voor conceptuele duidelijkheid is het echter het gemakkelijkst om ze te onderscheiden._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Wat is een EIP? \{#what-is-an-eip}
 
@@ -62,7 +68,9 @@ Een belangrijk proces dat wordt gebruikt in Ethereum governance is het voorstel 
   Meer over EIP's
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Het formele proces \{#formal-process}
 
@@ -106,7 +114,9 @@ Van de EIP-Champions wordt verwacht dat ze om feedback vragen van alle relevante
 
 Naast de veiligheid van het Ethereum-netwerk, is er historisch gezien significante betekenis toegekend door protocolontwikkelaars aan wat de applicatie-/gereedschapsontwikkelaars waarderen, gezien het feit dat hun gebruik en ontwikkeling op Ethereum het ecosysteem aantrekkelijk maakt voor andere belanghebbenden. Daarnaast moeten EIP's worden geïmplementeerd op alle client-implementaties die worden beheerd door verschillende teams. Een deel van dit proces betekent meestal het overtuigen van meerdere teams van protocolontwikkelaars dat een bepaalde verandering waardevol is en dat het de eindgebruikers helpt of een veiligheidsprobleem oplost.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Omgaan met meningsverschillen \{#disagreements}
 
@@ -134,9 +144,13 @@ Vandaag de dag heeft de Ethereum-gemeenschap een beleid van niet-interventie in 
 
 Bekijk meer over de DAO-hack:
 
-<YouTube id="rNeLuBOVe8A" />
+{
+	<YouTube id="rNeLuBOVe8A" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Het nut van forking \{#forking-utility}
 
@@ -144,7 +158,9 @@ De Ethereum/Ethereum Classic fork is een uitstekend voorbeeld van een gezonde fo
 
 De mogelijkheid om te forken ten aanzien van aanzienlijke politieke, filosofische of economische verschillen speelt een grote rol in het succes van Ethereum governance. Zonder de mogelijkheid om te forken was het alternatief een doorlopende strijd, gedwongen onwillige deelname voor degenen die uiteindelijk Ethereum Classic hebben gevormd en een in toenemende mate andere visie over hoe succes eruitziet voor Ethereum.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Beacon Chain-ontwikkeling \{#beacon-chain}
 
@@ -158,7 +174,9 @@ Wanneer de Beacon Chain samenvalt met de uitvoeringslaag van Ethereum, zal het g
   Meer over de merge
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Hoe kan ik meedoen? \{#get-involved}
 

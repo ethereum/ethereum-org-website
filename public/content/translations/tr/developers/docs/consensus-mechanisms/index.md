@@ -62,7 +62,9 @@ Hisse ispatı sistemi kripto ekonomik olarak güvenlidir çünkü ağa saldıran
 
 Ethereum üzerinde kullanılan farklı mutabakat mekanizması türleri hakkında daha fazlasını izleyin:
 
-<YouTube id="ojxfbN78WFQ" />
+{
+	<YouTube id="ojxfbN78WFQ" />
+}
 
 ### Sybil direnci ve zincir seçimi \{#sybil-chain}
 

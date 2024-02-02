@@ -8,7 +8,9 @@ lang: fil
 
 _Ang Web3 ay naging ecosystem ng mga L1 blockchain at L2 scaling solution, kung saan may mga natatanging kakayahan at trade-off ang bawat isa. Habang dumarami ang mga blockchain protocol, lumalaki rin [ang demand na ilipat-lipat ng chain ang mga asset](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Upang mapunan ang demand na ito, kailangan natin ng mga bridge._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ano ang mga bridge? \{#what-are-bridges}
 
@@ -37,7 +39,9 @@ Sa tulong ng mga bridge, naisasagawa ang mga sumusunod:
 
 [Paano maidurugtong ang tokens sa layer 2](/guides/how-to-use-a-bridge/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Mga use case ng bridge \{#bridge-use-cases}
 
@@ -63,7 +67,9 @@ Sabihin nating gusto mong magkaroon ng native na Bitcoin (BTC), ngunit nasa Ethe
   Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang <a href="/get-eth/">centralized exchange</a>. Gayunpaman, maliban kung nasa isang exchange na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Mga uri ng bridge \{#types-of-bridge}
 
@@ -93,7 +99,9 @@ Ang self check-in ay katulad ng trustless model dahil inaalis nito ang papel ng 
 
 Gumagamit ang maraming bridging solution ng mga model sa pagitan ng dalawang uring ito, na may iba't ibang antas ng pagiging trustless.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Panganib sa paggamit ng mga bridge \{#bridge-risk}
 
@@ -119,7 +127,9 @@ Ang isang kamakailang hack ay ang Wormhole bridge ng Solana, [kung saan 120k wET
 
 Mahalaga ang mga bridge sa mga user na nasa onboarding sa mga Ethereum L2, at maging sa mga user na gustong gumamit ng iba't ibang ecosystem. Gayunpaman, dahil sa mga panganib na kaakibat ng pag-interact sa mga bridge, dapat maunawaan ng mga user ang mga trade-off ng mga bridge. Ito ang ilang [estratehiya para sa cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Karagdagang pagbabasa \{#further-reading}
 

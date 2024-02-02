@@ -201,7 +201,9 @@ Si todo funciona correctamente, se deberían ver 2 eventos ( `Transfer` [transfe
 
 ![Dos eventos en la transacción: transferencia y vender](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 Desde este tutorial se ha visto cómo comprobar el saldo y la autorización de un token ERC, y también cómo ejecutar `Transfer` y `TransferFrom` de un contrato inteligente ERC20 usando la interfaz.
 

@@ -127,6 +127,7 @@ summaryPoints:
 
 ## 常见问题 \{#faq}
 
+{
 <ExpandableCard
 title="在我提供了一个提款地址后，我能否将其改为另一个提款地址？"
 eventCategory="FAQ"
@@ -134,7 +135,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 不，提供提款凭证的过程只需进行一次，一旦提交后就无法更改。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="为什么提款地址只能设置一次？"
 eventCategory="FAQ"
@@ -146,7 +149,9 @@ eventName="read more">
 
 作为更改特定验证者提款地址的替代方案，用户可以选择设置智能合约作为他们的提款地址，该智能合约可以处理密钥轮换，例如 Safe。 将资金去向设置为自己的外部帐户的用户可以执行完全退出以提取所有的质押资金，然后使用新的凭证重新进行质押。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="如果我参与代币质押或联合质押，会怎么样？"
 eventCategory="FAQ"
@@ -158,7 +163,9 @@ eventName="read more">
 一般来说，用户应该可以随意收回他们的底层质押以太币，或者更换他们使用的质押服务提供商。 如果某个质押池变得过大，可以退出、收回资金，并通过<a href="https://rated.network/">较小的提供商</a>重新质押。 或者，如果你已经积攒了足够多的以太币，你就可以<a href="/staking/solo/">自行质押</a>。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="奖励支付（部分提款）是否会自动进行？"
 eventCategory="FAQ"
@@ -166,7 +173,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 是的，只要你的验证者提供了提款地址。 提款地址必须要提供一次，以便在最初时启用任何提款，之后奖励支付将每隔几天在进行验证者扫描时自动分发。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="全额提款是否会自动进行？"
 eventCategory="FAQ"
@@ -178,7 +187,9 @@ eventName="read more">
 一旦验证者完成退出流程，并且假设该帐户具有提款凭证，则剩余余额<em>随后将在</em>下一次<a href="#validator-sweeping">验证者扫描</a>期间提取。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我可以提取自定义数量的资金吗？"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +198,9 @@ eventName="read more">
 
 无法手动请求要提取以太币的具体数量。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="我运行一个验证者。 我在哪里可以找到更多关于启用提款的信息？"
 eventCategory="FAQ"
@@ -199,7 +212,9 @@ eventName="read more">
 要首先在测试网上测试你的设置，请访问 <a href="https://goerli.launchpad.ethereum.org">Goerli 测试网质押启动板</a>开始测试。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="退出后，我可以通过存入更多以太币来重新激活验证者吗？"
 eventCategory="FAQ"
@@ -207,6 +222,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 否。 一旦验证者退出并提取其全部余额，存入该验证者的任何额外资金将在下一次验证者扫描期间自动转移到提款地址。 要重新质押以太币，必须激活新的验证者。
 </ExpandableCard>
+}
 
 ## 延伸阅读 \{#further-reading}
 

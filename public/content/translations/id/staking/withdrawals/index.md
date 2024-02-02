@@ -37,7 +37,9 @@ Sebelum peningkatan Shanghai/Capella, Anda tidak dapat menggunakan atau mengakse
 
 ### Bagaimana saya mempersiapkan diri? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Pemberitahuan Penting \{#important-notices}
 
@@ -76,7 +78,9 @@ Apakah validator tertentu memenuhi syarat untuk penarikan atau tidak, ditentukan
 
 Simak penjelasan mengenai penarikan penaruhan Ethereum dari Finematics berikut ini:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Validator "menyapu" \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Seperti yang Anda lihat, hal ini melambat karena semakin banyak validator yang a
 
 ## Pertanyaan yang sering diajukan \{#faq}
 
+{
 <ExpandableCard
 title="Setelah saya telah memberikan alamat penarikan, apakah saya bisa mengubahnya menjadi alamat penarikan alternatif?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Tidak, proses untuk memberikan kredensial penarikan hanya dilakukan satu kali, dan tidak dapat diubah setelah diajukan.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Mengapa alamat penarikan hanya bisa diatur sekali?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Alamat penarikan dapat berupa kontrak pintar (dikendalikan oleh kodenya), atau a
 
 Sebagai alternatif untuk mengubah alamat penarikan untuk validator tertentu, pengguna dapat memilih untuk menetapkan kontrak pintar sebagai alamat penarikan mereka yang dapat menangani perputaran kunci, seperti Brankas. Pengguna yang menetapkan dana mereka ke EOA mereka sendiri dapat melakukan keluar sepenuhnya untuk menarik semua dana yang dipertaruhkan, dan kemudian melakukan penaruhan ulang dengan menggunakan kredensial baru.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Bagaimana jika saya berpartisipasi dalam penaruhan token atau penaruhan dengan pool"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Jika Anda merupakan bagian dari <a href="/staking/pools/">pool penaruhan</a> ata
 Secara umum, pengguna harus bebas untuk mendapatkan kembali ETH yang mereka pertaruhkan, atau mengubah penyedia penaruhan yang mereka gunakan. Jika pool tertentu menjadi terlalu besar, dana dapat keluar, ditebus, dan dipertaruhkan kembali dengan <a href="https://rated.network/">penyedia yang lebih kecil</a>. Atau, jika Anda telah mengumpulkan cukup banyak ETH, Anda dapat melakukan <a href="/staking/solo/">penaruhan dari beranda</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Apakah pembayaran imbalan (penarikan parsial) terjadi secara otomatis?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Ya, selama validator Anda telah memberikan alamat penarikan. Ini harus diberikan satu kali untuk mengaktifkan penarikan pertama kali, kemudian pembayaran imbalan akan secara otomatis dipicu setiap beberapa hari dengan setiap sapuan validator.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Apakah penarikan penuh terjadi secara otomatis?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Tidak, jika validator Anda masih aktif di jaringan, penarikan penuh tidak akan t
 Setelah validator menyelesaikan proses keluar, dan dengan asumsi akun tersebut memiliki kredensial penarikan, saldo yang tersisa <em>kemudian</em> akan ditarik pada saat <a href="#validator-sweeping">pemindaian validator</a> berikutnya.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Dapatkah saya menarik jumlah yang ditentukan sendiri?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Penarikan dirancang untuk didorong secara otomatis, mentransfer ETH apa pun yang
 
 Tidak dimungkinkan meminta ETH yang akan ditarik dengan jumlah tertentu secara manual.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Saya mengoperasikan validator. Di mana saya bisa menemukan lebih banyak informasi tentang mengaktifkan penarikan?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Operator validator disarankan untuk mengunjungi halaman <a href="https://launchp
 Untuk mencoba pengaturan Anda di jaringan percobaan terlebih dahulu, kunjungi <a href="https://goerli.launchpad.ethereum.org">Landasan Peluncuran Penaruhan Jaringan Percobaan Goerli</a> untuk memulai.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Apakah saya bisa mengaktifkan kembali validator saya setelah keluar dengan menyetorkan lebih banyak ETH?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap dana tambahan yang disetorkan ke validator tersebut akan secara otomatis ditransfer ke alamat penarikan selama penyisiran validator berikutnya. Untuk taruhan ulang ETH, validator baru harus diaktifkan.
 </ExpandableCard>
+}
 
 ## Bacaan lebih lanjut \{#further-reading}
 

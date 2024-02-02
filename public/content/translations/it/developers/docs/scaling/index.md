@@ -92,11 +92,15 @@ Scopri di più su [Validium](/developers/docs/scaling/validium/).
 
 ## Preferisci un approccio visivo all'apprendimento? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Si noti che la spiegazione nel video usa il termine "Livello 2" per fare riferimento a tutte le soluzioni di ridimensionamento off-chain, mentre noi distinguiamo il "Livello 2" come soluzione off-chain che deriva la sua sicurezza dal consenso di livello 1 (Rete principale)._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Letture consigliate \{#further-reading}
 

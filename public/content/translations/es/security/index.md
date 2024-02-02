@@ -8,7 +8,9 @@ lang: es
 
 Con el creciente interés en las criptomonedas, es esencial aplicar las mejores prácticas al usar criptomonedas. Las criptomonedas pueden ser divertidas y emocionantes, aunque también entrañan serios riesgos. Si actúa con precaución y allana antes el terreno, puede mitigar estos riesgos.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Seguridad en la Web 101 \{#web-security}
 
@@ -88,7 +90,9 @@ Para aquellos que quieran dar el siguiente paso en 2FA, considere usar una clave
 
 Ver más en el 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Desinstale extensiones del navegador \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Las extensiones del navegador como las extensiones Chrome o los complementos par
 
 [Más sobre los riesgos de las extensiones del navegador](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Seguridad de criptomonedas 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ Una de las razones más importantes por las que se sufren estafas con las cripto
 <DocLink to="/eth/">
   ¿Qué es el ether?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Seguridad de la billetera \{#wallet-security}
 
@@ -160,7 +168,9 @@ Muchas carteras de Ethereum ofrecen una protección de límites para evitar que 
 
 [Cómo revocar el acceso al contrato inteligente a sus fondos en criptomonedas](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Estafas comunes \{#common-scams}
 
@@ -264,7 +274,9 @@ Las estafas de distribución de criptomonedas, o airdropping, implican una tenta
 
 [Más información sobre las estafas de airdropping](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Más información \{#further-reading}
 
@@ -288,4 +300,6 @@ Las estafas de distribución de criptomonedas, o airdropping, implican una tenta
 - [Evitar estafas](https://bitcoin.org/en/scams), _Bitcoin.org_
 - [Hilo de Twitter sobre correos electrónicos y mensajes comunes de phishing de criptomonedas](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

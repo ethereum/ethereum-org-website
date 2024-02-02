@@ -5,7 +5,9 @@ lang: en
 incomplete: false
 ---
 
+{
 <FeaturedText>Learn how to develop for Ethereum using Ruby-based projects and tooling.</FeaturedText>
+}
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. These dapps can be trustless, meaning that once they are deployed to Ethereum, they will always run as programmed. They can control digital assets to create new kinds of financial applications. They can be decentralized, meaning that no single entity or person controls them and are nearly impossible to censor.
 
@@ -20,7 +22,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner articles \{##beginner-articles}
+## Beginner articles \{#beginner-articles}
 
 - [Finally understanding Ethereum accounts](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Finally Authenticating Rails Users with MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
@@ -28,14 +30,14 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [How to connect to the Ethereum network using Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [How to generate a new Ethereum address in Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
-## Intermediate articles \{##intermediate-articles}
+## Intermediate articles \{#intermediate-articles}
 
 - [Blockchain App with Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
 - [Use the Ruby, connected to Ethereum, to execute the Smart Contract](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
-## Ruby projects and tools \{##ruby-projects-and-tools}
+## Ruby projects and tools \{#ruby-projects-and-tools}
 
-### Active \{##active}
+### Active \{#active}
 
 - [eth.rb](https://github.com/q9f/eth.rb) - _Ruby library and RPC-client to handle Ethereum accounts, messages, and transactions_
 - [keccak.rb](https://github.com/q9f/keccak.rb) - _The Keccak (SHA3) hash used by Ethereum_
@@ -46,7 +48,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [omniauth-nft](https://github.com/valthon/omniauth-nft) - _OmniAuth strategy for authenticating via NFT ownership_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails) - _Ethereum on Rails template which allows to connect MetaMask to Ruby on Rails_
 
-### Archived / No longer maintained \{##archived--no-longer-maintained}
+### Archived / No longer maintained \{#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum) - _Calling RPC methods of Ethereum node with Ruby_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree) - _Ruby library to generate ETH addresses from a Hierarchical Deterministic wallet according to the BIP32 standard_
@@ -56,6 +58,6 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [our Developer's home](/developers/).
 
-## Ruby community contributors \{##ruby-community-contributors}
+## Ruby community contributors \{#ruby-community-contributors}
 
 The [Ethereum Ruby Telegram group](https://t.me/ruby_eth) is a host to a rapidly growing community and is the dedicated resource for discussions on any of the above projects and related topics.

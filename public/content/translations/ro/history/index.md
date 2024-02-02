@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 O cronologie a tuturor reperelor majore, a fork-urilor și actualizărilor blockchain-ului Ethereum.
 
+{
 <ExpandableCard title="Ce sunt fork-urile?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Fork-urile apar atunci când trebuie făcute actualizări tehnice sau modificări majore în rețea – acestea provin de obicei din [Propunerile de îmbunătățire pentru Ethereum (EIP)](/eips/) și modifică „regulile” protocolului.
@@ -18,16 +19,21 @@ Atunci când sunt necesare actualizări în software-ul tradițional, controlat 
 Aceste schimbări de reguli pot crea o separare temporară în rețea. Pot fi produse blocuri noi conform regulilor noi sau celor vechi. Se convine în avans asupra creării fork-urilor, astfel încât clienții să adopte schimbările la unison și fork-ul cu actualizările să devină lanțul principal. Cu toate acestea, în cazuri rare, dezacordurile asupra fork-urilor pot determina divizarea permanentă a rețelei – cea mai cunoscută fiind crearea lui Ethereum Classic cu [fork-ul DAO](#dao-fork).
 
 </ExpandableCard>
+}
 
 Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați despre viitoarele actualizări ale lui Ethereum](/roadmap/).
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2021 \{#2021}
 
 ### Arrow Glacier \{#arrow-glacier}
 
-<NetworkUpgradeSummary name="arrowGlacier" />
+{
+	<NetworkUpgradeSummary name="arrowGlacier" />
+}
 
 #### Rezumat \{#arrow-glacier-summary}
 
@@ -36,11 +42,13 @@ Actualizarea Arrow Glacier a amânat [bomba de dificultate](/glossary/#difficult
 - [Blogul EF - Anunțul actualizării Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Actualizarea Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="EIP-urile Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – _amână bomba de dificultate până în iunie 2022_
 
 </ExpandableCard>
+}
 
 #### <Emoji text=":police_car_light:" size={1} me="0.5rem" />Operatorii de noduri \{#arrow-glacier-node-operators}
 
@@ -50,7 +58,9 @@ Aveţi grijă să vă actualizați software-ul client la versiunea cea mai recen
 
 ### Altair \{#altair}
 
-<NetworkUpgradeSummary name="altair" />
+{
+	<NetworkUpgradeSummary name="altair" />
+}
 
 #### Rezumat \{#altair-summary}
 
@@ -68,7 +78,9 @@ Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă d
 
 ### Londra \{#london}
 
-<NetworkUpgradeSummary name="london" />
+{
+	<NetworkUpgradeSummary name="london" />
+}
 
 #### Rezumat \{#london-summary}
 
@@ -78,6 +90,7 @@ Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-155
 - [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Citiţi explicatorul Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIP-urile Londra" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _îmbunătățește piața taxelor de tranzacționare_.
@@ -87,12 +100,15 @@ Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-155
 - [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _întârzie Era glaciară până în decembrie 2021_
 
 </ExpandableCard>
+}
 
 ---
 
 ### Berlin \{#berlin}
 
-<NetworkUpgradeSummary name="berlin" />
+{
+	<NetworkUpgradeSummary name="berlin" />
+}
 
 #### Rezumat \{#berlin-summary}
 
@@ -101,6 +117,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 - [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Citiţi explicatorul Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIP-urile Berlin" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _reduce costul gazului ModExp_.
@@ -109,14 +126,19 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _adăugă liste de acces opționale_
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2020 \{#2020}
 
 ### Geneza Lanțului Beacon \{#beacon-chain-genesis}
 
-<NetworkUpgradeSummary name="beaconChainGenesis" />
+{
+	<NetworkUpgradeSummary name="beaconChainGenesis" />
+}
 
 #### Rezumat \{#beacon-chain-genesis-summary}
 
@@ -132,7 +154,9 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 ### S-a implementat contractul de depunere a mizei \{#staking-deposit-contract}
 
-<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+{
+	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+}
 
 #### Rezumat \{#deposit-contract-summary}
 
@@ -148,7 +172,9 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 
 ### Muir Glacier \{#muir-glacier}
 
-<NetworkUpgradeSummary name="muirGlacier" />
+{
+	<NetworkUpgradeSummary name="muirGlacier" />
+}
 
 #### Rezumat \{#muir-glacier-summary}
 
@@ -157,19 +183,25 @@ Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossa
 - [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Citiţi explicatorul Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="EIP-urile Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) – _întârzie bomba de dificultate cu încă 4.000.000 de blocuri sau ~611 zile._
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2019 \{#2019}
 
 ### Istanbul \{#istanbul}
 
-<NetworkUpgradeSummary name="istanbul" />
+{
+	<NetworkUpgradeSummary name="istanbul" />
+}
 
 #### Rezumat \{#istanbul-summary}
 
@@ -183,6 +215,7 @@ Fork-ul Istanbul:
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP-urile Istanbul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _allow Ethereum to work with privacy-preserving currency like Zcash._
@@ -193,12 +226,15 @@ Fork-ul Istanbul:
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _other opcode gas price alterations._
 
 </ExpandableCard>
+}
 
 ---
 
 ### Constantinopol \{#constantinople}
 
-<NetworkUpgradeSummary name="constantinople" />
+{
+	<NetworkUpgradeSummary name="constantinople" />
+}
 
 #### Rezumat \{#constantinople-summary}
 
@@ -210,6 +246,7 @@ Fork-ul Constantinopol:
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP-urile Constantinopol" contentPreview="Official improvements included in this fork.">
 
 - [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – _optimizează costul anumitor acțiuni on-chain._
@@ -218,14 +255,19 @@ Fork-ul Constantinopol:
 - [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _garantează că blockchain-ul nu îngheață înainte de a se implementa dovada-mizei._
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2017 \{#2017}
 
 ### Byzantium \{#byzantium}
 
-<NetworkUpgradeSummary name="byzantium" />
+{
+	<NetworkUpgradeSummary name="byzantium" />
+}
 
 #### Rezumat \{#byzantium-summary}
 
@@ -238,6 +280,7 @@ Fork-ul Byzantium:
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIP-urile Byzantium" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adds `REVERT` opcode._
@@ -251,14 +294,19 @@ Fork-ul Byzantium:
 - [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _delays [difficulty bomb](/glossary/#difficulty-bomb) by 1 year and reduces block reward from 5 to 3 ETH._
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2016 \{#2016}
 
 ### Spurious Dragon \{#spurious-dragon}
 
-<NetworkUpgradeSummary name="spuriousDragon" />
+{
+	<NetworkUpgradeSummary name="spuriousDragon" />
+}
 
 #### Rezumat \{#spurious-dragon-summary}
 
@@ -270,6 +318,7 @@ Fork-ul Spurious Dragon a fost al doilea răspuns la atacurile prin refuzul-serv
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIP-urile Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _împiedică tranzacțiile dintr-un lanț Ethereum să fie retransmise pe un lanț alternativ, de exemplu o tranzacție testnet care este retransmisă pe lanțul principal Ethereum._
@@ -278,12 +327,15 @@ Fork-ul Spurious Dragon a fost al doilea răspuns la atacurile prin refuzul-serv
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _modifică dimensiunea maximă a codului pe care îl poate avea un contract pe blockchain – la 24576 octeți._
 
 </ExpandableCard>
+}
 
 ---
 
 ### Tangerine whistle \{#tangerine-whistle}
 
-<NetworkUpgradeSummary name="tangerineWhistle" />
+{
+	<NetworkUpgradeSummary name="tangerineWhistle" />
+}
 
 #### Rezumat \{#tangerine-whistle-summary}
 
@@ -293,18 +345,22 @@ Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-servi
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EIP-urile Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _crește costurile gazului opcode-urilor care pot fi utilizate în atacurile spam._
 - [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _reduce dimensiunea stării prin eliminarea unui număr mare de conturi goale care au fost plasate în stare la un cost foarte scăzut din cauza erorilor din versiunile anterioare ale protocolului Ethereum._
 
 </ExpandableCard>
+}
 
 ---
 
 ### Fork-ul DAO \{#dao-fork}
 
-<NetworkUpgradeSummary name="daoFork" />
+{
+	<NetworkUpgradeSummary name="daoFork" />
+}
 
 #### Rezumat \{#dao-fork-summary}
 
@@ -320,7 +376,9 @@ Unii miner-i au refuzat să creeze fork-ul pentru că incidentul DAO nu a fost o
 
 ### Homestead \{#homestead}
 
-<NetworkUpgradeSummary name="homestead" />
+{
+	<NetworkUpgradeSummary name="homestead" />
+}
 
 #### Rezumat \{#homestead-summary}
 
@@ -328,6 +386,7 @@ Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIP-urile Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _face modificări la procesul de creare a contractului._
@@ -335,14 +394,19 @@ Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduce cerințele de compatibilitate „devp2p forward”_
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2015 \{#2015}
 
 ### Frontier thawing \{#frontier-thawing}
 
-<NetworkUpgradeSummary name="frontierThawing" />
+{
+	<NetworkUpgradeSummary name="frontierThawing" />
+}
 
 #### Rezumat \{#frontier-thawing-summary}
 
@@ -354,7 +418,9 @@ Fork-ul frontier thawing a ridicat limita de [gaz](/glossary/#gas) de 5.000 per 
 
 ### Frontier \{#frontier}
 
-<NetworkUpgradeSummary name="frontier" />
+{
+	<NetworkUpgradeSummary name="frontier" />
+}
 
 #### Rezumat \{#frontier-summary}
 
@@ -362,13 +428,17 @@ Frontier a fost o implementare în direct, dar absolut esenţială pentru proiec
 
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2014 \{#2014}
 
 ### Vânzarea de ether \{#ether-sale}
 
-<NetworkUpgradeSummary name="etherSale" />
+{
+	<NetworkUpgradeSummary name="etherSale" />
+}
 
 Ether-ul a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra cu BTC.
 
@@ -378,19 +448,25 @@ Ether-ul a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra c
 
 ### A fost lansată Cartea galbenă \{#yellowpaper}
 
-<NetworkUpgradeSummary name="yellowpaperRelease" />
+{
+	<NetworkUpgradeSummary name="yellowpaperRelease" />
+}
 
 Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protocolului Ethereum.
 
 [Vedeți Cartea galbenă](https://github.com/ethereum/yellowpaper)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## 2013 \{#2013}
 
 ### A fost lansată Cartea albă \{#whitepaper}
 
-<NetworkUpgradeSummary name="whitepaperRelease" />
+{
+	<NetworkUpgradeSummary name="whitepaperRelease" />
+}
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul lui Ethereum, înainte de lansarea proiectului în 2015.
 

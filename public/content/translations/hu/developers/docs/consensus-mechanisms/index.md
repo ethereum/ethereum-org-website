@@ -62,7 +62,9 @@ Bővebben a [proof-of-stake-ről](/developers/docs/consensus-mechanisms/pos/)
 
 Tekintse meg az Ethereumon használt különféle konszenzusmechanizmusokat:
 
-<YouTube id="ojxfbN78WFQ" />
+{
+	<YouTube id="ojxfbN78WFQ" />
+}
 
 ### Ellenállás a Sybil-támadásnak & láncválasztás \{#sybil-chain}
 

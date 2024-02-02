@@ -14,6 +14,7 @@ Das Angebot an ETH kann hauptsächlich in zwei Faktoren unterteilt werden: Die A
 
 Der Prozess der Erstellung von zuvor nicht existierendem ETH wird als **Ausgabe** von ETH bezeichnet. Das **Verbrennen** von ETH bezeichnet den Prozess, bei dem vorhandenes ETH zerstört und damit aus dem Umlauf genommen wird. Die Rate der Ausgabe und des Verbrennens wird anhand mehrerer Parameter berechnet, und das Gleichgewicht zwischen ihnen bestimmt die resultierende Inflations-/Deflationsrate von Ether.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="ETH-Ausgabe tldr">

@@ -40,7 +40,9 @@ Lesen Sie mehr über <a href="/contributing/translation-program/mission-and-visi
 - [Die Seite ist in **54** Sprachen verfügbar](/languages/)
 - [**3 Millionen** Wörter übersetzt im Jahr 2022](/contributing/translation-program/acknowledgements/)
 
-<TranslationChartImage />
+{
+	<TranslationChartImage />
+}
 
 ### Danksagungen \{#acknowledgements}
 

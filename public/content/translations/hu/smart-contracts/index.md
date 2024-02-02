@@ -73,7 +73,9 @@ Többek között képesek számításokat végezni, valutát létrehozni, adatot
 
 Nézze meg a videót, melyben a Finematics elmagyarázza az okosszerződések lényegét:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## További olvasnivaló \{#further-reading}
 

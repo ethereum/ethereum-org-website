@@ -10,7 +10,7 @@ The programs listed below offer a variety of funding grants for projects working
 
 This list is curated by our community. If there's something missing or incorrect, please edit this page!
 
-## Broad Ethereum ecosystem \{##broad-ethereum-ecosystem}
+## Broad Ethereum ecosystem \{#broad-ethereum-ecosystem}
 
 These programs support the broad Ethereum ecosystem by offering grants to a wide scope of projects. These include solutions for scalability, community building, security, privacy, and more. These grants are not specific to any one Ethereum platform and are a good place to start if you're unsure.
 
@@ -22,7 +22,7 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
 
-## Project specific \{##project-specific}
+## Project specific \{#project-specific}
 
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
@@ -37,13 +37,13 @@ These projects have created their own grants for projects aimed at developing an
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Uniswap](https://uniswap.org/) community_
 - [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
 
-## Quadratic funding \{##quadratic-funding}
+## Quadratic funding \{#quadratic-funding}
 
 The open source roots of Ethereum have led to the growth of an interesting new fundraising model: quadratic funding. This has the potential to improve the way we fund all types of public goods in the future. Quadratic funding makes sure that the projects that receive the most funding are those with the most unique demand. In other words, projects that stand to improve the lives of the most people. [More on quadratic funding.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
 
-## Work in Ethereum \{##work-in-ethereum}
+## Work in Ethereum \{#work-in-ethereum}
 
 Not ready to start your own project? There are hundreds of companies actively looking for passionate individuals to work in and contribute to the Ethereum ecosystem. Looking for more information? [Check out Ethereum related jobs](/community/get-involved/#ethereum-jobs)

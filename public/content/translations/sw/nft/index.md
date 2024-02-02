@@ -18,7 +18,9 @@ NFT ni tokeni zilizo na ubinafsi wa kipekee. Kila NTF ina sifa tofauti (haziwezi
 
 Upekee wa kila tokeni za kidijitali zisizoweza kuigwa ni kuwezesha ishara ya vitu kama sanaa, vitu vinavyokusanywa ama mali isiyohamishika, ambapo kila tokeni maalum ya kidijitali isiyoweza kuigwa huwakilisha ulimwengu halisi ama bidhaa ya kidijitali. Umiliki wa mali unalindwa na mnyororo wa bloku wa Ethereum – hakuna anayeweza kubadili nyaraka za umiliki ama kutoa/kubandika nakala mpya za NFT.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Mtandao wa mali \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Tovuti hii pia inatumia jina mbadala la kikoa linaloendeshwa na NFT, **ethereum.
 
 [Zaidi juu ya ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Usalama wa NFT \{#nft-security}
 
@@ -89,6 +93,10 @@ Maswala ya usalama yanayohusiana na NFT sana sana yanahusiana na utapeli wa kutu
 - [Kiwango cha tokeni cha ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Kiwango cha tokeni cha ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

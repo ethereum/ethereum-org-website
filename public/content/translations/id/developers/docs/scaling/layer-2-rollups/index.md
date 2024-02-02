@@ -72,7 +72,9 @@ Jadi Anda bisa melihat insentifnya: peserta dihukum karena melakukan penipuan da
 
 Tonton Finematics menjelaskan rollup optimistic:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
 #### Gunakan rollup Optimistic \{#use-optimistic-rollups}
 
@@ -106,7 +108,9 @@ Saat berada di lapisan 2, rollup ZK dapat dioptimalkan guna mengurangi ukuran tr
 
 Tonton Finematics yang menjelaskan rollup ZK:
 
-<YouTube id="7pWxCklcNsU" start="406" />
+{
+	<YouTube id="7pWxCklcNsU" start="406" />
+}
 
 #### Gunakan rollup ZK \{#use-zk-rollups}
 

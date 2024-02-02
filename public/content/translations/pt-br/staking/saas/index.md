@@ -27,7 +27,9 @@ O protocolo Ethereum não suporta nativamente a delegação de stake, portanto e
   <Card title="Limite seu risco" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
-<StakingComparison page="saas" />
+{
+	<StakingComparison page="saas" />
+}
 
 ## O que considerar \{#what-to-consider}
 
@@ -35,32 +37,43 @@ Há um número cada vez maior de provedores de SaaS para ajudar você a fazer pa
 
 Os indicadores de atributo são usados abaixo para sinalizar os pontos fortes ou fracos notáveis que um pool de staking pode ter. Utilize esta seção como referência de como definimos estes atributos enquanto você está escolhendo um serviço para auxiliar em sua jornada de staking.
 
-<StakingConsiderations page="saas" />
+{
+	<StakingConsiderations page="saas" />
+}
 
 ## Explore provedores de serviços de staking \{#saas-providers}
 
 Abaixo estão alguns provedores SaaS disponíveis. Use os indicadores acima para guiá-lo pelos serviços abaixo
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### Provedores SaaS
 
-<StakingProductsCardGrid category="saas" />
+{
+	<StakingProductsCardGrid category="saas" />
+}
 
 Observe a importância de escolher um serviço que leve a [diversidade de cliente](/developers/docs/nodes-and-clients/client-diversity/) a sério, à medida que melhora a segurança da rede e limita o seu risco. Os serviços que têm evidências de limitação do uso do cliente majoritário são indicados com <em style={{ textTransform: "uppercase" }}>"diversidade do cliente de execução"</em> e <em style={{ textTransform: "uppercase" }}>"diversidade do cliente de consenso".</em>
 
 ### Geradores de chaves
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Alguma sugestão de um provedor de SaaS que não foi mencionado? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
 ## Perguntas frequentes \{#faq}
 
+{
 <ExpandableCard title="Quem guarda as minhas chaves?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 As disposições diferem de provedor para provedor, mas geralmente você será guiado pela configuração de quaisquer chaves de assinatura que você precise (uma a cada 32 ETH), e terá que enviar estas para o seu provedor para permitir que validem em seu nome. Só as chaves de assinatura não oferecem nenhuma possibilidade de saque, transferência ou gasto dos seus fundos. Entretanto, elas proporcionam a capacidade de votar em consensos, o que, se não for feito adequadamente, pode resultar em sanções ou em cortes off-line.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Então, há dois conjuntos de chaves?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Sim. Cada conta é composta por ambas chaves <em>de assinatura</em> BLS, e as chaves de <em>saque</em> BLS. Para que um validador ateste o estado da cadeia, participe de comitês de sincronização e proponha blocos, as chaves de assinatura devem estar prontamente acessíveis por um cliente validador. Elas devem estar conectadas à internet de alguma forma, portanto, são inerentemente consideradas chaves "quentes". Este é um requisito para as confirmações do seu validador, portanto, as chaves usadas para transferir ou sacar fundos são separadas por razões de segurança.
 
@@ -72,7 +85,9 @@ A atualização das credenciais de saque é uma etapa necessária para habilitar
 
 \*Os stakers que forneceram um endereço de saque com depósito inicial não precisam definir isso. Consulte com seu provedor SaaS para obter suporte sobre como preparar seu validador.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Quando posso sacar?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Os saques de staking foram implementados na atualização Shanghai/Capella em abril de 2023. Os stakers precisam fornecer um endereço de saque (se não tiver sido fornecido no depósito inicial) e os pagamentos de recompensa começarão a ser distribuídos de forma automática periodicamente em intervalos de alguns dias.
 
@@ -80,7 +95,9 @@ Os validadores também podem sair totalmente como validadores, o que desbloquear
 
 <ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="O que acontece se eu for cortado?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Usando um provedor SaaS, você está confiando a operação do seu nó a um terceiro. Isto implica o risco de um desempenho deficiente, que não está sob o seu controle. Caso seu validador seja cortado, seu saldo do validador será penalizado e removido à força da pool do validador.
 
@@ -88,6 +105,7 @@ Após a conclusão do processo de remoção/saída, esses fundos serão transfer
 
 Entre em contato com o provedor de SaaS para obter mais detalhes sobre quaisquer garantias ou opções de seguro e instruções sobre como fornecer um endereço de saque. Se você preferir estar no controle total da sua configuração do validador, <a href="/staking/solo/">saiba mais sobre como fazer staking individual de seu ETH</a>.
 </ExpandableCard>
+}
 
 ## Leitura adicional \{#further-reading}
 

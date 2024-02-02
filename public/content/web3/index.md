@@ -11,7 +11,9 @@ Centralization has helped onboard billions of people to the World Wide Web and c
 Web3 is the answer to this dilemma. Instead of a Web monopolized by large technology companies, Web3 embraces decentralization and is being built, operated, and owned by its users. Web3 puts power in the hands of individuals rather than corporations.
 Before we talk about Web3, let's explore how we got here.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## The early Web \{#early-internet}
 
@@ -31,7 +33,9 @@ The Web 2.0 period began in 2004 with the emergence of social media platforms. I
 
 ![Client-server architecture, representing Web 2.0](./web2.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Web 3.0: Read-Write-Own \{#web3}
 
@@ -160,4 +164,6 @@ Web3 isn’t rigidly defined. Various community participants have different pers
 - [The Web3 Landscape](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
-<QuizWidget quizKey="web3" />
+{
+	<QuizWidget quizKey="web3" />
+}

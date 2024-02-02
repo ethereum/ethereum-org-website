@@ -20,7 +20,9 @@ DeFi je kolektivní termín pro finanční produkty a služby, které jsou pří
 
 Kryptoekonomika je na vzestupu, můžete si v ní půjčovat, longovat/shortovat akcie, vydělávat na úrocích a mnoho dalšího. Kryptoměnami zabývající se Argentinci využili DeFi k tomu, aby unikli ochromující inflaci. Firmy začaly svým zaměstnancům zasílat jejich mzdy v reálném čase. Někteří lidé si dokonce vzali a splatili půjčky v hodnotě milionů dolarů, aniž by potřebovali jakoukoliv osobní identifikaci.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## DeFi vs. tradiční finanční systém \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Bitcoin byl v mnoha ohledech prvním využití DeFi. Bitcoin vám umožňuje sku
 
 Na tom Ethereum staví. Stejně jako u Bitcoinu se pravidla nemohou změnit a přístup má každý. Zároveň však umožňuje tyto digitální peníze programovat pomocí [chytrých kontraktů](/glossary#smart-contract), takže můžete jít nad rámec ukládání a odesílání hodnot.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Programovatelné peníze \{#programmable-money}
 
@@ -86,7 +90,9 @@ Existuje decentralizovaná alternativa k většině finančních služeb. Ethere
 - [Zakoupit pojištění](#insurance)
 - [Spravovat své portfolio](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Rychle posílat peníze napříč zeměkoulí \{#send-money}
 
@@ -102,7 +108,9 @@ Můžete také streamovat peníze přes Ethereum. To vám umožní vyplatit něk
 
 A pokud nechcete posílat nebo streamovat [ETH](/eth/) kvůli tomu, jak moc se může měnit jeho hodnota, existují na Ethereu alternativní měny: stablecoiny.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Pracovat se stabilními měnami \{#stablecoins}
 
@@ -114,7 +122,9 @@ Mince jako Dai nebo USDC mají hodnotu, která zůstane v rozmezí několika cen
   Více o stablecoinech
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Půjčky \{#lending}
 
@@ -170,7 +180,9 @@ Abyste mohli provést výše uvedený příklad v tradičním finančním systé
 
 [Více o bleskových úvěrech](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Začít šetřit s kryptem \{#saving}
 
@@ -203,7 +215,9 @@ Výherní fond je tvořen všemi úroky z půjčování vkladů lístků jako v 
   Vyzkoušejte PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Vyměňování tokenů \{#swaps}
 
@@ -215,7 +229,9 @@ Chcete-li se například zúčastnit bezztrátové loterie PoolTogether (popsan�
   Zobrazit burzy tokenů
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Pokročilé obchodování \{#trading}
 
@@ -227,7 +243,9 @@ Když používáte centralizovanou burzu, musíte svá aktiva před obchodem ulo
   Zobrazit decentralizované aplikace na obchodování
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Rozšířit své portfolio \{#investing}
 
@@ -239,7 +257,9 @@ Dobrým příkladem je fond [DeFi Pulse Index (DPI)](https://defipulse.com/blog/
   Zobrazit investiční decentralizované aplikace
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Financovat své nápady \{#crowdfunding}
 
@@ -268,7 +288,9 @@ To znamená, že projekt A se 100 dary ve výši 1 dolaru může nakonec získat
 
 [Více o kvadratickém financování](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Pojištění \{#insurance}
 
@@ -280,7 +302,9 @@ Ethereum produkty, stejně jako ostatní software, mohou trpět chybami a zneuž
   Zobrazit decentralizované aplikace na pojištění
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Agregátoři a správci portfolia \{#aggregators}
 
@@ -290,7 +314,9 @@ Vzhledem k tomuto všemu potřebujete mít přehled o všech svých investicích
   Zobrazit decentralizované aplikace na portfolia
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Jak funguje DeFi? \{#how-defi-works}
 

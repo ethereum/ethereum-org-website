@@ -12,7 +12,9 @@ Ethereum için enerji tüketim tahmini [CCRI (Crypto Carbon Ratings Institute)](
 
 Ethereum'un enerji tüketimini bir bağlama oturtmak için, diğer ürünler ve endüstriler için yıllık yapılan tahminleri karşılaştırabiliriz. Bu, bize Ethereum için tahminin düşük ya da yüksek olduğunu daha iyi anlamamıza yardım ediyor.
 
-<EnergyConsumptionChart />
+{
+	<EnergyConsumptionChart />
+}
 
 Yukarıdaki tablo, diğer ürün ve endüstrilere kıyasla Ethereum için tahmini yıllık enerji tüketimini TWh/yıl cinsinden göstermektedir. Sunulan tahminler Temmuz 2023'te herkese açık bilgilerden alınmıştır, kaynak bağlantıları aşağıdaki tabloda mevcuttur.
 

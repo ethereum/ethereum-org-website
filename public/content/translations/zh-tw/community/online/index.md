@@ -10,6 +10,7 @@ lang: zh-tw
 
 ## 論壇 \{#forums}
 
+{
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - 所有有關以太坊的話題</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - 以太坊中有關金融的主題，其中包含去中心化金融</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - 專注於以太坊的開發</SocialListItem>
@@ -18,9 +19,11 @@ lang: zh-tw
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">以太坊魔法師獎學金</Link> - 以以太坊技術標準為中心的社群</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">以太坊 Stackexchange</Link> - 以太坊開發者討論及協助</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">以太坊研究</Link> - 最具影響力的加密經濟研究留言板</SocialListItem>
+}
 
 ## 聊天室 \{#chat-rooms}
 
+{
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">以太牧貓人組織</Link> - 提供專案管理以支援以太坊的社群</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">以太坊駭客</Link> - 由全球以太坊駭客線上社群 ETHGlobal 所管理的 Discord 聊天室</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - 專注於以太坊開發的 Discord 社群</SocialListItem>
@@ -31,15 +34,20 @@ lang: zh-tw
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 討論 solidity 的開發 (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊技術堆棧交易所</Link> *- 問答論壇*</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- 去中心化問答論壇*</SocialListItem>
+}
 
 ## YouTube 和 Twitter \{#youtube-and-twitter}
 
+{
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">以太坊基金會</Link> - 掌握以太坊基金會最新的資訊</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - 以太坊基金會的官方帳戶</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - 以太坊的入口網站，為我們成長中的全球社群而建</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">具影響力的以太坊推特帳戶清單</Link></SocialListItem>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 <Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
   <div>

@@ -9,7 +9,9 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 
 _Si personne ne possède Ethereum, comment les décisions concernant les changements passés et futurs sur Ethereum sont-elles prises ? On entend par gouvernance d'Ethereum le processus qui permet de prendre des décisions._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Qu'est-ce que la gouvernance ? \{#what-is-governance}
 
@@ -37,7 +39,9 @@ _Bien qu'au niveau du protocole, la gouvernance d'Ethereum est hors chaîne, de 
   En savoir plus sur les DAO
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Qui est impliqué ? \{#who-is-involved}
 
@@ -53,7 +57,9 @@ Il y a différentes parties prenantes dans la communauté [Ethereum](/community/
 
 _Note : Toute personne peut faire partie de plusieurs de ces groupes (par exemple un développeur de protocole peut défendre une EIP, exécuter un validateur de la chaîne phare, et utiliser des applications DeFi). Pour mieux comprendre, il est toutefois plus facile de les distinguer._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Qu'est-ce qu'une EIP ? \{#what-is-an-eip}
 
@@ -63,7 +69,9 @@ Un processus important utilisé dans la gouvernance Ethereum est la proposition 
   Plus d'infos les EIP
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Le processus formel \{#formal-process}
 
@@ -107,7 +115,9 @@ Les champions EIP sont censés solliciter des commentaires de tous les intervena
 
 Au-delà de la sécurité du réseau Ethereum, un poids significatif a historiquement été accordé par les développeurs de protocole sur la valeur des développeurs d'applications/outils et des utilisateurs d'applications. étant donné que leur utilisation et leur développement sur Ethereum sont ce qui rend l'écosystème attractif pour les autres parties prenantes. De plus, les EIP doivent être implémentées dans toutes les implémentations de clients, qui sont gérées par des équipes distinctes. Une partie de ce processus signifie généralement convaincre plusieurs équipes de développeurs de protocoles qu'un changement particulier est précieux et qu'il aide les utilisateurs finaux ou résout un problème de sécurité.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Gérer les désaccords \{#disagreements}
 
@@ -135,9 +145,13 @@ Aujourd'hui, la communauté Ethereum a adopté une politique de non-intervention
 
 Regardez-en plus sur le piratage DAO :
 
-<YouTube id="rNeLuBOVe8A" />
+{
+	<YouTube id="rNeLuBOVe8A" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### L'utilité de la fourche \{#forking-utility}
 
@@ -145,7 +159,9 @@ La fourche Ethereum/Ethereum Classic est un excellent exemple de fourche saine. 
 
 La capacité à faire face à des différences politiques, philosophiques ou économiques significatives joue un rôle important dans le succès de la gouvernance d'Ethereum. Sans la fourche, il y aurait eu des luttes incessantes, une réticence à participer pour ceux qui ont finalement formé Ethereum Classic et une vision de plus en plus divergente de ce qui ferait le succès d'Ethereum.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Gouvernance de la Chaîne phare \{#beacon-chain}
 
@@ -159,7 +175,9 @@ Lorsque la Chaîne Phare a fusionné avec la couche d'exécution Ethereum le 15 
   Plus d'infos sur la fusion
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Comment s'impliquer ? \{#get-involved}
 

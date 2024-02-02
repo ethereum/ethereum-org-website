@@ -56,6 +56,7 @@ La abstracción de cuenta permite una **mejor experiencia global de usuario** as
 
 La gestión del gas también se mejora mucho con la abstracción de cuenta. Las aplicaciones, no solo pueden ofrecer el pago de las tarifas de gas de sus usuarios, las tarifas de gas también pueden pagarse con otros tókenes además de ETH, lo que libera a los usuarios de tener que mantener un balance de ETH para transacciones de fondos. Esto funcionaría intercambiando los tókenes de los usuarios por ETH dentro del contrato y luego usando ETH para pagar el gas.
 
+{
 <ExpandableCard title="¿Cómo puede ayudar con el gas una abstracción de cuenta?" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
 
 La gestión del gas es una de las principales fricciones de los usuarios de Ethereum, principalmente porque ETH es el único activo que puede usarse para pagar por transacciones. Imagine que tiene una cartera con USDC, pero sin ETH. No podrá mover o intercambiar esos tókenes USDC, porque no puede pagar el gas. No puede intercambiar los USDC por ETH tampoco, porque eso en sí mismo cuesta gas. Tendrá que mandar más ETH a su cuenta desde una plataforma de cambio u otra dirección para solucionar el problema. Con billeteras de contrato inteligente, podrá simplemente pagar por gas en USDC, liberando su cuenta. Ahora no tendrá que mantener un balance de ETH en todas sus cuentas.
@@ -63,6 +64,7 @@ La gestión del gas es una de las principales fricciones de los usuarios de Ethe
 La abstracción de cuenta también permite a los desarrolladores de DApp ser creativos con la gestión del gas. Por ejemplo, puede empezar a pagar a su DEX favorito una tarifa fija mensual por transacciones ilimitadas. DApps podría ofrecer el pago de todas sus tarifas de gas en su nombre como recompensa por usar su plataforma, o como una oferta de incorporación. Los desarrolladores podrán innovar en el tema del gas más fácilmente cuando las carteras de contrato inteligente sean compatibles con el protocolo.
 
 </ExpandableCard>
+}
 
 Las sesiones de confianza también pueden transformar potencialmente la experiencia del usuario, especialmente para aplicaciones como juegos, donde se necesitan aprobar grandes cantidades de transacciones pequeñas en poco tiempo. La aprobación individual de cada transacción rompería la experiencia de juego, pero la aprobación permanente es insegura. Una billetera de contrato inteligente podría aprobar ciertas transacciones por un tiempo fijo, hasta valores específicos o solo para ciertas direcciones.
 
@@ -74,12 +76,15 @@ Estos son solo algunos ejemplos de cómo las experiencias de usuario podrían pa
 
 Las carteras de contrato inteligente existen actualmente, pero es un desafío implementarlas debido a que la EVM no las admite. En cambio, se basan en proteger un código relativamente complejo con transacciones estándar de Ethereum. Ethereum puede cambiar esto al permitir que contratos inteligentes inicien transacciones, controlando la lógica necesaria en los contratos inteligentes de Ethereum en vez de fuera de la cadena. Al colocar la lógica en los contratos inteligentes se aumenta la descentralización de Ethereum, ya que elimina la necesidad de «repetidores» ejecutados por desarrolladores de carteras para traducir mensajes firmados por el usuario de transacciones regulares de Ethereum.
 
+{
 <ExpandableCard title="EIP-2771: la abstracción de cuenta usando transacciones meta" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 introduce el concepto de transacciones meta, lo que le permite a terceros pagar por los costes de gas de un usuario sin hacer cambios en el protocolo de Ethereum. En principio base es enviar las transacciones firmadas por un usuario a un contrato de transitario. El transitario es una entidad de confianza que verifica que las transacciones sean válidas antes de enviarlas a un repetidor de gas. Esto se realiza fuera de la cadena, evitando la necesidad de pagar gas. El repetidor de gas transfiere la transacción a un contrato «destinatario», pagando el gas necesario para que la transacción se ejecute en Ethereum. La transacción se ejecuta si el destinatario conoce y se fía del transitario. Este modelo le facilita a los desarrolladores la implementación de transacciones sin gas para usuarios.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-4337: la abstracción de cuenta sin cambiar el protocolo de Ethereum" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
 EIP-4337 es el primer paso hacia la compatibilidad con la cartera de contrato inteligente de forma descentralizada que <em>no requiere cambios en el protocolo de Ethereum</em>. En vez de modificar la capa de consenso para ser compatible con carteras de contrato inteligente, se añade un nuevo sistema por separado al protocolo de intercambio de información de transacción normal. Este sistema de nivel superior se construye alrededor de un nuevo objeto llamado <code>UserOperation</code> que recoge acciones de un usuario junto con firmas relevantes. Estas acciones <code>UserOperation</code> se emiten después a una zona de espera donde los validadores pueden reunirlas en una «transacción agrupada». La transacción agrupada representa una secuencia de muchas <code>UserOperations</code> individuales y puede incluirse en bloques de Ethereum como una transacción normal para que los validadores la recojan usando modelos de selección similares que maximizan las tarifas.
@@ -89,7 +94,9 @@ El funcionamiento de las carteras también cambiaría en el marco del EIP-4337. 
 <strong>Nota</strong> el contrato de punto de entrada EIP 4337 se implementó en la red principal de Ethereum el 1 de marzo del 2023. Puede ver el contrato en <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-2938: cambios en el protocolo de Ethereum para compatibilizarlo con la abstracción de cuenta" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> tiene como objetivo actualizar el protocolo de Ethereum al introducir un nuevo tipo de transacción, <code>AA_TX_TYPE</code> que incluye tres campos: <code>nonce</code>, <code>destino</code> y <code>datos</code>, donde <code>nonce</code> es un contador de transacciones, <code>destino</code> es la dirección de contrato del punto de entrada <code>datos</code> es el código byte de EVM. Para ejecutar estas transacciones, hay dos instrucciones nuevas (conocidas como códigos operativos) que se deben añadir a la EVM: <code>NONCE</code> y <code>PAYGAS</code>. El código OP <code>NONCE</code> registra la secuencia de transacción y <code>PAYGAS</code> calcula y retira el gas necesario para ejecutar una transacción del balance del contrato. Estas nuevas características le permiten a Ethereum respaldar nativamente las carteras de contrato inteligente, dado que la infraestructura necesaria se integra en el protocolo de Ethereum.
@@ -97,7 +104,9 @@ El funcionamiento de las carteras también cambiaría en el marco del EIP-4337. 
 Tenga en cuenta que EIP-2938 no está activo actualmente. La comunidad ahora está favoreciendo el EIP-4337 porque no requiere cambios en el protocolo.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-3074: actualiza las cuentas de propiedad externa para la abstracción de cuenta" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> pretende actualizar las cuentas de propiedad externa de Ethereum al permitirles delegar control a un contrato inteligente. Esto significa que la lógica del contrato inteligente podría aprobar transacciones originadas por una EOA. Esto podría permitir características como el patrocinio de gas y transacciones por lotes. Para que esto funcione, dos nuevos códigos operativos deben añadirse a la EVM: <code>AUTH</code> y <code>AUTHCALL</code>. Con EIP-3074 los beneficios de una cartera de contrato inteligente están disponibles <em>sin necesitar un contrato</em>, en su lugar, un contrato de tipo específico sin estado, ni fiabilidad, no actualizable, conocido como «invocador» hace las transacciones.
@@ -105,6 +114,7 @@ Tenga en cuenta que EIP-2938 no está activo actualmente. La comunidad ahora est
 Tenga en cuenta que EIP-3074 no está activo actualmente. La comunidad ahora está favoreciendo el EIP-4337 porque no requiere cambios en el protocolo.
 
 </ExpandableCard>
+}
 
 ## Progreso actual \{#current-progress}
 

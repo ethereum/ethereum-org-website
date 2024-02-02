@@ -34,13 +34,17 @@ La deuxième étape de l'expansion des données blob est compliquée car elle n�
 
 Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). Il est probable que cette dernière prenne plusieurs années avant d'être pleinement mise en œuvre. La solution Danksharding repose sur d'autres développements tels que [la séparation entre la construction et la proposition de blocs](/roadmap/pbs) et de nouveaux modèles de réseau qui permettent à celui-ci de confirmer avec efficacité, que les données sont disponibles en échantillonnant de manière aléatoire quelques kilo-octets à la fois, aussi appelé [Échantillonnage de disponibilité des données (DAS)](/developers/docs/data-availability).
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">En savoir plus sur la fragmentation</ButtonLink>
+}
 
 ## Décentraliser les rollups \{#decentralizing-rollups}
 
 [Les rollups](/layer-2) permettent déjà la mise à l'échelle d'Ethereum. Un[ riche écosystème de projets rollups](https://l2beat.com/scaling/tvl) permet aux utilisateurs d'effectuer des transactions rapidement et à moindre coût, avec divers niveaux de garantie de sécurité. Cependant, les rollups ont été initiés en utilisant des séquenceurs centralisés (ordinateurs qui effectuent l'ensemble du traitement et l'agrégation des transactions avant de les soumettre à Ethereum). Cette approche est vulnérable à la censure car, en d'autres termes, les opérateurs-séquenceurs peuvent être sanctionnés, soudoyés ou corrompus. Parallèlement,[ les rollups fluctuent](https://l2beat.com) de la façon dont ils valident les données entrantes. La meilleure voie possible, consiste à ce que les « provers/ceux qui prouvent » soumettent des preuves de fraude ou de validité, mais tous les rollups n'ont pas encore atteint ce niveau. Même ceux qui utilisent des preuves de validité/fraude font appel à un petit groupe de « provers » réputés. Par conséquent, la prochaine étape cruciale dans la mise à l'échelle d'Ethereum consiste à répartir la responsabilité de l'exécution des séquenceurs et des provers, parmi davantage de personnes.
 
+{
 <ButtonLink variant="outline-color" to="/developers/docs/scaling/">Plus d'infos sur les rollups</ButtonLink>
+}
 
 ## Progrès actuels \{#current-progress}
 

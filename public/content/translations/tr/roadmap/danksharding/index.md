@@ -17,17 +17,21 @@ summaryPoints:
 
 Proto-Danksharding, [ EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) olarak da bilinir, [toplamaların](/layer2/#rollups) bloklara daha uygun veri ekleyebilmesi için bir yöntemdir. Bu iki kavramın isimleri fikri ortaya atan araştırmacılardan gelmektedir: Protolambda ve Dankrad Feist. İşlemlerini `CALLDATA`'ya kaydettikleri için toplamalar şu an için kullanıcı işlemlerini ne kadar uyguna yapabilecekleri konusunda sınırlandırılmışlardır. Bu çok pahalı çünkü Ethereum düğümleri tarafından işleniyor ve toplamaların veriye kısa bir süre ihtiyaç duymasına rağmen zincirde sonsuza kadar yaşıyor. Proto-Danksharding bloklara takılıp gönderilebilen veri damlalarını tanıtıyor. Bu veri damlaları Ethereum Sanal Makinesi için erişilebilir değildir ve belli bir süreden sonra otomatik olarak silinir (1-3 ay). Bu, toplamaların verilerini çok daha ucuza gönderebileceklerini ve birikimleri de son kullanıcılara ucuz işlemler adı altında aktarabileceği anlamına gelir.
 
+{
 <ExpandableCard title="Damlalar Toplamaları neden daha ucuz hale getirir?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Toplamalar Ethereum'u ölçeklendirmek için Zincir dışındaki işlemleri harmanlayarak ve sonrasında da Ethereum'a sonuçları göndererek uygulanan yollardır. Bir Toplama esas olarak iki bölümden oluşur, veri ve yürütme kontrolü. Veri, Ethereum'a gönderilen durum değişikliğini üretmek için bir toplama tarafından işlenen bir işlem sekansıdır. Yürütme kontrolü, işlemlerin dürüst bir aktör ("kanıtlayıcı) tarafından teklif edilen durum değişikliğinin doğru olduğundan emin olunması için tekrar uygulanmasıdır. Yürütme kontrolünün yapılması için, işlem verisi herkesin yükleyebileceği ve kontrol edebileceği kadar uzun süredir ulaşılabilir olmalıdır. Bu toplama sıralayıcısının herhangi bir dürüst olmayan davranışın kanıtlayıcı tarafından cezalandırılabileceği anlamına gelir. Ancak, sonsuza kadar da ulaşılabilir olmasına gerek yoktur.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Damla verilerini silmek neden sorun çıkarmaz?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Toplamalar, Zincir üstündeki işlem verilerine taahhütler gönderirler ve ayrıca asıl veriyi de veri damlalarında ulaşılabilir kılarlar. Bu, kanıtlayıcıların taahhütlerin geçerli olup olmadığını ve yanlış olduğunu düşündüğü verileri bildirebileceği anlamına gelir. Düğüm seviyesinde, veri düğümleri fikir birliği istemcisinde tutulur. Fikir birliği istemcileri veriyi gördüklerini ve ağ içinde yayıldığını kanıtlarlar. Eğer veri sonsuza kadar tutulsaydı, bu istemciler şişer ve düğümleri çalıştırabilmek için büyük donanım gerekliliklerine ihtiyaç duyulurdu. Bunun yerine, her 1 ila 3 ayda bir veri otomatik olarak düğümden çıkarılır. Fikir birliği istemcisi kanıtlayıcıları veriyi onaylamak için yeterince fırsat olduğunu belirtirler. Asıl veri; toplama operatörleri, kullanıcılar ya da başkaları tarafından zincir dışında tutulabilir.
 
 </ExpandableCard>
+}
 
 ### Veri damlaları nasıl onaylanır? \{#how-are-blobs-verified}
 
@@ -41,17 +45,21 @@ KZG'nin açılımı Kate-Zaverucha-Goldberg'dür. Bunlar [bir](https://link.spri
 
 KZG Töreni, Ethereum topluluğundan birçok insanın beraber veri onaylamak için kullanmak üzere yazdığı rastgele bir dizidir. Bu sayı dizilerinin kimse tarafından bilinmemesi ve tekrar oluşturulmaması çok önemlidir. Bundan emin olmak için, törene katılan herkes önceki katılımcıdan bir dizi alır. Sonra kendileri bazı yeni değerler oluştururlar (örnek: internet tarayıcısının mouse hareketini ölçmesine izin vermek) ve önceki değerlerle karıştırırlar. Sonrada bu değeri bir sonraki katılımcıya gönderirler ve yerel cihazlarından silerler. Törendeki bir kişi bunu dürüst yaptığı sürece, son değer saldırgan için bilinemez olacak. EIP-4844 KZG töreni hâlâ açıktı ve on binlerce insan kendi entropilerini eklemek için katıldı. Bu törenin baltanabilmesi için, katılımcıların %100'ünün aktif olarak sahtekar olması gerekirdi. Katılımcıların gözünde, eğer kendilerinin dürüst olduklarını biliyorlarsa, başkalarına güvenmeye gerek yoktu çünkü kendilerinin zaten töreni güvende tuttuklarını biliyorlardı (N'de 1 dürüst katılımcı gerekliliğini kişisel olarak sağlamışlardı).
 
+{
 <ExpandableCard title="KZG töreninde kullanılan rastgele numara nedir?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Bir toplama, damlada veri yayınladığında, zincirde yayınladıkları bir taahhüt sağlarlar. Bu taahhüt belli başlı noktalara polinom yerleştirmenin değerlendirilmesinin bir sonucudur. Bu noktalar, KZG töreninde oluşturulan rastgele numaralar tarafından tanımlanır. Kanıtlayıcılar veriyi onaylamak için polinomu aynı noktalarda değerlendirebilirler - eğer aynı değerlere ulaştılarsa veri doğrudur.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="KZG rastgele verileri neden gizli tutulmalıdır?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Eğer biri bu taahhüt için kullanılan rastgele lokasyonları biliyorsa, söz konusu spesifik noktalara (ör. "çarpışma") oturacak yeni polinomlar yazmak onlar için kolaydır. Bu, damlaya veri ekleyip damladan veri çıkarabilecekleri ve buna rağmen geçerli kanıt sunabilecekleri anlamına gelir. Bunu önlemek için, kanıtlayıcılara asıl gizli lokasyonları vermek yerine, bu lokasyonları eliptik eğriler kullanılarak oluşturulmuş kriptografik bir "kara kutu" içinde alırlar. Bunlar bu değerleri orijinal değerlerin ters mühendislik yapılamayacağı etkili bir yolla karıştıtırlar, ancak zeki matematikçi kanıtlayıcılar ve onaylayıcılar yine de polinomları ve temsil ettiği yerleri bulabilir ve değerlendirebilirler.
 
 </ExpandableCard>
+}
 
 <InfoBanner isWarning mb={8}>
   Ne Danksharding ne de Proto-Danksharding blok zinciri çoklu parçalara ayırmayı hedeflemiş olan geleneksel "Parçalama"ya uymaz. Parça zincirleri artık yol haritasının bir parçası değildir. Bunun yerine, "Danksharding", Ethereum'u ölçeklendirmek için damlalar etrafında dağıtılmış veri örneklendirmesini kullanır. Bu, uygulanması çok daha kolay bir yöntemdir. Bu modele bazen "veri parçalama" da denir.
@@ -63,17 +71,21 @@ Danksharding, Proto-Danksharing ile başlayan toplama ölçeklemesinin tamamen g
 
 Bunun çalışma mantığı damlaların, Proto-Danksharding'teki bloklara bağlı 1'den tam Danksharding'deki 64'e genişletilmesidir. Diğer gerekli değişiklikler, fikir birliği istemcilerinin yeni büyük damlalarla başa çıkabilmek için gereken çalışma biçimindeki güncellemelerdir. Bu değişiklerden bazıları, Danksharding'den bağımsız sebeplerden dolayı halihazırda yol haritasında bulunmaktadır. Örneğin, Danksharding, "önerici-inşa edici" ayrımının uygulanmış olmasını gerektirir. Bu, blok inşası ve blok önerisi görevlerini farklı doğrulayıcılara dağıtan bir yükseltmedir. Benzer şekilde Danksharding için, veri ulaşılabilirliği örneklemi gereklidir. Ancak, aynı zamanda yüklü miktarda geçmiş verileri depolamayan hafif istemcilerin (durumsuz istemciler) geliştirilmesinde de gereklidir.
 
+{
 <ExpandableCard title="Danksharding neden, önerici-inşa edici ayrımına ihtiyaç duyuyor?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Önerici-inşa edici ayrımı, bağımsız doğrulayıcıların 32 MB'lik damla verileri için yüksek maliyetli taahhüt ve kanıt oluşturmak zorunda kalmalarını engellemek için gereklidir. Çünkü bu durum yerel paydaşlar için zorluğa ve güçlü donanıma yatırım yapma gerekliliğine sebep olacak ve merkeziyetsizliğe zarar verecektir. Bunun yerine, özelleştirilmiş blok inşa edicileri bu maliyetli hesaplama işinin sorumluluğunu alır. Sonrasında bloklarını, blok önericilerinin yayın yapabilmesi için erişime açarlar. Blok önericileri basitçe en kârlı bloku seçerler. Herkes damlaları ucuz ve hızlı bir şekilde doğrulayabilir. Bu da demek olur ki, herhangi bir normal doğrulayıcı blok inşa edicilerinin dürüst davranıp davranmadığını kontrol edebilir. Bu da merkeziyetsizlikten feragat edilmeden büyük damlaların işlenebilmesini sağlar. Uygunsuz davranışta bulunan blok inşa edicileri ağdan dışarı atılır ve yatırdığı paranın bir kısmını (yaklaşık 1/32'sini) kaybeder. Blok inşa etme görevi kazançlı bir aktivite olduğu için diğer insanlar bu kişilerin yerini alacaktır.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Danksharding neden veri kullanılabilirliği örneklendirmesine ihtiyaç duyuyor?" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Veri kullanılabilirliği örneklendirmesi, doğrulayıcıların hızlı ve etkili bir şekilde damla verilerini doğrulayabilmesi için gereklidir. Veri kullanılabilirliği örneklendirmesi kullanılarak, doğrulayıcılar damla verisinin kullanılabilir ve doğru şekilde taahhüt edilmiş olduğundan çok emin olabilirler. Her doğrulayıcı rastgele birkaç veri noktası örnekleyerek kanıt oluşturabilir. Yani hiçbir doğrulayıcının bütün damlayı kontrol etmesi gerekmez. Veri kaybı olması durumunda, hızlıca tespit edilir ve damla reddedilir.
 
 </ExpandableCard>
+}
 
 ### Güncel ilerleme \{#current-progress}
 

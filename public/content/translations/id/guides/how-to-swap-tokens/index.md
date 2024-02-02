@@ -47,7 +47,9 @@ Tinjau detail transaksi. Periksa nilai tukar dan biaya lainnya untuk mencegah ke
 Anda bisa melihat perkembangan transaksi di penjelajah rantai blok mana pun. Proses ini seharusnya tidak memakan waktu lebih dari 10 menit.
 
 Anda akan secara otomatis menerima token yang ditukar di dompet Anda setelah transaksi diproses.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Ingin mempelajari selengkapnya?</div>

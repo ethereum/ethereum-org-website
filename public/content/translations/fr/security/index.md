@@ -8,7 +8,9 @@ lang: fr
 
 Face à l'intérêt grandissant pour les cryptomonnaies, il est essentiel d'apprendre les bonnes pratiques lors de leur utilisation. Les cryptomonnaies peuvent être excitantes, mais elles impliquent aussi des risques importants. Si vous effectuez ces petits efforts en amont, vous pouvez diminuer ces risques.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Le b.a.-ba de la sécurité sur le Web \{#web-security}
 
@@ -81,7 +83,9 @@ Pour ceux qui veulent une 2FA encore plus securisée, pensez à utiliser une cl�
 
 En savoir plus sur la 2FA :
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Désinstaller les extensions du navigateur \{#uninstall-browser-extensions}
 
@@ -95,7 +99,9 @@ Les extensions de navigateur comme les extensions Chrome ou les modules complém
 
 [En savoir plus sur les risques liés aux extensions des navigateurs](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Le b.a.-ba de la sécurité de votre cryptomonnaie \{#crypto-security}
 
@@ -110,7 +116,9 @@ L'une des principales raisons pour lesquelles les gens se font arnaquer dans l'u
 <DocLink to="/eth/">
   Qu'est-ce-que l'ether ?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Sécurité du portefeuille \{#wallet-security}
 
@@ -153,7 +161,9 @@ De nombreux portefeuilles Ethereum offrent des limites de sécurité pour évite
 
 [Comment révoquer l'accès des contrats intelligents à vos fonds crypto](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Escroqueries courantes \{#common-scams}
 
@@ -257,7 +267,9 @@ Les arnaques au airdrop : il s'agit d'un projet factice de distribution d'actif 
 
 [En savoir plus sur les arnaques par Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Complément d'information \{#further-reading}
 
@@ -281,4 +293,6 @@ Les arnaques au airdrop : il s'agit d'un projet factice de distribution d'actif 
 - [Avoiding Scams](https://bitcoin.org/en/scams) - _Bitcoin.org_
 - [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

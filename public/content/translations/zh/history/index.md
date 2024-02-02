@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 所有主要里程碑、分叉和更新以太坊区块链的时间表
 
+{
 <ExpandableCard title="什么是分叉？" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 分叉是需要对网络进行重大技术升级或更改时的变化 – 它们通常源自<a href="/eips/">以太坊改进建议 (EIP)</a> 并更改了以太坊协议的“规则”。
@@ -18,6 +19,7 @@ sidebarDepth: 1
 这些规则更改可能会在网络中造成暂时的分叉。 新区块的产生，可以来自新规则，也可以来自旧规则。 分叉通常提前商定，以便让客户端能够采用 Unison 的升级，升级后的分叉链成为主链。 然而，在极少数情况下，对分叉的不同意见可能导致网络永久硬分叉 – 最为著名的是 <a href="#dao-fork">DAO 分叉</a> 产生了 Ethereum Classic。
 
 </ExpandableCard>
+}
 
 直接查阅有关一些特别重要的以往升级的信息：[信标链](/roadmap/beacon-chain/)、[合并](/roadmap/merge/)和 [EIP-1559](#london)
 
@@ -35,6 +37,7 @@ sidebarDepth: 1
 
 上海升级将质押提款引入执行层。 上海升级与卡佩拉升级同时进行，使区块能够接受提款操作，因此质押人可以将以太币从信标链提取到执行层。
 
+{
 <ExpandableCard title="以太坊改进提案 - 上海升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,6 +49,7 @@ sidebarDepth: 1
 </ul>
 
 </ExpandableCard>
+}
 
 - [阅读上海升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -80,6 +84,7 @@ sidebarDepth: 1
 
 - [阅读巴黎升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="以太坊改进提案 - 巴黎升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,6 +93,7 @@ sidebarDepth: 1
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -113,6 +119,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 - [以太坊基金会博客 - 灰色冰川升级公告](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 灰色冰川升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,6 +127,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -136,6 +144,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 - [以太坊基金会博客 - 箭形冰川升级公告](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [以太坊牧猫人组织 - 以太坊箭形冰川升级](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="箭形冰川升级以太坊改进提" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,6 +152,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -176,6 +186,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [请阅读以太坊牧猫人组织的解释说明](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="以太坊改进提案 - 伦敦升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,6 +198,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -201,6 +213,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [请阅读以太坊牧猫人组织的解释说明](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="以太坊改进提案 - 柏林升级" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,6 +224,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -259,6 +273,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 - [请阅读以太坊基金会公告](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [请阅读以太坊牧猫人组织的解释说明](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="以太坊改进提案 - 缪尔冰川升级" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,6 +281,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -287,6 +303,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 伊斯坦布尔分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -299,6 +316,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -316,6 +334,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 君士坦丁堡分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -326,6 +345,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -346,6 +366,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 拜占庭升级" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -361,6 +382,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -380,6 +402,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 伪龙分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -390,6 +413,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -405,6 +429,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 橘子口哨分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -413,6 +438,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -442,6 +468,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 [请阅读以太坊基金会公告](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="以太坊改进提案 - 家园分叉" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -451,6 +478,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 

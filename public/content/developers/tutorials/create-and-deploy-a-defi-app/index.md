@@ -38,7 +38,7 @@ This will create a blank project for the development and deployment of our smart
 
 - `truffle-config.js`: Truffle configuration file
 
-## Create the ERC20 Token \{##create-the-erc20-token}
+## Create the ERC20 Token \{#create-the-erc20-token}
 
 First we need to create our ERC20 token that we will use to stake on the smart contract. To create our fungible token, we will first need to install the OpenZeppelin library. This library contains the implementations of standards such as the ERC20 and the ERC721. To install it, run the command:
 
@@ -84,7 +84,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## Compile the ERC20 Token \{##compile-the-erc20-token}
+## Compile the ERC20 Token \{#compile-the-erc20-token}
 
 To compile our smart contract, we must first check our solidity compiler version. You can check that by running the command:
 
@@ -117,7 +117,7 @@ Now we can compile our smart contract by running the following command:
 truffle compile
 ```
 
-## Deploy ERC20 Token \{##deploy-erc20-token}
+## Deploy ERC20 Token \{#deploy-erc20-token}
 
 After compiling, we can now deploy our token.
 
@@ -169,7 +169,7 @@ By running the commands above, we will see that the first address has in fact 1 
 
 _First address has 1000000 MyTokens_
 
-## Create FarmToken Smart Contract \{##create-farmtoken-smart-contract}
+## Create FarmToken Smart Contract \{#create-farmtoken-smart-contract}
 
 The FarmToken smart contract will have 3 functions:
 
@@ -462,7 +462,7 @@ To run this script: `truffle exec .\scripts\withdrawMyTokenFromTokenFarm.js`. As
 
 _output of withdrawMyTokenFromTokenFarm.js_
 
-## References \{##references}
+## References \{#references}
 
 [Contracts - OpenZeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/)
 

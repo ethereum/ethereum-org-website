@@ -53,6 +53,7 @@ summaryPoint4: 合併將以太坊的能耗降低了大約 99.95%。
 
 ### 節點營運者與去中心化應用程式開發者 \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="質押節點營運者和提供者"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +69,9 @@ id="staking-node-operators">
 
 若未設定「收費」地址，驗證者仍舊可以如常行事，但你將無法賺取未銷毀費用小費，以及原本可以在驗證者提交的區塊中賺取的礦工可提取價值。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="非驗證節點營運者和基礎設施提供者"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +89,9 @@ id="node-operators">
 若未完成上述事項，你的節點將會顯示為「離線」狀態，直到兩個層皆同步且通過驗證為止。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="dApp 和智慧型合約開發者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -105,6 +110,7 @@ id="developers">
 更多資訊請閱讀 Tim Beiko 的部落格文章：<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">合併如何影響以太坊的應用層</a>。
 
 </ExpandableCard>
+}
 
 ## 合併與能耗 \{#merge-and-energy}
 
@@ -116,6 +122,7 @@ id="developers">
 
 ## 關於合併的誤解 \{#misconceptions}
 
+{
 <ExpandableCard
 title="誤解：「運行節點需要質押 32 以太幣。」"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -133,7 +140,9 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 <a href="/run-a-node/">關於運行自己節點的更多資訊</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解：「合併無法降低 Gas 費用。」"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -143,7 +152,9 @@ Gas 費用是網路需求相對於網路容量的產物。 合併後，我們棄
 根據<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷軸為中心的開發藍圖</a>，我們主要專注於擴容<a href="/layer-2/">二層網路</a>上的使用者活動，同時讓一層網路主網成為針對卷軸資料儲存進行最佳化的安全去中心化結算層，以協助使卷軸交易成本呈指數級下降。 轉用權益證明是實現這點的關鍵前導步驟。 <a href="/developers/docs/gas/">關於 Gas 和費用的更多資訊。</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解：「交易速度在合併後大幅加快。」"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -154,7 +165,9 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 權益證明引入了先前不存在的交易最終性的概念。 在工作量證明中，交易後經過的每個區塊會讓區塊逆轉的難度指數型加大，但機率並不完全為零。 在權益證明下，區塊會捆綁進驗證者投票的時期（每 6.4 分鐘含有 32 個提交區塊的機會）。 當一個時期結束時，驗證者投票決定該時期是否「合法」。 如果驗證者們同意該時期合法，它會在下個時期最終確定。 取消最終確定的交易在經濟上不可行，因為需要取得和銷毀超過三分之一的總質押以太幣。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解：「合併啟用了質押提款功能。」"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -166,7 +179,9 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 <a href="/staking/withdrawals/">關於質押提款的更多資訊</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="誤解：「目前合併完成了，且質押提款已啟用，質押者可以一次全部退出。」"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -178,6 +193,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 年化報酬率也是特意設計成動態的，使得市場上的質押者可以權衡他們願意付出多少成本來協助維護網路安全。 如果速率太低，驗證者將以協定限制的速率退出。 這將逐漸提高留下的所有人的年利率，再次吸引新的或返回的質押者。
 </ExpandableCard>
+}
 
 ## “Eth2”發生了什麽？ \{#eth2}
 

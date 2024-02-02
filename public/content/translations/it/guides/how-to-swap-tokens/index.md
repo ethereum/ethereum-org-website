@@ -47,7 +47,9 @@ Ricontrolla i dettagli della transazione. Controlla il tasso di cambio e qualsia
 Puoi visualizzare il progresso della transazione su qualsiasi esploratore della blockchain. Questo processo non dovrebbe richiedere più di 10 minuti.
 
 Riceverai automaticamente i token scambiati nel tuo portafoglio, una volta elaborata la transazione.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Vuoi scoprire di più?</div>

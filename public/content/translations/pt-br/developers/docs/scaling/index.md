@@ -94,11 +94,15 @@ Saiba mais sobre [fragmentação](/developers/docs/scaling/validium/).
 
 ## Você é o tipo de pessoa que aprende mais com recursos visuais? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Note que a explicação no vídeo usa o termo "Camada 2" para se referir a todas as soluções de escalonamento off-chain enquanto diferenciamos a "Camada 2" como uma solução off-chain que deriva sua segurança através do consenso principal da camada 1._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Leitura adicional \{#further-reading}
 

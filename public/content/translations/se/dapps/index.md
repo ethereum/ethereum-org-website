@@ -18,7 +18,9 @@ Det bästa sättet att komma igång med Ethereum är att hoppa rakt in!
 
 Här är några appar byggda på Ethereum - vi roterar listan ofta!
 
-<RandomAppList />
+{
+	<RandomAppList />
+}
 
 Intresserad av att titta på fler appar som är byggda på Ethereum?
 

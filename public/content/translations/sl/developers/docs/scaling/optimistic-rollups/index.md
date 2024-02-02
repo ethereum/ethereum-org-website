@@ -41,13 +41,17 @@ Torej lahko vidite spodbude: sodelujoči so kaznovani za izvajanje prevar in kom
 
 Oglejte si, kako Finematics razložijo optimistične zvitke:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
 ### Uporaba optimističnih zvitkov \{#use-optimistic-rollups}
 
 Obstaja več implementacij optimističnih zvitkov, ki jih lahko integrirate v svoje dappe:
 
-<RollupProductDevDoc rollupType="optimistic" />
+{
+	<RollupProductDevDoc rollupType="optimistic" />
+}
 
 **Gradivo za branje o optimističnih zvitkih**
 

@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 A timeline of all the major milestones, forks, and updates to the Ethereum blockchain.
 
+{
 <ExpandableCard title="What are forks?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Forks are when major technical upgrades or changes need to be made to the network – they typically stem from <a href="/eips/">Ethereum Improvement Proposals (EIPs)</a> and change the "rules" of the protocol.
@@ -18,23 +19,29 @@ When upgrades are needed in traditional, centrally-controlled software, the comp
 These rule changes may create a temporary split in the network. New blocks could be produced according to the new rules or the old ones. Forks are usually agreed upon ahead of time so that clients adopt the changes in unison and the fork with the upgrades becomes the main chain. However, in rare cases, disagreements over forks can cause the network to permanently split – most notably the creation of Ethereum Classic with the <a href="#dao-fork">DAO fork</a>.
 
 </ExpandableCard>
+}
 
 Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); and [EIP-1559](#london)
 
 Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2023 \{##2023}
+## 2023 \{#2023}
 
-### Shanghai \{##shanghai}
+### Shanghai \{#shanghai}
 
-<NetworkUpgradeSummary name="shanghai" />
+{
+	<NetworkUpgradeSummary name="shanghai" />
+}
 
-#### Summary \{##shanghai-summary}
+#### Summary \{#shanghai-summary}
 
 The Shanghai upgrade brought staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enabled blocks to accept withdrawal operations, which allows stakers to withdraw their ETH from the Beacon Chain to the execution layer.
 
+{
 <ExpandableCard title="Shanghai EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,16 +53,19 @@ The Shanghai upgrade brought staking withdrawals to the execution layer. In tand
 </ul>
 
 </ExpandableCard>
+}
 
 - [Read the Shanghai upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
 ---
 
-### Capella \{##capella}
+### Capella \{#capella}
 
-<NetworkUpgradeSummary name="capella" />
+{
+	<NetworkUpgradeSummary name="capella" />
+}
 
-#### Summary \{##capella-summary}
+#### Summary \{#capella-summary}
 
 The Capella upgrade was the third major upgrade to the consensus layer (Beacon Chain) and enabled staking withdrawals. Capella occurred synchronously with the execution layer upgrade, Shanghai, and enabled staking withdrawal functionality.
 
@@ -66,20 +76,25 @@ The upgrade also provided automatic account sweeping functionality, which contin
 - [More on staking withdrawals](/staking/withdrawals/).
 - [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2022 \{##2022}
+## 2022 \{#2022}
 
-### Paris (The Merge) \{##paris}
+### Paris (The Merge) \{#paris}
 
-<NetworkUpgradeSummary name="paris" />
+{
+	<NetworkUpgradeSummary name="paris" />
+}
 
-#### Summary \{##paris-summary}
+#### Summary \{#paris-summary}
 
 The Paris upgrade was triggered by the proof-of-work blockchain passing a [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000. This happened at block 15537393 on 15th September 2022, triggering the Paris upgrade the next block. Paris was [The Merge](/roadmap/merge/) transition - its major feature was switching off the [proof-of-work](/developers/docs/consensus-mechanisms/pow) mining algorithm and associated consensus logic and switching on [proof-of-stake](/developers/docs/consensus-mechanisms/pos) instead. Paris itself was an upgrade to the [execution clients](/developers/docs/nodes-and-clients/#execution-clients) (equivalent to Bellatrix on the consensus layer) that enabled them to take instruction from their connected [consensus clients](/developers/docs/nodes-and-clients/#consensus-clients). This required a new set of internal API methods, collectively known as the [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md), to be activated. This was arguably the most significant upgrade in Ethereum history since [Homestead](#homestead)!
 
 - [Read the Paris upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="Paris EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,14 +103,17 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Bellatrix \{##bellatrix}
+### Bellatrix \{#bellatrix}
 
-<NetworkUpgradeSummary name="bellatrix" />
+{
+	<NetworkUpgradeSummary name="bellatrix" />
+}
 
-#### Summary \{##bellatrix-summary}
+#### Summary \{#bellatrix-summary}
 
 The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/roadmap/beacon-chain), preparing the chain for [The Merge](/roadmap/merge/). It brings validator penalties to their full values for inactivity and slashable offenses. Bellatrix also includes an update to the fork choice rules to prepare the chain for The Merge and the transition from the last proof-of-work block to the first proof-of-stake block. This includes making consensus clients aware of the [terminal total difficulty](/glossary/#terminal-total-difficulty) of 58750000000000000000000.
 
@@ -103,16 +121,19 @@ The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/r
 
 ---
 
-### Gray Glacier \{##gray-glacier}
+### Gray Glacier \{#gray-glacier}
 
-<NetworkUpgradeSummary name="grayGlacier" />
+{
+	<NetworkUpgradeSummary name="grayGlacier" />
+}
 
-#### Summary \{##gray-glacier-summary}
+#### Summary \{#gray-glacier-summary}
 
 The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by three months. This is the only change introduced in this upgrade, and is similar in nature to the [Arrow Glacier](#arrow-glacier) and [Muir Glacier](#muir-glacier) upgrades. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
 
 - [EF Blog - Gray Glacier Upgrade Announcement](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="Gray Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,22 +141,28 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2021 \{##2021}
+## 2021 \{#2021}
 
-### Arrow Glacier \{##arrow-glacier}
+### Arrow Glacier \{#arrow-glacier}
 
-<NetworkUpgradeSummary name="arrowGlacier" />
+{
+	<NetworkUpgradeSummary name="arrowGlacier" />
+}
 
-#### Summary \{##arrow-glacier-summary}
+#### Summary \{#arrow-glacier-summary}
 
 The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#difficulty-bomb) by several months. This is the only change introduced in this upgrade, and is similar in nature to the [Muir Glacier](#muir-glacier) upgrade. Similar changes have been performed on the [Byzantium](#byzantium), [Constantinople](#constantinople) and [London](#london) network upgrades.
 
 - [EF Blog - Arrow Glacier Upgrade Announcement](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Upgrade](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="Arrow Glacier EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,20 +170,23 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Altair \{##altair}
+### Altair \{#altair}
 
-<NetworkUpgradeSummary name="altair" />
+{
+	<NetworkUpgradeSummary name="altair" />
+}
 
-#### Summary \{##altair-summary}
+#### Summary \{#altair-summary}
 
 The Altair upgrade was the first scheduled upgrade for the [Beacon Chain](/roadmap/beacon-chain). It added support for "sync committees"—enabling light clients, and increased validator inactivity and slashing penalties as development progressed towards The Merge.
 
 - [Read the Altair upgrade specification](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Fun fact! \{##altair-fun-fact}
+#### <Emoji text=":tada:" size={1} me="0.5rem" />Fun fact! \{#altair-fun-fact}
 
 Altair was the first major network upgrade that had an exact rollout time. Every upgrade prior had been based on a declared block number on the proof-of-work chain, where block times vary. The Beacon Chain does not require solving for proof-of-work, and instead works on a time-based epoch system consisting of 32 twelve-second "slots" of time where validators can propose blocks. This is why we knew exactly when we would hit epoch 74,240 and Altair became live!
 
@@ -164,11 +194,13 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 ---
 
-### London \{##london}
+### London \{#london}
 
-<NetworkUpgradeSummary name="london" />
+{
+	<NetworkUpgradeSummary name="london" />
+}
 
-#### Summary \{##london-summary}
+#### Summary \{#london-summary}
 
 The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](/glossary/#ice-age) schedule.
 
@@ -176,6 +208,7 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="London EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,20 +220,24 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Berlin \{##berlin}
+### Berlin \{#berlin}
 
-<NetworkUpgradeSummary name="berlin" />
+{
+	<NetworkUpgradeSummary name="berlin" />
+}
 
-#### Summary \{##berlin-summary}
+#### Summary \{#berlin-summary}
 
 The Berlin upgrade optimized gas cost for certain EVM actions, and increases support for multiple transaction types.
 
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="Berlin EIPs" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,16 +248,21 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2020 \{##2020}
+## 2020 \{#2020}
 
-### Beacon Chain genesis \{##beacon-chain-genesis}
+### Beacon Chain genesis \{#beacon-chain-genesis}
 
-<NetworkUpgradeSummary name="beaconChainGenesis" />
+{
+	<NetworkUpgradeSummary name="beaconChainGenesis" />
+}
 
-#### Summary \{##beacon-chain-genesis-summary}
+#### Summary \{#beacon-chain-genesis-summary}
 
 The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ETH to ship securely. This happened on November 27, meaning the Beacon Chain started producing blocks on December 1, 2020. This is an important first step in achieving the [Ethereum vision](/roadmap/vision/).
 
@@ -232,11 +274,13 @@ The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ET
 
 ---
 
-### Staking deposit contract deployed \{##staking-deposit-contract}
+### Staking deposit contract deployed \{#staking-deposit-contract}
 
-<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+{
+	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+}
 
-#### Summary \{##deposit-contract-summary}
+#### Summary \{#deposit-contract-summary}
 
 The staking deposit contract introduced [staking](/glossary/#staking) to the Ethereum ecosystem. Although a [Mainnet](/glossary/#mainnet) contract, it had a direct impact on the timeline for launching the [Beacon Chain](/roadmap/beacon-chain/), an important [Ethereum upgrade](/roadmap/).
 
@@ -248,17 +292,20 @@ The staking deposit contract introduced [staking](/glossary/#staking) to the Eth
 
 ---
 
-### Muir Glacier \{##muir-glacier}
+### Muir Glacier \{#muir-glacier}
 
-<NetworkUpgradeSummary name="muirGlacier" />
+{
+	<NetworkUpgradeSummary name="muirGlacier" />
+}
 
-#### Summary \{##muir-glacier-summary}
+#### Summary \{#muir-glacier-summary}
 
 The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#difficulty-bomb). Increases in block difficulty of the [proof-of-work](/developers/docs/consensus-mechanisms/pow/) consensus mechanism threatened to degrade the usability of Ethereum by increasing wait times for sending transactions and using dapps.
 
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="Muir Glacier EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,16 +313,21 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2019 \{##2019}
+## 2019 \{#2019}
 
-### Istanbul \{##istanbul}
+### Istanbul \{#istanbul}
 
-<NetworkUpgradeSummary name="istanbul" />
+{
+	<NetworkUpgradeSummary name="istanbul" />
+}
 
-#### Summary \{##istanbul-summary}
+#### Summary \{#istanbul-summary}
 
 The Istanbul fork:
 
@@ -287,6 +339,7 @@ The Istanbul fork:
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="Istanbul EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -299,14 +352,17 @@ The Istanbul fork:
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Constantinople \{##constantinople}
+### Constantinople \{#constantinople}
 
-<NetworkUpgradeSummary name="constantinople" />
+{
+	<NetworkUpgradeSummary name="constantinople" />
+}
 
-#### Summary \{##constantinople-summary}
+#### Summary \{#constantinople-summary}
 
 The Constantinople fork:
 
@@ -317,6 +373,7 @@ The Constantinople fork:
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="Constantinople EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -327,16 +384,21 @@ The Constantinople fork:
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2017 \{##2017}
+## 2017 \{#2017}
 
-### Byzantium \{##byzantium}
+### Byzantium \{#byzantium}
 
-<NetworkUpgradeSummary name="byzantium" />
+{
+	<NetworkUpgradeSummary name="byzantium" />
+}
 
-#### Summary \{##byzantium-summary}
+#### Summary \{#byzantium-summary}
 
 The Byzantium fork:
 
@@ -347,6 +409,7 @@ The Byzantium fork:
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="Byzantium EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -362,16 +425,21 @@ The Byzantium fork:
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2016 \{##2016}
+## 2016 \{#2016}
 
-### Spurious Dragon \{##spurious-dragon}
+### Spurious Dragon \{#spurious-dragon}
 
-<NetworkUpgradeSummary name="spuriousDragon" />
+{
+	<NetworkUpgradeSummary name="spuriousDragon" />
+}
 
-#### Summary \{##spurious-dragon-summary}
+#### Summary \{#spurious-dragon-summary}
 
 The Spurious Dragon fork was the second response to the denial of service (DoS) attacks on the network (September/October 2016) including:
 
@@ -381,6 +449,7 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="Spurious Dragon EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -391,14 +460,17 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Tangerine whistle \{##tangerine-whistle}
+### Tangerine whistle \{#tangerine-whistle}
 
-<NetworkUpgradeSummary name="tangerineWhistle" />
+{
+	<NetworkUpgradeSummary name="tangerineWhistle" />
+}
 
-#### Summary \{##tangerine-whistle-summary}
+#### Summary \{#tangerine-whistle-summary}
 
 The Tangerine Whistle fork was the first response to the denial of service (DoS) attacks on the network (September/October 2016) including:
 
@@ -406,6 +478,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="Tangerine Whistle EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -414,14 +487,17 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### DAO fork \{##dao-fork}
+### DAO fork \{#dao-fork}
 
-<NetworkUpgradeSummary name="daoFork" />
+{
+	<NetworkUpgradeSummary name="daoFork" />
+}
 
-#### Summary \{##dao-fork-summary}
+#### Summary \{#dao-fork-summary}
 
 The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/learn/understanding-the-dao-attack/) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a [new contract](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) with a single function: withdraw. Anyone who lost funds could withdraw 1 ETH for every 100 DAO tokens in their wallets.
 
@@ -433,16 +509,19 @@ Some miners refused to fork because the DAO incident wasn't a defect in the prot
 
 ---
 
-### Homestead \{##homestead}
+### Homestead \{#homestead}
 
-<NetworkUpgradeSummary name="homestead" />
+{
+	<NetworkUpgradeSummary name="homestead" />
+}
 
-#### Summary \{##homestead-summary}
+#### Summary \{#homestead-summary}
 
 The Homestead fork that looked to the future. It included several protocol changes and a networking change that gave Ethereum the ability to do further network upgrades.
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="Homestead EIPs" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -452,16 +531,21 @@ The Homestead fork that looked to the future. It included several protocol chang
 </ul>
 
 </ExpandableCard>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2015 \{##2015}
+## 2015 \{#2015}
 
-### Frontier thawing \{##frontier-thawing}
+### Frontier thawing \{#frontier-thawing}
 
-<NetworkUpgradeSummary name="frontierThawing" />
+{
+	<NetworkUpgradeSummary name="frontierThawing" />
+}
 
-#### Summary \{##frontier-thawing-summary}
+#### Summary \{#frontier-thawing-summary}
 
 The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [block](/glossary/#block) and set the default gas price to 51 [gwei](/glossary/#gwei). This allowed for transactions – transactions require 21,000 gas. The [difficulty bomb](/glossary/#difficulty-bomb) was introduced to ensure a future hard-fork to [proof-of-stake](/glossary/#pos).
 
@@ -470,23 +554,29 @@ The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [bloc
 
 ---
 
-### Frontier \{##frontier}
+### Frontier \{#frontier}
 
-<NetworkUpgradeSummary name="frontier" />
+{
+	<NetworkUpgradeSummary name="frontier" />
+}
 
-#### Summary \{##frontier-summary}
+#### Summary \{#frontier-summary}
 
 Frontier was a live, but barebone implementation of the Ethereum project. It followed the successful Olympic testing phase. It was intended for technical users, specifically developers. [Blocks](/glossary/#block) had a [gas](/glossary/#gas) limit of 5,000. This ‘thawing’ period enabled miners to start their operations and for early adopters to install their clients without having to ‘rush’.
 
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2014 \{##2014}
+## 2014 \{#2014}
 
-### Ether sale \{##ether-sale}
+### Ether sale \{#ether-sale}
 
-<NetworkUpgradeSummary name="etherSale" />
+{
+	<NetworkUpgradeSummary name="etherSale" />
+}
 
 Ether officially went on sale for 42 days. You could buy it with BTC.
 
@@ -494,21 +584,27 @@ Ether officially went on sale for 42 days. You could buy it with BTC.
 
 ---
 
-### Yellowpaper released \{##yellowpaper}
+### Yellowpaper released \{#yellowpaper}
 
-<NetworkUpgradeSummary name="yellowpaperRelease" />
+{
+	<NetworkUpgradeSummary name="yellowpaperRelease" />
+}
 
 The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the Ethereum protocol.
 
 [View the Yellow Paper](https://github.com/ethereum/yellowpaper)
 
-<Divider />
+{
+	<Divider />
+}
 
-## 2013 \{##2013}
+## 2013 \{#2013}
 
-### Whitepaper released \{##whitepaper}
+### Whitepaper released \{#whitepaper}
 
-<NetworkUpgradeSummary name="whitepaperRelease" />
+{
+	<NetworkUpgradeSummary name="whitepaperRelease" />
+}
 
 The introductory paper, published in 2013 by Vitalik Buterin, the founder of Ethereum, before the project's launch in 2015.
 

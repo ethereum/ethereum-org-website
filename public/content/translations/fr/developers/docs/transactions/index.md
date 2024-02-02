@@ -172,7 +172,9 @@ Voici ce qui se passe une fois qu'une transaction a été soumise :
 
 Regardez Austin vous guider à travers les transactions, le gaz et le minage.
 
-<YouTube id="er-0ihqFQB0" />
+{
+	<YouTube id="er-0ihqFQB0" />
+}
 
 ## Enveloppe de transaction saisie \{#typed-transaction-envelope}
 

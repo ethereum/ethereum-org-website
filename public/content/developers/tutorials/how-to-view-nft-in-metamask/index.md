@@ -20,7 +20,7 @@ At the top of the app, press the “Wallet” button, after which you’ll be pr
 
 ![How to set Sepolia as your network on MetaMask Mobile](./goerliMetamask.gif)
 
-## Step 2: Add your collectable to MetaMask \{##add-nft-to-metamask}
+## Step 2: Add your collectable to MetaMask \{#add-nft-to-metamask}
 
 Once you’re on the Sepolia network, select the “Collectibles” tab on the right and add the NFT smart contract address and the ERC-721 token ID of your NFT — which you should be able to find on Etherscan based on the transaction hash from your NFT deployed in Part II of our tutorial.
 

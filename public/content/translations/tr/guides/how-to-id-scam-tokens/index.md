@@ -15,6 +15,7 @@ Sizi kandırmaları muhtemel olan iki yol vardır:
 
 Dolandırıcılık token'larının ne olduğunu örnekleyebilmek ve bunları tespit edebilmek için bir örneğine göz atacağız: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Bu token meşru [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token'ı gibi görünmeye çalışmaktadır.
 
+{
 <ExpandableCard
 title="ARB nedir?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum <a href="/developers/docs/scaling/optimistic-rollups/">optimistik toplamalar</a> geliştiren ve yöneten bir organizasyondur. Başlangıçta, Arbitrum kâr amaçlı bir şirket olarak organize edilmiştir, ancak sonrasında merkeziyetsizleşme adımları atmıştır. Bu sürecin bir parçası olarak, takas edilebilir bir <a href="/dao/#token-based-membership">yönetişim token'ı</a> bastılar.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dolandırıcılık token'ınza neden wARB denilmektedir?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Ethereum'da bir varlık ERC-20 uyumlu olmadığında "w" ile başlayan "sarılı
 Hali hazırda Ethereum üzerinde bulunan bir ERC-20 token'ının sarılı bir versiyonunu oluşturmak mantıklı değildir, ancak dolandırıcılar arkaplandaki gerçekliktense meşru bir görünüme dayanır.
 
 </ExpandableCard>
+}
 
 ## Dolandırıcılık token'ları nasıl çalışır? \{#how-do-scam-tokens-work}
 
 Ethereum'un tüm meselesi merkeziyetsizliktir. Bu varlıklarınıza el koyabilecek veya bir akıllı sözleşme yayımlamanızı engelleyecek bir merkezi otorite bulunmadığı anlamına gelir. Ancak, ayrıca dolandırıcıların da istedikleri herhangi bir akıllı sözleşmeyi yayımlayabilecekleri anlamına gelir.
 
+{
 <ExpandableCard
 title="Akıllı sözleşmeler nedir?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Akıllı sözleşmeler</a> Ethereum blok zincir üzerinde çalışan programlardır. Örnek olarak, her ERC-20 token'ı bir akıllı sözleşme olarak uygulanmıştır.
 
 </ExpandableCard>
+}
 
 Spesifik olarak, Arbitrum `ARB` sembolünü kullanan bir sözleşme yayımladı. Ancak bu diğer kişilerin benzer veya tam olarak aynı sembolü kullanan bir sözleşme yayımlamasını engellemez. Sözleşmeyi yazan kişi sözleşmenin ne yapacağına karar verir.
 

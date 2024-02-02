@@ -57,7 +57,9 @@ Fiecare tranzacție este minată (inclusă într-un bloc nou și propagată pent
 
 Urmăriți cum vă îndrumă Austin în procesul de minare și blockchain-ul dovezii-muncii.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## Referințe suplimentare \{#further-reading}
 

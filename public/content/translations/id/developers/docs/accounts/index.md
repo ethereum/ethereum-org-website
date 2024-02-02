@@ -103,9 +103,13 @@ Akun bukanlah dompet. Akun adalah pasangan kunci untuk akun Ethereum yang dimili
 
 Tonton Austin memandu Anda tentang fungsi hash, dan pasangan kunci.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## Bacaan lebih lanjut \{#further-reading}
 

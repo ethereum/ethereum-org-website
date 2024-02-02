@@ -22,7 +22,7 @@ This means running nodes can be expensive, because a large amount of disk space 
 
 The Portal Network aims to provide an alternative way for light nodes to get their data that does not require trusting or adding significantly to the work that has to be done by full nodes. The way this will be done is to introduce a new way for Ethereum nodes to share data across the network.
 
-## How does the Portal Network work? \{##how-does-portal-network-work}
+## How does the Portal Network work? \{#how-does-portal-network-work}
 
 Ethereum nodes have strict protocols that define how they communicate with each other. Execution clients communicate using a set of subprotocols known as [DevP2P](/developers/docs/networking-layer/#devp2p), while consensus clients use a different stack of subprotocols called [libP2P](/developers/docs/networking-layer/#libp2p). These define the types of data that can be passed between nodes.
 
@@ -61,7 +61,7 @@ The diagram below shows the functions of existing clients that can be delivered 
 
 ![portal network table](portal-network-table2.png)
 
-## Client diversity by default \{##client-diversity-as-default}
+## Client diversity by default \{#client-diversity-as-default}
 
 The Portal Network developers also made the design choice to build three separate Portal Network clients from day one.
 
@@ -75,7 +75,7 @@ Having multiple independent client implementations enhances the resilience and d
 
 If one client experiences issues or vulnerabilities, other clients can continue to operate smoothly, preventing a single point of failure. Additionally, diverse client implementations foster innovation and competition, driving improvements and reducing monoculture risk within the ecosystem.
 
-## Further reading \{##futher-reading}
+## Further reading \{#futher-reading}
 
 - [The Portal Network (Piper Merriam at Devcon Bogota)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [The Portal Network discord](https://discord.gg/CFFnmE7Hbs)

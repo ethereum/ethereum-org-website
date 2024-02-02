@@ -15,6 +15,7 @@ Um dos usos mais comuns do Ethereum é para que um grupo possa criar sua própri
 
 Para ilustrar o que são tokens fraudulentos e como identificá-los, veremos um exemplo: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Esse token tenta se parecer com o token [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) legítimo.
 
+{
 <ExpandableCard
 title="O que é ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum é uma organização que desenvolve e gerencia <a href="/developers/docs/scaling/optimistic-rollups/">rollups otimistas</a>. Inicialmente, a Arbitrum foi organizada como uma empresa com fins lucrativos, mas depois tomou medidas para se descentralizar. Como parte desse processo, a empresa emitiu um <a href="/dao/#token-based-membership">token de governança</a> negociável.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Por que o token fraudulento é chamado wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Há uma convenção no Ethereum de que, quando um ativo não está em conformida
 Não faz sentido criar uma versão enrolada de um token ERC-20 que já está no Ethereum, mas os golpistas confiam na aparência de legitimidade em vez da realidade subjacente.
 
 </ExpandableCard>
+}
 
 ## Como funcionam os tokens fraudulentos? \{#how-do-scam-tokens-work}
 
 O ponto principal do Ethereum é a descentralização. Isso significa que não há uma autoridade central que possa confiscar os seus ativos ou impedir você de implantar um contrato inteligente. Mas isso também significa que os golpistas podem implementar qualquer contrato inteligente.
 
+{
 <ExpandableCard
 title="O que são contratos inteligentes?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Os contratos inteligentes</a> são programas que são executados no blockchain Ethereum. Cada token ERC-20, por exemplo, é implementado como um contrato inteligente.
 
 </ExpandableCard>
+}
 
 Especificamente, a Arbitrum implantou um contrato que utiliza o símbolo `ARB`. Mas isso não impede que outras pessoas também implantem um contrato que use exatamente o mesmo símbolo, ou um semelhante. Quem elabora o contrato pode definir o que o contrato fará.
 

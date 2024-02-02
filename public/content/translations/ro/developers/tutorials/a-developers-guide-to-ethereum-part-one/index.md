@@ -43,7 +43,9 @@ Ethereum poate fi descris în mai multe feluri, dar în esență este un blockch
 
 Fiecare [bloc](/developers/docs/blocks/) conține o referință la blocul precedent; `„parentHash”` este pur și simplu hash-ul blocului anterior.
 
+{
 <FeaturedText>Observaţie: Ethereum utilizează în mod regulat <a href="https://en.wikipedia.org/wiki/Hash_function">funcții hash</a> pentru a produce valori de mărime fixă („hash-uri”). Hash-urile joacă un rol important în Ethereum, dar deocamdată puteți să le consideraţi niște ID-uri unice.</FeaturedText>
+}
 
 ![O diagramă care ilustrează un blockchain, inclusiv datele din interiorul fiecărui bloc](./blockchain-diagram.png)
 
@@ -59,7 +61,9 @@ Această nouă stivă tehnologică descentralizată a generat noi instrumente pe
 
 Dezvoltatorii Python care vor să interacționeze cu Ethereum vor căuta probabil să utilizeze [Web3.py](https://web3py.readthedocs.io/). Web3.py este o bibliotecă ce simplifică mult felul în care vă conectați la un nod Ethereum, după care trimiteți și primiți date de la acesta.
 
+{
 <FeaturedText>Observaţie: noţiunile de „nod Ethereum” și „client Ethereum” sunt utilizate ca sinonime. În ambele cazuri, se referă la software-ul rulat de un participant la rețeaua Ethereum. Acest software poate să citească datele blocurilor, să primească actualizări când se adaugă noi blocuri în lanț („minate”), să transmită noi tranzacții și multe altele.</FeaturedText>
+}
 
 [Clienții Ethereum](/developers/docs/nodes-and-clients/) pot fi configurați pentru a fi accesați prin [IPC](https://en.wikipedia.org/wiki/Inter-process_communication), HTTP sau Websockets, astfel încât Web3.py va trebui să reflecte aceste configurații. Web3.py se referă la aceste opțiuni de conectare ca **furnizori (providers)**. Va trebui să alegeți unul dintre cei trei furnizori pentru a conecta instanța Web3.py la nodul dvs.
 
@@ -81,7 +85,9 @@ w3.eth.sendTransaction({'from': ..., 'to': ..., 'value': ...})
 
 În această prezentare vom lucra doar în cadrul unui interpretator Python. Nu vom crea niciun dosar, fișier, nici clase sau funcții.
 
+{
 <FeaturedText>Observaţie: În exemplele de mai jos, comenzile care încep cu „$” sunt destinate a fi rulate în terminal. (Nu tastați „$”, acesta semnifică doar începutul liniei.)</FeaturedText>
+}
 
 Mai întâi instalați [IPython](https://ipython.org/) pentru a explora într-un mediu ușor de utilizat. IPython oferă, printre alte funcţionalităţi, completarea filei, ceea ce face mult mai ușor de văzut ce este posibil în Web3.py.
 
@@ -287,7 +293,9 @@ Out[13]: 1000003000000000000000000
 
 Acesta din urmă arată bine! Soldul a trecut de la 1.000.000 la 1.000.003 ether. Dar ce s-a întâmplat cu primul cont? Se pare că a pierdut ceva mai mult de trei ether. Din nefericire, nimic nu este gratuit în viaţă, iar utilizarea rețelei publice Ethereum necesită să vă recompensați colegii pentru rolul lor de sprijin. A fost dedusă o mică taxă de tranzacție de 21000 de wei din contul care a efectuat tranzacția.
 
+{
 <FeaturedText>Observaţie: În rețeaua publică, taxele de tranzacție sunt variabile în funcție de cererea rețelei și de rapiditatea cu care doriți ca o tranzacție să fie procesată. Dacă vă interesează o defalcare a modului în care sunt calculate taxele, consultați postarea mea anterioară despre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cum sunt incluse tranzacțiile într-un bloc</a>.</FeaturedText>
+}
 
 ## Și respirați \{#and-breathe}
 

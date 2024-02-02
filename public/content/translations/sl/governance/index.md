@@ -8,7 +8,9 @@ lang: sl
 
 _Če si nihče ne lasti Ethereuma, kako so potem sprejete odločitve o prihodnjih in preteklih spremembah? Upravljanje Ethereuma kaže na proces, ki omogoča sprejemanje takšnih odločitev_
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kaj je upravljanje? \{#what-is-governance}
 
@@ -32,9 +34,13 @@ Nasprotni pristop, upravljanje izven verige je proces, pri katerem se kakršneko
 
 _Čeprav je na nivoju protokola upravljanje Ethereuma izven verige, se v veliko primerih razvitih na Ethereumu, kot so DAOs, uporablja upravljanje na verigi._
 
+{
 <ButtonLink to="/dao/">Več o DAOs</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kdo vse je vključen? \{#who-is-involved}
 
@@ -50,15 +56,21 @@ V [Ethereum skupnosti](/community/) so prisotni različni deležniki, od katerih
 
 _Opomba: katerikoli posameznik je lahko del različnih skupin (na primer, razvijalec protokola se lahko zavzema za EIP, upravlja validator na oddajniški verigi in uporablja DeFi aplikacije). Za večjo jasnost koncepta je lažje, če se jih obravnava posebej._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kaj je EIP? \{#what-is-an-eip}
 
 Pomemben proces, ki se uporablja pri upravljanju Ethereuma je predlaganje **Ethereum predlogov za izboljšave (EIPs)**. EIPs so standard za opredeljevanje potencialnih lastnosti ali procesov Ethereuma. Kdorkoli znotraj Ethereum skupnosti lahko ustvari EIP. Na primer, noben od avtorjev EIP-721 - EIP-ja, ki je standardiziral NFT-je, ni neposredno delal na razvoju Ethereum protokola.
 
+{
 <ButtonLink to="/eips/">Več o EIPs</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Uraden proces \{#formal-process}
 
@@ -102,7 +114,9 @@ Od EIP predlagateljev se pričakuje, da zberejo odzive od vseh relevantnih dele�
 
 Onstran varnosti Ethereum omrežja, je bila s strani razvijalcev protokola zgodovinsko gledano velika teža posvečena temu, kar visoko vrednotijo uporabniki in razvijalci aplikacij/orodij, glede na to, da njihova uporaba in razvoj Ethereuma delata ekosistem privlačen za ostale deležnike. Poleg tega morajo biti EIP-ji implementirani prek vseh implementacij strank, ki jih upravljajo različne ekipe. Del tega procesa običajno predstavlja prepričevanje več ekip razvijalcev protokola, da je določena sprememba dragocena, in v pomoč končnim uporabnikom, ali pa rešuje varnostno težavo.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Upravljanje nestrinjanj \{#disagreements}
 
@@ -130,9 +144,13 @@ Danes je Ethereum skupnost sprejela stališče o neposeganju v primeru napak v p
 
 Oglejte si več o DAO razcepu:
 
-<YouTube id="rNeLuBOVe8A" />
+{
+	<YouTube id="rNeLuBOVe8A" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Uporabnost razcepov \{#forking-utility}
 
@@ -140,7 +158,9 @@ Ethereum/Ethereum Classic razcep je odličen primer zdravega razcepa. Dve skupin
 
 Možnost razcepa ob pomembnih političnih, filozofskih ali ekonomskih razlikah predstavlja pomembno vlogo za uspeh Ethereum upravljanja. Brez možnosti razcepa so bila alternativa nenehni spopadi, prisilno sodelovanje za tiste, ki so sčasoma oblikovali Ethereum Classic in vedno bolj različna vizija za to, kako izgleda uspeh Ethereuma.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Razvoj oddajniške verige \{#beacon-chain}
 
@@ -150,9 +170,13 @@ Medtem ko je bil razvoj specifikacij in implementacij vedno povsem odprtokoden, 
 
 Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo upravljavski proces za predlaganje sprememb poenotil. Proces za implementacijo združitve je [že na poti](https://eips.ethereum.org/EIPS/eip-3675).
 
+{
 <ButtonLink to="/roadmap/merge/">Več o združitvi</ButtonLink>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kako se lahko vključim? \{#get-involved}
 

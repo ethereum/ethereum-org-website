@@ -92,11 +92,15 @@ Obtenga más información sobre [Validium](/developers/docs/scaling/validium/).
 
 ## ¿Es más bien de los que aprende viendo? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Obsérvese que la explicación del video utiliza el término "Capa 2" para referirse a todas las soluciones de escalado fuera de cadena, mientras que nosotros diferenciamos "Capa 2" como una solución fuera de cadena que obtiene su seguridad a través del consenso de la red principal de capa 1._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Más información \{#further-reading}
 

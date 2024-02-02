@@ -97,4 +97,6 @@ Solo debe usar carteras de autocustodia para reclamar POAP. No use cuentas de di
 
 ## Colaboradores \{#contributors}
 
-<Contributors />
+{
+	<Contributors />
+}

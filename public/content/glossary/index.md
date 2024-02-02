@@ -6,441 +6,827 @@ lang: en
 
 # Glossary \{#ethereum-glossary}
 
-## \# \{##section-numbers}
+## \# \{#section-numbers}
 
-<GlossaryDefinition term="51%-attack" />
+{
+	<GlossaryDefinition term="51%-attack" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## A \{##section-a}
+## A \{#section-a}
 
-<GlossaryDefinition term="account" />
+{
+	<GlossaryDefinition term="account" />
+}
 
-<GlossaryDefinition term="address" />
+{
+	<GlossaryDefinition term="address" />
+}
 
-<GlossaryDefinition term="abi" />
+{
+	<GlossaryDefinition term="abi" />
+}
 
-<GlossaryDefinition term="api" />
+{
+	<GlossaryDefinition term="api" />
+}
 
-<GlossaryDefinition term="asic" />
+{
+	<GlossaryDefinition term="asic" />
+}
 
-<GlossaryDefinition term="assert" />
+{
+	<GlossaryDefinition term="assert" />
+}
 
-<GlossaryDefinition term="attestation" />
+{
+	<GlossaryDefinition term="attestation" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## B \{##section-b}
+## B \{#section-b}
 
-<GlossaryDefinition term="base-fee" />
+{
+	<GlossaryDefinition term="base-fee" />
+}
 
-<GlossaryDefinition term="beacon-chain" />
+{
+	<GlossaryDefinition term="beacon-chain" />
+}
 
-<GlossaryDefinition term="big-endian" />
+{
+	<GlossaryDefinition term="big-endian" />
+}
 
-<GlossaryDefinition term="block" />
+{
+	<GlossaryDefinition term="block" />
+}
 
-<GlossaryDefinition term="block-explorer" />
+{
+	<GlossaryDefinition term="block-explorer" />
+}
 
-<GlossaryDefinition term="block-header" />
+{
+	<GlossaryDefinition term="block-header" />
+}
 
-<GlossaryDefinition term="block-propagation" />
+{
+	<GlossaryDefinition term="block-propagation" />
+}
 
-<GlossaryDefinition term="block-proposer" />
+{
+	<GlossaryDefinition term="block-proposer" />
+}
 
-<GlossaryDefinition term="block-reward" />
+{
+	<GlossaryDefinition term="block-reward" />
+}
 
-<GlossaryDefinition term="block-status" />
+{
+	<GlossaryDefinition term="block-status" />
+}
 
-<GlossaryDefinition term="block-time" />
+{
+	<GlossaryDefinition term="block-time" />
+}
 
-<GlossaryDefinition term="block-validation" />
+{
+	<GlossaryDefinition term="block-validation" />
+}
 
-<GlossaryDefinition term="blockchain" />
+{
+	<GlossaryDefinition term="blockchain" />
+}
 
-<GlossaryDefinition term="bootnode" />
+{
+	<GlossaryDefinition term="bootnode" />
+}
 
-<GlossaryDefinition term="bytecode" />
+{
+	<GlossaryDefinition term="bytecode" />
+}
 
-<GlossaryDefinition term="byzantium-fork" />
+{
+	<GlossaryDefinition term="byzantium-fork" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## C \{##section-c}
+## C \{#section-c}
 
-<GlossaryDefinition term="casper-ffg" />
+{
+	<GlossaryDefinition term="casper-ffg" />
+}
 
-<GlossaryDefinition term="checkpoint" />
+{
+	<GlossaryDefinition term="checkpoint" />
+}
 
-<GlossaryDefinition term="compiling" />
+{
+	<GlossaryDefinition term="compiling" />
+}
 
-<GlossaryDefinition term="committee" />
+{
+	<GlossaryDefinition term="committee" />
+}
 
-<GlossaryDefinition term="computational-infeasibility" />
+{
+	<GlossaryDefinition term="computational-infeasibility" />
+}
 
-<GlossaryDefinition term="consensus" />
+{
+	<GlossaryDefinition term="consensus" />
+}
 
-<GlossaryDefinition term="consensus-client" />
+{
+	<GlossaryDefinition term="consensus-client" />
+}
 
-<GlossaryDefinition term="consensus-layer" />
+{
+	<GlossaryDefinition term="consensus-layer" />
+}
 
-<GlossaryDefinition term="consensus-rules" />
+{
+	<GlossaryDefinition term="consensus-rules" />
+}
 
-<GlossaryDefinition term="constantinople-fork" />
+{
+	<GlossaryDefinition term="constantinople-fork" />
+}
 
-<GlossaryDefinition term="contract-account" />
+{
+	<GlossaryDefinition term="contract-account" />
+}
 
-<GlossaryDefinition term="contract-creation-transaction" />
+{
+	<GlossaryDefinition term="contract-creation-transaction" />
+}
 
-<GlossaryDefinition term="cryptoeconomics" />
+{
+	<GlossaryDefinition term="cryptoeconomics" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## D \{##section-d}
+## D \{#section-d}
 
-<GlossaryDefinition term="doge-d" />
+{
+	<GlossaryDefinition term="doge-d" />
+}
 
-<GlossaryDefinition term="dag" />
+{
+	<GlossaryDefinition term="dag" />
+}
 
-<GlossaryDefinition term="dapp" />
+{
+	<GlossaryDefinition term="dapp" />
+}
 
-<GlossaryDefinition term="data-availability" />
+{
+	<GlossaryDefinition term="data-availability" />
+}
 
-<GlossaryDefinition term="decentralization" />
+{
+	<GlossaryDefinition term="decentralization" />
+}
 
-<GlossaryDefinition term="dao" />
+{
+	<GlossaryDefinition term="dao" />
+}
 
-<GlossaryDefinition term="dex" />
+{
+	<GlossaryDefinition term="dex" />
+}
 
-<GlossaryDefinition term="deposit-contract" />
+{
+	<GlossaryDefinition term="deposit-contract" />
+}
 
-<GlossaryDefinition term="defi" />
+{
+	<GlossaryDefinition term="defi" />
+}
 
-<GlossaryDefinition term="difficulty" />
+{
+	<GlossaryDefinition term="difficulty" />
+}
 
-<GlossaryDefinition term="difficulty-bomb" />
+{
+	<GlossaryDefinition term="difficulty-bomb" />
+}
 
-<GlossaryDefinition term="digital-signatures" />
+{
+	<GlossaryDefinition term="digital-signatures" />
+}
 
-<GlossaryDefinition term="discovery" />
+{
+	<GlossaryDefinition term="discovery" />
+}
 
-<GlossaryDefinition term="distributed-hash-table" />
+{
+	<GlossaryDefinition term="distributed-hash-table" />
+}
 
-<GlossaryDefinition term="double-spend" />
+{
+	<GlossaryDefinition term="double-spend" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## E \{##section-e}
+## E \{#section-e}
 
-<GlossaryDefinition term="ecdsa" />
+{
+	<GlossaryDefinition term="ecdsa" />
+}
 
-<GlossaryDefinition term="encryption" />
+{
+	<GlossaryDefinition term="encryption" />
+}
 
-<GlossaryDefinition term="entropy" />
+{
+	<GlossaryDefinition term="entropy" />
+}
 
-<GlossaryDefinition term="epoch" />
+{
+	<GlossaryDefinition term="epoch" />
+}
 
-<GlossaryDefinition term="equivocation" />
+{
+	<GlossaryDefinition term="equivocation" />
+}
 
-<GlossaryDefinition term="eth1" />
+{
+	<GlossaryDefinition term="eth1" />
+}
 
-<GlossaryDefinition term="eth2" />
+{
+	<GlossaryDefinition term="eth2" />
+}
 
-<GlossaryDefinition term="eip" />
+{
+	<GlossaryDefinition term="eip" />
+}
 
-<GlossaryDefinition term="ens" />
+{
+	<GlossaryDefinition term="ens" />
+}
 
-<GlossaryDefinition term="execution-client" />
+{
+	<GlossaryDefinition term="execution-client" />
+}
 
-<GlossaryDefinition term="execution-layer" />
+{
+	<GlossaryDefinition term="execution-layer" />
+}
 
-<GlossaryDefinition term="eoa" />
+{
+	<GlossaryDefinition term="eoa" />
+}
 
-<GlossaryDefinition term="erc" />
+{
+	<GlossaryDefinition term="erc" />
+}
 
-<GlossaryDefinition term="ethash" />
+{
+	<GlossaryDefinition term="ethash" />
+}
 
-<GlossaryDefinition term="ether" />
+{
+	<GlossaryDefinition term="ether" />
+}
 
-<GlossaryDefinition term="events" />
+{
+	<GlossaryDefinition term="events" />
+}
 
-<GlossaryDefinition term="evm" />
+{
+	<GlossaryDefinition term="evm" />
+}
 
-<GlossaryDefinition term="evm-assembly-language" />
+{
+	<GlossaryDefinition term="evm-assembly-language" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## F \{##section-f}
+## F \{#section-f}
 
-<GlossaryDefinition term="fallback-function" />
+{
+	<GlossaryDefinition term="fallback-function" />
+}
 
-<GlossaryDefinition term="faucet" />
+{
+	<GlossaryDefinition term="faucet" />
+}
 
-<GlossaryDefinition term="finality" />
+{
+	<GlossaryDefinition term="finality" />
+}
 
-<GlossaryDefinition term="finney" />
+{
+	<GlossaryDefinition term="finney" />
+}
 
-<GlossaryDefinition term="fork" />
+{
+	<GlossaryDefinition term="fork" />
+}
 
-<GlossaryDefinition term="fork-choice-algorithm" />
+{
+	<GlossaryDefinition term="fork-choice-algorithm" />
+}
 
-<GlossaryDefinition term="fraud-proof" />
+{
+	<GlossaryDefinition term="fraud-proof" />
+}
 
-<GlossaryDefinition term="frontier" />
+{
+	<GlossaryDefinition term="frontier" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## G \{##section-g}
+## G \{#section-g}
 
-<GlossaryDefinition term="gas" />
+{
+	<GlossaryDefinition term="gas" />
+}
 
-<GlossaryDefinition term="gas-limit" />
+{
+	<GlossaryDefinition term="gas-limit" />
+}
 
-<GlossaryDefinition term="gas-price" />
+{
+	<GlossaryDefinition term="gas-price" />
+}
 
-<GlossaryDefinition term="genesis-block" />
+{
+	<GlossaryDefinition term="genesis-block" />
+}
 
-<GlossaryDefinition term="geth" />
+{
+	<GlossaryDefinition term="geth" />
+}
 
-<GlossaryDefinition term="gwei" />
+{
+	<GlossaryDefinition term="gwei" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## H \{##section-h}
+## H \{#section-h}
 
-<GlossaryDefinition term="hard-fork" />
+{
+	<GlossaryDefinition term="hard-fork" />
+}
 
-<GlossaryDefinition term="hash" />
+{
+	<GlossaryDefinition term="hash" />
+}
 
-<GlossaryDefinition term="hash-rate" />
+{
+	<GlossaryDefinition term="hash-rate" />
+}
 
-<GlossaryDefinition term="homestead" />
+{
+	<GlossaryDefinition term="homestead" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## I \{##section-i}
+## I \{#section-i}
 
-<GlossaryDefinition term="index" />
+{
+	<GlossaryDefinition term="index" />
+}
 
-<GlossaryDefinition term="ide" />
+{
+	<GlossaryDefinition term="ide" />
+}
 
-<GlossaryDefinition term="immutable-deployed-code-problem" />
+{
+	<GlossaryDefinition term="immutable-deployed-code-problem" />
+}
 
-<GlossaryDefinition term="internal-transaction" />
+{
+	<GlossaryDefinition term="internal-transaction" />
+}
 
-<GlossaryDefinition term="issuance" />
+{
+	<GlossaryDefinition term="issuance" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## K \{##section-k}
+## K \{#section-k}
 
-<GlossaryDefinition term="kdf" />
+{
+	<GlossaryDefinition term="kdf" />
+}
 
-<GlossaryDefinition term="keystore" />
+{
+	<GlossaryDefinition term="keystore" />
+}
 
-<GlossaryDefinition term="keccak-256" />
+{
+	<GlossaryDefinition term="keccak-256" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## L \{##section-l}
+## L \{#section-l}
 
-<GlossaryDefinition term="layer-2" />
+{
+	<GlossaryDefinition term="layer-2" />
+}
 
-<GlossaryDefinition term="library" />
+{
+	<GlossaryDefinition term="library" />
+}
 
-<GlossaryDefinition term="light-client" />
+{
+	<GlossaryDefinition term="light-client" />
+}
 
-<GlossaryDefinition term="lmd-ghost" />
+{
+	<GlossaryDefinition term="lmd-ghost" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## M \{##section-m}
+## M \{#section-m}
 
-<GlossaryDefinition term="mainnet" />
+{
+	<GlossaryDefinition term="mainnet" />
+}
 
-<GlossaryDefinition term="merkle-patricia-tree" />
+{
+	<GlossaryDefinition term="merkle-patricia-tree" />
+}
 
-<GlossaryDefinition term="message" />
+{
+	<GlossaryDefinition term="message" />
+}
 
-<GlossaryDefinition term="message-call" />
+{
+	<GlossaryDefinition term="message-call" />
+}
 
-<GlossaryDefinition term="mining" />
+{
+	<GlossaryDefinition term="mining" />
+}
 
-<GlossaryDefinition term="miner" />
+{
+	<GlossaryDefinition term="miner" />
+}
 
-<GlossaryDefinition term="mint" />
+{
+	<GlossaryDefinition term="mint" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## N \{##section-n}
+## N \{#section-n}
 
-<GlossaryDefinition term="network" />
+{
+	<GlossaryDefinition term="network" />
+}
 
-<GlossaryDefinition term="network-hashrate" />
+{
+	<GlossaryDefinition term="network-hashrate" />
+}
 
-<GlossaryDefinition term="nft" />
+{
+	<GlossaryDefinition term="nft" />
+}
 
-<GlossaryDefinition term="node" />
+{
+	<GlossaryDefinition term="node" />
+}
 
-<GlossaryDefinition term="nonce" />
+{
+	<GlossaryDefinition term="nonce" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## O \{##section-o}
+## O \{#section-o}
 
-<GlossaryDefinition term="ommer" />
+{
+	<GlossaryDefinition term="ommer" />
+}
 
-<GlossaryDefinition term="optimistic-rollup" />
+{
+	<GlossaryDefinition term="optimistic-rollup" />
+}
 
-<GlossaryDefinition term="oracle" />
+{
+	<GlossaryDefinition term="oracle" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## P \{##section-p}
+## P \{#section-p}
 
-<GlossaryDefinition term="peer" />
+{
+	<GlossaryDefinition term="peer" />
+}
 
-<GlossaryDefinition term="peer-to-peer-network" />
+{
+	<GlossaryDefinition term="peer-to-peer-network" />
+}
 
-<GlossaryDefinition term="plasma" />
+{
+	<GlossaryDefinition term="plasma" />
+}
 
-<GlossaryDefinition term="private-key" />
+{
+	<GlossaryDefinition term="private-key" />
+}
 
-<GlossaryDefinition term="private-chain" />
+{
+	<GlossaryDefinition term="private-chain" />
+}
 
-<GlossaryDefinition term="pos" />
+{
+	<GlossaryDefinition term="pos" />
+}
 
-<GlossaryDefinition term="pow" />
+{
+	<GlossaryDefinition term="pow" />
+}
 
-<GlossaryDefinition term="public-key" />
+{
+	<GlossaryDefinition term="public-key" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## R \{##section-r}
+## R \{#section-r}
 
-<GlossaryDefinition term="receipt" />
+{
+	<GlossaryDefinition term="receipt" />
+}
 
-<GlossaryDefinition term="re-entrancy-attack" />
+{
+	<GlossaryDefinition term="re-entrancy-attack" />
+}
 
-<GlossaryDefinition term="reward" />
+{
+	<GlossaryDefinition term="reward" />
+}
 
-<GlossaryDefinition term="rlp" />
+{
+	<GlossaryDefinition term="rlp" />
+}
 
-<GlossaryDefinition term="rollups" />
+{
+	<GlossaryDefinition term="rollups" />
+}
 
-<GlossaryDefinition term="rpc" />
+{
+	<GlossaryDefinition term="rpc" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## S \{##section-s}
+## S \{#section-s}
 
-<GlossaryDefinition term="sha" />
+{
+	<GlossaryDefinition term="sha" />
+}
 
-<GlossaryDefinition term="serialization" />
+{
+	<GlossaryDefinition term="serialization" />
+}
 
-<GlossaryDefinition term="shard" />
+{
+	<GlossaryDefinition term="shard" />
+}
 
-<GlossaryDefinition term="sidechain" />
+{
+	<GlossaryDefinition term="sidechain" />
+}
 
-<GlossaryDefinition term="signing" />
+{
+	<GlossaryDefinition term="signing" />
+}
 
-<GlossaryDefinition term="singleton" />
+{
+	<GlossaryDefinition term="singleton" />
+}
 
-<GlossaryDefinition term="slasher" />
+{
+	<GlossaryDefinition term="slasher" />
+}
 
-<GlossaryDefinition term="slot" />
+{
+	<GlossaryDefinition term="slot" />
+}
 
-<GlossaryDefinition term="smart-contract" />
+{
+	<GlossaryDefinition term="smart-contract" />
+}
 
-<GlossaryDefinition term="snark" />
+{
+	<GlossaryDefinition term="snark" />
+}
 
-<GlossaryDefinition term="soft-fork" />
+{
+	<GlossaryDefinition term="soft-fork" />
+}
 
-<GlossaryDefinition term="solidity" />
+{
+	<GlossaryDefinition term="solidity" />
+}
 
-<GlossaryDefinition term="solidity-inline-assembly" />
+{
+	<GlossaryDefinition term="solidity-inline-assembly" />
+}
 
-<GlossaryDefinition term="stablecoin" />
+{
+	<GlossaryDefinition term="stablecoin" />
+}
 
-<GlossaryDefinition term="staking" />
+{
+	<GlossaryDefinition term="staking" />
+}
 
-<GlossaryDefinition term="staking-pool" />
+{
+	<GlossaryDefinition term="staking-pool" />
+}
 
-<GlossaryDefinition term="stark" />
+{
+	<GlossaryDefinition term="stark" />
+}
 
-<GlossaryDefinition term="state" />
+{
+	<GlossaryDefinition term="state" />
+}
 
-<GlossaryDefinition term="state-channels" />
+{
+	<GlossaryDefinition term="state-channels" />
+}
 
-<GlossaryDefinition term="supermajority" />
+{
+	<GlossaryDefinition term="supermajority" />
+}
 
-<GlossaryDefinition term="syncing" />
+{
+	<GlossaryDefinition term="syncing" />
+}
 
-<GlossaryDefinition term="sync-committee" />
+{
+	<GlossaryDefinition term="sync-committee" />
+}
 
-<GlossaryDefinition term="szabo" />
+{
+	<GlossaryDefinition term="szabo" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## T \{##section-t}
+## T \{#section-t}
 
-<GlossaryDefinition term="terminal-total-difficulty" />
+{
+	<GlossaryDefinition term="terminal-total-difficulty" />
+}
 
-<GlossaryDefinition term="testnet" />
+{
+	<GlossaryDefinition term="testnet" />
+}
 
-<GlossaryDefinition term="token" />
+{
+	<GlossaryDefinition term="token" />
+}
 
-<GlossaryDefinition term="transaction" />
+{
+	<GlossaryDefinition term="transaction" />
+}
 
-<GlossaryDefinition term="transaction-fee" />
+{
+	<GlossaryDefinition term="transaction-fee" />
+}
 
-<GlossaryDefinition term="trustlessness" />
+{
+	<GlossaryDefinition term="trustlessness" />
+}
 
-<GlossaryDefinition term="turing-complete" />
+{
+	<GlossaryDefinition term="turing-complete" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## V \{##section-v}
+## V \{#section-v}
 
-<GlossaryDefinition term="validator" />
+{
+	<GlossaryDefinition term="validator" />
+}
 
-<GlossaryDefinition term="validator-lifecycle" />
+{
+	<GlossaryDefinition term="validator-lifecycle" />
+}
 
-<GlossaryDefinition term="validity-proof" />
+{
+	<GlossaryDefinition term="validity-proof" />
+}
 
-<GlossaryDefinition term="validium" />
+{
+	<GlossaryDefinition term="validium" />
+}
 
-<GlossaryDefinition term="vyper" />
+{
+	<GlossaryDefinition term="vyper" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## W \{##section-w}
+## W \{#section-w}
 
-<GlossaryDefinition term="wallet" />
+{
+	<GlossaryDefinition term="wallet" />
+}
 
-<GlossaryDefinition term="web3" />
+{
+	<GlossaryDefinition term="web3" />
+}
 
-<GlossaryDefinition term="wei" />
+{
+	<GlossaryDefinition term="wei" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## Z \{##section-z}
+## Z \{#section-z}
 
-<GlossaryDefinition term="zero-address" />
+{
+	<GlossaryDefinition term="zero-address" />
+}
 
-<GlossaryDefinition term="zk-proof" />
+{
+	<GlossaryDefinition term="zk-proof" />
+}
 
-<GlossaryDefinition term="zk-rollup" />
+{
+	<GlossaryDefinition term="zk-rollup" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
-## Sources \{##sources}
+## Sources \{#sources}
 
 _Provided in part by [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) by [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) under CC-BY-SA_
 
-<Divider />
+{
+	<Divider />
+}
 
-## Contribute to this page \{##contribute-to-this-page}
+## Contribute to this page \{#contribute-to-this-page}
 
 Did we miss something? Is something incorrect? Help us improve by contributing to this glossary on GitHub!
 

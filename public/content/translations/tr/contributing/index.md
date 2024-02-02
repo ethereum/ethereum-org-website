@@ -85,4 +85,6 @@ POAP'leri yalnızca, özel anahtarlarının sadece sizde bulunduğu cüzdanlar i
 
 ## Katkıda Bulunanlar \{#contributors}
 
-<Contributors />
+{
+	<Contributors />
+}

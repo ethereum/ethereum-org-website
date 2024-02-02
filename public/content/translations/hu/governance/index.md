@@ -9,7 +9,9 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 
 _Ha senki sem birtokolja az Ethereumot, akkor a döntéseket hogyan hozzák meg az Ethereum kapcsán? Az Ethereum irányítása (governance) egy olyan folyamat, mely lehetővé teszi a döntések meghozatalát._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Mi az az irányítás (governance)? \{#what-is-governance}
 
@@ -37,7 +39,9 @@ _Miközben a protokollszintű Ethereum-irányítás láncon kívül zajlik, addi
   Bővebben a DAO-król
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ki vesz részt ebben? \{#who-is-involved}
 
@@ -53,7 +57,9 @@ Az [Ethereum-közösségben](/community/) számos érdekelt fél van, akik szere
 
 _Megjegyzés: bárki lehet több csoport tagja is (pl. a protokollfejlesztő lehet EIP-bajnok is, futtathat Beaconlánc-validátort és használhat DeFi-alkalmazásokat). A koncepcionális egyértelműség miatt könnyebb, ha megkülönböztetjük őket._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Mi az az Ethereum fejlesztési javaslat (EIP)? \{#what-is-an-eip}
 
@@ -63,7 +69,9 @@ Az egyik fontos Ethereum-irányítási eszköz az **Ethereum fejlesztési javasl
   Bővebben az EIP-kről
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## A hivatalos folyamat \{#formal-process}
 
@@ -107,7 +115,9 @@ Az EIP-bajnokoknak minden releváns érdekelttől visszajelzést kell kérniük.
 
 Az Ethereum-hálózat biztonságán túl rendkívül fontos az, hogy miként vélekednek a protokollfejlesztők, az alkalmazás-/eszközfejlesztők és az alkalmazások felhasználói, mert az ő közreműködésük és munkájuk teszi vonzóvá ezt az ökoszisztémát. Emellett az EIP-ket az összes kliensen végig kell vezetni, amit különböző csapatok végeznek. Tehát meg kell győzni a protokollfejlesztők számos csapatát, hogy az adott változás értékes, segíti a felhasználókat vagy biztonsági problémát old meg.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## A nézeteltérések kezelése \{#disagreements}
 
@@ -135,9 +145,13 @@ Ma az Ethereum közössége a beavatkozásmentesség szabályát követi a hibá
 
 Bővebben a DAO-támadásról:
 
-<YouTube id="rNeLuBOVe8A" />
+{
+	<YouTube id="rNeLuBOVe8A" />
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Az elágazás hasznossága \{#forking-utility}
 
@@ -145,7 +159,9 @@ Az Ethereum/Ethereum Classic elágazás egy kiváló példája az egészséges e
 
 Az elágazás lehetősége a jelentős politikai, filozófiai vagy gazdasági különbségek esetén az Ethereum-irányítás sikerének fontos része. Az elágazás lehetősége nélkül az alternatívák folyamatosan ütköztek, részvételre kényszerítve a vonakodókat, akik később végül létrehozták az Ethereum Classicot, és egy teljesen más vízióval rendelkeztek arról, hogy az Ethereum sikere miben áll.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Beacon-lánc irányítása \{#beacon-chain}
 
@@ -159,7 +175,9 @@ Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szept
   A beolvadásról bővebben
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Hogyan lehet ebben részt venni? \{#get-involved}
 

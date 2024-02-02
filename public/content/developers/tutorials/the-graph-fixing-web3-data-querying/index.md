@@ -85,19 +85,21 @@ You can see how this is not optimal:
 
 Now let's look at a better solution.
 
-## Let me introduce you to GraphQL \{##let-me-introduce-to-you-graphql}
+## Let me introduce you to GraphQL \{#let-me-introduce-to-you-graphql}
 
 First let's talk about GraphQL, originally designed and implemented by Facebook. You might be familiar with the traditional Rest API model. Now imagine instead you could write a query for exactly the data that you wanted:
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 
-<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%"/>
+{
+	<img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%"/>
+}
 
 The two images pretty much capture the essence of GraphQL. With the query on the right we can define exactly what data we want, so there we get everything in one request and nothing more than exactly what we need. A GraphQL server handles the fetching of all data required, so it is incredibly easy for the frontend consumer side to use. [This is a nice explanation](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) of how exactly the server handles a query if you're interested.
 
 Now with that knowledge, let's finally jump into blockchain space and The Graph.
 
-## What is The Graph? \{##what-is-the-graph}
+## What is The Graph? \{#what-is-the-graph}
 
 A blockchain is a decentralized database, but in contrast to what's usually the case, we don't have a query language for this database. Solutions for retrieving data are painful or completely impossible. The Graph is a decentralized protocol for indexing and querying blockchain data. And you might have guessed it, it's using GraphQL as query language.
 
@@ -105,7 +107,7 @@ A blockchain is a decentralized database, but in contrast to what's usually the 
 
 Examples are always the best to understand something, so let's use The Graph for our GameContract example.
 
-## How to create a Subgraph \{##how-to-create-a-subgraph}
+## How to create a Subgraph \{#how-to-create-a-subgraph}
 
 The definition for how to index data is called subgraph. It requires three components:
 
@@ -113,7 +115,7 @@ The definition for how to index data is called subgraph. It requires three compo
 2. Schema (`schema.graphql`)
 3. Mapping (`mapping.ts`)
 
-### Manifest (`subgraph.yaml`) \{##manifest}
+### Manifest (`subgraph.yaml`) \{#manifest}
 
 The manifest is our configuration file and defines:
 
@@ -157,7 +159,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Schema (`schema.graphql`) \{##schema}
+### Schema (`schema.graphql`) \{#schema}
 
 The schema is the GraphQL data definition. It will allow you to define which entities exist and their types. Supported types from The Graph are
 
@@ -188,7 +190,7 @@ type Player @entity {
 }
 ```
 
-### Mapping (`mapping.ts`) \{##mapping}
+### Mapping (`mapping.ts`) \{#mapping}
 
 The mapping file in The Graph defines our functions that transform incoming events into entities. It is written in AssemblyScript, a subset of Typescript. This means it can be compiled into WASM (WebAssembly) for more efficient and portable execution of the mapping.
 
@@ -240,7 +242,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Using it in the Frontend \{##using-it-in-the-frontend}
+## Using it in the Frontend \{#using-it-in-the-frontend}
 
 Using something like Apollo Boost, you can easily integrate The Graph in your React dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQl query in your component. A typical setup might look like this:
 
@@ -291,19 +293,19 @@ React.useEffect(() => {
 
 But we're missing one last piece of the puzzle and that's the server. You can either run it yourself or use the hosted service.
 
-## The Graph server \{##the-graph-server}
+## The Graph server \{#the-graph-server}
 
-### Graph Explorer: The hosted service \{##graph-explorer-the-hosted-service}
+### Graph Explorer: The hosted service \{#graph-explorer-the-hosted-service}
 
 The easiest way is to use the hosted service. Follow the instructions [here](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) to deploy a subgraph. For many projects you can actually find existing subgraphs in the [explorer](https://thegraph.com/explorer/).
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
-### Running your own node \{##running-your-own-node}
+### Running your own node \{#running-your-own-node}
 
 Alternatively you can run your own node. Docs [here](https://github.com/graphprotocol/graph-node#quick-start). One reason to do this might be using a network that's not supported by the hosted service. The currently supported networks [can be found here](https://thegraph.com/docs/en/developing/supported-networks/).
 
-## The decentralized future \{##the-decentralized-future}
+## The decentralized future \{#the-decentralized-future}
 
 GraphQL supports streams as well for newly incoming events. These are supported on the graph through [Substreams](https://thegraph.com/docs/en/substreams/) which are currently in open beta.
 

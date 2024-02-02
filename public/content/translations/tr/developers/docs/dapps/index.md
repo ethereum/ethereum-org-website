@@ -45,7 +45,9 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 
 ## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? \{#visual-learner}
 
-<YouTube id="F50OrwV6Uk8" />
+{
+	<YouTube id="F50OrwV6Uk8" />
+}
 
 ## Dapp oluşturmak için araçlar \{#dapp-tools}
 

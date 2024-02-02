@@ -62,7 +62,9 @@ Maggiori informazioni sul [Proof of Stake](/developers/docs/consensus-mechanisms
 
 Scopri altri contenuti sui diversi tipi di meccanismi di consenso usati su Ethereum:
 
-<YouTube id="ojxfbN78WFQ" />
+{
+	<YouTube id="ojxfbN78WFQ" />
+}
 
 ### Resistenza di Sybil e selezione della catena \{#sybil-chain}
 

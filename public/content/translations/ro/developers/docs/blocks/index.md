@@ -26,7 +26,9 @@ Odată ce un bloc este asamblat (minat) de către un miner din rețea, acesta es
 
 ### O demonstrație vizuală \{#a-visual-demo}
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## Protocolul „dovada-muncii” \{#proof-of-work-protocol}
 

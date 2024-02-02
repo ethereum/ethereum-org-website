@@ -15,11 +15,13 @@ A Verkle-fák (a vektor elköteleződés és a „Merkel-fák” összevonásáb
 
 A Verkle-fák kritikus lépést jelentenek a státusztalan Ethereum-kliensekhez vezető úton. A státusztalan kliensek úgy tudják validálni a bejövő blokkokat, hogy ahhoz nem kell tárolniuk a teljes státuszadatbázist. Ahelyett, hogy az Ethereum státuszának saját lokális másolatát használnák, a státusztalan kliensek egy „tanút” használnak a státuszadatokhoz, amely a blokkal együtt érkezik. A tanú a státuszadat egyéni darabjainak halmaza, amely ahhoz szükséges, hogy a tranzakciók egy adott kötegét le lehessen futtatni, illetve egy kriptográfiai bizonyíték arra, hogy a tanú valóban a teljes adat része. Ezt a tanút használják a státuszadatbázis _helyett_. Ehhez arra van szükség, hogy a tanúk nagyon kis méretűek legyenek, így biztosan időben el lehet juttatni őket a hálózaton keresztül a validátorokhoz, hogy azt egy 12 másodperces slotban feldolgozzák. A jelenlegi státuszadatstruktúra nem megfelelő, mert a tanúk túl nagy méretűek. A Verkle-fák megoldják ezt a problémát, mert kis méretű tanúkat tudnak készíteni, így a státusztalan kliensek egyik fő akadályát ki tudják küszöbölni.
 
+{
 <ExpandableCard title="Miért van szükség státusztalan kliensekre?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Az Ethereum-kliensek jelenleg a Patricia Merkle Trie-adatstruktúrát használják a státuszadatok tárolására. Az egyéni számlákra vonatkozó információk a fa és a digitális fa leveleiként tárolódnak, ahol a levélpárokat addig hashelik, amíg már csak egyetlen hash marad. Ezt a végső hasht hívják gyökérnek. A blokkellenőrzéshez az Ethereum-kliensek végrehajtják az összes tranzakciót a blokkban és frissítik a lokális státuszfájukat. A blokkot akkor tekintik érvényesnek, amikor a lokális fa gyökere azonos lesz azzal, amit a blokkelőterjesztő adott, mivel ha bármilyen különbség lenne az előterjesztő és a validáló csomópont számolása között, akkor a gyökérhash teljesen eltérne. Ezzel az a gond, hogy a blokklánc validálásához minden kliensnek tárolnia kell a vezetőblokk és számos előzményblokk teljes státuszfáját (a Geth-ben alapvető, hogy a vezetőblokk utáni 128 blokkra megtartják a státuszadatokat). Ehhez a klienseknek nagy tárhelyre van szükségük, ami megakadályozza, hogy teljes csomópontokat lehessen olcsón és kisebb kapacitású hardverrel üzemeltetni. Ezt úgy lehet megoldani, hogy a státuszfát egy hatékonyabb struktúrára (Verkle-fa) cserélik, ami képes kis méretű tanúkkal összefoglalni az adatokat, amit a teljes státuszadat helyett meg lehet osztani a validátorokkal. A státuszadat átformázása a Verkle-fa struktúrájába egy mérföldkő a státuszmentes kliensek bevezetéséhez.
 
 </ExpandableCard>
+}
 
 ## Mi az a tanú és miért van rá szükség? \{#what-is-a-witness}
 
@@ -31,11 +33,13 @@ A Merkle-fa struktúrája nagy méretű tanúkat ad – ezeket nem lehet biztons
 
 A polinomiális elköteleződési séma alapján a tanú kezelhető méretű lesz, és könnyedén átadható a peer-to-peer hálózaton keresztül. Ez alapján a kliensek minimális adatmennyiséggel képesek minden blokkban ellenőrizni a státuszváltozást.
 
+{
 <ExpandableCard title="A Verkle-fák pontosan milyen mértékben tudják lecsökkenteni a tanú méretét?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 A tanú mérete a benne lévő levelek száma alapján változik. Feltéve, hogy a tanú 1000 levelet fed le, akkor a Merkle-fához tartozó tanú 3,5 MB lenne (egy 7 szintű fa esetében). Ugyanezen adatok esetében a Verkle-fa tanúja (4 szintű fát feltételezve) 150 kB – **ez nagyjából 23-szor kisebb**. A tanú ilyen szintű méretcsökkenése megengedi, hogy a státusztalan kliensek tanúi elfogadhatóan kicsik maradjanak. A polinomiális tanúk 0,128–1 kB méretűek, attól függően, hogy amelyik polinomiális elköteleződést használják.
 
 </ExpandableCard>
+}
 
 ## Mi a Verkle-fák struktúrája? \{#what-is-the-structure-of-a-verkle-tree}
 

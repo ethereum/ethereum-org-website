@@ -20,7 +20,9 @@ Blok zincir verisinin nasıl şifrelendiğini ve sonrasında blok referansların
 
 Anders'ın blok zincirlerdeki karmaları açıklamasını izleyin:
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## Ethereum nedir? \{#what-is-ethereum}
 

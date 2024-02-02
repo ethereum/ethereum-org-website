@@ -22,7 +22,9 @@ DeSci ವಿಜ್ಞಾನಿಗಳು ತಮ್ಮ ಸಂಶೋಧನೆಯನ
 
 ### ಜುವಾನ್ ಬೆನೆಟ್ - ಡಿಸ್ಯೆ ಚಲನೆ
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## DeSci ವಿಜ್ಞಾನವನ್ನು ಹೇಗೆ ಸುಧಾರಿಸುತ್ತದೆ \{#desci-improves-science}
 

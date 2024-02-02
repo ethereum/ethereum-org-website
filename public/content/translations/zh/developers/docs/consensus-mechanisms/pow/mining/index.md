@@ -66,7 +66,9 @@ lang: zh
 
 跟随 Austin 了解挖矿和工作量证明区块链。
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## 挖矿算法 \{#mining-algorithm}
 

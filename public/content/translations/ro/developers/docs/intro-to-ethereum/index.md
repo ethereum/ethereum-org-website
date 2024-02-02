@@ -22,13 +22,17 @@ Deci, pentru a rezuma, atunci când trimiteţi ETH cuiva, tranzacția trebuie s�
 
 Urmăriţi cum Austin vă conduce prin blockchain-uri:
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 Dacă doriți să vedeți cum blockchain-ul hash-ează datele și apoi blocul anterior face referire la toate blocurile anterioare, consultați [acest demo](https://andersbrownworth.com/blockchain/blockchain) de Anders Brownworth și urmăriți videoclipul care-l însoțește mai jos.
 
 Urmăriți-l pe Anders explicând despre hash-urile din blockchain-uri:
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## Ce este Ethereum? \{#what-is-ethereum}
 

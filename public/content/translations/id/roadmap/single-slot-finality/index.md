@@ -33,6 +33,7 @@ Dengan desain mekanisme saat ini, untuk mengurangi waktu hingga finalitas, perlu
 
 ## Rute ke SSF \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Mengapa kita tidak bisa memiliki SSF sekarang?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Mekanisme konsensus saat ini menggabungkan pengesahan dari beberapa validator, yang dikenal sebagai komite, untuk mengurangi jumlah pesan yang harus diproses oleh setiap validator untuk memvalidasi blok. Setiap validator memiliki kesempatan untuk mengesahkan dalam setiap jangka waktu (32 ruang) tetapi di setiap ruang, hanya sebagian validator, yang dikenal sebagai 'panitia' yang mengesahkan. Mereka melakukannya dengan membagi menjadi subnet di mana beberapa validator dipilih untuk menjadi 'agregator'. Agregator-agregator itu masing-masing menggabungkan semua tanda tangan yang mereka lihat dari validator lain di subnet mereka menjadi satu tanda tangan agregat. Agregator yang mencakup jumlah kontribusi individu terbanyak mengirimkan tanda tangan agregat mereka ke proposer blok, yang menyertakannya dalam blok bersama dengan tanda tangan agregat dari panitia lain.
@@ -41,6 +42,7 @@ Proses ini memberikan kapasitas yang cukup untuk setiap validator memberikan sua
 
 Dalam skema ini, hanya mungkin bagi setiap validator untuk memberikan suara pada blok dengan mendistribusikan pengesahan mereka di seluruh jangka waktu. Namun, ada kemungkinan cara untuk meningkatkan mekanisme sehingga _setiap validator memiliki kesempatan untuk mengesahkan dalam setiap ruang_.
 </ExpandableCard>
+}
 
 Sejak mekanisme konsensus Ethereum dirancang, skema agregasi tanda tangan (BLS) telah ditemukan jauh lebih skalabel daripada yang awalnya dipikirkan, sementara kemampuan klien untuk memproses dan memverifikasi tanda tangan juga meningkat. Ternyata memproses pengesahan dari sejumlah besar validator sebenarnya mungkin dalam satu ruang. Misalnya, dengan satu juta validator masing-masing memberikan suara dua kali di setiap ruang, dan waktu ruang disesuaikan menjadi 16 detik, simpul akan diminta untuk memverifikasi tanda tangan dengan kecepatan minimum 125.000 agregasi per detik untuk memproses semua 1 juta pengesahan dalam ruang. Pada kenyataannya, dibutuhkan sekitar 500 nanodetik untuk melakukan satu verifikasi tanda tangan, yang berarti 125.000 dapat dilakukan dalam ~62,5 ms - jauh di bawah ambang batas satu detik.
 

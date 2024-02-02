@@ -19,13 +19,15 @@ summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 
 The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/history/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 Initially, the [Beacon Chain](/roadmap/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all its accounts, balances, smart contracts, and blockchain state - continued to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain ran in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge was when these two systems finally came together, and proof-of-work was permanently replaced by proof-of-stake.
 
 Imagine Ethereum is a spaceship that launched before it was quite ready for an interstellar voyage. With the Beacon Chain, the community built a new engine and a hardened hull. After significant testing, it became time to hot-swap the new engine for the old one mid-flight. This merged the new, more efficient engine into the existing ship enabling it to put in some serious light years and take on the universe.
 
-## Merging with Mainnet \{##merging-with-mainnet}
+## Merging with Mainnet \{#merging-with-mainnet}
 
 Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to to come into existence in July 2015 with all its familiar features—transactions, smart contracts, accounts, etc.
 
@@ -41,7 +43,7 @@ No history was lost in The Merge. As Mainnet merged with the Beacon Chain, it al
 This transition to proof-of-stake changed the way ether is issued. Learn more about <a href="/roadmap/merge/issuance/">ether issuance before and after The Merge</a>.
 </InfoBanner>
 
-### Users and holders \{##users-holders}
+### Users and holders \{#users-holders}
 
 **The Merge did not change anything for holders/users.**
 
@@ -51,8 +53,9 @@ Despite swapping out proof-of-work, the entire history of Ethereum since genesis
 
 [More on Ethereum security](/security/#eth2-token-scam)
 
-### Node operators and dapp developers \{##node-operators-dapp-developers}
+### Node operators and dapp developers \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Staking node operators and providers"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ Not completing the first two items above will result in your node being seen as 
 
 Not setting a `fee recipient` will still allow your validator to behave as usual, but you will miss out on unburnt fee tips and any MEV you would have otherwise earned in blocks your validator proposes.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Non-validating node operators and infrastructure providers"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ Key action items include:
 Not completing the above items will result in your node appearing to be "offline" until both layers are synced and authenticated.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dapp and smart contract developers"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -105,17 +112,19 @@ The Merge came with changes to consensus, which also includes changes related to
 For more information, check out this blog post by Tim Beiko on <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">How The Merge Impacts Ethereum’s Application Layer</a>.
 
 </ExpandableCard>
+}
 
-## The Merge and energy consumption \{##merge-and-energy}
+## The Merge and energy consumption \{#merge-and-energy}
 
 The Merge marked the end of proof-of-work for Ethereum and start the era of a more sustainable, eco-friendly Ethereum. Ethereum's energy consumption dropped by an estimated 99.95%, making Ethereum a green blockchain. Learn more about [Ethereum energy consumption](/energy-consumption/).
 
-## The Merge and scaling \{##merge-and-scaling}
+## The Merge and scaling \{#merge-and-scaling}
 
 The Merge also set the stage for further scalability upgrades not possible under proof-of-work, bringing Ethereum one step closer to achieving the full scale, security and sustainability outlined in its [Ethereum vision](/roadmap/vision/).
 
-## Misconceptions about The Merge \{##misconceptions}
+## Misconceptions about The Merge \{#misconceptions}
 
+{
 <ExpandableCard
 title="Misconception: &quot;Running a node requires staking 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -133,7 +142,9 @@ The ability for anyone to run their own node is <em>absolutely essential</em> to
 <a href="/run-a-node/">More on running your own node</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misconception: &quot;The Merge failed to reduced gas fees.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -143,7 +154,9 @@ Gas fees are a product of network demand relative to the capacity of the network
 With a <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">rollup-centric roadmap</a>, efforts are being focused on scaling user activity at <a href="/layer-2/">layer 2</a>, while enabling layer 1 Mainnet as a secure decentralized settlement layer optimized for rollup data storage to help make rollup transactions exponentially cheaper. The transition to proof-of-stake is a critical precursor to realizing this. <a href="/developers/docs/gas/">More on gas and fees.</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misconception: &quot;Transactions were accelerated substantially by The Merge.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -154,7 +167,9 @@ Historically, on proof-of-work, the target was to have a new block every ~13.3 s
 Proof-of-stake introduced the transaction finality concept that did not previously exist. In proof-of-work, the ability to reverse a block gets exponentially more difficult with every passing block mined on top of a transaction, but it never quite reaches zero. Under proof-of-stake, blocks are bundled into epochs (6.4 minute spans of time containing 32 chances for blocks) which validators vote on. When an epoch ends, validators vote on whether to consider the epoch 'justified'. If validators agree to justify the epoch, it gets finalized in the next epoch. Undoing finalized transactions is economically inviable as it would require obtaining and burning over one-third of the total staked ETH.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misconception: &quot;The Merge enabled staking withdrawals.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -166,7 +181,9 @@ Since the Shanghai/Capella network upgrade, stakers can now designate a <em>with
 <a href="/staking/withdrawals/">More on staking withdrawals</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misconception: &quot;Now that The Merge is complete, and withdrawals are enabled, stakers could all exit at once.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -178,8 +195,9 @@ This prevents a mass exodus of staked funds. Furthermore, it prevents a potentia
 
 The APR is also intentionally dynamic, allowing a market of stakers to balance how much they're willing to be paid to help secure the network. If the rate is too low, then validators will exit at a rate limited by the protocol. Gradually this will raise the APR for everyone who remains, attracting new or returning stakers yet again.
 </ExpandableCard>
+}
 
-## What happened to 'Eth2'? \{##eth2}
+## What happened to 'Eth2'? \{#eth2}
 
 The term 'Eth2' has been deprecated. After merging 'Eth1' and 'Eth2' into a single chain, there is no longer any need to
 distinguish between two Ethereum networks; there is just Ethereum.
@@ -193,11 +211,11 @@ These terminology updates only change naming conventions; this does not alter Et
 
 [Learn more about the 'Eth2' renaming](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Relationship between upgrades \{##relationship-between-upgrades}
+## Relationship between upgrades \{#relationship-between-upgrades}
 
 The Ethereum upgrades are all somewhat interrelated. So let’s recap how The Merge relates to the other upgrades.
 
-### The Merge and the Beacon Chain \{##merge-and-beacon-chain}
+### The Merge and the Beacon Chain \{#merge-and-beacon-chain}
 
 The Merge represents the formal adoption of the Beacon Chain as the new consensus layer to the original Mainnet execution layer. Since The Merge, validators are assigned to secure Ethereum Mainnet, and mining on [proof-of-work](/developers/docs/consensus-mechanisms/pow/) is no longer a valid means of block production.
 
@@ -207,13 +225,13 @@ Blocks are instead proposed by validating nodes that have staked ETH in return f
   The Beacon Chain
 </ButtonLink>
 
-### The Merge and the Shanghai upgrade \{##merge-and-shanghai}
+### The Merge and the Shanghai upgrade \{#merge-and-shanghai}
 
 In order to simplify and maximize focus on a successful transition to proof-of-stake, The Merge upgrade did not include certain anticipated features such as the ability to withdraw staked ETH. This functionality was enabled separately with the Shanghai/Capella upgrade.
 
 For those curious, learn more about [What Happens After The Merge](https://youtu.be/7ggwLccuN5s?t=101), presented by Vitalik at the April 2021 ETHGlobal event.
 
-### The Merge and sharding \{##merge-and-data-sharding}
+### The Merge and sharding \{#merge-and-data-sharding}
 
 Originally, the plan was to work on sharding before The Merge to address scalability. However, with the boom of [layer 2 scaling solutions](/layer-2/), the priority shifted to swapping proof-of-work to proof-of-stake first.
 
@@ -223,8 +241,12 @@ Plans for sharding are rapidly evolving, but given the rise and success of layer
   Sharding
 </ButtonLink>
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

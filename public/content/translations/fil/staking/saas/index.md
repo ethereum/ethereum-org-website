@@ -27,7 +27,9 @@ Hindi native na sinusuportahan ng Ethereum protocol ang pagtatalaga ng stake, ka
   <Card title="Limitahan ang iyong panganib" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
 
-<StakingComparison page="saas" />
+{
+	<StakingComparison page="saas" />
+}
 
 ## Ano ang dapat isaalang-alang \{#what-to-consider}
 
@@ -35,32 +37,43 @@ Dumarami ang mga SaaS provider na tutulong sa iyong i-stake ang ETH mo, pero may
 
 Ang mga attribute indicator ay ginagamit sa ibaba para ipakita ang mga kapansin-pansing kalakasan o kahinaas ng isang nakalistang SaaS provider. Gamitin ang seksyong ito bilang sanggunian sa pagtukoy ng mga katangian na ito habang pumipili ka ng serbisyong tutulong sa iyo sa iyong pag-stake.
 
-<StakingConsiderations page="saas" />
+{
+	<StakingConsiderations page="saas" />
+}
 
 ## Tingnan ang mga staking service provider \{#saas-providers}
 
 Nasa ibaba ang ilang available na SaaS provider. Gamitin ang mga indicator sa itaas upang tulungan kang gamitin ang mga serbisyong ito
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### Mga SaaS provider
 
-<StakingProductsCardGrid category="saas" />
+{
+	<StakingProductsCardGrid category="saas" />
+}
 
 Tandaan ang kahalagahan ng pagsuporta sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/) dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
 ### Mga Generator ng Key
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Mayroong mungkahi para sa staking-as-a-service provider na hindi namin napansin? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
 
 ## Mga karaniwang itanong \{#faq}
 
+{
 <ExpandableCard title="Sino ang nangangasiwa ng aking mga key?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 Mag-iiba ang mga usapan depende sa provider, pero karaniwan kang gagabayan sa pag-set up ng anumang signing key na kailangan mo (isa kada 32 ETH), at ia-upload ang mga ito sa iyong provider para payagan ang mga itong mag-validate para sa iyo. Hindi nagbibigay ang mga signing key ng anumang kakayahang mag-withdraw, mag-transfer, o gastusin ang iyong pondo. Gayunpaman, nagbibigay ang mga ito ng kakayahang bumoto para sa consensus, na kung hindi maayos na gagawin ay maaaring magdulot ng mga parusa offline o slashing.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="May dalawang set ng mga key?" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 Oo. Ang bawat account ay binubuo ng mga BLS <em>signing</em> key at mga BLS <em>withdrawal</em> key. Upang magawa ng isang validator na patunayan ang kalagayan ng chain, lumahok sa mga sync committee at magmungkahi ng mga block, dapat maa-access kaagad ng validator client ang mga signing key. Dapat nakakonekta ang mga ito sa internet, at nang sa gayon ay maituturing na mga "hot" key. Isa itong kahingian para makapagpatunay ang iyong validator, kung kaya, pinaghihiwalay ang mga key na ginagamit para mag-transfer o mag-withdraw ng pondo para sa mga dahilang panseguridad.
 
@@ -72,7 +85,9 @@ Kailangang i-update ang mga kredensyal sa pag-withdraw para makapag-withdraw\*. 
 
 \*Hindi ito kailangang itakda ng mga staker na nagbigay ng withdrawal address na may inisyal na deposito. Magtanong sa iyong SaaS provider para sa suporta tungkol sa kung paano ihanda ang iyong validator.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kailan ako puwedeng mag-withdraw?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 Inilunsad ang pag-withdraw sa staking sa Shanghai/Capella upgrade noong Abril 2023. Kailangang magbigay ng mga staker ng withdrawal address (kung hindi ito ibinigay sa inisyal na deposito), at awtomatikong sisimulang ipamahagi ang mga reward payment kada ilang araw.
 
@@ -80,7 +95,9 @@ Puwede ring ganap na umalis ang mga validator bilang validator, na siyang mag-a-
 
 <ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Anong mangyayari kung masa-slash ako?" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 Sa pamamagitan ng paggamit ng SaaS provider, ipinagkakatiwala mo ang operasyon ng node mo sa iba. May kaakibat itong panganib ng hindi magandang performance ng node, na hindi mo makokontrol. Kung ma-slash ang validator mo, papatawan ng parusa ang validator balance mo at puwersahang aalisin sa validator pool.
 
@@ -88,6 +105,7 @@ Kapag natapos na ang proseso ng slashing/pag-alis, ita-transfer ang pondong ito 
 
 Makipag-ugnayan sa indibidwal na SaaS provider para sa iba pang detalye tungkol sa anumang guarantee o opsyon sa insurance, at para sa mga tagubilin sa kung paano magbigay ng withdrawal address. Kung gusto mong ikaw lang ang nagkokontrol ng iyong validator setup, <a href="/staking/solo/">magbasa pa tungkol sa kung paano i-solo stake ang iyong ETH</a>.
 </ExpandableCard>
+}
 
 ## Karagdagang pagbabasa \{#further-reading}
 

@@ -29,7 +29,9 @@ Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/stak
   <Card title="Staking-Token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## Bitte beachten \{#what-to-consider}
 
@@ -43,15 +45,21 @@ Allerdings kommt es mit diesen gestaketen ETH-Token zu kartellähnlichem Verhalt
 
 Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Schwächen hinzuweisen, die ein gelisteter Staking-Pool enthalten kann. Verwenden Sie diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren, während Sie einen Pool auswählen, dem Sie beitreten möchten.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## Staking-Pools entdecken \{#explore-staking-pools}
 
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Anhand der Indikatoren oben können Sie die Tools unten besser beurteilen.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 Hinweis: Es ist wichtig, einen Dienst zu wählen, der [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) ernst nimmt, da das die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungskunden"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsenskunden"</em>.
 
@@ -59,10 +67,13 @@ Haben Sie einen Vorschlag für einen Staking-Tool, der noch fehlt? Machen Sie si
 
 ## Häufig gestellte Fragen \{#faq}
 
+{
 <ExpandableCard title="Wie erhalte ich Belohnungen?">
 Typischerweise werden ERC-20 Staking-Token an Staker ausgegeben, die den Wert ihrer eingesetzten ETH plus Belohnungen darstellen. Denken Sie daran, dass Staking-Belohnungen grundsätzlich etabliert sind, verschiedene Pools Staking-Belohnungen allerdings nach leicht unterschiedlichen Methoden an ihre Benutzer verteilen.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Wann kann ich meinen Einsatz zurückziehen?">
 Sofort! Die Aktualisierung des Netzwerks auf Shanghai/Capella erfolgte im April 2023 und führte das Auszahlen von Staking-Mitteln ein. Validatoren haben nun die Möglichkeit, Staking-Pools, die sie unterstützen, zu verlassen und eine Auszahlung von ETH an ihre angegebene Adresse anzuweisen. Dies macht es möglich, Ihren Anteil am Stake gegen das zugrundeliegende ETH einzulösen. Bitte wenden Sie sich an Ihren Anbieter, um zu erfahren, wie er diese Funktionalität unterstützt.
 
@@ -70,7 +81,9 @@ Alternativ dazu ermöglichen Pools, die einen ERC-20 Staking-Token verwenden, de
 
 <ButtonLink to="/staking/withdrawals/">Mehr zum Abheben von Staking</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Ist dies anders als Staking auf meiner Börse?">
 Es gibt viele Ähnlichkeiten zwischen diesen gepoolten Staking-Optionen und zentralisierten Börsen, wie z. B. die Möglichkeit, kleine ETH-Beträge zu staken und sie zu bündeln, um Validatoren zu aktivieren.
 
@@ -78,6 +91,7 @@ Im Gegensatz zu zentralisierten Börsen nutzen viele andere gepoolte Staking-Opt
 
 Einige Pooling-Optionen sind im Hinblick auf die Nodes, die sie unterstützen, stärker dezentralisiert als andere. Um die Gesundheit und Dezentralisierung des Netzwerks zu fördern, werden Staker immer dazu ermutigt, einen Pooling-Service auszuwählen, der eine genehmigungsfreie, dezentrale Gruppe von Node-Betreibern ermöglicht.
 </ExpandableCard>
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

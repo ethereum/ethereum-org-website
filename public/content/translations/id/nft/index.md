@@ -18,7 +18,9 @@ NFT adalah token yang unik secara individual. Setiap NFT memiliki properti yang 
 
 Keunikan dari setiap NFT memungkinkan tokenisasi untuk berbagai hal seperti seni, koleksi, atau bahkan properti, yang mana satu NFT unik yang spesifik mewakili suatu item dunia nyata atau digital yang unik. Kepemilikan suatu aset diamankan oleh rantai blok Ethereum – tidak seorang pun dapat merubah catatan kepemilikan atau menyalin/menempel NFT baru untuk mengadakannya.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Internet aset \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Situs web ini juga memiliki nama domain alternatif yang didukung oleh NFT, **eth
 
 [Selengkapnya tentang ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Keamanan NFT \{#nft-security}
 
@@ -89,6 +93,10 @@ Masalah keamanan terkait NFT sering kali terkait dengan penipuan phishing, keren
 - [Standar token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Token standar ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

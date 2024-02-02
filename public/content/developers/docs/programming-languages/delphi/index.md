@@ -26,7 +26,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner references and links \{##beginner-references-and-links}
+## Beginner references and links \{#beginner-references-and-links}
 
 **Introducing the Delphereum library**
 
@@ -40,13 +40,13 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [A 3-minute Smart Contract and Delphi - Part 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [A 3-minute Smart Contract and Delphi - Part 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Intermediate articles \{##intermediate-articles}
+## Intermediate articles \{#intermediate-articles}
 
 - [Generating an Ethereum-signed message signature in Delphi](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Transferring ether with Delphi](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Transferring ERC-20 tokens with Delphi](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## Advanced use patterns \{##advanced-use-patterns}
+## Advanced use patterns \{#advanced-use-patterns}
 
 - [Delphi and Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum and Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

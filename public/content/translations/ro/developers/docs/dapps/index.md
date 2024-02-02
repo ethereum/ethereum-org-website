@@ -45,7 +45,9 @@ Un contract inteligent este un cod care locuieşte pe blockchain-ul Ethereum și
 
 ## Învățați mai ușor prin vizualizare? \{#visual-learner}
 
-<YouTube id="F50OrwV6Uk8" />
+{
+	<YouTube id="F50OrwV6Uk8" />
+}
 
 ## Instrumentele aplicaţiilor dapp \{#dapp-tools}
 

@@ -29,7 +29,9 @@ Selain manfaat yang kami sebutkan dalam [pengantar tentang penaruhan](/staking/)
   <Card title="penaruhan token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## Apa yang perlu ditentukan \{#what-to-consider}
 
@@ -43,15 +45,21 @@ Namun, token ETH yang dipertaruhkan ini cenderung menciptakan perilaku seperti k
 
 Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang mencolok yang mungkin dimiliki oleh pool penaruhan yang terdaftar. Gunakan bagian ini sebagai referensi untuk bagaimana kami mendefinisikan atribut ini ketika Anda memilih pool untuk bergabung.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## Eksplorasi pool penaruhan \{#explore-staking-pools}
 
 Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan petunjuk di atas untuk membantu Anda memandu melalui perangkat di bawah ini.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 Harap perhatikan pentingnya memilih layanan yang serius mengenai [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/), karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style={{ textTransform: "uppercase" }}>"diversitas klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"diversitas klien konsensus."</em>
 
@@ -59,10 +67,13 @@ Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar pro
 
 ## Pertanyaan yang sering diajukan \{#faq}
 
+{
 <ExpandableCard title="Bagaimana cara saya mendapatkan imbalan?">
 Biasanya token penaruhan ERC-20 dikeluarkan untuk para penaruh yang mewakili nilai ETH yang mereka pertaruhkan ditambah hadiah. Perlu diingat bahwa berbagai pool akan mendistribusikan imbalan penaruhan kepada pengguna mereka melalui metode yang sedikit berbeda, tetapi tema umum ini tetap sama.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kapan saya bisa menarik kembali taruhan saya?">
 Sekarang juga! Peningkatan jaringan Shanghai/Capella terjadi pada April 2023 dan memperkenalkan penarikan penaruhan. Akun validator yang mendukung pool penaruhan sekarang memiliki kemampuan untuk keluar dan menarik ETH ke alamat penarikan yang ditentukan. Ini memungkinkan Anda untuk menebus bagian Anda dari taruhan menjadi ETH yang mendasarinya. Periksa dengan penyedia Anda untuk melihat bagaimana mereka mendukung fungsionalitas ini.
 
@@ -70,7 +81,9 @@ Sebagai alternatif, pool yang menggunakan token penaruhan ERC-20 memungkinkan pe
 
 <ButtonLink to="/staking/withdrawals/">Lebih lanjut tentang penarikan penaruhan</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Apakah ini berbeda dari melakukan penaruhan dengan bursa saya?">
 Terdapat banyak kesamaan antara pilihan pooled penaruhan ini dengan bursa terpusat, seperti kemampuan untuk melakukan penaruhan dengan jumlah ETH yang kecil dan menggabungkannya bersama untuk mengaktifkan validator.
 
@@ -78,6 +91,7 @@ Tidak seperti bursa terpusat, banyak opsi penaruhan gabungan lainnya menggunakan
 
 Beberapa pilihan pooling lebih terdesentralisasi daripada yang lain dalam hal simpul yang mendukungnya. Untuk mendorong kesehatan dan desentralisasi jaringan, para penaruh selalu didorong untuk memilih layanan pooling yang memungkinkan set kelompok simpul operator yang terdesentralisasi dan tanpa izin.
 </ExpandableCard>
+}
 
 ## Bacaan lebih lanjut \{#further-reading}
 

@@ -8,9 +8,11 @@ lang: en
 
 _Web3 has evolved into an ecosystem of L1 blockchains and L2 scaling solutions, each designed with unique capabilities and trade-offs. As the number of blockchain protocols increases, so does [the demand to move assets across chains](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). To fulfill this demand, we need bridges._
 
-<Divider />
+{
+	<Divider />
+}
 
-## What are bridges? \{##what-are-bridges}
+## What are bridges? \{#what-are-bridges}
 
 Blockchain bridges work just like the bridges we know in the physical world. Just as a physical bridge connects two physical locations, a blockchain bridge connects two blockchain ecosystems. Bridges facilitate communication between blockchains through the transfer of information and assets.
 
@@ -20,7 +22,7 @@ You're from the USA and are planning a trip to Europe. You have USD, but you nee
 
 But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for EUR, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
 
-## Why do we need bridges? \{##why-do-we-need-bridges}
+## Why do we need bridges? \{#why-do-we-need-bridges}
 
 All blockchains have their limitations. For Ethereum to scale and keep up with demand, it has required rollups. Alternatively, L1s like Solana and Avalanche are designed differently to enable higher throughput but at the cost of decentralization.
 
@@ -37,25 +39,27 @@ Bridges enable:
 
 [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
 
-<Divider />
+{
+	<Divider />
+}
 
-## Bridge use cases \{##bridge-use-cases}
+## Bridge use cases \{#bridge-use-cases}
 
 The following are some scenarios where you can use a bridge:
 
-### Lower transaction fees \{##transaction-fees}
+### Lower transaction fees \{#transaction-fees}
 
 Let’s say you have ETH on Ethereum Mainnet but want cheaper transaction fees to explore different dapps. By bridging your ETH from the Mainnet to an Ethereum L2 rollup, you can enjoy lower transaction fees.
 
-### Dapps on other blockchains \{##dapps-other-chains}
+### Dapps on other blockchains \{#dapps-other-chains}
 
 If you’ve been using Aave on Ethereum Mainnet to lend USDT but the interest rate for lending USDT using Aave on Polygon is higher.
 
-### Explore blockchain ecosystems \{##explore-ecosystems}
+### Explore blockchain ecosystems \{#explore-ecosystems}
 
 If you have ETH on Ethereum Mainnet and you want to explore an alt L1 to try out their native dapps. You can use a bridge to transfer your ETH from Ethereum Mainnet to the alt L1.
 
-### Own native crypto assets \{##own-native}
+### Own native crypto assets \{#own-native}
 
 Let’s say you want to own native Bitcoin (BTC), but you only have funds on Ethereum Mainnet. To gain exposure to BTC on Ethereum, you can buy Wrapped Bitcoin (WBTC). However, WBTC is an ERC-20 token native to the Ethereum network, which means it’s an Ethereum version of Bitcoin and not the original asset on the Bitcoin blockchain. To own native BTC, you would have to bridge your assets from Ethereum to Bitcoin using a bridge. This will bridge your WBTC and convert it into native BTC. Alternatively, you might own BTC and want to use it in Ethereum DeFi protocols. This would require bridging the other way, from BTC to WBTC which can then be used as an asset on Ethereum.
 
@@ -63,9 +67,11 @@ Let’s say you want to own native Bitcoin (BTC), but you only have funds on Eth
   You can also do all of the above using a <a href="/get-eth/">centralized exchange</a>. However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
-## Types of bridge \{##types-of-bridge}
+## Types of bridge \{#types-of-bridge}
 
 Bridges have many types of designs and intricacies. Generally, bridges fall into two categories: trusted and trustless bridges.
 
@@ -93,9 +99,11 @@ Self check-in is similar to a trustless model as it removes the operator's role 
 
 Many bridging solutions adopt models between these two extremes with varying degrees of trustlessness.
 
-<Divider />
+{
+	<Divider />
+}
 
-## Risk using bridges \{##bridge-risk}
+## Risk using bridges \{#bridge-risk}
 
 Bridges are in the early stages of development. It is likely that the optimal bridge design has not yet been discovered. Interacting with any type of bridge carries risk:
 
@@ -119,9 +127,11 @@ One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million U
 
 Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
-<Divider />
+{
+	<Divider />
+}
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _June 18, 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _July 5, 2022 - Bartek Kiepuszewski_

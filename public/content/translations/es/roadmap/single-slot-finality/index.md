@@ -33,6 +33,7 @@ Con el diseño del mecanismo actual, para acortar la finalidad, es necesario que
 
 ## Rutas hacia la SSF \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "¿Por qué no podemos usar SSF a día de hoy?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 El mecanismo de consenso actual combina certificaciones de multiples validadores, conocidos como comités, para reducir el número de mensajes que cada validador tiene que procesar para validar un bloque. Cada validador tiene una oportunidad para certificar en cada época (32 ranuras) pero en cada ranura, solo un subgrupo de validadores, conocido como comité de certificación. Ellos lo hacen al dividirse en subredes en las que se seleccionan a unos cuantos validadores para ser «agregadores». Cada agregador combina todas las firmas de parte de los validadores en su subred en una sola firma. Los agregadores que incluyen los números más grandes de contribuidores individuales pasan su firma combinada al bloque del proponente, quien la incluye en el bloque, junto con la firma combinada de otros comités.
@@ -41,6 +42,7 @@ Este proceso proporciona suficiente capacidad para que cada validador vote en ca
 
 En este esquema, cada validador solo puede votar en un bloque para distribuir sus certificaciones a través de la época completa. Sin embargo, hay formas potenciales de mejorar el mecanismo para que _cada validador tenga la oportunidad de certificar en cada ranura_.
 </ExpandableCard>
+}
 
 Desde que se designó el mecanismo de consenso de Ethereum, el esquema de agregación de firmas (BLS, por sus siglas en inglés) ha resultado ser mucho más escalable de lo que se pensó inicialmente, mientras que también ha mejorado la posibilidad de que los clientes procesen y verifiquen firmas. Resulta que procesar certificaciones de un gran número de validadores puede, de hecho, hacerse en una única ranura. Por ejemplo, con un millón de validadores, votando cada uno dos veces en cada ranura y 16 segundos para cada ranura, se requerirán nodos para verificar firmas a un ritmo mínimo de 125.000 certificaciones por segundo para procesar todo el millón de certificaciones en la ranura. En realidad, a un ordenador normal le lleva cerca de 500 nanosegundos hacer la verificación de una firma, lo que significa que se pueden hacer 125.000 en ~62,5 ms - muy por debajo del umbral de un segundo.
 

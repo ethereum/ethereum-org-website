@@ -94,7 +94,9 @@ Ethereum, как и Bitcoin, в настоящий момент использу
 
 ## Больше любите видео? \{#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+{
+	<YouTube id="3EUAcxhuoU4" />
+}
 
 ## Дополнительные ресурсы \{#further-reading}
 

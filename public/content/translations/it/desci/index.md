@@ -22,7 +22,9 @@ La scienza decentralizzata consente fonti di finanziamento più diversificate (d
 
 ### Juan Benet: Il Movimento della DeSci
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## In che modo la DeSci migliora le scienze? \{#desci-improves-science}
 

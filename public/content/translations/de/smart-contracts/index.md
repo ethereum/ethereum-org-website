@@ -73,7 +73,9 @@ Sie können Berechnungen durchführen, Währungen erzeugen, Daten speichern, NFT
 
 Dann sehen Sie sich an, wie Finematics Smart Contracts erklären:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

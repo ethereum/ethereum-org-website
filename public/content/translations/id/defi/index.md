@@ -20,7 +20,9 @@ DeFi adalah sebuah istilah kolektif untuk produk dan layanan keuangan yang dapat
 
 Ada ekonomi kripto yang sedang booming di luar sana, di mana Anda dapat memberi pinjaman, meminjam, melakukan long/short, mendapatkan bunga, dan banyak lagi. Orang-orang Argentina yang paham kripto telah menggunakan DeFi untuk menghindari inflasi yang melumpuhkan. Perusahaan telah mulai menyalurkan gaji karyawan mereka secara waktu nyata. Beberapa orang bahkan telah mengambil dan melunasi pinjaman senilai jutaan dolar tanpa perlu menunjukkan identifikasi pribadi.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## DeFi vs keuangan tradisional \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Bitcoin dalam banyak hal adalah aplikasi DeFi yang pertama. Bitcoin memungkinkan
 
 Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah terhadap Anda dan siapa pun yang memiliki akses. Namun itu juga membuat uang digital ini dapat diprogram, menggunakan [kontrak pintar](/glossary#smart-contract), sehingga Anda dapat lebih dari sekadar menyimpan dan mengirim nilai.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Uang yang dapat diprogram \{#programmable-money}
 
@@ -86,7 +90,9 @@ Ada sebuah alternatif terdesentralisasi untuk kebanyakan layanan keuangan. Tetap
 - [Beli asuransi](#insurance)
 - [Kelola portofolio Anda](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Kirim uang ke seluruh dunia dengan cepat \{#send-money}
 
@@ -102,7 +108,9 @@ Anda juga dapat menyalurkan uang melalui Ethereum. Ini memungkinkan Anda membaya
 
 Dan jika Anda tidak ingin mengirim atau menyalurkan [ETH](/eth/) karena perubahan jumlah nilainya, ada mata uang alternatif di Ethereum: stablecoin.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Akses mata uang yang stabil \{#stablecoins}
 
@@ -114,7 +122,9 @@ Produk koin seperti Dai atau USDC memiliki nilai yang tetap dalam cakupan bebera
   Selengkapnya tentang stablecoin
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Meminjam \{#lending}
 
@@ -170,7 +180,9 @@ Agar dapat melakukan contoh di atas dalam dunia keuangan tradisional, Anda akan 
 
 [Lebih lanjut tentang pinjaman flash](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Mulai menabung dengan kripto \{#saving}
 
@@ -203,7 +215,9 @@ Pool hadiah dibentuk oleh semua bunga yang dihasilkan oleh pemberian pinjaman de
   Cobalah PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Tukar token \{#swaps}
 
@@ -215,7 +229,9 @@ Misalnya, jika Anda ingin menggunakan lotre anti kerugian PoolTogether (yang did
   Lihat penukaran token
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Perdagangan tingkat lanjut \{#trading}
 
@@ -227,7 +243,9 @@ Ketika Anda menggunakan bursa terpusat, Anda harus mendepositokan aset Anda sebe
   Lihat dapp perdagangan
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Kembangkan portofolio Anda \{#investing}
 
@@ -239,7 +257,9 @@ Sebuah contoh yang baik untuk ini adalah [dana DeFi Pulse Index (DPI)](https://d
   Lihat dapp investasi
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Danai ide Anda \{#crowdfunding}
 
@@ -268,7 +288,9 @@ Ini berarti Proyek A dengan 100 sumbangannya senilai 1 dolar dapat menerima lebi
 
 [Selengkapnya tentang pendanaan kuadrat](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Asuransi \{#insurance}
 
@@ -280,7 +302,9 @@ Produk Ethereum, seperti perangkat lunak mana pun, dapat mengalami masalah karen
   Lihat dapp asuransi
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Manajer agregator dan portofolio \{#aggregators}
 
@@ -290,7 +314,9 @@ Dengan begitu banyak hal yang terjadi, Anda akan memerlukan cara untuk tetap mel
   Lihat dapp portofolio
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Bagaimana cara kerja DeFi? \{#how-defi-works}
 

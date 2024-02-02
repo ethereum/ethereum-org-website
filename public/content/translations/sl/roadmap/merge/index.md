@@ -19,7 +19,9 @@ summaryPoint4: Spojitev je Ethereumovo porabo energijo zmanjšala za približno 
 
 Spojitev je bila združitev izvirne izvajalne plasti Ethereuma (glavno omrežje, ki je obstajalo od [izvora](/history/#frontier)) z novo plastjo z mehanizmom za doseganje soglasja z dokazom o deležu, oddajniško verigo. Odpravila je potrebo po energijsko potratnem rudarjenju in namesto tega omogočila zaščito omrežja z zastavljanjem ETH. Predstavljala je zares vznemirljiv korak k realizaciji Ethereumove vizije – več možnosti širitve, varnosti in trajnosti.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 Najprej je [oddajniška veriga](/roadmap/beacon-chain/) stopila v uporabo ločeno od [glavnega omrežja](/glossary/#mainnet). Ethereumovo glavno omrežje z vsemi računi, zneski, pametnimi pogodbami in stanjem verige blokov je še naprej varoval mehanizem [dokaza o delu](/developers/docs/consensus-mechanisms/pow/), tudi ko je oddajniška veriga vzporedno uporabljala [dokaz o deležu](/developers/docs/consensus-mechanisms/pos/). Spojitev je končno združila oba sistema in mehanizem dokaza o delu je trajno zamenjal mehanizem dokaza o deležu.
 
@@ -53,6 +55,7 @@ Tudi po zamenjavi mehanizma dokaza o delu je celotna Ethereumova zgodovina ostal
 
 ### Upravljavci vozlišč in razvijalci decentraliziranih aplikacij \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Upravljavci in ponudniki vozlišč za zastavljanje"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ Ključne naloge vključujejo:
 
 Če ne nastavite "prejemnika provizij", bo validator deloval kot običajno, ne boste pa prejeli neporabljenih provizij in maksimalnih pridobljivih vrednosti (MEV), ki bi jih zaslužili z bloki, ki jih predlaga vaš validator.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Upravljavci vozlišč, ki ne opravljajo validacije, in ponudniki infrastrukture"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ Ključne naloge vključujejo:
 Če za vozlišče ne opravite zgornjih korakov, bo vozlišče prikazano kot "brez povezave", dokler obe plasti nista sinhronizirani in preverjeni.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Razvijalci decentraliziranih aplikacij in pametnih pogodb"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -102,6 +109,7 @@ Spojitev je spremenila način doseganja soglasja, kar vključuje tudi spremembe,
 
 Za več informacij preberite blog [Kako spojitev vpliva na Ethereumovo aplikacijsko plast](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/) Tima Beika.
 </ExpandableCard>
+}
 
 ## Spojitev in poraba energije \{#merge-and-energy}
 
@@ -113,6 +121,7 @@ Spojitev je tudi postavila temelje za nadaljnje širitve omrežja, ki z dokazom 
 
 ## Zmote o spojitvi \{#misconceptions}
 
+{
 <ExpandableCard
 title="Zmota: &quot;Če želite upravljati vozlišče, morate zastaviti 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -129,7 +138,9 @@ Zmožnost, da lahko kdorkoli upravlja svoje vozlišče, je _popolnoma nepogrešl
 [Več o upravljanju lastnega vozlišča](/run-a-node/)
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zmota: &quot;Spojitev ni zmanjšala provizij za plin.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -137,7 +148,9 @@ Provizije za plin so posledica povpraševanja v omrežju glede na njegovo kapaci
 
 Z [načrtom razvoja, ki se osredotoča na združevanje transakcij](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), se trudimo širiti dejavnost uporabnikov na [2. plasti 2](/layer-2/), glavno omrežje na 1. plasti pa želimo razvijati kot varno decentralizirano plast za poravnavo, ki je optimizirana za povečevanje prostora za shranjevanje podatkov, s katerim bodo vse transakcije postale eksponentno cenejše. Prehod na mehanizem dokaza o deležu je nujen predpogoj za tako delovanje. [Več o plinu in provizijah.](/developers/docs/gas/)
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zmota: &quot;Spojitev je močno pospešila transakcije.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -148,13 +161,17 @@ V preteklosti je bil pri mehanizmu dokaza o delu cilj, da se nov blok ustvari pr
 Mehanizem dokaza o deležu je uvedel koncept zaključka transakcije, ki prej ni bil na voljo. Pri mehanizmu dokaza o delu je zmožnost povrnitve bloka postala eksponentno težja z vsakim blokom, ki je bil ustvarjen po transakciji, vendar pa nikoli ni postala ničelna. Pri mehanizmu dokaza o deležu se bloki združujejo v epohe (6,4-minutna obdobja, ki vsebujejo 32 možnosti za bloke), o katerih glasujejo validatorji. Ko se epoha konča, validatorji glasujejo, ali jo smatrajo za "upravičeno". Če se validatorji strinjajo, da je epoha upravičena, se v naslednji epohi zaključi. Razveljavitev zaključenih transakcij ni ekonomsko smiselna, saj bi bilo treba za njo pridobiti in sežgati tretjino vsega zastavljenega ETH.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zmota: &quot;Spojitev je omogočila dvige zastavljenih sredstev.&quot;"
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
 Zastavljen ETH in nagrade za zastavljanje so še naprej zadržane in jih ni mogoče dvigniti. Dvigi so načrtovani v prihajajoči nadgradnji Shanghai.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zmota: &quot;Validatorji do nadgradnje Shanghai, ki bo omogočila dvige, ne bodo prejeli nobene likvidne nagrade v ETH.&quot;"
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
@@ -164,7 +181,9 @@ Protokol izdaja ETH kot nagrado za validatorje, ki prispevajo k doseganju soglas
 
 ETH na izvajalni plasti se upošteva ločeno od tistega na plasti za doseganje soglasja. Ko uporabniki opravljajo transakcije v Ethereumovem glavnem omrežju, se z ETH plačujejo plin in provizije validatorjem. Ta ETH je že na izvajalni plasti in ga protokol ne izdaja na novo – validatorjem je na voljo takoj (če so odjemalski programski opremi posredovali veljaven naslov "prejemnika provizije").
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zmota: &quot;Ko bodo omogočeni dvigi, bodo vsi zastavljavci hkrati izstopili iz omrežja.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -174,6 +193,7 @@ Pomembna opomba: protokol omejuje popolne izhode validatorjev iz omrežja. Tako 
 
 Letna mera donosa je namenoma dinamična, saj tako celotnemu trgu zastavljavcev omogoča, da pretehtajo, koliko so pripravljeni zaslužiti za pomoč pri ščitenju omrežja. Ko bodo dvigi omogočeni in bo omejitev prenizka, bodo validatorji izstopali pri omejitvi, ki jo določa protokol. S tem bo letna mera donosa postopoma naraščala, kar bo privabilo nove ali stare zastavljavce.
 </ExpandableCard>
+}
 
 ## Kaj se je zgodilo z "Eth2"? \{#eth2}
 
@@ -220,6 +240,10 @@ Načrti za razdrobitev se hitro spreminjajo, vendar so se s pojavom in uspehom t
 
 ## Nadaljnje branje \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

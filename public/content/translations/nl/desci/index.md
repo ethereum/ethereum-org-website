@@ -22,7 +22,9 @@ Gedecentraliseerde wetenschap voorziet in nieuwe soorten financieringsbronnen (v
 
 ### Juan Benet - De DeSci-beweging
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## Hoe DeSci de wetenschap verbetert \{#desci-improves-science}
 

@@ -72,7 +72,9 @@ Vous pouvez consulter toutes les fonctions disponibles sur l'instance Web3 dans 
 
 La plupart des bibliothèques Web3 sont asynchrones parce qu'en arrière-plan, la bibliothèque fait appel au serveur JSON RPC pour accéder au noeud qui renvoie le résultat.
 
-<Divider />
+{
+	<Divider />
+}
 
 Si vous travaillez dans le navigateur, certains portefeuilles injectent directement une instance Web3 et vous devriez essayer de l'utiliser dans la mesure du possible, surtout si vous prévoyez d'interagir avec l'adresse Ethereum de l'utilisateur pour effectuer des transactions.
 

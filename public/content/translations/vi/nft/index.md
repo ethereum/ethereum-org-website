@@ -18,7 +18,9 @@ NFT là các token độc nhất. Mỗi NFT có các thuộc tính khác nhau (k
 
 Tính độc nhất của mỗi NFT cho phép chuyển hóa nhiều thứ như tác phẩm nghệ thuật, các bộ sưu tập, hoặc thậm chí là bất động sản thành token, trong đó một NFT độc nhất đại diện cho một tài sản thế giới thực hoặc một vật phẩm số. Quyền sở hữu của tài sản được bảo mật bởi chuỗi khối Ethereum – không một ai có thể chỉnh sửa chứng từ sở hữu hay sao chép/dán để cho ra đời một NFT mới.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Internet của tài sản \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Trang web này cũng có một tên miền thay thế được vận hành bởi
 
 [Đọc thêm về ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Bảo mật NFT \{#nft-security}
 
@@ -89,6 +93,10 @@ Các vấn đề bảo mật liên quan đến NFT thường ít hay nhiều li�
 - [Tiêu chuẩn token ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [Tiêu chuẩn token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

@@ -20,7 +20,9 @@ DeFi est un terme collectif pour les produits et services financiers qui sont ac
 
 Il y a une économie de cryptomonnaies en plein essor où vous pouvez prêter, emprunter, long/court, gagner des intérêts, et plus. Les Argentins possédant des crypto-monnaies ont utilisé la DeFi pour échapper à l'inflation de leur pays. Les entreprises ont commencé à verser les salaires de leurs employés en temps réel. Certaines personnes ont même souscrit et remboursé des prêts d'une valeur de millions de dollars sans qu'il soit nécessaire de les identifier.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## DeFi vs finance traditionnelle \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Bitcoin à bien des égards a été la première application de la DeFi. Bitcoin
 
 L'Ethereum s'appuie sur cela. Comme le Bitcoin, les règles ne peuvent pas changer et tout le monde y a accès. Mais cela rend aussi cet argent numérique programmable, en utilisant [contrats intelligents](/glossary#smart-contract), vous pouvez donc aller au-delà du stockage et de la valeur d'envoi.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Monnaie programmable \{#programmable-money}
 
@@ -86,7 +90,9 @@ Il existe une alternative décentralisée à la plupart des services financiers.
 - [Acheter une assurance](#insurance)
 - [Gérer votre portefeuille](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Envoyer de l'argent partout dans le monde rapidement \{#send-money}
 
@@ -102,7 +108,9 @@ Vous pouvez également diffuser de l'argent sur Ethereum. Cela vous permet de pa
 
 Et si vous ne voulez pas envoyer ou diffuser des [ETH](/eth/) en raison de sa volatilité, Il existe des devises alternatives sur Ethereum: les stablecoins.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Accéder aux monnaies stables \{#stablecoins}
 
@@ -114,7 +122,9 @@ Les pièces comme Dai ou USDC ont une valeur qui reste stable à quelques centim
   En savoir plus sur les stablecoins
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Emprunter \{#lending}
 
@@ -170,7 +180,9 @@ Pour pouvoir faire ce qui précède dans le monde de la finance traditionnelle, 
 
 [Plus d'infos sur les prêts Flash](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Commencez à épargner avec des cryptomonnaies \{#saving}
 
@@ -203,7 +215,9 @@ La cagnotte équivaut aux intérêts générés par les prêts effectués grâce
   Essayer PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Échanger des jetons \{#swaps}
 
@@ -215,7 +229,9 @@ Par exemple, si vous voulez vous lancer dans une loterie sans risque (décrite a
   Voir échanger des jetons
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Échanges avancés \{#trading}
 
@@ -227,7 +243,9 @@ Avec le trading centralisé, vous devez déposer vos actifs avant les échanges 
   Voir Applications décentralisées (dapps)
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Développer votre Portefeuille \{#investing}
 
@@ -239,7 +257,9 @@ Voilà un bon exemple [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/d
   Voir les applications d'investissement dapps
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Financer vos projets \{#crowdfunding}
 
@@ -268,7 +288,9 @@ Cela veut dire qu'un projet A avec ses 100 donneurs de 1 dollar pourrait finir a
 
 [En savoir plus sur le financement quadratique](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Assurance \{#insurance}
 
@@ -280,7 +302,9 @@ Les produits Ethereum, comme n'importe quel logiciel, peuvent souffrir de bugs e
   Voir les assurances Dapps
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Agrégateurs et gestionnaires de portefeuille \{#aggregators}
 
@@ -290,7 +314,9 @@ Avec tant de choses en cours, vous aurez besoin d'un moyen de suivre tous vos in
   Voir les dApps de portefeuille
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Comment est-ce que la DeFi marche ? \{#how-defi-works}
 

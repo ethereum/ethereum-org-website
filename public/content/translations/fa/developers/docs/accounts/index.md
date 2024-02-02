@@ -114,9 +114,13 @@ WARN [10-28|16:19:09.306] لطفاً از مسیر فایل کلید خود نس
 
 آستین را مشاهده کنید که توابع هش و جفت کلیدها را توضیح می‌‌دهد.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## بیشتر بخوانید \{#further-reading}
 

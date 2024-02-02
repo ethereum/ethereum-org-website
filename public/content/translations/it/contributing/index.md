@@ -86,4 +86,6 @@ Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare
 
 ## Collaboratori \{#contributors}
 
-<Contributors />
+{
+	<Contributors />
+}

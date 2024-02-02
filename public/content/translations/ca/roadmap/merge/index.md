@@ -65,4 +65,6 @@ La comunitat avaluarà de forma contínua la necessitat de múltiples rondes de 
 
 ## Més informació \{#read-more}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}

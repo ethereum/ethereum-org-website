@@ -10,7 +10,9 @@ description: Instructions for using Crowdin to translate ethereum.org
 
 For more visual learners, watch Luka walk through getting set up with Crowdin. Alternatively, you can find the same steps in a written format in the next section.
 
-<YouTube id="Ii7bYhanLs4" />
+{
+	<YouTube id="Ii7bYhanLs4" />
+}
 
 ## Written guide \{#written-guide}
 

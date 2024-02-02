@@ -14,6 +14,7 @@ Podemos analizar el suministro de ETH en dos fuerzas principales: la emisión y 
 
 La **emisión** es el proceso de creación de ETH. La **quema** es la destrucción de los ETH existente y su consiguiente eliminación de la circulación. La tasa de emisión y quema se calcula basándose en varios parámetros, y el equilibrio entre ellos determina la tasa de inflación/deflación del ether.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="tldr emisión de ETH">

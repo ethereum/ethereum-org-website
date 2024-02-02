@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 Uma linha do tempo dos principais marcos, bifurcações e atualizações da blockchain Ethereum.
 
+{
 <ExpandableCard title="O que são bifurcações?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Bifurcações ocorrem quando grandes atualizações ou alterações técnicas precisam ser feitas na rede, que geralmente são decorrentes de [Propostas de Melhoria do Ethereum (EIPs)] (/ eips /) e alteram as "regras" do protocolo.
@@ -17,6 +18,7 @@ Quando é necessário atualizar um software tradicional, com controle centraliza
 
 Essas mudanças de regra podem criar uma divisão temporária na rede. Novos blocos podem ser produzidos conforme as novas regras ou as antigas. Geralmente, as bifurcações são acordadas antes do tempo, para que os clientes adotem as mudanças de uníssono e para que a bifurcação com as melhorias se torne a cadeia principal. No entanto, em casos raros, desacordos sobre as bifurcações podem fazer com que a rede seja dividida permanentemente. Esse foi notadamente o caso para a criação do Ethereum Classic com a [bifurcação DAO] (#dao-fork).
 </ExpandableCard>
+}
 
 Vá direto para informações sobre algumas das atualizações anteriores particularmente importantes: [The Beacon Chain](/roadmap/beacon-chain/), [The Merge](/roadmap/merge/) e [EIP-1559](#london)
 
@@ -34,6 +36,7 @@ Procurando por futuras melhorias de protocolo? [Saiba mais sobre as próximas at
 
 A atualização Shanghai trouxe saques de stake para a camada de execução. Em conjunto com a atualização Capella, isso permitiu que os blocos aceitassem operações de saque, o que permite que os stakers saquem seu ETH da Beacon Chain para a camada de execução.
 
+{
 <ExpandableCard title="EIPs da Shanghai" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – _Inicia o endereço `COINBASE` warm_
@@ -43,6 +46,7 @@ A atualização Shanghai trouxe saques de stake para a camada de execução. Em 
 - [EIP-6049](https://eips.ethereum.org/EIPS/eip-6049) – _Substituir `SELFDESTRUCT`_
 
 </ExpandableCard>
+}
 
 - [Leia a especificação de atualização Shangai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -77,12 +81,14 @@ A atualização Paris foi desencadeada pela cadeia de blocos de prova de trabalh
 
 - [Leia a especificação de atualização Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="EIPs da Paris" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – _Atualização do consenso para prova de participação_
 – [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – _Substituir o opcode DIFFICULTY por PREVRANDAO_
 
 </ExpandableCard>
+}
 
 ---
 
@@ -108,11 +114,13 @@ A atualização Gray Glacier atrasou a [bomba de dificuldade](/glossary/#difficu
 
 - [Blog da EF – Comunicado da atualização Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="EIPs da Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-5133](https://eips.ethereum.org/EIPS/eip-5133) – _atrasa a bomba de dificuldade até setembro de 2022_
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -129,11 +137,13 @@ A implementação de rede Arrow Glacier atrasou a [bomba de dificuldade](/glossa
 - [Blog da EF – Comunicado da atualização Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders – Atualização Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="EIPs da Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – _atrasa a bomba de dificuldade até junho 2022_
 
 </ExpandableCard>
+}
 
 ---
 
@@ -167,6 +177,7 @@ A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/ei
 - [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Leia a explicação do Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIPs da London" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _melhora a taxa de transação do mercado_
@@ -176,6 +187,7 @@ A atualização London introduziu a [EIP-1559](https://eips.ethereum.org/EIPS/ei
 – [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _atrasa a Ice Age até 2021_
 
 </ExpandableCard>
+}
 
 ---
 
@@ -190,6 +202,7 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
 - [Leia o anúncio da Fundação Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Leia a explicação do Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIPs da Berlim" contentPreview="Official improvements included in this upgrade.">
 
 – [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) - _reduz o custo de gás para ModExp_
@@ -198,6 +211,7 @@ A atualização Berlim otimizou o custo de gás para certas ações de EVM e aum
 – [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _adiciona listas de acesso opcionais_
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -246,11 +260,13 @@ O fork (bifurcação) Muir Glacier introduziu um atraso na [bomba de dificuldade
 - [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leia a explicação do Ethereum Cat Herder](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 – [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) – _atrasa a bomba de dificuldade por mais 4.000.000 blocos, ou ~611 dias._
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -272,6 +288,7 @@ O fork (bifurcação) Istanbul:
 
 [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIPs da Istanbul" contentPreview="Official improvements included in this fork.">
 
 – [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _permite que o Ethereum trabalhe com moedas que preservam a privacidade, como o Zcash._
@@ -282,6 +299,7 @@ O fork (bifurcação) Istanbul:
 – [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _outras alterações do preço do gás dos códigos de operação._
 
 </ExpandableCard>
+}
 
 ---
 
@@ -299,6 +317,7 @@ O fork (bifurcação) Constantinople:
 
 [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIPs da Constantinople" contentPreview="Official improvements included in this fork.">
 
 – [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – _otimiza o custo de certas ações em cadeia.
@@ -307,6 +326,7 @@ O fork (bifurcação) Constantinople:
 – [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – \_verifica se a cadeia de blocos não congela antes da prova de participação._
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -327,6 +347,7 @@ O fork (bifurcação) Byzantium:
 
 [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIPs da Byzantium" contentPreview="Official improvements included in this fork.">
 
 – [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _adiciona o código de operação "REVERT"._
@@ -340,6 +361,7 @@ O fork (bifurcação) Byzantium:
 – [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _atrasa a [difficulty bomb](/glossary/#difficulty-bomb) em um ano e reduz a recompensa de bloco de 5 para 3 ETH._
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -359,6 +381,7 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
 
 [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIPs da Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 – [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _evita que as transações de uma cadeia Ethereum sejam retransmitidas em uma cadeia alternativa, por exemplo, uma transação de rede de testes sendo reproduzida na cadeia principal Ethereum._
@@ -367,6 +390,7 @@ O fork (bifurcação) Spurious Dragon foi a segunda resposta aos ataques de nega
 – [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _muda o tamanho máximo de código que um contrato na cadeia de blocos pode ter – para 24576 bytes._
 
 </ExpandableCard>
+}
 
 ---
 
@@ -382,12 +406,14 @@ O fork (bifurcação) Whistle Tangerine foi a primeira resposta aos ataques de n
 
 [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EIPs da Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 – [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _aumenta os custos de gás de códigos de operação que podem ser usados em ataques de spam._
 – [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _reduz o tamanho do estado removendo muitas contas vazias que foram colocadas no estado a um custo muito baixo, devido a falhas em versões anteriores do protocolo Ethereum._
 
 </ExpandableCard>
+}
 
 ---
 
@@ -417,6 +443,7 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
 
 [Leia o comunicado da Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIPs do Homestead" contentPreview="Official improvements included in this fork.">
 
 – [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _faz edições no processo de criação do contrato._
@@ -424,6 +451,7 @@ O fork (bifurcação) Homestead que olhou para o futuro. Incluiu várias altera�
 – [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _introduz os requisitos de compatibilidade devp2p_
 
 </ExpandableCard>
+}
 
 <Divider />
 

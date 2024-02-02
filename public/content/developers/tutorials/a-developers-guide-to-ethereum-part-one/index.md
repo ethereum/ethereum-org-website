@@ -24,7 +24,7 @@ Assumptions:
 - you’ve used `pip`, Python’s package installer.
   Again, if any of these are untrue, or you don’t plan to reproduce the code in this article, you can likely still follow along just fine.
 
-## Blockchains, briefly \{##blockchains-briefly}
+## Blockchains, briefly \{#blockchains-briefly}
 
 There are many ways to describe Ethereum, but at its heart is a blockchain. Blockchains are made up of a series of blocks, so let’s start there. In the simplest terms, each block on the Ethereum blockchain is just some metadata and a list of transactions. In JSON format, that looks something like this:
 
@@ -40,7 +40,9 @@ There are many ways to describe Ethereum, but at its heart is a blockchain. Bloc
 
 Each [block](/developers/docs/blocks/) has a reference to the block that came before it; the `parentHash` is simply the hash of the previous block.
 
+{
 <FeaturedText>Note: Ethereum makes regular use of <a href="https://wikipedia.org/wiki/Hash_function">hash functions</a> to produce fixed-size values (“hashes”). Hashes play an important role in Ethereum, but you can safely think of them as unique IDs for now.</FeaturedText>
+}
 
 ![A diagram depicting a blockchain including the data inside  each block](./blockchain-diagram.png)
 
@@ -50,13 +52,15 @@ This data structure is nothing novel, but the rules (i.e., peer-to-peer protocol
 
 The only way for the blockchain to verify that money was truly sent from one user to another is to use a currency native to (i.e., created and governed by) that blockchain. In Ethereum, this currency is called ether, and the Ethereum blockchain contains the only official record of account balances.
 
-## A new paradigm \{##a-new-paradigm}
+## A new paradigm \{#a-new-paradigm}
 
 This new decentralized tech stack has spawned new developer tools. Such tools exist in many programming languages, but we’ll be looking through the Python lens. To reiterate: even if Python isn’t your language of choice, it shouldn’t be much trouble to follow along.
 
 Python developers that want to interact with Ethereum are likely to reach for [Web3.py](https://web3py.readthedocs.io/). Web3.py is a library that greatly simplifies the way you connect to an Ethereum node, then send and receive data from it.
 
+{
 <FeaturedText>Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software.</FeaturedText>
+}
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
@@ -74,11 +78,13 @@ w3.eth.get_block('latest')
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## Installation \{##installation}
+## Installation \{#installation}
 
 In this walkthrough, we’ll just be working within a Python interpreter. We won't be creating any directories, files, classes or functions.
 
+{
 <FeaturedText>Note: In the examples below, commands that begin with `$` are intended to be run in the terminal. (Do not type the `$`, it just signifies the start of the line.)</FeaturedText>
+}
 
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
@@ -102,7 +108,7 @@ You’re all set up to go!
 
 Note: The `web3[tester]` package works up to Python 3.10.xx
 
-## Spin up a sandbox \{##spin-up-a-sandbox}
+## Spin up a sandbox \{#spin-up-a-sandbox}
 
 Open up a new Python environment by running `ipython` in your terminal. This is comparable to running `python`, but comes with more bells and whistles.
 
@@ -122,7 +128,7 @@ You’re looking at an interactive Python shell now. Essentially, it's a sandbox
 In [1]: from web3 import Web3
 ```
 
-## Introducing the Web3 module \{##introducing-the-web3-module}
+## Introducing the Web3 module \{#introducing-the-web3-module}
 
 Besides being a gateway to Ethereum, the [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) module offers a few convenience functions. Let’s explore a couple.
 
@@ -151,7 +157,7 @@ Out[3]: Decimal('0.5')
 
 Other utility methods on the Web3 module include data format converters (e.g., [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), address helpers (e.g., [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), and hash functions (e.g., [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Many of these will be covered later in the series. To view all the available methods and properties, utilize IPython’s auto-complete by typing `Web3`. and hitting the tab key twice after the period.
 
-## Talk to the chain \{##talk-to-the-chain}
+## Talk to the chain \{#talk-to-the-chain}
 
 The convenience methods are lovely, but let’s move on to the blockchain. The next step is to configure Web3.py to communicate with an Ethereum node. Here we have the option to use the IPC, HTTP, or Websocket providers.
 
@@ -177,7 +183,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 Now you’re ready to surf the chain! That’s not a thing people say. I just made that up. Let’s take a quick tour.
 
-## The quick tour \{##the-quick-tour}
+## The quick tour \{#the-quick-tour}
 
 First things first, a sanity check:
 
@@ -188,7 +194,7 @@ Out[5]: True
 
 Since we’re using the tester provider, this isn’t a very valuable test, but if it does fail, chances are you typed something in wrong when instantiating the `w3` variable. Double-check that you included the inner parentheses, i.e., `Web3.EthereumTesterProvider()`.
 
-## Tour stop #1: [accounts](/developers/docs/accounts/) \{##tour-stop-1-accounts}
+## Tour stop #1: [accounts](/developers/docs/accounts/) \{#tour-stop-1-accounts}
 
 As a convenience, the tester provider created some accounts and preloaded them with test ether.
 
@@ -219,7 +225,7 @@ Out[8]: Decimal('1000000')
 
 One million test ether — still not too shabby.
 
-## Tour stop #2: block data \{##tour-stop-2-block-data}
+## Tour stop #2: block data \{#tour-stop-2-block-data}
 
 Let’s take a peek at the state of this simulated blockchain:
 
@@ -240,7 +246,7 @@ A lot of information gets returned about a block, but just a couple things to po
 - `transactions` is an empty list, for the same reason: we haven’t done anything yet. This first block is an **empty block**, just to kick off the chain.
 - Notice that the `parentHash` is just a bunch of empty bytes. This signifies that it's the first block in the chain, also known as the **genesis block**.
 
-## Tour stop #3: [transactions](/developers/docs/transactions/) \{##tour-stop-3-transactions}
+## Tour stop #3: [transactions](/developers/docs/transactions/) \{#tour-stop-3-transactions}
 
 We’re stuck at block zero until there’s a pending transaction, so let’s give it one. Send a few test ether from one account to another:
 
@@ -293,8 +299,10 @@ The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But w
 
 More on [gas](/developers/docs/gas/#post-london)
 
+{
 <FeaturedText>Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</FeaturedText>
+}
 
-## And breathe \{##and-breathe}
+## And breathe \{#and-breathe}
 
 We’ve been at this for a while, so this seems as good a place as any to take a break. The rabbit hole continues on, and we’ll continue exploring in part two of this series. Some concepts to come: connecting to a real node, smart contracts, and tokens. Have follow-up questions? Let me know! Your feedback will influence where we go from here. Requests welcome via [Twitter](https://twitter.com/wolovim).

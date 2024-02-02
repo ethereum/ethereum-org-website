@@ -33,6 +33,7 @@ Avec l'actuelle conception du mécanisme, et dans l'espoir de réduire le délai
 
 ## Routes vers la finalité à créneau unique ou Single Slot Finality (SSF) \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Pourquoi nous ne pouvons pas bénéficier aujourd'hui de la Finalité à créneau unique (SSF) ?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Le mécanisme de consensus actuel combine les attestations de plusieurs validateurs, aussi appelés comités, et ce, pour réduire le nombre de messages que chaque validateur doit traiter pour valider un bloc. Chaque validateur a la possibilité d'attester à chaque période (32 créneaux), cependant, dans chaque créneau, seul un sous-ensemble de validateurs, appelé « comité », a le pouvoir d'attester. Ils agissent ainsi en se divisant en sous-réseaux parmi lesquels quelques validateurs sont sélectionnés pour devenir « agrégateurs ». Ces agrégateurs combinent chacun toutes les signatures qu'ils voient provenant d'autres validateurs de leur sous-réseau en une seule signature globale. L'agrégateur qui comprend le plus grand nombre de contributions individuelles transmet sa signature globale à l'auteur du bloc (proposant), et ce dernier l'inclut dans le bloc avec la signature agrégée des autres comités.
@@ -41,6 +42,7 @@ Ce processus procure une capacité suffisante pour que chaque validateur puisse 
 
 Concernant ce schéma, chaque validateur n'a la possibilité de voter sur un bloc, qu'en répartissant ses attestations sur l'ensemble de la période. Toutefois, il est possible d'améliorer le mécanisme de manière à ce que _chaque validateur, ait la possibilité d'attester dans chaque créneau_.
 </ExpandableCard>
+}
 
 Depuis la conception du mécanisme de consensus Ethereum, le système d'agrégation des signatures (BLS) s'est révélé beaucoup plus évolutif qu'on n'eût pu l'imaginer au départ, tandis que la capacité des clients à traiter et vérifier les signatures s'est également améliorée. Il s'avère que le traitement des attestations d'un grand nombre de validateurs est en fait rendu possible à l'intérieur d'un seul et même créneau. Exemple : avec un million de validateurs votant chacun deux fois dans chaque créneau, et des créneaux horaires calibrés à 16 secondes, les nœuds seraient poussés à vérifier les signatures lors d'un rythme minimum de 125 000 agrégations par seconde, afin de traiter l'ensemble du million d'attestations à l'intérieur dudit créneau. En réalité, il faut environ 500 nanosecondes à un ordinateur normal pour vérifier une signature, entendant le fait que 125 000 signatures peuvent être vérifiées en environ 62,5 ms, soit bien en deçà du seuil d'une seconde.
 

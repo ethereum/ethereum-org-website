@@ -22,7 +22,7 @@ and price. However, integrity is usually assured.
 In this article you learn **how** to ensure data integrity without storing the data on the blockchain, using
 [Merkle proofs](https://computersciencewiki.org/index.php/Merkle_proof).
 
-## How does it work? \{##how-does-it-work}
+## How does it work? \{#how-does-it-work}
 
 In theory we could just store the hash of the data on chain, and send all the data in transactions that require it. However, this is still too expensive. A byte of data to a transaction costs about 16 gas, currently about half a cent, or about $5 per kilobyte. At $5000 per megabyte, this is still too expensive for many uses, even without the added cost of hashing the data.
 
@@ -34,15 +34,15 @@ The root hash is the only part that needs to be stored on chain. To prove a cert
 
 ![Proof of the value of C](proof-c.png)
 
-## Implementation \{##implementation}
+## Implementation \{#implementation}
 
 [The sample code is provided here](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Off-chain code \{##off-chain-code}
+### Off-chain code \{#off-chain-code}
 
 In this article we use JavaScript for the off-chain computations. Most decentralized applications have their off-chain component in JavaScript.
 
-#### Creating the Merkle root \{##creating-the-merkle-root}
+#### Creating the Merkle root \{#creating-the-merkle-root}
 
 First we need to provide the Merkle root to the chain.
 
@@ -135,7 +135,7 @@ const getMerkleRoot = (inputArray) => {
 
 To get the root, climb until there is only one value left.
 
-#### Creating a Merkle proof \{##creating-a-merkle-proof}
+#### Creating a Merkle proof \{#creating-a-merkle-proof}
 
 A Merkle proof is the values to hash together with the value being proved to get back the Merkle root. The value to prove is often available from other data, so I prefer to provide it separately rather than as part of the code.
 
@@ -172,7 +172,7 @@ We hash `(v[0],v[1])`, `(v[2],v[3])`, etc. So for even values we need the next o
 }   // getMerkleProof
 ```
 
-### On-chain code \{##on-chain-code}
+### On-chain code \{#on-chain-code}
 
 Finally we have the code that checks the proof. The on-chain code is written in [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimization is a lot more important here because gas is relatively expensive.
 
@@ -237,13 +237,13 @@ This function generates a pair hash. It is just the Solidity translation of the 
 
 In mathematical notation Merkle proof verification looks like this: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. This code implements it.
 
-## Merkle proofs and rollups don't mix \{##merkle-proofs-and-rollups}
+## Merkle proofs and rollups don't mix \{#merkle-proofs-and-rollups}
 
 Merkle proofs don't work well with [rollups](/developers/docs/scaling/#rollups). The reason is that rollups write all the transaction data on L1, but process on L2. The cost to send a Merkle proof with a transaction averages to 638 gas per layer (currently a byte in call data costs 16 gas if it isn't zero, and 4 if it is zero). If we have 1024 words of data, a Merkle proof requires ten layers, or a total of 6380 gas.
 
 Looking for example at [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), writing L1 gas costs about 100 gwei and L2 gas costs 0.001 gwei (that is the normal price, it can rise with congestion). So for the cost of one L1 gas we can spend a hundred thousand gas on L2 processing. Assuming we don't overwrite storage, this means that we can write about five words to storage on L2 for the price of one L1 gas. For a single Merkle proof we can write the entire 1024 words to storage (assuming they can be calculated on chain to begin with, rather than provided in a transaction) and still have most of the gas left over.
 
-## Conclusion \{##conclusion}
+## Conclusion \{#conclusion}
 
 In real life you might never implement Merkle trees on your own. There are well known and audited libraries you can use and generally speaking it is best not to implement cryptographic primitives on your own. But I hope that now you understand Merkle proofs better and can decide when they are worth using.
 

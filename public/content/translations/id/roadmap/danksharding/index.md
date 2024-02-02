@@ -17,17 +17,21 @@ summaryPoints:
 
 Proto-Danksharding, juga dikenal sebagai [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), adalah sebuah cara [rollup](/layer2/#rollups) untuk menambahkan data yang lebih murah ke dalam blok. Nama ini berasal dari dua peneliti yang mengusulkan ide tersebut: Protolambda dan Dankrad Feist. Saat ini, rollup terbatas pada seberapa murahnya mereka dapat melakukan transaksi pengguna karena mereka memposting transaksi mereka dalam `CALLDATA`. Ini mahal karena diproses oleh semua simpul Ethereum dan berada di rantai selamanya, meskipun rollup hanya membutuhkan data untuk waktu yang singkat. Proto-Danksharding memperkenalkan blob data yang dapat dikirim dan dilampirkan ke blok. Data dalam blob ini tidak dapat diakses oleh EVM dan secara otomatis dihapus setelah periode waktu tertentu (1-3 bulan). Ini berarti rollup dapat mengirimkan data mereka dengan lebih murah dan meneruskan penghematan tersebut kepada pengguna akhir dalam bentuk transaksi yang lebih murah.
 
+{
 <ExpandableCard title="Mengapa blob membuat rollup menjadi lebih murah?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
 Rollup adalah cara untuk menskalakan Ethereum dengan mengelompokkan transaksi di luar rantai dan kemudian memposting hasilnya ke Ethereum. Rollup pada dasarnya terdiri dari dua bagian: data dan pemeriksaan eksekusi. Data tersebut merupakan urutan lengkap dari transaksi yang sedang diproses oleh rollup untuk menghasilkan perubahan status yang diposting ke Ethereum. Pemeriksaan eksekusi adalah eksekusi ulang transaksi-transaksi tersebut oleh beberapa aktor yang jujur ("prover") untuk memastikan bahwa perubahan status yang diusulkan adalah benar. Agar pemeriksaan eksekusi dapat dilakukan, data transaksi harus tersedia cukup lama agar dapat diunduh dan diperiksa oleh siapa pun. Ini berarti setiap perilaku tidak jujur dari rollup sequencer dapat diidentifikasi dan ditantang oleh prover. Namun demikian, ini tidak harus tersedia selamanya.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Mengapa menghapus data blob diperbolehkan?" eventCategory="/roadmap/danksharding" eventName="clicked why is it OK to delete the blob data?">
 
 Rollup memposting komitmen ke data transaksinya di dalam rantai dan juga membuat data aktual tersedia dalam blob data. Ini berarti pembuktian dapat memeriksa apakah komitmen tersebut valid atau menantang data yang mereka anggap salah. Pada tingkat simpul, blob data disimpan di klien konsensus. Klien konsensus membuktikan bahwa mereka telah melihat data tersebut dan telah disebarkan di seluruh jaringan. Jika data disimpan selamanya, klien-klien ini akan membengkak dan menyebabkan kebutuhan perangkat keras yang besar untuk menjalankan simpul. Sebagai gantinya, data secara otomatis dipangkas dari simpul setiap 1-3 bulan. Pengesahan klien konsensus menunjukkan bahwa ada kesempatan yang cukup bagi para prover untuk memverifikasi data. Data aktual dapat disimpan di luar rantai oleh operator rollup, pengguna, atau lainnya.
 
 </ExpandableCard>
+}
 
 ### Bagaimana data blob diverifikasi? \{#how-are-blobs-verified}
 
@@ -41,17 +45,21 @@ KZG adalah singkatan dari Kate-Zaverucha-Goldberg - nama dari tiga [penulis asli
 
 Upacara KZG adalah cara bagi banyak orang dari seluruh komunitas Ethereum untuk menghasilkan serangkaian angka acak rahasia yang dapat digunakan untuk memverifikasi beberapa data. Sangat penting bahwa rangkaian angka ini tidak diketahui dan tidak dapat dibuat ulang oleh siapa pun. Untuk memastikan hal ini, setiap orang yang berpartisipasi dalam upacara ini menerima seutas tali dari peserta sebelumnya. Mereka kemudian membuat beberapa nilai acak baru (misalnya dengan mengizinkan peramban mereka untuk mengukur pergerakan mouse mereka) dan mencampurkannya dengan nilai sebelumnya. Mereka kemudian mengirimkan nilai tersebut ke peserta berikutnya dan menghancurkannya dari mesin lokal mereka. Selama satu orang dalam upacara tersebut melakukan hal ini dengan jujur, nilai akhirnya tidak akan dapat diketahui oleh penyerang. Upacara EIP-4844 KZG terbuka untuk umum dan puluhan ribu orang berpartisipasi untuk menambahkan entropi mereka sendiri. Agar upacara dapat dirusak, 100% dari para peserta harus secara aktif tidak jujur. Dari sudut pandang peserta, jika mereka tahu bahwa mereka jujur, tidak perlu mempercayai orang lain karena mereka tahu bahwa mereka telah mengamankan upacara tersebut (mereka secara individu memenuhi persyaratan 1 dari N peserta yang jujur).
 
+{
 <ExpandableCard title="Untuk apa nomor acak dari upacara KZG digunakan?" eventCategory="/roadmap/danksharding" eventName="clicked why is the random number from the KZG ceremony used for?">
 
 Ketika sebuah rollup memposting data dalam sebuah blob, mereka memberikan "komitmen" yang mereka posting pada rantai. Komitmen ini merupakan hasil evaluasi kecocokan polinomial terhadap data pada titik-titik tertentu. Titik-titik ini ditentukan oleh angka acak yang dihasilkan dalam upacara KZG. Prover kemudian dapat mengevaluasi polinomial pada titik-titik yang sama untuk memverifikasi data - jika mereka sampai pada nilai yang sama, maka data tersebut benar.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Mengapa data acak KZG harus tetap dirahasiakan?" eventCategory="/roadmap/danksharding" eventName="clicked why does the KZG random data have to stay secret?">
 
 Jika seseorang mengetahui lokasi acak yang digunakan untuk komitmen, maka akan mudah bagi mereka untuk membuat polinomial baru yang sesuai dengan titik-titik tertentu (yaitu "tabrakan"). Ini berarti mereka bisa menambahkan atau menghapus data dari blob dan tetap memberikan bukti yang sah. Untuk mencegah hal ini, alih-alih memberikan pembuktian lokasi rahasia yang sebenarnya, mereka benar-benar menerima lokasi yang dibungkus dalam "kotak hitam" kriptografi menggunakan kurva elips. Ini secara efektif mengacak nilai sedemikian rupa sehingga nilai asli tidak dapat direkayasa, tetapi dengan beberapa pembuktian aljabar yang cerdas dan pemeriksa masih dapat mengevaluasi polinomial pada titik-titik yang diwakilinya.
 
 </ExpandableCard>
+}
 
 <InfoBanner isWarning mb={8}>
   Baik Danksharding maupun Proto-Danksharding tidak mengikuti model "pecahan" tradisional yang bertujuan untuk membagi rantai blok menjadi beberapa bagian. Rantai pecahan tidak lagi menjadi bagian dari peta perjalanan. Sebagai gantinya, Danksharding menggunakan pengambilan sampel data terdistribusi di seluruh blob untuk menskalakan Ethereum. Ini jauh lebih sederhana untuk diterapkan. Model ini kadang-kadang disebut sebagai "data-pecahan".
@@ -63,17 +71,21 @@ Danksharding adalah realisasi penuh dari penskalaan rollup yang dimulai dengan P
 
 Cara kerjanya adalah dengan memperluas blob yang melekat pada blok dari 1 pada Proto-Danksharding menjadi 64 pada Danksharding penuh. Perubahan lainnya yang diperlukan adalah pembaruan pada cara klien konsensus beroperasi untuk memungkinkan mereka menangani blob besar yang baru. Beberapa dari perubahan ini sudah ada di peta perjalanan untuk tujuan lain yang tidak terkait dengan Danksharding. Sebagai contoh, Danksharding mengharuskan pemisahan pengusul-pembangun untuk diimplementasikan. Ini adalah peningkatan yang memisahkan tugas membangun blok dan mengusulkan blok di seluruh validator yang berbeda. Demikian pula, pengambilan sampel ketersediaan data diperlukan untuk Danksharding, tetapi juga diperlukan untuk pengembangan klien yang sangat ringan yang tidak menyimpan banyak data historis ("klien tanpa kewarganegaraan").
 
+{
 <ExpandableCard title="Mengapa Danksharding memerlukan pemisahan pengusul-pembangun?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
 Pemisahan pengusul-pembuat diperlukan untuk mencegah keharusan validator individual membuat komitmen dan bukti yang mahal untuk data blob sebesar 32MB. Hal ini akan memberikan beban yang terlalu berat bagi para penaruh rumahan dan mengharuskan mereka untuk berinvestasi pada perangkat keras yang lebih kuat, yang akan merugikan desentralisasi. Sebagai gantinya, pembuat blok khusus bertanggung jawab atas pekerjaan komputasi yang mahal ini. Kemudian, mereka membuat blok mereka tersedia bagi para pengusul blok untuk disiarkan. Pengusul blok hanya memilih blok yang paling menguntungkan. Siapa pun bisa memverifikasi blob dengan biaya yang murah dan cepat, artinya setiap validator biasa dapat memeriksa apakah pembangun blok berperilaku jujur. Ini memungkinkan blob besar diproses tanpa mengorbankan desentralisasi. Pembangun blok yang berperilaku buruk dapat dengan mudah dikeluarkan dari jaringan dan dihukum pemotongan imbalan - orang lain akan menggantikannya karena membangun blok adalah kegiatan yang menguntungkan.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Mengapa Danksharding memerlukan pengambilan sampel ketersediaan data?" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Pengambilan sampel ketersediaan data diperlukan oleh validator untuk dengan cepat dan efisien memverifikasi data blob. Dengan menggunakan pengambilan sampel ketersediaan data, para validator dapat yakin bahwa data blob tersedia dan tercatat dengan benar. Setiap validator dapat secara acak memilih beberapa titik data dan membuat bukti, artinya tidak ada validator yang harus memeriksa seluruh blob. Jika ada data yang hilang, hal itu akan segera teridentifikasi dan blob akan ditolak.
 
 </ExpandableCard>
+}
 
 ### Kemajuan saat ini \{#current-progress}
 

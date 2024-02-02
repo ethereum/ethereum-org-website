@@ -15,6 +15,7 @@ Kétféle módon próbálhatják Önt megtéveszteni:
 
 A hamis tokenek illusztrálása végett, és hogyan lehet beazonosítani azokat, megnézünk egy példát: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Ez a token megpróbál úgy kinézni, mint a valós [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
+{
 <ExpandableCard
 title="Mi az az ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Az Arbitrum egy olyan szervezet, mely <a href="/developers/docs/scaling/optimistic-rollups/">optimista rollupokat</a> fejleszt és kezel. Kezdetben az Arbitrum egy profitorientált vállalatként működött, de aztán decentralizálta magát. Ennek részeként kibocsátott egy <a href="/dao/#token-based-membership">irányítási tokent</a>, amivel kereskedni lehet.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="A hamis tokent miért nevezik wARB-nek?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Az Ethereumon létezik egy konvenció, hogy a nem ERC-20-szabványnak megfelelő
 Nincs értelme egy olyan ERC-20 token becsomagolt változatát létrehozni, ami már az Ethereumon van, de a csalók a kinézetre hagyatkoznak, nem a mögöttes valóságra.
 
 </ExpandableCard>
+}
 
 ## Hogyan működnek a hamis tokenek? \{#how-do-scam-tokens-work}
 
 Az Ethereum lényege a decentralizáció. Emiatt nincs központi hatóság, amely elkobozná bárki eszközeit vagy megakadályozná, hogy egy okosszerződést hozzon létre. De ez azt is jelenti, hogy a csalók is képesek bármilyen okosszerződést létrehozni.
 
+{
 <ExpandableCard
 title="Mi az az okosszerződés?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 Az <a href="/developers/docs/smart-contracts/">okosszerződések</a> olyan programok, amelyek az Ethereum-blokkláncon futnak. Minden ERC-20 token egy okosszerződéként van létrehozva.
 
 </ExpandableCard>
+}
 
 Specifikusan, az Arbitrum készített egy szerződést, amely az `ARB` szimbólumot használja. De ez nem akadályozza meg a többi embert, hogy egy szerződést készítsenek ugyanezzel a szimbólummal vagy egy hasonlóval. Aki ezt a szerződést megírja, be kell állítsa, hogy az mit fog csinálni.
 

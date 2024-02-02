@@ -73,7 +73,9 @@ Mogu da izvršavaju računanja, naprave valutu, skladište podatke, rudare NFT-i
 
 Gledajte kako Finematics objašnjava pametne ugovore:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## Dodatna literatura \{#further-reading}
 

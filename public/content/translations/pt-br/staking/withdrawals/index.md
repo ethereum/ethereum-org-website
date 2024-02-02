@@ -37,7 +37,9 @@ Antes da atualização Shanghai/Capella, não era possível usar ou acessar seu 
 
 ### Como me preparo? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Avisos importantes \{#important-notices}
 
@@ -76,7 +78,9 @@ Se um determinado validador é elegível para um saque ou não é determinado pe
 
 Confira esta explicação sobre saques de staking do Ethereum pela Finematics:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Validador de "varredura" \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Como você poder ver, isso fica lento à medida que mais validadores estão na r
 
 ## Perguntas frequentes \{#faq}
 
+{
 <ExpandableCard
 title="Após ter fornecido um endereço de saque, posso alterá-lo para um endereço de saque alternativo?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Não, o processo para fornecer credenciais de saque é um processo único e não pode ser modificado após o envio.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Por que um endereço de saque só pode ser definido uma vez?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Os endereços de saque podem ser ou um contrato inteligente (controlado por seu 
 
 Uma alternativa para mudar o endereço de saque de um validador específico implicaria os usuários poderem optar por definir um contrato inteligente como seu endereço de saque, o que permitiria lidar com a rotação de chaves, como um cofre. Os usuários que definem seus fundos para seu próprio EOA podem realizar uma saída completa para sacar todos os seus fundos em stake e, em seguida, refazer o stake usando novas credenciais.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="E se eu me envolver em tokens participados ou participação combinada?"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Se você faz parte de uma <a href="/staking/pools/">participação combinada</a>
 Em geral, os usuários podem recuperar seu ETH subjacente em stake ou alterar o provedor de stake que utilizam quando quiserem. Se um pool em particular estiver ficando muito grande, os fundos podem ser encerrados, resgatados e reinvestidos com um <a href="https://rated.network/">provedor menor</a>. Ou então, se você acumulou ETH suficiente, pode fazer <a href="/staking/solo/">stake em casa</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Os pagamentos de recompensa (saques parciais) acontecem automaticamente?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Sim, desde que seu validador forneça um endereço de saque. Isso deve ser fornecido uma vez para permitir, inicialmente, quaisquer saques. Em seguida, os pagamentos de recompensa serão acionados automaticamente em poucos dias a cada varredura do validador.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Os saques totais acontecem automaticamente?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Não, se o seu validador ainda estiver ativo na rede, um saque total não aconte
 Após um validador ter concluído o processo de saída, e presumindo que a conta tenha credenciais de saque, o saldo restante será <em>então</em> sacado durante a próxima <a href="#validator-sweeping">varredura do validador</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Posso sacar uma quantia personalizada?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Os saques foram projetados para serem enviados automaticamente, transferindo qua
 
 Não é possível solicitar manualmente o saque de quantidades específicas de ETH.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Eu opero um validador. Onde posso encontrar mais informações sobre como habilitar saques?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Recomenda-se que os operadores do validador visitem a página <a href="https://l
 Para testar a sua configuração numa rede de testes, primeiro visite o <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> para começar.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Posso reativar meu validador depois de sair depositando mais ETH?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Não. Uma vez que um validador tenha saído e seu saldo completo tenha sido sacado, quaisquer fundos adicionais depositados nesse validador serão automaticamente transferidos para o endereço de saque durante a próxima varredura do validador. Para recolocar o ETH em stake, um novo validador deve ser ativado.
 </ExpandableCard>
+}
 
 ## Leitura adicional \{#further-reading}
 

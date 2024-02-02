@@ -61,8 +61,12 @@ Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu uta
     Minyororo ya Kigae
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Ingiliana na Mnyororo Kioleza \{#interact-with-beacon-chain}
 
-<BeaconChainActions />
+{
+	<BeaconChainActions />
+}

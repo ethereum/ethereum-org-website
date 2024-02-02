@@ -50,7 +50,9 @@ Ennek 10 perc alatt meg kell történnie.
 ## 7. Adja hozzá a kiválasztott L2 hálózatot a tárcájához (opcionális)
 
 A [chainlist.org](http://chainlist.org) segít az adott hálózat RPC-adatait megtalálni. Amint a hálózat hozzáadásra kerül és a tranzakció végbemegy, a tokenek megjelennek a tárcájában.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Szeretne többet megtudni?</div>

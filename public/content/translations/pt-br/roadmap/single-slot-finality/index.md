@@ -33,6 +33,7 @@ Com o design do mecanismo atual, para reduzir o tempo de finalização, é neces
 
 ## Rotas para SSF \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Por que não podemos ter SSF hoje?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 O mecanismo de consenso atual combina atestações de diversos validadores, conhecidos como "comitês", para reduzir o número de mensagens que cada validador precisa processar para validar um bloco. Cada validador tem a oportunidade de atestar em cada época (32 espaços), mas em cada espaço, apenas um subconjunto de validadores, conhecido como uma atestação de "comitê". Eles fazem isso ao se dividir em sub-redes, nas quais alguns validadores são selecionados para serem "agregadores". Esses agregadores combinam, em uma única assinatura agregada, todas as assinaturas que observam de outros validadores na respectiva sub-rede. O agregador que inclui o maior número de contribuições individuais passa a assinatura agregada ao proponente do bloco, que a inclui no bloco juntamente com a assinatura agregada dos demais comitês.
@@ -41,6 +42,7 @@ Esse processo oferece capacidade suficiente para cada validador votar em cada é
 
 Nesse esquema, só é possível que cada validador vote em um bloco se distribuir as respectivas atestações por toda a época. Entretanto, há potencialmente maneiras de aprimorar o mecanismo para que _cada validador tenha a chance de atestar em cada espaço_.
 </ExpandableCard>
+}
 
 Desde que o mecanismo de consenso do Ethereum foi projetado, o esquema de agregação de assinaturas (BLS) foi considerado muito mais dimensionável do que se pensava inicialmente, enquanto a capacidade dos clientes de processar e verificar assinaturas também melhorou. Foi constatado que o processamento de atestações de um grande número de validadores é realmente possível em um único espaço. Por exemplo, com um milhão de validadores, cada um votando duas vezes em cada espaço, e os tempos de espaço ajustados para 16 segundos, os nós precisariam verificar as assinaturas a uma taxa mínima de 125.000 agregações por segundo para processar o um milhão de atestações no espaço. Na realidade, um computador comum demora aproximadamente 500 nanossegundos para fazer uma verificação de assinatura, o que significa que 125.000 podem ser feitas em ~62,5 ms, muito abaixo do limite de um segundo.
 

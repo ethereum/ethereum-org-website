@@ -41,13 +41,17 @@ Sie sehen also die Anreize: Die Teilnehmer werden für die Durchführung von Bet
 
 Sehen Sie, wie Finematics optimistische Rollups erklärt:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
 ### Optimistische Rollups verwenden \{#use-optimistic-rollups}
 
 Es gibt mehrere Implementierungen von optimistischen Rollups, die Sie in Ihre dApps integrieren können:
 
-<RollupProductDevDoc rollupType="optimistic" />
+{
+	<RollupProductDevDoc rollupType="optimistic" />
+}
 
 **Optimistische Rollups verstehen**
 

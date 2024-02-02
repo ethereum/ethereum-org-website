@@ -45,27 +45,37 @@ summaryPoints:
 
 越是了解你在執行的軟體以及權益證明的運作原理，你作為質押者的風險就越小，也越容易解決節點運作過程中可能出現的問題。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="熟悉電腦" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 設定節點仍然需要對電腦有一定程度的掌握，不過隨著時間經過，新工具會越來越容易使用。 了解命令列介面會有幫助，但不是必要的。
 
 設定節點也需要設置非常基本的硬體，以及對最低建議規格有一些了解。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="安全的金鑰管理" eventCategory="SoloStaking" eventName="clicked secure key management">
 就像以私密金鑰保護以太坊地址一樣，你還需要專門為驗證者生成金鑰。 你必須了解如何確保你的種子助記詞或私密金鑰的安全。{' '}
 
 <a href="/security/">以太坊安全及詐騙預防</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="維護" eventCategory="SoloStaking" eventName="clicked maintenance">
 硬體偶爾會出現故障，網路連線會中斷，用戶端軟體偶爾也需要升級。 節點維護是不可避免的，你偶爾需要留意， 最好能隨時掌握預期的網路升級或其他重要的用戶端升級。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="可靠的運行時間" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 你的酬勞和你的驗證者在線上並提供正確證明的時間成正比。 停機會導致一定程度的罰金，這和有多少其他驗證者同時離線成正比，但<a href="#faq">不會導致罰沒</a>。 頻寬也很重要，因為如果沒有及時收到證明，酬勞就會減少。 要求可能有所差異，但建議上傳和下載速率至少都要有 10 Mb/s。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="罰沒風險" eventCategory="SoloStaking" eventName="clicked slashing risk">
 與離線的怠工罰金不同，<em>罰沒</em>是針對惡意犯罪的更嚴重的懲罰。 如果同一個時間只在一台電腦上載入金鑰來執行非主流用戶端，遭到罰沒的風險微乎其微。 話雖如此，所有質押者都必須意識到罰沒的風險。
 
@@ -127,12 +137,15 @@ summaryPoints:
 
 以下是關於質押的一些最常見問題，建議仔細閱讀。
 
+{
 <ExpandableCard title="什麼是驗證者？">
 
 <em>驗證者</em>是一個存在於以太坊並參與以太坊協議共識的虛擬實體。 驗證者由餘額、公鑰和其他屬性表示。 <em>驗證者用戶端</em>是通過持有和使用私密金鑰代表驗證者進行操作的軟體。 一個驗證者用戶端可以持有多組金鑰，控制許多驗證者。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我可以存入超過 32 個以太幣嗎？">
 與驗證者相關聯的每組金鑰都需要 32 個以太幣才能啟用。 將更多以太幣存入一組金鑰不會增加潛在的酬勞，因為一個驗證者的<a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">有效餘額</a>以 32 個以太幣為限。 這意味著質押是以 32 個以太幣為遞增單位，每個單位都有自己的一組金鑰和餘額。
 
@@ -140,7 +153,9 @@ summaryPoints:
 
 如果單獨質押對你來說要求太高，可以考慮使用<a href="/staking/saas/">質押即服務</a>供應商，或者如果你的資金少於 32 個以太幣，可以參考<a href="/staking/pools/">質押池</a>。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="如果離線，會被罰沒嗎？ （簡單的說：不會）">
 如果你在網路正確進行最終確認時離線，則不會發生罰沒。 如果你的驗證者無法在特定時期內（每個時期 6.4 分鐘）完成證明，則會產生少量的<em>怠工罰金</em>，但這與<em>罰沒</em>完全不同。 這些罰金略低於你在驗證者可以完成證明的情況下獲得的酬勞，因此只要讓驗證者再次上線，經過差不多相同的時間就能賺回來。
 
@@ -148,7 +163,9 @@ summaryPoints:
 
 在極端情況下，如果有超過三分之一的驗證者同時離線導致網路停止最終確認，那麼這些使用者會遭受所謂的<em>二次怠工罰金</em>，離線驗證者帳戶中的以太幣將受到指數級別的損失。 這時以太坊網路會消耗怠工驗證者的以太幣來進行自我修復，直到其餘額達到 16 個以太幣為止，此時它們將自動被踢出驗證者池。 最後還在線上的剩餘驗證者將再次超過網路的三分之二，滿足再次最終確認區塊鏈所需的絕對多數要求。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="如何確保我不會被罰沒？">
 簡而言之，雖然我們永遠無法完全保證你不會被罰沒，但如果你真誠行事，執行非主流用戶端，而且一次只將簽名金鑰保存在一台電腦上，那麼遭到罰沒的風險微乎其微。
 
@@ -163,7 +180,9 @@ summaryPoints:
   <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">詳細了解如何避免罰沒</a></li>
 </ul>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="哪一個用戶端最好？">
 各用戶端的效能和使用者介面可能略有不同，因為每個用戶端都是由不同的團隊使用不同程式語言開發的。 這表示沒有「最好的」用戶端。 所有生產環境的用戶端都是優秀的軟體，會執行相同的核心功能來與區塊鏈同步和互動。
 
@@ -171,7 +190,9 @@ summaryPoints:
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">詳細了解為什麼用戶端多元化如此重要</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我可以只用 VPS（虛擬私人伺服器）嗎？">
 雖然虛擬私人伺服器 (VPS) 可以作為家用硬體的替代品，但驗證者用戶端的實體存取和位置<em>有其重要性</em>。 Amazon Web Services 或 Digital Ocean 等集中式雲端解決方案提供了不必擁有和運作硬體的便利，但代價是網路集中化。
 
@@ -179,7 +200,9 @@ summaryPoints:
 
 離線罰金與同時離線的其他驗證者數量成正比。 使用虛擬私人伺服器會大幅提高承受更嚴重的離線罰金的風險，甚至如果發生大量當機，還會增加二次懲罰或罰沒的風險。 為了將你自己的風險和網路風險降至最低，我們強烈鼓勵使用者取得並操作自己的硬體。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="如何解鎖我的酬勞或取回我的以太幣？">
 
 在信標鏈中進行任何類型的提款都需要設置提款憑證。
@@ -192,6 +215,7 @@ summaryPoints:
 
 <ButtonLink to="/staking/withdrawals/">更多關於提取質押代幣的資訊</ButtonLink>
 </ExpandableCard>
+}
 
 ## 延伸閱讀 \{#further-reading}
 

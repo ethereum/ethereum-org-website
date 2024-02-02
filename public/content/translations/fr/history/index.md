@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 Chronologie de tous les jalons, fourches et mises à jour majeures de la blockchain Ethereum.
 
+{
 <ExpandableCard title="En quoi consistent les fourches ?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Les forks existent lorsque des mises à jour ou des changements techniques majeurs doivent être effectués sur le réseau – ils proviennent généralement des <a href="/eips/">Propositions d'amélioration d'Ethereum (EIP)</a> et modifient les « règles » du protocole.
@@ -18,6 +19,7 @@ Lorsque des mises à niveau des logiciels traditionnels contrôlés centralement
 Ces changements de règles peuvent créer une scission temporaire dans le réseau. De nouveaux blocs peuvent être produits selon les nouvelles règles ou les anciennes. Les fourches font généralement l'objet d'un accord à l'avance afin que les clients adoptent les changements à l'unisson et que la fourche contenant les mises à niveau devienne la chaîne principale. Toutefois, dans de rares cas, les désaccords sur les forks peuvent causer une séparation permanente du réseau – plus particulièrement la création d'Ethereum Classic avec le <a href="#dao-fork">fork DAO</a>.
 
 </ExpandableCard>
+}
 
 Passer directement à l'information sur certaines des mises à jour passées particulièrement importantes : [La Chaîne phare](/roadmap/beacon-chain/); [La Fusion](/roadmap/merge/); et [EIP-1559](#london)
 
@@ -35,6 +37,7 @@ Vous cherchez les prochaines mises à jour de protocole ? [Découvrez les mises 
 
 La mise à jour Shanghai a ouvert la voie à des opérations de retrait et de basculement vers la couche d'exécution Couplée à la mise à jour Capella, cette mise à jour permet aux blocs d'accepter des opérations de retrait, permettant ainsi aux validateurs de retirer leur ETH de la chaîne phare et de le basculer vers la couche d'exécution.
 
+{
 <ExpandableCard title="EIP Shanghai" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,6 +49,7 @@ La mise à jour Shanghai a ouvert la voie à des opérations de retrait et de ba
 </ul>
 
 </ExpandableCard>
+}
 
 - [Lire les spécificités de la mise à jour Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -80,6 +84,7 @@ La mise à jour de Paris a été déclenchée par le passage de la blockchain de
 
 - [Lisez la spécification de la mise à jour Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="EIP Paris" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,6 +93,7 @@ La mise à jour de Paris a été déclenchée par le passage de la blockchain de
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -113,6 +119,7 @@ La mise à niveau Gray Glacier a retardé le déclenchement de la [bombe de diff
 
 - [Blog de l'Ethereum Foundation - Annonce de la mise à niveau Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="Les EIP de Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,6 +127,7 @@ La mise à niveau Gray Glacier a retardé le déclenchement de la [bombe de diff
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -136,6 +144,7 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 - [Blog de l'Ethereum Foundation - Annonce de la mise à niveau Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Mise à niveau Ethereum Arrow Glacier](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="EIP Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,6 +152,7 @@ La mise à niveau Arrow Glacier a retardé le déclenchement de la [bombe de dif
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -176,6 +186,7 @@ La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/e
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIP de London" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,6 +198,7 @@ La mise à niveau London a introduit [EIP-1559](https://eips.ethereum.org/EIPS/e
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -201,6 +213,7 @@ La mise à niveau Berlin a optimisé le coût en gaz de certaines actions EVM et
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIP de Berlin" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,6 +224,7 @@ La mise à niveau Berlin a optimisé le coût en gaz de certaines actions EVM et
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -259,6 +273,7 @@ La fourche Muir Glacier a entraîné un report de la [bombe de difficulté](/glo
 - [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Lire l'explication du site Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="Les EIP de Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,6 +281,7 @@ La fourche Muir Glacier a entraîné un report de la [bombe de difficulté](/glo
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -287,6 +303,7 @@ La fourche Istanbul a :
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="Les EIP d'Istanbul" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -299,6 +316,7 @@ La fourche Istanbul a :
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -316,6 +334,7 @@ La fourche Constantinople a :
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="Les EIP de Constantinople" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -326,6 +345,7 @@ La fourche Constantinople a :
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -346,6 +366,7 @@ La fourche Byzantium a :
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIP de Byzantium" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -361,6 +382,7 @@ La fourche Byzantium a :
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -380,6 +402,7 @@ La fourche Spurious Dragon a été la deuxième réponse aux attaques par déni 
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIP de Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -390,6 +413,7 @@ La fourche Spurious Dragon a été la deuxième réponse aux attaques par déni 
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -405,6 +429,7 @@ La fourche Tangerine Whistle a été la première réponse aux attaques par dén
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EIP de Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -413,6 +438,7 @@ La fourche Tangerine Whistle a été la première réponse aux attaques par dén
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -442,6 +468,7 @@ La fourche Homestead qui regardait vers l'avenir. Elle comprenait plusieurs chan
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIP d'Homestead" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -451,6 +478,7 @@ La fourche Homestead qui regardait vers l'avenir. Elle comprenait plusieurs chan
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 

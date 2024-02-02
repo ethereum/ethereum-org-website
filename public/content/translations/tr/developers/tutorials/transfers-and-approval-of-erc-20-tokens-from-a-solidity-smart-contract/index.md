@@ -200,7 +200,9 @@ Her şey çalışıyorsa işlemde 2 olay görmelisiniz (`Transfer` ve `Sold`) ve
 
 ![İşlemdeki iki olay: Transfer ve Sold](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 Bu öğreticide, bir ERC-20 tokenin bakiyesi ve ödeneği nasıl kontrol edilir ve bir ERC20 akıllı sözleşmesinden `Transfer` ve `TransferFrom` arayüzleri kullanılarak nasıl çağırılır gördük.
 

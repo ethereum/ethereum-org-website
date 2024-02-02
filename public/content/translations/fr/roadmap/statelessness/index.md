@@ -68,12 +68,14 @@ L'absence d'était faible implique des changements dans la façon dont les nœud
 
 Pour que cela soit possible, les [arbres de Verkle](/roadmap/verkle-trees/) doivent déjà avoir été implémentés dans les clients Ethereum. Les arbres de Verkle sont une structure de données de remplacement pour stocker les données d'état d'Ethereum qui permettent à de petits « témoins des données » de taille fixe d'être transmis entre pairs et d'être utilisés pour vérifier les blocs au lieu de vérifier les blocs par rapport aux bases de données locales. La [séparation proposant-constructeur](/roadmap/pbs/) est également requise car elle permet aux constructeurs de blocs d'être des nœuds spécialisés avec un matériel plus puissant, et ce sont eux qui ont besoin d'un accès aux données d'état complètes.
 
+{
 <ExpandableCard title="Pourquoi est-il acceptable de s'appuyer sur un nombre réduit de proposeurs de blocs ?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 L'absence d'état requiert que les constructeurs de blocs conservent une copie des données d'état complètes afin qu'ils puissent générer des témoins pouvant être utilisés pour vérifier le bloc. Les autres nœuds n'ont pas besoin d'accéder aux données d'état, toute l'information requise pour vérifier le bloc est disponible dans le témoin. Cela crée une situation où proposer un bloc est coûteux, mais vérifier le bloc est bon marché, ce qui implique que moins d'opérateurs vont faire fonctionner un bloc proposant des noeuds. Cependant, la décentralisation des proposants de blocs n'est pas critique tant qu'autant de participants que possible peuvent vérifier que les blocs qu'ils proposent sont valides.
 
 <ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">En lire plus dans les notes de Dankrad</ButtonLink>
 </ExpandableCard>
+}
 
 Les proposants de bloc utilisent les données d'état pour créer des « témoins » - l'ensemble minimal de données qui prouvent les valeurs de l'état qui sont modifiées par les transactions dans un bloc. Les autres validateurs ne détiennent pas l'état, ils ne stockent que la racine de l'état (une empreinte numérique de l'état complet). Ils reçoivent un bloc et un témoin et les utilisent pour mettre à jour leur racine de l'état. Cela rend un nœud validant extrêmement léger.
 

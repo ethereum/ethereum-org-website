@@ -10,6 +10,7 @@ Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om
 
 ## Forums \{#forums}
 
+{
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - alles over Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> - de financiële kant van Ethereum, inclusief DeFi</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> - gericht op Ethereum-ontwikkeling</SocialListItem>
@@ -18,9 +19,11 @@ Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Gemeenschap van Ethereum-magiërs</Link> - een gemeenschap gericht op de technische standaarden in Ethereum</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> - discussie en hulp voor Ethereum-ontwikkelaars</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - de meest invloedrijke messageboard voor cryptoeconomisch onderzoek</SocialListItem>
+}
 
 ## Chatruimtes \{#chat-rooms}
 
+{
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - gemeenschap gericht op het aanbieden van projectbeheerondersteuning voor Ethereum-ontwikkeling</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - Discord-chat beheerd door ETHGlobal: een online gemeenschap voor Ethereum-hackers over de hele wereld</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Ethereum-ontwikkeling gericht op de Discord-gemeenschap</SocialListItem>
@@ -31,15 +34,20 @@ Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat voor solidity-ontwikkeling (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- vraag en antwoord forum_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- gedecentraliseerd vraag- en antwoordforum_</SocialListItem>
+}
 
 ## YouTube en Twitter \{#youtube-and-twitter}
 
+{
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Blijf op de hoogte van de laatste informatie van de Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Officieel account van de Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Het portaal naar Ethereum, gebouwd voor onze groeiende wereldwijde gemeenschap</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Lijst van invloedrijke Ethereum-twitteraccounts</Link></SocialListItem>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 <Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
   <div>

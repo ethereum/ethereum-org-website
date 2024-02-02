@@ -138,7 +138,9 @@ Po przesłaniu transakcji nastąpią następujące wydarzenia:
 
 Zobacz, jak Austin przeprowadzi Cię przez transakcje, gaz i wydobycie.
 
-<YouTube id="er-0ihqFQB0" />
+{
+	<YouTube id="er-0ihqFQB0" />
+}
 
 ## Dalsza lektura \{#further-reading}
 

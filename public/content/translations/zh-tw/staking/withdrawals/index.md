@@ -127,6 +127,7 @@ summaryPoints:
 
 ## 常見問題 \{#faq}
 
+{
 <ExpandableCard
 title="提供提款地址後，可以更改為其他提款地址嗎？"
 eventCategory="FAQ"
@@ -134,7 +135,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 不可以，提供提款憑證的過程是一次性的，一旦提交就無法更改。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="為什麼提款地址只能設定一次？"
 eventCategory="FAQ"
@@ -146,7 +149,9 @@ eventName="read more">
 
 如果無法更改特定驗證者的提款地址，用戶可以選擇將智慧型合約設置為可以處理金鑰輪換的提款地址，例如保險箱。 將資金設置為自己的外部所有帳戶的用戶可以執行完全退出以提取所有質押資金，然後使用新憑證重新質押。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="如果我持有質押代幣或參與聯合質押怎麼辦？"
 eventCategory="FAQ"
@@ -158,7 +163,9 @@ eventName="read more">
 一般來說，用戶應該可以自由地收回其質押的以太幣，或者更改他們使用的質押提供商。 如果特定質押池變得過大，則可以退出、贖回資金，並透過<a href="https://rated.network/">較小的提供商</a>重新質押。 或者，如果積累了足夠的以太幣，你可以<a href="/staking/solo/">在家進行質押</a>。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="酬勞支付（部分提款）會自動發生嗎？"
 eventCategory="FAQ"
@@ -166,7 +173,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 是的，只要你的驗證者提供了提款地址。 必須提供一次才能啟用任何提款，然後酬勞支付將在每次驗證器掃描時，每隔幾天自動觸發一次。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="全額提款會自動發生嗎？"
 eventCategory="FAQ"
@@ -178,7 +187,9 @@ eventName="read more">
 一旦驗證者完成退出過程，並且假設該帳戶具有提款憑證，<em>則</em>餘額將在下一次<a href="#validator-sweeping">驗證者掃描</a>期間提出。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我可以提取自定金額嗎？"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +198,9 @@ eventName="read more">
 
 無法手動請求提取特定數量的以太幣。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="我操作一個驗證者。 從何處了解有關啟用提款的更多資訊？"
 eventCategory="FAQ"
@@ -199,7 +212,9 @@ eventName="read more">
 若想先在測試網上嘗試你的設置，請從訪問 <a href="https://goerli.launchpad.ethereum.org">Goerli 測試網質押啟動面板</a>開始。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="退出後我是否可以藉由存入更多以太幣來重新啟用我的驗證者？"
 eventCategory="FAQ"
@@ -207,6 +222,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 否。 驗證者退出並成功提取其全部餘額後，任何後續存入該驗證者的資金都會在下一次驗證者掃描期間自動轉移到提款地址。 要重新質押以太幣，必須啟用新的驗證者。
 </ExpandableCard>
+}
 
 ## 了解更多 \{#further-reading}
 

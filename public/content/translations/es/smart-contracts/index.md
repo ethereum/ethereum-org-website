@@ -73,7 +73,9 @@ Se pueden realizar cálculos, crear una divisa, almacenar datos, acuñar NFT, en
 
 Mire en este vídeo cómo Finematics explica los contratos inteligentes:
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## Más información \{#further-reading}
 

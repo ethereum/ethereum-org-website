@@ -20,7 +20,9 @@ DeFi ang tawag sa mga produkto at serbisyong pinansyal na maaring gamitin ng sin
 
 Lumalaki ang ekonomiya ng crypto, kung saan puwede kang magpautang, manghiram, mag-trade, kumita ng interes, at iba pa. Gumamit ng DeFi ang mga taga-Argentina na marunong sa crypto para takasan ang matinding pagtaas ng presyo. May mga kumpanya nang nagsimulang i-stream sa kanilang mga empleyado ang kanilang mga suweldo nang real time. May ibang nakahiram at nakapagbayad ng mga loan na milyong-milyong dolyar ang halaga nang hindi nangangailangan ng anumang personal identification.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## DeFi vs tradisyonal na pinansya \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Sa maraming paraan, ang Bitcoin ang unang DeFi application. Talagang pinapayagan
 
 Mas pinapahusay pa ito ng Ethereum. Tulad ng Bitcoin, hindi maaaring magbago ang mga panuntunan nang biglaan at may access ang lahat. Ngunit ito rin ang dahilan kung bakit programmable ang digital money, gamit ang [mga smart contract](/glossary#smart-contract), kung kaya, hindi lang pag-store at pagpapadala ng halaga ang magagawa mo.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Programmable na pera \{#programmable-money}
 
@@ -86,7 +90,9 @@ May decentralized na alternatibo sa karamihan sa mga serbisyong pinansyal. Nguni
 - [Bumili ng insurance](#insurance)
 - [Pamahalaan ang iyong portfolio](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Magpadala ng pera sa iba't ibang bahagi ng mundo nang mabilis \{#send-money}
 
@@ -102,7 +108,9 @@ Maaari ka ring mag-stream ng pera sa Ethereum. Binibigyang-daan ka nitong bayara
 
 At kung ayaw mong magpadala o mag-stream ng [ETH](/eth/) dahil nagbabago-bago ang halaga nito, may mga alternatibong currency sa Ethereum: mga stablecoin.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Ma-access ang mga stable na currency \{#stablecoins}
 
@@ -114,7 +122,9 @@ Ang mga coin tulad ng Dai o USDC ay may halagang nananatiling malapit sa isang d
   Iba pang detalye tungkol sa mga stablecoin
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Paghiram \{#lending}
 
@@ -170,7 +180,9 @@ Para magawa ang halimbawa sa itaas sa tradisyonal na mundo ng pinansya, kakailan
 
 [Iba pang detalye tungkol sa mga flash loan](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Magsimulang mag-ipon gamit ang crypto \{#saving}
 
@@ -203,7 +215,9 @@ Ang prize pool ay mula sa lahat ng interes na kinikita mula sa pagpapautang ng m
   Subukan ang PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Mag-exchange ng mga token \{#swaps}
 
@@ -215,7 +229,9 @@ Halimbawa, kung nais mong gamitin ang no-loss lottery na PoolTogether (na inilal
   Tingnan ang mga token exchange
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Advanced trading \{#trading}
 
@@ -227,7 +243,9 @@ Kapag gumagamit ka ng centralized exchange, dapat mong ideposito ang mga asset m
   Tingnan ang mga decentralized application (dapps) para sa trading
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Palaguin ang iyong portfolio \{#investing}
 
@@ -239,7 +257,9 @@ Isang magandang halimbawa ang [ DeFi Pulse Index fund (DPI)](https://defipulse.c
   Tingnan ang mga decentralized application (dapps) para sa investment
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Pondohan ang iyong mga ideya \{#crowdfunding}
 
@@ -268,7 +288,9 @@ Ibig sabihin nito, ang Proyekto A na may 100 na donasyon na nagkakahalaga ng 1 d
 
 [Iba pang detalye tungkol sa quadratic funding](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Insurance \{#insurance}
 
@@ -280,7 +302,9 @@ Ang mga produkto ng Ethereum, gaya ng anumang software, ay puwedeng magkaroon ng
   Tingnan ang decentralized application (dapps) para sa insurance
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Mga aggregator at manager ng portfolio \{#aggregators}
 
@@ -290,7 +314,9 @@ Sa dami ng mga nangyayari, kakailanganin mo ng paraan upang subaybayan ang lahat
   Tingnan ang decentralized application (dapps) para sa portfolio
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Paano gumagana ang DeFi? \{#how-defi-works}
 

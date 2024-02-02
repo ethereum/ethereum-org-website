@@ -56,6 +56,7 @@ A számlaabsztrakció lehetővé teszi a **jobb felhasználói élményt** és *
 
 A gáz, vagyis a tranzakciós díjak kezelése is sokkal fejlettebbé válik a számlaabsztrakcióval. Az alkalmazások felajánlhatják, hogy kifizetik a felhasználók gázdíját, továbbá a gázt más tokenben is lehet rendezni, nem csak ETH-ben, így a felhasználóknak nem kötelező ETH-összeget tartani a számlájukon, hogy a tranzakciókat finanszírozni tudják. Ez úgy valósul meg, hogy a szerződésen belül a felhasználó tokenjeit átváltják ETH-re, és ebben fizetik ki a gázt.
 
+{
 <ExpandableCard title="Hogyan tud a számlaabsztrakció segíteni a gázdíjak kapcsán?" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
 
 A gázdíjak kezelése az egyik fő gond az Ethereum-felhasználók számára, mert csak ETH-ben lehet azt rendezni. Tegyük fel, hogy van egy tárca USDC-egyenleggel, de nincs benne ETH. Akkor az USDC-tokeneket nem tudja a tulajdonos elküldeni vagy átváltani, mert nem tudja kifizetni a gázdíjat. Nem lehet átváltani az USDC-t ETH-re, mert ez önmagában gázdíjat igényel. Ennek megoldásához ETH-t kell beküldeni a számlára egy tőzsdéről vagy egy másik címről. Az okosszerződéses tárcákkal ki lehet fizetni a gázdíjat a számlán tartott USDC-ből, így szabadon használható a számla. Ennek köszönhetően nem kell ETH-egyenleget tartani az összes számlán.
@@ -63,6 +64,7 @@ A gázdíjak kezelése az egyik fő gond az Ethereum-felhasználók számára, m
 A számlaabsztrakció lehetővé teszi a dapp fejlesztőknek azt is, hogy a gázdíj kezelésében kreatívak legyenek. Például a kedvenc tőzsdéjének a felhasználó akár fix díjat is fizethetne havonta korlátlan mennyiségű tranzakcióért. A dappok felajánlhatják, hogy kifizetik az összes gázdíjat a felhasználó helyett, ezzel jutalmazva őket, hogy az adott platformot használják, vagy belépési ajánlat gyanánt. A fejlesztőknek könnyebb lesz innovatív módon hozzáállni a gázhoz, amikor az okosszerződéses tárcákat protokollszinten támogatják.
 
 </ExpandableCard>
+}
 
 A megbízható periódus használata is jelentős hatással lehet a felhasználói élményekre, főleg olyan alkalmazásoknál, mint a játékok, ahol sok kis értékű tranzakciót kell rövid időn belül jóváhagyni. Ha egyesével kell a tranzakciókat engedélyezni, akkor az megtöri a játék élményét, de az állandó jóváhagyás nem lenne biztonságos. Az okosszerződéses tárca engedélyezni tudna bizonyos tranzakciókat egy fix időre, egy meghatározott értékig vagy csak egy bizonyos címre.
 
@@ -74,12 +76,15 @@ Ez csak néhány példa arra, hogy a felhasználói élmény hogyan fejlődhet a
 
 Az okosszerződéses tárcák most is léteznek, de kihívásokkal teli a megvalósításuk, mert az EVM nem támogatja azokat. Ehelyett azon alapulnak, hogy elég összetett kódokba burkolják a standard Ethereum-tranzakciókat. Az Ethereum képes ezt megváltoztatni azáltal, hogy megengedi az okosszerződéseknek a tranzakciókezdeményezést, így az Ethereum okosszerződésbe lehet kódolni a szükséges logikákat, nem pedig a láncon kívül kezelni azokat. Az okosszerződésbe írt logikák növelik az Ethereum decentralizációját is, mivel nem lesz szükség a tárcafejlesztők által működtetett közvetítőkre, hogy lefordítsák a felhasználók által aláírt üzeneteket Ethereum-tranzakciókká.
 
+{
 <ExpandableCard title="EIP-2771: számlaabsztrakció metatranzakciók használatával" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 a metatranzakció koncepcióját vezeti be, amelynek révén egy harmadik személy kifizetheti a felhasználó gázdíját anélkül, hogy ehhez változtatni kellene az Ethereum protokollon. Eszerint a felhasználó által aláírt tranzakciók egy „továbbító” szerződéshez kerülnek. Ez a továbbító egy megbízott entitás, amely ellenőrzi a tranzakciók érvényességét, mielőtt elküldi azokat egy gázközvetítőnek. Ezt a láncon kívül intézik, így nem kell érte gázdíjat fizetni. A gázközvetítő átadja a tranzakciót egy „fogadó” szerződésnek, és kifizeti a szükséges díjat, hogy a tranzakció végrehajtható legyen az Ethereumon. A tranzakciót végre lehet hajtani, ha a „továbbító” ismert és a „fogadó” bízta meg. Ez a modell megkönnyíti a fejlesztők számára, hogy gázdíj nélküli tranzakciókat tegyenek lehetővé a felhasználók számára.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-4337: számlaabsztrakció az Ethereum-protokoll módosítása nélkül" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
 Az EIP-4337 az első lépés az okosszerződéses tárca támogatására decentralizált módon <em>anélkül, hogy az Ethereum-protokollt változtatni kellene hozzá</em>. Ahelyett, hogy a konszenzusréteget módosítanák, hogy támogassa az okosszerződéses tárcákat, egy új rendszert adnak a meglévő tranzakciós pletykaprotokollhoz. Ez a magasabb szintű rendszer egy új objektumra épül, amely a <code>UserOperation</code> nevet kapta, és a felhasználótól érkező tevékenységeket csomagolja össze a megfelelő aláírásokkal együtt. Majd ezeket a <code>UserOperation</code>-objektumokat elküldik egy dedikált memóriakészletbe, ahol a validátorok azokat egy tranzakcióköteggé szedhetik össze. A tranzakcióköteg számos egyéni <code>UserOperations</code>-sorozatot képvisel, és ugyanúgy bekerül egy Ethereum-blokkba, mint bármilyen normál tranzakció. Ezután a validátorok felveszik azt egy díjmaximalizáló kiválasztási modell alapján.
@@ -89,7 +94,9 @@ Az EIP-4337 azt is megváltoztatja, ahogy a tárcák működnek. Ahelyett, hogy 
 <strong>Megjegyzés:</strong> az EIP-4337 által tervezett belépésipont-szerződést az Ethereum-főhálózatra 2023. március 1-én üzemelték be. A szerződés az <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a> oldalon tekinthető meg.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-2938: az Ethereum-protokoll módosítása, hogy az támogassa a számlaabsztrakciót" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
 Az <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> az Ethereum-protokollt fejleszti azzal, hogy bevezet egy új, <code>AA_TX_TYPE</code> nevű tranzakciótípust, amely három mezőt tartalmaz: <code>nonce</code>, <code>target</code> és <code>data</code>, ahol a <code>nonce</code> egy tranzakciószámláló, a <code>target</code> a belépésipont-szerződés címe, a <code>data</code> pedig az EVM-bájtkód. Ezen tranzakciók végrehajtásához két új parancsot (operációs kódot) kell hozzáadni az EVM-hez: <code>NONCE</code> és <code>PAYGAS</code>. A <code>NONCE</code> opkód trekkeli a tranzakciósorrendet, a <code>PAYGAS</code> kalkulálja és levonja a végrehajtáshoz szükséges gázdíjat a szerződés egyenlegéből. Ezek az új funkciók lehetővé teszik az Ethereumnak, hogy támogassa az okosszerződéses tárcákat, mivel a szükséges infrastruktúra az Ethereum-protokollba épül be.
@@ -97,7 +104,9 @@ Az <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> az Ethereum-pr
 Jelenleg az EIP-2938 változtatás nem aktív. A közösség az EIP-4337 javaslatot támogatja, mert ahhoz nem szükséges megváltoztatni a protokollt.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-3074: a külső tulajdonú számlák továbbfejlesztése a számlaabsztrakció bevezetéséhez" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
 Az <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> az Ethereumot úgy fejleszti, hogy a külső tulajdonú számlák képesek legyenek delegálni a kontrollt egy okosszerződésnek. Eszerint az okosszerződés logikája jóváhagyhat olyan tranzakciót, amely egy külső tulajdonú számlától (EOA) származik. Ez lehetővé teszi az olyan funkciók bevezetését, mint a gázdíjak szponzor általi kifizetése és a kötegelt tranzakciók. Ennek működéséhez két új operációs kódot kell hozzáadni az EVM-hez: <code>AUTH</code> és <code>AUTHCALL</code>. Az EIP-3074 révén az okosszerződéses tárca előnyei elérhetővé válnak úgy, hogy <em>nem kell hozzá szerződés</em> – ehelyett egy státuszmentes, bizalomigény-mentes, nem változtatható szerződés, a „hívó” kezeli a tranzakciókat.
@@ -105,6 +114,7 @@ Az <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> az Ethereumot 
 Jelenleg az EIP-3074 változtatás nem aktív. A közösség az EIP-4337 javaslatot támogatja, mert ahhoz nem szükséges megváltoztatni a protokollt.
 
 </ExpandableCard>
+}
 
 ## Jelenlegi helyzet \{#current-progress}
 

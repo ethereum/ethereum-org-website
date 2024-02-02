@@ -18,7 +18,7 @@ Mocking a contract essentially means creating a second version of that contract 
 
 You could write complex test setup logic every time that brings in the contract in the required state or you write a mock. Mocking a contract is easy with inheritance. Simply create a second mock contract that inherits from the original one. Now you can override functions to your mock. Let us see it with an example.
 
-## Example: Private ERC20 \{##example-private-erc20}
+## Example: Private ERC20 \{#example-private-erc20}
 
 We use an example ERC-20 contract that has an initial private time. The owner can manage private users and only those will be allowed to receive tokens at the beginning. Once a certain time has passed, everyone will be allowed to use the tokens. If you are curious, we are using the [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) hook from the new OpenZeppelin contracts v3.
 
@@ -90,11 +90,11 @@ Since we are using the new 0.6 Solidity version, we have to add the `virtual` ke
 
 Now in your unit tests, you can use `PrivateERC20Mock` instead. When you want to test the behavior during the private usage time, use `setIsPublic(false)` and likewise `setIsPublic(true)` for testing the public usage time. Of course in our example, we could just use [time helpers](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) to change the times accordingly as well. But the idea of mocking should be clear now and you can imagine scenarios where it is not as easy as simply advancing the time.
 
-## Mocking many contracts \{##mocking-many-contracts}
+## Mocking many contracts \{#mocking-many-contracts}
 
 It can become messy if you have to create another contract for every single mock. If this bothers you, you can take a look at the [MockContract](https://github.com/gnosis/mock-contract) library. It allows you to override and change behaviors of contracts on-the-fly. However, it works only for mocking calls to another contract, so it would not work for our example.
 
-## Mocking can be even more powerful \{##mocking-can-be-even-more-powerful}
+## Mocking can be even more powerful \{#mocking-can-be-even-more-powerful}
 
 The powers of mocking do not end there.
 

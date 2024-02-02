@@ -34,13 +34,17 @@ A blobadatok kiterjesztésének második szintje bonyolult, mert új módszer ke
 
 Ez a második lépés a [Danksharding](/roadmap/danksharding/). Valószínűleg néhány évnek el kell telnie, mire teljesen kialakul. A Danksharding más fejlesztéseken is múlik, mint a [PBS](/roadmap/pbs) és új hálózati dizájn, hogy a hálózat hatékonyan tudja konfirmálni, hogy az adatok elérhetők, azáltal hogy véletlenszerűen néhány kilobájtos mintát választ egy adott időben, ezt [adat-elérhetőségi mintavételnek (DAS)](/developers/docs/data-availability) nevezzük.
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">Bővebben a Dankshardingról</ButtonLink>
+}
 
 ## Az összevont tranzakciók decentralizálása \{#decentralizing-rollups}
 
 Az [összevont tranzakciók](/layer-2) már most is gondoskodnak az Ethereum méretezhetőségéről. Az [összevont tranzakciós projektek gazdag ökoszisztémája](https://l2beat.com/scaling/tvl) teszi lehetővé, hogy a felhasználó gyorsabban és olcsóbban indítson tranzakciót, a biztonsági garanciák széles körét kiélvezve. Ugyanakkor az összevont tranzakciók centralizált szekvenszert használnak (ami feldolgozza a tranzakciókat és aggregálja azokat, mielőtt az Ethereumra küldené). Ez lehetővé teszi a cenzúrát, mivel a szekvenszeroperátorokat meg lehet büntetni, vesztegetni vagy máshogy veszélyeztetni. Emellett az [összevont tranzakciók eltérnek abban](https://l2beat.com), hogyan validálják a bejövő adatokat. A legjobb az, ha a bizonyítók csalási bizonyítékot vagy érvényességi bizonyítékot adnak be, de nem minden összevont tranzakció tart még itt. Még ahol léteznek is ilyen érvényesítési/csalásbiztos összevont tranzakciók, ott is csak kevés bizonyítót használnak. Ezért a következő fontos lépés az Ethereum skálázásban, hogy elossza a szekvenszer és a bizonyító felelősségét több emberre.
 
+{
 <ButtonLink variant="outline-color" to="/developers/docs/scaling/">Bővebben az összevont tranzakciókról</ButtonLink>
+}
 
 ## Jelenlegi helyzet \{#current-progress}
 

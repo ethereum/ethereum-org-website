@@ -40,7 +40,9 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 - [**54** idiomas disponibles en el sitio](/languages/)
 - [3 millones de palabras traducidas en 2022](/contributing/translation-program/acknowledgements/)
 
-<TranslationChartImage />
+{
+	<TranslationChartImage />
+}
 
 ### Reconocimientos \{#acknowledgements}
 

@@ -114,9 +114,13 @@ Un compte n'est pas un portefeuille. Un compte est une paire de clés d'un compt
 
 Regardez Austin vous guider à travers les fonctions de hachage et les paires de clés.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## Complément d'information \{#further-reading}
 

@@ -20,7 +20,9 @@ DeFi is een collectieve term voor financiële producten en diensten die toeganke
 
 Er is een bloeiende cryptomarkt waar u kunt lenen, long/short kunt gaan, rente kunt verdienen, en meer. In crypto onderlegde Argentiniërs hebben DeFi gebruikt om te ontsnappen aan verlammende inflatie. Bedrijven zijn begonnen met het streamen van loon van hun werknemers in realtime. Sommige mensen zijn leningen ter waarde van miljoenen dollars aangegaan en hebben deze afbetaald, zonder dat daar enige persoonlijke identificatie voor nodig was.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## Defi vs traditionele financiën \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Bitcoin was in vele opzichten de eerste DeFi-applicatie. Bitcoin laat u echt waa
 
 Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen en heeft iedereen toegang. Maar het maakt dit digitale geld ook programmeerbaar met behulp van [slimme contracten](/glossary#smart-contract), zodat u veel meer kunt doen dan enkel het opslaan en verzenden van waarde.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Programmeerbaar geld \{#programmable-money}
 
@@ -86,7 +90,9 @@ Er is een gedecentraliseerd alternatief voor de meeste financiële diensten. Maa
 - [Koop verzekering](#insurance)
 - [Beheer uw portfolio](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Stuur snel geld over de hele wereld \{#send-money}
 
@@ -102,7 +108,9 @@ U kunt ook geld over Ethereum streamen. Hiermee kunt u iemands salaris per secon
 
 En als u niet [ETH](/eth/) wilt verzenden of streamen vanwege het feit dat de waarde kan veranderen, zijn er alternatieve valuta op Ethereum: stablecoins.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Krijg toegang tot stabiele valuta \{#stablecoins}
 
@@ -114,7 +122,9 @@ Munten als Dai of USDC hebben een waarde die binnen een paar cent van een dollar
   Meer over stablecoins
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Lenen \{#lending}
 
@@ -170,7 +180,9 @@ Om het bovenstaande voorbeeld in de traditionele financiële wereld te kunnen do
 
 [Meer over flash-leningen](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Begin met het sparen van crypto \{#saving}
 
@@ -203,7 +215,9 @@ De prijzenpool wordt gegenereerd door alle rente die gegenereerd wordt door het 
   Probeer PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Exchange tokens \{#swaps}
 
@@ -215,7 +229,9 @@ Als u bijvoorbeeld de no-loss loterij PoolTogether wilt gebruiken (hierboven bes
   Bekijk token exchanges
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Geavanceerd handelen \{#trading}
 
@@ -227,7 +243,9 @@ Wanneer u een gecentraliseerde exchange gebruikt, moet u uw geld storten vóór 
   Bekijk trading dapps
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Breid uw portfolio uit \{#investing}
 
@@ -239,7 +257,9 @@ Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/b
   Bekijk investering-dapps
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Financier uw ideeën \{#crowdfunding}
 
@@ -268,7 +288,9 @@ Dit betekent dat Project A met zijn 100 donaties van 1 dollar uiteindelijk meer 
 
 [Meer over kwadratische financiering](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Verzekering \{#insurance}
 
@@ -280,7 +302,9 @@ Ethereum-producten, zoals elke software, kunnen lijden onder bugs en exploits. O
   Zie verzekering-dapps
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Aggregators en portfoliobeheerders \{#aggregators}
 
@@ -290,7 +314,9 @@ Met alle drukte die u heeft, heeft u een manier nodig om al uw investeringen, le
   Bekijk portfolio-dapps
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Hoe werkt DeFi? \{#how-defi-works}
 

@@ -152,6 +152,7 @@ _The Ethereum.org Translation Competition, also referred to as the “Translatat
 
 ## Frequently asked questions \{#FAQ}
 
+{
 <ExpandableCard title="Who can I contact if I need help or have questions, feedback, or ideas?" eventCategory="/translation-program/translatathon" eventName="clicked Who can I contact if I need help or have questions, feedback, or ideas?">
 
 - In Crowdin, you can send a direct message to <a href="https://crowdin.com/profile/ethdotorg">Ethereum.org Team</a>
@@ -159,7 +160,9 @@ _The Ethereum.org Translation Competition, also referred to as the “Translatat
 - You can send an email to <strong>translations@ethereum.org</strong>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Which languages can I translate into?" eventCategory="/translation-program/translatathon" eventName="clicked Which languages can I translate into?">
 
 You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
@@ -167,7 +170,9 @@ You can translate into any language! It is recommended to only translate into yo
 In case you would like to translate into a language that is not available in the <a href="https://crowdin.com/project/ethereum-org">ethereum.org project in Crowdin</a>, please send a message to <a href="https://crowdin.com/profile/ethdotorg">Ethereum.org Team</a> in Crowdin, or send a message in the <strong>#translatathon</strong> or <strong>#translate</strong> channels on the <a href="/discord/">ethereum.org Discord</a> and we’ll add the language to the project.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="I want to participate as part of a team. Do I need to apply as an individual as well?" eventCategory="/translation-program/translatathon" eventName="clicked I want to participate as part of a team. Do I need to apply as an individual as well?">
 
 Yes, all Translatathon participants are required to submit the individual application form to participate.
@@ -175,7 +180,9 @@ Yes, all Translatathon participants are required to submit the individual applic
 Only one member of a team needs to submit the team registration form, so we can keep track of teams and their members.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Which tools can I use to assist me with the translation?" eventCategory="/translation-program/translatathon" eventName="clicked Which tools can I use to assist me with the translation?">
 
 Machine translation is strictly forbidden, but the project in Crowdin has a built-in Translation memory and Glossary that you can use to assist you in the process, or check definitions and established translations for specific terms.
@@ -183,7 +190,9 @@ Machine translation is strictly forbidden, but the project in Crowdin has a buil
 You can learn more about navigating Crowdin and using the Translation memory and Glossary <a href="https://support.crowdin.com/online-editor/#section-4">here</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="How can I find teammates to compete in the Teams category?" eventCategory="/translation-program/translatathon" eventName="clicked How can I find teammates to compete in the Teams category?">
 
 If you are already connected with other translators or people who would be interested in participating, you can simply <a href="https://teams.paperform.co/">apply to register as a team</a> and add the Crowdin accounts for everyone that will be part of the team.
@@ -193,7 +202,9 @@ You can also invite your friends and form a team with them.
 Finally, we’ll be hosting team formation calls on the <a href="/discord/">ethereum.org Discord</a>, where you can connect with other individuals looking for teammates.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="What should I do if my language is 100% translated?" eventCategory="/translation-program/translatathon" eventName="clicked What should I do if my language is 100% translated?">
 
 If the ethereum.org content in Crowdin has been 100% translated into your language, congratulations!
@@ -204,3 +215,4 @@ However, despite your language being completely translated, you can still partic
 These translations will be used in the Remix IDE documentation and have a lower score multiplier than ethereum.org content.
 
 </ExpandableCard>
+}

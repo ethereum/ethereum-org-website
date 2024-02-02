@@ -37,7 +37,9 @@ Bago ang Shanghai/Capella upgrade, hindi mo magamit o ma-access ang iyong staked
 
 ### Paano ako maghahanda? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Mahahalagang paunawa \{#important-notices}
 
@@ -76,7 +78,9 @@ Ang pagiging eligible ng isang partikular na validator para sa pag-withdraw ay t
 
 Tingnan ang paliwanag ng Finematics tungkol sa mga pag-withdraw sa staking ng Ethereum:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### "Pag-sweep" ng validator \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Tulad ng nakikita mo, babagal ito habang dumarami ang mga validator sa network. 
 
 ## Mga karaniwang itanong \{#faq}
 
+{
 <ExpandableCard
 title="Kapag nakapagbigay na ako ng withdrawal address, puwede ko ba itong palitan ng alternatibong withdrawal address?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Hindi, ang proseso ng pagbibigay ng mga kredensyal sa pag-withdraw ay one-time process, at hindi na maaaring baguhin kapag naisumite na.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Bakit isang beses lang maaaring itakda ang withdrawal address?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Ang mga withdrawal address ay maaaring maging smart contract (kontrolado ng code
 
 Bilang alternatibo sa pagbabago ng withdrawal address para sa partikular na validator, maaaring piliin ng mga user na magtakda ng isang smart contract bilang kanilang withdrawal address na maaaring pangasiwaan ang pag-rotate ng key, tulad ng Safe. Ang mga user na nagtatakda ng kanilang pondo sa kanilang sariling EOA ay maaaring magsagawa ng ganap na pag-alis para i-withdraw ang lahat ng kanilang na-stake na pondo, at pagkatapos ay mag-stake ulit gamit ang mga bagong kredensyal.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Paano kung sumali ako sa pag-stake ng mga token o sa pooled staking"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Kung bahagi ka ng isang <a href="/staking/pools/">staking pool</a> o may hawak k
 Sa pangkalahatan, dapat malaya ang mga user na kunin ang kasalukuyan nilang staked ETH, o magpalit ng staking provider na ginagamit nila. Kung masyado nang nagiging malaki ang isang partikular na pool, puwedeng alisin, i-redeem, at i-stake ulit ang pondo sa <a href="https://rated.network/">mas maliit na provider</a>. O, kung nakalikom ka na ng sapat na ETH, maaari kang <a href="/staking/solo/">mag-stake mula sa bahay</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Awtomatiko bang nangyayari ang mga reward payment (mga partial withdrawal)?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Oo, basta't may ibinigay na withdrawal address ang iyong validator. Dapat itong ibigay nang isang beses para inisyal na ma-enable ang anumang withdrawal, pagkatapos ay awtomatikong mati-trigger kada ilang araw ang mga reward payment sa bawat validator sweep.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Awtomatiko bang nangyayari ba ang full withdrawal?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Hindi, kung ang iyong validator ay aktibo pa sa network, hindi magaganap nang aw
 Kapag natapos na ng validator ang proseso ng pag-alis, at kung may mga kredensyal sa pag-withdraw ang account, ang natitirang balanse ay <em>saka</em> iwi-withdraw sa susunod na <a href="#validator-sweeping">validator sweep</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Puwede ba akong mag-withdraw ng custom na halaga?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Ang mga withdrawal ay idinisenyo upang awtomatikong maiproseso, at ililipat nito
 
 Hindi posibleng manual na hilingin ang partikular na halaga ng ETH na iwi-withdraw.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Nagpapatakbo ako ng validator. Saan ako makakakita ng iba pang impormasyon tungkol sa pagpapagana ng mga withdrawal?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Inirerekomenda sa mga operator ng validator na bisitahin ang page na <a href="ht
 Upang subukan muna ang iyong setup sa isang testnet, bisitahin ang <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> para magsimula.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Puwede ko bang i-reactivate ang aking validator matapos umalis sa pamamagitan ng pagdeposito pa ng ETH?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Hindi. Kapag umalis na ang isang validator at na-wtihdraw na ang kumpletong balanse nito, awtomatikong ita-transfer ang anumang karagdagang pondong idineposito sa validator na iyon sa withdrawal address sa susunod na validator sweep. Upang mag-stake ulit ng ETH, kailangang mag-activate ng bagong validator.
 </ExpandableCard>
+}
 
 ## Karagdagang pagbabasa \{#further-reading}
 

@@ -91,7 +91,9 @@ lang: zh
 
 ## 更愿意通过视频学习？ \{#visual-learner}
 
-<YouTube id="3EUAcxhuoU4" />
+{
+	<YouTube id="3EUAcxhuoU4" />
+}
 
 ## 延伸阅读 \{#further-reading}
 

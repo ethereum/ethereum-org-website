@@ -33,6 +33,7 @@ Con l'attuale design del meccanismo, per poter ridurre il tempo di finalizzazion
 
 ## Percorsi allo SSF \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Perché non possiamo avere lo SSF oggi?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Il meccanismo di consenso attuale combina le attestazioni da più validatori, noti come commissioni, per ridurre il numero di messaggi che ogni validatore deve elaborare per convalidare un blocco. Ogni validatore ha l'opportunità di attestare in ogni epoca (32 spazi), ma in ogni spazio, soltanto un sottoinsieme di validatori attesta, noto come 'commissione'. Lo fanno dividendosi in reti secondarie, in cui alcuni validatori sono selezionati per essere 'aggregatori'. Questi combinano ognuno tutte le firme che vedono da altri validatori nella propria rete secondaria in una singola firma aggregata. L'aggregatore che include il numero massimo di singoli contributi, ne passa la firma aggregata al propositore di blocchi, che la include nel blocco insieme alla firma aggregata da altre commissioni.
@@ -41,6 +42,7 @@ Questo procedimento fornisce la capacità sufficiente per ogni validatore di vot
 
 In questo schema, è possibile per ogni validatore, votare esclusivamente su un blocco, distribuendo le proprie attestazioni per l'intera epoca. Tuttavia, esistono potenzialmente dei metodi per migliorare il meccanismo, così che _ogni validatore abbia la possibilità di attestare a ogni spazio_.
 </ExpandableCard>
+}
 
 Dalla progettazione del meccanismo di consenso di Ethereum, lo schema di aggregazione delle firme (BLS), è stato ben più scalabile di quanto si pensasse inizialmente, mentre è stata migliorata anche l'abilità dei client di elaborare e verificare le firme. Si è scoperto che le attestazioni di elaborazione da un gran numero di validatori è in realtà possibile, entro un singolo spazio. Ad esempio, con un milione di validatori che votano due volte per ogni spazio e con i tempi dello spazio regolati a 16 secondi, i nodi dovrebbero verificare a un tasso minimo di 125.000 aggregazioni al secondo, per elaborare tutto il milione di attestazioni nello spazio. In realtà, un normale computer richiede circa 500 nanosecondi per eseguire la verifica di una firma, a significare che se ne possono eseguire 125.000 in circa 62,5 ms; molto meno della soglia di un secondo.
 

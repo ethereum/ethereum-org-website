@@ -53,6 +53,7 @@ Mimo przejścia z proof-of-work cała historia Ethereum od genezy pozostała nie
 
 ### Operatorzy węzłów i deweloperzy aplikacji \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Operatorzy i dostawcy węzłów stakingowych"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +69,9 @@ Niewykonanie dwóch pierwszych punktów spowoduje, że węzeł będzie widoczny 
 
 Nieustawienie „odbiorcy opłat” sprawi, że walidator będzie zachowywać się jak zwykle, ale utracisz niespalone napiwki z tytułu opłat i wszystkie MEV, które w przeciwnym razie zarobił(a)byś w blokach proponowanych przez walidatora.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Niewalidujący operatorzy węzłów i dostawcy infrastruktury"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +89,9 @@ Kluczowe działania obejmują:
 Niewykonanie powyższych działań spowoduje, że węzeł będzie wyświetlany jako „offline”, dopóki obie warstwy nie zostaną zsynchronizowane i uwierzytelnione.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Deweloperzy dapp i inteligentnych kontraktów"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -102,6 +107,7 @@ Połączenie wdrożono wraz ze zmianami w konsensusie, co obejmuje również zmi
 
 Więcej informacji znajdziesz w tym wpisie Tima Beiko [Jak Połączenie wpływa na warstwę aplikacji Ethereum](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
 </ExpandableCard>
+}
 
 ## Połączenie i zużycie energii \{#merge-and-energy}
 
@@ -113,6 +119,7 @@ Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności,
 
 ## Błędne przekonania o Połączeniu \{#misconceptions}
 
+{
 <ExpandableCard
 title="Błędne przekonanie: „Uruchomienie węzła wymaga stakowania 32 ETH”."
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -129,7 +136,9 @@ Możliwość uruchomienia przez każdego własnego węzła jest _absolutnie niez
 [Więcej o uruchamianiu własnego węzła](/run-a-node/)
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Błędne przekonanie: „w wyniku fuzji nie udało się obniżyć opłat za gaz”."
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -137,7 +146,9 @@ Opłaty za gaz są wypadkową zapotrzebowania na sieć i jej przepustowości. W 
 
 W ramach [planu działania skoncentrowanego na pakietach zbiorczych](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) wysiłki koncentrują się na zwiększeniu aktywności użytkowników w [warstwie 2](/warstwa-2/), przy jednoczesnym umożliwieniu działania sieci głównej w warstwie 1 jako bezpiecznej, zdecentralizowanej warstwy rozliczenia, zoptymalizowanej do przechowywania danych pakietów zbiorczych, co pomoże uczynić transakcje na pakietach zbiorczych wykładniczo tańszymi. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. [Więcej o gazie i opłatach](/developers/docs/gas/)
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Błędne przekonanie: „transakcje zostały znacznie przyspieszone przez Połączenie”."
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -148,13 +159,17 @@ Historycznie, w przypadku mechanizmu proof-of-work, celem było generowanie nowe
 Mechanizm proof-of-stake wprowadził nieistniejące wcześniej pojęcie nieodwołalności transakcji. W przypadku mechanizmu proof-of-work możliwość odwrócenia bloku staje się wykładniczo trudniejsza z każdym kolejnym blokiem wydobytym na podstawie transakcji, ale nigdy nie osiąga zera. W przypadku mechanizmu proof-of-stake bloki są łączone w epoki (6,4-minutowe odcinki czasu zawierające 32 szanse dla bloków), na które głosują walidatorzy. Gdy epoka się kończy, walidatorzy głosują, czy uznać ją za „uzasadnioną”. Jeśli walidatorzy zgodzą się na uzasadnienie epoki, zostanie ona sfinalizowana w następnej epoce. Cofnięcie sfinalizowanych transakcji jest ekonomicznie nieopłacalne, ponieważ wymagałoby uzyskania i spalenia ponad jednej trzeciej wszystkich stakowanych ETH.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Błędne przekonanie: „Połączenie umożliwiło wypłaty stakowanych środków”."
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
 Stakowane ETH i nagrody za stakowanie są nadal blokowane bez możliwości wypłaty. Wypłaty są planowane w najbliższym uaktualnieniu Shanghai.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Błędne przekonanie: „walidatorzy nie otrzymają żadnych płynnych nagród ETH do czasu uaktualnienia Shanghai, w którym zostaną włączone wypłaty”."
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
@@ -164,7 +179,9 @@ Protokół wydaje ETH jako nagrodę dla walidatorów za przyczynianie się do ko
 
 ETH w warstwie wykonawczej są rejestrowane oddzielnie od warstwy konsensusu. Gdy użytkownicy wykonują transakcje w sieci głównej Ethereum, muszą zapłacić w ETH za pokrycie kosztów gazu, w tym napiwku dla walidatora. Te ETH znajdują się już w warstwie wykonania, NIE są nowo wydawane przez protokół i są dostępne dla walidatora natychmiast (pod warunkiem, że odpowiedni adres „odbiorcy opłaty” został podany w oprogramowaniu klienckim).
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Błędne przekonanie: „wszyscy stakerzy wyjdą, gdy tylko wypłaty zostaną włączone”."
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -174,6 +191,7 @@ Ważne zastrzeżenie: pełne wyjścia walidatorów są ograniczone przez protok�
 
 APR jest celowo dynamiczna, co pozwala rynkowi stakerów wyważyć, jakiej zapłaty sobie życzą za pomoc w zabezpieczeniu sieci. Gdy wypłaty są włączone, jeśli szybkość jest za mała, walidatorzy będą wychodzić z szybkością ograniczoną przez protokół. Stopniowo podniesie to APR dla wszystkich, którzy pozostaną, przyciągając nowych lub powracających stakerów.
 </ExpandableCard>
+}
 
 ## Co się stało z „Eth2”? \{#eth2}
 

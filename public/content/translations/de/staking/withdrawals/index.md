@@ -37,7 +37,9 @@ Vor dem Shanghai/Capella-Upgrade konnten Sie Ihr gestaktes ETH nicht verwenden o
 
 ### Wie bereite ich mich vor? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Wichtige Hinweise \{#important-notices}
 
@@ -76,7 +78,9 @@ Ob ein bestimmter Validator zur Auszahlung berechtigt ist oder nicht, wird durch
 
 Sehen Sie sich diese Erklärung für die Abhebungen von Ethereum von Finematics an:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Validator „Sweeping" \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Wie Sie sehen, verlangsamt sich dieser Prozess, wenn mehr Validatoren im Netzwer
 
 ## Häufig gestellte Fragen \{#faq}
 
+{
 <ExpandableCard
 title="Sobald ich eine Auszahlungsadresse angegeben habe, kann ich diese dann auf eine alternative Auszahlungsadresse ändern?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Nein, der Prozess zur Bereitstellung von Auszahlungsberechtigungen ist ein einmaliger Prozess und kann nach der Einreichung nicht mehr geändert werden.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Warum kann eine Auszahlungsadresse nur einmal festgelegt werden?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Abhebungsadressen können entweder ein intelligenter Vertrag sein (durch seinen 
 
 Als Alternative zur Änderung der Auszahlungsadresse für einen bestimmten Validator können sich Benutzer dafür entscheiden, einen intelligenten Vertrag als ihre Auszahlungsadresse festzulegen, der Schlüsselrotationen handhaben könnte, wie zum Beispiel ein Safe. Benutzer, die ihre Mittel auf ihr eigenes extern kontrolliertes Konto (EOA) setzen, können einen vollständigen Ausstieg durchführen, um all ihre gestakten Mittel abzuheben, und dann mit neuen Anmeldeinformationen erneut staken.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Was ist, wenn ich Staking-Token habe oder am Pool-Staking teilnehme"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Wenn Sie Teil eines <a href="/staking/pools/">Staking-Pools</a> sind oder Stakin
 Im Allgemeinen sollten Benutzer in der Lage sein, ihr zugrundeliegendes gestaktes ETH zurückzufordern oder zu ändern, welchen Staking-Anbieter sie nutzen. Wenn ein bestimmter Pool zu groß wird, können Mittel abgezogen, eingelöst und mit einem <a href="https://rated.network/">kleineren Anbieter</a> neu gestaked werden. Oder, wenn Sie genug ETH angesammelt haben, könnten Sie <a href="/staking/solo/">von zu Hause aus staken</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Erfolgen Belohnungszahlungen (Teilauszahlungen) automatisch?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Ja, solange Ihr Validator eine Auszahlungsadresse bereitgestellt hat. Diese muss einmal bereitgestellt werden, um Auszahlungen zu ermöglichen, danach werden Belohnungszahlungen automatisch alle paar Tage mit jedem Durchlauf des Validators ausgelöst.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Erfolgen vollständige Auszahlungen automatisch?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Nein, wenn Ihr Validator noch aktiv im Netzwerk ist, erfolgt keine automatische 
 Sobald ein Validator den Ausstiegsprozess abgeschlossen hat und vorausgesetzt, das Konto verfügt über Auszahlungsberechtigungen, wird das verbleibende Guthaben <em>dann</em> während des nächsten <a href="#validator-sweeping">Validator-Durchlaufs</a> abgehoben.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kann ich einen individuellen Betrag abheben?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Auszahlungen sind darauf ausgelegt, automatisch durchgeführt zu werden und jegl
 
 Es ist nicht möglich, manuell spezifische Mengen an ETH zur Auszahlung anzufordern.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Ich betreibe einen Validator. Wo kann ich mehr Informationen zur Aktivierung von Auszahlungen finden?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Es wird empfohlen, dass Validatoren die Seite <a href="https://launchpad.ethereu
 Um Ihre Einrichtung zunächst auf einem Testnetz auszuprobieren, können Sie mit dem <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> beginnen.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Kann ich meinen Validator nach dem Verlassen durch Einzahlung von mehr ETH wieder aktivieren?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Nein. Sobald ein Validator ausgetreten ist und sein gesamtes Guthaben abgehoben wurde, werden alle zusätzlichen Einzahlungen auf diesen Validator automatisch während des nächsten Validator-Durchlaufs an die Auszahlungsadresse übertragen. Um ETH erneut zu staken, muss ein neuer Validator aktiviert werden.
 </ExpandableCard>
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

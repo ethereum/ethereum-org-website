@@ -45,7 +45,9 @@ lang: ru
 
 ## Больше любите видео? \{#visual-learner}
 
-<YouTube id="F50OrwV6Uk8" />
+{
+	<YouTube id="F50OrwV6Uk8" />
+}
 
 ## Инструменты для создания децентрализованных приложений \{#dapp-tools}
 

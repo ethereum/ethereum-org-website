@@ -20,7 +20,7 @@ In this article we will analyze [Ryuya Nakamura's ERC-721 contract](https://gith
 This contract is written in [Vyper](https://vyper.readthedocs.io/en/latest/index.html), a Python-like contract language designed to make
 it harder to write insecure code than it is in Solidity.
 
-## The Contract \{##contract}
+## The Contract \{#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -46,7 +46,7 @@ Python.
 
 The first line imports the interface, and the second specifies that we are implementing it here.
 
-### The ERC721Receiver Interface \{##receiver-interface}
+### The ERC721Receiver Interface \{#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -94,7 +94,7 @@ but 256 bits with a specific value.
 
 This function is a `view`, which means it can read the state of the blockchain, but not modify it.
 
-### Events \{##events}
+### Events \{#events}
 
 [Events](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)
 are emitted to inform users and servers outside of the blockchain of events. Note that the content of events
@@ -161,7 +161,7 @@ but that doesn't work for ERC-721 because the tokens are not fungible. This is t
 
 The `approved` value tells us whether the event is for an approval, or the withdrawal of an approval.
 
-### State Variables \{##state-vars}
+### State Variables \{#state-vars}
 
 These variables contain the current state of the tokens: which ones are available and who owns them. Most of these
 are `HashMap` objects, [unidirectional mappings that exist between two types](https://vyper.readthedocs.io/en/latest/types.html#mappings).
@@ -225,11 +225,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) specifies a mechanism for a contract to disclose how applications
 can communicate with it, to which ERCs it conforms. In this case, the contract conforms to ERC-165 and ERC-721.
 
-### Functions \{##functions}
+### Functions \{#functions}
 
 These are the functions that actually implement ERC-721.
 
-#### Constructor \{##constructor}
+#### Constructor \{#constructor}
 
 ```python
 @external
@@ -256,7 +256,7 @@ with `"""`), and not using it in any way. These comments can also include
 
 To access state variables you use `self.<variable name>` (again, same as in Python).
 
-#### View Functions \{##views}
+#### View Functions \{#views}
 
 These are functions that do not modify the state of the blockchain, and therefore can be executed for
 free if they are called externally. If the view functions are called by a contract they still have to be executed on
@@ -367,7 +367,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 This function checks if `_operator` is allowed to manage all of `_owner`'s tokens in this contract.
 Because there can be multiple operators, this is a two level HashMap.
 
-#### Transfer Helper Functions \{##transfer-helpers}
+#### Transfer Helper Functions \{#transfer-helpers}
 
 These functions implement operations that are part of transferring or managing tokens.
 
@@ -490,7 +490,7 @@ we want only a single location in the code where we do it to make auditing easie
 
 To emit an event in Vyper you use a `log` statement ([see here for more details](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Transfer Functions \{##transfer-funs}
+#### Transfer Functions \{#transfer-funs}
 
 ```python
 
@@ -619,7 +619,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Mint New Tokens and Destroy Existing Ones \{##mint-burn}
+#### Mint New Tokens and Destroy Existing Ones \{#mint-burn}
 
 The account that created the contract is the `minter`, the super user that is authorized to mint
 new NFTs. However, even it is not allowed to burn existing tokens. Only the owner, or an entity
@@ -689,14 +689,14 @@ Anybody who is allowed to transfer a token is allowed to burn it. While a burn a
 transfer to the zero address, the zero address does not actually receives the token. This allows us to
 free up all the storage that was used for the token, which can reduce the gas cost of the transaction.
 
-# Using this Contract \{##using-contract}
+# Using this Contract \{#using-contract}
 
 In contrast to Solidity, Vyper does not have inheritance. This is a deliberate design choice to make the
 code clearer and therefore easier to secure. So to create your own Vyper ERC-721 contract you take [this
 contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) and modify it
 to implement the business logic you want.
 
-# Conclusion \{##conclusion}
+# Conclusion \{#conclusion}
 
 For review, here are some of the most important ideas in this contract:
 

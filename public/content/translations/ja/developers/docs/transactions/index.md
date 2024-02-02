@@ -172,7 +172,9 @@ Alice のアカウントに **+1.0 ETH**振り込み
 
 トランザクション、ガス、マイニングに関する Austin の説明動画をご覧ください。
 
-<YouTube id="er-0ihqFQB0" />
+{
+	<YouTube id="er-0ihqFQB0" />
+}
 
 ## 型付トランザクションエンベロープ(Typed Transaction Envelope) \{#typed-transaction-envelope}
 

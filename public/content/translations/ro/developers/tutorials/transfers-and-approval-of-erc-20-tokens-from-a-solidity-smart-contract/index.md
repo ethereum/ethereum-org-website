@@ -193,7 +193,9 @@ Dacă totul merge bine, ar trebui să vedeţi 2 evenimente (un `„Transfer”` 
 
 ![Două evenimente în tranzacție: „Transfer” și „Sold”](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 În acest tutorial am văzut cum să verificăm soldul și alocația permisă de tokenurile ERC-20 și de asemenea cum să apelăm `„Transfer”` și `„TransferFrom”` ale unui contract inteligent ERC20 folosind interfața.
 

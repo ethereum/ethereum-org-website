@@ -8,7 +8,9 @@ lang: fr
 
 _Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à l'échelle L2, chacune ayant des avantages et des inconvénients. À mesure qu'augmente le nombre de protocoles blockchain, [la demande de déplacement d'actifs entre les chaînes](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)) augmente aussi. Pour répondre à cette demande, nous avons besoin de ponts._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Que sont les ponts ? \{#what-are-bridges}
 
@@ -37,7 +39,9 @@ Les ponts permettent :
 
 [Comment transférer des jetons aux réseaux de secondes couches](/guides/how-to-use-a-bridge/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Exemple d'utilisation d'un pont \{#bridge-use-cases}
 
@@ -63,7 +67,9 @@ Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez
   Vous pouvez également faire tout ce qui précède en utilisant un <a href="/get-eth/">échange centralisé</a>. Cependant, à moins que vos fonds ne soient déjà mêlés à un échange, cela impliquerait plusieurs étapes et il serait probablement préférable d'utiliser un pont.
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Type de pont \{#types-of-bridge}
 
@@ -93,7 +99,9 @@ L'enregistrement automatique s'apparente à un modèle risqué car il supprime l
 
 De nombreuses solutions de transition adoptent des modèles entre ces deux extrêmes, avec des degrés de confiance variables.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Risques liés à l'utilisation de ponts \{#bridge-risk}
 
@@ -119,7 +127,9 @@ Un piratage a récemment eu lieu sur le pont Wormhole de Solana, [où 120k wETH 
 
 Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum, et même pour les utilisateurs qui veulent explorer différents écosystèmes. Cependant, étant donné les risques liés à l'interaction avec les ponts, les utilisateurs doivent comprendre les compromis que font les ponts. Voici [des stratégies pour la sécurité transversale](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
-<Divider />
+{
+	<Divider />
+}
 
 ## En savoir plus \{#further-reading}
 

@@ -114,9 +114,13 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 Посмотрите, как Остин описывает хэш-функции и пары ключей.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## Дополнительные ресурсы \{#further-reading}
 

@@ -10,6 +10,7 @@ isOutdated: true
 
 Oś czasu wszystkich najważniejszych kamieni milowych, forków i aktualizacji blockchainu Ethereum.
 
+{
 <ExpandableCard title="Czym są forki?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Forki powstają, gdy w sieci trzeba wprowadzić istotne aktualizacje techniczne lub zmiany – zazwyczaj wynikają one z p ropozycji ulepszeń Ethereum [Ethereum Improvement Proposals (EIP)](/eips/) i zmieniają „zasady” protokołu.
@@ -19,6 +20,7 @@ Gdy potrzebne są aktualizacje w tradycyjnym, centralnie sterowanym oprogramowan
 Te zmiany reguł mogą spowodować tymczasowy podział w sieci. Nowe bloki można wytwarzać według nowych lub starych zasad. Forki są zwykle uzgadniane z wyprzedzeniem, tak aby klienci przyjęli zmiany jednomyślnie, a fork z aktualizacjami stał się głównym łańcuchem. Jednak w rzadkich przypadkach nieporozumienia dotyczące forków mogą spowodować trwały rozłam w sieci — przykładem jest powstanie Ethereum Classic z [DAO fork](#dao-fork).
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -44,6 +46,7 @@ Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 - [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIP London" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – _wprowadza ulepszenia rynku opłat transakcyjnych_
@@ -53,6 +56,7 @@ Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 - [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – _opóźnia Epokę Lodowcową do grudnia 2021_
 
 </ExpandableCard>
+}
 
 ---
 
@@ -67,6 +71,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 - [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIP Berlin" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – _obniża koszt gazu ModExp_
@@ -75,6 +80,7 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – _dodaje opcjonalne listy dostępu_
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -123,11 +129,13 @@ Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficu
 - [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Przeczytaj objaśnienie Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="EIP Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) - _opóźnia bombę trudności o kolejne 4 000 000 bloków, lub ~611 dni._
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -149,6 +157,7 @@ Fork Istanbul:
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP Istanbul" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) – _umożliwia Ethereum korzystanie z waluty chroniącej prywatność takiej jak Zcash._
@@ -159,6 +168,7 @@ Fork Istanbul:
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) – _inne zmiany dotyczące cen gazu dla kodów operacyjnych._
 
 </ExpandableCard>
+}
 
 ---
 
@@ -176,6 +186,7 @@ Fork Constantinople:
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP Constantinople" contentPreview="Official improvements included in this fork.">
 
 - [EIP-145] (https://eips.ethereum.org/EIPS/eip-145) – _optymalizuje koszt niektórych działań w łańcuchu._
@@ -184,6 +195,7 @@ Fork Constantinople:
 - [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – _upewnia się, że blockchain nie zawiesza się przed sprawdzeniem proof-of-stake._
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -204,6 +216,7 @@ Fork Byzantium:
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIP Byzantium" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) – _dodaje kod operacyjny `REVERT._
@@ -217,6 +230,7 @@ Fork Byzantium:
 - [EIP-649](https://eips.ethereum.org/EIPS/eip-649) – _opóźnia [bombę trudności](/glossary/#difficulty-bomb) o 1 rok i zmniejsza nagrody za blok z 5 do 3 ETH._
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -236,6 +250,7 @@ Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi)
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIP Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) – _zapobiega ponownemu przesyłaniu transakcji z jednego łańcucha Ethereum do innego łańcucha, na przykład transakcji w sieci testowej do głównego łańcucha Ethereum._
@@ -244,6 +259,7 @@ Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi)
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) – _zmienia maksymalny dozwolony rozmiar kodu kontraktu w blockchainie na 24576 bajty._
 
 </ExpandableCard>
+}
 
 ---
 
@@ -259,12 +275,14 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usłu
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EIP Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – _zwiększa koszty gazu w kodach operacyjnych, które można wykorzystać w atakach spamowych._
 - [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – _redukuje rozmiar stanu, usuwając dużą liczbę pustych kont, które zostały wprowadzone w stan bardzo niskim kosztem z powodu błędów we wcześniejszych wersjach protokołu Ethereum._
 
 </ExpandableCard>
+}
 
 ---
 
@@ -294,6 +312,7 @@ Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sie
 
 [Przeczytaj ogłoszenie Fundacji Ethereum](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIP Homestead" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – _dokonuje zmian w procesie tworzenia kontraktu._
@@ -301,6 +320,7 @@ Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sie
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – _wprowadza wymagania zgodności w przód z devp2p_
 
 </ExpandableCard>
+}
 
 <Divider />
 

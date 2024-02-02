@@ -37,7 +37,9 @@ Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i pro
 
 ### Come mi preparo? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Avvisi importanti \{#important-notices}
 
@@ -76,7 +78,9 @@ Che un dato validatore sia o meno idoneo per un prelievo è determinato dallo st
 
 Dai un'occhiata a questa spiegazione dei prelievi di staking di Ethereum, di Finematics:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### "Pulizia" dei validatori \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Come vedi, la frequenza rallenta con l'aumento dei validatori sulla rete. Un aum
 
 ## Domande frequenti \{#faq}
 
+{
 <ExpandableCard
 title="Una volta fornito un indirizzo di prelievo, posso modificarlo con un altro indirizzo di prelievo?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 No, il processo per fornire le credenziali di prelievo è una tantum e queste non sono modificabili una volta inviate.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Perché un indirizzo di prelievo è impostabile solo una volta?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Gli indirizzi di prelievo possono essere un contratto intelligente (controllato 
 
 Come alternativa alla modifica dell'indirizzo di prelievo per un dato validatore, gli utenti potrebbero scegliere di impostare un contratto intelligente come proprio indirizzo di prelievo che potrebbe gestirebbe la rotazione delle chiavi, come Safe. Gli utenti che impostano i propri fondi al proprio EOA possono eseguire un'uscita completa per prelevare tutti i propri fondi in staking, per poi rimetterli in staking utilizzando nuove credenziali.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Cosa succede se partecipo token di staking o a staking in pool"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Se fai parte di un <a href="/staking/pools/">pool di staking</a> o detieni token
 In generale, gli utenti dovrebbero essere liberi di rivendicare i propri ETH in staking sottostanti, o di modificare il fornitore di staking che utilizzano. Se un pool in particolare sta diventando troppo grande, è possibile uscire, riscattare i fondi e rimetterli in staking con un <a href="https://rated.network/">fornitore di dimensioni minori</a>. O, se hai accumulato abbastanza ETH, potresti <a href="/staking/solo/">fare staking da casa</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="I pagamenti delle ricompense (prelievi parziali) si verificano automaticamente?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Sì, a condizione che il tuo validatore abbia fornito un indirizzo di prelievo. Questo deve essere fornito una volta per abilitare inizialmente qualsiasi prelievo, poi i pagamenti delle ricompense saranno innescati automaticamente a intervalli di pochi giorni, a ogni pulizia del validatore.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="I prelievi completi si verificano automaticamente?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ No, se il tuo validatore è ancora attivo sulla rete, un prelievo completo non s
 Una volta che un validatore ha completato il procedimento di uscita e supponendo che il conto abbia le credenziali di prelievo, il saldo rimanente sarà <em>then</em> prelevato durante la successiva<a href="#validator-sweeping">pulizia del validatore</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Posso prelevare un importo personalizzato?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ I prelievi sono progettati per avvenire automaticamente, trasferendo qualsiasi E
 
 Non è possibile richiedere manualmente importi specifici di ETH da prelevare.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Gestisco un validatore. Dove posso trovare ulteriori informazione sull'abilitazione dei prelievi?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Gli operatori del validatore dovrebbero visitare la pagina dei <a href="https://
 Per testare la tua configurazione su una rete di prova, visita prima il <a href="https://goerli.launchpad.ethereum.org">Launchpad di Staking della Rete di Prova di Goerli</a> per iniziare.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Posso riattivare il mio validatore dopo esser uscito, depositando altri ETH?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 No. Una volta che un validatore è uscito e che il suo intero saldo è stato prelevato, qualsiasi fondo aggiuntivo depositato a quel validatore sarà automaticamente trasferito all'indirizzo di prelievo durante la pulizia successiva del validatore. Per rimettere gli ETH in staking, deve essere abilitato un nuovo validatore.
 </ExpandableCard>
+}
 
 ## Letture consigliate \{#further-reading}
 

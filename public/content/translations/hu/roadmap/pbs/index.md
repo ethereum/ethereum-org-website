@@ -18,11 +18,13 @@ Például bekerülési listákat tud adni a javaslattevő, hogy a tudomására j
 
 [A titkosított memóriakészletek](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) nem teszik lehetővé az építő és a javaslattevő számára, hogy tisztában legyenek a blokkba foglalt tételekkel, csak miután az már elküldésre került.
 
+{
 <ExpandableCard title="Milyen fajta cenzúrát old meg a PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 A nagyobb hatalommal bíró szervezetek nyomást gyakorolhatnak a validátorokra, hogy zárjanak ki bizonyos címekre menő vagy onnan jövő tranzakciókat. A validátorok ennek megfelelően beazonosíthatják a feketelistás tételeket a tranzakciógyűjtőben és kihagyhatják azokat a javasolt blokkból. A PBS után ez nem lehetséges, mert a javaslattevő nem fogja tudni, hogy milyen tranzakciók szerepelnek az általa elküldött blokkban. Bizonyos egyéneknek vagy alkalmazásoknak talán fontos lehet bizonyos cenzúraszabályoknak megfelelni, amikor az adott régióban azt törvény szabályozza. Ezekben az esetekben a szabálynak való megfelelés az alkalmazás szintjén történik, így a protokoll továbbra is engedélymentes és cenzúramentes marad.
 
 </ExpandableCard>
+}
 
 ## A PBS és a MEV \{#pbs-and-mev}
 
@@ -30,10 +32,12 @@ A **maximálisan kinyerhető érték (MEV)** arra utal, amikor a validátorok ma
 
 A PBS úgy oldja meg ezt a problémát, hogy újrakonfigurálja a MEV gazdasági helyzetét. Ahelyett, hogy a blokk javaslattevője végezne saját MEV keresést, egyszerűen felvesz egy blokkot a neki felajánlottak közül, amelyet a blokképítők készítettek. A blokk építői végezhetnek szofisztikált MEV-kinyerést, de ennek nyeresége a javaslattevőhöz jut. Tehát még ha a MEV kinyerést dominánsan néhány specializált blokképítő végzi, ennek jutalma a hálózat bármelyik validátorához kerülhet, beleértve az egyéni, otthoni letétbe helyezőket.
 
+{
 <ExpandableCard title="Miért elfogadható, ha a blokképítés centralizálódik?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Az egyéneket arra motiválhatja, hogy egyéni letétbe helyezés helyett inkább készletekbe tegyék a letétet, mert a szofisztikált MEV-stratégiák miatt az nagyobb nyereséget kínál. A blokk építőjének és javaslattevőjének elkülönítése azt jelenti, hogy a kinyert MEV több validátornál kerül elosztásra, nem pedig a leghatékonyabb MEV-kinyerőnél központosul. Emellett a specializált blokképítők levehetik az egyénekről a blokk készítésének terhét, megakadályozhatják, hogy az egyének saját maguknak vegyenek ki MEV-et a validálás során, miközben maximalizálják az egyéni, független validátorok számát, akik jóhiszemű módon képesek ellenőrizni a blokkokat. A fontos koncepció a „bizonyító-ellenőrző aszimmetria”, amelynek lényege, hogy a centralizált blokklétrehozás rendben van addig, amíg robosztus és maximálisan decentralizált validátorhálózat áll rendelkezésre a blokkok jóhiszemű igazolásához. A decentralizáció egy eszköz, nem pedig végcél – valós blokkokat szeretnénk elérni.
 </ExpandableCard>
+}
 
 ## A PBS és a Danksharding \{#pbs-and-danksharding}
 

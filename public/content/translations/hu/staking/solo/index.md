@@ -45,27 +45,37 @@ Saját csomópont működtetéséhez meg kell tanulni a választott szoftver has
 
 Minél többet tud a választott szoftverről és a proof-of-stake működéséről, annál kevésbé kockázatos a letétbe helyezés, illetve a felmerülő problémák kezelése a csomópont-operátor szerepében.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Számítógépes tapasztalat" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 A csomópont beállításához egy bizonyos szintű számítógépes gyakorlat szükséges, habár az új eszközök egyre inkább megkönnyítik ezt a feladatot is. A parancssoros felhasználói felület (command-line interface) ismerete hasznos, de nem elengedhetetlen.
 
 Alapvető hardverösszeállításra, illetve a javasolt minimális specifikáció megértésére van szükség.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Biztonságos kulcskezelés" eventCategory="SoloStaking" eventName="clicked secure key management">
 Ahogy a privát kulcs biztosítja az Ethereum-címet, úgy a validátorhoz is létre kell hozni kulcsokat. Tudnia kell, hogyan tartsa a kulcsmondatokat vagy privát kulcsokat biztos helyen.{' '}
 
 <a href="/security/">Ethereum biztonság és csalásmegelőzés</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Maintenance" eventCategory="SoloStaking" eventName="clicked maintenance">
 A hardver néha leáll, a hálózati kapcsolat hibára fut, a kliensszoftvert néha frissíteni kell. A csomópont karbantartása elkerülhetetlen, ezzel foglalkozni kell. Muszáj naprakésznek lennie minden várható hálózati frissítésről vagy más kritikus kliensfrissítésről.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Megbízható üzemidő" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 A jutalmazás annak arányában történik, hogy a validátor mennyi időt van online és megfelelő módon végzi-e a tanúsítást. A leállás miatti büntetések annak függvényében vannak megállapítva, hogy ugyanakkor hány validátor volt még offline, ez azonban <a href="#faq">nem von maga után súlyos büntetést és kizárást (slashing)</a>. A sávszélesség is számít, mert a tanúsításért járó jutalmak csökkenek, ha azok nem érkeznek meg időben. A szükséges paraméterek változhatnak, de érdemes legalább 10 Mb/s fel- és letöltési sebességgel számolni.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="A súlyos büntetés és kizárás (slashing) kockázata" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Az inaktív állapot miatti büntetéstől különbözik a <em>súlyos büntetéssel egybekötött kizárás (slashing)</em>, ami rosszhiszemű vétségekért jár. Ha kisebbségi klienst használ és a kulcsokat csak egy gépre tölti fel, akkor a slashing kockázata minimális. Ettől függetlenül minden letétbe helyezőnek szembe kell néznie a slashing kockázatával.
 
@@ -73,11 +83,15 @@ Az inaktív állapot miatti büntetéstől különbözik a <em>súlyos bünteté
 </ExpandableCard>
 </InfoGrid>
 
-<StakingComparison page="solo" />
+{
+	<StakingComparison page="solo" />
+}
 
 ## Hogyan működik \{#how-it-works}
 
-<StakingHowSoloWorks />
+{
+	<StakingHowSoloWorks />
+}
 
 Mialatt Ön aktív, ETH jutalmakat kap, melyeket rendszeresen elhelyeznek a visszavonási számlán.
 
@@ -89,7 +103,9 @@ Bármikor kiléphet a validátor szerepéből, így nem kell online lennie, és 
 
 A Staking Launchpad egy nyílt forráskódú alkalmazás, ami segít a letétbe helyezés folyamatában. Végigvezeti Önt a szükséges lépéseken, mint a kliensek kiválasztása, a kulcsok létrehozása és az ETH letétbe helyezése a letéti szerződésbe. Egy ellenőrzőlistán is végigveheti, hogy minden a rendelkezésre áll, hogy biztonsággal működjön a validátora.
 
-<StakingLaunchpadWidget />
+{
+	<StakingLaunchpadWidget />
+}
 
 ## Mit kell figyelembe venni a csomópont- és kliensbeállító eszközöknél \{#node-tool-considerations}
 
@@ -97,17 +113,23 @@ Az önálló letétbe helyezést segítő eszközök és szolgáltatások száma
 
 Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket vagy gyengeségeket, melyekkel a listázott letéti eszközök rendelkezhetnek. Ez alapján Ön is megértheti, hogy e jellemzőket hogyan határoztuk meg, és így könnyebben választhat a szükséges eszközök közül.
 
-<StakingConsiderations page="solo" />
+{
+	<StakingConsiderations page="solo" />
+}
 
 ## Fedezze fel a csomópont- és kliensbeállító eszközöket \{#node-and-client-tools}
 
 Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A fenti jellemzőket használva megértheti az alábbi eszközökben rejlő lehetőségeket.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### Csomóponteszközök
 
-<StakingProductsCardGrid category="nodeTools" />
+{
+	<StakingProductsCardGrid category="nodeTools" />
+}
 
 Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok az eszközök, amelyek a kisebbségi kliens beállítást támogatják, a <em style={{ textTransform: "uppercase" }}>többklienses</em> jellemzővel vannak jelölve
 
@@ -115,24 +137,31 @@ Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](
 
 Ezek alternatív eszközök a [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) mellett, hogy a kulcsok le legyenek generálva.
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 
 ## Nézze meg az önálló letétbe helyezés útmutatóit \{#staking-guides}
 
-<StakingGuides />
+{
+	<StakingGuides />
+}
 
 ## Gyakran ismételt kérdések \{#faq}
 
 Ezek a leggyakrabban felmerülő kérdések a letétbe helyezés kapcsán, melyről érdemes Önnek is tudnia.
 
+{
 <ExpandableCard title="Mi az a validátor?">
 
 A <em>validátor</em> egy virtuális entitás, ami az Ethereumon működik és a protokoll konszenzusfolyamatában vesz részt. A validátort az egyenleg, a nyilvános kulcs és más tulajdonságok jellemzik. A <em>validátorkliens</em> az a szoftver, ami a validátor nevében működik, tárolva és felhasználva annak privát kulcsát. Egy validátorkliens több kulcspárt is tárolhat, így több validátort is üzemelhet.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Letétbe helyezhetek több mint 32 ETH-t?">
 A validátorhoz tartozó kulcspár pontosan 32 ETH összeget igényel ahhoz, hogy aktívvá váljon. Ha a kulcsokhoz több ETH kerül letétbe, az nem növeli meg a jutalmak lehetőségét, mert a validátor <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">érvényes egyenlege</a> 32 ETH. Tehát a letétbe helyezés 32 ETH összegenként történik, melyekhez saját kulcs és egyenleg tartozik.
 
@@ -140,7 +169,9 @@ Egy validátorhoz ne kössön le többet, mint 32 ETH. Ez nem hoz több nyeres�
 
 Ha az önálló letétbe helyezés túl nagy erőfeszítést igényelne Öntől, akkor nézze meg a <a href="/staking/saas/">letétbe helyezés, mint szolgáltatás</a> opcióit, vagy ha kevesebb mint 32 ETH összegről van szó, akkor fontolja meg a <a href="/staking/pools/">letéti alapok</a> szolgáltatást.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Súlyos büntetéssel és kizárással jár, ha offline a validátorom? (Röviden: nem.)">
 Nem vezet súlyos büntetéshez és kizáráshoz (slashing) az, ha a validátor offline, de a hálózat állapota megfelelő. Kis mértékű <em>inaktivitási büntetések</em> várhatók, ha a validátor nem elérhető a tanúsításhoz egy adott korszakban (mely 6,4 perc hosszú), ez azonban különbözik a <em>súlyos büntetéssel járó kizárástól (slashing)</em>. A kis büntetések kicsit kevesebbek, mint az a jutalom, amit a validátor a tanúsításért kapott volna, az elvesztett pénzt pedig vissza lehet nyerni ugyanannyi online töltött idővel.
 
@@ -148,7 +179,9 @@ Az inaktivitási büntetés mértéke függ attól, hogy ugyanabban az időben m
 
 Szélsőséges esetben, ha a hálózat nem tud állapotot frissíteni, mert a validátorok harmada offline van, akkor ezek a felhasználók a <em>kvadratikus inaktivitási elszivárgást</em> szenvedik el, vagyis a validátorszámlákról exponenciálisan kiáramlik az ETH. Ezzel a rendszer végül képes helyrebillenteni magát azáltal, hogy az inaktív validátorok ETH-jét elégeti, amíg az egyenlegük 16 ETH lesz és ezzel automatikusan kilökődnek a validátorok közül. A megmaradó online validátorok végül teljesítik a több mint 2/3 arányt, kielégítve a túlnyomó többség elvét, hogy a lánc állapota megint frissítve legyen.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Hogyan biztosíthatom, hogy ne zárjanak ki?">
 Röviden, bár nem lehet garantálni, de a slahing kockázata szinte nulla, hogy ha jóhiszeműen jár el, kisebbségi klienst használ, az aláíró kulcsokat pedig csak egy gépen tartja.
 
@@ -163,7 +196,9 @@ A <em>kisebbségi kliensben lévő hiba nem fog végleges állapotot eredményez
   <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Tudjon meg többet a súlyos büntetés és kizárás (slashing) elkerüléséről</a></li>
 </ul>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Melyik kliens a legjobb?">
 Az egyéni kliensek esetében kicsit különböző a teljesítmény, a felhasználói felület, mivel mindet különböző csapatok fejlesztik, különböző programozási nyelveken. Így nincsen „legjobb” kliens. Az összes működő kliens kiváló szoftver, melyek működési elve azonos, hogy szinkronizáljanak és kapcsolódjanak a blokklánchoz.
 
@@ -171,7 +206,9 @@ Mivel az összes kliens ugyanazokat az alapvető funkcionalitásokat kínálja, 
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Tudjon meg többet arról, hogy kliensdiverzitás miért kritikus fontosságú</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Használhatok VPS-t (virtual private server)?">
 Habár a virtuális privát szerver (VPS) használható az otthoni hardver helyett, a validátorkliens fizikai elérhetősége és helye <em>igenis számít</em>. A centralizált felhőszolgáltatások, mint az Amazon Web Services vagy a Digital Ocean, lehetővé teszik, hogy nem kell hardvert venni és működtetni, de ez hatással van a hálózat centralizáltságára.
 
@@ -179,7 +216,9 @@ Minél több validátorkliens működik ugyanazon a centralizált felhőszolgál
 
 Az offline büntetések arányosak azzal, hogy hány validátor van még offline ugyanakkor. A VPS használata megnöveli az offline büntetés várható mértékét, a kvadratikus elszivárgás vagy akár a slashing kockázatát is, ha a kimaradás kellően nagy mértékű. A saját és a hálózat kockázatát minimalizálandó a felhasználó jobban jár, ha saját hardvert szerez és üzemeltet.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Hogyan juthatok hozzá a jutalmakhoz vagy kaphatom vissza a letétbe helyezett ETH-t?">
 
 A Beacon-láncról való visszavonáshoz be kell állítani a visszavonási adatokat.
@@ -192,6 +231,7 @@ A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési 
 
 <ButtonLink to="/staking/withdrawals/">Bővebben a letétbe helyezés visszavonásáról</ButtonLink>
 </ExpandableCard>
+}
 
 ## További olvasnivaló \{#further-reading}
 

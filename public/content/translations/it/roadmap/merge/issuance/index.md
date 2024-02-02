@@ -14,6 +14,7 @@ Possiamo spezzare la fornitura di ETH in due forze principali: emissione e bruci
 
 L'**emissione** di ETH è il procedimento di creazione di ETH, che precedentemente non esisteva. La **bruciatura** di ETH è quando gli ETH esistenti vengono distrutti, rimuovendoli dalla circolazione. Il tasso di emissione e bruciatura viene calcolato su diversi parametri e, il saldo tra di essi, determina il tasso di inflazione/deflazione di ether risultante.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="Tldr sull'emissione di ETH">

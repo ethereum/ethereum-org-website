@@ -8,7 +8,9 @@ lang: ca
 
 A mesura que creix l'interès en les criptomonedes, és essencial aprendre les millors pràctiques que cal seguir a l'utilitzar-les. Les criptomonedes poden ser divertides i emocionants, però també comporten riscs seriosos. Si feu aquesta mica de treball per endavant, podeu mitigar els riscs.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Seguretat web 101 \{#web-security}
 
@@ -88,7 +90,9 @@ Per aquells que vulgueu continuar amb la 2FA, considereu utilitzar una clau de s
 
 Mireu aquest vídeo amb més informació sobre la 2FA:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Desinstal·leu les extensions del navegador \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ Les extensions del navegador com les extensions de Chrome o els complements de F
 
 [Més informació sobre els riscs de les extensions del navegador](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Criptoseguretat 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ Una de les majors causes perquè la gent sigui estafada en criptomonedes és gen
 <DocLink to="/eth/">
   Què és l'ether?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Protecció de la cartera \{#wallet-security}
 
@@ -158,7 +166,9 @@ Quan interactueu amb contractes intel·ligents, no permeteu límits de despesa i
 
 Algunes carteres d'Ethereum ofereixen protecció de límits per a salvaguardar els comptes contra el seu buidatge.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Estafes habituals \{#common-scams}
 
@@ -262,7 +272,9 @@ Les estafes d'enviament involucren que un projecte d'estafa enviï un actiu (NFT
 
 [Més informació sobre l'estafa d'enviament](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Llegir-ne més \{#further-reading}
 

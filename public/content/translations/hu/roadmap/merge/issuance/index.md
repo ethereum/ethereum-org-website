@@ -14,6 +14,7 @@ A ETH-kínálatot két elsődleges erő irányítja: a kibocsátás és az elég
 
 Az ETH **kibocsátása** az a folyamat, amikor olyan ETH-t hoznak létre, amely korábban nem létezett. Az ETH **elégetése** az a folyamat, amikor a létező ETH-t megsemmisítik, ezzel kivonva azt a körforgásból. A kibocsátás és elégetés rátája számos paraméter alapján kerül kiszámításra, és az ezek közötti egyensúly határozza meg az ether inflációs/deflációs rátáját.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="Az ETH-kibocsátásról röviden">

@@ -65,7 +65,9 @@ Une attaque plus sophistiquée peut diviser l'ensemble des validateurs honnêtes
 
 Les **attaques de rebond** sont similaires. Les votes sont à nouveau retenus par les validateurs attaquants. Au lieu de libérer les votes pour maintenir une répartition égale entre deux fourches, ils utilisent leurs votes à des moments opportuns pour justifier des points de contrôle qui alternent entre le choix A et le choix B. Cette alternance de justification entre deux fourches empêche qu'il y ait des paires de points de contrôle source et cible justifiés qui peuvent être finalisés sur l'une ou l'autre chaîne, bloquant ainsi la finalité.
 
-<YouTube id="xcPxwhrg3Ao"/>
+{
+	<YouTube id="xcPxwhrg3Ao"/>
+}
 
 Les attaques de rebond et d'équilibrage dépendent de la capacité de l'attaquant à contrôler très précisément la synchronisation des messages à travers le réseau, ce qui est peu probable. Néanmoins, des défenses sont intégrées au protocole sous la forme d'un poids supplémentaire accordé aux messages rapides par rapport aux messages lents. Ceci est connu sous le nom de [renforcement du poids du proposeur](https://github.com/ethereum/consensus-specs/pull/2730). Pour se défendre contre les attaques de rebond, l'algorithme de choix de fourche a été mis à jour afin que le dernier point de contrôle justifié ne puisse passer à celui d'une chaîne alternative que pendant [le premier tiers des créneaux de chaque période](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114). Cette condition empêche l'attaquant de cumuler des votes pour les déployer plus tard - l'algorithme de choix de fourche reste simplement fidèle au point de contrôle qu'il a choisi lors du premier tiers de l'époque, période pendant laquelle la plupart des validateurs honnêtes auraient voté.
 

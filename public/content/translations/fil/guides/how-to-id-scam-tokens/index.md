@@ -15,6 +15,7 @@ May dalawa silang paraan upang lokohin ka:
 
 Upang ipakita kung ano ang mga scam token, at kung paano matukoy ang mga ito, titingnan natin ang halimbawa nito: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Sinusubukan ng token na ito na magmukhang lehitimong [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
+{
 <ExpandableCard
 title="Ano ang ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Ang Arbitrum ay isang organisasyon na nagde-develop at namamahala ng <a href="/developers/docs/scaling/optimistic-rollups/">mga optimistic rollup</a>. Sa simula, ang Arbitrum ay itinatag bilang isang for-profit na kumpanya, ngunit kumilos ito para mag-decentralize. Bilang bahagi ng prosesong iyon, naglabas ito ng tradeable na <a href="/dao/#token-based-membership">governance token</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Bakit tinatawag na wARB ang scam token?"
 contentPreview=''>
@@ -32,11 +35,13 @@ May isang kasanayan sa Ethereum na kapag hindi nakakatugon sa ERC-20 ang isang a
 Hindi makatwirang gumawa ng wrapped na bersyon ng isang ERC-20 token na nasa Ethereum na, ngunit umaasa ang mga scammer sa pagmumukhang legitimate sa halip na sa katotohanan.
 
 </ExpandableCard>
+}
 
 ## Paano gumagana ang mga scam token? \{#how-do-scam-tokens-work}
 
 Ang layunin talaga ng Ethereum ay decentralization. Ibig sabihin nito, walang central na awtoridad na puwedeng kumumpiska ng iyong mga asset o pumigil sa iyong mag-deploy ng smart contract. Ngunit ibig sabihin rin nito, puwedeng mag-deploy ng anumang smart contract ang mga scammer.
 
+{
 <ExpandableCard
 title="Ano ang mga matalinong kontrata?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 Ang <a href="/developers/docs/smart-contracts/">mga smart contract</a> ang mga program na tumatakbo sa Ethereum blockchain. Halimbawa, ang bawat ERC-20 token ay ipinapatupad bilang isang smart contract.
 
 </ExpandableCard>
+}
 
 Partikular dito, nag-deploy ang Arbitrum ng contract na gumagamit ng simbolong `ARB`. Ngunit, hindi nito napipigilan ang ibang tao na mag-deploy din ng contract na gumagamit ng mismong simbolong iyon, o ng katulad noon. Maitatakda ng gumagawa ng contract ang gagawin ng contract.
 

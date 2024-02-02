@@ -61,8 +61,12 @@ Les cadenes de fragments només poden entrar de forma segura a l'ecosistema Ethe
     Cadenes de fragments
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Interactuar amb la cadena de balisa \{#interact-with-beacon-chain}
 
-<BeaconChainActions />
+{
+	<BeaconChainActions />
+}

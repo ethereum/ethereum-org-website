@@ -50,7 +50,9 @@ Este proceso no debería tardar más de 10 minutos.
 ## 7. Añada la red de la capa 2 seleccionada a su cartera (opcional)
 
 Puede utilizar [chainlist.org](http://chainlist.org) para encontrar los detalles RPC de la red. Una vez que se añada la red y la transacción haya finalizado, deberían aparecer los tókenes en su cartera.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>

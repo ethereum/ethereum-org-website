@@ -22,7 +22,9 @@ A ciência descentralizada permite fontes de financiamento mais diversificadas (
 
 ### Juan Benet - O Movimento DeSci
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## Como DeSci está a melhorar a ciência \{#desci-improves-science}
 

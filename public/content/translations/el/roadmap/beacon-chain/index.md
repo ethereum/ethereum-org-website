@@ -57,8 +57,12 @@ summaryPoint4: Μπορεί να το γνωρίζετε αυτό ως "Φάση
 
 <ButtonLink to="/roadmap/danksharding/">Shard chains</ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Αλληλεπίδραση με την κύρια αλυσίδα \{#interact-with-beacon-chain}
 
-<BeaconChainActions />
+{
+	<BeaconChainActions />
+}

@@ -6,7 +6,9 @@ lang: se
 
 # Ethereum för företag \{#ethereum-for-enterprise}
 
+{
 <FeaturedText>Guider, artiklar och verktyg för offentliga och privata Ethereum-blockchains för företag.</FeaturedText>
+}
 
 ## Varför Enterprise Ethereum? \{#why-enterprise-ethereum}
 

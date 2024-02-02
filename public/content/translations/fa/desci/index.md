@@ -22,7 +22,9 @@ summaryPoint3: بر اساس جنبش علم باز است.
 
 ### خوان بنت - جنبش DeSci
 
-<YouTube id="5ORvbCIW39o" />
+{
+	<YouTube id="5ORvbCIW39o" />
+}
 
 ## چگونه DeSci علم را بهبود می بخشد \{#desci-improves-science}
 

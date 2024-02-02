@@ -7,7 +7,9 @@ lang: it
 
 # Informazioni sulla Ethereum Foundation \{#about-the-ethereum-foundation}
 
-<Logo/>
+{
+	<Logo/>
+}
 
 La [Ethereum Foundation](http://ethereum.foundation/) (EF) è un'organizzazione no-profit dedita al supporto di [Ethereum](/what-is-ethereum/) e delle tecnologie correlate.
 

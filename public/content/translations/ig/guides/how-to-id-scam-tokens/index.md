@@ -15,6 +15,7 @@ E nwere ụzọ abụọ ha nwere ike isi duhie gị:
 
 Iji gosi ihe tokin adigboloja bụ, yana otu e si amata ha, anyị ga-eleba anya n'ihe atụ nke otu: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Tokin na-achọ ịdị ka [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) tokin.
 
+{
 <ExpandableCard
 title="Kedu ihe bụ ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum bụ otu na-etolite ma na-ejikwa <a href="/developers/docs/scaling/optimistic-rollups/">atụmatụ nwere nchekwube</a>. Na mbụ, a haziri Arbitrum dị ka ụlọ ọrụ na-erite uru, mana e mesịa mee ka ọ nọrọ n'etiti. Dịka usoro nke ahụ, ha nyere <a href="/dao/#token-based-membership">tokin gọọmenti nke e nwere ike iregharị</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Kedu ihe kpatara eji akpọ tokin adigboloja wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ E nwere iwu n'Ethereum na mgbe akụ enweghị nkwado ERC-20, anyị emepụta �
 Ọ baghị uru imeputa ụdị tokin ERC-20 e kechiri nke dịvu na Ethereum, mana ndị ojoro na-adabere na nke ziri ezi na-abụghị etu o kwesiri.
 
 </ExpandableCard>
+}
 
 ## Kedu ka tokin adigboloja si arụ ọrụ? \{#how-do-scam-tokens-work}
 
 Ihe niile maka Ethereum bụ ọdịịrịonwe. Nke a pụtara na o nweghị ikike nwere ike ịnara akụ gị maọbụ gbochiere gị iji igwe na-arụ nke aka ya. Mana ọ pụtakwara na ndị adigboloja nwere ike iji ngwa kọmputa ọbụla ha chọrọ.
 
+{
 <ExpandableCard
 title="What are smart contracts?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Ngwa kọmputa</a> bụ ngwaọrụ kọmputa na-arụ ọrụ na blọkchen Ethereum. A na-emejuputa tokin ERC-20 ọ bụla, iji maa atụ, dị ka nkwekọrịta ngwa kọmputa.
 
 </ExpandableCard>
+}
 
 Kpọmkwem, Arbitrum wepụrụ ngwa kọmputa na-eji akara `ARB`. Mana nke ahụ anaghị egbochi ndị ọzọ ibuga ngwa na-eji otu akara ahụ, maọbụ nke yiri ya. Onye ọbụla na-ede ngwa ahụ ga-edozi ihe ngwa ahụ ga-eme.
 

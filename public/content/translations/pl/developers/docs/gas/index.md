@@ -24,7 +24,9 @@ Zasadniczo opłaty za gaz są uiszczane w walucie ojczystej Ethereum, eterze (ET
 
 Film ten oferuje zwięzłe omówienie gazu i powodów jego istnienia:
 
-<YouTube id="AJvzNICwcwc" />
+{
+	<YouTube id="AJvzNICwcwc" />
+}
 
 ## Dlaczego istnieją opłaty za gaz? \{#why-do-gas-fees-exist}
 

@@ -85,4 +85,6 @@ Sie sollten nur Wallets zur Selbstaufbewahrung verwenden, um Ihre POAPs zu beans
 
 ## Mitwirkende \{#contributors}
 
-<Contributors />
+{
+	<Contributors />
+}

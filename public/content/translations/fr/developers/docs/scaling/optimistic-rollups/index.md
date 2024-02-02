@@ -247,13 +247,17 @@ L'introduction de [la fragmentation des données](/roadmap/danksharding/) sur Et
 
 Davantage qu'un apprenant visuel ? Regardez Finematics expliquer les rollups optimistes :
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
 ### Utiliser des rollups optimistes \{#use-optimistic-rollups}
 
 Plusieurs implémentations de rollups optimistes existent, que vous pouvez intégrer dans vos dApps :
 
-<RollupProductDevDoc rollupType="optimistic" />
+{
+	<RollupProductDevDoc rollupType="optimistic" />
+}
 
 ## Autres lectures sur les rollups optimistes
 

@@ -17,7 +17,9 @@ Oracle merupakan sebuah jembatan yang menghubungkan antara blockchain dan dunia 
 
 Tonton Patrick menjelaskan Oracle:
 
-<YouTube id="ZJfkNzyO7-U" start="10" />
+{
+	<YouTube id="ZJfkNzyO7-U" start="10" />
+}
 
 ## Mengapa oracle dibutuhkan? \{#why-are-they-needed}
 

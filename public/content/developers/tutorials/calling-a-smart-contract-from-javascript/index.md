@@ -110,7 +110,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 Remember that DAI ERC20 has 18 decimals which means you need to remove 18 zeros to get the correct amount. uint256 are returned as strings as JavaScript does not handle big numeric values. If you’re not sure [how to deal with big numbers in JS check our tutorial about bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Send: Sending a transaction to a smart contract function \{##send-sending-a-transaction-to-a-smart-contract-function}
+## Send: Sending a transaction to a smart contract function \{#send-sending-a-transaction-to-a-smart-contract-function}
 
 For the second example we’ll call the transfer function of the DAI smart contract to send 10 DAI to our second address. The transfer function accepts two parameters: the recipient address and the amount of token to transfers:
 

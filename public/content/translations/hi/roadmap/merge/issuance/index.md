@@ -14,6 +14,7 @@ We can break the supply of ETH into two primary forces: issuance and burn.
 
 The **issuance** of ETH is the process of creating ETH that did not previously exist. The **burning** of ETH is when existing ETH gets destroyed, removing it from circulation. The rate of issuance and burning gets calculated on several parameters, and the balance between them determines the resulting inflation/deflation rate of ether.
 
+{
 <Card
 emoji=":chart_decreasing:"
 title="ETH issuance tldr">

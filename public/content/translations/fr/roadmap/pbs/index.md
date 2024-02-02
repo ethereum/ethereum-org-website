@@ -18,11 +18,13 @@ Par exemple, des listes d'inclusion peuvent être introduites. Ainsi, quand les 
 
 [Les mempools encryptés](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) peuvent aussi empêcher les proposants et constructeurs de blocs de connaître quelles transactions ils incluent dans un bloc, mais seulement après que ledit bloc ait été déjà émis.
 
+{
 <ExpandableCard title="Quel genre de censure la séparation entre le constructeur et le proposant de blocs (PBS) résout-elle ?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Des organisations puissantes peuvent aussi faire pression sur les validateurs pour qu'ils censurent des transactions issues ou à destination de certaines adresses. Ces derniers se plient à cette exigence en détectant les adresses blacklistées au sein de leur pool de transaction puis en les excluant de leurs propositions de blocs. Après la séparation proposants et constructeurs de blocs (PBS), cette action ne sera plus possible car les proposants de blocs ne sauront pas quelles transactions ils diffusent dans leurs blocs. Il peut être important que certaines personnes ou applications se conforment aux règles de censure, par exemple lorsqu'elles sont adoptées dans leur région. Dans ces cas, la conformité se produit au niveau de l’application, tandis que le protocole reste sans autorisation et sans censure.
 
 </ExpandableCard>
+}
 
 ## PBS et MEV \{#pbs-and-mev}
 
@@ -30,10 +32,12 @@ Des organisations puissantes peuvent aussi faire pression sur les validateurs po
 
 La séparation entre le constructeur et le proposant de bloc (PBS) résout ce dilemme en repensant les critères économiques de la valeur maximale extractible (MEV). Pour éviter au proposant de bloc d'effectuer ses propres recherches sur la Valeur maximale extractible (MEV), celui-ci choisit simplement un bloc parmi tous ceux soumis par les constructeurs de blocs. Les constructeurs de blocs ont peut-être effectué une extraction MEV sophistiquée, mais la récompense revient au proposant du bloc. Cela signifie que même si un petit groupe de constructeurs de blocs spécialisés dominent l’extraction de MEV, la récompense pourrait revenir à n’importe quel validateur du réseau, y compris les parieurs individuels.
 
+{
 <ExpandableCard title="Pourquoi est-ce acceptable de centraliser la construction des blocs ?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Les individus pourraient être incités à miser dans des pools plutôt que seuls en raison des récompenses améliorées offertes par les stratégies MEV sophistiquées. Séparer la construction de blocs de la proposition de bloc signifie que la MEV extraite sera distribuée entre davantage de validateurs plutôt que d'être centralisée avec le chercheur de MEV le plus efficace. Dans le même temps, permettre à des constructeurs de blocs spécialisés d'exister soulage les individus du fardeau de la construction de blocs et empêche également les individus de voler la MEV pour eux-mêmes, tout en maximisant le nombre de validateurs individuels et indépendants qui peuvent vérifier que les blocs sont honnêtes. Le concept important est « l'asymétrie prouveur-vérificateur », qui fait référence à l'idée selon laquelle la production centralisée de blocs est acceptable tant qu'il existe un réseau robuste et décentralisé au maximum de validateurs capables de prouver que les blocs sont honnêtes. La décentralisation reste un moyen, non un but final en soi. Nous désirons simplement des blocs intègres.
 </ExpandableCard>
+}
 
 ## PBS et Danksharding \{#pbs-and-danksharding}
 

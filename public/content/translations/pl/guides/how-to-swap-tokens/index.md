@@ -47,7 +47,9 @@ Przejrzyj szczegóły transakcji. Sprawdź kurs wymiany i wszelkie inne opłaty,
 Możesz zobaczyć postęp transakcji w dowolnym eksploratorze blockchain. Proces ten nie powinien trwać dłużej niż 10 minut.
 
 Po przetworzeniu transakcji automatycznie otrzymasz wymienione tokeny do swojego portfela.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Chcesz dowiedzieć się więcej?</div>

@@ -45,27 +45,37 @@ Ao operar seu próprio nó, você deve gastar algum tempo aprendendo a usar o so
 
 Quanto mais você entender sobre o software que está executando e como funciona a prova de participação (proof of sake), menos arriscado será como um staker e mais fácil será corrigir quaisquer problemas que possam surgir ao longo do caminho como operador de nó.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="À vontade com computadores" eventCategory="SoloStaking" eventName="clicked comfortable with computers">
 A configuração do nó requer um nível de conforto razoável ao trabalhar com computadores, embora novas ferramentas estejam tornando isso mais fácil com o tempo. A compreensão da interface de linha de comando é útil, mas não é mais estritamente necessária.
 
 Também requer uma configuração de hardware muito básica e alguma compreensão das especificações mínimas recomendadas.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Gerenciamento seguro de chaves" eventCategory="SoloStaking" eventName="clicked secure key management">
 Assim como as chaves privadas protegem seu endereço Ethereum, você precisará gerar chaves especificamente para seu validador. Você precisa compreender como manter qualquer frase semente ou chave privada protegida e segura.{' '}
 
 <a href="/security/">Segurança Ethereum e prevenção à fraude</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Manutenção" eventCategory="SoloStaking" eventName="clicked maintenance">
 O hardware falha ocasionalmente, as conexões de rede falham e o software cliente ocasionalmente precisa ser atualizado. A manutenção do nó é inevitável e ocasionalmente exigirá sua atenção. Você deve estar ciente de quaisquer informações de atualizações de rede ou outras atualizações críticas de clientes.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Tempo de atividade confiável" eventCategory="SoloStaking" eventName="clicked reliable uptime">
 Suas recompensas são proporcionais ao tempo que seu validador está on-line e atestando corretamente. O tempo de inatividade incorre em penalidades proporcionais a quantos outros validadores estão off-line ao mesmo tempo, mas <a href="#faq">não resulta em cortes</a>. A largura de banda também é importante, pois as recompensas são reduzidas para declarações que não são recebidos a tempo. Os requisitos variam, mas é recomendado um mínimo de 10 Mb/s de upload e download.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Risco de corte" eventCategory="SoloStaking" eventName="clicked slashing risk">
 Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é uma penalidade muito mais séria reservada para infrações maliciosas. Ao executar um cliente minoritário com suas chaves carregadas em apenas uma máquina por vez, o risco de ser cortado é minimizado. Dito isto, todos os stakers devem estar cientes dos riscos de serem cortados.
 
@@ -73,11 +83,15 @@ Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é
 </ExpandableCard>
 </InfoGrid>
 
-<StakingComparison page="solo" />
+{
+	<StakingComparison page="solo" />
+}
 
 ## Como funciona \{#how-it-works}
 
-<StakingHowSoloWorks />
+{
+	<StakingHowSoloWorks />
+}
 
 Enquanto ativo, você ganhará recompensas ETH, que serão depositadas periodicamente no seu endereço de saque.
 
@@ -89,7 +103,9 @@ Se desejar, você pode parar suas atividades como um validador, o que elimina a 
 
 O Staking Launchpad é um aplicativo de código aberto que o ajudará a se tornar um staker. Ele o guiará na escolha de seus clientes, gerará suas chaves e depositará seu ETH no contrato de depósito de staking. Uma lista de verificação é fornecida para garantir que você cobriu tudo para configurar seu validador com segurança.
 
-<StakingLaunchpadWidget />
+{
+	<StakingLaunchpadWidget />
+}
 
 ## O que considerar com ferramentas de configuração de nó e cliente \{#node-tool-considerations}
 
@@ -97,17 +113,23 @@ Há um número crescente de ferramentas e serviços para ajudá-lo a fazer staki
 
 Os indicadores de atributo são usados abaixo para sinalizar pontos fortes ou fracos notáveis que uma ferramenta de staking listada pode ter. Use esta seção como referência de como definimos esses atributos enquanto você escolhe quais ferramentas ajudarão em sua jornada de staking.
 
-<StakingConsiderations page="solo" />
+{
+	<StakingConsiderations page="solo" />
+}
 
 ## Explore as ferramentas de configuração de nós e clientes \{#node-and-client-tools}
 
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
 ### Ferramentas do nó
 
-<StakingProductsCardGrid category="nodeTools" />
+{
+	<StakingProductsCardGrid category="nodeTools" />
+}
 
 Observe a importância de escolher um [cliente minoritário](/developers/docs/nodes-and-clients/client-diversity/), pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar um cliente minoritário são indicadas como <em style={{ textTransform: "uppercase" }}>"multicliente."</em>
 
@@ -115,24 +137,31 @@ Observe a importância de escolher um [cliente minoritário](/developers/docs/no
 
 Essas ferramentas podem ser utilizadas como uma alternativa à [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) para ajudar na geração de chaves.
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Alguma sugestão de ferramenta de participação que não mencionamos? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
 ## Explore os guias de staking individual \{#staking-guides}
 
-<StakingGuides />
+{
+	<StakingGuides />
+}
 
 ## Perguntas frequentes \{#faq}
 
 Apresentamos algumas das perguntas mais comuns sobre staking (participação) que vale a pena saber.
 
+{
 <ExpandableCard title="O que é um validador?">
 
 Um <em>validador</em> é uma entidade virtual que vive no Ethereum e participa no consenso do protocolo Ethereum. Os validadores são representados por um saldo, chave pública e outras propriedades. Um <em>cliente validador</em> é o software que atua em nome do validador mantendo e usando sua chave privada. Um único cliente validador pode conter muitos pares de chaves, controlando muitos validadores.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Posso depositar mais de 32 ETH?">
 Cada par de chaves associado a um validador requer exatamente 32 ETH para ser ativado. Mais ETH depositado em um único conjunto de chaves não aumenta o potencial de recompensas, pois cada validador está limitado a um <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">saldo efetivo</a> de 32 ETH. Isso significa que o staking é feito em 32 incrementos de ETH, cada um com seu próprio conjunto de chaves e saldo.
 
@@ -140,7 +169,9 @@ Não deposite mais de 32 ETH para um único validador. Isso não aumentará suas
 
 Se o staking individual demandar muito de você, considere usar um provedor de <a href="/staking/saas/">staking-as-a-service</a> (staking como um serviço) ou, se estiver trabalhando com menos de 32 ETH, verifique as <a href="/staking/pools/">staking pools</a> (pools de staking).
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Serei cortado se ficar off-line? (Para resumir: Não.)">
 Ficar off-line quando a rede estiver finalizando corretamente NÃO resultará em cortes. Pequenas <em>penalidades por inatividade</em> são incorridas se o seu validador não estiver disponível para atestar determinado período (cada um com 6,4 minutos de duração), mas isso é muito diferente de um <em>corte</em>. Essas penalidades são um pouco menores do que a recompensa que você ganharia se o validador estivesse disponível para atestar, e as perdas podem ser recuperadas com aproximadamente a mesma quantidade de tempo novamente on-line.
 
@@ -148,7 +179,9 @@ Observe que as penalidades por inatividade são proporcionais a quantos validado
 
 Em casos extremos, se a rede parar de finalizar como resultado de mais de um terço dos validadores estarem off-line, esses usuários sofrerão o sendo conhecido como <em>vazamento de inatividade quadrática</em>, sendo um dreno exponencial de ETH de contas de validador off-line. Isso permite que a rede se recupere eventualmente queimando o ETH de validadores inativos até que seu saldo atinja 16 ETH, momento em que eles serão automaticamente ejetados da pool de validadores. Os validadores on-line restantes acabarão por abranger mais de 2/3 da rede novamente, satisfazendo a maioria qualificada necessária para finalizar mais uma vez a cadeia.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Como posso garantir que não serei cortado?">
 Em resumo, isso nunca pode ser totalmente garantido, mas se você agir de boa-fé, executar um cliente minoritário e manter suas chaves de assinatura em apenas uma máquina por vez, o risco de ser cortado é quase zero.
 
@@ -163,7 +196,9 @@ Falhas equivalentes em um <em>cliente minoritário jamais seriam finalizadas</em
   <li><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Saiba mais sobre prevenção contra remoções</a></li>
 </ul>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Qual cliente é melhor?">
 Os clientes individuais podem variar um pouco em desempenho e interface do usuário, pois cada um é desenvolvido por equipes diferentes usando uma variedade de linguagens de programação. Assim sendo, nenhum deles é "melhor". Todos os clientes de implantação são excelentes softwares, que executam as mesmas funções principais para sincronizar e interagir com o blockchain.
 
@@ -171,7 +206,9 @@ Como todos os clientes de implantação fornecem a mesma funcionalidade básica,
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Saiba mais sobre a razão de a diversidade de clientes ser fundamental</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Posso usar apenas um VPS (servidor privado virtual)?">
 Embora um servidor virtual privado (VPS) possa ser usado como substituto do hardware doméstico, o acesso físico e a localização do seu cliente validador <em>importam</em>. Soluções em nuvem centralizadas como Amazon Web Services ou Digital Ocean permitem a conveniência de não ter que obter e operar hardware, à custa da centralização da rede.
 
@@ -179,7 +216,9 @@ Quanto mais clientes validadores forem executados em uma única solução centra
 
 As penalidades por ficar off-line são proporcionais a quantos outros estão off-line ao mesmo tempo. O uso de um VPS aumenta muito o risco de que as penalidades por ficar offl-ine sejam mais severas e aumenta o risco de vazamento ou corte quadrático no caso de a interrupção ser grande o suficiente. Para minimizar seu próprio risco e o risco para a rede, os usuários são fortemente encorajados a obter e operar seu próprio hardware.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Como posso desbloquear minhas recompensas ou obter meu ETH de volta?">
 
 Saques de qualquer tipo da Beacon Chain exigem que sejam definidas credenciais de retirada.
@@ -192,6 +231,7 @@ Para desbloquear e receber todo o seu saldo de volta, você deve concluir o proc
 
 <ButtonLink to="/staking/withdrawals/">Mais sobre saques de participação</ButtonLink>
 </ExpandableCard>
+}
 
 ## Leitura adicional \{#further-reading}
 

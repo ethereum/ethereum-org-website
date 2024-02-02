@@ -20,7 +20,9 @@ lang: fa
 
 توضیحات آندِرس را در رابطه با «هش» در بلاک‌چین تماشا کنید:
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## اتریوم چیست؟ \{#what-is-ethereum}
 

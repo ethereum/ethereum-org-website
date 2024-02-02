@@ -62,7 +62,9 @@ Más información sobre la [prueba de participación](/developers/docs/consensus
 
 Obtenga más información sobre los diferentes tipos de mecanismos de consenso usados en Ethereum:
 
-<YouTube id="ojxfbN78WFQ" />
+{
+	<YouTube id="ojxfbN78WFQ" />
+}
 
 ### Resistencia a ataque Sybil & selección de cadena \{#sybil-chain}
 

@@ -131,7 +131,9 @@ Az [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) bevezetése a London-fris
 
 Az alábbi videó elmagyarázza az EIP-1559 lényegét és előnyeit:
 
-<YouTube id="MGemhK9t44Q" />
+{
+	<YouTube id="MGemhK9t44Q" />
+}
 
 ## A gázdíjak felügyelete \{#moitoring-gas-fees}
 

@@ -121,7 +121,7 @@ describe("Greeter", function () {
 })
 ```
 
-### Next step consists of compiling our contract and running tests: \{##compiling-and-testing}
+### Next step consists of compiling our contract and running tests: \{#compiling-and-testing}
 
 Waffle tests use Mocha (a test framework) with Chai (an assertion library). All you have to do is run `npx hardhat test` and wait for the following message to appear.
 
@@ -129,7 +129,7 @@ Waffle tests use Mocha (a test framework) with Chai (an assertion library). All 
 ✓ Should return the new greeting once it's changed
 ```
 
-### Everything looks great so far, let's add some more complexity to our project <Emoji text=":slightly_smiling_face:" size={1}/> \{##adding-complexity}
+### Everything looks great so far, let's add some more complexity to our project <Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
 
 Imagine a situation where someone adds an empty string as a greeting. It wouldn't be a warm greeting, right?  
 Let's make sure that doesn't happen:
@@ -190,7 +190,7 @@ Let's run tests again:
 
 Congrats! You made it :)
 
-### Conclusion \{##conclusion}
+### Conclusion \{#conclusion}
 
 We made a simple project with Waffle, Hardhat and ethers.js. We learned how to set up a project, add a test and implement new functionality.
 

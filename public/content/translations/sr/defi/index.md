@@ -20,7 +20,9 @@ Decentralizovane finansije predstavljaju zbirni termin za finansijske proizvode 
 
 Došlo je do procvata kripto-ekonomije, u kojoj možete davati na zajam, pozajmljivati, dugoročno/kratkoročno, zarađivati kamatu i još mnogo toga. Argentinci koji poznaju kriptovalute su iskoristili decentralizovane finansije da bi se sačuvali od razorne inflacije. Kompanije su počele da isplaćuju plate zaposlenim u stvarnom vremenu. Neki ljudi su čak uzimali i isplaćivali milionske pozajmice u dolarima bez potrebe za bilo kakvom ličnom identifikacijom.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## Decentralizovane finansije nasuprot tradicionalnim finansijama \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Bitcoin je na mnoge načine bio prva aplikacija decentralizovanih finansija. Bit
 
 Ethereum počiva na tome. Kao i Bitcoin, pravila se ne mogu promeniti za vas i svako ima pristup. Ali, to takođe ovaj digitalni novac čini podložnim programiranju, pomoću [pametne ugovore](/glossary#smart-contract), tako da možete ići dalje od čuvanja i slanja vrednosti.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Novac koji se može programirati \{#programmable-money}
 
@@ -86,7 +90,9 @@ Postoji decentralizovana alternativa većini finansijskih usluga. Ali Ethereum t
 - [Kupite osiguranje](#insurance)
 - [Upravljajte svojim portfoliom](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Brzo pošaljite novac bilo gde na svetu \{#send-money}
 
@@ -102,7 +108,9 @@ Možete slati novac i putem mreže Ethereum. To omogućava da isplatite nekome n
 
 I ako ne želite da šaljete ili pošaljete [ETH](/eth/) zato što njegova vrednost može da se promeni, postoje alternativne valute na mreži Ethereum: stabilni novčići.
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Pristup stabilnim valutama \{#stablecoins}
 
@@ -114,7 +122,9 @@ Novčići kao što su Dai ili USDC imaju vrednost koja ostaje blizu jednog dolar
   Više informacija o stabilnim novčićima
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Pozajmljivanje \{#lending}
 
@@ -170,7 +180,9 @@ Da biste mogli da izvedete gornji primer u tradicionalnom finansijskom svetu, bi
 
 [Više informacija o brzim zajmovima](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Počnite da štedite u kriptovalutama \{#saving}
 
@@ -203,7 +215,9 @@ Nagradni fond se generiše od svih kamata nastalih iz pozajmica depozita karata,
   Probajte PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Tokeni menjačnice \{#swaps}
 
@@ -215,7 +229,9 @@ Npr. ako želite da koristite lutriju bez gubitka PoolTogether (opisanu iznad), 
   Pogledajte menjačnice tokena
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Napredna trgovina \{#trading}
 
@@ -227,7 +243,9 @@ Kada koristite centralizovane menjačnice morate da dostavite sredstva pre trgov
   Pogledajte decentralizovane aplikacije o trgovanju
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Razvijajte portfolio \{#investing}
 
@@ -239,7 +257,9 @@ Dobar primer je [DeFi Pulse Index fond (DPI)](https://defipulse.com/blog/defi-pu
   Pogledajte decentralizovane aplikacije za investiranje
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Finansirajte svoje ideje \{#crowdfunding}
 
@@ -268,7 +288,9 @@ To znači da projekat A sa svojih 100 donacija u iznosu od 1 dolara može biti f
 
 [Više o kvadratnom finansiranju](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Osiguranje \{#insurance}
 
@@ -280,7 +302,9 @@ Ethereum proizvodi, kao i bilo koji drugi softver, može imati greške i slabe t
   Pogledajte decentralizovane aplikacije za osiguranje
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Agregatori i menadžeri portfolija \{#aggregators}
 
@@ -290,7 +314,9 @@ S obzirom na toliko dešavanja trenutno, treba vam način da pratite sve svoje i
   Pogledajte decentralizovane aplikacije o portfolijima
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kako DeFi funkcioniše? \{#how-defi-works}
 

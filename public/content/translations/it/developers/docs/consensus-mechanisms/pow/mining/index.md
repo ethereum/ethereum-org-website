@@ -66,7 +66,9 @@ L'estrazione di blocchi basata sul proof-of-work era solo probabilistica, il che
 
 Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work.
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 ## L'algoritmo di mining \{#mining-algorithm}
 

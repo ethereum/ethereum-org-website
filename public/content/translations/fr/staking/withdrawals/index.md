@@ -37,7 +37,9 @@ Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH 
 
 ### Comment puis-je me préparer ? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Informations importantes \{#important-notices}
 
@@ -76,7 +78,9 @@ Le fait qu'un validateur donné soit éligible ou non pour un retrait est déter
 
 Consultez cette explication de Finematics sur les retraits de staking d'Ethereum :
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### « Balayage » du validateur \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Comme vous pouvez le constater, ce processus ralentit au fur et à mesure que le
 
 ## Questions fréquemment posées \{#faq}
 
+{
 <ExpandableCard
 title="Une fois que j'ai fourni une adresse de retrait, puis-je la changer pour une autre adresse de retrait ?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Non, la procédure de fourniture des identifiants de retrait est une procédure unique, qui ne peut être modifiée une fois qu'elle a été soumise.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Pourquoi une adresse de retrait ne peut être définie qu'une seule fois ?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Les adresses de retrait peuvent être soit un contrat intelligent (contrôlé pa
 
 En guise d'alternative au changement d'adresse de retrait pour un validateur particulier, les utilisateurs peuvent choisir de définir un contrat intelligent comme adresse de retrait, qui pourrait gérer la rotation des clés, comme un coffre-fort. Les utilisateurs qui ont placé leurs fonds sur leur propre EOA peuvent effectuer une sortie complète pour retirer tous leurs fonds misés, puis effectuer une nouvelle mise en utilisant de nouveaux identifiants.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Que se passe-t-il si je participe à des jetons de mise en jeu ou à la mise en jeu mutualisée"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Si vous faites partie d'un <a href="/staking/pools/">groupe d'enjeux</a> ou si v
 En général, les utilisateurs sont censés être libres de récupérer leur ETH sous-jacent mis en jeu, ou de changer le fournisseur de mise en jeu qu'ils utilisent. Si un groupe particulier devient trop important, les fonds peuvent être retirés, rachetés, et remisés auprès d'un <a href="https://rated.network/">fournisseur plus petit</a>. Ou, si vous avez accumulé suffisamment d'ETH, vous pouvez <a href="/staking/solo/">miser depuis chez vous</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Est-ce que les paiements de récompense (retraits partiels) se font automatiquement ?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Oui, à condition que votre validateur ait fourni une adresse de retrait. Elle doit être fournie une fois pour permettre tout retrait initialement, puis les paiements de récompenses seront automatiquement déclenchés tous les deux ou trois jours avec chaque balayage des validateurs.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Les retraits complets sont-ils effectués automatiquement ?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Non, si votre validateur est toujours actif sur le réseau, un retrait total ne 
 Une fois qu'un validateur a terminé le processus de sortie, et en supposant que le compte possède des identifiants de retrait, le solde restant sera <em>alors</em> retiré lors du prochain <a href="#validator-sweeping">balayage du validateur</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Puis-je retirer un montant personnalisé ?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Les retraits sont conçus pour être effectués automatiquement, en transférant
 
 Il n'est pas possible de demander manuellement le retrait de quantités spécifiques d'ETH.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="J'opère un validateur. Où puis-je trouver plus d'informations sur l'activation des retraits ?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Il est recommandé aux opérateurs de validateurs de consulter la page <a href="
 Pour commencer en testant votre configuration sur un réseau de test, visitez la <a href="https://goerli.launchpad.ethereum.org">Platforme de lancement pour la mise en jeu sur le réseau de test Goerli</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Puis-je réactiver mon validateur après la sortie en déposant plus d'ETH ?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Non. Une fois qu'un validateur est sorti et que son solde total a été retiré, tous les fonds supplémentaires déposés sur ce validateur seront automatiquement transférés à l'adresse de retrait lors du prochain balayage du validateur. Pour remettre en jeu l'ETH, un nouveau validateur doit être activé.
 </ExpandableCard>
+}
 
 ## Complément d'information \{#further-reading}
 

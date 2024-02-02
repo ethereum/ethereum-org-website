@@ -148,7 +148,9 @@ function sell(uint256 amount) public {
 
 ![交易中的两个事件：Transfer 和 Sold](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 在本教程中，我们了解到如何检查 ERC-20 代币的余额和余量，以及如何使用接口调用 ERC20 智能合约的 `Transfer` 和 `TransferFrom` 函数。
 

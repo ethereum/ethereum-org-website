@@ -20,7 +20,9 @@ lang: zh-tw
 
 觀看 Anders 解釋區塊鏈中雜湊的影片：
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## 甚麼是以太坊(Ethereum)？ \{#what-is-ethereum}
 

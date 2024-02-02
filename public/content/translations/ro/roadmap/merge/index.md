@@ -19,7 +19,9 @@ summaryPoint4: Fuziunea a redus consumul de energie al Ethereum cu aproximativ 9
 
 Fuziunea a reprezentat combinarea stratului de execuție original al Ethereum (Rețeaua principală care a existat încă de la [geneză](/history/#frontier)) cu noul strat de consens cu dovada mizei, Lanțul Beacon. Acesta a eliminat nevoie de minare cu un consum mare de energie și, în schimb, a permis ca rețeaua să fie securizată folosind miza ETH. Realizarea viziunii Ethereum a fost un pas cu adevărat extraordinar: mai multă scalabilitate, mai multă securitate și mai multă durabilitate.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 Inițial, [Lanțul Beacon](/roadmap/beacon-chain/) a fost lansat separat de [Rețeaua principală](/glossary/#mainnet). Rețeaua principală Ethereum - cu toate conturile, soldurile, contractele inteligente și starea blockchainului - a continuat să fie securizată prin [dovada muncii](/developers/docs/consensus-mechanisms/pow/), chiar și atunci când Lanțul Beacon funcționa în paralel folosind [dovada mizei](/developers/docs/consensus-mechanisms/pos/). Fuziunea a avut loc când acest două sisteme s-au reunit în cele din urmă și dovada muncii a fost înlocuită permanent de dovada mizei.
 
@@ -53,6 +55,7 @@ _Acest lucru trebuie repetat_: în calitate de utilizator sau deținător de ETH
 
 ### Operatorii de noduri și dezvoltatorii de aplicații \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Operatori și furnizori ai nodului de mizare"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -64,7 +67,9 @@ Dacă nu efectuezi primele două elemente de mai sus, nodul va fi considerat „
 
 Dacă nu definești un „destinatar pentru taxă”, validatorul va putea acționa în continuare ca de obicei, dar vei rata bacșișurile pentru taxele de tranzacție nearse și MEV pe care le-ai fi câștigat în blocurile propuse de validatorul tău.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Operatori și furnizori de infrastructură ai nodului care nu validează"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -82,7 +87,9 @@ Principalele elemente de acțiune includ:
 Dacă nu efectuezi elementele de mai sus, nodul tău va fi considerat „offline” până când ambele straturi sunt sincronizate și autentificate.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dezvoltatori de aplicații și de contracte inteligente"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -98,6 +105,7 @@ Fuziunea a venit cu modificări ale consensului, care includ și modificări leg
 
 Pentru mai multe informații, consultați această postare a lui Tim Beiko despre [Impactul Fuziunii asupra Stratului aplicației Ethereum](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
 </ExpandableCard>
+}
 
 ## Fuziunea și consumul de energie \{#merge-and-energy}
 
@@ -109,6 +117,7 @@ De asemenea, Fuziunea a creat posibilitatea pentru și mai multe modernizări de
 
 ## Neînțelegeri despre Fuziune \{#misconceptions}
 
+{
 <ExpandableCard
 title="Neînțelegere: &quot;Rularea unui nod necesită mizarea a 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -125,7 +134,9 @@ Capacitatea oricui de a rula propriul nod este _absolut esențială_ pentru păs
 [Mai multe despre rularea propriului nod](/run-a-node/)
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Neînțelegere: &quot;Fuziunea nu a reușit să scadă costurile cu gazul.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -133,7 +144,9 @@ Taxele pentru gaz sunt produsul cererii rețelei în funcție de capacitatea re�
 
 Cu o [foaie de parcurs centrată pe regrupare](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698), eforturile sunt concentrate pe scalarea activității utilizatorului la [stratul 2](/layer-2/), în timp ce se activează stratul 1 al Rețelei principale ca un strat de soluționare descentralizat, securizat și optimizat pentru stocarea datelor de rollup pentru a face tranzacțiile rollup exponențial mai ieftine. Tranziția la dovada mizei este un precursor esențial pentru acest lucru. [Mai multe despre gaz și taxe.](/developers/docs/gas/)
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Neînțelegere: &quot;Tranzacțiile au fost accelerate substanțial de Fuziune.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -144,13 +157,17 @@ Din punct de vedere istoric, în ceea ce privește dovada muncii, obiectivul a f
 Dovada mizei a introdus conceptul de finalitate a tranzacției, care nu exista anterior. În cazul dovezii muncii, capacitatea de a inversa un bloc devine exponențial mai dificilă cu fiecare bloc creat peste o tranzacție, dar nu ajunge niciodată la zero. În cazul dovezii mizei, blocurile sunt grupate în epoci (perioade de timp de 6,4 minute, cu 32 de șanse pentru blocuri), pe care validatorii le votează. Când o epocă se încheie, validatorii votează dacă epoca este „justificată”. Dacă validatorii sunt de acord să justifice epoca, aceasta se finalizează în următoarea epocă. Anularea tranzacțiilor finalizate nu este viabilă economic, deoarece ar necesita obținerea și arderea a mai mult de o treime din ETH mizat total.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Neînțelegere: &quot;Fuziunea a permis retragerea mizelor.&quot;"
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
 ETH mizat și recompensele pentru mizare continuă să fie blocate fără posibilitatea de retragere. Retragerile sunt planificate pentru viitoarea actualizare Shanghai.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Neînțelegere: &quot;Validatorii nu vor primi recompense de ETH lichid până la actualizarea Shanghai, când sunt activate retragerile.&quot;"
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
@@ -160,7 +177,9 @@ Protocolul emite ETH drept recompensă validatorilor pentru contribuția la cons
 
 ETH de pe stratul de execuție este contabilizat separat de stratul de consens. Când utilizatorii execută tranzacții în Rețeaua principală Ethereum, ETH trebuie plătit pentru achitarea costului gazului, inclusiv un comision pentru validator. Acest ETH se află deja pe stratul de execuție, NU este nou emis de protocol și este disponibil pentru validator imediat (cu condiția furnizării unei adrese corecte a „destinatarului taxei” în software-ul client).
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Neînțelegere: &quot;Când retragerile sunt activate, toți stakerii vor pleca în același timp.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -170,6 +189,7 @@ O precizare importantă și necesară aici, ieșirile complete ale validatorului
 
 APR este dinamic în mod intenționat, permițând stakerilor să găsească un echilibru pentru cât de mult sunt dispuși să fie plătiți pentru a ajuta la securizarea rețelei. Când retragerile sunt activate, dacă rata este prea mică, validatorii se vor retrage la o rată limitată de protocol. Treptat, acest lucru crește APR pentru toți cei care rămân, atrăgând stakeri noi sau care revin.
 </ExpandableCard>
+}
 
 ## Ce s-a întâmplat cu „Eth2”? \{#eth2}
 
@@ -216,6 +236,10 @@ Planurile pentru fragmentare evoluează rapid, dar, având în vedere apariția 
 
 ## Referințe suplimentare \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

@@ -18,7 +18,9 @@ summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,
 
 La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/history/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Elle a également permis d'éliminer la nécessité d'un minage gourmand en énergie et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 Initialement, la [Chaîne phare](/roadmap/beacon-chain/) était envoyée séparément du [réseau principal](/glossary/#mainnet). Le réseau principal Ethereum - avec tous ses comptes, ses soldes, ses contrats intelligents et l'état de la blockchain - continuait d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même si la Chaîne Phare fonctionnait en parallèle en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). La Fusion a été le moment où ces deux systèmes se sont finalement combinés, et la preuve de travail a été remplacée de façon permanente par la preuve d'enjeu.
 
@@ -52,6 +54,7 @@ Malgré le passage de la preuve de travail vers la preuve d'enjeu, tout l'histor
 
 ### Opérateurs de nœuds et développeurs de dApps \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Opérateurs et fournisseurs de nœuds de mise en jeu"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -67,7 +70,9 @@ Si vous ne remplissez pas les deux premiers éléments ci-dessus, votre nœud se
 
 Ne pas définir un « destinataire de frais » permettra toujours à votre validateur de se comporter comme d'habitude, mais vous n'allez pas recevoir les frais non brûlés et autres MEV que vous auriez autrement gagnés avec les blocs que votre validateur propose.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Opérateurs de nœuds non validés et fournisseurs d'infrastructure"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -85,7 +90,9 @@ Les éléments clés d'action incluent le fait :
 Si vous ne répondez pas aux exigences ci-dessus, votre nœud apparaîtra comme « hors ligne » jusqu'à ce que les deux couches soient synchronisées et authentifiées.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Développeurs de dApps et de contrats intelligents"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -104,6 +111,7 @@ La Fusion s'est accompagnée de changements apportés au consensus, qui incluent
 Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Comment La Fusion a un impact sur la couche d'application d'Ethereum</a>.
 
 </ExpandableCard>
+}
 
 ## La Fusion et la consommation énergétique \{#merge-and-energy}
 
@@ -115,6 +123,7 @@ La Fusion permet également de préparer le terrain pour d'autres améliorations
 
 ## Les idées fausses sur La Fusion \{#misconceptions}
 
+{
 <ExpandableCard
 title="Idée reçue : &quot;L'exécution d'un nœud nécessite la mise en jeu de 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -132,7 +141,9 @@ La possibilité pour quiconque de pouvoir exécuter son propre noeud est <em>abs
 <a href="/run-a-node/">En savoir plus sur l'exécution de son propre nœud</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Idée reçue : &quot;La Fusion n'a pas réussi à réduire les frais de gaz.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -142,7 +153,9 @@ Les frais de gaz sont le produit des demandes envoyées au réseau par rapport �
 Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route axée sur les rollups</a>, les efforts sont concentrés sur la mise à l'échelle de l'activité des utilisateurs sur la <a href="/layer-2/">couche 2</a>, tout en activant le réseau principal de couche 1 en tant que couche de règlement décentralisée, sécurisée et optimisée pour le stockage de données cumulatives afin de rendre les transactions rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est une étape préalable essentielle afin de réaliser cela. <a href="/developers/docs/gas/">Plus d'infos sur le gaz et les frais</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Idée reçue : &quot;Les transactions ont été considérablement accélérées par La Fusion.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -153,7 +166,9 @@ Historiquement, concernant la preuve de travail, l'objectif était de permettre 
 La preuve d’enjeu a introduit le concept de finalité des transactions qui n’existait pas auparavant. Avec la de preuve de travail, la possibilité d'inverser un bloc devient exponentiellement plus difficile avec chaque nouveau bloc créé, mais elle n'atteindra jamais zéro. Avec la preuve d'enjeu, les blocs sont regroupés dans des périodes (6,4 minutes de temps contenant 32 chances pour les blocs) sur lesquelles les validateurs votent. Lorsqu'une période se termine, les validateurs se prononcent sur la question de savoir s'il faut considérer la période comme « justifiée ». Si les validateurs acceptent de justifier la période, elle sera finalisée lors de la prochaine période. L'annulation des transactions finalisées n'est pas viable économiquement, car cela nécessiterait l'obtention et la combustion de plus d'un tiers du total de l'ETH misé.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Idée reçue : &quot;La Fusion a permis la mise en jeu des retraits.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -165,7 +180,9 @@ Depuis la mise à niveau du réseau Shanghai/Capella, les validateurs peuvent ma
 <a href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Mauvaise conception : &quot;Maintenant que La Fusion est terminée, et que les retraits sont activés, les stakers pourraient tous sortir en même temps.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -177,6 +194,7 @@ Cela empêche un exode massif de fonds misés. En outre, cela empêche un attaqu
 
 L'APR a été rendue dynamique intentionnellement, afin de permettre aux stakers de trouver un équilibre concernant le montant de la rémunération qu'ils souhaitent percevoir pour aider à sécuriser le réseau. Si le taux est trop bas, alors les validateurs pourront se retirer en suivant un taux limité par le protocole. Peu à peu, cela permettra d'élever l'APR pour tous ceux qui restent, attirant encore une fois de nouveaux stakers ou en permettant le retour d'anciens validateurs.
 </ExpandableCard>
+}
 
 ## Que devient « Eth2 » ? \{#eth2}
 
@@ -223,6 +241,10 @@ Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du d�
 
 ## Complément d'information \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

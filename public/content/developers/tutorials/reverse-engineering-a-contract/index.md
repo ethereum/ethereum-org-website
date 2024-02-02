@@ -16,7 +16,7 @@ There are reverse compilers, but they don't always produce [usable results](http
 
 To be able to understand this article you should already know the basics of the EVM, and be at least somewhat familiar with EVM assembler. [You can read about these topics here](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Prepare the Executable Code \{##prepare-the-executable-code}
+## Prepare the Executable Code \{#prepare-the-executable-code}
 
 You can get the opcodes by going to Etherscan for the contract, clicking the **Contract** tab and then **Switch to Opcodes View**. You get a view that is one opcode per line.
 
@@ -40,7 +40,7 @@ In `A1` put the first offset, zero. Then, in `A2`, put this function and again c
 
 We need this function to give us the hexadecimal value because the values that are pushed prior to jumps (`JUMP` and `JUMPI`) are given to us in hexadecimal.
 
-## The Entry Point (0x00) \{##the-entry-point-0x00}
+## The Entry Point (0x00) \{#the-entry-point-0x00}
 
 Contracts are always executed from the first byte. This is the initial part of the code:
 
@@ -62,7 +62,7 @@ This code does two things:
 
 ![Flowchart for this portion](flowchart-entry.png)
 
-### The Handler at 0x5E (for non-ABI call data) \{##the-handler-at-0x5e-for-non-abi-call-data}
+### The Handler at 0x5E (for non-ABI call data) \{#the-handler-at-0x5e-for-non-abi-call-data}
 
 | Offset | Opcode       |
 | -----: | ------------ |
@@ -156,7 +156,7 @@ To sum it all up, here's a flowchart for the initial code.
 
 ![Entry point flowchart](flowchart-entry.png)
 
-## The Handler at 0x7C \{##the-handler-at-0x7c}
+## The Handler at 0x7C \{#the-handler-at-0x7c}
 
 I purposely did not put in the heading what this handler does. The point isn't to teach you how this specific contract works, but how to reverse engineer contracts. You will learn what it does the same way I did, by following the code.
 
@@ -248,7 +248,7 @@ Here we copy all the return data to the memory buffer starting at 0x80.
 
 So after the call we copy the return data to the buffer 0x80 - 0x80+RETURNDATASIZE, and if the call is successful we then `RETURN` with exactly that buffer.
 
-### DELEGATECALL Failed \{##delegatecall-failed}
+### DELEGATECALL Failed \{#delegatecall-failed}
 
 If we get here, to 0xC0, it means that the contract we called reverted. As we are just a proxy for that contract, we want to return the same data and also revert.
 
@@ -263,7 +263,7 @@ So we `REVERT` with the same buffer we used for `RETURN` earlier: 0x80 - 0x80+RE
 
 ![Call to proxy flowchart](flowchart-proxy.png)
 
-## ABI calls \{##abi-calls}
+## ABI calls \{#abi-calls}
 
 If the call data size is four bytes or more this might be a valid ABI call.
 
@@ -298,7 +298,7 @@ If no match is found, the code jumps to [the proxy handler at 0x7C](#the-handler
 
 ![ABI calls flowchart](flowchart-abi.png)
 
-## splitter() \{##splitter}
+## splitter() \{#splitter}
 
 | Offset | Opcode       | Stack                         |
 | -----: | ------------ | ----------------------------- |
@@ -338,7 +338,7 @@ And 0x80 now contains the proxy address
 |    134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |    137 | JUMP         | 0xA0      |
 
-### The E4 Code \{##the-e4-code}
+### The E4 Code \{#the-e4-code}
 
 This is the first time we see these lines, but they are shared with other methods (see below). So we'll call the value in the stack X, and just remember that in `splitter()` the value of this X is 0xA0.
 
@@ -357,7 +357,7 @@ So this code receives a memory pointer in the stack (X), and causes the contract
 
 In the case of `splitter()`, this returns the address for which we are a proxy. `RETURN` returns the buffer in 0x80-0x9F, which is where we wrote this data (offset 0x130 above).
 
-## currentWindow() \{##currentwindow}
+## currentWindow() \{#currentwindow}
 
 The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `currentWindow()` is also not `payable`.
 
@@ -371,7 +371,7 @@ The code in offsets 0x158-0x163 is identical to what we saw in 0x103-0x10E in `s
 |    16C | DUP2         | 0xDA Storage[1] 0xDA |
 |    16D | JUMP         | Storage[1] 0xDA      |
 
-### The DA code \{##the-da-code}
+### The DA code \{#the-da-code}
 
 This code is also shared with other methods. So we'll call the value in the stack Y, and just remember that in `currentWindow()` the value of this Y is Storage[1].
 
@@ -393,7 +393,7 @@ Write Y to 0x80-0x9F.
 
 And the rest is already explained [above](#the-e4-code). So jumps to 0xDA write the stack top (Y) to 0x80-0x9F, and return that value. In the case of `currentWindow()`, it returns Storage[1].
 
-## merkleRoot() \{##merkleroot}
+## merkleRoot() \{#merkleroot}
 
 The code in offsets 0xED-0xF8 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know `merkleRoot()` is also not `payable`.
 
@@ -409,7 +409,7 @@ The code in offsets 0xED-0xF8 is identical to what we saw in 0x103-0x10E in `spl
 
 What happens after the jump [we already figured out](#the-da-code). So `merkleRoot()` returns Storage[0].
 
-## 0x81e580d3 \{##0x81e580d3}
+## 0x81e580d3 \{#0x81e580d3}
 
 The code in offsets 0x138-0x143 is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`.
 
@@ -513,7 +513,7 @@ So there is a lookup table in storage, which starts at the SHA3 of 0x000...0004 
 
 We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns the value from the lookup table to the caller.
 
-## 0x1f135823 \{##0x1f135823}
+## 0x1f135823 \{#0x1f135823}
 
 The code in offsets 0xC4-0xCF is identical to what we saw in 0x103-0x10E in `splitter()` (other than the `JUMPI` destination), so we know this function is also not `payable`.
 
@@ -529,7 +529,7 @@ The code in offsets 0xC4-0xCF is identical to what we saw in 0x103-0x10E in `spl
 
 We already know what [the code at offset 0xDA](#the-da-code) does, it returns the stack top value to the caller. So this function returns `Value*`.
 
-### Method Summary \{##method-summary}
+### Method Summary \{#method-summary}
 
 Do you feel you understand the contract at this point? I don't. So far we have these methods:
 
@@ -544,7 +544,7 @@ Do you feel you understand the contract at this point? I don't. So far we have t
 
 But we know any other functionality is provided by the contract in Storage[3]. Maybe if we knew what that contract is it'll give us a clue. Thankfully, this is the blockchain and everything is known, at least in theory. We didn't see any methods that set Storage[3], so it must have been set by the constructor.
 
-## The Constructor \{##the-constructor}
+## The Constructor \{#the-constructor}
 
 When we [look at a contract](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) we can also see the transaction that created it.
 
@@ -552,7 +552,7 @@ When we [look at a contract](https://etherscan.io/address/0x2510c039cc3b061d79e5
 
 If we click that transaction, and then the **State** tab, we can see the initial values of the parameters. Specifically, we can see that Storage[3] contains [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). That contract must contain the missing functionality. We can understand it using the same tools we used for the contract we are investigating.
 
-## The Proxy Contract \{##the-proxy-contract}
+## The Proxy Contract \{#the-proxy-contract}
 
 Using the same techniques we used for the original contract above we can see that the contract reverts if:
 
@@ -578,7 +578,7 @@ We can ignore the bottom four methods because we will never get to them. Their s
 
 One of the remaining methods is `claim(<params>)`, and another is `isClaimed(<params>)`, so it looks like an airdrop contract. Instead of going through the rest opcode by opcode, we can [try the decompiler](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), which produces usable results for three functions from this contract. Reverse engineering the other ones is left as an exercise to the reader.
 
-### scaleAmountByPercentage \{##scaleamountbypercentage}
+### scaleAmountByPercentage \{#scaleamountbypercentage}
 
 This is what the decompiler gives us for this function:
 
@@ -596,7 +596,7 @@ The `if` statement seems to check that `_param1` is not zero, and that `_param1 
 
 Finally, the function returns a scaled value.
 
-### claim \{##claim}
+### claim \{#claim}
 
 The code the decompiler creates is complex, and not all of it is relevant for us. I am going to skip some of it to focus on the lines that I believe provide useful information
 
@@ -671,7 +671,7 @@ At the end of the function we see a log entry being generated. [Look at the gene
 
 ![A claim transaction](claim-tx.png)
 
-### 1e7df9d3 \{##1e7df9d3}
+### 1e7df9d3 \{#1e7df9d3}
 
 This function is very similar to [`claim`](#claim) above. It also checks a merkle proof, attempts to transfer ETH to the first, and produces the same type of log entry.
 
@@ -737,6 +737,6 @@ The main difference is that the first parameter, the window to withdraw, isn't t
 
 So it looks like a `claim` variant that claims all the windows.
 
-## Conclusion \{##conclusion}
+## Conclusion \{#conclusion}
 
 By now you should know how to understand contracts whose source code is not available, using either the opcodes or (when it works) the decompiler. As is evident from the length of this article, reverse engineering a contract is not trivial, but in a system where security is essential it is an important skill to be able to verify contracts work as promised.

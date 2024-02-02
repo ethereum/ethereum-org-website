@@ -73,7 +73,9 @@ Alice 和 Bob 要进行一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 
 观看 Finematics 解释智能合约：
 
-<YouTube id="pWGLtjG-F5c" />
+{
+	<YouTube id="pWGLtjG-F5c" />
+}
 
 ## 延伸阅读 \{#further-reading}
 

@@ -20,7 +20,9 @@ A proof-of-work sokkal eneriaigényesebb, mert a bányászati folyamatban elektr
 
 A proof-of-work versus proof-of-stake egy állandó téma. [Vitalik Buterin blogja](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work), valamint a Justin Drake és Lyn Alden közötti vita remekül összefoglalja az érveket.
 
-<YouTube id="1m12zgJ42dI" />
+{
+	<YouTube id="1m12zgJ42dI" />
+}
 
 ## Energiatakarékos a proof-of-stake? \{#is-pos-energy-efficient}
 

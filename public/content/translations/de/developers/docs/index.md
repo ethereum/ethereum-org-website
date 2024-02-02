@@ -14,12 +14,18 @@ Wenn das Ihr erster Versuch bei der Entwicklung mit Ethereum ist, empfehlen wir 
 
 ### Grundsätzliche Themen \{#foundational-topics}
 
-<DeveloperDocsLinks headerId="foundational-topics" />
+{
+	<DeveloperDocsLinks headerId="foundational-topics" />
+}
 
 ### Ethereum-Stack \{#ethereum-stack}
 
-<DeveloperDocsLinks headerId="ethereum-stack" />
+{
+	<DeveloperDocsLinks headerId="ethereum-stack" />
+}
 
 ### Fortgeschritten \{#advanced}
 
-<DeveloperDocsLinks headerId="advanced" />
+{
+	<DeveloperDocsLinks headerId="advanced" />
+}

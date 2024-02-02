@@ -10,6 +10,7 @@ lang: uk
 
 ## Форуми \{#forums}
 
+{
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> — усе про Ethereum</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethfinance/">r/ethfinance</Link> — фінансовий бік Ethereum, зокрема децентралізовані фінанси (DeFi)</SocialListItem>
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethdev/">r/ethdev</Link> — здебільшого про розвиток Ethereum</SocialListItem>
@@ -18,9 +19,11 @@ lang: uk
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum-magicians.org">Fellowship of Ethereum Magicians</Link> — спільнота, у якій обговорюються технічні стандарти Ethereum</SocialListItem>
 <SocialListItem socialIcon="stackExchange"><Link to="https://ethereum.stackexchange.com">Ethereum Stackexchange</Link> — дискусії та допомога розробникам Ethereum</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> — найвпливовіша дошка повідомлень, присвячена дослідженням у галузі криптоекономіки</SocialListItem>
+}
 
 ## Чати \{#chat-rooms}
 
+{
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — спільнота, орієнтована на допомогу з управлінням проєктами під час розробки Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> — чат Discord, який керується ETHGlobal: онлайн-спільнота для хакерів Ethereum з усього світу</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> — спільнота Discord, сфокусована на розробці Ethereum</SocialListItem>
@@ -32,15 +35,20 @@ lang: uk
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> — чат для розробки Solidity (Matrix)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- форум із запитаннями й відповідями_</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- децентралізований форум із запитаннями й відповідями_</SocialListItem>
+}
 
 ## YouTube і Twitter \{#youtube-and-twitter}
 
+{
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> — будьте в курсі останніх подій від Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Офіційний акаунт Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> — портал Ethereum, створений для нашої глобальної спільноти, яка розширюється</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Перелік важливих акаунтів Ethereum у Twitter</Link></SocialListItem>
+}
 
-<Divider />
+{
+	<Divider />
+}
 
 <Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
   <div>

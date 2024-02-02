@@ -10,7 +10,9 @@ A centralização ajudou a integrar bilhões de pessoas à World Wide Web e crio
 
 Web3 é a resposta para este dilema. Em vez de uma Web monopolizada por grandes empresas de tecnologia, a Web3 adota a descentralização e está sendo construída, operada e de propriedade de seus usuários. A Web3 coloca o poder nas mãos dos indivíduos e não das corporações. Antes de falarmos sobre Web3, vamos explorar como chegamos aqui.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## O início da Web \{#early-internet}
 
@@ -30,7 +32,9 @@ O período da Web 2.0 começou em 2004 com o surgimento das plataformas de mídi
 
 ![Arquitetura cliente-servidor, representando Web 2.0](./web2.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Web 3.0: Leitura-escrita \{#web3}
 
@@ -158,4 +162,6 @@ Web3 não é rigidamente definida. Vários participantes da comunidade têm dive
 - [O Cenário Web3](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [O Debate Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
-<QuizWidget quizKey="web3" />
+{
+	<QuizWidget quizKey="web3" />
+}

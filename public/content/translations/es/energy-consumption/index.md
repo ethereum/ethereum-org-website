@@ -12,7 +12,9 @@ La estimación de consumo energético de Ethereum proviene de un estudio del [CC
 
 Para contextualizar el consumo de energía de Ethereum, es posible comparar las estimaciones anuales de otros productos e industrias. Esto nos ayuda a comprender mejor si la estimación para Ethereum es alta o baja.
 
-<EnergyConsumptionChart />
+{
+	<EnergyConsumptionChart />
+}
 
 La tabla de arriba muestra el consumo estimado de energía en TWh/yr para Ethereum, con respecto a un conjunto de otros productos e industrias. Las estimaciones proporcionadas provienen de fuentes públicas de información disponible, consultadas en julio 2023, con los correspondientes enlaces a las fuentes disponibles en la tabla de abajo.
 

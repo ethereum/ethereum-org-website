@@ -14,11 +14,11 @@ published: 2022-05-15
 
 Like almost everything else in Ethereum, the Yellow Paper evolves over time. To be able to refer to a specific version, I uploaded [the current version at writing](yellow-paper-berlin.pdf). The section, page, and equation numbers I use will refer to that version. It is a good idea to have it open in a different window while reading this document.
 
-### Why the EVM? \{##why-the-evm}
+### Why the EVM? \{#why-the-evm}
 
 The original yellow paper was written right at the start of Ethereum's development. It describes the original proof-of-work based consensus mechanism that was originally used to secure the network. However, Ethereum switched off proof-of-work and started using proof-of-stake based consensus in September 2022. This tutorial will focus on the parts of the yellow paper defining the Ethereum Virtual Machine. The EVM was unchanged by the transition to proof-of-stake (except for the return value of the DIFFICULTY opcode).
 
-## 9 Execution model \{##9-execution-model}
+## 9 Execution model \{#9-execution-model}
 
 This section (p. 12-14) includes most of the definition of the EVM.
 
@@ -28,7 +28,7 @@ A [Turing machine](https://en.wikipedia.org/wiki/Turing_machine) is a computatio
 
 The term [Turing-complete](https://en.wikipedia.org/wiki/Turing_completeness) means a computer that can run the same calculations as a Turing machine. Turing machines can get into infinite loops, and the EVM cannot because it would run out of gas, so it's only quasi-Turing-complete.
 
-## 9.1 Basics \{##91-basics}
+## 9.1 Basics \{#91-basics}
 
 This section gives the basics of the EVM and how it compares with other computational models.
 
@@ -55,11 +55,11 @@ There are only two cases in which code is executed from memory:
 
 The term exceptional execution means an exception that causes the execution of the current contract to halt.
 
-## 9.2 Fees overview \{##92-fees-overview}
+## 9.2 Fees overview \{#92-fees-overview}
 
 This section explains how the gas fees are calculated. There are three costs:
 
-### Opcode cost \{##opcode-cost}
+### Opcode cost \{#opcode-cost}
 
 The inherent cost of the specific opcode. To get this value, find the cost group of the opcode in Appendix H (p. 28, under equation (327)), and find the cost group in equation (324). This gives you a cost function, which in most cases uses parameters from Appendix G (p. 27).
 
@@ -67,14 +67,14 @@ For example, the opcode [`CALLDATACOPY`](https://www.evm.codes/#37) is a member 
 
 We still need to decipher the expression _⌈μ<sub>s</sub>[2]÷32⌉_. The outmost part, _⌈ \<value\> ⌉_ is the ceiling function, a function that given a value returns the smallest integer that is still not smaller than the value. For example, _⌈2.5⌉ = ⌈3⌉ = 3_. The inner part is _μ<sub>s</sub>[2]÷32_. Looking at section 3 (Conventions) on p. 3, _μ_ is the machine state. The machine state is defined in section 9.4.1 on p. 13. According to that section, one of the machine state parameters is _s_ for the stack. Putting it all together, it seems that _μ<sub>s</sub>[2]_ is location #2 in the stack. Looking at [the opcode](https://www.evm.codes/#37), location #2 in the stack is the size of the data in bytes. Looking at the other opcodes in group W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) and [`RETURNDATACOPY`](https://www.evm.codes/#3e), they also have a size of data in the same location. So _⌈μ<sub>s</sub>[2]÷32⌉_ is the number of 32 byte words required to store the data being copied. Putting everything together, the inherent cost of [`CALLDATACOPY`](https://www.evm.codes/#37) is 3 gas plus 3 per word of data being copied.
 
-### Running cost \{##running-cost}
+### Running cost \{#running-cost}
 
 The cost of running the code we're calling.
 
 - In the case of [`CREATE`](https://www.evm.codes/#f0) and [`CREATE2`](https://www.evm.codes/#f5), the constructor for the new contract.
 - In the case of [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), or [`DELEGATECALL`](https://www.evm.codes/#f4), the contract we call.
 
-### Expanding memory cost \{##expanding-memory-cost}
+### Expanding memory cost \{#expanding-memory-cost}
 
 The cost of expanding memory (if necessary).
 
@@ -86,7 +86,7 @@ The function _C<sub>mem</sub>_ is defined in equation 326: _C<sub>mem</sub>(a) =
 
 [Read more about gas](/developers/docs/gas/).
 
-## 9.3 Execution environment \{##93-execution-env}
+## 9.3 Execution environment \{#93-execution-env}
 
 The execution environment is a tuple, _I_, that includes information that isn't part of the blockchain state or the EVM.
 
@@ -112,7 +112,7 @@ A few other parameters are necessary to understand the rest of section 9:
 | _A_       | 6.1 (p. 8)           | Accrued substate (changes scheduled for when the transaction ends)                                                                                                                                                       |
 | _o_       | 9.3 (p. 13)          | Output - the returned result in the case of internal transaction (when one contract calls another) and calls to view functions (when you are just asking for information, so there is no need to wait for a transaction) |
 
-## 9.4 Execution overview \{##94-execution-overview}
+## 9.4 Execution overview \{#94-execution-overview}
 
 Now that have all the preliminaries, we can finally start working on how the EVM works.
 
@@ -134,13 +134,13 @@ Equation 143 tells us there are four possible conditions at each point in time d
 3.  If the sequence of operations is finished, as signified by a [`RETURN`](https://www.evm.codes/#f3)), the state is updated to the new state.
 4.  If we aren't at one of the end conditions 1-3, continue running.
 
-## 9.4.1 Machine State \{##941-machine-state}
+## 9.4.1 Machine State \{#941-machine-state}
 
 This section explains the machine state in greater detail. It specifies that _w_ is the current opcode. If _μ<sub>pc</sub>_ is less than _||I<sub>b</sub>||_, the length of the code, then that byte (_I<sub>b</sub>[μ<sub>pc</sub>]_) is the opcode. Otherwise, the opcode is defined as [`STOP`](https://www.evm.codes/#00).
 
 As this is a [stack machine](https://en.wikipedia.org/wiki/Stack_machine), we need to keep track of the number of items popped out (_δ_) and pushed in (_α_) by each opcode.
 
-## 9.4.2 Exceptional Halting \{##942-exceptional-halt}
+## 9.4.2 Exceptional Halting \{#942-exceptional-halt}
 
 This section defines the _Z_ function, which specifies when we have an abnormal termination. This is a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) function, so it uses [_∨_ for a logical or](https://en.wikipedia.org/wiki/Logical_disjunction) and [_∧_ for a logical and](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -186,7 +186,7 @@ We have an exceptional halt if any of these conditions is true:
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_**
   You cannot run [`SSTORE`](https://www.evm.codes/#55) unless you have more than G<sub>callstipend</sub> (defined as 2300 in Appendix G) gas.
 
-## 9.4.3 Jump Destination Validity \{##943-jump-dest-valid}
+## 9.4.3 Jump Destination Validity \{#943-jump-dest-valid}
 
 Here we formally define what are the [`JUMPDEST`](https://www.evm.codes/#5b) opcodes. We cannot just look for byte value 0x5B, because it might be inside a PUSH (and therefore data and not an opcode).
 
@@ -196,7 +196,7 @@ This function is used in equation (152) to define _D<sub>J</sub>(c,i)_, which is
 
 In all other cases we look at the rest of the code by going to the next opcode and getting the set starting from it. _c[i]_ is the current opcode, so _N(i,c[i])_ is the location of the next opcode. _D<sub>J</sub>(c,N(i,c[i]))_ is therefore the set of valid jump destinations that starts at the next opcode. If the current opcode isn't a `JUMPDEST`, just return that set. If it is `JUMPDEST`, include it in the result set and return that.
 
-## 9.4.4 Normal halting \{##944-normal-halt}
+## 9.4.4 Normal halting \{#944-normal-halt}
 
 The halting function _H_, can return three types of values.
 
@@ -204,7 +204,7 @@ The halting function _H_, can return three types of values.
 - If we have a halt opcode that doesn't produce output (either [`STOP`](https://www.evm.codes/#00) or [`SELFDESTRUCT`](https://www.evm.codes/#ff)), return a sequence of size zero bytes as the return value. Note that this is very different from the empty set. This value means that the EVM really did halt, just there's no return data to read.
 - If we have a halt opcode that does produce output (either [`RETURN`](https://www.evm.codes/#f3) or [`REVERT`](https://www.evm.codes/#fd)), return the sequence of bytes specified by that opcode. This sequence is taken from memory, the value at the top of the stack (_μ<sub>s</sub>[0]_) is the first byte, and the value after it (_μ<sub>s</sub>[1]_) is the length.
 
-## H.2 Instruction set \{##h2-instruction-set}
+## H.2 Instruction set \{#h2-instruction-set}
 
 Before we go to the final subsection of the EVM, 9.5, let's look at the instructions themselves. They are defined in Appendix H.2 which starts on p. 29. Anything that is not specified as changing with that specific opcode is expected to stay the same. Variables that do change are specified with as \<something\>′.
 
@@ -249,7 +249,7 @@ The second equation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mo
 
 Note that to use any stack item, we need to pop it, which means we also need to pop all the stack items on top of it. In the case of [`DUP<n>`](https://www.evm.codes/#8f) and [`SWAP<n>`](https://www.evm.codes/#9f), this means having to pop and then push up to sixteen values.
 
-## 9.5 The execution cycle \{##95-exec-cycle}
+## 9.5 The execution cycle \{#95-exec-cycle}
 
 Now that we have all the parts, we can finally understand how the execution cycle of the EVM is documented.
 
@@ -266,7 +266,7 @@ Equations (156)-(158) define the stack and the change in it due to an opcode (_�
 
 With this the EVM is fully defined.
 
-## Conclusion \{##conclusion}
+## Conclusion \{#conclusion}
 
 Mathematical notation is precise and has allowed the Yellow Paper to specify every detail of Ethereum. However, it does have some drawbacks:
 

@@ -131,7 +131,9 @@ lang: fa
 
 این ویدئو EIP-1559 و مزایای آن را توضیح می‌دهد:
 
-<YouTube id="MGemhK9t44Q" />
+{
+	<YouTube id="MGemhK9t44Q" />
+}
 
 ## نظارت بر کارمزدهای گاز \{#moitoring-gas-fees}
 

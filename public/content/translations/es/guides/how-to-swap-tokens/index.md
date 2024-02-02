@@ -47,7 +47,9 @@ Revise los detalles de la transacción. Compruebe el tipo de cambio y cualquier 
 Puede seguir el progreso de la transacción en cualquier navegador de cadena de bloques. Este proceso no debería llevar más de 10 minutos.
 
 Recibirá automáticamente los tókenes intercambiados en su cartera una vez que la transacción sea procesada.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>¿Quiere saber más?</div>

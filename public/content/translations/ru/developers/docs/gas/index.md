@@ -131,7 +131,9 @@ lang: ru
 
 В этом видео рассказывается об EIP-1559 и его преимуществах:
 
-<YouTube id="MGemhK9t44Q" />
+{
+	<YouTube id="MGemhK9t44Q" />
+}
 
 ## Отслеживание комиссий за газ \{#moitoring-gas-fees}
 

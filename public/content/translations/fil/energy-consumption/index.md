@@ -12,7 +12,9 @@ Ang pagtatantya sa kinokonsumong enerhiya ng Ethereum ay mula sa isang pag-aaral
 
 Upang maipaliwanag ang kinokonsumong enerhiya ng Ethereum, maaari nating ikumpara ang mga pagtatantya kada taon ng iba pang industriya. Makakatulong ito para mas maunawaan natin kung masyadong mataas o mababa ang pagtatantya para sa Ethereum.
 
-<EnergyConsumptionChart />
+{
+	<EnergyConsumptionChart />
+}
 
 Ipinapakita ng chart sa itaas ang tinatantyang kinokonsumong enerhiya kada taon sa TWh/taon para sa Ethereum, kumpara sa ilan pang industriya. Ang mga pagtatantyang ibinigay ay galing sa mga impormasyong available sa pampubliko na kinuha noong Mayo 2023. Makikita sa talahanayan sa ibaba ang mga link sa mga source:
 

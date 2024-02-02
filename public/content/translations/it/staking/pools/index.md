@@ -29,7 +29,9 @@ Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking]
   <Card title="token di staking" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## Cosa considerare \{#what-to-consider}
 
@@ -43,15 +45,21 @@ Tuttavia, questi token derivanti dagli ETH in staking tendono a creare comportam
 
 Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di forza o debolezze che un pool di staking elencato potrebbe avere. Usa questa sezione come un riferimento per come definire tali attributi mentre stai scegliendo un pool cui unirti.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## Esplora i pool di staking \{#explore-staking-pools}
 
 Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazione. Gli indicatori di cui sopra ti guideranno per gli strumenti seguenti.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 Sei pregato di notare l'importanza di scegliere un servizio che prenda sul serio la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/), poiché essa migliora la sicurezza della rete e limita i tuoi rischi. I servizi aventi prova della limitazione dell'utilizzo dei client di maggioranza sono indicati con <em style={{ textTransform: "uppercase" }}>"diversità del client d'esecuzione"</em> e <em style={{ textTransform: "uppercase" }}>"diversità del client del consenso."</em>
 
@@ -59,10 +67,13 @@ Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un
 
 ## Domande frequenti \{#faq}
 
+{
 <ExpandableCard title="Come ottengo ricompense?">
 Tipicamente, i token di staking ERC-20 sono emessi agli staker che rappresentano il valore dei loro ETH in staking più le ricompense. Tieni a mente che diversi pool distribuiranno ricompense di staking ai loro utenti tramite metodi lievemente differenti, ma questo è il tema comune.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Quando posso prelevare il mio stake?">
 Subito! L'aggiornamento della rete di Shanghai/Capella è avvenuto ad aprile 2023 e ha introdotto i prelievi di staking. I conti del validatore che sostengono i pool di staking hanno ora la possibilità di uscire e prelevare ETH al proprio indirizzo di prelievo designato. Ciò consente di riscattare la propria parte di stake per gli ETH sottostanti. Confrontati con il tuo fornitore per scoprire come supporta tale funzionalità.
 
@@ -70,7 +81,9 @@ In alternativa, i pool che utilizzano un token di staking ERC-20 consentono agli
 
 <ButtonLink to="/staking/withdrawals/">Di più sui prelievi di staking</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="È diverso dallo staking con la mia borsa?">
 Esistono molte somiglianze tra queste opzioni di staking in pool e le borse centralizzate, come la possibilità di mettere in staking piccole quantità di ETH e farle impacchettare insieme per attivare i validatori.
 
@@ -78,6 +91,7 @@ A differenza delle borse centralizzate, molte altre opzioni di staking in pool u
 
 Alcune opzioni di pooling sono più decentralizzate di altre quando si tratta di nodi che le sostengono. Per promuovere la salute e la decentralizzazione della rete, gli staker sono sempre incoraggiati a selezionare un servizio di pooling che consenta una serie di operatori del nodo decentralizzati e privi di permessi.
 </ExpandableCard>
+}
 
 ## Approfondimenti \{#further-reading}
 

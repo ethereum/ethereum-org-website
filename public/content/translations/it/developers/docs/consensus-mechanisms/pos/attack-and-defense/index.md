@@ -65,7 +65,9 @@ Un attacco più sofisticato può dividere l'insieme di validatori onesti in grup
 
 Gli **attacchi di rimbalzo** sono simili. Anche in questo caso i voti sono trattenuti dai validatori malevoli. Invece di rilasciarli per mantenere una divisione equa tra le due diramazioni, utilizzano i propri voti nei momenti opportuni per giustificare punti di controllo che si alternano tra la diramazione A e la diramazione B. Questo tira e molla di giustificazioni tra le due diramazioni impedisce la presenza di coppie di punti di controllo di origine e di destinazione giustificati finalizzabili su una delle due catene, interrompendo la finalità.
 
-<YouTube id="xcPxwhrg3Ao"/>
+{
+	<YouTube id="xcPxwhrg3Ao"/>
+}
 
 Sia gli attacchi di rimbalzo che quelli di bilanciamento si basano sul fatto che l'utente malevolo abbia un controllo molto preciso sulle tempistiche dei messaggi attraverso la rete, il che è improbabile. Tuttavia, le difese sono integrate nel protocollo sotto forma di ponderazione aggiuntiva data ai messaggi immediati rispetto a quelli lenti. Ciò è noto come [incremento del peso del propositore](https://github.com/ethereum/consensus-specs/pull/2730). Per difendersi dagli attacchi di rimbalzo, l'algoritmo di scelta della diramazione è stato aggiornato così che l'ultimo punto di controllo giustificato possa passare a quello di una catena alternativa soltanto durante il [primo 1/3 degli slot in ogni epoca](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114). Questa condizione impedisce all'utente malevolo di risparmiare voti da distribuire in seguito: l'algoritmo di scelta della diramazione, semplicemente, resta leale al punto di controllo che ha scelto nel primo 1/3 dell'epoca in cui avrebbero votato i validatori più onesti.
 

@@ -12,7 +12,7 @@ As computation is the slow, expensive part of using Ethereum, optimistic rollups
 
 You should have read and understood our pages on [Ethereum scaling](/developers/docs/scaling/) and [layer 2](/layer-2/).
 
-## What is an optimistic rollup? \{##what-is-an-optimistic-rollup}
+## What is an optimistic rollup? \{#what-is-an-optimistic-rollup}
 
 An optimistic rollup is an approach to scaling Ethereum that involves moving computation and state storage off-chain. Optimistic rollups execute transactions outside of Ethereum, but post transaction data to Mainnet as `calldata`.
 
@@ -26,7 +26,7 @@ If the fraud proof succeeds, the rollup protocol re-executes the transaction(s) 
 
 If the rollup batch remains unchallenged (i.e., all transactions are correctly executed) after the challenge period elapses, it is deemed valid and accepted on Ethereum. Others can continue to build on an unconfirmed rollup block, but with a caveat: transaction results will be reversed if based on an incorrectly executed transaction published previously.
 
-## How do optimistic rollups interact with Ethereum? \{##optimistic-rollups-and-Ethereum}
+## How do optimistic rollups interact with Ethereum? \{#optimistic-rollups-and-Ethereum}
 
 Optimistic rollups are [off-chain scaling solutions](/developers/docs/scaling/#off-chain-scaling) built to operate on top of Ethereum. Each optimistic rollup is managed by a set of smart contracts deployed on the Ethereum network. Optimistic rollups process transactions off the main Ethereum chain, but post off-chain transactions (in batches) to an on-chain rollup contract. Like the Ethereum blockchain, this transaction record is immutable and forms the "optimistic rollup chain."
 
@@ -42,13 +42,13 @@ Optimistic rollups are described as 'hybrid scaling solutions' because, while th
 
 Optimistic rollups rely on the main Ethereum protocol for the following:
 
-### Data availability \{##data-availability}
+### Data availability \{#data-availability}
 
 As mentioned, optimistic rollups post transaction data to Ethereum as `calldata`. Since the rollup chain's execution is based on submitted transactions, anyone can use this information—anchored on Ethereum’s base layer—to execute the rollup’s state and verify the correctness of state transitions.
 
 [Data availability](/developers/docs/data-availability/) is critical because without access to state data, challengers cannot construct fraud proofs to dispute invalid rollup operations. With Ethereum providing data availability, the risk of rollup operators getting away with malicious acts (e.g., submitting invalid blocks) is reduced.
 
-### Censorship resistance \{##censorship-resistance}
+### Censorship resistance \{#censorship-resistance}
 
 Optimistic rollups also rely on Ethereum for censorship resistance. In an optimistic rollup a centralized entity (the operator) is responsible for processing transactions and submitting rollup blocks to Ethereum. This has some implications:
 
@@ -64,15 +64,15 @@ Optimistic rollups solve this problem by forcing operators to publish data assoc
 
 - Users can also submit their transactions on L1 instead of to the sequencer, in which case the sequencer has to include the transaction within a certain time limit to continue to produce valid blocks.
 
-### Settlement \{##settlement}
+### Settlement \{#settlement}
 
 Another role Ethereum plays in the context of optimistic rollups is that of a settlement layer. A settlement layer anchors the entire blockchain ecosystem, establishes security, and provides objective finality if a dispute occurs on another chain (optimistic rollups in this case) that requires arbitration.
 
 Ethereum Mainnet provides a hub for optimistic rollups to verify fraud proofs and resolve disputes. Moreover, transactions conducted on the rollup are only final _after_ the rollup block is accepted on Ethereum. Once a rollup transaction is committed to Ethereum’s base layer, it cannot be rolled back (except in the highly unlikely case of a chain reorganization).
 
-## How do optimistic rollups work? \{##how-optimistic-rollups-work}
+## How do optimistic rollups work? \{#how-optimistic-rollups-work}
 
-### Transaction execution and aggregation \{##transaction-execution-and-aggregation}
+### Transaction execution and aggregation \{#transaction-execution-and-aggregation}
 
 Users submit transactions to “operators”, which are nodes responsible for processing transactions on the optimistic rollup. Also known as a “validator” or “aggregator”, the operator aggregates transactions, compresses the underlying data, and publishes the block on Ethereum.
 
@@ -84,7 +84,7 @@ Some optimistic rollups may forgo a permissionless validator system and use a si
 
 The sequencer is different from a regular rollup operator because they have greater control over the ordering of transactions. Also, the sequencer has priority access to the rollup chain and is the only entity authorized to submit transactions to the on-chain contract. Transactions from non-sequencer nodes or regular users are simply queued up in a separate inbox until the sequencer includes them in a new batch.
 
-#### Submitting rollup blocks to Ethereum \{##submitting-blocks-to-ethereum}
+#### Submitting rollup blocks to Ethereum \{#submitting-blocks-to-ethereum}
 
 As mentioned, the operator of an optimistic rollup bundles off-chain transactions into a batch and sends it to Ethereum for notarization. This process involves compressing transaction-related data and publishing it on Ethereum as `calldata`.
 
@@ -96,7 +96,7 @@ In the context of optimistic rollups, `calldata` is used to send compressed tran
 
 Here is [an example](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591) of a rollup batch submission to show how this concept works. The sequencer invoked the `appendSequencerBatch()` method and passed the compressed transaction data as inputs using `calldata`.
 
-### State commitments \{##state-commitments}
+### State commitments \{#state-commitments}
 
 At any point in time, the optimistic rollup’s state (accounts, balances, contract code, etc.) is organized as a [Merkle tree](/whitepaper/#merkle-trees) called a “state tree”. The root of this Merkle tree (state root), which references the rollup’s latest state, is hashed and stored in the rollup contract. Every state transition on the chain produces a new rollup state, which an operator commits to by computing a new state root.
 
@@ -106,7 +106,7 @@ The rollup operator is also required to commit a Merkle root for the transaction
 
 State commitments, especially state roots, are necessary for proving the correctness of state changes in an optimistic rollup. The rollup contract accepts new state roots from operators immediately after they are posted, but can later delete invalid state roots to restore the rollup to its correct state.
 
-### Fraud proving \{##fraud-proving}
+### Fraud proving \{#fraud-proving}
 
 As explained, optimistic rollups allow anyone to publish blocks without providing proofs of validity. However, to ensure the chain remains safe, optimistic rollups specify a time window during which anyone can dispute a state transition. Hence, rollup blocks are called “assertions” since anyone can dispute their validity.
 
@@ -116,7 +116,7 @@ Single-round interactive proving schemes replay disputed transactions on L1 to d
 
 However, re-executing transactions on L1 to detect fraud requires publishing state commitments for individual transactions and increases the data rollups must publish on-chain. Replaying transactions also incurs significant gas costs. For these reasons, optimistic rollups are switching to multi-round interactive proving, which achieves the same objective (i.e., detecting invalid rollup operations) with more efficiency.
 
-#### Multi-round interactive proving \{##multi-round-interactive-proving}
+#### Multi-round interactive proving \{#multi-round-interactive-proving}
 
 Multi-round interactive proving involves a back-and-forth protocol between the asserter and challenger overseen by an L1 verifier contract, which ultimately decides the lying party. After an L2 node challenges an assertion, the asserter is required to divide the disputed assertion into two equal halves. Each individual assertion in this case will contain as many steps of computation as the other.
 
@@ -134,7 +134,7 @@ Some notes about this type of fraud proof:
 
 4. Multi-round interactive proving requires both parties (the asserter and the challenger) to make moves within the specified time window. Failure to act before the deadline expires causes the defaulting party to forfeit the challenge.
 
-#### Why fraud proofs matter for optimistic rollups \{##fraud-proof-benefits}
+#### Why fraud proofs matter for optimistic rollups \{#fraud-proof-benefits}
 
 Fraud proofs are important because they facilitate _trustless finality_ in optimistic rollups. Trustless finality is a quality of optimistic rollups that guarantees that a transaction—so long as it’s valid—will eventually be confirmed.
 
@@ -142,11 +142,11 @@ Malicious nodes can try to delay the confirmation of a valid rollup block by sta
 
 This also relates to another security property of optimistic rollups: the validity of the chain relies on the existence of _one_ honest node. The honest node can advance the chain correctly by either posting valid assertions or disputing invalid assertions. Whatever the case, malicious nodes who enter into disputes with the honest node will lose their stakes during the fraud proving process.
 
-### L1/L2 interoperability \{##l1-l2-interoperability}
+### L1/L2 interoperability \{#l1-l2-interoperability}
 
 Optimistic rollups are designed for interoperability with Ethereum Mainnet and allow users to pass messages and arbitrary data between L1 and L2. They are also compatible with the EVM, so you can port existing [dapps](/developers/docs/dapps/) to optimistic rollups or create new dapps using Ethereum development tools.
 
-#### 1. Asset movement \{##asset-movement}
+#### 1. Asset movement \{#asset-movement}
 
 ##### Entering the rollup
 
@@ -166,7 +166,7 @@ To avoid waiting a week before withdrawing funds to Ethereum, optimistic rollup 
 
 Liquidity providers can check the validity of the user’s withdrawal request (by executing the chain themselves) before releasing funds. This way they have assurances that the transaction will be confirmed eventually (i.e., trustless finality).
 
-#### 2. EVM compatibility \{##evm-compatibility}
+#### 2. EVM compatibility \{#evm-compatibility}
 
 For developers, the advantage of optimistic rollups is their compatibility—or, better still, equivalence—with the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). EVM-compatible rollups comply with specifications in the [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) and support the EVM at the bytecode level.
 
@@ -178,7 +178,7 @@ ii. Developers and project teams using optimistic rollups can take advantage of 
 
 Using existing tooling is important because these tools have been extensively audited, debugged, and improved over the years. It also removes the need for Ethereum developers to learn how to build with an entirely new development stack.
 
-#### 3. Cross-chain contract calls \{##cross-chain-contract-calls}
+#### 3. Cross-chain contract calls \{#cross-chain-contract-calls}
 
 Users (externally owned accounts) interact with L2 contracts by submitting a transaction to the rollup contract or having a sequencer or validator do it for them. Optimistic rollups also allow contract accounts on Ethereum to interact with L2 contracts using bridging contracts to relay messages and pass data between L1 and L2. This means you can program an L1 contract on Ethereum Mainnet to invoke functions belonging to contracts on an L2 optimistic rollup.
 
@@ -190,7 +190,7 @@ As cross-chain message calls result in contract execution, the sender is usually
 
 Finally, we should note that L2 > L1 message calls between contracts need to account for delays (L1 > L2 calls are typically executed after some minutes). This is because messages sent to Mainnet from the optimistic rollup cannot be executed until the challenge window expires.
 
-## How do optimistic rollup fees work? \{##how-do-optimistic-rollup-fees-work}
+## How do optimistic rollup fees work? \{#how-do-optimistic-rollup-fees-work}
 
 Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much users pay per transaction. Fees charged on optimistic rollups depends on the following components:
 
@@ -202,7 +202,7 @@ Optimistic rollups use a gas fee scheme, much like Ethereum, to denote how much 
 
 Optimistic rollups apply several mechanisms to reducing fees for users, including batching transactions and compressing `calldata` to reduce data publication costs. You can check the [L2 fee tracker](https://l2fees.info/) for a real-time overview of how much it costs to use Ethereum-based optimistic rollups.
 
-## How do optimistic rollups scale Ethereum? \{##scaling-ethereum-with-optimistic-rollups}
+## How do optimistic rollups scale Ethereum? \{#scaling-ethereum-with-optimistic-rollups}
 
 As explained, optimistic rollups publish compressed transaction data on Ethereum to guarantee data availability. The ability to compress data published on-chain is crucial to scaling throughput on Ethereum with optimistic rollups.
 
@@ -231,7 +231,7 @@ This is a fairly optimistic estimate, given that optimistic rollup transactions 
 
 The introduction of [data sharding](/roadmap/danksharding/) on Ethereum is expected to improve scalability in optimistic rollups. Because rollup transactions must share blockspace with other non-rollup transactions, their processing capacity is limited by data throughput on the main Ethereum chain. Danksharding will increase the space available to L2 chains to publish data per block, using cheaper, impermanent "blob" storage instead of expensive, permanent `CALLDATA`.
 
-### Pros and cons of optimistic rollups \{##optimistic-rollups-pros-and-cons}
+### Pros and cons of optimistic rollups \{#optimistic-rollups-pros-and-cons}
 
 | Pros                                                                                                                                                  | Cons                                                                                                                                                |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -243,17 +243,21 @@ The introduction of [data sharding](/roadmap/danksharding/) on Ethereum is expec
 | Optimistic rollups rely on well-designed cryptoeconomic incentives to increase security on the chain.                                                 | Rollups must post all transaction data on-chain, which can increase costs.                                                                          |
 | Compatibility with EVM and Solidity allows developers to port Ethereum-native smart contracts to rollups or use existing tooling to create new dapps. |
 
-### A visual explanation of optimistic rollups \{##optimistic-video}
+### A visual explanation of optimistic rollups \{#optimistic-video}
 
 More of a visual learner? Watch Finematics explain optimistic rollups:
 
-<YouTube id="7pWxCklcNsU" start="263" />
+{
+	<YouTube id="7pWxCklcNsU" start="263" />
+}
 
-### Use Optimistic rollups \{##use-optimistic-rollups}
+### Use Optimistic rollups \{#use-optimistic-rollups}
 
 Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
 
-<RollupProductDevDoc rollupType="optimistic" />
+{
+	<RollupProductDevDoc rollupType="optimistic" />
+}
 
 ## Further reading on optimistic rollups
 

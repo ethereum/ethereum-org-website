@@ -19,7 +19,9 @@ summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno
 
 Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne mreže koja je postojala još od [geneze](/history/#frontier)) s novim slojem konsenzusa dokaza uloga pod nazivom Beacon Chain. Time se uklanja potreba za energetski intenzivnim rudarenjem i umjesto toga mreža se osigurava korištenjem ulagačkog ETH-a. To je bio dosta značajan korak vizije Ethereuma kao prilagodljivijeg, sigurnijeg i održivijeg.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 U početku je [Beacon Chain](/roadmap/beacon-chain/) bio odvojen od [glavne mreže](/glossary/#mainnet). Glavna mreža Ethereuma, sa svim svojim računima, stanjima, pametnim ugovorima i stanjima lanaca blokova, ostaje zaštićena [dokazom rada](/developers/docs/consensus-mechanisms/pow/), čak i za vrijeme paralelnog rada značajke Beacon Chain i njegova [dokaza uloga](/developers/docs/consensus-mechanisms/pos/). Spajanjem su ta dva sustava konačno objedinjena, pri čemu je dokaz rada trajno zamijenjen dokazom uloga.
 
@@ -53,6 +55,7 @@ Unatoč trajne zamjene dokaza rada i prijelaza na dokaz uloga, cjelokupna povije
 
 ### Rukovatelji čvora i programeri decentralizirane aplikacije (dapp) \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Rukovatelji i davatelji ulagačkih čvorova"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ Ako ne dovršite gornje dvije radnje, vaš će se čvor vidjeti kao „izvan mre
 
 Iako nije postavljen „primatelj naknade”, validator i dalje može raditi na uobičajeni način, ali vi nećete primiti napojnice za naknade ili MEV koje biste inače zaradili u blokovima koje vaš validator predloži.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Rukovatelji nevalidiranog čvora i davatelji infrastrukture"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ Ključne radnje sadržavaju:
 Ako ne dovršite gornje radnje, vaš će se čvor vidjeti kao „izvan mreže” sve dok oba sloja nisu sinkronizirana i dok im nije potvrđena autentičnost.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Programeri decentralizirane aplikacije (dapp) i pametnog ugovora"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -102,6 +109,7 @@ Spajanje je izvršilo promjene konsenzusa koje su uključivale promjene:
 
 Više informacija potražite u objavi Tima Beikoa: [How The Merge Impacts Ethereum’s Application Layer](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
 </ExpandableCard>
+}
 
 ## Spajanje i potrošnja energije \{#merge-and-energy}
 
@@ -113,6 +121,7 @@ Spajanje je postavilo temelje za nove nadogradnje skalabilnosti koje nisu bile m
 
 ## Zablude o spajanju \{#misconceptions}
 
+{
 <ExpandableCard
 title="Zabluda: „Za pokretanje čvora potreban je ulog od 32 ETH.”"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -129,7 +138,9 @@ Mogućnost da svaka osoba pokrene vlastiti čvor temeljni je čimbenik održavan
 [Više o pokretanju vlastitog čvora](/run-a-node/)
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zabluda: „Spajanje nije uspjelo smanjiti troškove goriva.”"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -137,7 +148,9 @@ Troškovi goriva proizvod su mrežnog zahtjeva povezanog s kapacitetom mreže. S
 
 S [planom razvoja objedinjavanja transakcija](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) napori su usmjereni na skaliranje aktivnosti korisnika na [sloju 2](/layer-2/), dok je sloj 1 glavne mreže omogućen kao zaštićen, decentralizirani sloj odlučivanja optimiziran za pohranu podataka objedinjavanja transakcija kako bi cijena objedinjenih transakcija eksponencijalno padala. Da bi se to moglo provesti, prijelaz na dokaz uloga kritični je preduvjet. [Više o gorivu i troškovima.](/developers/docs/gas/)
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zabluda: „Spajanje je znatno ubrzalo transakcije.”"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -148,13 +161,17 @@ Povijesno, u konceptu dokaza rada cilj je bio dobiti novi blok približno svakih
 Koncept dokaza uloga uveo je potpuno novi koncept konačnosti transakcije. U konceptu dokaza rada mogućnost reverzije bloka eksponencijalno se usložnjava sa svakim rudarenim blokom u transakciji, međutim ona nikada ne nestaje. U konceptu dokaza uloga blokovi su objedinjeni u epohe (razdoblje od 6,4 minuta sadrži 32 mogućnosti za blokove) za koje glasuju validatori. Kada se epoha završi, validatori glasuju smatra li se epoha „opravdanom”. Ako se validatori slože da je epoha opravdana, epoha se finalizira u sljedećoj epohi. Poništavanje finaliziranih transakcija ekonomski je neodrživo jer bi zahtijevalo prikupljanje i spaljivanje više od trećine ukupunih uloga ETH-a.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zabluda: „Spajanje je omogućilo povrat uloženih sredstava.”"
 contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
 Uloženi ETH i nagrade za ulaganje i dalje su zaključani bez mogućnosti povlačenja. Povlačenje je planirano za sljedeću šangajsku nadogradnju.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zabluda: „Validatori neće primiti likvidne ETH nagrade do šangajske nadogradnje u kojoj će biti omogućeno povlačenje sredstava.”"
 contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
@@ -164,7 +181,9 @@ Protokol izdaje ETH kao nagradu validatorima za njihov doprinos u konsenzusu. Sl
 
 ETH na sloju za izvršavanje računa se odvojeno od sloja konsenzusa. Kada korisnici provode transakcije na glavnoj mreži Ethereuma, ETH-om se mora platiti gorivo, uključujući i napojnicu za validatora. ETH je već na sloju za izvršavanje. Protokol ga NIJE izdao kao novog i trenutačno je dostupan validatoru (uz pretpostavku da je registrirana adresa „primatelja naknade” u klijentskom softveru).
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Zabluda: „Kada se omogući povlačenje sredstava, ulagači će odmah biti isključeni.”"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -174,6 +193,7 @@ Važno upozorenje, protokol ograničava stopu potpunog izlaska validatora, pa ta
 
 Kamatna stopa na godišnjoj razini namjerno je dinamična kako bi dopustila tržištu ulagača da odluče koliko žele zaraditi za pomoć u zaštiti mreže. Kada je omogućeno povlačenje sredstava, ako je stopa preniska, validatori izlaze po stopi koju je ograničio protokol. Postupno će to povećati kamatnu stopu na godišnjoj razini za sve one koji ostanu i privući će nove ulagače i one koji se žele vratiti.
 </ExpandableCard>
+}
 
 ## Što se dogodilo s „Eth2”? \{#eth2}
 
@@ -220,6 +240,10 @@ Planovi za razdjeljivanje brzo su se razvijali. Međutim, uzimajući u obzir ras
 
 ## Daljnje čitanje \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

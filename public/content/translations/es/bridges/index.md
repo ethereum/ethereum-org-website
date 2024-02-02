@@ -8,7 +8,9 @@ lang: es
 
 _La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones de escalado L2, cada uno diseñado con capacidades y compensaciones particulares. A medida que aumenta el número de protocolos en las cadenas de bloques, también lo hace [la demanda de mover activos por las diferentes cadenas](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Para satisfacer esta demanda, necesitamos puentes (bridges)._
 
-<Divider />
+{
+	<Divider />
+}
 
 ## ¿Qué son los puentes? \{#what-are-bridges}
 
@@ -37,7 +39,9 @@ Los puentes permiten:
 
 [Cómo pasar los tókenes a la capa 2](/guides/how-to-use-a-bridge/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Casos de uso de los puentes \{#bridge-use-cases}
 
@@ -63,7 +67,9 @@ Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red princip
   También puede hacer todo lo anterior usando un <a href="/get-eth/">exchange centralizado</a>. Sin embargo, a menos que sus fondos ya estén en un exchange, esto implicaría varios pasos y probablemente sería mejor usar un puente.
 </InfoBanner>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Tipos de puente \{#types-of-bridge}
 
@@ -93,7 +99,9 @@ La autofacturación, o auto check-in, es similar a un modelo que no precisa conf
 
 Muchas soluciones de puente adoptan modelos entre estos dos extremos con diferentes niveles de no necesidad de confianza en el proceso.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Riesgo al utilizar puentes \{#bridge-risk}
 
@@ -119,7 +127,9 @@ Un hackeo reciente ocurrió en el puente de Solana Wormhole, [donde se robaron d
 
 Los puentes son cruciales para incorporar a los usuarios a las L2 de Ethereum e incluso para los usuarios que quieren explorar diferentes ecosistemas. Sin embargo, dados los riesgos que implica la interacción con los puentes, los usuarios deben entender las implicancias. Estas son algunas [estrategias para la seguridad entre cadenas](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Para seguir leyendo \{#further-reading}
 

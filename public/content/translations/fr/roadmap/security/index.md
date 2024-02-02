@@ -15,7 +15,9 @@ Il existe également des améliorations qui rendent la censure des transactions 
 
 La transition de la preuve de travail à la preuve d'enjeu a commencé avec les pionniers d'Ethereum qui ont « mis en jeu » leur ETH dans un contrat de dépôt. Cet ETH est utilisé pour protéger le réseau. Cependant, cet ETH ne peut pas encore être débloqué et rendu aux utilisateurs. Permettre le retrait d'ETH est un élément essentiel de la mise à niveau de la preuve d'enjeu. En plus d'être un élément essentiel d'un protocole de preuve d'enjeu pleinement fonctionnel, l'autorisation des retraits est également bénéfique pour la sécurité d'Ethereum, car elle permet aux stakers d'utiliser leurs récompenses ETH à d'autres fins que l'enjeu. Cela signifie que les utilisateurs qui veulent de la liquidité n'ont pas besoin de s'appuyer sur les « liquid staking derivatives » (LSD) qui peuvent être une force centralisatrice sur Ethereum. Cette mise à niveau est prévue pour être achevée le 12 avril 2023.
 
+{
 <ButtonLink variant="outline-color" to="/staking/withdrawals/">À propos des retraits</ButtonLink>
+}
 
 ## Se défendre contre les attaques \{#defending-against-attacks}
 
@@ -23,25 +25,33 @@ Même après l'activation des retraits, des améliorations peuvent être apport�
 
 Réduire le temps que prend Ethereum pour finaliser les blocs offrirait une meilleure expérience utilisateur et empêcherait les attaques sophistiquées de « reorg » où les attaquants essaient de réorganiser les blocs très récents pour en tirer profit ou censurer certaines transactions. [**Finalité à créneau unique - Single slot finality (SSF)**](/roadmap/single-slot-finality/) est un moyen de minimiser le délai de finalisation. Actuellement, il y a l'équivalent de 15 minutes de blocs qu'un attaquant pourrait théoriquement convaincre d'autres validateurs de reconfigurer. Avec SSF, il y en aurait 0. Les utilisateurs, des individus aux applications jusqu'aux échanges, bénéficient d'une assurance rapide que leurs transactions ne seront pas annulées, et le réseau bénéficie lui de l'élimination d'une catégorie entière d'attaques.
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/single-slot-finality/">En apprendre plus à propos de la finalité à créneau unique</ButtonLink>
+}
 
 ## Se défendre contre la censure \{#defending-against-censorship}
 
 La décentralisation empêche les individus ou les petits groupes de validateurs de devenir trop influents. Les nouvelles technologies de mise en jeu peuvent aider à garantir que les validateurs d'Ethereum restent aussi décentralisés que possible tout en les protégeant contre les pannes matérielles, logicielles et de réseau. Cela inclut un logiciel qui partage les responsabilités du validateur sur plusieurs nœuds. C'est ce qu'on appelle la **technologie de validation distribuée (DVT)**. Les pools de mise en jeu sont incités à utiliser le DVT car il permet à plusieurs ordinateurs de participer collectivement à la validation, ajoutant ainsi une redondance et une tolérance aux pannes. Cela divise également les clés du validateur entre plusieurs systèmes, plutôt que d'avoir des opérateurs individuels exécutant plusieurs validateurs. Cela rend plus difficile pour les opérateurs malhonnêtes de coordonner des attaques sur Ethereum. Globalement, l'idée est de gagner en matière de sécurité en faisant fonctionner les validateurs en tant que _communautés_ plutôt qu'en tant qu'individus.
 
+{
 <ButtonLink variant="outline-color" to="/staking/dvt/">En apprendre plus à propos de la technologie de validation distribuée</ButtonLink>
+}
 
 La mise en œuvre de la **séparation proposeur-constructeur (PBS)** améliorera considérablement les défenses intégrées d'Ethereum contre la censure. PBS permet à un validateur de créer un bloc et à un autre de le diffuser à travers le réseau Ethereum. Cela garantit que les gains provenant des algorithmes de construction de blocs axés sur la maximisation des profits sont partagés plus équitablement à travers le réseau, **empêchant la concentration ** chez les stakers institutionnels les plus performants au fil du temps. Le proposeur de bloc a la possibilité de sélectionner le bloc le plus rentable qui lui est proposé par un marché de constructeurs de blocs. Pour censurer, un proposeur de bloc devrait souvent choisir un bloc moins rentable, ce qui serait **économiquement irrationnel et également évident pour le reste des validateurs** sur le réseau.
 
 Il existe des ajouts potentiels à PBS, tels que les transactions chiffrées et les listes d'inclusion, qui pourraient améliorer davantage la résistance à la censure d'Ethereum. Ces éléments rendent le constructeur de blocs et le proposeur ignorants des transactions réelles incluses dans leurs blocs.
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/pbs/">En apprendre plus à propos de la séparation entre le constructeur et le proposeur</ButtonLink>
+}
 
 ## Protéger les validateurs \{#protecting-validators}
 
 Il est possible qu'un attaquant sophistiqué puisse identifier les validateurs imminents et les spammer pour les empêcher de proposer des blocs ; cela s'appelle une **attaque par déni de service (DoS)**. Implémenter [**l'élection secrète du leader (SLE)**](/roadmap/secret-leader-election) protégera contre ce type d'attaque en empêchant les proposants de bloc d'être connus à l'avance. Cela fonctionne en mélangeant continuellement un ensemble d'engagements cryptographiques représentant les candidats proposeurs de blocs et en utilisant leur ordre pour déterminer quel validateur est sélectionné de telle manière que seuls les validateurs eux-mêmes connaissent leur ordre à l'avance.
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">En apprendre plus à propos de l'élection d'un leader secret</ButtonLink>
+}
 
 ## Progrès actuels \{#current-progress}
 

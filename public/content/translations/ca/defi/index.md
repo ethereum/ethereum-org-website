@@ -20,7 +20,9 @@ DeFi és un terme col·lectiu per als productes i serveis financers que són acc
 
 Hi ha una criptoeconomia puixant allà fora, on podeu prestar, demanar prestat, rebre interessos i molt més. Els argentins amb coneixements de criptografia han usat les DeFi per escapar de la inflació tan limitadora que pateix el seu país. Les empreses han començat a pagar els salaris dels seus empleats en temps real. Hi ha hagut casos de persones que han pagat préstecs per valor de milions de dòlars, sense la necessitat de cap identificació personal.
 
-<YouTube id="H-O3r2YMWJ4" />
+{
+	<YouTube id="H-O3r2YMWJ4" />
+}
 
 ## DeFi vs les finances tradicionals \{#defi-vs-tradfi}
 
@@ -57,7 +59,9 @@ Segons com es miri, Bitcoin va ser la primera aplicació DeFi. Bitcoin us permet
 
 Ethereum desenvolupa tot això. Com Bitcoin, les regles no es poden canviar i tothom hi té accés. Però també permet que el diners digitals siguin programables mitjançant [contractes intel·ligents](/glossary#smart-contract), així podeu fer més coses, a banda de guardar o enviar valor.
 
-<YouTube id="qFBYB4W2tqU" />
+{
+	<YouTube id="qFBYB4W2tqU" />
+}
 
 ## Diners programables \{#programmable-money}
 
@@ -86,7 +90,9 @@ Hi ha una alternativa descentralitzada a la majoria dels serveis financers. Per�
 - [Comprar assegurances](#insurance)
 - [Gestionar la vostra cartera d'inversions](#aggregators)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Enviar diners arreu del món, ràpidament \{#send-money}
 
@@ -102,7 +108,9 @@ També podeu transferir diners dins d'Ethereum. Això us permet pagar salaris en
 
 I si no voleu enviar o transferir [ETH](/eth/) a causa de les grans oscil·lacions de valor que pot patir, hi ha divises alternatives dins d'Ethereum: monedes estables («stablecoins»).
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Accedir a divises estables \{#stablecoins}
 
@@ -114,7 +122,9 @@ Monedes com DAI o USDC tenen un valor que oscil·la uns pocs cèntims al voltant
   Més informació sobre monedes estables
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Obtenir préstecs \{#lending}
 
@@ -170,7 +180,9 @@ Per a poder dur a terme l'exemple anterior en les finances tradicionals, necessi
 
 [Més sobre préstecs ràpids](https://aave.com/flash-loans/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Comenceu a estalviar amb criptomonedes \{#saving}
 
@@ -203,7 +215,9 @@ La quantitat del premi surt dels interessos que es generen prestant els tiquets 
   Proveu PoolTogether
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Tókens dels mercats d'intercanvi \{#swaps}
 
@@ -215,7 +229,9 @@ Per exemple, si voleu fer servir la loteria sense pèrdues PoolTogether (descrit
   Veure intercanvi de tókens
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Comerç avançat \{#trading}
 
@@ -227,7 +243,9 @@ Quan feu servir un mercat (o casa de canvi) centralitzat heu de dipositar-hi els
   Veure dapps de comerç
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Fes créixer la vostra cartera \{#investing}
 
@@ -239,7 +257,9 @@ Un bon exemple és el [fons DeFi Pulse Index (DPI)](https://defipulse.com/blog/d
   Veure dapps d'inversió
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Finançament per a les vostres idees \{#crowdfunding}
 
@@ -268,7 +288,9 @@ Això vol dir que el Projecte A amb les seves 100 donacions d'1 dòlar, podria a
 
 [Més sobre finançament quadràtic](https://wtfisqf.com)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Assegurances \{#insurance}
 
@@ -280,7 +302,9 @@ Els productes Ethereum, com qualsevol software, poden tenir errors de codi i ser
   Veure dapps d'assegurances
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Agregadors i gestors de carteres \{#aggregators}
 
@@ -290,7 +314,9 @@ Amb tantes coses alhora, necessitareu una forma per fer un seguiment de totes le
   Veure les dapps de gestió de carteres
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Com funcionen les DeFi? \{#how-defi-works}
 

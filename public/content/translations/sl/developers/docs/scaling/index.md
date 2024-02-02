@@ -92,11 +92,15 @@ Izvedite več o [Validiumu](/developers/docs/scaling/validium/).
 
 ## Se lažje učite z vizualizacijo? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Upoštevajte, da razlaga v videu izraz "plast 2" uporablja za naslavljanje vseh rešitev za širjenje izven verige, medtem ko mi "plast 2" razumemo kot rešitev izven verige, ki izpeljuje svojo varnost prek soglasij na glavnem omrežju plasti 1._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Nadaljnje branje \{#further-reading}
 

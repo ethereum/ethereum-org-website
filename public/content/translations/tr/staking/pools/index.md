@@ -29,7 +29,9 @@ Bazı havuzlar, fonların bir sözleşmeye yatırılabileceği, bahis tutarını
   <Card title="hisseleme token'ları" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## Ne dikkate alınmalı \{#what-to-consider}
 
@@ -43,15 +45,21 @@ Ancak, bu kilitli ETH token'ları, büyük miktarda hisselenmiş ETH'nin birçok
 
 Nitelik göstergeleri, listelenen bir stake havuzunun sahip olabileceği dikkate değer güçlü veya zayıf yönleri belirtmek için aşağıda kullanılmaktadır. Katılmak için bir havuz seçerken bu öznitelikleri nasıl tanımladığımız konusunda bu bölümü referans olarak kullanın.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## Paydaşlık havuzlarını keşfet \{#explore-staking-pools}
 
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 Ağ güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) ciddiye alan bir hizmet seçmenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
 
@@ -59,10 +67,13 @@ Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup o
 
 ## Sıkça sorulan sorular \{#faq}
 
+{
 <ExpandableCard title="Nasıl ödül kazanabilirim?">
 Tipik olarak ERC-20 hisseleme token'ları, hisselenen ETH artı ödüllerinin değerini temsil eden paydaşlara verilir. Farklı havuzların, kullanıcılarına biraz farklı yöntemlerle hisseleme ödüllerini dağıtacağını aklınızda tutun, ancak bu ortak temadır.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Stake ettiğim tutarı ne zaman geri çekebilirim?">
 Hemen şimdi! Şangay/Capella ağ yükseltmesi Nisan 2023'te gerçekleşti, hisseleme para çekim işlemlerini başlattı. Hisseleme havuzlarını destekleyen doğrulayıcı hesaplar artık çıkış ve ayarladıkları çekim adresine ETH çekim yeteneğine sahipler. Bu hisse miktarını arkaplandaki ETH için kullanma yeteneğini aktif eder. Bu işlevselliği ne şekilde desteklediklerini görmek için sağlayıcınıza danışın.
 
@@ -70,7 +81,9 @@ Alternatif olarak, bir ERC-20 likidite token'ı kullanan havuzlar, kullanıcıla
 
 <ButtonLink to="/staking/withdrawals/">Hisseleme para çekmeleri hakkında daha fazlası</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Bu benim borsamla stake yapmaktan farklı mı?">
 Bu havuzlanmış stake seçenekleri ile merkezi borsalar arasında, küçük miktarlarda ETH stake etme ve doğrulayıcıları etkinleştirmek için bir araya getirme gibi birçok benzerlik vardır.
 
@@ -78,6 +91,7 @@ Merkezi borsalardan farklı olarak, diğer birçok havuzlanmış hisseleme seçe
 
 Arkalarındaki düğümler söz konusu olduğunda bazı havuzlar diğerlerinden daha merkeziyetsizdir. Ağın sağlığını ve merkeziyetsizliğini teşvik etmek için, pay sahipleri her zaman izinsiz merkeziyetsiz bir dizi düğüm operatörü sağlayan bir havuz hizmeti seçmeye teşvik edilir.
 </ExpandableCard>
+}
 
 ## Daha fazla bilgi \{#further-reading}
 

@@ -8,7 +8,9 @@ lang: hu
 
 A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni a bevált gyakorlatokat. A kripto izgalmas dolog, de közben komoly kockázatokat is rejt. Ha Ön megfelelően tájékozódik, akkor elháríthatja ezeket a kockázatokat.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Webbiztonság 101 \{#web-security}
 
@@ -88,7 +90,9 @@ Akik a 2FA következő szintjére akarnak lépni, azoknak a biztonsági kulcs ha
 
 Tudjon meg többet a 2FA-ról:
 
-<YouTube id="m8jlnZuV1i4" start="3479" />
+{
+	<YouTube id="m8jlnZuV1i4" start="3479" />
+}
 
 ### Böngészőbővítmények eltávolítása \{#uninstall-browser-extensions}
 
@@ -102,7 +106,9 @@ A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegész�
 
 [Bővebben a böngészőbővítmények kockázatáról](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Kriptobiztonság 101 \{#crypto-security}
 
@@ -117,7 +123,9 @@ A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai l
 <DocLink to="/eth/">
   Mi az ether?
 </DocLink>
-<Divider />
+{
+	<Divider />
+}
 
 ## Tárcabiztonság \{#wallet-security}
 
@@ -160,7 +168,9 @@ Számos Ethereum-tárca kínál védelmet keretek beállításával, hogy ne leh
 
 [Hogyan vonható vissza, hogy az okosszerződés hozzáférjen a kriptoeszközeihez](/guides/how-to-revoke-token-access/)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Gyakori csalások \{#common-scams}
 
@@ -264,7 +274,9 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, to
 
 [Bővebben a tokenkiosztási (airdrop) csalásokról](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## További olvasnivaló \{#further-reading}
 
@@ -288,4 +300,6 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, to
 - [A csalások elkerülése](https://bitcoin.org/en/scams) – _Bitcoin.org_
 - [Twitter-beszélgetés a tipikus kripto-adathalász e-mailekről és üzenetekről](https://twitter.com/tayvano_/status/1516225457640787969) – _Taylor Monahan_
 
-<QuizWidget quizKey="security" />
+{
+	<QuizWidget quizKey="security" />
+}

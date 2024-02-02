@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 イーサリアムブロックチェーンの主要なマイルストーン、フォーク、アップデートをすべてまとめたタイムラインです。
 
+{
 <ExpandableCard title="フォークとは？" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 フォークとは、ネットワークに必要となる大規模な技術アップグレードや変更のことで、通常は[イーサリアム改善提案 (EIPs)](/eips/)に基づいて、プロトコルの「規約」を変更するものです。
@@ -17,6 +18,7 @@ sidebarDepth: 1
 
 これらのルール変更により、ネットワークに一時的な分断が生じる可能性があります。 新規ブロックは、新しいルールもしくは古いルールに基づいて生成できます。 フォークは事前に合意されることが一般的で、クライアントが一斉に変更を採用し、アップグレードされたフォークがメインチェーンとなります。 しかし、まれにフォークをめぐる意見の相違により、ネットワークが永久に分断してしまうことがあります。最も有名な例は、[DAO フォーク](#dao-fork)によるイーサリアムクラシックの誕生です。
 </ExpandableCard>
+}
 
 [ビーコンチェーン](/upgrades/beacon-chain/)、[マージ](/upgrades/merge/)、[EIP-1559](#london)から過去の重要なアップグレードをご確認ください。
 
@@ -36,6 +38,7 @@ sidebarDepth: 1
 
 上海アップグレードにより、実行レイヤーへのステーキングの引き出しが可能になります。 カペラのアップグレードと並行して、ブロックは引き出し操作を受け付けられるようになり、ステーカーはビーコンチェーンから実行レイヤーに ETH を引き出せるようになります。
 
+{
 <ExpandableCard title="上海EIP" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-3651](https://eips.ethereum.org/EIPS/eip-3651) – 「COINBASE」アドレスウォームを開始
@@ -45,6 +48,7 @@ sidebarDepth: 1
 - [EIP-6049](https://eips.ethereum.org/EIPS/eip-6049) – `SELFDESTRUCT`の廃止
 
 </ExpandableCard>
+}
 
 - [上海のアップグレード仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -81,12 +85,14 @@ sidebarDepth: 1
 
 - [パリのアップグレード仕様を読む](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="パリEIP" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-3675](https://eips.ethereum.org/EIPS/eip-3675) – コンセンサスをプルーフ・オブ・ステークにアップグレード
 - [EIP-4399](https://eips.ethereum.org/EIPS/eip-4399) – PREVRANDAO で DIFFICULTY オペコードを置き換える
 
 </ExpandableCard>
+}
 
 ---
 
@@ -112,11 +118,13 @@ sidebarDepth: 1
 
 - [EF ブログ - アロー・グレイシャーのアップグレードのお知らせ](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="グレイ・グレイシャーEIP" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-5133](https://eips.ethereum.org/EIPS/eip-5133) – 2022 年 9 月までディフィカルティボムを延期
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -133,11 +141,13 @@ sidebarDepth: 1
 - [EF ブログ - アロー・グレイシャーのアップグレードのお知らせ](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - イーサリアムのアロー・グレイシャーのアップグレード](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="アロー・グレイシャーEIP" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-4345](https://eips.ethereum.org/EIPS/eip-4345) – 2022 年 6 月までデフィカルティボムを順延
 
 </ExpandableCard>
+}
 
 ---
 
@@ -171,6 +181,7 @@ sidebarDepth: 1
 - [イーサリアム・ファウンデーションのお知らせを読む](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="ロンドンEIP" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) – トランザクションフィー市場の改善。
@@ -180,6 +191,7 @@ sidebarDepth: 1
 - [EIP-3554](https://eips.ethereum.org/EIPS/eip-3554) – 2021 年 12 月までアイス・グレイシャーを順延。
 
 </ExpandableCard>
+}
 
 ---
 
@@ -194,6 +206,7 @@ sidebarDepth: 1
 - [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="ベルリンEIP" contentPreview="Official improvements included in this upgrade.">
 
 - [EIP-2565](https://eips.ethereum.org/EIPS/eip-2565) – ModExp のガスコストを削減。
@@ -202,6 +215,7 @@ sidebarDepth: 1
 - [EIP-2930](https://eips.ethereum.org/EIPS/eip-2930) – 任意アクセスリストを追加。
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -250,11 +264,13 @@ sidebarDepth: 1
 - [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herder の説明を読む](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="ミュア・グレイシャーEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2384](https://eips.ethereum.org/EIPS/eip-2384) - ディフィカルティボムをさらに 4,000,000 ブロック(～ 611 日)延期。
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -276,6 +292,7 @@ sidebarDepth: 1
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="イスタンブールEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-152](https://eips.ethereum.org/EIPS/eip-152) - イーサリアムが Zcash のようなプライバシーを保護する通貨と連携することを許可。
@@ -286,6 +303,7 @@ sidebarDepth: 1
 - [EIP-2200](https://eips.ethereum.org/EIPS/eip-2200) - 他のオペコードのガス価格の変更。
 
 </ExpandableCard>
+}
 
 ---
 
@@ -303,6 +321,7 @@ sidebarDepth: 1
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="コンスタンティノープルEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-145](https://eips.ethereum.org/EIPS/eip-145) – 特定のオンチェーンアクションのコストを最適化。
@@ -311,6 +330,7 @@ sidebarDepth: 1
 - [EIP-1234](https://eips.ethereum.org/EIPS/eip-1234) – ブロックチェーンがプルーフ・オブ・ステーク実装前にフリーズしないよう確認。
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -331,6 +351,7 @@ sidebarDepth: 1
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="ビザンチウムEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-140](https://eips.ethereum.org/EIPS/eip-140) - `REVERT`オペコードを追加。
@@ -344,6 +365,7 @@ sidebarDepth: 1
 - [EIP-649](https://eips.ethereum.org/EIPS/eip-649) - [ディフィカルティボム](/glossary/#difficulty-bomb)を 1 年延期し、ブロック報酬を 5 から 3ETH に減額。
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -363,6 +385,7 @@ sidebarDepth: 1
 
 [Ethereum 財団の発表を読む](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="スプリニアスドラゴンEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-155](https://eips.ethereum.org/EIPS/eip-155) - あるイーサリアムチェーンからのトランザクションが、たとえばテストネットのトランザクションがメインのイーサリアムチェーンで再生されるなど、代替チェーン上で再ブロードキャストされることを防ぐ。
@@ -371,6 +394,7 @@ sidebarDepth: 1
 - [EIP-170](https://eips.ethereum.org/EIPS/eip-170) - ブロックチェーン上のコントラクトの最大コードサイズを 24576 バイトに変更する。
 
 </ExpandableCard>
+}
 
 ---
 
@@ -386,12 +410,14 @@ sidebarDepth: 1
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="タンジェリンホイッスルEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-150](https://eips.ethereum.org/EIPS/eip-150) – スパム攻撃に使えるようにオペコードのガスコストの増加。
 - [EIP-158](https://eips.ethereum.org/EIPS/eip-158) – イーサリアムプロトコルの初期バージョンの欠陥により、非常に低いコストでステートに置かれた大量の空のアカウントを削除することにより、ステートのサイズを縮小。
 
 </ExpandableCard>
+}
 
 ---
 
@@ -421,6 +447,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 [イーサリアム・ファウンデーションの発表を読む](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="ホームステッドEIP" contentPreview="Official improvements included in this fork.">
 
 - [EIP-2](https://eips.ethereum.org/EIPS/eip-2) – コントラクト作成プロセスの編集。
@@ -428,6 +455,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 - [EIP-8](https://eips.ethereum.org/EIPS/eip-8) – devp2p フォワード互換性要求の導入。
 
 </ExpandableCard>
+}
 
 <Divider />
 

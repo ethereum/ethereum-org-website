@@ -19,7 +19,9 @@ summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~%99,95 oranında azalt
 
 Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/history/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 
-<MergeInfographic />
+{
+	<MergeInfographic />
+}
 
 Başlangıçta, [İşaret Zinciri](/roadmap/beacon-chain/) [Ana Ağ'dan](/glossary/#mainnet) farklı olarak yayımlandı. Ethereum Ana Ağı - tüm hesapları, bakiyeleri, akıllı sözleşmeleri ve blok zincir durumu dahil - [iş ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam ediyordu, İşaret Zinciri, [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) kullanarak paralel olarak çalışırken de dahil olmak üzere. Birleşim bu iki sistemin bir araya geldiği ve hisse ispatının iş kanıtının yerini kalıcı olarak aldığı zamandı.
 
@@ -53,6 +55,7 @@ _Bu tekrar ister_: Ya düğüm yönetmeyen bir kilitleyici olarak ya da Ethereum
 
 ### Düğüm operatörleri ve dapp geliştiricileri \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Hisseleme düğüm operatörleri ve sağlayıcıları"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ Anahtar eylem maddeleri şunları içerir:
 
 Bir "ücret alıcısı" ayarlamamak doğrulayıcınızın davranışını etkilemez, ancak doğrulayıcınızın önerdiği bloklarda kazanılan yakılmamış ücretleri ve MEV ücretlerini kaçırırsınız.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Doğrulamasız düğüm operatörleri ve altyapı sağlayıcıları"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ Anahtar eylem maddeleri şunları içerir:
 Yukarıdaki maddeleri tamamlamamak iki katman da eşlenene ve doğrulanana kadar düğümünüzün "çevrim dışı" olarak görülmesine sebep olur.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dapp ve akıllı sözleşme geliştiricileri"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -105,6 +112,7 @@ Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunla
 Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Birleşim Ethereum'un Uygulama Katmanını Nasıl Etkiler</a> üzerine blog gönderisine bakın.
 
 </ExpandableCard>
+}
 
 ## Birleşim ve enerji tüketimi \{#merge-and-energy}
 
@@ -116,6 +124,7 @@ Birleşim aynı zamanda, iş ispatı altında mümkün olmayan daha fazla ölçe
 
 ## Birleşim hakkında yanlış bilinenler \{#misconceptions}
 
+{
 <ExpandableCard
 title="Yanılgı: &quot;Bir düğüm çalıştırmak 32 ETH gerektirir.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -133,7 +142,9 @@ Herhangi bir kişinin kendi düğümünü çalıştırabilmesi Ethereum ağını
 <a href="/run-a-node/">Kendi kodunuzu çalıştırmanızla ilgili daha fazlası</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Yanılgı: &quot;Birleşim gaz ücretini düşürememiştir.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -143,7 +154,9 @@ Gaz ücretleri ağın kapasitesine bağlı olan bir ağ talebidir. Birleşim iş
 Toplama merkezli bir <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">yol haritasıyla</a>, K2'deki <a href="/layer-2/">Katman 2</a>deki kullanıcı aktivitesini ölçeklendirmeye odaklanılırken, Katman 1 Ana Ağı'nı toplama işlemlerinin kat kat ucuz olmasına yardım eden bir optimize edilmiş veri deposu ve güvenli merkeziyesiz bir uzlaşma katmanı olmasını sağlıyor. Hisse ispatına geçiş bunu fark etmede öncü rol oynuyor. <a href="/developers/docs/gas/">Gaz ve ücretler hakkında daha fazlası</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Yanılgı: &quot;İşlemler Birleşim ile oldukça hızlanmıştır.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -154,7 +167,9 @@ Tarihi olarak, iş ispatı döneminde, hedef her ~13,3 saniyede yeni bir bloka s
 Hisse ispatı daha önce var olmayan işlem kesinliiğii konseptini tanıttı. İş ispatında, bir bloku ters çevirebilmekmek her geçen blokun işlemin en tepesine çıkarılmış olmasıyla katlanarak zorlaşıyordu, ancak hiçbir zaman da 0'a ulaşmıyordu. Hisse ispatında, bloklar doğrulayıcının oyladıkları dönemlere ayrılmıştır (bloklar için 32 şans içeren 6,4 saniyelik zaman açıklıkları). Bir dönem sonlandığında doğrulayıcılar dönemin "makul" olarak değerlendirilmesi konusunda oylama yapar. Eğer doğrulayıcılar dönemin makul olduğunda fikir birliğine varırlarsa o, bir sonraki dönemde sonuçlandırılır. Kesinleşmiş işlemleri geri çevirmek ekonomik olarak yaşamaz çünkü bu toplam pay edilmiş Ethereum'un üçte birini yakmak demekti.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Yanılgı: &quot;Birleşim hisselenmiş parayı çekmeyi mümkün kılmıştır.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -166,7 +181,9 @@ Shangai/Capella ağ yükseltmesinden bu yana, paydaşlar herhangi bir hisse baki
 <a href="/staking/withdrawals/">Hisseleme çekimleri hakkında daha fazlası</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Yanılgı: &quot;Birleşim tamamlandığı için, para çekmeye izin verilir ve paydaşlar bir anda çıkabilir.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -178,6 +195,7 @@ Bu hisselenmiş kaynaklar için büyük bir hareketi, "sermaye kaçışı"nı en
 
 APR ayrıca kasten dinamik yapılmıştır, bu da bir grup paydaşın ağı güvende tutmaya yardımcı olmak için ne kadar ödeme almak istediklerini belirlemelerine olanak verir. Eğer oran çok düşükse, doğrulayıcılar protokol tarafından kısıtlanmış bir oranda çıkacaklardır. Yavaş yavaş bu, kalan herkes için APR'yi artıracak, yeni veya geri dönen paydaşları tekrar çekecektir.
 </ExpandableCard>
+}
 
 ## "Eth2"ye ne oldu? \{#eth2}
 
@@ -224,6 +242,10 @@ Parçalama planları hızla gelişiyor, ancak işlem yürütmeyi ölçeklendirme
 
 ## Daha fazla okuma \{#further-reading}
 
-<MergeArticleList />
+{
+	<MergeArticleList />
+}
 
-<QuizWidget quizKey="merge" />
+{
+	<QuizWidget quizKey="merge" />
+}

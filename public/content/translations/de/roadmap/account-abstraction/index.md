@@ -56,6 +56,7 @@ Die Account-Abstraktion ermöglicht eine **bessere Gesamtbenutzererfahrung** sow
 
 Das Gasmanagement wird durch die Account-Abstraktion ebenfalls stark verbessert. Nicht nur können Anwendungen anbieten, die Gasgebühren ihrer Nutzer zu übernehmen, sondern Gasgebühren können auch in Tokens, die nicht ETH sind, bezahlt werden. Dies befreit Nutzer davon, ein ETH-Guthaben zur Finanzierung von Transaktionen halten zu müssen. Dies würde funktionieren, indem die Tokens des Benutzers innerhalb des Vertrags gegen ETH getauscht und dann das ETH zur Bezahlung von Gas verwendet wird.
 
+{
 <ExpandableCard title="Wie kann Kontenabstraktion bei Gas helfen?" eventCategory="/roadmap/account-abstraction" eventName="clicked how can account abstraction help with gas?">
 
 Das Gasmanagement ist eine der Hauptreibungspunkte für Nutzer von Ethereum, hauptsächlich weil ETH das einzige Asset ist, das zur Bezahlung von Transaktionen verwendet werden kann. Stellen Sie sich vor, Sie haben eine Wallet mit einem USDC-Guthaben, aber keinem ETH. Sie können diese USDC-Tokens nicht verschieben oder tauschen, weil Sie kein Gas bezahlen können. Sie können die USDC auch nicht gegen ETH tauschen, weil auch das Gas kostet. Sie müssten mehr ETH von einer Börse oder einer anderen Adresse an Ihr Konto senden, um das Problem zu lösen. Mit Smart-Contract-Wallets können Sie stattdessen einfach Gas in USDC bezahlen und so Ihr Konto freischalten. Sie müssen nicht mehr in all Ihren Konten ein ETH-Guthaben halten.
@@ -63,6 +64,7 @@ Das Gasmanagement ist eine der Hauptreibungspunkte für Nutzer von Ethereum, hau
 Die Account-Abstraktion ermöglicht es auch den Dapp-Entwicklern, kreativ mit dem Gasmanagement umzugehen. Zum Beispiel könnten Sie anfangen, Ihrer bevorzugten DEX jeden Monat eine feste Gebühr für unbegrenzte Transaktionen zu zahlen. Dapps könnten anbieten, alle Ihre Gasgebühren als Belohnung für die Nutzung ihrer Plattform zu übernehmen, oder als Angebot zur Kundenakquise. Es wird für Entwickler deutlich einfacher, Neuerungen im Bereich des Gasmanagements zu entwickeln, wenn Smart-Contract-Wallets auf Protokollebene unterstützt werden.
 
 </ExpandableCard>
+}
 
 Vertrauenswürdige Sitzungen könnten ebenfalls die Benutzererfahrungen grundlegend verändern, insbesondere bei Anwendungen wie Spielen, bei denen in kurzer Zeit eine große Anzahl kleiner Transaktionen genehmigt werden muss. Das individuelle Genehmigen jeder Transaktion würde das Spielerlebnis stören, doch eine ständige Genehmigung birgt Risiken. Eine Smart-Contract-Wallet könnte bestimmte Transaktionen für eine festgelegte Zeit, bis zu einem bestimmten Wert oder nur an bestimmte Adressen genehmigen.
 
@@ -74,12 +76,15 @@ Das sind nur einige Beispiele dafür, wie Benutzererfahrungen durch die Account-
 
 Smart-Contract-Wallets existieren heute bereits, sind aber schwer zu implementieren, weil die EVM sie nicht unterstützt. Stattdessen verlassen sie sich darauf, relativ komplexe Code um Standard-Ethereum-Transaktionen zu wickeln. Ethereum kann dies ändern, indem es Smart Contracts erlaubt, Transaktionen zu initiieren und die notwendige Logik in Ethereum Smart Contracts statt off-chain zu behandeln. Das Einbringen von Logik in Smart Contracts erhöht auch die Dezentralisierung von Ethereum, da es die Notwendigkeit von "Relayern", die von Wallet-Entwicklern betrieben werden, um Nachrichten, die vom Benutzer signiert wurden, in reguläre Ethereum-Transaktionen zu übersetzen, beseitigt.
 
+{
 <ExpandableCard title="EIP-2771: Kontenabstraktion durch Meta-Transaktionen" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2771: account abstraction using meta-transactions">
 
 EIP-2771 führt das Konzept der Meta-Transaktionen ein, das es Dritten erlaubt, die Gas-Kosten eines Benutzers zu übernehmen, ohne Änderungen am Ethereum-Protokoll vorzunehmen. Die Idee ist, dass Transaktionen, die von einem Benutzer signiert wurden, an einen `Forwarder`-Vertrag gesendet werden. Der Weiterleiter ist eine vertrauenswürdige Entität, die überprüft, ob Transaktionen gültig sind, bevor sie sie an ein Gas-Relais weiterleitet. Dies geschieht off-chain und vermeidet die Notwendigkeit, Gas zu zahlen. Das Gas-Relais leitet die Transaktion an einen `Recipient`-Vertrag weiter und zahlt das notwendige Gas, um die Transaktion auf Ethereum ausführbar zu machen. Die Transaktion wird ausgeführt, wenn der `Forwarder` vom `Recipient` bekannt und vertraut ist. Dieses Modell macht es Entwicklern einfach, gaslose Transaktionen für Benutzer zu implementieren.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-4337: Kontenabstraktion ohne Änderung des Ethereum-Protokolls" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-4337: account abstraction without changing the Ethereum protocol">
 
 EIP-4337 ist der erste Schritt in Richtung nativer Smart-Contract-Wallet-Unterstützung auf dezentralisierte Weise, <em>ohne dass Änderungen am Ethereum-Protokoll erforderlich sind</em>. Anstatt die Konsensschicht zu modifizieren, um Smart-Contract-Wallets zu unterstützen, wird ein neues System getrennt vom normalen Transaktions-Gossip-Protokoll hinzugefügt. Dieses übergeordnete System ist um ein neues Objekt namens <code>UserOperation</code> herum aufgebaut, das die Aktionen eines Benutzers mit den entsprechenden Signaturen zusammenpackt. Diese <code>UserOperation</code>-Objekte werden dann in einen speziellen Mempool übertragen, wo Validatoren sie in einer "bundle" (gebündelten) Transaktion sammeln können. Die gebündelte Transaktion stellt eine Abfolge vieler einzelner <code>UserOperations</code> dar, kann wie eine normale Transaktion in Ethereum-Blöcke eingefügt werden und würde von Validierern mit einem ähnlichen Gebühren-maximierenden Auswahlmodell erfasst.
@@ -89,7 +94,9 @@ Die Art und Weise, wie Wallets funktionieren, würde sich auch unter EIP-4337 ä
 <strong>Hinweis</strong>: Der Einstiegs-Contract EIP 4337 wurde am 1. März 2023 auf dem Ethereum Mainnet deployt. Du kannst den Vertrag auf <a href="https://etherscan.io/address/0x0576a174D229E3cFA37253523E645A78A0C91B57">Etherscan</a> einsehen.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-2938: Änderung des Ethereum-Protokolls zur Unterstützung der Kontenabstraktion" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-2938: changing the Ethereum protocol to support account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-2938">EIP-2938</a> zielt darauf ab, das Ethereum-Protokoll um einen neuen Transaktionstyps zu ergänzen, <code>AA_TX_TYPE,</code> der drei Felder enthält: <code>nonce</code>, <code>target</code> und <code>data</code>, wobei die <code>nonce</code> ein Transaktions-Zähler ist, <code>target</code> die Einstiegs-Contract-Adresse und <code>data</code> der EVM bytecode. Um diese Transaktionen auszuführen, müssen dem EVM zwei neue Befehle (so genannte Opcodes) hinzugefügt werden: <code>NONCE</code> and <code>PAYGAS</code>. Der Opcode <code>NONCE</code> zeichnet die Transaktionssequenz auf und <code>PAYGAS</code> berechnet und entnimmt das zur Durchführung der Transaktion erforderliche Gas aus dem Vertragssaldo. Diese neuen Funktionen ermöglichen es Ethereum, Smart Contract Wallets nativ zu unterstützen, da die notwendige Infrastruktur in das Ethereum-Protokoll integriert ist.
@@ -97,7 +104,9 @@ Die Art und Weise, wie Wallets funktionieren, würde sich auch unter EIP-4337 ä
 Beachten Sie, dass EIP-2938 derzeit nicht aktiv ist. Die Community bevorzugt momentan EIP-4337, da es keine Änderungen am Protokoll erfordert.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="EIP-3074: Upgrade von extern kontrollierten Konten für die Kontenabstraktion" eventCategory="/roadmap/account-abstract" eventName="clicked EIP-3074: upgrading externally-owned accounts for account abstraction">
 
 <a href="https://eips.ethereum.org/EIPS/eip-3074">EIP-3074</a> zielt darauf ab, Ethereums externally owned accounts (EOAs) zu aktualisieren, indem es ihnen erlaubt, die Kontrolle an einen Smart Contract zu delegieren. Dies bedeutet, dass Transaktionen, die von einem von außen kontrollierten Konto ausgehen, durch die Logik eines Smart Contracts genehmigt werden könnten. Dies würde Funktionen wie Gas-Sponsoring und gebündelte Transaktionen ermöglichen. Damit dies funktioniert, müssen der EVM zwei neue Opcodes hinzugefügt werden: <code>AUTH</code> and <code>AUTHCALL</code>. Mit EIP-3074 werden die Vorteile einer Smart-Contract-Wallet verfügbar gemacht <em>ohne einen Smart Contract zu benötigen.</em> Stattdessen wickelt eine bestimmte Art von zustandslosem, vertrauenslosen, nicht aktualisierbarem Vertrag, der sogenannte "Invoker", die Transaktionen ab.
@@ -105,6 +114,7 @@ Beachten Sie, dass EIP-2938 derzeit nicht aktiv ist. Die Community bevorzugt mom
 Beachte, dass EIP-3074 derzeit nicht aktiv ist. Die Community bevorzugt momentan EIP-4337, da es keine Änderungen am Protokoll erfordert.
 
 </ExpandableCard>
+}
 
 ## Aktueller Fortschritt \{#current-progress}
 

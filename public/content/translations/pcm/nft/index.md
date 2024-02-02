@@ -18,7 +18,9 @@ NFTs na tokens wey ish dey unik on im own. Ish NFT get im own difren propatis (n
 
 Di unikness wey ish NFT karry dey enabol make dem fit get yus token do tins like art, kollectibols, abi even real estate, wia one spesifik unik NFT reprisent some spesifik unik real world abi digital item. Ownaship of tins dey sekure by di Ethereum blockchain - norbody fit shange di rekord of ownaship abi kopy/paste a new NFT to existens.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Intanet wit difren assets \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Dis website folow get alternative domain name powered by NFTs, **ethereum.eth**.
 
 [More on ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### NFT sekurity \{#nft-security}
 
@@ -89,6 +93,10 @@ Sikurity issues wey rilate to NFTs dey often rilate to phishin skams, vulnerabil
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

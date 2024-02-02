@@ -60,7 +60,9 @@ L'Ethereum basé sur la preuve d'enjeu peut financer sa sécurité en émettant 
 
 Regardez Justin Drake expliquer les avantages de la preuve d'enjeu par rapport à la preuve de travail :
 
-<YouTube id="1m12zgJ42dI" />
+{
+	<YouTube id="1m12zgJ42dI" />
+}
 
 ## Complément d'information \{#further-reading}
 

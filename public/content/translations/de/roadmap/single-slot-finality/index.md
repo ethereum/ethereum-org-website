@@ -33,6 +33,7 @@ Mit dem derzeitigen Aufbau des Mechanismus müssen, um die Zeit zur Endlichkeit 
 
 ## Wege zu SSF \{#routes-to-ssf}
 
+{
 <ExpandableCard title= "Warum können wir nicht heute schon SSF haben?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
 
 Der derzeitige Konsensmechanismus verbindet Attestierungen mehrerer Validatoren, welche Komitees genannt werden, um die Anzahl an Nachrichten, die jeder Validator in einem Block verarbeiten muss, um jenen zu validieren, zu verringern. Jeder Validator hat in jeder Epoche (32 Plätze) die Möglichkeit zur Attestierung. In jedem Platz haben jedoch nur eine Untergruppe von Validatoren, bekannt als Komitee-Attestierung diese Möglichkeit. Das machen sie, indem sie in Unternetzwerke unterteilt werden, in denen wenige Validatoren als "Aggregatoren" ausgewählt werden. Diese Aggregatoren verbinden alle die Unterschriften, welche sie von anderen Validatoren bekommen in, in ihrem Netzwerk zu einer einzelnen aggregierten Unterschrift. Der Aggregator, welcher die größte Anzahl an einzelnen Teilnahmen beinhaltet, gibt dann die aggregierte Unterschrift an den Blockantragsteller (Block Proposer) weiter, welcher sie dann in seinem Block mit den aggregierten Unterschriften anderer Komitees einschließt.
@@ -41,6 +42,7 @@ Dieser Prozess gibt für jeden Validatoren ausreichende Kapazität, in jeder Epo
 
 In diesem Schema ist es für jeden Validatoren möglich für einen Block abzustimmen, indem er seine Attestierungen über die gesamte Epoche verteilen. Jedoch gibt es potentielle Wege diesen Mechanismus zu verbessern, sodass _jeder Validator die Chance hat in jedem Platz zu attestieren_.
 </ExpandableCard>
+}
 
 Seit der Ethereum Konsensmechanismus entwickelt wurde, hat sich das Unterschriften-Aggregationsschema (BLS) als deutlich skalierbarer als erwartet erwiesen, dabei wurde auch die Fähigkeit von Clients, die Unterschriften zu verarbeiten und unterschreiben, verbessert. Es stellt sich heraus, dass das Verarbeiten von Attestierungen in großer Anzahl von Validatoren in einem einzelnen Platz möglich ist. Zum Beispiel müssten Nodes, bei einer Million Validatoren, die zweimal pro Platz wählen und dem Verändern von der Zeit pro Slot (Platz) auf 16 Sekunden, Unterschriften mit mindestens 125 000 Aggregationen pro Sekunde funktionieren, um alle Attestierungen innerhalb des Platzes zu verarbeiten. In Wirklichkeit benötigt ein gewöhnlicher Computer ungefähr 500 Nanosekunden um eine Unterschrift zu verifizieren, das heißt, dass 125 000 Verifikationen in ~62,5 ms durchgeführt werden könnten. Das wäre weit unter der Ein-Sekunden-Grenze.
 

@@ -153,7 +153,7 @@ In the case where the buy is successful we should see two events in the transact
 
 ![Two events in the transaction: Transfer and Bought](./transfer-and-bought-events.png)
 
-## The sell function \{##the-sell-function}
+## The sell function \{#the-sell-function}
 
 The function responsible for the sell will first require the user to have approved the amount by calling the approve function beforehand. Approving the transfer requires the ERC20Basic token instantiated by the DEX to be called by the user. This can be achieved by first calling the DEX contract's `token()` function to retrieve the address where DEX deployed the ERC20Basic contract called `token`. Then we create an instance of that contract in our session and call its `approve` function. Then we are able to call the DEX's `sell` function and swap our tokens back for ether. For example, this is how this looks in an interactive brownie session:
 
@@ -196,7 +196,9 @@ If everything works you should see 2 events (a `Transfer` and `Sold`) in the tra
 
 ![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 From this tutorial we saw how to check the balance and allowance of an ERC-20 token and also how to call `Transfer` and `TransferFrom` of an ERC20 smart contract using the interface.
 

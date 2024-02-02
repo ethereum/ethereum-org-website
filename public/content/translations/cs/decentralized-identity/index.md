@@ -21,7 +21,7 @@ Abychom tyto problémy vyřešili, vytvořili jsme decentralizované systémy id
 
 Identita značí sebepojetí jednotlivce, které je definováno jedinečnými charakteristikami. Identita znamená být _jednotlivcem_, tj. samostatnou lidskou entitou. Identita také může odkazovat na jiné nelidské entity, jako jsou například organizace či autority.
 
-## Co jsou identifikátory? \{##what-are-identifiers}
+## Co jsou identifikátory? \{#what-are-identifiers}
 
 Identifikátor je informace, která slouží jako ukazatel ke konkrétní identitě či identitám. Mezi časté identifikátory patří:
 
@@ -33,13 +33,13 @@ Identifikátor je informace, která slouží jako ukazatel ke konkrétní identi
 
 Tyto tradiční příklady identifikátorů jsou vydávány, drženy a kontrolovány centrálními entitami. Potřebujete povolení od vlády, abyste změnili své jméno nebo od sociální sítě, abyste změnili své uživatelské jméno.
 
-## Co jsou atestace? \{##what-are-attestations}
+## Co jsou atestace? \{#what-are-attestations}
 
 Atestace je nárok uplatněn jednou entitou o jiné entitě. Pokud žijete ve Spojených státech, řidičský průkaz, který vám byl vydán Ministerstvem pro motorová vozidla (jednou entitou) vám (jiné entitě) udělí atestaci, která vám legálně umožňuje řídit auto.
 
 Atestace se liší od identifikátorů. Atestace _obsahuje_ identifikátory odkazující na určitou identitu a uplatňuje nárok o atributu vztahujícím se k této identitě. Takže váš řidičský průkaz má identifikátory (jméno, datum narození, adresa), ale je také atestací o vašem zákonném právu řídit.
 
-### Co jsou decentralizované identifikátory? \{##what-are-decentralized-identifiers}
+### Co jsou decentralizované identifikátory? \{#what-are-decentralized-identifiers}
 
 Tradiční identifikátory, jako je vaše jméno nebo e-mailová adresa, jsou závislé na třetích stranách – vládách a poskytovatelích e-mailových služeb. Decentralizované identifikátory (DID) jsou odlišné – nejsou vydávány, spravovány ani ovládány žádnou centrální entitou.
 
@@ -47,21 +47,21 @@ Decentralizované identifikátory jsou vydávány, drženy a kontrolovány jedno
 
 Decentralizované identifikátory jsou uloženy v distribuovaných účetních knihách (blockchainech) nebo v sítích typu peer-to-peer. Díky tomu jsou DID [globálně jedinečné, řešitelné s vysokou dostupností a kryptograficky ověřitelné](https://w3c-ccg.github.io/did-primer/). Decentralizovaný identifikátor může být spojen s různými entitami, včetně lidí, organizací nebo vládních institucí.
 
-## Co umožňuje decentralizované identifikátory? \{##what-makes-decentralized-identifiers-possible}
+## Co umožňuje decentralizované identifikátory? \{#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktura veřejných klíčů (PKI) \{##public-key-infrastructure}
+### 1. Infrastruktura veřejných klíčů (PKI) \{#public-key-infrastructure}
 
 Infrastruktura veřejných klíčů (PKI) je opatřením v oblasti informační bezpečnosti, které pro entitu vytváří [veřejný klíč](/glossary/#public-key) a [privátní klíč](/glossary/#private-key). Kryptografie veřejných klídů se využívá v sítích blockchainu k ověření totožnosti uživatelů a k prokázání vlastnictví digitálních majetků.
 
 Některé decentralizované identifikátory, například účet Ethereum, mají veřejné a privátní klíče. Veřejný klíč identifikuje správce účtu, zatímco privátní klíče mohou podepisovat a dešifrovat zprávy pro tento účet. PKI poskytuje důkazy potřebné k ověření totožnosti entit a k zabránění vydávání se za jinou osobu a používání falešných identit pomocí [kryptografických podpisů](https://andersbrownworth.com/blockchain/public-private-keys/) k ověření všech nároků.
 
-### 2. Decentralizovaná datová úložiště \{##decentralized-datastores}
+### 2. Decentralizovaná datová úložiště \{#decentralized-datastores}
 
 Blockchain slouží jako ověřitelný rejstřík dat: otevřený a decentralizovaný repozitář informací. Existence veřejných blockchainů odstraňuje potřebu ukládat identifikátory do centralizovaných rejstříků.
 
 Pokud někdo potřebuje potvrdit platnost decentralizovaného identifikátoru, může najít přidružený veřejný klíč na blockchainu. Toto je odlišné od tradičních identifikátorů, které vyžadují ověření od třetích stran.
 
-## Jak decentralizované identifikátory a atestace umožňují decentralizovanou identitu? \{##how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+## Jak decentralizované identifikátory a atestace umožňují decentralizovanou identitu? \{#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
 Decentralizovaná identita je přesvědčení, že informace týkající se identity by měly být samostatně kontrolovány, soukromé a přenosné, přičemž základem toho všeho jsou decentralizované identifikátory a atestace.
 
@@ -73,11 +73,11 @@ Decentralizované identifikátory jsou důvodem, proč jsou atestace samostatně
 
 Decentralizované identifikátory jsou také klíčové pro ochranu soukromí osobních údajů prostřednictvím decentralizované identity. Například, pokud daný jednotlivec předloží doklad o atestaci (např.: řidičský průkaz), ověřující strana nemusí ověřovat platnost informací v dokladu. Ověřovatel místo toho potřebuje pouze kryptografické záruky autenticity atestace a identity vydávající organizace, aby určil, zda je doklad platný.
 
-## Typy atestací v decentralizované identitě \{##types-of-attestations-in-decentralized-identity}
+## Typy atestací v decentralizované identitě \{#types-of-attestations-in-decentralized-identity}
 
 Jak se informace atestací ukládají a získávají v ekosystému založeném na Ethereu se liší od tradiční správy identity. Zde je přehled různých přístupů k vydávání, ukládání a ověřování atestací v decentralizovaných systémech identity:
 
-### Atestace mimo blockchain \{##off-chain-attestations}
+### Atestace mimo blockchain \{#off-chain-attestations}
 
 Jednou z obav o uchovávání atestací na blockchainu je to, že by mohly obsahovat informace, které si jednotlivci přejí zachovat v tajnosti. Veřejná povaha blockchainu Ethereum činí ukládání takových osvědčení neatraktivním.
 
@@ -89,13 +89,13 @@ Zde je hypotetická situace pro vysvětlení atestací mimo blockchain:
 
 2. Bob žádá o práci a chce prokázat své akademické kvalifikace zaměstnavateli, takže sdílí atestaci ze své mobilní peněženky. Společnost (ověřovatel) pak může potvrdit platnost atestace kontrolou DID vydavatele (tj. jeho veřejného klíče v Ethereu).
 
-### Atestace mimo blockchain s trvalým přístupem \{##offchain-attestations-with-persistent-access}
+### Atestace mimo blockchain s trvalým přístupem \{#offchain-attestations-with-persistent-access}
 
 V rámci tohoto uspořádání jsou atestace přeměněny na soubory JSON a uloženy mimo blockchain (ideálně na platformě [decentralizovaného cloudového úložiště](/developers/docs/storage/), jako je IPFS nebo Swarm). Nicméně [hash](/glossary/#hash) souboru JSON je uložen na blockchainu a propojen s DID prostřednictvím blockchainového rejstříku. Související DID může být buď vydavatele atestace, nebo příjemce.
 
 Tento přístup umožňuje atestacím získat trvalost založenou na blockchainu a současně uchovávat informace o nárocích šifrované a ověřitelné. Umožňuje rovněž selektivní zveřejnění, jelikož držitel privátního klíče může informace dešifrovat.
 
-### Atestace na blockchainu \{##onchain-attestations}
+### Atestace na blockchainu \{#onchain-attestations}
 
 Atestace na blockchainu jsou uchovávány v [chytrých kontaktech](/developers/docs/smart-contracts/) na blockchainu Ethereum. Chytrý kontrakt (sloužící jako rejstřík) spojí atestaci k odpovídajícímu blockchainovému decentralizovanému identifikátoru (veřejnému klíči).
 
@@ -107,11 +107,11 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 3. Chytrý kontrakt o prodeji akcií může zkontrolovat registrační kontrakt k nalezení identity zkontrolovaných kupců, což chytrému kontraktu umožňuje určit, kdo smí akcie koupit a kdo ne.
 
-### Soulbound tokeny a identity \{##soulbound}
+### Soulbound tokeny a identity \{#soulbound}
 
 [Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nepřenosné NFT) by mohly být použity ke shromažďování informací jedinečných pro konkrétní peněženku. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účasti.
 
-## Výhody decentralizované identity \{##benefits-of-decentralized-identity}
+## Výhody decentralizované identity \{#benefits-of-decentralized-identity}
 
 1. Decentralizovaná identita zvyšuje individuální kontrolu nad identifikačními údaji. Decentralizované identifikátory a atestace lze ověřit bez spoléhání se na centralizované autority a služby třetích stran.
 
@@ -125,33 +125,33 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 6. Decentralizovaná identita umožňuje mechanismům proti Sybil útokům identifikovat, kdy se jeden jednotlivec vydává za více lidí, aby si na nějakém systému zahrál nebo ho zaspamoval.
 
-## Příklady využití decentralizované identity \{##decentralized-identity-use-cases}
+## Příklady využití decentralizované identity \{#decentralized-identity-use-cases}
 
 Decentralizovaná identita má mnoho možných využití:
 
-### 1. Univerzální přihlášení \{##universal-dapp-logins}
+### 1. Univerzální přihlášení \{#universal-dapp-logins}
 
 Decentralizovaná identita může pomoci nahradit přihlašovací údaje na základě hesel[decentralizovanou autentizací](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Poskytovatelé služeb mohou vydávat atestace uživatelům, které mohou být uloženy v Ethereum peněžence. Příkladem atestace by byl [NFT](/nft/) umožňující držiteli přístup k online komunitě.
 
 Funkce [Přihlášení s Ethereem](https://login.xyz/) by pak umožnila serverům potvrdit uživatelův Ethereum účet a načíst požadovanou atestaci z jejich adresy účtu. To znamená, že uživatelé mohou přistupovat k platformám a webům, aniž by si museli zapamatovat dlouhá hesla, a tím zlepšili jejich online zážitek.
 
-### 2. Autentizace KYC \{##kyc-authentication}
+### 2. Autentizace KYC \{#kyc-authentication}
 
 Používání mnoha on-line služeb vyžaduje, aby jednotlivci poskytovali atestace a ověření, jako je řidičský průkaz nebo národní cestovní pas. Tento přístup je však problematický, protože soukromé informace uživatelů mohou být ohroženy a poskytovatelé služeb nemohou ověřit autenticitu atestace.
 
 Decentralizovaná identita umožňuje společnostem vyhnout se konvenčním [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) procesům a ověřovat identitu uživatelů pomocí ověřitelných údajů. To snižuje náklady na správu identit a zabraňuje používání falešné dokumentace.
 
-### 3. Hlasování a online komunity \{##voting-and-online-communities}
+### 3. Hlasování a online komunity \{#voting-and-online-communities}
 
 Online hlasování a sociální média jsou dvě nová využití pro decentralizovanou identitu. Online hlasovací systémy jsou náchylné k manipulaci, zejména pokud škodliví aktéři vytvářejí k hlasování falešnou identitu. Žádat jednotlivce, aby předložili online atestace, může zlepšit integritu procesů hlasování on-line.
 
 Decentralizovaná identita může pomoci vytvořit online komunity, které jsou bez falešných účtů. Každý uživatel například bude muset ověřit svou identitu pomocí blockchainového systému identity jako je Ethereum Name Service, což snižuje možnost výskytu botů.
 
-### 4. Ochrana proti Sybil útokům \{##sybil-protection}
+### 4. Ochrana proti Sybil útokům \{#sybil-protection}
 
 Sybil útoky jsou útoky, kde se jednotlivci snaží přelstít systém, aby si myslel, že jsou více lidmi, aby zvyšili svůj vliv. [Aplikace pro udělování grantů](https://gitcoin.co/grants/), které využívají [kvadratické hlasování](https://www.radicalxchange.org/concepts/plural-voting/), jsou zranitelné vůči těmto Sybil útokům, protože hodnota grantu se zvýší, když pro něj hlasuje více jednotlivců, což podněcuje uživatele k tomu, aby své příspěvky rozdělili na více identit. Decentralizované identity tomu pomáhají zabránit tím, že zvyšují břemeno každého účastníka, aby dokázali, že jsou skutečně lidé, i když často aniž by bylo nutné zveřejnit konkrétní soukromé informace.
 
-## Využití decentralizované identity \{##use-decentralized-identity}
+## Využití decentralizované identity \{#use-decentralized-identity}
 
 Existuje mnoho ambiciózních projektů, které využívají Ethereum jako základ pro decentralizovaná řešení identity:
 
@@ -162,23 +162,23 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - **[BrightID](https://www.brightid.org/)** – _Decentralizovaná síť sociální identity s veřejně dostupným zdrojovým kódem usilující o reformu ověřování identity vytvořením a analýzou sociálního grafu._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** – _Decentralizovaný agregátor digitální identity._
 
-## Další informace \{##further-reading}
+## Další informace \{#further-reading}
 
-### Články \{##articles}
+### Články \{#articles}
 
 - [Využití blockchainu: Blockchain a digitální identita](https://consensys.net/blockchain-use-cases/digital-identity/) – _ConsenSys_
 - [Co je Ethereum ERC725? Samostatně suverénní správa identity na Blockchainu](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Jak by blockchain mohl vyřešit problém digitální identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Co je decentralizovaná identita a proč by vás měla zajímat?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 
-### Videa \{##videos}
+### Videa \{#videos}
 
 - [Decentralizovaná identita (Bonusové živé vysílání)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Skvělé video na vysvětlení decentralizované identity od Andrease Antonopolouse_
 - [Přihlaste se pomocí Etherea a decentralizované identity s Ceramic, IDX, React, a 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) – _YouTube tutorial na vytváření systému správy identity pro tvorbu, čtení a aktualizaci uživatelského profilu pomocí jejich Ethereum peněženky od Nadera Dabita_
 - [BrightID – Decentralizovaná identita na Ethereu](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _epizoda podcastu Bankless o BrightID, decentralizovaném řešení identity pro Ethereum_
 - [Internet mimo blockchain: Decentralizovaná identita & Ověřitelné údaje](https://www.youtube.com/watch?v=EZ_Bb6j87mg) – EthDenver 2022 prezentace Evina McMullena
 
-### Komunity \{##communities}
+### Komunity \{#communities}
 
 - [Aliance ERC-725 na GitHubu](https://github.com/erc725alliance) – _Stoupenci normy ERC725 pro správu identity na blockchainu Ethereum_
 - [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) – _Komunita pro nadšence a vývojáře pracující na přihlášení s Ethereem_

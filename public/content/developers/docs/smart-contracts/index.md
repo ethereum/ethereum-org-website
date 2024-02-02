@@ -10,13 +10,13 @@ A "smart contract" is simply a program that runs on the Ethereum blockchain. It'
 
 Smart contracts are a type of [Ethereum account](/developers/docs/accounts/). This means they have a balance and can be the target of transactions. However they're not controlled by a user, instead they are deployed to the network and run as programmed. User accounts can then interact with a smart contract by submitting transactions that execute a function defined on the smart contract. Smart contracts can define rules, like a regular contract, and automatically enforce them via the code. Smart contracts cannot be deleted by default, and interactions with them are irreversible.
 
-## Prerequisites \{##prerequisites}
+## Prerequisites \{#prerequisites}
 
 If you're just getting started or looking for a less technical introduction, we recommend our [introduction to smart contracts](/smart-contracts/).
 
 Make sure you've read up on [accounts](/developers/docs/accounts/), [transactions](/developers/docs/transactions/) and the [Ethereum virtual machine](/developers/docs/evm/) before jumping into the world of smart contracts.
 
-## A digital vending machine \{##a-digital-vending-machine}
+## A digital vending machine \{#a-digital-vending-machine}
 
 Perhaps the best metaphor for a smart contract is a vending machine, as described by [Nick Szabo](https://unenumerated.blogspot.com/). With the right inputs, a certain output is guaranteed.
 
@@ -65,7 +65,7 @@ contract VendingMachine {
 
 Like how a vending machine removes the need for a vendor employee, smart contracts can replace intermediaries in many industries.
 
-## Permissionless \{##permissionless}
+## Permissionless \{#permissionless}
 
 Anyone can write a smart contract and deploy it to the network. You just need to learn how to code in a [smart contract language](/developers/docs/smart-contracts/languages/), and have enough ETH to deploy your contract. Deploying a smart contract is technically a transaction, so you need to pay [gas](/developers/docs/gas/) in the same way you need to pay gas for a simple ETH transfer. However, gas costs for contract deployment are far higher.
 
@@ -78,13 +78,13 @@ Ethereum has developer-friendly languages for writing smart contracts:
 
 However, they must be compiled before they can be deployed so that Ethereum's virtual machine can interpret and store the contract. [More on compilation](/developers/docs/smart-contracts/compiling/)
 
-## Composability \{##composability}
+## Composability \{#composability}
 
 Smart contracts are public on Ethereum and can be thought of as open APIs. This means you can call other smart contracts in your own smart contract to greatly extend what's possible. Contracts can even deploy other contracts.
 
 Learn more about [smart contract composability](/developers/docs/smart-contracts/composability/).
 
-## Limitations \{##limitations}
+## Limitations \{#limitations}
 
 Smart contracts alone cannot get information about "real-world" events because they can't retrieve data from off-chain sources. This means they can't respond to events in the real world. This is by design. Relying on external information could jeopardise consensus, which is important for security and decentralization.
 
@@ -92,11 +92,11 @@ However, it is important for blockchain applications to be able to use off-chain
 
 Another limitation of smart contracts is the maximum contract size. A smart contract can be a maximum of 24KB or it will run out of gas. This can be circumnavigated by using [The Diamond Pattern](https://eips.ethereum.org/EIPS/eip-2535).
 
-## Multisig contracts \{##multisig}
+## Multisig contracts \{#multisig}
 
 Multisig (multiple-signature) contracts are smart contract accounts that require multiple valid signatures to execute a transaction. This is very useful for avoiding single points of failure for contracts holding substantial amounts of ether or other tokens. Multisigs also divide responsibility for contract execution and key management between multiple parties and prevent the loss of a single private key leading to irreversible loss of funds. For these reasons, multisig contracts can be used for simple DAO governance. Multisigs require N signatures out of M possible acceptable signatures (where N ≤ M, and M > 1) in order to execute. `N = 3, M = 5` and `N = 4, M = 7` are commonly used. A 4/7 multisig requires four out of seven possible valid signatures. This means the funds are still retrievable even if three signatures are lost. In this case, it also means that the majority of key-holders must agree and sign in order for the contract to execute.
 
-## Smart contract resources \{##smart-contract-resources}
+## Smart contract resources \{#smart-contract-resources}
 
 **OpenZeppelin Contracts -** **_Library for secure smart contract development._**
 
@@ -104,7 +104,7 @@ Multisig (multiple-signature) contracts are smart contract accounts that require
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Community Forum](https://forum.openzeppelin.com/c/general/16)
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Coinbase: What is a smart contract?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink: What is a smart contract?](https://chain.link/education/smart-contracts)

@@ -12,7 +12,9 @@ Az Ethereum energiafogyasztásának becsült adata egy [CCRI (Crypto Carbon Rati
 
 Az Ethereum energiafogyasztását összevethetjük más termékek és iparágak éves becsléseivel, hogy kontextusban lássuk azt. Így jobban megértjük, hogy Ethereum fogyasztása magas vagy alacsony.
 
-<EnergyConsumptionChart />
+{
+	<EnergyConsumptionChart />
+}
 
 Az ábra az Ethereum becsült fogyasztását mutatja TWh/év formájában, más termékekkel és iparágakkal összevetve. A becslések nyilvános adatokból származnak 2023. júliusából, a forrásokat megtalálja a táblázat alatt.
 

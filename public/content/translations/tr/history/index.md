@@ -9,6 +9,7 @@ sidebarDepth: 1
 
 Ethereum blok zincirindeki tüm önemli dönüm noktalarının, çatalların ve güncellemelerin bir zaman çizelgesi.
 
+{
 <ExpandableCard title="Çatallama nedir?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Çatallanmalar, ağda önemli teknik yükseltmeler veya değişiklikler yapılması gerektiğinde ortaya çıkar: Bunlar, genellikle <a href="/eips/">[Ethereum İyileştirme Önerileri (EIP'ler)]</a>'den kaynaklanır ve protokolün "kurallarını" değiştirir.
@@ -18,6 +19,7 @@ Geleneksel, merkezden kontrol edilen yazılımlarda yükseltmelere ihtiyaç duyu
 Bu kural değişiklikleri, ağda geçici bir bölünme oluşturabilir. Yeni bloklar yeni ya da eski kurallara göre yaratılabilir. Çatallar genellikle önceden kararlaştırılır, böylece müşteriler değişiklikleri uyum içinde benimser ve yükseltmelerle birlikte çatal ana zincir hâline gelir. Fakat nadir durumlarda çatallanmalar üzerindeki anlaşmazlıklar, ağın geçici olarak ayrılmasına neden olabilir: En bilineni, <a href="#dao-fork">DAO çatallanması</a> ile Ethereum Classic'in yaratılmasıdır.
 
 </ExpandableCard>
+}
 
 Geçmişteki bazı özel önem taşıyan yükseltmeler hakkındaki bilgilere doğrudan geçebilirsiniz: [İşaret Zinciri](/roadmap/beacon-chain/); [Birleşim](/roadmap/merge/) ve [ EIP-1559](#london)
 
@@ -35,6 +37,7 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 Şanghay yükseltmesi, hisselemede çekimlerini yürütüm katmanına getirdi. Bu, Capella yükseltmesiyle birlikte blokların çekim işlemlerini kabul etmesi sağladı; bu da, paydaşların ETH'lerini İşaret Zincirinden yürütüm katmanına çekmelerine olanak tanıyor.
 
+{
 <ExpandableCard title="Şanghay EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,6 +49,7 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 </ul>
 
 </ExpandableCard>
+}
 
 - [Şanghay güncellemesinin spesifikasyonunu okuyun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
@@ -80,6 +84,7 @@ Paris yükseltmesi, iş ispatı blokzinciri tarafından 58750000000000000000000 
 
 - [Paris güncellemesinin spesifikasyonunu okuyun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="Paris EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,6 +93,7 @@ Paris yükseltmesi, iş ispatı blokzinciri tarafından 58750000000000000000000 
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -113,6 +119,7 @@ Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) ü�
 
 - [EF Blogu - Gray Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="Gray Glacier EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,6 +127,7 @@ Gray Glacier ağ yükseltmesi, [bomba değerini](/glossary/#difficulty-bomb) ü�
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -136,6 +144,7 @@ Arrow Glacier ağ yükseltmesi [bomba değerini](/glossary/#difficulty-bomb) bir
 - [EF Blogu - Arrow Glacier Yükseltme Duyurusu](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders - Ethereum Arrow Glacier Yükseltmesi](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="Arrow Glacier EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,6 +152,7 @@ Arrow Glacier ağ yükseltmesi [bomba değerini](/glossary/#difficulty-bomb) bir
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -176,6 +186,7 @@ Londra yükseltmesi, işlem ücreti marketini yeniden şekillendiren [EIP-1559](
 - [Ethereum Foundation'ın duyurusunu okuyun](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Ethereum Cat Herder'ın açıklamalarını okuyun](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="Londra EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,6 +198,7 @@ Londra yükseltmesi, işlem ücreti marketini yeniden şekillendiren [EIP-1559](
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -201,6 +213,7 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 - [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Ethereum Cat Herder'ın acıklamalarını okuyun](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="Berlin EIP'leri" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,6 +224,7 @@ Berlin yükseltmesi, belirli Ethereum Sanal Makinesi eylemleri için optimize ed
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -259,6 +273,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 - [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Ethereum Cat Herder'ın acıklamalarını okuyun](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="Muir Glacier EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,6 +281,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -287,6 +303,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 
 [Ethereum Vakfı'nın duyurusunu okuyunuz](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="İstanbul EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -300,6 +317,7 @@ Muir Glacier çatallanması, [bomba değerine](/glossary/#difficulty-bomb) bir g
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -317,6 +335,7 @@ Konstantinopolis çatalı:
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="Konstantinopolis EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -327,6 +346,7 @@ Konstantinopolis çatalı:
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -347,6 +367,7 @@ Bizans çatalı:
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="Bizans EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -362,6 +383,7 @@ Bizans çatalı:
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
@@ -381,6 +403,7 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="Sahte Ejderha EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -391,6 +414,7 @@ Sahte Ejderha çatallanması, ağdaki hizmet reddi (DoS) saldırılarına (Eylü
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -406,6 +430,7 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="Mandalina Düdüğü EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -414,6 +439,7 @@ Mandalina Düdüğü çatallanması, ağdaki (Eylül/Ekim 2016) hizmet reddi (Do
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
@@ -443,6 +469,7 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 
 [Ethereum Vakfı'nın duyurusunu okuyun](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="Homestead EIP'leri" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -452,6 +479,7 @@ Geleceğe dönük Homestead çatallanması. Birkaç protokol değişikliği ve E
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 

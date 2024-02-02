@@ -114,9 +114,13 @@ Una cuenta no es una cartera. Una cuenta consiste en un par de claves para una c
 
 En el siguiente vídeo Austin le guiará por las funciones hash y los pares de claves.
 
-<YouTube id="QJ010l-pBpE" />
+{
+	<YouTube id="QJ010l-pBpE" />
+}
 
-<YouTube id="9LtBDy67Tho" />
+{
+	<YouTube id="9LtBDy67Tho" />
+}
 
 ## Para seguir leyendo \{#further-reading}
 

@@ -17,7 +17,9 @@ Az Ethereum fejlesztői azzal a kihívással néznek szembe, hogy a jelenlegi pr
 
 A [KZG elköteleződési sémák](/roadmap/danksharding/#what-is-kzg) számos helyen megtalálhatók az Ethereumban, hogy kriptográfiai titkokat állítsanak elő, és ezek sebezhetők a kvantummal szemben. Jelenleg ezt úgy kerülik meg, hogy bizalmat igénylő összeállítást használnak, tehát több entitás állítja elő a véletlenszerűséget, amit nem tud a kvantum számítógép visszakövetni. Azonban az ideális megoldás a kvantumbiztos kriptográfia lenne. Két vezető megközelítés létezik, amely képes lenne a BLS-sémát helyettesíteni: a [STARK-alapú](https://hackmd.io/@vbuterin/stark_aggregation) és a [háló alapú](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) aláírás. Ezeket még kutatják és prototípusokat készítenek belőlük.
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Tudjon meg többet a KZG-ről és a bizalmat igénylő összeállításról</ButtonLink>
+}
 
 ## Egyszerűbb és hatékonyabb Ethereum \{#simpler-more-efficient-ethereum}
 

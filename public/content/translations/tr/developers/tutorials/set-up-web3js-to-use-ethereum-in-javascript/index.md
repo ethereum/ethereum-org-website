@@ -72,7 +72,9 @@ Web3 örneğinde kullanılabilen tüm fonksiyonları, [resmi web3.js belgelerind
 
 Web3 kütüphanelerinin çoğu eşzamansızdır çünkü arka planda kütüphane, sonucu geri gönderen düğüme JSON RPC çağrıları yapar.
 
-<Divider />
+{
+	<Divider />
+}
 
 Tarayıcıda çalışıyorsanız, bazı cüzdanlar doğrudan bir Web3 örneği enjekte eder ve özellikle işlem yapmak için kullanıcının Ethereum adresiyle etkileşim kurmayı planlıyorsanız, mümkün olduğunda onu kullanmaya çalışmalısınız.
 

@@ -16,13 +16,13 @@ Please note that since [The Merge](/roadmap/merge/), two connected pieces of Eth
 
 As well as understanding JavaScript, it might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
 
-## Why use a library? \{##why-use-a-library}
+## Why use a library? \{#why-use-a-library}
 
 These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
 
-## Library features \{##library-features}
+## Library features \{#library-features}
 
-### Connect to Ethereum nodes \{##connect-to-ethereum-nodes}
+### Connect to Ethereum nodes \{#connect-to-ethereum-nodes}
 
 Using providers, these libraries allow you to connect to Ethereum and read its data, whether that's over JSON-RPC, INFURA, Etherscan, Alchemy or MetaMask.
 
@@ -70,7 +70,7 @@ Once set up you'll be able to query the blockchain for:
 - network id
 - and more...
 
-### Wallet functionality \{##wallet-functionality}
+### Wallet functionality \{#wallet-functionality}
 
 These libraries give you functionality to create wallets, manage keys and sign transactions.
 
@@ -151,7 +151,7 @@ Once set up you'll be able to:
 - sign transactions
 - and more...
 
-### Interact with smart contract functions \{##interact-with-smart-contract-functions}
+### Interact with smart contract functions \{#interact-with-smart-contract-functions}
 
 JavaScript client libraries allow your application to call smart contract functions by reading the Application Binary Interface (ABI) of a compiled contract.
 
@@ -213,7 +213,7 @@ This means you can:
 - Deploy a contract
 - And more...
 
-### Utility functions \{##utility-functions}
+### Utility functions \{#utility-functions}
 
 Utility functions give you handy shortcuts that make building with Ethereum a little easier.
 
@@ -235,7 +235,7 @@ ethers.utils.formatEther(balance)
 - [Web3js utility functions](https://docs.web3js.org/api/web3-utils)
 - [Ethers utility functions](https://docs.ethers.io/v5/api/utils/)
 
-## Available libraries \{##available-libraries}
+## Available libraries \{#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
@@ -279,16 +279,16 @@ ethers.utils.formatEther(balance)
 - [Documentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics \{##related-topics}
+## Related topics \{#related-topics}
 
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [Development frameworks](/developers/docs/frameworks/)
 
-## Related tutorials \{##related-tutorials}
+## Related tutorials \{#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._

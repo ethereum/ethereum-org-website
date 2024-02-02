@@ -201,7 +201,9 @@ Jika semuanya berfungsi dengan baik, Anda akan melihat 2 aksi (`Transfer` dan `S
 
 ![Dua aksi dalam transaksi: Transfer dan Sold](./transfer-and-sold-events.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 Dari tutorial ini, kita melihat cara memeriksa saldo dan allowance token ERC-20 dan juga cara memanggil `Transfer` dan `TransferFrom` dari kontrak pintar ERC20 yang menggunakan antarmukanya.
 

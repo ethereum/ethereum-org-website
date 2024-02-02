@@ -92,11 +92,15 @@ Lernen Sie mehr über [Validium](/developers/docs/scaling/validium/).
 
 ## Eher der visuelle Lernende? \{#visual-learner}
 
-<YouTube id="BgCgauWVTs0" />
+{
+	<YouTube id="BgCgauWVTs0" />
+}
 
 _Beachten Sie, dass in der Erklärung im Video der Begriff „Layer 2" für alle Off-Chain-Skalierungslösungen verwendet wird, während wir „Layer-2" als eine Off-Chain-Lösung bezeichnen, die ihre Sicherheit aus dem Layer 1 Mainnet-Konsens bezieht._
 
-<YouTube id="7pWxCklcNsU" />
+{
+	<YouTube id="7pWxCklcNsU" />
+}
 
 ## Weiterführende Informationen \{#further-reading}
 

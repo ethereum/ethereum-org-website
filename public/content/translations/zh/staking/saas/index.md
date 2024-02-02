@@ -57,10 +57,13 @@ summaryPoints:
 
 ## 常见问题 \{#faq}
 
+{
 <ExpandableCard title="谁拥有我的密钥？" eventCategory="SaasStaking" eventName="clicked who holds my keys">
 不同的提供商会有不同的安排，但通常情况下，他们都会指导你设置所需的签名密钥（每 32 个以太币需要一个签名密钥），并将这些密钥上传给你的服务提供商，让他们代表你进行验证。 这些签名密钥本身并没有提现、转帐或者花费你资金的权限。 他们只提供为达成共识而投票的权限，如果投票执行方式不恰当，可能会受到离线处罚或罚没。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="为什么有两套密钥？" eventCategory="SaasStaking" eventName="clicked so there are two sets of keys">
 由此可见， 每个帐户都由 BLS <em>签名</em>密钥和 BLS <em>提款</em>密钥组成。 为了让验证者证明链的状态、参与同步委员会并提出区块建议，签名密钥必须易于验证者客户端访问。 为此签名密钥必须以某种形式与互联网连接，所以它们本质上被认为是“热”密钥。 这是验证者能够参与证明的必要条件，因此，出于安全原因，用于转移或提取资金的密钥是单独分开的。
 
@@ -72,7 +75,9 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 \*提供了提款地址和初始存款的质押人不需要设置此项。 如需有关准备验证者方面的支持，请联系你的质押即服务提供商。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="我什么时候可以提现？" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
 2023 年 4 月，上海/卡佩拉升级实现了质押提款功能。 质押人需要提供一个提款地址（如果在初始存款时没有提供），并将开始每隔几天定期自动分发奖励支付。
 
@@ -80,7 +85,9 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 <ButtonLink to="/staking/withdrawals/">更多关于质押提款的信息</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="如果我遭到罚没，会发生什么？" eventCategory="SaasStaking" eventName="clicked what happens if I get slashed">
 使用质押即服务提供商，你需要将节点运营委托给别人。 这伴随着一些你不能控制的节点性能不佳的风险。 如果你的验证者受到罚没，你的验证者余额将因处罚而遭受损失，验证者也将从验证者池中强行移除。
 
@@ -88,6 +95,7 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 
 有关任何担保或保险方案的详细信息，以及如何提供提款地址的说明，请联系各质押即服务提供商。 如果你想完全控制你的验证者设置，<a href="/staking/solo/">请详细了解如何单独质押以太币</a>。
 </ExpandableCard>
+}
 
 ## 延伸阅读 \{#further-reading}
 

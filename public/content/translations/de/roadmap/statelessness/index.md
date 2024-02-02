@@ -68,12 +68,14 @@ Schwache Zustandslosigkeit beinhaltet Änderungen dazu, wie Ethereum Nodes Zusta
 
 Damit dies passieren kann, müssten [Verkle Bäume](/roadmap/verkle-trees/) bereits in Ethereum Clients implementiert sein. Verkle-Bäume sind eine Datenersetzungsstruktur um Ethereums Zustandsdaten zu speichern. Sie erlauben kleine "Zeugen" fester Größe, die dazu da sind Daten zwischen Peers zu vermitteln und Blöcke direkt, anstatt gegen lokale Datenbanken zu verifizieren. [Proposer-Builder Separation](/roadmap/pbs/) wird zudem benötigt, da es Blockerzeugern erlaubt spezialisierte Nodes mit leistungsfähigerer Hardware zu sein und da sie es sind, die Zugriff auf die vollen Zustandsdaten brauchen.
 
+{
 <ExpandableCard title="Warum ist es OK ist sich auf weniger Block Proposer zu stützen?" eventCategory="/roadmap/statelessness" eventName="clicked why is it OK to rely on fewer block proposers?">
 
 Zustandslosigkeit stützt sich auf Blockerzeuger, welche eine Kopie der vollen Zustandsdaten pflegen, sodass sie Zeugen generieren können, welche genutzt werden um Blöcke zu verifizieren. Andere Nodes müssen die Zustandsdaten nicht abrufen, da alle benötigten Informationen für das Verifizieren eines Blocks im Zeugen vorhanden sind. Das erzeugt eine Situation, in der das Vorschlagen eines Blocks teuer, das Verifizieren jedoch günstig ist, was bedeutet, das weniger Operatoren einen blockvorschlagenden Node betreiben werden. Jedoch ist die Dezentralisation von Block Proposern nicht kritisch, solange möglichst viele Teilnehmende unabhängig voneinander verifizieren können, dass der vorgeschlagene Block valide ist.
 
 <ButtonLink variant="outline-color" to="https://notes.ethereum.org/WUUUXBKWQXORxpFMlLWy-w#So-why-is-it-ok-to-have-expensive-proposers">Lesen Sie mehr in Dankrads Notizen</ButtonLink>
 </ExpandableCard>
+}
 
 Block Proposer nutzen die Zustandsdaten, um "Zeugen" zu erzeugen - die minimale Menge an Daten, die die Werte des Zustands beweisen, welche während einer Transaktion in einem Block geändert werden. Andere Validatoren halten nicht den Zustand, sie speichern nur die Wurzel des Zustands (state root) (einen Hash des gesamten Zustands). Sie erhalten einen Block und einen Zeugen und nutzen diese, um ihre Wurzel des Zustands zu aktualisieren. Das macht einen validierenden Node extrem leichtgewichtig.
 

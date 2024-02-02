@@ -15,11 +15,13 @@ Pohon Verkle (gabungan dari "Vector commitment" dan "Merkle Trees") adalah sebua
 
 Pohon Verkle adalah langkah penting dalam perjalanan menuju klien Ethereum tanpa kewarganegaraan. Klien tanpa kewarganegaraan adalah klien yang tidak perlu menyimpan seluruh database status untuk memvalidasi blok yang masuk. Alih-alih menggunakan salinan lokal status Ethereumnya sendiri untuk memverifikasi blok, klien tanpa status menggunakan "saksi" untuk data status yang datang bersama blok. Saksi adalah sebuah kumpulan potongan-potongan individu dari data status yang diperlukan untuk mengeksekusi serangkaian transaksi tertentu, dan bukti kriptografi bahwa saksi tersebut benar-benar merupakan bagian dari data lengkap. Saksi digunakan, _bukan_ dari database keadaan. Agar hal ini dapat bekerja, saksi harus berukuran sangat kecil, sehingga dapat disiarkan dengan aman di seluruh jaringan pada waktunya agar validator dapat memprosesnya dalam ruang 12 detik. Struktur data status saat ini tidak cocok karena saksi terlalu besar. Pohon Verkle memecahkan masalah ini dengan memungkinkan saksi kecil, menghilangkan salah satu hambatan utama bagi klien tanpa status.
 
+{
 <ExpandableCard title="Mengapa kami menginginkan klien tanpa status?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 Klien Ethereum saat ini menggunakan struktur data yang dikenal sebagai Patricia Merkle Trie untuk menyimpan data statusnya. Informasi mengenai masing-masing akun disimpan sebagai daun pada trie dan pasangan daun di-hash berulang kali hingga hanya satu hash yang tersisa. Hash terakhir ini dikenal sebagai "akar". Untuk memverifikasi blok, klien Ethereum mengeksekusi semua transaksi dalam sebuah blok dan memperbarui trie status lokal mereka. Blok dianggap valid jika akar dari pohon lokal identik dengan yang disediakan oleh pengusul blok, karena setiap perbedaan dalam komputasi yang dilakukan oleh pengusul blok dan simpul yang memvalidasi akan menyebabkan hash akar benar-benar berbeda. Masalahnya adalah memverifikasi rantai blok mengharuskan setiap klien untuk menyimpan seluruh state trie untuk blok kepala dan beberapa blok historis (default di Geth adalah menyimpan data status untuk 128 blok di belakang blok kepala). Hal ini mengharuskan klien untuk memiliki akses ke ruang disk yang besar, yang merupakan penghalang untuk menjalankan simpul penuh pada perangkat keras yang murah dan berdaya rendah. Solusi untuk hal ini adalah dengan memperbarui trie status ke struktur yang lebih efisien (Verkle tree) yang dapat diringkas menggunakan "saksi" kecil pada data yang dapat dibagikan, bukan data status yang lengkap. Memformat ulang data negara bagian ke dalam pohon Verkle adalah batu loncatan untuk beralih ke klien tanpa status.
 
 </ExpandableCard>
+}
 
 ## Apa itu witness dan mengapa dibutuhkan? \{#what-is-a-witness}
 
@@ -31,11 +33,13 @@ Struktur pohon Merkle menyebabkan ukuran witness menjadi sangat besar - terlalu 
 
 Dalam skema komitmen polinomial, witness memiliki ukuran terkelola yang dapat dengan mudah ditransfer pada jaringan peer-to-peer. Hal ini memungkinkan klien memverifikasi perubahan keadaan di setiap blok dengan jumlah data yang minimal.
 
+{
 <ExpandableCard title="Secara eksak, seberapa besarkah pengurangan ukuran witness yang dapat dilakukan oleh pohon Verkle?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Ukuran witness berbeda-beda, bergantung pada jumlah daun yang disertakannya. Dengan asumsi bahwa witness mencakup 1000 daun, satu witness untuk pohon Merkle akan berukuran sekitar 3,5MB (dengan asumsi ada 7 tingkat ke pohon). Witness untuk data yang sama di pohon Verkle (dengan asumsi ada 4 tingkat ke pohon) akan berukuran sekitar 150 kB - **sekitar 23x lebih kecil**. Dengan penurunan ukuran ini, witness pada klien tanpa keadaan dapat menjadi cukup kecil sehingga dapat diterima. Witness polinomial berukuran 0,128 -1 kB bergantung pada komitmen polinomial spesifik yang digunakan).
 
 </ExpandableCard>
+}
 
 ## Bagaimana struktur pohon Verkle? \{#what-is-the-structure-of-a-verkle-tree}
 

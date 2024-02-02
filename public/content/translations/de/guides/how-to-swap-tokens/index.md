@@ -47,7 +47,9 @@ Die Börse berechnet automatisch, wie viele Token Sie bekommen.
 Sie können den Fortschritt der Transaktion auf jedem Blockchain-Explorer ansehen. Dieser Prozess sollte nicht länger als 10 Minuten dauern.
 
 Sie werden die getauschten Token automatisch in Ihrer Krypto-Wallet erhalten, wenn die Transaktion verarbeitet wurde.
-<br />
+{
+	<br />
+}
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Möchten Sie mehr erfahren?</div>

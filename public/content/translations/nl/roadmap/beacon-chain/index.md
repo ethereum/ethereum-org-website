@@ -61,8 +61,12 @@ Shardketens kunnen alleen op een veilige manier in het Ethereum-netwerk komen al
     Shardketens
 </ButtonLink>
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Heb interactie met de Beacon Chain \{#interact-with-beacon-chain}
 
-<BeaconChainActions />
+{
+	<BeaconChainActions />
+}

@@ -37,7 +37,9 @@ Shanghai/Capella yükseltmesinden önce hisselenmiş ETH'lerinizi kullanamaz vey
 
 ### Nasıl hazırlanırım? \{#how-do-i-prepare}
 
-<WithdrawalsTabComparison />
+{
+	<WithdrawalsTabComparison />
+}
 
 ### Önemli bildiriler \{#important-notices}
 
@@ -76,7 +78,9 @@ Belirli bir doğrulayıcının para çekmek için uygun olup olmadığı, söz k
 
 Finematics tarafından sağlanmış Ethereum hisseleme çekim işlemleri açıklamasına buradan göz atabilirsiniz:
 
-<YouTube id="RwwU3P9n3uo" />
+{
+	<YouTube id="RwwU3P9n3uo" />
+}
 
 ### Doğrulayıcı "süpürülmesi" \{#validator-sweeping}
 
@@ -127,6 +131,7 @@ Gördüğünüz üzere bu, ağda daha fazla doğrulayıcı varlığında yavaşl
 
 ## Sıkça sorulan sorular \{#faq}
 
+{
 <ExpandableCard
 title="Bir para çekme adresi sağladıktan sonra bunu yeni alternatif bir para çekme adresi ile değiştirebilir miyim?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Hayır, çünkü para çekme kimlik bilgilerini sağlama süreci tek seferlik bir süreçtir bu yüzden gönderildikten sonra değiştirilemez.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Para çekme adresi neden yalnızda bir sefer belirlenebilir?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Bir yürütme katmanı para çekme adresi belirleyerek söz konusu doğrulayıc�
 
 Belirli bir doğrulayıcı için çekim adresini değiştirmeye alternatif olarak, kullanıcılar anahtar döngüsünü yönetebilen, Safe gibi bir akıllı sözleşmeyi çekim adresi olarak kullanmayı seçebilirler. Fonlarını kendi EOA'larına göre ayarlayan kullanıcılar, tüm stake edilmiş fonlarını çekebilmek için tam bir çıkış gerçekleştirebilir ve ardından yeni kimlik bilgilerini sunarak yeniden hisseleyebilirler.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Hisseleme token'larında ya da havuzlanmış hisselemede yer alırsam"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Eğer bir <a href="/staking/pools/">paydaşlık havuzunun</a> parçasıysanız v
 Genel olarak kullanıcılar, temelde hisselenmiş ETH'lerini geri almakta veya kullandıkları hisseleme sağlayıcısını değiştirmekte özgürdür. Eğer spesifik bir havuz çok büyük hale geliyorsa fonlar çıkartılabilir, alınabilir ve <a href="https://rated.network/">daha küçük bir sağlayıcı</a> ile yeniden hisselenebilir. Ya da yeterince ETH biriktirdiyseniz <a href="/staking/solo/">evden hisseleyebilirsiniz</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Ödül ödemeleri (kısmi para çekimleri) otomatik olarak gerçekleşir mi?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Evet, doğrulayıcınız bir çekim adresi sağladığı sürece. Bu herhangi bir çekimi etkinleştirmek için bir defa sağlanmalıdır, sonrasında ödül ödemeleri otomatik olarak birkaç günde bir her doğrulayıcı süpürmesinde çalışacaktır.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Tam para çekimleri otomatik olarak gerçekleşir mi?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Hayır eğer doğrulayıcınız hâlâ ağda aktif ise otomatik olarak tam bir �
 Bir doğrulayıcı çıkış sürecini tamamladığında ve hesabın çekim kredilerinin olduğunu varsayarsak kalan bakiye, <em>sonrasında</em> sıradaki <a href="#validator-sweeping">doğrulayıcı süpürmesinde</a> çekilecektir.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Özel bir tutarı çekebilir miyim?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ eventName="read more">
 
 Belirli miktarlarda ETH'nin çekilmesini manuel olarak talep etmek mümkün değildir.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Doğrulayıcı yürütüyorum. Para çekimlerini etkinleştirmek için daha fazla bilgiye nereden ulaşabilirim?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Doğrulayıcı operatörlerinin doğrulayıcıyı çekimler için nasıl hazırl
 Kurulumunuzu ilk olarak bir test ağında denemek isterseniz, başlamak için <a href="https://goerli.launchpad.ethereum.org">Goerli Test Ağı Hisseleme Başlama Noktası</a> sayfasını ziyaret edin.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Daha fazla ETH yatırarak çıktıktan sonra kendi doğrulayıcımı tekrar aktive debilir miyim?"
 eventCategory="FAQ"
@@ -207,6 +226,7 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Hayır. Bir doğrulayıcı çıktıktan ve tüm bakiyesi çekildikten sonra, bu doğrulayıcıya yatırılan tüm ek fonlar, bir sonraki doğrulayıcı süpürmesi sırasında otomatik olarak çekim adresine aktarılacaktır. ETH'yi tekrar hisselemek için yeni bir doğrulayıcı aktive olmalıdır.
 </ExpandableCard>
+}
 
 ## Daha fazla bilgi \{#further-reading}
 

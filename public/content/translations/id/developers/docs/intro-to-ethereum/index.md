@@ -22,13 +22,17 @@ Jadi untuk meringkasnya, ketika Anda mengirim ETH ke seseorang, transaksi harus 
 
 Tonton Austin yang memandu Anda tentang blokchain:
 
-<YouTube id="zcX7OJ-L8XQ" />
+{
+	<YouTube id="zcX7OJ-L8XQ" />
+}
 
 Jika Anda ingin melihat cara blockchain membuat hash dari data dan kemudian blok sebelumnya merujuk pada semua blok di belakangnya, pastikan melihat [demo ini](https://andersbrownworth.com/blockchain/blockchain) yang dibuat oleh Anders Brownworth dan tonton video panduannya di bawah.
 
 Tonton Anders menjelaskan hash dalam blockchain:
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## Apa itu Ethereum? \{#what-is-ethereum}
 

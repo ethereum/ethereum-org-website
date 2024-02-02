@@ -72,11 +72,15 @@ We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn
   </ExpandableCard>
 </InfoGrid>
 
-<StakingComparison page="solo" />
+{
+	<StakingComparison page="solo" />
+}
 
 ## Hoe het werkt \{#how-it-works}
 
-<StakingHowSoloWorks />
+{
+	<StakingHowSoloWorks />
+}
 
 Indien ooit gewenst, kunt u stoppen als validator; hiermee hoeft u niet meer online te blijven, wat wel het verkrijgen van verdere beloningen stopt. Wees ervan bewust dat _opname_ van deze fondsen niet mogelijk zal zijn tot de geplande Shanghai upgrade.
 
@@ -86,7 +90,9 @@ Na de Shanghai upgrade kunnen gebruikers zowel hun beloningen als hun stake opne
 
 Het Staking Launchpad is een open-source applicatie die u helpt om een staker te worden. Het begeleidt u bij het kiezen van uw clients, het genereren van uw sleutels en het storten van uw ETH op het staking-stortingscontract. Er is een checklist beschikbaar om er zeker van te zijn dat u alles heeft ingevuld om uw validator veilig in te stellen.
 
-<StakingLaunchpadWidget />
+{
+	<StakingLaunchpadWidget />
+}
 
 ## Wat te overwegen met tools voor nodes en client-instelling \{#node-tool-considerations}
 
@@ -94,7 +100,9 @@ Er is een groeiend aantal tools en services om u te helpen als solo staker van u
 
 Attribuutindicatoren worden hieronder gebruikt om opmerkelijke sterke of zwakke punten aan te geven die een genoemde staking tool kan hebben. Gebruik deze sectie als referentie voor hoe we deze attributen definiëren wanneer u een tool kiest om u te helpen op uw staking-traject.
 
-<StakingConsiderations page="solo" />
+{
+	<StakingConsiderations page="solo" />
+}
 
 ## Onderzoek tools voor nodes en de instelling van clients \{#node-and-client-tools}
 
@@ -106,30 +114,39 @@ Houd rekening met het belang van het kiezen van een <a href="/developers/docs/no
 
 ### Node tools
 
-<StakingProductsCardGrid category="nodeTools" />
+{
+	<StakingProductsCardGrid category="nodeTools" />
+}
 
 ### Sleutelgenerators
 
 Deze tools worden gebruikt als een alternatief voor de [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), om u te helpen met het genereren van sleutels.
 
-<StakingProductsCardGrid category="keyGen" />
+{
+	<StakingProductsCardGrid category="keyGen" />
+}
 
 Heeft u een voorstel voor een staking tool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit zou zijn en om het ter beoordeling in te dienen.
 
 ## Bekijk solo staking-handleidingen \{#staking-guides}
 
-<StakingGuides />
+{
+	<StakingGuides />
+}
 
 ## Veelgestelde vragen \{#faq}
 
 Dit zijn enkele van de meest voorkomende vragen over staking die de moeite waard zijn om te weten.
 
+{
 <ExpandableCard title="Wat is een validator?">
 
 Een _validator_ is een virtuele entiteit die op Ethereum bestaat en deelneemt aan de consensus van het Ethereum-protocol. Validators worden vertegenwoordigd door een saldo, een publieke sleutel en andere eigenschappen. Een _validator client_ is de software die namens de validator handelt door de privé-sleutel te bewaren en te gebruiken. Een enkele validator-client kan verschillende sleutelparen hebben die verschillende validators kunnen controleren.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kan ik meer dan 32 ETH storten?">
 Voor elk sleutelpaar gekoppeld aan een validator moet precies 32 ETH geactiveerd worden. Meer ETH gestort op een enkele set sleutels verhoogt het beloningspotentieel niet, aangezien elke validator is beperkt tot een <a href="https://www.attestant.io/posts/understanding-validator-effective-balance/">effectief saldo</a> van 32 ETH. Dit betekent dat staking wordt uitgevoerd in 32 ETH-incrementen, elk met zijn eigen set sleutels en saldo.
 
@@ -137,7 +154,9 @@ Stort niet meer dan 32 ETH voor één enkele validator. Het zal je beloningen ni
 
 Als solo staking u te veeleisend lijkt, overweeg dan om een <a href="/staking/saas/">staking-as-a-service</a> provider te gebruiken, of als je met minder dan 32 ETH werkt, bekijk dan de <a href="/staking/pools/">staking pools</a>.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Word ik geslashed als ik offline ga? (tldr: Nee.)">
 Offline gaan wanneer het netwerk correct wordt afgesloten, zal NIET resulteren in slashing. Kleine <em>inactiviteitsboetes</em> worden opgelopen als uw validator niet beschikbaar is gedurende een bepaalde tijdsperiode (elk 6,4 minuten lang), maar dit is heel anders dan <em>slashing</em>. Deze boetes zijn iets minder dan de beloning die u zou hebben verdiend als de validator beschikbaar was om te attesteren, en deze verliezen kunnen worden terugverdiend door ongeveer evenveel tijd weer online te blijven.
 
@@ -145,7 +164,9 @@ Merk op dat boetes voor inactiviteit proportioneel zijn aan hoeveel validators t
 
 In extreme gevallen, als het netwerk stopt met werken doordat meer dan een derde van de validators offline is, zullen deze gebruikers ondervinden wat bekend staat als een <em>kwadratisch inactiviteitslek</em>, wat een exponentiële afvoer van ETH van offline validator-accounts is. Dit stelt het netwerk in staat om zichzelf uiteindelijk te genezen door het verbranden van ETH van inactieve validators totdat hun saldo 16 ETH bereikt, op welk moment ze automatisch zullen worden verwijderd uit de validator-pool. De resterende online validators zullen uiteindelijk weer meer dan 2/3 van het netwerk omvatten, waarmee voldaan wordt aan de supermeerderheid die nodig is om de chain opnieuw te voltooien.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Hoe zorg ik ervoor dat ik niet geslashed zal worden?">
 Kort samengevat kan dit nooit volledig worden gegarandeerd, maar als u te goeder trouw handelt, een minderheid-client uitvoert en uw ondertekeningssleutels op slechts één machine tegelijk houdt, is het risico om geslashed te worden bijna nul.
 
@@ -158,7 +179,9 @@ Gelijkwaardige bugs in een <em>minderheid-client zouden nooit afgerond worden</e
 <p><a href="https://hackernoon.com/ethereums-client-diversity-problem">Meer informatie over het belang van het uitvoeren van een minderheid-client.</a></p>
 <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50">Meer informatie over slashing-preventie</a></p>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Welke client is de beste?">
 Individuele clients kunnen wat betreft prestatie en gebruikersinterface lichtjes variëren, omdat ze elk ontwikkeld zijn door verschillende teams die verschillende programmeertalen gebruiken. Dat gezegd hebbende, is geen enkele de "beste" client. Alle productie-clients zijn uitstekende stukken software, die allemaal dezelfde kernfuncties uitvoeren om te synchroniseren en te communiceren met de blockchain.
 
@@ -166,7 +189,9 @@ Aangezien alle productie-clients dezelfde basisfunctionaliteit bieden, is het in
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">Meer informatie over de reden waarom client-diversiteit cruciaal is</a>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kan ik gewoon een VPS (virtuele privé-server) gebruiken?">
 Hoewel een virtuele privé-server (VPS) kan worden gebruikt als vervanging voor thuishardware, zijn de fysieke toegang en locatie van uw validator-client <em>ook van belang</em>. Gecentraliseerde cloudoplossingen zoals Amazon Web Services of Digital Ocean maken het mogelijk om hardware niet zelf te hoeven verkrijgen en bedienen, ten koste van het centraliseren van het netwerk.
 
@@ -174,6 +199,7 @@ Hoe meer validator-clients draaien op een enkele gecentraliseerde cloud-opslagop
 
 Offline boetes zijn evenredig aan hoeveel andere validators er tegelijkertijd offline zijn. Het gebruik van een VPS verhoogt het risico dat offline boetes zwaarder zullen zijn, en verhoogt uw risico op kwadratische lekkage of slashing in het geval dat de uitval groot genoeg is. Om uw eigen risico en het risico voor het netwerk te minimaliseren, worden gebruikers sterk aangemoedigd om hun eigen hardware te verkrijgen en gebruiken.
 </ExpandableCard>
+}
 
 ## Verder lezen \{#further-reading}
 

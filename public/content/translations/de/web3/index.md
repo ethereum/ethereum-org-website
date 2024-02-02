@@ -10,7 +10,9 @@ Zentralisierung hat es ermöglicht, dass Milliarden von Menschen Zugang zum Inte
 
 Web3 ist die Antwort auf diese Misere. Anstelle eines Internets, das von großen Technologieunternehmen monopolisiert wird, setzt Web3 auf Dezentralisierung und wird von seinen Benutzern aufgebaut, betrieben und gehalten. Web3 legt die Macht in die Hände von Einzelpersonen und nicht von Unternehmen. Bevor wir über Web3 sprechen, sehen wir uns an, wie wir hierher gekommen sind.
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Das frühe Internet \{#early-internet}
 
@@ -30,7 +32,9 @@ Die Zeit des Web 2.0 begann 2004 mit dem Aufkommen der Social-Media-Plattformen.
 
 ![Client-Server-Architektur, die Web 2.0 darstellt](./web2.png)
 
-<Divider />
+{
+	<Divider />
+}
 
 ## Web 3.0: lesen, schreiben, besitzen \{#web3}
 
@@ -158,4 +162,6 @@ Web3 ist nicht starr definiert. Zahlreiche Community-Teilnehmer haben unterschie
 - [Die Web3-Landschaft](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [Die Web3-Debatte](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
-<QuizWidget quizKey="web3" />
+{
+	<QuizWidget quizKey="web3" />
+}

@@ -15,6 +15,7 @@ Terdapat dua cara mereka mungkin menipu anda:
 
 Untuk mengilustrasikan maksud token penipuan, dan cara mengenal pastinya, kita akan melihat satu contoh: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Token ini cuba kelihatan seperti token [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) yang sah.
 
+{
 <ExpandableCard
 title="Apakah itu ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum ialah sebuah organisasi yang membangunkan dan mengurus <a href="/developers/docs/scaling/optimistic-rollups/">gulungan optimistik</a>. Pada awalnya, Arbitrum diorganisasikan sebagai syarikat bertujuan untung, tetapi kemudiannya mengambil langkah-langkah untuk mendesentralisasi. Sebagai sebahagian daripada proses itu, mereka mengeluarkan <a href="/dao/#token-based-membership">token tadbir urus</a> yang boleh diniagakan.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Mengapakah token penipuan dipanggil wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Terdapat kelaziman di Ethereum iaitu apabila aset tidak mematuhi piawai ERC-20, 
 Tidak masuk akal untuk mencipta versi "wrapped" bagi token ERC-20 yang sudah wujud di Ethereum, tetapi penipu bergantung pada penampilan kesahihan daripada realiti asas.
 
 </ExpandableCard>
+}
 
 ## Bagaimanakah token penipuan berfungsi? \{#how-do-scam-tokens-work}
 
 Tujuan utama Ethereum ialah desentralisasi. Ini bermakna tiada pihak berkuasa pusat yang boleh menyita aset anda atau menghalang anda daripada melaksanakan kontrak pintar. Tetapi, itu juga bermakna bahawa penipu boleh melaksanakan kontrak pintar mengikut kemahuan mereka.
 
+{
 <ExpandableCard
 title="What are smart contracts?"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Kontrak pintar</a> ialah program yang berjalan selain blok rantai Ethereum. Setiap token ERC-20, sebagai contoh, dilaksanakan sebagai kontrak pintar.
 
 </ExpandableCard>
+}
 
 Secara khusus, Arbitrum melaksanakan suatu kontrak yang menggunakan simbol `ARB`. Tetapi itu tidak menghalangi orang lain daripada turut melaksanakan kontrak yang menggunakan simbol yang sama, atau serupa. Sesiapa yang menulis kontrak akan menentukan perkara yang kontrak akan lakukan.
 

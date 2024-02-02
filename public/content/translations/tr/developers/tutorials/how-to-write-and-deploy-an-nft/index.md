@@ -239,7 +239,9 @@ Ardından projemizin kök dizininde bir `.env` dosyası oluşturun ve buna Metam
 
 Bunları kodumuza gerçekten bağlamak için adım 13'te hardhat.config.js dosyamızda bu değişkenlere başvuracağız.
 
-<EnvWarningBanner />
+{
+	<EnvWarningBanner />
+}
 
 ## Adım 12: Ethers.js'yi kurun \{#install-ethers}
 

@@ -11,7 +11,7 @@ Block explorers are your portal to Ethereum's data. You can use them to see real
 
 You should understand the basic concepts of Ethereum so you can make sense of the data that a block explorer gives you. Start with [an intro to Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Services \{##services}
+## Services \{#services}
 
 - [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
 - [Beaconcha.in](https://beaconcha.in/)
@@ -26,13 +26,13 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [EthVM](https://www.ethvm.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
-## Data \{##data}
+## Data \{#data}
 
 Ethereum is transparent by design so everything is verifiable. Block explorers provide an interface for getting this information. And this is for both the main Ethereum network and the testnets, should you need that data. Data is divided into execution data and consensus data. The execution data refers to the transactions that have been executed in a specific block. The consensus data refers to the blocks themselves and the validators who proposed them.
 
 Here's a summary of the types of data you can get from a block explorer.
 
-### Execution data \{##execution-data}
+### Execution data \{#execution-data}
 
 New blocks are added to Ethereum every 12 seconds (unless a block proposer misses its turn), so a near-constant stream of data gets added to block explorers. Blocks contain a lot of important data that you may find useful:
 
@@ -56,7 +56,7 @@ New blocks are added to Ethereum every 12 seconds (unless a block proposer misse
 - Parent hash - The hash of the block that came before the current block
 - StateRoot - The root hash of Merkle trie which stores the entire state of the system
 
-### Gas \{##gas}
+### Gas \{#gas}
 
 Not only will block explorers give you data about Gas usage in transactions and blocks, but some will give you information on the network's current gas prices. This will help you understand network usage, submit safe transactions and not overspend on gas. Look out for APIs that can help you get this information into your product's interface. Gas-specific data covers:
 
@@ -67,7 +67,7 @@ Not only will block explorers give you data about Gas usage in transactions and 
 - Contracts that are consuming gas - in other words, popular products that are seeing lots of usage on the network
 - Accounts that are spending gas - in other words, frequent network users
 
-### Transactions \{##transactions}
+### Transactions \{#transactions}
 
 Block explorers have become a common place for people to track the progress of their transactions. That's because the level of detail you can get provides extra certainty. Transaction data includes:
 
@@ -91,7 +91,7 @@ Block explorers have become a common place for people to track the progress of t
 - Nonce - The transaction number for the `from` address (bear in mind this starts at 0 so a nonce of `100` would actually be the 101st transaction submitted by this account
 - Input data - Any extra information required by the transaction
 
-### Accounts \{##accounts}
+### Accounts \{#accounts}
 
 There's a lot of data that you can access about an account. This is why it's often recommended to use multiple accounts so that your assets and value can't be easily tracked. There are also some solutions being developed to make transactions and account activity more private. But here's the data that's available for accounts:
 
@@ -114,7 +114,7 @@ Smart contract accounts have all the data that a user account will have, but som
 - Contract creation code - The compiled bytecode of the smart contract—created when you compile a smart contract written in Solidity or Vyper, etc.
 - Contract events - A history of the methods called in the smart contract—basically a way to see how the contract is being used and how often
 
-### Tokens \{##tokens}
+### Tokens \{#tokens}
 
 Tokens are a type of contract so they'll have similar data to a smart contract. But because they have value and can be traded they have additional data points:
 
@@ -128,7 +128,7 @@ Tokens are a type of contract so they'll have similar data to a smart contract. 
 - Contract address - The address of the token that was deployed to Mainnet
 - Decimals - ERC-20 tokens are divisible and have decimal places
 
-### Network \{##network}
+### Network \{#network}
 
 Some block data is concerned about the health of Ethereum more holistically.
 
@@ -138,9 +138,9 @@ Some block data is concerned about the health of Ethereum more holistically.
 - Total ETH supply - Number of ETH in circulation—remember new ETH is created with the creation of every block in the form of block rewards
 - Market cap - Calculation of price\*supply
 
-## Consensus layer data \{##consensus-layer-data}
+## Consensus layer data \{#consensus-layer-data}
 
-### Epoch \{##epoch}
+### Epoch \{#epoch}
 
 For security reasons, randomized committees of validators are created at the end of every epoch (every 6.4 minutes). Epoch data includes:
 
@@ -155,7 +155,7 @@ For security reasons, randomized committees of validators are created at the end
 - Average Validator balance - Average balance for active validators
 - Slots - Number of slots included in the epoch (slots include one valid block)
 
-### Slot \{##slot}
+### Slot \{#slot}
 
 Slots are opportunities for block creation, the data available for each slot includes:
 
@@ -180,7 +180,7 @@ Slots are opportunities for block creation, the data available for each slot inc
 - Slashings - Number of penalties given to proposers of blocks or attestors
 - Votes - The validators that voted for the block in this slot
 
-### Blocks \{##blocks-1}
+### Blocks \{#blocks-1}
 
 Proof-of-stake divides time into slots and epochs. So that means new data!
 
@@ -189,7 +189,7 @@ Proof-of-stake divides time into slots and epochs. So that means new data!
 - Slot - The slot in which the block was proposed
 - Attestations - The number of attestation included in the slot—attestations are like votes that indicate the block is ready to go to the Beacon Chain
 
-### Validators \{##validators}
+### Validators \{#validators}
 
 Validators are responsible for proposing blocks and attesting to them within slots.
 
@@ -205,7 +205,7 @@ Validators are responsible for proposing blocks and attesting to them within slo
 - Attestations - The attestations that the validator has provided
 - Deposits - The from address, transaction hash, block number, timestamp, amount and status of the staking deposit made by the validator
 
-### Attestations \{##attestations}
+### Attestations \{#attestations}
 
 Attestations are "yes" votes to include blocks in the chain. Their data relates to a record of the attestation and the validators who attested
 
@@ -218,7 +218,7 @@ Attestations are "yes" votes to include blocks in the chain. Their data relates 
 - Target - Points to the latest epoch boundary
 - Signature
 
-### Network \{##network-1}
+### Network \{#network-1}
 
 The consensus layer top-level data includes the following:
 
@@ -229,7 +229,7 @@ The consensus layer top-level data includes the following:
 - Staked ETH - Amount of ETH staked in the network
 - Average balance - Average ETH balance of validators
 
-## Block explorers \{##block-explorers}
+## Block explorers \{#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - a block explorer you can use to fetch data for Ethereum Mainnet and Goerli Testnet
 - [Beaconcha.in](https://beaconcha.in/) - an open source block explorer for Ethereum Mainnet and Goerli Testnet
@@ -238,11 +238,11 @@ The consensus layer top-level data includes the following:
 - [Ethplorer](https://ethplorer.io/) - a block explorer with a focus on tokens for the Ethereum Mainnet and the Kovan testnet
 - [Rantom](https://rantom.app/) - A user-friendly open-source DeFi & NFT transaction viewer for detailed insights
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics \{##related-topics}
+## Related topics \{#related-topics}
 
 - [Transactions](/developers/docs/transactions/)
 - [Accounts](/developers/docs/accounts/)

@@ -15,6 +15,7 @@ lang: zh
 
 为了说明什么是骗局代币以及如何识别它们，我们来看一个例子: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82)。 这个代币试图伪装成合法的 [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) 代币。
 
+{
 <ExpandableCard
 title="什么是 ARB？"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollup/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="骗局代币为什么叫 wARB？"
 contentPreview=''>
@@ -32,11 +35,13 @@ contentPreview=''>
 创建已经在以太坊存在的 ERC-20 代币的包装版本没有意义，但骗子希望借此制造合法的外观，而不顾真实的基本情况。
 
 </ExpandableCard>
+}
 
 ## 骗局代币如何运作？ \{#how-do-scam-tokens-work}
 
 以太坊的核心是去中心化。 这意味着不存在可以没收你的资产或禁止你部署智能合约的中心化机构。 但这也意味着骗子可以任意部署他们想要的任何智能合约。
 
+{
 <ExpandableCard
 title="什么是智能合约？"
 contentPreview=''>
@@ -44,6 +49,7 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">智能合约</a>是在以太坊区块链上运行的程序。 例如，每个 ERC-20 代币都是以智能合约的形式实现的。
 
 </ExpandableCard>
+}
 
 具体到这一示例，Arbitrum 部署了一个使用代币符号 `ARB` 的智能合约。 但是这并不能阻止其他人也部署使用完全相同的代币符号或类似符号的智能合约。 编写合约的任何人都可以设置合约的用途。
 

@@ -20,7 +20,9 @@ Wenn Sie sehen möchten, wie Blockchain-Daten gehasht und anschließend an den V
 
 Sehen Sie sich die Erklärung von Anders Brownworth zu Blockchains an:
 
-<YouTube id="_160oMzblY8" />
+{
+	<YouTube id="_160oMzblY8" />
+}
 
 ## Was ist Ethereum? \{#what-is-ethereum}
 

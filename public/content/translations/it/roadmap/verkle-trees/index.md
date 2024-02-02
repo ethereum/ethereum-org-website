@@ -15,11 +15,13 @@ Gli alberi di Verkle (un neologismo tra "Impegno Vettoriale" e "Alberi di Merkle
 
 Gli alberi di Verkle sono un passaggio fondamentale sul percorso per i client di Ethereum privi di stato. I client privi di stato sono quelli che non devono memorizzare l'intero database di stato per poter convalidare i blocchi in entrata. Invece di utilizzare la propria copia dello stato di Ethereum per verificare i blocchi, utilizzano un "testimone" ai dati di stato che arriva con il blocco. Un testimone è una raccolta di pezzi individuali dei dati di stato, necessaria per eseguire una serie particolare di transazioni, nonché una prova crittografica che il testimone sia davvero parte dei dati completi. Il testimone è utilizzato _invece_ del database di stato. Perché funzioni, i testimoni devono essere molto piccoli, così che siano trasmissibili in sicurezza per la rete, in tempo per essere convalidati dai validatori entro uno spazio di 12 secondi. La struttura attuale dei dati di stato non è adatta, poiché i testimoni sono troppo grandi. Gli alberi di Verkle risolvono questo problema consentendo piccoli testimoni e rimuovendo una delle principali barriere ai client privi di stato.
 
+{
 <ExpandableCard title="Perché vogliamo dei client privi di stato?" eventCategory="/roadmap/verkle-trees" eventName="clicked why do we want stateless clients?">
 
 I client di Ethereum, al momento, utilizzano una struttura di dati nota come Albero di Patricia di Merkle per memorizzarne i dati di stato. Le informazioni sui singoli conti sono memorizzati come foglie su un albero e, le coppie di foglie, ricevono ripetutamente un hash finché non ne resta soltanto uno. Questo hash finale è noto come la "radice". Per verficare i blocchi, i client di Ethereum eseguono tutte le transazioni in un blocco e aggiornano il proprio albero di stato locale. Il blocco è considerato valido se la radice dell'albero locale è identica a quella fornita dal propositore di blocchi, poiché qualsiasi differenza nel calcolo effettuato dal propositore del blocco e dal nodo di convalida, formerebbe un hash di radice completamente differente. Il problema è che la verifica della blockchain richiede che ogni client memorizzi l'intero albero di stato per il blocco di testa e per diversi blocchi storici (di default, su Geth, sono mantenuti i dati di stato per 128 blocchi oltre la testa). Ciò richiede che i client abbiano accesso a una grande quantità di spazio su disco, limitando l'esecuzione dei nodi completi su hardware economici e poco potenti. Una soluzione è aggiornare l'albero di stato a una struttura più efficiente (l'albero di Verkle), riepilogabile utilizzando un piccolo "testimone" ai dati, condivisibile invece dei dati di stato completi. Riformattare i dati di stato in un albero di Verkle è una pietra miliare per spostarsi verso i client privi di stato.
 
 </ExpandableCard>
+}
 
 ## Cos'è un testimone e perché è necessario? \{#what-is-a-witness}
 
@@ -31,11 +33,13 @@ La struttura di un Albero di Merkle rende le dimensioni dei testimoni molto gran
 
 Sotto lo schema di impegno polinomiale, i testimoni hanno dimensioni gestibili, facilmente trasferibili sulla rete tra pari. Questo consente ai client di verificare i cambiamenti di stato in ogni blocco con una quantità minima di dati.
 
+{
 <ExpandableCard title="Esattamente di quanto gli alberi di Verkle possono ridurre le dimensioni del testimone?" eventCategory="/roadmap/verkle-trees" eventName="clicked exactly how much can Verkle trees reduce witness size?">
 
 Le dimensioni dei testimoni variano a seconda del numero di foglie che include. Supponendo che il testimone copra 1000 foglie, un testimone per un albero di Merkle occuperebbe all'incirca 3,5 MB (ipotizzando 7 livelli all'albero). Un testimone per gli stessi dati in un albero di Verkle (ipotizzando 4 livelli all'albero) occuperebbe circa 150 kB; **circa 23 volte più piccolo**. Questa riduzione delle dimensioni del testimone consentirà ai testimoni del client di essere accettabilmente piccoli. I testimoni polinomiali variano da 0,128 a 1 kB a seconda di quale specifico impegno polinomiale è utilizzato.
 
 </ExpandableCard>
+}
 
 ## Qual è la struttura di un albero di Verkle? \{#what-is-the-structure-of-a-verkle-tree}
 

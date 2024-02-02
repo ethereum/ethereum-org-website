@@ -20,7 +20,7 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
 - [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
-## Types of standards \{##types-of-standards}
+## Types of standards \{#types-of-standards}
 
 There are 3 types of EIPs:
 
@@ -37,7 +37,7 @@ Furthermore, the Standard Track is subdivided into 4 categories:
 
 More detailed information on these different types and categories can be found in [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
-### Token standards \{##token-standards}
+### Token standards \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - A standard interface for fungible (interchangeable) tokens, like voting tokens, staking tokens or virtual currencies.
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - Defines a token interface for ERC-20 tokens that supports executing recipient code after transfer or transferFrom, or spender code after approve.
@@ -51,7 +51,7 @@ More detailed information on these different types and categories can be found i
 
 Learn more about [token standards](/developers/docs/standards/tokens/).
 
-## Further reading \{##further-reading}
+## Further reading \{#further-reading}
 
 - [Ethereum Improvement Proposals (EIPs)](/eips/)
 

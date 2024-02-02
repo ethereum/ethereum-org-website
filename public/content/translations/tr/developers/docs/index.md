@@ -14,12 +14,18 @@ Bu, Ethereum ile geliştirme konusundaki ilk girişiminizse, baştan başlamanı
 
 ### Temel konular \{#foundational-topics}
 
-<DeveloperDocsLinks headerId="foundational-topics" />
+{
+	<DeveloperDocsLinks headerId="foundational-topics" />
+}
 
 ### Ethereum yığını \{#ethereum-stack}
 
-<DeveloperDocsLinks headerId="ethereum-stack" />
+{
+	<DeveloperDocsLinks headerId="ethereum-stack" />
+}
 
 ### Gelişmiş \{#advanced}
 
-<DeveloperDocsLinks headerId="advanced" />
+{
+	<DeveloperDocsLinks headerId="advanced" />
+}

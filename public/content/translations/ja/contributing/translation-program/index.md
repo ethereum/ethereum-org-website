@@ -40,7 +40,9 @@ ethereum.org 翻訳プログラムの詳細については、[ミッションと
 - [**52**言語に対応](/languages/)
 - [**300 万**語翻訳(2022 年時点)](/contributing/translation-program/acknowledgements/)
 
-<TranslationChartImage />
+{
+	<TranslationChartImage />
+}
 
 ### 謝辞 \{#acknowledgements}
 

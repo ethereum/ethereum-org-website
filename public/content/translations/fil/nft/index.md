@@ -18,7 +18,9 @@ Ang mga NFT ay mga token na magkakaiba. May iba't ibang property (non-fungible) 
 
 Dahil sa pagiging natatangi ng bawat NFT, mato-tokenize ang mga bagay tulad ng art, mga collectible, o kahit real estate, kung saan kumakatawan ang isang partikular at natatanging NFT sa partikular na bagay sa totoong mundo o digital item. Sine-secure ng Ethereum blockchain ang pagmamay-ari sa isang asset – walang puwedeng magbago ng record ng pagmamay-ari o kumopya/mag-paste para gumawa ng bagong NFT.
 
-<YouTube id="Xdkkux6OxfM" />
+{
+	<YouTube id="Xdkkux6OxfM" />
+}
 
 ## Ang internet ng mga asset \{#internet-of-assets}
 
@@ -70,7 +72,9 @@ Ang website na ito ay mayroon ding alternatibong domain name na pinapagana ng mg
 
 [Iba pang detalye tungkol sa ENS](https://app.ens.domains)
 
-<Divider />
+{
+	<Divider />
+}
 
 ### Seguridad ng NFT \{#nft-security}
 
@@ -89,6 +93,10 @@ Pinakamadalas na nauugnay sa mga phishing scam, vulnerability ng smart contract 
 - [ERC-721 token standard](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 
-<Divider />
+{
+	<Divider />
+}
 
-<QuizWidget quizKey="nfts" />
+{
+	<QuizWidget quizKey="nfts" />
+}

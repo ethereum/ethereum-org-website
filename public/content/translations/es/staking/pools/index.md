@@ -29,7 +29,9 @@ Además de las ventajas que hemos descrito en nuestra [introducción a las parti
   <Card title="Tókenes de participación" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## Qué hay que tener en cuenta \{#what-to-consider}
 
@@ -43,15 +45,21 @@ Sin embargo, estos tókenes-ETH apostados tienden a generar conductas similares 
 
 Los indicadores de atributos se utilizan a continuación para señalar los puntos fuertes o débiles que puede tener una agrupación de participaciones de la lista. Utilice esta sección como referencia para saber cómo definimos estos atributos mientras elige un grupo al que unirse.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## Explore las participaciones agrupadas \{#explore-staking-pools}
 
 Existe una gran variedad de opciones disponibles para ayudarle con su configuración. Utilice los indicadores anteriores para guiarse a través de las herramientas siguientes.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 Es importante elegir un servicio que se tome en serio la [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/), ya que mejora la seguridad de la red y limita el riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados como <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
 
@@ -59,10 +67,13 @@ Es importante elegir un servicio que se tome en serio la [diversidad de clientes
 
 ## Preguntas más frecuentes \{#faq}
 
+{
 <ExpandableCard title="¿Cómo puedo ganar recompensas?">
 Por lo general, los tókenes de participación ERC-20 se emiten a los participantes y representan el valor de sus ETH apostados y las recompensas. Tenga en cuenta que las diferentes agrupaciones repartirán las recompensas de las participaciones entre sus usuarios a través de métodos ligeramente diferentes, pero siempre se reparten.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="¿Cuándo puedo retirar mi participación?">
 ¡En cualquier momento! La actualización de red Shanghai/Capella se produjo en abril de 2023 e introdujo las retiradas de participaciones. Después de esta actualización, las cuentas de validador que respaldan las reservas de participación tendrán la posibilidad de salir y retirar ETH a su dirección de retirada designada. Esto permitirá la capacidad de canjear su parte de participación por el ETH subyacente. Compruebe con su proveedor la compatibilidad con esta funcionalidad.
 
@@ -70,7 +81,9 @@ Alternativamente, los grupos que usan tókenes de participación ERC-20, permite
 
 <ButtonLink to="/staking/withdrawals/">Más sobre retiradas de participaciones</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="¿Es esto diferente a participar con mi intercambio?">
 Hay muchas semejanzas entre estas opciones de participación agrupada y los intercambios centralizados, como la posibilidad de apostar pequeñas cantidades de ETH y tenerlas juntas para activar validadores.
 
@@ -78,6 +91,7 @@ A diferencia de los intercambios centralizados, muchas otras opciones de partici
 
 Algunas opciones de agrupamiento están más descentralizadas que otras cuando se trata de los nodos que las respaldan. Para promover la salud y la descentralización de la red, siempre se anima a los participantes a seleccionar un servicio de agrupación que permita un conjunto descentralizado de operadores de nodos sin permisos.
 </ExpandableCard>
+}
 
 ## Para profundizar sobre el tema \{#further-reading}
 

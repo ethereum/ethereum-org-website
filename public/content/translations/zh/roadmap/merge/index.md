@@ -52,6 +52,7 @@ _再次提醒：_作为以太币或以太坊上任何其他数字资产的用户
 
 ### 节点运营商与去中心化应用程序开发者 \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="质押节点运营商与提供商"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -67,7 +68,9 @@ id="staking-node-operators">
 
 不设置“费用接收人”将仍然允许验证者像往常一样运行，但你将无法获得交易费小费和矿工可提取价值，这些你原本可以在你的验证者提出的区块中赢得。
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="非验证节点运营商和基础设施提供商"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -85,7 +88,9 @@ id="node-operators">
 如果不能及时完成上述项目，在合并之后你的节点会显示为“离线”，直到两层都同步并通过身份验证。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="去中心化应用程序和智能合约开发者"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -104,6 +109,7 @@ id="developers">
 有关详细信息，请查看 Tim Beiko 的博客文章<a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">“合并对以太坊的应用程序层有何影响”</a>。
 
 </ExpandableCard>
+}
 
 ## 合并和能源消耗 \{#merge-and-energy}
 
@@ -115,6 +121,7 @@ id="developers">
 
 ## 合并的误区 \{#misconceptions}
 
+{
 <ExpandableCard
 title="误区：&quot;运行一个节点需要质押 32 个以太币。&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -132,7 +139,9 @@ contentPreview="False. Anyone is free to sync their own self-verified copy of Et
 <a href="/run-a-node/">更多关于运行你自己的节点的信息</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="误解：&quot;合并未能降低燃料费用。&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -142,7 +151,9 @@ contentPreview="False. The Merge was a change of consensus mechanism, not an exp
 根据<a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">以卷叠为中心的路线图</a>，工作重点是扩展用户在<a href="/layer-2/">二层网络</a>的活动，同时使一层主网成为安全的去中心化结算层，针对卷叠数据存储进行优化，帮助迅速降低卷叠交易费用。 转变成权益证明机制是实现这一点的关键先导步骤。 <a href="/developers/docs/gas/">更多关于燃料和费用的信息。</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="误解：&quot;合并令交易大幅提速。&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -153,7 +164,9 @@ contentPreview="False. Though some slight changes exist, transaction speed is mo
 权益证明引入了以前不存在的交易最终确定概念。 在工作量证明机制下，回滚一个区块的难度将随着在它之后因交易产生的区块数目的增加而呈指数增长，但这个难度却永远不会归零。 在权益证明机制下，区块打包在一起放入由验证者投票的时段中，时段为 6.4 分钟的时间跨度，包含 32 次出块机会。 当一个时段结束时，验证者投票来决定是否认为该时段“合理”。 如果验证者同意证明该时段的合理性，它将在下一个时段中最终确定。 撤销最终确定的交易在经济上是不可行的，因为它需要获得并销毁超过 1/3 的质押以太币总量。
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="误解：&quot;合并启用了质押提款。&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -165,7 +178,9 @@ contentPreview="False, but staking withdrawals have since been enabled via the S
 <a href="/staking/withdrawals/">更多关于质押提款的信息</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="误解：&quot;因为合并已经完成，提款功能也已启用，所以质押人可以全部一次性退出。&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -177,6 +192,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 以太坊故意将年化利率设置为动态，以便市场上的质押人权衡他们愿意为保护网络付出多少资金。 如果利率过低，验证者将按照协议限制的速度退出。 这样会逐渐提高所有留下来的验证者的年化利率，从而吸引新的质押人加入或者退出的质押人回归。
 </ExpandableCard>
+}
 
 ## “以太坊 2”发生了什么？ \{#eth2}
 

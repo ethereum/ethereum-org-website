@@ -18,11 +18,13 @@ Sebagai contoh, daftar inklusi dapat diperkenalkan sehingga ketika validator men
 
 [Kolam memori yang dienkripsi](https://www.youtube.com/watch?v=fHDjgFcha0M&list=PLpktWkixc1gUqkyc1-iE6TT0RWQTBJELe&index=3) juga dapat membuat pembangun dan pengusul tidak bisa mengetahui transaksi mana yang mereka masukkan ke dalam blok hingga setelah blok disiarkan.
 
+{
 <ExpandableCard title="Jenis sensor apa yang dapat diatasi oleh PBS?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
 Organisasi yang kuat dapat memberi tekanan kepada validator untuk menyensor transaksi ke atau dari alamat tertentu. Validator mematuhi tekanan ini dengan mendeteksi alamat-alamat yang masuk dalam daftar hitam di dalam kolam memori transaksi mereka dan menghilangkannya dari blok yang mereka usulkan. Setelah PBS, hal ini tidak akan lagi mungkin terjadi karena pengusul blok tidak akan tahu transaksi mana yang mereka siarkan dalam blok mereka. Mungkin penting bagi individu atau aplikasi tertentu untuk mematuhi aturan penyensoran, misalnya ketika aturan tersebut dijadikan hukum di wilayah mereka. Dalam kasus-kasus ini, kepatuhan terjadi pada tingkat aplikasi, sementara protokol tetap terbuka dan bebas penyensoran.
 
 </ExpandableCard>
+}
 
 ## PBS dan MEV \{#pbs-and-mev}
 
@@ -30,10 +32,12 @@ Organisasi yang kuat dapat memberi tekanan kepada validator untuk menyensor tran
 
 PBS memecahkan masalah ini dengan mengonfigurasi ulang ekonomi MEV. Alih-alih pengusul blok melakukan pencarian MEV mereka sendiri, mereka hanya memilih blok dari banyak blok yang ditawarkan kepada mereka oleh pembangun blok. Pembangun blok mungkin telah melakukan ekstraksi MEV yang canggih, tetapi imbalannya diberikan kepada pengusul blok. Ini berarti bahwa meskipun sekelompok kecil pembangun blok khusus mendominasi ekstraksi MEV, imbalannya bisa diberikan kepada validator mana pun di jaringan, termasuk individu yang melakukan penaruhan di rumah.
 
+{
 <ExpandableCard title="Mengapa pembangunan blok terpusat dianggap wajar?" eventCategory="/roadmap/pbs" eventName="clicked why is it OK to centralize block building?">
 
 Seseorang dapat diberi insentif untuk melakukan penaruhan dengan pool daripada melakukannya atas keinginan sendiri karena peningkatan imbalan yang ditawarkan oleh strategi MEV yang canggih. Memisahkan pembangunan blok dari usulan blok berarti bahwa MEV yang diekstraksi akan tersebar di lebih banyak validator daripada terpusat pada pencari MEV yang paling efektif. Pada saat yang sama, memungkinkan pembangun blok khusus untuk ada menghilangkan beban pembangunan blok dari individu, dan juga mencegah individu mencuri MEV untuk diri mereka sendiri, sambil memaksimalkan jumlah validator individu dan independen yang dapat memeriksa blok-blok yang jujur. Konsep penting adalah "asimetri pemberi bukti-pemverifikasi" yang mengacu pada gagasan bahwa produksi blok terpusat dapat diterima selama ada jaringan validator yang kuat dan sepenuhnya terdesentralisasi yang mampu membuktikan bahwa blok-blok tersebut jujur. Desentralisasi adalah sarana, bukan tujuan akhir - yang kita inginkan adalah blok-blok yang jujur.
 </ExpandableCard>
+}
 
 ## PBS dan Danksharding \{#pbs-and-danksharding}
 

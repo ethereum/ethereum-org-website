@@ -14,7 +14,7 @@ Most clients have a list of bootnodes build in, but you might also want to run y
 geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 ```
 
-## Run a bootnode \{##run-a-bootnode}
+## Run a bootnode \{#run-a-bootnode}
 
 Bootnodes are full nodes that are not behind a NAT ([Network Address Translation](https://www.geeksforgeeks.org/network-address-translation-nat/)). Every full node can act as a bootnode as long as it is publicly available.
 
@@ -24,7 +24,7 @@ The enode is usually regenerated on every restart, so make sure to look at your 
 
 In order to be a good bootnode it's a good idea to increase the maximum number of peers that can connect to it. Running a bootnode with many peers will increase the bandwidth requirement significantly.
 
-## Available bootnodes \{##available-bootnodes}
+## Available bootnodes \{#available-bootnodes}
 
 A list of builtin bootnodes within go-ethereum can be found [here](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go#L23). These bootnodes are maintained by the Ethereum Foundation and the go-ethereum team.
 

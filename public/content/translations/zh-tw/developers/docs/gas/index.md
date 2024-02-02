@@ -131,7 +131,9 @@ lang: zh-tw
 
 此影片解釋 EIP-1599 及其帶來的好處：
 
-<YouTube id="MGemhK9t44Q" />
+{
+	<YouTube id="MGemhK9t44Q" />
+}
 
 ## 監控燃料費 \{#moitoring-gas-fees}
 

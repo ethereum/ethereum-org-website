@@ -29,7 +29,9 @@ Bukod sa mga benepisyo na aming inilahad sa aming [panimula sa staking](/staking
   <Card title="pag-stake ng mga token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
-<StakingComparison page="pools" />
+{
+	<StakingComparison page="pools" />
+}
 
 ## Ano ang dapat isaalang-alang \{#what-to-consider}
 
@@ -43,15 +45,21 @@ Gayunpaman, ang mga staked-ETH token na ito ay karaniwang nagdudulot ng mga kaga
 
 Gumagamit ng mga attribute indicator sa ibaba para ipakita ang mga kapansin-pansing kalakasan o kahinaan ng isang nakalistang staking pool. Gamitin ang seksyong ito bilang sanggunian sa kung paano namin tinutukoy ang mga attribute na ito habang pumipili ka ng pool na sasalihan.
 
-<StakingConsiderations page="pools" />
+{
+	<StakingConsiderations page="pools" />
+}
 
 ## Tingnan ang mga staking pool \{#explore-staking-pools}
 
 May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin ang mga indicator sa itaas para magabayan ka sa mga tool sa ibaba.
 
-<ProductDisclaimer />
+{
+	<ProductDisclaimer />
+}
 
-<StakingProductsCardGrid category="pools" />
+{
+	<StakingProductsCardGrid category="pools" />
+}
 
 Tandaan ang kahalagahan ng pagpili ng serbisyo na seryoso sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/), dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
 
@@ -59,10 +67,13 @@ May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [p
 
 ## Mga karaniwang itanong \{#faq}
 
+{
 <ExpandableCard title="Paano ako makakakuha ng mga reward?">
 Karaniwang ibinibigay ang mga ERC-20 staking token sa mga staker na kumakatawan sa halaga ng kanilang staked ETH at mga reward. Tandaan na medyo magkakaiba ang paraan ng iba't ibang pool ng pamamahagi ng mga reward para sa staking sa kanilang mga user, pero pangkaraniwan ito.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kailan ko puwedeng i-withdraw ang aking mga staked token?">
 Ngayon na! Ang Shanghai/Capella network upgrade ay nangyari noong Abril 2023, at inilunsad nito ang mga pag-withdraw sa staking. Ang mga validator accounts na sumusuporta sa mga staking pool ngayon ay may kakayahang umalis at i-withdraw ang ETH at ilagay sa kanilang itinakdang withdrawal address. Dahil dito, magkakaroon ka ng kakayahang i-redeem ang bahagi mo sa stake para sa kasalukuyang ETH. Magtanong sa iyong provider upang malaman kung paano nila sinusuportahan ang functionality na ito.
 
@@ -70,7 +81,9 @@ Binibigyang-daan naman ng mga pool na gumagamit ng ERC-20 staking token ang mga 
 
 <ButtonLink to="/staking/withdrawals/">Iba pang detalye tungkol sa mga pag-withdraw sa staking</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Iba ba ito sa pag-stake sa aking exchange?">
 Maraming pagkakatulad ang mga opsyong ito sa pooled staking at mga centralized exchange, gaya ng kakayahang mag-stake ng maliliit na halaga ng ETH at pagsama-samahin ang mga ito upang mapagana ang mga validator.
 
@@ -78,6 +91,7 @@ Hindi katulad ng mga centralized exchange, gumagamit ang maraming iba pang opsyo
 
 May ilang opsyon sa pooling na mas decentralized kumpara sa iba pagdating sa mga node na sumusuporta sa mga ito. Upang itaguyod ang kalagayan at decentralization ng network, palaging hinihikayat ang mga staker na pumili ng pooling service na nag-e-enable ng isang set ng mga node operator na hindi kailangan ng pahintulot at decentralized.
 </ExpandableCard>
+}
 
 ## Karagdagang pagbabasa \{#further-reading}
 
