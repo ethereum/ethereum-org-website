@@ -258,7 +258,6 @@ Dapp に統合可能な、既存のオプティミスティック・ロールア
 ## オプティミスティック・ロールアップに関する参考文献
 
 - [オプティミスティック・ロールアップの仕組み（完全ガイド）](https://www.alchemy.com/overviews/optimistic-rollups)
-- [オプティミスティック・ロールアップについて必要なすべての知識](https://research.paradigm.xyz/rollups)
 - [Arbitrum の基本ガイド](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Optimism のロールアップはどのように機能するのか？](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [OVM の詳細を学ぶ](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

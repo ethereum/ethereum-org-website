@@ -124,7 +124,6 @@ Istnieją rozwiązania hybrydowe, które łączą w sobie najlepsze elementy wie
 
 **Optymistyczne pakiety zbiorcze**
 
-- [Wszystko, co musisz wiedzieć o optymistycznym pakiecie zbiorczym](https://research.paradigm.xyz/rollups)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
 - [Jak faktycznie działa pakiet zbiorczy Optimism?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 
