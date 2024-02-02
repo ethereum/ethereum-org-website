@@ -102,15 +102,17 @@ const CentralizedExchanges = ({
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         {t("page-get-eth-exchanges-intro")}
       </Text>
-      <ReactSelect
-        instanceId="eth-exchange-region"
-        aria-label={t("page-get-eth-exchanges-header")}
-        options={selectOptions}
-        onChange={handleSelectChange}
-        placeholder={placeholderString}
-        isSearchable
-        variant="outline"
-      />
+      <Box w="full" maxW="container.sm">
+        <ReactSelect
+          instanceId="eth-exchange-region"
+          aria-label={t("page-get-eth-exchanges-header")}
+          options={selectOptions}
+          onChange={handleSelectChange}
+          placeholder={placeholderString}
+          isSearchable
+          variant="outline"
+        />
+      </Box>
       {!hasSelectedCountry && (
         <EmptyStateContainer>
           <Emoji text=":world_map:" fontSize="80px" />
