@@ -7,6 +7,7 @@ import AztecImage from "@/public/layer-2/aztec.png"
 import BobaImage from "@/public/layer-2/boba.png"
 import LoopringImage from "@/public/layer-2/loopring.png"
 import OptimismImage from "@/public/layer-2/optimism.png"
+import BaseImage from "@/public/layer-2/base.png"
 import StarknetImage from "@/public/layer-2/starknet.png"
 import ZKSpaceImage from "@/public/layer-2/zkspace.png"
 import zkSyncImage from "@/public/layer-2/zksync.png"
@@ -82,6 +83,22 @@ export const layer2Data: Rollups = {
       descriptionKey: "boba-description",
       image: BobaImage,
       background: "black",
+    },
+    {
+      name: "Base",
+      website: "https://base.org/",
+      developerDocs: "https://docs.base.org/",
+      l2beat: "https://l2beat.com/scaling/projects/base",
+      bridge: "https://bridge.base.org/deposit",
+      bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
+      blockExplorer: "https://basescan.org/",
+      ecosystemPortal: "https://www.ethereum-ecosystem.com/blockchains/base",
+      tokenLists: "",
+      noteKey: "layer-2-base-note",
+      purpose: ["universal"],
+      descriptionKey: "base-description",
+      image: BaseImage,
+      background: "white",
     },
   ],
   zk: [
