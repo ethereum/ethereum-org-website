@@ -12,6 +12,7 @@ import {
   chakra,
   Drawer,
   DrawerBody,
+  DrawerCloseButton,
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
@@ -341,14 +342,9 @@ const MobileNavMenu = ({
         size="md"
       >
         <DrawerOverlay onClick={onToggle} bg="modalBackground" />
+
         <DrawerContent bg="background.base">
-          <Flex
-            pt="4"
-            pb="2"
-            px="5"
-            alignItems="center"
-            justify="space-between"
-          >
+          <Flex p="6" alignItems="center" justify="space-between">
             <DrawerHeader
               fontWeight="regular"
               fontSize="md"
@@ -356,13 +352,21 @@ const MobileNavMenu = ({
               textTransform="uppercase"
               p="0"
             >
-              Ethereum.org
+              {t("site-title")}
             </DrawerHeader>
-            <CloseButton onToggle={onToggle} />
+            <DrawerCloseButton
+              fontSize="md"
+              w="fit-content"
+              p="2"
+              mt="3"
+              me="2"
+            >
+              {t("close")}
+            </DrawerCloseButton>
           </Flex>
 
           {/* MAIN NAV CONTENTS OF MOBILE MENU */}
-          <DrawerBody as="nav" px="0">
+          <DrawerBody as="nav" p="0">
             <Accordion allowToggle>
               {SECTION_LABELS.map((key) => linkSections[key]).map(
                 ({ label, items }) => (
