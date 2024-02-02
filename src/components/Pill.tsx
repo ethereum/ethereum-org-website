@@ -1,20 +1,20 @@
 import React from "react"
 import { Flex, FlexProps } from "@chakra-ui/react"
 
-export interface IProps extends FlexProps {
+export type PillProps = FlexProps & {
   children?: React.ReactNode
   className?: string
   isSecondary?: boolean
   color?: string
 }
 
-const Pill: React.FC<IProps> = ({
+const Pill = ({
   children,
   className,
   isSecondary,
   background,
   ...rest
-}) => {
+}: PillProps) => {
   return isSecondary ? (
     <Flex
       border="1px"
@@ -43,7 +43,7 @@ const Pill: React.FC<IProps> = ({
       textAlign="center"
       py={1}
       px={2}
-      mr={2}
+      me={2}
       fontSize="xs"
       borderRadius="base"
       lineHeight="1.6rem"
