@@ -18,6 +18,8 @@ You may want to read through introductory sections to gain a fundamental underst
 ## What is an optimium chain? {#overview-of-optimium-chains} 
 An optimium can be *concisely* defined as an off-chain protocol that relies on Ethereum to settle transactions and enforce validity of state transitions via fraud proofs, but derives consensus (canonical ordering of transactions) and data availability (availability of transaction data) from a separate source. Optimium chains do not prove validity of state transitions, but allow for claims about state transitions to be challenged on-chain. Ethereum arbitrates disputes between validators asserting conflicting states and can roll back successfully disputed state transitions to protect the off-chain network from executing invalid transactions.
 
+![Optimiums checkpoint state transitions on Ethereum by submitting block headers for inclusion in Ethereum blocks](sidechain-checkpointing-states-on-ethereum.png)
+
 An optimium can be *comprehensively* defined as an **optimistic sidechain**—that is, a sidechain with additional (security) properties: 
 * A requirement for validators to submit cryptographic commitments to state updates to an **on-chain light client** (implemented as a smart contract). The light client contract represents the main chain’s (Ethereum) view of the state of accounts and user balances on the sidechain. 
 * A **dispute protocol** that encodes the optimium’s state transition logic and can re-execute disputed state transitions on-chain to verify fraud proofs during the challenge period. 
@@ -28,10 +30,11 @@ The definition describes a blockchain as an optimium based on the off-chain netw
 
 If the sidechain implements a fraud proof system on Ethereum, it becomes an optimistic sidechain or optimium. Ethereum cannot *directly* verify the correctness of a new block header that asserts a new state for the sidechain, but it *can* verify a fraud proof that proves a newly asserted state is incorrect according to the sidechain’s state transition rules. But Ethereum does not guarantee that the inputs to the state transition function (transaction data) is available to verifiers or users—making it an optimistic sidechain (optimium) from the perspective of the Ethereum network.
 
+![Challenge games prevent dishonest nodes validating an optimium chain from settling invalid transactions on Ethereum](challenge-games.png)
+
 Separating out data availability from the sidechain’s consensus by storing transaction data with a third party *may* reduce trust assumptions for a user, if the user trusts the security of the data availability layer, but does not translate into guarantees of ownership of funds in the bridge contract enforced by Ethereum itself. The bridge connecting the sidechain with Ethereum is a light client and only reads attestations to data availability and does not verify if the data is actually available before accepting a new block header. If a majority of validators collude to withhold data or revert blocks, Ethereum cannot enforce ownership of funds deposited in the sidechain's bridge. 
 
 Since optimiums are developed as a scaling solution for Ethereum, this definition is crucial to understanding the guarantees that users bridging assets from Ethereum to various optimiums have. In other words: “If a user owns an asset on Ethereum, deposits into the optimium’s bridge, and then receives a representation of the asset off-chain, what guarantees does the user have that it can withdraw the original asset back to Ethereum?” 
-
 
 ### How are optimiums different from traditional sidechains?
 A sidechain is a separate, independent blockchain that connects with another blockchain (a “main chain”)—such as Ethereum—via a two-way bridge. Sidechains bootstrap security independently: a common approach is to implement a Proof of Stake (PoS) consensus protocol that requires staking the network’s native token before joining the validator set (a validator’s stake acts as a bond for honest behavior and can be slashed if it engages in provably dishonest behavior, such as voting for an voting for an incorrect block). 
@@ -55,13 +58,17 @@ In contrast, the **validating bridge** used by optimium chains can verify integr
 
 Verifying fraud proofs on Ethereum provides an extra layer of defense against settlement of invalid transactions by validators running the optimium chain. Unlike traditional sidechains that settle transactions once a threshold of validators approve blocks, optimium chains settle transactions *after* the challenge window expires without a fraud proof disputing block headers submitted to the on-chain light client. More specifically, the validating bridge delays withdrawals until it confirms acceptance of block headers by the optimium’s light client contract—reducing the risk of sidechain validators colluding to steal assets by approving invalid state transitions. 
 
-[insert fraud proof graphic]
+![Validating bridges prevent invalid withdrawals from an optimium’s bridge and safeguard deposited assets](validating-bridge-optimiums.png)
 
 Optimium chains can also defend against malicious reorgs by checkpointing state updates on-chain (via block headers submitted to the on-chain light client). Each block header is stored in a finalized Ethereum block and links to the previous block header, which creates a chain of commitments that represents Ethereum’s view of the optimium’s state. If the optimium chain uses a fork-choice rule that dictates a valid block must include a hash of the last Ethereum block, it guarantees everyone observing the optimium chain by reading Ethereum’s state will always have the same view.
 
 This prevents safety failures arising from two nodes observing two different states at the same block height. Such safety failures can occur when an adversary tricks undiscerning nodes into  following a malicious fork that reverts previously finalized blocks and performs a double-spend attack (spending funds from historical transactions). A blockchain’s security against malicious reorgs depends on the honesty of the validator set and the economic cost of reverting blocks. 
 
 An adversary that wishes to provide an alternative view of history and cause honest nodes to follow a malicious fork must control a threshold of the active stake on Ethereum to revert Ethereum blocks containing block headers submitted by optimium validators. This attack is difficult to execute in principle: (1) Ethereum’s consensus protocol uses a large set validator (composed of thousands of validators) that makes collusion and bribery difficult. (2) The price of ETH places a quantifiable and significant cost on malicious reorgs (attackers need to burn at least ⅓ of staked ETH or millions of dollars to revert finalized blocks). In comparison, traditional sidechains may be susceptible to reorg attacks due to using a smaller validator set and having a low-value native token (which reduces the difficulty of collusion and decreases the cost borne by an attacker in a 51 percent attack).
+
+| ![Preventing reorgs in optimium chains](sidechain-checkpointing-to-ethereum.png) | 
+|:--:| 
+| *The blocks in the green rectangle represent the checkpointed (canonical) optimium chain from the perspective of a node observing the finalized Ethereum chain and prevents an adversary from convincing honest nodes to follow a conflicting chain.* |
 
 Optimiums have slightly better security properties than pure sidechains by settling transactions on Ethereum and verifying fraud proofs to secure against invalid state transitions. However, optimium chains are not as secure as Layer 2 (L2) blockchains—off-chain scaling protocols that inherit consensus (canonical ordering of transactions) and data availability (availability of state data) from Ethereum in addition to settling transactions on-chain. Ethereum rollups are the primary example of Layer 2 (L2) scaling solutions and the next section explores the differences between L2s and optimiums 
 
@@ -81,7 +88,7 @@ In a decentralized Layer 2 construction, an honest majority of Ethereum validato
 
 Narrowing the scope of L2 scaling was the result of extensive discussions within the Ethereum community and a recognition that any scaling solution was valuable to the extent in which it preserved and extended Ethereum’s guarantees of decentralization and security. In the case of off-chain scaling solutions, users should only have to trust Ethereum’s security—having to trust any other party to secure assets and transactions in the off-chain network meant such a scaling solution could not scale Ethereum without introducing new trust assumptions and reducing decentralization.
 
-[Read more on Ethereum’s rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698). 
+**[Read more on Ethereum’s rollup-centric roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).**
 
 We discuss the basic properties that decentralized L2 protocols satisfy and compare them to optimium chains in the next section:
 
@@ -91,7 +98,11 @@ We discuss the basic properties that decentralized L2 protocols satisfy and comp
 
 Ethereum and other Proof of Stake (PoS) blockchains have *economic finality*, where nodes agree to never revert blocks beyond a certain finalized checkpoint; if the chain reverts a block beyond this checkpoint, accountable safety guarantees that at least ⅓ of validators (weighted by stake) can be slashed—provided ⅔ validators are honest. The cost of reverting blocks past a finalized checkpoint places a quantifiable cost on reorgs and provides a confirmation rule, where a transaction is confirmed after the corresponding block is voted by a supermajority (⅔) of validators (weighted by stake) in two successive epochs (~15 minutes).
 
+![Ethereum finality](ethereum-finality.png)
+
 Layer 2 blockchains inherit consensus from Ethereum by submitting transaction batches for inclusion in Ethereum blocks. A batch of L2 transactions is final when the L1 block that includes the batch is confirmed by a supermajority in two successful epochs; reverting finalized transactions requires burning ⅓ of the active stake to revert the L1 block. Due to this relationship (described as merged consensus), decentralized rollups are able to use Ethereum’s confirmation rule—which decides what blocks are canonical—to provide strong guarantees of transaction finality and resistance to malicious reorgs/double-spend attacks.
+
+![Rollup submitting transaction batches to Ethereum](rollup-batch-submission.jpg)
 
 Optimiums do not submit transaction batches to Ethereum and inherit consensus from wherever transaction data is stored. For example, an optimium that stores transaction data (blocks) with validators has transaction finality when a majority of validators approve the block and add it to the canonical chain. Conversely, an optimium integrated with an external data availability service has transaction finality when a quorum of nodes on the data availability layer confirms the batch. Finality of optimium transactions is dependent on the security of the external data availability protocol against adversarial attempts to revert the ordering of confirmed transaction batches. 
 
@@ -112,7 +123,6 @@ These components combined allow the Ethereum network to provide meaningful guara
 - The validator in an optimium is honest and proposes a valid block *b’* that builds on the head block *b* and asserts a correct post-state *s’*.
 
 If the aforementioned conditions are true, everyone observing the optimium chain—including users and applications that interact with the optimium’s state (e.g., bridges, exchanges, liquidity providers, fiat offramps) will always have a single view of the optimium’s state. This is critical to enforcing the chain’s safety property—one of which has to do with consistency: two honest nodes should never have conflicting views of the chain at the same block height.
-
 
 Settlement on Ethereum should, however, not be conflated with finality: the absence of a fraud proof inductively proves the validity of a transaction, allowing applications and users to make decisions based on the result of a transaction. But the acceptance of a state commitment by the optimium’s light client contract does not guarantee hard finality of transactions: an optimium can periodically checkpoint states on-chain by posting state commitments, but a loss of security in the external data availability layer can trigger the reversal of the network to a state before a finalized checkpoint. 
 
@@ -170,6 +180,8 @@ Like other [off-chain scaling solutions](/developers/docs/scaling/#off-chain-sca
 
 A sequencer is an optional component that optimium chains use to order transactions and provide fast-path confirmations to users. The sequencer is a full node and maintains a copy of the optimium’s state; transactions are applied to the pending state to provide users with confirmation of the result. A transaction has soft finality if the user trusts the sequencer to include the transaction in a new batch. 
 
+![Sequencer-user interaction in optimium chains](sequencer-user-interaction-and-batch-submission.png)
+
 At intervals, the sequencer aggregates transactions into a batch and submits the batch to the optimium’s off-chain data availability layer. Transactions have hard finality once the sequencer receives a certificate from the data availability layer attesting to the availability of the batch’s transaction data and inclusion of the batch in the optimium’s canonical chain. 
 
 #### Validators 
@@ -178,9 +190,13 @@ The sequencer is trusted to propose ordered transactions for execution, but is n
 
 The state root functions as a commitment to the optimium’s (claimed) state and is submitted by the validator to the light client contract on Ethereum. The light client contract cannot directly verify a newly submitted state root asserts a valid state. However, validators are required to bond collateral before asserting a new state—which can be slashed if the proposed state is proven incorrect by another validator during a dispute game. 
 
+![Validators deriving optimium blocks by downloading transaction data from DA layer](validator-download-transaction-batch-optimiums.png)
+
 #### Challengers 
 
 A challenger or watcher node monitors the optimium chain and tracks submission of state commitments asserting new states to the light client bridge on Ethereum. The challenger’s job is to ensure that invalid state transitions are never finalized by the light client bridge. It does this by re-executing transactions and computing the post-state with the asserted by the block proposer. If the validator’s proposed output conflicts with the challenger’s output, it can publish a fraud proof on-chain and initiate a dispute. 
+
+![Challenging submitted block headers on Ethereum](challenging-transaction-batches-on-ethereum.png)
 
 ### On-chain layer in optimium chains 
 
@@ -192,6 +208,8 @@ Optimiums will typically have an enshrined or canonical bridge on Ethereum for t
 
 Deposits and withdrawals between an optimium and other blockchains apart from Ethereum also pass through the canonical bridge. For example, a user bridging from optimium #1 to optimium #2 needs to withdraw from optimium #1’s canonical bridge on Ethereum and deposit into optimium #2’s bridge to complete the cross-chain bridging operation. Bridging through the optimium’s canonical bridge is usually more secure than third-party bridge solutions as the bridge can reject withdrawals proven invalid by a fraud proof. 
 
+![Bridging in optimium chains](optimium-bridging-workflow.png)
+
 #### Dispute resolution {#dispute-resolution-in-optimiums}  
 
 Optimiums permit validators to publish claims about off-chains state to Ethereum without providing proofs of validity, with a caveat: anyone can challenge the validity of these claims by publishing a fraud proof on-chain. A fraud proof is a mechanism for proving that the claimed result of a computation is incorrect; fraud proofs can be interactive or non-interactive, depending how many rounds of communication it takes to settle a dispute between the parties involved. 
@@ -201,7 +219,7 @@ This usually takes the form of a dispute played out on-chain, with the dispute p
 - **Safety with an honest minority of validators**: Invalid transactions are never finalized by the canonical optimium chain, provided an honest full node—with access to data for validating state updates—is monitoring the chain and incentivized to dispute invalid state updates. An honest validator is guaranteed to win against an arbitrary number of dishonest validators publishing false claims about the optimium’s state, if the dispute protocol is sound. 
 - **Liveness (trust-minimized finality) with an honest minority of validators**: Validly executed transactions are always added to the canonical chain contingent on the soundness of the optimium’s dispute game protocol. Dishonest validators may delay transactions by falsely disputing a block’s validity, but the dispute protocol will reliably identify the dishonest party and ensure the optimium’s light client bridge confirms blocks containing valid transactions eventually.
 
-[insert “prove fraud” graphic] 
+![Dispute invalid state transitions in optimium chains](challenge-games.png)
 
 Non-interactive (single-round) fraud proving requires replaying the disputed state transition, by which the dispute protocol can check whether the result claimed by the challenger, or the proposer, is correct. A validator is liable to be slashed (with some portion of the bonded collateral going to the honest validator) if it incorrectly asserts the wrong result; a challenger can also be slashed if it provides an invalid fraud proof. This design has two benefits:
 
@@ -213,8 +231,6 @@ Single-round fraud proving is easier to implement, but most optimiums use multi-
 Multi-round (interactive) fraud proving requires two validators disputing a state transition to participate in an [interactive verification game](https://dl.acm.org/doi/pdf/10.1145/258533.258644) (a.k.a., a *bisection protocol*) mediated on-chain by the optimium’s dispute manager contract. The bisection protocol requires the challenger and asserter to narrow down the disputed state transition to the smallest instruction (opcode) whose result is disputed by the two parties. 
 
 After both parties have narrowed down the disputed state transition to a claim about a single step of execution, the challenger is required to provide a one-step proof—the result of executing the disputed instruction—for verification. The dispute manager contract must re-execute the disputed instruction and evaluate the output to determine which validator is making the right claim about the instruction's execution. 
-
-[insert bisection graphic] 
 
 The dispute manager contract only executes a single step of execution to resolve a disputed state transition, which reduces the amount of on-chain computation required to adjudicate a dispute—making multi-round fraud proofs more efficient. The requirement to publish intermediate state tree roots for transactions is also no longer required as the dispute protocol only checks the output of one instruction, not the output of a disputed transaction, to verify a fraud proof. 
 
@@ -242,7 +258,8 @@ The credible threat of a loss of economic capital and loss of reputational capit
 DACs are typically more cost-effective and efficient for optimium chains due to being tailored for specific applications and having lower implementation complexity. However, the aforementioned assumptions underlying the security model of a DAC may be insufficient to guarantee security in edge-case scenarios. Some examples:
 - If a particular optimium becomes popular enough, the one-time profit of withholding data and bricking fraud proofs may be high enough to reduce the tradeoff from losing out on future income from fees paid by an optimium’s sequencer to temporarily store data blobs. The lack of a requirement for DAC nodes to bond slashable collateral before attesting to data availability also reduces the economic cost of participating in a data withholding attack. 
 - An adversary can hijack a DAC and perform a data withholding attack by bribing a set of committee members, or compromising private keys of a quorum of DAC nodes. Both attacks are feasible, especially as DACs typically have a small set of participants to reduce the cost of coordination and reduce complexity of bootstrapping the data availability service.  
-[Insert DAC workflow graphic] 
+
+![Sequencer-DAC interaction in optimium chains](data-availability-committee-sequencer-interaction-optimiums.png)
 
 #### Data availability networks
 
@@ -323,8 +340,6 @@ This edge case is also why “an optimium with a mechanism for switching to opti
 
 Moreover, an optimium’s users may be incentivized to pay the escape hatch *once*, but an adversary can continue to create unavailable blocks and withhold data—in collusion with the data availability provider—and force users to continually pay the cost of using the escape hatch to exit funds. This represents an ongoing tax on users and a penalty for using the optimium chain with security guarantees and may contribute to the optimium chain becoming unusable for average users. 
 
-[Insert data availability network graphic] 
-
 ## Optimiums FAQs for developers {#optimium-frequently-asked-questions-for-developers} 
 This section outlines some key details and considerations for Ethereum developers and enterprises interested in building applications on optimum protocols and leveraging the scaling benefits of off-chain computation on optimium chains. 
 ### Interoperability: Are optimium chains interoperable with Ethereum? {#optimiums-and-interoperability-with-Ethereum}
@@ -360,10 +375,13 @@ EVM-compatible optimium chains have a similar gas fee model with Ethereum, where
 Gas prices may also vary depending on the direction in which an optimium transaction is sent. 
 - Bridging from Ethereum to an optimium chain will incur the cost of a regular Ethereum transaction. An exception is if the transaction executes a call at the destination chain and users are required to pay upfront for gas consumed by the transaction upon delivery to the optimium). 
 - Bridging from an optimium chain to Ethereum will incur higher gas costs, even if the transaction is only withdrawing assets (and not executing logic on the destination chain), because two transactions are required in this scenario: one transaction to initiate the exit and another transaction to finalize the withdrawal after the challenge window passes. 
+
 #### Comparative advantages: How do optimiums compare to other off-chain scaling solutions? {#optimiums-and-alternative-scaling-solutions} 
 When comparing off-chain scaling solutions, the important question to ask is: “If a user owns an asset on Ethereum and transfers that asset to the off-chain network via a bridge, what guarantees does the user have that the asset can be transferred back to Ethereum?” A follow-up question is: “What technology choices does the designer of the off-chain protocol make to provide this guarantee (ownership of assets bridged off-chain from Ethereum) and what tradeoffs does this choice impose on users?”
 
 Off-chain scaling solutions can be either *security-favoring* or *scale-favoring* depending on answers to both questions. **Security-favoring scaling solutions** provide stronger guarantees of ownership of funds, but trade off a degree of scale. **Scale-favoring scaling solutions** provide weaker guarantees of ownership of assets, but provide higher levels of scalability. The “guarantee a user can withdraw assets to Ethereum” combines different properties (liveness and safety) and security typically correlates to the ability of Ethereum to enforce those properties for the off-chain protocol.
+
+![Scale-favoring vs. security-favoring scalingn solutions](scaling-solutions-infographic.png)
 
 **Optimiums are scale-favoring** and can be compared with other scale-favoring off-chain scaling solutions: validiums, sidechains, Plasma chains, and state channels. Scale-favoring scaling solutions are useful for blockchain applications that have very specific requirements of the underlying blockchain: 
 - The capacity to process a high number of transactions with low latency—think “5,000 transactions per second” (latency refers to how long it takes for a client to know the result of a transaction and doesn’t account for time-to-finality). 
