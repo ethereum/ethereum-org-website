@@ -80,21 +80,7 @@
     ],
     "simple-import-sort/exports": "error",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      /**
-       * Per a preferred convention used, we use an underscore
-       * or variable name prefixed with an underscore to denote an
-       * argument not being used in a callback function.
-       * This rule ignores all args that begin with an underscore.
-       *
-       * i.e. `arrObj.map((_, index) => index + 1)`
-       * The first argument of `value` is not used.
-       */
-      {
-        "varsIgnorePattern": "^_"
-      }
-    ],
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": [
       "error",
       {
