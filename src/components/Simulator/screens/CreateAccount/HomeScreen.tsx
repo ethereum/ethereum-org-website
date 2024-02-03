@@ -3,11 +3,13 @@ import { AnimatePresence, motion } from "framer-motion"
 import { MdArrowDownward } from "react-icons/md"
 import { Box, Grid, GridProps, Icon, useColorModeValue } from "@chakra-ui/react"
 
-import { EthGlyphIcon } from "../../icons"
-import type { SimulatorNavProps } from "../../interfaces"
+import type { SimulatorNavProps } from "@/lib/types"
 
-interface IProps extends GridProps, SimulatorNavProps {}
-export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
+import { EthGlyphIcon } from "../../icons"
+
+type HomeScreenProps = GridProps & SimulatorNavProps
+
+export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
   const gridShadow = useColorModeValue(
     "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
     "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"

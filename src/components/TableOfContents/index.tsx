@@ -20,7 +20,7 @@ import { outerListProps } from "@/lib/utils/toc"
 
 import { useActiveHash } from "@/hooks/useActiveHash"
 
-export interface IProps extends BoxProps {
+export type TableOfContentsProps = BoxProps & {
   items: Array<ToCItem>
   maxDepth?: number
   editPath?: string
@@ -28,14 +28,14 @@ export interface IProps extends BoxProps {
   isMobile?: boolean
 }
 
-const TableOfContents: React.FC<IProps> = ({
+const TableOfContents = ({
   items,
   maxDepth = 1,
   editPath,
   hideEditButton = false,
   isMobile = false,
   ...rest
-}) => {
+}: TableOfContentsProps) => {
   const { t } = useTranslation("common")
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
 const { i18n } = require("./next-i18next.config")

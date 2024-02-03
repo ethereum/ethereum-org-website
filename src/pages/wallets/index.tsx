@@ -19,7 +19,7 @@ import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard, {
-  IProps as HorizontalCardProps,
+  HorizontalCardProps,
 } from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -99,13 +99,7 @@ const H2 = (props: ChildOnlyProp) => (
 )
 
 const CardContainer = (props: BoxProps) => (
-  <Box
-    display={"flex"}
-    flexWrap={"wrap"}
-    ms={-4}
-    me={-4}
-    {...props}
-  />
+  <Box display={"flex"} flexWrap={"wrap"} ms={-4} me={-4} {...props} />
 )
 
 export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (

@@ -13,7 +13,7 @@ import { EXAMPLE_APP_URL } from "./constants"
 
 type BrowserProps = FlexProps
 
-export const Browser = (props: BrowserProps) => {
+export const Browser = ({ ...props }: BrowserProps) => {
   const [typing, setTyping] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {

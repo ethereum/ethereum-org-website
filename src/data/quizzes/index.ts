@@ -1,9 +1,7 @@
-// Import data types
-import type { QuizzesSection } from "@/lib/types"
-import type { RawQuizzes } from "@/lib/interfaces"
+import type { QuizzesSection, RawQuizzes } from "@/lib/types"
 
 // Declare hash-map of quizzes based on slug key
-const quizzes: RawQuizzes = {
+const quizzes = {
   "what-is-ethereum": {
     title: "what-is-ethereum",
     questions: ["a001", "a002", "a003", "a004", "a005"],
@@ -48,7 +46,7 @@ const quizzes: RawQuizzes = {
     title: "run-a-node",
     questions: ["l001", "l002", "l003", "l004", "l005", "l006"],
   },
-}
+} satisfies RawQuizzes
 
 export const ethereumBasicsQuizzes: QuizzesSection[] = [
   {

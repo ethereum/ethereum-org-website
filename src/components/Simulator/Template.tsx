@@ -1,7 +1,7 @@
 import React from "react"
 import { Flex, type FlexProps } from "@chakra-ui/react"
 
-export const Template: React.FC<FlexProps> = (props) => (
+export const Template = (props: FlexProps) => (
   <Flex
     pt={{ base: 0, md: 8 }}
     px={{ base: 0, md: 16 }}

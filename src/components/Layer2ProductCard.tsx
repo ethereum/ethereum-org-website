@@ -8,7 +8,7 @@ import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
 
-export interface IProps {
+export type Layer2ProductCardProps = {
   children?: React.ReactNode
   url?: string
   background: string
@@ -22,7 +22,7 @@ export interface IProps {
   ecosystemPortal?: string
 }
 
-const Layer2ProductCard: React.FC<IProps> = ({
+const Layer2ProductCard = ({
   url,
   background,
   image,
@@ -34,7 +34,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
   bridge,
   tokenLists,
   ecosystemPortal,
-}) => {
+}: Layer2ProductCardProps) => {
   const { t } = useTranslation("page-layer-2")
 
   return (

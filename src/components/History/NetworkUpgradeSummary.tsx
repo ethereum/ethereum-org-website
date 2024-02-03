@@ -11,11 +11,11 @@ import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
 import InlineLink from "../Link"
 
-interface IProps {
+type NetworkUpgradeSummaryProps = {
   name: string
 }
 
-const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
+const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const { locale } = useRouter()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)

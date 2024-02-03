@@ -1,7 +1,6 @@
 import { createContext, Dispatch, SetStateAction, useContext } from "react"
 
-import { QuizStatus } from "@/lib/types"
-import { AnswerChoice, Quiz } from "@/lib/interfaces"
+import { AnswerChoice, Quiz, QuizKey, QuizStatus } from "@/lib/types"
 
 import { AnswerStatus } from "./useQuizWidget"
 
@@ -13,9 +12,9 @@ type QuizWidgetContextType = Quiz & {
   currentQuestionAnswerChoice: AnswerChoice | null
   quizPageProps:
     | {
-        currentHandler: (nextKey: string) => void
+        currentHandler: (nextKey: QuizKey) => void
         statusHandler: (status: QuizStatus) => void
-        nextQuiz: string | undefined
+        nextQuiz: QuizKey | undefined
       }
     | false
   numberOfCorrectAnswers: number
