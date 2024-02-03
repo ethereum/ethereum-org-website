@@ -6,7 +6,6 @@ import NavDropdown from "./Dropdown"
 import { ISections } from "./types"
 
 export type MenuProps = FlexProps & {
-  path: string
   sections: ISections
 }
 
