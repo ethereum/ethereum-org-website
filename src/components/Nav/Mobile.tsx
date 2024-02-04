@@ -1,28 +1,27 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
+import { motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
+import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
 import {
   Box,
-  Icon,
+  ButtonProps,
   Drawer,
-  DrawerOverlay,
-  DrawerContent,
   DrawerBody,
+  DrawerContent,
+  DrawerFooter,
+  DrawerOverlay,
+  Flex,
+  forwardRef,
+  Icon,
   List,
   ListItem,
-  forwardRef,
-  DrawerFooter,
-  Flex,
-  ButtonProps,
 } from "@chakra-ui/react"
-import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { motion } from "framer-motion"
 
-import { BaseLink } from "../Link"
+import type { ChildOnlyProp } from "../../lib/types"
 import { Button } from "../Buttons"
-import Translation from "../Translation"
+import { BaseLink } from "../Link"
 
 import { ISections } from "./types"
-import { ChildOnlyProp } from "../../types"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
   (props, ref) => <ListItem ref={ref} mb={12} {...props} />
@@ -104,7 +103,7 @@ const glyphPathVariants = {
   },
 }
 
-export interface IProps extends ButtonProps {
+export type MobileNavMenuProps = ButtonProps & {
   isMenuOpen: boolean
   isDarkTheme: boolean
   toggleMenu: () => void
@@ -115,7 +114,7 @@ export interface IProps extends ButtonProps {
   drawerContainerRef: RefObject<HTMLElement | null>
 }
 
-const MobileNavMenu: React.FC<IProps> = ({
+const MobileNavMenu = ({
   isMenuOpen,
   isDarkTheme,
   toggleMenu,
@@ -125,8 +124,8 @@ const MobileNavMenu: React.FC<IProps> = ({
   fromPageParameter,
   drawerContainerRef,
   ...props
-}) => {
-  const { t } = useTranslation()
+}: MobileNavMenuProps) => {
+  const { t } = useTranslation("common")
 
   const handleClick = (): void => {
     toggleMenu()
@@ -176,7 +175,7 @@ const MobileNavMenu: React.FC<IProps> = ({
         portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
         onClose={handleClick}
-        placement="left"
+        placement="start"
         size="sm"
       >
         <DrawerOverlay bg="modalBackground" />
@@ -259,14 +258,12 @@ const MobileNavMenu: React.FC<IProps> = ({
               }}
             >
               <Icon as={MdSearch} />
-              <FooterItemText>
-                <Translation id="search" />
-              </FooterItemText>
+              <FooterItemText>{t("search")}</FooterItemText>
             </FooterItem>
             <FooterItem onClick={toggleTheme}>
               <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
               <FooterItemText>
-                <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} />
+                {t(isDarkTheme ? "light-mode" : "dark-mode")}
               </FooterItemText>
             </FooterItem>
             <FooterItem onClick={handleClick}>
@@ -283,9 +280,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                 }}
               >
                 <Icon as={MdLanguage} />
-                <FooterItemText>
-                  <Translation id="languages" />
-                </FooterItemText>
+                <FooterItemText>{t("languages")}</FooterItemText>
               </Flex>
             </FooterItem>
           </DrawerFooter>
