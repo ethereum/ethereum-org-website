@@ -28,7 +28,7 @@ El protocolo de Ethereum no respalda originariamente la delegación de participa
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Qué hay que tener en cuenta \{#what-to-consider}
@@ -38,7 +38,7 @@ Hay un número creciente de proveedores de SAAS para ayudarle a apostar sus ETH,
 Los indicadores de atributos se utilizan para señalar las fortalezas o debilidades notables que puede tener un proveedor aprobado de SaaS. Utilice esta sección como referencia sobre cómo definimos estos atributos, mientras está eligiendo el servicio que le ayudará con su experiencia de participación.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Explorar proveedores de servicios de participación \{#saas-providers}
@@ -46,13 +46,13 @@ Los indicadores de atributos se utilizan para señalar las fortalezas o debilida
 A continuación encontrará algunos proveedores SaaS disponibles. Utilice los indicadores de arriba para guiarse a través de estos servicios
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Proveedores SaaS
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Por favor, tenga en cuenta la importancia de elegir [clientes diversos](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados como <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
@@ -60,7 +60,7 @@ Por favor, tenga en cuenta la importancia de elegir [clientes diversos](/develop
 ### Generadores de claves
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 ¿Tiene alguna sugerencia para un proveedor de participación como servicio que no hayamos mencionado? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.

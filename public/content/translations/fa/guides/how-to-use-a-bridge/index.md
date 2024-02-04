@@ -51,7 +51,7 @@ lang: fa
 
 می‌توانید از [chainlist.org](http://chainlist.org) برای پیداکردن جزئیات RPC شبکه استفاده کنید. به محض اینکه شبکه اضافه شود و تراکنش پایان یابد، باید توکن‌ها را در کیف‌پولتان مشاهده کنید.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

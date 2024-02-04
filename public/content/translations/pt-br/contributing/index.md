@@ -84,5 +84,5 @@ Você só deve usar carteiras autônomas para reivindicar POAPs. Não use contas
 ## Colaboradores \{#contributors}
 
 {
-	<Contributors />
+<Contributors />
 }

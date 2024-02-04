@@ -63,7 +63,7 @@ lang: zh-tw
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [Github](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow_ -- FOSS 工具，以太坊開發者可用其測試節點，在瀏覽器中撰寫並偵錯遠端程序呼叫。_**
+**Etherflow* -- FOSS 工具，以太坊開發者可用其測試節點，在瀏覽器中撰寫並偵錯遠端程序呼叫。***
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)

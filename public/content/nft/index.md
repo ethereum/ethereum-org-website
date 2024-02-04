@@ -19,7 +19,7 @@ NFTs are tokens that are individually unique. Each NFT has different properties 
 The uniqueness of each NFT enables tokenization of things like art, collectibles, or even real estate, where one specific unique NFT represents some specific unique real world or digital item. Ownership of an asset is publicly verifiable on Ethereum blockchain.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## The internet of assets \{#internet-of-assets}
@@ -67,7 +67,7 @@ This website also has an alternative domain name powered by NFTs, **ethereum.eth
 [More on ENS](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## How do NFTs work? \{#how-nfts-work}
@@ -102,9 +102,9 @@ Security issues relating to NFTs are most often related to phishing scams, smart
 - [ERC-1155 token standard](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

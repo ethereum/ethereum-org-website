@@ -75,8 +75,6 @@ ABI._**
 - [اسناد](https://portal.thirdweb.com/)
 - [گیت هاب](https://github.com/thirdweb-dev/)
 
-
-
 ## بیشتر بخوانید \{#further-reading}
 
 - [کاوش در صرافی‌های غیرمتمرکز](/dapps)
@@ -86,8 +84,6 @@ ABI._**
 - [اپلیکیشن‌های غیرمتمرکز پرطرفدار](https://www.alchemy.com/dapps) - _Alchemy_
 
 _آیا می‌خواهید در مورد منابع جامعه که به شما کمک کرده بدانید؟ این صفحه را ویرایش و اضافه کنید!_
-
-
 
 ## موضوعات مرتبط \{#related-topics}
 

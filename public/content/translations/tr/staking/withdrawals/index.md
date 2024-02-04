@@ -38,7 +38,7 @@ Shanghai/Capella yükseltmesinden önce hisselenmiş ETH'lerinizi kullanamaz vey
 ### Nasıl hazırlanırım? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Önemli bildiriler \{#important-notices}
@@ -79,7 +79,7 @@ Belirli bir doğrulayıcının para çekmek için uygun olup olmadığı, söz k
 Finematics tarafından sağlanmış Ethereum hisseleme çekim işlemleri açıklamasına buradan göz atabilirsiniz:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Doğrulayıcı "süpürülmesi" \{#validator-sweeping}

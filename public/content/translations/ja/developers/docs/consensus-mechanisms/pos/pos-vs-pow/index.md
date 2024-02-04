@@ -61,7 +61,7 @@ lang: ja
 Justin Drak が、プルーフ・オブ・ワークよりも優れたプルーフ・オブ・ステークの利点について説明します。
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## 参考文献 \{#further-reading}

@@ -67,7 +67,7 @@ The term "ommer" is the preferred gender-neutral term for the sibling of a paren
 Watch Austin walk you through mining and the proof-of-work blockchain.
 
 {
-	<YouTube id="zcX7OJ-L8XQ" />
+<YouTube id="zcX7OJ-L8XQ" />
 }
 
 ## The mining algorithm \{#mining-algorithm}

@@ -46,7 +46,7 @@ Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonct
 ## En savoir plus via un apprenti visuel ? \{#visual-learner}
 
 {
-	<YouTube id="F50OrwV6Uk8" />
+<YouTube id="F50OrwV6Uk8" />
 }
 
 ## Outils pour créer des dApps \{#dapp-tools}

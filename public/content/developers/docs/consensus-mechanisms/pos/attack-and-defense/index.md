@@ -66,7 +66,7 @@ A more sophisticated attack can split the honest validator set into discrete gro
 **Bouncing attacks** are similar. Votes are again withheld by the attacking validators. Instead of releasing the votes to keep an even split between two forks, they use their votes at opportune moments to justify checkpoints that alternate between fork A and fork B. This flip-flopping of justification between two forks prevents there from being pairs of justified source and target checkpoints that can be finalized on either chain, halting finality.
 
 {
-	<YouTube id="xcPxwhrg3Ao"/>
+<YouTube id="xcPxwhrg3Ao"/>
 }
 
 Both bouncing and balancing attacks rely upon the attacker having very fine control over message timing across the network, which is unlikely. Nevertheless, defenses are built into the protocol in the form of additional weighting given to prompt messages compared to slow ones. This is known as [proposer-weight boosting](https://github.com/ethereum/consensus-specs/pull/2730). To defend against bouncing attacks the fork-choice algorithm was updated so that the latest justified checkpoint can only switch to that of an alternative chain during the [first 1/3 of the slots in each epoch](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114). This condition prevents the attacker from saving up votes to deploy later - the fork choice algorithm simply stays loyal to the checkpoint it chose in the first 1/3 of the epoch during which time most honest validators would have voted.

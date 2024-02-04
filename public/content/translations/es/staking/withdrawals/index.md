@@ -38,7 +38,7 @@ Antes de la actualización Shanghai/Capella, no se podía usar o acceder a sus E
 ### ¿Cómo me preparo? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Avisos importantes \{#important-notices}
@@ -79,7 +79,7 @@ La elegibilidad de un validador dado para una retirada o no, viene determinada p
 Lea la explicación sobre retirads de apuestas en Ethereum hecha por Finematics:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### «Barrido» del validador \{#validator-sweeping}
@@ -117,13 +117,13 @@ Ampliando este cálculo podemos estimar el tiempo que llevará el procesar un n�
 
 <TableContainer>
 
-| Número de retiradas | Tiempo que llevará|
-| :-------------------: | :--------------: |
-| 400.000 | 3,5 días |
-| 500.00 | 4,3 días |
-| 600.000 | 5,2 días |
-| 700.000 | 6,1 días |
-| 800.000 | 7 días |
+| Número de retiradas | Tiempo que llevará |
+| :-----------------: | :----------------: |
+|       400.000       |      3,5 días      |
+|       500.00        |      4,3 días      |
+|       600.000       |      5,2 días      |
+|       700.000       |      6,1 días      |
+|       800.000       |       7 días       |
 
 </TableContainer>
 

@@ -88,7 +88,7 @@ ZK-STARK est un acronyme pour **Zero-Knowledge Scalable Transparent Argument of 
 
 - **Évolutifs** : ZK-STARK est plus rapide que ZK-SNARK pour générer et vérifier des preuves avec un témoin de taille plus importante. Avec les preuves STARK, les temps de preuve et de vérification n'augmentent que légèrement lorsque le témoin (witness) augmente (tandis que pour les SNARK ils augmentent linéairement selon la taille du témoin).
 
-- **Transparents**: Contrairement à ZK-SNARK (qui se base sur une configuration de confiance), ZK-STARK repose sur un aléa publiquement vérifiable pour générer les paramètres publics de preuve et de vérification.  Ainsi, ils sont plus transparents que les ZK-SNARKs.
+- **Transparents**: Contrairement à ZK-SNARK (qui se base sur une configuration de confiance), ZK-STARK repose sur un aléa publiquement vérifiable pour générer les paramètres publics de preuve et de vérification. Ainsi, ils sont plus transparents que les ZK-SNARKs.
 
 Les ZK-STARKs produisent des preuves plus volumineuses que les ZK-SNARKs, engendrant des frais de vérification généralement plus élevés. Cependant, il y a des cas (comme la preuve de grands ensembles de données) où les ZK-STARKs peuvent être plus intéressants que les ZK-SNARKs.
 

@@ -9,7 +9,7 @@ lang: sl
 _Če si nihče ne lasti Ethereuma, kako so potem sprejete odločitve o prihodnjih in preteklih spremembah? Upravljanje Ethereuma kaže na proces, ki omogoča sprejemanje takšnih odločitev_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kaj je upravljanje? \{#what-is-governance}
@@ -39,7 +39,7 @@ _Čeprav je na nivoju protokola upravljanje Ethereuma izven verige, se v veliko 
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kdo vse je vključen? \{#who-is-involved}
@@ -57,7 +57,7 @@ V [Ethereum skupnosti](/community/) so prisotni različni deležniki, od katerih
 _Opomba: katerikoli posameznik je lahko del različnih skupin (na primer, razvijalec protokola se lahko zavzema za EIP, upravlja validator na oddajniški verigi in uporablja DeFi aplikacije). Za večjo jasnost koncepta je lažje, če se jih obravnava posebej._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kaj je EIP? \{#what-is-an-eip}
@@ -69,7 +69,7 @@ Pomemben proces, ki se uporablja pri upravljanju Ethereuma je predlaganje **Ethe
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Uraden proces \{#formal-process}
@@ -115,7 +115,7 @@ Od EIP predlagateljev se pričakuje, da zberejo odzive od vseh relevantnih dele�
 Onstran varnosti Ethereum omrežja, je bila s strani razvijalcev protokola zgodovinsko gledano velika teža posvečena temu, kar visoko vrednotijo uporabniki in razvijalci aplikacij/orodij, glede na to, da njihova uporaba in razvoj Ethereuma delata ekosistem privlačen za ostale deležnike. Poleg tega morajo biti EIP-ji implementirani prek vseh implementacij strank, ki jih upravljajo različne ekipe. Del tega procesa običajno predstavlja prepričevanje več ekip razvijalcev protokola, da je določena sprememba dragocena, in v pomoč končnim uporabnikom, ali pa rešuje varnostno težavo.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Upravljanje nestrinjanj \{#disagreements}
@@ -145,11 +145,11 @@ Danes je Ethereum skupnost sprejela stališče o neposeganju v primeru napak v p
 Oglejte si več o DAO razcepu:
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Uporabnost razcepov \{#forking-utility}
@@ -159,7 +159,7 @@ Ethereum/Ethereum Classic razcep je odličen primer zdravega razcepa. Dve skupin
 Možnost razcepa ob pomembnih političnih, filozofskih ali ekonomskih razlikah predstavlja pomembno vlogo za uspeh Ethereum upravljanja. Brez možnosti razcepa so bila alternativa nenehni spopadi, prisilno sodelovanje za tiste, ki so sčasoma oblikovali Ethereum Classic in vedno bolj različna vizija za to, kako izgleda uspeh Ethereuma.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Razvoj oddajniške verige \{#beacon-chain}
@@ -175,7 +175,7 @@ Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo up
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kako se lahko vključim? \{#get-involved}

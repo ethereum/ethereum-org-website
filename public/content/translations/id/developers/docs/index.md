@@ -15,17 +15,17 @@ Jika ini adalah upaya pertama Anda dalam pengembangan Ethereum, kami sarankan ag
 ### Topik dasar \{#foundational-topics}
 
 {
-	<DeveloperDocsLinks headerId="foundational-topics" />
+<DeveloperDocsLinks headerId="foundational-topics" />
 }
 
 ### Tumpukan Ethereum \{#ethereum-stack}
 
 {
-	<DeveloperDocsLinks headerId="ethereum-stack" />
+<DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
 ### Tingkat Lanjut \{#advanced}
 
 {
-	<DeveloperDocsLinks headerId="advanced" />
+<DeveloperDocsLinks headerId="advanced" />
 }

@@ -38,7 +38,7 @@ Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH.
 ### How do I prepare? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Important notices \{#important-notices}
@@ -79,7 +79,7 @@ Whether a given validator is eligible for a withdrawal or not is determined by t
 Check out this explanation of Ethereum staking withdrawals by Finematics:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Validator "sweeping" \{#validator-sweeping}

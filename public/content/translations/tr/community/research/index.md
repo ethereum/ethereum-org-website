@@ -124,7 +124,7 @@ Katman 2'nin daha çok araştırma ve geliştirme gerektiren spesifik alanların
 - [Blokzincir köprülerine giriş](/bridges/)
 - [Köprüler üzerine, Vitalik](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Blok zincir köprüleri makalesi](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Köprülerde kilitli değer](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+- [Köprülerde kilitli değer](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### Güncel araştırma \{#recent-research-3}
 

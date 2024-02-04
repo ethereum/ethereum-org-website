@@ -61,7 +61,7 @@ Hisse ispatı Ethereum, iş isparı Ethereum'dan çok daha az coin basımı yapa
 Justin Drake'in hisse ispatının iş ispatına göre avantajlarını açıklamasını izleyin:
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## Daha fazla bilgi \{#further-reading}

@@ -51,7 +51,7 @@ lang: hi
 
 आप नेटवर्क के RPC विवरण खोजने के लिए [chainlist.org](http://chainlist.org) का इस्तेमाल कर सकते हैं। एक बार जब नेटवर्क जुड़ जाता है और लेनदेन समाप्त हो जाता है, तो आपको अपने वॉलेट में टोकन दिखने चाहिए।
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

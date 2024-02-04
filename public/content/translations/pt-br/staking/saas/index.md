@@ -28,7 +28,7 @@ O protocolo Ethereum não suporta nativamente a delegação de stake, portanto e
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## O que considerar \{#what-to-consider}
@@ -38,7 +38,7 @@ Há um número cada vez maior de provedores de SaaS para ajudar você a fazer pa
 Os indicadores de atributo são usados abaixo para sinalizar os pontos fortes ou fracos notáveis que um pool de staking pode ter. Utilize esta seção como referência de como definimos estes atributos enquanto você está escolhendo um serviço para auxiliar em sua jornada de staking.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Explore provedores de serviços de staking \{#saas-providers}
@@ -46,13 +46,13 @@ Os indicadores de atributo são usados abaixo para sinalizar os pontos fortes ou
 Abaixo estão alguns provedores SaaS disponíveis. Use os indicadores acima para guiá-lo pelos serviços abaixo
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Provedores SaaS
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Observe a importância de escolher um serviço que leve a [diversidade de cliente](/developers/docs/nodes-and-clients/client-diversity/) a sério, à medida que melhora a segurança da rede e limita o seu risco. Os serviços que têm evidências de limitação do uso do cliente majoritário são indicados com <em style={{ textTransform: "uppercase" }}>"diversidade do cliente de execução"</em> e <em style={{ textTransform: "uppercase" }}>"diversidade do cliente de consenso".</em>
@@ -60,7 +60,7 @@ Observe a importância de escolher um serviço que leve a [diversidade de client
 ### Geradores de chaves
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Alguma sugestão de um provedor de SaaS que não foi mencionado? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.

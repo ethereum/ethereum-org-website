@@ -51,7 +51,7 @@ lang: uk
 
 Можна використовувати [chainlist.org](http://chainlist.org), щоб отримати інформацію про віддалений виклик процедур (Remote Procedure Call, RPC) мережі. Після додавання мережі та завершення транзакції ви побачите токени у своєму гаманці.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

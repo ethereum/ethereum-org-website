@@ -18,7 +18,7 @@ Ein Oracle ist eine Brücke zwischen der Blockchain und der realen Welt. Sie fun
 Schauen Sie sich an, wie Patrick Oracles erklärt:
 
 {
-	<YouTube id="ZJfkNzyO7-U" start="10" />
+<YouTube id="ZJfkNzyO7-U" start="10" />
 }
 
 ## Warum werden sie benötigt? \{#why-are-they-needed}

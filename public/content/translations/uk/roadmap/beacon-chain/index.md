@@ -4,7 +4,7 @@ description: Дізнайтеся про Beacon Chain — оновлення, з
 lang: uk
 template: upgrade
 image: /upgrades/core.png
-alt: 
+alt:
 summaryPoint1: Запуск Beacon Chain приніс в екосистему Ethereum модель доказу частки.
 summaryPoint2: У вересні 2022 року здійснено об’єднання з оригінальним ланцюгом Ethereum, що працював за моделлю підтвердження роботи.
 summaryPoint3: З Beacon Chain у системі з’явився протокол логіки консенсусу та поширення блоків, який наразі захищає Ethereum.

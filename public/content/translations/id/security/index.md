@@ -9,7 +9,7 @@ lang: id
 Dengan berkembangnya ketertarikan pada mata uang digital, mempelajari cara terbaik menggunakan mata uang digital menjadi perlu. Mata uang digital dapat menjadi menyenangkan dan menarik, tetapi juga ada risiko serius. Jika Anda mengerjakan sejumlah pekerjaan awal ini, Anda dapat mengurangi risiko tersebut.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Keamanan Situs 101 \{#web-security}
@@ -91,7 +91,7 @@ Untuk meningkatkan keamanan melampaui 2FA, anda dapat menggunakan kunci keamanan
 Tonton lebih lanjut mengenai 2FA:
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Hapus ekstensi peramban \{#uninstall-browser-extensions}
@@ -107,7 +107,7 @@ Ekstensi peramban seperti Chrome extension atau pengaya dalam Firefox dapat mena
 [Selengkapnya mengenai risiko ekstensi browser](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Keamanan crypto 101 \{#crypto-security}
@@ -167,7 +167,7 @@ Saat berinteraksi dengan kontrak pintar, jangan izinkan batas pembelanjaan tak t
 Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun yang terkuras.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Penipuan umum \{#common-scams}
@@ -273,7 +273,7 @@ Penipuan airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) 
 [Lebih lanjut tentang penipuan airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Bacaan lebih Lanjut \{#further-reading}

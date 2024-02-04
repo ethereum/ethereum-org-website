@@ -11,7 +11,7 @@ Merkezileştirme, milyarlarca insanın World Wide Web'e katılmasına yardımcı
 Web3 bu ikileme bir cevaptır. Büyük teknoloji şirketleri tarafından tekelleştirilen bir Web yerine, Web3 merkeziyetsizliği benimsiyor ve kullanıcıları tarafından inşa ediliyor, işletiliyor ve sahipleniliyor. Web3, gücü şirketlerden ziyade bireylerin eline verir. Web3 hakkında konuşmadan önce buraya nasıl geldiğimizi keşfedelim.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Erken Web \{#early-internet}
@@ -33,7 +33,7 @@ Web 2.0 dönemi, 2004 yılında sosyal medya platformlarının ortaya çıkması
 ![Web 2.0'ı temsil eden istemci-sunucu mimarisi](./web2.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Web 3.0: Oku-Yaz-Sahip Ol \{#web3}
@@ -163,5 +163,5 @@ Web3 rijit bir şekilde tanımlanmamıştır. Çeşitli topluluk katılımcılar
 - [Web3 Tartışması](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
 {
-	<QuizWidget quizKey="web3" />
+<QuizWidget quizKey="web3" />
 }

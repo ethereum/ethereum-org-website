@@ -124,7 +124,7 @@ lang: zh-tw
 - [區塊鏈跨鏈橋簡介](/bridges/)
 - [Vitalik 討論跨鏈橋](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [區塊鏈跨鏈橋文章](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [跨鏈橋中鎖定之資金](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+- [跨鏈橋中鎖定之資金](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### 近期研究 \{#recent-research-3}
 

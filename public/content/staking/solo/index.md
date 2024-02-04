@@ -84,13 +84,13 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## How it works \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 While active you will earn ETH rewards, which will be periodically deposited into your withdrawal address.
@@ -104,7 +104,7 @@ If ever desired, you can exit as a validator which eliminates the requirement to
 The Staking Launchpad is an open source application that will help you become a staker. It will guide you through choosing your clients, generate your keys and depositing your ETH to the staking deposit contract. A checklist is provided to make sure you've covered everything to get your validator set up safely.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## What to consider with node and client setup tools \{#node-tool-considerations}
@@ -114,7 +114,7 @@ There are a growing number of tools and services to help you solo stake your ETH
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking tool may have. Use this section as a reference for how we define these attributes while you’re choosing what tools to help with your staking journey.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Explore node and client setup tools \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Node tools
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Please note the importance of choosing a [minority client](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Tools that allow you to setup minority client are denoted as <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
@@ -138,7 +138,7 @@ Please note the importance of choosing a [minority client](/developers/docs/node
 These tools can be used as an alternative to the [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) to help with key generation.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
@@ -146,7 +146,7 @@ Have a suggestion for a staking tool we missed? Check out our [product listing p
 ## Explore solo staking guides \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Frequently asked questions \{#faq}
@@ -244,5 +244,5 @@ To unlock and receive your entire balance back you must also complete the proces
 - [Eth2 Slashing Prevention Tips](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
 
 {
-	<QuizWidget quizKey="solo-staking" />
+<QuizWidget quizKey="solo-staking" />
 }

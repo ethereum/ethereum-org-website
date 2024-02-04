@@ -84,13 +84,13 @@ Distinta a las penalizaciones por inactividad por estar fuera de línea, <em>el 
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Cómo funciona \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Mientras esté activo, obtendrá recompensas ETH que se depositarán periódicamente en su dirección de retirada.
@@ -104,7 +104,7 @@ Si lo desea, puede salir como validador, lo que elimina el requisito de estar en
 El Lanzador de participaciones es una aplicación de código abierto que le ayudará a convertirse en un participante. Le guiará a través de la elección de sus clientes de software, a generar sus llaves y depositar su ETH en el contrato de depósito de participación. Se proporciona una lista de verificación para asegurarse de que ha cubierto todo para configurar su validador de forma segura.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Qué considerar respecto a las herramientas de configuración de nodos y clientes \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Cada vez hay más herramientas y servicios para ayudarle a que usted haga una pa
 Los indicadores de atributos a continuación indican las fortalezas o debilidades que puede tener cada herramienta de participación. Utilice esta sección como referencia sobre cómo definimos estos atributos, mientras está eligiendo las herramientas que le ayudarán con su experiencia de participación.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Explora las herramientas de configuración de nodos y clientes \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Los indicadores de atributos a continuación indican las fortalezas o debilidade
 Hay una variedad de opciones disponibles para ayudarle con su configuración. Utilice los indicadores de arriba para guiarle a través de las herramientas que se muestran a continuación.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Herramientas de nodo
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Por favor, tenga en cuenta la importancia de elegir un [cliente minoritario](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Las herramientas que le permiten configurar un cliente minoritario se expresan como <em style={{ textTransform: "uppercase" }}>«multicliente».</em>
@@ -138,7 +138,7 @@ Por favor, tenga en cuenta la importancia de elegir un [cliente minoritario](/de
 Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de participación](https://github.com/ethereum/staking-deposit-cli/) para ayudar con la generación de claves.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 ¿Tiene alguna sugerencia para una herramienta de participación no cubierta? Eche un vistazo a nuestra [política de listado de productos](/contributing/adding-staking-products/) para ver si le parece una opción aceptable y enviarla para su revisión.
@@ -146,7 +146,7 @@ Estas herramientas pueden utilizarse como alternativa a la [CLI de depósito de 
 ## Explorar guías de participación individual \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Preguntas más frecuentes \{#faq}

@@ -8,7 +8,7 @@ sidebarDepth: 2
 # Glossario \{#ethereum-glossary}
 
 {
-	<Divider />
+<Divider />
 }
 
 ## \# \{#section-numbers}
@@ -64,7 +64,7 @@ Un'attestazione fatta da un'entità che qualcosa è vero. Nel contesto di Ethere
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## B \{#section-b}
@@ -155,7 +155,7 @@ Serie astratta di istruzioni progettata per l'esecuzione efficiente da parte di 
 La prima di due [diramazioni permanenti](#hard-fork) per la fase di sviluppo di [Metropolis](#metropolis). Includeva EIP-649 Metropolis [Difficulty Bomb](#difficulty-bomb) Delay e Block Reward Reduction, dove l'[Era Glaciale](#ice-age) era stata ritardata di 1 anno e la ricompensa sul blocco era stata ridotta da 5 a 3 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## C \{#section-c}
@@ -291,7 +291,7 @@ Aumento esponenziale pianificato nell'impostazione di [difficoltà](#difficulty)
 Breve stringa di dati che un utente produce per un documento utilizzando una [chiave privata](#private-key) in modo tale che chiunque disponga della corrispondente [chiave pubblica](#public-key), della firma e del documento possa verificare che (1) il documento è stato "firmato" dal proprietario di quella chiave privata e (2) il documento non è stato modificato dopo essere stato firmato.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### scoperta \{#discovery}
@@ -417,7 +417,7 @@ Macchina virtuale basata su stack che esegue il [bytecode](#bytecode). In Ethere
 Modulo leggibile dall'uomo di [bytecode](#bytecode) dell'EVM.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## F \{#section-f}
@@ -467,7 +467,7 @@ Modello di sicurezza per determinate soluzioni di [livello 2](#layer-2) in cui, 
 Fase di sviluppo di test iniziale di Ethereum, durata dal luglio 2015 al marzo 2016.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## G \{#section-g}
@@ -503,7 +503,7 @@ Go Ethereum. Una delle implementazioni più importanti del protocollo Ethereum, 
 Abbreviazione di gigawei, un taglio dell'[ether](#ether), comunemente usato per indicare il prezzo del [carburante](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## H \{#section-h}
@@ -535,7 +535,7 @@ Valore usato per generare la [chiave privata](#private-key) principale e il codi
 La seconda fase di sviluppo di Ethereum, lanciata nel marzo 2016 sul blocco 1.150.000.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## I \{#section-i}
@@ -573,7 +573,7 @@ Una volta distribuito il codice di un [contratto](#smart-contract) (o di una [li
 Una [transazione](#transaction) inviata da un [conto del contratto](#contract-account) a un altro, o a un [EOA](#eoa) (vedi [messaggio](#message)).
 
 {
-	<Divider />
+<Divider />
 }
 
 ### emissione
@@ -599,7 +599,7 @@ Ogni coppia chiave privata/indirizzo del conto esiste come un singolo file chiav
 Funzione crittografica dell'[hash](#hash) usata in Ethereum. Keccak-256 è stata standardizzata come [SHA](#sha)-3.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## L \{#section-l}
@@ -629,7 +629,7 @@ Tipo speciale di [contratto](#smart-contract) privo di funzioni pagabili, funzio
 Client di Ethereum che non memorizza una copia locale della [blockchain](#blockchain) né convalida i blocchi e le [transazioni](#transaction). Offre le funzioni di un [portafoglio](#wallet) e può creare e trasmettere transazioni.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### LMD_GHOST \{#lmd-ghost}
@@ -683,7 +683,7 @@ Il processo di hashing ripetuto dell'intestazione di un blocco mentre incrementa
 Il conio è il processo di creazione di nuovi token e la loro messa in circolazione così che siano utilizzabili. È un meccanismo decentralizzato per creare un nuovo token senza coinvolgere l'autorità centrale.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## N \{#section-n}
@@ -724,7 +724,7 @@ Client software che partecipa alla rete.
 In termini crittografici è un valore che può essere usato una volta sola. Il nonce di un conto è un contatore di transazioni in ogni conto, utilizzato per prevenire gli attacchi replay.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## O \{#section-o}
@@ -750,7 +750,7 @@ Un oracolo è un ponte tra la blockchain [blockchain](#blockchain) e il mondo re
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## P \{#section-p}
@@ -804,7 +804,7 @@ Un'informazione (la prova) che richiede calcoli significativi per essere trovata
 Numero derivato tramite una funzione unidirezionale da una [chiave privata](#private-key), che può essere condiviso pubblicamente e utilizzato da chiunque per verificare una firma digitale eseguita con la corrispondente chiave privata.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## R \{#section-r}
@@ -838,7 +838,7 @@ Tipo di soluzione per il passaggio al [livello 2](#layer-2) che raggruppa più t
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### RPC \{#rpc}
@@ -996,7 +996,7 @@ Una commissione di sincronizzazione è un gruppo selezionato casualmente di [val
 Un taglio dell'[ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## T \{#section-t}
@@ -1054,7 +1054,7 @@ La capacità di una rete di mediare le transazioni senza che alcuna delle parti 
 Concetto che prende il nome dal matematico e informatico inglese Alan Turing. Un sistema di regole per la manipolazione dei dati (come un set di istruzioni per computer, un linguaggio di programmazione o un automa cellulare) è detto "Turing completo" o "universale dal punto di vista computazionale" se può essere utilizzato per simulare qualsiasi macchina di Turing.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## V \{#section-v}
@@ -1105,7 +1105,7 @@ Linguaggio di programmazione di alto livello con sintassi simile a Python. Pensa
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## W \{#section-w}
@@ -1131,7 +1131,7 @@ Terza versione del Web. Proposto per la prima volta dal dott. Gavin Wood, il Web
 Il taglio più piccolo dell'[ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Z \{#section-z}
@@ -1157,7 +1157,7 @@ Un [rollup](#rollups) di transazioni che usa le [prove di validità](#validity-p
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Fonti \{#sources}
@@ -1165,7 +1165,7 @@ Un [rollup](#rollups) di transazioni che usa le [prove di validità](#validity-p
 _Fornito in parte da [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) di [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) con CC-BY-SA_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Contribuisci a questa pagina \{#contribute-to-this-page}

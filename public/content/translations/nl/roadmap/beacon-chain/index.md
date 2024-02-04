@@ -4,7 +4,7 @@ description: Leer meer over de Beacon Chain - de upgrade die proof-of-stake Ethe
 lang: nl
 template: upgrade
 image: /upgrades/core.png
-alt: 
+alt:
 summaryPoint1: De Beacon Chain verandert niks aan de Ethereum die we nu gebruiken.
 summaryPoint2: Het zal het netwerk coördineren en als consensuslaag fungeren.
 summaryPoint3: Het introduceerde Proof-of-Stake in het Ethereum-ecosysteem.
@@ -62,11 +62,11 @@ Shardketens kunnen alleen op een veilige manier in het Ethereum-netwerk komen al
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Heb interactie met de Beacon Chain \{#interact-with-beacon-chain}
 
 {
-	<BeaconChainActions />
+<BeaconChainActions />
 }

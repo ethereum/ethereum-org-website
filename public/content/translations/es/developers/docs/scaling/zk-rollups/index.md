@@ -1,10 +1,10 @@
 ---
 title: Rollups de conocimiento cero
-description: 'Introducción a las pruebas de conocimiento cero: una solución de escalabilidad que utiliza la comunidad de Ethereum.'
+description: "Introducción a las pruebas de conocimiento cero: una solución de escalabilidad que utiliza la comunidad de Ethereum."
 lang: es
 ---
 
-Las pruebas de conocimiento cero (ZK-rollups) son soluciones [soluciones de escalabilidad](/developers/docs/scaling/) de segunda capa que incrementan el rendimiento de la red principal de Ethereum, gracias a que mueven la gran mayoría del trabajo computacional y el almacenamiento fuera de la cadena principal. Los ZK-rollups pueden procesar miles de transacciones en un lote y luego pasar solo algunos de los datos mínimos y necesarios hacia la red principal. Estos datos en resúmen, definen los cambios que deben hacerse en Ethereum,  y realizar pruebas criptográficas de que esos cambios y resultados finales son correctos.
+Las pruebas de conocimiento cero (ZK-rollups) son soluciones [soluciones de escalabilidad](/developers/docs/scaling/) de segunda capa que incrementan el rendimiento de la red principal de Ethereum, gracias a que mueven la gran mayoría del trabajo computacional y el almacenamiento fuera de la cadena principal. Los ZK-rollups pueden procesar miles de transacciones en un lote y luego pasar solo algunos de los datos mínimos y necesarios hacia la red principal. Estos datos en resúmen, definen los cambios que deben hacerse en Ethereum, y realizar pruebas criptográficas de que esos cambios y resultados finales son correctos.
 
 ## Requisitos previos \{#prerequisites}
 
@@ -16,7 +16,7 @@ Debe haber leído y comprendido el tema [Escalamiento de Ethereum](/developers/d
 
 El estado de los ZK-rollups se mantendrá en un contrato inteligente desplegado en la red Ethereum. Para actualizar este estado, los nodos desplegables de ZK-rollup deberán presentar una prueba de su validez para la verificación. Como se ha mencionado, la prueba de validez es una garantía criptográfica de que el cambio de estado propuesto por el rollup es realmente el resultado verdadero de la ejecución de las transacciones. Esto significa que los ZK-rollups solo necesitan proporcionar pruebas de validez para llevar a cabo y completar las transacciones en Ethereum, en lugar de publicar todo el historial en la cadena principal como los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/).
 
-La ejecucíon tardará poco tiempo, ya que cuando se mueven los activos de un ZK-rollup a Ethereum, las transacciones se ejecutan una vez validada y verificada su validez. Por el contrario, retirar fondos de los  Rollups Optimistas está sujeto a un retraso para permitir a cualquiera desafiar la transacción a  [prueba de fraude](/glossary/#fraud-proof).
+La ejecucíon tardará poco tiempo, ya que cuando se mueven los activos de un ZK-rollup a Ethereum, las transacciones se ejecutan una vez validada y verificada su validez. Por el contrario, retirar fondos de los Rollups Optimistas está sujeto a un retraso para permitir a cualquiera desafiar la transacción a [prueba de fraude](/glossary/#fraud-proof).
 
 Los ZK-rollups escriben transacciones en Ethereum como `calldata` (o datos de llamada). En los `calldata` se almacenan los datos incluidos en las llamadas externas a funciones del contrato inteligente. La información en `calldata` se publica en la cadena de bloques, permitiendo que cualquiera reconstruya el estado del rollup de forma independiente. Los ZK-rollup utilizan técnicas de compresión para reducir los datos de las transacciones: por ejemplo, las cuentas están representadas por un índice en lugar de una dirección, que ahorra unos 28 bytes en datos. La publicación de datos dentro de la cadena tiene un coste significativo para los rollups, por lo que la compresión de datos puede reducir las tarifas para los usuarios.
 
@@ -221,7 +221,7 @@ Sin embargo, las pruebas recursivas permiten finalizar varios bloques con una pr
 Vea una explicación de Finematics de los ZK-rollups:
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### Utilice los ZK-rollups \{#use-zk-rollups}
@@ -229,7 +229,7 @@ Vea una explicación de Finematics de los ZK-rollups:
 Existen múltiples implementaciones de ZK-rollups que pueden integrarse en sus dApps:
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 ## ¿Quién está trabajando en un zkEVM? \{#zkevm-projects}

@@ -9,7 +9,7 @@ lang: id
 _Jika tidak ada seorang pun yang memiliki Ethereum, bagaimana keputusan tentang perubahan di masa lalu dan masa depan untuk Ethereum dibuat? Tata kelola Ethereum merujuk pada proses yang memungkinkan keputusan seperti ini dibuat_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Apa itu tata kelola? \{#what-is-governance}
@@ -39,7 +39,7 @@ _Sekalipun pada tingkat protokol tata kelola Ethereum bersifat off-chain, banyak
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Siapa yang terlibat? \{#who-is-involved}
@@ -57,7 +57,7 @@ Ada berbagai pemangku kepentingan dalam [komunitas Ethereum](/community/), yang 
 _Catatan: setiap individu bisa memiliki beberapa peran pada grup ini (misalnya seorang pengembang protokol dapat memperjuangkan EIP, dan bertugas sebagai validator rantai suar, serta menggunakan aplikasi DeFi). Namun, untuk kejelasan konseptual, paling mudah untuk membedakannya._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Apa itu EIP? \{#what-is-an-eip}
@@ -69,7 +69,7 @@ Salah satu proses penting yang digunakan dalam tata kelola Ethereum adalah propo
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Proses formal \{#formal-process}
@@ -115,7 +115,7 @@ Pejuang EIP diharapkan mengumpulkan umpan balik dari semua pemangku kepentingan 
 Di luar keamanan jaringan Ethereum, bobot yang signifikan secara historis telah ditempatkan oleh Pengembang Protokol pada sesuatu yang dihargai oleh Pengembang Aplikasi/Peralatan dan Pengguna Aplikasi, mengingat bahwa penggunaan dan pengembangan mereka di Ethereum adalah unsur yang membuat ekosistem menjadi menarik bagi para pemangku kepentingan lainnya. Selain itu, EIP perlu diimplementasikan di semua implementasi klien, yang dikelola oleh tim khusus. Bagian dari proses ini biasanya cara meyakinkan beberapa tim Pengembang Protokol bahwa perubahan tertentu berharga dan yang membantu pengguna akhir atau menyelesaikan masalah keamanan.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Menangani perselisihan pendapat \{#disagreements}
@@ -145,11 +145,11 @@ Saat ini, komunitas Ethereum telah mengadopsi kebijakan non-intervensi dalam hal
 Tonton lebih banyak tentang peretasan DAO:
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Kegunaan melakukan fork \{#forking-utility}
@@ -159,7 +159,7 @@ Fork Ethereum/Ethereum Classic merupakan contoh yang sangat baik untuk fork yang
 Kemampuan untuk melakukan fork dalam menghadapi perbedaan politik, filosofi, atau ekonomi yang signifikan memainkan peran yang besar dalam keberhasilan tata kelola Ethereum. Tanpa kemampuan untuk melakukan fork, alternatifnya adalah perselisihan internal yang berkepanjangan, yang merupakan partisipasi yang dipaksakan bagi mereka yang pada akhirnya membentuk Ethereum Classic dan visi yang semakin berbeda tentang ukuran keberhasilan Ethereum.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Pengembangan Rantai Suar \{#beacon-chain}
@@ -175,7 +175,7 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Bagaimana saya dapat terlibat? \{#get-involved}

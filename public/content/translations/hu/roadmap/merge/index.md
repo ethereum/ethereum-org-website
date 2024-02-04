@@ -19,7 +19,7 @@ summaryPoint4: A beolvadás nagyjából 99,95%-kal csökkentette az Ethereum ene
 A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/history/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 A [Beacon lánc](/roadmap/beacon-chain/) és a [fő hálózat](/glossary/#mainnet) eredetileg külön működött. Az Ethereum-főhálózat biztonságát – az összes számlájával, egyenlegével, okosszerződésével és blokkláncállapotával együtt – továbbra is a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) konszenzus szolgáltatta, még akkor is amikor a [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) mechanizmust használó Beacon lánc vele párhuzamosan futott. A beolvadás volt az esemény, amikor ez a két rendszer végre egyesült, és a proof-of-work helyét végleg átvette a proof-of-stake.
@@ -242,9 +242,9 @@ A szilánkolással kapcsolatos tervek gyorsan fejlődnek, ám a 2. rétegű tech
 ## További olvasnivaló \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

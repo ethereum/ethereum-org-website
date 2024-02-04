@@ -21,7 +21,7 @@ Il proof-of-work consuma molta più energia perché il processo di mining consum
 Il confronto proof-of-work vs. proof-of-stake è un argomento controverso. [Il blog di Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e il dibattito tra Justin Drake e Lyn Alden hanno dato una buona sintesi delle argomentazioni.
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## Il proof-of-stake è efficiente dal punto di vista energetico? \{#is-pos-energy-efficient}

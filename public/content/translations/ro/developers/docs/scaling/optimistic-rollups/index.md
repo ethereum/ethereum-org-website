@@ -40,7 +40,7 @@ Prin urmare, puteți vedea stimulentele: participanții sunt penalizați pentru 
 Urmăriți cum explică Finematics rollup-urile optimistic:
 
 {
-	<YouTube id="7pWxCklcNsU" start="263" />
+<YouTube id="7pWxCklcNsU" start="263" />
 }
 
 ### Utilizarea rollup-urilor Optimistic \{#use-optimistic-rollups}
@@ -48,7 +48,7 @@ Urmăriți cum explică Finematics rollup-urile optimistic:
 Există mai multe implementări ale rollup-urilor Optimistic pe care le puteți integra în aplicațiile dvs. descentralizate:
 
 {
-	<RollupProductDevDoc rollupType="optimistic" />
+<RollupProductDevDoc rollupType="optimistic" />
 }
 
 **Optimistic rollups reading**

@@ -21,7 +21,7 @@ Se você quiser ver como a cadeia de blocos faz hash dos dados e, subsequentemen
 Assista a Anders explicando hashes em cadeias de blocos:
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## O que é o Ethereum? \{#what-is-ethereum}

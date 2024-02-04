@@ -194,7 +194,7 @@ Jeśli wszystko działa, powinieneś zobaczyć 2 zdarzenia w transakcji (a `Tran
 ![Dwa zdarzenia w transakcji: Transfer i Sold](./transfer-and-bought-events.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 Z tego samouczka zobaczyliśmy, jak sprawdzić saldo i przydział tokena ERC-20, a także jak wywołać `Transfer` i `TransferFrom` inteligentnego kontraktu ERC20 przy użyciu interfejsu.

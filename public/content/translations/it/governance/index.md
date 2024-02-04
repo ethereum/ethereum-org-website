@@ -10,7 +10,7 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 _Se nessuno possiede Ethereum, come vengono prese le decisioni sui cambiamenti passati e futuri? La governance di Ethereum si riferisce al processo che consente di prendere tali decisioni._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Che cos'è la governance? \{#what-is-governance}
@@ -40,7 +40,7 @@ _Mentre a livello di protocollo Ethereum la governance è gestita off-chain, mol
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Chi è coinvolto? \{#who-is-involved}
@@ -58,7 +58,7 @@ Ci sono diversi stakeholder nella [ community Ethereum](/community/), ognuno dei
 _Nota: chiunque può far parte di più gruppi (ad esempio uno sviluppatore di protocollo può sostenere un EIP, essere validatore sulla beacon chain e usare applicazioni DeFi). Tuttavia, per chiarezza concettuale risulta più facile distinguerli._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Cos'è una EIP? \{#what-is-an-eip}
@@ -70,7 +70,7 @@ Un processo importante usato nella governance di Ethereum è la proposta di migl
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Il processo formale \{#formal-process}
@@ -116,7 +116,7 @@ Gli EIP Champion dovrebbero sollecitare i feedback da tutti gli stakeholder inte
 Al di là della sicurezza della rete di Ethereum, storicamente gli sviluppatori del protocollo attribuiscono un peso significativo agli aspetti che hanno valore per gli sviluppatori di app/tool e gli utenti dell'applicazione, dato che il loro utilizzo e sviluppo su Ethereum è ciò che rende l'ecosistema interessante per gli altri stakeholder. Inoltre, le EIP devono essere implementate per tutte le implementazioni del client, gestite da team distinti. Parte di questo processo significa solitamente convincere più team di Sviluppatori del Protocollo che una modifica particolare sia preziosa e aiuti gli utenti finali o risolva un problema di sicurezza.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Gestire le idee contrastanti \{#disagreements}
@@ -146,11 +146,11 @@ Oggi, la community di Ethereum ha adottato una politica di non intervento in cas
 Guarda altri contenuti sull'attacco alla DAO:
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### L'utilità della diramazione \{#forking-utility}
@@ -160,7 +160,7 @@ Il fork Ethereum/Ethereum Classic è un ottimo esempio di fork sano. Due gruppi 
 La capacità di eseguire il fork di fronte a divergenze politiche, filosofiche o economiche molto significative, svolge un ruolo importante nel successo della governance di Ethereum. Senza la capacità di eseguire il fork, l'alternativa sarebbe quella di lotte continue, di una partecipazione riluttante e forzata per coloro che alla fine hanno deciso di formare Ethereum Classic nonché una visione sempre più divergente su quale sia l'aspetto del successo per Ethereum.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Governance della beacon chain \{#beacon-chain}
@@ -176,7 +176,7 @@ Quando la Beacon Chain si è fusa al livello d'esecuzione di Ethereum il 15 sett
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Come posso partecipare? \{#get-involved}

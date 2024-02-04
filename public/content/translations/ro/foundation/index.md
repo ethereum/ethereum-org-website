@@ -8,7 +8,7 @@ lang: ro
 # Despre Fundația Ethereum \{#about-the-ethereum-foundation}
 
 {
-	<Logo/>
+<Logo/>
 }
 
 [Fundația Ethereum](http://ethereum.foundation/) (EF) este o organizație non-profit dedicată sprijinirii lui [Ethereum](/what-is-ethereum/) și a tehnologiilor conexe.

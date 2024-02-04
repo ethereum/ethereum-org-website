@@ -30,7 +30,7 @@ In addition to the benefits we outlined in our [intro to staking](/staking/), st
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## What to consider \{#what-to-consider}
@@ -46,7 +46,7 @@ However, these staked-ETH tokens tend to create cartel-like behaviors where a la
 Attribute indicators are used below to signal notable strengths or weaknesses a listed staking pool may have. Use this section as a reference for how we define these attributes while you're choosing a pool to join.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Explore staking pools \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Please note the importance of choosing a service that takes [client diversity](/developers/docs/nodes-and-clients/client-diversity/) seriously, as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>

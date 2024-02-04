@@ -30,7 +30,7 @@ A [bevezetés a letétbe helyezésbe](/staking/) során elhangzott előnyök mel
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Mit kell figyelembe venni \{#what-to-consider}
@@ -46,7 +46,7 @@ Ugyanakkor ezek a letétbe helyezett ETH tokenek kartellszerű viselkedésre haj
 Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket vagy gyengeségeket, melyekkel a listázott letéti alapok rendelkezhetnek. Ez alapján Ön is megértheti, hogy e jellemzőket hogyan határoztuk meg, és így könnyebben választhat a letéti alapokból.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Fedezze fel a letéti alapokat \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket va
 Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A fenti jellemzőket használva megértheti az alábbi eszközökben rejlő lehetőségeket.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Olyan szolgáltatást válasszon, amely komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>végrehajtási kliens sokrétűsége</em> és <em style={{ textTransform: "uppercase" }}>konszenzusos kliens sokrétűgése</em>

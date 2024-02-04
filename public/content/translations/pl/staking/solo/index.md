@@ -84,13 +84,13 @@ W odróżnieniu od kar za bycie offline, <em>cięcie</em> jest znacznie poważni
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Jak to działa \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Podczas aktywności będziesz zdobywać nagrody ETH, które będą okresowo wpłacane na Twój adres wypłaty.
@@ -104,7 +104,7 @@ Jeśli chcesz, możesz wyjść jako walidator, co eliminuje wymóg bycia online 
 Staking Launchpad to aplikacja open source, która pomoże ci zostać stakerem. Poprowadzi cię przez wybór klientów, wygenerowanie kluczy i zdeponowanie ETH w kontrakcie depozytu na staking. Lista kontrolna jest dostęna, aby upewnić się, że wszystko zostało uwzględnione w celu bezpiecznego skonfigurowania walidatora.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Co wziąć pod uwagę w przypadku narzędzi do konfiguracji węzłów i klientów \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Powstaje coraz więcej narzędzi i usług, które pomagają w samodzielnym stako
 Wskaźniki atrybutów są używane poniżej, aby zasygnalizować godne uwagi mocne lub słabe strony, jakie może mieć wymienione narzędzie do stakowania. Użyj tej sekcji jako odniesienia do sposobu definiowania tych atrybutów podczas wybierania narzędzi, które pomogą Ci w Twojej przygodzie ze stakingiem.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Poznaj narzędzia konfiguracji węzła i klienta \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Wskaźniki atrybutów są używane poniżej, aby zasygnalizować godne uwagi moc
 Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyższych wskaźników, które oprowadzą cię z poniższymi narzędziami.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Narzędzia węzła
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
@@ -138,7 +138,7 @@ Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/
 Narzędzia te mogą być używane jako alternatywa dla [CLI depozytu stakingu](https://github.com/ethereum/staking-deposit-cli/), aby pomóc w generowaniu kluczy.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy są one odpowiednie i przesłać je do recenzji.
@@ -146,7 +146,7 @@ Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapozna
 ## Zapoznaj się z przewodnikami solo stakingu \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Często zadawane pytania \{#faq}

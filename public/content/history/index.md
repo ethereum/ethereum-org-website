@@ -26,7 +26,7 @@ Skip straight to information about some of the particularly important past upgra
 Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2023 \{#2023}
@@ -34,7 +34,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 ### Shanghai \{#shanghai}
 
 {
-	<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shanghai" />
 }
 
 #### Summary \{#shanghai-summary}
@@ -62,7 +62,7 @@ The Shanghai upgrade brought staking withdrawals to the execution layer. In tand
 ### Capella \{#capella}
 
 {
-	<NetworkUpgradeSummary name="capella" />
+<NetworkUpgradeSummary name="capella" />
 }
 
 #### Summary \{#capella-summary}
@@ -77,7 +77,7 @@ The upgrade also provided automatic account sweeping functionality, which contin
 - [Read the Capella upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2022 \{#2022}
@@ -85,7 +85,7 @@ The upgrade also provided automatic account sweeping functionality, which contin
 ### Paris (The Merge) \{#paris}
 
 {
-	<NetworkUpgradeSummary name="paris" />
+<NetworkUpgradeSummary name="paris" />
 }
 
 #### Summary \{#paris-summary}
@@ -110,7 +110,7 @@ The Paris upgrade was triggered by the proof-of-work blockchain passing a [termi
 ### Bellatrix \{#bellatrix}
 
 {
-	<NetworkUpgradeSummary name="bellatrix" />
+<NetworkUpgradeSummary name="bellatrix" />
 }
 
 #### Summary \{#bellatrix-summary}
@@ -124,7 +124,7 @@ The Bellatrix upgrade was the second scheduled upgrade for the [Beacon Chain](/r
 ### Gray Glacier \{#gray-glacier}
 
 {
-	<NetworkUpgradeSummary name="grayGlacier" />
+<NetworkUpgradeSummary name="grayGlacier" />
 }
 
 #### Summary \{#gray-glacier-summary}
@@ -144,7 +144,7 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2021 \{#2021}
@@ -152,7 +152,7 @@ The Gray Glacier network upgrade pushed back the [difficulty bomb](/glossary/#di
 ### Arrow Glacier \{#arrow-glacier}
 
 {
-	<NetworkUpgradeSummary name="arrowGlacier" />
+<NetworkUpgradeSummary name="arrowGlacier" />
 }
 
 #### Summary \{#arrow-glacier-summary}
@@ -177,7 +177,7 @@ The Arrow Glacier network upgrade pushed back the [difficulty bomb](/glossary/#d
 ### Altair \{#altair}
 
 {
-	<NetworkUpgradeSummary name="altair" />
+<NetworkUpgradeSummary name="altair" />
 }
 
 #### Summary \{#altair-summary}
@@ -197,7 +197,7 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 ### London \{#london}
 
 {
-	<NetworkUpgradeSummary name="london" />
+<NetworkUpgradeSummary name="london" />
 }
 
 #### Summary \{#london-summary}
@@ -227,7 +227,7 @@ The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559
 ### Berlin \{#berlin}
 
 {
-	<NetworkUpgradeSummary name="berlin" />
+<NetworkUpgradeSummary name="berlin" />
 }
 
 #### Summary \{#berlin-summary}
@@ -251,7 +251,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2020 \{#2020}
@@ -259,7 +259,7 @@ The Berlin upgrade optimized gas cost for certain EVM actions, and increases sup
 ### Beacon Chain genesis \{#beacon-chain-genesis}
 
 {
-	<NetworkUpgradeSummary name="beaconChainGenesis" />
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
 #### Summary \{#beacon-chain-genesis-summary}
@@ -277,7 +277,7 @@ The [Beacon Chain](/roadmap/beacon-chain/) needed 16384 deposits of 32 staked ET
 ### Staking deposit contract deployed \{#staking-deposit-contract}
 
 {
-	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
 #### Summary \{#deposit-contract-summary}
@@ -295,7 +295,7 @@ The staking deposit contract introduced [staking](/glossary/#staking) to the Eth
 ### Muir Glacier \{#muir-glacier}
 
 {
-	<NetworkUpgradeSummary name="muirGlacier" />
+<NetworkUpgradeSummary name="muirGlacier" />
 }
 
 #### Summary \{#muir-glacier-summary}
@@ -316,7 +316,7 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2019 \{#2019}
@@ -324,7 +324,7 @@ The Muir Glacier fork introduced a delay to the [difficulty bomb](/glossary/#dif
 ### Istanbul \{#istanbul}
 
 {
-	<NetworkUpgradeSummary name="istanbul" />
+<NetworkUpgradeSummary name="istanbul" />
 }
 
 #### Summary \{#istanbul-summary}
@@ -359,7 +359,7 @@ The Istanbul fork:
 ### Constantinople \{#constantinople}
 
 {
-	<NetworkUpgradeSummary name="constantinople" />
+<NetworkUpgradeSummary name="constantinople" />
 }
 
 #### Summary \{#constantinople-summary}
@@ -387,7 +387,7 @@ The Constantinople fork:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2017 \{#2017}
@@ -395,7 +395,7 @@ The Constantinople fork:
 ### Byzantium \{#byzantium}
 
 {
-	<NetworkUpgradeSummary name="byzantium" />
+<NetworkUpgradeSummary name="byzantium" />
 }
 
 #### Summary \{#byzantium-summary}
@@ -428,7 +428,7 @@ The Byzantium fork:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2016 \{#2016}
@@ -436,7 +436,7 @@ The Byzantium fork:
 ### Spurious Dragon \{#spurious-dragon}
 
 {
-	<NetworkUpgradeSummary name="spuriousDragon" />
+<NetworkUpgradeSummary name="spuriousDragon" />
 }
 
 #### Summary \{#spurious-dragon-summary}
@@ -467,7 +467,7 @@ The Spurious Dragon fork was the second response to the denial of service (DoS) 
 ### Tangerine whistle \{#tangerine-whistle}
 
 {
-	<NetworkUpgradeSummary name="tangerineWhistle" />
+<NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
 #### Summary \{#tangerine-whistle-summary}
@@ -494,7 +494,7 @@ The Tangerine Whistle fork was the first response to the denial of service (DoS)
 ### DAO fork \{#dao-fork}
 
 {
-	<NetworkUpgradeSummary name="daoFork" />
+<NetworkUpgradeSummary name="daoFork" />
 }
 
 #### Summary \{#dao-fork-summary}
@@ -512,7 +512,7 @@ Some miners refused to fork because the DAO incident wasn't a defect in the prot
 ### Homestead \{#homestead}
 
 {
-	<NetworkUpgradeSummary name="homestead" />
+<NetworkUpgradeSummary name="homestead" />
 }
 
 #### Summary \{#homestead-summary}
@@ -534,7 +534,7 @@ The Homestead fork that looked to the future. It included several protocol chang
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2015 \{#2015}
@@ -542,7 +542,7 @@ The Homestead fork that looked to the future. It included several protocol chang
 ### Frontier thawing \{#frontier-thawing}
 
 {
-	<NetworkUpgradeSummary name="frontierThawing" />
+<NetworkUpgradeSummary name="frontierThawing" />
 }
 
 #### Summary \{#frontier-thawing-summary}
@@ -557,7 +557,7 @@ The frontier thawing fork lifted the 5,000 [gas](/glossary/#gas) limit per [bloc
 ### Frontier \{#frontier}
 
 {
-	<NetworkUpgradeSummary name="frontier" />
+<NetworkUpgradeSummary name="frontier" />
 }
 
 #### Summary \{#frontier-summary}
@@ -567,7 +567,7 @@ Frontier was a live, but barebone implementation of the Ethereum project. It fol
 [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2014 \{#2014}
@@ -575,7 +575,7 @@ Frontier was a live, but barebone implementation of the Ethereum project. It fol
 ### Ether sale \{#ether-sale}
 
 {
-	<NetworkUpgradeSummary name="etherSale" />
+<NetworkUpgradeSummary name="etherSale" />
 }
 
 Ether officially went on sale for 42 days. You could buy it with BTC.
@@ -587,7 +587,7 @@ Ether officially went on sale for 42 days. You could buy it with BTC.
 ### Yellowpaper released \{#yellowpaper}
 
 {
-	<NetworkUpgradeSummary name="yellowpaperRelease" />
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 }
 
 The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the Ethereum protocol.
@@ -595,7 +595,7 @@ The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the E
 [View the Yellow Paper](https://github.com/ethereum/yellowpaper)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2013 \{#2013}
@@ -603,7 +603,7 @@ The Yellow Paper, authored by Dr. Gavin Wood, is a technical definition of the E
 ### Whitepaper released \{#whitepaper}
 
 {
-	<NetworkUpgradeSummary name="whitepaperRelease" />
+<NetworkUpgradeSummary name="whitepaperRelease" />
 }
 
 The introductory paper, published in 2013 by Vitalik Buterin, the founder of Ethereum, before the project's launch in 2015.

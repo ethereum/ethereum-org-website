@@ -4,7 +4,7 @@ description: ビーコンチェーン - プルーフ・オブ・ステークの�
 lang: ja
 template: upgrade
 image: /upgrades/core.png
-alt: 
+alt:
 summaryPoint1: イーサリアムエコシステムにプルーフ・オブ・ステークの導入を可能にしたのが、ビーコンチェーンです。
 summaryPoint2: 2022年9月にプルーフ・オブ・ワーク・チェーンのイーサリアムとマージ(統合)されました。
 summaryPoint3: ビーコンチェーンは、コンセンサスロジックとブロックゴシッププロトコルを導入し、現在はイーサリアムの安全性を保護しています。

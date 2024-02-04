@@ -28,7 +28,7 @@ The Ethereum protocol does not natively support delegation of stake, so these se
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## What to consider \{#what-to-consider}
@@ -38,7 +38,7 @@ There are a growing number of SaaS providers to help you stake your ETH, but the
 Attribute indicators are used below to signal notable strengths or weaknesses a listed SaaS provider may have. Use this section as a reference for how we define these attributes while you're choosing a service to help with your staking journey.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Explore staking service providers \{#saas-providers}
@@ -46,13 +46,13 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 Below are some available SaaS provider. Use the above indicators to help guide you through these services
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### SaaS providers
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Please note the importance of supporting [client diversity](/developers/docs/nodes-and-clients/client-diversity/) as it improves the security of the network, and limits your risk. Services that have evidence of limiting majority client use are indicated with <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> and <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
@@ -60,7 +60,7 @@ Please note the importance of supporting [client diversity](/developers/docs/nod
 ### Key Generators
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Have a suggestion for a staking-as-a-service provider we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.

@@ -15,17 +15,17 @@ lang: fa
 ### موضوعات بنیادی \{#foundational-topics}
 
 {
-	<DeveloperDocsLinks headerId="foundational-topics" />
+<DeveloperDocsLinks headerId="foundational-topics" />
 }
 
 ### پشته‌ی اتریوم \{#ethereum-stack}
 
 {
-	<DeveloperDocsLinks headerId="ethereum-stack" />
+<DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
 ### پیشرفته \{#advanced}
 
 {
-	<DeveloperDocsLinks headerId="advanced" />
+<DeveloperDocsLinks headerId="advanced" />
 }

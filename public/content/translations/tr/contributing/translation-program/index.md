@@ -41,7 +41,7 @@ Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation
 - [**3 milyon** 2022'de çevrilen kelime sayısı](/contributing/translation-program/acknowledgements/)
 
 {
-	<TranslationChartImage />
+<TranslationChartImage />
 }
 
 ### Onaylar \{#acknowledgements}

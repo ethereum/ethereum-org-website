@@ -74,7 +74,7 @@ lang: uk
 Перегляньте відео від **Finematics** про смартконтракти:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Довідкові джерела \{#further-reading}

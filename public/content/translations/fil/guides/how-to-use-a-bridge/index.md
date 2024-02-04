@@ -51,7 +51,7 @@ Hindi dapat tumagal nang higit sa 10 minuto ang prosesong ito.
 
 Maaari kang gumamit ng [chainlist.org](http://chainlist.org) upang makita ang detalye ng RPC ng network. Kapag naidagdag na ang network at natapos na ang transaksyon, makikita mo na ang mga token sa iyong wallet.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

@@ -113,5 +113,5 @@ GitPOAP will also automatically recognize your merged contribution and let you m
 ## Contributors \{#contributors}
 
 {
-	<Contributors />
+<Contributors />
 }

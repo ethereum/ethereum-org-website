@@ -19,7 +19,7 @@ NFTs são tokens que são individualmente exclusivos. Cada NFT contém diferente
 A exclusividade de cada NFT permite a tokenização de itens como arte, colecionáveis ou inclusive imóveis, em que um NFT exclusivo específico representa um item real ou digital único específico. A propriedade de um ativo é garantida pelo blockchain Ethereum – ninguém pode alterar o registro de propriedade ou copiar/colar um novo NFT.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## A Internet de ativos \{#internet-of-assets}
@@ -73,7 +73,7 @@ Este site também tem um nome de domínio alternativo fornecido por NFTs, **ethe
 [Mais sobre ENS](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Segurança do NFT \{#nft-security}
@@ -94,9 +94,9 @@ Os problemas de segurança relacionados aos NFTs são, na maioria das vezes, rel
 - [Padrão de token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

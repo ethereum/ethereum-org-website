@@ -221,7 +221,7 @@ Les preuves récursives, cependant, permettent de finaliser plusieurs blocs avec
 Regardez la vidéo de Finematics qui explique les rollups ZK :
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### Utiliser les rollups ZK \{#use-zk-rollups}
@@ -229,7 +229,7 @@ Regardez la vidéo de Finematics qui explique les rollups ZK :
 Il existe un grand nombre d'implémentations de rollups ZK que vous pouvez intégrer dans vos dApps :
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 ## Qui travaille sur une zkEVM ? \{#zkevm-projects}

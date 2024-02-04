@@ -124,7 +124,7 @@ Az L2 az egyik területe még több kutatást és fejlesztést igényel – ez p
 - [Bevezetés a blokklánchidak működésébe](/bridges/)
 - [Vitalik a hidakról](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [A blokklánchidakról szóló cikk](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [A hidakba ragadt érték](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+- [A hidakba ragadt érték](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### Jelenlegi kutatás \{#recent-research-3}
 

@@ -206,7 +206,7 @@ Los oráculos computacionales también dependen de los nodos fuera de la cadena 
 
 ## Patrones de diseño de los oráculos \{#oracle-design-patterns}
 
-Los oráculos son de diferentes tipos, incluyendo _inmediato-lectura_,_publicar-suscribir_ y_solicitud-respuesta_, siendo los dos últimos los más populares entre los contratos inteligentes de Ethereum. Aquí describimos brevemente los modelos de publicación-suscripción y solicitud-respuesta.
+Los oráculos son de diferentes tipos, incluyendo _inmediato-lectura_,_publicar-suscribir_ y*solicitud-respuesta*, siendo los dos últimos los más populares entre los contratos inteligentes de Ethereum. Aquí describimos brevemente los modelos de publicación-suscripción y solicitud-respuesta.
 
 ### Oráculos publicar-suscribir \{#publish-subscribe-oracles}
 
@@ -278,7 +278,7 @@ La apuesta/votacion también protege a los oráculos descentralizados de los "Sy
 
 ##### Mecanismos de punto de Schelling
 
-[Punto de Shelling](https://en.wikipedia.org/wiki/Focal_point_(game_theory)) es un concepto de la teoría de juegos que asume que múltiples entidades siempre darán por defecto una solución común a un problema en ausencia de cualquier comunicación. Los mecanismos de punto de Shelling se utilizan a menudo en redes de oráculos descentralizados para permitir que los nodos lleguen a un consenso sobre las respuestas a las solicitudes de datos.
+[Punto de Shelling](<https://en.wikipedia.org/wiki/Focal_point_(game_theory)>) es un concepto de la teoría de juegos que asume que múltiples entidades siempre darán por defecto una solución común a un problema en ausencia de cualquier comunicación. Los mecanismos de punto de Shelling se utilizan a menudo en redes de oráculos descentralizados para permitir que los nodos lleguen a un consenso sobre las respuestas a las solicitudes de datos.
 
 Una explicación dada en un principio era la [SchellingCoin](https://blog.ethereum.org/2014/03/28/schellingcoin-a-minimal-trust-universal-data-feed/), una fuente de datos propuesta en la que los participantes envían respuestas a preguntas «escalar» (preguntas cuyas respuestas se describen por magnitud, por ejemplo, "¿cuál es el precio de ETH?), junto con un depósito. Los usuarios que proporcionen valores entre el [percentil](https://en.wikipedia.org/wiki/Percentile) 25 y 75 son recompensados, mientras que aquellos cuyos valores se desvíen de la media son penalizados.
 

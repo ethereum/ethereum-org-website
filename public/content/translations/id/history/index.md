@@ -26,7 +26,7 @@ Langsung menuju informasi tentang beberapa peningkatan penting di masa lalu: [Ra
 Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang upgrade mendatang pada peta perjalanan Ethereum](/roadmap/).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2023 \{#2023}
@@ -34,7 +34,7 @@ Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang upgrade
 ### Shanghai \{#shanghai}
 
 {
-	<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shanghai" />
 }
 
 #### Ringkasan \{#shanghai-summary}
@@ -62,7 +62,7 @@ Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan 
 ### Capella \{#capella}
 
 {
-	<NetworkUpgradeSummary name="capella" />
+<NetworkUpgradeSummary name="capella" />
 }
 
 #### Ringkasan \{#capella-summary}
@@ -77,7 +77,7 @@ Peningkatan ini juga menyediakan fungsionalitas pemindaian akun otomatis, yang t
 - [Baca spesifikasi peningkatan Capella](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2022 \{#2022}
@@ -85,7 +85,7 @@ Peningkatan ini juga menyediakan fungsionalitas pemindaian akun otomatis, yang t
 ### Paris (Penggabungan) \{#paris}
 
 {
-	<NetworkUpgradeSummary name="paris" />
+<NetworkUpgradeSummary name="paris" />
 }
 
 #### Ringkasan \{#paris-summary}
@@ -110,7 +110,7 @@ Peningkatan Paris dipicu oleh rantai blok bukti kerja mencapai [total tingkat ke
 ### Bellatrix \{#bellatrix}
 
 {
-	<NetworkUpgradeSummary name="bellatrix" />
+<NetworkUpgradeSummary name="bellatrix" />
 }
 
 #### Ringkasan \{#bellatrix-summary}
@@ -124,7 +124,7 @@ Peningkatan Bellatrix adalah peningkatan terjadwal kedua untuk [Rantai Suar](/ro
 ### Gray Glacier \{#gray-glacier}
 
 {
-	<NetworkUpgradeSummary name="grayGlacier" />
+<NetworkUpgradeSummary name="grayGlacier" />
 }
 
 #### Ringkasan \{#gray-glacier-summary}
@@ -144,7 +144,7 @@ Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2021 \{#2021}
@@ -152,7 +152,7 @@ Peningkatan jaringan Gray Glacier menunda [bomb kesulitan](/glossary/#difficulty
 ### Arrow Glacier \{#arrow-glacier}
 
 {
-	<NetworkUpgradeSummary name="arrowGlacier" />
+<NetworkUpgradeSummary name="arrowGlacier" />
 }
 
 #### Ringkasan \{#arrow-glacier-summary}
@@ -177,7 +177,7 @@ Peningkatan jaringan Arrow Glacier menjeda [bom kesulitan](/glossary/#difficulty
 ### Altair \{#altair}
 
 {
-	<NetworkUpgradeSummary name="altair" />
+<NetworkUpgradeSummary name="altair" />
 }
 
 #### Ringkasan \{#altair-summary}
@@ -197,7 +197,7 @@ Altair adalah peningkatan besar dan pertama untuk jaringan yang memiliki waktu r
 ### London \{#london}
 
 {
-	<NetworkUpgradeSummary name="london" />
+<NetworkUpgradeSummary name="london" />
 }
 
 #### Ringkasan \{#london-summary}
@@ -227,7 +227,7 @@ Peningkatan London memperkenalkan [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 ### Berlin \{#berlin}
 
 {
-	<NetworkUpgradeSummary name="berlin" />
+<NetworkUpgradeSummary name="berlin" />
 }
 
 #### Ringkasan \{#berlin-summary}
@@ -251,7 +251,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2020 \{#2020}
@@ -259,7 +259,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 ### Genesis Rantai Suar \{#beacon-chain-genesis}
 
 {
-	<NetworkUpgradeSummary name="beaconChainGenesis" />
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
 #### Ringkasan \{#beacon-chain-genesis-summary}
@@ -277,7 +277,7 @@ Peningkatan Berlin mengoptimalkan harga gas untuk beberapa aksi EVM, dan meningk
 ### Kontrak setoran penaruhan dibuat \{#staking-deposit-contract}
 
 {
-	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
 #### Ringkasan \{#deposit-contract-summary}
@@ -295,7 +295,7 @@ Kontrak setoran penaruhan memperkenalkan [penaruhan](/glossary/#staking) ke ekos
 ### Muir Glacier \{#muir-glacier}
 
 {
-	<NetworkUpgradeSummary name="muirGlacier" />
+<NetworkUpgradeSummary name="muirGlacier" />
 }
 
 #### Ringkasan \{#muir-glacier-summary}
@@ -316,7 +316,7 @@ Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2019 \{#2019}
@@ -324,7 +324,7 @@ Fork Gletser Muir memperkenalkan penundaan pada [bom kesulitan](/glossary/#diffi
 ### Istanbul \{#istanbul}
 
 {
-	<NetworkUpgradeSummary name="istanbul" />
+<NetworkUpgradeSummary name="istanbul" />
 }
 
 #### Ringkasan \{#istanbul-summary}
@@ -359,7 +359,7 @@ Garpu Istanbul:
 ### Constantinople \{#constantinople}
 
 {
-	<NetworkUpgradeSummary name="constantinople" />
+<NetworkUpgradeSummary name="constantinople" />
 }
 
 #### Ringkasan \{#constantinople-summary}
@@ -386,7 +386,7 @@ Fork Konstantinopel:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2017 \{#2017}
@@ -394,7 +394,7 @@ Fork Konstantinopel:
 ### Byzantium \{#byzantium}
 
 {
-	<NetworkUpgradeSummary name="byzantium" />
+<NetworkUpgradeSummary name="byzantium" />
 }
 
 #### Ringkasan \{#byzantium-summary}
@@ -427,7 +427,7 @@ Fork Byzantium:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2016 \{#2016}
@@ -435,7 +435,7 @@ Fork Byzantium:
 ### Spurious Dragon \{#spurious-dragon}
 
 {
-	<NetworkUpgradeSummary name="spuriousDragon" />
+<NetworkUpgradeSummary name="spuriousDragon" />
 }
 
 #### Ringkasan \{#spurious-dragon-summary}
@@ -466,7 +466,7 @@ Garpu Spurious Dragon adalah respons kedua terhadap serangan penolakan layanan (
 ### Tangerine whistle \{#tangerine-whistle}
 
 {
-	<NetworkUpgradeSummary name="tangerineWhistle" />
+<NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
 #### Ringkasan \{#tangerine-whistle-summary}
@@ -493,7 +493,7 @@ Garpu Tangerine Whistle adalah respons pertama terhadap serangan denial of servi
 ### Garpu DAO \{#dao-fork}
 
 {
-	<NetworkUpgradeSummary name="daoFork" />
+<NetworkUpgradeSummary name="daoFork" />
 }
 
 #### Ringkasan \{#dao-fork-summary}
@@ -511,7 +511,7 @@ Beberapa penambang menolak melakukan garpu karena insiden DAO bukan merupakan ke
 ### Homestead \{#homestead}
 
 {
-	<NetworkUpgradeSummary name="homestead" />
+<NetworkUpgradeSummary name="homestead" />
 }
 
 #### Ringkasan \{#homestead-summary}
@@ -533,7 +533,7 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2015 \{#2015}
@@ -541,7 +541,7 @@ Garpu Homestead yang melihat ke masa depan. Ini termasuk beberapa perubahan prot
 ### Thawing frontier \{#frontier-thawing}
 
 {
-	<NetworkUpgradeSummary name="frontierThawing" />
+<NetworkUpgradeSummary name="frontierThawing" />
 }
 
 #### Ringkasan \{#frontier-thawing-summary}
@@ -556,7 +556,7 @@ Garpu thawing frontier mengangkat batas [gas](/glossary/#gas) 5.000 per [blok](/
 ### Garis depan \{#frontier}
 
 {
-	<NetworkUpgradeSummary name="frontier" />
+<NetworkUpgradeSummary name="frontier" />
 }
 
 #### Ringkasan \{#frontier-summary}
@@ -566,7 +566,7 @@ Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini
 [Baca pengumuman Yayasan Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2014 \{#2014}
@@ -574,7 +574,7 @@ Frontier adalah implementasi langsung, tetapi barebone dari proyek Ethereum. Ini
 ### Penjualan Ether \{#ether-sale}
 
 {
-	<NetworkUpgradeSummary name="etherSale" />
+<NetworkUpgradeSummary name="etherSale" />
 }
 
 Ether secara resmi mulai dijual selama 42 hari. Anda dapat membelinya dengan BTC.
@@ -586,7 +586,7 @@ Ether secara resmi mulai dijual selama 42 hari. Anda dapat membelinya dengan BTC
 ### Yellowpaper dirilis \{#yellowpaper}
 
 {
-	<NetworkUpgradeSummary name="yellowpaperRelease" />
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 }
 
 Yellow Paper, yang ditulis oleh Dr. Gavin Wood, adalah definisi teknis dari protokol Ethereum.
@@ -594,7 +594,7 @@ Yellow Paper, yang ditulis oleh Dr. Gavin Wood, adalah definisi teknis dari prot
 [Lihat Yellow Paper](https://github.com/ethereum/yellowpaper)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2013 \{#2013}
@@ -602,7 +602,7 @@ Yellow Paper, yang ditulis oleh Dr. Gavin Wood, adalah definisi teknis dari prot
 ### Kertas putih dirilis \{#whitepaper}
 
 {
-	<NetworkUpgradeSummary name="whitepaperRelease" />
+<NetworkUpgradeSummary name="whitepaperRelease" />
 }
 
 Makalah pengantar, diterbitkan pada tahun 2013 oleh Vitalik Buterin, pendiri Ethereum, sebelum peluncuran proyek pada tahun 2015.

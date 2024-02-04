@@ -4,7 +4,7 @@ description: Conozca más sobre La Fusión y sobre cuándo la red principal de E
 lang: es
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: La red principal de Ethereum usa prueba de participación, pero esto no fue siempre el caso.
 summaryPoint2: La actualización del mecanismo original de prueba de trabajo a prueba de participación se denominó «La fusión».
 summaryPoint3: La Fusión se refiere a la fusión original de la red principal de Ethereum con una cadena de bloques de prueba de participación independiente llamada la cadena de bloques, que ahora existe como una cadena.
@@ -20,7 +20,7 @@ summaryPoint4: La Fusión reduce el consumo de energía de Ethereum en un ~99.95
 La fusión fue la unión de la capa de ejecución inicial de Ethereum (la red principal que ha existido desde el [génesis](/history/#frontier)) con su nueva capa de consenso de prueba de participación, la cadena de baliza. Eliminó la necesidad de la minería conun consumo intensivo de energía y, en su lugar, permitió asegurar la red utilizando ETH apostados. Es un paso verdaderamente emocionante para hacer la visión de Ethereum una realidad: más escalabilidad, seguridad y sostenibilidad.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Inicialmente, la [cadena de baliza](/roadmap/beacon-chain/) se lanzó de manera separada de la [red principal](/glossary/#mainnet). La red principal de Ethereum, con todas sus cuentas, balances, contratos inteligentes y estado de la cadena de bloques, continúa siendo asegurdad por el mecanismo de [prueba de participación](/developers/docs/consensus-mechanisms/pow/), incluso cuando la cadena de baliza se ejecuta en paralelo usando la [prueba de participación](/developers/docs/consensus-mechanisms/pos/). La Fusión se produce cuando estos dos sistemas finalmente se unen, siendo la prueba de trabajo permanentemente remplazada por la prueba de participación.
@@ -243,9 +243,9 @@ Los planes de fragmentación están evolucionando rápidamente, pero dado el aug
 ## Más información \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

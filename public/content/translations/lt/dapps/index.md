@@ -19,7 +19,7 @@ Geriausias būdas pradėti naudoti Ethereum – pasinerti į ją iškart!
 Štai keletas programų, sukurtų su Ethereum – dažnai kaitaliojame šį sąrašą!
 
 {
-	<RandomAppList />
+<RandomAppList />
 }
 
 Norite pamatyti daugiau su Ethereum sukurtų programų?

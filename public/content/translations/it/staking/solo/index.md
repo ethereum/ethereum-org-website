@@ -84,13 +84,13 @@ Differente dalle sanzioni di inattività per esser offline, il <em>taglio</em> �
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Come funziona \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Quando saranno attivi, riceverai le ricompense in ETH, che saranno depositate periodicamente al tuo indirizzo di prelievo.
@@ -104,7 +104,7 @@ Se lo desideri, puoi smettere di essere un validatore; in questo modo viene meno
 Il Launchpad di Staking è un'applicazione open source che ti aiuterà a diventare uno staker. Ti guiderà per la scelta dei tuoi client, la generazione delle tue chiavi e il deposito dei tuoi ETH al contratto di deposito di staking. Una lista di controllo è fornita per assicurarsi che tu abbia coperto tutto per configurare in sicurezza il tuo validatore.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Cosa considerare con il nodo e gli strumenti di configurazione del client \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Esistono sempre più strumenti e servizi per aiutarti a mettere i tuoi ETH in st
 Gli indicatori di attributo sono usati di seguito per segnalare punti di forza e debolezze notevoli che uno strumento di staking elencato potrebbe avere. Usa questa sezione come un riferimento per come definire questi attributi mentre stai scegliendo quali strumenti usare per guidarti per il tuo percorso di staking.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Esplora gli strumenti del nodo e di configurazione del client \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Gli indicatori di attributo sono usati di seguito per segnalare punti di forza e
 Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazione. Gli indicatori di cui sopra ti guideranno per gli strumenti seguenti.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Strumenti del nodo
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
@@ -138,7 +138,7 @@ Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/node
 Questi strumenti sono utilizzabili come un'alternativa alla [CLI di deposito di staking](https://github.com/ethereum/staking-deposit-cli/) per contribuire alla generazione di chiavi.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.
@@ -146,7 +146,7 @@ Hai un suggerimento per uno strumento di staking che abbiamo dimenticato? Dai un
 ## Esplora le guide di staking in solo \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Domande frequenti \{#faq}

@@ -21,7 +21,7 @@ If you would like to see how blockchain data is hashed and subsequently appended
 Watch Anders explain hashes in blockchains:
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## What is Ethereum? \{#what-is-ethereum}

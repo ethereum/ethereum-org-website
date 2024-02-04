@@ -122,7 +122,7 @@ The best way to handle links is to copy them directly from the source, either by
 
 ![Example of link.png](./example-of-link.png)
 
-Links also appear in the source text in the form of tags (i.e. <0> </0>). If you hover over the tag, the editor will show its full content - sometimes these tags will represent links.
+Links also appear in the source text in the form of tags (i.e. `<0>` `</0>`). If you hover over the tag, the editor will show its full content - sometimes these tags will represent links.
 
 It is very important to copy the links from the source and not change their order.
 
@@ -160,7 +160,7 @@ nonce - _Non-translatable text_
 
 The source text also contains shortened tags, which only contain numbers, meaning that their function is not immediately obvious. You can hover over these tags to see exactly which function they serve.
 
-In the example below, you can see that hovering over the <0> tag shows that it represents `<code>` and contains a code snippet, therefore the content inside these tags should not be translated.
+In the example below, you can see that hovering over the `<0>` tag shows that it represents `<code>` and contains a code snippet, therefore the content inside these tags should not be translated.
 
 ![Example of ambiguous tags.png](./example-of-ambiguous-tags.png)
 

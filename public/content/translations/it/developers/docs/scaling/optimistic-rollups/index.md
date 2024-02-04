@@ -248,7 +248,7 @@ L'introduzione dello [sharding dei dati](/roadmap/danksharding/) su Ethereum dov
 Preferisci un approccio visivo all'apprendimento? Guarda Finematics spiegare i rollup ottimistici:
 
 {
-	<YouTube id="7pWxCklcNsU" start="263" />
+<YouTube id="7pWxCklcNsU" start="263" />
 }
 
 ### Utilizzo dei rollup ottimistici \{#use-optimistic-rollups}
@@ -256,7 +256,7 @@ Preferisci un approccio visivo all'apprendimento? Guarda Finematics spiegare i r
 Esistono molteplici implementazioni dei rollup ottimistici, che puoi integrare nelle tue dapp:
 
 {
-	<RollupProductDevDoc rollupType="optimistic" />
+<RollupProductDevDoc rollupType="optimistic" />
 }
 
 ## Ulteriori letture sui rollup ottimistici

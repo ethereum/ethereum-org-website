@@ -121,18 +121,18 @@ lang: fa
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _مفهوم DAO را در زمینه غیر فناوری ترویج می‌کند و به مردم کمک در ایجاد ارزش از طریق DAO کمک می‌کند_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _جامعه‌ی سازندگانی که به مالکیت جمعی اینترنت اعتقاد دارند_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند_
 - [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _توسعه‌ی غیرمتمرکز و حاکمیت dAppها و پروتکل‌ها_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _حاکمیت اجتماعی DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _فرانچایز ابرقهرمانی متعلق به انجمن_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *جامعه‌ی هنری*
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *مرکز پرورش DAO*
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *برندهای پوشاک دیجیتالی*
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _مهندسی حقوقی_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _جامعه‌ی هنری_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _مرکز پرورش DAO_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _مکانیزم‌های بازی‌های MMORPG در زمان حال_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _برندهای پوشاک دیجیتالی_
 - [ΜΓΔ](https://metagammadelta.com/) (متا گاما دلتا) [@metagammadelta](https://twitter.com/metagammadelta) - _پروژه‌های تحت هدایت زنان_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم*
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *مجموعه‌ی سازندگان Web3*
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _مجموعه‌ی سازندگان Web3_
 
 لطفا هر زمان خواستید در ethereum.org مشارکت کنید به یاد داشته باشید از [منشور اخلاقی](/community/code-of-conduct) ethereum.org پیروی کنید!

@@ -8,7 +8,7 @@ lang: tr
 # Ethereum Vakfı Hakkında \{#about-the-ethereum-foundation}
 
 {
-	<Logo/>
+<Logo/>
 }
 
 [Ethereum Vakfı](http://ethereum.foundation/) (EF) kendisini [Ethereum](/what-is-ethereum/) ve ilgili teknolojileri desteklemeye adanmış, kâr amacı gütmeyen bir organizasyondur.

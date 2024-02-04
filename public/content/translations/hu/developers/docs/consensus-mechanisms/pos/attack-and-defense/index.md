@@ -66,7 +66,7 @@ Egy kifinomultabb támadás a becsületes validátorok halmazát különálló c
 **A pattogó (bouncing) támadások** hasonlóak. A szavazatokat a támadó validátorok ismét visszatartják. Ahelyett, hogy a szavazatokat úgy adnák le, hogy a két elágazás között egyenletes legyen a felosztás, a megfelelő pillanatokban arra használják a szavazataikat, hogy olyan ellenőrzőpontokat igazoljanak, amelyek felváltva váltakoznak az A és a B elágazás között. A tanúsításnak ez a két elágazás közötti felcserélése megakadályozza, hogy olyan igazolt forrás- és célellenőrzési pontok párjai legyenek, amelyek bármelyik láncban véglegesíthetők, ami megállítja a véglegesítést.
 
 {
-	<YouTube id="xcPxwhrg3Ao"/>
+<YouTube id="xcPxwhrg3Ao"/>
 }
 
 Mind a pattogó (bouncing), mind a kiegyenlítő (balancing) támadás arra épül, hogy a támadónak kifinomult kontrollja van az üzenetek időzítése felett a hálózaton keresztül, ami nem valószínű. Mindazonáltal a protokollba védelmet építettek be a gyors üzeneteknek a lassú üzenetekkel szemben adott többletsúlyozás formájában. Ez az úgynevezett [javaslattevő-súlynövelés (proposer-weight boosting)](https://github.com/ethereum/consensus-specs/pull/2730). A pattogó támadások elleni védekezés érdekében az elágazásválasztó algoritmust úgy frissítették, hogy a legutóbbi igazolt ellenőrzőpont csak [az adott korszak slotjainak első 1/3-ában](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114) válthat át egy alternatív láncra. Ez a feltétel megakadályozza, hogy a támadó szavazatokat gyűjtsön a későbbi használatra – az elágazásválasztó algoritmus egyszerűen hű marad ahhoz az ellenőrzőponthoz, amelyet a korszak első 1/3-ában választott, amely idő alatt a legtöbb becsületes validátor szavazott volna.

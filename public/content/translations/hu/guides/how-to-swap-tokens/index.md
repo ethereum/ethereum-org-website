@@ -48,7 +48,7 @@ Bármelyik blokkláncböngészővel megtekintheti a tranzakció állapotát. Ez 
 
 A tranzakció végrehajtása után automatikusan megkapja a tárcájába a beszerzett tokent.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

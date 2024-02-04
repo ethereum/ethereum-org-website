@@ -115,11 +115,11 @@ A számla nem egyenlő a tárcával. A számla az a kulcspár, amely a felhaszn�
 Nézze meg, ahogy Austin elmagyarázza a hash funkciót és a kulcspárokat.
 
 {
-	<YouTube id="QJ010l-pBpE" />
+<YouTube id="QJ010l-pBpE" />
 }
 
 {
-	<YouTube id="9LtBDy67Tho" />
+<YouTube id="9LtBDy67Tho" />
 }
 
 ## További olvasnivaló \{#further-reading}

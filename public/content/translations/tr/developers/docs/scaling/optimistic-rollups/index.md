@@ -248,7 +248,7 @@ Bu, iyimser toplama işlemlerinin asla tam bir Ethereum bloğunu oluşturamayaca
 Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hakkındaki açıklamasını izleyin:
 
 {
-	<YouTube id="7pWxCklcNsU" start="263" />
+<YouTube id="7pWxCklcNsU" start="263" />
 }
 
 ### İyimser toplamaları kullanın \{#use-optimistic-rollups}
@@ -256,7 +256,7 @@ Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hak
 Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok İyimser toplama uygulaması mevcuttur:
 
 {
-	<RollupProductDevDoc rollupType="optimistic" />
+<RollupProductDevDoc rollupType="optimistic" />
 }
 
 ## İyimser toplamalara dair daha fazlası

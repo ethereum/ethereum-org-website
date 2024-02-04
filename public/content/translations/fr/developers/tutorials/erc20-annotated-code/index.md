@@ -129,7 +129,7 @@ La fonction `allowance` permet à quiconque de demander à voir quelle allocatio
     /**
      * @dev  Définit l''amount` comme étant l'allocation que le `spender` attribue aux jetons de l'appelant.
      *
-     * Renvoie une valeur booléenne indiquant si l'opération a réussi. 
+     * Renvoie une valeur booléenne indiquant si l'opération a réussi.
      *
      * IMPORTANT: Attention ! Modifier une allocation par ce biais comporte un risque :
      * celui que quelqu'un puisse utiliser à la fois l'ancienne et la nouvelle allocation en activant une
@@ -150,7 +150,7 @@ La fonction `approve` crée une autorisation. Veillez à lire le message expliqu
 ```solidity
     /**
      * @dev Déplace l``amount` des jetons du `sender`  vers le `recipient`  grâce au
-     * mécanisme d'allocation. l'`amount` est ensuite déduit de l'  
+     * mécanisme d'allocation. l'`amount` est ensuite déduit de l'
      * allocation de l'appelant.
      *
      * Renvoie une valeur booléenne indiquant si l'opération a réussi.
@@ -351,7 +351,7 @@ Le constructeur est appelé lorsque le contrat est créé pour la première fois
      * éther et wei. C'est la valeur {ERC20} utilisée, sauf si {_setupDecimals} est
      * appelé.
      *
-     * REMARQUE : Cette information n'est utilisée qu'à des fins _affichage_ : 
+     * REMARQUE : Cette information n'est utilisée qu'à des fins _affichage_ :
      * elle n'affecte en aucune façon l'arithmétique du contrat, y compris
      * {IERC20-balanceOf} et {IERC20-transfer}.
      */
@@ -525,7 +525,7 @@ Pour éviter ce problème, ces deux fonctions (`increaseAllowance` et `decreaseA
 A :
 
 | Transaction d'Alice        | Nonce d'Alice | Transaction de Bill          | Nonce de Bill | Provision de Bill | Total facturé par Bill à Alice |
-| -------------------------- | -------------:| ---------------------------- | -------------:| -----------------:| ------------------------------ |
+| -------------------------- | ------------: | ---------------------------- | ------------: | ----------------: | ------------------------------ |
 | approve(Bill, 5)           |            10 |                              |               |                 5 | 0                              |
 |                            |               | transferFrom(Alice, Bill, 5) |        10,123 |                 0 | 5                              |
 | increaseAllowance(Bill, 5) |            11 |                              |               |           0+5 = 5 | 5                              |
@@ -534,7 +534,7 @@ A :
 B :
 
 | Transaction d'Alice        | Nonce d'Alice | Transaction de Bill           | Nonce de Bill | Provision de Bill | Total facturé par Bill à Alice |
-| -------------------------- | -------------:| ----------------------------- | -------------:| -----------------:| ------------------------------:|
+| -------------------------- | ------------: | ----------------------------- | ------------: | ----------------: | -----------------------------: |
 | approve(Bill, 5)           |            10 |                               |               |                 5 |                              0 |
 | increaseAllowance(Bill, 5) |            11 |                               |               |          5+5 = 10 |                              0 |
 |                            |               | transferFrom(Alice, Bill, 10) |        10 124 |                 0 |                             10 |

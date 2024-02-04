@@ -9,7 +9,7 @@ lang: it
 _Web3 si è evoluto in un ecosistema delle blockchain del L1 e soluzioni di ridimensionamento del L2, ognuna progettata con capacità e compromessi unici. All'aumentare del numero di protocolli delle blockchain, aumenta anche [la domanda di spostare risorse tra le catene](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Per soddisfare questa domanda, necessitiamo dei ponti._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Cosa sono i ponti? \{#what-are-bridges}
@@ -40,7 +40,7 @@ I ponti consentono:
 [Come collegare i token al livello 2](/guides/how-to-use-a-bridge/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Casi d'uso dei ponti \{#bridge-use-cases}
@@ -68,7 +68,7 @@ Diciamo che vuoi possedere Bitcoin (BTC) nativi, ma hai fondi soltanto sulla Ret
 </InfoBanner>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Tipi di ponte \{#types-of-bridge}
@@ -100,7 +100,7 @@ Il controllo automatico è simile a un modello non fiduciario, poiché rimuove i
 Molte soluzioni di collegamento adottano modelli tra questi due estremi, con gradi di fiducia variabili.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Rischi nell'uso dei ponti \{#bridge-risk}
@@ -128,7 +128,7 @@ Una hack recente è quella del ponte del Wormhole di Solana, [in cui 120k di wET
 I ponti sono fondamentali per accogliere gli utenti sui L2 di Ethereum e persino per gli utenti che desiderano esplorare diversi ecosistemi. Tuttavia, dati i rischi comportati dall'interazione coi ponti, gli utenti devono comprenderne i compromessi. Ecco alcune [strategie per la sicurezza tra le catene](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Ulteriori letture \{#further-reading}

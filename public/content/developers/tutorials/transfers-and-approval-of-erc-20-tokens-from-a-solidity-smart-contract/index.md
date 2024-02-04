@@ -197,7 +197,7 @@ If everything works you should see 2 events (a `Transfer` and `Sold`) in the tra
 ![Two events in the transaction: Transfer and Sold](./transfer-and-sold-events.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 From this tutorial we saw how to check the balance and allowance of an ERC-20 token and also how to call `Transfer` and `TransferFrom` of an ERC20 smart contract using the interface.

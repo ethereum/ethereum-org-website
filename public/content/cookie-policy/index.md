@@ -14,7 +14,7 @@ Our Websites may use cookies to distinguish you from other users of our Websites
 - **Targeting cookies.** These cookies record your visit to our websites, the pages you have visited and the links you have followed.
 
 {
-	<MatomoOptOut />
+<MatomoOptOut />
 }
 
 You can find more information about the individual cookies we may use and the purposes for which we may use them in the table below:

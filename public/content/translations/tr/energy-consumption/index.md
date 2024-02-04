@@ -13,22 +13,22 @@ Ethereum için enerji tüketim tahmini [CCRI (Crypto Carbon Ratings Institute)](
 Ethereum'un enerji tüketimini bir bağlama oturtmak için, diğer ürünler ve endüstriler için yıllık yapılan tahminleri karşılaştırabiliriz. Bu, bize Ethereum için tahminin düşük ya da yüksek olduğunu daha iyi anlamamıza yardım ediyor.
 
 {
-	<EnergyConsumptionChart />
+<EnergyConsumptionChart />
 }
 
 Yukarıdaki tablo, diğer ürün ve endüstrilere kıyasla Ethereum için tahmini yıllık enerji tüketimini TWh/yıl cinsinden göstermektedir. Sunulan tahminler Temmuz 2023'te herkese açık bilgilerden alınmıştır, kaynak bağlantıları aşağıdaki tabloda mevcuttur.
 
 |                         | Yıllık enerji tüketimi (TWh) | PoS Ethereum ile karşılaştırma |                                                                                      Kaynak                                                                                       |
-|:----------------------- |:----------------------------:|:------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| :---------------------- | :--------------------------: | :----------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Küresel veri merkezleri |             190              |            73,000x             |                                    [kaynak](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
 | Bitcoin                 |             149              |            53,000x             |                                                                 [kaynak](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
 | Altın madenciliği       |             131              |            50.000x             |                                                                 [kaynak](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
-| ABD'de oyun\*         |              34              |            13.000x             |                 [kaynak](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
+| ABD'de oyun\*           |              34              |            13.000x             |                 [kaynak](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
 | PoW Ethereum            |              21              |             8,100x             |                                                                    [kaynak](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
 | Google                  |              19              |             7,300x             |                                           [kaynak](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
 | Netflix                 |            0,457             |              176x              | [kaynak](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal                  |             0,26             |              100x              |                                  [kaynak](https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf)                                   |
-| AirBnB                  |             0,02             |               8x               |                               [kaynak](https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf)                               |
+| PayPal                  |             0,26             |              100x              |                                 [kaynak](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB                  |             0,02             |               8x               |                              [kaynak](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
 | **PoS Ethereum**        |          **0,0026**          |             **1x**             |                                                               [kaynak](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*PC'ler, dizüstü bilgisayarlar ve oyun konsolları gibi son kullanıcı cihazlarını içerir.

@@ -27,7 +27,7 @@ Gdy dany blok jest już złożony (wydobyty) przez jakiegoś górnika w sieci, j
 ### Demo wizualne \{#a-visual-demo}
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## Protokół proof-of-work (dowodu wykonanej pracy) \{#proof-of-work-protocol}

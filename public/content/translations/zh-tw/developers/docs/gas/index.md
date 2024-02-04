@@ -54,28 +54,28 @@ lang: zh-tw
 
 此基本費用透過一個公式計算，該公式比較前一個區塊的大小（所有交易使用的燃料用量）與目標區塊大小。 如果超出目標區塊大小，每個區塊的基本費用將最大增加 12.5%。 這種指數級增長讓區塊大小無限增加在經濟上不可行。
 
-| 區塊編號 | 包含燃料 |  費用增幅 |     當前基本費用 |
-| ---- | ----:| -----:| ----------:|
-| 1    |  15M |    0% |   100 gwei |
-| 2    |  30M |    0% |   100 gwei |
-| 3    |  30M | 12.5% | 112.5 gwei |
-| 4    |  30M | 12.5% | 126.6 gwei |
-| 5    |  30M | 12.5% | 142.4 gwei |
-| 6    |  30M | 12.5% | 160.2 gwei |
-| 7    |  30M | 12.5% | 180.2 gwei |
-| 8    |  30M | 12.5% | 202.7 gwei |
+| 區塊編號 | 包含燃料 | 費用增幅 | 當前基本費用 |
+| -------- | -------: | -------: | -----------: |
+| 1        |      15M |       0% |     100 gwei |
+| 2        |      30M |       0% |     100 gwei |
+| 3        |      30M |    12.5% |   112.5 gwei |
+| 4        |      30M |    12.5% |   126.6 gwei |
+| 5        |      30M |    12.5% |   142.4 gwei |
+| 6        |      30M |    12.5% |   160.2 gwei |
+| 7        |      30M |    12.5% |   180.2 gwei |
+| 8        |      30M |    12.5% |   202.7 gwei |
 
 依據上表 -- 要在 9 號區塊中建立一筆交易，錢包會讓使用者明確知道將交易添加到下一個區塊中的**最大基本費用**為 `current base fee * 112.5%` 或 `202.7 gwei * 112.5% = 228.1 gwei`。
 
 值得注意的是，因為基本費用在區塊變滿之前增加的速度很快，我們不太可能看到大量已滿區塊連續出現。
 
-| 區塊編碼 | 包含Gas費 |  增加費用 |          目前基本費用 |
-| ---- | ------:| -----:| ---------------:|
-| 30   |    30M | 12.5% |     2705.6 gwei |
-| ...  |    ... | 12.5% |             ... |
-| 50   |    30M | 12.5% |    28531.3 gwei |
-| ...  |    ... | 12.5% |             ... |
-| 100  |    30M | 12.5% | 10302608.6 gwei |
+| 區塊編碼 | 包含 Gas 費 | 增加費用 |    目前基本費用 |
+| -------- | ----------: | -------: | --------------: |
+| 30       |         30M |    12.5% |     2705.6 gwei |
+| ...      |         ... |    12.5% |             ... |
+| 50       |         30M |    12.5% |    28531.3 gwei |
+| ...      |         ... |    12.5% |             ... |
+| 100      |         30M |    12.5% | 10302608.6 gwei |
 
 ### 優先費（小費） \{#priority-fee}
 
@@ -132,7 +132,7 @@ lang: zh-tw
 此影片解釋 EIP-1599 及其帶來的好處：
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 ## 監控燃料費 \{#moitoring-gas-fees}
@@ -141,7 +141,7 @@ lang: zh-tw
 
 - [Etherscan](https://etherscan.io/gastracker) _交易燃料費價格估算器_
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _燃料估算 Chrome 延伸模組，支援 0 類原始交易及 2 類 EIP-1559 交易。_
-- [Cryptoneur燃料Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _在主網、Arbitrum、Polygon 上使用當地貨幣計算不同交易類型的燃料費。_
+- [Cryptoneur 燃料 Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _在主網、Arbitrum、Polygon 上使用當地貨幣計算不同交易類型的燃料費。_
 
 ## 相關工具 \{#related-tools}
 

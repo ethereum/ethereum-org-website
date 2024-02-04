@@ -9,7 +9,7 @@ lang: pt-br
 _Web3 evoluiu para um ecossistema de soluções de escala L1 e L2, cada uma projetada com capacidades e escolhas únicas. À medida que o número de protocolos blockchain aumenta, também aumenta [a demanda para mover ativos entre as cadeias](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Para atender a essa demanda, precisamos de pontes._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## O que são pontes? \{#what-are-bridges}
@@ -40,7 +40,7 @@ Pontes possibilitam:
 [Como fazer bridge de tokens para a camada 2](/guides/how-to-use-a-bridge/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Casos de utilização de pontes \{#bridge-use-cases}
@@ -68,7 +68,7 @@ Digamos que você queira possuir Bitcoin nativo (BTC), mas você só tem fundos 
 </InfoBanner>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Tipos de pontes \{#types-of-bridge}
@@ -100,7 +100,7 @@ O check-in automático é semelhante a um modelo sem confiança, pois remove o p
 Muitas soluções de ponte adotam modelos entre esses dois extremos, com graus variados de necessidade mínima de confiança.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Riscos ao usar pontes \{#bridge-risk}
@@ -128,7 +128,7 @@ Um ataque hacker recente foi a ponte Wormhole da Solana, [onde 120k wETH (US$ 32
 As pontes são cruciais para integrar usuários às camadas 2 do Ethereum e até mesmo para usuários que desejam explorar diferentes ecossistemas. Entretanto, dados os riscos envolvidos na interação com as pontes, os usuários devem entender as trocas que as pontes estão fazendo. Estas são algumas [estratégias para segurança entre cadeias](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Leitura adicional \{#further-reading}

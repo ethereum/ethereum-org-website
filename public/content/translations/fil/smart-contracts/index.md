@@ -74,7 +74,7 @@ Magagawa ng mga itong mag-compute, gumawa ng currency, mag-store ng data, mag-mi
 Panoorin ang paliwanag sa Finematics tungkol sa mga smart contract:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Karagdagang pagbabasa \{#further-reading}

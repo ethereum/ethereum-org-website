@@ -73,7 +73,7 @@ Puoi vedere tutte le funzioni disponibili sull'istanza di web3 nella [documentaz
 Gran parte delle librerie di Web3 sono asincrone perché, in background, la libreria effettua chiamate RPC di JSON al nodo, il quale restituisce il risultato.
 
 {
-	<Divider />
+<Divider />
 }
 
 Se lavori nel browser, alcuni portafogli iniettano direttamente un'istanza Web3 e dovresti provare a usarla appena possibile, specialmente se prevedi di interagire con l'indirizzo di Ethereum dell'utente per effettuare le transazioni.

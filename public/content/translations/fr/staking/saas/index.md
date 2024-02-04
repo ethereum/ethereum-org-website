@@ -28,7 +28,7 @@ Le protocole Ethereum ne soutient pas nativement la délégation de mise en jeu.
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Ce que vous devez prendre en compte \{#what-to-consider}
@@ -38,7 +38,7 @@ Il existe un nombre croissant de fournisseurs de services SaaS pour vous aider �
 Les indicateurs sont listés ci-dessous pour signaler les forces ou faiblesses notables d'un fournisseur SaaS répertorié. Utilisez cette section comme référence pour définir ces indicateurs pendant que vous choisissez un pool à rejoindre.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Explorer les fournisseurs de services de mise en jeu \{#saas-providers}
@@ -46,13 +46,13 @@ Les indicateurs sont listés ci-dessous pour signaler les forces ou faiblesses n
 Vous trouverez ci-dessous quelques fournisseurs SaaS disponibles. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Fournisseurs SaaS
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Veuillez noter l'importance de choisir un service qui prend au sérieux [la diversité des clients](/developers/docs/nodes-and-clients/client-diversity/) , car elle améliore la sécurité du réseau et limite vos risques. Les services prouvant que l'utilisation d'un client majoritaire est limitée sont indiqués avec <em style={{ textTransform: "uppercase" }}>"diversité des clients d'exécution"</em> et <em style={{ textTransform: "uppercase" }}>"diversité des clients de consensus."</em>
@@ -60,7 +60,7 @@ Veuillez noter l'importance de choisir un service qui prend au sérieux [la dive
 ### Générateurs de clés
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Avez-vous une suggestion concernant un fournisseur de mise en jeu en tant que service que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.

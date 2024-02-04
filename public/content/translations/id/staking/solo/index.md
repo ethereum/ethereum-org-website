@@ -85,13 +85,13 @@ Berbeda dari hukuman ketidakaktifan karena offline, <em>pemotongan</em> merupaka
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Cara kerjanya \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Saat aktif, Anda akan mendapatkan rewards ETH, yang akan secara berkala disetor ke alamat penarikan Anda.
@@ -105,7 +105,7 @@ Jika diinginkan, Anda dapat keluar sebagai validator yang menghilangkan keharusa
 Landasan Peluncuran Penaruhan adalah aplikasi sumber terbuka yang akan membantu Anda menjadi seorang penaruh. Aplikasi ini akan membimbing Anda dalam memilih klien, menghasilkan kunci Anda, dan mendepositkan ETH Anda ke kontrak deposit penaruhan. Daftar periksa disediakan untuk memastikan Anda telah mencakup semua yang diperlukan untuk mengatur validator dengan aman.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Apa yang perlu dipertimbangkan dalam perangkat pengaturan simpul dan klien \{#node-tool-considerations}
@@ -115,7 +115,7 @@ Ada sejumlah perangkat dan layanan yang semakin banyak membantu Anda untuk melak
 Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang signifikan yang mungkin dimiliki oleh perangkat penaruhan yang terdaftar. Gunakan bagian ini sebagai referensi untuk cara kami mendefinisikan atribut-atribut ini saat Anda memilih perangkat membantu perjalanan penaruhan Anda.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Jelajahi perangkat pengaturan simpul dan klien \{#node-and-client-tools}
@@ -123,13 +123,13 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan petunjuk di atas untuk membantu Anda memandu melalui perangkat di bawah ini.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Perangkat simpul
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Perangkat yang memungkinkan Anda mengatur klien minoritas ditandai sebagai <em style={{ textTransform: "uppercase" }}>"multi-klien."</em>
@@ -139,7 +139,7 @@ Harap perhatikan pentingnya memilih [klien minoritas](/developers/docs/nodes-and
 Perangkat ini dapat digunakan sebagai alternatif untuk [CLI Deposit Penaruhan](https://github.com/ethereum/staking-deposit-cli/) untuk membantu dalam pembuatan kunci.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
@@ -147,7 +147,7 @@ Punya saran untuk alat penaruhan yang kami lewatkan? Lihat [kebijakan daftar pro
 ## Jelajahi panduan penaruhan solo \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Pertanyaan yang sering diajukan \{#faq}

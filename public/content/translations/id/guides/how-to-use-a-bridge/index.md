@@ -51,7 +51,7 @@ Proses ini seharusnya tidak memakan waktu lebih dari 10 menit.
 
 Anda dapat menggunakan [chainlist.org](http://chainlist.org) untuk menemukan detail RPC jaringan. Setelah jaringan ditambahkan dan transaksi selesai, Anda akan melihat token di dompet Anda.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

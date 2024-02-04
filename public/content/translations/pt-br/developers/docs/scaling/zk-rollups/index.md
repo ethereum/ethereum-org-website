@@ -221,7 +221,7 @@ As provas recursivas, no entanto, permitem finalizar vários blocos com uma prov
 Assista ao Finematics explicando ZK-rollups:
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### Usar ZK-rollups \{#use-zk-rollups}
@@ -229,7 +229,7 @@ Assista ao Finematics explicando ZK-rollups:
 Existem várias implementações de ZK-rollups que você pode integrar aos seus dapps:
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 ## Quem está trabalhando em zkEVMs? \{#zkevm-projects}

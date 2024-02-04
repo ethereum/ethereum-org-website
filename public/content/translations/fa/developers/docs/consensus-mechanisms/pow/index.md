@@ -95,7 +95,7 @@ Miners who successfully create a block get rewarded with two freshly minted ETH 
 ## با تصویر راحت‌تر یاد می‌گیرید؟ \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## اطلاعات بیشتر \{#further-reading}

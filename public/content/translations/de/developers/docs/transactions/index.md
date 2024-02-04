@@ -173,7 +173,7 @@ Sobald die Transaktion abgeschickt wurde, passiert Folgendes:
 Schaue Austin bei einer Führung durch Transaktionen, Gas und Mining zu.
 
 {
-	<YouTube id="er-0ihqFQB0" />
+<YouTube id="er-0ihqFQB0" />
 }
 
 ## Typisierter Transaktionsumschlag \{#typed-transaction-envelope}

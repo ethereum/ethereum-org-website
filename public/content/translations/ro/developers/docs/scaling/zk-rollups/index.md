@@ -31,7 +31,7 @@ Fiind pe nivelul 2, ZK-rollup-urile pot fi optimizate pentru reducerea și mai m
 Urmăriți Finematics explicând ZK-rollup-urile:
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### Utilizarea ZK-rollup-urilor \{#use-zk-rollups}
@@ -39,7 +39,7 @@ Urmăriți Finematics explicând ZK-rollup-urile:
 Există numeroase implementări ale ZK-rollup-urilor pe care le puteți integra în aplicațiile dvs. descentralizate:
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 **ZK-rollups reading**

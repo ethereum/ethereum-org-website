@@ -74,7 +74,7 @@ Szabo предвидел создание цифрового рынка, на к
 Посмотрите, как Finematics объясняет умные контракты.
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Дополнительная литература \{#further-reading}

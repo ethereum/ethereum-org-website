@@ -19,7 +19,7 @@ summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,
 La Fusion est la réunion de la couche d'exécution originale d'Ethereum (le réseau principal qui existe depuis [genesis](/history/#frontier)) avec sa nouvelle couche de consensus de preuve d'enjeu ; la Chaîne phare. Elle a également permis d'éliminer la nécessité d'un minage gourmand en énergie et de sécuriser le réseau via la mise en jeu d'ETH. Ce fut une étape vraiment passionnante dans la réalisation de la vision Ethereum - plus d'évolutivité, de sécurité et de durabilité.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Initialement, la [Chaîne phare](/roadmap/beacon-chain/) était envoyée séparément du [réseau principal](/glossary/#mainnet). Le réseau principal Ethereum - avec tous ses comptes, ses soldes, ses contrats intelligents et l'état de la blockchain - continuait d'être sécurisé par [la preuve de travail](/developers/docs/consensus-mechanisms/pow/), même si la Chaîne Phare fonctionnait en parallèle en utilisant [la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/). La Fusion a été le moment où ces deux systèmes se sont finalement combinés, et la preuve de travail a été remplacée de façon permanente par la preuve d'enjeu.
@@ -242,9 +242,9 @@ Les plans liés à la fragmentation évoluent rapidement, mais compte tenu du d�
 ## Complément d'information \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

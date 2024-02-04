@@ -92,7 +92,7 @@ At a high level, proof-of-stake has the same end goal as proof-of-work: to help 
 ## More of a visual learner? \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## Further Reading \{#further-reading}

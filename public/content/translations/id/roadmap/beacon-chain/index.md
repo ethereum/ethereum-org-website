@@ -4,7 +4,7 @@ description: Belajar tentang Rantai Suar - peningkatan yang memperkenalkan bukti
 lang: id
 template: upgrade
 image: /upgrades/core.png
-alt: 
+alt:
 summaryPoint1: Rantai Suar memperkenalkan bukti taruhan ke dalam ekosistem Ethereum.
 summaryPoint2: Rantai ini digabungkan dengan rantai bukti kerja Ethereum yang asli pada bulan September 2022.
 summaryPoint3: Rantai Suar memperkenalkan logika konsensus dan protokol gosip blok yang sekarang mengamankan Ethereum.

@@ -38,7 +38,7 @@ Antes da atualização Shanghai/Capella, não era possível usar ou acessar seu 
 ### Como me preparo? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Avisos importantes \{#important-notices}
@@ -79,7 +79,7 @@ Se um determinado validador é elegível para um saque ou não é determinado pe
 Confira esta explicação sobre saques de staking do Ethereum pela Finematics:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Validador de "varredura" \{#validator-sweeping}

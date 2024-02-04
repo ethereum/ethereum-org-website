@@ -48,7 +48,7 @@ Makikita mo ang progreso ng transaksyon sa anumang blockchain explorer. Hindi da
 
 Awtomatiko mong matatanggap ang mga na-swap na token sa wallet mo kapag naiproseso na ang transaksyon.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

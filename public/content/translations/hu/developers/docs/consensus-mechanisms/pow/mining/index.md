@@ -67,7 +67,7 @@ Az „ommer” kifejezés a szülőblokk testvérblokkjának semleges formája, 
 Tekintse meg, ahogy Austin elmagyarázza a bányászatot és a proof-of-work blokkláncot.
 
 {
-	<YouTube id="zcX7OJ-L8XQ" />
+<YouTube id="zcX7OJ-L8XQ" />
 }
 
 ## A bányászati algoritmus \{#mining-algorithm}

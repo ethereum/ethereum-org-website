@@ -9,7 +9,7 @@ lang: tr
 Kripto paralara olan ilgi arttıkça, kripto para kullanmanın en iyi yöntemlerini öğrenmek çok önemlidir. Kripto eğlenceli ve heyecan verici olabilir, ancak ciddi riskleri de vardır. Eğer bu küçük ön çalışmayı uygulamaya koyarsanız, bu riskleri azaltabilirsiniz.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Web güvenliği 101 \{#web-security}
@@ -26,7 +26,7 @@ Zayıf şifre örneği: TatlıTüylüKedicikler!
 Güçlü şifre örneği: ymv\*azu.EAC8eyp8umf
 ```
 
-Bir başka yaygın hata da, [sosyal mühendislik](https://wikipedia.org/wiki/Social_engineering_(security)) aracılığıyla kolayca tahmin edilebilen veya bulunabilen şifreler kullanmaktır. Şifrenizde annenizin kızlık soyadı, çocuklarınızın veya evcil hayvanlarınızın adları veya doğum tarihlerinin bulunması güvenli değildir ve şifrenizin ele geçirilme riskini artırır.
+Bir başka yaygın hata da, [sosyal mühendislik](<https://wikipedia.org/wiki/Social_engineering_(security)>) aracılığıyla kolayca tahmin edilebilen veya bulunabilen şifreler kullanmaktır. Şifrenizde annenizin kızlık soyadı, çocuklarınızın veya evcil hayvanlarınızın adları veya doğum tarihlerinin bulunması güvenli değildir ve şifrenizin ele geçirilme riskini artırır.
 
 #### Şifre belirlemek için iyi yöntemler: \{#good-password-practices}
 
@@ -68,7 +68,7 @@ Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanıla
 - Olduğunuz bir şey (parmak izi veya göz/yüz tarayıcısı gibi)
 - Sahip olduğunuz bir şey (telefonunuzda bir güvenlik anahtarı veya kimlik doğrulama uygulaması)
 
-**İki Faktörlü Doğrulama (2FA)** kullanmak çevrimiçi hesaplarınız için ek bir *güvenlik faktörü* sağlar; böylece sadece şifrenizi bilmek (bildiğiniz bir şey) bir hesaba erişmek için yeterli değildir. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
+**İki Faktörlü Doğrulama (2FA)** kullanmak çevrimiçi hesaplarınız için ek bir _güvenlik faktörü_ sağlar; böylece sadece şifrenizi bilmek (bildiğiniz bir şey) bir hesaba erişmek için yeterli değildir. En yaygın olarak, ikinci faktör **zaman esaslı tek seferlik şifre (TOTP)** olarak bilinen, Google Authenticator veya Authy gibi bir doğrulayıcı uygulamadan ulaşabileceğiniz rastgele seçilmiş 6 haneli bir koddur. Bunlar "senin sahip olduğun bir şey" faktörü ile çalışırlar çünkü zamanlı kodu oluşturan tohum, sizin aygıtınızda depolanır.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -91,7 +91,7 @@ Gerçekten siz olduğunuzu kanıtlamak için, kimlik doğrulama için kullanıla
 2FA hakkında daha fazlasını izleyin:
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Tarayıcı uzantılarını kaldırın \{#uninstall-browser-extensions}
@@ -107,7 +107,7 @@ Chrome uzantıları veya Firefox Eklentileri gibi tarayıcı uzantıları, kulla
 [Tarayıcı uzantılarının riskleri hakkında daha fazla bilgi](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kripto güvenliği 101 \{#crypto-security}
@@ -169,7 +169,7 @@ Birçok Ethereum cüzdanı, boşaltılan hesaplara karşı koruma sağlamak içi
 [Kripto fonlarınızın akıllı sözleşme erişimini nasıl iptal edebilirsiniz?](/guides/how-to-revoke-token-access/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Yaygın dolandırıcılıklar \{#common-scams}
@@ -275,7 +275,7 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 [Airdrop dolandırıcılığı hakkında daha fazla bilgi](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Daha fazla bilgi \{#further-reading}
@@ -301,5 +301,5 @@ Airdrop dolandırıcılığı, bir varlığı (NFT, token) cüzdanınıza Airdro
 - [Yaygın kripto kimlik avı e-postaları ve mesajları hakkında Twitter ileti dizisi](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 {
-	<QuizWidget quizKey="security" />
+<QuizWidget quizKey="security" />
 }

@@ -38,7 +38,7 @@ Sebelum peningkatan Shanghai/Capella, Anda tidak dapat menggunakan atau mengakse
 ### Bagaimana saya mempersiapkan diri? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Pemberitahuan Penting \{#important-notices}
@@ -79,7 +79,7 @@ Apakah validator tertentu memenuhi syarat untuk penarikan atau tidak, ditentukan
 Simak penjelasan mengenai penarikan penaruhan Ethereum dari Finematics berikut ini:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Validator "menyapu" \{#validator-sweeping}

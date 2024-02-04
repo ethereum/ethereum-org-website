@@ -74,7 +74,7 @@ Possono eseguire calcoli, creare valuta, memorizzare dati, coniare NFT, inviare 
 Guarda la spiegazione di Finematics sui contratti intelligenti:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Letture consigliate \{#further-reading}

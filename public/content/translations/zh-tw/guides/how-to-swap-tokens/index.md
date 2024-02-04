@@ -48,7 +48,7 @@ lang: zh-tw
 
 交易處理完成後，你的錢包中將自動收到所兌換的代幣。
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

@@ -8,7 +8,7 @@ sidebarDepth: 2
 # Glossaire \{#ethereum-glossary}
 
 {
-	<Divider />
+<Divider />
 }
 
 ## \# \{#section-numbers}
@@ -64,7 +64,7 @@ Une affirmation faite par une entité selon laquelle quelque chose est vrai. Dan
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## B \{#section-b}
@@ -155,7 +155,7 @@ Ensemble d'instructions abstraites conçues pour être exécutées efficacement 
 La première des deux [fourches majeures](#hard-fork) de la phase de développement [Metropolis](#metropolis). Elle comprend le report de la [bombe de difficulté](#difficulty-bomb) de Metropolis et la réduction des récompenses de bloc de l'EIP 649, l'[Ice Age](#ice-age) ayant été retardé de 1 an et la récompense de bloc réduite de 5 à 3 ethers.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## C \{#section-c}
@@ -291,7 +291,7 @@ Augmentation exponentielle planifiée du paramètre de [difficulté](#difficulty
 Courte chaîne de données qu'un utilisateur produit pour un document en utilisant une [clé privée](#private-key) afin que quiconque ayant la [clé publique](#public-key) correspondante, la signature et le document puisse vérifier (1) que le document a bien été « signé » par le propriétaire de cette clé privée particulière et (2) que le document n'a pas été modifié après sa signature.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Découverte \{#discovery}
@@ -417,7 +417,7 @@ Machine virtuelle basée sur une pile, qui exécute du [bytecode](#bytecode). Da
 Forme lisible par l'homme du [bytecode de l'EVM](#bytecode).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## F \{#section-f}
@@ -467,7 +467,7 @@ Modèle de sécurité pour certaines solutions de [couche 2](#layer-2) où, pour
 Phase initiale de développement à des fins de test d'Ethereum, qui a duré de juillet 2015 à mars 2016.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## G \{#section-g}
@@ -503,7 +503,7 @@ Version abrégée de « Go Ethereum ». L'une des implémentations les plus im
 Abréviation de Gigawei, unité de l'[ether](#ether) couramment utilisée pour attribuer un prix au [gaz](#gas). 1 Gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> Gwei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## H \{#section-h}
@@ -535,7 +535,7 @@ Valeur utilisée pour générer la [clé privée](#private-key) maîtresse et le
 Deuxième phase de développement d'Ethereum, lancée en mars 2016 au bloc 1 150 000.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## I \{#section-i}
@@ -573,7 +573,7 @@ Une fois que le code d'un [contrat](#smart-contract) (ou celui d'une [bibliothè
 [Transaction](#transaction) envoyée depuis un [compte de contrat](#contract-account) vers un autre compte de contrat ou vers un [compte externe (EOA)](#eoa) (voir [message](#message)).
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Émission
@@ -599,7 +599,7 @@ La paire clé/adresse privée de chaque compte existe en tant que fichier clé u
 Fonction de hachage cryptographique ([empreinte numérique](#hash)) utilisée dans Ethereum. Keccak-256 a été standardisée comme [SHA](#sha)-3.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## L \{#section-l}
@@ -629,7 +629,7 @@ Type spécial de [contrat](#smart-contract) qui n'a ni fonction de paiement, ni 
 Client Ethereum qui ne stocke aucune copie locale de la [blockchain](#blockchain) ou qui ne valide aucun bloc ni aucune [transaction](#transaction). Il offre les fonctions d'un [portefeuille](#wallet), et peut créer et diffuser des transactions.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### LMD_GHOST \{#lmd-ghost}
@@ -683,7 +683,7 @@ Processus de hachage répétitif d'un en-tête de bloc lors de l'incrémentation
 Le frappage est le processus de création de nouveaux jetons et de leur mise en circulation afin qu'ils puissent être utilisés. C'est un mécanisme décentralisé pour créer un nouveau jeton sans participation de l'autorité centrale.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## N \{#section-n}
@@ -724,7 +724,7 @@ Client logiciel qui participe au réseau.
 En cryptographie, valeur qui ne peut être utilisée qu'une seule fois. Le nonce d'un compte est un compteur de transactions propre à chaque compte, qui est utilisé pour prévenir les attaques par répétition.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## O \{#section-o}
@@ -750,7 +750,7 @@ Les oracles sont des ponts entre la [blockchain](#blockchain) et le monde réel.
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## P \{#section-p}
@@ -804,7 +804,7 @@ Donnée (la preuve) qui nécessite des calculs significatifs pour être trouvée
 Nombre dérivé d'une [clé privée](#private-key) via une fonction à sens unique, qui peut être partagé publiquement et utilisé par n'importe qui pour vérifier une signature numérique créée avec la clé privée correspondante.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## R \{#section-r}
@@ -838,7 +838,7 @@ Type de solution de mise à l'échelle de [couche 2](#layer-2) qui regroupe plus
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### RPC \{#rpc}
@@ -996,7 +996,7 @@ Un comité de synchronisation est un groupe de [validateurs](#validator) sélect
 Unité de l'[ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## T \{#section-t}
@@ -1054,7 +1054,7 @@ Capacité d'un réseau à effectuer des transactions sans qu'aucune des parties 
 Concept nommé d'après le mathématicien et informaticien anglais Alan Turing. Un système de règles de traitement de données (instructions d'un ordinateur, langage de programmation ou automate cellulaire) est dit « Turing-complet » ou « universel sur le plan informatique » s'il a au moins le pouvoir des machines de Turing.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## V \{#section-v}
@@ -1105,7 +1105,7 @@ Langage de programmation pointu dont la syntaxe est similaire à celle de Python
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## W \{#section-w}
@@ -1131,7 +1131,7 @@ Troisième version du web. Terme proposé pour la première fois par le Dr Gavin
 Plus petite unité de l'[ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Z \{#section-z}
@@ -1157,7 +1157,7 @@ Une preuve de connaissance zéro (zero-knowledge proof) est une méthode cryptog
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Sources \{#sources}
@@ -1165,7 +1165,7 @@ Une preuve de connaissance zéro (zero-knowledge proof) est une méthode cryptog
 _Fournis pour partie par [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) (Maîtriser Ethereum) par [Andreas M. Antonopoulos et Gavin Wood](https://ethereumbook.info), sous licence CC-BY-SA_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Contribuer à cette page \{#contribute-to-this-page}

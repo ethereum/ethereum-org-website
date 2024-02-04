@@ -6,7 +6,7 @@ lang: zh-tw
 
 智慧型合約極度靈活，且能夠控制大量值和資料，同時基於部署在區塊鏈上的程式碼執行不可變的邏輯。 這建立了活躍的去信任和去中心化的應用程式生態系統，它與傳統系統相比有許多優點。 這也為謀求透過智慧型合約漏洞獲利的攻擊者提供機會。
 
-公共區塊鏈，例如以太坊，使智慧型合約的安全議題更加複雜。 已部署的合約程式碼_通常_無法變更，以修補安全缺陷；而要追蹤從智慧型合約竊取的資產也十分困難，且因為物件的不可變性，大多無法挽回。
+公共區塊鏈，例如以太坊，使智慧型合約的安全議題更加複雜。 已部署的合約程式碼*通常*無法變更，以修補安全缺陷；而要追蹤從智慧型合約竊取的資產也十分困難，且因為物件的不可變性，大多無法挽回。
 
 雖然數字有差異，但因智慧型合約安全缺陷而遭竊取或損失的總額，估計超過 10 億美元。 備受關注的事件如 [DAO 駭客攻擊](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（駭客竊取 360 萬以太幣，現價超過 10 億美元）；[Parity 多重簽章錢包駭客攻擊](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（駭客竊取 3 千萬美元）；以及 [Parity 凍結錢包問題](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（超過 3 億美元的以太幣遭到永久凍結）。
 
@@ -18,7 +18,7 @@ lang: zh-tw
 
 ## 建立安全的以太坊智慧型合約指南 \{#smart-contract-security-guidelines}
 
-### 1.  設計正確的存取控制 \{#design-proper-access-controls}
+### 1. 設計正確的存取控制 \{#design-proper-access-controls}
 
 在智慧型合約中，任何外部帳戶 (EOA) 或合約帳戶都可以調用標記為 `public` 或 `external` 的函數。 如果你想要其他人與你的智慧型合約互動，務必指定函數的公共可見性。 標記為 `private` 的函數只能被智慧型合約內部的函數調用，外部帳戶無法調用這種函數。 讓每個網路參與者存取智慧型合約函數可能造成一些問題，尤其是這表示人人都能執行須謹慎以對的操作（例如鑄造新代幣）。
 
@@ -126,7 +126,7 @@ contract VendingMachine {
 
 雖然以太坊智慧型合約是預設不得變更，但可以透過升級模式來達成某程度的變更。 當重大缺陷迫使舊合約無法使用，而部署新邏輯是最可行的選擇時，就必須升級合約。
 
-合約升級機制的運作方式不同，「代理人模式」是升級智慧型合約最常見的方法。 代理人模式會將應用程式的狀態和邏輯拆分成_兩個_合約。 第一個合約（稱為「代理人合約」）儲存狀態變數（例如使用者餘額）；第二個合約（稱為「邏輯合約」）保存執行合約函數的程式碼。
+合約升級機制的運作方式不同，「代理人模式」是升級智慧型合約最常見的方法。 代理人模式會將應用程式的狀態和邏輯拆分成*兩個*合約。 第一個合約（稱為「代理人合約」）儲存狀態變數（例如使用者餘額）；第二個合約（稱為「邏輯合約」）保存執行合約函數的程式碼。
 
 帳戶只和代理人合約互動，代理人合約再用低階調用 [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) 發送所有函數調用至邏輯合約。 和一般的訊息調用不同，`delegatecall()` 會確保在邏輯合約地址上執行的程式碼是在調用合約的情境下執行。 這表示邏輯合約將永遠把資料寫入代理人的存儲空間（而不是自己的存儲空間），且會保留 `msg.sender` 與 `msg.value` 的原始值。
 
@@ -259,7 +259,7 @@ contract Victim {
 2. 匯出資金至調用地址
 3. 將餘額重置為 0，避免使用者進一步提領
 
-`Victim` 合約中的 `withdraw()` 函數遵循「檢查-互動-效果」模式。 若滿足必要的執行條件，就會進行_檢查_（即使用者的以太幣餘額是正數)，接著再傳送以太幣至調用者的地址，進行_互動_，最後套用交易_效果_（即減少使用者的餘額）。
+`Victim` 合約中的 `withdraw()` 函數遵循「檢查-互動-效果」模式。 若滿足必要的執行條件，就會進行*檢查*（即使用者的以太幣餘額是正數)，接著再傳送以太幣至調用者的地址，進行*互動*，最後套用交易*效果*（即減少使用者的餘額）。
 
 假如是外部帳戶 (EOA) 調用 `withdraw()`，函數將如預期執行：`msg.sender.call.value()` 傳送以太幣給調用者。 然而，如果調用 `withdraw()` 的 `msg.sender` 是智慧型合約帳戶，使用`msg.sender.call.value()` 傳送資金，也會觸發儲存在該帳戶地址的程式碼執行。
 
@@ -286,7 +286,7 @@ contract Victim {
 2. 存入 1 以太幣至 Victim 合約
 3. 提領存儲在智慧型合約中的 1 以太幣
 
-這裡沒有任何問題，除了傳入 `msg.sender.call.value` 剩餘的燃料超過 40,000 時，`Attacker` 中的另一個函數會再次調用 `Victim` 內的 `withdraw()`。 這讓 `Attacker` 在第一次調用 `withdraw` 結束_之前_，可以一再進入 `Victim` 提領更多資金。 這個循環看起來像這樣：
+這裡沒有任何問題，除了傳入 `msg.sender.call.value` 剩餘的燃料超過 40,000 時，`Attacker` 中的另一個函數會再次調用 `Victim` 內的 `withdraw()`。 這讓 `Attacker` 在第一次調用 `withdraw` 結束*之前*，可以一再進入 `Victim` 提領更多資金。 這個循環看起來像這樣：
 
 ```solidity
 - Attacker's EOA calls `Attacker.beginAttack()` with 1 ETH
@@ -320,7 +320,7 @@ contract NoLongerAVictim {
 }
 ```
 
-這個合約如下執行：_檢查_使用者餘額、套用 `withdraw()` 函數的_效果_（將使用者的餘額重置為 0），再繼續執行_互動_（傳送以太幣至使用者地址）。 這能確保合約在外部調用前更新存儲空間，排除會引發第一次攻擊的重入條件。 `Attacker` 合約仍然可能回呼 `NoLongerAVictim`，但因為 `balances[msg.sender]` 已設定為 0，所以再次提領時會出現錯誤。
+這個合約如下執行：*檢查*使用者餘額、套用 `withdraw()` 函數的*效果*（將使用者的餘額重置為 0），再繼續執行*互動*（傳送以太幣至使用者地址）。 這能確保合約在外部調用前更新存儲空間，排除會引發第一次攻擊的重入條件。 `Attacker` 合約仍然可能回呼 `NoLongerAVictim`，但因為 `balances[msg.sender]` 已設定為 0，所以再次提領時會出現錯誤。
 
 另一個方法是使用相斥鎖定（一般稱為「Mutex」），鎖定合約的部分狀態，直到完成函數調用。 這個方法是在函數執行前，將一個布林變數設定為 `true`，調用完成後再把布林變數回復為 `false`。 如以下範例所示，使用 Mutex 可保護函數在初始調用尚未完成前，不被重複調用，並有效阻止重入。
 
@@ -478,7 +478,7 @@ contract Attack {
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _管理智慧型合約運作，包括存取控制、升級、和暫停的介面。_
 
-- **[Safe](https://safe.global/)** - _在以太坊上執行、需要達到最低核准人數（N 人中的M 人），才能執行交易的智慧型合約數位錢包。_
+- **[Safe](https://safe.global/)** - _在以太坊上執行、需要達到最低核准人數（N 人中的 M 人），才能執行交易的智慧型合約數位錢包。_
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _執行合約所有權、升級、存取控制、治理、暫停等管理功能的合約庫。_
 
@@ -546,9 +546,9 @@ contract Attack {
 
 - [如何編寫安全的智慧型合約](/developers/tutorials/secure-development-workflow/)
 
-- [如何使用 Slither 搜索智慧型合約bug.](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [如何使用 Slither 搜索智慧型合約 bug.](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 
-- [如何使用 Manticore 搜索智慧型合約bug.](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [如何使用 Manticore 搜索智慧型合約 bug.](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 
 - [智慧型合約安全指南](/developers/tutorials/smart-contract-security-guidelines/)
 

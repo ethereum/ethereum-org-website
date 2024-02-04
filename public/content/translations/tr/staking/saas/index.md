@@ -28,7 +28,7 @@ Ethereum protokolü doğal olarak pay devrini desteklemez, bu nedenle bu hizmetl
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Ne dikkate alınmalı \{#what-to-consider}
@@ -38,7 +38,7 @@ ETH'nizi kilitlemenize yardımcı olacak SaaS sağlayıcılarının sayısı art
 Nitelik göstergeleri, listelenen bir SaaS sağlayıcısının sahip olabileceği dikkate değer güçlü veya zayıf yönleri belirtmek için aşağıda kullanılmaktadır. Bu bölümü, stake etme yolculuğunuza yardımcı olacak bir hizmet seçerken bu nitelikleri nasıl tanımladığımıza dair bir referans olarak kullanın.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Staking servis sağlayıcılarını keşfedin \{#saas-providers}
@@ -46,13 +46,13 @@ Nitelik göstergeleri, listelenen bir SaaS sağlayıcısının sahip olabileceğ
 Aşağıda bazı mevcut SaaS sağlayıcıları bulunmaktadır. Bu hizmetlerde size rehberlik etmesi için yukarıdaki göstergeleri kullanın
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### SaaS sağlayıcıları
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemci çeşitliliğini](/developers/docs/nodes-and-clients/client-diversity/) desteklemenin önemini lütfen unutmayın. Çoğunluk istemcisi kullanımı sınırladığına dair kanıtları olan hizmetler;<em style={{ textTransform: "uppercase" }}>"yürütme istemcisi çeşitliliği"</em> ve <em style={{ textTransform: "uppercase" }}>"fikir birliği istemcisi çeşitliliği" ile belirtilir.</em>
@@ -60,7 +60,7 @@ Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için [istemc
 ### Anahtar Üreticileri
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Kaçırdığımız bir hizmet sağlayıcı olarak hisseleme için bir öneriniz mi var? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.

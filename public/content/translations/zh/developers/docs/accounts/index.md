@@ -115,11 +115,11 @@ WARN [10-28|16:19:09.306] Please remember your password!
 跟随 Austin 了解哈希函数和密钥对。
 
 {
-	<YouTube id="QJ010l-pBpE" />
+<YouTube id="QJ010l-pBpE" />
 }
 
 {
-	<YouTube id="9LtBDy67Tho" />
+<YouTube id="9LtBDy67Tho" />
 }
 
 ## 延伸阅读 \{#further-reading}

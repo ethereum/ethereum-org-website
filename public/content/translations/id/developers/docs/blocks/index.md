@@ -27,7 +27,7 @@ Setelah sebuah blok disatukan (ditambang) oleh beberapa penambang di jaringan, i
 ### Demo visual \{#a-visual-demo}
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## Protokol bukti kerja \{#proof-of-work-protocol}

@@ -10,7 +10,7 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 _If no one owns Ethereum, how are decisions about past and future changes to Ethereum made? Ethereum governance refers to the process that allows such decisions to be made._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## What is governance? \{#what-is-governance}
@@ -40,7 +40,7 @@ _Whilst at the protocol level Ethereum governance is off-chain, many use cases b
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Who is involved? \{#who-is-involved}
@@ -58,7 +58,7 @@ There are various stakeholders in the [Ethereum community](/community/), each pl
 _Note: any individual can be part of multiple of these groups (e.g. a protocol developer could champion an EIP, and run a beacon chain validator, and use DeFi applications). For conceptual clarity, it is easiest to distinguish between them, though._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## What is an EIP? \{#what-is-an-eip}
@@ -70,7 +70,7 @@ One important process used in Ethereum governance is the proposal of **Ethereum 
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## The formal process \{#formal-process}
@@ -116,7 +116,7 @@ EIP Champions are expected to solicit feedback from all relevant stakeholders. I
 Beyond the security of the Ethereum network, significant weight has historically been placed by Protocol Developers on what Application/Tooling Developers and Application Users value, given that their using and developing on Ethereum is what makes the ecosystem attractive for other stakeholders. Additionally, EIPs need to be implemented across all client implementations, which are managed by distinct teams. Part of this process usually means convincing multiple teams of Protocol Developers that a particular change is valuable and that it helps end-users or solves a security issue.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Handling disagreements \{#disagreements}
@@ -146,11 +146,11 @@ Today, the Ethereum community has adopted a policy of non-intervention in cases 
 Watch more on the DAO hack:
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### The utility of forking \{#forking-utility}
@@ -160,7 +160,7 @@ The Ethereum/Ethereum Classic fork is an excellent example of a healthy fork. We
 The ability to fork in the face of significant political, philosophical or economic differences plays a large part in the success of Ethereum governance. Without the ability to fork the alternative was ongoing in-fighting, forced reluctant participation for those who eventually formed Ethereum Classic and an increasingly differing vision of how success for Ethereum looks.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Beacon Chain governance \{#beacon-chain}
@@ -176,7 +176,7 @@ When the Beacon Chain merged with the Ethereum execution layer on September 15th
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## How can I get involved? \{#get-involved}

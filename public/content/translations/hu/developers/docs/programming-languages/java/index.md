@@ -31,7 +31,7 @@ Tanulja meg a [Web3J](https://github.com/web3j/web3j) és a Hyperledger Besu, a 
 - [Ethereum okosszerződés események hallgatása](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [Besu (Pantheon), a Java Ethereum kliens használata Linux-szal](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [Egy Hyperledger Besu (Pantheon) csomópont futtatása Java integrációs teszteken](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j Puska](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
+- [Web3j Puska](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
 ## Köztes cikkek \{#intermediate-articles}
 

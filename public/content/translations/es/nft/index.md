@@ -19,7 +19,7 @@ Los NFT son tókenes individualmente únicos. Cada NFT tiene diferentes propieda
 El carácter único de cada NFT permite la tokenización de cosas como arte, bienes coleccionables, o incluso bienes raíces, donde cada NFT específico es único y representa algo específico que es único en el mundo real o digital. La propiedad de un activo se puede verificar públicamente en la cadena de bloques de Ethereum.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## El Internet de los activos \{#internet-of-assets}
@@ -67,7 +67,7 @@ El nombre de dominio alternativo de esta página web también funciona a través
 [Más información sobre ENS](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## ¿Cómo funcionan los NFT? \{#how-nfts-work}
@@ -102,9 +102,9 @@ Las cuestiones de seguridad relativas a los NFT están casi siempre relacionadas
 - [Estándar de token ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

@@ -23,7 +23,7 @@ A decentralizált tudomány sokrétűbb finanszírozási forrásokat (a [DAO-okt
 ### Juan Benet – A DeSci mozgalom
 
 {
-	<YouTube id="5ORvbCIW39o" />
+<YouTube id="5ORvbCIW39o" />
 }
 
 ## Hogyan fejleszti a DeSci a tudományt \{#desci-improves-science}

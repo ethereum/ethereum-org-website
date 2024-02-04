@@ -10,7 +10,7 @@ hideEditButton: true
 **Minden hónapban részt vehet Ethereum-eseményeken a világ bármely pontján.** Vegyen részt egy Önhöz közel eső eseményen, hogy találkozzon a közösség tagjaival, megismerje a munkalehetőségeket és új képességeket fejlesszen.
 
 {
-	<UpcomingEventsList/>
+<UpcomingEventsList/>
 }
 
 A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy tervezett Ethereum-eseményről? [Kérjük, adja hozzá!](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)
@@ -20,7 +20,7 @@ A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy ter
 Nem talál olyan eseményt, amely jó lenne Önnek? Próbáljon meg elmenni egy találkozóra. Ezek kisebb események, melyeket az Ethereum-rajongók szerveznek, hogy az Ethereum iránt érdeklődők összegyűljenek, beszélgessenek az Ethereumról, megismerjék az új fejlesztéseket.
 
 {
-	<MeetupList />
+<MeetupList />
 }
 
 Saját találkozót szeretne szervezni? Nézze meg a [BUIDL Network-öt](https://consensys.net/developers/buidlnetwork/), ami a ConsesSys kezdeményezése, hogy támogassa az Ethereum találkozókat.

@@ -84,7 +84,7 @@ Nick Szabo は、自動的で暗号的に安全なプロセスに基づいて構
 Finematics によるスマートコントラクトの説明:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## 参考文献 \{#further-reading}

@@ -15,17 +15,17 @@ Se questo è il tuo primo tentativo di sviluppo su Ethereum, consigliamo di comi
 ### Argomenti fondamentali \{#foundational-topics}
 
 {
-	<DeveloperDocsLinks headerId="foundational-topics" />
+<DeveloperDocsLinks headerId="foundational-topics" />
 }
 
 ### Stack di Ethereum \{#ethereum-stack}
 
 {
-	<DeveloperDocsLinks headerId="ethereum-stack" />
+<DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
 ### Avanzato \{#advanced}
 
 {
-	<DeveloperDocsLinks headerId="advanced" />
+<DeveloperDocsLinks headerId="advanced" />
 }

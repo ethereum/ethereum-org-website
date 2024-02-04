@@ -23,7 +23,7 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/dao/
 ### Juan Benet - The DeSci Movement
 
 {
-	<YouTube id="5ORvbCIW39o" />
+<YouTube id="5ORvbCIW39o" />
 }
 
 ## How DeSci improves science \{#desci-improves-science}

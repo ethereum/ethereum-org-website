@@ -66,7 +66,7 @@ Um ataque mais sofisticado pode dividir o conjunto do validador honesto em grupo
 Os **ataques de salto** são semelhantes. Os votos são novamente retidos pelos validadores atacantes. Em vez de liberar os votos para manter uma divisão entre dois forks, eles usam seus votos em momentos oportunos para justificar pontos de verificação que alternam entre o fork A e o fork B. Esse vai e vem de justificações entre dois forks impede que existam pares de fontes justificadas e pontos de verificação que possam ser finalizados em qualquer cadeia, parando a finalidade.
 
 {
-	<YouTube id="xcPxwhrg3Ao"/>
+<YouTube id="xcPxwhrg3Ao"/>
 }
 
 Tanto os ataques de salto, quanto os ataques de balanceamento, dependem de o atacante ter um controle muito preciso sobre o momento das mensagens por toda a rede, o que é improvável. No entanto, as defesas são construídas no protocolo sob a forma de ponderação adicional dada às mensagens rápidas quando comparadas com as lentas. Isso é conhecido como [aceleração de peso do proponente](https://github.com/ethereum/consensus-specs/pull/2730). Para se defender contra ataques de salto, o algoritmo escolhido para o fork foi atualizado de modo que o último ponto de verificação justificado somente possa mudar para uma cadeia alternativa durante o [primeiro 1/3 dos slots em cada época](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114). Essa condição impede que o invasor economize votos para implantar mais tarde — o algoritmo de escolha do fork simplesmente permanece fiel ao ponto de verificação escolhido no primeiro 1/3 da época, durante o qual os validadores mais honestos teriam votado.

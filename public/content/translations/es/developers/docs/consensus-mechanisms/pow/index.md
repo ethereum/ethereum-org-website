@@ -92,7 +92,7 @@ A un alto nivel, la prueba de participación tiene el mismo objetivo final que l
 ## ¿Es usted una persona que aprende de manera visual? \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## Más información \{#further-reading}

@@ -4,7 +4,7 @@ description: Aflați mai multe despre Fuziune, când Rețeaua principală Ethere
 lang: ro
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Rețeaua principală Ethereum folosește dovada mizei, dar nu a fost întotdeauna așa.
 summaryPoint2: Modernizarea de la mecanismul original al dovezii muncii la dovada mizei a purtat numele de Fuziune.
 summaryPoint3: Fuziunea se referă la fuziunea dintre Rețeaua principală Ethernet și un blockchain dovada mizei separat, numit Lanțul Beacon, ceea ce acum funcționează ca un singur lanț.
@@ -20,7 +20,7 @@ summaryPoint4: Fuziunea a redus consumul de energie al Ethereum cu aproximativ 9
 Fuziunea a reprezentat combinarea stratului de execuție original al Ethereum (Rețeaua principală care a existat încă de la [geneză](/history/#frontier)) cu noul strat de consens cu dovada mizei, Lanțul Beacon. Acesta a eliminat nevoie de minare cu un consum mare de energie și, în schimb, a permis ca rețeaua să fie securizată folosind miza ETH. Realizarea viziunii Ethereum a fost un pas cu adevărat extraordinar: mai multă scalabilitate, mai multă securitate și mai multă durabilitate.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Inițial, [Lanțul Beacon](/roadmap/beacon-chain/) a fost lansat separat de [Rețeaua principală](/glossary/#mainnet). Rețeaua principală Ethereum - cu toate conturile, soldurile, contractele inteligente și starea blockchainului - a continuat să fie securizată prin [dovada muncii](/developers/docs/consensus-mechanisms/pow/), chiar și atunci când Lanțul Beacon funcționa în paralel folosind [dovada mizei](/developers/docs/consensus-mechanisms/pos/). Fuziunea a avut loc când acest două sisteme s-au reunit în cele din urmă și dovada muncii a fost înlocuită permanent de dovada mizei.
@@ -237,9 +237,9 @@ Planurile pentru fragmentare evoluează rapid, dar, având în vedere apariția 
 ## Referințe suplimentare \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

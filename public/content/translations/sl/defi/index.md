@@ -21,7 +21,7 @@ DeFi je skupni izraz za finančne produkte in storitve, ki so dostopne vsem, ki 
 Obstaja cvetoče kripto gospodarstvo, kjer lahko posojate, si izposojate, kupite/prodate, služite obresti in še več. Argentinci z kripto znanjem so uporabili DeFi, da so se izognili visoki inflaciji. Podjetja so začela zaposlenim "pretekati" plače v realnem času. Posamezniki so najeli in odplačali posojila v višini več milijonov dolarjev, brez da bi se morali kakorkoli identificirati.
 
 {
-	<YouTube id="H-O3r2YMWJ4" />
+<YouTube id="H-O3r2YMWJ4" />
 }
 
 ## DeFi v primerjavi s tradicionalnimi financami \{#defi-vs-tradfi}
@@ -60,7 +60,7 @@ Bitcoin je bil na mnogo načinov prva DeFi aplikacija. Bitcoin vam omogoča, da 
 Ethereum gradi na tem. Kot pri Bitcoinu se pravila ne morejo spremeniti in prav tako je dostop prost za vse. Prav tako pa naredi ta digitalni denar programljiv z uporabo [pametnih pogodb](/glossary#smart-contract), da greste lahko še naprej od shranjevanja in pošiljanja vrednosti.
 
 {
-	<YouTube id="qFBYB4W2tqU" />
+<YouTube id="qFBYB4W2tqU" />
 }
 
 ## Programirljiv denar \{#programmable-money}
@@ -89,7 +89,7 @@ Obstaja decentralizirana alternativa za večino finančnih storitev. Toda Ethere
 - [Upravljajte svoj portfelj](#aggregators)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Hitro pošiljajte denar po vsem svetu \{#send-money}
@@ -107,7 +107,7 @@ Denarne tokove lahko ustvarjate tudi prek Ethereuma. To vam omogoča, da nekomu 
 V primeru, da ne želite pošiljati ali pretakati [ETH](/eth/), zaradi spreminjanje njegove vrednosti, obstajajo alternativne valute na Ethereumu: stabilni kovanci.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Dostopajte do stabilnih kovancev \{#stablecoins}
@@ -121,7 +121,7 @@ Kovanca kot sta Dai ali USDC imata vrednost, ki ostaja znotraj nekaj centov vred
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Izposojanje \{#lending}
@@ -179,7 +179,7 @@ Da bi zgoraj opisano transakcijo lahko izvedli v svetu tradicionalnih financ, bi
 [Več o flash posojilih](https://aave.com/flash-loans/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Začnite varčevati z kripto \{#saving}
@@ -214,7 +214,7 @@ Nagradni bazen je ustvarjen iz vseh obresti, ki so bile pridobljene s posojanjem
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Borzni žetoni \{#swaps}
@@ -228,7 +228,7 @@ Na primer, če želite uporabljati loterijo brez izgube PoolTogether (opisano zg
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Napredno trgovanje \{#trading}
@@ -242,7 +242,7 @@ Ko uporabljate centralizirane borze, morate položiti svoja sredstva preden zač
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Povečajte svoj portfelj \{#investing}
@@ -256,7 +256,7 @@ Dober primer je [DeFi Pulse indeksni sklad (DPI)](https://defipulse.com/blog/def
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Financirajte svoje ideje \{#crowdfunding}
@@ -287,7 +287,7 @@ To pomeni, da projekt A s 100 donacijami po 1 dolar, lahko na koncu prejme več 
 [Več o kvadratičnem financiranju](https://wtfisqf.com)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Zavarovanje \{#insurance}
@@ -301,7 +301,7 @@ Ethereum produkti kot ostala programska oprema lahko trpi zaradi napak in izkori
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Agregatorji in upravljalci portfeljev \{#aggregators}
@@ -313,7 +313,7 @@ Ob tolikšnem dogajanju boste potrebovali način, da sledite vsem vašim naložb
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kako deluje DeFi? \{#how-defi-works}

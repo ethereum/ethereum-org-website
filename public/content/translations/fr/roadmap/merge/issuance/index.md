@@ -6,7 +6,7 @@ lang: fr
 
 # Impact de La Fusion sur l'offre d'ETH \{#how-the-merge-impacts-ETH-supply}
 
-La Fusion a marqué la transition du réseau Ethereum de la preuve de travail à la preuve d'enjeu, qui a eu lieu en septembre 2022. La manière dont l'ETH est émis a subi des changements lors de cette transition. Auparavant, de nouveaux ETH étaient émis à partir de deux sources : la couche d'exécution (c'est-à-dire Réseau principal) et la couche de consensus (c'est-à-dire  la chaîne phare). Depuis La Fusion, l'émission sur la couche d'exécution est désormais nulle. Analysons cela en détail.
+La Fusion a marqué la transition du réseau Ethereum de la preuve de travail à la preuve d'enjeu, qui a eu lieu en septembre 2022. La manière dont l'ETH est émis a subi des changements lors de cette transition. Auparavant, de nouveaux ETH étaient émis à partir de deux sources : la couche d'exécution (c'est-à-dire Réseau principal) et la couche de consensus (c'est-à-dire la chaîne phare). Depuis La Fusion, l'émission sur la couche d'exécution est désormais nulle. Analysons cela en détail.
 
 ## La répartition de l'émission d'ETH \{#components-of-eth-issuance}
 

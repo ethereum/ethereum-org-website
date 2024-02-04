@@ -115,11 +115,11 @@ Ein Konto ist kein Wallet. Ein Konto ist das Schlüsselpaar für ein Ethereum-Ko
 Austin führt Sie durch Hash-Funktionen und Schlüsselpaare.
 
 {
-	<YouTube id="QJ010l-pBpE" />
+<YouTube id="QJ010l-pBpE" />
 }
 
 {
-	<YouTube id="9LtBDy67Tho" />
+<YouTube id="9LtBDy67Tho" />
 }
 
 ## Weiterführende Informationen \{#further-reading}

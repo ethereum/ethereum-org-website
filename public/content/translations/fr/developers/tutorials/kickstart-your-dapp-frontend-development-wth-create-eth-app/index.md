@@ -53,7 +53,7 @@ _create-react-app_, en particulier, fait usage des nouveaux [effets hooks](https
 
 Si [Web3](https://docs.web3js.org/) est encore largement utilisé, [ethers.js](https://docs.ethers.io/) a davantage été employé comme alternative l'année dernière et est intégré à _create-eth-app_. Vous pouvez travailler avec celui-ci, le faire évoluer vers Web3 ou envisager une mise à niveau pour passer à [ethers.js v5](https://docs-beta.ethers.io/) qui n'est pratiquement plus en version bêta.
 
-### Le réseau Graph  \{#the-graph}
+### Le réseau Graph \{#the-graph}
 
 [GraphQL](https://graphql.org/) est un moyen alternatif de gérer les données par rapport à une [API Restful](https://restfulapi.net/). Il offre plusieurs avantages par rapport aux APIs REST, en particulier pour les données décentralisées de la blockchain. Si vous êtes intéressé par le raisonnement qui le sous-tend, jetez un œil à [GraphQL va propulser le Web décentralisé](https://medium.com/graphprotocol/graphql-will-power-the-decentralized-web-d7443a69c69a).
 
@@ -89,7 +89,7 @@ Les jetons échangés qui vous rapportent des intérêts sont appelés _aTokens_
 
 Si vous choisissez d'intégrer Aave avec _create-eth-app_, vous obtiendrez une [intégration subgraph](https://docs.aave.com/developers/getting-started/using-graphql). Aave utilise The Graph et vous fournit déjà plusieurs Subgraphs prêts à l'emploi sur [Ropsten](https://thegraph.com/explorer/subgraph/aave/protocol-ropsten) et [le réseau principal](https://thegraph.com/explorer/subgraph/aave/protocol) en formulaire [brut](https://thegraph.com/explorer/subgraph/aave/protocol-raw) ou [formaté](https://thegraph.com/explorer/subgraph/aave/protocol).
 
-![Aave Flash Loan meme - "Ouah, si je pouvais garder mon prêt flash plus longtemps qu'une transaction, ce serait génial&quot ;](./flashloan-meme.png)
+![Aave Flash Loan meme - "Ouah, si je pouvais garder mon prêt flash plus longtemps qu'une transaction, ce serait génial" ;](./flashloan-meme.png)
 
 ### Compound \{#compound}
 

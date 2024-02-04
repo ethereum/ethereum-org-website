@@ -13,23 +13,23 @@ Az Ethereum energiafogyasztásának becsült adata egy [CCRI (Crypto Carbon Rati
 Az Ethereum energiafogyasztását összevethetjük más termékek és iparágak éves becsléseivel, hogy kontextusban lássuk azt. Így jobban megértjük, hogy Ethereum fogyasztása magas vagy alacsony.
 
 {
-	<EnergyConsumptionChart />
+<EnergyConsumptionChart />
 }
 
 Az ábra az Ethereum becsült fogyasztását mutatja TWh/év formájában, más termékekkel és iparágakkal összevetve. A becslések nyilvános adatokból származnak 2023. júliusából, a forrásokat megtalálja a táblázat alatt.
 
-|                             | Éves energiafogyasztás (TWh) | Összevetve a PoS Ethereummal |                                                                                      Forrás                                                                                       |
-|:--------------------------- |:----------------------------:|:----------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| Globális adatközpontok      |             190              |           73 000x            |                                    [forrás](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
-| Bitcoin                     |             149              |           53 000x            |                                                                 [forrás](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
-| Aranybányászat              |             131              |           50 000x            |                                                                 [forrás](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
-| Számítógépes játékok (USA)* |              34              |           13 000x            |                 [forrás](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
-| PoW Ethereum                |              21              |            8100x             |                                                                    [forrás](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
-| Google                      |              19              |            7300x             |                                           [forrás](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
-| Netflix                     |            0,457             |             176x             | [forrás](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal                      |             0,26             |             100x             |                                  [forrás](https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf)                                   |
-| AirBnB                      |             0,02             |              8x              |                               [forrás](https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf)                               |
-| **PoS Ethereum**            |          **0,0026**          |            **1x**            |                                                               [forrás](https://carbon-ratings.com/eth-report-2022)                                                                |
+|                              | Éves energiafogyasztás (TWh) | Összevetve a PoS Ethereummal |                                                                                      Forrás                                                                                       |
+| :--------------------------- | :--------------------------: | :--------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Globális adatközpontok       |             190              |           73 000x            |                                    [forrás](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
+| Bitcoin                      |             149              |           53 000x            |                                                                 [forrás](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| Aranybányászat               |             131              |           50 000x            |                                                                 [forrás](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| Számítógépes játékok (USA)\* |              34              |           13 000x            |                 [forrás](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
+| PoW Ethereum                 |              21              |            8100x             |                                                                    [forrás](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
+| Google                       |              19              |            7300x             |                                           [forrás](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
+| Netflix                      |            0,457             |             176x             | [forrás](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
+| PayPal                       |             0,26             |             100x             |                                 [forrás](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB                       |             0,02             |              8x              |                              [forrás](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| **PoS Ethereum**             |          **0,0026**          |            **1x**            |                                                               [forrás](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*Beleértve a felhasználói eszközök fogyasztását, mint asztali számítógépek, laptopok és játékkonzolok.
 

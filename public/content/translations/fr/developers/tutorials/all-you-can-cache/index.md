@@ -28,7 +28,7 @@ Pour simplifier, nous supposerons que tous les paramètres de transaction sont d
 3. Pour toute autre valeur, prenez les quatre premiers bits comme le nombre d'octets supplémentaires, et les quatre bits de fin comme les bits les plus significatifs de la clé de la mise en cache. Voici quelques exemples :
 
    | Octets dans les données d'appel | Clé de la mise en cache |
-   |:------------------------------- | -----------------------:|
+   | :------------------------------ | ----------------------: |
    | 0x0F                            |                    0x0F |
    | 0x10,0x10                       |                    0x10 |
    | 0x12,0xAC                       |                  0x02AC |
@@ -298,7 +298,7 @@ Les autres possibilités (3 octets, 4 octets, etc.) sont gérées de la même ma
         revert("Error in encodeVal, should not happen");
 ```
 
-Si nous en arrivons là, cela signifie que nous avons obtenu une valeur qui n'est pas inférieure à 16 * 256<sup>15</sup>. Mais `cacheWrite` limite les clés donc nous ne pouvons même pas atteindre 14\*256<sup>16</sup> (ce qui aurait un premier octet de 0xFE, donc cela ressemblerait à `DONT_CACHE`). Mais cela ne nous coûte pas beaucoup d'ajouter un test au cas où un futur programmeur introduirait un bug.
+Si nous en arrivons là, cela signifie que nous avons obtenu une valeur qui n'est pas inférieure à 16 \* 256<sup>15</sup>. Mais `cacheWrite` limite les clés donc nous ne pouvons même pas atteindre 14\*256<sup>16</sup> (ce qui aurait un premier octet de 0xFE, donc cela ressemblerait à `DONT_CACHE`). Mais cela ne nous coûte pas beaucoup d'ajouter un test au cas où un futur programmeur introduirait un bug.
 
 ```solidity
     } // encodeVal
@@ -785,9 +785,9 @@ Une chose que vous n'obtenez pas avec les tests Solidity, c'est du code JavaScri
 
 4. Modifiez `.env` selon votre configuration :
 
-   | Paramètre             | Valeur                                                                                                                                                                                          |
-   | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | MNEMONIC              | La mnémonique d'un compte qui dispose de suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir de l'ETH gratuit pour le réseau Optimism Goerli ici](https://optimismfaucet.xyz/). |
+   | Paramètre           | Valeur                                                                                                                                                                                          |
+   | ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | MNEMONIC            | La mnémonique d'un compte qui dispose de suffisamment d'ETH pour payer une transaction. [Vous pouvez obtenir de l'ETH gratuit pour le réseau Optimism Goerli ici](https://optimismfaucet.xyz/). |
    | OPTIMISM_GOERLI_URL | URL vers Optimism Goerli. Le point de terminaison public, `https://goerli.optimism.io`, est à débit limité mais suffisant pour ce dont nous avons besoin ici                                    |
 
 5. Exécutez `index.js`.

@@ -51,7 +51,7 @@ Dieser Vorgang sollte nicht länger als 10 Minuten dauern.
 
 Sie können [chainlist.org](http://chainlist.org) verwenden, um die RPC-Details des Netzwerks zu finden. Sobald das Netzwerk hinzugefügt wurde und die Transaktion abgeschlossen ist, sollten Sie die Token in Ihrer Wallet sehen.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

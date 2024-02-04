@@ -11,7 +11,7 @@ description: Instruções de uso do Crowdin para traduzir o ethereum.org
 Para as pessoas que aprendem melhor de forma visual, assistam ao vídeo do Luka sobre as configurações do Crowdin. Como alternativa, você pode encontrar as mesmas etapas por escrito na próxima seção.
 
 {
-	<YouTube id="Ii7bYhanLs4" />
+<YouTube id="Ii7bYhanLs4" />
 }
 
 ## Guia escrito \{#written-guide}

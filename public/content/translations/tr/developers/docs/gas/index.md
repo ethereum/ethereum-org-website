@@ -132,7 +132,7 @@ Toplam ücret: `Gaz birimi (limit) * birim başına gaz ücreti` yani `21.000 * 
 Bu video, EIP-1559'u ve getirdiği faydaları açıklıyor:
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 ## Gaz ücretlerini izlemek \{#moitoring-gas-fees}

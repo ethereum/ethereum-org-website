@@ -97,5 +97,5 @@ GitPOAP reconnaîtra également automatiquement votre contribution et vous perme
 ## Contributeurs \{#contributors}
 
 {
-	<Contributors />
+<Contributors />
 }

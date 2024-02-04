@@ -30,7 +30,7 @@ Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/stak
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Bitte beachten \{#what-to-consider}
@@ -46,7 +46,7 @@ Allerdings kommt es mit diesen gestaketen ETH-Token zu kartellähnlichem Verhalt
 Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Schwächen hinzuweisen, die ein gelisteter Staking-Pool enthalten kann. Verwenden Sie diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren, während Sie einen Pool auswählen, dem Sie beitreten möchten.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Staking-Pools entdecken \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Sc
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Anhand der Indikatoren oben können Sie die Tools unten besser beurteilen.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Hinweis: Es ist wichtig, einen Dienst zu wählen, der [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) ernst nimmt, da das die Sicherheit des Netzwerks verbessert und Ihr Risiko begrenzt. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungskunden"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsenskunden"</em>.

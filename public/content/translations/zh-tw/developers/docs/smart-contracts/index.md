@@ -80,7 +80,7 @@ contract VendingMachine {
 
 ## 可組合性 \{#composability}
 
-智慧型合約公開於以太坊, 類似一API於網路. 這表示你可以在自己的智慧型合約中，調用其他智慧型合約，以大幅拓展可能性。 合約甚至能部署其他合約。
+智慧型合約公開於以太坊, 類似一 API 於網路. 這表示你可以在自己的智慧型合約中，調用其他智慧型合約，以大幅拓展可能性。 合約甚至能部署其他合約。
 
 深入瞭解[智慧型合約的可組合性](/developers/docs/smart-contracts/composability/)。
 

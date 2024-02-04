@@ -51,7 +51,7 @@ Ennek 10 perc alatt meg kell történnie.
 
 A [chainlist.org](http://chainlist.org) segít az adott hálózat RPC-adatait megtalálni. Amint a hálózat hozzáadásra kerül és a tranzakció végbemegy, a tokenek megjelennek a tárcájában.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

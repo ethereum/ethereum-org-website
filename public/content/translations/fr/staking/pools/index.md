@@ -30,7 +30,7 @@ En plus des avantages que nous avons décrits dans notre [introduction à la mis
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Éléments importants \{#what-to-consider}
@@ -46,7 +46,7 @@ Toutefois, ces jetons d'ETH mis en jeu ont tendance à créer des comportements 
 Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces ou faiblesses notables qu'un groupe de mise en jeu mutualisé peut présenter. Utilisez cette section comme référence pour savoir comment nous définissons ces attributs lorsque vous choisissez un pool à rejoindre.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Explorez les pools de mise en jeu \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces o
 De nombreuses options sont disponible pour vous aider dans votre configuration. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Veuillez noter l'importance de choisir un service qui prend au sérieux [la diversité des clients](/developers/docs/nodes-and-clients/client-diversity/) , car elle améliore la sécurité du réseau et limite vos risques. Les services prouvant que l'utilisation d'un client majoritaire est limitée sont indiqués avec <em style={{ textTransform: "uppercase" }}>"diversité des clients d'exécution"</em> et <em style={{ textTransform: "uppercase" }}>"diversité des clients de consensus."</em>

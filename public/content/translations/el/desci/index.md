@@ -23,7 +23,7 @@ summaryPoint3: Δημιουργία πάνω στο ανοιχτό επιστη�
 ### Juan Benet - Το Κίνημα DeSci
 
 {
-	<YouTube id="5ORvbCIW39o" />
+<YouTube id="5ORvbCIW39o" />
 }
 
 ## Πώς το DeSci βελτιώνει την επιστήμη \{#desci-improves-science}

@@ -84,13 +84,13 @@ Naiiba sa mga penalty sa kawalan ng aktibidad na ipapataw dahil sa pagiging offl
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Paano ito gumagana \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Habang aktibo ka, magkakaroon ka ng mga ETH reward, na ide-deposito paminsan-minsan sa iyong withdrawal address.
@@ -104,7 +104,7 @@ Kung gusto mo, maaari kang umalis bilang validator, kung kaya, hindi mo na kaila
 Ang Staking Launchpad ay isang open source na application na tutulong sa iyong maging staker. Gagabayan ka nito sa pagpili ng iyong mga client, paggawa ng mga key mo at pagdedeposito ng ETH mo sa staking deposit contract. May checklist na ibinibigay upang tiyakin na nagawa mo ang lahat para ligtas na ma-set up ang iyong validator.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Ano ang dapat isaalang-alang sa mga tool para sa node at client setup \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Dumarami ang mga tool at serbisyo na tutulong sa iyong i-solo stake ang ETH mo, 
 Ang mga attribute indicator ay ginagamit sa ibaba upang ipahiwatig ang mga kapansin-pansing kalakasan o kahinaan ng isang nakalistang staking tool. Gamitin ang seksyong ito bilang sanggunian sa kung paano namin tinutukoy ang mga attribute na ito habang pumipili ka ng mga tool na tutulong sa iyong staking journey.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Tingnan ang mga tool para sa pag-set up ng node at client \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Ang mga attribute indicator ay ginagamit sa ibaba upang ipahiwatig ang mga kapan
 May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin ang mga indicator sa itaas para magabayan ka sa mga tool sa ibaba.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Mga tool para sa node
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Tandaan ang kahalagahan ng pagpili ng [minority client](/developers/docs/nodes-and-clients/client-diversity/) dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Ang mga tool na nagbibigay-daan sa iyong mag-set up ng minority client ay tinutukoy bilang <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
@@ -138,7 +138,7 @@ Tandaan ang kahalagahan ng pagpili ng [minority client](/developers/docs/nodes-a
 Ang mga tool na ito ay maaaring gamitin bilang alternatibo sa [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) upang tumulong sa paggawa ng key.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.
@@ -146,7 +146,7 @@ May mungkahi para sa staking tool na hindi namin nabanggit? Tingnan ang aming [p
 ## Tingnan ang mga gabay sa solo staking \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Mga karaniwang itanong \{#faq}

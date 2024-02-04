@@ -9,7 +9,7 @@ lang: fr
 Face à l'intérêt grandissant pour les cryptomonnaies, il est essentiel d'apprendre les bonnes pratiques lors de leur utilisation. Les cryptomonnaies peuvent être excitantes, mais elles impliquent aussi des risques importants. Si vous effectuez ces petits efforts en amont, vous pouvez diminuer ces risques.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Le b.a.-ba de la sécurité sur le Web \{#web-security}
@@ -26,7 +26,7 @@ Exemple de mot de passe faible : CuteFluffyKittens!
 Exemple de mot de passe fort : ymv\*azu.EAC8eyp8umf
 ```
 
-Une autre erreur courante est d'utiliser des mots de passe qui peuvent être facilement devinés par le biais de l'[ingénierie sociale](https://wikipedia.org/wiki/Social_engineering_(security)). Par exemple, le fait d'inclure le nom de jeune fille de votre mère, le nom de vos enfants ou de votre animal de compagnie, ou encore des dates d'anniversaire dans votre mot de passe n'est pas sécurisé et augmente le risque que votre mot de passe soit compromis.
+Une autre erreur courante est d'utiliser des mots de passe qui peuvent être facilement devinés par le biais de l'[ingénierie sociale](<https://wikipedia.org/wiki/Social_engineering_(security)>). Par exemple, le fait d'inclure le nom de jeune fille de votre mère, le nom de vos enfants ou de votre animal de compagnie, ou encore des dates d'anniversaire dans votre mot de passe n'est pas sécurisé et augmente le risque que votre mot de passe soit compromis.
 
 #### Bonnes pratiques pour des mots de passe forts : \{#good-password-practices}
 
@@ -84,7 +84,7 @@ Pour ceux qui veulent une 2FA encore plus securisée, pensez à utiliser une cl�
 En savoir plus sur la 2FA :
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Désinstaller les extensions du navigateur \{#uninstall-browser-extensions}
@@ -100,7 +100,7 @@ Les extensions de navigateur comme les extensions Chrome ou les modules complém
 [En savoir plus sur les risques liés aux extensions des navigateurs](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Le b.a.-ba de la sécurité de votre cryptomonnaie \{#crypto-security}
@@ -162,7 +162,7 @@ De nombreux portefeuilles Ethereum offrent des limites de sécurité pour évite
 [Comment révoquer l'accès des contrats intelligents à vos fonds crypto](/guides/how-to-revoke-token-access/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Escroqueries courantes \{#common-scams}
@@ -268,7 +268,7 @@ Les arnaques au airdrop : il s'agit d'un projet factice de distribution d'actif 
 [En savoir plus sur les arnaques par Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Complément d'information \{#further-reading}
@@ -294,5 +294,5 @@ Les arnaques au airdrop : il s'agit d'un projet factice de distribution d'actif 
 - [Fil Twitter sur les courriels et messages communs de phishing en cryptomonnaies](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 {
-	<QuizWidget quizKey="security" />
+<QuizWidget quizKey="security" />
 }

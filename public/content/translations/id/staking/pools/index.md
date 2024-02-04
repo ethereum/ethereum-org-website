@@ -30,7 +30,7 @@ Selain manfaat yang kami sebutkan dalam [pengantar tentang penaruhan](/staking/)
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Apa yang perlu ditentukan \{#what-to-consider}
@@ -46,7 +46,7 @@ Namun, token ETH yang dipertaruhkan ini cenderung menciptakan perilaku seperti k
 Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang mencolok yang mungkin dimiliki oleh pool penaruhan yang terdaftar. Gunakan bagian ini sebagai referensi untuk bagaimana kami mendefinisikan atribut ini ketika Anda memilih pool untuk bergabung.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Eksplorasi pool penaruhan \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 Terdapat berbagai pilihan yang tersedia untuk membantu Anda dengan pengaturan Anda. Gunakan petunjuk di atas untuk membantu Anda memandu melalui perangkat di bawah ini.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Harap perhatikan pentingnya memilih layanan yang serius mengenai [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/), karena ini meningkatkan keamanan jaringan dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style={{ textTransform: "uppercase" }}>"diversitas klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"diversitas klien konsensus."</em>

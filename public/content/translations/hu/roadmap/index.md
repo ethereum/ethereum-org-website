@@ -7,11 +7,9 @@ image: /heroes/roadmap-hub-hero.jpg
 alt: "Ethereum-ütemterv"
 summaryPoints:
 buttons:
-  - 
-    label: Várható fejlesztések
+  - label: Várható fejlesztések
     toId: what-changes-are-coming
-  - 
-    label: Korábbi fejlesztések
+  - label: Korábbi fejlesztések
     to: /history/
     variant: vázlat
 ---

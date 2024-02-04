@@ -63,7 +63,7 @@ Mais sobre [prova de participação](/developers/docs/consensus-mechanisms/pos/)
 Saiba mais sobre os diferentes tipos de mecanismos de consenso utilizados no Ethereum:
 
 {
-	<YouTube id="ojxfbN78WFQ" />
+<YouTube id="ojxfbN78WFQ" />
 }
 
 ### Resistência a ataques Sybil e seleção de cadeia \{#sybil-chain}

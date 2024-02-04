@@ -33,7 +33,7 @@ Când Alice a trimis banii, suma de 1,0042 ETH ar fi fost dedusă din contul lui
 Acest videoclip oferă o prezentare succintă a gazului și a motivului pentru care există:
 
 {
-	<YouTube id="AJvzNICwcwc" />
+<YouTube id="AJvzNICwcwc" />
 }
 
 ## După actualizarea Londra \{#post-london}
@@ -108,7 +108,7 @@ Punerea în aplicare a [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) în c
 Acest videoclip explică EIP-1559 și beneficiile aduse de acesta:
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 Dacă sunteți interesat, puteți citi [Specificațiile EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)exacte.

@@ -132,7 +132,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 下面的视频解释了 EIP-1559 及其带来的好处：
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 ## 监控燃料费 \{#moitoring-gas-fees}

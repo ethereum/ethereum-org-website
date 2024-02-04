@@ -23,7 +23,7 @@ Merkeziyetsiz bilim, daha çeşitli fon kaynaklarına ( [DAO'lardan](/dao/), [ka
 ### Juan Benet - DeSci Hareketi
 
 {
-	<YouTube id="5ORvbCIW39o" />
+<YouTube id="5ORvbCIW39o" />
 }
 
 ## Merkeziyetsiz bilimin, bilimi nasıl geliştirdiği \{#desci-improves-science}

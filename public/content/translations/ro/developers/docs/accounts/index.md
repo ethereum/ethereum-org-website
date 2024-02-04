@@ -104,11 +104,11 @@ Un cont nu este un portofel. Un cont este perechea de chei pentru un cont Ethere
 Urmăriți-l pe Austin cum vă ghidează pas cu pas prin funcțiile hash și perechile de chei.
 
 {
-	<YouTube id="QJ010l-pBpE" />
+<YouTube id="QJ010l-pBpE" />
 }
 
 {
-	<YouTube id="9LtBDy67Tho" />
+<YouTube id="9LtBDy67Tho" />
 }
 
 ## Referințe suplimentare \{#further-reading}

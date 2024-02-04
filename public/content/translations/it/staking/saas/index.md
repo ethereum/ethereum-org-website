@@ -28,7 +28,7 @@ Il protocollo di Ethereum non supporta nativamente la delegazione dello staking,
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Cosa considerare \{#what-to-consider}
@@ -38,7 +38,7 @@ Esiste un numero crescente di fornitori di SaaS per aiutarti a mettere i tuoi ET
 Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di forza o debolezze che un fornitore di SaaS elencato potrebbe avere. Usa questa sezione come un riferimento per come definiamo questi attributi mentre stai scegliendo un servizio per aiutarti con il tuo percorso di staking.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Esplora i fornitori del servizio di staking \{#saas-providers}
@@ -46,13 +46,13 @@ Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di
 Di seguito alcuni fornitori di SaaS disponibili. Usa i suddetti indicatori per orientarti tra questi servizi
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Fornitori di SaaS
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Ricorda l'importanza di supportare la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/) poiché migliora la sicurezza della rete e limita i tuoi rischi. I servizi aventi prova della limitazione dell'utilizzo dei client di maggioranza sono indicati con <em style={{ textTransform: "uppercase" }}>"diversità del client d'esecuzione"</em> e <em style={{ textTransform: "uppercase" }}>"diversità del client del consenso."</em>
@@ -60,7 +60,7 @@ Ricorda l'importanza di supportare la [diversità del client](/developers/docs/n
 ### Generatori di chiavi
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Hai un suggerimento per un fornitore di staking come servizio che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.

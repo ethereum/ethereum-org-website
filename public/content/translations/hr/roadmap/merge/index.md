@@ -4,7 +4,7 @@ description: Saznajte više o spajanju – kada je glavna mreža Ethereuma usvoj
 lang: hr
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Glavna mreža Ethereuma upotrebljava dokaz uloga, međutim, to nije uvijek bilo tako.
 summaryPoint2: Nadogradnja izvornog mehanizma dokaza rada na dokaz uloga nazvana je The Merge (Spajanje).
 summaryPoint3: Spajanjem je spojena izvorna glavna mreža Ethereumu sa zasebnim lancem blokova dokaza uloga (poznat pod nazivom Beacon Chain) u jedan lanac.
@@ -20,7 +20,7 @@ summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno
 Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne mreže koja je postojala još od [geneze](/history/#frontier)) s novim slojem konsenzusa dokaza uloga pod nazivom Beacon Chain. Time se uklanja potreba za energetski intenzivnim rudarenjem i umjesto toga mreža se osigurava korištenjem ulagačkog ETH-a. To je bio dosta značajan korak vizije Ethereuma kao prilagodljivijeg, sigurnijeg i održivijeg.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 U početku je [Beacon Chain](/roadmap/beacon-chain/) bio odvojen od [glavne mreže](/glossary/#mainnet). Glavna mreža Ethereuma, sa svim svojim računima, stanjima, pametnim ugovorima i stanjima lanaca blokova, ostaje zaštićena [dokazom rada](/developers/docs/consensus-mechanisms/pow/), čak i za vrijeme paralelnog rada značajke Beacon Chain i njegova [dokaza uloga](/developers/docs/consensus-mechanisms/pos/). Spajanjem su ta dva sustava konačno objedinjena, pri čemu je dokaz rada trajno zamijenjen dokazom uloga.
@@ -241,9 +241,9 @@ Planovi za razdjeljivanje brzo su se razvijali. Međutim, uzimajući u obzir ras
 ## Daljnje čitanje \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

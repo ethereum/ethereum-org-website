@@ -19,7 +19,7 @@ Najlepší spôsob, ako začať s Ethereom, je pustiť sa rovno do toho!
 Tu je zopár aplikácií postavených na Ethereu – tento zoznam však často obmieňame!
 
 {
-	<RandomAppList />
+<RandomAppList />
 }
 
 Chceli by ste spoznať ďalšie aplikácie postavené na Ethereu?

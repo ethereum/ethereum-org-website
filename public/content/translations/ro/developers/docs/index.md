@@ -15,17 +15,17 @@ Dacă aceasta este prima dvs. încercare de dezvoltare pe Ethereum, vă recomand
 ### Subiecte fundamentale \{#foundational-topics}
 
 {
-	<DeveloperDocsLinks headerId="foundational-topics" />
+<DeveloperDocsLinks headerId="foundational-topics" />
 }
 
 ### Stiva Ethereum \{#ethereum-stack}
 
 {
-	<DeveloperDocsLinks headerId="ethereum-stack" />
+<DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
 ### Avansat \{#advanced}
 
 {
-	<DeveloperDocsLinks headerId="advanced" />
+<DeveloperDocsLinks headerId="advanced" />
 }

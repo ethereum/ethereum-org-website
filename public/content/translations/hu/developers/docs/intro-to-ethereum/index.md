@@ -21,7 +21,7 @@ Ha szeretné látni, hogy a blokklánc adat hogyan hashelődik és azután hogya
 Nézze meg, ahogy Anders elmagyarázza a hasheket a blokkláncban:
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## Mi az Ethereum? \{#what-is-ethereum}

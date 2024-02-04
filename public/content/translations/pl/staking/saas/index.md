@@ -28,7 +28,7 @@ Protokół Ethereum nie wspiera natywnie delegowania stawek, więc stworzone zos
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Co wziąć pod uwagę \{#what-to-consider}
@@ -38,7 +38,7 @@ Powstaje coraz więcej dostawców SaaS, którzy pomogą Ci stakować Twoje ETH, 
 Wskaźniki atrybutów są użyte poniżej, aby zasygnalizować godne uwagi mocne lub słabe strony, jakie może mieć wymieniony dostawca SaaS. Użyj tej sekcji jako odniesienia do sposobu definiowania tych atrybutów podczas wybierania usługi, która pomoże Ci w Twojej przygodzie ze stakingiem.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Poznaj dostawców usług stakingowych \{#saas-providers}
@@ -46,13 +46,13 @@ Wskaźniki atrybutów są użyte poniżej, aby zasygnalizować godne uwagi mocne
 Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Dostawcy SaaS
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
@@ -60,7 +60,7 @@ Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/develope
 ### Generatory kluczy
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Masz sugestię dostawcy usług stakingowych, którego pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy są one odpowiednie i przesłać je do recenzji.

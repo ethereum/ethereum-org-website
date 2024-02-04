@@ -28,7 +28,7 @@ lang: zh-tw
 - 撰寫或審查以太坊改進提案
   - 撰寫以太坊改進提案
     1. 將你的想法提交至[以太坊魔法師協會](https://ethereum-magicians.org)
-    2. 閱讀 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **沒錯，就是指_整篇_文件。**
+    2. 閱讀 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **沒錯，就是指*整篇*文件。**
     3. 遵照 EIP-1 中的指示， 並在寫草稿時參考指示。
   - 了解如何成為[以太坊改進提案編輯](https://eips.ethereum.org/EIPS/eip-5069)
     - 現在，你可以進行同行評審，審核其他人的以太坊改進提案！ 請見[使用 `e-review` 標籤建立新提取請求](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)。 在 `discussion-to` 連結提供技術性回饋。

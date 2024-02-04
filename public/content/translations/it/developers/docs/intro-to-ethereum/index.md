@@ -21,7 +21,7 @@ Se desideri vedere come avviene l'hashing dei dati della blockchain e la loro su
 Guarda Anders che spiega gli hash nelle blockchain:
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## Cos'è Ethereum? \{#what-is-ethereum}

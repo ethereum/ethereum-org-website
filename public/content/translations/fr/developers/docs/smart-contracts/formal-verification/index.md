@@ -130,7 +130,7 @@ En conséquence, une assistance humaine est souvent nécessaire pour guider le d
 
 ### Symbolic Execution \{#symbolic-execution}
 
-L'exécution symbolique est une méthode d'analyse d'un contrat intelligent en exécutant des fonctions à l'aide de _valeurs symboliques_ (p. ex., `x > 5`) au lieu de _valeurs concrètes_  (p. ex., `x == 5`). En tant que technique de vérification formelle, l'exécution symbolique est utilisée pour justifier formellement les propriétés de niveau de trace dans le code d'un contrat.
+L'exécution symbolique est une méthode d'analyse d'un contrat intelligent en exécutant des fonctions à l'aide de _valeurs symboliques_ (p. ex., `x > 5`) au lieu de _valeurs concrètes_ (p. ex., `x == 5`). En tant que technique de vérification formelle, l'exécution symbolique est utilisée pour justifier formellement les propriétés de niveau de trace dans le code d'un contrat.
 
 L'exécution symbolique représente une trace d'exécution en tant que formule mathématique sur des valeurs d'entrée symboliques, autrement appelée un _prédicat de chemin_. Un [solutionneur SMT](https://en.wikipedia.org/wiki/Satisfiability_modulo_theories) est utilisé pour vérifier si un prédicat de chemin est « réalisable » (c.-à-d. s'il existe une valeur qui peut satisfaire la formule). Si un chemin vulnérable est satisfaisant, le solutionneur SMT génère une valeur concrète qui déclenche l'exécution vers ce chemin.
 
@@ -212,16 +212,16 @@ De plus, il n'est pas toujours possible pour les vérificateurs de programme de 
 
 ### Langues de spécification pour la création de spécifications formelles \{#specification-languages}
 
-**Act** : _*Act permet de spécifier les mises à jour de stockage, les prérequis et les conditions ultérieures ainsi que les invariants contractuels. Sa suite d'outils a également des backends éprouvés capables de démontrer de nombreuses propriétés via Coq, les solutionneurs SMT, ou hem.**
+**Act** : \_\*Act permet de spécifier les mises à jour de stockage, les prérequis et les conditions ultérieures ainsi que les invariants contractuels. Sa suite d'outils a également des backends éprouvés capables de démontrer de nombreuses propriétés via Coq, les solutionneurs SMT, ou hem.\*\*
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentation](https://ethereum.github.io/act/)
 
-**Scribble** - _*Scribble transforme des annotations de code dans le langage de spécification Scribble en assertions concrètes qui vérifient la spécification.**
+**Scribble** - \_\*Scribble transforme des annotations de code dans le langage de spécification Scribble en assertions concrètes qui vérifient la spécification.\*\*
 
 - [Documentation](https://docs.scribble.codes/)
 
-**Dafny** - _*Dafny est un langage de programmation prêt à la vérification qui repose sur des annotations de haut niveau pour raisonner et prouver la justesse du code.**
+**Dafny** - \_\*Dafny est un langage de programmation prêt à la vérification qui repose sur des annotations de haut niveau pour raisonner et prouver la justesse du code.\*\*
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -232,15 +232,15 @@ De plus, il n'est pas toujours possible pour les vérificateurs de programme de 
 - [Site Web](https://www.certora.com/)
 - [Documentation](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - _*SMTChecker de Solidity est un vérificateur de modèle intégré basé sur SMT ( Satisfiability Modulo Théories) et résolution d'Horn. Il confirme si le code source d'un contrat correspond aux spécifications lors de la compilation et vérifie statiquement les violations des propriétés de sécurité.**
+**Solidity SMTChecker** - \_\*SMTChecker de Solidity est un vérificateur de modèle intégré basé sur SMT ( Satisfiability Modulo Théories) et résolution d'Horn. Il confirme si le code source d'un contrat correspond aux spécifications lors de la compilation et vérifie statiquement les violations des propriétés de sécurité.\*\*
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - _*solc-verify est une version étendue du compilateur Solidity qui peut effectuer une vérification formelle automatisée sur le code Solidity à l'aide d'annotations et de vérification de programme modulaire.**
+**solc-verify** - \_\*solc-verify est une version étendue du compilateur Solidity qui peut effectuer une vérification formelle automatisée sur le code Solidity à l'aide d'annotations et de vérification de programme modulaire.\*\*
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - _*KEVM est une sémantique formelle de la machine virtuelle (EVM) Ethereum écrite dans le cadre K. KEVM est exécutable et peut prouver certaines assertions liées à la propriété en utilisant la logique d'accessibilité.**
+**KEVM** - \_\*KEVM est une sémantique formelle de la machine virtuelle (EVM) Ethereum écrite dans le cadre K. KEVM est exécutable et peut prouver certaines assertions liées à la propriété en utilisant la logique d'accessibilité.\*\*
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentation](https://jellopaper.org/)
@@ -259,12 +259,12 @@ De plus, il n'est pas toujours possible pour les vérificateurs de programme de 
 
 ### Outils basés sur l'exécution symbolique pour détecter les modèles vulnérables dans les contrats intelligents \{#symbolic-execution-tools}
 
-**Manticore** - _*Un outil d'analyse de bytecode EVM basé sur l'exécution symbolique*.*
+**Manticore** - \__Un outil d'analyse de bytecode EVM basé sur l'exécution symbolique_.\*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentation](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - _*hevm est un moteur d'exécution symbolique et vérificateur d'équivalence pour le bytecode EVM.**
+**hevm** - \_\*hevm est un moteur d'exécution symbolique et vérificateur d'équivalence pour le bytecode EVM.\*\*
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 

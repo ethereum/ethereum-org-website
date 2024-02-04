@@ -30,7 +30,7 @@ Bukod sa mga benepisyo na aming inilahad sa aming [panimula sa staking](/staking
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Ano ang dapat isaalang-alang \{#what-to-consider}
@@ -46,7 +46,7 @@ Gayunpaman, ang mga staked-ETH token na ito ay karaniwang nagdudulot ng mga kaga
 Gumagamit ng mga attribute indicator sa ibaba para ipakita ang mga kapansin-pansing kalakasan o kahinaan ng isang nakalistang staking pool. Gamitin ang seksyong ito bilang sanggunian sa kung paano namin tinutukoy ang mga attribute na ito habang pumipili ka ng pool na sasalihan.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Tingnan ang mga staking pool \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Gumagamit ng mga attribute indicator sa ibaba para ipakita ang mga kapansin-pans
 May iba't ibang opsyon na available upang tulungan ka sa iyong setup. Gamitin ang mga indicator sa itaas para magabayan ka sa mga tool sa ibaba.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Tandaan ang kahalagahan ng pagpili ng serbisyo na seryoso sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/), dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>

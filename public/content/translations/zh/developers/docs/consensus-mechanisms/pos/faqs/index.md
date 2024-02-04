@@ -21,7 +21,7 @@ lang: zh
 工作量证明与权益证明是一个有争议的话题。 [Vitalik Buterin 的博客](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)以及 Justin Drake 与 Lyn Alden 之间的辩论对这些论点做了很好的总结。
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## 权益证明的能效高吗？ \{#is-pos-energy-efficient}

@@ -115,11 +115,11 @@ Hesap, cüzdan demek değildir. Hesap, kullanıcı tarafından sahip olunan bir 
 Austin'in karma fonksiyonlarını ve anahtar çiftlerini açıklamasını izleyin.
 
 {
-	<YouTube id="QJ010l-pBpE" />
+<YouTube id="QJ010l-pBpE" />
 }
 
 {
-	<YouTube id="9LtBDy67Tho" />
+<YouTube id="9LtBDy67Tho" />
 }
 
 ## Daha fazla okuma \{#further-reading}

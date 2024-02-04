@@ -21,7 +21,7 @@ Si desea ver cómo los datos de la cadena de bloques se convierte en hash y post
 Vea la explicación de Anders sobre los hashes en las cadenas de bloques:
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## ¿Qué es Ethereum? \{#what-is-ethereum}

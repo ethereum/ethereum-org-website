@@ -83,5 +83,5 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 ## 贡献者 \{#contributors}
 
 {
-	<Contributors />
+<Contributors />
 }

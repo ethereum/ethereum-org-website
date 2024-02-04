@@ -55,7 +55,7 @@ Minden blokk rendelkezik alapdíjjal, ami egyfajta foglalási díjként működi
 Az alapdíj egy olyan képlettel kerül kiszámításra, amely összeveti az előző blokk méretét (a benne lévő tranzakciók által felhasznált gáz mennyisége) a célmérettel. Ha a blokk meghaladja a célméretet, akkor az alapdíj legfeljebb 12,5%-kal emelkedik blokkonként. Ez az exponenciális növekedés gazdasági szempontból eléri, hogy a blokkméret ne maradhasson ilyen nagy a végtelenségig.
 
 | Blokkszám | Benne lévő gáz | Díjnövekedés | Jelenlegi alapdíj |
-| --------- | --------------:| ------------:| -----------------:|
+| --------- | -------------: | -----------: | ----------------: |
 | 1         |            15M |           0% |          100 gwei |
 | 2         |            30M |           0% |          100 gwei |
 | 3         |            30M |        12,5% |        112,5 gwei |
@@ -70,7 +70,7 @@ A táblázatot folytatva a 9. blokkba kerülő tranzakcióra a tárca megadja a 
 Fontos megjegyezni, hogy nem valószínű, hogy egymás után sok teljes blokk készül, mert az alapdíj gyorsan növekszik a teljes blokk előtt.
 
 | Blokkszám | Benne lévő gáz | Díjnövekedés | Jelenlegi alapdíj |
-| --------- | --------------:| ------------:| -----------------:|
+| --------- | -------------: | -----------: | ----------------: |
 | 30        |            30M |        12,5% |       2705,6 gwei |
 | ...       |            ... |        12,5% |               ... |
 | 50        |            30M |        12,5% |     28 531,3 gwei |
@@ -132,7 +132,7 @@ Az [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) bevezetése a London-fris
 Az alábbi videó elmagyarázza az EIP-1559 lényegét és előnyeit:
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 ## A gázdíjak felügyelete \{#moitoring-gas-fees}

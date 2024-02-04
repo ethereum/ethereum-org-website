@@ -19,7 +19,7 @@ Az NFT-k olyan tokenek, melyek teljesen egyediek. Minden egyes NFT más jellemz�
 Az NFT-k egyedisége révén akár műtárgyak, gyűjthető tárgyak vagy ingatlanok is tokenné alakíthatók. Ekkor egy adott egyedi NFT egy specifikus, egyedi, valós vagy digitális tárgyat képvisel. Az eszköz tulajdonjoga nyilvánosan ellenőrizhető az Ethereum blokkláncon.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## Az eszközök internete \{#internet-of-assets}
@@ -67,7 +67,7 @@ Ez a weboldal egy alternatív, NFT-k által működtetett domainnévvel is rende
 [Bővebben az ENS-ről](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Hogyan működnek az NFT-k? \{#how-nfts-work}
@@ -102,9 +102,9 @@ Az NFT-kkel kapcsolatos biztonsági problémák leggyakrabban adathalász csalá
 - [ERC-1155 tokenszabvány](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

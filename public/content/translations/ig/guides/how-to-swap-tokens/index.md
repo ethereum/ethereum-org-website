@@ -48,7 +48,7 @@ I nwere ike ịlele ọganihu nke azụmahịa ahụ n'ihe nchọgharị blọkc
 
 Ị ga-enweta tokin nke a gbanwere n'akpa ego ịntanetị gị ozugbo e mechara azụmahịa ahụ.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

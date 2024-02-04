@@ -33,7 +33,7 @@ Le terme [Turing-complet](https://en.wikipedia.org/wiki/Turing_completeness) dé
 
 Cette section présente les bases de l'EVM et comment il se compare à d'autres modèles computationnels.
 
-Une [machine pile](https://en.wikipedia.org/wiki/Stack_machine) est un ordinateur qui stocke les données intermédiaires non pas dans des registres, mais dans une [**pile**](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)). C'est l'architecture privilégiée pour les machines virtuelles car elle est facile à mettre en œuvre, ce qui signifie que les bugs et les vulnérabilités de sécurité sont beaucoup moins probables. La mémoire dans la pile est divisée en mots de 256 bits. Ce choix a été fait car il est pratique pour les opérations cryptographiques centrales d'Ethereum telles que le hachage Keccak-256 et les calculs de courbes elliptiques. La taille maximale de la pile est de 1024 octets. Lorsque les opcodes sont exécutés, ils prennent généralement leurs paramètres depuis la pile. Il existe des opcodes spécifiquement pour réorganiser les éléments dans la pile, tels que `POP` (retire l'élément du haut de la pile), `DUP_N` (duplique le N-ième élément dans la pile), etc.
+Une [machine pile](https://en.wikipedia.org/wiki/Stack_machine) est un ordinateur qui stocke les données intermédiaires non pas dans des registres, mais dans une [**pile**](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>). C'est l'architecture privilégiée pour les machines virtuelles car elle est facile à mettre en œuvre, ce qui signifie que les bugs et les vulnérabilités de sécurité sont beaucoup moins probables. La mémoire dans la pile est divisée en mots de 256 bits. Ce choix a été fait car il est pratique pour les opérations cryptographiques centrales d'Ethereum telles que le hachage Keccak-256 et les calculs de courbes elliptiques. La taille maximale de la pile est de 1024 octets. Lorsque les opcodes sont exécutés, ils prennent généralement leurs paramètres depuis la pile. Il existe des opcodes spécifiquement pour réorganiser les éléments dans la pile, tels que `POP` (retire l'élément du haut de la pile), `DUP_N` (duplique le N-ième élément dans la pile), etc.
 
 L'EVM possède également un espace volatile appelé **mémoire**, qui est utilisé pour stocker des données pendant l'exécution. Cette mémoire est organisée en mots de 32 octets. Tous les emplacements mémoire sont initialisés à zéro. Si vous exécutez ce code [Yul](https://docs.soliditylang.org/en/latest/yul.html) pour ajouter un mot à la mémoire, il remplira 32 octets de mémoire en remplissant l'espace vide du mot avec des zéros, c'est-à-dire qu'il crée un mot - avec des zéros aux emplacements 0-29, 0x60 à 30, et 0xA7 à 31.
 
@@ -180,7 +180,7 @@ Ici, nous définissons formellement ce que sont les opcodes [`JUMPDEST`](https:/
 
 Dans l'équation (153), nous définissons une fonction, _N(i,w)_. Le premier paramètre, _i_, est la position de l'opcode. Le second, _w_, est l'opcode lui-même. Si _w∈[PUSH1, PUSH32]_, cela signifie que l'opcode est un PUSH (les crochets définissent une plage qui inclut les points d'extrémité). Dans ce cas, le prochain opcode est à _i+2+(w−PUSH1)_. Pour [`PUSH1`](https://www.evm.codes/#60), nous devons avancer de deux bytes (le PUSH lui-même et la valeur d'un byte), pour [`PUSH2`](https://www.evm.codes/#61) nous devons avancer de trois bytes car c'est une valeur de deux bytes, etc. Tous les autres opcodes EVM ont une longueur d'un byte, donc dans tous les autres cas _N(i,w)=i+1_.
 
-Cette fonction est utilisée dans l'équation (152) pour définir _D<sub>J</sub>(c,i)_, qui est [l'ensemble](https://en.wikipedia.org/wiki/Set_(mathematics)) de toutes les destinations de saut valides dans le code _c_, à partir de la position de l'opcode _i_. Cette fonction est définie de manière récursive. Si _i≥||c||_, cela signifie que nous sommes à la fin ou après la fin du code. Nous ne trouverons plus d'autres destinations de saut, donc retournez simplement l'ensemble vide.
+Cette fonction est utilisée dans l'équation (152) pour définir _D<sub>J</sub>(c,i)_, qui est [l'ensemble](<https://en.wikipedia.org/wiki/Set_(mathematics)>) de toutes les destinations de saut valides dans le code _c_, à partir de la position de l'opcode _i_. Cette fonction est définie de manière récursive. Si _i≥||c||_, cela signifie que nous sommes à la fin ou après la fin du code. Nous ne trouverons plus d'autres destinations de saut, donc retournez simplement l'ensemble vide.
 
 Dans tous les autres cas, nous examinons le reste du code en passant à l'opcode suivant et en obtenant l'ensemble à partir de celui-ci. _c[i]_ est l'opcode actuel, donc _N(i,c[i])_ est la position du prochain opcode. _D<sub>J</sub>(c,N(i,c[i]))_ est donc l'ensemble des destinations de saut valides qui commence au prochain opcode. Si l'opcode actuel n'est pas un `JUMPDEST`, retournez simplement cet ensemble. Si c'est un `JUMPDEST`, incluez-le dans l'ensemble résultant et retournez-le.
 
@@ -198,10 +198,10 @@ Avant de passer à la sous-section finale de l'EVM, 9.5, examinons les instructi
 
 Par exemple, examinons l'opcode [`ADD`](https://www.evm.codes/#01).
 
-| Valeur | Mnemonic | δ | α | Description                                               |
-| ------:| -------- | - | - | --------------------------------------------------------- |
-|   0x01 | ADD      | 2 | 1 | Opération d'addition.                                     |
-|        |          |   |   | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]_ |
+| Valeur | Mnemonic | δ   | α   | Description                                               |
+| -----: | -------- | --- | --- | --------------------------------------------------------- |
+|   0x01 | ADD      | 2   | 1   | Opération d'addition.                                     |
+|        |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[0] + μ<sub>s</sub>[1]_ |
 
 _δ_ est le nombre de valeurs que nous retirons de la pile. Dans ce cas deux, car nous additionnons les deux premières valeurs.
 
@@ -211,18 +211,18 @@ Ainsi, le nouveau sommet de la pile (_μ′<sub>s</sub>[0]_) est la somme de l'a
 
 Au lieu de passer en revue tous les opcodes avec une « liste ennuyeuse », cet article n'explique que les opcodes qui introduisent quelque chose de nouveau.
 
-| Valeur | Mnemonic  | δ | α | Description                                                                                                |
-| ------:| --------- | - | - | ---------------------------------------------------------------------------------------------------------- |
-|   0x20 | KECCAK256 | 2 | 1 | Calculez le hash Keccak-256.                                                                               |
-|        |           |   |   | _μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])_ |
-|        |           |   |   | _μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])_                                      |
+| Valeur | Mnemonic  | δ   | α   | Description                                                                                                |
+| -----: | --------- | --- | --- | ---------------------------------------------------------------------------------------------------------- |
+|   0x20 | KECCAK256 | 2   | 1   | Calculez le hash Keccak-256.                                                                               |
+|        |           |     |     | _μ′<sub>s</sub>[0] ≡ KEC(μ<sub>m</sub>[μ<sub>s</sub>[0] . . . (μ<sub>s</sub>[0] + μ<sub>s</sub>[1] − 1)])_ |
+|        |           |     |     | _μ′<sub>i</sub> ≡ M(μ<sub>i</sub>,μ<sub>s</sub>[0],μ<sub>s</sub>[1])_                                      |
 
 Il s'agit du premier opcode qui accède à la mémoire (dans ce cas, en lecture seule). Cependant, il pourrait dépasser les limites actuelles de la mémoire, nous devons donc mettre à jour _μ<sub>i</sub>._ Nous faisons cela en utilisant la fonction _M_ définie dans l'équation 328 à la page 29.
 
-| Valeur | Mnemonic | δ | α | Description                       |
-| ------:| -------- | - | - | --------------------------------- |
-|   0x31 | BALANCE  | 1 | 1 | Obtenez le solde du compte donné. |
-|        |          |   |   | ...                               |
+| Valeur | Mnemonic | δ   | α   | Description                       |
+| -----: | -------- | --- | --- | --------------------------------- |
+|   0x31 | BALANCE  | 1   | 1   | Obtenez le solde du compte donné. |
+|        |          |     |     | ...                               |
 
 L'adresse dont nous avons besoin pour trouver le solde est _μ<sub>s</sub>[0] mod 2<sup>160</sup>_. Le sommet de la pile est l'adresse, mais comme les adresses ne font que 160 bits, nous calculons la valeur [modulo](https://en.wikipedia.org/wiki/Modulo_operation) 2<sup>160</sup>.
 
@@ -230,10 +230,10 @@ Si _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_, cela signifie qu'il y a 
 
 La deuxième équation, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] mod 2<sup>160</sup>}_, est liée à la différence de coût entre l'accès au stockage chaud (stockage qui a récemment été accédé et est susceptible d'être mis en cache) et le stockage froid (stockage qui n'a pas été accédé et est susceptible de se trouver dans un stockage plus lent qui est plus coûteux à récupérer). _A<sub>a</sub>_ est la liste des adresses précédemment accédées par la transaction, qui devraient donc être moins chères à accéder, comme défini dans la section 6.1 à la page 8. Vous pouvez en savoir plus sur ce sujet dans [l'EIP-2929](https://eips.ethereum.org/EIPS/eip-2929).
 
-| Valeur | Mnemonic | δ  | α  | Description                             |
-| ------:| -------- | -- | -- | --------------------------------------- |
-|   0x8F | DUP16    | 16 | 17 | Duplique le 16e élément de la pile.     |
-|        |          |    |    | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
+| Valeur | Mnemonic | δ   | α   | Description                             |
+| -----: | -------- | --- | --- | --------------------------------------- |
+|   0x8F | DUP16    | 16  | 17  | Duplique le 16e élément de la pile.     |
+|        |          |     |     | _μ′<sub>s</sub>[0] ≡ μ<sub>s</sub>[15]_ |
 
 Notez que pour utiliser un élément de la pile, nous devons le retirer, ce qui signifie que nous devons également retirer tous les éléments de la pile au-dessus de lui. Dans le cas de [`DUP<n>`](https://www.evm.codes/#8f) et [`SWAP<n>`](https://www.evm.codes/#9f), cela signifie devoir retirer puis remettre jusqu'à seize valeurs.
 

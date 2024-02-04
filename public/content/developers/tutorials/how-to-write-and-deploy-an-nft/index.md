@@ -236,7 +236,7 @@ Your `.env` should now look like this:
 To actually connect these to our code, we’ll reference these variables in our hardhat.config.js file in step 13.
 
 {
-	<EnvWarningBanner />
+<EnvWarningBanner />
 }
 
 ## Step 12: Install Ethers.js \{#install-ethers}

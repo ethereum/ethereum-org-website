@@ -8,7 +8,7 @@ lang: zh
 # 关于以太坊基金会 \{#about-the-ethereum-foundation}
 
 {
-	<Logo/>
+<Logo/>
 }
 
 [以太坊基金会](http://ethereum.foundation/) (EF) 是一个非营利性组织，致力于支持 [以太坊](/what-is-ethereum/) 以及相关技术。

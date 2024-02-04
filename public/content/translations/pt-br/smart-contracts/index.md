@@ -74,7 +74,7 @@ Eles podem realizar cálculos, criar moeda, armazenar dados, mintar NFTs, enviar
 Assista à explicação de contratos inteligentes disponibilizada pelo canal Finematics:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Leitura adicional \{#further-reading}

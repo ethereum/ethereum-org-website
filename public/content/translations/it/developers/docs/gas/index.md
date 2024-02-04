@@ -132,7 +132,7 @@ L'implementazione di [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) nell'Ag
 Questo video spiega l'EIP-1559 e i vantaggi che comporta:
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 ## Monitoraggio delle commissioni del gas \{#moitoring-gas-fees}

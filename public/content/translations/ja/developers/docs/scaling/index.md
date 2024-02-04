@@ -95,13 +95,13 @@ sidebarDepth: 3
 ## 映像で学びたい場合 \{#visual-learner}
 
 {
-	<YouTube id="BgCgauWVTs0" />
+<YouTube id="BgCgauWVTs0" />
 }
 
 _この動画の説明では、「レイヤー 2」という用語をオフチェーンでのスケーリング・ソリューション全般を指すものとして使用していますが、本記事では、「レイヤー 2」につき、レイヤー 1（メインネット）のコンセンサスに依存してセキュリティを保護するオフチェーンソリューションを指す用語としてを用いています。_
 
 {
-	<YouTube id="7pWxCklcNsU" />
+<YouTube id="7pWxCklcNsU" />
 }
 
 ## 参考文献 \{#further-reading}

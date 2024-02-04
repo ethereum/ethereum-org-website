@@ -51,7 +51,7 @@ lang: zh-tw
 
 可以使用 [chainlist.org](http://chainlist.org) 找到該網路遠端程式呼叫協定的詳細資訊。 添加網路並完成交易後，你會看到代幣出現在你的錢包中。
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

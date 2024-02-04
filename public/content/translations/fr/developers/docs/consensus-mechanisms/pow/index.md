@@ -92,7 +92,7 @@ Une critique majeure de la preuve de travail est la quantité d'énergie nécess
 ## En savoir plus via un apprenti visuel ? \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## Complément d'information \{#further-reading}

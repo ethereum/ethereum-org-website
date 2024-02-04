@@ -46,7 +46,7 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 ## Ön inkább vizuális típus? \{#visual-learner}
 
 {
-	<YouTube id="F50OrwV6Uk8" />
+<YouTube id="F50OrwV6Uk8" />
 }
 
 ## Eszközök a dappok létrehozásához \{#dapp-tools}

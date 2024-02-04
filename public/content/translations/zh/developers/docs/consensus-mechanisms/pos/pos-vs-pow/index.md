@@ -61,7 +61,7 @@ lang: zh
 观看 Justin Drake 解释权益证明相对于工作量证明的优势：
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## 延伸阅读 \{#further-reading}

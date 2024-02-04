@@ -84,13 +84,13 @@ Az inaktív állapot miatti büntetéstől különbözik a <em>súlyos bünteté
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Hogyan működik \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Mialatt Ön aktív, ETH jutalmakat kap, melyeket rendszeresen elhelyeznek a visszavonási számlán.
@@ -104,7 +104,7 @@ Bármikor kiléphet a validátor szerepéből, így nem kell online lennie, és 
 A Staking Launchpad egy nyílt forráskódú alkalmazás, ami segít a letétbe helyezés folyamatában. Végigvezeti Önt a szükséges lépéseken, mint a kliensek kiválasztása, a kulcsok létrehozása és az ETH letétbe helyezése a letéti szerződésbe. Egy ellenőrzőlistán is végigveheti, hogy minden a rendelkezésre áll, hogy biztonsággal működjön a validátora.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Mit kell figyelembe venni a csomópont- és kliensbeállító eszközöknél \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Az önálló letétbe helyezést segítő eszközök és szolgáltatások száma
 Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket vagy gyengeségeket, melyekkel a listázott letéti eszközök rendelkezhetnek. Ez alapján Ön is megértheti, hogy e jellemzőket hogyan határoztuk meg, és így könnyebben választhat a szükséges eszközök közül.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Fedezze fel a csomópont- és kliensbeállító eszközöket \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket va
 Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A fenti jellemzőket használva megértheti az alábbi eszközökben rejlő lehetőségeket.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Csomóponteszközök
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok az eszközök, amelyek a kisebbségi kliens beállítást támogatják, a <em style={{ textTransform: "uppercase" }}>többklienses</em> jellemzővel vannak jelölve
@@ -138,7 +138,7 @@ Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](
 Ezek alternatív eszközök a [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) mellett, hogy a kulcsok le legyenek generálva.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
@@ -146,7 +146,7 @@ Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szab�
 ## Nézze meg az önálló letétbe helyezés útmutatóit \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Gyakran ismételt kérdések \{#faq}

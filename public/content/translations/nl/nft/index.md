@@ -19,7 +19,7 @@ NFT's zijn tokens die elk uniek zijn. Elke NFT heeft verschillende eigenschappen
 De uniciteit van elke NFT maakt tokenisering van zaken zoals kunst, verzamelobjecten, of zelfs vastgoed mogelijk, waarbij één unieke NFT een specifiek uniek item in de echte wereld of een specifiek uniek digitaal item vertegenwoordigt. Het eigendom van een asset wordt beveiligd door de Ethereum-blockchain – niemand kan het eigendomsverleden ervan aanpassen of een nieuw NFT in het leven roepen via kopiëren/plakken.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## Het internet van activa \{#internet-of-assets}
@@ -73,7 +73,7 @@ Deze website heeft een alternatieve domeinnaam, mogelijk gemaakt door NFT's, **e
 [Meer over ENS](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### NFT-beveiliging \{#nft-security}
@@ -94,9 +94,9 @@ Beveiligingskwesties met betrekking tot NFT's hebben meestal te maken met phishi
 - [ERC-1155-tokenstandaard](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

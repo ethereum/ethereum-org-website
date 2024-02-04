@@ -92,7 +92,7 @@ Yüksek düzeyde, hisse ispatı ile iş ispatı birbiriyle aynı nihai hedefe sa
 ## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## Daha fazla bilgi \{#further-reading}

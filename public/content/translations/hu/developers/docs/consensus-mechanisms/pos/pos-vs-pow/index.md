@@ -61,7 +61,7 @@ A proof-of-stake Ethereum kevesebb érmekibocsátással tudja fenntartani a bizt
 Tekintse meg Justin Drake magyarázatát a proof-of-stake előnyeiről a proof-of-work-höz képest:
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## További olvasnivaló \{#further-reading}

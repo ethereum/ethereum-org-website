@@ -18,7 +18,7 @@ Orakelj je most med blokovno verigo in resničnim svetom. Delujejo kot API-ji na
 Oglejte si Patricka, ki pojasnjuje oraklje:
 
 {
-	<YouTube id="ZJfkNzyO7-U" start="10" />
+<YouTube id="ZJfkNzyO7-U" start="10" />
 }
 
 ## Zakaj so potrebni? \{#why-are-they-needed}

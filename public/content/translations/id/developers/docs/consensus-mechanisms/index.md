@@ -28,7 +28,7 @@ Selama beberapa dekade, mekanisme ini telah digunakan untuk membangun konsensus 
 Mekanisme konsensus dalam sistem ekonomi kripto juga membantu mencegah beberapa jenis serangan ekonomi tertentu. Secara teori, penyerang dapat membahayakan konsensus dengan mengendalikan 51% jaringan. Mekanisme konsensus dirancang untuk membuat "serangan 51%" ini tidak mungkin dilakukan. Mekanisme yang berbeda direkayasa untuk memecahkan masalah keamanan ini dalam cara yang berbeda.
 
 {
-	<YouTube id="dylgwcPH4EA" />
+<YouTube id="dylgwcPH4EA" />
 }
 
 ## Jenis-jenis mekanisme konsensus \{#types-of-consensus-mechanisms}
@@ -66,7 +66,7 @@ Selengkapnya tentang [bukti taruhan](/developers/docs/consensus-mechanisms/pos/)
 Tonton selengkapnya tentang berbagai jenis mekanisme konsensus yang digunakan di Ethereum:
 
 {
-	<YouTube id="ojxfbN78WFQ" />
+<YouTube id="ojxfbN78WFQ" />
 }
 
 ### Ketahanan Sybil dan pemilihan rantai \{#sybil-chain}

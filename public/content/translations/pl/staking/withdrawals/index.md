@@ -38,7 +38,7 @@ Przed aktualizacją Shanghai/Capella nie można było używać ani uzyskiwać do
 ### Jak się przygotować? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Ważne informacje \{#important-notices}
@@ -79,7 +79,7 @@ To, czy dany walidator kwalifikuje się do wypłaty, czy nie, zależy od stanu s
 Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematics:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Walidator „przesunięcia” \{#validator-sweeping}

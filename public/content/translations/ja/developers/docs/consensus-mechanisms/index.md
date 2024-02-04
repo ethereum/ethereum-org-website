@@ -63,7 +63,7 @@ lang: ja
 イーサリアムで使われているさまざまな種類の合意メカニズムについて視聴しましょう。
 
 {
-	<YouTube id="ojxfbN78WFQ" />
+<YouTube id="ojxfbN78WFQ" />
 }
 
 ### シビル耐性およびチェーン選択 \{#sybil-chain}

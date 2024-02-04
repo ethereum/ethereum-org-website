@@ -23,7 +23,7 @@ Comme la plupart des développeurs blockchain débutants, vous avez peut-être f
 
 ### 1\. Alchemy ne stocke pas vos clés privées \{#alchemy-does-not-store-your-private-keys}
 
-- Cela signifie qu'Alchemy ne peut pas signer et envoyer des transactions en votre nom. Ceci pour  des raisons de sécurité. Alchemy ne vous demandera jamais de partager votre clé privée, et vous ne devriez jamais partager votre clé privée avec un nœud hébergé (ni avec quiconque d'ailleurs).
+- Cela signifie qu'Alchemy ne peut pas signer et envoyer des transactions en votre nom. Ceci pour des raisons de sécurité. Alchemy ne vous demandera jamais de partager votre clé privée, et vous ne devriez jamais partager votre clé privée avec un nœud hébergé (ni avec quiconque d'ailleurs).
 - Vous pouvez lire sur la blockchain en utilisant l'API Alchemy, mais pour y écrire vous devrez utiliser quelque chose d'autre afin de signer vos transactions par le biais d'Alchemy (c'est le cas pour tous les [services d'accès à la blockchain](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
 ### 2\. Qu'est-ce qu'un « signataire » ? \{#what-is-a-signer}
@@ -108,7 +108,7 @@ npm install dotenv --save
 
 ### 6\. Créer le fichier `.env` \{#create-the-dotenv-file}
 
-Créez un fichier `.env` dans votre répertoire de projet et ajoutez les éléments suivants (en remplaçant «` your-api-URL `» et « `your-private-key` »)
+Créez un fichier `.env` dans votre répertoire de projet et ajoutez les éléments suivants (en remplaçant «`your-api-URL`» et « `your-private-key` »)
 
 - Pour trouver l’URL de votre API Alchemy, accédez à la page des détails de l’application que vous venez de créer sur votre tableau de bord, cliquez sur « View Key » (Voir clé) dans le coin supérieur droit et saisissez l’URL HTTP.
 - Pour trouver votre clé privée sur MetaMask, consultez ce [guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).

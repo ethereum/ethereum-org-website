@@ -33,7 +33,7 @@ Ketika Alice mengirimkan uang, 1,0042 ETH akan dipotong dari akun Alice. Bob aka
 Video ini menawarkan gambaran umum yang ringkas tentang gas dan mengapa gas ada:
 
 {
-	<YouTube id="AJvzNICwcwc" />
+<YouTube id="AJvzNICwcwc" />
 }
 
 ## Setelah peningkatan London \{#post-london}
@@ -108,7 +108,7 @@ Implementasi dari [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dalam Peni
 Video ini menjelaskan EIP-1559 dan keuntungan yang diberikannya:
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 Jika Anda tertarik, Anda dapat membaca [spesifikasi EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) yang pasti.

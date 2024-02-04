@@ -74,7 +74,7 @@ Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, NFT's minte
 Bekijk slimme contracten uitgelegd door Finematics:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Verder lezen \{#further-reading}

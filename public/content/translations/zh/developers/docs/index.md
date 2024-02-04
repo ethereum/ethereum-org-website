@@ -15,17 +15,17 @@ lang: zh
 ### 基础主题 \{#foundational-topics}
 
 {
-	<DeveloperDocsLinks headerId="foundational-topics" />
+<DeveloperDocsLinks headerId="foundational-topics" />
 }
 
 ### 以太坊堆栈 \{#ethereum-stack}
 
 {
-	<DeveloperDocsLinks headerId="ethereum-stack" />
+<DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
 ### 高级 \{#advanced}
 
 {
-	<DeveloperDocsLinks headerId="advanced" />
+<DeveloperDocsLinks headerId="advanced" />
 }

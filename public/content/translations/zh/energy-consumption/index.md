@@ -14,20 +14,20 @@ lang: zh
 
 <EnergyConsumptionChart />
 
-上面的图表显示了以太坊与其他一些产品和行业的能源消耗估算值，单位为亿千瓦时/年。 所有估算值均来自 2023 年7 月获得的公开信息，其来源链接在下表列出。
+上面的图表显示了以太坊与其他一些产品和行业的能源消耗估算值，单位为亿千瓦时/年。 所有估算值均来自 2023 年 7 月获得的公开信息，其来源链接在下表列出。
 
-|             | 年化能源消耗（亿千瓦时） | 和权益证明以太坊比较 |                                                                                      来源                                                                                       |
-|:----------- |:------------:|:----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| 全球数据中心      |     190      |  73,000 倍  |                                    [来源](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
-| 比特币         |     149      |  53,000 倍  |                                                                 [来源](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
-| 开采金矿        |     131      |  50,000 倍  |                                                                 [来源](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
-| 美国游戏行业\*  |      34      |  13,000 倍  |                 [来源](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
-| 工作量证明以太坊    |      21      |  8,100 倍   |                                                                    [来源](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
-| Google      |      19      |  7,300 倍   |                                           [来源](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
-| Netflix     |    0.457     |   176 倍    | [来源](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
-| PayPal      |     0.26     |   100 倍    |                                  [来源](https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf)                                   |
-| AirBnB      |     0.02     |    8 倍     |                               [来源](https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf)                               |
-| **权益证明以太坊** |  **0.0026**  |  **1 倍**   |                                                               [来源](https://carbon-ratings.com/eth-report-2022)                                                                |
+|                    | 年化能源消耗（亿千瓦时） | 和权益证明以太坊比较 |                                                                                      来源                                                                                       |
+| :----------------- | :----------------------: | :------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| 全球数据中心       |           190            |      73,000 倍       |                                    [来源](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
+| 比特币             |           149            |      53,000 倍       |                                                                 [来源](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| 开采金矿           |           131            |      50,000 倍       |                                                                 [来源](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| 美国游戏行业\*     |            34            |      13,000 倍       |                 [来源](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
+| 工作量证明以太坊   |            21            |       8,100 倍       |                                                                    [来源](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
+| Google             |            19            |       7,300 倍       |                                           [来源](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
+| Netflix            |          0.457           |        176 倍        | [来源](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
+| PayPal             |           0.26           |        100 倍        |                                 [来源](<https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf>)                                  |
+| AirBnB             |           0.02           |         8 倍         |                              [来源](<https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf>)                              |
+| **权益证明以太坊** |        **0.0026**        |       **1 倍**       |                                                               [来源](https://carbon-ratings.com/eth-report-2022)                                                                |
 
 \*包括个人电脑、笔记本电脑和游戏机等用户终端设备。
 

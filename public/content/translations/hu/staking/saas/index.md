@@ -28,7 +28,7 @@ Az Ethereum-protokoll eredendően nem támogatja a letétbe helyezés delegálá
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Mit kell figyelembe venni \{#what-to-consider}
@@ -38,7 +38,7 @@ Az SaaS szolgáltatók száma egyre növekszik, ugyanakkor mind saját előnnyel
 Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket vagy gyengeségeket, melyekkel a listázott SaaS szolgáltatók rendelkezhetnek. Ez alapján Ön is megértheti, hogy e jellemzőket hogyan határoztuk meg, és így könnyebben választhat a szolgáltatók közül.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Fedezze fel, hogy kik nyújtanak letétbe helyezési szolgáltatást \{#saas-providers}
@@ -46,13 +46,13 @@ Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket va
 Néhány elérhető SaaS-szolgáltatót soroltunk fel alább. A fenti jellemzőket használva megértheti az alábbi szolgáltatásokban rejlő lehetőségeket
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### SaaS-szolgáltatók
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>végrehajtási kliens sokrétűsége</em> és <em style={{ textTransform: "uppercase" }}>konszenzusos kliens sokrétűgése</em>
@@ -60,7 +60,7 @@ Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/deve
 ### Kulcsgenerátorok
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Javasolna olyan SaaS-szolgáltatót, akit nem lát felsorolva? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.

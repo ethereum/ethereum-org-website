@@ -35,7 +35,7 @@ Het Ethereum-protocol ondersteunt zelf geen stake-delegering, daarom zijn deze d
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Wat te overwegen \{#what-to-consider}
@@ -45,7 +45,7 @@ Er is een groeiend aantal staking-as-a-service providers om u te helpen uw ETH t
 Attribuutindicatoren worden hieronder gebruikt om opmerkelijke of zwakke punten te signaleren die een genoemde SaaS-provider kan hebben. Gebruik deze sectie als referentie voor hoe we deze attributen definiëren, wanneer u een service kiest om u te helpen met uw staking-traject.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Verken staking-serviceproviders \{#saas-providers}
@@ -59,13 +59,13 @@ Houd rekening met het belang van het ondersteunen van <a href="/developers/docs/
 ### SaaS-providers
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 ### Sleutelgenerators
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Heeft u een suggestie voor een staking-as-a-service provider die we gemist hebben? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit is en om het ter beoordeling in te dienen.
@@ -74,7 +74,7 @@ Heeft u een suggestie voor een staking-as-a-service provider die we gemist hebbe
 
 {
 <ExpandableCard title="Wie heeft mijn sleutels?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
-  Regelingen zullen verschillen van provider tot provider, maar gewoonlijk wordt u begeleid bij het instellen van de benodigde ondertekeningssleutels (één per 32 ETH) en het uploaden ervan naar uw provider zodat ze namens u kunnen valideren. De ondertekeningssleutels alleen bieden geen mogelijkheid om uw geld op te nemen, over te schrijven of uit te geven. Ze bieden echter wel de mogelijkheid om op consensus te stemmen, wat kan leiden tot offline boetes of slashing als het niet juist wordt gedaan.
+Regelingen zullen verschillen van provider tot provider, maar gewoonlijk wordt u begeleid bij het instellen van de benodigde ondertekeningssleutels (één per 32 ETH) en het uploaden ervan naar uw provider zodat ze namens u kunnen valideren. De ondertekeningssleutels alleen bieden geen mogelijkheid om uw geld op te nemen, over te schrijven of uit te geven. Ze bieden echter wel de mogelijkheid om op consensus te stemmen, wat kan leiden tot offline boetes of slashing als het niet juist wordt gedaan.
 </ExpandableCard>
 }
 
@@ -88,7 +88,7 @@ Al deze sleutels kunnen altijd op een reproduceerbare manier worden gegenereerd 
 
 {
 <ExpandableCard title="Wanneer kan ik mijn fondsen opnemen?" eventCategory="SaasStaking" eventName="clicked when can I withdraw">
-  Wanneer u 32 ETH staket met een SaaS-provider, wordt die ETH nog steeds gestort op het officiële staking-stortingscontract. Als zodaning zijn SaaS-stakers momenteel beperkt door dezelfde opnamebeperkingen als solo stakers. Dit betekent dat het staken van uw ETH momenteel een eenrichtings storting is. Dit zal het geval zijn tot aan de Shanghai upgrade.
+Wanneer u 32 ETH staket met een SaaS-provider, wordt die ETH nog steeds gestort op het officiële staking-stortingscontract. Als zodaning zijn SaaS-stakers momenteel beperkt door dezelfde opnamebeperkingen als solo stakers. Dit betekent dat het staken van uw ETH momenteel een eenrichtings storting is. Dit zal het geval zijn tot aan de Shanghai upgrade.
 </ExpandableCard>
 }
 

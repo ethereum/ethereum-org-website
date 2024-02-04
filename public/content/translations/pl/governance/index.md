@@ -10,7 +10,7 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 _Jeżeli nikt nie jest właścicielem Ethereum, w jaki sposób podejmowane są decyzje dotyczące przeszłych i przyszłych zmian w Ethereum? Zarządzanie Ethereum odnosi się do procesu, który umożliwia podejmowanie takich decyzji._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Czym jest zarządzanie? \{#what-is-governance}
@@ -40,7 +40,7 @@ _Podczas gdy na poziomie protokołu zarządzanie Ethereum odbywa się poza łań
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kto jest zaangażowany? \{#who-is-involved}
@@ -58,7 +58,7 @@ W [społeczności Ethereum](/community/) znajdują się różni udziałowcy, a k
 _Uwaga: każda osoba może być częścią wielu z tych grup (np. deweloper protokołów może być mistrzem EIP, uruchamiać walidator łańcucha śledzącego i korzystać z aplikacji DeFi). Jednak dla jasności pojęciowej najłatwiej jest je rozróżnić._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Czym jest EIP? \{#what-is-an-eip}
@@ -70,7 +70,7 @@ Jednym z ważniejszych procesów zarządzania Ethereum jest tzw. **Propozycja Ul
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Proces formalny \{#formal-process}
@@ -116,7 +116,7 @@ Od mistrzów EIP oczekuje się pozyskiwania opinii od wszystkich istotnych udzia
 Poza bezpieczeństwem sieci Ethereum, deweloperzy protokołów dawniej przywiązywali dużą wagę do tego, co cenią sobie deweloperzy aplikacji/narzędzi i użytkownicy aplikacji, biorąc pod uwagę, że ich używanie i tworzenie w Ethereum jest tym, co czyni ekosystem atrakcyjnym dla innych udziałowców. Dodatkowo, EIP muszą być wdrażane we wszystkich implementacjach klienta, które są zarządzane przez różne zespoły. Część tego procesu zwykle oznacza przekonywanie wielu zespołów deweloperów protokołów, że dana zmiana jest wartościowa i pomaga użytkownikom końcowym lub rozwiązuje kwestię bezpieczeństwa.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Radzenie sobie z nieporozumieniami \{#disagreements}
@@ -146,11 +146,11 @@ Obecnie społeczność Ethereum przyjęła politykę braku interwencji w przypad
 Obejrzyj po więcej informacji o włamaniu do DAO:
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Użyteczność forkowania \{#forking-utility}
@@ -160,7 +160,7 @@ Fork Ethereum/Ethereum Classic jest doskonałym przykładem prawidłowego forka.
 Zdolność do zforkowania w obliczu znaczących różnic politycznych, filozoficznych lub ekonomicznych odgrywa dużą rolę w sukcesie zarządzania Ethereum. Bez możliwości zforkowania alternatywą były ciągłe walki, wymuszony niechętny udział tych, którzy ostatecznie utworzyli Ethereum Classic i coraz bardziej rozbieżna wizja sukcesu Ethereum.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Zarządzanie łańcuchem śledzącym \{#beacon-chain}
@@ -176,7 +176,7 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Jak mogę się zaangażować? \{#get-involved}

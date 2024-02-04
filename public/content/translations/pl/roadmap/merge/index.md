@@ -4,7 +4,7 @@ description: Dowiedz się więcej o Połączeniu — kiedy w sieci głównej Eth
 lang: pl
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Sieć główna Ethereum wykorzystuje mechanizm proof-of-stake, ale nie zawsze tak było.
 summaryPoint2: Przejście z oryginalnego mechanizmu proof-of-work na proof-of-stake zostało nazwane Połączeniem.
 summaryPoint3: Połączenie odnosi się do połączenia pierwotnej sieci głównej Ethereum z oddzielną siecią blockchain proof-of-stake nazywaną łańcuchem śledzącym, które teraz istnieją jako jeden łańcuch.

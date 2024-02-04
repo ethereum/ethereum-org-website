@@ -23,7 +23,7 @@ Decentralizovana nauka omogućava raznovrsnije izvore finansiranja (od [DAO-a](/
 ### Huan Benet — DeSci pokret
 
 {
-	<YouTube id="5ORvbCIW39o" />
+<YouTube id="5ORvbCIW39o" />
 }
 
 ## Kako DeSci unapređuje nauku \{#desci-improves-science}

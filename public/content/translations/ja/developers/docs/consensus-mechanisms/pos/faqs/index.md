@@ -21,7 +21,7 @@ lang: ja
 プルーフ・オブ・ワークとプルーフ・オブ・ステークのどちらが優れているかについては、現在も論争が続いています。 これについては、[ヴィタリック・ブテリンのブログ](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)および Justin Drake と Lyn Alden の議論においてよく論点がまとめられています。
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## プルーフ・オブ・ステークは、エネルギー効率が良いと言えますか？ \{#is-pos-energy-efficient}

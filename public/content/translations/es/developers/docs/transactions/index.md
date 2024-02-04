@@ -173,7 +173,7 @@ Una vez enviada la transacción ocurre lo siguiente:
 Observe a Austin mientras le guía por las transacciones, el gas y la minería.
 
 {
-	<YouTube id="er-0ihqFQB0" />
+<YouTube id="er-0ihqFQB0" />
 }
 
 ## Typed Transaction Envelope \{#typed-transaction-envelope}

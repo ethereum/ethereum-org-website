@@ -1,10 +1,10 @@
 ---
 title: Birleştirme
-description: 'Birleşim: Ana Ağ Ethereum''un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin.'
+description: "Birleşim: Ana Ağ Ethereum'un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin."
 lang: tr
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Ethereum Ana Ağı hisse ispatı kullanır, ancak bu her zaman geçerli olan durum değildi.
 summaryPoint2: Özgün iş ispatı mekanizmasının hisse ispatına yükseltilmesi Birleşim olarak adlandırılır.
 summaryPoint3: Birleşim, esas Ethereum Ana Ağı'nın İşaret Zinciri olarak adlandırılan ayrı bir iş ispatı blok zinciri ile birleşmesi ile artık tek bir zincir olarak varlığını sürdürmesini ifade eder.
@@ -20,7 +20,7 @@ summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~%99,95 oranında azalt
 Birleşim Ethereum'un orijinal yürütüm katmanı ([başlangıç](/history/#frontier) zamanından beri olan Ana Ağ) ile yeni hisse ispatı fikir birliği katmanı olan İşaret Zinciri'nin birleşmesiydi. Yoğun enerji tüketen madenciliğe olan ihtiyacı kaldırdı ve ağın hisselenmiş ETH aracılığıyla güvenli kılınmasına ön ayak oldu. Ethereum vizyonunun gerçekleştirilmesinde gerçekten heyecan verici bir adımdı; daha fazla ölçeklenebilirlik, güvenlik ve sürdürülebilirlik.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Başlangıçta, [İşaret Zinciri](/roadmap/beacon-chain/) [Ana Ağ'dan](/glossary/#mainnet) farklı olarak yayımlandı. Ethereum Ana Ağı - tüm hesapları, bakiyeleri, akıllı sözleşmeleri ve blok zincir durumu dahil - [iş ispatı](/developers/docs/consensus-mechanisms/pow/) ile güvence altına alınmaya devam ediyordu, İşaret Zinciri, [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) kullanarak paralel olarak çalışırken de dahil olmak üzere. Birleşim bu iki sistemin bir araya geldiği ve hisse ispatının iş kanıtının yerini kalıcı olarak aldığı zamandı.
@@ -243,9 +243,9 @@ Parçalama planları hızla gelişiyor, ancak işlem yürütmeyi ölçeklendirme
 ## Daha fazla okuma \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

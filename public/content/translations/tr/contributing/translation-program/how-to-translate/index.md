@@ -11,7 +11,7 @@ description: Ethererum.org çevirisinde Crowdin kullanım talimatları
 Görsel olarak daha kolay öğrenenler için Luka'nın Crowdin'in kurulumunu anlatışını izleyin. Alternatif olarak, bir sonraki bölümde aynı adımları yazılı olarak da bulabilirsiniz.
 
 {
-	<YouTube id="Ii7bYhanLs4" />
+<YouTube id="Ii7bYhanLs4" />
 }
 
 ## Yazılı rehber \{#written-guide}

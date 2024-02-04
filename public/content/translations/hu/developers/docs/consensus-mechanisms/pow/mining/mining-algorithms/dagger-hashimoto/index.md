@@ -294,7 +294,7 @@ A `P` és `w` bizonyos értékei esetén a `pow(x, w, P)` függvénynek sok ütk
 Adott, hogy `P` prímszám, akkor egy megfelelő `w` moduláris exponenciálási hashfüggvényhez a következő eredmény segítségével választható ki:
 
 > 3. megfigyelés. Legyen `P` egy prímszám; `w` és `P-1` akkor, és csak akkor relatív prímszámok, ha minden `a` és `b` esetén `ℤ/Pℤ`:
-> 
+>
 > <center>
 >   `aʷ mod P ≡ bʷ mod P`, ha és csak ha `a mod P ≡ b mod P`
 > </center>

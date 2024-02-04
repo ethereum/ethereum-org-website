@@ -16,11 +16,11 @@ published: 2021-03-31
 Si vous débutez dans le développement de blockchain et ne savez pas par où commencer, ou si vous souhaitez uniquement comprendre comment déployer et interagir avec les contrats intelligents, ce guide est fait pour vous. Nous allons parcourir la création et le déploiement d'un contrat intelligent simple sur le réseau de test de Goerli à l'aide d'un portefeuille virtuel [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), et [Alchemy](https://alchemyapi.io/eth) (ne vous inquiétez pas si vous ne comprenez pas à ce stade ce que cela signifie, nous allons l'expliquer).
 
 > **Avertissement **
-> 
+>
 > 🚧 Avis de fin de support
-> 
+>
 > Tout au long de ce guide, le réseau de test Goerli est utilisé pour créer et déployer un contrat intelligent. Cependant, veuillez noter que l'Ethereum Foundation a annoncé que [Goerli sera bientôt obsolète](https://www.alchemy.com/blog/goerli-faucet-deprecation).
-> 
+>
 > Nous vous recommandons d'utiliser le [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) et le [distributeur sur Sepolia](https://sepoliafaucet.com/) pour ce tutoriel.
 
 Dans la [partie 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) de ce tutoriel, nous allons voir comment nous pouvons interagir avec notre contrat intelligent une fois qu'il sera déployé ici, et dans la [partie 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) nous couvrirons comment le publier sur Etherscan.
@@ -66,7 +66,7 @@ Pour vérifier notre solde, faisons une requête [eth_getBalance](https://docs.a
 ```
 
 > **REMARQUE :** Ce résultat est en wei et non pas en ETH. Le wei est utilisé comme la plus petite dénomination d'ether. La conversion de wei en ETH est : 1 eth = 10<sup>18</sup> wei. Donc si nous convertissons 0x2B5E3AF16B1880000 en décimales, nous obtenons 5\*10¹⁸, ce qui équivaut à 5 ETH.
-> 
+>
 > Ouf ! Notre fausse monnaie est bien là <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Étape 6 : Initialisez notre projet \{#step-6}

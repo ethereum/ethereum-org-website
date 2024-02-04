@@ -77,7 +77,7 @@ Pelajari lebih lanjut tentang [Plasma](/developers/docs/scaling/plasma/).
 ## Selengkapnya tentang pelajar visual? \{#visual-learner}
 
 {
-	<YouTube id="BgCgauWVTs0" />
+<YouTube id="BgCgauWVTs0" />
 }
 
 _Perhatikan penjelasan dalam video ini menggunakan istilah "Lapisan 2" untuk merujuk pada semua solusi penskalaan off-chain, sedangkan kami membedakan "Lapisan 2" sebagai sebuah solusi off-chain yang mendapat keamanannya lewat konsensus Jaringan Utama lapisan 1._

@@ -84,13 +84,13 @@ Les <em>sanctions de délestage (slashing)</em> diffèrent des pénalités d'ina
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Fonctionnement \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Lorsque vous êtes actif, vous gagnerez des récompenses ETH, qui seront déposées périodiquement dans votre adresse de retrait.
@@ -104,7 +104,7 @@ Si vous le désirez, vous pouvez vous retirer en tant que validateur, ce qui él
 La plateforme de lancement de la mise en jeu est une application open source qui vous aidera à devenir un validateur. Elle vous guidera dans le choix de vos clients, génèrera vos clés et déposera vos ETH dans le contrat de dépôt des mises en jeu. Une liste de vérification est fournie pour vous assurer que vous avez fait le tour de la question pour installer votre validateur en toute sécurité.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Éléments à prendre en compte avec les outils de configuration de nœud et de client \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Un nombre croissant d'outils et de services vous aident à miser vos ETH, mais c
 Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces ou faiblesses notables d'un outil de mise en jeu répertorié. Utilisez cette section comme référence pendant que vous choisissez les outils qui vous aideront dans votre parcours de mise en jeu.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Explorer les outils de configuration de noeud et de client \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces o
 Il existe une variété d'options disponibles pour vous aider dans votre configuration. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Outils de nœud
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/nodes-and-clients/client-diversity/) , car cela améliore la sécurité du réseau et limite vos risques. Les outils qui permettent de configurer un client minoritaire sont désignés comme <em style={{ textTransform: "uppercase" }}>"multi-client."</em>
@@ -138,7 +138,7 @@ Veuillez noter l'importance de choisir un [client minoritaire](/developers/docs/
 Ces outils peuvent être utilisés en alternative à [l'interface de dépôt de mise en jeu](https://github.com/ethereum/staking-deposit-cli/) pour vous aider à générer vos clés.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.
@@ -146,7 +146,7 @@ Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consul
 ## Explorer les guides de mise en jeu individuelle \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Questions fréquemment posées \{#faq}

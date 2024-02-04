@@ -21,7 +21,7 @@ DeFi ist ein Sammelbegriff für Finanzprodukte und Services, die für alle zugä
 Es gibt eine boomende Kryptowirtschaft, in der Sie Assets leihen und verleihen können, lang- und kurzfristige Positionen einnehmen, Zinsen verdienen und vieles mehr. Beispielsweise setzen Krypto-versierte Argentinier auf DeFi, um den Folgen der Hyperinflation zu entkommen. Und auch Unternehmen haben begonnen, ihre Mitarbeiter in Echtzeit via Krypto zu bezahlen. Es wurden sogar Darlehen im Wert von Millionen Dollar aufgenommen und bezahlt, ohne dass für die Beteiligten eine persönliche Identifizierung erforderlich gewesen wäre.
 
 {
-	<YouTube id="H-O3r2YMWJ4" />
+<YouTube id="H-O3r2YMWJ4" />
 }
 
 ## DeFi vs. das traditionelle Finanzsystem \{#defi-vs-tradfi}
@@ -60,7 +60,7 @@ Bitcoin war in vielerlei Hinsicht die erste DeFi-Anwendung. Mit Bitcoin können 
 Darauf baut Ethereum auf. Wie bei Bitcoin, können die Regeln sich nicht ändern und jeder hat Zugang dazu. Doch zusätzlich macht Ethereum dieses digitale Geld programmierbar, und zwar mit[Smart Contracts](/glossary#smart-contract). Das bietet über das Speichern und Senden von Werten hinaus noch viele weitere Möglichkeiten.
 
 {
-	<YouTube id="qFBYB4W2tqU" />
+<YouTube id="qFBYB4W2tqU" />
 }
 
 ## Programmierbares Geld \{#programmable-money}
@@ -91,7 +91,7 @@ Für fast alle Finanzdienstleistungen gibt es dezentrale Alternativen. Ethereum 
 - [Das eigene Portfolio verwalten](#aggregators)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Geld schnell um die ganze Welt senden \{#send-money}
@@ -109,7 +109,7 @@ Als Blockchain ist Ethereum für sichere und globale Transaktionen konzipiert. W
 Und wenn Sie wegen der Volatilität kein [ETH](/eth/) senden oder streamen möchten, gibt es auf Ethereum alternative Währungen: Stablecoins.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Zugriff auf Stablecoins \{#stablecoins}
@@ -123,7 +123,7 @@ Coins wie Dai oder USDC haben einen Wert der sich bis auf wenige Cent-Beträge a
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Kreditaufnahme \{#lending}
@@ -181,7 +181,7 @@ Um das obige Beispiel in der etablierten Finanzwelt umzusetzen, benötigten Sie 
 [Mehr zu Flash Loans](https://aave.com/flash-loans/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Jetzt mit dem Kryptosparen beginnen \{#saving}
@@ -216,7 +216,7 @@ Der Gewinnpool wird aus allen Zinsen gewonnen, die durch das Verleihen der Ticke
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Token tauschen \{#swaps}
@@ -230,7 +230,7 @@ Wenn Sie zum Beispiel die No-Loss-Lotterie PoolTogether (wie oben beschrieben) n
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Erweitertes Trading \{#trading}
@@ -244,7 +244,7 @@ Wenn Sie sich für einen zentralen Handelsplatz entscheiden, müssen Sie Ihre As
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Das eigene Portfolio vergrößern \{#investing}
@@ -258,7 +258,7 @@ Ein gutes Beispiel ist der [DeFi Pulse Index Fund (DPI)](https://defipulse.com/b
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Eigene Ideen finanzieren \{#crowdfunding}
@@ -289,7 +289,7 @@ Projekt A mit 100 Spenden zu je 1 Euro könnte also mehr Mittel erhalten als Pro
 [Zu quadratischer Finanzierung](https://wtfisqf.com)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Versicherung \{#insurance}
@@ -303,7 +303,7 @@ Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Ex
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Aggregatoren und Portfoliomanager \{#aggregators}
@@ -315,7 +315,7 @@ Bei all diesen Entwicklungen brauchen Sie einen Weg, um alle Ihre Investitionen,
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Wie funktioniert DeFi? \{#how-defi-works}

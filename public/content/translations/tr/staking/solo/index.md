@@ -82,13 +82,13 @@ Donanım bazen başarısız oluyor, ağ bağlantıları hata veriyor ve istemci 
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Nasıl Çalışır \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Aktif olduğu durumda ETH ödülleri kazanırsınız. Bu ödüller periyodik olarak para çekme adresinize yatırılır.
@@ -102,7 +102,7 @@ Aktif olduğu durumda ETH ödülleri kazanırsınız. Bu ödüller periyodik ola
 Staking Launchpad, stake yapmanıza yardımcı olacak açık kaynaklı bir uygulamadır. İstemcilerinizi seçme, anahtarlarınızı oluşturma ve ETH'nizi stake depozito sözleşmesine yatırma konusunda size rehberlik edecektir. Doğrulayıcınızı güvenli bir şekilde kurmak ve her şeyi kapsadığınızdan emin olmak için bir kontrol listesi sağlanmıştır.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Düğüm ve istemci kurulum araçlarıyla ilgili olarak nelere dikkat edilmelidir \{#node-tool-considerations}
@@ -112,7 +112,7 @@ ETH'nizi tek başınıza stake etmenize yardımcı olacak, giderek artan sayıda
 Nitelik göstergeleri, listelenen bir stake etme aracının sahip olabileceği dikkate değer güçlü veya zayıf yönleri belirtmek için aşağıda kullanılmaktadır. Stake yolculuğunuza yardımcı olacak araçları seçerken bu özellikleri nasıl tanımladığımıza dair bu bölümü referans olarak kullanın.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Düğüm ve istemci kurulum araçlarını keşfedin \{#node-and-client-tools}
@@ -120,13 +120,13 @@ Nitelik göstergeleri, listelenen bir stake etme aracının sahip olabileceği d
 Kurulumunuzda size yardımcı olacak çeşitli seçenekler mevcuttur. Aşağıdaki araçlarda size rehberlik etmesi için yukarıdaki göstergeleri kullanın.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Düğüm araçları
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [azınlık istemcisi](/developers/docs/nodes-and-clients/client-diversity/) seçmenin önemini lütfen unutmayın. Azınlık istemcisini kurmanıza izin veren araçlar, <em style={{ textTransform: "uppercase" }}>"çoklu istemci"</em> olarak anılır.
@@ -136,7 +136,7 @@ Ağın güvenliğini iyileştirdiği ve riskinizi sınırladığı için bir [az
 Bu araçlar, anahtar oluşturmaya yardımcı olmak için [hisseleme Mevduat CLI'sına](https://github.com/ethereum/staking-deposit-cli/) alternatif olarak kullanılabilir.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup olmadığını görmek ve incelemeye göndermek için [ürün listeleme politikamıza](/contributing/adding-staking-products/) göz atın.
@@ -144,7 +144,7 @@ Kaçırdığımız bir hisseleme aracı için öneriniz mi var mı? Uygun olup o
 ## Solo staking kılavuzlarını keşfet \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Sıkça sorulan sorular \{#faq}

@@ -4,7 +4,7 @@ description: マージについて - イーサリアムメインネットへの�
 lang: ja
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: イーサリアムメインネットは現在プルーフ・オブ・ステークを使用していますが、これまではそうではありませんでした。
 summaryPoint2: 旧プルーフ・オブ・ワークのメカニズムからプルーフ・オブ・ステークへのアップグレードはマージと呼ばれます。
 summaryPoint3: マージとは、元のイーサリアムメインネットが、ビーコンチェーンとよばれる別のプルーフ・オブ・ステークのブロックチェーンと統合(マージ)し、1つのチェーンになったことを意味します。
@@ -20,7 +20,7 @@ summaryPoint4: マージによりイーサリアムのエネルギー消費が�
 マージとは、イーサリアムの元の実行レイヤー ([誕生](/history/#frontier)から存在するメインネット) と、新規のプルーフ・オブ・ステークのコンセンサスレイヤーであるビーコンチェーンをマージ(統合)することでした。 これにより、エネルギー集約的なマイニングが不要になり、代わりにステーキングされた ETH を利用して、ネットワークのセキュリティが確保されるようになりました。 イーサリアムのビジョンである、より高性能なスケーラビリティ、より安心なセキュリティ、より高いレベルの持続可能性を実現するための、本当にエキサイティングなステップとなりました。
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 当初、[メインネット](/glossary/#mainnet)とは別に[ビーコンチェーン](/roadmap/beacon-chain/)がリリースされました。 メインネットでは[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)によりすべてのアカウント、残高、スマートコントラクトおよびブロックチェーンの状態の安全性が保たれ、それと同時に[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos/)を活用したビーコンチェーンが並行して稼働していました。 マージでは、これらの 2 つのシステムが最終的に統合され、プルーフ・オブ・ワークが永久にプルーフ・オブ・ステークに置き換わりました。
@@ -243,9 +243,9 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 ## 参考文献 \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

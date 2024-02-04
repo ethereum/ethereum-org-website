@@ -248,7 +248,7 @@ The introduction of [data sharding](/roadmap/danksharding/) on Ethereum is expec
 More of a visual learner? Watch Finematics explain optimistic rollups:
 
 {
-	<YouTube id="7pWxCklcNsU" start="263" />
+<YouTube id="7pWxCklcNsU" start="263" />
 }
 
 ### Use Optimistic rollups \{#use-optimistic-rollups}
@@ -256,7 +256,7 @@ More of a visual learner? Watch Finematics explain optimistic rollups:
 Multiple implementations of Optimistic rollups exist that you can integrate into your dapps:
 
 {
-	<RollupProductDevDoc rollupType="optimistic" />
+<RollupProductDevDoc rollupType="optimistic" />
 }
 
 ## Further reading on optimistic rollups

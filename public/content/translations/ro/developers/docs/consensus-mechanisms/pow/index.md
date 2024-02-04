@@ -95,7 +95,7 @@ Un dezavantaj major al dovezii-muncii este cantitătea de energie necesară pent
 ## Învățați mai ușor prin vizualizare? \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## Referințe suplimentare \{#further-reading}

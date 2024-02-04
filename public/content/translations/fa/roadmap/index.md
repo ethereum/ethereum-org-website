@@ -7,11 +7,9 @@ image: /heroes/roadmap-hub-hero.jpg
 alt: "نقشه‌ راه اتریوم"
 summaryPoints:
 buttons:
-  - 
-    label: ارتقا‌های پیش‌ رو
+  - label: ارتقا‌های پیش‌ رو
     toId: چه تغییراتی ایجاد خواهد شد
-  - 
-    label: ارتقاهای پیشین
+  - label: ارتقاهای پیشین
     to: /history/
     variant: طرح کلی
 ---

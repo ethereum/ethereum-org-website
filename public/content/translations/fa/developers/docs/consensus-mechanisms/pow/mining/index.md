@@ -58,7 +58,7 @@ incomplete: true
 آستین را مشاهده کنید که در راه استخراج و اثبات کار زنجیره‌ی بلوکی شما را راهنمایی می‌کند.
 
 {
-	<YouTube id="zcX7OJ-L8XQ" />
+<YouTube id="zcX7OJ-L8XQ" />
 }
 
 ## بیشتر بخوانید \{#further-reading}

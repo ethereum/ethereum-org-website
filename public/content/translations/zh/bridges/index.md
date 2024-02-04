@@ -6,7 +6,7 @@ lang: zh
 
 # 区块链桥 \{#prerequisites}
 
-_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum))。 为了满足这一需求，我们需要桥接。_
+_Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>)。  为了满足这一需求，我们需要桥接。_
 
 <Divider />
 
@@ -69,11 +69,11 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和去信任桥梁。
 
-| 需信任桥梁                                 | 去信任桥梁                         |
-| ------------------------------------- | ----------------------------- |
-| 需信任桥梁依赖于中心实体或系统的运作。                   | 去信任桥梁使用智能合约和算法运行。             |
+| 需信任桥梁                                                                | 去信任桥梁                                                 |
+| ------------------------------------------------------------------------- | ---------------------------------------------------------- |
+| 需信任桥梁依赖于中心实体或系统的运作。                                    | 去信任桥梁使用智能合约和算法运行。                         |
 | 他们对资金的保管和桥梁的安全性有信任假设。 用户大多依赖桥梁运营商的声誉。 | 这种桥梁免于信任，即桥梁的安全性与底层区块链的安全性相同。 |
-| 用户需要放弃对其加密资产的控制。                      | 通过智能合约，去信任桥梁使用户能够继续控制他们的资金。   |
+| 用户需要放弃对其加密资产的控制。                                          | 通过智能合约，去信任桥梁使用户能够继续控制他们的资金。     |
 
 简而言之，我们可以说需信任桥梁具有信任假设，而去信任桥梁对信任的依赖非常小，因此不会在基础域之外出现新的信任假设。 上述术语的解释如下：
 
@@ -124,7 +124,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 ## 延伸阅读 \{#further-reading}
 
 - [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658)_2022 年 6 月 18 日 - Brendan Asselstine_
-- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5日 - Bartek Kiepuszewski_
+- [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5 日 - Bartek Kiepuszewski_
 - [“为什么未来将出现多链，而不会是跨链。”](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/) _2022 年 1 月 8 日 - Vitalik Buterin_
 - [什么是区块链桥以及我们如何对其进行分类？](https://blog.li.finance/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) _2021 年 2 月 18 日 - Arjun Chand_
 - [什么是跨链桥接？](https://www.alchemy.com/overviews/cross-chain-bridges) _2022 年 5 月 10 日 - Alchemy_

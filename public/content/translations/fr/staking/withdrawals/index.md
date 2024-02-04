@@ -38,7 +38,7 @@ Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH 
 ### Comment puis-je me préparer ? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Informations importantes \{#important-notices}
@@ -79,7 +79,7 @@ Le fait qu'un validateur donné soit éligible ou non pour un retrait est déter
 Consultez cette explication de Finematics sur les retraits de staking d'Ethereum :
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### « Balayage » du validateur \{#validator-sweeping}

@@ -24,7 +24,7 @@ Aceste schimbări de reguli pot crea o separare temporară în rețea. Pot fi pr
 Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați despre viitoarele actualizări ale lui Ethereum](/roadmap/).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2021 \{#2021}
@@ -32,7 +32,7 @@ Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați des
 ### Arrow Glacier \{#arrow-glacier}
 
 {
-	<NetworkUpgradeSummary name="arrowGlacier" />
+<NetworkUpgradeSummary name="arrowGlacier" />
 }
 
 #### Rezumat \{#arrow-glacier-summary}
@@ -59,7 +59,7 @@ Aveţi grijă să vă actualizați software-ul client la versiunea cea mai recen
 ### Altair \{#altair}
 
 {
-	<NetworkUpgradeSummary name="altair" />
+<NetworkUpgradeSummary name="altair" />
 }
 
 #### Rezumat \{#altair-summary}
@@ -79,7 +79,7 @@ Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă d
 ### Londra \{#london}
 
 {
-	<NetworkUpgradeSummary name="london" />
+<NetworkUpgradeSummary name="london" />
 }
 
 #### Rezumat \{#london-summary}
@@ -107,7 +107,7 @@ Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-155
 ### Berlin \{#berlin}
 
 {
-	<NetworkUpgradeSummary name="berlin" />
+<NetworkUpgradeSummary name="berlin" />
 }
 
 #### Rezumat \{#berlin-summary}
@@ -129,7 +129,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2020 \{#2020}
@@ -137,7 +137,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 ### Geneza Lanțului Beacon \{#beacon-chain-genesis}
 
 {
-	<NetworkUpgradeSummary name="beaconChainGenesis" />
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
 #### Rezumat \{#beacon-chain-genesis-summary}
@@ -155,7 +155,7 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 ### S-a implementat contractul de depunere a mizei \{#staking-deposit-contract}
 
 {
-	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
 #### Rezumat \{#deposit-contract-summary}
@@ -173,7 +173,7 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 ### Muir Glacier \{#muir-glacier}
 
 {
-	<NetworkUpgradeSummary name="muirGlacier" />
+<NetworkUpgradeSummary name="muirGlacier" />
 }
 
 #### Rezumat \{#muir-glacier-summary}
@@ -192,7 +192,7 @@ Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossa
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2019 \{#2019}
@@ -200,7 +200,7 @@ Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossa
 ### Istanbul \{#istanbul}
 
 {
-	<NetworkUpgradeSummary name="istanbul" />
+<NetworkUpgradeSummary name="istanbul" />
 }
 
 #### Rezumat \{#istanbul-summary}
@@ -233,7 +233,7 @@ Fork-ul Istanbul:
 ### Constantinopol \{#constantinople}
 
 {
-	<NetworkUpgradeSummary name="constantinople" />
+<NetworkUpgradeSummary name="constantinople" />
 }
 
 #### Rezumat \{#constantinople-summary}
@@ -258,7 +258,7 @@ Fork-ul Constantinopol:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2017 \{#2017}
@@ -266,7 +266,7 @@ Fork-ul Constantinopol:
 ### Byzantium \{#byzantium}
 
 {
-	<NetworkUpgradeSummary name="byzantium" />
+<NetworkUpgradeSummary name="byzantium" />
 }
 
 #### Rezumat \{#byzantium-summary}
@@ -297,7 +297,7 @@ Fork-ul Byzantium:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2016 \{#2016}
@@ -305,7 +305,7 @@ Fork-ul Byzantium:
 ### Spurious Dragon \{#spurious-dragon}
 
 {
-	<NetworkUpgradeSummary name="spuriousDragon" />
+<NetworkUpgradeSummary name="spuriousDragon" />
 }
 
 #### Rezumat \{#spurious-dragon-summary}
@@ -334,7 +334,7 @@ Fork-ul Spurious Dragon a fost al doilea răspuns la atacurile prin refuzul-serv
 ### Tangerine whistle \{#tangerine-whistle}
 
 {
-	<NetworkUpgradeSummary name="tangerineWhistle" />
+<NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
 #### Rezumat \{#tangerine-whistle-summary}
@@ -359,7 +359,7 @@ Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-servi
 ### Fork-ul DAO \{#dao-fork}
 
 {
-	<NetworkUpgradeSummary name="daoFork" />
+<NetworkUpgradeSummary name="daoFork" />
 }
 
 #### Rezumat \{#dao-fork-summary}
@@ -377,7 +377,7 @@ Unii miner-i au refuzat să creeze fork-ul pentru că incidentul DAO nu a fost o
 ### Homestead \{#homestead}
 
 {
-	<NetworkUpgradeSummary name="homestead" />
+<NetworkUpgradeSummary name="homestead" />
 }
 
 #### Rezumat \{#homestead-summary}
@@ -397,7 +397,7 @@ Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2015 \{#2015}
@@ -405,7 +405,7 @@ Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări
 ### Frontier thawing \{#frontier-thawing}
 
 {
-	<NetworkUpgradeSummary name="frontierThawing" />
+<NetworkUpgradeSummary name="frontierThawing" />
 }
 
 #### Rezumat \{#frontier-thawing-summary}
@@ -419,7 +419,7 @@ Fork-ul frontier thawing a ridicat limita de [gaz](/glossary/#gas) de 5.000 per 
 ### Frontier \{#frontier}
 
 {
-	<NetworkUpgradeSummary name="frontier" />
+<NetworkUpgradeSummary name="frontier" />
 }
 
 #### Rezumat \{#frontier-summary}
@@ -429,7 +429,7 @@ Frontier a fost o implementare în direct, dar absolut esenţială pentru proiec
 [Citiţi anunțul Fundației Ethereum](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2014 \{#2014}
@@ -437,7 +437,7 @@ Frontier a fost o implementare în direct, dar absolut esenţială pentru proiec
 ### Vânzarea de ether \{#ether-sale}
 
 {
-	<NetworkUpgradeSummary name="etherSale" />
+<NetworkUpgradeSummary name="etherSale" />
 }
 
 Ether-ul a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra cu BTC.
@@ -449,7 +449,7 @@ Ether-ul a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra c
 ### A fost lansată Cartea galbenă \{#yellowpaper}
 
 {
-	<NetworkUpgradeSummary name="yellowpaperRelease" />
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 }
 
 Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protocolului Ethereum.
@@ -457,7 +457,7 @@ Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protoco
 [Vedeți Cartea galbenă](https://github.com/ethereum/yellowpaper)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2013 \{#2013}
@@ -465,7 +465,7 @@ Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protoco
 ### A fost lansată Cartea albă \{#whitepaper}
 
 {
-	<NetworkUpgradeSummary name="whitepaperRelease" />
+<NetworkUpgradeSummary name="whitepaperRelease" />
 }
 
 Lucrarea introductivă, publicată în 2013 de Vitalik Buterin, fondatorul lui Ethereum, înainte de lansarea proiectului în 2015.

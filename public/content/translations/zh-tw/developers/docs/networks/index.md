@@ -62,7 +62,7 @@ lang: zh-tw
 - [Chainstack Sepolia 水龍頭](https://faucet.chainstack.com/sepolia-faucet)
 - [測試網水龍頭 | Sepolia](https://testnet-faucet.com/sepolia/)
 
-#### Goerli_（長期支援）_ \{#goerli}
+#### Goerli*（長期支援）* \{#goerli}
 
 _注意：[Goerli 測試網已被棄用](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)且將在 2023 年被 [Holesovice](https://github.com/eth-clients/holesovice) 取代。 請考慮將你的應用程式遷移到 Sepolia。_
 

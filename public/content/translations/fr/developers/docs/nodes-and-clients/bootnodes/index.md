@@ -18,7 +18,7 @@ geth --bootnodes "enode://<node ID>@<IP address>:<port>"
 
 Les nœuds de démarrage sont des nœuds complets qui ne se trouvent pas derrière une NAT ([Traduction des adresses réseau](https://www.geeksforgeeks.org/network-address-translation-nat/)). Tout nœud complet peut servir de nœud de démarrage tant qu'il reste accessible au public.
 
-Lorsque vous démarrez un nœud, celui-ci doit enregistrer votre [*enode](/developers/docs/networking-layer/network-addresses/#enode), qui est un identifiant public que d'autres peuvent utiliser pour se connecter à votre nœud. *Un enode est un moyen de décrire un nœud Ethereum sous la forme d'un **URI. **Un identifiant de ressource uniforme ou Uniform Resource Identifier (URI) est une séquence unique de caractères qui identifie une ressource logique ou physique, utilisée par les technologies web.
+Lorsque vous démarrez un nœud, celui-ci doit enregistrer votre [\*enode](/developers/docs/networking-layer/network-addresses/#enode), qui est un identifiant public que d'autres peuvent utiliser pour se connecter à votre nœud. \*Un enode est un moyen de décrire un nœud Ethereum sous la forme d'un **URI. **Un identifiant de ressource uniforme ou Uniform Resource Identifier (URI) est une séquence unique de caractères qui identifie une ressource logique ou physique, utilisée par les technologies web.
 
 L'enode est généralement régénéré lors de chaque redémarrage, alors assurez-vous de consulter la documentation de votre client pour savoir comment produire un enode persistant pour votre nœud de démarrage.
 

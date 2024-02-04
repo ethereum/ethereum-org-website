@@ -8,7 +8,7 @@ lang: id
 # Tentang Yayasan Ethereum \{#about-the-ethereum-foundation}
 
 {
-	<Logo/>
+<Logo/>
 }
 
 [Yayasan Ethereum](http://ethereum.foundation/) (EF) adalah sebuah organisasi nirlaba yang didedikasikan untuk mendukung [Ethereum](/what-is-ethereum/) dan teknologi yang terkait dengannya.

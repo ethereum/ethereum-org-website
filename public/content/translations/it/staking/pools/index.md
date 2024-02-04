@@ -30,7 +30,7 @@ Oltre ai vantaggi che abbiamo delineato nella nostra [introduzione allo staking]
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Cosa considerare \{#what-to-consider}
@@ -46,7 +46,7 @@ Tuttavia, questi token derivanti dagli ETH in staking tendono a creare comportam
 Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di forza o debolezze che un pool di staking elencato potrebbe avere. Usa questa sezione come un riferimento per come definire tali attributi mentre stai scegliendo un pool cui unirti.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Esplora i pool di staking \{#explore-staking-pools}
@@ -54,11 +54,11 @@ Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di
 Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazione. Gli indicatori di cui sopra ti guideranno per gli strumenti seguenti.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Sei pregato di notare l'importanza di scegliere un servizio che prenda sul serio la [diversità del client](/developers/docs/nodes-and-clients/client-diversity/), poiché essa migliora la sicurezza della rete e limita i tuoi rischi. I servizi aventi prova della limitazione dell'utilizzo dei client di maggioranza sono indicati con <em style={{ textTransform: "uppercase" }}>"diversità del client d'esecuzione"</em> e <em style={{ textTransform: "uppercase" }}>"diversità del client del consenso."</em>

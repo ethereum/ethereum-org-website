@@ -173,7 +173,7 @@ Amikor valaki elküld egy tranzakciót, a következő történik:
 Kövesse végig, ahogy Austin bemutatja a tranzakciókat, a gázt és a bányászatot.
 
 {
-	<YouTube id="er-0ihqFQB0" />
+<YouTube id="er-0ihqFQB0" />
 }
 
 ## Beírt tranzakciógöngyöleg \{#typed-transaction-envelope}

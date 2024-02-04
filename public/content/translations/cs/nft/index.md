@@ -19,7 +19,7 @@ NFT jsou tokeny, které jsou individuálně jedinečné. Každé NFT má jiné v
 Jedinečnost každého NFT umožňuje tokenizaci věcí, jako je umění, sběratelské předměty nebo dokonce nemovitosti, kde jedno konkrétní unikátní NFT představuje jednu konkrétní unikátní položku existující v reálném nebo digitálnm světě. Vlastnictví aktiva je zajištěno Ethereum blockchainem. Nikdo nemůže měnit záznam vlastnictví nebo zkopírovat a následně vložit toto NFT na blockchain.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## Internet aktiv \{#internet-of-assets}
@@ -73,7 +73,7 @@ Tato webová stránka má také alternativní název domény využívající NFT
 [Více o ENS](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Zabezpečení NFT \{#nft-security}
@@ -94,9 +94,9 @@ Bezpečnostní otázky týkající se NFT se nejčastěji týkají podvodů s ph
 - [Standart tokenu ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

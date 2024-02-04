@@ -221,7 +221,7 @@ Recursive proofs, however, make it possible to finalize several blocks with one 
 Watch Finematics explain ZK-rollups:
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### Use ZK-rollups \{#use-zk-rollups}
@@ -229,7 +229,7 @@ Watch Finematics explain ZK-rollups:
 Multiple implementations of ZK-rollups exist that you can integrate into your dapps:
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 ## Who is working on a zkEVM? \{#zkevm-projects}

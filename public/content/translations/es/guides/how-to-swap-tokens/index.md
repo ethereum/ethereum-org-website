@@ -48,7 +48,7 @@ Puede seguir el progreso de la transacción en cualquier navegador de cadena de 
 
 Recibirá automáticamente los tókenes intercambiados en su cartera una vez que la transacción sea procesada.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

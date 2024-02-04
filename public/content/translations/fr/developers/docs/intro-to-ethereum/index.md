@@ -21,7 +21,7 @@ Si vous souhaitez voir comment les données de la blockchain sont hachées puis 
 Regardez Anders expliquer le hachage dans les blockchains :
 
 {
-	<YouTube id="_160oMzblY8" />
+<YouTube id="_160oMzblY8" />
 }
 
 ## Qu'est-ce qu'Ethereum ? \{#what-is-ethereum}

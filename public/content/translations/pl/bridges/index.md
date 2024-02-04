@@ -9,7 +9,7 @@ lang: pl
 _Web3 przekształcił się w ekosystem blockchainów warstwy 1 i rozwiązań skalujących warstwy 2, z których każdy ma unikalne możliwości i kompromisy. Wraz ze wzrostem liczby protokołów blockchain, rośnie [zapotrzebowanie na przenoszenie aktywów pomiędzy łańcuchami](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Aby zaspokoić to zapotrzebowanie, potrzebujemy mostów._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Czym są mosty? \{#what-are-bridges}
@@ -40,7 +40,7 @@ Mosty umożliwiają:
 [Jak zmostkować tokeny do warstwy 2](/guides/how-to-use-a-bridge/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Przypadki użycia mostów \{#bridge-use-cases}
@@ -68,7 +68,7 @@ Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w
 </InfoBanner>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Rodzaje mostów \{#types-of-bridge}
@@ -100,7 +100,7 @@ Samodzielna odprawa jest podobna do modelu bez zaufania, ponieważ eliminuje rol
 Wiele rozwiązań mostowych przyjmuje modele pomiędzy tymi dwoma skrajnościami z różnym stopniem braku zaufania.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Ryzyko korzystania z mostów \{#bridge-risk}
@@ -128,7 +128,7 @@ Jedno z ostatnich włamań było na moście Solana przy użyciu Wormhole, [gdzie
 Mosty mają kluczowe znaczenie dla wdrażania użytkowników do Ethereum, a nawet dla użytkowników, którzy chcą odkrywać różne ekosystemy. Biorąc jednak pod uwagę ryzyko związane z interakcją z mostami, użytkownicy muszą rozumieć kompromisy, jakie mosty podejmują. Oto kilka [strategii bezpieczeństwa międzyłańcuchowych](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Dodatkowo przeczytaj \{#further-reading}

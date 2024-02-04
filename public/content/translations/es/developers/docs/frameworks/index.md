@@ -87,7 +87,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Brownie: ****_Un entorno de desarrollo y framework de pruebas basado en Python._**
+**Brownie: \*\***_Un entorno de desarrollo y framework de pruebas basado en Python._\*\*
 
 - [Documentación](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
@@ -99,7 +99,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 - [GitHub](https://github.com/trufflesuite/truffle)
 - **El desarrollo de Truffle ha finalizado** - [leer más](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
 
-**OpenZeppelin SDK: ****_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._**
+**OpenZeppelin SDK: \*\***_El kit definitivo de herramientas para contratos inteligentes; una serie de herramientas que lo ayuda a desarrollar, compilar, actualizar, implementar e interactuar con contratos inteligentes._\*\*
 
 - [SDK de OpenZeppelin](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)

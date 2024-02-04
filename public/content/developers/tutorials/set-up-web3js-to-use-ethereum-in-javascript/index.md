@@ -71,7 +71,7 @@ You can see all the functions available on the Web3 instance in [the official we
 Most of Web3 libraries are asynchronous because in the background the library makes JSON RPC calls to the node which send backs the result.
 
 {
-	<Divider />
+<Divider />
 }
 
 If you are working in the browser, some wallets directly inject a Web3 instance and you should try to use it whenever possible especially if you plan to interact with the user’s Ethereum address to make transactions.

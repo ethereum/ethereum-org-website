@@ -8,7 +8,7 @@ sidebarDepth: 2
 # Glosarium \{#ethereum-glossary}
 
 {
-	<Divider />
+<Divider />
 }
 
 ## \# \{#section-numbers}
@@ -64,7 +64,7 @@ Klaim yang dibuat oleh suatu entitas bahwa sesuatu adalah benar. Dalam konteks E
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## B \{#section-b}
@@ -155,7 +155,7 @@ Kumpulan instruksi abstrak yang dirancang untuk eksekusi yang efisien oleh pener
 Tipe garpu pertama dari dua [garpu keras](#hard-fork) untuk fase pengembangan [Metropolis](#metropolis). Garpu ini mencakup Penundaan [Bom Kesulitan](#difficulty-bomb) Metropolis EIP-649 dan Pengurangan Imbalan Blok, yaitu dengan cara [Zaman Es](#ice-age) ditunda selama 1 tahun dan imbalan blok dikurangi dari 5 ke 3 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## C \{#section-c}
@@ -291,7 +291,7 @@ Kenaikan eksponensial yang direncanakan dalam pengaturan [tingkat kesulitan](#di
 Data string pendek yang dibuat pengguna untuk dokumen yang menggunakan [kunci pribadi](#private-key) sehingga siapa pun dengan [kunci publik](#public-key), tanda tangan, dan dokumen yang sesuai dapat memverifikasi bahwa (1) dokumennya "ditandatangani" oleh pemilik dari kunci privat tersebut, dan (2) dokumen tidak diubah setelah ditandatangani.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### penemuan \{#discovery}
@@ -417,7 +417,7 @@ Mesin virtual berbasis tumpukan yang mengeksekusi [kode bita](#bytecode). Dalam 
 Bentuk [kode bita](#bytecode) EVM yang dapat dibaca manusia.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## F \{#section-f}
@@ -467,7 +467,7 @@ Model keamanan untuk solusi [lapisan ke-2](#layer-2) tertentu di mana, untuk men
 Fase pengembangan uji coba awal Ethereum, yang berlangsung dari Juli 2015 sampai Maret 2016.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## G \{#section-g}
@@ -503,7 +503,7 @@ Go Ethereum. Salah satu implementasi protokol Ethereum yang paling menonjol, dit
 Singkatan untuk gigawei, sebuah denominasi [ether](#ether), biasanya digunakan untuk memberi harga pada [gas](#gas). 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## H \{#section-h}
@@ -535,7 +535,7 @@ Nilai yang digunakan untuk membuat [kunci pribadi](#private-key) master dan kode
 Tahapan pengembangan kedua Ethereum, yang diluncurkan pada Maret 2016 di blok 1.150.000.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## I \{#section-i}
@@ -573,7 +573,7 @@ Setelah kode [kontrak](#smart-contract) (atau [pustaka](#library)) disebarkan, k
 [Transaksi](#transaction) yang dikirim dari [akun kontrak](#contract-account) ke akun kontrak lainnya atau [EOA](#eoa) (lihat [pesan](#message)).
 
 {
-	<Divider />
+<Divider />
 }
 
 ### penerbitan
@@ -599,7 +599,7 @@ Setiap pasangan kunci pribadi/alamat akun ada sebagai sebuah file kunci tunggal 
 Fungsi [hash](#hash) kriptografi yang digunakan di Ethereum. Keccak-256 distandardisasi sebagai [SHA](#sha)-3.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## L \{#section-l}
@@ -629,7 +629,7 @@ Tipe [kontrak](#smart-contract) spesial yang tidak memiliki fungsi yang dapat di
 Klien Ethereum yang tidak menyimpan salinan lokal dari [rantai blok](#blockchain), atau memvalidasi blok dan [transaksi](#transaction). Menawarkan fungsi [dompet](#wallet) dan bisa membuat dan menyiarkan transaksi.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### LMD_GHOST \{#lmd-ghost}
@@ -683,7 +683,7 @@ Proses melakukan hashing pada header blok secara berulang sambil meningkatkan [n
 Minting adalah proses membuat token baru dan memasukkannya ke peredaran agar dapat digunakan. Mekanisme ini terdesentralisasi untuk membuat token baru tanpa keterlibatan otoritas pusat.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## N \{#section-n}
@@ -724,7 +724,7 @@ Klien perangkat lunak yang berpartisipasi dalam jaringan.
 Nilai dalam kriptografi yang hanya boleh digunakan satu kali. Nonce akun adalah penghitung transaksi di setiap akun, yang digunakan untuk mencegah serangan replay.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## O \{#section-o}
@@ -750,7 +750,7 @@ Oracle adalah jembatan antara [rantai blok](#blockchain) dan dunia nyata. Oracle
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## P \{#section-p}
@@ -804,7 +804,7 @@ Sepotong data (bukti) yang membutuhkan komputasi yang signifikan untuk dapat dit
 Angka, yang diturunkan melalui fungsi satu arah dari [kunci pribadi](#private-key), yang dapat dibagikan secara pubik dan digunakan oleh siapa pun untuk memverifikasi tanda tangan digital yang dibuat dengan kunci pribadi yang sesuai.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## R \{#section-r}
@@ -838,7 +838,7 @@ Jenis solusi penskalaan [lapisan ke-2](#layer-2) yang membuat beberapa batch ata
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### RPC \{#rpc}
@@ -996,7 +996,7 @@ Panitia sinkronisasi adalah sekelompok [validator](#validator) yang dipilih seca
 Denominasi [ether](#ether). 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## T \{#section-t}
@@ -1054,7 +1054,7 @@ Kemampuan jaringan untuk memediasi transaksi tanpa perlu ada kepercayaan dari pi
 Sebuah konsep yang dinamai menurut nama matematikawan dan ilmuwan komputer Inggris, Alan Turing - sebuah sistem aturan manipulasi data (seperti set instruksi komputer, bahasa pemrograman, atau automaton seluler) akan disebut sebagai "Lengkap secara Turing" atau "universal secara komputasi" jika sistem tersebut dapat digunakan untuk menyimulasikan setiap mesin Turing.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## V \{#section-v}
@@ -1105,7 +1105,7 @@ Bahasa pemrograman tingkat tinggi dengan sintaksis seperti Phyton. Dimaksudkan a
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## W \{#section-w}
@@ -1131,7 +1131,7 @@ Versi ketiga web. Pertama kali diusulkan oleh Dr. Gavin Wood, Web3 melambangkan 
 Denominasi terkecil dari [ether](#ether). 10<sup>18</sup> wei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Z \{#section-z}
@@ -1157,7 +1157,7 @@ Bukti tanpa pengetahuan adalah metode kriptografi yang memungkinkan individu mem
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Sumber \{#sources}
@@ -1165,7 +1165,7 @@ Bukti tanpa pengetahuan adalah metode kriptografi yang memungkinkan individu mem
 _Disediakan sebagian melalui [Menguasai Ethereum](https://github.com/ethereumbook/ethereumbook) oleh [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) di bawah CC-BY-SA_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Berkontribusi untuk halaman ini \{#contribute-to-this-page}

@@ -28,7 +28,7 @@ Protokol Ethereum tidak secara asli mendukung delegasi taruhan, sehingga layanan
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Apa yang perlu ditentukan \{#what-to-consider}
@@ -38,7 +38,7 @@ Ada semakin banyak penyedia SaaS yang dapat membantu Anda melakukan taruhan ETH,
 Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemahan yang mencolok yang mungkin dimiliki oleh penyedia SaaS yang terdaftar. Gunakan bagian ini sebagai referensi untuk bagaimana kami mendefinisikan atribut-atribut ini saat Anda memilih layanan untuk membantu perjalanan penaruhan Anda.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Eksplorasi penyedia layanan penaruhan \{#saas-providers}
@@ -46,13 +46,13 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 Berikut adalah beberapa penyedia layanan SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Penyedia layanan SaaS
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Harap perhatikan pentingnya mendukung [diversitas klien](/developers/docs/nodes-and-clients/client-diversity/) karena ini meningkatkan keamanan jaringan, dan membatasi risiko Anda. Layanan-layanan yang memiliki bukti pembatasan penggunaan mayoritas klien ditandai dengan <em style={{ textTransform: "uppercase" }}>"diversitas klien eksekusi"</em> dan <em style={{ textTransform: "uppercase" }}>"diversitas klien konsensus."</em>
@@ -60,7 +60,7 @@ Harap perhatikan pentingnya mendukung [diversitas klien](/developers/docs/nodes-
 ### Pembangkit Kunci
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Punya saran untuk penyedia penaruhan sebagai layanan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.

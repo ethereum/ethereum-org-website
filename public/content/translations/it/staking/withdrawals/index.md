@@ -38,7 +38,7 @@ Prima dell'aggiornamento di Shanghai/Capella, non era possibile utilizzare i pro
 ### Come mi preparo? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Avvisi importanti \{#important-notices}
@@ -79,7 +79,7 @@ Che un dato validatore sia o meno idoneo per un prelievo è determinato dallo st
 Dai un'occhiata a questa spiegazione dei prelievi di staking di Ethereum, di Finematics:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### "Pulizia" dei validatori \{#validator-sweeping}

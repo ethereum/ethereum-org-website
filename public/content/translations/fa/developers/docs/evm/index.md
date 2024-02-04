@@ -10,7 +10,7 @@ lang: fa
 
 ## پیش‌نیازها \{#prerequisites}
 
-برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)،‏ [حافظه](https://wikipedia.org/wiki/Computer_memory) و یک [پشته](https://wikipedia.org/wiki/Stack_(abstract_data_type)) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/بلاکچین مانند [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function) و <a href="https://wikipedia.org/wiki/Merkle_tree"> مفید خواهد بود.درخت مرکل</a>.
+برای درک EVM آشنایی اولیه با اصطلاحات رایج در علوم کامپیوتر مانند [بایت](https://wikipedia.org/wiki/Byte)،‏ [حافظه](https://wikipedia.org/wiki/Computer_memory) و یک [پشته](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) ضروری است. همچنین راحت بودن با مفاهیم رمزنگاری/بلاکچین مانند [توابع هش](https://wikipedia.org/wiki/Cryptographic_hash_function) و <a href="https://wikipedia.org/wiki/Merkle_tree"> مفید خواهد بود.درخت مرکل</a>.
 
 ## از دفتر کل تا ماشین حالات متناهی \{#from-ledger-to-state-machine}
 

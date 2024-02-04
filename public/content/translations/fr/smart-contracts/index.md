@@ -74,7 +74,7 @@ Ils peuvent effectuer des calculs, produire de la monnaie, stocker des données,
 Regardez Finematics expliquer les contrats intelligents :
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Complément d'information \{#further-reading}

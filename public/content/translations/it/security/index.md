@@ -9,7 +9,7 @@ lang: it
 Con l'interesse per le criptovalute in crescita, imparare le migliori pratiche quando si usano le criptovalute è essenziale. Le criptovalute possono essere divertenti ed eccitanti, ma ci sono anche seri rischi. Se si esegue questa piccola quantità di lavoro iniziale, si possono mitigare questi rischi.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Sicurezza web 101 \{#web-security}
@@ -91,7 +91,7 @@ Per coloro che vogliono fare il passo successivo in 2FA, prendere in considerazi
 Guarda altro sulla 2FA (autenticazione a due fattori):
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Disinstalla le estensioni del browser \{#uninstall-browser-extensions}
@@ -107,7 +107,7 @@ Le estensioni del browser come quelle di Chrome o i componenti aggiuntivi di Fir
 [Maggiori informazioni sui rischi delle estensioni del browser](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Sicurezza criptovalute 101 \{#crypto-security}
@@ -169,7 +169,7 @@ Molti portafogli di Ethereum offrono una protezione dei limiti per salvaguardart
 [Come revocare l'accesso dei contratti intelligenti ai tuoi fondi di criptovalute](/guides/how-to-revoke-token-access/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Truffe comuni \{#common-scams}
@@ -275,7 +275,7 @@ Le truffe di Airdrop prevedono un falso progetto di airdropping di una risorsa (
 [Maggiori informazioni sulle truffe di airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Letture consigliate \{#further-reading}
@@ -302,5 +302,5 @@ Le truffe di Airdrop prevedono un falso progetto di airdropping di una risorsa (
 - [Discussione di Twitter sulle e-mail e i messaggi di phishing di criptovalute comuni](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 {
-	<QuizWidget quizKey="security" />
+<QuizWidget quizKey="security" />
 }

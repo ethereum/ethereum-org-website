@@ -48,7 +48,7 @@ Anda bisa melihat perkembangan transaksi di penjelajah rantai blok mana pun. Pro
 
 Anda akan secara otomatis menerima token yang ditukar di dompet Anda setelah transaksi diproses.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

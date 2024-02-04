@@ -70,5 +70,5 @@ _認識社區或社團資源能幫助大家學習更多? 歡迎自由編輯或�
 ## 相關主題 \{#related-topics}
 
 - [開發架構](/developers/docs/frameworks/)
-- [運行一Ethereum節點](/developers/docs/nodes-and-clients/run-a-node/)
+- [運行一 Ethereum 節點](/developers/docs/nodes-and-clients/run-a-node/)
 - [節點即服務](/developers/docs/nodes-and-clients/nodes-as-a-service)

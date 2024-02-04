@@ -11,7 +11,7 @@ description: Anweisungen für die Verwendung von Crowdin zur Übersetzung von et
 Für visuell Lernende: Luka führt Sie durch die Einrichtung von Crowdin. Alternativ können Sie die gleichen Schritte auch im nächsten Abschnitt nachlesen.
 
 {
-	<YouTube id="Ii7bYhanLs4" />
+<YouTube id="Ii7bYhanLs4" />
 }
 
 ## Schriftlicher Leitfaden \{#written-guide}

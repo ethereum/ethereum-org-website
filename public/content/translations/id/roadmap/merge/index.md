@@ -4,7 +4,7 @@ description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum meng
 lang: id
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Jaringan Utama Ethereum menggunakan bukti taruhan, tetapi tidak selalu demikian.
 summaryPoint2: Peningkatan dari mekanisme bukti kerja yang asli menjadi bukti taruhan disebut Penggabungan.
 summaryPoint3: Penggabungan mengacu pada penggabungan Jaringan Utama Ethereum asli dengan rantai blok bukti taruhan terpisah yang disebut Rantai Suar, yang sekarang ada sebagai satu rantai.
@@ -20,7 +20,7 @@ summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,
 Penggabungan adalah penyatuan lapisan eksekusi asli Ethereum (Jaringan Utama yang telah ada sejak [genesis](/history/#frontier)) dengan lapisan konsensus bukti taruhan baru, Rantai Suar. Ini menghilangkan kebutuhan akan penambangan yang boros energi dan sebagai gantinya memungkinkan jaringan untuk diamankan menggunakan ETH yang dipertaruhkan. Ini adalah langkah yang sangat menarik dalam mewujudkan visi Ethereum - skalabilitas, keamanan, dan keberlanjutan yang lebih baik.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Pada awalnya, [Rantai Suar](/roadmap/beacon-chain/) dikirim secara terpisah dari [Jaringan Utama](/glossary/#mainnet). Jaringan Utama Ethereum - dengan semua akun, saldo, kontrak pintar, dan status rantai blok - tetap diamankan oleh [bukti kerja](/developers/docs/consensus-mechanisms/pow/), bahkan saat Rantai Suar berjalan paralel menggunakan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/). Penggabungan adalah saat kedua sistem ini akhirnya digabungkan, dan bukti kerja digantikan secara permanen oleh bukti taruhan.
@@ -243,9 +243,9 @@ Rencana untuk pecahan berkembang dengan cepat, tetapi dengan munculnya dan keber
 ## Bacaan lebih lanjut \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

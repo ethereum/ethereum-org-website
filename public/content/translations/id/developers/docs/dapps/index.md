@@ -46,7 +46,7 @@ Kontrak pintar adalah kode yang ada di blockchain Ethereum dan berjalan persis s
 ## Selengkapnya tentang pelajar visual? \{#visual-learner}
 
 {
-	<YouTube id="F50OrwV6Uk8" />
+<YouTube id="F50OrwV6Uk8" />
 }
 
 ## Peralatan dapp \{#dapp-tools}

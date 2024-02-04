@@ -4,7 +4,7 @@ description: "Més informació sobre la fusió: quan la xarxa principal d'Ethere
 lang: ca
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Està previst que l'actual xarxa principal d'Ethereum es "fusioni" amb la cadena de balisa basada en el sistema de prova de participació.
 summaryPoint2: Això marcarà el final del sistema de prova de treball per Ethereum i significarà la transició completa al sistema de prova de participació.
 summaryPoint3: Està previst que precedeixi la posada en marxa de la millora anomenada cadena de fragments.
@@ -66,5 +66,5 @@ La comunitat avaluarà de forma contínua la necessitat de múltiples rondes de 
 ## Més informació \{#read-more}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }

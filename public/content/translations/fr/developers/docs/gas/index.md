@@ -132,7 +132,7 @@ La mise en œuvre de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dans la
 Cette vidéo explique l'EIP-1559 et les avantages qu'il procure :
 
 {
-	<YouTube id="MGemhK9t44Q" />
+<YouTube id="MGemhK9t44Q" />
 }
 
 ## Suivi des frais de gaz \{#moitoring-gas-fees}

@@ -30,7 +30,7 @@ summaryPoints:
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## آنچه باید در نظر گرفته شود \{#what-to-consider}
@@ -46,7 +46,7 @@ summaryPoints:
 شاخص‌های ویژگی در زیر برای نشان دادن نقاط قوت یا ضعف قابل توجهی که ممکن است یک استخر فهرست شده داشته باشد استفاده می‌شود. از این بخش به‌عنوان مرجعی برای نحوه تعریف این ویژگی‌ها هنگام انتخاب استخری برای پیوستن استفاده کنید.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## استخرهای سهام‌گذاری را کاوش کنید \{#explore-staking-pools}
@@ -54,11 +54,11 @@ summaryPoints:
 گزینه‌های مختلفی برای کمک به شما در راه‌اندازی وجود دارد. از شاخص‌های بالا برای راهنمایی به خود در مورد ابزارهای زیر استفاده کنید.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 لطفاً از اهمیت انتخاب سرویسی که [تنوع کاربر](/developers/docs/nodes-and-clients/client-diversity/) را جدی بگیرد غافل نشوید، زیرا امنیت شبکه را بهبود می‌بخشد و ریسک شما را محدود می‌کند. سرویس‌هایی که مدارکی از محدود کردن استفاده اکثریت کاربران را دارند با عنوان <em style={{ textTransform: "uppercase" }}>"تنوع کاربر اجرایی"</em> و <em style={{ textTransform: "uppercase" }}>"تنوع کاربر اجماعی"</em> نشان داده می‌شوند.

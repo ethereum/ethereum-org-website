@@ -47,7 +47,7 @@ Hyperledger、Quorum、Corda プロジェクトが開始された 2016 年頃か
 
 ### プロダクトとサービス \{#products-and-services}
 
-- [Alchemy](https://www.alchemy.com/)_ イーサリアムでアプリケーションを作成、監視するための API サービスとツールを提供_</0>
+- [Alchemy](https://www.alchemy.com/)_ イーサリアムでアプリケーションを作成、監視するための API サービスとツールを提供_`</0>`
 - [Blast](https://blastapi.io/) _イーサリアムアーカイブのメインネットおよびテストネットの RPC/WSS API を提供する API プラットフォーム_
 - [Blockapps](https://blockapps.net/) _STRATO プラットフォームを構成するエンタープライズイーサリアムプロトコル、ツール、API の実装_
 - [Chainstack](https://chainstack.com/) _メインネットおよびテストネットのイーサリアムインフラストラクチャをパブリックおよび隔離されたカスタマークラウドでホスト_

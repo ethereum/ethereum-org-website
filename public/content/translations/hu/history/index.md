@@ -23,7 +23,7 @@ Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2020 \{#2020}
@@ -31,7 +31,7 @@ Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új
 ### Beacon Chain genesis \{#beacon-chain-genesis}
 
 {
-	<NetworkUpgradeSummary name="beaconChainGenesis" />
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
 #### Összefoglaló \{#beacon-chain-genesis-summary}
@@ -49,7 +49,7 @@ A [Beacon Chain](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 ### A letétbe helyezési szerződés aktiválása \{#staking-deposit-contract}
 
 {
-	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
 #### Összefoglaló \{#deposit-contract-summary}
@@ -67,7 +67,7 @@ A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#st
 ### Muir Glacier \{#muir-glacier}
 
 {
-	<NetworkUpgradeSummary name="muirGlacier" />
+<NetworkUpgradeSummary name="muirGlacier" />
 }
 
 #### Összefoglaló \{#muir-glacier-summary}
@@ -86,7 +86,7 @@ A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2019 \{#2019}
@@ -94,7 +94,7 @@ A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/
 ### Istanbul \{#istanbul}
 
 {
-	<NetworkUpgradeSummary name="istanbul" />
+<NetworkUpgradeSummary name="istanbul" />
 }
 
 #### Összefoglaló \{#istanbul-summary}
@@ -127,7 +127,7 @@ Az Istanbul fork:
 ### Constantinople \{#constantinople}
 
 {
-	<NetworkUpgradeSummary name="constantinople" />
+<NetworkUpgradeSummary name="constantinople" />
 }
 
 #### Összefoglaló \{#constantinople-summary}
@@ -152,7 +152,7 @@ A Constantinople fork:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2017 \{#2017}
@@ -160,7 +160,7 @@ A Constantinople fork:
 ### Byzantium \{#byzantium}
 
 {
-	<NetworkUpgradeSummary name="byzantium" />
+<NetworkUpgradeSummary name="byzantium" />
 }
 
 #### Összefoglaló \{#byzantium-summary}
@@ -191,7 +191,7 @@ A Byzantium fork:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2016 \{#2016}
@@ -199,7 +199,7 @@ A Byzantium fork:
 ### Spurious Dragon \{#spurious-dragon}
 
 {
-	<NetworkUpgradeSummary name="spuriousDragon" />
+<NetworkUpgradeSummary name="spuriousDragon" />
 }
 
 #### Összefoglaló \{#spurious-dragon-summary}
@@ -228,7 +228,7 @@ A Spurious Dragon fork volt a második válasz a szolgáltatás megtagadásos (D
 ### Tangerine whistle \{#tangerine-whistle}
 
 {
-	<NetworkUpgradeSummary name="tangerineWhistle" />
+<NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
 #### Összefoglaló \{#tangerine-whistle-summary}
@@ -253,7 +253,7 @@ A Tangerine Whistle fork volt a első válasz a szolgáltatás megtagadásos (Do
 ### DAO fork \{#dao-fork}
 
 {
-	<NetworkUpgradeSummary name="daoFork" />
+<NetworkUpgradeSummary name="daoFork" />
 }
 
 #### Összefoglaló \{#dao-fork-summary}
@@ -271,7 +271,7 @@ Némely bányász nem volt hajlandó forkolni, mivel a DAO incidens nem a protok
 ### Homestead \{#homestead}
 
 {
-	<NetworkUpgradeSummary name="homestead" />
+<NetworkUpgradeSummary name="homestead" />
 }
 
 #### Összefoglaló \{#homestead-summary}
@@ -291,7 +291,7 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2015 \{#2015}
@@ -299,7 +299,7 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 ### Frontier thawing \{#frontier-thawing}
 
 {
-	<NetworkUpgradeSummary name="frontierThawing" />
+<NetworkUpgradeSummary name="frontierThawing" />
 }
 
 #### Összefoglaló \{#frontier-thawing-summary}
@@ -313,7 +313,7 @@ A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet
 ### Frontier \{#frontier}
 
 {
-	<NetworkUpgradeSummary name="frontier" />
+<NetworkUpgradeSummary name="frontier" />
 }
 
 #### Összefoglaló \{#frontier-summary}
@@ -323,7 +323,7 @@ A Frontier egy működő, de teljesen leegyszerűsített implementációja volt 
 [Olvasd el az Ethereum Alapítvány közleményét](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2014 \{#2014}
@@ -331,7 +331,7 @@ A Frontier egy működő, de teljesen leegyszerűsített implementációja volt 
 ### Ether eladás \{#ether-sale}
 
 {
-	<NetworkUpgradeSummary name="etherSale" />
+<NetworkUpgradeSummary name="etherSale" />
 }
 
 A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
@@ -343,7 +343,7 @@ A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
 ### Sárga könyv kiadása \{#yellowpaper}
 
 {
-	<NetworkUpgradeSummary name="yellowpaperRelease" />
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 }
 
 A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műszaki meghatározása.
@@ -351,7 +351,7 @@ A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsz
 [A Sárga Könyv megtekintése](https://github.com/ethereum/yellowpaper)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2013 \{#2013}
@@ -359,7 +359,7 @@ A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsz
 ### A fehérkönyv kiadása \{#whitepaper}
 
 {
-	<NetworkUpgradeSummary name="yellowpaperRelease" />
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 }
 
 A bemutatkozó kiadvány, melyet Vitalik Buterin az Ethereum alapítója adott ki 2013-ban, a projekt 2015-ös indulása előtt.

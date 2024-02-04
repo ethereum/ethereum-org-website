@@ -58,7 +58,7 @@ Setiap transaksi ditambang (disertakan dalam blok baru dan disebarkan untuk pert
 Amati Austin memandu Anda melalui penambangan dan blockchain bukti kerja.
 
 {
-	<YouTube id="zcX7OJ-L8XQ" />
+<YouTube id="zcX7OJ-L8XQ" />
 }
 
 ## Bacaan lebih lanjut \{#further-reading}

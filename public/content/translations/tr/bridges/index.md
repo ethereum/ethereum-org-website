@@ -6,7 +6,7 @@ lang: tr
 
 # Blokzincir köprüleri \{#prerequisites}
 
-_Web3 L1 blok zincirler ve L2 ölçeklendirme çözümlerinin her birinin benzersiz yetenek ve ödünlestirmelerle tasarlandığı bir ekosisteme evrilmiştir. Blok zincir protokol sayısı arttıkça, [varlıkları zincirler arasında aktarma talebi](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)) de artmıştır. Bu talebi karşılamak için köprülere ihtiyacımız var._
+_Web3 L1 blok zincirler ve L2 ölçeklendirme çözümlerinin her birinin benzersiz yetenek ve ödünlestirmelerle tasarlandığı bir ekosisteme evrilmiştir. Blok zincir protokol sayısı arttıkça, [varlıkları zincirler arasında aktarma talebi](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>) de artmıştır. Bu talebi karşılamak için köprülere ihtiyacımız var._
 
 <Divider />
 

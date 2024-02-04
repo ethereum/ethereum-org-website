@@ -62,7 +62,7 @@ lang: fa
 - [فاست Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 - [فاست Testnet |‏ Sepolia](https://testnet-faucet.com/sepolia/)
 
-#### Goerli_(پشتیبانی طولانی مدت)_ \{#goerli}
+#### Goerli*(پشتیبانی طولانی مدت)* \{#goerli}
 
 _توجه:[شبکه‌ تست Goerli منسوخ شده است](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) و در 2023 با [Holesovice](https://github.com/eth-clients/holesovice) جایگزین خواهد شد. لطفاً انتقال اپلیکیشن‌های خود را به Sepolia در نظر بگیرید._
 

@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum 
 lang: de
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer der Fall.
 summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work Mechanismus zu Proof-of-Stake wurde Zusammenführung genannt.
 summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum Mainnet, welches mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain vereinigt wurde, und somit nun beide als eine Blockchain existieren.
@@ -20,7 +20,7 @@ summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca.
 Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/history/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Ursprünglich wurde die [Beacon Chain](/roadmap/beacon-chain/) getrennt vom [Mainnet](/glossary/#mainnet) betrieben. Das Ethereum-Mainnet, mit allen Konten, Kontoständen, Smart Contracts, und des Blockchain-Zustandes, wurde weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) betrieben wurde. Die Zusammenführung fand statt, als diese beiden Systeme schließlich vereint wurden und Proof-of-Work permanent durch Proof-of-Stake ersetzt wurde.
@@ -243,9 +243,9 @@ Pläne für die gemeinsame Nutzung entwickeln sich rasch, aber angesichts des An
 ## Weiterführende Informationen \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

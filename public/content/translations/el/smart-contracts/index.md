@@ -74,7 +74,7 @@ lang: el
 Δείτε τη Finematics να εξηγεί τα έξυπνα συμβόλαια:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Περισσότερες πληροφορίες \{#further-reading}

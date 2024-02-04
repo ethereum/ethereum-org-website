@@ -9,7 +9,7 @@ lang: de
 _Web3 hat sich zu einem Ökosystem von L1 Blockchains und L2 Skalierungslösungen entwickelt, die jeweils mit einzigartigen Fähigkeiten und Gegenleistungen entwickelt wurden. Mit dem Anstieg der Anzahl der Blockchain-Protokolle erhöht sich auch [das Bedürfnis, Vermögenswerte über Blockchains hinweg verschieben zu können](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Um diesem Bedürfnis gerecht zu werden, brauchen wir Brücken._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Was sind Brücken? \{#what-are-bridges}
@@ -40,7 +40,7 @@ Brücken ermöglichen Folgendes:
 [Wie man Token auf die Layer 2 überträgt](/guides/how-to-use-a-bridge/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Anwendungsfälle für Brücken \{#bridge-use-cases}
@@ -68,7 +68,7 @@ Nehmen wir an, Sie möchten native Bitcoin (BTC) besitzen, aber Sie haben nur Ge
 </InfoBanner>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Arten von Brücken \{#types-of-bridge}
@@ -100,7 +100,7 @@ Self Check-in ist ähnlich einem vertrauenslosen Modell, da es die Rolle des Bet
 Viele Brückenlösungen übernehmen Modelle zwischen diesen beiden Extremen mit unterschiedlichem Grad an Vertrauenslosigkeit.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Risiken von Brücken \{#bridge-risk}
@@ -128,7 +128,7 @@ Ein kürzlicher Hack war der von Solanas Wormhole-Brücke, [wo 120T wETH (325 Mi
 Brücken sind von entscheidender Bedeutung für Benutzer, die Ethereum L2s und sogar verschiedene Ökosysteme erkunden wollen. Angesichts der Risiken, die mit der Interaktion mit Brücken verbunden sind, müssen die Benutzer jedoch verstehen, welche Kompromisse die Brücken eingehen. Dies sind einige [Strategien für die Crosschain-Sicherheit](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Weiterführende Informationen \{#further-reading}

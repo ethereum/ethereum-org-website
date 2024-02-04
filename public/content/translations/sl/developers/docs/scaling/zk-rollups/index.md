@@ -33,7 +33,7 @@ Glede na to, da so na plasti 2, so lahko ZK-zvitki optimizirani za nadaljnje zma
 Oglejte si, kako pri Finematics razložijo ZK-zvitke:
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### Uporaba ZK-zvitkov \{#use-zk-rollups}
@@ -41,7 +41,7 @@ Oglejte si, kako pri Finematics razložijo ZK-zvitke:
 Obstaja več implementacij ZK-zvitkov, ki jih lahko integrirate v svoje dappe:
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 **Materiali za branje o ZK-zvitkih**

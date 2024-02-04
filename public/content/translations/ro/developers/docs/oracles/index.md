@@ -18,7 +18,7 @@ Un oracol este o punte între blockchain și lumea reală. Acestea acționează 
 Urmăriți-l pe Patrick explicând Oracolele:
 
 {
-	<YouTube id="ZJfkNzyO7-U" start="10" />
+<YouTube id="ZJfkNzyO7-U" start="10" />
 }
 
 ## De ce este nevoie de oracole? \{#why-are-they-needed}

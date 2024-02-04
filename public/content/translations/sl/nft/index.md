@@ -19,7 +19,7 @@ NFT-ji so žetoni, ki so individualno unikatni. Vsak NFT ima drugačne lastnosti
 Unikatnost vsakega NFT-ja omogoča spremembo stvari, kot so umetnost, zbirateljski predmeti ali celo nepremičnine, v žetone, kjer specifičen NFT predstavlja nek unikaten resničen ali digitalen izdelek. Lastništvo sredstva ščiti Ethereumova veriga blokov – nihče ne more spreminjati zapisa o lastništvu ali s kopiranjem in lepljenjem ustvariti novega nezamenljivega žetona.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## Internet sredstev \{#internet-of-assets}
@@ -73,7 +73,7 @@ To spletišče ima tudi alternativno ime domene, ki ga poganjajo NFT-ji, **ether
 [Več o storitvi ENS](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Varnost NFT-jev \{#nft-security}
@@ -94,7 +94,7 @@ Varnostne težave, povezane z NFT-ji, so najpogosteje posledica prevar z lažnim
 - [Standard za žetone ERC-1155](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 <QuizWidget quizKey="nfts" />

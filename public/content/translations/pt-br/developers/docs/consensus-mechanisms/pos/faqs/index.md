@@ -21,7 +21,7 @@ A prova de trabalho consome muito mais energia porque a eletricidade é consumid
 A comparação entre prova de trabalho e prova de participação é um tópico controverso. [O blog de Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e o debate entre Justin Drake e Lyn Alden dão um bom resumo dos argumentos.
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## A prova de participação é energeticamente eficiente? \{#is-pos-energy-efficient}

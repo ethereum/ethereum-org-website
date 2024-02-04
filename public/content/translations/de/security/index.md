@@ -9,7 +9,7 @@ lang: de
 Da Kryptowährungen immer beliebter werden, ist es unerlässlich, sich die besten Praktiken für die Nutzung von Kryptowährungen anzueignen. Kryptowährungen können Spaß machen und aufregend sein, aber es gibt auch ernsthafte Risiken. Wenn Sie bereits im Vorfeld etwas Zeit investieren, können Sie diese Risiken mildern.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Das Einmaleins der Sicherheit im Internet \{#web-security}
@@ -91,7 +91,7 @@ Für diejenigen, die bei der 2FA einen Schritt weiter gehen möchten, sollten ei
 Mehr zur 2FA:
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Browsererweiterungen entfernen \{#uninstall-browser-extensions}
@@ -107,7 +107,7 @@ Browsererweiterungen wie die Chrome-Erweiterungen oder die Add-ons von Firefox k
 [Mehr zu den Risiken von Browsererweiterungen](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Das Einmaleins der Krypto-Sicherheit \{#crypto-security}
@@ -169,7 +169,7 @@ Viele Ethereum-Wallets bieten Schutz gegen die komplette Entleerung durch Hacker
 [So widerrufen Sie den Smart-Contract-Zugriff auf Ihre Krypto-Gelder](/guides/how-to-revoke-token-access/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Häufige Betrugsversuche \{#common-scams}
@@ -275,7 +275,7 @@ Beim Airdrop-Betrug sendet ein Betrugsprojekt ein Asset (z. B. ein NFT/Token) pe
 [Mehr zu Airdrop-Betrugsversuchen](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Weiterführende Informationen \{#further-reading}
@@ -302,5 +302,5 @@ Beim Airdrop-Betrug sendet ein Betrugsprojekt ein Asset (z. B. ein NFT/Token) pe
 - [Twitter-Thread über häufige Phishing-E-Mails und Nachrichten](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 {
-	<QuizWidget quizKey="security" />
+<QuizWidget quizKey="security" />
 }

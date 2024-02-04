@@ -9,7 +9,7 @@ lang: hu
 A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni a bevált gyakorlatokat. A kripto izgalmas dolog, de közben komoly kockázatokat is rejt. Ha Ön megfelelően tájékozódik, akkor elháríthatja ezeket a kockázatokat.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Webbiztonság 101 \{#web-security}
@@ -26,7 +26,7 @@ Gyenge jelszó például: AranyosBolyhosCicák!
 Erős jelszó például: ymv\*azu.EAC8eyp8umf
 ```
 
-A másik általános hiba az, amikor a [közösségi médiából visszafejthető](https://wikipedia.org/wiki/Social_engineering_(security)) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
+A másik általános hiba az, amikor a [közösségi médiából visszafejthető](<https://wikipedia.org/wiki/Social_engineering_(security)>) jelszót találnak ki. Beleértve az édesanyja leánykori nevét, a gyerekek vagy háziállatok neveit, születési időpontokat használva nem lesz a jelszó biztonságos, és lehetőséget ad a támadásra.
 
 #### A jó jelszóhoz: \{#good-password-practices}
 
@@ -68,7 +68,7 @@ Különböző egyedi bizonyítékok bemutatásával igazolhatja, hogy Ön valób
 - Valami, ami Öntől származik (mint egy ujjlenyomat vagy írisz-/arcszkenner)
 - Valami, ami az Ön birtokában van (biztonsági kulcs vagy azonosítási alkalmazás a telefonján)
 
-A **kéttényezős azonosítás (2FA)** egy plusz *biztonsági tényezőt* ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
+A **kéttényezős azonosítás (2FA)** egy plusz _biztonsági tényezőt_ ad az online számlákhoz, így a jelszó (amit Ön tud) önmagában nem elég annak eléréséhez. Általában a második tényező egy véletlenszerű hatjegyű kód, ami egy **időzített egyszeri jelszó (TOTP)**, amit egy azonosítási alkalmazással ér el, mint a Google Authenticator vagy Authy. Ez az a tényező, ami az Ön birtokában van, mert a kódot adó mag az Ön eszközén található.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -91,7 +91,7 @@ Akik a 2FA következő szintjére akarnak lépni, azoknak a biztonsági kulcs ha
 Tudjon meg többet a 2FA-ról:
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Böngészőbővítmények eltávolítása \{#uninstall-browser-extensions}
@@ -107,7 +107,7 @@ A böngészőbővítmények (mint a Chrome-bővítmények vagy Firefox kiegész�
 [Bővebben a böngészőbővítmények kockázatáról](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Kriptobiztonság 101 \{#crypto-security}
@@ -169,7 +169,7 @@ Számos Ethereum-tárca kínál védelmet keretek beállításával, hogy ne leh
 [Hogyan vonható vissza, hogy az okosszerződés hozzáférjen a kriptoeszközeihez](/guides/how-to-revoke-token-access/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Gyakori csalások \{#common-scams}
@@ -275,7 +275,7 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, to
 [Bővebben a tokenkiosztási (airdrop) csalásokról](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## További olvasnivaló \{#further-reading}
@@ -301,5 +301,5 @@ A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt (NFT, to
 - [Twitter-beszélgetés a tipikus kripto-adathalász e-mailekről és üzenetekről](https://twitter.com/tayvano_/status/1516225457640787969) – _Taylor Monahan_
 
 {
-	<QuizWidget quizKey="security" />
+<QuizWidget quizKey="security" />
 }

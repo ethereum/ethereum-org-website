@@ -51,7 +51,7 @@ Süreç 10 dakikadan fazla sürmemelidir.
 
 Ağın RPC detaylarını bulmak için [chainlist.org](http://chainlist.org) sitesini kullanabilirsiniz. Ağ eklendiğinde ve işlem sonlandığında, token'ları cüzdanınızda görmelisiniz.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

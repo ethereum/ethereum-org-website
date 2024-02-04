@@ -74,7 +74,7 @@ Utiliser les méthodes de proxy nécessite une compréhension de la fonction **d
 
 Selon la [documentation Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries) :
 
-> _Il existe une variante spéciale de l'appel de message, nommée **delegatecall** qui est identique à un appel de message à part le fait que le code à l'adresse cible est exécuté dans le contexte (c'est-à-dire à l'adresse) du contrat appelant et `msg.sender` et `msg.value` ne changent pas leurs valeurs. __Cela signifie qu'un contrat peut charger dynamiquement du code depuis une adresse différente à l'exécution. Le stockage, l'adresse actuelle et le solde font toujours référence au contrat appelant, seul le code est pris à partir de l'adresse appelée._
+> _Il existe une variante spéciale de l'appel de message, nommée **delegatecall** qui est identique à un appel de message à part le fait que le code à l'adresse cible est exécuté dans le contexte (c'est-à-dire à l'adresse) du contrat appelant et `msg.sender` et `msg.value` ne changent pas leurs valeurs. \_\_Cela signifie qu'un contrat peut charger dynamiquement du code depuis une adresse différente à l'exécution. Le stockage, l'adresse actuelle et le solde font toujours référence au contrat appelant, seul le code est pris à partir de l'adresse appelée._
 
 Le contrat proxy sait invoquer `delegatecall` chaque fois qu'un utilisateur appelle une fonction car il dispose d'une fonction `fallback` intégrée. En programmation Solidity, la [fonction fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) est exécutée lorsqu'un appel de fonction ne correspond pas aux fonctions spécifiées dans un contrat.
 

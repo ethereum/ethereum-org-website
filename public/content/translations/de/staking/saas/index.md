@@ -28,7 +28,7 @@ Das Ethereum-Protokoll unterstützt keine Delegation von Staking, daher wurden d
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Bitte beachten \{#what-to-consider}
@@ -38,7 +38,7 @@ Es kommen immer mehr SaaS-Anbieter auf den Markt, die Ihnen beim Staking Ihrer E
 Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwächen eines gelisteten SaaS-Anbieters zu signalisieren. Nutzen Sie bei Ihrer Auswahl eines Diensts, dem Sie Ihr Staking anvertrauen möchten, diesen Abschnitt als Referenz dafür, wie wir diese Attribute definieren.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Erkunden Sie die Staking-Dienstleister \{#saas-providers}
@@ -46,13 +46,13 @@ Attributindikatoren werden unten verwendet, um nennenswerte Stärken oder Schwä
 Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obigen Indikatoren für die Beurteilung dieser Dienste
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### SaaS-Anbieter
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungskunden"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsenskunden"</em>.
@@ -60,7 +60,7 @@ Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/node
 ### Schlüssel-Generatoren
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Sie haben einen Vorschlag zu einem SaaS-Anbieter, den wir noch nicht haben? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.

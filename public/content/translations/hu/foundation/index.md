@@ -7,7 +7,7 @@ lang: hu
 # Az Ethereum Alapítványról \{#about-the-ethereum-foundation}
 
 {
-	<Logo/>
+<Logo/>
 }
 
 Az [Ethereum Alapítvány](http://ethereum.foundation/) (EA) egy non-profit szervezet, melynek célja az [Ethereum](/what-is-ethereum/) és a kapcsolódó technológiák támogatása.

@@ -46,7 +46,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 ## Eher ein visueller Lerner? \{#visual-learner}
 
 {
-	<YouTube id="F50OrwV6Uk8" />
+<YouTube id="F50OrwV6Uk8" />
 }
 
 ## Tools zum Erstellen von dApps \{#dapp-tools}

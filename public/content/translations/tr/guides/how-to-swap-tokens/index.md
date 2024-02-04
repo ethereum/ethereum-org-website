@@ -48,7 +48,7 @@ Herhangi bir blok zincir tarayıcısında işlemin ilerlemesini görebilirsiniz.
 
 İşlem yapıldığında otomatik olarak takas edilmiş token'ları cüzdanınıza alacaksınız.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

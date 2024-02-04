@@ -41,7 +41,7 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 - [**3 million** words translated in 2022](/contributing/translation-program/acknowledgements/)
 
 {
-	<TranslationChartImage />
+<TranslationChartImage />
 }
 
 ### Acknowledgements \{#acknowledgements}

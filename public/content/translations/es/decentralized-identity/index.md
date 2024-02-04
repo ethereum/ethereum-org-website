@@ -1,6 +1,6 @@
 ---
 title: Identidad descentralizada
-description: '¿Qué es la identidad descentralizada y por qué es importante?'
+description: "¿Qué es la identidad descentralizada y por qué es importante?"
 lang: es
 template: use-cases
 emoji: ":id:"
@@ -111,7 +111,7 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 [Los tókenes Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) pueden utilizarse para recopilar información única en una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
 
-## Beneficios de una identidad descentralizada  \{#benefits-of-decentralized-identity}
+## Beneficios de una identidad descentralizada \{#benefits-of-decentralized-identity}
 
 1. La identidad descentralizada aumenta el control individual de la información identificativa. Los identificadores y certificados descentralizados pueden ser verificados sin depender de autoridades centralizadas o servicios de terceros.
 

@@ -1,6 +1,6 @@
 ---
 title: Datos y análisis
-description: '¿Cómo obtener datos y análisis en cadena para usarlos en tus dapps?'
+description: "¿Cómo obtener datos y análisis en cadena para usarlos en tus dapps?"
 lang: es
 ---
 

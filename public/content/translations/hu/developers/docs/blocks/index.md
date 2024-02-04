@@ -40,7 +40,7 @@ A proof-of-stake a következőket jelenti:
 A blokkban rengeteg információ van. A legmagasabb szinten a következő mezőket tartalmazza:
 
 | Mező             | Leírás                                                                        |
-|:---------------- |:----------------------------------------------------------------------------- |
+| :--------------- | :---------------------------------------------------------------------------- |
 | `slot`           | az a slot, amelyhez a blokk tartozik                                          |
 | `proposer_index` | a validátor azonosítója, aki a blokkot javasolta                              |
 | `parent_root`    | az előző blokk hash-e                                                         |
@@ -50,7 +50,7 @@ A blokkban rengeteg információ van. A legmagasabb szinten a következő mezők
 A blokk `body` számos mezőt tartalmaz:
 
 | Mező                 | Leírás                                                              |
-|:-------------------- |:------------------------------------------------------------------- |
+| :------------------- | :------------------------------------------------------------------ |
 | `randao_reveal`      | egy érték, amely a következő blokkjavaslót választja ki             |
 | `eth1_data`          | információ a letéti szerződésről                                    |
 | `graffiti`           | tetszőleges adat a blokkok taggelésére                              |
@@ -65,7 +65,7 @@ A blokk `body` számos mezőt tartalmaz:
 A `attestations` (tanúsítások) mező tartalmazza a blokkban lévő az összes tanúsítást. A tanúsítások saját adattípussal rendelkezik, amelyben számos adat megtalálható. A tanúsítások a következőket tartalmazzák:
 
 | Mező               | Leírás                                                       |
-|:------------------ |:------------------------------------------------------------ |
+| :----------------- | :----------------------------------------------------------- |
 | `aggregation_bits` | a validátorok listája, akik részt vettek a tanúsításban      |
 | `adat`             | konténer számos almezővel                                    |
 | `aláírás`          | az összes tanúsítást végző validátor aláírásának aggregátuma |
@@ -73,7 +73,7 @@ A `attestations` (tanúsítások) mező tartalmazza a blokkban lévő az összes
 A `data` mező a `tanúsítás` részen belül tartalmazza:
 
 | Mező                | Leírás                                                            |
-|:------------------- |:----------------------------------------------------------------- |
+| :------------------ | :---------------------------------------------------------------- |
 | `slot`              | a slot, amelyhez a tanúsítás kapcsolódik                          |
 | `index`             | a tanúsítást végző validátorok indexei                            |
 | `beacon_block_root` | a Beacon blokk gyökér hash-e, amely ezt az objektumot tartalmazza |
@@ -85,7 +85,7 @@ A tranzakciók végrehajtása az `execution_payload` paraméterben frissíti a g
 Az `execution_payload_header` a következő mezőket tartalmazza:
 
 | Mező                | Leírás                                                                   |
-|:------------------- |:------------------------------------------------------------------------ |
+| :------------------ | :----------------------------------------------------------------------- |
 | `parent_hash`       | a jelenlegi blokk elődjének a hash-e                                     |
 | `fee_recipient`     | a számla címe, amelyre a tranzakciós díjakat fizették                    |
 | `state_root`        | a globális állapot gyökér hash-e, miután a változások bementek a blokkba |
@@ -105,7 +105,7 @@ Az `execution_payload_header` a következő mezőket tartalmazza:
 Az `execution_payload` maga a következőket tartalmazza (ami azonos a fejléccel, kivéve, hogy a gyökér hash-ek helyett a tranzakciók és visszavonások aktuális listáját tartalmazza):
 
 | Mező               | Leírás                                                                   |
-|:------------------ |:------------------------------------------------------------------------ |
+| :----------------- | :----------------------------------------------------------------------- |
 | `parent_hash`      | a jelenlegi blokk elődjének a hash-e                                     |
 | `fee_recipient`    | a számla címe, amelyre a tranzakciós díjakat fizették                    |
 | `state_root`       | a globális állapot gyökér hash-e, miután a változások bementek a blokkba |
@@ -125,7 +125,7 @@ Az `execution_payload` maga a következőket tartalmazza (ami azonos a fejlécce
 A `withdrawals` (visszavonások) listája tartalmazza a `withdrawal` (visszavonási) objektumokat, amelyek a következőképpen vannak strukturálva:
 
 | Mező             | Leírás                             |
-|:---------------- |:---------------------------------- |
+| :--------------- | :--------------------------------- |
 | `address`        | a visszavonásra került számla címe |
 | `amount`         | a visszavonás összege              |
 | `index`          | a visszavonás index értéke         |

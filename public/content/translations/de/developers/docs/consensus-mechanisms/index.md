@@ -28,7 +28,7 @@ Seit Jahrzehnten werden Mechanismen genutzt, um einen Konsens zwischen Datenbank
 Ein Konsensmechanismus in einem kryptoökonomisches System hilft auch bestimmte Arten von wirtschaftlichen Angriffen zu verhindern. Theoretisch kann ein Angreifer den Konsens erreichen, indem er 51 % des Netzwerks kontrolliert. Konsensmechanismen sollen diesen "51-%-Angriff" unmöglich zu machen. Verschiedene Mechanismen werden entwickelt, um dieses Sicherheitsproblem auf unterschiedliche Weise zu lösen.
 
 {
-	<YouTube id="dylgwcPH4EA" />
+<YouTube id="dylgwcPH4EA" />
 }
 
 ## Arten von Konsensmechanismen \{#types-of-consensus-mechanisms}
@@ -66,7 +66,7 @@ Mehr zu [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/)
 Erfahre mehr über die verschiedenen Arten von Konsensmechanismen, die auf Ethereum verwendet werden:
 
 {
-	<YouTube id="ojxfbN78WFQ" />
+<YouTube id="ojxfbN78WFQ" />
 }
 
 ### Sybil: Widerstand & Kettenauswahl \{#sybil-chain}

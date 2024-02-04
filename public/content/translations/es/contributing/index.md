@@ -24,7 +24,7 @@ El sitio web ethereum.org, al igual Ethereum en general, es un proyecto de códi
 - [Añadir un intercambio](/contributing/adding-exchanges/) _: anada un intercambio a nuestro [buscador de intercambios](/get-eth/#country-picker)_.
 - [Mejorar nuestra investigación](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c) _: comparta su opinión sobre nuestra investigación o colabore aportando la suya propia_.
 - [Solicitar una característica](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) _– Envíanos cualquier idea que tengas para una nueva característica o diseño_
-- [Añadir un término de glosario](/contributing/adding-glossary-terms) _: ayúdenos a continuar ampliando el [glosario](/glossary/)_de Ethereum.
+- [Añadir un término de glosario](/contributing/adding-glossary-terms) \_: ayúdenos a continuar ampliando el [glosario](/glossary/)\_de Ethereum.
 - [Crear/editar contenido](/contributing/#how-to-update-content) _– Sugiere nuevas páginas o realiza ajustes a lo que ya está disponible_
 - [ Agregar una capa 2](/contributing/adding-layer-2s/) _: agregue una capa 2 a una página relevante._
 - [Agregar un producto o servicio de participación](/contributing/adding-staking-products/): _agregue un proyecto que facilite la participación solitaria, en grupo o la participación como servicio_.
@@ -98,5 +98,5 @@ Solo debe usar carteras de autocustodia para reclamar POAP. No use cuentas de di
 ## Colaboradores \{#contributors}
 
 {
-	<Contributors />
+<Contributors />
 }

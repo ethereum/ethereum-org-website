@@ -48,7 +48,7 @@ Anda boleh melihat perkembangan transaksi tersebut pada mana-mana peneroka blok 
 
 Anda akan secara automatik menerima token yang ditukar dalam dompet anda sebaik sahaja transaksi diproses.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

@@ -174,7 +174,7 @@ Odată ce tranzacția a fost trimisă, se întâmplă următoarele:
 Urmăriți-l pe Austin cum vă prezintă tranzacțiile, gazele și mineritul.
 
 {
-	<YouTube id="er-0ihqFQB0" />
+<YouTube id="er-0ihqFQB0" />
 }
 
 ## Tranzacția plic tipizată \{#typed-transaction-envelope}

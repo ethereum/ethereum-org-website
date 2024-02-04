@@ -74,7 +74,7 @@ They can perform computations, create currency, store data, mint NFTs, send comm
 Watch Finematics explain smart contracts:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Further reading \{#further-reading}

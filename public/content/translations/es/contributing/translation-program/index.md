@@ -41,7 +41,7 @@ Conozca más detalles sobre la [misión y visión](/contributing/translation-pro
 - [3 millones de palabras traducidas en 2022](/contributing/translation-program/acknowledgements/)
 
 {
-	<TranslationChartImage />
+<TranslationChartImage />
 }
 
 ### Reconocimientos \{#acknowledgements}

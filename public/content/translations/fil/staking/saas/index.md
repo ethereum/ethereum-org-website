@@ -28,7 +28,7 @@ Hindi native na sinusuportahan ng Ethereum protocol ang pagtatalaga ng stake, ka
 </CardGrid>
 
 {
-	<StakingComparison page="saas" />
+<StakingComparison page="saas" />
 }
 
 ## Ano ang dapat isaalang-alang \{#what-to-consider}
@@ -38,7 +38,7 @@ Dumarami ang mga SaaS provider na tutulong sa iyong i-stake ang ETH mo, pero may
 Ang mga attribute indicator ay ginagamit sa ibaba para ipakita ang mga kapansin-pansing kalakasan o kahinaas ng isang nakalistang SaaS provider. Gamitin ang seksyong ito bilang sanggunian sa pagtukoy ng mga katangian na ito habang pumipili ka ng serbisyong tutulong sa iyo sa iyong pag-stake.
 
 {
-	<StakingConsiderations page="saas" />
+<StakingConsiderations page="saas" />
 }
 
 ## Tingnan ang mga staking service provider \{#saas-providers}
@@ -46,13 +46,13 @@ Ang mga attribute indicator ay ginagamit sa ibaba para ipakita ang mga kapansin-
 Nasa ibaba ang ilang available na SaaS provider. Gamitin ang mga indicator sa itaas upang tulungan kang gamitin ang mga serbisyong ito
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Mga SaaS provider
 
 {
-	<StakingProductsCardGrid category="saas" />
+<StakingProductsCardGrid category="saas" />
 }
 
 Tandaan ang kahalagahan ng pagsuporta sa [client diversity](/developers/docs/nodes-and-clients/client-diversity/) dahil pinapaigting nito ang seguridad ng network, at nililimitahan nito ang iyong panganib. Matutukoy ang mga serbisyo na may patunay ng paglilimita ng pangunahing paggamit ng client sa pamamagitan ng <em style={{ textTransform: "uppercase" }}>"execution client diversity"</em> at <em style={{ textTransform: "uppercase" }}>"consensus client diversity."</em>
@@ -60,7 +60,7 @@ Tandaan ang kahalagahan ng pagsuporta sa [client diversity](/developers/docs/nod
 ### Mga Generator ng Key
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Mayroong mungkahi para sa staking-as-a-service provider na hindi namin napansin? Tingnan ang aming [patakaran sa product listing](/contributing/adding-staking-products/) para malaman kung ito ay angkop, at isumite ito para masuri.

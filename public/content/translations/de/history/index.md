@@ -25,7 +25,7 @@ Springen Sie direkt zu Informationen über einige besonders wichtige vergangene 
 Suchen Sie nach weiteren Protokoll-Upgrades? [Erfahren Sie mehr über anstehende Upgrades auf der Ethereum-Roadmap](/roadmap/).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2023 \{#2023}
@@ -33,7 +33,7 @@ Suchen Sie nach weiteren Protokoll-Upgrades? [Erfahren Sie mehr über anstehende
 ### Shanghai \{#shanghai}
 
 {
-	<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shanghai" />
 }
 
 #### Zusammenfassung \{#shanghai-summary}
@@ -61,7 +61,7 @@ Das Shanghai-Update ebnete den Weg für Staking-Auszahlungen auf der Ausführung
 ### Capella \{#capella}
 
 {
-	<NetworkUpgradeSummary name="capella" />
+<NetworkUpgradeSummary name="capella" />
 }
 
 #### Zusammenfassung \{#capella-summary}
@@ -76,7 +76,7 @@ Das Upgrade hat auch eine automatische Kontenbereinigungsfunktion bereitgestellt
 - [Lesen Sie die Spezifikationen für das Capella-Upgrade](https://github.com/ethereum/consensus-specs/blob/dev/specs/capella/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2022 \{#2022}
@@ -84,7 +84,7 @@ Das Upgrade hat auch eine automatische Kontenbereinigungsfunktion bereitgestellt
 ### Paris (Die Zusammenführung) \{#paris}
 
 {
-	<NetworkUpgradeSummary name="paris" />
+<NetworkUpgradeSummary name="paris" />
 }
 
 #### Zusammenfassung \{#paris-summary}
@@ -109,7 +109,7 @@ Das Paris-Upgrade wurde durch das Erreichen einer [endgültigen Gesamtschwierigk
 ### Bellatrix \{#bellatrix}
 
 {
-	<NetworkUpgradeSummary name="bellatrix" />
+<NetworkUpgradeSummary name="bellatrix" />
 }
 
 #### Zusammenfassung \{#bellatrix-summary}
@@ -123,7 +123,7 @@ Das Bellatrix-Upgrade war das zweite geplante Upgrade für die [Beacon Chain](/r
 ### Gray Glacier \{#gray-glacier}
 
 {
-	<NetworkUpgradeSummary name="grayGlacier" />
+<NetworkUpgradeSummary name="grayGlacier" />
 }
 
 #### Zusammenfassung \{#gray-glacier-summary}
@@ -143,7 +143,7 @@ Das Gray Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diffi
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2021 \{#2021}
@@ -151,7 +151,7 @@ Das Gray Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diffi
 ### Arrow Glacier \{#arrow-glacier}
 
 {
-	<NetworkUpgradeSummary name="arrowGlacier" />
+<NetworkUpgradeSummary name="arrowGlacier" />
 }
 
 #### Zusammenfassung \{#arrow-glacier-summary}
@@ -176,7 +176,7 @@ Das Arrow Glacier Netzwerk-Upgrade hat die [Schwierigkeitsbombe](/glossary/#diff
 ### Altair \{#altair}
 
 {
-	<NetworkUpgradeSummary name="altair" />
+<NetworkUpgradeSummary name="altair" />
 }
 
 #### Zusammenfassung \{#altair-summary}
@@ -196,7 +196,7 @@ Altair war das erste große Netzwerk-Upgrade, für das es einen genauen Einführ
 ### London \{#london}
 
 {
-	<NetworkUpgradeSummary name="london" />
+<NetworkUpgradeSummary name="london" />
 }
 
 #### Zusammenfassung \{#london-summary}
@@ -226,7 +226,7 @@ Das London-Upgrade führte die [EIP-1559](https://eips.ethereum.org/EIPS/eip-155
 ### Berlin \{#berlin}
 
 {
-	<NetworkUpgradeSummary name="berlin" />
+<NetworkUpgradeSummary name="berlin" />
 }
 
 #### Zusammenfassung \{#berlin-summary}
@@ -250,7 +250,7 @@ Mit dem Berlin-Upgrade wurden die Gaskosten für bestimmte EVM-Aktionen optimier
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2020 \{#2020}
@@ -258,7 +258,7 @@ Mit dem Berlin-Upgrade wurden die Gaskosten für bestimmte EVM-Aktionen optimier
 ### Entstehungsgeschichte der Beacon Chain \{#beacon-chain-genesis}
 
 {
-	<NetworkUpgradeSummary name="beaconChainGenesis" />
+<NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
 #### Zusammenfassung \{#beacon-chain-genesis-summary}
@@ -276,7 +276,7 @@ Die [Beacon Chain](/roadmap/beacon-chain/) benötigte zum sicheren Betrieb 16.38
 ### Staking-Einzahlungsvertrag bereitgestellt \{#staking-deposit-contract}
 
 {
-	<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
+<NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
 #### Zusammenfassung \{#deposit-contract-summary}
@@ -294,7 +294,7 @@ Mit dem Staking-Einzahlungsvertrag wurde [Staking](/glossary/#staking) im Ökosy
 ### Muir Glacier \{#muir-glacier}
 
 {
-	<NetworkUpgradeSummary name="muirGlacier" />
+<NetworkUpgradeSummary name="muirGlacier" />
 }
 
 #### Zusammenfassung \{#muir-glacier-summary}
@@ -315,7 +315,7 @@ Die Muir-Glacier-Fork führte eine Verzögerung in die [Schwierigkeitsbombe](/gl
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2019 \{#2019}
@@ -323,7 +323,7 @@ Die Muir-Glacier-Fork führte eine Verzögerung in die [Schwierigkeitsbombe](/gl
 ### Istanbul \{#istanbul}
 
 {
-	<NetworkUpgradeSummary name="istanbul" />
+<NetworkUpgradeSummary name="istanbul" />
 }
 
 #### Zusammenfassung \{#istanbul-summary}
@@ -359,7 +359,7 @@ weitere Änderungen der Gaspreisverfahrenscodes.</em></li>
 ### Constantinople \{#constantinople}
 
 {
-	<NetworkUpgradeSummary name="constantinople" />
+<NetworkUpgradeSummary name="constantinople" />
 }
 
 #### Zusammenfassung \{#constantinople-summary}
@@ -386,7 +386,7 @@ Die Constantinople-Fork:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2017 \{#2017}
@@ -394,7 +394,7 @@ Die Constantinople-Fork:
 ### Byzantium \{#byzantium}
 
 {
-	<NetworkUpgradeSummary name="byzantium" />
+<NetworkUpgradeSummary name="byzantium" />
 }
 
 #### Zusammenfassung \{#byzantium-summary}
@@ -427,7 +427,7 @@ Die Byzantium-Fork:
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2016 \{#2016}
@@ -435,7 +435,7 @@ Die Byzantium-Fork:
 ### Spurious Dragon \{#spurious-dragon}
 
 {
-	<NetworkUpgradeSummary name="spuriousDragon" />
+<NetworkUpgradeSummary name="spuriousDragon" />
 }
 
 #### Zusammenfassung \{#spurious-dragon-summary}
@@ -466,7 +466,7 @@ Die Spurious-Dragon-Fork war die zweite Reaktion auf die Denial-of-Service(DoS)-
 ### Tangerine Whistle \{#tangerine-whistle}
 
 {
-	<NetworkUpgradeSummary name="tangerineWhistle" />
+<NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
 #### Zusammenfassung \{#tangerine-whistle-summary}
@@ -493,7 +493,7 @@ Die Tangerine-Whistle-Fork war die erste Reaktion auf die Denial-of-Service(DoS)
 ### DAO-Fork \{#dao-fork}
 
 {
-	<NetworkUpgradeSummary name="daoFork" />
+<NetworkUpgradeSummary name="daoFork" />
 }
 
 #### Zusammenfassung \{#dao-fork-summary}
@@ -511,7 +511,7 @@ Einige Miner weigerten sich, die Abspaltung mitzutragen, da der Vorfall des DAO 
 ### Homestead \{#homestead}
 
 {
-	<NetworkUpgradeSummary name="homestead" />
+<NetworkUpgradeSummary name="homestead" />
 }
 
 #### Zusammenfassung \{#homestead-summary}
@@ -534,7 +534,7 @@ führt einen neuen Verfahrenscode ein: <code>DELEGATECALL</code></em></li>
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2015 \{#2015}
@@ -542,7 +542,7 @@ führt einen neuen Verfahrenscode ein: <code>DELEGATECALL</code></em></li>
 ### Frontier Thawing \{#frontier-thawing}
 
 {
-	<NetworkUpgradeSummary name="frontierThawing" />
+<NetworkUpgradeSummary name="frontierThawing" />
 }
 
 #### Zusammenfassung \{#frontier-thawing-summary}
@@ -557,7 +557,7 @@ Die Frontier-Thawing-Fork hob das 5.000 [Gas](/glossary/#gas)-Limit pro [Block](
 ### Frontier \{#frontier}
 
 {
-	<NetworkUpgradeSummary name="frontier" />
+<NetworkUpgradeSummary name="frontier" />
 }
 
 #### Zusammenfassung \{#frontier-summary}
@@ -567,7 +567,7 @@ Frontier war live, aber soweit nur die Implementierung eines grundsätzlichen Ra
 [Lies die Ankündigung der Ethereum Foundation](https://blog.ethereum.org/2015/07/22/frontier-is-coming-what-to-expect-and-how-to-prepare/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2014 \{#2014}
@@ -575,7 +575,7 @@ Frontier war live, aber soweit nur die Implementierung eines grundsätzlichen Ra
 ### Ether-Verkauf \{#ether-sale}
 
 {
-	<NetworkUpgradeSummary name="etherSale" />
+<NetworkUpgradeSummary name="etherSale" />
 }
 
 Ether ging offiziell 42 Tage lang in den Verkauf. Man konnte es mit BTC kaufen.
@@ -587,7 +587,7 @@ Ether ging offiziell 42 Tage lang in den Verkauf. Man konnte es mit BTC kaufen.
 ### Yellowpaper veröffentlicht \{#yellowpaper}
 
 {
-	<NetworkUpgradeSummary name="yellowpaperRelease" />
+<NetworkUpgradeSummary name="yellowpaperRelease" />
 }
 
 Das Yellowpaper, verfasst von Dr. Gavin Wood, ist eine technische Definition des Ethereum-Protokolls.
@@ -595,7 +595,7 @@ Das Yellowpaper, verfasst von Dr. Gavin Wood, ist eine technische Definition des
 [Yellowpaper anzeigen](https://github.com/ethereum/yellowpaper)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 2013 \{#2013}
@@ -603,7 +603,7 @@ Das Yellowpaper, verfasst von Dr. Gavin Wood, ist eine technische Definition des
 ### Whitepaper veröffentlicht \{#whitepaper}
 
 {
-	<NetworkUpgradeSummary name="whitepaperRelease" />
+<NetworkUpgradeSummary name="whitepaperRelease" />
 }
 
 Dieses einleitende Papier wurde ursprünglich 2013 von Vitalik Buterin, dem Gründer von Ethereum, vor dem Projektstart im Jahr 2015 veröffentlicht.

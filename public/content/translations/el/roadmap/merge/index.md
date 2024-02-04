@@ -4,7 +4,7 @@ description: Μάθετε για την ενσωμάτωση - όταν το κ�
 lang: el
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Τελικά το τρέχον κεντρικό δίκτυο του Ethereum θα "ενσωματωθεί" με τις υπόλοιπες αναβαθμίσεις του Eth2.
 summaryPoint2: Η ενσωμάτωση αυτή θα συγχωνεύσει το κεντρικό δίκτυο του "Eth1" με το beacon chain του Eth2 και το σύστημα διαλογής (sharding system).
 summaryPoint3: Αυτό θα σηματοδοτήσει το τέλος του proof-of-work για το Ethereum και την πλήρη μετάβαση στο proof of stake.

@@ -66,7 +66,7 @@ Daha karmaşık bir saldırı dürüst doğrulayıcı ekibini, zincirin başı h
 **Sıçrama saldırıları** benzerdir. Oylar tekrardan saldırgan doğrulayıcılar tarafından geri çekilir. Oyları iki çatal arasında eşit bir bölünmeyle dağılım sağlamak için yayınlamak yerine, çatal A ve çatal B arasında değişen kontrol noktalarını gerekçelendirmek adına oylarını uygun anlarda kullanırlar. İki çatal arasında bu gerekçelendirmenin terse çevrilmesi, her iki zincirde de sonuçlandırılabilir olan haklı kaynak ve hedef kontrol noktalarının ikizleşmesini engeller, böylece kesinlik durdurulur.
 
 {
-	<YouTube id="xcPxwhrg3Ao"/>
+<YouTube id="xcPxwhrg3Ao"/>
 }
 
 Sıçrama saldırıları da dengeleme saldırıları da saldırganın, ağ arasında genellikle olmayan ileti zamanlaması üzerindeki ince kontrolüne bel bağlar. Yine de savunmalar protokol içine, daha yavaş olanlarına kıyasla hızlı iletilere, fazladan ağırlıklandırılımış formda inşa edilmiştir. Bu, [önerici ağırlık güçlendirmesi](https://github.com/ethereum/consensus-specs/pull/2730) olarak bilinir. Sıçrama saldırılarına karşı savunabilmek için çatal seçim algoritması güncellenerek, en son gerçekleşen haklı kontrol noktasını yalnızca her dönemin [ilk 1/3 yuvasında](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114) bir alternatif zincire geçebilecek şekilde değiştirilmiştir. Bu koşul, saldırganın daha sonra kullanmak üzere oy biriktirmesini engeller - çatal seçim algoritması öncelikli seçtiği kontrol noktasına sadık kalarak bu süre zarfında çoğu dürüst doğrulayıcı dönemin ilk 1/3'ünde seçilmiş kontrol noktasında sadık kalarak oylamış olur.

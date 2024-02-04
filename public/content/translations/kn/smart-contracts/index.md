@@ -74,7 +74,7 @@ lang: kn
 ಸ್ಮಾರ್ಟ್ ಕಾಂಟ್ರಾಕ್ಟ್ ಗಳನ್ನು ಫೈನ್ಮ್ಯಾಟಿಕ್ಸ್ ವಿವರಿಸುವುದನ್ನು ವೀಕ್ಷಿಸಿ:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Further reading \{#further-reading}

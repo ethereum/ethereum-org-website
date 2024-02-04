@@ -35,7 +35,7 @@ summaryPoints:
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## 고려 사항 \{#what-to-consider}
@@ -47,7 +47,7 @@ summaryPoints:
 아래의 속성 지표는 현재 목록에 있는 스테이킹 풀의 대표적인 강점 및 약점을 나타내기 위해 사용되었습니다. 참여할 풀을 선택할 때 이 섹션을 참고하여 이러한 속성이 정의되는 방법을 알아보세요.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## 스테이킹 풀 살펴보기 \{#explore-staking-pools}
@@ -59,7 +59,7 @@ summaryPoints:
 </InfoBanner>
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 저희가 놓친 스테이킹 풀을 제안하고 싶으신가요? 이더리움 [제품 나열 정책](/contributing/adding-staking-products/)을 확인하고 정책에 맞는 제품인 경우 검토를 위해 제출해 주세요.

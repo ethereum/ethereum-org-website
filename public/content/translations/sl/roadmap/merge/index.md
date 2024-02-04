@@ -4,7 +4,7 @@ description: Več informacij o spojitvi – trenutku, ko je Ethereumovo glavno o
 lang: sl
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Ethereumovo glavno omrežje uporablja dokaz o deležu, vendar ni bilo vedno tako.
 summaryPoint2: Nadgradnja z izvirnega mehanizma dokaza o delu na dokaz o deležu se je imenovala spojitev.
 summaryPoint3: Spojitev je ime dogodka, ko se je Ethereumovo glavno omrežje spojilo z oddajniško verigo – ločeno verigo blokov, ki je uporabljalo dokaz o deležu. Obe omrežji zdaj obstajata kot ena veriga.
@@ -20,7 +20,7 @@ summaryPoint4: Spojitev je Ethereumovo porabo energijo zmanjšala za približno 
 Spojitev je bila združitev izvirne izvajalne plasti Ethereuma (glavno omrežje, ki je obstajalo od [izvora](/history/#frontier)) z novo plastjo z mehanizmom za doseganje soglasja z dokazom o deležu, oddajniško verigo. Odpravila je potrebo po energijsko potratnem rudarjenju in namesto tega omogočila zaščito omrežja z zastavljanjem ETH. Predstavljala je zares vznemirljiv korak k realizaciji Ethereumove vizije – več možnosti širitve, varnosti in trajnosti.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Najprej je [oddajniška veriga](/roadmap/beacon-chain/) stopila v uporabo ločeno od [glavnega omrežja](/glossary/#mainnet). Ethereumovo glavno omrežje z vsemi računi, zneski, pametnimi pogodbami in stanjem verige blokov je še naprej varoval mehanizem [dokaza o delu](/developers/docs/consensus-mechanisms/pow/), tudi ko je oddajniška veriga vzporedno uporabljala [dokaz o deležu](/developers/docs/consensus-mechanisms/pos/). Spojitev je končno združila oba sistema in mehanizem dokaza o delu je trajno zamenjal mehanizem dokaza o deležu.
@@ -241,9 +241,9 @@ Načrti za razdrobitev se hitro spreminjajo, vendar so se s pojavom in uspehom t
 ## Nadaljnje branje \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

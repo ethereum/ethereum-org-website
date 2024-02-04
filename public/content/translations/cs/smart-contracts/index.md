@@ -74,7 +74,7 @@ Mohou provádět výpočty, vytvářet měnu, ukládat data, těžit NFT, odesí
 Koukněte se, jak vysvětlují chytré kontrakty na Finematics:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Další informace \{#further-reading}

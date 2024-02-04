@@ -66,7 +66,7 @@ Un ataque más sofisticado puede dividir el validador honesto establecido en gru
 **Los ataques de rebote** son similares. Los validadores atacantes vuelven a retener los votos. En lugar de liberar los votos para mantener una división uniforme entre dos bifurcaciones, utilizan sus votos en momentos oportunos para justificar los puntos de control que se alternan entre la bifurcación A y la bifurcación B. Este vaivén de justificación entre dos bifurcaciones evita que haya pares de puntos de control de origen y destino justificados que se pueden finalizar en cualquiera de las cadenas, deteniendo la finalidad.
 
 {
-	<YouTube id="xcPxwhrg3Ao"/>
+<YouTube id="xcPxwhrg3Ao"/>
 }
 
 Tanto los ataques de rebote como los de equilibrio dependen de que el atacante tenga un control muy preciso de la sincronización de los mensajes en toda la red, lo cual es poco probable. No obstante, las defensas están integradas en el protocolo en forma de ponderación adicional dada a los avisos de mensajes en comparación con los lentos. Esto se conoce como [impulso del peso del proponente](https://github.com/ethereum/consensus-specs/pull/2730). Para defenderse de los ataques de rebote, se actualizó el algoritmo de selección de bifurcación para que el último punto de control justificado sólo pueda cambiar al de una cadena alternativa durante el [primer 1/3 de las ranuras en cada época](https://ethresear.ch/t/prevention-of-bouncing-attack-on-ffg/6114). Esta condición evita que el atacante ahorre votos para desplegarlos más tarde: el algoritmo de elección de bifurcación simplemente se mantiene fiel al punto de control que eligió en el primer 1/3 de la época durante el cual los validadores más honestos habrían votado.

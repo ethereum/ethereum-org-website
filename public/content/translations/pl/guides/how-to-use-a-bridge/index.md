@@ -51,7 +51,7 @@ Proces ten nie powinien zająć więcej niż 10 minut.
 
 Możesz użyć [chainlist.org](http://chainlist.org), aby znaleźć szczegóły RPC sieci. Po dodaniu sieci i zakończeniu transakcji powinieneś zobaczyć tokeny w swoim portfelu.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

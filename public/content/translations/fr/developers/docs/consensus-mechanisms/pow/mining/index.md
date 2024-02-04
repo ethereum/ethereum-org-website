@@ -67,7 +67,7 @@ On utilise de préférence le terme « ommer », plus neutre, pour désigner l
 Regardez Austin vous guider à travers le minage et la blockchain de la preuve de travail.
 
 {
-	<YouTube id="zcX7OJ-L8XQ" />
+<YouTube id="zcX7OJ-L8XQ" />
 }
 
 ## L'algorithme de minage \{#mining-algorithm}

@@ -33,7 +33,7 @@ Da sie sich auf Layer 2 befinden, können ZK-Rollups optimiert werden, um die Tr
 Sehen Sie, wie Finematics ZK-Rollups erklärt:
 
 {
-	<YouTube id="7pWxCklcNsU" start="406" />
+<YouTube id="7pWxCklcNsU" start="406" />
 }
 
 ### ZK-Rollups verwenden \{#use-zk-rollups}
@@ -41,7 +41,7 @@ Sehen Sie, wie Finematics ZK-Rollups erklärt:
 Es gibt mehrere Implementierungen von ZK-Rollups, die Sie in Ihre dApps integrieren können:
 
 {
-	<RollupProductDevDoc rollupType="zk" />
+<RollupProductDevDoc rollupType="zk" />
 }
 
 **ZK-Rollups verstehen**

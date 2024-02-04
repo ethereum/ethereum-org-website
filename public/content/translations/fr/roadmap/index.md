@@ -7,11 +7,9 @@ image: /heroes/roadmap-hub-hero.jpg
 alt: "Feuille de route d'Ethereum"
 summaryPoints:
 buttons:
-  - 
-    label: Améliorations ultérieures
+  - label: Améliorations ultérieures
     toId: what-changes-are-coming
-  - 
-    label: Améliorations antérieures
+  - label: Améliorations antérieures
     to: /history/
     variant: outline
 ---

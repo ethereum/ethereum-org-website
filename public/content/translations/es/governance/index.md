@@ -10,7 +10,7 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 _Si Ethereum no le pertenece a nadie, ¿cómo se toman las decisiones sobre los cambios pasados y futuros? La gobernanza de Ethereum se refiere al proceso por el cual se toman tales decisiones._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## ¿Qué es la gobernanza? \{#what-is-governance}
@@ -40,7 +40,7 @@ _A pesar de que siguiendo el protocolo, la gobernanza de Ethereum se desarrolla 
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## ¿Quiénes son los participantes? \{#who-is-involved}
@@ -58,7 +58,7 @@ En la [comunidad Ethereum](/community/), hay diversos actores y cada uno cumple 
 _Nota: cualquier persona puede ser parte de varios de estos grupos (p. ej., un desarrollador de protocolos podría abogar por una EIP, ejecutar un validador de la cadena de baliza y utilizar aplicaciones DeFi). Sin embargo, por motivos de claridad conceptual, resulta más práctico hacer una distinción entre ellos._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## ¿Qué es una EIP? \{#what-is-an-eip}
@@ -70,7 +70,7 @@ Un proceso importante utilizado en la gobernanza Ethereum son las **propuestas d
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Procedimiento formal \{#formal-process}
@@ -116,7 +116,7 @@ Se espera que los defensores de la EIP soliciten una devolución de parte de tod
 Además de centrarse en la seguridad de la red Ethereum, históricamente los desarrolladores del protocolo le han asignado gran importancia a lo que los desarrolladores de aplicaciones y herramientas y los usuarios valoran. Esto se debe a que el desarrollo en Ethereum, así como su uso, es lo que hace al ecosistema atractivo a otras personas. Adicionalmente, las EIP deben aplicarse en todas las implementaciones, las cuales son gestionadas por distintos equipos. Parte de este proceso generalmente implica convencer a varios equipos de desarrolladores del protocolo de que un cambio específico es valioso y que traería beneficios para los usuarios o resolvería problemas de seguridad.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Gestión de los desacuerdos \{#disagreements}
@@ -146,11 +146,11 @@ Hoy en día, la comunidad de Ethereum adoptó una política de no intervención 
 Más información del hack a la DAO
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### La utilidad de las bifurcaciones \{#forking-utility}
@@ -160,7 +160,7 @@ La bifurcación de Ethereum/Ethereum Classic es un excelente ejemplo de una sepa
 La habilidad de bifurcar en relación a desacuerdos políticos, económicos y filosóficos juega un rol fundamental en la gobernanza de Ethereum. Sin la posibilidad de bifurcar, la alternativa era un desacuerdo constante para las personas que formaban Ethereum Classic y una visión completamente diferente de cuál era la vía correcta para Ethereum.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Gobernanza de la cadena de baliza (Beacon) \{#beacon-chain}
@@ -176,7 +176,7 @@ Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## ¿Cómo puedo involucrarme? \{#get-involved}

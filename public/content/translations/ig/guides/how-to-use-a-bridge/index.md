@@ -51,7 +51,7 @@ Usoro a e kwesịghị iwe ihe karịrị nkeji 10.
 
 Ị nwere ike jiri [chainlist.org](http://chainlist.org) ịji chọta ozi ndị dị na nkọwa RPC. Ozugbo a etinyechara netwọk ahụ wee mechaa azụmahịa, ị ga-ahụ tokin na akpa ego ịntanetị gị.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

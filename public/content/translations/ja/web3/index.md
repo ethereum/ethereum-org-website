@@ -11,7 +11,7 @@ lang: ja
 Web3 は、このジレンマに対する答えです。 Web3 は、大企業が独占する Web ではなく、ユーザーにより構築、運営、所有される非中央集権的な分散化を採用しています。 Web3 は企業ではなく個人の手に権力を与えます。 Web3 について話す前に、これまでの経緯について振り返ってみましょう。
 
 {
-	<Divider />
+<Divider />
 }
 
 ## 初期の Web \{#early-internet}
@@ -33,7 +33,7 @@ Web2.0 の時代は、ソーシャルメディアプラットフォームの出�
 ![Web 2.0を表すクライアントサーバアーキテクチャ](./web2.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Web3.0: 読み取り - 書き込み - 所有 \{#web3}
@@ -163,5 +163,5 @@ Web3 とは何かは、厳密に定義されていません。 さまざまな�
 - [Web3 に関する議論](https://www.notboring.co/p/the-web3-debate?s=r) - _Packy McCormick_
 
 {
-	<QuizWidget quizKey="web3" />
+<QuizWidget quizKey="web3" />
 }

@@ -38,7 +38,7 @@ A Shanghai/Capella frissítés előtt nem lehetett használni vagy elérni ezt a
 ### Hogyan tudok erre felkészülni? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Fontos figyelmeztetések \{#important-notices}
@@ -79,7 +79,7 @@ A validátorszámla státusza mondja meg, hogy egy validátor jogosult-e a vissz
 Nézze meg az Ethereum letétvisszavonásról szóló magyarázatát a Finematics-tól:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Validátor-ellenőrzés vagy söprés \{#validator-sweeping}
@@ -118,12 +118,12 @@ Ezt a kalkulációt kiterjesztve megbecsülhetjük, hogy egy adott számú vissz
 <TableContainer>
 
 | Visszavonások száma | Időszükséglet |
-| :-------------------: | :--------------: |
-|        400 000        |     3,5 nap     |
-|        500 000        |     4,3 nap     |
-|        600 000        |     5,2 nap     |
-|        700 000        |     6,1 nap     |
-|        800 000        |     7,0 nap     |
+| :-----------------: | :-----------: |
+|       400 000       |    3,5 nap    |
+|       500 000       |    4,3 nap    |
+|       600 000       |    5,2 nap    |
+|       700 000       |    6,1 nap    |
+|       800 000       |    7,0 nap    |
 
 </TableContainer>
 

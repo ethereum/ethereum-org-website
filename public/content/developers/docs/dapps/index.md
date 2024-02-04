@@ -46,7 +46,7 @@ A smart contract is code that lives on the Ethereum blockchain and runs exactly 
 ## More of a visual learner? \{#visual-learner}
 
 {
-	<YouTube id="F50OrwV6Uk8" />
+<YouTube id="F50OrwV6Uk8" />
 }
 
 ## Tools for creating dapps \{#dapp-tools}

@@ -82,5 +82,5 @@ GitHub リポジトリには、オープンソースに初めて触れるデベ�
 ## コントリビューター \{#contributors}
 
 {
-	<Contributors />
+<Contributors />
 }

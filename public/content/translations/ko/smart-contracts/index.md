@@ -74,7 +74,7 @@ lang: ko
 스마트 계약에 대해 설명하는 Finematics 시청하기:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## 부록 \{#further-reading}

@@ -61,7 +61,7 @@ La prueba de participación de Ethereum puede pagar por su seguridad emitiendo m
 Mire este vídeo en el que Justin Drake explica los beneficios de la prueba de participación sobre la prueba de trabajo:
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## Más información \{#further-reading}

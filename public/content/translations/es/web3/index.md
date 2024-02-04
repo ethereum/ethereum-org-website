@@ -1,5 +1,5 @@
 ---
-title: '¿Qué es Web3 y por qué es importante?'
+title: "¿Qué es Web3 y por qué es importante?"
 description: Una introducción a la Web3 —la próxima evolución de Internet— y por qué importa.
 lang: es
 ---
@@ -11,7 +11,7 @@ La centralización ha ayudado a miles de millones de personas a conectarse a Int
 Web3 es la respuesta a este dilema. En vez de tener una Web monopolizada por las grandes compañías de tecnología, la Web3 adopta la descentralización y se construye, opera y permanece en propiedad de sus usuarios. Web3 pone el poder en manos de los usuarios y no de las grandes empresas. Antes de hablar de Web3, vamos a explorar cómo hemos llegado aquí.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## La Web en sus comienzos \{#early-internet}
@@ -33,7 +33,7 @@ El período de la Web 2.0 comenzó en 2004 con la aparición de las plataformas 
 ![Arquitectura cliente-servidor, que representa la Web 2.0](./web2.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Web 3.0: Lectura-Escritura-Propiedad \{#web3}
@@ -163,5 +163,5 @@ Web3 no está definida rígidamente. Varios participantes de la comunidad tienen
 - [El debate de Web3](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
 {
-	<QuizWidget quizKey="web3" />
+<QuizWidget quizKey="web3" />
 }

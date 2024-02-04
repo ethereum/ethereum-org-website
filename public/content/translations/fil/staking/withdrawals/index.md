@@ -38,7 +38,7 @@ Bago ang Shanghai/Capella upgrade, hindi mo magamit o ma-access ang iyong staked
 ### Paano ako maghahanda? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Mahahalagang paunawa \{#important-notices}
@@ -79,7 +79,7 @@ Ang pagiging eligible ng isang partikular na validator para sa pag-withdraw ay t
 Tingnan ang paliwanag ng Finematics tungkol sa mga pag-withdraw sa staking ng Ethereum:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### "Pag-sweep" ng validator \{#validator-sweeping}

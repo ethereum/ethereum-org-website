@@ -74,7 +74,7 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 觀看 Finematics 講解智慧型合約：
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## 了解更多 \{#further-reading}

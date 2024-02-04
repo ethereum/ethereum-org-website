@@ -19,7 +19,7 @@ NFT-lər individual olaraq unikal olan tokenlərdir. Hər bir NFT fərqli xüsus
 Hər bir NFT-nin unikallığı incəsənət, kolleksiya əşyaları və ya hətta daşınmaz əmlak kimi əşyaların tokenləşdirilməsinə imkan verir, burada bir xüsusi unikal NFT hansısa xüsusi unikal real dünya və ya rəqəmsal əşyanı təmsil edir. Aktivin mülkiyyəti, Ethereum blockchainində açıq şəkildə yoxlanıla bilər.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## Aktivlərin interneti \{#internet-of-assets}
@@ -67,7 +67,7 @@ Bu veb-saytın NFT-lər tərəfindən dəstəklənən alternativ domen adı da v
 [ENS haqqında daha çox məlumat](https://app.ens.domains)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## NFT-lər necə işləyir? \{#how-nfts-work}
@@ -102,9 +102,9 @@ NFT-lərlə bağlı təhlükəsizlik məsələləri çox vaxt fişinq fırıldaq
 - [ERC-1155 token standartı](/developers/docs/standards/tokens/erc-1155/)
 
 {
-	<Divider />
+<Divider />
 }
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

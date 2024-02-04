@@ -10,7 +10,7 @@ hideEditButton: true
 **Jeden Monat finden auf der ganzen Welt große Ethereum-Veranstaltungen statt.** Besuchen Sie doch eine Veranstaltung in Ihrer Nähe, so lernen Sie andere aus der Community kennen und können sich über mögliche Karrierechancen informieren und neue Kompetenzen aufbauen.
 
 {
-	<UpcomingEventsList/>
+<UpcomingEventsList/>
 }
 
 Diese Liste wird von unserer Community gepflegt und ist nicht abschließend. Wissen Sie von einer bevorstehenden Ethereum-Veranstaltung, die Sie dieser Liste hinzufügen möchten? Fügen Sie sie gerne hinzu.
@@ -20,7 +20,7 @@ Diese Liste wird von unserer Community gepflegt und ist nicht abschließend. Wis
 Sehen Sie keine Veranstaltung, an der Sie teilnehmen können? Dann bietet es sich an, an einem Treffen teilzunehmen. Treffen sind kleinere Veranstaltungen, die von Gruppen aus Ethereum-Enthusiasten abgehalten werden. Dort kommen Personen zusammen, die sich für Ethereum interessieren, es wird über Ethereum gesprochen und es findet ein Austausch über die jüngsten Entwicklungen statt.
 
 {
-	<MeetupList />
+<MeetupList />
 }
 
 Sind Sie daran interessiert, ein eigenes Treffen zu organisieren? Im [BUIDL Network](https://consensys.net/developers/buidlnetwork/), eine Initiative von ConsenSys zur Unterstützung von Treffen der Ethereum-Community, finden Sie hilfreiche Informationen.

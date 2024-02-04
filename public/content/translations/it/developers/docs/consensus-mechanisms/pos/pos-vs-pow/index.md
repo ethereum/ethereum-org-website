@@ -61,7 +61,7 @@ Il proof-of-stake di Ethereum può pagare per la sua sicurezza, emettendo molte 
 Guarda Justin Drake spiegare i benefici del proof-of-stake rispetto al proof-of-work:
 
 {
-	<YouTube id="1m12zgJ42dI" />
+<YouTube id="1m12zgJ42dI" />
 }
 
 ## Letture consigliate \{#further-reading}

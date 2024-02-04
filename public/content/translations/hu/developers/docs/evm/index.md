@@ -10,7 +10,7 @@ Az Ethereum protokoll maga egyedül azért létezik, hogy fenntartsa a folyamato
 
 ## Előfeltételek \{#prerequisites}
 
-Alapvető számítástudományi fogalmak ismerete, mint például a [bájtok](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory), és a [stack](https://wikipedia.org/wiki/Stack_(abstract_data_type)) szükségesek ahhoz, hogy megértse az EVM-et. Érdemes tisztában lenni egy pár kriptográfiai/blokklánc fogalommal úgy, mint a [hash függvények](https://wikipedia.org/wiki/Cryptographic_hash_function) és a [Merkle-fa](https://wikipedia.org/wiki/Merkle_tree).
+Alapvető számítástudományi fogalmak ismerete, mint például a [bájtok](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory), és a [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) szükségesek ahhoz, hogy megértse az EVM-et. Érdemes tisztában lenni egy pár kriptográfiai/blokklánc fogalommal úgy, mint a [hash függvények](https://wikipedia.org/wiki/Cryptographic_hash_function) és a [Merkle-fa](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Főkönyvtől az állapot gépig \{#from-ledger-to-state-machine}
 

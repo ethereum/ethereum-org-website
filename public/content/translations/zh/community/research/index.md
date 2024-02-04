@@ -46,7 +46,7 @@ lang: zh
 
 #### 近期研究 \{#recent-research}
 
-- [Ethresear.ch共识](https://ethresear.ch/c/consensus/29)
+- [Ethresear.ch 共识](https://ethresear.ch/c/consensus/29)
 - [可用性/确定性困境](https://arxiv.org/abs/2009.04987)
 - [单时隙确定性](https://ethresear.ch/t/a-model-for-cumulative-committee-based-finality/10259)
 - [提议者-构建者分离](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
@@ -124,7 +124,7 @@ lang: zh
 - [区块链桥简介](/bridges/)
 - [Vitalik 谈链桥](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [区块链链桥相关文章](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [链桥上锁定的价值](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
+- [链桥上锁定的价值](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
 
 #### 近期研究 \{#recent-research-3}
 

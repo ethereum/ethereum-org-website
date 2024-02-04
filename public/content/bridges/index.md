@@ -9,7 +9,7 @@ lang: en
 _Web3 has evolved into an ecosystem of L1 blockchains and L2 scaling solutions, each designed with unique capabilities and trade-offs. As the number of blockchain protocols increases, so does [the demand to move assets across chains](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). To fulfill this demand, we need bridges._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## What are bridges? \{#what-are-bridges}
@@ -40,7 +40,7 @@ Bridges enable:
 [How to bridge tokens to layer 2](/guides/how-to-use-a-bridge/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Bridge use cases \{#bridge-use-cases}
@@ -68,7 +68,7 @@ Let’s say you want to own native Bitcoin (BTC), but you only have funds on Eth
 </InfoBanner>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Types of bridge \{#types-of-bridge}
@@ -100,7 +100,7 @@ Self check-in is similar to a trustless model as it removes the operator's role 
 Many bridging solutions adopt models between these two extremes with varying degrees of trustlessness.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Risk using bridges \{#bridge-risk}
@@ -128,7 +128,7 @@ One recent hack was Solana’s Wormhole bridge, [where 120k wETH ($325 million U
 Bridges are crucial to onboarding users onto Ethereum L2s, and even for users who want to explore different ecosystems. However, given the risks involved in interacting with bridges, users must understand the trade-offs the bridges are making. These are some [strategies for cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Further reading \{#further-reading}

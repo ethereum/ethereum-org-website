@@ -16,9 +16,9 @@ lang: zh-tw
 
 ### 行為 \{#behaviors}
 
-編寫智慧型合約時，你很可能會發現自己在重複編寫類似代碼。比如說在合約中指派一個_管理員_地址執行受保護的操作；或添加一個緊急_暫停_按鈕以應對預料之外的問題。
+編寫智慧型合約時，你很可能會發現自己在重複編寫類似代碼。比如說在合約中指派一個*管理員*地址執行受保護的操作；或添加一個緊急*暫停*按鈕以應對預料之外的問題。
 
-智慧型合約庫通常透過[庫](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)或在Solidity 中[繼承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)，讓這些行為可以重複使用。
+智慧型合約庫通常透過[庫](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)或在 Solidity 中[繼承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)，讓這些行為可以重複使用。
 
 例如，以下是[OpenZepelin Contracts 資料庫](https://github.com/OpenZeppelin/openzeppelin-contracts)的 [`Ownable` 合約](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)簡化版，此合約指定了合約擁有者的地址，並提供將存取方法限制為只有擁有者可存取的修飾符。
 
@@ -93,7 +93,7 @@ contract MyNFT is ERC721 {
 - [Github](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [社群論壇](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys：****_安全、簡單、靈活的智慧型合約建置組件。_**
+**DappSys：\*\***_安全、簡單、靈活的智慧型合約建置組件。_\*\*
 
 - [文件檔案](https://dappsys.readthedocs.io/)
 - [Github](https://github.com/dapphub/dappsys)

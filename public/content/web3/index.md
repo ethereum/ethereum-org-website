@@ -12,7 +12,7 @@ Web3 is the answer to this dilemma. Instead of a Web monopolized by large techno
 Before we talk about Web3, let's explore how we got here.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## The early Web \{#early-internet}
@@ -34,7 +34,7 @@ The Web 2.0 period began in 2004 with the emergence of social media platforms. I
 ![Client-server architecture, representing Web 2.0](./web2.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Web 3.0: Read-Write-Own \{#web3}
@@ -165,5 +165,5 @@ Web3 isn’t rigidly defined. Various community participants have different pers
 - [The Web3 Debate](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_
 
 {
-	<QuizWidget quizKey="web3" />
+<QuizWidget quizKey="web3" />
 }

@@ -4,7 +4,7 @@ description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adotta
 lang: it
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: La Rete Principale di Ethereum usa il proof-of-stake, ma non è sempre stato così.
 summaryPoint2: L'aggiornamento dal meccanismo originale di proof-of-work al proof-of-stake è stato chiamato La Fusione.
 summaryPoint3: La Fusione si riferisce alla fusione della Rete Principale originale di Ethereum con una blockchain di proof-of-stake separata, detta Beacon Chain, ora esistenti come un'unica catena.
@@ -20,7 +20,7 @@ summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa 
 La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/history/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Inizialmente, la [Beacon Chain](/roadmap/beacon-chain/) veniva inviata separatamente dalla [Rete principale](/glossary/#mainnet). La Rete Principale di Ethereum, con tutti i suoi conti, saldi, contratti intelligenti e stati della blockchain, ha continuato a essere protetta dal [proof-of-work](/developers/docs/consensus-mechanisms/pow/), anche mentre la Beacon Chain veniva eseguita in parallelo, utilizzando il [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). La Fusione si è verificata quando, finalmente, questi due sistemi si sono uniti e il Poof of Work è stata permanentemente sostituita dal Proof of stake.
@@ -243,9 +243,9 @@ I piani per lo sharding si stanno evolvendo rapidamente, ma data la nascita e il
 ## Letture consigliate \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

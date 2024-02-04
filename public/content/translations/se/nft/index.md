@@ -25,7 +25,7 @@ NFT är en akronym för Non-Fungible Token, en icke-fungibel pollett. Icke-fungi
 Fungibla föremål, å andra sidan, kan bytas ut eftersom det är deras värde som definierar, inte deras unika egenskaper. Till exempel är ETH eller dollar fungibla eftersom 1 ETH/1 USD kan bytas mot en annan 1 ETH/1 USD.
 
 {
-	<YouTube id="Xdkkux6OxfM" />
+<YouTube id="Xdkkux6OxfM" />
 }
 
 ## Internet för tillgångar \{#internet-of-assets}
@@ -158,7 +158,7 @@ Här är mer information om några av de bättre utvecklade användningsfallen o
 - [Tokengating](#tokengating)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Maximera intäkterna för kreatörer \{#nfts-for-creators}
@@ -189,7 +189,7 @@ Att faktiskt äga den äkta varan är i slutändan ldet som räknas och det är 
 Att äga en faktisk sak som kan verifieras har alltid mer värde än att inte göra det.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Öka spelpotentialen \{#nft-gaming}
@@ -214,7 +214,7 @@ Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er
 </InfoBanner>
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Skapa Ethereum-adresser som är lättare att komma ihåg \{#nft-domains}
@@ -230,7 +230,7 @@ Ditt ENS-namn kan:
 - Lagra eventuell godtycklig information, inklusive profilinformation som e-postadresser och Twitter-handtag.
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Fysiska föremål \{#nft-physical-items}
@@ -242,7 +242,7 @@ Eftersom NFT:er i huvudsak är transaktionshandlingar kan du en dag kan köpa en
 När det finns värdefulla tillgångar som bilar och egendom representerade på Ethereum, kan du använda NFT:er som säkerhet i decentraliserade lån. Detta är särskilt användbart om du inte är rik på kontanter eller kryptovalutor medn äger fysiska föremål av värde. [Mer om DeFi](/defi/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ### NFT:er och DeFi \{#nfts-and-defi}
@@ -285,7 +285,7 @@ Företag som erbjuder falska certifikat för universitetsexamen är enligt uppgi
 Tokengating är ett sätt att begränsa tillgången till något och där kan NFT:er används för att få åtkomst till det som är begränsat. [Trinity Business School (TBS) i Irland planerar också att erbjuda NFT:er från 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
 
 {
-	<Divider />
+<Divider />
 }
 
 ### Tokengating \{#tokengating}
@@ -305,7 +305,7 @@ Om prägling och distribuering av NFT:er handlar om generering som görs av geme
 - [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) har en växande lista med appar som tillåter handlare använda pollettportar för att få åtkomst till produkter och rabatter
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Ethereum och NFT:er \{#ethereum-and-nfts}
@@ -370,5 +370,5 @@ De flesta NFT:er är byggda med en konsekvent standard som kallas [ERC-721](/dev
 - [Ethereum NFT APIs](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
 {
-	<QuizWidget quizKey="nfts" />
+<QuizWidget quizKey="nfts" />
 }

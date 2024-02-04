@@ -46,7 +46,7 @@ Um contrato inteligente é um código presente na blockchain Ethereum e funciona
 ## Você é o tipo de pessoa que aprende mais com recursos visuais? \{#visual-learner}
 
 {
-	<YouTube id="F50OrwV6Uk8" />
+<YouTube id="F50OrwV6Uk8" />
 }
 
 ## Ferramentas para criar dapps \{#dapp-tools}

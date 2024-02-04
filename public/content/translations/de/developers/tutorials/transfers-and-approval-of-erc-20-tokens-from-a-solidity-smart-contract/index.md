@@ -202,7 +202,7 @@ Wenn alles funktioniert, sollten Sie zwei Ereignisse (`Transfer` und `Sold`) in 
 ![Zwei Ereignisse in der Transaktion: Übertragung und Verkauf](./transfer-and-sold-events.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 In diesem Tutorial haben wir gesehen, wie Sie den Kontostand und das Guthaben eines ERC-20-Tokens überprüfen und wie Sie `Transfer` und `TransferFrom` eines ERC20-Smart-Contracts über die Schnittstelle abrufen.

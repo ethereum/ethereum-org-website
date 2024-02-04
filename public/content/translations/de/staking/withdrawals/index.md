@@ -38,7 +38,7 @@ Vor dem Shanghai/Capella-Upgrade konnten Sie Ihr gestaktes ETH nicht verwenden o
 ### Wie bereite ich mich vor? \{#how-do-i-prepare}
 
 {
-	<WithdrawalsTabComparison />
+<WithdrawalsTabComparison />
 }
 
 ### Wichtige Hinweise \{#important-notices}
@@ -79,7 +79,7 @@ Ob ein bestimmter Validator zur Auszahlung berechtigt ist oder nicht, wird durch
 Sehen Sie sich diese Erklärung für die Abhebungen von Ethereum von Finematics an:
 
 {
-	<YouTube id="RwwU3P9n3uo" />
+<YouTube id="RwwU3P9n3uo" />
 }
 
 ### Validator „Sweeping" \{#validator-sweeping}

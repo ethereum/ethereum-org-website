@@ -48,7 +48,7 @@ Puoi visualizzare il progresso della transazione su qualsiasi esploratore della 
 
 Riceverai automaticamente i token scambiati nel tuo portafoglio, una volta elaborata la transazione.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

@@ -115,11 +115,11 @@ Generated account 0x5e97870f263700f46aa00d967821199b9bc5a120
 ハッシュ関数と鍵ペアに関する Austin の説明動画をご覧ください。
 
 {
-	<YouTube id="QJ010l-pBpE" />
+<YouTube id="QJ010l-pBpE" />
 }
 
 {
-	<YouTube id="9LtBDy67Tho" />
+<YouTube id="9LtBDy67Tho" />
 }
 
 ## 参考文献 \{#further-reading}

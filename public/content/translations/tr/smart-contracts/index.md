@@ -74,7 +74,7 @@ Hesaplamalar gerçekleştirebilir, para birimleri oluşturabilir, veri tutabilir
 Finematics'in akıllı sözleşmeleri açıklamasını izleyin:
 
 {
-	<YouTube id="pWGLtjG-F5c" />
+<YouTube id="pWGLtjG-F5c" />
 }
 
 ## Daha fazla bilgi \{#further-reading}

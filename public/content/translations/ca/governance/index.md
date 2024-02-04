@@ -9,7 +9,7 @@ lang: ca
 _Si ningú és el propietari d'Ethereum, com es prenen les decisions sobre els canvis passats i futurs d'Ethereum? La governança d'Ethereum es refereix al procés que permet que es prenguin aquestes decisions_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Què és la governança? \{#what-is-governance}
@@ -39,7 +39,7 @@ _Mentre que a nivell del protocol la governança d'Ethereum és fora de cadena, 
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Qui hi està involucrat? \{#who-is-involved}
@@ -57,7 +57,7 @@ Hi ha diversos tipus de tenidors a la [comunitat Ethereum](/community/) i cadasc
 _Nota: Qualsevol particular pot ser part de mutitud d'aquests grups (p. ex. un desenvolupador de protocol podria ser autor d'una EIP i executar un validador de la cadena de balisa a més d'utilitzar aplicacions DeFi). No obstant això, per a presentar els conceptes de forma clara, és més fàcil que hi hagi diferències entre ells._
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Què és una EIP? \{#what-is-an-eip}
@@ -69,7 +69,7 @@ Un procés important utilitzat en la governança d'Ethereum és la iniciativa d'
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## El procés formal \{#formal-process}
@@ -115,7 +115,7 @@ S'espera que els autors d'EIP demanin l'opinió de tots els tenidors rellevants.
 Més enllà de la seguretat de la xarxa Ethereum, històricament els desenvolupadors de protocol han atorgat un pes significant al valor dels desenvolupadors d'aplicacions/eines i als usuaris d'aplicacions, ja que el seu ús i desenvolupament a Ethereum és el que fa que l'ecosistema sigui atractiu per a altres tenidors. A més, les EIP han d'implementar-se al llarg de totes les implementacions de client, que són gestionades per diferents equips. Part d'aquest procés significa generalment convèncer múltiples equips de desenvolupadors de protocol que un canvi en particular és valuós i ajuda als usuaris finals o soluciona un problema de seguretat.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Com abordar els desacords \{#disagreements}
@@ -145,11 +145,11 @@ Avui en dia, la comunitat Ethereum ha adoptat una política de no-intervenció e
 Veieu aquest vídeo amb més informació sobre el pirateig de la DAO:
 
 {
-	<YouTube id="rNeLuBOVe8A" />
+<YouTube id="rNeLuBOVe8A" />
 }
 
 {
-	<Divider />
+<Divider />
 }
 
 ### La utilitat de les bifurcacions \{#forking-utility}
@@ -159,7 +159,7 @@ La bifurcació d'Ethereum/Ethereum Classic és un exemple excel·lent d'una bifu
 L'habilitat de bifurcar-se front a diferències polítiques, filosòfiques o econòmiques significants juga un gran paper en l'èxit de la governança d'Ethereum. Si no hi hagués hagut la possibilitat d'una bifurcació, l'alternativa era una lluita interna continuada, participació forçada reticent per a aquells que eventualment van formar Ethereum Classic i una visió cada cop més diferent de com es percep l'èxit d'Ethereum.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Desenvolupament de la cadena de balisa \{#beacon-chain}
@@ -175,7 +175,7 @@ Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el proc�
 </ButtonLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Com puc involucrar-me? \{#get-involved}

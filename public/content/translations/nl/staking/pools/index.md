@@ -36,7 +36,7 @@ Naast de voordelen die we hebben behandeld in onze [inleiding tot staking](/stak
 </CardGrid>
 
 {
-	<StakingComparison page="pools" />
+<StakingComparison page="pools" />
 }
 
 ## Wat te overwegen \{#what-to-consider}
@@ -48,7 +48,7 @@ Elke pool en de tools of smart contracts die ervoor gebruikt worden, zijn door v
 Hieronder zijn attribuutindicatoren gebruikt om opmerkelijke sterke of zwakke punten te signaleren die een genoemde staking-pool kan hebben. Gebruik deze sectie als referentie voor hoe we deze attributen definiëren terwijl u een pool kiest om u bij aan te sluiten.
 
 {
-	<StakingConsiderations page="pools" />
+<StakingConsiderations page="pools" />
 }
 
 ## Onderzoek staking-pools \{#explore-staking-pools}
@@ -60,7 +60,7 @@ Houd rekening met het belang van het kiezen van een service die de <a href="/dev
 </InfoBanner>
 
 {
-	<StakingProductsCardGrid category="pools" />
+<StakingProductsCardGrid category="pools" />
 }
 
 Heeft u een suggestie voor een staking-tool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit is en om het ter beoordeling in te dienen.

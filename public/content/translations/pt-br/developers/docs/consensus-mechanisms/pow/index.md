@@ -92,7 +92,7 @@ Em termos gerais, a prova de participação tem o mesmo objetivo final que a pro
 ## Você é o tipo de pessoa que aprende mais com recursos visuais? \{#visual-learner}
 
 {
-	<YouTube id="3EUAcxhuoU4" />
+<YouTube id="3EUAcxhuoU4" />
 }
 
 ## Leitura adicional \{#further-reading}

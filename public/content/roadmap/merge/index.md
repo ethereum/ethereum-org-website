@@ -4,7 +4,7 @@ description: Learn about The Merge - when Mainnet Ethereum adopted proof-of-stak
 lang: en
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Ethereum Mainnet uses proof-of-stake, but this wasn't always the case.
 summaryPoint2: The upgrade from the original proof-of-work mechanism to proof-of-stake was called The Merge.
 summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a separate proof-of-stake blockchain called the Beacon Chain, now existing as one chain.
@@ -20,7 +20,7 @@ summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 The Merge was the joining of the original execution layer of Ethereum (the Mainnet that has existed since [genesis](/history/#frontier)) with its new proof-of-stake consensus layer, the Beacon Chain. It eliminated the need for energy-intensive mining and instead enabled the network to be secured using staked ETH. It was a truly exciting step in realizing the Ethereum vision—more scalability, security, and sustainability.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Initially, the [Beacon Chain](/roadmap/beacon-chain/) shipped separately from [Mainnet](/glossary/#mainnet). Ethereum Mainnet - with all its accounts, balances, smart contracts, and blockchain state - continued to be secured by [proof-of-work](/developers/docs/consensus-mechanisms/pow/), even while the Beacon Chain ran in parallel using [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). The Merge was when these two systems finally came together, and proof-of-work was permanently replaced by proof-of-stake.
@@ -244,9 +244,9 @@ Plans for sharding are rapidly evolving, but given the rise and success of layer
 ## Further reading \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

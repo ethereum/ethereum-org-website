@@ -14,7 +14,7 @@ lang: zh-tw
 
 以太坊交易是指由外部帳戶發起的操作，換句話說，此帳戶是由人而不是智慧型合約管理的帳戶。 例如，如果 Bob 發送給 Alice 1 以太幣，Bob 的帳戶必須扣除，Alice 的帳戶必須存入。 此更改狀態的操作發生在交易中。
 
-![顯示交易導致狀態變化的圖表](./tx.png) _此圖源於[以太坊EVM圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![顯示交易導致狀態變化的圖表](./tx.png) _此圖源於[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 交易會改變以太坊虛擬機的狀態，須廣播至整個網路。 任何節點都可以廣播要在以太坊虛擬機上執行的交易請求；之後驗證者將執行交易並將引起的狀態變化傳播到網路上的其他節點。
 
@@ -155,7 +155,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 
 所有智慧型合約互動也需要燃料。
 
-![顯示如何退還未使用燃料的圖表](./gas-tx.png) _此圖源於[以太坊EVM圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
+![顯示如何退還未使用燃料的圖表](./gas-tx.png) _此圖源於[以太坊 EVM 圖解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 任何交易中未使用的燃料都會退還給使用者帳戶。
 
@@ -173,7 +173,7 @@ Alice 的帳戶將存入 **+1.0 以太幣**
 觀看 Austin 為你講解交易、燃料和挖礦。
 
 {
-	<YouTube id="er-0ihqFQB0" />
+<YouTube id="er-0ihqFQB0" />
 }
 
 ## Typed Transaction Envelope 交易 \{#typed-transaction-envelope}

@@ -9,7 +9,7 @@ lang: es
 Con el creciente interés en las criptomonedas, es esencial aplicar las mejores prácticas al usar criptomonedas. Las criptomonedas pueden ser divertidas y emocionantes, aunque también entrañan serios riesgos. Si actúa con precaución y allana antes el terreno, puede mitigar estos riesgos.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Seguridad en la Web 101 \{#web-security}
@@ -26,7 +26,7 @@ Ejemplo de una contraseña débil: CuteFluffyKittens!
 Ejemplo de una contraseña fuerte: ymv\*azu.EAC8eyp8umf
 ```
 
-Otro error común es el uso de contraseñas que se pueden adivinar fácilmente o descubrir a través de [ingeniería social](https://wikipedia.org/wiki/Social_engineering_(security)). Incluir el nombre de soltera de su madre, los nombres de tus hijos o mascotas, o fechas de nacimiento en su contraseña no es seguro y aumentará el riesgo de que su contraseña sea pirateada.
+Otro error común es el uso de contraseñas que se pueden adivinar fácilmente o descubrir a través de [ingeniería social](<https://wikipedia.org/wiki/Social_engineering_(security)>). Incluir el nombre de soltera de su madre, los nombres de tus hijos o mascotas, o fechas de nacimiento en su contraseña no es seguro y aumentará el riesgo de que su contraseña sea pirateada.
 
 #### Buenas prácticas de contraseña: \{#good-password-practices}
 
@@ -68,7 +68,7 @@ Para demostrar que es realmente usted el usuario, hay diferentes pruebas únicas
 - Algún rasgo distintivo suyo (como una huella dactilar o un escáner de iris/facial).
 - Algo que tenga (una clave de seguridad o una aplicación de autenticación en su teléfono).
 
-Utilizando **la autenticación de dos factores (2FA)** proporciona un *factor de seguridad adicional* para sus cuentas en línea, de modo que conocer solo su contraseña (algo que usted sepa) no sea suficiente para acceder a una cuenta. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
+Utilizando **la autenticación de dos factores (2FA)** proporciona un _factor de seguridad adicional_ para sus cuentas en línea, de modo que conocer solo su contraseña (algo que usted sepa) no sea suficiente para acceder a una cuenta. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -91,7 +91,7 @@ Para aquellos que quieran dar el siguiente paso en 2FA, considere usar una clave
 Ver más en el 2FA:
 
 {
-	<YouTube id="m8jlnZuV1i4" start="3479" />
+<YouTube id="m8jlnZuV1i4" start="3479" />
 }
 
 ### Desinstale extensiones del navegador \{#uninstall-browser-extensions}
@@ -107,7 +107,7 @@ Las extensiones del navegador como las extensiones Chrome o los complementos par
 [Más sobre los riesgos de las extensiones del navegador](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Seguridad de criptomonedas 101 \{#crypto-security}
@@ -169,7 +169,7 @@ Muchas carteras de Ethereum ofrecen una protección de límites para evitar que 
 [Cómo revocar el acceso al contrato inteligente a sus fondos en criptomonedas](/guides/how-to-revoke-token-access/)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Estafas comunes \{#common-scams}
@@ -275,7 +275,7 @@ Las estafas de distribución de criptomonedas, o airdropping, implican una tenta
 [Más información sobre las estafas de airdropping](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Más información \{#further-reading}
@@ -301,5 +301,5 @@ Las estafas de distribución de criptomonedas, o airdropping, implican una tenta
 - [Hilo de Twitter sobre correos electrónicos y mensajes comunes de phishing de criptomonedas](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
 
 {
-	<QuizWidget quizKey="security" />
+<QuizWidget quizKey="security" />
 }

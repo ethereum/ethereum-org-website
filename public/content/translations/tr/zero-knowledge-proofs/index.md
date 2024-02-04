@@ -150,7 +150,7 @@ Blok zincir oylama şemalarının pek çok olumlu özelliği vardır: tamamen de
 
 Rüşvet ve gizli anlaşmalar, (özellikle kullanıcılar hangi oyu verdiklerini kanıtlayabildiğinde) oylamayı bir sinyal mekanizması olarak kullanan süreçlerin verimliliğini kısıtlar. Özellikle oyların sınırlı kaynak kullanımını etkilediği durumlarda, bu durum önemli sonuçlara yol açabilir.
 
-Örneğin, [kuadratik fonlama mekanizmaları](https://www.radicalxchange.org/concepts/plural-funding/) farklı kamu projeleri arasında tercihleri belirlemek üzere bağışları kullanır.  Her bağış, projeler için bir "oy" sayılır ve daha çok oy alan projeler eşleştirme havuzundan daha çok fon alır.
+Örneğin, [kuadratik fonlama mekanizmaları](https://www.radicalxchange.org/concepts/plural-funding/) farklı kamu projeleri arasında tercihleri belirlemek üzere bağışları kullanır. Her bağış, projeler için bir "oy" sayılır ve daha çok oy alan projeler eşleştirme havuzundan daha çok fon alır.
 
 Zincir üstü oylama kullanmak, kuadratik fonlamayı gizli anlaşmalara açık hale getirir: Blok zincir işlemleri herkese açıktır, yani rüşvet verenler zincir üstü aktiviteleri inceleyebilir ve rüşvet alanların "oylarını" görebilir. Bu şekilde kuadratik fonlama, topluluğun tercihlerine dayalı fonların kullanımı için etkili bir yöntem olmaktan çıkar.
 

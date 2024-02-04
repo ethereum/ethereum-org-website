@@ -51,7 +51,7 @@ Questo procedimento non dovrebbe richiedere più di 10 minuti.
 
 Puoi utilizzare [chainlist.org](http://chainlist.org) per trovare i dettagli RPC della rete. Una volta che la rete è aggiunta e la transazione è terminata, dovresti visualizzare i token nel tuo portafoglio.
 {
-	<br />
+<br />
 }
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">

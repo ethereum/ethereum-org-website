@@ -84,13 +84,13 @@ Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Como funciona \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Enquanto ativo, você ganhará recompensas ETH, que serão depositadas periodicamente no seu endereço de saque.
@@ -104,7 +104,7 @@ Se desejar, você pode parar suas atividades como um validador, o que elimina a 
 O Staking Launchpad é um aplicativo de código aberto que o ajudará a se tornar um staker. Ele o guiará na escolha de seus clientes, gerará suas chaves e depositará seu ETH no contrato de depósito de staking. Uma lista de verificação é fornecida para garantir que você cobriu tudo para configurar seu validador com segurança.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## O que considerar com ferramentas de configuração de nó e cliente \{#node-tool-considerations}
@@ -114,7 +114,7 @@ Há um número crescente de ferramentas e serviços para ajudá-lo a fazer staki
 Os indicadores de atributo são usados abaixo para sinalizar pontos fortes ou fracos notáveis que uma ferramenta de staking listada pode ter. Use esta seção como referência de como definimos esses atributos enquanto você escolhe quais ferramentas ajudarão em sua jornada de staking.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Explore as ferramentas de configuração de nós e clientes \{#node-and-client-tools}
@@ -122,13 +122,13 @@ Os indicadores de atributo são usados abaixo para sinalizar pontos fortes ou fr
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
 {
-	<ProductDisclaimer />
+<ProductDisclaimer />
 }
 
 ### Ferramentas do nó
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 Observe a importância de escolher um [cliente minoritário](/developers/docs/nodes-and-clients/client-diversity/), pois melhora a segurança da rede e limita seu risco. As ferramentas que permitem configurar um cliente minoritário são indicadas como <em style={{ textTransform: "uppercase" }}>"multicliente."</em>
@@ -138,7 +138,7 @@ Observe a importância de escolher um [cliente minoritário](/developers/docs/no
 Essas ferramentas podem ser utilizadas como uma alternativa à [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/) para ajudar na geração de chaves.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Alguma sugestão de ferramenta de participação que não mencionamos? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
@@ -146,7 +146,7 @@ Alguma sugestão de ferramenta de participação que não mencionamos? Leia a no
 ## Explore os guias de staking individual \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Perguntas frequentes \{#faq}

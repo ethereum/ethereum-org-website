@@ -68,6 +68,7 @@ summaryPoints:
     오프라인 상태가 되어 받는 비활동 상태에 대한 불이익과는 달리, <em>슬래싱</em>은 악의적 행동에 대한 훨씬 심각한 불이익입니다. 한 번에 하나의 시스템에만 로드된 키를 사용하여 소수의 클라이언트를 실행하면 슬래시 처리될 위험성이 최소화됩니다. 이를 통해 알 수 있듯이 모든 스테이커는 슬래싱의 위험성을 주의해야 합니다.
 
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">슬래싱 및 검증자의 주기 자세히 알아보기</a></p>
+
   </ExpandableCard>
 </InfoGrid>
 

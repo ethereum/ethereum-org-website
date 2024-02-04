@@ -23,7 +23,7 @@ Podsumowując, kiedy wysyłasz ETH do kogoś, transakcja musi zostać wykopana i
 Zobacz, jak Austin oprowadza Cię po blockchainach:
 
 {
-	<YouTube id="zcX7OJ-L8XQ" />
+<YouTube id="zcX7OJ-L8XQ" />
 }
 
 ## Co to jest Ethereum? \{#what-is-ethereum}

@@ -202,7 +202,7 @@ Se tudo funcionar, você deve ver 2 eventos (um `Transfer` e `Sold`) na transaç
 ![Dois eventos na transação: transferência e venda](./transfer-and-sold-events.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 Neste tutorial, vimos como verificar o saldo e a dedução de um token ERC-20 e também como chamar a `Transfer` e `TransferFrom` de um contrato inteligente ERC20 usando a interface.

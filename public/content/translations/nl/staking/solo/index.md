@@ -69,17 +69,18 @@ We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn
     Anders dan inactiviteitsboetes voor offline zijn, is er ook <em>slashing</em>. Dit is een veel serieuzere boete gereserveerd voor kwaadwillige misdrijven. Door een minderheid-client met sleutels enkel op één machine tegelijk te gebruiken, wordt het risico op slashing geminimaliseerd. Toch moeten alle stakers zich bewust zijn van de risico's van slashing.
 
     <p><a href="https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50/">Meer over slashing en validatorlevenscyclus</a></p>
+
   </ExpandableCard>
 </InfoGrid>
 
 {
-	<StakingComparison page="solo" />
+<StakingComparison page="solo" />
 }
 
 ## Hoe het werkt \{#how-it-works}
 
 {
-	<StakingHowSoloWorks />
+<StakingHowSoloWorks />
 }
 
 Indien ooit gewenst, kunt u stoppen als validator; hiermee hoeft u niet meer online te blijven, wat wel het verkrijgen van verdere beloningen stopt. Wees ervan bewust dat _opname_ van deze fondsen niet mogelijk zal zijn tot de geplande Shanghai upgrade.
@@ -91,7 +92,7 @@ Na de Shanghai upgrade kunnen gebruikers zowel hun beloningen als hun stake opne
 Het Staking Launchpad is een open-source applicatie die u helpt om een staker te worden. Het begeleidt u bij het kiezen van uw clients, het genereren van uw sleutels en het storten van uw ETH op het staking-stortingscontract. Er is een checklist beschikbaar om er zeker van te zijn dat u alles heeft ingevuld om uw validator veilig in te stellen.
 
 {
-	<StakingLaunchpadWidget />
+<StakingLaunchpadWidget />
 }
 
 ## Wat te overwegen met tools voor nodes en client-instelling \{#node-tool-considerations}
@@ -101,7 +102,7 @@ Er is een groeiend aantal tools en services om u te helpen als solo staker van u
 Attribuutindicatoren worden hieronder gebruikt om opmerkelijke sterke of zwakke punten aan te geven die een genoemde staking tool kan hebben. Gebruik deze sectie als referentie voor hoe we deze attributen definiëren wanneer u een tool kiest om u te helpen op uw staking-traject.
 
 {
-	<StakingConsiderations page="solo" />
+<StakingConsiderations page="solo" />
 }
 
 ## Onderzoek tools voor nodes en de instelling van clients \{#node-and-client-tools}
@@ -115,7 +116,7 @@ Houd rekening met het belang van het kiezen van een <a href="/developers/docs/no
 ### Node tools
 
 {
-	<StakingProductsCardGrid category="nodeTools" />
+<StakingProductsCardGrid category="nodeTools" />
 }
 
 ### Sleutelgenerators
@@ -123,7 +124,7 @@ Houd rekening met het belang van het kiezen van een <a href="/developers/docs/no
 Deze tools worden gebruikt als een alternatief voor de [Staking Deposit CLI](https://github.com/ethereum/staking-deposit-cli/), om u te helpen met het genereren van sleutels.
 
 {
-	<StakingProductsCardGrid category="keyGen" />
+<StakingProductsCardGrid category="keyGen" />
 }
 
 Heeft u een voorstel voor een staking tool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit zou zijn en om het ter beoordeling in te dienen.
@@ -131,7 +132,7 @@ Heeft u een voorstel voor een staking tool die we hebben gemist? Bekijk ons [pro
 ## Bekijk solo staking-handleidingen \{#staking-guides}
 
 {
-	<StakingGuides />
+<StakingGuides />
 }
 
 ## Veelgestelde vragen \{#faq}

@@ -184,7 +184,7 @@ Once the transaction has been submitted the following happens:
 Watch Austin walk you through transactions, gas, and mining.
 
 {
-	<YouTube id="er-0ihqFQB0" />
+<YouTube id="er-0ihqFQB0" />
 }
 
 ## Typed Transaction Envelope \{#typed-transaction-envelope}

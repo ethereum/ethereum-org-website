@@ -4,7 +4,7 @@ description: Aprenda sobre A Fusão — quando a Rede principal do Ethereum adot
 lang: pt-br
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: A Rede principal do Ethereum usa prova de participação, mas nem sempre foi esse o caso.
 summaryPoint2: A melhoria do mecanismo original de prova de trabalho para prova de participação foi chamada de The Merge, ou seja, A Fusão.
 summaryPoint3: A Fusão se refere à fusão original da Rede Principal do Ethereum, com uma cadeia de blocos de prova de participação separada chamada Beacon Chain, agora existente como uma cadeia.
@@ -20,7 +20,7 @@ summaryPoint4: A Fusão reduziu o consumo de energia do Ethereum em ~99,95%.
 A Fusão foi a junção da camada de execução original do Ethereum (a Rede principal que existe desde a [origem](/history/#frontier)) com a sua nova camada de consenso de prova de participação, a Beacon Chain. Ele eliminou a necessidade de mineração que faz uso intensivo de energia e, em vez disso, permitiu que a rede fosse protegida usando participação de ETH. Foi uma etapa realmente emocionante para a realização da visão do Ethereum — mais escalabilidade, segurança e sustentabilidade.
 
 {
-	<MergeInfographic />
+<MergeInfographic />
 }
 
 Inicialmente, a [Beacon Chain](/roadmap/beacon-chain/) foi enviada separadamente da [Mainnet](/glossary/#mainnet). A rede principal da Ethereum - com todas as suas contas, saldos, contratos inteligentes e estado da cadeia de blocos - continuou a ser protegida pela [prova de trabalho](/developers/docs/consensus-mechanisms/pow/), mesmo enquanto a Beacon Chain funcionava em paralelo usando a [prova de participação](/developers/docs/consensus-mechanisms/pos/). A Fusão foi quando esses dois sistemas finalmente se uniram, e a prova de trabalho foi permanentemente substituída pela prova de participação.
@@ -243,9 +243,9 @@ Os planos para fragmentação estão evoluindo rapidamente, mas dado o surgiment
 ## Leitura adicional \{#further-reading}
 
 {
-	<MergeArticleList />
+<MergeArticleList />
 }
 
 {
-	<QuizWidget quizKey="merge" />
+<QuizWidget quizKey="merge" />
 }

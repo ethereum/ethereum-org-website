@@ -78,7 +78,7 @@ We may use this technical data to analyze your use of the Websites by compiling 
 Any processing of this technical personal data helps us to identify what is working and what is not on our Websites and how we may improve our Websites. Without any data thus received, we may not be able to provide you the service we are currently offering to you. Your data will be used only to improve the user experience on our Websites and help you find the information you are looking for. This is our legitimate interest in the processing of data in the sense of Art. 6 Par. 1 lit. f GDPR.
 
 {
-	<MatomoOptOut />
+<MatomoOptOut />
 }
 
 **3.4 Opening an account for the Ethereum Web Forum**

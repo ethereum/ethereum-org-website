@@ -11,7 +11,7 @@ Centralizacja pomogła miliardom ludzi wejść do sieci World Wide Web i stworzy
 Web3 jest odpowiedzią na ten dylemat. Zamiast sieci zmonopolizowanej przez duże firmy technologiczne, Web3 jest zdecentralizowany i jest tworzony, obsługiwany i jest własnością użytkowników. Web3 oddaje władzę w ręce osób indywidualnych, a nie korporacji. Zanim porozmawiamy o Web3, dowiedzmy się, jak się tu znaleźliśmy.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Wczesna sieć \{#early-internet}
@@ -33,7 +33,7 @@ Okres Web 2.0 rozpoczął się w 2004 roku wraz z pojawieniem się platform medi
 ![Architektura klient-serwer reprezentująca Web 2.0](./web2.png)
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Web 3.0: Odczyt, zapis i posiadanie \{#web3}
@@ -163,5 +163,5 @@ Web3 nie jest jednoznacznie zdefiniowany. Różni uczestnicy społeczności maj�
 - [Debata o Web3](https://www.notboring.co/p/the-web3-debate?s=r) — _Packy McCormick_
 
 {
-	<QuizWidget quizKey="web3" />
+<QuizWidget quizKey="web3" />
 }

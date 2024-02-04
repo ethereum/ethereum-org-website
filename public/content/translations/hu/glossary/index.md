@@ -8,7 +8,7 @@ sidebarDepth: 2
 # Összegzés \{#ethereum-glossary}
 
 {
-	<Divider />
+<Divider />
 }
 
 ## # \{#section-numbers}
@@ -44,7 +44,7 @@ A [Solidity-ben](#solidity), az `assert(false)` a `0xfe` opkódra fordítódik, 
 Egy validátor szavazata egy [Beacon Chain](#beacon-chain) vagy egy [shard](#shard) [blokkra](#block). A validátoroknak tanúsítaniuk kell a blokkokat, jelezve, hogy egyetértenek a blokk által javasolt állapottal.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## B \{#section-b}
@@ -86,7 +86,7 @@ Egy absztrakt utasításkészlet, amelyet egy szoftver fordító vagy virtuális
 Az első a két [hard forkból](#hard-fork) a [Metropolis](#metropolis) fejlesztési szinthgez. Tartalmazta az EIP-649 Metropolis [nehézség bomba](#difficulty-bomb) késeltetést és a blokk jutalom csökkentését, ahol az [Ice Age](#ice-age) el lett tolva 1 évvel és a blokk jutalom lecsökkent 5 etherről 3 etherre.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## C \{#section-c}
@@ -132,7 +132,7 @@ A kereszt kapcsolat egy összesítést ad vissza egy shard állapotáról. Így 
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## D \{#section-d}
@@ -186,7 +186,7 @@ A [proof-of-work](#pow) [nehézség](#difficulty) tervezett exponenciális megn�
 Egy rövid adat sztring, melyet egy felhasználó hoz létre egy dokumentumhoz egy [privát kulcs](#private-key) használatával úgy, hogy bárki a hozzátartozó [publikus kulccsal](#public-key), az aláírással és a dokumentummal hitelesíteni tudja, hogy (1) a dokumentumot "aláírta" a bizonyos privát kulcs tulajdonosa, és (2) a dokumentum nem változott miután aláírták.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## E \{#section-e}
@@ -268,7 +268,7 @@ Egy stack alapú virtuális gép, mely [bájtkódot](#bytecode) futtat. Az Ether
 Az EVM [bájtkód](#bytecode) emberek számára is olvasható változata.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## F \{#section-f}
@@ -316,7 +316,7 @@ Bizonyos [2. réteg](#layer-2) megoldások biztonsági modellje, ahol a sebessé
 Az Ethereum kezdeti teszt fejlesztési fázisa, mely 2015 júliusától 2016 márciusáig tartott.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## G \{#section-g}
@@ -348,7 +348,7 @@ Go Ethereum. Az Ethereum egyik legprominensebb implementációja Go-ban írva.
 A gigawei rövidítése, az [ether](#ether) egyik részegysége, gyakran a [gáz](#gas) díjak elszámolására használjuk. 1 gwei = 10<sup>9</sup> [wei](#wei). 10<sup>9</sup> gwei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## H \{#section-h}
@@ -376,7 +376,7 @@ Egy érték, melyet a master [privát kulcs](#private-key) és a master lánc k�
 Az Ethereum második fejlesztési fázisa, mely 2016 márciusában indult el az 1,150,000 számú blokknál.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## I \{#section-i}
@@ -410,7 +410,7 @@ Amint egy [szerződés](#smart-contract) (vagy [könyvtár](#library)) kód tele
 Egy [tranzakció](#transaction) egy [szerződéses számláról](#contract-account) egy másik szerződéses számlára vagy egy [EOA-ra](#eoa) (lásd [üzenet](#message)).
 
 {
-	<Divider />
+<Divider />
 }
 
 ## K \{#section-k}
@@ -432,7 +432,7 @@ Az Ethereumban használt kriptográfiai [hash](#hash) függvény. A Keccak-256 [
 Egy JSON kódolású fájl, mely egy (véletlenszerűen generált) [privát kulcsot](#private-key) tartalmaz, melyet egy jelszó titkosít magasabb fokú biztonságért.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## L \{#section-l}
@@ -462,7 +462,7 @@ Egy speciális [szerződés](#smart-contract) típus, melynek nincsenek payable 
 Egy Ethereum kliens, mely nem tárolja a [blokklánc](#blockchain) lokális másolatát, nem validál blokkokat és [tranzakciókat](#transaction). Egy [tárca](#wallet) funkcionalitását szolgáltatja és tranzakciókat tud létrehozni és közvetíteni.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## M \{#section-m}
@@ -496,7 +496,7 @@ Egy hálózati [csomópont](#node), mely érvényes [munkabizonyítékokat](#pow
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## N \{#section-n}
@@ -534,7 +534,7 @@ Egy szoftver kliens, mely részt vesz a hálózatban.
 A kriptográfiában egy olyan érték, melyet csak egyszer lehet felhasználni. Az Ethereum kétféle nonce-ot használ -a számla-nonce a tranzakciók számlán történő nyilvántartásához szükséges, és a tranzakciók megismétlésével történő támadások megelőzésére használja a hálózat; a [munkabizonyíték](#pow)-nonce pedig az a blokkban használt véletlenszerű érték, amely [munkabizonyítékként](#pow) szolgál.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## O \{#section-o}
@@ -552,7 +552,7 @@ Olyan [összevont tranzakció](#rollups), amely [csalási bizonyítást](#fraud-
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## P \{#section-p}
@@ -594,7 +594,7 @@ Egy adatsor (a bizonyíték), melynek megtalálása jelentős mennyiségű szám
 Egy a [privát kulcsból](#private-key) egy egyirányú függvénnyel származtatott szám, amelyet nyilvánosan meg lehet osztani, és bárki felhasználhatja az ehhez tartozó privát kulccsal készült digitális aláírások hitelesítéséhez.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## R \{#section-r}
@@ -628,7 +628,7 @@ A [2. réteg](#layer-2) skálázódásának egyik módszere, amely több tranzak
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## S \{#section-s}
@@ -726,7 +726,7 @@ Egy [2. rétegű](#layer-2) megoldás, ahol egy csatorna van létrehozva a rész
 Az [ether](#ether) egyik címlete. 1 szabo = 10<sup>12</sup> [wei](#wei), 10<sup>6</sup> szabo = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## T \{#section-t}
@@ -772,7 +772,7 @@ A tranzakciós díjak csökkentésének témáját nagy érdeklődés övezi mos
 Az angol matematikus és számítástechnikus Alan Turing után elnevezett fogalom - az adatmanipulációs szabályok rendszere (például egy számítógép utasításai, egy programozási nyelv, vagy egy sejtautomata) "Turing-teljesnek" vagy számítási szempontból univerzálisnak mondható, ha bármely Turing-gép szimulálására használható.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## V \{#section-v}
@@ -812,7 +812,7 @@ Egy magas szintű programozási nyelv Python-szerű szintaxissal. Az a célja, h
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## W \{#section-w}
@@ -838,7 +838,7 @@ A világháló harmadik verziója. A Web3, amit először Dr. Gavin Wood írt le
 Az [ether](#ether) legkisebb címlete. 10<sup>18</sup> wei = 1 ether.
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Z \{#section-z}
@@ -856,7 +856,7 @@ Egy speciális, kizárólag nullákat tartalmazó Ethereum cím, amely a [szerz�
 </DocLink>
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Források \{#sources}
@@ -864,7 +864,7 @@ Egy speciális, kizárólag nullákat tartalmazó Ethereum cím, amely a [szerz�
 _Részben a [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook)alapján [Andreas M. Antonopoulos, Gavin Wood](https://ethereumbook.info) által a CC-BY-SA alapján_
 
 {
-	<Divider />
+<Divider />
 }
 
 ## Járulj hozzá az oldalhoz \{#contribute-to-this-page}

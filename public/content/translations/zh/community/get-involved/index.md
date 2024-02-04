@@ -28,7 +28,7 @@ lang: zh
 - 撰写或审查以太坊改进提案
   - 撰写以太坊改进提案
     1. 在[以太坊魔术师](https://ethereum-magicians.org)论坛上提交你的创想
-    2. 查阅 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **是的，请阅读_整份_文件。**
+    2. 查阅 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **是的，请阅读*整份*文件。**
     3. 请遵循 EIP-1 中的指导准则。 在撰写提案草案时，请参考 EIP-1。
   - 了解如何成为[以太坊改进提案编辑人员](https://eips.ethereum.org/EIPS/eip-5069)
     - 你现在即可对以太坊改进提案进行同行评审！ 请参阅[打开带有 `e-review` 标签的同行评审](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)。 在 `discussion-to` 链接上提供技术反馈。
