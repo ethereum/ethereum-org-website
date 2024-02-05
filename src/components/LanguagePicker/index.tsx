@@ -36,7 +36,6 @@ const LanguagePicker = ({
     firstItemRef,
     filterValue,
     setFilterValue,
-    browserLocales,
     filteredNames,
   } = useLanguagePicker(handleClose)
 

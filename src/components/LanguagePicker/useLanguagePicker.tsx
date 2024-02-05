@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { useDisclosure } from "@chakra-ui/react"
@@ -27,10 +27,32 @@ export const useLanguagePicker = (handleClose?: () => void) => {
   const [filterValue, setFilterValue] = useState("")
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
-  const [browserLocales, setBrowserLocales] = useState<Lang[]>([])
 
-  const localeToDisplayInfo = useCallback(
-    (localeOption: Lang): LocaleDisplayInfo => {
+  // perform all the filtering and mapping when the filter value change
+  useEffect(() => {
+    // Get the preferred languages for the users browser
+    const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
+
+    // For each browser preference, reduce to the most specific match found in `locales` array
+    const allBrowserLocales: Lang[] = navLangs
+      .map(
+        (navLang) =>
+          locales?.reduce((acc, cur) => {
+            if (cur.toLowerCase() === navLang.toLowerCase()) return cur
+            if (
+              navLang.toLowerCase().startsWith(cur.toLowerCase()) &&
+              acc !== navLang
+            )
+              return cur
+            return acc
+          }, "") as Lang
+      )
+      .filter((i) => !!i) // Remove those without matches
+
+    // Remove duplicate matches
+    const browserLocales = Array.from(new Set(allBrowserLocales))
+
+    const localeToDisplayInfo = (localeOption: Lang): LocaleDisplayInfo => {
       const i18nItem: I18nLocale = languages[localeOption]
       const englishName = i18nItem.name
 
@@ -90,33 +112,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
         wordsApproved,
         isBrowserDefault,
       }
-    },
-    [browserLocales, locale, t]
-  )
-
-  // perform all the filtering and mapping when the filter value change
-  useEffect(() => {
-    // Get the preferred languages for the users browser
-    const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
-
-    // For each browser preference, reduce to the most specific match found in `locales` array
-    const allBrowserLocales: Lang[] = navLangs
-      .map(
-        (navLang) =>
-          locales?.reduce((acc, cur) => {
-            if (cur.toLowerCase() === navLang.toLowerCase()) return cur
-            if (
-              navLang.toLowerCase().startsWith(cur.toLowerCase()) &&
-              acc !== navLang
-            )
-              return cur
-            return acc
-          }, "") as Lang
-      )
-      .filter((i) => !!i) // Remove those without matches
-
-    // Remove duplicate matches
-    setBrowserLocales(Array.from(new Set(allBrowserLocales)))
+    }
 
     const displayNames: LocaleDisplayInfo[] =
       (locales as Lang[])?.map(localeToDisplayInfo).sort((a, b) => {
@@ -136,7 +132,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
             .includes(filterValue.toLowerCase())
       )
     )
-  }, [browserLocales, filterValue, localeToDisplayInfo, locales])
+  }, [filterValue, locale, locales, t])
 
   const { isOpen, ...menu } = useDisclosure()
 
@@ -178,7 +174,6 @@ export const useLanguagePicker = (handleClose?: () => void) => {
     firstItemRef,
     filterValue,
     setFilterValue,
-    browserLocales,
     filteredNames,
   }
 }
