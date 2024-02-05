@@ -121,7 +121,7 @@ export const useStakingProductsCardGrid = ({
           .sort((a, b) => b.rankingScore - a.rankingScore)
       )
     }
-  }, [])
+  }, [LUM, SAT, category])
 
   return {
     rankedProducts,
