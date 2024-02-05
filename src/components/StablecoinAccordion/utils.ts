@@ -1,4 +1,4 @@
-import { TranslationKey } from "../../utils/translations"
+import { TranslationKey } from "@/lib/types"
 
 export type CategoryNameType = "dapps" | "buy" | "earn" | "generate"
 

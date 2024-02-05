@@ -1,13 +1,13 @@
-import { Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { MdContentCopy } from "react-icons/md"
+import { Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
+
 import { FAKE_DEMO_ADDRESS } from "../constants"
 import { NotificationPopover } from "../NotificationPopover"
 
-interface IProps extends Omit<FlexProps, "children"> {
-  children?: Pick<FlexProps, "children">
-}
-export const AddressPill: React.FC<IProps> = ({ children, ...btnProps }) => (
+type AddressPillProps = Omit<FlexProps, "children">
+
+export const AddressPill = ({ ...btnProps }: AddressPillProps) => (
   <NotificationPopover
     title="Example walkthrough"
     content="Share your address (public identifier) from your own wallet when finished here"
@@ -26,7 +26,7 @@ export const AddressPill: React.FC<IProps> = ({ children, ...btnProps }) => (
       fontSize="xs"
       {...btnProps}
     >
-      <Text m={0}>{children ?? FAKE_DEMO_ADDRESS}</Text>
+      <Text m={0}>{FAKE_DEMO_ADDRESS}</Text>
       <Icon as={MdContentCopy} w={4} fontSize="lg" />
     </Flex>
   </NotificationPopover>

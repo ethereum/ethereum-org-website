@@ -1,11 +1,9 @@
-import { Box, Flex, Grid, useToken } from "@chakra-ui/react"
 import React from "react"
+import { Box, Flex, Grid, useToken } from "@chakra-ui/react"
 
-export type Props = {
-  children: React.ReactNode
-}
+import { ChildOnlyProp } from "@/lib/types"
 
-export const Banner: React.FC<Props> = ({ children }) => {
+export const Banner = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       w="full"
@@ -26,7 +24,7 @@ export const Banner: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerBody: React.FC<Props> = ({ children }) => {
+export const BannerBody = ({ children }: ChildOnlyProp) => {
   return (
     <Box flex={4} p={10}>
       {children}
@@ -34,7 +32,7 @@ export const BannerBody: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerImage: React.FC<Props> = ({ children }) => {
+export const BannerImage = ({ children }: ChildOnlyProp) => {
   return (
     <Flex justifyContent="end" flex={2} alignSelf="end">
       {children}
@@ -42,7 +40,7 @@ export const BannerImage: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerGrid: React.FC<Props> = ({ children }) => {
+export const BannerGrid = ({ children }: ChildOnlyProp) => {
   return (
     <Grid
       templateColumns={{
@@ -62,7 +60,7 @@ export const BannerGrid: React.FC<Props> = ({ children }) => {
   )
 }
 
-export const BannerGridCell: React.FC<Props> = ({ children }) => {
+export const BannerGridCell = ({ children }: ChildOnlyProp) => {
   const [medBp, lgBp] = useToken("breakpoints", ["md", "lg"])
 
   return (
@@ -72,8 +70,8 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
       direction="column"
       borderTop="1px solid"
       borderTopColor="searchBackground"
-      borderLeft={{ base: 0, md: "1px solid" }}
-      borderLeftColor={{ md: "searchBackground" }}
+      borderInlineStart={{ base: 0, md: "1px solid" }}
+      borderInlineStartColor={{ md: "searchBackground" }}
       sx={{
         "&:first-child": {
           borderTop: 0,
@@ -83,21 +81,21 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
             borderTop: 0,
           },
           "&:nth-child(2n + 1)": {
-            borderLeft: 0,
+            borderInlineStart: 0,
           },
         },
         [`@media (min-width: ${lgBp})`]: {
           "&:first-child": {
-            paddingLeft: 0,
-            borderLeft: 0,
+            ps: 0,
+            borderInlineStart: 0,
           },
           "&:nth-child(-n + 2)": {
             borderTop: "1px solid",
             borderTopColor: "searchBackground",
           },
           "&:nth-child(2n + 1)": {
-            borderLeft: "1px solid",
-            borderLeftColor: "searchBackground",
+            borderInlineStart: "1px solid",
+            borderInlineStartColor: "searchBackground",
           },
           "&:nth-child(-n + 3)": {
             borderTop: 0,
@@ -105,8 +103,8 @@ export const BannerGridCell: React.FC<Props> = ({ children }) => {
             paddingTop: 0,
           },
           "&:nth-child(3n + 1)": {
-            paddingLeft: 0,
-            borderLeft: 0,
+            ps: 0,
+            borderInlineStart: 0,
           },
           "&:nth-child(n + 4)": {
             justifyContent: "start",
