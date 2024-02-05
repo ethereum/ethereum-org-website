@@ -29,7 +29,6 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
     targetName,
     approvalProgress,
     wordsApproved,
-    isBrowserPreference,
     isBrowserDefault,
   } = displayInfo
   const { t } = useTranslation("page-languages")
@@ -90,7 +89,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
             >
               {targetName}
             </Text>
-            {isBrowserPreference && (
+            {isBrowserDefault && (
               <Badge
                 border="1px"
                 borderColor="body.medium"
@@ -101,11 +100,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
                 h="fit-content"
                 bg="none"
               >
-                {t(
-                  isBrowserDefault
-                    ? "page-languages-browser-default"
-                    : "page-languages-browser-preference"
-                )}
+                {t("page-languages-browser-default")}
               </Badge>
             )}
           </Flex>

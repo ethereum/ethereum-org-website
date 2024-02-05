@@ -79,9 +79,8 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           ? totalWords || 0
           : dataItem?.words.approved || 0
 
-      const isBrowserPreference = browserLocales.includes(localeOption)
-      const isBrowserDefault =
-        browserLocales.length > 0 && browserLocales[0] === localeOption
+      const isBrowserDefault = browserLocales.includes(localeOption)
+
       return {
         localeOption,
         approvalProgress,
@@ -89,7 +88,6 @@ export const useLanguagePicker = (handleClose?: () => void) => {
         targetName,
         englishName,
         wordsApproved,
-        isBrowserPreference,
         isBrowserDefault,
       }
     },
@@ -108,7 +106,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           locales?.reduce((acc, cur) => {
             if (cur.toLowerCase() === navLang.toLowerCase()) return cur
             if (
-              navLang.toLowerCase().includes(cur.toLowerCase()) &&
+              navLang.toLowerCase().startsWith(cur.toLowerCase()) &&
               acc !== navLang
             )
               return cur
@@ -122,10 +120,11 @@ export const useLanguagePicker = (handleClose?: () => void) => {
 
     const displayNames: LocaleDisplayInfo[] =
       (locales as Lang[])?.map(localeToDisplayInfo).sort((a, b) => {
-        if (a.isBrowserDefault) return -1
-        if (b.isBrowserDefault) return 1
-        if (a.isBrowserPreference) return -1
-        if (b.isBrowserPreference) return 1
+        const indexA = browserLocales.indexOf(a.localeOption as Lang)
+        const indexB = browserLocales.indexOf(b.localeOption as Lang)
+        if (indexA >= 0 && indexB >= 0) return indexA - indexB
+        if (indexA >= 0) return -1
+        if (indexB >= 0) return 1
         return b.approvalProgress - a.approvalProgress
       }) || []
 
