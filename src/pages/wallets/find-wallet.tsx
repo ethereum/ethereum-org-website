@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -41,6 +41,8 @@ import {
   getNonSupportedLocaleWallets,
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
+
+import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
@@ -115,13 +117,19 @@ const FindWalletPage = () => {
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const [randomizedWalletData, setRandomizedWalletData] = useState<
+    WalletData[]
+  >([])
 
   // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
   const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-  const randomizedWalletData = supportedLocaleWallets.concat(
-    noSupportedLocaleWallets
-  )
+
+  useEffect(() => {
+    setRandomizedWalletData(
+      supportedLocaleWallets.concat(noSupportedLocaleWallets)
+    )
+  }, [noSupportedLocaleWallets, supportedLocaleWallets])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
