@@ -122,14 +122,14 @@ const FindWalletPage = () => {
   >([])
 
   // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
-  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
-  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
-
   useEffect(() => {
+    const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
+    const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
+
     setRandomizedWalletData(
       supportedLocaleWallets.concat(noSupportedLocaleWallets)
     )
-  }, [noSupportedLocaleWallets, supportedLocaleWallets])
+  }, [locale])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
