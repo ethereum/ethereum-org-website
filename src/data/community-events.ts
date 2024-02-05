@@ -356,7 +356,7 @@ const communityConferences: CommunityConference[] = [
     to: "https://ethsafari.xyz/",
     location: "Nairobi & Kilifi, Kenya",
     description:
-      "Welcome to the latest greatest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi.",
+      "Welcome to the largest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi.",
   },
   {
     title: "TOKEN2049",
