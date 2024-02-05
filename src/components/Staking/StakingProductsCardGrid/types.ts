@@ -1,5 +1,6 @@
-import { type MatomoEventOptions } from "../../../utils/matomo"
-import type stakingProducts from "../../../data/staking-products.json"
+import type { MatomoEventOptions } from "@/lib/utils/matomo"
+
+import type stakingProducts from "@/data/staking-products.json"
 
 export enum FlagType {
   VALID = "green-check",

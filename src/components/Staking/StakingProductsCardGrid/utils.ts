@@ -1,4 +1,4 @@
-import { Product, FlagType, StakingCategoryType } from "./types"
+import { FlagType, Product, StakingCategoryType } from "./types"
 
 const scoreOpenSource = (product: Product): 1 | 0 => {
   return product.openSource === FlagType.VALID ? 1 : 0
@@ -129,10 +129,10 @@ const getSharedSecurityProperties = (
 })
 
 export {
-  getRankingScore,
+  getBrandProperties,
   getDiversityOfClients,
   getFlagFromBoolean,
-  getBrandProperties,
-  getTagProperties,
+  getRankingScore,
   getSharedSecurityProperties,
+  getTagProperties,
 }

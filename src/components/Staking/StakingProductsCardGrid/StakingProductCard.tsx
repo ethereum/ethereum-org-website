@@ -12,14 +12,16 @@ import {
   ListIcon,
   ListItem,
 } from "@chakra-ui/react"
+
 import { ButtonLink } from "../../Buttons"
-import Translation from "../../Translation"
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "../../icons/staking"
+import Translation from "../../Translation"
+
 import { FlagType, Product } from "./types"
 
 const getIconFromName = (imageName: string): typeof ChakraIcon | undefined => {

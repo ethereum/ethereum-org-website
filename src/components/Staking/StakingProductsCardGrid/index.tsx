@@ -1,8 +1,9 @@
 import React from "react"
 import { SimpleGrid } from "@chakra-ui/react"
+
 import { StakingProductCard } from "./StakingProductCard"
-import { useStakingProductsCardGrid } from "./useStakingProductsCardGrid"
 import { StakingProductsCategoryKeys } from "./types"
+import { useStakingProductsCardGrid } from "./useStakingProductsCardGrid"
 
 export interface IProps {
   category: StakingProductsCategoryKeys
