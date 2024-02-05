@@ -144,7 +144,6 @@ const FindWalletPage = () => {
       direction="column"
       position="relative"
       w="full"
-      suppressHydrationWarning
     >
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
