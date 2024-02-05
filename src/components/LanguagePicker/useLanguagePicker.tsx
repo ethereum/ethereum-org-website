@@ -136,7 +136,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
             .includes(filterValue.toLowerCase())
       )
     )
-  }, [filterValue, localeToDisplayInfo, locales])
+  }, [browserLocales, filterValue, localeToDisplayInfo, locales])
 
   const { isOpen, ...menu } = useDisclosure()
 
