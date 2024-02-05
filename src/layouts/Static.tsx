@@ -76,22 +76,21 @@ export const staticComponents = {
   UpcomingEventsList,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
-    > {
-  frontmatter: StaticFrontmatter
-}
-export const StaticLayout: React.FC<IProps> = ({
+type StaticLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+  > & {
+    frontmatter: StaticFrontmatter
+  }
+export const StaticLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   lastUpdatedDate,
   contentNotTranslated,
-}) => {
+}: StaticLayoutProps) => {
   const { locale } = useRouter()
 
   const absoluteEditPath = getEditPath(slug)
