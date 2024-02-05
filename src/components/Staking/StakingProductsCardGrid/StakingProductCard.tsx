@@ -1,4 +1,5 @@
-import * as React from "react"
+import { useTranslation } from "next-i18next"
+import type { ComponentType, ReactNode, SVGProps } from "react"
 import {
   Badge,
   Box,
@@ -7,52 +8,55 @@ import {
   Flex,
   Heading,
   HStack,
-  Icon as ChakraIcon,
+  Icon,
   List,
   ListIcon,
   ListItem,
 } from "@chakra-ui/react"
 
-import { ButtonLink } from "../../Buttons"
+import { ButtonLink } from "@/components/Buttons"
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../../icons/staking"
-import Translation from "../../Translation"
+} from "@/components/icons/staking"
 
 import { FlagType, Product } from "./types"
 
-const getIconFromName = (imageName: string): typeof ChakraIcon | undefined => {
-  const { [imageName + "GlyphIcon"]: Icon } = require("../icons/staking")
+const getIconFromName = (
+  imageName: string
+): ComponentType<SVGProps<SVGElement>> => {
+  const {
+    [imageName + "GlyphIcon"]: Icon,
+  } = require("@/components/icons/staking")
   return Icon
 }
 
-export const Status = ({ status }: { status: FlagType }) => {
+const Status = ({ status }: { status: FlagType | undefined }) => {
   if (!status) return null
 
-  const getStatusIcon = () => {
-    switch (status) {
-      case "green-check":
-        return GreenCheckProductGlyphIcon
-      case "caution":
-        return CautionProductGlyphIcon
-      case "warning":
-      case "false":
-        return WarningProductGlyphIcon
-      default:
-        return UnknownProductGlyphIcon
-    }
+  const styles = { fontSize: "2xl", m: 0 }
+  switch (status) {
+    case "green-check":
+      return <ListIcon as={GreenCheckProductGlyphIcon} {...styles} />
+    case "caution":
+      return <ListIcon as={CautionProductGlyphIcon} {...styles} />
+    case "warning":
+    case "false":
+      return <ListIcon as={WarningProductGlyphIcon} {...styles} />
+    default:
+      return <ListIcon as={UnknownProductGlyphIcon} {...styles} />
   }
-
-  return <ListIcon as={getStatusIcon()} fontSize="2xl" m={0} />
 }
 
-const StakingBadge: React.FC<{
+const StakingBadge = ({
+  type,
+  children,
+}: {
   type: "ui" | "platform"
-  children: React.ReactNode
-}> = ({ type, children }) => {
+  children: ReactNode
+}) => {
   const uiTypeColor = type === "ui" && "stakingPillUI"
   const platformTypeColor = type === "platform" && "stakingPillPlatform"
 
@@ -67,11 +71,11 @@ const StakingBadge: React.FC<{
   )
 }
 
-interface ICardProps {
+type StakingProductCardProps = {
   product: Product
 }
 
-export const StakingProductCard: React.FC<ICardProps> = ({
+export const StakingProductCard = ({
   product: {
     name,
     imageName,
@@ -95,72 +99,69 @@ export const StakingProductCard: React.FC<ICardProps> = ({
     economical,
     matomo,
   },
-}) => {
+}: StakingProductCardProps) => {
   const PADDED_DIV_STYLE: BoxProps = {
     px: 8,
     py: 6,
   }
 
+  const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
-  type DataType = { label: JSX.Element; status?: FlagType }
+  type DataType = { label: string; status?: FlagType }
   const data: DataType[] = [
     {
-      label: <Translation id="page-staking-considerations-solo-1-title" />,
+      label: t("page-staking-considerations-solo-1-title"),
       status: openSource,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-2-title" />,
+      label: t("page-staking-considerations-solo-2-title"),
       status: audited,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-3-title" />,
+      label: t("page-staking-considerations-solo-3-title"),
       status: bugBounty,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-4-title" />,
+      label: t("page-staking-considerations-solo-4-title"),
       status: battleTested,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-5-title" />,
+      label: t("page-staking-considerations-solo-5-title"),
       status: trustless,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-6-title" />,
+      label: t("page-staking-considerations-solo-6-title"),
       status: permissionless,
     },
     {
-      label: <Translation id="page-staking-considerations-pools-6-title" />,
+      label: t("page-staking-considerations-pools-6-title"),
       status: permissionlessNodes,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-7-title" />,
+      label: t("page-staking-considerations-solo-7-title"),
       status: multiClient,
     },
     {
-      label: <Translation id="page-staking-considerations-saas-7-title" />,
+      label: t("page-staking-considerations-saas-7-title"),
       status: executionDiversity,
     },
     {
-      label: <Translation id="page-staking-considerations-saas-8-title" />,
+      label: t("page-staking-considerations-saas-8-title"),
       status: consensusDiversity,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-8-title" />,
+      label: t("page-staking-considerations-solo-8-title"),
       status: selfCustody,
     },
     {
-      label: <Translation id="page-staking-considerations-pools-8-title" />,
+      label: t("page-staking-considerations-pools-8-title"),
       status: liquidityToken,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-9-title" />,
+      label: t("page-staking-considerations-solo-9-title"),
       status: economical,
     },
-  ]
-
-  const filteredData = data.filter(
-    (item): item is Required<DataType> => !!item.status
-  )
+  ].filter(({ status }) => !!status)
 
   return (
     <Flex
@@ -180,7 +181,7 @@ export const StakingProductCard: React.FC<ICardProps> = ({
         borderRadius="base"
         maxH={24}
       >
-        {!!Svg && <Svg fontSize="2rem" color="white" />}
+        {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
         <Heading as="h4" fontSize="2xl" color="white">
           {name}
         </Heading>
@@ -203,45 +204,42 @@ export const StakingProductCard: React.FC<ICardProps> = ({
         flex={1}
         alignItems="flex-start"
       >
-        {platforms &&
-          platforms.map((platform, idx) => (
-            <StakingBadge type="platform" key={idx}>
-              {platform}
-            </StakingBadge>
-          ))}
-        {ui &&
-          ui.map((_ui, idx) => (
-            <StakingBadge type="ui" key={idx}>
-              {_ui}
-            </StakingBadge>
-          ))}
+        {platforms.map((platform, idx) => (
+          <StakingBadge type="platform" key={idx}>
+            {platform}
+          </StakingBadge>
+        ))}
+        {ui.map((_ui, idx) => (
+          <StakingBadge type="ui" key={idx}>
+            {_ui}
+          </StakingBadge>
+        ))}
       </Flex>
       <Box {...PADDED_DIV_STYLE} py={0}>
         <List m={0} gap={3}>
-          {filteredData &&
-            filteredData.map(({ label, status }, idx) => (
-              <ListItem
-                as={Flex}
-                key={idx}
-                textTransform="uppercase"
-                fontSize="xs"
-                lineHeight="0.875rem"
-                letterSpacing="wider"
-                my={4}
-                ms="auto"
-                me={0}
-                gap="1em"
-                alignItems="center"
-              >
-                <Status status={status} />
-                {label}
-              </ListItem>
-            ))}
+          {data.map(({ label, status }, idx) => (
+            <ListItem
+              as={Flex}
+              key={idx}
+              textTransform="uppercase"
+              fontSize="xs"
+              lineHeight="0.875rem"
+              letterSpacing="wider"
+              my="4"
+              ms="auto"
+              me={0}
+              gap="1em"
+              alignItems="center"
+            >
+              <Status status={status} />
+              {label}
+            </ListItem>
+          ))}
         </List>
       </Box>
       <Box {...PADDED_DIV_STYLE}>
-        <ButtonLink to={url} customEventOptions={matomo} width="100%">
-          <Translation id="page-staking-products-get-started" />
+        <ButtonLink href={url} customEventOptions={matomo} width="100%">
+          {t("page-staking-products-get-started")}
         </ButtonLink>
       </Box>
     </Flex>

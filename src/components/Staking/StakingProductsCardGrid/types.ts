@@ -34,7 +34,7 @@ export type Product = {
   matomo: MatomoEventOptions
 }
 
-type StakingProductsType = typeof stakingProducts
+export type StakingProductsType = typeof stakingProducts
 
 export type NodeToolsType = StakingProductsType["nodeTools"]
 export type KeyGenType = StakingProductsType["keyGen"]

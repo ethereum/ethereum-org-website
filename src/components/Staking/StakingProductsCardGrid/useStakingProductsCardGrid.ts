@@ -33,10 +33,7 @@ export const useStakingProductsCardGrid = ({
     const categoryProducts = stakingProducts[category]
     const products: Array<Product> = []
 
-    function mapCatProducts<T extends unknown>(
-      products: T[],
-      cb: (listing: T) => Product
-    ) {
+    function mapCatProducts<T>(products: T[], cb: (listing: T) => Product) {
       return products.map((item) => cb(item))
     }
 
@@ -111,17 +108,16 @@ export const useStakingProductsCardGrid = ({
       )
     }
 
-    if (products) {
-      updateRankedProducts(
-        shuffle(products)
-          .map((product) => ({
-            ...product,
-            rankingScore: getRankingScore(product),
-          }))
-          .sort((a, b) => b.rankingScore - a.rankingScore)
-      )
-    }
-  }, [LUM, SAT, category])
+    updateRankedProducts(
+      shuffle(products)
+        .map((product) => ({
+          ...product,
+          rankingScore: getRankingScore(product),
+        }))
+        .sort((a, b) => b.rankingScore - a.rankingScore)
+    )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return {
     rankedProducts,

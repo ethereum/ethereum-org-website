@@ -5,14 +5,14 @@ import { StakingProductCard } from "./StakingProductCard"
 import { StakingProductsCategoryKeys } from "./types"
 import { useStakingProductsCardGrid } from "./useStakingProductsCardGrid"
 
-export interface IProps {
+export type StakingProductsCardGridProps = {
   category: StakingProductsCategoryKeys
 }
 
-const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
+const StakingProductsCardGrid = ({
+  category,
+}: StakingProductsCardGridProps) => {
   const { rankedProducts } = useStakingProductsCardGrid({ category })
-
-  if (!rankedProducts) return null
 
   return (
     <SimpleGrid
@@ -28,4 +28,4 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
   )
 }
 
-export default StakingProductCardGrid
+export default StakingProductsCardGrid
