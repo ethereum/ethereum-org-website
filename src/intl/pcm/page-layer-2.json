@@ -49,7 +49,7 @@
   "layer-2-optimistic-rollups-description": "Optimistic rollups are 'optimistic' when we see say transactions dey assumed to be valid, but dem fit challenge am if e need. If dem suspect an invalid transactions, dem fit run fault proof to see if e don take place.",
   "layer-2-optimistic-rollups-childSentance": "More on optimistic rollups",
   "layer-2-zk-rollups-title": "Zero-knowledge rollups",
-  "layer-2-zk-rollups-description": "Zero knowledge rollups dey use validity proofs where the transactons dey offcahin and the the data wey dem compress go go ethereum mainnet as proof of their validity.",
+  "layer-2-zk-rollups-description": "Zero knowledge rollups dey use validity proofs where the transactons dey offcahin and the data wey dem compress go go ethereum mainnet as proof of their validity.",
   "layer-2-zk-rollups-childSentance": "More tori for ZK-rollups",
   "layer-2-dyor-title": "Make yor own research: kasala for layer 2",
   "layer-2-dyor-1": "Plenty layer 2 projects dey young and dem still need make users trust some operators make dem talk true on the decentralized networks. make you dey do your own research to take know if you dey comfortable with any risk involved.",

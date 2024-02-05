@@ -18,9 +18,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook 7, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. See [Storybook 7 docs](https://storybook.js.org/docs/react/get-started/whats-a-story) for details.
->
-> These docs are also still a work in progress as we create new stories inline with the new Design System. Check back here regularly for updates to the approach and structure as we keep inline with the latest Storybook versions and usage.
+> 🚨 NOTE: This project uses Storybook v7, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
@@ -42,10 +40,12 @@ The initial structure of each story file will look something like this (in types
 ```tsx
 import ComponentA from "."
 
+type ComponentAType = typeof ComponentA
+
 const meta {
   title: "ComponentA",
   component: ComponentA
-} satisfies Meta<typeof ComponentA>
+} satisfies Meta<ComponentAType>
 
 export default meta
 type Story = StoryObj<typeof meta>;
@@ -68,10 +68,12 @@ Let's say for a `Button` component with different style variants...
 ```tsx
 import Button from "."
 
+type ButtonType = typeof Button
+
 const meta {
   title: "Button",
   component: Button
-} satisfies Meta<typeof Button>
+} satisfies Meta<ButtonType>
 
 export default meta
 type Story = StoryObj<typeof meta>;
@@ -141,7 +143,7 @@ The dashboard where you view each story has a number of different addons availab
 
 Outlined below are each area going from left to right in the selections.
 
-| Sidebar above the preview                | Dashboard below the preview                                                                                                                                                                                                                                                |
+| Toolbar above the preview                | Panel below the preview                                                                                                                                                                                                                                                    |
 | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1. Rerender preview                      | 1. Controls - allows you to interact with a component’s args (inputs) dynamically. Experiment with alternate configurations of the component to discover edge cases. See [Controls addon docs](https://storybook.js.org/docs/7.0/react/essentials/controls)                |
 | 2. Zoom In                               | 2. Actions (if applicable) - help you verify interactions produce the correct outputs via callbacks. See [Actions addon docs](https://storybook.js.org/docs/7.0/react/essentials/actions)                                                                                  |

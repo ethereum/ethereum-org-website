@@ -1,11 +1,12 @@
-import { Meta, StoryObj } from "@storybook/react"
 import React from "react"
+import { Meta, StoryObj } from "@storybook/react"
+
 import DismissableBannerComponent from "../Banners/DismissableBanner"
 
 const meta = {
   component: DismissableBannerComponent,
   title: "DismissableBanner",
-} as Meta<typeof DismissableBannerComponent>
+} satisfies Meta<typeof DismissableBannerComponent>
 
 export default meta
 /**
@@ -21,5 +22,13 @@ export const DismissableBanner: StoryObj<typeof meta> = {
   },
   play: () => {
     localStorage.setItem(dismissableBannerStoryPageKey, "false")
+  },
+  render: () => {
+    const children = <div>{bannerText}</div>
+    return (
+      <DismissableBannerComponent storageKey={dismissableBannerStoryPageKey}>
+        {children}
+      </DismissableBannerComponent>
+    )
   },
 }

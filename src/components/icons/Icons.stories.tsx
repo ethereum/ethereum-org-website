@@ -1,5 +1,6 @@
-import { Center, Flex, SimpleGrid } from "@chakra-ui/react"
 import * as React from "react"
+import { Center, Flex, SimpleGrid } from "@chakra-ui/react"
+
 import { EthHomeIcon } from "./EthHomeIcon"
 import { FeedbackGlyphIcon } from "./FeedbackGlyphIcon"
 import { FeedbackThumbsUpIcon } from "./FeedbackThumbsUpIcon"
@@ -13,8 +14,8 @@ import {
 } from "./quiz"
 import {
   DappnodeIcon,
-  DecentralizationGlyphIcon,
   DecentralizationEthGlyphIcon,
+  DecentralizationGlyphIcon,
   DownloadGlyphIcon,
   EarthGlyphIcon,
   HardwareGlyphIcon,
@@ -25,6 +26,7 @@ import {
 } from "./run-a-node"
 import {
   AbyssGlyphIcon,
+  AllnodesGlyphIcon,
   AnkrGlyphIcon,
   AuditedIcon,
   AvadoGlyphIcon,
@@ -32,7 +34,6 @@ import {
   BloxstakingGlyphIcon,
   BugBountyIcon,
   CautionProductGlyphIcon,
-  StakingDappnodeGlyphIcon,
   DefaultOpenSourceGlyphIcon,
   DockerGlyphIcon,
   EconomicalIcon,
@@ -43,6 +44,7 @@ import {
   LiquidityTokenIcon,
   MultiClientIcon,
   OpenSourceStakingIcon,
+  P2PGlyphIcon,
   PermissionlessIcon,
   RocketPoolGlyphIcon,
   RockXGlyphIcon,
@@ -50,6 +52,7 @@ import {
   StafiGlyphIcon,
   StakefishGlyphIcon,
   StakewiseGlyphIcon,
+  StakingDappnodeGlyphIcon,
   StakingGlyphCentralizedIcon,
   StakingGlyphCloudIcon,
   StakingGlyphCPUIcon,
@@ -60,7 +63,6 @@ import {
   UnknownProductGlyphIcon,
   WagyuGlyphIcon,
   WarningProductGlyphIcon,
-  AllnodesGlyphIcon,
 } from "./staking"
 import {
   BrowserIcon,
@@ -123,6 +125,7 @@ const iconsDefinitions = [
   EconomicalIcon,
   EthpoolGlyphIcon,
   GreenCheckProductGlyphIcon,
+  P2PGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
   LiquidityTokenIcon,

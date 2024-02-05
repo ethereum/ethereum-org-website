@@ -1,21 +1,13 @@
-import React from "react"
 import { Box, useColorModeValue } from "@chakra-ui/react"
 
-import darkVideo from "../assets/ethereum-hero-dark.mp4"
-import lightVideo from "../assets/ethereum-hero-light.mp4"
-
-export interface IProps {
-  className?: string
-  videoSrc?: string
-}
-
-const EthVideo: React.FC<IProps> = ({ className, videoSrc }) => {
-  const videoFile = useColorModeValue(lightVideo, darkVideo)
-
-  const src = videoSrc ? videoSrc : videoFile
+const EthVideo = () => {
+  const src = useColorModeValue(
+    "ethereum-hero-light.mp4",
+    "ethereum-hero-dark.mp4"
+  )
 
   return (
-    <Box className={className}>
+    <Box>
       <video
         id="hero-video"
         width="100%"

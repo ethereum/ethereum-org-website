@@ -1,13 +1,14 @@
 import React from "react"
+import { useTranslation } from "next-i18next"
 import { Text } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
-import { useTranslation } from "react-i18next"
+
 import BannerNotification from "."
 
 const meta = {
   title: "PostMergeBanner",
   component: BannerNotification,
-} as Meta<typeof BannerNotification>
+} satisfies Meta<typeof BannerNotification>
 
 export default meta
 
@@ -21,7 +22,8 @@ export const PostMergeBanner: StoryObj<typeof meta> = {
     shouldShow: true,
   },
   render: (args) => {
-    const { t } = useTranslation()
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { t } = useTranslation("page-upgrades")
 
     return (
       <BannerNotification {...args}>

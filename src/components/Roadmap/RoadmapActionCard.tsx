@@ -1,20 +1,21 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import {
-  Text,
   Center,
   Flex,
   Heading,
   LinkBox,
   LinkOverlay,
+  Text,
 } from "@chakra-ui/react"
 
-import { ButtonLink } from "../Buttons"
-import GatsbyImage from "../GatsbyImage"
+import { ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
 
-import { getImage } from "../../utils/image"
+import futureProofing from "@/public/roadmap/roadmap-future.png"
+import security from "@/public/roadmap/roadmap-security.png"
+import scaling from "@/public/roadmap/roadmap-transactions.png"
+import userExperience from "@/public/roadmap/roadmap-ux.png"
 
-interface IProps {
+type RoadmapActionCardProps = {
   to: string
   alt: string
   image: string
@@ -23,61 +24,21 @@ interface IProps {
   buttonText: string
 }
 
-const RoadmapActionCard: React.FC<IProps> = ({
+const RoadmapActionCard = ({
   to,
   alt,
   image,
   title,
   description,
   buttonText,
-}) => {
-  const data = useStaticQuery(graphql`
-    query RoadmapActionCard {
-      futureProofing: file(relativePath: { eq: "roadmap/roadmap-future.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 400
-            height: 260
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-      scaling: file(relativePath: { eq: "roadmap/roadmap-transactions.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 260
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-      security: file(relativePath: { eq: "roadmap/roadmap-security.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 380
-            height: 260
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-      userExperience: file(relativePath: { eq: "roadmap/roadmap-ux.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 380
-            height: 260
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
+}: RoadmapActionCardProps) => {
+  const images = {
+    futureProofing,
+    scaling,
+    security,
+    userExperience,
+  }
+  const imgSrc = images[image] ?? images.futureProofing
 
   return (
     <LinkBox
@@ -87,11 +48,7 @@ const RoadmapActionCard: React.FC<IProps> = ({
       borderColor="lightBorder"
     >
       <Center background="cardGradient" h="260px">
-        <GatsbyImage
-          image={getImage(data[image])!}
-          alt={alt}
-          objectFit="contain"
-        />
+        <Image src={imgSrc} alt={alt} style={{ objectFit: "contain" }} />
       </Center>
       <Flex p={6} flex="1" flexDir="column" justify="space-between" gap={4}>
         <Heading as="h3" size="md">

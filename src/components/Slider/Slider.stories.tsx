@@ -7,6 +7,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import SliderComponent, { EmblaSlide } from "."
 
 const meta = {

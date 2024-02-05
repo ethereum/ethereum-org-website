@@ -1,15 +1,13 @@
-import axios from "axios"
-import { useState, useEffect } from "react"
-import { getData } from "../utils/cache"
+import { useEffect, useState } from "react"
 
 export const useEthPrice = (): number => {
   const [ethPrice, setEthPrice] = useState<number>(0)
   useEffect(() => {
     ;(async () => {
       try {
-        const data = await getData<{ ethereum: { usd: number } }>(
+        const data: { ethereum: { usd: number } } = await fetch(
           "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"
-        )
+        ).then((res) => res.json())
         const {
           ethereum: { usd },
         } = data

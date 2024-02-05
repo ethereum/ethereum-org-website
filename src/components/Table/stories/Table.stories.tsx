@@ -1,7 +1,9 @@
 import * as React from "react"
 import { Flex } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import TableComponent from ".."
+
 import {
   MdxDemoData,
   MdxEnergyConsumpData,
@@ -41,8 +43,12 @@ export const Tables: Story = {
 export const MockDocContent = {
   render: () => (
     <>
-      <TableComponent children={<MdxEnergyConsumpData />} variant="simple" />
-      <TableComponent children={<MdxTypesOfBridgesData />} />
+      <TableComponent variant="simple">
+        <MdxEnergyConsumpData />
+      </TableComponent>
+      <TableComponent>
+        <MdxTypesOfBridgesData />
+      </TableComponent>
     </>
   ),
 }
