@@ -27,9 +27,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
   const [filterValue, setFilterValue] = useState("")
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
-  const [browserLocalesInfo, setBrowserLocalesInfo] = useState<
-    LocaleDisplayInfo[]
-  >([])
+  const [browserLocales, setBrowserLocales] = useState<Lang[]>([])
 
   const localeToDisplayInfo = useCallback(
     (localeOption: Lang): LocaleDisplayInfo => {
@@ -81,6 +79,9 @@ export const useLanguagePicker = (handleClose?: () => void) => {
           ? totalWords || 0
           : dataItem?.words.approved || 0
 
+      const isBrowserPreference = browserLocales.includes(localeOption)
+      const isBrowserDefault =
+        browserLocales.length > 0 && browserLocales[0] === localeOption
       return {
         localeOption,
         approvalProgress,
@@ -88,9 +89,11 @@ export const useLanguagePicker = (handleClose?: () => void) => {
         targetName,
         englishName,
         wordsApproved,
+        isBrowserPreference,
+        isBrowserDefault,
       }
     },
-    [locale, t]
+    [browserLocales, locale, t]
   )
 
   // perform all the filtering and mapping when the filter value change
@@ -103,8 +106,11 @@ export const useLanguagePicker = (handleClose?: () => void) => {
       .map(
         (navLang) =>
           locales?.reduce((acc, cur) => {
-            if (cur.toLowerCase() === navLang) return cur
-            if (navLang.includes(cur.toLowerCase()) && acc !== navLang)
+            if (cur.toLowerCase() === navLang.toLowerCase()) return cur
+            if (
+              navLang.toLowerCase().includes(cur.toLowerCase()) &&
+              acc !== navLang
+            )
               return cur
             return acc
           }, "") as Lang
@@ -112,12 +118,16 @@ export const useLanguagePicker = (handleClose?: () => void) => {
       .filter((i) => !!i) // Remove those without matches
 
     // Remove duplicate matches
-    const browserLocales: Lang[] = Array.from(new Set(allBrowserLocales))
+    setBrowserLocales(Array.from(new Set(allBrowserLocales)))
 
     const displayNames: LocaleDisplayInfo[] =
-      (locales as Lang[])
-        ?.map(localeToDisplayInfo)
-        .sort((a, b) => b.approvalProgress - a.approvalProgress) || []
+      (locales as Lang[])?.map(localeToDisplayInfo).sort((a, b) => {
+        if (a.isBrowserDefault) return -1
+        if (b.isBrowserDefault) return 1
+        if (a.isBrowserPreference) return -1
+        if (b.isBrowserPreference) return 1
+        return b.approvalProgress - a.approvalProgress
+      }) || []
 
     setFilteredNames(
       displayNames.filter(
@@ -126,17 +136,6 @@ export const useLanguagePicker = (handleClose?: () => void) => {
             .toLowerCase()
             .includes(filterValue.toLowerCase())
       )
-    )
-    // Get display info for each browser locale
-    setBrowserLocalesInfo(
-      browserLocales.map((browserLocale) => {
-        const item = displayNames.find(
-          ({ localeOption }) => localeOption === browserLocale
-        )
-        if (!item)
-          throw new Error("Missing browser locale info for " + browserLocale)
-        return item
-      })
     )
   }, [filterValue, localeToDisplayInfo, locales])
 
@@ -180,7 +179,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
     firstItemRef,
     filterValue,
     setFilterValue,
-    browserLocalesInfo,
+    browserLocales,
     filteredNames,
   }
 }

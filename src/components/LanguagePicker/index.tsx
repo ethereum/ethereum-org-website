@@ -3,7 +3,6 @@ import {
   Flex,
   Input,
   Menu,
-  MenuDivider,
   MenuItem as ChakraMenuItem,
   MenuList,
   type MenuListProps,
@@ -37,7 +36,7 @@ const LanguagePicker = ({
     firstItemRef,
     filterValue,
     setFilterValue,
-    browserLocalesInfo,
+    browserLocales,
     filteredNames,
   } = useLanguagePicker(handleClose)
 
@@ -81,28 +80,6 @@ const LanguagePicker = ({
           bg="background.highlight"
           sx={{ "[role=menuitem]": { py: "3", px: "2" } }}
         >
-          {browserLocalesInfo.length > 0 && (
-            <>
-              <Text fontSize="xs" color="body.medium">
-                {t("page-languages-browser-language")}
-              </Text>
-              {browserLocalesInfo.map((displayInfo) => (
-                <MenuItem
-                  key={`item-${displayInfo.localeOption}`}
-                  displayInfo={displayInfo}
-                  onClick={() =>
-                    onClose({
-                      eventAction: "Locale chosen (browser preference)",
-                      eventName: displayInfo.localeOption,
-                    })
-                  }
-                  isFeatured
-                />
-              ))}
-              <MenuDivider borderColor="body.medium" my="4" mx="-2" />
-            </>
-          )}
-
           <Text fontSize="xs" color="body.medium">
             {t("page-languages-filter-label")}{" "}
             <Text as="span" textTransform="lowercase">
@@ -136,22 +113,19 @@ const LanguagePicker = ({
             />
           </ChakraMenuItem>
 
-          {filteredNames.map((displayInfo, index) => {
-            const firstResult = index === 0
-            return (
-              <MenuItem
-                key={"item-" + displayInfo.localeOption}
-                displayInfo={displayInfo}
-                ref={firstResult ? firstItemRef : null}
-                onClick={() =>
-                  onClose({
-                    eventAction: "Locale chosen",
-                    eventName: displayInfo.localeOption,
-                  })
-                }
-              />
-            )
-          })}
+          {filteredNames.map((displayInfo, index) => (
+            <MenuItem
+              key={"item-" + displayInfo.localeOption}
+              displayInfo={displayInfo}
+              ref={index === 0 ? firstItemRef : null}
+              onClick={() =>
+                onClose({
+                  eventAction: "Locale chosen",
+                  eventName: displayInfo.localeOption,
+                })
+              }
+            />
+          ))}
 
           {filteredNames.length === 0 && (
             <NoResultsCallout

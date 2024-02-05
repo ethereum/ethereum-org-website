@@ -231,6 +231,8 @@ export type LocaleDisplayInfo = {
   englishName: string
   approvalProgress: number
   wordsApproved: number
+  isBrowserPreference?: boolean
+  isBrowserDefault?: boolean
 }
 
 type TranslatedStats = {
