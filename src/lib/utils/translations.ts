@@ -149,7 +149,7 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/gas")) {
     primaryNamespace = "page-gas"
-    requiredNamespaces = [...requiredNamespaces, "page-gas"]
+    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
   if (path.startsWith("/what-is-ethereum")) {
