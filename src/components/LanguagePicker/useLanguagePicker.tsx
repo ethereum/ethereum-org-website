@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { useDisclosure } from "@chakra-ui/react"
+import { useDisclosure, type UseDisclosureReturn } from "@chakra-ui/react"
 
 import type {
   I18nLocale,
@@ -19,11 +19,18 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 const data = progressData as ProjectProgressData[]
 
-export const useLanguagePicker = (handleClose?: () => void) => {
+export const useLanguagePicker = (
+  handleClose?: () => void,
+  menuState?: UseDisclosureReturn
+) => {
   const { t } = useTranslation("page-languages")
   const { locale, locales } = useRouter()
-  const inputRef = useRef<HTMLInputElement>(null)
-  const firstItemRef = useRef<HTMLAnchorElement>(null)
+  const refs = {
+    inputRef: useRef<HTMLInputElement>(null),
+    firstItemRef: useRef<HTMLAnchorElement>(null),
+    noResultsRef: useRef<HTMLAnchorElement>(null),
+    footerRef: useRef<HTMLAnchorElement>(null),
+  }
   const [filterValue, setFilterValue] = useState("")
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
@@ -143,6 +150,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
 
   const onOpen = () => {
     menu.onOpen()
+    menuState?.onOpen()
     trackCustomEvent({
       ...eventBase,
       eventName: "Opened",
@@ -160,6 +168,7 @@ export const useLanguagePicker = (handleClose?: () => void) => {
     setFilterValue("")
     handleClose && handleClose()
     menu.onClose()
+    menuState?.onClose()
     trackCustomEvent(
       (customMatomoEvent
         ? { ...eventBase, ...customMatomoEvent }
@@ -169,9 +178,8 @@ export const useLanguagePicker = (handleClose?: () => void) => {
 
   return {
     t,
+    refs,
     disclosure: { isOpen, onOpen, onClose },
-    inputRef,
-    firstItemRef,
     filterValue,
     setFilterValue,
     filteredNames,

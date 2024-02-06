@@ -42,6 +42,7 @@ const Nav: FC<IProps> = ({ path }) => {
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
+  const languagePickerState = useDisclosure()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
   /**
    * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
@@ -54,6 +55,7 @@ const Nav: FC<IProps> = ({ path }) => {
     if (e.metaKey || e.ctrlKey) {
       toggleColorMode()
     } else {
+      if (languagePickerState.isOpen) return
       languagePickerRef.current?.click()
     }
   })
@@ -135,6 +137,7 @@ const Nav: FC<IProps> = ({ path }) => {
                   w="xs"
                   inset="unset"
                   top="unset"
+                  menuState={languagePickerState}
                 >
                   <MenuButton
                     as={Button}
@@ -144,7 +147,6 @@ const Nav: FC<IProps> = ({ path }) => {
                     transition="color 0.2s"
                     _hover={{
                       color: "primary.hover",
-                      bg: "primary.lowContrast",
                       "& svg": {
                         transform: "rotate(10deg)",
                         transition: "transform 0.5s",
