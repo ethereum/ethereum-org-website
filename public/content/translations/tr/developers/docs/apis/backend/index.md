@@ -98,6 +98,12 @@ Bu kütüphaneler, bir Ethereum düğümü ile doğrudan etkileşim kurmanın ka
 - [Belgeler](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_EVM tabanlı blockchainler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_Ethereum ve açık kaynaklı yazılım tarafından desteklenen bir hizmet olarak Ethereum Classic API'ları._**
 
 - [rivet.cloud](https://rivet.cloud)
