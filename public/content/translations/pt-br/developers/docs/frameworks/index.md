@@ -48,6 +48,12 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 - [Documentação](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_Biblioteca Kotlin/Java/Android assíncrona de alta desempenho para blockchains baseadas em EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Exemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **OpenZeppelin SDK -** **_O Ultimate Smart Contract Toolkit: Um conjunto de ferramentas para ajudar você a desenvolver, compilar, atualizar, implantar e interagir com contratos inteligentes._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

@@ -98,6 +98,12 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 - [Documentação](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_Biblioteca Kotlin/Java/Android assíncrona de alta performance para blockchains baseadas em EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Exemplos](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_Ethereum e Ethereum Classic APIs como serviço, desenvolvido por software de código aberto._**
 
 - [rivet.cloud](https://rivet.cloud)
