@@ -98,6 +98,12 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 - [Dokumentáció](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_Aszinkron, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Példák](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_Ethereum és Ethereum Classic API-k mint szolgáltatás, amelyeket nyílt forráskódú szoftver működtet._**
 
 - [rivet.cloud](https://rivet.cloud)
