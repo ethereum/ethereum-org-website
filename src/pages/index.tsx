@@ -530,7 +530,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-developers-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/dapps/?category=technology">
+              <ButtonLink to="/developers/">
                 <Translation id="page-index:page-index-developers-button" />
               </ButtonLink>
             </ButtonLinkRow>
