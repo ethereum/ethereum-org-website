@@ -574,17 +574,15 @@ Of course, you don't really care about providing a user interface for `Greeter`.
 1. Specify to create a wagmi application.
 
    ```sh copy
-   npm create wagmi
+   pnpm create wagmi
    ```
 
 1. Name the application.
 
-1. Select the **Vite (React)** framework.
+1. Select **React** framework.
 
-1. Select **Rainbow Kit**.
+1. Select the **Vite** variant.
 
-1. Press Enter.
-
-1. Enter your own WalletConnect Project Id.
+1. You can [add Rainbow kit](https://www.rainbowkit.com/docs/installation#manual-setup).
 
 Now go and make your contracts usable for the wide world.
