@@ -36,7 +36,18 @@ const Menu = ({ sections }: NavMenuProps) => {
               return (
                 <NavigationMenu.Item key={sectionKey}>
                   <NavigationMenu.Trigger asChild>
-                    <Button py="2" px="4" variant="link">
+                    <Button
+                      py="2"
+                      px="4"
+                      variant="ghost"
+                      color="body.base"
+                      sx={{
+                        '&[data-state="open"]': {
+                          bg: "primary.lowContrast",
+                          color: "primary.base",
+                        },
+                      }}
+                    >
                       {label}
                     </Button>
                   </NavigationMenu.Trigger>
