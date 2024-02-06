@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "Documentatie, handleidingen en tools voor ontwikkelaars die bouwen op Ethereum.",
   "page-developers-mev-desc": "Een introductie tot maximaal extraheerbare waarde (MEV)",
   "page-developers-mev-link": "Maximale extraheerbare waarde (MEV)",
-  "page-developers-mining-desc": "Hoe nieuwe blocks worden gemaakt en consensus wordt bereikt",
+  "page-developers-mining-desc": "Hoe nieuwe blokken worden gecreëerd en consensus werd bereikt met behulp van proof-of-work",
   "page-developers-mining-link": "Mining",
   "page-developers-mining-algorithms-desc": "Informatie over Ethereums mining-algoritmes",
   "page-developers-mining-algorithms-link": "Mining-algoritmes",
@@ -92,5 +92,6 @@
   "page-developers-data-structures-and-encoding": "Gegevensstructuren en codering",
   "page-developers-data-structures-and-encoding-link": "Gegevensstructuren en codering",
   "page-developers-data-structures-and-encoding-desc": "Introductie tot de gegevensstructuren en het coderingsschema gebruikt in de Ethereum stack",
-  "alt-eth-blocks": "Illustratie van blokken die worden georganiseerd als een ETH-symbool"
+  "alt-eth-blocks": "Illustratie van blokken die worden georganiseerd als een ETH-symbool",
+  "page-assets-doge": "Doge maakt gebruik van dapps"
 }
