@@ -58,7 +58,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
       pt="2 !important"
       alignItems="start"
       borderRadius="base"
-      bg="transparent"
+      bg={isCurrent ? "background.base" : "transparent"}
       color="body.base"
       textDecoration="none"
       data-group
@@ -108,7 +108,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
             {sourceName}
           </Text>
         </Box>
-        {isCurrent && <Icon as={BsCheck} fontSize="2xl" />}
+        {isCurrent && <Icon as={BsCheck} fontSize="2xl" color="primary.highContrast" />}
       </Flex>
       <Text
         textTransform="lowercase"
@@ -119,7 +119,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
         {progress} {t("page-languages-translated")} • {words}{" "}
         {t("page-languages-words")}
       </Text>
-      <ProgressBar value={approvalProgress} isCurrent={isCurrent} />
+      <ProgressBar value={approvalProgress} />
     </ChakraMenuItem>
   )
 })
