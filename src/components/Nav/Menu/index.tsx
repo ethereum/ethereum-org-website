@@ -1,34 +1,22 @@
-import { useRef, useState } from "react"
-import { motion } from "framer-motion"
-import { Menu as ArkMenu, type MenuOpenChangeDetails } from "@ark-ui/react"
-import {
-  Box,
-  Flex,
-  type FlexProps,
-  Grid,
-  Text,
-  useDisclosure,
-} from "@chakra-ui/react"
+import { useRef } from "react"
+import { Box, Flex, Grid } from "@chakra-ui/react"
+import * as NavigationMenu from "@radix-ui/react-navigation-menu"
+import * as Portal from "@radix-ui/react-portal"
 
 import { Button } from "@/components/Buttons"
+import Link from "@/components/Link"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { LvlRefs, NavSectionKey, NavSections } from "../types"
-
-import LvlPortal from "./LvlPortal"
+import type { LvlRefs, NavSections } from "../types"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-type NavMenuProps = FlexProps & {
+type NavMenuProps = {
   sections: NavSections
 }
 
-const Menu = ({ sections, ...props }: NavMenuProps) => {
-  const { isOpen, onOpen, onClose } = useDisclosure()
-
-  const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
-
+const Menu = ({ sections }: NavMenuProps) => {
   const { direction } = useRtlFlip()
 
   const refs: LvlRefs = {
@@ -37,77 +25,151 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
     lvl3: useRef(null),
   }
 
-  const handleOpenChange = (
-    { open }: MenuOpenChangeDetails,
-    sectionKey: NavSectionKey
-  ): void => {
-    setActiveSection(open ? sectionKey : null)
-    open ? onOpen() : onClose()
-  }
-
   return (
     <>
-      <Flex alignItems="center" m="0" {...props}>
-        {SECTION_LABELS.map((sectionKey) => {
-          const { label, items } = sections[sectionKey]
-          const isActive = activeSection === sectionKey
-          return (
-            <ArkMenu.Root
-              key={label}
-              dir={direction}
-              onOpenChange={(details) => handleOpenChange(details, sectionKey)}
-              loop
-            >
-              <ArkMenu.Trigger asChild>
-                <Button
-                  variant="ghost"
-                  m="0"
-                  color={isActive ? "primary.base" : "menu.lvl1.body"}
-                >
-                  {isActive && (
-                    <motion.div
-                      style={{
-                        position: "absolute",
-                        inset: "0",
-                        borderRadius: "var(--eth-radii-base)",
-                        background: "var(--eth-colors-primary-lowContrast)",
-                      }}
-                      layoutId="menu-section-bg-highlight"
-                      transition={{ duration: 0.2 }}
-                    />
-                  )}
-                  <Text as="span" position="relative">
-                    {label}
-                  </Text>
-                </Button>
-              </ArkMenu.Trigger>
-              <LvlPortal lvl={1} refs={refs} items={items} />
-            </ArkMenu.Root>
-          )
-        })}
-      </Flex>
+      <NavigationMenu.Root dir={direction} orientation="horizontal">
+        <NavigationMenu.List asChild>
+          <Flex listStyleType="none">
+            {SECTION_LABELS.map((sectionKey) => {
+              const { label: sectionLabel, items: l1Items } =
+                sections[sectionKey]
+              return (
+                <NavigationMenu.Item key={sectionKey}>
+                  <NavigationMenu.Trigger asChild>
+                    <Button py="2" px="4" variant="link">
+                      {sectionLabel}
+                    </Button>
+                  </NavigationMenu.Trigger>
+                  <NavigationMenu.Content>
+                    {/* Content goes to Viewport, wrapped in Portal, referencing Grid column */}
+                    <NavigationMenu.Sub>
+                      <NavigationMenu.List asChild>
+                        <Box listStyleType="none">
+                          {l1Items.map(
+                            ({
+                              label: l1Label,
+                              description: l1Description,
+                              ...l1Action
+                            }) => {
+                              const l2Items = l1Action.items || []
+                              return (
+                                <NavigationMenu.Item key={l1Label}>
+                                  {"href" in l1Action ? (
+                                    <NavigationMenu.Link asChild>
+                                      <Button as={Link} href={l1Action.href}>
+                                        {l1Label}
+                                      </Button>
+                                    </NavigationMenu.Link>
+                                  ) : (
+                                    <>
+                                      <NavigationMenu.Trigger>
+                                        <Button>{l1Label}</Button>
+                                      </NavigationMenu.Trigger>
+                                      <NavigationMenu.Content>
+                                        <NavigationMenu.Sub>
+                                          <NavigationMenu.List asChild>
+                                            <Box listStyleType="none">
+                                              {l2Items.map(
+                                                ({
+                                                  label: l2Label,
+                                                  description: l2Description,
+                                                  ...l2Action
+                                                }) => {
+                                                  return (
+                                                    <NavigationMenu.Item
+                                                      key={l2Label}
+                                                    >
+                                                      <NavigationMenu.Trigger
+                                                        asChild
+                                                      >
+                                                        <Button>
+                                                          {l2Label}
+                                                        </Button>
+                                                      </NavigationMenu.Trigger>
+                                                      <NavigationMenu.Content>
+                                                        <NavigationMenu.Sub>
+                                                          <NavigationMenu.List
+                                                            asChild
+                                                          >
+                                                            <Box listStyleType="none">
+                                                              {l2Action.items?.map(
+                                                                ({
+                                                                  label:
+                                                                    l3Label,
+                                                                  description:
+                                                                    l3Description,
+                                                                  ...l3Action
+                                                                }) => (
+                                                                  <NavigationMenu.Item
+                                                                    key={
+                                                                      l3Label
+                                                                    }
+                                                                  >
+                                                                    <NavigationMenu.Trigger
+                                                                      asChild
+                                                                    >
+                                                                      <Button>
+                                                                        {
+                                                                          l3Label
+                                                                        }
+                                                                      </Button>
+                                                                    </NavigationMenu.Trigger>
+                                                                    <NavigationMenu.Content>
+                                                                      <NavigationMenu.Sub></NavigationMenu.Sub>
+                                                                    </NavigationMenu.Content>
+                                                                  </NavigationMenu.Item>
+                                                                )
+                                                              )}
+                                                            </Box>
+                                                          </NavigationMenu.List>
+                                                          <NavigationMenu.Viewport />
+                                                        </NavigationMenu.Sub>
+                                                      </NavigationMenu.Content>
+                                                    </NavigationMenu.Item>
+                                                  )
+                                                }
+                                              )}
+                                            </Box>
+                                          </NavigationMenu.List>
+                                          <Portal.Root
+                                            container={refs.lvl3.current}
+                                          >
+                                            <NavigationMenu.Viewport />
+                                          </Portal.Root>
+                                        </NavigationMenu.Sub>
+                                      </NavigationMenu.Content>
+                                    </>
+                                  )}
+                                </NavigationMenu.Item>
+                              )
+                            }
+                          )}
+                        </Box>
+                      </NavigationMenu.List>
+                      <Portal.Root container={refs.lvl2.current}>
+                        <NavigationMenu.Viewport />
+                      </Portal.Root>
+                    </NavigationMenu.Sub>
+                  </NavigationMenu.Content>
+                </NavigationMenu.Item>
+              )
+            })}
+          </Flex>
+        </NavigationMenu.List>
+        <Portal.Root container={refs.lvl1.current}>
+          <NavigationMenu.Viewport />
+        </Portal.Root>
+      </NavigationMenu.Root>
+
       <Grid
         position="absolute"
-        visibility={isOpen ? "visible" : "hidden"}
         top="16.5"
         insetInline="0"
         templateColumns="repeat(3, 1fr)"
-        transition="height 1s ease-in-out"
         shadow="md"
         border="1px"
         borderColor="menu.stroke"
-        scrollBehavior="smooth"
-        bg={`menu.lvl${1}.background`}
-        sx={{
-          // Styling if Lvl2 is open
-          '&:has(#menu-box-lvl-2 [data-state="open"])': {
-            bg: "menu.lvl2.background",
-          },
-          // Styling if Lvl3 is open
-          '&:has(#menu-box-lvl-3 [data-state="open"])': {
-            bg: "menu.lvl3.background",
-          },
-        }}
+        bg="menu.lvl1.background"
       >
         <Box ref={refs.lvl1} id="menu-box-lvl-1" />
         <Box ref={refs.lvl2} id="menu-box-lvl-2" />
