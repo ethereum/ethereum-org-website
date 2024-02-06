@@ -1,5 +1,5 @@
 import { useRef } from "react"
-import { Box, Flex, Grid } from "@chakra-ui/react"
+import { Box, type BoxProps, Flex, Grid } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import * as Portal from "@radix-ui/react-portal"
 
@@ -13,11 +13,11 @@ import LvlContent from "./LvlContent"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-type NavMenuProps = {
+type NavMenuProps = BoxProps & {
   sections: NavSections
 }
 
-const Menu = ({ sections }: NavMenuProps) => {
+const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { direction } = useRtlFlip()
 
   const refs: LvlRefs = {
@@ -28,39 +28,41 @@ const Menu = ({ sections }: NavMenuProps) => {
 
   return (
     <>
-      <NavigationMenu.Root dir={direction} orientation="horizontal">
-        <NavigationMenu.List asChild>
-          <Flex listStyleType="none">
-            {SECTION_LABELS.map((sectionKey) => {
-              const { label, items } = sections[sectionKey]
-              return (
-                <NavigationMenu.Item key={sectionKey}>
-                  <NavigationMenu.Trigger asChild>
-                    <Button
-                      py="2"
-                      px="4"
-                      variant="ghost"
-                      color="body.base"
-                      sx={{
-                        '&[data-state="open"]': {
-                          bg: "primary.lowContrast",
-                          color: "primary.base",
-                        },
-                      }}
-                    >
-                      {label}
-                    </Button>
-                  </NavigationMenu.Trigger>
-                  <LvlContent lvl={1} items={items} refs={refs} />
-                </NavigationMenu.Item>
-              )
-            })}
-          </Flex>
-        </NavigationMenu.List>
-        <Portal.Root container={refs.lvl1.current}>
-          <NavigationMenu.Viewport />
-        </Portal.Root>
-      </NavigationMenu.Root>
+      <Box {...props}>
+        <NavigationMenu.Root dir={direction} orientation="horizontal">
+          <NavigationMenu.List asChild>
+            <Flex listStyleType="none">
+              {SECTION_LABELS.map((sectionKey) => {
+                const { label, items } = sections[sectionKey]
+                return (
+                  <NavigationMenu.Item key={sectionKey}>
+                    <NavigationMenu.Trigger asChild>
+                      <Button
+                        py="2"
+                        px="4"
+                        variant="ghost"
+                        color="body.base"
+                        sx={{
+                          '&[data-state="open"]': {
+                            bg: "primary.lowContrast",
+                            color: "primary.base",
+                          },
+                        }}
+                      >
+                        {label}
+                      </Button>
+                    </NavigationMenu.Trigger>
+                    <LvlContent lvl={1} items={items} refs={refs} />
+                  </NavigationMenu.Item>
+                )
+              })}
+            </Flex>
+          </NavigationMenu.List>
+          <Portal.Root container={refs.lvl1.current}>
+            <NavigationMenu.Viewport />
+          </Portal.Root>
+        </NavigationMenu.Root>
+      </Box>
 
       <Grid
         position="absolute"
