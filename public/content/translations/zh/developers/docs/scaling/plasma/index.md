@@ -171,7 +171,7 @@ Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这
 
 - [学习 Plasma](https://www.learnplasma.org/en/)
 - [关于何为“共享安全”以及它为何如此重要的简单提示](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [侧链、Plasma 与分片](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [侧链、Plasma 与分片](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [了解 Plasma（第一部分）：基础知识](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [Plasma 的一生](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 

@@ -15,7 +15,7 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import { TranslationKey } from "@/lib/types"
+import type { AnswerKey, TranslationKey } from "@/lib/types"
 
 import { useQuizWidgetContext } from "./context"
 
@@ -28,7 +28,7 @@ export const QuizRadioGroup = () => {
   } = useQuizWidgetContext()
   const { t } = useTranslation("learn-quizzes")
 
-  const handleSelection = (answerId: string) => {
+  const handleSelection = (answerId: AnswerKey) => {
     const isCorrect =
       answerId === questions[currentQuestionIndex].correctAnswerId
     setCurrentQuestionAnswerChoice({ answerId, isCorrect })

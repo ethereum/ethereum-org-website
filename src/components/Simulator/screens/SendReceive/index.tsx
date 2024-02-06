@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from "react"
 
+import type { PhoneScreenProps } from "@/lib/types"
+
 import { useEthPrice } from "../../../../hooks/useEthPrice"
 import {
   ETH_TRANSFER_FEE,
@@ -7,7 +9,6 @@ import {
   USD_RECEIVE_AMOUNT,
 } from "../../constants"
 import { defaultTokenBalances } from "../../constants"
-import { PhoneScreenProps } from "../../interfaces"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
@@ -20,7 +21,7 @@ import { SendFromContacts } from "./SendFromContacts"
 import { SendSummary } from "./SendSummary"
 import { Success } from "./Success"
 
-export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE

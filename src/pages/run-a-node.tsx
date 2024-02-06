@@ -38,6 +38,7 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageHero from "@/components/PageHero"
 import PageMetadata from "@/components/PageMetadata"
+import { StandaloneQuizWidget as QuizWidget } from "@/components/Quiz/QuizWidget"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -328,7 +329,7 @@ type RunANodeCard = {
 }
 
 export const getStaticProps = (async ({ locale }) => {
-  const requiredNamespaces = getRequiredNamespacesForPage("run-a-node")
+  const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
 
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
 
@@ -833,7 +834,7 @@ const RunANodePage = () => {
             </InlineLink>
           </li>
           <li>
-            <InlineLink to="https://vitalik.ca/general/2021/05/23/scaling.html">
+            <InlineLink to="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
               {t("page-run-a-node-further-reading-3-link")}
             </InlineLink>{" "}
             -{" "}
@@ -917,6 +918,7 @@ const RunANodePage = () => {
         </ul>
       </Content>
       <Content>
+        <QuizWidget quizKey="run-a-node" />
         <FeedbackCard />
       </Content>
     </GappedPage>

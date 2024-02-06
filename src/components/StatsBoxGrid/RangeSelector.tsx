@@ -4,17 +4,17 @@ import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 import { RANGES } from "@/lib/constants"
 
-interface IRangeSelectorProps {
+type RangeSelectorProps = {
   state: string
   setState: (state: string) => void
   matomo: MatomoEventOptions
 }
 
-export const RangeSelector: React.FC<IRangeSelectorProps> = ({
+export const RangeSelector = ({
   state,
   setState,
   matomo,
-}) => (
+}: RangeSelectorProps) => (
   <div>
     {RANGES.map((range, idx) => (
       <Button

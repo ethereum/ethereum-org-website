@@ -60,6 +60,6 @@ summaryPoints:
 - [«چگونه درختان ورکل اتریوم را مختصر و مفید می‌کنند» از Guillaume Ballet در دِوکان 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam از ETHDenver 2020 درباره کلاینت‌های بی‌حالت می‌گوید](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Fiest در پادکست Zero Knowledge، درباره درختان ورکل و بی‌حالتی توضیح می‌دهد](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Vitalik Buterin درباره درختان ورکل می‌گوید](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Vitalik Buterin درباره درختان ورکل می‌گوید](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist درباره درختان ورکل می‌گوید](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [مستندات مربوط به EIP درختان ورکل](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

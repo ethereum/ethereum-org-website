@@ -11,17 +11,18 @@ import {
   Text,
 } from "@chakra-ui/react"
 
+import type { ChildOnlyProp } from "@/lib/types"
+
 import Emoji from "../Emoji"
 import Pill from "../Pill"
 
 import { accordionButtonContent, CategoryNameType } from "./utils"
-import { ChildOnlyType } from "."
 
-export const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
+export const LeftColumnPanel = (props: ChildOnlyProp & Partial<BoxProps>) => (
   <Box flex="0 0 50%" maxW={{ lg: "75%" }} me={{ lg: 16 }} {...props} />
 )
 
-export const RightColumnPanel = (props: ChildOnlyType) => (
+export const RightColumnPanel = (props: ChildOnlyProp) => (
   <LeftColumnPanel me={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
 )
 

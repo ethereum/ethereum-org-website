@@ -60,13 +60,10 @@ import ZKRollupImage from "@/public/layer-2/zk_rollup.png"
 import DAOImage from "@/public/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
 
-interface ContentBoxProps extends BoxProps {
+type ContentBoxProps = BoxProps & {
   isLightGrayBg?: boolean
 }
-const ContentBox: React.FC<ContentBoxProps> = ({
-  isLightGrayBg,
-  ...rest
-}: ContentBoxProps) => (
+const ContentBox = ({ isLightGrayBg, ...rest }: ContentBoxProps) => (
   <Box
     px={8}
     py={12}
@@ -663,7 +660,7 @@ const Layer2Page = () => {
             <i>- Vitalik Buterin </i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://vitalik.ca/general/2021/01/05/rollup.html">
+            <InlineLink to="https://vitalik.eth.limo/general/2021/01/05/rollup.html">
               {t("an-incomplete-guide-to-rollups")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin</i>

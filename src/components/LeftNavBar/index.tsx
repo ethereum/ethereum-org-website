@@ -3,7 +3,7 @@ import { calc, Flex, type FlexProps, type HeadingProps } from "@chakra-ui/react"
 import type { ToCItem } from "@/lib/types"
 
 import ButtonDropdown, {
-  IProps as ButtonDropdownProps,
+  ButtonDropdownProps,
   List as ButtonDropdownList,
 } from "@/components/ButtonDropdown"
 import OldHeading from "@/components/OldHeading"
@@ -36,12 +36,12 @@ type LeftNavBarProps = FlexProps & {
   tocItems: ToCItem[]
 }
 
-const LeftNavBar: React.FC<LeftNavBarProps> = ({
+const LeftNavBar = ({
   dropdownLinks,
   maxDepth = 1,
   tocItems,
   ...props
-}) => {
+}: LeftNavBarProps) => {
   return (
     <Flex
       as="aside"

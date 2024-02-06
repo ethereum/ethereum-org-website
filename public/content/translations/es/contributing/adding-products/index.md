@@ -1,38 +1,34 @@
 ---
 title: Añadir productos
-description: La política que utilizamos al añadir carteras y dapps a ethereum.org
+description: La política que utilizamos al añadir DApps a ethereum.org.
 lang: es
 ---
 
-_Aclaraciones sobre el procedimiento de añadir carteras: como parte de [ nuestra hoja de ruta del producto T1](https://github.com/ethereum/ethereum-org-website/issues/5105), estamos ultimando nuestra página de carteras. En el proceso ultimaremos también los criterios de listado para nuestra página de carteras. No añadiremos activamente nuevas carteras al sitio web, hasta que hayamos investigado, establecido y publicado criterios de listados ultimados._
-
 # Añadir productos a Ethereum {#adding-products}
 
-Cualquiera puede sugerir nuevas carteras y dapps al contenido en ethereum.org, cuando proceda. **No, no incluiremos su dapp en nuestra página de inicio.**😜
+Cualquier persona es libre de sugerir nuevas dapps al contenido de ethereum.org, cuando sea apropiado hacerlo. **No, no incluirmos su DApp en nuestra página de inicio.**😜
 
-Las carteras y dapps están enumeradas en:
+Las DApps actualmente incluidas en:
 
-- ethereum.org/wallets
-- ethereum.org/wallets/find-wallet
 - ethereum.org/dapps
 - ethereum.org/get-eth
 
-**Sugiera únicamente nuevas adiciones a estas páginas.**
+**Favor, de sugerir sólo nuevas adiciones en estas páginas.**
 
-Aunque le recibimos con gusto sus nuevas adiciones, escogemos las carteras y las dapps basándonos en la experiencia que estamos buscando creear para nuestros usuarios. Estos se basan en algunos de nuestros principios de diseño:
+Aunque damos la bienvenida a las nuevas incorporaciones, elegimos las dapps actuales en base a una experiencia que estamos tratando de crear para nuestros usuarios. Estos se basan en algunos de nuestros principios de diseño:
 
 - _Inspirador_: cualquier contenido de ethereum.org debe ofrecer algo nuevo a los usuarios.
 - _Una buena historia_: lo que se incluya debe calar en los usuarios.
 - _Creíble_: los proyectos/empresas deben ser legítimos para minimizar el riesgo a los usuarios.
 
-En general, **ethereum.org quiere proporcionar una «experiencia de incorporación fluida» para nuevos usuarios**. Por esta razón, añadimos carteras/dapps basadas en su:
+En general, **ethereum.org quiere proporcionar una "experiencia de incorporación sin fisuras" para nuevos usuarios**. Por esa razón, añadimos DApps en función de su:
 
 - facilidad de uso
 - interoperabilidad con otros productos
 - seguridad
 - durabilidad
 
-He aquí nuestro marco de decisión detallado. No dude en proporcionar comentarios o sugerir cambios.
+He aquí nuestro marco de decisión explicado. Proporcione comentarios o sugiera cambios con total libertad.
 
 ## El marco de decisión {#decision-framework}
 
@@ -45,22 +41,14 @@ He aquí nuestro marco de decisión detallado. No dude en proporcionar comentari
 
 ### Criterios para la clasificación: los aspectos deseados {#criteria-for-ranking-the-nice-to-haves}
 
-Puede que su dapp o cartera no aparezca en ethereum.org tan claramente como otras debido a los siguientes criterios.
-
-**Carteras**
-
-- **Dinero «fiat» con tasas de entrada**: esto evita una gran cantidad de fricción potencial en la experiencia de un nuevo usuario con una cartera. Si un usuario tiene que financiar una cartera a través de un intercambio, pueden pasar días antes de que pueda probar la cartera debido a las comprobaciones de conozca a su cliente.
-- **Admitido por la mayoría de dapps**: el contenido de ethereum.org apunta a que los usuarios funcionen con una cartera y ETH antes de mostrarles dapps. Si las dapps no admiten el acceso a su cartera, eso podría arruinar su experiencia.
+Es posible que su dapp no aparezca en ethereum.org de manera tan prominente como otros debido a los siguientes criterios.
 
 **Dapps**
 
 - **De acceso a través de la mayoría de las carteras listadas**: las dapps deberían funcionar con la mayoría de las carteras que aparecen en ethereum.org.
 - **Los usuarios pueden probarlo por sí solos:** un usuario particular debería poder usar su dapp y lograr algo tangible.
-
-**Ambos**
-
 - **Incorporación**: su producto debería tener una experiencia de incorporación bien trazada para ayudar y educar a los usuarios. O prueba de cómo hacer contenido como artículos o vídeos.
-- **Sin custodia**: los usuarios controlan sus fondos. Si su producto desaparece, los usuarios pueden acceder y mover sus fondos.
+- **Sin custodia**: los usuarios controlan sus fondos. Aunque su producto desaparezca, los usuarios aún pueden acceder y mover sus fondos.
 - **Accesible globalmente**: su producto no tiene limitaciones geográficas ni requisitos de conozca su cliente (KYC) que excluyen a ciertas personas del acceso a su servicio.
 - **De código abierto**: su código debe ser accesible y debería aceptar las PR de la comunidad en general.
 - **Comunidad**: tiene una comunidad dedicada, tal vez un Discord, donde los usuarios pueden interactuar con su equipo para obtener ayuda o sugerir nuevas características.
@@ -80,11 +68,11 @@ Otros aspectos que sopesarán esta decisión:
 
 Esta es una decisión de diseño de la que ethereum.org es responsable.
 
-Pero siempre **habrá enlaces a otros sitios web que clasifiquen más dapps/wallets**
+Pero tenga la seguridad de que **habrá enlaces a otros sitios web que clasifiquen más DApps**.
 
 ### Pedido de productos {#product-ordering}
 
-A menos que los productos se soliciten específicamente de otro modo, como alfabético, los productos se mostrarán de más a menos recientemente añadido a la página. En otras palabras, los productos más nuevos se añaden al final de la lista.
+A menos que los productos se soliciten específicamente de otro modo, como alfabético, aparecerán del último al primero añadidos recientemente a la página. Es decir, los productos más nuevos se añaden al final de la lista.
 
 ### Condiciones de uso {#terms-of-use}
 
@@ -94,19 +82,19 @@ Por favor, consulte también nuestras [condiciones de uso](/terms-of-use/). La i
 
 Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y van y la innovación sucede diariamente, así realizaremos comprobaciones de rutina de nuestro contenido para:
 
-- asegurarnos de que todas las carteras y dapps incluidas todavía cumplan nuestros criterios,
+- asegurarnos de que todas las DApps incluidas aún cumplan con nuestros criterios,
 - cercionarnos de que no hay productos sugeridos que cumplan con más de nuestros criterios que los actualmente incluidos,
 
-Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Cree una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request) o envíe un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org)
+Puede ayudar con esta tarea comprobando e informándonos de las conclusiones. [Crear un problema](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) o enviar un correo electrónico a [website@ethereum.org](mailto:website@ethereum.org)
 
-_También estamos investigando las opciones para votar para que la comunidad pueda indicar sus preferencias y poner de relevancia los mejores productos para que nosotros los recomendemos._
+_También estamos investigando las opciones para votar y que la comunidad pueda indicar sus preferencias y así poner de relevancia los mejores productos para que nosotros los recomendemos._
 
 ---
 
 ## Añada su producto {#add-your-product}
 
-Si desea añadir una cartera o dapp a ethereum.org y cumple con los criterios, cree una incidencia en GitHub.
+Si quieres añadir un dapp a ethereum.org y cumple con los criterios, crea un problema en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new/choose">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Crear una incidencia
 </ButtonLink>

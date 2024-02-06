@@ -302,6 +302,14 @@ const communityConferences: CommunityConference[] = [
     description: "Through Hackathon, Conference, side events, discussions, collaborations, and vast networking, we aim to further establish Kyiv as an innovation and infrastructure development leader",
   },
   {
+    title: "EthCC",
+    to: "https://ethcc.io",
+    location: "Brussels, Belgium",
+    description: "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Four intense days of conferences, networking and learning.",
+    startDate: "2024-7-08",
+    endDate: "2024-7-11"
+  },
+  {
     title: "Pragma Brussels",
     to: "https://ethglobal.com/events/pragma-brussels",
     location: "Brussels, Belgium",
