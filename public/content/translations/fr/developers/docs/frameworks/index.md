@@ -45,6 +45,12 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_Bibliothèque Kotlin/Java/Android asynchrone et haute performance pour les blockchains basées sur EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Exemples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Créer une application Eth -** **_Créer des applications alimentées par Ethereum avec une seule commande. Fournit un panel d'infrastructures d'interface utilisateur et des modèles DeFi parmi lesquels faire votre choix._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
