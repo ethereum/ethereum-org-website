@@ -98,6 +98,12 @@ lang: ja
 - [ドキュメント](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_EVMベースのブロックチェーン用の非同期、高性能Kotlin/Java/Androidライブラリ。_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_オープンソースソフトウェアを搭載した、アズ・ア・サービス型のイーサリアムとイーサリアムクラシックの API_**
 
 - [rivet.cloud](https://rivet.cloud)

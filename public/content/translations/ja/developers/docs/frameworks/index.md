@@ -45,6 +45,12 @@ lang: ja
 - [ドキュメント](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_EVMベースのブロックチェーン用の非同期、高性能Kotlin/Java/Androidライブラリ。_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Create Eth App -** **_単一のコマンドで、イーサリアムで稼動するアプリケーションを作成可能。 豊富な選択肢を提供する UI フレームワークと DeFi テンプレートが付属。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)

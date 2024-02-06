@@ -33,6 +33,11 @@ incomplete: true
 - [Java 統合テストでハイパーレジャー Besu (Pantheon) ノードを実行する](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Web3j のチートシート](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
+EVMベースのブロックチェーンと対話するための非同期、高性能Kotlinライブラリ、[ethers-kt](https://github.com/Kr1ptal/ethers-kt)の使用方法を学ぶ。JVMおよびAndroidプラットフォームを対象としています。
+- [ERC20トークンの転送](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [イベントリスニング付きUniswapV2スワップ](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [ETH / ERC20のバランストラッカー](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
+
 ## 中級者向けの記事 {#intermediate-articles}
 
 - [IPFS を使用して Java アプリケーションのストレージを管理する](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
@@ -47,6 +52,7 @@ incomplete: true
 
 - [ハイパーレジャー Besu (Pantheon) (イーサリアムクライアント)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3j (イーサリアムクライアントとやり取りするためのライブラリ)](https://github.com/web3j/web3j)
+- [ethers-kt (EVMベースのブロックチェーン用の非同期、高性能Kotlin/Java/Androidライブラリ。)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (イベントリスナー)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS デベロッパーツール)](https://github.com/ConsenSys/mahuta)
 
