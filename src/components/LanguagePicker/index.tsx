@@ -25,7 +25,7 @@ import { useLanguagePicker } from "./useLanguagePicker"
 
 type LanguagePickerProps = Omit<MenuListProps, "children"> & {
   children: React.ReactNode
-  placement: MenuProps["placement"]
+  placement?: MenuProps["placement"]
   handleClose?: () => void
   menuState?: UseDisclosureReturn
 }

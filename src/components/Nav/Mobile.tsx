@@ -337,8 +337,8 @@ const MobileNavMenu: React.FC<IProps> = ({
                 <FooterItemText>{t(themeLabelKey)}</FooterItemText>
               </FooterButton>
               <LanguagePicker
-                placement="top-end"
-                h="calc(100svh - var(--eth-sizes-8))"
+                hideFrom="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+                position="fixed"
                 w="calc(100vw - var(--eth-sizes-8))"
                 inset="4"
                 handleClose={onToggle}
