@@ -44,7 +44,7 @@ import walletData from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
-import FindWalletHeroImage from "@/public/wallets/find-wallet-hero.png"
+import HeroImage from "@/public/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -139,12 +139,7 @@ const FindWalletPage = () => {
   }
 
   return (
-    <Flex
-      as={MainArticle}
-      direction="column"
-      position="relative"
-      w="full"
-    >
+    <Flex as={MainArticle} direction="column" position="relative" w="full">
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
@@ -181,7 +176,7 @@ const FindWalletPage = () => {
         </Box>
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
-            src={FindWalletHeroImage}
+            src={HeroImage}
             width={500}
             alt=""
             priority
