@@ -10,6 +10,7 @@ import {
   HStack,
   Icon,
   MenuButton,
+  Text,
   useDisclosure,
   useEventListener,
 } from "@chakra-ui/react"
@@ -169,7 +170,10 @@ const Nav: FC<IProps> = ({ path }) => {
                       verticalAlign="middle"
                       me={2}
                     />
-                    {t("common:languages")} {locale!.toUpperCase()}
+                    <Text hideBelow="lg" as="span">
+                      {t("common:languages")}&nbsp;
+                    </Text>
+                    {locale!.toUpperCase()}
                   </MenuButton>
                 </LanguagePicker>
               </HStack>
