@@ -3,22 +3,22 @@ import { useTranslation } from "next-i18next"
 import {
   BsBook,
   BsBuildings,
+  BsCodeSquare,
   BsCompass,
+  BsFlag,
   BsJournalCode,
   BsLayers,
   BsLightbulb,
   BsMegaphone,
   BsMortarboard,
-  BsFlag,
   BsPinAngle,
   BsSafe,
   BsSignpost,
   BsSliders,
-  BsCodeSquare,
   BsUiChecksGrid,
 } from "react-icons/bs"
 import { LiaEthereum } from "react-icons/lia";
-import { 
+import {
   PiFlask,
   PiUsersFourLight,
 } from "react-icons/pi";
