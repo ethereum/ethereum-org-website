@@ -237,6 +237,99 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
+// Crowdin translation progress
+type Language = {
+  id: string
+  name: string
+  editorCode: string
+  twoLettersCode: string
+  threeLettersCode: string
+  locale: string
+  androidCode: string
+  osxCode: string
+  osxLocale: string
+  pluralCategoryNames: string[]
+  pluralRules: string
+  pluralExamples: string[]
+  textDirection: string
+  dialectOf: unknown
+}
+
+type CountSummary = {
+  total: number
+  translated: number
+  preTranslateAppliedTo: number
+  approved: number
+}
+
+export type ProjectProgressData = {
+  languageId: string,
+  language?: Language,
+  words: CountSummary,
+  phrases: CountSummary,
+  translationProgress: number
+  approvalProgress: number
+}
+
+export type LocaleDisplayInfo = {
+  localeOption: string
+  sourceName: string
+  targetName: string
+  englishName: string
+  approvalProgress: number
+  wordsApproved: number
+  isBrowserDefault?: boolean
+}
+
+type TranslatedStats = {
+  tmMatch: number
+  default: number
+  total: number
+}
+
+export type AllTimeData = {
+  name: string
+  url: string
+  unit: string
+  dateRange: {
+    from: string
+    to: string
+  }
+  currency: string
+  mode: string
+  totalCosts: number
+  totalTMSavings: number
+  totalPreTranslated: number
+  data: Array<{
+    user: {
+      id: number
+      username: string
+      fullName: string
+      userRole: string
+      avatarUrl: string
+      preTranslated: number
+      totalCosts: number
+    }
+    languages: Array<{
+      language: {
+        id: string
+        name: string
+        userRole: string
+        tmSavings: number
+        preTranslate: number
+        totalCosts: number
+      }
+      translated: TranslatedStats
+      targetTranslated: TranslatedStats
+      translatedByMt: TranslatedStats
+      approved: TranslatedStats
+      translationCosts: TranslatedStats
+      approvalCosts: TranslatedStats
+    }>
+  }>
+}
+
+
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -411,52 +504,4 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
-}
-
-type TranslatedStats = {
-  tmMatch: number
-  default: number
-  total: number
-}
-
-export type AllTimeData = {
-  name: string
-  url: string
-  unit: string
-  dateRange: {
-    from: string
-    to: string
-  }
-  currency: string
-  mode: string
-  totalCosts: number
-  totalTMSavings: number
-  totalPreTranslated: number
-  data: Array<{
-    user: {
-      id: number
-      username: string
-      fullName: string
-      userRole: string
-      avatarUrl: string
-      preTranslated: number
-      totalCosts: number
-    }
-    languages: Array<{
-      language: {
-        id: string
-        name: string
-        userRole: string
-        tmSavings: number
-        preTranslate: number
-        totalCosts: number
-      }
-      translated: TranslatedStats
-      targetTranslated: TranslatedStats
-      translatedByMt: TranslatedStats
-      approved: TranslatedStats
-      translationCosts: TranslatedStats
-      approvalCosts: TranslatedStats
-    }>
-  }>
 }

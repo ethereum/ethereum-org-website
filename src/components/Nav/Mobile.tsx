@@ -1,7 +1,9 @@
 import { RefObject } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
+import { IconType } from "react-icons"
+import { BsTranslate } from "react-icons/bs"
+import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
 import {
   Accordion,
   AccordionButton,
@@ -19,9 +21,11 @@ import {
   DrawerOverlay,
   Flex,
   forwardRef,
+  Grid,
   Heading,
   Icon,
   IconButton,
+  MenuButton,
   Text,
   useBreakpointValue,
   useColorModeValue,
@@ -33,6 +37,8 @@ import { Button } from "@/components/Buttons"
 import { BaseLink } from "@/components/Link"
 
 import { SECTION_LABELS } from "@/lib/constants"
+
+import LanguagePicker from "../LanguagePicker"
 
 import type { Level, NavItem, NavSections } from "./types"
 
@@ -60,8 +66,25 @@ const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   />
 ))
 
+type FooterButtonProps = ButtonProps & {
+  icon: IconType
+}
+
+const FooterButton = ({ icon, ...props }: FooterButtonProps) => (
+  <Button
+    leftIcon={<Icon as={icon} />}
+    sx={{ span: { m: 0 } }}
+    variant="ghost"
+    flexDir="column"
+    alignItems="center"
+    color="body.base"
+    px="1"
+    {...props}
+  />
+)
+
 const FooterItemText = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="sm"
     lineHeight={1.6}
     fontWeight={400}
@@ -325,7 +348,7 @@ const MobileNavMenu = ({
   ...props
 }: MobileNavMenuProps) => {
   const { t } = useTranslation("common")
-  const themeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
   const isMenuOpen = !!useBreakpointValue({ base: isOpen, md: false })
 
@@ -430,37 +453,39 @@ const MobileNavMenu = ({
             py={0}
             mt="auto"
           >
-            <FooterItem
-              onClick={() => {
-                // Workaround to ensure the input for the search modal can have focus
-                onToggle()
-                toggleSearch()
-              }}
-            >
-              <Icon as={MdSearch} />
-              <FooterItemText>{t("search")}</FooterItemText>
-            </FooterItem>
-            <FooterItem onClick={toggleTheme}>
-              <Icon as={themeIcon} />
-              <FooterItemText>{t(themeLabelKey)}</FooterItemText>
-            </FooterItem>
-            <FooterItem onClick={onToggle}>
-              <Flex
-                as={BaseLink}
-                to={`/languages/${fromPageParameter}`}
-                alignItems="center"
-                color="text"
-                flexDir="column"
-                textDecor="none"
-                _hover={{
-                  color: "primary.base",
-                  textDecor: "none",
+            <Grid templateColumns="repeat(3, 1fr)" w="full">
+              <FooterButton
+                icon={MdSearch}
+                onClick={() => {
+                  // Workaround to ensure the input for the search modal can have focus
+                  onToggle()
+                  toggleSearch()
                 }}
               >
-                <Icon as={MdLanguage} />
-                <FooterItemText>{t("languages")}</FooterItemText>
-              </Flex>
-            </FooterItem>
+                <FooterItemText>{t("search")}</FooterItemText>
+              </FooterButton>
+              <FooterButton icon={ThemeIcon} onClick={toggleTheme}>
+                <FooterItemText>{t(themeLabelKey)}</FooterItemText>
+              </FooterButton>
+              <LanguagePicker
+                hideFrom="md"
+                position="fixed"
+                w="calc(100vw - var(--eth-sizes-8))"
+                inset="4"
+                handleClose={onToggle}
+                _before={{
+                  content: '""',
+                  position: "fixed",
+                  inset: 0,
+                  bg: "black",
+                  opacity: 0.4,
+                }} // TODO: Replace with overlay component
+              >
+                <MenuButton as={FooterButton} icon={BsTranslate}>
+                  <FooterItemText>{t("languages")}</FooterItemText>
+                </MenuButton>
+              </LanguagePicker>
+            </Grid>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>

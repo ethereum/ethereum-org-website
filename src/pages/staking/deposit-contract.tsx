@@ -214,7 +214,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/staking/deposit-contract"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 

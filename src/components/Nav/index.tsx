@@ -1,20 +1,26 @@
 import { useRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdBrightness2, MdLanguage, MdWbSunny } from "react-icons/md"
+import { BsTranslate } from "react-icons/bs"
+import { MdBrightness2, MdWbSunny } from "react-icons/md"
 import {
   Box,
+  Button,
   Flex,
   HStack,
   Icon,
+  MenuButton,
+  Text,
   useColorModeValue,
   useDisclosure,
+  useEventListener,
 } from "@chakra-ui/react"
 
-import { ButtonLink, IconButton } from "../Buttons"
-import { EthHomeIcon } from "../icons"
-import { BaseLink } from "../Link"
-import Search from "../Search"
+import { IconButton } from "@/components/Buttons"
+import { EthHomeIcon } from "@/components/icons"
+import LanguagePicker from "@/components/LanguagePicker"
+import { BaseLink } from "@/components/Link"
+import Search from "@/components/Search"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -22,15 +28,31 @@ import { useNav } from "./useNav"
 
 // TODO display page title on mobile
 const Nav = () => {
-  const { fromPageParameter, toggleColorMode, linkSections, mobileNavProps } =
-    useNav()
-
+  const { toggleColorMode, linkSections, mobileNavProps } = useNav()
   const { locale } = useRouter()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
+  const languagePickerState = useDisclosure()
+  const languagePickerRef = useRef<HTMLButtonElement>(null)
 
-  const themeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
+  /**
+   * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
+   * or open the language picker (\).
+   * @param {string} event - The keydown event.
+   */
+  useEventListener("keydown", (e) => {
+    if (e.key !== "\\") return
+    e.preventDefault()
+    if (e.metaKey || e.ctrlKey) {
+      toggleColorMode()
+    } else {
+      if (languagePickerState.isOpen) return
+      languagePickerRef.current?.click()
+    }
+  })
+
+  const ThemeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
   const themeIconAriaLabel = useColorModeValue(
     "Switch to Dark Theme",
     "Switch to Light Theme"
@@ -74,11 +96,19 @@ const Nav = () => {
             <Menu hideBelow="md" sections={linkSections} />
             <Flex alignItems="center" justifyContent="space-between">
               <Search {...searchModalDisclosure} />
+              {/* Mobile */}
+              <MobileNavMenu
+                {...mobileNavProps}
+                linkSections={linkSections}
+                hideFrom="lg"
+                toggleSearch={searchModalDisclosure.onOpen}
+                drawerContainerRef={navWrapperRef}
+              />
               {/* Desktop */}
               <HStack spacing={2} hideBelow="md" ms="2">
                 <IconButton
                   transition="transform 0.5s, color 0.2s"
-                  icon={themeIcon}
+                  icon={ThemeIcon}
                   aria-label={themeIconAriaLabel}
                   variant="ghost"
                   isSecondary
@@ -89,23 +119,53 @@ const Nav = () => {
                   }}
                   onClick={toggleColorMode}
                 />
-                <ButtonLink
-                  href={`/languages/${fromPageParameter}`}
-                  transition="color 0.2s"
-                  leftIcon={<Icon as={MdLanguage} />}
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
-                  _hover={{
-                    color: "primary.hover",
-                    "& svg": {
-                      transform: "rotate(10deg)",
-                      transition: "transform 0.5s",
-                    },
-                  }}
+
+                {/* Locale-picker menu */}
+                <LanguagePicker
+                  placement="bottom-end"
+                  minH="unset"
+                  maxH="75vh"
+                  w="xs"
+                  inset="unset"
+                  top="unset"
+                  menuState={languagePickerState}
                 >
-                  {t("languages")} {locale!.toUpperCase()}
-                </ButtonLink>
+                  <MenuButton
+                    as={Button}
+                    ref={languagePickerRef}
+                    variant="ghost"
+                    color="body.base"
+                    transition="color 0.2s"
+                    _hover={{
+                      color: "primary.hover",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                    _active={{
+                      color: "primary.hover",
+                      bg: "primary.lowContrast",
+                    }}
+                    sx={{
+                      "& svg": {
+                        transform: "rotate(0deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                  >
+                    <Icon
+                      as={BsTranslate}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                    <Text hideBelow="lg" as="span">
+                      {t("common:languages")}&nbsp;
+                    </Text>
+                    {locale!.toUpperCase()}
+                  </MenuButton>
+                </LanguagePicker>
               </HStack>
               {/* Mobile */}
               <MobileNavMenu

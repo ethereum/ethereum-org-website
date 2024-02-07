@@ -1,0 +1,1549 @@
+[
+  {
+    "languageId": "af",
+    "words": {
+      "total": 336489,
+      "translated": 2654,
+      "preTranslateAppliedTo": 134,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 474,
+      "preTranslateAppliedTo": 36,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "am",
+    "words": {
+      "total": 336489,
+      "translated": 34590,
+      "preTranslateAppliedTo": 3747,
+      "approved": 9634
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3447,
+      "preTranslateAppliedTo": 362,
+      "approved": 993
+    },
+    "translationProgress": 10,
+    "approvalProgress": 2
+  },
+  {
+    "languageId": "ar",
+    "words": {
+      "total": 336489,
+      "translated": 101830,
+      "preTranslateAppliedTo": 35259,
+      "approved": 40466
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 8511,
+      "preTranslateAppliedTo": 3243,
+      "approved": 3373
+    },
+    "translationProgress": 30,
+    "approvalProgress": 12
+  },
+  {
+    "languageId": "az",
+    "words": {
+      "total": 336489,
+      "translated": 29092,
+      "preTranslateAppliedTo": 1761,
+      "approved": 18707
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2701,
+      "preTranslateAppliedTo": 310,
+      "approved": 1852
+    },
+    "translationProgress": 8,
+    "approvalProgress": 5
+  },
+  {
+    "languageId": "be",
+    "words": {
+      "total": 336489,
+      "translated": 7372,
+      "preTranslateAppliedTo": 726,
+      "approved": 5879
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 822,
+      "preTranslateAppliedTo": 94,
+      "approved": 603
+    },
+    "translationProgress": 2,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "bg",
+    "words": {
+      "total": 336489,
+      "translated": 36624,
+      "preTranslateAppliedTo": 12272,
+      "approved": 14767
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3737,
+      "preTranslateAppliedTo": 1422,
+      "approved": 1531
+    },
+    "translationProgress": 10,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "bi",
+    "words": {
+      "total": 336489,
+      "translated": 180,
+      "preTranslateAppliedTo": 20,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 115,
+      "preTranslateAppliedTo": 17,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "bn",
+    "words": {
+      "total": 336489,
+      "translated": 44527,
+      "preTranslateAppliedTo": 4114,
+      "approved": 36246
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3853,
+      "preTranslateAppliedTo": 532,
+      "approved": 3027
+    },
+    "translationProgress": 13,
+    "approvalProgress": 10
+  },
+  {
+    "languageId": "br-FR",
+    "words": {
+      "total": 336489,
+      "translated": 192,
+      "preTranslateAppliedTo": 148,
+      "approved": 82
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 29,
+      "preTranslateAppliedTo": 21,
+      "approved": 7
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "bs",
+    "words": {
+      "total": 336489,
+      "translated": 12036,
+      "preTranslateAppliedTo": 713,
+      "approved": 5879
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1160,
+      "preTranslateAppliedTo": 68,
+      "approved": 603
+    },
+    "translationProgress": 3,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "ca",
+    "words": {
+      "total": 336489,
+      "translated": 46990,
+      "preTranslateAppliedTo": 14452,
+      "approved": 19695
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 4571,
+      "preTranslateAppliedTo": 1601,
+      "approved": 2056
+    },
+    "translationProgress": 13,
+    "approvalProgress": 5
+  },
+  {
+    "languageId": "cs",
+    "words": {
+      "total": 336489,
+      "translated": 62786,
+      "preTranslateAppliedTo": 6867,
+      "approved": 26678
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 5544,
+      "preTranslateAppliedTo": 1004,
+      "approved": 2427
+    },
+    "translationProgress": 18,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "da",
+    "words": {
+      "total": 336489,
+      "translated": 15857,
+      "preTranslateAppliedTo": 2817,
+      "approved": 1466
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1668,
+      "preTranslateAppliedTo": 488,
+      "approved": 263
+    },
+    "translationProgress": 4,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "de",
+    "words": {
+      "total": 336489,
+      "translated": 237654,
+      "preTranslateAppliedTo": 43906,
+      "approved": 163737
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 18419,
+      "preTranslateAppliedTo": 4130,
+      "approved": 13313
+    },
+    "translationProgress": 70,
+    "approvalProgress": 48
+  },
+  {
+    "languageId": "el",
+    "words": {
+      "total": 336489,
+      "translated": 102635,
+      "preTranslateAppliedTo": 18079,
+      "approved": 102345
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 10333,
+      "preTranslateAppliedTo": 2113,
+      "approved": 10314
+    },
+    "translationProgress": 30,
+    "approvalProgress": 30
+  },
+  {
+    "languageId": "eo",
+    "words": {
+      "total": 336489,
+      "translated": 824,
+      "preTranslateAppliedTo": 268,
+      "approved": 169
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 77,
+      "preTranslateAppliedTo": 27,
+      "approved": 16
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "es-EM",
+    "words": {
+      "total": 336489,
+      "translated": 331819,
+      "preTranslateAppliedTo": 51273,
+      "approved": 296693
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 24558,
+      "preTranslateAppliedTo": 4649,
+      "approved": 21958
+    },
+    "translationProgress": 98,
+    "approvalProgress": 88
+  },
+  {
+    "languageId": "et",
+    "words": {
+      "total": 336489,
+      "translated": 1014,
+      "preTranslateAppliedTo": 245,
+      "approved": 75
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 149,
+      "preTranslateAppliedTo": 46,
+      "approved": 12
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "eu",
+    "words": {
+      "total": 336489,
+      "translated": 768,
+      "preTranslateAppliedTo": 217,
+      "approved": 36
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 83,
+      "preTranslateAppliedTo": 38,
+      "approved": 4
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "fa",
+    "words": {
+      "total": 336489,
+      "translated": 149845,
+      "preTranslateAppliedTo": 28269,
+      "approved": 96744
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 12201,
+      "preTranslateAppliedTo": 2782,
+      "approved": 7769
+    },
+    "translationProgress": 44,
+    "approvalProgress": 28
+  },
+  {
+    "languageId": "fa-AF",
+    "words": {
+      "total": 336489,
+      "translated": 193,
+      "preTranslateAppliedTo": 37,
+      "approved": 186
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 22,
+      "preTranslateAppliedTo": 6,
+      "approved": 17
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "fi",
+    "words": {
+      "total": 336489,
+      "translated": 45286,
+      "preTranslateAppliedTo": 11063,
+      "approved": 22594
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 4157,
+      "preTranslateAppliedTo": 1096,
+      "approved": 2136
+    },
+    "translationProgress": 13,
+    "approvalProgress": 6
+  },
+  {
+    "languageId": "fil",
+    "words": {
+      "total": 336489,
+      "translated": 63679,
+      "preTranslateAppliedTo": 5142,
+      "approved": 54718
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 5343,
+      "preTranslateAppliedTo": 656,
+      "approved": 4539
+    },
+    "translationProgress": 18,
+    "approvalProgress": 16
+  },
+  {
+    "languageId": "fr",
+    "words": {
+      "total": 336489,
+      "translated": 336489,
+      "preTranslateAppliedTo": 54154,
+      "approved": 336420
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 24685,
+      "preTranslateAppliedTo": 4849,
+      "approved": 24674
+    },
+    "translationProgress": 100,
+    "approvalProgress": 99
+  },
+  {
+    "languageId": "gi",
+    "words": {
+      "total": 336489,
+      "translated": 4,
+      "preTranslateAppliedTo": 4,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2,
+      "preTranslateAppliedTo": 2,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "gl",
+    "words": {
+      "total": 336489,
+      "translated": 8308,
+      "preTranslateAppliedTo": 1290,
+      "approved": 1062
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1042,
+      "preTranslateAppliedTo": 238,
+      "approved": 165
+    },
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "gu-IN",
+    "words": {
+      "total": 336489,
+      "translated": 3066,
+      "preTranslateAppliedTo": 1043,
+      "approved": 1300
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 551,
+      "preTranslateAppliedTo": 251,
+      "approved": 235
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ha",
+    "words": {
+      "total": 336489,
+      "translated": 524,
+      "preTranslateAppliedTo": 114,
+      "approved": 4
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 54,
+      "preTranslateAppliedTo": 18,
+      "approved": 2
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "he",
+    "words": {
+      "total": 336489,
+      "translated": 7207,
+      "preTranslateAppliedTo": 1109,
+      "approved": 1222
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1041,
+      "preTranslateAppliedTo": 268,
+      "approved": 203
+    },
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "hi",
+    "words": {
+      "total": 336489,
+      "translated": 75996,
+      "preTranslateAppliedTo": 8937,
+      "approved": 57736
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 6278,
+      "preTranslateAppliedTo": 975,
+      "approved": 4820
+    },
+    "translationProgress": 22,
+    "approvalProgress": 17
+  },
+  {
+    "languageId": "hr",
+    "words": {
+      "total": 336489,
+      "translated": 28058,
+      "preTranslateAppliedTo": 9317,
+      "approved": 13546
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3014,
+      "preTranslateAppliedTo": 1040,
+      "approved": 1399
+    },
+    "translationProgress": 8,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "hu",
+    "words": {
+      "total": 336489,
+      "translated": 218207,
+      "preTranslateAppliedTo": 18587,
+      "approved": 148555
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 16143,
+      "preTranslateAppliedTo": 1952,
+      "approved": 11899
+    },
+    "translationProgress": 64,
+    "approvalProgress": 44
+  },
+  {
+    "languageId": "hy-AM",
+    "words": {
+      "total": 336489,
+      "translated": 10508,
+      "preTranslateAppliedTo": 1290,
+      "approved": 9634
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1094,
+      "preTranslateAppliedTo": 243,
+      "approved": 993
+    },
+    "translationProgress": 3,
+    "approvalProgress": 2
+  },
+  {
+    "languageId": "id",
+    "words": {
+      "total": 336489,
+      "translated": 280227,
+      "preTranslateAppliedTo": 37675,
+      "approved": 156274
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 21146,
+      "preTranslateAppliedTo": 3636,
+      "approved": 12116
+    },
+    "translationProgress": 83,
+    "approvalProgress": 46
+  },
+  {
+    "languageId": "ig",
+    "words": {
+      "total": 336489,
+      "translated": 31195,
+      "preTranslateAppliedTo": 1678,
+      "approved": 23475
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2954,
+      "preTranslateAppliedTo": 299,
+      "approved": 2278
+    },
+    "translationProgress": 9,
+    "approvalProgress": 6
+  },
+  {
+    "languageId": "it",
+    "words": {
+      "total": 336489,
+      "translated": 336489,
+      "preTranslateAppliedTo": 57137,
+      "approved": 336174
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 24685,
+      "preTranslateAppliedTo": 5157,
+      "approved": 24656
+    },
+    "translationProgress": 100,
+    "approvalProgress": 99
+  },
+  {
+    "languageId": "ja",
+    "words": {
+      "total": 336489,
+      "translated": 316663,
+      "preTranslateAppliedTo": 48606,
+      "approved": 284629
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 23404,
+      "preTranslateAppliedTo": 4431,
+      "approved": 20925
+    },
+    "translationProgress": 94,
+    "approvalProgress": 84
+  },
+  {
+    "languageId": "ka",
+    "words": {
+      "total": 336489,
+      "translated": 15234,
+      "preTranslateAppliedTo": 2130,
+      "approved": 1449
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1936,
+      "preTranslateAppliedTo": 387,
+      "approved": 253
+    },
+    "translationProgress": 4,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "kk",
+    "words": {
+      "total": 336489,
+      "translated": 2027,
+      "preTranslateAppliedTo": 1138,
+      "approved": 1155
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 427,
+      "preTranslateAppliedTo": 225,
+      "approved": 185
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "km",
+    "words": {
+      "total": 336489,
+      "translated": 16940,
+      "preTranslateAppliedTo": 1646,
+      "approved": 15713
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1769,
+      "preTranslateAppliedTo": 327,
+      "approved": 1551
+    },
+    "translationProgress": 5,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "kn",
+    "words": {
+      "total": 336489,
+      "translated": 44325,
+      "preTranslateAppliedTo": 1474,
+      "approved": 26051
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3595,
+      "preTranslateAppliedTo": 144,
+      "approved": 2343
+    },
+    "translationProgress": 13,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "ko",
+    "words": {
+      "total": 336489,
+      "translated": 108091,
+      "preTranslateAppliedTo": 19220,
+      "approved": 51562
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 8998,
+      "preTranslateAppliedTo": 2057,
+      "approved": 3874
+    },
+    "translationProgress": 32,
+    "approvalProgress": 15
+  },
+  {
+    "languageId": "ku",
+    "words": {
+      "total": 336489,
+      "translated": 897,
+      "preTranslateAppliedTo": 70,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 116,
+      "preTranslateAppliedTo": 40,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ky",
+    "words": {
+      "total": 336489,
+      "translated": 456,
+      "preTranslateAppliedTo": 129,
+      "approved": 12
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 129,
+      "preTranslateAppliedTo": 55,
+      "approved": 7
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "lb",
+    "words": {
+      "total": 336489,
+      "translated": 257,
+      "preTranslateAppliedTo": 81,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 29,
+      "preTranslateAppliedTo": 11,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "lt",
+    "words": {
+      "total": 336489,
+      "translated": 4171,
+      "preTranslateAppliedTo": 1794,
+      "approved": 1567
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 790,
+      "preTranslateAppliedTo": 398,
+      "approved": 257
+    },
+    "translationProgress": 1,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "mai",
+    "words": {
+      "total": 336489,
+      "translated": 1,
+      "preTranslateAppliedTo": 1,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1,
+      "preTranslateAppliedTo": 1,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "mk",
+    "words": {
+      "total": 336489,
+      "translated": 422,
+      "preTranslateAppliedTo": 245,
+      "approved": 88
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 164,
+      "preTranslateAppliedTo": 88,
+      "approved": 16
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ml-IN",
+    "words": {
+      "total": 336489,
+      "translated": 18507,
+      "preTranslateAppliedTo": 6285,
+      "approved": 11452
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2119,
+      "preTranslateAppliedTo": 750,
+      "approved": 1281
+    },
+    "translationProgress": 5,
+    "approvalProgress": 3
+  },
+  {
+    "languageId": "mn",
+    "words": {
+      "total": 336489,
+      "translated": 142,
+      "preTranslateAppliedTo": 131,
+      "approved": 64
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 19,
+      "preTranslateAppliedTo": 17,
+      "approved": 4
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "mr",
+    "words": {
+      "total": 336489,
+      "translated": 33873,
+      "preTranslateAppliedTo": 1592,
+      "approved": 26062
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2914,
+      "preTranslateAppliedTo": 269,
+      "approved": 2346
+    },
+    "translationProgress": 10,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "ms",
+    "words": {
+      "total": 336489,
+      "translated": 74157,
+      "preTranslateAppliedTo": 4802,
+      "approved": 37271
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 6231,
+      "preTranslateAppliedTo": 619,
+      "approved": 2879
+    },
+    "translationProgress": 22,
+    "approvalProgress": 11
+  },
+  {
+    "languageId": "my",
+    "words": {
+      "total": 336489,
+      "translated": 1568,
+      "preTranslateAppliedTo": 914,
+      "approved": 706
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 188,
+      "preTranslateAppliedTo": 99,
+      "approved": 58
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ne-NP",
+    "words": {
+      "total": 336489,
+      "translated": 1887,
+      "preTranslateAppliedTo": 200,
+      "approved": 1434
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 317,
+      "preTranslateAppliedTo": 45,
+      "approved": 248
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "nl",
+    "words": {
+      "total": 336489,
+      "translated": 71400,
+      "preTranslateAppliedTo": 17112,
+      "approved": 37568
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 6480,
+      "preTranslateAppliedTo": 1791,
+      "approved": 3380
+    },
+    "translationProgress": 21,
+    "approvalProgress": 11
+  },
+  {
+    "languageId": "no",
+    "words": {
+      "total": 336489,
+      "translated": 6743,
+      "preTranslateAppliedTo": 1939,
+      "approved": 1717
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1319,
+      "preTranslateAppliedTo": 414,
+      "approved": 306
+    },
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "or",
+    "words": {
+      "total": 336489,
+      "translated": 146,
+      "preTranslateAppliedTo": 42,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 79,
+      "preTranslateAppliedTo": 31,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "pa-IN",
+    "words": {
+      "total": 336489,
+      "translated": 3977,
+      "preTranslateAppliedTo": 458,
+      "approved": 6
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 365,
+      "preTranslateAppliedTo": 44,
+      "approved": 2
+    },
+    "translationProgress": 1,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "pcm",
+    "words": {
+      "total": 336489,
+      "translated": 28626,
+      "preTranslateAppliedTo": 2714,
+      "approved": 17267
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2637,
+      "preTranslateAppliedTo": 350,
+      "approved": 1686
+    },
+    "translationProgress": 8,
+    "approvalProgress": 5
+  },
+  {
+    "languageId": "pl",
+    "words": {
+      "total": 336489,
+      "translated": 158045,
+      "preTranslateAppliedTo": 23871,
+      "approved": 94469
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 12909,
+      "preTranslateAppliedTo": 2437,
+      "approved": 7963
+    },
+    "translationProgress": 46,
+    "approvalProgress": 28
+  },
+  {
+    "languageId": "pt-BR",
+    "words": {
+      "total": 336489,
+      "translated": 326075,
+      "preTranslateAppliedTo": 53214,
+      "approved": 319354
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 24198,
+      "preTranslateAppliedTo": 4787,
+      "approved": 23630
+    },
+    "translationProgress": 96,
+    "approvalProgress": 94
+  },
+  {
+    "languageId": "pt-PT",
+    "words": {
+      "total": 336489,
+      "translated": 39477,
+      "preTranslateAppliedTo": 4918,
+      "approved": 26172
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3712,
+      "preTranslateAppliedTo": 775,
+      "approved": 2376
+    },
+    "translationProgress": 11,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "ro",
+    "words": {
+      "total": 336489,
+      "translated": 103193,
+      "preTranslateAppliedTo": 28227,
+      "approved": 78311
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 9188,
+      "preTranslateAppliedTo": 2632,
+      "approved": 6983
+    },
+    "translationProgress": 30,
+    "approvalProgress": 23
+  },
+  {
+    "languageId": "ru",
+    "words": {
+      "total": 336489,
+      "translated": 172802,
+      "preTranslateAppliedTo": 35985,
+      "approved": 96860
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 14092,
+      "preTranslateAppliedTo": 3599,
+      "approved": 7842
+    },
+    "translationProgress": 51,
+    "approvalProgress": 28
+  },
+  {
+    "languageId": "sat",
+    "words": {
+      "total": 336489,
+      "translated": 69,
+      "preTranslateAppliedTo": 66,
+      "approved": 57
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 26,
+      "preTranslateAppliedTo": 25,
+      "approved": 20
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "si-LK",
+    "words": {
+      "total": 336489,
+      "translated": 978,
+      "preTranslateAppliedTo": 886,
+      "approved": 706
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 134,
+      "preTranslateAppliedTo": 98,
+      "approved": 58
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "sk",
+    "words": {
+      "total": 336489,
+      "translated": 14738,
+      "preTranslateAppliedTo": 2629,
+      "approved": 6377
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1683,
+      "preTranslateAppliedTo": 439,
+      "approved": 700
+    },
+    "translationProgress": 4,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "sl",
+    "words": {
+      "total": 336489,
+      "translated": 54938,
+      "preTranslateAppliedTo": 20007,
+      "approved": 26540
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 5175,
+      "preTranslateAppliedTo": 2068,
+      "approved": 2537
+    },
+    "translationProgress": 16,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "sn",
+    "words": {
+      "total": 336489,
+      "translated": 557,
+      "preTranslateAppliedTo": 557,
+      "approved": 465
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 53,
+      "preTranslateAppliedTo": 53,
+      "approved": 40
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "so",
+    "words": {
+      "total": 336489,
+      "translated": 1238,
+      "preTranslateAppliedTo": 797,
+      "approved": 493
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 252,
+      "preTranslateAppliedTo": 156,
+      "approved": 42
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "sq",
+    "words": {
+      "total": 336489,
+      "translated": 8532,
+      "preTranslateAppliedTo": 6014,
+      "approved": 693
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1115,
+      "preTranslateAppliedTo": 741,
+      "approved": 58
+    },
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "sr-CS",
+    "words": {
+      "total": 336489,
+      "translated": 41464,
+      "preTranslateAppliedTo": 3636,
+      "approved": 26313
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3837,
+      "preTranslateAppliedTo": 504,
+      "approved": 2374
+    },
+    "translationProgress": 12,
+    "approvalProgress": 7
+  },
+  {
+    "languageId": "sv-SE",
+    "words": {
+      "total": 336489,
+      "translated": 28083,
+      "preTranslateAppliedTo": 8024,
+      "approved": 10006
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 3150,
+      "preTranslateAppliedTo": 1096,
+      "approved": 1087
+    },
+    "translationProgress": 8,
+    "approvalProgress": 2
+  },
+  {
+    "languageId": "sw",
+    "words": {
+      "total": 336489,
+      "translated": 24971,
+      "preTranslateAppliedTo": 6832,
+      "approved": 16569
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2729,
+      "preTranslateAppliedTo": 883,
+      "approved": 1784
+    },
+    "translationProgress": 7,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "ta",
+    "words": {
+      "total": 336489,
+      "translated": 8030,
+      "preTranslateAppliedTo": 1738,
+      "approved": 1453
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1041,
+      "preTranslateAppliedTo": 335,
+      "approved": 255
+    },
+    "translationProgress": 2,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "te",
+    "words": {
+      "total": 336489,
+      "translated": 13832,
+      "preTranslateAppliedTo": 1291,
+      "approved": 694
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1401,
+      "preTranslateAppliedTo": 153,
+      "approved": 59
+    },
+    "translationProgress": 4,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "tg",
+    "words": {
+      "total": 336489,
+      "translated": 169,
+      "preTranslateAppliedTo": 87,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 52,
+      "preTranslateAppliedTo": 44,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "th",
+    "words": {
+      "total": 336489,
+      "translated": 12941,
+      "preTranslateAppliedTo": 2660,
+      "approved": 5951
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 1728,
+      "preTranslateAppliedTo": 498,
+      "approved": 630
+    },
+    "translationProgress": 3,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "ti",
+    "words": {
+      "total": 336489,
+      "translated": 160,
+      "preTranslateAppliedTo": 14,
+      "approved": 0
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 17,
+      "preTranslateAppliedTo": 1,
+      "approved": 0
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "tk",
+    "words": {
+      "total": 336489,
+      "translated": 6361,
+      "preTranslateAppliedTo": 739,
+      "approved": 5881
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 709,
+      "preTranslateAppliedTo": 131,
+      "approved": 604
+    },
+    "translationProgress": 1,
+    "approvalProgress": 1
+  },
+  {
+    "languageId": "tl",
+    "words": {
+      "total": 336489,
+      "translated": 2844,
+      "preTranslateAppliedTo": 811,
+      "approved": 86
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 264,
+      "preTranslateAppliedTo": 93,
+      "approved": 8
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "tr",
+    "words": {
+      "total": 336489,
+      "translated": 326807,
+      "preTranslateAppliedTo": 44723,
+      "approved": 321705
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 24288,
+      "preTranslateAppliedTo": 4221,
+      "approved": 23859
+    },
+    "translationProgress": 97,
+    "approvalProgress": 95
+  },
+  {
+    "languageId": "uk",
+    "words": {
+      "total": 336489,
+      "translated": 191008,
+      "preTranslateAppliedTo": 34741,
+      "approved": 64755
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 15442,
+      "preTranslateAppliedTo": 3316,
+      "approved": 5426
+    },
+    "translationProgress": 56,
+    "approvalProgress": 19
+  },
+  {
+    "languageId": "ur-IN",
+    "words": {
+      "total": 336489,
+      "translated": 1998,
+      "preTranslateAppliedTo": 367,
+      "approved": 1214
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 437,
+      "preTranslateAppliedTo": 162,
+      "approved": 200
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "ur-PK",
+    "words": {
+      "total": 336489,
+      "translated": 2766,
+      "preTranslateAppliedTo": 1441,
+      "approved": 725
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 451,
+      "preTranslateAppliedTo": 191,
+      "approved": 60
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "uz",
+    "words": {
+      "total": 336489,
+      "translated": 22487,
+      "preTranslateAppliedTo": 4383,
+      "approved": 1878
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 2310,
+      "preTranslateAppliedTo": 640,
+      "approved": 339
+    },
+    "translationProgress": 6,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "vi",
+    "words": {
+      "total": 336489,
+      "translated": 62946,
+      "preTranslateAppliedTo": 12751,
+      "approved": 16174
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 5744,
+      "preTranslateAppliedTo": 1399,
+      "approved": 1635
+    },
+    "translationProgress": 18,
+    "approvalProgress": 4
+  },
+  {
+    "languageId": "yo",
+    "words": {
+      "total": 336489,
+      "translated": 3820,
+      "preTranslateAppliedTo": 930,
+      "approved": 687
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 494,
+      "preTranslateAppliedTo": 117,
+      "approved": 55
+    },
+    "translationProgress": 1,
+    "approvalProgress": 0
+  },
+  {
+    "languageId": "zh-CN",
+    "words": {
+      "total": 336489,
+      "translated": 323069,
+      "preTranslateAppliedTo": 56826,
+      "approved": 305017
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 23991,
+      "preTranslateAppliedTo": 5128,
+      "approved": 22626
+    },
+    "translationProgress": 96,
+    "approvalProgress": 90
+  },
+  {
+    "languageId": "zh-TW",
+    "words": {
+      "total": 336489,
+      "translated": 214786,
+      "preTranslateAppliedTo": 37224,
+      "approved": 111257
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 17351,
+      "preTranslateAppliedTo": 3689,
+      "approved": 8893
+    },
+    "translationProgress": 63,
+    "approvalProgress": 33
+  },
+  {
+    "languageId": "zu",
+    "words": {
+      "total": 336489,
+      "translated": 164,
+      "preTranslateAppliedTo": 164,
+      "approved": 109
+    },
+    "phrases": {
+      "total": 24685,
+      "translated": 17,
+      "preTranslateAppliedTo": 17,
+      "approved": 9
+    },
+    "translationProgress": 0,
+    "approvalProgress": 0
+  }
+]
