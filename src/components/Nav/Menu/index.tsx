@@ -29,7 +29,11 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
   return (
     <>
       <Box {...props}>
-        <NavigationMenu.Root dir={direction} orientation="horizontal">
+        <NavigationMenu.Root
+          dir={direction}
+          orientation="horizontal"
+          delayDuration={750}
+        >
           <NavigationMenu.List asChild>
             <Flex listStyleType="none">
               {SECTION_LABELS.map((sectionKey) => {
@@ -66,17 +70,30 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
 
       <Grid
         position="absolute"
+        visibility="hidden"
         top="16.5"
         insetInline="0"
-        templateColumns="repeat(3, 1fr)"
+        templateColumns={{ base: "repeat(2, 1fr) 0fr", lg: "repeat(3, 1fr)" }}
         shadow="md"
         border="1px"
         borderColor="menu.stroke"
         bg="menu.lvl1.background"
+        sx={{
+          '&:has(#lvl1 [data-state="open"])': {
+            visibility: "visible",
+          },
+          '&:has(#lvl2 [data-state="open"])': {
+            bg: "menu.lvl2.background",
+          },
+          '&:has(#lvl3 [data-state="open"])': {
+            bg: "menu.lvl3-background",
+            gridTemplateColumns: "repeat(3, 1fr)",
+          },
+        }}
       >
-        <Box ref={refs.lvl1} id="menu-box-lvl-1" />
-        <Box ref={refs.lvl2} id="menu-box-lvl-2" />
-        <Box ref={refs.lvl3} id="menu-box-lvl-3" />
+        <Box ref={refs.lvl1} id="lvl1" />
+        <Box ref={refs.lvl2} id="lvl2" />
+        <Box ref={refs.lvl3} id="lvl3" />
       </Grid>
     </>
   )

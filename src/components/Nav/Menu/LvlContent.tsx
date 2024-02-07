@@ -58,7 +58,10 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                 w: "full",
                 sx: {
                   "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
-                  '&[data-state="open"]': { roundedEnd: "none" },
+                  '&[data-state="open"]': {
+                    roundedEnd: "none",
+                    bg: `menu.lvl${lvl}.activeBackground`,
+                  },
                 },
                 py: "4",
                 bg: "none",
