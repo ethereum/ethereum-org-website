@@ -17,12 +17,14 @@ import {
   BsSliders,
   BsUiChecksGrid,
 } from "react-icons/bs"
-import { LiaEthereum } from "react-icons/lia";
+import { PiFlask, PiUsersFourLight } from "react-icons/pi"
 import {
-  PiFlask,
-  PiUsersFourLight,
-} from "react-icons/pi";
-import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
+  useColorMode,
+  useColorModeValue,
+  useDisclosure,
+} from "@chakra-ui/react"
+
+import { EthereumIcon } from "@/components/icons/EthereumIcon"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -118,7 +120,7 @@ export const useNav = () => {
           description: t("nav-quizzes-description"),
           icon: BsMortarboard,
           href: "/quizzes",
-        }
+        },
       ],
     },
     use: {
@@ -165,7 +167,7 @@ export const useNav = () => {
                   description: t("nav-guide-revoke-access-description"),
                   href: "/guides/how-to-revoke-token-access",
                 },
-              ]
+              ],
             },
           ],
         },
@@ -218,8 +220,8 @@ export const useNav = () => {
                   description: t("nav-refi-description"),
                   href: "/refi",
                 },
-              ]
-            }
+              ],
+            },
           ],
         },
         {
@@ -254,8 +256,8 @@ export const useNav = () => {
           description: t("nav-layer-2-description"),
           icon: BsLayers,
           href: "/layer-2",
-        }
-      ]
+        },
+      ],
     },
     build: {
       label: t("build"),
@@ -291,8 +293,8 @@ export const useNav = () => {
               label: t("grants"),
               description: t("nav-grants-description"),
               href: "/community/grants",
-            }
-          ]
+            },
+          ],
         },
         {
           label: t("documentation"),
@@ -317,8 +319,8 @@ export const useNav = () => {
             {
               label: t("nav-docs-design-label"),
               description: t("nav-docs-design-description"),
-              href: "/developers/docs/design-and-ux"
-            }
+              href: "/developers/docs/design-and-ux",
+            },
           ],
         },
         {
@@ -334,10 +336,10 @@ export const useNav = () => {
             {
               label: t("private-ethereum"),
               description: t("nav-private-description"),
-              href: "/enterprise/private-ethereum"
-            }
-          ]
-        }
+              href: "/enterprise/private-ethereum",
+            },
+          ],
+        },
       ],
     },
     participate: {
@@ -365,12 +367,12 @@ export const useNav = () => {
               description: t("nav-events-irl-description"),
               href: "/community/events",
             },
-          ]
+          ],
         },
         {
           label: t("site-title"),
           description: t("nav-ethereum-org-description"),
-          icon: LiaEthereum,
+          icon: EthereumIcon,
           items: [
             {
               label: t("nav-contribute-label"),
@@ -388,7 +390,7 @@ export const useNav = () => {
               href: "/about",
             },
           ],
-        }
+        },
       ],
     },
     research: {
@@ -426,7 +428,7 @@ export const useNav = () => {
               description: t("nav-roadmap-future-description"),
               href: "/roadmap/future-proofing",
             },
-          ]
+          ],
         },
         {
           label: t("nav-research-label"),
@@ -453,7 +455,7 @@ export const useNav = () => {
               description: t("nav-governance-description"),
               href: "/governance",
             },
-          ]
+          ],
         },
       ],
     },
