@@ -74,7 +74,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         visibility="hidden"
         top="16.5"
         insetInline="0"
-        templateColumns={{ base: "repeat(2, 1fr) 0fr", lg: "repeat(3, 1fr)" }}
+        templateColumns="repeat(3, 1fr)"
         shadow="md"
         border="1px"
         borderColor="menu.stroke"
@@ -88,7 +88,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
           },
           '&:has(#lvl3 [data-state="open"])': {
             bg: "menu.lvl3-background",
-            gridTemplateColumns: "repeat(3, 1fr)",
           },
         }}
       >
