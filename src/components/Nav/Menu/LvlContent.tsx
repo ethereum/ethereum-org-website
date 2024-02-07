@@ -1,9 +1,10 @@
 import { useRouter } from "next/router"
-import { Button, Icon, Link, ListItem, UnorderedList } from "@chakra-ui/react"
+import { Button, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import * as Portal from "@radix-ui/react-portal"
 
 import { ButtonProps } from "@/components/Buttons"
+import Link from "@/components/Link"
 
 import { cleanPath } from "@/lib/utils/url"
 
