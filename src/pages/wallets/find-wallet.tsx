@@ -1,5 +1,4 @@
-import { useRef, useState } from "react"
-import { shuffle } from "lodash"
+import { useEffect, useRef, useState } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -39,8 +38,12 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import {
+  getNonSupportedLocaleWallets,
+  getSupportedLocaleWallets,
+} from "@/lib/utils/wallets"
 
-import walletData from "@/data/wallets/wallet-data"
+import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
@@ -108,14 +111,26 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const FindWalletPage = () => {
-  const randomizedWalletData = shuffle(walletData)
-  const { pathname } = useRouter()
+  const { pathname, locale } = useRouter()
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
   const resetWalletFilter = useRef(() => {})
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
   const [filters, setFilters] = useState(filterDefault)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const [randomizedWalletData, setRandomizedWalletData] = useState<
+    WalletData[]
+  >([])
+
+  // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
+  useEffect(() => {
+    const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
+    const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
+
+    setRandomizedWalletData(
+      supportedLocaleWallets.concat(noSupportedLocaleWallets)
+    )
+  }, [locale])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
