@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, Button, Icon, Link } from "@chakra-ui/react"
+import { Button, Icon, Link, ListItem, UnorderedList } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import * as Portal from "@radix-ui/react-portal"
 
@@ -31,11 +31,18 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
   const { asPath } = useRouter()
   if (lvl > 3) return null
 
+  const pad = 4
+
   return (
     <NavigationMenu.Content>
       <NavigationMenu.Sub orientation="vertical">
         <NavigationMenu.List asChild>
-          <Box listStyleType="none" bg={`menu.lvl${lvl}.background`} p="4">
+          <UnorderedList
+            listStyleType="none"
+            bg={`menu.lvl${lvl}.background`}
+            p={pad}
+            m="0"
+          >
             {items.map((item) => {
               const { label, description, icon, ...action } = item
               const subItems = action.items || []
@@ -63,7 +70,7 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                     bg: `menu.lvl${lvl}.activeBackground`,
                   },
                 },
-                py: "4",
+                py: pad,
                 bg: "none",
                 _hover: activeStyles,
                 _active: activeStyles,
@@ -72,34 +79,33 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
               }
 
               return (
-                <NavigationMenu.Item key={label}>
-                  {isLink ? (
-                    <NavigationMenu.Link asChild>
-                      <Button as={Link} href={action.href} {...buttonProps}>
-                        <ItemContent item={item} lvl={lvl} />
-                      </Button>
-                    </NavigationMenu.Link>
-                  ) : (
-                    <>
-                      <NavigationMenu.Trigger asChild>
-                        <Button
-                          marginInlineEnd="-16px !important"
-                          {...buttonProps}
-                        >
+                <NavigationMenu.Item key={label} asChild>
+                  <ListItem me={isLink ? undefined : -pad}>
+                    {isLink ? (
+                      <NavigationMenu.Link asChild>
+                        <Button as={Link} href={action.href} {...buttonProps}>
                           <ItemContent item={item} lvl={lvl} />
                         </Button>
-                      </NavigationMenu.Trigger>
-                      <LvlContent
-                        lvl={(lvl + 1) as Level}
-                        items={subItems}
-                        refs={refs}
-                      />
-                    </>
-                  )}
+                      </NavigationMenu.Link>
+                    ) : (
+                      <>
+                        <NavigationMenu.Trigger asChild>
+                          <Button {...buttonProps}>
+                            <ItemContent item={item} lvl={lvl} />
+                          </Button>
+                        </NavigationMenu.Trigger>
+                        <LvlContent
+                          lvl={(lvl + 1) as Level}
+                          items={subItems}
+                          refs={refs}
+                        />
+                      </>
+                    )}
+                  </ListItem>
                 </NavigationMenu.Item>
               )
             })}
-          </Box>
+          </UnorderedList>
         </NavigationMenu.List>
         <Portal.Root container={refs[`lvl${lvl + 1}`]?.current}>
           <NavigationMenu.Viewport />
