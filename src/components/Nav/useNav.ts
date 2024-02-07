@@ -4,21 +4,24 @@ import {
   BsBook,
   BsBuildings,
   BsCompass,
-  BsFire,
   BsJournalCode,
   BsLayers,
   BsLightbulb,
   BsMegaphone,
   BsMortarboard,
-  BsPersonArmsUp,
+  BsFlag,
   BsPinAngle,
   BsSafe,
   BsSignpost,
   BsSliders,
-  BsTools,
+  BsCodeSquare,
   BsUiChecksGrid,
 } from "react-icons/bs"
-import { PiFlask } from "react-icons/pi";
+import { LiaEthereum } from "react-icons/lia";
+import { 
+  PiFlask,
+  PiUsersFourLight,
+} from "react-icons/pi";
 import { useColorMode, useColorModeValue, useDisclosure } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -261,13 +264,13 @@ export const useNav = () => {
         {
           label: t("nav-builders-home-label"),
           description: t("nav-builders-home-description"),
-          icon: BsTools,
+          icon: BsCodeSquare,
           href: "/developers",
         },
         {
           label: t("get-started"),
           description: t("nav-start-building-description"),
-          icon: BsPinAngle,
+          icon: BsFlag,
           items: [
             {
               label: t("tutorials"),
@@ -344,7 +347,7 @@ export const useNav = () => {
         {
           label: t("community-hub"),
           description: t("nav-participate-overview-description"),
-          icon: BsPersonArmsUp,
+          icon: PiUsersFourLight,
           href: "/community",
         },
         {
@@ -367,7 +370,7 @@ export const useNav = () => {
         {
           label: t("site-title"),
           description: t("nav-ethereum-org-description"),
-          icon: BsFire,
+          icon: LiaEthereum,
           items: [
             {
               label: t("nav-contribute-label"),
