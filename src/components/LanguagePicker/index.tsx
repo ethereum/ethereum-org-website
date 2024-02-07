@@ -71,7 +71,7 @@ const LanguagePicker = ({
         {/* Mobile Close bar */}
         <Flex
           justifyContent="end"
-          hideFrom="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+          hideFrom="md"
           position="sticky"
           zIndex="sticky"
           top="0"
@@ -139,7 +139,7 @@ const LanguagePicker = ({
                 }}
               />
               <InputRightElement
-                hideBelow="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+                hideBelow="md"
                 cursor="text"
               >
                 <Kbd
