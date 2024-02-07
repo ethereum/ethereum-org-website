@@ -94,25 +94,17 @@ const Nav = () => {
             ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="md" sections={linkSections} />
-            <Flex alignItems="center" justifyContent="space-between">
+            <Flex alignItems="center"/*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
-              {/* Mobile */}
-              <MobileNavMenu
-                {...mobileNavProps}
-                linkSections={linkSections}
-                hideFrom="lg"
-                toggleSearch={searchModalDisclosure.onOpen}
-                drawerContainerRef={navWrapperRef}
-              />
               {/* Desktop */}
-              <HStack spacing={2} hideBelow="md" ms="2">
+              <HStack hideBelow="md" gap="0">
                 <IconButton
                   transition="transform 0.5s, color 0.2s"
                   icon={ThemeIcon}
                   aria-label={themeIconAriaLabel}
                   variant="ghost"
                   isSecondary
-                  px={1.5}
+                  px={{ base: "2", xl: "3" }}
                   _hover={{
                     transform: "rotate(10deg)",
                     color: "primary.hover",
@@ -136,6 +128,7 @@ const Nav = () => {
                     variant="ghost"
                     color="body.base"
                     transition="color 0.2s"
+                    px={{ base: "2", xl: "3" }}
                     _hover={{
                       color: "primary.hover",
                       "& svg": {
@@ -169,7 +162,6 @@ const Nav = () => {
               </HStack>
               {/* Mobile */}
               <MobileNavMenu
-                ms={{ base: 2, lg: 4 }}
                 {...mobileNavProps}
                 linkSections={linkSections}
                 hideFrom="md"

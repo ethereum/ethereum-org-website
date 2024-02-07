@@ -17,7 +17,8 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   bg: "none",
   gap: 4,
   m: 0,
-  ps: 3,
+  me: 3,
+  px: 3,
   _hover: {
     ...commonBtnStateStyles,
     ".DocSearch-Button-Keys kbd": {
@@ -191,7 +192,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     placeItems: "center",
     borderRadius: "base",
     mr: "unset",
-    me: 1.5
+    me: 1.5,
   },
 
   ".DocSearch-Logo": {

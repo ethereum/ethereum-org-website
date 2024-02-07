@@ -43,8 +43,9 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                     <NavigationMenu.Trigger asChild>
                       <Button
                         py="2"
-                        px="4"
+                        px={{ base: "3", lg: "4" }}
                         variant="ghost"
+                        whiteSpace="nowrap"
                         color="body.base"
                         sx={{
                           '&[data-state="open"]': {
