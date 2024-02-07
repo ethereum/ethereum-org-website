@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Button, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
+import { Box, Button, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import * as Portal from "@radix-ui/react-portal"
 
@@ -23,9 +23,9 @@ type LvlContentProps = {
  * Content for each sub-menu below top-level navigation
  * Content renders inside sibling Viewport
  * Viewport wrapped in Portal to render inside a passed ref
- * @param { 1 | 2 | 3 } lvl - The level of the menu
+ * @param lvl - The level of the menu
  * @param refs - The references to the Grid column elements.
- * @param { NavItem[] } items - The items to be displayed in the menu
+ * @param items - The items to be displayed in the menu
  * @returns The JSX element representing the menu content.
  */
 const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
@@ -38,75 +38,74 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
     <NavigationMenu.Content>
       <NavigationMenu.Sub orientation="vertical">
         <NavigationMenu.List asChild>
-          <UnorderedList
-            listStyleType="none"
-            bg={`menu.lvl${lvl}.background`}
-            p={pad}
-            m="0"
-          >
-            {items.map((item) => {
-              const { label, description, icon, ...action } = item
-              const subItems = action.items || []
-              const isLink = "href" in action
-              const isActivePage = isLink && cleanPath(asPath) === action.href
-
-              const activeStyles = {
-                outline: "none",
-                rounded: "md",
-                "p, svg": { color: "primary.base" },
-                bg: `menu.lvl${lvl}.activeBackground`,
-                boxShadow: "none",
-              }
-
-              const buttonProps: ButtonProps = {
-                color: isActivePage ? "menu.active" : `menu.lvl${lvl}.main`,
-                leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
-                rightIcon: isLink ? undefined : <NextChevron />,
-                position: "relative",
-                w: "full",
-                sx: {
-                  "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
-                  '&[data-state="open"]': {
-                    roundedEnd: "none",
-                    bg: `menu.lvl${lvl}.activeBackground`,
+          <Box bg={`menu.lvl${lvl}.background`}>
+            <UnorderedList
+              listStyleType="none"
+              p={pad}
+              m="0"
+              sx={{ "li:last-of-type": { mb: 0 } }}
+            >
+              {items.map((item) => {
+                const { label, description, icon, ...action } = item
+                const subItems = action.items || []
+                const isLink = "href" in action
+                const isActivePage = isLink && cleanPath(asPath) === action.href
+                const activeStyles = {
+                  outline: "none",
+                  rounded: "md",
+                  "p, svg": { color: "primary.base" },
+                  bg: `menu.lvl${lvl}.activeBackground`,
+                  boxShadow: "none",
+                }
+                const buttonProps: ButtonProps = {
+                  color: isActivePage ? "menu.active" : `menu.lvl${lvl}.main`,
+                  leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
+                  rightIcon: isLink ? undefined : <NextChevron />,
+                  position: "relative",
+                  w: "full",
+                  sx: {
+                    "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
+                    '&[data-state="open"]': {
+                      roundedEnd: "none",
+                      bg: `menu.lvl${lvl}.activeBackground`,
+                    },
                   },
-                },
-                py: pad,
-                bg: "none",
-                _hover: activeStyles,
-                _active: activeStyles,
-                _focus: activeStyles,
-                variant: "ghost",
-              }
-
-              return (
-                <NavigationMenu.Item key={label} asChild>
-                  <ListItem me={isLink ? undefined : -pad}>
-                    {isLink ? (
-                      <NavigationMenu.Link asChild>
-                        <Button as={Link} href={action.href} {...buttonProps}>
-                          <ItemContent item={item} lvl={lvl} />
-                        </Button>
-                      </NavigationMenu.Link>
-                    ) : (
-                      <>
-                        <NavigationMenu.Trigger asChild>
-                          <Button {...buttonProps}>
+                  py: pad,
+                  bg: "none",
+                  _hover: activeStyles,
+                  _active: activeStyles,
+                  _focus: activeStyles,
+                  variant: "ghost",
+                }
+                return (
+                  <NavigationMenu.Item key={label} asChild>
+                    <ListItem me={isLink ? undefined : -pad}>
+                      {isLink ? (
+                        <NavigationMenu.Link asChild>
+                          <Button as={Link} href={action.href} {...buttonProps}>
                             <ItemContent item={item} lvl={lvl} />
                           </Button>
-                        </NavigationMenu.Trigger>
-                        <LvlContent
-                          lvl={(lvl + 1) as Level}
-                          items={subItems}
-                          refs={refs}
-                        />
-                      </>
-                    )}
-                  </ListItem>
-                </NavigationMenu.Item>
-              )
-            })}
-          </UnorderedList>
+                        </NavigationMenu.Link>
+                      ) : (
+                        <>
+                          <NavigationMenu.Trigger asChild>
+                            <Button {...buttonProps}>
+                              <ItemContent item={item} lvl={lvl} />
+                            </Button>
+                          </NavigationMenu.Trigger>
+                          <LvlContent
+                            lvl={(lvl + 1) as Level}
+                            items={subItems}
+                            refs={refs}
+                          />
+                        </>
+                      )}
+                    </ListItem>
+                  </NavigationMenu.Item>
+                )
+              })}
+            </UnorderedList>
+          </Box>
         </NavigationMenu.List>
         <Portal.Root container={refs[`lvl${lvl + 1}`]?.current}>
           <NavigationMenu.Viewport />
