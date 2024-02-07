@@ -2,7 +2,7 @@ import { useRef, useState } from "react"
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -30,6 +30,7 @@ import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
 import WalletTable from "@/components/FindWallet/WalletTable"
 import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
 import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
@@ -43,7 +44,7 @@ import walletData from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
-import FindWalletHeroImage from "@/public/wallets/find-wallet-hero.png"
+import HeroImage from "@/public/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -166,12 +167,17 @@ const FindWalletPage = () => {
             {t("page-find-wallet-title")}
           </OldHeading>
           <Subtitle>{t("page-find-wallet-description")}</Subtitle>
-          <Subtitle>{t("page-find-wallet-desc-2")}</Subtitle>
+          <Subtitle>
+            {t("page-find-wallet-desc-2")}{" "}
+            <InlineLink to="/wallets">
+              {t("page-find-wallet-desc-2-wallets-link")}
+            </InlineLink>
+          </Subtitle>
         </Box>
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
-            src={FindWalletHeroImage}
-            width={600}
+            src={HeroImage}
+            width={500}
             alt=""
             priority
             style={{
