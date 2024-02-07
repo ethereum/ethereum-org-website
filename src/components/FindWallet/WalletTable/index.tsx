@@ -32,12 +32,15 @@ import {
 import { Image } from "@/components/Image"
 import InlineLink, { LinkProps } from "@/components/Link"
 import Text from "@/components/OldText"
+import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+
+import { useWalletPersonas } from "../../../hooks/useWalletPersonas"
 
 const Container = (props: TableProps) => (
   <Table
@@ -331,6 +334,9 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
 
+  const personas = useWalletPersonas()
+  console.log({ personas })
+
   return (
     <Container>
       <WalletContentHeader>
@@ -443,13 +449,23 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                   </Box>
                   <Box>
                     <Text>{wallet.name}</Text>
+
+                    <Flex>
+                      {personas.map((persona) => (
+                        <Tag
+                          key={persona.title}
+                          label={persona.title.toUpperCase()}
+                        />
+                      ))}
+                    </Flex>
+
                     <Text
                       hideBelow="sm"
                       color="text200"
                       fontSize="0.7rem"
                       lineHeight="0.85rem"
                     >
-                      {deviceLabels.join(" | ")}
+                      {deviceLabels.join(" · ")}
                     </Text>
                     {deviceLabels.map((label) => (
                       <Text

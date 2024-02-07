@@ -14,7 +14,7 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useWalletFilterProfile } from "./useWalletFilterProfile"
+import { useWalletPersonas } from "../../../../hooks/useWalletPersonas"
 
 const WalletFilterProfile = ({
   resetFilters,
@@ -22,7 +22,7 @@ const WalletFilterProfile = ({
   selectedPersona,
   setSelectedPersona,
 }) => {
-  const { personas } = useWalletFilterProfile()
+  const personas = useWalletPersonas()
 
   const getContainerBg = (idx: number) =>
     // eslint-disable-next-line react-hooks/rules-of-hooks

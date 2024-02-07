@@ -21,7 +21,7 @@ import {
   SwapIcon,
   WalletConnectIcon,
   WithdrawCryptoIcon,
-} from "../../../icons/wallets"
+} from "../components/icons/wallets"
 
 // Types
 interface Personas {
@@ -58,7 +58,7 @@ interface Personas {
   }
 }
 
-export const useWalletFilterProfile = () => {
+export const useWalletPersonas = () => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   const filterLabels = {
@@ -331,7 +331,5 @@ export const useWalletFilterProfile = () => {
     },
   ]
 
-  return {
-    personas,
-  }
+  return personas
 }
