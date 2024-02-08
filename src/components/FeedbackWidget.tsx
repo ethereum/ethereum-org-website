@@ -133,7 +133,7 @@ const FeedbackWidget = () => {
     setIsExpanded(false)
   }
 
-  // Dispay on English pages only
+  // Display on English pages only
   if (locale !== DEFAULT_LOCALE) return null
 
   return (
