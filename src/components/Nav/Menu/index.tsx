@@ -4,6 +4,8 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { SECTION_LABELS } from "@/lib/constants"
 
 import type { Level, LvlRefs, NavSections } from "../types"
@@ -37,13 +39,22 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         dir={direction}
         orientation="horizontal"
         delayDuration={750}
+        onValueChange={(activeSection) => {
+          trackCustomEvent({
+            eventCategory: "Desktop navigation menu",
+            eventAction: "Section changed",
+            eventName: activeSection
+              ? `Open section: ${activeSection}`
+              : "Menu closed",
+          })
+        }}
       >
         <NavigationMenu.List asChild>
           <Flex listStyleType="none">
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               return (
-                <NavigationMenu.Item key={sectionKey}>
+                <NavigationMenu.Item key={sectionKey} value={label}>
                   <NavigationMenu.Trigger asChild>
                     <Button
                       py="2"

@@ -7,6 +7,7 @@ import * as Portal from "@radix-ui/react-portal"
 import { ButtonProps } from "@/components/Buttons"
 import Link from "@/components/Link"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
 import type { Level, LvlRefs, NavItem } from "../types"
@@ -88,7 +89,17 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                     {isLink ? (
                       <NextLink href={action.href!} passHref legacyBehavior>
                         <NavigationMenu.Link asChild>
-                          <Button as={Link} {...buttonProps}>
+                          <Button
+                            as={Link}
+                            onClick={() =>
+                              trackCustomEvent({
+                                eventCategory: "Desktop navigation menu",
+                                eventAction: `Follow level ${lvl} link`,
+                                eventName: action.href!,
+                              })
+                            }
+                            {...buttonProps}
+                          >
                             <ItemContent item={item} lvl={lvl} />
                           </Button>
                         </NavigationMenu.Link>
