@@ -13,11 +13,11 @@ import type {
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { languages } from "@/lib/utils/translations"
 
-import progressData from "@/data/translationProgress.json"
+import progressDataJson from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-const data = progressData as ProjectProgressData[]
+const progressData = progressDataJson satisfies ProjectProgressData[]
 
 export const useLanguagePicker = (
   handleClose?: () => void,
@@ -88,20 +88,24 @@ export const useLanguagePicker = (
       }
 
       // English will not have a dataItem
-      const dataItem = data.find(
+      const dataItem = progressData.find(
         ({ languageId }) =>
           i18nItem.crowdinCode.toLowerCase() === languageId.toLowerCase()
       )
 
       const approvalProgress =
-        localeOption === DEFAULT_LOCALE ? 100 : dataItem?.approvalProgress || 0
+        localeOption === DEFAULT_LOCALE
+          ? 100
+          : Math.floor(
+              (dataItem!.words.approved / dataItem!.words.total) * 100
+            ) || 0
 
-      if (data.length === 0)
+      if (progressData.length === 0)
         throw new Error(
           "Missing translation progress data; check GitHub action"
         )
 
-      const totalWords = data[0].words.total
+      const totalWords = progressData[0].words.total
 
       const wordsApproved =
         localeOption === DEFAULT_LOCALE

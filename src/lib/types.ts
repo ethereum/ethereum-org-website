@@ -155,7 +155,8 @@ export type RawQuestion = {
 
 export type QuestionBank = Record<string, RawQuestion>
 export type QuestionKey = keyof typeof allQuestionData
-export type AnswerKey = typeof allQuestionData[QuestionKey]["answers"][number]["id"]
+export type AnswerKey =
+  (typeof allQuestionData)[QuestionKey]["answers"][number]["id"]
 
 export type Question = RawQuestion & {
   id: QuestionKey
@@ -192,7 +193,10 @@ export type QuizKey = keyof typeof allQuizData
 type HasScoredPerfect = boolean
 type QuestionsCorrect = number
 
-export type CompletedQuizzes = Record<QuizKey, [HasScoredPerfect, QuestionsCorrect]>
+export type CompletedQuizzes = Record<
+  QuizKey,
+  [HasScoredPerfect, QuestionsCorrect]
+>
 
 export type UserStats = {
   score: number
@@ -238,37 +242,12 @@ export type LocaleContributions = {
 }
 
 // Crowdin translation progress
-type Language = {
-  id: string
-  name: string
-  editorCode: string
-  twoLettersCode: string
-  threeLettersCode: string
-  locale: string
-  androidCode: string
-  osxCode: string
-  osxLocale: string
-  pluralCategoryNames: string[]
-  pluralRules: string
-  pluralExamples: string[]
-  textDirection: string
-  dialectOf: unknown
-}
-
-type CountSummary = {
-  total: number
-  translated: number
-  preTranslateAppliedTo: number
-  approved: number
-}
-
 export type ProjectProgressData = {
-  languageId: string,
-  language?: Language,
-  words: CountSummary,
-  phrases: CountSummary,
-  translationProgress: number
-  approvalProgress: number
+  languageId: string
+  words: {
+    total: number
+    approved: number
+  }
 }
 
 export type LocaleDisplayInfo = {
@@ -329,7 +308,6 @@ export type AllTimeData = {
   }>
 }
 
-
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -368,8 +346,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -435,12 +413,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-    error: string
-  }
+      error: string
+    }
   | {
-    data: Data
-    value: Value
-  }
+      data: Data
+      value: Value
+    }
 
 export type EtherscanNodeResponse = {
   result: {
