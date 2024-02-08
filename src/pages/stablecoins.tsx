@@ -522,6 +522,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                       <ButtonLink
                         variant="outline"
                         to="https://kb.oasis.app/help/what-is-dai"
+                        isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
                       </ButtonLink>
@@ -572,6 +573,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       variant="outline"
                       to="https://www.coinbase.com/usdc"
+                      isSecondary
                     >
                       {t("page-stablecoins-usdc-banner-learn-button")}
                     </ButtonLink>
@@ -640,7 +642,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <ButtonLink to="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
-            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
+            <ButtonLink
+              variant="outline"
+              to="/defi/"
+              whiteSpace="normal"
+              isSecondary
+            >
               {t("page-stablecoins-more-defi-button")}
             </ButtonLink>
           </Flex>

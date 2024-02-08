@@ -624,7 +624,7 @@ const WhatIsEthereumPage = ({
                 <ButtonLink to="/smart-contracts/">
                   {t("page-what-is-ethereum-more-on-smart-contracts")}
                 </ButtonLink>
-                <ButtonLink to="/dapps/" variant="outline">
+                <ButtonLink to="/dapps/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-explore-dapps")}
                 </ButtonLink>
               </ButtonRow>
@@ -645,7 +645,7 @@ const WhatIsEthereumPage = ({
                 <ButtonLink to="/eth/">
                   {t("page-what-is-ethereum-what-is-ether")}
                 </ButtonLink>
-                <ButtonLink to="/get-eth/" variant="outline">
+                <ButtonLink to="/get-eth/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-get-eth")}
                 </ButtonLink>
               </ButtonRow>
@@ -668,7 +668,7 @@ const WhatIsEthereumPage = ({
                 <ButtonLink to="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}
                 </ButtonLink>
-                <ButtonLink to="/roadmap/merge/" variant="outline">
+                <ButtonLink to="/roadmap/merge/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-the-merge-update")}
                 </ButtonLink>
               </ButtonRow>

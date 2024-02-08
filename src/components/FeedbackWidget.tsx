@@ -45,8 +45,9 @@ const FixedDot = ({
       boxShadow="tableItemBox"
       position="sticky"
       bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
-      ms="auto"
+      me="1rem"
       mt={{ lg: "inherit" }}
+      insetStart={`calc(100% - ${size})`}
       insetEnd={4}
       zIndex={98} /* Below the mobile menu */
       display="flex"
@@ -137,7 +138,7 @@ const FeedbackWidget = () => {
     setIsExpanded(false)
   }
 
-  // Dispay on English pages only
+  // Display on English pages only
   if (locale !== DEFAULT_LOCALE) return null
 
   return (
@@ -184,79 +185,85 @@ const FeedbackWidget = () => {
         <AlertDialogOverlay>
           <AlertDialogContent
             position="fixed"
-            insetEnd={{ base: 4, sm: 8 }}
-            insetStart={{ base: 4, sm: "auto" }}
-            bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
-            w={{ base: "auto", sm: "300px" }}
-            bgColor="ednBackground"
-            border="1px"
-            borderColor="buttonColor"
+            maxW={1504}
+            m="auto"
+            alignItems="flex-end"
+            backgroundColor="transparent"
             boxShadow="tableItemBox"
-            borderRadius="base"
-            py="4"
-            px="2"
+            me={24}
+            bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
           >
-            <AlertDialogCloseButton />
-
-            <AlertDialogHeader
-              fontSize="xl"
-              fontWeight="bold"
-              lineHeight="6"
-              textAlign="center"
+            <Box
+              w={{ base: "auto", sm: "300px" }}
+              bgColor="ednBackground"
+              border="1px"
+              borderColor="buttonColor"
+              borderRadius="base"
+              py="4"
+              px="2"
             >
-              {feedbackSubmitted
-                ? t("feedback-widget-thank-you-title")
-                : t("feedback-widget-prompt")}
-            </AlertDialogHeader>
+              <AlertDialogCloseButton />
 
-            {/* Body: */}
-            {feedbackSubmitted && (
-              <>
-                <AlertDialogBody
-                  fontWeight="normal"
-                  fontSize="md"
-                  lineHeight="5"
-                  textAlign="center"
-                >
-                  {t("feedback-widget-thank-you-subtitle")}
-                </AlertDialogBody>
-                <AlertDialogBody
-                  fontWeight="bold"
-                  fontSize="xs"
-                  lineHeight="4"
-                  letterSpacing="wide"
-                  color="searchBorder"
-                  textAlign="center"
-                >
-                  {t("feedback-widget-thank-you-timing")}
-                </AlertDialogBody>
-              </>
-            )}
+              <AlertDialogHeader
+                fontSize="xl"
+                fontWeight="bold"
+                lineHeight="6"
+                textAlign="center"
+              >
+                {feedbackSubmitted
+                  ? t("feedback-widget-thank-you-title")
+                  : t("feedback-widget-prompt")}
+              </AlertDialogHeader>
 
-            <AlertDialogFooter display="flex" gap="6">
-              {feedbackSubmitted ? (
-                <Button onClick={handleSurveyOpen} flex={1}>
-                  {t("feedback-widget-thank-you-cta")}
-                </Button>
-              ) : (
+              {/* Body: */}
+              {feedbackSubmitted && (
                 <>
-                  <Button
-                    variant="solid"
-                    onClick={() => handleSubmit(true)}
-                    flex={1}
+                  <AlertDialogBody
+                    fontWeight="normal"
+                    fontSize="md"
+                    lineHeight="5"
+                    textAlign="center"
                   >
-                    {t("yes")}
-                  </Button>
-                  <Button
-                    variant="solid"
-                    onClick={() => handleSubmit(false)}
-                    flex={1}
+                    {t("feedback-widget-thank-you-subtitle")}
+                  </AlertDialogBody>
+                  <AlertDialogBody
+                    fontWeight="bold"
+                    fontSize="xs"
+                    lineHeight="4"
+                    letterSpacing="wide"
+                    color="searchBorder"
+                    textAlign="center"
                   >
-                    {t("no")}
-                  </Button>
+                    {t("feedback-widget-thank-you-timing")}
+                  </AlertDialogBody>
                 </>
               )}
-            </AlertDialogFooter>
+
+              <AlertDialogFooter display="flex" gap="6">
+                {feedbackSubmitted ? (
+                  <Button onClick={handleSurveyOpen} flex={1}>
+                    {t("feedback-widget-thank-you-cta")}
+                  </Button>
+                ) : (
+                  <>
+                    <Button
+                      variant="solid"
+                      onClick={() => handleSubmit(true)}
+                      flex={1}
+                    >
+                      {t("yes")}
+                    </Button>
+                    <Button
+                      variant="solid"
+                      onClick={() => handleSubmit(false)}
+                      flex={1}
+                    >
+                      {t("no")}
+                    </Button>
+                  </>
+                )}
+              </AlertDialogFooter>
+            </Box>
           </AlertDialogContent>
         </AlertDialogOverlay>
       </AlertDialog>
