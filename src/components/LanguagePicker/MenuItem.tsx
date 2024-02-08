@@ -85,7 +85,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
           <Flex alignItems="center" gap={2}>
             <Text
               fontSize="lg"
-              color={isCurrent ? "primary.highContrast" : "primary.base"}
+              color={isCurrent ? "primary.highContrast" : "body.base"}
             >
               {targetName}
             </Text>
