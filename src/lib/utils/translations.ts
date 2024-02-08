@@ -18,6 +18,10 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
   return langConfig[0].langDir === "rtl"
 }
 
+export const filterFakedLocales = (locales: string[] | undefined) => {
+  return locales?.filter((locale) => locale !== "default") || []
+}
+
 // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)
 // Context: https://github.com/ethereum/ethereum-org-website/pull/5490#pullrequestreview-892596553
 export const getLocaleForNumberFormat = (locale: Lang): Lang =>
@@ -73,10 +77,7 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/energy-consumption")) {
     primaryNamespace = "page-what-is-ethereum"
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-about",
-    ]
+    requiredNamespaces = [...requiredNamespaces, "page-about"]
   }
 
   if (path.startsWith("/eth")) {
@@ -133,10 +134,7 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/roadmap/vision")) {
     primaryNamespace = "page-roadmap-vision"
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-upgrades-index",
-    ]
+    requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
   }
 
   if (path.startsWith("/gas")) {
@@ -163,10 +161,7 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/wallets/find-wallet")) {
     primaryNamespace = "page-wallets-find-wallet"
-    requiredNamespaces = [
-      ...requiredNamespaces,
-      "page-wallets",
-    ]
+    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
   }
 
   if (path.startsWith("/layer-2")) {
@@ -193,7 +188,9 @@ const getRequiredNamespacesForPath = (path: string) => {
   }
 
   // Ensures that the primary namespace is always the first item in the array
-  return primaryNamespace ? [primaryNamespace, ...requiredNamespaces] : [...requiredNamespaces]
+  return primaryNamespace
+    ? [primaryNamespace, ...requiredNamespaces]
+    : [...requiredNamespaces]
 }
 
 const getRequiredNamespacesForLayout = (layout?: string) => {
