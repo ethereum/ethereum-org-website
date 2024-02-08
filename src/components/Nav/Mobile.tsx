@@ -20,7 +20,6 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
-  forwardRef,
   Grid,
   Heading,
   Icon,
@@ -42,29 +41,6 @@ import LanguagePicker from "../LanguagePicker"
 
 import type { Level, NavItem, NavSections } from "./types"
 
-const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
-  <Flex
-    ref={ref}
-    flex="1 1 120px"
-    alignItems="center"
-    color="text"
-    cursor="pointer"
-    flexDir="column"
-    _hover={{
-      color: "primary.base",
-      "& svg": {
-        fill: "currentColor",
-      },
-    }}
-    sx={{
-      "& svg": {
-        fill: "currentColor",
-        fontSize: "2xl",
-      },
-    }}
-    {...props}
-  />
-))
 
 type FooterButtonProps = ButtonProps & {
   icon: IconType
@@ -86,10 +62,10 @@ const FooterButton = ({ icon, ...props }: FooterButtonProps) => (
 const FooterItemText = (props: ChildOnlyProp) => (
   <Text
     fontSize="sm"
-    lineHeight={1.6}
-    fontWeight={400}
-    letterSpacing="0.04em"
-    mt={2}
+    lineHeight="base"
+    fontWeight="normal"
+    letterSpacing="wider"
+    mt="2"
     textTransform="uppercase"
     textAlign="center"
     opacity={0.7}
@@ -161,41 +137,6 @@ const HamburgerButton = ({
   )
 }
 
-type CloseButtonProps = ButtonProps & {
-  onToggle: () => void
-}
-
-const CloseButton = ({ onToggle, ...props }: CloseButtonProps) => {
-  const { t } = useTranslation("common")
-  return (
-    <IconButton
-      onClick={onToggle}
-      aria-label={t("aria-toggle-search-button")}
-      variant="ghost"
-      isSecondary
-      px={0}
-      color="menu.lvl1.main"
-      icon={
-        <Icon
-          viewBox="0 0 24 24"
-          width={6}
-          height={6}
-          position="relative"
-          strokeWidth="2px"
-          display="inline-block"
-          stroke="currentColor"
-        >
-          <path d="M 2 4 l 0 -3 l 20 0 l 0 3" />
-          <path d="M 7 15 l 10 -10 " />
-          <path d="M 7 5 l 10 10" />
-          <path d="M 2 16 l 0 3 l 20 0 l 0 -3" />
-        </Icon>
-      }
-      {...props}
-    />
-  )
-}
-
 const expandedPathVariants = {
   closed: {
     d: "M12 7.875V17.125",
@@ -207,7 +148,7 @@ const expandedPathVariants = {
   },
 }
 
-const OpenCloseIcon = ({ isOpen }: { isOpen: boolean }) => (
+const ExpandIcon = ({ isOpen }: { isOpen: boolean }) => (
   <Icon
     viewBox="0 0 24 25"
     width={6}
@@ -273,6 +214,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
                 </Text>
               </Box>
             </Button>
+                    <ExpandIcon isOpen={isExpanded} />
           </AccordionItem>
         )
       return (
@@ -292,7 +234,6 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
                   pe="4"
                   py="4"
                 >
-                  <OpenCloseIcon isOpen={isExpanded} />
                   <Box flex="1" textAlign="start">
                     <Text
                       fontWeight="bold"
@@ -414,7 +355,7 @@ const MobileNavMenu = ({
                             _hover={{ bg: "none" }}
                             py="4"
                           >
-                            <OpenCloseIcon isOpen={isExpanded} />
+                            <ExpandIcon isOpen={isExpanded} />
                             <Box
                               as="span"
                               flex="1"
