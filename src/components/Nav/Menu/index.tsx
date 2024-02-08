@@ -6,7 +6,7 @@ import { Button } from "@/components/Buttons"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { LvlRefs, NavSections } from "../types"
+import type { Level, LvlRefs, NavSections } from "../types"
 
 import LvlContent from "./LvlContent"
 
@@ -24,6 +24,10 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
     lvl2: useRef(null),
     lvl3: useRef(null),
   }
+
+  const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
+    '&:has([data-state="open"])': { bg: menuColors.lvl[lvl].background },
+  })
 
   return (
     <Box {...props}>
@@ -79,16 +83,15 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
               bg: "menu.lvl2.background",
             },
             '&:has(#lvl3 [data-state="open"])': {
-              bg: "menu.lvl3-background",
+              bg: "menu.lvl3.background",
             },
-            div: { h: "full" },
           }}
         >
-          <Box ref={refs.lvl1} id="lvl1">
+          <Box ref={refs.lvl1} id="lvl1" bg="menu.lvl1.background">
             <NavigationMenu.Viewport />
           </Box>
-          <Box ref={refs.lvl2} id="lvl2" />
-          <Box ref={refs.lvl3} id="lvl3" />
+          <Box ref={refs.lvl2} id="lvl2" sx={getLvlSx(2)} />
+          <Box ref={refs.lvl3} id="lvl3" sx={getLvlSx(3)} />
         </Grid>
       </NavigationMenu.Root>
     </Box>
