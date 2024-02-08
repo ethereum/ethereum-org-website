@@ -5,6 +5,8 @@ import { cleanPath } from "@/lib/utils/url"
 
 import type { Level, NavItem } from "../types"
 
+import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+
 type ItemProps = {
   item: NavItem
   lvl: Level
@@ -13,6 +15,8 @@ type ItemProps = {
 const ItemContent = ({ item, lvl }: ItemProps) => {
   const { label, description, icon, ...action } = item
   const { asPath } = useRouter()
+  const menuColors = useNavMenuColors()
+
   const isLink = "href" in action
   const isActivePage = isLink && cleanPath(asPath) === action.href
 
@@ -20,13 +24,13 @@ const ItemContent = ({ item, lvl }: ItemProps) => {
     <Box me="auto" textAlign="start" position="relative">
       <Text
         fontWeight="bold"
-        color={isActivePage ? "menu.active" : `menu.lvl${lvl}.main`}
+        color={isActivePage ? menuColors.active : menuColors.body}
       >
         {label}
       </Text>
       <Text
         fontSize="sm"
-        color={isActivePage ? "menu.active" : `menu.lvl${lvl}.subtext`}
+        color={isActivePage ? menuColors.active : menuColors.lvl[lvl].subtext}
       >
         {description}
       </Text>

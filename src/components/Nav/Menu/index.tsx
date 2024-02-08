@@ -10,6 +10,7 @@ import type { Level, LvlRefs, NavSections } from "../types"
 
 import LvlContent from "./LvlContent"
 
+import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type NavMenuProps = BoxProps & {
@@ -18,6 +19,7 @@ type NavMenuProps = BoxProps & {
 
 const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { direction } = useRtlFlip()
+  const menuColors = useNavMenuColors()
 
   const refs: LvlRefs = {
     lvl1: useRef(null),
@@ -73,21 +75,21 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
           templateColumns="repeat(3, 1fr)"
           shadow="md"
           border="1px"
-          borderColor="menu.stroke"
-          bg="menu.lvl1.background"
+          borderColor={menuColors.stroke}
+          bg={menuColors.lvl[1].background}
           sx={{
             '&:has(#lvl1 [data-state="open"])': {
               visibility: "visible",
             },
             '&:has(#lvl2 [data-state="open"])': {
-              bg: "menu.lvl2.background",
+              bg: menuColors.lvl[2].background,
             },
             '&:has(#lvl3 [data-state="open"])': {
-              bg: "menu.lvl3.background",
+              bg: menuColors.lvl[3].background,
             },
           }}
         >
-          <Box ref={refs.lvl1} id="lvl1" bg="menu.lvl1.background">
+          <Box ref={refs.lvl1} id="lvl1" bg={menuColors.lvl[1].background}>
             <NavigationMenu.Viewport />
           </Box>
           <Box ref={refs.lvl2} id="lvl2" sx={getLvlSx(2)} />

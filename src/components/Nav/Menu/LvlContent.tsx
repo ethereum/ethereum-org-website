@@ -14,6 +14,8 @@ import type { Level, LvlRefs, NavItem } from "../types"
 import ItemContent from "./ItemContent"
 import NextChevron from "./NextChevron"
 
+import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+
 type LvlContentProps = {
   lvl: Level
   refs: LvlRefs
@@ -31,6 +33,8 @@ type LvlContentProps = {
  */
 const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
   const { asPath } = useRouter()
+  const menuColors = useNavMenuColors()
+
   if (lvl > 3) return null
 
   const pad = 4
@@ -48,12 +52,12 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
               const activeStyles = {
                 outline: "none",
                 rounded: "md",
-                "p, svg": { color: "primary.base" },
-                bg: `menu.lvl${lvl}.activeBackground`,
+                "p, svg": { color: menuColors.highlight },
+                bg: menuColors.lvl[lvl].activeBackground,
                 boxShadow: "none",
               }
               const buttonProps: ButtonProps = {
-                color: isActivePage ? "menu.active" : `menu.lvl${lvl}.main`,
+                color: isActivePage ? menuColors.active : menuColors.body,
                 leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
                 rightIcon: isLink ? undefined : <NextChevron />,
                 position: "relative",
@@ -75,7 +79,7 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                     sx={{
                       '&:has(button[data-state="open"])': {
                         roundedEnd: "none",
-                        bg: `menu.lvl${lvl}.activeBackground`,
+                        bg: menuColors.lvl[lvl].activeBackground,
                         me: -pad,
                         pe: pad,
                       },

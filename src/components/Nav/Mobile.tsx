@@ -41,6 +41,7 @@ import LanguagePicker from "../LanguagePicker"
 
 import type { Level, NavItem, NavSections } from "./types"
 
+import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 
 type FooterButtonProps = ButtonProps & {
   icon: IconType
@@ -175,98 +176,97 @@ type LvlAccordionProps = {
   onToggle: () => void
 }
 
-const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => (
-  <Accordion allowToggle boxShadow="menu.accordion">
-    {items.map(({ label, description, ...actions }) => {
-      if ("href" in actions)
+const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
+  const menuColors = useNavMenuColors()
+  return (
+    <Accordion allowToggle boxShadow="menu.accordion">
+      {items.map(({ label, description, ...actions }) => {
+        if ("href" in actions)
+          return (
+            <AccordionItem key={label}>
+              <Button
+                as={BaseLink}
+                w="full"
+                href={actions.href}
+                onClick={onToggle}
+                variant="ghost"
+                borderRadius="none"
+                borderColor={menuColors.stroke}
+                justifyContent="start"
+                gap="2"
+                ps={(lvl + 2) * 4}
+                py="4"
+                _hover={{
+                  color: menuColors.highlight,
+                }}
+              >
+                <Box flex="1" textAlign="start">
+                  <Text fontWeight="bold" fontSize="md" color={menuColors.body}>
+                    {label}
+                  </Text>
+                  <Text
+                    fontWeight="regular"
+                    fontSize="sm"
+                    color={menuColors.lvl[lvl].subtext}
+                  >
+                    {description}
+                  </Text>
+                </Box>
+              </Button>
+            </AccordionItem>
+          )
         return (
           <AccordionItem key={label}>
-            <Button
-              as={BaseLink}
-              w="full"
-              href={actions.href}
-              onClick={onToggle}
-              variant="ghost"
-              borderRadius="none"
-              borderColor="menu.stroke"
-              justifyContent="start"
-              gap="2"
-              ps={(lvl + 2) * 4}
-              py="4"
-              _hover={{
-                color: "menu.highlight",
-              }}
-            >
-              <Box flex="1" textAlign="start">
-                <Text
-                  fontWeight="bold"
-                  fontSize="md"
-                  color={`menu.lvl${lvl}.main`}
+            {({ isExpanded }) => (
+              <>
+                <Heading
+                  as={chakra[`h${lvl + 1}`]}
+                  color={menuColors.body}
+                  py="0"
+                  borderColor={menuColors.stroke}
                 >
-                  {label}
-                </Text>
-                <Text
-                  fontWeight="regular"
-                  fontSize="sm"
-                  color={`menu.lvl${lvl}.subtext`}
-                >
-                  {description}
-                </Text>
-              </Box>
-            </Button>
+                  <AccordionButton
+                    justifyContent="start"
+                    gap="2"
+                    ps={lvl * 4}
+                    pe="4"
+                    py="4"
+                  >
                     <ExpandIcon isOpen={isExpanded} />
+                    <Box flex="1" textAlign="start">
+                      <Text
+                        fontWeight="bold"
+                        fontSize="md"
+                        color={menuColors.body}
+                      >
+                        {label}
+                      </Text>
+                      <Text
+                        fontWeight="regular"
+                        fontSize="sm"
+                        color={menuColors.lvl[lvl].subtext}
+                      >
+                        {description}
+                      </Text>
+                    </Box>
+                  </AccordionButton>
+                </Heading>
+
+                <AccordionPanel p="0" bg={menuColors.lvl[lvl + 1].background}>
+                  <LvlAccordion
+                    lvl={(lvl + 1) as Level}
+                    items={actions.items}
+                    onToggle={onToggle}
+                  />
+                </AccordionPanel>
+              </>
+            )}
           </AccordionItem>
         )
-      return (
-        <AccordionItem key={label}>
-          {({ isExpanded }) => (
-            <>
-              <Heading
-                as={chakra[`h${lvl + 1}`]}
-                color={`menu.lvl${lvl}.main`}
-                py="0"
-                borderColor="menu.stroke"
-              >
-                <AccordionButton
-                  justifyContent="start"
-                  gap="2"
-                  ps={lvl * 4}
-                  pe="4"
-                  py="4"
-                >
-                  <Box flex="1" textAlign="start">
-                    <Text
-                      fontWeight="bold"
-                      fontSize="md"
-                      color={`menu.lvl${lvl}.main`}
-                    >
-                      {label}
-                    </Text>
-                    <Text
-                      fontWeight="regular"
-                      fontSize="sm"
-                      color={`menu.lvl${lvl}.subtext`}
-                    >
-                      {description}
-                    </Text>
-                  </Box>
-                </AccordionButton>
-              </Heading>
-
-              <AccordionPanel p="0" bg={`menu.lvl${lvl + 1}.background`}>
-                <LvlAccordion
-                  lvl={(lvl + 1) as Level}
-                  items={actions.items}
-                  onToggle={onToggle}
-                />
-              </AccordionPanel>
-            </>
-          )}
-        </AccordionItem>
-      )
-    })}
-  </Accordion>
-)
+      })}
+    </Accordion>
+  )
+}
 
 export type MobileNavMenuProps = ButtonProps & {
   isOpen: boolean
@@ -292,6 +292,7 @@ const MobileNavMenu = ({
   const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
   const isMenuOpen = !!useBreakpointValue({ base: isOpen, md: false })
+  const menuColors = useNavMenuColors()
 
   return (
     <>
@@ -339,11 +340,11 @@ const MobileNavMenu = ({
                       <>
                         <Heading
                           as="h2"
-                          color="menu.lvl1.main"
+                          color={menuColors.body}
                           py="0"
                           bg={
                             isExpanded
-                              ? "menu.lvl1.background"
+                              ? menuColors.lvl[1].background
                               : "background.base"
                           }
                           borderBottom={isExpanded ? "1px" : "none"}
@@ -368,7 +369,7 @@ const MobileNavMenu = ({
                           </AccordionButton>
                         </Heading>
 
-                        <AccordionPanel p="0" bg="menu.lvl2.background">
+                        <AccordionPanel p="0" bg={menuColors.lvl[2].background}>
                           <LvlAccordion
                             lvl={2 as Level}
                             items={items}
