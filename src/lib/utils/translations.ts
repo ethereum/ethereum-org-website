@@ -12,8 +12,9 @@ export const languages: Languages = i18nConfig.reduce((result, config) => {
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfig.filter((language) => language.code === lang)
 
-  if (!langConfig.length)
-    throw new Error("Language code not found in isLangRightToLeft")
+  if (!langConfig.length) {
+    return false
+  }
 
   return langConfig[0].langDir === "rtl"
 }
