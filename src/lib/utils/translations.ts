@@ -1,6 +1,6 @@
 import { Lang, Languages } from "@/lib/types"
 
-import { DEFAULT_LOCALE } from "@/lib/constants"
+import { DEFAULT_LOCALE, FAKE_LOCALE } from "@/lib/constants"
 
 import i18nConfig from "../../../i18n.config.json"
 
@@ -20,7 +20,7 @@ export const isLangRightToLeft = (lang: Lang): boolean => {
 }
 
 export const filterFakedLocales = (locales: string[] | undefined) => {
-  return locales?.filter((locale) => locale !== "default") || []
+  return locales?.filter((locale) => locale !== FAKE_LOCALE) || []
 }
 
 // Overwrites the default Persian numbering of the Farsi language to use Hindu-Arabic numerals (0-9)

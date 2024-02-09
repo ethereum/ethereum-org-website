@@ -11,6 +11,7 @@ export const INTL_JSON_DIR = "src/intl"
 
 // i18n
 export const DEFAULT_LOCALE = "en"
+export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
 const BUILD_LOCALES = process.env.BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
