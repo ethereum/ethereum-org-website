@@ -284,7 +284,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         },
         {
           to: "mailto:press@ethereum.org",
-          text: t("contact"),
+          text: t("press-contact"),
         },
       ],
     },
