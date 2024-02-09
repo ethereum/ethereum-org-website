@@ -2,7 +2,6 @@
 title: Doanh nghiệp
 description: Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp
 lang: vi
-sidebarDepth: 1
 ---
 
 # Ethereum cho Doanh nghiệp {#ethereum-for-enterprise}

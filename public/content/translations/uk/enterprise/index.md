@@ -2,7 +2,6 @@
 title: Корпоративний сектор
 description: Посібники, статті та інструменти про відкриті та приватні блокчейни Ethereum для корпоративного сектора
 lang: uk
-sidebarDepth: 1
 ---
 
 # Ethereum для корпоративного сектора {#ethereum-for-enterprise}
