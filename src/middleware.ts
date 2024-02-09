@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from "next/server"
 
+import { DEFAULT_LOCALE, FAKE_LOCALE } from "./lib/constants"
+
 const PUBLIC_FILE = /\.(.*)$/
 
 export async function middleware(req: NextRequest) {
@@ -11,8 +13,9 @@ export async function middleware(req: NextRequest) {
     return
   }
 
-  if (req.nextUrl.locale === "default") {
-    console.log(`/en${req.nextUrl.pathname}`)
-    return NextResponse.redirect(new URL(`/en${req.nextUrl.pathname}`, req.url))
+  if (req.nextUrl.locale === FAKE_LOCALE) {
+    return NextResponse.redirect(
+      new URL(`/${DEFAULT_LOCALE}${req.nextUrl.pathname}`, req.url)
+    )
   }
 }
