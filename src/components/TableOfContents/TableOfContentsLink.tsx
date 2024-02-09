@@ -21,6 +21,7 @@ const TableOfContentsLink = ({
 
   const $dotBg = cssVar("dot-bg")
 
+  // Styling for ToC circle indicator
   const hoverOrActiveStyle: SystemStyleObject = {
     color: "primary.base",
     _after: {
@@ -31,7 +32,7 @@ const TableOfContentsLink = ({
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",
-      insetInlineStart: `calc(-1 * (1rem * ${depth} + 5.5px))`,
+      insetInlineStart: `calc(-1 * (1rem * ${depth} + 4.5px))`,
       top: "50%",
       mt: -1,
     },
@@ -42,6 +43,8 @@ const TableOfContentsLink = ({
       isActive={activeHash === url}
       variant="link"
       href={url}
+      p="0"
+      border="0px"
       textDecoration="none"
       display="inline-block"
       position="relative"
