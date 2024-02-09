@@ -81,7 +81,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         <Grid
           position="absolute"
           visibility="hidden"
-          top="16.5"
+          top="19"
           insetInline="0"
           templateColumns="repeat(3, 1fr)"
           shadow="md"
