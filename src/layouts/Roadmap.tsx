@@ -196,7 +196,7 @@ export const RoadmapLayout: React.FC<IProps> = ({
         <LeftNavBar
           hideBelow={lgBp}
           dropdownLinks={dropdownLinks}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
           tocItems={tocItems}
         />
         <ContentContainer>

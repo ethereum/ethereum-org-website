@@ -290,7 +290,7 @@ export const StakingLayout: React.FC<IProps> = ({
           hideBelow={lgBp}
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
         />
         <ContentContainer>
           {children}

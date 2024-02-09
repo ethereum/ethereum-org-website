@@ -222,7 +222,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
           hideBelow={lgBreakpoint}
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
         />
         <ContentContainer>
           {children}

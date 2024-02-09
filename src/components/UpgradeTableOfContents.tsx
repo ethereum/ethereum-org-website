@@ -65,7 +65,7 @@ type UpgradeTableOfContentsProps = {
 
 const UpgradeTableOfContents = ({
   items,
-  maxDepth = 1,
+  maxDepth = 2,
 }: UpgradeTableOfContentsProps) => (
   <Box
     as="nav"
@@ -75,7 +75,7 @@ const UpgradeTableOfContents = ({
     display={{ base: "none", l: "block" }}
   >
     <List m={0} py={0} lineHeight="1.4">
-      <ItemsList items={items} depth={0} maxDepth={maxDepth} />
+      <ItemsList items={items} depth={1} maxDepth={maxDepth} />
     </List>
   </Box>
 )
