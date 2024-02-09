@@ -8,6 +8,8 @@ import {
   Heading,
 } from "@chakra-ui/react"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { SECTION_LABELS } from "@/lib/constants"
 
 import type { Level, NavSections } from "../types"
@@ -44,6 +46,15 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                     }
                     borderBottom={isExpanded ? "1px" : "none"}
                     borderColor="disabled"
+                    onClick={() => {
+                      trackCustomEvent({
+                        eventCategory: "Mobile navigation menu",
+                        eventAction: "Section changed",
+                        eventName: `${
+                          isExpanded ? "Close" : "Open"
+                        } section: ${label}`,
+                      })
+                    }}
                   >
                     <AccordionButton
                       justifyContent="start"

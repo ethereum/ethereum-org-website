@@ -12,6 +12,8 @@ import {
 
 import { BaseLink } from "@/components/Link"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import type { Level, NavItem } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
@@ -37,7 +39,6 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
                 as={BaseLink}
                 w="full"
                 href={actions.href}
-                onClick={onToggle}
                 variant="ghost"
                 borderRadius="none"
                 borderColor={menuColors.stroke}
@@ -47,6 +48,14 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
                 py="4"
                 _hover={{
                   color: menuColors.highlight,
+                }}
+                onClick={() => {
+                  trackCustomEvent({
+                    eventCategory: "Mobile navigation menu",
+                    eventAction: `Follow level ${lvl - 1} link`,
+                    eventName: actions.href!,
+                  })
+                  onToggle()
                 }}
               >
                 <Box flex="1" textAlign="start">
@@ -73,6 +82,15 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
                   color={menuColors.body}
                   py="0"
                   borderColor={menuColors.stroke}
+                  onClick={() => {
+                    trackCustomEvent({
+                      eventCategory: "Mobile navigation menu",
+                      eventAction: `Level ${lvl - 1} section changed`,
+                      eventName: `${
+                        isExpanded ? "Close" : "Open"
+                      } section: ${label} - ${description.slice(0, 16)}...`,
+                    })
+                  }}
                 >
                   <AccordionButton
                     justifyContent="start"
