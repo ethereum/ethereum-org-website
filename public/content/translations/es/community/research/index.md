@@ -71,7 +71,7 @@ La capa de ejecución se ocupa de la ejecución de transacciones, de la ejecuci�
 - [Modelos de vencimiento del estado](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkel y la propuesta de vencimiento del estado](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Gestión del historial](https://eips.ethereum.org/EIPS/eip-4444)
-- [Árboles Verkle](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Árboles Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Muestreo de disponibilidad de datos](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Desarrollo de clientes {#client-development}

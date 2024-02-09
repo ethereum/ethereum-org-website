@@ -72,7 +72,7 @@ Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor k
 - [Gwei.cz](https://gwei.cz) – helyi közösség a web3 körül, amely oktatási anyagokat készít, online és személyes találkozókat szervez
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) – Ethereum útmutató kezdőknek
 - [DAO Příručka](https://dao.gwei.cz/) – útmutató kezdőknek a DAO-okról
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) – Az Ethereum elsajátítása, cseh verzió
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) – Az Ethereum elsajátítása, cseh verzió
 
 ### Francia {#fr}
 

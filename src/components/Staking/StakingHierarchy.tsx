@@ -13,6 +13,8 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { ButtonLink } from "../Buttons"
@@ -25,18 +27,15 @@ import {
 } from "../icons/staking"
 import Translation from "../Translation"
 
-type ChildOnlyType = {
-  children: ReactNode
+type SectionGridProps = ChildOnlyProp & {
+  number: number
 }
 
 const $colorVar = cssVar("color")
 const $nextColorVar = cssVar("next-color")
 const $fillColorVar = cssVar("fill-color")
 
-const SectionGrid: React.FC<{ number: number; children: ReactNode }> = ({
-  number,
-  children,
-}) => {
+const SectionGrid = ({ number, children }: SectionGridProps) => {
   const colorValue = () => {
     switch (number) {
       case 1:
@@ -117,7 +116,7 @@ const SectionGrid: React.FC<{ number: number; children: ReactNode }> = ({
   )
 }
 
-const StyledEtherSvg: React.FC<{ size: string }> = ({ size }) => (
+const StyledEtherSvg = ({ size }: { size: string }) => (
   <Center gridArea="ether" zIndex={2} maxW={20} width="full" mx="auto">
     <StakingGlyphEtherCircleIcon
       boxSize={size}
@@ -157,7 +156,7 @@ const Line = () => {
   )
 }
 
-const Header = ({ children }: ChildOnlyType) => (
+const Header = ({ children }: ChildOnlyProp) => (
   <Flex
     gridArea="header"
     flexDirection="column"
@@ -169,7 +168,7 @@ const Header = ({ children }: ChildOnlyType) => (
   </Flex>
 )
 
-const HeadingEl = ({ children }: ChildOnlyType) => (
+const HeadingEl = ({ children }: ChildOnlyProp) => (
   <Heading
     color={$colorVar.reference}
     fontSize="2rem"
@@ -181,7 +180,7 @@ const HeadingEl = ({ children }: ChildOnlyType) => (
   </Heading>
 )
 
-const Pills = ({ children }: ChildOnlyType) => (
+const Pills = ({ children }: ChildOnlyProp) => (
   <Flex
     flexWrap="wrap"
     gap={1}
@@ -223,7 +222,7 @@ const Glyph = ({ glyphIcon }: GlyphProps) => (
   </Center>
 )
 
-const Content = ({ children }: ChildOnlyType) => (
+const Content = ({ children }: ChildOnlyProp) => (
   <Box
     gridArea="content"
     mt={{ md: 4 }}

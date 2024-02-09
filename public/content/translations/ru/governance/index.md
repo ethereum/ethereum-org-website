@@ -175,9 +175,9 @@ _Примечание. Любой человек может входить в н
 
 В Ethereum нет строгой структуры. У разных участников сообщества есть собственные взгляды на развитие системы. Вот некоторые из них:
 
-- [Заметки об управлении блокчейном](https://vitalik.ca/general/2017/12/17/voting.html) _Виталик Бутерин_
+- [Заметки об управлении блокчейном](https://vitalik.eth.limo/general/2017/12/17/voting.html) _Виталик Бутерин_
 - [Как работает управление Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Как работает управление Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Кто такой основной разработчик Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
-- [Управление, часть 2. Плутократия — это все еще плохо](https://vitalik.ca/general/2018/03/28/plutocracy.html) — _Виталик Бутерин_
-- [Выход за рамки управления с голосованием монетами](https://vitalik.ca/general/2021/08/16/voting3.html) — _Виталик Бутерин_
+- [Управление, часть 2. Плутократия — это все еще плохо](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) — _Виталик Бутерин_
+- [Выход за рамки управления с голосованием монетами](https://vitalik.eth.limo/general/2021/08/16/voting3.html) — _Виталик Бутерин_

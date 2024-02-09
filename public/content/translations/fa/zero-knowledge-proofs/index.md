@@ -208,5 +208,5 @@ ZK-STARK در برابر تهدید محاسبه کوانتومی مصون در 
 - [اثبات دانش صفر: بهبود حریم خصوصی در یک بلاک‌چین](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) - _دیمیتری لاورنوف_
 - [zk-SNARKها - یک مثال واقعی از دانش صفر و بررسی جامع آن](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) - _آدام لوسیانو_
 - [ZK-STARKها - ایجاد اعتماد قابل تایید، حتی نسبت به رایانه‌های کوانتومی](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) - _آدام لوسیانو_
-- [مقدمه‌ای تقریبی دربارۀ چگونگی امکان zk-SNARKها](https://vitalik.ca/general/2021/01/26/snarks.html) - _ویتالیک بوترین_
+- [مقدمه‌ای تقریبی دربارۀ چگونگی امکان zk-SNARKها](https://vitalik.eth.limo/general/2021/01/26/snarks.html) - _ویتالیک بوترین_
 - [اثبات دانش صفر و نقش آن در بلاک‌چین چیست؟](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) - _لیوی هرتز_

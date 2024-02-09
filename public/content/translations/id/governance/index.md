@@ -174,9 +174,9 @@ Ketika Rantai Suar bergabung dengan lapisan eksekusi Ethereum, proses tata kelol
 
 Tata kelola di Ethereum tidaklah didefinisikan dengan kaku. Berbagai peserta komunitas memiliki sudut pandang berbeda mengenai ini. Berikut adalah beberapa di antaranya:
 
-- [Catatan tentang Tata Kelola Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Catatan tentang Tata Kelola Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Bagaimana cara kerja Tata Kelola Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Bagaimana cara kerja tata kelola Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Apa yang dimaksud dengan pengembang inti Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Tata Kelola, Bagian 2: Plutokrasi Masih Buruk](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Bergerak melampaui tata kelola pengambilan suara koin](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Tata Kelola, Bagian 2: Plutokrasi Masih Buruk](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Bergerak melampaui tata kelola pengambilan suara koin](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

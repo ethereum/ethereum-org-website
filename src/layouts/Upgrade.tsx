@@ -133,22 +133,21 @@ export const upgradeComponents = {
   BeaconChainActions,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
-    > {
-  frontmatter: UpgradeFrontmatter
-}
-export const UpgradeLayout: React.FC<IProps> = ({
+type UpgradeLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+  > & {
+    frontmatter: UpgradeFrontmatter
+  }
+export const UpgradeLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   lastUpdatedDate,
   contentNotTranslated,
-}) => {
+}: UpgradeLayoutProps) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 

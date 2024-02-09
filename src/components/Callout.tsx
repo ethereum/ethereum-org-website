@@ -8,7 +8,7 @@ import { Image, type ImageProps } from "@/components/Image"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 
-export interface IProps extends FlexProps {
+export type CalloutProps = FlexProps & {
   children?: React.ReactNode
   image?: ImageProps["src"]
   emoji?: string
@@ -18,7 +18,7 @@ export interface IProps extends FlexProps {
   className?: string
 }
 
-const Callout: React.FC<IProps> = ({
+const Callout = ({
   image,
   emoji,
   alt,
@@ -27,7 +27,7 @@ const Callout: React.FC<IProps> = ({
   children,
   className,
   ...rest
-}) => {
+}: CalloutProps) => {
   const { t } = useTranslation("common")
 
   return (

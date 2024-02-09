@@ -71,7 +71,7 @@ Il livello di esecuzione si occupa dell'esecuzione delle transazioni, dell'esecu
 - [Percorsi verso la scadenza dello stato](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Proposta riguardo Verkle e alla scadenza dello stato](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Gestione della cronologia](https://eips.ethereum.org/EIPS/eip-4444)
-- [Alberi di Verkle](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Alberi di Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Campionamento della disponibilità dei dati](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Sviluppo del client {#client-development}

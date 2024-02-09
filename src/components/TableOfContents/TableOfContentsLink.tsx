@@ -6,13 +6,13 @@ import { ButtonLink } from "@/components/Buttons"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-type TableOfContentsLinkProps = {
+export type TableOfContentsLinkProps = {
   depth: number
   item: ToCItem
   activeHash?: string
 }
 
-const TableOfContentsLink = ({
+const Link = ({
   depth,
   item: { title, url },
   activeHash,
@@ -78,4 +78,4 @@ const TableOfContentsLink = ({
   )
 }
 
-export default TableOfContentsLink
+export default Link

@@ -60,6 +60,6 @@ summaryPoints:
 - [Devcon6 での Guillaume Ballet による「バークルツリーがイーサリアムを効率的にする仕組み」](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [ETHDenver 2020 での Piper Merriam によるステートレスクライアントに関する説明](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [ゼロ知識ポッドキャストでのダンクラッド・フィーストによるバークルツリーとステートレスに関する説明](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [ヴィタリック・ブテリンによるバークルツリーの説明](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [ヴィタリック・ブテリンによるバークルツリーの説明](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [ダンクラッド・フィーストによるバークルツリーの説明](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [バークルツリーの EIP ドキュメント](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

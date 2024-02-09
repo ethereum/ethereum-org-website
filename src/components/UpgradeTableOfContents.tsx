@@ -3,7 +3,7 @@ import { Box, List, ListItem } from "@chakra-ui/react"
 import type { ToCItem } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
-import { IPropsItemsList } from "@/components/TableOfContents/ItemsList"
+import { ItemsListProps } from "@/components/TableOfContents/ItemsList"
 
 import { trimmedTitle } from "@/lib/utils/toc"
 
@@ -44,7 +44,7 @@ const TableOfContentsLink = ({
   )
 }
 
-const ItemsList = ({ items, depth, maxDepth }: IPropsItemsList) => {
+const ItemsList = ({ items, depth, maxDepth }: ItemsListProps) => {
   // Return early if maxDepth hit, or if no items
   if (depth > maxDepth || !items) return null
   return (

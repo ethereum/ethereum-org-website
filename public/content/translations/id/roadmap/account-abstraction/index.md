@@ -117,7 +117,7 @@ Dompet kontrak pintar sudah tersedia, tetapi lebih banyak peningkatan diperlukan
 - ["Mengapa abstraksi akun adalah pengubah permainan untuk dapps" dari Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Abstraksi akun ELI5" dari Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Catatan "Jalan Menuju Abstraksi Akun" dari Vitalik](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Postingan blog Vitalik tentang dompet pemulihan sosial](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Postingan blog Vitalik tentang dompet pemulihan sosial](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Catatan EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Dokumentasi EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Catatan EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

@@ -156,7 +156,7 @@ _Tipik olaraq protokolların və mərkəzləşdirilməmiş tətbiqlərin mərkə
 - [DAO ilə işləyən Rəqəmsal İcmaya Necə Başlamaq olar](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [DAO nədir?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Holografik Konsensus nədir?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO-lar korporasiyalar deyil: muxtar təşkilatlarda mərkəzsizləşdirmənin vacib olduğu yerlərdə Vitalik tərəfindən](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO-lar korporasiyalar deyil: muxtar təşkilatlarda mərkəzsizləşdirmənin vacib olduğu yerlərdə Vitalik tərəfindən](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA və daha çox: Natamam Terminologiya Bələdçisi](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videolar {#videos}

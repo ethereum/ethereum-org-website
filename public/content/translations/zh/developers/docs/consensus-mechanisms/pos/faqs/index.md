@@ -18,7 +18,7 @@ lang: zh
 
 工作量证明需要在挖矿过程中消耗大量的电力，因此能耗要高得多。 而权益证明只需要非常少量的能量 - 以太坊验证者甚至可以在树莓派等低功耗设备上运行。 以太坊的权益证明机制被认为比工作量证明机制更安全，因为攻击的代价更高，并且给攻击者造成的后果更严重。
 
-工作量证明与权益证明是一个有争议的话题。 [Vitalik Buterin 的博客](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)以及 Justin Drake 与 Lyn Alden 之间的辩论对这些论点做了很好的总结。
+工作量证明与权益证明是一个有争议的话题。 [Vitalik Buterin 的博客](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)以及 Justin Drake 与 Lyn Alden 之间的辩论对这些论点做了很好的总结。
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ Casper 和 LMD_GHOST 的组合被称为 Gasper。
 社交罚没是指社区协调区块链的分叉以应对攻击的能力。 它使社区能够从攻击者最终化不诚实的链中恢复过来。 它也可以用于对抗审查攻击。
 
 - [关于社交罚没的更多信息](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin 关于社交罚没的观点](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin 关于社交罚没的观点](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## 我会受到罚没吗？ {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Casper 和 LMD_GHOST 的组合被称为 Gasper。
 
 无利害关系问题是一些权益证明机制中的一个概念性问题，其中只有奖励而没有惩罚。 如果没有任何利害关系，那么一个务实的验证者同样愿意验证任何甚至多个区块链分叉，因为这将增加他们的奖励。 以太坊通过使用最终确定性条件和罚没机制来确保只有一个规范链，以解决此问题。
 
-[关于无利害关系问题的更多信息](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[关于无利害关系问题的更多信息](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## 什么是分叉选择算法？ {#what-is-a-fork-choice-algorithm}
 

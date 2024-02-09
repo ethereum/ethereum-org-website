@@ -117,7 +117,7 @@ As carteiras de contratos inteligentes já estão disponíveis, mas são necess�
 - ["Por que a abstração de contas é um agente de mudança para dApps", Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Abstração de conta ELI5", Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Notas sobre o "Caminho para abstração de contas", Vitalik](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Publicação do blog de Vitalik sobre carteiras de recuperação social](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Publicação do blog de Vitalik sobre carteiras de recuperação social](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Notas EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Documentação EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Notas EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

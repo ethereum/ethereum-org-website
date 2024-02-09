@@ -109,7 +109,7 @@ Oto przykład pokazujący, w jaki sposób poświadczenia mogą działać w prakt
 
 ### Tokeny Soulbound i tożsamość {#soulbound}
 
-[Tokeny Soulbound](https://vitalik.ca/general/2022/01/26/soulbound.html) (niezbywalne NFT) mogą być używane do zbierania informacji unikatowych dla określonego portfela. W ten sposób tworzy się unikatową w łańcuchu tożsamość związaną z określonym adresem Ethereum, która może obejmować tokeny reprezentujące osiągnięcia (np. ukończenie określonego kursu online lub przekroczenie progowego wyniku w grze) albo zaangażowanie w działania społeczności.
+[Tokeny Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (niezbywalne NFT) mogą być używane do zbierania informacji unikatowych dla określonego portfela. W ten sposób tworzy się unikatową w łańcuchu tożsamość związaną z określonym adresem Ethereum, która może obejmować tokeny reprezentujące osiągnięcia (np. ukończenie określonego kursu online lub przekroczenie progowego wyniku w grze) albo zaangażowanie w działania społeczności.
 
 ## Zalety zdecentralizowanej tożsamości {#benefits-of-decentralized-identity}
 

@@ -1,0 +1,639 @@
+[
+  {
+    "languageId": "af",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "am",
+    "words": {
+      "approved": 9631,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ar",
+    "words": {
+      "approved": 40199,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "az",
+    "words": {
+      "approved": 18602,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "be",
+    "words": {
+      "approved": 5879,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "bg",
+    "words": {
+      "approved": 14656,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "bi",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "bn",
+    "words": {
+      "approved": 36077,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "br-FR",
+    "words": {
+      "approved": 82,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "bs",
+    "words": {
+      "approved": 5879,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ca",
+    "words": {
+      "approved": 19651,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "cs",
+    "words": {
+      "approved": 26515,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "da",
+    "words": {
+      "approved": 1454,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "de",
+    "words": {
+      "approved": 162757,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "el",
+    "words": {
+      "approved": 102339,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "eo",
+    "words": {
+      "approved": 169,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "es-EM",
+    "words": {
+      "approved": 318593,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "et",
+    "words": {
+      "approved": 75,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "eu",
+    "words": {
+      "approved": 36,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "fa",
+    "words": {
+      "approved": 96301,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "fa-AF",
+    "words": {
+      "approved": 186,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "fi",
+    "words": {
+      "approved": 22519,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "fil",
+    "words": {
+      "approved": 54484,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "fr",
+    "words": {
+      "approved": 334953,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "gi",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "gl",
+    "words": {
+      "approved": 1047,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "gu-IN",
+    "words": {
+      "approved": 1291,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ha",
+    "words": {
+      "approved": 4,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "he",
+    "words": {
+      "approved": 1207,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "hi",
+    "words": {
+      "approved": 57405,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "hr",
+    "words": {
+      "approved": 13432,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "hu",
+    "words": {
+      "approved": 198484,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "hy-AM",
+    "words": {
+      "approved": 9631,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "id",
+    "words": {
+      "approved": 155502,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ig",
+    "words": {
+      "approved": 23355,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "it",
+    "words": {
+      "approved": 334707,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ja",
+    "words": {
+      "approved": 283319,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ka",
+    "words": {
+      "approved": 1434,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "kk",
+    "words": {
+      "approved": 1140,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "km",
+    "words": {
+      "approved": 15612,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "kn",
+    "words": {
+      "approved": 25901,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ko",
+    "words": {
+      "approved": 51367,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ku",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ky",
+    "words": {
+      "approved": 12,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "lb",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "lt",
+    "words": {
+      "approved": 1552,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "mai",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "mk",
+    "words": {
+      "approved": 88,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ml-IN",
+    "words": {
+      "approved": 11316,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "mn",
+    "words": {
+      "approved": 64,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "mr",
+    "words": {
+      "approved": 25900,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ms",
+    "words": {
+      "approved": 37132,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "my",
+    "words": {
+      "approved": 706,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ne-NP",
+    "words": {
+      "approved": 1434,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "nl",
+    "words": {
+      "approved": 37358,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "no",
+    "words": {
+      "approved": 1702,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "or",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "pa-IN",
+    "words": {
+      "approved": 6,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "pcm",
+    "words": {
+      "approved": 17163,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "pl",
+    "words": {
+      "approved": 93928,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "pt-BR",
+    "words": {
+      "approved": 317914,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "pt-PT",
+    "words": {
+      "approved": 26010,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ro",
+    "words": {
+      "approved": 77817,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ru",
+    "words": {
+      "approved": 96401,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sat",
+    "words": {
+      "approved": 57,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "si-LK",
+    "words": {
+      "approved": 706,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sk",
+    "words": {
+      "approved": 6362,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sl",
+    "words": {
+      "approved": 26395,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sn",
+    "words": {
+      "approved": 465,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "so",
+    "words": {
+      "approved": 493,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sq",
+    "words": {
+      "approved": 693,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sr-CS",
+    "words": {
+      "approved": 26151,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sv-SE",
+    "words": {
+      "approved": 9980,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "sw",
+    "words": {
+      "approved": 16508,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ta",
+    "words": {
+      "approved": 1438,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "te",
+    "words": {
+      "approved": 694,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "tg",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "th",
+    "words": {
+      "approved": 5936,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ti",
+    "words": {
+      "approved": 0,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "tk",
+    "words": {
+      "approved": 5881,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "tl",
+    "words": {
+      "approved": 86,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "tr",
+    "words": {
+      "approved": 320257,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "uk",
+    "words": {
+      "approved": 64387,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ur-IN",
+    "words": {
+      "approved": 1205,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "ur-PK",
+    "words": {
+      "approved": 725,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "uz",
+    "words": {
+      "approved": 1863,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "vi",
+    "words": {
+      "approved": 16076,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "yo",
+    "words": {
+      "approved": 687,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "zh-CN",
+    "words": {
+      "approved": 303699,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "zh-TW",
+    "words": {
+      "approved": 110743,
+      "total": 340006
+    }
+  },
+  {
+    "languageId": "zu",
+    "words": {
+      "approved": 109,
+      "total": 340006
+    }
+  }
+]

@@ -77,18 +77,17 @@ export const useCasesComponents = {
   // Export empty object if none needed
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> {
-  frontmatter: UseCasesFrontmatter
-}
-export const UseCasesLayout: React.FC<IProps> = ({
+type UseCasesLayoutProps = ChildOnlyProp &
+  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+    frontmatter: UseCasesFrontmatter
+  }
+export const UseCasesLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   contentNotTranslated,
-}) => {
+}: UseCasesLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const { t } = useTranslation("template-usecase")
   const lgBp = useToken("breakpoints", "lg")

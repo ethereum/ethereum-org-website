@@ -18,7 +18,7 @@ lang: ja
 
 プルーフ・オブ・ワークではマイニングにおいて電力が消費されるため、よりエネルギー効率が低いと言えます。 一方、プルーフ・オブ・ステークではエネルギー消費量は非常に少なく抑えることができ、イーサリアムのバリデータは Raspberry Pi などの低電力消費のコンピュータでも作業を実行できます。 イーサリアムが採用したプルーフ・オブ・ステークのメカニズムでは、攻撃者が負担するコストがより大きく、より厳格な制裁が課されるため、プルーフ・オブ・ワークよりも安全性が高いと考えられています。
 
-プルーフ・オブ・ワークとプルーフ・オブ・ステークのどちらが優れているかについては、現在も論争が続いています。 これについては、[ヴィタリック・ブテリンのブログ](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)および Justin Drake と Lyn Alden の議論においてよく論点がまとめられています。
+プルーフ・オブ・ワークとプルーフ・オブ・ステークのどちらが優れているかについては、現在も論争が続いています。 これについては、[ヴィタリック・ブテリンのブログ](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work)および Justin Drake と Lyn Alden の議論においてよく論点がまとめられています。
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ lang: ja
 ソーシャルスラッシングとは、ネットワークが攻撃を受けた際に、ユーザーコミュニティがブロックチェーンのフォークを調整する能力を指します。 ユーザーコミュニティは、ソーシャルスラッシングを通じて、攻撃者がファイナライズしてしまった不正なチェーンを元に戻すことができます。 ソーシャルスラッシングはさらに、検閲攻撃に対しても活用できます。
 
 - [ソーシャルスラッシングについての詳細](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [ソーシャルスラッシングについてのヴィタリック・ブテリンの意見](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [ソーシャルスラッシングについてのヴィタリック・ブテリンの意見](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## 私もスラッシングの対象になりますか？ {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ lang: ja
 
 ステーキング無しの問題とは、報酬のみを伴い、ペナルティが科せられない一部のプルーフ・オブ・ステークのメカニズムにおける概念上の問題です。 ステーキングが要求されない場合、実利を求めるバリデータは、報酬を増やすために、ブロックチェーンのいかなるいかなるフォークに対して、あるいは複数のフォークに対して喜んでアテステーションを行うでしょう。 イーサリアムでは、ファイナリティ条件とスラッシングのメカニズムを採用することで、唯一の正規チェーンを維持できるようにしています。
 
-[ステーキング無し問題についての詳細](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[ステーキング無し問題についての詳細](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## フォーク選択アルゴリズムとは何ですか？ {#what-is-a-fork-choice-algorithm}
 
