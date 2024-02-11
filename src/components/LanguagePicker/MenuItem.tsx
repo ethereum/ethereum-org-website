@@ -1,24 +1,15 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsCheck } from "react-icons/bs"
-import {
-  Badge,
-  Box,
-  Flex,
-  forwardRef,
-  Icon,
-  MenuItem as ChakraMenuItem,
-  type MenuItemProps as ChakraMenuItemProps,
-  Text,
-} from "@chakra-ui/react"
+import { Badge, Box, Flex, forwardRef, Icon, Text } from "@chakra-ui/react"
 
 import type { LocaleDisplayInfo } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
+import { BaseLink, LinkProps } from "@/components/Link"
 
 import ProgressBar from "./ProgressBar"
 
-type ItemProps = ChakraMenuItemProps & {
+type ItemProps = LinkProps & {
   displayInfo: LocaleDisplayInfo
 }
 
@@ -48,8 +39,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
   const { progress, words } = getProgressInfo(approvalProgress, wordsApproved)
 
   return (
-    <ChakraMenuItem
-      as={BaseLink}
+    <BaseLink
       ref={ref}
       flexDir="column"
       w="full"
@@ -62,9 +52,6 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
       color="body.base"
       textDecoration="none"
       data-group
-      onFocus={(e) => {
-        e.target.scrollIntoView({ block: "nearest" })
-      }}
       scrollMarginY="8"
       _hover={{ bg: "primary.lowContrast", textDecoration: "none" }}
       _focus={{ bg: "primary.lowContrast" }}
@@ -108,7 +95,9 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
             {sourceName}
           </Text>
         </Box>
-        {isCurrent && <Icon as={BsCheck} fontSize="2xl" color="primary.highContrast" />}
+        {isCurrent && (
+          <Icon as={BsCheck} fontSize="2xl" color="primary.highContrast" />
+        )}
       </Flex>
       <Text
         textTransform="lowercase"
@@ -120,7 +109,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
         {t("page-languages-words")}
       </Text>
       <ProgressBar value={approvalProgress} />
-    </ChakraMenuItem>
+    </BaseLink>
   )
 })
 

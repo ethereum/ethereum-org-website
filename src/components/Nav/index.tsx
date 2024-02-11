@@ -133,16 +133,12 @@ const Nav: FC<IProps> = ({ path }) => {
                 {/* Locale-picker menu */}
                 <LanguagePicker
                   placement="bottom-end"
-                  minH="unset"
                   maxH="75vh"
                   w="xs"
-                  inset="unset"
-                  top="unset"
-                  menuState={languagePickerState}
+                  // menuState={languagePickerState}
                 >
-                  <MenuButton
-                    as={Button}
-                    ref={languagePickerRef}
+                  <Button
+                    // ref={languagePickerRef}
                     variant="ghost"
                     color="body.base"
                     transition="color 0.2s"
@@ -174,7 +170,7 @@ const Nav: FC<IProps> = ({ path }) => {
                       {t("common:languages")}&nbsp;
                     </Text>
                     {locale!.toUpperCase()}
-                  </MenuButton>
+                  </Button>
                 </LanguagePicker>
               </HStack>
             </Flex>

@@ -1,5 +1,5 @@
 import { useTranslation } from "next-i18next"
-import { FormHelperText, forwardRef, Text } from "@chakra-ui/react"
+import { Box, FormHelperText, forwardRef, Text } from "@chakra-ui/react"
 
 import { BaseLink } from "@/components/Link"
 
@@ -11,7 +11,7 @@ const NoResultsCallout = forwardRef(
   ({ onClose }: NoResultsCalloutProps, ref) => {
     const { t } = useTranslation("page-languages")
     return (
-      <FormHelperText color="body.medium" lineHeight="base" fontSize="md">
+      <Box color="body.medium" lineHeight="base" fontSize="md">
         <Text fontWeight="bold" mb="2" color="body.base">
           {t("page-languages-want-more-header")}
         </Text>
@@ -25,7 +25,7 @@ const NoResultsCallout = forwardRef(
         >
           {t("page-languages-want-more-link")}
         </BaseLink>
-      </FormHelperText>
+      </Box>
     )
   }
 )
